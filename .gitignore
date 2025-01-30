@@ -1,0 +1,12 @@
+# Logseq generated files
+.logseq/
+logseq/bak
+**/logseq/bak
+**/logseq/.recycle
+logseq/pages-metadata.edn.bak*
+logseq/.recycle
+
+ignore
+.DS_Store
+tools
+tools/**/*
