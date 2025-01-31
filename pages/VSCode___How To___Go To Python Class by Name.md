@@ -1,5 +1,6 @@
 # DONE How can I go to a Python class by name in #VSCode?
-	- In
+	- In [[PyCharm]] there's  an easy way to do this with Go To Class
+		- ![image.png](../assets/image_1738338310091_0.png)
 	- There's **NOT AN EASY WAY** to only go to a class. One can only go to a symbol.
 	- ### [[VSCode/Keyshort]] for going to a symbol anywhere in the workspace #card
 		- Press `Cmd + T` (or `Ctrl + T` on Windows/Linux) to open **Go to Symbol**.
