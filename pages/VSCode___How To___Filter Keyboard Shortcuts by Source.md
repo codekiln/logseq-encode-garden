@@ -1,0 +1,18 @@
+# DONE How do I filter the Keyboard Shortcuts view by the source, for example, an extension? #Question
+	- You cannot currently filter for the keyboard shortcuts of a particular extension, as far as I know. See also my [[GitHub/Issue]] here:
+		- [Support Keyword or Exact Search for `@source` filter in Keyboard Shortcuts view · Issue #239309 · microsoft/vscode](https://github.com/microsoft/vscode/issues/239309)
+	- However, several search filters are available in the keyboard shortcuts view.
+		- [[VSCode/Docs/getstarted/keybindings]]
+		- [Visual Studio Code keyboard shortcuts](https://code.visualstudio.com/docs/getstarted/keybindings)
+			- [[VSCode/Docs/getstarted/keybindings/Viewing modified keyboard shortcuts]]
+				- ### [Viewing Modified Keyboard Shortcuts](https://code.visualstudio.com/docs/getstarted/keybindings#_viewing-modified-keyboard-shortcuts)
+					- You can view any user modified keyboard shortcuts in VS Code in the Keyboard Shortcuts editor with the Show User Keybindings command in the More Actions (...) menu. **This applies the `@source:user` filter to the Keyboard Shortcuts editor (Source is 'User')**.
+			- [[VSCode/Docs/getstarted/keybindings/Default Keyboard Shortcuts]]
+				- ### [Default Keyboard Shortcuts](https://code.visualstudio.com/docs/getstarted/keybindings#_default-keyboard-shortcuts)
+				- You can view all default keyboard shortcuts in VS Code in the Keyboard Shortcuts editor with the Show Default Keybindings command in the More Actions (...) menu. **This applies the `@source:default` filter to the Keyboard Shortcuts editor (Source is 'Default')**.
+				- You can view the default keyboard shortcuts as a JSON file using the command Preferences: Open Default Keyboard Shortcuts (JSON).
+		- [Visual Studio Code November 2020](https://code.visualstudio.com/updates/v1_52#_keyboard-shortcuts-editor)
+			- You can also now filter by a particular Keyboard Shortcut editor column from search input:
+				- `@command:commandId` - Filters by command ID. For example, `@command:workbench.action.showCommands`.
+				- `@keybinding:keybinding` - Filters by keybinding. For example, `@keybinding:f1`.
+				- `@source:user|default|extension` - Filters by source.
