@@ -3,4 +3,5 @@
 		- ![image.png](../assets/image_1738339457701_0.png)
 		- ![image.png](../assets/image_1738339429209_0.png){:height 548, :width 315}
 	- What is the closest feature of this in VSCode?
-	-
+	- ## Answer
+		- [[VSCode]]
