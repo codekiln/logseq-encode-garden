@@ -1,0 +1,4 @@
+- [[PyMuPDF/Docs]]
+	- [PyMuPDF 1.25.2 documentation](https://pymupdf.readthedocs.io/en/latest/)
+- [[PyMuPDF/Code]]
+	- [pymupdf/PyMuPDF: PyMuPDF is a high performance Python library for data extraction, analysis, conversion & manipulation of PDF (and other) documents.](https://github.com/pymupdf/PyMuPDF) [[GitHub/pymupdf/PyMuPDF]]
