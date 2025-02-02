@@ -1,0 +1,1 @@
+- [codekiln/kebricide: Ableton Max For Live (M4L) device to cut up samples with a drum rack](https://github.com/codekiln/kebricide)

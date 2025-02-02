@@ -1,0 +1,7 @@
+- [AutoCinemagraph ComfyUI Guide](https://learn.thinkdiffusion.com/autocinemagraph-comfyui-guide/)
+- ## See also
+	- [AutoCinemagraph ComfyUI Workflow on Gumroad](https://urbansoul7.gumroad.com/l/autocinemagraph_V1)
+		- more information here in the comments
+		- apparently this was part of a challenge with a $100 prize that expired [[2024/05]]
+		- via this found [[Person/Matteo Spinelli]]
+			- > Huge thanks to the greatest Matteo at https://www.youtube.com/@latentvision for creating this beast that is IPAdapter and all he does for the community. Follow him and give props to the GOAT.

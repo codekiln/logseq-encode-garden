@@ -1,0 +1,14 @@
+- Website: https://steinkamp.us/
+- GitHub: [zsteinkamp (Zack Steinkamp)](https://github.com/zsteinkamp)
+- Website about Max plugins: [Zack's Plugins](https://plugins.steinkamp.us/about) - https://plugins.steinkamp.us/
+	- YouTube channel: [[YouTube/zsteinkamp]]
+		- He has a "Knobbler" app for iPad that's coming out [Zack's Plugins - Knobbler4](https://plugins.steinkamp.us/m4l-Knobbler4)
+		- #Ableton playlist
+			- [coming very soon - Knobbler for iPad #ableton subscribe to know when it's out! :) - YouTube](https://www.youtube.com/watch?v=x5fPh3uMODM&list=PLqzTnRgmRId7rYvoVSoCvCWFgvfc8RcfW)
+- He has a bunch of his music online at https://musics.steinkamp.us/ which is software he wrote
+	- see [Filesystem Apps - Own Your Own Data](https://steinkamp.us/posts/2024-03-05_filesystem-apps---own-your-own-data)  for the breakdown
+	- https://musics.steinkamp.us/local/minidiscs/Journey%20Into%20Ambient%20Groove
+- His blog has some cool posts on getting [[c74/M4L]] to work nice with [[Git]]
+	- [Making 'git diff' Work For .amxd](https://steinkamp.us/posts/2022-02-15-git-diff-amxd-max)
+	-
+-

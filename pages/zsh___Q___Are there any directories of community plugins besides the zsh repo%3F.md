@@ -1,0 +1,2 @@
+- [[GitHub/unixorn/awesome-zsh-plugins]]
+- [[GitHub/zsh-users/zsh-completions]]

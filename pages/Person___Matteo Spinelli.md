@@ -1,0 +1,2 @@
+- Creator of [[ComfyUI]] plugin IPAdapter, "Image Prompt" adapter
+- [[YouTube/latentvision]] has lots of [[Stable Diffusion]] guides, including lots about [[ComfyUI]], including a [[YouTube/Playlist]] [ComfyUI: Advanced Understanding (Part 1/3) - YouTube](https://www.youtube.com/watch?v=_C7kR2TFIX0&list=PLcW1kbTO1uPhDecZWV_4TGNpys4ULv51D)
