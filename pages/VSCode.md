@@ -1,0 +1,46 @@
+# VS Code
+- ## VS Code Topics
+	- *Here are the pages in the VSCode docs*
+	  id:: 67652955-b523-4710-b8f2-d01153f23ced
+	- ### [[VSCode/Docs]] https://code.visualstudio.com/docs
+	  note:: TODO - Add a logseq page for all the major ones below
+	  id:: 676526fd-cc86-4805-b559-f556193abed5
+		- Setup
+			- [Overview](https://code.visualstudio.com/docs/setup/setup-overview)
+				- [Portable Mode](https://code.visualstudio.com/docs/setup/setup-overview#_portable-mode)
+		- User Guide
+			- [Basic Editing](https://code.visualstudio.com/docs/editor/codebasics)
+				- [Keyboard Shortcuts](https://code.visualstudio.com/docs/editor/codebasics#_keyboard-shortcuts)
+					- [Keyboard Shortcuts Reference](https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-reference) - Learn the most commonly used and popular keyboard shortcuts by downloading the reference sheet.
+					- [Install a Keymap extension](https://code.visualstudio.com/docs/getstarted/keybindings#_keymap-extensions) - Use the keyboard shortcuts of your old editor (such as Sublime Text, Atom, and Vim) in VS Code by installing a Keymap extension.
+					- [Customize Keyboard Shortcuts](https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-editor) - Change the default keyboard shortcuts to fit your style.
+			- Extension Marketplace
+			- IntelliSense
+			- [Code Navigation](https://code.visualstudio.com/docs/editor/editingevolved) [[VSCode/Docs/User Guide/Code Navigation]]
+			- Refactoring
+			- Debugging
+			- Testing
+			- VS Code for the Web
+			- Tasks
+			- Profiles
+			- Settings Sync
+			- Snippets
+			- Emmet
+			- Command Line Interface
+			- Workspaces
+			- Workspace Trust
+			- Multi-root Workspaces
+			- Accessibility
+			- Voice Interactions
+			- Custom Layout
+			- Port Forwarding
+		- Components
+			- Source Control
+			- Terminal
+			- Github Copilot
+			- Python
+			- Docker
+			- Data Science
+			- Remote
+			- Dev Containers
+			- Extensions

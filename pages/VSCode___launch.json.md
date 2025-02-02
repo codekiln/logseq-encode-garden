@@ -1,0 +1,1 @@
+- See [[VSCode/Docs/Editor/Debugging/Launch configurations]] [here](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations)

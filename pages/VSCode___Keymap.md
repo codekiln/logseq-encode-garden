@@ -1,0 +1,1 @@
+- This is for entering blocks of json into logseq lifted straight from the [[VSCode/View/Keyboard Shortcuts]]

@@ -1,0 +1,42 @@
+## VSCode Keyboard Shortcut Flashcards
+- {{cards (and (or [[VSCode/Keyshort]] (and [[Keyshort]] [[VSCode]])) )}}
+  collapsed:: true
+	- Summary: 12 items, 12 review counts [[Mon, 2025/01/06]]
+		- Remembered:   11 (91%)
+		- Forgotten :   1 (8%)
+	- Summary: 35 items, 35 review counts [[Sat, 2025/01/04]]
+		- Remembered:   28 (80%)
+		- Forgotten :   7 (20%)
+	- Summary: 14 items, 14 review counts [[Tue, 2024/12/31]]
+		- Remembered:   10 (71%)
+		- Forgotten :   4 (28%)
+	- Summary: 24 items, 24 review counts [[Mon, 2024/12/30]]
+		- Remembered:   17 (70%)
+		- Forgotten :   7 (29%)
+	- Summary: 23 items, 23 review counts [[Sat, 2024/12/28]]
+		- Remembered:   11 (47%)
+		- Forgotten :   12 (52%)
+	- Summary: 7 items, 7 review counts [[Thu, 2024/12/26]]
+		- Remembered:   3 (42%)
+		- Forgotten :   4 (57%)
+	- Summary: 7 items, 7 review counts [[Wed, 2024/12/25]]
+		- Remembered:   4 (57%)
+		- Forgotten :   3 (42%)
+	- Summary: 5 items, 5 review counts [[Tue, 2024/12/24]]
+		- Remembered:   5 (100%)
+		- Forgotten :   0 (0%)
+	- Summary: 5 items, 5 review counts [[Mon, 2024/12/23]]
+		- Remembered:   3 (60%)
+		- Forgotten :   2 (40%)
+	- Summary: 22 items, 22 review counts [[Fri, 2024/12/20]]
+		- Remembered:   21 (95%)
+		- Forgotten :   1 (4%)
+	- Summary: 22 items, 22 review counts [[Thu, 2024/12/19]]
+		- Remembered:   20 (90%)
+		- Forgotten :   2 (9%)
+	- Summary: 22 items, 22 review counts [[Wed, 2024/12/18]]
+		- Remembered:   15 (68%)
+		- Forgotten :   7 (31%)
+	- Summary: 18 items, 18 review counts [[Sat, 2024/12/14]]
+		- Remembered:   13 (72%)
+		- Forgotten :   5 (27%)

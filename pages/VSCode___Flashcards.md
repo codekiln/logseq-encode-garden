@@ -1,0 +1,26 @@
+- {{cards [[VSCode]]}}
+	- Summary: 29 items, 29 review counts [[Fri, 2025/01/17]]
+		- Remembered:   24 (82%)
+		- Forgotten :   5 (17%)
+	- Summary: 18 items, 18 review counts [[Wed, 2025/01/15]]
+		- Remembered:   13 (72%)
+		- Forgotten :   5 (27%)
+	- Summary: 14 items, 14 review counts [[Sat, 2025/01/11]]
+		- Remembered:   8 (57%)
+		- Forgotten :   6 (42%)
+	- Summary: 5 items, 5 review counts [[Fri, 2025/01/10]]
+		- Remembered:   2 (40%)
+		- Forgotten :   3 (60%)
+	- Summary: 1 items, 1 review counts [[Thu, 2025/01/09]]
+		- Remembered:   1 (100%)
+		- Forgotten :   0 (0%)
+	- Summary: 11 items, 11 review counts [[Thu, 2025/01/09]]
+		- Remembered:   10 (90%)
+		- Forgotten :   1 (9%)
+	- Summary: 7 items, 7 review counts [[Wed, 2025/01/08]]
+		- Remembered:   5 (71%)
+		- Forgotten :   2 (28%)
+	- Summary: 11 items, 11 review counts [[Tue, 2025/01/07]]
+		- Remembered:   5 (45%)
+		- Forgotten :   6 (54%)
+-
