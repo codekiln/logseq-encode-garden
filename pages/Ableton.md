@@ -19,4 +19,3 @@
 			- CMD+8 is quarter note
 			- CMD+9 is 1-bar
 			- CMD+0 is off
-		- ((67a1e712-3860-4f72-801b-d93194fdbaad))
