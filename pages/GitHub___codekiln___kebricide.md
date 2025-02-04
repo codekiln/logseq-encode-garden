@@ -16,7 +16,7 @@ tags:: [[c74/M4L]]
 		- [[GitHub/zsteinkamp/m4l-ChiasticSlide]] 
 		  [[GitHub/zsteinkamp/m4l-FibonacciNoteEcho]] 
 		  [[GitHub/zsteinkamp/m4l-FractalNoteEcho]]
-		- [[GitHub/zsteinkamp/m4l-KeyStepper]]
+		- [[GitHub/zsteinkamp/m4l-KeyStepper]] - by far, the simplest example here
 		- [[GitHub/zsteinkamp/m4l-Knobbler4]]
 		- [[GitHub/zsteinkamp/m4l-MoireArp]]
 	-
