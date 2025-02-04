@@ -1,0 +1,22 @@
+tags:: [[c74/M4L]], [[Tutorial]]
+
+- These instruments are really impressive. I'm learning a lot
+- [[Ableton/Packs/building-max-devices/01 Tour/Track/1 Drums]] has an [[Ableton/Max for Live/MIDI Effect]] called **Filler** that is operating on a midi clip that has a basic drum beat. Downstream of the filler is a drum rack. Filler is adding in events. It's fun to play with
+- [[Ableton/Packs/building-max-devices/01 Tour/Track/2 E-Piano]] has an [[Ableton/Max for Live/Audio Effect]]. It's also really fun to play with. The input is a [[Ableton/Instrument/Electric/E-Piano MKI Simple]]. The audio effect is called **Snipper**
+- [[Ableton/Packs/building-max-devices/01 Tour/Track/3 Bell Tower]] has [[Ableton/Clip]]s in it that have automation of [[Ableton/Audio Effects/EQ Three]]. I never thought about using a clip to automate the EQ of a loop.
+	- The Bell Tower [[c74/M4L]] patch is really fun to play with
+- [[Ableton/Packs/building-max-devices/01 Tour/Track/4 Bass]] illustrates Modulating Live Parameters and it has [[Ableton/Max for Live/Audio Effect/Macro Knob]] "**Macro Knob**" that is actually really cool, but it took me a bit to get the hang of it. It basically gives you one knob that can map multiple parameters and linearly interpolate between them This could actually be really useful to create a synthetic compound effect from component effects.
+- [[Ableton/Packs/building-max-devices/01 Tour/Track/5 Copper Bells]]
+	- this one switches between clips in the session view
+	- This is using [[Ableton/Operator]] instrument rack called Brushed Bells. I couldn't find it in the full instrument list, though I did find a few examples like Basic Brushed Bells and Ethereal Brushed Bells. They all sound great.
+	- what makes this one cool is the [[Ableton/Max for Live/MIDI Effect/Launcher]] which lets you basically stack clips into a track and then use a rotary encoder called "Progress" which determines the parameters of a sliding window from top to bottom in a clip. so for example at the beginning you can have it select randomly among the first three, then in the middle you have it select from the middle 6, then at the end it selects from the last three.
+	- very cool and #Creative idea that I could actually use for [[Music/Composition/Collab/Erik and Kev/Proj/25/t1/FinalizeRec]]
+	- the point here is that max for live can access tracks, clip slots and clip launches.
+- [[Ableton/Packs/building-max-devices/01 Tour/Track/6 Fog Pad]]
+	- this one has [[Ableton/Max for Live/Audio Effect/Sidechain Modulator]]
+		- the point here is that you can select audio input from other channels - we're getting input from the bass and electronic piano channels
+		- ok, I think I see what this is doing now, there's an [[Ableton/Operator/Fog Pad]] that's playing some chords, and there are two macros, LFO Amount and Cutoff, and those are selected in the sidechain modulator. The LFO Amount is going from 100% to 10% and the Cutoff is going from 90% to 0%. And what that means is that Cutoff and LFO Amount are **turned up** when the signal from the electronic piano and the bass are **quiet**. Very cool, I wouldn't know how to do this effect without this max tool. I never even thought about something like this before.
+			- I learned something else, too, I see that on the Fog Pad, they are using [[Ableton/Macro]]s to highlight out specific parts of the Fog Pad operator. This is just a bit subjective, but I think the range on the macro knobs isn't the same as on the equivalent knobs on the operator. So this might be a good reason to use macro knobs: to "zoom in" to a particular range without going over.
+	-
+	-
+	-

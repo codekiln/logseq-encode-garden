@@ -9,6 +9,6 @@
 	- see [Filesystem Apps - Own Your Own Data](https://steinkamp.us/posts/2024-03-05_filesystem-apps---own-your-own-data)  for the breakdown
 	- https://musics.steinkamp.us/local/minidiscs/Journey%20Into%20Ambient%20Groove
 - His blog has some cool posts on getting [[c74/M4L]] to work nice with [[Git]]
-	- [Making 'git diff' Work For .amxd](https://steinkamp.us/posts/2022-02-15-git-diff-amxd-max)
+	- [[Person/Zack Steinkamp/blog/posts/2022-02-15-git-diff-amxd-max]]
 	-
 -

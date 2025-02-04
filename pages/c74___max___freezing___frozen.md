@@ -1,0 +1,1 @@
+- [Freezing Attributes - Max 8 Documentation](https://docs.cycling74.com/legacy/max8/vignettes/freezing_attributes)
