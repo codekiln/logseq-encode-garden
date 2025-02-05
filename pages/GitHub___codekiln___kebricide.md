@@ -2,6 +2,18 @@ tags:: [[c74/M4L]]
 
 - [codekiln/kebricide: Ableton Max For Live (M4L) device to cut up samples with a drum rack](https://github.com/codekiln/kebricide)
 - [[2025-02-05 Wed]]
+	- DONE list the clips in track in the console
+		- LATER come up with a query to do a basic list of clips
+			- DONE What are the best docs for the [[c74/M4L/Ref]]?
+				- [[c74/M4L/Ref/Live API Overview]]
+				- [[c74/M4L/Ref/LOM]]
+		- DONE list tracks in console
+			- [2025-02-05 10:25 - 23bfa327 - Modify track retrieval to log track names](https://github.com/codekiln/kebricide/commit/23bfa327) #git/commit
+		- DONE list clips in each track
+			- [2025-02-05 10:30 - c32f5f55 - Add clip retrieval function to track initialization](https://github.com/codekiln/kebricide/commit/c32f5f55) #git/commit
+	- [[c74/max/js/Q/How do I get the line number of the error?]]
+	- [[c74/max/js/Q/What is get the error get: no valid object set about?]]
+	- [[c74/max/js/How To/Run a function when the js is recompiled or initialized]]
 	-
 - [[Feb 4th, 2025]]
 	- `yarn dev` starts the watcher inside the [[VSCode/Dev Container]]

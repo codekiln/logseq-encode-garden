@@ -1,0 +1,8 @@
+# DONE the the max for live js api, I'm getting `jsliveapi: get: no valid object set` - what's a common reason for this? #Question ANS: use `bang()`
+	- The `jsliveapi: get: no valid object set` error in Max for Live's JavaScript API typically occurs when the `LiveAPI` object is not properly initialized or is called before Ableton Live has fully loaded the device. Cmmon reasons for this include:
+		- **Initialization Timing**: If u instantiate the `LiveAPI` object in the global scope of your JavaScript file, it may execute before the Max for Live device is fully initialized. To ensure proper timing, use the `live.thisdevice` object, which sends a bang when the device is fully loaded. Connect this bang to trigger the creation of your `LiveAPI` object. ([ds.cycling74.com](hts://docs.cycling74.com/max5/vignettess/jsliveapi.html?utm_source=chatgpt.com))
+		- **Incorrect Object Path or ID**: Ensure that the path or ID you provide to the `LiveAPI` constructor accurately references an existing object in the Live set. An incorrect patr ID will result in the iveAPI` object not pointing to a valid Live object.
+		- **Thread Context**: The `LiveAPI` object cannot be created or used in Max's high-priority thread. Ensure that your JavaScript functions interacting with the Live API are executed in the low-priority thread. You can manage thread contexusing the `defer` o`ferlow` objects to re-queue messages appropriately. ([docs.cycling74.com](https://docs.cycling74.com/max5/vignettes/js/jsliveapi.html?utm_source=chatgpt.com))
+	- [no valid object set? JS/Max For Live - Max For Live Forum | Cycling '74](https://cycling74.com/forums/no-valid-object-set-jsmax-for-live)
+		- suggestion was to call all code not in globals, but inside a `bang()` function
+			-

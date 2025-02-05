@@ -1,0 +1,2 @@
+# [Live API Overview - Max 8 Documentation](https://docs.cycling74.com/legacy/max8/vignettes/live_api_overview)
+	- The [[c74/M4L/Ref/LOM]] shows how to navigate from a number of root objects down a path to the particular object of interest, and what to do with it. Not all of Live's parameters are accessible via Live's API, the reference should give you an idea of what can and can't be done via Max for Live.

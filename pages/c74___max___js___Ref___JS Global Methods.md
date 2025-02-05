@@ -1,0 +1,2 @@
+- [Basic Javascript programming: Global Methods - Max 8 Documentation](https://docs.cycling74.com/legacy/max8/vignettes/jsglobal)
+	-

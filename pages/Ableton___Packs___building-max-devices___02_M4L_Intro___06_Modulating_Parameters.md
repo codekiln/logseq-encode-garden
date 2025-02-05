@@ -29,7 +29,7 @@
 				- [[c74/max/obj/pattr]] stores data persistently between sessions.
 		- ![Tutorial Screenshot](../assets/Ableton/Packs/building-max-devices/02_M4L_Intro/06_Modulating_Parameters/Ableton__Packs__building-max-devices__02_M4L_Intro__06_Modulating_Parameters__tutorial.png){:height 400, :width 700}
 		- **Additional Reading:**
-			- [[c74/M4L/docs/Live Audio Effects]] [Creating Audio Effect Devices](https://docs.cycling74.com/max8/vignettes/live_audiodevices)
+			- [[c74/M4L/Ref/Live Audio Effects]] [Creating Audio Effect Devices](https://docs.cycling74.com/max8/vignettes/live_audiodevices)
 	- ## Inside the HumanLFO Patch
 		- ![Human_LFO_Patch](../assets/Ableton/Packs/building-max-devices/02_M4L_Intro/06_Modulating_Parameters/Ableton__Packs__building-max-devices__02_M4L_Intro__06_Modulating_Parameters__Human_LFO_Patch.png)
 		- ## Key Max Objects
@@ -82,8 +82,8 @@
 										- Oscillator frequency (initial) The initial frequency of the oscillator
 									- #### buffer-name \[symbol\]
 										- Optional
-										- The name of a [[c74/msp/buffer~]] 
-										   - [buffer~](https://docs.cycling74.com/legacy/max8/refpages/buffer~) object used to define the oscillator's wavetable. If a frequency argument is present, the `buffer~` name follows the frequency. If no `buffer~` name is given, `cycle~` uses an internal 64-bit 16K cosine wavetable.
+										- The name of a [[c74/msp/buffer~]]
+											- [buffer~](https://docs.cycling74.com/legacy/max8/refpages/buffer~) object used to define the oscillator's wavetable. If a frequency argument is present, the `buffer~` name follows the frequency. If no `buffer~` name is given, `cycle~` uses an internal 64-bit 16K cosine wavetable.
 								- ### Output
 									- ### signal
 										- A waveform (cosine by default) repeating at the specified frequency, with the specified phase.

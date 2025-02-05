@@ -1,0 +1,4 @@
+- [Supporting Remote Development and GitHub Codespaces | Visual Studio Code Extension API](https://code.visualstudio.com/api/advanced-topics/remote-extensions#architecture-and-extension-kinds)
+	- When a user installs an extension, VS Code automatically installs it to the correct location based on its kind. If an extension can run as either kind, VS Code will attempt to choose the optimal one for the situation; UI Extensions will run in VS Code's [local Extension Host](/api/advanced-topics/extension-host), while Workspace Extensions will run in a Remote Extension Host that sits in a small [VS Code Server](/docs/remote/vscode-server), if it exists in a remote workspace, otherwise will run in VS Code's local extension host if it exists locally
+	- the server needs to match the VS Code client version exactly
+	- if your extension uses APIs not provided by VS Code — such using Node APIs or running shell scripts — it may not work properly when run remotely

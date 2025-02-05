@@ -1,0 +1,2 @@
+# TODO [JavaScript Usage - Max 8 Documentation](https://docs.cycling74.com/legacy/max8/vignettes/javascript_usage_topic)
+	- In the newer [[c74/max/v/9]] docs for js, [Max JS API | Cycling '74 Documentation](https://docs.cycling74.com/apiref/js/), it's a lot more clear what the API is; I wonder if I have the right link for max 8 js

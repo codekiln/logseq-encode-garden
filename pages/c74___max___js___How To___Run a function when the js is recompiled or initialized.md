@@ -1,0 +1,8 @@
+- make a `compile()` function; see https://docs.cycling74.com/legacy/max8/refpages/js#compile
+	- note: you can use this, it's reserved
+- Instead, see this step from #Tutorial by [[Person/Adam Murray]] [JavaScript in Ableton Live: The Live API - Adam Murray's Blog](https://adammurray.link/max-for-live/js-in-live/live-api/)
+	- it should be more like this, using [[c74/M4L/obj/live.thisdevice]]
+		- ![image.png](../assets/image_1738755764511_0.png)
+		- ![example of using a bang object or live.thisdevice in max 4 live](https://adammurray.link/max-for-live/js-in-live/live-api/triggered-tempo-randomizer.png)
+		-
+	-

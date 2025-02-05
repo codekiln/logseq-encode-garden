@@ -223,7 +223,7 @@
   CLOCK: [2025-01-26 Sun 08:55:49]--[2025-01-26 Sun 11:15:51] =>  02:20:02
   :END:
 	- ## Making Audio Effects
-		- [[c74/M4L/docs/Live Audio Effects]] [Creating Audio Effect Devices - Max 8 Documentation](https://docs.cycling74.com/legacy/max8/vignettes/live_audiodevices)
+		- [[c74/M4L/Ref/Live Audio Effects]] [Creating Audio Effect Devices - Max 8 Documentation](https://docs.cycling74.com/legacy/max8/vignettes/live_audiodevices)
 			- mentions that [[c74/M4L/obj/plugin~]] and [[c74/m4l/obj/plugout~]] are used "by convention"  for m4l to get audio from max for live
 				- > Audio input and output is limited to two channels.
 		- ### Modifying Audio
