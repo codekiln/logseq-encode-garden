@@ -15,7 +15,7 @@
  ;; Exclude directories/files.
  ;; Example usage:
  ;; :hidden ["/archived" "/test.md" "../assets/archived"]
- :hidden []
+ :hidden ["/README.md"]
 
  ;; Define the default journal page template.
  ;; Enter the template name between the quotes.
@@ -26,7 +26,7 @@
  ;; Default value: "MMM do, yyyy"
  ;; e.g., "Jan 19th, 2038"
  ;; Example usage e.g., "Tue 19th, Jan 2038"
- ;; :journal/page-title-format "EEE do, MMM yyyy"
+ :journal/page-title-format "yyyy-MM-dd EEE"
 
  ;; Specify the journal filename format using a valid date format string.
  ;; !Warning:

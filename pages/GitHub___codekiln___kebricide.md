@@ -1,6 +1,8 @@
 tags:: [[c74/M4L]]
 
 - [codekiln/kebricide: Ableton Max For Live (M4L) device to cut up samples with a drum rack](https://github.com/codekiln/kebricide)
+- [[2025-02-05 Wed]]
+	-
 - [[Feb 4th, 2025]]
 	- `yarn dev` starts the watcher inside the [[VSCode/Dev Container]]
 	- DONE how do I add `Project/Device.amxd` [[c74/M4L/.amxd]] to #Ableton ? ANS: drag and drop
@@ -19,4 +21,5 @@ tags:: [[c74/M4L]]
 		- [[GitHub/zsteinkamp/m4l-KeyStepper]] - by far, the simplest example here
 		- [[GitHub/zsteinkamp/m4l-Knobbler4]]
 		- [[GitHub/zsteinkamp/m4l-MoireArp]]
+		- Confirmed that these are all of them from [[Person/Zack Steinkamp]] here: [Feature request: filter plugins by those that use typescript · Issue #2 · zsteinkamp/plugins](https://github.com/zsteinkamp/plugins/issues/2) [[GitHub/zsteinkamp/plugins]]
 	-
