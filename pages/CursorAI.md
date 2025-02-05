@@ -1,1 +1,1 @@
-filters:: {"github/dgokcin/dotfiles" true}
+filters:: {"github/maxfahl/cursor-agent-master-prompt" true}
