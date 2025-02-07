@@ -1,0 +1,1 @@
+- [How to use Page Properties Macros in Confluence](https://community.atlassian.com/t5/Confluence-articles/How-to-use-Page-Properties-Macros-in-Confluence-Best-practices/ba-p/2370523)
