@@ -75,7 +75,13 @@ tags:: Idea, Typescript, [[c74/M4L]]
 			    return clips
 			  }
 			  ```
-		- Here, inside `createValidatedLiveApi` is a custom function to validate the path and raise an error if it doesn't refer to anything, or return a `LiveAPI` object if it is valid:
+		- After after obtaining an array of [Clip](https://docs.cycling74.com/legacy/max8/vignettes/live_object_model) object references with `getClips(track)`, accessing the members of the objects is also done using a string-based API, as one can see from these lines above:
+			- ```ts
+			  logger(`Found clip ${clipIndex}:`)
+			  logger(`- name: ${clip.get('name')}`)
+			  logger(`- length: ${clip.get('length')}`)
+			  ```
+		- Above, inside `createValidatedLiveApi` is a custom function to validate the path and raise an error if it doesn't refer to anything, or return a `LiveAPI` object if it is valid:
 			- ```ts 
 			  /**
 			   * Checks if a LiveAPI object is invalid or doesn't exist.
@@ -121,9 +127,9 @@ tags:: Idea, Typescript, [[c74/M4L]]
 			    return api
 			  }
 			  ```
-		- After after obtaining an array of [Clip](https://docs.cycling74.com/legacy/max8/vignettes/live_object_model) object references with `getClips(track)`, accessing the members of the objects is also done using a string-based API:
 	- ## Suggested API - An #Observable [[Typescript/Library]] for Live API
 		- The core characteristics of a more idiomatic typescript library would be:
+			- The library would be oriented towards a [[Functional Reactive Programming]] paradigm using [[RxJS]].
 			- The library would abstract away and hide the details of using the [[Ableton/Live Object Model]] paths from [[c74/M4L/obj/live.path]] and treat that as a low-level implementation detail. Advanced users could still utilize methods that enabled using this functionality, but the core assumption of the Alits API is that it would no longer be necessary.
 			- [Each object](https://docs.cycling74.com/legacy/max8/vignettes/live_object_model) in the [[Ableton/Live Object Model]] would have its own [Typescript class](https://www.typescriptlang.org/docs/handbook/2/classes.html).
 				- Each object would have a `get_children()` function that would return an Array of objects of the appropriate Typescript classes in the API.
@@ -133,7 +139,7 @@ tags:: Idea, Typescript, [[c74/M4L]]
 					- that has `observe` access has a `<ObjectInstance>.observe_<propertyname>(...)` method that returns an observable. Internally, this would call [[RxJS/subscribe]] (see also docs for [Subscription](https://rxjs.dev/guide/subscription)).
 					  id:: 67a5f8ab-b96a-4f3a-978f-b0e9967e3531
 				- Each method would be proxied appropriately onto the object. For example, the typescript class corresponding to [Clip](https://docs.cycling74.com/legacy/max8/vignettes/live_object_model#live_obj_anchor_Clip) would have a `Clip.add_new_notes(...)` method.
-				- The library would come with first-class support for logging and error handling.
+			- The library would come with first-class support for logging and error handling.
 		- The library that implements this API could be written using the [[GitHub/Repo/Template]] that [[Person/Alessandro Petrone]] wrote for maxing max/msp libraries in #Typescript - [[GitHub/aptrn/maxmsp-ts-library-template]]. As the README from that template mentions,
 			- > This is a [turborepo monorepo](https://turbo.build/repo/docs) ([[turborepo]]) template with the following structure:
 				- ```
