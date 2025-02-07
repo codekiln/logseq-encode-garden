@@ -1,0 +1,6 @@
+- from [[Country/Italy]]
+- [[GitHub/aptrn]]
+- created several [[c74/max]] items for [[Typescript]]
+	- [[GitHub/aptrn/maxmsp-ts-library-template]]
+	- [[GitHub/aptrn/maxmsp-ts]]
+	- [[GitHub/aptrn/maxmsp-ts-example]]

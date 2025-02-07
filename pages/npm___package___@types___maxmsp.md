@@ -1,0 +1,1 @@
+- [@types/maxmsp - npm](https://www.npmjs.com/package/@types/maxmsp)

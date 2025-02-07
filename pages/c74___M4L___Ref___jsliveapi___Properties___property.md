@@ -1,0 +1,2 @@
+- https://docs.cycling74.com/legacy/max8/vignettes/jsliveapi#property
+	- > The observed property, child or child-list of the object at the current path, if desired. For instance, if the LiveAPI object refers to "live_set tracks 1", setting the property to "mute" would cause changes to the "mute" property of the 2nd track to be reported to the callback function defined in the LiveAPI Constructor.

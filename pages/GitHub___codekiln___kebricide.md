@@ -1,6 +1,8 @@
 tags:: [[c74/M4L]]
 
 - [codekiln/kebricide: Ableton Max For Live (M4L) device to cut up samples with a drum rack](https://github.com/codekiln/kebricide)
+- [[2025-02-07 Fri]]
+	- TODO make a prototype of [[c74/M4L/Idea/Alits]] just for Track and Clip
 - [[2025-02-06 Thu]]
   collapsed:: true
 	- DONE define [[CursorAI/Project Rules]] for Kebricide

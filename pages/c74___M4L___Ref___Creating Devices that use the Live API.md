@@ -1,4 +1,4 @@
 # TODO [Creating Devices that use the Live API - Max 8 Documentation](https://docs.cycling74.com/legacy/max8/vignettes/live_api)
 	- You can use a trio of Max for Live objects - ([live.object](https://docs.cycling74.com/max8/refpages/live.object) , [live.observer](https://docs.cycling74.com/max8/refpages/live.observer) , and [live.path](https://docs.cycling74.com/max8/refpages/live.path)) to access, observe, and control the Live application.
-	- You can use the Max [[c74/max/obj/js]] object to write code using the  [[c74/M4L/obj/LiveAPI]] Javascript object that exposes the [[c74/M4L/LOM]].
-	- the [[c74/M4L/LOM]] describes the properties and functions of a Live session that can be queried and set and observed
+	- You can use the Max [[c74/max/obj/js]] object to write code using the  [[c74/M4L/obj/LiveAPI]] Javascript object that exposes the [[c74/M4L/Ref/LOM]].
+	- the [[c74/M4L/Ref/LOM]] describes the properties and functions of a Live session that can be queried and set and observed
