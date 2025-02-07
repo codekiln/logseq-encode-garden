@@ -1,0 +1,5 @@
+-
+alias:: [[c74/M4L/Ref/jsliveapi]]
+
+- # TODO [The LiveAPI Object](https://docs.cycling74.com/max8/vignettes/jsliveapi)
+	- Technical note: you cannot use the LiveAPI object in JavaScript global code. Use the [[c74/M4L/obj/live.thisdevice]] object to determine when your Max Device has completely loaded (the object sends a bang from its left outlet when the Device is fully initialized, including the Live API).

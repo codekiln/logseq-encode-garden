@@ -1,0 +1,10 @@
+- [[c74/max/Patcher/console]]
+	- **tl;dr:** in the max patcher console, make sure the `<P>` is illuminated yellow.
+	- from [[c74/max/Ref/Max Console]] [Max Console - Max 8 Documentation](https://docs.cycling74.com/legacy/max8/vignettes/max_window)
+		- > The Max Console sidebar provides all of the functions of the Max Console window. Additionally, you can limit the messages viewed in the Max Console sidebar by clicking on the **Messages for This Patcher Only** icon at the top of the sidebar.
+		- ![the little p inside of a diamond button should be illuminated](https://cycling74-docs-production.nyc3.cdn.digitaloceanspaces.com/legacy/max8/images/56174772d88d81a1ecc586fc60eb45b9.png)
+		- *I think that because the `<P>` isn't illuminated above, it means that we are getting the slider and newobj errors*
+		- I believe that this was mentioned in [[YouTube/zsteinkamp/Your First Max for Live Device Build a WavScope]]
+			- ((67a4876c-dd5f-4f92-86d0-1085f81ba54d))
+				- Actually, it's the same button but on the inspector tab instead of the console tab. Weird that they chose to overload that!
+		- *The button is really weird, because the tooltip you see over the button doesn't reflect the state of the button, but rather, the action that will be taken if you click the button*
