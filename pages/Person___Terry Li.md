@@ -1,0 +1,5 @@
+- [Terry Li | LinkedIn](https://www.linkedin.com/in/terrylica/?originalSubdomain=ca)
+	- Director Of Operations at Eon Labs Ltd. https://www.eonlabs.com/
+	- Vancouver, British Columbia, Canada
+- [[CursorAI/Forum/User/Terry]] [Summary - Terry - Cursor - Community Forum](https://forum.cursor.com/u/Terry/summary)
+	- > AI Crypto Futures Firm Operations Director, dad of two. Focused on [[CursorAI]] for seamless integration, replacing [[VSCode]], vector database, and scrapers. Aiming to simplify programming in niche languages, overcoming GPT-4 challenges. Keen on sharing and growing in the Cursor community, bridging AI and finance.

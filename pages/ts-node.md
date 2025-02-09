@@ -1,0 +1,2 @@
+- [ts-node - npm](https://www.npmjs.com/package/ts-node)
+	- > TypeScript execution and REPL for node.js, with source map and native ESM support.
