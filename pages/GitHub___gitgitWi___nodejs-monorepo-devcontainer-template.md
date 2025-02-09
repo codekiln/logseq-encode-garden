@@ -1,0 +1,6 @@
+- [gitgitWi/nodejs-monorepo-devcontainer-template: VSCode DevContainer Template for Node.js, Monorepo](https://github.com/gitgitWi/nodejs-monorepo-devcontainer-template/tree/main)
+	- DevContainer: `Alpine Linux` with `Node.js` LTS,
+	- Package Manager: [`PNPM`](/gitgitWi/nodejs-monorepo-devcontainer-template/blob/main/pnpm.io)
+	- Monorepo Management: [`PNPM Workspace`](https://pnpm.io/workspaces), [`Turborepo`](https://turbo.build/repo)
+	- Prettier, Eslint, and TypeScript configs for monorepo.
+	- ...and with AWESOME VSCode extensions prebuilt and recommendations for Fullstack Web Developers

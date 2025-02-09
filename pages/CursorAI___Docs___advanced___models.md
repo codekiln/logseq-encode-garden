@@ -1,0 +1,74 @@
+- [Advanced / Models – Cursor](https://docs.cursor.com/advanced/models)
+	- ## Summary
+		- only certain models work on [[CursorAI/Agent Mode]]
+			- [[Anthropic/Model/Claude/3.5/Sonnet]]
+			- [[OpenAI/Model/GPT/4o]]
+		- [[OpenAI/Model/o1]] is 10x the cost of [[OpenAI/Model/GPT/4o]] for Cursor
+		- [[DeepSeek]] models are coming soon, including in agent mode, which could be a game-changer
+	- ## Model Information Table
+		- [[CursorAI/Model/Small]]
+			- **Provider:** CursorAI
+			- **Premium:** ❌
+			- **Agent:** ❌
+			- **Pricing:** Free
+			- **Note:** —
+		- [[Anthropic/Model/Claude/3.5/Sonnet]]
+			- **Provider:** Anthropic
+			- **Premium:** ✅
+			- **Agent:** ✅
+			- **Pricing:** $0.04
+			- **Note:** —
+		- [[Anthropic/Model/Claude/3.5/Haiku]]
+			- **Provider:** Anthropic
+			- **Premium:** ✅
+			- **Agent:** ❌
+			- **Pricing:** **$0.01**
+			- **Note:** **Counts as 1/3 premium request**
+		- [[Anthropic/Model/Claude/3/Opus]]
+			- **Provider:** Anthropic
+			- **Premium:** ✅
+			- **Agent:** ❌
+			- **Pricing:** $0.10
+			- **Note:** 10 requests/day included on paid plan
+		- [[OpenAI/Model/GPT/4o/Mini]]
+			- **Provider:** OpenAI
+			- **Premium:** ✅
+			- **Agent:** ❌
+			- **Pricing:** Free
+			- **Note:** Free plan gets 500 requests/day
+		- [[OpenAI/Model/GPT/4o]]
+			- **Provider:** OpenAI
+			- **Premium:** ✅
+			- **Agent:** ✅
+			- **Pricing:** $0.04
+			- **Note:** —
+		- [[OpenAI/Model/o1]]
+			- **Provider:** OpenAI
+			- **Premium:** ✅
+			- **Agent:** ❌
+			- **Pricing:** $0.40
+			- **Note:** —
+		- [[OpenAI/Model/o1/Mini]]
+			- **Provider:** OpenAI
+			- **Premium:** ✅
+			- **Agent:** ❌
+			- **Pricing:** **$0.10**
+			- **Note:** **10 requests/day included on paid plan**
+		- [[OpenAI/Model/o3/Mini]]
+			- **Provider:** OpenAI
+			- **Premium:** ✅
+			- **Agent:** ❌
+			- **Pricing:** **TBD (free for now)**
+			- **Note:** —
+		- [[DeepSeek/Model/v3]]
+			- **Provider:** DeepSeek
+			- **Premium:** ❌ (Coming soon)
+			- **Agent:** ❌ (Coming soon)
+			- **Pricing:** Free
+			- **Note:** —
+		- [[DeepSeek/Model/r1]]
+			- **Provider:** DeepSeek
+			- **Premium:** ✅ (Coming soon)
+			- **Agent:** ❌ (Coming soon)
+			- **Pricing:** $0.04
+			- **Note:** —

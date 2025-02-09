@@ -1,1 +1,7 @@
--
+- [QuickStage - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=bs-code.git-quick-stage)
+- [[GitHub/Bluesteel-Software/git-stage-file]]
+	- [git-stage-file/CHANGELOG.md at main · Bluesteel-Software/git-stage-file](https://github.com/Bluesteel-Software/git-stage-file/blob/main/CHANGELOG.md)
+		- nice #Changelog - I thought perhaps they were using some commit hook, but I can't find any in the package.json - they do have a dependency on something called [g though; what is that](https://github.com/Bluesteel-Software/git-stage-file/blob/main/package.json#L168)?
+			- [g - npm](https://www.npmjs.com/package/g)
+				- THIS IS NOT FOR PRODUCTION SOFTWARE. ONLY USE IT FOR PROTOTYPING AND PROOF-OF-CONCEPT WORK. DO NOT USE THIS FOR ANYTHING TRULY IMPORTANT.
+- [For a detailed article on what you can do with **Quick Stage** go here!](https://medium.com/vs-code-keybindings/staging-files-in-vs-code-with-the-keyboard-2a80d3dc035c)

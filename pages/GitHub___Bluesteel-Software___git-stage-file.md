@@ -1,0 +1,1 @@
+- [Bluesteel-Software/git-stage-file](https://github.com/Bluesteel-Software/git-stage-file)
