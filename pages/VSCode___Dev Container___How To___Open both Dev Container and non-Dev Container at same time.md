@@ -1,0 +1,2 @@
+# TODO #Question - what's the easiest way to be able to run commands in the repo without [[VSCode/Dev Container]] open while having the dev container open?
+	- useful for accessing things that haven't been added yet to the container, for example, ((67a9ce72-4337-4068-89aa-64ecf85cd515)), or opening files in the host operating system

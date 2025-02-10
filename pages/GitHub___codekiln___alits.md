@@ -1,7 +1,159 @@
 - for the summary of the idea, see [[c74/M4L/Idea/Alits]]
 - Work Log
-	- [[2025-02-09 Sun]]
-		- DONE test if I'm able to utilize the library in [[c74/max/js]]
+	- DOING try creating a kebricide package within the apps dir of [[GitHub/aptrn/maxmsp-ts-library-template]]
+	  :LOGBOOK:
+	  CLOCK: [2025-02-09 Sun 09:04:55]
+	  :END:
+		- [[2025-02-10 Mon]]
+			- ### ((67a9c525-8066-403a-adca-68083427b2d1))
+				- created [Max for Live compatibility - optionally compile js assets to root directory by codekiln · Pull Request #29 · aptrn/maxmsp-ts](https://github.com/aptrn/maxmsp-ts/pull/29/files) [[GitHub/MR]]
+			- ### DONE file [[GitHub/Issue]] dev container requires unusual setup
+			  collapsed:: true
+			  :LOGBOOK:
+			  CLOCK: [2025-02-10 Mon 05:39:20]--[2025-02-10 Mon 05:40:33] =>  00:01:13
+			  :END:
+				- currently, in order to get the [[VSCode/Dev Container]] to initialize correctly, I need to do:
+					- `docker compose build`
+					- `docker compose up`
+						- `ctrl+c` to exit
+					- [[VSCode/Command/Dev Containers/Reopen/in Container]]
+				- If I don't, then I get a failure related to trying to call `uname` on the `node` user in the image.
+			- ### DONE file [[GitHub/Issue]] [create project-directory-structure cursor project rule with project directory structure and context · Issue #15 · codekiln/alits](https://github.com/codekiln/alits/issues/15)
+				- create a [[CursorAI/Project Rules]] entry describing the directory structure and project context
+			- #Filed ((67a9ce72-4337-4068-89aa-64ecf85cd515))
+			- ### DONE file [[GitHub/Issue]] [create apps/kebricide with Project/ dir and js next to it · Issue #13 · codekiln/alits](https://github.com/codekiln/alits/issues/13)
+			  collapsed:: true
+			  :LOGBOOK:
+			  CLOCK: [2025-02-10 Mon 04:41:37]--[2025-02-10 Mon 04:46:55] =>  00:05:18
+			  :END:
+				- TODO Create a folder at `apps/kebricide` for [[GitHub/codekiln/kebricide]]
+					- TODO folder should have same rough structure as `apps/maxmsp-test`, but instead of putting typescript in `Code`, typescript will mirror the directory structure of [[GitHub/zsteinkamp/m4l-typescript-base]], with a structure roughly like:
+						- ```
+						  Project/Device.amxd
+						  Project/Project.maxproj
+						  Project/index.js
+						  Project/utils.js
+						  ```
+			- ### DONE file a [[GitHub/Issue]] [App js assets uniquely named and next to `apps/*/Project/*.amxd` · Issue #12 · codekiln/alits](https://github.com/codekiln/alits/issues/12)
+			  collapsed:: true
+			  :LOGBOOK:
+			  CLOCK: [2025-02-10 Mon 04:16:30]--[2025-02-10 Mon 04:40:40] =>  00:24:10
+			  :END:
+				- [[GitHub/aptrn]]'s original template was for [[c74/max/standalone]], where there are [[c74/max/Project]]s that can manage the paths unique to each application so as to include each generated [[c74/max/js]] item.
+				- I could add each library to the [[c74/max/File Browser]] path manually, which could work, but I have to be careful that each generated js file is uniquely named.
+				- That doesn't seem like a great approach for portability or getting a great [[Dev/Experience]].
+				- Instead, if we utilize [[rollupjs]] and [[Typescript]] options so everything is compiled to a file that's adjacent to the [[c74/M4L/.amxd]] file that's uniquely named, then the downstream developer won't have to mess with modifying [[c74/M4L/max]]'s  paths.
+				- ## Acceptance Criteria
+					- [ ] Compiled application assets are added to git
+					- [ ] Compiled application js assets are not nested in folders
+					- [ ] Compiled application js assets are uniquely named
+				- #Filed [[GitHub/codekiln/alits/Todos]]
+		- [[2025-02-09 Sun]]
+			- DONE would the [[GitHub/aptrn/maxmsp-ts]] #CLI be useful here? ANS: probably not
+			  collapsed:: true
+				- I think that is mostly on the library side, for adding dependencies, not on the application side.
+			- theoretically, [[GitHub/Barnard-PL-Labs/MaxPy]] could be used to dynamically generate the patch ...
+			- #Discovered that at least some people have a way to open [[c74/max/Project]] files in [[Ableton/Max for Live]]
+			  collapsed:: true
+				- [Convert a .maxproj file into a .amxd file | AudioSEX - Professional Audio Forum](https://audiosex.pro/threads/convert-a-maxproj-file-into-a-amxd-file.74689/)
+					- Basically what I would like to do is convert this .maxproj or .maxpatch into a .axmd file to use it as a Max Instrument in Ableton.
+					- so far i know you need to open the project file in Max4Live.
+					- Okay open Ableton, drag in an empty M4L device, click on the "old school chip" icon on the right of the device, opens M4L edit panel.
+					- Now you need to open the project file and then you can save it. Only in that mode, you have to option save it as amxd file for use in Ableton.
+					- [Is there a special trick to exporting patches or saving as M4L devices? - MaxMSP Forum | Cycling '74](https://cycling74.com/forums/is-there-a-special-trick-to-exporting-patches-or-saving-as-m4l-devices)
+						- Hi Jeremy, for me, "Export Max for Live Device..." is greyed out, both when opening the amxd from Max or from Live. I did find a workflow using "freeze device" and "save as", that seems to do the trick. Are these equivalent?
+						- This is after I read through all doc pages that seem to be related to building and distributing M4L devices from the long list at [https://docs.cycling74.com/max8/vignettes/max\_for\_live\_topic](https://docs.cycling74.com/max8/vignettes/max_for_live_topic), but I couldn't find a page that groups these related topics, so I'm not sure if I missed something.
+					- [Max/MSP, Max4Live, & RNBO (the thread) - Equipment - lines](https://llllllll.co/t/max-msp-max4live-rnbo-the-thread/18366/188?page=10) #Cool [[Forum/post]] [[llllllll/Forum]]
+						- EDIT: I saved it as an M4L object with presentation mode if you want to hack it from there: [Dropbox - ManuallyClockedSeq.amxd - Simplify your life](https://www.dropbox.com/s/hhrty53a7iztbcu/ManuallyClockedSeq.amxd?dl=0)
+						- DOUBLE EDIT: I highly, highly recommend buying this book, which is all about hacking the live.step object for more advanced behaviors: [Books About Max | Cycling '74](https://cycling74.com/products/books) [[Books/Max Cookbook]] is there
+			- ## Breakthrough - creating a new [[Ableton/Max for Live/MIDI Effect]] and then opening `.maxproj` DOES work in Ableton Live
+				- I even get the `js: Hello! Writing from typescript! ` in the console! so, we're in business possibly ...
+				- done
+				  collapsed:: true
+					- DONE verify I can save this in the Ableton project file and open it again: ANS - not if I just opened it
+					  collapsed:: true
+					  :LOGBOOK:
+					  CLOCK: [2025-02-09 Sun 09:07:37]--[2025-02-09 Sun 09:09:34] =>  00:01:57
+					  :END:
+						- Ok, so maybe this isn't working just yet. when I re-open the ableton project file after having opened the `.maxproj`, it doesn't open [[c74/max/Project]] by default; I don't see the console logging.
+					- DONE is there some way to do something similar to what is done in [[GitHub/aptrn/maxmsp-ts-library-template/apps/maxmsp-test/maxmsp-test.maxproj]] with a [[c74/max/Project/Window]], but in [[c74/M4L]],  [[Ableton/Max for Live]]?
+					  collapsed:: true
+					  :LOGBOOK:
+					  CLOCK: [2025-02-09 Sun 09:10:53]--[2025-02-09 Sun 09:33:42] =>  00:22:49
+					  :END:
+						- is there something equivalent to the project window?
+						- When I was working with the [[c74/max/Project/Window]] before, I was in [[c74/max/v/9]], and the built-in version for [[Ableton/Max for Live]] is [[c74/max/v/8]], so it might be in a different spot, but I can't seem to find it in the UI. Alternatively, it could be that they removed support for Max Projects from Max for Live deliberately.
+							- ((67a89ce8-b922-4e9e-9f02-43cab5a93eb1))
+							- Max 8 documentation for [[c74/max/Project/Window]] is here [Anatomy of the Project Window - Max 8 Documentation](https://docs.cycling74.com/legacy/max8/vignettes/projects_anatomy?utm_source=chatgpt.com)
+								- see also [Working With Projects - Max 8 Documentation](https://docs.cycling74.com/legacy/max8/vignettes/projects_topic)
+								- see also [Project Settings - Max 8 Documentation](https://docs.cycling74.com/legacy/max8/vignettes/projects_settings)
+								- see also [Project Search Paths - Max 8 Documentation](https://docs.cycling74.com/legacy/max8/vignettes/projects_searchpath)
+									- Previous versions of Max used a single global search path for locating files used by the application. For instance, the "patches" folder inside the Max application folder was typically used to store patchers, media files, 3rd party externals and help files, and so on. Projects provide new means for controlling how Max searches for files.
+									- Projects also maintain a list of additional folders to be searched when locating project assets. This list works similarly to the list found in Max's [[c74/max/Menu/Options/File Preferences]]  window, but is used only by the project.
+										- #Insight #Observation *ok, so it sounds like [[c74/max/Project]]s are the only way to have project-specific paths added. So I either need to change the compilation directory for [[GitHub/aptrn/maxmsp-ts-library-template/apps/maxmsp-test]] so that the compiled assets are in the same directory as the patcher, similar to the way [[GitHub/zsteinkamp/m4l-typescript-base]] does it, or instruct users to add a folder manually to the search path using the File Preferences menu. The latter is not as ergonomic, because it will likely require additional set-up and reminders for users. However, it may be the fastest way for me to get going. Of course, it's at least POSSIBLE that if I save my [[c74/M4L/.amxd]] file in the parent directory of the generated typescript assets, I may be able to access the items via a relative path...*
+						- #Conclusion no, there's no way to do something similar to [[c74/max/Project]]s in [[Ableton/Max for Live]]; I need to explore other approaches such as
+							- 1 - using a relative path to a sub-directory
+							- 2 - changing the [[Typescript/tsconfig]] compilation setting so that it compiles to the same directory as the [[c74/M4L/.amxd]] file
+							- 3 - instruct [[Ableton/Max for Live]] users to manually add a directory to [[c74/max/Menu/Options/File Preferences]]
+						-
+						-
+					- DONE is there some way a relative path can work? ANS: probably not?
+					  collapsed:: true
+					  :LOGBOOK:
+					  CLOCK: [2025-02-09 Sun 09:36:49]--[2025-02-09 Sun 09:57:41] =>  00:20:52
+					  :END:
+						- I tried creating `apps/maxmsp-test/maxmsp-test.amxd` with a [[c74/max/obj/js]] as `js ./Code/Main.js`, and got `js: can't find file ./Code/Main.js`, even though `apps/maxmsp-test/Code/Main.js` exists
+							- I also tried `js Code/Main.js` which also did not work
+						- I wish there was a way to open [[c74/M4L/.amxd]] files ... there probably is because [[Person/Zack Steinkamp/blog/posts/2022-02-15-git-diff-amxd-max]] says ((67a8be1a-780f-4c61-82e5-c04cfae63cc6))
+							- I imagine it might be able to adjust the paths if I was able to adjust the .amxd directly ...
+						- #Discovered that if I go to [[c74/max/Menu/File/Show File Browser]] I'm taken to [[c74/max/File Browser]] window, which lets one create [[c74/max/Collections]] of files. interesting. I tried adding `apps/maxmsp-test/Code/Main.js` to the file paths, but got "no new files have been added to the search path" because the extension is invalid. So that probably won't work.
+					- DONE is there some way that the [[c74/M4L/.amxd]] could be extracted into [[json]], and then we could add the multiple file paths into the .amxd directly? see [[c74/M4L/.amxd/How To/Decompile .amxd into json]]
+					  collapsed:: true
+						- #Conclusion - while it **is** feasible to "decompile" the `.amxd` into `.json`, and this could conceivably help in actually versioning `.amxd` in git as `json` and treating `.amxd` as a compiled artifact using git hooks, I don't yet see a way that would help me add additional paths to the available search paths for the [[c74/max/obj/js]] obj.
+				- DONE try 2 - changing the [[Typescript/tsconfig]] compilation setting so that it compiles to the same directory as the [[c74/M4L/.amxd]] file, following the hint of [[GitHub/zsteinkamp/m4l-typescript-base]] - I just m moved the .amxd file and that works
+				  :LOGBOOK:
+				  CLOCK: [2025-02-09 Sun 09:58:14]--[2025-02-10 Mon 04:15:09] =>  18:16:55
+				  :END:
+					- DONE try just moving the .amxd file to be adjacent to the .js file, the way it's done in typescript base - WORKS as long as I manually add the path to ableton
+					  :LOGBOOK:
+					  CLOCK: [2025-02-09 Sun 10:32:23]--[2025-02-10 Mon 04:14:52] =>  17:42:29
+					  :END:
+						- if I do that, I'm able to load the first javascript file
+						  collapsed:: true
+							- ```js
+							  "use strict";
+							  var mylib = require("lib/@my-username-my-library/myLibrary_index.js");
+							  inlets = 1;
+							  outlets = 1;
+							  autowatch = 1;
+							  function bang() {
+							      post(mylib.greet() + "\n");
+							  }
+							  bang();
+							  // .ts files with this at the end become a script usable in a [js] or [jsui] object
+							  // If you are going to require your module instead of import it then you should comment
+							  // these two lines out of this script
+							  var module = {};
+							  module.exports = {};
+							  
+							  ```
+								- but I get an #Error when it tries to load this line 7 - `mylib.greet()` is not found.
+									- `js: Main.js: Javascript TypeError: mylib.greet is not a function, line 7`
+							- DONE How do relative imports work in [[GitHub/zsteinkamp/m4l-typescript-base]]? we're importing from utils there ... let me look at the compiled js artifacts #Question
+							  :LOGBOOK:
+							  CLOCK: [2025-02-09 Sun 10:34:42]--[2025-02-09 Sun 10:35:25] =>  00:00:43
+							  :END:
+								- it's doing `var utils_1 = require("./utils");`, where `utils.js` is in the same folder
+								- so they are both using `require` - I see [[c74/js/Ref/jsrequire]] has the docs for that.
+							- DOING it does NOT work **by default** to use require to access a file from another nested folder by default, for example, `var mylib = require("lib/@my-username-my-library/myLibrary_index.js");` even if that path is adjacent to [[c74/M4L/.amxd]] - is there a way to get around this with [[c74/max/Menu/Options/File Preferences]]? ANS: **YES**
+							  :LOGBOOK:
+							  CLOCK: [2025-02-09 Sun 10:51:21]
+							  :END:
+								- Yes, if I manually add the folder `apps/maxmsp-test/Code/lib/@my-username-my-library/`in file preferences, then I get the `Hello! Writing from typescript!` message. But that also means that any included libraries would also need to be manually added. That is less than ideal. But ... it works.
+						- #Conclusion
+							- I might be utilize a "monorepo" based approach to utilize typescript libraries in [[Ableton/Max for Live]], but it seems as though each library I create, I have to manually add it separately to the [[c74/max/Menu/Options/File Preferences]], unless ...
+	- DONE test if I'm able to utilize the library in [[c74/max/js]]
+		- [[2025-02-09 Sun]]
 			- DONE try using the built-in test functions from [[GitHub/aptrn/maxmsp-ts-library-template]] using [[GitHub/aptrn/maxmsp-ts-example]]
 			  collapsed:: true
 				- There is already a greet function in `packages/my-library/src/index.ts` and `apps/maxmsp-test/src/Main.ts` contains a test [[c74/max/js]] object which is likely referenced in `apps/maxmsp-test/Patchers/Test.maxpat`
@@ -84,112 +236,6 @@
 					- > You can install dependencies using `pnpm i -D <package-name>`. If you're sure the dependency is [**compatible with Max**](https://github.com/aptrn/maxmsp-ts-example?tab=readme-ov-file#dependencies), you can add it to the config file.
 					- > The configuration file `maxmsp.config.json` determines which dependencies are included in the compiled output. The default `output_path` is `lib`, placed as a subdirectory of the `outDir` found in the `tsconfig.json` file.
 					-
-		- DOING try creating a kebricide package within the apps dir of [[GitHub/aptrn/maxmsp-ts-library-template]]
-		  :LOGBOOK:
-		  CLOCK: [2025-02-09 Sun 09:04:55]
-		  :END:
-			- DONE would the [[GitHub/aptrn/maxmsp-ts]] #CLI be useful here? ANS: probably not
-			  collapsed:: true
-				- I think that is mostly on the library side, for adding dependencies, not on the application side.
-			- theoretically, [[GitHub/Barnard-PL-Labs/MaxPy]] could be used to dynamically generate the patch ...
-			- #Discovered that at least some people have a way to open [[c74/max/Project]] files in [[Ableton/Max for Live]]
-			  collapsed:: true
-				- [Convert a .maxproj file into a .amxd file | AudioSEX - Professional Audio Forum](https://audiosex.pro/threads/convert-a-maxproj-file-into-a-amxd-file.74689/)
-					- Basically what I would like to do is convert this .maxproj or .maxpatch into a .axmd file to use it as a Max Instrument in Ableton.
-					- so far i know you need to open the project file in Max4Live.
-					- Okay open Ableton, drag in an empty M4L device, click on the "old school chip" icon on the right of the device, opens M4L edit panel.
-					- Now you need to open the project file and then you can save it. Only in that mode, you have to option save it as amxd file for use in Ableton.
-					- [Is there a special trick to exporting patches or saving as M4L devices? - MaxMSP Forum | Cycling '74](https://cycling74.com/forums/is-there-a-special-trick-to-exporting-patches-or-saving-as-m4l-devices)
-						- Hi Jeremy, for me, "Export Max for Live Device..." is greyed out, both when opening the amxd from Max or from Live. I did find a workflow using "freeze device" and "save as", that seems to do the trick. Are these equivalent?
-						- This is after I read through all doc pages that seem to be related to building and distributing M4L devices from the long list at [https://docs.cycling74.com/max8/vignettes/max\_for\_live\_topic](https://docs.cycling74.com/max8/vignettes/max_for_live_topic), but I couldn't find a page that groups these related topics, so I'm not sure if I missed something.
-					- [Max/MSP, Max4Live, & RNBO (the thread) - Equipment - lines](https://llllllll.co/t/max-msp-max4live-rnbo-the-thread/18366/188?page=10) #Cool [[Forum/post]] [[llllllll/Forum]]
-						- EDIT: I saved it as an M4L object with presentation mode if you want to hack it from there: [Dropbox - ManuallyClockedSeq.amxd - Simplify your life](https://www.dropbox.com/s/hhrty53a7iztbcu/ManuallyClockedSeq.amxd?dl=0)
-						- DOUBLE EDIT: I highly, highly recommend buying this book, which is all about hacking the live.step object for more advanced behaviors: [Books About Max | Cycling '74](https://cycling74.com/products/books) [[Books/Max Cookbook]] is there
-			- ## Breakthrough - creating a new [[Ableton/Max for Live/MIDI Effect]] and then opening `.maxproj` DOES work in Ableton Live
-				- I even get the `js: Hello! Writing from typescript! ` in the console! so, we're in business possibly ...
-				- DONE verify I can save this in the Ableton project file and open it again: ANS - not if I just opened it
-				  collapsed:: true
-				  :LOGBOOK:
-				  CLOCK: [2025-02-09 Sun 09:07:37]--[2025-02-09 Sun 09:09:34] =>  00:01:57
-				  :END:
-					- Ok, so maybe this isn't working just yet. when I re-open the ableton project file after having opened the `.maxproj`, it doesn't open [[c74/max/Project]] by default; I don't see the console logging.
-				- DONE is there some way to do something similar to what is done in [[GitHub/aptrn/maxmsp-ts-library-template/apps/maxmsp-test/maxmsp-test.maxproj]] with a [[c74/max/Project/Window]], but in [[c74/M4L]],  [[Ableton/Max for Live]]?
-				  collapsed:: true
-				  :LOGBOOK:
-				  CLOCK: [2025-02-09 Sun 09:10:53]--[2025-02-09 Sun 09:33:42] =>  00:22:49
-				  :END:
-					- is there something equivalent to the project window?
-					- When I was working with the [[c74/max/Project/Window]] before, I was in [[c74/max/v/9]], and the built-in version for [[Ableton/Max for Live]] is [[c74/max/v/8]], so it might be in a different spot, but I can't seem to find it in the UI. Alternatively, it could be that they removed support for Max Projects from Max for Live deliberately.
-						- ((67a89ce8-b922-4e9e-9f02-43cab5a93eb1))
-						- Max 8 documentation for [[c74/max/Project/Window]] is here [Anatomy of the Project Window - Max 8 Documentation](https://docs.cycling74.com/legacy/max8/vignettes/projects_anatomy?utm_source=chatgpt.com)
-							- see also [Working With Projects - Max 8 Documentation](https://docs.cycling74.com/legacy/max8/vignettes/projects_topic)
-							- see also [Project Settings - Max 8 Documentation](https://docs.cycling74.com/legacy/max8/vignettes/projects_settings)
-							- see also [Project Search Paths - Max 8 Documentation](https://docs.cycling74.com/legacy/max8/vignettes/projects_searchpath)
-								- Previous versions of Max used a single global search path for locating files used by the application. For instance, the "patches" folder inside the Max application folder was typically used to store patchers, media files, 3rd party externals and help files, and so on. Projects provide new means for controlling how Max searches for files.
-								- Projects also maintain a list of additional folders to be searched when locating project assets. This list works similarly to the list found in Max's [[c74/max/Menu/Options/File Preferences]]  window, but is used only by the project.
-									- #Insight #Observation *ok, so it sounds like [[c74/max/Project]]s are the only way to have project-specific paths added. So I either need to change the compilation directory for [[GitHub/aptrn/maxmsp-ts-library-template/apps/maxmsp-test]] so that the compiled assets are in the same directory as the patcher, similar to the way [[GitHub/zsteinkamp/m4l-typescript-base]] does it, or instruct users to add a folder manually to the search path using the File Preferences menu. The latter is not as ergonomic, because it will likely require additional set-up and reminders for users. However, it may be the fastest way for me to get going. Of course, it's at least POSSIBLE that if I save my [[c74/M4L/.amxd]] file in the parent directory of the generated typescript assets, I may be able to access the items via a relative path...*
-					- #Conclusion no, there's no way to do something similar to [[c74/max/Project]]s in [[Ableton/Max for Live]]; I need to explore other approaches such as
-						- 1 - using a relative path to a sub-directory
-						- 2 - changing the [[Typescript/tsconfig]] compilation setting so that it compiles to the same directory as the [[c74/M4L/.amxd]] file
-						- 3 - instruct [[Ableton/Max for Live]] users to manually add a directory to [[c74/max/Menu/Options/File Preferences]]
-					-
-					-
-				- DONE is there some way a relative path can work? ANS: probably not?
-				  collapsed:: true
-				  :LOGBOOK:
-				  CLOCK: [2025-02-09 Sun 09:36:49]--[2025-02-09 Sun 09:57:41] =>  00:20:52
-				  :END:
-					- I tried creating `apps/maxmsp-test/maxmsp-test.amxd` with a [[c74/max/obj/js]] as `js ./Code/Main.js`, and got `js: can't find file ./Code/Main.js`, even though `apps/maxmsp-test/Code/Main.js` exists
-						- I also tried `js Code/Main.js` which also did not work
-					- I wish there was a way to open [[c74/M4L/.amxd]] files ... there probably is because [[Person/Zack Steinkamp/blog/posts/2022-02-15-git-diff-amxd-max]] says ((67a8be1a-780f-4c61-82e5-c04cfae63cc6))
-						- I imagine it might be able to adjust the paths if I was able to adjust the .amxd directly ...
-					- #Discovered that if I go to [[c74/max/Menu/File/Show File Browser]] I'm taken to [[c74/max/File Browser]] window, which lets one create [[c74/max/Collections]] of files. interesting. I tried adding `apps/maxmsp-test/Code/Main.js` to the file paths, but got "no new files have been added to the search path" because the extension is invalid. So that probably won't work.
-				- DONE is there some way that the [[c74/M4L/.amxd]] could be extracted into [[json]], and then we could add the multiple file paths into the .amxd directly? see [[c74/M4L/.amxd/How To/Decompile .amxd into json]]
-				  collapsed:: true
-					- #Conclusion - while it **is** feasible to "decompile" the `.amxd` into `.json`, and this could conceivably help in actually versioning `.amxd` in git as `json` and treating `.amxd` as a compiled artifact using git hooks, I don't yet see a way that would help me add additional paths to the available search paths for the [[c74/max/obj/js]] obj.
-				- DOING try 2 - changing the [[Typescript/tsconfig]] compilation setting so that it compiles to the same directory as the [[c74/M4L/.amxd]] file, following the hint of [[GitHub/zsteinkamp/m4l-typescript-base]]
-				  :LOGBOOK:
-				  CLOCK: [2025-02-09 Sun 09:58:14]
-				  :END:
-					- DOING try just moving the .amxd file to be adjacent to the .js file, the way it's done in typescript base
-					  :LOGBOOK:
-					  CLOCK: [2025-02-09 Sun 10:32:23]
-					  :END:
-						- if I do that, I'm able to load the first javascript file
-							- ```js
-							  "use strict";
-							  var mylib = require("lib/@my-username-my-library/myLibrary_index.js");
-							  inlets = 1;
-							  outlets = 1;
-							  autowatch = 1;
-							  function bang() {
-							      post(mylib.greet() + "\n");
-							  }
-							  bang();
-							  // .ts files with this at the end become a script usable in a [js] or [jsui] object
-							  // If you are going to require your module instead of import it then you should comment
-							  // these two lines out of this script
-							  var module = {};
-							  module.exports = {};
-							  
-							  ```
-								- but I get an #Error when it tries to load this line 7 - `mylib.greet()` is not found.
-									- `js: Main.js: Javascript TypeError: mylib.greet is not a function, line 7`
-							- DONE How do relative imports work in [[GitHub/zsteinkamp/m4l-typescript-base]]? we're importing from utils there ... let me look at the compiled js artifacts #Question
-							  :LOGBOOK:
-							  CLOCK: [2025-02-09 Sun 10:34:42]--[2025-02-09 Sun 10:35:25] =>  00:00:43
-							  :END:
-								- it's doing `var utils_1 = require("./utils");`, where `utils.js` is in the same folder
-								- so they are both using `require` - I see [[c74/js/Ref/jsrequire]] has the docs for that.
-							- DOING it does NOT work **by default** to use require to access a file from another nested folder by default, for example, `var mylib = require("lib/@my-username-my-library/myLibrary_index.js");` even if that path is adjacent to [[c74/M4L/.amxd]] - is there a way to get around this with [[c74/max/Menu/Options/File Preferences]]? ANS: **YES**
-							  :LOGBOOK:
-							  CLOCK: [2025-02-09 Sun 10:51:21]
-							  :END:
-								- Yes, if I manually add the folder `apps/maxmsp-test/Code/lib/@my-username-my-library/`in file preferences, then I get the `Hello! Writing from typescript!` message. But that also means that any included libraries would also need to be manually added. That is less than ideal. But ... it works.
-						- #Conclusion
-							- I might be utilize a "monorepo" based approach to utilize typescript libraries in [[Ableton/Max for Live]], but it seems as though each library I create, I have to manually add it separately to the [[c74/max/Menu/Options/File Preferences]], unless ...
-								- there's some way in the [[c74/js]]
-					- ok, let's look carefully at how it's done there ...
 	- [[2025-02-08 Sat]]
 		- tried to get [[VSCode/Dev Container]] spec from [[GitHub/zsteinkamp/m4l-typescript-base]] working with [[GitHub/codekiln/alits]], which was created from [[GitHub/aptrn/maxmsp-ts-library-template]]
 			- #Error
