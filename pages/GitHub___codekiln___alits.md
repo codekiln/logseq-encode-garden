@@ -1,3 +1,4 @@
+- for the summary of the idea, see [[c74/M4L/Idea/Alits]]
 - Work Log
 	- [[2025-02-09 Sun]]
 		- DONE test if I'm able to utilize the library in [[c74/max/js]]
@@ -73,8 +74,8 @@
 							  be created from templates, and existing files can be added to projects.
 						- That is greyed out for me, though, perhaps because I didn't start my trial?
 						- #Discovered
-							- [Node for Max - Working with Projects, Devices and Standalones - Max 8 Documentation](https://docs.cycling74.com/legacy/max8/vignettes/03_n4m_projects_devices)
-								- In the Project Inspector disable the option "Keep Project Folder Organized":
+							- [[c74/max/obj/node.script/Ref/Node for Max]]
+								- In the Project Inspector **disable** the option "Keep Project Folder Organized" (**NOTE - NOT AS PICTURED, YOU NEED TO UNCHECK**)
 								- ![](https://cycling74-docs-production.nyc3.cdn.digitaloceanspaces.com/legacy/max8/images/91dc0c32258a0b131d2dde19281b62be.png)
 								- You can now close the Project Inspector. We will now use the `+` Button in the bottom left corner in order to add our main patcher to the project by choosing "Add New File…" and creating a Max Patcher called `n4m-bundler.main.maxpat`
 								- #Observation when I open the gear icon for [[c74/max/Project/Window]] I'm given the ability to choose between Project Inspector, Search Paths, Open Actions. When I do Search Paths, I can see a `project default` with path that includes has the `subfolders` checked. **I wonder if I could do this for max for live?**
@@ -185,9 +186,9 @@
 							  CLOCK: [2025-02-09 Sun 10:51:21]
 							  :END:
 								- Yes, if I manually add the folder `apps/maxmsp-test/Code/lib/@my-username-my-library/`in file preferences, then I get the `Hello! Writing from typescript!` message. But that also means that any included libraries would also need to be manually added. That is less than ideal. But ... it works.
-								-
-							-
-							-
+						- #Conclusion
+							- I might be utilize a "monorepo" based approach to utilize typescript libraries in [[Ableton/Max for Live]], but it seems as though each library I create, I have to manually add it separately to the [[c74/max/Menu/Options/File Preferences]], unless ...
+								- there's some way in the [[c74/js]]
 					- ok, let's look carefully at how it's done there ...
 	- [[2025-02-08 Sat]]
 		- tried to get [[VSCode/Dev Container]] spec from [[GitHub/zsteinkamp/m4l-typescript-base]] working with [[GitHub/codekiln/alits]], which was created from [[GitHub/aptrn/maxmsp-ts-library-template]]

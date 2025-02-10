@@ -1,0 +1,2 @@
+- [Node for Max API | Cycling '74 Documentation](https://docs.cycling74.com/apiref/nodeformax/)
+	- > Reference for the API exposed as "max-api" when running NodeJS applications using the [node.script] object. This API can be required using `const maxAPI = require("max-api");`
