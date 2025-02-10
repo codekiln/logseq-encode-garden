@@ -1,0 +1,2 @@
+- #Website [Simon Willison’s Weblog](https://simonwillison.net/)
+- One of the core developers that m

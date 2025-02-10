@@ -1,0 +1,2 @@
+- [astral-sh/uv: An extremely fast Python package and project manager, written in Rust.](https://github.com/astral-sh/uv)
+	- Recommended by [[Person/Simon Willison]]
