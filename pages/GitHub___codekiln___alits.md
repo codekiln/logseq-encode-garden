@@ -1,12 +1,93 @@
 - for the summary of the idea, see [[c74/M4L/Idea/Alits]]
 - Work Log
-	- DOING try creating a kebricide package within the apps dir of [[GitHub/aptrn/maxmsp-ts-library-template]]
+	- DOING create a kebricide package within the apps dir of [[GitHub/aptrn/maxmsp-ts-library-template]]
 	  :LOGBOOK:
 	  CLOCK: [2025-02-09 Sun 09:04:55]
 	  :END:
-		- [[2025-02-10 Mon]]
+		- [[2025-02-11 Tue]]
+			- ((67ab314c-1b42-4801-952b-47266a549059))
+				-
+			- ### DONE file [[GitHub/Issue]] to add `alits-core`
+			  :LOGBOOK:
+			  CLOCK: [2025-02-11 Tue 06:06:43]--[2025-02-11 Tue 06:15:44] =>  00:09:01
+			  :END:
+				- create `alits-core` package
+				- filed ((67ab314c-1b42-4801-952b-47266a549059))
+			- ### ((67ab1089-984e-4ec4-b361-9705b3f4baf3))
+			  collapsed:: true
+				- for some reason, in the merge request we are getting failures [pull maxmsp-ts into monorepo until original is compatible · codekiln/alits@db6dd08](https://github.com/codekiln/alits/actions/runs/13260403805/job/37015493541)
+					- key error
+						- `kebricide#build: command (/home/runner/work/alits/alits/apps/kebricide) /home/runner/setup-pnpm/node_modules/.bin/pnpm run build exited (254)`
+					- ```
+					  Run pnpm run build
+					  
+					  > alits-monorepo@ build /home/runner/work/alits/alits
+					  > turbo build
+					  
+					  • Packages in scope: @codekiln/maxmsp-ts, @my-username/my-library, kebricide, maxmsp-test
+					  • Running build in 4 packages
+					  • Remote caching disabled
+					  @codekiln/maxmsp-ts:build
+					  @my-username/my-library:build
+					  kebricide:build
+					  cache miss, executing dbfe99f6e1cd9d58
+					  
+					  > kebricide@0.0.1 build /home/runner/work/alits/alits/apps/kebricide
+					  > pnpm maxmsp build
+					  
+					  undefined
+					   ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL  Command "maxmsp" not found
+					   ELIFECYCLE  Command failed with exit code 254.
+					  Error:  command finished with error: command (/home/runner/work/alits/alits/apps/kebricide) /home/runner/setup-pnpm/node_modules/.bin/pnpm run build exited (254)
+					  maxmsp-test:build
+					  Error: kebricide#build: command (/home/runner/work/alits/alits/apps/kebricide) /home/runner/setup-pnpm/node_modules/.bin/pnpm run build exited (254)
+					   ERROR  run failed: command  exited (254)
+					  
+					   Tasks:    2 successful, 4 total
+					  Cached:    0 cached, 4 total
+					    Time:    3.321s 
+					  Failed:    kebricide#build
+					  
+					   ELIFECYCLE  Command failed with exit code 254.
+					  Error: Process completed with exit code 254.
+					  ```
+				- When I try to reproduce in the dev container, it looks like I have cached results ... I wonder what the right answer is for this?
+					- ```
+					  node ➜ /app (codekiln/issue20-pull-maxmsp-ts-into-monorepo-until-original-is-compatible) $ pnpm install
+					  ! Corepack is about to download https://registry.npmjs.org/pnpm/-/pnpm-10.2.1.tgz
+					  ? Do you want to continue? [Y/n] y
+					  
+					  Scope: all 5 workspace projects
+					  Lockfile is up to date, resolution step is skipped
+					  Already up to date
+					   EACCES  EACCES: permission denied, symlink '../../../apps/kebricide' -> '/app/node_modules/.pnpm/node_modules/kebricide'
+					  
+					  pnpm: EACCES: permission denied, symlink '../../../apps/kebricide' -> '/app/node_modules/.pnpm/node_modules/kebricide'
+					      at async Object.symlink (node:internal/fs/promises:1001:10)
+					      at async forceSymlink (/home/node/.cache/node/corepack/v1/pnpm/10.2.1/dist/pnpm.cjs:101363:9)
+					      at async symlinkHoistedDependency (/home/node/.cache/node/corepack/v1/pnpm/10.2.1/dist/pnpm.cjs:143563:9)
+					      at async Promise.all (index 0)
+					      at async /home/node/.cache/node/corepack/v1/pnpm/10.2.1/dist/pnpm.cjs:143554:9
+					      at async Promise.all (index 2)
+					      at async symlinkHoistedDependencies (/home/node/.cache/node/corepack/v1/pnpm/10.2.1/dist/pnpm.cjs:143540:7)
+					      at async hoist (/home/node/.cache/node/corepack/v1/pnpm/10.2.1/dist/pnpm.cjs:143416:7)
+					      at async headlessInstall (/home/node/.cache/node/corepack/v1/pnpm/10.2.1/dist/pnpm.cjs:149440:36)
+					      at async _install (/home/node/.cache/node/corepack/v1/pnpm/10.2.1/dist/pnpm.cjs:188646:33)
+					  ```
 			- ### ((67a9c525-8066-403a-adca-68083427b2d1))
-				- created [Max for Live compatibility - optionally compile js assets to root directory by codekiln · Pull Request #29 · aptrn/maxmsp-ts](https://github.com/aptrn/maxmsp-ts/pull/29/files) [[GitHub/MR]]
+			  collapsed:: true
+				- compilation is working
+				- DONE test in ableton
+				- DONE create MR
+			- ### DONE file [[GitHub/Issue]] pull maxmsp-ts into monorepo until original is compatible
+			  collapsed:: true
+			  :LOGBOOK:
+			  CLOCK: [2025-02-11 Tue 03:51:46]--[2025-02-11 Tue 03:54:05] =>  00:02:19
+			  :END:
+				- Until [Feature request: Max for Live compatibility - make it possible to compile all js assets to the root directory (not lib/) for use in Max for Live · Issue #28 · aptrn/maxmsp-ts](https://github.com/aptrn/maxmsp-ts/issues/28) issue is fixed or the MR [Max for Live compatibility - optionally compile js assets to root directory by codekiln · Pull Request #29 · aptrn/maxmsp-ts](https://github.com/aptrn/maxmsp-ts/pull/29/files) [[GitHub/MR]] is merged, pull [updated maxmsp-ts](https://github.com/codekiln/maxmsp-ts) into this monorepo.
+		- [[2025-02-10 Mon]]
+			- DONE create [[GitHub/MR]] to fix [Feature request: Max for Live compatibility - make it possible to compile all js assets to the root directory (not lib/) for use in Max for Live · Issue #28 · aptrn/maxmsp-ts](https://github.com/aptrn/maxmsp-ts/issues/28) - [Max for Live compatibility - optionally compile js assets to root directory by codekiln · Pull Request #29 · aptrn/maxmsp-ts](https://github.com/aptrn/maxmsp-ts/pull/29/files)
+			  id:: 67ab10fa-b600-4153-b294-73f523a85b7d
 			- ### DONE file [[GitHub/Issue]] dev container requires unusual setup
 			  collapsed:: true
 			  :LOGBOOK:
