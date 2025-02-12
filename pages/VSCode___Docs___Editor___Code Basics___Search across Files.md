@@ -1,0 +1,1 @@
+- https://code.visualstudio.com/docs/editor/codebasics#_search-and-replace

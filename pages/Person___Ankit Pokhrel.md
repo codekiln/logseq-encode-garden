@@ -1,0 +1,4 @@
+- #Blog #Medium https://medium.com/@ankitpokhrel
+	- [[Person/Ankit Pokhrel/Blog/21/09/Jira CLI Medium Blog Post]]
+		- [Jira CLI: The Missing Command-line Tool for Atlassian Jira | Medium](https://medium.com/@ankitpokhrel/introducing-jira-cli-the-missing-command-line-tool-for-atlassian-jira-fe44982cc1de)
+- [[GitHub/ankitpokhrel]] [ankitpokhrel (Ankit)](https://github.com/ankitpokhrel)

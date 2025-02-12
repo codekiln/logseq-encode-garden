@@ -1,12 +1,19 @@
 - for the summary of the idea, see [[c74/M4L/Idea/Alits]]
 - Work Log
-	- DOING create a kebricide package within the apps dir of [[GitHub/aptrn/maxmsp-ts-library-template]]
+	- ((67ab314c-1b42-4801-952b-47266a549059))
+		- [[2025-02-12 Wed]]
+			- [[CursorAI]]
+				- DONE add [[CursorAI/Project Rules/markdown-output]] to  project
+				  :LOGBOOK:
+				  CLOCK: [2025-02-12 Wed 04:32:42]--[2025-02-12 Wed 06:50:21] =>  02:17:39
+				  :END:
+					- Note, this is also in [[GitHub/codekiln/gist/markdown-output.mdc]] #[[GitHub/Gist]]
+	- DONE create a kebricide package within the apps dir of [[GitHub/aptrn/maxmsp-ts-library-template]]
+	  collapsed:: true
 	  :LOGBOOK:
-	  CLOCK: [2025-02-09 Sun 09:04:55]
+	  CLOCK: [2025-02-09 Sun 09:04:55]--[2025-02-12 Wed 03:41:49] =>  66:36:54
 	  :END:
 		- [[2025-02-11 Tue]]
-			- ((67ab314c-1b42-4801-952b-47266a549059))
-				-
 			- ### DONE file [[GitHub/Issue]] to add `alits-core`
 			  :LOGBOOK:
 			  CLOCK: [2025-02-11 Tue 06:06:43]--[2025-02-11 Tue 06:15:44] =>  00:09:01
@@ -234,6 +241,7 @@
 						- #Conclusion
 							- I might be utilize a "monorepo" based approach to utilize typescript libraries in [[Ableton/Max for Live]], but it seems as though each library I create, I have to manually add it separately to the [[c74/max/Menu/Options/File Preferences]], unless ...
 	- DONE test if I'm able to utilize the library in [[c74/max/js]]
+	  collapsed:: true
 		- [[2025-02-09 Sun]]
 			- DONE try using the built-in test functions from [[GitHub/aptrn/maxmsp-ts-library-template]] using [[GitHub/aptrn/maxmsp-ts-example]]
 			  collapsed:: true
@@ -318,6 +326,7 @@
 					- > The configuration file `maxmsp.config.json` determines which dependencies are included in the compiled output. The default `output_path` is `lib`, placed as a subdirectory of the `outDir` found in the `tsconfig.json` file.
 					-
 	- [[2025-02-08 Sat]]
+	  collapsed:: true
 		- tried to get [[VSCode/Dev Container]] spec from [[GitHub/zsteinkamp/m4l-typescript-base]] working with [[GitHub/codekiln/alits]], which was created from [[GitHub/aptrn/maxmsp-ts-library-template]]
 			- #Error
 				- Error from inside the dv container

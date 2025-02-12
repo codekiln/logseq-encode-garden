@@ -1,5 +1,6 @@
 description:: If you are outputting markdown, follow these rules
-globs:: *.md
+globs:: `*.md,*.mdc`
+link:: https://gist.github.com/codekiln/71f9497eaece99ba4d1c95b89d40b315
 
 - # Rules to follow when outputting markdown
 - It's important that there is only one level of triple-backtick fenced code blocks in markdown output.

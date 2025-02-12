@@ -1,0 +1,4 @@
+- [Basic editing - Find and Replace](https://code.visualstudio.com/docs/editor/codebasics#_find-and-replace) [[VSCode/Editor/Find and Replace]]
+	- VS Code allows you to quickly find text and replace in the currently opened file. Press ⌘F to open the Find Widget in the editor, search results will be highlighted in the editor, overview ruler and minimap.
+	- If there are more than one matched result in the current opened file, you can press Enter and ⇧Enter to navigate to next or previous result when the find input box is focused.
+	- By default, VS Code saves the history of your find and replace queries for a workspace and restores it across restarts. You can configure this behavior with the [](vscode://settings/editor.find.history)editor.find.history and [](vscode://settings/editor.find.replaceHistory)editor.find.replaceHistory settings. Set the value to `never` to disable saving the history.

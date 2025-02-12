@@ -1,0 +1,1 @@
+- https://github.com/ankitpokhrel/jira-cli
