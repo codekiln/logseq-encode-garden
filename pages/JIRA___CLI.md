@@ -11,6 +11,7 @@ created-by:: [[Person/Ankit Pokhrel]]
 			- **3 ways** to set your Jira API token
 				- **1 -** environment variable [[EnvVar]] - [[JIRA/CLI/EnvVar/JIRA_API_TOKEN]]
 				- **2 -**[[dotfiles/.netrc]]
+					- **NOTE** - see my [bug report here as the docs are not clear here](https://github.com/ankitpokhrel/jira-cli/issues/822#issuecomment-2654317981)
 				- **3 -** [[MacOS/Keychain]] password manager
 	- ### Installation problem
 		- [jira init received unexpected response 401 unauthorized from jira cloud behind SSO - Unable to generate configuration: invalid character '<' looking for beginning of value · Issue #822 · ankitpokhrel/jira-cli](https://github.com/ankitpokhrel/jira-cli/issues/822) [[GitHub/Issue/My]]
