@@ -12,6 +12,7 @@ created-by:: [[Person/Ankit Pokhrel]]
 				- **1 -** environment variable [[EnvVar]] - [[JIRA/CLI/EnvVar/JIRA_API_TOKEN]]
 				- **2 -**[[dotfiles/.netrc]]
 				- **3 -** [[MacOS/Keychain]] password manager
-	-
+	- ### Installation problem
+		- [jira init received unexpected response 401 unauthorized from jira cloud behind SSO - Unable to generate configuration: invalid character '<' looking for beginning of value · Issue #822 · ankitpokhrel/jira-cli](https://github.com/ankitpokhrel/jira-cli/issues/822) [[GitHub/Issue/My]]
 - ## [[JIRA/CLI/Commands]] - see [here](https://github.com/ankitpokhrel/jira-cli?tab=readme-ov-file#commands)
 	-
