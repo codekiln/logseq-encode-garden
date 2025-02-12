@@ -10,7 +10,7 @@ created-by:: [[Person/Ankit Pokhrel]]
 		- [What are different ways of setting the Jira API token? · ankitpokhrel/jira-cli · Discussion #356](https://github.com/ankitpokhrel/jira-cli/discussions/356)
 			- **3 ways** to set your Jira API token
 				- **1 -** environment variable [[EnvVar]] - [[JIRA/CLI/EnvVar/JIRA_API_TOKEN]]
-				- **2 - **[[dotfiles/.netrc]]
-				- keychain password manager
+				- **2 -**[[dotfiles/.netrc]]
+				- **3 -** keychain password manager
 - ## [[JIRA/CLI/Commands]] - see [here](https://github.com/ankitpokhrel/jira-cli?tab=readme-ov-file#commands)
 	-
