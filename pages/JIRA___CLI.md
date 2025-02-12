@@ -11,6 +11,6 @@ created-by:: [[Person/Ankit Pokhrel]]
 			- **3 ways** to set your Jira API token
 				- **1 -** environment variable [[EnvVar]] - [[JIRA/CLI/EnvVar/JIRA_API_TOKEN]]
 				- **2 -**[[dotfiles/.netrc]]
-				- **3 -** keychain password manager
+				- **3 -** [[MacOS/Keychain]] password manager
 - ## [[JIRA/CLI/Commands]] - see [here](https://github.com/ankitpokhrel/jira-cli?tab=readme-ov-file#commands)
 	-
