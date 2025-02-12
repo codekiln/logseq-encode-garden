@@ -1,0 +1,1 @@
+- [atlascode/scripts/prepare-commit-jira.sh at main · atlassian/atlascode](https://github.com/atlassian/atlascode/blob/main/scripts/prepare-commit-jira.sh)
