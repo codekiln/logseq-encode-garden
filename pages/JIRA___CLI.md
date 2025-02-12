@@ -1,7 +1,7 @@
 created-by:: [[Person/Ankit Pokhrel]]
 
 - [[GitHub/ankitpokhrel/jira-cli]] defines a JIRA #CLI that's influenced by [[GitHub/CLI]].
-	-
+	- It's written in [[Programming/Language/Go]]
 - ## Jira Cli Installation
 	- One of the available installation targets is using [[Docker]]
 		- `docker run -it --rm ghcr.io/ankitpokhrel/jira-cli:latest`
