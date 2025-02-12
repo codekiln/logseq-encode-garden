@@ -1,1 +1,2 @@
 - [atlascode/scripts/prepare-commit-jira.sh at main · atlassian/atlascode](https://github.com/atlassian/atlascode/blob/main/scripts/prepare-commit-jira.sh)
+- git prepare-commit-msg hook for automatically prepending an issue key from the start of the current branch name to commit messages.
