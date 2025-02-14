@@ -1,0 +1,6 @@
+tags:: [[Markdown]], [[Programming/Language/Go]], [[Go/Library]]
+
+- [[GitHub/charmbracelet/glamour]]
+	- [charmbracelet/glamour: Stylesheet-based markdown rendering for your CLI apps 💇🏻‍♀️](https://github.com/charmbracelet/glamour)
+	- ![beautiful markdown rendering for CLI apps](https://private-user-images.githubusercontent.com/25087/361524878-ec2ead40-c467-48cc-b6a8-f0f13709eeab.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mzk1MjU2MjEsIm5iZiI6MTczOTUyNTMyMSwicGF0aCI6Ii8yNTA4Ny8zNjE1MjQ4NzgtZWMyZWFkNDAtYzQ2Ny00OGNjLWI2YTgtZjBmMTM3MDllZWFiLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAyMTQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMjE0VDA5Mjg0MVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRlOWYwMmIyZjUwNjkwMTgxMzU2YzdkODY5MzIwZmRhOTM2M2FlMjMzMjNhMzZjNGExOWQyODE0ZDFkMDY3MDgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.11p7gUn2yPebjy_FGlC53UYTJctw0VDucBM4jtsxAow)
+	- Used by [[GitHub/CLI/gh]] and [[Gitlab/CLI/glab]]

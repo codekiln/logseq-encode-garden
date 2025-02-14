@@ -1,0 +1,11 @@
+- [[CursorAI/Forum/User/dougwithseismic]]
+	- Knows a lot about where [[CursorAI/Notepad]]s
+- #Resume https://withseismic.com/cv/Doug_Silkstone__Senior_Full-stack_Engineer._.pdf
+- [[LinkedIn/dougsilkstone]]
+	- #Blog has a lot about [[CursorAI]]
+		- [Activity | Doug Silkstone | LinkedIn](https://www.linkedin.com/in/dougsilkstone/recent-activity/all/)
+- [[YouTube/@dougsilkstone]] [Doug Silkstone - Practical AI & Automation - YouTube](https://www.youtube.com/@dougsilkstone)
+- [[GitHub/dougwithseismic]]
+	- [[GitHub/dougwithseismic/cursor-tools]]
+		- [dougwithseismic/cursor-tools: building tools with cursor to make cursor faster so I can ubuild tools to be faster at making cursor fast](https://github.com/dougwithseismic/cursor-tools)
+			- [cursor-tools/docs/articles/cursor-notepads-deep-dive.md at main · dougwithseismic/cursor-tools](https://github.com/dougwithseismic/cursor-tools/blob/main/docs/articles/cursor-notepads-deep-dive.md)

@@ -1,6 +1,6 @@
 - #Website: [any blockers?](https://anyblockers.com/) #Blog
 	- [[Person/Eric Zakariasson/Blog/24/10/18 observations from using Cusor]]
-- [[TwitX]]: https://x.com/ericzakariasson
+- [[TwitX/ericzakariasson]]: https://x.com/ericzakariasson
 - #Company - [[CursorAI]]
 	- moderator at [[CursorAI/Forum]]
 - [[GitHub/ericzakariasson]]

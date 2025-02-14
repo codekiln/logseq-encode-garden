@@ -1,0 +1,5 @@
+- [[CursorAI/Forum/User/bmadcode]]
+	- [[CursorAI/Forum/24/02/Composer Agent Refined Workflow - Detailed Instructions and Example Repo for Practice]]
+- [[GitHub/bmadcode]]
+	- [[GitHub/bmadcode/cursor-xml-rules-trial]]
+	-

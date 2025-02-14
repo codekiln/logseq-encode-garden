@@ -1,0 +1,1 @@
+- [Summary - dougwithseismic - Cursor - Community Forum](https://forum.cursor.com/u/dougwithseismic/summary)

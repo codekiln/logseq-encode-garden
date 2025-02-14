@@ -1,0 +1,6 @@
+created-by:: [[Person/Brian Madison]]
+
+- [bmadcode/hak-news-aiadd-1](https://github.com/bmadcode/hak-news-aiadd-1)
+- # HakNews AIADD V1 - Code Kata for Agentic Driven Development: AI-Powered Hacker News Digest Service
+	- This repository remains a valuable reference for the AIADD (**Ai Agentic Driven Development** - AKA BMad Workflow) and serves as a foundation for the optimized V2.0 implementation. For it to function, ensure you have the cursor option on to use .cursorrules file in the root of the project, or add the bulk of it to your cursor settings.
+	- You can view a .ai folder that has the prd. that drove the AI to produce each story in that folder and implement them each 1 at a time. Each numbered story is only created in that folder by the AI after the previous we agree is complete. This magic happens due to the .cursorrules file in the root of the project. The current best model in cursor for this is Claude 3.5 Sonnet. Others are still to wonky to reliable create and modify the story md files against the proper template, and also just generally do not follow our agreed upon working model.
