@@ -1,9 +1,8 @@
-- #Website [Switch Dimension AI](https://www.switchdimension.com/) [[switchdimension]]
+- [[Person/Rob Shocks/Website]]
 	- He runs a paid [[CursorAI]] #Course https://www.switchdimension.com/courses/cursor-ai
-	-
-- [[TwitX/robshocks]] https://x.com/robshocks
-- [[GitHub/robshox]] https://github.com/robshox
-- [[YouTube/@robshocks]]
+- [[Person/Rob Shocks/TwitX]]
+- [[Person/Rob Shocks/GitHub]]
+- [[Person/Rob Shocks/YouTube]]
 - [[Country/Ireland]]
 - [[Notion]] notes on [[CursorAI]]
 	- [Rob Shocks - Build with AI Resources](https://notes.switchdimension.com/Build-With-AI-Resources-18cb5b07a9438046a0d7d2824237ed20)

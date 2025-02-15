@@ -160,6 +160,7 @@ tags:: [[CursorAI/Project Rules]]
 			- we installed all these install additional packages
 			- and then remember in our rules file I have this little reminder to say `hey! don't forget to commit!`
 			- [[CursorAI/Technique/Project Rules/Remind User To Commit]]
+				- See also [Best Practice for Cursor Commits - How To - Cursor - Community Forum](https://forum.cursor.com/t/best-practice-for-cursor-commits/45861)
 				- [[Key Insight]]
 					- *you can create a [[CursorAI/Project Rules]] entry that includes a git commit command, which is both faster and more customizable than using the built-in UI, but you need to be careful when staging files for a commit*
 				- because that's something I always do when I'm working with AI so if I go up here
