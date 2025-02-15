@@ -39,9 +39,38 @@
 				- you have a choice you can either give the full URL or you can {{youtube-timestamp 365}} just give a relative path in this case
 				- because we're using [[localhost]] I'm doing it here
 				- if you wanted to do this on like a preview Branch or staging like you could change this right it's nice thing about this you can really customize this as much as you want um and then the way I have this set up is because I couldn't really figure out how to send um you know the a binary over to cursor and have it uh included I'm not sure if that's possible or not if it is that'd be great um so I kind of cheated and basically said hey cursor agent you just find tell me where you want me to save this screenshot and I'll just save it there um so then you can basically look at it in your repo you can drag it
-		- {{youtube-timestamp 400}} into the agent if you want to uh make changes but it's kind of a neat way to just kind of um see some of these screenshots directly um I've got an architect so again if you saw my last video um I did a lot of work of you know concatenating all my files and I had the whole repo and then I wrote a description of the task and I had all these XML bags and I sent that off to you know 03 mini or a really smart reasoning model to get back the plan um this is absolutely a best practice to get the most out of um the cursor agent I find this works really well but it's a pain to do all that so this tool is kind of does that automatically which is pretty neat it's not quite as effective as from what I
-		- {{youtube-timestamp 439}} found but um it's a really really good starting point and I think you could um iterate on that this last one is just a little trick from my buddy who uh was uh playing around this weekend and and had been doing some get diffs and uh adding that to the end of his um you know cursor agent uh calls and and before he actually you know does a commit uh or or a pushup to um to the actual GitHub just runs a quick G diff ask the agent to look at it review it give them any uh fixes um kind of a neat approach you know I actually I think this might be built in I actually don't use a lot of the get commands directly through cursor so correct me if I'm wrong here um but uh kind of a neat neat thing here anyway
-		- {{youtube-timestamp 481}} so then we do all that stuff um very simple here we're just calling in the request get some pams to figure out what tool we need to run um you know we start this thing here again this is standard stuff I didn't write any of this uh this is from the docs um and I I won't worry too much about this but it just works okay um and then the the tools themselves are pretty straightforward uh we'll start with the screenshot tool um so basically uh you know we're we're using Puppeteer we Just Launch the browser we go to the page we take a screenshot and uh we write it to this uh whatever that file path is okay and then here's the interesting thing thing is is we return this back and then this is
+		- {{youtube-timestamp 400}} into the agent if you want to uh make changes
+			- it's kind of a neat way to see some of these screenshots directly
+			- I've got an architect so again
+			- if you saw my last video
+			- I did a lot of work
+				- concatenating all my files
+				- I had the whole repo
+				- I wrote a description of the task
+				- I had all these [[XML]] tags
+					- I sent that off to you know [[OpenAI/Model/o3/Mini]] a really smart reasoning model
+					- to get back the plan
+					- this is **absolutely a best practice** to get the most out of the cursor agent
+					- I find this works **really well**
+						- but it's **a pain** to do all that
+						- so this tool **does that automatically**
+						- which is pretty neat
+						- it's *not quite as effective* as from what I {{youtube-timestamp 439}} found
+						- but ... it's a really really good starting point
+							- and I think you could iterate on that
+				- this last one is just a little trick from my buddy
+				- [[git/diff]]s
+					- he had been adding that to the end of his cursor agent calls
+					- before he actually you know does a commit or a push {{youtube-timestamp 459}}
+					- up to the actual GitHub repo, just runs a quick `git diff` and asks the agent to review it
+						- give them any fixes
+						- kind of a neat approach
+						- you know *I actually I think this might be built*
+							- I actually *don't use a lot of the `git` commands directly through cursor*
+							- so correct me if I'm wrong here
+		- {{youtube-timestamp 481}} so then we do all that stuff
+		- very simple here
+		- we're just calling in the request get some params to figure out what tool we need to run um you know we start this thing here again this is standard stuff I didn't write any of this uh this is from the docs um and I I won't worry too much about this but it just works okay um and then the the tools themselves are pretty straightforward uh we'll start with the screenshot tool um so basically uh you know we're we're using Puppeteer we Just Launch the browser we go to the page we take a screenshot and uh we write it to this uh whatever that file path is okay and then here's the interesting thing thing is is we return this back and then this is
 		- {{youtube-timestamp 521}} basically another prompt that you were giving to the agent right so we're telling it hey we saved the screenshot here um but before you continue ask the user to drag and drop that into the agent window again this is kind of a hack because I couldn't actually get it in there um but you'll see here the agent you know you know should kind of say Hey Kevin do you want to pull this in and and talk about it was cool right uh you could say whatever you want it uh you could say never say that you whatever you want um just kind of helps guide the agent uh again this code review um this is very simple uh what do we have here you know we're just doing a ex you know executing this this command
 		- {{youtube-timestamp 561}} G Command right uh no big deal but then um as the instructions we're basically saying review this diff and then if you find any issues just fix it okay no big deal um so pretty cool and then the architect I think this is where you start to get into what I think could be a really really interesting use case this is an area I want to explore more um I might do another video um if I go deep on this um for those who don't know actually I maintain uh an open source coding agent I've been working on it for about a year now um full-time on and off um still work in progress still some interesting things there cursor you know is doing a really great job uh with their and their whole approach um but
 		- {{youtube-timestamp 601}} there's some interesting ideas in that in that repo and I want to start to pull some of those in and kind of use the best of the ideas I have from my uh repo uh and merge them with the excellent tools um that that uh we offer here uh or the cursor offers so again you can start to do very detailed prompts here this one's fairly straightforward um but you could really go deep here and make this um a really uh intricate prompt um but the cool thing here we can actually just call out um to 03 mini you can call it 01 whatever model you want uh do an open source thing whatever you want um and you know basically return that back uh and basically the The Prompt here is all about um expert software architect
