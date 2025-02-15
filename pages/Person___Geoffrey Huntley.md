@@ -1,0 +1,5 @@
+- #Website - [Geoffrey Huntley](https://ghuntley.com/)
+	- principal developer advocate. A software engineer and DevOps engineer with a "Jack-of-All-Trades" background
+	- #Blog
+		- [[Person/Geoffrey Huntley/Blog/25/02/You are using Cursor AI incorrectly...]]
+-

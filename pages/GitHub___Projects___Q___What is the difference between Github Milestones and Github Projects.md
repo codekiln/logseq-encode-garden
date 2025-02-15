@@ -1,0 +1,3 @@
+- [[StackOverflow/16/09/What is the diff between Github Projects and Github Milestones]]
+	- [[GitHub/Milestones]] are about [[Release/Management]] and are more for [[Scrum]]. They deal with concrete deadlines. Each issue can be a part of at most one milestone, while a single issue may appear in many [[GitHub/Projects]].
+	- [[GitHub/Projects]] are about [[Kanban]]. They are more of a "going concern," and can even span multiple [[GitHub/Repo]]s. Projects can contain *Notes* that can be converted to issues, so as to prevent spamming the issue tracker with nascent ideas.

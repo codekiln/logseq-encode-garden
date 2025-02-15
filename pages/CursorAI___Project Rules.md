@@ -1,2 +1,3 @@
--
+alias:: [[CursorAI/.cursor/rules]]
+
 -

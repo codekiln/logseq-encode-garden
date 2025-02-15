@@ -1,0 +1,188 @@
+date-created:: [[2025-02-06 Thu]]
+created-by:: [[Person/Rob Shocks]]
+tags:: [[CursorAI/Project Rules]]
+
+- # DONE [Master Cursor AI App Development With These Simple Rules! - YouTube](https://www.youtube.com/watch?v=BtDxvAGhrjg)
+	-
+	- {{video https://www.youtube.com/watch?v=BtDxvAGhrjg}}
+		- {{youtube-timestamp 40}} all that into account and that's essentially what rules are
+		- so in this video I'm going to take you through how to use rules from start to finish with cursor AI I'm going to talk about the new rules system that was launched with cursor
+		- [[CursorAI/Project Rules]]
+			- only in the last couple of days I've gone through loads of Reddit posts and cursor forum and I've been experimenting with it myself for the last couple of days trying to see what works and what doesn't and I've got a great resource for you which I shared you in the course of the video which is going to help you get started super fast in your AI development Journey all this and more let's go so cursor AI basically allows you to influence how the AI operates and
+			- {{youtube-timestamp 81}} how it writes code and we do this with either a global rule that works across everything you do in cursor
+				- or via project rules that are specific to each project that you create so this is really powerful because it helps nudge the large language model in the right direction based on your experience and the collective experience of others so it allows you to create components in a particular way
+				- adhere to style guides maybe
+					- always use Tailwind you have
+					- installation preferences
+					- reminding you to commit
+					- these are all little rules that can be applied and
+			- you can crowdsource rules from the rest of the community based on their experience so they're actually really powerful
+			- we've had rules for a while in {{youtube-timestamp 125}} the form of a DOT cursor rules file in cursor and in [[Windsurf]] they're called **Memories**
+			- One cool feature of wind surf is that it actually pays attention to remarks and changes that you make and it updates that memory itself so we're having a chat with cursor about what it is that we want to build and it's basically taking that into account alongside what our code base is and then also what's in our rules file
+			- and then it's going to package all that up and summarize it
+			- and then send it over to the llm and the llm is going to send it all the way back here again so all this gets implemented
+		- {{youtube-timestamp 168}} my community switch dimension. where you can learn a whole lot more okay so if you go to the settings up here in cursor settings what we have here is in general we have
+		- [[CursorAI/Rules for AI]]
+			- rules for AI so basically anything you apply or enter in here is going to happen for every single project that you work on every time you open a cursor window folder instance workspace it is going to apply these same rules
+			- so you don't want those to be specific to any particular languages
+			- you want them to be very high level and general
+			- and that's important if you start putting in granular rules here uh you might forget that they're being applied because it doesn't necessarily tell you
+			- okay so I just have one rule in here for now to {{youtube-timestamp 213}} keep it simple and it's [[git/commit/message]]s
+				- **so basically when you finish applying changes the last line of the message should read don't forget to commit and give me a commit command as well** and then
+				- **always prefix commit messages in the following way no exceptions**
+				- {{youtube-timestamp 239}}
+				- and these are basically how I like to structure my commit messages I find that the default way that cursor does this is a little bit verbose and because of the frequency with which I like to commit when I'm working with AI I
+				- just like them a little bit shorter and specific so that's the other thing when you are working with AI you can't rely on the checkpoints features or the other ways of saving you need to be committing constantly in case something goes wrong
+				- {{youtube-timestamp 257}} or the model decides to overwrite half your code base you need to be constantly committing so you can step back in time so if you don't know what committing is it's just basically like a a versioning system for saving all your files we also have this little checkbox here which says
+		- [[CursorAI/.cursorrules]]
+			- include cursor rules files so that's this little file over here to create it all you do is you type in dot cursor rules and that's it it's just basically you can it's a basic file that you can add in in markdown or or Json or anything you want all the rules that you want to have applied
+			- but the caveat is here it's being **deprecated** deprecated means that it's in in the next couple of versions of cursor won't be used anymore
+			- {{youtube-timestamp 301}} or the ability to use it will switch off in favor of this new cursor rules folder system that we're going to talk about now in a second
+		- [[CursorAI/Project Rules]]
+			- {{youtube-timestamp 326}}
+			- so if we scroll down here still in general we have what we call Project rules so these are specific rules that help AI understand your co-base and follow your Project's conventions um so here's a couple of sample ones that I have here that I'm going to take you through and uh this is how you basically add a new one here
+			- these rules are constantly synced with your code base but it is important to remember and I've had this happen a few times need
+			- you need to know where syncing happens so if you go to **Features** here and you scroll down what we have here is our codebase indexing
+			- so if {{youtube-timestamp 347}} you've made some changes to your rules or you've added new ones in there's no harm in just hitting this little resync button here
+			- {{youtube-timestamp 360}} what that will do is make sure that it's synced and up to date this is happening constantly but just just to be sure
+			- **I've often been in scenarios where I've been working on a rules file it wouldn't work for me couldn't figure it out it was just that it codebase hadn't been indexed**
+			- and when you click on that you'll actually see any new files show up here that are being added to the index so important to do that when you're working on files if you're having any errors it's a little gotcha that I found
+		- so back again to the rules and the specific project rules so {{youtube-timestamp 386}}
+		- {{youtube-timestamp 393}} if I want to so if I want to create a new r it's fairly self-explanatory I just add a new rule and I click that here so click that it's going to give me the ability to enter a name
+			- I'm just going to give you an example of one I've set up earlier on so
+			- this is a super simple example rule just for you to test out to see that it's working for you
+			- what I've done is I've called it **create component** and I believe **the naming convention is important**
+				- you need to think about it **from a human perspective** and also **from an AI perspective**
+				- the AI is going to be used some kind of [[AI/RAG]] to read through and chunk everything that's in the index and if it is relevant to the {{youtube-timestamp 427}} instruction that it's carrying out it's going to pull that in so context is probably a good thing here
+			- so I've named this create component and in the description I basically said create new component refactor a component or update a component I want this rule to be taken into account in that scenario um is this the best way to do this I'm not sure sure these rules are brand new
+			- there's no documentation on them cursor you make a fantastic tool but man you're **terrible at documentation** need to sort that out cursor come on
+			- so anyway this is my approach to it and what what has worked for me
+			- it's adding in **create new component**, **refactor component**, **update component**
+			- and then over here we have {{youtube-timestamp 471}} something called [[CursorAI/Project Rules/Glob]]s
+				- so what this is is it allows you to specify um a particular file pattern this essentially means in the source directory then deeper in the app directory and these are little wildcards or Stars they say all the folders in the app directory and then deeper than that it's all the files within those folders you can have it here as TSX or py depending on what files that you want to work on watching those patterns this has been kind of Hit and Miss for me as I've been testing it out I'm looking forward to some more insight from cursor on exactly how to go about using this so what I'm saying here is prefix all component names with HAL 9000 so first of all naming our component you want to {{youtube-timestamp 518}} make the name as semantic and descriptive as possible think about um a large language model who wants to know the context of when they use this
+				- so in this case **anytime a component is created I want this to be taken into a account**
+					- and here in the description what I have is basically I'm saying **whenever something is created refactored are updated as a component** I want this to be taken into account
+					- not sure yet if this is the best practice
+					- but this **seems to be working really well for me** after some testing
+					- I'm sure we'll get more information on this as the weeks go goes on
+				- [[Person/Rob Shocks/Build with AI Resources]]
+					- and what I've got for you is a live resource on the [[switchdimension]] website which I'll update as I learn more so {{youtube-timestamp 560}} even if you're watching this video two or three months into the future I'll have kept that updated with all the uh up-to-date knowledge
+					- hopefully some contributions from the community as well
+					- so here then we have the bulk of our message that we're sending
+					- so this is kind of what you would have placed in the rules file and this is kind of like the header you would have put in the rules file so what we're seeing here is
+					- "prefix all component names with HAL 9000"
+					- I'm adding in some examples and then I've got this little rule at the end here that says prefix the chat message response with **Rule** and then we're going to pull in the **rule name** up here so that the user knows that this rule is {{youtube-timestamp 602}} being applied
+					- so I found actually **in composer and chat cursor does a great job of telling you when the rule is being applied**
+						- *but* I like to know as a backup and this is good for just knowing that things are being kept um in context
+				- when you create a new rule or add a new rule they're going to appear in [[CursorAI/.cursor/rules]]
+					- and it replaces the dot cursor rules so if we open this
+						- we can see different rules here that I've created
+					- so if we take a look we have the install Shad Cen so essentially I have this bug bear where every time I'm
+		- {{youtube-timestamp 646}} installing [[shadcn]] on a project or or adding new components [[Anthropic/Model/Claude/3.5]] doesn't have training knowledge as of the cut off date of when [[shadcn]] deprecated their [[CLI]] basically Claude tends to always use the wrong setup command for shadcn
+			- and it goes into a bit of a loop and uh it causes issues for a lot of beginners in particular
+			- so we're just reminding it here that we should always use [[npx]] install [[shadcn]] and I'm saying that when you're installing Shaden and then it's when installing Shaden or adding Shad CN components that's important to be fired and I don't have any [[CursorAI/Project Rules/Glob]]s in place there **because I want that to be Universal**
+		- and then the last one here is basically a more advanced file that I {{youtube-timestamp 694}} would use for **setting up a new project**
+			- so some little tips on prompting
+			- so getting it to **work sequentially through instructions** seems to work very well
+				- you could do little things like check for things in advance before you run them
+				- or have other kind of tests that you want to run so
+				- [[CursorAI/Technique/Project Rules/Dump in Specific Code to be run]]
+					- you can also just **dump in** {{youtube-timestamp 710}} **specific code** [into the project rule] that you need to be run
+						- *I tend to try not to do this too often often*
+							- because the power of using AI or a large language model is that **you're giving it autonomy** to work on the project
+							- and generally **a rule should only be applied or set up when you're trying to correct how it works** or it's **not** doing something the way that you want to there's one
+		- {{youtube-timestamp 739}} particular company called [[copycoder]] I want to give them a shout out
+			- now **it is a paid service**
+			- **in no way I I affiliate with these guys**
+			- it's about 15 Euros to use it for a month
+			- they have a great service
+			- you take a **screenshot of a website and then dump it in and it will provide kind of an AI build file**
+			- something similar to this [Project Rule] which will help you create {{youtube-timestamp 766}} the start of an [[nextjs]] project
+				- so I thought that was pretty cool
+		- and um they've done some good work on that
+		- so this little build file here what's happening is it's creating a new [[nextjs]] application with all the defaults
+		- but then what happens is when you've got cursor rules in your folder *already* it
+			- {{youtube-timestamp 783}} won't let you create a [[nextjs]] folder so it creates a temporary folder that you can copy back that and it will copy it all back into so you're so you're good to go
+				- DONE #Question what is this about? What's the problem? **ANS**: it is because the commands `npx create-next-app` create a whole subfolder, which overwrites the cursor rules directory, so instead, we create it in a temp folder and copy it back
+		- [[CursorAI/Technique/Open Project in the Right Folder]]
+			- {{youtube-timestamp 793}} one thing that a lot of people fall down on when they're creating new projects is
+				- once you've got cursor set up and you open a new project
+				- and you've created a new project
+				- you need to go to [[VSCode/Menu/File]] file and you need to open that folder
+				- so that so that cursor or vs code or whatever it is is can reset itself and set itself up so that it's working with the root of the file tree that you're going to be working with
+				- and the **AI needs this to have a context for where it is**
+				- **if you're a folder structure down or in a different place it's going to get confused** so always
+					- TODO #Question what is he talking about? is he saying that if you have your `.cursor/rules` in the root of the repository, but you have a monorepo-like structure and you open up the subfolder, then Cursor can't find the [[CursorAI/.cursor/rules]]?
+			- {{youtube-timestamp 825}} make sure to file and open in the right folder that's **really critical**
+		- okay and we have a few other commands here like uh
+			- installing Lucid React Icons
+			- and some Sonner Toast
+			- I'm just trying to give you the principles of how you can work with rules
+		- so let's give it a go I'm going to close each one of these down and
+		- then we have basically a fresh folder
+		- we're going to delete our old [[CursorAI/.cursorrules]] you were great we loved you it's time to go and he's gone
+		- so to open our AI Pane and how we work with AI we've got this little window over here just a reminder you've got the chat window where you {{youtube-timestamp 867}} generally have a conversation about your Codebase and plan your next move
+			- and then in composer that's the agent that we talk to when we actually want to get stuff built
+			- {{youtube-timestamp 877}} we're going to see if this gets invoked and
+			- there's we have a clean directory here with these files in installed
+			- and just so you understand what we're doing here
+			- you can **only install nextjs in a clean folder** so **because we've got cursor rules in here that I want to invoke uh that's not going to work** so this of course is just a bit complicated we could just use a build file I could just run a couple of commands by typing them in arguably it's a whole lot faster really what I'm trying to do here is just give you the {{youtube-timestamp 901}} **idea of how this could be used**
+			- what this might work for is like let's say the rule is let's add [[Prisma]] to the project let's add clerk authentication let's add drizzle whatever it is that you want to add and you want to do it in a specific way making sure it's paying attention to specific documents using a particular framework
+			- you could add all those rules in here and have them invoked uh if you if you get what I mean
+		- ## Summary thus far
+			- he's created a rather long [[CursorAI/Project Rules]] document for starting a *new* [[nextjs]] app with [[shadcn]]. Essentially, it's a bit like using a [[GitHub/Repo/Template]] or using [[Python Copier]], but here it's instructions for the AI to do the same. It's essentially a "soft" install script, sort of similar to what you might find in a README.md in the root of a repo.
+			- It includes lots of commands, but they are versioned controlled at a particular state.
+			- In this case, it's NOT a good example of the type of project rule you'd want committed to your project repo, but is instead a rule you might want to bring in so that you can start up your project
+		- ## Starting to use the rules
+			- {{youtube-timestamp 926}} I can just use my voice control
+				- TODO #Observation - he's using some kind of [[Tool/Dictation]] ... which one? #Question
+			- and say "I want to install nextjs in this directory" okay so you see that it's picked up so you'll see that it's actually picked up on it it
+				- I didn't invoke it in any way it just knew that nextjs was what I was asking about even {{youtube-timestamp 945}} though the dictation got it wrong the model will get the context
+				- it's giving me a citation of my rule here
+				- it's going to the directory to check if the package Json is attached which it is we've said it is here
+				- and then it's said great there's no package file so we can proceed with the installation
+				- so we just hit run command
+					- and you'll see up here this little temp directory is created
+				- if we just pop that open we'll see what happens so I've said no now we're installing dependencies
+				- so what's happening here is it's pulling down packages from um the the registry
+				- so basically if you've ever worked with python when you're working with typescript or JavaScript  anything got to do with node all these these {{youtube-timestamp 989}} packages that you're used to for pip or anything they're all stored in the cloud in a registry
+				- and then we could pull them all down so you can see that's all being created there in the temporary directory
+				- and now it's saying let's initialize [[shadcn]] and Hallelujah! for the first time it's actually understanding that it needs to use shadcn at latest init instead of using Shad CN UI which is the older version of the client and if you watch the channel at all something we run into quite a bit it
+				- actually throws a lot of beginners off that are trying to work with nextjs in AI trying to figure out why isn't installing these components the right way so I have a little cursor {{youtube-timestamp 1030}} rule up here now that fixed that problem
+				- so let's run that command so again **that's the power of a cursor rule** the **model has a cutout date or a context where it doesn't know the right command to use but we're just reminding it**
+				- now it's saying finally let's install [[Lucid React Icons]] and [[sonner]] toast
+					- so Lucid react icons is just a way that we can style our project really quickly with some nice visual icons
+						- it always gives that little professional touch
+					- sonner toast is when you have any kind of notification or action that happens in your application, those things pop up
+					- so those are the kind of defaults that I use when I'm starting any nextjs project
+		- {{youtube-timestamp 1085}}
+			- so it's saying great I've completed the nextjs installation
+			- we installed all these install additional packages
+			- and then remember in our rules file I have this little reminder to say `hey! don't forget to commit!`
+			- [[CursorAI/Technique/Project Rules/Remind User To Commit]]
+				- [[Key Insight]]
+					- *you can create a [[CursorAI/Project Rules]] entry that includes a git commit command, which is both faster and more customizable than using the built-in UI, but you need to be careful when staging files for a commit*
+				- because that's something I always do when I'm working with AI so if I go up here
+				- and we look at our project
+				- we've got all these new files that have been added
+				- we had the initial commit that was done a automatically
+				- and then we've got all these extra changes that with the new {{youtube-timestamp 1112}} components
+				- so what I normally do is I'll check each one of those and I'll just add them in to be staged to get ready to be committed
+				- and then I can press this little button here and it generates a commit message for me
+				- but I find it sometimes a little bit faster [to use the `git commit` command included in the suggested agent commands]
+				- you always want to make sure that your [[EnvVar/.env]] file is not included via [[git/.gitignore]]
+				- but what I'm just going to do is run this here
+				- you'll see that this will take care of the commit for me
+			- we {{youtube-timestamp 1152}} can just hit clear here
+				- and then if I hit `npm run dev` I've got myself a new nextjs project and
+			- there you have it our and there you have nextjs fired up on the development server at Local Host 3000
+			- so we're we're good to go
+			- ### [[switchdimension]] notes at [[Person/Rob Shocks/Build with AI Resources]]
+				- if you go to notes.switchdimension.com you'll find this page
+				- I'm just going to start dumping in resources as I do my research and I find things useful to other people
+				- ### [[Person/Rob Shocks/Build with AI Resources/Cursor AI Rules - The Missing Manual]]
+					- [I made this site to deal with] {{youtube-timestamp 1198}} frustration I had myself trying to figure this out and the frustration I saw from other people in the in the community
+					- so I dropped in everything I know as of right now about how [[CursorAI/Project Rules]] work
+						- if you have some good rules um let me know I'll add them in here I'll attribute you
+						- any rules {{youtube-timestamp 1240}} that you have for me that you haven't seen me do in terms of using cursor rules
+						- *we're all here to learn as much as possible as fast as possible*

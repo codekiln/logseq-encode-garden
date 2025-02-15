@@ -1,4 +1,6 @@
 - Currently, when editing a `.mdc` file stored in `cursor/rules`, [[VSCode/Docs/Editor/Code Basics/Find and Replace]] / [[VSCode/Editor/Find and Replace]] does not work.
+- ## Update
+	- this *has* been working for me a few times; I'm not quite sure what the issue was
 - ## Workaround
 	- use [[VSCode/Command/Search/Find in Files]]
 	- use [[VSCode/Command/Search/Replace in Files]]

@@ -1,0 +1,10 @@
+- [Cursorrules, Rules for AI, or Project Rules : r/cursor](https://www.reddit.com/r/cursor/comments/1icmmb0/cursorrules_rules_for_ai_or_project_rules/)
+	- [[Reddit/User/MacroMeez]]
+		- [[CursorAI/Rules for AI]]
+			- My preferences across all projects. This is good for general things like "Always talk through a solution first" or "When adding debug logs prefix them with `[testing]` so i can filter". I don't personally use this.
+		- [[CursorAI/.cursorrules]]
+			- General guidance across this single project. Its included in every request. It's kind of underpowered for larger codebases hence we built Project Rules. I wouldn't be surprised to see this go away, you can get the same behavior with a Project Rule globbed to "\*"
+		- [[CursorAI/Project Rules]]
+			- Specific guidance for various parts of this project. These are super powerful when you have complex, generalized tasks that your whole team does. These can be really specific since they're not fully included in all requests but the agent can request them if it needs to know more about how to do something.
+		- We have really powerful Project Rules like "**How to add a new tool for Agent**" or "Create a custom editor view for a new file type" so you can ask it to do things like "Add a new agent tool that can curl a URL" or "Create a custom editor view for JSON that renders it as a collapsible tree" and it can actually succeed at doing that.
+		- We also use them for simple rules that get included with specific file types. For example, we use solidJS instead of react, but the model would often use React code so we have a simple rule that gets attached with any \`vscode/\*\*/\*.tsx\` files that just says "This vscode fork uses solidjs, not react". This wouldn't make sense in .cursorrules because our backend code in fact \_does\_ use react for some dashboards so that would be very confusing. We also have a rule that gets attached with any ".proto" file that gives the agent the command for rebuilding our protobuf files, so it can modify, generate, then use, without us having to do anything.

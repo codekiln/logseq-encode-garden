@@ -1,0 +1,2 @@
+- [[2025-02-06 Thu]]
+	- [[YouTube/@robshocks/25/02/Master Cursor AI App Dev with Rules]]

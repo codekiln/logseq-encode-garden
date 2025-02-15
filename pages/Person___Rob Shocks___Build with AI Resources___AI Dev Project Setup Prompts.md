@@ -1,0 +1,7 @@
+- [AI Dev Project Setup Prompts](https://notes.switchdimension.com/AI-Dev-Project-Setup-Prompts-18fb5b07a94380758bd6e92baa5e8c98) #Blog/post
+	- great overview and #Tips on how to use [[CursorAI]]
+	- sample
+		- > Quick Instructions: First, paste the Product Expert Prompt into o3 Mini and answer its questions. Next, paste the PRD output and UX prompt into a new chat and answer those questions. Finally, add both the PRD and UX documents to the context of another new chat, paste in the Software Architect prompt, and answer its questions.
+	- he's using [[Tool/Dictation]] but doesn't say which one
+	- mentions [[PRD]]
+	-
