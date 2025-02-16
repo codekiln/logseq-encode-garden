@@ -1,0 +1,2 @@
+- This #Idea is an extension to [[CursorAI/Idea/Use Project Rules to Integrate with GitHub CLI for an AI-Assisted SLDC]] that considers whether it might make sense to use a [[Model Context Protocol]] to interact with the [[GitHub/API]] to provide the same context that flat files would.
+-

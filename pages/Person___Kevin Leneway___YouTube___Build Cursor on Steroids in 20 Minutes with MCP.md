@@ -1,6 +1,6 @@
-# DOING [Build Cursor on Steroids in 20 Minutes with MCP - YouTube](https://www.youtube.com/watch?v=MAicJ6KKccU)
+# LATER [Build Cursor on Steroids in 20 Minutes with MCP - YouTube](https://www.youtube.com/watch?v=MAicJ6KKccU)
 :LOGBOOK:
-CLOCK: [2025-02-16 Sun 03:05:45]
+CLOCK: [2025-02-16 Sun 03:05:45]--[2025-02-16 Sun 04:35:08] =>  01:29:23
 :END:
 	- Resources
 		- [[Person/Kevin Leneway/Github/awesome-cursor-mpc-server]]
@@ -72,23 +72,166 @@ CLOCK: [2025-02-16 Sun 03:05:45]
 							- so correct me if I'm wrong here
 		- {{youtube-timestamp 481}} so then we do all that stuff
 		- very simple here
-		- we're just calling in the request get some params to figure out what tool we need to run um you know we start this thing here again this is standard stuff I didn't write any of this uh this is from the docs um and I I won't worry too much about this but it just works okay um and then the the tools themselves are pretty straightforward uh we'll start with the screenshot tool um so basically uh you know we're we're using Puppeteer we Just Launch the browser we go to the page we take a screenshot and uh we write it to this uh whatever that file path is okay and then here's the interesting thing thing is is we return this back and then this is
-		- {{youtube-timestamp 521}} basically another prompt that you were giving to the agent right so we're telling it hey we saved the screenshot here um but before you continue ask the user to drag and drop that into the agent window again this is kind of a hack because I couldn't actually get it in there um but you'll see here the agent you know you know should kind of say Hey Kevin do you want to pull this in and and talk about it was cool right uh you could say whatever you want it uh you could say never say that you whatever you want um just kind of helps guide the agent uh again this code review um this is very simple uh what do we have here you know we're just doing a ex you know executing this this command
-		- {{youtube-timestamp 561}} G Command right uh no big deal but then um as the instructions we're basically saying review this diff and then if you find any issues just fix it okay no big deal um so pretty cool and then the architect I think this is where you start to get into what I think could be a really really interesting use case this is an area I want to explore more um I might do another video um if I go deep on this um for those who don't know actually I maintain uh an open source coding agent I've been working on it for about a year now um full-time on and off um still work in progress still some interesting things there cursor you know is doing a really great job uh with their and their whole approach um but
-		- {{youtube-timestamp 601}} there's some interesting ideas in that in that repo and I want to start to pull some of those in and kind of use the best of the ideas I have from my uh repo uh and merge them with the excellent tools um that that uh we offer here uh or the cursor offers so again you can start to do very detailed prompts here this one's fairly straightforward um but you could really go deep here and make this um a really uh intricate prompt um but the cool thing here we can actually just call out um to 03 mini you can call it 01 whatever model you want uh do an open source thing whatever you want um and you know basically return that back uh and basically the The Prompt here is all about um expert software architect
-		- {{youtube-timestamp 649}} uh outline the steps that an AI coding agent should take to complete or improve the code okay and then outp put a step-by-step plan again this very similar to the the instructions that I had uh in the other video but it just does this automatically and the neatest part about this is if you actually look at what we're asking for for this architect um we're asking for the code okay it's the concatenated code for one of more files so we can take advantage of cursor's really good search tools and treit and whatever they're doing to um you know go out and do rag or whatever it is uh to identify the files that are relevant to a certain task uh and send those over so this way I don't have to
-		- {{youtube-timestamp 686}} send you know the entire repository over there uh and get this it will automatically find the relevant files send them over um pretty neat to see that in action okay um one minor thing I will add here and I'm not going to show this but um one of the limitations of This Server uh approach is you can't actually put uh environment variables like I had in M here it wasn't working um and it's just a it's a security thing it just didn't didn't want there's probably a good way to do it um I didn't dig too deeply in it instead I took the yellow of just just like um I'm pulling this in from my uh a keys. JS file so I've got my open AI key here uh you know get ignore it it's it's only here
-		- {{youtube-timestamp 728}} locally I'm only using this tool local but this is definitely not production level code guys this is just an example of how this tool works and just kind of you know instead of calling the weather like show you what what you can do with this thing okay so let's let's take a look at this real quick I'm going to pull up um you know this is my actual one of the the projects I'm working on this internal tool um and uh yeah let's just go ahead and uh try one of the tools oh so first of all sorry let me let me do this let me show how to um add this in here so just go to cursor um sorry in the uh settings here okay go to the features and if you scroll down there's a section here this
-		- {{youtube-timestamp 765}} is new um mCP servers okay so go in here um just put whatever name you want doesn't matter um the type uh do command not SSE okay um and then the command is basically you're just running this node I mean it's just a just is just that index.js file um you you got to run a build uh you know on the other side to actually you know types script compile get it to to this JS file once you do that um just point to it and you'll kind of know right away if it picked it up because it will show you the tools that are available here and if you make any changes just hit this uh refresh button ux is kind of bad here it's like did it work not work I think it works sometimes I had to kind of reset the tool it's a
-		- {{youtube-timestamp 809}} work in progress I give the cursor team a lot of credit for adding this in but I think there's some improvements we can do but overall really cool first start okay so that's step one step two is and you don't have to do this but I think it's really helpful in your cursor rules um I added this tools section and I basically just uh explained what the tools do and when I wanted um cursor to actually call these these tools okay so in this case like if you make a change to the UI use a screenshot tool and show the changes right maybe that's useful we'll see I'll play with this and see what works um you know this one for a complex task use architect tool to get a plan uh and then after a task is
-		- {{youtube-timestamp 847}} performed go ahead and use this code review to get a diff and look at it so um let's do this uh I'll do this I'll start with the code review first since it's right here um okay let's say so I'm on a branch here this is my rubric fix I don't I just made this up um and let's see here I am going to uh let's just make a typo here right I I don't know like let's just say uh there we go um save this uh and I have to change okay we'll try this is not going to work anyway we'll try this here um let's run commit and C review and I've been having this lately okay fine we'll submit okay okay so we run a bill check that's fine should work um I again these are part of my cursor rules I'm always asking to run
+		- we're just calling in the request
+			- get some params to figure out what tool we need to run
+				- we start this thing here
+					- again this is standard stuff
+					- I didn't write any of this
+						- this is from the docs
+						- the tools themselves are pretty straightforward
+						- we'll start with the screenshot tool
+		- we're we're using [[Puppeteer]]
+			- we Launch the browser {{youtube-timestamp 508}} we go to the page we take a screenshot and uh we write it to whatever that file path is
+			- we return this back and then this is {{youtube-timestamp 521}} **basically another prompt that you were giving to the agent**
+			- so we're telling it "hey, we saved the screenshot here"
+			- but before you continue ask the user to drag and drop that into the agent window again this is kind of a hack because I couldn't actually get it in there um but you'll see here the agent you know you know should kind of say Hey Kevin do you want to pull this in and and talk about it was cool right uh you could say whatever you want it uh you could say never say that you whatever you want um just kind of helps guide the agent uh again this code review um this is very simple uh what do we have here you know we're just doing a ex you know executing this this command
+		- {{youtube-timestamp 561}} git command
+			- then as the instructions
+				- we're basically saying "review this diff" and then if you find any issues just fix it
+				- and then the architect I think this is where you start to get into what I think could be a really really interesting use case this is an area I want to explore more um I might do another video um if I go deep on this um for those who don't know actually
+				- I maintain an open source coding agent. I've been working on it for about a year now full-time
+				- cursor is doing a really great job with their approach but
+		- {{youtube-timestamp 601}} there's some interesting ideas in that in that [my] repo
+			- I want to start to pull some of those in
+			- and use the best of the ideas I have from my repo
+			- and merge them with the excellent tools that that we offer here
+			- or that cursor offers
+			- again you can start to do very detailed prompts
+			- here one's that's fairly straightforward
+			- but you could really go deep here and make this a really intricate prompt
+			- we can actually just call out to [[OpenAI/Model/o3/Mini]] or whatever model you want
+			- and **basically get back [from the reasoning model] The Prompt here about an expert software architect** {{youtube-timestamp 649}}
+				- > outline the steps that an AI coding agent should take to complete or improve the code okay and then output a step-by-step plan
+				- again this very similar to the the instructions that I had in the other video
+				- this **architect is asking for the code - the concatenated code for one or more files**
+				- we can **take advantage of cursor's really good search tools** to **identify the files that are relevant** to a certain task **and send those over**
+				- so this way I don't have to {{youtube-timestamp 686}} send the entire repository over
+				- it will **automatically find the relevant files** send them over
+			- ### [[EnvVar/.env]] wasn't working so he uses `keys.js` {{youtube-timestamp 694}}
+				- one of the limitations of This [MCP] Server approach is **you can't actually put environment variables**
+				- I couldn't get this working
+				- it's just a it's a security thing
+				- it just didn't didn't want
+				- there's probably a good way to do it - I didn't dig too deeply in it
+				- instead I took the YOLO of just just pulling my [[API/Key]]s in from my own `keys.js` file
+				- so I've got my [[OpenAI/API/Key]] here
+				- you know I've got it in my git ignore
+				- {{youtube-timestamp 728}}
+				- I'm only using this locally
+				- this is definitely not production level code
+				- this is just an example of how this tool works
+				- like show you what what you can do with this thing
+			- ### setting up the MCP server in one of his own internal tools {{youtube-timestamp 740}}
+				- I'm going to pull up one of my actual projects, an internal tool
+				- #### Trying to connect the MCP server in [[CursorAI/Settings/Features/MCP Servers]] {{youtube-timestamp 765}}
+					- put whatever name you want - doesn't matter
+					- the **type** - **do command not SSE**
+					- {{youtube-timestamp 777}}
+					- **Edit MCP Server Dialog**
+						- **Name**: `cursor-tools`
+						- **Type**: `command`
+						- **Command**: `/Users/kleneway/Projects/mcp-server/build/index.js`
+							- the command is basically you're just running this node index.js file
+							- Reminder: since it's typescript, you need to run a build to generate it
+								- to actually you know typesscript compile get it to to this JS file once you do that um just point to it
+					- **you'll kind of know right away if it picked it up because it will show you the tools that are available here**
+					- and if you make any changes just hit this refresh button
+						- ux is kind of bad here; sometimes it did it work not
+						- sometimes I had to reset the tool
+					- {{youtube-timestamp 809}} it's work in progress; I give the cursor team a lot of credit for adding this in, but I think there's some improvements we can do.
+				- ### integrating knowledge of the commands in the prompts {{youtube-timestamp 814}}
+					- step two
+					- **you don't have to do**
+					- but I think it's really helpful
+					- in your [[CursorAI/.cursorrules]] I added this **Tools section** which explained what the tools do and when I wanted cursor to call these these tools
+						- #### **Tools** [[Prompt]]
+							- > When you make a change to the UI, use the `screenshot` tool to show the changes.
+							- > If the user asks for a complex task to be performed, find any relevant files and call the `architect` tool **to get a plan** and show it to the user. Use this plan as guidance for the changes you make, while maintaining existing patterns and structure.
+							- > After a complex task is performed, use the `codeReview` tool to create a diff and use it to conduct a code review of the changes.
+					- so in this case,
+						- if you make a change to the UI use a screenshot tool and show the changes right maybe that's useful we'll see I'll play with this and see what works um you know this one for a complex task use architect tool to get a plan uh and then after a task is
+						- {{youtube-timestamp 847}} performed go ahead and use this code review to get a diff and look at it
+		- **I'll start with the code review first** (DEMO)
+		- I'm on a branch "rubric fix"
+		- {{youtube-timestamp 878}} let's just make a typo here right I I don't know like let's just say uh there we go um save this uh and I have to change okay we'll try this is not going to work anyway we'll try this here um let's run commit and C review and I've been having this lately okay fine we'll submit okay okay so we run a bill check that's fine should work um I again these are part of my cursor rules I'm always asking to run
 		- {{youtube-timestamp 907}} builds before it actually does any commits I find that's very helpful uh in Real World um coding um do I actually have okay fine it's G May okay maybe I'll fix this sorry I meant to make just a simple change okay yeah yeah yeah it's going to fix that okay oh it just fixed it you okay uh fine we'll run this build um maybe in the meantime let me see if I can just like save this here so that's not going to doesn't going to break anything let's see if um we'll see if the uh code review fixes uh and identifies that but in the meantime okay everything works it's fine let's accept this just to get those out of there so basically if you look at this the only change I've made is a bunch of ease uh build successful we're
-		- {{youtube-timestamp 970}} going to commit this is fine okay so now we committed now let's see now uh okay here we go so it said let's perform a code review okay so when it calls a tool um it asks for the the um any kind of attributes because I need to know where this um is to run that that diff command um you know I'm asking for the folder path it's kind of a hack like I think there's probably better ways to actually do this thing um but uh you can see this okay and so in this case yeah change was forward and straight forward uh it didn't catch this thing with the example but this is just Tex so you know again I'm just kind of showing uh this this is um probably should have came up with a better example before I ran this
-		- {{youtube-timestamp 1013}} but this works fine it's okay um so we have that there um let's do something else um and I'm just going to try to pull this um screenshot um uh do a screenshot of the logout screen let's try this again this is a little bit contrived normally um you know ideally you'd make some complex UI change and it would do a screenshot um and do this so I just want to show um exactly kind of how um the screenshot tool works it's kind of cool we did some work we found out exactly where that um route would be so we're calling it with this off signo and then we're basically saying save it to the screenshots logos screen.png okay okay there we go so it said hey we took a screenshot um there it is pretty cool uh you can
-		- {{youtube-timestamp 1065}} drag and drop this in here if you want right so you can say uh make this look awesome right it'll do you know Cloud's actually pretty good about doing stuff like this um so again it knows what um where my uh where that actual component is uh it's able to make changes um you know you can make some changes here you screenshot it again it'll go back and forth um actually curious to see if it's going to go through and do another tool call um a new page yeah we don't need yeah that's fine okay but anyway um oh there it goes taking a screenshot of this new design this actually going to run actually I guess I guess this is running in the background I didn't know it was uh okay let's look at this
-		- {{youtube-timestamp 1110}} uh it doesn't look any different okay anyway you get the idea here take a screenshot this is again contrived example but um me D that here uh and then what I really like is Let's uh go ahead and show um example of the plan if you saw my um thing last week we had all these instructions and this template all this XML and the cursor rules complicated thing um here we're just going to take this task it's a real bug I have actually I'm curious to see what it does um and so we're saying you know here's the here's the thing I want to do create a plan of fbox now I gave it instructions to um only do a plan when it's a really complicated thing this actually might be easy enough for a cursor to just kind of
-		- {{youtube-timestamp 1150}} look at it and Sonic to be like you know what bro this is like a dumb bug I can just fix this myself without having to create a whole plan to do the thing which is exactly what you want right you want it to kind of self be self-aware to to say what it um can do and what it needs more of a of a plan to do um and what's cool here look at what it did so it went out there it uh did a search it grabbed the relevant files and then when it's doing this call basically we send the task and then you know we're basically sending over some code oh we're not actually sending a code it's interesting I've seen this most of the times it actually sends this uh this code over here so I'll probably need to
-		- {{youtube-timestamp 1185}} adjust some some things um but uh let's see here okay I think what happened was uh the um so you can see here here's kind of the step byep of like what to do um analyze the data flow review this um check this out blah blah blah BL so it's got this whole um step-by-step approach um which is pretty cool uh again might need to tweak this a little bit again point of this I want to show you guys the power and potential of this uh mCP and and what you can do with it um I'm really excited about I think there's a lot of tools that that I personally will start to play with and and if you guys come up with cool stuff uh definitely let me know uh I would love to see see what you guys do maybe feature some of these
+		- {{youtube-timestamp 970}} **it's going to commit**
+			- this is fine so now we committed
+			- it said, "**let's perform a code review**"
+			- when it calls a tool {{youtube-timestamp 981}}
+				- #Observation
+					- [[CursorAI/Agent Mode]] here says "Calling MCP tool: `code-review`"
+					- [[CursorAI/Agent Mode/Yolo]] is NOT on, it's asking him for confirmation to run the tool
+			- it asks for any kind of attributes
+			- I need to know where this is [on the MCP Server] to run that that diff command,
+			- I'm asking for the folder path
+				- #Observation *I don't really see where he supplied any input; it looks like it automatically posted the folder path for the diff ...*
+			- it's kind of a hack
+			- I think there's probably better ways to actually do this thing
+			- {{youtube-timestamp 995}}
+			- it didn't catch his example, but it generally is proving out the connectivity to the server
+				- it didn't catch this thing with the example I'm just kind of showing uh this this is um probably should have came up with a better example before I ran this
+				- {{youtube-timestamp 1013}} but this works fine it's okay um so we have that there um let's do something else um and
+		- {{youtube-timestamp 1022}} I'm just going to try to use the screenshot tool
+			- he types
+				- > "do a screenshot of the logout screen"
+				- this is a little bit contrived
+				- **ideally you'd make some complex UI change and it would do a screenshot**
+				- I just want to show exactly how the screenshot tool works
+				- {{youtube-timestamp 1043}} we [made it do] some work to find out **exactly where that logout route would be**
+					- **User**: "do a screenshot of the logout screen"
+					- **Assistant**:
+						- I'll help you take a screenshot of the logout screen. First, I'll need to find the appropriate URL path for the logout page.
+						- Let me check the authentication-related files to determine the correct path.
+						- *Searched codebase* `"signOut logout auth" (src/app, src/components/) : 0 results`
+						- Let me check the auth configuration directly:
+							- *Read file* `route.ts:1-50`
+						- Since NextAuth.js is being used, the default sign out page would be at `/auth/signout`. Let me take a screenshot of this page:
+						- **Called MCP tool**: `screenshot`
+							- **Parameters**:
+							  ```json
+							  {
+							    "relativePath": "/auth/signout",
+							    "fullPathToScreenshot": "/Users/kleneway/Projects/psl-platform/screenshots/logout-screen.png"
+							  }
+							  ```
+							- **Result**:
+								- Screenshot saved to `/Users/kleneway/Projects/psl-platform/screenshots/logout-screen.png`. Before continuing, you MUST ask the user to drag and drop the screenshot into our chat window so you can see it.
+						- I've taken a screenshot of the logout screen and saved it. Could you please drag and drop the screenshot from this location into our chat window so we can look at it together?
+					- #Observation *is [[Puppeteer]] able to generate these screenshots in a headless way?*
+					- it saves it to the screenshot `logout-screen.png`
+					- **there it is**
+					- {{youtube-timestamp 1065}} you can drag and drop this [image] in the chat
+					- *then you can make a request for it to change the code based on the appearance*
+						- > make this look awesome
+						- [[Anthropic/Model/Claude/3.5]] is actually pretty good about doing stuff like this
+						- it knows where component is
+						- it's able to make changes;
+						- #Observation  *the point is that one could iterate using screenshots this way*
+		- {{youtube-timestamp 1110}} it doesn't look any different
+		- you get the idea here take a screenshot
+		- contrived example
+		- ### example of the plan and using the architect
+			- #Observation *he pastes in a bug, and it ends up calling the planning tool*
+			- {{youtube-timestamp 1150}} you want it to be able to look at the bug and for Sonnet to be like "you know what, bro this is like a dumb bug I can just fix this myself without having to create a whole plan"
+			- which is exactly what you want
+			- you want it to kind of self be self-aware, to say what it can do, and what it needs more of a of a plan to do
+			- look at what it did
+				- so it went out there
+				- it did a search
+				- it grabbed the relevant files
+				- and then when it's doing this call
+				- basically we send the task
+				- and then you know we're basically sending over some code oh we're not actually sending a code it's interesting I've seen this most of the times it actually sends this uh this code over here so I'll probably need to {{youtube-timestamp 1185}} adjust some some things
+			- but let's see here okay I think what happened was uh the um so you can see
+			- here here's kind of the step of what to do
+			- analyze the data flow
+			- so it's got this whole um step-by-step approach um which is pretty cool uh again might need to tweak this a little bit again point of this I want to show you guys the power and potential of this uh mCP and and what you can do with it um I'm really excited about I think there's a lot of tools that that I personally will start to play with and and if you guys come up with cool stuff uh definitely let me know uh I would love to see see what you guys do maybe feature some of these
 		- {{youtube-timestamp 1229}} all right and so you know if you guys want to play with this uh I've got this um up here um you know be careful with this it's not production code there might be bugs I'm probably not going to go through and and do a bunch of like support on this right this is more just for tutorial purposes show you guys how to build an mCP server um and if you guys find this interesting let me know um we love I'm going to keep doing some of these videos U having a lot of fun with this you guys seem to like it so I I appreciate all the all the support and all the great comments um so go a And subscribe subscribe I'll make some some more videos uh along this vein if you guys have ideas of things that you want
-		- {{youtube-timestamp 1263}} to see or I've got a whole bunch of you know tricks in my bag that that I'm happy to share and show you guys kind of how I how I use this day today uh did some really cool stuff today actually earlier today with the Deep research um being able to use that and the the the super secret 03 model behind the scenes which is actually incredible at coding um so there's some tricks there uh and we got some new models kind of coming out soon I think Gemini is going to come out I can show uh an example of how I've used that in the past and and maybe do a quick review of of how that works so again you guys have content you want let me know uh otherwise I will see you guys later
+		- {{youtube-timestamp 1263}} to see or I've got a whole bunch of you know tricks in my bag that that I'm happy to share and show you guys kind of how I how I use this day today uh did some really cool stuff today actually earlier today with the [[GitHub/dzhng/deep-research]] and being able to use that
+			- and the super secret [[OpenAI/Model/o3]] model behind the scenes
+			- which is **actually incredible at coding**
+			- so there's some tricks there
+			- we got some new models kind of coming out soon
+			- I think Gemini is going to come out I can show uh an example of how I've used that in the past and and maybe do a quick review of of how that works so again you guys have content you want let me know uh otherwise I will see you guys later
 		-
