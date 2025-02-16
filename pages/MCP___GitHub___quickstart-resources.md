@@ -1,0 +1,1 @@
+- [quickstart-resources](https://github.com/modelcontextprotocol/quickstart-resources) 

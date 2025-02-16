@@ -1,4 +1,6 @@
-# Using [[CursorAI/Project Rules]] with the [[GitHub/CLI]] for an AI-Assisted SLDC
+tags:: [[Idea]]
+
+- # Using [[CursorAI/Project Rules]] with the [[GitHub/CLI]] for an AI-Assisted SLDC
 - ## Impetus
 	- Most of the use cases for Cursor that are seen on web are about using CursorAI for coding.
 	- Many advanced uses of Cursor require up-front planning about the design of the feature; see also [[CursorAI/Technique/Frontload Design]]. Recently, several Cursor templates have also tried to bake-in a light, text-based project management approach, for example, see [[Person/John Nathaniel Marquez]]'s project, [[GitHub/T1nker-1220/NEW-PROJECT-RULES-ULTRA-CONTEXT-FOR-AI-MEMORIES-LESSONS-SCRATCHPAD-WITH-PLAN-AND-ACT-MODES]] or [[Person/Max Fahl]]'s project, [[GitHub/maxfahl/cursor-agent-master-prompt]]. These experiments are cool and they point to how the system benefits from creative thinking. **But why don't we take it one step further and make Cursor actually utilize a remote project management system via CLI commands?**

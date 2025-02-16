@@ -1,0 +1,1 @@
+- [cursor.directory](https://cursor.directory/)

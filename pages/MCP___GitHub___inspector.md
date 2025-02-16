@@ -1,0 +1,1 @@
+- [inspector](https://github.com/modelcontextprotocol/inspector) 
