@@ -1,0 +1,1 @@
+- [kleneway/awesome-cursor-mpc-server: Example of an MCP server with custom tools that can be called directly from cursor](https://github.com/kleneway/awesome-cursor-mpc-server)

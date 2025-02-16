@@ -1,6 +1,9 @@
-- [Build Cursor on Steroids in 20 Minutes with MCP - YouTube](https://www.youtube.com/watch?v=MAicJ6KKccU)
+# DOING [Build Cursor on Steroids in 20 Minutes with MCP - YouTube](https://www.youtube.com/watch?v=MAicJ6KKccU)
+:LOGBOOK:
+CLOCK: [2025-02-16 Sun 03:05:45]
+:END:
 	- Resources
-		- [kleneway/awesome-cursor-mpc-server: Example of an MCP server with custom tools that can be called directly from cursor](https://github.com/kleneway/awesome-cursor-mpc-server)
+		- [[Person/Kevin Leneway/Github/awesome-cursor-mpc-server]]
 	- {{video https://www.youtube.com/watch?v=MAicJ6KKccU}}
 		- {{youtube-timestamp 2}} all right hey everybody I am here today to show off a new feature of cursor that I think is severely underrated and is actually pretty awesome and so I wanted to share uh exactly how I can use this new uh model context protocol mCP function to really turbocharge a lot of the the common features of cursor so I'll show you how to build this kind of Step by Step from the ground up and then I have an open source repo uh you guys can check that out and feel free to contribute add what you want um for it do whatever all right so first of all I want to say thanks I uh made my first video just threw it up on Reddit just for fun uh and uh really got some good responses and really appreciate uh all
 		- {{youtube-timestamp 48}} of the uh feedback got a lot of good tips myself and I thought I'd make another video here um based on some of the feedback one person uh called out a interesting repo I did I did a video on this earlier this week I'm looking at this Devon cursor rules basically the idea is that you can use cursor rules to execute scripts and basically have this multi-agent kind of Devon like uh system uh just using the core cursor functionality now this idea is amazing I think it's really interesting one problem I have though is I wor wor that because we are loading up these cursor rules with all of these kind of agent meta instructions it's your agent's not going to know enough about your code
@@ -43,9 +46,8 @@
 			- it's kind of a neat way to see some of these screenshots directly
 			- I've got an architect so again
 			- if you saw my last video
-			- I did a lot of work
-				- concatenating all my files
-				- I had the whole repo
+			- I did a lot of work concatenating all my files
+				- I had the whole repo;
 				- I wrote a description of the task
 				- I had all these [[XML]] tags
 					- I sent that off to you know [[OpenAI/Model/o3/Mini]] a really smart reasoning model
