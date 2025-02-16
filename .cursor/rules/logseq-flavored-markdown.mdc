@@ -1,0 +1,75 @@
+---
+description: Writing logseq-flavored-markdown (LFM)
+globs: *.md
+---
+**Cursor Project Rule: Formatting Logseq-Flavored Markdown**
+
+### 1. **Basic Structure**
+
+- Logseq uses a hierarchical bullet-point structure.
+- Indentation determines the relationship between parent and child blocks.
+- Headings are created using `#`, with more `#` indicating deeper nesting.
+- Content should be nested logically under the appropriate headings.
+
+**Example:**
+
+```markdown
+- # Main Topic
+  - ## Overview
+    - Detail 1
+      - Sub-detail A
+    - Detail 2
+```
+
+### 2. **Namespaces**
+
+- Logseq supports namespaces using `/` to create hierarchical page structures.
+- Namespaces help organize related content under broader categories.
+- Pages with namespaces are stored as a single file but visually represented as a hierarchy.
+- In the filesystem, Logseq replaces `/` with `___`, storing namespaced pages as single markdown files.
+
+**Example:**
+
+```markdown
+[[Project/Tasks]]
+[[Work/Meetings/2024]]
+```
+
+- The above will be interpreted as:
+
+  - `Project` → `Tasks`
+  - `Work` → `Meetings` → `2024`
+
+- In the filesystem, these pages would be saved as:
+
+  - `Project___Tasks.md`
+  - `Work___Meetings___2024.md`
+
+### 3. **Special Formatting**
+
+- **Bold:** `**bold text**`
+- *Italic:* `*italic text*`
+- `Inline code:` `` `code` ``
+- Blockquotes: `> Quote`
+- Code Blocks:
+  ```markdown
+  ~~~
+  $> git describe --tags  
+  ~~~
+  ```
+
+### 4. **Fenced Code Blocks Rule**
+
+- When nesting fenced code blocks in markdown, avoid using triple-backticks inside another triple-backtick block.
+- Use triple-backticks for the outer markdown block and triple-tilde (`~~~`) for inner code blocks.
+- This prevents rendering issues and aligns with the CommonMark spec.
+
+**Example:**
+
+```markdown
+- Here's an example of the code:
+  ~~~
+  $> git describe --tags  
+  ~~~
+```
+

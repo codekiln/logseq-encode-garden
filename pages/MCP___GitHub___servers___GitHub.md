@@ -1,4 +1,44 @@
 created-by:: [[Person/Tim Rogers]]
 
 - https://github.com/modelcontextprotocol/servers/tree/main/src/github
--
+- # GitHub MCP Server
+	- ## Overview
+		- MCP Server for the [[GitHub/API]] that enables file operations, repository management, search functionality, and more
+		- ## Key Features
+			- Automatic branch creation when creating/updating files
+			- Comprehensive error handling with clear messages
+			- Git history preservation without force pushing
+			- Support for both single-file and multi-file operations
+			- Advanced search capabilities
+	- ## Available Tools
+		- ### File Operations
+			- `create_or_update_file`: Create or update a single file in a repository
+			- `push_files`: Push multiple files in a single commit
+			- `get_file_contents`: Get contents of a file or directory
+		- ### Repository Management
+			- `create_repository`: Create a new GitHub repository
+			- `fork_repository`: Fork a repository
+			- `create_branch`: Create a new branch
+			- `search_repositories`: Search for GitHub repositories
+		- ### Issues and Pull Requests
+			- `create_issue`: Create a new issue
+			- `list_issues`: List and filter repository issues
+			- `update_issue`: Update an existing issue
+			- `add_issue_comment`: Add a comment to an issue
+			- `get_issue`: Get contents of a specific issue
+			- `create_pull_request`: Create a new pull request
+			- `get_pull_request`: Get details of a specific pull request
+			- `list_pull_requests`: List and filter repository pull requests
+			- `create_pull_request_review`: Create a review on a pull request
+			- `merge_pull_request`: Merge a pull request
+			- `get_pull_request_files`: Get list of files changed in a pull request
+			- `get_pull_request_status`: Get combined status of all status checks
+			- `update_pull_request_branch`: Update PR branch with latest base changes
+			- `get_pull_request_comments`: Get review comments on a pull request
+			- `get_pull_request_reviews`: Get reviews on a pull request
+		- ### Search Functionality
+			- `search_code`: Search for code across GitHub repositories
+			- `search_issues`: Search for issues and pull requests
+			- `search_users`: Search for GitHub users
+		- ### Version Control
+			- `list_commits`: Gets commits of a branch in a repository
