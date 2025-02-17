@@ -10,7 +10,7 @@ created-by:: [[Person/Tim Rogers]]
 			- Git history preservation without force pushing
 			- Support for both single-file and multi-file operations
 			- Advanced search capabilities
-	- ## Available Tools
+	- ## Available Tools - see also [Github MCP Tools at Smithery](https://smithery.ai/server/@smithery-ai/github/tools)
 		- ### File Operations
 			- `create_or_update_file`: Create or update a single file in a repository
 			- `push_files`: Push multiple files in a single commit
@@ -42,3 +42,20 @@ created-by:: [[Person/Tim Rogers]]
 			- `search_users`: Search for GitHub users
 		- ### Version Control
 			- `list_commits`: Gets commits of a branch in a repository
+	- ## Setup
+		- ### Starting the server
+			- `npx -y @modelcontextprotocol/server-github` will **start the server**
+		- ### Personal Access Token
+			- [Create a GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) with appropriate permissions:
+			- Go to [Personal access tokens](https://github.com/settings/tokens) (in GitHub Settings > Developer settings)
+			- Select which repositories you'd like this token to have access to (Public, All, or Select)
+			- Create a token with the `repo` scope ("Full control of private repositories")
+				- Alternatively, if working only with public repositories, select only the `public_repo` scope
+			- Copy the generated token
+		- ## According to [[smithery.ai/smithery.ai/server/github]]
+			- `npx -y @smithery/cli@latest run @smithery-ai/github --config "{\"githubPersonalAccessToken\":\"asdf\"}"` is the way to do this, but I don't really want to put my PAT in plain text
+			- do I actually need to have cursor run the process? Probably not
+			-
+			-
+			-
+		-

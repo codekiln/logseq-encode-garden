@@ -1,0 +1,8 @@
+- [How to use MCP Server? - How To - Cursor - Community Forum](https://forum.cursor.com/t/how-to-use-mcp-server/50064/13)
+	- I just found this it has a cursor command generator [[smithery.ai]]
+	- [[CursorAI/Forum/User/mehmet-py]]
+		- I created a folder called tools in the project directory. I cloned the mcp server on github there. then I installed the other steps required by the mcp server with cmd or powershell. then I ran the mcp server. then I went to cursor and typed the following settings from the mcp server settings:
+		- ![image](https://us1.discourse-cdn.com/flex020/uploads/cursor1/original/3X/7/a/7a126ed41af501f19ccf794ba4ffdc625112bc5f.png)
+		- I activated the mcp server. then I called the mcp server by adding commands like “proceed using the sequential thinking method” while entering commands in composer.
+		- if you don’t understand, do this, take the link about cursor mcp and which mcp server you want to install and ask cursor chat to analyze them and how to install the mcp server according to these documents. it will explain step by step. this is how I installed it.
+	-
