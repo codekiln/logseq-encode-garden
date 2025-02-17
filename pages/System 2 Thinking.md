@@ -1,4 +1,4 @@
-alias:: [[System 1 vs System 2 Thinking/System 2 Thinking]]
+alias:: [[System 1 vs System 2 Thinking/System 2 Thinking]], [[System 2]]
 
 - This is the slower, more deliberate, and analytical mode of thinking.
 - It requires effort and attention, often engaging in complex problem-solving and reasoning.

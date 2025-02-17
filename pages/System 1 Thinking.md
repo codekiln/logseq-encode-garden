@@ -1,4 +1,4 @@
-alias:: [[System 1 vs System 2 Thinking/System 1 Thinking]]
+alias:: [[System 1 vs System 2 Thinking/System 1 Thinking]], [[System 1]]
 
 - This is the fast, automatic, and intuitive mode of thinking.
 - It operates effortlessly and quickly, often using heuristics or mental shortcuts.
