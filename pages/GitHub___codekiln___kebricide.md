@@ -5,7 +5,7 @@ tags:: [[c74/M4L]]
 	- TODO make a prototype of [[c74/M4L/Idea/Alits]] just for Track and Clip
 - [[2025-02-06 Thu]]
   collapsed:: true
-	- DONE define [[CursorAI/Project Rules]] for Kebricide
+	- DONE define [[CursorAI/Project Rule]] for Kebricide
 	- DONE figure out why I'm getting #Error `js: index.js: Javascript ReferenceError: window is not defined, line 6`
 	  collapsed:: true
 		- I think it's because yesterday I did [[Ableton/Menu/File/Collect All and Save]], and now I'm not interacting with the right version of the patcher

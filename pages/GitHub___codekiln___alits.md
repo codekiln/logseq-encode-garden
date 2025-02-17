@@ -3,7 +3,7 @@
 	- ((67ab314c-1b42-4801-952b-47266a549059))
 		- [[2025-02-12 Wed]]
 			- [[CursorAI]]
-				- DONE add [[CursorAI/Project Rules/markdown-output]] to  project
+				- DONE add [[CursorAI/Project Rule/markdown-output]] to  project
 				  :LOGBOOK:
 				  CLOCK: [2025-02-12 Wed 04:32:42]--[2025-02-12 Wed 06:50:21] =>  02:17:39
 				  :END:
@@ -107,7 +107,7 @@
 					- [[VSCode/Command/Dev Containers/Reopen/in Container]]
 				- If I don't, then I get a failure related to trying to call `uname` on the `node` user in the image.
 			- ### DONE file [[GitHub/Issue]] [create project-directory-structure cursor project rule with project directory structure and context · Issue #15 · codekiln/alits](https://github.com/codekiln/alits/issues/15)
-				- create a [[CursorAI/Project Rules]] entry describing the directory structure and project context
+				- create a [[CursorAI/Project Rule]] entry describing the directory structure and project context
 			- #Filed ((67a9ce72-4337-4068-89aa-64ecf85cd515))
 			- ### DONE file [[GitHub/Issue]] [create apps/kebricide with Project/ dir and js next to it · Issue #13 · codekiln/alits](https://github.com/codekiln/alits/issues/13)
 			  collapsed:: true

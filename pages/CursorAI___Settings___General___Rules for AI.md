@@ -1,1 +1,1 @@
-- See [[CursorAI/Project Rules]]
+- See [[CursorAI/Project Rule]]

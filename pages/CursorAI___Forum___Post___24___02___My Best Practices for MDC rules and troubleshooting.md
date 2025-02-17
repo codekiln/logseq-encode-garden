@@ -1,5 +1,5 @@
 date-created:: [[2025-02-12 Wed]]
-tags:: [[CursorAI/Project Rules]]
+tags:: [[CursorAI/Project Rule]]
 
 - [My Best Practices for MDC rules and troubleshooting - How To - Cursor - Community Forum](https://forum.cursor.com/t/my-best-practices-for-mdc-rules-and-troubleshooting/50526)
 	- #OP [[CursorAI/Forum/User/Meh-S-Eze]]

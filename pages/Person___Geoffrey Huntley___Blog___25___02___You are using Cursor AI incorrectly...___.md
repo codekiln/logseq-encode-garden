@@ -1,4 +1,4 @@
-tags:: [[CursorAI/Project Rules]]
+tags:: [[CursorAI/Project Rule]]
 
 - [You are using Cursor AI incorrectly...](https://ghuntley.com/stdlib/)
 	- [[Insight/Key]] #Quote

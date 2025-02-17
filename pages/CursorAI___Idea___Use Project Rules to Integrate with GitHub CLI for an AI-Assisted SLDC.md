@@ -1,6 +1,6 @@
 tags:: [[Idea]]
 
-- # Using [[CursorAI/Project Rules]] with the [[GitHub/CLI]] for an AI-Assisted SLDC
+- # Using [[CursorAI/Project Rule]] with the [[GitHub/CLI]] for an AI-Assisted SLDC
 - ## Impetus
 	- Most of the use cases for Cursor that are seen on web are about using CursorAI for coding.
 	- Many advanced uses of Cursor require up-front planning about the design of the feature; see also [[CursorAI/Technique/Frontload Design]]. Recently, several Cursor templates have also tried to bake-in a light, text-based project management approach, for example, see [[Person/John Nathaniel Marquez]]'s project, [[GitHub/T1nker-1220/NEW-PROJECT-RULES-ULTRA-CONTEXT-FOR-AI-MEMORIES-LESSONS-SCRATCHPAD-WITH-PLAN-AND-ACT-MODES]] or [[Person/Max Fahl]]'s project, [[GitHub/maxfahl/cursor-agent-master-prompt]]. These experiments are cool and they point to how the system benefits from creative thinking. **But why don't we take it one step further and make Cursor actually utilize a remote project management system via CLI commands?**
@@ -16,7 +16,7 @@ tags:: [[Idea]]
 		- checking on status of github actions
 	- This page proposes an idea for how to create reusable, agential workflows for SLDC automation using Cursor Project Rules.
 - ## Project Rules for wrapping `gh`
-	- When using [[CursorAI/Agent Mode]], the agent can read [[CursorAI/Project Rules]] to craft CLI command invocations for the GitHub CLI, `gh`. A lot of information about this CLI is likely already in the training data, but Project Rules may let users focus the AI's attention on the details about how to use it in an AI-assisted [[Software/Engineering/Development Life Cycle (SLDC)]] and specifically within the context of Cursor.
+	- When using [[CursorAI/Agent Mode]], the agent can read [[CursorAI/Project Rule]] to craft CLI command invocations for the GitHub CLI, `gh`. A lot of information about this CLI is likely already in the training data, but Project Rules may let users focus the AI's attention on the details about how to use it in an AI-assisted [[Software/Engineering/Development Life Cycle (SLDC)]] and specifically within the context of Cursor.
 	- A centerpiece of this approach is that rather than explicitly saying what should be done in the composer chat, the [[Product Requirements Document]] should most likely be specified in a external project management software like a GitHub issue.
 	- ### Defining the [[PRD]] in the [[GitHub/Issue]]
 		- A project rule `gh-issue-update.mdc` rule could be created to help with the ideating phase of the issue. Perhaps a [[GitHub/Projects]] `status` could be applied to the issue to signal that it is in a design phase.

@@ -1,5 +1,5 @@
 # DONE How to make CursorAI activate a Project Rule
-	- Use a [[CursorAI/Project Rules/Glob]] to ensure a rule is activated
+	- Use a [[CursorAI/Project Rule/Glob]] to ensure a rule is activated
 	- In the description, mention a "command", and then use the command, for example, `Use this when Foo! is entered`, and then use `Foo!`
 		- [[Person/Brian Madison]] says in [[CursorAI/Forum/Post/24/02/Rules for ultra context memories lessons scratchpad]] [here](https://forum.cursor.com/t/rules-for-ultra-context-memories-lessons-scratchpad-with-plan-and-act-modes/48792/37?u=codekiln)
 			- > for me when using `.cursor/rules` - no combination of `USE ME ALWAYS` or `ALWAYS USE THIS FILE` or whatever in the mdc file is not reliable whatsoever.

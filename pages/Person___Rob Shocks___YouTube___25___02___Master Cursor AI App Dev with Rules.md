@@ -1,13 +1,13 @@
 date-created:: [[2025-02-06 Thu]]
 created-by:: [[Person/Rob Shocks]]
-tags:: [[CursorAI/Project Rules]]
+tags:: [[CursorAI/Project Rule]]
 
 - # DONE [Master Cursor AI App Development With These Simple Rules! - YouTube](https://www.youtube.com/watch?v=BtDxvAGhrjg)
 	-
 	- {{video https://www.youtube.com/watch?v=BtDxvAGhrjg}}
 		- {{youtube-timestamp 40}} all that into account and that's essentially what rules are
 		- so in this video I'm going to take you through how to use rules from start to finish with cursor AI I'm going to talk about the new rules system that was launched with cursor
-		- [[CursorAI/Project Rules]]
+		- [[CursorAI/Project Rule]]
 			- only in the last couple of days I've gone through loads of Reddit posts and cursor forum and I've been experimenting with it myself for the last couple of days trying to see what works and what doesn't and I've got a great resource for you which I shared you in the course of the video which is going to help you get started super fast in your AI development Journey all this and more let's go so cursor AI basically allows you to influence how the AI operates and
 			- {{youtube-timestamp 81}} how it writes code and we do this with either a global rule that works across everything you do in cursor
 				- or via project rules that are specific to each project that you create so this is really powerful because it helps nudge the large language model in the right direction based on your experience and the collective experience of others so it allows you to create components in a particular way
@@ -38,7 +38,7 @@ tags:: [[CursorAI/Project Rules]]
 			- include cursor rules files so that's this little file over here to create it all you do is you type in dot cursor rules and that's it it's just basically you can it's a basic file that you can add in in markdown or or Json or anything you want all the rules that you want to have applied
 			- but the caveat is here it's being **deprecated** deprecated means that it's in in the next couple of versions of cursor won't be used anymore
 			- {{youtube-timestamp 301}} or the ability to use it will switch off in favor of this new cursor rules folder system that we're going to talk about now in a second
-		- [[CursorAI/Project Rules]]
+		- [[CursorAI/Project Rule]]
 			- {{youtube-timestamp 326}}
 			- so if we scroll down here still in general we have what we call Project rules so these are specific rules that help AI understand your co-base and follow your Project's conventions um so here's a couple of sample ones that I have here that I'm going to take you through and uh this is how you basically add a new one here
 			- these rules are constantly synced with your code base but it is important to remember and I've had this happen a few times need
@@ -58,7 +58,7 @@ tags:: [[CursorAI/Project Rules]]
 			- there's no documentation on them cursor you make a fantastic tool but man you're **terrible at documentation** need to sort that out cursor come on
 			- so anyway this is my approach to it and what what has worked for me
 			- it's adding in **create new component**, **refactor component**, **update component**
-			- and then over here we have {{youtube-timestamp 471}} something called [[CursorAI/Project Rules/Glob]]s
+			- and then over here we have {{youtube-timestamp 471}} something called [[CursorAI/Project Rule/Glob]]s
 				- so what this is is it allows you to specify um a particular file pattern this essentially means in the source directory then deeper in the app directory and these are little wildcards or Stars they say all the folders in the app directory and then deeper than that it's all the files within those folders you can have it here as TSX or py depending on what files that you want to work on watching those patterns this has been kind of Hit and Miss for me as I've been testing it out I'm looking forward to some more insight from cursor on exactly how to go about using this so what I'm saying here is prefix all component names with HAL 9000 so first of all naming our component you want to {{youtube-timestamp 518}} make the name as semantic and descriptive as possible think about um a large language model who wants to know the context of when they use this
 				- so in this case **anytime a component is created I want this to be taken into a account**
 					- and here in the description what I have is basically I'm saying **whenever something is created refactored are updated as a component** I want this to be taken into account
@@ -80,7 +80,7 @@ tags:: [[CursorAI/Project Rules]]
 					- so if we take a look we have the install Shad Cen so essentially I have this bug bear where every time I'm
 		- {{youtube-timestamp 646}} installing [[shadcn]] on a project or or adding new components [[Anthropic/Model/Claude/3.5]] doesn't have training knowledge as of the cut off date of when [[shadcn]] deprecated their [[CLI]] basically Claude tends to always use the wrong setup command for shadcn
 			- and it goes into a bit of a loop and uh it causes issues for a lot of beginners in particular
-			- so we're just reminding it here that we should always use [[npx]] install [[shadcn]] and I'm saying that when you're installing Shaden and then it's when installing Shaden or adding Shad CN components that's important to be fired and I don't have any [[CursorAI/Project Rules/Glob]]s in place there **because I want that to be Universal**
+			- so we're just reminding it here that we should always use [[npx]] install [[shadcn]] and I'm saying that when you're installing Shaden and then it's when installing Shaden or adding Shad CN components that's important to be fired and I don't have any [[CursorAI/Project Rule/Glob]]s in place there **because I want that to be Universal**
 		- and then the last one here is basically a more advanced file that I {{youtube-timestamp 694}} would use for **setting up a new project**
 			- so some little tips on prompting
 			- so getting it to **work sequentially through instructions** seems to work very well
@@ -130,7 +130,7 @@ tags:: [[CursorAI/Project Rules]]
 			- what this might work for is like let's say the rule is let's add [[Prisma]] to the project let's add clerk authentication let's add drizzle whatever it is that you want to add and you want to do it in a specific way making sure it's paying attention to specific documents using a particular framework
 			- you could add all those rules in here and have them invoked uh if you if you get what I mean
 		- ## Summary thus far
-			- he's created a rather long [[CursorAI/Project Rules]] document for starting a *new* [[nextjs]] app with [[shadcn]]. Essentially, it's a bit like using a [[GitHub/Repo/Template]] or using [[Python Copier]], but here it's instructions for the AI to do the same. It's essentially a "soft" install script, sort of similar to what you might find in a README.md in the root of a repo.
+			- he's created a rather long [[CursorAI/Project Rule]] document for starting a *new* [[nextjs]] app with [[shadcn]]. Essentially, it's a bit like using a [[GitHub/Repo/Template]] or using [[Python Copier]], but here it's instructions for the AI to do the same. It's essentially a "soft" install script, sort of similar to what you might find in a README.md in the root of a repo.
 			- It includes lots of commands, but they are versioned controlled at a particular state.
 			- In this case, it's NOT a good example of the type of project rule you'd want committed to your project repo, but is instead a rule you might want to bring in so that you can start up your project
 		- ## Starting to use the rules
@@ -162,7 +162,7 @@ tags:: [[CursorAI/Project Rules]]
 			- [[CursorAI/Technique/Project Rules/Remind User To Commit]]
 				- See also [Best Practice for Cursor Commits - How To - Cursor - Community Forum](https://forum.cursor.com/t/best-practice-for-cursor-commits/45861)
 				- [[Key Insight]]
-					- *you can create a [[CursorAI/Project Rules]] entry that includes a git commit command, which is both faster and more customizable than using the built-in UI, but you need to be careful when staging files for a commit*
+					- *you can create a [[CursorAI/Project Rule]] entry that includes a git commit command, which is both faster and more customizable than using the built-in UI, but you need to be careful when staging files for a commit*
 				- because that's something I always do when I'm working with AI so if I go up here
 				- and we look at our project
 				- we've got all these new files that have been added
@@ -183,7 +183,7 @@ tags:: [[CursorAI/Project Rules]]
 				- I'm just going to start dumping in resources as I do my research and I find things useful to other people
 				- ### [[Person/Rob Shocks/Build with AI Resources/Cursor AI Rules - The Missing Manual]]
 					- [I made this site to deal with] {{youtube-timestamp 1198}} frustration I had myself trying to figure this out and the frustration I saw from other people in the in the community
-					- so I dropped in everything I know as of right now about how [[CursorAI/Project Rules]] work
+					- so I dropped in everything I know as of right now about how [[CursorAI/Project Rule]] work
 						- if you have some good rules um let me know I'll add them in here I'll attribute you
 						- any rules {{youtube-timestamp 1240}} that you have for me that you haven't seen me do in terms of using cursor rules
 						- *we're all here to learn as much as possible as fast as possible*
