@@ -1,0 +1,4 @@
+alias:: [[Backlog Grooming]]
+
+- [What is Backlog Grooming? | Productboard](https://www.productboard.com/glossary/backlog-grooming/)
+	- Backlog grooming is a regular session where [backlog](https://www.productboard.com/glossary/product-backlog/) items are discussed, reviewed, and prioritized by product managers, product owners, and the rest of the team. The primary goal of backlog grooming is to keep the backlog up-to-date and ensure that backlog items are prepared for upcoming sprints. Additionally, the process helps product managers explain and align the organization behind the strategy that informs the backlog items.

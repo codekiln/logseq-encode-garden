@@ -1,9 +1,9 @@
-- [Advanced / Models – Cursor](https://docs.cursor.com/advanced/models)
+- [Cursor – Models](https://docs.cursor.com/settings/models)
 	- ## Summary
 		- only certain models work on [[CursorAI/Agent Mode]]
 			- [[Anthropic/Model/Claude/3.5/Sonnet]]
 			- [[OpenAI/Model/GPT/4o]]
-		- [[OpenAI/Model/o1]] is 10x the cost of [[OpenAI/Model/GPT/4o]] for Cursor
+		- [[OpenAI/Model/o1]] is 10x the cost of [[OpenAI/Model/GPT/4o]] for Cursor and is not included in the regular package. See [[CursorAI/Docs/Account/Teams/Members/Usage Controls]] for the details.
 		- [[DeepSeek]] models are coming soon, including in agent mode, which could be a game-changer
 	- ## Model Information Table
 		- [[CursorAI/Model/Small]]
@@ -49,17 +49,19 @@
 			- **Pricing:** $0.40
 			- **Note:** —
 		- [[OpenAI/Model/o1/Mini]]
+		  id:: 67a71fed-97e7-4fd0-bf93-11adc049c543
 			- **Provider:** OpenAI
 			- **Premium:** ✅
 			- **Agent:** ❌
 			- **Pricing:** **$0.10**
 			- **Note:** **10 requests/day included on paid plan**
 		- [[OpenAI/Model/o3/Mini]]
+		  id:: 67a71fed-f31d-449b-9c88-9d98d4796a1d
 			- **Provider:** OpenAI
 			- **Premium:** ✅
-			- **Agent:** ❌
-			- **Pricing:** **TBD (free for now)**
-			- **Note:** —
+			- **Agent:** ✅
+			- **Pricing:** **Counts as 1/3 fast request**
+			- **Note:** *This is the only reasoning model included in premium available to [[CursorAI/Agent Mode]]*
 		- [[DeepSeek/Model/v3]]
 			- **Provider:** DeepSeek
 			- **Premium:** ❌ (Coming soon)

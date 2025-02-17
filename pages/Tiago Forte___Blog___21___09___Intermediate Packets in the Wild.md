@@ -1,0 +1,35 @@
+- [Intermediate Packets in the Wild - Forte Labs](https://fortelabs.com/blog/intermediate-packets-in-the-wild/)
+	- One of the most powerful shifts I see people make in the way they work is breaking down their large projects or goals into smaller chunks, which I call “Intermediate Packets.”
+		- If you design a slide that elegantly communicates a certain idea, why not keep it as a building block that can be reused in multiple slide decks in the future?
+		- If you write a paragraph that powerfully argues a point, why not save that paragraph and incorporate it anytime you need to make that particular point?
+		- If you create a diagram that effectively illustrates a trend in your industry, why not preserve that diagram so you always have evidence to support your assertions?
+		- If you find a quote that speaks to one of your deeply held values, why not put it somewhere that you can refer to anytime you’re feeling down or discouraged?
+	- instead of finding a separate place for each of these kinds of content and many dozens of others, keep them all in your system of personal knowledge, which I call a [[Second Brain]].
+	- I’ve collected many examples of how this concept is applied in different creative media and different professions
+		- ## #Examples of [[Intermediate Packets]]
+			- "Module" in software development
+			- “Taste test” in cooking
+			- “Alpha” or “beta” in startups
+			- “Sketches” in architecture
+			- “Pilot” in television
+			- “Prototypes” or “iron birds” in mechanical engineering
+			- “Scaffolding” in IT development
+			- “Pilot process” in manufacturing
+			- “Scrimmages” in football
+			- “Scenarios” in firefighting
+			- “Concept car” in automobile design
+			- “Demos” in music recording
+			- “Sample” in baking
+			- “First pass” in theatre lighting design
+			- “Marking” in the performance arts
+			- “Mock-ups” for websites
+			- “Sitzprobe” for rehearsing an opera performance
+			- “Comps” in graphic design
+			- “Animatics” in storyboard animation
+			- “Passes” in sculpting
+			- “Manuscripts” for writing
+			- “Franken-model” for hardware design
+			- “Storyboard” in filmmaking
+			- “Preprint” in academia
+			- “Straw man” in proposal drafting
+			- “Wireframe” in UI design

@@ -1,0 +1,1 @@
+alias:: [[Person/Daniel Kahneman]]

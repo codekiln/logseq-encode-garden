@@ -1,0 +1,4 @@
+- [[Person/Daniel Kahneman]] describes two modes of thinking in his book [[Thinking, Fast and Slow]]: System 1 and System 2.
+- {{embed [[System 1 Thinking]]}}
+- {{embed [[System 2 Thinking]]}}
+- In summary, System 1 is quick and intuitive, while System 2 is deliberate and analytical. Both systems play crucial roles in how individuals think and make decisions, but they can also lead to different outcomes in judgment and reasoning.

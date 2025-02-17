@@ -1,0 +1,3 @@
+- The idea that using a [[Personal Knowledge Manager]] can help one Build a Second Brain, an outboard extension of memory and intermediate creative expression.
+- ## See Also
+	- [[Building a Second Brain]]

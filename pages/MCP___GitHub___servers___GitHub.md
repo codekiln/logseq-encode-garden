@@ -1,4 +1,5 @@
 created-by:: [[Person/Tim Rogers]]
+alias:: [[GitHub/MCP]], [[GitHub MCP]]
 
 - https://github.com/modelcontextprotocol/servers/tree/main/src/github
 - # GitHub MCP Server

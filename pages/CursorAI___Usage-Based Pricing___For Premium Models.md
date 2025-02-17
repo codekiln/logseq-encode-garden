@@ -1,0 +1,4 @@
+- As of early 2025, the `premium` models from [[CursorAI/Settings/Models]] only includes two reasoning models without [[CursorAI/Usage-Based Pricing]]:
+	- {{embed ((67a71fed-97e7-4fd0-bf93-11adc049c543))}}
+	- {{embed ((67a71fed-f31d-449b-9c88-9d98d4796a1d))}}
+	- Note that **out of these two of these**, only [[OpenAI/Model/o3/Mini]] is able to be used in Agent mode, and according to [[LangChain/Blog/25/02/Benchmarking Single Agent Performance]], [[o3-mini]]'s performance strongly degrades in tool calling accuracy (which would also include #MCP tool calls) when the context grows, which is typical in [[CursorAI/Agent Mode]].

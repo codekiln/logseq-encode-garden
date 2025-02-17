@@ -1,3 +1,4 @@
+-
 tags:: [[Idea]]
 
 - # Using [[CursorAI/Project Rule]] with the [[GitHub/CLI]] for an AI-Assisted SLDC

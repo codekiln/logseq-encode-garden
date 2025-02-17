@@ -1,0 +1,6 @@
+- https://docs.cursor.com/account/teams/members#usage-controls
+- This setting is only available on the [[CursorAI/Dashboard]]. Among other things, it enables turning on the following features that are off by default:
+	- Enable [[CursorAI/Usage-Based Pricing]]
+	- Enable for [[CursorAI/Usage-Based Pricing/For Premium Models]]
+- > Usage-based pricing allows you to pay for extra fast requests **beyond your plan limits**.
+- ![usage controls example - image contains text "Usage-based pricing allows you to pay for extra fast requests beyond your plan limits."](https://mintlify.s3.us-west-1.amazonaws.com/cursor/images/account/usage-based-pricing.png){:height 522, :width 739}

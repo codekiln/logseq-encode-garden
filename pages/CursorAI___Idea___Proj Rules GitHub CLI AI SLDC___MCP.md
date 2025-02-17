@@ -1,6 +1,6 @@
 tags:: [[Idea]], [[MCP]]
 
-- This idea is an extension to [[CursorAI/Idea/Use Project Rules to Integrate with GitHub CLI for an AI-Assisted SLDC]] that considers whether it might make sense to use a [[Model Context Protocol]] to interact with the [[GitHub/API]] to provide the same context that flat files would in that project.
+- This idea is an extension to [[CursorAI/Idea/Proj Rules GitHub CLI AI SLDC]] that considers whether it might make sense to use a [[Model Context Protocol]] to interact with the [[GitHub/API]] to provide the same context that flat files would in that project.
 - ## Finding an MCP server for the GitHub API
 	- An example of an MCP server is available in [[Person/Kevin Leneway/Github/awesome-cursor-mpc-server]].
 	- In this case, there may be an existing server available that interacts with the GitHub API
