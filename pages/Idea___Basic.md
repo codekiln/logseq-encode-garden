@@ -1,0 +1,1 @@
+alias:: [[Basic Idea]]

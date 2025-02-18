@@ -1,0 +1,5 @@
+- [Building a self-updating profile README for GitHub](https://simonwillison.net/2020/Jul/10/self-updating-profile-readme/)
+	- I couldn’t resist re-using the trick [from this blog post](https://simonwillison.net/2020/Apr/20/self-rewriting-readme/) and implementing a GitHub Action to automatically keep my profile README up-to-date.
+	- Visit [github.com/simonw](https://github.com/simonw) and you’ll see a three-column README showing my latest GitHub project releases, my latest blog entries and my latest [TILs](https://til.simonwillison.net/).
+	- I’m doing this with a GitHub Action in [build.yml](https://github.com/simonw/simonw/blob/master/.github/workflows/build.yml)
+	- It’s configured to run on every push to the repo, on a schedule at 32 minutes past the hour and on the new `workflow_dispatch` event which means I get a [manual button I can click](https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch/) to trigger it on demand.

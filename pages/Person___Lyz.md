@@ -1,0 +1,3 @@
+- Not much about this person online other than their amazing [[Knowledge Garden]]
+	- [[Person/Lyz/Garden]] [lyz-code (Lyz)](https://github.com/lyz-code)
+		- has lots of info about systems, [[DevOps]], as well as many other topics

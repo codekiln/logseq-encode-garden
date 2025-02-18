@@ -1,0 +1,2 @@
+- https://github.com/simonw
+- His about page uses tables and is updated daily! Crazy cool. See [[Person/Simon Willison/Blog/20/07/self-updating-profile-readme]]

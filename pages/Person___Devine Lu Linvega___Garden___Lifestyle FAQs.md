@@ -1,0 +1,12 @@
+- [XXIIVV — lifestyle faqs](https://wiki.xxiivv.com/site/lifestyle_faqs.html) #Quotes
+	- I was born in March of 1986
+	- I soon started writing [[Person/Devine Lu Linvega/Garden/Lifestyle FAQs/Music]] [music](audio.html) to complement the pictures and animations
+	- I work at a research studio aboard a sailboat, called [Hundred Rabbits](hundred_rabbits.html), where we do experiments in resilience and self-reliance using [low-tech solutions](https://100r.co/site/philosophy.html).
+	- I go to bed choosing one thing to accomplish the next day, I wake up to tackle this [singular task](routine.html). I tend to work only in the morning, get everything done before lunch. The afternoons, I spend mostly reading and learning things to help me solve the next day's task. I usually wake up with the sun, and sleep soon after sunset.
+	- I share a forum with a few online friends and whenever I am looking for a new favourite thing, or some help — I know I can find it there. Everyone should build a network, a place where they can feel comfortable to experiment, show works-in-progress and exchange on the topics of art and science in a safe place among [like-minded people](merveilles.html).
+	- In my early years of journaling, I accidentally stumbled on the feedback loop that exists between the Work, and its documentation. The aspiration that transpired from documenting through the lens of fiction bordering on self-insertion
+	- > Working behind an avatar ([[Person/Devine Lu Linvega/Garden/Identity]]) and living online through a proxy name offers a good healthy farness between the work and the self. The Devine Lu Linvega project focuses on making explicit the reflections, and techniques for the creative process. My intimate life, my health, my friends and family are outside of the scope of this project.
+	- > I thereafter modeled the Devine Lu Linvega project over things like [[Book/The Divine Comedy]], [[Book/Etidorhpa]] or [[Book/Alice in Wonderland]], which are fictional #Travel #Journals
+- ##
+	-
+	-

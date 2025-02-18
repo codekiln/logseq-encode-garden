@@ -1,4 +1,3 @@
--
 alias:: [[CursorAI/Docs/Account/Usage/Fast and Slow Requests]]
 
 - https://docs.cursor.com/account/usage#fast-and-slow-requests

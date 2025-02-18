@@ -1,2 +1,5 @@
 - #Website [Simon Willison’s Weblog](https://simonwillison.net/)
-- One of the core developers that made #Django
+- One of the core developers that made #Django, #GOAT
+- [[Person/Simon Willison/GitHub]] https://github.com/simonw
+- [[Person/Simon Willison/Bluesky]] https://bsky.app/profile/simonwillison.net
+-

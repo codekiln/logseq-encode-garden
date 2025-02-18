@@ -1,1 +1,1 @@
-- [cursor.directory](https://cursor.directory/)
+- [Find MCP servers at cursor.directory](https://cursor.directory/mcp/)

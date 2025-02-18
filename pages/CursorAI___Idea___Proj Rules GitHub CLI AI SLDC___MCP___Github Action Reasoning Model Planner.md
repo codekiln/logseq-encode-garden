@@ -5,7 +5,7 @@ tags:: Idea
 		- The parent idea, [[CursorAI/Idea/Proj Rules GitHub CLI AI SLDC/MCP]] describes how #[[GitHub/MCP]] could enable Cursor to utilize GitHub project planning functionalities. This would enable it to plan what to do and possibly keep an agent scratchpad in the issue comments whose history is more idiomatically recorded in the repository, the way that a real software engineer would.
 	- ## Impetus
 		- This idea extends the parent idea farther. Many Cursor power users swear that using a reasoning model to create the action plan is an essential first step to effectively using Cursor; see also [[CursorAI/Technique/Frontload Design]]. As of early 2025, it is a bit awkward to use reasoning models in Cursor.
-			- It's not possible to use one's own API key to use reasoning models:
+			- It's not possible to use one's own API key to use OpenAI reasoning models:
 				- {{embed [[CursorAI/Settings/API Keys/OpenAI API Keys]]}}
 			- Also, using reasoning models requires usage-based pricing, which isn't feasible for every person or team; in particular, usage-based pricing may be disabled at the team-level:
 				- {{embed [[CursorAI/Usage-Based Pricing/For Premium Models]]}}

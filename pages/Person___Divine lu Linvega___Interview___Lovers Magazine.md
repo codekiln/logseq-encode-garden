@@ -1,0 +1,21 @@
+tags:: [[Zine/Lovers Magazine]]
+
+- [Interview with Devine Lu Linvega, Frontend Developer at XXIIVV: Lovers Magazine by Spaces](https://spaces.is/loversmagazine/interviews/devine-lu-linvega)
+	- > Operating under the [[Username/neauoire]] moniker, Devine is a polymath working on a series of experimental tools and applications while sailing around the world and documenting their life at sea
+	- My typical day begins with my eyes closed, at around 7:00 am
+	- I then rise, grind coffee. I usually ever only drink one cup per day.
+	- I immediately set off to complete the task I have eye-closely planned. No email, no chat. I know myself to have 2 hours of undisturbed flow before the distraction surrounding lunch-time pull me away from the screen
+	- My goal is usually to have done a singular task per day, the daily task is devised in a way that it should take about 3 hours to complete - Across roughly 5 or 6 [pomodoro](https://github.com/XXIIVV/Clock) grinds.
+	- After the last pomodoro, I tend to [cook](http://grimgrains.com/#home). I try as much as possible to take an [hour for lunch](https://wiki.xxiivv.com/#nutrition) to try and exit the state of flow
+	- The afternoon is spent doing maintenance or superficial work, experiments
+	- the afternoon is spent [reading and learning](https://wiki.xxiivv.com/#directory)
+	- goal is to build a catalog of exciting things to wake up to the next day and to experiment with
+	- day ends with [journaling](https://wiki.xxiivv.com/#journal) in which I record the task done, and if any, the lessons learned
+	- usually go to sleep with a book and a highlighter pen
+	- currently reading [[Book/Hermeneutics]], I overline the things I want to keep for a [later use](https://wiki.xxiivv.com/#glossary), or to revisit
+	- While it is not a public place for anyone to visit, my point is instead to suggest that anyone who's looking for inspiration build a place where they can feel at ease to experiment, show works-in-progress and exchange on art and science in a safe place among [like-minded people](https://webring.xxiivv.com/).
+	- I think I find a lot of my ideas while cycling. But that's not really a place either.
+	- Among the ones that have given me vertigo with how good of a design it had, was the "[Carrick Bend](https://en.wikipedia.org/wiki/File:Carrick-bend-Guten-Verrill-modified.png)" knot. It's a simple knot, but it is infinitely pleasing aesthetically. I've recently learned how to make a [origami pentagon](https://www.pinterest.jp/pin/1548181097703821/), and this, also, has blown me away with its elegance and simplicity.
+	- Among all the apps and games that I have built, [Dotgrid](http://hundredrabbits.itch.io/dotgrid) would be the one I use the most. But the one I am most proud of is [my own website](http://xxiivv.com/). It has been around for the better part of the last 10 years, and it is now an extension of myself, it's a repository of what I know, and what I am [hoping to learn](https://wiki.xxiivv.com/#aesthetics).
+	- two main challenges of hosting a studio aboard a [sailboat](http://wiki.xxiivv.com/pino) are: power, and [internet connectivity](http://100r.co/resources.html#internet). We currently power our studio's [battery bank with solar panels](http://100r.co/resources.html)
+	- Over time, you begin building around the more power-efficient applications and stay away from software that requires constant internet connectivity.

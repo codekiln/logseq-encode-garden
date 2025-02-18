@@ -1,0 +1,7 @@
+# [50 Years of Travel Tips](https://simonwillison.net/2025/Feb/17/50-years-of-travel-tips/)
+	- These travel tips from [[Person/Kevin Kelly]] are the best kind of advice because they're almost all both surprising but obviously good ideas.
+	- The first one instantly appeals to my love for  [[Person/Simon Willison/Niche Museums]], and helped me realize that traveling with someone who is passionate about something fits the same bill - the joy is in experiencing someone else's passion, no matter what the topic:
+	- > Organize your travel around passions instead of destinations. An itinerary based on obscure cheeses, or naval history, or dinosaur digs, or jazz joints will lead to far more adventures, and memorable times than a grand tour of famous places. It doesn’t even have to be your passions; it could be a friend’s, family member’s, or even one you’ve read about. The point is to get away from the expected into the unexpected.
+	- I *love* this idea:
+	- > If you hire a driver, or use a taxi, offer to pay the driver to take you to visit their mother. They will ordinarily jump at the chance. They fulfill their filial duty and you will get easy entry into a local’s home, and a very high chance to taste some home cooking. Mother, driver, and you leave happy. This trick rarely fails.
+	- And those are just the first two!

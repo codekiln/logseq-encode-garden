@@ -3,6 +3,5 @@
 		- > 100%. **I keep the composers as short as possible and try to think through the design of a feature before starting**. If it’s multiple steps then how can I best prompt each step in a new composer and let it figure out the rest of the context on its own.
 	- [[CursorAI/Technique/Composer/Git Commit Frequently]]
 		- > **git commit FREQUENTLY** so it’s easy to blast away the changes if it gets stuck in a loop.
-	- [](https://x.com/robertcuadra/status/1890073924681232467)
 - Source
 	- {{tweet https://x.com/robertcuadra/status/1890073924681232467}}

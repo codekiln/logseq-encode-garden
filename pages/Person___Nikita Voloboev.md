@@ -1,0 +1,17 @@
+- About
+	- An avid [[Knowledge Gardener]]
+		- https://wiki.nikiv.dev/
+		- [[Person/Nikita Voloboev/Garden]]
+			- https://docs.nikiv.dev/
+			- a substantial knowledge garden
+			- lots of info about learning [[Programming Languages]]
+- Links
+	- [[Person/Nikita Voloboev/LinkedIn]] https://www.linkedin.com/in/nikitavoloboev
+	- [[Person/Nikita Voloboev/Web/About]] https://nikiv.dev/
+	- [[Person/Nikita Voloboev/TwitX]] https://x.com/nikitavoloboev
+	- [[Person/Nikita Voloboev/GitHub]] https://github.com/nikitavoloboev
+- #Discovered #Via
+	- [[Person/Lyz]]
+-
+-
+-

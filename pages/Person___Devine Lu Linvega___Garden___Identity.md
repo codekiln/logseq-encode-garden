@@ -1,0 +1,3 @@
+- [XXIIVV — identity](https://wiki.xxiivv.com/site/identity.html)
+	- ![Carmilla portrait](https://wiki.xxiivv.com/media/identity/carmilla.jpg){:height 414, :width 410}
+	- The Carmilla icon is taken from the [1995 cyberpunk magazine](https://archive.org/stream/Carmilla1/carmilla-1-1-1995#page/n41/mode/2up) with the same name. This avatar is primarily being used on [Mastodon](https://merveilles.town/@neauoire) and private channels.
