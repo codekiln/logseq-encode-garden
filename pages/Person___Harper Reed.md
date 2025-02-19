@@ -1,4 +1,4 @@
-- Worked on
+- Worked on [[Person/Barack Obama]]'s tech team
 - [[Person/Harper Reed/Web]] https://harperreed.com/
 - [[Person/Harper Reed/Blog]] https://harper.blog/posts/
 - [[Person/Harper Reed/Web/About]] https://harper.blog/about/
