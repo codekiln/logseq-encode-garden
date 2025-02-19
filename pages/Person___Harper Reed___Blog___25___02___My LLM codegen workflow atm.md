@@ -1,7 +1,8 @@
-tags:: [[AI/Coding]]
+created-by:: [[Person/Harper Reed]]
 :LOGBOOK:
 CLOCK: [2025-02-19 Wed 03:51:26]
 :END:
+tags:: [[AI/Coding]]
 
 - # DONE [My LLM codegen workflow atm | Harper Reed's Blog](https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/)
 	- ## #notes
