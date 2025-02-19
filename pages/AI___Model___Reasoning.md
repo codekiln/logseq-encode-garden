@@ -1,5 +1,6 @@
 alias:: [[LLM Reasoning Model]]
 
 - #Examples
-	- [[OpenAI/Model/o3/Mini]]
-	- [[OpenAI/Model/o1]]
+	- #o3
+	- #o3-mini
+	- #o1

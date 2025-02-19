@@ -1,0 +1,1 @@
+- > Claude has a tendency to just output react code - and having a solid foundation with the language, style, and tooling of your choice will help quite a bit.

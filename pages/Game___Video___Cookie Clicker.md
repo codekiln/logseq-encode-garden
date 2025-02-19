@@ -1,0 +1,3 @@
+- [Cookie Clicker](https://orteil.dashnet.org/cookieclicker/)
+- Game where you just click a cookie as fast as possible
+-

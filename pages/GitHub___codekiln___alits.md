@@ -153,7 +153,7 @@
 						- This is after I read through all doc pages that seem to be related to building and distributing M4L devices from the long list at [https://docs.cycling74.com/max8/vignettes/max\_for\_live\_topic](https://docs.cycling74.com/max8/vignettes/max_for_live_topic), but I couldn't find a page that groups these related topics, so I'm not sure if I missed something.
 					- [Max/MSP, Max4Live, & RNBO (the thread) - Equipment - lines](https://llllllll.co/t/max-msp-max4live-rnbo-the-thread/18366/188?page=10) #Cool [[Forum/post]] [[llllllll/Forum]]
 						- EDIT: I saved it as an M4L object with presentation mode if you want to hack it from there: [Dropbox - ManuallyClockedSeq.amxd - Simplify your life](https://www.dropbox.com/s/hhrty53a7iztbcu/ManuallyClockedSeq.amxd?dl=0)
-						- DOUBLE EDIT: I highly, highly recommend buying this book, which is all about hacking the live.step object for more advanced behaviors: [Books About Max | Cycling '74](https://cycling74.com/products/books) [[Books/Max Cookbook]] is there
+						- DOUBLE EDIT: I highly, highly recommend buying this book, which is all about hacking the live.step object for more advanced behaviors: [Books About Max | Cycling '74](https://cycling74.com/products/books) [[Book/Max Cookbook]] is there
 			- ## Breakthrough - creating a new [[Ableton/Max for Live/MIDI Effect]] and then opening `.maxproj` DOES work in Ableton Live
 				- I even get the `js: Hello! Writing from typescript! ` in the console! so, we're in business possibly ...
 				- done
