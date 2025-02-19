@@ -5,7 +5,5 @@ tags:: [[Knowledge Gardener]]
 	- > Dr. Simson Garfinkel researches and writes at the intersection of #AI #Privacy and [[Digital Forensics]]. He is a fellow of the AAAS, the ACM and the IEEE. He earned his PhD in Computer Science at MIT and a Master of Science in Journalism at Columbia University.
 	- Via https://simson.net/page/Bio
 - [[Person/Simson Garfinkel/Garden]] [All pages - Simson Garfinkel](https://simson.net/page/Special:AllPages)
-	- Hosts his personal knowledge garden as a [[Wiki]] on [[MediaWiki]]
-	- Lots of information about the classes he teaches, which are mostly related to his research areas
 -
 -
