@@ -1,4 +1,4 @@
 tags:: [[Knowledge Garden]]
 
-- https://maggieappleton.com/
+- https://maggieappleton.com/garden
 - essays, notes, patterns, library
