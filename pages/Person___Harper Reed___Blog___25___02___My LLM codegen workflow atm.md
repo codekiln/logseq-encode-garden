@@ -8,11 +8,7 @@ tags:: [[AI/Coding]]
 	- ## #notes
 		- Awesome overview of a CLI-centric workflow for AI coding. solid advice.
 		  id:: 67b5b920-e30f-48db-8a1a-8faa0d8f8b41
-			- particular emphasis on using
-				- [[mise]]
-				- [[aider]]
-				- [[llm-cli]]
-				- [[Repomix]]
+		- Tools: [[mise]], [[aider]], [[llm-cli]], [[Repomix]]
 	- > tl:dr; Brainstorm spec, then plan a plan, then execute using LLM codegen. Discrete loops. Then magic. ✩₊˚.⋆☾⋆⁺₊✧
 	- ## [[Greenfield Coding]] code dev (~15 min)
 		- ### Step 1 - requirements elicitation - have #4o or #o3 interview you for the requirements

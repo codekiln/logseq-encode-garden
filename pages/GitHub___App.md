@@ -1,0 +1,7 @@
+- [About creating GitHub Apps - GitHub Docs](https://docs.github.com/en/apps/creating-github-apps/about-creating-github-apps/about-creating-github-apps)
+	- use cases for GitHub Apps
+	- Automating tasks or background processes
+	- Supporting "Sign in with GitHub," which allows users to sign in with their GitHub account to provide their identity in your ecosystem
+	- As a developer tool, allowing users to work with GitHub by signing into your GitHub App, which can then act on their behalf
+	- Integrating your tool or external service with GitHub
+	- Like OAuth apps, GitHub Apps use OAuth 2.0 and can act on behalf of a user. Unlike OAuth apps, GitHub Apps can also act independently of a user.
