@@ -19,7 +19,7 @@ tags:: [[Idea]]
 	- When using [[CursorAI/Agent Mode]], the agent can read [[CursorAI/Project Rule]] to craft CLI command invocations for the GitHub CLI, `gh`. A lot of information about this CLI is likely already in the training data, but Project Rules may let users focus the AI's attention on the details about how to use it in an AI-assisted [[Software/Engineering/Development Life Cycle (SLDC)]] and specifically within the context of Cursor.
 	- A centerpiece of this approach is that rather than explicitly saying what should be done in the composer chat, the [[Product Requirements Document]] should most likely be specified in a external project management software like a GitHub issue.
 	- ### Defining the [[PRD]] in the [[GitHub/Issue]]
-		- A project rule `gh-issue-update.mdc` rule could be created to help with the ideating phase of the issue. Perhaps a [[GitHub/Projects]] `status` could be applied to the issue to signal that it is in a design phase.
+		- A project rule `gh-issue-update.mdc` rule could be created to help with the ideating phase of the issue. Perhaps a [[GitHub/Project]] `status` could be applied to the issue to signal that it is in a design phase.
 		- A draft issue can be created as a markdown issue, and [[GitHub/CLI/gh/issue/create]] can create an issue when it's time, or [[GitHub/CLI/gh/issue/edit]] could edit an issue if it needs to be updated.
 	- ### Checking out a [[GitHub/Issue]] to work on it
 		- [[GitHub/CLI/gh/issue/develop]] can check out a branch from another branch, and link the branch to the issue. The new branch will be configured as the base branch for pull requests created using  [[GitHub/CLI/gh/pr/create]].

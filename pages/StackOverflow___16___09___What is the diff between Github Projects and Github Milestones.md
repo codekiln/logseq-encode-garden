@@ -1,4 +1,4 @@
-tags:: [[GitHub/Projects]], [[GitHub/Milestones]]
+tags:: [[GitHub/Project]], [[GitHub/Milestones]]
 
 - # [What is the difference / relationship between GitHub Projects and Milestones? - Stack Overflow](https://stackoverflow.com/questions/39591795/what-is-the-difference-relationship-between-github-projects-and-milestones)
 	- Top answer, from [[Person/Remi Lanvin]]
