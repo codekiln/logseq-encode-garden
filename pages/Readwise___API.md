@@ -1,0 +1,3 @@
+- https://readwise.io/api_deets
+- looks fairly well designed
+- could easily pull things into knowledge graph
