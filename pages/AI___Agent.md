@@ -1,1 +1,1 @@
-alias:: Agent, Agents
+alias:: Agent, Agents, Agentic
