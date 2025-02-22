@@ -1,4 +1,4 @@
-tags:: [[Question]], [[EdTech]], [[Digital Twin]]
+tags:: [[Q]], [[EdTech]], [[Digital Twin]]
 
 - In a [[Learning Management System]] (LMS), **Digital Twins** can revolutionize personalized education, learner engagement, and instructor effectiveness. Here’s how:
 - ### **1. Personalized Learning Paths**

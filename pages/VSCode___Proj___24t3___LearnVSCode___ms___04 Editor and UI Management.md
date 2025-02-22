@@ -43,7 +43,7 @@ icon:: 🎯
 			  id:: 678cd106-8965-4d07-bc49-740cc127436d
 			- TODO create logseq flashcard for all the active editor file right click menu items
 			  id:: 67653c4d-40f0-49ed-9f3c-0f11beb47aa4
-				- TODO #Question how many of these require one to be focused *on the tab* rather than the *active editor*?
+				- TODO #Q how many of these require one to be focused *on the tab* rather than the *active editor*?
 				- Close Others: ⇧⌘T
 				- Close Saved: ⌘K U
 				- Close All: ⌘K W

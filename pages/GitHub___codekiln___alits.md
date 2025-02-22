@@ -227,7 +227,7 @@
 							  ```
 								- but I get an #Error when it tries to load this line 7 - `mylib.greet()` is not found.
 									- `js: Main.js: Javascript TypeError: mylib.greet is not a function, line 7`
-							- DONE How do relative imports work in [[GitHub/zsteinkamp/m4l-typescript-base]]? we're importing from utils there ... let me look at the compiled js artifacts #Question
+							- DONE How do relative imports work in [[GitHub/zsteinkamp/m4l-typescript-base]]? we're importing from utils there ... let me look at the compiled js artifacts #Q
 							  :LOGBOOK:
 							  CLOCK: [2025-02-09 Sun 10:34:42]--[2025-02-09 Sun 10:35:25] =>  00:00:43
 							  :END:

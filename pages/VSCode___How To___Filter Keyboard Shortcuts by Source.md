@@ -1,4 +1,4 @@
-# DONE How do I filter the Keyboard Shortcuts view by the source, for example, an extension? #Question
+# DONE How do I filter the Keyboard Shortcuts view by the source, for example, an extension? #Q
 	- You cannot currently filter for the keyboard shortcuts of a particular extension, as far as I know. See also my [[GitHub/Issue]] here:
 		- [Support Keyword or Exact Search for `@source` filter in Keyboard Shortcuts view · Issue #239309 · microsoft/vscode](https://github.com/microsoft/vscode/issues/239309)
 	- However, several search filters are available in the keyboard shortcuts view.

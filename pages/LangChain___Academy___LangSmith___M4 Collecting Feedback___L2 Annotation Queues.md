@@ -5,7 +5,7 @@ date-completed:: [[2025-02-19 Wed]]
 - ## [[LangSmith Annotation Queues]] overview
 	- can have feedback applied to them
 	- can be individually added to a dataset
-		- #Question when should we encourage SMEs to add to a distinct [[LangSmith/Dataset]] vs when to apply a #Rubric ?
+		- #Q when should we encourage SMEs to add to a distinct [[LangSmith/Dataset]] vs when to apply a #Rubric ?
 		  id:: 67b606b2-1122-46ff-bb35-78b6e96b4aa0
 			- The annotation queue has a "D" hotkey for adding to the default dataset, so it might be simplest if we were going to only use datasets for the "golden" dataset - the "reference" of a good response.
 - ## Creating [[LangSmith Annotation Queues]]

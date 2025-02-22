@@ -9,7 +9,7 @@
 		  card-last-score:: 5
 			- Shortcut: `Shift+Command+]`
 			- Description: Moves focus to the next terminal group.
-			- TODO #Question **what exactly is a [[VSCode/Terminal/Group]]?**
+			- TODO #Q **what exactly is a [[VSCode/Terminal/Group]]?**
 		- **Focus Previous Terminal Group** #card
 		  card-last-interval:: 33.64
 		  card-repeats:: 4

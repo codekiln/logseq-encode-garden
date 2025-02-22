@@ -103,7 +103,7 @@ tags:: [[CursorAI/Project Rule]]
 		- so this little build file here what's happening is it's creating a new [[nextjs]] application with all the defaults
 		- but then what happens is when you've got cursor rules in your folder *already* it
 			- {{youtube-timestamp 783}} won't let you create a [[nextjs]] folder so it creates a temporary folder that you can copy back that and it will copy it all back into so you're so you're good to go
-				- DONE #Question what is this about? What's the problem? **ANS**: it is because the commands `npx create-next-app` create a whole subfolder, which overwrites the cursor rules directory, so instead, we create it in a temp folder and copy it back
+				- DONE #Q what is this about? What's the problem? **ANS**: it is because the commands `npx create-next-app` create a whole subfolder, which overwrites the cursor rules directory, so instead, we create it in a temp folder and copy it back
 		- [[CursorAI/Technique/Open Project in the Right Folder]]
 			- {{youtube-timestamp 793}} one thing that a lot of people fall down on when they're creating new projects is
 				- once you've got cursor set up and you open a new project
@@ -112,7 +112,7 @@ tags:: [[CursorAI/Project Rule]]
 				- so that so that cursor or vs code or whatever it is is can reset itself and set itself up so that it's working with the root of the file tree that you're going to be working with
 				- and the **AI needs this to have a context for where it is**
 				- **if you're a folder structure down or in a different place it's going to get confused** so always
-					- TODO #Question what is he talking about? is he saying that if you have your `.cursor/rules` in the root of the repository, but you have a monorepo-like structure and you open up the subfolder, then Cursor can't find the [[CursorAI/.cursor/rules]]?
+					- TODO #Q what is he talking about? is he saying that if you have your `.cursor/rules` in the root of the repository, but you have a monorepo-like structure and you open up the subfolder, then Cursor can't find the [[CursorAI/.cursor/rules]]?
 			- {{youtube-timestamp 825}} make sure to file and open in the right folder that's **really critical**
 		- okay and we have a few other commands here like uh
 			- installing Lucid React Icons
@@ -135,7 +135,7 @@ tags:: [[CursorAI/Project Rule]]
 			- In this case, it's NOT a good example of the type of project rule you'd want committed to your project repo, but is instead a rule you might want to bring in so that you can start up your project
 		- ## Starting to use the rules
 			- {{youtube-timestamp 926}} I can just use my voice control
-				- TODO #Observation - he's using some kind of [[Tool/Dictation]] ... which one? #Question
+				- TODO #Observation - he's using some kind of [[Tool/Dictation]] ... which one? #Q
 			- and say "I want to install nextjs in this directory" okay so you see that it's picked up so you'll see that it's actually picked up on it it
 				- I didn't invoke it in any way it just knew that nextjs was what I was asking about even {{youtube-timestamp 945}} though the dictation got it wrong the model will get the context
 				- it's giving me a citation of my rule here

@@ -110,7 +110,7 @@ icon:: 🎯
 				- TODO take notes on [[VSCode/Docs/Editor/Testing]]
 				- TODO take notes on [Python profile template](https://code.visualstudio.com/docs/editor/profiles#_python-profile-template) [[VSCode/Docs/Editor/Profiles/Python Profile Template]] - Create a new [[VSCode/Docs/Editor/Profile/Python]]  [profile](https://code.visualstudio.com/docs/editor/profiles) with a curated set of extensions, settings, and snippets
 				- TODO take notes on [[VSCode/Docs/Python/Debugging]] [Debugging](https://code.visualstudio.com/docs/python/debugging) - Learn to debug Python both locally and remotely.
-					- TODO How do I create a [[VSCode/launch.json]] [[VSCode/Debugger/Configuration]] so that when it asks me for arguments, I can supply more than one and they will be supplied as more than one argument? #Question
+					- TODO How do I create a [[VSCode/launch.json]] [[VSCode/Debugger/Configuration]] so that when it asks me for arguments, I can supply more than one and they will be supplied as more than one argument? #Q
 					  id:: 676fd6c9-baa1-4402-ba53-1ca4a0dd8aaa
 					- TODO is there any way to create a [[VSCode/launch.json]] [[VSCode/Debugger/Configuration]]
 				- TODO take notes on [[VSCode/Extension/Python]] [Python - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
@@ -119,7 +119,7 @@ icon:: 🎯
 				- TODO take notes on [[VSCode/Docs/Languages/Python]] [Python in Visual Studio Code](https://code.visualstudio.com/docs/languages/python)
 				- TODO find a good VSCode for Python course
 		- ### Items to push to the parent project
-			- TODO #to-file how can I format jinja files with [[Ruff]] in [[VSCode]]? #Question
+			- TODO #to-file how can I format jinja files with [[Ruff]] in [[VSCode]]? #Q
 			  id:: 677276bc-8175-4a8f-8e23-2e39eb5db802
 		- ### Theoretical Next Actions
 		- ### #Design todos
@@ -316,7 +316,7 @@ icon:: 🎯
 						- ((676d1d18-01df-4a93-8cc4-983f5a3d13c3))
 						- ((676d1d2b-6ad5-4baa-9a2e-218ad2c419ce))
 					- ((676d1d19-1ea4-42bd-b1b2-844f44aa63b3))
-						- TODO #Question #to-file What is the #VSCode #Keyshort for the Run Python button
+						- TODO #Q #to-file What is the #VSCode #Keyshort for the Run Python button
 					- 04:19 #Filed ((676d1dfa-f9d4-4335-be68-fcd95e3fe89a))
 				-
 		- **LearnVSCode_03_Python** log [[2024/Trimester/t3/w17/d3]] - [[Wed, 2024/12/25]]

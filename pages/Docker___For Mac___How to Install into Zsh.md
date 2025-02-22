@@ -31,7 +31,7 @@ tags:: [[Diataxis/How To]], [[zsh]]
 					  docker-compose                docker-index
 					  docker-credential-desktop     hub-tool
 					  ```
-			- DONE When should I use [[zsh/.zprofile]] vs [[zsh]] #Question
+			- DONE When should I use [[zsh/.zprofile]] vs [[zsh]] #Q
 				- **`.zprofile`**:
 					- Loaded for **login shells** (i.e., when you log into a system via SSH or TTY).
 					- It is equivalent to [[Bash/.bash_profile]].

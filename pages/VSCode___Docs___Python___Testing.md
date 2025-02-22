@@ -73,7 +73,7 @@ CLOCK: [2025-01-03 Fri 06:34:13]--[2025-01-15 Wed 03:26:46] =>  284:52:33
 				- 1. [[VSCode/Command/Testing/Focus on Test Explorer]]
 				- 2. `Cmd Click` on more than one
 				- 3. click on the **Run Test** button on any of them
-				- TODO #Question - is there any way to do this with focus management? Certainly there must for [[A11y]] reasons
+				- TODO #Q - is there any way to do this with focus management? Certainly there must for [[A11y]] reasons
 	- ## DONE [Run Tests in Parallel](https://code.visualstudio.com/docs/python/testing#_run-tests-in-parallel)
 	  id:: 6779110c-b7cc-42fa-b936-c4608e8d6837
 	  :LOGBOOK:
@@ -332,7 +332,7 @@ CLOCK: [2025-01-03 Fri 06:34:13]--[2025-01-15 Wed 03:26:46] =>  284:52:33
 					- [code actions](https://code.visualstudio.com/docs/editor/refactoring#_code-actions--quick-fixes-and-refactorings) can be used to add type annotations to test funcs with fixture parameters
 					- example:
 						- ![add type annotation to housing data inline hints](https://code.visualstudio.com/assets/docs/python/testing/pytest-annotation-code-action.png)
-					- DONE what is an [[VSCode/Term/Inlay Hint]] and what Pylance Test configuration is available? #Question #card
+					- DONE what is an [[VSCode/Term/Inlay Hint]] and what Pylance Test configuration is available? #Q #card
 					  card-last-interval:: -1
 					  card-repeats:: 1
 					  card-ease-factor:: 2.36

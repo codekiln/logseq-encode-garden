@@ -1,5 +1,6 @@
 alias:: [[AI Engineer Summit 2025 NYC Workshops]], [[AI/ES/25/AI Engineer Summit 2025 NYC Workshops]]
 
+- date:: [[2025-02-22 Sat]]
 - # Workshop Schedule
 	- # Workshop 1 - 10:00 AM
 		- # #Chosen

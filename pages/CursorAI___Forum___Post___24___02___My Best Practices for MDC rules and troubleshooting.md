@@ -4,7 +4,7 @@ tags:: [[CursorAI/Project Rule]]
 - [My Best Practices for MDC rules and troubleshooting - How To - Cursor - Community Forum](https://forum.cursor.com/t/my-best-practices-for-mdc-rules-and-troubleshooting/50526)
 	- #OP [[CursorAI/Forum/User/Meh-S-Eze]]
 		- > I spent a bunch of time testing stuff with the AI, and we figured out that the rules load based on the numbers `<CURRENT_CURSOR_POSITION>` at the start of the filenames.
-			- TODO What does this mean? #Question
+			- TODO What does this mean? #Q
 		- > if you have rules that clash, the last one wins
 		- #Tip
 			- [[yaml]] is definitely the way to go
