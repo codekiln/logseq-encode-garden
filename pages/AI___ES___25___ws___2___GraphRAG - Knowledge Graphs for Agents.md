@@ -19,7 +19,21 @@ created-by:: [[Person/Alison Cossette]]
 		- Alison Cossette, Data Science Strategist, Advocate, Educator
 		  LinkedIn
 		  Twitter
-	- form: https://docs.google.com/forms/d/e/1FAIpQLScKDk4bwnHLBKhTZXJ4XP-YBkGLgUh3B1C7-mc38jC7r0BAUQ/viewform
+	- workshop form: https://docs.google.com/forms/d/e/1FAIpQLScKDk4bwnHLBKhTZXJ4XP-YBkGLgUh3B1C7-mc38jC7r0BAUQ/viewform
+		- see also
+		- https://graphacademy.neo4j.com/courses/genai-workshop/
+	- init summary
+		- Generative AI is only as good as the data it retrieves—but traditional RAG (Retrieval-Augmented Generation) is limited by flat, disconnected search. AI models struggle to connect structured data (databases, APIs) with unstructured data (docs, PDFs, chat logs), leading to incomplete answers and hallucinations.
+		  
+		  Enter GraphRAG—a next-generation retrieval approach powered by Neo4j. This workshop will show you how graphs unlock deeper context, better reasoning, and enterprise-ready AI applications. No graph experience needed!
+		  
+		  You’ll learn how to:
+		- Integrate structured and unstructured data into a unified retrieval system.
+		- Use GraphRAG to improve accuracy, explainability, and trust in AI-generated answers.
+		- Leverage graph-native retrieval, embeddings, and hybrid search for better responses.
+		- Apply GraphRAG to real-world use cases, from enterprise AI copilots to knowledge-driven automation.
+		  
+		  Whether you’re building AI-powered search, chatbots, or intelligent assistants—GraphRAG makes AI retrieval smarter. Join us to learn how Neo4j can take your Generative AI applications to the next level.
 	- ## Intro
 		- problems with #RAG
 			- how do I handle
@@ -114,6 +128,229 @@ created-by:: [[Person/Alison Cossette]]
 				- what are the areas of knowledge that they are interacting on
 				- they came in asking about this and they left asking about that
 				- having this understanding ... as a builder itmmight not be important to you, but to product owner, highly relevant
-				-
+	- ## GraphRAG
+		- ### #GraphRAG Patterns
+			- ![image.png](../assets/image_1740247345920_0.png)
+			- cgpt notes
+				- This slide outlines **GraphRAG Patterns**, which integrate **graph databases with retrieval-augmented generation (RAG)** for AI applications.
+				- ### **Key GraphRAG Patterns:**
+					- #### [[Neo4j/Text2Cypher]]
+						- Converts natural language prompts into **Cypher queries** for graph-based retrieval.
+						- Enhances interpretability and structured querying of knowledge graphs.
+					- #### [[GraphRAG/Graph Vector]]s
+						- Uses **graph embeddings** for retrieval, combining **structured and unstructured data**.
+						- Improves **vector similarity search** by adding semantic relationships.
+					- **Vector Search with Graph Context**
+						- Uses **graph patterns** to retrieve additional **context** for vector search results.
+						- Enhances retrieval accuracy by **linking relevant entities**.
+					- **Graph Filtering**
+						- Applies **graph relationships and metadata** to **filter** vector search results.
+						- Supports **hybrid search**, combining **semantic retrieval and structured filtering**.
+					- **Agents and Multi-Step**
+						- Combines multiple **GraphRAG patterns** into an intelligent **GenAI workflow**.
+						- Enables **corrective retrieval, semantic layers, and multi-step reasoning**.
+				- ### **Why This Matters?**
+					- **Brings structure to retrieval**: Enhances AI-driven search by **combining vector-based retrieval with graph context**.
+					- **More precise and explainable AI responses**: Graphs add reasoning to **why** an answer is retrieved.
+					- **Scalable for enterprise AI**: Helps in **chatbots, knowledge management, and recommendation systems**.
+			- ### my #notes
+				- it's going to run [[Cosine/Similarity]] in the graph
+					- give me top *k* back
+				- ##### text2cypher
+					- convert natural language prompts to explicit "[[Neo4j/Cypher Query Language]]" queries for retrieval
+					- we are querying just the domain portion
+				- #### the embdding lives on the node in that chunk
+					- you've even got sonnet 3.5 embedding and gpt
+					- the vectors live as a property of the node
+				- #### #Q how good is text to cypher if text to SQL is not that great
+					- internally they use it and it's good
+				- #### #Q how can you use external vector stores if you want to?
+					- #MCP
+					- data doesn't *need* to move, but you can have a "temporal holding"
+					- you can create a "relevant graph for the moment"
+						- they've seen people do that
+					- what does that look like?
+						- they will store it in neo4j because they want to connect it for the memory graph
+				- #### #Q what is a [[GraphRAG/Graph Vector]]
+					- is it graph to vector vs vector to graph
+					- if I have a million rows of information about a client
+					- if I have a categorical with 5 elements and it exists a million tiems
+					- sparse matrix, anyone?
+						- it helps with the sparse matrix problem
+						- there's no need to hold empty space, it's not there
+							- #Oracle
+					- you want to start with the node that's the most exclusive in your query
+						- sort of like [[TF-IDF]]
+				- #### #Q how does indexing work for this?
+					- based on which embedding you are using
+					- it will go across all the nodes that are using that column
+					- 13:14 they are at neo4j > User Guide: RAG > Create a Vector Index in the docs
+						- this is the python library for neo4j
+				- #### #Q question about filtering
+					- more and less efficient way to do it
+					- create an index per customer
+	- ## Semantic Search + Traversal
+		- pic
+			- ![image.png](../assets/image_1740248397062_0.png)
+		- cgpt notes
+			- This slide illustrates **Semantic Search + Traversal** using a **graph-based recommendation approach**.
+			- ### **Key Components:**
+			- **Semantically Similar Products**
+				- Products are linked based on **semantic similarity** (e.g., embeddings, categories, or features).
+				- **"VARIANT_OF"** relationships connect product variations.
+			- **Customers**
+				- Customers who have purchased similar products are **clustered** in the graph.
+				- **Edges represent purchase history** (e.g., "PURCHASED" relationships).
+			- **Purchases in Common**
+				- Identifies shared purchasing behavior among customers.
+				- Allows **pattern detection** to find products likely to be bought together.
+			- **Target Customer**
+				- Graph traversal extends recommendations by **finding customers with similar purchase patterns**.
+				- Helps predict what a customer might purchase next based on **graph proximity and semantic similarity**.
+			- ### **Why This Matters?**
+			- **Combines Vector Similarity + Graph Search**
+				- Uses **semantic search** to match products while leveraging **graph traversal** to infer relationships.
+			- **Better Personalization**
+				- Helps in **recommendation systems** by finding similar products based on prior purchases.
+			- **Graph-Based Collaborative Filtering**
+				- Unlike traditional **matrix-based recommendation systems**, this approach dynamically **adapts to new data**.
+			- ### **Potential Use Cases:**
+			- **E-commerce recommendations**
+			- **Personalized content suggestions**
+			- **Customer behavior analysis**
+		- my #notes
+		- let's see some actual things
+	- ## Demo
+		- llm-graph-builder.neo4jlabs. ...
+		- ### drag and drop in some product descriptions
+			- we could ask it to tell us what the entities are
+			- i just want to know
+				- is there a product in there
+				- how do i tie across to the domain
+				- how to tie it to the rest of my data
+		- ### graph enhancements schema builder
+			- #### image
+				- ![image.png](../assets/image_1740249015911_0.png)
+			- #### cgpt notes
+				- This slide illustrates **Semantic Search + Traversal** using a **graph-based recommendation approach**.
+				- ### **Key Components:**
+				- **Semantically Similar Products**
+					- Products are linked based on **semantic similarity** (e.g., embeddings, categories, or features).
+					- **"VARIANT_OF"** relationships connect product variations.
+				- **Customers**
+					- Customers who have purchased similar products are **clustered** in the graph.
+					- **Edges represent purchase history** (e.g., "PURCHASED" relationships).
+				- **Purchases in Common**
+					- Identifies shared purchasing behavior among customers.
+					- Allows **pattern detection** to find products likely to be bought together.
+				- **Target Customer**
+					- Graph traversal extends recommendations by **finding customers with similar purchase patterns**.
+					- Helps predict what a customer might purchase next based on **graph proximity and semantic similarity**.
+				- ### **Why This Matters?**
+				- **Combines Vector Similarity + Graph Search**
+					- Uses **semantic search** to match products while leveraging **graph traversal** to infer relationships.
+				- **Better Personalization**
+					- Helps in **recommendation systems** by finding similar products based on prior purchases.
+				- **Graph-Based Collaborative Filtering**
+					- Unlike traditional **matrix-based recommendation systems**, this approach dynamically **adapts to new data**.
+				- ### **Potential Use Cases:**
+				- **E-commerce recommendations**
+				- **Personalized content suggestions**
+				- **Customer behavior analysis**
+			- #### my notes
+				- it's looking for product name
+					- 1 entity recognition in unstructure
+					- 2 - some other step
+		- ### The job of [[Ontologies]] is never done
+			- The "Going Meta" podcast, hosted by Jesús Barrasa, Neo4j's Global Director of Sales Engineering, features an episode titled **"One Ontology to Rule Them All: Building Knowledge Graphs from Mixed Data."** This is **Season 2, Episode 5**, released on December 27, 2024
+			- In this episode, Barrasa delves into the integration of structured and unstructured data using ontologies to construct comprehensive knowledge graphs. The session includes demonstrations on creating and applying ontologies, importing structured data, and managing unstructured data with GraphRAG.
+			  
+			  For further exploration:
+			- **Watch the Episode**:
+				- **Access Resources and Code**: [Going Meta GitHub Repository](https://github.com/jbarrasa/goingmeta)
+			- #### there's a way this can help us answer - is there something we know that we don't know?
+				- TODO didn't quite catch this part, check up later - what was it? maybe you can actually ask it what it doesn't know or what holes there are [in the ontology?]
+				- "it becomes an interesting tool in that development" -> in the development of the ontology?
+	- ## Flatfiles Demo
+		- ### image
 			-
-		-
+		- ### cgpt notes
+			-
+		- ### my #notes
+			- this user interface is querying customers.csv, orders.csv, products.csv
+			- three graph nodes
+	- ## EDA with Graphs and GDS - [[AI/Grounding]]
+		- image
+			- ![image.png](../assets/image_1740250235409_0.png)
+		- cgpt notes
+			- This slide outlines the **Elements of High-Quality Grounding Data**, which are crucial for improving **LLM (Large Language Model) performance** in **retrieval-augmented generation (RAG)**.
+			- ### **Key Elements:**
+			- **Relevant**
+				- Data should directly relate to the problem the **LLM is solving** and the expected **user queries**.
+			- **Augmenting**
+				- Helps **fill gaps** in the LLM’s knowledge, especially for **non-public or out-of-training-window** data.
+			- **Reliable**
+				- Must be **accurate**, whether sourced internally or externally.
+			- **Clean**
+				- Should be **free of errors, formatting issues, and noise**, especially when extracted from **notebooks, websites, and repositories**.
+			- **Efficient**
+				- Avoids **duplicates or near-duplicates** to prevent wasting valuable **context space**.
+			- ### **Why This Matters?**
+			- Ensuring **high-quality grounding data** improves **LLM accuracy and relevance**.
+			- **Prevents hallucinations** by **augmenting model knowledge with trustworthy sources**.
+			- **Optimizes token efficiency**, reducing unnecessary redundancy.
+		- my notes
+			- ADVICE: Connect -> Cluster -> Curate
+		- KNN-similar text chunks
+			- if you've got 17 different chunks that they are nearly identical, they can be removed
+			- collapsing duplicate nodes
+				- into a single instance
+				- maintain relationship to original source document
+					- through original URL
+	- ## Graphs enable explainable AI in LLMs
+		- by having "logging and memory graph" we can dive into it
+		- this evaluation piece is about the connection between the memory program and the rest
+		- "most frequently used" grounding text
+		- centrality algorithm -> chatbot for data science documentation
+			- most used algo by their customers
+		- how do I get data into neo4j and how do I run the algo
+		- sometimes you want "most frequent document" *communities*
+			- of course, the first most used is the docs then the 2nd is the community
+		- but what's the visualization of the logging
+	- ## Logging and visualizing document usage
+		- image
+			- ![image.png](../assets/image_1740250387757_0.png)
+		- cgpt
+			- This slide explains how **Neo4j can be used to log and visualize LLM conversations**, integrating them with **context documents** in a structured graph.
+			- ### **Key Concepts:**
+			- **Graph-Based Conversation Logging**
+				- LLM conversations are stored in **Neo4j** with structured relationships.
+				- Messages from the **user** and **assistant** are linked sequentially (`NEXT` relationship).
+				- Context documents (`HAS_CONTEXT`) are associated with messages.
+			- **Graph Structure Example**
+				- **User and Assistant Messages**:
+					- "User" initiates the conversation.
+					- "Assistant" provides responses.
+				- **Relationships in the Graph**:
+					- `HAS_CONVERSATION`: Links a session to an LLM (e.g., GPT-4).
+					- `NEXT`: Orders the conversation flow.
+					- `HAS_CONTEXT`: Associates messages with relevant context documents.
+			- **Why This Matters?**
+				- **Retrieval-Augmented Generation (RAG)**:
+					- Context documents are **retrievable** based on conversation history.
+				- **LLM Debugging & Insights**:
+					- Helps **analyze patterns** in chatbot interactions.
+				- **Fine-Tuning Data Collection**:
+					- Logs **real user queries** for **model improvement**.
+					  
+					  Would you like help **querying LLM conversations in Neo4j** using Cypher?
+		- *inspect communities of llm responses* to detect if people are getting responses
+			- there's something important here, but I didn't quite catch it
+			- it has to do with [[AI/Eval]]s
+			- TODO 13:54 come back and check this technique out
+		- [[Key Insight]] it's not going to be obvious
+			- if you get a bad response in an agent, agents aren't complaining yet
+			- we need to understand *the physics of the systems and how they are moving*
+		- Recommendation - the woman from ARIZE -
+			- [Ensure AI Agents Work: Evaluation Frameworks for Scaling Success](https://www.ai.engineer/summit/2025/schedule/ensure-ai-agents-work-evaluation-frameworks-for-scaling-success)
+	-
