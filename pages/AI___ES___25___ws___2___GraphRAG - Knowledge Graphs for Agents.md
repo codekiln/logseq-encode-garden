@@ -1,0 +1,16 @@
+# [Smarter AI with GraphRAG – Connecting Structured & Unstructured Data for Better Retrieval](https://www.ai.engineer/summit/2025/schedule/smarter-ai-with-graphrag-connecting-structured-and-unstructured-data-for-better-retrieval)
+- **Date**: February 22, 2025
+- **Time**: 12:30 PM
+- Generative AI is only as good as the data it retrieves—but traditional RAG (Retrieval-Augmented Generation) is limited by flat, disconnected search. AI models struggle to connect structured data (databases, APIs) with unstructured data (docs, PDFs, chat logs), leading to incomplete answers and hallucinations.
+- Enter GraphRAG—a next-generation retrieval approach powered by Neo4j. This workshop will show you how graphs unlock deeper context, better reasoning, and enterprise-ready AI applications. No graph experience needed!
+- You’ll learn how to:
+- Integrate structured and unstructured data into a unified retrieval system.
+  Use GraphRAG to improve accuracy, explainability, and trust in AI-generated answers.
+  Leverage graph-native retrieval, embeddings, and hybrid search for better responses.
+  Apply GraphRAG to real-world use cases, from enterprise AI copilots to knowledge-driven automation.
+  Whether you’re building AI-powered search, chatbots, or intelligent assistants—GraphRAG makes AI retrieval smarter. Join us to learn how Neo4j can take your Generative AI applications to the next level.
+- [[Person/Alison Cossette]]
+	- Alison Cossette is a dynamic Data Science Strategist, Educator, and Podcast Host. As a Developer Advocate at Neo4j specializing in Graph Data Science, she brings a wealth of expertise to the field. With her strong technical background and exceptional communication skills, Alison bridges the gap between complex data science concepts and practical applications. Alison’s passion for responsible AI shines through in her work. She actively promotes ethical and transparent AI practices and believes in the transformative potential of responsible AI for industries and society. Through her engagements with industry professionals, policymakers, and the public, she advocates for the responsible development and deployment of AI technologies. She is currently a Volunteer Member of the US Department of Commerce - National Institute of Standards and Technology’s Generative AI Public Working Group Alison’s academic journey includes Masters of Science in Data Science studies, specializing in Artificial Intelligence, at Northwestern University and research with Stanford University Human-Computer Interaction Crowd Research Collective. Alison combines academic knowledge with real-world experience. She leverages this expertise to educate and empower individuals and organizations in the field of data science. Overall, Alison Cossette’s multifaceted background, commitment to responsible AI, and expertise in data science make her a respected figure in the field. Through her role as a Developer Advocate at Neo4j and her podcast, she continues to drive innovation, education, and responsible practices in the exciting realm of data science and AI.
+- Alison Cossette, Data Science Strategist, Advocate, Educator
+  LinkedIn
+  Twitter

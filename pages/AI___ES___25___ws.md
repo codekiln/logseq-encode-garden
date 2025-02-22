@@ -1,0 +1,90 @@
+alias:: [[AI Engineer Summit 2025 NYC Workshops]], [[AI/ES/25/AI Engineer Summit 2025 NYC Workshops]]
+
+- # Workshop Schedule
+	- # Workshop 1 - 10:00 AM
+		- # #Chosen
+			- **Company:** [[OpenAI]]
+				- **Presenter:** [[Person/Ilan Bigio]] [Ilan Bigio](https://www.linkedin.com/in/ilanbigio)
+					- [[AI/ES/25/ws/1/Building with OpenAI o1 o3 and Realtime]]
+						- **Date**: February 22, 2025
+						- **Time**: 10:00 AM - 12:00 PM
+						- **Presenter**: Ilan Bigio
+						- **Room**: Jay Suites A & B - 109 W 39th 2nd floor
+						- **Description**: This workshop will delve into building applications using OpenAI's latest models—4o, o1, and o3—with a focus on real-time capabilities and function calling. Participants will learn how to effectively utilize these models to create advanced AI applications.
+		- # Alt
+			- **Company:** [[Anthropic]]
+				- **Presenter:** [[Person/Mahesh Murag]] [Mahesh Murag](https://www.linkedin.com/in/maheshmurag)
+					- [[AI/ES/25/ws/1/Building Agents with Model Context Protocol]]
+						- # [Building (Agents) with Model Context Protocol](https://www.ai.engineer/summit/2025/schedule/anthropic-mcp)
+							- This workshop, from the creators of MCP, talks about the philosophy behind MCP, its impact on the broader ecosystem since launch, and how developers can use it to build context-rich AI apps and agentic experiences.
+	- # Workshop 2 - 12:30pm-2:15pm
+		- **Company:** [[Neo4j]]
+			- **Presenter:** [[Person/Alison Cossette]]
+				- [[AI/ES/25/ws/2/GraphRAG - Knowledge Graphs for Agents]]
+		- **Company:** [[Weights & Biases]]
+			- **Presenter:** [[Person/Alex Volkov]] [Alex Volkov](https://www.linkedin.com/in/alexvolkov)
+				- [[AI/ES/25/ws/2/AI in Production - Observe, Compile, Eval]]
+					- https://www.ai.engineer/summit/2025/schedule/wandb-production
+		- **Company:** Independent
+			- **Presenter:** [[Person/Minki Jung]] [Minki Jung](https://www.linkedin.com/in/minkijung)
+				- [[AI/ES/25/ws/2/Flow Engineering 101]]
+					- # [Flow Engineering 101](https://www.ai.engineer/summit/2025/schedule/flow-eng-101)
+						- If you've built a advanced LLM app, you know how finicky it is to break down complex goals into sub-tasks and organize them into a workflow. For instance, what are the best practices when decomposing tasks? How to manage the state within a workflow? Are generic flows better than complicated ones?
+						- Flow engineering is an emerging skill among AI engineers that covers these questions.
+						- In this workshop, we'll explore the four fundamentals of flow engineering: managing state, curating context, improving conditional edges, and best architectural practices. Through these fundamentals, you'll learn to transform complex LLM interactions into well-structured, maintainable systems that deliver reliable results.
+		- **Company:** [[Solana]]
+			- **Presenter:** [[Person/Tiffany Dong]] [Tiffany Dong](https://www.linkedin.com/in/tiffanydong)
+				- [[AI/ES/25/ws/2/Crypto Agents on Solana]]
+	- # Workshop 3 - 2:30pm-3:50pm
+		- **Company:** [[LangChain]]
+			- **Presenter:** [[Person/Nick Huang]] [Nick Huang](https://www.linkedin.com/in/nickhuang)
+				- [[AI/ES/25/ws/3/How Clay Performs Agent Evaluation]]
+					- **Date**: February 22, 2025
+					- **Time**: 2:30 PM - 3:50 PM
+					- **Presenters**: [[Person/Nick Huang]] and Ratch Sujithan
+					- **Room**: AWS JFK27 (12 W 39th St) 300/301 - entrance 39th St & 5th Ave, large gold doors, bring ID
+					- **Description**: In this workshop, Nick Huang from #LangChain will explain agent evaluation concepts. Jeff Barg will then demonstrate how Clay performs end-to-end agent tests for Claygent across various prompt categories against a ground truth dataset, and discuss how Clay conducts prompt-level evaluations.
+		- **Company:** [[AWS]]
+			- **Presenter:** [[Person/Deepam Mishra]]
+				- [[AI/ES/25/ws/3/AWS Agentic DeepSeek]]
+					- https://www.ai.engineer/summit/2025/schedule/aws-deepseek
+		- **Company:** [[Pydantic/Logfire]]
+			- **Presenter:** [[Person/Samuel Colvin]] [Samuel Colvin](https://www.linkedin.com/in/samuelcolvin)
+				- [[AI/ES/25/ws/3/Building Agents with Pydantic AI]]
+					- # [An Opinionated Blueprint for the Future of GenAI Applications](https://www.ai.engineer/summit/2025/schedule/an-opinionated-blueprint-for-the-future-of-genai-applications)
+						- We think people are over-complicating AI application development.
+						- With the right abstractions, there's no need to reinvent software engineering for AI applications — existing tools like Pydantic can form the foundation of the AI engineering stack.
+						- The key challenge today is identifying patterns that allow you to build maintainable, AI-powered components within larger software systems.
+						- In this talk, Samuel Colvin, creator of Pydantic, will present a blueprint for the most critical components of new AI applications.
+						- Based on our experience building AI functionality into our commercial platform, Pydantic Logfire, this blueprint includes:
+						- Data Validation, Reflection and Self-Correction: The critical role of enforcing strict data contracts at the API level and validating inputs to and outputs from AI models to ensure reliability — simple and obvious though this might see, it’s easy to get wrong and many people do Schema Generation: tool calls are critical to leveraging LLMs, but you shouldn’t be hand-writing JSON Schema to define tools, instead Pydantic should be generating schema from the same source of truth used for data validation.
+						- Evaluations and Iterative Improvement: The importance of continuous evaluation and iterative refinement to improve AI models and applications over time.
+						- Observability: Implementing observability to monitor AI systems, detect issues early, and maintain robust performance. We'll motivate the importance of each of these bullets and, perhaps surprisingly, show through concrete examples and code snippets demonstrating how straightforward they can be to implement using familiar tools like Pydantic.
+		- **Company:** [[Neon]]
+			- **Presenter:** [[Person/Mahmoud Abdelwahab]] [Mahmoud Abdelwahab](https://www.linkedin.com/in/mahmoudabdelwahab)
+				- [[AI/ES/25/ws/3/Build a Personal AI Email Agent]]
+					- # [Build a personal AI email agent](https://www.ai.engineer/summit/2025/schedule/email-agent)
+						- Build a personal AI Email Agent that automatically processes, labels, and drafts responses to incoming messages. You'll create the agent with Next.js, TypeScript, the Vercel AI SDK, and Neon Postgres.
+	- # Workshop 4 - 4:10pm - 5:30pm
+		- **Company:** [[Stride]]
+			- **Presenter:** [[Person/Dan Mason]] [Dan Mason](https://www.linkedin.com/in/danmason)
+				- [[AI/ES/25/ws/4/Multi-Agent Workflows with MCP]]
+					- # [Multi-Agent Workflows with MCP](https://www.ai.engineer/summit/2025/schedule/mcp-workflows)
+						- Agents aren't really agents unless they can discover the world outside of the chatbox, and act on it -- and the MCP (Model Context Protocol) is an emerging standard for connecting agents to physical and digital worlds. This workshop will teach you how to build your own MCP client (not just the one built into Claude) and connect it to a multi-agent system (we'll be using LangGraph but this approach works with Autogen, Crew AI and many more). This allows you to build powerful workflows that go way beyond writing code, and rethink how to express business logic as a set of roles, tools, and desired outcomes. We'll walk through examples together and then put them into practice -- come with ideas of workflows you want to build! [List of existing MCP servers here]
+						-
+		- **Company:** [[AWS]]
+			- **Presenter:** [[Person/Suman Debnath]] [Suman Debnath](https://www.linkedin.com/in/sumandebnath)
+				- https://github.com/debnsuma
+				- [[AI/ES/25/ws/4/Multimodal Agentic RAG]]
+					- # [Agentic RAG with Vision Language Models](https://www.ai.engineer/summit/2025/schedule/aws-agentic-rag)
+						- Discover the transformative potential of Multimodal Agentic Retrieval-Augmented Generation (RAG) in this hands-on workshop. Participants will explore the integration of advanced AI engineering techniques with Amazon Nova to build systems that leverage text and image embeddings, LangChain, and Amazon Bedrock for creating context-aware multimodal AI agents. The workshop focuses on the practical application of Multimodal RAG to automate complex workflows, such as insurance claim optimization, through enhanced decision-making and operational efficiency.
+						- Room: AWS JFK27 (12 W 39th St) 200/201 - entrance 39th St & 5th Ave, large gold doors, bring ID
+		- **Company:** [[Vercel]]
+			- **Presenter:** [[Person/Nico Albanese]] [Nico Albanese](https://www.linkedin.com/in/nicoalbanese)
+				- [[AI/ES/25/ws/4/Advanced AI Engineering]]
+		- **Company:** [[Letta]]
+			- **Presenter:** [[Person/Charles Packer]] [Charles Packer](https://www.linkedin.com/in/charlespacker)
+				- [[AI/ES/25/ws/4/Agent Memory and the LLM OS]]
+		- **Company:** (Independent)
+			- **Presenter:** [[AI/Person/Jason Liu]] [Jason Liu](https://www.linkedin.com/in/jasonliu)
+				- [[AI/ES/25/ws/4/Advanced RAG]]
