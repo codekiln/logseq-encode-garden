@@ -184,56 +184,49 @@ tags:: [[AI/Agent]], [[LangChain]], [[Workshop]], [[Tutorial]]
 				- "Talking: Sydney"
 	- ## Expected trajectory can be ordered
 		- ![image.png](../assets/image_1740255660446_0.png)
-		- **v1 Trajectory (Red Box)**
-			- `get_calendar(time="5pm")`
-			- `get_calendar(time="7pm")` *(green)*
-			- `get_calendar(time="6pm")` *(red)*
-			- `schedule_meeting(time="7pm")`
-		- **Expected Trajectory (Green Box)**
-			- `get_calendar(time="5pm")`
-			- `get_calendar(time="6pm")` *(red)*
-			- `get_calendar(time="7pm")`
-			- `schedule_meeting(time="7pm")`
-		- **Key takeaway:**
-			- The v1 trajectory executes `get_calendar(time="7pm")` before `get_calendar(time="6pm")`, which is incorrect compared to the expected ordering.
-		- **LangChain logo present at the bottom-left corner**
-		- **Slide number:** 41
-	- ## Setting up Agentic Evals
+			- **v1 Trajectory (Red Box)**
+				- `get_calendar(time="5pm")`
+				- `get_calendar(time="7pm")` *(green)*
+				- `get_calendar(time="6pm")` *(red)*
+				- `schedule_meeting(time="7pm")`
+			- **Expected Trajectory (Green Box)**
+				- `get_calendar(time="5pm")`
+				- `get_calendar(time="6pm")` *(red)*
+				- `get_calendar(time="7pm")`
+				- `schedule_meeting(time="7pm")`
+			- **Key takeaway:**
+				- The v1 trajectory executes `get_calendar(time="7pm")` before `get_calendar(time="6pm")`, which is incorrect compared to the expected ordering.
+			- **LangChain logo present at the bottom-left corner**
+			- **Slide number:** 41
+	- ## **Multi-turn conversations can be tested individually, or in series**
 		- ![image.png](../assets/image_1740256078101_0.png)
-		- **Multi-turn conversations can be tested individually, or in series**
 		- **Comparison of Testing Approaches:**
 			- **One Conversation (Green Box)**
 				- Human: A
-				- AI: B
+					- AI: B
 				- Human: C
-				- AI: D
+					- AI: D
 				- Human: E
-				- AI: F
+					- AI: F
 			- **Each Turn can be tested individually (Red Boxes)**
 				- **First box:**
 					- Human: A
-					- AI: ?
+						- AI: ?
 				- **Second box:**
 					- Human: A
-					- AI: B
+						- AI: B
 					- Human: C
-					- AI: ?
+						- AI: ?
 				- **Third box:**
 					- Human: A
-					- AI: B
+						- AI: B
 					- Human: C
-					- AI: D
+						- AI: D
 					- Human: E
-					- AI: ?
-		- **LangChain logo present at the bottom-left corner**
+						- AI: ?
 		- **Slide number:** 46
-		- **Zoom overlay visible at the top**
-			- "This meeting is being recorded."
-			- "Not hearing anything? Turn up volume"
-			- "Talking: Sydney"
-	- ## Improving your Application
+	- ## **Regression Testing: Does performance actually improve with a change?**
 		- ![image.png](../assets/image_1740256094705_0.png)
-		- **Regression Testing: Does performance actually improve with a change?**
 		- **Diagram Structure:**
 			- **Application Versions**
 				- v1 → Dataset A (red arrow)
@@ -253,11 +246,7 @@ tags:: [[AI/Agent]], [[LangChain]], [[Workshop]], [[Tutorial]]
 				- v2: 10s
 				- v3: 20s
 				- v4: 5s
-		- **LangChain logo present at the bottom-left corner**
 		- **Slide number:** 52
-		- **Zoom overlay visible at the top**
-			- "This meeting is being recorded."
-			- "Not hearing anything? Turn up volume"
 	- ## [[Person/Ratch Sujithan]]
 		- ### Clay
 			- "data marketplace for go to markplace"
@@ -266,68 +255,102 @@ tags:: [[AI/Agent]], [[LangChain]], [[Workshop]], [[Tutorial]]
 				- it can augment your dataset
 			- go to clay.com and see what they have to offer
 			- trusted by 300k gtm teams - openai, airbnb, [[Anthropic]], [[CursorAI]], notion, dropbox
-		- ### demo that took 5-7 min to shut up
+		- ### demo that took 5-7 min to create
 			- ## LangChain Demo: LinkedIn Profile Finder
 				- **Workspace:** Langchain demo
 				- ![image.png](../assets/image_1740256185555_0.png)
-				- **Data Table View:**
-					- **Columns:**
-						- "Find stargazers on" (GitHub user list)
-						- "Num Contributions"
-						- "Repos Contributed"
-						- "LinkedIn Profile Find"
-						- "Response"
-					- **Example Users:**
-						- `allsayar` (160+ contributions)
-						- `JohnShahawy` (3481 contributions, `backstage`, `cotmaker`)
-						- `davidtsong`, `salomartin`, `sjwithmore`, etc.
-				- **Model:** Claygent -> Argon
-				- **Configuration:**
-					- **Prompt:**  
-					  "Given a person's full name, GitHub username, and GitHub profile link, find their LinkedIn profile URL. Follow these steps to ensure accuracy:"
-					- **Inputs:**
-						- Name (`T Name`)
-						- GitHub Username (`T Username`)
-						- GitHub URL (`URL`)
-					- **Steps to Execute:**  
-					  1. Check the GitHub Profile Directly
-				- **Additional UI Elements:**
-					- "Compare models" button
-					- "Save" button
-				- **Zoom overlay visible at the top:**
-					- "This meeting is being recorded."
-					- "Not hearing anything? Turn up volume"
-					- "Talking: Sydney"
-				- **MacOS Dock visible at the bottom**
-			- use "stargazers" on github integration
-			- put langchain github url in there
-			- get back stargazers in a spareadsheet
-			- extract usernames and github urla
-			- use github integration to get names and contributions and number of repos they created
-			- i'm a recruiter to find out about them and find their backgrounds
-			- there's a linkedin profile finder
-			- now you can extract person from linkedin profile
-			- now you have country profile, email
-			- write personalized messages to them
-			- very small snapshot of what clay can do
+				- cgpt
+					- **Data Table View:**
+						- **Columns:**
+							- "Find stargazers on" (GitHub user list)
+							- "Num Contributions"
+							- "Repos Contributed"
+							- "LinkedIn Profile Find"
+							- "Response"
+						- **Example Users:**
+							- `allsayar` (160+ contributions)
+							- `JohnShahawy` (3481 contributions, `backstage`, `cotmaker`)
+							- `davidtsong`, `salomartin`, `sjwithmore`, etc.
+					- **Model:** Claygent -> Argon
+					- **Configuration:**
+						- **Prompt:**  
+						  "Given a person's full name, GitHub username, and GitHub profile link, find their LinkedIn profile URL. Follow these steps to ensure accuracy:"
+						- **Inputs:**
+							- Name (`T Name`)
+							- GitHub Username (`T Username`)
+							- GitHub URL (`URL`)
+						- **Steps to Execute:**  
+						  1. Check the GitHub Profile Directly
+					- **Additional UI Elements:**
+						- "Compare models" button
+						- "Save" button
+					- **Zoom overlay visible at the top:**
+						- "This meeting is being recorded."
+						- "Not hearing anything? Turn up volume"
+						- "Talking: Sydney"
+			- my #notes
+				- use "stargazers" on github integration
+				- put langchain github url in there
+				- get back stargazers in a spareadsheet
+				- extract usernames and github urla
+				- use github integration to get names and contributions and number of repos they created
+				- i'm a recruiter to find out about them and find their backgrounds
+				- there's a linkedin profile finder
+				- now you can extract person from linkedin profile
+				- now you have country profile, email
+				- write personalized messages to them
+				- very small snapshot of what clay can do
 		- ### how we think of evals
 		- ### Logs to Action
 			- logs here could be json logs
 			- analysis
 				- clustering
 				- regression
-		- ## Evals at Clay
+		- ## **Evals: Steering AI Strategy**
 			- **Evals: Steering AI Strategy**
 			- ![image.png](../assets/image_1740257703536_0.png)
-			- **Key Points:**
-				- Data-driven feedback loop
-				- Continuous Feedback
-				- Customer-Centric Insights
-				- Strategic Alignment
-				- Evolutionary Foundation
-			- **Clay logo present at the bottom-left corner**
-			- **Zoom overlay visible at the top**
-				- "This meeting is being recorded."
-				- "Not hearing anything? Turn up volume"
-				- "Talking: Sydney"
+				- **Key Points:**
+					- Data-driven feedback loop
+					- Continuous Feedback
+					- Customer-Centric Insights
+					- Strategic Alignment
+					- Evolutionary Foundation
+		- ## Core Elements of Our Evaluation Framework
+			- **Development Evaluations**
+				- Validate Functionality
+				- Test Integration
+				- Support New Use Cases
+			- **Observability Evaluations**
+				- Monitor Usage Patterns
+				- Performance Analysis
+				- Driving Strategic Decisions
+			- **Key Insight:**
+				- Observability insights continuously refine development evaluations in a feedback loop.
+		- ## Evals at Clay - **Evaluation Pipeline Overview**
+			- image here
+				- tbd
+			- **Production / Observability Evals**
+				- **Tools Used:**
+					- Segment
+					- LangSmith
+				- **Process:**
+					- Logs are collected and processed in LangSmith
+					- Structured events analyzed (Eval_IDs assigned)
+					- Pattern analysis and broader insights derived from multiple evaluations
+					- Insights linked to Linear for tracking action items
+						- Example: Sprint 1 - Implement Use Case 1
+						- Example: Sprint 2 - Implement Use Case 2
+			- **Development Evals**
+				- **Process:**
+					- New functionality added and simulated in development
+					- Update test suite:
+						- Test Case 1 → Test Use Case 1
+						- Test Case 2 → Test Use Case 2
+						- Test Case N → Test Use Case N
+					- Run CI Pipelines:
+						- Smoke Test CI
+						- Integration Test CI
+					- **GitHub Actions handles CI runs**
+					- **Final step: Deploy! 🚀**
+		-
 -

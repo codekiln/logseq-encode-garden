@@ -26,4 +26,4 @@ tags:: [[Anthropic/MCP]], #langgraph, Agentic
 	- #langgraph is the easiest to explain of all the frameworks #Quote -- [[Person/Dan Mason]]
 		- it is #Expensive at least it gan me
 		- it is model agnostic
-	-
+	- [[GitHub/CoPilot]] is at the bottom of the pile but
