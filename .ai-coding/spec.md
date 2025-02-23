@@ -4,7 +4,7 @@
 mise (pronounced "meez") is a development environment setup tool. This spec focuses on setting up [Harper Reed's AI coding workflow tasks](https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/).
 
 # Goals
-- [ ] Install mise
+- [x] Install mise
 - [ ] Configure global mise tasks for AI coding workflow
 - [ ] Test basic AI workflow functionality
 

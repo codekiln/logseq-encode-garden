@@ -2,3 +2,5 @@
 - ## #Install
 	- #brew
 		- `brew install mise`
+- ## `exec` and `run`
+	- `mise` can be used to install and run [tools](https://mise.jdx.dev/dev-tools/), launch [tasks](https://mise.jdx.dev/tasks/), and manage [environment variables](https://mise.jdx.dev/environments/).

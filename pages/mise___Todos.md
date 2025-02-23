@@ -1,23 +1,25 @@
 # `mise` TODOS
-	- TODO Configure Python version management
-	- TODO Configure Node.js version management
-	- TODO Test version switching between projects
-	- TODO Document version management workflow
-- ## Environment Variables
-	- TODO Set up project-specific environment variables
-	- TODO Test Python virtualenv integration
-	- TODO Document environment variable patterns
-- ## Task Runner Features
-	- TODO Explore file watch functionality
-	- TODO Test project-specific task overrides
-	- TODO Document task runner capabilities
-- ## Documentation
-	- TODO Create detailed setup guide
-	- TODO Document common workflows
-	- TODO Add troubleshooting section
-	- TODO Include example configurations
-	- TODO Document AI task usage patterns
-- ## Advanced Features
-	- TODO Test cross-project version management
-	- TODO Explore integration with other dev tools
-	- TODO Set up automated environment switching
+	- ## Version Management
+		- TODO Configure Python version management
+		- TODO Configure Node.js version management
+		- TODO Test version switching between projects
+		- TODO Document version management workflow
+	- ## Environment Variables
+		- TODO try managing [[GitHub/CLI/EnvVar/GH_TOKEN]] with `mise`
+		- TODO Set up project-specific environment variables
+		- TODO Test Python virtualenv integration
+		- TODO Document environment variable patterns
+	- ## Task Runner Features
+		- TODO Explore file watch functionality
+		- TODO Test project-specific task overrides
+		- TODO Document task runner capabilities
+	- ## Documentation
+		- TODO Document AI task usage patterns
+		- TODO Create detailed setup guide
+		- TODO Document common workflows
+		- TODO Add troubleshooting section
+		- TODO Include example configurations
+	- ## Advanced Features
+		- TODO Test cross-project version management
+		- TODO Explore integration with other dev tools
+		- TODO Set up automated environment switching
