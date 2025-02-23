@@ -19,6 +19,4 @@ created-by:: [[Person/Jeff Dickey]]
 		- `3`: task runner to share common tasks *within* a project
 			- for example, run a task when a file changes
 - [[mise/Docs/Guides/Getting Started]]
-	-
-	-
-	-
+	- [[mise/Todos]]
