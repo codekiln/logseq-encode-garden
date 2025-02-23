@@ -20,3 +20,4 @@ created-by:: [[Person/Jeff Dickey]]
 			- for example, run a task when a file changes
 - [[mise/Docs/Guides/Getting Started]]
 	- [[mise/Todos]]
+- [[mise/Docs/Guides/Walkthrouh]]

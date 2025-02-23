@@ -1,0 +1,1 @@
+- [dotenvy - crates.io: Rust Package Registry](https://crates.io/crates/dotenvy)
