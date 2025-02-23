@@ -328,7 +328,7 @@ tags:: [[AI/Agent]], [[LangChain]], [[Workshop]], [[Tutorial]]
 				- Observability insights continuously refine development evaluations in a feedback loop.
 		- ## Evals at Clay - **Evaluation Pipeline Overview**
 			- image here
-				- tbd
+				- ![image.png](../assets/image_1740270980969_0.png)
 			- **Production / Observability Evals**
 				- **Tools Used:**
 					- Segment
@@ -352,5 +352,206 @@ tags:: [[AI/Agent]], [[LangChain]], [[Workshop]], [[Tutorial]]
 						- Integration Test CI
 					- **GitHub Actions handles CI runs**
 					- **Final step: Deploy! 🚀**
-		-
--
+		- ## Development Evals – Ensuring Quality & Stability
+			- **Blackbox E2E Smoke Testing**
+				- Environment parity
+				- Early problem detection
+				- Confidence in real-world conditions
+			- **Integration Testing**
+				- Performance tracking on key use cases
+				- Regression prevention
+				- Comprehensive coverage
+		- ## **Claygent Blackbox E2E Smoke Test CI Workflow**
+			- ![image.png](../assets/image_1740271062509_0.png)
+			- **Workflow Steps:**
+			  1. **Checkout Branch Changes** (Git icon)
+			  2. **Install Packages** (npm icon)
+			  3. **Deploy to Staging** (AWS Lambda icon)
+			  4. **Run Smoketest Script** (`smoke_test.ts` file)
+			  5. **Clay API**
+				- Response: `200`
+				  6. **Clay Tables in Staging**
+		- ## **Claygent Blackbox E2E Smoke Test: Sample Staging Clay Table**
+			- ![image.png](../assets/image_1740271184217_0.png)
+				- **Table Overview:**
+					- **Columns:**
+						- `domain`
+						- `b2b_or_b2c`
+						- `TRUTH: claygent`
+						- `Send Test Case to C`
+						- `testid`
+						- `model`
+					- **Example Entries:**
+						- `horizonvalleygroup.com` → `B2C` → `Pass` → `gpt-4o`
+						- `bostrom.com` → `B2B` → `Pass` → `gpt-4o`
+						- `owshousing.com` → `B2B` → `Bug` → `gpt-4o`
+						- `culinaryproperties.com` → `B2B` → `Pass` → `gpt-4o`
+						- `globalmarininsurance.com` → `B2B` → `Fail` → `gpt-4o`
+						- `greatgood.org` → `B2C` → `Pass` → `gpt-4o`
+						- `fortcapitalp.com` → `B2B` → `Bug` → `gpt-4o`
+						- `servicethread.com` → `B2B` → `Pass` → `gpt-4o`
+				- **Key Status Indicators:**
+					- ✅ Pass
+					- ❌ Fail
+					- 🐞 Bug
+		- ## **Claygent Integration Testing: Types of Evals**
+			- **Key Points:**
+				- Check your agent’s performance in development to ensure high-quality output in production.
+				- Comparing Agent Output to Ground Truth.
+				- **Comparison Methods – [The Langchain Openevals Framework](https://github.com/langchain-ai/openevals) Approach:**
+					- Exact Match
+					- Levenshtein Distance
+					- Embedding Similarity
+					- LLM as a Judge
+		- ## **Claygent Integration Test Example 1**
+			- **Exact Matching**
+				- Integration Test
+				- LangSmith integration with Vitest
+			- **Code Example (JavaScript)**
+				- **Test Definition**
+				  ```javascript
+				  ls.test(
+				   'horizonrealtygroup',
+				   {
+				     inputs: {
+				       mission: createTestActionInputs('http://www.horizonrealtygroup.com').mission,
+				     },
+				     referenceOutputs: {
+				       answer: 'B2C',
+				     },
+				   }
+				  );
+				  ```
+				- **Execute Test**
+				  ```javascript
+				  async ({ referenceOutputs }) => {
+				   // call claygent action code
+				   const actionInputs = createTestActionInputs('http://www.horizonrealtygroup.com');
+				   const response = await runClaygentActionCode(actionInputs, testContext);
+				   ls.logOutputs({ response: response.data.result });
+				  ```
+				- **Assert Exact Match**
+				  ```javascript
+				   const exactMatchResult = await exactMatch({
+				     outputs: response.data.result,
+				     referenceOutputs: referenceOutputs?.answer,
+				   });
+				   expect(exactMatchResult.score).toBe(true);
+				  }
+				  ```
+		- ## LangSmith Debugging: Inspecting Model Discrepancies
+			- **Bucket Overview:**
+				- C Bucket: ✅ Passed
+				- Ideal Candidate Bucket: ❌ Meta failed, ✅ OpenAI passed
+			- **Using LangSmith for Debugging**
+				- Navigate to the **Datasets and Experiments** page on LangSmith.
+				- Identify and select the **Ideal Candidate** bucket.
+				- Click on the **latest run** to inspect errors.
+			- **Error Inspection Process**
+				- **Input:** "Give me an Ideal Candidate for the job at this particular link, at company Meta."
+				- **Reference Output:** Seems to be related to an iOS job.
+				- **Model Error:** Discrepancy detected.
+			- **Analyzing the Judge's Thought Process**
+				- **Judge's Observation:**
+					- Input suggests scraping a job for Mechanical Engineering.
+					- Reference output describes an iOS job.
+					- **Final Evaluation:**
+						- "Upon analyzing the reference and model outputs under the given rubric, it is evident that they describe candidates for entirely different roles."
+			- **Key Takeaway:**
+				- LangSmith provides insight into model performance discrepancies by exposing errors in judgment and alignment with expected outputs.
+		- ## Observability Evals – Real-Time Insights & Optimization
+			- **User Prompt Classification**
+				- Capture user patterns and trends.
+				- Sharpen evaluation for precise tuning.
+				- **Methods:** Classifier training, LLM judging, clustering, semantic analysis.
+			- **Realtime Agent Log Analysis**
+				- Monitor responses live.
+				- Receive immediate, context-aware feedback.
+				- Detect anomalies as they occur.
+				- Extract data for training and/or dev evals.
+		- ## Extracting Value from Customer Usage Data
+			- **Importance of Customer Logs**
+				- Understanding how customers interact with the platform provides the most valuable insights.
+				- Logs help assess whether an agent performed well or poorly on specific interactions.
+				- Extracting logs for training or development evaluations can refine model performance.
+			- **Classification, Clustering, and Tagging**
+				- Once logs are classified, clustering techniques can be applied.
+				- Tagging strategies help organize and analyze data for targeted improvements.
+			- **Key Takeaway:**
+				- Observability-driven insights allow for continuous tuning and refinement of AI agents.
+		- ## Prompt Classification - Clustering & Tagging
+			- ![image.png](../assets/image_1740271572484_0.png)
+				- **Using Embeddings for Clustering**
+					- Cohere has recently released embeddings tailored for clustering.
+					- Obtain embeddings for prompt properties.
+					- Perform clustering using methods such as:
+						- Hack-rewarded clustering
+						- K-means clustering
+					- Experimentation is necessary to determine the most effective clustering approach.
+				- **Generating Tags for Clusters**
+					- Once clusters are formed, send a request to the LLM to generate category tags.
+					- Results in well-defined buckets of prompt categories.
+				- **Analyzing Prompt Categories**
+					- Count the number of prompts in each category.
+					- Identify the most common customer use cases.
+					- Enables deeper insights into how customers are using the platform.
+				- **Key Takeaway:**
+					- Clustering prompts enables structured categorization and prioritization of real customer needs.
+		- ## Prompt Classification - Claygent Categories
+			- ![image.png](../assets/image_1740271686595_0.png)
+				- **Identified Prompt Categories:**
+					- **Company Profile**
+						- **Users:** 776
+						- **Events:** 306,944
+						- **Example Task:** Find the Facebook and Instagram profile links for a company.
+					- **Google Search**
+						- **Users:** 767
+						- **Events:** 171,276
+						- **Example Task:** Google an address and check if a company is listed.
+					- **Boolean**
+						- **Users:** 756
+						- **Events:** 162,082
+						- **Example Task:** Determine whether a statement is true or false.
+					- **Business Website**
+						- **Users:** 706
+						- **Events:** 160,212
+						- **Example Task:** Visit a company website and extract relevant details.
+				- **Analysis & Insights:**
+					- Understanding which categories are most commonly used helps prioritize improvements.
+					- Some categories may be less popular but still provide valuable use cases.
+		- ## Realtime Agent Performance Analysis
+			- **Live data is the best data!**
+			- **Key Insights:**
+				- Examples where the agent performs well → **Great training data**.
+				- Examples where the agent needs improvement → **Useful for development evals**.
+				- The feedback loop between **production evals, observability evals, and development evals** helps refine performance.
+			- **Process:**
+				- 1. Stream in live data.
+				- 2. Identify examples where the agent succeeds.
+				- 3. Export those cases to LangSmith for training.
+				- 4. Identify failure cases and move them to development evals.
+			- **Key Takeaway:**
+				- Creating a structured evaluation pipeline ensures continuous improvements in agent performance.
+		- ## LLM as a Judge - Example Evaluation
+			- **Input:**
+				- **Answer:** `valid`
+				- **Mission:**
+					- **Context:** Validate if a given website landing page is operational.
+					- **Objective:** Determine if the landing page at `kw-platinum.com` is connected.
+					- **Instructions:**
+					  1. Visit the website provided in the `kw-platinum.com` column.
+					  2. Check the landing page for indications that it is associated with a business.
+					  3. If the page appears to be improperly set up (e.g., showing a generic hosting page like `wix.com` default), mark it as `'broken'`.
+					  4. If the page loads correctly and is associated with a company, mark it as `'valid'`.
+					  5. Return **only** `'broken'` or `'valid'` based on the page status.
+					  6. Do **not** include any additional commentary or information in the response.
+					- **Examples:**
+						- If a Wix default page appears → Respond `'broken'`.
+						- If the landing page shows a functioning business site → Respond `'valid'`.
+			- **Output Evaluation:**
+				- **Reasoning:**
+					- The student's answer (`valid`) is concise and correctly follows the instructions.
+					- The response format adheres to the requirement to return **only** `'broken'` or `'valid'`.
+					- The student has determined that the landing page is operational and associated with a business, aligning with the objective.
+				- **Score:** 10 (Perfect response)
+				- **Conclusion:** The answer is both relevant and helpful, fully meeting evaluation criteria.
