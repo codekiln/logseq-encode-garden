@@ -11,11 +11,11 @@ mise (pronounced "meez") is a development environment setup tool. This spec focu
 # Implementation Checklist
 
 ## 1. Installation
-- [ ] Install mise via homebrew
+- [x] Install mise via homebrew
   ```bash
   brew install mise
   ```
-- [ ] Verify installation successful
+- [x] Verify installation successful
 
 ## 2. Configure AI Tasks
 - [ ] Create global config at `~/.config/mise/config.toml`
