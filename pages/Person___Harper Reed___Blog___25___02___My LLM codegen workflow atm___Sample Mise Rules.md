@@ -18,6 +18,7 @@ alias:: [[Person/Harper Reed/Sample Mise Rules]]
 				- `missing-tests-gen`
 				- `issue-prompts-gen`
 		- I'd like to adapt these commands so the files are not in the root of the repo but are instead in `.ai-coding/*`
+		  id:: 67bc53e0-115e-4c8b-9fb2-dfbd65c1665e
 	- DONE Configure AI coding task collection in `~/.config/mise/config.toml`:
 		- ### `LLM:generate_bundle` - Bundle Generation Task
 			- Generate LLM bundle using #Repomix
@@ -122,18 +123,17 @@ alias:: [[Person/Harper Reed/Sample Mise Rules]]
 			  cat output.txt | llm -m o3-mini -t issue-prompts-gen > issue-prompts.md
 			  """
 			  ```
-	- ## Key Differences from Previous Version
+	- ## #notes
 		- Uses a hidden `llm:generate_bundle` task that other tasks depend on
-		- Uses `llm` CLI tool with specific templates (-t flag) and models (-m flag)
+		- Uses [[llm-cli]] with specific templates (-t flag) and models (-m flag)
 		- More specific ignore patterns in the bundle generation
 		- Simpler output paths (directly in project root rather than .ai-coding/)
 		- Uses Claude 3.5 Sonnet for most generations, O3-mini for prompts
-	- ## Usage Notes
-		- Most tasks depend on the hidden `llm:generate_bundle` task
-		- Tasks generate files in the project root directory
+		- Tasks generate files in the project root directory; ((67bc53e0-115e-4c8b-9fb2-dfbd65c1665e))
 		- Uses the `llm` CLI tool with specific templates
-		- For clipboard operations, uses `pbcopy` (macOS) - adjust for your OS
-		- Requires:
-			- repomix (via npx)
-			- llm CLI tool
-			- Claude API access for some tasks
+		- For clipboard operations, uses [[pbcopy]] (macOS) - adjust for your OS
+		- ### Prerequisites
+			- Requires:
+				- repomix (via npx)
+				- llm CLI tool
+				- Claude API access for some tasks
