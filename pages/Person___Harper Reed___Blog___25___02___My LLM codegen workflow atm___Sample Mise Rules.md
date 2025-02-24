@@ -2,17 +2,23 @@ tags:: mise, [[llm-cli]], repomix
 created-by:: [[Person/Harper Reed]]
 alias:: [[Person/Harper Reed/Sample Mise Rules]]
 
-- # Harper Reed - Sample mise rules
+- # Harper Reed - Sample [[mise/Tasks]] for [[AI/Coding]]
 	- #notes
 		- See [[Person/Harper Reed/GitHub/dotfiles/mise]] [here](https://github.com/harperreed/dotfiles/blob/560ebda30d1b8cea81acee8d44ebe1cf8be3aa2e/.config/mise/config.toml)
-		- I'd like to adapt these so the files are not in the root of the repo but are instead in `.ai-coding/*`
-		- Note: Harper hasn't shared his actual [[llm-cli/Prompt template]]s AFAIK, so we'll need to create our own versions of these templates:
-			- `readme-gen`
-			- `github-issue-gen`
-			- `code-review-gen`
-			- `missing-tests-gen`
-			- `issue-prompts-gen`
-	- DOING Configure AI coding task collection in `~/.config/mise/config.toml`:
+			- To install:
+				- ```
+				  $ mkdir -p ~/.config/mise
+				  $ cd ~/.config/mise
+				  $ curl -o config.toml https://raw.githubusercontent.com/harperreed/dotfiles/560ebda30d1b8cea81acee8d44ebe1cf8be3aa2e/.config/mise/config.toml
+				  ```
+			- Note: Harper hasn't shared his actual [[llm-cli/Prompt template]]s AFAIK, so we'll need to create our own versions of these templates:
+				- `readme-gen`
+				- `github-issue-gen`
+				- `code-review-gen`
+				- `missing-tests-gen`
+				- `issue-prompts-gen`
+		- I'd like to adapt these commands so the files are not in the root of the repo but are instead in `.ai-coding/*`
+	- DONE Configure AI coding task collection in `~/.config/mise/config.toml`:
 		- ### `LLM:generate_bundle` - Bundle Generation Task
 			- Generate LLM bundle using #Repomix
 			- #Via [[Person/Harper Reed/GitHub/dotfiles]] [here](https://github.com/harperreed/dotfiles/blob/560ebda30d1b8cea81acee8d44ebe1cf8be3aa2e/.config/mise/config.toml#L33)
