@@ -15,7 +15,13 @@
  ;; Exclude directories/files.
  ;; Example usage:
  ;; :hidden ["/archived" "/test.md" "../assets/archived"]
- :hidden ["/README.md", "tools/my-logseq-tooling/README.md", "README.md", "../README.md", "../tools/my-logseq-tooling/README.md"]
+ :hidden [
+ "README.md", 
+ "../README.md", 
+ "../tools/my-logseq-tooling/README.md",
+ "../.ai-coding/spec.md",
+ "../.ai-coding/README.md",
+]
 
  ;; Define the default journal page template.
  ;; Enter the template name between the quotes.
