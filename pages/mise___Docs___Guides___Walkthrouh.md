@@ -1,4 +1,7 @@
-## [[mise/Config/mise.toml]]
+tags:: [[Tutorial]]
+
+- # TODO [Walkthrough | mise-en-place](https://mise.jdx.dev/walkthrough.html)
+- ## [[mise/Config/mise.toml]]
 	- commit it to the repo to share
 	- use `mise.local.toml` to `.gitignore` for personal preferences
 	- ### nested configurations
@@ -9,7 +12,7 @@
 			- `~/work/project/mise.local.toml` - Project-specific settings that should not be shared
 		- `mise` will use all the parent directories together to determine the set of tools—overriding configuration as it goes lower in the hierarchy.
 	- #Tip - Use [[mise/config/ls]] to see the configuration files currently used by mise.
-- ## Setting [[EnvVar]]s
+- ## Setting [[EnvVar]]s - [[mise/EnvVar]]s
 	- #Example - note, this can also be added to [[mise/Config/mise.toml]]
 		- ```
 		  mise set MY_VAR=123
@@ -40,7 +43,7 @@
 		  SECRET = { value = "my_secret", redact = true }
 		  _.file = { path = [".env.json"], redact = true }
 		  ```
-	- ### `env._` "directives"
+	- ### `env._` directives
 		- > Since nested environment variables do not make sense, we make use of this fact by creating a key named "_" which is a TOML table for the configuration of these directives.
 		- #### setting a dotenv file
 			- here's how to set a dotenv file. here, `_` inside the `env` is a [[TOML/Table]]. Uses [[Rust/Lib/dotenvy]]
@@ -140,6 +143,23 @@
 			  hey, me! Your message is: how are you
 			  ```
 		- In my testing, the tab completion did not play well with [[Zsh/OhMyZsh]] autocompletions
-	- ## [Common Commands](https://mise.jdx.dev/walkthrough.html#common-commands)
-		- TODO review this list
-		-
+	- ## [Common Commands](https://mise.jdx.dev/walkthrough.html#common-commands) [[mise/Commands]]
+		- [[mise/completion]] - Set up completions for your shell
+		- [[mise/config]] aka [[mise/cfg]] - A bunch of commands for working with `mise.toml` files via the CLI
+		- [[mise/exec]] aka [[mise/x]] - Execute a command in the mise environment without activating mise
+		- [[mise/generate]] aka [[mise/g]] - Generates things like git hooks, task documentation, GitHub actions, and more for your project
+		- [[mise/install]] aka [[mise/i]] - Install tools
+		- [[mise/link]] - Symlink a tool installed by some other means into mise
+		- [[mise/ls-remote]] - List all available versions of a tool
+		- [[mise/ls]] - Lists information about installed/active tools
+		- [[mise/outdated]] - Informs you of any tools with newer versions available
+		- [[mise/plugin]] - Plugins can extend mise with new functionality like extra tools or environment variable management
+			- Commonly, these are simply asdf/vfox plugins
+		- [[mise/run]] aka [[mise/r]] - Run a task defined in `mise.toml` or `mise-tasks`
+		- [[mise/self-update]] - Update mise to the latest version
+			- Don't use this if you installed mise via a package manager
+		- [[mise/settings]] - CLI access to get/set configuration settings
+		- [[mise/uninstall]] aka [[mise/rm]] - Uninstall a tool
+		- [[mise/upgrade]] aka [[mise/up]] - Upgrade tool versions
+		- [[mise/use]] aka [[mise/u]] - Install and activate tools
+		- [[mise/watch]] aka [[mise/w]] - Watch for changes in a project and run tasks when they occur

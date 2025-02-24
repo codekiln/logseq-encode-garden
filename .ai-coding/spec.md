@@ -18,7 +18,7 @@ mise (pronounced "meez") is a development environment setup tool. This spec focu
 - [x] Verify installation successful
 
 ## 2. Configure AI Tasks
-- [ ] Create global config at `~/.config/mise/config.toml`
+- [x] Create global config at `~/.config/mise/config.toml`
 - [ ] Configure AI coding task collection:
   - [ ] `LLM:clean_bundles` - Generate LLM bundle using Repomix
   - [ ] `LLM:copy_buffer_bundle` - Copy bundle to clipboard
