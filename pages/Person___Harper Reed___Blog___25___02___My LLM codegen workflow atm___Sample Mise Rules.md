@@ -1,9 +1,17 @@
-tags:: mise, llm, repomix
+tags:: mise, [[llm-cli]], repomix
+created-by:: [[Person/Harper Reed]]
+alias:: [[Person/Harper Reed/Sample Mise Rules]]
 
-- # Sample conversions of mise rules from ((67b5d737-894f-41d3-b03e-aa28f536d6e7)) to mise format
+- # Harper Reed - Sample mise rules
 	- #notes
 		- See [[Person/Harper Reed/GitHub/dotfiles/mise]] [here](https://github.com/harperreed/dotfiles/blob/560ebda30d1b8cea81acee8d44ebe1cf8be3aa2e/.config/mise/config.toml)
 		- I'd like to adapt these so the files are not in the root of the repo but are instead in `.ai-coding/*`
+		- Note: Harper hasn't shared his actual [[llm-cli/Prompt template]]s AFAIK, so we'll need to create our own versions of these templates:
+			- `readme-gen`
+			- `github-issue-gen`
+			- `code-review-gen`
+			- `missing-tests-gen`
+			- `issue-prompts-gen`
 	- DOING Configure AI coding task collection in `~/.config/mise/config.toml`:
 		- ### `LLM:generate_bundle` - Bundle Generation Task
 			- Generate LLM bundle using #Repomix
@@ -29,6 +37,8 @@ tags:: mise, llm, repomix
 			  ```
 		- ### `LLM:generate_readme` - README Generation
 			- Depends on generate_bundle task
+			- #notes
+				- this depends on the [[llm-cli/Prompt template]] called `readme-gen`, which Harper hasn't shared, but which can be imagined
 			- ```toml
 			  [tasks."llm:generate_readme"]
 			  depends = ["llm:generate_bundle"]
@@ -52,6 +62,9 @@ tags:: mise, llm, repomix
 			  ```
 		- ### `LLM:generate_github_issues` - Issue Generation
 			- Depends on generate_bundle task
+			- #notes
+				- this depends on the [[llm-cli/Prompt template]] called `github-issue-gen`
+				- would need to create this template to generate GitHub-formatted issues from codebase
 			- ```toml
 			  [tasks."llm:generate_github_issues"]
 			  depends = ["llm:generate_bundle"]
@@ -63,6 +76,9 @@ tags:: mise, llm, repomix
 			  ```
 		- ### `LLM:generate_code_review` - Code Review Generation
 			- Depends on generate_bundle task
+			- #notes
+				- this depends on the [[llm-cli/Prompt template]] called `code-review-gen`
+				- template should instruct LLM to analyze code for best practices, issues, and improvements
 			- ```toml
 			  [tasks."llm:generate_code_review"]
 			  depends = ["llm:generate_bundle"]
@@ -74,6 +90,9 @@ tags:: mise, llm, repomix
 			  ```
 		- ### `LLM:generate_missing_tests` - Test Coverage Analysis
 			- Depends on generate_bundle task
+			- #notes
+				- this depends on the [[llm-cli/Prompt template]] called `missing-tests-gen`
+				- template should guide LLM to identify untested code paths and suggest test cases
 			- ```toml
 			  [tasks."llm:generate_missing_tests"]
 			  depends = ["llm:generate_bundle"]
@@ -85,6 +104,9 @@ tags:: mise, llm, repomix
 			  ```
 		- ### `LLM:generate_issue_prompts` - Prompt Generation
 			- Depends on generate_bundle task
+			- #notes
+				- this depends on the [[llm-cli/Prompt template]] called `issue-prompts-gen`
+				- template should help LLM generate useful prompts for common development tasks
 			- ```toml
 			  [tasks."llm:generate_issue_prompts"]
 			  depends = ["llm:generate_bundle"]
