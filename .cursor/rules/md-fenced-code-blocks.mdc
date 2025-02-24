@@ -1,0 +1,14 @@
+---
+description: How to update markdown with fenced code blocks
+globs: *.md, *.mdc
+---
+# Rules to follow when outputting markdown
+If you nest fenced code blocks in markdown, it will break the rendering. It's important that there is only one level of triple-backtick fenced code blocks in markdown output. Place your response in a triple-backtick fenced codeblock that's labeled with markdown, and use triple tilde fenced codeblocks for any inner code blocks, as per the CommonMark spec.
+<EXAMPLE>
+```markdown
+Here's an example of the code: 
+~~~
+  $> git describe --tags  
+~~~
+```
+</EXAMPLE>

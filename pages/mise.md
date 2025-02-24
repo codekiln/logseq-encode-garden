@@ -18,5 +18,6 @@ created-by:: [[Person/Jeff Dickey]]
 			- lets you specify configuration like `AWS_ACCESS_KEY_ID` that may differ between projects. It can also be used to automatically activate a [Python virtualenv](https://mise.jdx.dev/lang/python.html) when entering projects too.
 		- `3`: task runner to share common tasks *within* a project
 			- for example, run a task when a file changes
-			-
-	-
+- [[mise/Docs/Guides/Getting Started]]
+	- [[mise/Todos]]
+- [[mise/Docs/Guides/Walkthrouh]]

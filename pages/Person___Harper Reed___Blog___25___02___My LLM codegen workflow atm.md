@@ -68,7 +68,9 @@ tags:: [[AI/Coding]]
 			- #love
 				- tasks are defined in a way that's agnostic to the programming language and is outside of the repo
 				- CLI-centric for re-usability. much more widely applicable than [[CursorAI/Project Rules]]
-		- #### [[AI/LLM]] task list
+		- #### [[AI/LLM]] task list - 
+		  id:: 67b5d737-894f-41d3-b03e-aa28f536d6e7
+			- IMPORTANT see [[Person/Harper Reed/Sample Mise Rules]] for the details
 			- `LLM:clean_bundles` aka **generate bundles**
 				- Generate LLM bundle `output.txt` using #Repomix
 				- [[AI/Coding/Tip]]
