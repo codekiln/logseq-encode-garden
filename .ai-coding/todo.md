@@ -1,0 +1,20 @@
+- # Implementation Checklist for [install, configure and try [[mise]] · Issue #1 · codekiln/logseq-encode-garden](https://github.com/codekiln/logseq-encode-garden/issues/1) 
+	- ## AI Workflow Configuration
+		- DOING Configure AI coding task collection in `~/.config/mise/config.toml`:
+			- TODO Set up `LLM:clean_bundles` for Repomix bundle generation
+			- TODO Set up `LLM:copy_buffer_bundle` for clipboard operations
+			- TODO Set up `LLM:generate_code_review` for bundle review
+			- TODO Set up `LLM:generate_github_issues` for issue generation
+			- TODO Set up `LLM:generate_issue_prompts` for prompt generation
+			- TODO Set up `LLM:generate_missing_tests` for test coverage
+			- TODO Set up `LLM:generate_readme` for README generation
+	- ## Dependencies
+		- TODO Install required tools:
+			- TODO Install Repomix
+			- TODO Install llm-cli
+			- TODO Install aider
+	- ## Testing
+		- TODO Test basic workflow:
+			- TODO Test bundle generation with `LLM:clean_bundles`
+			- TODO Test processing with an LLM task
+			- TODO Verify output functionality

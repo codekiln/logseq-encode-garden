@@ -1,6 +1,6 @@
 tags:: [[Tutorial]]
 
-- # TODO [Walkthrough | mise-en-place](https://mise.jdx.dev/walkthrough.html)
+- # DONE [Walkthrough | mise-en-place](https://mise.jdx.dev/walkthrough.html)
 - ## [[mise/Config/mise.toml]]
 	- commit it to the repo to share
 	- use `mise.local.toml` to `.gitignore` for personal preferences
@@ -163,3 +163,4 @@ tags:: [[Tutorial]]
 		- [[mise/upgrade]] aka [[mise/up]] - Upgrade tool versions
 		- [[mise/use]] aka [[mise/u]] - Install and activate tools
 		- [[mise/watch]] aka [[mise/w]] - Watch for changes in a project and run tasks when they occur
+	-
