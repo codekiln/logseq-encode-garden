@@ -1,0 +1,37 @@
+- # How to determine which [[GitHub/Issue/Status]] closes the issue in a Project
+	- ## Overview
+		- GitHub Projects allows custom status fields to track issue progress
+		- Status fields are created by GitHub and cannot be renamed
+		- There is no explicit "terminal status" configuration in GitHub Projects
+	- ## What Closes an Issue
+		- Issues are closed through actions, not through Project status:
+			- Manually closing the issue
+			- Merging a PR that closes the issue (using keywords like "closes #123")
+			- Using the GitHub API to close the issue
+		- The Project status field is independent of whether an issue is closed
+	- ## Status Field in Projects
+		- Status is a single select field that can be customized with options
+		- You can add/edit/remove status options
+		- Status changes don't automatically close issues
+		- Example from your project:
+			- Backlog
+			- Prep/Checkout
+			- Prep/Gather Requirements
+			- Prep/Researching
+			- Prep/Planning
+			- Work/Ready for Implementation
+			- Work/In Progress
+			- Work/Review/Needed
+			- Work/Review/In Progress
+			- Work/Review/Pre-Merge Checks
+			- Completed
+	- ## Best Practices
+		- Use status to track workflow state, not completion
+		- For completion tracking, use:
+			- The issue's closed/open state
+			- Milestones
+			- Labels
+		- Consider automating status updates based on issue events
+	- ## References
+		- [About Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
+		- [About Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)
