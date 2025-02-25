@@ -1,0 +1,2 @@
+- A desktop app for interacting with [[Claude]].
+- The original use case that inspired #MCP

@@ -10,7 +10,7 @@ tags:: [[AI/Coding]]
 		  id:: 67b5b920-e30f-48db-8a1a-8faa0d8f8b41
 			- Tools: [[mise]], [[aider]], [[llm-cli]], [[Repomix]] added to [[AI/Coding/Todos]]
 	- > tl:dr; Brainstorm spec, then plan a plan, then execute using LLM codegen. Discrete loops. Then magic. ✩₊˚.⋆☾⋆⁺₊✧
-	- ## [[Greenfield Coding]] code dev (~15 min)
+	- ## [[Greenfield Coding]] code dev
 		- ### Step 1 - requirements elicitation - have #4o or #o3 interview you for the requirements
 			- have it prompt you to have a requirements elicitation session, asking you one question at a time
 			- at end of brainstorm, ask it to compile findings into a `spec.md` in root of repo

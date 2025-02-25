@@ -1,3 +1,5 @@
+tags:: [[Diataxis/Concept]]
+
 - # How to determine which [[GitHub/Issue/Status]] closes the issue in a Project
 	- ## Overview
 		- GitHub Projects allows custom status fields to track issue progress
@@ -13,7 +15,7 @@
 		- Status is a single select field that can be customized with options
 		- You can add/edit/remove status options
 		- Status changes don't automatically close issues
-		- Example from your project:
+		- Example project:
 			- Backlog
 			- Prep/Checkout
 			- Prep/Gather Requirements
@@ -26,7 +28,8 @@
 			- Work/Review/Pre-Merge Checks
 			- Completed
 	- ## Best Practices
-		- Use status to track workflow state, not completion
+	  id:: 67bd9925-9e49-4b5c-b11b-a3443b97b9a3
+		- Use `status` to track workflow state, **not completion**
 		- For completion tracking, use:
 			- The issue's closed/open state
 			- Milestones

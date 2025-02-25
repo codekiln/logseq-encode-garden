@@ -1,0 +1,1 @@
+alias:: [[AI Model Card]]

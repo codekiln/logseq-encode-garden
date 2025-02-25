@@ -136,7 +136,7 @@ tags:: [[Anthropic/Model Context Protocol]]
 					  
 					  **Speaker:** Vibhu Sapra
 					  **Presented by Anthropic**
-				- [[Claude/For Desktop]]
+				- [[Claude/Desktop]]
 					- give url of github repository
 					- the model, claude, does the invoke issues tool, and pulls those into context, summarizing them
 					- it's personalizing to you based on your history with claude and what it knows you want
