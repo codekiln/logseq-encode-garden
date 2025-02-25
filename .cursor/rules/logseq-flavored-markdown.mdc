@@ -1,6 +1,7 @@
 ---
 description: Writing logseq-flavored-markdown (LFM)
 globs: pages/*.md
+alwaysApply: false
 ---
 # Formatting Logseq-Flavored Markdown (LFM)
 
@@ -94,6 +95,9 @@ The following example is incorrect because it lacks indentation, unordered list 
   ```
 
 ### Page-level attributes in Logseq
+
+IMPORTANT: you should not invent tags and page-level attributes. I structure my tags and attributes in a particular way, and you will mess up my categorization if you do. You should seek to not alter the tags and frontmatter of a page. 
+
 Page-level attributes or Logseq Frontmatter 
 - MUST occur as the first lines in the markdown file before an unordered list item
 - MUST use kebob-case
