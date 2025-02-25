@@ -9,7 +9,8 @@ alias:: [[CursorAI/v/0.46 - Agent is ready and UI Refresh]]
 			- TODO #Q *what exactly is the change here?*
 				- I've noticed a change in the last 24 hours about being able to drill into the file hierarchy, is that this?
 	- ## Web search
-		- [[CursorAI Agent Mode]] can now automatically search the web for up-to-date information without requiring explicit @Web commands.
+		- [[CursorAI Agent Mode]] can now automatically search the web for up-to-date information without requiring explicit @Web commands. Here's what it looks like:
+			- ![image.png](../assets/image_1740514763944_0.png)
 	- ## Security
 	  id:: 67bd9cae-648a-4958-9f5f-db961bf49650
 		- Ignore files: [[CursorAI/.cursorignore]] now **blocks files from being added in chat or sent up for tab completions**, *in addition to ignoring them from indexing*.

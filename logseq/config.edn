@@ -305,7 +305,7 @@
  ;;  :charge-range    600}   ; Default value: 600
 
  ;; Favorites to list on the left sidebar
- :favorites []
+ :favorites ["person/harper reed/blog/25/02/my llm codegen workflow atm"]
 
  ;; Set flashcards interval.
  ;; Expected value:

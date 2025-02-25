@@ -13,7 +13,16 @@ tags:: [[AI/Coding]]
 	- ## [[Greenfield Coding]] code dev
 		- ### Step 1 - requirements elicitation - have #4o or #o3 interview you for the requirements
 			- have it prompt you to have a requirements elicitation session, asking you one question at a time
+			- ```
+			  Ask me one question at a time so we can develop a thorough, step-by-step spec for this idea. Each question should build on my previous answers, and our end goal is to have a detailed specification I can hand off to a developer. Let’s do this iteratively and dig into every relevant detail. Remember, only one question at a time.
+			  
+			  Here’s the idea:
+			  
+			  <IDEA>
+			  ```
 			- at end of brainstorm, ask it to compile findings into a `spec.md` in root of repo
+			- > Now that we’ve wrapped up the brainstorming process, can you compile our findings into a comprehensive, developer-ready specification? Include all relevant requirements, architecture choices, data handling details, error handling strategies, and a testing plan so a developer can immediately begin implementation.
+			-
 		- ### Step 2 - todo checklist - have #[[LLM Reasoning Model]] use `spec.md` to create `todo.md`
 			- #TDD #Prompt
 				- ```
