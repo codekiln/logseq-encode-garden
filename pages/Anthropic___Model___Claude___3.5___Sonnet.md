@@ -1,1 +1,1 @@
-alias:: [[Claude 3.5 Sonnet]]
+alias:: [[Claude 3.5 Sonnet]], [[C35S]]

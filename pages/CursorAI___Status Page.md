@@ -1,0 +1,1 @@
+- https://status.cursor.com/

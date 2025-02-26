@@ -3,7 +3,6 @@ created-by:: [[Person/Harper Reed]]
 alias:: [[Person/Harper Reed/Sample Mise Rules]]
 
 - # Harper Reed - Sample [[mise/Tasks]] for [[AI/Coding]]
-  collapsed:: true
 	- #notes
 		- See [[Person/Harper Reed/GitHub/dotfiles/mise]] [here](https://github.com/harperreed/dotfiles/blob/560ebda30d1b8cea81acee8d44ebe1cf8be3aa2e/.config/mise/config.toml)
 			- To install:
@@ -56,7 +55,8 @@ alias:: [[Person/Harper Reed/Sample Mise Rules]]
 			  cat output.txt | llm -t readme-gen > README.md
 			  """
 			  ```
-		- ### `LLM:copy_buffer_bundle` - Clipboard Operations
+		- ### `LLM:copy_buffer_bundle` - Clipboard Operations [[mise/Task/LLM/copy_buffer_bundle]]
+		  id:: 67bc5e58-33d4-464a-8c40-2c876820e39a
 			- Depends on generate_bundle task
 			- ```toml
 			  [tasks."llm:copy_buffer_bundle"]
