@@ -1,5 +1,5 @@
-# DOING  solve #Error - "no precompiled python found for <REPONAME>, force mise to use a version with `mise settings set python.compile false`
-	- ## DOING original error - while running [[mise/Task/LLM/copy_buffer_bundle]]
+# DONE  solve #Error - "no precompiled python found for <REPONAME>, force mise to use a version with `mise settings set python.compile false`
+	- ## DONE original error - while running [[mise/Task/LLM/copy_buffer_bundle]]
 		- ```
 		  mise run llm:copy_buffer_bundle                         
 		  mise WARN  no precompiled python found for codekiln, force mise to use a precompiled version with `mise settings set python.compile false`
@@ -17,15 +17,17 @@
 				- When both are active, they conflict in reading `.python-version` files
 			- ### Immediate Solutions
 				- Option A: Disable Python compilation in mise
+				  collapsed:: true
 					- ```bash
 					  mise settings set python.compile false
 					  ```
 				- Option B: Remove .python-version files and use mise's configuration
+				  collapsed:: true
 					- ```bash
 					  rm .python-version
 					  mise use python@<version>
 					  ```
-				- Option C: Configure mise to ignore [[Pyenv/.python-version]] files
+				- #### #Chosen Option C: Configure mise to ignore [[Pyenv/.python-version]] files
 					- Add to `~/.config/mise/config.toml`:
 					- ```toml
 					  [settings]
