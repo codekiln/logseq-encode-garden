@@ -1,0 +1,2 @@
+# DOING how to exclude `.env` and other files - [[CursorAI/Security]]
+	- By default, as of [[CursorAI/v/0.46 - Agent is ready and UI Refresh]], updating `.gitignore` should be sufficient for excluding from from AI context. See also the details in [[.cursorignore]].

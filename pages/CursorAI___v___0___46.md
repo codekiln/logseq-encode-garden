@@ -11,12 +11,13 @@ alias:: [[CursorAI/v/0.46 - Agent is ready and UI Refresh]]
 	- ## Web search
 		- [[CursorAI Agent Mode]] can now automatically search the web for up-to-date information without requiring explicit @Web commands. Here's what it looks like:
 			- ![image.png](../assets/image_1740514763944_0.png)
-	- ## Security
+	- ## [[CursorAI/Security]]
 	  id:: 67bd9cae-648a-4958-9f5f-db961bf49650
 		- Ignore files: [[CursorAI/.cursorignore]] now **blocks files from being added in chat or sent up for tab completions**, *in addition to ignoring them from indexing*.
 		- **NEW:** [[CursorAI/.cursorindexingignore]] for specifically controlling file indexing
 			- TODO #Q *when would I want to put something in `.cursorindexingignore` instead of `.cursorignore`?*
-				- ... if I wanted something to be available to cursor in file references but not indexed? What's the use of that?
+				- *... if I wanted something to be available to cursor in file references but not indexed? What's the use of that?*
+				- *perhaps the use case is that you have confidential information committed to the repo that's not a secret*
 	- ## [[CursorAI/Project Rules]]
 		- **New** capability to **apply rules globally**
 		- **visual indicator** for **when rules are applied**
