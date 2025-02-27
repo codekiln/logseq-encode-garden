@@ -1,0 +1,42 @@
+alias:: [[Code Kata]]
+
+- # Code Kata
+	- ## What is a Code Kata?
+		- A Code Kata is a programming exercise where developers practice their coding skills through repetition and incremental improvement
+		- The concept is inspired by martial arts kata, where practitioners repeatedly perform specific movements to perfect their technique
+		- Like musical or athletic practice, the goal is to build muscle memory and improve through deliberate practice
+	- ## History and Origin
+		- The term "Code Kata" was coined by Dave Thomas, co-author of "The Pragmatic Programmer"
+		- He introduced the concept in the early 2000s through his website codekata.com
+		- The idea emerged from the observation that software developers, unlike musicians or athletes, rarely practice their craft outside of actual project work
+	- ## Key Principles
+		- Practice should be:
+			- Regular and repeated
+			- Done without interruptions
+			- Focused on small, manageable exercises
+			- Free from pressure to achieve specific outcomes
+			- Aimed at learning and improvement rather than reaching a "correct" solution
+	- ## Benefits
+		- Improves coding fluency and muscle memory
+		- Develops problem-solving skills
+		- Allows experimentation with different approaches
+		- Builds confidence in coding abilities
+		- Provides opportunities to learn new techniques and patterns
+	- ## Common Types of Katas
+		- Algorithm implementations
+		- Data structure manipulations
+		- Design pattern practice
+		- Refactoring exercises
+		- Test-Driven Development (TDD) practice
+	- ## Notable Examples
+		- Supermarket Pricing Kata
+		- Binary Search (Karate Chop) Kata
+		- Data Munging Kata
+		- Anagrams Kata
+		- Word Chain Kata
+	- ## Best Practices
+		- Set aside dedicated time for practice
+		- Focus on one specific skill or concept per session
+		- Try different approaches to the same problem
+		- Reflect on improvements after each iteration
+		- Share and discuss solutions with other developers

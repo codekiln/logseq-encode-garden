@@ -1,0 +1,1 @@
+- [increase resolution of life and package it up · Issue #1 · codekiln/codekiln](https://github.com/codekiln/codekiln/issues/1)

@@ -23,7 +23,7 @@ tags:: [[AI/Coding]]
 			- at end of brainstorm, ask it to compile findings into a `spec.md` in root of repo
 			- > Now that we’ve wrapped up the brainstorming process, can you compile our findings into a comprehensive, developer-ready specification? Include all relevant requirements, architecture choices, data handling details, error handling strategies, and a testing plan so a developer can immediately begin implementation.
 			-
-		- ### Step 2 - todo checklist - have #[[LLM Reasoning Model]] use `spec.md` to create `todo.md`
+		- ### Step 2 - todo checklist - have #[[LLM Reasoning Model]] use `spec.md` to create `prompt_plan.md` `todo.md`
 			- #TDD #Prompt
 				- ```
 				  Draft a detailed, step-by-step blueprint for building this project. Then, once you have a solid plan, break it down into small, iterative chunks that build on each other. Look at these chunks and then go another round to break it into small steps. Review the results and make sure that the steps are small enough to be implemented safely with strong testing, but big enough to move the project forward. Iterate until you feel that the steps are right sized for this project.
