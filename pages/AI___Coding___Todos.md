@@ -5,7 +5,7 @@
 	  :LOGBOOK:
 	  CLOCK: [2025-02-24 Mon 04:13:40]
 	  :END:
-		- DOING install, configure and try [[Repomix]]
+		- DONE install, configure and try [[Repomix]]
 		  id:: 67b84d15-9c14-49fb-ae8d-9a03ee42573f
 		  :LOGBOOK:
 		  CLOCK: [2025-02-24 Mon 04:13:49]

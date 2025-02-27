@@ -6,4 +6,15 @@ tags:: #LLMs, [[CLI/Tool]]
 - [[Repomix/GitHub]] https://github.com/yamadashy/repomix
 - [[Repomix/Web]] https://repomix.com/
 	- This tool can be used online
+- # Usage
+	- ## Using with a config file
+		- To use Repomix with a specific configuration file, use the following command:
+		  ~~~bash
+		  npx repomix --config path/to/repomix.config.json
+		  ~~~
+		- This will generate the output based on the settings in your configuration file
+		- The config file allows you to customize:
+		  - Which files to include/exclude
+		  - Output format
+		  - Repository metadata
 -
