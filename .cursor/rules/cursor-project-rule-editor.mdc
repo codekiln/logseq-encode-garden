@@ -1,0 +1,130 @@
+---
+description: How to Edit Cursor Rules and their appropriate location in the repository
+globs: 
+alwaysApply: false
+source: https://gist.github.com/codekiln/242b572c64c1097277fd4c831db91c10
+---
+# Cursor Project Rule Editor Rule
+
+`.mdc` files stand for Mark Down Cursor, and are meant to give the Cursor IDE AI Agent context on how to operate in the codebase.
+This particular rule is about using the AI to author and edit `.mdc` files, so as to update the rules.
+This rule ensures `.mdc` files are correctly placed within a repository and adhere to standard formatting conventions.
+
+## Cursor Project Rule Placement
+
+Rules for placing and organizing Cursor rule files in the repository.
+
+<rule>
+name: cursor_rules_location
+description: Standards for placing Cursor rule files in the correct directory
+filters:
+  # Match any .mdc files
+  - type: file_extension
+    pattern: "\\.mdc$"
+  # Match files that look like Cursor rules
+  - type: content
+    pattern: "(?s)<rule>.*?</rule>"
+  # Match file creation events
+  - type: event
+    pattern: "file_create"
+
+actions:
+  - type: reject
+    conditions:
+      - pattern: "^(?!\\.\\/\\.cursor\\/rules\\/.*\\.mdc$)"
+        message: "Cursor rule files (.mdc) must be placed in the .cursor/rules directory"
+
+  - type: suggest
+    message: |
+      When creating Cursor rules:
+
+      1. Always place rule files in PROJECT_ROOT/.cursor/rules/:
+         ```
+         .cursor/rules/
+         ├── your-rule-name.mdc
+         ├── another-rule.mdc
+         └── ...
+         ```
+
+      2. Follow the naming convention:
+         - Use kebab-case for filenames
+         - Always use .mdc extension
+         - Make names descriptive of the rule's purpose
+
+      3. Directory structure:
+         ```
+         PROJECT_ROOT/
+         ├── .cursor/
+         │   └── rules/
+         │       ├── your-rule-name.mdc
+         │       └── ...
+         └── ...
+         ```
+
+      4. Never place rule files:
+         - In the project root
+         - In subdirectories outside .cursor/rules
+         - In any other location
+
+examples:
+  - input: |
+      # Bad: Rule file in wrong location
+      rules/my-rule.mdc
+      my-rule.mdc
+      .rules/my-rule.mdc
+
+      # Good: Rule file in correct location
+      .cursor/rules/my-rule.mdc
+    output: "Correctly placed Cursor rule file"
+
+metadata:
+  priority: high
+  version: 1.0
+</rule>
+
+## Cursor Project Rule Markdown Formatting Standards
+
+Rules for ensuring `.mdc` files adhere to proper Markdown formatting.
+
+<rule>
+name: markdown_format_standard
+description: Ensures correct formatting and link structure in `.mdc` files.
+filters:
+  - type: file_extension
+    pattern: "\\.mdc$"
+  - type: content
+    pattern: "(?s)^---\\n.*?\\n---\\n"
+
+actions:
+  - type: suggest
+    message: |
+      Markdown `.mdc` files should:
+      
+      1. **Include a frontmatter block** at the top with a `description` field:
+         ```
+         ---
+         description: "Description of the rule"
+         globs: "*.mdc"
+         ---
+         ```
+      
+      2. **Use `mdc:` links** for file references, constructing a relative link from the PROJECT_ROOT to the file
+         ```
+         [example.mdc](mdc:.cursor/rules/example.mdc)
+         ```
+
+      3. **Use proper headers** (`#`, `##`, `###`) and avoid inconsistent formatting.
+
+examples:
+  - input: |
+      ---
+      description: "Example rule for formatting"
+      ---
+      # Sample Rule
+      This rule enforces correct `.mdc` formatting.
+    output: "Correctly formatted `.mdc` file"
+
+metadata:
+  priority: medium
+  version: 1.0
+</rule>
