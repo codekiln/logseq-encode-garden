@@ -16,7 +16,7 @@ tags:: [[Idea]]
 		- checking on status of github actions
 	- This page proposes an idea for how to create reusable, agential workflows for SLDC automation using Cursor Project Rules.
 - ## Project Rules for wrapping `gh`
-	- When using [[CursorAI/Agent Mode]], the agent can read [[CursorAI/Project Rule]] to craft CLI command invocations for the GitHub CLI, `gh`. A lot of information about this CLI is likely already in the training data, but Project Rules may let users focus the AI's attention on the details about how to use it in an AI-assisted [[Software/Engineering/Development Life Cycle (SLDC)]] and specifically within the context of Cursor.
+	- When using [[CursorAI/Agent Mode]], the agent can read [[CursorAI/Project Rule]] to craft CLI command invocations for the GitHub CLI, `gh`. A lot of information about this CLI is likely already in the training data, but Project Rules may let users focus the AI's attention on the details about how to use it in an AI-assisted [[Software/Engineering/Development Life Cycle (SDLC)]] and specifically within the context of Cursor.
 	- A centerpiece of this approach is that rather than explicitly saying what should be done in the composer chat, the [[Product Requirements Document]] should most likely be specified in a external project management software like a GitHub issue.
 	- ### Defining the [[PRD]] in the [[GitHub/Issue]]
 		- A project rule `gh-issue-update.mdc` rule could be created to help with the ideating phase of the issue. Perhaps a [[GitHub/Project]] `status` could be applied to the issue to signal that it is in a design phase.
@@ -54,11 +54,11 @@ tags:: [[Idea]]
 			- checking CI results
 			- ...
 		- In particular, a `gh-pr-draft.mdc` could draft a merge request description, and  `gh-pr-create.mdc` could create the merge request using [[GitHub/CLI/gh/pr/create]].
-	- The ideas here are by no means a complete list of the [[SLDC]] items that could be automated with project rules, but they are a good start for understanding what's possible.
+	- The ideas here are by no means a complete list of the [[SDLC]] items that could be automated with project rules, but they are a good start for understanding what's possible.
 - ## Reusing `gh` Project Rules Across Multiple Projects
 	- So far, early testing seems to indicate that subdirectories of [[CursorAI/.cursor/rules]] may be scanned for `.mdc` files. As a result, it may be possible to use [[git/submodule]]s to pull in a standard set of `gh-cursor` project rules. This would enable an entire team to have a similar set of affordances for mapping Github SLDC operations on to Cursor.
 - ## Association between custom scripts and custom project rules
-	- In time, it may make sense to have some scripts that are associated with the stages of the SDLC and which constrain the github CLI actions that are taken, so as to increase consistency and decrease the number of tokens needed to figure out what to do.
+	- In time, it may make sense to have some scripts that are associated with the stages of the [[Software/Engineering/Development Life Cycle (SDLC)]] and which constrain the github CLI actions that are taken, so as to increase consistency and decrease the number of tokens needed to figure out what to do.
 	- Perhaps a framework like [[FabricAI]] could be useful, although I haven't approached that yet.
 	- Alternatively, a [[Python/Package]] or [[Programming/Language/Go]] package could be included which is expected to be used by the project rules.
 - ## Scratchpad

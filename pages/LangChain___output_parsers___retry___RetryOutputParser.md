@@ -1,0 +1,3 @@
+- [RetryOutputParser — 🦜🔗 LangChain documentation](https://python.langchain.com/api_reference/langchain/output_parsers/langchain.output_parsers.retry.RetryOutputParser.html)
+	- Wrap a parser and try to fix parsing errors.
+	- Does this by passing the original prompt and the completion to another LLM, and telling it the completion did not satisfy criteria in the prompt.

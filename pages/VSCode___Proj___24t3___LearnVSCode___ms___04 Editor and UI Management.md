@@ -2,7 +2,7 @@ type:: [[Type/Logseq/Project/Milestone]]
 status:: [[status/InProgress]] 
 created-by-template:: [[Logseq/Template/Project/Milestone/Page]]
 up:: [[VSCode/Proj/24t3/LearnVSCode/ms]] 
-Project:: [[VSCode/Proj/24t3/LearnVSCode]] 
+project:: [[VSCode/Proj/24t3/LearnVSCode]] 
 banner:: "../assets/Logseq/Plugins/logseq-banners-plugin/Land-of-the-Ancients-Overnighter_2.jpg"
 icon:: 🎯
 

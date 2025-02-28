@@ -1,0 +1,60 @@
+#  AI Coding technique - Using an `.ai-coding/TICKET/` dir for staging [[SDLC]] planning artifacts
+	- ## Summary of the `/.ai-coding/TICKET-feature-name/` dir
+	  id:: 67c180c4-95f6-4d0b-b787-60d11eed3ff9
+		- Named after the ticket and a brief description of the feature; preferably the name of this directory matches the end of the branch name; `TICKET` is an external project management ticket reference from [[JIRA]], [[GitHub/Issue]], [[Gitlab/Issue]], [[JetBrains/YouTrack]], etc, so something like `ASDF-123` for Jira
+		- Contains all planning and documentation assets for a single feature's implementation. Here they are, broken down by the phase in which they are created or used:
+		- ### [[AI/Coding/v0/Phase/0 - Gather Materials]]
+			- **Output:** [[AI/Coding/v0/File/0-TICKET-original-issue.md]] - Original ticket details and high-level #AC
+				- this is for [[Project/Management]] stakeholders and likely doesn't have the detail needed for implementation
+				- pulled in from a tool like [[JIRA/CLI]], [[GitHub/CLI]], [[Gitlab/CLI]] if not using a tool like [[GitHub/MCP]]
+			- **Output:** `0-TICKET-repomix.config.json` - defines issue-related repository paths for [[Repomix]]
+				- used to gather repo context for external tools like [[ChatGPT]] or [[Claude/Desktop]]
+			- **Output:** `PROJECT_ROOT/repo-context.txt` (or `0-TICKET-repo-context.txt`) - Contains the repo context sent to an external LLM in the next step.
+				- Should be put in [[git/.gitignore]] and considered a temporary, transitory, runtime artifact of the process
+				- Unlike the other files, this should probably not be inside of the `/.ai-coding/TICKET-feature-name/` directory, as the file may be quite large, and there's little value in retaining separate context for separate tickets over time.
+		- ### [[AI/Coding/v0/Phase/1 - Requirements Interview]]
+			- **Output:** `1-TICKET-technical-specification.md` - Detailed technical requirements, data models, [[Acceptance Criteria]], and architecture decisions
+		- ### [[AI/Coding/v0/Phase/2 - Implementation Plan]]
+			- **Output:** `2-TICKET-staged-implementation-plan.md` - Step-by-step implementation guide for AI implementation.
+				- Contains AI prompts broken down into stages, and each builds on previous work
+				- Includes validation steps after each stage
+				- Enforces commit discipline in a way specific to the ticket by adding the issue number into the commit, for example
+		- ### [[AI/Coding/v0/Phase/3 - TODO Checklist]]
+			- **Output:** `3-TICKET-todo.md` - Granular checklist of all required tasks organized by implementation phase
+		- ### [[AI/Coding/v0/Phase/4 - Implementation]]
+			- **Update:** Each iteration updates a `3-TICKET-todo.md` chunk, checking off the todos for a new commit.
+			- **Output:** `4-TICKET-qa-todo.md` - This is a [[QA/Test Plan]] checklist, with both human and AI todo items, including automated testing, manual verification, code coverage, etc. While each iteration is likely to run some if not all tests, each iteration may update  with any areas of the codebase that will later require final verification before submission.
+		- ### [[AI/Coding/v0/Phase/5 - Verification]]
+			- **Complete:** `3-Ticket-todo.md`
+			- **Update:** `4-TICKET-qa-todo.md`
+			- **Output:** `5-TICKET-qa-summary.md` - a summary of the QA impacted areas of the codebase, the testing activities conducted, etc.
+		- ### [[AI/Coding/v0/Phase/6 - Documentation]]
+			- **Output:** `6-TICKET-mr-summary.md`, a [[Merge Request/Description]] with a summary of changes, testing results, documentation updates, and next steps for reviewers
+			- **Output:** In-repository documentation updates
+		- ### [[AI/Coding/v0/Phase/7 - Submission]]
+			- **Output:** `7-TICKET-mr-handoff.md` - Summary of changes made during the [[Code Review]], along with any items that may need follow-up in future tickets
+	- ## About the `<STAGE_NUM>-<TICKET_REF>-` prefix for files
+		- **STAGE_NUM** - By prefixing the file with the stage number, the files will be sorted in chronological order of when they will be used. This benefits both the AI and the human participants, as they can use a shared vocabulary
+		- **TICKET_REF** - Ideally, this wouldn't be necessary. In [[CursorAI]], it can currently be a bit messy when trying to pull a specific file into the chat pane using [[CursorAI/@/Files]] if many files are named the same. In the interest of making it possible to uniquely identify all files using `@` references, one may prefix the files with the ticket. This has the advantage of making it possible to quickly reference an item. If Cursor's UI evolves a more reliable directory drill-down UI, it may make sense to omit this section of the file names.
+	- ## See also
+		- [[Person/Harper Reed/Blog/25/02/My LLM codegen workflow atm]]
+		- **Specification (**`TICKET-spec.mdc`)
+			- Detailed technical requirements
+			- Data model definitions
+			- Acceptance criteria
+			- Architecture decisions
+		- **Prompt Plan (**`TICKET-prompt-plan.mdc`)
+			- Step-by-step guide for AI implementation
+			- Each prompt is incremental and builds on previous work
+			- Includes validation steps after each prompt
+			- Enforces commit discipline
+		- **Todo List (**`TICKET-todo.md`)
+			- Granular checklist of all required tasks
+			- Organized by implementation phase
+			- Tracks progress with checkboxes
+			- Links back to spec and prompt plan
+		- **Handoff Document (**`TICKET-handoff.md`)
+			- Summary of all changes implemented
+			- Testing results and verification steps
+			- Documentation updates
+			- Next steps for reviewers
