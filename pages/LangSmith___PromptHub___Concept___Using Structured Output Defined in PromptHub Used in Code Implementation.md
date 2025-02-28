@@ -1,0 +1,3 @@
+# Conceptual factors when deciding whether to include the model pulled from the [[LangSmith/PromptHub]]
+	- It's possible to use [[LangSmith/client/Client/pull_prompt/include_model]] to pull a model that has structured output defined in the PromptHub, but then it seems like one needs to provide the same [[API/Key]] and model authentication configuration that was used in the LangSmith admin. It's unclear what the best practices are.
+-
