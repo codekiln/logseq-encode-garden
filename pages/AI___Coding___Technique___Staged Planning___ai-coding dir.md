@@ -1,8 +1,8 @@
-#  AI Coding technique - Using an `.ai-coding/TICKET/` dir for staging [[SDLC]] planning artifacts
+#  AI Coding technique - Using an `.ai-coding/TICKET/` dir for staging [[SDLC]] planning artifacts by SDLC Phase
 	- ## Summary of the `/.ai-coding/TICKET-feature-name/` dir
 	  id:: 67c180c4-95f6-4d0b-b787-60d11eed3ff9
 		- Named after the ticket and a brief description of the feature; preferably the name of this directory matches the end of the branch name; `TICKET` is an external project management ticket reference from [[JIRA]], [[GitHub/Issue]], [[Gitlab/Issue]], [[JetBrains/YouTrack]], etc, so something like `ASDF-123` for Jira
-		- Contains all planning and documentation assets for a single feature's implementation. Here they are, broken down by the phase in which they are created or used:
+		- Contains all planning and documentation assets for a single feature's implementation. Here they are, broken down by the **Phase** in which they are created or used:
 		- ### [[AI/Coding/v0/Phase/0 - Gather Materials]]
 			- **Output:** [[AI/Coding/v0/File/0-TICKET-original-issue.md]] - Original ticket details and high-level #AC
 				- this is for [[Project/Management]] stakeholders and likely doesn't have the detail needed for implementation
@@ -16,16 +16,20 @@
 			- **Output:** `1-TICKET-technical-specification.md` - Detailed technical requirements, data models, [[Acceptance Criteria]], and architecture decisions
 		- ### [[AI/Coding/v0/Phase/2 - Implementation Plan]]
 			- **Output:** `2-TICKET-staged-implementation-plan.md` - Step-by-step implementation guide for AI implementation.
-				- Contains AI prompts broken down into stages, and each builds on previous work
-				- Includes validation steps after each stage
-				- Enforces commit discipline in a way specific to the ticket by adding the issue number into the commit, for example
-		- ### [[AI/Coding/v0/Phase/3 - TODO Checklist]]
-			- **Output:** `3-TICKET-todo.md` - Granular checklist of all required tasks organized by implementation phase
+				- Contains AI prompts broken down into **Stages**, each of which
+					- chunk the work into a single logical commit
+					- builds on previous work
+					- contains a step-by-step implementation guide
+					- includes its own validation steps
+				- Enforces commit discipline in a way specific to the ticket, for example, by adding the issue number into the commit
+		- ### [[AI/Coding/v0/Phase/3 - Implementation Checklist]]
+			- **Output:** `3-TICKET-staged-implementation-checklist.md` - Granular checklist of all required tasks organized by implementation phase, grouped into a single logical commit with a summary commit message
+				- While not strictly enforced, ideally the commit history should roughly match the stages in this checklist
 		- ### [[AI/Coding/v0/Phase/4 - Implementation]]
-			- **Update:** Each iteration updates a `3-TICKET-todo.md` chunk, checking off the todos for a new commit.
+			- **Update:** Each iteration updates a single **Stage** in `3-TICKET-staged-implementation-checklist.md` **Stage**, checking off the todos for that stage, and ends with a commit
 			- **Output:** `4-TICKET-qa-todo.md` - This is a [[QA/Test Plan]] checklist, with both human and AI todo items, including automated testing, manual verification, code coverage, etc. While each iteration is likely to run some if not all tests, each iteration may update  with any areas of the codebase that will later require final verification before submission.
 		- ### [[AI/Coding/v0/Phase/5 - Verification]]
-			- **Complete:** `3-Ticket-todo.md`
+			- **Complete:** `3-TICKET-staged-implementation-checklist.md`
 			- **Update:** `4-TICKET-qa-todo.md`
 			- **Output:** `5-TICKET-qa-summary.md` - a summary of the QA impacted areas of the codebase, the testing activities conducted, etc.
 		- ### [[AI/Coding/v0/Phase/6 - Documentation]]

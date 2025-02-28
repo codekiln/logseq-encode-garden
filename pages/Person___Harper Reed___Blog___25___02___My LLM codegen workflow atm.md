@@ -43,7 +43,7 @@ tags:: [[AI/Coding]]
 				  
 				  <SPEC>
 				  ```
-		- ### [[AI/Coding/v0/Phase/3 - TODO Checklist]] use #[[LLM Reasoning Model]] to create sequential `todo.md` with equivalent chunks of work as `prompt_plan.md`
+		- ### [[AI/Coding/v0/Phase/3 - Implementation Checklist]] use #[[LLM Reasoning Model]] to create sequential `todo.md` with equivalent chunks of work as `prompt_plan.md`
 			- #Prompt to generate todos
 				- ```
 				  Can you make a `todo.md` that I can use as a checklist? Be thorough.
