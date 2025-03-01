@@ -1,0 +1,42 @@
+tags:: [[CLI/Tool]]
+alias:: cat
+
+- # `cat` command
+	- ## Overview
+		- `cat` (concatenate) is a standard Unix utility that reads files sequentially and writes them to standard output.
+		- Defined by the POSIX standard (`POSIX.1-2017`), meaning it's included in compliant Unix-like systems.
+	- ## Basic Usage
+		- `cat [OPTION]... [FILE]...`
+		- Displays the contents of one or more files to standard output.
+		- Without any FILE arguments, reads from standard input.
+	- ## Common Options
+		- `-A, --show-all` - equivalent to `-vET`, shows all non-printing characters
+		- `-b, --number-nonblank` - number non-empty output lines
+		- `-E, --show-ends` - display $ at end of each line
+		- `-n, --number` - number all output lines
+		- `-s, --squeeze-blank` - suppress repeated empty output lines
+		- `-T, --show-tabs` - display TAB characters as ^I
+		- `-v, --show-nonprinting` - use ^ and M- notation, except for LFD and TAB
+	- ## Examples
+		- ### Display file contents
+			- `cat filename.txt` - display contents of a single file
+			- `cat file1.txt file2.txt` - concatenate and display multiple files
+		- ### Create a new file
+			- `cat > newfile.txt` - create a new file (type content, press Ctrl+D to save)
+		- ### Append to a file
+			- `cat >> existing.txt` - append content to an existing file
+		- ### Display with line numbers
+			- `cat -n filename.txt` - display file with line numbers
+		- ### Display non-printing characters
+			- `cat -A filename.txt` - show all non-printing characters
+	- ## Common Use Cases
+		- Viewing small text files
+		- Concatenating multiple files
+		- Creating simple text files
+		- Redirecting output to other commands via pipes
+	- ## Related Commands
+		- `less` - view files with pagination
+		- `more` - similar to less but with fewer features
+		- `head` - display the beginning of a file
+		- `tail` - display the end of a file
+		- `tac` - display files in reverse order (opposite of cat)

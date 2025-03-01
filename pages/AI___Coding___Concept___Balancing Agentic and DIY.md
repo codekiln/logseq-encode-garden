@@ -1,0 +1,22 @@
+tags:: [[Diataxis/Concept]], [[Writing]]
+
+- # The importance of #Balancing [[DIY Software Engineering]] and [[AI Coding]]
+	- ## AI Development Phases and Building the Coding Engine
+		- While working on [[AI/Coding/Technique/Phased Planning/ai-coding dir]], had a thought about [[AI Software Engineering]]
+			- Feels like **building an engine—a coding engine**. [[Software/Engineering]] **is now the act of building and tuning a specific coding engine, tailored to a specific domain or problem**.
+				- The engine consists of prompts meant to be invoked at specific phases in the software development lifecycle.
+				- If done well, it could function like a checklist.
+					- This could increase quality and consistency. [[Book/The Checklist Manifesto]].
+	- ## Traversal and Resolution in Learning
+		- Driving everywhere limits the ability of the traveler to notice details in the landscape.
+		- Slower traversals increase the resolution of time, life, and awareness.
+		- Agentic coding feels like driving—accelerated but less granular.
+		- Before motor cars became common, people walked and biked more.
+		- After cars, personal exploration of the landscape diminished.
+		- Coding is approaching a similar shift, where implementation is rapid but potentially less thoughtful.
+	- ## What is the right ratio of AI:DIY coding?
+		- Implementing something from scratch yields a more detailed mental map.
+		- [[Classical Software Engineering]] fosters struggle, which often leads to better abstractions and simplifications.
+			- Without this struggle or the signal of felt pain, one may not recognize patterns that lead to cleaner designs.
+		- It's not a fixed thing. It changes with the season, the repo, the project, the issue.
+		- Cultivate mindfulness to tune into the signal of when the fulcrum needs to shift

@@ -11,7 +11,7 @@ tags:: [[AI/Coding]]
 			- Tools: [[mise]], [[aider]], [[llm-cli]], [[Repomix]] added to [[AI/Coding/Todos]]
 	- > tl:dr; Brainstorm spec, then plan a plan, then execute using LLM codegen. Discrete loops. Then magic. ✩₊˚.⋆☾⋆⁺₊✧
 	- ## [[Greenfield Coding]] code dev
-		- ### [[AI/Coding/v0/Phase/1 - Requirements Interview]] have #4o or #o3 interview you for the requirements and put it in `spec.md`
+		- ### [[AI/Coding/v0/Phase/2 - Requirements Interview]] have #4o or #o3 interview you for the requirements and put it in `spec.md`
 			- have it prompt you to have a requirements elicitation session, asking you **one question at a time**
 			- ```
 			  Ask me one question at a time so we can develop a thorough, step-by-step spec for this idea. Each question should build on my previous answers, and our end goal is to have a detailed specification I can hand off to a developer. Let’s do this iteratively and dig into every relevant detail. Remember, only one question at a time.
@@ -22,7 +22,7 @@ tags:: [[AI/Coding]]
 			  ```
 			- at end of brainstorm, ask it to compile findings into a `spec.md` in root of repo
 			- > Now that we’ve wrapped up the brainstorming process, can you compile our findings into a comprehensive, developer-ready specification? Include all relevant requirements, architecture choices, data handling details, error handling strategies, and a testing plan so a developer can immediately begin implementation.
-		- ### [[AI/Coding/v0/Phase/2 - Implementation Plan]] - use #[[LLM Reasoning Model]] to create sequential `prompt_plan.md` with chunks of work
+		- ### [[AI/Coding/v0/Phase/3 - Implementation Plan]] - use #[[LLM Reasoning Model]] to create sequential `prompt_plan.md` with chunks of work
 			- #TDD #Prompt
 				- ```
 				  Draft a detailed, step-by-step blueprint for building this project. Then, once you have a solid plan, break it down into small, iterative chunks that build on each other. Look at these chunks and then go another round to break it into small steps. Review the results and make sure that the steps are small enough to be implemented safely with strong testing, but big enough to move the project forward. Iterate until you feel that the steps are right sized for this project.
@@ -43,12 +43,12 @@ tags:: [[AI/Coding]]
 				  
 				  <SPEC>
 				  ```
-		- ### [[AI/Coding/v0/Phase/3 - Implementation Checklist]] use #[[LLM Reasoning Model]] to create sequential `todo.md` with equivalent chunks of work as `prompt_plan.md`
+		- ### [[AI/Coding/v0/Phase/4 - Implementation Checklist]] use #[[LLM Reasoning Model]] to create sequential `todo.md` with equivalent chunks of work as `prompt_plan.md`
 			- #Prompt to generate todos
 				- ```
 				  Can you make a `todo.md` that I can use as a checklist? Be thorough.
 				  ```
-		- ### [[AI/Coding/v0/Phase/4 - Implementation]] - follow `prompt_plan.md` to complete tasks in `todo.md`
+		- ### [[AI/Coding/v0/Phase/5 - Implementation]] - follow `prompt_plan.md` to complete tasks in `todo.md`
 			- success depends on step 2 and 3
 			- could work with [[CursorAI]] or any other tool
 			- prefers raw [[Claude]] and [[aider]]
@@ -71,7 +71,7 @@ tags:: [[AI/Coding]]
 					- instead of pasting into claude, paste into aider
 					- then play [[Game/Video/Cookie Clicker]] #LOL
 				- > *An aside: Aider does really great benchmarking of new models for codegen in their *[LLM leaderboards](https://aider.chat/docs/leaderboards/)*. I find it to be a really great resource for seeing how effective new models are.*
-	- ## [[Brownfield Coding]] - generate `output.txt` with #Repomix and process with #mise tasks - [[AI/Coding/v0/Phase/0 - Gather Materials]]
+	- ## [[Brownfield Coding]] - generate `output.txt` with #Repomix and process with #mise tasks - [[AI/Coding/v0/Phase/1 - Gather Materials]]
 		- > I have a task collection defined in my global `~/.config/mise/config.toml` that allows me to do various things with my code base ([mise rules](https://mise.jdx.dev/)).
 		- ### my #notes
 			- There could be another step here related to research, e.g. deciding on relevant files and generating [[Repomix]] config, gathering documentation, researching prior art
