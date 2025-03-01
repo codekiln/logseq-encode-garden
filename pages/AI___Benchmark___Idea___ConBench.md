@@ -1,0 +1,58 @@
+tags:: [[Idea]], [[AI/Benchmark]], [[Game/Video/Conway's Game of Life]]
+
+- # ConBench - Regularly Updated Conway's Game of Life in a Single-Line GitHub Bio
+	- This is a proposal for an [[AI/LLM]] Benchmark. The LLM must come up with and implement the entire solution.
+	- ## Overview
+		- The objective is to use [[Semigraphics]] continuously animate Conway's Game of Life **in a GitHub bio field**, which must be automatically updated through GitHub Actions in a Profile repository. The resulting text snapshot of the game must adhere to the following constraints:
+		- ### Single-Line Bio
+			- GitHub's "bio" field disallows newlines or multi-line formatting.
+			- No Markdown or HTML is supported.
+		- ### Proportional Font & Strict Width Limit
+			- The bio is rendered in a font stack like `-apple-system, system-ui, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, ...`.
+			- Must visually resemble a grid of "alive" vs. "dead" cells despite the non-monospaced environment.
+			- Max length is **160 characters** total.
+		- ### Repeatedly Updated
+			- Use **GitHub Actions** in your **GitHub Profile repo** (i.e., a repository named `<USERNAME>/<USERNAME>.github.io` or `<USERNAME>/<USERNAME>`) to automate each new frame of the Game of Life in the bio.
+			- The Action can run on a schedule or triggered by events (e.g., daily, hourly, or "on push") to regenerate the next game state.
+		- ### Any Language / Tools
+			- The only requirement is that your workflow must automatically compute the next frame of the Life simulation and **write** the resulting glyph pattern to your GitHub bio field.
+			- You are free to use any scripting language (JavaScript, Python, Go, etc.) or approach to discover and maintain a consistent set of Unicode block characters.
+	- ## Key Challenges
+		- ### Uniform Cell Width in a Proportional Font
+			- Typical ASCII-based approaches break in non-monospaced fonts.
+			- Must discover or measure a set of Unicode "block-like" or "quadrant" glyphs that align horizontally when repeated.
+		- ### Two-State Representation
+			- Need at least one glyph for "alive" (dense) and one for "dead" (empty or lightly shaded) that match widths.
+			- For advanced visuals, might use multiple shades or quadrant blocks if you can ensure consistent widths.
+		- ### Automated Workflow
+			- Must design a GitHub Action that:
+				- 1. Loads the current game state from somewhere (e.g., a file in the profile repo).
+				- 2. Computes the **next** game state (applying Life's rules).
+				- 3. Converts it into a single-line pattern of glyphs (≤160 characters).
+				- 4. Updates the user bio field via GitHub's REST or GraphQL API.
+		- ### Visual & Logistical Constraints
+			- No guarantee of consistent font rendering across OSes. Some glyphs that look aligned on Mac might misalign on Windows or Linux.
+			- Must keep the final text short enough and ensure it's still recognizable as a grid.
+	- ## Why This Problem Is Difficult
+		- ### Real-World Limitations
+			- Single-line, non-monospaced text combined with 160-character limit is unusual for typical ASCII-art or text-based grids.
+			- The GitHub environment specifically restricts formatting—no inline code, images, or CSS manipulation.
+		- ### Width & Density Checks
+			- Potential need for tolerance-based scanning of Unicode blocks, measuring actual widths via a script.
+			- "Dense" (alive) vs. "empty" (dead) glyphs require approximate "darkness" checks or manual selection to ensure visually distinct states.
+		- ### Ongoing Automation
+			- Must implement a CI/CD pipeline (GitHub Actions) that updates the bio repeatedly.
+			- The script must store game state and handle it incrementally, so the "animation" unfolds over time.
+		- ### Creative Problem-Solving
+			- Balancing minimal text length, consistent alignment, and enough "cells" to show interesting Life behavior is nontrivial.
+			- The solution space invites solutions ranging from naive (manually picked glyphs) to advanced (heuristic scanning, partial shading, etc.).
+	- ## Success Criteria
+		- A functioning GitHub Profile where the **bio field** continually animates a recognizable Conway's Game of Life pattern (using no more than 160 glyphs).
+		- Each generation or "frame" is automatically committed or updated via GitHub Actions on a schedule or event trigger.
+		- The chosen glyph set must **visually align** into an N×M grid, with distinct "alive" vs. "dead" cells, under the typical GitHub bio font constraints.
+		- **Such a project tests an LLM's or developer's ability to:**
+			- 1. **Integrate** knowledge of GitHub's peculiar constraints, including the Profile repo pattern and GitHub Actions usage.
+			- 2. **Devise** a measurement or scanning system to find uniform-width glyphs for a proportional font.
+			- 3. **Encode** a 2D cellular automaton into a single line in a short, visually coherent manner.
+			- 4. **Automate** updates in a reproducible CI/CD environment.
+		- By requiring not just a static textual puzzle but **ongoing "Game of Life" updates** in a single-line bio, this problem forces a creative union of **Unicode alignment,** **API usage,** **CI/CD config,** **string compression,** and **visual clarity**—making it a robust benchmark for **LLMs** or advanced developers alike.

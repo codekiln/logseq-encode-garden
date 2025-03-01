@@ -2,7 +2,7 @@
 	- ## Summary of the `/.ai-coding/TICKET-feature-name/` directory
 	  id:: 67c180c4-95f6-4d0b-b787-60d11eed3ff9
 		- Named after the ticket and a brief description of the feature; preferably the name of this directory matches the end of the branch name; `TICKET` is an external project management ticket reference from [[JIRA]], [[GitHub/Issue]], [[Gitlab/Issue]], [[JetBrains/YouTrack]], etc, so something like `ASDF-123` for Jira
-		- Contains all planning and documentation assets for a single feature's implementation. Here they are, broken down by the **Phase** in which they are created or used:
+		- Contains all planning and documentation assets for a single feature's implementation. Here they are, broken down by the **Phase** in which they are created or used.
 		- ### [[AI/Coding/v0/Phase/0 - Preparation]]
 		  id:: 67c2d185-4821-4b6f-80f9-51b05cdb859e
 			- Before beginning work on a ticket, even before assembling materials to work on the ticket, it helps to have a the coding environment is correctly configured. This includes but is not limited to:
