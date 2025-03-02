@@ -7,6 +7,16 @@ alwaysApply: false
 
 Note: these markdown rules are not itself in LFM (though it does contain examples of valid LFM)
 
+### ⚠️ CRITICAL: DO NOT MODIFY FRONTMATTER TAGS ⚠️
+
+- **NEVER** modify, add, or remove the `tags::` frontmatter item specifically
+- The `tags::` frontmatter (e.g., `tags:: [[MyTagHere]], [[MySecondTagHere]]`) is strictly protected
+- Even if you think a tag is missing or incorrect, DO NOT change the `tags::` frontmatter
+- This restriction applies ONLY to the `tags::` frontmatter item, not to other page attributes
+- Other page-level attributes may be modified when explicitly instructed to do so
+- Do not confuse this instruction with inline tags in the document body (e.g., `#MyTag`)
+- This is a strict requirement - modifying frontmatter tags will disrupt the user's categorization system
+
 ### Basic Structure
 
 - Logseq uses a hierarchical bullet-point structure.
@@ -96,16 +106,20 @@ The following example is incorrect because it lacks indentation, unordered list 
 
 ### Page-level attributes in Logseq
 
-IMPORTANT: you should not invent tags and page-level attributes. I structure my tags and attributes in a particular way, and you will mess up my categorization if you do. You should seek to not alter the tags and frontmatter of a page. 
+**CRITICAL: NEVER modify the `tags::` frontmatter item in any document.** The user has a specific tagging system that follows particular rules not documented here. Any modification to the `tags::` frontmatter will disrupt their categorization system. Always preserve existing frontmatter tags exactly as they appear.
+
+Other page-level attributes may be modified when explicitly instructed to do so, but the `tags::` frontmatter must remain untouched.
 
 Page-level attributes or Logseq Frontmatter 
 - MUST occur as the first lines in the markdown file before an unordered list item
 - MUST use kebob-case
 - separation between key and value is with `:: `
+- The `tags::` frontmatter item specifically **MUST NOT be modified, added, or removed** under any circumstances
 
 <CORRECT_✅>
 ~~~markdown
-tags:: Q, nvm, npx
+tags:: [[Q]], [[nvm]], [[npx]]
+other-attribute:: some value
 - # Main Topic
 ...
 ~~~
