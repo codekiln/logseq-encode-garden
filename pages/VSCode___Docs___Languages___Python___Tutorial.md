@@ -20,7 +20,7 @@ readwise-link:: https://read.readwise.io/new/read/01jfz94w9xygdp5gx50req7srh
 	  :END:
 	- DONE import into #Readwise/Reader [Linting Python in Visual Studio Code](https://code.visualstudio.com/docs/python/linting) [[VSCode/Docs/Python/Linting]]
 	  id:: 676d1d2b-6ad5-4baa-9a2e-218ad2c419ce
-- DONE Run [[Python]] code
+- DONE Run [[Py]] code
   id:: 676d1d19-1ea4-42bd-b1b2-844f44aa63b3
   :LOGBOOK:
   CLOCK: [2024-12-26 Thu 04:11:58]--[2024-12-26 Thu 04:19:30] =>  00:07:32
@@ -31,7 +31,7 @@ readwise-link:: https://read.readwise.io/new/read/01jfz94w9xygdp5gx50req7srh
 		  gitp-acolyte ✘ Me@Home  ~/dev/gitpa  ↱ cc/04-host-n-dist/03-ai-ep-yml  /Users/Me/.pyenv/versions/3.13.1/envs/gitp-acolyte/bin/python /Users/Me/dev/gitpa/gitp-acolyte/gitp_acolyte/hello.py
 		  Roll a dice!
 		  ```
-	- ## four ways to run #Python in #VSCode
+	- ## four ways to run #Py in #VSCode
 	  id:: 676d1dfa-f9d4-4335-be68-fcd95e3fe89a
 	  card-last-interval:: -1
 	  card-repeats:: 1

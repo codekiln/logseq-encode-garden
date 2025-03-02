@@ -1,4 +1,4 @@
-# DONE [Testing Python in Visual Studio Code](https://code.visualstudio.com/docs/python/testing) - #Python #Pytest [[Software/Testing]]
+# DONE [Testing Python in Visual Studio Code](https://code.visualstudio.com/docs/python/testing) - #Py #Pytest [[Software/Testing]]
 id:: 6777cb12-88af-4ac9-a143-2a0c4ef1f93c
 :LOGBOOK:
 CLOCK: [2025-01-03 Fri 06:34:13]--[2025-01-15 Wed 03:26:46] =>  284:52:33

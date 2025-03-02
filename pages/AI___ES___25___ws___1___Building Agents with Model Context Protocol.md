@@ -445,7 +445,7 @@ tags:: [[Anthropic/Model Context Protocol]]
 				- Metadata includes **versions**, **protocol types** (`stdio`, `sse`), and **URLs**.
 				- Supports **multiple package registries** (`npm`, `pypi`, etc.)
 		- my #notes
-			- this lets us have something like npm, pypi, [[Package Manager]]s for mcp
+			- this lets us have something like npm, pypi, [[Package/Manager]]s for mcp
 			- how do you determine whether it's sse or stdio
 			- who built it, is it verified, did [[Shopify]] bless this server?
 			- "this is coming, it's going to be great"

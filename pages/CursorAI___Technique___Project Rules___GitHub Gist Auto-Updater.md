@@ -20,7 +20,7 @@
 					- Show status messages for install/update/current
 	- ## Future variations
 		- could consider making a generic script that would detect any .mdc files in the gist and apply to all of them, so that installer could be reused
-		- it would probably be better if there was a standard [[Package Manager]] for cursor rules though
+		- it would probably be better if there was a standard [[Package/Manager]] for cursor rules though
 		- could also consider a [[GitHub Repo Template]] as a way to create one's own **stdlib**, as per [[Person/Geoffrey Huntley/Blog/25/02/You are using Cursor AI incorrectly...]]
 	- ### Benefits for Sharing Cursor Rules
 		- Version control through GitHub Gists

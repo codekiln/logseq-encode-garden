@@ -40,7 +40,7 @@ created-by-template:: [[Logseq/Template/Project/Page]]
 			  :LOGBOOK:
 			  CLOCK: [2024-12-19 Thu 03:19:51]--[2024-12-20 Fri 03:11:24] =>  23:51:33
 			  :END:
-			- DONE create a milestone for learning #Python in #VSCode: ((676c215b-e6e1-42a5-8842-69dfea383749))
+			- DONE create a milestone for learning #Py in #VSCode: ((676c215b-e6e1-42a5-8842-69dfea383749))
 			  id:: 676a7b3a-475a-4d9c-a42a-0df0c87d0b96
 			  :LOGBOOK:
 			  CLOCK: [2024-12-25 Wed 10:14:02]--[2024-12-25 Wed 10:36:49] =>  00:22:47
@@ -59,7 +59,7 @@ created-by-template:: [[Logseq/Template/Project/Page]]
 			  id:: 67692054-752a-4cd6-a890-dcbfeb10b9e5
 				- TODO create [[Diataxis/How To]] browse from a diff to the file to edit it using a #Keyshort in [[VSCode/Git]]
 				  id:: 6763ee82-a86e-4962-83af-5ce7a61f34d0
-			- #### TODO create advanced #Python #VSCode milestones
+			- #### TODO create advanced #Py #VSCode milestones
 				- TODO create a milestone for **Refactoring Python**
 				- TODO create a milestone for **Docker Python** - using interpreter inside of docker-compose - *note, should not include Dev Containers*
 				- TODO create a milestone for **Dev Container Python** for creating a [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) for python
