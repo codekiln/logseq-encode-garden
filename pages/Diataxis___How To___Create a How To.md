@@ -1,4 +1,4 @@
-tags:: [[Diataxis]], [[Documentation]], [[Writing]], [[Diataxis/How To]]
+tags:: [[Diataxis]], [[Documentation]], [[Writing]], [[Diataxis/How To]], [[CursorAI/Project Rule/diataxis-how-to.mdc/Created By]]
 
 - # How To Create a [Diataxis How-To Guide](https://diataxis.fr/how-to-guides/)
 	- ## [[My Notes]]

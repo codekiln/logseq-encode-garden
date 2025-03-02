@@ -1,0 +1,1 @@
+alias:: [[Irrational Exuberance]]

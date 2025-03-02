@@ -1,0 +1,4 @@
+- [[Person/Johann Goethe/Wikipedia]] [Johann Wolfgang von Goethe - Wikipedia](https://en.wikipedia.org/wiki/Johann_Wolfgang_von_Goethe)
+	- Born: [[17/40/9]]
+	- Died: [[18/30/2]]
+	- > widely regarded as the greatest and most influential writer in the German language

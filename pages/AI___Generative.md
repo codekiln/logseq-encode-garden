@@ -1,0 +1,1 @@
+alias:: [[GenAI]], [[Generative AI]]

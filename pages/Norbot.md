@@ -1,0 +1,13 @@
+# [Norbot](https://wallaceandgromit.fandom.com/wiki/Norbot)
+	- The Norbots (**N**ifty **O**dd-Jobbing Ro**bots**) are the secondary antagonists in [Wallace & Gromit: Vengeance Most Fowl](https://wallaceandgromit.fandom.com/wiki/Wallace_%26_Gromit:_Vengeance_Most_Fowl "Wallace & Gromit: Vengeance Most Fowl").
+	- ![mechanical-looking gnome made from clay](https://static.wikia.nocookie.net/wallaceandgromit/images/f/f0/Norbot_landscape-removebg-preview.png/revision/latest?cb=20240928151017){:height 223, :width 81}
+	- The green Norbot is [Wallace](https://wallaceandgromit.fandom.com/wiki/Wallace "Wallace")'s latest invention that was **invented as a smart gnome**.
+	- intended **as a well-meaning garden device**
+	- [Feathers McGraw](https://wallaceandgromit.fandom.com/wiki/Feathers_McGraw "Feathers McGraw") **hacked** his code to be malicious
+		- Norbot created an **army of evil blue Norbots**
+			- thieved residents of Wigan in disguise as home improvement
+			- used stolen house parts and equipment to create a [submarine](https://wallaceandgromit.fandom.com/wiki/Feathers%27_submarine "Feathers' submarine") to help Feathers' escape
+	- ## [[My Notes]]
+		- well-timed critique of [[AI/Issue/Alignment]], [[AI/Security]] and the [[Irrational Exuberance]] of [[Techno-Optimism]]
+		- hilarious commentary on the [[Aesthetics]] of [[GenAI]]; the hedges that Norbot creates are all square and even. Also, while constructing them, Norbot is oblivious to how close he comes to injuring Grommit and others while rapidly working
+		- re-tells [[Person/Johann Goethe/Poem/The Sorcerer's Apprentice]]

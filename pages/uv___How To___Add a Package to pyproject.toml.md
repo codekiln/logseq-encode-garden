@@ -1,4 +1,4 @@
-tags:: [[uv]], [[Py/pyproject.toml]], [[Package/Management]], [[Diataxis/How To]]
+tags:: [[uv]], [[Py/pyproject.toml]], [[Package/Management]], [[Diataxis/How To]], [[CursorAI/Project Rule/diataxis-how-to.mdc/Created By]]
 
 - # How To Add a Package to pyproject.toml with uv
 	- ## Overview
@@ -14,6 +14,7 @@ tags:: [[uv]], [[Py/pyproject.toml]], [[Package/Management]], [[Diataxis/How To]
 			- Change to your project's root directory where the pyproject.toml file is located
 			- Example: `cd path/to/your/project`
 		- ### 2. Add a Package Using the uv Command
+		  id:: 67c45284-ca87-43f8-919b-8c8ed7cbed73
 			- Run the `uv add` command followed by the package name
 			- Basic syntax: `uv add <package-name>`
 			- Example: `uv add ruff`

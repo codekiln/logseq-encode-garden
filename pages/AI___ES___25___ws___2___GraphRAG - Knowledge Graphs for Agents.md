@@ -6,7 +6,7 @@ created-by:: [[Person/Alison Cossette]]
 	  collapsed:: true
 		- **Date**: February 22, 2025
 		- **Time**: 12:30 PM
-		- Generative AI is only as good as the data it retrieves—but traditional RAG (Retrieval-Augmented Generation) is limited by flat, disconnected search. AI models struggle to connect structured data (databases, APIs) with unstructured data (docs, PDFs, chat logs), leading to incomplete answers and hallucinations.
+		- [[AI/Generative]] is only as good as the data it retrieves—but traditional RAG (Retrieval-Augmented Generation) is limited by flat, disconnected search. AI models struggle to connect structured data (databases, APIs) with unstructured data (docs, PDFs, chat logs), leading to incomplete answers and hallucinations.
 		- Enter GraphRAG—a next-generation retrieval approach powered by Neo4j. This workshop will show you how graphs unlock deeper context, better reasoning, and enterprise-ready AI applications. No graph experience needed!
 		- You’ll learn how to:
 		- Integrate structured and unstructured data into a unified retrieval system.
