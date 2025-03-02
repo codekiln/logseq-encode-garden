@@ -1,0 +1,35 @@
+# [How-to guides - Diátaxis](https://diataxis.fr/how-to-guides/)
+
+tags:: [[Diataxis]], [[Documentation]]
+
+- # Diataxis How-To Guides
+	- ## Definition
+		- How-to guides are **goal-oriented directions** that guide the reader through solving a specific problem or achieving a concrete result.
+		- They are part of the [Diátaxis documentation framework](https://diataxis.fr/how-to-guides/) created by Daniele Procida.
+	- ## Key Characteristics
+		- **Goal-oriented**: Focused on helping users accomplish specific tasks
+		- **Practical**: Provides executable solutions to real-world problems
+		- **Assumes competence**: Written for users who know what they want to achieve
+		- **Action-focused**: Contains clear, sequential steps
+		- **Concise**: Omits unnecessary explanations and theory
+	- ## Purpose
+		- How-to guides serve as reliable references that users can return to whenever they need to accomplish specific tasks.
+		- They answer the question: "How do I...?" for users who already understand the basics.
+		- They help frame what a product or system can actually do by showcasing practical applications.
+	- ## Relationship to Other Documentation Types
+		- **Tutorials**: While tutorials teach new skills through guided learning experiences, how-to guides help apply existing skills to accomplish specific goals.
+		- **Reference**: Reference documentation describes what something is and how it works, while how-to guides show how to use it to accomplish tasks.
+		- **Explanation**: Explanation provides background and context, while how-to guides focus solely on practical steps.
+	- ## Structure in Logseq
+		- How-to guides in this knowledge garden follow a consistent structure:
+			- Title: "How To [Specific Task]"
+			- Overview: Brief description of what the guide helps accomplish
+			- Prerequisites: What's needed before starting
+			- Steps: Numbered, sequential actions to take
+			- Troubleshooting: Common issues and solutions
+			- Related: Links to related pages
+		- All how-to guides are tagged with `[[Diataxis/How To]]` for easy discovery.
+	- ## Examples
+		- [[Diataxis/How To/Create a How To]]
+		- (More examples will be added as they are created)
+	-

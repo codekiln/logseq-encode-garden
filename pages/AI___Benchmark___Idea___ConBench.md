@@ -1,9 +1,12 @@
 tags:: [[Idea]], [[AI/Benchmark]], [[Game/Video/Conway's Game of Life]]
 
 - # ConBench - Regularly Updated Conway's Game of Life in a Single-Line GitHub Bio
-	- This is a proposal for an [[AI/LLM]] Benchmark. The LLM must come up with and implement the entire solution.
-	- ## Overview
-		- The objective is to use [[Semigraphics]] continuously animate Conway's Game of Life **in a GitHub bio field**, which must be automatically updated through GitHub Actions in a Profile repository. The resulting text snapshot of the game must adhere to the following constraints:
+	- ## Summary of ConBench
+	  id:: 67c43e9b-3de3-4762-ac95-df86cd6122c3
+		- This is a proposal for an [[AI/LLM]] Benchmark. The LLM must come up with and implement the entire solution. The objective is to use [[Semigraphics]] continuously animate Conway's Game of Life **in a GitHub bio field**, which must be automatically updated through GitHub Actions in a Profile repository.
+		  id:: 67c340dc-9dea-4289-9d7d-5b9a130617fa
+	- ## Constraints
+		- The resulting text snapshot of the game must adhere to the following constraints:
 		- ### Single-Line Bio
 			- GitHub's "bio" field disallows newlines or multi-line formatting.
 			- No Markdown or HTML is supported.

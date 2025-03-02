@@ -1,0 +1,58 @@
+tags:: [[Diataxis]], [[Documentation]], [[Writing]], [[Diataxis/How To]]
+
+- # How To Create a How-To Guide
+	- ## Overview
+		- This guide walks you through creating an effective How-To guide following the Diataxis documentation framework.
+		- It's for documentation writers, technical writers, and anyone who needs to create clear, actionable instructions.
+	- ## Prerequisites
+		- Basic understanding of the documentation purpose
+		- Knowledge of the subject matter you're documenting
+		- Clear idea of the specific task your guide will address
+	- ## Steps
+		- ### 1. Identify a Specific Task or Problem
+			- Choose a concrete, practical goal that users need to accomplish
+			- Make sure it's focused and specific (e.g., "How to reset your password" rather than "How to use accounts")
+			- Verify that it addresses a real user need
+		- ### 2. Create a Clear, Action-Oriented Title
+			- Start with "How to" followed by a verb and the specific task
+			- Examples:
+				- "How to Configure Email Notifications"
+				- "How to Export Data as CSV"
+				- "How to Troubleshoot Connection Issues"
+		- ### 3. Write a Brief Overview
+			- Summarize what the guide helps accomplish in 1-2 sentences
+			- Identify who the guide is for and when they might need it
+			- Don't include conceptual explanations or background theory
+		- ### 4. List Prerequisites
+			- Specify what the reader needs before starting
+			- Include required tools, permissions, knowledge, or resources
+			- Be specific about versions or configurations if relevant
+		- ### 5. Create Sequential, Numbered Steps
+			- Break down the task into logical, ordered steps
+			- Start each step with an action verb (Configure, Click, Enter, etc.)
+			- Keep steps focused on a single action when possible
+			- Include screenshots or examples for complex steps
+			- Use conditional statements for steps with variations: "If X, then do Y"
+		- ### 6. Add Troubleshooting Information
+			- Anticipate common issues users might encounter
+			- Provide clear solutions for each problem
+			- Use a problem/solution format: "If you see [error], then [solution]"
+		- ### 7. Include Related Resources
+			- Link to related guides, reference material, or explanations
+			- Don't include this information directly in your guide
+			- Focus on connections that are immediately useful to someone performing this task
+		- ### 8. Review and Test Your Guide
+			- Follow your own instructions to verify they work
+			- Check for missing steps or assumptions
+			- Ensure the guide remains focused on the specific task
+			- Remove any unnecessary explanations or digressions
+	- ## Troubleshooting
+		- If your guide becomes too long: Break it into multiple, more focused guides
+		- If steps are unclear: Add more specific details or examples
+		- If users report confusion: Check for missing prerequisites or assumptions
+		- If the guide contains too much explanation: Move theoretical content to a separate explanation document and link to it
+	- ## Related
+		- [[Diataxis/How To]]
+		- [[Diataxis/Tutorials]]
+		- [[Diataxis/Reference]]
+		- [[Diataxis/Explanation]] 
