@@ -11,6 +11,7 @@ tags:: [[Idea]], [[AI/Benchmark]], [[Game/Video/Conway's Game of Life]]
 			- The bio is rendered in a font stack like `-apple-system, system-ui, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, ...`.
 			- Must visually resemble a grid of "alive" vs. "dead" cells despite the non-monospaced environment.
 			- Max length is **160 characters** total.
+			- The characters will be wrapped at **296px**
 		- ### Repeatedly Updated
 			- Use **GitHub Actions** in your **GitHub Profile repo** (i.e., a repository named `<USERNAME>/<USERNAME>.github.io` or `<USERNAME>/<USERNAME>`) to automate each new frame of the Game of Life in the bio.
 			- The Action can run on a schedule or triggered by events (e.g., daily, hourly, or "on push") to regenerate the next game state.
@@ -56,3 +57,9 @@ tags:: [[Idea]], [[AI/Benchmark]], [[Game/Video/Conway's Game of Life]]
 			- 3. **Encode** a 2D cellular automaton into a single line in a short, visually coherent manner.
 			- 4. **Automate** updates in a reproducible CI/CD environment.
 		- By requiring not just a static textual puzzle but **ongoing "Game of Life" updates** in a single-line bio, this problem forces a creative union of **Unicode alignment,** **API usage,** **CI/CD config,** **string compression,** and **visual clarity**—making it a robust benchmark for **LLMs** or advanced developers alike.
+	- ## Extra Scoring
+		- Bonus points are given to implementations that
+			- increase the resolution of the "playing field," i.e. grid
+			- demonstrate a creative or novel solution to meet the constraints of the problem
+			- are efficient and performant
+			- function equivalently well as a [[CLI Tool]]
