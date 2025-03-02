@@ -66,3 +66,5 @@ tags:: [[Idea]], [[AI/Benchmark]], [[Game/Video/Conway's Game of Life]]
 			- demonstrate a creative or novel solution to meet the constraints of the problem
 			- are efficient and performant
 			- function equivalently well as a [[CLI Tool]]
+	- ## See also
+		- [[Project - Conway's Game of Life in GitHub Bio]]

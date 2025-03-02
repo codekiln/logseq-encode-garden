@@ -9,5 +9,5 @@
 			- used stolen house parts and equipment to create a [submarine](https://wallaceandgromit.fandom.com/wiki/Feathers%27_submarine "Feathers' submarine") to help Feathers' escape
 	- ## [[My Notes]]
 		- well-timed critique of [[AI/Issue/Alignment]], [[AI/Security]] and the [[Irrational Exuberance]] of [[Techno-Optimism]]
-		- hilarious commentary on the [[Aesthetics]] of [[GenAI]]; the hedges that Norbot creates are all square and even. Also, while constructing them, Norbot is oblivious to how close he comes to injuring Grommit and others while rapidly working
+		- hilarious commentary on the [[Aesthetics]] of [[GenAI]]; the hedges that Norbot creates are all square and even. Also, while constructing them, Norbot dangerously and obliviously comes close to injuring Grommit and others while working so rapidly.
 		- re-tells [[Person/Johann Goethe/Poem/The Sorcerer's Apprentice]]

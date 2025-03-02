@@ -1,0 +1,1 @@
+alias:: [[Slideshow]], [[Slides]], [[Slideshows]]
