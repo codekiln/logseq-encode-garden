@@ -1,11 +1,9 @@
-# [How-to guides - Diátaxis](https://diataxis.fr/how-to-guides/)
-
 tags:: [[Diataxis]], [[Documentation]]
 
-- # Diataxis How-To Guides
+- # [Diataxis How-To Guides](https://diataxis.fr/how-to-guides/)
 	- ## Definition
 		- How-to guides are **goal-oriented directions** that guide the reader through solving a specific problem or achieving a concrete result.
-		- They are part of the [Diátaxis documentation framework](https://diataxis.fr/how-to-guides/) created by Daniele Procida.
+		- They are part of the [Diátaxis documentation framework](https://diataxis.fr/how-to-guides/) created by [[Person/Daniele Procida]].
 	- ## Key Characteristics
 		- **Goal-oriented**: Focused on helping users accomplish specific tasks
 		- **Practical**: Provides executable solutions to real-world problems

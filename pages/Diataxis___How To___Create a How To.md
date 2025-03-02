@@ -1,6 +1,8 @@
 tags:: [[Diataxis]], [[Documentation]], [[Writing]], [[Diataxis/How To]]
 
-- # How To Create a How-To Guide
+- # How To Create a [Diataxis How-To Guide](https://diataxis.fr/how-to-guides/)
+	- ## [[My Notes]]
+		- This page is referenced by a [[CursorAI/Project Rule/diataxis-how-to.mdc]]
 	- ## Overview
 		- This guide walks you through creating an effective How-To guide following the Diataxis documentation framework.
 		- It's for documentation writers, technical writers, and anyone who needs to create clear, actionable instructions.
@@ -55,4 +57,4 @@ tags:: [[Diataxis]], [[Documentation]], [[Writing]], [[Diataxis/How To]]
 		- [[Diataxis/How To]]
 		- [[Diataxis/Tutorials]]
 		- [[Diataxis/Reference]]
-		- [[Diataxis/Explanation]] 
+		- [[Diataxis/Explanation]]
