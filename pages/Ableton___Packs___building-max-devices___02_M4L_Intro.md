@@ -5,7 +5,7 @@
 - ## DONE Page 2/9 - [[Ableton/Max for Live/MIDI Effect/Note Doubler]] in "Track 1 Max Patching"
   id:: 67960248-7168-46b2-af54-5ecfa125cfd6
   collapsed:: true
-	- so many [[Nerd Safari]]s await
+	- so many [[Nerd/Safari]]s await
 		- [[c74/max/Time Value Syntax]]
 		  collapsed:: true
 			- Here is a listing of the note and tick values associated with common note durations. Note value abbreviations that can be used in Max to specify time are in bold.

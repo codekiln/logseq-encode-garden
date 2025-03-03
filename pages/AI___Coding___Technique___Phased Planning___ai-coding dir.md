@@ -1,11 +1,26 @@
 #  AI Coding technique - Using an `.ai-coding/TICKET/` dir for staging [[SDLC]] planning artifacts by SDLC Phase
 	- ## Summary of the `/.ai-coding/TICKET-feature-name/` directory
 	  id:: 67c180c4-95f6-4d0b-b787-60d11eed3ff9
-		- Named after the ticket and a brief description of the feature; preferably the name of this directory matches the end of the branch name; `TICKET` is an external project management ticket reference from [[JIRA]], [[GitHub/Issue]], [[Gitlab/Issue]], [[JetBrains/YouTrack]], etc, so something like `ASDF-123` for Jira
-		- Contains all planning and documentation assets for a single feature's implementation. Here they are, broken down by the **Phase** in which they are created or used.
+		- Named after the ticket and a brief description of the feature; preferably the name of this directory matches the end of the branch name; `TICKET` is an external project management ticket reference.
+			- ### Examples of `TICKET` references
+				- [[JIRA]] - `ASDF-123`
+				- [[GitHub/Issue]] - by convention, `gh-issue-123` for an issue in the current repo
+				- [[Gitlab/Issue]] - by convention, `gl-issue-123` for an issue in the current repo
+		- This directory contains all planning and documentation assets for a single feature's implementation. Here's an example full directory with all files for a github issue:
+			- `/.ai-coding/gl-issue-123-feature-name/`
+				- [[AI/Coding/v0/File/1-TICKET-original-issue.md]]
+				- [[AI/Coding/v0/File/1-TICKET-repomix.config.json]]
+				- [[AI/Coding/v0/File/2-TICKET-technical-specification.md]]
+				- [[AI/Coding/v0/File/3-TICKET-staged-implementation-plan.md]]
+				- [[AI/Coding/v0/File/6-TICKET-staged-implementation-checklist.md]]
+				- [[AI/Coding/v0/File/6-TICKET-qa-todo.md]]
+				- [[AI/Coding/v0/File/6-TICKET-qa-summary.md]]
+				- [[AI/Coding/v0/File/7-TICKET-mr-summary.md]]
+				- [[AI/Coding/v0/File/8-TICKET-mr-handoff.md]]
+	- ## Phases and their [[Intermediate Packets]] AKA output files
 		- ### [[AI/Coding/v0/Phase/0 - Preparation]]
 		  id:: 67c2d185-4821-4b6f-80f9-51b05cdb859e
-			- Before beginning work on a ticket, even before assembling materials to work on the ticket, it helps to have a the coding environment is correctly configured. This includes but is not limited to:
+			- Before beginning work it is a good idea to prepare the coding environment for AI coding. This includes but is not limited to:
 				- downloading the repository
 				- setting up the IDE
 					- ensuring that [[Prompts]] for [[AI Coding]] are configured and accessible

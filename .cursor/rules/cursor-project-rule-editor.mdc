@@ -1,12 +1,12 @@
 ---
-versionNum: 7a0e5aab
-description: How to Edit Cursor Rules and their appropriate location in the repository
-globs: 
+versionNum: b2fe3ee5
+description: Editing Cursor Project Rules
+globs: *.mdc
 source: https://gist.github.com/codekiln/242b572c64c1097277fd4c831db91c10
 ---
 # Cursor Project Rule Editor Rule
 
-`.mdc` files stand for Mark Down Cursor, and are meant to give the Cursor IDE AI Agent context on how to operate in the codebase.
+`.mdc` files stand for MarkDown Cursor, and are meant to give the Cursor IDE AI Agent context on how to operate in the codebase.
 This particular rule is about using the AI to author and edit `.mdc` files, so as to update the rules.
 This rule ensures `.mdc` files are correctly placed within a repository and adhere to standard formatting conventions.
 
@@ -61,10 +61,19 @@ actions:
          └── ...
          ```
 
-      4. Never place rule files:
+      4. VERY IMPORTANT - NEVER EVER place rule files:
          - In the project root
          - In subdirectories outside .cursor/rules
          - In any other location
+
+      5. ⚠️ CRITICAL WARNING - File Initialization Bug:
+         When the AI creates or edits a .mdc file, DO NOT open the file in the editor
+         until the changes are committed to the repository. There is currently a bug
+         where opening a newly created or edited .mdc file in the editor will cause
+         it to be initialized/erased. To avoid this:
+         - Wait for the AI to finish making changes
+         - Commit the changes to the repository
+         - Only then open the file in the editor if needed
 
 examples:
   - input: |
@@ -100,17 +109,19 @@ actions:
     message: |
       Markdown `.mdc` files should:
       
-      1. **Include a frontmatter block** at the top with a `description` field:
+      1. **Include a frontmatter block** at the top with `description` and `globs` fields:
          ```
          ---
-         description: "Description of the rule"
-         globs: "*.mdc"
+         description: <REQUIRED: RULE_DESCRIPTION_HERE>
+         globs: <OPTIONAL: COMMA_SEPARATED_GLOBS_HERE>
          ---
          ```
+         RULE_DESCRIPTION_HERE: the phrase placed here is like a "wake word" for the AI agent to use this agent. This is required of all cursor rules.
+         COMMA_SEPARATED_GLOBS_HERE: if a file is being edited that matches the given glob relative to the project root (.gitignore syntax), then this rule will be activated. This acts as a gate - globs are filled in, then the rule likely won't be activated unless it matches a glob. If the globs are not filled in, then it may be activated if the description sounds like a relevant tool to the current task to the AI agent.
       
-      2. **Use `mdc:` links** for file references, constructing a relative link from the PROJECT_ROOT to the file
+      2. **Use `mdc:` links** for file references, constructing a relative link from the PROJECT_ROOT to the file. The following is a link to a file at PROJECT_ROOT/src/folder/example.txt
          ```
-         [example.mdc](mdc:.cursor/rules/example.mdc)
+         [example.txt](mdc:src/folder/example.txt)
          ```
 
       3. **Use proper headers** (`#`, `##`, `###`) and avoid inconsistent formatting.
@@ -118,10 +129,12 @@ actions:
 examples:
   - input: |
       ---
-      description: "Example rule for formatting"
+      description: Example rule for formatting
+      globs: *.mdc
       ---
       # Sample Rule
       This rule enforces correct `.mdc` formatting.
+      (...)
     output: "Correctly formatted `.mdc` file"
 
 metadata:

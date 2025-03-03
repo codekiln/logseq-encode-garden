@@ -5,7 +5,7 @@ tags:: [[Coder]]
 	- ## [[My Notes]]
 	  id:: 67c4b361-6c2f-409f-acbc-37f36ac86418
 		- creator of the beautiful [[Font/unscii]]
-		- culturally adjacent to [[Person/Divine lu Linvega]] and [[Perma/Computing]]; see also his essay [[Person/Viznut/Article/future]]
+		- culturally adjacent to [[Person/Devine Lu Linvega]] and [[Perma/Computing]]; see also his essay [[Person/Viznut/Article/future]]
 - ## Links
 	- ### [[Person/Viznut/Web]] http://viznut.fi/en/
 		- #### #Writing

@@ -3,7 +3,7 @@ date-created:: [[2024/04]]
 
 - # [viznut:future](http://viznut.fi/en/future.html)
 	- ## [[My Notes]]
-		- reminds me of [[Person/Divine lu Linvega]] with the [[Perma/Computing]] aesthetic
+		- reminds me of [[Person/Devine Lu Linvega]] with the [[Perma/Computing]] aesthetic
 	- ## Summaries and Excerpts
 		- two types of futuristic images available for today's people
 			- "bright"

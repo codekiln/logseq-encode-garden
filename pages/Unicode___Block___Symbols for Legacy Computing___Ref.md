@@ -1,0 +1,52 @@
+tags:: [[Unicode]], [[Character Sets]], [[Diataxis/Reference]]
+
+- # [Unicode Block Reference: Symbols for Legacy Computing](https://en.wikipedia.org/wiki/Symbols_for_Legacy_Computing)
+	- ## [[My Notes]]
+		- I created a [[Semigraphics/Sextant Characters/Py Grid Utility]] for [[Proj/CGoL Bio]]
+		- Some of these are also in [[Font/unscii]]
+	- ## Overview
+		- The Symbols for Legacy Computing block (U+1FB00–U+1FBFF) contains 249 assigned code points out of 256 total
+		- Added to Unicode in version 13.0 (2020) with 212 characters, expanded in Unicode 16.0 (2024) with 37 additional characters
+		- Contains graphical characters for compatibility with legacy computing platforms from the 1970s and 1980s
+		- Located in the Supplementary Multilingual Plane (SMP)
+	- ## Structure
+		- Characters are organized by visual similarity and original platform
+		- Hexadecimal code points are used for precise identification
+		- The block includes 7 reserved code points that are currently unused
+	- ## Core Components
+		- ### Block Elements and Sextants (U+1FB00–U+1FB3B)
+			- 60 characters for block drawing and pixel art
+			- Includes "sextant" characters (semigraphic characters made up of six smaller blocks)
+			- Compatible with CP437 and similar encodings
+			- Example: U+1FB00 '🬀' BLOCK SEXTANT-1
+		- ### Teletext Elements (U+1FB3C–U+1FB6F)
+			- Characters used in Teletext broadcasting standards
+			- Compatible with NAPLPS and similar standards
+			- Example: U+1FB3C '🬼' BLOCK SEXTANT-121
+		- ### Legacy Computer Characters (U+1FB70–U+1FBFF)
+			- Characters from various home computers including:
+				- Amstrad CPC
+				- MSX
+				- Mattel Aquarius
+				- RISC OS
+				- MouseText
+				- Atari ST
+				- TRS-80 Color Computer
+				- Oric
+				- Texas Instruments TI-99/4A
+				- Minitel
+				- ATASCII
+				- PETSCII
+				- ZX80 and ZX81
+	- ## Technical Details
+		- Script property: Common
+		- All characters have East Asian Width property: Neutral (N)
+		- General Category: Symbol, Other (So)
+		- Bidirectional Class: Other Neutral (ON)
+		- A supplemental block (Symbols for Legacy Computing Supplement) was added with Unicode 16.0
+	- ## Related References
+		- [[Unicode/Block/Ref/Block Elements]]
+		- [[Unicode/Block/Ref/Geometric Shapes]]
+		- [[Unicode/Block/Ref/Box Drawing]]
+		- [[Unicode/Ref/Semigraphics]]
+		-
