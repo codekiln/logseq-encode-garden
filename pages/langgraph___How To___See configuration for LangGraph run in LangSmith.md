@@ -1,0 +1,12 @@
+# TODO How to see the [[langgraph/Assistant]] configuration in a particular [[LangSmith/Thread]] in LangSmith
+	- [LangGraph graphs are not reusable, and overall the configuration approach is poorly designed · langchain-ai/langgraph · Discussion #3225](https://github.com/langchain-ai/langgraph/discussions/3225)
+	- [LangGraph graphs are not reusable, and overall the configuration approach is poorly designed · langchain-ai/langgraph · Discussion #3225](https://github.com/langchain-ai/langgraph/discussions/3225)
+		- OP
+			- With LangGraph it is impossible to build and share reusable graphs. What I mean by that is that I cannot build a graph and publish it as a package, so that it is easily redeployed somewhere else by someone else **with a different base config**.
+			- Because the `configuration = Configuration.from_runnable_config(config)` will always use parent Configuration defaults defined in my package instead of enabling someone to import the graph and provide a different config
+			- So there is unfortunately no way to compile a graph and pass it a different default configuration at compile time. It can only be done at runtime.
+			- And every single node in the graph is then dependent on the original `Configuration` which cannot be overridden by anyone wanting to reuse our graph (because we need to do the ugly `configuration = Configuration.from_runnable_config(config)` at the start of each node to get the default configuration of the graph)
+			- It's really bad design from the start for something as simple as a DAG workflow runner. And it's quite concerning because LangGraph is not doing much, it's just yet another DAG runner, but with less feature and that now requires proprietary paying components to be run (cf. [#1604](https://github.com/langchain-ai/langgraph/discussions/1604))
+		- I've run into this limitation multiple times and I agree there needs to be a way to set Configuration defaults at runtime.
+		- On a related note, I haven't been able to get around this limitation when running graphs via Langgraph Studio. Since the configuration set at runtime is a configurable, I can't find a way to configure other RunnableConfig variables, like max\_concurrency, at runtime in Studio.
+		-
