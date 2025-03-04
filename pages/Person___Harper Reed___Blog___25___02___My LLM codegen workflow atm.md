@@ -12,7 +12,8 @@ tags:: [[AI/Coding]]
 	- > tl:dr; Brainstorm spec, then plan a plan, then execute using LLM codegen. Discrete loops. Then magic. ✩₊˚.⋆☾⋆⁺₊✧
 	- ## [[Greenfield Coding]] code dev
 		- ### [[AI/Coding/v0/Phase/2 - Requirements Interview]] have #4o or #o3 interview you for the requirements and put it in `spec.md`
-			- have it prompt you to have a requirements elicitation session, asking you **one question at a time**
+		  id:: 67b5d737-0ce1-47ee-a0a9-9735d77539b3
+			- have it prompt you to have a [[Requirement/Elicitation]] session, asking you **one question at a time**
 			- ```
 			  Ask me one question at a time so we can develop a thorough, step-by-step spec for this idea. Each question should build on my previous answers, and our end goal is to have a detailed specification I can hand off to a developer. Let’s do this iteratively and dig into every relevant detail. Remember, only one question at a time.
 			  

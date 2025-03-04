@@ -12,69 +12,105 @@
 				- [[AI/Coding/v0/File/1-TICKET-repomix.config.json]]
 				- [[AI/Coding/v0/File/2-TICKET-technical-specification.md]]
 				- [[AI/Coding/v0/File/3-TICKET-staged-implementation-plan.md]]
-				- [[AI/Coding/v0/File/6-TICKET-staged-implementation-checklist.md]]
-				- [[AI/Coding/v0/File/6-TICKET-qa-todo.md]]
+				- [[AI/Coding/v0/File/4-TICKET-staged-implementation-checklist.md]]
+				- [[AI/Coding/v0/File/5-TICKET-qa-todo.md]]
 				- [[AI/Coding/v0/File/6-TICKET-qa-summary.md]]
 				- [[AI/Coding/v0/File/7-TICKET-mr-summary.md]]
 				- [[AI/Coding/v0/File/8-TICKET-mr-handoff.md]]
 	- ## Phases and their [[Intermediate Packets]] AKA output files
 		- ### [[AI/Coding/v0/Phase/0 - Preparation]]
 		  id:: 67c2d185-4821-4b6f-80f9-51b05cdb859e
-			- Before beginning work it is a good idea to prepare the coding environment for AI coding. This includes but is not limited to:
+			- Following [[mise-en-place]] from the culinary world, before beginning work it is important to prepare the environment for working efficiently.
+			- This is the only phase that isn't strongly tied to the ticket, and the files it impacts are not scoped to the ticket or stored in the `/.ai-coding/TICKET-feature-name/` directory.
+			- #### Phase Activities
 				- downloading the repository
 				- setting up the IDE
 					- ensuring that [[Prompts]] for [[AI Coding]] are configured and accessible
 						- [[CursorAI/Project Rules]]
 							- [[CursorAI/Project Rule/cursor-project-rule-editor.mdc]]
-							- descriptions of the context of
+								- when to suggest an update to a cursor rule
+							- descriptions of the coding context
 								- the repository
 									- directory structure
-									- purpose
-									- coding conventions
-										- git commit format
-										- when to commit
-								- when to suggest an update to a cursor rule
+									- purpose of the project
+								- coding conventions
+									- git commit format
+									- when to commit
+								- which [[Package Managers]] to use
+							- Project Rules from other git submodules
+					- Configuring a #[[Dev Container]]
 				- provisioning API tokens, populating [[EnvVar]]s
-				- configuring shell
+					- consider provisioning a fine-grained `GH_TOKEN` for the AI to interact with the #gh CLI
+				- configuring the shell
 					- consider setting [[git/Config/core.pager]] to use [[cat]]; see also [[AI/Coding/Tip/Avoid Non-Interactive CLI Commands When Defining AI Tools]]
 					  id:: 67c2d285-e4ca-448a-96bf-e76c70111882
 				- ensuring [[CLI Tools]] are available and configured
 					- #Repomix
 					- #llm-cli
+					- #mise
+					- #[[Package Managers]]
+					- #[[MCP Servers]]
+					- #Docker
+				- #### Link in any [[Knowledge Bases]] for [[AI/Coding/Technique/Knowledge Base]]
+					- For example, a [[Logseq]] or [[Obsidian]] flat-file database of documentation could be symlinked to `.ai-coding/knowledge` if it is contained outside.
+				- ####  Link in any personal coding [[Knowledge Gardens]] that the AI should be able to access #[[AI Technique - Link in a Personal Knowledge Base]]
+					- In time, a [[Coder]]'s Knowledge Garden may become an important supplement to the AI coding process. The accumulated knowledge should be able to be instrumented so as to be available in any repository so the AI can make use of it. Consider using [[git/.gitignore]] so as to keep the agent from committing it to the repo. This way a coder's central knowledge garden can be utilized across multiple projects.
+				- #### Use an [[AI Interviewer]] to conduct [[AI/Coding/Technique/Project Onboarding Interview]]
+					- The purpose of this type of interview is to onboard the human into AI programming in the current project and guide the human to help them complete [[AI/Coding/v0/Phase/0 - Preparation]].
+			- #### Phase Files and Directories
+				- [[CursorAI/Project Rules]]
+					- a file that explains the repository's directory structure
+					- a file that explains the high level project context
+					- files that explain coding conventions
+						- a file that explains git commit conventions
+						- a file that explains <language> conventions, for example, python conventions
+							- package management
+							- coding preferences
 		- ### [[AI/Coding/v0/Phase/1 - Gather Materials]]
-			- **Output:** [[AI/Coding/v0/File/1-TICKET-original-issue.md]] - Original ticket details and high-level #AC
-				- this is for [[Project/Management]] stakeholders and likely doesn't have the detail needed for implementation
-				- pulled in from a tool like [[JIRA/CLI]], [[GitHub/CLI]], [[Gitlab/CLI]] if not using a tool like [[GitHub/MCP]]
-			- **Output:** [[AI/Coding/v0/File/1-TICKET-repomix.config.json]] - defines issue-related repository paths for [[Repomix]]
-				- used to gather repo context for external tools like [[ChatGPT]] or [[Claude/Desktop]]
-			- **Output:** [[AI/Coding/v0/File/1-TICKET-repo-context.txt]] - Contains the repo context sent to an external LLM in the next step.
-				- Should be put in [[git/.gitignore]] and considered a temporary, transitory, runtime artifact of the process
-				- Unlike the other files, this should probably not be inside of the `/.ai-coding/TICKET-feature-name/` directory, as the file may be quite large, and there's little value in retaining separate context for separate tickets over time.
+			- #### Phase Files
+				- **Output:** [[AI/Coding/v0/File/1-TICKET-original-issue.md]] - Original ticket details and high-level #AC
+					- this is for [[Project/Management]] stakeholders and likely doesn't have the detail needed for implementation
+					- pulled in from a tool like [[JIRA/CLI]], [[GitHub/CLI]], [[Gitlab/CLI]] if not using a tool like [[GitHub/MCP]]
+				- **Output:** [[AI/Coding/v0/File/1-TICKET-repomix.config.json]] - defines issue-related repository paths for [[Repomix]]
+					- used to gather repo context for external tools like [[ChatGPT]] or [[Claude/Desktop]]
+				- **Output:** [[AI/Coding/v0/File/1-TICKET-repo-context.txt]] - Contains the repo context sent to an external LLM in the next step.
+					- Should be put in [[git/.gitignore]] and considered a temporary, transitory, runtime artifact of the process
+					- Unlike the other files, this should probably not be inside of the `/.ai-coding/TICKET-feature-name/` directory, as the file may be quite large, and there's little value in retaining separate context for separate tickets over time.
 		- ### [[AI/Coding/v0/Phase/2 - Requirements Interview]]
-			- **Output:** [[AI/Coding/v0/File/2-TICKET-technical-specification.md]] - Detailed technical requirements, data models, [[Acceptance Criteria]], and architecture decisions
+			- This is a type of [[AI/Coding/Interview]] (see also #Interview and [[AI/LLM/Technique/AI Interviewer]] )
+			- #### Phase Files
+				- **Output:** [[AI/Coding/v0/File/2-TICKET-technical-specification.md]] - Detailed technical requirements, data models, [[Acceptance Criteria]], and architecture decisions
 		- ### [[AI/Coding/v0/Phase/3 - Implementation Plan]]
-			- **Output:** [[AI/Coding/v0/File/3-TICKET-staged-implementation-plan.md]] - Step-by-step implementation guide for AI implementation.
-				- Contains AI prompts broken down into **Stages**, *each* of which
-					- chunk the work into a single logical commit
-					- builds on previous work
-					- contains a step-by-step implementation guide
-					- includes its own validation steps
-				- Enforces commit discipline in a way specific to the ticket, for example, by adding the issue number into the commit
+			- #### Phase Files
+				- **Output:** [[AI/Coding/v0/File/3-TICKET-staged-implementation-plan.md]] - Step-by-step implementation guide for AI implementation.
+					- Contains AI prompts broken down into **Stages**, *each* of which
+						- chunk the work into a single logical commit
+						- builds on previous work
+						- contains a step-by-step implementation guide
+						- includes its own validation steps
+					- Enforces commit discipline in a way specific to the ticket, for example, by adding the issue number into the commit
 		- ### [[AI/Coding/v0/Phase/4 - Implementation Checklist]]
-			- **Output:** [[AI/Coding/v0/File/6-TICKET-staged-implementation-checklist.md]] - Granular checklist of all required tasks organized by implementation phase, grouped into a single logical commit with a summary commit message
-				- While not strictly enforced, ideally the commit history should roughly match the stages in this checklist
+			- #### Phase Files
+				- **Output:** [[AI/Coding/v0/File/4-TICKET-staged-implementation-checklist.md]] - Granular checklist of all required tasks organized by implementation phase, grouped into a single logical commit with a summary commit message
+					- While not strictly enforced, ideally the commit history should roughly match the stages in this checklist
 		- ### [[AI/Coding/v0/Phase/5 - Implementation]]
-			- **Update:** Each iteration updates a single **Stage** in [[AI/Coding/v0/File/6-TICKET-staged-implementation-checklist.md]] **Stage**, checking off the todos for that stage, and ends with a commit
-			- **Output:** [[AI/Coding/v0/File/6-TICKET-qa-todo.md]] - This is a [[QA/Test Plan]] checklist, with both human and AI todo items, including automated testing, manual verification, code coverage, etc. While each iteration is likely to run some if not all tests, each iteration may update  with any areas of the codebase that will later require final verification before submission.
+			- #### Phase Files
+				- **Update/Complete:** Each iteration updates a single **Stage** in [[AI/Coding/v0/File/4-TICKET-staged-implementation-checklist.md]], checking off the todos for that stage, and ends with a commit. By the end of phase 5, every item has been checked off.
+				- **Output:** [[AI/Coding/v0/File/5-TICKET-commits.md]] - The commit messages created along with the **Stage** of the implementation from the [[AI/Coding/v0/File/4-TICKET-staged-implementation-checklist.md]]
+				- **Output:** [[AI/Coding/v0/File/5-TICKET-qa-todo.md]] - This is a [[QA/Test Plan]] checklist, with both human and AI todo items, including automated testing, manual verification, code coverage, etc. While each iteration is likely to run some if not all tests, each iteration may update  with any areas of the codebase that will later require final verification before submission.
 		- ### [[AI/Coding/v0/Phase/6 - Verification]]
-			- **Complete:** [[AI/Coding/v0/File/6-TICKET-staged-implementation-checklist.md]]
-			- **Update:** [[AI/Coding/v0/File/6-TICKET-qa-todo.md]]
-			- **Output:** [[AI/Coding/v0/File/6-TICKET-qa-summary.md]] - a summary of the QA impacted areas of the codebase, the testing activities conducted, etc.
+			- #### Phase Files
+				- **Update/Complete:** [[AI/Coding/v0/File/5-TICKET-qa-todo.md]] - as items from the verification checklist are completed, they are checked off. By the end of phase 6, all the items are checked off.
+				- **Output:** [[AI/Coding/v0/File/6-TICKET-qa-summary.md]] - a summary of the QA impacted areas of the codebase, the testing activities conducted, etc.
 		- ### [[AI/Coding/v0/Phase/7 - Documentation]]
-			- **Output:** [[AI/Coding/v0/File/7-TICKET-mr-summary.md]], a [[Merge Request/Description]] with a summary of changes, testing results, documentation updates, and next steps for reviewers
-			- **Output:** In-repository documentation updates
-		- ### [[AI/Coding/v0/Phase/8 - Submission]]
-			- **Output:** [[AI/Coding/v0/File/8-TICKET-mr-handoff.md]] - Summary of changes made during the [[Code Review]], along with any items that may need follow-up in future tickets
+			- #### Phase Files
+				- **Update:** any `CHANGELOG.md`, `README.md`, or any other in-repository documentation of the project with anything that has changed
+		- ### [[AI/Coding/v0/Phase/8 - Submission]] of #PR / #MR
+			- #### Phase Files
+				- Before PR
+					- **Output:** [[AI/Coding/v0/File/7-TICKET-mr-summary.md]], a [[Merge Request/Description]] with a summary of changes, testing results, documentation updates, and next steps for reviewers
+				- After PR
+					- **Output:** [[AI/Coding/v0/File/8-TICKET-mr-handoff.md]] - Summary of changes made during the [[Code Review]], along with any items that may need follow-up tickets for future work
 	- ## About the `<STAGE_NUM>-<TICKET_REF>-` prefix for files
 		- **STAGE_NUM** - By prefixing the file with the stage number, the files will be sorted in chronological order of when they will be used. This benefits both the AI and the human participants, as they can use a shared vocabulary
 		- **TICKET_REF** - Ideally, this wouldn't be necessary. In [[CursorAI]], it can currently be a bit messy when trying to pull a specific file into the chat pane using [[CursorAI/@/Files]] if many files are named the same. In the interest of making it possible to uniquely identify all files using `@` references, one may prefix the files with the ticket. This has the advantage of making it possible to quickly reference an item. If Cursor's UI evolves a more reliable directory drill-down UI, it may make sense to omit this section of the file names.
