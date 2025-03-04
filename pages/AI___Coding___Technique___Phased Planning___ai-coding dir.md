@@ -10,9 +10,11 @@
 			- `/.ai-coding/gl-issue-123-feature-name/`
 				- [[AI/Coding/v0/File/1-TICKET-original-issue.md]]
 				- [[AI/Coding/v0/File/1-TICKET-repomix.config.json]]
+				- [[AI/Coding/v0/File/1-TICKET-repo-context.txt]]
 				- [[AI/Coding/v0/File/2-TICKET-technical-specification.md]]
 				- [[AI/Coding/v0/File/3-TICKET-staged-implementation-plan.md]]
 				- [[AI/Coding/v0/File/4-TICKET-staged-implementation-checklist.md]]
+				- [[AI/Coding/v0/File/5-TICKET-commits.md]]
 				- [[AI/Coding/v0/File/5-TICKET-qa-todo.md]]
 				- [[AI/Coding/v0/File/6-TICKET-qa-summary.md]]
 				- [[AI/Coding/v0/File/7-TICKET-mr-summary.md]]
