@@ -1,0 +1,2 @@
+- ![Itamar Friedman](https://www.qodo.ai/wp-content/uploads/2025/02/user-itamar-new.png)
+- [[Co-Founder]] and [[CEO]] at [[QodoAI]]
