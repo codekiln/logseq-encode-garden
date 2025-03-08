@@ -1,7 +1,7 @@
 alias:: [[Repomix/repomix.config.json]]
 
 - # Repomix Config
-	- The config file is in [[JSON5]] which means it can have [[Code/Comments]] in it
+	- The config file is in [[JSON5]] which means it can have [[Code/Comment]] in it
 	- ## Config File Options
 		- [[Repomix/Config/output/filePath]]
 			- The name of the output file (default: `"repomix-output.txt"`)
@@ -9,8 +9,25 @@ alias:: [[Repomix/repomix.config.json]]
 			- The style of the output (`plain`, `xml`, `markdown`) (default: `"plain"`)
 		- [[Repomix/Config/output/headerText]]
 			- Custom text to include in the file header (default: `null`)
-		- [[Repomix/Config/output/instructionFilePath]]
-			- Path to a file containing detailed custom instructions (default: `null`)
+		- ### [[Repomix/Config/output/instructionFilePath]] - see [Custom Instruction](https://github.com/yamadashy/repomix/tree/main?tab=readme-ov-file#custom-instruction)
+			- Path to **a file** containing **detailed custom instructions for the [[AI/LLM]] to include in the bundle** (default: `null`)
+			- allows you to specify a separate file containing detailed instructions or context about your project. This allows AI systems to understand the specific context and requirements of your project.
+			- #### #Example - this should likely be [[AI/Coding/v0/File/repo-overview]]
+				- ```
+				  # Coding Guidelines
+				  
+				  - Follow the Airbnb JavaScript Style Guide
+				  - Suggest splitting files into smaller, focused units when appropriate
+				  - Add comments for non-obvious logic. Keep all text in English
+				  - All new features should have corresponding unit tests
+				  
+				  # Generate Comprehensive Output
+				  
+				  - Include all content without abbreviation, unless specified otherwise
+				  - Optimize for handling large codebases while maintaining output quality
+				  ```
+			- #### [[My Notes]]
+				- Perhaps a reference to
 		- [[Repomix/Config/output/removeComments]]
 			- Whether to remove comments from supported file types (default: `false`)
 		- [[Repomix/Config/output/removeEmptyLines]]

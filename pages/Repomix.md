@@ -9,7 +9,12 @@ tags:: #LLMs, [[CLI/Tool]], [[AI/LLM/Tool/Repo Summarizer]]
 		- This tool can be used online
 	- ## Usage
 		- ## [[Repomix/Config]]
-			- ### Specifying a Config File
+			- See [[Repomix/repomix.config.json]] for options
+			- ### Creating a Config File with [[repomix/--init]]
+				- creates a config file in current dir
+					- [[repomix/--global]] can be used with `--init` to create a global config file
+			- ### Specifying a Config File with [[Repomix/--config]]
+				- use with [[repomix/--global]] to utilize global config file
 				- To use Repomix with a specific configuration file, use the following command:
 				  ~~~bash
 				  npx repomix --config path/to/repomix.config.json
@@ -19,7 +24,6 @@ tags:: #LLMs, [[CLI/Tool]], [[AI/LLM/Tool/Repo Summarizer]]
 					- Which files to include/exclude
 					- Output format
 					- Repository metadata
-				- See also [[Repomix/repomix.config.json]] for options
 	- ## [[see-also]]
 		- [[gitingest]]
 		-

@@ -3,10 +3,16 @@ alias:: [[JSON5]]
 - # [JSON5 – JSON for Humans | JSON5](https://json5.org/)
 	- ## About
 	  id:: 67c822b0-3271-41da-a14f-4f023a1f4556
-		- extension to [[json]] that **aims to be easier to write and maintain by hand (e.g. for config files)**. ([[Code/Comments]] allowed)
+		- extension to [[json]] that **aims to be easier to write and maintain by hand (e.g. for config files)**.
 		- superset of [[json]]; valid JSON files will always be valid JSON5 files
 			- a subset of [[ES5]]; valid JSON5 files will always be valid ES5
 			- expands its syntax to include some productions from [ECMAScript 5.1](https://www.ecma-international.org/ecma-262/5.1/) (ES5).
+		- ### [[My Notes]]
+			- allows
+				- [[Code/Comment]] (both single-line and multi-line)
+				- Trailing commas in objects and arrays
+				- Unquoted property names
+				- More relaxed string syntax
 	- ## #Example
 		- ```json5
 		  {

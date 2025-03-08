@@ -1,4 +1,6 @@
-#  AI Coding technique - Using an `.ai-coding/TICKET/` dir for staging [[SDLC]] planning artifacts by SDLC Phase
+alias:: [[AI/Coding/Technique/Phased Planning]]
+
+- #  AI Coding technique - Using an `.ai-coding/TICKET/` dir for staging [[SDLC]] planning artifacts by SDLC Phase
 	- ## Summary of the `/.ai-coding/TICKET-feature-name/` directory
 	  id:: 67c180c4-95f6-4d0b-b787-60d11eed3ff9
 		- Named after the ticket and a brief description of the feature; preferably the name of this directory matches the end of the branch name; `TICKET` is an external project management ticket reference.
@@ -32,13 +34,14 @@
 							- [[CursorAI/Project Rule/cursor-project-rule-editor.mdc]]
 								- when to suggest an update to a cursor rule
 							- descriptions of the coding context
-								- the repository
-									- directory structure
-									- purpose of the project
-								- coding conventions
-									- git commit format
-									- when to commit
-								- which [[Package Managers]] to use
+								- [[AI/Coding/v0/File/repo-overview]] - an overview of
+									- the repository
+										- directory structure
+										- purpose of the project
+									- coding conventions
+										- git commit format
+										- when to commit
+									- which [[Package Managers]] to use
 							- Project Rules from other git submodules
 					- Configuring a #[[Dev Container]]
 				- provisioning API tokens, populating [[EnvVar]]s
