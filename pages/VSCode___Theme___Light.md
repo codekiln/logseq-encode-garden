@@ -1,0 +1,1 @@
+alias:: [[VSCode Light Themes]]

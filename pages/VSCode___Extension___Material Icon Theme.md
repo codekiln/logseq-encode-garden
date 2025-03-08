@@ -1,0 +1,2 @@
+# [Material Icon Theme - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+	- Changes the file icons in the [[VSCode/Term/Sidebar]] to the material theme. There are many icons, so the sidebar ends up having a more visually diverse set of icons. This especially helps in distinguishing folders from files.

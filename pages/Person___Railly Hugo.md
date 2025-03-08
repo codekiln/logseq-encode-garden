@@ -1,0 +1,4 @@
+- [[Person/Railly Hugo/Web]] [Railly Hugo](https://www.railly.dev/)
+	- I work as a full-stack engineer at [Globant](https://www.globant.com/), contributing to Disney O&I Engineering Team.
+	- I like to build developer tools for myself and make them open source for the community.
+-

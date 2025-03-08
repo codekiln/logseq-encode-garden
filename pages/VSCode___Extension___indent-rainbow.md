@@ -1,0 +1,4 @@
+- [indent-rainbow - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)
+	- adds rainbow colors to the indents
+	- ![Indent rainbow code preview](https://raw.githubusercontent.com/oderwat/vscode-indent-rainbow/master/assets/example.png)
+-

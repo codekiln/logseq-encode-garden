@@ -1,0 +1,10 @@
+- [Hide Files - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=JeremyFunk.hidefiles)
+	- fairly complex and feature-full extension that puts a new "Hiden Files" section into the [[VSCode/View/Files Explorer]]
+		- one can right click a file and add it to the hidden files section, which moves it down there and hides it from the view up above
+		- example
+			- ![hidden files section animtion](https://i.imgur.com/mNNSGvz.gif)
+			- unhiding a file
+				- ![](https://i.imgur.com/MKg9EH6.gif)
+	- there are different "Profiles" one can use, it's unclear whether this maps to [[VSCode/Docs/Editor/Profiles]] or not
+		- > Profiles are used to easily switch between different levels of hiding. This way you can be very restrictive with visible files. You can hide anything that is not often needed in a strict profile and anything that is (almost) never needed in a default profile.
+	- there's a config file

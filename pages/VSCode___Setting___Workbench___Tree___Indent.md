@@ -1,0 +1,3 @@
+- Controls tree indentation in pixels.
+- [[My Notes]]
+	- Increase to 14 to make folders more indented in [[VSCode/Term/Sidebar]]
