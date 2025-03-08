@@ -1,0 +1,14 @@
+# Can Cursor Agent Mode pick up mdc files in subfolders? **NO**
+	- ## Test
+		- {{embed [[CursorAI/Project Rule/Test/Standard Setup]]}}
+		- Activate Agent mode in Cursor chat
+		- Type "what are my favorite apples?" and hit enter
+		- ### Tested Project Rules
+			-
+	- ## Expected Behavior
+		- Cursor Agent surfaces the correct rule
+		- Cursor Agent answers according to the contents of the rule
+	- ## Observed Behavior
+		- ### `0.46.11`
+			- Cursor Agent searches the codebase for the keyword
+			- "I don't see any rules or information in the codebase about favorite apples. The only rule available is about favorite cars."
