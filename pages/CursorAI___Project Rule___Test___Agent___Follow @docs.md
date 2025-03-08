@@ -1,14 +1,11 @@
 # Can Cursor Agent Mode follow [[CursorAI/@/Docs]] references in [[.mdc]] files?
 	- ## Test Preparation
-		- Visit to the [[CursorAI/Test/Fixture/Docs/Root]] Github Link: https://raw.githubusercontent.com/codekiln/logseq-encode-garden/refs/heads/main/pages/CursorAI___Test___Fixture___Sample%20Docs%20Page.md
-			- index this as `sample-doc`
-				- Open Cursor agent
-				- Enter `@sample-doc`
-				- When it prompts to enter a new doc, enter `https://raw.githubusercontent.com/codekiln/logseq-encode-garden/refs/heads/main/pages/CursorAI___Test___Fixture___Sample%20Docs%20Page.md`
-				- Name: sample-doc
-				- Prefix: https://raw.githubusercontent.com/codekiln/logseq-encode-garden/refs/heads/main/pages/CursorAI___Test___Fixture___Sample%20Docs%20Page.md
-				- Entrypoint: https://raw.githubusercontent.com/codekiln/logseq-encode-garden/refs/heads/main/pages/CursorAI___Test___Fixture___Sample%20Docs%20Page.md
-				- Click Confirm
+		- Try a docs query to one of the pre-built providers [[CursorAI/@/Docs/PreBuilt]]
+			- Sample queries
+				- `@Aws Lambda what's an Alias configuration?`
+					- it should pull in 4-8 docs from [AliasConfiguration](https://docs.aws.amazon.com/lambda/latest/api/API_AliasConfiguration.html)
+				- `@Ansible how can I install multiple collections with a requirements file?`
+					- it should pull in 4-8 docs including [Installing collections — Ansible Community Documentation](https://docs.ansible.com/ansible/latest/collections_guide/collections_installing.html#install-multiple-collections-with-a-requirements-file)
 		- Place this file at `.cursor/rules`
 			- [[CursorAI/Project Rule/Link/GitHub]]
 				- [test-favorite-cars.mdc](https://github.com/codekiln/logseq-encode-garden/blob/main/.cursor/rules/test-favorite-cars.mdc)

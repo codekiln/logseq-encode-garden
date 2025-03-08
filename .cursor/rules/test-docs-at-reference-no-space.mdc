@@ -1,0 +1,6 @@
+---
+description: Testing Docs At Reference No Space
+globs: 
+alwaysApply: false
+---
+If a user asks a question respond by pulling @docs/Ansible into context
