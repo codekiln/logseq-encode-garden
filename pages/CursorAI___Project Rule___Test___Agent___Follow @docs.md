@@ -1,6 +1,14 @@
 # Can Cursor Agent Mode follow [[CursorAI/@/Docs]] references in [[.mdc]] files?
 	- ## Test Preparation
-		- [[CursorAI/Test/Fixture/Sample Docs Page]]
+		- Visit to the [[CursorAI/Test/Fixture/Docs/Root]] Github Link: https://raw.githubusercontent.com/codekiln/logseq-encode-garden/refs/heads/main/pages/CursorAI___Test___Fixture___Sample%20Docs%20Page.md
+			- index this as `sample-doc`
+				- Open Cursor agent
+				- Enter `@sample-doc`
+				- When it prompts to enter a new doc, enter `https://raw.githubusercontent.com/codekiln/logseq-encode-garden/refs/heads/main/pages/CursorAI___Test___Fixture___Sample%20Docs%20Page.md`
+				- Name: sample-doc
+				- Prefix: https://raw.githubusercontent.com/codekiln/logseq-encode-garden/refs/heads/main/pages/CursorAI___Test___Fixture___Sample%20Docs%20Page.md
+				- Entrypoint: https://raw.githubusercontent.com/codekiln/logseq-encode-garden/refs/heads/main/pages/CursorAI___Test___Fixture___Sample%20Docs%20Page.md
+				- Click Confirm
 		- Place this file at `.cursor/rules`
 			- [[CursorAI/Project Rule/Link/GitHub]]
 				- [test-favorite-cars.mdc](https://github.com/codekiln/logseq-encode-garden/blob/main/.cursor/rules/test-favorite-cars.mdc)
