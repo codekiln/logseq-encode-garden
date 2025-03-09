@@ -57,5 +57,5 @@ tags:: [[uv]], [[Python]], [[Package Management]], [[Diataxis/Reference]]
 				- Example: `uvx --python 3.10 ruff` or `uv tool install --python 3.10 ruff`
 	- ## Related References
 		- [[uv/tool/install]]: Detailed reference for the `uv tool install` command.
-		- [[Python/Versions]]: Information about Python version management in uv.
+		- [[uv/concept/python-versions]]: Information about Python version management in uv.
 		- [[uv/pip]]: The pip-compatible interface in uv.

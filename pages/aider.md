@@ -1,26 +1,28 @@
 - [[aider/GitHub]] https://github.com/Aider-AI/aider
 - # [Home | aider](https://aider.chat/)
 	- > Aider lets you [[Pair Program]] with [[AI/LLM]]s, to edit code in your local git repository. Start a new project or work with an existing code base
-	- ## Features
-		- Run aider with the files you want to edit: `aider <file1> <file2> ...`
-		- Ask for changes:
-		- Add new features or test cases.
-		- Describe a bug.
-		- Paste in an error message or GitHub issue URL.
-		- Refactor code.
-		- Update docs.
-		- Aider will edit your files to complete your request.
-		- Aider [automatically git commits](https://aider.chat/docs/git.html) changes with a sensible commit message.
-		- [Use aider inside your favorite editor or IDE](https://aider.chat/docs/usage/watch.html).
-		- Aider can edit multiple files at once for complex requests.
-		- Aider uses a [map of your entire git repo](https://aider.chat/docs/repomap.html), which helps it work well in larger codebases
-		- [Add images to the chat](https://aider.chat/docs/usage/images-urls.html) (GPT-4o, Claude 3.5 Sonnet, etc).
-		- [Add URLs to the chat](https://aider.chat/docs/usage/images-urls.html) and aider will read their content.
-		- [Code with your voice](https://aider.chat/docs/usage/voice.html).
-	- ## Top tier performance
-		- [Aider has one of the top scores on SWE Bench](https://aider.chat/2024/06/02/main-swe-bench.html). SWE Bench is a challenging software engineering benchmark where aider solved real GitHub issues from popular open source projects like django, scikitlearn, matplotlib, etc.
-	- ## More info
-		- [Documentation](https://aider.chat/)
-	- ## Kind words from users
-		- > The best free open source AI coding assistant
+	- ## Overview
+		- ### Features
+			- Run aider with the files you want to edit: `aider <file1> <file2> ...`
+			- Ask for changes:
+				- Add new features or test cases.
+				- Describe a bug.
+				- Paste in an error message or GitHub issue URL.
+				- Refactor code.
+				- Update docs.
+			- Aider will edit your files to complete your request.
+			- Aider [automatically git commits](https://aider.chat/docs/git.html) changes with a sensible commit message.
+			- [Use aider inside your favorite editor or IDE](https://aider.chat/docs/usage/watch.html).
+			- Aider can edit multiple files at once for complex requests.
+			- Aider uses a [map of your entire git repo](https://aider.chat/docs/repomap.html), which helps it work well in larger codebases
+			- [Add images to the chat](https://aider.chat/docs/usage/images-urls.html) (GPT-4o, Claude 3.5 Sonnet, etc).
+			- [Add URLs to the chat](https://aider.chat/docs/usage/images-urls.html) and aider will read their content.
+			- [Code with your voice](https://aider.chat/docs/usage/voice.html).
+		- ### Top tier performance
+			- [Aider has one of the top scores on SWE Bench](https://aider.chat/2024/06/02/main-swe-bench.html). SWE Bench is a challenging software engineering benchmark where aider solved real GitHub issues from popular open source projects like django, scikitlearn, matplotlib, etc.
+		- ### More info
+			- [Documentation](https://aider.chat/)
+		- ### Kind words from users
+			- > The best free open source AI coding assistant
 	- ## [[aider/Installation]]
+		-
