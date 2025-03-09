@@ -1,0 +1,52 @@
+tags:: [[uv]], [[Python]], [[Package Management]], [[Diataxis/Reference]]
+
+- # `uv tool install` Reference
+	- ## Overview
+		- `uv tool install` is a command that installs command-line tools provided by Python packages in isolated environments.
+		- It creates persistent installations of Python tools that are available on your PATH, similar to `pipx`.
+		- Unlike `uv pip install`, tools installed with `uv tool install` are isolated from your current environment.
+	- ## Structure
+		- The command follows the format: `uv tool install [OPTIONS] <PACKAGE>`
+		- The package can be specified with version constraints or from alternative sources.
+	- ## Core Components
+		- ### Basic Usage
+			- `uv tool install <PACKAGE>`: Installs all executables provided by the specified package.
+			- Example: `uv tool install ruff`
+		- ### Key Options
+			- #### `--force`
+				- Forces installation of the tool, even if it's already installed.
+				- Useful for reinstalling or updating tools to the latest version.
+			- #### `--python <PYTHON>`
+				- Specifies the Python interpreter to use to build the tool environment.
+				- Can be a path to a Python executable or a version identifier.
+			- #### `--with <WITH>`
+				- Includes additional packages as dependencies.
+				- Example: `uv tool install mkdocs --with mkdocs-material`
+			- #### `--editable` or `-e`
+				- Installs the target package in editable mode.
+				- Changes in the package's source directory are reflected without reinstallation.
+	- ## Technical Details
+		- ### Tool Environments
+			- Tools are installed in isolated virtual environments.
+			- Each tool gets its own environment to prevent dependency conflicts.
+			- Executables are placed in a `bin` directory that's added to your PATH.
+		- ### Version Specification
+			- Package versions can be specified using standard version specifiers.
+			- Example: `uv tool install 'httpie>0.1.0'`
+			- Use `@latest` to explicitly request the latest version.
+		- ### Package Sources
+			- Tools can be installed from PyPI (default) or alternative sources:
+				- Git repositories: `uv tool install git+https://github.com/example/repo`
+				- Local directories: `uv tool install /path/to/package`
+	- ## Example from [[aider/Installation]]
+		- `uv tool install --force --python python3.12 aider-chat@latest`
+			- ### What this does:
+				- Installs the latest version of the `aider-chat` package (an AI pair programming tool).
+				- `--force`: Reinstalls the tool even if it's already installed.
+				- `--python python3.12`: Uses Python 3.12 specifically for the tool's environment.
+				- `@latest`: Explicitly requests the latest version of the package.
+				- This creates an isolated environment with Python 3.12 for aider, making the `aider` command available in your terminal.
+	- ## Related References
+		- `uv tool run` (or `uvx`): For running tools without installing them.
+		- `uv tool list`: For listing installed tools.
+		- `uv tool uninstall`: For removing installed tools.
