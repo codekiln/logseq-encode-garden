@@ -1,9 +1,11 @@
 tags:: [[uv]], [[Python]], [[Package Management]], [[Diataxis/Reference]]
+alias:: [[uv/tool/install/Ref]], [[uv tool install]]
 
 - # `uv tool install` Reference
+	- adapted from [Using tools | uv](https://docs.astral.sh/uv/guides/tools/)
 	- ## Overview
 		- `uv tool install` is a command that installs command-line tools provided by Python packages in isolated environments.
-		- It creates persistent installations of Python tools that are available on your PATH, similar to `pipx`.
+		- It creates persistent installations of Python tools that are available on your PATH, similar to [[pipx]].
 		- Unlike `uv pip install`, tools installed with `uv tool install` are isolated from your current environment.
 	- ## Structure
 		- The command follows the format: `uv tool install [OPTIONS] <PACKAGE>`
@@ -47,6 +49,6 @@ tags:: [[uv]], [[Python]], [[Package Management]], [[Diataxis/Reference]]
 				- `@latest`: Explicitly requests the latest version of the package.
 				- This creates an isolated environment with Python 3.12 for aider, making the `aider` command available in your terminal.
 	- ## Related References
-		- `uv tool run` (or `uvx`): For running tools without installing them.
-		- `uv tool list`: For listing installed tools.
-		- `uv tool uninstall`: For removing installed tools.
+		- [[uv/tool/run]] `uv tool run` (or `uvx`): For running tools without installing them.
+		- [[uv/tool/list]] `uv tool list`: For listing installed tools.
+		- [[uv/tool/uninstall]] `uv tool uninstall`: For removing installed tools.

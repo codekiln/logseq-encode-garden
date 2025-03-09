@@ -1,2 +1,61 @@
 # [Using tools | uv](https://docs.astral.sh/uv/guides/tools/)
-	-
+tags:: [[uv]], [[Python]], [[Package Management]], [[Diataxis/Reference]]
+- # uv Tool Reference
+	- ## Overview
+		- The `uv tool` interface provides specialized support for working with command-line tools provided by Python packages.
+		- It allows for both temporary execution and persistent installation of Python tools in isolated environments.
+		- Tools are Python packages that provide command-line interfaces, similar to those managed by `pipx`.
+	- ## Structure
+		- The `uv tool` interface consists of several subcommands:
+			- [[uv/tool/run]] `uv tool run` (or `uvx`): For executing tools without installation
+			- [[uv/tool/install]] `uv tool install`: For persistent installation of tools
+			- [[uv/tool/upgrade]] `uv tool upgrade`: For upgrading installed tools
+			- [[uv/tool/list]] `uv tool list`: For listing installed tools
+			- [[uv/tool/uninstall]] `uv tool uninstall`: For removing installed tools
+	- ## Core Components
+		- ### Running Tools (`uv tool run` or `uvx`) - [[uv/tool/run]]
+			- Executes a tool in a temporary, isolated environment.
+			- Basic usage: `uvx <TOOL>` or `uv tool run <TOOL>`
+			- Example: `uvx ruff check` or `uv tool run ruff check`
+			- Tools are installed into temporary environments that are removed after execution.
+		- ### Installing Tools (`uv tool install`) - [[uv/tool/install]]
+			- Installs a tool to a persistent environment and adds it to the PATH.
+			- Basic usage: `uv tool install <PACKAGE>`
+			- Example: `uv tool install ruff`
+			- See [[uv___tool___install]] for detailed reference.
+		- ### Upgrading Tools (`uv tool upgrade`) [[uv/tool/upgrade]]
+			- Upgrades installed tools to newer versions.
+			- Basic usage: `uv tool upgrade <TOOL>` or `uv tool upgrade --all`
+			- Respects version constraints provided during installation.
+	- ## Technical Details
+		- ### Tool Environments
+			- Tools are installed in isolated virtual environments.
+			- Each tool gets its own environment to prevent dependency conflicts.
+			- Unlike `uv pip install`, tool modules are not available in the current environment.
+			- Example: After installing ruff, `python -c "import ruff"` will fail.
+		- ### Package vs. Command
+			- [[uv tool install]] operates on a package and installs all executables it provides.
+			- Example: `uv tool install httpie` installs the `http`, `https`, and `httpie` executables.
+		- ### Version Specification
+			- For running tools: `uvx command@<version>` or `uvx --from 'package==version' command`
+			- For installing tools: [[uv tool install]] `'package>=version'`
+			- Use `@latest` to explicitly request the latest version: `uvx ruff@latest`
+		- ### Package Sources
+			- Tools can be installed from PyPI (default) or alternative sources:
+				- Git repositories: `uvx --from git+https://github.com/example/repo command`
+				- Specific branches: `uvx --from git+https://github.com/example/repo@branch command`
+				- Specific tags: `uvx --from git+https://github.com/example/repo@tag command`
+				- Specific commits: `uvx --from git+https://github.com/example/repo@commit command`
+		- ### Additional Features
+			- **Commands with different package names**: Use `--from` to specify the package.
+				- Example: `uvx --from httpie http`
+			- **Requesting extras**: Use `--from` with square brackets.
+				- Example: `uvx --from 'mypy[faster-cache,reports]' mypy`
+			- **Commands with plugins**: Use `--with` to include additional packages.
+				- Example: `uvx --with mkdocs-material mkdocs --help`
+			- **Requesting Python versions**: Use `--python` to specify the Python interpreter.
+				- Example: `uvx --python 3.10 ruff` or `uv tool install --python 3.10 ruff`
+	- ## Related References
+		- [[uv/tool/install]]: Detailed reference for the `uv tool install` command.
+		- [[Python/Versions]]: Information about Python version management in uv.
+		- [[uv/pip]]: The pip-compatible interface in uv.
