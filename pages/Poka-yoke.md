@@ -1,0 +1,13 @@
+# [Poka-yoke - Wikipedia](https://en.wikipedia.org/wiki/Poka-yoke)
+	- a Japanese term that means "mistake-proofing" or "error prevention". It is also sometimes referred to as a forcing function or a behavior-shaping constraint.
+	- A poka-yoke is any mechanism in a process that helps an equipment operator avoid (yokeru) mistakes (poka) and defects by preventing, correcting, or drawing attention to [human errors](/wiki/Human_error "Human error") as they occur
+	- The concept was formalized, and the term adopted, by [Shigeo Shingo](/wiki/Shigeo_Shingo "Shigeo Shingo") as part of the [Toyota Production System](/wiki/Toyota_Production_System "Toyota Production System")
+	- Poka-yoke was originally baka-yoke, but as this means "fool-proofing" (or "idiot-proofing). the name was changed to the milder poka-yoke.
+	- Poka-yoke is derived from "poka o yokeru," a term in [[Shogi]] that means avoiding an unthinkably bad move.
+	- More broadly, the term can refer to any behavior-shaping constraint designed into a process to prevent incorrect operation by the user.
+	- ## #Examples
+		- The microwave oven provides another example of a forcing function
+			- In all modern microwave ovens, it is impossible to start the microwave while the door is still open. Likewise, the microwave will shut off automatically if the door is opened by the user.
+	- The term poka-yoke was applied by [[Person/Shigeo Shingo]] in the 1960s to industrial processes designed to prevent human errors.
+	- Shingo redesigned a process in which factory workers, while assembling a small switch, would often forget to insert the required spring under one of the switch buttons. In the redesigned process, the worker would perform the task in two steps, first preparing the two required springs and placing them in a placeholder, then inserting the springs from the placeholder into the switch. When a spring remained in the placeholder, the workers knew that they had forgotten to insert it and could correct the mistake effortlessly.
+	- Shingo distinguished between the concepts of inevitable human [[Mistakes]] and [[Defects]] in the production. Defects occur when the mistakes are allowed to reach the customer. The aim of poka-yoke is to design the process so that mistakes can be detected and corrected immediately, eliminating defects at the source.

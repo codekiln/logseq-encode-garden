@@ -15,3 +15,4 @@
 		- ### `0.46.11`
 			- Cursor Agent searches the codebase for the keyword
 			- "I don't see any rules or information in the codebase about favorite apples. The only rule available is about favorite cars."
+-

@@ -1,0 +1,22 @@
+# How to share [[CursorAI/Project Rules]] across multiple projects and users
+	- Cursor project rules are a unique set of [[Metaprogramming]] tools. A set of related cursor project rules define the [[CursorAI Agent Mode]]'s [[Agentic System]], each encapsulating a particular aspect of the overall capabilities.
+	- It is important for Cursor's users be able to share and collaborate on cursor project rules in a modular, open-source manner, while maintaining the ability to version the rules and obtain updates to the rules after they have been tested.
+	- In my opinion, they deserve a new type of  [[Package Manager]] that allows for rapid prototyping, that is, that allowed one to install a particular version of a "package" of rules, and then modify the library on the fly in response to observed behavior, and have the option to easily offer those contributions back to the source as a merge request. The proposal for such a package manager is out of the scope of this page, however.
+	- This page focuses on how to achieve collaborative sharing of versioned, vetted project rules across repositories and users.
+	- ## It is not currently feasible to create git submodules under `.cursor/rules`
+		- It would be great if Cursor sourced project rules in subdirectories. This would enable a modular and related collection of cursor project rules to be located in a single git repository. Then downstream projects could use [[git submodules]] to link them in under `.cursor/rules/<submodule_folder>`. Any changes to the rule could be contributed back to the source repository for sharing with others.
+		- Unfortunately, according to my tests at [[CursorAI Project Rule Tests]], in particular, [[CursorAI/Project Rule/Test/Agent/❌/Find MDC/in Subfolder]], this is not currently possible.
+	- ## Possible workarounds
+		- ### Copy and paste
+			- Of course, it's possible to copy and paste cursor project rules from one repository into the `.cursor/rules` directory of each project or user. Over time, though, there will be drift between the most up-to-date version of the rules from the upstream repository and the one that was copied in.
+		- ### Use [[Symlinks]]
+			- While I have not yet documented it under [[CursorAI Project Rule Tests]], I have found that Cursor does follow rules that are symlinked under `.cursor/rules`. To achieve similar behavior to git submodules, one can clone a repository of project rules and then symlink in the rules.
+			- #### Downsides
+				- ##### Extra Tooling
+					- This approach opens up the need for a set of tools that can "deploy" a set of symlinks from another repository into the cursor rules.
+					- To use cursor project rules in a systematic way, one would want a tool to deploy them systematically.
+				- ##### Issues with cross-platform compatibility
+					- Symlinks work differently in [[Linux]] than in [[Windows]].
+					- Symlinks are only stable in [[git]] if they are relative paths. If relative paths are made from `projects/my-project/.cursor/rules/link-*.mdc` to `projects/my-centralized-project-rules/link-*.mdc`, then all users who edit `my-project` who wish to use the rules in `my-centralized-project-rules` will need to place it as a sibling directory to  `my-project`. This is a hard requirement that may or may not make sense for all users.
+						- On may work around this by using two symlinks - the first would go from `projects/my-project/.cursor/rules/link-*.mdc` to `projects/my-project/user-rules/link-*.mdc`, where `my-project/user-rules` is added to `.gitignore` and not in version control, treating it as a directory similar to `.vscode` or `.idea` for IDEA, which is allowed to vary between users. It would be a user's responsibility to create symlinks to the rules in this directory on their machine. However, again, there's a need for standardized tooling.
+		-

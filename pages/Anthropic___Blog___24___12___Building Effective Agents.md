@@ -1,0 +1,11 @@
+# [Building Effective AI Agents | Anthropic \ Anthropic](https://www.anthropic.com/engineering/building-effective-agents)
+	- ## [[My Notes]]
+		- This blog post has become influential for it's distinction between [[AI Agents]] and [[AI Workflows]].
+	- ## [[Anthropic/Blog/24/12/Building Effective Agents/What are agents?]]
+		- > "Agent" can be defined in several ways.
+			- > Some customers define agents as fully autonomous systems that operate independently over extended periods, using various tools to accomplish complex tasks. Others use the term to describe more prescriptive implementations that follow predefined workflows.
+		- > At Anthropic, we categorize all these variations as **[[Agentic Systems]]**, but draw an important architectural distinction between **workflows **and** agents**:
+			- > **[[AI Workflows]]** are systems where LLMs and tools are orchestrated through predefined code paths.
+				- [[My Note]] *more deterministic and pre-specified*
+			- > **[[AI Agents]]**, on the other hand, are systems where LLMs dynamically direct their own processes and tool usage, maintaining control over how they accomplish tasks.
+				- [[My Note]] *the AI takes the steering wheel*
