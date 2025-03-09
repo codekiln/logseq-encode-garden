@@ -1,4 +1,6 @@
 # Can Cursor Agent Mode follow [[CursorAI/@/Docs]] references in [[.mdc]] files? **NO**
+	- Tests whether [[CursorAI/Agent Mode]] mode pulls documentation docs into context if a [[CursorAI/Project Rule]] is activated that attempts to reference `@docs`
+	  id:: 67cd6155-cbe2-435f-b834-0a271fa13258
 	- ## Test Preparation
 		- Try a docs query to one of the pre-built providers [[CursorAI/@/Docs/PreBuilt]]
 			- Sample queries
@@ -8,9 +10,9 @@
 					- it should pull in 4-8 docs including [Installing collections — Ansible Community Documentation](https://docs.ansible.com/ansible/latest/collections_guide/collections_installing.html#install-multiple-collections-with-a-requirements-file)
 					  id:: 67cc7ec6-3d01-44dd-b4ec-91822d930db5
 		- Place these file at `.cursor/rules`
-			- [[CursorAI/Project Rule/Link/GitHub]]
+			- [[CursorAI/Project Rule/Link/GitHub]] [[CursorAI/Test/Fixture]]
 				- [logseq-encode-garden/.cursor/rules/test-docs-at-reference-space.mdc at main · codekiln/logseq-encode-garden](https://github.com/codekiln/logseq-encode-garden/blob/main/.cursor/rules/test-docs-at-reference-space.mdc)
-				- ### optional; I didn't use because the first test failed
+				- ### Optional; didn't use because the first test failed
 					- [logseq-encode-garden/.cursor/rules/test-docs-at-reference-no-space.mdc at main · codekiln/logseq-encode-garden](https://github.com/codekiln/logseq-encode-garden/blob/main/.cursor/rules/test-docs-at-reference-no-space.mdc)
 	- ## Test
 		- {{embed [[CursorAI/Project Rule/Test/Standard Setup]]}}

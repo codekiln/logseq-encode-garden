@@ -1,0 +1,2 @@
+# [codekiln/cursor-project-rule-test: Testing the Cursor Project Rule feature](https://github.com/codekiln/cursor-project-rule-test)
+	- See also [[CursorAI/Project Rule/Test]], which has all these tests and more
