@@ -1,0 +1,1 @@
+# [codekiln/cursor-ai-sdlc: Cursor rules for the phases and stages of the Software Development Life Cycle (SDLC)](https://github.com/codekiln/cursor-ai-sdlc)

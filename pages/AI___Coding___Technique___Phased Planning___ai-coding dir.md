@@ -1,6 +1,8 @@
 alias:: [[AI/Coding/Technique/Phased Planning]]
 
 - #  AI Coding technique - Using an `.ai-coding/TICKET/` dir for staging [[SDLC]] planning artifacts by SDLC Phase
+	- [[My Notes]]
+		- An early prototype of this technique is available in [[Person/codekiln/GitHub/cursor-ai-sdlc]]
 	- ## Summary of the `/.ai-coding/TICKET-feature-name/` directory
 	  id:: 67c180c4-95f6-4d0b-b787-60d11eed3ff9
 		- Named after the ticket and a brief description of the feature; preferably the name of this directory matches the end of the branch name; `TICKET` is an external project management ticket reference.
