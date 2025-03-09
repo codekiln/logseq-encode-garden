@@ -25,4 +25,6 @@
 		- ### Kind words from users
 			- > The best free open source AI coding assistant
 	- ## [[aider/Installation]]
-		-
+	- ## [[aider/Configuration/API Keys]]
+		- [[aider/docs/llms/azure]]
+		- [[aider/docs/llms/bedrock]]

@@ -1,0 +1,12 @@
+# [Amazon Bedrock | aider](https://aider.chat/docs/llms/bedrock.html)
+	- for usage with [[Okta]] consider [[aws_okta_keyman]]; docs don't say how, but presumably something with [[mise]] might work
+	- ## Installing [[AWS/py/boto3]]
+		- ### with [[uv/tool/run]]
+			- > You must install `boto3` dependency to aider’s virtual environment installed via one-liner or uv by running
+				- `uv tool run --from aider-chat pip install boto3`
+	-
+	- [[FEATURE] Support Amazon Bedrock Claude Sonnet 3.5 · Issue #713 · Aider-AI/aider](https://github.com/Aider-AI/aider/issues/713)
+		- For anyone, if you authenticate through the role assumption, i.e. profile then to access Bedrock you simply need to pass AWS profile, e.g. `AWS_PROFILE=dev` and then `aider --model=bedrock/anthropic.claude-3-5-sonnet-20240620-v1:0` will access AWS Bedrock
+		- A note that this does not work for me. I set AWS\_REGION and AWS\_PROFILE in my .env file, but aider complains on startup that I do not have AWS\_ACCESS\_KEY\_ID or AWS\_SECRET\_ACCESS\_KEY set. If I set these in my .env and restart things work, but ideally I only need to set the AWS\_REGION and then boto picks up all of the other keys it needs directly from my ~/.aws/credentials file.
+		- I'm on aider 0.62.1.
+		-
