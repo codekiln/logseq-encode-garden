@@ -3,7 +3,6 @@ created-by:: [[Person/Dan Mason]]
 
 - # AI ES 25 WS 4 - 16:10 - [Multi-Agent Workflows with MCP](https://www.ai.engineer/summit/2025/schedule/mcp-workflows)
 	- summary / intro
-	  collapsed:: true
 		- by [[Person/Dan Mason]]
 			- Agents aren't really agents unless they can discover the world outside of the chatbox, and act on it -- and the MCP (Model Context Protocol) is an emerging standard for connecting agents to physical and digital worlds. This workshop will teach you how to build your own MCP client (not just the one built into Claude) and connect it to a multi-agent system (we'll be using [[langgraph]] but this approach works with Autogen, Crew AI and many more). This allows you to build powerful workflows that go way beyond writing code, and rethink how to express business logic as a set of roles, tools, and desired outcomes. We'll walk through examples together and then put them into practice -- come with ideas of workflows you want to build! [List of existing MCP servers here]
 			- | Date   | Time          | Track      | Room                                       |
@@ -11,7 +10,6 @@ created-by:: [[Person/Dan Mason]]
 			  | Feb 22 | 4:10pm-5:30pm | Workshops  | Jay Suites Sydney - 109 W 38th 2nd floor   |
 	- all pics - [[AI/ES/25/ws/4/Multi-Agent Workflows with MCP/Pics]]
 	- ### MCP Workflows Workshop Notes
-	  collapsed:: true
 		- ![original header](https://lh3.googleusercontent.com/pw/AP1GczOm3ZAMX2IL8Sc-_B69aaeUTijo4zyMdwuQCKrTKdaqHvPTbnWBAr46rGcA7nANFc5ZI9QpulWjEvvtH3OHN-d56FGrCFgpz3UImS50ufigru33YgE=w1920-h1080)
 		- ![Pic 02](https://lh3.googleusercontent.com/pw/AP1GczPnWIuBRf6ZuYHgFQ1_DXBt39LQpQpG_95nEZmslbkBoQKrQ1umfq_PfdWBC8DgxK52MwCDHiAn2v4goDOJi8D7EXbAiVO6YyEtg7iGlZGBbp16Kks=w1920-h1080)
 		- **Agents vs. Simple Chatbots**
@@ -39,7 +37,6 @@ created-by:: [[Person/Dan Mason]]
 			- **List of existing MCP servers**: [TBD]
 			- **Presenter**: Dan Mason, Principal, AI ([LinkedIn](https://www.linkedin.com/in/dnmason/))
 	- ### MCP Workflows Workshop Notes
-	  collapsed:: true
 		- **Speaker:** Dan Mason, Principal, AI @ Stride (ex-ESPN, SSTK, NBCU)
 		- **Setup for Hands-on Participation:**
 			- Local environment with **Python 3.12+**
@@ -52,7 +49,6 @@ created-by:: [[Person/Dan Mason]]
 			- **Multi-agent system (LangGraph) with MCP gateway:**
 				- [GitHub Repo](https://github.com/danmas0n/multi-agent-with-mcp/)
 	- ### Stride’s AI Expertise
-	  collapsed:: true
 		- ![Pic 03](https://lh3.googleusercontent.com/pw/AP1GczNe6sbez_64AB33ueakA5xcmO4ZJzhA5uv7rY7Gs-t5AtIWe124hSc8iRDDqOadc6-oEr1zi4PJUDAAj2rm3_PwlwySUKMO5wL6DstqGE5EQIo3U5Q=w1920-h1080)
 		- **Agentic Workflows**
 			- Build **AI and LLM-powered workflows** to enhance and scale products and services.
@@ -63,7 +59,6 @@ created-by:: [[Person/Dan Mason]]
 			- Dramatically accelerate **product development cycles**.
 			- Ensure **safe, secure, and transparent** GenAI module integration.
 	- ### What You’re About to See
-	  collapsed:: true
 		- ![Pic 04](https://lh3.googleusercontent.com/pw/AP1GczOD3Wlzm00SAMuSbnryhYDg9c1GMTiXUEAcBg5YNfgOXyPYNY1__y62P01NZ-77s4wYOxGzhRG4A5riX2Ah3HGxwUe95ViKuOLBMHkHksXoNdB0i-U=w1920-h1080)
 		- **Framework Agnostic, but Opinionated**
 			- **LangGraph ecosystem** is preferred but adaptable.
@@ -79,7 +74,6 @@ created-by:: [[Person/Dan Mason]]
 			- **AI tooling ranking:**
 				- **Cline > Windsurf > Cursor (Composer agent mode only) > Copilot**.
 	- ### Additional Notes from the MCP Workflows Workshop
-	  collapsed:: true
 		- > There really was a long time between the original Copilot and some of the cool stuff that it did, and, you know, the most recent releases, which are close to parity, right? So I may jump into Client a little bit here just to show you how we got to some of these samples, but for the most part, I just wanted to call that out. Okay, again, more resources here. I also did drop this link, if anybody's in the Slack, if you're in the AI Engineer Slack, this deck is linked in there. It's under workshop-stride, so if you want to go into that channel, if you're in Slack, you can have all these links for yourself. There are other implementations of these agents, right? I'm not going to go through them, but the Last Mile implementation came up today a couple of times. It's one that I keep an eye on.
 		- **Evolution of AI Coding Assistants**
 			- There was a long gap between the **original Copilot** and its more recent releases.
@@ -93,7 +87,6 @@ created-by:: [[Person/Dan Mason]]
 			- Various implementations exist beyond the ones covered.
 			- **Last Mile implementation** was mentioned multiple times as **notable**.
 	- ### [Reminder] Sample Code and Resources
-	  collapsed:: true
 		- ![Pic 04](https://lh3.googleusercontent.com/pw/AP1GczOD3Wlzm00SAMuSbnryhYDg9c1GMTiXUEAcBg5YNfgOXyPYNY1__y62P01NZ-77s4wYOxGzhRG4A5riX2Ah3HGxwUe95ViKuOLBMHkHksXoNdB0i-U=w1920-h1080)
 		- **Links to Dan Mason’s GitHub, LinkedIn, etc.:**
 			- [http://jpsi.me](http://jpsi.me/)
@@ -111,7 +104,6 @@ created-by:: [[Person/Dan Mason]]
 			- [MCP Run](http://mcp.run/)
 			- [MCP Introduction](https://modelcontextprotocol.io/introduction)
 	- ### **Package Upgrader with LangGraph/Stride CodeAPI**
-	  collapsed:: true
 		- ![Pic 06](https://lh3.googleusercontent.com/pw/AP1GczNfFwj7qIcA0HBsnkXV0Ho8BgeBnKUjr-rFCr9I6b6MkxAR-pew2Gl-h9pOZW5E6BIyY11NF9Y4x0_Jv1RcxMwlOnzmu_h9UGlNmBxF8vj4DdsKkxA=w1920-h1080)
 		- > You had to build your own interface. We built one called CodeAPI. And the whole idea with this is that... I think I can go over here and show you briefly what this looks like. So, CodeAPI is just a tiny little fast API server. And it has a handful of functions. Here... And I'm going to zoom in so I'm sure this is too small. Okay. So here... This is more or less what CodeAPI exposes. Okay? And you can see here that there's a bunch of Hydantic. Right? This, you know, Hydantic and LangChain are pretty well integrated. And what I'm really saying is... There's a handful of functions that are available to call. And they mostly have things to do with... You know, making code changes, reading, writing files.
 		- **CodeAPI Overview**
@@ -132,7 +124,6 @@ created-by:: [[Person/Dan Mason]]
 			- CodeAPI allows **external control over codebases** in a structured way.
 			- Enables **automated refactoring, dependency updates, and code modifications**.
 	- ### **CodeAPI in Action – Connecting LLMs to Code Manipulation**
-	  collapsed:: true
 		- ![Pic 07](https://lh3.googleusercontent.com/pw/AP1GczNcXptVIATJkQA43R0nZnYJPO3LH2-f0lXIu3q5tUoXXigePYwcSYklCp-4H03_RDmVuMXBD9eTYkOCP79BMNs0I4QW8meqIWsTwogffe6lxgbOm6o=w1920-h1080)
 		- **Overview**
 			- CodeAPI provides **functions for task retrieval and file access**.
@@ -142,38 +133,35 @@ created-by:: [[Person/Dan Mason]]
 			- **`get_next_task()`**
 				- Fetches the next task from the task queue.
 				- Uses a **GET request** to `CODEAPI_URL/get_next_task`.
-				  
-				  ```
+				- ```python
 				  @tool
 				  def get_next_task():
-				  """Get the next task from the task queue."""
-				  response = requests.get(f"{CODEAPI_URL}/get_next_task")
-				  response.raise_for_status()
-				  return response.json().get("task")
+				  	"""Get the next task from the task queue."""
+				  	response = requests.get(f"{CODEAPI_URL}/get_next_task")
+				  	response.raise_for_status()
+				  	return response.json().get("task")
 				  ```
 			- **`get_code_context(task: str)`**
 				- Given a task, retrieves the relevant **code context**.
 				- Uses a **POST request** to `CODEAPI_URL/get_code_context`.
-				  
-				  ```
+				- ```python
 				  @tool
 				  def get_code_context(task: str):
-				  """Given a task, retrieve code context."""
-				  response = requests.post(f"{CODEAPI_URL}/get_code_context", json={"task": task})
-				  response.raise_for_status()
-				  return response.json().get("context")
+				  	"""Given a task, retrieve code context."""
+				  	response = requests.post(f"{CODEAPI_URL}/get_code_context", json={"task": task})
+				  	response.raise_for_status()
+				  	return response.json().get("context")
 				  ```
 			- **`get_file_context(file_path: str)`**
 				- Given a file path, retrieves the **file contents and related context**.
 				- Uses a **POST request** to `CODEAPI_URL/get_file_context`.
-				  
-				  ```
+				- ```python
 				  @tool
 				  def get_file_context(file_path: str):
-				  """Given a file path, retrieve the contents of the file and any related context."""
-				  response = requests.post(f"{CODEAPI_URL}/get_file_context", json={"file_path": file_path})
-				  response.raise_for_status()
-				  return response.json().get("context")
+				  	"""Given a file path, retrieve the contents of the file and any related context."""
+				  	response = requests.post(f"{CODEAPI_URL}/get_file_context", json={"file_path": file_path})
+				  	response.raise_for_status()
+				  	return response.json().get("context")
 				  ```
 		- **How It Works**
 			- LLMs interact with **CodeAPI** to:
@@ -189,7 +177,6 @@ created-by:: [[Person/Dan Mason]]
 			- **CodeAPI serves as a bridge** between AI agents and **real-world code modifications**.
 			- **Supports dynamic code upgrades and automation** in **multi-agent workflows**.
 	- ### **Package Upgrader with [[langgraph/Studio]]**
-	  collapsed:: true
 		- ![Pic 08](https://lh3.googleusercontent.com/pw/AP1GczOjOLs5nwDPyNKKFJBQLKLAzwifP1FN0p505DiZJWZZDmd44345ES4P7_Q7KDVNx-egNl2hB3VXPb9wpEeZk-m9mavVCDjx-LpxmJIZyau_fAzpjQ0=w1920-h1080)
 		- > But I had the code. And so what I was able to do was to take this little team, this team of agents, which is basically just, you know, a single agent with tools, right? So, you know, this is very similar to the [[AI/LLM/Tool/ReACT]] pattern that [[LangChain]] talks a lot about. And I gave it some really basic instructions. I said, I need you to upgrade the Java in this to a recent enough version. You know, 17 is not brand new, but it's new enough. And I want you to flip from JBoss into Spring Boot, right? Because that was, you know, essentially what the client wanted. That was going to be the framework they were going to. I gave it some details, right? You know, I told it that it's got these kinds of commands, right? You know, like, you're going to need to build the project, run the test, and run the app. These are the tools that are exposed in that API, right? So this is a lot like what MCP ultimately is going to become. I told it where to look for, you know, the basic information about the project, right? You know, I gave it a few, you know, high-level rules, but not that much. It was basically just, here's my goal state, right? You figure this out given the tools that you have. So, you know, basically the kind of interaction you get is, all right, you know, you told me what you want me to do. I'm going to start by reading the package file, right?
 		- **Task Overview**
@@ -217,7 +204,6 @@ created-by:: [[Person/Dan Mason]]
 			- **LangChain Studio** provides **task execution visibility**.
 			- **Minimal human intervention**—agent follows high-level goal instructions.
 	- ### **Key Takeaways on AI-Driven Code Upgrading with LangGraph & MCP**
-	  collapsed:: true
 		- > Start figuring out more details about these errors, reading code, writing code. This all happens basically just by configuring, you know, this tiny little setup with, you know, some high-level instructions.
 		- > ... **this is the power both of being able to put this in this [[langgraph]] format. I can explain this to the client, right**? I can actually run it in real time. I can then go to the code, and I can show them that it runs, right? ... **this is how all the dots get connected for people who, you know, are fundamentally just not really that deep into this stuff**. #Quote from
 		- > But again, very, very basic setup. So you can see here, you know, that this is not a complicated configuration at all, and, you know, ultimately we got to something that, you know, I was also sort of doing the final verification on, right? You know, and now you can use Client to do, you know, some visual testing, right? Hey, we just did this work. This thing's running on port X. Go click around, you know, and see if anything is broken, right? Like, so, I used AI top to bottom, you know, to sort of achieve this result. Okay, so with that...
@@ -241,7 +227,6 @@ created-by:: [[Person/Dan Mason]]
 				- Allowed for **automated yet interpretable** software updates.
 				- **MCP-like structure** connects tools and workflows seamlessly.
 	- ### **AI-Driven Test Builder Using LangGraph & Autonomous Agents**
-	  collapsed:: true
 		- pic09
 			- ![Pic 09](https://lh3.googleusercontent.com/pw/AP1GczONxbb5c-dt8HTwE1Pqj53wfH9qzzv5C4xL_hDv0fM7oQ9Emu7vemHHC495VWF4D0OEQmB8aLmN1xPEn6liOAqC94Fv3MSf-H6oghddUrnOh9arikc=w1920-h1080)
 		- pic 10
@@ -282,7 +267,6 @@ created-by:: [[Person/Dan Mason]]
 					  
 					  This setup demonstrates **LLM-powered software testing**, using **LangGraph to orchestrate multiple autonomous agents**.
 	- ### **Automated Translation Workflow Using LangGraph**
-	  collapsed:: true
 		- pics
 			- pic 13
 				- ![Pic 13](https://lh3.googleusercontent.com/pw/AP1GczML6GC6ESWTo3PDkMAv7bPUxDPrPtpM6IIgbmS5iTcmAcV6AK2Y1UfqjQn9V6pMaNQ1xpGCKRzn-13l8asPay7EUP3HWHsBLp4Bd2yvKLusUeXQqQ0=w1920-h1080)
@@ -340,7 +324,6 @@ created-by:: [[Person/Dan Mason]]
 					- **Orchestrator pattern enables automation with human oversight**.
 					- **Potential to scale for enterprise use in content localization workflows**.
 	- ### **LangGraph-Powered Translation Workflow: AI Review & Proof of Publication**
-	  collapsed:: true
 		- pics
 			- pic 15
 				- ![Pic 15](https://lh3.googleusercontent.com/pw/AP1GczMabAv3yGj9M2mM2Vb6LLmBoi7ikWda7wZK6Zg03hKm83E2Olg6rToj-SzaIS26lF4jTVsrBkAmYapG4JXTv9n9If0q1ImHO1BmpmqPmCUKsyWpJlw=w1920-h1080)
@@ -389,7 +372,6 @@ created-by:: [[Person/Dan Mason]]
 				- **LangGraph ensures process integrity while keeping LLMs accountable**.
 				- **Future work:** Integrating MCP to make each **tool agent-exposed and reusable**.
 	- ### **Scaling AI-Powered Translation: Lessons from Large-Scale Book Translation**
-	  collapsed:: true
 		- pics
 			- none
 		- Transcript
@@ -434,7 +416,6 @@ created-by:: [[Person/Dan Mason]]
 			- **Fine-tune models for specific domains** instead of relying on expensive LLM APIs.
 			- **Leverage MCP to manage modular translation workflows** at scale.
 	- ### **Scaling AI-Powered Translation: Reliability Engineering & Benchmarking**
-	  collapsed:: true
 		- pics
 			- none
 		- Transcript
@@ -476,7 +457,6 @@ created-by:: [[Person/Dan Mason]]
 			- How **MCP replaces LangGraph "tools"** with **standardized agent interfaces**.
 			- **First simple example of an MCP-powered workflow** coming up next.
 	- ### **Introduction to #MCP - Agent-Based Tool Discovery & Execution**
-	  collapsed:: true
 		- #### Pics
 			- Pic 18
 				- ![Pic 18](https://lh3.googleusercontent.com/pw/AP1GczPa2cN8B4nWOHbQoJYy5-0EyUKQIJqKcc3aqwX6l2yhllUJzE9ptD6v1pZwN9WpJsFvgHzWvQnlcU4e1LUExw-w51blbTSETJ7Jd_6FcKtZtw5HjoA=w1920-h1080)
@@ -540,7 +520,6 @@ created-by:: [[Person/Dan Mason]]
 				- Further **refining tool constraints** for **smoother execution**.
 				- Expanding MCP's **tool catalog** for more complex workflows.
 	- ### **MCP Server-Client Interactions & Configurations**
-	  collapsed:: true
 		- #### Transcript
 			- > These definitions do have descriptions. So if I wanted to put something in here, and I wanted to say, you know, hey, whenever you use this file, ensure that you actually have access to the login directory, I could do it here instead. So it's kind of your choice, the server can do it. Actually, this is kind of what I think Mahesh was saying earlier, is the servers can be opinionated to the client, right? The servers can say, you have to do it this way, and the client is not really going to try to listen. So it is your choice. Any other questions on this one? I'm just curious. Has anybody else tried this sample? Not my sample, but in general, the React agent? Is this what you're trying to say? Yeah, so I haven't tried it in context yet. We did take a little sample. Yeah, like I'm putting the slides up. And I think you can see the only real difference is that normally you would have to find these tools in your Python, and in this case, you know, all I did was say what the gateway was, you know, wrote some config.json that told you what tools were there, and it just kind of worked. That is what MCP is supposed to do.
 		- #### [[AI Notes]]
@@ -570,7 +549,6 @@ created-by:: [[Person/Dan Mason]]
 			- **Configuration-based discovery** simplifies deployment and maintenance.
 			- **Future Direction:** Expanding **MCP-compliant tool libraries** for broader automation use cases.
 	- ### **MCP Configuration & Multi-Agent Workflows**
-	  collapsed:: true
 		- #### Pics
 			- ##### Pic 20
 				- ![Pic 20](https://lh3.googleusercontent.com/pw/AP1GczMJmBvHkafLFkxGafgq5Jv90BMtzpycXBw2RcxN9bH1zIDKpS9ZcI2ARz8Kyr9zpEKc0pFIptYERlHv75hMMZiVMdLEp0FADcES4OHbo9WiD8R9cOE=w1920-h1080)
@@ -631,7 +609,6 @@ created-by:: [[Person/Dan Mason]]
 			- **Feedback loops enable self-improvement in AI agents**.
 			- **Future Work:** Expanding MCP agent roles for more advanced **collaborative AI systems**.
 	- ### **Automated Code Generation with MCP & Multi-Agent Planning**
-	  collapsed:: true
 		- #### Pics
 			- ##### Pic 25
 				- ![Pic 25](https://lh3.googleusercontent.com/pw/AP1GczOU3s4x3Z27yBUM7Z49KyMDKgDmBMtSiHSY3aDWXrNNscmp2euyEy4AUlI2mVTNHnbi4p7gSbrfbrvh6ECeGQ4hJHcfw97_96jOT0g03Fds-esmEHc=w1920-h1080)
@@ -680,7 +657,6 @@ created-by:: [[Person/Dan Mason]]
 			- **Industry is moving towards AI-assisted PR creation for feature backlogs.**
 			- **Future Work:** Expanding AI’s ability to **handle complex engineering tasks autonomously.**
 	- ### **AI Role Constraints & Safety in Multi-Agent Systems**
-	  collapsed:: true
 		- #### Pics
 			- None
 		- #### Transcript
@@ -728,7 +704,6 @@ created-by:: [[Person/Dan Mason]]
 			- **Orchestration frameworks need AI safety layers** to manage risks in **autonomous workflows**.
 			- **Future Work:** Developing **MCP-compatible safety protocols** for AI-driven agent architectures.
 	- ### **Security & Deployment Considerations for Multi-Agent AI Systems**
-	  collapsed:: true
 		- #### Pics
 			- ##### Pic 27
 				- ![Pic 27](https://lh3.googleusercontent.com/pw/AP1GczOVw3IQ8wZ3ZLE6gIbmTDWiyvJcNu5j7bM8IxDxarvhqj8qiGPrz2Iy8cK61IHHhE7MPyfLZfJr4gpIGY6Q2EPOUH5vtf8jQhFcsguWCxzPDH6jklU=w1920-h1080)
@@ -761,7 +736,6 @@ created-by:: [[Person/Dan Mason]]
 				- **AI outputs are treated as "suggestions," requiring review before production use**.
 				- **Future Work:** Strengthening **MCP integration for secure, scalable multi-agent workflows**.
 	- ### **Multi-Agent AI Code Planning & Execution with MCP**
-	  collapsed:: true
 		- #### Pics
 			- ##### Pic 28
 				- ![Pic 28](https://lh3.googleusercontent.com/pw/AP1GczPdS8cBF-u9pAAS_Tt1u8uWC4bqBhQuezR54qnNfM6xS9Mx-OepLiUVRfFcTt5w6kILPSyA8pzipr3YBZ4hVjUiMZiSh_NyOQT9O1n7pC-OcppHBY8=w1920-h1080)
@@ -818,7 +792,6 @@ created-by:: [[Person/Dan Mason]]
 				- **Graph-based AI workflows enable scalable and modular software automation.**
 				- **Future Work:** Enhancing **multi-graph execution** for complex, interdependent AI tasks.
 	- ### **CollegeBot: AI-Driven College Search & Recommendations**
-	  collapsed:: true
 		- #### Pics
 			- ##### Pic 29
 				- ![Pic 29](https://lh3.googleusercontent.com/pw/AP1GczOau1YcLrapkhOSQujsha2XLM8xmfi6ZS9nUxRiY2VgWzW_Uj21lmqUDJyaQinUlxlTT-hF_yTL1XxR5NqwN8GqVFmTqYLJv-GfjU0doMptFAx_-uU=w1920-h1080)
@@ -873,7 +846,6 @@ created-by:: [[Person/Dan Mason]]
 			- **AI agents can work across multiple turns**, refining insights dynamically.
 			- **Future Work**: Expanding AI capabilities for **scholarship search, essay coaching, and financial aid optimization**.
 	- ### **MCP-Powered Telemedicine Assistant: AI-Guided Patient Interaction** - 31, 32, 33
-	  collapsed:: true
 		- #### Pics
 			- ##### Pic 31
 				- ![Pic 31](https://lh3.googleusercontent.com/pw/AP1GczPLxp4pLyk7ZKpEbPoHbkKaoqFK_I3R2KfLIuqy2V2JqtDdoWQ8hYM688KEK56Xz8xbQgyb7YMcTf3_83GKnP0fCPN-K6YCqkC4wNtUKW91SShgP1c=w1920-h1080)
@@ -973,8 +945,9 @@ created-by:: [[Person/Dan Mason]]
 				- **Confidence scoring prevents medical AI from overstepping boundaries.**
 				- **MCP servers ensure AI messages follow pre-approved treatment protocols.**
 				- **Future Work:** Expanding **telemedicine AI for broader patient support, including chronic disease management and post-surgical follow-ups**.
+- ## [[My Notes]]
 	- ### [[Key Insight]] - #MCP is #Lego
 	- #langgraph is the easiest to explain of all the frameworks #Quote -- [[Person/Dan Mason]]
 		- it is #Expensive at least it gan me
 		- it is model agnostic
-	- [[GitHub/CoPilot]] is at the bottom of the pile but
+	- [[GitHub/CoPilot]] is at the bottom of the pile
