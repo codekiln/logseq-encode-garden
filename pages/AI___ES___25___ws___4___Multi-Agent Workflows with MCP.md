@@ -1,16 +1,45 @@
 tags:: [[Anthropic/MCP]], #langgraph, Agentic
+created-by:: [[Person/Dan Mason]]
 
-- # [Multi-Agent Workflows with MCP](https://www.ai.engineer/summit/2025/schedule/mcp-workflows)
-	- summary
+- # AI ES 25 WS 4 - 16:10 - [Multi-Agent Workflows with MCP](https://www.ai.engineer/summit/2025/schedule/mcp-workflows)
+	- summary / intro
 	  collapsed:: true
 		- by [[Person/Dan Mason]]
 			- Agents aren't really agents unless they can discover the world outside of the chatbox, and act on it -- and the MCP (Model Context Protocol) is an emerging standard for connecting agents to physical and digital worlds. This workshop will teach you how to build your own MCP client (not just the one built into Claude) and connect it to a multi-agent system (we'll be using [[langgraph]] but this approach works with Autogen, Crew AI and many more). This allows you to build powerful workflows that go way beyond writing code, and rethink how to express business logic as a set of roles, tools, and desired outcomes. We'll walk through examples together and then put them into practice -- come with ideas of workflows you want to build! [List of existing MCP servers here]
 			- | Date   | Time          | Track      | Room                                       |
 			  |-------:|:-------------:|:----------:|:-------------------------------------------|
 			  | Feb 22 | 4:10pm-5:30pm | Workshops  | Jay Suites Sydney - 109 W 38th 2nd floor   |
-			-
-	- 16:12
+	- all pics - [[AI/ES/25/ws/4/Multi-Agent Workflows with MCP/Pics]]
 	- ### MCP Workflows Workshop Notes
+	  collapsed:: true
+		- ![original header](https://lh3.googleusercontent.com/pw/AP1GczOm3ZAMX2IL8Sc-_B69aaeUTijo4zyMdwuQCKrTKdaqHvPTbnWBAr46rGcA7nANFc5ZI9QpulWjEvvtH3OHN-d56FGrCFgpz3UImS50ufigru33YgE=w1920-h1080)
+		- ![Pic 02](https://lh3.googleusercontent.com/pw/AP1GczPnWIuBRf6ZuYHgFQ1_DXBt39LQpQpG_95nEZmslbkBoQKrQ1umfq_PfdWBC8DgxK52MwCDHiAn2v4goDOJi8D7EXbAiVO6YyEtg7iGlZGBbp16Kks=w1920-h1080)
+		- **Agents vs. Simple Chatbots**
+			- True agents must **discover** and **act** beyond the chatbox.
+			- The **Model Context Protocol (MCP)** standard connects agents to **physical and digital environments**.
+		- **Building an MCP Client**
+			- Not limited to **Claude’s built-in MCP client**.
+			- Hands-on session to build a **custom MCP client**.
+			- Connects to a **multi-agent system**.
+			- Using **LangGraph** but also applicable to:
+				- **Autogen**
+				- **Crew AI**
+				- Other frameworks
+		- **Expanding Beyond Code Generation**
+			- MCP enables workflows **beyond programming**.
+			- Helps rethink **business logic**:
+				- Defined as **roles**
+				- Equipped with **tools**
+				- Aligned with **desired outcomes**
+		- **Workshop Structure**
+			- **Walkthrough of existing MCP workflows**.
+			- **Hands-on practice**: Participants will implement workflows.
+			- Bring ideas for **workflows you want to build**!
+		- **Resources**
+			- **List of existing MCP servers**: [TBD]
+			- **Presenter**: Dan Mason, Principal, AI ([LinkedIn](https://www.linkedin.com/in/dnmason/))
+	- ### MCP Workflows Workshop Notes
+	  collapsed:: true
 		- **Speaker:** Dan Mason, Principal, AI @ Stride (ex-ESPN, SSTK, NBCU)
 		- **Setup for Hands-on Participation:**
 			- Local environment with **Python 3.12+**
@@ -22,6 +51,928 @@ tags:: [[Anthropic/MCP]], #langgraph, Agentic
 				- [GitHub Repo](https://github.com/danmas0n/react-agent-with-mcp/)
 			- **Multi-agent system (LangGraph) with MCP gateway:**
 				- [GitHub Repo](https://github.com/danmas0n/multi-agent-with-mcp/)
+	- ### Stride’s AI Expertise
+	  collapsed:: true
+		- ![Pic 03](https://lh3.googleusercontent.com/pw/AP1GczNe6sbez_64AB33ueakA5xcmO4ZJzhA5uv7rY7Gs-t5AtIWe124hSc8iRDDqOadc6-oEr1zi4PJUDAAj2rm3_PwlwySUKMO5wL6DstqGE5EQIo3U5Q=w1920-h1080)
+		- **Agentic Workflows**
+			- Build **AI and LLM-powered workflows** to enhance and scale products and services.
+		- **Stride 100x**
+			- Eradicate **systemic debt issues**.
+			- Unlock **33% of team capacity** using GenAI and automation.
+		- **Stride Conductor**
+			- Dramatically accelerate **product development cycles**.
+			- Ensure **safe, secure, and transparent** GenAI module integration.
+	- ### What You’re About to See
+	  collapsed:: true
+		- ![Pic 04](https://lh3.googleusercontent.com/pw/AP1GczOD3Wlzm00SAMuSbnryhYDg9c1GMTiXUEAcBg5YNfgOXyPYNY1__y62P01NZ-77s4wYOxGzhRG4A5riX2Ah3HGxwUe95ViKuOLBMHkHksXoNdB0i-U=w1920-h1080)
+		- **Framework Agnostic, but Opinionated**
+			- **LangGraph ecosystem** is preferred but adaptable.
+		- **Model Agnostic, but Opinionated**
+			- Preference for **Claude** for most tasks.
+		- **Stack Agnostic**
+			- Works across **client environments**.
+		- **Evaluation is Use Case-Specific**
+			- **Coding:** Uses **test suites, linters, code reviews**.
+			- Other cases: **LLM-as-judge + human annotation**.
+		- **98% Vibe-Coded**
+			- Doesn't always **Accept All**, but when it does, **it works**.
+			- **AI tooling ranking:**
+				- **Cline > Windsurf > Cursor (Composer agent mode only) > Copilot**.
+	- ### Additional Notes from the MCP Workflows Workshop
+	  collapsed:: true
+		- > There really was a long time between the original Copilot and some of the cool stuff that it did, and, you know, the most recent releases, which are close to parity, right? So I may jump into Client a little bit here just to show you how we got to some of these samples, but for the most part, I just wanted to call that out. Okay, again, more resources here. I also did drop this link, if anybody's in the Slack, if you're in the AI Engineer Slack, this deck is linked in there. It's under workshop-stride, so if you want to go into that channel, if you're in Slack, you can have all these links for yourself. There are other implementations of these agents, right? I'm not going to go through them, but the Last Mile implementation came up today a couple of times. It's one that I keep an eye on.
+		- **Evolution of AI Coding Assistants**
+			- There was a long gap between the **original Copilot** and its more recent releases.
+			- The **latest versions** are much closer to **feature parity** with other AI coding assistants.
+		- **Client Demo**
+			- The speaker may show **Client** to illustrate the **workflow development process**.
+		- **Workshop Resources**
+			- More resources are available in the **AI Engineer Slack**.
+			- The **workshop deck** is linked in the Slack under **#workshop-stride**.
+		- **Other Agent Implementations**
+			- Various implementations exist beyond the ones covered.
+			- **Last Mile implementation** was mentioned multiple times as **notable**.
+	- ### [Reminder] Sample Code and Resources
+	  collapsed:: true
+		- ![Pic 04](https://lh3.googleusercontent.com/pw/AP1GczOD3Wlzm00SAMuSbnryhYDg9c1GMTiXUEAcBg5YNfgOXyPYNY1__y62P01NZ-77s4wYOxGzhRG4A5riX2Ah3HGxwUe95ViKuOLBMHkHksXoNdB0i-U=w1920-h1080)
+		- **Links to Dan Mason’s GitHub, LinkedIn, etc.:**
+			- [http://jpsi.me](http://jpsi.me/)
+		- **MCP Agent Implementations:**
+			- **Simple ReAct agent (LangGraph) with MCP gateway:**
+				- [GitHub Repo](https://github.com/danmas0n/react-agent-with-mcp/)
+			- **Multi-agent (LangGraph) with MCP gateway:**
+				- [GitHub Repo](https://github.com/danmas0n/multi-agent-with-mcp/)
+			- **Other MCP agent implementations:**
+				- [Last Mile AI MCP Agent](https://github.com/lastmile-ai/mcp-agent)
+				- [Glama AI MCP Server](https://glama.ai/mcp/servers/lamjyav2ov)
+		- **MCP in the Wild:**
+			- [Model Context Protocol Servers](https://github.com/modelcontextprotocol/servers)
+			- [Glama AI MCP Servers](https://glama.ai/mcp/servers)
+			- [MCP Run](http://mcp.run/)
+			- [MCP Introduction](https://modelcontextprotocol.io/introduction)
+	- ### **Package Upgrader with LangGraph/Stride CodeAPI**
+	  collapsed:: true
+		- ![Pic 06](https://lh3.googleusercontent.com/pw/AP1GczNfFwj7qIcA0HBsnkXV0Ho8BgeBnKUjr-rFCr9I6b6MkxAR-pew2Gl-h9pOZW5E6BIyY11NF9Y4x0_Jv1RcxMwlOnzmu_h9UGlNmBxF8vj4DdsKkxA=w1920-h1080)
+		- > You had to build your own interface. We built one called CodeAPI. And the whole idea with this is that... I think I can go over here and show you briefly what this looks like. So, CodeAPI is just a tiny little fast API server. And it has a handful of functions. Here... And I'm going to zoom in so I'm sure this is too small. Okay. So here... This is more or less what CodeAPI exposes. Okay? And you can see here that there's a bunch of Hydantic. Right? This, you know, Hydantic and LangChain are pretty well integrated. And what I'm really saying is... There's a handful of functions that are available to call. And they mostly have things to do with... You know, making code changes, reading, writing files.
+		- **CodeAPI Overview**
+			- A lightweight **FastAPI server**.
+			- Provides a small set of functions for **code manipulation**.
+			- Uses **Pydantic** for model validation.
+			- **Well-integrated with LangChain**.
+		- **CodeAPI Capabilities**
+			- Supports **reading and writing files**.
+			- Facilitates **automated code changes**.
+			- Designed for **multi-agent workflows** in LangGraph.
+		- **Package Upgrader Workflow**
+			- **Start → package_upgrader → repo_tools (optional) → End**
+			- Uses LangGraph to **automate package upgrades**.
+			- Likely interacts with repositories to update dependencies.
+		- **Key Takeaways**
+			- **Custom interfaces** like CodeAPI are essential for agent-driven workflows.
+			- CodeAPI allows **external control over codebases** in a structured way.
+			- Enables **automated refactoring, dependency updates, and code modifications**.
+	- ### **CodeAPI in Action – Connecting LLMs to Code Manipulation**
+	  collapsed:: true
+		- ![Pic 07](https://lh3.googleusercontent.com/pw/AP1GczNcXptVIATJkQA43R0nZnYJPO3LH2-f0lXIu3q5tUoXXigePYwcSYklCp-4H03_RDmVuMXBD9eTYkOCP79BMNs0I4QW8meqIWsTwogffe6lxgbOm6o=w1920-h1080)
+		- **Overview**
+			- CodeAPI provides **functions for task retrieval and file access**.
+			- Uses **FastAPI** to expose endpoints callable by LLMs.
+			- Enables **agents to interact with codebases dynamically**.
+		- **Highlighted Functions in `codeapi_tools.py`**
+			- **`get_next_task()`**
+				- Fetches the next task from the task queue.
+				- Uses a **GET request** to `CODEAPI_URL/get_next_task`.
+				  
+				  ```
+				  @tool
+				  def get_next_task():
+				  """Get the next task from the task queue."""
+				  response = requests.get(f"{CODEAPI_URL}/get_next_task")
+				  response.raise_for_status()
+				  return response.json().get("task")
+				  ```
+			- **`get_code_context(task: str)`**
+				- Given a task, retrieves the relevant **code context**.
+				- Uses a **POST request** to `CODEAPI_URL/get_code_context`.
+				  
+				  ```
+				  @tool
+				  def get_code_context(task: str):
+				  """Given a task, retrieve code context."""
+				  response = requests.post(f"{CODEAPI_URL}/get_code_context", json={"task": task})
+				  response.raise_for_status()
+				  return response.json().get("context")
+				  ```
+			- **`get_file_context(file_path: str)`**
+				- Given a file path, retrieves the **file contents and related context**.
+				- Uses a **POST request** to `CODEAPI_URL/get_file_context`.
+				  
+				  ```
+				  @tool
+				  def get_file_context(file_path: str):
+				  """Given a file path, retrieve the contents of the file and any related context."""
+				  response = requests.post(f"{CODEAPI_URL}/get_file_context", json={"file_path": file_path})
+				  response.raise_for_status()
+				  return response.json().get("context")
+				  ```
+		- **How It Works**
+			- LLMs interact with **CodeAPI** to:
+				- Retrieve **tasks**.
+				- Fetch **relevant code snippets**.
+				- Read **file contents** dynamically.
+			- Enables **AI-driven code analysis and modification**.
+		- **Use Case**
+			- Integrates with **LangGraph, MCP, and multi-agent workflows**.
+			- LLMs **automate development tasks**, such as refactoring, dependency updates, and debugging.
+		- ### **Key Takeaways**
+			- **LLMs can now "read" and "write" codebases programmatically**.
+			- **CodeAPI serves as a bridge** between AI agents and **real-world code modifications**.
+			- **Supports dynamic code upgrades and automation** in **multi-agent workflows**.
+	- ### **Package Upgrader with [[langgraph/Studio]]**
+	  collapsed:: true
+		- ![Pic 08](https://lh3.googleusercontent.com/pw/AP1GczOjOLs5nwDPyNKKFJBQLKLAzwifP1FN0p505DiZJWZZDmd44345ES4P7_Q7KDVNx-egNl2hB3VXPb9wpEeZk-m9mavVCDjx-LpxmJIZyau_fAzpjQ0=w1920-h1080)
+		- > But I had the code. And so what I was able to do was to take this little team, this team of agents, which is basically just, you know, a single agent with tools, right? So, you know, this is very similar to the [[AI/LLM/Tool/ReACT]] pattern that [[LangChain]] talks a lot about. And I gave it some really basic instructions. I said, I need you to upgrade the Java in this to a recent enough version. You know, 17 is not brand new, but it's new enough. And I want you to flip from JBoss into Spring Boot, right? Because that was, you know, essentially what the client wanted. That was going to be the framework they were going to. I gave it some details, right? You know, I told it that it's got these kinds of commands, right? You know, like, you're going to need to build the project, run the test, and run the app. These are the tools that are exposed in that API, right? So this is a lot like what MCP ultimately is going to become. I told it where to look for, you know, the basic information about the project, right? You know, I gave it a few, you know, high-level rules, but not that much. It was basically just, here's my goal state, right? You figure this out given the tools that you have. So, you know, basically the kind of interaction you get is, all right, you know, you told me what you want me to do. I'm going to start by reading the package file, right?
+		- **Task Overview**
+			- **Upgrade a legacy Java project**:
+				- Migrate from **JBoss to Spring Boot**.
+				- Upgrade Java to **version 17**.
+				- Ensure all **dependencies** are updated.
+				- Use **Maven** for build and tests.
+		- **Agent Setup**
+			- Implemented as a **single agent with tools**.
+			- Follows a **ReAct pattern** (similar to LangChain’s approach).
+			- Uses **CodeAPI** for **reading, writing, and modifying code**.
+		- **Execution Flow**
+			- **Agent reads `pom.xml`** to determine dependencies.
+			- **Upgrades Java version** while preserving existing logic.
+			- **Builds and tests the project** to confirm functionality.
+			- **Uses Git for version control** (undo mistakes if needed).
+		- **Constraints Given to the Agent**
+			- **Do not modify unnecessary code**.
+			- **Do not address deprecation warnings**.
+			- **Do not add or remove comments**.
+		- **Key Takeaways**
+			- **Agents can autonomously refactor and upgrade code**.
+			- **MCP-like structure**: tools exposed via API enable **autonomous reasoning**.
+			- **LangChain Studio** provides **task execution visibility**.
+			- **Minimal human intervention**—agent follows high-level goal instructions.
+	- ### **Key Takeaways on AI-Driven Code Upgrading with LangGraph & MCP**
+	  collapsed:: true
+		- > Start figuring out more details about these errors, reading code, writing code. This all happens basically just by configuring, you know, this tiny little setup with, you know, some high-level instructions.
+		- > ... **this is the power both of being able to put this in this [[langgraph]] format. I can explain this to the client, right**? I can actually run it in real time. I can then go to the code, and I can show them that it runs, right? ... **this is how all the dots get connected for people who, you know, are fundamentally just not really that deep into this stuff**. #Quote from
+		- > But again, very, very basic setup. So you can see here, you know, that this is not a complicated configuration at all, and, you know, ultimately we got to something that, you know, I was also sort of doing the final verification on, right? You know, and now you can use Client to do, you know, some visual testing, right? Hey, we just did this work. This thing's running on port X. Go click around, you know, and see if anything is broken, right? Like, so, I used AI top to bottom, you know, to sort of achieve this result. Okay, so with that...
+		- AI notes on this section
+			- **Error Handling & Code Modification**
+				- The agent **reads, analyzes, and modifies code** autonomously.
+				- Works within a **simple high-level configuration**.
+				- Uses **CodeAPI** to interact with the codebase (reading/writing files, making changes).
+			- **LangGraph Representation for Clients**
+				- **Visualizing workflows** in LangGraph makes them easy to explain.
+				- **Real-time execution** can be demonstrated to clients.
+				- **Immediate feedback loop**—errors are identified, and fixes are tested live.
+			- **Validation & Verification**
+				- **Human review** for final verification.
+				- **Client testing via UI**:
+					- Deployed the updated project.
+					- Ran the application on a test port.
+					- Manually checked if any **functional issues** arose.
+			- **End-to-End AI Utilization**
+				- AI was used **from initial code analysis to deployment and testing**.
+				- Allowed for **automated yet interpretable** software updates.
+				- **MCP-like structure** connects tools and workflows seamlessly.
+	- ### **AI-Driven Test Builder Using LangGraph & Autonomous Agents**
+	  collapsed:: true
+		- pic09
+			- ![Pic 09](https://lh3.googleusercontent.com/pw/AP1GczONxbb5c-dt8HTwE1Pqj53wfH9qzzv5C4xL_hDv0fM7oQ9Emu7vemHHC495VWF4D0OEQmB8aLmN1xPEn6liOAqC94Fv3MSf-H6oghddUrnOh9arikc=w1920-h1080)
+		- pic 10
+			- ![Pic 10](https://lh3.googleusercontent.com/pw/AP1GczPi2RxG25oPWdIMjTlySOXFgYfeVcLZki_hD1pxVJ3_cmYXDeKaR4KUT6tlDF_oxgbvqrMKstnQy2SyD0uhyFJVc8yqfGetpgMkUkIMtjFFjsMBRu8=w1920-h1080)
+		- pic 11
+			- ![Pic 11](https://lh3.googleusercontent.com/pw/AP1GczPbXcgquYPBJKsje7d_LrzXUBUQ3NF1w8xwNv1qhRiA1qeiHHSIgY0FVvMFfCZcDjWa0sKLHmMaLu0S0Pz2UfXpozTc8s3sa9qEXwA7aRX1QZclRs8=w1920-h1080)
+		- pic 12
+			- ![Pic 12](https://lh3.googleusercontent.com/pw/AP1GczNnlijS3ak8s_WunbgNQ9Ki40HYTLH6oopznaPUaREydajKPjt1Q3HhMAsW1lK11U6hdSdpgRSlltMDgUuSq3d5mwnulJ4psz4hrYqZEL7-MKRcXbc=w1920-h1080)
+		- transcript
+			- > Spring 2024 code This whole process, you know, A, results in this big paper trail, you can see all the stuff happening, right? You get a record of it, and then, at the end, on your local disk, you're either going to have new branches, if we ask for that, or you're just going to have, you know, new running tests that you can, you know, sort of deal with as you see fit. We didn't generally go all the way to, you know, this is committing, you know, new branches and pushing stuff in your CICB, right? Like, you can do that, right? We chose generally to have it still be fairly human-driven. But it saves a tremendous amount of time, right? So we're taking down the cycles on what would normally have been a pretty long process to write tests and get all the stuff running, you know, into a very, very short window. And again, we built this into some sort of more specifically productized stuff that was not based on Minecraft. Okay. I will now say, please do interrupt me with questions. I'm going to be talking for a while, like we've gone on all this stuff. Any questions so far? Quick question on your choice to move from Minecraft into production. Is that for cost reasons or for other reasons? So it's a combination. So we also have a version of this that was built in AutoGen. And again, we've never been entirely framework-specific. We actually will build these things in both, in part because it's easier to explain in Minecraft, and it's a little easier to run in AutoGen, right? So it really depends. There are cases where we have backed off specifically because we thought deployment would be easier without Minecraft. But there are other cases where, like, we think the total sort of tool suite is better for the client, right? So again, we are very flexible with our situation. So in regards to MCP and its usage here, is it this is the client, and then, like, all these graphs are, like, the servers and maybe more clients? So this is pre-MCP. So the question was, is this, you know, where are the MCP servers and clients? The basic idea here is that everything that's called a tool, right, in this graph, is ultimately going to be replaced by MCP, right? So we built these things specifically for, hey, there are certain tools that are going to be exposed for every agent, right? Every agent is going to have different capabilities. And so we had to build our own version of this. But ultimately, MCP is where this goes. Great. Thank you for that. So I'm going to move on from this one. So again, you know, test automation is a big piece of our business. It's something that, you know, we also have non-agents.
+			- [[AI Notes]]
+				- **Overview**
+					- This setup **automates writing and verifying tests**.
+					- Uses an **orchestrator pattern** (similar to Anthropic’s approach).
+					- Tracks agent reasoning via **Paper Linesmith** or the **command line**.
+				- **Workflow Breakdown**
+					- **Context Gathering**
+						- The **context agent** collects relevant **repo context**.
+						- Uses **read/write tools** to access necessary files.
+					- **Test Plan Creation**
+						- Generates **prospective tests** based on **testing guidelines**.
+						- Defines **navigation bar test scenarios**.
+					- **Test Review & Execution**
+						- **Unit test writer** generates initial test cases.
+						- **Unit test reviewer** checks for correctness.
+						- **Test runner** executes the tests.
+						- **QA agent** verifies results.
+				- **Example Test Scenarios**
+					- **Clicking ‘Learn’** → Navigates to `/learn`
+					- **Clicking ‘Reference’** → Navigates to `/reference/react`
+					- **Clicking ‘Community’** → Navigates to `/community`
+					- **Clicking ‘Blog’** → Navigates to `/blog`
+				- **Key Benefits**
+					- **Autonomous** test generation and execution.
+					- **Paper trail** for AI decision-making.
+					- **Orchestrator coordinates multiple agents** for context-aware testing.
+					- **CLI compatibility** for managing and verifying AI-generated tests.
+					  
+					  This setup demonstrates **LLM-powered software testing**, using **LangGraph to orchestrate multiple autonomous agents**.
+	- ### **Automated Translation Workflow Using LangGraph**
+	  collapsed:: true
+		- pics
+			- pic 13
+				- ![Pic 13](https://lh3.googleusercontent.com/pw/AP1GczML6GC6ESWTo3PDkMAv7bPUxDPrPtpM6IIgbmS5iTcmAcV6AK2Y1UfqjQn9V6pMaNQ1xpGCKRzn-13l8asPay7EUP3HWHsBLp4Bd2yvKLusUeXQqQ0=w1920-h1080)
+			- pic 14
+				- ![Pic 14](https://lh3.googleusercontent.com/pw/AP1GczNI0yS8ndd9jXZZLtwF0v6jHbmSBuQqXbj1-DdwL17FGiAEyvVZuYZQUbO2WlyEg4pK1m13gF721uSaM1cfcjKjtDLdUWiiZoc8BxnW54HK_z8WH4k=w1920-h1080)
+		- Transcript
+			- > Look, we're not translators. We don't do this, right? But we do understand how these workflows work, and we can send this something that'll at least give you a straw man. So, I'll go ahead and run this, just after showing you the couple of steps that we've already done. The task in this case, again, kind of looks like a user story, right? But, you know, in this case, it's really just saying, hey, you know, take this file, right? So this is going to a file on disk, which I'll show you in a second. Here's our very high-level acceptance criteria, right? You have to actually translate it. You know, it should be a good translation, whatever that means. You know, part of our idea here was that we wanted to see what would happen when we're trying to overly direct the output. And, you know, the new translation is saved out so we can see it. And, you know, this is essentially we're putting in HTML, so there's still an element of code here. You know, it's not that this is not code, it's just different code. And I've got this orchestrator pattern again, where, you know, the orchestrator is trying to gather all of this context. So, here you go, right? So I've read this file from disk, and I'll go over here just to show you what this kind of looks like. So this is a super old Project Gutenberg example. I'm not going to show you the real client content. You know who it was. But this example is, you know, written in English with actually a sprinkling of Latin, right? It's, you know, a fairly kind of archaic text. And what we really just wanted to see was, like, can it handle this, right? Like, you know, what's it going to do? And can we also build in a little bit of self-improvement into the process? And so that's really what this overall architecture is meant to do. So you can see up here, the orchestrator, you know, is reading files, figuring out what the job is, and then it passes to this translator and reviewer, who operate in a loop, right? So I'll go ahead and take off this interrupt, because then it'll just run until it's done.
+				- [[AI Notes]]
+					- #### **Overview**
+					- **AI-driven translation pipeline** for structured documents.
+					- Uses **LangGraph for orchestration**.
+					- **Translates English to Spanish** while preserving **HTML formatting**.
+					  
+					  ---
+					- #### **Process Breakdown**
+					- **Task Initialization**
+						- `task_tool` retrieves the **next translation task**.
+						- **User Story Style Prompt**:
+							- **File path**: `/pg74416-h/pg74416-ch1.html`
+							- **Acceptance Criteria**:
+								- **Fully translated** from English to Spanish.
+								- **Accurate, idiomatic, and lyrical** translation.
+								- **Preserve formatting & images**.
+								- **Save as a new file** without overwriting the original.
+					- **Orchestration & Context Gathering**
+						- `orchestrator` collects **file context**.
+						- `read_tool` extracts **HTML content**.
+						- Ensures **non-destructive processing**.
+					- **Translation & Review Loop**
+						- **`translator`** performs the **initial translation**.
+						- **`reviewer`** verifies **accuracy and formatting**.
+						- If needed, adjustments are made in a **feedback loop**.
+					- **Finalization & Output**
+						- **`finalizer`** ensures quality compliance.
+						- **`write_tool`** saves the final translation.
+						  
+						  ---
+					- #### **Key Insights**
+					- **AI as an assistive tool**:
+						- Not human translators, but **efficient for structured text**.
+						- Produces a **"straw man" draft** for human refinement.
+					- **Handling Complex Texts**
+						- **Project Gutenberg example**: Contains **English + Latin mix**.
+						- Goal: Assess **LLM handling of archaic and multi-language content**.
+					- **Continuous Improvement**
+						- **Orchestrator supervises refinement**.
+						- Loop between **translator and reviewer** for **iterative quality checks**.
+					- **Integration with MCP**
+						- Currently **pre-MCP**, but **each tool could be an MCP endpoint**.
+						- **Future-proof design** ensures smooth **transition to standard MCP agents**.
+						  
+						  ---
+					- #### **Final Thoughts**
+					- **AI accelerates structured text translation** while ensuring **traceability**.
+					- **Orchestrator pattern enables automation with human oversight**.
+					- **Potential to scale for enterprise use in content localization workflows**.
+	- ### **LangGraph-Powered Translation Workflow: AI Review & Proof of Publication**
+	  collapsed:: true
+		- pics
+			- pic 15
+				- ![Pic 15](https://lh3.googleusercontent.com/pw/AP1GczMabAv3yGj9M2mM2Vb6LLmBoi7ikWda7wZK6Zg03hKm83E2Olg6rToj-SzaIS26lF4jTVsrBkAmYapG4JXTv9n9If0q1ImHO1BmpmqPmCUKsyWpJlw=w1920-h1080)
+			- pic 16
+				- ![Pic 16](https://lh3.googleusercontent.com/pw/AP1GczNOWyhXoEezmxqtlkwG-xTdatQpVmgeZ2LQXmGmQN0DhvG8wMcd1AbWmVRZbjSQJbR_nptB4NkACdEcbIAdyOyEIg9SgC5VGMKYGXScuNGPTaW3lAU=w1920-h1080)
+			- pic 17
+				- ![Pic 17](https://lh3.googleusercontent.com/pw/AP1GczMHsW20KTyiWI13F7eyhQWnqRlvKaE00_MxTTrXfvEYNk_QyNV73UeikCg07vfCk2kl696Fd_3FYrJZHoSoSOFIlCj56wzqGqrEz-UQydsww4cQjSI=w1920-h1080)
+		- Transcript
+			- > It's got, you know, this idea of a proof of publication, right? That's how the reviewer says, I think this translation was good enough, right? And so this idea, when they do loop, they technically do improve their work. We have some good evidence of that, and we also use LLMs in John Hathaway's text, right? To actually look at, you know, LLMs, you know, their opinion of the translation having not been part of the process. Is that a proof of publication on the system prompt, or is it still an LLM? It is, and so I'll show you the code real quick just so you can get a sense of what this actually looks like. So if I go over here, you know, the translator workflow is basically setting up a graph, right? The exact same graph that we just saw. And each of these personalities has their own agent code, right? And I'll see if I can find where this is here. Yeah, so in this case, you know, let's say the translation reviewer. This is just a prompt, right? So, you know, this is prompt engineering kind of buried inside this overall setup. And we're giving these instructions. If you approve the content, use a proof of publication in your response, right? That's how we transition from state to state. If you want to revise, you say revise. And again, the graph is fundamentally trying to control someone's behavior, and you'll see this is an old example.
+			- > **We have to kind of do a lot of shouting, right, to try to get this to work**. Like, this was an early example of this. You know, sometimes it just improves forever, right? Sometimes it, you know, suggests things just because it's been told that it's supposed to be reviewing things, and it thinks that it needs to be, you know, extra smart. It was actually having a hard time saying, you know, yes, this is fine, right? So all of this, you know, really was just prompt engineering. And again, we were sort of roughly trying to control the graph flow with things like, you know, these specific comments. So this worked. And in fact, what we'll do is I'll show you sort of what we had to build on top of this.
+			- [[AI Notes]]
+				- #### **Overview**
+				- **Automates translation and review workflows** using LangGraph.
+				- **Structured agent-based translation process**.
+				- Uses **proof-of-publication** system to validate quality.
+				- #### **Workflow Breakdown**
+				- **Graph Setup (`translate_workflow.py`)**
+					- Creates an **orchestrated pipeline** for translation.
+					- Defines key agents:
+						- `translator` → Performs **initial translation**.
+						- `reviewer` → **Verifies accuracy, style, and fidelity**.
+						- `finalizer` → **Saves approved translations**.
+				- **Reviewer’s Role (`translation_reviewer.py`)**
+					- **Strict review guidelines**:
+						- Use `"APPROVED FOR PUBLICATION"` for **finalized content**.
+						- If revision is needed, respond with `"REVISE"` → Translator iterates.
+						- Ensures **accuracy, idiomatic correctness, and style**.
+					- **Rules to prevent infinite improvement loops**:
+						- Reviews **only the latest version**.
+						- **Suggests changes only when necessary**.
+				- **Handling LLM Review Loops**
+					- Early versions **over-corrected translations** due to reviewer bias.
+					- **Prompt engineering** ensures **balanced critique vs. acceptance**.
+					- Overcame issues where **LLM felt obligated to suggest edits** even when unnecessary.
+					  
+					  ---
+				- #### **Key Insights**
+				- **Proof of publication** acts as a state transition marker.
+				- **Graph flow enforces quality control** while keeping AI behavior predictable.
+				- **LLM-based review feedback is structured, ensuring human-like editorial decisions**.
+				- **Initial struggles with over-reviewing** were mitigated with **explicit prompts**.
+				  
+				  ---
+				- #### **Final Thoughts**
+				- **AI-assisted translation is viable with structured validation**.
+				- **LangGraph ensures process integrity while keeping LLMs accountable**.
+				- **Future work:** Integrating MCP to make each **tool agent-exposed and reusable**.
+	- ### **Scaling AI-Powered Translation: Lessons from Large-Scale Book Translation**
+	  collapsed:: true
+		- pics
+			- none
+		- Transcript
+			- > because the agents would get confused and they really just didn't know what to do, right? So what we did is we ended up building a tool outside of the graph, and I'll come back to this also with some of the future things we did, to orchestrate smaller pieces of this work, right? So this book translator was just **a Python app which essentially split a large PDF into manageable enough chunks**. It ended up being **about a page at a time**, right? And we **split on sentence boundaries, we did our best to keep things logically consistent**, and we split it, we translated them one at a time in a loop, right? **This thing is just going to go over and over again until everything is translated, and then reassemble them back into PDFs**. And that was how we delivered the app to the client.
+			- > While we did this, **a few of the things we learned**
+				- > one is we started with DALL·E, or with **Sana** specifically. Sana was pretty good at it, right? It did good translations, it was very good at following rules, it also was extremely **expensive**. **It ended up being something like a quarter per page**. And for this work for the client, **we wanted to do something like, I want to say six books, you know, 300 pages a piece in four languages**. **So it ended up being something like, you know, 10 or 15,000 pages. And we were spending thousands of dollars just on the LLM**. And we weren't sure that we needed to.
+		- [[AI Notes]]
+			- #### **Problem: LLM Confusion & High Cost**
+			- **Agents struggled with large documents**, often getting confused by complex dependencies.
+			- Initial approach using **LangGraph alone wasn't sufficient** for handling entire books.
+			- **LLM costs were high**—Sana provided **high-quality translations** but was **too expensive** for large-scale work.
+			  
+			  ---
+			- #### **Solution: Hybrid Approach with External Python App**
+			- **Preprocessing: Splitting Large PDFs**
+				- A **Python app** was built **outside of LangGraph**.
+				- **Breaks PDFs into smaller chunks** (~one page per unit).
+				- **Splits on sentence boundaries** to maintain **logical consistency**.
+			- **Loop-Based Translation Process**
+				- Each **small chunk is translated individually** in a loop.
+				- The process **continues iteratively** until all pages are translated.
+			- **Reassembly & Delivery**
+				- Translated segments are **recombined into a full PDF**.
+				- The **final translated book** is packaged and delivered to the client.
+				  
+				  ---
+			- #### **Challenges & Cost Considerations**
+			- **Initial LLM choice (Sana) was accurate but costly** ($0.25 per page).
+			- **Scaling required translating ~15,000 pages** across **six books and four languages**.
+			- Total cost estimates ran into **thousands of dollars**—needed a more cost-effective approach.
+			  
+			  ---
+			- #### **Key Insights**
+			- **LLMs struggle with very large documents** → Need **modular processing**.
+			- **Preprocessing (splitting by sentence/page) improves consistency**.
+			- **Hybrid approaches (Python tools + LLM agents) optimize costs & performance**.
+			- **Agent-based workflows need external orchestration** for large-scale AI applications.
+			  
+			  ---
+			- #### **Future Considerations**
+			- **Investigate cheaper but effective translation models**.
+			- **Fine-tune models for specific domains** instead of relying on expensive LLM APIs.
+			- **Leverage MCP to manage modular translation workflows** at scale.
+	- ### **Scaling AI-Powered Translation: Reliability Engineering & Benchmarking**
+	  collapsed:: true
+		- pics
+			- none
+		- Transcript
+			- > And so we had to set a recursion limit on it, you know, like, you can't do this more than 50 times. If it fails and there's still no file written out, try again, right? And that was one thing where I'm not sure if anybody caught the, I guess, the second talk yesterday from my neice Hamal, who was talking about AI engineering as being reliability engineering. So I love that thought, but here's the caveat. I think a reliability engineer would not stand for the kind of reliability engineering we have to do here because we have to basically say, look, I don't care if it fails, just do it again, right? It can fail as much as it wants. I just need to know if you've finished, right? That is not a reliability engineer's thing. So it's not that that concept doesn't work, but I think there's got to be an evolution of it. So again, we managed to do thousands of pages of books this way. Very simple workflow. You know, it didn't take us that long to set up. We had to tweak it a lot. I'm not saying it's perfect even now, but we did manage to deliver a really interesting output for the client. You know, for in the end, I think we probably spent 85 bucks on a GPT-40 for 15,000 pages. It's that kind of thing, right? So a lot of this was figuring out how to do it, and it was figuring out which model fit, and it was just getting sort of a general system around it that would deliver a reliable output. Please. You know, do I have to intercede, right? Does a human have to get involved? Or can I get through, you know, kind of the entire job I have, or the workflow that I have, without human intercession? So that was kind of the way that we looked at it, was that we just had to make sure that this succeeded. We were willing to pay the cost of failed runs. Again, the individual runs were so cheap, it didn't matter. We just had to know that it was done. And so, I think, you know, like, within reason, I think that's the way that you have to look at some of these workflows in the broader sense, is like, if there are individual failures and you know that they failed, and maybe over time you can improve the rate just because you want to improve the rate, like, maybe that's the acceptable way to look at it. Yeah. Did you do some benchmarking, like, past a different case for this loop? Or what happens if you don't have a reviewer in this case, and you just straight forward pass it? Yeah. Well, we did do some straight testing, and at the same time, part of it was, we wanted to make an argument that we thought the review was important, right, that we really believed it would improve the output. So we tried a few times without it, a few times with it, and if nothing else, the paper trail was relevant, because they could see how it thought, right? So we passed them the end books, and we also said, look, here's some examples of how this happened, right? Here's the kinds of things it was talking about. If you want to configure this differently, you can do that, right? So a lot of it was we were trying to sell them on the possibility of a system like this that they could control. So we did try both ways, but it was very much more like we wanted to sort of advocate this decision. Related to that, how structured were your evals? It sounded a little bit biotech-y, just with your network. Did you have a set of books or pages that you reviewed passively? So the way we did it in this case was a combination of, again, it had to be complete, right? So if we could not translate certain pages, the job would fail. So there were a handful of times when I had to go in and say, well, it's failing because there's a weird formatting character, it doesn't even know what you have to do with it, it just dies. So that was something that required a little bit of fix. The rest of it was we took the finished, let's say, chapters, right, I didn't do the entire book, but I would take a finished chapter and pass the original and the translated version, either a plot, I did a couple things with Gemini, a little longer window, and just said, please tell me whether there's anything missing, right? I don't want you to vouch for the quality of the translation, we've already done that, I just want you to tell me if there's anything missing from the output. That essentially gave us enough confidence by the end to say, look, we have the actual outputs, we can prove that they're similar length, that was one thing we could look at, and we also proved that when we did these point analyses that they matched. But again, it was something where aside from having a human actually read the book, we didn't think that was fully sufficient. We thought we'd still need to have the human ultimately reading the books. Any other questions on this? All right, so now we'll actually talk about MCP. Half an hour in, maybe more. Okay, so first of all, now, if any of you are interested in building these things and you have either grabbed them from GitHub or are planning to do so, this is the first example that I'll give. It's very simple, but just to give you a sense of how...
+		- [[AI Notes]]
+			- #### **Handling Failures in AI Workflows**
+			- **Key realization:** AI reliability isn't about eliminating failures but ensuring the **workflow eventually succeeds**.
+			- **Approach:**
+				- **Set recursion limits** (e.g., max 50 retries).
+				- **Ignore transient failures** and reattempt processing.
+				- **Completion is the only success metric**—failure loops are acceptable as long as the system recovers.
+			- #### **Balancing Cost & Model Choice**
+			- **Sana LLM:** High-quality but expensive ($0.25 per page).
+			- **GPT-4o:** Significantly cheaper (~$85 for 15,000 pages).
+			- **Tradeoff:** Slight reduction in translation fidelity but massive cost savings.
+			- #### **Human Intercession & Workflow Design**
+			- **Main goal:** Avoid human intervention unless absolutely necessary.
+			- **Review stage:** Ensured **better translations** and provided a **paper trail** of AI reasoning.
+			- **Client Control:**
+				- Final books were delivered alongside **process logs**.
+				- Clients could adjust **workflow parameters** as needed.
+			- #### **Evaluation & Benchmarking**
+			- **Evaluated translation completeness:**
+				- Compared **original vs. translated** text using LLMs.
+				- Checked for **missing content**, not **translation quality**.
+				- Used **chapter-based** review instead of full-book validation.
+			- **Point Analysis:**
+				- Length comparison of **source vs. target** text.
+				- Spot-checked **content alignment** using Gemini’s **longer context window**.
+			- #### **Key Takeaways**
+			- **"Just make sure it finishes"** → AI engineering prioritizes **resiliency over perfection**.
+			- **Human validation remains essential for final quality checks**.
+			- **LLM-powered evaluation can flag missing translations but not ensure quality.**
+			- **Cost-performance tradeoffs are crucial when scaling AI-powered automation.**
+			  
+			  ---
+			- ### **Next: Introduction to MCP**
+			- Transitioning AI workflows to **Model Context Protocol (MCP)**.
+			- How **MCP replaces LangGraph "tools"** with **standardized agent interfaces**.
+			- **First simple example of an MCP-powered workflow** coming up next.
+	- ### **Introduction to #MCP - Agent-Based Tool Discovery & Execution**
+	  collapsed:: true
+		- #### Pics
+			- Pic 18
+				- ![Pic 18](https://lh3.googleusercontent.com/pw/AP1GczPa2cN8B4nWOHbQoJYy5-0EyUKQIJqKcc3aqwX6l2yhllUJzE9ptD6v1pZwN9WpJsFvgHzWvQnlcU4e1LUExw-w51blbTSETJ7Jd_6FcKtZtw5HjoA=w1920-h1080)
+			- Pic 19
+				- ![Pic 19](https://lh3.googleusercontent.com/pw/AP1GczPKi8KyN25LoRiaCCEeVOFeu3TQa_N0GXvJ72BP7VnJXpsmsF1pKyXAppV-S0IMeYQ9uy_meSxeKffiUZhZ3rXNZ1-S5HdmUlDjesEARgxipDbWmaU=w1920-h1080)
+		- #### Transcript
+			- > So you can see here that what's going on is, you know, the line graph itself is calling to the gateway to figure out what tools are available, right? So in this case, I've got this file system tool, right? So, you know, there's a **tool called GetFileInfo. It can list the allowed directories**.
+			- > It's pulling in a **total of 12 tools. 11 of them are the file system, and one of them is just Google Next**
+			- > I'm going to hope that this example works, I'm going to try to use both of them. So I am a Washington commander, speaking for anyone who cares. But here's an example of something that I might ask if I want topical, recent Google information, and I want to do something with it. So let's say... Hi. Let me get started. Let me spell it right.
+			- > **Can you tell me if Washington commanders lead in the 2025 NFC championship game? And if they did, please write a file that says Dallas Cowboys are losers. Because they are**.
+			- > So what we'll see here is the query goes out, and I'll rewind to some of this stuff. But fundamentally, you know, it got what I was trying to ask for, right? It said, I need to search Google to see if this happened, right? And you can see here, here's the snippet, right? You know, this is the 2025. We know that it's the Eagles and the Commanders. You know, there's other ones. But in this case, that was enough information for the LLM to say, I believe that the Dallas Cowboys are losers.
+			- > Now, one thing that's interesting is that sometimes, **depending on how you instruct it, the model will do things that error out**
+				- > in this case, it tried to write to slash 10. It does not have access to slash 10, right? It didn't make the check. With more precise instructions, you can get around that
+				- > So a big part of MCP is if you think you need to give additional direction about how to use the tools, you can, right? You know, the MCP tools are usually enough, right? In this case, it knew that it had the ability to write files. It didn't think that it had to list the allowed directories first, right? But it turns out, you know, once it figured out that this was the allowed directory, right, which comes back in the error message, it just tries again. Here you go. Now it writes it out. Dallas Cowboys are losers. It says it's specifically wrote there. And now if I go over to this, I will see Dallas Cowboys are losers. In fact, it's written in a different place. But the point is, oh, here it is. This is the most recent one. So this shows.
+		- #### [[AI Notes]]
+			- #### **Overview**
+			- **MCP (Model Context Protocol)** enables **dynamic tool discovery and execution**.
+			- The **LLM queries the MCP gateway** to find available tools.
+			- In this example, MCP exposes **12 tools**:
+				- **11 related to file system operations**.
+				- **1 tool for Google search queries**.
+				  
+				  ---
+			- #### **Example Use Case: Automated Search & File Writing**
+			- **User Prompt:**
+				- *"Can you tell me if the Washington Commanders lead in the 2025 NFC Championship game? If they did, write a file saying 'Dallas Cowboys are losers'."*
+			- **Process Breakdown:**
+				- **MCP checks tool availability**.
+				- LLM determines it needs to use **Google search**.
+				- **Search results confirm game details**.
+				- LLM generates **text based on the outcome**.
+				- **Writes the result to a file**.
+				  
+				  ---
+			- #### **Error Handling & Recovery**
+			- **Initial Error:**
+				- LLM attempted to write to **`/tmp/washington_commanders_nfc_championship.txt`**.
+				- **Access Denied** → Path not in **allowed directories**.
+			- **Automatic Retry:**
+				- LLM extracts **allowed directories from error message**.
+				- **Attempts again in the correct location**.
+				- **File successfully written**.
+				  
+				  ---
+			- #### **Key Insights on MCP Usage**
+			- **Dynamic Tool Discovery**
+				- **LLMs do not need pre-configured tools**.
+				- MCP allows them to **query available actions at runtime**.
+			- **Resilient Execution**
+				- **Tools return structured errors**, allowing the LLM to **adapt and retry**.
+				- **Fail-safe execution** → Process recovers without human intervention.
+			- **Fine-Tuning Tool Instructions**
+				- MCP allows for **additional constraints** (e.g., enforcing directory checks before writing).
+				- **Clearer tool instructions reduce errors** but are **not always necessary**.
+				  
+				  ---
+			- #### **Final Thoughts**
+			- **MCP enhances agent capabilities by exposing structured tools dynamically**.
+			- **LLMs can reason through tool selection and error handling autonomously**.
+			- **Future Work:**
+				- Further **refining tool constraints** for **smoother execution**.
+				- Expanding MCP's **tool catalog** for more complex workflows.
+	- ### **MCP Server-Client Interactions & Configurations**
+	  collapsed:: true
+		- #### Transcript
+			- > These definitions do have descriptions. So if I wanted to put something in here, and I wanted to say, you know, hey, whenever you use this file, ensure that you actually have access to the login directory, I could do it here instead. So it's kind of your choice, the server can do it. Actually, this is kind of what I think Mahesh was saying earlier, is the servers can be opinionated to the client, right? The servers can say, you have to do it this way, and the client is not really going to try to listen. So it is your choice. Any other questions on this one? I'm just curious. Has anybody else tried this sample? Not my sample, but in general, the React agent? Is this what you're trying to say? Yeah, so I haven't tried it in context yet. We did take a little sample. Yeah, like I'm putting the slides up. And I think you can see the only real difference is that normally you would have to find these tools in your Python, and in this case, you know, all I did was say what the gateway was, you know, wrote some config.json that told you what tools were there, and it just kind of worked. That is what MCP is supposed to do.
+		- #### [[AI Notes]]
+			- #### **Key Concept: Opinionated Servers vs. Flexible Clients**
+			- **MCP servers can enforce rules** on how clients use tools.
+			- Example:
+				- A server can **require** clients to **check directory access** before writing a file.
+				- The **client may not be aware** of this constraint **until it attempts execution**.
+			- **Server-side vs. client-side constraints**:
+				- **Server-side enforcement** ensures **consistent rule application**.
+				- **Client-side adjustments** allow for **flexibility** but may lead to **errors** before adaptation.
+				  
+				  ---
+			- #### **Simplified MCP Integration: Configuration-Based Tool Discovery**
+			- Traditional approach:
+				- Tools are **hardcoded in Python**.
+				- Clients must manually **define available functions**.
+			- MCP approach:
+				- **Client queries the MCP gateway**.
+				- Tools are **discovered dynamically** via `config.json`.
+				- **No manual tool definitions required** → The system "just works."
+				  
+				  ---
+			- #### **Key Takeaways**
+			- **MCP allows flexible and scalable tool integration**.
+			- **Servers dictate behavior**, while **clients adapt dynamically**.
+			- **Configuration-based discovery** simplifies deployment and maintenance.
+			- **Future Direction:** Expanding **MCP-compliant tool libraries** for broader automation use cases.
+	- ### **MCP Configuration & Multi-Agent Workflows**
+	  collapsed:: true
+		- #### Pics
+			- ##### Pic 20
+				- ![Pic 20](https://lh3.googleusercontent.com/pw/AP1GczMJmBvHkafLFkxGafgq5Jv90BMtzpycXBw2RcxN9bH1zIDKpS9ZcI2ARz8Kyr9zpEKc0pFIptYERlHv75hMMZiVMdLEp0FADcES4OHbo9WiD8R9cOE=w1920-h1080)
+			- ##### Pic 21
+				- ![Pic 21](https://lh3.googleusercontent.com/pw/AP1GczObdGCO2fI_S8Q23KYJQuVe6XMukQEKKdc4Yva8oSDSVpa-EeUepsl6IGIOf-5lzldVG_RHyXWru7vUAEF0-7fbQbmqYEglOKRwdy3bT9E6RxgBv1c=w1920-h1080)
+			- ##### Pic 22
+				- ![Pic 22](https://lh3.googleusercontent.com/pw/AP1GczO9k42H1R8-898wfwPmGwTTUB7UVXV-GN07ABu4Zv_735W1L0aBXEGrqropOyAY-qqCYmZER5_LhnboWnf3UajezcR5ex01aK1qdh4xw7smeKN2QJQ=w1920-h1080)
+			- ##### Pic 23
+				- ![Pic 23](https://lh3.googleusercontent.com/pw/AP1GczMihFxk30Xyt0J-VO6UBSHHcwfMtxLRqifSwy70P5vmjBv9RPE43gMtqaGiZ6xNESgEq9nM5WHZoeLRUFrCIyj_o4WcHucseYt2E_RewJfTh7Vxh80=w1920-h1080)
+			- ##### Pic 24
+				- ![Pic 24](https://lh3.googleusercontent.com/pw/AP1GczMEc9dL4KUO91WmuO0K5_jbv-DtM0200OMsv1goRh9U92zuKQfZiUpqbY5DgRZhbASTTlFyYdO_1T0JLWTlnxBFXRLxX0TCXMmnO8jsiT31s4gzIMg=w1920-h1080)
+			-
+		- #### Transcript
+			- > Something a little bit more complicated. Still have an orchestrator pattern. Again, you saw this before in the context of the translation. So we still think that's powerful. You have an orchestrator who is nominally in charge of routing these flows. But now we have a couple other guys, right? And they're all revolving around the MCP. Now, there are a couple reasons for this. So I'm going to try to show my notes. Where is my code? Well, I think this is it. All right. Sorry, this is not the right one. Let's see if I can find this real quick. All right, you know what? I'll just start this fresh. I'm pretty sure that it will work, so we'll start fresh. So, I'll kick this off. What should happen here is that I'm going to give it a request to look at a repo that I can find, right? Because I'm giving it access to a repo exclusively in my GitHub. That's actually the configuration that we've got here. So, you know, here, again, I'm deleting my personal access token for convenience. But you can see, you know, we're giving access to GitHub, which allows you both to read the files in a repo, as well as modify them, create branches, and distribute all the stuff that you might want. This is the only server that's allowed, right? So we've got multiple agents all using one server and the various things that are contained within it. So, if I go here, I'm going to say, Hi, please look at the repo. In fact, I'll do that here. So I'll give it a specific name term. There it is. So I'll say, look at this repo. And I'd like you to add the ability to delete some new items. This is a super simple to-do list app. So just imagine that and show it to you if you're interested. But what I'm really telling it is, go get the context yourself, right? I'm not going to give it to you. You go find it using the MCP tools. And then I want you to use your instructions, because we basically told, you know, the planner's job is to come up with, you know, sort of implementation variations. The coder's job is to code them and make new branches for them. And the orchestrator's job is to manage the process, right? To sort of govern the whole thing working. And so if I say this, fingers crossed, what I should get is a process of the orchestrator passing essentially this context around, right? You know, trying to actually give instructions to other agents, trying to give them an opportunity to do these things. Let's give it a second and see if it looks up. There we go. So you can see here, you know, and I'll try to scroll through these things as it goes, it's pulling back, you know, pretty human-unfriendly versions of the things in the repo, but now including the code, right? So it's pulling...
+		- [[AI Notes]]
+			- #### **1. Configuring MCP in `config.json`**
+			- Defines MCP **servers** dynamically instead of hardcoding them in Python.
+			- Example servers:
+				- **Filesystem (`server-filesystem`)**: Handles file operations (read/write/search).
+				- **Google Search (`mcp-google-search`)**: Enables web search via MCP.
+			- Uses **`npx`** to execute commands, making MCP tools **modular and extensible**.
+			  
+			  ---
+			- #### **2. LangGraph Coding Agent Team with MCP**
+			- Project: **Multi-agent system using LangGraph and MCP**.
+			- **Originated at the AnthropiC MCP Hackathon (Dec 2024)**.
+			- **Goal:** Enable coding agents to process requirements and propose multiple implementations.
+			  
+			  ---
+			- #### **3. Multi-Agent System Architecture**
+			- **MCP Gateway Server**
+				- Manages multiple MCP **server processes**.
+				- Provides a **unified API** for accessing tools.
+				- **Handles communication** between agents and tools.
+			- **MCP Servers**
+				- **Filesystem Server**: Reads/writes files, performs search queries.
+				- **Memory Server**: Manages **knowledge graph operations**.
+				- **Additional servers can be added** for specialized tasks.
+			- **Coding Agents**
+				- **Orchestrator**: Collects user requirements and decides task flow.
+				- **Planner**: Converts requirements into code context.
+				- **Implementation Agents**: Create multiple solutions for human review.
+				  
+				  ---
+			- #### **4. Reasoning-to-Action Loops**
+			- **Why Keep a Feedback Loop?**
+				- **Agents self-correct** when given time to reflect.
+				- Example: **Healthcare chatbots adjusting empathy levels**.
+				- **Without a loop**, the agent commits to **its first response**, even if imperfect.
+			- **Tradeoffs:**
+				- Loops **improve output quality** in complex cases.
+				- **Predictable tasks may not need loops** (e.g., simple file operations).
+				  
+				  ---
+			- #### **Key Takeaways**
+			- **MCP configuration simplifies agent-tool integration**.
+			- **Multi-agent teams enhance automation workflows**.
+			- **Feedback loops enable self-improvement in AI agents**.
+			- **Future Work:** Expanding MCP agent roles for more advanced **collaborative AI systems**.
+	- ### **Automated Code Generation with MCP & Multi-Agent Planning**
+	  collapsed:: true
+		- #### Pics
+			- ##### Pic 25
+				- ![Pic 25](https://lh3.googleusercontent.com/pw/AP1GczOU3s4x3Z27yBUM7Z49KyMDKgDmBMtSiHSY3aDWXrNNscmp2euyEy4AUlI2mVTNHnbi4p7gSbrfbrvh6ECeGQ4hJHcfw97_96jOT0g03Fds-esmEHc=w1920-h1080)
+			- ##### Pic 26
+				- ![Pic 26](https://lh3.googleusercontent.com/pw/AP1GczMrFj9R_6ehIjFoyJchRhbCDYlG2jB6_TYjDYbZ05euysP9YVIjIHvvIdndhu70I52AsXFkcAY6bjhnMCWI3zzlOYO4iZFVLjvjkOb9zXDj_vF9y64=w1920-h1080)
+		- #### Transcript
+			- > You know, like, I want this to change for the next guy in the graph, and I want to tell you where to go, right? So it actually enables you to do much more interesting routing. And so this flow, in the end, all goes well, is going to end up with a new branch sitting in my GitHub. The reason I actually like this, in fact, I don't think I showed this, but I'm not going to be here while this is cooking. The reason I like this is because we thought that this was a thing for a long time, right? This actually is a recent tweet, but this idea of, hey, look, at some point, you know, you're just going to basically say, hey, AI, here's my backlog. Here's my repo. You can't do anything that I don't want you to do, you know, without my approval anyway, but if you want to go ahead and make a new PR for, you know, features that are sitting in Ready for Dev, go for it. Maybe that's quicker and better than, you know, me spinning this up with, you know, my human team, you know, from scratch. Maybe it's not. It's going to be a team-specific thing. But, you know, Brian Armstrong at Coinbase, you know, basically says, hey, this is what's coming. You know, we're just going to start processing, essentially, our feature backlogs this way. And so this whole thing we did for the hackathon, you know, kind of does that. Let's look at all the contexts. Let's get the right things into the window. And then once we sort of understand what the problem is, the planner plans it. And I can go back and show you sort of what that looks like. And then the coder codes it. So let me see if I can find a couple of examples here. Yeah, so here, you know, the planner—and in fact, this is one thing where, like, you know, I need to fine-tune this so it does it more reliably. The planner is getting multiple approaches. So another powerful thing about this, right, is ideally, you know, especially if you don't have human direction, maybe you just want three different versions of something, right? I'll pick the one that I want, right? It's so cheap now to make this stuff that, you know, maybe I'd actually like to see multiple variations of things. And instead of, you know, explicitly planning and designing things, I curate. You know, I'm going to pick the ones that I like the best. And I'll, you know, say, hey, give me number three, but in green. You know, that's the kind of thing this opens up. And again, this is intentionally very light, right? I'm not actually saying that much to the agents about what I want them to do, right? There are prompts. I'll go over here to show you a little bit of what that looks like.
+		- #### [[AI Notes]]
+			- #### **1. AI-Driven PR Creation Workflow**
+			- **Task:** Automate **feature development** in a GitHub repo.
+			- **Flow:**
+				- User submits a request (e.g., *"Add delete functionality to a to-do app"*).
+				- **MCP-enabled agents** fetch repo context and propose solutions.
+				- **New branches and PRs are automatically created.**
+				  
+				  ---
+			- #### **2. Multi-Agent Collaboration**
+			- **Orchestrator:** Routes requests and manages agent collaboration.
+			- **Planner:** Generates **multiple implementation options**.
+			- **Coder:** Writes the code and **commits PRs** to GitHub.
+			- **Key Advantage:**
+				- **Developers curate AI-generated solutions** instead of manually coding from scratch.
+				  
+				  ---
+			- #### **3. Industry Perspective**
+			- **Brian Armstrong (Coinbase CEO) on AI Development**
+				- AI will soon **auto-generate draft PRs** for **Jira/Linear tickets**.
+				- AI-powered development will start with **low-difficulty fixes** and expand.
+				- Teams will approve changes before merging.
+				  
+				  ---
+			- #### **4. Future of AI-Augmented Engineering**
+			- **Shift from manual coding to AI-assisted development**.
+			- **Developers as curators**:
+				- AI generates multiple solutions.
+				- Humans **select, refine, and approve** the best approach.
+			- **Potential Impacts:**
+				- **Accelerates backlog processing.**
+				- **Reduces developer effort on routine tasks.**
+				- **Increases focus on high-value engineering work.**
+				  
+				  ---
+			- ### **Key Takeaways**
+			- **MCP enables AI agents to propose, implement, and iterate on software changes.**
+			- **Developers shift from writing code to selecting AI-generated solutions.**
+			- **Industry is moving towards AI-assisted PR creation for feature backlogs.**
+			- **Future Work:** Expanding AI’s ability to **handle complex engineering tasks autonomously.**
+	- ### **AI Role Constraints & Safety in Multi-Agent Systems**
+	  collapsed:: true
+		- #### Pics
+			- None
+		- #### Transcript
+			- >  There are largely constraints around behaviors that naturally, especially Claude, being smart as it is, is just going to do, right? If you don't tell them, they'll basically try to do the entire job themselves. They can see the context, right? So actually segregating them into their little roles can be difficult. If you drive the fireman, unless you can help. But in this case, we also want the planner agent to do multiple solutions. We don't want these things like, each of these guys has a job that they can't 100% see, right? And so some of this is about describing their role in relation to the other agents and just trying to make the whole thing work. It's an inexact science. I mean, that's why this really is kind of wild. It's not like this is the only right way to do it and that it always works, but it works enough at a time that it's interesting. Who's looking out for AI safety in this sort of architecture? Is it individual tools that would attach something, like an indirect prompt conjecture, if that tool was to go about to create something and that website had metadata that had an indirect prompt conjecture, or is it like an orchestrator's responsibility? I think there's a couple ways you could do it.
+		- #### [[AI Notes]]
+			- #### **1. Challenge: Role Segregation in AI Agents**
+				- **LLMs (especially Claude) tend to take on the whole task** if not explicitly constrained.
+				- **AI sees full context**, making it difficult to enforce **strictly defined roles**.
+				- **Key issue:** Ensuring **each agent only works within its assigned function**.
+			- #### **2. Role-Specific Task Management**
+				- **Planner Agent:**
+					- Generates **multiple solution paths** rather than dictating a single approach.
+				- **Orchestrator:**
+					- Ensures **agents operate independently** within their assigned roles.
+				- **Implementation Agents:**
+					- Only execute changes within their scope, avoiding broader decision-making.
+				- **Goal:**
+					- Define **clear boundaries** between agents while ensuring smooth task execution.
+					- **Imperfect but functional**—enough to be **useful and adaptable**.
+					  
+					  ---
+			- #### **3. AI Safety Considerations in Agent-Based Workflows**
+				- **Who enforces safety constraints?**
+					- **Option 1: Individual Tools**
+						- AI safety **filters can be embedded at the tool level**.
+						- Example: If a file-writing tool detects **harmful content**, it **rejects execution**.
+					- **Option 2: Orchestrator-Level Monitoring**
+						- The orchestrator **prevents dangerous tool combinations**.
+						- Example: If a **file-modification agent** attempts unauthorized changes, it is blocked.
+				- **Hybrid Approach:**
+					- **Tools attach metadata** (e.g., indirect prompt conjecture flags).
+					- **Orchestrator interprets safety signals** and **halts unsafe actions**.
+					  
+					  ---
+			- #### **4. Future Considerations for AI Safety**
+				- **Explicit agent instructions** to **avoid overreach**.
+				- **Tool-based safeguards** for critical actions.
+				- **Orchestrator as a fail-safe**, ensuring AI follows predefined safety constraints.
+				- **Adaptive AI oversight**—learning from mistakes to improve agent safety.
+				  
+				  ---
+			- ### **Key Takeaways**
+			- **AI agents need role constraints** to prevent overstepping.
+			- **Safety can be enforced at multiple levels**—tool-based, orchestrator-level, or both.
+			- **Orchestration frameworks need AI safety layers** to manage risks in **autonomous workflows**.
+			- **Future Work:** Developing **MCP-compatible safety protocols** for AI-driven agent architectures.
+	- ### **Security & Deployment Considerations for Multi-Agent AI Systems**
+	  collapsed:: true
+		- #### Pics
+			- ##### Pic 27
+				- ![Pic 27](https://lh3.googleusercontent.com/pw/AP1GczOVw3IQ8wZ3ZLE6gIbmTDWiyvJcNu5j7bM8IxDxarvhqj8qiGPrz2Iy8cK61IHHhE7MPyfLZfJr4gpIGY6Q2EPOUH5vtf8jQhFcsguWCxzPDH6jklU=w1920-h1080)
+					- > CRITICAL: The planner agent may suggest multiple solutions -- if it does, the coder agent will implement each var in separate branches and then tell you about them. This is why it's important that you don't create branches or ...
+		- #### Transcript
+			- > We typically work with clients who have pretty industrial-strength pipelines, and the pipelines do a lot of it, right? Like, they will run the same tests against bot code that they would have run against human code, and they usually catch those things. But it's a real risk. I'm not trying to be low about it. I would love to hear more about the tooling around provisioning keys that have scoped permissions, and also, like, how do you sandbox your file systems? Are you using Docker everywhere? Like, how do you make it safe? Yeah. I mean, in these cases, right, it is mostly that we're working on dev environments, and we have Dockerized stuff. Like, one thing we did for one client, we were doing some pretty large-scale changes, was we explicitly, you know, delivered them things entirely inside Docker containers that were sandboxed, and were actually just essentially new patches, right? So, you know, we didn't have their actual full repo. We just had pieces of it in time. We gave it to them. They integrated it themselves. Right? So a lot of it was just trying to break it down into manageable bit-sized pieces. There was a lot of Docker, for sure. Do you provision new keys for, like, every repo? Well, new LLM keys, or what kind of keys? Like, permission keys for the repo. Well, so, in this case, I'm using my own personal key, right, just for this environment. Yes, we do not reuse keys across humans and agents, right? You do make your own keys for the agents, so you can see exactly what they're doing. And again, most of the time, we do this locally. We're not trying to push directly into most people's environments. We want to do it to them so that we can supervise. In the examples that we saw earlier, for mobile agent, they have the agents themselves as MCP servers. Do you see a benefit to that as well? So, I think that... We think that the idea of agents calling out to tools is the right sort of local view on it, right? But the idea that, like, then the tools themselves can call out to other tools, 100%, that's totally fine, right? I don't think that we see, like... We think that it's probably more complicated to build architectures that, you know, are really trying to integrate sort of the LLM and non-LLM code, right? So, in large part, what we want, and I'll show this example, I promise I'll get there in a second, where we really did build a very, very hard line between the graph and what it's doing and the actual system, right? The actual system was giving the graph only what it needed to know at any given time and then taking back the graph's output, essentially as a suggestion, right? It was like, hey, you know, we can't take this as a thing that, you know, actually sort of fully impacts production, but we can put it in a queue, we can review it by humans or by our evals, whatever the case may be, and then, you know, ultimately integrate it. So, we have tried to keep some pretty hard lines between those lines. Could you go back to that graph real quick? Sure.
+		- #### [[AI Notes]]
+			- #### **1. AI Code Integration with Industrial Pipelines**
+				- **Bot-generated code is treated the same as human code**.
+				- **CI/CD pipelines run tests against AI-generated changes**.
+				- **Ensures AI modifications meet the same quality standards**.
+			- #### **2. Security & Access Control**
+				- **Scoped API Keys:**
+					- **Separate keys for human and AI agents**.
+					- **Per-repo permissioning** to track agent actions.
+				- **Sandboxing Strategies:**
+					- **Dockerized environments** isolate AI-generated changes.
+					- **Agents only receive a subset of the repo**—final integration is manual.
+			- #### **3. MCP Agents & Tool Chaining**
+				- **Agent-MCP Hybrid Model:**
+					- Agents **call tools**, but **tools can also call other tools**.
+					- Maintains **clear separation** between **LLM logic and system execution**.
+				- **AI-Generated Changes as Suggestions:**
+					- **Not automatically deployed**.
+					- Reviewed **via human supervision** or **automated evals**.
+					- **Queued for approval before integration**.
+			- #### **4. Key Takeaways**
+				- **Security-first approach**: Scoped keys, Dockerized environments, limited repo access.
+				- **AI-generated code must pass the same tests as human-written code**.
+				- **AI outputs are treated as "suggestions," requiring review before production use**.
+				- **Future Work:** Strengthening **MCP integration for secure, scalable multi-agent workflows**.
+	- ### **Multi-Agent AI Code Planning & Execution with MCP**
+	  collapsed:: true
+		- #### Pics
+			- ##### Pic 28
+				- ![Pic 28](https://lh3.googleusercontent.com/pw/AP1GczPdS8cBF-u9pAAS_Tt1u8uWC4bqBhQuezR54qnNfM6xS9Mx-OepLiUVRfFcTt5w6kILPSyA8pzipr3YBZ4hVjUiMZiSh_NyOQT9O1n7pC-OcppHBY8=w1920-h1080)
+		- #### Transcript
+			- > The LangGraph paradigm is that each of these nodes can either be an agent or a tool. Or, probably not both. Probably either agent or tool. And so, either what this is going to do is it's going to run an agent sort of indication with a prompt, or it's going to say, well, this is a tool node, so I'm just going to go and figure out which of these functions you're trying to call and call it and return the answer directly. So, in LineGraph, that's the way to set it up. In the model, I think, with Cloud Desktop, let's use that. So, Cloud Desktop and the idea of, you know, like, we have the core sort of Cloud agent who then just calls out to GCP. Then, you know, they, I think, are doing the same basic flow underneath the covers, where, like, Cloud is talking to the tool, which talks back. So, I think it's just not visualized that way, but it is the same basic idea. And just to follow up, do you think it's kind of more helpful to think of, because today, like, I was talking to the environment people, and there's the idea, like, like you said, tools can call tools. So, like, you know, they're doing client server, but actually, relatively, relative to other services, a server could be a client that calls another tool. So, do you think it's, I guess, like, actually helpful to distinguish the client that the user interacts with should be the orchestrator? Because, like, it's like a, it's not at the same level as another service level client. I mean, maybe another way to think about it is that you absolutely can have graphs calling other graphs. I don't have a great example of that here, like we've done a couple of times, but, like, you can have, you know, essentially this encapsulated graph completely calling another graph, which sub-executes and does whatever it wants, we can call other graphs beyond that, right? So, your system architecture can be any number of levels of these things. What they're saying about, you know, and the MCP servers can also be clients, really just says you don't have to, you know, essentially over-engineer a single thing. If it needs tools itself, it can call the tools, whether it's an LLM or, you know, just actual code. So, like, architecturally, I totally buy what they're saying. We don't really even sort of get to that level of detail. It's more just we're going to call a system that all we know is the external database. You know, it's kind of up to that system how it works.
+		- #### [[AI Notes]]
+			- #### **1. LangGraph Paradigm: Agents vs. Tools**
+				- **Each node in LangGraph is either an agent or a tool**.
+					- **Agents**: Execute reasoning steps via LLMs.
+					- **Tools**: Call predefined functions and return results directly.
+				- **Execution Model:**
+					- Agents interact **through prompts and decision-making**.
+					- Tools handle **deterministic tasks**, like fetching data or executing API calls.
+					  
+					  ---
+			- #### **2. Orchestrator-Based AI Coding Workflow**
+				- **User Request:**
+					- *"Look at this repo and add a delete function to the to-do app."*
+				- **Workflow:**
+					- **Orchestrator delegates tasks**.
+					- **MCP-enabled planner** analyzes the codebase.
+					- **Planner generates multiple implementation options**.
+					- **Coder agent implements the chosen solution**.
+					- **Final modifications are committed to GitHub**.
+					  
+					  ---
+			- #### **3. Example: Multiple Approaches to Implementing "Delete"**
+				- **Approach 1: Index-Based Deletion**
+					- Modify UI to include a **delete button**.
+					- Use **array filter() or splice()** to remove items.
+					- **Pros**: Simple, follows app’s existing logic.
+					- **Cons**: Index-based deletion can break if order changes.
+				- **Approach 2: ID-Based Deletion**
+					- Assign **unique IDs** to each item.
+					- Delete items based on **ID lookup**.
+					- **Pros**: More robust than index-based removal.
+					- **Cons**: May require modifying data structure.
+				- **Outcome:**
+					- AI **proposes multiple solutions**.
+					- Developer **selects the best fit**.
+					  
+					  ---
+			- #### **4. AI Systems as Both Clients & Servers**
+				- **MCP servers can act as clients** when invoking additional services.
+				- **Graphs can call other graphs**, enabling **nested execution architectures**.
+				- **Flexibility in AI design:**
+					- AI components can act as **autonomous services**.
+					- Orchestrators manage **high-level execution flow**.
+					  
+					  ---
+			- ### **Key Takeaways**
+				- **MCP allows agents to dynamically analyze and modify codebases.**
+				- **Multiple AI-generated solutions empower developers to curate implementations.**
+				- **Graph-based AI workflows enable scalable and modular software automation.**
+				- **Future Work:** Enhancing **multi-graph execution** for complex, interdependent AI tasks.
+	- ### **CollegeBot: AI-Driven College Search & Recommendations**
+	  collapsed:: true
+		- #### Pics
+			- ##### Pic 29
+				- ![Pic 29](https://lh3.googleusercontent.com/pw/AP1GczOau1YcLrapkhOSQujsha2XLM8xmfi6ZS9nUxRiY2VgWzW_Uj21lmqUDJyaQinUlxlTT-hF_yTL1XxR5NqwN8GqVFmTqYLJv-GfjU0doMptFAx_-uU=w1920-h1080)
+			- ##### Pic 30
+				- ![Pic 30](https://lh3.googleusercontent.com/pw/AP1GczOBT6x0mqciTy1tyt42neprKktqqQ9I7a4vdK0Na-r-EUlQf_xFy7NQCQWBtjLk2VhoN5aj--omKaqq6tS9X4rgiq1yyN2_ibu4j5AjdgRJ_-PYfnA=w1920-h1080)
+		- #### Transcript
+			- > So, I've been building this because I have three teenagers and college sucks. I am motivated to find ways to manage the process better. And also, when I wrote that Anthropic Hackathon, I wanted much credits, so I just figured I would mess around and see what I could do. So, this thing is basically taking, you know, a fair amount of data, right? You know, data about students, like this is my daughter who I'm making up much stuff about, but, you know, fundamentally trying to sort of, you know, construct a bunch of data as input to a thinking agent, right? And this thinking agent, which mostly when it reloads, is doing a couple things. So, this was built before deep research. It's built mostly on Clog, maybe a little bit of GemIIni as well. And it fundamentally is doing the same thing, you know, that, you know, you just saw on these agent graphs. But I'm not using Lengraph at all to do this, right? This is purely just bare metal, Clog, GemIIni, you know, like, when you respond, you know, use thinking tags and answer tags, whatever, whatever else it is. And it works pretty well. And it uses tools. So, this search college data tool here is an MCP server, which I'm happy to show you in a minute, right? And it's an MCP server that looks a lot like that Google search we just did. There's another one here, which is about common dataset information. This actually is essentially a GemIIni PDF parser, which, you know, again, supposed to be an MCP. You know, all the Elham knows is how to call it. It doesn't really understand what it is. And you can get some pretty interesting results, right? You know, it's able to digest this stuff. It's able to do multiple turns. You know, it talks all about, you know, the opportunities that it sees. It tries to give instructions on this. And in the end, you know, a separate agent chews on it and comes up with a map. I'm not sure what's going on with the map. Let's see if it works in here. Yeah, it's better. And, you know, essentially puts all the pins from what it found in the text on the map and, you know, tells you what it thinks about it, right? You know, a bit, and, you know, sort of different links to follow. So I just point this out because...
+		- #### [[AI Notes]]
+			- #### **1. Purpose & Motivation**
+			- **Built to simplify the college selection process**.
+			- **Personal project** inspired by the developer's experience with teenagers navigating college admissions.
+			- Developed during the **Anthropic Hackathon** to explore AI-driven decision support.
+			  
+			  ---
+			- #### **2. How It Works**
+			- **Student inputs personal data**:
+				- Academic profile (GPA, SAT/ACT).
+				- Interests and preferred majors.
+				- Location and budget constraints.
+			- **AI-driven recommendation system**:
+				- **Thinking Agent:** Processes student data and refines queries.
+				- **Search College Data Tool (MCP Server)**:
+					- Fetches **college statistics, admission data, and financial aid information**.
+					- Works like the **Google search agent** from earlier demos.
+				- **Common Dataset MCP Tool**:
+					- Parses **college PDFs** for detailed institutional data.
+			- **Multi-turn interaction**:
+				- AI refines responses based on feedback.
+				- Suggests **college options** aligned with student preferences.
+				- **Generates interactive maps** of suggested colleges.
+				  
+				  ---
+			- #### **3. Tech Stack**
+			- **Bare-metal AI implementation**:
+				- Uses **Claude & Gemini** (no LangGraph).
+				- Implements **structured prompting** (thinking tags, answer tags).
+			- **MCP Tool Integration**:
+				- AI calls external **MCP servers** for specialized data processing.
+				- College search functions similar to the **Google Search API example**.
+				  
+				  ---
+			- #### **4. Key Features & Benefits**
+			- **Personalized recommendations** based on academic and financial constraints.
+			- **Interactive mapping** of suggested colleges.
+			- **Uses AI for PDF parsing** to extract critical admissions data.
+			- **Supports multiple AI models** for better analysis and decision-making.
+			  
+			  ---
+			- ### **Key Takeaways**
+			- **MCP tools modularize AI workflows**, enabling data retrieval from diverse sources.
+			- **AI-assisted decision-making enhances the college search process**.
+			- **AI agents can work across multiple turns**, refining insights dynamically.
+			- **Future Work**: Expanding AI capabilities for **scholarship search, essay coaching, and financial aid optimization**.
+	- ### **MCP-Powered Telemedicine Assistant: AI-Guided Patient Interaction** - 31, 32, 33
+	  collapsed:: true
+		- #### Pics
+			- ##### Pic 31
+				- ![Pic 31](https://lh3.googleusercontent.com/pw/AP1GczPLxp4pLyk7ZKpEbPoHbkKaoqFK_I3R2KfLIuqy2V2JqtDdoWQ8hYM688KEK56Xz8xbQgyb7YMcTf3_83GKnP0fCPN-K6YCqkC4wNtUKW91SShgP1c=w1920-h1080)
+			- ##### Pic 32
+				- ![Pic 32](https://lh3.googleusercontent.com/pw/AP1GczNxbce42bQatodhAyf0-io4-913UqekRB-rTEy7AEylm-tW6jumX_YMsZjMxC1jCk5QwF-v-JuuC8WZ-sIzcRpIqg0fzjfY5D66-ofP5oS6HHr8CKs=w1920-h1080)
+			- ##### Pic 33
+				- ![Pic 33](https://lh3.googleusercontent.com/pw/AP1GczPEeZrP9M_jmpyzV3Cr9_7bqtlbQYKeePESxNgZJq1gJ54hs7_chAir-dp2G9vH6HdV3cBFHMSAskyuOIw2dYrgrYjj5G63rkzV3EPzhTcLlfgxrn8=w1920-h1080)
+		- #### Transcript
+			- > I can't show you this code, I can't tell you what it is, but I can give you a broad outline of this thing. It's pretty interesting. So this is a very simple, again, patient-directed. It's a virtual operations assistant, right? So imagine that this is, you know, people write in via text message with questions about a treatment that they're currently administering at home. The tools here, this is an MCP server, which we'll talk about in a second. And there is this evaluation loop, right? You know, because what we want to do is we fundamentally want to get a sense of the LLM's confidence in its own answers. So this is a piece of, you know, the kind of general emails picture. It'll make more sense when I show you the actual examples here. This, and I'll blow this up so you can see. So this is the way this is actually architected. This entire blue box is not LLM at all, and in fact is what you would really consider to be the actual system, right? This is the software that we are writing to now. It calls LimeGraph when a new message comes in and it needs to figure out what to do with it. And it passes the LimeGraph container everything that it thinks it needs to know. Not the entirety of the system, right? Not the entirety of the conversation with the user, you know, sort of everything that's going back and forth with them. But just enough to basically say, is this next message you want to send the right thing? Because what we're really trying to do is enable a small team of, you know, telemedicine associates to scale up to serve more patients. Right? And so that line is largely governed by both, you know, calling in the LimeGraph API and then using the MCP for data retrieval. Right? So this is a real world example of using this. The message that I want to send, here is my confidence about this message. And the reason that this is interesting is because in medical context, you either can't get medical advice, or you can only say approved things that are medical advice. So you basically have a list of preordained things that you can say in response to patient questions. So the reason we use an LLM here is that the LLM is very good at figuring out what the situation is, like what state the patient is in, and then it can respond with approved language. And when it does respond with approved language, it has a confidence level of 1. It's, I'm confident this is the right thing. If it had been completely off script, the patient's asking about something that doesn't know how to handle, the confidence might be 0, it might be 0.2, something that flags essentially for a human, hey, you really need to get involved. Either this is a question that we should be able to answer and we can't, or that needs human interaction. And then you can see on subsequent turns, the human can say, yeah, I got the medicine, and then you can go to the next message, right? So this whole thing is using LLMs in a very, very tightly controlled way to drive a piece of a workflow that otherwise would not have been scripted. And we use MCP in this case to give the right kind of context so that that can happen. And we did not have to write custom code for that. The MCP server we're using is just a database plugin. So that's the kind of thing that this enables. Well, a question for the reflector or reflection step. Yeah. Did you have a quantitative rubric for it, or is it LLMs judged? We did have a rubric. So in this case, we specifically said, here are the situations that correspond to these scores. And we tried to do it in a way such that we couldn't see simple math at the end and decide whether a human had to get involved. But if the confidence is 0.9, it basically just means, well, it's not exactly completely off the script. We can literally say exactly what the message should be, but we do understand the situation and we're confident this is okay. It's just not as sort of crisp as, like, they said exactly the thing I wanted to hear, and I'm saying exactly the thing they say in response. How did you get to confidence ratings like 0.9, and how did you make them different than 0.11? Are you actually using a categorical evaluation of a numerator and then a denominator and then dividing them? No, there is a rubric. So it is specifically that there is a table of, in this situation, where patients can ask irrelevant questions, right? But it can be an irrelevant question that is essentially not germane to the treatment, like, how's the weather today? And we can respond with, I'm sorry, I can't help you with that, but the confidence can still be high. It's like, I know that I'm not supposed to say anything to that, so it's okay. There are other cases where they'll say, I'm bleeding really badly or my stomach really hurts, and if we don't have an answer for that, like, if that's not an expected side effect, then we have to say, you've got to see a doctor, right? Like, you need to go contact someone, and the confidence on that is going to be low because we want a human to see it. So it's kind of different, like, this is all about placing sort of these situations such that the human always can actually oversee the process. It's not statistical. It's not, you know, kind of just a random, you know, how confident is he able to think it is. It's sort of a, this is the score that we think the system needs to surface, right, you know, so that humans can interact with it. Okay.
+		- #### [[AI Notes]]
+			- #### **1. Overview: AI-Assisted Telemedicine Messaging**
+				- **Purpose:** Automate **patient follow-ups and medication adherence** via SMS.
+				- **Architecture:**
+					- AI agent manages **conversations**.
+					- **Confidence scoring system** determines when **human intervention is required**.
+					- Uses **MCP for database lookups and structured message flows**.
+					  
+					  ---
+			- #### **2. System Architecture Breakdown**
+				- **Blue Box (Non-AI System)**
+					- **Handles all core operations** (data storage, SMS sending).
+					- Calls **LangGraph API** when LLM reasoning is needed.
+					- Only **passes minimal necessary context** to AI.
+					- Ensures **LLM does not control entire system**—it **advises, not executes**.
+				- **AI Workflow (LangGraph + MCP)**
+					- **Virtual Operations Assistant (`virtual_oa`)**
+						- Determines next message based on patient response.
+						- Uses **pre-approved language** for compliance.
+					- **Evaluator Agent (`evaluator`)**
+						- **Assigns confidence scores** to AI-generated responses.
+						- Flags **low-confidence cases for human review**.
+					- **MCP Tools**
+						- Pulls **medical records** and **treatment guidelines**.
+						- Ensures AI **adheres to approved protocols**.
+						  
+						  ---
+			- #### **3. Confidence Scoring for AI Safety**
+				- AI **must not generate unapproved medical advice**.
+				- **Confidence Scale:**
+					- **1.0** → Message matches a pre-approved script.
+					- **0.9** → Slight variation but within protocol.
+					- **<0.5** → High-risk; requires human intervention.
+				- **Example Scenarios:**
+					- *Patient asks an unrelated question (e.g., "How’s the weather?")* → High confidence in "I can’t answer that."
+					- *Patient reports a critical symptom (e.g., "I'm bleeding badly.")* → Low confidence, escalated to human.
+					  
+					  ---
+			- ### **4. Key Takeaways**
+				- **AI augments but does not replace human oversight.**
+				- **Confidence-based escalation ensures safety in medical applications.**
+				- **MCP enables structured data retrieval**, preventing hallucinated responses.
+				- **Future Work:** Expanding **AI-driven automation in clinical workflows** while maintaining strict compliance.
+		-
+	- ### **MCP-Powered Telemedicine AI: Ensuring Safe Patient Communication** 33
+		- #### Pics
+			- ##### Pic 33
+				- ![Pic 33](https://lh3.googleusercontent.com/pw/AP1GczPEeZrP9M_jmpyzV3Cr9_7bqtlbQYKeePESxNgZJq1gJ54hs7_chAir-dp2G9vH6HdV3cBFHMSAskyuOIw2dYrgrYjj5G63rkzV3EPzhTcLlfgxrn8=w1920-h1080)
+		- #### Transcript
+			- > ...your MCB server, right? So there is just some, you know, it's all on the same private subnet, you know, like it's all AWS, so we had to fund it a little bit, and that's why it was a little work. But, you know, there is basically a conversation back and forth inside the LineGraph environment, and then one conversation out, you know, for MCB. Well, you mentioned that at the prototype level, you can't use that graph at all again. Yeah. What are you, in production, what are you resorting to? So, it's that some projects are, I mentioned early on about some of the distinctions between different products we offer. So, Conductor is built on Autogen, the one that does test coverage. Again, I have a LineGraph version of it so that I can illustrate it so that we can, you know, sort of debug different versions of that flow. This is a LineGraph in part because we do want the observability base. Like, we actually are using LineGraph and LineStand together. We really like that combination. So, it's just, it depends. So, have you used through AI? I've only prototyped with it. I, and actually, it's interesting to me, like, if I didn't take AI stuff, I do want to take a look at. Again, we're not, we're trying not to be very framework, you know, sort of specific. We want to support whatever is the best tool. The main reason for us to not use through AI is just that we like the way that LineGraph allows us to explain flows to clients, right? You know, if it was entirely for our own use, I think we'd have very different requirements. I'm also, go ahead. I'm also curious in that context of the medical QA. Yeah. That we're using LLM to decide whether to send a message or not. Right. Because I'm thinking that, is it the case for, like, catastrophic error higher in that medical context than, like, translation context? Well, so, in this case, right, and try to find the right explanation. So, this middle thing right here, so imagine that there is, and there's a question about catastrophic errors, excuse me. But the idea of this flow in the middle is that when you have a message like this with a confidence of one, and most messages are going to be very high confidence, right? Because you're asking a question to somebody, you know, like, this is all, there are cases where the patient's going to reach out to us, and a lot of cases where we will send them a message saying, hey, have you taken the pills yet? Right? Like, have you done this? Right? So, remember, a lot of this is, like, you know, oncology patients or people who, you know, have, like, memory fog. Like, that's kind of the design of it. And so, we're reaching out to them, and what we really want to know is just, hey, you know, have you done the thing that you're supposed to do? And most of the time the answer is either yes or no, I'll do it in an hour. Thanks for reminding me.
+		- #### [[AI Notes]]
+			- #### **1. AI-Driven Patient Messaging for Medical Adherence**
+				- **Purpose:** Automate **check-ins with patients** to ensure they are following treatment plans.
+				- **Primary Use Cases:**
+					- **Medication reminders** for patients with memory issues (e.g., oncology patients).
+					- **Follow-up on treatment progress**.
+					- **Escalation to human agents when needed**.
+					  
+					  ---
+			- #### **2. System Architecture: Safety & Control**
+				- **LangGraph-Based Workflow**
+					- **Virtual Operations Assistant (`virtual_oa`)**
+						- Determines what message to send next.
+					- **Evaluator Agent (`evaluator`)**
+						- Scores AI-generated messages based on confidence.
+					- **MCP Server**
+						- Provides **approved medical messages**.
+						- Ensures AI responses **comply with strict guidelines**.
+				- **Message Confidence System**
+					- **Confidence 1.0:** AI message follows **approved script exactly**.
+					- **Confidence 0.9:** AI rewords message but **adheres to intent**.
+					- **Confidence <0.5:** AI **flags message for human review**.
+					  
+					  ---
+			- #### **3. AI Safety: Preventing Catastrophic Errors**
+				- **Strict AI Constraints in Medical Context**
+					- AI **cannot generate arbitrary medical advice**.
+					- **Pre-approved response templates** ensure compliance.
+					- AI **only determines which pre-approved message** to send.
+				- **Why Confidence-Based Messaging Matters**
+					- **High confidence scores allow automated responses**.
+					- **Low confidence scores trigger human intervention**.
+					- Prevents AI from making **potentially harmful recommendations**.
+					  
+					  ---
+			- ### **4. Key Takeaways**
+				- **AI assists but does not replace human oversight in healthcare.**
+				- **Confidence scoring prevents medical AI from overstepping boundaries.**
+				- **MCP servers ensure AI messages follow pre-approved treatment protocols.**
+				- **Future Work:** Expanding **telemedicine AI for broader patient support, including chronic disease management and post-surgical follow-ups**.
 	- ### [[Key Insight]] - #MCP is #Lego
 	- #langgraph is the easiest to explain of all the frameworks #Quote -- [[Person/Dan Mason]]
 		- it is #Expensive at least it gan me

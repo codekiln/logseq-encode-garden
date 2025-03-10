@@ -1,0 +1,71 @@
+# AI/ES/25/ws/4/Multi-Agent Workflows with MCP
+	- ## Pic 01
+		- ![Pic 01](https://lh3.googleusercontent.com/pw/AP1GczMn93SQDyeKmPaLOr_ENMr8W3TdB2BhcBZzT1cfWErKpvznwI_Qp2AllcqqxWtF1C68GwCZ9W6DJWlbNbM_LSbTI_MrxJW-Eb05aCbrEnBXWaA-0is=w1920-h1080)
+	- ## Pic 02
+		- ![Pic 02](https://lh3.googleusercontent.com/pw/AP1GczPnWIuBRf6ZuYHgFQ1_DXBt39LQpQpG_95nEZmslbkBoQKrQ1umfq_PfdWBC8DgxK52MwCDHiAn2v4goDOJi8D7EXbAiVO6YyEtg7iGlZGBbp16Kks=w1920-h1080)
+	- ## Pic 03
+		- ![Pic 03](https://lh3.googleusercontent.com/pw/AP1GczNe6sbez_64AB33ueakA5xcmO4ZJzhA5uv7rY7Gs-t5AtIWe124hSc8iRDDqOadc6-oEr1zi4PJUDAAj2rm3_PwlwySUKMO5wL6DstqGE5EQIo3U5Q=w1920-h1080)
+	- ## Pic 04
+		- ![Pic 04](https://lh3.googleusercontent.com/pw/AP1GczOD3Wlzm00SAMuSbnryhYDg9c1GMTiXUEAcBg5YNfgOXyPYNY1__y62P01NZ-77s4wYOxGzhRG4A5riX2Ah3HGxwUe95ViKuOLBMHkHksXoNdB0i-U=w1920-h1080)
+	- ## Pic 05
+		- ![Pic 05](https://lh3.googleusercontent.com/pw/AP1GczM2G8fIsPBjSJLh2aS53BAXqv1-t8PlqqP5r_bjLKOa8yyVGaYD9KWWaj5FCEKnd6HFo6Jn1hHLTt7hWtN5iySoxIPlunJg45Av3DxfnfgFt74APNU=w1920-h1080)
+	- ## Pic 06
+		- ![Pic 06](https://lh3.googleusercontent.com/pw/AP1GczNfFwj7qIcA0HBsnkXV0Ho8BgeBnKUjr-rFCr9I6b6MkxAR-pew2Gl-h9pOZW5E6BIyY11NF9Y4x0_Jv1RcxMwlOnzmu_h9UGlNmBxF8vj4DdsKkxA=w1920-h1080)
+	- ## Pic 07
+		- ![Pic 07](https://lh3.googleusercontent.com/pw/AP1GczNcXptVIATJkQA43R0nZnYJPO3LH2-f0lXIu3q5tUoXXigePYwcSYklCp-4H03_RDmVuMXBD9eTYkOCP79BMNs0I4QW8meqIWsTwogffe6lxgbOm6o=w1920-h1080)
+	- ## Pic 08
+		- ![Pic 08](https://lh3.googleusercontent.com/pw/AP1GczOjOLs5nwDPyNKKFJBQLKLAzwifP1FN0p505DiZJWZZDmd44345ES4P7_Q7KDVNx-egNl2hB3VXPb9wpEeZk-m9mavVCDjx-LpxmJIZyau_fAzpjQ0=w1920-h1080)
+	- ## Pic 09
+	  id:: 67cf1320-9f56-4b44-817d-258098cb31b7
+		- ![Pic 09](https://lh3.googleusercontent.com/pw/AP1GczONxbb5c-dt8HTwE1Pqj53wfH9qzzv5C4xL_hDv0fM7oQ9Emu7vemHHC495VWF4D0OEQmB8aLmN1xPEn6liOAqC94Fv3MSf-H6oghddUrnOh9arikc=w1920-h1080)
+	- ## Pic 10
+	  id:: 67cf1320-9ec7-48c9-bd77-02c363650a12
+		- ![Pic 10](https://lh3.googleusercontent.com/pw/AP1GczPi2RxG25oPWdIMjTlySOXFgYfeVcLZki_hD1pxVJ3_cmYXDeKaR4KUT6tlDF_oxgbvqrMKstnQy2SyD0uhyFJVc8yqfGetpgMkUkIMtjFFjsMBRu8=w1920-h1080)
+	- ## Pic 11
+		- ![Pic 11](https://lh3.googleusercontent.com/pw/AP1GczPbXcgquYPBJKsje7d_LrzXUBUQ3NF1w8xwNv1qhRiA1qeiHHSIgY0FVvMFfCZcDjWa0sKLHmMaLu0S0Pz2UfXpozTc8s3sa9qEXwA7aRX1QZclRs8=w1920-h1080)
+	- ## Pic 12
+		- ![Pic 12](https://lh3.googleusercontent.com/pw/AP1GczNnlijS3ak8s_WunbgNQ9Ki40HYTLH6oopznaPUaREydajKPjt1Q3HhMAsW1lK11U6hdSdpgRSlltMDgUuSq3d5mwnulJ4psz4hrYqZEL7-MKRcXbc=w1920-h1080)
+	- ## Pic 13
+		- ![Pic 13](https://lh3.googleusercontent.com/pw/AP1GczML6GC6ESWTo3PDkMAv7bPUxDPrPtpM6IIgbmS5iTcmAcV6AK2Y1UfqjQn9V6pMaNQ1xpGCKRzn-13l8asPay7EUP3HWHsBLp4Bd2yvKLusUeXQqQ0=w1920-h1080)
+	- ## Pic 14
+		- ![Pic 14](https://lh3.googleusercontent.com/pw/AP1GczNI0yS8ndd9jXZZLtwF0v6jHbmSBuQqXbj1-DdwL17FGiAEyvVZuYZQUbO2WlyEg4pK1m13gF721uSaM1cfcjKjtDLdUWiiZoc8BxnW54HK_z8WH4k=w1920-h1080)
+	- ## Pic 15
+	  id:: 67cf1320-79fc-4791-907c-ce0aa8069ef6
+		- ![Pic 15](https://lh3.googleusercontent.com/pw/AP1GczMabAv3yGj9M2mM2Vb6LLmBoi7ikWda7wZK6Zg03hKm83E2Olg6rToj-SzaIS26lF4jTVsrBkAmYapG4JXTv9n9If0q1ImHO1BmpmqPmCUKsyWpJlw=w1920-h1080)
+	- ## Pic 16
+		- ![Pic 16](https://lh3.googleusercontent.com/pw/AP1GczNOWyhXoEezmxqtlkwG-xTdatQpVmgeZ2LQXmGmQN0DhvG8wMcd1AbWmVRZbjSQJbR_nptB4NkACdEcbIAdyOyEIg9SgC5VGMKYGXScuNGPTaW3lAU=w1920-h1080)
+	- ## Pic 17
+		- ![Pic 17](https://lh3.googleusercontent.com/pw/AP1GczMHsW20KTyiWI13F7eyhQWnqRlvKaE00_MxTTrXfvEYNk_QyNV73UeikCg07vfCk2kl696Fd_3FYrJZHoSoSOFIlCj56wzqGqrEz-UQydsww4cQjSI=w1920-h1080)
+	- ## Pic 18
+		- ![Pic 18](https://lh3.googleusercontent.com/pw/AP1GczPa2cN8B4nWOHbQoJYy5-0EyUKQIJqKcc3aqwX6l2yhllUJzE9ptD6v1pZwN9WpJsFvgHzWvQnlcU4e1LUExw-w51blbTSETJ7Jd_6FcKtZtw5HjoA=w1920-h1080)
+	- ## Pic 19
+		- ![Pic 19](https://lh3.googleusercontent.com/pw/AP1GczPKi8KyN25LoRiaCCEeVOFeu3TQa_N0GXvJ72BP7VnJXpsmsF1pKyXAppV-S0IMeYQ9uy_meSxeKffiUZhZ3rXNZ1-S5HdmUlDjesEARgxipDbWmaU=w1920-h1080)
+	- ## Pic 20
+		- ![Pic 20](https://lh3.googleusercontent.com/pw/AP1GczMJmBvHkafLFkxGafgq5Jv90BMtzpycXBw2RcxN9bH1zIDKpS9ZcI2ARz8Kyr9zpEKc0pFIptYERlHv75hMMZiVMdLEp0FADcES4OHbo9WiD8R9cOE=w1920-h1080)
+	- ## Pic 21
+		- ![Pic 21](https://lh3.googleusercontent.com/pw/AP1GczObdGCO2fI_S8Q23KYJQuVe6XMukQEKKdc4Yva8oSDSVpa-EeUepsl6IGIOf-5lzldVG_RHyXWru7vUAEF0-7fbQbmqYEglOKRwdy3bT9E6RxgBv1c=w1920-h1080)
+	- ## Pic 22
+		- ![Pic 22](https://lh3.googleusercontent.com/pw/AP1GczO9k42H1R8-898wfwPmGwTTUB7UVXV-GN07ABu4Zv_735W1L0aBXEGrqropOyAY-qqCYmZER5_LhnboWnf3UajezcR5ex01aK1qdh4xw7smeKN2QJQ=w1920-h1080)
+	- ## Pic 23
+		- ![Pic 23](https://lh3.googleusercontent.com/pw/AP1GczMihFxk30Xyt0J-VO6UBSHHcwfMtxLRqifSwy70P5vmjBv9RPE43gMtqaGiZ6xNESgEq9nM5WHZoeLRUFrCIyj_o4WcHucseYt2E_RewJfTh7Vxh80=w1920-h1080)
+	- ## Pic 24
+		- ![Pic 24](https://lh3.googleusercontent.com/pw/AP1GczMEc9dL4KUO91WmuO0K5_jbv-DtM0200OMsv1goRh9U92zuKQfZiUpqbY5DgRZhbASTTlFyYdO_1T0JLWTlnxBFXRLxX0TCXMmnO8jsiT31s4gzIMg=w1920-h1080)
+	- ## Pic 25
+		- ![Pic 25](https://lh3.googleusercontent.com/pw/AP1GczOU3s4x3Z27yBUM7Z49KyMDKgDmBMtSiHSY3aDWXrNNscmp2euyEy4AUlI2mVTNHnbi4p7gSbrfbrvh6ECeGQ4hJHcfw97_96jOT0g03Fds-esmEHc=w1920-h1080)
+	- ## Pic 26
+		- ![Pic 26](https://lh3.googleusercontent.com/pw/AP1GczMrFj9R_6ehIjFoyJchRhbCDYlG2jB6_TYjDYbZ05euysP9YVIjIHvvIdndhu70I52AsXFkcAY6bjhnMCWI3zzlOYO4iZFVLjvjkOb9zXDj_vF9y64=w1920-h1080)
+	- ## Pic 27
+		- ![Pic 27](https://lh3.googleusercontent.com/pw/AP1GczOVw3IQ8wZ3ZLE6gIbmTDWiyvJcNu5j7bM8IxDxarvhqj8qiGPrz2Iy8cK61IHHhE7MPyfLZfJr4gpIGY6Q2EPOUH5vtf8jQhFcsguWCxzPDH6jklU=w1920-h1080)
+	- ## Pic 28
+		- ![Pic 28](https://lh3.googleusercontent.com/pw/AP1GczPdS8cBF-u9pAAS_Tt1u8uWC4bqBhQuezR54qnNfM6xS9Mx-OepLiUVRfFcTt5w6kILPSyA8pzipr3YBZ4hVjUiMZiSh_NyOQT9O1n7pC-OcppHBY8=w1920-h1080)
+	- ## Pic 29
+		- ![Pic 29](https://lh3.googleusercontent.com/pw/AP1GczOau1YcLrapkhOSQujsha2XLM8xmfi6ZS9nUxRiY2VgWzW_Uj21lmqUDJyaQinUlxlTT-hF_yTL1XxR5NqwN8GqVFmTqYLJv-GfjU0doMptFAx_-uU=w1920-h1080)
+	- ## Pic 30
+		- ![Pic 30](https://lh3.googleusercontent.com/pw/AP1GczOBT6x0mqciTy1tyt42neprKktqqQ9I7a4vdK0Na-r-EUlQf_xFy7NQCQWBtjLk2VhoN5aj--omKaqq6tS9X4rgiq1yyN2_ibu4j5AjdgRJ_-PYfnA=w1920-h1080)
+	- ## Pic 31
+		- ![Pic 31](https://lh3.googleusercontent.com/pw/AP1GczPLxp4pLyk7ZKpEbPoHbkKaoqFK_I3R2KfLIuqy2V2JqtDdoWQ8hYM688KEK56Xz8xbQgyb7YMcTf3_83GKnP0fCPN-K6YCqkC4wNtUKW91SShgP1c=w1920-h1080)
+	- ## Pic 32
+		- ![Pic 32](https://lh3.googleusercontent.com/pw/AP1GczNxbce42bQatodhAyf0-io4-913UqekRB-rTEy7AEylm-tW6jumX_YMsZjMxC1jCk5QwF-v-JuuC8WZ-sIzcRpIqg0fzjfY5D66-ofP5oS6HHr8CKs=w1920-h1080)
+	- ## Pic 33
+		- ![Pic 33](https://lh3.googleusercontent.com/pw/AP1GczPEeZrP9M_jmpyzV3Cr9_7bqtlbQYKeePESxNgZJq1gJ54hs7_chAir-dp2G9vH6HdV3cBFHMSAskyuOIw2dYrgrYjj5G63rkzV3EPzhTcLlfgxrn8=w1920-h1080)
+	-
