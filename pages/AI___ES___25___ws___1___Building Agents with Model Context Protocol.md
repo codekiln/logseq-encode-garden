@@ -1,14 +1,21 @@
 created-by:: [[People/Mahesh Murag]]
-tags:: [[Anthropic/Model Context Protocol]]
+tags:: [[Anthropic/Model Context Protocol]], [[MCP]]
 
 - # [Building (Agents) with Model Context Protocol](https://www.ai.engineer/summit/2025/schedule/anthropic-mcp)
-	- This workshop, from the creators of MCP, talks about the philosophy behind MCP, its impact on the broader ecosystem since launch, and how developers can use it to build context-rich AI apps and agentic experiences.
-	- met
-		- left
-			- 1 - real estate
-		- right hayden
-			- headless agents hosting
-			- headlessagents.ai
+	- ## About
+		- > This workshop, from the creators of MCP, talks about the philosophy behind MCP, its impact on the broader ecosystem since launch, and how developers can use it to build context-rich AI apps and agentic experiences.
+		- ### Video and [[Transcript]]
+			- [[AI/ES/25/ws/1/Building Agents with Model Context Protocol/YouTube]]
+		- ### Pics
+			- [[AI/ES/25/ws/1/Building Agents with Model Context Protocol/Pics]]
+			-
+	- ## Before
+		- [[My Notes]]
+			- left
+				- 1 - real estate
+				- TODO fill in
+			- right hayden
+				- startup - headlessagents.ai - headless agents hosting
 	- ## intro
 		- what is MCP
 			- APIs
