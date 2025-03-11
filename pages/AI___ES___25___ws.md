@@ -1,9 +1,15 @@
 alias:: [[AI Engineer Summit 2025 NYC Workshops]], [[AI/ES/25/AI Engineer Summit 2025 NYC Workshops]]
+date:: [[2025-02-22 Sat]]
 
-- date:: [[2025-02-22 Sat]]
 - # Workshop Schedule
 	- # Workshop 1 - 10:00 AM
 		- # #Chosen
+			- **Company:** [[Anthropic]]
+				- **Presenter:** [[Person/Mahesh Murag]] [Mahesh Murag](https://www.linkedin.com/in/maheshmurag)
+					- [[AI/ES/25/ws/1/Building Agents with Model Context Protocol]]
+						- # [Building (Agents) with Model Context Protocol](https://www.ai.engineer/summit/2025/schedule/anthropic-mcp)
+							- This workshop, from the creators of MCP, talks about the philosophy behind MCP, its impact on the broader ecosystem since launch, and how developers can use it to build context-rich AI apps and agentic experiences.
+		- # Alt
 			- **Company:** [[OpenAI]]
 				- **Presenter:** [[Person/Ilan Bigio]] [Ilan Bigio](https://www.linkedin.com/in/ilanbigio)
 					- [[AI/ES/25/ws/1/Building with OpenAI o1 o3 and Realtime]]
@@ -12,12 +18,6 @@ alias:: [[AI Engineer Summit 2025 NYC Workshops]], [[AI/ES/25/AI Engineer Summit
 						- **Presenter**: Ilan Bigio
 						- **Room**: Jay Suites A & B - 109 W 39th 2nd floor
 						- **Description**: This workshop will delve into building applications using OpenAI's latest models—4o, o1, and o3—with a focus on real-time capabilities and function calling. Participants will learn how to effectively utilize these models to create advanced AI applications.
-		- # Alt
-			- **Company:** [[Anthropic]]
-				- **Presenter:** [[Person/Mahesh Murag]] [Mahesh Murag](https://www.linkedin.com/in/maheshmurag)
-					- [[AI/ES/25/ws/1/Building Agents with Model Context Protocol]]
-						- # [Building (Agents) with Model Context Protocol](https://www.ai.engineer/summit/2025/schedule/anthropic-mcp)
-							- This workshop, from the creators of MCP, talks about the philosophy behind MCP, its impact on the broader ecosystem since launch, and how developers can use it to build context-rich AI apps and agentic experiences.
 	- # Workshop 2 - 12:30pm-2:15pm
 		- **Company:** [[Neo4j]]
 			- **Presenter:** [[Person/Alison Cossette]]
