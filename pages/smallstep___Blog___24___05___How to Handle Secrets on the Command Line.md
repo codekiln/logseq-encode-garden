@@ -3,7 +3,7 @@ tags:: [[Security]], [[Secrets]], [[CLI]], [[Article]]
 - # [How to Handle Secrets on the Command Line](https://smallstep.com/blog/command-line-secrets/)
 	- ### [[tldr]] #Summary
 	  id:: 67cdafc5-8105-48cc-a41b-adb7d83f5c10
-		- TL;DR: Best practices for #CLI secrets: (1) Use credential files with proper permissions and disk encryption; (2) Use pipes to pass secrets directly between programs; (3) Avoid [[EnvVars]] environment variables when possible; (4) **Never pass secrets directly in command arguments**; (5) Consider using a keyring facility like [[Linux/keyring]] for in-memory storage; (6) For specific tools, use their built-in credential storage (like [[dotfiles/.netrc]] for [[curl]]).
+		- TL;DR: Best practices for #CLI secrets: (1) Use credential files with proper permissions and disk encryption; (2) Use pipes to pass secrets directly between programs; (3) Avoid [[EnvVars]] environment variables when possible; (4) **Never pass secrets directly in command arguments**; (5) Consider using a keyring facility like [[Linux/keyring]] for in-memory storage; (6) For specific tools, use their built-in credential storage (like [[dotfile/.netrc]] for [[curl]]).
 	- The command line really wasn't designed for secrets. So, keeping secrets secret on the command line requires some extra care and effort.
 	- All of these values, including the precious contents of the private key file, can be seen via `ps` when these commands are running. [[ps]] finds them via `/proc/<pid>/cmdline`, which is globally readable for any process ID.
 	- ### Credentials Files

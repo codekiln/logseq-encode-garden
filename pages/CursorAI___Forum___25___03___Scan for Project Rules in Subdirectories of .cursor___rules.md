@@ -2,7 +2,7 @@ created-by:: [[Person/codekiln]]
 date-created:: [[2025/03]]
 
 - # [Scan for Project Rules in Subdirectories of .cursor/rules - Feature Requests - Cursor - Community Forum](https://forum.cursor.com/t/scan-for-project-rules-in-subdirectories-of-cursor-rules/61534)
-	- ## #OP
+	- ## #[[Original Poster]]
 		- According to [my tests](https://codekiln.github.io/logseq-encode-garden/#/page/cursorai%2Fproject%20rule%2Ftest), as of `v0.46.11`, Cursor does not activate project rules which are stored in sub-directories of the `.cursor/rules/` location. See [codekiln/cursor-project-rule-test: Testing the Cursor Project Rule feature](https://github.com/codekiln/cursor-project-rule-test/tree/main) for an independent repository you can clone and test.
 		- If Cursor did, then we would be able to use [Git Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to reference Cursor Project Rules stored in a centralized repository, shared among many users and projects. This would unlock a whole new way to share project rules between users and repositories. In my opinion, it’s very important that Cursor enable its community to collaborate together on developing mature, open source cursor rules, and adding this feature would be an important step in that direction.
 		- An example of the types of repositories that could be contributed on by multiple people is [[Person/codekiln/GitHub/cursor-ai-sdlc]], which proposes a way to use a particular directory to be a bridge between external tools like [[JIRA]] and the [[SDLC]].
