@@ -1,4 +1,4 @@
-# Webinar: From Code Completion to Multi-Agent Coding Workflows
+# Webinar: From Code Completion to Multi-Agent Coding Workflows - building [[QodoAI]] with [[langgraph]]
 	- ## Intro - [[Person/Itamar Friedman]]
 		- [[My Notes]]
 			- Says that they would have built Qodo in [[langgraph]] if it had been available
@@ -66,5 +66,22 @@
 		- [[Person/Itamar Friedman]]
 			- original documentation about mcp was about fetching context
 			- *there are some problems with using MCP with agent to agent*
-		-
+	- ## My Questions from the Discussion
+		- How does MCP fit into the architecture? Specifically:
+			- How many servers were created vs. reused?
+			- How are prompts versioned within MCP server definitions?
+			- What best practices were learned for versioning MCP servers?
+		- Is there a good pattern for abstracting custom streaming away from the graph definition in LangGraph?
+			- LangGraph's integration with the application appears tightly coupled to the graph architecture, limiting flexibility.
+			- Are there strategies to mitigate this coupling?
+		- How does LangSmith play into LLM system evaluation with LangGraph?
+			- How are datasets structured in this process?
+		- How does the "agent-to-agent" paradigm relate to MCP clients acting as both servers and clients?
+			- How does this enable chaining agents together while keeping inference controlled by the client application?
+		- Does Qodo have something similar to "Cursor Project Rules" that allows steering its functionality?
+			- What are the abstractions around this, if any?
+		- What best practices exist for managing scoped permissions with MCP servers?
+			- Other than using finely grained permissions, are there strategies for handling permissions across multiple projects?
+			- Each MCP server needs its own permissions—how can this be streamlined?
+			- Is "context credential ops" on Qodo’s product development radar?
 		-
