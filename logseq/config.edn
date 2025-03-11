@@ -305,7 +305,7 @@
  ;;  :charge-range    600}   ; Default value: 600
 
  ;; Favorites to list on the left sidebar
- :favorites ["ai/coding/technique/phased planning/ai-coding dir" "person/harper reed/blog/25/02/my llm codegen workflow atm"]
+ :favorites ["ai/es/25/ws/what i learned at the ai engineer summit workshops 2025" "ai/coding/technique/phased planning/ai-coding dir" "person/harper reed/blog/25/02/my llm codegen workflow atm"]
 
  ;; Set flashcards interval.
  ;; Expected value:

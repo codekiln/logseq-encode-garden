@@ -1,6 +1,10 @@
 # [Building Agents with Model Context Protocol - Full Workshop with Mahesh Murag of Anthropic - YouTube](https://www.youtube.com/watch?v=kQmXtrmQ5Zg&t=235s)
 	- ## [[My Notes]]
 		- See detailed notes in [[AI/ES/25/ws/1/Building Agents with Model Context Protocol]]
+		- ### Key comments from #YouTube
+			- GraphQL <-> data-sources ...is analogous to... MCP <-> data-sources and tools
+				- Just like GraphQL servers provide a standardized proxy layer over data sources, MCP servers provide a standardized proxy layer over data-sources and tools to be used as context for LLMs.
+				- FE apps are GraphQL clients. AI agents are MCP clients.
 	- ## #Video
 		- {{video https://www.youtube.com/watch?v=kQmXtrmQ5Zg}}
 			- {{youtube-timestamp 0}} [Music] hey everyone hello thank you all for coming uh my name is mahes and I'm on the applied AI team at anthropic um really excited to see a very full room and very excited that you chose me over open AI thank you very

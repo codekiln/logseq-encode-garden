@@ -1,0 +1,70 @@
+# Webinar: From Code Completion to Multi-Agent Coding Workflows
+	- ## Intro - [[Person/Itamar Friedman]]
+		- [[My Notes]]
+			- Says that they would have built Qodo in [[langgraph]] if it had been available
+			- [[System 2]]
+				- aware of environment
+			- Trad vs agentic AI
+				- agentic - multi-step, autonomous
+			- they launched qodo gen 1.0 in [[JetBrains]] etc
+			- mentions [[AlphaCodium]]
+	- ## Next - [[Person/Harrison Chase]]
+		- [[My Notes]]
+			- you made some comment about how langgraph came a day after [[AlphaCodium]]
+				- [[Flow Engineering]] stuck with him at that time, he uses that term all the
+	- ## [[Person/Itamar Friedman]]
+		- [[My Notes]]
+			- original code was AlphaCode by [[DeepMind]]
+	- ## Demo 1 - something simple
+		- [[My Notes]]
+			- ### [[Person/Yoav Orlev]]
+				- [[My Notes]]
+					- Qodo Gen extension on left in [[VSCode/Q]]
+						- Question he asks it: best web frameworks in python ...
+					- it generates an "artifact"
+						- they are printing it as a new file to see it
+					- you generate the diff *after* and then apply it to the file
+			- ### [[Person/Itamar Friedman]]
+				- [to yoav] you should hint at stability in a way that leads to [[langgraph]] above
+			- ### [[Person/Yoav Orlev]]
+				- we like [[langgraph]] to leverage the IDE
+				- this is a structured flow, not a single node
+				- we're widening this to see if we wanted to have test generated code
+			- ### [[Person/Itamar Friedman]]
+				- this is first time we're showing this
+			- ### [[Person/Harrison Chase]]
+				- are all the tools #MCP based?
+			- ### [[Person/Itamar Friedman]]
+				- the one we use internal ... follow the same interface
+			- ### [[Person/Harrison Chase]]
+				- asks if they actually have same interface or same [[MCP/Server]] under hood
+			- [[Person/Yoav Orlev]]
+				- smaller toolsets are more accurate
+			- [[Person/Itamar Friedman]]
+				- you can be a bit specific as you learn to prompt
+				- being a bit verbose with what you want you can get up to 33 tools
+				- not sure if up to 100 will work well
+	- ## Demo 2 - #MCP with [[Playwright]]
+		- [[Person/Yoav Orlev]] is using [[ArcBrowser]]
+		- doesn't go very well; the chromium browser doesn't pop up
+		- [[Person/Itamar Friedman]] mentions that it *usually* opens in the background
+	- ## Discussion of frameworks
+		- a bunch of discussion here
+	- ## Challenges with #LangGraph
+		- ### [[Person/Yoav Orlev]]
+			- talks about docs challenges with #Documentation around [[langgraph/Streaming]]
+			- [[Person/Harrison Chase]]
+				- talks about
+	- ## Things that work well
+		- [[LangSmith]] "I don't think we would manage to get where we are without
+		- ### [[Person/Harrison Chase]]
+			- mentions that we "used to have a desktop version" [[langgraph/Studio]]
+	- ## Where is it going next
+		- ### [[Person/Harrison Chase]]
+			- MCP is like agent to tools, but [something] is like agent to agent
+	- ## Talking about [[MCP]]
+		- [[Person/Itamar Friedman]]
+			- original documentation about mcp was about fetching context
+			- *there are some problems with using MCP with agent to agent*
+		-
+		-
