@@ -2,13 +2,14 @@ tags:: [[Anthropic/MCP]], #langgraph, Agentic
 created-by:: [[Person/Dan Mason]]
 
 - # AI ES 25 WS 4 - 16:10 - [Multi-Agent Workflows with MCP](https://www.ai.engineer/summit/2025/schedule/mcp-workflows)
-	- summary / intro
+	- ## about
 		- by [[Person/Dan Mason]]
 			- Agents aren't really agents unless they can discover the world outside of the chatbox, and act on it -- and the MCP (Model Context Protocol) is an emerging standard for connecting agents to physical and digital worlds. This workshop will teach you how to build your own MCP client (not just the one built into Claude) and connect it to a multi-agent system (we'll be using [[langgraph]] but this approach works with Autogen, Crew AI and many more). This allows you to build powerful workflows that go way beyond writing code, and rethink how to express business logic as a set of roles, tools, and desired outcomes. We'll walk through examples together and then put them into practice -- come with ideas of workflows you want to build! [List of existing MCP servers here]
 			- | Date   | Time          | Track      | Room                                       |
 			  |-------:|:-------------:|:----------:|:-------------------------------------------|
 			  | Feb 22 | 4:10pm-5:30pm | Workshops  | Jay Suites Sydney - 109 W 38th 2nd floor   |
-	- all pics - [[AI/ES/25/ws/4/Multi-Agent Workflows with MCP/Pics]]
+		- ### all pics - [[AI/ES/25/ws/4/Multi-Agent Workflows with MCP/Pics]]
+	- ## Notes
 	- ### MCP Workflows Workshop Notes
 		- ![original header](https://lh3.googleusercontent.com/pw/AP1GczOm3ZAMX2IL8Sc-_B69aaeUTijo4zyMdwuQCKrTKdaqHvPTbnWBAr46rGcA7nANFc5ZI9QpulWjEvvtH3OHN-d56FGrCFgpz3UImS50ufigru33YgE=w1920-h1080)
 		- ![Pic 02](https://lh3.googleusercontent.com/pw/AP1GczPnWIuBRf6ZuYHgFQ1_DXBt39LQpQpG_95nEZmslbkBoQKrQ1umfq_PfdWBC8DgxK52MwCDHiAn2v4goDOJi8D7EXbAiVO6YyEtg7iGlZGBbp16Kks=w1920-h1080)
@@ -205,7 +206,7 @@ created-by:: [[Person/Dan Mason]]
 			- **Minimal human intervention**—agent follows high-level goal instructions.
 	- ### **Key Takeaways on AI-Driven Code Upgrading with LangGraph & MCP**
 		- > Start figuring out more details about these errors, reading code, writing code. This all happens basically just by configuring, you know, this tiny little setup with, you know, some high-level instructions.
-		- > ... **this is the power both of being able to put this in this [[langgraph]] format. I can explain this to the client, right**? I can actually run it in real time. I can then go to the code, and I can show them that it runs, right? ... **this is how all the dots get connected for people who, you know, are fundamentally just not really that deep into this stuff**. #Quote from
+		- > ... **this is the power both of being able to put this in this [[langgraph]] format. I can explain this to the client, right**? I can actually run it in real time. I can then go to the code, and I can show them that it runs, right? ... **this is how all the dots get connected for people who, you know, are fundamentally just not really that deep into this stuff**. #Quote from [[Person/Dan Mason]]
 		- > But again, very, very basic setup. So you can see here, you know, that this is not a complicated configuration at all, and, you know, ultimately we got to something that, you know, I was also sort of doing the final verification on, right? You know, and now you can use Client to do, you know, some visual testing, right? Hey, we just did this work. This thing's running on port X. Go click around, you know, and see if anything is broken, right? Like, so, I used AI top to bottom, you know, to sort of achieve this result. Okay, so with that...
 		- AI notes on this section
 			- **Error Handling & Code Modification**
