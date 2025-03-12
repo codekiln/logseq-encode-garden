@@ -1,0 +1,24 @@
+# [Best (non-paid) way to turn complex PDFs into markdown : r/LangChain](https://www.reddit.com/r/LangChain/comments/1ilnftx/best_nonpaid_way_to_turn_complex_pdfs_into/)
+	- [[Original Poster]] - *[[LlamaParse/Premium]] works great for them but it is too expensive*
+		- I've tried LlamaParse and the premium mode works perfectly for what I need it for. It is too expensive for the number of documents I need to process though.
+		- I am looking for a way that I can process a large number of PDFs with similar accuracy compared to LlamaParse, without needing to pay a lot of money.
+		- Is there currently a consensus on the best performing free alternative to LlamaParse premium mode? Or a best-practice approach to create my own pipeline that could give me similar results?
+		- For a bit more context, LlamaParse accurate mode does not give me the results I need. At the least I need to ensure that the different chunks/sections in the PDFs can be separated effectively and this isn't something LlamaParse Accurate mode can’t do for my use case.
+		- UPDATE
+			- What I’ve found to be the best fit, based on a combination of speed and accuracy, is [[PyMuPdf4llm]]. It does what I need it to and is super fast. Docling is accurate too but at least the default settings for it were very slow. Another user suggested they were able to get it to be faster but for right now pymupdf4llm is doing to job.
+	- Comments
+	  id:: 67d1407f-b506-4044-b502-a3e21e9c4913
+		- [[PyMuPdf4llm]] is what the [[Original Poster]] went with
+			- [[Reddit/User/SatoshiNotMe]] -
+				- > [[Docling]] doesn’t have a way of maintaining the original page numbers (important for citations) in the conversion, and doing the conversion page by page is extremely slow. On the other hand [[PyMuPdf4llm]] has a fast page by page conversion to markdown.
+		- 10 upvotes for [[Docling]]
+		- 4 upvotes for [[marker-pdf]]
+		- 6 upvotes for [[Markitdown]]
+		- 1 upvote MegaParser
+		- 1 upvote for `marker` -
+		- 1 upvote for  [yobix-ai/extractous: Fast and efficient unstructured data extraction. Written in Rust with bindings for many languages.](https://github.com/yobix-ai/extractous)
+		- Other people recommend [[LlamaParse/Auto Mode]]
+			- > accuracy of Premium but it only switches into premium mode when necessary, so it can be a lot cheaper for the rest of your documents
+			- CEO of [[LlamaIndex]] Jerry commented about this
+		-
+		-

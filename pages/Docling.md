@@ -1,0 +1,1 @@
+# [DS4SD/docling: Get your documents ready for gen AI](https://github.com/DS4SD/docling)

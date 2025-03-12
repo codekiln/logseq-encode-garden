@@ -1,0 +1,51 @@
+# #PDF to #Markdown [[CLI Tools]]
+	- ## [[ChatGPT/Deep Research/Query]] - [PDF to Markdown Conversion](https://chatgpt.com/c/67d145bf-8c40-800a-b1e5-07671a210396)
+		- ### **Query: The State of the Art in Local Command-Line PDF to Markdown Conversion**
+		  id:: 67d14d5f-738e-4189-9323-64e17723b94e
+			- #### **Primary Objective:**
+				- Identify **the best open-source and battle-tested command-line tools** for converting PDFs to **CommonMark-compliant Markdown** while preserving structure, formatting, and readability. The tools must not require **external APIs** (but LLM APIs are okay) and should be installable via package managers , straightforward compilation, or in a Docker image.
+			- #### **Core Requirements:**
+				- **Markdown Output**:
+					- CommonMark-compliant Markdown (GitHub Flavored Markdown preferred).
+					- Fenced code blocks (`````) should include language annotation.
+					- Bold (`**bold**`) and italic (`*italic*`) text should be preserved.
+					- Strikethrough (`~~text~~`), blockquotes (`> text`), and lists (`- item` / `1. item`) should be correctly formatted.
+					- Line breaks should be normalized for readability (not preserved from the PDF).
+				- **Images & Non-Text Elements**:
+					- Extract and save images separately with relative markdown references (`![alt text](image.png)`).
+					- **Bonus**: Any support for auto-generating alt text for images.
+					- Convert simple tables to Markdown tables; for complex tables, extract them into `.csv` files and reference them in Markdown.
+				- **Structural & Semantic Preservation**:
+					- Detect and apply proper heading levels (`# H1`, `## H2`, `### H3`) for accessibility and screen reader compatibility.
+					- Maintain logical reading order in multi-column PDFs (especially for academic papers).
+					- Support footnotes in Markdown format, positioned at the **end of the document** (not per page).
+				- **Metadata Handling**:
+					- Extract PDF metadata (title, author, creation date) into **YAML frontmatter** (preferred) or another structured format.
+				- **Performance & Execution**:
+					- Optimized for **accuracy over speed** (handling large PDFs is expected).
+					- No external API calls; must work entirely offline.
+					- Installable via `pip`, `brew`, `cargo`, or `apt`; compiling from source is acceptable but not ideal.
+					- Single-file processing is sufficient, but batch-processing support is a plus.
+			- #### **Secondary Considerations:**
+				- **OCR Support (For Future Research, Not Required in Primary Tool)**:
+					- If OCR tools exist for extracting text from scanned PDFs into Markdown, document best practices.
+					- How OCR-based Markdown extraction tools handle citations, errors, and structured references.
+				- **Tooling Maturity & Community Support**:
+					- Only consider **actively maintained** open-source tools with strong GitHub activity and issue tracking.
+					- If a proprietary tool exists that **meets all criteria and is free**, document it as well.
+					- No experimental, proof-of-concept, or abandoned projects.
+			- #### **Nice-to-Have Features (Non-Essential but Valuable):**
+				- Structured CLI output (e.g., JSON) for programmatic processing.
+				- The ability to split large documents into multiple Markdown files with **relative links**.
+				- Handling of internal document references (e.g., footnotes, citations).
+				- Support for extracting vector-based diagrams into **SVG** format.
+		- ### **Execution:**
+			- **Identify 1-3 best tools** that match the above requirements.
+			- **Contextual reliability**: Prefer references from respected engineering teams, active GitHub projects, or technical blogs over casual forum discussions (e.g., prioritize engineering blogs, well-documented repositories).
+			- **Comparison analysis**: If multiple tools exist, compare their strengths, weaknesses, and any trade-offs.
+	- ## Research, Reverse Chron
+		- [[LangChain/Reddit/25/02/Best non-paid way to turn complex PDFs into markdown]]
+			- {{embed ((67d1407f-b506-4044-b502-a3e21e9c4913))}}
+		- [[Reddit/learnpython/24/08/What is the best way to convert well-formatted PDF to Markdown]]
+			- {{embed ((67d143cc-c4d7-4c15-8e71-599851292f0e))}}
+-
