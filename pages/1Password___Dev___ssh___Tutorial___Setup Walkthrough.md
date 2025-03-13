@@ -1,5 +1,6 @@
 # Setting up 1Password Dev SSH Support
 	- ## Prerequisites
+		- [[1Password/Dev/Doc/CLI/Get Started]]
 		- enable [[1Password/Desktop/Settings/Developer/Show 1Password Developer experience]]
 		- get some SSH keys into 1Password
 			- see [[1Password/How To/Import an SSH Key]] to import an SSH key
