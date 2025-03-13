@@ -1,6 +1,6 @@
 # Setting up 1Password Dev SSH Support
 	- ## Prerequisites
-		- [[1Password/Dev/Doc/CLI/Get Started]]
+		- install [[OP]] - see [[1Password/Dev/Doc/CLI/Get Started]]
 		- enable [[1Password/Desktop/Settings/Developer/Show 1Password Developer experience]]
 		- get some SSH keys into 1Password
 			- see [[1Password/How To/Import an SSH Key]] to import an SSH key
@@ -13,6 +13,7 @@
 				- This **will help you recognize the SSH key** if you have more than one.
 				- **Button Options:**
 					- [Use Key Fingerprints Only]
+					  id:: 67d29d5f-451e-41d7-868c-381cae45301e
 					- [Use Key Names]
 				- ##### [[My Notes]]
 					- this is a #Hypothesis but *presumably* **all** the SSH keys available in your current 1Password vaults will be persisted to disk either as a key title or a fingerprint, which is more likely than not, **more than you need**
@@ -34,9 +35,19 @@
 				- **Options:**
 					- [Copy Snippet]
 					- [Edit Automatically]
-		- now the SSH agent should be configured
+		- ### Migrating to using the SSH agent
+			- At this point, you may want to move your [[ssh/Key/Private]] and update your [[ssh/config]] to no longer reference it
+				- for example `cd ~/.ssh && mkdir -p tbd && mv <PRIVATE_KEY_NAME> tbd/<PRIVATE_KEY_NAME>.to_be_deleted.txt`
+			- After doing that, try `ssh -T git@github.com` to try testing out whether your keys are loaded
+				- you might get permission denied, which might mean that your keys are not stored in a vault that makes them an [eligible key](https://developer.1password.com/docs/ssh/agent/#eligible-keys) [[1Password/Dev/Doc/SSHnGit/SSH Agent/Overview/Eligible Keys]]
+		- ### Ensure your SSH key is in Eligible Keys
+			- See [[1Password/Dev/Doc/SSHnGit/SSH Agent/Overview/Eligible Keys]] for an overview, but in particular, note that if your key is in a custom vault, **it is not eligible by default** and the solution is to create a 1Password SSH Agent Config File;  [SSH agent config file | 1Password Developer](https://developer.1password.com/docs/ssh/agent/config/) [[1Password/Dev/Doc/SSHnGit/SSH Agent/Agent Config File]]
+			- In particular, if you have selected to use key fingerprints only as in ((67d29d5f-451e-41d7-868c-381cae45301e)), you may want to [use IDs as values](https://developer.1password.com/docs/ssh/agent/config/#use-ids-as-values), which requires special configuration
+				- > To find and copy an item ID, go to the [**Advanced** settings](onepassword://settings/advanced) in the 1Password app and turn on **Show debugging tools**. Find the item you want and select it, then select  > **Copy UUID**. Then paste the UUID value in the config file entry.
+				- > You can also [use 1Password CLI to find the IDs for your items, vaults, and accounts](https://developer.1password.com/docs/cli/reference/#unique-identifiers-ids).
 	- ## Follow-up Configuration
 		- ### Review [[1Password/Desktop/Settings/Developer/SSH Agent/Advanced]] options
+		  collapsed:: true
 			- **Ask approval for each new:**
 				- `application and terminal session` (dropdown)
 			- **Remember key approval:**
@@ -51,9 +62,11 @@
 				- `Terminal` (dropdown to pick terminal)
 					- [[My Note]] - you likely want to customize this to your preferred [[Terminal]] program rather than using the default
 		- ### Command-Line Interface (CLI)
+		  collapsed:: true
 			- [x] **Integrate with [[1Password/Dev/CLI]]**
 				- Use the desktop app to sign in to 1Password in the terminal.
 		- ### Watchtower ([[1Password/Dev/Watchtower]])
+		  collapsed:: true
 			- [x] **Check for developer credentials on disk**
 				- See [[1Password/Dev/Doc/Watchtower]]
 			- **Options:**

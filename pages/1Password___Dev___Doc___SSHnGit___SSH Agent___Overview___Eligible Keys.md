@@ -1,0 +1,9 @@
+# [Eligible Keys for 1Password SSH Agent](https://developer.1password.com/docs/ssh/agent/#eligible-keys)
+	- or the 1Password SSH agent to work with your SSH keys, your 1Password SSH key items must meet the following requirements. They must be:
+		- [Generated](https://developer.1password.com/docs/ssh/manage-keys/#generate-an-ssh-key) or [imported](https://developer.1password.com/docs/ssh/manage-keys/#import-an-ssh-key) using the `SSH Key` item type (which supports [`Ed25519` or `RSA`](https://developer.1password.com/docs/ssh/manage-keys/#supported-ssh-key-types) key types).
+		- Stored in the vaults [the SSH agent is configured to use](https://developer.1password.com/docs/ssh/agent/#configuration) in 1Password. By default, this is the [Personal](https://support.1password.com/1password-glossary/#personal-vault), [Private](https://support.1password.com/1password-glossary/#private-vault), or [Employee](https://support.1password.com/1password-glossary/#employee-vault) vault of any 1Password account you're signed in to.
+		- Active items (not archived or deleted).
+	- Any key meeting these requirements will automatically be available in the SSH agent for authentication. You will still be required to explicitly [authorize any request](https://developer.1password.com/docs/ssh/agent/security/#authorization-model) an SSH client makes to use your keys.
+	- To see a list of all keys that the agent has available, [set the `SSH_AUTH_SOCK` environment variable](https://developer.1password.com/docs/ssh/get-started/#step-4-configure-your-ssh-or-git-client) and run:
+		- `ssh-add -l`
+		- [[My Note]] *if there are no identities available, it will say "The agent has no identities"*
