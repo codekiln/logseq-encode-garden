@@ -1,0 +1,1 @@
+alias:: [[SSH Public Key]]

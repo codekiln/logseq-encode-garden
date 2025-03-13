@@ -5,7 +5,7 @@ date-created:: [[2022/07]]
 		- {{video https://www.youtube.com/watch?v=z67zoIN8sCA}}
 			- ### [[My Notes]]
 			  id:: 67cff1ee-baac-4066-a027-6cac39f06983
-				- [[Password/Floris van der Grinten]] provides a competent overview of how to use [[op]] CLI tool to be an [[ssh/agent]] as well as how to use it to inject secret references using a [[Biometric]] unlock that persists in a shell session.
+				- [[Person/Floris van der Grinten]] provides a competent overview of how to use [[op]] CLI tool to be an [[ssh/agent]] as well as how to use it to inject secret references using a [[Biometric]] unlock that persists in a shell session.
 				- After watching this video I had more confidence that Biometrics could be used to get secrets off of disk in all the "normal" cases, but I still have questions about how this interacts with local VMs and Docker.
 				- Runtime: 16.5 min
 					- ((67cff279-ee66-4500-8b2a-e07261d61e00))

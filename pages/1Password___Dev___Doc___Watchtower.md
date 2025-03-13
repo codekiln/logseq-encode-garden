@@ -1,0 +1,2 @@
+# [1Password Developer Watchtower | 1Password Developer](https://developer.1password.com/docs/watchtower/?utm_medium=organic&utm_source=oph&utm_campaign=macos)
+	- 1Password Developer Watchtower can check for developer credentials stored on your local disk and alert you about credentials that don't follow best security practices, such as credentials stored in plaintext or SSH keys that use outdated cryptography.

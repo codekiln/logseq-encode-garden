@@ -1,0 +1,3 @@
+# [SSH Bookmarks](https://support.1password.com/developer/#ssh-bookmarks)
+	- SSH Bookmarks (see [[1Password/Dev/Doc/Manage SSH Bookmarks in 1Password]]) allow you to quickly connect to the SSH hosts you frequently use, directly from 1Password.
+	- Learn more about [SSH Bookmarks](https://developer.1password.com/docs/ssh/bookmarks), including how to generate a [1Password configuration file](https://developer.1password.com/docs/ssh/bookmarks#ssh-configuration-files) that automatically maps your SSH hosts to keys.
