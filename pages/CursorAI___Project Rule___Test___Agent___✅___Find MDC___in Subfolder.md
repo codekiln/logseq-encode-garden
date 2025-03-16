@@ -1,0 +1,21 @@
+# Can Cursor Agent Mode pick up mdc files in subfolders? **YES**
+	- Tests whether [[CursorAI/Agent Mode]] activates `.mdc` project rules by description when they are found in a subdirectory of `.cursor/rules`, such as in `.cursor/rules/subfolder/*.mdc`
+	  id:: 67cd60f9-b734-486d-b050-7c9527e32250
+	- ## Test Cursor Project Rule File - [[CursorAI/Test/Fixture/Subfolder Favorite Apples project rule]]
+		- Install this cursor rule in the specified location (inside the `subfolder`):
+			- [.cursor/rules/subfolder/test-favorite-apples.mdc](https://github.com/codekiln/logseq-encode-garden/blob/main/.cursor/rules/subfolder/test-favorite-apples.mdc)
+	- ## Test
+		- {{embed [[CursorAI/Project Rule/Test/Standard Setup]]}}
+		- Activate Agent mode in Cursor chat
+		- Type "what are my favorite apples?" and hit enter
+	- ## Expected Behavior
+		- Cursor Agent surfaces the correct rule
+		- Cursor Agent answers according to the contents of the rule
+	- ## Observed Behavior
+		- ### `0.47.5` - PASS
+			- Cursor surfaces `Rule: subfolder/test-favorite-apples`
+			- > Based on the rule, I can tell you about the interesting connection between Apple Computer (now Apple Inc.) and the McIntosh apple variety. The Macintosh computer line, first introduced in 1984, was actually named after the McIntosh apple - though with a slightly different spelling.The McIntosh apple was discovered by John McIntosh in 1811 as a chance seedling on his farm in Ontario, Canada. Jef Raskin, who started the Macintosh project at Apple, named it after his favorite type of apple, the McIntosh. However, the spelling was changed to "Macintosh" to avoid potential trademark issues with McIntosh Laboratory, an audio equipment manufacturer.This naming choice aligned well with Apple's fruit-themed branding, and the McIntosh apple's reputation as a high-quality, widely popular apple variety made it a fitting namesake for what would become one of the most influential computer lines in history.Would you like me to search for more specific information about either the McIntosh apple variety or the history of Apple's computer naming?
+		- ### `0.46.11`
+			- Cursor Agent searches the codebase for the keyword
+			- "I don't see any rules or information in the codebase about favorite apples. The only rule available is about favorite cars."
+-

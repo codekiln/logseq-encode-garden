@@ -18,7 +18,7 @@ tags:: [[Py/Module]]
 	  - Type-safe representation of sextant coordinates and characters
 	  - Hierarchical organization of sextant characters by number of activated cells
 	  - Efficient mapping between coordinate sets and their corresponding Unicode characters
-	  - Utilities for converting between string-based and object-based coordinate representations
+	  - Simple string-based coordinate system ("1A", "1B", etc.)
 	  
 	  The module is designed to be used in any application requiring text-based graphics, such as:
 	  - Terminal-based user interfaces
@@ -41,8 +41,8 @@ tags:: [[Py/Module]]
 	      List,
 	      Tuple,
 	      Type,
+	      cast,
 	  )
-	  from pydantic import BaseModel, Field, validator
 	  from abc import ABC, abstractmethod, isabstract
 	  
 	  
@@ -61,17 +61,6 @@ tags:: [[Py/Module]]
 	  COORD_3B: SextantCoordinateString = "3B"
 	  
 	  
-	  class SextantColumn(NamedTuple):
-	      column_a: bool
-	      column_b: bool
-	  
-	  
-	  class SextantRow(NamedTuple):
-	      row_1: SextantColumn
-	      row_2: SextantColumn
-	      row_3: SextantColumn
-	  
-	  
 	  class SextantChar(NamedTuple):
 	      """Represents a sextant Unicode character with its description."""
 	  
@@ -82,6 +71,28 @@ tags:: [[Py/Module]]
 	      def __str__(self) -> str:
 	          """Returns the Unicode character when the object is converted to string."""
 	          return self.unicode
+	  
+	  
+	  class SextantCoord(NamedTuple):
+	      """Represents a coordinate in the sextant grid with row (1-3) and column (0-1)."""
+	  
+	      row: int  # 1-3
+	      col: int  # 0 for A, 1 for B
+	  
+	      @classmethod
+	      def from_coordinate_string(
+	          cls, coord_string: SextantCoordinateString
+	      ) -> "SextantCoord":
+	          """Creates a SextantCoord from a coordinate string (e.g., '1A')."""
+	          row = int(coord_string[0])
+	          col = 0 if coord_string[1] == "A" else 1
+	          return cls(row=row, col=col)
+	  
+	      def to_coordinate_string(self) -> SextantCoordinateString:
+	          """Converts the coordinate to its string representation."""
+	          col_letter = "A" if self.col == 0 else "B"
+	          coord_str = f"{self.row}{col_letter}"
+	          return cast(SextantCoordinateString, coord_str)
 	  
 	  
 	  class SextantCoordMapping(NamedTuple):
@@ -455,57 +466,6 @@ tags:: [[Py/Module]]
 	          )
 	  
 	  
-	  class SextantCoordinate(BaseModel):
-	      """
-	      Represents a single coordinate within a sextant grid cell.
-	  
-	      A sextant grid divides each character cell into a 3×2 grid (three rows, two columns).
-	      This class represents a single position within that grid, specified by a row (1-3)
-	      and column (A or B).
-	  
-	      Attributes:
-	          row: Integer from 1 to 3 representing the row (top to bottom)
-	          col: String, either "A" or "B", representing the column (left or right)
-	  
-	      Example:
-	          SextantCoordinate(row=1, col="A")  # Top-left position
-	          SextantCoordinate(row=3, col="B")  # Bottom-right position
-	      """
-	  
-	      row: int = Field(..., ge=1, le=3)
-	      col: Literal["A", "B"]
-	  
-	      @validator("col")
-	      def validate_col(cls, v):
-	          if v not in {"A", "B"}:
-	              raise ValueError('Column must be "A" or "B"')
-	          return v
-	  
-	      @classmethod
-	      def from_string(cls, coord_str: SextantCoordinateString):
-	          """
-	          Creates a SextantCoordinate from a string representation.
-	  
-	          Args:
-	              coord_str: A string in the format of row number (1-3) followed by column letter (A or B),
-	                         e.g., "1A", "2B", "3A"
-	  
-	          Returns:
-	              A new SextantCoordinate object
-	  
-	          Raises:
-	              ValueError: If the string format is invalid
-	          """
-	          if len(coord_str) != 2:
-	              raise ValueError("Coordinate string must be of length 2")
-	          row_part, col_part = coord_str
-	          try:
-	              row = int(row_part)
-	          except ValueError:
-	              raise ValueError("Row must be an integer between 1 and 3")
-	          return cls(row=row, col=col_part.upper())
-	  
-	  
 	  # Function to convert mappings to a dictionary with frozensets as keys
 	  def create_sextant_dict(
 	      mappings: List[SextantCoordMapping],
@@ -527,7 +487,6 @@ tags:: [[Py/Module]]
 	  )
 	  
 	  # Create the main mapping dictionary from the flattened cell mappings
-	  # Maps frozensets of coordinate strings (e.g., frozenset(["1A", "1B"])) to Unicode characters
 	  SEXTANT_CHAR_MAP: Dict[FrozenSet[SextantCoordinateString], str] = {
 	      coords: char
 	      for cell_count_dict in CELL_MAPPINGS_BY_ACTIVE_CELLS
@@ -537,57 +496,57 @@ tags:: [[Py/Module]]
 	  A dictionary mapping sets of string-based coordinates to their corresponding Unicode sextant characters.
 	  
 	  This dictionary uses frozensets of coordinate strings (e.g., frozenset(["1A", "1B"])) as keys,
-	  and the corresponding Unicode sextant character as values. It serves as an intermediate mapping
-	  that is used to build the SEXTANT_MAP dictionary.
+	  and the corresponding Unicode sextant character as values.
 	  
 	  Example:
 	      # The character with top row filled has coordinates "1A" and "1B" activated
 	      char = SEXTANT_CHAR_MAP[frozenset(["1A", "1B"])]  # Returns "🬂"
 	  """
 	  
-	  # Create a mapping from sets of SextantCoordinate objects to Unicode characters
-	  # This transforms the string-based coordinates in SEXTANT_CHAR_MAP to SextantCoordinate objects
-	  # Used by get_sextant_character() to look up characters based on coordinate objects
-	  SEXTANT_MAP: Dict[FrozenSet[SextantCoordinate], str] = {
-	      frozenset(SextantCoordinate.from_string(coord) for coord in coords): char
-	      for coords, char in SEXTANT_CHAR_MAP.items()
-	  }
-	  """
-	  A dictionary mapping sets of SextantCoordinate objects to their corresponding Unicode sextant characters.
 	  
-	  This is the main lookup dictionary used by the get_sextant_character() function. It transforms
-	  the string-based coordinates in SEXTANT_CHAR_MAP to SextantCoordinate objects, allowing for
-	  a more structured and type-safe interface.
-	  
-	  Example:
-	      # The character with top row filled has coordinates (1,A) and (1,B) activated
-	      coords = frozenset([SextantCoordinate(row=1, col="A"), SextantCoordinate(row=1, col="B")])
-	      char = SEXTANT_MAP[coords]  # Returns "🬂"
-	  """
-	  
-	  
-	  def get_sextant_character(active_cells: Set[SextantCoordinate]) -> str:
+	  def get_sextant_character(
+	      active_cells: Set[SextantCoordinateString] | Set[SextantCoord],
+	  ) -> str:
 	      """
 	      Returns the Unicode sextant character corresponding to the given set of active cells.
 	  
-	      This function maps a set of active coordinates within a sextant grid to the appropriate
-	      Unicode character from the "Symbols for Legacy Computing" block that visually represents
-	      those active positions.
+	      This function maps a set of coordinates (either as strings or SextantCoord objects) within
+	      a sextant grid to the appropriate Unicode character from the "Symbols for Legacy Computing"
+	      block that visually represents those active positions.
+	  
+	      The coordinate system can use either:
+	      1. String format where the first character is the row number (1-3) and the second
+	         character is the column letter (A or B). For example: "1A", "1B", etc.
+	      2. SextantCoord objects with row (1-3) and col (0 for A, 1 for B) attributes.
 	  
 	      Args:
-	          active_cells: A set of SextantCoordinate objects representing the positions that
-	                       should be activated (filled) in the resulting character
+	          active_cells: A set of coordinates (either strings like {"1A", "1B"} or
+	                       SextantCoord objects) representing the positions that should be
+	                       activated (filled) in the resulting character
 	  
 	      Returns:
 	          A Unicode string containing a single sextant character with the specified cells activated.
 	          Returns "?" if no matching character is found for the given set of coordinates.
 	  
-	      Example:
-	          # Get character with top-left and bottom-right cells activated
-	          top_left = SextantCoordinate(row=1, col="A")
-	          bottom_right = SextantCoordinate(row=3, col="B")
-	          char = get_sextant_character({top_left, bottom_right})  # Returns "🬟"
+	      Examples:
+	          # Using string coordinates
+	          char = get_sextant_character({"1A", "3B"})  # Returns "🬟"
+	  
+	          # Using SextantCoord objects
+	          char = get_sextant_character({SextantCoord(1, 0), SextantCoord(3, 1)})  # Returns "🬟"
 	      """
-	      return SEXTANT_MAP.get(frozenset(active_cells), "?")  # Return '?' if not found
+	      # Convert SextantCoord objects to coordinate strings if needed
+	      coord_strings: Set[SextantCoordinateString]
+	      if active_cells and isinstance(next(iter(active_cells)), SextantCoord):
+	          coord_strings = {
+	              coord.to_coordinate_string()
+	              for coord in cast(Set[SextantCoord], active_cells)
+	          }
+	      else:
+	          coord_strings = cast(Set[SextantCoordinateString], active_cells)
+	  
+	      return SEXTANT_CHAR_MAP.get(
+	          frozenset(coord_strings), "?"
+	      )  # Return '?' if not found
 	  
 	  ```

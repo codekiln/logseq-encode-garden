@@ -5,7 +5,7 @@
 	- This page focuses on how to achieve collaborative sharing of versioned, vetted project rules across repositories and users.
 	- ## It is not currently feasible to create git submodules under `.cursor/rules`
 		- It would be great if Cursor sourced project rules in subdirectories. This would enable a modular and related collection of cursor project rules to be located in a single git repository. Then downstream projects could use [[git submodules]] to link them in under `.cursor/rules/<submodule_folder>`. Any changes to the rule could be contributed back to the source repository for sharing with others.
-		- Unfortunately, according to my tests at [[CursorAI Project Rule Tests]], in particular, [[CursorAI/Project Rule/Test/Agent/❌/Find MDC/in Subfolder]], this is not currently possible.
+		- Unfortunately, according to my tests at [[CursorAI Project Rule Tests]], in particular, [[CursorAI/Project Rule/Test/Agent/✅/Find MDC/in Subfolder]], this is not currently possible.
 		- See [[CursorAI/Forum/25/03/Scan for Project Rules in Subdirectories of .cursor rules]] for a feature request that has been submitted.
 	- ## Possible workarounds
 		- ### Copy and paste

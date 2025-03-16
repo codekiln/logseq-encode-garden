@@ -257,7 +257,7 @@ tags:: [[Anthropic/Model Context Protocol]], [[MCP]]
 					- Outputs execution plan to `"output/execution_plan.md"`
 					- Runs up to **5 iterations**
 			- #### [[My Notes]]
-				- ### Here's [[IDE/Windsurf]]
+				- ### Here's [[Windsurf]]
 					- they have their own ui inside of their agent
 					- other applications don't call them tools (one calls them extensions)
 						- -> which IDE is that? booz?

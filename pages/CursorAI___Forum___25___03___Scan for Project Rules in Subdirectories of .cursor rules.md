@@ -8,3 +8,5 @@ date-created:: [[2025/03]]
 		- An example of the types of repositories that could be contributed on by multiple people is [[Person/codekiln/GitHub/cursor-ai-sdlc]], which proposes a way to use a particular directory to be a bridge between external tools like [[JIRA]] and the [[SDLC]].
 		- A number of users in the community have been interested in this functionality; see [Mastering Cursor Rules: A Developer’s Guide to Smart AI Integration - DEV Community](https://dev.to/dpaluy/mastering-cursor-rules-a-developers-guide-to-smart-ai-integration-1k65) for an example.
 		- I’ve listed a number of dynamics and workarounds at [CursorAI/How To/Share Cursor Project Rules Across Repositories and Users](https://codekiln.github.io/logseq-encode-garden/#/page/cursorai%2Fhow%20to%2Fshare%20cursor%20project%20rules%20across%20repositories%20and%20users).
+	- [[My Notes]]
+		- This is now possible; see [[CursorAI/Project Rule/Test/Agent/✅/Find MDC/in Subfolder]]
