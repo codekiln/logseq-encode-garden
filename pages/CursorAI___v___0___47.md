@@ -1,0 +1,4 @@
+# [Changelog - Mar 11, 2025 | Cursor - The AI Code Editor | Cursor - The AI Code Editor](https://www.cursor.com/changelog/reliability-keyboard-shortcuts-early-access-opt-in)
+	- **Auto select model**: We choose the most appropriate premium model for the task at hand based on performance, speed, and availability so you get performance even during model degradation or outages.
+	- **Rules**: Allow nested `.cursor/rules` directories and improved UX to make it clearer when rules are being applied.
+		- Awesome, I asked for this in [[CursorAI/Forum/25/03/Scan for Project Rules in Subdirectories of .cursor rules]]

@@ -137,7 +137,7 @@ icon:: 🎯
 	- **LearnVSCode_03_Python** log [[2025/t1/w03/d7]] - [[2025/01/19]] - [[Sun, 2025/01/19]]
 		- 07:14 - #Learned how to set [[Python/Environment/Variables/PYTHONDONTWRITEBYTECODE]] by default in [[VSCode]] - [[VSCode/Language/Python/Tips/Source Dotenv in Settings Json to Avoid Cache]]
 		  id:: e40fa7f2-9b33-4445-a8ba-d520baa1af2c
-			- put this in `.vscode/settings.json` in the repo:
+			- put this in `.vscode/settings.json` [[VSCode/settings.json]] in the repo:
 				- ```json
 				  {
 				      "python.envFile": "${workspaceFolder}/.env"

@@ -1,0 +1,25 @@
+# [visual studio code - VSCode - Importing keyboard shortcuts - Stack Overflow](https://stackoverflow.com/questions/45840945/vscode-importing-keyboard-shortcuts)
+	- comment1
+		- you can use this extension [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) this will sync extensions and complete User Folder that Contains
+			- Settings File
+			- Keybinding File
+			- Launch File
+			- Snippets Folder
+			- VSCode Extensions & Extensions Configurations
+			- Workspaces Folder
+		- Use your GitHub account token and Gist.
+	- comment2
+		- I think use [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) like [Muhammed Albarmavi's answer](https://stackoverflow.com/a/59332365/9787887) mentioned is the way to go, I used it myself to sync between Ubuntu and Windows.
+		- About [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync), the idea is it uses [Github Gist](https://gist.github.com/) to store all the settings on the cloud, so that then you could use any machine to pull (download) from the cloud to replicate those settings on any new machine. With the extension, you just need to press upload/download, all the copying process is done by the extension for you.
+		- Details about those files store on `gist`, they're:
+			- extensions.json
+			- `keybindings.json`
+			- `keybindingsMac.json`
+			- settings.json
+			- snippets|javascript.json
+			- ...another modified settings
+		- You could take a look about its shape here: [https://gist.github.com/loia5tqd001/7f68a682472a018bcc75ecadeeab447b](https://gist.github.com/loia5tqd001/7f68a682472a018bcc75ecadeeab447b)
+			- [[My Notes]]
+				- looks like it's not so great for #Privacy if public, hopefully one can use a private gist
+		- About syncing from Linux to MacOs, I don't know exactly what's happening under the hood, give a look at [a comment here](https://github.com/shanalikhan/code-settings-sync/issues/194#issuecomment-276562844) maybe you'll know.
+		- As you use the Settings Sync, you'll notice that you can have [multiple gists](https://gist.github.com/loia5tqd001), so you can have multiple versions of settings on the cloud. Maybe you'd want some gist for Windows, some for Linux/macOS or any strategy that you could think of.

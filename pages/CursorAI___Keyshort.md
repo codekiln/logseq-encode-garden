@@ -1,0 +1,1 @@
+alias:: [[CursorAI Keyshorts]]

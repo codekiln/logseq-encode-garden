@@ -1,0 +1,19 @@
+# How to find a Memorable and Available #Keyshort in #VSCode
+	- ## Problem
+		- After mapping a custom keyboard shortcut in VSCode, one can see whether or not it has a conflict, and see what the conflicts are.
+		- Unfortunately, if one clicks on the link to see the keyboard shortcuts, it removes the current context of mapping the keyboard shortcut, and one needs to browse back and begin to input the same keyboard shortcut.
+		- While there is an ability to search by keyboard shortcuts, there is not AFAICT a way to view available keyboard shortcuts, or a way to suggest memorable and available keyboard shortcuts in VSCode.
+		- ### [[see-also]]
+			- [[CursorAI/Forum/Post/25/01/Can anyone provide a full diff of default system keyboard shortcuts]]
+			- [[StackOverflow/17/09/VSCode - Importing keyboard shortcuts]]
+			- [Keyboard Shortcut Exporter - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.KeyboardShortcutExporter)
+				- This is NOT for VSCode, but for Visual Studio. Also, it hasn't been updated in 8 years or more
+	- ## #Ideas
+		- Perhaps it might be possible to make a [[ChatGPT/GPT]], a [[CursorAI/Project Rule]], or [[FabricAI]] prompt, or something that uses [[llm-cli]] to locate a good one, if we can get the context of all the currently mapped keyboard shortcuts.
+			- [[VSCode/Command/Preferences/Open/Keyboard Shortcuts JSON]] provides all the user-defined keyboard shortcuts, which is likely to not be as useful as the full list.
+			- [[VSCode/Command/Preferences/Open/Default Keyboard Shortcuts JSON]] gives all default keyboard shortcuts in the system and in the [[VSCode/Extensions]], which still isn't the full list; it's missing [[VSCode/Command/Preferences/Open/Keyboard Shortcuts JSON]] which would need to be layered on top of it. I think it might also be missing [[CursorAI Keyshorts]], if using cursor.
+			- It's possible to use [[VSCode/Command/Preferences/Show/Keyboard Shortcuts]] opens up the interactive editor. Using the three dots menu, it's possible to access the Show Extension Keybindings, Show User Keybindings, and Show System Keybindings menu items, but as far as I know, there's no way to access this from a VSCode command or any way to access Show Extension Keybindings as a JSON file.
+				- What we really need is a json file that contains the union of these three files.
+			- It might be possible to locate or write a [[VSCode/Extension]] which listed all the keyboard shortcuts.
+				- See also [[CursorAI/Forum/Post/25/01/Can anyone provide a full diff of default system keyboard shortcuts]]
+				-

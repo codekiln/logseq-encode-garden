@@ -98,7 +98,7 @@ alias:: [[VSCode/Docs/Editor/EditingEvolved]]
 		  card-last-score:: 3
 			- `Cmd F12`
 			- Requires one a programming languages to be set up - see [[VSCode/Docs/Languages/Overview]]
-			- **Note**: *this is different from Go to Definition because Go to Implementation is for finding how a method is implemented in specific subclasses vs Go to Definition which looks up where the current symbol is located* - according to [[ChatGPT/GPTs/VS Code Copilot]] **here**
+			- **Note**: *this is different from Go to Definition because Go to Implementation is for finding how a method is implemented in specific subclasses vs Go to Definition which looks up where the current symbol is located* - according to [[ChatGPT/GPT/VS Code Copilot]] **here**
 			- [[Mnemonic]]: `F12` is **Go to Definition**, and `Cmd F12` is a modifier to go to the **Concrete Implementations**
 		- ### Navigate programming language symbols in a file, group by category #card
 		  card-last-score:: 3
