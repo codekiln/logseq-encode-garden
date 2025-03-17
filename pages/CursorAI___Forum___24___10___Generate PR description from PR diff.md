@@ -1,0 +1,14 @@
+# [Generate PR description from PR diff](https://forum.cursor.com/t/generate-pr-description-from-pr-diff/20735)
+	- [[Person/Deniz Gokcin]]
+		- [[My Notes]]
+			- Deniz has some great tips here on how to use [[FabricAI]]
+		- not sure how much prompting you are OK with doing but I am sure you can do it by modifying my existing [prompt](https://github.com/dgokcin/dotfiles/blob/main/ai-stuff/cursor/prompts/create-pr/system.md), push it to a git repo, crawl it with cursor’s doc crawling feature and use it as:
+			- `@create-description @PR Diff`
+		- I am generating my prs and commits on a daily basis with the prompts in that are included in that repository which are crawled with the docs feature. and yes you just reference the crawled doc with @ and than add whatever you want as additional context.
+		- To answer your other question about easier ways of prompting in cursor, when I discovered this usage, cursor did not have the notepads feature so you can accomplish the same result by creating a notepad(`cmd + shift + p` → `Notepad: Create and Open New Notepad`) and than reference it with `@` with the same name if you want simplify the process. However I like putting my prompts under version control so thats why I have not changed my approach.
+		- On an unrelated note about creating custom prompts in an easy way, **I have a #Tip for you**.
+			- There is an amazing CLI tool called  [[FabricAI]]  which is like a huge collection of amazing prompts that you can use with local/cloud LLMs.
+				- One specific pattern there gave me inspiration to use the [create_pattern](https://github.com/danielmiessler/fabric/blob/main/patterns/create_pattern/system.md) pattern and create this [prompt](https://github.com/dgokcin/dotfiles/blob/e86d6382db54052985cd8d394ba8e564ba6bf7fd/ai-stuff/cursor/prompts/generate-prompt/system.md) in my repo that just creates prompts.
+				- So what you can do is to add the prompt generator prompt to a notepad, name it as `generate-prompt` and than when you want to create a new prompt, mention it with `@generate-prompt <what you want your prompt to do in plain text english>` and than paste the nicely formatted markdown output to a new prompt and use it.
+			- So with [[GitHub/CLI]], you can create PRs, through your terminal. You can combine this with advanced prompting and make cursor output the github cli command that creates the PR. Here is an example that uses [this prompt](https://github.com/dgokcin/dotfiles/blob/e86d6382db54052985cd8d394ba8e564ba6bf7fd/ai-stuff/cursor/prompts/create-pr/system.md) and claude-3.5-sonnet to create [this pr](https://github.com/dgokcin/dotfiles/pull/151). **The trick is to force cursor to output the cli command under backticks and bash as the language so that the play icon appears** and you just click and boom!
+		- ![2025-01-30 15.17.30](https://us1.discourse-cdn.com/flex020/uploads/cursor1/original/3X/8/b/8b0ee7abc81f81f038c88e7794ed51fa9da1b123.gif)
