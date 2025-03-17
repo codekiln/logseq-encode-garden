@@ -242,7 +242,7 @@ created-by:: [[Person/Dan Mason]]
 				- **Overview**
 					- This setup **automates writing and verifying tests**.
 					- Uses an **orchestrator pattern** (similar to Anthropic’s approach).
-					- Tracks agent reasoning via **Paper Linesmith** or the **command line**.
+					- Tracks agent reasoning via **Paper LangSmith** or the **command line**.
 				- **Workflow Breakdown**
 					- **Context Gathering**
 						- The **context agent** collects relevant **repo context**.
