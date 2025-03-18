@@ -1,6 +1,6 @@
 # [slide](https://docs.logseq.com/#/page/slide)
 	- Logseq's slide feature is powered by the awesome [Reveal.js](https://revealjs.com/).
-	  background-image:: https://images.unsplash.com/photo-1498855926480-d98e83099315
+	  background-image:: https://www.ai.engineer/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-placeholder.db9b525d.jpg&w=3840&q=75
 	- ## Usage
 		- Go to a specific non-journal page, right click on the page title and select `View as slides`.
 		  logseq.order-list-type:: number
