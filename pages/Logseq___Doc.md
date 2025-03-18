@@ -1,0 +1,1 @@
+alias:: [[Logseq/Docs]]
