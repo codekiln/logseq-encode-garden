@@ -268,6 +268,7 @@ alias:: [[AIES 25 WS 1 - Building Agents with MCP - Mahesh Murag]]
 				- ### his claim: #MCP will be "the foundational protocol for agents"
 					- the models are becoming better and they use the data that you bring to them in better ways.
 		- ### [[Anthropic/Blog/24/12/Building Effective Agents]] with #MCP 1 - ((67d04b34-097b-489e-a9cd-c203d335f5a2))
+		  id:: 67b9effa-2d46-4913-8e22-c96a7ba2344f
 			- ![Pic 09](https://lh3.googleusercontent.com/pw/AP1GczOqy2WciToU7rlcJ4dYr_jR2P0z_P8ucVs7oOymOGc1ZNLTefHHPoXLKBrsqMNl39VR_FORrAj2FM9P_hxjY4BoGSMFV6-hHn7cc4LTosQAVNbRBJE=w1920-h1080)
 			- #### [[My Notes]]
 				- now, *with MCP*

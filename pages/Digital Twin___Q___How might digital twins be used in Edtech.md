@@ -1,6 +1,6 @@
 tags:: [[Q]], [[EdTech]], [[Digital Twin]]
 
-- In a [[Learning Management System]] (LMS), **Digital Twins** can revolutionize personalized education, learner engagement, and instructor effectiveness. Here’s how:
+- In a [[LMS]] (LMS), **Digital Twins** can revolutionize personalized education, learner engagement, and instructor effectiveness. Here’s how:
 - ### **1. Personalized Learning Paths**
 	- **Student Digital Twins**: Each learner can have a **digital twin** that models their skills, learning preferences, progress, and engagement levels. AI-driven analysis can then recommend **adaptive learning paths**, customized exercises, and real-time feedback.
 	- **AI Tutors**: Digital twins of expert instructors or AI-powered teaching assistants can provide **real-time, personalized guidance** based on a student’s twin profile.

@@ -72,13 +72,11 @@
 		- Inspired by [[GraphQL]] and [[Language Server Protocol]].
 		  ![Apis -> LSP -> MCP](https://substackcdn.com/image/fetch/w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F287e9c38-db9a-4abb-9a88-bc3e3e590355_2252x1214.png)
 		- Three interaction types: Tools, Resources, Prompts.
-		  ![Pic 04](https://lh3.googleusercontent.com/pw/AP1GczMbc7nvpyq0Hx6ROTqCkZhH0QkfKv8hlWvL9dVp1rJX7bfbdLeKlOOrYlvwx2oPOJ652WgOhpiu3hV7Kg9eXBEs1tI4d7TzHJ0XgQlciKtax46nag0=w1920-h1080){:height 330, :width 544}
-		- A bit clearer
 		  ![MCP Deep-Dive](https://substackcdn.com/image/fetch/w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe07df610-fa0b-4e18-bca5-6ade934cb64a_2274x1264.png)
 	- ## Rapid Adoption of MCP
 		- Major companies quickly adopted MCP:
 		  * Cloudflare, Shopify, IBM, GitHub, Docker, Replit, and more.
-		  * Over 1,100 community-built MCP servers available.
+		  * Over **1,100** community-built MCP servers available.
 		  * Industry leaders predicting MCP to become standard in AI integration.
 		  ![Rapid adoption](https://lh3.googleusercontent.com/pw/AP1GczP4Thkxk-MhVQqm9JdoNSJJnXEiyYdY63F3jsPJVgFoK7Y2HECKVBPS9xXg6sttqCWn-O-4IDyFER4iKyijKOIK0spyAtg4gTrEqxKnHE3xdWqSHjc=w1920-h1080){:height 225, :width 400}
 	- ## MCP Components: Tools, Resources, and Prompts
@@ -117,11 +115,16 @@
 		  * Identifies and summarizes GitHub issues.
 		  * Adds top priority tasks into user's Asana.
 		  ![Claude desktop demo](../assets/image_1740239495124_0.png){:height 297, :width 412}
-	- ## MCP-Agent Framework (Lastmile.ai)
-		- Enables complex multi-agent workflows.
-		- Example: Quantum computing cybersecurity research task. 
-		  ![MCP-Agent project structure](https://lh3.googleusercontent.com/pw/AP1GczMwwnFzwCmTQrAIOfOJwG_Hz3G5yPrx4P-1i3rBPwtx1IclV5EHvIjjmp6e7ZWYQWVpFU3dN8DwB_FnBChNN3AMkZytcjAQdmvT4gaKVgKYC_8gx5k=w1920-h1080){:height 381, :width 657}
-		  * Uses **sub-agents**: research, fact-checker, report writer
+	- [[Anthropic/Blog/24/12/Building Effective Agents]] with #MCP 
+	  ![Pic 09](https://lh3.googleusercontent.com/pw/AP1GczOqy2WciToU7rlcJ4dYr_jR2P0z_P8ucVs7oOymOGc1ZNLTefHHPoXLKBrsqMNl39VR_FORrAj2FM9P_hxjY4BoGSMFV6-hHn7cc4LTosQAVNbRBJE=w1920-h1080)
+	  * one of the key points of MCP is that the system can **discover new capabilities after the agent system is built**
+	  * agent is an "augmented LLM" running in a loop
+	  * you can let users of the agent system connect to their data and you as the developer can focus on **the core loop**
+	- ## #Example [mcp-agent](https://github.com/lastmile-ai/mcp-agent) from  [[lastmileAI]]
+	  * **`mcp-agent`** is a simple, composable framework to build agents using [Model Context Protocol](https://modelcontextprotocol.io/introduction).
+		- Example: Agent system to do deep research on Quantum computing cybersecurity implications 
+		  ![MCP-Agent project structure](https://lh3.googleusercontent.com/pw/AP1GczMwwnFzwCmTQrAIOfOJwG_Hz3G5yPrx4P-1i3rBPwtx1IclV5EHvIjjmp6e7ZWYQWVpFU3dN8DwB_FnBChNN3AMkZytcjAQdmvT4gaKVgKYC_8gx5k=w1920-h1080){:height 313, :width 538}
+		  * Uses **sub-agents**: `search_agent`, `fact_checker`, `report_writer`
 		  * side note - [[People/Mahesh Murag]] uses [[Windsurf]] here
 	- ## MCP & Augmented LLM Concept
 		- MCP enhances LLMs, allowing dynamic tool discovery.
