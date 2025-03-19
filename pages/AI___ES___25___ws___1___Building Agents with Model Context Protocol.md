@@ -1,5 +1,6 @@
 created-by:: [[People/Mahesh Murag]]
 tags:: [[Anthropic/Model Context Protocol]], [[MCP]]
+alias:: [[AIES 25 WS 1 - Building Agents with MCP - Mahesh Murag]]
 
 - # [Building (Agents) with Model Context Protocol](https://www.ai.engineer/summit/2025/schedule/anthropic-mcp)
 	- ## About
@@ -9,13 +10,13 @@ tags:: [[Anthropic/Model Context Protocol]], [[MCP]]
 		- ### Pics
 			- [[AI/ES/25/ws/1/Building Agents with Model Context Protocol/Pics]]
 	- ## Before ((67d04b34-b6c8-4ed5-a63f-aee1d3d57a69))
-		- ![Pic 01](https://lh3.googleusercontent.com/pw/AP1GczNTS1VKTShXGqSYGMByy6laT8lL5MddZ3bxjDlsMnJcuZzQitD68um-_Yan2Yl5jpBcXgPO_FrqvzxXTStZfIdCGnL86RGzgkNelzm4V-l8dG2ics0=w1920-h1080)
-		- [[My Notes]]
-			- left
-				- 1 - real estate
-				- TODO fill in
-			- right hayden
-				- startup - headlessagents.ai - headless agents hosting
+		- ![Pic 01](https://lh3.googleusercontent.com/pw/AP1GczNTS1VKTShXGqSYGMByy6laT8lL5MddZ3bxjDlsMnJcuZzQitD68um-_Yan2Yl5jpBcXgPO_FrqvzxXTStZfIdCGnL86RGzgkNelzm4V-l8dG2ics0=w1920-h1080){:height 172, :width 275}
+		  id:: 67d04b42-b317-4f6b-8d87-8c6b0fd0ae4d
+		  [[My Notes]]
+			- On my left was [[Person/Mike Christensen]], **VP Engineering** at [[Fundrise]], with quite a bit of experience in Real Estate. Was using [[IDE/Cline]] (or was it [[Windsurf]]?) to do some [[Vibe Coding]] a bit. We talked about MCP and the importance of #Security in [[Agentic Systems]].
+			  id:: 67da7fc2-1c1f-46e9-84b0-dee824e45395
+			- On my right was [[Person/Hayden Harrow]], **Co-Founder** at [[Headless Agents]] ([headlessagents.ai](https://headlessagents.ai/)). Mike and I got a demo of his product, which allows deploying any type of agent and allowing inter-agent communication. Right now the product is has developers as its target audience.
+			  id:: 67da7fbe-0f7f-45f0-bac4-27dc498b0387
 	- ## intro
 		- what is MCP
 			- APIs
