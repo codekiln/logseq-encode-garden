@@ -244,67 +244,58 @@
 	  * For **phased conversations**, **each phase should be separately evaluated**
 	  * Each part of the application should be tested in isolation
 	  * In truly [[Agentic Systems]], you need to also evaluate the [[AI/Tool/Calling]]
-- # [[AIES 25 WS 4 – Multi-Agent Workflows with MCP – Dan Mason]]
-	- ### Why Multi-Agent Workflows?
-		- **"Agents aren't really agents unless they can discover and act beyond the chatbox."**
-		- MCP (**Model Context Protocol**) enables agents to interact dynamically with the environment.
-		- Allows agents to:
-		  * Discover external resources
-		  * Interact beyond simple chat interfaces
-		  * Execute complex, context-sensitive tasks
-		- ![Intro Slide](https://lh3.googleusercontent.com/pw/AP1GczMn93SQDyeKmPaLOr_ENMr8W3TdB2BhcBZzT1cfWErKpvznwI_Qp2AllcqqxWtF1C68GwCZ9W6DJWlbNbM_LSbTI_MrxJW-Eb05aCbrEnBXWaA-0is=w680-h383)
-	- ### Building Custom MCP Clients
-		- Not limited to Claude's built-in MCP client.
-		- Hands-on session demonstrated custom MCP client creation.
-		- Framework agnostic but strongly compatible with LangGraph, Autogen, Crew AI.
-		- Enables workflows beyond simple code generation.
-		- ![Custom MCP Clients](https://lh3.googleusercontent.com/pw/AP1GczPnWIuBRf6ZuYHgFQ1_DXBt39LQpQpG_95nEZmslbkBoQKrQ1umfq_PfdWBC8DgxK52MwCDHiAn2v4goDOJi8D7EXbAiVO6YyEtg7iGlZGBbp16Kks=w680-h383)
-	- ### MCP Agentic Workflow Example: CodeAPI
-		- CodeAPI: Lightweight FastAPI server for code manipulation.
-		- Integrated with LangChain, MCP, and LangGraph.
-		- Tools include reading, writing, and modifying files.
-		- Used in automated dependency upgrades and refactoring tasks.
-		- ![CodeAPI Workflow](https://lh3.googleusercontent.com/pw/AP1GczNfFwj7qIcA0HBsnkXV0Ho8BgeBnKUjr-rFCr9I6b6MkxAR-pew2Gl-h9pOZW5E6BIyY11NF9Y4x0_Jv1RcxMwlOnzmu_h9UGlNmBxF8vj4DdsKkxA=w680-h383)
-	- ### AI-Driven Code Upgrades with LangGraph Studio
-		- Multi-agent coding workflows illustrated with practical example:
-		  * Migrating Java project from JBoss to Spring Boot.
-		  * AI autonomously handled dependencies and framework transitions.
-		- Human interaction minimized, focused on final verification.
-		- Demonstrated efficiency in automated software updates.
-		- ![LangGraph Studio Example](https://lh3.googleusercontent.com/pw/AP1GczOjOLs5nwDPyNKKFJBQLKLAzwifP1FN0p505DiZJWZZDmd44345ES4P7_Q7KDVNx-egNl2hB3VXPb9wpEeZk-m9mavVCDjx-LpxmJIZyau_fAzpjQ0=w680-h383)
+- # [[AI/ES/25/ws/4/Multi-Agent Workflows with MCP]]
+	- ### Multi-Agent Workflows Beyond the Chatbox
+	  * **"Agents aren't really agents unless they can discover and act beyond the chatbox"**
+	  * MCP enables dynamic environment interaction and resource discovery
+	  * Agents can execute complex, context-sensitive tasks autonomously
+	  ![Intro Slide](https://lh3.googleusercontent.com/pw/AP1GczMn93SQDyeKmPaLOr_ENMr8W3TdB2BhcBZzT1cfWErKpvznwI_Qp2AllcqqxWtF1C68GwCZ9W6DJWlbNbM_LSbTI_MrxJW-Eb05aCbrEnBXWaA-0is=w680-h383){:height 225, :width 400}
+	- ## Building Custom MCP Clients
+	  * Not limited to Claude's built-in client implementation
+	  * Framework agnostic but integrates with [[LangGraph]], [[Autogen]], [[Crew AI]]
+	  * Enables complex workflows beyond simple code generation
+	  ![Custom MCP Clients](https://lh3.googleusercontent.com/pw/AP1GczPnWIuBRf6ZuYHgFQ1_DXBt39LQpQpG_95nEZmslbkBoQKrQ1umfq_PfdWBC8DgxK52MwCDHiAn2v4goDOJi8D7EXbAiVO6YyEtg7iGlZGBbp16Kks=w680-h383){:height 225, :width 400}
+	- ## CodeAPI: MCP Workflow Example
+	  ![CodeAPI Workflow](https://lh3.googleusercontent.com/pw/AP1GczNfFwj7qIcA0HBsnkXV0Ho8BgeBnKUjr-rFCr9I6b6MkxAR-pew2Gl-h9pOZW5E6BIyY11NF9Y4x0_Jv1RcxMwlOnzmu_h9UGlNmBxF8vj4DdsKkxA=w680-h383){:height 225, :width 400}
+	  * Lightweight [[FastAPI]] server for code manipulation
+	  * [[LangChain]], [[MCP]], and [[LangGraph]]
+	  * automated **dependency upgrades**, **refactoring**
+	- ## AI-Driven Code Migration with LangGraph
+	  ![LangGraph Studio Example](https://lh3.googleusercontent.com/pw/AP1GczOjOLs5nwDPyNKKFJBQLKLAzwifP1FN0p505DiZJWZZDmd44345ES4P7_Q7KDVNx-egNl2hB3VXPb9wpEeZk-m9mavVCDjx-LpxmJIZyau_fAzpjQ0=w680-h383){:height 225, :width 400}
+	  * Automated Java migration from [[JBoss]] to [[Spring Boot]]
+	  * AI handles dependencies and framework transitions
+	  * Minimal human interaction, focused on final verification
 	- ### Automated Test Generation & Verification
-		- Multi-agent orchestration to automate software test creation.
-		- Agents collaboratively:
-		  * Extract context from codebases
-		  * Write and review unit tests
-		  * Execute and verify tests autonomously
-		- Significantly reduced manual testing efforts.
-		- ![Automated Testing Workflow](https://lh3.googleusercontent.com/pw/AP1GczONxbb5c-dt8HTwE1Pqj53wfH9qzzv5C4xL_hDv0fM7oQ9Emu7vemHHC495VWF4D0OEQmB8aLmN1xPEn6liOAqC94Fv3MSf-H6oghddUrnOh9arikc=w680-h383)
+	  * ![Automated Testing Workflow](https://lh3.googleusercontent.com/pw/AP1GczONxbb5c-dt8HTwE1Pqj53wfH9qzzv5C4xL_hDv0fM7oQ9Emu7vemHHC495VWF4D0OEQmB8aLmN1xPEn6liOAqC94Fv3MSf-H6oghddUrnOh9arikc=w680-h383){:height 310, :width 525}
+	  * Multi-agent orchestration to automate software test creation
+	  * Agents collaboratively extract context from codebases, Write and review unit tests, Execute and verify tests autonomously
+	- ![Pic 12](https://lh3.googleusercontent.com/pw/AP1GczNnlijS3ak8s_WunbgNQ9Ki40HYTLH6oopznaPUaREydajKPjt1Q3HhMAsW1lK11U6hdSdpgRSlltMDgUuSq3d5mwnulJ4psz4hrYqZEL7-MKRcXbc=w1920-h1080){:height 311, :width 538}
 	- ### MCP-Enabled Real-Time Tool Discovery
-		- Agents dynamically discover available MCP tools at runtime.
-		- Example showcased dynamic integration:
-		  * Agent performed web search via MCP
-		  * Automatically adapted tool usage after an initial access error
-		  * Demonstrated robust error-handling and recovery
-		- ![Dynamic Tool Discovery](https://lh3.googleusercontent.com/pw/AP1GczPa2cN8B4nWOHbQoJYy5-0EyUKQIJqKcc3aqwX6l2yhllUJzE9ptD6v1pZwN9WpJsFvgHzWvQnlcU4e1LUExw-w51blbTSETJ7Jd_6FcKtZtw5HjoA=w680-h383)
+	  * ![Dynamic Tool Discovery](https://lh3.googleusercontent.com/pw/AP1GczPa2cN8B4nWOHbQoJYy5-0EyUKQIJqKcc3aqwX6l2yhllUJzE9ptD6v1pZwN9WpJsFvgHzWvQnlcU4e1LUExw-w51blbTSETJ7Jd_6FcKtZtw5HjoA=w680-h383){:height 320, :width 545}
+	  * Agents dynamically discover available MCP tools at runtime
+	  * Agent performed web search via MCP, Automatically adapted tool usage after an initial access error, Demonstrated robust error-handling and recovery
 	- ### Real-World Example: Automated PR Generation
-		- AI autonomously generated GitHub PRs for feature requests.
-		- Multi-agent system:
-		  * Planner agent suggested multiple code implementations
-		  * Coder agent implemented selected solutions
-		  * Orchestrator managed workflow, ensuring safety and control
-		- Increased development productivity significantly.
-		- ![Automated PR Workflow](https://lh3.googleusercontent.com/pw/AP1GczPdS8cBF-u9pAAS_Tt1u8uWC4bqBhQuezR54qnNfM6xS9Mx-OepLiUVRfFcTt5w6kILPSyA8pzipr3YBZ4hVjUiMZiSh_NyOQT9O1n7pC-OcppHBY8=w680-h383)
-	- ### Safety & Security in MCP Multi-Agent Systems
-		- Scoped API keys, Docker containers for secure deployments.
-		- AI-generated code treated identically to human code for QA.
-		- Final deployment always under human oversight.
-		- Critical security and compliance safeguards integrated into MCP workflows.
-		- ![Security & Safety](https://lh3.googleusercontent.com/pw/AP1GczOVw3IQ8wZ3ZLE6gIbmTDWiyvJcNu5j7bM8IxDxarvhqj8qiGPrz2Iy8cK61IHHhE7MPyfLZfJr4gpIGY6Q2EPOUH5vtf8jQhFcsguWCxzPDH6jklU=w680-h383)
+	  * ![Automated PR Workflow](https://lh3.googleusercontent.com/pw/AP1GczPdS8cBF-u9pAAS_Tt1u8uWC4bqBhQuezR54qnNfM6xS9Mx-OepLiUVRfFcTt5w6kILPSyA8pzipr3YBZ4hVjUiMZiSh_NyOQT9O1n7pC-OcppHBY8=w680-h383){:height 241, :width 401}
+	  * AI autonomously generated GitHub PRs for feature requests
+	  * Multi-agent system:
+	    * Planner agent suggested multiple code implementations
+	    * Coder agent implemented selected solutions
+	    * Orchestrator managed workflow, ensuring safety and control
+	  * Increased development productivity significantly
+	- ### **Scaling AI-Powered Translation: Lessons from Large-Scale Book Translation**
+	  ![Pic 13](https://lh3.googleusercontent.com/pw/AP1GczML6GC6ESWTo3PDkMAv7bPUxDPrPtpM6IIgbmS5iTcmAcV6AK2Y1UfqjQn9V6pMaNQ1xpGCKRzn-13l8asPay7EUP3HWHsBLp4Bd2yvKLusUeXQqQ0=w1920-h1080)
+	- ![Pic 28](https://lh3.googleusercontent.com/pw/AP1GczPdS8cBF-u9pAAS_Tt1u8uWC4bqBhQuezR54qnNfM6xS9Mx-OepLiUVRfFcTt5w6kILPSyA8pzipr3YBZ4hVjUiMZiSh_NyOQT9O1n7pC-OcppHBY8=w1920-h1080)
+	- ### **CollegeBot: AI-Driven College Search & Recommendations**
+	  ![Pic 29](https://lh3.googleusercontent.com/pw/AP1GczOau1YcLrapkhOSQujsha2XLM8xmfi6ZS9nUxRiY2VgWzW_Uj21lmqUDJyaQinUlxlTT-hF_yTL1XxR5NqwN8GqVFmTqYLJv-GfjU0doMptFAx_-uU=w1920-h1080)
+	- ![Pic 30](https://lh3.googleusercontent.com/pw/AP1GczOBT6x0mqciTy1tyt42neprKktqqQ9I7a4vdK0Na-r-EUlQf_xFy7NQCQWBtjLk2VhoN5aj--omKaqq6tS9X4rgiq1yyN2_ibu4j5AjdgRJ_-PYfnA=w1920-h1080)
+	- ### **MCP-Powered Telemedicine Assistant: AI-Guided Patient Interaction** - 31, 32, 33
+		- ![Pic 31](https://lh3.googleusercontent.com/pw/AP1GczPLxp4pLyk7ZKpEbPoHbkKaoqFK_I3R2KfLIuqy2V2JqtDdoWQ8hYM688KEK56Xz8xbQgyb7YMcTf3_83GKnP0fCPN-K6YCqkC4wNtUKW91SShgP1c=w1920-h1080)
+		- ![Pic 32](https://lh3.googleusercontent.com/pw/AP1GczNxbce42bQatodhAyf0-io4-913UqekRB-rTEy7AEylm-tW6jumX_YMsZjMxC1jCk5QwF-v-JuuC8WZ-sIzcRpIqg0fzjfY5D66-ofP5oS6HHr8CKs=w1920-h1080)
+		- ![Pic 33](https://lh3.googleusercontent.com/pw/AP1GczPEeZrP9M_jmpyzV3Cr9_7bqtlbQYKeePESxNgZJq1gJ54hs7_chAir-dp2G9vH6HdV3cBFHMSAskyuOIw2dYrgrYjj5G63rkzV3EPzhTcLlfgxrn8=w1920-h1080)2
 	- ### Final Takeaways from the Workshop
-		- MCP standardizes agent integration with diverse tools and services.
-		- Multi-agent workflows amplify AI capabilities, enabling complex business logic automation.
-		- Safety, security, and flexibility are central to effective multi-agent implementations.
-		- Emphasizes human curation of AI-generated solutions rather than direct AI autonomy.
-		- ![Final Insights](https://lh3.googleusercontent.com/pw/AP1GczMJmBvHkafLFkxGafgq5Jv90BMtzpycXBw2RcxN9bH1zIDKpS9ZcI2ARz8Kyr9zpEKc0pFIptYERlHv75hMMZiVMdLEp0FADcES4OHbo9WiD8R9cOE=w680-h383)
+	  * MCP standardizes agent integration with diverse tools and services
+	  * Multi-agent workflows amplify AI capabilities, enabling complex business logic automation
+	  * Safety, security, and flexibility are central to effective multi-agent implementations
+	  * Emphasizes human curation of AI-generated solutions rather than direct AI autonomy
+	-
 - ![Pic 04](https://lh3.googleusercontent.com/pw/AP1GczOddYpgPv6uWr9f1zavmUFGB42hHAM0q8Ohi00Y7Jot-octhPyd0mLa2tXpGiqqIjg8Rdxuck7B6ofD7wew6tsU386N-3DenZzYrjqr1v3pFlYjzJc=w1920-h1080)
