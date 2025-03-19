@@ -148,7 +148,7 @@
 	  * Of course it helps [[AI Coding]] agents know more about the other systems ([[JIRA]], [[GitHub]], [[PostgreSQL]], etc)
 	  * Each [[LMS/Course/Teaching Element]] could express actions AI could take on it as an [[MCP Server]]. Any AI application with permission could interact with that Teaching Element Type
 	  * Each LMS could be an [[LMS/Course/Authoring]] MCP Server for AI-enhanced course development
-- # [[AIES 25 WS 2 - Smarter AI with GraphRAG – Knowledge Graphs for Agents]]
+- # [[AI/ES/25/ws/2/GraphRAG - Knowledge Graphs for Agents]]
 	- ## Workshop Overview: GraphRAG with Neo4j
 	  * Instructor: Alison Cossette, Neo4j Developer Advocate
 	  * Goal: Improve AI accuracy using graph-based RAG
@@ -178,67 +178,72 @@
 	  * **one of the best ways** to have an AI gradually **develop a "mental model" of a student's abilities** relative to the learning goles; see also [[AI/Digital Twin]] 
 	  * possible to take flatfile documents and do entity extraction into a knowledge graph; see also [[EdTech/Idea/LearnMark]] for topic extraction, pre-requisite identification, etc - this would help [[LMS/Course/Authoring]] for custom courses
 - ![Pic 03](https://lh3.googleusercontent.com/pw/AP1GczMsj7X800Pr7fExabDh8-Z1tRqBSHzniDKzncp_FqTQr1dPzqDgrGGSU1ON4BlhG7dGaZHGYa_cL_9XQqDiHMVHgwr10Tdbh1UOeY_Wuq_NTZ0nllk=w1920-h1080)
-- # [[AIES 25 WS 3 - How Clay Performs Agent Evaluation]]
+- # [[AI/ES/25/ws/3/How Clay Performs Agent Evaluation]]
 	- ## Workshop Overview
-		- **Presenters:** [[Person/Nick Huang]] (LangChain), [[Person/Ratch Sujithan]] (ClayCo)
-		- **Focus:** Best practices in evaluating AI agents at various granularity levels.
-		- **Key takeaway:** Comprehensive testing ensures continuous improvement and reliability.
-	- ## Why Evaluate Agents?
-		- Challenges in agent reliability:
+	  * Presenters: [[Person/Nick Huang]] ([[LangChain]]), [[Person/Ratch Sujithan]] (ClayCo)
+	  * Focus: Best practices in evaluating AI agents at various granularity levels
+	  * Key takeaway: Comprehensive testing ensures continuous improvement and reliability
+	- ## Part 1 - [[Person/Nick Huang]] from [[LangChain]] on Evaluation
+	  * See also [[LangChain/Academy/LangSmith]] course
+	  ![Chain vs Agent Issues](https://lh3.googleusercontent.com/pw/AP1GczMaKUGkuv3cOtRkXpq6sXB-IEb8W7wnltne0f4qHpQ9sS-ty-ao7h-Uh4fZHFVvGnOZvIZbPccvnWz_ueFbxJWkIr83PKzexm2lLT6olqO60QSz8WY=w680-h383)
+		- ### Why Evaluate Agents?
 		  * Task ambiguity
 		  * Missing context
 		  * Excessive or ambiguous tool usage
 		  * Poor reasoning
-		- Solutions include combining deterministic logic with agentic logic for better control flow.
-		- ![Chain vs Agent Issues](https://lh3.googleusercontent.com/pw/AP1GczMaKUGkuv3cOtRkXpq6sXB-IEb8W7wnltne0f4qHpQ9sS-ty-ao7h-Uh4fZHFVvGnOZvIZbPccvnWz_ueFbxJWkIr83PKzexm2lLT6olqO60QSz8WY=w680-h383)
-	- ## Evaluating Application Versions Over Time
-		- Evaluations track progress through new prompts, models, and architectures.
-		- Metrics help verify improvements.
-		- ![Application Progress](https://lh3.googleusercontent.com/pw/AP1GczOuO9nArnqeYQs4cVrYo86h68jjSgzDZmm_PLNxlFoVSmZ1DBjWTF0adrQAXjndc_RiJmeeH6r0pukA0ROKCUpWekmflE96esfFdfu0USmfJcE9R5k=w680-h383)
-	- ## Defining Effective Evaluators
-		- Test agent outputs against ground-truth datasets.
-		- Evaluators calculate accuracy, hallucination rates, and other metrics.
-		- ![Evaluator Setup](https://lh3.googleusercontent.com/pw/AP1GczPIGmnmHU9ePZApyGAwsrREL1qz8KJW6eNiS3_MPz6f2dyiHurJ6r0a50y9IwegCEpjW8Y0UMMqvfIt710y1Jv0rcMxqJgXVJ-M_9U3aVhzZXjkFRY=w680-h383)
-	- ## Pairwise Evaluations
-		- Directly compares two versions of an application side-by-side.
-		- Clearly identifies improvements.
-		- ![Pairwise Comparison](https://lh3.googleusercontent.com/pw/AP1GczOeZAVeKrBWgAeEnklFLQ-UfTg7OvVo-l__eSYEFMqdwE6VuIxrmFZ2RnzKzNcUeUSOQKTuy7_V22Y9wQk6pNw-07ZhRK1oUzN5WcUOmqVLXRtKKKg=w680-h383)
-	- ## Feedback Loops from Online Evaluators
-		- Online evaluation enables real-time quality control.
-		- Automations triggered by thresholds improve agent performance continuously.
-		- ![Feedback Automation](https://lh3.googleusercontent.com/pw/AP1GczMQgk2kqx5f7wVpgBh53iw8eSmKGG4WBFenlBY4GnClAxnkazVi0_mSU_5wU4_3KO1lPkrAq3ddvVzb5rLVIge4bjaSmC97tM_gdO-vPnTSUx8U5qI=w680-h383)
-	- ## Granular Evaluations: Breaking Down Agent Tasks
-		- Evaluations performed at different task levels (queries, document retrieval, hallucination checks).
-		- ![Granular Eval](https://lh3.googleusercontent.com/pw/AP1GczOoZtHmdnzv65-hxJY2hOrUgR3fCPyvfCQF2Bk9-zFwKuSV8a4R0oWLoC5n7TmJpu2b9eox-vrTptORYN7sa7AlF56L5EuxvpU2T-6Ajha3sWj7TpQ=w680-h383)
-	- ## Claygent Evaluation Pipeline
-		- **Development Evals:** Ensuring quality and stability through CI/CD pipelines.
-		- **Production/Observability Evals:** Analyzing real-world logs to drive strategic decisions.
-		- ![Eval Pipeline Overview](https://lh3.googleusercontent.com/pw/AP1GczN_vsGXWItowDvl8kflS_2m24O8K_s1EDcy74sifwssY33aDosoorIgmCGMbjjmEa9oXfiZvF4CKf4hZ4oisfDlpoARJ5m2k8eSIaAfRfRlrWYGRh4=w680-h383)
-	- ## Development Evaluations: CI/CD Testing
-		- Blackbox E2E smoke tests ensure environmental parity.
-		- Integration tests prevent regressions.
-		- ![Development Testing](https://lh3.googleusercontent.com/pw/AP1GczN37WkSDTlnvBj1zNXaamMq3SgQOSHHgFF1UdKqJVn31WFH3FdKMuHpTVepoxrWQxFlQQcKLZXheXRaRMn-FIVVnJ8nyJL_P4lH_dtNd8KiSYt_K30=w680-h383)
-	- ## LLM as a Judge: Automated Quality Checks
-		- Judges evaluate responses on relevance, correctness, and conciseness.
-		- Structured scoring system for clear assessment.
-		- ![LLM Judging](https://lh3.googleusercontent.com/pw/AP1GczMLenu9I9KrQciFAxPWb3W-iNapPTa9NJZ-edOKw0o0EWSokZzc5-nqkjNzbHkTD8LvHAKcYfv9Ko_HiMMD_sN0YXnELcI-je5_wEiFpmOs7Wyfrs0=w680-h383)
-	- ## Real-time Observability Evals
-		- Live monitoring and immediate feedback.
-		- Identifies issues instantly and provides quick corrective actions.
-		- ![Realtime Insights](https://lh3.googleusercontent.com/pw/AP1GczNIAyPtVjMsvNTcDxB74zFu7Ykh6i-rwuHx4rA5IUUgpYbNJdOG_5p2l-K_efjipBHGt8P3FgscNh-RWy-Ma6A1yOAHbxvXnOiQCm0MDgx6tzUwTEw=w680-h383)
-	- ## Clustering and Tagging for Prompt Analysis
-		- Prompt clustering with embeddings helps identify common customer queries.
-		- Strategic insights into user needs through categorized data.
-		- ![Prompt Clustering](https://lh3.googleusercontent.com/pw/AP1GczPB2n5fpgIDq7UbfIzfHNWI4aCvnF3QTLxDMHO0qafy6Jg6i6uCob55x0GKBrJ-t-RumeCMM2aOceQ1UVW-fPYDI7BW8y1fHbHJ9EcL2iAvV0NGPVQ=w680-h383)
-	- ## Using Logs for Dataset Generation
-		- Effective use of logs to build datasets for future training and evaluations.
-		- Continuous refinement based on real user data.
-		- ![Dataset Generation](https://lh3.googleusercontent.com/pw/AP1GczPPWXGFuOju9u_lVuKn_pJNvdAP5e_ATisZRpeSo1OiWE14MRAy69iz1RnudrpUAOXh4qrFIHwZIYEkztCRq7dPz8rXHcOs330mVuJxMnUHhORHhyg=w680-h383)
-	- ## Conclusion: Continuous Improvement
-		- Evaluation frameworks serve as strategic compasses, aligning innovations with user needs.
-		- Combining development and observability creates a robust system for continuous enhancements.
-		- Each iteration marks progress towards resilience and adaptability.
-		- ![Conclusion](https://lh3.googleusercontent.com/pw/AP1GczNlmprodT3aIOr9VWbmndjKd4QgJZ10A4fdqsQ8IbT3zqvZ77Lv34_hi1QPOdyGqVDRUIjldmlS7TuAAieL759a8G2DR_FzMxzpckxs8VgkNIP0CSE=w680-h383)
+		  * Solutions include combining deterministic logic with agentic logic for better control flow
+		- ### Evaluating Application Versions Over Time
+		  * Evaluations track progress through new prompts, models, and architectures
+		  * Metrics help verify improvements
+		  ![Application Progress](https://lh3.googleusercontent.com/pw/AP1GczOuO9nArnqeYQs4cVrYo86h68jjSgzDZmm_PLNxlFoVSmZ1DBjWTF0adrQAXjndc_RiJmeeH6r0pukA0ROKCUpWekmflE96esfFdfu0USmfJcE9R5k=w680-h383)
+		- ### Defining Effective Evaluators
+		  * Test agent outputs against ground-truth datasets
+		  * Evaluators calculate accuracy, hallucination rates, and other metrics
+		  ![Evaluator Setup](https://lh3.googleusercontent.com/pw/AP1GczPIGmnmHU9ePZApyGAwsrREL1qz8KJW6eNiS3_MPz6f2dyiHurJ6r0a50y9IwegCEpjW8Y0UMMqvfIt710y1Jv0rcMxqJgXVJ-M_9U3aVhzZXjkFRY=w680-h383)
+		- {{embed ((67ba2c91-d8f5-423c-bb1c-1c0ba5bb07d3))}}
+		- ### Pairwise Evaluations
+		  * Directly compares two versions of an application side-by-side
+		  * Clearly identifies improvements
+		  ![Pairwise Comparison](https://lh3.googleusercontent.com/pw/AP1GczOeZAVeKrBWgAeEnklFLQ-UfTg7OvVo-l__eSYEFMqdwE6VuIxrmFZ2RnzKzNcUeUSOQKTuy7_V22Y9wQk6pNw-07ZhRK1oUzN5WcUOmqVLXRtKKKg=w680-h383)
+		- ### Feedback Loops from Online Evaluators
+		  * Online evaluation enables real-time quality control
+		  * Automations triggered by thresholds improve agent performance continuously
+		  ![Feedback Automation](https://lh3.googleusercontent.com/pw/AP1GczMQgk2kqx5f7wVpgBh53iw8eSmKGG4WBFenlBY4GnClAxnkazVi0_mSU_5wU4_3KO1lPkrAq3ddvVzb5rLVIge4bjaSmC97tM_gdO-vPnTSUx8U5qI=w680-h383)
+		- {{embed ((67ba2c91-d8f5-423c-bb1c-1c0ba5bb07d3))}}
+		- ### Granular Evaluations: Breaking Down Agent Tasks
+		  * Evaluations performed at different task levels (queries, document retrieval, hallucination checks)
+		  ![Granular Eval](https://lh3.googleusercontent.com/pw/AP1GczOoZtHmdnzv65-hxJY2hOrUgR3fCPyvfCQF2Bk9-zFwKuSV8a4R0oWLoC5n7TmJpu2b9eox-vrTptORYN7sa7AlF56L5EuxvpU2T-6Ajha3sWj7TpQ=w680-h383)
+		- ### **Multi-turn conversations can be tested individually, or in series**
+		  ![image.png](../assets/image_1740256078101_0.png)
+		- The structure of how one tests is also determined by the structure of the conversation
+		- if your conversation has phases, and you need to make assertions against phases, individual tests for phases may make sense
+		- The structure of the golden datasets match the expected structure of how one tests
+	- ## Workshop 3, Part 2 [[Person/Ratch Sujithan]] from [[ClayCo]] on their AI Agent evaluation
+		- ### ClayCo Demo: LinkedIn Profile Finder
+		  ![image.png](../assets/image_1740256185555_0.png){:height 354, :width 542}
+		- ### My Notes on this application
+		  ![image.png](../assets/image_1740256185555_0.png){:height 354, :width 542}
+		  * Sample recruiter app - Given a person's full name, GitHub username, and GitHub profile link, find their LinkedIn profile URL. Find the topics they are interested in using Stargazers on GitHub. Find their backgrounds, connect it to a [[LinkedIn]] profile finder, extract country profile and email, target companies with a certain size and profile, write personalized messages to them 
+		  * > "very small snapshot of what clay can do"
+		- ### Claygent Evaluation Pipeline
+		  * Development Evals: Ensuring quality and stability through CI/CD pipelines
+		  * Production/Observability Evals: Analyzing real-world logs to drive strategic decisions
+		  ![Eval Pipeline Overview](https://lh3.googleusercontent.com/pw/AP1GczN_vsGXWItowDvl8kflS_2m24O8K_s1EDcy74sifwssY33aDosoorIgmCGMbjjmEa9oXfiZvF4CKf4hZ4oisfDlpoARJ5m2k8eSIaAfRfRlrWYGRh4=w680-h383)
+		- ### Development Evaluations: CI/CD Testing
+		  * Blackbox E2E smoke tests ensure environmental parity
+		  * Integration tests prevent regressions
+		  ![Development Testing](https://lh3.googleusercontent.com/pw/AP1GczN37WkSDTlnvBj1zNXaamMq3SgQOSHHgFF1UdKqJVn31WFH3FdKMuHpTVepoxrWQxFlQQcKLZXheXRaRMn-FIVVnJ8nyJL_P4lH_dtNd8KiSYt_K30=w680-h383)
+		- ### using [[LangSmith/Evaluator/Online/LLM as a Judge]]: Automated Quality Checks
+		  * Judges evaluate responses on **relevance**, **correctness**, and **conciseness**
+		  * **Structured scoring system** for clear assessment
+		  ![LLM Judging](https://lh3.googleusercontent.com/pw/AP1GczMLenu9I9KrQciFAxPWb3W-iNapPTa9NJZ-edOKw0o0EWSokZzc5-nqkjNzbHkTD8LvHAKcYfv9Ko_HiMMD_sN0YXnELcI-je5_wEiFpmOs7Wyfrs0=w680-h383)
+	- ## Workshop 3 - Key Takeaways for [[EdTech]]
+	  * [[LangSmith/Evaluator/Offline]] are conducted from [[CICD]] as part of the pull request process
+	    * they are powered by a ground truth collection of curated labels in a golden dataset
+	  * [[LangSmith/Evaluator/Online]] evaluations are "good enough, quickly" for live-use cases
+	  * For **phased conversations**, **each phase should be separately evaluated**
+	  * Each part of the application should be tested in isolation
+	  * In truly [[Agentic Systems]], you need to also evaluate the [[AI/Tool/Calling]]
 - # [[AIES 25 WS 4 – Multi-Agent Workflows with MCP – Dan Mason]]
 	- ### Why Multi-Agent Workflows?
 		- **"Agents aren't really agents unless they can discover and act beyond the chatbox."**

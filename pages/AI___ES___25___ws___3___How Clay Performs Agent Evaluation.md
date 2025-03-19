@@ -109,8 +109,9 @@ tags:: [[AI/Agent]], [[LangChain]], [[Workshop]], [[Tutorial]]
 				- **Slide number:** 21
 			- #### [[My Notes]]
 				- ### #Q - is [[LangSmith/Evaluator/Offline]] preferred if you have ground truth labels?
+				  id:: 67ba2c91-d8f5-423c-bb1c-1c0ba5bb07d3
 					- kinda, yeah. online tends to be "sketchy"
-					- you want to do this
+					- offline evaluators are the best for quality
 		- ### **Pairwise evaluators directly compare different versions of your application** - ((67d01741-c2af-4f20-b8ef-4fb7a3a68f90))
 			- ![image.png](../assets/image_1740254592413_0.png)
 			- #### [[AI Notes]]
@@ -197,6 +198,7 @@ tags:: [[AI/Agent]], [[LangChain]], [[Workshop]], [[Tutorial]]
 						- The v1 trajectory executes `get_calendar(time="7pm")` before `get_calendar(time="6pm")`, which is incorrect compared to the expected ordering.
 					- **Slide number:** 41
 		- ### **Multi-turn conversations can be tested individually, or in series** ((67d01741-9809-4d48-a77b-31fa1d1d196d))
+		  id:: 67ba3341-78b0-4852-b6cb-747829aa2fdb
 			- ![image.png](../assets/image_1740256078101_0.png)
 			- #### [[My Notes]]
 				- The structure of how one tests is also determined by the structure of the conversation
