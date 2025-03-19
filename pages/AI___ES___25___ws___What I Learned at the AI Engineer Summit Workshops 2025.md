@@ -134,7 +134,7 @@
 	  * Inspector provides debugging for MCP connections.
 	  * OAuth integration simplifies secure service authentication. Scoped permission boundaries can apply.
 	  ![MCP Inspector OAuth](../assets/image_1740242601017_0.png){:height 225, :width 400}
-	- ## MCP Registry API: Autonomous Discovery
+	- ## Autonomous Discovery
 	  * Official MCP Registry provides centralized server discovery
 	  * Enables agents to find and trust verified MCP servers
 	  * Example: Automatic discovery of [[Grafana]] MCP for debugging tasks
@@ -144,17 +144,10 @@
 	  * Enables instant discovery of service integrations
 	  * Real example: [[Shopify/MCP]] integration auto-discovery
 	  ![Shopify MCP discovery](../assets/image_1740243306243_0.png){:height 225, :width 400}
-	- ## MCP Roadmap: Future Features
-	  * Stateful vs. stateless connections coming soon
-	  * Real-time data streaming capabilities
-	  * Namespacing tools for better organization
-	  * Proactive, event-driven server architecture
-	  ![MCP Future roadmap](../assets/image_1740243402170_0.png){:height 225, :width 400}
-	- ## Key Takeaways
-		* MCP is quickly becoming foundational for AI development
-		* Standardization boosts innovation and interoperability
-		* Strong and growing industry adoption
-		![MCP Future roadmap](../assets/image_1740243402170_0.png){:height 225, :width 400}
+	- ## #MCP Key [[EdTech]] Takeaways
+	  * Of course it helps [[AI Coding]] agents know more about the other systems ([[JIRA]], [[GitHub]], [[PostgreSQL]], etc)
+	  * Each [[LMS/Course/Teaching Element]] could express actions AI could take on it as an [[MCP Server]]. Any AI application with permission could interact with that Teaching Element Type
+	  * Each LMS could be an [[LMS/Course/Authoring]] MCP Server for AI-enhanced course development
 - # [[AIES 25 WS 2 - Smarter AI with GraphRAG – Knowledge Graphs for Agents]]
 	- ## Workshop Overview
 		- **Instructor:** [[Person/Alison Cossette]], Developer Advocate at Neo4j
