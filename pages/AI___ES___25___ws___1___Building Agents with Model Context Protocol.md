@@ -104,16 +104,19 @@ alias:: [[AIES 25 WS 1 - Building Agents with MCP - Mahesh Murag]]
 				  •	Exposes Prompts
 				- Components:
 				- ##### Tools (Model-controlled)
+				  id:: 67b9ecfb-1191-4550-8f61-f821b0bfa21f
 				  •	Functions invoked by the model:
 				  •	Retrieve / search
 				  •	Send a message
 				  •	Update DB records
 				- ##### Resources (Application-controlled)
+				  id:: 67b9ecfb-e989-4dbb-bf88-cca12c5cc9bb
 				  •	Data exposed to the application:
 				  •	Files
 				  •	Database Records
 				  •	API Responses
 				- ##### Prompts (User-controlled)
+				  id:: 67b9ecfb-92e0-4b19-b0f9-4d4dbd542917
 					- Pre-defined templates for AI interactions:
 					- Document Q&A
 					- Transcript Summary
@@ -129,7 +132,7 @@ alias:: [[AIES 25 WS 1 - Building Agents with MCP - Mahesh Murag]]
 					- we don't think mcp is going to replace agent frameworks
 				- a few questions are about "why isn't it a tool"
 				- a few questions about "why do we need agent frameworks if we need this"
-				- #### q - why do resources and prompts exist, because you can do it with tools
+				- #### #Q - why do resources and prompts exist, because you can do it with tools
 					- a - there are more capabilities with tools and resources
 					- in reality, resources and prompts can be *dynamic* and interpolated with context from the user or the aplication and the server can return a customized resource or prompt for the task at hand
 					- client can subscribe to resource, and server can notify the client and tell the client that you need to update the state of your system
