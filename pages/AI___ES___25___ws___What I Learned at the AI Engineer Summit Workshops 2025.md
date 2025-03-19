@@ -149,73 +149,34 @@
 	  * Each [[LMS/Course/Teaching Element]] could express actions AI could take on it as an [[MCP Server]]. Any AI application with permission could interact with that Teaching Element Type
 	  * Each LMS could be an [[LMS/Course/Authoring]] MCP Server for AI-enhanced course development
 - # [[AIES 25 WS 2 - Smarter AI with GraphRAG – Knowledge Graphs for Agents]]
-	- ## Workshop Overview
-		- **Instructor:** [[Person/Alison Cossette]], Developer Advocate at Neo4j
-		- **Topic:** Improving AI accuracy and trust using GraphRAG with Neo4j
-		- **Key Concept:** Connecting structured (databases, APIs) and unstructured data (documents, chat logs) in AI retrieval.
-		- ![Alison Cossette](https://lh3.googleusercontent.com/pw/AP1GczPKe2x5c8T9_9dTrwMgaR12P_ZyEPcoRmY2hB8-eBIrL7O_zvJbKuHarLMGn_tDwc91oJn42uNUKvMS60Of4BF1UJNhDehrpiO8P9qvOXlZ1-bpUpE=w680-h383)
-	- ## Why Traditional RAG Falls Short
-		- Traditional Retrieval-Augmented Generation (RAG) often struggles with:
-		  * Relative context
-		  * Temporal information
-		  * Integration of structured and unstructured data
-		  * Providing transparent, explainable responses
-		- ![External Data Types](https://lh3.googleusercontent.com/pw/AP1GczO8afuu1HdHe5eM28rDd8YEdT7ZORrpyMUUOIXIBxYze4zkfthVgq01cmlX7rGBVduXTji55Hdfr-9bhrblR0LZ5pZR9p_eeDPqQYgEF7NKlQW6cuQ=w680-h383)
-	- ## Introduction to Neo4j Graph Concepts
-		- **Nodes:** Entities (nouns, e.g., "Person," "Car")
-		- **Relationships:** Interactions ("KNOWS," "LIVES WITH")
-		- **Properties:** Attributes of nodes or relationships
-		- ![Neo4j Graph Components](https://lh3.googleusercontent.com/pw/AP1GczNT3GiDxoNMcs9lVEFE87hP6FA4KXCPFV0S-nDhWsq6BAM5_YsKf_JRvBVmmezauAUJmFxQ6v_E-ZzeJ-4WDg1SKWXXXixhbDvVkw6FIlh_szrA2Rs=w680-h383)
-	- ## Graph Structure for RAG: Domain and Lexical Graphs
-		- **Domain Graph:** Extracted structured knowledge (topics/entities).
-		- **Lexical Graph:** Granular breakdown of documents into "chunks."
-		- Enables precise, context-rich retrieval across structured and unstructured content.
-		- ![Domain & Lexical Graph](https://lh3.googleusercontent.com/pw/AP1GczOAARYGgrIPeHtn2Gy88OhNMO-T6wBhAMGge-uGZ0fAkF_CnNogRI952c0cjLrybAMMChtEPvflPPmL9wDKbdzUI_VowlZ6uC6cl-U_NBjnBk0wJKU=w680-h383)
-	- ## Adding Conversational Context: Memory Graph
-		- Records interactions as:
-		  * Users → Sessions → Prompts → Responses
-		- Maintains conversational context over multiple interactions.
-		- Crucial for intelligent chatbots and assistants.
-		- ![Memory Graph](https://lh3.googleusercontent.com/pw/AP1GczNouh-9RA9nrHrbHCf5Q5zjkMar6I48nfMHFjGfcezgN-V5glv7wZWm2ZwsY30xhROZa91hzAVGboNSFTczjMDa5z2NHj4GiZykqq_dAFKkV8FrM-4=w680-h383)
-	- ## Comprehensive Graph Structure: Domain, Lexical, Memory
-		- Integrates domain knowledge, granular document data, and user interactions into one cohesive graph.
-		- Supports sophisticated query patterns (e.g., "Who is vulnerable to lithium shortages?").
-		- Provides the transparency of how answers are derived from interconnected data.
-		- ![Complete Knowledge Graph](https://lh3.googleusercontent.com/pw/AP1GczPN66ytEQ3RtucN9WzyXYZnVR5QlvlfqGOxbGn8TmXZjVpSvJLOTX9eaESkR-sYUA_k2G3kfws1IP_VCTSrhjlzlJNOMfxrrMW8GIh1R_GScVoEsRQ=w680-h383)
-	- ## GraphRAG Patterns in Neo4j
-		- Converts natural language queries to Cypher queries (**Text2Cypher**).
-		- Uses graph embeddings (**Graph Vectors**) stored as node properties for enhanced semantic retrieval.
-		- Allows semantic search combined with structured graph relationships.
-		- ![GraphRAG Patterns](https://lh3.googleusercontent.com/pw/AP1GczORkXyZklWNW6I-UZdIrOAhjiH8SiSvJML986k_2A6m7M77C02VavV8aUOrU1Bgb3EF9aLfsod9TWJU_nSObOvMaF95lsVW8hI0k8LrqOTcPmNp9J0=w680-h383)
-	- ## Real-world Example: Semantic Search + Traversal
-		- Graph-powered recommendation system:
-		  * Links semantically similar products.
-		  * Clusters customers by purchasing patterns.
-		  * Dynamically predicts future purchases based on graph traversal.
-		- Ideal for personalized e-commerce recommendations.
-		- ![Semantic Product Recommendation](https://lh3.googleusercontent.com/pw/AP1GczOSgCgRFVjSzfnVg97oIPvuAAU9yhV7EAX803tz4OVsnHsbNuP96kJXMPbvb1N-fjDZHaST4NG4aH3xnQ1HHRHL-OSnExzxa_ZPPZihWyJKkkvVLZM=w680-h383)
-	- ## Importing Structured Data (Flatfiles) into Neo4j
-		- Simple user interface to map entities and relationships from CSV files.
-		- Enables rapid prototyping of customer-order-product interactions.
-		- ![Flatfile Import](https://lh3.googleusercontent.com/pw/AP1GczPFa3s6vqlIXIcIt1vhdS6O5bny5H1y40wEQzrTebyAU35G20gsXnGi4YPeI_Em4zsc-tm1OYPCUi6i8VCBXM87cv51cJUJs5zSX9YOE8bafK7Iyps=w680-h383)
-	- ## Grounding and Graph-based EDA (Exploratory Data Analysis)
-		- Graph-based strategies to improve data quality:
-		  * Connect → Cluster → Curate
-		  * Removes duplicate nodes using KNN similarity.
-		- Improves token efficiency and accuracy in RAG applications.
-		- ![Graph-based EDA](https://lh3.googleusercontent.com/pw/AP1GczOPyHKOFt5pCvDrAPxtX41BeGeIu3DB-sltRxi0aPMRp3sgYIwJHI0H5OERi3suvfSPh06MVypkS8yV2-49KN5QPndC9_DE94iQelV6Kr7oWFJkJRQ=w680-h383)
-	- ## Visualizing LLM Conversations & Evaluations
-		- Logs user-assistant interactions and associated context.
-		- Helps identify patterns and evaluate response quality through community analysis.
-		- Enables fine-tuning of AI models.
-		- ![LLM Conversation Logging](https://lh3.googleusercontent.com/pw/AP1GczM7lCFLSiO7vopNtVBAaJ80BK1-fSdC2YkIo2q0qIim3OHoKhfpyX2QEYQutccaUFpdPK6r_mrXWO9gkoXhGGdM9-Y0f0a_8_OoezAxt8PzXDEnKvQ=w680-h383)
-	- ## Hands-On Learning: Neo4j GenAI Workshop
-		- Practical skills in:
-		  * Vector search and embeddings
-		  * Integration with LangChain and OpenAI
-		  * RAG techniques for improved retrieval and grounding
-		- Available via Neo4j GraphAcademy platform.
-		- ![Neo4j Workshop](https://lh3.googleusercontent.com/pw/AP1GczMa5jyoCp2al07E_S7lNRHpuF4IYNerN5er1uV7QrS9vf9eFZAFDxJTP7WxTP_7c01tu__oQRzMRXvVCoq2v1IRFx1lu3siPmwplkMb07Yo_-5pOcM=w680-h383)
+	- ## Workshop Overview: GraphRAG with Neo4j
+	  * Instructor: Alison Cossette, Neo4j Developer Advocate
+	  * Goal: Improve AI accuracy using graph-based RAG
+	  * Focus: Connecting structured and unstructured data
+	  ![Alison Cossette](https://lh3.googleusercontent.com/pw/AP1GczPKe2x5c8T9_9dTrwMgaR12P_ZyEPcoRmY2hB8-eBIrL7O_zvJbKuHarLMGn_tDwc91oJn42uNUKvMS60Of4BF1UJNhDehrpiO8P9qvOXlZ1-bpUpE=w680-h383)
+	- ## Traditional RAG Limitations
+	  * Struggles with context and temporal information
+	  * Can't integrate structured and unstructured data well
+	  * Lacks transparency in responses
+	  ![External Data Types](https://lh3.googleusercontent.com/pw/AP1GczO8afuu1HdHe5eM28rDd8YEdT7ZORrpyMUUOIXIBxYze4zkfthVgq01cmlX7rGBVduXTji55Hdfr-9bhrblR0LZ5pZR9p_eeDPqQYgEF7NKlQW6cuQ=w680-h383)
+	- ## Neo4j Graph Building Blocks
+	  * Nodes: Entities (Person, Car)
+	  * Relationships: Interactions (KNOWS, LIVES_WITH)
+	  * Properties: Node/relationship attributes
+	  ![Neo4j Graph Components](https://lh3.googleusercontent.com/pw/AP1GczNT3GiDxoNMcs9lVEFE87hP6FA4KXCPFV0S-nDhWsq6BAM5_YsKf_JRvBVmmezauAUJmFxQ6v_E-ZzeJ-4WDg1SKWXXXixhbDvVkw6FIlh_szrA2Rs=w680-h383)
+	- ## GraphRAG Architecture
+	  * Domain Graph: Structured knowledge base
+	  * Lexical Graph: Document chunk relationships
+	  * Memory Graph: User interaction history
+	  ![Domain & Lexical Graph](https://lh3.googleusercontent.com/pw/AP1GczOAARYGgrIPeHtn2Gy88OhNMO-T6wBhAMGge-uGZ0fAkF_CnNogRI952c0cjLrybAMMChtEPvflPPmL9wDKbdzUI_VowlZ6uC6cl-U_NBjnBk0wJKU=w680-h383)
+	- ## GraphRAG in Action
+	  * Converts natural language to Cypher queries
+	  * Uses graph embeddings for semantic search
+	  * Combines structured and vector search
+	  ![GraphRAG Patterns](https://lh3.googleusercontent.com/pw/AP1GczORkXyZklWNW6I-UZdIrOAhjiH8SiSvJML986k_2A6m7M77C02VavV8aUOrU1Bgb3EF9aLfsod9TWJU_nSObOvMaF95lsVW8hI0k8LrqOTcPmNp9J0=w680-h383)
+	- ## Key #EdTech Takeaways for GraphRAG
+	  * **one of the best ways** to have an AI gradually **develop a "mental model" of a student's abilities** relative to the learning goles; see also [[AI/Digital Twin]] 
+	  * possible to take flatfile documents and do entity extraction into a knowledge graph; see also [[EdTech/Idea/LearnMark]] for topic extraction, pre-requisite identification, etc - this would help [[LMS/Course/Authoring]] for custom courses
 - ![Pic 03](https://lh3.googleusercontent.com/pw/AP1GczMsj7X800Pr7fExabDh8-Z1tRqBSHzniDKzncp_FqTQr1dPzqDgrGGSU1ON4BlhG7dGaZHGYa_cL_9XQqDiHMVHgwr10Tdbh1UOeY_Wuq_NTZ0nllk=w1920-h1080)
 - # [[AIES 25 WS 3 - How Clay Performs Agent Evaluation]]
 	- ## Workshop Overview
