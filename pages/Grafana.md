@@ -1,0 +1,1 @@
+# Grafana is ==an open-source, interactive data visualization and monitoring platform== that allows users to query, visualize, and understand data from various sources, creating dashboards for easier interpretation and collaboration.

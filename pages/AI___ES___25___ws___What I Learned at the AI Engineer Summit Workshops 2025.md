@@ -57,7 +57,7 @@
 		  * introspect into database, etc
 	- ## Side-note - [[Latent Space/Blog/25/03/Why MCP Won]]
 		- this talk possibly contributed to MCP going viral in [[2025/03]] 
-		  > At current pace, **MCP will overtake OpenAPI in July**
+		  > At current pace, **MCP will overtake OpenAPI in July**
 		  ![MCP going viral](https://substackcdn.com/image/fetch/w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3c23222d-bb03-445b-9806-483eb06c3b75_2554x1640.png)
 		- [[Person/Mahesh Murag]]'s talk likely contributed to MCP taking over AI social media feeds
 		  ![the twitter hype](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc325ceca-4bdf-44cf-b727-978bb49a89e1_1106x1716.png){:height 551, :width 299}
@@ -121,43 +121,40 @@
 	  * agent is an "augmented LLM" running in a loop
 	  * you can let users of the agent system connect to their data and you as the developer can focus on **the core loop**
 	- ## #Example [mcp-agent](https://github.com/lastmile-ai/mcp-agent) from  [[lastmileAI]]
-	  * **`mcp-agent`** is a simple, composable framework to build agents using [Model Context Protocol](https://modelcontextprotocol.io/introduction).
+	  * **`mcp-agent`** is a simple, composable framework to **build agents** using #MCP
 		- Example: Agent system to do deep research on Quantum computing cybersecurity implications 
 		  ![MCP-Agent project structure](https://lh3.googleusercontent.com/pw/AP1GczMwwnFzwCmTQrAIOfOJwG_Hz3G5yPrx4P-1i3rBPwtx1IclV5EHvIjjmp6e7ZWYQWVpFU3dN8DwB_FnBChNN3AMkZytcjAQdmvT4gaKVgKYC_8gx5k=w1920-h1080){:height 313, :width 538}
 		  * Uses **sub-agents**: `search_agent`, `fact_checker`, `report_writer`
 		  * side note - [[People/Mahesh Murag]] uses [[Windsurf]] here
-	- ## MCP & Augmented LLM Concept
-		- MCP enhances LLMs, allowing dynamic tool discovery.
-		- Enables agents to evolve post-deployment without manual updates.
-		  ![Augmented LLM](../assets/image_1740240522201_0.png){:height 225, :width 400}
-	- ## MCP Composability & Sampling
-		- Supports hierarchical agent workflows:
-		  * Agents act as both MCP clients and servers.
-		  * Sampling allows servers to request inference from clients, ensuring control of privacy and cost.
-		  ![Hierarchical agent diagram](../assets/image_1740241876883_0.png){:height 225, :width 400}
+	- ## MCP Composability & [Sampling](https://modelcontextprotocol.io/docs/concepts/sampling)
+	  * Every MCP client can be an MCP Server.
+	  * [[MCP/Sampling]] allows **servers to request inference** from clients, ensuring **control of privacy and cost**.
+	  ![Hierarchical agent diagram](../assets/image_1740241876883_0.png){:height 225, :width 400}
 	- ## MCP Inspector & OAuth Authentication
-		- Inspector provides debugging for MCP connections.
-		- OAuth integration simplifies secure service authentication.
-		  ![MCP Inspector OAuth](../assets/image_1740242601017_0.png){:height 225, :width 400}
+	  * Inspector provides debugging for MCP connections.
+	  * OAuth integration simplifies secure service authentication. Scoped permission boundaries can apply.
+	  ![MCP Inspector OAuth](../assets/image_1740242601017_0.png){:height 225, :width 400}
 	- ## MCP Registry API: Autonomous Discovery
-		- Official MCP Registry simplifies finding and trusting servers.
-		- Example: Agent autonomously finds Grafana MCP server for debugging tasks.
-		  ![MCP Registry discovery](../assets/image_1740242405280_0.png){:height 225, :width 400}
-	- ## Server Discovery: `.well-known/mcp.json`
-		- Websites expose MCP server info publicly.
-		- Agents instantly discover services like Shopify MCP integration.
-		  ![Shopify MCP discovery](../assets/image_1740243306243_0.png){:height 225, :width 400}
+	  * Official MCP Registry provides centralized server discovery
+	  * Enables agents to find and trust verified MCP servers
+	  * Example: Automatic discovery of [[Grafana]] MCP for debugging tasks
+	  ![MCP Registry discovery](../assets/image_1740242405280_0.png){:height 225, :width 400}
+	- ## Server Discovery
+	  * Websites can expose MCP server capabilities via `.well-known/mcp.json`
+	  * Enables instant discovery of service integrations
+	  * Real example: [[Shopify/MCP]] integration auto-discovery
+	  ![Shopify MCP discovery](../assets/image_1740243306243_0.png){:height 225, :width 400}
 	- ## MCP Roadmap: Future Features
-		- Upcoming improvements:
-		  * Stateful vs. stateless connections
-		  * Real-time data streaming
-		  * Namespacing tools
-		  * Proactive, event-driven servers
-		  ![MCP Future roadmap](../assets/image_1740243402170_0.png){:height 225, :width 400}
+	  * Stateful vs. stateless connections coming soon
+	  * Real-time data streaming capabilities
+	  * Namespacing tools for better organization
+	  * Proactive, event-driven server architecture
+	  ![MCP Future roadmap](../assets/image_1740243402170_0.png){:height 225, :width 400}
 	- ## Key Takeaways
-		- MCP is quickly becoming foundational for AI development.
-		- Standardization boosts innovation and interoperability.
-		- Strong and growing industry adoption.
+		* MCP is quickly becoming foundational for AI development
+		* Standardization boosts innovation and interoperability
+		* Strong and growing industry adoption
+		![MCP Future roadmap](../assets/image_1740243402170_0.png){:height 225, :width 400}
 - # [[AIES 25 WS 2 - Smarter AI with GraphRAG – Knowledge Graphs for Agents]]
 	- ## Workshop Overview
 		- **Instructor:** [[Person/Alison Cossette]], Developer Advocate at Neo4j
@@ -298,7 +295,7 @@
 		  * Execute complex, context-sensitive tasks
 		- ![Intro Slide](https://lh3.googleusercontent.com/pw/AP1GczMn93SQDyeKmPaLOr_ENMr8W3TdB2BhcBZzT1cfWErKpvznwI_Qp2AllcqqxWtF1C68GwCZ9W6DJWlbNbM_LSbTI_MrxJW-Eb05aCbrEnBXWaA-0is=w680-h383)
 	- ### Building Custom MCP Clients
-		- Not limited to Claude’s built-in MCP client.
+		- Not limited to Claude's built-in MCP client.
 		- Hands-on session demonstrated custom MCP client creation.
 		- Framework agnostic but strongly compatible with LangGraph, Autogen, Crew AI.
 		- Enables workflows beyond simple code generation.
