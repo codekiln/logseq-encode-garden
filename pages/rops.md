@@ -1,0 +1,22 @@
+tags:: [[CLI/Tool]], [[Secrets]]
+- # [[rops]]
+	- ## Overview
+		- Alternative to [[sops]] specifically designed for teams using [[AWS/KMS]]
+		- Rust implementation focusing on AWS integration
+	- ## Key Features
+		- ### AWS Integration
+			- Native [[AWS/KMS]] support
+			- [[AWS/IAM]] role-based access control
+			- Region-specific encryption
+		- ### File Format Support
+			- [[yaml]] - YAML configuration files
+			- [[json]] - JSON data files
+			- [[EnvVar/.env]] - Environment variable files
+	- ## Use Cases
+		- Team-based secret management in AWS environments
+		- [[CICD]] pipeline secret management
+		- Infrastructure as Code secret handling
+	- ## Integration Considerations
+		- Can be used with [[mise]] through command execution
+		- Alternative to [[sops]] when [[AWS/KMS]] is the primary encryption method
+		- Works well with version control systems 

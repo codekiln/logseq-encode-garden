@@ -244,7 +244,7 @@
 	  * For **phased conversations**, **each phase should be separately evaluated**
 	  * Each part of the application should be tested in isolation
 	  * In truly [[Agentic Systems]], you need to also evaluate the [[AI/Tool/Calling]]
-- # [[AI/ES/25/ws/4/Multi-Agent Workflows with MCP]]
+- # [[AI/ES/25/ws/4/Multi-Agent Workflows with MCP]] #MCP
 	- ### Multi-Agent Workflows Beyond the Chatbox
 	  * **"Agents aren't really agents unless they can discover and act beyond the chatbox"**
 	  * MCP enables dynamic environment interaction and resource discovery
@@ -260,7 +260,7 @@
 	  * Lightweight [[FastAPI]] server for code manipulation
 	  * [[LangChain]], [[MCP]], and [[LangGraph]]
 	  * automated **dependency upgrades**, **refactoring**
-	- ## AI-Driven Code Migration with LangGraph
+	- ## AI-Driven Code Migration with [[LangGraph]]
 	  ![LangGraph Studio Example](https://lh3.googleusercontent.com/pw/AP1GczOjOLs5nwDPyNKKFJBQLKLAzwifP1FN0p505DiZJWZZDmd44345ES4P7_Q7KDVNx-egNl2hB3VXPb9wpEeZk-m9mavVCDjx-LpxmJIZyau_fAzpjQ0=w680-h383){:height 225, :width 400}
 	  * Automated Java migration from [[JBoss]] to [[Spring Boot]]
 	  * AI handles dependencies and framework transitions

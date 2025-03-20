@@ -1,0 +1,3 @@
+# [Move or copy items | 1Password Support](https://support.1password.com/move-copy-items/?mac)
+	- > If you don’t see the vault you want to drag an item to in the sidebar, **and you have more than one account**, click your account or collection at the top of the sidebar and choose **All Accounts**. You’ll see **all the vaults in all your accounts**.
+	- After you other account's Vault is there, then you can drag an account to another vault

@@ -1,0 +1,33 @@
+tags:: [[CLI/Tool]], [[Secrets]]
+
+- # [[sops]]
+	- ## Overview
+		- Mozilla's Simple and flexible tool for managing secrets
+		- Supports multiple key management services and encryption methods
+	- ## Key Features
+		- ### Encryption Methods
+			- [[AWS/KMS]] - AWS Key Management Service
+			- GCP KMS
+			- Azure Key Vault
+			- PGP
+			- Age
+		- ### File Format Support
+			- [[yaml]] - YAML configuration files
+			- [[json]] - JSON data files
+			- [[EnvVar/.env]] - Environment variable files
+			- INI
+			- BINARY
+	- ## Integration with [[mise]]
+		- [[mise/plugin/mise-sops]] plugin available
+		- Can be used with [[direnv]] for environment variable management
+		- Benefits:
+			- Caching support for better performance
+			- Flexible output formats
+			- Works well with version control
+	- ## Use Cases
+		- [[CICD]] pipeline secret management
+		- Infrastructure as Code configurations
+		- Team-based secret sharing
+	- ## Links
+		- [GitHub Repository](https://github.com/getsops/sops)
+		- [Documentation](https://github.com/getsops/sops#readme)
