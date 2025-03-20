@@ -1,4 +1,6 @@
-# What I learned at the [[AI Engineer Summit 2025 NYC Workshops]]
+tags:: [[Logseq/Slideshow]]
+
+- # What I learned at the [[AI Engineer Summit 2025 NYC Workshops]]
 	- ## What *is* the [[AI Engineer Summit]]?
 		- ### How I *found out* about the AI Engineer Summit...
 			- #### ⚡ flash back to [[@swyx]]'s [[GraphQL]] presentation at [[Conference/React Boston/2018]] ...

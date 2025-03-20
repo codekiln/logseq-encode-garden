@@ -86,7 +86,7 @@ date-created:: [[2022/07]]
 				- now what i'm going to do is i'm going to **use the 1password cli version 2** which **introduced the new secret provision provisioning features** that tyler just mentioned
 				- i'm going to show you how that works
 				- i'm going to go back to where i {{youtube-timestamp 667}} configured the digital ocean access token
-				- but now **instead of pasting in the plain text value i'm gonna use a reference**
+				- but now **instead of pasting in the plain text value i'm gonna use a reference** [[1Password/Dev/CLI/Secret Reference]]
 					- so i'm replacing those **the plain text value with a reference to the secret**
 					- and you can use those references using a special syntax {{youtube-timestamp 688}}
 					- and that starts with `op://`

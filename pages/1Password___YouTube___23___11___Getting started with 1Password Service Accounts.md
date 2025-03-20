@@ -1,0 +1,16 @@
+# [Getting Started with 1Password Service Accounts - YouTube](https://www.youtube.com/watch?v=E3HKeG9P8HA)
+	- runtime: 1min 25sec
+	- ## Video
+		- {{video https://www.youtube.com/watch?v=E3HKeG9P8HA}}
+			- {{youtube-timestamp 1}} [Music] typically when accessing your credentials from one password you would need to provide a username and a password this isn't ideal in an automated scenario as a username and password will give access to all your
+			- {{youtube-timestamp 19}} vaults and all your secrets rather than just the secrets needed by your automated tools one password service accounts are ideal for shared environments because they provide an authentication method to one password that isn't associated with an individual
+			- {{youtube-timestamp 33}} like a username and password would be and allows for you to limit the scope of access in case your credentials ever get compromised surface accounts can be used anywhere that you can run our one password command line tool we have
+			- {{youtube-timestamp 46}} published many Integrations that leverage the use of surface accounts but for this demo I'll show you how to create and use a surface account directly with the one password CLI first we'll head on over to the one password web app click on Integrations
+			- {{youtube-timestamp 59}} then Direct directory and then look for the infrastructure Secrets management section because we're creating this surface account for the CLI we're going to select other here and we're going to select surface account next we'll name our surface
+			- {{youtube-timestamp 74}} account let's give a descriptive name for what it's going to be used for I've chosen CLI click next from here we can choose what vaults our service account should have access to I'm going to choose the dev Vault with read access
+			- {{youtube-timestamp 88}} we'll go ahead and create the account from here we can either copy the token directly to where we need it or we can store it securely and one password for this example I'll be copying the credential into the CLI now to use this service account with
+			- {{youtube-timestamp 106}} our CLI tool I'll need to set the credential to an environment variable called op service account token from here I can start using the CLI with a number of different commands for example we can use the op read command to return secrets from one
+			- {{youtube-timestamp 120}} password so we can write op read then we can head over to the one password app find the item we want to get our secret from so from here I'm going to go for my Docker secret find the field we care about and we can select copy secret
+			- {{youtube-timestamp 136}} reference we can then paste this as part of our Command and we get the secret my super secret password we can also use this command in scripts or as part of a larger command for example I can log into Docker by replacing my username and password with
+			- {{youtube-timestamp 153}} a secret reference to these values of one password so I enter this command in it will log me into Docker using those credentials there are many other commands and ways you can use service accounts and the one password CI so
+			- {{youtube-timestamp 165}} please check out our documentation for more details
