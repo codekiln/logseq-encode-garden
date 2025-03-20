@@ -8,7 +8,9 @@ month-created:: [[2024/12]]
 		- how to migrate from [[EnvVar/.env]] files to 1Password's secure tooling
 		- 1 - how to use [[op/run]] and a [[1Password Shared Vault]] to share secrets with other members on the dev team and inject them in to the [[EnvVar/.env]] file
 		- 2 - how a remotely running automated script can use a [[1Password Service Account]] and the [[1Password/Dev/SDK/python]] to access secrets
-		- comments - after this article, I have a better sense of how 1Password aims to cover the whole dev lifecycle. But I have an active #Question about the trade-offs of using this vs or with cloud-focused tools like [[HashiCorp/Vault]] or [[AWS/Secrets Manager]]. duplication of secrets isn't fun, but convincing #DevOps to to use a tool that's convenient for development instead of [[HashiCorp Vault]] or an AWS-specific tool sounds even less fun. Maybe someone has made an integration ... ?
+		- **comments** - after this article, I have a better sense of how 1Password aims to cover the whole dev lifecycle.
+			- I have an active #Question about the trade-offs of using this vs or with cloud-focused tools like [[HashiCorp/Vault]] or [[AWS/Secrets Manager]]. Duplication of secrets isn't fun, but convincing #DevOps to to use a tool that's convenient for development instead of [[HashiCorp Vault]] or an AWS-specific tool sounds even less fun. Maybe someone has made an integration ... ?
+			- This article doesn't mention [[1Password/Dev/Connect Server]], which is the next level up from using a [[1Password Service Account]], and offers low latency and self-managed rate limits at the expense of self-hosting, etc. See [[1Password/Dev/Doc/secrets-automation/Overview/Comparison]]
 	- ## Migration Steps
 		- ### Install [[VSCode/Extension/1Password]]
 			- Select a secret in [[EnvVar/.env]] file and use [[VSCode/Extension/1Password/Command/Save in 1Password]] [[VSCode/Command]] to swap it for a secret reference
@@ -80,3 +82,4 @@ month-created:: [[2024/12]]
 			- Optional but recommended step
 			- Edit secrets directly in 1Password
 			- Changes automatically reflected on application restart
+	-
