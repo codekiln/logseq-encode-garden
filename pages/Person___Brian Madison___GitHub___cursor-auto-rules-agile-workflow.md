@@ -39,12 +39,16 @@
 						- In my MR I used it or invoked it like this:
 							- > I've just forked this repository and checked out a branch. I've noticed there are a lot of spelling errors. I'd like to use this as an opportunity to try out the agile workflow mentioned in @agile-readme.md. Can you suggest what my first step should be to start an Epic to fix spelling and grammar and Stories for each file?
 						- The project rules guided the agent to create a directory structure like this:
-							- [.ai](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/tree/e26348726d94a6c1a2ce576358f55494a82b9965/.ai)
-								- a #PRD document [prd.md](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/blob/e26348726d94a6c1a2ce576358f55494a82b9965/.ai/prd.md), possible equivalent of [[AI/Coding/v0/File/2-TICKET-technical-specification.md]] in my workflow
-								- an [arch.md](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/blob/e26348726d94a6c1a2ce576358f55494a82b9965/.ai/arch.md), possible equivalent of [[AI/Coding/v0/File/2-TICKET-technical-specification.md]] which contained a beautiful [[Mermaid Diagram]] that looked like this:
+							- [.ai](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/tree/70d24a80da9d4520896189dad70b5e84be35d0ed/.ai)
+								- a #PRD document [prd.md](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/blob/70d24a80da9d4520896189dad70b5e84be35d0ed/.ai/prd.md), possible equivalent of [[AI/Coding/v0/File/2-TICKET-technical-specification.md]] in my workflow
+								- an [arch.md](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/blob/70d24a80da9d4520896189dad70b5e84be35d0ed/.ai/arch.md), possible equivalent of [[AI/Coding/v0/File/2-TICKET-technical-specification.md]] which contained a beautiful [[Mermaid Diagram]] that looked like this:
 									- ![image.png](../assets/image_1742556555015_0.png){:height 430, :width 122}
-							- [epic-1/](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/tree/e26348726d94a6c1a2ce576358f55494a82b9965/.ai/epic-1)
-								- [/.ai/epic-1/story-1.story.md](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/blob/e26348726d94a6c1a2ce576358f55494a82b9965/.ai/epic-1/story-1.story.md)
+							- [epic-1/](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/tree/70d24a80da9d4520896189dad70b5e84be35d0ed/.ai/epic-1)
+								- [story-1.story.md](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/blob/70d24a80da9d4520896189dad70b5e84be35d0ed/.ai/epic-1/story-1.story.md)
+								- [story-2.story.md](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/blob/70d24a80da9d4520896189dad70b5e84be35d0ed/.ai/epic-1/story-2.story.md)
+								- [story-3.story.md](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/blob/70d24a80da9d4520896189dad70b5e84be35d0ed/.ai/epic-1/story-3.story.md)
+								- [story-4.story.md](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/blob/70d24a80da9d4520896189dad70b5e84be35d0ed/.ai/epic-1/story-4.story.md)
+								-
 					- The project structure also includes an `xnotes` directory which is intended to be used for drafting longer prompts to copy andpaste into [[CursorAI/Agent Mode]]. AFAICT this directory is only meant as a tempfile staging area for a human crafting prompts; it's **not critical to read and can be ignored**. Expand this node if you want more info.
 					  collapsed:: true
 						- this directory is added to [[CursorAI/.cursorindexingignore]] [here](https://github.com/codekiln/cursor-auto-rules-agile-workflow/blob/main/.cursorindexingignore) and **also** added to [[.cursorignore]] [here](https://github.com/codekiln/cursor-auto-rules-agile-workflow/blob/main/.cursorignore).
