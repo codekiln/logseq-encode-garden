@@ -1,0 +1,2 @@
+# OLAP, or Online Analytical Processing
+	- is ==a technology that allows users to analyze business data from multiple perspectives, often using a structure called an OLAP cube, to make data analysis easier==

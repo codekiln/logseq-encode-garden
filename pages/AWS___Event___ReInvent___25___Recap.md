@@ -25,7 +25,7 @@ cgpt-link:: https://chatgpt.com/c/67dc5545-2598-800a-adae-d82a0f17e607
 		- ### [[AWS/Bedrock/Knowledge Base]]
 			- ### 13:54 [[AWS/Bedrock/Knowledge Base/Structured Data Retrieval]]
 				- sql-driven data sources
-			- ### 13:56 [[GraphRAG]] with [[AWS/Bedrock/Knowledge Base/GraphRAG]]
+			- ### 13:56 [[AI/RAG/Graph]] with [[AWS/Bedrock/Knowledge Base/GraphRAG]]
 			- ### 13:59 [[AI/RAG/Evaluation]] - [[AWS/Bedrock/Knowledge Base/Evaluation]]
 			- ### 14:00 multimodal data processing
 				- search across images

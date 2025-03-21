@@ -48,7 +48,6 @@
 								- [story-2.story.md](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/blob/70d24a80da9d4520896189dad70b5e84be35d0ed/.ai/epic-1/story-2.story.md)
 								- [story-3.story.md](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/blob/70d24a80da9d4520896189dad70b5e84be35d0ed/.ai/epic-1/story-3.story.md)
 								- [story-4.story.md](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/blob/70d24a80da9d4520896189dad70b5e84be35d0ed/.ai/epic-1/story-4.story.md)
-								-
 					- The project structure also includes an `xnotes` directory which is intended to be used for drafting longer prompts to copy andpaste into [[CursorAI/Agent Mode]]. AFAICT this directory is only meant as a tempfile staging area for a human crafting prompts; it's **not critical to read and can be ignored**. Expand this node if you want more info.
 					  collapsed:: true
 						- this directory is added to [[CursorAI/.cursorindexingignore]] [here](https://github.com/codekiln/cursor-auto-rules-agile-workflow/blob/main/.cursorindexingignore) and **also** added to [[.cursorignore]] [here](https://github.com/codekiln/cursor-auto-rules-agile-workflow/blob/main/.cursorignore).

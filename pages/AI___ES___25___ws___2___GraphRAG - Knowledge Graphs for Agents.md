@@ -156,7 +156,7 @@ created-by:: [[Person/Alison Cossette]]
 						- **Lexical and Domain Graphs** provide structured and unstructured content retrieval for AI applications.
 					- This setup is well-suited for **AI-driven search, chatbots, or recommendation systems**.
 	- ## GraphRAG
-		- ### #GraphRAG Patterns ((67d03ec9-1265-4dca-b45e-a7807a7701a1))
+		- ### #AI/RAG/Graph Patterns ((67d03ec9-1265-4dca-b45e-a7807a7701a1))
 			- ![image.png](../assets/image_1740247345920_0.png)
 			- #### [[My Notes]]
 				- it's going to run [[Cosine/Similarity]] in the graph
@@ -176,7 +176,7 @@ created-by:: [[Person/Alison Cossette]]
 						- they've seen people do that
 					- what does that look like?
 						- they will store it in neo4j because they want to connect it for the memory graph
-				- #### #Q what is a [[GraphRAG/Graph Vector]]
+				- #### #Q what is a [[AI/RAG/Graph/Graph Vector]]
 					- is it graph to vector vs vector to graph
 					- if I have a million rows of information about a client
 					- if I have a categorical with 5 elements and it exists a million tiems
@@ -200,7 +200,7 @@ created-by:: [[Person/Alison Cossette]]
 					- #### [[Neo4j/Text2Cypher]]
 						- Converts natural language prompts into **Cypher queries** for graph-based retrieval.
 						- Enhances interpretability and structured querying of knowledge graphs.
-					- #### [[GraphRAG/Graph Vector]]s
+					- #### [[AI/RAG/Graph/Graph Vector]]s
 						- Uses **graph embeddings** for retrieval, combining **structured and unstructured data**.
 						- Improves **vector similarity search** by adding semantic relationships.
 					- **Vector Search with Graph Context**
