@@ -1,0 +1,67 @@
+cgpt-link:: https://chatgpt.com/c/67dc5545-2598-800a-adae-d82a0f17e607
+
+- # [[AWS/Event/ReInvent]] 2025 Recap
+	- ## 14:00 - 14:45 | AI/ML
+		- [[Person/Mary Strain]] - leads AI strategy for higher education in the US
+		- [[Person/Aditya Singh]] - SLG/EDU AI/ML Specialist SA
+		- ### 13:47 bedrock new launches
+			- ### Amazon Nova Foundation Models
+				- **State-of-the-art multimodal intelligence**: Image and video quality
+				- **Performance & Pricing**:
+					- Comparable or better than GPT-4 and Gemini 1.5 in benchmarks.
+					- Competitive pricing with low latency.
+			- ### AWS Bedrock Model Updates
+				- **New Features in Bedrock**:
+					- Broad selection of models available 24/7 on-demand.
+					- Pay-per-use model for inference.
+					- **New Model Providers**:
+						- [[AWS/Bedrock/Model/Poolside]]: Focused on coding-related tasks.
+						- [[AWS/Bedrock/Model/Luma/Waveflow]] **Luma Models**: Includes **Waveflow**, a major generative model.
+			- ### Amazon Nova Foundation Models
+				- **State-of-the-art multimodal intelligence**:
+					- High-quality image and video processing.
+			- choose the best model
+			- model selection
+		- ### [[AWS/Bedrock/Knowledge Base]]
+			- ### 13:54 [[AWS/Bedrock/Knowledge Base/Structured Data Retrieval]]
+				- sql-driven data sources
+			- ### 13:56 [[GraphRAG]] with [[AWS/Bedrock/Knowledge Base/GraphRAG]]
+			- ### 13:59 [[AI/RAG/Evaluation]] - [[AWS/Bedrock/Knowledge Base/Evaluation]]
+			- ### 14:00 multimodal data processing
+				- search across images
+				- we see a lot of video data
+			- ### 14:03 real-time sync from data sources
+				- example: examination dates added to chatbot
+		- ### 14:03 [[AWS/Bedrock/Reranker API]] [[AI/RAG/Rerank]]
+			- you can call this independently of knowledge bases, but there's an integration with knowledge bases
+		- ### 14:05 [[AWS/Bedrock/Data Automation]] [[AI/Image/Processing]]
+			- Example: upload bank statement from capital one ... there are sample blueprints such as US medical insurance card or us passport. if there's a document that you want to create a custom blueprint for, you can start from scratch ... this is about data extraction
+			- [[Person/Mary Strain]] - this is good for student onboarding
+				- think of financial aid
+				- students have to resubmit identification
+			- [[Person/Aditya Singh]] says that you can also do [[AI/Video/Processing]] #Video
+				- handles video summarization and scene summarization
+				- you just upload it to [[AWS/S3]]
+				- you can select embeddings model and configure vector store
+				- there's a point here I don't quite understand - he's highlighting Amazon Bedrock Data Automation as parser preview - select this option to process visually
+		- ### 14:13 build and orchestrate agents
+			- strong announcements on this
+			- #### 14:15 multi-agent collaboration
+		- ### 14:18 optimize for cost, latency and accuracy
+			- #### 14:18 [[AI/Model/Distillation]] [[AWS/Bedrock/Model/Distillation]]
+			- #### [[AI/Prompt/Caching]]
+			- #### 14:20 Intelligent Prompt Routing
+				- single endpoint to route prompts
+				- [[Person/Aditya Singh]] says this is an [[AI/Mixture of Experts]] construct - interesting point, never thought of prompt routing that way
+		- ### 14:23 [[AWS/SageMaker/Unified Studio]]
+		- ### 14:27 [[AWS/Q Developer]]
+			- [[Person/Aditya Singh]] "you have a vibe coder now"
+			- [[My Question]]
+				- [[AWS/Q Developer/Web Experience]] allows sandboxing
+				- I asked about [[MCP]] -
+			- Question
+				- there is a free tier of Q developer, then it's per person subscription
+					- it's possible to create a service role
+					- there's a q developer dashboard on the admin side
+			- [[Person/Aditya Singh]] says there's some kind of [[Agentic]] system that's in a "start an investigation" page inside [[AWS/CloudWatch]]
+		-
