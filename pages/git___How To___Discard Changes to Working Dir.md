@@ -25,12 +25,28 @@ tags:: [[Diataxis/How To]], [[Git]], [[Git Commands]]
 				- First unstage the changes:
 					- Run `git reset HEAD`
 				- Then follow Option B if you want to discard them completely
+			- #### Option D: Discard Untracked Files - [[git/clean]]
+				- ### Preview what will be removed (STRONGLY RECOMMENDED)
+					- Run `git clean -n` [[git/clean/--dry-run]]
+					- This shows which files would be deleted without actually deleting them
+				- ### Remove untracked files
+					- Run `git clean -f` [[git/clean/--force]] to remove all untracked files
+					- For specific directories: `git clean -f <directory>`
+				- ### Remove untracked files and directories
+					- Run `git clean -fd` ([[git/clean/--force]] [[git/clean/--directory]]) to also remove untracked directories
+				- ### Remove ignored files too
+					- Run `git clean -fdx` ([[git/clean/--force]] [[git/clean/--directory]] [[git/clean/--exclude]]) to remove both untracked and ignored files
+					- ⚠️ Be extremely careful with this option!
 	- ## Safety Measures
 		- ### Before Discarding
 			- Create a backup branch if unsure:
 				- Run `git branch backup-YYYY-MM-DD`
 			- Or stash your changes:
 				- Run `git stash save "description of changes"`
+			- For untracked files:
+				- ALWAYS use `git clean -n` first to preview what will be deleted
+				- Consider moving important untracked files to a different location
+				- Check your `.gitignore` to ensure you won't delete needed files
 	- ## Troubleshooting
 		- ### Common Issues
 			- If you accidentally discarded changes:
@@ -39,6 +55,11 @@ tags:: [[Diataxis/How To]], [[Git]], [[Git Commands]]
 			- If some files aren't being discarded:
 				- Check if they're being tracked by Git
 				- For untracked files, use `git clean -f`
+			- If `git clean` isn't removing directories:
+				- Add the `-d` flag: `git clean -fd`
+			- If `git clean` shows "fatal: clean.requireForce defaults to true":
+				- Use the `-f` (force) flag as shown above
+				- Or configure git: `git config clean.requireForce false`
 	- ## Related
 		- [[git/reset]]
 		- [[git/checkout]]
