@@ -1,0 +1,60 @@
+tags:: [[Diataxis/Reference]], [[Git]], [[Git Commands]]
+
+- # [git reset](https://git-scm.com/docs/git-reset)
+	- ## Overview
+		- `git reset` is a command that updates the repository state by moving the current branch pointer and optionally modifying the working directory and staging area
+		- Primary purpose is to undo changes or move the branch pointer to a different commit
+	- ## Core Components
+		- ### Command Structure
+			- Basic syntax: `git reset [options] [commit]`
+			- Common options:
+				- `--soft`: Only moves HEAD and branch pointer
+				- `--mixed`: Default mode; moves HEAD and updates staging area
+				- `--hard`: Moves HEAD, updates staging area, and working directory
+		- ### Reset Modes
+			- #### Soft Reset [[git/reset/--soft]]
+				- Only moves the branch pointer
+				- Keeps all changes in staging area
+				- Example: `git reset --soft HEAD~1`
+				- Use case: Undo last commit while keeping changes staged
+			- #### Mixed Reset [[git/reset/--mixed]]
+				- Default mode if no option specified
+				- Moves branch pointer and unstages changes
+				- Example: `git reset HEAD~1`
+				- Use case: Undo commit and staging, keep changes in working directory
+			- #### Hard Reset (`--hard`) [[git/reset/--hard]]
+				- Most aggressive mode
+				- Moves branch pointer and discards all changes
+				- Example: `git reset --hard HEAD~1`
+				- Use case: Completely discard commits and revert to previous state
+				- See [[git/How To/Discard Changes to Working Dir]] for step-by-step instructions
+		- ### Common Reference Points
+			- `HEAD~n`: Move back n commits from current position
+			- `HEAD^`: Move to parent commit
+			- Commit hash: Reset to specific commit
+			- Branch name: Reset to tip of another branch
+	- ## Technical Details
+		- ### Safety Considerations
+			- Hard reset can permanently lose work
+			- ### The Reflog [[git/reflog]]
+				- Git's reference log (reflog) is a safety mechanism that records all changes to branch tips and HEAD
+				- Maintains a local history of where HEAD and branch references have been
+				- Entries persist for 30 days by default (configurable)
+				- Common reflog commands:
+					- `git reflog`: View the reflog history
+					- `git reflog show <branch>`: View reflog for specific branch
+					- `git reset HEAD@{n}`: Reset to nth previous HEAD position
+				- Use cases:
+					- Recover from accidental hard reset
+					- Find lost commits after branch deletion
+					- Undo git operations that moved HEAD
+			- Recommended to create backup branch before major resets
+		- ### Limitations
+			- Cannot reset individual files in committed state
+			- Does not work on untracked files
+			- Cannot undo after pushing to remote (use [[Git/revert]] instead)
+	- ## Related References
+		- [[git/revert]]
+		- [[git/checkout]]
+		- [[git/clean]]
+		- [[git/reflog]]

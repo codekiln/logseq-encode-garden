@@ -5,7 +5,7 @@
 			- ### Workflow Review
 				- #### Onboarding
 					- I was initially a bit confused by the [introductory material in the root README.md](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/blob/main/readme.md?plain=1#L3-L28), which contains important notices to new users before explaining what the repository does.
-						- **Note** this does contain a great #Tip that is useful that I've mentioned before at [[CursorAI/How To/update workbench.editorAssociations for mdc to prevent custom editor]]
+						- **Note** this does contain a great #Tip [[CursorAI/How To/update workbench.editorAssociations for mdc to prevent custom editor]]
 					- Just skip down to the Overview for more information.
 				- #### Installation
 					- The root README.md presents two quick start options, [**BOTH** of which rely on](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/blob/main/readme.md?plain=1#L45-L82) these installation instructions:
@@ -20,8 +20,7 @@
 				- #### [Overview](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/blob/main/readme.md#overview)
 					- This rule system has a few components. The two most highly visible in the core `README.md` are:
 						- ##### Using the agent to author and update custom [[CursorAI/Project Rules]]
-							- kind of like [[Person/Geoffrey Huntley/Blog/25/02/You are using Cursor AI incorrectly...]]
-							- This repo presents
+							- similar to [[Person/Geoffrey Huntley/Blog/25/02/You are using Cursor AI incorrectly...]], this repo presents a method of creating new cursor rules.
 							- Each type of [[CursorAI/Project Rule]] has a template in `.cursor/templatess/*.md`
 								- #Example #PRD template - [cursor-auto-rules-agile-workflow/.cursor/templates/template-prd.md at main](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/blob/main/.cursor/templates/template-prd.md)
 								- I like this method of **standardizing how cursor creates project rules**  by using **configurable templates**. This seems flexible and powerful.

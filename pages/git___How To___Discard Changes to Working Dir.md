@@ -1,0 +1,46 @@
+tags:: [[Diataxis/How To]], [[Git]], [[Git Commands]]
+
+- # How to Discard Changes to Working Directory with Git
+	- ## Overview
+		- This guide shows you how to safely discard unwanted changes in your Git working directory
+		- Useful when you want to abandon local modifications and return to a known good state
+	- ## Prerequisites
+		- Git installed on your system
+		- A Git repository with changes you want to discard
+		- Basic understanding of Git staging area and commits
+	- ## Steps
+		- ### 1. Review Changes to be Discarded
+			- Run `git status` to see what changes will be discarded
+			- Make sure you really want to discard these changes (they cannot be recovered!)
+		- ### 2. Choose Your Discard Method
+			- #### Option A: Discard All Changes (Staged and Unstaged) - [[git/reset/--hard]]
+				- Run `git reset --hard HEAD`
+				- This discards all changes and returns to the last commit
+			- #### Option B: Discard Only Unstaged Changes - [[git/checkout]]
+				- For all unstaged changes:
+					- Run `git checkout -- .`
+				- For specific files:
+					- Run `git checkout -- path/to/file`
+			- #### Option C: Discard Only Staged Changes - [[git/reset]]
+				- First unstage the changes:
+					- Run `git reset HEAD`
+				- Then follow Option B if you want to discard them completely
+	- ## Safety Measures
+		- ### Before Discarding
+			- Create a backup branch if unsure:
+				- Run `git branch backup-YYYY-MM-DD`
+			- Or stash your changes:
+				- Run `git stash save "description of changes"`
+	- ## Troubleshooting
+		- ### Common Issues
+			- If you accidentally discarded changes:
+				- Check `git reflog` for recovery options
+				- Restore from stash if you created one: `git stash pop`
+			- If some files aren't being discarded:
+				- Check if they're being tracked by Git
+				- For untracked files, use `git clean -f`
+	- ## Related
+		- [[git/reset]]
+		- [[git/checkout]]
+		- [[git/clean]]
+		- [[git/stash]]
