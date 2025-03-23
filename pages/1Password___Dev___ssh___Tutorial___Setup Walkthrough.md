@@ -1,6 +1,6 @@
 # Setting up 1Password Dev SSH Support
 	- ## Prerequisites
-		- install [[OP]] - see [[1Password/Dev/Doc/CLI/Get Started]]
+		- install [[1Password/Dev/op]] - see [[1Password/Dev/Doc/CLI/Get Started]]
 		- enable [[1Password/Desktop/Settings/Developer/Show 1Password Developer experience]]
 		- get some SSH keys into 1Password
 			- see [[1Password/How To/Import an SSH Key]] to import an SSH key
@@ -63,7 +63,7 @@
 					- [[My Note]] - you likely want to customize this to your preferred [[Terminal]] program rather than using the default
 		- ### Command-Line Interface (CLI)
 		  collapsed:: true
-			- [x] **Integrate with [[1Password/Dev/CLI]]**
+			- [x] **Integrate with [[1Password/Dev/op]]**
 				- Use the desktop app to sign in to 1Password in the terminal.
 		- ### Watchtower ([[1Password/Dev/Watchtower]])
 		  collapsed:: true

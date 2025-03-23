@@ -5,7 +5,7 @@ date-created:: [[2022/07]]
 		- {{video https://www.youtube.com/watch?v=z67zoIN8sCA}}
 			- ### [[My Notes]]
 			  id:: 67cff1ee-baac-4066-a027-6cac39f06983
-				- [[Person/Floris van der Grinten]] provides a competent overview of how to use [[op]] CLI tool to be an [[ssh/agent]] as well as how to use it to inject secret references using a [[Biometric]] unlock that persists in a shell session.
+				- [[Person/Floris van der Grinten]] provides a competent overview of how to use [[1Password/Dev/op]] CLI tool to be an [[ssh/agent]] as well as how to use it to inject secret references using a [[Biometric]] unlock that persists in a shell session.
 				- After watching this video I had more confidence that Biometrics could be used to get secrets off of disk in all the "normal" cases, but I still have questions about how this interacts with local VMs and Docker.
 				- Runtime: 16.5 min
 					- ((67cff279-ee66-4500-8b2a-e07261d61e00))
@@ -44,7 +44,7 @@ date-created:: [[2022/07]]
 				- {{youtube-timestamp 340}} i'm gonna select ssh keys and i'm gonna register a new ssh key and this time i'm gonna pick the one that i already created the webinar key click ok to auto fill also again filled in the name i'm going to click add and now i'm going to let's give it a name demo droplet
 				- {{youtube-timestamp 364}} and i'm going to create the droplet and now for this demo i'm not going to use the vanilla ssh cli instead i'm going to show you how you can use it in a local terraform workflow so i have a simple terraform project here which manages a digital ocean droplet
 				- {{youtube-timestamp 384}} and it prints the the ip of the droplet that gets created and it then uses an ssh provisioner and it's very simple all it does it creates a file on the on the host at this path um and it's a json file change the message here and then it runs through ssh a few commands
-			- ### {{youtube-timestamp 410}} Using [[1Password/Dev/CLI]] with [[tf]] to transfer a file to the [[DigitalOcean/Droplet]]
+			- ### {{youtube-timestamp 410}} Using [[1Password/Dev/op]] with [[tf]] to transfer a file to the [[DigitalOcean/Droplet]]
 			  id:: 67cff3b2-2083-4121-8e06-7fdd5227a76d
 			  collapsed:: true
 				- {{youtube-timestamp 405}} to prove that ssh works so let's go back to my droplet and it successfully created it so yeah
@@ -65,7 +65,7 @@ date-created:: [[2022/07]]
 				- {{youtube-timestamp 537}} so **that means no more ssh keys on disk** also **here still no ssh keys**
 					- *he's looking at `~/.ssh/config`*
 				- it's **very clean just the config** and the **known hosts**
-			- ### {{youtube-timestamp 540}} [[1Password/Dev/CLI]] for [[API/Key]] management and how to keep [[Secrets]] from holding your [[dotfiles]] hostage
+			- ### {{youtube-timestamp 540}} [[1Password/Dev/op]] for [[API/Key]] management and how to keep [[Secrets]] from holding your [[dotfiles]] hostage
 			  id:: 67cff615-7e1f-439b-862a-f3e3707020ec
 			  collapsed:: true
 				- that was ssh keys but **if you're a developer like i am** then you know that **ssh keys are not the only keys and secrets on your on your local disk**
@@ -94,7 +94,7 @@ date-created:: [[2022/07]]
 					- and then the **item** name `DigitalOcean`
 					- and then the **field name** which was `axis-token`
 				- so now i'm gonna rerun my terraform {{youtube-timestamp 713}} command
-				- but now i'm gonna wrap it **in a new command called** [[op/run]]
+				- but now i'm gonna wrap it **in a new command called** [[1Password/Dev/op/run]]
 					- which is new in the one password cli version two
 					- i'm gonna do [[tf/refresh]] here
 					- **what this will do is**
@@ -103,7 +103,7 @@ date-created:: [[2022/07]]
 							- *but only at runtime* - only *when this command runs*
 						- and **when it ends the secrets are wiped**
 				- so let's see that in action
-					- **side note**: first it's also good to note the the [[1Password/Dev/CLI]] {{youtube-timestamp 755}} **by itself does not have any bootstrap secret or any authentication secret that's that's that's stored on my disk****
+					- **side note**: first it's also good to note the the [[1Password/Dev/op]] {{youtube-timestamp 755}} **by itself does not have any bootstrap secret or any authentication secret that's that's that's stored on my disk****
 						- instead, simply **because i have the one password desktop app installed,**
 						- the CLI **can connect to that** and **authenticate**
 						- **without** having to {{youtube-timestamp 777}} have **yet another secret sitting there** in between
@@ -127,7 +127,7 @@ date-created:: [[2022/07]]
 			  collapsed:: true
 				- i can rerun this without the {{youtube-timestamp 840}} prompt
 				- because this shell is now connected to my one password app
-			- ### {{youtube-timestamp 846}} another feature - items are masked by default in the [[CLI]] during the run of [[OP]]
+			- ### {{youtube-timestamp 846}} another feature - items are masked by default in the [[CLI]] during the run of [[1Password/Dev/op]]
 			  id:: 67cffac0-8c8b-402c-8246-26e86c6fc0ec
 			  collapsed:: true
 				- #### Demo of 1Password conceal by default UI
@@ -143,8 +143,8 @@ date-created:: [[2022/07]]
 					- if i now **print the digital ocean access token**
 					- **it says digital ocean access token concealed by 1password**
 					- and then i **can** {{youtube-timestamp 904}} **use** the **no masking flag** to **opt out of that**
-					- so that was [[op/run]]
-			- ### {{youtube-timestamp 916}} Technique for utilizing [[op/run]] using [[Shell/alias]]
+					- so that was [[1Password/Dev/op/run]]
+			- ### {{youtube-timestamp 916}} Technique for utilizing [[1Password/Dev/op/run]] using [[Shell/alias]]
 			  id:: 67cffb6e-46e0-4298-bfa5-030b95635165
 			  collapsed:: true
 				- **and i can already hear you thinking** now that **okay so wait i now need to always remember to always wrap my terraform commands with op run** true but luckily there's a good old uh

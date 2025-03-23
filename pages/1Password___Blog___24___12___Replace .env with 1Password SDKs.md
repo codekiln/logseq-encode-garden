@@ -6,7 +6,7 @@ month-created:: [[2024/12]]
 	- ## [[My Notes]]
 	  id:: 67dbde70-e7cb-4b5a-a5e6-a15a761a4ccb
 		- how to migrate from [[EnvVar/.env]] files to 1Password's secure tooling
-		- 1 - how to use [[op/run]] and a [[1Password Shared Vault]] to share secrets with other members on the dev team and inject them in to the [[EnvVar/.env]] file
+		- 1 - how to use [[1Password/Dev/op/run]] and a [[1Password Shared Vault]] to share secrets with other members on the dev team and inject them in to the [[EnvVar/.env]] file
 		- 2 - how a remotely running automated script can use a [[1Password Service Account]] and the [[1Password/Dev/SDK/python]] to access secrets
 		- **comments** - after this article, I have a better sense of how 1Password aims to cover the whole dev lifecycle.
 			- I have an active #Question about the trade-offs of using this vs or with cloud-focused tools like [[HashiCorp/Vault]] or [[AWS/Secrets Manager]]. Duplication of secrets isn't fun, but convincing #DevOps to to use a tool that's convenient for development instead of [[HashiCorp Vault]] or an AWS-specific tool sounds even less fun. Maybe someone has made an integration ... ?
@@ -50,7 +50,7 @@ month-created:: [[2024/12]]
 			- > For this step, let’s **assume you’re running a remote automated job** that **kicks off a Python script**. **Due to hosting limitations** you are **unable to install the 1Password CLI**. The desktop client does not allow programmatic access to secrets. In this scenario, your **only option is to use the 1Password SDKs** to access your application secrets.
 			- #### When to use which [[1Password]] Tool
 				- [[1Password/Desktop]] - intended to be used as a desktop client
-				- [[OP]] - Intended to be run from command line to inject secrets into your environment (may be limited due to hosting configuration).
+				- [[1Password/Dev/op]] - Intended to be run from command line to inject secrets into your environment (may be limited due to hosting configuration).
 				- [[1Password SDKs]] - Intended for direct secret access from within applications and scripts.
 					- [[My Notes]]
 						- It's still unclear to me whether 1P is advising when to use `op` vs `sdk` for devs **locally**. It sounds like they are saying that the SDKs are a last resort for remote scenarios. If I've instrumented my application to use .env files and [[1Password/Dev/CLI/Secret Reference]]s
@@ -77,7 +77,7 @@ month-created:: [[2024/12]]
 				    app_name = await client.secrets.resolve("op://ENV_Demo_Secrets/Demo App Name/text")
 				    app_secret_token = await client.secrets.resolve("op://ENV_Demo_Secrets/Blog 1 ENV App_Secret_Token/Section_ty4kl2xveagt5wxcz4yzfzloia/token")
 				  ~~~
-				- [[My Note]] *If we've instrumented this so it can run as a remote job and use a [[1Password Service Account]], I think the assumption that locally, I'll then use [[1Password/Dev/CLI]] `op` to get a [[1Password/Dev/CLI/Secret Reference]] to load the `OP_SERVICE_ACCOUNT_TOKEN` ... is that right?*
+				- [[My Note]] *If we've instrumented this so it can run as a remote job and use a [[1Password Service Account]], I think the assumption that locally, I'll then use [[1Password/Dev/op]] `op` to get a [[1Password/Dev/CLI/Secret Reference]] to load the `OP_SERVICE_ACCOUNT_TOKEN` ... is that right?*
 		- ### Step 4: Key Rotation
 			- Optional but recommended step
 			- Edit secrets directly in 1Password

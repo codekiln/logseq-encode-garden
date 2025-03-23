@@ -1,6 +1,6 @@
 tags:: [[WIP]]
 
-- # How to replace [[EnvVar/.env]] files secrets with [[op]] references
+- # How to replace [[EnvVar/.env]] files secrets with [[1Password/Dev/op]] references
 	- [[My Notes]]
 		- tbd
 	- [[see-also]]

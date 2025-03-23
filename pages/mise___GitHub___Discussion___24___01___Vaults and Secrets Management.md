@@ -1,6 +1,6 @@
 # [vaults/secrets management · jdx/mise · Discussion #3712](https://github.com/jdx/mise/discussions/3712)
 	- ## [[My Notes]]
-		- detailed discussion on how to add secrets management.
+		- open discussion on how the team can add add [[Secrets Management]] to [[mise]]. as of [[2025-03-23 Sun]] there are no proposals on the table and discussion hasn't been active since last year.
 	- ## Summary
 		- ### Initial Proposal by [[@jdx]]
 			- Two main approaches suggested:
@@ -21,7 +21,7 @@
 				- Already supports multiple password managers
 				- Preference for referencing secrets over storing encrypted copies
 				- Easier secret rotation when not storing copies
-			- #### [[op]] Integration Considerations
+			- #### [[1Password/Dev/op]] Integration Considerations
 				- Recommendation to use secret references with `op inject`
 				- Example usage:
 					- ~~~bash
@@ -59,7 +59,7 @@
 		- ### Current Status
 			- Discussion ongoing
 			- Multiple integration paths being explored:
-				- Direct tool integration ([[op]], [[sops]])
+				- Direct tool integration ([[1Password/Dev/op]], [[sops]])
 				- Template-based approach ([[Person/Vincent Prouillet/GitHub/tera]])
 				- Command-based resolution
-			- See related issue: [[mise/GitHub/Issue/24/02/Struggles with integrating 1Password op]] for specific [[op]] integration challenges
+			- See related issue: [[mise/GitHub/Issue/24/02/Struggles with integrating 1Password op]] for specific [[1Password/Dev/op]] integration challenges

@@ -1,7 +1,7 @@
 # TODO How to see the [[langgraph/Assistant]] configuration in a particular [[LangSmith/Thread]] in LangSmith
 	- ## Research
 		- [LangGraph graphs are not reusable, and overall the configuration approach is poorly designed · langchain-ai/langgraph · Discussion #3225](https://github.com/langchain-ai/langgraph/discussions/3225)
-			- #OP
+			- #1Password/Dev/op
 				- With LangGraph it is impossible to build and share reusable graphs. What I mean by that is that I cannot build a graph and publish it as a package, so that it is easily redeployed somewhere else by someone else **with a different base config**.
 				- Because the `configuration = Configuration.from_runnable_config(config)` will always use parent Configuration defaults defined in my package instead of enabling someone to import the graph and provide a different config
 				- So there is unfortunately no way to compile a graph and pass it a different default configuration at compile time. It can only be done at runtime.
