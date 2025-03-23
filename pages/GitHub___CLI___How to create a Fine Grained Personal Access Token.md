@@ -1,6 +1,6 @@
 tags:: Q, [[GitHub Personal Access Token]]
 
-- # DONE How to create a [[GitHub/Token/Personal]] with Fine-Grained permissions from #gh
+- # DONE How to create a [[GitHub/Auth/Personal]] with Fine-Grained permissions from #gh
 	- there **isn't** currently a command to create Fine-Grained Personal Access Tokens (PATs) through the GitHub CLI (gh).The closest authentication-related commands available are:- gh auth login - Which handles basic authentication and creates classic tokens
 		- [[GitHub/CLI/gh/auth/token]] `gh auth token` - Which displays existing tokens
 		- [[GitHub/CLI/gh/auth/refresh]] `gh auth refresh` - Which can modify scopes of existing tokens
