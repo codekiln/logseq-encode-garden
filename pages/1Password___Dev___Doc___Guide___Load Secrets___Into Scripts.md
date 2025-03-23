@@ -21,15 +21,18 @@
 				  AWS_ACCESS_KEY_ID=op://prod/aws/access-key
 				  ```
 			- `op run --env-file yourscript.env -- yourscript.sh`
+			- This might work well with [[mise/Task]] definitions
 	- ## [Option 2](https://developer.1password.com/docs/cli/secrets-scripts/#option-2-use-op-read-to-read-secrets) - use [[1Password/Dev/op/read]] to read secrets in a script
-		- #### Directly in script
+		- ### [[My Notes]]
+			- **Not as useful**, because it prevents the application from being used in contexts that don't use one password. Once you have a script that references `op` inline, every person or environment running that script must use `op`. Even so, there may be some use cases.
+		- ### Directly in script
 			- ##### #Example
 				- ```bash
 				  #!/bin/bash
 				  
 				  docker login -u $(op read op://prod/docker/username) -p $(op read op://prod/docker/password)
 				  ```
-		- #### With environment variables
+		- ### With environment variables
 			- ##### #Example
 				- ```bash
 				  #!/bin/bash
@@ -44,6 +47,7 @@
 		- [Learn how to load secrets into config files](https://developer.1password.com/docs/cli/secrets-config-files/).
 		- [[My Notes]] on option 3
 			- This uses a specific [[Template]] sytax reminiscent of [[Jinja]] - see [[1Password/Dev/CLI/Ref/Concept/Template Syntax]]
+				- {{embed ((67dfea45-d135-4607-9190-07c6918ce936))}}
 			- of course, now you have the secret sitting around unencrypted on disk, which goes against [[Security/Quest/Zero Secrets on Disk]]
 			- rant about this part
 				- > keep them in sync throughout developer workstations, CI, and production servers
@@ -66,4 +70,5 @@
 			  aws sts get-caller-identity
 			  ```
 		- If a shell plugin doesn't exist for the tool you're using, you can [build a new plugin](https://developer.1password.com/docs/cli/shell-plugins/contribute/).
-		-
+		- [[My Notes]]
+			- This might work well with [[mise/Task]] definitions
