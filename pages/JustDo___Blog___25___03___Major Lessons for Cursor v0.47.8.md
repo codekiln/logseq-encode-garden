@@ -1,0 +1,3 @@
+# [Major Lessons for Vibe Coders Using Cursor v0.47.8](https://justdo.com/blog/cursor-vibe-coding-lessons--major-lessons-for-vibe-coders-using-cursor-v0-47-8)
+	- they have created a sample [[.mdc]] that documents mdc file structure and usage at [https://github.com/justdoinc/justdo/blob/master/.cursor/rules/999-mdc-format.mdc](https://github.com/justdoinc/justdo/blob/master/.cursor/rules/999-mdc-format.mdc)
+	  id:: 67ded07e-9571-4aec-a2ca-3427f6e4ef43

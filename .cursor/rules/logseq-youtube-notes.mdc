@@ -1,0 +1,33 @@
+---
+description: Logseq-Flavored Markdown (LFM) YouTube transcript headings
+globs: 
+alwaysApply: false
+---
+# Logseq-Flavored Markdown (LFM) YouTube transcript headings
+
+This rule applies to 'pages/*.md' that have a YouTube video with a transcript. It is an extension to [logseq-flavored-markdown.mdc](mdc:.cursor/rules/logseq-flavored-markdown.mdc).
+
+Youtube video begins with a block like this:
+
+```
+	- ## [[Video]]
+		- {{video https://www.youtube.com/watch?v=abcdefghijklmnop}}
+```
+
+It will have a transcript like this:
+<BEFORE> 
+			- {{youtube-timestamp 3}} here's the transcript at 3 seconds into the video
+			- {{youtube-timestamp 284} here's the transcript at 284 seconds into the video
+			- {{youtube-timestamp 3}} here's the transcript at 350 seconds into the video
+</BEFORE>
+
+It's your goal to add headings at logical sections, with a link to the timestamp, like this:
+<AFTER>
+			- ### {{youtube-timestamp 3}} this is a summary heading of what was happening 3-349 seconds into the video
+				- {{youtube-timestamp 3}} here's the transcript at 3 seconds into the video
+				- {{youtube-timestamp 284} here's the transcript at 284 seconds into the video
+			- ### {{youtube-timestamp 350}} this is a summary heading of what was happening 350 seconds into the video to the next section
+				- {{youtube-timestamp 3}} here's the transcript at 350 seconds into the video
+</AFTER>
+
+If possible, visit the youtube URL and see what the chapters are, and name the headings after that. If that is not possible, use your best judgment or ask the user about how to group the sections of the transcript.  

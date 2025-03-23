@@ -44,12 +44,12 @@ date-created:: [[2022/07]]
 				- {{youtube-timestamp 340}} i'm gonna select ssh keys and i'm gonna register a new ssh key and this time i'm gonna pick the one that i already created the webinar key click ok to auto fill also again filled in the name i'm going to click add and now i'm going to let's give it a name demo droplet
 				- {{youtube-timestamp 364}} and i'm going to create the droplet and now for this demo i'm not going to use the vanilla ssh cli instead i'm going to show you how you can use it in a local terraform workflow so i have a simple terraform project here which manages a digital ocean droplet
 				- {{youtube-timestamp 384}} and it prints the the ip of the droplet that gets created and it then uses an ssh provisioner and it's very simple all it does it creates a file on the on the host at this path um and it's a json file change the message here and then it runs through ssh a few commands
-			- ### {{youtube-timestamp 410}} Using [[1Password/Dev/CLI]] with [[Terraform]] to transfer a file to the [[DigitalOcean/Droplet]]
+			- ### {{youtube-timestamp 410}} Using [[1Password/Dev/CLI]] with [[tf]] to transfer a file to the [[DigitalOcean/Droplet]]
 			  id:: 67cff3b2-2083-4121-8e06-7fdd5227a76d
 			  collapsed:: true
 				- {{youtube-timestamp 405}} to prove that ssh works so let's go back to my droplet and it successfully created it so yeah
 				- now enough with the [[UI/Graphical]] i'm going to start i'm going to **continue in terraform now** so i'm going to **copy the droplet id** and now i'm gonna transfer ownership to
-				- {{youtube-timestamp 423}} my uh to my terraform projects i'm gonna use [[Terraform/import]] here digital ocean **paste in the droplet id** now i will use [[Terraform/apply]] which will **run my provisioners using ssh**
+				- {{youtube-timestamp 423}} my uh to my terraform projects i'm gonna use [[tf/import]] here digital ocean **paste in the droplet id** now i will use [[tf/apply]] which will **run my provisioners using ssh**
 					- i'm gonna confirm yes and **now it's gonna try to ssh into the machine**
 					- *here is the [[Mac/TouchID]]*
 				- {{youtube-timestamp 458}} and i'm gonna confirm that and **now it's connecting to the host using the ssh agent** and it's printing out my commands um and now again yeah session got created here so i can now just run turf refresh and i don't have to authorize again and
@@ -96,7 +96,7 @@ date-created:: [[2022/07]]
 				- so now i'm gonna rerun my terraform {{youtube-timestamp 713}} command
 				- but now i'm gonna wrap it **in a new command called** [[op/run]]
 					- which is new in the one password cli version two
-					- i'm gonna do [[Terraform/refresh]] here
+					- i'm gonna do [[tf/refresh]] here
 					- **what this will do is**
 						- it will scan the environment for those those secret references
 						- it will then {{youtube-timestamp 734}} if it finds it, it will **inject the plain text values**

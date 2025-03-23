@@ -1,3 +1,5 @@
+alias:: [[Harper Reed]]
+
 - Worked on [[Person/Barack Obama]]'s tech team
 - [[Person/Harper Reed/Web]] https://harperreed.com/
 - [[Person/Harper Reed/Blog]] https://harper.blog/posts/

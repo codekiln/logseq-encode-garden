@@ -11,7 +11,7 @@ created-by:: [[Person/Jeff Dickey]]
 			- **before one begins cooking, a professional chef should have all their utensils and ingredients ready to go and in their place**
 	- use `mise.toml` describes consistent way to setup and interact with projects across languages
 	- ### 3 categories of usage for `mise`
-		- `1`: installs [[NodeJS]], [[Py]], [[Terraform]]
+		- `1`: installs [[NodeJS]], [[Py]], [[tf]]
 			- specify versions of tools per project
 			- `mise` supports [hundreds](https://mise.jdx.dev/plugins.html) of dev tools
 		- `2`: manages [[EnvVar]]s

@@ -137,6 +137,7 @@ tags:: [[AI/Coding]]
 			- > When I describe this process to people I say “**you have to aggressively keep track of what’s going on because you can easily get ahead of yourself**.”
 			- > For some reason I say “over my skies” a lot when talking about LLMs. I don’t know why. It resonates with me. Maybe it’s because it is beautiful smooth powder skiing, and then all of a sudden you are like “WHAT THE FUCK IS GOING ON!,” and are completely lost and suddenly fall off a cliff.
 		- ### LLM coding is largely Single-player
+		  id:: 67b5d737-1411-48f4-ab3a-aa8512474565
 			- My main complaint about these workflows is that it is largely a solo endeavor - i.e. the interfaces are all *single player mode*.
 			- I have spent years coding by myself, years coding as a pair, and years coding in a team. It is always better with people. These workflows are not easy to use as a team. The bots collide, the merges are horrific, the context complicated.
 			- I really want someone to solve this problem in a way that makes coding with an LLM a multiplayer game. Not a solo hacker experience. There is so much opportunity to fix this and make it amazing.
