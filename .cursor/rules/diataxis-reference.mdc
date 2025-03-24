@@ -1,6 +1,7 @@
 ---
 description: "How to create a Diataxis Reference page"
-globs: "*.md"
+globs: 
+alwaysApply: false
 ---
 
 # Diataxis Reference Guide Format for Logseq
