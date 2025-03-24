@@ -9,6 +9,8 @@ alias:: [[AIES 25 WS 1 - Building Agents with MCP - Mahesh Murag]]
 			- [[AI/ES/25/ws/1/Building Agents with Model Context Protocol/YouTube]]
 		- ### Pics
 			- [[AI/ES/25/ws/1/Building Agents with Model Context Protocol/Pics]]
+		- ### Summary and Context
+			- [[Latent Space/Blog/25/03/Why MCP Won]]
 	- ## Before ((67d04b34-b6c8-4ed5-a63f-aee1d3d57a69))
 		- ![Pic 01](https://lh3.googleusercontent.com/pw/AP1GczNTS1VKTShXGqSYGMByy6laT8lL5MddZ3bxjDlsMnJcuZzQitD68um-_Yan2Yl5jpBcXgPO_FrqvzxXTStZfIdCGnL86RGzgkNelzm4V-l8dG2ics0=w1920-h1080){:height 172, :width 275}
 		  id:: 67d04b42-b317-4f6b-8d87-8c6b0fd0ae4d
