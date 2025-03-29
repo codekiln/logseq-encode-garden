@@ -54,7 +54,8 @@ tags:: [[Question/My]]
 						      rt.metadata["my_log"] = "some message"
 						      # ... rest of node logic
 						  ```
-					- 2. Use the context manager for specific sub-sections:
+2. Use the context manager for specific sub-sections:
+
 						- ```python
 						  from langsmith import trace
 						  

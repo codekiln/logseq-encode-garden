@@ -51,6 +51,8 @@ tags:: [[Diataxis/Tutorial]]
 		- ### 3. Enable the MCP Server
 			- Open Cursor Settings
 			- Navigate to the MCP section
+				- ## What You'll Create
+				  id:: 67e13751-0f8c-46e0-9b1f-01acee9914c7
 			- Find your newly added MCP server in the list
 			- Enable it using the toggle switch
 			- Click the refresh button to initialize the server
@@ -63,7 +65,8 @@ tags:: [[Diataxis/Tutorial]]
 			- Verify that you receive appropriate responses
 	- ## What You've Learned
 		- How to create and configure project-specific MCP servers
-		- The structure of MCP configuration files
+The structure of MCP configuration files
+
 		- How to enable and test MCP servers in Cursor
 	- ## Related
 		- [[CursorAI/Docs/Context/Model Context Protocol]]

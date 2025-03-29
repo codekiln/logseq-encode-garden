@@ -1,0 +1,190 @@
+created-by:: [[Person/Barry Zhang]]
+runtime:: 00:15:08
+
+- # [Building Effective Agents](https://www.youtube.com/watch?v=D7_ipDqhtwk&list=PLcfpQ4tk2k0WzqWDdWkN2DnZOhtYI9jyI&index=10)
+	- ## [[My Notes]]
+	- ## [[Video]]
+		- {{video https://www.youtube.com/watch?v=D7_ipDqhtwk&list=PLcfpQ4tk2k0WzqWDdWkN2DnZOhtYI9jyI&index=10}}
+			- ### {{youtube-timestamp 0}} Introduction and Background
+				- {{youtube-timestamp 0}} [Music] wow it's uh incredible to be on the same stage as uh so many people i've learned so much from let's get into it my name is [[Person/Barry Zhang]] and today we're going to be talking about how we build effective agents
+				- about two months ago eric and i wrote a blog post called building {{youtube-timestamp 32}} effective agents [[Anthropic/Blog/24/12/Building Effective Agents]]
+					- in there we shared some opinionated take on what an agent is and isn't and we give some practical learnings that we have gained along the way
+					- today i'd like to go deeper on three core ideas from the blog post and provide you with some personal musings {{youtube-timestamp 48}} at the end
+				- here are those ideas
+				- first don't build agents for everything
+				- second keep it simple
+				- third think like your agents
+				- let's first start with a recap of how we got here
+				- most of us probably started building very simple features
+			- ### {{youtube-timestamp 69}} Evolution of [[Agentic Systems]]
+				- {{youtube-timestamp 69}} things like summarization classification extraction just really simple things that felt like magic two to three years ago and have now become table stakes
+				- then as we got more sophisticated and as products mature we got more creative
+				- one model call often wasn't enough so we {{youtube-timestamp 86}} started orchestrating multiple model calls in predefined control flows
+					- this basically gave us a way to trade off cause and latency for better performance and we call these **workflows**
+					- we believe this is the beginning of Agentic Systems now models are even more capable
+				- {{youtube-timestamp 105}} and we are seeing more and more domain domain specific agents start to pop up in production unlike workflows agents can decide their own trajectory and operate almost independently based on environment feedback this is going to be our focus
+				- {{youtube-timestamp 121}} today it's probably a little bit too early to name what the next phase of agentic system is going to look like especially in production
+				- single agents could become a lot more general purpose and more capable
+				- or we can start to see collaboration and delegation in {{youtube-timestamp 134}} multi-agent settings
+				- regardless i think the broad trend here is that as we give these systems a lot more agency they become more useful and more capable but as a result the cost the latency the consequences of errors also go up and that brings us to the first point
+			- ### {{youtube-timestamp 152}} First Core Idea: Don't Build [[AI/Agent]]s for Everything
+				- {{youtube-timestamp 152}} don't build agents for everything
+					- well, why not?
+					- we think of agents as a way to **scale complex and valuable tasks**
+					- they **shouldn't be a drop in upgrade for every use case**
+					- if you have read the blog post, you'll know that we talked a lot about workflows and {{youtube-timestamp 169}} that's because we really like them and they're a great concrete way to deliver values today well so when should you build an agent here's our checklist the first thing to consider is the complexity of your task
+				- agents really thrive in ambiguous problem {{youtube-timestamp 186}} spaces and if you can map out the entire decision tree pretty easily just build that explicitly and then optimize every node of that decision tree
+					- **it's a lot more cost- effective and it's going to give you a lot more control**
+				- #### next thing to consider is the {{youtube-timestamp 201}} **value of your task**
+					- that exploration i just mentioned is going to **cost you a lot of tokens** so the **task really needs to justify the cost**
+					- if your budget per task is around 10 cents for example you're building a u high volume customer support system that only affords you 30 {{youtube-timestamp 218}} to 50,000 tokens
+					- in that case just use a workflow to solve the most common scenarios and you're able to capture the majority of the values from there on the other hand though if you look at this question and your first thought is i don't care how many tokens i spend i {{youtube-timestamp 233}} just want to get the task done, please see me after the talk; our go to market team would love to speak with you [laughter]
+				- #### from there we want to de-risk the critical capabilities
+					- this is to make sure that there aren't any significant bottlenecks in the agent's trajectory
+					- if {{youtube-timestamp 249}} you're doing a coding agent, you want to make sure it's able to write good code
+						- it's able to debug
+						- and it's able to recover from its errors
+					- if you do have bottlenecks, that's probably not going to be fatal
+						- but they will multiply your cost and latency
+						- so {{youtube-timestamp 263}} in that case we normally just
+							- 1.) reduce the scope
+							- 2.) simplify the task,
+							- 3.) try again
+				- #### finally the the the last important thing to consider is the cost of error and error discovery
+					- if your errors are going to be high stakes and very hard to discover it's going to be very difficult {{youtube-timestamp 280}} for you to trust the agent to take actions on your behalf and to have more autonomy
+					- ###### you can always mitigate this by **limiting the scope**
+						- you can have
+							- **read-only access**
+							- more **human-in-the-loop**
+							- ... but this will also limit how {{youtube-timestamp 294}} well you're able to scale your agent in your use case
+					- let's see this checklist in in action
+				- #### why is coding a great agent use-case?
+					- 1.) to go from design doc to a pr is obviously a very ambiguous and very complex task
+					- 2.) a lot {{youtube-timestamp 311}} of us are developers here; we know that good code has a lot of value
+					- 3.) many of us already use cloud for coding so we know that it's great at many parts of the coding workflow and last coding has this really nice property where the output is easily
+				- {{youtube-timestamp 328}} verifiable through [[Software/Testing/Unit]] and [[CICD]] and that's probably why we're seeing so many creative and successful coding agents right now
+				- once you find a good use case for agents **this is the second core idea** which is to
+				- #### keep it as simple as possible
+					- let me show you what i mean ...
+			- ### {{youtube-timestamp 349}} Second Core Idea: Keep It Simple
+				- {{youtube-timestamp 349}} this is what agents look like to us. They're **models using tools in a loop**
+					- and in this frame **three components define what an agent really looks like**
+						- 1.) **the environment** - this is a system that the agent is operating in
+						- 2.) a **set of [[AI/Tool]]s** which {{youtube-timestamp 367}} offer an interface for the agent to take action and get feedback
+							- then we have
+						- 3.) the [[Prompt/System]] which defines the goals the constraints and the ideal behavior for the agent to actually work in this environment
+						- 4.) then the model gets called in a loop and that's {{youtube-timestamp 385}} agents
+				- we have learned the hard way to keep this simple, because **any complexity up front is really going to kill iteration speed**
+				- iterating on just these three basic components is going to give you by far the highest [[ROI]] and optimizations can come later
+				- #### {{youtube-timestamp 401}} #Examples of three agent use cases that we have built for ourselves or or our customers
+					- they're going to look very different
+						- on the product surface
+						- in their scope
+						- {{youtube-timestamp 413}} in the capability
+					- but they **share** almost exactly the same backbone and code
+					- the environment largely depends on your use case
+					- so really the **only two design decisions**
+						- 1.) what are the set of {{youtube-timestamp 428}} [[AI/Tool]]s you want to offer to the [[AI/Agent]]
+						- 2.) what **is the prompt** that you want to instruct your agent to follow
+					- if you want to learn more about [[AI/Tool]]s my friend [[Person/Mahesh Murag]] is going to be giving a workshop on #MCP tomorrow morning - [[AIES 25 WS 1 - Building Agents with MCP - Mahesh Murag]] {{youtube-timestamp 444}}
+						- i've seen that workshop it's going to be really fun so i highly encourage you guys to to check that out um but back to our talk ...
+					- once you have figured out these three basic components you have a lot of optimizations to do from there
+						- {{youtube-timestamp 455}} for coding and computer use you might want to **cache the trajectory** to reduce cost
+						- for **search** where you have **a lot of tool calls**, you can **parallelize** a lot of those to **reduce latency**
+						- for **almost all of these** we want to **make sure to present the agents'** progress in such a {{youtube-timestamp 470}} way that gains the user's trust
+					- but that's it - keep it as simple as possible
+					- as you're iterating, build these three components **first**, and then **optimize once you have the behaviors down**
+			- ### {{youtube-timestamp 489}} Third Core Idea: Think Like Your [[AI/Agent]]
+				- {{youtube-timestamp 489}} i've seen a lot of builders, myself included, who develop agents from our own perspectives, and get confused when agents make a mistake; it seems **counterintuitive to us**,
+					- and that's why we always recommend to **put yourself in the agents context window**
+					- agents can exhibit some really {{youtube-timestamp 507}} sophisticated behavior
+						- it could look incredibly complex
+						- but at each step, what the model is doing is still just **running inference on a very limited set of contexts**
+						- everything that the model knows about the current state of the world is going {{youtube-timestamp 521}} **to be explained in that 10 to 20k tokens**
+							- and it's really helpful to limit ourselves in that context, and **see if it's actually sufficient and coherent**
+							- this will give you a **much better understanding** of **how agents see the world** and then bridge the gap {{youtube-timestamp 536}}
+								- between our understanding and theirs
+							- #### #Example - we are computer use agents
+								- all we're going to get is a static screenshot and a very poorly written description
+								- {{youtube-timestamp 553}} "you're a computer use agent, you have a set of tools, and you have a task" ... [this description is] terrible
+								- we can think and talk and reason all we want ... but **the only thing that's going to take effect in the environment are our tools**.
+								- So we attempt a click without {{youtube-timestamp 568}} really seeing what's happening
+								- and while the inference is happening
+									- while the tool execution is happening
+									- this is basically equivalent to us closing our eyes for three to five seconds and using the computer in the dark
+								- then you open up {{youtube-timestamp 581}} your eyes, you see another screenshot, and whatever you did could have worked or you could have shut down the computer.
+								- you just don't know this is a huge leap of faith
+								- and the cycle kind of starts again.
+								- i highly recommend just trying doing a full task from the {{youtube-timestamp 596}} agent's perspective like this
+								- once you go through that mildly uncomfortable experience, it becomes very clear what the agents would have actually needed
+								- it's {{youtube-timestamp 612}} very crucial to know what the screen resolution is, so I know how to click
+								- it's also good to have recommended actions and limitations just so that you know we can put some guardrails around what we should be exploring and we can avoid unnecessary exploration
+							- {{youtube-timestamp 628}} these are just some examples
+								- you should do this exercise for your own own agent use case, and figure out what kind of context do you actually want to provide for the agent.
+					- fortunately though um we are building systems that speak our language
+				- #### {{youtube-timestamp 643}} so we could just ask claude to understand [[Claude]]
+					- you can throw in your your [[Prompt/System]] and ask
+						- > well is any of this instruction ambiguous?
+						- > does it make sense to you?
+						- > are you able to follow this?
+					- [then] you can throw in an [[AI/Tool]] description and see whether the agent knows how to use the tool
+					- {{youtube-timestamp 657}} you can see if it wants more parameters or fewer parameters
+					- and one thing that we do quite frequently is
+					- we throw the entire agent's trajectory into Claude
+					- and just ask it, "hey, why do you think we made this decision right here? ... is there anything that we can do to help {{youtube-timestamp 672}} you make better decisions?"
+				- this shouldn't replace your own understanding of the context
+					- ... but you'll help you gain a **much closer perspective on how the agent is seeing the world**
+				- [[Key Insight]]: think like your agent as you're iterating
+			- ### {{youtube-timestamp 689}} Future Directions and Personal [[AI/Research/Direction]]s
+				- {{youtube-timestamp 689}} most of the talk has been about very practical stuff
+				- i'm going to indulge myself and spend one slide on personal musings
+				- this is going to be my view on
+					- how this might evolve
+					- and some open questions i think we need to answer together as [[AI/Engineer]]s
+				- #### Top Three Things on My Mind
+					- ##### 1. Making Agents More Budget-Aware
+						- {{youtube-timestamp 703}} first i think we need to make agents a lot more budget aware
+						- unlike workflows we don't really have a great sense of control for the cost and latency for agents
+						- i think figuring this {{youtube-timestamp 716}} out will enable a lot more use cases as it gives us the necessary control to deploy them in production
+						- the open question is just what's the best way to define and enforce budgets in terms of
+							- time
+							- money
+							- tokens
+							- the things that we care about
+					- ##### 2. Self-Evolving Tools
+						- {{youtube-timestamp 732}} next up is this concept of self-evolving tools
+						- i've already hinted at this two slides ago
+						- we are already using models to help iterate on the tool description
+						- but this should generalize pretty well into a meta tool where agents can design and improve their own {{youtube-timestamp 747}} tool ergonomics
+						- this will make agents a lot more general purpose as they can adopt the tools that they need for each use case
+					- ##### 3. Multi-Agent Collaboration
+						- finally um i don't even think this is a hot take anymore
+						- i have a personal conviction that we will see a lot more multi-agent collaborations in {{youtube-timestamp 764}} production by the end of this year
+						- they're well parallelized
+						- they have very nice separation of concerns
+						- and having sub agent for example will really protect the main agents context window
+						- but i think a big open question here is um how how do these {{youtube-timestamp 782}} agents actually communicate with each other
+						- we're currently in this very rigid frame of having mostly synchronous user assistant terms
+						- i think most of our systems are built around that
+						- so how do we expand from there and build in asynchronous communication and {{youtube-timestamp 796}} enable more roles that afford agents to communicate with each other and recognize each other
+						- i think that's going to be a big open question as we explore this more multi-agent future
+				- these are the areas that take up a lot of my mind space
+				- if you're also thinking about this uh please shoot me a text i would love to chat
+			- ### {{youtube-timestamp 810}} Conclusion and Key Takeaways
+				- {{youtube-timestamp 810}} okay let's bring it all together
+				- if you forget everything i said today these are the three takeaways [[Take-Away]]s
+					- 1. don't build agents for everything
+					- 2. if you do find a good use case and want to build an agent keep it as simple for as long as possible
+					- 3. {{youtube-timestamp 827}} and finally as you iterate try to think like your agent
+						- gain their perspective and help them do their job
+				- i would love to keep in touch with everyone of you if you want to chat about agents especially those open questions that i talked about
+				- {{youtube-timestamp 844}} you'll be incredibly lovely you can just you know uh jam on some of these ideas
+				- these are my socials if you want to get connected
+				- #### Personal Anecdote
+					- back in 2023 i was building ai product {{youtube-timestamp 860}} at meta
+					- and we had this funny thing where we could change our job description to anything we want
+					- after reading that blog post from swix i decided i was going to be the first [[AI/Engineer]]
+					- i really love the focus on practicality and just making ai actually {{youtube-timestamp 876}} useful to the world
+					- and i think that aspiration brought me here today
+				- so i hope you enjoy the rest of the [[AI/Engineer]] summit and in the meantime let's keep building
+			-
