@@ -14,20 +14,69 @@ Youtube video begins with a block like this:
 		- {{video https://www.youtube.com/watch?v=abcdefghijklmnop}}
 ```
 
-It will have a transcript like this:
-<BEFORE> 
-			- {{youtube-timestamp 3}} here's the transcript at 3 seconds into the video
-			- {{youtube-timestamp 284} here's the transcript at 284 seconds into the video
-			- {{youtube-timestamp 3}} here's the transcript at 350 seconds into the video
+## Basic Transcript Organization
+
+The transcript should be organized with logical sections and proper hierarchical headings. Each major section should start with a timestamp-based heading.
+
+### Heading Structure
+- Use `### {{youtube-timestamp X}}` for main sections
+- Use `####` for subsections
+- Use `#####` for detailed points within subsections
+- Always maintain proper indentation using TABs
+
+### Semantic Linking
+- Convert relevant terms into semantic links using `[[Topic]]` format
+- Common patterns include:
+  - People: `[[Person/Name]]`
+  - Concepts: `[[AI/Concept]]`
+  - Technologies: `[[Tech/Name]]`
+  - Key insights: `[[Key Insight]]`
+
+### Content Formatting
+- Break long monologues into natural speech patterns
+- Use bullet points for lists and sub-points
+- Use **bold** for emphasis on key concepts
+- Group related ideas under appropriate subheadings
+- Add semantic structure with terms like:
+  - `[[Take-Away]]s`
+  - `[[Key Insight]]`
+  - `#Example`
+
+### Example of Improved Formatting:
+
+<BEFORE>
+			- {{youtube-timestamp 3}} here's a long monologue that goes on and on without structure and is hard to read because it's just one big block of text that continues without any organization or semantic meaning
+			- {{youtube-timestamp 284}} another long section of text without structure
 </BEFORE>
 
-It's your goal to add headings at logical sections, with a link to the timestamp, like this:
 <AFTER>
-			- ### {{youtube-timestamp 3}} this is a summary heading of what was happening 3-349 seconds into the video
-				- {{youtube-timestamp 3}} here's the transcript at 3 seconds into the video
-				- {{youtube-timestamp 284} here's the transcript at 284 seconds into the video
-			- ### {{youtube-timestamp 350}} this is a summary heading of what was happening 350 seconds into the video to the next section
-				- {{youtube-timestamp 3}} here's the transcript at 350 seconds into the video
+			- ### {{youtube-timestamp 3}} Introduction to [[Topic/Name]]
+				- here's a structured version of the content
+					- broken into logical points
+					- with semantic links to [[Important/Concepts]]
+				- #### Key Components
+					- 1. first important point
+					- 2. second important point
+				- #Example
+					- here's a practical example
+					- with clear structure
+			- ### {{youtube-timestamp 284}} Next Major Section
+				- organized into clear points
+				- with proper hierarchy
+					- and sub-points
+					- for better readability
 </AFTER>
+
+### Additional Guidelines
+1. Keep timestamps at the most relevant points, but don't let them break the flow of ideas
+2. Use semantic links to connect related concepts across notes
+3. Break long monologues into digestible bullet points
+4. Maintain hierarchy with proper indentation
+5. Add structure with subsections when content is complex
+6. Use emphasis (**bold**) for key concepts
+7. Include `#Example` tags for practical examples
+8. Add `[[Key Insight]]` markers for important takeaways
+
+Remember: The goal is to make the transcript more readable and navigable while preserving the semantic connections between concepts.
 
 If possible, visit the youtube URL and see what the chapters are, and name the headings after that. If that is not possible, use your best judgment or ask the user about how to group the sections of the transcript.  
