@@ -1,0 +1,1 @@
+- [[Tutorial] Obtain GPT Prompts. | SingularityKChen](https://singularitykchen.github.io/blog/2023/11/12/Tutorial-Obtain-GPT-Prompts/)
