@@ -1,0 +1,209 @@
+# The Future of AI with [[PerplexityAI]] and [[Person/Aravind Srinivas]] and [[Person/Johnny Ho]]
+	- 16:10 [[DeepSeek]]
+		- the first opensource reasoning model, not just systems optimizations. they figured out how to make [[AI/Reinforcement Learning]] work
+	- 16:12 they have three technical co-founders
+		- right now they have open-ended product questions that no one knows the answer to
+			- what's the best UI for answers
+		- [[Person/Aravind Srinivas]] being "heavily grounded helps a lot"
+			- you do need to understand the details, because that can matter when it comes to 10s of millions of dollars
+			- startup as a wrapper vs being able to train their own
+				- being able to have open source models to leverage on top of our own data flywheel
+	- 16:15 are we going to run out of data, or what are you thinking about [[Intellectual Property]]
+		- [[Person/Aravind Srinivas]]
+			- we're not training on random tokens on the internet, we are training models to be good at certain tasks, doing math, answering questions, etc
+			- as a company, they focus on post-training
+				- skills
+					- uploading files
+					- summarizing
+		- 16:17 where do you get your data?
+			- transcript
+				- It automatically makes the answers more reliable. And we also gather human evaluators to compare different models and tell us if this answer was better or that answer was better. That's used to frame an RL system that prioritizes for using answers that are more likable according to human evaluators. So there are so many thoughts and signals we gather, both from user logs and actual human evaluators. Sometimes you can use an AI model itself as an evaluator, where you just ask an even bigger LLM to evaluate smaller LLMs, which are located with each other. And that becomes the judge. So that way you can get rid of that iteration cycle and actually have humans look at it. And that concept in AI is referred to often as synthetic data. You just make an LLM generate all the labels and frame the smaller models on it. Especially let's say you want to build a classifier, which decides what UI should be presented to the end user. If it's a finance query or a shopping query or a travel query. You cannot have one human animate a million queries. That's like, oh, this is finance, this is price. This is impossible to get through. And the amount of data you get every day cannot repeat that. So an AI has to do this job. AI has to be the enabler itself. And then a smaller AI will actually learn from it and train on it and then do the plotting. So we do a lot of these things.
+			- [[AI Notes]]
+			  collapsed:: true
+				- What you’re describing is a layered system of AI supervision and training—essentially, **AI supervising AI**, with humans in the loop only at key points. Here’s a breakdown of the ideas in your explanation, rephrased for clarity and structure:
+				- ---
+				- **🧠 Multi-Tiered AI Evaluation and Training Process**
+				- 1.	**Human Evaluation for RLHF (Reinforcement Learning with Human Feedback)**
+				- •	Human annotators compare outputs from different models.
+				- •	These preferences are used to train a reward model.
+				- •	That reward model then guides future model behavior toward producing more *likable* or *useful* outputs.
+				- 2.	**User Interaction as Implicit Feedback**
+				- •	Logs and engagement signals (clicks, time spent, follow-up questions, etc.) help improve model responses over time.
+				- •	This is *passive feedback*, but can be very high-scale.
+				- 3.	**LLMs as Evaluators**
+				- •	Larger or more capable LLMs are used to judge or rank the outputs of smaller ones.
+				- •	This reduces reliance on expensive, slow human evaluations.
+				- •	The term for this is often **“synthetic evaluation”**.
+				- 4.	**Synthetic Data for Supervised Training**
+				- •	Large LLMs generate labeled datasets for tasks like classification (e.g., categorizing queries into finance/travel/shopping).
+				- •	These labels train smaller models that can perform inference at scale.
+				- •	This enables bootstrapping massive datasets that would be impossible for humans to annotate manually.
+				- 5.	**AI as Both Teacher and Student**
+				- •	The architecture forms a pyramid:
+				- •	**Big AI** generates or evaluates.
+				- •	**Small AI** learns from the big one.
+				- •	This is how scalable systems are built without human bottlenecks.
+				- ---
+				- **🚀 Real-World Example:**
+				- Say you’re building a search assistant. You want the system to:
+				- •	Detect intent (travel vs. finance vs. shopping),
+				- •	Recommend the best UI experience,
+				- •	And give helpful responses.
+				- Instead of hiring thousands of annotators to label millions of queries:
+				- •	You let a big LLM infer the labels.
+				- •	Train a compact model on that labeled data.
+				- •	Use it in production for low-latency inference.
+				- ---
+				- If you’re putting this into a presentation or paper, I can help turn it into a diagram or slide format. Want me to do that?
+			- [[Person/Aravind Srinivas]]
+				- user logs and human evaluators
+					- user data
+					- data from human evaluators
+				- that trains a [[AI/Reinforcement Learning]] system
+				- he mentions having a bigger model training a smaller model [[AI/LLM/Technique/LLM/As a Judge]]
+	- 16:19 audience questions
+		- what is the diff between [[PerplexityAI]] and [[ChatGPT]]
+			- affordable [[AI Deep Research]]
+		- 16:21 what's your advice for startups?
+			- #Transcript
+				- 4:21 start - Thank you. I'm a Berkeley alum as well, so go Bears. So you spent the last few days here with a lot of students. You've had events at HBS, you have one tomorrow at MIT. You're going to do a class with us right now. What's something that we young student founders should be asking you more about, or something that really excites you that perhaps, given our lack of background in the field of scope, we might not be seeing right now. So perhaps a blank spot. Student founders? Yes, student founders. Well, I guess you've asked a lot of things already, so I think I would say... I'm not going to directly answer that question, but I guess my point is that people should really try to get started and do something, and then gather their own understanding of the world. I have a certain view of the world that might not be right. That's still brought along with the time I've gone and the perplexity of that. There's opportunities to do something new without subscribing to Google. That might be part of the perplexity of any of the successful application-oriented companies without having a Google model. You don't have to follow the trajectory of one. You may not even be the most optimal one. But I think synergy is important. That's kind of really what I would encourage the young students to do. What is the environment you have? Okay, if you were to start now, what are some things that get really good at your Google now, that we all need at break of day, and you can actually start a company around that, and really benefit from all the advances that happen there, without having to really worry a lot about, oh, this is going to be a feature, this is going to be a product. Very hard to get a solution to this, but I think that's where I would encourage people to go. So, a follow-up on that. We have five students here.
+			- [[AI Notes]]
+			  collapsed:: true
+				- Here’s a cleaned-up and more structured version of what was said in that excerpt, keeping the spirit and key ideas intact:
+				- ---
+				- **Student:**
+				- *“Thank you. I’m a Berkeley alum as well — go Bears! You’ve spent the past few days with a lot of students, including events here at HBS, one coming up at MIT, and now you’re here with us. So let me ask: As young student founders, what’s something we should be asking you about — something exciting that we might be missing, just due to our limited experience or exposure? What’s a blind spot we should be paying attention to?”*
+				- **Speaker:**
+				- *“That’s a good question. And honestly, you’ve already asked a lot of great things. I won’t answer it directly, but here’s what I’d say:*
+				- *The most important thing is to actually get started. Build something. Through that process, you’ll develop your own view of the world — a perspective that might not match mine, and that’s okay. My own view is shaped by the time I’ve spent working on this stuff and the unique challenges I’ve faced — what you might call the ‘perplexity’ of experience.”*
+				- *“You don’t need to recreate Google, or follow any existing company’s path. In fact, doing something new without that baggage can lead to fresh, valuable ideas. Many of the successful applications today don’t look like Google, and that’s a good thing.”*
+				- *“So think about the environment you’re in — what do people around you need now, today, at the break of dawn? What tools or capabilities do they already have that could be extended? There’s real power in starting a company that builds on those advances, rather than worrying too early about whether it’s a ‘feature’ or a ‘product.’”*
+				- *“It’s not easy to find perfect solutions to these questions. But that’s exactly where the opportunity lies — in the ambiguity. That’s where I’d encourage young founders to explore.”*
+				- ---
+				- Let me know if you’d like this turned into a quote slide, a soundbite summary, or even rephrased in bullet-point takeaways.
+			- [[My Notes]]
+				- what is a brand new path?
+				- what are some things that will get really good in a few years?
+	- 16:24 question about ... why didn't you stay in academia vs going to a startup
+		- transcript
+		  collapsed:: true
+			- 4:25 pm start Stanford did a lot of research on states-based models, but no one has really proven that it's a good replacement category for transformers. But there's a lot of interesting research you can do around that. Assume that the model is an abstraction there. What are all the things that come out of it? How do you evaluate agents effectively? How do you make two agents collaborate with each other? How do you pass them the context of any application software and LLMs? These are all definitely possible practices that would be leading into that right now. And so I want to encourage people to do those things. And I will point out that all of my meetings here, so I may be fired. So when I was asked by one of my co-faculties, how he would get his hands on enough GPUs to do the kind of work he wanted to do, I advised him to quit. Go to work or something. He didn't take me up on it. But, yeah, the research problem is there. In the front row.
+		- [[AI Notes]]
+		- [[My Notes]]
+			- he mentions
+				- [[AI/Model/State Space]] out of [[Stanford]]
+				- [[Model Context Protocol]]
+	- 16:26 question - how do you feel that [[PerplexityAI]] could scale to take on [[Google]]?
+		- #Transcript
+			- 4:25 pm start Stanford did a lot of research on states-based models, but no one has really proven that it's a good replacement category for transformers. But there's a lot of interesting research you can do around that. Assume that the model is an abstraction there. What are all the things that come out of it? How do you evaluate agents effectively? How do you make two agents collaborate with each other? How do you pass them the context of any application software and LLMs? These are all definitely possible practices that would be leading into that right now. And so I want to encourage people to do those things. And I will point out that all of my meetings here, so I may be fired. So when I was asked by one of my co-faculties, how he would get his hands on enough GPUs to do the kind of work he wanted to do, I advised him to quit. Go to work or something. He didn't take me up on it. But, yeah, the research problem is there. In the front row.
+		- #[[AI Notes]]
+		- #[[My Notes]]
+			- 1 - it's too expensive for [[Google]] to offer our level of quality
+			- 2 -
+			- 3 - business model - it's difficult for [[Google]] to make money off of AI access right now
+				- they have extremely high margin revenues right now
+				- average revenue
+	- 16:29 question - some people think AI will be as big a lever as mobile transition and lift everyone up and make wisdom available to everyone. but there's a dystopian view - where do you see this going
+		- #Transcript
+			- Where AI would take us as humanity? There are two views. One is, of course, that AI would be a great leveler and democratize many things, such as Internet and mobile devices, make information accessible to everyone, including people in remote parts of India receiving information, and so on. So the view is that AI would sort of lift everyone up and make reasoning and wisdom available to everyone. There's also a dystopian view that, okay, what will happen to the future world and how humanity will react to it. So what's your thoughts on it, and where do you see this evolving? Not like the here and now in the next one or two years, but more like in the five, ten years hence. Where do you see this going? I think we shouldn't discount the dystopian outcomes entirely, right? Whatever you said, the first part, when you hook in stuff, knowledge, wisdom, reasoning, intelligence, and scale, and being accessible to everyone at no cost, that's fantastic. But not everybody is going to know how to make good use of it. Not everybody is going to learn how to make use of their deep research agent and put the business out there. And so those who know how to do it will profit a lot. They can do companies with way fewer people, and they can manage a bunch of AIs and companies, like the different kind of companies that I've read about before, with workflows around AIs. The amount of people who know how to do this is going to be a very tiny part of the population. So when that happens, that's going to be a bunch of people who don't really know how they can add value to their companies. And I don't have a good answer on how to solve this. I don't think anybody wants to think. Except for really encouraging everybody to start using AIs as much as they can, and trying to rethink if they're working on a lot of the same repetitive things that are not long-tail problem-solving, you really have to be concerned and try to adapt. And no one is safe from being disrupted by an AI. A lot of people like to think the work they're doing is safe and everything else is not. It's interesting. Let's take the trajectory. Programmers are the ones who are actually the most affected by AIs. This might not be how they would have thought about it. Because I always think freedom to write code well is considered a good sign on intelligence. And it's also one of the highest-paying jobs for a category. But that's actually where most of the things happen. You don't need anyone to be able to build a basic app for something you want. So I hope that can be some kind of theater-esque profession, where somebody just builds an app that's interesting to them, without actually being the programmer, and they can monetize the app through logically using it. And this way, you have to have taste. At the end, people have taste and opinions. I create my music to be useful. That's how I see it.
+		- #[[My Notes]]
+			- [[Person/Aravind Srinivas]] - we shouldn't discount the dystopian view
+				- not everyone is going to learn how to build a business off of a deep research bot
+				- they can build a business on top of fewer people
+				- they can build workflows on top of AIs
+				- a lot of people are going to not know how to add value to the economy
+				- that's a big problem,
+				- programmers are the most affected by AI
+					- it's a sign of intelligence
+					- but you don't need to know how to do it to build an app today.
+				- if you don't have taste, it's hard to be useful
+	- 16:33 question - one of the things about tools is that people discover ways to use it that creators had not anticipated. how do you think about when people ask questions of these tools that they shouldn't be asking AI; references [[ELIZA Therapist]]
+		- #Transcript
+			- I don't know what is the language role. As a product, our UI is not really like a chatbot. It's more a conversational search. You start a question, you keep asking follow-ups. That said, despite this, there are people who come in and do low-paying chats, even on Perplexity. And I don't know why they do that. That's the thing with CSS, it's human nature. So, despite the UI not being the most friendly, despite there existing so many other products where you can do this, people do still come in and do these things. I think my design of a product is so boring. It's always citing sources. Someone even said it's like ChatGPT is educated on code. I don't pay office dollars. That's fine. It's always useful. I did not want to ask you about Perplexity. I wanted you to step out of your CEO role. But let's take now the case where everybody starts going to some other product because it's so much more fun and interesting to play with than yours is, which is boring by design. I think the case is that, for example, there was a scenario of this young kid who had a suicide that was actually talking to a character he had bought. And I think it is not clear if the bot is the reason he committed suicide, but it's kind of weird that he spent so much time with a chatbot. I don't want to build those kind of products myself, and I don't want Perplexity to do any of those products. That's my take on the scenario, but I'm not stopping anybody from doing it. I still think that danger is in the kids more than anything else right now. If we can figure out a way to either make those apps controllable for kids, parent-led controls, that would be great. And maybe there's a system problem with parent-connected. You're not supposed to engage in certain ways. You can try this hard, but it's really, really quick. And good jailbreak defenses for the LLMs are, but you can at least expect, you know, like, a kid is now somewhat sophisticated enough to go find, like, a way to jailbreak the LLMs in, like, a different language altogether and make it respond in English back. You never know, but at least you can try a bunch of these things and figure out ways to make it safe for kids in these use cases. I just want to point out, years ago, I worked in a club. Kids are amazing at jailbreak.
+		- [[My Notes]]
+			- [[Person/Aravind Srinivas]] references the kid who was using [[character.ai]] and committed suicide, says it wasn't actually because of something the bot said
+				- he says, maybe there's a system prompt for parents, talks about jailbreaking
+	- 16:37 question - when you were working in the industry, you said that we should use AI frequently and for a lot of tasks - should we begin our career at an AI startup or one of the FAANGs?
+		- [[Transcript]]
+			- Given, before you both started at Perplexity, you both worked in the industry. So I was wondering that, do you think the experience you had when you were working in the industry did help with building Perplexity? And a follow-up question to that is, given the current AI climate, and you also said that it's very important that we use AI frequently for a lot of tasks, I was wondering that, especially for fresh graduates, do you recommend that we start our careers at an AI startup or at a traditional big tech company like one of the facts? Thank you. Obviously, it's adventurous to say AI startup. But just going along, if you want to really learn a lot and get into the weeds of things, it's definitely not going to happen in a fan company. Just simply because there's so many people like you there, and it's very hard to do your immediate role. As for whether you should work in the industry before starting a company, it really depends. It's so subjective. There's no optimal time to start anything. A lot of people think, OK, I'll work for four years, I'll learn everything, and then I'll go and apply. You don't really learn that much. You're working somewhere else. It's completely different, especially if you're a founder. Founding an engineer is not exactly the same. If you're a founder, you will not learn how to be a founder without actually becoming one. That's the direct answer. Does anything you learn in the industry help you at all? I think it does. You get to see how people operate, how the leaders operate, work with a great deal of people, build your own opinions about the field. You get some space and time to do all that, and I think it's useful. Thank you.
+		- [[My Notes]]
+			- [[Person/Aravind Srinivas]]
+				- if you are founder, you won't learn how to be a founder without founding something
+	- 16:39 question - what should we be teaching our students at harvard?
+		- [[Transcript]]
+			- If you're a founder, you're going to have to entertain all these roles. I guess I would like to say problem-solving, but that's so vague. Critical thinking, too. Critical thinking? I'm really worried that AI will also get good at those things, too. It's not so far ahead. Honestly, I think the core thing comes down to, like, how do we bring good taste and thorough opinions about things? There is no good way to judge this. It's very subjective, obviously. And if a professor can turn more into a coach for students, rather than an evaluator of their skills, and really inspire them, that's what education comes down to. This really inspired me. I look back on the time I've been there, and the teachers who taught me there, as fully inspirational. Because, sure, there are so many lectures about linear algebra, but you do love Hilbert-Strang's lectures. They're pretty amazing to watch. And some people are such fans that they'll go watch the same video a hundred times. Even if they understand singularity and decomposition, you're going to watch it again. So I think there is something in just appreciating the degree, building great taste in how you explain things, and how you look at a problem, even. Which you can learn from some of the best educators in the best universities. So that's what every university should double down on, rather than, oh, yeah, here are your assignments. Make it even more interesting. Make it even more challenging. And what are some problems that would be hard to solve, even if the student had unlimited perplexity, or tragedy, or grump, or all these things, right? An unlimited amount of complexity. That would be worth throwing the undergrads at. I think someone made a comment at dinner, I was going to say, where undergraduate classes are going to start looking more like graduate classes. And I think you said it, Fred, when you were getting mic'd up, that even in grad classes, undergrads always score the grads by 9. So they clearly have the ability to do it, open-ended, uncertain challenges. So that's where I think something's going to go. Hello? You've got the mic. Hi. Yeah, you've got the mic. Okay, I'm Joshua. Thank you so much for coming.
+		- [[My Notes]]
+			- [[Person/Johnny Ho]]
+				- how not to get locked into one role like software engineer
+			- [[Person/Aravind Srinivas]]
+				- if the professor can become more of a coach that inspires rather than an evaluator, that's better
+				- mentions [[Person/Richard Feynman]] are more inspiring than some random linear algebra class
+	- 16:43 question - thinking about challenges that are facing AI today, you mentioned source attribution as a challenge. when you were thinking about retrieving and citing information, how were you thinking about how a specific piece of information relates to the user's information, especially since information can be repeated? how did you think about that?
+		- [[Transcript]]
+			- I'm asking between the AI and the content producers, but I think what's really important about the Internet is that there's a factual basis of which source is first, and you can trace back when you're crawling, like, which source is first. And especially with the rise of social, there's a name and a timestamp behind every single piece of information, so you can actually see which one's original, and which one's continuous, and, you know, spread the idea more than half of them. Yeah, I think, like, the smarter AIs, the ones that are more reasoning-based than them, are able to figure out the low-quality content and duplicate content pretty fast. And we also, like, have a lot of work to do with building cross-cores of domains, user feedback on, like, some quality results being low-quality, to be triagic to, like, is it class-based in domains or sources that are, like, low-quality? We keep collecting and gathering a lot of data around, like, domains in general. It's not the same concept as PageRank, but it's similar. And that kind of system is also, this is what we're doing, indexing and hacking here.
+		- [[My Notes]]
+			- [[Person/Johnny Ho]]
+				- what's important about the internet is that you can see who is first by crawling the internet
+			- [[Person/Aravind Srinivas]]
+				- the smarter AI with [[AI/Model/Reasoning]] are good at deduplicating content fast (*really?*)
+				- it's not the same concept as [[Algo/PageRank]]
+	- 16:45 question - perplexity is sometimes referred to as a wrapper in a pejorative sense. what do you see as the economic incentives for the foundation models? do they eventu
+		- [[Transcript]]
+			- I'm not talking about Google building their own models, just stand-alone companies, foundational models. OpenAI and DALL·E, you can drop XAI. You saw enough XAI's to merge with X. It's just one company, so it's essentially X. Or XAI, whatever you want to call it. So it's an application company, for example, with their social platform. And they're building models and getting them deployed there. Similarly, OpenAI has like 400 users. So even if they smack out a model that's non-GPT-4 and something else, and don't tell anyone about it, let's say it's just bad, they shouldn't do it. Let's assume they did this. Nobody's going to really notice. Except the very hardcore users who are using it for really work-oriented tasks. The average ChatGPT user hasn't even heard of these new models. Hopefully none of them. They're still stuck on the GPT-4, meaning a 3.5Mbps. They're not going to notice at all. So they're actually pretty much set up as an application company. The only outlier is BAR, which is heavily focused on API and their models. And I think that is always a risk. It's not as good as XAI. Does somebody have a mic in the back? Thank you so much for talking with us today.
+		- [[My Notes]]
+			- [[Person/Aravind Srinivas]]
+				- there are three companies - OpenAI, Grok.AI or x.AI and Anthropic
+				- OpenAI has 400M users, so let's assume they put another model out that's cheaper, the average chatgpt user has never heard of a [[AI/Model/Reasoning]].
+				- the only outliers are claude and anthropic, which are heavily
+	- 16:47 question - you said that you thought open source models would catch up and [[AI/Model/Distillation]] would make a big difference
+		- [[Transcript]]
+			- In just context from another workspace tool, what is the format for that? Is everybody going to converge on one protocol? Will all these companies build API servers around them and let them be wrapped by the AIs? This is the whole concept of who's in a wrapped group. Everyone's a wrapper in the end, but... It's not about who wants to be wrapped and who doesn't want to be wrapped. It's about what the business model is essentially talking about. So, for example, Uber... If an AI is calling an Uber ride from a user, I don't think it can get disrupted at all. Because they're only making money on the ride. They don't really have an ad for a new model. On the other hand, for Instacart, it's not necessarily great. Because Instacart actually has an ad business. Or for Amazon, if an AI is doing the shopping that we have, it's actually bad for them. Because they do make a lot of ad revenue. So they don't actually want agents to work with them. Or rather, if agents were to innovate their agency, it's something that each of them can have. That's their current philosophy. So this is where I think there's a lot of uncertainty on how things will evolve. So having some opinion on how this will end, or how this problem will end, I don't know. But if you have an opinion, please let me know. Maybe I'll write that into the next book.
+		- [[My Notes]]
+			- [[Person/Aravind Srinivas]]
+				- I'm still very optimistic about open source
+				- after Deep Seek ... <> ... what is not clear to me today is how do all these AI application layers interact with all the desktop apps on the web
+				- who is going to wrap who? everyone is a wrapper in the end, but it's a matter is, who wants to be a wrapper and who doesn't?
+					- if [[Uber]] is calling
+					- if an AI is shopping on your behalf, [[Instacart]] doesn't benefit from AI as much, because they show you ads
+				- so there's a lot of uncertainty about how this will head towards
+	- 16:50 question - what's your perspective on multi-agent perspectives, where you create fictional teams and they go off
+		- [[My Notes]]
+			- [[Person/Aravind Srinivas]]
+				- he compares it to [[Software/Paradigm/Object-Oriented]]; he prefers [[Software/Paradigm/Functional]] but having no structure is not good
+	- 16:52 question - is there a thoughtful way to release our next model ... how do you think about ... and how does the community think about when you should release these models
+		- [[Transcript]]
+			- We're just talking about building things and releasing things. There's been a lot of speculation about how that works in the whole generative AI industry, and is it all dictated by competitiveness between different companies, or is there an awful process that you go through to think about, or are you ready to release our next model to people? So perhaps we're not experimenting on them in ways that would make many of us uncomfortable. Any insight you can give us into how we think, and how we see the rest of the industry think, about developing these new products and models, and how we should release them, and what we should not, I think would be very interesting to hear. So I think if you have a decade of IFSN competition, you have to drive release timelines. And I think right now that's what is truly hiding it. Everybody's moving so fast because they don't want to be the NF4. Either be the first four or the last four, right? I think quality is important. If you release something that's half-baked and not ready, what you're basically doing is you're hurting the trust of users. So next time you release something, they won't take you as seriously as earlier. And if it happens four or five times, you've exponentially reduced the level of trust in the product, which is hard to recover from. So every product, in the end, has to keep this in mind. And so everyone is trying to push for that, oh, what is a good or not a level of quality needed to still get end-users excited about it, and still make sure I'm not behind my competitors. I think that's how a lot of people are making their decisions today. We have done this a couple of times. I'm not necessarily happy about that. But at least for the more serious problems we're doing, like the browser that we're working on, we're really pushing hard and making it feel like it's really ready before putting it out. Our original plan was to get it out in March. It didn't happen clearly. So we're going to try to take our time and get it out there, and it's really good. Thank you.
+		- [[My Notes]]
+			- [[Person/Aravind Srinivas]]
+				- quality is important; if you release something half-baked and not ready, you are hurting the trust of the users.
+	- 16:54 question - earlier you mentioned that those who are able to leverage AI will be able to make use of it. some kids are not learning to think the way we are in this room, how can we maintain our critical thinking skills?
+		- [[Transcript]]
+			- The level of cognitive work you're going to do is declining. If it led to more creativity in people, then that's a good thing. You can get more focus on the stuff. For example, I'm sure people who wrote code before all the tools that are available today – that's even a joke. How did Cursor build Cursor without using Cursor? But yeah, you can. How did people code before GitHub? Or did they collaborate on projects? That doesn't mean that people who did it only in these schools are lower quality or something. They're solving problems that are even harder at times, and they're benefiting from all these tools and moving even faster. So I think similar things will happen here. But you cannot completely discount an outcome where there are going to be a lot of people who will be affected severely. I think it's going to happen, and I don't think that's good. Yeah, I wish I had some time. I don't know. You got to get the board chill, baby. That's all you need. What else? Mike? Thank you so much for such a wonderful talk.
+		- [[My Notes]]
+			- [[Person/Aravind Srinivas]]
+				- read that math skills are declining
+					- maybe it's social media
+				- i'm sure people who wrote code before github had a harder time
+				- you can't discount an outcome
+	- 16:57 question - my mom, despite being not proficient of technology and skeptical of AI became a heavy user of perplexity. when genAI was just out, it was hard to use. the search function was limited. Even now, ChatGPT's search isn't that great, except for Deep Research, which is very expensive. there is a higher quota for perplexity
+		- [[Transcript]]
+			- Like, if you want to use, like, you know, deep research, right, that just means there are one million users. You know, that's the thing, like, go do your research when you come back. Like, I think that's something that a lot needs to be said. Everybody's only doing it on their own. And then, it definitely increases the level of knowledge in the world. That's actually our mission. Like, that's still where we say where knowledge begins, on the app. Every company should stand for some purpose or value that's beyond just, like, you know, making money. You don't want to make money, but you want to do something even of a higher purpose. So that, if whatever you say is happening to many moms out there on this scale, I think it's a destination. I think there is one case where you have to realize that the web and mobile phones are very general. And if you only use them, then you just end up over-threatening, right? But if you want to, you have to consciously decide when, like, you want to be different. Like, do you want to be a startup founder? That's different than, you know, like, a niche profession. That's different from everything else.
+		- [[My Notes]]
+			- [[Person/Aravind Srinivas]]
+	- 17:00 question - how far are we from [[AI/AGI]]?
+		- [[Transcript]]
+			- Completely replacing humans, deprecating humans, that doesn't seem to be happening. Mainly because we are always adapting our intelligence to co-exist and use these AIs ourselves, and being still innovators with higher capability than before. That's evidenced by the companies with fewer employees, there's no market cap, including revenue and things like that. You've never seen that earlier. And that's contributed by people using AIs on their own in the company. So definitely, from that perspective, I feel like we are safe for now. No problems. Digital knowledge worker, like the 80-20 knowledge worker, I think that's going to happen. At least 40% of the work is already happening. And fewer software engineers than before. So if you want to call that an AGI, then it's happening. If you want to call AGI as truly something that will come with breakthroughs on a new field, or look at all the code and look at all the bugs that are being filed, and automatically go and fix everything and deploy it to production, and my system is gone, and we go and figure out where the bug is, and what's causing the spike in latency, and go and fix it on its own. I think that system is not there yet. I think a lot of co-agency units are doing network testing right now, and many other companies. So that level of intelligence is still not there. I would definitely be very impressed if that happens. I would personally consider it an AGI-level breakthrough, because it completely changes how you think about building engineering teams and running companies. But that's not quite happening yet. And then you think about, oh, can you have an AI that – let's say I go talk to an AI and ask it, hey, just tell me what is my roadmap for six months. I don't want to even think. You take one day at a given time and think about it, and come back to me with a roadmap that explains why. And if you can do that, and if it's actually a pretty good roadmap, then I would love to pay it a lot of money, like $7 million per month of money for just that one query. I would consider these kind of things as truly an AGI-like movement. And I think, to be very honest, there's literally no AI out there today. Can it happen in the next five years? Potentially. If Reason keeps making progress, and it's being given access to a lot of things, and it's increasingly clear that more thinking time leads to a very high-quality answer, we could get something close to this, and it would have a lot of impact, positive impact, I think.
+		- [[My Notes]]
+			- [[Person/Aravind Srinivas]]
+				- [[Agentic System]]s for fixing bugs in production
+					- not quite there yet, even though it's compelling and interesting
+	- 17:03 question - what's the next frontier that we have to breach in AI, Technology, etc? what is the problem that you can't solve now that you wish you could
+		- [[Transcript]]
+			- And then execute it, and it actually happens. You know, like a $100 million increase in the market cap in a $300 million company. A.I. like 1%, but that's completely breaking any kind of revenue model you've ever used before. So I feel that would be pretty incredible. The other thing I said, programming and software engineering go from just auto-completing code or changing multiple files simultaneously to like, can you just help me fix bugs? Because that's the number one thing I hate in any process. We get a lot of bugs, but then it takes so much time to triage it with the right person, and they go and look at their tickets. They all get bored fixing bugs every single day. And then they push some fixes, and then that breaks something else. And then someone, a smarter engineer like Zion, has to come and see what are the dependencies between these different fixes that cause the issue. It takes time. It takes energy and effort. If an A.I. can do this, it's worth taking that A.I. like several hundred to thousands of dollars a year. Just be a reliable software engineer. And really even move back into infrastructure. Not just like JavaScript. Johnny, do you have a closing pitch you want to make? I'm going to just add on that. I think a real-world model is really missing. So the key step there that you have to take is deploying. And you have to estimate the probability that it actually fits the building. So I think having that feedback loop. I know it's getting there, but I think it's much more important. Just having that even more realistic. And you see so much more feedback being deployed in actual systems that are allowed to break. And we gather that data at the beginning of the framework.
+		- [[My Notes]]
+			- [[Person/Aravind Srinivas]]
+				- fixing bugs.
+			- [[Person/Johnny Ho]]
+				- a **real world model** is what is missing today
+				- it needs to know the probability that it actually fixed the bug before it deploys
+				-
