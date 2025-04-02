@@ -1,0 +1,23 @@
+# [M2 Lesson 1](https://academy.langchain.com/courses/take/intro-to-langsmith/lessons/60631044-lesson-1-datasets)
+- We're creating a [[Golden Dataset]] - `RAG Application Golden Dataset`
+- In [[Jupyter]]
+	- adding examples programmatically
+	- first field is question, 2nd field is correct, known answer from the [[Golden Dataset]]
+- in [[LangSmith]] UI
+	- 05:00 they apply a [[LangSmith/Tag]] to the [[LangSmith/Dataset]]
+		- some people in the chat say that tagging isn't available in the UI any more
+		- it's a way of finding a specific commit so we can run it again
+	- 07:00 editing examples before adding to a [[LangSmith/Dataset]]
+	- #[[New Idea]] here is that it's importat to create individual [[Unit Test]]s for each big run chunk in the trace
+		- for example, the `retrieve_documents` should have a separate [[LangSmith/Dataset]] and eval from `generate_response`
+	- create a separate data set
+	- 09:50 creating an [[LangSmith/Dataset/Schema/Input]] and [[LangSmith/Dataset/Schema/Output]]
+		- 11:00 once you've defined a schema, you have a method of generating [[LangSmith/Dataset/Example]]s
+			- This was new to me; I didn't know this was possible
+				- [How to manage datasets in the UI | 🦜️🛠️ LangSmith](https://docs.smith.langchain.com/evaluation/how_to_guides/manage_datasets_in_application#add-synthetic-examples-created-by-an-llm-via-the-datasets-ui)
+					- the `source` field is `synthetic` for these
+	- 12:50 using [[LangSmith/Dataset/Split]]
+		- mentions the importance of being able to use this for fine tuning
+		- Creates a "Crucial Examples" split - in splits
+	- 14:00 sharing a dataset, downloading, cloning [[LangSmith/Dataset]]
+	- 14:30 Recap / Summary
