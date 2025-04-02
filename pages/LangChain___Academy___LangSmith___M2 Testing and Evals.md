@@ -1,0 +1,4 @@
+- [[LangChain/Academy/LangSmith/M2 Testing and Evals/Resources]]
+	- Notebook Reference: [evaluators.ipynb](https://github.com/langchain-ai/intro-to-langsmith/blob/main/notebooks/module_2/evaluators.ipynb) from [[LangChain/GitHub/intro-to-langsmith]]
+		- Download Notebook on [**GitHub**](https://github.com/langchain-ai/intro-to-langsmith/blob/main/notebooks/module_2/evaluators.ipynb)
+- [[LangChain/Academy/LangSmith/M2 Testing and Evals/L1 Datasets]]
