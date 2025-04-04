@@ -1,0 +1,34 @@
+tags:: [[Diataxis/How To]]
+
+- # How to Adjust O365 Outlook Web Calendar Time Scale
+	- ## Overview
+		- This guide shows you how to change the time scale in your Outlook web calendar to show more granular time slots
+		- Useful for scheduling precise meeting times or managing detailed schedules
+	- ## Prerequisites
+		- An active Microsoft 365 account
+		- Access to Outlook on the web (outlook.office.com)
+	- ## Steps
+		- ### 1. Access Outlook Calendar Settings
+			- Open Outlook on the web (outlook.office.com)
+			- Click on the Calendar icon in the navigation pane
+			- Click the Settings gear icon in the top-right corner
+			- Select "View all Outlook settings" at the bottom of the settings panel
+		- ### 2. Navigate to Calendar Settings
+			- In the Settings window, click "Calendar"
+			- Select "View" from the left sidebar
+		- ### 3. Adjust Time Scale
+			- Under "Calendar appearance", locate "Time scale"
+			- Click the dropdown menu
+			- Select your preferred time increment (e.g., 6 minutes, 10 minutes, etc.)
+			- The calendar will automatically update to reflect your choice
+		- ### 4. Save Changes
+			- Click "Save" at the top of the settings window
+			- Close the settings panel
+	- ## Troubleshooting
+		- If you don't see the changes:
+			- Try refreshing your browser page
+			- Make sure you're using the web version of Outlook
+			- Check that you've clicked "Save" after making changes
+	- ## Related
+		- [[O365/Outlook/How To/Customize Calendar View]]
+		- [[O365/Outlook/How To/Set Calendar Working Hours]]
