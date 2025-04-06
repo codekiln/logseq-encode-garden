@@ -1,0 +1,2 @@
+- [readwise.io/chat](https://readwise.io/chat)
+	- You’ll find the option to chat on the main Review tab of the Readwise mobile app and on web here: **[readwise.io/chat](https://readwise.io/chat)**.

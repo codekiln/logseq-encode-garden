@@ -1,0 +1,5 @@
+# [microsoft/semanticworkbench: A versatile tool designed to help prototype intelligent assistants, agents and multi-agentic systems](https://github.com/microsoft/semanticworkbench?wt.mc_id=studentamb_263805)
+	- The Semantic Workbench is composed of three main components:
+		- [Workbench Service](https://github.com/microsoft/semanticworkbench/blob/main/workbench-service/README.md) (Python): The backend service that handles core functionalities.
+		- [Workbench App](https://github.com/microsoft/semanticworkbench/blob/main/workbench-app/README.md) (React/Typescript): The frontend web user interface for interacting with workbench and assistants.
+		- [Assistant Services](https://github.com/microsoft/semanticworkbench/blob/main/examples) (Python, C#, etc.): any number of assistant services that implement the service protocols/APIs, developed using any framework and programming language of your choice.

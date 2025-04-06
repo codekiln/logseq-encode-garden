@@ -1,0 +1,5 @@
+# [Cable Types and Differences | Understanding USB Type C: Cable Types, Pitfalls and More | Adafruit Learning System](https://learn.adafruit.com/understanding-usb-type-c-cable-types-pitfalls-and-more/cable-types-and-differences)
+	- ![USB-C types](https://cdn-learn.adafruit.com/assets/assets/000/085/324/large1024/components_adafruit_USB_C_graphic_outlines.png?1575491911)
+	- ## E-Marker Chips Inside Cables
+		- All Type-C cables except the minimal combination of USB 2.0 and only 3 A must contain E-Marker chips that identify the cable and its capabilities via the USB PD protocol. This identification data includes information about product/vendor, cable connectors, USB signalling protocol (2.0, Gen speed rating , Gen 2), passive/active construction, use of VCONN power, available VBUS current, latency, RX/TX directionality, SOP controller mode, and hardware/firmware version. It also can include further vendor-defined messages (VDM) that detail support for Alt modes or vendor specific functionality outside of the USB standards.
+		- {{video https://www.youtube.com/watch?v=PqR_AkXQp0Q}}
