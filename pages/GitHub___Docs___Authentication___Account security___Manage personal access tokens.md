@@ -4,8 +4,27 @@
 		- Personal access tokens are intended to access GitHub resources on behalf of yourself.
 		- To access resources on behalf of an organization, or for long-lived integrations, you should use a GitHub App. For more information, see [About creating GitHub Apps](/en/apps/creating-github-apps/setting-up-a-github-app/about-creating-github-apps).
 		- ### [Types of personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#types-of-personal-access-tokens)
+			-
 			- GitHub currently supports **two types of personal access tokens**:
 				- fine-grained personal access tokens
 				- personal access tokens (classic)
 			- ==GitHub recommends that you use [[GitHub Fine-Grained PAT]]s instead of [[GitHub Personal Access Token (Classic)]] whenever possible.==
 			  id:: 67dfca39-5780-49ba-8673-bcafd5a169bd
+	- ## [[GitHub/Auth/How To/Create a Fine Grained Personal Access Token]] via [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token)
+		- In the upper-right corner of any page on GitHub, click your profile photo, then click **Settings**.
+		- In the left sidebar, click **Developer settings** - *this is the lowest option, you may have to scroll*
+		- In the left sidebar, under ** Personal access tokens**, click **Fine-grained tokens**.
+		- Click **Generate new token**.
+			- Under **Token name**, enter a name for the token.
+			- Under **Expiration**, select an expiration for the token
+			- Optionally, under **Description**, add a note to describe the purpose of the token.
+			- Under **Resource owner**, select a resource owner, *which is a github username that owns the assets that the key will try to access*.
+				- **optional:** if the resource owner is an organization that requires approval for fine-grained personal access tokens, below the resource owner, in the box, enter a justification for the request.
+			- Under **Repository access**, select which repositories you want the token to access. You should choose the minimal repository access that meets your needs. Tokens always include read-only access to all public repositories on GitHub.
+			- If you selected **Only select repositories** in the previous step, under the **Selected repositories** dropdown, select the repositories that you want the token to access.
+				- *be minimal*
+			- Under **Permissions**, select which permissions to grant the token. Depending on which resource owner and which repository access you specified, there are repository, organization, and account permissions. You should choose the minimal permissions necessary for your needs.
+				- The REST API reference document for each endpoint states whether the endpoint works with fine-grained personal access tokens and states what permissions are required in order for the token to use the endpoint. Some endpoints may require multiple permissions, and some endpoints may require one of multiple permissions. For an overview of which REST API endpoints a fine-grained personal access token can access with each permission, see [Permissions required for fine-grained personal access tokens](https://docs.github.com/en/rest/overview/permissions-required-for-fine-grained-personal-access-tokens).
+					- TODO fill out [[GitHub/API/Q/Is there a description of each API endpoint and what it can do]]
+			- Click **Generate token**.
+	-

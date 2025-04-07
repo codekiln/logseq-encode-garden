@@ -1,0 +1,6 @@
+# Is there a description of each [[GitHub/API]] endpoint and what it can do?
+	- Currently, [Permissions required for fine-grained personal access tokens - GitHub Docs](https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens) is accurate but fairly sparse when it comes to quickly understanding the security implications of each endpoint.
+	- Most GitHub users are not familiar with the details of each github feature, but at the time they create a personal access token, they need to be able to specify whether the token should have no access, read access or write access to any of dozens of different areas. Most recently, many users have been creating [[GitHub Fine-Grained Access Token]]s for [[AI Coding]] with the [[GitHub/MCP]] server. It's a bit of a chore to determine what the levels of access for each API category will mean for an agent that's able to interact with GitHub MCP.
+	- ## #Idea - Create a small github pages site that has human-friendly descriptions of each of the fine-grained access permissions
+		-
+	-
