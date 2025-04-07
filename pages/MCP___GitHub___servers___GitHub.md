@@ -1,7 +1,7 @@
 created-by:: [[Person/Tim Rogers]]
 alias:: [[GitHub/MCP]], [[GitHub MCP]]
 
-- https://github.com/modelcontextprotocol/servers/tree/main/src/github
+- [github/github-mcp-server: GitHub's official MCP Server](https://github.com/github/github-mcp-server)
 - # GitHub MCP Server
 	- ## Overview
 		- MCP Server for the [[GitHub/API]] that enables file operations, repository management, search functionality, and more
