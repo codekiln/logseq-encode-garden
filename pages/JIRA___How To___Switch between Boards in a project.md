@@ -1,0 +1,33 @@
+tags:: [[JIRA]], [[Project Management]], [[Diataxis/How To]]
+
+- # How to Switch Between Different Boards in a Jira Project
+	- ## Overview
+		- This guide shows you how to navigate and switch between different boards within a Jira project
+		- Useful for project managers, team members, and stakeholders who need to view different board layouts for the same project
+	- ## Prerequisites
+		- Active Jira account with access to the project
+		- Project must have multiple boards set up
+	- ## Steps
+		- ### 1. Navigate to Your Current Board
+			- Click on "Boards" in the top navigation menu
+			- Select your current project board from the dropdown or recent boards list
+		- ### 2. Access Board Switcher
+			- Look for the board name in the top-left corner of your screen (inside the sidebar, under Planning)
+			- Click the dropdown arrow next to the board name
+		- ### 3. Select Different Board
+			- In the dropdown menu, you'll see a list of all boards you have access to
+			- Choose the desired board from the list
+			- The page will refresh and display the selected board
+		- ### 4. Use Quick Search (Alternative Method)
+			- Press "." (period key) to open the quick search
+			- Type the name of the board you want to switch to
+			- Select the board from the search results
+	- ## Troubleshooting
+		- If you can't see a specific board:
+			- Verify you have the correct permissions for that board
+			- Check if the board is still active and not archived
+			- Contact your Jira administrator if you need access
+	- ## Related
+		- [[JIRA/How To/Create a New Board]]
+		- [[JIRA/How To/Configure Board Settings]]
+		- [[JIRA/How To/Manage Board Permissions]]
