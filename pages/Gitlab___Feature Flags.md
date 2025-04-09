@@ -1,0 +1,3 @@
+- [Feature flags | GitLab Docs](https://docs.gitlab.com/operations/feature_flags/)
+	- For an example of feature flags in action, see [Eliminating risk with feature flags](https://www.youtube.com/watch?v=U9WqoK9froI).
+	- For a click-through demo, see [Feature Flags](https://tech-marketing.gitlab.io/static-demos/feature-flags/feature-flags-html.html).
