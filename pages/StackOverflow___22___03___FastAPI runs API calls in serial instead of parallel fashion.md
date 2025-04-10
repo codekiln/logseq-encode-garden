@@ -67,22 +67,26 @@ tags:: [[Py/asyncio]]
 						- ```python
 						  import httpx
 						  import asyncio
-						  - URLS = ['http://127.0.0.1:8000/ping'] * 2
-						  - async def send(url, client):
-						  return await client.get(url, timeout=10)
-						  - async def main():
-						  async with httpx.AsyncClient() as client:
-						      tasks = [send(url, client) for url in URLS]
-						      responses = await asyncio.gather(*tasks)
-						      print(*[r.json() for r in responses], sep='\n')
-						  - asyncio.run(main())
+						  
+						  URLS = ['http://127.0.0.1:8000/ping'] * 2
+						  
+						  async def send(url, client):
+						      return await client.get(url, timeout=10)
+						  
+						  async def main():
+						      async with httpx.AsyncClient() as client:
+						          tasks = [send(url, client) for url in URLS]
+						          responses = await asyncio.gather(*tasks)
+						          print(*[r.json() for r in responses], sep='\n')
+						  
+						  asyncio.run(main())
 						  ```
 					- In case you had to call different endpoints that may take different time to process a request, and you would like to print the response out on client side as soon as it is returned from the server—instead of waiting for `asyncio.gather()` to gather the results of all tasks and print them out in the same order the tasks were passed to the `send()` function—you could replace the `send()` function of the example above with the one shown below:
 						- ```python
 						  async def send(url, client):
-						    res = await client.get(url, timeout=10)
-						    print(res.json())
-						    return res
+						      res = await client.get(url, timeout=10)
+						      print(res.json())
+						      return res
 						  ```
 		- ### Python's GIL and Blocking Operations inside Threads
 			- Simply put, the Global Interpreter Lock (GIL) is a mutex (lock), ensuring that only one thread (per process) can hold the control of the Python interpreter (and run Python bytecode) at any point in time.
@@ -90,7 +94,8 @@ tags:: [[Py/asyncio]]
 			- Even if a CPU-bound operation (or an I/O-bound one that wouldn't voluntarily release the GIL) was executed inside a thread, and the GIL hadn't been released after `5ms` (or some other [configurable interval](https://docs.python.org/3/library/sys.html#sys.setswitchinterval)), Python would (automatically) tell the current thread to release the GIL. To find the default thread switch interval, use:
 				- ```python
 				  import sys
-				  - print(sys.getswitchinterval())  # 0.005
+				  
+				  print(sys.getswitchinterval())  # 0.005
 				  ```
 			- However, this automatic GIL release is best-effort, not guaranteed—see [this](https://stackoverflow.com/q/56692439/17865804), for instance.
 		- ## `Async` / `await`   and Blocking I/O-bound or CPU-bound Operations
@@ -126,19 +131,22 @@ tags:: [[Py/asyncio]]
 				- 2 - Use FastAPI's (Starlette's) [`run_in_threadpool()`](https://github.com/encode/starlette/blob/b8ea367b4304a98653ec8ce9c794ad0ba6dcaf4b/starlette/concurrency.py#L35) function from the `concurrency` module—as [@tiangolo suggested](https://github.com/fastapi/fastapi/issues/1066#issuecomment-612940187)—which, as noted earlier, will run the function in a separate thread from an external threadpool to ensure that the main thread (where coroutines are run) does not get blocked. The `run_in_threadpool()` is an `await`able function, where its first parameter is a normal function, and the following parameters are passed to that function directly. It supports both *sequence* and *keyword* arguments.
 					- ```python
 					  from fastapi.concurrency import run_in_threadpool
-					  - res = await run_in_threadpool(cpu_bound_task, contents)
+					  
+					  res = await run_in_threadpool(cpu_bound_task, contents)
 					  ```
 				- 3 - Alternatively, use `asyncio`'s [`loop.run_in_executor()`](https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.run_in_executor)—after obtaining the running `event loop` using [`asyncio.get_running_loop()`](https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.get_running_loop)—to run the task, which, in this case, you can `await` for it to complete and return the result(s), before moving on to the next line of code. Passing `None` to the *executor* argument, the *default* executor will be used; which is a [`ThreadPoolExecutor`](https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ThreadPoolExecutor):
 					- ```python
 					  import asyncio
-					  - loop = asyncio.get_running_loop()
+					  
+					  loop = asyncio.get_running_loop()
 					  res = await loop.run_in_executor(None, cpu_bound_task, contents)
 					  ```
 					- or, if you would like to [pass keyword arguments](https://docs.python.org/3/library/asyncio-eventloop.html#asyncio-pass-keywords) instead, you could use a `lambda` expression (e.g., `lambda: cpu_bound_task(some_arg=contents)`), or, preferably, [`functools.partial()`](https://docs.python.org/3/library/functools.html#functools.partial), which is specifically recommended in the documentation for [`loop.run_in_executor()`](https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.run_in_executor):
 						- ```python
 						  import asyncio
 						  from functools import partial
-						  - loop = asyncio.get_running_loop()
+						  
+						  loop = asyncio.get_running_loop()
 						  res = await loop.run_in_executor(None, partial(cpu_bound_task, some_arg=contents))
 						  ```
 					- In Python 3.9+, you could also use [`asyncio.to_thread()`](https://docs.python.org/3/library/asyncio-task.html#asyncio.to_thread) to asynchronously run a synchronous function in a separate thread—which, essentially, uses `await loop.run_in_executor(None, func_call)` under the hood, as can been seen in the [implementation of `asyncio.to_thread()`](https://github.com/python/cpython/blob/c5660ae96f2ab5732c68c301ce9a63009f432d93/Lib/asyncio/threads.py#L12). The `to_thread()` function takes the name of a blocking function to execute, as well as any arguments (`*args` and/or `**kwargs`) to the function, and then returns a coroutine that can be `await`ed. Example:
@@ -153,17 +161,19 @@ tags:: [[Py/asyncio]]
 						- ```python
 						  import asyncio
 						  import concurrent.futures
-						  - loop = asyncio.get_running_loop()
+						  
+						  loop = asyncio.get_running_loop()
 						  with concurrent.futures.ThreadPoolExecutor() as pool:
-						  res = await loop.run_in_executor(pool, cpu_bound_task, contents)
+						      res = await loop.run_in_executor(pool, cpu_bound_task, contents)
 						  ```
 					- I would strongly recommend having a look at the linked answer above to learn about the difference between using `run_in_threadpool()` and `run_in_executor()`, as well as how to create a re-usable custom `ThreadPoolExecutor` at the application startup, and adjust the number of maximum worker threads as needed.
 				- 4 - `ThreadPoolExecutor` will successfully prevent the `event loop` from being blocked (and should be prefered for calling blocking I/O-bound tasks), but won't give you the **performance improvement** you would expect from running **code in parallel**; especially, when one needs to perform `CPU-bound` tasks, such as audio or image processing and machine learning (see [here](https://fastapi.tiangolo.com/async/#is-concurrency-better-than-parallelism)). It is thus preferable to **run CPU-bound tasks in a separate process**—using [`ProcessPoolExecutor`](https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor), as shown below—which, again, you can integrate with `asyncio`, in order to `await` it to finish its work and return the result(s). As described [here](https://stackoverflow.com/q/15900366), it is important to protect the entry point of the program to avoid recursive spawning of subprocesses, etc. Basically, your code must be under [`if __name__ == '__main__'`](https://stackoverflow.com/questions/419163/what-does-if-name-main-do).
 					- ```python
 					  import concurrent.futures
-					  - loop = asyncio.get_running_loop()
+					  
+					  loop = asyncio.get_running_loop()
 					  with concurrent.futures.ProcessPoolExecutor() as pool:
-					  res = await loop.run_in_executor(pool, cpu_bound_task, contents)
+					      res = await loop.run_in_executor(pool, cpu_bound_task, contents)
 					  ```
 					- Again, I'd suggest having a look at the linked answer earlier on how to create a re-usable `ProcessPoolExecutor` at application startup—you should find [this answer](https://stackoverflow.com/a/77862153/17865804) helpful as well.
 				- 5 - More solutions, as shown in [this answer](https://stackoverflow.com/a/70873984/17865804), include using `asyncio.create_task()` (if your task is actually `async def`, but you wouldn't like to `await` for it to complete) or [background tasks](https://stackoverflow.com/a/76280152/17865804), as well as spawning a new thread (using [`threading`](https://docs.python.org/3/library/threading.html)) or process (using [`multiprocessing`](https://docs.python.org/3/library/multiprocessing.html)) in the background instead of using [`concurrent.futures`](https://docs.python.org/3/library/concurrent.futures.html). Moreover, if you had to perform some **heavy background computation** task that wouldn't necessarily have to be run by the same process (for example, you don't need to share memory, variables, etc.), you could also benefit from using other bigger tools like [Celery](https://fastapi.tiangolo.com/tutorial/background-tasks/#caveat). Using `apscheduler`, as demonstrated in [this answer](https://stackoverflow.com/a/79031846/17865804), might be another option as well—always choose what suits you best.
