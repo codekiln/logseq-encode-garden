@@ -2,13 +2,13 @@ date-created:: [[2025-04-10 Thu]]
 
 - # [[FastAPI/BackgroundTasks]] with [[Py/asyncio]]: An In-Depth Analysis
 	- Deep research query with the context of [[FastAPI/Docs/Tutorial/Background Tasks]] - [[ChatGPT/Deep Research/Query]]
+	  collapsed:: true
 		- > I'll dig into the internals of FastAPI and Starlette's BackgroundTasks, and how they interact with asyncio event loops, especially in both development (debugging with PyCharm and VSCode) and production (using Uvicorn). I'll look for concrete documentation or examples from trusted sources that explain:
 			- > The execution order and error behavior of queued background tasks
 			- > How exceptions are handled (and potentially swallowed)
 			- > Whether and how subsequent background tasks are affected by earlier failures
 			- > When to use asyncio primitives (like queues or `create_task`) vs. BackgroundTasks
 			- > Best practices around observability and logging failures in these async scenarios
-		- > I'll prepare a detailed report based strictly on official docs and reputable sources. I'll let you know when it's ready.
 	- [[ChatGPT/Deep Research/Response]]
 		- ## Overview of FastAPI Background Tasks
 			- FastAPI leverages Starlette's in-process background task system to run operations after sending an HTTP response. A **background task** is a function (sync or async) attached to a response that executes **only once the response has been sent to the client** ([Background Tasks - Starlette](https://www.starlette.io/background/#:~:text=Starlette%20includes%20a%20,process%20background%20tasks)). FastAPI provides a `BackgroundTasks` utility (built on Starlette's `BackgroundTask`) to collect multiple tasks during request processing and ensure they run post-response ([[FastAPI/Docs/Tutorial/Background Tasks]]). This allows you to offload non-critical work (e.g. sending emails, writing logs) so it doesn't block the main request/response cycle ([[FastAPI/Docs/Tutorial/Background Tasks]]).
