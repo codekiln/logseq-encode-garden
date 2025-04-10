@@ -1,0 +1,51 @@
+tags:: [[Podcast]], [[Conversation]], [[Dialog]]
+
+- # The Keys to Great Conversation
+	- Harvard Business School professor [[Person/Alison Wood Brooks]] breaks down the science and art of conversation. Brooks is the author of the book [[Book/Talk]].
+	- She introduces the **TALK** framework: **Topic**, **Asking**, **Levity**, and **Kindness**, aimed at improving conversational skills across all contexts—work, social, or personal.
+	- Conversations are full of micro-decisions and are inherently uncertain; scripts and memorization don't work.
+	- You can listen to the full episode here: [https://hbr.org/podcast/2025/03/the-keys-to-great-conversation](https://hbr.org/podcast/2025/03/the-keys-to-great-conversation)
+- # TALK Framework [[Book/Talk/Framework]]
+	- ## Topic
+		- Every person brings unique goals into a conversation, so principles must be adaptable across contexts.
+			- [source](https://share.snipd.com/snip/0b7edecb-cb65-4311-ab69-13c3f48358ee)
+		- Choosing and switching topics is a major decision point in conversation:
+			- Should we drift gently, switch abruptly, or end the exchange?
+			- These choices steer the direction and outcome of the interaction.
+			- [source](https://share.snipd.com/snip/1471a859-3ee1-4873-af7b-0b967946d0e5)
+		- **Topic prep**—spending 30 seconds to list potential topics—reduces anxiety and improves flow.
+			- This works even for close relationships (e.g., calling your mom).
+			- [source](https://share.snipd.com/snip/af0bbfc8-803f-4315-8309-132aee691ddd)
+		- Even during conversations, **topic switching** can prevent lulls and keep things fresh.
+			- [source](https://share.snipd.com/snip/c2d3b0ab-be46-407f-a34a-1092a2f8f94a)
+	- ## Asking
+		- Finding common ground is an essential service to others in group and one-on-one contexts.
+			- Helps establish ease and meaningful shared reality.
+			- [source](https://share.snipd.com/snip/325a2eca-8e9a-473f-ad29-4159fe16b107)
+		- Many people talk more than they ask—this leads to poor engagement.
+			- [source](https://share.snipd.com/snip/b0afdd7c-7f95-4437-ade5-70422bb75874)
+		- Asking more questions increases likability and connection.
+			- Speed dating data: follow-up questions were key in getting second dates.
+			- [source](https://share.snipd.com/snip/125b8e20-f226-47e3-88f9-5dd7c5f8d490)
+		- **Follow-up questions** show active listening and interest—called "responsiveness in action."
+			- [source](https://share.snipd.com/snip/ef1bf700-c2fb-4bba-979e-a8a47fda314d)
+		- Prefer "what" questions to "why" in negotiations:
+			- "What" fosters openness, while "why" can feel accusatory.
+			- [source](https://share.snipd.com/snip/fdea810d-0b23-4d36-828f-0e882282e1d7)
+	- ## Levity
+		- Boredom is a silent killer in conversations—more dangerous than anger.
+		- Levity (smiles, jokes, compliments, or switching topics) keeps things lively and fun.
+			- [source](https://share.snipd.com/snip/80ee5595-deff-46b0-a591-02866d829388)
+		- Even bad jokes boost status; successful ones can make you group leader.
+			- [source](https://share.snipd.com/snip/5a52b3f9-9a49-43a2-82b3-7dc62eda14c9)
+		- People laugh and smile less after age 23—levity may be even more essential in professional contexts.
+			- [source](https://share.snipd.com/snip/34ce629a-9d40-4319-92a6-58464b0a15f0)
+		- The goal isn't to be funny, but to make the **conversation fun**.
+			- Smiling and laughing alone can boost the vibe.
+			- [source](https://share.snipd.com/snip/1b5932bb-9730-4a16-8e7d-b7357c21fd5d)
+	- ## Kindness
+		- Kindness is the capstone of the TALK framework—it ties everything together.
+		- Active listening = kindness in action.
+			- Show you've listened by paraphrasing, affirming, or asking relevant follow-up questions.
+			- Try sequential validation exercises to build this skill.
+			- [source](https://share.snipd.com/snip/758cf140-ceaf-48f2-b204-79dc45322a20)
