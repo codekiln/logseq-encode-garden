@@ -98,7 +98,9 @@ tags:: [[Diataxis/Tutorial]], [[FastAPI/background_tasks]]
 			- Recommended to use `BackgroundTasks` (plural) over `BackgroundTask`
 			- > "By only using `BackgroundTasks` (and not `BackgroundTask`), it's then possible to use it as a *path operation function* parameter and have FastAPI handle the rest for you"
 		- From [[starlette/background/BackgroundTask]] [Starlette Docs](https://www.starlette.io/background/):
+		  id:: 67f7c779-c56b-49b5-9314-09f1a4b72efa
 			- Tasks run in order
+			  id:: 67f7c779-8d28-4ea3-9506-5f5e4b90c11a
 				- > The tasks are executed in order. In case one of the tasks raises an exception, the following tasks will not get the opportunity to be executed.
 			- Tasks run after response is sent
 			- Multiple tasks supported via `add_task`

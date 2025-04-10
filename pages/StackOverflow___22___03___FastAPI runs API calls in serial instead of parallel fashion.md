@@ -5,8 +5,8 @@ tags:: [[Py/asyncio]]
 	  id:: 67f7d1dd-fbf0-424f-9117-08f2a7015fdf
 		- The original poster's example comes from the [[Py/asyncio]] docs, which is also explained in [[YouTube/Code Collider/24/03/How FastAPI Handles Requests Behind the Scenes]].
 		- The top answer comes from [[StackOverflow/User/Chris]] and is voted up 270+ times, it's basically an [[Essay]] on how [[FastAPI]] is implemented with [[Py/asyncio]]. As people said in the comments, "Better answer than entire emojis-ridden FastApi documentation" See my formatting below.
-		- I came here looking for an answer to what the limitations were for using [[FastAPI/BackgroundTasks]] vs when I should be managing my own [[Py/asyncio]] event loops, in particular, after reading:
-			- {{embed ((67f7c637-a7bc-4e7e-8e61-58c4479bc965))}}
+		- I came here looking for an answer to what the limitations were for using [[FastAPI/BackgroundTasks]] vs when I should be managing my own [[Py/asyncio]] event loops, in particular, after reading [[FastAPI/Docs/Tutorial/Background Tasks]] here:
+			- {{embed ((67f7c779-c56b-49b5-9314-09f1a4b72efa))}}
 	- Top Answer from [[StackOverflow/User/Chris]]
 		- ### Basic Answer
 			- As per [FastAPI's docs](https://fastapi.tiangolo.com/async/#path-operation-functions):
