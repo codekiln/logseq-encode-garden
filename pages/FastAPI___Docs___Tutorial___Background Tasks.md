@@ -139,10 +139,30 @@ tags:: [[Diataxis/Tutorial]], [[FastAPI/background_tasks]]
 						      return {"message": "Tasks scheduled"}
 						  ```
 				- #### Important Notes about Background Tasks
-					- From [[starlette/background/BackgroundTask]] [Starlette Background Tasks Docs](https://www.starlette.io/background/):
+					- From [[starlette/background/BackgroundTask]] [Starlette Docs](https://www.starlette.io/background/):
 						- Tasks run in order they were added
-						- If one task raises an exception, following tasks won't run
-						- Tasks only run after the response is sent
+							- > The tasks are executed in order. In case one of the tasks raises an exception, the following tasks will not get the opportunity to be executed.
+						- Tasks run after response is sent
+						- Multiple tasks supported via `add_task`
+					- #### Concurrency and Task Execution Details
+						- In-Process Nature
+							- Tasks run in the same process as your FastAPI app
+							- Share the same event loop as your application
+							- Not run in separate threads by default
+						- Request Independence
+							- Each HTTP request gets its own `BackgroundTasks` instance
+							- Tasks from different requests are independent
+							- If Request A's tasks fail, Request B's tasks are unaffected
+						- When to Use What
+							- Use `BackgroundTasks` for:
+								- Small, quick tasks
+								- Tasks that need access to your FastAPI app's variables
+								- Simple background operations like sending emails
+							- Use Celery or similar for:
+								- Heavy computation
+								- Tasks that need to run across multiple processes
+								- Tasks that need to run across multiple servers
+								- When you need a proper job queue (RabbitMQ/Redis)
 				- #### Technical Details from [[FastAPI/Docs/Tutorial/Background Tasks]] [FastAPI Background Tasks Tutorial](https://fastapi.tiangolo.com/tutorial/background-tasks/)
 					- FastAPI imports `BackgroundTasks` directly from Starlette for convenience
 					- It's recommended to use `BackgroundTasks` (plural) instead of `BackgroundTask` (singular)
@@ -172,5 +192,6 @@ tags:: [[Diataxis/Tutorial]], [[FastAPI/background_tasks]]
 						- From [[starlette/background/BackgroundTask]] [Starlette Docs](https://www.starlette.io/background/):
 							- Tasks run in order
 								- > The tasks are executed in order. In case one of the tasks raises an exception, the following tasks will not get the opportunity to be executed.
+									- For [[Error/Handling]], see [[StackOverflow/23/01/How to handle exceptions in background tasks in FastAPI and Starlette]] [here](https://stackoverflow.com/a/75146315/78202)
 							- Tasks run after response is sent
 							- Multiple tasks supported via `add_task`
