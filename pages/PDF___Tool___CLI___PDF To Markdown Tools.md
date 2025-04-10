@@ -1,4 +1,6 @@
-# #PDF to #Markdown [[CLI Tools]]
+tags:: [[ChatGPT/Deep Research]]
+
+- # #PDF to #Markdown [[CLI Tools]]
 	- ## #[[ChatGPT/Deep Research/Query]] - [PDF to Markdown Conversion](https://chatgpt.com/c/67d145bf-8c40-800a-b1e5-07671a210396)
 		- ### **Query: The State of the Art in Local Command-Line PDF to Markdown Conversion**
 		  id:: 67d14d5f-738e-4189-9323-64e17723b94e
