@@ -2,7 +2,7 @@ date-created:: [[2023-01-10 Tue]]
 source:: https://stackoverflow.com/a/75146315/78202
 tags:: [[FastAPI]], [[Starlette]], [[Python/Exception Handling]], [[Python/Async]]
 
-- # How to handle exceptions inside FastAPI/Starlette background tasks?
+- # [How to handle exceptions inside FastAPI/Starlette background tasks?](https://stackoverflow.com/a/75146315/78202)
 	- ## Question Summary
 		- How to properly handle exceptions that occur in FastAPI/Starlette background tasks
 		- What happens when an exception occurs in a background task
@@ -24,4 +24,4 @@ tags:: [[FastAPI]], [[Starlette]], [[Python/Exception Handling]], [[Python/Async
 	- ## Related
 		- [[FastAPI/Concept/Starlette BackgroundTasks with FastAPI and AsyncIO - Deep Research]]
 		- [[FastAPI/Docs/Tutorial/Background Tasks]]
-		- [[starlette/background/BackgroundTask]] 
+		- [[starlette/background/BackgroundTask]]
