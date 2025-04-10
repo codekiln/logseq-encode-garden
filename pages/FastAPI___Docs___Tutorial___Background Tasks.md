@@ -190,6 +190,7 @@ tags:: [[Diataxis/Tutorial]], [[FastAPI/background_tasks]]
 							- All background tasks are merged and run together
 					- 3. Maintains all Starlette features
 						- From [[starlette/background/BackgroundTask]] [Starlette Docs](https://www.starlette.io/background/):
+						  id:: 67f7c637-a7bc-4e7e-8e61-58c4479bc965
 							- Tasks run in order
 								- > The tasks are executed in order. In case one of the tasks raises an exception, the following tasks will not get the opportunity to be executed.
 									- For [[Error/Handling]], see [[StackOverflow/23/01/How to handle exceptions in background tasks in FastAPI and Starlette]] [here](https://stackoverflow.com/a/75146315/78202)
