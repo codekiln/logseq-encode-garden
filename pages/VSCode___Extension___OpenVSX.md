@@ -1,0 +1,3 @@
+- [About OpenVSX](https://open-vsx.org/about)
+	- > Open VSX is an open-source registry for VS Code extensions. It can be used by any development environment that supports such extensions. See this article for more information.
+	- > This service is operated by the Eclipse Foundation under the responsibility of the Open VSX Working Group. The Open VSX Working Group ensures the continued sustainability, integrity, evolution and adoption of the Open VSX Registry. It provides governance, guidance, and funding for the communities that support its implementation, deployment and maintenance.
