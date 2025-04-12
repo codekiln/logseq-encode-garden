@@ -8,7 +8,7 @@ readwise-link:: https://read.readwise.io/new/read/01jfz94w9xygdp5gx50req7srh
   :END:
 	- This automatically installs two other extensions
 		- [[VSCode/Extension/Pylance]] - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) - to provide performant Python language support
-		- [[VSCode/Extension/Python/Debugger]] - [Python Debugger](https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy) - to provide a seamless debug experience with [[Python/debugpy]]
+		- [[VSCode/Extension/Python/Debugger]] - [Python Debugger](https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy) - to provide a seamless debug experience with [[Py/debugpy]]
 - DONE get a python interpreter to work
 - DONE prove [[IntelliSense]] works
   id:: 676d1cb7-8c2b-4108-89de-bb8129d3bf68

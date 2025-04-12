@@ -1,0 +1,2 @@
+# [xyhp915/logseq-fenced-code-plus: A Logseq plugin for missing types of fenced code 🚀](https://github.com/xyhp915/logseq-fenced-code-plus)
+	- I think this is created by a core contributor of logseq, [[Person/Charlie xyhp915]]
