@@ -15,7 +15,7 @@
 			- [Three truths about applying for jobs](https://vurt.eu/articles/three-truths/)
 			- [How to use stories in interviews](https://vurt.eu/articles/using-stories/)
 			- > These articles address *hiring*, for the benefit of hopeful job applicants in need of advice. They’re written from the perspective of hiring in the software industry, though a lot of the advice applies more generally too.
-		- [[Open Source]]
+		- [[Open/Source]]
 			- [Find your way into open-source software](https://vurt.eu/articles/becoming-a-contributor/)
 		- #Documentation
 			- [Twelve principles of documentation](https://vurt.eu/articles/principles-documentation/)

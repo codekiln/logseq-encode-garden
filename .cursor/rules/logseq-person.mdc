@@ -1,0 +1,19 @@
+---
+description: Logseq-Flavored Markdown (LFM) Person Reference
+globs: 
+alwaysApply: false
+---
+# How a Person is tracked in this Logseq knowledge garden
+This is an extension to [logseq-flavored-markdown](mdc:.cursor/rules/logseq-flavored-markdown.mdc) for recording information about a person.
+
+A person entry is a logseq page where [[Person/Full Name]] corresponds to `pages/Person___Full Name.md`. 
+
+If you are asked to make an entry for a person, you should do a search
+* search in `pages/Person___*.md` to find if a person already exists
+* if it already exists, then you should **update** the existing entry
+  * a single person should not have more than one person page
+* look up the person on the internet
+  * create a person page for them 
+  * link the person and a bit of their bio in their page
+  * if possible add an image link
+* if the person page is new, make an entry in today's journal page that links to that person. 

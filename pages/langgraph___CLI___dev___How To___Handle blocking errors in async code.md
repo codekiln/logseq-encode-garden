@@ -12,4 +12,8 @@
 		     - For deployment: Set 'BG_JOB_ISOLATED_LOOPS=true' environment variable
 		  These blocking operations can prevent health checks and slow down other runs in your deployment. Following these recommendations will help keep your LangGraph application running smoothly!
 		  ```
-	-
+	- ## Sub-optimal workarounds
+		- For development: Run 'langgraph dev --allow-blocking'
+		- For deployment: Set 'BG_JOB_ISOLATED_LOOPS=true' environment variable
+	- ## Better workarounds
+		- search your code for synchronous clients and replace them with async clients
