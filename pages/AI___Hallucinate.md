@@ -1,1 +1,1 @@
-alias:: [[Hallucination]], [[Hallucinations]], [[Hallucinate]], [[Hallucinates]]
+alias:: [[Hallucination]], [[Hallucinations]], [[Hallucinate]], [[Hallucinates]], [[AI Hallucinations]]

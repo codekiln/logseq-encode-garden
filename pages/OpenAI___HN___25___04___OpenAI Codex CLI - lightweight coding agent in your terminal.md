@@ -3,6 +3,7 @@ tags:: [[HackerNews]]
 - # [OpenAI Codex CLI: Lightweight coding agent that runs in your terminal | Hacker News](https://news.ycombinator.com/item?id=43708025)
 	- ## [[My Notes]] [[2025-04-18 Fri]]
 	  id:: 68021420-5b60-4dcf-a5b6-b18dba954e26
+	  collapsed:: true
 		- great discussion comparing various [[AI Coding]] tools and [[AI Coding Techniques]] and related issues
 			- nobody is very impressed with [[OpenAI Codex]] at [[HackerNews]] at this time
 			- first I've heard anyone have anything nice to say about [[AWS/Q]]
