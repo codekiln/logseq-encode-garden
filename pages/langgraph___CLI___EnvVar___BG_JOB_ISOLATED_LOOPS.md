@@ -1,0 +1,4 @@
+# [BG_JOB_ISOLATED_LOOPS](https://langchain-ai.github.io/langgraph/cloud/reference/env_var/?h=bg_job_isolated_loops#bg_job_isolated_loops)
+	- Set ==BG_JOB_ISOLATED_LOOPS== to `True` to execute background runs in an isolated event loop separate from the serving API event loop.
+	- This environment variable should be set to `True` if the implementation of a graph/node contains synchronous code. In this situation, the synchronous code will block the serving API event loop, which may cause the API to be unavailable. A symptom of an unavailable API is continuous application restarts due to failing health checks.
+	- Defaults to `False`.

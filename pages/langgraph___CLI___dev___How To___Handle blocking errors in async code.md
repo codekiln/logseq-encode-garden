@@ -1,5 +1,5 @@
 # How to handle langgraph's blocking error
-	- ## sample error - "LangGraph dev identified a synchronous blocking call in your code"
+	- ## sample error 1 - "LangGraph dev identified a synchronous blocking call in your code"
 		- ```
 		  Heads up! LangGraph dev identified a synchronous blocking call in your code. When running in an ASGI web server, blocking calls can degrade performance for everyone since they tie up the event loop.
 		  Here are your options to fix this:
@@ -14,6 +14,9 @@
 		  ```
 	- ## Sub-optimal workarounds
 		- For development: Run 'langgraph dev --allow-blocking'
-		- For deployment: Set 'BG_JOB_ISOLATED_LOOPS=true' environment variable
+		- For deployment: Set 'BG_JOB_ISOLATED_LOOPS=true' environment variable [[langgraph/CLI/EnvVar/BG_JOB_ISOLATED_LOOPS]]
 	- ## Better workarounds
 		- search your code for synchronous clients and replace them with async clients
+	- ## Resources
+		- [blockbuster causes blocking error via tiktoken in async context with latest langgraph-api · Issue #4218 · langchain-ai/langgraph](https://github.com/langchain-ai/langgraph/issues/4218)
+			- References workarounds; recommendation from
