@@ -18,7 +18,7 @@ tags:: [[CursorAI/Project Rules]]
 		  
 		  Here is a [Video Demo and Walkthrough](https://youtu.be/jEhvwYkI-og) ([[Person/Brian Madison/YouTube/25/02/Unlock Cursor AI Automatic Rule Generation]]) of auto rule generation, theory of why this works so well, along with a demo of voice → rule generation and public vs private rule handling.
 		  
-		  Check it out here [[Person/Brian Madison/GitHub/cursor-auto-rules-agile-workflow]]   - the readme has more info, or just take a look at the .cursor/rules rule 000.
+		  Check it out here [[Person/Brian Madison/GitHub/cursor-custom-agents-rules-generator]]   - the readme has more info, or just take a look at the .cursor/rules rule 000.
 	- ## #[[My Notes]]
 		- comment from [[CursorAI/Forum/User/sanjiovani100]] [here](https://forum.cursor.com/t/ultimate-rule-generator-no-more-failure-to-generate-and-private-rules/51782/17?u=codekiln) mentions it might be possible to get the rules path to be somewhere else  ...
 			- TODO *does this actually work??*

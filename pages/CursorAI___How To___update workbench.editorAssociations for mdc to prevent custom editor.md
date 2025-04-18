@@ -12,7 +12,7 @@ tags:: [[Diataxis/How To]], [[.mdc]]
 		    }
 		  ```
 	- [[Via]]
-		- [[Person/Brian Madison/GitHub/cursor-auto-rules-agile-workflow]]
+		- [[Person/Brian Madison/GitHub/cursor-custom-agents-rules-generator]]
 		- [[CursorAI/Forum/25/02/The MDC editor is whack]]
 		- [[JustDo/Blog/25/03/Major Lessons for Cursor v0.47.8]]
 -

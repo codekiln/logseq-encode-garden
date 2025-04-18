@@ -1,0 +1,119 @@
+date-created:: [[2025/04]]
+created-by:: [[Person/Brian Madison]]
+
+- # [Better Than Vibe Coding: Agile AI Driven Development for Complex Apps - YouTube](https://www.youtube.com/watch?v=JbhiLUY_V2U&t=10s)
+	- ## [[My Notes]] - [[2025-04-18 Fri]]
+	  id:: 68020e5d-bc8d-4375-9c02-461ea6b8b9e1
+		- I tried [[Person/Brian Madison]]'s approach before in [[Person/Brian Madison/GitHub/cursor-custom-agents-rules-generator]] (see ((67dd428f-9c6b-4d20-ab14-188778b80b92))). At the time it seemed like a promising workflow that was still a work in progress.
+			- This video spells out a lot of the things about how to utilize the repo in an [[Agile]] context that were mostly tacit in the repository at that time. I don't think there's anything totally new here since my review, but Brian mentions some things that I have independently started to do as well, such as trying to get as much out of [[CursorAI]] and into reasoning models as possible at the planning stage, so that cursor can focus on the cheap, fast stuff iteration rather than the reasoning and planning, a tip I took from [[Person/Harper Reed/Blog/25/02/My LLM codegen workflow atm]].
+			- I am looking forward to the next video, which is likely where the rubber is going to meet the road in terms of planning outside of cursor. He mentions that he's using Gemini reasoning models.
+	- ## [[Video]]
+		- {{video https://www.youtube.com/watch?v=JbhiLUY_V2U}}
+		- ### {{youtube-timestamp 0}} Introduction and Problem Statement
+		  collapsed:: true
+			- Key problem with [[Vibe Coding]]
+			- Benefits of structured approach:
+				- Saves time
+				- Saves money
+				- Builds scalable solutions
+			- ### {{youtube-timestamp 13}} Understanding [[Vibe Coding]]
+			  collapsed:: true
+				- #### Characteristics
+					- Casual approach used for relaxation
+					- No serious project structure
+					- Example: Building space shooter game with [[Super Whisper]]
+				- #### Limitations
+					- Lack of code quality focus
+					- No proper app structure
+					- Often single file solutions (HTML + JavaScript)
+			- ### {{youtube-timestamp 43}} Challenges with Vibe Coding
+			  collapsed:: true
+				- #### Common Issues
+					- Debugging loops
+					- Fix one thing, break another
+					- Resource intensive (uses up [[Cursor]] credits quickly)
+				- #### Need for Better Approach
+					- For serious applications
+					- For feature additions
+					- For brownfield environments
+			- ### {{youtube-timestamp 69}} Introduction to [[Agile AI-driven Development]]
+			  collapsed:: true
+				- #### Speaker Background
+					- [[Person/Brian Madison]]
+					- 20+ years software development experience
+					- Experience from startups to enterprises
+				- #### Method Overview
+					- Combines agile best practices
+					- Applies to agentic coding
+					- Focus on maintainable solutions
+		- ### {{youtube-timestamp 132}} The Breakthrough Method
+			- #### Process Overview
+				- Multi-video series approach - this video lays groundwork
+				- Focus on setting up initial project correctly
+			- #### Key Roles and Phases {{youtube-timestamp 167}}
+				- #### {{youtube-timestamp 167}} 1. [[Business/Analyst]] Phase - do [[Requirement/Elicitation]]
+					- Uses [[AI/Model/Reasoning]]
+					- Refines initial idea
+					- Elicits detailed requirements
+				- #### 2. [[Project/Manager]] Phase {{youtube-timestamp 191}} - use [[AI Deep Research]]
+					- Uses [[OpenAI]] or [[Gemini]] for deep research
+						- it will come back with a report
+					- optionally, create [[PRD]] (Product Requirements Document)
+					- this will be a clear roadmap
+					- PM will ask us questions to clarify things - more [[Requirement/Elicitation]]
+				- #### 3. [[Architect]] Phase {{youtube-timestamp 247}}
+					- Produces detailed architecture document
+					- Define technology choices
+					- Creates technical roadmap document
+						- then, when we're building project from end to end, we have all the details we need
+						- if it's a web app, what pages there will be
+						- database schemas, data models spelled out
+				- 4. [[Product/Owner]] Phase {{youtube-timestamp 309}}
+					- The product owner is responsible for creating documents to hand off to the [[Project/Manager]]
+					- take everything from the [[Architect]] and make everything sequenced so a [[Dev/Jr]] could handle it
+						- Creates granular task list
+						- Sequences implementation steps
+						- Ensures completeness of requirements
+				- 5. [[ScrumMaster]] Phase {{youtube-timestamp 365}}
+					- All of this could be done outside of cursor, this will save you a bunch of time
+						- > "this can be the funnest part"
+					- {{youtube-timestamp 418}}
+					- Creates [[Epics]] and [[Stories]]
+						- stories will have all details so the agent can pick up a **single new story in a new [[Chat/Thread]], and that's all it needs in its [[AI/Context]] to build this phase of the application**
+							- file locations
+							- project structure
+							- what's been done before in previous stories
+							- each story is granular, so our developer agent can take a look at it
+						- Organizes tasks logically
+						- Prepares for agent implementation
+		- ### {{youtube-timestamp 460}} Implementation Phase - the Developer Agent
+			- #### Setup Process
+				- Convert all documents to [[Markdown]]
+				- Create `.ai` folder structure
+				- Organize story files
+			- #### {{youtube-timestamp 510}} Development Workflow
+				- Build <-> test -> push
+				- > "don't proceed without tests ... shoot for 80-90% test coverage"
+				- > "this works in industry, and with [[AI Agents]]"
+				- Story-based implementation
+				- Test-driven approach
+				- Continuous integration
+			- #### Testing Strategy
+				- Aim for 80-90% test coverage
+				- Continuous testing
+				- Regression prevention
+		- ### {{youtube-timestamp 580}} Conclusion and Next Steps
+			- #### Key Takeaways
+				- No complex prompts needed
+				- Structured approach vs. vibe coding
+					- you are vibing with the AI to riff on your project ideas, but then you get a bit more rigid
+				- Scalable from simple to complex applications
+			- #### Future Content
+				- Implementation details coming in next video
+				- Focus on [[Gemini]] and [[OpenAI]] integration
+				- [[Cursor]] setup guidance
+			- #### Call to Action
+				- Try the method
+				- Share experiences in comments
+				- Stay tuned for detailed implementation
+		-

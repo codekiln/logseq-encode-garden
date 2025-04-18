@@ -1,4 +1,4 @@
-tags:: [[Person/Brian Madison/GitHub/cursor-auto-rules-agile-workflow]], [[YouTube]]
+tags:: [[Person/Brian Madison/GitHub/cursor-custom-agents-rules-generator]], [[YouTube]]
 created-by:: [[Brian Madison]]
 
 - # DONE [Unlock Cursor AI's Full Potential: Master Automatic Rule Generation That Gets Results! - YouTube](https://www.youtube.com/watch?v=jEhvwYkI-og)

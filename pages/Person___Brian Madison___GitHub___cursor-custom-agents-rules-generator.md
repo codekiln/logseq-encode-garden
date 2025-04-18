@@ -1,5 +1,5 @@
-# [GitHub - bmadcode/cursor-auto-rules-agile-workflow](https://github.com/bmadcode/cursor-auto-rules-agile-workflow)
-	- ## [[My Notes]] on trying this workflow
+# [bmadcode/cursor-custom-agents-rules-generator: Maximize the potential of Cursor best practices for Automatic Rule and Custom Agent Generation and Agile Workflows](https://github.com/bmadcode/cursor-custom-agents-rules-generator)
+	- ## [[My Notes]] on trying this workflow - [[2025-03-21 Fri]]
 	  id:: 67dd428f-9c6b-4d20-ab14-188778b80b92
 		- I prepared a [[Merge Request]] [Fix spelling errors by codekiln · Pull Request #27 · bmadcode/cursor-auto-rules-agile-workflow](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/pull/27) into this repo to get to know the process. Here are my notes on the process. Similar to [[AI/Coding/Technique/Phased Planning/ai-coding dir]], this repo by [[Person/Brian Madison]] presents a system of [[CursorAI/Project Rules]] that implement an [[Agile]] workflow.
 			- ### Workflow Review
@@ -58,7 +58,7 @@
 								- an [arch.md](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/blob/70d24a80da9d4520896189dad70b5e84be35d0ed/.ai/arch.md), possible equivalent of [[AI/Coding/v0/File/2-TICKET-technical-specification.md]] which, for my pull request, contained an LLM-generated [[Mermaid Diagram]] that looked like this:
 									- ![image.png](../assets/image_1742556555015_0.png){:height 430, :width 122}
 									- **Note:** I needed to install [[VSCode/Extension/Markdown Preview Mermaid Support]] to see it in a preview locally
-									- I #[[❤️]] the idea of using mermaid in an [[Architecture]] document
+									- I #[[❤️]] the idea of using mermaid in an [[Arch/itecture]] document
 							- [epic-1/](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/tree/70d24a80da9d4520896189dad70b5e84be35d0ed/.ai/epic-1)
 								- [story-1.story.md](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/blob/70d24a80da9d4520896189dad70b5e84be35d0ed/.ai/epic-1/story-1.story.md)
 								- [story-2.story.md](https://github.com/bmadcode/cursor-auto-rules-agile-workflow/blob/70d24a80da9d4520896189dad70b5e84be35d0ed/.ai/epic-1/story-2.story.md)
