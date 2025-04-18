@@ -1,4 +1,4 @@
-- #
+#
 - [PEP 570 – Python Positional-Only Parameters | peps.python.org](https://peps.python.org/pep-0570/)
 	- ## Official Summary
 		- This PEP proposes to introduce a new syntax, `/`, for specifying positional-only parameters in Python function definitions.

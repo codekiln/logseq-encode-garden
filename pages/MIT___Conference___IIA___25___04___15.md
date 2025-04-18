@@ -6,6 +6,7 @@
 		  collapsed:: true
 			- ### Panel - left to right
 				- ### Riccardo Sabatini
+				  collapsed:: true
 					- **Title**: Chief Data Scientist, Orionis Biosciences
 					- **Background**: Riccardo Sabatini is a physicist and data scientist best known for decoding the human genome and contributing to precision medicine. He has worked at the intersection of AI, biology, and data. At Orionis Biosciences, he focuses on using advanced computational biology and data modeling to discover new therapeutic pathways and accelerate drug development.
 					- [[My Notes]]
@@ -13,6 +14,7 @@
 				- ### [[Person/Carina Hong]]
 					- [[Bio]]
 						- **Title**: CEO, AxiomAI
+						  collapsed:: true
 						- **Background**: Carina Hong is a technology executive and founder focused on AI and data-centric solutions. As CEO of Axiom, she leads efforts to develop tools that use artificial intelligence to analyze complex scientific data and generate actionable insights, particularly in health and genomics.
 						- links
 							- [Carina Hong | Knight-Hennessy Scholars at Stanford University](https://knight-hennessy.stanford.edu/people/carina-hong)
@@ -79,6 +81,7 @@
 						-
 				- ### [[Person/Lisa Huang]]
 					- [Lisa Huang | LinkedIn](https://www.linkedin.com/in/lisa-huang-55b393156/)
+					  collapsed:: true
 					- **Title**: Head of AI Investment
 					- **Organization**: [[Company/Fidelity]]
 					- **Background**: Dr. Lisa Huang leads AI investment strategies at Fidelity, focusing on identifying and implementing AI solutions that enhance investment decision-making and client services. Her work spans across quantitative analysis, machine learning applications in portfolio management, and AI-driven market insights.
@@ -96,6 +99,7 @@
 						- #### **Key Challenges**
 						- **High cost of error:** Mistakes in financial services can have billion-dollar consequences.
 						- **Slow, thoughtful adoption:** Compared to consumer tech, financial AI requires rigorous governance and risk controls.
+						  collapsed:: true
 						- **AI as augmentation, not replacement:** Focus is on enhancing human capabilities, not replacing them.
 						  
 						  >  “Take a human. That human has a certain value. Add AI to it.”
@@ -106,11 +110,13 @@
 					- **Title**: CTO
 					- **Organization**: [[Company/Prudential Financial]]
 					- **Background**: Robert Sala serves as the Chief Technology Officer at Prudential Financial, where he oversees the company's technological transformation and AI integration initiatives. He leads strategic efforts to modernize financial services through AI adoption while maintaining robust security and compliance standards.
+					  collapsed:: true
 					- [[My Notes]]
 						- they are using [[GitHub/CoPilot]]
 						- uses the term [[Data Gravity]] - new #Term to refer to when data is easier to use in a certain platform (for example, with [[AWS/Bedrock]] or [[Salesforce/Agentforce]])
 						- > "architecturally, we have a principle to assume it's never more than a 24 month decision and there are always two way doors"
 							- did I hear this right?
+							  collapsed:: true
 					- [[Transcript]]
 						- [[Person/Robert Sala]]:
 							- When I talk to, you know, you, John, everything should be repatriated. When I talk to Amazon, everything should go to bedrock. You know, there's a continuum that we're all going to likely play, and I think we're all trying to figure out what the right topography is, for where, like, where should compute should live. There's a data gravity component of that. There's a whole bunch of things, right, cost of inference and watching that move around. When you think of the sprawl, we talked about this a little bit earlier, this reminds me, Dave, myself, this reminds me of the dot-com explosion, right? Think of all the website, site, shop-in-a-box kits and tools and platforms and people and online automated email forms and submissions and postings and content management, there were hundreds and hundreds of them. And what we saw over time is that it all settled down and they coalesced and there was consolidation and there was acquisition and sort of it grooved into a much more manageable entity. I could be wrong, but my theory is that we're going to see something similar here. Right now, it's such a wide open space with so many unknowns and everybody's racing into it hoping to be the, sort of, the hotter chair when the music stops, so to speak, and we all consolidate. You know, time will tell, but it is a little crazy right now. The only other thing I'd add is... Do you find yourself, RJ, going with just your incumbent vendors, let's just keep them housed, we don't want to do new ones for now, or do you market the startups out here? Yeah, architecturally we have a principle that says assume everything is no more than a 24-month decision and strive to make everything a two-way, right? Because today's amazing capability might get leapfrogged three times in the next 14 months and what we don't want to do is lock in. And so that's hard to do, but we spend a lot of time, not so much saying tool A, tool B, tool C, we spend a lot of time saying whichever tools we do, how do I press the clutch and swap it back out, not unless we know how to do it. Two quick things I would say is, one, I'd say focus on the problem to be solved and there are a lot of different ways and tools that you can solve it. So if you build to be agnostic to the technology...
@@ -125,6 +131,7 @@
 				- ### [[Person/Jieyu Fan]]
 					- [Jieyu Fan - LinkedIn](https://www.linkedin.com/in/jieyu-fan-69762428/)
 					- ![jieyu fan](https://media.licdn.com/dms/image/v2/D4E03AQEE_sXX3reXUg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1723079717075?e=1750291200&v=beta&t=dD7xI85e9ojhYOpXIc25L4QBXdc95dKn38eO0iWgHtw){:height 301, :width 287}
+					  collapsed:: true
 					- **Title**: Head of Advanced Analytics, US
 					- **Organization**: [[Company/John Hancock]]
 					- **Background**: Jieyu Fan leads advanced analytics initiatives at John Hancock, focusing on implementing AI and data science solutions in the insurance and financial services sector. Her work involves developing and deploying AI-driven solutions for risk assessment, customer service, and operational efficiency. She has been particularly active in developing cutting-edge AI and Gen AI solutions in the industry.
@@ -154,6 +161,7 @@
 				- [[Transcript]]
 					- and navigate, and socialize, and learn, earn, and transact on our behalf, how are they all going to do this? You know, how does this look like the DNS, the browsers, the HTTP and HTML of the web? The exciting part is companies like Anthropic and Google have recently released protocols for communication. It's like the TCP IP of, you know, two machines talking to each other, which is great. But you have to go well beyond just communication and solve problems like discovery, search, and authentication, and trace. And that's what Nanda is about. It's an architecture that will support many protocols, including MCP and A2A, but each of those protocols could have dozens of different implementations. So that's the beauty of thinking like an architecture here. And so it requires all those things, just like, you know, a website gets certificates, there are coupons like weblogs, there's registration, all these things that we have in the web world also map to the agent world, but it would be a mistake to say that agents will behave just like the web pages behave, because in the 90s we could have said, oh, web pages will behave just like fax machines. So we have it. You know, we have the Nanda registry, like a DNS registry, and I'm delighted to announce that 15 AI universities are on this note already. Isn't that amazing? Remember, the very first nodes on the Internet were UCSB, UCLA, and SRI, and MIT came just right after that, so we're very delighted that we're including UCLA in this as well. And many companies, many startups already have their services on this open source, open architecture platform, and you can go play it out at nanda.mit.edu. And let me show you a quick video of how this works. Oh. Can we go back to the video? All right. What you'll see in the video is that to, you know, design this, to organize this birthday party, I can connect to various services, my Spotify list, you know, the bakery shop, you know, I can add all the services that I want. And they might be charging me. They might charge me, like, 50 cents for the query, you know, or do some intelligence on their sites. You can go to all these servers and add them. If there's a new shop in your neighborhood that shows up, you can just add them to your services. And this looks like a chat GPT or a cloud-like interface for today. You can play with it. And then you can go and say, hey, are these real stores? You know, there shouldn't be bad actors on this thing. And you can say, hey, you know, what's the weather, just to make sure everything is working. What tools do you have? Say, oh, I can, you know, I can make cakes for you. I can design songs for you. I can send party supplies for you, and so on. And all the services will be out there working for you. And just for a few dollars, just like you are willing to pay a few dollars to get, you know, the best airline tickets, because, you know, you are paying for it or order from Uber, some of those prices are included, all the services will be out there. So finally I can say for my daughter's birthday, hey, you know, do you have, you know, a chocolate cake? And can you deliver that by tomorrow? And it goes to the Nanda agent of the bakery shop and talks in real time. And there's a small intelligent model working on the bakery shop's server as well. And they can look at their inventory and their list and come back with an answer. Right? So all the orchestration around your life can be done this way. Of course, we are taking the low-stakes scenario, like a birthday party, but imagine doing the same thing for, you know, your health condition. You know, you have to go and search for all these pages, and all the services are coming at you, or think of a supply chain, and so on. So we are very delighted that we are launching this open source, and if your company and if your startups can get up and running in a matter of minutes with whatever existing software you have, you can add the Nanda modules on top of it. So, you know, you can post them.
 				- [[AI Notes]]
+				  collapsed:: true
 					- ### initial notes
 						- Slide 1: “Towards the Web of Agents”
 							- | Legacy Concept | Future Concept | Description |
@@ -359,6 +367,7 @@
 							  We deploy infrastructure in places where:
 							- **Wind is blowing**
 							- **Sun is shining**
+							  collapsed:: true
 							- **Geothermal energy is available**
 							  
 							  For example:
@@ -387,6 +396,7 @@
 				- pixels
 				- voxels
 				- neural radiance fields
+				  collapsed:: true
 					- might melt your gpu
 				- gaussian splatting
 					- can run onboard in real time
@@ -419,6 +429,7 @@
 				- graph-based approach
 				- CAD drawings
 				- metadata
+				  collapsed:: true
 				- sub-graphs are added to bigger graph object called a chronical
 					- multi-modes and different contexts
 					- on different time intervals
@@ -429,6 +440,7 @@
 				- ABMs - agent based modelings
 				- amazing but confusing
 				- how the heck to they detect seniority or competence from slack messages
+				  collapsed:: true
 				- TODO post human documentary on bloomberg with emily chang videos with others - check this out!
 				- fine tuned mapping facial expressions
 				- can choose the chronicle to talk to - pose a question - graph will be posed - so it ends up creating a synthetic person - it's a model that not just the facial expression but the bottom left corner is an audit dashboard

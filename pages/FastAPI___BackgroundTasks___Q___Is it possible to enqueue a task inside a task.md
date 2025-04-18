@@ -10,7 +10,8 @@ tags:: [[FastAPI]], [[Q]], [[BackgroundTasks]]
 			- At this point, we want to enqueue a new background task for sending the notification
 		- The challenge is that background tasks in FastAPI are tied to the HTTP request lifecycle:
 			- The `BackgroundTasks` object is created when the request starts
-			- Tasks are added to this object before sending the response
+Tasks are added to this object before sending the response
+
 			- The tasks run after the response is sent
 			- Once the response is sent, we can't add new tasks
 		- This creates a limitation where nested or chained background tasks are not directly supported

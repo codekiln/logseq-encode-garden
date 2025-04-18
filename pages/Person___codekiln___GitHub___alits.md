@@ -1,6 +1,11 @@
+alias:: [[Alits]]
+tags:: [[c74/M4L/Idea/Alits]]
+
 - for the summary of the idea, see [[c74/M4L/Idea/Alits]]
 - Work Log
 	- ((67ab314c-1b42-4801-952b-47266a549059))
+		- [[2025-04-18 Fri]]
+			-
 		- [[2025-02-12 Wed]]
 			- [[CursorAI]]
 				- DONE add [[CursorAI/Project Rule/markdown-output]] to  project
@@ -135,7 +140,7 @@
 					- [ ] Compiled application assets are added to git
 					- [ ] Compiled application js assets are not nested in folders
 					- [ ] Compiled application js assets are uniquely named
-				- #Filed [[GitHub/codekiln/alits/Todos]]
+				- #Filed [[Person/codekiln/GitHub/alits/Todos]]
 		- [[2025-02-09 Sun]]
 			- DONE would the [[GitHub/aptrn/maxmsp-ts]] #CLI be useful here? ANS: probably not
 			  collapsed:: true
@@ -327,7 +332,7 @@
 					-
 	- [[2025-02-08 Sat]]
 	  collapsed:: true
-		- tried to get [[VSCode/Dev Container]] spec from [[GitHub/zsteinkamp/m4l-typescript-base]] working with [[GitHub/codekiln/alits]], which was created from [[GitHub/aptrn/maxmsp-ts-library-template]]
+		- tried to get [[VSCode/Dev Container]] spec from [[GitHub/zsteinkamp/m4l-typescript-base]] working with [[Person/codekiln/GitHub/alits]], which was created from [[GitHub/aptrn/maxmsp-ts-library-template]]
 			- #Error
 				- Error from inside the dv container
 					- ```

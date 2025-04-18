@@ -36,6 +36,7 @@
 						- taking inspiration from dns
 						- there are practical challenges - we can't rely on existing structures
 						- [[AI Notes]]
+						  collapsed:: true
 							-
 							- ### **2:18 PM – Core Protocol Concepts**
 							- **Unified client-server abstraction**:
@@ -49,6 +50,7 @@
 									- Serve as **traces** of communication and knowledge propagation.
 									- Enable construction of **services**: search, reputation systems, transaction layers, etc.
 							- **Agent registry system**:
+							  collapsed:: true
 								- Inspired by **DNS**, but with necessary extensions for agent use cases.
 								- **Root zones**: Hosted by universities or major entities.
 								- **Secondary/tertiary zones**: Open to any org; can be private/internal.
@@ -57,6 +59,7 @@
 							- **Practical deployment tip**:
 								- Reference to **Google’s 8.8.8 DNS**: fast and commonly used.
 								- Similar model possible for agent registries — public or private layers.
+								  collapsed:: true
 								- Actionable takeaway: You can host your own registry now via GitHub with a **single Docker command**.
 						-
 					- 14:22 [[NANDA]] demo again
@@ -78,6 +81,7 @@
 				- [[My Notes]]
 					- I talked to this speaker earlier today before 8am - we had a good discussion
 					- financial services industry
+					  collapsed:: true
 			- ###  14:36 from [[Microsoft]] [[Person/Aditya Challapally]] – Microsoft: Edge AI
 			  collapsed:: true
 				- he leads a research team in partnership with [[OpenAI]]
@@ -97,6 +101,7 @@
 					- ### **Anna Kazlauskas (Vana) – The Case for Data Sovereignty**
 					- **Training data bottleneck**:
 						- *“AI is only as good as its training data.”*
+						  collapsed:: true
 						- GPT-3 was trained on mostly **public** web data — Reddit, Common Crawl, etc.
 						- But **public data = <0.1% of internet data** — the rest is behind logins, permissions, or paywalls (e.g., Google Drive, iMessages, photos).
 						- AI is **hitting a wall**: models like WAMA-3 already trained on **all of public web** (~15T tokens).
@@ -107,6 +112,7 @@
 							- Apple: $50M data deal
 						- Platforms like Stack Overflow and Reddit have **restricted APIs** to increase pricing leverage.
 					- **Legal & philosophical stance**:
+					  collapsed:: true
 						- *“Your data is like your car in a parking lot — it’s yours, not the platform’s.”*
 						- Legally, **you own your data**, even when stored on Facebook, Twitter, etc.
 						- Platforms **borrow usage rights**, but **you retain ownership**.

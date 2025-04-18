@@ -1,6 +1,6 @@
 - [[GitHub/codekiln/dev-container-test]]
 - [[VSCode/Extension/QuickStage]] not installed
-- one of the reasons I created this test repo was to see if I could reproduce the issue I saw [[2025-02-08 Sat]] in [[GitHub/codekiln/alits]] where QuickStage wasn't installed, even though I had it in my [[VSCode/Dev Container/.devcontainer.json]] file. Sure enough, this minimal test repo does reproduce it.
+- one of the reasons I created this test repo was to see if I could reproduce the issue I saw [[2025-02-08 Sat]] in [[Person/codekiln/GitHub/alits]] where QuickStage wasn't installed, even though I had it in my [[VSCode/Dev Container/.devcontainer.json]] file. Sure enough, this minimal test repo does reproduce it.
 	- ```
 	  [6895 ms] Extensions cache, install extensions: dbaeumer.vscode-eslint, bs-code.git-quick-stage, ms-azuretools.vscode-docker, GitHub.vscode-pull-request-github
 	  
