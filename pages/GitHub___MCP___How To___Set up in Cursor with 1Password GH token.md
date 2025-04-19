@@ -11,7 +11,7 @@ tags:: [[CursorAI/Settings/MCP]]
 	- ## 3 - Install the [[op/run]] wrapper for the [[GitHub/MCP]] server
 		- Install the following script into `~/.cursor/github-mcp/start-github-mcp.sh`
 			- **note**: there may be better ways to do this - for example, it may be possible to do this by developing a custom [[1Password/Dev/CLI/Shell Plugin]] as described in [Build your own shell plugins (beta) | 1Password Developer](https://developer.1password.com/docs/cli/shell-plugins/contribute/)
-				- ### 1 - `mkdir -p ~/.curosr/github-mcp`
+				- ### 1 - `mkdir -p ~/.cursor/github-mcp`
 				- ### 2 - `cursor ~/.cursor/github-mcp/start-github-mcp.sh`
 				- ### 3 - paste in the `start-github-mcp.sh` script
 					- ```zsh
@@ -89,7 +89,7 @@ tags:: [[CursorAI/Settings/MCP]]
 					  ```
 				- ### 5 - `chmod +x ~/.cursor/github-mcp/start-github-mcp.sh`
 					- make the script executable
-				- ### 6 - try running `~/.cursor/github-mcp-start-github-mcp.sh`
+				- ### 6 - try running `~/.cursor/github-mcp/start-github-mcp.sh`
 					- a dialog will pop up granting access to the vault
 					- if successful, you should see `GitHub MCP Server running on stdio` as the last line of output
 					- `Ctrl+C` to get out
