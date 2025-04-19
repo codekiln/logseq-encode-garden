@@ -2,8 +2,8 @@
 	- ## Summary
 		- only certain models work on [[CursorAI/Agent Mode]]
 			- [[Anthropic/Model/Claude/3.5/Sonnet]]
-			- [[OpenAI/Model/GPT/4o]]
-		- [[OpenAI/Model/o1]] is 10x the cost of [[OpenAI/Model/GPT/4o]] for Cursor and is not included in the regular package. See [[CursorAI/Docs/Account/Teams/Members/Usage Controls]] for the details.
+			- [[OpenAI/Model/GPT/4/o]]
+		- [[OpenAI/Model/o1]] is 10x the cost of [[OpenAI/Model/GPT/4/o]] for Cursor and is not included in the regular package. See [[CursorAI/Docs/Account/Teams/Members/Usage Controls]] for the details.
 		- [[DeepSeek]] models are coming soon, including in agent mode, which could be a game-changer
 	- ## Model Information Table
 		- [[CursorAI/Model/Small]]
@@ -30,13 +30,13 @@
 			- **Agent:** ❌
 			- **Pricing:** $0.10
 			- **Note:** 10 requests/day included on paid plan
-		- [[OpenAI/Model/GPT/4o/Mini]]
+		- [[OpenAI/Model/GPT/4/o/Mini]]
 			- **Provider:** OpenAI
 			- **Premium:** ✅
 			- **Agent:** ❌
 			- **Pricing:** Free
 			- **Note:** Free plan gets 500 requests/day
-		- [[OpenAI/Model/GPT/4o]]
+		- [[OpenAI/Model/GPT/4/o]]
 			- **Provider:** OpenAI
 			- **Premium:** ✅
 			- **Agent:** ✅

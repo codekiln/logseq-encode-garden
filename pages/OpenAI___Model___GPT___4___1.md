@@ -1,0 +1,40 @@
+alias:: [[gpt-4.1]]
+
+- # GPT-4.1 Overview
+	- ## Key Features
+		- New family of models: GPT-4.1, GPT-4.1 Mini, and GPT-4.1 Nano
+		- Major improvements in coding, instruction following, and long-context understanding
+		- Supports up to 1 million tokens context window
+		- Knowledge cutoff: [[2024/06]]
+	- ## Performance Highlights
+		- [[AI Coding]]
+			- 54.6% on [[AI/Benchmark/SWE-Bench/Verified]]
+		- Instruction Following
+			- 38.3% on [[AI/Benchmark/MultiChallenge]]
+		- Long-context
+			- 72% on [[AI/Benchmark/Video-MME/long no subtitles]]
+	- ## Model Tiers
+		- [[OpenAI/Model/GPT/4/1/mini]]
+			- 83% cheaper than [[4o]]
+			- Beats GPT-4o on many tasks
+		- [[OpenAI/Model/GPT/4/1/nano]]
+			- Fastest and cheapest option
+			- High performance on classification/autocompletion
+	- ## Access Details
+		- API-only availability
+			- GPT-4o in ChatGPT continues to integrate improvements
+		- GPT-4.5 will be deprecated by [[2025-07-14 Mon]]
+	- ## Technical Specifications
+		- Model name: `gpt-4.1`
+		- Context length: Up to 128k tokens in API
+		- Input support: Text and images (multimodal)
+		- Key improvements
+			- Better instruction following
+			- Enhanced long context understanding
+			- Improved code task completion
+		- Features
+			- System message support for behavior control
+			- OpenAI function/tool calling capability
+	- ## References
+		- [Official Documentation](https://platform.openai.com/docs/models/gpt-4.1)
+		- [Release Announcement](https://openai.com/index/gpt-4-1/)
