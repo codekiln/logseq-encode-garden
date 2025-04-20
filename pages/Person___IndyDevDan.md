@@ -1,0 +1,27 @@
+tags:: [[Coder]], [[AI Coder]], [[Course/Author]]
+
+- [[Person/IndyDevDan/Web]] - [[Course]] Principled AI Coding (PAIC) - paid course ($250) https://agenticengineer.com/principled-ai-coding
+- [[Person/IndyDevDan/Compute Advantage]]
+	- ### Compute Advantage Insight
+		- **Compute Advantage** = The higher your *compute advantage*, the more value you can produce as an engineer using *compute as leverage*.
+		- Increasing compute advantage examples, in order
+			- using 1 prompt to make an application
+			- using multiple prompts in a row to make an application
+			- using multiple prompts in a loop to make an application -
+			- using prompts with tool calls in a loop to make an application - [[Agentic System]]
+			- combining a reasoning model with powerful execution models in an agentic system that makes tool calls in a loop to make an application
+- [[Person/IndyDevDan/Compute Advantage/Equation]]
+	- [[Person/IndyDevDan/YouTube/25/04/One framework for evaluating AI Coding]]
+		- ### Compute Advantage Equation
+			- **Compute Advantage** = ( **Compute Scaling** × **Autonomy** ) ÷ ( **Time** + **Effort** + **Monetary Cost** )
+			- **Definitions**
+				- **Compute Scaling**: Raw intelligence and capability of your model
+				- **Autonomy**: How much/well your AI tools can operate without you
+				- **Time**: Calendar time from start to completion
+				- **Effort**: Mental energy you spend on the task
+				- **Monetary Cost**: Direct financial expense of tools and services
+			- **Insight**
+				- The higher your compute scaling and autonomy, and the lower your time, effort, and monetary cost, the greater your compute advantage as an engineer.
+- [[Person/IndyDevDan/YouTube]]
+	- [IndyDevDan - YouTube](https://www.youtube.com/@indydevdan/videos)
+		- On this channel we think, plan, and build. Right now on the channel, we're on the path to evolve into Agentic engineers. Engineers that build software that works for them while they sleep. Here are principles of my engineering philosophy and ideologies this channel holds as facts.

@@ -24,23 +24,20 @@ The transcript should be organized with logical sections and proper hierarchical
 - Use `#####` for detailed points within subsections
 - Always maintain proper indentation using TABs
 
-### Semantic Linking
-- Convert relevant terms into semantic links using `[[Topic]]` format
-- Common patterns include:
-  - People: `[[Person/Name]]`
-  - Concepts: `[[AI/Concept]]`
-  - Technologies: `[[Tech/Name]]`
-  - Key insights: `[[Key Insight]]`
+### Semantic Linking / Logseq Page Links
+- Convert relevant terms into Logseq Page Links using `[[Topic]]` format if and onl if a given Logseq Page is known known to exist
+- Do not invent link to Logseq Pages that do not already exist
+    - if you invent a logseq page to link to it will just introduce a duplicate into the knowledge management system, so do not do that 
+- Some common ones you CAN use
+    - #Example
+	- [[AI Coding]]
+	- [[Py]] for python
 
 ### Content Formatting
 - Break long monologues into natural speech patterns
 - Use bullet points for lists and sub-points
 - Use **bold** for emphasis on key concepts
 - Group related ideas under appropriate subheadings
-- Add semantic structure with terms like:
-  - `[[Take-Away]]s`
-  - `[[Key Insight]]`
-  - `#Example`
 
 ### Example of Improved Formatting:
 

@@ -1,0 +1,59 @@
+# [Aider (Upgraded) : This Coding Agent just got BETTER with Architect Mode, Gemini-002 Support & More! - YouTube](https://www.youtube.com/watch?v=OPXslklVBZc)
+	- ## [[Video]]
+		- {{video https://www.youtube.com/watch?v=OPXslklVBZc}}
+		- ### {{youtube-timestamp 0}} Introduction
+			- Recent version updates since last video:
+				- Bug fix for dependency conflict between [[aider/Chat]] and [[Playwright]]
+				- Major version update with significant new features
+		- ### {{youtube-timestamp 40}} Architect Mode Overview
+			- #### Core Concept
+				- Experimental support using two models for coding tasks:
+					- [[aider/mode/Architect]] Plans and describes solution approach
+						- Generates outline for how to implement solution
+					- [[aider/mode/Editor]] Converts plan into specific code edits
+			- #### How It Works
+				- 1. Architect model receives prompt and generates solution outline
+				- 2. Editor model receives outline and produces code changes
+				- Note: Process is **one-way** (non-agentic) - architect doesn't review final code
+		- ### {{youtube-timestamp 119}} Performance Benchmarks
+			- #### Top Performing Combinations
+				- Best combination: GPT-4-1106-Preview + DeepSeek
+					- Achieves ~85% success rate
+					- Uses whole edit format
+				- Second best: GPT-4-1106-Preview + Claude-3 Sonnet
+					- Scores ~83% in diff edit format
+				- DeepSeek + GPT-4 combination
+					- Achieves ~80.5% success rate
+			- #### Key Findings
+				- Better results with architect model, but higher token usage
+				- DeepSeek particularly effective as editor model
+				- Most models improve when used in architect-editor pairs
+		- ### {{youtube-timestamp 309}} Additional New Features
+			- #### Model Integration Updates
+				- New shortcuts for GPT-4-1106-Preview and mini versions
+				- Support for Gemini-002 models
+				- Better compatibility with LightLLM
+			- #### UI/UX Improvements
+				- New completion menu colors
+				- Voice format switching (wave/MP3/webm)
+				- Improved URL scraping with HTTP redirect support
+				- Enhanced Vim mode cursor shapes
+		- ### {{youtube-timestamp 371}} Using Architect Mode
+			- #### Setup Instructions
+				- Install development version using command from optional steps page
+			- #### Usage Patterns
+				- Basic usage: Add architect operator to set model roles
+				- Can override editor model with `editor_model` operator
+				- Example configurations:
+					- GPT-4-1106-Preview as architect + Claude-3 Sonnet as editor
+					- Single-prompt architect mode using `/architect` command
+		- ### {{youtube-timestamp 693}} Gemini Integration
+			- #### Features
+				- Free tier available
+				- Works well with Flask applications
+				- Example: Creating a Finance Tracker app
+		- ### {{youtube-timestamp 757}} Conclusion
+			- Key takeaway: Aider continues to evolve with powerful new capabilities
+			- Channel support options:
+				- Super Thanks feature
+				- Channel membership
