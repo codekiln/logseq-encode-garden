@@ -1,3 +1,74 @@
 # [How to Choose the BEST AI Coding Tools with ONE FRAMEWORK (Aider, Claude Code, Cursor) - YouTube](https://www.youtube.com/watch?v=FPTlP6Adefo)
 	- ## [[Video]]
-		-
+		- {{video https://www.youtube.com/watch?v=FPTlP6Adefo}}
+			- ### {{youtube-timestamp 0}} Introduction to AI Coding Tool Selection
+				- Key challenges in the current AI landscape:
+					- Abundance of options and competition
+					- Rapid changes in tool effectiveness
+					- Example: Llama 4's Maverick and Scout models becoming obsolete quickly
+				- Need for a framework to make informed decisions
+					- Focus on investing time effectively
+					- "10,000 informed iterations" vs "10,000 hours"
+			- ### {{youtube-timestamp 74}} The Compute Advantage Framework - [[Person/IndyDevDan/Compute Advantage/Equation]]
+				- #### Core Concept
+					- Higher compute advantage = More value produced as an engineer
+					- Essential for managing results in 2025 and beyond
+				- #### Framework Components
+					- Simple equation with two parts:
+						- Numerator (factors to increase)
+						- Denominator (factors to decrease)
+			- ### {{youtube-timestamp 126}} Understanding the Variables
+				- #### Compute Scaling
+					- Definition: Raw intelligence and scaling methods
+					- Examples:
+						- Prompt chains
+						- Agentic loops
+						- Multiple LLM calls
+				- #### Autonomy
+					- Definition: Tool's ability to work independently
+					- Impact on compute advantage
+					- Example comparison: Aider vs Claude Code
+				- #### Cost Variables (Denominator)
+					- Time: Duration required for tasks
+					- Effort: Cognitive load and keystrokes
+					- Monetary Costs: Financial investment required
+			- ### {{youtube-timestamp 319}} Tool Analysis Using the Framework
+				- #### Aider Analysis
+					- Compute Scaling: 25 (bare metal implementation)
+					- Autonomy: 5 (limited autonomous capabilities)
+					- Time: 25 (efficient at preventing manual coding)
+					- Effort: 50 (requires more user interaction)
+					- Monetary Cost: 10 (open-source advantage)
+				- #### Cursor Analysis
+					- Compute Scaling: 40 (embedded agent capabilities)
+					- Autonomy: 25 (improved autonomous features)
+					- Time: Reduced from Aider
+					- Effort: Lower than Aider
+					- Monetary Cost: 30 (subscription model)
+				- #### Claude Code Analysis
+					- Compute Scaling: 50 (Claude 3.7 Sonnet integration)
+					- Autonomy: 40 (advanced agentic capabilities)
+					- Time: 10 (significant reduction in shipping time)
+					- Effort: Reduced significantly
+					- Monetary Cost: 70 (high token usage)
+				- #### Devon Analysis
+					- Compute Scaling: Highest (advanced agentic architecture)
+					- Autonomy: 70 (superior autonomous capabilities)
+					- Time: 5 (minimal user time required)
+					- Effort: Significantly reduced
+					- Monetary Cost: 75 ($500/month)
+			- ### {{youtube-timestamp 892}} Additional Resources
+				- State of AI Coding series completion
+					- Part 1: Understanding current state
+					- Part 2 and 3: Available for principal members
+				- Topics covered:
+					- Compute equals success
+					- Compute advantage in-depth
+					- AI coding transition
+					- Agentic coding as the future
+			- ### {{youtube-timestamp 973}} Conclusion
+				- Framework flexibility for personal preferences
+				- Trade-off considerations:
+					- Time vs monetary costs
+					- Effort vs features
+					- Individual priorities in tool selection
