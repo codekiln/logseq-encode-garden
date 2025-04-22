@@ -5,7 +5,7 @@
 	- As a result of these properties, humans and AI could work together to **break courses down** into [[LMS Course Segments]], and **AI could help with re-authoring them** in a way that stitched them together.
 	- If an LMS can write an exporter and an importer that translated from their format to LearnMark, it would enable courses to be exported to LearnMark, and then an AI system could be used on the LearnMark to identify the re-usable segments, where they could be re-uploaded up to the source platforms.
 	- ## Metadata that could be a part of the YAML Frontmatter
-		- Metadata that should travel along with the segments could include
+		- Metadata that should travel along with the segments could include the following - see also [[IEEE/LOM]] or [[Dublin Core Metadata]]
 			- content creation info
 				- the duration of the segment or the average time a student would need for the segment
 				- when the content was created or updated
@@ -17,4 +17,5 @@
 			- entity info
 				- subjects
 				- entities (companies, etc)
-	-
+	- ## Prior Art - [[EdTech/Idea/LearnMark/Q/What precedents exist for LMS-agnostic format]]
+		- see above for annotated deep research query
