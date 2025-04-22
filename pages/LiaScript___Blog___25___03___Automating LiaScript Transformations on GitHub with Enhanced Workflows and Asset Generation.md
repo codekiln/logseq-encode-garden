@@ -1,0 +1,4 @@
+# [Automating LiaScript Transformations on GitHub with Enhanced Workflows and Asset Generation](https://liascript.github.io/blog/automating-liascript-transformations-on-github/)
+	- Automating the transformation of your LiaScript markdown documents into formats like #PDF, #SCORM, and [[IMS/Package]]s can streamline your workflow and reduce manual effort. In this post, we’ll walk you through setting up [[GitHub/Workflows]] Workflows step by step—even if you’re just getting started with GitHub.
+	- You can find the complete example workflows in the following repository:
+		- [Demo Repository](https://github.com/LiaPlayground/Automating-LiaScript-Transformations/)

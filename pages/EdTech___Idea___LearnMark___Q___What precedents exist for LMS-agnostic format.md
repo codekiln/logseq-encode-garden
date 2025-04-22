@@ -356,7 +356,7 @@
 					- Item
 				- Can use [[IEEE/LOM]] or [[Dublin Core Metadata]]
 					- IEEE LOM (Learning Object Metadata) and Dublin Core are two prominent metadata standards designed to facilitate the description, discovery, and management of digital resources.
-					- ### 🧠 IEEE LOM (Learning Object Metadata)
+					- ### 🧠 [[IEEE/LOM]] (Learning Object Metadata)
 					  collapsed:: true
 						- **IEEE LOM** is a standard developed by the IEEE Learning Technology Standards Committee, formally known as IEEE 1484.12.1
 						- It provides a comprehensive framework for describing learning objects—any digital or non-digital entity used in education or training
@@ -371,7 +371,7 @@
 							- **Annotation**:Comments and feedback
 							- **Classification**:Subject and taxonomy information
 					- This structured approach ensures that learning objects can be effectively cataloged, discovered, and reused across various educational platforms
-					- ### 📚 Dublin Core Metadata Standard
+					- ### 📚 [[Dublin Core Metadata]] Standard
 					  collapsed:: true
 						- **Dublin Core** is a simple yet effective metadata standard developed by the Dublin Core Metadata Initiative (DCMI. It was originally created to describe web resources but has since been applied to a wide range of digital and physical asset.
 						  The **Dublin Core Metadata Element Set** consists of 15 core element:
