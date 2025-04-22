@@ -338,11 +338,11 @@
 					- Put back in
 				- Newer approaches (like **LearnMark**) aim for AI-friendly formats
 			- ### Openness, Standardization & Adoption
-				- Open standard under 1EdTech
+				- Open standard under [[1EdTech]]
 				- Multiple versions (1.0 through 1.3)
 				- Wide adoption in educational LMSs:
-					- Canvas uses CC as export format
-					- Moodle and Blackboard support import/export
+					- [[Canvas]] uses CC as export format
+					- [[Moodle]] and [[Blackboard]] support import/export
 					- Many publishers provide course packages in CC
 				- Focus on academic use cases differentiates from SCORM
 				- IMS consortium continues updates:
@@ -354,7 +354,54 @@
 					- Course
 					- Module
 					- Item
-				- Can use IEEE LOM or Dublin Core metadata
+				- Can use [[IEEE/LOM]] or [[Dublin Core Metadata]]
+					- IEEE LOM (Learning Object Metadata) and Dublin Core are two prominent metadata standards designed to facilitate the description, discovery, and management of digital resources.
+					- ### 🧠 IEEE LOM (Learning Object Metadata)
+					  collapsed:: true
+						- **IEEE LOM** is a standard developed by the IEEE Learning Technology Standards Committee, formally known as IEEE 1484.12.1
+						- It provides a comprehensive framework for describing learning objects—any digital or non-digital entity used in education or training
+						  The standard organizes metadata into **nine categories**
+							- **General**: Basic information like title and language
+							- **Lifecycle**: Details about the creation and versioning of the object
+							- **Meta-Metadata**:Information about the metadata itself
+							- **Technical**:Technical requirements and formats
+							- **Educational**:Educational and pedagogical characteristics
+							- **Rights**:Intellectual property and usage rights
+							- **Relation**:Connections to other learning objects
+							- **Annotation**:Comments and feedback
+							- **Classification**:Subject and taxonomy information
+					- This structured approach ensures that learning objects can be effectively cataloged, discovered, and reused across various educational platforms
+					- ### 📚 Dublin Core Metadata Standard
+					  collapsed:: true
+						- **Dublin Core** is a simple yet effective metadata standard developed by the Dublin Core Metadata Initiative (DCMI. It was originally created to describe web resources but has since been applied to a wide range of digital and physical asset.
+						  The **Dublin Core Metadata Element Set** consists of 15 core element:
+							- **Title**
+							- **Creator**
+							- **Subject**
+							- **Description**
+							- **Publisher**
+							- **Contributor**
+							- **Date**
+							- **Type**
+							- **Format**
+							- **Identifier**
+							- **Source**
+							- **Language**
+							- **Relation**
+							- **Coverage**
+							- **Rights**
+						- These elements are designed to be broad and universally applicable, facilitating interoperability across different systems and discipline.
+						  ---
+					- ### 🔍 Key Differences
+					  collapsed:: true
+						- | Aspect          | IEEE LOM                                         | Dublin Core                                  |
+						  |-----------------|--------------------------------------------------|----------------------------------------------|
+						  | **Purpose**     | Detailed description of learning objects         | General description of various resources     |
+						  | **Structure**   | Hierarchical with nine categories                | Flat with 15 core elements                   |
+						  | **Complexity**  | More complex, suitable for educational contexts  | Simpler, suitable for broad applications     |
+						  | **Flexibility** | Allows for extensions and application profiles   | Designed for interoperability and simplicit |
+						  
+						  Both standards serve to enhance the discoverability and management of resources, but they cater to different needs and disciplines.
 				- Can describe:
 					- Subject
 					- Description
@@ -398,7 +445,7 @@
 		- ## Other Notable Standards and Emerging Formats
 			- ### [[IMS/QTI]] (Question & Test Interoperability)
 				- Widely used standard for assessment content
-				- Platform-neutral XML format
+				- Platform-neutral #XML format
 				- Often used with Common Cartridge
 				- Supports structured items:
 					- Multiple-choice
