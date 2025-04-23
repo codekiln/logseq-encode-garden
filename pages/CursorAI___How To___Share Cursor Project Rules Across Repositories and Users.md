@@ -9,7 +9,7 @@ tags:: [[CursorAI]], [[git]], [[Diataxis/How To]]
 		- Your project must be a git repository
 		- You must have git installed
 		- You must have SSH access to GitHub configured (for GitHub-hosted rules)
-		- Cursor version `0.47` or later (which supports project rules in subdirectories)
+		- Cursor version `0.47` or later (which supports project rules in subdirectories) - see [[CursorAI/Project Rule/Test/Agent/✅/Find MDC/in Subfolder]]
 	- ## Steps (adapted from [[Person/codekiln/GitHub/logseq-cursor-rules]] [README.md](https://github.com/codekiln/logseq-cursor-rules))
 		- ### 1. Create the rules directory if applicable
 			- First ensure you have a `.cursor/rules` directory in your project:
