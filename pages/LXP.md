@@ -1,0 +1,5 @@
+tags:: [[Term]], [[EdTech]]
+
+- # Learning Experience Platform
+	- [LXP vs LMS: Key Differences Explained](https://www.eliftech.com/insights/lxp-vs-lms-explained/)
+		- A Learning Experience Platform (LXP) is a modern learning management system designed to offer a more personalized and engaging learning experience for users. Unlike traditional LMS platforms that focus primarily on delivering structured training content, LXPs prioritize the learner's experience by providing a curated and dynamic learning environment. One of the key features of an LXP is its ability to combine learning content from various sources, including internal digital assets, external third-party material, and even user-generated content. This diverse range of content ensures that learners have access to a wide array of resources to support their learning goals.

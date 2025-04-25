@@ -1,1 +1,1 @@
-alias:: [[Learning Management System]]
+alias:: [[Learning Management System]], [[Learning Management Systems]], [[LMSs]]
