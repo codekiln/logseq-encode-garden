@@ -9,36 +9,28 @@ tags:: [[Diataxis/How To]], [[Ableton]]
 			- Press **CMD+L** (Mac) / **CTRL+L** (Windows) to set the loop to that selection.
 		- Then hit **Play** — Live will loop that section of the arrangement.
 	- ## How to avoid clicks when playing in a loop
+		- none of these methods are automatic, unfortunately. They are very "click and drag"-y.
 		- right click and split the section of the clip into a new clip
 			- To avoid clicks when looping a split clip in Arrangement View, you want to ensure **smooth transitions at loop points**, ideally at **zero crossings**. Here’s how to do that in Ableton Live:
-			  ---
 			- ### **1. Use Fade Handles (Crossfade at Edges)**
 				- Live automatically creates fade handles on audio clips. To enable and adjust them:
 				- **Enable fades**: Press **[Cmd]+[Alt]+[F]** (Mac) or **[Ctrl]+[Alt]+[F]** (Windows) to show fade handles.
 				- **Manually drag** the **in/out fades** of the clip to taper the edges to zero.
-				  
-				  This smooths the start and end, reducing clicks at the loop point.
+				- This smooths the start and end, reducing clicks at the loop point.
 			- ### **2. Snap to Zero Crossings (in Clip View)**
 				- You can make selections or adjust loop/warp markers in the **Clip View**:
 				- **Double-click** the audio clip to open **Clip View**.
 				- Zoom in at the **loop start and end markers**.
 				- Drag the start/end or loop brace **until the waveform is at or near a zero crossing** (where the waveform crosses the center line).
 				- It’s manual, but ensures no jump in amplitude.
-			- ### **✅ **
 			- ### **3. Use Warp Mode Carefully**
-			  
-			  If you’re using **Warping**, set it to a mode that minimizes transient artifacts:
-			- Try **“Complex”** or **“Complex Pro”** for full mixes.
-			- Use **“Tones”** or **“Texture”** for smoother loops on single-instrument sounds.
-			  
-			  ---
-			- ### **✅ **
+				- If you’re using **Warping**, set it to a mode that minimizes transient artifacts:
+				- Try **“Complex”** or **“Complex Pro”** for full mixes.
+				- Use **“Tones”** or **“Texture”** for smoother loops on single-instrument sounds.
 			- ### **4. Consolidate and Crossfade (if needed)**
-			  
-			  If you’ve split the clip and it clicks:
-			- Select both parts, press **[Cmd]+[J]** (Mac) or **[Ctrl]+[J]** (Win) to **consolidate** them.
-			- Apply fades at the loop start/end manually again if needed.
-			- ---
+				- If you’ve split the clip and it clicks:
+				- Select both parts, press **[Cmd]+[J]** (Mac) or **[Ctrl]+[J]** (Win) to **consolidate** them.
+				- Apply fades at the loop start/end manually again if needed.
 			- Clicks usually happen when the start or end of a loop isn’t near a zero crossing or there’s a sudden change in waveform amplitude. Fades + careful marker placement is the fix.
 		-
 	-
