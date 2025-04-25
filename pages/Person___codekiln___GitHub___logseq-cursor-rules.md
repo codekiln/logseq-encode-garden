@@ -11,9 +11,7 @@
 				  mkdir -p .cursor/rules
 				  ```
 			- 2. Add the rules as a git submodule:
-				- ```bash
-				  git submodule add git@github.com:codekiln/logseq-cursor-rules.git .cursor/rules/logseq-cursor-rules
-				  ```
+				- git submodule add git@github.com:codekiln/logseq-cursor-rules.git .cursor/rules/logseq-cursor-rules
 			- 3. Commit the changes:
 				- ```bash
 				  git add .cursor/rules/logseq-cursor-rules .gitmodules
