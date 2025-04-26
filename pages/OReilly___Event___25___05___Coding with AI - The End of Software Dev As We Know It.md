@@ -1,0 +1,2 @@
+- [Coding with AI: The End of Software Development As We Know It - May 2025 - O'Reilly Media](https://www.oreilly.com/CodingwithAI/cfp.html)
+- [[2025-05-08 Thu]] 11:00 – 15:00 EDT
