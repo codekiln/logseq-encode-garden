@@ -66,6 +66,7 @@
 				  {
 				    "duration": "string",
 				    "file": "string",
+				    // the following is for images
 				    "thumb_url": "string"
 				  }
 				  ```
