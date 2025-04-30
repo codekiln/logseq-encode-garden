@@ -1,0 +1,41 @@
+tags:: [[EdTech/Product]]
+
+- # [TalentLMS: Cloud LMS Software for Online Learning](https://www.talentlms.com/)
+	- TalentLMS is a cloud-based Learning Management System ([[LMS]]) designed for quick setup, ease of use, and scalability across corporate, educational, and extended enterprise training use cases.
+	- ### 🏢 Company
+	  TalentLMS is developed and maintained by [[EdTech/Co/Epignosis]], a learning technology company that also offers products like [[EdTech/Co/Epignosis/eFront]] and [[EdTech/Co/Epignosis/TalentCards]].
+	- ### 🚀 Key Features
+		- **Cloud-based & SaaS**: Accessible via browser with no installation required.
+		- **Course authoring**: Built-in editor supports videos, presentations, [[SCORM]], [[xAPI]], and external content embedding.
+		- **Gamification**: Badges, points, levels, and leaderboards built into the learning experience.
+		- **Customization**: Supports custom domains, themes, logos, and language localization.
+		- **Multitenancy**: "Branches" feature allows you to segment your LMS instance for different audiences (e.g. clients or departments).
+		- **Assessment engine**: Quizzes, surveys, assignments with auto-grading and analytics.
+		- **Certifications**: Issue time-bound certificates with automated renewal tracking.
+		- **Mobile access**: iOS and Android apps for on-the-go learning.
+	- ### 📦 Standards & Integrations
+		- Supports **SCORM 1.2** and **xAPI** packages.
+		- Integrates with tools like Zoom, Microsoft Teams, Salesforce, BambooHR, Google Workspace, and Zapier.
+		- SSO support (SAML2, LDAP, Active Directory).
+		- Open REST API for custom integrations.
+	- ### 🧑‍💼 Target Use Cases
+		- Employee onboarding
+		- Compliance training
+		- Partner/reseller education
+		- Customer education
+		- Continuing education and certifications
+	- ### 💲 Pricing
+		- Subscription-based pricing tiers (Starter to Enterprise)
+		- Free plan available with limited features and user caps
+	- ### 🔐 Security & Compliance
+		- GDPR-compliant
+		- SSL encryption
+		- Role-based access control
+		- Regular backups and uptime SLAs for enterprise accounts
+	- ### 🌐 Learn More
+		- Main site: https://www.talentlms.com/
+		- Developer docs/API: https://help.talentlms.com/hc/en-us/categories/360002450733-TalentLMS-API
+	- ### 🔗 Related
+		- [[EdTech/Co/Epignosis]]
+		- [[xAPI/LRS]]
+		- [[SCORM]]

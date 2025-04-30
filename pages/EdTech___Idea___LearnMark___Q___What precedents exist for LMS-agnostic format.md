@@ -10,6 +10,8 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 				- [[A11y/WCAG]]
 				- [[EdTech/Co/dominKnow]]
 				- [[IMS Content Packaging XML]]
+				- [[EdTech/Co/Epignosis/TalentLMS]]
+				- [[US/Gov/ADL/CATAPULT]]
 	- ## [[ChatGPT/Deep Research/Query]]
 		- Given [[EdTech/Idea/LearnMark]], what precedents exist for What precedents exist for an LMS-agnostic format that an AI could both read and write?
 	- ## [[ChatGPT/Deep Research/Response]]
@@ -60,9 +62,9 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 					- Some higher-ed content (like publisher supplements) is offered as SCORM for LMS compatibility
 					- SCORM's widespread use also means many legacy courses still rely on it
 				- ### Technical Complexity & Tooling
-					- A key success factor of SCORM was the tooling ecosystem
-					- Non-technical users rely on authoring software that publishes SCORM packages
-					- This hides the XML and API details
+					- A **key success factor of SCORM was the tooling ecosystem**
+						- Non-technical users rely on authoring software that publishes SCORM packages
+						- This hides the XML and API details
 					- Without such tools, creating a SCORM package involves:
 						- Hand-writing the manifest
 						- Using the SCORM JavaScript API for tracking
@@ -96,7 +98,7 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 						- Getting a high score in a game
 						- Even "Joe *answered* Question 5 *incorrectly* after 30 seconds"
 					- The vocabulary (verbs, activity types) can be extended or standardized via profiles
-					- Because xAPI is JSON-based and web-friendly, it handles complex and informal learning activities
+					- Because [[xAPI]] is [[json]]-based and web-friendly, it handles complex and informal learning activities
 					- For instance, a flight simulator can send detailed xAPI statements about each maneuver
 					- This makes xAPI ideal for rich data and analytics across diverse learning contexts
 				- ### Integration with LLMs
@@ -222,8 +224,8 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 					- Some LMS/LRS products support importing and launching cmi5:
 						- [[EdTech/Co/RusticiSoftware/SCORM Cloud]]
 						- [[EdTech/Co/Learning Pool/Learning Locker]]
-						- TalentLMS
-					- US DoD actively encouraging cmi5 for future-proofing training content
+						- [[EdTech/Co/Epignosis/TalentLMS]]
+					- [[US/Gov/DoD]] actively encouraging cmi5 for future-proofing training content
 					- Community and tooling not yet as mature as SCORM's
 				- ### Content Metadata
 					- cmi5 manifest isn't as feature-rich for metadata as some [[IMS]] standards
@@ -241,7 +243,7 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 					- No widely adopted convention for metadata in cmi5 yet
 				- ### Real-World Examples
 					- Tech company adopting cmi5 for adaptive learning:
-						- Each module (AU) reports detailed interactions via xAPI
+						- Each module ([[cmi5/AU]]) reports detailed interactions via xAPI
 						- LMS can allow "testing out" based on prior performance
 						- Uses cmi5's moveOn and xAPI data together
 					- VR training program for warehouse safety:
@@ -262,8 +264,8 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 						- cmi5's XML is simpler
 						- No detailed sequencing beyond moveOn
 						- No separate metadata or packaging of resources
-					- Testing requires LRS environment
-					- Developers use tools like ADL's **CATAPULT** for validation
+					- Testing requires [[xAPI/LRS]] environment
+					- Developers use tools like [[US/Gov/ADL/CATAPULT]] for validation
 				- ### Limitations
 					- Main limitation is ecosystem maturity
 					- Not every LMS supports cmi5 yet
@@ -402,7 +404,7 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 					- Developer perspective:
 						- Requires working with [[IMS/Content Packaging]] XML
 						- Tools and libraries available
-						- Zip-based like SCORM
+						- [[Compression/zip]]-based like SCORM
 						- Can include all media files
 					- Complexities:
 						- Different LMS support different features
