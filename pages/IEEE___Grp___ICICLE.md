@@ -1,0 +1,58 @@
+alias:: [[International Consortium for Innovation and Collaboration in Learning Engineering]]
+tags:: [[IEEE]], [[Learning Engineering]], [[Organization]], [[Research]]
+
+- # International Consortium for Innovation and Collaboration in [[Learning Engineering]] (ICICLE)
+	- ![Learning Engineering at a glance](https://sagroups.ieee.org/icicle/wp-content/uploads/sites/148/2023/01/LE-infographic.png)
+	- ## 🌱 What is Learning Engineering?
+		- Learning engineering is a **process** and **interdisciplinary practice** that:
+			- Applies the **learning sciences**
+			- Uses **human-centered engineering design**
+			- Relies on **data-informed decision-making**
+			- to support learners and their development
+	- ## 🔄 The Learning Engineering Process
+		- ![Learning Engineering Process Diagram](../assets/images/learning-engineering-process.jpg)
+		- The process consists of:
+			- 1. **Challenge Definition**: Identifying learner needs and context.
+			- 2. **Creation**: Designing interventions, tools, or content.
+			- 3. **Implementation**: Deploying the learning solution.
+			- 4. **Investigation**: Analyzing learner interactions and outcomes using data.
+			- 5. **Iteration**: Refining solutions based on insights.
+	- ## 🧠 Core Disciplines
+		- Learning engineering integrates insights and methods from:
+			- Cognitive psychology
+			- Developmental psychology
+			- Social psychology
+			- Neuroscience
+			- Education research
+			- Learning sciences
+			- Data science
+			- Biomedical R&D
+			- Motivational science
+			- Anthropology
+	- ## 🧰 Engineering Mindsets and Concepts
+		- **Constraints** shape problem-solving and are central to engineering
+		- Engineers work with **modular systems**, where parts interact
+		- Effective systems involve **feedback loops** between inputs and performance
+		- **Multiple feedback loops** inform course correction and design iteration
+		- Engineering often involves **design under uncertainty** and **rapid prototyping**
+	- ## 📈 Data Instrumentation and Analytics
+		- Learning engineering emphasizes **data collection**, **modeling**, and **analytics** as part of design.
+		- Systems are **instrumented** to collect learning activity and performance data.
+		- Data is used to refine both the content and the learning pathway over time.
+		- A common analytic used is **learning curve analysis**, which shows how error rates decrease over time as learners acquire mastery.
+	- ## 👤 Human-Centered Design in Learning
+		- Human-centered design is key to learning engineering:
+			- Designs are developed using **personas** (e.g., "Lily, a 5-year-old learner")
+			- Empathizes with learners' needs, contexts, and abilities
+			- Encourages inclusive, equitable learning experiences
+	- ## 🪴 Role of ICICLE
+		- [[IEEE/Grp/ICICLE]] serves to:
+			- Advance professional development for learning engineers
+			- Build shared language and standards in the field
+			- Facilitate collaboration between academia, industry, and government
+			- Support tools like the **Learning Engineering Toolkit**
+	- ## 🔗 Related
+		- [[IEEE]]
+		- [[Learning/Science]]
+		- [[Learning/Design/Data-Informed]]
+		- [[Design/Human-Centered]]
