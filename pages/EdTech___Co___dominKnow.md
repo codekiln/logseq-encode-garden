@@ -1,0 +1,20 @@
+# [dominKnow - Capable & Efficient Content Authoring LCMS](https://www.dominknow.com/)
+	- **dominKnow | ONE** is a comprehensive, cloud-based eLearning authoring and Learning Content Management System ([[EdTech/LCMS]]) designed to streamline the creation, management, and delivery of learning content across various platforms and devices. It integrates multiple tools to support diverse learning needs, facilitating collaboration among instructional designers, subject matter experts, and other stakeholders.
+	- ### 🔑 Key Features
+		- **Unified Authoring Environment**: Combines traditional (Claro) and responsive (Flow) authoring tools within a single platform, allowing seamless content creation for different devices and learning contexts.
+		- **Responsive Design**: Enables the development of content that automatically adapts to various screen sizes and orientations, ensuring optimal user experience on desktops, tablets, and smartphones.
+		- **Collaboration & Review**: Offers real-time collaboration features, including version control, commenting, and review workflows, to enhance team productivity and streamline content development processes.
+		- **Content Reusability**: Facilitates the reuse of learning objects, templates, and media assets across multiple projects, promoting consistency and reducing development time.
+		- **Accessibility Compliance**: Supports the creation of content that meets accessibility standards, such as WCAG and Section 508, ensuring inclusivity for all learners.
+		- **Multi-language Support**: Provides tools for translating and localizing content, including pre-translated interface elements in over 250 languages and integration with third-party translation services.
+		- **Software Simulations**: Includes built-in capabilities for creating interactive software simulations, allowing learners to engage in hands-on practice within a controlled environment.
+		- **Assessment & Analytics**: Enables the creation of various assessment types and offers analytics to track learner performance and content effectiveness.
+		- **Publishing Flexibility**: Supports multiple publishing formats, including [[SCORM]], [[xAPI]] (Tin Can), [[AICC]], and PENS, allowing integration with various Learning Management Systems ([[LMS]]).
+	- ### 📦 Use Cases
+		- **Employee Onboarding**: Develop structured onboarding programs that can be easily updated and customized for different roles or departments.
+		- **Compliance Training**: Create and manage compliance courses that require regular updates and tracking of learner completion and comprehension.
+		- **Product & Software Training**: Design interactive tutorials and simulations to train users on new products or software applications.
+		- **Microlearning Modules**: Produce short, focused learning units that cater to just-in-time training needs.
+	- ### 🧩 Integration & Extensibility
+		- **LMS Integration**: Seamlessly integrates with various LMS platforms through standard protocols, ensuring smooth deployment and tracking of learning content.
+		- **API Access**: Offers APIs for custom integrations, allowing organizations to connect dominKnow | ONE with other systems and tools within their technology ecosystem.
