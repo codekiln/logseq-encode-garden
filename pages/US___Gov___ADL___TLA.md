@@ -26,7 +26,7 @@ tags:: [[EdTech]], [[US/Gov/ADL]], [[Standard]], [[Architecture]], [[Learning En
 					- Features TLA's Master Object Model (MOM)
 				- [[IEEE/Std/1484.12.1-2020 Learner Object Metadata 2.0]] for content description
 				- [[IEEE/Std/1484.20.3 Sharable Competency Definitions]] for competency frameworks
-				- [[IEEE/Std/2997 Enterprise Learning Record]] for learner profiles
+				- [[IEEE/Std/P2997 Enterprise Learning Record]] for learner profiles
 		- ### Key Projects
 			- #### Competency and Skills System (CaSS)
 				- Manages competency frameworks
