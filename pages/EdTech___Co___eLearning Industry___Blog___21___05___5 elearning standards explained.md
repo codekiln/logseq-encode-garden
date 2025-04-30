@@ -1,0 +1,62 @@
+date-created:: [[2021/05]]
+tags:: [[EdTech]], [[Standard]], [[Article]], [[eLearning Industry]]
+
+- # [eLearning Standards Explained - eLearning Industry](https://elearningindustry.com/elearning-standards-scorm-aicc-xapi-cmi5-ims-cartridge)
+	- See also: [[EdTech/Idea/LearnMark/Q/What precedents exist for LMS-agnostic format]]
+	- ## Key Standards Covered
+		- ### [[SCORM]]
+			- The oldest and most widely adopted standard
+			- Developed by [[US/Gov/ADL]] in early 2000s
+			- Enables content portability across [[LMS]]s
+			- Two main versions still in use:
+				- SCORM 1.2 (most common)
+				- SCORM 2004 (adds sequencing)
+		- ### [[AICC]]
+			- One of the earliest eLearning standards
+			- Created by the Aviation Industry CBT Committee
+			- Laid groundwork for later standards
+			- Dissolved in 2014, but influenced [[cmi5]]
+		- ### [[xAPI]] (Experience API)
+			- Modern successor to SCORM
+			- Focuses on tracking learning experiences
+			- More flexible than SCORM:
+				- Works outside the browser
+				- Supports mobile learning
+				- Can track informal learning
+			- Uses [[xAPI/LRS]] to store learning data
+		- ### [[cmi5]]
+			- Combines best of SCORM and xAPI
+			- Created by [[AICC]] and [[US/Gov/ADL]]
+			- Provides standardized launch mechanism
+			- Uses xAPI for tracking
+			- Growing adoption in modern systems
+		- ### [[IMS/Common Cartridge]]
+			- Developed by [[1EdTech]] (formerly IMS Global)
+			- Popular in academic settings
+			- Supports various content types:
+				- Course materials
+				- [[IMS/QTI]] assessments
+				- Discussion prompts
+				- External tools via [[LTI]]
+	- ## Standard Selection Guidance
+		- Choose [[SCORM]] for:
+			- Traditional self-paced eLearning
+			- Maximum LMS compatibility
+			- Simple completion tracking
+		- Choose [[xAPI]] for:
+			- Modern, mobile-first learning
+			- Detailed analytics needs
+			- Learning outside the LMS
+		- Choose [[cmi5]] for:
+			- New projects needing SCORM-like features
+			- xAPI tracking requirements
+			- Future-proofing content
+		- Choose [[IMS/Common Cartridge]] for:
+			- Academic course materials
+			- Content sharing between institutions
+			- Integration with publisher content
+	- ## Future Trends
+		- Moving away from SCORM toward xAPI/cmi5
+		- Increased focus on analytics and tracking
+		- Growing need for mobile compatibility
+		- Emphasis on interoperability between systems
