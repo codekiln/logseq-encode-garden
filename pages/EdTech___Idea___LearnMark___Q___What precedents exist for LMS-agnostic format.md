@@ -12,6 +12,8 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 				- [[IMS Content Packaging XML]]
 				- [[EdTech/Co/Epignosis/TalentLMS]]
 				- [[US/Gov/ADL/CATAPULT]]
+				- [[US/Gov/ADL/TLA]]
+				- [[EdTech/Co/eLearning Industry/Blog/21/05/5 elearning standards explained]]
 	- ## [[ChatGPT/Deep Research/Query]]
 		- Given [[EdTech/Idea/LearnMark]], what precedents exist for What precedents exist for an LMS-agnostic format that an AI could both read and write?
 	- ## [[ChatGPT/Deep Research/Response]]
