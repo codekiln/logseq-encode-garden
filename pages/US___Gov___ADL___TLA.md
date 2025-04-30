@@ -1,8 +1,83 @@
-tags:: [[EdTech/Acronym]]
+alias:: [[Total Learning Architecture]]
+tags:: [[EdTech]], [[US/Gov/ADL]], [[Standard]], [[Architecture]], [[Learning Engineering]]
 
-- # [Total Learning Architecture (TLA)](https://www.adlnet.gov/projects/tla/)
-	- [[IEEE]] standards
-		- [[IEEE/Std/P9274.1 Experience API xAPI 2.0]] ([[xAPI]]) – Learning activity tracking uses the xAPI to capture learning activity streams. The xAPI standard also includes xAPI Profiles such as cmi5 and the TLA’s Master Object Model (MOM). xAPI 2.0 is targeted for approval in 2020.
-		- [[IEEE/Std/1484.12.1 Learner Object Metadata 2.0]] – Descriptions of learning activities and their associated content are stored in the TLA’s Experience Index and use a modified version of the Learning Resource Metadata Initiative standard. A draft standard is being submitted for finalization in early 2020.
-		- [[IEEE/Std/1484.20.3 Sharable Competency Definitions]] – The definition of a competency, the relationship to other competencies, and the alignment of evidence to help measure proficiency of the competency, are included in this standard. This standard is expected for approval in 2022.
-		- [[IEEE/Std/2997 Enterprise Learning Record]] – Learner profile standards do not currently meet all TLA requirements. These new standards are actively being developed and modified based on input from numerous industry groups and associations.
+- # Total Learning Architecture (TLA)
+	- A research and development project by [[US/Gov/ADL]] to create an integrated learning services environment
+	- [Official Project Page](https://www.adlnet.gov/projects/tla/)
+	- ## 🎯 Core Purpose
+		- Enable personalized, data-driven, technology-enabled lifelong learning across:
+			- Department of Defense
+			- Other Federal Government agencies
+			- Beyond government sectors
+		- Create a "continuum of learning" that is:
+			- Continuous (career-long vs episodic)
+			- Blended (formal + informal)
+			- Enterprise-focused
+			- Learner-centric
+			- Data-driven
+			- Competency-based
+			- On-demand
+			- Cloud-based
+	- ## 🏗️ Architecture Components
+		- ### Data Standards
+			- Built on key [[IEEE]] specifications:
+				- [[IEEE/Std/P9274.1 Experience API xAPI 2.0]] for activity tracking
+					- Includes [[xAPI]] Profiles like [[cmi5]]
+					- Features TLA's Master Object Model (MOM)
+				- [[IEEE/Std/1484.12.1-2020 Learner Object Metadata 2.0]] for content description
+				- [[IEEE/Std/1484.20.3 Sharable Competency Definitions]] for competency frameworks
+				- [[IEEE/Std/2997 Enterprise Learning Record]] for learner profiles
+		- ### Key Projects
+			- #### Competency and Skills System (CaSS)
+				- Manages competency frameworks
+				- Creates sharable learner profiles
+				- Integrates with existing [[LMS]]s
+			- #### Data Analytics and Visualizations (DAVE)
+				- Extends [[xAPI]] capabilities
+				- Provides analysis and visualization tools
+			- #### DATASIM
+				- Open-source testing tool
+				- Generates datasets for TLA validation
+				- Helps evaluate [[xAPI]] implementations
+			- #### Privacy Support (PS4TLA)
+				- Implements user-tailored privacy
+				- Creates personalized privacy models
+			- #### FLUENT
+				- Adaptive recommendation system
+				- Analyzes [[xAPI]] data for learning patterns
+				- Identifies effective learning sequences
+	- ## 🤝 Implementation Partners
+		- ### Military
+			- Air Force Learning Services Environment (AFLSE)
+			- Army Futures Command
+			- Defense Health Agency (DHA)
+		- ### Intelligence Community
+			- Office of the Under Secretary of Defense for Intelligence
+			- Defense Counterintelligence and Security Agency
+	- ## 📚 Related Standards
+		- Builds upon and integrates with:
+			- [[SCORM]] (historical foundation)
+			- [[xAPI]] (core data standard)
+			- [[cmi5]] (launching and tracking)
+			- [[IMS/Common Cartridge]] (content packaging)
+	- ## 🔄 Development Process
+		- Started in 2016
+		- Uses spiral design-based research
+		- Focus on:
+			- Technical specifications
+			- Standards development
+			- Policy guidance
+			- Reference implementations
+		- Emphasis on "plug and play" interoperability
+	- ## 🎯 Future Direction
+		- Moving toward:
+			- AI and machine learning integration
+			- Enhanced data analytics
+			- Improved competency tracking
+			- Greater system interoperability
+		- Goal: Create a unified learning ecosystem that supports:
+			- Multiple learning modalities
+			- Various delivery points
+			- Comprehensive data collection
+			- Advanced analytics
+			- Personalized learning paths

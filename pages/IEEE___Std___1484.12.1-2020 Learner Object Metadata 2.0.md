@@ -1,0 +1,102 @@
+alias:: [[IEEE LOM 2.0]], [[LOM]]
+tags:: [[IEEE]], [[Standard]], [[Metadata]], [[Learning Object]], [[EdTech]]
+
+- # IEEE Standard for Learning Object Metadata (1484.12.1-2020)
+	- [IEEE Xplore](https://ieeexplore.ieee.org/servlet/opac?punumber=9262116)
+	- ## 📖 Overview
+		- A standard that defines metadata structure for describing learning objects
+		- Enables interoperability and discovery of learning resources across systems
+		- Part of [[US/Gov/ADL/TLA]]'s core standards for content description
+	- ## 🎯 Purpose
+		- Facilitate search, evaluation, acquisition, and use of learning objects by:
+			- Learners
+			- Instructors
+			- Automated software processes
+		- Enable sharing and exchange of learning objects through:
+			- Development of catalogs and inventories
+			- Support for diverse cultural and linguistic contexts
+		- Ensure semantic interoperability between different LOM implementations
+	- ## 📋 Scope
+		- Defines metadata structure for learning objects where:
+			- Learning object = any entity (digital or non-digital) used for learning
+			- Metadata instance = description of learning object characteristics
+		- Supports linguistic diversity of:
+			- Learning objects themselves
+			- Their metadata descriptions
+	- ## 🏷️ Metadata Categories
+		- ### Core Categories
+			- General information
+			- Life cycle
+			- Meta-metadata
+			- Educational aspects
+			- Technical details
+			- Rights management
+			- Relationships
+			- Annotations
+			- Classifications
+	- ## 💡 Key Concepts
+		- ### Learning Object
+			- Any entity (digital or non-digital) used for:
+				- Learning
+				- Education
+				- Training
+		- ### Metadata Instance
+			- Describes relevant characteristics of a learning object
+			- Enables systems to:
+				- Manage learning objects
+				- Locate resources
+				- Evaluate content
+				- Exchange data
+	- ## 🔄 Implementation
+		- Standard provides conceptual data schema
+		- Actual implementation defined by other standards
+		- Designed as base schema that can be extended
+		- Enables automated scheduling of learning objects
+	- ## 🌐 Interoperability
+		- Supports transformation between different bindings
+		- Ensures high degree of semantic interoperability
+		- Facilitates cross-platform content sharing
+		- Enables multi-language support
+	- ## 📚 Standard Vocabulary
+		- Terms from the IEEE Standards Dictionary
+		- ### Category
+			- A group of related data elements
+			- Used to organize metadata into logical groups
+		- ### Datatype
+			- A property of distinct values
+			- Defines:
+				- Common features of values
+				- Operations on those values
+		- ### Extended Data Element
+			- Element defined outside the standard
+			- Permitted within data structure instance
+			- Enables extensibility of the standard
+		- ### LangString
+			- Special datatype for character strings
+			- Supports multiple equivalent strings:
+				- Translations
+				- Alternative descriptions
+			- Enables multilingual metadata
+		- ### Learning Object
+			- Any entity used for learning purposes:
+				- Can be digital or non-digital
+				- Used in education or training
+				- Basic unit of educational content
+		- ### LOM Data Element
+			- Standard-defined data element with:
+				- Name
+				- Explanation
+				- Size
+				- Ordering
+				- Value space
+				- Datatype
+		- ### Smallest Permitted Maximum
+			- For implementation-defined values
+			- Defines minimum constraints
+			- Referenced in section 4.5 of standard
+		- ### Value Space
+			- Set of values for a given datatype
+			- Can be:
+				- Explicitly enumerated
+				- Defined by reference to other standards
+			- Note: Definitions based on ISO/IEC 11404:1996

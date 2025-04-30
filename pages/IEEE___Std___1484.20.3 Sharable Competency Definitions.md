@@ -1,6 +1,6 @@
 created-by:: [[IEEE/Committee/LTSC]]
-date-created:: [[2022]]
-tags:: [[EdTech]]
+date-created:: [[2023/07]] 
+tags:: [[EdTech]], [[US/Gov/ADL/TLA]]
 
 - # IEEE Standard for Learning Technology--Data Model for Shareable Competency Definitions
 	- > Defined in this standard are a data model for describing, referencing, and sharing **competency definitions**, and **frameworks of competency definitions** and **rubrics** in the context of **online and distributed learning** and in employment and work.
