@@ -3,6 +3,7 @@ tags:: [[IEEE]], [[Standard]], [[Metadata]], [[Learning Object]], [[EdTech]]
 
 - # IEEE Standard for Learning Object Metadata (1484.12.1-2020)
 	- [IEEE Xplore](https://ieeexplore.ieee.org/servlet/opac?punumber=9262116)
+	- [[EdTech/Wiki/Learning/Object/Metadata]]
 	- ## 📖 Overview
 		- A standard that defines metadata structure for describing learning objects
 		- Enables interoperability and discovery of learning resources across systems

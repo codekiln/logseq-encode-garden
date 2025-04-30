@@ -1,0 +1,1 @@
+# [Learning object metadata - Wikipedia](https://en.wikipedia.org/wiki/Learning_object_metadata)

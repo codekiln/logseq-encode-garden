@@ -167,6 +167,7 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 					- Not all LMS fully embrace xAPI yet
 					- Some treat it as an add-on for analytics rather than a SCORM replacement
 			- ## [[cmi5]]
+			  collapsed:: true
 				- An emerging standard that bridges the gap between [[SCORM]]'s packaging/launch and xAPI's flexibility
 				- In essence, cmi5 is *"xAPI packaged for [[LMSs]]"*
 				- ### Neutrality & Interoperability
@@ -283,6 +284,7 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 						- LTI tool inside cmi5-launched content
 						- AI tutor calling xAPI alongside cmi5 statements
 			- ## [[IMS/Common Cartridge]] (CC)
+			  collapsed:: true
 				- A content packaging format from 1EdTech (IMS Global)
 				- Widely used in academia for course materials exchange
 				- Think of it as a "course archive" that works across different [[LMSs]]
