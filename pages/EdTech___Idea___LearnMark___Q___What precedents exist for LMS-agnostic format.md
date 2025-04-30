@@ -19,6 +19,7 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 	- ## [[ChatGPT/Deep Research/Response]]
 		- # LMS-Neutral Course Content Formats for Portability and AI-Assisted Authoring
 			- ## [[SCORM]] (Sharable Content Object Reference Model)
+			  collapsed:: true
 				- A long-standing standard (circa 2000) for packaging e-learning courses into a transferable ZIP file.
 				- ### Neutrality & Interoperability
 					- SCORM packages (typically a `.zip` with a manifest) can be imported into any SCORM-compliant LMS, making content portable across platforms
@@ -77,6 +78,7 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 						- Cross-domain restrictions historically made hosting content outside the LMS tricky
 					- These complexities and SCORM's aging web technology (designed before mobile era) are why the industry considers SCORM "dated"
 			- ## [[xAPI]] (Experience API, aka Tin Can API)
+			  collapsed:: true
 				- A modern e-learning data specification (released 2013) focused on recording learning *experiences* rather than packaging content
 				- ### Neutrality & Interoperability
 					- xAPI is platform-neutral by design
@@ -422,6 +424,7 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 					- Mostly seen in academia
 			- ## Other Notable Standards and Emerging Formats
 				- ### [[IMS/QTI]] (Question & Test Interoperability)
+				  collapsed:: true
 					- Widely used standard for assessment content
 					- Platform-neutral #XML format
 					- Often used with [[IMS/Common Cartridge]]
@@ -433,6 +436,7 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 					- Enhances modularity for test content
 					- Some limitations on complex question types
 				- ### [[IMS/LD]] Learning Design
+				  collapsed:: true
 					- Comprehensive specification for pedagogical designs
 					- Can model:
 						- Activities
@@ -443,6 +447,7 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 					- Remained mostly experimental
 					- Too complex for widespread adoption
 				- ### Standards Comparison
+				  collapsed:: true
 					- Standards are complementary and overlapping
 					- Example combination:
 						- Package content as cmi5
@@ -450,6 +455,7 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 						- Track with xAPI data
 					- Industry moving toward blended approach
 				- ### [[EdTech/Idea/LearnMark]] ( or other [[Markdown]]-based formats)
+				  collapsed:: true
 					- Interest in simpler, text-based formats
 					- Uses Markdown with YAML frontmatter
 					- Benefits:

@@ -10,3 +10,4 @@ tags:: [[Standard]], [[EdTech/Standard]]
 		- [IMS Common Cartridge - EduTech Wiki](https://edutechwiki.unige.ch/en/IMS_Common_Cartridge)
 	- ## Timeline
 		- A first version was published as v1.0 in Jan 2009, the final v1.1 was published on Jan 10 2011 and version 1.2. final on oct 1, 2011.
+		- 1.3 - bn
