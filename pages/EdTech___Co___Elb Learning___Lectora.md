@@ -1,5 +1,5 @@
 alias:: [[Lectora]]
-tags:: [[EdTech]], [[Company/ELB Learning]], [[Software]], [[Authoring Tool]]
+tags:: [[EdTech]], [[Company/ELB Learning]], [[Software]], [[Authoring Tool]], [[Product]]
 
 - # Lectora
 	- Trivantis Lectora is now part of ELB Learning (formerly eLearning Brothers), which acquired Trivantis in 2021.

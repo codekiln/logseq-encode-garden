@@ -21,7 +21,7 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 					- This addresses the early e-learning pain point of delivering the same content on multiple LMSs without custom rework
 				- ### Hierarchical Structure
 					- SCORM supports a course hierarchy via an **IMS Content Packaging manifest** (`imsmanifest.xml`)
-					- Content is organized into a tree of *Sharable Content Objects (SCOs)*, allowing modules/lessons inside a course
+					- Content is organized into a tree of *Sharable Content Objects ([[SCORM/SCO]]s)*, allowing modules/lessons inside a course
 					- SCORM 2004 introduced *Sequencing and Navigation* rules, enabling prerequisites and branching
 					- This hierarchy is mostly linear, but can represent modules > lessons if authored that way
 				- ### Extensibility (Interactive Components)
@@ -30,7 +30,7 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 					- SCORM's built-in tracking is limited to quiz scores, statuses, etc., via a browser API
 					- It lacks native support for modern app embedding or external web services
 					- Content runs in the LMS's web frame and communicates through a JavaScript API (the **SCORM RTE**)
-					- Beyond what the SCO's code does, SCORM doesn't itself provide interactive widgets or question types
+					- Beyond what the [[SCORM/SCO]]'s code does, SCORM doesn't itself provide interactive widgets or question types
 				- ### Integration with LLMs (AI Authoring)
 					- SCORM is not inherently designed for AI-assisted authoring
 					- Content inside is typically HTML or Flash (in older courses)
@@ -134,7 +134,7 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 					- Example use cases:
 						- Enterprise tracking learner progress through mixed resources:
 							- LMS course (via SCORM or cmi5)
-							- YouTube videos
+							- [[YouTube]] videos
 							- VR training session
 						- Academic research projects using xAPI for detailed learning interaction data
 						- Museum or onboarding programs where experiences aren't confined to one system
@@ -175,28 +175,28 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 				- ### Hierarchical Structure
 					- cmi5's manifest allows simple course structure
 					- One or more **[[cmi5/Assignable Unit]] (AUs)** organized under a course
-					- An AU is analogous to a SCO in SCORM
-					- The manifest can group AUs
+					- An [[cmi5/Assignable Unit]] AU is analogous to a [[SCORM/SCO]]
+						- The manifest can group AUs
 					- Can potentially have nested structure of blocks or chapters
 					- Standardizes *sequencing and mastery rules* via "moveOn" attribute
 					- Example moveOn values:
 						- `moveOn: Completed`
 						- `moveOn: Passed`
-					- LMS marks it satisfied when learner's xAPI statements indicate completion
+					- [[LMS]] marks it satisfied when learner's xAPI statements indicate completion
 				- ### Extensibility (Interactive Components)
 					- Because cmi5 content is essentially #xAPI content, inherits xAPI's extensibility
-					- A cmi5 AU could be:
+					- A [[cmi5/Assignable Unit]] could be:
 						- Video
 						- VR simulation
 						- Website
 						- Not limited to browser frame
-					- The spec explicitly allows AUs that run outside a web browser
+					- The spec explicitly allows [[cmi5/Assignable Unit]]s that run outside a web browser
 					- This means cmi5 can handle modern use cases:
 						- Mobile apps
 						- Serious games
 						- IoT-based training
 					- LMS provides launch parameters including secure token for xAPI statements
-					- Once launched, AU is free to deliver any interactive experience
+					- Once launched, [[cmi5/Assignable Unit]] is free to deliver any interactive experience
 				- ### Integration with [[LLMs]]
 					- cmi5 is relatively new and focused on interoperability
 					- Direct AI integration isn't a core feature
@@ -220,8 +220,8 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 						- [[EdTech/Co/Elb Learning/Lectora]]
 						- [[EdTech/Co/dominKnow]]
 					- Some LMS/LRS products support importing and launching cmi5:
-						- SCORM Cloud
-						- Learning Locker
+						- [[EdTech/Co/RusticiSoftware/SCORM Cloud]]
+						- [[EdTech/Co/Learning Pool/Learning Locker]]
 						- TalentLMS
 					- US DoD actively encouraging cmi5 for future-proofing training content
 					- Community and tooling not yet as mature as SCORM's
@@ -272,7 +272,7 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 					- cmi5 kept scope narrow to encourage adoption
 					- Doesn't solve:
 						- Peer learning activities
-						- Complex branching within single AU
+						- Complex branching within single [[cmi5/AU]]
 					- Often used with other approaches:
 						- LTI tool inside cmi5-launched content
 						- AI tutor calling xAPI alongside cmi5 statements
@@ -420,7 +420,7 @@ tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
 				- ### [[IMS/QTI]] (Question & Test Interoperability)
 					- Widely used standard for assessment content
 					- Platform-neutral #XML format
-					- Often used with Common Cartridge
+					- Often used with [[IMS/Common Cartridge]]
 					- Supports structured items:
 						- Multiple-choice
 						- Essays

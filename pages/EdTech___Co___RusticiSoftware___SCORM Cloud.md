@@ -1,0 +1,4 @@
+tags:: [[EdTech/Product]], [[SAAS]], [[SCORM]]
+
+- # [SCORM Cloud: Test, Play and Distribute eLearning](https://rusticisoftware.com/products/scorm-cloud/?utm_source=google&utm_medium=natural_search)
+	- SCORM Cloud takes care of all your eLearning needs from testing standards-based content to delivering courses and reporting on results. SCORM Cloud supports SCORM 1.2, SCORM 2004 (2nd, 3rd and 4th editions), AICC, xAPI, cmi5 and LTI (v1.1 and v1.3) as well as MP3, MP4 and PDF imports. Log in to SCORM Cloud web application to manage your learning in one place or integrate SCORM Cloud functionality to your application via our API. Sign up for a free trial today.

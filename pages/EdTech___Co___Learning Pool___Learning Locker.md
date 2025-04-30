@@ -1,0 +1,39 @@
+alias:: [[Learning Locker]]
+tags:: [[EdTech]], [[Company/Learning Pool]], [[xAPI]], [[LRS]], [[Open/Source]]
+
+- # Learning Locker
+  - Learning Locker is an open-source [[xAPI/LRS]] that implements the [[xAPI]] (Experience API / Tin Can) specification. It is designed to collect, store, and analyze learner activity data across a wide variety of platforms and contexts.
+  - ## 🏢 Company
+    - Learning Locker was originally developed by HT2 Labs and is now maintained and owned by [[EdTech/Co/Learning Pool]], which acquired HT2 Labs in 2019.
+  - ## 🌐 Website
+    - [Community site](https://www.learninglocker.co.uk) (archived/redirected)
+    - [Official product page](https://learningpool.com/solutions/learning-record-store-learning-locker/)
+  - ## 💻 #GitHub
+    - [Source code repository](https://github.com/LearningLocker)
+    - License: AGPL-3.0
+    - The repository hosts the **Community Edition**, which is free and open source.
+  - ## 🔓 Editions
+    - **Community Edition**:
+      - Self-hosted
+      - Free and open source (AGPL)
+      - Suitable for academic, research, or technical users
+      - Basic [[xAPI/LRS]] features (store/query xAPI statements)
+    - **Enterprise Edition** (by [[EdTech/Co/Learning Pool]]):
+      - Fully managed cloud/SaaS offering
+      - Advanced dashboards and reporting
+      - SLA-backed support
+      - Integrations with tools like Power BI
+  - ## 🔧 Features
+    - Full support for xAPI 1.0.3
+    - Data visualization (basic in Community, advanced in Enterprise)
+    - APIs for ingesting, querying, and managing xAPI statements
+    - Roles and permissions for multi-tenant deployments
+  - ## 🧩 Integration Use Cases
+    - LMS analytics augmentation
+    - VR/AR and mobile learning activity tracking
+    - Offline training capture and syncing
+    - Integration with third-party tools via xAPI
+  - ## 🔗 Related
+    - [[EdTech/Co/Learning Pool]]
+    - [[xAPI/LRS]]
+    - [[xAPI]]
