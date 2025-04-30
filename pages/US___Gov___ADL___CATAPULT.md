@@ -1,9 +1,10 @@
 alias:: [[CATAPULT]]
-tags:: [[Tool]], [[EdTech/Acronym]], [[EdTech/Co/RusticiSoftware]]
+tags:: [[Tool]], [[EdTech/Acronym]], [[EdTech/Co/RusticiSoftware]], [[cmi5]]
 
 - # [CATAPULT – cmi5 Advanced Testing Application and Player Underpinning Learning Technologies](https://www.adlnet.gov/projects/cmi5-CATAPULT/) - [[cmi5]]
 	- **CATAPULT** is a conformance testing toolkit developed by [[US/Gov/ADL]] (Advanced Distributed Learning Initiative) to support the adoption of [[xAPI]] and [[cmi5]] standards across learning technologies.
 	- [Project page](https://www.adlnet.gov/projects/cmi5-CATAPULT/)
+	- See also [[US/Gov/ADL/GitHub/CATAPULT]] for a sample github repo
 	- ![cmi5-CATAPULT context diagram](https://www.adlnet.gov/assets/images/projects/cmi5-catapult-fit-in.png)
 	- ## 🧪 Purpose
 		- CATAPULT provides tools that allow developers and system integrators to:
