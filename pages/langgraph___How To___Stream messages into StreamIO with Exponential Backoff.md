@@ -17,24 +17,10 @@
 			- **Batching Chunks:** If rate limits are frequently hit, consider batching multiple chunks together and updating StreamIO less frequently. This reduces the number of API calls and better utilizes the allowed quota.
 			- **Skipping Redundant Updates:** In scenarios where only the latest chunk matters (e.g., replacing message content), it may be optimal to skip intermediate updates that failed due to rate limits and only update with the most recent chunk after the backoff period.
 			- **Inspect Rate Limit Headers:** Always inspect the `X-RateLimit-Remaining` and `X-RateLimit-Reset` headers in StreamIO responses to dynamically adjust backoff timing and avoid unnecessary retries.
-			- **Configurable Retry Policy:** In LangGraph, you can configure retry policies for nodes (see [How to add node retry policies](https://langchain-ai.github.io/langgraph/how-tos/node-retries/)), allowing for exponential backoff and custom retry logic on API errors like 429.
-		- ### Example Retry Policy in LangGraph
-			- Use the `RetryPolicy` when adding a node that updates StreamIO, specifying `initial_interval`, `backoff_factor`, `max_interval`, and `max_attempts`.
-			- Example:
-			  ~~~python
-			  from langgraph.pregel import RetryPolicy
-			  builder.add_node(
-			     "update_streamio",
-			     update_streamio_fn,
-			     retry=RetryPolicy(initial_interval=1.0, backoff_factor=2.0, max_interval=32.0, max_attempts=5)
-			  )
-			  ~~~
-			- This ensures that if a rate limit error occurs, the node will retry with exponential backoff, up to the specified maximum attempts.
 		- ### Summary
 			- When streaming from LangGraph to StreamIO, design your update logic to:
 				- Handle 429 errors with exponential backoff
 				- Consider batching or skipping redundant updates
-				- Use LangGraph's retry policies for robust error handling
 				- Monitor rate limit headers to optimize retry timing
 			- This approach balances responsiveness, efficiency, and compliance with StreamIO's rate limits.
 	- ## Algorithms
@@ -91,15 +77,16 @@
 			  ```
 			- Uses Stream's **partial-update** endpoint so you never overwrite undeclared fields ([Build an AI Assistant Using Python - getstream.io](https://getstream.io/blog/python-assistant/?utm_source=chatgpt.com)).
 			- Works with any LangGraph streaming mode; just adapt the buffer strategy for "replace" vs "append".
-		- ### Node-Level Retry Policy (optional)
-			- ```python
-			  from langgraph.pregel import RetryPolicy
-			  builder.add_node(
-			      "update_streamio",
-			      lambda state: stream_to_streamio(state["run_id"], state["msg_id"]),
-			      retry=RetryPolicy(initial_interval=1.0, backoff_factor=2.0,
-			                        max_interval=32.0, max_attempts=5)
-			  )
-			  
-			  ```
-			- This lets LangGraph itself re-invoke the node when a 429 bubbles up. ([Streaming](https://langchain-ai.github.io/langgraph/concepts/streaming/))
+	- ## Additional Context: Node-Level Retry Policies in LangGraph
+		- **Configurable Retry Policy:** In LangGraph, you can configure retry policies for nodes (see [How to add node retry policies](https://langchain-ai.github.io/langgraph/how-tos/node-retries/)), allowing for exponential backoff and custom retry logic on API errors like 429.
+		- **Note:** Node-level retry policies in LangGraph are only relevant if a LangGraph node is directly responsible for updating StreamIO. In the main scenario discussed above, streaming from LangGraph and updating StreamIO are decoupled, so node-level retry policies do not apply. If, however, you architect your graph such that a node performs the StreamIO update, you can use a retry policy as shown below.
+		- ```python
+		  from langgraph.pregel import RetryPolicy
+		  builder.add_node(
+		      "update_streamio",
+		      lambda state: stream_to_streamio(state["run_id"], state["msg_id"]),
+		      retry=RetryPolicy(initial_interval=1.0, backoff_factor=2.0,
+		                        max_interval=32.0, max_attempts=5)
+		  )
+		  ```
+		- This lets LangGraph itself re-invoke the node when a 429 bubbles up. ([Streaming](https://langchain-ai.github.io/langgraph/concepts/streaming/))
