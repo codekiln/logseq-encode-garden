@@ -1,0 +1,1 @@
+# [Rate Limits - Python Chat Messaging Docs](https://getstream.io/chat/docs/python/rate_limits/)
