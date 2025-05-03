@@ -1,0 +1,25 @@
+# [[Ableton/Arrangement View]] [navigation](https://www.ableton.com/en/live-manual/11/arrangement-view/#navigation)
+	- ![navigation of ableton arrangement view](https://ableton-production.imgix.net/live-manual/11/ArrangerNavigationWithBreakouts.png?auto=&w=1533)
+		- ## 1 - Zooming left and right with [[Ableton/Arrangement View/Beat Time Ruler]]
+			- > To smoothly change the zoom level, click and drag vertically in the beat-time ruler at the top of the Arrangement View (you can also drag horizontally to scroll the display). The Arrangement View can also be zoomed using a pinch gesture on a supported trackpad or touch screen.
+		- ## 2 - Zooming into [[Ableton/Selection]] in [[Ableton/Arrangement View/Track/Display Area]] *Progressively*
+			- > To zoom in and out around the current selection progressively, you can use the computer keyboard’s + and - keys, or scroll with the mousewheel or trackpad while holding the Ctrl (Win) / Cmd (Mac) modifier. To “pan“ the display, click and drag while holding the CtrlAlt (Win) / CmdOption (Mac) modifier. Double-clicking in the beat-time ruler also zooms to the current selection. If nothing is selected, double-clicking the beat-time ruler zooms out to show the entire Arrangement.
+			- [[My Notes]]
+				- ### [[Ableton/Menu/View/Zoom/In or Out]] to zoom in or out (left to right)
+					- [[Keyshort]] `+` or `-`
+						- [[My Note]]: these are actually `-` or `=` keys, respectively; it doesn't matter if you press `Shift` or not
+							- `Cmd`+mouse wheel: zoom left/right like the above
+				- ### Pan left right up down around selection in Arrangement View #card
+					- [[Keyshort]] use `Cmd+Opt` while clicking and dragging a selection to pan up, down, left, right
+		- ## 3 - Zooming into [[Ableton/Selection]] in [[Ableton/Arrangement View/Track/Display Area]] *Completely*
+			- > To zoom in the current selection completely, press Z or use the View menu’s Zoom to Arrangement Time Selection command. Note that if you select time on a single Arrangement clip, the [Clip Content Editor in Clip View](https://www.ableton.com/en/live-manual/11/clip-view/#zooming-and-scrolling) will zoom in on that selected time. You can revert back to the previous zoom state by pressing the X key. Note that when zooming in multiple times using the Z key, the X key can be pressed multiple times to go back one step each time the key is pressed.
+			- [[My Notes]]
+				- ### To Zoom in to selection completely
+					- Press `Z` to zoom to to selection horizontally and then vertically; [[Ableton/Menu/View/Zoom/Arrangement Time Selection/To]]
+						- Press `X` to zoom back after that: [[Ableton/Menu/View/Zoom/Arrangement Time Selection/Back]]
+					-
+		- ## 4 - [[Ableton/Arrangement View/Track/Display Area]] Vertical Zoom
+			- > To vertically zoom a selected track, scroll inside the Track Display Area with the mousewheel or trackpad while holding the Alt (Win) / Option (Mac) modifier. Note that if the Arrangement contains a time selection, all tracks with selected content will zoom vertically.
+		- ## 5 -
+			- > To optimize the height of all tracks to fit the Arrangement View, click the Optimize Arrangement Height button or press the `H` shortcut key. To adjust the Arrangement View’s horizontal zoom so that the whole song fits to the view, click the Optimize Arrangement Width button or press the `W` shortcut key.
+			-
