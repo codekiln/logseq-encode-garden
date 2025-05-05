@@ -1,0 +1,53 @@
+# Using [[Ableton Collections]] & Folders to [Organise Your Entire Library - YouTube](https://www.youtube.com/watch?v=6bFhECd1Y5A)
+	- ## About
+		- All of this still applies to Live 11 & 12. However, in Live 12 you now have the inclusion of Filters / Tags to help organise your library. If you prefer to organise your library using tags and filters, then Live 12's new features may be a better option for you. If you prefer to organise everything through folders on your hard drive, then the method in the video might be better for you. My advice if you're not sure: try a little bit of both and see what you feel most comfortable with. :)
+		- Here I show you how to use the new 'Collections' feature in Live 10 to organise your Ableton devices, Max4Live devices, VSTs and samples into folders and then store them all in one handy, easy to reach place.
+	- ## #Video
+		- {{video https://www.youtube.com/watch?v=6bFhECd1Y5A}}
+			- ### {{youtube-timestamp 2}} Introduction & The Problem Before Collections
+				- Presenter explains how to use the [[Ableton Collections]] feature in Ableton Live to organize the entire library.
+				- Before version 10, finding effects like reverb required searching in multiple places:
+					- Stock Ableton plugins
+					- Max for Live devices
+					- Plugins folder (VSTs, Audio Units)
+				- This made it difficult to browse and choose effects.
+				- "Often I want to add a reverb or delay effect and don't know which one I want, so I want to look through what I've got first."
+			- ### {{youtube-timestamp 56}} How Collections Solves This
+				- Collections allow grouping various device types together:
+					- Drums, instruments, audio effects, MIDI effects, user presets, core presets, samples
+				- #### Example: Drums
+					- Acoustic kits (Ableton, Kontakt, custom)
+					- Battery kits, chopped breaks, drum machines, electronic kits
+					- External drum machines, percussion, pitch drum effects
+				- #### Example: Instruments
+					- External instruments, synths, real instruments (bass, brass, guitar, keys)
+				- #### Example: Effects
+					- Audio effects (delays, reverbs) grouped together, mixing stock, VST, Max for Live, Reaktor
+					- MIDI effects grouped
+				- "This is the thing I find most helpful: if you're after a particular kind of delay, you don't have to look in three different places."
+			- ### {{youtube-timestamp 200}} Organizing with Folders & Collections
+				- Presenter organizes everything into folders by type, not just single effects or instruments.
+				- Collections can include whole folders from the user library.
+				- Takes time to set up, but allows mapping folders to collection colors.
+				- Organize folders in user library using Finder/Explorer.
+				- Remove default empty folders, replace with custom ones.
+				- For stock plugins and Max for Live devices: drag and drop into folders.
+				- For VSTs/Audio Units: create a group (Cmd/Ctrl+G), rename, and save in user library.
+				- Linking top-level folders to a color automatically includes all subfolders in that collection.
+				- Mirrors user library structure in collections.
+			- ### {{youtube-timestamp 316}} Advanced Tips: Managing VSTs, Macros, and Presets
+				- All VST plugins are lumped together, making it hard to find what you want.
+				- To organize, create instrument racks for VSTs and save them in appropriate folders.
+				- Map commonly used parameters to macros in instrument racks.
+				- Save VST groups with mapped macros for easier access, especially for Push users.
+				- Folders allow infinite subcategories, overcoming the limitation of only seven collection colors.
+			- ### {{youtube-timestamp 523}} Mapping External Samples and Packs
+				- Can map folders from external drives and packs into collections.
+				- Example: add a samples folder from an external drive to a collection.
+				- Also possible to map folders from Ableton packs (e.g., core library) into collections.
+				- Save VST presets as separate instruments in the user library for quick access.
+				- Example: create folders for specific packs, save each preset as a separate file.
+				- This process takes time but makes all presets easily accessible.
+			- ### {{youtube-timestamp 703}} Conclusion
+				- The system groups everything in one place, eliminating the need to search in multiple locations.
+				- "I hope this is useful to you. Thanks for watching!"
