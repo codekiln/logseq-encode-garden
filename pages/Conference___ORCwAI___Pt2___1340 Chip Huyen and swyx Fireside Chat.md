@@ -8,12 +8,13 @@
 			- I A
 			- 1:45PM
 			- Event-Driven multi-agent systems
-		- 13:51 quote from chat
+		- 13:51 quote from chat [[Guide]]s
 			- TODO [AI Engineer Roadmap](https://roadmap.sh/ai-engineer)  check this out
 			- TODO On AI in general: [https://karpathy.ai/zero-to-hero.html](https://karpathy.ai/zero-to-hero.html) [[Person/Andrej Karpathy]] check out
 			- On AI coding: [https://aicode.guide](https://aicode.guide/)
 			- On AI Engineering: [https://roadmap.sh/ai-engineer](https://roadmap.sh/ai-engineer)
 			- On LLM: [https://github.com/mlabonne/llm-course](https://github.com/mlabonne/llm-course)
+		-
 	- ## [[AI Notes]]
 		- ### Intro Slide
 			- **Title**: Fireside Chat with Chip Huyen and swyx

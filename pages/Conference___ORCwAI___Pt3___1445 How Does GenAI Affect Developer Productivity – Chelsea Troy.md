@@ -1,0 +1,17 @@
+# How does GenAI affect Dev Productivity - [[Person/Chelsea Troy]]
+	- ## [[My Notes]]
+		- 14:47 "from a bolus of context including a query" about "lost in the middle" paper - top 5 paper from 2023 July 6
+			- if it appears at beginning and end or middle of context
+			- it's in important to identify the most relevant sections
+		- ## 14:54 – Key Point
+			- **LLMs are most helpful on programming problems that are:**
+				- Specific
+				- Limited in scope
+				- Focused on a programming language with a robust sharing history
+		- what skills are humans left to build?
+			- investigative skills
+				- problem: we tend to view debugging not as part of our work but as an obstacle
+			- evaluative skills
+				-
+	- ## [[AI Notes]]
+		-

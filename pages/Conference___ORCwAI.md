@@ -20,7 +20,6 @@
 		- **Introduction – Tim O'Reilly (10 minutes)**
 			- Tim welcomes you to Coding with AI.
 		- ### [[Conference/ORCwAI/Pt1]]: The Big Picture
-		  collapsed:: true
 			- **Gergely Orosz and Addy Osmani Fireside Chat (20 minutes)** - [[Conference/ORCwAI/Pt1/1120 Fireside Chat with Gergely Orosz and Addy Osmani]]
 				- Gergely Orosz, author of The Pragmatic Engineer, the most popular tech newsletter on Substack, joins Addy Osmani for an insightful discussion on the evolving role of AI in software engineering. Discover how AI is accelerating development for seasoned engineers while redefining the learning curve for juniors and paving the way for a new era of agentic, "AI-first" development.
 			- **Vibe Coding: More Experiments, More Care – Kent Beck (15 minutes)** [[Conference/ORCwAI/Pt1/1140 Kent Beck Vibe Coding]]
@@ -33,6 +32,7 @@
 			  id:: 681cdb10-f393-4fa7-bec4-9ef9b963c4fa
 				- Technologist Harper Reed takes you through his LLM-based code generation workflow that boosts software-building efficiency, whether you're starting fresh or iterating on a legacy code base. He explores how to refine ideas, develop detailed specs, and break down tasks into manageable, iterative steps using LLMs, ensuring smooth execution and robust testing. You'll learn to integrate various tools like Claude and Aider, gaining insights into optimizing LLMs for real-world development scenarios, leading to faster and more reliable code production.
 			- 1240 [[Conference/ORCwAI/Pt2/1239 Jay Parikh and Gergely Orosz Fireside Chat]] (15 minutes)
+			  collapsed:: true
 				- Join Jay Parikh, executive vice president at Microsoft, and Gergely Orosz, author of *The Pragmatic Engineer*, for a thought-provoking discussion on AI's role as the "third runtime," the lessons from past technological shifts, and why software development isn't disappearing—it's evolving.
 			- 1300 [[Conference/ORCwAI/Pt2/1300 Dev Skills in AI-Assisted World – Birgitta Böckeler]] (15 minutes)
 				- With AI coding assistants becoming more and more powerful, discussions about the future role of developers have intensified. Birgitta Böckeler, global lead for AI-assisted software delivery at [[Thoughtworks]] , highlights instances where human intervention remains essential, based on firsthand experiences. These examples can inform how far we are from "hands-free" AI-generated software and the skills that remain essential, even with AI in the copilot seat.
@@ -50,17 +50,17 @@
 			- [[Conference/ORCwAI/Pt2/1400 Teaching Developers to Think with AI]] **Bridging the AI Learning Gap: Teaching Developers to Think with AI – Andrew Stellman (15 minutes)**
 				- AI can accelerate development, helping developers generate working code faster than ever. But when AI short-circuits conventional learning processes, it can lead to slower skill growth and tech debt down the line—especially for junior developers still working on their skills. Andrew Stellman, software developer and author of *Head First C#*, shares lessons from Sens-AI, a learning path built specifically for early-career developers, and offers insights into the gap between junior and senior engineers. You'll leave with a new perspective on AI-assisted coding—and practical ways to keep building your skills while working with AI tools.
 			- **Break (5 minutes)**
-		- ### Part 3: The New AI Workflow
-		  collapsed:: true
-			- **Lessons Learned Vibe Coding and Vibe Debugging a Chrome Extension with Windsurf – Iyanuoluwa Ajao (5 minutes)**
-				- Vibe coding web apps is one thing, but what about Chrome extensions? Unlike web apps where frameworks and platforms like Replit make things easier, Chrome extensions require a more native, hands-on approach. Software and AI engineer Iyanuoluwa Ajao explores the quirks of extension development and how to vibe code one from scratch. You'll learn how chrome extensions work under the hood, how to vibe code an extension by thinking in flows and files, and how to vibe debug using dependency mapping and other techniques.
-			- **Designing Intelligent AI for Autonomous Action – Nikola Balic (5 minutes)**
-				- AI-native applications demand a fundamental rethinking of software architecture. Nikola Balic, head of growth at VC-funded startup Daytona, bridges agent design theory and engineering practice, showcasing how AI agent architectures amplify productivity. Through case studies like AI-powered code generation and autonomous coding, you'll learn key patterns for balancing speed, safety, and strategic decision-making—and gain a road map for catapulting legacy systems into agent-driven platforms.
-			- **Secure the AI: Protect the Electric Sheep – Brett Smith (5 minutes)**
-				- Distinguished software architect, engineer, and developer Brett Smith discusses AI security risks to the software supply chain, covering attack vectors, how they relate to the OWASP Top 10 for LLMs, and how they tie into scenarios in CI/CD pipelines. You'll learn techniques for closing the attack vectors and protecting your pipelines, software, and customers.
-			- **How Does GenAI Affect Developer Productivity? – Chelsea Troy (15 minutes)**
+		- ### [[Conference/ORCwAI/Pt3]] Part 3: The New AI Workflow
+			- [[Conference/ORCwAI/Pt3/1425 Lightning]]
+				- [[Conference/ORCwAI/Pt3/1425 Lightning/1 Lessons Learned Vibe Coding]] and Vibe Debugging a Chrome Extension with Windsurf – Iyanuoluwa Ajao (5 minutes)**
+					- Vibe coding web apps is one thing, but what about Chrome extensions? Unlike web apps where frameworks and platforms like Replit make things easier, Chrome extensions require a more native, hands-on approach. Software and AI engineer Iyanuoluwa Ajao explores the quirks of extension development and how to vibe code one from scratch. You'll learn how chrome extensions work under the hood, how to vibe code an extension by thinking in flows and files, and how to vibe debug using dependency mapping and other techniques.
+				- [[Conference/ORCwAI/Pt3/1425 Lightning/2 - Designing Intelligent AI for Autonomous Nikola Balic]] (5 minutes)**
+					- AI-native applications demand a fundamental rethinking of software architecture. Nikola Balic, head of growth at VC-funded startup Daytona, bridges agent design theory and engineering practice, showcasing how AI agent architectures amplify productivity. Through case studies like AI-powered code generation and autonomous coding, you'll learn key patterns for balancing speed, safety, and strategic decision-making—and gain a road map for catapulting legacy systems into agent-driven platforms.
+				- [[Conference/ORCwAI/Pt3/1425 Lightning/3 - Secure the AI – Brett Smith]] Protect the Electric Sheep  (5 minutes)**
+					- Distinguished software architect, engineer, and developer Brett Smith discusses AI security risks to the software supply chain, covering attack vectors, how they relate to the OWASP Top 10 for LLMs, and how they tie into scenarios in CI/CD pipelines. You'll learn techniques for closing the attack vectors and protecting your pipelines, software, and customers.
+			- [[Conference/ORCwAI/Pt3/1445 How Does GenAI Affect Developer Productivity – Chelsea Troy]] (15 minutes)**
 				- The advent of consumer-facing generative models in 2021 catalyzed a massive experiment in production on our technical landscape. A few years in, we're starting to see published research on the results of that experiment. Join Chelsea Troy, leader of Mozilla's MLOps team, for a tour through the current findings and a few summative thoughts about the future.
-			- **Eval Engineering: The End of Machine Learning Engineering as We Know It – Lili Jiang (15 minutes)**
+			- [[Conference/ORCwAI/Pt3/1500 Eval Engineering Lili Jiang]]: The End of Machine Learning Engineering as We Know It – Lili Jiang (15 minutes)
 				- Lili Jiang, former Waymo evaluation leader, reveals how LLMs are transforming ML engineering. Discover why evaluation is becoming the new frontier of ML expertise, how eval metrics are evolving into sophisticated algorithms, and why measuring deltas instead of absolute performance creates powerful development flywheels.
 			- **Closing Remarks – Tim O'Reilly (10 minutes)**
 				- Tim closes out today's event.
