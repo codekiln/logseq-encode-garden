@@ -1,0 +1,27 @@
+# 1220 My LLM Codegen Workflow at the Moment - [[Person/Harper Reed]]
+	- ## [[My Notes]]
+		- 12:30 this is definitely based on his recent blog posts
+		- 12:30 [[AI/Coding/v0/File/TICKET-spec.mdc]] - keystone of entire process is the spec
+			- if you don't have the spec it won't work
+			- "lately it's gotten so good I don't even read them"
+		- 12:31 feed spec into reasoning model, and have it generate the prompts
+		- 12:32 [[Greenfield Coding]] loop
+		- 12:32 "Context packing"
+			- mentions repo2txt
+			- one test at a time, one feature at a time
+			- do a new branch - use it like a video game checkpoint
+			- he mentions pre-commit [[Py/Lib]] [[CICD/CI]] on every commit
+			- `git reset --hard` every four hours
+			- 12:33 "Waterfall" is no longer evil
+			- LLM needs clear specs
+			- "the micro-cycle is waterfall"
+				- you can do it concurrently
+		- 12:35 no more jobs we can recognize
+			- general de-skilling
+		- 12:36 pro tips
+			- start plain
+			- scaffolds keep models honest
+			- short prompts beat essays
+		- 12:38 closing remarks
+		- 12:46 some one mentions this
+			- [automata/aicodeguide: AI Code Guide is a roadmap to start coding with AI](https://github.com/automata/aicodeguide#vibe)

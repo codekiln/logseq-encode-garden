@@ -1,0 +1,27 @@
+cgpt-link:: [Conference/ORCwAI - ORCwAI/Pt2/1239 Jay Parikh and Gergely Orosz Fireside Chat](https://chatgpt.com/g/g-p-681cc9933b4c8191bcf21e72a6de0e2b-conference-orcwai/c/681cde69-2dc0-800a-a9d1-f0433af2dc90)
+
+- # [[Person/Jay Parikh]] and [[Person/Gergely Orosz]] Fireside Chat
+	- ## [[My Notes]]
+		- not many notes, actually. a bit boring.
+		- 12:57 "you should always learn 1-2 levels above and below you" - jay
+		-
+	- ## [[AI Notes]]
+		- ## 12:40pm – Fireside Chat with Jay Parikh and Gergely Orosz
+			- **Session Title**: Fireside Chat with Jay Parikh and Gergely Orosz
+			- **Speakers**: Jay Parikh (EVP at Microsoft) and Gergely Orosz (author of *The Pragmatic Engineer*)
+			- **Track**: Part 2: AI-Enhanced Software Engineering
+			- **Themes**:
+				- AI as the "third runtime" in software development
+				- Lessons from past technological shifts (e.g. cloud, mobile)
+				- Reframing the AI era not as an endpoint, but an evolution
+			- **Key Idea**: Software engineering is not being replaced by AI—it is being reshaped and enhanced by it.
+			- **Quote (inferred)**: “AI isn’t replacing developers. It’s changing what it means to be one.”
+			- **Takeaways**:
+				- Developers must adapt, not retreat—tools are evolving rapidly
+				- Historical perspective helps in navigating paradigm shifts
+				- The AI “runtime” works alongside human logic and traditional computing, not against it
+			- ### Slide (visual transcription)
+				- O'Reilly AI Codecon branding
+				- Title: "Fireside Chat with Jay Parikh and Gergely Orosz"
+				- Subtitle: "Part 2: AI-Enhanced Software Engineering"
+				- Speaker names and headshots: Jay Parikh and Gergely Orosz

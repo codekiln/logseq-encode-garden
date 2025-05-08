@@ -1,0 +1,74 @@
+# 1320 lightning talks
+	- ## **Modern Day Mashups: How AI Agents Are Reviving the Programmable Web – [[Person/Angie Jones]] (5 minutes)** (5 minutes)
+		- ### [[My Notes]]
+			- very cool talk about [[Goose]] [[MCP/Client]] and how we're in a new mashup generation
+			- #### Action items
+				- DONE find her slides - https://slides.com/angiejones/mcp-mashups-5min/fullscreen?token=D53DGw66
+				- TODO check out [Quickstart | codename goose](https://block.github.io/goose/docs/quickstart/) [[Goose]]
+	- ## [[Conference/ORCwAI/Pt2/1320 Lightning Talks/p2 Tipping AI Code Generation on its Side]] – [[Person/Craig McLuckie]] (5 minutes)
+	  collapsed:: true
+		- ### Summary
+			- ((681cdb10-b9d1-48ab-a577-b58d982c0b5c))
+		- ### [[My Notes]]
+		- ### [[AI Notes]]
+			- ## 2025-05-08 – O'Reilly AI Codecon – Craig McLuckie – Tipping AI Code Generation on its Side
+				- ### Talk Overview
+					- **Speaker**: Craig McLuckie
+					- **Length**: 5 minutes (Lightning Talk)
+					- **Time**: 13:24 ET
+					- **Theme**: Moving from closed, vertically integrated AI tooling to open, horizontally composable systems
+				- ### Slide: Vertically Integrated AI Stacks
+					- Visual shows 3 identical vertical stacks, each labeled **App** at the top.
+						- Each stack contains:
+							- **Workflow Logic**
+							- **Context Management**
+							- **LLM**
+					- Represents current architecture where every AI tool builds its own full vertical system.
+						- This leads to duplication of infrastructure across apps.
+				- ### AI Summary
+					- Craig McLuckie critiques the prevailing model of AI code generation, where each product builds an end-to-end vertical stack—including its own LLM, context manager, and workflow engine.
+					- These **vertically integrated stacks** are closed systems that inhibit interoperability, innovation, and reuse.
+					- He argues that the next evolution must tip this structure **horizontally**, enabling shared context management and LLM resources across different applications.
+					- This shift mirrors earlier evolutions in tech (e.g. microservices, containerization) that replaced monolithic systems with more **modular, composable architectures**.
+					- Emphasizes the importance of **community-led efforts** and open standards—like the **Model Context Protocol (MCP)**—to facilitate this transition.
+	- ## [[Conference/ORCwAI/Pt2/1320 Lightning Talks/p3 Prompt Engineering as a Core Dev Skill Patty OCallaghan]] – [[Person/Patty OCallaghan]] - Techniques for Getting High-Quality Code from LLMs
+		- ### [[My Notes]]
+		- ### slides
+		  collapsed:: true
+			- ## 2025-05-08 – O'Reilly AI Codecon – Patty O’Callaghan – Techniques for Getting High-Quality Code from LLMs
+			  collapsed:: true
+				- ### Slide Summary
+					- **Title Slide**
+						- "Techniques for Getting High-Quality Code from LLMs"
+					- **Slide: Prompt Engineering is a Core Dev Skill**
+						- LLMs are now tools in every developer’s toolbox.
+						- Prompt engineering is as fundamental as learning a framework.
+					- **Slide: Architecture-First Prompting**
+						- Begin prompts with high-level architecture and design goals.
+						- Helps guide LLMs to generate code that fits into existing systems.
+						- Example prompt: “I’m building a Flask app with this structure…”
+					- **Slide: Contextual Scaffolding**
+						- Provide surrounding code context to situate the LLM.
+						- Use file headers, imports, docstrings, and nearby function calls.
+						- Helps the LLM understand naming conventions and system patterns.
+					- **Slide: Task-Specific Prompting**
+						- Customize prompts for:
+							- New feature development
+							- Debugging
+							- Refactoring
+						- Example: For debugging, provide error trace and expected behavior.
+					- **Slide: Progressive Enhancement**
+						- Start with a minimal viable prompt.
+						- Add detail iteratively to refine the output.
+						- Encourages experimentation and layered improvement.
+					- **Slide: Collaborate, Don’t Delegate**
+						- Treat the LLM like a junior developer:
+							- Guide it.
+							- Review output.
+							- Improve over time.
+						- Emphasizes the importance of human review and iteration.
+				- ### AI Summary
+					- Patty O’Callaghan presents a set of practical strategies for getting consistently strong output from LLMs in software engineering tasks.
+					- Key idea: don’t expect magic—**collaborate** with the model by designing thoughtful prompts.
+					- Strong prompts lead to **better alignment** with existing systems and more maintainable code.
+					- Encourages iterative development of prompts, tailored to both the task and the architecture.

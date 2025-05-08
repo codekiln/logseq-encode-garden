@@ -1,0 +1,38 @@
+# [[Person/Chip Huyen]] (CH) and [[Person/Shawn @swyx Wang]] (SW) Fireside Chat with [[Person/Tim O'Reilly]]
+	- ## [[My Notes]]
+		- 13:43 CH prompt engineer is very underrated
+		- 13:46 quote from chat
+			- R B
+			- 1:45PM
+			- We're creating the "Society of Mind" with agents
+			- I A
+			- 1:45PM
+			- Event-Driven multi-agent systems
+		- 13:51 quote from chat
+			- TODO [AI Engineer Roadmap](https://roadmap.sh/ai-engineer)  check this out
+			- TODO On AI in general: [https://karpathy.ai/zero-to-hero.html](https://karpathy.ai/zero-to-hero.html) [[Person/Andrej Karpathy]] check out
+			- On AI coding: [https://aicode.guide](https://aicode.guide/)
+			- On AI Engineering: [https://roadmap.sh/ai-engineer](https://roadmap.sh/ai-engineer)
+			- On LLM: [https://github.com/mlabonne/llm-course](https://github.com/mlabonne/llm-course)
+	- ## [[AI Notes]]
+		- ### Intro Slide
+			- **Title**: Fireside Chat with Chip Huyen and swyx
+			- **Time**: 13:40 ET
+			- **Duration**: 20 minutes
+			- **Speakers**:
+				- Chip Huyen – Author of *AI Engineering*
+				- swyx – Writer and cohost of the *Latent.Space* podcast
+			- **Overview**:
+				- A conversation at the intersection of theory and practice in AI software engineering.
+				- Topics covered:
+					- The rise of **intelligent agents** and **autonomous systems**.
+					- How **foundation models** are unlocking new application patterns.
+					- Practical lessons learned from deploying real-world AI systems.
+					- The evolving stack for AI engineers.
+					- Challenges in **bridging research and production**, especially around MLOps, monitoring, and data feedback loops.
+			- **Format**: Informal fireside chat with emphasis on real-world insights and speculative futures.
+			- **Key Themes**:
+				- Importance of **feedback loops** and **human-in-the-loop** systems.
+				- Friction points in the **AI developer experience**.
+				- Design patterns for **autonomous agents** and **interactive AI**.
+				- The blurred line between **product** and **model** in AI systems.

@@ -5,4 +5,6 @@
 - 11:40 [[Conference/ORCwAI/Pt1/1140 Kent Beck Vibe Coding]]
 - 11:55 [[Conference/ORCwAI/Pt1/1152 Junior Devs and GenAI - Camille Fournier Avi Flombaum Maxi Ferreira]]
 - 12:15 ten minute break
+- ((681cdb10-f393-4fa7-bec4-9ef9b963c4fa))
+-
 -
