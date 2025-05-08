@@ -1,13 +1,11 @@
 # [Coding with AI: The End of Software Development As We Know It - May 2025 - O'Reilly Media](https://www.oreilly.com/CodingwithAI/)
 	- See also [[OReilly/Event/25/05/Coding with AI - The End of Software Dev As We Know It]]
 	- ## Event description
-	  collapsed:: true
 		- You hear it in the media, on your social feed, in meetings with coworkers: AI's advance means the end of programming as a career. [We don't buy it](https://www.oreilly.com/radar/the-end-of-programming-as-we-know-it/). AI isn't replacing developers; it's opening up new frontiers to be explored and new skills to be mastered. There will be disruption, sure. But like every true technological revolution, AI expands the palette available to human creativity, and the market will demand new services that put it to use.
 		- Programming is a field in transition. A transition bigger than the move to the GUI, to the web, to mobile, or the cloud. Developers are already at work inventing that future, harnessing the power of AI to do things that were previously impossible while testing the limits of what works well and what has still to be invented. There are already hundreds of new tools, approaches, and models to try out. Companies must shift to AI-native interfaces and evolve their business models—or be replaced by those that commit to the new paradigm.
 		- As Alvin Toffler once wrote, "The future always comes too fast and in the wrong order." There's a lot to sort out. This event shares news from the future, brought to us by developers and organizations who are exploring what works and inventing what does not (yet). We'll feature fireside chats with senior technical executives, brilliant engineers, and entrepreneurs; practical talks on the new tools, workflows, and hacks that are shaping the emerging discipline of programming with AI; and demos of how experienced developers are using the new tools to supercharge their productivity.
 		- **Register now to save your seat!**
 	- ## Recommended content for this event
-	  collapsed:: true
 		- Not an O'Reilly member yet? Explore all this content and more with a [10-day free trial](https://www.oreilly.com/start-trial/).
 		- Read [*AI Engineering*](https://learning.oreilly.com/library/view/ai-engineering/9781098166298/) (book)
 		- Take [*ChatGPT for Software Engineers*](https://learning.oreilly.com/live-events/chatgpt-for-software-engineers/0636920090062/) (live course with Sergio Pereira)
@@ -32,7 +30,6 @@
 			  id:: 681cdb10-f393-4fa7-bec4-9ef9b963c4fa
 				- Technologist Harper Reed takes you through his LLM-based code generation workflow that boosts software-building efficiency, whether you're starting fresh or iterating on a legacy code base. He explores how to refine ideas, develop detailed specs, and break down tasks into manageable, iterative steps using LLMs, ensuring smooth execution and robust testing. You'll learn to integrate various tools like Claude and Aider, gaining insights into optimizing LLMs for real-world development scenarios, leading to faster and more reliable code production.
 			- 1240 [[Conference/ORCwAI/Pt2/1239 Jay Parikh and Gergely Orosz Fireside Chat]] (15 minutes)
-			  collapsed:: true
 				- Join Jay Parikh, executive vice president at Microsoft, and Gergely Orosz, author of *The Pragmatic Engineer*, for a thought-provoking discussion on AI's role as the "third runtime," the lessons from past technological shifts, and why software development isn't disappearing—it's evolving.
 			- 1300 [[Conference/ORCwAI/Pt2/1300 Dev Skills in AI-Assisted World – Birgitta Böckeler]] (15 minutes)
 				- With AI coding assistants becoming more and more powerful, discussions about the future role of developers have intensified. Birgitta Böckeler, global lead for AI-assisted software delivery at [[Thoughtworks]] , highlights instances where human intervention remains essential, based on firsthand experiences. These examples can inform how far we are from "hands-free" AI-generated software and the skills that remain essential, even with AI in the copilot seat.
