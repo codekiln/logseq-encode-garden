@@ -1,2 +1,6 @@
 - [Coding with AI: The End of Software Development As We Know It - May 2025 - O'Reilly Media](https://www.oreilly.com/CodingwithAI/cfp.html)
 - [[2025-05-08 Thu]] 11:00 – 15:00 EDT
+- 11:09 [[Conference/ORCwAI/1100 Intro Addy and Tim]]
+- 11:18 [[Conference/ORCwAI/Pt1/1120 Fireside Chat with Gergely Orosz and Addy Osmani]]
+- 11:40 [[Conference/ORCwAI/Pt1/1140 Kent Beck Vibe Coding]]
+- 11:55 [[Conference/ORCwAI/Pt1/1152 Junior Devs and GenAI - Camille Fournier Avi Flombaum Maxi Ferreira]]

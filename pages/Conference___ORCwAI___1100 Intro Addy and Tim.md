@@ -1,0 +1,9 @@
+- [[My Notes]]
+	- [[Person/Tim O'Reilly]]
+		- he believes that the programmers will be put out of a job is fundamentally wrong
+		- there was an example of a high school intern who over the summer used chatgpt to code image recognition of images of retina
+		- 11:15 someone mentions "Jevon's paradox for coding"
+			- TODO what is Jevon's paradox?
+		- 11:16 handing over to ADdy
+	- 11:16 [[Person/Addy Osmani]]
+	-

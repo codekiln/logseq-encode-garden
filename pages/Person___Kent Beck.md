@@ -1,0 +1,2 @@
+- [[Person/Kent Beck/Web]] kentbeck.com
+-

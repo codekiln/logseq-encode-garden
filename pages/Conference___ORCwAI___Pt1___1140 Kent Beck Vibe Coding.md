@@ -1,0 +1,13 @@
+## 1140 Augmented Coding: Explore, yes, expand & extract not so much (yet) - [[Person/Kent Beck]]
+	- ### [[My Notes]]
+		- 11:42 he mentions [[RooCode]] which worked well for him
+		- 11:45 he defines vibe coding. "That's not what I'm doing"
+		- 11:46 he uses the term AI-Augmented Coding
+		- 11:46 "I could do one more prompt ... 2 hours later it's 2 am"
+		- 11:48 he quotes a logistic curve that writes Explore Expand Extract, with 3x in the upper lh corner. noticed at Facebook
+			- 11:48 when you are in explore mode it's not about how good your ideas are, it's about how many experiments
+			- 11:49 Birgitta B parti quote
+				- > I'm still confused by the term "AI engineer" - I've seen people use it to describe somebody who engineers applications that include AI, and as somebody who uses AI to build things. Just one of the many examples of semantic diffusion going on because of the fast pace
+			- 11:49 mentions freud ... in conjunction with genies ...
+		-
+		-
