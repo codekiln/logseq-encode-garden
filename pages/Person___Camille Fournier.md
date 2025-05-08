@@ -1,3 +1,16 @@
 # Camille Fournier
-	- author of book
-		-
+	- ## Biography
+		- Camille Fournier is a technology executive and author. She is the former Chief Technology Officer of Rent the Runway, former Vice President of Technology at Goldman Sachs, and currently a Managing Director at JPMorgan Chase.
+		- She holds a bachelor's degree in computer science from Carnegie Mellon University and a master's degree in computer science from the University of Wisconsin–Madison.
+		- Camille has written the "Ask The CTO" column for O'Reilly Media and is a frequent speaker and writer on engineering leadership and management.
+	- ## Books
+		- [[Camille Fournier/Book/17/The Manager's Path]]: A Guide for Tech Leaders Navigating Growth and Change** (2017)
+		- **97 Things Every Engineering Manager Should Know: Collective Wisdom from the Experts** (Editor, 2019)
+		- *Upcoming:* **Platform Engineering: A Guide for Technical, Product, and People Leaders**
+	- ## Notable Roles
+		- Managing Director, JPMorgan Chase
+		- Former CTO, Rent the Runway
+		- Former VP of Technology, Goldman Sachs
+	- ## Links
+		- [Wikipedia](https://en.wikipedia.org/wiki/Camille_Fournier)
+		- [Amazon Author Page](https://www.amazon.com/stores/author/B06XFMDTBZ/about)

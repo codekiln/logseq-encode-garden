@@ -3,6 +3,8 @@ cgpt-link:: [cgpt Conference/ORCwAI - ORCwAI/Pt1/1140 Kent Beck Vibe Coding](htt
 - # 1152 [[Dev/Jr]] and [[GenAI]] - [[Person/Camille Fournier]], [[Person/Avi Flombaum]], [[Person/Maxi Ferreira]]
 	- ## [[My Notes]]
 		- 12:00 [[Person/Camille Fournier]] is talking about the importance of reading code
+		- 12:12 - 3 best books from the Tim's bookshelf he would recommend :)
+			- Albert O. Hirschman, The Passions and the Interests; my wife Jennifer Pahlka's Recoding America; Chip Huyen's AI Engineering; Addy Osmani's Managing Effective Engineering Teams; Brian Christian's Algorithms to Live By; Dan Davies' The Unaccountability Machine
 	- ## [[AI Notes]]
 		- ### 11:53 AM – Part I: The Big Picture
 			- **Title:** Junior Developers and Generative AI

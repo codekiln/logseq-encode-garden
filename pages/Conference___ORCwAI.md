@@ -1,0 +1,85 @@
+# [Coding with AI: The End of Software Development As We Know It - May 2025 - O'Reilly Media](https://www.oreilly.com/CodingwithAI/)
+	- See also [[OReilly/Event/25/05/Coding with AI - The End of Software Dev As We Know It]]
+- ## Event description
+  
+  You hear it in the media, on your social feed, in meetings with coworkers: AI’s advance means the end of programming as a career. [We don’t buy it](https://www.oreilly.com/radar/the-end-of-programming-as-we-know-it/). AI isn’t replacing developers; it’s opening up new frontiers to be explored and new skills to be mastered. There will be disruption, sure. But like every true technological revolution, AI expands the palette available to human creativity, and the market will demand new services that put it to use.
+  
+  Programming is a field in transition. A transition bigger than the move to the GUI, to the web, to mobile, or the cloud. Developers are already at work inventing that future, harnessing the power of AI to do things that were previously impossible while testing the limits of what works well and what has still to be invented. There are already hundreds of new tools, approaches, and models to try out. Companies must shift to AI-native interfaces and evolve their business models—or be replaced by those that commit to the new paradigm.
+  
+  As Alvin Toffler once wrote, “The future always comes too fast and in the wrong order.” There’s a lot to sort out. This event shares news from the future, brought to us by developers and organizations who are exploring what works and inventing what does not (yet). We’ll feature fireside chats with senior technical executives, brilliant engineers, and entrepreneurs; practical talks on the new tools, workflows, and hacks that are shaping the emerging discipline of programming with AI; and demos of how experienced developers are using the new tools to supercharge their productivity.
+  
+  **Register now to save your seat!**
+- ## Recommended content for this event
+  
+  Not an O’Reilly member yet? Explore all this content and more with a [10-day free trial](https://www.oreilly.com/start-trial/).
+- Read [*AI Engineering*](https://learning.oreilly.com/library/view/ai-engineering/9781098166298/) (book)
+- Take [*ChatGPT for Software Engineers*](https://learning.oreilly.com/live-events/chatgpt-for-software-engineers/0636920090062/) (live course with Sergio Pereira)
+- Explore [*Generative AI Foundations*](https://learning.oreilly.com/course/generative-ai-foundations/0642572079628/) (on-demand course)
+- Read [*Generative AI for Software Development*](https://learning.oreilly.com/library/view/generative-ai-for/9781098162269/) (early release book)
+- Read [*Prompt Engineering for Generative AI*](https://learning.oreilly.com/library/view/prompt-engineering-for/9781098153427/) (book)
+- ## Schedule
+  
+  *The time frames are only estimates and may vary according to how the class is progressing.*
+  
+  *We’re still working on finalizing the schedule for this event. Please check back closer to the event date for more information.*
+  
+  **Introduction – Tim O’Reilly (10 minutes)**
+- Tim welcomes you to Coding with AI.
+- ### **Part 1: The Big Picture**
+  
+  **Gergely Orosz and Addy Osmani Fireside Chat (20 minutes)**
+- Gergely Orosz, author of The Pragmatic Engineer, the most popular tech newsletter on Substack, joins Addy Osmani for an insightful discussion on the evolving role of AI in software engineering. Discover how AI is accelerating development for seasoned engineers while redefining the learning curve for juniors and paving the way for a new era of agentic, “AI-first” development.
+  
+  **Vibe Coding: More Experiments, More Care – Kent Beck (15 minutes)**
+- Augmented coding deprecates formerly leveraged skills such as language expertise. Augmented coding amplifies vision, strategy, task breakdown, and feedback loops. What are programmers to do? We can afford more experiments. How will organizations react to more code getting thrown away? We can take greater care with modifications to existing systems. How will organizations react to the apparent slowdown? What is a programmer to do? Kent Beck, creator of Extreme Programming, tells you what he’s doing and the principles guiding his choices.
+  
+  **Junior Developers and Generative AI – Camille Fournier, Avi Flombaum, and Maxi Ferreira (15 minutes)**
+- As AI continues to automate simpler engineering tasks, some companies are shifting toward exclusively hiring senior engineers—raising tough questions about the future of early-career talent. Camille Fournier, engineering executive; Avi Flombaum, founder of Flatiron School; and Maxi Ferreira, staff frontend engineer, explore both sides of this debate. Is bypassing junior engineers a recipe for short-term gain but long-term instability? Or is it a necessary evolution in a high-efficiency world? Hear three experts discuss the trade-offs in team composition, mentorship, and organizational health in an AI-augmented industry.
+  
+  **Break (10 minutes)**
+- ### **Part 2: AI-Enhanced Software Engineering**
+  
+  **My LLM Codegen Workflow at the Moment – Harper Reed (15 minutes)**
+- Technologist Harper Reed takes you through his LLM-based code generation workflow that boosts software-building efficiency, whether you’re starting fresh or iterating on a legacy code base. He explores how to refine ideas, develop detailed specs, and break down tasks into manageable, iterative steps using LLMs, ensuring smooth execution and robust testing. You’ll learn to integrate various tools like Claude and Aider, gaining insights into optimizing LLMs for real-world development scenarios, leading to faster and more reliable code production.
+  
+  **Jay Parikh and Gergely Orosz Fireside Chat (15 minutes)**
+- Join Jay Parikh, executive vice president at Microsoft, and Gergely Orosz, author of *The Pragmatic Engineer*, for a thought-provoking discussion on AI’s role as the “third runtime,” the lessons from past technological shifts, and why software development isn’t disappearing—it’s evolving.
+  
+  **The Role of Developer Skills in Today’s AI-Assisted World – Birgitta Böckeler (15 minutes)**
+- With AI coding assistants becoming more and more powerful, discussions about the future role of developers have intensified. Birgitta Böckeler, global lead for AI-assisted software delivery at Thoughtworks, highlights instances where human intervention remains essential, based on firsthand experiences. These examples can inform how far we are from “hands-free” AI-generated software and the skills that remain essential, even with AI in the copilot seat.
+  
+  **Modern Day Mashups: How AI Agents Are Reviving the Programmable Web – Angie Jones (5 minutes)**
+- Remember the Mashup Era? It was an exciting time, when developers mixed and matched APIs from different vendors to create new services. But the excitement fizzled as developers realized they had to maintain these applications. But now, with the Model Context Protocol open standard, developers can integrate data and functionality from multiple services without the burden of maintaining full systems. Angie Jones, global vice president of developer relations at Block, explores how AI agents are bringing fun and creativity back to software development and giving new life to the “programmable web.”
+  
+  **Tipping AI Code Generation on its Side – Craig McLuckie (5 minutes)**
+- The current wave of AI code generation tools are closed, vertically integrated solutions. The next wave will be open, horizontally aligned systems. Craig McLuckie explores this transformation, why it needs to happen, and how it will be led by the community.
+  
+  **Prompt Engineering as a Core Dev Skill: Techniques for Getting High-Quality Code from LLMs – Patty O’Callaghan (5 minutes)**
+- In modern development, prompt engineering has become a core developer skill. Patty O’Callaghan highlights practical techniques to help teams generate high-quality code with AI tools, including an “architecture-first” prompting method that ensures AI-generated code aligns with existing systems, contextual scaffolding techniques to help LLMs work with complex codebases, and the use of task-specific prompts for coding, debugging, and refactoring.
+  
+  **Chip Huyen and swyx Fireside Chat (20 minutes)**
+- Join Chip Huyen, author of the best-selling book *AI Engineering*, and swyx, writer and cohost of the *Latent.Space* podcast, for an insightful fireside chat exploring the cutting-edge of AI engineering and the rise of intelligent agents. They’ll delve into the practical challenges and emerging best practices for building real-world AI applications, with a focus on how foundation models are enabling a new era of autonomous agents. Expect a lively discussion on the future of AI development, bridging the gap between theory and production.
+  
+  **Bridging the AI Learning Gap: Teaching Developers to Think with AI – Andrew Stellman (15 minutes)**
+- AI can accelerate development, helping developers generate working code faster than ever. But when AI short-circuits conventional learning processes, it can lead to slower skill growth and tech debt down the line—especially for junior developers still working on their skills. Andrew Stellman, software developer and author of *Head First C#*, shares lessons from Sens-AI, a learning path built specifically for early-career developers, and offers insights into the gap between junior and senior engineers. You’ll leave with a new perspective on AI-assisted coding—and practical ways to keep building your skills while working with AI tools.
+  
+  **Break (5 minutes)**
+- ### **Part 3: The New AI Workflow**
+  
+  **Lessons Learned Vibe Coding and Vibe Debugging a Chrome Extension with Windsurf – Iyanuoluwa Ajao (5 minutes)**
+- Vibe coding web apps is one thing, but what about Chrome extensions? Unlike web apps where frameworks and platforms like Replit make things easier, Chrome extensions require a more native, hands-on approach. Software and AI engineer Iyanuoluwa Ajao explores the quirks of extension development and how to vibe code one from scratch. You’ll learn how chrome extensions work under the hood, how to vibe code an extension by thinking in flows and files, and how to vibe debug using dependency mapping and other techniques.
+  
+  **Designing Intelligent AI for Autonomous Action – Nikola Balic (5 minutes)**
+- AI-native applications demand a fundamental rethinking of software architecture. Nikola Balic, head of growth at VC-funded startup Daytona, bridges agent design theory and engineering practice, showcasing how AI agent architectures amplify productivity. Through case studies like AI-powered code generation and autonomous coding, you’ll learn key patterns for balancing speed, safety, and strategic decision-making—and gain a road map for catapulting legacy systems into agent-driven platforms.
+  
+  **Secure the AI: Protect the Electric Sheep – Brett Smith (5 minutes)**
+- Distinguished software architect, engineer, and developer Brett Smith discusses AI security risks to the software supply chain, covering attack vectors, how they relate to the OWASP Top 10 for LLMs, and how they tie into scenarios in CI/CD pipelines. You’ll learn techniques for closing the attack vectors and protecting your pipelines, software, and customers.
+  
+  **How Does GenAI Affect Developer Productivity? – Chelsea Troy (15 minutes)**
+- The advent of consumer-facing generative models in 2021 catalyzed a massive experiment in production on our technical landscape. A few years in, we’re starting to see published research on the results of that experiment. Join Chelsea Troy, leader of Mozilla’s MLOps team, for a tour through the current findings and a few summative thoughts about the future.
+  
+  **Eval Engineering: The End of Machine Learning Engineering as We Know It – Lili Jiang (15 minutes)**
+- Lili Jiang, former Waymo evaluation leader, reveals how LLMs are transforming ML engineering. Discover why evaluation is becoming the new frontier of ML expertise, how eval metrics are evolving into sophisticated algorithms, and why measuring deltas instead of absolute performance creates powerful development flywheels.
+  
+  **Closing Remarks – Tim O’Reilly (10 minutes)**
+- Tim closes out today’s event.

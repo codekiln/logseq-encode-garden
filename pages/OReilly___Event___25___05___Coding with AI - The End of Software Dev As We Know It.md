@@ -4,3 +4,5 @@
 - 11:18 [[Conference/ORCwAI/Pt1/1120 Fireside Chat with Gergely Orosz and Addy Osmani]]
 - 11:40 [[Conference/ORCwAI/Pt1/1140 Kent Beck Vibe Coding]]
 - 11:55 [[Conference/ORCwAI/Pt1/1152 Junior Devs and GenAI - Camille Fournier Avi Flombaum Maxi Ferreira]]
+- 12:15 ten minute break
+-
