@@ -10,11 +10,11 @@ tags:: [[CursorAI/Changelog]]
 		- Agent can now edit rules reliably
 	- ### More accessible history
 		- Chat history has moved into the command palette
-		- Access via "Show history button" in Chat or through the `Show Chat History` command
+		- Access via "Show history button" in Chat or through the `Show Chat History` command [[CursorAI/Command/Show Chat History]]
 	- ### Making reviews easier
 		- Reviewing agent generated code is now easier with a built-in diff view
 		- Find the `Review changes` button at the bottom of chat after a message from the agent
-	- ### Images in MCP
+	- ### Images in [[CursorAI]] [[MCP Servers]]
 		- You can now pass images as part of the context in MCP servers
 		- Helps when screenshots, UI mocks, or diagrams add essential context
 	- ### Improved agent terminal control
