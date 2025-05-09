@@ -1,0 +1,62 @@
+date-created:: [[2025-04-15 Tue]]
+alias:: [[CursorAI/v/0.49.x]]
+tags:: [[CursorAI/Changelog]]
+
+- ## `0.49.x` [Rules generation, improved agent terminal and MCP images](https://www.cursor.com/changelog/0-49)
+	- ### Automated and improved rules
+		- You can now generate rules directly from a conversation using the `/Generate Cursor Rules` command [[CursorAI/Command/Generate  Cursor Rules]]
+		- For `Auto Attached` rules with path patterns defined, Agent will now automatically apply the right rules when reading or writing files [[CursorAI/Project Rule/Type/AutoAttached]]
+		- Fixed issue where `Always` attached rules now persist across longer conversations [[CursorAI/Project Rule/Type/Always]]
+		- Agent can now edit rules reliably
+	- ### More accessible history
+		- Chat history has moved into the command palette
+		- Access via "Show history button" in Chat or through the `Show Chat History` command
+	- ### Making reviews easier
+		- Reviewing agent generated code is now easier with a built-in diff view
+		- Find the `Review changes` button at the bottom of chat after a message from the agent
+	- ### Images in MCP
+		- You can now pass images as part of the context in MCP servers
+		- Helps when screenshots, UI mocks, or diagrams add essential context
+	- ### Improved agent terminal control
+		- Added more control over terminals started by the agent
+		- Commands can now be edited before they run, or skipped entirely
+		- Renamed "Pop-out" to "Move to background"
+	- ### Global ignore files
+		- Define global ignore patterns that apply across all projects via user-level settings
+		- Keeps noisy or sensitive files out of prompts without per-project configuration
+	- ### New models
+		- Added Gemini 2.5 Pro, Gemini 2.5 Flash
+		- Added Grok 3, Grok 3 Mini
+		- Added [[gpt-4.1]], o3 and o4-mini
+	- ### Project structure in context (Beta)
+		- Option to include project structure in context
+		- Adds directory structure to the prompt
+		- Improves suggestions and navigation of large or nested monorepos
+	- ### Keybindings
+		- Some `CMD+K` shortcuts are now remappable
+		- Emacs keybinding extensions now work reliably
+	- ### Improvements
+		- Simplified model picker UI for Auto-select
+		- New interface for command palette
+		- Refreshed UI for Tab jump suggestions
+		- Tooltips for modes in Chat
+		- MCP stability improvements
+		- [[AWS/Bedrock]] connection using access keys and secret keys
+		- Git > @PR renamed to [[CursorAI/@/Branch]]
+	- ### Fixes
+		- [[CursorAI/Project Rule/Type/AutoAttached]] now persist correctly across summarization
+		- [[CursorAI/Project Rules]] in [[.mdc]] files can now be created and edited without issue by [[CursorAI/Agent Mode]]
+		- Fixed selection issues with `@mention` nodes at the start of the input box
+		- Performance improvements in core editor
+	- ### Business / Teams
+		- Global ignore traversal (optional)
+		- [[AWS/IAM]] roles for [[AWS/Bedrock]]
+		- User-level usage insights for admins
+		- Auto-run controls for teams
+	- ### Patches
+		- 0.49.1: Fixed Cursor Rules editor for Remote SSH, UI delimiter display, warnings
+		- 0.49.2: Improved rule generation apply, caching, client metrics
+		- 0.49.3: Fixed chat loading issue
+		- 0.49.4: Fixed Neovim chat keybindings, indexing logs, `.cursorignore` issue
+		- 0.49.5: Improved client reliability
+		- 0.49.6: Fixed codeblocks, loading states, message rendering, folder parsing
