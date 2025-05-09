@@ -1,2 +1,2 @@
-alias:: 4o
+alias:: [[o1-mini]]
 tags:: [[AI/Model]]

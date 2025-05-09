@@ -1,5 +1,5 @@
 date-created:: [[2025-04-15 Tue]]
-alias:: [[CursorAI/v/0.49.x]]
+alias:: [[CursorAI/v/0.49.x Rules generation, improved agent terminal and MCP images]]
 tags:: [[CursorAI/Changelog]]
 
 - ## `0.49.x` [Rules generation, improved agent terminal and MCP images](https://www.cursor.com/changelog/0-49)
@@ -25,9 +25,9 @@ tags:: [[CursorAI/Changelog]]
 		- Define global ignore patterns that apply across all projects via user-level settings
 		- Keeps noisy or sensitive files out of prompts without per-project configuration
 	- ### New models
-		- Added Gemini 2.5 Pro, Gemini 2.5 Flash
-		- Added Grok 3, Grok 3 Mini
-		- Added [[gpt-4.1]], o3 and o4-mini
+		- Added [[Google/AI/Model/Gemini/2.5/Pro]], [[Google/AI/Model/Gemini/2.5/Flash]]
+		- Added [[xAI/Model/Grok/3]], [[xAI/Model/Grok/3/Mini]]
+		- Added [[OpenAI/Model/GPT/4/1]], [[OpenAI/Model/o3]] and [[OpenAI/Model/o4/Mini]]
 	- ### Project structure in context (Beta)
 		- Option to include project structure in context
 		- Adds directory structure to the prompt

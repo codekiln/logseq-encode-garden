@@ -1,1 +1,43 @@
-alias:: [[Gemini 2.5 Pro]]
+---
+alias:: [[gemini-2.5-pro-preview-05-06]]
+tags:: [[AI/Model]]
+---
+
+- # [Gemini 2.5 Pro Preview 05-06](https://ai.google.dev/gemini-api/docs/models#gemini-2.5-pro-preview-05-06)
+  - ## Key Features
+    - Preview version of Gemini 2.5 Pro (as of May 2025)
+    - Strong performance in coding tasks and reasoning
+    - Available through Google's AI platform
+    - Free tier available with high usage limits
+    - More restrictive rate limits due to preview status
+  - ## Performance Highlights
+    - [[AI Coding]]
+      - Superior performance to [[Claude 3.7 Sonnet]] in coding tasks when used with [[aider]]
+      - Effective for complex software development tasks
+    - Reasoning Capabilities
+      - Strong performance in planning and architecture tasks
+      - Used effectively for business analysis and requirement elicitation
+  - ## Model Tiers
+    - [[gemini-2.5-pro-preview-05-06]]
+      - Full-featured model for complex tasks
+      - Strong in coding and reasoning
+    - [[gemini-2.5-flash-preview-04-17]]
+      - Faster, more efficient variant
+      - Optimized for simpler tasks
+  - ## Access Details
+    - Available through Google's AI platform
+    - Free tier with high usage limits
+    - Cost-effective alternative to other premium models
+      - Approximately 1/6 the cost of [[Claude 3.7 Sonnet]]
+    - Preview model with more restrictive rate limits
+  - ## Technical Specifications
+    - Model name: `gemini-2.5-pro-preview-05-06`
+    - Input support: Text
+    - Key capabilities
+      - Advanced coding assistance
+      - Strong reasoning and planning
+      - Business analysis
+      - Requirement elicitation
+  - ## References
+    - [Official Documentation](https://ai.google.dev/gemini-api/docs/models#gemini-2.5-pro-preview-05-06)
+    - [Aider Integration](https://github.com/paul-gauthier/aider)

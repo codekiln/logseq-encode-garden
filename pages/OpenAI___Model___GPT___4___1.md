@@ -1,4 +1,5 @@
 alias:: [[gpt-4.1]]
+tags:: [[AI/Model]]
 
 - # GPT-4.1 Overview
 	- ## Key Features
