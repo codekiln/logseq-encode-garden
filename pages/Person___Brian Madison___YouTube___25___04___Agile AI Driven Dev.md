@@ -31,7 +31,7 @@ created-by:: [[Person/Brian Madison]]
 				- #### Common Issues
 					- Debugging loops
 					- Fix one thing, break another
-					- Resource intensive (uses up [[Cursor]] credits quickly)
+					- Resource intensive (uses up [[CursorAI]] credits quickly)
 				- #### Need for Better Approach
 					- For serious applications
 					- For feature additions
@@ -111,7 +111,7 @@ created-by:: [[Person/Brian Madison]]
 			- #### Future Content
 				- Implementation details coming in next video
 				- Focus on [[Gemini]] and [[OpenAI]] integration
-				- [[Cursor]] setup guidance
+				- [[CursorAI]] setup guidance
 			- #### Call to Action
 				- Try the method
 				- Share experiences in comments
