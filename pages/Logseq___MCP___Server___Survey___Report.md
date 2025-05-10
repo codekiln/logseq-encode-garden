@@ -51,7 +51,7 @@ tags:: [[MCP/Server]], [[ChatGPT/Deep Research/Response]]
 					- **Status:** **Inactive** in recent years (released around 2021–2022, 0.9.0 on NPM) but remains a useful solution for complex read-only queries
 					- **Installation:** Via npm (`npm install -g logseq-query`)
 					- **Limitations:** Does **not support writing** to the graph – it doesn't create or edit pages/blocks, because it operates on a static snapshot of the graph's database. If you need to update content, you must do so via other means (or through Logseq itself)
-				- #### [[Logseq/npm/@logseq/nbb-logseq]]
+				- #### [[Logseq/npm/@logseq/nbb-logseq]] [[NBB-Logseq]]
 					- This is a Node.js package that embeds Logseq's ClojureScript environment for scripting. In essence, `@logseq/nbb-logseq` is a customized build of **Babashka's NBB** (Node Baby…) that bundles Logseq's **graph parser and Datascript libraries**. It allows developers to run ClojureScript code against their Logseq graph in a Node context, giving access to low-level functions. For example, one can load the graph's database and run Datascript queries programmatically (similar to how plugins query `logseq.DB.datascript` in the app). This has been used to create scripts for exporting graphs, validating graph data, or running queries in CI pipelines.
 					- **Status:** **Stable** but somewhat niche (actively developed up to mid-2023, v1.2.173)
 					- **Installation:** Via npm (`npm install -g @logseq/nbb-logseq`)

@@ -1,0 +1,34 @@
+tags:: [[MCP/Server]], [[JavaScript]], [[Logseq]], [[TypeScript]]
+
+- # Logseq MCP Tools (Node.js)
+	- GitHub: [joelhooks/logseq-mcp-tools](https://github.com/joelhooks/logseq-mcp-tools)
+	- npm: [@joelhooks/logseq-mcp-tools](https://www.npmjs.com/package/@joelhooks/logseq-mcp-tools)
+	- ## Overview
+		- A Node.js MCP server (MIT-licensed) that uses the Model Context Protocol SDK and Logseq's HTTP API. It focuses on both basic graph access and higher-level analysis.
+	- ## Features
+		- Core tools for retrieving pages and content
+		- Advanced read functions:
+			- Journal entry summaries over date ranges
+			- Backlink listing
+			- Free-form Datalog queries via `smartQuery`
+		- AI-powered analysis:
+			- Knowledge gap detection
+			- Connection suggestions between pages
+	- ## Status
+		- **Active** – created in 2025
+		- ~20⭐ on GitHub
+		- Small but active community
+		- Author is a well-known developer
+	- ## Compatibility
+		- Developed and tested on macOS
+		- Works on Linux/Windows
+		- Requires Node.js
+	- ## Installation
+		- Via npm/pnpm: `npm install @joelhooks/logseq-mcp-tools`
+		- Or via Smithery CLI: `npx @smithery/cli install @joelhooks/logseq-mcp-tools`
+	- ## Usage
+		- Run server with `npm start` or `npx tsx index.ts`
+	- ## Limitations
+		- Write access limited to page level
+		- No direct block insertion/editing
+		- No real-time updates 

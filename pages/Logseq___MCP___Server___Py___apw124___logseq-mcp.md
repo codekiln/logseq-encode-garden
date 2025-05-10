@@ -1,0 +1,23 @@
+tags:: [[MCP/Server]], [[Python]], [[Logseq]]
+
+- # apw124's Logseq MCP Server
+	- GitHub: [apw124/logseq-mcp](https://github.com/apw124/logseq-mcp)
+	- ## Overview
+		- An earlier Python MCP server (MIT-licensed) with similar goals to dailydaniel's project. It exposes a rich set of namespace functions for Logseq operations.
+	- ## Features
+		- Rich set of namespace functions under `logseq.`:
+			- `logseq.get_page`
+			- `logseq.create_block`
+			- `logseq.update_block`
+		- Fine-grained block operations:
+			- Moving blocks
+			- Searching blocks by text content
+		- Aims for full parity with Logseq's plugin API
+	- ## Status
+		- **Mostly inactive** (single-digit GitHub stars)
+		- May have been a proof-of-concept
+		- Precursor to the more polished dailydaniel project
+	- ## Installation
+		- Via source: `pip install -e .`
+	- ## Usage
+		- Tied to the Cursor IDE/Claude integration 

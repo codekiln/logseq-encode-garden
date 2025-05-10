@@ -1,0 +1,27 @@
+tags:: [[MCP/Server]], [[Python]], [[Logseq]]
+
+- # Ergüt's Logseq MCP Server
+	- GitHub: [ergut/mcp-logseq-server](https://github.com/ergut/mcp-logseq-server)
+	- ## Overview
+		- A minimalist Python MCP implementation that interfaces with Logseq's API. It provides core operations for basic graph access and management.
+	- ## Features
+		- List available graphs
+		- List pages
+		- Fetch page content
+		- Search across pages
+		- Basic page management (create/update/delete)
+	- ## Status
+		- **Inactive** (only a few commits in 2025)
+		- Gained attention for enabling early Logseq–LLM integrations
+		- 66⭐ on GitHub
+	- ## Installation
+		- No published PyPI package
+		- Requires cloning the repository
+		- Open issue noted the name not on pip
+	- ## Configuration
+		- Requires Logseq's dev API
+		- Local API URL and token must be set in environment
+	- ## Limitations
+		- No built-in change notification mechanism
+		- No license information provided
+		- Limited community contributions 

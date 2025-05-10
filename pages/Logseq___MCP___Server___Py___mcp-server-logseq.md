@@ -1,0 +1,29 @@
+tags:: [[MCP/Server]], [[Python]], [[Logseq]]
+
+- # Logseq MCP Server (Python)
+	- GitHub: [dailydaniel/logseq-mcp](https://github.com/dailydaniel/logseq-mcp)
+	- PyPI: [mcp-server-logseq](https://pypi.org/project/mcp-server-logseq/)
+	- ## Overview
+		- An actively maintained Python server (MIT-licensed) exposing a comprehensive set of Logseq operations via MCP. It can list all pages, get page content, create and delete pages, as well as insert and modify blocks.
+	- ## Features
+		- Full read/write access to Logseq graphs
+		- Commands like `logseq_create_page` and `logseq_insert_block`
+		- Multiple graph support (via `repo` parameter)
+		- Block-level operations
+	- ## Status
+		- **Active** – initial release in early 2025
+		- ~17⭐ on GitHub
+		- Ongoing updates
+		- Open to contributions for query support and other enhancements
+	- ## Compatibility
+		- Runs on macOS (tested with Homebrew Python)
+		- Likely works on Linux/Windows (pure Python)
+	- ## Installation
+		- `pip install mcp-server-logseq`
+		- Launch via command-line: `python -m mcp_server_logseq`
+	- ## Configuration
+		- Requires Logseq's API to be enabled
+		- Set token as environment variable or in MCP tool config
+	- ## Limitations
+		- No real-time change notifications
+		- Clients must poll (e.g. call `logseq_search_blocks` periodically) to detect updates 
