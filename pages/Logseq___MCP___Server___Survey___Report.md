@@ -1,9 +1,23 @@
 tags:: [[MCP/Server]], [[ChatGPT/Deep Research/Response]]
 
 - # Survey of available Logseq [[MCP/Server]]s and their abilities
+	- ## [[My Notes]]
+		- [[2025-05-10 Sat]]
+			- Most promising
+				- [[Logseq/MCP/Server/Py/mcp-server-logseq]]
+					- {{embed ((681f9320-8043-48e5-9f1a-bf9877268de6))}}
+				- [[Logseq/MCP/Server/JS/@joelhooks/logseq-mcp-tools]]
+					- {{embed ((681f9493-061c-4f53-a033-26ad6c1ea18f))}}
+				- [[Logseq/MCP/Server/Py/apw124/logseq-mcp]]
+					- {{embed ((681f94bc-4e32-43c9-84c8-24ff05aeae16))}}
+			- Not as promising
+				- [[Logseq/MCP/Server/Py/ruliana/mcp-pkm-logseq]]
+				  collapsed:: true
+					- {{embed ((681f9276-1927-4b40-b629-cf360eb855aa))}}
+					-
 	- [[ChatGPT/Deep Research/Response]]
-		- # Open-Source Solutions for Logseq Graph Access
 		- ## Overview
+		  id:: 681f7f60-faca-42fe-9c7a-134526a9c5ad
 			- Logseq's **Local HTTP API** (available when Logseq is running in developer mode) and its underlying **graph data** can be tapped by external tools to read and write your notes. Several open-source projects provide structured access to Logseq "graphs" (knowledge bases) via these two approaches:
 			- **MCP Servers (HTTP API-based):** Standalone servers or plugins using Logseq's local HTTP API to expose functions for listing, querying, creating, or updating pages/blocks. These are often designed to let AI assistants (via the Model Context Protocol, *MCP*) interact with your Logseq data.
 			- **Direct Node/CLI Tools:** Libraries and command-line utilities (often Node.js or ClojureScript-based) that read the Logseq graph files or database directly (e.g. via Datascript) without the Logseq UI. These enable custom queries and automations, sometimes allowing writes by modifying the Markdown/Org files.
@@ -126,5 +140,7 @@ tags:: [[MCP/Server]], [[ChatGPT/Deep Research/Response]]
 				- [logseq/nbb-logseq](https://github.com/logseq/nbb-logseq)
 			- [[Person/Jaron Swab/GitHub/lsq]] LSQ Logseq CLI ([[Go]]) – Features for journal capture and cross-format support
 				- [jrswab/lsq](https://github.com/jrswab/lsq)
-			- [[Logseq/Forum]] [Logseq forum discussions on using the HTTP API and external tools](https://discuss.logseq.com/t/python-library-to-access-and-manipulate-graphs/16505)
+			- [[Logseq/Forum]]
+				- [Logseq forum discussions on using the HTTP API and external tools](https://discuss.logseq.com/t/python-library-to-access-and-manipulate-graphs/16505)
+				- [[Logseq/Forum/25/04/MCP Server for Logseq]]
 -

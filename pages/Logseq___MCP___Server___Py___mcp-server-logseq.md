@@ -4,12 +4,47 @@ tags:: [[MCP/Server]], [[Python]], [[Logseq]]
 	- GitHub: [dailydaniel/logseq-mcp](https://github.com/dailydaniel/logseq-mcp)
 	- PyPI: [mcp-server-logseq](https://pypi.org/project/mcp-server-logseq/)
 	- ## Overview
+		- ### [[My Notes]]
+			- [[2025-05-10 Sat]] has the ability to edit blocks, insert blocks, controlling the edit mode of a block, etc.
+			  id:: 681f9320-8043-48e5-9f1a-bf9877268de6
 		- An actively maintained Python server (MIT-licensed) exposing a comprehensive set of Logseq operations via MCP. It can list all pages, get page content, create and delete pages, as well as insert and modify blocks.
 	- ## Features
 		- Full read/write access to Logseq graphs
-		- Commands like `logseq_create_page` and `logseq_insert_block`
+		- Commands like `logseq_create_page` and `logseq_insert_block`, `logseq_edit_block`, etc
 		- Multiple graph support (via `repo` parameter)
 		- Block-level operations
+		- ### Block Operations
+		  [](https://github.com/dailydaniel/logseq-mcp#block-operations)
+			- **logseq_insert_block** - Create new blocks in Logseq **Parameters**:
+				- `parent_block` (string): Parent block UUID or page name
+				- `content` (string, required): Block content
+				- `is_page_block` (boolean): Create as page-level block
+				- `before` (boolean): Insert before parent block
+				- `custom_uuid` (string): Custom UUIDv4 for block
+			- **logseq_edit_block** - Enter block editing mode **Parameters**:
+				- `src_block` (string, required): Block UUID
+				- `pos` (number): Cursor position
+			- **logseq_exit_editing_mode** - Exit editing mode **Parameters**:
+				- `select_block` (boolean): Keep block selected
+		- ### Page Operations
+		  [](https://github.com/dailydaniel/logseq-mcp#page-operations)
+			- **logseq_create_page** - Create new pages **Parameters**:
+				- `page_name` (string, required): Page name
+				- `properties` (object): Page properties
+				- `journal` (boolean): Create as journal page
+				- `format` (string): Page format (markdown/org)
+			- **logseq_get_page** - Get page details **Parameters**:
+				- `src_page` (string, required): Page identifier
+				- `include_children` (boolean): Include child blocks
+			- **logseq_get_all_pages** - List all pages **Parameters**:
+				- `repo` (string): Repository name
+		- ### Content Retrieval
+		  [](https://github.com/dailydaniel/logseq-mcp#content-retrieval)
+			- **logseq_get_current_page** - Get active page/block **Parameters**: None
+			- **logseq_get_current_blocks_tree** - Current page's block hierarchy **Parameters**: None
+			- **logseq_get_editing_block_content** - Get content of active block **Parameters**: None
+			- **logseq_get_page_blocks_tree** - Get page's block structure **Parameters**:
+				- `src_page` (string, required): Page identifier
 	- ## Status
 		- **Active** – initial release in early 2025
 		- ~17⭐ on GitHub
@@ -26,4 +61,4 @@ tags:: [[MCP/Server]], [[Python]], [[Logseq]]
 		- Set token as environment variable or in MCP tool config
 	- ## Limitations
 		- No real-time change notifications
-		- Clients must poll (e.g. call `logseq_search_blocks` periodically) to detect updates 
+		- Clients must poll (e.g. call `logseq_search_blocks` periodically) to detect updates
