@@ -1,0 +1,25 @@
+tags:: [[MCP/Server]], [[Logseq]], [[PRD]]
+
+- # Logseq MCP Project Summary and Requirements
+	- ## Project Summary
+		- **Goal:** Identify or create a JSON-RPC-based MCP server that supports structured read/write access to multiple local Logseq graphs.
+		- **Scope:** Deep technical survey and prototype evaluation of candidate MCP servers or components (e.g., `@logseq/nbb-logseq`, `logseq-query`) that meet project requirements.
+	- ## Product Requirements Document (PRD)
+		- ### Functional Requirements
+			- ✅ Must read from and write to Logseq graphs (blocks, pages, properties).
+			- ✅ Must support simultaneous access to multiple local graphs.
+			- ✅ Must expose a JSON-RPC API conforming to the Model Context Protocol (MCP).
+			- ✅ Must support periodic polling (real-time subscriptions not required).
+			- ✅ Must run on macOS.
+			- ✅ Must interoperate with AI agents using structured formats (e.g., Markdown with frontmatter, JSON).
+			- ✅ Must work via either:
+				- Logseq's official/local HTTP API (if viable), **or**
+				- a Node/npm-based method like `@logseq/nbb-logseq` or `logseq-query`.
+		- ### Non-Requirements
+			- ❌ No need for authentication/authorization or multi-user permissioning.
+			- ❌ No requirement for background/daemon mode (CLI or persistent server both acceptable).
+			- ❌ No need for cross-platform support (only macOS required).
+			- ❌ No constraint on programming language or runtime.
+		- ### Open Questions
+			- ❓ What are the current capabilities and limitations of `logseq-query` and `@logseq/nbb-logseq` regarding write operations?
+			- ❓ Can the MCP server dynamically discover and reload graphs or must graphs be statically configured?
