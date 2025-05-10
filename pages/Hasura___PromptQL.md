@@ -1,9 +1,9 @@
-tags:: ai-engineering, llm, query-languages
+tags:: [[Query Languages]] 
 alias:: [[PromptQL]]
 
 - # [PromptQL: A Query Language for LLM Interactions](https://promptql.hasura.io/)
 	- ## Overview
-		- PromptQL is a declarative query language developed by Hasura that enables structured interactions with Large Language Models (LLMs)
+		- PromptQL is a declarative query language developed by Hasura that enables structured interactions with Large Language Models ([[LLMs]])
 		- It provides a standardized way to compose, validate, and execute prompts while maintaining type safety and reproducibility
 	- ## Key Problems Solved
 		- ### Prompt Engineering Challenges
@@ -21,7 +21,7 @@ alias:: [[PromptQL]]
 			- Limited ability to compose complex workflows from simpler components
 	- ## Core Features
 		- ### Declarative Syntax
-			- SQL-like syntax that's familiar to developers
+			- [[SQL]]-like syntax that's familiar to developers
 			- Clear separation of concerns between prompt structure and content
 			- Built-in support for variables and parameters
 		- ### Type System

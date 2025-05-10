@@ -1,1 +1,1 @@
-alias:: [[Python]]
+alias:: [[Python]], [[Programming/Language/Scripting/Python]]
