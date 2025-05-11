@@ -22,55 +22,39 @@ alias:: [[Person/Lyz/Identity]]
 			- # Logseq Example in Orgmode Style (Lyz’s System)
 			- Below is an Orgmode snippet showing how Hermione Granger might model her Identities and Axis using the structure from Lyz’s Blue Book. This follows the Org headings, property drawers, and linking conventions demonstrated at [https://lyz-code.github.io/blue-book/orgmode/](https://lyz-code.github.io/blue-book/orgmode/).
 			- ```
-			  * Hermione Granger
-			  ** Identities
-			  *** Student                                 :student:
-			  Description:: Dedicated and high-achieving student at Hogwarts School of Witchcraft and Wizardry.
-			  Why Important:: Central to personal growth and group contributions through knowledge mastery.
-			  Responsibilities:: Attend classes and complete assignments; support classmates; pursue extra-curricular research.
-			  Domains:: Magical Education; Academic Community
-			  Projects:: OWLs & NEWTs prep; study-group organization; advanced magic research
-			  Goals:: Master all Hogwarts subjects; achieve top grades
-			  Plans:: Create weekly study schedule; consult library & professors
-			  IdentityPlan:: (:Axis PersonalGrowth Excellence)
+			  * Hermione Grainger :identity:
+			  ** Analysis of the identity
+			     Hermione Grainger embodies intellectual curiosity, discipline, and moral courage. She seeks both personal mastery of magic and the advancement of justice within the wizarding world.
 			  
-			  *** Activist                                :activist:
-			  :PROPERTIES:
-			  :Description:    Advocate for rights of marginalized magical beings.
-			  :Why Important: Demonstrates commitment to justice and challenges status quo.
-			  :Responsibilities: Educate peers; campaign for policy change.
-			  :Domains:        Magical Law & Society; Creature Rights
-			  :Projects:       S.P.E.W. leadership; Ministry petitions
-			  :Goals:          Promote house-elf welfare; raise social awareness
-			  :Plans:          Draft pamphlets; host discussion events
-			  :IdentityPlan:   (:Axis SocialImpact Courage)
-			  :END:
+			  ** Identity characteristics
+			     - **Values** :: Justice, Equality, Knowledge, Loyalty  
+			     - **Habits** :: Daily reading, meticulous note-taking, helping peers  
+			     - **Abilities** :: Expert spell-casting, research skill, superb time-management  
 			  
-			  *** Friend                                  :friend:
-			  :PROPERTIES:
-			  :Description:    Loyal and supportive companion to Harry and Ron.
-			  :Why Important: Provides emotional grounding and strengthens team bonds.
-			  :Responsibilities: Offer emotional/tactical support; foster trust.
-			  :Domains:        Personal Relationships; Group Dynamics
-			  :Projects:       Mission planning & execution; crisis support
-			  :Goals:          Stand by friends; cultivate deep bonds
-			  :Plans:          Regular check-ins; active mission participation
-			  :IdentityPlan:   (:Axis Belonging Loyalty)
-			  :END:
+			  ** Identity plan
+			  *** TODO Academic Mastery of Magic :axis:
+			  **** Axis analysis
+			     Deepen theoretical and practical knowledge beyond the Hogwarts curriculum.
+			  **** Axis plan
+			  ***** Project Advanced Potion Brewing :project:
+			        DEADLINE: <2025-12-15>
+			        - [ ] Finish *Moste Potente Potions* self-study
+			        - [ ] Brew Polyjuice variations and document results
+			  ***** Project Ancient Runes Intensive :project:
+			        - [ ] Translate 10 previously unknown runic inscriptions
+			        - [ ] Publish findings in the Hogwarts Library archive
 			  
-			  ** Axis
-			  *** PersonalGrowth
-			    - Focus: continuous learning, self-reflection, resilience
-			  *** Excellence
-			    - Focus: academic mastery, high standards, intellectual rigor
-			  *** SocialImpact
-			    - Focus: advocacy, community engagement, leadership
-			  *** Courage
-			    - Focus: moral bravery, challenging injustice, risk-taking
-			  *** Belonging
-			    - Focus: interpersonal trust, supportive connection
-			  *** Loyalty
-			    - Focus: steadfastness, reliability, commitment
+			  *** TODO Advocacy for Magical Creature Rights :axis:
+			  **** Axis analysis
+			     Lead initiatives to improve welfare and legal status of magical creatures.
+			  **** Axis plan
+			  ***** Project Relaunch S.P.E.W. Awareness Drive :project:
+			        DEADLINE: <2025-10-01>
+			        - [ ] Update educational leaflets
+			        - [ ] Host an inter-house seminar on house-elf welfare
+			  ***** Project Werewolf Employment Fair :project:
+			        - [ ] Coordinate with the Ministry’s Creatures Department
+			        - [ ] Secure five participating employers
 			  ```
 			- This Orgmode example mirrors Lyz’s conventions, using headings for each identity, property drawers for detail, and an explicit `:IdentityPlan:` linking each identity to relevant Axis values.
 			-
