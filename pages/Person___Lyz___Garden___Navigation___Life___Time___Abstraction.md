@@ -1,0 +1,16 @@
+# [Time navigation abstraction levels - The Blue Book](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/)
+	- > To be able to manage the complexity of the life roadmap we can use models for different levels of abstraction with different purposes. In **increasing** level of abstraction:
+		- [Step](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#step)
+		- [Action](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#action)
+		- [Project](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#project)
+		- [Area](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#area)
+		- [Goal](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#goal)
+		- [Vision](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#vision)
+		- [Purpose and principles](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#purpose-and-principles)
+	- ## [[My Notes]]
+		- [[2025-05-11 Sun]]
+			- presents a set of templates for how to map tasks at these time levels into an [[Orgmode]] system
+			- Similar to [[Person/Tiago Forte/PARA]]'s  separation between projects and areas, but puts **Areas** as the parent of **Projects**
+			- Subpages
+				- [[Person/Lyz/Identity]]
+				- [[Person/Lyz/Identity/Axis]]

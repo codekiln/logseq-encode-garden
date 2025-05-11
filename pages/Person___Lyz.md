@@ -1,3 +1,6 @@
 - Not much about this person online other than their amazing [[Knowledge Garden]]
-	- [[Person/Lyz/Garden]] [lyz-code (Lyz)](https://github.com/lyz-code)
-		- has lots of info about systems, [[DevOps]], as well as many other topics
+	- ## [[Person/Lyz/Garden]] [lyz-code (Lyz)](https://github.com/lyz-code)
+		- ### [[My Notes]] on Lyz's "blue-book"
+			- has lots of info about systems, [[DevOps]], as well as many other topics
+			- [[2025-05-11 Sun]]
+				- [[Person/Lyz/Garden/Navigation/Life/Time]]

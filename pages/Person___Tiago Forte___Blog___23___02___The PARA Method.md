@@ -1,0 +1,34 @@
+tags:: [[Person/Tiago Forte/PARA]]
+
+- # [The PARA Method: The Simple System for Organizing Your Digital Life in Seconds](https://fortelabs.com/blog/para/)
+	- PARA is based on a simple observation: that there are only four categories that encompass all the information in your life.
+	- ![PARA explained](https://fortelabs.com/wp-content/uploads/2017/02/3-BASB_Illos_Gray_211015_PARA-1024x537.jpg)
+	- You have **projects** you’re actively working on – short-term efforts (in your work or personal life) that you take on with a certain goal in mind. For example:
+		- Complete webpage design
+		- Buy a new computer
+		- Write research report
+		- Renovate the bathroom
+		- Finish Spanish language course
+		- Set up new living room furniture
+	- You have **areas** of responsibility – important parts of your work and life that require ongoing attention. These might include:
+		- Work responsibilities such as Marketing, Human Resources, Product Management, Research and Development, Direct Reports, or Engineering
+		- Personal responsibilities such as Health, Finances, Kids, Writing, Car, or Home
+	- Then you have **resources** on a range of topics you’re interested in and learning about, such as:
+		- Graphic design
+		- Personal productivity
+		- Organic gardening
+		- Coffee
+		- Modern architecture
+		- Web design
+		- Japanese language
+		- French literature
+		- Notetaking
+		- Breathwork
+		- Habit formation
+		- Photography
+		- Marketing assets
+	- Finally, you have **archives**, which include anything from the previous three categories that is no longer active, but you might want to save for future reference:
+		- Projects you’ve completed or put on hold
+		- Areas that are no longer active or relevant
+		- Resources that you’re no longer interested in
+	- ![PARA hierarchy](https://fortelabs.com/wp-content/uploads/2017/02/PARA-blog-post-PARA-hierarchy.jpeg)
