@@ -3,6 +3,7 @@ tags:: [[MCP/Server]], [[ChatGPT/Deep Research/Response]]
 - # Survey of available Logseq [[MCP/Server]]s and their abilities
 	- ## [[My Notes]]
 		- [[2025-05-10 Sat]]
+		  id:: 681f8bab-19c2-4241-9ce4-53a5b6f7bc97
 			- Most promising
 				- [[Logseq/MCP/Server/Py/mcp-server-logseq]]
 					- {{embed ((681f9320-8043-48e5-9f1a-bf9877268de6))}}
