@@ -1,4 +1,5 @@
 alias:: [[Person/Lyz/Identity]]
+up:: [[Person/Lyz/Garden/Navigation/Life/Time/Abstraction]]
 
 - # [Identities - The Blue Book](https://lyz-code.github.io/blue-book/identities/)
 	- ## Quotes

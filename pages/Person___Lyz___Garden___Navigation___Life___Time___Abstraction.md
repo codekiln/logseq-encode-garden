@@ -3,7 +3,48 @@
 		- [Step](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#step)
 		- [Action](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#action)
 		- [Project](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#project)
-		- [Area](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#area)
+		- ## [Area](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#area) [[Person/Lyz/Area]]
+			- ### Quotes
+				- an **Area**
+					- Models a **group of Projects** that follow some common thread
+						- interest
+						- roles
+						- accountabilities
+					- not things to **finish**
+					- used as criteria for analyzing, defining a specific aspect of your life
+						- to prioritize its projects to reach a higher outcome
+					- used to maintain balance and sustainability on our responsibilities as we operate in the world
+					- Areas' titles don't contain verbs as they don't model actions.
+						- #Examples
+							- *health*
+							- *travels*
+							- *economy*
+			- #### See also [[Person/Lyz/Garden/Navigation/Life/Roadmap/Adjustment/Area]] - [Area review](https://lyz-code.github.io/blue-book/roadmap_adjustment/#area)
+				- #### Quotes
+					- ask the following questions with sincerity; it doesn't matter if answers aren't forthcoming; "live the questions."
+						- ##### What does your desire tell you about the area? [⚑](https://lyz-code.github.io/blue-book/roadmap_adjustment/#what-does-your-desire-tell-you-about-the-area)
+						- ##### What does your reason tell you about the area? [⚑](https://lyz-code.github.io/blue-book/roadmap_adjustment/#what-does-your-reason-tell-you-about-the-area)
+						- ##### Where are you currently pursuing comfort, when what's called for is a little discomfort? [⚑](https://lyz-code.github.io/blue-book/roadmap_adjustment/#where-are-you-currently-pursuing-comfort-when-whats-called-for-is-a-little-discomfort)
+						- ##### In what ways have you yet to accept the fact that you are who you are, not the person you think you ought to be? [⚑](https://lyz-code.github.io/blue-book/roadmap_adjustment/#in-what-ways-have-you-yet-to-accept-the-fact-that-you-are-who-you-are-not-the-person-you-think-you-ought-to-be)
+						- ##### Where are you holding back until you feel like you know what you’re doing? [⚑](https://lyz-code.github.io/blue-book/roadmap_adjustment/#where-are-you-holding-back-until-you-feel-like-you-know-what-youre-doing)
+						- ##### How would you spend your time differently in the area if you didn’t care so much about seeing your actions reach fruition? [⚑](https://lyz-code.github.io/blue-book/roadmap_adjustment/#how-would-you-spend-your-time-differently-in-the-area-if-you-didnt-care-so-much-about-seeing-your-actions-reach-fruition)
+						-
+		- ## [[Person/Lyz/Identity/Axis]] - [Axis](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#axis)
+			- "Above" an area; groups areas
+				- > Sometimes the area documents start to grow, and you kind of get the feeling that an area has subareas, in this case the area that gathers the rest of subareas is identified as an axis.
+			- ### [Essential intent](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#essential-intent) - [[Person/Lyz/Essential Intent]]
+				- #### Quotes
+					- An Essential Intent
+						- **is** an inspirational, concrete statement
+							- guides a sense of purpose
+							- charts life’s path
+							- meaningful and measurable (to you)
+						- its **purpose**
+							- to adhere to **one big decision** that **settles one thousand later decisions**
+					- An Essential Intent is **not**
+						- vision and mission statements like "We want to change the world"
+						- vague, general values like “innovation” or “teamwork”
+						- shorter-term quarterly objectives like “Pass maths”
 		- [Goal](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#goal)
 		- [Vision](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#vision)
 		- [Purpose and principles](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#purpose-and-principles)
