@@ -1,4 +1,5 @@
 tags:: [[Idea/My]]
+cgpt-link:: https://chatgpt.com/g/g-p-67f8f6b926a8819192b3b953d0bf4266-idea-langgraph-streamio/project
 
 - # Aichat -
 	- [[My Notes]]
@@ -8,5 +9,5 @@ tags:: [[Idea/My]]
 				- StreamIO is a composable communication infrastructure platform, that is, an in-app communications SDK provider. It is a service that has a well-defined API for how to make a chat application (see [Backend - Python Chat Messaging Docs](https://getstream.io/chat/docs/python/?language=python); they also have over a dozen SDKs in different languages).
 					- It was designed in the era before AI was really popular, so it was designed to solve a different problem than most AI apps. There are many competitors to StreamIO, but it's the one I'm most familiar with. It's important to note that StreamIO isn't just about chat. It is a [[CPaaS]], and it offers SDKs for real time multi-channel video, audio and notifications alongside its chat-centric features.
 				- [langgraph](https://langchain-ai.github.io/langgraph/tutorials/introduction/) is one of many frameworks for agentic AI apps. There are many competitors there, too.
-			- So I'm going to articulate this idea in terms of StreamIO Chat, and LangGraph.
-				- I want to use the
+			- This idea will be articulated first in terms of StreamIO Chat, and LangGraph, but the central idea is to create an adapter that would work for arbitrary chat and AI libraries.
+-
