@@ -1,0 +1,63 @@
+cgpt-link:: [cgpt - Ableton/Keyshort/Single-Key](https://chatgpt.com/g/g-p-6815d54d7a708191a3405a601b4773ba-erik-and-kev-proj-25-t1-finalizerec/c/6822fd17-9120-800a-a388-7f2ae097fcf2)
+
+- # [Ableton Live Keyboard Shortcuts](https://www.ableton.com/en/live-manual/11/live-keyboard-shortcuts/) that utilize a single letter
+	- ## [[My Notes]]
+		- [[2025-05-13 Tue]] assembled this list so as to find the keys that are free for quick mapping with the [Key Map Mode Switch - see also 29.2.5 Computer Keyboard Remote Control](https://www.ableton.com/en/live-manual/11/midi-and-key-remote-control/#computer-keyboard-remote-control) in the [[Ableton/Manual/29/02/05 Computer Keyboard Remote Control]].
+			- Specifically, I was looking for good default shortcuts for [[Ableton/Manual/06/03 Launching the Arrangement with Locators]]
+	- ## Single-letter shortcuts (macOS, no modifiers)
+		- alphabetical
+			- mapped
+				- `A` – toggle Automation Mode
+				- `B` – toggle Draw Mode
+				- `C` – arm selected track / decrease Computer-MIDI-keyboard velocity*
+				- `D` – toggle Drum-Rack last-selected pad
+				- `F` – momentarily show Fade handles
+				- `H` – optimise Arrangement height
+				- `K` – highlight Scale in MIDI editor
+				- `M` – enable/disable Computer MIDI Keyboard
+				- `Q` – toggle Hot-Swap mode
+				- `R` – reverse selected audio
+				- `S` – solo selected track(s)
+				- `T` – audition selected Take lane
+				- `U` – fold/unfold selected track(s)
+				- `V` – increase Computer-MIDI-keyboard velocity*
+				- `W` – optimise Arrangement width
+				- `X` – zoom back from current selection / raise Computer-MIDI-keyboard octave*
+				- `Z` – zoom to current selection / lower Computer-MIDI-keyboard octave*
+			- unmapped
+				- `E`
+				- `G`
+				- `I`
+				- `J`
+				- `L`
+				- `N`
+				- `O`
+				- `P`
+		- numerical
+			- mapped
+				- `0` - Deactivate / Reactivate selected clip, note or automation - Works everywhere (Session, Arrangement, MIDI editor)
+				- `1` - `7` -
+					- Assign Color(s) to Selected Browser Item(s)
+			- unmapped
+				- `8`
+				- `9`
+		- punctual
+			- mapped
+				- `=` or `+`: Zoom In
+				- `-`: Zoom Out
+				- `.` and `,`: *Go to Next Field (Bar/Beat/16th)*
+			- unmapped
+				- suggested user mappings
+					- [[Ableton/Manual/06/03 Launching the Arrangement with Locators]]
+						- {{embed ((6823088d-fa5b-4a59-99c1-f6d211a63f9d))}}
+						- `[`
+						- `]`
+						- `\`
+				- no suggested mapping yet
+					- `
+					- `;`
+					- `'`
+					- `/`
+		- {{embed [[Ableton/Keyshort/F-Key]]}}
+	- ## Notes
+		- *The `C`/`V` and `Z`/`X` functions apply when the Computer MIDI Keyboard is turned on.
