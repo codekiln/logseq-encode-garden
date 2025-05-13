@@ -25,14 +25,16 @@ cgpt-link:: [cgpt - Ableton/Keyshort/Single-Key](https://chatgpt.com/g/g-p-6815d
 				- `X` – zoom back from current selection / raise Computer-MIDI-keyboard octave*
 				- `Z` – zoom to current selection / lower Computer-MIDI-keyboard octave*
 			- unmapped
-				- `E`
-				- `G`
-				- `I`
-				- `J`
-				- `L`
-				- `N`
-				- `O`
-				- `P`
+				- LH
+					- `E`
+					- `G`
+				- RH
+					- `I`
+					- `J`
+					- `L`
+					- `N`
+					- `O`
+					- `P`
 		- numerical
 			- mapped
 				- `0` - Deactivate / Reactivate selected clip, note or automation - Works everywhere (Session, Arrangement, MIDI editor)
