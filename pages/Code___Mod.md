@@ -13,7 +13,7 @@ tags:: [[Term]]
 				- clang-tidy (C/C++)
 				- Scalafix (Scala)
 				- Coccinelle (C)
-				- Roslyn analyzers (C#/VB)
+				- Roslyn analyzers (`C#`/`VB`)
 				- Spoon (Java)
 				- rustfix (Rust)
 				- Rector (PHP)
