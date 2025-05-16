@@ -1,0 +1,3 @@
+# [[Diataxis]] [[Logseq]] [[ChatGPT/Project/Instruction]]
+	- ## Context
+		- This #Prompt - [ChatGPT Project Instruction Diataxis Logseq](https://github.com/codekiln/logseq-cursor-rules/blob/b6b1bf8a00d77abd99389635a79800afe7c61a5e/ChatGPT_Project_Instruction_Diataxis_Logseq.txt) - is < 8k characters and encapsulates much of what's needed to get ChatGPT to generate well-formulated logseq documents in Diataxis format.

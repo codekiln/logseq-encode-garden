@@ -9,6 +9,20 @@
         "pages/Logseq___Proj___LsqMCP___PRD.md",
         "pages/Logseq___MCP___Server___Survey___Report.md"
       ]
+    },
+    "logseq-diataxis-620": {
+      "name": "logseq-diataxis",
+      "created": "2025-05-16T13:22:29.447Z",
+      "lastUsed": "2025-05-16T13:22:42.736Z",
+      "tags": [],
+      "files": [
+        ".cursor/rules/diataxis-how-to.mdc",
+        ".cursor/rules/diataxis-reference.mdc",
+        ".cursor/rules/diataxis-tutorial.mdc",
+        ".cursor/rules/logseq-cursor-rules/logseq-flavored-markdown.mdc",
+        ".cursor/rules/logseq-cursor-rules/logseq-overview.mdc",
+        ".cursor/rules/logseq-cursor-rules/logseq-ai-model-reference.mdc"
+      ]
     }
   }
 }

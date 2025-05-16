@@ -1,0 +1,1028 @@
+This file is a merged representation of a subset of the codebase, containing specifically included files, combined into a single document by Repomix.
+
+================================================================
+File Summary
+================================================================
+
+Purpose:
+--------
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+
+File Format:
+------------
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+4. Multiple file entries, each consisting of:
+  a. A separator line (================)
+  b. The file path (File: path/to/file)
+  c. Another separator line
+  d. The full contents of the file
+  e. A blank line
+
+Usage Guidelines:
+-----------------
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+
+Notes:
+------
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Only files matching these patterns are included: .cursor/rules/diataxis-how-to.mdc, .cursor/rules/diataxis-reference.mdc, .cursor/rules/diataxis-tutorial.mdc, .cursor/rules/logseq-cursor-rules/logseq-flavored-markdown.mdc, .cursor/rules/logseq-cursor-rules/logseq-overview.mdc, .cursor/rules/logseq-cursor-rules/logseq-ai-model-reference.mdc
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+
+Additional Info:
+----------------
+
+================================================================
+Directory Structure
+================================================================
+.cursor/
+  rules/
+    logseq-cursor-rules/
+      logseq-ai-model-reference.mdc
+      logseq-flavored-markdown.mdc
+      logseq-overview.mdc
+    diataxis-how-to.mdc
+    diataxis-reference.mdc
+    diataxis-tutorial.mdc
+
+================================================================
+Files
+================================================================
+
+================
+File: .cursor/rules/logseq-cursor-rules/logseq-ai-model-reference.mdc
+================
+---
+description: How to reference an AI model in passing in a logseq page
+globs:
+alwaysApply: false
+---
+# AI Model Reference Quick Guide
+This rule extends `logseq-naming-conventions.mdc` for quickly referencing AI models in the knowledge graph without creating detailed pages.
+
+## When to Use This Rule
+- When mentioning a model in passing
+- When creating changelog entries
+- When comparing models
+- When listing available models
+- When creating stub pages for future detailed documentation
+
+## Quick Reference Format
+
+### Provider Namespaces
+- [[OpenAI/Model/...]] - For OpenAI models
+- [[Anthropic/Model/...]] - For Anthropic models
+- [[Google/AI/Model/...]] - For Google models
+- [[DeepSeek/Model/...]] - For DeepSeek models
+- [[xAI/Model/...]] - For xAI/Grok models
+
+### Version Format
+- Use forward slashes for version hierarchy
+- Example: `[[OpenAI/Model/GPT/4/1]]` for GPT-4.1
+- Example: `[[Anthropic/Model/Claude/3.5/Sonnet]]` for Claude 3.5 Sonnet
+
+### Quick Stub Page Creation
+When creating a stub page for a new model:
+
+1. Create the page with minimal frontmatter:
+   ```markdown
+   ---
+   alias:: [[model-name]]
+   tags:: [[AI/Model]]
+   ---
+   ```
+
+2. Add a basic structure:
+   ```markdown
+   - # Model Name
+     - *Stub page - detailed documentation pending*
+   ```
+
+3. Add the model to the appropriate provider's model list page if it exists
+
+## Examples
+
+<CORRECT_✅>
+```markdown
+- ### New models
+  - Added [[Google/AI/Model/Gemini/2.5/Pro]], [[Google/AI/Model/Gemini/2.5/Flash]]
+  - Added [[xAI/Model/Grok/3]], [[xAI/Model/Grok/3/Mini]]
+  - Added [[OpenAI/Model/GPT/4/1]], [[OpenAI/Model/o3]] and [[OpenAI/Model/o4/Mini]]
+```
+</CORRECT_✅>
+
+<INCORRECT_❌>
+```markdown
+- ### New models
+  - Added Gemini 2.5 Pro, Gemini 2.5 Flash
+  - Added Grok 3, Grok 3 Mini
+  - Added GPT-4.1, o3 and o4-mini
+```
+</INCORRECT_❌>
+
+## Best Practices
+- Always use the full namespace path when referencing models
+- Create stub pages for new models to maintain consistency
+- Use aliases for common model references
+- Link to existing model pages when available
+- Follow the singular naming convention from `logseq-naming-conventions.mdc`
+
+## When to Create a Detailed Page
+- When the model is a primary focus of discussion
+- When documenting model capabilities or benchmarks
+- When creating comparison pages
+- When the model is frequently referenced
+- When detailed technical specifications are needed
+
+In these cases, refer to `logseq-ai-model-details-page.mdc` for creating comprehensive model documentation.
+
+================
+File: .cursor/rules/logseq-cursor-rules/logseq-flavored-markdown.mdc
+================
+---
+description: Writing logseq-flavored-markdown (LFM)
+globs: *.md
+alwaysApply: false
+---
+# Formatting Logseq-Flavored Markdown (LFM)
+
+Note: these markdown rules are not itself in LFM (though it does contain examples of valid LFM)
+
+### ⚠️ CRITICAL: DO NOT MODIFY FRONTMATTER TAGS ⚠️
+
+- **NEVER** modify, add, or remove the `tags::` frontmatter item specifically
+- The `tags::` frontmatter (e.g., `tags:: [[MyTagHere]], [[MySecondTagHere]]`) is strictly protected
+- Even if you think a tag is missing or incorrect, DO NOT change the `tags::` frontmatter
+- This restriction applies ONLY to the `tags::` frontmatter item, not to other page attributes
+- Other page-level attributes may be modified when explicitly instructed to do so
+- Do not confuse this instruction with inline tags in the document body (e.g., `#MyTag`)
+- This is a strict requirement - modifying frontmatter tags will disrupt the user's categorization system
+
+### Basic Structure
+
+- Logseq uses a hierarchical bullet-point structure.
+- TAB Indentation determines the relationship between parent and child blocks. 
+- IMPORTANT: All content, including headings, must be prefixed with bullet points (`-`)
+- IMPORTANT: Indentations should use the TAB character.
+- Headings are created using `#`, with more `#` indicating deeper nesting
+- Heading format: `- # Heading Text` (note the bullet point before the #)
+- Content should be nested logically under the appropriate headings
+  - H2 (##) should be "under" H1 (#)
+  - H3 (###) should be "under" H2 (##)
+  - ... 
+  - H<n> should be "under H<n-1>
+- DO NOT blank newlines in the document. Each line in the whole file should have content. At the very least, a line should contain a `-`.
+
+#### Example
+
+<CORRECT_✅>
+~~~markdown
+
+- # Main Topic
+  - ## Overview
+    - ### Basic Idea
+      - Sub-detail A
+    - Detail 2
+- # Next Topic
+  - First point under next topic
+
+~~~
+<CORRECT_✅>
+
+The following example is incorrect because it lacks indentation, unordered list items, and puts newlines between headings:
+<INCORRECT_❌>
+~~~markdown
+
+# Main Topic
+
+## Overview
+
+### Basic Idea
+- Sub-detail A
+- Detail 2
+
+# Next Topic
+- Another point
+
+~~~
+</INCORRECT_❌>
+
+
+### Namespaces / Hierarchy
+
+- Logseq supports namespaces using `/` to create hierarchical page structures.
+- Namespaces help organize related content under broader categories.
+- Pages with namespaces are stored as a single file but visually represented as a hierarchy.
+- In the filesystem, Logseq replaces `/` with `___`, storing namespaced pages as single markdown files.
+- It's important that you not invent namespace links that don't already exist, to avoid polluting the knowledge garden with duplicate content.
+
+**Example:**
+
+```markdown
+[[Project/Tasks]]
+[[Work/Meetings/2024]]
+```
+
+- The above will be interpreted as:
+
+  - `Project` → `Tasks`
+  - `Work` → `Meetings` → `2024`
+
+- In the filesystem, these pages would be saved as:
+
+  - `Project___Tasks.md`
+  - `Work___Meetings___2024.md`
+
+### **Special Formatting**
+
+- **Bold:** `**bold text**`
+- *Italic:* `*italic text*`
+- `Inline code:` `` `code` ``
+- Blockquotes: `> Quote`
+- Code Blocks:
+  ```markdown
+  ~~~
+  $> git describe --tags  
+  ~~~
+  ```
+
+### Page-level attributes in Logseq
+
+**CRITICAL: NEVER modify the `tags::` frontmatter item in any document.** The user has a specific tagging system that follows particular rules not documented here. Any modification to the `tags::` frontmatter will disrupt their categorization system. Always preserve existing frontmatter tags exactly as they appear.
+
+Other page-level attributes may be modified when explicitly instructed to do so, but the `tags::` frontmatter must remain untouched.
+
+Page-level attributes or Logseq Frontmatter 
+- MUST occur as the first lines in the markdown file before an unordered list item
+- MUST use kebob-case
+- separation between key and value is with `:: `
+- The `tags::` frontmatter item specifically **MUST NOT be modified, added, or removed** under any circumstances
+
+<CORRECT_✅>
+~~~markdown
+tags:: [[Q]], [[nvm]], [[npx]]
+other-attribute:: some value
+- # Main Topic
+...
+~~~
+<CORRECT_✅>
+
+The following example is incorrect because it tries to put page level attributes as the first list item in the document: 
+<INCORRECT_❌>
+~~~markdown
+- tags:: Q, topicA
+- # Main Topic
+...
+~~~
+</INCORRECT_❌>
+
+The following example is incorrect because it does not use `:: ` to separate the key-value pairs:
+<INCORRECT_❌>
+~~~markdown
+tags: Q, topicA
+- # Main Topic
+...
+~~~
+</INCORRECT_❌>
+
+
+
+### Fenced Code Blocks Rule
+
+- When nesting fenced code blocks in markdown, avoid using triple-backticks inside another triple-backtick block.
+- Use triple-backticks for the outer markdown block and triple-tilde (`~~~`) for inner code blocks.
+- This prevents rendering issues and aligns with the CommonMark spec.
+- See also  which is a duplicate of this rule that also applies to .mdc files
+
+**Example:**
+
+```markdown
+- Here's an example of the code:
+  ~~~
+  $> git describe --tags  
+  ~~~
+```
+
+### There are no ordered list items in Logseq Flavored Markdown 
+... but you can use numbers as the first item in an unordered list item.
+REMEMBER to use TAB character for identing before the `-`
+
+<INCORRECT_❌>
+- # how to do something
+  - subheading:
+    1. do the first thing
+    2. do the second thing
+	  3. do the third thing
+</INCORRECT_❌>
+
+
+<CORRECT_✅>
+- # how to do something
+	- subheading:
+	  - 1. do the first thing
+	  - 2. do the second thing
+	  - 3. do the third thing
+</CORRECT_✅>
+
+================
+File: .cursor/rules/logseq-cursor-rules/logseq-overview.mdc
+================
+---
+description: 
+globs: *.md
+alwaysApply: false
+---
+# Overview of Logseq
+
+* Logseq is a privacy-first, open-source platform for knowledge management. 
+* A Logseq graph is a collection of markdown files and linked assets. 
+* Logseq is different from other markdown-based knowledge systems like Obsidian because it uses a block-centric approach with infinite nesting. Each block inherits the tags of its parent blocks. This relies on the unordere list item in markdown. Logseq uses a special flavor of markdown. 
+* See the Logseq Flavored Markdown cursor project rule in [logseq-flavored-markdown.mdc](mdc:.cursor/rules/logseq-cursor-rules/logseq-flavored-markdown.mdc).
+* See Logseq Directory Structure cursor project rule in [logseq-directory-structure.mdc](mdc:.cursor/rules/logseq-cursor-rules/logseq-directory-structure.mdc).
+* See the Logseq Asset Linker cursor project rule in [logseq-asset-linker.mdc](mdc:.cursor/rules/logseq-cursor-rules/logseq-asset-linker.mdc).
+* If you have access to a GitHub MCP server, then you can query documentation about logseq at the public https://github.com/logseq/docs, especially in the `pages` subdirectory.
+
+================
+File: .cursor/rules/diataxis-how-to.mdc
+================
+---
+description: "How to create a Diataxis How-To page"
+globs: 
+alwaysApply: false
+---
+# Diataxis How-To Guide Format for Logseq
+
+This rule provides guidance on creating How-To guides in Logseq following the Diataxis documentation framework principles.
+
+<rule>
+name: diataxis_how_to_format
+description: Guidelines for creating effective How-To guides in Logseq following the Diataxis framework
+filters:
+  - type: file_path
+    pattern: ".*How To.*\\.md$"
+
+actions:
+  - type: suggest
+    message: |
+      # Creating Diataxis How-To Guides in Logseq
+
+      ## Purpose
+      
+      How-to guides are **directions** that guide the reader through solving a specific problem or achieving a concrete result. They are **goal-oriented** and focused on practical tasks.
+      
+      According to the Diataxis framework, How-To guides:
+      - Address real-world problems and tasks
+      - Guide the reader's actions toward a specific goal
+      - Assume the reader knows what they want to achieve
+      - Focus on practical steps rather than conceptual understanding
+
+      See @Diataxis___How To.md and @Diataxis___How To___Create a How To.md for more detailed information in the knowledge base about how-to guides.
+      
+      ## Key Principles
+      
+      1. **Focus on tasks or problems** - Address real-world needs
+      2. **Assume competence** - The reader knows what they want to achieve
+      3. **Action-oriented** - Provide clear, executable steps
+      4. **No digressions** - Avoid explanations, teaching, or reference material
+      5. **Practical over complete** - Usability is more important than covering every possibility
+      6. **Describe a logical sequence** - Steps should flow naturally in a meaningful order
+      7. **Pay attention to naming** - Titles should clearly state what the guide helps accomplish
+      
+      ## Structure for Logseq How-To Guides
+      
+      When creating a How-To guide in Logseq, follow this structure using Logseq-Flavored Markdown (LFM):
+      
+      ```
+      tags:: [[ExistingTag1]], [[ExistingTag2]], [[Diataxis/How To]]
+      
+      - # How To [Specific Task]
+        - ## Overview
+          - Brief description of what this guide helps accomplish
+          - Who it's for and when they might need it
+        - ## Prerequisites
+          - What the reader needs before starting
+          - Tools, knowledge, or resources required
+        - ## Steps
+          - ### 1. First Step
+            - Details and guidance
+            - Screenshots or examples if helpful
+          - ### 2. Second Step
+            - And so on...
+        - ## Troubleshooting
+          - Common issues and their solutions
+        - ## Related
+          - Links to related pages: [[Page1]], [[Page2]]
+      ```
+      
+      ## Naming Convention and File Paths
+      
+      Use the namespace pattern: `Topic/Subtopic/How To/Specific Task`
+      
+      Examples:
+      - `[[Programming/Python/How To/Set Up a Virtual Environment]]`
+      - `[[PKM/Logseq/How To/Create a Template]]`
+      
+      In Logseq, namespaces using `/` are translated into file paths using triple underscores `___`. For example:
+      
+      - The page `[[Programming/Python/How To/Set Up a Virtual Environment]]` will be stored as:
+        `pages/Programming___Python___How To___Set Up a Virtual Environment.md`
+      
+      - The page `[[PKM/Logseq/How To/Create a Template]]` will be stored as:
+        `pages/PKM___Logseq___How To___Create a Template.md`
+      
+      ## Required Tags
+      
+      **IMPORTANT**: All Diataxis How-To pages MUST include the `[[Diataxis/How To]]` tag in the frontmatter.
+      
+      - If the page already has tags, add `[[Diataxis/How To]]` to the existing tags list
+      - Example: `tags:: [[ExistingTag1]], [[ExistingTag2]], [[Diataxis/How To]]`
+      - If the page has no tags yet, add: `tags:: [[Diataxis/How To]]`
+      - Never remove existing tags when adding the Diataxis tag
+      
+      ## Research Process
+      
+      If creating a How-To guide on a topic that requires research:
+      
+      1. Add a `- ### Research` section containing findings
+      2. Clearly indicate uncertain information
+      3. Ask the human collaborator specific questions to clarify scope
+      4. Co-author the guide with the human, one section at a time
+      
+      ## Language Guidelines
+      
+      - Use conditional imperatives: "If you want X, do Y"
+      - Start with clear action verbs: "Install", "Configure", "Create", etc.
+      - Use present tense and active voice
+      - Keep sentences concise and focused on the action
+      - Avoid unnecessary explanations - link to explanation pages instead
+
+examples:
+  - input: |
+      tags:: [[Python]], [[macOS]], [[Installation]], [[Diataxis/How To]]
+      
+      - # How To Install Python on macOS
+        - ## Overview
+          - This guide walks you through installing Python on macOS
+          - For developers and users who need Python for their projects
+        - ## Prerequisites
+          - macOS 10.15 or later
+          - Admin access to your computer
+        - ## Steps
+          - ### 1. Check Existing Installation
+            - Open Terminal
+            - Run `python --version` or `python3 --version`
+          - ### 2. Install Homebrew (if not installed)
+            - Run `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+          - ### 3. Install Python via Homebrew
+            - Run `brew install python`
+        - ## Troubleshooting
+          - If you see "command not found": Ensure Homebrew is in your PATH
+        - ## Related
+          - [[Programming/Python/How To/Set Up a Virtual Environment]]
+          - [[Programming/Tools/Homebrew]]
+    output: "Correctly formatted Diataxis How-To guide in Logseq with proper tags"
+
+metadata:
+  priority: high
+  version: 1.0
+  related_rules: ["logseq-flavored-markdown.mdc"]
+</rule>
+
+## Implementation Guide
+
+When implementing a Diataxis How-To guide in Logseq, follow these steps:
+
+1. **Identify a specific task or problem** that needs solving
+   - Focus on concrete, practical goals
+   - Choose tasks that are meaningful to users
+   - Ask: "What specific problem does this guide help solve?"
+
+2. **Create the page with the proper namespace**
+   - Use `Topic/Subtopic/How To/Specific Task` format
+   - This will create a file at `pages/Topic___Subtopic___How To___Specific Task.md`
+   - The triple underscore `___` is how Logseq translates namespace hierarchies into file paths
+
+3. **Add the required tags**
+   - Always include `[[Diataxis/How To]]` in the tags frontmatter
+   - Place tags at the very top of the file, before any content
+   - Format: `tags:: [[ExistingTag1]], [[ExistingTag2]], [[Diataxis/How To]]`
+   - Never remove existing tags when adding the Diataxis tag
+
+4. **Follow the Logseq-Flavored Markdown format**
+   - See [logseq-flavored-markdown.mdc](mdc:.cursor/rules/logseq-flavored-markdown.mdc) for detailed formatting rules
+   - Remember all content must be prefixed with bullet points (`-`)
+   - Use proper indentation with TAB characters
+   - No blank lines between bullet points
+
+5. **Structure the content**
+   - Start with a clear title: `- # How To [Specific Task]`
+   - Include all required sections (Overview, Prerequisites, Steps, etc.)
+   - Make steps sequential and logical
+   - Number steps for clarity: `- ### 1. First Step`
+
+6. **Focus on action and guidance**
+   - Use imperative language: "Run", "Click", "Enter", etc.
+   - Provide enough context for each step
+   - Include expected outcomes where helpful
+   - Use conditional imperatives: "If you want X, do Y"
+
+7. **Omit unnecessary information**
+   - Link to explanations rather than including them
+   - Keep reference material separate
+   - Focus on the task at hand
+   - Remember: How-To guides are about doing, not understanding
+
+8. **Test the guide**
+   - Follow your own instructions to verify accuracy
+   - Update as needed based on feedback
+
+## The Diataxis Compass for How-To Guides
+
+The Diataxis framework provides a "compass" to help identify what type of documentation you're creating:
+
+| If the content... | ...and serves the user's... | ...then it belongs to... |
+|-------------------|------------------------------|--------------------------|
+| informs action    | application of skill         | a how-to guide           |
+
+How-To guides:
+- Inform action (not cognition)
+- Serve the application (not acquisition) of skill
+- Are goal-oriented (not learning-oriented)
+- Focus on practical tasks (not theoretical understanding)
+
+Remember that a good How-To guide serves as a reliable reference that users can return to whenever they need to accomplish the specific task. It should be clear, concise, and focused on helping the user achieve their goal with minimal distractions.
+
+================
+File: .cursor/rules/diataxis-reference.mdc
+================
+---
+description: "How to create a Diataxis Reference page"
+globs: 
+alwaysApply: false
+---
+
+# Diataxis Reference Guide Format for Logseq
+
+This rule provides guidance on creating Reference documentation in Logseq following the Diataxis documentation framework principles.
+
+<rule>
+name: diataxis_reference_format
+description: Guidelines for creating effective Reference documentation in Logseq following the Diataxis framework
+filters:
+  - type: file_path
+    pattern: ".*Ref.*\\.md$"
+
+actions:
+  - type: suggest
+    message: |
+      # Creating Diataxis Reference Documentation in Logseq
+
+      ## Purpose
+      
+      Reference documentation provides **technical descriptions** of a product and how to use it effectively. Reference material is **information-oriented** and serves as a reliable source of truth.
+      
+      According to the Diataxis framework, Reference documentation:
+      - Contains propositional or theoretical knowledge that users consult during practical work
+      - Describes the product as succinctly and clearly as possible, in an orderly and systematic way
+      - Is led by the structure and nature of the product it describes (unlike tutorials and how-to guides)
+      - Provides users with certainty and confidence—firm platforms on which to stand while they work
+      
+      ## Key Principles
+      
+      1. **Describe and Only Describe** - Neutral description is the key imperative
+      2. **Adopt Standard Patterns** - Reference material is most useful when consistent
+      3. **Respect the Structure of the Product** - Mirror the logical organization of what you're documenting
+      4. **Provide Examples** - Illustrate usage without falling into explanation or instruction
+      5. **Be Austere** - Users consult reference material rather than read it from beginning to end
+      6. **Be Authoritative** - No doubt or ambiguity; wholly reliable and definitive
+      
+      ## Structure for Logseq Reference Documentation
+      
+      When creating Reference documentation in Logseq, follow this structure using Logseq-Flavored Markdown (LFM):
+      
+      ```
+      tags:: [[ExistingTag1]], [[ExistingTag2]], [[Diataxis/Reference]]
+      
+      - # [Topic Name] Reference
+        - ## Overview
+          - Brief, factual description of what this reference documents
+          - Scope and boundaries of the reference material
+        - ## Structure
+          - How the reference is organized (if needed)
+          - Any conventions used throughout the document
+        - ## Core Components
+          - ### Component 1
+            - Precise, factual description
+            - Technical specifications
+            - Parameters, properties, or attributes
+            - Examples of usage
+          - ### Component 2
+            - And so on...
+        - ## Technical Details
+          - Specifications, constraints, and requirements
+          - Version information (if applicable)
+          - Dependencies and relationships
+        - ## Related References
+          - Links to related reference pages: [[Page1/Ref/Topic]], [[Page2/Ref/Topic]]
+      ```
+      
+      ## Naming Convention and File Paths
+      
+      Use the namespace pattern: `Topic/Subtopic/Ref/Specific Subject`
+      
+      Examples:
+      - `[[API/Endpoints/Ref/Authentication]]`
+      - `[[Unicode/Block/Ref/Symbols for Legacy Computing]]`
+      
+      In Logseq, namespaces using `/` are translated into file paths using triple underscores `___`. For example:
+      
+      - The page `[[API/Endpoints/Ref/Authentication]]` will be stored as:
+        `pages/API___Endpoints___Ref___Authentication.md`
+      
+      - The page `[[Unicode/Block/Ref/Symbols for Legacy Computing]]` will be stored as:
+        `pages/Unicode___Block___Ref___Symbols for Legacy Computing.md`
+      
+      ## Required Tags
+      
+      **IMPORTANT**: All Diataxis Reference pages MUST include the `[[Diataxis/Reference]]` tag in the frontmatter.
+      
+      - If the page already has tags, add `[[Diataxis/Reference]]` to the existing tags list
+      - Example: `tags:: [[ExistingTag1]], [[ExistingTag2]], [[Diataxis/Reference]]`
+      - If the page has no tags yet, add: `tags:: [[Diataxis/Reference]]`
+      - Never remove existing tags when adding the Diataxis tag
+      
+      ## Language Guidelines
+      
+      - Use neutral, objective language
+      - Focus on facts, not opinions or interpretations
+      - Present information in a consistent format
+      - Use present tense for descriptions
+      - Be precise and unambiguous
+      - Avoid instructional language ("do this," "follow these steps")
+      - Separate description from explanation (link to explanation pages instead)
+      
+      ## Common Pitfalls to Avoid
+      
+      - Mixing reference with tutorials or how-to content
+      - Including opinions, speculation, or marketing language
+      - Using inconsistent formats or structures
+      - Assuming auto-generated reference is sufficient documentation
+      - Failing to update reference when the product changes
+
+examples:
+  - input: |
+      tags:: [[Unicode]], [[Character Sets]], [[Diataxis/Reference]]
+      
+      - # Unicode Block Reference: Symbols for Legacy Computing
+        - ## Overview
+          - The Symbols for Legacy Computing block (U+1FB00–U+1FBFF) contains 128 characters
+          - Added to Unicode in version 13.0 (2020)
+          - Contains graphical characters for compatibility with legacy computing platforms
+        - ## Structure
+          - Characters are organized by visual similarity and original platform
+          - Hexadecimal code points are used for precise identification
+        - ## Core Components
+          - ### Block Elements (U+1FB00–U+1FB3B)
+            - 60 characters for block drawing and pixel art
+            - Compatible with CP437 and similar encodings
+            - Example: U+1FB00 '▘' BLOCK SEXTANT-1
+          - ### Teletext Elements (U+1FB3C–U+1FB6F)
+            - 52 characters for teletext/videotex graphics
+            - Compatible with NAPLPS and similar standards
+            - Example: U+1FB3C '🬼' BLOCK SEXTANT-121
+        - ## Technical Details
+          - All characters have East Asian Width property: Neutral (N)
+          - General Category: Symbol, Other (So)
+          - Bidirectional Class: Other Neutral (ON)
+        - ## Related References
+          - [[Unicode/Block/Ref/Block Elements]]
+          - [[Unicode/Block/Ref/Geometric Shapes]]
+    output: "Correctly formatted Diataxis Reference documentation in Logseq with proper tags"
+
+metadata:
+  priority: high
+  version: 1.0
+  related_rules: ["logseq-flavored-markdown.mdc"]
+</rule>
+
+## Implementation Guide
+
+When implementing Diataxis Reference documentation in Logseq, follow these steps:
+
+1. **Identify the subject that needs reference documentation**
+   - Focus on technical aspects that users need to look up
+   - Choose subjects that benefit from structured, factual documentation
+   - Ask: "What information will users need to consult while working with this?"
+
+2. **Create the page with the proper namespace**
+   - Use `Topic/Subtopic/Ref/Specific Subject` format
+   - This will create a file at `pages/Topic___Subtopic___Ref___Specific Subject.md`
+   - The triple underscore `___` is how Logseq translates namespace hierarchies into file paths
+
+3. **Add the required tags**
+   - Always include `[[Diataxis/Reference]]` in the tags frontmatter
+   - Place tags at the very top of the file, before any content
+   - Format: `tags:: [[ExistingTag1]], [[ExistingTag2]], [[Diataxis/Reference]]`
+   - Never remove existing tags when adding the Diataxis tag
+
+4. **Follow the Logseq-Flavored Markdown format**
+   - All content must be prefixed with bullet points (`-`)
+   - Use proper indentation with TAB characters
+   - No blank lines between bullet points
+   - Use headings to create a clear structure
+
+5. **Structure the content to mirror the product**
+   - Organize reference material to reflect the logical structure of what you're documenting
+   - Group related items together in a way that makes sense for the subject
+   - Use consistent naming and formatting throughout
+
+6. **Focus on description, not instruction**
+   - Use neutral, factual language
+   - Describe what things are, not how to use them
+   - Provide examples that illustrate usage without instructing
+   - Be comprehensive but concise
+
+7. **Maintain consistency**
+   - Use the same format for similar types of information
+   - Present technical details in a standardized way
+   - Create patterns that users can recognize and rely on
+   - Be consistent with terminology and naming
+
+8. **Review for accuracy and completeness**
+   - Verify all technical details
+   - Ensure the reference covers the full scope of the subject
+   - Update when the underlying product changes
+
+## The Diataxis Compass for Reference Documentation
+
+The Diataxis framework provides a "compass" to help identify what type of documentation you're creating:
+
+| If the content... | ...and serves the user's... | ...then it belongs to... |
+|----|---|-----|
+| informs cognition | theoretical knowledge        | reference                |
+
+Reference documentation:
+- Informs cognition (not action)
+- Serves theoretical knowledge (not practical application)
+- Is information-oriented (not task-oriented)
+- Focuses on describing the product (not guiding the user)
+
+Remember that good reference documentation serves as a reliable source of truth that users can consult whenever they need factual information about the product. It should be authoritative, structured, and focused on providing clear, accurate descriptions without distracting explanations or instructions.
+
+## Characteristics of Good Reference Documentation
+
+- **Austere**: One consults reference material rather than reads it from beginning to end
+- **Authoritative**: No doubt or ambiguity; wholly reliable and definitive
+- **Map-like**: Tells you what you need to know without having to explore for yourself
+- **Structured**: Organized according to the logical structure of what it describes
+
+## Real-World Analogy
+
+Reference documentation is similar to information on food packaging or product specifications:
+- Users expect standardized presentation of facts in a predictable format
+- Information should be reliable, consistent, and clearly separated from marketing or instructional content
+- The importance of reference is such that in many fields it's governed by standards or regulations
+
+================
+File: .cursor/rules/diataxis-tutorial.mdc
+================
+---
+description: "How to create a Diataxis Tutorial page"
+globs: 
+alwaysApply: false
+---
+# How to create a Diataxis Tutorial page in the Knowledge Garden
+
+# Diataxis Tutorial Guide Format for Logseq
+
+This rule provides guidance on creating Tutorial documentation in Logseq following the Diataxis documentation framework principles.
+
+<rule>
+name: diataxis_tutorial_format
+description: Guidelines for creating effective Tutorial documentation in Logseq following the Diataxis framework
+filters:
+  - type: file_path
+    pattern: ".*Tutorial.*\\.md$"
+
+actions:
+  - type: suggest
+    message: |
+      # Creating Diataxis Tutorial Documentation in Logseq
+
+      ## Purpose
+      
+      Tutorials are **learning-oriented** guides that provide a hands-on experience. A tutorial is a lesson that:
+      - Takes the learner through meaningful, practical steps
+      - Focuses on learning by doing
+      - Builds confidence through successful completion
+      - Minimizes explanation in favor of action
+      
+      ## Key Principles
+      
+      1. **Focus on Learning** - Help users acquire new skills through guided practice
+      2. **Show Early Results** - Deliver visible achievements frequently
+      3. **Minimize Explanation** - Keep focus on doing; link to explanations elsewhere
+      4. **Ensure Success** - Every step must work reliably for every user
+      5. **Be Concrete** - Use specific examples, avoid abstractions
+      6. **Guide Completely** - Take full responsibility for the learner's success
+      
+      ## Structure for Logseq Tutorial Documentation
+      
+      When creating Tutorial documentation in Logseq, follow this structure using Logseq-Flavored Markdown (LFM):
+      
+      ```
+      tags:: [[ExistingTag1]], [[ExistingTag2]], [[Diataxis/Tutorial]]
+      
+      - # Tutorial: [Learning Goal]
+        - ## What You'll Create
+          - Brief description of the end result
+          - Screenshot or example of the finished product
+        - ## Prerequisites
+          - Required tools or knowledge
+          - Setup steps if needed
+        - ## Learning Goals
+          - What skills they'll acquire
+          - What they'll be able to do afterward
+        - ## Steps
+          - ### 1. First Achievement
+            - Clear, concrete instructions
+            - Expected results
+            - What to notice
+          - ### 2. Second Achievement
+            - And so on...
+        - ## What You've Learned
+          - Recap of skills acquired
+          - Next steps for practice
+        - ## Related
+          - Links to related pages: [[Page1]], [[Page2]]
+      ```
+      
+      ## Naming Convention and File Paths
+      
+      Use the namespace pattern: `Topic/Subtopic/Tutorial/Learning Goal`
+      
+      Examples:
+      - `[[Programming/Python/Tutorial/Build Your First Web App]]`
+      - `[[PKM/Logseq/Tutorial/Create a Daily Notes Workflow]]`
+      
+      In Logseq, namespaces using `/` are translated into file paths using triple underscores `___`. For example:
+      
+      - The page `[[Programming/Python/Tutorial/Build Your First Web App]]` will be stored as:
+        `pages/Programming___Python___Tutorial___Build Your First Web App.md`
+      
+      ## Required Tags
+      
+      **IMPORTANT**: All Diataxis Tutorial pages MUST include the `[[Diataxis/Tutorial]]` tag in the frontmatter.
+      
+      - If the page already has tags, add `[[Diataxis/Tutorial]]` to the existing tags list
+      - Example: `tags:: [[ExistingTag1]], [[ExistingTag2]], [[Diataxis/Tutorial]]`
+      - If the page has no tags yet, add: `tags:: [[Diataxis/Tutorial]]`
+      - Never remove existing tags when adding the Diataxis tag
+      
+      ## Language Guidelines
+      
+      - Use "we" to establish teacher-learner relationship: "We will create..."
+      - Use present tense and active voice
+      - Provide clear expectations: "You will see..."
+      - Point out important observations: "Notice that..."
+      - Keep explanations minimal and link to reference material
+      - Focus on concrete actions and results
+      
+      ## Tutorial Writing Process
+      
+      1. **Plan the Learning Journey**
+         - Identify specific skills to be learned
+         - Break down into small, achievable steps
+         - Ensure each step produces visible results
+      
+      2. **Write the Tutorial**
+         - Start with clear learning goals
+         - Focus on concrete actions
+         - Include expected results
+         - Point out what to notice
+      
+      3. **Test the Tutorial**
+         - Follow your own instructions exactly
+         - Verify each step works reliably
+         - Check that results match expectations
+      
+      4. **Review and Refine**
+         - Remove unnecessary explanations
+         - Add missing steps if needed
+         - Ensure consistent success
+
+examples:
+  - input: |
+      tags:: [[Python]], [[Web Development]], [[Diataxis/Tutorial]]
+      
+      - # Tutorial: Build Your First Flask Web App
+        - ## What You'll Create
+          - A simple web application that displays a greeting
+          - Screenshot of finished application
+        - ## Prerequisites
+          - Python 3.8 or later installed
+          - Basic familiarity with terminal/command prompt
+        - ## Learning Goals
+          - Create a basic Flask application
+          - Run a local development server
+          - Handle web requests
+        - ## Steps
+          - ### 1. Set Up Your Environment
+            - Open your terminal
+            - Create a new directory: `mkdir my-flask-app`
+            - Move into it: `cd my-flask-app`
+          - ### 2. Create Your First Route
+            - Create app.py with this code:
+              ~~~python
+              from flask import Flask
+              app = Flask(__name__)
+              
+              @app.route('/')
+              def hello():
+                  return 'Hello, World!'
+              ~~~
+            - Notice how we import Flask and create an application
+          - ### 3. Run Your Application
+            - In the terminal, run: `flask run`
+            - You'll see a message that your server is running
+            - Open http://localhost:5000 in your browser
+        - ## What You've Learned
+          - How to create a basic Flask application
+          - How to define a route
+          - How to run a development server
+        - ## Related
+          - [[Programming/Python/Tutorial/Add Database to Flask App]]
+          - [[Programming/Web/How To/Deploy Flask to Production]]
+    output: "Correctly formatted Diataxis Tutorial in Logseq with proper tags"
+
+metadata:
+  priority: high
+  version: 1.0
+  related_rules: ["logseq-flavored-markdown.mdc"]
+</rule>
+
+## Implementation Guide
+
+When implementing Diataxis Tutorial documentation in Logseq, follow these steps:
+
+1. **Plan the Learning Experience**
+   - Identify what specific skills need to be learned
+   - Break down into small, achievable steps
+   - Ensure each step produces visible results
+   - Focus on concrete actions over abstract concepts
+
+2. **Create the page with the proper namespace**
+   - Use `Topic/Subtopic/Tutorial/Learning Goal` format
+   - This will create a file at `pages/Topic___Subtopic___Tutorial___Learning Goal.md`
+   - The triple underscore `___` is how Logseq translates namespace hierarchies into file paths
+
+3. **Add the required tags**
+   - Always include `[[Diataxis/Tutorial]]` in the tags frontmatter
+   - Place tags at the very top of the file, before any content
+   - Format: `tags:: [[ExistingTag1]], [[ExistingTag2]], [[Diataxis/Tutorial]]`
+   - Never remove existing tags when adding the Diataxis tag
+
+4. **Structure the content**
+   - Follow the Logseq-Flavored Markdown format
+   - Use bullet points (`-`) for all content
+   - Use proper indentation with TAB characters
+   - Include all required sections (What You'll Create, Prerequisites, etc.)
+
+5. **Write with the learner in mind**
+   - Use "we" to establish the teacher-learner relationship
+   - Keep explanations minimal
+   - Focus on concrete actions and results
+   - Point out what to notice
+   - Provide clear expectations
+
+6. **Test thoroughly**
+   - Follow your own instructions exactly
+   - Verify each step works reliably
+   - Check that results match expectations
+   - Test with different users if possible
+
+Remember that a good tutorial:
+- Takes full responsibility for the learner's success
+- Provides a reliable, repeatable experience
+- Builds confidence through early and frequent achievements
+- Focuses on concrete actions over abstract concepts
+
+
+
+
+================================================================
+End of Codebase
+================================================================
