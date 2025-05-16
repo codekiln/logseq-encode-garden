@@ -2,6 +2,8 @@ created-by:: [[Person/Kristian Fagerlie]]
 
 - # [5 AMAZING Claude Code Commands You MUST Know About - YouTube](https://www.youtube.com/watch?v=eM_Tg8_BGx4)
 	- ## [[My Notes]]
+		- [[2025-05-16 Fri]]
+			- I turned this into a How To guide - [[Anthropic/App/Claude Code/How To/Use Essential Commands]]
 	- ## #Video
 		- {{video https://www.youtube.com/watch?v=eM_Tg8_BGx4}}
 			- ### {{youtube-timestamp 0}} Introduction & Overview
@@ -12,7 +14,7 @@ created-by:: [[Person/Kristian Fagerlie]]
 			- ### {{youtube-timestamp 27}} Command 1: Project Rules with `claude.md`
 				- Use `/init` to create a `claude.md` file for project guidance.
 				- Example rules for `claude.md`:
-					- 1. Always write secure, best-practice [[Py]] code
+					- 1. Always write secure, best-practice Python code
 					- 2. Write and execute tests for each function; iterate based on results
 					- 3. Delete test scripts if tests pass
 					- 4. Commit after each new function
@@ -52,6 +54,4 @@ created-by:: [[Person/Kristian Fagerlie]]
 				- Example: Ask Claude to "think deeply about a step-by-step plan to calculate arbitrage trading from currency rates.json"; Claude generates a plan, implements algorithms (e.g., Bellman-Ford), and analyzes results.
 				- [[Key Insight]]: Prompting for deeper thinking can yield more comprehensive solutions.
 				- Recap of favorite commands: `claude.md` for project rules, `-p` for file-specific queries, images for context, output formatting, and extended thinking.
-				- Encourages viewers to try these commands for inspiration and efficiency.
-				- **Thank you for watching!**
 		-
