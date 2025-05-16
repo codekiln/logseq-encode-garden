@@ -12,6 +12,8 @@
 					- if it states that you are out of date, you may need to run [[mise/self-update]] to update.
 			- #### configure mise to use latest [[LTS]] version of [[NodeJS]]
 				- `mise use --global node@lts`
+				- [[My Notes]]
+					- [[2025-05-15 Thu]] You may also want to do `mise use --global npm@11` or whatever is "lts"-ish
 			- #### run [[mise/install]] and then resource the [[zsh/.zshrc]] to run [[mise/activate]], then test node version
 				- ```
 				  $> mise install
