@@ -1,21 +1,34 @@
-# [5 AMAZING Claude Code Commands You MUST Know About - YouTube](https://www.youtube.com/watch?v=eM_Tg8_BGx4)
+created-by:: [[Person/Kristian Fagerlie]]
+
+- # [5 AMAZING Claude Code Commands You MUST Know About - YouTube](https://www.youtube.com/watch?v=eM_Tg8_BGx4)
 	- ## [[My Notes]]
 	- ## #Video
 		- {{video https://www.youtube.com/watch?v=eM_Tg8_BGx4}}
 			- ### {{youtube-timestamp 0}} Introduction & Overview
-				- Presenter introduces the topic: **5 Claude Code commands you may not know about**
-				- Expresses enthusiasm for Claude Code and its usefulness
+				- "Today I want to go over five different commands you probably haven't used yet in Claude Code."
+				- Presenter is a big fan of Claude Code and uses it frequently.
+				- The video will demonstrate commands that save time and make working with Claude Code easier.
+				- Claude Code is used for automating tasks, saving time, and improving workflow.
 			- ### {{youtube-timestamp 13}} use it yeah kind of all the time if I have something I want to do. So yeah, I'm just going to go through some different commands I use. uh yeah to help me save some time sometimes and it could be easier if you wanted to dive
-			- ### {{youtube-timestamp 27}} Command 1: Setting Up `claude.md` (Project Rules)
-				- Use `/init` to create a `claude.md` file for project guidance
+			- ### {{youtube-timestamp 27}} Command 1: Project Rules with `claude.md`
+				- Use `/init` to create a `claude.md` file for project guidance.
 				- Example rules for `claude.md`:
-					- 1. Always write secure, best-practice Python code
+					- 1. Always write secure, best-practice [[Py]] code
 					- 2. Write and execute tests for each function; iterate based on results
 					- 3. Delete test scripts if tests pass
 					- 4. Commit after each new function
-				- Demonstrates editing `claude.md` and connecting to GitHub via MCP server
-				- Shows workflow: create repo, add rules, test automation (write, test, commit, clean up)
-				- **Key Insight:** Setting up `claude.md` saves time and enforces best practices
+				- Demonstrates editing `claude.md` and connecting to GitHub via MCP server.
+				- Shows workflow:
+					- Create a new repo for the project
+					- Add rules to `claude.md`
+					- Test automation: write, test, commit, clean up
+				- Example workflow:
+					- Write an email input validator function in `CC.py`
+					- Claude Code automatically writes a test, runs it, and deletes the test if it passes
+					- Commits the changes to GitHub
+					- Repeat for additional functions (e.g., date input validator)
+				- Using `claude.md` ensures best practices are followed and saves time on repetitive tasks
+				- [[Key Insight]]: Setting up `claude.md` enforces best practices and automates much of the coding workflow
 			- ### {{youtube-timestamp 40}} example of how we can use this claw MD file today. And yeah, just going to do something simple and I'm going to show you kind of how this works and how we can use this for our uh advantage. So this is the cloud MD file I want to use
 			- ### {{youtube-timestamp 54}} today. Uh yeah, you can see here I kind of prepare this but you can you do this manually, right? So uh do you want to create cloud MD? Yes, I do. And then I'm going to edit it manually. So this is going to be placed here in my folder.
 			- ### {{youtube-timestamp 67}} Now you can see this in cursor. So we can go into this. So this is basically rules you can set for your project. So this file provides guidance to cloud code, right? Uh we have a project overview and yeah this was just
@@ -78,5 +91,31 @@
 			- ### {{youtube-timestamp 903}} Conclusion & Takeaways
 				- Recap of favorite commands: `claude.md` for project rules, `-p` for file-specific queries, images for context, output formatting, and extended thinking
 				- Encourages viewers to try these commands for inspiration and efficiency
+				- **Thank you for watching!**
+			- ### {{youtube-timestamp 288}} Command 2: Custom Command Files & Documentation Lookup
+				- Create custom command files (project or global) to store frequently used commands or documentation.
+				- Example: `claude docs.md` for storing API documentation.
+				- Use user commands to query documentation files directly (e.g., "Give me a code example of Claude AI API").
+				- Claude Code fetches relevant info from the referenced file, making it easy to access documentation without leaving the editor.
+				- #Example: Using a custom docs file to answer API questions quickly.
+				- **Tip:** Store API docs locally for quick reference and efficiency.
+			- ### {{youtube-timestamp 457}} Command 3: Using Images in Claude Code
+				- Drag and drop images (e.g., screenshots) into Claude Code to extract text and use it as context.
+				- Example: Screenshot code, extract text, and ask Claude to write [[Py]] code based on it.
+				- Useful for extracting data from images for further processing or coding tasks.
+				- Claude can process images, extract relevant information, and help automate workflows.
+			- ### {{youtube-timestamp 535}} Command 4: One-Shot Mode & File-Specific Queries
+				- Use `-p` (oneshot mode) for single commands and quick queries.
+				- Pipe file content into Claude Code for focused analysis (e.g., `cat file.txt | claude -p 'What model is used here?'`).
+				- Saves tokens and time by narrowing context to a specific file.
+				- [[Key Insight]]: Use oneshot mode for targeted, efficient queries and to save on compute costs.
+			- ### {{youtube-timestamp 662}} Command 5: Output Formatting & Extended Thinking, Conclusion
+				- Use `output-format` to specify result format (e.g., JSON, XML) for Claude's output.
+				- Example: Generate a currency rates dataset in JSON or XML.
+				- Extended thinking: Use prompts like "think deeply about" for more thorough, step-by-step plans.
+				- Example: Ask Claude to "think deeply about a step-by-step plan to calculate arbitrage trading from currency rates.json"; Claude generates a plan, implements algorithms (e.g., Bellman-Ford), and analyzes results.
+				- [[Key Insight]]: Prompting for deeper thinking can yield more comprehensive solutions.
+				- Recap of favorite commands: `claude.md` for project rules, `-p` for file-specific queries, images for context, output formatting, and extended thinking.
+				- Encourages viewers to try these commands for inspiration and efficiency.
 				- **Thank you for watching!**
 		-
