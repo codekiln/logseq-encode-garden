@@ -6,7 +6,12 @@ alias:: [[pre-commit]]
 	- ## [[My Notes]]
 		- [[2025-05-16 Fri]]
 			- I started using this to actually manage installation of locally defined git hooks in a way that can extend to hooks written in any language.
-			- #Thought This #Framework for multi-language pre-commit hooks is part of a class of tools that work across any [[Programming Language]].
+			- #Thought This #Framework for multi-language pre-commit hooks is part of a class of tools that work across any [[Programming Language]]. I wonder what the right #Term is for these class of tools. Maybe [[Polyglot Codemod Engines]]
+				- Common phrases in docs, slides, and blogs:
+					- “**Polyglot codemod engine**” (Grit marketing) [Elite AI Tools](https://eliteai.tools/tool/grit?utm_source=chatgpt.com)
+					- “**Language-agnostic structural search & replace**” (Comby tagline) [comby.dev](https://comby.dev/)
+					- “**Universal codemod framework**” or simply “**multi-language codemod**.”
+					- "**language-agnostic codemod engines**"
 			- Uses [[yaml]] for  [[Py/Lib/pre-commit/.pre-commit-config.yaml]]. The way they document the valid parameters is intuitive but not one I've seen before; first they list a table of top-level attributes, then they list tables for nested attributes and their valid values.
 			- [[Core Developers]] work at [[Reddit]]
 				- [[Person/Ken Struys/GitHub]] [struys (Ken Struys)](https://github.com/struys)
@@ -37,8 +42,6 @@ alias:: [[pre-commit]]
 					- You just list [[GitHub/Repos]] that are written as plugins
 		- ### 3 - install [[Git Hooks]]
 			- `pre-commit install` - [[Py/Lib/pre-commit/CLI/install]]
-		- ### - 4 - optional - run against all files
+		- ### 4 - optional - run against all files
 			- `pre-commit run --all-files` [[Py/Lib/pre-commit/CLI/run/--all-files]]
-			-
-			-
 		-
