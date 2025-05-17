@@ -20,9 +20,6 @@ tags:: [[Claude Code]], [[Mise]], [[AWS/Bedrock]], [[Okta]], [[Diataxis/How To]]
 				  "npm:@anthropic-ai/claude-code" = "latest"
 				  "pipx:aws-okta-keyman"        = "latest"  # pipx uses UV under the hood
 				  
-				  [tasks.bedrock-login]                     # STS helper (optional)
-				  run = "uvx aws_okta_keyman --role arn:aws:iam::<acct>:role/BedrockInvokeRole --profile bedrock"
-				  
 				  [tasks.claude]                            # main entry point
 				  run = "claude $@"                         # forward args
 				  
