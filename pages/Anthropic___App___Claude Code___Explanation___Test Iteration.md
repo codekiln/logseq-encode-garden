@@ -1,4 +1,4 @@
-tags:: [[Claude Code]], [[Testing]], [[Diataxis/Explanation]]
+tags:: [[Claude Code]], [[Diataxis/Explanation]], [[Software/Testing]]
 
 - # Claude Code & [[Programming/Test]] Iteration — Conceptual Guide
 	- ## Overview

@@ -42,7 +42,7 @@ tags:: [[LangChain]], [[Blog]], [[Content-Blocks]], [[Retry-Logic]]
 			      image_url="https://example.com/image.jpg"
 			  )
 			  ```
-	- ## Custom [[Programming/Error Handling/Retry Logic/Exponential Backoff]] for Runnable.with_retry
+	- ## Custom [[Programming/Error/Handling/Retry Logic/Exponential Backoff]] for Runnable.with_retry
 		- [Documentation](https://python.langchain.com/api_reference/core/runnables/langchain_core.runnables.base.Runnable.html#langchain_core.runnables.base.Runnable.with_retry)
 		- Example:
 			- ```python
