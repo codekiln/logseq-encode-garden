@@ -23,6 +23,34 @@
         ".cursor/rules/logseq-cursor-rules/logseq-overview.mdc",
         ".cursor/rules/logseq-cursor-rules/logseq-ai-model-reference.mdc"
       ]
+    },
+    "mise-607": {
+      "name": "mise",
+      "created": "2025-05-17T10:05:24.998Z",
+      "lastUsed": "2025-05-17T10:12:12.339Z",
+      "tags": [],
+      "files": [
+        "pages/mise___config___Environment.md",
+        "pages/mise___cookbook___python.md",
+        "pages/mise___Docs___Guides___Getting Started.md",
+        "pages/mise___Docs___Guides___Walkthrouh.md",
+        "pages/mise___Docs___Tool___Core___Python.md",
+        "pages/mise___Docs___Tool___Core.md",
+        "pages/mise___Docs___Tool___Overview.md",
+        "pages/mise___GitHub___Discussion___24___01___Vaults and Secrets Management.md",
+        "pages/mise___GitHub___Issue___24___02___Struggles with integrating 1Password op.md",
+        "pages/mise___How To___Use 1Password runner only in dev.md",
+        "pages/mise___Issue___Conflict with PyEnv on Shell Startup.md",
+        "pages/mise___plugin___mise-sops.md",
+        "pages/mise___Q___Are people using mise only in development environments or are they using it for deploy as well.md",
+        "pages/mise___Q___How does mise interact with nvm and npx.md",
+        "pages/mise___Q___How does mise interact with pyenv.md",
+        "pages/mise___Task.md",
+        "pages/mise___Template.md",
+        "pages/mise___Todos.md",
+        "pages/mise-en-place.md",
+        "pages/mise.md"
+      ]
     }
   }
 }
