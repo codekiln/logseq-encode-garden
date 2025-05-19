@@ -1,0 +1,5 @@
+# [How I use git worktrees](https://simonwillison.net/2024/Mar/6/how-i-use-git-worktrees/) - [[git/worktree]]
+	- **[How I use git worktrees](https://notes.billmill.org/blog/2024/03/How_I_use_git_worktrees.html)** ([via](https://lobste.rs/s/ikbbnt/how_i_use_git_worktrees)) TIL about worktrees, a Git feature that lets you have multiple repository branches checked out to separate directories at the same time.
+	- The default UI for them is a little unergonomic (classic Git) but Bill Mill here shares a neat utility script for managing them in a more convenient way.
+	- One particularly neat trick: Bill’s “worktree” Bash script checks for a node_modules folder and, if one exists, duplicates it to the new directory using copy-on-write, saving you from having to run yet another lengthy “npm install”.
+	- See also: [[Person/Bill Mill/24/03/How I use git worktrees]] for the full writeup and script details.
