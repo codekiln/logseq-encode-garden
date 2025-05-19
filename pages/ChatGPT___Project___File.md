@@ -1,0 +1,1 @@
+alias:: [[ChatGPT/Project/Files]]
