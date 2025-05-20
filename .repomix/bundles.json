@@ -187,6 +187,27 @@
         "pages/Pytest___asyncio___How To___Await Async Fixtures.md",
         "pages/Pytest___Warning___How To___Resolve AST-related Deprecation Warnings on Python 3.13.md"
       ]
+    },
+    "claude-code-640": {
+      "name": "claude-code",
+      "created": "2025-05-19T15:28:16.193Z",
+      "lastUsed": "2025-05-19T15:28:58.775Z",
+      "tags": [],
+      "files": [
+        "pages/Anthropic___App___Claude Code___Explanation___Test Iteration.md",
+        "pages/Anthropic___App___Claude Code___How To___Bootstrap Claude Code with Mise + UV-Powered Okta Role Assumption.md",
+        "pages/Anthropic___App___Claude Code___How To___Get Started with AWS Bedrock.md",
+        "pages/Anthropic___App___Claude Code___How To___Use Essential Commands.md",
+        "pages/Anthropic___App___Claude Code___Tutorial___Connect to MCP Servers.md",
+        "pages/Anthropic___App___Claude Code.md",
+        "pages/Anthropic___Blog___24___12___Building Effective Agents.md",
+        "pages/Anthropic___Blog___25___02___Claude 3.7 Sonnet and Claude Code.md",
+        "pages/Anthropic___Model___Claude___3.5___Haiku.md",
+        "pages/Anthropic___Model___Claude___3.5___Sonnet.md",
+        "pages/Anthropic___Model___Claude___3.7___Sonnet.md",
+        "pages/Anthropic___Model___Claude.md",
+        "pages/Anthropic___YouTube___25___02___Introducing Claude Code.md"
+      ]
     }
   }
 }
