@@ -56,6 +56,7 @@ tags:: [[Diataxis/How To]]
 			- > ok I'd like to speak to the product manager now
 		- ### Using [[Person/Brian Madison/BMAD/Persona/Product Manager]]
 			- [[ChatGPT/Response]]
+			  collapsed:: true
 				- Activating the Product Manager Agent, John…
 				  
 				  ---
@@ -69,4 +70,5 @@ tags:: [[Diataxis/How To]]
 				  
 				  I’m in **Interactive** mode by default. Which task should we tackle first, or what would you like me to focus on?
 			- I said **Create PRD**
+			- At this point, I ended up realizing I needed to go back to the drawing board with the design, so I activated the analyst again. Then I had the analyst prepare a new report, then switched back to the product manager, refactoring the project's name and assumptions. I was impressed with how the product manager had an ability to revise project path. See [ableton-live-git-hooks/ableton-live-git-hooks-docs/journals/2025_05_20.md at main · codekiln/ableton-live-git-hooks](https://github.com/codekiln/ableton-live-git-hooks/blob/main/ableton-live-git-hooks-docs/journals/2025_05_20.md)  for details
 			-
