@@ -24,6 +24,8 @@ alias:: [[Claude Code]]
 		  id:: 682c8543-8869-4d54-a1ff-04c296c08f9a
 		- TODO get or create a #Bug ticket at [[Anthropic/App/Claude Code/GitHub]] related to the session timeout of [[AWS/Bedrock]] via [[AWS SSM]]
 	- ## [[My Notes]]
+		- ### [[2025-05-23 Fri]]
+			- updated to [[Anthropic/App/Claude Code/v/1/0/2]]. Had a few issues with #AWS/Bedrock authentication but eventually (after enough restarting), managed to get it to work without changing anything.
 		- ### [[2025-05-21 Wed]]
 		  id:: 682ddfa2-67b1-4605-8e77-3b75720efe39
 			- #Filed

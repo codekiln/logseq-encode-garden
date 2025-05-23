@@ -1,0 +1,3 @@
+# [Introducing Claude 4 \ Anthropic](https://www.anthropic.com/news/claude-4)
+	- [[claude-opus-4]] and Sonnet 4 are hybrid models offering two modes: near-instant responses and extended thinking for deeper reasoning. The Pro, Max, Team, and Enterprise Claude plans include both models and extended thinking, with Sonnet 4 also available to free users. Both models are available on the Anthropic API, Amazon Bedrock, and Google Cloud's Vertex AI.
+	- Pricing remains consistent with previous Opus and Sonnet models: Opus 4 at `$15`/`$75` per million tokens (input/output) and Sonnet 4 at `$3`/`$15`.
