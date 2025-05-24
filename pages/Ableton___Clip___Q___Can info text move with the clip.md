@@ -1,0 +1,2 @@
+# Can [[Ableton/Info Text]] associated with an [[Ableton/Clip]] in project A be seen in project B if the clip is saved ([[Ableton/Clip/How To/Save to Library]])?
+	- After moving the clip to another project, I do **not** see the info text, which implies that the info text is specific to a project.
