@@ -1,0 +1,12 @@
+# Usability
+	- via [[NIST/Glossary/Usability]] [Usability - Glossary | CSRC](https://csrc.nist.gov/glossary/term/usability)
+		- #Definition
+			- Per ISO/IEC 9241-11: Extent to which a product can be used by specified users to achieve specified goals with effectiveness, efficiency, and satisfaction in a specified context of use.
+				- **Sources:**
+					- [NIST SP 800-63-3](https://doi.org/10.6028/NIST.SP.800-63-3) from ISO/IEC 9241-11
+			- Extent to which a product can be used by specified users to achieve specified goals with effectiveness, efficiency, and satisfaction in a specified context of use.
+				- **Sources:**
+					- [NIST SP 800-63-3](https://doi.org/10.6028/NIST.SP.800-63-3) from ISO/IEC 9241-11
+			- The extent to which a product can be used by specified users to achieve specified goals with effectiveness, efficiency and satisfaction in a specified context of use.
+				- **Sources:**
+					- [NISTIR 8040](https://doi.org/10.6028/NIST.IR.8040) from ISO 9241-11:1998

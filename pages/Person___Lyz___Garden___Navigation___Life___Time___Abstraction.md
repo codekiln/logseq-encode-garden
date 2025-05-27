@@ -1,4 +1,6 @@
-# [Time navigation abstraction levels - The Blue Book](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/)
+alias:: [[Person/Lyz/Time/Abstraction]]
+
+- # Lyz's [Time navigation abstraction levels](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/)
 	- > To be able to manage the complexity of the life roadmap we can use models for different levels of abstraction with different purposes. In **increasing** level of abstraction:
 		- [Step](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#step)
 		- [Action](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#action)
@@ -45,10 +47,15 @@
 						- vision and mission statements like "We want to change the world"
 						- vague, general values like “innovation” or “teamwork”
 						- shorter-term quarterly objectives like “Pass maths”
-		- [Goal](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#goal)
-		- [Vision](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#vision)
+		- ## [Goal](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#goal)
+			- {{embed [[Person/Lyz/Garden/Navigation/Life/Time/Abstraction/Goal]]}}
+			-
+		- ## [Vision](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#vision)
+			- {{embed [[Person/Lyz/Garden/Navigation/Life/Time/Abstraction/Vision]]}}
 		- [Purpose and principles](https://lyz-code.github.io/blue-book/time_management_abstraction_levels/#purpose-and-principles)
 	- ## [[My Notes]]
+		- [[2025-05-26 Mon]]
+			- Added individual pages for vision and goal.
 		- [[2025-05-11 Sun]]
 			- presents a set of templates for how to map tasks at these time levels into an [[Orgmode]] system
 			- Similar to [[Person/Tiago Forte/PARA]]'s  separation between projects and areas, but puts **Areas** as the parent of **Projects**
