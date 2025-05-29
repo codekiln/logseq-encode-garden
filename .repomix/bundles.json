@@ -208,6 +208,31 @@
         "pages/Anthropic___Model___Claude.md",
         "pages/Anthropic___YouTube___25___02___Introducing Claude Code.md"
       ]
+    },
+    "python-185": {
+      "name": "python",
+      "created": "2025-05-28T12:22:57.559Z",
+      "lastUsed": "2025-05-28T12:23:46.604Z",
+      "tags": [],
+      "files": [
+        "pages/Py___asyncio___How To___Use gather and await to wait for multiple futures.md",
+        "pages/Py___Dataclass.md",
+        "pages/Py___Dunder Method.md",
+        "pages/Py___Lib___pre-commit.md",
+        "pages/Py___Lib.md",
+        "pages/Py___Operator___Dunder___Right-shift.md",
+        "pages/Py___PEP___570 Python Positional-Only Parameters.md",
+        "pages/Py___v___3___13.md",
+        "pages/Py.md",
+        "pages/PyCharm___Debug___Attach to Process.md",
+        "pages/PyCharm___Keyshort___Find Action.md",
+        "pages/Pyenv___.python-version.md",
+        "pages/PyMuPDF.md",
+        "pages/Pytest___asyncio___Explanation___yield vs return in async pytest fixtures.md",
+        "pages/Pytest___asyncio___How To___Await Async Fixtures.md",
+        "pages/Pytest___Warning___How To___Resolve AST-related Deprecation Warnings on Python 3.13.md",
+        "pages/Pytest___Warning___How To___Resolve PytestDeprecationWarning___asyncio_default_fixture_loop_scope unset.md"
+      ]
     }
   }
 }
