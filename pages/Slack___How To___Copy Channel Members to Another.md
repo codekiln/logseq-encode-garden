@@ -1,0 +1,31 @@
+tags:: [[Diataxis/How To]]
+
+- # How To Copy Members from One Slack Channel to Another
+	- ## Goal
+		- Duplicate the member list from one Slack channel into another.
+	- ## Preconditions
+		- Slack workspace access with permission to add people to both channels.
+	- ## Procedure
+		- ### 1. Open the Source Channel
+			- Navigate to the Slack channel you want to copy members from.
+			- [Slack - copy name of channel - Stack Overflow](https://stackoverflow.com/questions/53281069/slack-copy-name-of-channel?utm_source=chatgpt.com)
+		- ### 2. Copy Member Details
+			- Click the channel name at the top.
+			- Go to the **Settings** tab.
+			- Click **Copy member names** or **Copy member email addresses** (if available).
+			- [Copy member names and email addresses from a conversation - Slack](https://slack.com/help/articles/4409607962387-Copy-member-names-and-email-addresses-from-a-conversation?utm_source=chatgpt.com)
+		- ### 3. Open the Destination Channel
+			- Navigate to the Slack channel where you want to add the members.
+			- [How to add someone to Slack channel? - CLRN](https://www.clrn.org/how-to-add-someone-to-slack-channel/?utm_source=chatgpt.com)
+		- ### 4. Add Members
+			- Click the channel name at the top.
+			- Select **Add people**.
+			- Paste the copied names or emails into the field.
+			- Click **Add**.
+			- [Add people to a channel - Slack](https://slack.com/help/articles/201980108-Add-people-to-a-channel?utm_source=chatgpt.com)
+	- ## Troubleshooting
+		- If you don’t see the copy option, you may lack permissions or need to use a different browser.
+		- Slack supports adding up to 1,000 people at once.
+	- ## References
+		- [How to Use Slack for Work - Lifewire](https://www.lifewire.com/how-to-use-slack-for-work-4800366?utm_source=chatgpt.com)
+		- [Slack™ Member Extractor - Microsoft Edge Addons](https://microsoftedge.microsoft.com/addons/detail/slack%E2%84%A2-member-extractor-/ekmdmnnmlndaionafieomfdmdfeonpgd?utm_source=chatgpt.com)
