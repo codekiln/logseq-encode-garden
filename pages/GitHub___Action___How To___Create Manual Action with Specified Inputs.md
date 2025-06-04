@@ -62,3 +62,4 @@ tags:: [[GitHub/Action/How To]], [[Diataxis/How To]]
 	- ## References
 		- [Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)
 		- [Manual triggers with `workflow_dispatch`](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch)
+		- [GitHub Actions: Input types for manual workflows - GitHub Changelog](https://github.blog/changelog/2021-11-10-github-actions-input-types-for-manual-workflows/)
