@@ -1,0 +1,14 @@
+# How to map sample minutes and seconds to octaves
+	- This is a technique to map samples from a longer recording onto drum clips.
+	- Assumption - every clip has a four digit number that identifies `MMSS` of the clip
+		- The first `M` determines the octave of the drum rack mapping
+		- The second `M` determines the "quadrant" of the octave mapping, given 12 semitones, if `M` is 3, that would be first quadrant, if second `M` is `4`, that would be 2nd quadrant, etc
+		- if there's not room, squeeze into octave, trying to honor halfs instead of quarters, or just trying to squeeze all into octave
+		- #Example
+			- Clip - `0813🎷Biddilyip`
+				- first `M` is `0` so this should be in octave 0
+				- 2nd `M` is `8` so this should be in quadrant `4` of octave `0`, meaning `G#`, `A`, `A#`, `B`
+			- Clip - `2430🎷distort-wish`
+				- 1st `M` is `2` so this should be in octave `2`
+				- 2nd `M` is `4` so this should be in quadrant 2, meaning roughly `E`, `F`, `F#`, `G`
+				-
