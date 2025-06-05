@@ -1,3 +1,1 @@
-filters:: {"github/maxfahl/cursor-agent-master-prompt" true}
-
--
+# [Cursor - The AI Code Editor](https://www.cursor.com/)

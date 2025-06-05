@@ -17,11 +17,12 @@ tags:: [[Claude Code]], [[Mise]], [[AWS/Bedrock]], [[Okta]], [[Diataxis/How To]]
 				  [tools]                                   # language & CLI pinning
 				  node = "lts"
 				  uv   = "latest"                           # UV installer/runtime
-				  "npm:@anthropic-ai/claude-code" = "latest"
 				  "pipx:aws-okta-keyman"        = "latest"  # pipx uses UV under the hood
 				  
-				  [tasks.claude]                            # main entry point
-				  run = "claude $@"                         # forward args
+				  [tasks.claude]
+				  # run mise install && mise reshim before running this.
+				  description = "Run Claude Code CLI"
+				  run = "npx @anthropic-ai/claude-code $@"
 				  
 				  [tasks.claude.env]                        # vars ONLY for Claude
 				  CLAUDE_CODE_USE_BEDROCK    = "true"
@@ -41,7 +42,7 @@ tags:: [[Claude Code]], [[Mise]], [[AWS/Bedrock]], [[Okta]], [[Diataxis/How To]]
 		  ~~~bash
 		  mise run bedrock-login          # runs uvx aws_okta_keyman …
 		  ~~~
-			- Credentials land in *~/.aws/credentials* under `[bedrock]`.
+			- Credentials land in *~/.aws/credentials* under `[bedrock]` (assumption is that user has defined a bedrock profile, but it could be named anything; this isn't a special name)
 		- ### 4  Launch Claude Code
 		  ~~~bash
 		  cd /path/to/monorepo

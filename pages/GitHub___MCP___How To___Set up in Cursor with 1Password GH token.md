@@ -1,5 +1,5 @@
 alias:: [[GitHub/MCP/How To set up GitHub MCP in Cursor with 1Password fine-grained access token]]
-tags:: [[CursorAI/Settings/MCP]]
+tags:: [[CursorAI/Settings/MCP]], [[Diataxis/How To]]
 
 - # How to set up a [[GitHub Fine-Grained Access Token]], store it in [[1Password]], and reference this in a GitHub [[MCP Server]] registered in [[CursorAI/.cursor/mcp.json]]
 	- ## 1 - Follow [[GitHub/CLI/How to create a Fine Grained Personal Access Token]] to create a token
