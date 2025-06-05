@@ -11,7 +11,7 @@ tags:: [[Diataxis/How To]]
 		- 2 - launch a [[GitHub/MCP]] server in a way that wraps it in [[op/run]], referencing the [[1Password Secret Reference]] pointing to the [[GitHub Fine-Grained Personal Access Token]] for that repository.
 	- ## Prerequisites
 		- 1 - a [[GitHub/Repo]] has already been created and has some content in it. It does not matter if it is public or private, but it should be owned by you.
-		- 2 - A [[GitHub Fine-Grained Personal Access Token]] has already been created that grants several repository permissions to just the project repository, such as the ability to read and write issues. The token has been stored in [[1Password]].
+		- 2 - A [[GitHub Fine-Grained Personal Access Token]] has already been created that grants several repository permissions to just the project repository, such as the ability to read and write issues. The token has been stored in [[1Password]], as well as [[1Password/Dev/CLI]] having been installed properly and available in PATH.
 		- 3 - a home directory [[mise/Config/mise.toml]] has been created with a run configuration this in it (see also [[Anthropic/App/Claude Code/How To/Bootstrap Claude Code with Mise + UV-Powered Okta Role Assumption]] for context)
 			- ```toml
 			  [tasks.claude]
