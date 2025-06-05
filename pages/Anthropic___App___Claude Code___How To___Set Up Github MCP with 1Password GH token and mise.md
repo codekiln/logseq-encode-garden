@@ -80,12 +80,42 @@ tags:: [[Diataxis/How To]]
 				  ~~~
 			- 2 - `mise run claude` to open claude code, which should read the file above
 			- 3 - the first time, you will need to give permission to claude to use this MCP server
-			- 4 - ask Claude to execute the same tool you used to test the GitHub MCP Server.
+			- 4 - use `/mcp` command to check out mcp connection inside of claude
+			- 4 - ask Claude to execute the same tool you used to test the GitHub MCP Server. For example, if you endowed the PAT with the permission to read issues, try
+				- > Let's test your MCP connection - can you find the first github issue?
+				- ```
+				  > Let's test your MCP connection - can you find the first github issue?
+				  
+				  ⏺ I'll use the GitHub API to search for the first issue in this repository.
+				  
+				  ⏺ gh:list_issues (MCP)(owner: "boingo", repo: "langgraph-assistant-migrator", state: "all", sort: "created", direction: "asc")
+				    ⎿  Error: MCP error -32603: failed to list issues: GET https://api.github.com/repos/boingo/langgraph-assistant-migrator/issues?direction=asc&sort=created&state=all: 404 Not Found []
+				    ⎿  Interrupted by user
+				  
+				  > you have tried `boingo` instead of using git to inspect this repository's owner - why?
+				  
+				  ⏺ You're right, I made an assumption without checking the repository owner. Let me check the git configuration to find the correct owner.
+				  
+				  ⏺ Bash(git config --get remote.origin.url)
+				    ⎿  git@github.com:codekiln/langgraph-assistant-migrator.git
+				  
+				  ⏺ Now I'll try again with the correct owner:
+				  
+				  ⏺ gh:list_issues (MCP)(owner: "codekiln", repo: "langgraph-assistant-migrator", state: "all", sort: "created", direction: "asc")
+				    ⎿  [
+				         {
+				           "id": 3121550442,
+				           "number": 1,
+				       … +49 lines (ctrl+r to expand)
+				  
+				  ⏺ Found it. Issue #1 is titled "test issue" with description "test issue description", created by codekiln.
+				  ```
 				- It should succeed. If it does not, debug, comparing to the output of MCP Inspector.
 	- ## Troubleshooting
 		- **401 Unauthorized** — verify PAT scopes and the secret reference in `github-mcp.env`.
 		- **`github-mcp.env` missing** — copy the template in *Step 1* and add your secret reference.
 	- ## References
+		- [[Anthropic/App/Claude Code/Docs/Tutorial/Set up Model Context Protocol]] [here](https://docs.anthropic.com/en/docs/claude-code/tutorials#set-up-model-context-protocol-mcp)
 		- [Fine-grained PAT creation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#fine-grained-personal-access-tokens)
 		- [1Password CLI — `op run`](https://developer.1password.com/docs/cli/secrets-scripts/)
 		- [GitHub MCP Server README](https://github.com/github/github-mcp-server)
