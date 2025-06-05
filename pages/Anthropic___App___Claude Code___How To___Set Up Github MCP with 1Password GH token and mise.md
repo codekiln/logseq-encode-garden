@@ -4,7 +4,7 @@ tags:: [[Diataxis/How To]]
 - # How to set up a single-repository MCP with fine-grained permissions for a single repository
 	- ## Impetus
 		- From a security perspective, it's a good idea to maintain some discipline when integrating [[MCP Servers]]:
-			- [[InvariantLabsAI/Blog/25/05/GitHub MCP Exploited: Accessing private repositories via MCP]] [here](https://invariantlabs.ai/blog/mcp-github-vulnerability) describes an attack that depends on mixing write-access to protected and unprotected repositories in [[GitHub Fine-Grained Personal Access Token]]s is unwise. Instead, github PAT security token hygiene dictates that each project should have its own fine-grained personal access token.
+			- [[InvariantLabsAI/Blog/25/05/GitHub MCP Exploited: Accessing private repositories via MCP]] [here](https://invariantlabs.ai/blog/mcp-github-vulnerability) describes an attack that depends on mixing write-access to protected and unprotected repositories with [[GitHub Fine-Grained Personal Access Token]]s. Instead, github PAT security token hygiene dictates that each project should have its own fine-grained personal access token.
 			- As described in [[GitHub/MCP/How To/Set up in Cursor with 1Password GH token]], it's better to use a [[Secrets Manager]] with [[Biometric]] authentication at the CLI, using [[op/run]] to wrap the GitHub MCP server in a [[1Password/Dev/CLI]] command which extracts the project token from the secrets manager after prompting for biometric authentication.
 	- ## This guide describes how to define [[mise/Tasks]] which
 		- 1 - will launch claude code in project-specific way similar to, but not identical to [[Anthropic/App/Claude Code/How To/Bootstrap Claude Code with Mise + UV-Powered Okta Role Assumption]].
