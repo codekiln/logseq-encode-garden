@@ -1,0 +1,35 @@
+tags:: [[Diataxis/How To]]
+
+- # How To Create an `.ics` Calendar File from Outlook Web Using Gmail and ChatGPT
+	- ## Goal
+		- Generate a downloadable `.ics` file for an Outlook Web event using Gmail and ChatGPT—without needing the Outlook desktop app.
+	- ## Preconditions
+		- You use the O365 Outlook Web App.
+		- You have a Gmail account.
+		- You can paste links and content into ChatGPT with canvas enabled.
+	- ## Procedure
+		- 1. Forward the Outlook Event to Gmail
+			- In Outlook Web, open the calendar event.
+			- Use **Forward** or **Forward as iCalendar** to send it to your Gmail address.
+		- 2. Add and Duplicate the Event in Google Calendar
+			- In Gmail, open the invite and click **Add to Calendar**.
+			- In Google Calendar, find the event, click it, then click **More actions → Duplicate**.
+			- Save the duplicated version.
+			- *Note:* This duplication step is **required**—the original event's link may not work on mobile devices.
+		- 3. Get a Shareable Link from Google Calendar
+			- Open the duplicated event.
+			- Click **Invite via link**.
+			- Click **Copy** to grab the sharable event link.
+		- 4. Use ChatGPT and Canvas to Generate the `.ics`
+			- Paste the link into ChatGPT and say:
+				- "Open a canvas. I'll paste the full event description next. Then please generate a downloadable `.ics` file."
+			- Once the canvas opens, paste the full event description.
+			- ChatGPT will extract the title, start/end time, location, and description, and generate the `.ics` file.
+		- 5. Download the `.ics` File
+			- Click the provided link to download the `.ics` file.
+			- Use it to import into calendar systems or send to invitees.
+	- ## Troubleshooting
+		- **Mobile link error** → Always duplicate the Google Calendar event before using **Invite via link**.
+		- **Missing fields** → Ensure the forwarded event contains title, time, and location before duplicating.
+	- ## References
+		- [[How to work around o365 Outlook being unable to generate a `.ics` file using ChatGPT and a gmail link]]
