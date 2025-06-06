@@ -32,4 +32,4 @@ tags:: [[Diataxis/How To]]
 		- **Mobile link error** → Always duplicate the Google Calendar event before using **Invite via link**.
 		- **Missing fields** → Ensure the forwarded event contains title, time, and location before duplicating.
 	- ## References
-		- [[How to work around o365 Outlook being unable to generate a `.ics` file using ChatGPT and a gmail link]]
+		- It's not possible to do this in o365 according to [Export single calendar appointment to file (ics or other) - Microsoft Community](https://answers.microsoft.com/en-us/outlook_com/forum/all/export-single-calendar-appointment-to-file-ics-or/dc61d83f-adc9-4936-a0c3-1c4759c4a7b4)
