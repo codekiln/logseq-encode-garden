@@ -2,7 +2,7 @@ tags:: [[mise]], [[Diataxis/Explanation]]
 
 - # When to Declare [[mise/Tool]]s
 	- ## Overview
-		- **`[tools]` pins a versioned binary and gives you a shim; tasks merely *use* whatever is already on `PATH`.**
+		- **`[tools]` pins a versioned binary and gives you a [[mise/Shim]]; tasks merely *use* whatever is already on `PATH`.**
 		- [Mise can be used to install and run tools, launch tasks, and manage environment variables](https://mise.jdx.dev/getting-started.html#exec-and-run). Choosing where a command lives decides whether it is upgraded by `mise` or by the command's own update mechanism.
 	- ## Context
 		- New users often add every CLI to `[tools]`, then wonder why `npx prettier` or `pipx some-app` discovers a newer version than `prettier --version` run directly.

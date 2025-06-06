@@ -1,1 +1,1 @@
-alias:: [[Diataxis/Concept]]
+alias:: [[Diataxis/Concept]], [[Diataxis/Conceptual Guide]]
