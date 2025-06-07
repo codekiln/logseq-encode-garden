@@ -10,7 +10,7 @@ tags:: [[c74/M4L]], [[Tutorial]]
 	- this one switches between clips in the session view
 	- This is using [[Ableton/Operator]] instrument rack called Brushed Bells. I couldn't find it in the full instrument list, though I did find a few examples like Basic Brushed Bells and Ethereal Brushed Bells. They all sound great.
 	- what makes this one cool is the [[Ableton/Max for Live/MIDI Effect/Launcher]] which lets you basically stack clips into a track and then use a rotary encoder called "Progress" which determines the parameters of a sliding window from top to bottom in a clip. so for example at the beginning you can have it select randomly among the first three, then in the middle you have it select from the middle 6, then at the end it selects from the last three.
-	- very cool and #Creative idea that I could actually use for [[Music/Composition/Collab/Erik and Kev/Proj/25/t1/FinalizeRec]]
+	- very cool and #Creative idea that I could actually use
 	- the point here is that max for live can access tracks, clip slots and clip launches.
 - [[Ableton/Packs/building-max-devices/01 Tour/Track/6 Fog Pad]]
 	- this one has [[Ableton/Max for Live/Audio Effect/Sidechain Modulator]]
