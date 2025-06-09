@@ -1,0 +1,25 @@
+tags:: [[Sound/3d]]
+
+- # Sluicer by Shawn Greenlee - `ICMC25.512` - 12'
+	- > CUSTOM SOFTWARE FOR MULTICHANNEL AUDIO PERFORMANCE
+	- [[Person/Shawn Greenlee]]
+		- ![Shawn Greenlee](https://icmc2025.sites.northeastern.edu/files/2025/05/greenlee_headshot_sq-221x300.jpg)
+		- **Shawn Greenlee** is a composer, sound artist, and Professor at Rhode Island School of Design ([[School/RISD]]) where he leads the Studio for Research in Sound & Technology (SRST) and is the Department Head for Digital + Media. His recent work explores spatial audio, high density loudspeaker arrays, and erratic sound synthesis techniques. Greenlee has been active as a solo electronic / electroacoustic improvisor since 1997 and has toured extensively across the US and Europe. Conference and festival performances include New Interfaces for Musical Expression (2024 Utrecht, 2018 Blacksburg, 2015 Baton Rouge, 2014 London, 2013 Daejeon), International Computer Music Conference (2021 Santiago, 2018 Daegu, 2011 Huddersfield, 2005 Barcelona), BEAST FEaST (2017 Birmingham), PdCon16 (2016 New York), Cube Fest (2024, 2019, 2016 Blacksburg), Re-new (2013 Copenhagen), IN TRANSIT (2008 Berlin), and Elevate (2007 Graz), among others. Greenlee holds a Ph.D. in Computer Music and New Media from [[Uni/Brown]].
+	- ## Summary
+		- **Sluicer** is a performance system for spatial audio improvisation, adaptable to various output channel configurations from stereo to high density loudspeaker arrays. In this work, two 20-voice, erratic synthesizers operate as a roving “chorus” under the player’s direction. Both synths have a series of multichannel effects designed to work specifically with high order [[Sound/Ambisonic]] signals, allowing the player to create and alter spatial dimensions. As audio flows, the guiding action is like closing/opening gates in a lock on a waterway. The results are timbral and spatial churns, swells, **floods and drains**, motion in repetition, expansion, and contraction. Sluicer is programmed in [[Max]] with tactile interfaces being **high resolution, multi-touch control surfaces** and a DJ-style MIDI controller.
+			- *which ones?*
+				- [[ChatGPT/Response]]
+					- The **high-resolution, multi-touch control surfaces** Greenlee puts at the centre of *Sluicer* are [[Co/Sensel/Morph]] pads:
+						- Sensel published an interview with him on their Morph artist blog, highlighting how he uses a pair of Morphs as the “tactile, multi-touch front end” for his Max patch.
+						- The same “Interview: Shawn Greenlee” article on the Sensel site (and its syndicated preview) explicitly notes that the Morph’s high sensor resolution and pressure-sensitivity are what let him sculpt ambisonic parameters in real time: [morph.sensel.com](https://morph.sensel.com/blogs/news/interview-shawn-greenlee?utm_source=chatgpt.com).
+						- In other words, the **Sensel Morph** (typically two units side-by-side, each with custom overlays mapped in Max) provides the high-density multi-touch control he refers to. The other hardware he mentions—a “DJ-style MIDI controller” for quick faders/knobs—is separate; it handles coarse mix actions, while the Morphs handle the nuanced spatial-synthesis gestures.
+		- Since 2015, my artistic work and research has been primarily focused on an area within spatial audio involving [[Sound/Speaker/High Density Loudspeaker Array]] High Density Loudspeaker Arrays (HDLA) which are typically permanent installations with 24 or more loudspeakers in a cube or hemisphere configuration. Some HDLA facilities feature **hundreds of loudspeakers** to provide more resolution and precision, and to support a wider range of spatial audio techniques. For this work, **I have traveled to various HDLA facilities to participate in residencies and workshops** and to perform/present at conferences and festivals.
+		- Sluicer is the most recent performance system I have developed that focuses on HDLAs as new interfaces for musical expression. A core strategy in Sluicer is the use of spatially positioned, multichannel audio effects that alter specific regions of a sound field rather than the audio signal of a specific source (e.g. instrument, voice, track). This approach makes it possible to lock an effect at spatial coordinates such that an audio source moving in 3d space is transformed when its path crosses into a specific zone.
+	- ## [[My Notes]]
+		- appreciations
+			- splattery confetti
+			- whippery helicopters
+				- low hz
+			- pulses of intensity
+			- reverberations that echo in the deep and up high in a coordinated way, that makes it seem as though a giant blade is rotating
+			- 14:41  the peel of pitches made me smile, neons

@@ -1,0 +1,14 @@
+# AEON
+	- [[Person/Chi Wang]]
+		- ![Chi Wang](https://icmc2025.sites.northeastern.edu/files/2025/05/chang-269x300.jpg)
+		- Chi Wang is a composer and performer of [[Music/Genre/Electroacoustic]]. Her research and compositional interests include sound design, data-driven instruments creation, musical composition, and performance. Chi’s compositions have been performed internationally including presentations at the International Computer Music Conference, New Interfaces for Musical Expression, Musicacoustica-Beijing, the Society for Electro-Acoustic Music in the United States Conference, the New York City Electroacoustic Music Festival, Kyma International Sound Symposia, Electronic Music Midwest Festival, Third Practice Electroacoustic Music Festival, Electroacoustic Barn Dance, Portland Biennial of Contemporary Art, I. Paderewski Conservatory of Music in Poland, International Confederation of Electro-Acoustic Music, and WOCMAT in Taiwan. Chi’s compositions were selected for SEAMUS CDs, Best Composition from the Americas from International Computer Music Conference, Pauline Oliveros New Genre Prize from International Alliance for Women in Music, Award of Distinction from MA/IN International Festival of Digital and Creative Culture festival, International Confederation of Electroacoustic Music Competition Prix CIME, and finalist at Guthman Musical Instrument Competition. Chi has also served as a judge for international electronic music competitions including Musicacostica-Beijing, Society for Electro-Acoustic Music in the United States national conferences and International Computer Music Conference. Chi is also an active translator for electronic music related books, including Kyma and the SumOfSines Disco Club and Electronic Music Interactive. Chi received her D.M.A. at the [[Uni/Oregon]] University of Oregon in the Performance of Data-driven Instruments and is currently an assistant professor of music (composition: electronic and computer music) at the [[Uni/Indiana/Jacobs School of Music]].
+	- ## Description
+		- The symbolic abstraction of origin, motion of circle, and the reflection of evolution can be implemented in numerous forms and timespans and can inspire provocative insights into everyday life. Four custom-made controllers of two sizes are used for the performance. Each controller can be performed individually or together with the other three, creating an immersive musical experience.
+	- ## See-also
+		- from [[NIME/23]] - [AEON](https://nime.org/proc_music/nime2024_music_27/index.html)
+			- [NIME23 description PDF](https://nime.org/proceedings/2024/nime2024_music_27.pdf)
+			- #Video
+				- {{video https://www.youtube.com/watch?v=LWuolr1jKZ8}}
+	- ## [[My Notes]]
+		- Cool interface! Appreciated the sounds
+-

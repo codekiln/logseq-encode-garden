@@ -1,0 +1,8 @@
+# [Interactive Music Co-Creation with an Instrumental Technique-Aware System: A Case Study with Flute and Somax2 - Archive ouverte HAL](https://hal.science/hal-05061669v1)
+	- [ICMC 25 papers page](https://icmc2025.sites.northeastern.edu/papers/)
+	- ## Abstract
+		- This paper presents a significant advancement in the co-creative capabilities of [[Somax2]] through the integration of real-time recognition of a broad range of flute **Instrumental Playing Techniques** (IPTs). Building on the concept of interactive systems for musical co-creation, this implementation enables the recognition and response to diverse IPTs, enhancing the depth of interaction during live performance. The approach was tested in collaboration with a professional flutist performing Cassandra’s Dream Song by Brian Ferneyhough, a piece renowned for its complex intrication of extended playing techniques. Through this experiment, the artificial agents demonstrated the ability to adapt and engage with the performer’s techniques, creating a more dynamic and responsive experience. This functionality relies on a [[AI/ML/CNN]]-based flute IPT recognition model, which informs the agents’ real-time responses. The paper examines the broader implications of these innovations for music co-creation, interactive performance, and human-AI collaboration, offering new workflows for creative musical systems and potential applications in composition and live improvisation.
+	- ## [[My Notes]]
+		- Hard to understand in such a condensed presentation.
+		-
+	-

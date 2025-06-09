@@ -1,0 +1,57 @@
+date-created:: [[2025-06-09 Mon]]
+cgpt-link:: [ICMC25 - ICMC/25/d1/1300 Quantum Computing Panel](https://chatgpt.com/g/g-p-6845c013a1dc8191953259251f424f3c-icmc25/c/68471c1b-6440-800a-a612-8a63c6a6a7ba)
+title:: ICMC/25/d0/1300 Quantum Computing Panel
+
+- # Quantum Computer Music? Goodness Me!
+	- ## Summary
+		- see https://icmc2025.sites.northeastern.edu/panel-sessions/
+		- **Panelists:**
+			- Eduardo Reck Miranda (Chair), [[Person/Scott Yeiichi Oshiro]], [[Person/Mark Carney]]
+		- livestream - #YouTube - [ICMC - Fenway Center - Quantum Computing Panel - YouTube](https://www.youtube.com/live/P2AQqx4v-DM)
+		- Location: [[Uni/Northeastern/Campus/Fenway Center]]
+		- Time/Location: 1:00pm – 2:00pm / Fenway Center, Northeastern University
+		- In collaboration with the: ![University-of-Plymouth-logo-and-moth-logo](https://icmc2025.sites.northeastern.edu/files/2025/02/University-of-Plymouth-logo-and-moth-logo.jpg)
+		- #### Abstract
+			- In celebration of the 100th anniversary of quantum mechanics, UNESCO has declared 2025 the International Year of Quantum Science and Technology. In addition, 2025 marks the 50th anniversary of the International Computer Music Conference (ICMC). This panel aims to raise awareness within the ICMC community about the emerging field of Quantum Computer Music. The panelists will discuss their ongoing work in this field, with demonstrations and a performance. Computers have become integral to the music industry. The ICMC community is a major player in this prosperous activity. Therefore, it is natural for us to consider how new types of computers might influence the future of music composition, performance, and distribution. Quantum computers leverage quantum mechanical phenomena like entanglement and superposition to process information. They can afford different algorithms, some of which may run more efficiently on quantum hardware than on traditional digital computers. There is a global race to develop quantum computers, and much research is underway to determine their affordances and advantages. Regardless of whether any advantage will ever materialize, small-scale quantum computers are already available, and their size and sophistication are evolving fast. The panelists propose that the time is right for the computer music community to engage with these developments. Enhanced processing power and alleged computational advantages would most definitely benefit the computer music community in the future. Nevertheless, quantum computing can already offer intriguing possibilities for musical creativity right now. It encourages new approaches to developing generative algorithms and AI, which is very exciting. We are already witnessing systems and musical pieces created with quantum computers that would not have been conceived otherwise.
+	- ## [[My Notes]]
+		- Basic idea is that you don't need as much computing power to represent musical information
+		- ## [[Person/Scott Yeiichi Oshiro]]
+			- ### Quantum Agents
+				- use the idea of quantum teleportation to send ideas from agent 1 to agent 2 to agent 3 ...
+				- 3 agents
+				- a single agent's "quantum circuit"
+				- specific algorithm - sqpan - decodes a signal based on a 1-cubit superposition
+			- ### Quantum Teleportation
+				- if you have two cubits in one location and you want to get to the other location in a quantum location. you entangle two and send it over fiber optics, then destroy one ... ?
+			- ### Demo Concert
+				- he's playing flute. The quantum computer is playing the grand piano ... so far, it sounds cool
+				- drum kit beats enter.  quantum system is controlling the beats.
+				- it's interesting
+		- ## [[Person/Mark Carney]]
+			- Quote on entanglement (Karen Barad) ties to his philosophical perspective:
+				- >  “Existence is not an individual affair.”
+			- Promotes educational outreach via hands-on projects (e.g., Raspberry Pi Pico quantum simulator).
+			- > “Make a Raspberry Pi Pico a Micro Quantum Computer!”
+			- Emphasis: “Hold a quantum computer in your hand!”
+			- Quantum Village exhibits included playful pedagogical tools and embedded quantum simulators.
+			- He compares it to [[Korg/NTS-1]] and you can build a plugin for it
+				- they made a version of a bitcrusher, which is "the most basic effect"
+			- He has a yamaha dx-7
+			- ### What's next for Quantum Village?
+				- Entangled instruments for non-local ensembles are in development.
+				- Simulation performance improvements planned: more qubits, better timing.
+				- Nonlocal performance concepts being explored—distributed performers linked via entanglement-inspired systems.
+				- Repository: [https://github.com/Quantum-Village/quantum-music](https://github.com/Quantum-Village/quantum-music)
+				- Contact: [hello@quantumvillage.org](mailto:hello@quantumvillage.org)
+				- Stylized slide featured a futuristic Bach performing on imagined quantum keyboards.
+			- ### Musical "interlude" - [[ToposJS]]
+				- The software shown in the livestream is **Topo.js (aka Topos)** — a browser-based live coding environment for music and visuals.
+				- ### Key identifiers:
+					- The browser tab reads: `Lincut Gem by Quantum Village – topos.live`
+					- The domain `topos.live` is an active web-based livecoding platform.
+					- Code structure (`beat`, `sound`, `.scope().out()`) aligns with the **Topo.js DSL** (domain-specific language).
+					- The visual waveform (`scope: { enabled: true, color: "purple" }`) uses a configuration object unique to Topos for customizing oscilloscope displays.
+					- The code is executing in the browser with controls like `Pause`, `Eval`, and `Docs`, typical of the Topos livecoding UI.
+				- ### Summary:
+					- This is not Sonic Pi — although they share a spirit of real-time audio synthesis, **Topos runs in a browser** and is designed for **collaborative audiovisual coding**. The `.scope().out()` syntax and flexible sample management with JSON-style configuration are specific to Topos.
+					- You can explore it or run your own code here: [https://topos.live](https://topos.live/)

@@ -1,0 +1,3 @@
+# George Rhoads
+	- (1926–2021), renowned for his [[Sound/Sculpture/Audiokinetic]] audiokinetic sculptures featuring rolling balls, bells, chimes, and intricate mechanical pathways. One of his most notable works, *42nd Street Ballroom*, has been installed at the Port Authority Bus Terminal in New York City since 1983. This 8-foot cube captivates passersby with 24 billiard balls navigating four distinct tracks, activating over 15 devices that produce various sounds and movements
+		- {{video https://www.youtube.com/watch?v=WK_uiMzTsvY&t=1s}}

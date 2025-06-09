@@ -1,0 +1,11 @@
+# Serie 410 `ICMC.586` 6'
+	- ## My Notes
+		- Didn't connect with me. It kind of made me think about terroception though - but in the sense of what it would be like for the piano. Echoey piano with reversed samples. Not performed; pre-recorded.
+	- ## [[Person/Costantino Rizzuti]]
+		- [I care about - sound, music and Art - Costantino Rizzuti](http://www.costantinorizzuti.com/)
+		- ![Costantino Rizzuti](https://icmc2025.sites.northeastern.edu/files/2025/05/unnamed-1-223x300.jpg)
+		- Costantino Rizzuti is a composer and sound artist. He is author of pieces of acousmatic music and live electronics, sound and audio-visual installations and live performances presented in national and international conferences, festivals and exhibitions. He graduated at Conservatory S. Giacomantonio in Cosenza in Electronic Music. In June 2012, He won the IX edition of the national award for Italian conservatory students “Premio delle Arti”, section Music and new technologies with the composition Advaita, for flute and live electronics. He teaches electroacoustics at the Conservatory S. Giacomantonio in Cosenza and is the founder of Artis Lab an electronic music studio devoted to the design and construction of new experimental electronic musical instruments.
+	- ## Description
+		- **Serie 410** is an acousmatic piece that explores the boundary between real and virtual by proposing to listen to sounds organized according to a typically instrumental language. Art and technology therefore become means to falsify reality by suggesting as real something that is instead the result of technological manipulation. The piece also proposes a diagonal crossing of the different categories of electronic compositions in use today. Indeed this acousmatic work could also be perceived as a recording of a piece for mixed media or even for instruments and live electronics.
+		- Serie 410 was born from the recording of a [[Instrument/Piano]] improvisation made using a twelve-tone series as musical material. The recording was superimposed on a copy of it played backwards. The sounds of the piano dialogue with percussion sounds, also elaborated with electronic means, to create small iridescent sound universes
+	-

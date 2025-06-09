@@ -1,0 +1,25 @@
+imc25-id:: 555
+
+- # Soundscape Beyond Black and White
+	- [[My Notes]]
+		- Many pieces so far today have been about [[Instrument/Piano]], and this also exposes the guts of the piano in a visceral way as they are scraped and clawed. At times it sounds like a [[Hammered Dulcimer]]. Sounds great on the loudspeaker array here.
+	- Description
+		- The sound sources of **Soundscape beyond black and white** were solely drawn from recording fragments of playing inside the piano The sources were then manipulated and transformed through several techniques of digital audio signal processing to build up the needed and desired timbres and sonic gestures of this composition.
+		- Those processed “inner sounds” of pianoforte were then “organized” (in E. Varese’s word) or “digital micro-montaged” (in H. Vaggione’s word) to compose a musical composition with artistic interests and imaginary soundscape.
+		- However, Soundscape beyond black and white is neither abstract nor so much representational, but oscillates between the real and virtual or “concrete” and abstract soundscapes to create the beauty of Ying and Yang in Chinese philosophy.
+		- Soundscape beyond black and white was completed as a 2-channel work, but could be possibly live diffused into multi-channel sound system while concert performance. The work was finished at Sound Lab at National Yang-Ming Chiao-Tung University (NYCU) in 2023 and revised in 2025.
+	- Composer [[Person/Yu-Chung Tseng]]
+		- ![](https://icmc2025.sites.northeastern.edu/files/2025/06/Yu-Chung-Tseng-221x300.jpg)
+		- **Yu-Chung Tseng**, receiving his DMA from UNT in Texas, is a professor of electronic music composition and serves as the director of multi-channel Sound Lab at Institute of Music at National Yang Ming Chiao Tung University(NYCU) in Taiwan.
+		- His music, written for both acoustic and electronic media, has been recognized with selection/awards from Pierre Schaeffer International Computer Music Competition (1st Prize/2003), Città di Udine International Contemporary Music Competition, Musica Nova (First Prize/2010), Metamorphoses, International Computer Music Conference(ICMC, Best Music Award/2011/2015/2022),Taukay Edizioni Musicali call for [[Music/Acousmatic]] (Winner/2019), and RMN Classical Electroacoustic call for work(Winner/2023),Polish International Electroacoustic Music Competition (Finalist/2023),and KLANG International Acousmatic Composition Competition(Second Prize/2023).
+		- Tseng’s works have also received many performances at festivals and conferences, including Taiwan-CLAB, ICMC, NYCEMF, Musicacoustica, SICMF, Visiones Sonoras Festiva,La Hora Acusmatica, EMW, FIME, MUSLAB,Schumann Festival, ACL, Musica Nova, Taiwan-France Exchange and Chengdu International Electronic Music Festival..etc.
+		- His music can be heard on labels including CDCM (U.S.A.), Discontact iii (Canada), Pescara (It.), Contemporanea (It.), Metamorphoses (Belgium), SEAMUS (USA), KECD2 (Demark), Musica Nova (Czech), ICMC 2011 DVD and ICMC 2015 CD , IL SUONO DELLE LINGUE(It.), Electroacoustic & Beyond 7 (UK).
+	- [[AI Notes]]
+		- ## 📘 1. "Organized" —  **Edgard Varèse** [[Person/Edgard Varese]]
+			- Varèse is widely credited with redefining what music could be in the 20th century, moving beyond melody and harmony to **“organized sound.”** This phrase comes from his belief that:
+			- > “Music is organized sound. The raw material of music is sound.”
+			- He meant that any sound—industrial noise, electronic buzzes, environmental ambience—could be music, as long as it was organized with intent. This quote captures Varèse’s radical vision of breaking traditional musical boundaries and treating sound as a sculptural medium. In the context of Tseng's piece, it underscores the structuring of inside-the-piano recordings into an abstract yet expressive soundscape, similar to Varèse’s vision of sonic architecture.
+		- ## 🎧 2. "Digital Micro-Montaged" —  **Horacio Vaggione** [[Person/Horacio Vaggione]]
+			- Horacio Vaggione is an Argentinian composer known for his pioneering work in microsound and computer-assisted composition. His idea of **“micro-montage”** comes from working at the microscopic level of sound. He once described his method as:
+			- > “A digital montage where sound is articulated at micro-time scales… Each sonic unit is structured not only by its frequency and envelope but also its spatial behavior and evolution.”
+			- In Tseng’s usage, *digital micro-montaging* refers to his **granular and high-resolution sculpting of piano recordings**—cutting, layering, transforming these fragments into sonic gestures that evolve across time and space. This mirrors Vaggione’s technique, which treats sound like a pointillist painting—tiny dots forming a cohesive but fluid whole.

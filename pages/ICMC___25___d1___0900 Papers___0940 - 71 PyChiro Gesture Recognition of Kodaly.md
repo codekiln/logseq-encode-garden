@@ -1,0 +1,21 @@
+# **PyChiro: Gesture-Based Music Interaction Using the Kodály Chironomic Method**
+	- **Presented by**: Francesco Roberto Dani
+	- **Website**: [https://www.francesco-dani.com](https://www.francesco-dani.com/)
+	- **GitHub (Project Repo)**: [https://github.com/FRD93/PyChiro-ICMC2025](https://github.com/FRD93/PyChiro-ICMC2025)
+	- ## 🧠 What Is PyChiro?
+		- **PyChiro** is a **real-time gesture recognition system** designed to bring the **Kodály Chironomic Method** into digital music interaction. It supports music pedagogy, therapy, and performance by mapping hand gestures—captured via webcam—to musical outputs using MIDI.
+	- ### 🔧 Key Features:
+		- **Real-time webcam gesture capture**
+		- **Neural network-based gesture classification**
+		- **Direct MIDI output for feedback**
+		- Open-source and platform-flexible
+	- ### 📌 Use Cases:
+		- **Music education** (e.g., solfège practice with feedback)
+		- **Therapeutic applications** (gesture-based interaction for accessibility)
+		- **Live performance** (hands-only conducting of digital music)
+		- **Creative composition** (gestural interfaces for DAWs)
+	- ## 🔬 Technical Summary:
+		- Gesture features are extracted via computer vision.
+		- A trained deep learning model classifies gestures with high precision.
+		- MIDI output is triggered to correspond to recognized gestures.
+		- Built for portability and ease of setup using a standard webcam.
