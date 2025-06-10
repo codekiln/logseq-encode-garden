@@ -5,5 +5,6 @@
 	- [[ICMC/25/d1/1930 Concert n04/03 Echoes of the Machine Mind I]]
 	- [[ICMC/25/d1/1930 Concert n04/04 Five Elements with Somax2]]
 	- [[ICMC/25/d1/1930 Concert n04/05 Instrospectronica]]
-	- [[ICMC/25/d1/1930 Concert n04/06]]
+	- [[ICMC/25/d1/1930 Concert n04/06 Harald Bode's Phase 6]]
+	- [[ICMC/25/d1/1930 Concert n04/07 Taideji]]
 -
