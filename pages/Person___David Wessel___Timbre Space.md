@@ -1,0 +1,14 @@
+# David Wessel's Notion of "Timbre Space"
+	- David Wessel's concept of **Timbre Space** is foundational in computer music and auditory cognition. It originates from his 1979 paper titled *"Timbre Space as a Musical Control Structure"*, published in the *Computer Music Journal*. Here's a breakdown of the key ideas:
+	- ## 🌀 Overview of Timbre Space
+		- **Timbre Space** refers to a **multi-dimensional representation of timbre**—the perceived quality of sound that allows us to distinguish different instruments or sound sources, even when they have the same pitch and loudness.
+		- Wessel proposed that timbre could be **mapped to a perceptual space** using dimensions like **brightness, attack time, spectral centroid**, and others derived from both physical properties and human perception.
+		- This space is **continuous**, meaning small movements within it correspond to subtle changes in sound quality—ideal for gestural control and real-time sound interaction.
+	- ## 🎛 Timbre as a Control Structure
+		- One of Wessel's great contributions was the insight that **musical performance and composition could be driven by navigating this timbre space**, instead of only using pitch and rhythm.
+		- This meant that a performer or system could **"play timbre"** by smoothly transitioning through perceptual sound qualities.
+		- It laid the groundwork for many **gesture-based instruments** and real-time synthesis environments (e.g., the *Thunder* controller and Max/MSP mappings).
+	- ## 🔭 Applications and Legacy
+		- Wessel's ideas shaped decades of research on **auditory display**, **sound synthesis**, and **music perception**.
+		- His notion of **"timbre as structure"** led to a deeper integration of **machine learning, sensory fusion**, and **real-time improvisation tools** (such as Somax2).
+		- As referenced in Jean-Baptiste Barrière's *"Portrait du chercheur dans l'espace des timbres"*, Wessel's "timbre space" is not just a metaphor but a **functional design principle** used in software like the MuBu and Bach libraries for Max/MSP.

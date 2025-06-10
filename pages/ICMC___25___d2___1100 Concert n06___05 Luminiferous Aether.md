@@ -1,5 +1,27 @@
 icmc25-id:: 862
+tags:: [[Music/Acousmatic]]
 
-- # Luminiferous Aether
+- # Luminiferous Aether aka `LumAE`
 	- ## [[My Notes]]
-	- ## #Description 
+		- 14:32 we had some kind of audio distortion issue that caused the performance to cut out. The engineer said we'll start it over from the start.
+		- There's a kind of stuttering as things come around us in little grains of space - I can sense on the second time through the 64-ness of the space
+		- rich strings, gutteral [[Double Bass]] strokes
+		- the thrush of 2-3 strings simultaneously bowing ... what does it remind me of ... ? maybe [[Person/John Adams/Shaker Loops]] in the final movements?
+		- some of the sounds blink in and out, this ispopular effect, binary [[Poisson]] process gives way to lusher moments with more sweeping gestures
+		- if I close my eyes, I feel like I am at the center of a merry-go-round,
+		- #Enjoy the flittering time shifts, there's a slow bezzier curve mapping over the holes between the amplitude.
+			- they are not holes, but more like sine waves mapping the amplitude
+		- 14:42 ok now, some rain samples come in, with some crystaline fluffs
+		- in the left, some harmonica-ish thing --- is that a phone?
+	- ## #Composer
+		- [[Person/Peter Otto]]
+			- ![Peter Otto](https://icmc2025.sites.northeastern.edu/files/2025/06/862-577DF8AE-C18A-4D53-9F64-5523E4CB1C35-221x300.jpg)
+			- **Peter Otto** is an expert in the language and aesthetics of music technology, and has lead hardware/software design teams in instrumentation and facilities design, systems and networking, and media R&D. Classically trained in performance and composition, he completed graduate work at [[School/California/Institute/of the Arts]] in Los Angeles in 1984, and continued there on faculty for several years. His vita includes long associations with [[Person/Morton Subotnick]] and [[Person/Luciano Berio]] (Tempo Reale), and studies and collaborations with Mel Powell and Roger Reynolds. He held faculty appointments at [[Uni/California/San Diego]] as Music Technology Director, and as founding Director of the Sonic Arts R&D group at UCSD’s Qualcomm Institute from 2009. He designed audio systems for leading academic laboratories (StarCave, HiperWall, KAUST’s sci-viz labs). Venue, studio and R&D lab credits include CalIT2’s Spatial Audio Lab (Spatlab) and collaborative designs for CalIT2’s Black Box and Digital Cinema Theatres, UCSD Music’s new Prebys Music Center (Experimental Theatre and others). His research has focused on auditory imaging, sensory fusion and multidimensionality for the past 15 years, and he has published or co-authored more than 25 technical papers. His performance and large venue design work has been heard in American, European and Asian venues such as Carnegie Hall, Juilliard, Los Angeles Philharmonic, SIGGRAPH, Theatre Olympics (Japan), The Holland Festival, Foundation Maecht (France), Santa Cecilia (Italy), Barbican and Royal Albert Halls (London), Ars Electronica (Austria), the Aspen Festival, and many others. In 2016 he designed the innovative and acclaimed hybrid immersive audio system for the Mass Effect 4D Theatre in the Great America theme park in Santa Clara, California.
+	- ## #Description
+		- Luminiferous Aether Students of scientific history will recognize that the title references ==a beautiful but abandoned concept in physics==, eventually disproven in the late 19th and early twentieth century. “Luminiferous Aether” was the ==postulated medium for the propagation of light … “invoked to explain the ability of apparently wave-based light to propagate through empty space…”== (Wikipedia)
+		- ‘LumAe’ envelopes listeners in harmonic constructs of a primarily static nature. However, beneath this static harmonic surface, individual pitch elements undergo continual spatial shifts through the use of overlapping, nested and granulated spatial matrices. In effect, harmonies are dynamically revoiced in space. Little traditional panning is used.
+		- In ==its 24 channel version==, individual sounds virtually appear in one speaker at a time though they may overlap in various ways as melodies sometimes surface. The music is completely derived from bowed cello tones and harmonics (except for one note and one other sound).
+		- In its final form, the piece will be performed live by a [[Cellist]] / [[Computer Musician]]. All materials were generated and processed in real time in [[c74/msp]] and [[Spat5]]. Output formats vary, from transaural stereo to hemispherical arrays of [[Sound/Speaker/Multichannel/64 Channel]] or more loudspeakers . To be succinct, the piece is about spatially articulated harmony as complex timbre flow, riffing on wave and particle dualities, and notions of transcendence. ‘LumAe’ was premiered ==at the SAT dome in Montreal== in 2016 and revised in 2024/25. Note: I first started thinking about spatially distributed harmonies after learning of [[Person/David Wessel/Timbre Space]]. Perhaps this is Harmony Space. Peter Otto
+			- DONE #Question what is David Wessel's notion of Timbre Space?
+				- > Wessel's legacy—where **spatially-distributed harmonies** are treated as **complex timbral phenomena**, implying that just as Wessel mapped timbre in space, Otto maps harmony through distributed loudspeakers.
+			-

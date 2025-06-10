@@ -1,5 +1,42 @@
 icmc25-id:: 544
+tags:: [[To Listen Again]]
 
-- # disonancia
+- # disonancia (disonance)
 	- ## [[My Notes]]
-	- ## #Description 
+		- 14:44 it begins with the sound of crickets and insects
+		- it's a rich soundscape
+		- 14:45 some thunder enters
+		- 14:45 it gets loud, then cuts out with loud silence
+			- then a female voice flips and silences in the space with a heartbeat, startling, then the rain comes back in
+		- 14:46 very serious, and beautiful
+			- shards of glass
+			- terrifying heartbeats on this immense sound system
+			- vulnerable rain gives way to the sound of frying eggs or something
+				- really nice #ASMR ellision
+				- sounds of cracking against pans
+			- elision into static popping ... and then some music from the 60s on a radio
+			- the texture of the static is sumptuous and gets disrupted by ... it starts opening up the filter, and now we're in a public space
+			- a cat call ?
+		- 14:49 a trumpet, mariachi, a cylinder motorcycle or 4-cylinder car?
+			- laughter
+		- what a carnival (not literally)
+		- but we are outdoors, ... woah, laughter, this is so graceful, but I'm scared at getting lured in
+		- ok, now we have some [[Instrument/Calliope]]
+		- 14:50 some vocal yodelings, but it's not like anything I've heard before, it's fantasitc
+		- 14:50 the gasping breath is back, with distorted, elongated church bell cacophony, eches of voices in a public hall
+		- 14:51 having more problems with the sound system popping out
+		- 14:51 what is that bell, it's so familiar ... ?
+		- Whispering, uterances
+		- Some sobbing? The heartbeat returns
+		- while uterances continue
+		- wow, I feel like someone smacked my face.
+		- the first tears I've had in this conference.
+	- ## #Composer
+	- [[Person/Natalia Quintanilla Cabrera]]
+		- ![Natalia Quintanilla Cabrera](https://icmc2025.sites.northeastern.edu/files/2025/06/544-Natalia_sHeadshot-221x300.jpg)
+		- **Natalia Quintanilla Cabrera** is an electroacoustic music artist, composer, producer, and multi-instrumentalist based in Detroit, Michigan. She studied composition and music theory at the Centro de Investigación y Estudios Musicales (CIEM) in Mexico City and holds an M.A. in Media Arts from the Performing Arts Technology Department at the [[Uni/Michigan]] School of Music, Theatre & Dance. In Fall 2025, she will begin her Ph.D. in Digital Arts and Experimental Media (DXARTS) at the University of Washington. Her research focuses on hybrid systems for spatial audio, creating augmented immersive environments that integrate binaural headphone listening, Ambisonics speaker arrays, and natural acoustic sound fields. Her work has been presented across Mexico and the U.S., as well as at internationally recognized festivals such as Ars Electronica in Linz, Austria, and Festival IZIS in Koper, Slovenia. She has also participated in conferences and summits including the 40.4 Festival at the University of Colorado Boulder, the University of Gloucestershire, and the University of Michigan. She was commissioned by the Hopkins Center for the Arts at Dartmouth as part of The Mexican Repertoire Initiative, and her wind ensemble works from this project are published by The Valley Winds in Pioneer Valley, Massachusetts. Natalia’s artistic practice is closely tied to social narratives, particularly around gender violence. She was the sound designer for Ni Une Más, a multidisciplinary production that brings together music, theater, and dance to share the stories of survivors and celebrate their agency. Her thesis extended this work, focusing on gender violence in Mexico through immersive compositions that use 3D audio and a hybrid audio diffusion system (HADS). She performs under the solo project Nati Bu, blending electronics with Latin American music. She plays piano and accordion, sings, and integrates live electronics and sensor-based technology into her performances.
+	- ## #Description
+		- **disonancia **(dissonance) traces the friction between two phrases.
+			- One is a call: **“lo personal es político”—the personal is political**.
+				- Born from feminist movements in the late 1960s, it reminds us that private struggles are not isolated. They are shaped by—and shape—larger systems of power. In the intimate spaces of daily life, in homes and relationships, politics takes root.
+			- The other is a warning: **“la ropa sucia se lava en casa”**—dirty laundry is washed at home. Common in México and Latin America, it urges silence. It keeps personal matters behind closed doors, especially those that disturb. It protects appearances, but at a cost: women’s voices are softened, struggles hidden, autonomy denied. disonancia lives in the space between these two phrases. It names the dissonance felt by gendered bodies in México—between silence and exposure, private pain and public denial. The piece is grounded in field recordings captured throughout Mexico City using a Zoom H3-VR Ambisonics microphone. These recordings were made across a range of sonic and social environments: the busy corridors of the Metro; the chants of street vendors in outdoor markets; the echoes of prayer inside historic Catholic churches; the quiet rustle of trees in ecological reserves like Los Dinamos; the stillness of early mornings in the canals of Xochimilco; the energy of Friday night gatherings in public plazas like Coyoacán; and the layered sounds of Centro Histórico, including the vibrant pedestrian avenue Francisco I. Madero. Structured as a sonic narrative, “disonancia” uses these recordings not just as texture, but as meaning. They form the foundation upon which the piece reflects on how place, sound, and gendered experience intersect. The work invites listeners into a space where the personal reverberates outward, unsettling the silence, and refusing erasure.

@@ -1,0 +1,20 @@
+# 5th Order Ambisonic Encoding
+	- **5th-order ambisonic encoding** refers to a high-resolution spatial audio technique that captures or synthesizes 3D sound fields using spherical harmonics up to the 5th order.
+	- ### **🔊 What is Ambisonics?**
+		- Ambisonics is a full-sphere surround sound format that encodes audio in terms of **soundfield directions** rather than channels like stereo or 5.1 surround. It uses **spherical harmonics** to represent the soundfield in 3D space (horizontal and vertical directions).
+	- ### **🎚️ What Does “5th-Order” Mean?**
+		- The **order** of ambisonics determines how accurately the spatial characteristics of a soundfield can be captured or reconstructed:
+		- **Order 0**: Omnidirectional (1 channel)
+		- **Order 1**: Adds front-back, left-right, up-down (4 channels total)
+		- **Order 2**: More precision (9 channels)
+		- …
+		- **Order N**: Uses (N+1)^2 channels
+		- So for **5th-order**:
+			- Number of channels = (5 + 1)^2 = 36
+		- This means 36 separate signals are used to encode directional sound detail.
+	- ### **🎧 Why Use 5th-Order?**
+		- **Higher spatial resolution**: More precise localization and smooth spatial movement.
+		- **VR/AR applications**: Ideal for immersive audio in head-tracked environments.
+		- **Post-production flexibility**: Sounds can be manipulated in 3D space without re-recording.
+	- ### **🧠 Summary**
+		- 5th-order ambisonic encoding is a method of representing 3D audio using 36 spherical harmonic components, enabling highly detailed spatial audio for immersive applications like VR, 360° video, or advanced music production.
