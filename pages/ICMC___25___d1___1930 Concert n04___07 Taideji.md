@@ -11,7 +11,7 @@
 		- the snare is traveling around with incredible force, like a train in a circle
 		- now the drums back off, and we get the piano
 		- clusters of chunks are dashed and chopped, speeding up samples of her grinding on the lower strings earlier.
-		- i swee that jose has some kind of controller now.
+		- i see that jose has some kind of controller now.
 		- ooh, now we have to get our ears opened to these electronic buzzes, that explode with wet lips, while [[Person/Thierry Miroglio]]'s bells and maraca stokes into a rattlesnake's spin,
 			- snare starts and comes across thierry's stick and out into the room, spinning out,
 			- ooh, now some low toms sound even weirder with somax2's processing
