@@ -2,6 +2,7 @@ icmc25-id:: 429
 
 - # Self-Censorship
 	- ## [[My Notes]]
+	  id:: 68485511-ab5e-47e1-b9ad-c3f49d77ca0f
 		- 11:54 tons of reverb. we have dissolving screen stuff with people holding a finger in front of a mouth
 		- echoes, crashes
 		- powerful, well-performed #Violin ! some of the lines remind me of [[Person/John Adams/Violin Concerto]]

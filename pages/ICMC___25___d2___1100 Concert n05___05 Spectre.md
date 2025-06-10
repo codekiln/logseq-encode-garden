@@ -3,6 +3,7 @@ tags:: [[To Listen Again]], [[Fantastic]]
 
 - # Spectre
 	- ## [[My Notes]]
+	  id:: 68485359-0f9a-4ac9-8995-3e588ca99754
 		- 11:46 fantastic piano performance, extremely compelling!
 		- melodic at times, imaginative and yet experimental and real.
 		- uses large iPad for the through-composed score

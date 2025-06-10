@@ -2,6 +2,7 @@ icmc25-id:: 963
 
 - ## Florillegium for violin and live electronics
 	- ## [[My Notes]]
+	  id:: 68484d2c-4808-448f-92a4-dd4c3e7e199b
 		- Very #Cool
 			- 11:20 the electronics are resampling violin, but they sound almost like [[Instrument/Melodica]]
 			- 11:22 now it is almost like [[Instrument/Organ]] or [[Instrument/Reed]]. visuals are circles cmyk style or rgb

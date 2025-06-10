@@ -2,10 +2,14 @@ icmc25-id:: 551
 
 - # Dynamic itineraries (2024)
 	- ## [[My Notes]]
+	  id:: 68485069-3e9b-4a8d-b4e2-b2c03fc63dcb
 		- 11:34 the vocalist from [[Music/Callithumpian Consort]] has some awesome extended [[Instrument/Voice]] techniques
 			- goat bleeting1
-			- see #Video
+			- see #Video - [[Person/Stephen Marotto]], #Cello - [[Person/Yukiko Takagi]] #Piano
+				- {{video https://youtu.be/zfn5bkQvi2g}}
 	- ## #Performer [[Music/Callithumpian Consort]]
+		- [[Person/Yukiko Takagi]] #Piano
+		- [[Person/Stephen Marotto]], #Cello
 	- ## #Composer [[Person/Sandra Gonzalez]]
 	  collapsed:: true
 		- ![Sandra Gonzalez](https://icmc2025.sites.northeastern.edu/files/2025/06/Sandra_Gonza%CC%81lez_HEADSHOT-221x300.jpg)

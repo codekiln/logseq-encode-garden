@@ -1,8 +1,15 @@
 -
+- **Location**: [[School/New England Conservatory/Plimpton Shattuck Black Box Theater]]
 - [[ICMC/25/d2/1100 Concert n05/01 Con Anima]] (originally 2nd to last)
+	- {{embed ((68484b6c-9345-4d5d-b6e5-fda0a583ae6a))}}
 - [[ICMC/25/d2/1100 Concert n05/02 Florillegium for violin and live electronics]] (originally last)
+	- {{embed ((68484d2c-4808-448f-92a4-dd4c3e7e199b))}}
 - [[ICMC/25/d2/1100 Concert n05/03 Dynamic itineraries]] (originally first)
+	- {{embed ((68485069-3e9b-4a8d-b4e2-b2c03fc63dcb))}}
 - [[ICMC/25/d2/1100 Concert n05/04 Hybris]]
+	- {{embed ((68485189-e671-406b-9df4-d30d5000f188))}}
 - [[ICMC/25/d2/1100 Concert n05/05 Spectre]]
+	- {{embed ((68485359-0f9a-4ac9-8995-3e588ca99754))}}
 - [[ICMC/25/d2/1100 Concert n05/06 Self-Censorship]]
+	- {{embed ((68485511-ab5e-47e1-b9ad-c3f49d77ca0f))}}
 - [[ICMC/25/d2/1100 Concert n05/08 Esquisse-o-phrenia]]

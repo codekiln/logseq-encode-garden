@@ -2,6 +2,7 @@ icmc25-id:: 410
 
 - # Con Anima `9'`
 	- ## [[My Notes]]
+	  id:: 68484b6c-9345-4d5d-b6e5-fda0a583ae6a
 		- Very #Cool - solo [[Instrument/Violin]] with electronics
 			- 11:13 10 min in
 				- twang in accompaniment

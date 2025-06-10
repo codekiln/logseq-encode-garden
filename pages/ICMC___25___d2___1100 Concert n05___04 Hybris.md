@@ -2,6 +2,7 @@ icmc25-id:: 579
 
 - # Hybris
 	- ## [[My Notes]]
+	  id:: 68485189-e671-406b-9df4-d30d5000f188
 		- 11:38 compelling soundscape - I mean [[To Listen Again]]. We have at least four channels here, I didn't realize yesterday
 		- space changes in jump cuts
 		- fields of blurs - clocks, whirring, more of the deep bass pulsing in and out
