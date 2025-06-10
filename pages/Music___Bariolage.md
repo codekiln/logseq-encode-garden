@@ -1,0 +1,11 @@
+# Bariolage
+	- **Bariolage** is a string playing technique, primarily used on the #Violin (but also on other bowed string instruments), characterized by rapid alternation between notes on adjacent strings—often between a static open string and varying stopped notes on a neighboring string.
+	- ### Characteristics:
+		- Creates a **shimmering or pulsating texture**.
+		- Common in **Baroque and Classical** music, notably in **J.S. Bach’s** solo string works.
+		- Exploits the **contrast in tone** between open and fingered strings.
+		- Often used to **simulate polyphony** or to add **rhythmic drive**.
+	- ### #Example
+		- In **Bach’s Partita No. 3 in E major, BWV 1006**, the Preludio uses bariolage extensively, alternating between the open E string and notes played on the A string.
+	- ### #Etymology
+		- From French *barioler*, meaning "to streak with several colors"—a metaphor for the tonal contrasts produced.

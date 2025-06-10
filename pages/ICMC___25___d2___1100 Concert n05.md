@@ -4,4 +4,5 @@
 - [[ICMC/25/d2/1100 Concert n05/03 Dynamic itineraries]] (originally first)
 - [[ICMC/25/d2/1100 Concert n05/04 Hybris]]
 - [[ICMC/25/d2/1100 Concert n05/05 Spectre]]
-- [[ICMC/25/d2/1100 Concert n05/06]]
+- [[ICMC/25/d2/1100 Concert n05/06 Self-Censorship]]
+- [[ICMC/25/d2/1100 Concert n05/08 Esquisse-o-phrenia]]
