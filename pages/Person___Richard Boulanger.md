@@ -1,0 +1,37 @@
+tags:: [[Person]], [[ICMC]], [[Computer Music]], [[Csound]], [[Berklee]]
+
+- # Richard Boulanger
+  - ## Title
+    - Professor of Electronic Production and Design (EPD) at Berklee College of Music
+  - ## Bio
+    - Known as "Dr. B"
+    - PhD in Computer Music from University of California, San Diego (UCSD)
+    - Worked at Center for Music Experiment's Computer Audio Research Lab (CARL) with Dick Moore
+    - Composed first cmusic piece "Two Movements in C" featured at 1981 ICMC in Denton, Texas
+    - Collaborated with key figures in computer music:
+      - Alan R. Pearlman (ARP)
+      - Barry Vercoe (Father of Csound)
+      - Max Mathews (Father of Computer Music)
+    - Research at:
+      - MIT Media Lab
+      - Bell Labs
+      - Stanford's CCRMA
+      - IBM
+      - Interval Research
+      - One Laptop Per Child Project (OLPC)
+  - ## Notable Achievements
+    - Created 'Trapped in Convert' (1979) - considered first Csound piece
+    - Developed Csound-based iOS apps: csJam, csGrain, csSpectral
+    - Created MUSE app for Leap Motion Controller
+    - Composed 'Symphonic Muse' featuring Boston Symphony Orchestra soloists
+    - Fulbright Professor at Krakow Academy of Music
+    - Faculty of the Year Award and President's Award at Berklee
+  - ## Publications
+    - Author/Editor of "The Csound Book" (MIT Press)
+    - Author/Editor of "The Audio Programming Book" (MIT Press)
+    - Articles in Perspectives of New Music, Electronic Musician, and Keyboard
+  - ## Philosophy
+    - "Music is a medium through which the spiritual essence of all things is revealed and shared"
+    - Focuses on extending performers' voices through technology
+    - Believes in connecting past, present, and future through music
+    - Advocates for Csound as a foundational and inspirational tool for audio artists 

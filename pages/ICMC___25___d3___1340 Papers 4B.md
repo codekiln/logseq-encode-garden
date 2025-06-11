@@ -1,0 +1,5 @@
+- [[ICMC/25/d3/1340 Papers 4B/01 Anger at the Asteroid: From Exhibition to Ensemble Performance]]
+	- missed most of it
+	- [[Person/Courtney Brown]] mentioned some movement having to do with paleo-art; aligned
+- [[ICMC/25/d3/1340 Papers 4B/02 Dynamic Generalized Parametric Control of Digital Music Instruments]]
+	- {{embed ((6849c5e1-25c9-49ba-9c31-559e8b9449e6))}}

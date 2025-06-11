@@ -1,0 +1,48 @@
+# 02 Dynamic Generalized Parametric Control of Digital Music Instruments
+	- ## [[My Notes]]
+	  id:: 6849c5e1-25c9-49ba-9c31-559e8b9449e6
+		- mentions [[Arturia/AnalogLab/OB-Xd]] [[VST]] and [[c74/msp/vst~]]; he's using [[Arturia/MiniLab/mkII]]
+			- I wonder if [[Ableton/Max for Live]] can host this object? It kind of seems like it could
+		- 14:14 implications for spatalization
+			- you could have a bunch of different VSTs all the same but out of phase
+			- paper talks about that
+	- ## [[AI Notes]]
+		- ## ✅  **Prior Art Review**
+			- ### 1.  **Int.lib – Oli Larkin (2007)**
+			- Wrapper for `vst~` in Max/MSP.
+			- Enables interpolation for *all* parameters.
+			- Skips non-continuous parameters.
+			- Decouples UI from the Max patch logic.
+			- Omits discussion of **musical** impact or results.
+			- ### 2.  **J74 Morph – Fabrizio Poce (2012)**
+			- Adds preset interpolation functionality to Max for Live devices.
+			- ### 3.  **Arturia Polybrute (2021)**
+			- Commercial hardware synth.
+			- Provides interpolation between presets.
+		- ## ✅  **Context from Eric Lyon’s Paper**
+			- ### **Core Contribution**
+			- Describes a general method for parameter mapping of DMIs using VST plug-ins.
+			- Emphasizes:
+				- Simplicity of implementation.
+				- Broad applicability to existing DMI processing.
+				- Rich, evolving timbral control for musical expression.
+				- Applicability beyond VSTs to `Csound`, `c74/max`, `PureData`, `SuperCollider`, etc.
+			- ### **Unique Insights**
+			- Shows how **parameter interpolation** enables dynamic, hard-to-achieve behaviors.
+			- Claims that **simple interpolation** can produce musically compelling and complex results that aren’t possible through static parameter tweaking.
+			- Mentions **implications for machine learning**—suggesting interpolation could enable adaptive or generative models.
+		- ## 📌  **Synthesis**
+			- positioning Lyon’s interpolation-centric method as musically potent and algorithmically accessible, in contrast to prior art:
+				- Larkin: Strong technical abstraction, but no musical analysis.
+				- Poce & Arturia: Focused on UI/preset morphing, but less academically or musically rigorous.
+			- Lyon’s work bridges **parameter mapping** and **expressive musical output**, offering a platform for further ML or AI research.
+		- ### 🟧 Reference:  *Automated Sound Design*  by Eric Lyon #Book
+			- **Book**: *Automated Sound Design*
+			- **Author**: Eric Lyon
+			- **Series**: The Computer Music and Digital Audio Series, Volume 28
+			- **Relevance**: The current work builds upon earlier concepts presented in this book.
+	- ## Description
+		- This paper discusses a general approach to mapping the parameters of a digital music instrument (DMI) with a focus on Virtual Studio Technology (VST) plug-ins. This approach is characterized by its simplicity of implemen-tation, its general applicability to existing DMI signal processing algorithms, and its ability to produce rich, dynamic timbres for musical performance. The focus is on VST plug-ins because there are many thousands of VSTs in existence, but the techniques described here can be applied to DMIs coded in [[Csound]], [[c74/max]], [[PureData]], [[SuperCollider]], or any other acoustic compiler. High-level control is applied to the DMI through interpolation of its parameters, which can create a constantly changing timbre environment for performers. Despite the simplicity of the method, a surprising amount of sonic variety and musical behaviors can be generated that would be diffi-cult or impossible to produce through more traditional manipulation of DMI parameters. The implications of this approach for machine learning are also discussed.
+	- ## #Author [[Person/Eric Lyon]]
+		- ![Eric Lyon](https://icmc2025.sites.northeastern.edu/files/2025/05/eric_lyon_photo-221x300.jpg)
+		- **Eric Lyon** is a composer and audio researcher focused on high-density loudspeaker arrays, dynamic timbres, virtual drum machines, and performer-computer interactions. His audio signal processing software includes “FFTease” and “LyonPotpourri.” He has authored two computer music books, “Designing Audio Objects for Max/MSP and Pd,” a guidebook for writing audio DSP code for live performance, and “Automated Sound Design,” a book that presents technical processes for implementing oracular synthesis and processing of sound across a wide domain of audio applications. In 2015-16, Lyon architected both the Spatial Music Workshop and Cube Fest at Virginia Tech to support the work of other artists working with high-density loudspeaker arrays. In 2025 he created the Spatial Audio Tidepool to provide technical instruction for creative uses of high-density loudspeaker arrays. Lyon’s compositional work has been recognized with a ZKM Giga-Hertz prize, MUSLAB award, the League ISCM World Music Days competition, and a Guggenheim Fellowship. Lyon is Professor of Practice in the School of Performing Arts at Virginia Tech, and is a Faculty Fellow at the Institute for Creativity, Arts, and Technology.

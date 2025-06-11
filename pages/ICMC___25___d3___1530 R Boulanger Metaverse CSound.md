@@ -1,0 +1,44 @@
+tags:: [[ICMC]], [[Keynote]], [[Computer Music]], [[Csound]], [[XR]], [[Metaverse]]
+
+- # 1530 [Playing with Sound: Richard Boulanger's Computer Music Journey, Adventure, Dreams](https://icmc2025.sites.northeastern.edu/keynote-speakers/) [[Person/Richard Boulanger]]
+	- ## [[My Notes]]
+		- TODO attach #YouTube #Video 1
+		- TODO attach #YouTube #Video 2
+		- Cool to see so many pics from history. Quite a bit about [[Person/Max Matthews]]. Included some of his batons / wands and pads
+		-
+	- ## #Description
+		- #Location - [[School/Berklee/Campus/David Friend Recital Hall]]
+		- Join Richard Boulanger on a five-decade journey through computer and electronic music
+		- Stories and insights from legends he's worked with:
+			- Alan R. Pearlman (ARP)
+			- Dexter Morrill & Bruce Pennycook (Music10)
+			- Dick Moore (cmusic)
+			- Barry Vercoe & John ffitch (music11 & Csound)
+			- [[Person/Max Mathews]] (MusicV and The Conductor Program)
+		- Discussion of his research and innovative applications developed with Berklee students
+		- Focus on his latest work: "Csound in the Metaverse"
+			- Developed with recent EPD graduate Hung Vo (Strong Bear)
+			- Enables global Csound collaboration in:
+				- Studio settings
+				- Concert stages
+				- AI-designed worlds
+			- Realizes dreams of composing and playing in unique environments:
+				- Csound in/on the House
+				- Csound on the Beach
+				- Csound on the Moon
+		- ## Technical Focus
+			- Extended Reality (XR) technologies
+			- Real-time immersive synthesis
+			- Real-time processing
+			- Real-time performance
+			- Global collaborative music making
+		- ## Related Technologies
+			- Music10
+			- cmusic
+			- Csound
+			- MaxMSP
+			- Max for Live
+			- Mathews Radio Baton
+			- XR/VR environments
+		- ## #YouTube preview
+			- {{video https://www.youtube.com/watch?v=mnwqJANLTNM}}
