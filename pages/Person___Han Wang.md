@@ -1,0 +1,3 @@
+-
+- ![Han Wang](https://icmc2025.sites.northeastern.edu/files/2025/06/984_985_1011-Wang-Han-PHOTO.pic_-221x300.jpg)
+- **Wang Han** holds a Ph.D. in Electronic Music Composition from the Central Conservatory of Music (CCOM) in Beijing, China, where she studied under Professor Li Xiaobing, the head of the Department of Artificial Intelligence and Music Information Technology at CCOM. Wang Han’s creative work is profoundly influenced by Chinese traditional culture and natural aesthetics. Her piece “The Story of AI” received recognition at the 2nd “SOMI” Composition Competition. Her multimedia work “Who Am I” won First.

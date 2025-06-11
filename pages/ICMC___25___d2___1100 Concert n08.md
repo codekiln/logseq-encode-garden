@@ -1,0 +1,16 @@
+## Concert n08
+	- **Date:** Tuesday, June 10
+	- **Time:** 7:30PM – 9:00PM
+	- **Location:** Northeastern Fenway Center
+- ## Program
+	- [[ICMC/25/d2/1100 Concert n08/01 Continuum]]
+	- [[ICMC/25/d2/1100 Concert n08/02 String Theory, Soaring Dragon]]
+	- Suite
+		- [[ICMC/25/d2/1100 Concert n08/03 The Dialogue Between the Machine and the Pipa]]
+		- [[ICMC/25/d2/1100 Concert n08/04 The Disappearing Bell]]
+		- [[ICMC/25/d2/1100 Concert n08/05 Horse]]
+	- [[ICMC/25/d2/1100 Concert n08/06 Four Seasons Fragrance]]
+	- [[ICMC/25/d2/1100 Concert n08/07 FOMO]]
+	- [[ICMC/25/d2/1100 Concert n08/08 UTMORI]]
+	- [[ICMC/25/d2/1100 Concert n08/09 Galaxy]]
+	- [[ICMC/25/d2/1100 Concert n08/10 Eight Pilots]]
