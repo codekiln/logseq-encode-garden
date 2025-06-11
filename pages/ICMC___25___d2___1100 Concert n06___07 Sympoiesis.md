@@ -4,8 +4,8 @@ tags:: [[To Listen Again]]
 - # Sympoiesis - Duo Performance with Oliveros Expanded Instrument System
 	- ## [[My Notes]]
 		- 14:55 Haunting drone - the #Accordion texture is silkily accompanied by the more triangular waves of the [[17-string Bass]]
-		- DONE attach #YouTube #Video
-			- {{video https://youtu.be/jMv6i3HK_Ng}}
+			- DONE attach #YouTube #Video
+				- {{video https://youtu.be/jMv6i3HK_Ng}}
 		- Very rich, atmospheric.
 	- ## #Composer #Performer
 		- ### [[Person/Michael Century]]

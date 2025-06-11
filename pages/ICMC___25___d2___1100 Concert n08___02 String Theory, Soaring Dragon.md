@@ -2,6 +2,7 @@ icmc25-id:: 995
 
 - # String Theory, Soaring Dragon
 	- ## [[My Notes]]
+	  id:: 6848c9e5-e25e-496a-a2cb-03f31c9ef2c2
 		- Also extremely cool. Amazing visuals
 			- DONE attach #YouTube #Video
 				- {{video https://youtu.be/uvVflZGL0O4}}

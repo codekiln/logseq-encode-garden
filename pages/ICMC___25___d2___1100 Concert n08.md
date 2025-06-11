@@ -4,7 +4,9 @@
 	- **Location:** Northeastern Fenway Center
 - ## Program
 	- [[ICMC/25/d2/1100 Concert n08/01 Continuum]]
+		- {{embed ((6848c9e4-1c2d-463f-bf57-5e8f71eec70b))}}
 	- [[ICMC/25/d2/1100 Concert n08/02 String Theory, Soaring Dragon]]
+		- {{embed ((6848c9e5-e25e-496a-a2cb-03f31c9ef2c2))}}
 	- Suite
 		- [[ICMC/25/d2/1100 Concert n08/03 The Dialogue Between the Machine and the Pipa]]
 		- [[ICMC/25/d2/1100 Concert n08/04 The Disappearing Bell]]
