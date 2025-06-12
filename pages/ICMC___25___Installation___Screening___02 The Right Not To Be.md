@@ -1,5 +1,6 @@
 # The right not to be
 	- ## [[My Notes]]
+	  id:: 684a2331-f3a2-499a-b6b4-a5b969b34496
 		- 20:45 we start in the black. it's very 3d sound, a voice is talking about empathy, putting ourselves in the place of another person
 		- 20:46 the voices are coming in one by one and they are about how maps are invisible and not real
 		- "What you don't know about me"

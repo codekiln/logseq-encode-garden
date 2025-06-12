@@ -1,0 +1,33 @@
+tags:: [[ICMC]], [[Installation]], [[Art Gallery]], [[2025]]
+
+- # ICMC 2025 Installation Art Gallery
+	- Location: [[College/Emerson/Campus/25 Avery St]]
+	- Date: [[2025-06-11 Wed]]
+	- ## Installations
+		- ### 75: Contained — Michael Trommer
+			- Description: *Contained* is an ambisonic/haptic virtual-reality sound installation that sonifies otherwise imperceptible electromagnetic, vibrational, and mnemonic emissions permeating everyday environments, inviting listeners to inhabit an unseen acoustic ecology.
+			- Author bio: Michael Trommer is a Toronto-based sound-artist and acoustic-ecologist whose work spans field recording, VR environments, and site-responsive installation.
+		- ### 274: Foresta-Inclusive: (ex)tending towards — Jane Tingley
+			- Description: An interactive sculptural network of hanging "seed" forms that sense audience proximity, triggering generative sound and light to evoke speculative forest communication.
+			- Author bio: Jane Tingley is a Canadian artist integrating sculpture, electronics, and data-driven media to explore ecological systems and embodied interaction.
+		- ### 289: Liminal — Zhitao Lin
+			- Description: *Liminal* immerses visitors in a shifting light-and-sound corridor whose boundaries blur through motion-tracking and granular synthesis, evoking thresholds between real and virtual space.
+			- Author bio: Zhitao Lin is a multimedia composer based in Boston whose practice combines algorithmic sound design, responsive lighting, and architectural space.
+		- ### 438: 24 Cards — William Turner-Duffin
+			- Description: Twenty-four suspended acrylic panels each embed a transducer playing one channel of a spatial audio score; audience movement reshapes the perceived polyphony.
+			- Author bio: William Turner-Duffin explores distributed loudspeaker arrays and participatory listening in gallery and outdoor contexts.
+		- ### 508: Rings… Through Rings — Tak-Cheung Hui, Xiaoqiao Li, Chun Ting Vincent Chan
+			- Description: Multi-channel audio guided by wearable gyroscope sensors flows through concentric tubular sculptures, creating evolving resonances as participants walk the rings.
+			- Author bios: Collaborative trio of Hong Kong–based artists working at the intersection of kinetic sculpture, sensor networks, and spatialised sound.
+		- ### 724: Summerland — Matthew Ostrowski
+			- Description: A room-scale projection of vintage séance transcripts drives machine-learning-generated voices and spectral audio, reflecting on spiritualism and electronic mediation.
+			- Author bio: Matthew Ostrowski is a New York electronic-music pioneer using real-time computing and archival media to examine memory and technology.
+		- ### 874: the ground beneath our feet, the air inside our lungs — Matthew Azevedo
+			- Description: Sub-bass transducers embedded in wooden floor panels transmit inaudible infrasonic field recordings; visitors feel geological vibrations coupled with diffused high-frequency air sounds.
+			- Author bio: Matthew Azevedo is a Boston-based mastering engineer and composer investigating infrasonic perception and tactile sound.
+		- ### 908: Entrainment — Shomit Barua
+			- Description: Wave-driven LEDs and binaural beats synchronise light pulses and brainwave-mapped audio, inviting meditative states of neuro-physiological entrainment.
+			- Author bio: Shomit Barua is a therapist-artist researching neurofeedback and immersive audiovisual therapy.
+		- ### 920: MELT (topographic remix) — Betsey Biggs
+			- Description: 3-D-printed glacier forms melt under heat lamps while contact-miked runoff modulates ambient recordings of Icelandic ice, drawing attention to climate loss.
+			- Author bio: Betsey Biggs is an interdisciplinary artist-composer whose installations fuse landscape, storytelling, and community engagement.

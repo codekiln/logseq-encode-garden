@@ -12,9 +12,11 @@
 		- **201** *The Right Not (To Be)* — [[Person/Lee Gilboa]] [[ICMC/25/Installation/Screening/02 The Right Not To Be]]
 			- Description: Electroacoustic work built from testimonies of Israeli veterans (Breaking the Silence), manipulating speech artifacts to question identity and political morality.
 			- Author bio: Israeli composer-researcher at Berklee College of Music; investigates voice, testifying, and socio-political listening.
+			- {{embed ((684a2331-f3a2-499a-b6b4-a5b969b34496))}}
 		- **483** *Coming Together: Cityscapes* — Arne Eigenfeldt [[ICMC/25/Installation/Screening/01 Coming Together Cityscape]]
 			- Description: Five-channel agents negotiate a database of 1,000+ urban audio-video clips, moving from chaotic granular noise to aligned timbral “city chords” while visuals converge.
 			- Author bio: Canadian composer focusing on generative systems and agent-based multimedia.
+			- {{embed ((684a2277-22e3-40f8-bc2f-e28c53aae359))}}
 		- **642** *pOPPING bUBBLES oN jUPITER* — [[Person/Dave O Mahony]] [[ICMC/25/Installation/Screening/03 pOPPING bUBBLES oN jUPITER]]
 			- Description: [[Ableton/Max for Live]] visualiser triggers audio peaks driven by a [[VCVRack]] modular session, producing playful audiovisual “bubble pops.”
 			- Author bio: Irish electroacoustic composer with interests in modular synthesis and brainwave interaction; SEAMUS & ICMC regular.
@@ -26,5 +28,5 @@
 			- Author bio: UC Santa Cruz professor combining computer-assisted composition with visual media.
 			- {{embed ((684a2e5a-43cc-43b7-9403-294ccf3c0fd3))}}
 		- **909** *Miniscope Multimedia Project* — Si Hyun Uhm
-			- Description: Real-time TouchDesigner and Max/MSP piece mapping calcium-imaging data (mouse hippocampus & RSC) to generative visuals and electronics, plus composed layers in Logic Pro.
+			- Description: Real-time TouchDesigner and [[c74/max]] Max/MSP piece mapping calcium-imaging data (mouse hippocampus & RSC) to generative visuals and electronics, plus composed layers in [[LogicPro]] .
 			- Author bio: Korean composer-pianist and UCLA PhD fellow; integrates neuroscience data with multimedia art.
