@@ -6,10 +6,28 @@ icmc25-id:: 6
 		- TODO 18:41 attach #Video
 			- the tonality of the electronics processing is a bit different than that of the instrument.
 			- it's flipping around us
+			- TODO attach #YouTube #Video
 	- ## #Description
-		- An electroacoustic work that explores the rich musical traditions of Arab culture through the lens of contemporary electronic music, blending traditional maqam scales with modern sound design techniques.
+		- #Short
+			- An electroacoustic work that explores the rich musical traditions of Arab culture through the lens of contemporary electronic music, blending traditional maqam scales with modern sound design techniques.
+		- #Long
+			- **Taqism / The Humanity of Arabs**
+				- In a time when it seems difficult for some even to concede the humanity of certain Arabs
+				- draws from Arabic musical materials
+				- All electronic material is generated and controlled in real-time
+					- see accompanying ICMC 2025 paper “Preparation for Improvisation with Oud and Interactive Electronics.”
+				- The instrument is the [[Instrument/oud]] / العود, the fretless short-necked Arabic [[Instrument/lute]]
+					- #Etymology of “lute”
+						- (with the misunderstood definite article “al” / ال from “al oud” / “the oud” giving us the “L” in “lute”)
+						- tonal material and phrase organization draws from the Arabic maqam / مقام system.
+						- This piece premiered April 20, 2024 and is dedicated to all Arabs and all those who recognize their humanity.
 	- ## #Composer [[Person/Matthew Goodheart]]
-		- Composer and performer
-		- Known for works combining acoustic instruments with electronics
+		- #Pic
+			- ![Matthew Wright](https://icmc2025.sites.northeastern.edu/files/2025/05/Matt-head-shot-2x2-1-221x300.jpg)
+		- #Bio/Short
+			- Composer and performer
+			- Known for works combining acoustic instruments with electronics
+		- #Bio/Long
+			- **Dr. Matthew Wright** is a media systems designer, improvising composer/performer, computer music researcher, father of an energetic 8-year-old, and the Executive Director and acting Technical Director of Stanford University’s Center for Computer Research in Music and Acoustics (CCRMA). His computer music career began in 1990 as an undergraduate in a class from David Wessel at UC Berkeley’s Center for New Music and Audio Technologies (CNMAT), where he joined the staff as a researcher from 1993-2008, before and during his CCRMA PhD. He later worked at the University of Victoria and UC Santa Barbara. His research has included real-time mapping of musical gestures to sound synthesis, helping develop and promote the Sound Description Interchange Format (SDIF) and [[Open Sound Control]] (OSC) standards, computer modeling of the perception of musical rhythm, and musical creation with technology in a live performance context. As a musician, he plays a variety of Middle Eastern and Afghan plucked lutes, Afro-Brazilian percussion, and computer-based instruments of his own design, in both traditional music contexts and experimental new works.
 	- ## #Performer
 		- [[Person/Matthew Wright]] — oud

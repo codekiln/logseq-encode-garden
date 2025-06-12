@@ -1,0 +1,39 @@
+tags:: [[Diataxis/Concept]]
+alias:: [[OSC]]
+
+- ## Conceptual Overview of Open Sound Control (OSC)
+	- Open Sound Control (OSC) is a modern protocol for networking sound synthesizers, computers, and other multimedia devices. Developed in the late 1990s at [[CNMAT]] (Center for New Music and Audio Technologies) by Adrian Freed and others, OSC offers a flexible, high-resolution alternative to MIDI.
+	- ### Design Principles
+		- **Human-readable address patterns**: OSC messages use URI-style address strings (e.g., `/synth/frequency`) to reference parameters or actions.
+		- **Arbitrary data types**: Unlike MIDI's limited integer-based data, OSC supports 32-bit floats, strings, blobs, and more.
+		- **Timetagging**: Messages can include timestamps for scheduling future events.
+		- **Transport-independent**: While most OSC implementations use UDP for low-latency communication, it can also be transported via TCP, serial, or WebSockets.
+	- ### Message Structure
+		- **Address Pattern**: Specifies the destination (e.g., `/voice/1/volume`)
+		- **Type Tag String**: A comma-prefixed list indicating the type of each argument (e.g., `,f` for a float)
+		- **Arguments**: The payload of the message—data values like numbers or strings
+	- ### Example
+		- A message to set the pitch of a voice might look like:
+			- Address: `/voice/1/freq`
+			- Type Tags: `,f`
+			- Arguments: `440.0`
+	- ### Applications
+		- **Live performance**: Control of software instruments, lighting, and visual projections
+		- **Telematic art**: Synchronizing performance elements over the internet
+		- **Interactive installations**: Connecting sensors and actuators to real-time audio systems
+		- **Experimental research**: Used in academic projects exploring alternate input modalities and responsive environments
+	- ### Comparison with MIDI
+		- OSC allows richer, more expressive data and isn't confined to a fixed protocol
+		- Lacks built-in widespread hardware support that MIDI enjoys
+		- Suited for custom software ecosystems, often requiring developer integration
+	- ### Role of [[Person/Matthew Goodheart]]
+		- As a composer, performer, and researcher, Matthew Goodheart has explored OSC as part of his work on resonance-based instrument design and responsive performance systems.
+		- His integration of OSC enables nuanced communication between gestural interfaces, resonating objects, and reactive sound synthesis environments.
+	- ### Tools and Environments
+		- **SuperCollider**: Native support for OSC; ideal for dynamic synthesis
+		- **Max/MSP**: Widely used in installation and performance art; includes `udpsend`/`udpreceive` for OSC
+		- **Pure Data (Pd)**: Open-source cousin of Max; good for academic and DIY use
+		- **TouchDesigner, Processing, Unity**: Used for audio-visual installations with OSC bridges
+	- ### Conclusion
+		- OSC is not just a protocol but a philosophy of **open, extensible communication** between disparate systems in real-time media art and research.
+		- Its flexibility makes it an enduring tool for artists and technologists committed to expressive interactivity.

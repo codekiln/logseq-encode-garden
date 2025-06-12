@@ -16,5 +16,7 @@ tags:: [[Concert]]
 		- [[ICMC/25/d4/1120 Concert n12/06 Taqsim The Humanity of Arabs]]
 		- [[ICMC/25/d4/1120 Concert n12/07 Noise to Signal]]
 		- [[ICMC/25/d4/1120 Concert n12/08 A Southern Reverie]]
-		- [[ICMC/25/d4/1120 Concert n12/09 Broken Hourglass]]
-		- [[ICMC/25/d4/1120 Concert n12/10 Fantasia on Battle Tactics]]
+		- ### [[ICMC/25/d4/1120 Concert n12/09 Broken Hourglass]]
+			- {{embed ((684b4da4-ff21-4f4d-a0ad-85c9d786523b))}}
+		- ### [[ICMC/25/d4/1120 Concert n12/10 Fantasia on Battle Tactics]]
+			- {{embed ((684b4da9-9a31-419b-b582-1e2b97745ed7))}}
