@@ -4,7 +4,19 @@ icmc25-id:: 775
 	- ## [[My Notes]]
 		- Video piece, buffalos with inner stuff. fairly cool but distracted.
 	- ## #Description
-		- Upwelling is a multimedia collage of **Fox River Valley** video textures, digitised family films, and a sonic palimpsest of field recordings plus sampled piano, guitar, violin, and drums. Filtered frequency bands modulate [[c74/msp]] Max/MSP + TouchDesigner visuals, reflecting on the unpredictable surfacing of memory and its role in shaping identity.
+		- #Short
+			- Upwelling is a multimedia collage of **Fox River Valley** video textures, digitised family films, and a sonic palimpsest of field recordings plus sampled piano, guitar, violin, and drums. Filtered frequency bands modulate [[c74/msp]] Max/MSP + TouchDesigner visuals, reflecting on the unpredictable surfacing of memory and its role in shaping identity.
+		- #Long
+			- **Upwelling** is a multimedia composition that weaves together the artist's experiences with the transformative capabilities of digital technology. Since relocating to the Fox River Valley, 45 miles west of Chicago, in 2019, I have been captivated by the interplay of images and sounds, exploring their convergence in a digital realm through Max/MSP and TouchDesigner. Upwelling unfolds as a visual narrative, where footage I filmed along the river and during travels becomes dynamic texture material mapped onto geometric shapes. These visuals undergo various manipulations and interactions, creating a synthesis of the familiar and the abstract. The work also incorporates home movies I digitized for my parents, invoking a contemplative reflection on the passage of time and the individuals who have shaped my life. The audio composition is a sonic collage of field recordings, synthesized elements, and acoustic instruments. Improvised piano, guitar, violin, and drums are sampled to act as vessels for memory and emotion—symbols of missed opportunities, including a wish that I had spent more time learning to play them earlier in life. The audio is processed through a series of filters, allowing the intensity of distinct frequency bands to influence visual parameters. This dynamic relationship between sound and image produces a shifting tapestry of modulations and displacements, transforming the familiar into the unfamiliar. Upwelling contemplates the unpredictable nature of memory—how it can resurface randomly or be triggered by specific events, shaping our present experiences and influencing our identities, cultural values, and relationships. In this composition, the artist invites the audience to navigate the fluid boundaries between the tangible and the ephemeral, the past and the present, offering a poignant reflection on the interconnectedness of our memories and the profound role they play in shaping the human experience.
 	- ## #Composer [[Person/Salvatore Siriano]]
-		- Chicago-based composer/educator
-		- Work merges audiovisual fieldwork with realtime electronics
+		- #Bio/Short
+			- Chicago-based composer/educator
+			- Work merges audiovisual fieldwork with realtime electronics
+		- #Bio/Long
+			- ![Salvatore Siriano](https://icmc2025.sites.northeastern.edu/files/2025/06/775-Salvatore-Siriano-221x300.jpg)
+			- Faculty member at [[Uni/Triton]] College teaching music theory and technology
+			- Work combines field recordings, synthesis, and original video from Fox River Valley
+			- Recent performances at [[Festival/Seoul International Computer Music Festival]], [[Festival/WOCMAT]], and [[Festival/New Music on the Bayou]]
+			- Collaborates with photographer [[Person/Alice Hargrave]] on immersive sound installations
+			- Teaches workshops on music technology and equitable education in Illinois schools
+			- Summer 2024 music teaching residency at [[Uni/Roi Et School for the Blind]] in Thailand

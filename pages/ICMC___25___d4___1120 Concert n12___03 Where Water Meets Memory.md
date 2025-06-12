@@ -1,9 +1,46 @@
 icmc25-id:: 12
 
 - # Where Water Meets Memory
-	- ## [[My Notes]]
+	- ## [[My Notes]] [[To Listen Again]]
+	  id:: 684b4d82-e9e1-4b9c-b8cb-219ecc2a5945
+		- 18:06 piece starts - #Acousmatic. lush bass and sparkles, with wave crash. Rich sonic stage.
+		- [[Sound/Speaker/Multichannel/8 Channel]]
+		- 18:07 love the Train sound. [[Sound/Sample/Ambient]]
+			- This [[Sound/Recording/Ambisonic/5th Order]] is so rich
+			- 18:10 some kind of fog horn
+			- 18:12 so freaking #Cool when the water is 3-d with the [[Instrument/Voice/Choir]]
+			- 18:13 some startling skittering with some kid samples
+			- water splashing
+			- wow, would this survive stereo?
+			- the piano and plunky splashy sounds with thunder 18:14
 	- ## #Description
-		- Electroacoustic montage built from Shenandoah field recordings, processed strings, and the composer's childhood tapes, exploring fluid identities of place and recollection.
+		- #Short
+			- Electroacoustic montage built from Shenandoah field recordings, processed strings, and the composer's childhood tapes, exploring fluid identities of place and recollection.
+		- #Long
+			- **Where Water Meets Memory. **During the summers of 2018 and 2019, I spent time at the Anheuser-Busch Coastal Research Center (Oyster, Virginia), recording sounds including oyster reefs. Since that experience, I have thought about my lifelong relationship to water: trips to the beach as a child, a fear of deep, dark water (thalassophobia), recent collaboration with environmental scientists researching sea life, and, of course, the rising of our oceans as a function of global warming. All of these experiences swirled around compositionally for a year or two, until I began working on this piece in earnest during the beginning of 2021, while holed up in Oberlin, Ohio during the COVID-19 pandemic.
+			- Creating this work, I challenged myself in several ways:
+				- to use a **completely higher-order ambisonic workflow,**
+				- to incorporate recorded or sampled instruments in each section, and to work in a number of different electroacoustic styles. The resulting work is for full [[Sound/Recording/Ambisonic/5th Order]] [[Ambisonic]]s, presented here as an [[Octophonic]] decoding.
+				- Includes performance recordings of David Bowlin, violin, Kate Copeland, soprano, and Kevin William Davis, cello.
+			- ### Sections
+				- #### I. The Bay (Of Trains and Shorebirds)
+					- with solo #Violin
+				- #### II. The Reef (Of Predator and Prey)
+					- with cello, piano, glockenspiel.
+				- #### III. The Ocean (The Lull of the Sirens)
+					- soprano soloists, choir
+				- #### IV. The Deep (Beneath the Rain)
+					- string quartet, orchestra.
 	- ## #Composer [[Person/Eli Stine]]
-		- Media-artist and software designer
-		- Published on SEAMUS, ICAD, and Computer Music Journal labels 
+		- #Pic
+			- ![Eli Stine](https://icmc2025.sites.northeastern.edu/files/2025/06/12-Eli-Stine-221x300.jpg)
+		- #Bio/Short
+			- Media-artist and software designer
+			- Published on SEAMUS, ICAD, and Computer Music Journal labels
+		- #Bio/Long
+			- Assistant Professor of Computer Music & Digital Arts at [[Uni/Oberlin]] Conservatory's TIMARA program
+			- Previously worked as Software Engineer at [[Company/Meta]] Reality Labs Audio Research
+			- Ph.D. and Masters in Composition and Computer Technologies from [[Uni/Virginia]], Bachelors in TIMARA and Computer Science from [[Uni/Oberlin]]
+			- Work spans immersive electronic music, mixed reality storytelling, and interactive multimedia
+			- Notable projects include sound design for VR adaptation of Kafka's Metamorphosis and electronics performance on George Lewis' Recombinant Trilogy
+			- Recordings available on New Focus, Ravello, Naxos, and SEAMUS Records
