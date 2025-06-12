@@ -1,0 +1,42 @@
+icmc25-id:: 31
+
+- # Resilience in Color: Sonic Portrayals of Women’s Resistance
+	- ## [[My Notes]]
+	  id:: 684a29eb-f264-4d2e-9f1e-baaba460416a
+		- 21:14 there are five vertical sections in the top half of the screen, with red, blue, green, pink, yellow scenes of women's resistence. two scenes involve brutality, three involve protest that is not being . In the lower half, a highly contrasted, bit-reducted version gradually "downloads" as the piece continues.
+		- 21:15 sounds remind me of a casiotone keyboard from the 80's immitating a voice, appropriate.
+		- slowly moving blocks of red, blue, green, pink, yellow crawl from left to right slowly, like the early video game "snake"
+		- 21:20 a sound of beating on the door seven times
+		- little screeches perhaps signify struggle
+		- #YouTube #Video
+			- {{video https://youtu.be/EZ3_fT4tVC4}}
+	- ## #Description
+		- audiovisual installation project ...
+			- translates ... visual iconography of women’s ... movements
+			- leverages the concept of RGB color distance
+		- The process
+			- begins with ... images of defiance
+			- target color ... emblematic of the protest itself or inspired by news titles and prominent visual themes, is pre-selected for each image. Custom software then scans each selected image pixel-by-pixel, from left to right and top to bottom. The Euclidean distance between each pixel’s RGB value and the target color is calculated; if this distance falls within a defined threshold, the pixel is considered a match. To provide ongoing visual feedback, a marker glides over the image, indicating the scanner’s live position. Simultaneously, a duplicative visual representation is generated beneath the original image. This is accomplished by selectively drawing colored points in a dedicated space which corresponds to pixels that meet the color criteria. Specifically, when the calculated distance between the current pixel’s color and the target color falls within the threshold.
+		- core is built upon ==formant synthesis==
+			- vocal determination... in acts of resistance ... to evoke the ... voice
+			- The data derived from the scan, specifically the ==Euclidean distance of a pixel’s color to the target color==, directly **influences parameters such as the amplitude and formant change of specific voices** within a multi-part vocal composition.
+			- To maintain the prominence of these voices and symbolize unyielding persistence, pixels that deviate significantly from the target color trigger a sequenced kick drum sound. This interplay between the presence of matching colors (represented by vocal sounds) and their perceived absence (represented by the rhythmic pulse) forms a narrative chorus. Furthermore, for certain images depicting isolated figures of resistance, such as “Women in Red” or “The Girl In The Blue Bra,” a delay effect is implemented, allowing the data from these distinct images to influence each other’s delay parameters, sonically weaving a web of solidarity.
+		- Resilience in Color is adaptable in its presentation, designed to be experienced over varying durations that invite audiences to come and go freely, engaging as they wish. The adjustable nature of the scanning speed allows for creating temporal dynamics between the images, potentially condensing or expanding the experience from desired minutes to days.
+		- It premiered as a 5-channel, 8-hour-long installation at ICAD (International Conference on Auditory Display) 2024 at the EMPAC (Experimental Media and Performing Arts Center) Studio 2, Rensselaer Polytechnic Institute, Troy, NY [6]. It was also installed as a stereo, 24-hour-long installation at SEAMUS (Society for Electro-Acoustic Music in the United States) 2025 at Yue-Kong Pao Hall, Acting Studio I, Purdue University, West Lafayette, IN. At ICMC (International Computer Music Conference) 2025, a 15-minute fixed media installation for the Bright Family Screening Room at Emerson College, Boston, MA, will be presented. In this shorter version, the scanning speed is adjusted, ranging from 10 milliseconds per pixel to 120, allowing for temporal dynamics that can condense or expand the experience. This variability creates interesting sonic textures, from subtle formant changes at slower speeds to faster transitions at higher speeds, offering a condensed yet immersive experience of the work’s essence.
+		- This work features a curated selection of five images, each captures a moment of women actively resisting political oppression around the world. These images serve as the source material for the sonification. List of images used in the project from left to right:
+		- **Women in Red** (Turkey)
+			- Photo Credit: Osman Orsal/Reuters [2]
+			- The image, captured in Istanbul, Turkey during a moment of violence at the 2013 Gezi Park protests, shows a woman in a red dress protesting as a masked policeman discharges tear gas directly at her. Gezi Park Protests lasted between 28 May and 20 August 2013.
+		- **The Girl In The Blue Bra** (Egypt)
+			- Photo Credit: Reuters [5]
+			- The image, captured in Cairo’s Tahrir Square in Egypt during a moment of violence in 2011, shows a woman being dragged and beaten by the Egyptian military. On the cusp of a soldier’s kick, her starkly exposed torso is clad only in a bright-blue bra.
+		- **Green Scarf Movement** (Argentina)
+			- Photo Credit: Brandon Bell/Getty Images [4]
+			- The image, captured in Argentina during reproductive rights protests, shows a group of activists holding triangle- shaped green scarves above their heads as they stand in solidarity.
+		- **Pink PussyHats** (USA)
+			- Photo Credit: Carolyn Cole/Los Angeles Times/TNS [3]
+			- The image, captured in the USA during the 2018 Women’s March, shows activists wearing pink beanies, also known as Pink PussyHats. The protest focused on voter registration and electing women and progressive candidates.
+		- **Yellow Scarves** (India)
+			- Photo Credit: Danish Siddiqui/Reuters [1]
+			- The image, captured in India on International Women’s Day in 2021, shows women activists clad in bright yellow scarves, which are symbolic of mustard fields, joining mass sit-ins and hunger strikes on the outskirts of New Delhi. Their protest rallied against agricultural reforms that they feared would compromise their livelihoods.
+	- ##

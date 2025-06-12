@@ -1,0 +1,34 @@
+# The right not to be
+	- ## [[My Notes]]
+		- 20:45 we start in the black. it's very 3d sound, a voice is talking about empathy, putting ourselves in the place of another person
+		- 20:46 the voices are coming in one by one and they are about how maps are invisible and not real
+		- "What you don't know about me"
+		- "I'm part of a regime ... I'm a policial person" ... "I can make sense of my life here, make sense of ..."
+		- "I don't know ... what you know about me"
+		- some synth interludes that are brief.
+		- The voices are rotating around. it's a rich tapestry
+		- Listenable. Rhythmic. Interesting that this was submitted to a film screening facility.
+		- Some quotes about Zionism, "homeland security aspect."
+		- why "the right not to be"
+		- "I saw a crack"
+		- The soundtrack is really fractured, but musically so.
+		- Some quotes about colonialism.
+		- "There is a victim and an oppressor."
+		- The noise blips are from all directions. In a way it sounds like a sewing machine. Sometimes the voices are radically melted.
+		- I appreciate the density - there is a space.
+		- It's a meditation.
+	- ## #Description
+		- The Right Not (To Be)
+			- features voices of members of the Israeli anti-occupation activist organization Breaking the Silence, an anti-occupation Israeli activist organization whose work is focused on collecting and spreading testimonies of veterans from the Israel Defense Forces whose mandatory military service took place in the occupied territories, West Bank, and Gaza. In this work, I explore the complex relationship between belonging and historical narratives (or myths) that form a collective identity and highlight the difficulty in cultivating a political morality opposed to the status quo imposed by one’s state. The piece engages with questions about identity, the need to define good and bad, and the tendency to stop listening to others when their opinion or life experiences do not align perfectly with common and popular rhetoric and conduct.
+		- Sonically, my engagement with speech and oral sounds takes on multiple forms, ranging from the setting of full spoken sentences, through electronic manipulation that emphasizes, distorts, and amplifies the relation between vocalizing and wording, and the creation of rhythmic and timbral textures out of the artifacts of speech; sounds produced by the mouth that don’t amount to the production of legible language, but are nonetheless parts of speech’s meaning-making process.
+		- My conversation with Breaking the Silence began almost three years ago now, and I finally got to record some of their members in June of 2023. The conversation I had with them did not touch the military service directly, but ==the lived experience in Israel-Palestine, as it is perceived from Leftist Israeli eyes==.
+		- Needless to say, the reality of the region has shifted between June 2023 and now, and as a result, the piece sounds in different tones as well. Although the piece does not address the ongoing war in Gaza, it would be reckless to assume its perception can be dissociated from the current context of the region. The war has captured the interest of the international community, and yet, there have been limited attempts to comment on or engage with it, as well as the lived realities of Jewish Israelis, Israeli Arabs, and Palestinians in the region through an artistic medium since October 7th, 2023. In this current saturated moment in time, The Right Not (To Be) offers invaluable insights into the possibility of peace and the lived experience in Israel-Palestine, as it is perceived from Leftist Israeli eyes. the members of Breaking the Silence with whom I talked and whose voices are heard in the piece share a commitment to a peaceful future and a bettered, equal society. I hear a rare sense of hope in their voices, which I was committed to doing justice to in my compositional process.
+	- ## #Author #Composer #Creator [[Person/Lee Gilboa]]
+		- **Lee Gilboa** is a US-based Israeli composer, researcher, and audio engineer.
+			- uses speech, audio spatialization, and vocal processing
+			- engages with the sonic identity, representation, collectivity, self-expression.
+			- research ... sound studies, political theory, Black studies.
+			- examines role listening assumes in politics
+			- investigation of testifying voices.
+			- curator for spatial audio concert series `CT::SWaM`, currently known as `New Ear:: Spatial`
+			- collaborates with Daniel Neumann on creation of listening spaces dedicated to [[Sound/Speaker/Multichannel]] audio works.

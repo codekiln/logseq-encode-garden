@@ -1,0 +1,30 @@
+# ICMC 25 Film Screenings
+	- [[2025-06-11 Wed]]
+		- **Installations — Screenings** — Bright Family Screening Room, Emerson College, 559 Washington St. — two identical screenings on Wednesday 11 June: 18:00 – 20:00 and 20:30 – 22:30
+		- **31** *Resilience in Color: Sonic Portrayals of Women’s Resistance* — [[Person/Zeynep Özcan]] [[ICMC/25/Installation/Screening/04 Resilience in Color]]
+			- Description: Audiovisual installation translating iconic images of women’s sociopolitical protest into formant-synthesis sound and RGB-driven visuals, scanning each pixel to build a chorus of resilience.
+			- Author bio: Experimental-music composer and University of Michigan professor exploring bio-inspired creativity, sonification, and large-scale interactive works.
+			- {{embed ((684a29eb-f264-4d2e-9f1e-baaba460416a))}}
+		- **98** *ludus vocalis* — [[Person/Felipe Tovar Henao]] [[ICMC/25/Installation/Screening/06 ludus vocalis]]
+			- Description: 25-minute eight-channel video work re-imagining non-verbal vocalisations (laughing, crying, screaming, etc.) through AI-generated mouth imagery and curated sound corpora.
+			- Author bio: Colombian-American multimedia artist researching algorithmic creativity, machine learning, and immersive installations; composer fellow with American Composers Orchestra.
+			- {{embed ((684a3048-72f3-4978-a156-b0d5f7190785))}}
+		- **201** *The Right Not (To Be)* — [[Person/Lee Gilboa]] [[ICMC/25/Installation/Screening/02 The Right Not To Be]]
+			- Description: Electroacoustic work built from testimonies of Israeli veterans (Breaking the Silence), manipulating speech artifacts to question identity and political morality.
+			- Author bio: Israeli composer-researcher at Berklee College of Music; investigates voice, testifying, and socio-political listening.
+		- **483** *Coming Together: Cityscapes* — Arne Eigenfeldt [[ICMC/25/Installation/Screening/01 Coming Together Cityscape]]
+			- Description: Five-channel agents negotiate a database of 1,000+ urban audio-video clips, moving from chaotic granular noise to aligned timbral “city chords” while visuals converge.
+			- Author bio: Canadian composer focusing on generative systems and agent-based multimedia.
+		- **642** *pOPPING bUBBLES oN jUPITER* — [[Person/Dave O Mahony]] [[ICMC/25/Installation/Screening/03 pOPPING bUBBLES oN jUPITER]]
+			- Description: [[Ableton/Max for Live]] visualiser triggers audio peaks driven by a [[VCVRack]] modular session, producing playful audiovisual “bubble pops.”
+			- Author bio: Irish electroacoustic composer with interests in modular synthesis and brainwave interaction; SEAMUS & ICMC regular.
+		- **782** *A Dialogue, In Medias Res* — Andrew Watts
+			- Description: Speech monologue sliced to syllables, reordered by quick-sort while video ages via AI and EbSynth; voice morphs into orchestra via Orchidea.
+			- Author bio: UCSB composer blending algorithmic processes, AI video, and orchestral writing; Stanford DMA.
+		- **823** *Temporary structures* — Matthew Schumaker - [[ICMC/25/Installation/Screening/05 Temporary structures]]
+			- Description: Piano-and-graphics duets where algorithmic lines in music drive shifting 3-D forms, inspired by parametric architecture; presented live and as video/Disklavier installation.
+			- Author bio: UC Santa Cruz professor combining computer-assisted composition with visual media.
+			- {{embed ((684a2e5a-43cc-43b7-9403-294ccf3c0fd3))}}
+		- **909** *Miniscope Multimedia Project* — Si Hyun Uhm
+			- Description: Real-time TouchDesigner and Max/MSP piece mapping calcium-imaging data (mouse hippocampus & RSC) to generative visuals and electronics, plus composed layers in Logic Pro.
+			- Author bio: Korean composer-pianist and UCLA PhD fellow; integrates neuroscience data with multimedia art.
