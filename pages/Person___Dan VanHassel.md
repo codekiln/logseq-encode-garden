@@ -1,0 +1,6 @@
+# Dan VanHassell
+	- #Pic
+		- ![](https://icmc2025.sites.northeastern.edu/files/2024/10/VanHassel-240x300.jpg)
+	- #Bio
+		- Electric guitarist and composer Dan VanHassel was a founding member and artistic director of San Francisco new music ensemble Wild Rumpus through 2016, which commissioned over 30 new works. As a guitarist he has appeared as a soloist with the UC Santa Cruz Wind Ensemble, the UC Berkeley Symphony, and as a featured performer with the Eco Ensemble, Original Gravity Concert Series, and the Callithumpian Ensemble. As a composer, his works have been performed by the Talea Ensemble, Dinosaur Annex, Transient Canvas, Now Hear Ensemble, Empyrean Ensemble, Ignition Duo, Ensemble Pamplemousse and has been featured at the MATA Festival, Bang on a Can Summer Festival, Bowling Green New Music Festival, UC Davis Music and Words Festival, Wellesley Composers Conference, June in Buffalo, Music11 Festival, ICMC, and the SEAMUS National Conference. His work has been recognized by grants from the Boston Foundation, Chamber Music America, the Barlow Endowment, the Johnstone Fund, and New Music USA. Dan is an assistant professor of composition and teaches electronic music at the Boston Conservatory at Berklee.
+-

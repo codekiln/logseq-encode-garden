@@ -1,0 +1,11 @@
+# Hinge Quartet
+	- #Pic
+		- ![Hinge Quartet](https://icmc2025.sites.northeastern.edu/files/2025/06/Hinge-Quartet-300x200.jpg)
+	- Praised as “experimental and ethereal” and a “welcome addition to the new music scene,” the **Hinge Quartet** is made up of Philipp Stäudlin (saxophones), Dan VanHassel (electric guitar), Matt Sharrock (percussion), and Keith Kirchoff (piano). Lying somewhere between a chamber ensemble and an avant-garde rock band, the Hinge Quartet combines cutting-edge contemporary classical and experimental music with seamless multimedia integration and the innovative re-imagining of rock and pop songs.
+	- Dedicated to expanding and diversifying the repertoire for their ensemble, the Hinge Quartet has commissioned new works from composers including Bahar Royaee, Per Bloland, Kirsten Volness, LJ White, Ed Martin, Chen-Hui Jen, Kirsten Carey, Marti Epstein, Yoon-Ji Lee, Curtis Hughes, and Nicole Murphy. Recent seasons have also featured works by Julius Eastman, Sam Pluta, Jessie Cox, Philippe Hurel, Meshuggah, Katherine Young, Louis Andriessen, Chaya Czernowin, Klaus Lang, Björk, and more.
+	- The Hinge Quartet’s educational initiatives have included residencies and workshops throughout the United States at institutions such as the Cincinnati University College-Conservatory of Music, Boston Conservatory at Berklee, UC Berkeley, East Carolina University, Ohio University, Miami University, the University of Georgia, St. Cloud State University, the University of Montana, and Western Michigan University. In 2019-20 the Hinge Quartet partnered with UMass Lowell in an innovative mentorship program in which the ensemble worked closely with an undergraduate performer throughout the season.
+	- [[Group/Hinge Quartet/Web]] [https://hingequartet.com](https://hingequartet.com/)
+	- #Guitar [[Person/Dan VanHassel]]
+	- #Saxophone [[Person/Philipp Stäudlin]]
+	- #Piano [[Person/Keith Kirchoff]]
+	- #Percussionist [[Person/Matt Sharrock]]

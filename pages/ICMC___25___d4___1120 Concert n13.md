@@ -18,9 +18,11 @@
 				- {{embed ((684b71d0-fe68-43fa-bcc0-a181ba8cc75d))}}
 			- ### [[ICMC/25/d4/1120 Concert n13/07 Pazhvak Astaneh]] — [[Person/Pedram Diba]]
 				- {{embed ((684b71d7-66ec-4ce3-9c99-dfc7e079971f))}}
-		- ### Part 2 - #VR
-			- [[ICMC/25/d4/1120 Concert n13/08 Camouflage]] — [[Person/Dan VanHassel]]
-			- [[ICMC/25/d4/1120 Concert n13/09 separación]] — [[Person/Orlando Garcia]]
+		- ### Part 2
+			- ### [[ICMC/25/d4/1120 Concert n13/08 Camouflage]] — [[Person/Dan VanHassel]]
+				- {{embed ((684b71de-c226-467f-b8f6-433a1be800a1))}}
+			- ### [[ICMC/25/d4/1120 Concert n13/09 separación]] — [[Person/Orlando Garcia]]
+				- {{embed ((684b71e5-494c-4660-93f7-f1ccf07bba8e))}}
 			- [[ICMC/25/d4/1120 Concert n13/10 Union of Workers]] — [[Person/Margaret Schedel]]
 			- [[ICMC/25/d4/1120 Concert n13/11 Oscillations iii]] — [[Person/Juan Vassallo]]
 			- [[ICMC/25/d4/1120 Concert n13/12 Sky Stars]] — [[Person/Douglas Geers]]
