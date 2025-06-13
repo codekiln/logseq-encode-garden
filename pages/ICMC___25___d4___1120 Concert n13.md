@@ -1,35 +1,26 @@
-- **CONCERT #13** — Thursday June 12; 8 – 9 : 30 pm — 132 Ipswich St., Rm 106, Boston Conservatory at Berklee
-	- **Berklee** *The Space Between* — Manuela Cardona Garcia
-	- **863** *Music for Immediate Ensemble, improvisation for VR synth, live electronics with face tracking & live video* — Itza Garcia Ordoñez, Tobias Fandel
-		- Performers: Itza Garcia Ordoñez (SynthVR); Tobias Fandel (live electronics with face tracking & live video)
-		- Description: Music for Immediate Ensemble weaves real-time VR synthesis, Wi-Fi audio/video casting, analog video-mixer disruptions and Unreal-Engine visuals steered by eye-tracking, creating an on-stage chain of gesture-to-media metamorphosis that passes “from body to virtual, from grin to sound, from glance to feedback.”
-		- Author bios: **Itzá García** (b. 1993, Mexico) explores interdisciplinary composition, VR instruments and decolonial practice; pursuing a PhD at CUNY. **Tobias Fandel** is a Brooklyn-based composer/visual artist focused on media entanglement in performance.
-	- **446** *Birds, for piano and fixed media* — Christopher Cook
-		- Performers: Mary Hellmann (piano)
-		- Description: Written for pianist Mary Hellmann, the piece layers recorded and synthetic birdsong against pianistic gestures; species flit through the texture, disappearing as quickly as they arrive.
-		- Author bio: Christopher Cook (DMA, Univ. Texas) writes instrumental, electro-acoustic and operatic music; Professor of Music, Chowan University.
-	- **696** *Harmonic Turbulences* — Gaël Moriceau
-		- Performers: Gaël Moriceau (T-Stick)
-		- Description: A solo T-Stick work exploiting the controller’s gestural nuance to sculpt shifting noise-grains and harmonic spectra that whirl like turbulent airflow before settling into resonant drones.
-	- **491** *Air Sampling #007 – Air Guitar, for e-Guitar and SoundSpaceXR* — Grégory Beller, Kieran McAuliffe
-		- Performers: Grégory Beller (SoundSpaceXR); Kieran McAuliffe (e-Guitar)
-		- Description: Live guitar gestures are captured in XR space and “re-sampled” by SoundSpaceXR, spawning an audiovisual feedback loop where virtual strings and real strings trade riffs in mid-air.
-	- **894** *Let’s play together? for piano, live video & electronics* — Alexey Logunov
-		- Performers: Alexey Logunov (piano)
-		- Description: A meditation on latency and presence: the solo pianist duets with delayed video clones while electronics stretch and fold the acoustic signal, questioning co-presence in networked music.
-	- **723** *His Dreams, I. Iron Horses, for solo piano and fixed media* — Zouning “Anne” Liao
-		- Performers: Alexey Logunov (piano)
-		- Description: Piano interlocks with industrial samples—steam whistles, clanking rails—to evoke childhood visions of locomotives powering inexorably across the landscape of memory.
-	- **557** *Pazhvak Astaneh, for viola, electronics & lights* — Pedram Diba
-		- Performers: Long Okada (viola)
-		- Description: Micro-tonal viola lines trigger realtime spectral processing and synchronized light pulses, tracing the threshold (“Astaneh”) between acoustic breath and electro-luminous after-image.
-	- **692** *Camouflage* — Dan VanHassel
-		- Description: Piano with live electronics conceals, erases and re-paints its own material; as timbres disappear into processed shadows, the work asks how performers mask emotion in a technological veil.
-	- **720** *separación* — Orlando Garcia
-		- Description: Sparse saxophone-derived electronics drift apart like estranged voices across a stereo field; subtle harmonic beating underscores the quiet ache implied by the title.
-	- **638** *Union of Workers* — Margaret Schedel
-		- Description: Granular resynthesis of factory sounds combines with data-driven pitch systems to comment on labor, automation and collective action in 21-century industry.
-	- **754** *Oscillations (iii)* — Juan Vassallo
-		- Description: The third panel in a cycle exploring rhythmic entrainment and social resonance; interleaves sine-swells with spoken-word fragments about acceptance.
-	- **531** *Sky Stars* — Douglas Geers
-		- Description: An electro-acoustic nocturne where processed string harmonics shimmer like distant constellations; invites meditative group listening.
+# Concert n13
+	- ## [[My Notes]]
+	- ## #Concert Details
+		- Date: Thursday June 12
+		- Time: 8:00 PM - 9:30 PM
+		- Location: 132 Ipswich St., Rm 106, Boston Conservatory at Berklee
+	- ## #Program
+		- ### Part 1
+			- ### [[ICMC/25/d4/1120 Concert n13/01 The Space Between]] — [[Person/Itzá García]], [[Person/Tobias Fandel]]
+			- [[ICMC/25/d4/1120 Concert n13/02 Birds]] — [[Person/Christopher Cook]]
+			- ### [[ICMC/25/d4/1120 Concert n13/03 Harmonic Turbulences]] — [[Person/Gaël Moriceau]]
+				- {{embed ((684b71b6-994e-4d66-b31a-7e5bc6c9ee8a))}}
+			- ### [[ICMC/25/d4/1120 Concert n13/04 Air Sampling 007]] — [[Person/Grégory Beller]], [[Person/Kieran McAuliffe]]
+				- {{embed ((684b71c0-7bfd-45b3-b439-4a7af622bea8))}}
+			- ### [[ICMC/25/d4/1120 Concert n13/05 Lets Play Together]] — [[Person/Alexey Logunov]]
+				- {{embed ((684b71c8-bf5f-4673-968a-b518ea9139b9))}}
+			- ### [[ICMC/25/d4/1120 Concert n13/06 His Dreams I Iron Horses]] — [[Person/Zouning Liao]]
+				- {{embed ((684b71d0-fe68-43fa-bcc0-a181ba8cc75d))}}
+			- ### [[ICMC/25/d4/1120 Concert n13/07 Pazhvak Astaneh]] — [[Person/Pedram Diba]]
+				- {{embed ((684b71d7-66ec-4ce3-9c99-dfc7e079971f))}}
+		- ### Part 2 - #VR
+			- [[ICMC/25/d4/1120 Concert n13/08 Camouflage]] — [[Person/Dan VanHassel]]
+			- [[ICMC/25/d4/1120 Concert n13/09 separación]] — [[Person/Orlando Garcia]]
+			- [[ICMC/25/d4/1120 Concert n13/10 Union of Workers]] — [[Person/Margaret Schedel]]
+			- [[ICMC/25/d4/1120 Concert n13/11 Oscillations iii]] — [[Person/Juan Vassallo]]
+			- [[ICMC/25/d4/1120 Concert n13/12 Sky Stars]] — [[Person/Douglas Geers]]

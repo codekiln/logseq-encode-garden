@@ -1,0 +1,36 @@
+icmc25-id:: 863
+
+- # The Space Between
+	- ## [[My Notes]] - #VR performance
+		- pretty #Cool - very distressed video performance. Audio wouldn't stand on its own (for me), but the whole ensemble.
+		- TODO attach #Video
+	- ## #Description
+		- #Short
+			- Music for Immediate Ensemble weaves real-time VR synthesis, Wi-Fi audio/video casting, analog video-mixer disruptions and Unreal-Engine visuals steered by eye-tracking, creating an on-stage chain of gesture-to-media metamorphosis that passes "from body to virtual, from grin to sound, from glance to feedback."
+	- ## #Composers
+		- ### [[Person/Itzá García]]
+			- #Pic
+				- ![Itzá García](https://icmc2025.sites.northeastern.edu/files/2025/06/863-Itza-Garcia-Tobias-Fandel-294x300.jpg)
+			- #Bio/Short
+				- Mexican composer exploring interdisciplinary composition and VR instruments
+				- PhD candidate at [[Uni/CUNY]]
+			- #Bio/Long
+				- Composer focused on time and togetherness in technology-mediated musical settings
+				- Research engages transformations in acoustic instrumentation and augmented instruments
+				- Work performed by [[Ensemble/JACK Quartet]], [[Ensemble/Musikfabrik]], [[Ensemble/Yarn/Wire]], and [[Ensemble/Talea]]
+				- Based in New York City pursuing PhD at [[Uni/CUNY]] Graduate Center
+		- ### [[Person/Tobias Fandel]]
+			- #Pic
+				- ![Itzá García](https://icmc2025.sites.northeastern.edu/files/2025/06/863-Itza-Garcia-Tobias-Fandel-294x300.jpg)
+			- #Bio/Short
+				- Brooklyn-based composer/visual artist
+				- Focuses on media entanglement in performance
+			- #Bio/Long
+				- Composer and visual artist working with acoustic instruments, video, and digital media
+				- Research interests include digital culture, virtual materials, and media technologies
+				- Collaborations with [[Ensemble/Modern]], [[Ensemble/Moscow Contemporary Music]], and [[Ensemble/Talea]]
+				- Teaches Music at [[Uni/Baruch College]]
+				- PhD candidate at [[Uni/CUNY]] Graduate Center
+	- ## #Performers
+		- [[Person/Itzá García]] — SynthVR
+		- [[Person/Tobias Fandel]] — live electronics with face tracking & live video
