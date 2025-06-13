@@ -1,0 +1,11 @@
+# Modular Risset Rhythm Etude
+- icmc25-id:: 787
+- ## [[My Notes]]
+- ## #Description
+	- a cascade of self-shepherd-tone rhythms produced on a Eurorack system, where pulse streams glide upward forever in a continuous perceptual spiral.
+- ## #Composer
+	- [[Person/Matthew Davidson]]
+		- composer, technologist and associate professor at Berklee College of Music
+		- noted for IDM-inflected modular work
+- ## #Performers
+	- [[Person/Matthew Davidson]] 

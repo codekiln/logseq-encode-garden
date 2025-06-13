@@ -1,0 +1,15 @@
+# Synthrospection: Exploring Audio Feedback in Live Coding
+- icmc25-id:: 434
+- ## [[My Notes]]
+  id:: 684b9779-4ff4-4430-9ff3-91c346471a0e
+	- TODO attach #Video
+	- This was the first really good [[Live Coding]] session that I've seen in person.
+		- He presents at [[Conference/ICLC]], a conference on live coding. This is inspiring me to get into [[TidalCycles]]
+- ## #Description
+	- The performance, Synthrospection: Exploring Audio Feedback in Live Coding, explores the creative possibilities of audio feedback within live coding, an improvisational art where music and sound are generated in real-time through code. Feedback, the process of routing output signals back into input, produces dynamic and unpredictable sonic effects, from subtle resonances to intense oscillations. By incorporating feedback loops into this context, the performance examines how these loops can create evolving soundscapes that surpass initial creative intentions.
+	- Audio feedback plays a central role in this performance. The system integrates feedback mechanisms into SynthDefs (SuperCollider synthesis definitions) controlled by [[TidalCycles]], a [[Live Coding]] platform for musical patterns. Sounds are continuously reintroduced into the system, processed, and altered in real-time, fostering a recursive interplay between performer, code, and sound. This process mirrors the way a guitarist interacts with feedback from their amplifier, creating a dynamic dialogue between input and output that reshapes the sonic landscape.
+	- The improvisational aspect of live coding adds complexity, requiring the performer to adapt their code in response to the evolving feedback-generated sounds. This interaction highlights feedback as more than a sonic effect—it becomes a tool for real-time exploration, creating a balance between control and emergence. This approach pushes the boundaries of live coding, where the manipulation of audio feedback remains a relatively unexplored area, offering opportunities for innovative sound creation.
+	- While feedback is not new in music, its digital application in live coding offers fresh perspectives. Like a guitarist using feedback to sustain notes or generate overtones, this performance employs digital tools to navigate similar creative terrain. By integrating the unpredictable nature of feedback into the structured framework of live coding, the performance reimagines traditional sonic practices in a modern, code-driven context.
+	- Synthrospection: Exploring Audio Feedback in Live Coding demonstrates how feedback can inspire novel approaches to sound design. By combining improvisation with recursive processes, the performance engages with feedback as a dynamic, interactive element that reshapes live coding. This fusion of structure and spontaneity reveals the potential of feedback to generate unexpected and compelling auditory experiences, encouraging a reexamination of both live coding and feedback as creative practices.
+- ## #Composer #Performer
+	- {{embed [[Person/Atsushi Tadokoro]]}}

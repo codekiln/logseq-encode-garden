@@ -1,0 +1,11 @@
+# Conjure II
+- icmc25-id:: 398
+- ## [[My Notes]] #[[To Listen Again]] #[[To Watch Again]] #Cool
+	- TODO attach #Video 1
+	- TODO  attach #Video 2
+	- #Amazing imagination, so fluffy, squealy, alternate, I feel like a monster is in the room. Black against black against black. it's harmless, even though it's frightening. She's taking a black balloon and playing with the air with friction and live processing. As the balloon gets inflated, it reflects the lights in the room, and then it's gradually decreasing in volume as she makes it speak. At the end, the balloon is popped, of course. Fabulous.
+- ## #Description
+	- Before the sound, there is a breath. Before the explosion, a threshold. Before the noise, silence. In this performance, the balloon becomes a vessel for memory, pressure, and transformation. Breath, shaped by the mouth and stretched latex, releases noise that resists translation—alien textures of hissing and vibration that unsettle the body’s borders. These sounds reflect the fragility and strength of a body in motion with its past.
+- ## #Composer [[Person/Huichun Yang]]
+- ## #Performers
+	- [[Person/Huichun Yang]]

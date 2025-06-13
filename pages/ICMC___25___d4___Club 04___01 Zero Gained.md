@@ -1,0 +1,12 @@
+# Zero Gained
+- icmc25-id:: 480
+- ## [[My Notes]]
+- ## #Description
+	- dystopian live-electronics narrative in which ill-starred protagonists drift through abrasive textures and fractured pulses, finding no truce—only the relentless beat of survival.
+- ## #Composer
+	- [[Person/Krzysztof Wolek]]
+		- Polish-American composer, sound artist and curator
+		- professor/director of electro-acoustic music at U. Louisville
+		- works released on Ablaze, Centaur, Wergo, Accord, etc.
+- ## #Performers
+	- [[Person/Krzysztof Wolek]] (University of Louisville) 

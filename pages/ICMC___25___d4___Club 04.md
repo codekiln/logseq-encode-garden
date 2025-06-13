@@ -1,0 +1,20 @@
+# CLUB CONCERT #4
+- ## [[My Notes]]
+- ## #Concert Details
+	- Date: Thursday June 12
+	- Time: 10:00 PM - 12:00 AM
+	- Location: Raytheon Amphitheatre (240 Egan Research Center), Northeastern University
+- ## #Program
+	- ### Curated Improvisation
+		- *Csound in the Metaverse improvisations* — ICMC Delegates participating in the "Csound in the Metaverse" workshop (Thu AM, June 11)
+	- ## Didn't get to see
+	- [[ICMC/25/d4/Club 04/01 Zero Gained]] — [[Person/Krzysztof Wolek]]
+	- [[ICMC/25/d4/Club 04/02 Modular Risset Rhythm Etude]] — [[Person/Matthew Davidson]]
+	- ## Did get to see
+		- ### [[ICMC/25/d4/Club 04/03 The Dance in the Place Congress]] — [[Person/David Taddie]]
+		- ### [[ICMC/25/d4/Club 04/04 Synthrospection]] — [[Person/Atsushi Tadokoro]]
+			- {{embed ((684b9779-4ff4-4430-9ff3-91c346471a0e))}}
+		- ### [[ICMC/25/d4/Club 04/05 Conjure II]] — [[Person/Huichun Yang]]
+	- ## Didn't get to see
+		- ### [[ICMC/25/d4/Club 04/06 nin]] — [[Person/Dimitris Papageorgiou]]
+		- ### [[ICMC/25/d4/Club 04/07 Human Capital]] — [[Person/Adam Vidiksis]], [[Person/Scott Miller]], [[Person/Sam Wells]]
