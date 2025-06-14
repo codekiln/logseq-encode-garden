@@ -1,0 +1,23 @@
+tags:: [[Concert]]
+
+- # [[ICMC/25/d6/1130 Concert 16]] — [[2025-06-14 Sat]]; 11:30 am – 1:00 pm — [[College/Emerson/Campus/Paramount Theater/Bright Family Screening Room]]
+	- ## Didn't get to witness
+		- **479** *Fragments 15.0-15.6 (Ockeghem Anamorph)* — Kyle Quarles
+			- Performers: Nathan Halbur; Nicholas Ottersberg; Kyle Quarles; Mara Riley; Regina Stroncek; Tianyi Wang
+			- Description: multimedia madrigal inspired by Ockeghem's *Missa Cuiusvis Toni*; six singers circle a live-spatialised Max patch that continually reslices recorded fragments, creating an anamorphic counterpoint between plainchant and glitch. The singers interact with gestural controllers strapped to their wrists, warping the electronic texture in real time.
+			- Author bio: composer-vocalist from Iowa whose work fuses early-music practice with real-time signal processing; DMA candidate, University of Iowa.
+		- **691** *Electrotropism* — Libby Fabricatore
+			- Description: fixed-media video-music exploring plants' electric-field sensing. Microscopy footage of pollen tubes is sonified via granular resynthesis and translated into luminous particle systems.
+			- Author bio: US/Irish electro-acoustic artist and botanist; PhD, Trinity College Dublin; research on audiovisual ecologies.
+		- **653** *Have a Hand* — Alvaro Lopez
+			- Performers: Alvaro Lopez
+			- Description: improvised performance for amplified hand-claps, live coding (TidalCycles) and gestural camera tracking; examines manual labour and rhythmic solidarity.
+		- **525** *Séance, for bamboo flute and electronics* — Yu-Hsin Chang
+			- Performers: Yu-Hsin Chang, bamboo flute
+			- Description: electro-acoustic ritual invoking Taiwanese ancestral voices; spectral flute multiphonics trigger convolution layers of temple gongs and whispered sutras.
+			- Author bio: Taiwanese flutist-composer active in Taipei new-media scene.
+	- ## Did get to witness
+		- [[ICMC/25/d6/1130 Concert 16/05 Ik Kil]]
+		- [[ICMC/25/d6/1130 Concert 16/06 Meditation I for Patti Cudd]]
+		- [[ICMC/25/d6/1130 Concert 16/07 Moments Between Thoughts]]
+		- [[ICMC/25/d6/1130 Concert 16/08 Arcade Mirages]]
