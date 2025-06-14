@@ -1,0 +1,26 @@
+# **Felipe Tovar-Henao**
+	- #Pic
+		- ![Felipe Tovar-Henao](https://icmc2025.sites.northeastern.edu/files/2025/05/uf_headshot_small_square-221x300.jpg)
+	- **Felipe Tovar-Henao**
+		- US-based
+		- multimedia artist, developer, researcher
+		- computer algorithms as expressive tools
+			- for human & ==post-human== creativity, cognition, **pedagogy**
+		- weaving digital instruments
+			- crafting immersive spaces
+			- dancing with generative algorithms
+			- exploring the boundaries of human and machine
+		- his work emerges from
+			- transformative encounters with technology
+			- philosophical wanderings
+			- cinematic dreams
+		- exploring the landscapes of
+			- human perception
+			- memory's echoes
+			- recognition's dance
+		- his journey has taken him through
+			- Cincinnati's halls of music
+			- Chicago's research chambers
+			- Bogotá's teaching spaces
+			- now finding home in Florida's digital gardens
+	-

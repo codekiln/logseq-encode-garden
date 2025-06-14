@@ -1,7 +1,7 @@
 icmc25-id:: 863
 
 - # The Space Between
-	- ## [[My Notes]] - #VR performance
+	- ## [[My Notes]] - #Reality/Virtual performance
 		- pretty #Cool - very distressed video performance. Audio wouldn't stand on its own (for me), but the whole ensemble.
 		- TODO attach #Video
 	- ## #Description

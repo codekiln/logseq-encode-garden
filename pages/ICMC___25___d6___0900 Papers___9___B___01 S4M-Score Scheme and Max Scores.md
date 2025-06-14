@@ -1,0 +1,36 @@
+# S4M-Score, a Library for Textual Scores in [[c74/max]] and [[Programming/Language/Lisp/Scheme]]
+	- ## Notes
+		- ### [[AI Notes]]
+			- **S4M-Score Overview**:
+				- A library for **Scheme for Max**, enabling **textual score authoring** in Max/MSP.
+				- Inspired by **Music-N**, **Csound**, and **Nyquist** languages.
+				- Designed to **extend Max/MSP** to handle linear, metrically-notated, text-based scores.
+				- Enables **symbolic beat timing** (numeric or symbolic) relative to global transport.
+				- Executes arbitrary functions in Scheme for Max object at scheduled times.
+				- Facilitates real-time score sequencing, transformation, and live coding.
+			- **S4m Score Events ("notes")**:
+				- Events are **s-expressions**, evaluated at a scheduled and quantized time (4 ticks of 480 ppq).
+				- Events can use any Scheme for Max facilities: **message sending, transport, dictionaries, buffers, Live API**, etc.
+				- Stored **quoted**, so events can be **redefined during playback**.
+			- **Playback and Interaction**:
+				- Score sequencer object supports **real-time transformation** and **live coding**.
+				- Driven by **Max clocks**, synchronized with Max transport.
+				- Enables **synchronized playback** with other Max sequencers.
+		- ### [[My Notes]]
+			- Works for [[Ableton/Max for Live]]
+			- 09:19 question from [[Person/Roger B. Dannenberg]]
+				- [Roger B. Dannenberg](https://www.cs.cmu.edu/~rbd/)
+				- his zoom background is from outer space, nice.
+				- Question was about rounding, I didn't quite catch it.
+	- ## #Author [[Person/Iain C. T. Duncan]]
+		- #Pic
+			- ![Iain C. T. Duncan](https://icmc2025.sites.northeastern.edu/files/2025/05/Iain_Duncan_sax_headshot-221x300.jpg)
+		- #Bio
+			- **Iain C. T. Duncan** is a musician, programmer, and composer in B.C., Canada. He holds a Master of Music Technology from the University of Victoria, where he is currently an interdisciplinary PhD student in Computer Science and Music, supervised by George Tzanetakis and Andy Schloss. Iain is the author of the open-source Scheme for Max extension to the Max/MSP audio-visual programming platform, which enables users to script, sequence, and live-code Max in s7 Scheme Lisp, and he is the developer of the Csound6~ object for Max, based on Victor Lazzarini’s object for Pure Data. He has been working in the software industry for over 20 years, and is currently a software acquisition and architecture consultant at Ringstone Tech, as well as the founder and developer of the online music education tools platform, seriousmusictraining.com. A gigging jazz saxophonist, Iain plays too many other instruments for fun and produces a weekly jazz night on Salt Spring Island, “Jazz at The Harbour House”. Iain is an unabashed fan of AJH and Intellijel Eurorack modules, which he controls with Scheme from Max for Live, and he makes Scheme-powered electronic music as Tremendous Machine (soundcloud.com/iain-duncan).
+	- ## #Author [[Person/George Tzanetakis]]
+		- #Pic
+			- ![George Tzanetakis](https://icmc2025.sites.northeastern.edu/files/2025/05/tzanetakis_head-221x300.jpg)
+		- #Bio
+			- **George Tzanetakis** is a Professor in the Department of Computer Science at the University of Victoria, with cross-listed appointments in Electrical and Computer Engineering and the School of Music. He holds a PhD in Computer Science from Princeton University and completed postdoctoral research at Carnegie Mellon University. His interdisciplinary research spans computer audition, human-computer interaction, music robotics, and computer-assisted music education. In 2012, he received the Craigdarroch Research Award in Artistic Expression from the University of Victoria. He also served as a visiting faculty member at Google Research in 2011. From 2010 to 2020 he was the Canada Research Chair (Tier 2) in the Computer Analysis of Audio. Dr. Tzanetakis has published over 230 papers. He is also an active musician, playing saxophone and piano.
+	- ## #Description
+		- While textual scores are common in Music-N languages, such as Csound and Music V, and in Lisp-based systems such as Nyquist and Common Lisp Music, the Max/MSP platform does not include any built-in facilities for working with linear, metrically-notated text-based scores. S4M-Score is a library for the Scheme for Max extension to Max/MSP, providing facilities for creating and playing textual scores inspired by those in the Music-N, Csound, and Nyquist languages. Score times are specified in either numeric or symbolic beat times relative to a global transport, and can be used to schedule arbitrary function execution in the host Scheme for Max object. As scores are represented by Scheme lists, they may be generated or transformed programmatically, including during playback. Scores are played by a provided score-sequencer object that is designed to support real-time transformations and live coding, and that is driven by Max clocks that synchronize with the main Max transport, thus enabling users to combine and synchronize textual score playback with other Max sequencing, including during dynamic tempo changes.

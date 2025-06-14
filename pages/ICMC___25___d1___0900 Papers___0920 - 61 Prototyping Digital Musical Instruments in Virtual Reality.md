@@ -1,4 +1,4 @@
-# Prototyping Digital Musical Instruments in [[VR]]
+# Prototyping Digital Musical Instruments in [[Reality/Virtual]]
 	- **Session Type:** Full Paper
 	- **Presenters:**
 		- *Anıl Çamcı* — Associate Professor, [[Uni/Michigan]] (Performing Arts Technology)

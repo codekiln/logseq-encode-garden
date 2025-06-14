@@ -1,3 +1,4 @@
+filters:: {"diataxis/how to" true}
 tags:: [[CLI/Tool]] 
 created-by:: [[Person/Jeff Dickey]]
 

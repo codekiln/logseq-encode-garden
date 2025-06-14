@@ -1,4 +1,4 @@
-tags:: [[uv]], [[Py/pyproject.toml]], [[Package/Management]], [[Diataxis/How To]], [[CursorAI/Project Rule/diataxis-how-to.mdc/Created By]]
+tags:: [[uv]], [[Py/pyproject.toml]], [[Package/Management]], [[Diataxis/How To]]
 
 - # How To Add a Package to pyproject.toml with uv
 	- ## Overview

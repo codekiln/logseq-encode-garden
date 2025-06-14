@@ -1,0 +1,8 @@
+# Dr. Matthew Wright
+	- #Pic
+		- ![Matthew Wright](https://icmc2025.sites.northeastern.edu/files/2025/05/Matt-head-shot-2x2-1-221x300.jpg)
+	- #Bio/Short
+		- Composer and performer
+		- Known for works combining acoustic instruments with electronics
+	- #Bio/Long
+		- **Dr. Matthew Wright** is a media systems designer, improvising composer/performer, computer music researcher, father of an energetic 8-year-old, and the Executive Director and acting Technical Director of Stanford University’s Center for Computer Research in Music and Acoustics ([[Uni/Stanford/CCRMA]]). His computer music career began in 1990 as an undergraduate in a class from David Wessel at UC Berkeley’s Center for New Music and Audio Technologies (CNMAT), where he joined the staff as a researcher from 1993-2008, before and during his CCRMA PhD. He later worked at the University of Victoria and UC Santa Barbara. His research has included real-time mapping of musical gestures to sound synthesis, helping develop and promote the Sound Description Interchange Format (SDIF) and [[Open Sound Control]] (OSC) standards, computer modeling of the perception of musical rhythm, and musical creation with technology in a live performance context. As a musician, he plays a variety of Middle Eastern and Afghan plucked lutes, Afro-Brazilian percussion, and computer-based instruments of his own design, in both traditional music contexts and experimental new works.

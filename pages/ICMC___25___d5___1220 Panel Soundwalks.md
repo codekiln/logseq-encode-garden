@@ -1,0 +1,71 @@
+# [Panel on Soundwalks](https://icmc2025.sites.northeastern.edu/panel-sessions/) #Soundwalk
+	- ## Summary
+		- Amber Vistein  (Moderator), Josh Kopeček, Christina Campanella, Leah Barclay
+		  [[2025-06-13 Fri]]
+		  12:20pm – 1:00pm  Bright Family Screening Room, Emerson [[College/Emerson/Campus/Paramount Theater/Bright Family Screening Room]]
+	- ## [[My Notes]]
+		- 12:30 [[Person/Christina Campanella]]
+			- (I talked to her and took part in her soundwalk, *Traces*)
+			- she mentions recording an [[Instrument/Erhu]]
+		- 12:42 [[Person/Leah Barclay]] 2007 got to work with Bill Duckworth and someone else.
+			- ipod opera something about orpheus.
+			- she mentions "riding wifi networks" ... ?
+			- fell in love with geolocating sound in different places in the environment in a way that's connected to place
+			- key point: accessibility - it can reach people who might not come to an electroaccoustic concert
+			- particular vocabulary around "decision makers" and "planting" soundwalks about ecology "around the offices of the decision makers" what a #Cool idea
+		- 12:47 [[Person/Josh Kopeček]]
+			- talks about Hannoi, Vietnam after his PhD
+			- key term: audio augmented reality
+			- wanted to be able to create "branching reality" - you can put in external factors by day or weather - things that would - weather would impact the composition, for example,
+			- in studio we think in timeline, very linear, but it's actually very different; you have no control over this and you have to embrace that as part of the concept
+				- we deconstruct our composition and we have to allow our compositions to
+		- 12:52 pm [[Person/Josh Kopeček]]
+			- people love it because they put on headphones and they get a different experience each time, and that's different from what we usually get with headphones
+			- interested in access, like what [[Person/Leah Barclay]] said.
+				- he did a [[Sound/Recording/Binaural]] piece for a blind audience
+				- passionate about giving r
+		- 12:55 q: what's the role of platforms? - [[Person/Amber Vistein]]
+		- 12:56 [[Person/Christina Campanella]]
+			- has a piece called "the visitation" that's being developed into an opera. jackie robinson park in nyc
+				- [Jackie Robinson Park : NYC Parks](https://www.nycgovparks.org/parks/jackie-robinson-park_manhattan)
+			- worked with a [[Music/Opera/Libretto/Lyricist]] - this helped
+			- she normally works with 12-channel wired speakers, ball and chain
+				- I'm never moving that system again
+			- She's talking about [[Person/Ellen Reid]] [[Sound/App/Ellen Reid SOUNDWALK]]
+				- [Ellen Reid SOUNDWALK](https://www.ellenreidsoundwalk.com/)
+		- 12:59 [[Person/Leah Barclay]]
+			- talking about [[Design/Collaborative]]
+			- she embeds [[Sound/App/ECHOES]] in her outdoor engagement activities
+			- [[My Question]] why are we putting so much more attention on #Reality/Virtual and [[Reality/Augmented]] in a concert statements
+		- 13:04 [[Person/Josh Kopeček]] talks more about platforms and accessibility
+			- been concerned with this problem of "legacy"
+			- there are many soundwalks that are lying in dustry mp3 players in a box
+			- if he disappeared, [[Sound/App/ECHOES]] would fall over eventually
+				- there are a couple thousand soundwalks on it
+			- last year, he was considering trying to reevaluate how echoes functions; it's an open company at the moment. thinking about transferring to an open source project
+				- he asks about help ... he is looking for maintaining
+				- he wants it to have a life beyond him as well
+				- it's his real passion
+		- 13:07 [[Person/Christina Campanella]] lives in NYC
+			- really does mix for whatever invironment they are in
+			- made a bunch of decisions before she got here and started
+			- next is to make a piece JUST for [[Sound/App/ECHOES]].
+				- when she first realized you could put layers of sound above you
+		- 13:08 [[Person/Leah Barclay]]
+			- what's next
+				- mentions [[Ambisonic]] support in [[Sound/App/ECHOES]]
+		- 13:10 [[Person/Josh Kopeček]] encourages us to do [[Audio/Spatial]] support in [[Sound/App/ECHOES]]
+			- also talks about the space for [[Activism]]
+	- ## #Description
+		- The Soundwalks Panel brings together practitioners from around the world to discuss the unique affordances and creative possibilities of soundwalks as a medium. Topics will include opportunities presented by emerging technologies, interdisciplinary practice, acoustic ecology, community collaboration, and public engagement. Panel members include Josh Kopeček, creative technologist and founder of [[Sound/App/ECHOES]] platform; Leah Barclay, acclaimed Australian sound artist, designer, and researcher working at the intersection of art, science, and technology; and award-winning multi-disciplinary composer, performer, and sound artist Christina Campanella.
+	- ## #Moderator [[Person/Amber Vistein]]
+		- Amber Vistein (b. 1984) is a composer and sound artist who delves deeply into the poetics of timbre, texture, and gesture. Praised for her conceptual “acuity” (Big, Red, and Shiny) and “blooming phrases” (New Music Box), they draw upon research in affect theory, phenomenology, aesthetics, sonic materialism, historical musicology, and psychoacoustics to compose music filled with storied textural details, shifting temporal effects, and affectively charged atmospheres. Their style is defined by the juxtaposition of a visceral gestural vocabulary alongside evocative textural constructions; cross-cutting registers from the autonomic to the atmospheric. This highly tactile approach to composition works to unearth invisible events, networks, and histories by introducing expressive imperfections—dysfluencies—into the musical sentence. These sites of rupture (a suspended trill, stutter, or broken-record loop) expose the submerged complexities of sound, the labor of its production, and its fragility
+	- ## #Panelists
+		- ### [[Person/Josh Kopeček]]
+			- Josh is a creative technologist and founder of ECHOES, a platform for making and publishing locative audio experiences. He has developed technology for many high-profile projects, such as Huang Ruo’s City of Floating Sounds, commissioned by Factory International, which toured to the Lincoln Center in New York and Southbank in London as well as other locations globally; the principal audio guide for the Colosseum in Rome; The Royal Parks and The Royal Academy’s collaborative ‘Music for Trees’ app; the ‘Ellen Reid SOUNDWALK’ app in collaboration with the New York Philharmonic in Central Park, New York, and other worldwide locations; and the Zollverein UNESCO World Heritage Site audio guide and visitor app.
+		- ### [[Person/Christina Campanella]]
+			- CHRISTINA CAMPANELLA is a composer, performer, and sound artist. The “contemplative rhythm” of her sound installations (Boston Globe), her “moody, driving music,” “hymn-like songs” (NY Times), and “ethereal voice” (BUST) are the building blocks of her performance, installation and fixed media works. Among them: three compositions for The Great Learning Orchestra (Stockholm): CHANCE (VERB) (2024), ALL THINGS FROM ZERO (2019), and NO WAKE (2015); THE VISITATION, a soundwalk for Harlem’s Jackie Robinson Park (2023) and THE VISITATION, an opera (in process, writer Stephanie Fleischmann); 12-channel sound installation FIND ME (2018, writer Jim Dawson); headphone installation LIGHTHOUSE 40°N, 73°W (2015, Harvestworks/NY Electronic Arts Festival); BREATHE, a sound intervention for Arthur Ganson ’s kinetic sculpture ‘Machine With Breath’ (2013, Museum at MIT); and multiple music-theater works performed across the US and abroad. Support includes three NYSCA Commissions (Film, Media, New Technologies), Opera America’ s Discovery Grant for Female Composers, NY State Music Fund.
+		- ### [[Person/Leah Barclay]]
+			- **Dr Leah Barclay** is an Australian sound artist, designer, and researcher working at the intersection of art, science, and technology. Her research and creative work investigate new approaches to ecoacoustics, exploring the soundscapes of terrestrial and aquatic ecosystems to inform conservation, scientific research, and public engagement. She is a specialist in underwater sound with over 15 years’ experience recording marine and freshwater ecosystems across the planet. Leah creates complex sonic environments and audio-visual works that draw attention to changing climates and fragile ecosystems. These works are realised through live performances, sound walks, interactive installations, VR/AR, and site-specific experiences. Her work explores ways we can use creativity, new technologies, and emerging science to reconnect communities to place and inspire ecological awareness. Leah is the Discipline Lead of Design at the University of the Sunshine Coast, where she is also co-leading the Creative Ecologies Research Cluster, an emerging hub for interdisciplinary research that is shaping new approaches to creative practice.
+			-
+	-
