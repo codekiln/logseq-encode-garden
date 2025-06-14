@@ -1,0 +1,34 @@
+icmc25-id:: id 896
+
+- # Migration Script
+	- ## [[My Notes]]
+	  id:: 684df9a5-fd6a-4853-b37b-13ed7e3fbc01
+		- live projection from top down, using two devices that look like teenage engineering, and a [[Novation/Launchpad]].
+		- A bunch of bird calls - nice reminder that top-down projection performance can be engaging. meditative.
+		- Love the monom norns!
+		- ah he was using [[Ableton]]
+	- ## #Description
+		- Migration Script centers on the unrelenting forces of nature that push creatures to live their lives as molded through centuries-old patterns without question. Using Mark Wheeler’s ‘Overwintering’ script and Zach Scholl’s ‘granchild’ script for the [[Monome/Norns]], the performer reacts to and shapes the slowly evolving harmonic content generated in real-time from bird migration patterns captured across Europe. Building new polyphonic and rhythmic overlays from bird song field recordings and the aforementioned sonified data, the performer uses granular engines and digital sample reduction processing to impart their fleeting influence on an unrelenting force. In this manner, the musician gains an improvisation partner out of one of their own instruments, a source of stochastic drive they must attempt to sculpt and decide how to react to in each performance. Bird song recordings used in this piece are provided by the Yle Finnish Public Service Media Company under a Creative Commons license.
+	- ## #Composer [[Person/Anthony T. Marasco]]
+		- #Pic
+			- ![Anthony T. Marasco](https://icmc2025.sites.northeastern.edu/files/2025/06/896-Anthony-Marasco-221x300.jpg)
+		- **Anthony T. Marasco** is a composer, sound artist, and instrument designer who takes influence from the aesthetics of today’s ==Digimodernist== culture.
+			- interactive sensor systems
+			- cyber-hacked circuit-bent hardware
+			- modular synthesizers
+			- tabletop sound computers
+				- TODO is this the [[Monome/Norns]]?
+			- Marasco’s works have been featured at
+				- SEAMUS
+				- Networked Music Festival
+				- NIME
+				- MoxSonic
+				- ICMC
+				- Toronto International Electroacoustic Symposium
+				- Electroacoustic Barn Dance
+				- Mise-En Festival
+				- Montreal Contemporary Music Lab
+			- grand-prize winner of the 2013 ==UnCaged Toy Piano Festival== Call for Scores
+			- resident artist at Signal Culture Experimental Media Labs
+			- winner of the American Composers Forum Philadelphia’s “If You Could Hear These Walls” project.
+			- He’s received commissions from WIRED Magazine, the Elm Trio, smol ensemble, Phyllis Chen, Quince Contemporary Vocal Ensemble, Toy Piano Composers, and Maureen Batt. Dr. Marasco is an Assistant Professor of Music Composition and Technology and the Director of the Electronic Music Studios at Michigan State University.

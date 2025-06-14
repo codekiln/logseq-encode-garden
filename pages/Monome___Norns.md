@@ -1,0 +1,2 @@
+# [norns | monome/docs](https://monome.org/docs/norns/)
+	- Through *scripts* written in  [[Programming/Language/Lua]] [Lua](https://www.lua.org/about.html), you can define the behavior of its on-board rotary controls, keys, and screen, as well as any connected devices. Through a large number of [pre-written libraries](https://monome.org/docs/norns/reference), norns offers a platform for charting new possibilities in music-making. norns connects easily to grids, [[MIDI]] devices, USB-CV interfaces, networked [[OSC]], and other objects.

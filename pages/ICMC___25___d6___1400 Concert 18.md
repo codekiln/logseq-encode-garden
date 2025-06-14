@@ -1,0 +1,11 @@
+# ICMC Concert 18
+	- ## [[ICMC/25/d6/1400 Concert 18/02 Laboratory of Found Sounds]]
+		- {{embed ((684df0da-f2da-483c-9b8d-46677d22a271))}}
+	- ## [[ICMC/25/d6/1400 Concert 18/03 Means both sanctioned and forbidden]]
+		- {{embed ((684df265-eaa9-470d-8ffc-a4ca46ecb9e2))}}
+	- ## [[ICMC/25/d6/1400 Concert 18/04 The Wind Blowing Sounds of Nature]]
+	- ## [[ICMC/25/d6/1400 Concert 18/06 Migration Script]]
+		- {{embed ((684df9a5-fd6a-4853-b37b-13ed7e3fbc01))}}
+	- ## [[ICMC/25/d6/1400 Concert 18/07 Hysteresis]]
+		- {{embed ((684dfc4f-f4e4-46b0-9640-dc359b98125b))}}
+-

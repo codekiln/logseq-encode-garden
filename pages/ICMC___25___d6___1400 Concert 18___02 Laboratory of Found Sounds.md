@@ -1,0 +1,12 @@
+icmc25-id:: 569
+
+- # Laboratory of Found Sounds
+	- ## [[My Notes]] [[To Watch Again]] #Fun
+	  id:: 684df0da-f2da-483c-9b8d-46677d22a271
+		- awesome, duh, where has this idea been? physical, relatable
+		- TODO  attach #Video
+	- ## #Performer #Composer [[Person/Akito van Troyer]]
+		- #Pic
+			- ![Akito van Troyer](https://icmc2025.sites.northeastern.edu/files/2025/06/569-Akito-van-Troyer-221x300.jpg)
+		- #Bio
+			- **Akito van Troyer** is a media artist, researcher, and performer specializing in experimental electronic music and interactive systems. With a Ph.D. in Media Arts and Sciences from MIT, his work explores the intersection of technology and musical expression through the development of new paradigms for musical instruments that encourage creative exploration. van Troyer’s research focuses on designing innovative interfaces that transform everyday objects into musical instruments. His award-winning project, MM-RT, received the People’s Choice Award for Most Unusual Musical Instrument at the Guthman Musical Instrument Competition. His approach bridges physical and digital realms, enabling players to directly touch and manipulate electronic sounds through tangible interactions. His recent research investigates how artificial intelligence can enhance instrument design and performance, with particular attention to creating intuitive, expressive interactions. As a performer, van Troyer blends custom-built digital instruments with physical objects to create immersive sonic environments that challenge traditional notions of musical interaction. His musical interfaces and performance system innovations have been presented at major conferences, including NIME, CHI, and various ACM venues. His work has been featured in prominent publications such as Scientific American and CBS’s 60 Minutes. Currently an Associate Professor at Berklee College of Music and lecturer at Northeastern University, van Troyer teaches audio programming, multimedia performance, and AI applications for musicians. Through collaborations with musicians, researchers, and technologists, he explores novel approaches to musical expression, developing systems that balance technological innovation with artistic depth, making complex concepts accessible through engaging musical experiences.
