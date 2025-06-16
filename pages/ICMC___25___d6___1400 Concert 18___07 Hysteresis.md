@@ -15,7 +15,8 @@ icmc25-id:: 688
 		- my head does bobble a bit.
 		- ok, there's more juice in this grumbling flibber than I thought at first, give me more of what he's having.
 		- i see now that this really does come from the true spirit of teenage engineering.
-		- let's see wtf this does. listen like a geologist.
+		- let's see wtf this does. listen like a geologist. I feel like I'm listening to the conversation between los angeles and its therapist, when the slots are turned upside down.
+		- there are natural constraints here that form the embouchure
 	- ## #Composer #Performer [[Person/Alex Bernhardt]]
 		- #Pic
 			- ![Alex Bernhardt](https://icmc2025.sites.northeastern.edu/files/2025/06/688-Alexander-Bernhardt.jpg){:height 520, :width 378}

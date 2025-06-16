@@ -293,7 +293,7 @@
 				- it's "so good" it takes so many strokes
 			- we are talking about music for waiting areas, a la [[Person/Brian Eno/Music for Airports]]
 			- 16:18 he talkes about [[Person/Clarence Barlow]] and he will talk about this more on [[2025-06-14 Sat]]
-				- TODO find [[Person/Georg Hajdu]]'s talk on [[2025-06-14 Sat]]
+				- DONE find [[Person/Georg Hajdu]]'s talk on [[2025-06-14 Sat]]
 			- importance of non-repetition, allusion to [[Person/John Cage]]
 			- #Cool - 11 or more centers are implementing this!
 		- ### 16:11 [[Transcript]]
