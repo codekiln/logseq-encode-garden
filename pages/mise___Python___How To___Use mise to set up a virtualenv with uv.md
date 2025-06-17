@@ -5,7 +5,7 @@ tags:: [[Diataxis/How To]]
 		- Use a project-local `mise.toml` to pin and install Python (via `uv`) and automatically create/activate a virtualenv, while keeping Python dependencies in `pyproject.toml`.
 	- ## Preconditions
 		- You have `mise` ≥ 2025.5.6 installed globally.
-		- A Git repository with a `pyproject.toml` defining your Python project's metadata and dependencies.
+		- A Git repository with a [[pyproject.toml]] defining your Python project's metadata and dependencies.
 		- You want all Mise configuration in `mise.toml`, not in `pyproject.toml`.
 	- ## Procedure
 		- ### 1. Create and commit `mise.toml`
@@ -68,14 +68,14 @@ tags:: [[Diataxis/How To]]
 			- In your shell, run `mise install`.
 		- ### 3. Define tasks for Python dependency management
 			- The `mise.toml` above defines several useful tasks:
-			  - `mise run install-deps` (or `mise run id`): Install all basic dependencies
-			  - `mise run install-deps-dev` (or `mise run idd`): Install only dev dependencies
-			  - `mise run install-deps-all` (or `mise run ida`): Install all dependencies
-			  - `mise run add-deps <package>` (or `mise run ad <package>`): Add new dependencies
-			  - `mise run test`: Run tests
-			  - `mise run lint`: Lint the code
-			  - `mise run format`: Format the code
-			  - `mise run info`: Show project information
+				- `mise run install-deps` (or `mise run id`): Install all basic dependencies
+				- `mise run install-deps-dev` (or `mise run idd`): Install only dev dependencies
+				- `mise run install-deps-all` (or `mise run ida`): Install all dependencies
+				- `mise run add-deps <package>` (or `mise run ad <package>`): Add new dependencies
+				- `mise run test`: Run tests
+				- `mise run lint`: Lint the code
+				- `mise run format`: Format the code
+				- `mise run info`: Show project information
 		- ### 4. Keep Python dependencies in `pyproject.toml`
 			- In `pyproject.toml`, list your dependencies under `[project]`:
 			  ~~~toml
