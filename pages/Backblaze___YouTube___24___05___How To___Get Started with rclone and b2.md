@@ -1,0 +1,49 @@
+# [Getting Started with Rclone and Backblaze B2 - YouTube](https://www.youtube.com/watch?v=r1ruNWy3B00&t=2s)
+	- ## [[My Notes]]
+		- great overview of the rclone backblaze integration. In particular:
+			- the note about [[rclone/EnvVar/RCLONE_FAST_LIST]]
+			- the tour of rclone commands was useful
+				- especially use of [[rclone/sync]] to sync a folder (presumably similar to [[rsync]]?)and [[rclone/--dry-run]] to preview elements.
+	- ## #Video
+		- {{video https://www.youtube.com/watch?v=r1ruNWy3B00}}
+			- ### {{youtube-timestamp 45}} setting up integration between [[Backblaze/B2]] and [[rclone]]
+				- {{youtube-timestamp 45}} creating a [[Backblaze/App Key]]
+					- id and secret
+				- {{youtube-timestamp 65}} installing [[rclone/install]]
+					- using precompiled binary
+				- {{youtube-timestamp 89}} [[rclone/config]]
+					- creating a "remote" - `n` for New remote
+					- selecting [[Backblaze/B2]] at the top
+					- {{youtube-timestamp 129}} rclone option for `hard_delete`
+						- he goes with soft deletes
+			- ### {{youtube-timestamp 150}} sample usage - [[rclone/lsd]] to list directories (buckets in [[Backblaze/B2]])
+				- {{youtube-timestamp 150}} `rclone lsd b2:` lists buckets.
+					- *presumably this `lsd` is short for `list directories`; ((6857f742-f69a-4c21-b431-9904f4881248))
+					- requires `:` - the address could come after this.
+					- here `b2` is the name of the [[rclone/remote]] that he assigned to his backblaze b2 bucket.
+			- ### {{youtube-timestamp 170}} note [[Backblaze/B2/API/class B]] and [[Backblaze/B2/API/class C]] have daily rate limit and are paid after that; use [[rclone/--fast-list]] option or [[rclone/EnvVar/RCLONE_FAST_LIST]] to prevent exceeding them
+				- {{youtube-timestamp 170}} `--fast-list` option
+					- with b2 it treats the bucket as the top level directory
+					- by default, rclone retrieves
+					- {{youtube-timestamp 210}}  class A, B, C calls
+						- [[Backblaze/B2/API/class A]]: uploading files
+							- always free
+						- [[Backblaze/B2/API/class B]]: downloading files
+						- [[Backblaze/B2/API/class C]]: creating buckets and listing files
+						- you get daily free amount of class B and C files, then it's **not** free
+						- if you have deeply nested directory tree (100k files) then rclone can quickly start to rack up charges
+					- {{youtube-timestamp 252}} rclone can fetch in batches of 1000 uses `--fast-list` and they recommend it
+						- this uses more memory but it's more convenient
+						- they recommend it
+						- {{youtube-timestamp 272}} you can use `--fast-list` w every command but `export RCLONE_FAST_LIST=true` [[rclone/EnvVar/RCLONE_FAST_LIST]]
+			- ### {{youtube-timestamp 290}} creating a [[Backblaze/B2/Bucket]] with `rclone mkdir b2:rclone-demo-1` - [[rclone/mkdir]]
+				- [[rclone]] sees **each bucket as a top level directory**
+				  id:: 6857f742-f69a-4c21-b431-9904f4881248
+					- so `mkdir` here is **making a bucket** in backblaze
+				- {{youtube-timestamp 327}} copying file in with `[[rclone/copy]]` and using [[rclone/ls]] to see them.
+					- using [[rclone/cat]] to retrieve the contents of the file
+			- ### {{youtube-timestamp 355}} keeping a folder in sync with [[rclone/sync]]
+				- using [[rclone/--dry-run]]
+					- recommended for sync or [[rclone/delete]]
+				-
+			-
