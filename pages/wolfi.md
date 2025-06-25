@@ -1,0 +1,4 @@
+# [Wolfi](https://github.com/wolfi-dev/)
+	- Wolfi is the first community Linux (un)distribution declaratively built for creating a secure base layer for your [[Containers]]!
+	- Wolfi is a community [[Linux/Distro]] OS designed for the container and cloud-native era. Chainguard started the Wolfi project to enable building [Chainguard Images](https://github.com/chainguard-images), our collection of curated [distroless](https://blog.chainguard.dev/minimal-container-images-towards-a-more-secure-future/) images that meet the requirements of a secure software supply chain.
+	- Wolfi, whose name was inspired by the [world's smallest octopus](https://en.wikipedia.org/wiki/Octopus_wolfi)
