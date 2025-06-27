@@ -305,7 +305,7 @@
  ;;  :charge-range    600}   ; Default value: 600
 
  ;; Favorites to list on the left sidebar
- :favorites ["icmc/25/d6/1130 concert 16/08 arcade mirages" "icmc/25/d3/1700 concert n10/05 two unworkable contraptions" "edtech/idea/learnmark/q/what precedents exist for lms-agnostic format" "ai/es/25/ws/what i learned at the ai engineer summit workshops 2025" "ai/coding/technique/phased planning/ai-coding dir" "person/harper reed/blog/25/02/my llm codegen workflow atm"]
+ :favorites ["edtech/idea/learnmark/q/what precedents exist for lms-agnostic format" "ai/coding/technique/phased planning/ai-coding dir" "person/harper reed/blog/25/02/my llm codegen workflow atm"]
 
  ;; Set flashcards interval.
  ;; Expected value:

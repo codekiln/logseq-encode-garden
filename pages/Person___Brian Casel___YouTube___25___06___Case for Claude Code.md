@@ -1,0 +1,29 @@
+# [The Case for Claude Code - YouTube](https://www.youtube.com/watch?v=aHTXccrfXC8)
+	- ## #Video
+		- {{video https://www.youtube.com/watch?v=aHTXccrfXC8}}
+			- ### {{youtube-timestamp 0}} The Case for Claude Code
+				- 
+			- ### {{youtube-timestamp 66}} Where Claude Code is pushing us
+				- 
+			- ### {{youtube-timestamp 151}} Understanding Anthropic's Product Vision
+				- 
+			- ### {{youtube-timestamp 194}} Terminal-based agent experience
+				- 
+			- ### {{youtube-timestamp 344}} MCP integration
+				- 
+			- ### {{youtube-timestamp 490}} CLAUDE.md file (memories)
+				- 
+			- ### {{youtube-timestamp 712}} Custom Slash Commands
+				- 
+			- ### {{youtube-timestamp 805}} Claude Code GitHub Actions
+				- 
+			- ### {{youtube-timestamp 869}} Autonomous agents vs. AI pair-programming
+				- 
+			- ### {{youtube-timestamp 999}} Claude Code vs. Cursor Background Agents
+				- 
+			- ### {{youtube-timestamp 1052}} Planning mode in Claude Code
+				- 
+			- ### {{youtube-timestamp 1340}} Multi-tasking with Claude Code
+				- 
+			- ### {{youtube-timestamp 1558}} Agentic coding patterns
+				- 
