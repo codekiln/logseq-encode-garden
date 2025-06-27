@@ -2,6 +2,6 @@
 	- Lightweight general-purpose languages often used for glue code.
 	- #Examples
 		- [[Bash]]
-		- [[Python]]
+		- [[Py]]
 		- [[JS]]
 	- Not mutually exclusive with general-purpose languages.

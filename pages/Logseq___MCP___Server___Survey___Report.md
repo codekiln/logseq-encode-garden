@@ -2,6 +2,9 @@ tags:: [[MCP/Server]], [[ChatGPT/Deep Research/Response]]
 
 - # Survey of available Logseq [[MCP/Server]]s and their abilities
 	- ## [[My Notes]]
+		- [[2025-06-27 Fri]]
+			- New entry
+				- [[Logseq/MCP/Server/Py/gustavo-meilus/logseq-api-mcp]]
 		- [[2025-05-10 Sat]]
 		  id:: 681f8bab-19c2-4241-9ce4-53a5b6f7bc97
 			- Most promising
