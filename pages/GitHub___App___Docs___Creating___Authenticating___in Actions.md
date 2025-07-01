@@ -1,0 +1,3 @@
+alias:: [[GitHub/Docs/Making authenticated API requests with a GitHub App in a GitHub Actions workflow]]
+
+- # [Making authenticated API requests with a GitHub App in a GitHub Actions workflow - GitHub Docs](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/making-authenticated-api-requests-with-a-github-app-in-a-github-actions-workflow#authenticating-with-a-github-app)
