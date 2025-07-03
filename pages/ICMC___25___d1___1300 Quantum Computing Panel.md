@@ -1,6 +1,6 @@
 date-created:: [[2025-06-09 Mon]]
 cgpt-link:: [ICMC25 - ICMC/25/d1/1300 Quantum Computing Panel](https://chatgpt.com/g/g-p-6845c013a1dc8191953259251f424f3c-icmc25/c/68471c1b-6440-800a-a612-8a63c6a6a7ba)
-title:: ICMC/25/d0/1300 Quantum Computing Panel
+title:: ICMC/25/d1/1300 Quantum Computing Panel
 
 - # Quantum Computer Music? Goodness Me!
 	- ## Summary
