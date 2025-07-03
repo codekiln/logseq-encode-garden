@@ -1,0 +1,23 @@
+# [BMad Method V4: Complete Step-by-Step Install, Upgrade and Execution - YouTube](https://www.youtube.com/watch?v=l9iqJIRZzkA)
+	- ## [[Video]]
+		- {{video https://www.youtube.com/watch?v=l9iqJIRZzkA}}
+			- ### {{youtube-timestamp 0}} Intro
+			- ### {{youtube-timestamp 100}} 1 Minute Web Setup
+			- ### {{youtube-timestamp 240}} BMad Orchestrator is your Mentor
+			- ### {{youtube-timestamp 400}} Installer Usage
+			- ### {{youtube-timestamp 495}} NPX Install Steps and IDE Selection
+			- ### {{youtube-timestamp 690}} Cursor and Windsurf Specifics
+			- ### {{youtube-timestamp 830}} Clone and Architecture
+			- ### {{youtube-timestamp 946}} Core Config Explanation
+			- ### {{youtube-timestamp 1040}} NPM Install: BMad Command
+			- ### {{youtube-timestamp 1140}} V3 to V4 Auto Upgrade
+			- ### {{youtube-timestamp 1380}} Claude Code running Migration Task
+			- ### {{youtube-timestamp 1620}} How to Shard the Architecture
+			- ### {{youtube-timestamp 1770}} Keeping BMad Auto Up To Date!
+			- ### {{youtube-timestamp 1860}} Custom Agents in Cursor Setup
+			- ### {{youtube-timestamp 1965}} New Project Dev Setup
+			- ### {{youtube-timestamp 2060}} Shard a New PRD and Architecture with Claude and Cursor
+			- ### {{youtube-timestamp 2160}} SM Agent Drafts the Story Cursor
+			- ### {{youtube-timestamp 2280}} Claude Code Dev Agent Builds Story
+			- ### {{youtube-timestamp 2460}} Wrap Up
+			-
