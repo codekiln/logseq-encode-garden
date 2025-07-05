@@ -18,4 +18,4 @@ tags:: [[Coder]], [[Knowledge Gardener]]
 			  **Web Frameworks**: Flask, [[Django]], Express.js, Node.js, Reactjs
 			  **Database Frameworks**: SQL, [[PostgreSQL]], NoSQL
 			  **Cloud**: [[Kubernetes]], Microsoft Azure, Google Cloud Platform, [[AWS]] 
-			  **Other tools**: Apache Airflow, CI/CD pipeline, Splunk
+			  **Other tools**: Apache Airflow, CI/CD pipeline, [[Splunk]]
