@@ -1,7 +1,14 @@
-- [QuickStage - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=bs-code.git-quick-stage)
-- [[GitHub/Bluesteel-Software/git-stage-file]]
-	- [git-stage-file/CHANGELOG.md at main · Bluesteel-Software/git-stage-file](https://github.com/Bluesteel-Software/git-stage-file/blob/main/CHANGELOG.md)
-		- nice #Changelog - I thought perhaps they were using some commit hook, but I can't find any in the package.json - they do have a dependency on something called [g though; what is that](https://github.com/Bluesteel-Software/git-stage-file/blob/main/package.json#L168)?
-			- [g - npm](https://www.npmjs.com/package/g)
-				- THIS IS NOT FOR PRODUCTION SOFTWARE. ONLY USE IT FOR PROTOTYPING AND PROOF-OF-CONCEPT WORK. DO NOT USE THIS FOR ANYTHING TRULY IMPORTANT.
-- [For a detailed article on what you can do with **Quick Stage** go here!](https://medium.com/vs-code-keybindings/staging-files-in-vs-code-with-the-keyboard-2a80d3dc035c)
+# [QuickStage - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=bs-code.git-quick-stage)
+	- ## [[GitHub/Bluesteel-Software/git-stage-file]]
+		- ### [[My Notes]]
+			- [[2025-07-06 Sun]]
+				- There is a bug `Cannot read properties of undefined (reading 'onDidRunOperation')` that prevents using this extension - [Error when running quickstage · Issue #20 · Bluesteel-Software/git-stage-file](https://github.com/Bluesteel-Software/git-stage-file/issues/20)
+					- Apparently it has to do with a change in the allegedly rather undocumented git API for [[VSCode/Git]]
+					- [[VSCode/GitHub/Issue/25/03 useGitAPI() missing repository resource n242531]]
+						- [useGitApi() missing repository resource after updating to latest version · Issue #242531 · microsoft/vscode](https://github.com/microsoft/vscode/issues/242531#issuecomment-2789114660)
+				- I'm going to disable this until it's fixed. [[Microsoft]] is so enthusiastic about AI coding that it [laid off 9,000 workers](https://apnews.com/article/microsoft-layoffs-xbox-f44079957b12370f72e24edebe9fcc6b) but can't yet get AI to write documentation for one of the most important single plugin APIs in [[VSCode/Git]]. [[¯\_(ツ)_/¯]]
+		- [git-stage-file/CHANGELOG.md at main · Bluesteel-Software/git-stage-file](https://github.com/Bluesteel-Software/git-stage-file/blob/main/CHANGELOG.md)
+			- nice #Changelog - I thought perhaps they were using some commit hook, but I can't find any in the package.json - they do have a dependency on something called [g though; what is that](https://github.com/Bluesteel-Software/git-stage-file/blob/main/package.json#L168)?
+				- [g - npm](https://www.npmjs.com/package/g)
+					- THIS IS NOT FOR PRODUCTION SOFTWARE. ONLY USE IT FOR PROTOTYPING AND PROOF-OF-CONCEPT WORK. DO NOT USE THIS FOR ANYTHING TRULY IMPORTANT.
+		- [For a detailed article on what you can do with **Quick Stage** go here!](https://medium.com/vs-code-keybindings/staging-files-in-vs-code-with-the-keyboard-2a80d3dc035c)
