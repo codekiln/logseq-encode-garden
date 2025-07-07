@@ -1,4 +1,6 @@
-# [The /llms.txt file – llms-txt](https://llmstxt.org/)
+alias:: [[llms.txt]]
+
+- # [The /llms.txt file – llms-txt](https://llmstxt.org/)
 	- > A proposal to standardise on using an `/llms.txt` file to provide information to help LLMs use a website at inference time.
 	- [[My Notes]]
 		- #Discovered #Via [[langgraph/llms-txt]]
