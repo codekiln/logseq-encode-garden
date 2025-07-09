@@ -1,0 +1,2 @@
+- [DeepResearch2Markdown - Convert ChatGPT PDFs to Markdown](https://deepresearch2markdown.com/)
+	- provides a way to parse citations from ChatGPT Deep Research PDFs and produce markdown, but it's not open source and it requires a google login.
