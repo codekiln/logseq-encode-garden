@@ -4,7 +4,7 @@
 			- very cool talk about [[Goose]] [[MCP/Client]] and how we're in a new mashup generation
 			- #### Action items
 				- DONE find her slides - https://slides.com/angiejones/mcp-mashups-5min/fullscreen?token=D53DGw66
-				- TODO check out [Quickstart | codename goose](https://block.github.io/goose/docs/quickstart/) [[Goose]]
+				- DONE check out [Quickstart | codename goose](https://block.github.io/goose/docs/quickstart/) [[Goose]]
 	- ## [[Conference/ORCwAI/Pt2/1320 Lightning Talks/p2 Tipping AI Code Generation on its Side]] – [[Person/Craig McLuckie]] (5 minutes)
 	  collapsed:: true
 		- ### Summary
