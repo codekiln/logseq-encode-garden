@@ -1,7 +1,8 @@
 alias:: [[Atlassian/MCP/How To set up Atlassian MCP in Cursor with 1Password credentials]]
 tags:: [[CursorAI/Settings/MCP]]
 
-- # How to set up mcp-atlassian in [[CursorAI/Settings/MCP]] using 1Password
+- # How to set up [[mcp-atlassian]] in [[CursorAI/Settings/MCP]] using 1Password
+	- ==**Important Note**: this guide was made for [[Person/Hyeonsoo Lee/GitHub/mcp-atlassian]] but there is now an official [[Atlassian/MCP]] server==
 	- ## 1 - Store Atlassian credentials in [[1Password]]
 		- ### For Cloud deployment:
 			- Create entries in 1Password for:
