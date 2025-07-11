@@ -1,6 +1,6 @@
 tags:: [[Diataxis/How To]]
 
-- # How To Serve LangGraph & LangChain llms.txt via MCP with mise and validate in Claude Code
+- # How To Serve LangGraph & LangChain [[llms-txt]] via MCP with mise and validate in Claude Code
 	- ## Goal
 		- Stand up a local **MCP** documentation server using a YAML config for both LangGraph Python and LangChain Python `llms.txt`, wire it into **Claude Code** through `mise`, and confirm the connection with **MCP Inspector**.
 	- ## Preconditions
@@ -17,7 +17,7 @@ tags:: [[Diataxis/How To]]
 			  AWS_REGION                 = "us-east-1"
 			  ANTHROPIC_MODEL            = "us.anthropic.claude-3-7-sonnet-20250219-v1:0"
 			  ANTHROPIC_SMALL_FAST_MODEL = "us.anthropic.claude-3-5-haiku-20241022-v1:0"
-			~~~
+			  ~~~
 		- You have `Node.js` ≥ 18 and `uvx` available (via `mise`'s `node` plugin).
 		- **This guide assumes you already have the `uv` and `python` tools installed and shimmed via your home directory `mise.toml`, so that `uvx` is available on your PATH.**
 			- See: [mise Getting Started – Adding tools](https://mise.jdx.dev/getting-started.html#3-adding-tools-to-mise-optional)
@@ -30,7 +30,7 @@ tags:: [[Diataxis/How To]]
 				    llms_txt: https://langchain-ai.github.io/langgraph/llms.txt
 				  - name: LangChain Python
 				    llms_txt: https://python.langchain.com/llms.txt
-				~~~
+				  ~~~
 		- ### 2. Extend `mise.toml` with MCP tasks
 			- Add the following to your `mise.toml`:
 				- ~~~toml
@@ -46,44 +46,44 @@ tags:: [[Diataxis/How To]]
 				  [tasks.mpc-inspect]
 				  description = "Launch MCP Inspector UI"
 				  run = "npx -y @modelcontextprotocol/inspector mise run mpc-docs"
-				~~~
+				  ~~~
 		- ### 3. (Optional) Add a local environment file
 			- If you want to set a custom port or other environment variables, create a `.env` file (or reuse an existing one) with:
 				- ~~~env
 				  # optional override
 				  MPCDOC_PORT=8082
-				~~~
+				  ~~~
 			- **Note:** By default, mise does NOT automatically load `.env` files. To have mise load this file for your tasks, add the following to your `mise.toml`:
 				- ~~~toml
 				  # This is forgiving: if .env does not exist, mise will ignore it without error.
 				  # See: https://mise.jdx.dev/configuration/environments.html#setting-envvars
 				  [env]
 				  _.file = ".env"
-				~~~
+				  ~~~
 		- ### 4. Other ways to customize the port for the mpc-docs task
 			- You can set the `MPCDOC_PORT` environment variable for the `mpc-docs` task in several mise-specific ways:
 				- **Directly in the task definition:**
 					- ~~~toml
 					  [tasks.mpc-docs.env]
 					  MPCDOC_PORT = "8083" # or any available port
-					~~~
+					  ~~~
 				- **Via the command line for a one-off run:**
 					- ~~~sh
 					  MPCDOC_PORT=8084 mise run mpc-docs
-					~~~
+					  ~~~
 				- **With a `.env` file as described above.**
 			- See [mise: Setting EnvVars](https://mise.jdx.dev/configuration/environments.html#setting-envvars) for more options.
 		- ### 5. Start the MCP server
 			- Run:
 				- ~~~sh
 				  mise run mpc-docs
-				~~~
+				  ~~~
 			- You should see Uvicorn log output showing that it's serving on your selected port and has loaded two documentation sources.
 		- ### 6. Inspect and validate
 			- In another terminal, run:
 				- ~~~sh
 				  mise run mpc-inspect
-				~~~
+				  ~~~
 			- MCP Inspector opens in your browser at **http://127.0.0.1:6274**. Click **Connect**, then test **list_doc_sources** and **fetch_docs** to verify both sources load correctly.
 		- ### 7. Connect Claude Code to the project server
 			- 1. Add the MCP server to your project's `.mcp.json` using:
@@ -91,19 +91,19 @@ tags:: [[Diataxis/How To]]
 				  claude mcp add-json langgraph-docs \
 				    '{"type":"sse","url":"http://localhost:8082"}' \
 				    -s project
-				~~~
-			-   See: [Claude Code Tutorials – Set up Model Context Protocol MCP (project scope)](https://docs.anthropic.com/en/docs/claude-code/tutorials#set-up-model-context-protocol-mcp)
+				  ~~~
+			- See: [Claude Code Tutorials – Set up Model Context Protocol MCP (project scope)](https://docs.anthropic.com/en/docs/claude-code/tutorials#set-up-model-context-protocol-mcp)
 			- 2. Create a `CLAUDE.md` file in the root of your repo with usage rules like:
 				- ~~~markdown
 				  for ANY question about LangGraph or LangChain, use the langgraph-docs server to help answer –  
 				  + call list_doc_sources to view available llms.txt files  
 				  + call fetch_docs to read them  
 				  + reflect on the input question and fetched content before answering
-				~~~
+				  ~~~
 			- 3. Run:
 				- ~~~sh
 				  mise run claude
-				~~~
+				  ~~~
 			- 4. In Claude's terminal, run `/mcp status` and confirm `langgraph-docs` is connected. Ask:
 				- > *"What types of memory does LangGraph support?"*  
 				  Claude should respond using the local docs without external fetches.

@@ -1,0 +1,1 @@
+# [Logseq doesn’t seem to support Markdown Reference Links!?](https://discuss.logseq.com/t/logseq-doesnt-seem-to-support-markdown-reference-links/19245/8)

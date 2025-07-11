@@ -1,0 +1,1 @@
+- [API keys for Amazon Bedrock - AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_bedrock.html)
