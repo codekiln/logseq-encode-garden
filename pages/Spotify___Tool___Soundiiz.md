@@ -1,0 +1,1 @@
+- [Export Spotify playlist to EXCEL CSV - Save your playlists and library with Soundiiz](https://soundiiz.com/tutorial/export-spotify-to-excel)

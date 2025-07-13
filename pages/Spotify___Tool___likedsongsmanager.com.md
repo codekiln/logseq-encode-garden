@@ -1,0 +1,4 @@
+- [Liked Songs Manager | Automate your Spotify playlist management](https://www.likedsongsmanager.com/)
+	- a fremium service that lets you create managed playlists that draw upon your liked songs.
+	- by default it only gives you first 1000 of your liked songs playlist.
+	- lets you create a "managed playlist" that updates as you add items.

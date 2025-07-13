@@ -1,0 +1,2 @@
+- https://open.spotify.com/search/bpm%20mix/playlists gives you your custom #BPM [[Spotify/Playlists]]
+	- via [Spotify now has personslised "Made For You" BPM mixes, generated from your listen history in certain BPM ranges, and useful for help with cadence and improving SPM : r/running](https://www.reddit.com/r/running/comments/yss4nd/spotify_now_has_personslised_made_for_you_bpm/)

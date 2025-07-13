@@ -1,0 +1,9 @@
+- [[2024/03]]
+	- [How do you find the BPM of a song on Spotify?](https://musicat.musicstax.com/how-do-you-find-the-bpm-of-a-song-on-spotify)
+		- use [[musicstax]] - put in a playlist or a song to get the BPM. Unfortunately, it's not srtable
+- [[2020/05]]
+	- [BPM info on Spotify : r/Beatmatch](https://www.reddit.com/r/Beatmatch/comments/ez8yh9/bpm_info_on_spotify/)
+		- [[Spotify/Tool/SortYourMusic]]
+- [[2017/08]]
+	- [Running Mix BPM is Incorrect - The Spotify Community](https://community.spotify.com/t5/iOS-iPhone-iPad/Running-Mix-BPM-is-Incorrect/td-p/1905697)
+		- > Trying to arrange my dance songs and the BPM is often displayed to be 2x of what it actually is
