@@ -43,9 +43,9 @@ tags:: [[Diataxis/Concept]]
 		- *“Embeddings remove the need for Cypher pattern matching.”*  
 		  – They approximate similarity but cannot replace exact path queries where relationship semantics matter.
 	- ## Related
+		- # [[AI/RAG/Graph/Graph Vector]]
 		- [[Neo4j/Blog/24/09/Enhancing Hybrid Retrieval with Graph Traversal Using the GraphRAG Python Package]]
 		- [Fast Random Projection – Neo4j Graph Data Science](https://neo4j.com/docs/graph-data-science/current/machine-learning/node-embeddings/fastrp/) ([Graph Database & Analytics](https://neo4j.com/docs/graph-data-science/current/machine-learning/node-embeddings/fastrp/))
 		- [Node2Vec – Neo4j Graph Data Science](https://neo4j.com/docs/graph-data-science/current/machine-learning/node-embeddings/node2vec/) ([Graph Database & Analytics](https://neo4j.com/docs/graph-data-science/current/machine-learning/node-embeddings/node2vec/))
 		- [GraphSAGE – Neo4j Graph Data Science](https://neo4j.com/docs/graph-data-science/current/machine-learning/node-embeddings/graph-sage/) ([Graph Database & Analytics](https://neo4j.com/docs/graph-data-science/current/machine-learning/node-embeddings/graph-sage/))
 		- [Vector indexes – Cypher Manual](https://neo4j.com/docs/cypher-manual/current/indexes/semantic-indexes/vector-indexes/) ([Graph Database & Analytics](https://neo4j.com/docs/cypher-manual/current/indexes/semantic-indexes/vector-indexes/))
-		- [Hybrid Retrieval Using the Neo4j GraphRAG Package for Python](https://neo4j.com/blog/developer/hybrid-retrieval-graphrag-python-package/) ([Graph Database & Analytics](https://neo4j.com/blog/developer/hybrid-retrieval-graphrag-python-package/))
