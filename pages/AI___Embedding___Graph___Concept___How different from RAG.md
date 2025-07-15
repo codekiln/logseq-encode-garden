@@ -1,5 +1,5 @@
 alias:: [[AI/Embedding/Concept/How are Graph Embeddings different than traditional RAG]]
-tags:: [[Diataxis/Concept]]
+tags:: [[Diataxis/Concept]], [[Writing/Co-Written with AI]], [[o3]]
 
 - # Graph Embeddings in [[Neo4j]] — Conceptual Overview
 	- ## Overview
