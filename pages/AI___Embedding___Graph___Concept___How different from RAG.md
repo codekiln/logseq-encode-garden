@@ -43,6 +43,7 @@ tags:: [[Diataxis/Concept]]
 		- *“Embeddings remove the need for Cypher pattern matching.”*  
 		  – They approximate similarity but cannot replace exact path queries where relationship semantics matter.
 	- ## Related
+		- [[Neo4j/Blog/24/09/Enhancing Hybrid Retrieval with Graph Traversal Using the GraphRAG Python Package]]
 		- [Fast Random Projection – Neo4j Graph Data Science](https://neo4j.com/docs/graph-data-science/current/machine-learning/node-embeddings/fastrp/) ([Graph Database & Analytics](https://neo4j.com/docs/graph-data-science/current/machine-learning/node-embeddings/fastrp/))
 		- [Node2Vec – Neo4j Graph Data Science](https://neo4j.com/docs/graph-data-science/current/machine-learning/node-embeddings/node2vec/) ([Graph Database & Analytics](https://neo4j.com/docs/graph-data-science/current/machine-learning/node-embeddings/node2vec/))
 		- [GraphSAGE – Neo4j Graph Data Science](https://neo4j.com/docs/graph-data-science/current/machine-learning/node-embeddings/graph-sage/) ([Graph Database & Analytics](https://neo4j.com/docs/graph-data-science/current/machine-learning/node-embeddings/graph-sage/))
