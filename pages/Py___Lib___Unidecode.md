@@ -1,0 +1,5 @@
+# [Unidecode](https://pypi.org/project/Unidecode/)
+	- It often happens that you have text data in Unicode, but you need to represent it in ASCII. For example when integrating with legacy code that doesn’t support Unicode, or for ease of entry of non-Roman names on a US keyboard, or when constructing ASCII machine identifiers from human-readable Unicode strings that should still be somewhat intelligible. A popular example of this is when making an URL slug from an article title.
+	- **Unidecode is not a replacement for fully supporting Unicode for strings in your program. There are a number of caveats that come with its use, especially when its output is directly visible to users. Please read the rest of this README before using Unidecode in your project.**
+	- ...
+	- **Note that some people might find certain transliterations offending.** Most common examples include characters that are used in multiple languages. A user expects a character to be transliterated in their language but Unidecode uses a transliteration for a different language. It’s best to not use Unidecode for strings that are directly visible to users of your application.
