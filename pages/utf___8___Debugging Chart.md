@@ -1,0 +1,1 @@
+- [UTF-8 Character Debug Tool](https://www.i18nqa.com/debug/utf8-debug.html#dbg)
