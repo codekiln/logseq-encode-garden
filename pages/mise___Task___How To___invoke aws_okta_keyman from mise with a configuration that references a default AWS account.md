@@ -21,7 +21,7 @@ tags:: [[Diataxis/How To]], [[mise/Tool]], [[AWS/CLI/Tool]]
 			  "pipx:aws-okta-keyman" = "latest"
 			  ~~~
 			- `mise install` builds an isolated uvx environment.
-		- ### 2. Create the Expect wrapper
+		- ### 2. Create the [[Linux/expect]] wrapper
 			- ==You will need to edit the values below to point to the vault and item== ... [[1Password Secret References]]
 			- ~~~tcl
 			  # ~/.local/bin/aws_okta_login.expect
