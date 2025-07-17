@@ -1,1 +1,1 @@
--
+- [Load secrets into scripts | 1Password Developer](https://developer.1password.com/docs/cli/secrets-scripts/#option-2-use-op-read-to-read-secrets)
