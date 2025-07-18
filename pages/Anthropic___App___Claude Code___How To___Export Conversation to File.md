@@ -22,16 +22,44 @@ tags:: [[Anthropic/App/Claude Code]], [[Diataxis/How To]]
 				- Save to file for future reference
 		- ### Community Extractor Tools
 			- Claude Code keeps every prompt/response pair in plain-text JSONL files under `~/.claude/projects/<project-id>/transcript.jsonl`
-			- **Claude Conversation Extractor** – CLI that scans the transcript directory and spits out clean Markdown
+			- **Finding Session IDs**:
+				- **Use Claude Code's built-in session picker**:
+					- Run `claude --resume` to see an interactive list of all sessions
+					- The picker shows: Modified date, Created date, Message count, and Description
+					- Example output:
+						~~~
+						Modified    Created     # Messages   Description
+					  ❯ 1. [recent]   [recent]         25     [Redacted: System-generated message batch]
+					    2. [recent]   [recent]          3     [Redacted: File Upload Test]
+					    3. [past]     [past]           61     [Redacted: Attachment Test]
+					  ~~~
+					- Use arrow keys to navigate and press Enter to select a session
+					- The session ID is the UUID in the project directory path
+				- **Alternative: List project directories**:
+					- Session IDs are stored in the project directory structure: `~/.claude/projects/<session-id>/`
+					- Use `ls ~/.claude/projects/` to list all available session IDs
+					- The most recent session is typically the one with the latest timestamp
+					- Session IDs are UUIDs (e.g., `abc12345-def6-7890-ghij-klmnopqrstuv`)
+				- **Pro tip**: Use `claude --resume` to see human-readable descriptions, then match them to the UUID directories
+			- **Claude Conversation Extractor** – CLI tool that converts JSONL transcripts to clean Markdown
 				- Install with `pip install claude-conversation-extractor`
+				- Basic usage: `claude-extract <session-id>` to extract a specific session
+				- Advanced usage: `claude-extract --all` to extract all sessions
+				- Outputs clean Markdown with proper code block formatting
 				- [GitHub](https://github.com/ZeroSumQuant/claude-conversation-extractor)
 				- [PyPI](https://pypi.org/project/claude-conversation-extractor/)
-			- **claude-code-log** – turns the JSONL into minimalist HTML, preserving code blocks and timestamps
+			- **claude-code-log** – Converts JSONL transcripts to minimalist HTML
 				- Install with `pip install claude-code-log`
+				- Usage: `claude-code-log <session-id>` to generate HTML output
+				- Preserves code blocks, timestamps, and conversation structure
+				- Outputs a single HTML file that can be opened in any browser
 				- [PyPI](https://pypi.org/project/claude-code-log/)
 				- [GitCode](https://gitcode.com/gh_mirrors/cl/claude-code-log/overview)
-			- **claude-transcript** – converts a session to Markdown
-				- Lives on GitHub and works on the same JSONL files
+			- **claude-transcript** – Simple Markdown converter for Claude Code sessions
+				- Install from GitHub: `pip install git+https://github.com/jflam/claude-transcript.git`
+				- Usage: `claude-transcript <session-id>` to convert to Markdown
+				- Lightweight tool focused on clean Markdown output
+				- Works with the same JSONL transcript files as other tools
 				- [GitHub](https://github.com/jflam/claude-transcript)
 		- ### Session Recording Methods
 			- **[[Linux/script/command]]** records the full interactive session to a log file
