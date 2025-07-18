@@ -1,4 +1,6 @@
-# How To Observe [[uvicorn]] and [[FastAPI]] app [[Logging]] to verify JSON logs
+cgpt-link:: https://chatgpt.com/c/687a1d68-4384-8329-b76e-5b5974e0499f
+
+- # How To Observe [[uvicorn]] and [[FastAPI]] app [[Logging]] to verify JSON logs
 	- Below are a few proven ways an agent can "watch" the JSON that the service writes to the terminal when one runs a [[mise/Task]] like `mise run serve` to bring up a FastAPI application.
 	- ## 1 Spin the server up in a subprocess and stream its STDOUT/STDERR
 		- `mise run serve` is just a shell wrapper around
