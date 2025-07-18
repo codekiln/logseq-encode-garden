@@ -1,4 +1,5 @@
-tags:: [[Programming]], [[Algorithm]], [[Diataxis/Reference]]
+tags:: [[Programming]], [[Algorithm]], [[Diataxis/Reference]], [[Algorithm]] 
+alias:: [[Dynamic Programming]]
 
 - # Dynamic Programming Reference
 	- ## Overview
@@ -83,9 +84,12 @@ tags:: [[Programming]], [[Algorithm]], [[Diataxis/Reference]]
 			- State dimensions depend on problem constraints
 			- Example: LCS uses 2D state for string positions
 			- Common patterns:
-				- $$dp[i]$$ - 1D state (Fibonacci, climbing stairs)
-				- $$dp[i][j]$$ - 2D state (LCS, edit distance)
-				- $$dp[i][j][k]$$ - 3D state (complex constraints)
+				- $$dp[i]$$
+	- 1D state (Fibonacci, climbing stairs)
+		- $$dp[i][j]$$
+	- 2D state (LCS, edit distance)
+		- $$dp[i][j][k]$$
+	- 3D state (complex constraints)
 		- ### Transition Function
 			- Formula that relates current state to previous states
 			- Must handle all possible cases and edge conditions

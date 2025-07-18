@@ -1,0 +1,7 @@
+# [[Person/Solomon Hykes]], the founder of [[Docker]] and developer of [[Dagger]] explains why [[Container/iz/ation]] is key to [[AI Coding]]
+	- {{video https://youtu.be/Hf9Oj0ccGHI?t=686}}
+		- ### [[AI/Summary]] of relevant parts at {{youtube-timestamp 685}}
+			- Hykes explained that while Docker's foundational container technology revolutionized environment portability, the tools built around it—like Dockerfiles and Compose—were designed as temporary solutions a decade ago and "frozen in time," inadequately serving today's needs for agent-native developer workflows.
+			- He emphasized that **as AI coding agents become more central, environment reproducibility is critical so agents can operate in isolated, portable, and observable environments**.
+			- Dagger aims to solve these problems by **building an agent-native, modular workflow engine on existing open standards (containers, Git, OpenAI APIs) instead of retrofitting legacy Docker interfaces**.
+			- Hykes noted that while Docker made containers ubiquitous, it isn't "agent native," and the next wave of developer tooling must focus on isolating agent environments to avoid vendor lock-in, enabling local and cloud execution, and providing reproducibility for both agents and humans across platforms and infrastructures

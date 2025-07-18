@@ -243,7 +243,7 @@ created-by-template:: [[Logseq/Template/Project/Page]]
 		- *record a decision log*
 		- DONE #Decide what should we call the "Language" section of VSCode in logseq: [[VSCode/Language]]
 		  id:: 676bc5e3-c2e1-4157-8b01-32f6304016ae
-	- ## #Reminders
+	- ## #Remind/ers
 		- *remind yourself about what is most important*
 	- ## Additional Pages
 		- (optional) - Useful place for listing additional references and related pages.

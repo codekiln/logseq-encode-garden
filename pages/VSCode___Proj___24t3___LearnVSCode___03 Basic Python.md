@@ -36,7 +36,7 @@ icon:: 🎯
 					- {{embed ((676c2977-8659-4e75-b3b3-2f46917382b0))}}
 		- ## #Decisions
 		  note:: place any decisions about the milestone underneath
-		- ## #Reminders
+		- ## #Remind/ers
 		  Note:: reminders about the scope of the milestone or the actual objectives
 	- ## #Todos
 		- ### Best Next Actions

@@ -27,7 +27,7 @@ icon:: 🎯
 			- [[Scope/Out]] - [[MoSCoW/Wont-have-right-now]]
 		- ## #Decisions
 		  note:: place any decisions about the milestone underneath
-		- ## #Reminders
+		- ## #Remind/ers
 		  Note:: reminders about the scope of the milestone or the actual objectives
 	- ## #Todos
 		- ### Best Next Actions

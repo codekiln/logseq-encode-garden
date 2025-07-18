@@ -5,7 +5,7 @@
 		- ### [[2025-07-18 Fri]] - utilized the [[ScrumMaster]] for the first time
 			- This was not intuitive at first, but once I got the hang of it, it was really impressive.
 			- I was especially confused about what "doc sharding" means
-			- filed a feature request related to [[Diataxis]] in [[Person/Brian Madison/GitHub/BMAD-METHOD/Discord]] [here](https://discord.com/channels/1377115244018532404/1395730883016654879/1395730883016654879)
+				- filed a feature request related to [[Diataxis]] in [[Person/Brian Madison/GitHub/BMAD-METHOD/Discord]] [here](https://discord.com/channels/1377115244018532404/1395730883016654879/1395730883016654879)
 		- ### [[2025-07-17 Thu]] - used `npx bmad-method install` for first time
 			- The transition from the [planning workflow in the web](https://github.com/bmadcode/BMAD-METHOD/blob/main/docs/user-guide.md#the-planning-workflow-web-ui) to the [Web to UI Transition](https://github.com/bmadcode/BMAD-METHOD/blob/main/docs/user-guide.md#web-ui-to-ide-transition).
 				- I added a [[PRD]] at `docs/prd.md` and `docs/architecture.md` to the repo
