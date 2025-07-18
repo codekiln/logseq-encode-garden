@@ -3,7 +3,7 @@
 		- [BMAD-METHOD/docs/user-guide.md](https://github.com/bmadcode/BMAD-METHOD/blob/main/docs/user-guide.md)
 	- ## Log
 		- ### [[2025-07-18 Fri]] - utilized the [[ScrumMaster]] for the first time
-			-
+			- This was not intuitive at first, but once I got the hang of it, it was really impressive.
 		- ### [[2025-07-17 Thu]] - used `npx bmad-method install` for first time
 			- The transition from the [planning workflow in the web](https://github.com/bmadcode/BMAD-METHOD/blob/main/docs/user-guide.md#the-planning-workflow-web-ui) to the [Web to UI Transition](https://github.com/bmadcode/BMAD-METHOD/blob/main/docs/user-guide.md#web-ui-to-ide-transition).
 				- I added a [[PRD]] at `docs/prd.md` and `docs/architecture.md` to the repo

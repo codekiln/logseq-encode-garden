@@ -23,15 +23,19 @@ tags:: [[Anthropic/App/Claude Code]], [[Diataxis/How To]]
 		- ### Community Extractor Tools
 			- Claude Code keeps every prompt/response pair in plain-text JSONL files under `~/.claude/projects/<project-id>/transcript.jsonl`
 			- **Finding Session IDs**:
+				- **From within an active session**:
+					- Use `/status` to see current session information including provider and model
+					- Use `/help` to see all available slash commands
+					- Use `/cost` to see session usage statistics
+					- **Note**: These commands show session metadata but may not display the session ID directly
 				- **Use Claude Code's built-in session picker**:
 					- Run `claude --resume` to see an interactive list of all sessions
 					- The picker shows: Modified date, Created date, Message count, and Description
 					- Example output:
-						~~~
-						Modified    Created     # Messages   Description
-					  ❯ 1. [recent]   [recent]         25     [Redacted: System-generated message batch]
-					    2. [recent]   [recent]          3     [Redacted: File Upload Test]
-					    3. [past]     [past]           61     [Redacted: Attachment Test]
+					  ~~~
+					      Modified    Created     # Messages Git Branch     Summary
+					  ❯ 1. 1m ago      1h ago             111 mn/PD-30064_Cr This session is being continued from a previo...
+					    2. 1 week ago  1 week ago         427 -              FastAPI Service Template with JSON Logging Setup
 					  ~~~
 					- Use arrow keys to navigate and press Enter to select a session
 					- The session ID is the UUID in the project directory path
