@@ -1,5 +1,5 @@
 tags:: [[Diataxis/Explanation]], [[Server]], [[Specification]] 
-alias:: [[ASGI]]
+alias:: [[ASGI]], [[Py/Concept/ASGI]]
 
 - # ASGI (Asynchronous Server Gateway Interface) — Conceptual Overview
 	- ## Overview
