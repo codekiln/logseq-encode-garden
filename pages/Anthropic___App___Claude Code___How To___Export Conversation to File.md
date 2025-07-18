@@ -1,6 +1,6 @@
 tags:: [[Anthropic/App/Claude Code]], [[Diataxis/How To]]
 
-- # How To Export Claude Code Conversations to Files
+- # How To Export [[Claude Code]] Conversations to Files
 	- ## Overview
 		- This guide shows you how to save Claude Code conversation history to files for backup, sharing, or documentation purposes.
 		- **Note**: Claude Code does not have a built-in export feature that I could find as of [[2025-07-18 Fri]], so these are manual workarounds.
@@ -9,8 +9,8 @@ tags:: [[Anthropic/App/Claude Code]], [[Diataxis/How To]]
 		- Claude Code CLI installed and authenticated (`claude --version` should work)
 		- Terminal access with basic command-line skills
 		- (Optional) Text editor for viewing exported files
-	- ## Steps
-		- ### 1. Manual Copy-Paste Method (Workaround)
+	- ## Methods and Workarounds
+		- ### Manual Copy-Paste Method
 			- **During an active session**:
 				- Select all conversation text in your terminal
 				- Copy to clipboard (Cmd+C on macOS, Ctrl+C on Windows/Linux)
@@ -20,21 +20,8 @@ tags:: [[Anthropic/App/Claude Code]], [[Diataxis/How To]]
 				- Use `history` command to find Claude Code commands
 				- Copy relevant conversation output
 				- Save to file for future reference
-		- ### 2. Use MCP Filesystem Server (Workaround)
-			- **Set up filesystem MCP server** (if not already configured):
-			  ~~~bash
-			  claude mcp add filesystem npx -y @modelcontextprotocol/server-filesystem ~/Desktop ~/Downloads
-			  ~~~
-			- **Ask Claude to save conversation directly**:
-				- "Save our conversation to a file called 'claude-session.txt' on my Desktop"
-				- Claude will create the file with the full conversation content
-	- ## Troubleshooting
-		- **File permissions**: Check write permissions in target directory
-		- **Large conversations**: Consider breaking into smaller files for better manageability
-		- **MCP server not working**: Ensure the filesystem server is properly configured and connected
-	- ## [[AI/Analysis]] from #o3
-		- Claude Code keeps every prompt/response pair in plain-text JSONL files under `~/.claude/projects/<project-id>/transcript.jsonl`. There's no button to export them, but local storage means you can script your own pipelines.
-		- ### Community extractors
+		- ### Community Extractor Tools
+			- Claude Code keeps every prompt/response pair in plain-text JSONL files under `~/.claude/projects/<project-id>/transcript.jsonl`
 			- **Claude Conversation Extractor** – CLI that scans the transcript directory and spits out clean Markdown
 				- Install with `pip install claude-conversation-extractor`
 				- [GitHub](https://github.com/ZeroSumQuant/claude-conversation-extractor)
@@ -46,14 +33,14 @@ tags:: [[Anthropic/App/Claude Code]], [[Diataxis/How To]]
 			- **claude-transcript** – converts a session to Markdown
 				- Lives on GitHub and works on the same JSONL files
 				- [GitHub](https://github.com/jflam/claude-transcript)
-		- ### Record as you work
+		- ### Session Recording Methods
 			- **[[Linux/script/command]]** records the full interactive session to a log file
 				- ~~~bash
 				  script -f claude_$(date +%F).log claude code
 				  ~~~
 				- You can replay it with [[Linux/script/command/scriptreplay]] `scriptreplay` later
-					- [Red Hat Documentation](https://www.redhat.com/en/blog/record-terminal-script-scriptreplay)
-					- [LFCS Certification eBook](https://www.tecmint.com/record-and-replay-linux-terminal-session-commands-using-script/)
+				- [Red Hat Documentation](https://www.redhat.com/en/blog/record-terminal-script-scriptreplay)
+				- [LFCS Certification eBook](https://www.tecmint.com/record-and-replay-linux-terminal-session-commands-using-script/)
 			- **tee command** for read-only output (simple but loses your keystrokes)
 				- ~~~bash
 				  claude code | tee claude_output.log
@@ -65,7 +52,15 @@ tags:: [[Anthropic/App/Claude Code]], [[Diataxis/How To]]
 				- Captures keystrokes and timing in a lightweight *.cast file you can embed on the web
 				- [asciinema.org](https://asciinema.org/)
 				- [asciinema docs](https://docs.asciinema.org/manual/cli/quick-start/)
-		- ### Browser & GUI options
+		- ### [[MCP/Server/Filesystem]] Method
+			- **Set up filesystem MCP server** (if not already configured):
+			  ~~~bash
+			  claude mcp add filesystem npx -y @modelcontextprotocol/server-filesystem ~/Desktop ~/Downloads
+			  ~~~
+			- **Ask Claude to save conversation directly**:
+				- "Save our conversation to a file called 'claude-session.txt' on my Desktop"
+				- Claude will create the file with the full conversation content
+		- ### Browser & GUI Options
 			- **Web version (claude.ai)** has an official export feature
 				- Settings → Privacy → Export data button
 				- Emails you a zip containing chat JSON plus CSV
@@ -74,15 +69,20 @@ tags:: [[Anthropic/App/Claude Code]], [[Diataxis/How To]]
 				- Free Chrome extension that saves any web chat to PDF, Markdown, text, CSV, or JSON with one click
 				- Handy if teammates use the browser UI rather than Claude Code
 				- [Chrome Web Store](https://chromewebstore.google.com/detail/claude-exporter-save-clau/elhmfakncmnghlnabnolalcjkdpfjnin)
-		- ### Other tricks
-			- **Filesystem MCP server workflow** still works
-				- Spin up the server once and ask Claude to `write_file` the whole transcript into a chosen directory
+		- ### Version Control Method
 			- **Git version control** for transcript history
 				- Put `~/.claude/projects` under Git
 				- Every time you finish a session, commit the changed transcript
 				- Provides chronological history that's diff-able and reviewable
-		- ### Workflow recommendations
-			- Pick whichever mix matches your workflow:
-				- Extractor for polished docs
-				- `script` or `asciinema` for live capture
-				- Git for incremental backups
+	- ## Workflow Recommendations
+		- Pick whichever mix matches your workflow:
+			- Extractor tools for polished docs
+			- `script` or `asciinema` for live capture
+			- Git for incremental backups
+	- ## Troubleshooting
+		- **File permissions**: Check write permissions in target directory
+		- **Large conversations**: Consider breaking into smaller files for better manageability
+		- **MCP server not working**: Ensure the filesystem server is properly configured and connected
+		- **Extractor tools not working**: Verify the transcript files exist in `~/.claude/projects/<project-id>/transcript.jsonl`
+	- ## Related
+		- [[Anthropic/App/Claude Code/Tutorial/Connect to MCP Servers]]
