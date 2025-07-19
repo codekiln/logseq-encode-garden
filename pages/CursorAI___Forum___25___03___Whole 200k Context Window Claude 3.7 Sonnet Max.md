@@ -1,0 +1,1 @@
+# [The "Whole 200k Context Window" of Claude 3.7 Sonnet Max - Feedback - Cursor - Community Forum](https://forum.cursor.com/t/the-whole-200k-context-window-of-claude-3-7-sonnet-max/69736/13)
