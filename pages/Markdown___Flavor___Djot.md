@@ -1,4 +1,6 @@
-# Djot
+tags:: [[Markdown/Flavor]]
+
+- # [Djot](https://djot.net/)
 	- Djot is a light markup syntax. It derives most of its features from commonmark, but it fixes a few things that make commonmark's syntax complex and difficult to parse efficiently. It is also much fuller-featured than commonmark, with support for definition lists, footnotes, tables, several new kinds of inline formatting (insert, delete, highlight, superscript, subscript), math, smart punctuation, attributes that can be applied to any element, and generic containers for block-level, inline-level, and raw content. The project began as an attempt to implement some of the ideas I suggested in [Beyond Markdown](https://johnmacfarlane.net/beyond-markdown.html).
 	  title:: Markdown/Flavor/Djot
 		- [Design goals and explanation of design decisions](https://github.com/jgm/djot#rationale)
