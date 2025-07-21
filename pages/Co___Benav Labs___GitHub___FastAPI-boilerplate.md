@@ -1,0 +1,2 @@
+# [benavlabs/FastAPI-boilerplate: An extendable async API using FastAPI, Pydantic V2, SQLAlchemy 2.0, PostgreSQL and Redis.](https://github.com/benavlabs/FastAPI-boilerplate)
+	- Simpler than [[FastAPI/GitHub/full-stack-fastapi-template]]; only-includes back-end. Still requires [[PostgreSQL]] though.
