@@ -31,7 +31,8 @@ tags:: [[Diataxis/How To]]
 			- ~~~toml
 			  
 			  [tasks.gh-mcp]
-			  description = "Start GitHub MCP server (using github-mcp.env)"
+			  # see also [Anthropic/App/Claude Code/How To/Set Up Github MCP with 1Password GH token and mise](https://codekiln.github.io/logseq-encode-garden/#/page/anthropic%2Fapp%2Fclaude%20code%2Fhow%20to%2Fset%20up%20github%20mcp%20with%201password%20gh%20token%20and%20mise) 
+			  description = "Start GitHub MCP server (using github-mcp.env) and 1Password CLI"
 			  alias       = "mcp"
 			  run = '''
 			  #!/usr/bin/env bash
