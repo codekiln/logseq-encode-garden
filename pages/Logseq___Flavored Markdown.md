@@ -6,3 +6,6 @@ tags:: [[Markdown/Flavor]]
 	- **Use** – Logseq desktop/web/mobile PKM app
 	- **Renderers** – ClojureScript parser inside Logseq; community JS libraries piggy-back on `markdown-it` plugins
 	- **Interactive / data** – `{{query}}`, advanced queries, and property blocks act as a lightweight database with live results inside notes
+	- ## References
+		- [Logseq Markdown: Cheat Sheet with Syntax Examples - Face Dragons](https://facedragons.com/foss/logseq-markdown-cheat-sheet/)
+		-

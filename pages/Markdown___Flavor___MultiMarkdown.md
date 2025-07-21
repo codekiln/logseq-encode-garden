@@ -1,0 +1,13 @@
+# MultiMarkdown
+	- **Origin & purpose** – 2005 ±, Fletcher T. Penney wanted scholarly bells-and-whistles—tables, footnot[Best Of Web](https://best-of-web.builder.io/library/commonmark/commonmark-spec?utm_source=chatgpt.com)s-references, math—while staying readable in plain text.
+	- **Syntax extras** – footnotes, BibTeX citations, column-aligned tables, LaTeX math, figure/table c[GitHub](https://github.com/commonmark/cmark?utm_source=chatgpt.com)umbering & cross-links, definition lists, smart quotes, per[GitHub](https://github.com/yuin/goldmark?utm_source=chatgpt.com)AML-like metadata heade[GitHub](https://github.com/pulldown-cmark/pulldown-cmark/?utm_source=chatgpt.com)
+	- **Data/storage angle** – the top-of-file metadata block (`Title: …`, custom `Key: …`) is first-class; `multimarkdown --extract=Key` makes docs double as lightweight data stores for build pipelines.
+	- **Outpu[GitHub Docs](https://github.github.com/gfm/?utm_source=chatgpt.com)PDF, EPUB 3, OPML, Flat ODT, RTF; switch via a single CLI flag.
+	- **Adoption** – niche but steady among academic/technical writers[GitHub](https://github.com/github/cmark-gfm?utm_source=chatgpt.com)oser & Marked 2 on macOS, Leanpub manuscripts, Joplin table plugin, Pandoc conversions.
+	- **Renderers / bindings**
+		- C reference library **libMultiMarkdown-6**.
+		- Python `pymmd` wrapper.
+		- Ruby gems `rpeg-multimarkdown2`, `multimarkdown-cli`. [GitLab Docs](https://docs.gitlab.com/user/markdown/)ll Pandoc reader/writer.
+		- JavaScript via WASM builds and `markdown-it-multimd-table` plugin.
+		- Cross-platform CLI binaries (macOS, Windows, Linux).
+	- **Interactivity** – core spec is static; metadata extraction enables build-time automation, and HTML output can host JS (MathJax, charts), but MultiMarkdown itself embeds no runtime widgets.

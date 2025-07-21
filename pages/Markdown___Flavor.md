@@ -37,4 +37,5 @@
 			- **Status / use** – early adopters in static-site tooling; Pandoc can convert to/from Djot
 			- **Renderers** – official JS implementation plus Lua, Rust, Go, Prolog parsers[Djot](https://www.djot.net/)
 			- **Interactive / data** – element-level attributes make it easier to attach metadata; no built-in live interactivity yet
+		- {{embed [[Markdown/Flavor/MultiMarkdown]]}}
 	- C-level libraries exist for CommonMark, GFM, and Djot; Ruby and JavaScript dominate AsciiDoc and MDX toolchains; R and multi-language kernels drive R Markdown and Quarto.
