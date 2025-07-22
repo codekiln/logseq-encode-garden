@@ -11,7 +11,7 @@ created-date:: [[2010]]
 		- Related: I've recently learned about the [[Learning/Gap Effect]] from [[Person/Andrew Huberman]] - [https://www.youtube.com/watch?v=0zQaNicTyCM](https://www.youtube.com/watch?v=0zQaNicTyCM)
 	- ## Others' notes
 		- I've borrowed shamelessly here from [talk-transcripts/Hickey_Rich/HammockDrivenDev.md at master · matthiasn/talk-transcripts](https://github.com/matthiasn/talk-transcripts/blob/master/Hickey_Rich/HammockDrivenDev.md) in assembling the transcript below the video. The images actually hot link to the images in his repo until I can get a clearer, more [[A11y]] version.
-		- [Hammock-driven development | learning-notes](https://learning-notes.mistermicheels.com/mindset/hammock-driven-development/)
+		- ### [[Person/Mister Michaels/Learning Notes/Hammock-driven development]] [Hammock-driven development | learning-notes](https://learning-notes.mistermicheels.com/mindset/hammock-driven-development/)
 			- Best way to feed subconscious mind: use conscious mind!
 			- Clearly state the problem, ideally in written form
 			- Identify things you know, identify things you know you don’t know, identify constraints that limit your possibilities

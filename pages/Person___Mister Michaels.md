@@ -1,0 +1,26 @@
+alias:: People/Mister Michaels
+
+- tags:: [[Architect]], [[Knowledge Gardener]]
+- # Person/Mister Michaels
+	- **Full Name:** Mister Michaels
+	- **GitHub:** [@mistermicheels](https://github.com/mistermicheels)
+	- **Location:** [[Country/Belgium]]
+	- **Twitter/X:** [@mistermicheels](https://twitter.com/mistermicheels)
+	- **Primary Languages:** JavaScript/TypeScript, Java
+	- ## Bio
+		- Software developer living in Belgium, writing mostly JavaScript/TypeScript and Java. Has 42 followers on GitHub and maintains several open source projects.
+	- ## Notable Projects
+		- [[Person/Mister Michaels/Learning Notes]] **learning-notes** - Notes regarding things learned (281 stars, 49 forks)
+		- **[markdown-notes-tree](https://github.com/mistermicheels/markdown-notes-tree)** - Generate Markdown trees that act as a table of contents for a folder structure with Markdown notes (40 stars, 9 forks)
+		- **current-task** - A desktop app that helps you to focus on one task at a time (14 stars, 3 forks)
+		- **collabwriter** - CollabWriter, a massively multiplayer online democratic suggestion-based writing application (TypeScript, 3 stars, 1 fork)
+		- **cymi** - Can You Make It, a web application allowing people to indicate whether they will join certain events (Java, 2 stars)
+		- **production-scheduling-prototype** - A prototype of a production scheduler for a chocolate factory (JavaScript)
+	- ## Achievements
+		- Starstruckx2 Achievement
+		- Arctic Code Vault Contributor
+	- ## External Links
+		- [GitHub Profile](https://github.com/mistermicheels)
+		- [Learning Notes Blog](https://learning-notes.mistermicheels.com/)
+	- ## Related Notes
+		- [[Person/Rich Hickey/YouTube/2010/Hammock-Driven Development]] - Referenced in notes about hammock-driven development
