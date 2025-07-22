@@ -9,6 +9,9 @@ created-date:: [[2010]]
 	- ## My notes
 		- I deeply respect Rich Hickey and agree wholeheartedly with everything he says in this talk. I do have open questions, though, about whether mentally framing everything as a problem to be solved is the context that will always lead to developing the best application
 		- Related: I've recently learned about the [[Learning/Gap Effect]] from [[Person/Andrew Huberman]] - [https://www.youtube.com/watch?v=0zQaNicTyCM](https://www.youtube.com/watch?v=0zQaNicTyCM)
+		- great comment about the importance of articulating trade-offs 18min8sec into his 2010 talk [Hammock Driven Development](https://youtu.be/f84n5oFoZBc?t=1088).
+			- > You have to look at at least two solutions to your problems, and you have to figure out what's good and bad about those things, before you can say, "I've made a trade-off." And when you've done that, you might want to write that down somewhere! #Quote from [[People/Rich Hickey]]
+				- I referenced this in a [[MR/Comment]] [here](https://github.com/bmadcode/BMAD-METHOD/pull/337#issuecomment-3102300130)
 	- ## Others' notes
 		- I've borrowed shamelessly here from [talk-transcripts/Hickey_Rich/HammockDrivenDev.md at master · matthiasn/talk-transcripts](https://github.com/matthiasn/talk-transcripts/blob/master/Hickey_Rich/HammockDrivenDev.md) in assembling the transcript below the video. The images actually hot link to the images in his repo until I can get a clearer, more [[A11y]] version.
 		- ### [[Person/Mister Michaels/Learning Notes/Hammock-driven development]] [Hammock-driven development | learning-notes](https://learning-notes.mistermicheels.com/mindset/hammock-driven-development/)
