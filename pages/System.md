@@ -1,0 +1,40 @@
+- # Understanding Systems
+  - In general terms, a **system** is a structured set of interrelated components organized to achieve a specific purpose or function. However, the meaning of "system" varies considerably across different contexts—particularly in the domains of **systems engineering**, **infrastructure systems**, and **systems programming**. Understanding these distinctions helps clarify what we mean when we talk about systems.
+  - ## Systems in Systems Engineering and Design
+    - In systems engineering, a **system** is a cohesive collection of interacting elements (people, hardware, software, policies, data, and processes) intentionally organized to fulfill stakeholder needs or operational goals. The critical insight here is that the system is defined not just by its parts, but by their relationships, interactions, and the behaviors that emerge from these interactions. This holistic viewpoint underscores the need for structured design and management practices, collectively known as **systems design**.
+    - Systems design is the methodical process of specifying the architecture, components, interfaces, and data necessary to realize a system that meets well-defined requirements. It involves:
+      - Clearly identifying stakeholder needs.
+      - Defining functional and non-functional requirements.
+      - Selecting or developing system components.
+      - Managing the interactions and interfaces between these components.
+      - Evaluating system trade-offs.
+      - Validating the integrated system's functionality, reliability, and sustainability across its lifecycle.
+    - Examples include designing an autonomous drone delivery network, developing an air traffic control system, or creating a health information exchange.
+  - ## Infrastructure Systems
+    - **Infrastructure systems** are specialized systems providing foundational services that societies, organizations, and other systems depend upon. While they embody the general idea of a system (multiple interrelated components functioning cohesively), they specifically refer to large-scale, physical or digital frameworks, such as power grids, water distribution networks, transportation systems, or cloud computing infrastructure.
+    - Infrastructure systems typically emphasize particular attributes:
+      - **Reliability:** Ensuring consistent performance and availability.
+      - **Scalability:** Growing or adapting gracefully under increasing demands.
+      - **Resilience:** Maintaining functionality under stress, disruption, or attack.
+      - **Security:** Protecting components from malicious actors or accidental faults.
+    - Because infrastructure systems serve foundational societal needs, their design frequently involves systemic trade-offs around cost, reliability, maintainability, and societal impact.
+  - ## Systems Programming
+    - The term **systems programming** diverges significantly from systems engineering and infrastructure contexts. Here, a "system" generally refers to the low-level software environment close to hardware—most commonly, operating systems, kernels, drivers, or runtime libraries. Systems programming involves writing software that directly manages hardware resources and interfaces, emphasizing efficiency, performance, and control.
+    - Systems programming requires addressing particular concerns:
+      - **Efficiency and performance:** Minimizing memory use, CPU cycles, and latency.
+      - **Resource management:** Directly managing hardware resources such as memory, processor time, and input/output devices.
+      - **Concurrency and parallelism:** Coordinating tasks that happen simultaneously or managing multiple hardware devices.
+      - **Hardware abstraction:** Simplifying access to complex hardware components, allowing application-level software to interact with hardware without managing detailed specifics.
+    - Common examples include the Linux kernel, device drivers for GPUs, or embedded software for microcontrollers.
+  - ## How These Definitions Interact
+    - While distinct, these three perspectives are complementary rather than contradictory:
+      - **Systems engineering** provides a general methodology for integrating complex components into unified wholes, applicable to infrastructure or software.
+      - **Infrastructure systems** represent a domain-specific implementation of systems engineering, emphasizing large-scale foundational services.
+      - **Systems programming** deals explicitly with software components closely interacting with hardware, serving as a critical element in the realization of engineered systems—often infrastructure systems themselves.
+    - For instance, a cloud computing infrastructure (an infrastructure system) may be created using methods of systems engineering to define its components, interfaces, and behavior. Implementing that infrastructure may involve significant systems programming to manage low-level computational resources efficiently and reliably.
+  - ## Summary
+    - The concept of a **system** spans multiple contexts, each with distinct emphases and practices:
+      - **Systems engineering**: designing integrated systems for purposeful functionality.
+      - **Infrastructure systems**: specialized large-scale systems providing foundational societal or organizational services.
+      - **Systems programming**: low-level software development closely tied to hardware.
+    - Understanding these distinctions allows clearer communication, better design decisions, and more effective interdisciplinary collaboration.
