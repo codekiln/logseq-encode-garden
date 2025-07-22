@@ -1,4 +1,6 @@
-- Below is a **total-cost-of-ownership (TCO) framework** intended for evaluating a potential migration from an x86-based CI and runtime stack to ARM-based infrastructure within a GitHub Enterprise organization.
+tags:: [[Writing/Co-Written with AI]], [[o3]]
+
+- Below is a **total-cost-of-ownership (TCO) framework** intended for evaluating a potential migration from a [[CPU/Arch/x86]] x86-based [[CICD/CI]] and runtime stack to [[CPU/Arch/ARM]] ARM-based infrastructure within a [[GitHub/Enterprise]] organization.
 - ## 1 Cost Pillars to Model
 	- ### A. Build-runner minutes
 		- Metrics: Minutes × price-per-minute, Utilization of included minutes
