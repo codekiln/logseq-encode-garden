@@ -1,0 +1,188 @@
+created-by:: [[Person/Cal Rueb]]
+
+- # [Claude Code best practices - YouTube](https://www.youtube.com/watch?v=gv0WHhKelSE) - [[Anthropic/App/Claude Code]]
+	- ## [[My Notes]]
+	  id:: 688e2332-502a-4106-aa81-ddeb8aed57cc
+		- Nice reminder of [[Agentic]] definition from [[Anthropic/Blog/24/12/Building Effective Agents]]
+			- ((688e1ee0-8a38-4879-a2f1-6aad419c8020))
+		- It's interesting to hear how skeptical he sounds of [[MCP]] use in Claude Code at this time; it sounds "advanced" and he advises that people prefer well-documented [[CLI/Tool]]s over MCP Servers
+			- {{embed ((688e1ee0-c23d-408c-8541-e7ef92b40df3))}}
+		- I don't think I've managed to use the [[AI/Image/Processing]] features of [[Claude Code]] yet
+			- ((688e1ee0-cf83-4625-88a8-c3a8ead1e454))
+	- ## [[Video]]
+		- {{video https://www.youtube.com/watch?v=gv0WHhKelSE}}
+			- ### {{youtube-timestamp 5}} Introduction and Personal Background
+				- #### Welcome and Overview
+					- "Welcome everyone to Claude Code best practices"
+					- Talk structure:
+						- High-level overview of what Claude Code is
+						- Understanding how it works under the hood
+						- Good use cases and best practices
+				- #### Personal Introduction
+					- Cal's background:
+						- Joined Anthropic about a year and a half ago
+						- Part of the Applied AI team
+						- Mission: help customers build great products on top of Claude
+						- Spends time prompting Claude for optimal outputs
+					- #### Coding Background
+						- Self-described coder who starts many projects but rarely finishes
+						- Has a "graveyard of code" from unfinished projects
+						- Always spinning up new ideas
+			- ### {{youtube-timestamp 64}} Discovery of Claude Code
+				- #### Initial Encounter
+					- Heard about new tool in Slack
+					- Downloaded on a Friday night
+					- Applied to a new notetaking app project
+				- #### Transformative Experience
+					- "That whole weekend just kind of totally changed the way that I code and think about software engineering"
+					- Carried laptop around all weekend
+					- "Super addicted to just watching Claude Code work"
+					- Watched powerful application come together in real-time
+					- Got much further than would have on own
+				- #### Internal Recognition
+					- Worried about token usage
+					- Claude Code team had internal leaderboard tracking usage
+					- Shot to the top over the weekend
+					- Met Boris and Cat from early Claude Code team
+					- Became core contributor focusing on:
+						- System prompts
+						- Tool descriptions and results
+						- Evaluation methodology
+			- ### {{youtube-timestamp 154}} What is Claude Code?
+				- #### Mental Model
+					- "Claude Code is like that co-worker that does everything on the terminal"
+					- Never touches GUI, terminal whiz
+					- Like having a mentor (Tony) next to you all the time
+				- #### Technical Architecture
+					- **Pure agent approach**: instructions + powerful tools + model runs in loop
+					  id:: 688e1ee0-8a38-4879-a2f1-6aad419c8020
+					- Tools include:
+						- File creation and editing
+						- Terminal usage
+						- MCP (Model Context Protocol) integration
+					- **No indexing approach**: Claude explores codebase like a new team member
+					- Uses same search tools humans use: glob, grep, find
+					- **Agentic search**: model can do searches, analyze results, then search more
+				- #### UI and Security Features
+					- Light UI layer showing Claude's work in real-time
+					- Permission system for dangerous operations
+					- Security focus with lightweight architecture
+					- Easy integration with AWS and GCP cloud providers
+			- ### {{youtube-timestamp 366}} Use Cases for Claude Code
+				- #### Discovery and Onboarding
+					- Supercharges onboarding into new codebases
+					- Ask "where is this feature implemented?"
+					- Analyze git history and code evolution
+				- #### Thought Partnership
+					- Use as planning partner before diving into work
+					- Ask for multiple implementation options
+					- Validate approaches before starting
+				- #### Code Building and Writing
+					- **Zero to one projects**: build apps from empty directory
+					- **Existing codebases**: primary focus area
+					- High unit test coverage due to ease of adding tests
+					- Great commit and PR messages
+				- #### Deployment and Lifecycle
+					- Use Claude Code SDK for headless automation
+					- Integrate into CI/CD pipelines
+					- GitHub Actions integration
+				- #### Support and Scale
+					- Faster debugging
+					- Large codebase migrations (Java version upgrades, PHP to React)
+					- CLI tool expertise (Git, Docker, BigQuery)
+			- ### {{youtube-timestamp 617}} Best Practices
+				- #### Use Claude.md Files
+					- {{youtube-timestamp 655}} Claude Code doesn't really have [[AI/Memory]]
+					- Main way to share state across sessions
+					- Plopped into context when Claude Code starts
+					- Can be placed in:
+						- Project directory (shared with team) {{youtube-timestamp 688}}
+						- Home directory (personal preferences)
+					- Include information like:
+						- How to run unit tests
+						- Project layout overview
+						- Style guides
+						- Module locations
+				- #### Permission Management {{youtube-timestamp 725}}
+					- Read actions allowed automatically
+					- Write/run commands require permission
+					- **Autoaccept mode**: Shift+Tab for automatic approval [[Keyshort]]
+					- Configure specific command approvals in settings - `npm run test` for example
+				- #### Integration Setup {{youtube-timestamp 786}}
+					- Leverage CLI tools (GitHub's `gh` tool)
+					- Install [[MCP/Server]]s for custom tools
+					  id:: 688e1ee0-c23d-408c-8541-e7ef92b40df3
+						- Best Practice #Tip: Prefer well-documented [[CLI/Tool]] over MCP servers
+					- Document internal tools in `Claude.md`
+				- #### Context Management
+					- Context builds up over time (200,000 token limit) {{youtube-timestamp 861}}
+					- Options when context fills up:
+						- `/clear`: start over (preserves Claude.md)
+						- `/compact`: summarize and continue {{youtube-timestamp 895}}
+					- Compact functionality tuned for efficient continuation
+			- ### {{youtube-timestamp 873}} Efficient Workflows
+				- #### Planning and To-Dos
+					- Ask for plans before implementation {{youtube-timestamp 926}}
+					- > "Can you search around, figure out what's causing it, and tell me a plan?"
+						- you can verify what claude's going to do
+					- Watch to-do lists and intervene if needed
+						- Press Escape to modify plans mid-execution
+				- #### Smart Iterative Coding {{youtube-timestamp 970}}
+					- Test-driven development approach {{youtube-timestamp 982}}
+					- Small changes with test runs
+					- Check TypeScript and linting
+					- Commit regularly for fallback points
+				- #### Screenshot Guidance {{youtube-timestamp 1000}}
+				  id:: 688e1ee0-cf83-4625-88a8-c3a8ead1e454
+					- Use screenshots for visual guidance
+					- Paste images or reference image files
+					- "Look at this `mock.png` and build the website"
+				- #### Advanced Techniques {{youtube-timestamp 1035}}
+					- **Multiple Claude instances**: run 2-4 simultaneously
+					- Use [[tmux]] or different tabs
+						- > I can only do 2, but I know people who can do four {{youtube-timestamp 1050}} #Quote
+					- **Escape key mastery**: stop and interject when needed
+					- #Tip Double escape: jump back in conversation {{youtube-timestamp 1083}}
+					- [[MCP Server]]: for advanced tool integration
+						- *hear him be a bit hesitant about this*
+					- **Headless automation**: programmatic Claude usage
+			- ### {{youtube-timestamp 1115}} New Features and Updates
+				- #### Model Selection
+					- `/model` command to see current model
+					- Switch between Sonnet and Opus
+					- `/config` for configuration changes {{youtube-timestamp 1154}}
+				- #### Enhanced Thinking {{youtube-timestamp 1177}} #Tip
+					- "Think hard" or extended thinking capabilities - you should specify it
+					- > {{youtube-timestamp 1185}} Starting with [[Anthropic/Model/Claude/4]] Models now think between tool calls [[AI/Model/Reasoning]]
+						- Visible as lighter gray text
+						- Encouraged for complex tasks and bug solving
+				- #### [[IDE]] Integrations {{youtube-timestamp 1228}}
+					- [[VSCode]] VS Code and [[JetBrains]] integrations
+						- Claude knows what file you have open
+						- Enhanced development workflow
+				- #### Staying Updated about new things in [[Claude Code]] {{youtube-timestamp 1261}}
+					- #Tip
+						- Public GitHub project: Claude Code under Anthropic
+						- **Check changelog weekly**
+							- Fast shipping pace
+							- > "Even I can't keep up with it"
+			- ### {{youtube-timestamp 1293}} Q&A Session
+				- #### Multiple Claude.md Files {{youtube-timestamp 1300}}
+					- Can have multiple files in different directories
+					- Only reads Claude.md in current working directory by default
+					- Encourages Claude to read relevant files in subdirectories {{youtube-timestamp 1330}}
+						- Can reference other files with @ symbol in `Claude.md`
+					- Example: `@package.json`
+				- #### [[Anthropic/App/Claude Code/Claude.md]] Effectiveness - Why doesn't it work? {{youtube-timestamp 1372}}
+					- > I have not had luck having Claude honor Claude.md, for example, inline comments #Quote -- Claude User
+						- Model behavior issues (excessive commenting) mostly fixed in Claude 4
+						- Better instruction following in newer models
+						- Good time to review and update `Claude.md` files
+				- #### Multi-Agent Execution {{youtube-timestamp 1460}}
+					- question: can we have agents that use each other's context?
+					- Currently single agent approach
+					- Future: shared markdown files for agent communication
+					- Manual orchestration through file-based state sharing
+				- #### Closing
+					- Claude Code stickers available
+					- Happy to answer questions and do live demos
