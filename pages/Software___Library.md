@@ -1,1 +1,1 @@
-alias:: [[Software Libraries]]
+alias:: [[Software Libraries]], [[Library]], [[Software Library]]
