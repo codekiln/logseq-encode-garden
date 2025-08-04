@@ -1,4 +1,5 @@
 tags:: [[Idea]]
+alias:: [[AI/Coding/Technique/Using Agentic Documentation as Intermediary Step]] 
 created-by:: [[Person/codekiln]]
 
 - # #Agentic #[[Knowledge Base]] #[[Software Library]] #Documentation as an input to #[[AI Coding]]
