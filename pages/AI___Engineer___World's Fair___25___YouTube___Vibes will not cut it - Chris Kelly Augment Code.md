@@ -1,0 +1,172 @@
+created-by:: [[Person/Chris Kelly]]
+created-date:: [[2025/06]]
+
+- # [Vibes won't cut it — Chris Kelly, Augment Code - YouTube](https://www.youtube.com/watch?v=Dc3qOA9WOnE)
+	- ## Bio - [[Person/Chris Kelly]] from [[AugmentCode]]
+		- Chris is the head of developer experience where he works across Augment to make building software better for every developer. He’s been making developers happier and more productive for 15 years at innovative companies like [[New Relic]], [[GitHub]], [[Salesforce]], and FireHydrant. You can find him at @amateurhuman everywhere on the internet.
+	- ## [[Video]]
+		- {{video https://www.youtube.com/watch?v=Dc3qOA9WOnE}}
+			- ### {{youtube-timestamp 1}} Introduction and Opening Remarks
+				- Opening comments and audience acknowledgment
+				- "Thanks for coming, by the way, and for sticking around for a little while"
+				- Setting the stage for discussion about [[AI Coding]] and software engineering
+			- ### {{youtube-timestamp 33}} Challenging AI Coding Hype
+				- #### Questioning Industry Predictions
+					- "there's lots of fanfare, no disrespect, very intelligent people that made these quotes"
+					- "I think they're probably wrong. Not because I don't think AI coding is going somewhere important, but probably because they haven't actually touched a production system in a very long time"
+					- #### Recent Industry Claims (2025)
+						- **[[Person/Satya Nadella]] (Microsoft CEO)**: "as much as 30% of Microsoft code is written by AI" (April 29, 2025)
+						- **Anthropic CEO** [[Person/Dario Amodei]]: "in 3 to 6 months, AI will be writing 90% of the code software developers were in charge of" (March 13, 2025)
+						- [[Person/Mark Zuckerberg]] (Meta CEO): "AI will write most of Meta's code within 12 to 18 months" (April 30, 2025)
+				- #### Reality of Large Codebases
+					- "maybe generating code at 30% isn't really what they think it is because really AI code is still code"
+					- "they're working in very large code bases that have basically every decision that's ever needed to be made about that code, about that architecture, about that infrastructure has already been made for them"
+					- "if I'm generating 30% of my code against... millions of lines of existing code, there's not a lot of wiggle room for what that code can do or should do"
+				- #### [[Meta]] Engineer Example
+					- "If you've ever talked to a meta engineer, they will talk about how they **built a button in the ads platform for six months**"
+						- "that's what they worked on for **six** months. That was their **job**"
+					- "there's very little definition about what this can needs to do that has wiggle room that AI really can influence"
+			- ### {{youtube-timestamp 111}} AI Code is Still Code
+				- #### Fundamental Constraints
+					- "AI is still writing code. This is code we have written for 50 years. Same programming languages. Nothing is different there"
+					- "That code still needs to run in production somewhere"
+				- #### Production System Complexity
+					- "if you haven't run a large production system, even if you write a great line of code, in complex systems, things fail"
+					- "complex systems have emergent behavior that don't show up in just single lines of code"
+					- "who's going to fix it? Who's going to examine it? Who's going to understand those nuances when if you don't have software engineers?"
+			- ### {{youtube-timestamp 154}} Historical Context and Career Evolution
+				- #### Previous Career "Threats"
+					- "This is not the first time I have been told that my career is over"
+					- "anyone around the [[DevOps]] transformation from 15 years ago, cloud, all the sysadmins that I know that were racking boxes and booting kernels, all got payraises and all work on much more valuable things now"
+				- #### Technology Evolution Patterns
+					- "this isn't new. This is just a different level of abstraction"
+					- "Like tractors didn't get rid of farms. They just got rid of farm hands and horses"
+					- "yes, there will be change in an industry for certain. But tractors didn't get rid of farming. We still have to farm"
+			- ### {{youtube-timestamp 184}} Vibe Coding vs Production Engineering
+				- #### Defining Vibe Coding
+					- "vibe coding, if you're not familiar with the term... is basically letting the AI write all of the code and think through the code and not really examining the code at all"
+					- "Just does it do what I need it to do? And then in that case, I just keep going and let it keep going"
+				- #### Production Requirements
+					- "I'm talking about how can we write code that's for production"
+					- "when I say production, I mean, you have [[Nines/Four]] four nines. Do you even know what four nines means? That's production code"
+					- "You have thousands of users, gigabytes of data. We're talking software that runs the internet today"
+					- "Vibes don't cut that because there's a lot of nuances on what goes into code"
+			- ### {{youtube-timestamp 241}} Code vs Software Engineering
+				- #### Misconception About Code Generation
+					- "Code is not the job in the same way that blueprints are not the job of an architect. That's an artifact of being an architect"
+					- "The artifact of being a software developer is code. Sure, I have to output some code, but I make thousands of decisions about what my software is supposed to do"
+				- #### Engineering Decisions
+					- "I make thousands of decisions about what my software is supposed to do, what kind of what I'm writing, what packages I'm bringing in"
+					- "let's stop conflating generating code with the art and the craft of doing software engineering. Those are different things"
+				- #### [[Person/Jeff Atwood]]'s Insight
+					- "[[Person/Jeff Atwood]], (rest in peace, [[StackOverflow]]), said the best code is no code at all"
+					- "every line of code comes with a burden, right? I have to maintain that code. I have to debug that code"
+			- ### {{youtube-timestamp 290}} Code Generation vs Quality
+				- #### The Burden of Generated Code
+					- "every line of code I generate I have to be responsible for"
+					- "we spent so much time thinking about how much code can AI generate? Who cares how much it can generate? the more it generates, the worse off I end up being"
+					- "We want to put as little code as possible in there because all codes has trade-offs"
+				- #### [[Architecture]] Decisions
+					- "the best example I can give you... is the difference between a monolith, microservices architecture and an adventure system"
+					- "if you ever built a flight booking system in all three of these, you have thousands of individual decisions that have to get made"
+					- "LLMs don't make decisions. They generate text. They generate patterns"
+			- ### {{youtube-timestamp 345}} Pattern Matching Limitations
+				- #### [[System/Snowflake]]
+					- "Anyone here run a piece of production software that's kind of a bit of a snowflake? Has a bunch of idiosyncrasies in it that well only Bob knows how that works and only Jane can fix that"
+					- "at some scale pattern matching doesn't work anymore because all of the nuances that go into all that software can't be pattern matched against"
+				- #### Production Incidents
+					- "When software goes down at two in the morning, vibes aren't going to fix the bug"
+					- "someone has to diagnose that problem"
+			- ### {{youtube-timestamp 389}} The Work of Software Engineering
+				- #### Core Responsibility
+					- "what is the work of software engineering? For me, that's changing software safely"
+					- "That's been my job for 20 years is how can I make changes to software, whether that's adding new functionality or changing existing code"
+				- #### Safety Mechanisms
+					- "how do I do it safely so that software doesn't go down? So my users get their get the thing that they're getting, they the widget ships, that data is secure"
+				- #### Traditional Safety Tools
+					- "how have we done that so far in the industry? We've done lots of different things to solve that problem"
+					- "One, there's just my own knowledge. I have to learn a ton about a codebase before I can make changes safely"
+					- "we use version control to do that. We know testing, that's why we write tests to catch if if I change this, did this thing break over here?"
+					- "We use type systems. We use deployment strategies"
+			- ### {{youtube-timestamp 430}} AI's Role in Context
+				- #### Context is Key
+					- "Can context that an AI has about and can understand more of the codebase help us? probably"
+					- "at augment we believe that context is the most important part of all AI generation in code"
+					- "we think we can solve that problem that doesn't change that I still have to care about production"
+			- ### {{youtube-timestamp 463}} Professional Engineers and AI Adoption
+				- #### Slow Adoption by Professionals
+					- "professional software engineers are the last people I see adopting AI and I've never seen that before"
+					- "I've seen version control systems change I was at GitHub in early days so massive jumps to get the cloud transformation pick your innovation and developers are like hell yes give me that new thing"
+					- "software developers are like I'm not touching code I'm not touching AI"
+				- #### AI Coding Evolution
+					- "a few years ago, AI coding was mostly just a pile of bricks. It kind of worked but really didn't do much"
+					- "about a year ago, years and change when Sonic 35 came out, that's really when we saw a massive explosion in AI coding because the quality substantially jumped"
+					- "four weeks ago, if you weren't watching the news, literally every AI coding tool said agents are the future"
+			- ### {{youtube-timestamp 542}} Building Software for AI
+				- #### Infrastructure Requirements
+					- "how do you build software that's easy for AI to write?"
+					- "have some documented standards and practices, right? What do you use? Every codebase I know is in some sort of flux"
+				- #### Development Environment
+					- "have reproducible environments. Can you easily spin up a developer environment? Is your developer environment very bespoke and unique? You want to have it reproducible"
+					- "have easy testing, right? can you run your tests locally? Is that fast?"
+				- #### Clear Boundaries and Tasks
+					- "establish clear boundaries of what you're going to do. You're never going to give AI the idea of extract this module using the strangler pattern"
+					- "you have to give clear boundaries of what you're trying to build and how to get the AI to do it"
+					- "have clearly defined tasks and work"
+				- #### Engineering Standards
+					- "this just sounds like software engineering right if ideally your software engineering stack has these qualities and if it doesn't you're like our productivity sucks"
+					- "You have to give AI the same tools that engineers need because it's doing exactly the same job. It's writing code"
+			- ### {{youtube-timestamp 644}} Realistic Expectations
+				- #### Code Quality Reality
+					- "I've never one-shot at a piece of code in my life personally. I've always made mistakes in the code I write"
+					- "I run a test, it fails. I've got a [[Linter]], it fixes it, whatever the thing is"
+					- "I don't know why, but we've had this expectation that AI can write perfect code."
+				- #### System Requirements
+					- "when you're thinking about adopting AI as a software engineer, you have to make sure that your systems work like you would expect any other engineer to work because that's how it's writing code"
+			- ### {{youtube-timestamp 672}} Code Review as Critical Skill
+				- #### Industry Neglect
+					- "code review is by far the most important skill. I think we've forgotten that skill as an industry"
+					- "we probably should have been interviewing for code review and not here's this esoteric [[Software/LeetCode]] problem that you could solve, but can you read somebody else's code and comment on why it's good or bad?"
+					  id:: 6891b24f-a928-45d1-b359-df9619cb9013
+				- #### Current Tool Limitations
+					- "our code review tools today frankly suck. I'm getting a list of changed files. It's lexographically sorted"
+					- "That's not a way to think about how software changes is in the order of the files"
+				- #### Future Importance
+					- "I think this is going to become far more important as agents are writing more and more code"
+					- "we're going to see a pretty big explosion on the way code review can happen"
+					- "that's the skill we need to be interviewing for. you need to be kind of brushing up on"
+			- ### {{youtube-timestamp 727}} 10 Practical Tips for [[AI/Engineer]]s
+				- #### **1. AI talks like a human, but it is still a machine**
+					- "the most important thing I can imagine is AI talks like a human but is actually a machine"
+					- "I had this interaction with AI the other day where I was yelling at it because that's what you do at AI when it doesn't do what you want it to do"
+					- "And it's like oh I'm sorry I just scanned that file. I didn't read it. I'm like what does that even mean?"
+					- "LLMs are trained on all the data in the world, right? There are thousands of emails that it has read that says oh sorry I didn't read your document thoroughly. I actually just skimmed it"
+					- "we have to distrust some of the things that LLMs are saying they're doing because it's not actually doing that"
+					- "Don't forget, it's just generating text. It's not always doing exactly what it's outputting in that text"
+				- **2. Prompts matter, be detailed and specific**
+				- **3. Agents aren't all knowing, they're a partner**
+				- **4. Explore directions with multiple agents**
+				- #### **5. Different isn't inherently better or worse**
+					- "Sometimes code is just different. It's okay if the LLM outputs code differently than you would"
+					- "I can't expect it to produce the code that I would exactly in the same way that the person that's sitting next to me also writes code a little differently than I do"
+					- "know the difference of is the code better or is it just different?"
+				- #### Tools for Consistency
+					- "this is why we have [[Linter]]s. This is why we have rule systems. This is why we have style guides"
+					- "Let some of that go if you can"
+				- **6. Start and kill agents frequently**
+				- **7. Have it work just like you do**
+				- **8. Start with writing code**
+				- #### **9. Write a rules file**
+					- "write a rules file. Give it tell it what you want it to do. Have a file"
+					- "I always start all of my projects with here's the stack I'm using. Here's the guidelines I want you to use"
+					- "And that's always ends up being part of the context I send with the LLM"
+				- #### 10. The Define-create-refine loop
+					- "I like the **Define-Create-Refine** loop. Expect create a document of some kind. Have the LM help you generate it"
+					- "Write a markdown file that would lay out the plan. Here's my plan. Save that as a markdown file"
+					- "Then use that again in your context. Have it create the thing. Have the agent run against that file"
+					- "Make a plan, have it create it, and then just make your tweaks and you'll get a lot more comfortable with how to prompt the LLM to get the code you want to do"
+			- ### {{youtube-timestamp 898}} Conclusion
+				- #### Final Thoughts
+					- "if you let go of that code has to be how I would write it, not just good functional code, then you can get a lot more productive in that way"
+				- #### Closing Remarks
+					- "I hope to see you here next year. Hope we're all here next year. I think the jobs aren't going anywhere"
