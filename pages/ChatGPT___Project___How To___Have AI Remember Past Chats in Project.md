@@ -1,0 +1,4 @@
+# [How does memory work in projects?](https://help.openai.com/en/articles/10169521-projects-in-chatgpt#h_28be29e3b3)
+	- If memory for your account is enabled, it remains active across all chats, including chats in your projects.
+	- For **Plus** and **Pro** users: In addition to saved memories, ChatGPT can reference previous chats within a project to deliver more relevant, focused responses. When you ask a question in a project, ChatGPT prioritizes the project chats and files.
+	- ***Note****: Both settings **Reference saved memories** and **Reference chat history** must be enabled in settings in order to reference past chats in projects. Reference chat history is available for Plus and Pro users.*
