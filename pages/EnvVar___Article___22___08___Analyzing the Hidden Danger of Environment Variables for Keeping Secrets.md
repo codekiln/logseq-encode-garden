@@ -8,17 +8,17 @@ created-date:: [[2022/08]]
 			- **Blind spot**: They were designed for *configuration*, not *confidentiality*; nothing in the spec guarantees secrecy ([Trend Micro](https://www.trendmicro.com/en_us/research/22/h/analyzing-hidden-danger-of-environment-variables-for-keeping-secrets.html)).
 		- ## Where the risk really lies
 			- ### Always-in-clear memory
-				- Variables are copied to every process stack and remain in plaintext for the lifetime of the process tree, violating the “short availability” principle of secrets management ([Trend Micro](https://www.trendmicro.com/en_us/research/22/h/analyzing-hidden-danger-of-environment-variables-for-keeping-secrets.html)).
+				- Variables are copied to every process stack and remain in plaintext for the lifetime of the process tree, violating the “short availability” principle of secrets management.
 			- ### Easy to scrape
 				- `ps -e`, `/proc/$pid/environ`, crash dumps, or a simple memory-dump tool all yield credentials instantly. Most observability/​debug tooling captures env blocks by default .
 			- ### Propagates beyond intended scope
-				- Child processes, wrapper scripts, and sidecar containers inherit every variable—even if they don’t need it. In container builds the value can end up in intermediate layers; in serverless runtimes it’s injected into *every* invocation context ([Trend Micro](https://www.trendmicro.com/en_us/research/22/h/analyzing-hidden-danger-of-environment-variables-for-keeping-secrets.html)).
+				- Child processes and wrapper scripts inherit every variable—even if they don’t need it. In container image builds the value can end up in intermediate layers; in serverless runtimes it’s injected into *every* invocation context.
 			- ### Logs & CI/CD artefacts
 				- Panic handlers, verbose flags, or “print env on error” patterns push secrets to log aggregators and build logs; once indexed they’re searchable forever .
 			- ### Cloud-wide blast radius
-				- Example: a MySQL container’s `MYSQL_ROOT_PASSWORD` obtained from `/proc` grants full DB control; in serverless an AWS CLI token exposed as an env var lets attackers spin up resources or exfiltrate data across the account ([Trend Micro](https://www.trendmicro.com/en_us/research/22/h/analyzing-hidden-danger-of-environment-variables-for-keeping-secrets.html)).
+				- Example: a MySQL container’s `MYSQL_ROOT_PASSWORD` obtained from `/proc` grants full DB control; in serverless an AWS CLI token exposed as an env var lets attackers spin up resources or exfiltrate data across the account.
 			- ### Actively harvested in the wild
-				- Threat groups like **TeamTNT** scan compromised hosts specifically for sensitive env vars; a recent malicious Python package shipped code to steal them at import-time ([Trend Micro](https://www.trendmicro.com/en_us/research/22/h/analyzing-hidden-danger-of-environment-variables-for-keeping-secrets.html)).
+				- Threat groups like **TeamTNT** scan compromised hosts specifically for sensitive env vars; a recent malicious Python package shipped code to steal them at import-time.
 		- ## Why your current mitigations aren’t enough
 			- **Read-only fs / non-root containers**: env vars are still visible to the running process and anything that can read its memory.
 			- **Base-64 encoding**: only obfuscation; attackers dump and decode.
@@ -34,9 +34,11 @@ created-date:: [[2022/08]]
 			- Every time a process spawns a child (e.g., via fork), its environment—including secrets—is inherited, and every debug log or core dump silently widens that exposure.
 			- Moving to pull-on-demand secrets, scoped permissions, and memory hygiene closes off entire classes of supply-chain and post-exploitation paths.  
 			  
-			  > “The best-case scenario is to avoid storing secrets in environment variables completely.” —Trend Micro research team ([Trend Micro](https://www.trendmicro.com/en_us/research/22/h/analyzing-hidden-danger-of-environment-variables-for-keeping-secrets.html))
+			  > “The best-case scenario is to avoid storing secrets in environment variables completely.” — #Quote from Trend Micro research team
 	- ## Related Topics
 		- [[Secret Management]]
 		- [[DevOps/Security]]
 		- [[Security]]
 		- [[EnvVars]]
+	- ## [[see-also]]
+		- [[smallstep/Blog/24/05/How to Handle Secrets on the Command Line]]

@@ -26,3 +26,5 @@ tags:: [[Security]], [[Secrets]], [[CLI]], [[Article]]
 			- [Website](https://tashian.com)
 			- [LinkedIn](https://www.linkedin.com/in/tashian/)
 			- is an engineer, writer, exec coach, and startup all-rounder. He's currently an Offroad Engineer at Smallstep. He co-founded and built the engineering team at Trove, and he wrote the code that opens your Zipcar. He lives in San Francisco with his wife Siobhan and he loves to play the modular synthesizer 🎛️🎚️
+- ## [[see-also]]
+	- [[EnvVar/Article/22/08/Analyzing the Hidden Danger of Environment Variables for Keeping Secrets]]
