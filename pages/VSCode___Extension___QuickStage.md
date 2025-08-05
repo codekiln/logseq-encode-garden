@@ -1,6 +1,8 @@
 # [QuickStage - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=bs-code.git-quick-stage)
 	- ## [[GitHub/Bluesteel-Software/git-stage-file]]
 		- ### [[My Notes]]
+			- [[2025-08-05 Tue]] - [[VSCode/GitHub/Issue/25/03 useGitAPI() missing repository resource n242531]] is **FIXED**
+				- [[Person/Josh Piasecki]] fixed it in 1.0.0 [here](https://github.com/Bluesteel-Software/git-stage-file/issues/20#issuecomment-3149001979)
 			- [[2025-07-06 Sun]]
 				- There is a bug `Cannot read properties of undefined (reading 'onDidRunOperation')` that prevents using this extension - [Error when running quickstage · Issue #20 · Bluesteel-Software/git-stage-file](https://github.com/Bluesteel-Software/git-stage-file/issues/20)
 					- Apparently it has to do with a change in the allegedly rather undocumented git API for [[VSCode/Git]]

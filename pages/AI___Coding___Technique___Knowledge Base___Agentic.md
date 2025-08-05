@@ -7,13 +7,14 @@ created-by:: [[Person/codekiln]]
 		- It's almost like a form of slow digestion; the process of producing good documentation is like creating enzymes to break down problems in a way that's more specific to the body  - or enterprise - in which software is built
 		- In the case of [[BlitzyAI]], this involves work on internal, private codebases.
 	- ## #[[Mermaid Diagram]]
-		- {{renderer :mermaid_6890c24d-0204-4717-8711-2303ff420f37, 3}}
+		-
+		- {{renderer :mermaid_6891bd99-2b46-40d9-ace0-95d5f40c74b1, 4}}
 			- ```mermaid
 			  flowchart TD
 			      Note["Used by: Blitzy, Devin"]
 			      A[Arch Doc Agent]
 			      B[Analyze Library]
-			      C[Condensed, high-quality context<br>for AI]
+			      C[Condensed, high-quality context for AI]
 			      D[Code Planning Agent]
 			      E[Coding Agent]
 			      F[Code]
@@ -25,5 +26,4 @@ created-by:: [[Person/codekiln]]
 			      D --> E
 			      E --> F
 			      E -->|update| A
-			  
 			  ```
