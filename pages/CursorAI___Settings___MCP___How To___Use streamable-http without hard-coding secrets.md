@@ -5,7 +5,7 @@
 			- [[Anthropic/App/Claude Code/How To/Set Up Github MCP with 1Password GH token and mise]]
 		- Today, I saw that github has new instructions for cursor, using "Remote Server Setup (Recommended):  
 		  https://github.com/github/github-mcp-server/blob/main/docs/installation-guides/install-cursor.md
-		- The guide suggests that we put the following in [[CursorAI/.cursor/mcp.json]], which uses the new "Streamable HTTP Configuration" which I'm not as familiar with in Anthropic's Model Context Protocol; this is my first or second time configuring it:
+		- The guide suggests that we put the following in [[CursorAI/.cursor/mcp.json]], which uses the new "Streamable HTTP Configuration" which I'm not as familiar with in Anthropic's Model Context Protocol:
 			- ```json
 			  {
 			  "mcpServers": {
@@ -18,7 +18,7 @@
 			  }
 			  }
 			  ```
-		- Only problem with these instructions are: I prefer to use [[1Password]]'s [[op/run]] CLI for managing access to secrets. I don't like to have secrets on disk in plain text. So ... how can achieve the same effect of my method in [[GitHub/MCP/How To/Set up in Cursor with 1Password GH token]], but use 1password's CLI to wrap the invocation to MCP, but still use the "streamable HTTP configuration"?
+		- Only problem with these instructions are: I prefer to use [[1Password]]'s [[op/run]] CLI for managing access to secrets, as I don't like to have secrets on disk in plain text. So ... how can achieve the same effect of my method in [[GitHub/MCP/How To/Set up in Cursor with 1Password GH token]], but use 1password's CLI to wrap the invocation to MCP, but still use the "streamable HTTP configuration"?
 	- ## Proposal from #o3
 		- Cursor doesn’t yet expand environment variables inside the `headers` block of a **streamable-http** entry; tokens have to be literal (see forum reply: “For now, yes … you’re forced to deal with env vars.” ([Cursor - Community Forum](https://forum.cursor.com/t/how-to-use-environment-variables-in-mcp-json/79296))).
 		  
