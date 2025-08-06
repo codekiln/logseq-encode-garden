@@ -2,8 +2,10 @@
 	- [[Person/Tim O'Reilly]]
 		- he believes that the programmers will be put out of a job is fundamentally wrong
 		- there was an example of a high school intern who over the summer used chatgpt to code image recognition of images of retina
-		- 11:15 someone mentions "Jevon's paradox for coding"
-			- TODO what is Jevon's paradox?
-		- 11:16 handing over to ADdy
+		- 11:15 someone mentions "[[Jevon's Paradox]] for coding"
+			- DONE what is Jevon's paradox?
+				- [When Less Means More: How Jevons Paradox Applies to Our Post-DeepSeek World - WWT](https://www.wwt.com/wwt-research/when-less-means-more-how-jevons-paradox-applies-to-our-post-deepseek-world)
+					- > **Whenever a technology becomes dramatically more efficient, its use doesn't plateau — it explodes**. This phenomenon, known as Jevons Paradox, suggests that as AI models become cheaper to train and infer, several things are likely to happen: Hardware providers: High-performance hardware demand will continue to increase.
+		- 11:16 handing over to Addy
 	- 11:16 [[Person/Addy Osmani]]
 	-
