@@ -237,7 +237,7 @@
     "claude-code-github-mcp-mise-605": {
       "name": "claude-code-github-mcp-mise",
       "created": "2025-06-05T09:33:09.159Z",
-      "lastUsed": "2025-06-06T10:01:15.562Z",
+      "lastUsed": "2025-08-08T10:50:55.263Z",
       "tags": [],
       "files": [
         "pages/1Password___Account___Service.md",
@@ -427,7 +427,15 @@
         "pages/mcp-atlassian.md",
         "pages/1Password___Dev___op___run.md",
         "pages/mise___Tool___Explanation___When to Declare Tools.md",
-        "pages/mise___Shim.md"
+        "pages/mise___Shim.md",
+        "pages/Anthropic___App___Claude Code___How To___Create Git Commit Tool.md",
+        "pages/Anthropic___App___Claude Code___How To___Export Conversation to File.md",
+        "pages/1Password___Dev___CLI.md",
+        "pages/1Password___Browser Extension___How To___Scan QR Code on Existing Login Item.md",
+        "pages/Anthropic___Model___Claude.md",
+        "pages/Anthropic___Product___Claude___Max.md",
+        "pages/Anthropic___YouTube___25___02___Introducing Claude Code.md",
+        "pages/Anthropic___YouTube___25___07___Claude Code Best Practices.md"
       ]
     }
   }
