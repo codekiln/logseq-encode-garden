@@ -1,0 +1,34 @@
+tags:: [[Diataxis/How To]]
+
+- # How to Clip the Same [[Ableton/Arrangement View/Time Selection]] across Multiple Tracks in Ableton Live
+	- ## Goal
+		- Split or create clips with identical time boundaries across multiple tracks in Arrangement View without manually reselecting each track.
+	- ## Preconditions
+		- Ableton Live installed and opened in Arrangement View.
+		- Basic knowledge of clip selection and keyboard shortcuts.
+		- A keyboard available (Mac shortcuts shown; replace `Cmd` with `Ctrl` on Windows).
+	- ## Procedure
+		- ### 1. Make your initial time selection
+			- In Arrangement View, select the clip or time range on the first track (e.g., Track A).
+			- The selection can be an existing audio clip, MIDI clip, or empty time region.
+			- For the purposes of instruction, you can make a time selection in a MIDI track and press [[Keyshort]] `Cmd+Shift+M` to create a new empty midi clip.
+		- ### 2. Move the selection to another track
+			- **If a clip is selected:**
+				- Press the **Up (↑)** or **Down (↓)** arrow keys to move the selection to the track above or below.
+				- The time boundaries remain exactly the same.
+			- **If a time range is selected across the timeline ruler:**
+				- Press **Shift + Up (↑)** or **Shift + Down (↓)** to move the time range selection to another track.
+		- ### 3. Split or create a clip at the same boundaries on the new track
+			- If there is an existing clip in the selection range, press **Cmd+E** to split it at the selection boundaries.
+			- If no clip exists, press **Cmd+Shift+M** to create a new empty MIDI clip with those boundaries.
+		- ### 4. Repeat for additional tracks
+			- Continue pressing **Up (↑)** or **Down (↓)** to move the selection through tracks.
+			- Apply **Cmd+E** or **Cmd+Shift+M** on each track as needed.
+	- ## Troubleshooting
+		- If the selection doesn’t move tracks as expected, make sure the Arrangement View is active and the correct track is selected.
+		- On Windows, replace `Cmd` with `Ctrl` for all shortcuts.
+	- ## Tips
+		- Select multiple tracks at once by dragging across track headers, then split clips on all selected tracks simultaneously.
+		- For faster workflow, alternate between arrow keys and the split/create shortcuts to quickly align clips across many tracks.
+	- ## Outcome
+		- You have clips or empty MIDI regions perfectly aligned in time across multiple tracks, ready for further editing, looping, or automation.
