@@ -1,0 +1,33 @@
+tags:: [[Diataxis/How To]]
+
+- # How To Batch Export [[Ableton/Clip/.alc]] Clips to [[.wav files]] in #Ableton Live
+	- ## Goal
+		- Export multiple `.alc` (Ableton Live Clip) files to separate `.wav` audio files efficiently.
+	- ## Preconditions
+		- Ableton Live installed (version 10 or later).
+		- `.alc` clip files available in the Ableton Browser.
+		- Familiarity with Arrangement View and Session View.
+	- ## Procedure
+		- ### 1. Manual Render from Arrangement View (Most Reliable)
+			- Create a new Ableton Live project.
+			- Drag each `.alc` clip from the Browser into its own track in Arrangement View.
+			- Arrange clips sequentially (one after another) if you require a single bounce with individual outputs.
+			- Go to `File → Export Audio/Video`.
+				- Set **Rendered Track** to **All Individual Tracks**.
+				- Choose **WAV** as File Type.
+				- Configure Sample Rate and Bit Depth as desired.
+				- Adjust Rendering Options (e.g., disable Normalize).
+			- Click **Export**; Ableton will render each track as a separate `.wav` named after the track.
+			- *Tip:* Rename tracks to match clip names before exporting for clear file names.
+		- ### 2. Session View Consolidate + Export (Semi-Automated)
+			- Load each `.alc` clip into its own track in Session View.
+			- Launch each clip to verify its content.
+			- Right-click each clip and choose **Consolidate** (`CMD + J` / `Ctrl + J`).
+			- Right-click the consolidated clip and select **Show in Finder** (macOS) or **Show in Explorer** (Windows).
+				- Locate the `.wav` file under `Project/Samples/Processed/Consolidate`.
+			- Rename and relocate the `.wav` files as needed.
+	- ## Troubleshooting
+		- *Clips not consolidating:* Ensure each clip is selected before consolidating.
+		- *Missing export files:* Verify export path in Ableton preferences.
+	- ## References
+		- [Ableton Live Manual: Export Audio/Video](https://help.ableton.com/hc/en-us/articles/209773345-Export-Audio-Video).
