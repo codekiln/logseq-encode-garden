@@ -1,0 +1,51 @@
+tags:: [[Diataxis/How To]]
+
+- # How To Get Started with Claude Code in VSCode via AWS Bedrock & aws_okta_keyman
+	- ## Goal
+		- In ≈ 45 minutes your team can open VSCode, authenticate with Okta-backed AWS STS credentials, and run Claude Code prompts against Bedrock.
+	- ## Preconditions
+		- macOS / Linux workstation with admin rights.
+		- VSCode ≥ 1.90.0 installed.
+		- **AWS CLI v2** configured for your Okta org.
+		- **aws_okta_keyman** installed (`pipx install aws-okta-keyman`).
+		- Bedrock access to an Anthropic Claude model (e.g. *claude-3-sonnet*).
+	- ## Procedure
+		- ### 1. Assume the Bedrock-enabled role
+			- 1. Run `aws_okta_keyman exec <profile> -- aws sts get-caller-identity`.
+			- 2. Confirm JSON contains your intended AWS Account & ARN.
+			- 3. Leave the shell open—its env vars power later steps.
+		- ### 2. Verify Bedrock entitlement
+			- 1. `aws bedrock list-foundation-models --region us-east-1 \| grep claude`.
+			- 2. Output should list at least one `anthropic.claude-3-sonnet-*` model ID.
+		- ### 3. Install Claude Code tooling
+			- 1. **VSCode extension**: *Extensions → Claude Code → Install*.
+			- 2. **CLI (optional)**: `npm i -g @anthropic-ai/claude-code`.
+		- ### 4. Configure provider in VSCode
+			- 1. Open *Settings → Extensions → Claude Code*.
+			- 2. Set **Model Provider** → *AWS Bedrock*.
+			- 3. Leave **Credentials Source** as *AWS CLI profile* (already loaded by `aws_okta_keyman`).
+			- 4. (Optional) Enable **Prompt Caching** for cost savings [[Anthropic/App/Claude Code/Bedrock/How To/Enable Prompt Caching]].
+		- ### 5. First-run smoke test
+			- 1. In VSCode press <kbd>⌘ ⇧ P</kbd> → `Claude: Chat`.
+			- 2. Prompt: “Summarise the repository in three bullets.”
+			- 3. Status bar should show **Bedrock: <model-id>**; reply arrives within ~5 s.
+		- ### 6. Essential commands walkthrough
+			- 1. **Inline Completion**: start typing code and accept the ghost text with <kbd>Tab</kbd>.
+			- 2. **/edit**: highlight code → `/edit` → “convert to async/await”.
+			- 3. **/explain**: select a function → `/explain`.
+			- 4. **/tests**: ask Claude to generate unit tests.
+			- 5. Show multi-file reasoning by opening two related files and asking Claude to refactor both.
+		- ### 7. Optional backend demo (Node + Express proxy)
+			- 1. Clone `claude-code-vue-chat-tutorial` scaffold.
+			- 2. In `backend/server.js` ensure `BedrockRuntimeClient` region matches creds.
+			- 3. From the same `aws_okta_keyman` shell: `npm run start` (backend) then `npm run dev` (frontend).
+			- 4. Confirm chat UI proxies requests through Bedrock without CORS issues.
+	- ## Troubleshooting
+		- *`No credentials to load`* → run `aws_okta_keyman exec ...` in the same terminal that launches VSCode.
+		- *`AccessDeniedException`* invoking Bedrock → check IAM role includes `bedrock:InvokeModel`.
+		- VSCode shows *provider: Anthropic* instead of *Bedrock* → ensure **CLAUDE_CODE_USE_BEDROCK=1** in environment or set in extension settings.
+		- Long latency on identical prompts → confirm prompt caching toggle is **On**.
+	- ## References
+		- [[Anthropic/App/Claude Code/How To/Get Started with AWS Bedrock]]
+		- [[Anthropic/App/Claude Code/How To/Use Essential Commands]]
+		- [`aws_okta_keyman` GitHub](https://github.com/nathan-v/aws_okta_keyman)
