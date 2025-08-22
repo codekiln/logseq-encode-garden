@@ -2,35 +2,20 @@ tags:: [[Diataxis/How To]]
 
 - # How to get started with [[Claude Code]] using [[AWS/Bedrock/Model/Anthropic]]
 	- ## Problem
-		- Use **Claude Code** with Anthropic models on **AWS Bedrock** while authenticating through an Okta-backed IAM role obtained with **`aws_okta_keyman`**.
+		- You, as a software engineer, want to use **Claude Code** with **Anthropic** models served by your enterprise's **AWS Bedrock** access. You are working in an organization where your [[DevOps]] team has already configured your AWS user to be able to utilize AWS Bedrock, as long as you use [[Okta]] to conduct [[MFA]] and then subsequently assume an [[AWS/IAM/Role]].
+		- ### After this guide you should be able to:
+			- 1 - start [[Claude Code]] and demonstrate that it is able to use your organization's AWS Bedrock connection to utilize [[Anthropic/Model]]s such as [[Claude 3.5 Sonnet]] and [[Claude 3.7 Sonnet]] and [[Anthropic/Model/Claude/3.5/Haiku]].
 	- ## Prerequisites
-		- Node 18+ & npm
-		- Python 3.8+ and `pip`
-		- AWS CLI v2 configured for SSO/Okta federation
-		- Bedrock model access for *Claude 3.7 Sonnet* (and optionally *3.5 Haiku*) in your Region
-		- An Okta-backed IAM role allowing `bedrock:InvokeModel`
-		- Local Git checkout of your monorepo
+		- ### Your Responsibilities and Prerequisites
+			- #### Follow [[AWS/Okta Keyman/How To/Install and Configure for Bedrock]]
+				- The above how-to guide is a prerequisite for this one.
+			- **Before** starting this how-to guide, you should **already** have these things **available** as [[CLI commands]]:
+				- [[NodeJS]] 18+ and [[npm]]
+				- [[aws_okta_keyman]] (which was required for the how-to guide above)
+			- You should also have a git repository already created which has a project you want to work on with claude code
 	- ## Steps
-		- ### 1. Install tools
-			- ~~~
-			  npm install -g @anthropic-ai/claude-code       # Claude Code CLI
-			  pip install --user aws-okta-keyman             # Okta → AWS STS helper
-			  ~~~
-			- `aws_okta_keyman` produces short-lived `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_SESSION_TOKEN` for any role your Okta account exposes ([aws_okta_keyman GitHub](https://github.com/nathan-v/aws_okta_keyman)).
-		- ### 2. Assume the Bedrock-enabled role
-			- ~~~
-			  aws_okta_keyman --role arn:aws:iam::<acct>:role/BedrockInvokeRole
-			  # follow MFA prompts; creds land in ~/.aws/credentials under [default]
-			  ~~~
-			- *Alternatively*, wrap the entire Claude session:
-				- ~~~
-				  aws_okta_keyman --command "claude"
-				  ~~~
-		- ### 3. Verify the temporary credentials
-			- ~~~
-			  aws sts get-caller-identity
-			  aws bedrock list-foundation-models --region us-east-1 | grep claude
-			  ~~~
+		- ### 1. Install tools - [[Claude Code]]
+			- `npm install -g @anthropic-ai/claude-code`
 		- ### 4. Tell Claude Code to use Bedrock
 			- ~~~
 			  export CLAUDE_CODE_USE_BEDROCK=1

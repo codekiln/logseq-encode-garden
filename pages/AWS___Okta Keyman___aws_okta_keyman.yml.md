@@ -1,1 +1,1 @@
-- minimal test: `uvx aws_okta_keyman --role $AWS_ROLE && aws bedrock list-foundation-models --region us-east-1 --profile $AWS_PROFILE --no-cli-pager | jq -r '.modelSummaries[].modelId' | grep claude`
+-

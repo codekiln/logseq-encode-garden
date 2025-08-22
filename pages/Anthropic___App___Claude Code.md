@@ -2,6 +2,7 @@ alias:: [[Claude Code]]
 
 - # [Claude Code overview - Anthropic](https://docs.anthropic.com/en/docs/claude-code/overview)
 	- ## Todos
+	  collapsed:: true
 		- TODO create [[Diataxis/How To]] guide [[Anthropic/App/Claude Code/How To/Save and Restore Session History]] after reading through options at [[Anthropic/App/Claude Code/Docs/Memory Management]]
 		  id:: 682c815f-e2a5-429b-b5cb-a033598ac14e
 			- done
@@ -24,6 +25,7 @@ alias:: [[Claude Code]]
 		  id:: 682c8543-8869-4d54-a1ff-04c296c08f9a
 		- TODO get or create a #Bug ticket at [[Anthropic/App/Claude Code/GitHub]] related to the session timeout of [[AWS/Bedrock]] via [[AWS SSM]]
 	- ## [[My Notes]]
+	  collapsed:: true
 		- ### [[2025-05-23 Fri]]
 			- updated to [[Anthropic/App/Claude Code/v/1/0/2]]. Had a few issues with #AWS/Bedrock authentication but eventually (after enough restarting), managed to get it to work without changing anything.
 		- ### [[2025-05-21 Wed]]
