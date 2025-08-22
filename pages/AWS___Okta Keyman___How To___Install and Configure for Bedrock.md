@@ -97,7 +97,7 @@ tags:: [[Diataxis/How To]]
 				  ...
 				  ```
 			- If you don't, contact your DevOps team and let them know what you did.
-		- ### 4. Verify that Okta will let you execute one of the models
+		- ### 5. Verify that Okta will let you execute one of the models
 			- You may need to substitute the `--model-id` parameter for one of the ones you had in the list-out above.
 			- ```
 			  aws bedrock-runtime invoke-model \
