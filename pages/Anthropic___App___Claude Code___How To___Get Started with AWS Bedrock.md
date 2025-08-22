@@ -7,12 +7,13 @@ tags:: [[Diataxis/How To]]
 			- 1 - start [[Claude Code]] and demonstrate that it is able to use your organization's AWS Bedrock connection to utilize [[Anthropic/Model]]s such as [[Claude 3.5 Sonnet]] and [[Claude 3.7 Sonnet]] and [[Anthropic/Model/Claude/3.5/Haiku]].
 	- ## Prerequisites
 		- ### Your Responsibilities and Prerequisites
-			- #### Follow [[AWS/Okta Keyman/How To/Install and Configure for Bedrock]]
+			- #### 1 - Follow [[AWS/Okta Keyman/How To/Install and Configure for Bedrock]]
 				- The above how-to guide is a prerequisite for this one.
-			- **Before** starting this how-to guide, you should **already** have these things **available** as [[CLI commands]]:
+			- #### 2 - **Before** starting this how-to guide, you should **already** have these things **available** as [[CLI commands]]:
 				- [[NodeJS]] 18+ and [[npm]]
 				- [[aws_okta_keyman]] (which was required for the how-to guide above)
-			- You should also have a git repository already created which has a project you want to work on with claude code
+			- #### 3 - You should have a git repository with code you want to work on with claude code
+				- This guide assumes you already have a git repo you want to work on. You can create a new one right now, if you wish, but how to do that is not described here.
 	- ## Steps
 		- ### 1. Install tools - [[Claude Code]]
 			- `npm install -g @anthropic-ai/claude-code`
