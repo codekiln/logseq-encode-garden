@@ -1,0 +1,147 @@
+tags:: [[AI Coding]], [[Context Engineering]], [[AI Agents]], [[YouTube]], [[YC/Conference/Context Eng/25]] 
+created-by:: [[Person/Dexter Horthy]]
+
+- # [Advanced Context Engineering for Agents - YouTube](https://www.youtube.com/watch?v=IS_y40zY-hc)
+	- ## [[Video]]
+		- {{video https://www.youtube.com/watch?v=IS_y40zY-hc}}
+			- ### {{youtube-timestamp 0}} Introduction and Background
+				- **Speaker**: [[Person/Dexter Horthy]] [[Role/Founder]] of [[humanlayer]] (YC Fall 24 batch)
+				- **Context Engineering History**:
+					- Wrote "12 Factor agents - principles of reliable LLM applications" manifesto [[2025-04-22 Tue]] - [[humanlayer/GitHub/12-factor-agents]]
+					- Term "context engineering" coined on June 4th
+					- Talk titled "12 factor agents" at AI Engineer conference
+				- **Current Focus**: Moving beyond basic context engineering to advanced techniques for coding agents
+			- ### {{youtube-timestamp 55}} Industry Insights and Challenges
+				- #### Favorite Talks from [[AI/Engineer/World's Fair/25]] {{youtube-timestamp 55}}
+					- Context eng: [[Person/Dexter Horthy/YouTube/25/07/12-factor-agents]] 
+					  Spec driven coding: [[Person/Sean Grove/YouTube/25/07/The New Code]]
+					  Dev Productivity: [[Person/Yegor Denisov-Blanch/YouTube/25/07/Does AI Boost Developer Productivity - 100k Devs Study - Stanford]]
+				- #### Sean Grove's "New Code" Talk - [[Person/Sean Grove/YouTube/25/07/The New Code]]
+					- **Vibe Coding Problem**: Sitting with agents for hours specifying requirements then discarding prompts
+					- **Analogy**: Like Java developers committing compiled JARs instead of source code
+					- **Key Insight**: In AI-driven development, specifications and descriptions become the important artifacts
+				- #### Stanford Study Findings [[Person/Yegor Denisov-Blanch/YouTube/25/07/Does AI Boost Developer Productivity - 100k Devs Study - Stanford]]
+					- **Research Scope**: 100,000 developers across enterprises and startups
+					- **Key Finding**: AI engineering leads to significant rework
+					- **Limitations**:
+						- Doesn't work well for complex or brownfield tasks
+						- Can be counterproductive for legacy codebases
+						- May actually slow down development in some cases
+			- ### {{youtube-timestamp 154}} Personal Journey and Transformation
+				- #### Forced Adoption of Spec-First Development
+					- **Challenge**: Working with AI coder producing 20,000-line Go PRs
+					- **Complexity**: Systems code with race conditions, shutdown order, etc.
+					- **Solution**: Adopted specification-first development approach
+					- **Transformation**: 8-week process from code review to spec review
+				- #### Current Workflow
+					- **Success Metrics**: Shipped 6 PRs in one Thursday
+					- **No Code Files**: Haven't opened non-markdown files in editor for 2 months
+					- **Focus**: Reading tests and specs instead of every line of code
+			- ### {{youtube-timestamp 206}} Advanced Context Engineering Goals
+				- #### Core Objectives
+					- Works well in big, complex codebases
+					- Solves big, complex problems
+					- No slop - production-ready code
+					- Team stays aligned
+					- Maximize token usage efficiently
+				- #### Naive Approach Problems
+					- Shouting back and forth until context exhaustion
+					- Giving up or crying from frustration
+					- Inefficient iteration cycles
+			- ### {{youtube-timestamp 258}} Intentional Compaction Strategy
+				- #### When to Start Over
+					- **Signs**: Agent going off track, making repeated mistakes
+					- **Strategy**: Stop and restart with fresh context
+					- **Steering**: Add specific guidance about what not to repeat
+				- #### Context Management
+					- **Avoid**: `/compact` command (considered ineffective)
+					- **Preferred**: Write progress files for context transfer
+					- **Purpose**: Onboard next agent into ongoing work
+				- #### Context Window Optimization
+					- **Space Consumers**: File searching, flow understanding, edits, MCP tool responses
+					- **Focus**: Intentional compaction of progress and status
+			- ### {{youtube-timestamp 307}} Context Engineering Principles
+				- #### LLM as Pure Functions
+					- **Key Insight**: Only input quality improves output quality
+					- **Context Window**: Critical for agent decision-making
+					- **Agent Loops**: Constantly determining next tool/action
+				- #### Optimization Priorities
+					- **Correctness**: Ensure information accuracy
+					- **Completeness**: Include all necessary details
+					- **Size**: Keep context manageable
+					- **Trajectory**: Maintain direction (vibes-based)
+				- #### Context Quality Equation
+					- **Worst**: Bad information
+					- **Second Worst**: Missing information
+					- **Third**: Too much noise
+					- **Target**: ~170,000 tokens with efficient usage
+			- ### {{youtube-timestamp 405}} Sub-Agents and Context Control
+				- #### Sub-Agent Strategy
+					- **Purpose**: Context control and delegation
+					- **Common Use**: Finding files, understanding information flow
+					- **Workflow**: Parent agent calls sub-agent, gets focused results
+					- **Benefit**: Parent avoids context burden of searching/reading
+				- #### Sub-Agent Challenges
+					- **Telephone Problem**: Information distortion through delegation
+					- **Prompting Complexity**: How to instruct parent to instruct child
+					- **Deterministic vs Non-deterministic**: Chaos in complex systems
+			- ### {{youtube-timestamp 452}} Frequent Intentional Compaction
+				- #### Development Workflow Phases
+					- **Research**: Understand system, identify relevant files, locate problems
+					- **Plan**: Specify all changes, testing strategy, verification steps
+					- **Implement**: Execute the plan with code generation
+				- #### Context Management Target
+					- **Goal**: Keep context utilization under 40%
+					- **Strategy**: Constant plan updates and context refresh
+					- **Benefit**: Fresh context window for each phase
+				- #### Research and Planning Prompts
+					- **Research Output**: File names, line numbers, system understanding
+					- **Planning Output**: Change specifications, testing approach, verification steps
+					- **Open Source**: All prompts available publicly
+			- ### {{youtube-timestamp 548}} Implementation and Code Review
+				- #### Workflow Benefits
+					- **Efficiency**: Good plans eliminate need for agent shouting
+					- **Quality**: Plans are shorter than code but catch problems early
+					- **Human Review**: Research files easier to review than 2000-line PRs
+				- #### Code Review Purpose
+					- **Mental Alignment**: Keep team aware of system changes
+					- **Efficiency**: Review 200-line plans vs 2000-line code
+					- **Early Problem Detection**: Catch issues before implementation
+			- ### {{youtube-timestamp 593}} Real-World Validation
+				- #### BAML Codebase Challenge
+					- **Scope**: 300,000-line Rust codebase
+					- **Approach**: One-shot fix attempt
+					- **Result**: PR merged successfully
+					- **Validation**: Works in brownfield codebases, no slop
+				- #### Complex Problem Solving
+					- **Challenge**: Adding WASM support to programming language
+					- **Time**: 7 hours with Boundary CEO
+					- **Output**: 35,000 lines of code
+					- **Efficiency**: 1-2 weeks of work compressed to 7 hours
+				- #### Key Insight Hierarchy
+					- **Bad Code Line**: One bad line
+					- **Bad Plan**: Hundreds of bad lines
+					- **Bad Research**: Thousands of bad lines
+					- **Focus**: Spend time on problem specification and system understanding
+			- ### {{youtube-timestamp 650}} Results and Team Transformation
+				- #### Success Metrics
+					- **Token Usage**: Significant monthly consumption (team of 3)
+					- **Efficiency**: Worth the cost due to time savings
+					- **Team Growth**: Intern shipped 2 PRs first day, 10 PRs by day 8
+				- #### Workflow Transformation
+					- **Code Review**: No longer reading code, only specs
+					- **Team Adoption**: New communication and work structuring methods
+					- **Scalability**: Working with 6-person startups to 1000-person public companies
+			- ### {{youtube-timestamp 696}} Future Outlook and Next Steps
+				- #### Industry Trends
+					- **Coding Agents**: Becoming commoditized
+					- **Team Transformation**: The hard part of adoption
+					- **Communication**: New ways of structuring work
+				- #### Human Layer's Role
+					- **Support**: Helping teams figure out new workflows
+					- **Events**: Hyperengineering event (near capacity)
+					- **Content**: 90-minute video with Vibbov discussing BAML challenge
+				- #### Final Message
+					- **Urgency**: Figure this out or face difficulties
+					- **Opportunity**: Advanced context engineering for coding agents
+					- **Resources**: QR code with all materials and links

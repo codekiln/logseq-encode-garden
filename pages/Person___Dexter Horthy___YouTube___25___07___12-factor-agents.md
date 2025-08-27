@@ -1,0 +1,180 @@
+tags:: [[humanlayer/GitHub/12-factor-agents]], [[AI/Engineer/World's Fair/25/YouTube]] 
+created-by:: [[Person/Dexter Horthy]]
+
+- # [12-Factor Agents: Patterns of reliable LLM applications — Dex Horthy, HumanLayer - YouTube](https://www.youtube.com/watch?v=8kMaTybvDUw)
+	- ## [[Video]]
+		- {{video https://www.youtube.com/watch?v=8kMaTybvDUw}}
+			- ### {{youtube-timestamp 1}} Introduction and Personal Journey with Agents
+				- Opening question about agent building experience:
+					- "Who here's building agents? Who here's your hand up if you built like 10 plus agents? Anyone here built like a hundred agents?"
+				- Personal experience with agent development:
+					- Started with excitement and rapid development using libraries
+					- Reached 70-80% completion, enough to get CEO excited and expand team
+					- Realized quality limitations and complexity of debugging deep call stacks
+					- Often had to start from scratch or abandon projects
+				- Example of failed DevOps agent:
+					- Attempted to build agent for running make commands
+					- Agent couldn't figure out correct order of operations
+					- Spent hours adding detail to prompts until it became a step-by-step script
+					- Realization: "I could have written the bash script to do this in about 90 seconds"
+					- Key insight: "Not every problem needs an agent"
+			- ### {{youtube-timestamp 108}} Research and Pattern Discovery
+				- Interviewed 100+ founders, builders, and engineers
+				- Key findings:
+					- Most production agents weren't very agentic
+					- They were mostly just software with specific patterns
+					- No one was doing complete rewrites
+					- People were applying small, modular concepts to existing code
+				- Comparison to cloud development evolution:
+					- Similar to how Heroku defined cloud-native patterns 10 years ago
+					- "This is software engineering 101... probably not 101, but just like Heroku needed to define what it meant to build cloud"
+				- Creation of 12-factor agents framework:
+					- Based on field observations and working patterns
+					- GitHub repository gained significant traction
+					- 4,000 stars in a month, 14 active contributors
+					- Featured on Hacker News front page, 200k social impressions
+			- ### {{youtube-timestamp 210}} Core Principles and Factor Analysis
+				- Factor 1: LLM's Core Capability
+					- "The most magical things that LLMs can do has nothing to do with loops or switch statements or code or tools or anything"
+					- Key ability: "turning a sentence like this into JSON that looks like this"
+					- Foundation for other factors
+				- Factor 4: Tool Use and Control Flow
+					- Controversial statement: "tool use is harmful" (in quotes)
+					- Clarification: Not about giving agents access to the world
+					- Issue: Treating tool use as "magical thing where this ethereal alien entity is interacting with its environment"
+					- Reality: "our LLM is putting out JSON. We're going to give that to some deterministic code that's going to do something"
+					- Solution: "If you have structures like this and you can get the LLM to output something that generates them, then you can pass it into a loop like this or a switch statement like this"
+					- Conclusion: "There's nothing special about tools. It's just JSON and code"
+			- ### {{youtube-timestamp 302}} Control Flow and State Management
+				- Factor 8: Owning Your Control Flow
+					- Historical context: "We've been writing DAGs in software for a long time"
+					- "If you've written an if statement, you've written a directed graph. Code is a graph"
+					- DAG orchestration tools: Airflow, Prefect
+					- Agent promise: "You don't have to write the DAG. You just tell the LLM, here's the goal, and LLM will find its way there"
+				- Simple Agent Loop Model:
+					- Event comes in → passed to prompt
+					- LLM determines next step (API call, etc.)
+					- Result added to context window
+					- Process repeats until completion
+					- Materialized DAG shows actual steps taken
+				- Problems with simple approach:
+					- Doesn't work well with longer workflows
+					- Long context windows cause issues
+					- "You can do it. The API will return you something. But I don't think anyone will argue with you that you will always get like tighter, better, higher reliability results by controlling and limiting the number of tokens you put in that context window"
+			- ### {{youtube-timestamp 399}} Advanced Control Flow and State Management
+				- Agent Architecture Components:
+					- Prompt with step selection instructions
+					- Switch statement for handling model output JSON
+					- Context window building mechanism
+					- Loop controlling exit conditions
+				- Control Flow Ownership Benefits:
+					- Can implement break, switch, summarize
+					- LLM as judge functionality
+					- Execution state management
+				- State Management Types:
+					- Execution state: current step, next step, retry counts
+					- Business state: messages, user data, approval status
+				- REST API Integration:
+					- Normal request comes in
+					- Context window loaded for LLM
+					- Agent can call long-running tools
+					- Workflow can be interrupted and serialized to database
+					- State can be resumed with state ID
+			- ### {{youtube-timestamp 491}} Prompt Engineering and Context Management
+				- Factor 2: Owning Your Prompts
+					- Good extractions can provide primitives and good prompts
+					- "This will make you a banger prompt that like you would have to go to prompt school for like three months to build a prompt this good"
+					- Quality requirement: "Eventually if you want to get past some quality bar, you're going to end up writing every single token by hand"
+					- LLM characteristics: "LLMs are pure focus functions and the only thing that determines the reliability of your agent is how good of tokens can you get out"
+					- Token optimization: "The only thing that determines the tokens you get out... is being really careful about what tokens you put in"
+				- Context Window Ownership:
+					- Can use standard OpenAI messages format
+					- Flexibility in modeling event state and thread model
+					- Custom stringification options
+					- Importance of token density and clarity
+				- Core principle: "LLMs are pure functions, token in, tokens out, and everything in making agents good is context engineering"
+				- Context components: prompt, memory, RAG, history
+			- ### {{youtube-timestamp 581}} Error Handling and Human Integration
+				- Error Handling Strategy:
+					- When model makes mistakes (wrong API calls, API down)
+					- Take tool call and associated error
+					- Put error on context window for retry
+					- Problem: "Anyone ever had a bad time with this? Seen like this thing just like kind of spin out and like go crazy and lose context and just get stuck"
+				- Context Window Management:
+					- Don't blindly add things to context
+					- Clear pending errors when getting valid tool calls
+					- Summarize errors instead of full stack traces
+					- "Figure out what you want to tell the model so you get better results"
+				- Factor: Contacting Humans with Tools
+					- Subtle but important choice at output beginning
+					- Decision between tool call and message to human
+					- Push emphasis to natural language tokens
+					- Benefits:
+						- Give model different ways to communicate
+						- Push intent generation to natural language
+						- Model better understands natural language
+				- Human Integration Examples:
+					- "I'm done" or "I need clarification" or "I need to talk to a manager"
+					- Enables auto-outloop agents
+					- Integration with existing platforms: email, Slack, Discord, SMS
+			- ### {{youtube-timestamp 725}} Micro-Agents and Practical Implementation
+				- Small Focused Agents:
+					- Alternative to complex agent structures
+					- "The things that people are doing that work really well are micro agents"
+					- Mostly deterministic DAG with small agent loops (3-10 steps)
+				- HumanLayer Deployment Example:
+					- Bot manages deployments
+					- Most pipeline is deterministic CI/CD code
+					- LLM handles deployment decisions after PR merge and tests pass
+					- Human approval for deployment order
+					- Agent can adapt based on human feedback
+					- Returns to deterministic code for end-to-end testing
+				- Rollback Agent:
+					- Similar structure for handling failures
+					- Manages rollback process
+				- Benefits of Micro-Agents:
+					- 100 tools, 20 steps, manageable
+					- Manageable context, clear responsibilities
+			- ### {{youtube-timestamp 775}} Future of Agent Development and Framework Philosophy
+				- Evolution Path:
+					- Start with mostly deterministic workflows
+					- Sprinkle LLMs into code, backend, logic
+					- Over time, LLMs handle bigger, more complex tasks
+					- Eventually entire API endpoints or pipelines run by agents
+				- Quality Engineering:
+					- "Find something that is right at the boundary of what the model can do reliably"
+					- "If you can figure out how to get it right reliably anyways because you've engineered reliability into your system then you will have created something magical"
+				- Stateless Design:
+					- "Agents should be stateless. You should own the state, manage it however you want"
+					- State ownership provides flexibility
+				- Framework Philosophy:
+					- Not anti-framework, but pro-flexibility
+					- "What agents need is not bootstrap. You don't need a wrapper around an internal thing"
+					- Need something like shadcn: scaffolded out then you own the code
+			- ### {{youtube-timestamp 867}} Summary and Key Takeaways
+				- Core Principles:
+					- "Agents are software. You all can build software"
+					- "LLMs are stateless functions, which means just make sure you put the right things in the context and you'll get the best results"
+					- "Own your state and your control flow and just do it and just understand it because it's going to give you flexibility"
+				- Quality Focus:
+					- "Find the bleeding edge. Find ways to do things better than everybody else by really curating what you put in the model and how you control what comes out"
+				- Human Collaboration:
+					- "My tech agents are better with people. Find ways to let agents collaborate with humans"
+				- Framework Philosophy:
+					- "I think a lot of frameworks try to take away the hard AI parts of the problem so that you can just kind of drop it in and go"
+					- "I think it should be the opposite. I think the tools that we get should take away the other hard parts so that we can spend all our time focusing on the hard AI parts"
+				- Focus areas: getting prompts right, getting flow right, getting tokens right
+			- ### {{youtube-timestamp 913}} Business Context and Future Work
+				- HumanLayer Business:
+					- Small startup helping with agent development
+					- Open source approach: "We do a lot of what we do in the open is open source and I think it's really important and we need to work on it together"
+				- A2 Protocol:
+					- Working on consolidation around agent-human contact methods
+					- "This is a way to get like consolidation around how agents can contact humans"
+				- Personal Automation:
+					- Built many agents for personal use
+					- Examples: finding apartments, internal business processes
+				- Closing Message:
+					- "Thank you all for watching. Let's go build something"
+					- Available for hallway track discussions about agents, building, control flow
+					- "That's 12-factor agents"

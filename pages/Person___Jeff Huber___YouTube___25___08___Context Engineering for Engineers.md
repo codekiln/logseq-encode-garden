@@ -1,0 +1,131 @@
+created-by:: [[Person/Jeff Huber]]
+
+- # [Context Engineering for Engineers - YouTube](https://www.youtube.com/watch?v=3jN77Aw7Utk&list=PL5q_lef6zVkb2j0SjbqFWLUdTTvkEnfaL&index=4)
+	- ## [[Video]]
+		- {{video https://www.youtube.com/watch?v=3jN77Aw7Utk&list=PL5q_lef6zVkb2j0SjbqFWLUdTTvkEnfaL&index=4}}
+			- ### {{youtube-timestamp 0}} Introduction and Background
+				- Jeff Huber introduces himself as founder of [[Chroma]]
+					- "my name is Jeff and I'm the founder of Chroma"
+					- "Chroma for those of you who don't know builds a search and retrieval database"
+				- AI systems as programs:
+					- "one way that we think about what really is happening inside of an AI system is that it is ultimately just a program"
+					- Components: instruction set, relevant information and tools, user input, magic box, output
+					- "this is just very much a program"
+					- "though people may want to sell this to you as a techno machine god, we believe it is ultimately just software"
+			- ### {{youtube-timestamp 63}} Context Engineering vs. Buzzwords
+				- Preference for "context engineering" over "prompt engineering" or "RAG"
+					- "context engineering is a much better term than prompt engineering or rag"
+					- Criticism of AI buzzwords and thought leaders
+					- "every week there's some new AI thought boy with their head explode emoji going crazy over some new technique"
+				- Definition of context engineering:
+					- "It is quite simply deciding what's in the context window"
+					- "That includes the prompt. That may include retrieval depending on the use case"
+				- Implications for the field:
+					- "context engineering implies the existence of context engineers"
+					- "Maybe even context engineering implies the existence of a context engine"
+			- ### {{youtube-timestamp 114}} Building Reliable AI Software
+				- Shared goal of building reliable software:
+					- "Our shared goal is to build reliable software"
+					- "this new software has some new abilities and primitives that prior software didn't"
+				- AI system requirements:
+					- "AI can be useful if you give it the right context"
+					- Systems should be "reliable, fast and cheap"
+				- Development approach:
+					- "make it work, make it fast, make it cheap"
+					- "probably today most people are still on stage one... how do we make it reliable?"
+			- ### {{youtube-timestamp 169}} Long Context Limitations
+				- Current context window challenges:
+					- "Anthropic just announced a couple days ago their million token context limit model"
+					- "there was a certain language model lab that released a model that 10 million tokens"
+					- "startups raise half a billion dollars for 100 million billion infinite tokens"
+				- Reality check:
+					- "unfortunately that doesn't work yet"
+					- "Maybe it'll never work. Maybe it'll work next year. We don't know yet"
+					- "as the room is full of engineers and builders, we want to know what works today"
+				- Chroma's technical report findings:
+					- "model performance as an input of token length goes down precipitously"
+					- "the blue dot at the far bottom right hand corner is 10,000 tokens"
+					- Performance degradation occurs much sooner than expected
+			- ### {{youtube-timestamp 226}} Needle in Haystack Problem
+				- Limitations of "needle in haystack" tests:
+					- "needle in haystack is solved across all the different token dimensions"
+					- "needle in a haystack is a very easy task"
+				- Why it's easy:
+					- "the model only has to pay attention to a needle by definition"
+					- "it doesn't have to pay attention to lots of the context window, only the needle"
+					- "the reasoning power is basically zero"
+				- Example task:
+					- Question: "what was the best writing advice I got from my college classmate?"
+					- Needle: "the best writing advice I got from my college classmate was to write every week"
+					- "the reasoning power required to make that match is basically zero"
+				- Task difficulty framework:
+					- Left axis: amount of context window the model has to pay attention to
+					- Bottom axis: difficulty or reasoning power required
+					- "most interesting things people are doing with language models today require either more context or more reasoning or both"
+			- ### {{youtube-timestamp 279}} Context Curation Benefits
+				- Performance comparison: full context vs. focused context
+					- "if you were to give the model full context versus focus context"
+					- "focus context in this case is Oracle... human curated"
+					- "massive gains in performance by curating context"
+				- Key principle: "You should curate your context"
+				- Context engineering goals:
+					- "find the relevant information"
+					- "remove the irrelevant information"
+					- "optimize the relevant information"
+				- Core problem: "out of all the information in the universe what information should be in the context window this time"
+			- ### {{youtube-timestamp 330}} Gather and Glean Framework
+				- Two-stage approach:
+					- Stage 1: "maximize recall... get all possible relevant tokens or information even at the risk of getting information that's not relevant"
+					- Stage 2: "maximize precision... remove and call out and cut out all of the irrelevant information"
+				- Current developer pipeline:
+					- Query comes in from user
+					- LLM creates query plan
+					- Multiple search probes across different data sources
+					- "Maybe it creates 10 different search probes or 30 different search probes across structured data SQL queries APIs and tools unstructured data like data in Chroma"
+			- ### {{youtube-timestamp 380}} Data Sources and Gleaning Techniques
+				- Data gathering sources:
+					- "structured data unstructured data local file system tools"
+					- "other kinds of tools like MCP tools web search your chat conversation history"
+				- Gleaning approaches:
+					- "top k on vector similarity... that's usually people's first pass"
+					- "reciprocal rank fusion or RRF"
+					- "LTR learning to rank as sort of an OG information retrieval technique"
+					- "dedicated reranking models"
+					- "increasingly just LLMs"
+				- Modern approach: "brute forcing search instead of trying to get super fancy about it"
+					- "just use more intelligence like spend more money on tokens"
+					- "You can use small fast cheap models and use a lot of them and use a lot of them in parallel"
+			- ### {{youtube-timestamp 429}} Context Engineering for Agents
+				- Agent complexity:
+					- "you're not just doing this gathering glean task once"
+					- "you're doing this gathering glean task many times conceptually"
+					- "inside of sub agents and the sub agents are getting judged by the orchestrator"
+				- Additional context factors:
+					- "agent conversation and history as a major factor in the context window"
+					- "prompt histories can be really, really big"
+				- Swebench example:
+					- "this is an example from Swebench of like the code and logs generated from like one, a couple turns of Swebench"
+					- "what human could possibly parse this and make sense of it is insanely large"
+			- ### {{youtube-timestamp 529}} Learning from Past Experiences
+				- Impact of past failure cases:
+					- "if you give the agent access to past failure cases, it helps improve agent performance"
+					- "the agent seems to be able to break out of these like local minimas where it commonly gets trapped"
+				- Impact of past success cases:
+					- "it wasn't really a slam dunk to give the agent access to prior success cases"
+					- "in many cases, it seemed like the agent would slip into a local minima and kind of just like pattern match and get lazy"
+					- "Oh, you already gave me the answer. Thank you. I'll just say that back"
+				- Community approach needed:
+					- "it's important to create a community around this idea of context engineering so we can all solve these problems together"
+			- ### {{youtube-timestamp 579}} Context Compaction Challenges
+				- Importance of compaction:
+					- "compaction is a really important point of leverage"
+					- "how do you distill down for the next turn of the model compassion is so important"
+				- Current approaches don't work well:
+					- "today's approaches don't really work"
+					- "the difference between no summary and the compaction coming out of like open code for example is negligible"
+					- "you can basically throw away that compaction entirely"
+				- Better compaction with improved prompts:
+					- "if you do a smarter compaction with a better prompt it can be much better"
+			- ### {{youtube-timestamp 622}} Conclusion
+				- Thank you message: "thank you very much for listening. I'm Jeff"
+				- Music plays to end the presentation
