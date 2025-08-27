@@ -90,13 +90,16 @@ created-by:: [[Person/Dexter Horthy]]
 					- **Research**: Understand system, identify relevant files, locate problems
 					- **Plan**: Specify all changes, testing strategy, verification steps
 					- **Implement**: Execute the plan with code generation
-				- #### Context Management Target
+				- #### Context Management Target {{youtube-timestamp 540}}
 					- **Goal**: Keep context utilization under 40%
 					- **Strategy**: Constant plan updates and context refresh
 					- **Benefit**: Fresh context window for each phase
-				- #### Research and Planning Prompts
+				- #### 3 phases - Research, Plann, Implement, each with a prompt
 					- **Research Output**: File names, line numbers, system understanding
+						-
 					- **Planning Output**: Change specifications, testing approach, verification steps
+						- "Tell me every single change you're going to make"
+						- "Be very specific about how we're going to implement"
 					- **Open Source**: All prompts available publicly
 			- ### {{youtube-timestamp 548}} Implementation and Code Review
 				- #### Workflow Benefits
