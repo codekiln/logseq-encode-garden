@@ -91,7 +91,7 @@ created-by:: [[Person/Dexter Horthy]]
 					- **Plan**: Specify all changes, testing strategy, verification steps
 					- **Implement**: Execute the plan with code generation
 				- #### Context Management Target {{youtube-timestamp 540}}
-					- **Goal**: Keep context utilization under 40%
+					- **Goal**: ==Keep context utilization under 40%==
 					- **Strategy**: Constant plan updates and context refresh
 					- **Benefit**: Fresh context window for each phase
 				- #### 3 phases - Research, Plann, Implement, each with a prompt
@@ -99,7 +99,7 @@ created-by:: [[Person/Dexter Horthy]]
 						-
 					- **Planning Output**: Change specifications, testing approach, verification steps
 						- "Tell me every single change you're going to make"
-						- "Be very specific about how we're going to implement"
+						- "Be very specific about how we're going to implement
 					- **Open Source**: All prompts available publicly
 			- ### {{youtube-timestamp 548}} Implementation and Code Review
 				- #### Workflow Benefits
