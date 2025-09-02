@@ -91,6 +91,7 @@ created-by:: [[Person/Dexter Horthy]]
 					- **Plan**: Specify all changes, testing strategy, verification steps
 					- **Implement**: Execute the plan with code generation
 				- #### Context Management Target {{youtube-timestamp 540}}
+				  id:: 68aed1f2-88ef-4d4e-9e71-e6822d6be819
 					- **Goal**: ==Keep context utilization under 40%==
 					- **Strategy**: Constant plan updates and context refresh
 					- **Benefit**: Fresh context window for each phase
