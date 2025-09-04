@@ -1,0 +1,12 @@
+# Learn Live [[Ableton/Linked-Track Editing]] - [YouTube](https://www.youtube.com/watch?v=UuRDpqBsmD0)
+	- ## #Video
+		- {{video https://www.youtube.com/watch?v=UuRDpqBsmD0}}
+			- {{youtube-timestamp 0}} In this video, we're going to take a look at linked tracks. Using the Link Track feature allows you to adjust multiple tracks to edit or adjust parameters. A great use for this feature is when you've recorded multiple sources at the same time.
+			- {{youtube-timestamp 17}} So for example, in this case, I have a multi mic recording of some drums in this project. Linking tracks is a very simple procedure in the arrangement view. All I have to do is select the tracks I'd like to link together,
+			- {{youtube-timestamp 33}} right click to access the context menu and select Link Tracks. When tracks have been successfully linked together, there's a small icon indicating linked tracks in the top right-hand corner of each track.
+			- {{youtube-timestamp 46}} Now, if I go into my Arrangement View and select any of the clips from the linked tracks, all of the linked tracks are highlighted. With the tracks linked, you can now perform all kinds of edits to all the linked tracks. For example... Splitting and deleting selections.
+			- {{youtube-timestamp 73}} Reversing selections. Or adding cross-fades and fades. And even renaming selections. You can also manipulate warp markers and warp parameters of all linked tracks. Another great feature of Linked Tracks is the ability to adjust parameters in the mixer section.
+			- {{youtube-timestamp 116}} By selecting one of the tracks in a Link Track selection, you're able to adjust the mixer parameters of that particular track. In this state, you can continue to work on other individual tracks and adjust their mixer parameters.
+			- {{youtube-timestamp 140}} If you wish to work on all of the linked tracks at the same time, simply click on the Link Track icon and adjust their parameters. This allows for a great amount of flexibility for you to either adjust individual parameters in the mixer section,
+			- {{youtube-timestamp 157}} or adjust them all collectively together. Not only can you link together Audio tracks, but you can also link together MIDI tracks. or a combination of MIDI and Audio tracks. As a final technique, Link Tracks can also be used to comp together
+			- {{youtube-timestamp 184}} several takes from several tracks simultaneously.
