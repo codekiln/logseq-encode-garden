@@ -21,6 +21,11 @@
  "../tools/my-logseq-tooling/README.md",
  "../.ai-coding/spec.md",
  "../.ai-coding/README.md",
+"../CLAUDE.md",
+"../journals/CLAUDE.md",
+"../pages/CLAUDE.md",
+"../tools/CLAUDE.md",
+"../.ai-coding/CLAUDE.md",
 ]
 
  ;; Define the default journal page template.
