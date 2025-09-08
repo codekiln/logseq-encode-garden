@@ -1,0 +1,7 @@
+- # Chris Dzombak
+	- ## About
+		- Software engineer and developer
+		- Author of blog post about getting good results from Claude Code
+		- Known for insights on AI coding workflows
+	- ## Links
+		- [[Person/Chris Dzombak/Blog]] https://www.dzombak.com/blog/2025/08/getting-good-results-from-claude-code/

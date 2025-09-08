@@ -1,0 +1,6 @@
+- # Orta Therox
+	- ## About
+		- Developer and writer known for work on React Native and TypeScript
+		- Author of "Six weeks of Claude Code" blog post about AI coding experiences
+	- ## Links
+		- [[Person/Orta Therox/Blog]] https://blog.puzzmo.com/posts/2025/07/30/six-weeks-of-claude-code/

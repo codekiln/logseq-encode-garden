@@ -1,0 +1,7 @@
+- # Indragie Karunaratne
+	- ## About
+		- macOS app developer
+		- Known for building apps entirely using Claude Code
+		- Author of blog post about shipping a macOS app built entirely by Claude Code
+	- ## Links
+		- [[Person/Indragie Karunaratne/Blog]] https://www.indragie.com/blog/i-shipped-a-macos-app-built-entirely-by-claude-code
