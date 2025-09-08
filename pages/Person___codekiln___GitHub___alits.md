@@ -3,7 +3,9 @@ tags:: [[c74/M4L/Idea/Alits]]
 
 - for the summary of the idea, see [[c74/M4L/Idea/Alits]]
 - Work Log
-	-
+	- [[2025-09-08 Mon]]
+		- using [[Person/Brian Madison/BMAD]] to define a project brief; see [alits/docs/brief.md at main · codekiln/alits](https://github.com/codekiln/alits/blob/main/docs/brief.md).
+		- Also, used [[ChatGPT]] to help define a phased implementation plan; see [alits/docs/live-object-model-implementation-phases.md at main · codekiln/alits](https://github.com/codekiln/alits/blob/main/docs/live-object-model-implementation-phases.md)
 	- ((67ab314c-1b42-4801-952b-47266a549059))
 	  collapsed:: true
 		- [[2025-02-12 Wed]]
