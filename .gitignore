@@ -14,3 +14,6 @@ tools/**/*
 .idea
 repomix-*.txt
 repomix-*.xml
+
+# Claude settings
+.claude/settings.local.json
