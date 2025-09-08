@@ -9,7 +9,7 @@
 	  :LOGBOOK:
 	  CLOCK: [2025-02-11 Tue 04:30:21]--[2025-02-11 Tue 05:43:33] =>  01:13:12
 	  :END:
-	- DOING [create `alits-core` package · Issue #23 · codekiln/alits](https://github.com/codekiln/alits/issues/23)
+	- DONE [create `alits-core` package · Issue #23 · codekiln/alits](https://github.com/codekiln/alits/issues/23)
 	  id:: 67ab314c-1b42-4801-952b-47266a549059
 	  :LOGBOOK:
 	  CLOCK: [2025-02-11 Tue 06:15:58]

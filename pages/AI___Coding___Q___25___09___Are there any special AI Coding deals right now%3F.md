@@ -1,0 +1,67 @@
+cgpt-link:: [[AI coding token deals](https://chatgpt.com/c/68be89ad-8cd8-832d-ae1a-6e6da4a9b453) ](https://chatgpt.com/c/68be89ad-8cd8-832d-ae1a-6e6da4a9b453)
+- # Are there any special deals for OpenAI, Google, or Anthropic models right now for open source projects to get AI coding tokens for free or reduced?
+	- ## OpenAI
+		- ### 1. Token Grants for Data Sharing (ending April 30, 2025)
+		- Up to 11 million free tokens per day for eligible organizations that opt in to share prompts and completions:
+			- 1M tokens/day for GPT‑4o, o1, and o1‑preview
+			- 10M tokens/day for GPT‑4o‑mini, o1‑mini, and o3‑mini [^1]
+		- Incentive extended through April 30, 2025, no continuation beyond that confirmed [^1].
+		- Access based on eligibility; not universally granted [^2].
+		- ### 2. Open‑Weight Models: GPT‑OSS
+		- Released in 120B and 20B parameter versions under Apache 2.0 [^3].
+		- Can be freely downloaded and run locally.
+		- Useful for coding tasks without API usage costs.
+		- ### 3. Third‑Party Routing Platforms
+		- OpenRouter and Requesty provide unified APIs with free usage tiers or credits [^4].
+		- Enables experimentation without consuming OpenAI paid tokens.
+	- ## Google
+		- ### 1. Gemini CLI Preview
+		- Open‑source terminal agent using Gemini 2.5 Pro [^5].
+		- Free during preview with 1M token context window.
+		- Quotas: 60 requests/minute, 1,000 requests/day [^5].
+		- ### 2. Gemini Code Assist—Free for Individuals
+		- Free global tier: up to 180,000 code completions/month [^6].
+		- Supports 38 programming languages.
+		- Powered by Gemini 2.0.
+	- ## Anthropic
+		- No official free‑token programs.
+		- Provides Model Context Protocol (MCP) for easier integrations [^7].
+		- Community tools sometimes offer free Claude access during betas (e.g., 5M–20M tokens/day) [^8].
+	- ## Community‑Shared Options & Tools
+		- Cohere: free tier for command‑r and command‑r‑plus [^9].
+		- Anthropic: 2‑week free trial [^9].
+		- OpenRouter: some free models [^9].
+		- Hugging Face + Ollama: free/open alternatives [^9].
+	- ## Summary Table
+		- **OpenAI**:
+			- Open Source / Local Option: GPT‑OSS (120B & 20B)
+			- Free or Discounted Token Incentives: Up to 11M tokens/day via data‑sharing (ends Apr 30, 2025) [^1]
+			- Notes: Eligibility required, uncertain beyond April.
+		- **Google**:
+			- Open Source / Local Option: Gemini CLI (open source)
+			- Free or Discounted Token Incentives: Free preview: 1,000 req/day + Code Assist free tier [^5][^6]
+			- Notes: Generous quotas.
+		- **Anthropic**:
+			- Open Source / Local Option: No open‑weights
+			- Free or Discounted Token Incentives: No official program
+			- Notes: MCP improves Claude integration [^7].
+		- **Third‑Party**:
+			- Open Source / Local Option: OpenRouter, Requesty
+			- Free or Discounted Token Incentives: Free tiers or credits [^4]
+			- Notes: Useful for prototyping.
+	- ## Recommendations for Open‑Source Developers
+		- Run **GPT‑OSS locally or via OpenRouter/Requesty** to avoid token costs.
+		- Enable **OpenAI data sharing** if eligible before April 30, 2025 [^1].
+		- Use **Google Gemini CLI + Code Assist** for strong free coding support [^5][^6].
+		- Monitor **Anthropic** for future programs; leverage MCP for Claude [^7].
+		- Explore **Hugging Face, Cohere, Ollama** for additional free/open options [^9].
+	- ## Footnotes
+		- [^1]: https://community.openai.com/t/free-tokens-on-traffic-shared-with-openai-extended-through-april-30-2025/1129643
+		- [^2]: https://community.openai.com/t/free-tokens-by-helping-improve-openai-models-issue/1094819
+		- [^3]: https://www.theverge.com/openai/718785/openai-gpt-oss-open-model-release
+		- [^4]: https://www.datacamp.com/tutorial/how-to-access-gpt-oss-120b-for-free
+		- [^5]: https://www.theverge.com/news/692517/google-gemini-cli-ai-agent-dev-terminal
+		- [^6]: https://www.theverge.com/news/618839/google-gemini-ai-code-assist-free-individuals-availability
+		- [^7]: https://www.theverge.com/2024/11/25/24305774/anthropic-model-context-protocol-data-sources
+		- [^8]: https://github.com/inmve/free-ai-coding
+		- [^9]: https://www.reddit.com/r/AI_Agents/comments/1jlvb2d

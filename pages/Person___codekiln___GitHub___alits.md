@@ -3,9 +3,9 @@ tags:: [[c74/M4L/Idea/Alits]]
 
 - for the summary of the idea, see [[c74/M4L/Idea/Alits]]
 - Work Log
+	-
 	- ((67ab314c-1b42-4801-952b-47266a549059))
-		- [[2025-04-18 Fri]]
-			-
+	  collapsed:: true
 		- [[2025-02-12 Wed]]
 			- [[CursorAI]]
 				- DONE add [[CursorAI/Project Rule/markdown-output]] to  project
