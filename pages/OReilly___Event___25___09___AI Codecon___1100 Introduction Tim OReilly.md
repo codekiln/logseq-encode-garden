@@ -1,0 +1,12 @@
+- # Introduction – Tim O'Reilly
+	- ## Overview
+		- **Duration**: 10 minutes
+		- **Time**: 11:00
+		- **Speaker**: [[Person/Tim O'Reilly]]
+		- **Event**: [[OReilly/Event/25/09/AI Codecon]]
+	- ## Description
+		- Tim welcomes attendees to "Coding for the Agentic World"
+		- Opening remarks for the AI Codecon event
+	- ## Key Points
+		- Introduction to the agentic AI development landscape
+		- Setting the stage for the day's discussions on agentic interfaces and workflows

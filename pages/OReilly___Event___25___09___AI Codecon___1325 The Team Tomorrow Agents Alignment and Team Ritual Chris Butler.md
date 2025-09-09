@@ -1,0 +1,17 @@
+- # The Team Tomorrow: Agents, Alignment, and Team Ritual – Chris Butler
+	- ## Overview
+		- **Duration**: 15 minutes
+		- **Time**: 13:25
+		- **Speaker**: [[Person/Chris Butler]]
+		- **Event**: [[OReilly/Event/25/09/AI Codecon]]
+		- **Resources**: [PDF](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1757334504676/theteamoftomorrowagentsalignmentandteamritualaicodecon1757334504676.pdf)
+	- ## Description
+		- Exploration of how AI agents will change team dynamics and collaboration
+		- Discussion of alignment challenges when working with AI agents
+		- Focus on team rituals and practices for effective human-AI collaboration
+	- ## Key Topics
+		- Future of team collaboration with AI agents
+		- Alignment strategies for human-AI teams
+		- Team rituals and practices for effective collaboration
+		- Managing human-AI team dynamics
+		- Building successful hybrid human-AI teams

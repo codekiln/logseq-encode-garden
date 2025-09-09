@@ -1,0 +1,17 @@
+- # Death of the Browser – Rachel-Lee Nabors
+	- ## Overview
+		- **Duration**: 15 minutes
+		- **Time**: 12:00
+		- **Speaker**: [[Person/Rachel-Lee Nabors]]
+		- **Event**: [[OReilly/Event/25/09/AI Codecon]]
+		- **Resources**: [PDF](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1757128458670/rebirthoftheweboreilly15min1757128458670.pdf)
+	- ## Description
+		- Exploration of how the internet has become a maze of walled gardens, ad-powered content, and algorithmic manipulation
+		- Discussion of AI agents as the key to putting users back in the driver's seat
+		- How agents can create interfaces that adapt to user needs and preferences while providing privacy and accessibility features
+	- ## Key Topics
+		- Problems with current web browsing experience
+		- AI agents as solution for user control and privacy
+		- Technical implications of the shift from traditional browsers
+		- Emerging technologies for direct content distribution and access
+		- Privacy and accessibility features that traditional browsers can't match

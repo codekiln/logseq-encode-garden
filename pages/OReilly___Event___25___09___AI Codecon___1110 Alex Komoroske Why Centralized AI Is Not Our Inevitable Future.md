@@ -1,0 +1,18 @@
+- 11:10 Why Centralized AI Is Not Our Inevitable Future – [[Person/Alex Komoroske]] (15 minutes)
+	- 1110 Alex Komoroske Why Centralized AI Is Not Our Inevitable Future: [PDF](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1757379799741/alexkomoroskewhycentralizedaiisnotourinevitablefuturev21757379799741.pdf)
+	- [[My Notes]]
+		- 11:11 good point, switching costs go up when one model has more of our personal context
+		- 11:14 "sycosocial" - he makes the claim that when gpt-5 came out, it said "give me back my friend"
+		- 11:14 Resonance and "the quality without a name" from Christopher Alexander, Architect
+		- 11:16 "you should own your context, your digital soul"
+		- 11:16 argument for decentralization
+		- 11:18 "architecture of participation" "view source by default"
+		- 11:18 "The thing that's holding back vibe coding is that not everyone wants to be a PM"
+		- 11:18 he mentions [[CursorAI]] or "Granola" - what's granola here?
+		- 11:20 "Prompt Injection" makes "all text executable"
+		- 11:21 *this guy is thinking big, and I'm here for it*
+		- 11:25 [[Person/Tim O'Reilly]] mentions he's been reading this paper
+			- [AI as Normal Technology | Knight First Amendment Institute](https://knightcolumbia.org/content/ai-as-normal-technology)
+				- By [Arvind Narayanan](/authors/arvind-narayanan) & [Sayash Kapoor](/authors/sayash-kapoor)
+				- April 15, 2025
+				- We articulate a vision of artificial intelligence (AI) as normal technology.

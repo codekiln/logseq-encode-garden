@@ -1,0 +1,17 @@
+- # Designing for AI Agents MCP – Jessica Kerr
+	- ## Overview
+		- **Duration**: 15 minutes
+		- **Time**: 13:55
+		- **Speaker**: [[Person/Jessica Kerr]]
+		- **Event**: [[OReilly/Event/25/09/AI Codecon]]
+		- **Resources**: [PDF](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1757091679028/mcpdesignfororeillybyjessitron1757091679028.pdf)
+	- ## Description
+		- Discussion of design principles for AI agents using Model Context Protocol (MCP)
+		- Exploration of user experience considerations for AI agent interfaces
+		- Focus on creating effective and intuitive AI agent interactions
+	- ## Key Topics
+		- Design principles for AI agents
+		- Model Context Protocol (MCP) design considerations
+		- User experience for AI agent interfaces
+		- Creating intuitive AI agent interactions
+		- Best practices for AI agent design

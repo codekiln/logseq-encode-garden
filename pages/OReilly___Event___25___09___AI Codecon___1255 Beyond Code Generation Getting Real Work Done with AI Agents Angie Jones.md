@@ -1,0 +1,16 @@
+- # Beyond Code Generation: Getting Real Work Done with AI Agents – Angie Jones
+	- ## Overview
+		- **Duration**: 15 minutes
+		- **Time**: 12:55
+		- **Speaker**: [[Person/Angie Jones]]
+		- **Event**: [[OReilly/Event/25/09/AI Codecon]]
+		- **Resources**: [PDF](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1757129649118/angiejonesbeyondcodegeneration1757129649118.pdf)
+	- ## Description
+		- Exploration of how AI agents can go beyond simple code generation
+		- Discussion of getting real work done through AI agent collaboration
+		- Focus on practical applications and real-world productivity gains
+	- ## Key Topics
+		- Moving beyond basic code generation capabilities
+		- Real-world productivity applications of AI agents
+		- Practical strategies for effective AI agent collaboration
+		- Achieving meaningful work outcomes with AI assistance

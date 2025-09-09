@@ -1,0 +1,37 @@
+# AI Codecon: Coding for the Agentic World
+	- ## Resources
+		- Event Schedule: [Link](https://learning.oreilly.com/live-events/ai-codecon-coding-for-the-future-agentic-world/0642572207748/?_gl=1%2A10rtv4r%2A_ga%2AMzMzNjQ2NzE1LjE3NTUxODc0MDY.%2A_ga_092EL089CH%2AczE3NTUxODc0MDUkbzEkZzEkdDE3NTUxODc0MTEkajU0JGwwJGgw)
+		- Code of Conduct: [Link](https://www.oreilly.com/online-learning/events-code-of-conduct.html)
+		- Expert Playlist: [Link](https://learning.oreilly.com/playlists/577f8b99-c9fe-41f0-ad5b-48c888af0132/)
+		- Register for September 16 O’Reilly Demo Day: [Link](https://learning.oreilly.com/live-events/oreilly-demo-day/0642572227968/)
+		- Alex Komoroske - Why Centralized AI Is Not Our Inevitable Future: [PDF](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1757379799741/alexkomoroskewhycentralizedaiisnotourinevitablefuturev21757379799741.pdf)
+		- Addy Osmani - Context Engineering: [PDF](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1757373124706/oreillycontextengineering1757373124706.pdf)
+		- Rachel-Lee Nabors - Death of the Browser: [PDF](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1757128458670/rebirthoftheweboreilly15min1757128458670.pdf)
+		- Ken Kousen - The Hitchhiker’s Guide to AI Coding Agents (Don’t Panic!): [PDF](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1757253031006/kenkousenslidesexport1757253031006.pdf)
+		- Angie Jones - Beyond Code Generation: Getting Real Work Done with AI Agents: [PDF](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1757129649118/angiejonesbeyondcodegeneration1757129649118.pdf)
+		- Ramesh Raskar - Agentic Web MCP, A2A, MIT Project NANDA, and Beyond: [PDF](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1756960833326/raskarberkeleyaug2025final.pdf)
+		- Chris Butler - The Team Tomorrow: Agents, Alignment, and Team Ritual: [PDF](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1757334504676/theteamoftomorrowagentsalignmentandteamritualaicodecon1757334504676.pdf)
+		- Brennon Bortz - From Proof to Platform: Scaling Agentic AI in a Fortune 300 Software Enterprise: [PDF](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1756856589113/oreillyagenticpresentationbrennonbortz1756856589113.pdf)
+		- Jessica Kerr - Designing for AI Agents MCP: [PDF](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1757091679028/mcpdesignfororeillybyjessitron1757091679028.pdf)
+		- Siddharth Ahuja - Blender MCP: [PDF](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1756843783912/siddharthahujablendermcpaicodecon1756843783912.pdf)
+		- Siddharth Ahuja - GitHub Repo: [Link](https://github.com/ahujasid)
+	- ## Schedule
+		- ### [[OReilly/Event/25/09/AI Codecon/Pt 1 Agentic Interfaces]]
+			- 11:00 [[OReilly/Event/25/09/AI Codecon/1100 Introduction Tim OReilly]]
+			- 11:10 [[OReilly/Event/25/09/AI Codecon/1110 Alex Komoroske Why Centralized AI Is Not Our Inevitable Future]]
+			- 11:25 [[OReilly/Event/25/09/AI Codecon/1125 Josh Woodward and Tim OReilly Fireside Chat]]
+			- 11:45 [[OReilly/Event/25/09/AI Codecon/1145 Context Engineering Addy Osmani]]
+			- 12:00 [[OReilly/Event/25/09/AI Codecon/1200 Death of the Browser Rachel-Lee Nabors]]
+			- 12:15 Break (5 minutes)
+		- ### [[OReilly/Event/25/09/AI Codecon/Pt 2 Tool-to-Tool Workflows]]
+			- 12:20 [[OReilly/Event/25/09/AI Codecon/1220 Clay Bavor and Tim OReilly Fireside Chat]]
+			- 12:40 [[OReilly/Event/25/09/AI Codecon/1240 The Hitchhikers Guide to AI Coding Agents Ken Kousen]]
+			- 12:55 [[OReilly/Event/25/09/AI Codecon/1255 Beyond Code Generation Getting Real Work Done with AI Agents Angie Jones]]
+			- 13:10 [[OReilly/Event/25/09/AI Codecon/1310 Agentic Web MCP A2A MIT Project NANDA and Beyond Ramesh Raskar]]
+			- 13:25 [[OReilly/Event/25/09/AI Codecon/1325 The Team Tomorrow Agents Alignment and Team Ritual Chris Butler]]
+			- 13:40 [[OReilly/Event/25/09/AI Codecon/1340 From Proof to Platform Scaling Agentic AI in a Fortune 300 Software Enterprise Brennon Bortz]]
+			- 13:55 [[OReilly/Event/25/09/AI Codecon/1355 Designing for AI Agents MCP Jessica Kerr]]
+			- 14:10 [[OReilly/Event/25/09/AI Codecon/1410 Blender MCP Siddharth Ahuja]]
+		- ### Additional Notes
+			- 11:31 In the chat - a recommendation from "David M"
+				- > I have been testing out Abacus AI, which is $10 per month. It has access to all the LLMs and also has MCP server, you can build chat bots, and it has backend database for authentication and storage. https://chatllm.abacus.ai/HkLTNcDQBP

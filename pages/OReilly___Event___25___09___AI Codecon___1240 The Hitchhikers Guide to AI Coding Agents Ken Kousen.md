@@ -1,0 +1,16 @@
+- # The Hitchhiker's Guide to AI Coding Agents (Don't Panic!) – Ken Kousen
+	- ## Overview
+		- **Duration**: 15 minutes
+		- **Time**: 12:40
+		- **Speaker**: [[Person/Ken Kousen]]
+		- **Event**: [[OReilly/Event/25/09/AI Codecon]]
+		- **Resources**: [PDF](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1757253031006/kenkousenslidesexport1757253031006.pdf)
+	- ## Description
+		- Practical guide to working with AI coding agents
+		- Focus on tool-to-tool workflows and how agents chain across environments
+		- Discussion of how agents complete complex tasks through collaboration
+	- ## Key Topics
+		- Practical approaches to AI coding agents
+		- Tool-to-tool workflows and agent chaining
+		- Completing complex tasks through agent collaboration
+		- Best practices for working with AI coding tools

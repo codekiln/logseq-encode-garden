@@ -1,0 +1,17 @@
+- # From Proof to Platform: Scaling Agentic AI in a Fortune 300 Software Enterprise – Brennon Bortz
+	- ## Overview
+		- **Duration**: 15 minutes
+		- **Time**: 13:40
+		- **Speaker**: [[Person/Brennon Bortz]]
+		- **Event**: [[OReilly/Event/25/09/AI Codecon]]
+		- **Resources**: [PDF](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1756856589113/oreillyagenticpresentationbrennonbortz1756856589113.pdf)
+	- ## Description
+		- Case study of scaling agentic AI from proof-of-concept to enterprise platform
+		- Discussion of challenges and solutions in Fortune 300 software enterprise
+		- Focus on practical implementation strategies and lessons learned
+	- ## Key Topics
+		- Scaling AI from proof-of-concept to production
+		- Enterprise implementation challenges and solutions
+		- Platform architecture for agentic AI
+		- Lessons learned from Fortune 300 deployment
+		- Best practices for enterprise AI adoption

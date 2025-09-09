@@ -1,0 +1,17 @@
+- # Agentic Web MCP, A2A, MIT Project NANDA, and Beyond – Ramesh Raskar
+	- ## Overview
+		- **Duration**: 15 minutes
+		- **Time**: 13:10
+		- **Speaker**: [[Person/Ramesh Raskar]]
+		- **Event**: [[OReilly/Event/25/09/AI Codecon]]
+		- **Resources**: [PDF](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1756960833326/raskarberkeleyaug2025final.pdf)
+	- ## Description
+		- Discussion of agentic web technologies and protocols
+		- Exploration of MCP (Model Context Protocol) and A2A (Agent-to-Agent) communication
+		- Overview of MIT Project NANDA and its implications for the future
+	- ## Key Topics
+		- Agentic web architecture and protocols
+		- Model Context Protocol (MCP) implementation
+		- Agent-to-Agent (A2A) communication systems
+		- MIT Project NANDA research and applications
+		- Future directions in agentic web technologies

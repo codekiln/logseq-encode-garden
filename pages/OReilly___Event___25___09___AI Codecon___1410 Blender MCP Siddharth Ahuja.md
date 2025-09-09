@@ -1,0 +1,19 @@
+- # Blender MCP – Siddharth Ahuja
+	- ## Overview
+		- **Duration**: 15 minutes
+		- **Time**: 14:10
+		- **Speaker**: [[Person/Siddharth Ahuja]]
+		- **Event**: [[OReilly/Event/25/09/AI Codecon]]
+		- **Resources**: 
+			- [PDF](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1756843783912/siddharthahujablendermcpaicodecon1756843783912.pdf)
+			- [GitHub Repo](https://github.com/ahujasid)
+	- ## Description
+		- Demonstration of Blender MCP (Model Context Protocol) implementation
+		- Showcase of how AI agents can interact with 3D modeling software
+		- Discussion of creative applications of AI agents in design and modeling
+	- ## Key Topics
+		- Blender MCP implementation and capabilities
+		- AI agents in 3D modeling and design
+		- Creative applications of AI agents
+		- Model Context Protocol in creative software
+		- Future of AI-assisted design tools

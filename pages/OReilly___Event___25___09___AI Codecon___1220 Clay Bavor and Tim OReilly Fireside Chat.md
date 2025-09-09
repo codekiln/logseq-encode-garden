@@ -1,0 +1,16 @@
+- # Clay Bavor and Tim O'Reilly Fireside Chat
+	- ## Overview
+		- **Duration**: 20 minutes
+		- **Time**: 12:20
+		- **Speakers**: [[Person/Clay Bavor]], [[Person/Tim O'Reilly]]
+		- **Event**: [[OReilly/Event/25/09/AI Codecon]]
+	- ## Description
+		- Forward-looking conversation challenging conventional thinking about AI agents
+		- Discussion of AI agents as the primary digital interface for enterprises
+		- Exploration of Sierra's approach to creating singular branded agents that power entire customer experiences
+	- ## Key Topics
+		- AI agents as essential enterprise interfaces (like websites and mobile apps)
+		- Sierra's platform for creating branded agents
+		- Business model ensuring companies only pay when agents deliver results
+		- Future of artificial intelligence in enterprise environments
+		- Moving beyond individual productivity tools to enterprise-wide solutions

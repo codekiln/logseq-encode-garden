@@ -1,0 +1,15 @@
+- # Josh Woodward and Tim O'Reilly Fireside Chat
+	- ## Overview
+		- **Duration**: 20 minutes
+		- **Time**: 11:25
+		- **Speakers**: [[Person/Josh Woodward]], [[Person/Tim O'Reilly]]
+		- **Event**: [[OReilly/Event/25/09/AI Codecon]]
+	- ## Description
+		- Discussion about NotebookLM as one of the first breakout successes beyond simple chatbots and coding tools
+		- Exploration of how to rethink existing apps and services to give them truly useful AI native interfaces
+		- Josh Woodward shares the origin story of NotebookLM and lessons for developers
+	- ## Key Topics
+		- NotebookLM's breakthrough success in AI interfaces
+		- Lessons for developers on creating AI-native applications
+		- Future directions in AI interface design
+		- What's next in AI development
