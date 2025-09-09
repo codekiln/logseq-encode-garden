@@ -1,0 +1,17 @@
+- # Kathy Korevec and Addy Osmani Fireside Chat [[2025-09-09 Tue]]
+	- **Speakers:** [[Person/Kathy Korevec]] and [[Person/Addy Osmani]]
+	- **Time:** 13:00-13:20 (20 min)
+	- **Event:** [[OReilly/Event/25/09/AI Codecon]]
+	- **Topic:** Inside Google Labs' AIDA team and the making of Jules, an AI-powered dev tool
+	- ## Overview
+		- Fireside chat between Kathy Korevec and Addy Osmani
+		- Discussion about Google Labs' AIDA team
+		- Focus on Jules, an AI-powered development tool
+	- ## Key Topics
+		- Google Labs AIDA team
+		- Jules AI development tool
+		- AI-powered development workflows
+		- Google's approach to AI tooling
+	- ## Related Sessions
+		- [[OReilly/Event/25/09/AI Codecon/1145 Context Engineering Addy Osmani]]
+		- [[OReilly/Event/25/09/AI Codecon/1355 Designing for AI Agents MCP Jessica Kerr]]
