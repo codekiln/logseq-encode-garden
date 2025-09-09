@@ -1,0 +1,43 @@
+- # AI Codecon People [[2025-09-09 Tue]]
+	- ## Tim O'Reilly
+		- **Role:** Founder, CEO, and Chairman, O'Reilly Media
+		- **Bio:** Tim O'Reilly is the founder, CEO, and chairman of O'Reilly Media, which has been providing learning resources for the tech industry for over 40 years. He has shaped key conversations around open source software, Web 2.0, the Maker movement, government as a platform, and the "WTF economy." He is also a partner at O'Reilly AlphaTech Ventures (OATV) and serves on several boards, including Code for America and Civis Analytics. Tim authored many technical books, including *WTF? What's the Future and Why It's Up to Us* (2017), and is working on a book about antitrust in the internet era.
+	- ## Addy Osmani
+		- **Role:** Engineering Leader, Google Chrome
+		- **Bio:** Addy Osmani leads Chrome's Developer Experience organization at Google, helping reduce friction for developers and improve user experiences. He is the author of several books, including *Leading Effective Engineering Teams: Lessons for Individual Contributors and Managers from 10 Years at Google*.
+	- ## Alex Komoroske
+		- **Role:** CEO, Common Tools
+		- **Bio:** Alex Komoroske has been a product manager and director of product management for platforms such as Chrome, Google Maps, and Google Earth. At Google, he authored *Practical PM Stuff*, widely known as the Product Manager's Bible. He promotes the "Gardening Platforms" approach—guiding ecosystems toward greatness instead of controlling them. At Common Tools, he's building open, private, and composable AI infrastructure that prioritizes human agency.
+	- ## Josh Woodward
+		- **Role:** Leads Google Labs & Gemini app
+		- **Bio:** Josh Woodward leads Google Labs and the Gemini app teams, focused on discovering and delivering new AI products. He co-founded Google's Next Billion Users initiative and helped create Chromebooks, aiming to make technology more accessible globally.
+	- ## Rachel-Lee Nabors
+		- **Role:** Founder, Dressed for Space
+		- **Bio:** Rachel-Lee Nabors has worked extensively on web standards, open source, and developer education, including roles on the React team and W3C. Now at their company, Dressed for Space, they focus on adapting information to people through innovative experiences. They are also an educator and mentor for the next generation of web builders.
+	- ## Clay Bavor
+		- **Role:** Cofounder, Sierra
+		- **Bio:** Clay Bavor cofounded Sierra, which helps businesses build better customer experiences with AI. He spent 18 years at Google, where he led Google Labs and projects such as AR/VR, Project Starline, Google Lens, Gmail, Google Docs, Google Drive, and Workspace.
+	- ## Ken Kousen
+		- **Role:** Author & Trainer, Kousen I.T., Inc.
+		- **Bio:** Ken Kousen is the author of *Kotlin Cookbook* (O'Reilly), *Modern Java Recipes*, and *Making Java Groovy*. A JavaOne Rock Star and regular speaker on the No Fluff Just Stuff tour, he has taught thousands of students worldwide through his company, Kousen I.T., Inc.
+	- ## Angie Jones
+		- **Role:** Global VP of Developer Relations, Block Inc.
+		- **Bio:** Angie Jones is an award-winning educator, IBM Master Inventor, and international keynote speaker. She has 27 patented inventions spanning virtual worlds, social networking, smarter planet initiatives, and software development processes.
+	- ## Amit Rustagi
+		- **Role:** AI & Big Data Technologist
+		- **Bio:** Amit Rustagi has over 20 years of experience designing AI, generative AI, and analytics solutions. He specializes in building ML architectures and models for impactful outcomes and has spoken at multiple industry events.
+	- ## Kathy Korevec
+		- **Role:** Director of Product, Google Labs
+		- **Bio:** Kathy Korevec is a product leader with an engineering background, currently leading an AI coding agent named Jules at Google Labs. Previously, she was VP of product and design at Vercel and senior director at GitHub, focusing on developer tools and documentation.
+	- ## Ramesh Raskar
+		- **Role:** Associate Professor, MIT Media Lab
+		- **Bio:** Ramesh Raskar directs the Camera Culture group and leads decentralized AI initiatives at MIT. His research spans AI and imaging for health, sustainability, and mobility. He has received numerous awards and holds over 100 US patents, with prior work at Google X, Apple, and Facebook.
+	- ## Chris Butler
+		- **Role:** Product Leader, GitHub
+		- **Bio:** Chris Butler has led product efforts at GitHub, Google, Facebook, and Microsoft. He co-founded The Uncertainty Project and specializes in AI, productivity, and responsible technology. His work bridges speculative design and practical product leadership.
+	- ## Brennon Bortz
+		- **Role:** Chief Engineer, Leidos R&D
+		- **Bio:** Brennon Bortz leads engineering across Leidos's 500-person innovation organization. He focuses on integrating agentic AI into enterprise software. He holds a PhD in computer science from Virginia Tech and has published in computer science and affective computing.
+	- ## Jessica Kerr
+		- **Role:** Engineering Manager, Honeycomb
+		- **Bio:** Jessica Kerr is the engineering manager at Honeycomb, specializing in observability and developer experience.

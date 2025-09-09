@@ -25,4 +25,11 @@
 		- 11:51 he has an example of [[IDE/Cline]] with a progress bar.
 		- 11:51 he has a slide from [Prompting 101 | Code w/ Claude - YouTube](https://www.youtube.com/watch?v=ysPbXH0LpIE) by [[Anthropic]]
 			- {{video https://www.youtube.com/watch?v=ysPbXH0LpIE}}
+		- 11:55 he mentions he uses [[IDE/Cline]] quite a bit, and he talks about 50% of context window as a threshold
+		- 11:58 even more examples from [[IDE/Cline]] of [[AI/Context/Compact]]
+		- mentions [LangChain - Context Engineering](https://blog.langchain.com/context-engineering-for-agents/)
+		- 11:59 he mentions [How to Fix Your Context](https://www.dbreunig.com/2025/06/26/how-to-fix-your-context.html) by [[Person/Drew Breunig]]
+			- ![image.png](../assets/image_1757433689552_0.png)
+			- TODO follow him on [[Readwise]]
+		- TODO follow [[Person/Addy Osmani]] in readwise
 		-

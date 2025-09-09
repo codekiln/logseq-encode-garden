@@ -1,4 +1,4 @@
-- # Death of the Browser – Rachel-Lee Nabors
+# Death of the Browser – [[Person/Rachel-Lee Nabors]]
 	- ## Overview
 		- **Duration**: 15 minutes
 		- **Time**: 12:00
@@ -15,3 +15,4 @@
 		- Technical implications of the shift from traditional browsers
 		- Emerging technologies for direct content distribution and access
 		- Privacy and accessibility features that traditional browsers can't match
+	- [[My Notes]]

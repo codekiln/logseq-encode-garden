@@ -1,4 +1,5 @@
 # AI Codecon: Coding for the Agentic World
+	- ## [[OReilly/Event/25/09/AI Codecon/People]]
 	- ## Resources
 		- Event Schedule: [Link](https://learning.oreilly.com/live-events/ai-codecon-coding-for-the-future-agentic-world/0642572207748/?_gl=1%2A10rtv4r%2A_ga%2AMzMzNjQ2NzE1LjE3NTUxODc0MDY.%2A_ga_092EL089CH%2AczE3NTUxODc0MDUkbzEkZzEkdDE3NTUxODc0MTEkajU0JGwwJGgw)
 		- Code of Conduct: [Link](https://www.oreilly.com/online-learning/events-code-of-conduct.html)
