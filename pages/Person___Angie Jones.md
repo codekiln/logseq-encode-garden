@@ -1,0 +1,16 @@
+- # Angie Jones
+	- **Role:** Global VP of Developer Relations, Block Inc.
+	- **Bio:** Angie Jones is an award-winning educator, IBM Master Inventor, and international keynote speaker. She has 27 patented inventions spanning virtual worlds, social networking, smarter planet initiatives, and software development processes.
+	- **Achievements:**
+		- IBM Master Inventor
+		- 27 patented inventions
+		- Award-winning educator
+		- International keynote speaker
+	- **External Links:**
+		- [GitHub](https://github.com/angiejones)
+		- [Twitter](https://twitter.com/techgirl1908)
+		- [LinkedIn](https://www.linkedin.com/in/angiejones/)
+		- [Personal Website](https://angiejones.tech/)
+	- **Related Events:**
+		- [[OReilly/Event/25/09/AI Codecon]]
+		- [[OReilly/Event/25/09/AI Codecon/1255 Beyond Code Generation Getting Real Work Done with AI Agents Angie Jones]]

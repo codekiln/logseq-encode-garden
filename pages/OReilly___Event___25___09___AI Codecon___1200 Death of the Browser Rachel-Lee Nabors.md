@@ -16,3 +16,47 @@
 		- Emerging technologies for direct content distribution and access
 		- Privacy and accessibility features that traditional browsers can't match
 	- [[My Notes]]
+		- This is version 3 - they've been tooling this for 9 months
+		- 12:04 has worked with mozilla on firefox devtools, worked on react
+		- 12:05 their favorite personal agent is [[Goose]]
+			- they are looking up solutions to puzzles
+		- …Searches on Safari dipped for the rst time last month, which [Cue] attributed to people
+		  using AI. Cue said he believes that AI search
+		  providers, including OpenAI, Perplexity AI Inc.
+		  and Anthropic PBC, will eventually replace
+		  standard search engines like Alphabet s Google.
+			- Bloomberg article: bloom.bg/4kFzVDe
+		- 12:07 3 types of traffic
+			- **Human** reads and perceives content, including ads.
+			- **Crawler** indexes and scrapes content.
+			- **Agent** performs tasks on behalf of humans.
+		- 12:08 they discuss "Comet" to reach out to people ... on linkedin?
+		- 12:08 will we even need a browser?
+		- 12:09 using notion and claude to search opportunities - MUCH better than linkedin and jobs boards
+			- "I rarely use LinkedIn anymore"
+			- "I was able to get 9 offers and land two roles which I was never able to do before"
+		- 12:09 5 Pillars of the agentic web
+		- 12:10 Agent Interoperability protocols - [[MCP]], [[Agent Communication Protocol]] ACP, [[A2A]]
+			- What's ACP? [What is Agent Communication Protocol (ACP)? | IBM](https://www.ibm.com/think/topics/agent-communication-protocol)
+		- 12:11 Payments - subscriptions, micropayments, sponsorships
+			- "the ad-supported web is broken"
+			- [[Co/Visa]] is working on something called AgentPay
+		- 12:12 Discovery and Discernment - recommendation engines, ranking, algorithms
+			- Google and Facebook do this today, but they are monoliths
+			- doing this in a decentralized way is harder, it hasn't been done before
+		- 12:13 [AIOS Foundation](https://www.aios.foundation/)
+			- [[2403.16971] AIOS: LLM Agent Operating System](https://arxiv.org/abs/2403.16971)
+		- 12:16
+		- 12:14 They recommend NLWeb - github.com/microsoft/NLWeb
+		- 12:16 "Tarpits" are meant to distract agents
+			- Sabot in the Age of AI
+			- A list of offensive methods & strategic approaches for facilitating (algorithmic) sabotage, framework disruption, & intentional data poisoning.
+			- example https://tldr.nettime.org/@asrg/113867412641585520
+		- 12:19 on-device AI features
+			- https://developer.chrome.com/docs/ai/built-in
+		- 12:19 mentions `@ATProtocol`
+			- "Adopt social networking Protocols"
+		- There's something called "MCP UI" [MCP-UI](https://mcpui.dev/)
+			- a project by [Ido Salomon](https://x.com/idosal1), in collaboration with [Liad Yosef](https://x.com/liadyosef).
+			- *I'm not sure I understand yet, but I'm fascinated*
+		-

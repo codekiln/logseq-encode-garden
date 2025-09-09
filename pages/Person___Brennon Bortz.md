@@ -1,0 +1,16 @@
+- # Brennon Bortz
+	- **Role:** Chief Engineer, Leidos R&D
+	- **Bio:** Brennon Bortz leads engineering across Leidos's 500-person innovation organization. He focuses on integrating agentic AI into enterprise software. He holds a PhD in computer science from Virginia Tech and has published in computer science and affective computing.
+	- **Education:**
+		- PhD in computer science from Virginia Tech
+	- **Research Areas:**
+		- Computer science
+		- Affective computing
+	- **Current Focus:**
+		- Integrating agentic AI into enterprise software
+		- Leading 500-person innovation organization at Leidos
+	- **External Links:**
+		- [LinkedIn](https://www.linkedin.com/in/brennonbortz/)
+	- **Related Events:**
+		- [[OReilly/Event/25/09/AI Codecon]]
+		- [[OReilly/Event/25/09/AI Codecon/1340 From Proof to Platform Scaling Agentic AI in a Fortune 300 Software Enterprise Brennon Bortz]]

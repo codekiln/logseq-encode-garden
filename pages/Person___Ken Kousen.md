@@ -1,0 +1,19 @@
+# Ken Kousen
+	- Kousen is pronounced  "Cousin"
+	- **Role:** Author & Trainer, Kousen I.T., Inc.
+	- **Bio:** Ken Kousen is the author of *Kotlin Cookbook* (O'Reilly), *Modern Java Recipes*, and *Making Java Groovy*. A JavaOne Rock Star and regular speaker on the No Fluff Just Stuff tour, he has taught thousands of students worldwide through his company, Kousen I.T., Inc.
+	- **Books:**
+		- *Kotlin Cookbook* (O'Reilly)
+		- *Modern Java Recipes*
+		- *Making Java Groovy*
+	- **Achievements:**
+		- JavaOne Rock Star
+		- Regular speaker on No Fluff Just Stuff tour
+	- **External Links:**
+		- [GitHub](https://github.com/kousen)
+		- [Twitter](https://twitter.com/kenkousen)
+		- [LinkedIn](https://www.linkedin.com/in/kenkousen/)
+		- [Kousen I.T.](https://kousenit.com/)
+	- **Related Events:**
+		- [[OReilly/Event/25/09/AI Codecon]]
+		- [[OReilly/Event/25/09/AI Codecon/1240 The Hitchhikers Guide to AI Coding Agents Ken Kousen]]

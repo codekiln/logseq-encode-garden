@@ -1,4 +1,4 @@
-- # The Hitchhiker's Guide to AI Coding Agents (Don't Panic!) – Ken Kousen
+# The Hitchhiker's Guide to AI Coding Agents (Don't Panic!) – [[Person/Ken Kousen]]
 	- ## Overview
 		- **Duration**: 15 minutes
 		- **Time**: 12:40
@@ -14,3 +14,76 @@
 		- Tool-to-tool workflows and agent chaining
 		- Completing complex tasks through agent collaboration
 		- Best practices for working with AI coding tools
+	- ## [[My Notes]]
+		- 12:52 he teaches classes on them. He's a [[Java]] dev
+		- 12:52 [[Claude Code]] is his favorite
+		- 12:53 Four Collaboration Patterns coming up
+			- 1. Programmatic Orchestration
+				- LangChain4j passing chat memory between agents
+			- 2. Manual Multi-Terminal
+				- Three console windows, copy-paste coordination
+			- 3. MCP Server Wrapping
+				- Headless agents exposed as MCP servers
+			- 4. Claude Code Agent Orchestration
+				- [[Anthropic/App/Claude Code/Subagent]] [Subagents - Anthropic](https://docs.anthropic.com/en/docs/claude-code/sub-agents)
+		- 12:55 example: Opera generator
+			- gpt 4.1 and claude are taking turns generating the libretto
+			- all these services are stateless; you have to pass the memory back and forth
+			- stateless web services joke
+			- this is using [[LangChain/4j]]
+		- 12:58 2. Manual Multi-Terminal
+			- #Example
+				- [kousen/cosmic-catalog: Curated astronomical observations from telescopes like Hubble and JWST](https://github.com/kousen/cosmic-catalog)
+			- he has claude code and google gemini opened up and codex on gpt-5
+			- trying to pass comments back and forth
+			- application downloads telescope data and allows people to approve the observations
+			- the entire application was done with the round robin of the agents, and giving them the freedom to say when they need more tests. his role is to veto or suggest something else.
+			- it generated an [[OpenAPI]] swagger. this is an API
+			- he learned that it's like dealing with multiple over-eager toddlers. They make up things and so you have to keep an eye on them all.
+			- So he did an implementation for an MCP server to wrap Gemini, because it brings an enormous context window
+				- Flash has 1M tokens
+				- Pro has 2M tokens
+			- he said, he wants to be able to read the whole codebase and figure out what to do.
+			- he has an analyzecodebase function and write results to file.
+			- inside of codex, he's using mcp to talk to gemini to get the context
+		- 13:03 now he's in
+		- His [[MCP/Server]]s
+			- Here’s a summary of the **MCP tools** listed in your screenshot:
+			- **context7**
+				- **Command:** `npx -y @upstash/context7-mcp --api-key ...`
+				- **Tools:**
+					- `get-library-docs` – fetch documentation for a library.
+					- `resolve-library-id` – resolve identifiers for libraries.
+			- **firecrawl**
+				- **Command:** `npx -y firecrawl-mcp`
+				- **Tools:**
+					- `firecrawl_check_crawl_status` – check the progress of a crawl.
+					- `firecrawl_crawl` – start a crawl.
+					- `firecrawl_extract` – extract content from crawled pages.
+					- `firecrawl_map` – map discovered links/content.
+					- `firecrawl_scrape` – scrape page data.
+					- `firecrawl_search` – perform a search.
+			- **gemini-analyzer**
+				- **Command:** `java -jar .../GeminiMcpServer-0.0.1-SNAPSHOT.jar`
+				- **Tools:**
+					- `gemini_analyzeCodebase` – analyze a codebase.
+					- `gemini_scanAndPlan` – scan a project and generate a plan.
+			- **playwright**
+				- **Command:** `npx @playwright/mcp@latest`
+				- **Tools:**
+				  
+				  Browser automation:
+					- Actions: `browser_click`, `browser_close`, `browser_drag`, `browser_hover`, `browser_press_key`, `browser_type`, `browser_wait_for`.
+					- Navigation: `browser_navigate`, `browser_navigate_back`.
+					- DevTools/diagnostics: `browser_console_messages`, `browser_network_requests`.
+					- UI control: `browser_resize`, `browser_select_option`, `browser_tabs`.
+					- Media/data: `browser_snapshot`, `browser_take_screenshot`.
+					- Installation and dialogs: `browser_install`, `browser_handle_dialog`, `browser_file_upload`, `browser_fill_form`.
+					  
+					  ✅ In short:
+						- **context7** → library docs + IDs
+						- **firecrawl** → web crawling, scraping, searching
+						- **gemini-analyzer** → codebase analysis + planning
+						- **playwright** → browser automation & testing
+		- Now he says in claude code he's using a sub-agent to call Gemini
+		-

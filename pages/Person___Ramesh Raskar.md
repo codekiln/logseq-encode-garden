@@ -1,0 +1,18 @@
+# Ramesh Raskar
+	- **Role:** Associate Professor, MIT Media Lab
+	- **Bio:** Ramesh Raskar directs the Camera Culture group and leads decentralized AI initiatives at MIT. His research spans AI and imaging for health, sustainability, and mobility. He has received numerous awards and holds over 100 US patents, with prior work at Google X, Apple, and Facebook.
+	- **Achievements:**
+		- Over 100 US patents
+		- Numerous awards
+		- Director of Camera Culture group at MIT
+	- **Previous Experience:**
+		- Google X
+		- Apple
+		- Facebook
+	- **External Links:**
+		- [MIT Profile](https://www.media.mit.edu/people/raskar/)
+		- [LinkedIn](https://www.linkedin.com/in/ramesh-raskar/)
+		- [Twitter](https://twitter.com/ramesh_raskar)
+	- **Related Events:**
+		- [[OReilly/Event/25/09/AI Codecon]]
+		- [[OReilly/Event/25/09/AI Codecon/1310 Agentic Web MCP A2A MIT Project NANDA and Beyond Ramesh Raskar]]

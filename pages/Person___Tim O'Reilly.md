@@ -1,0 +1,12 @@
+- # Tim O'Reilly
+	- **Role:** Founder, CEO, and Chairman, O'Reilly Media
+	- **Bio:** Tim O'Reilly is the founder, CEO, and chairman of O'Reilly Media, which has been providing learning resources for the tech industry for over 40 years. He has shaped key conversations around open source software, Web 2.0, the Maker movement, government as a platform, and the "WTF economy." He is also a partner at O'Reilly AlphaTech Ventures (OATV) and serves on several boards, including Code for America and Civis Analytics.
+	- **Books:** 
+		- *WTF? What's the Future and Why It's Up to Us* (2017)
+		- Working on a book about antitrust in the internet era
+	- **External Links:**
+		- [O'Reilly Media](https://www.oreilly.com/)
+		- [Twitter](https://twitter.com/timoreilly)
+		- [LinkedIn](https://www.linkedin.com/in/timoreilly/)
+	- **Related Events:**
+		- [[OReilly/Event/25/09/AI Codecon]]

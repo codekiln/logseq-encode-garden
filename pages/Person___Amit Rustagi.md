@@ -1,0 +1,12 @@
+- # Amit Rustagi
+	- **Role:** AI & Big Data Technologist
+	- **Bio:** Amit Rustagi has over 20 years of experience designing AI, generative AI, and analytics solutions. He specializes in building ML architectures and models for impactful outcomes and has spoken at multiple industry events.
+	- **Expertise:**
+		- AI and generative AI
+		- Big Data analytics
+		- ML architectures and models
+		- 20+ years experience
+	- **External Links:**
+		- [LinkedIn](https://www.linkedin.com/in/amitrustagi/)
+	- **Related Events:**
+		- [[OReilly/Event/25/09/AI Codecon]]

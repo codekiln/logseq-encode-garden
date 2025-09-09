@@ -1,0 +1,17 @@
+- # Clay Bavor
+	- **Role:** Cofounder, Sierra
+	- **Bio:** Clay Bavor cofounded Sierra, which helps businesses build better customer experiences with AI. He spent 18 years at Google, where he led Google Labs and projects such as AR/VR, Project Starline, Google Lens, Gmail, Google Docs, Google Drive, and Workspace.
+	- **Previous Experience:**
+		- 18 years at Google
+		- Led Google Labs
+		- AR/VR projects
+		- Project Starline
+		- Google Lens
+		- Gmail, Google Docs, Google Drive, Workspace
+	- **Current Focus:**
+		- Sierra (AI customer experiences)
+	- **External Links:**
+		- [LinkedIn](https://www.linkedin.com/in/claybavor/)
+		- [Sierra](https://www.sierra.com/)
+	- **Related Events:**
+		- [[OReilly/Event/25/09/AI Codecon]]

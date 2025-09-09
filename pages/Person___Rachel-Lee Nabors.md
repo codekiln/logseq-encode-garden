@@ -1,0 +1,17 @@
+- # Rachel-Lee Nabors
+	- **Role:** Founder, Dressed for Space
+	- **Bio:** Rachel-Lee Nabors has worked extensively on web standards, open source, and developer education, including roles on the React team and W3C. Now at their company, Dressed for Space, they focus on adapting information to people through innovative experiences. They are also an educator and mentor for the next generation of web builders.
+	- **Previous Experience:**
+		- React team
+		- W3C
+	- **Current Focus:**
+		- Dressed for Space
+		- Web standards
+		- Developer education
+	- **External Links:**
+		- [GitHub](https://github.com/rachelnabors)
+		- [Twitter](https://twitter.com/rachelnabors)
+		- [LinkedIn](https://www.linkedin.com/in/rachelnabors/)
+		- [Dressed for Space](https://dressedforspace.com/)
+	- **Related Events:**
+		- [[OReilly/Event/25/09/AI Codecon]]

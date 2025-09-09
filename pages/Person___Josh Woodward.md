@@ -1,0 +1,12 @@
+- # Josh Woodward
+	- **Role:** Leads Google Labs & Gemini app
+	- **Bio:** Josh Woodward leads Google Labs and the Gemini app teams, focused on discovering and delivering new AI products. He co-founded Google's Next Billion Users initiative and helped create Chromebooks, aiming to make technology more accessible globally.
+	- **Key Initiatives:**
+		- Google Labs
+		- Gemini app
+		- Next Billion Users initiative
+		- Chromebooks
+	- **External Links:**
+		- [LinkedIn](https://www.linkedin.com/in/joshwoodward/)
+	- **Related Events:**
+		- [[OReilly/Event/25/09/AI Codecon]]

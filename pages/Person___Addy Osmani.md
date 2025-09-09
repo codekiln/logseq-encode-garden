@@ -1,0 +1,13 @@
+- # Addy Osmani
+	- **Role:** Engineering Leader, Google Chrome
+	- **Bio:** Addy Osmani leads Chrome's Developer Experience organization at Google, helping reduce friction for developers and improve user experiences. He is the author of several books, including *Leading Effective Engineering Teams: Lessons for Individual Contributors and Managers from 10 Years at Google*.
+	- **Books:**
+		- *Leading Effective Engineering Teams: Lessons for Individual Contributors and Managers from 10 Years at Google*
+	- **External Links:**
+		- [GitHub](https://github.com/addyosmani)
+		- [Twitter](https://twitter.com/addyosmani)
+		- [LinkedIn](https://www.linkedin.com/in/addyosmani/)
+		- [Personal Website](https://addyosmani.com/)
+	- **Related Events:**
+		- [[OReilly/Event/25/09/AI Codecon]]
+		- [[OReilly/Event/25/09/AI Codecon/1145 Context Engineering Addy Osmani]]

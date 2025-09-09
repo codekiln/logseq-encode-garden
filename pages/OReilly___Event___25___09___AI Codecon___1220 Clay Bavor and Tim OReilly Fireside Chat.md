@@ -1,4 +1,4 @@
-- # Clay Bavor and Tim O'Reilly Fireside Chat
+# [[Person/Clay Bavor]] and [[Person/Tim O'Reilly]] Fireside Chat
 	- ## Overview
 		- **Duration**: 20 minutes
 		- **Time**: 12:20
@@ -14,3 +14,50 @@
 		- Business model ensuring companies only pay when agents deliver results
 		- Future of artificial intelligence in enterprise environments
 		- Moving beyond individual productivity tools to enterprise-wide solutions
+	- ## [[My Notes]]
+		- He's talking about Agent SDK but I don't know what this is
+			- [Develop your agent | Sierra](https://sierra.ai/product/develop-your-agent) mentions Agent SDK
+		- He mentions this [[2025-08-15 Fri]] article with [[Co/Ramp]] using Agent SDK [How Ramp applies its engineering mindset to customer experience | Sierra](https://sierra.ai/customers/ramp)
+			- drag and drop
+		- 12:37 [[Person/Tim O'Reilly]] mentions "the bitter lesson and the garbage can" by [[Person/Ethan Mollick/Blog/25/07/The Bitter Lesson vs The Garbage Can]]
+			- his article from [[2025-08-21 Thu]] is [We Are Only Beginning to Understand How to Use AI – O’Reilly](https://www.oreilly.com/radar/we-are-only-beginning-to-understand-how-to-use-ai/)
+			- [[ChatGPT]] [[AI Notes]]
+			  collapsed:: true
+				- ## What Tim O’Reilly Said
+					- Tim O’Reilly referenced Ethan Mollick’s essay *“The Bitter Lesson versus the Garbage Can”* in a post on O’Reilly Radar (around early September 2025). O’Reilly highlighted Mollick’s essay as “a wonderful essay about the opportunities (and failure modes) of this moment”—pointing to the tension between merely trying to apply AI to our old business processes versus reimagining organizational work fundamentally. ([O'Reilly Media](https://www.oreilly.com/radar/we-are-only-beginning-to-understand-how-to-use-ai/))
+				- ## Summary of Ethan Mollick’s  *“The Bitter Lesson versus The Garbage Can”*
+				- ### 1.  **The “Garbage Can” Model of Organizations**
+					- Mollick draws on organizational theory—specifically the classic *Garbage Can Model*—to describe how many organizations are chaotic or loosely structured systems where problems, solutions, and decision-makers collide in unpredictable ways. A vivid example from the essay:
+					- > When a manager walked a CEO through a map of the organization’s actual processes—revealing strange, duplicative, and unused workflows—the CEO “put his head on the table” and said, “This is even more fucked up than I imagined.” ([Vuink.com](https://vuink.com/post/barhfrshyguvat-d-dbet/p/the-bitter-lesson-versus-the-garbage?utm_source=chatgpt.com), [alephic.com](https://www.alephic.com/writing/you-dont-clean-the-garbage-can-by-labeling-the-trash?utm_source=chatgpt.com))
+				- ### 2.  **The “Bitter Lesson” from AI**
+					- Ethan references Rich Sutton’s influential 2019 concept known as *The Bitter Lesson*: over decades, attempts to encode human knowledge into AI systems have consistently been outperformed by general learning methods that leverage massive computation. AI that simply learns from data and outcomes (e.g., AlphaZero) often surpasses systems built on handcrafted rules or human expertise. ([Drew Breunig](https://www.dbreunig.com/2025/08/01/does-the-bitter-lesson-have-limits.html?utm_source=chatgpt.com), [Siddhartha Reddy](https://sids.in/posts/the-bitter-lesson-versus-the-garbage-can?utm_source=chatgpt.com), [Wikipedia](https://en.wikipedia.org/wiki/Bitter_lesson?utm_source=chatgpt.com))
+				- ### 3.  **The Core Conflict or Opportunity**
+					- Mollick poses a vital question: which applies more to organizations today—are they like chess games that yield to computational scale, or are they fundamentally messy systems that demand deep understanding and mapping? In other words, should we build AI agents that follow our messy, messy, partially documented processes—or should we instead define the desired outcomes and let AI figure out how to reach them? ([alephic.com](https://www.alephic.com/writing/you-dont-clean-the-garbage-can-by-labeling-the-trash?utm_source=chatgpt.com), [Allard de Winter's Website](https://allarddewinter.net/blog/the-bitter-lesson-for-organisations/?utm_source=chatgpt.com), [A Human in the Loop](https://inhumanloop.com/ai/2025/07/30/garbage-can-bitter-lesson.html?utm_source=chatgpt.com))
+				- ### 4.  **Key Insights and Lessons**
+					- One commentator summarized Mollick’s stance:
+					- > “You don’t tame the garbage can by labeling the trash. You decide what ‘clean’ looks like and let machines take out the waste.” ([alephic.com](https://www.alephic.com/writing/you-dont-clean-the-garbage-can-by-labeling-the-trash?utm_source=chatgpt.com))
+				- In practice, this translates to:
+					- Putting *outcomes over process*: Define what success looks like—not every step.
+					- Using *builders over managers*: Let teams that can build AI-powered solutions drive change.
+					- Prioritizing *AI over hard-coded rules*: Provide good-quality data and allow AI to navigate complexity.
+				- Moreover, some contexts may benefit from the *Bitter Lesson*—AI finding novel paths—even within messy systems—while others (e.g., regulatory compliance, brand standards) demand explicit, structured approaches. ([A Human in the Loop](https://inhumanloop.com/ai/2025/07/30/garbage-can-bitter-lesson.html?utm_source=chatgpt.com))
+				- ### TL;DR Summary
+				- | Term/Concept | Description |
+				  | ---- | ---- | ---- |
+				  | **Garbage Can Model** | Organizations are messy, chaotic; decisions emerge unpredictably from a jumble of problems, people, solutions—not neatly designed processes. |
+				  | **The Bitter Lesson** | In AI, generalized methods that scale computation generally outperform hand-coded human knowledge over time. |
+				  | **Mollick’s Core Argument** | We must choose between embedding AI into messy, existing processes or defining clear outcomes and letting AI find its own way. This choice may redefine how work is done. |
+				- So, in essence: **Tim O’Reilly highlighted Mollick’s essay to emphasize the tension between legacy business processes and AI’s potential to transcend them.** Mollick’s essay challenges us to consider whether defining success clearly might be more powerful than meticulously mapping the past.
+				-
+		- 12:42 Tim asks Clay about Supervisor in agent architecture
+			- Clay Bavor says "dialing up determinism" means using the Agent SDK to lock down the agent
+				- if it's reading compliance language, there's no room for creativity
+			- "AI Architect team" understands "how the team does what it does" and is responsible for reflecting those SOPs in the agent. If the web had that webmaster, is the AI Architect the webmaster of the AI era? Yes. -- Clay Bavor
+			- Clay says "our agents are aware of when they are out of their depth" so they can hand it off to a human
+				- *how?*
+		- 12:48 they mention "outcome based pricing"
+			- if they upscale a delivery, they are paid a comission
+		- 12:50 how do agents know when they are out of their depth?
+			- it comes back to the supervisor agent
+			- is what I need to do specified in the code or operating procedure I have?
+			-
