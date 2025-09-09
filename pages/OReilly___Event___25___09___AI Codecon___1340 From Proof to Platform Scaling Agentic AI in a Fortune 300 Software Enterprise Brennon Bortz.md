@@ -1,4 +1,4 @@
-- # From Proof to Platform: Scaling Agentic AI in a Fortune 300 Software Enterprise – Brennon Bortz
+# From Proof to Platform: Scaling Agentic AI in a Fortune 300 Software Enterprise – Brennon Bortz
 	- ## Overview
 		- **Duration**: 15 minutes
 		- **Time**: 13:40
@@ -15,3 +15,6 @@
 		- Platform architecture for agentic AI
 		- Lessons learned from Fortune 300 deployment
 		- Best practices for enterprise AI adoption
+	- ## [[My Notes]]
+		- Evaluated **9 tools**, integrated the best into the platform.
+		- Talks a lot about getting leadership on the side of these pilots

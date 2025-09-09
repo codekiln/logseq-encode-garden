@@ -1,4 +1,4 @@
-- # Chris Butler
+# Chris Butler
 	- **Role:** Product Leader, GitHub
 	- **Bio:** Chris Butler has led product efforts at GitHub, Google, Facebook, and Microsoft. He co-founded The Uncertainty Project and specializes in AI, productivity, and responsible technology. His work bridges speculative design and practical product leadership.
 	- **Previous Experience:**
@@ -14,5 +14,4 @@
 		- [LinkedIn](https://www.linkedin.com/in/chrisbutler/)
 		- [Twitter](https://twitter.com/chrisbutler)
 	- **Related Events:**
-		- [[OReilly/Event/25/09/AI Codecon]]
 		- [[OReilly/Event/25/09/AI Codecon/1325 The Team Tomorrow Agents Alignment and Team Ritual Chris Butler]]

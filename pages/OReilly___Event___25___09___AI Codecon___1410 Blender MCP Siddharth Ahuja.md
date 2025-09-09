@@ -1,10 +1,10 @@
-- # Blender MCP – Siddharth Ahuja
+# [Blender MCP – Siddharth Ahuja](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1756843783912/siddharthahujablendermcpaicodecon1756843783912.pdf)
 	- ## Overview
 		- **Duration**: 15 minutes
 		- **Time**: 14:10
 		- **Speaker**: [[Person/Siddharth Ahuja]]
 		- **Event**: [[OReilly/Event/25/09/AI Codecon]]
-		- **Resources**: 
+		- **Resources**:
 			- [PDF](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1756843783912/siddharthahujablendermcpaicodecon1756843783912.pdf)
 			- [GitHub Repo](https://github.com/ahujasid)
 	- ## Description

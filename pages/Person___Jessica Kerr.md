@@ -1,6 +1,6 @@
-- # Jessica Kerr
+# Jessica Kerr - https://jessitron.com/
 	- **Role:** Engineering Manager, Honeycomb
-	- **Bio:** Jessica Kerr is the engineering manager at Honeycomb, specializing in observability and developer experience.
+	- **Bio:** Jessica Kerr is the engineering manager at [[Co/Honeycomb]] which is an [[Observability]] platform, specializing in observability and developer experience.
 	- **Expertise:**
 		- Observability
 		- Developer experience
@@ -9,7 +9,9 @@
 		- [GitHub](https://github.com/jessitron)
 		- [Twitter](https://twitter.com/jessitron)
 		- [LinkedIn](https://www.linkedin.com/in/jessicakerr/)
-		- [Personal Website](https://jessitron.com/)
+		- [Personal Website](https://jessitron.com/) - https://jessitron.com/
 	- **Related Events:**
 		- [[OReilly/Event/25/09/AI Codecon]]
 		- [[OReilly/Event/25/09/AI Codecon/1355 Designing for AI Agents MCP Jessica Kerr]]
+	- [[Person/Jessica Kerr/YouTube]] on [[OpenTelemetry]]
+		- [What Is OpenTelemetry? Explained by Jessica Kerr | Honeycomb](https://www.honeycomb.io/resources/training-videos/what-is-opentelemetry-explained-by-jessica-kerr)

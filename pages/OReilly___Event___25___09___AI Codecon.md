@@ -24,7 +24,7 @@
 		- ### Additional Notes
 			- 11:31 In the chat - a recommendation from "David M"
 				- > I have been testing out Abacus AI, which is $10 per month. It has access to all the LLMs and also has MCP server, you can build chat bots, and it has backend database for authentication and storage. https://chatllm.abacus.ai/HkLTNcDQBP
-			- 1:55 PM
+			- 1:55 PM about local LLMs
 				- I find I don't need a ton of memory when I find nice quantized models
 				- Check out Hugging FAce's page (they are where I find such models): https://huggingface.co/docs/optimum/en/concept_guides/quantization
 				- quantization is when the model is kind of compressed, so you need less memory etc. but you are losing so the more compressed you get the results are worse

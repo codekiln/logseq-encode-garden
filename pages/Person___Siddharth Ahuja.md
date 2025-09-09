@@ -1,0 +1,13 @@
+# Siddharth Ahuja
+	- **Role:** Developer & Creator
+	- **Bio:** Siddharth Ahuja is a developer who created Blender MCP, demonstrating how Large Language Models can drive 3D modeling through Model Context Protocol (MCP). His work showcases the creative potential of MCPs in enabling AI agents to interact with complex software tools.
+	- **Notable Work:**
+		- Blender MCP implementation
+		- AI-driven 3D modeling tools
+		- MCP protocol demonstrations
+		- Made [[Ableton/MCP/ableton-mcp]] [ahujasid/ableton-mcp](https://github.com/ahujasid/ableton-mcp)
+	- **External Links:**
+		- [GitHub](https://github.com/ahujasid)
+	- **Related Events:**
+		- [[OReilly/Event/25/09/AI Codecon]]
+		- [[OReilly/Event/25/09/AI Codecon/1410 Blender MCP Siddharth Ahuja]]
