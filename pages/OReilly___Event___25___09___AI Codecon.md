@@ -16,7 +16,7 @@
 		- Jessica Kerr - Designing for AI Agents MCP: [PDF](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1757091679028/mcpdesignfororeillybyjessitron1757091679028.pdf)
 		- Siddharth Ahuja - Blender MCP: [PDF](https://on24static.akamaized.net/event/49/94/94/2/rt/1/documents/resourceList1756843783912/siddharthahujablendermcpaicodecon1756843783912.pdf)
 		- Siddharth Ahuja - GitHub Repo: [Link](https://github.com/ahujasid)
-	- ## Schedule
+	- ## Schedule - Links
 		- ### [[OReilly/Event/25/09/AI Codecon/Pt 1 Agentic Interfaces]]
 			- 11:00 [[OReilly/Event/25/09/AI Codecon/1100 Introduction Tim OReilly]]
 			- 11:10 [[OReilly/Event/25/09/AI Codecon/1110 Alex Komoroske Why Centralized AI Is Not Our Inevitable Future]]
@@ -28,6 +28,7 @@
 			- 12:20 [[OReilly/Event/25/09/AI Codecon/1220 Clay Bavor and Tim OReilly Fireside Chat]]
 			- 12:40 [[OReilly/Event/25/09/AI Codecon/1240 The Hitchhikers Guide to AI Coding Agents Ken Kousen]]
 			- 12:55 [[OReilly/Event/25/09/AI Codecon/1255 Beyond Code Generation Getting Real Work Done with AI Agents Angie Jones]]
+		- ### [[OReilly/Event/25/09/AI Codecon/Pt 3 Background Coding]]
 			- 13:10 [[OReilly/Event/25/09/AI Codecon/1310 Agentic Web MCP A2A MIT Project NANDA and Beyond Ramesh Raskar]]
 			- 13:25 [[OReilly/Event/25/09/AI Codecon/1325 The Team Tomorrow Agents Alignment and Team Ritual Chris Butler]]
 			- 13:40 [[OReilly/Event/25/09/AI Codecon/1340 From Proof to Platform Scaling Agentic AI in a Fortune 300 Software Enterprise Brennon Bortz]]
@@ -36,3 +37,78 @@
 		- ### Additional Notes
 			- 11:31 In the chat - a recommendation from "David M"
 				- > I have been testing out Abacus AI, which is $10 per month. It has access to all the LLMs and also has MCP server, you can build chat bots, and it has backend database for authentication and storage. https://chatllm.abacus.ai/HkLTNcDQBP
+	- ## Schedule - Text
+		- ### Introduction
+			- **Speaker:** [[Person/Tim O'Reilly]]
+			- **Length:** 10 min
+			- **Description:** Tim welcomes you to Coding for the Agentic World.
+		- ### Part 1: Agentic Interfaces
+			- #### Why Centralized AI Is Not Our Inevitable Future
+				- **Speaker:** [[Person/Alex Komoroske]]
+				- **Length:** 15 min
+				- **Description:** Explores data sovereignty, open ecosystems, personalized AI, and the risks of a centralized AI future.
+			- #### Fireside Chat
+				- **Speakers:** [[Person/Josh Woodward]] and [[Person/Tim O'Reilly]]
+				- **Length:** 20 min
+				- **Description:** NotebookLM's origin story, AI-native interfaces, and what's next.
+			- #### Context Engineering
+				- **Speaker:** [[Person/Addy Osmani]]
+				- **Length:** 15 min
+				- **Description:** From prompt engineering to system-level context design for LLMs.
+			- #### Death of the Browser
+				- **Speaker:** [[Person/Rachel-Lee Nabors]]
+				- **Length:** 15 min
+				- **Description:** How AI agents can replace browsers, with more adaptive, private, and accessible user experiences.
+			- #### Break — 5 min
+		- ### Part 2: Tool-to-Tool Workflows
+			- #### Fireside Chat
+				- **Speakers:** [[Person/Clay Bavor]] and [[Person/Tim O'Reilly]]
+				- **Length:** 20 min
+				- **Description:** Sierra's vision of enterprise AI agents as core digital interfaces.
+			- #### The Hitchhiker's Guide to AI Coding Agents (Don't Panic!)
+				- **Speaker:** [[Person/Ken Kousen]]
+				- **Length:** 15 min
+				- **Description:** Survey of AI-powered coding assistants, their capabilities and limits.
+			- #### Beyond Code Generation: Getting Real Work Done with AI Agents
+				- **Speaker:** [[Person/Angie Jones]]
+				- **Length:** 15 min
+				- **Description:** Delegating non-coding dev tasks (triage, tests, PRs, docs) to AI agents.
+			- #### Your AI Agents Don't Need You Anymore
+				- **Speaker:** [[Person/Amit Rustagi]]
+				- **Length:** 5 min
+				- **Description:** Framework for decentralized, self-organizing AI systems using Wasm + IPFS.
+		- ### Part 3: Background Coding Agents
+			- #### Fireside Chat
+				- **Speakers:** [[Person/Kathy Korevec]] and [[Person/Addy Osmani]]
+				- **Length:** 20 min
+				- **Description:** Inside Google Labs' AIDA team and the making of Jules, an AI-powered dev tool.
+			- #### Break — 5 min
+			- #### Agentic Web: MCP, A2A, MIT Project NANDA, and Beyond
+				- **Speaker:** [[Person/Ramesh Raskar]]
+				- **Length:** 10 min
+				- **Description:** Open protocols and the future of agentic societies and commerce.
+			- #### The Team of Tomorrow: Agents, Alignment, and Team Ritual
+				- **Speaker:** [[Person/Chris Butler]]
+				- **Length:** 5 min
+				- **Description:** Design fiction on future team rituals with AI agents as collaborators.
+			- #### From Proof to Platform
+				- **Speaker:** [[Person/Brennon Bortz]]
+				- **Length:** 5 min
+				- **Description:** Scaling agentic AI inside Leidos: pilots, adoption, and enterprise integration.
+		- ### Part 4: MCP and Agent Protocols
+			- #### Designing for AI Agents: MCP
+				- **Speaker:** [[Person/Jessica Kerr]]
+				- **Length:** 15 min
+				- **Description:** MCP design considerations, comparisons with APIs and UX.
+			- #### Blender MCP
+				- **Speaker:** Siddharth Ahuja
+				- **Length:** 15 min
+				- **Description:** How Blender MCP lets LLMs drive 3D modeling, and the creative potential of MCPs.
+			- #### Fireside Chat
+				- **Speakers:** Thomas Dohmke and [[Person/Tim O'Reilly]]
+				- **Length:** 20 min
+				- **Description:** GitHub's evolving role in AI-powered software development.
+			- #### Closing Remarks
+				- **Speakers:** [[Person/Tim O'Reilly]] and [[Person/Addy Osmani]]
+				- **Length:** 5 min
+				- **Description:** Wrap-up and takeaways.
