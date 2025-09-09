@@ -1,0 +1,19 @@
+### Part 4: MCP and Agent Protocols
+	- #### Designing for AI Agents: MCP
+		- **Session:** [[OReilly/Event/25/09/AI Codecon/1355 Designing for AI Agents MCP Jessica Kerr]]
+		- **Speaker:** [[Person/Jessica Kerr]]
+		- **Length:** 15 min
+		- **Description:** MCP design considerations, comparisons with APIs and UX.
+	- #### Blender MCP
+		- **Session:** [[OReilly/Event/25/09/AI Codecon/1410 Blender MCP Siddharth Ahuja]]
+		- **Speaker:** Siddharth Ahuja
+		- **Length:** 15 min
+		- **Description:** How Blender MCP lets LLMs drive 3D modeling, and the creative potential of MCPs.
+	- #### Fireside Chat
+		- **Speakers:** Thomas Dohmke and [[Person/Tim O'Reilly]]
+		- **Length:** 20 min
+		- **Description:** GitHub's evolving role in AI-powered software development.
+	- #### Closing Remarks
+		- **Speakers:** [[Person/Tim O'Reilly]] and [[Person/Addy Osmani]]
+		- **Length:** 5 min
+		- **Description:** Wrap-up and takeaways.

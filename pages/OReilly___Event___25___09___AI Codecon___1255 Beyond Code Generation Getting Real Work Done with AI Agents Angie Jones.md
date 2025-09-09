@@ -62,3 +62,4 @@
 				  So, **HowToAI.md is a practical, concrete artifact** that teams add to their repositories to embed AI usage directly into the developer workflow — a way to normalize and standardize AI assistance just like any other engineering tool.
 		- ## Big idea is to "Think beyond the IDE"
 -
+-

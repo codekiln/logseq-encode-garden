@@ -1,0 +1,22 @@
+### Part 3: Background Coding Agents
+	- #### Fireside Chat
+		- **Session:** [[OReilly/Event/25/09/AI Codecon/1300 Kathy Korevec and Addy Osmani Fireside Chat]]
+		- **Speakers:** [[Person/Kathy Korevec]] and [[Person/Addy Osmani]]
+		- **Length:** 20 min
+		- **Description:** Inside Google Labs' AIDA team and the making of Jules, an AI-powered dev tool.
+	- #### Break — 5 min
+	- #### Agentic Web: MCP, A2A, MIT Project NANDA, and Beyond
+		- **Session:** [[OReilly/Event/25/09/AI Codecon/1310 Agentic Web MCP A2A MIT Project NANDA and Beyond Ramesh Raskar]]
+		- **Speaker:** [[Person/Ramesh Raskar]]
+		- **Length:** 10 min
+		- **Description:** Open protocols and the future of agentic societies and commerce.
+	- #### The Team of Tomorrow: Agents, Alignment, and Team Ritual
+		- **Session:** [[OReilly/Event/25/09/AI Codecon/1325 The Team Tomorrow Agents Alignment and Team Ritual Chris Butler]]
+		- **Speaker:** [[Person/Chris Butler]]
+		- **Length:** 5 min
+		- **Description:** Design fiction on future team rituals with AI agents as collaborators.
+	- #### From Proof to Platform
+		- **Session:** [[OReilly/Event/25/09/AI Codecon/1340 From Proof to Platform Scaling Agentic AI in a Fortune 300 Software Enterprise Brennon Bortz]]
+		- **Speaker:** [[Person/Brennon Bortz]]
+		- **Length:** 5 min
+		- **Description:** Scaling agentic AI inside Leidos: pilots, adoption, and enterprise integration.

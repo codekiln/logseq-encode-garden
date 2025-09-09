@@ -1,0 +1,20 @@
+### Part 2: Tool-to-Tool Workflows
+	- #### Fireside Chat
+		- **Session:** [[OReilly/Event/25/09/AI Codecon/1220 Clay Bavor and Tim OReilly Fireside Chat]]
+		- **Speakers:** [[Person/Clay Bavor]] and [[Person/Tim O'Reilly]]
+		- **Length:** 20 min
+		- **Description:** Sierra's vision of enterprise AI agents as core digital interfaces.
+	- #### The Hitchhiker's Guide to AI Coding Agents (Don't Panic!)
+		- **Session:** [[OReilly/Event/25/09/AI Codecon/1240 The Hitchhikers Guide to AI Coding Agents Ken Kousen]]
+		- **Speaker:** [[Person/Ken Kousen]]
+		- **Length:** 15 min
+		- **Description:** Survey of AI-powered coding assistants, their capabilities and limits.
+	- #### Beyond Code Generation: Getting Real Work Done with AI Agents
+		- **Session:** [[OReilly/Event/25/09/AI Codecon/1255 Beyond Code Generation Getting Real Work Done with AI Agents Angie Jones]]
+		- **Speaker:** [[Person/Angie Jones]]
+		- **Length:** 15 min
+		- **Description:** Delegating non-coding dev tasks (triage, tests, PRs, docs) to AI agents.
+	- #### Your AI Agents Don't Need You Anymore
+		- **Speaker:** [[Person/Amit Rustagi]]
+		- **Length:** 5 min
+		- **Description:** Framework for decentralized, self-organizing AI systems using Wasm + IPFS.

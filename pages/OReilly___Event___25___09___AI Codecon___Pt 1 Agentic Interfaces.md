@@ -1,0 +1,27 @@
+### Part 1: Agentic Interfaces
+	- ### Introduction
+		- **Session:** [[OReilly/Event/25/09/AI Codecon/1100 Introduction Tim OReilly]]
+		- **Speaker:** [[Person/Tim O'Reilly]]
+		- **Length:** 10 min
+		- **Description:** Tim welcomes you to Coding for the Agentic World.
+	- #### Why Centralized AI Is Not Our Inevitable Future
+		- **Session:** [[OReilly/Event/25/09/AI Codecon/1110 Alex Komoroske Why Centralized AI Is Not Our Inevitable Future]]
+		- **Speaker:** [[Person/Alex Komoroske]]
+		- **Length:** 15 min
+		- **Description:** Explores data sovereignty, open ecosystems, personalized AI, and the risks of a centralized AI future.
+	- #### Fireside Chat
+		- **Session:** [[OReilly/Event/25/09/AI Codecon/1125 Josh Woodward and Tim OReilly Fireside Chat]]
+		- **Speakers:** [[Person/Josh Woodward]] and [[Person/Tim O'Reilly]]
+		- **Length:** 20 min
+		- **Description:** NotebookLM's origin story, AI-native interfaces, and what's next.
+	- #### Context Engineering
+		- **Session:** [[OReilly/Event/25/09/AI Codecon/1145 Context Engineering Addy Osmani]]
+		- **Speaker:** [[Person/Addy Osmani]]
+		- **Length:** 15 min
+		- **Description:** From prompt engineering to system-level context design for LLMs.
+	- #### Death of the Browser
+		- **Session:** [[OReilly/Event/25/09/AI Codecon/1200 Death of the Browser Rachel-Lee Nabors]]
+		- **Speaker:** [[Person/Rachel-Lee Nabors]]
+		- **Length:** 15 min
+		- **Description:** How AI agents can replace browsers, with more adaptive, private, and accessible user experiences.
+	- #### Break — 5 min
