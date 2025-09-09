@@ -1,0 +1,44 @@
+- # Advanced Elicitation Methods
+	- These methods, drawn from the [BMAD-METHOD Advanced Elicitation task](https://github.com/bmad-code-org/BMAD-METHOD/blob/main/bmad-core/tasks/advanced-elicitation.md), help refine, stress-test, or expand content during business analysis, ensuring clarity, alignment, and risk-awareness before proceeding.
+	- ## 0. Expand or Contract for Audience
+		- Adjust the **level of detail** in content.
+		- **Expand**: Add depth, examples, and context for expert readers.
+		- **Contract**: Simplify and clarify for executives or non-technical audiences.
+	- ## 1. Critique and Refine
+		- Review output for flaws, inconsistencies, or unclear areas.
+		- Identify weaknesses from the analyst's perspective.
+		- Provide a **refined version** that improves clarity or structure.
+	- ## 2. Identify Potential Risks
+		- Brainstorm possible risks and edge cases.
+		- Highlight unintended consequences or hidden dependencies.
+		- Suggest mitigation strategies to avoid issues.
+	- ## 3. Assess Alignment with Goals
+		- Check whether content supports **stated objectives**.
+		- Spot gaps, misalignments, or unnecessary scope creep.
+		- Suggest adjustments to realign with business and user goals.
+	- ## 4. Tree of Thoughts
+		- Breaks problems into **parallel reasoning paths**.
+		- Classify paths as "sure, likely, or impossible."
+		- Explore multiple approaches, then select the optimal path.
+	- ## 5. ReWOO (Reasoning Without Observation)
+		- Separate **reasoning from external lookup**.
+		- Focus on what can be solved through pure logic.
+		- Increases efficiency and reduces reliance on tools or data.
+	- ## 6. Meta-Prompting
+		- Step back and analyze the **framing of the prompt**.
+		- Ask: *Is this structured effectively?*
+		- Suggest alternative models, structures, or frameworks.
+	- ## 7. Agile Team Perspective
+		- Rotate perspectives through Agile roles:
+			- **Product Owner** → user value & business impact
+			- **Scrum Master** → process & flow
+			- **Developer** → technical complexity
+			- **QA** → testability & quality
+		- Produces a **well-rounded evaluation**.
+	- ## 8. Stakeholder Roundtable
+		- Simulate a virtual discussion among stakeholders.
+		- Capture **conflicting priorities, synergies, and perspectives**.
+		- Synthesize into a balanced recommendation.
+	- ## 9. Proceed / No Further Actions
+		- Accept content as-is.
+		- Move forward without additional elicitation.

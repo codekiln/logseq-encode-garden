@@ -3,6 +3,17 @@ tags:: [[c74/M4L/Idea/Alits]]
 
 - for the summary of the idea, see [[c74/M4L/Idea/Alits]]
 - Work Log
+	- [[2025-09-09 Tue]]
+		- A list of special topics related to [[c74/M4L]]
+			- https://docs.cycling74.com/legacy/max8/vignettes/jsliveapi
+			- https://docs.cycling74.com/legacy/max8/vignettes/live_api_overview
+			- [Basic Javascript programming: Global Methods - Max 8 Documentation](https://docs.cycling74.com/legacy/max8/vignettes/jsglobal#jsarguments)
+			- [Live API Overview - Max 8 Documentation](https://docs.cycling74.com/legacy/max8/vignettes/live_api_overview)
+			- [Controlling Live using Max for Live – Ableton](https://help.ableton.com/hc/en-us/articles/5402681764242-Controlling-Live-using-Max-for-Live)
+			- [Max for Live learning resources – Ableton](https://help.ableton.com/hc/en-us/articles/360003276080-Max-for-Live-learning-resources)
+			- [Tutorial: Max for Live Best Practices, Part 1 | Cycling '74](https://cycling74.com/tutorials/ableton-max-for-live-best-practices-tutorial-part-1)
+			- https://maxforlive.com/resources/M4L-Production-Guidelines.pdf
+			- [[c74/M4L/obj/live.object]]
 	- [[2025-09-08 Mon]]
 		- using [[Person/Brian Madison/BMAD]] to define a project brief; see [alits/docs/brief.md at main · codekiln/alits](https://github.com/codekiln/alits/blob/main/docs/brief.md).
 		- Also, used [[ChatGPT]] to help define a phased implementation plan; see [alits/docs/live-object-model-implementation-phases.md at main · codekiln/alits](https://github.com/codekiln/alits/blob/main/docs/live-object-model-implementation-phases.md)
