@@ -210,7 +210,7 @@ tags:: [[c74/M4L/Idea/Alits]]
 					  :END:
 						- I tried creating `apps/maxmsp-test/maxmsp-test.amxd` with a [[c74/max/obj/js]] as `js ./Code/Main.js`, and got `js: can't find file ./Code/Main.js`, even though `apps/maxmsp-test/Code/Main.js` exists
 							- I also tried `js Code/Main.js` which also did not work
-						- I wish there was a way to open [[c74/M4L/.amxd]] files ... there probably is because [[Person/Zack Steinkamp/blog/posts/2022-02-15-git-diff-amxd-max]] says ((67a8be1a-780f-4c61-82e5-c04cfae63cc6))
+						- I wish there was a way to open [[c74/M4L/.amxd]] files ... there probably is because [[Person/Zack Steinkamp/blog/posts/2022-02-15-git-diff-amxd-max]] says > `.amxd` files are basically JSON, but with a non-JSON file header. This binary part at the beginning makes git fall back to binary file mode when trying to show diffs. Usualy that's not very helpful.
 							- I imagine it might be able to adjust the paths if I was able to adjust the .amxd directly ...
 						- #Discovered that if I go to [[c74/max/Menu/File/Show File Browser]] I'm taken to [[c74/max/File Browser]] window, which lets one create [[c74/max/Collections]] of files. interesting. I tried adding `apps/maxmsp-test/Code/Main.js` to the file paths, but got "no new files have been added to the search path" because the extension is invalid. So that probably won't work.
 					- DONE is there some way that the [[c74/M4L/.amxd]] could be extracted into [[json]], and then we could add the multiple file paths into the .amxd directly? see [[c74/M4L/.amxd/How To/Decompile .amxd into json]]
