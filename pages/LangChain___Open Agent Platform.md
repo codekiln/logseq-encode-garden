@@ -1,0 +1,3 @@
+- [Introduction - Docs by LangChain](https://docs.langchain.com/labs/oap)
+	- Open Agent Platform is a citizen developer platform, allowing non-technical users to build, prototype, and use agents. These agents can be connected to a wide range of tools, RAG servers, and even other agents through an Agent Supervisor!
+	- Open Agent Platform provides a modern, web-based interface for creating, managing, and interacting with LangGraph agents. It’s designed with simplicity in mind, making it accessible to users without technical expertise, while still offering advanced capabilities for developers.

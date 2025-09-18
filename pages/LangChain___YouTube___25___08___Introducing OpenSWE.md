@@ -1,0 +1,86 @@
+date-created:: [[2025/08]]
+
+- # [Introducing Open SWE: An Open-Source Asynchronous Coding Agent - YouTube](https://www.youtube.com/watch?v=TaYVvXbOs8c)
+	- ## [[Video]]
+		- {{video https://www.youtube.com/watch?v=TaYVvXbOs8c}}
+			- ### {{youtube-timestamp 0}} Introduction to Open SWE
+				- #### What is Open SWE?
+					- **Open SWE** is an async cloud-based open source [[AI Coding]] agent
+					- Core functionality:
+						- "you connect your GitHub account to open send it a task and it does the rest"
+						- "It plans, executes the plan, writes code, runs tests, runs your different scripts"
+						- "reviews the code before putting up a pull request to make sure it's all high quality code"
+				- #### Demo Task
+					- Express.js app enhancement:
+						- "add an in-memory data.json store to store my data"
+						- "implement this, write some tests, and then handle all the errors gracefully"
+			- ### {{youtube-timestamp 50}} Cloud-Based Architecture & Benefits
+				- #### Sandbox Environment
+					- Powered by **Daytona** cloud infrastructure
+					- Key advantages over local agents:
+						- **Unlimited parallel tasks**: "run essentially unlimited open suite tasks at the same time"
+						- **Workflow integration**: "I wake up, I plan out what I want to get done in the morning. I create all these different GitHub issues for that and then I simply kick off Open Suite tasks for them all at the exact same time"
+				- #### Security & Isolation
+					- GitHub integration: "you simply add a label to the GitHub issue and that kicks off a new Open Suite task"
+					- Sandbox benefits:
+						- "I don't need to worry about any sort of malicious command, say deleting my entire computer"
+						- "We don't have any sort of guardrails around the commands it can execute"
+						- "It doesn't have access to secrets. We don't need to worry about it leaking those"
+						- "if it wants to execute a shell command that says, you know, delete the entire repository, sure, because it's on its own branch"
+			- ### {{youtube-timestamp 138}} Planning & Execution Workflow
+				- #### Plan Generation & Approval
+					- Automated planning: "it's going to start generating the actual plan now"
+					- User control: "once the plan has been generated, it's going to propose it to me where I can then go and accept it as is"
+					- Plan modification options:
+						- "I can edit individual plans, delete them, or even send a message back to the manager"
+						- "Hey, I actually want you to update the plan in this way"
+				- #### Real-time Communication
+					- Manager system: "This is the manager on this side"
+					- Dynamic updates: "I can send it a message and say actually you know rename this file to XYZ or you know what I've changed my mind on the product spec"
+					- Advantage over other agents: "with a lot of current coding agents that are that are being used out there, you can't really send it messages and update its task in real time"
+			- ### {{youtube-timestamp 184}} Internal Usage & Success Stories
+				- #### Open SWE Self-Development
+					- **Self-contribution**: "using Open Suite to write Open Suite"
+					- Repository insights: "it's the second biggest contributor to the open suite repository"
+					- Use cases: "writing changes to the front end, updating the actual agent documentation"
+				- #### LangGraph Development
+					- **LangGraph contributions**: "tied as the biggest contributor to the Langraph open source repository"
+					- Complex repository handling: "highly complex repo with many different subpackages, apps, documentation, highly complex tests"
+					- Team comparison: "tied with Sydney, who's one of the core maintainers of Langraph as the most contributions for this week"
+				- #### Simple Task Example
+					- Community issue resolution:
+						- "Hey, there's a problem in Open Platform. Can you fix it?"
+						- "I simply added this label to the issue, Open SW Max Auto"
+						- Result: "very simple oneline change. It figured out exactly what to do and in the simplest possible implementation"
+						- Quality: "Its very first try worked as is pass CI every single time"
+				- #### Complex Task Example
+					- **Bench evaluations** implementation:
+						- "extremely complex 19step plan"
+						- Web research capability: "I gave it links to the actual Swedbench website because open suite can go and research the web for you"
+						- Results: "eight files, 2600 changes, a nice body description, only commits from Open Suite"
+						- Success: "All of them pass CI. And at the bottom, we can see everything worked"
+			- ### {{youtube-timestamp 386}} Why We Built Open SWE
+				- #### Market Gap Analysis
+					- **Missing features**: "there wasn't really an open source coding agent that had the same level of features and integrations that open has out there"
+					- Comparison with existing solutions:
+						- Local agents: "local open source coding agents like Coder"
+						- Closed source: "closed source fully autonomous coding agents like Devon or even Cursor"
+						- Missing integration: "there wasn't anything where I could connect it to my GitHub account add a label to the GitHub issue or invoke the agent through the UI"
+				- #### LangGraph Specialization
+					- **LangGraph expertise**: "we want one that's really good at langraph"
+					- Current development: "we're working on a version of open suite which is prompted specifically for langraph code"
+					- Future plans: "open suite langraph engineer. You'll be able to use this to build agentic applications or just agent services for you fully autonomously"
+					- Agent architecture focus: "even if modern-day coding agents can write langraph code, they typically aren't good at writing actual agents themselves"
+			- ### {{youtube-timestamp 533}} Getting Started & Token Management
+				- #### Access & Setup
+					- **Open source**: "it's an open source repository you simply go to langchainai/openswuite"
+					- Documentation: "docs.langchain.com/labs"
+					- Self-hosting: "detailed development setup guide so you can fork open suite use it for your own internal use cases"
+				- #### Hosted Service
+					- **Easy setup**: "simply inputting an anthropic API key"
+					- Managed infrastructure: "We manage the GitHub app, the agent deployment, the sandbox, everything else for you"
+				- #### Cost Transparency
+					- **Token tracking**: "You get insights into all the different tokens that it consumes"
+					- Caching benefits: "we're caching all these tokens are anthropic. So only 5.7% of the tokens we've sent to it have been uncached"
+					- Cost savings: "we've only spent $62 and $222 of that we would have had to pay if we hadn't cached these tokens ahead of time"
+					- Model breakdown: "We can also look at model breakdown"
