@@ -1,0 +1,113 @@
+created-by:: [[CGPT Deep Research]]
+- # Confidentiality & Generative AI in Legal Practice (2025)
+	- ## 1. OpenAI API
+	- **Policies:** Prompts and outputs sent via the [OpenAI API](https://platform.openai.com/docs) are **not used for training** by default (since March 2023). Data is retained for **30 days** for abuse and misuse monitoring, unless Zero Data Retention (ZDR) is enabled.
+	- **Zero Data Retention:** Available on [special request](https://platform.openai.com/docs/guides/data-privacy) for some endpoints, typically for higher-tier or enterprise agreements.
+	- **DPAs:** Customers can sign a Data Processing Addendum to clarify confidentiality obligations.
+	- **Storage:** Data is stored in the US unless otherwise negotiated.
+	- **Tiers:**
+		- Standard API keys: 30-day retention, no training.
+		- Enterprise: contractual guarantees, ZDR available.
+	- **Legal Commentary:** See [Alex Hamilton's discussion on ethical AI use in law](https://twitter.com/asilbop/status/1641449053080846336), and analysis from [LegalTechHub](https://www.legaltechnologyhub.com/).
+	- ## 2. Anthropic API (Claude)
+	- **Policies:** [Anthropic API](https://docs.anthropic.com/claude/docs/anthropic-api-data-usage) does not train on API data. Default retention is **90 days**, for abuse monitoring.
+	- **Controls:** No training by default, opt-in not required. Enterprise plans may offer custom retention windows.
+	- **Claude Code:** Anthropic markets [Claude Code](https://www.anthropic.com/news/claude-code) as a developer-focused assistant. Plans include:
+		- **Claude API** (pay-as-you-go): subject to standard 90-day retention.
+		- **Claude Pro** (web app, $20/month): consumer-facing, not recommended for client data.
+		- **Claude Team**: shared org features, retains same API-level protections.
+		- **Claude Enterprise:** zero-retention options, SOC 2 compliance, custom jurisdiction.
+		- **Claude Code Beta / Claude Code in Enterprise:** inherits same retention rules as above.
+	- **Comparison:** Anthropic's commercial API terms are generally clearer about **no training** than OpenAI's. Lawyers (e.g. [Gabriella Ziccarelli, legal technologist](https://www.linkedin.com/in/gabriella-ziccarelli/)) have commented favorably on Anthropic's contractual clarity.
+	- ## 3. Cloud Gateways
+	- **Azure OpenAI:** Data stays within Microsoft Azure tenant. Microsoft states prompts/outputs are **not used for training** ([Azure OpenAI docs](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy)). Data may be stored up to 30 days.
+	- **AWS Bedrock:** [AWS Bedrock](https://aws.amazon.com/bedrock/) enforces that inputs/outputs are **not used for training**, with encryption in customer's AWS environment. Retention defaults to 30 days.
+	- **Access for Individuals:** Solo lawyers may face GPU quota and onboarding hurdles for Azure and AWS. Some anecdotal evidence on [Hacker News](https://news.ycombinator.com/) reports smaller practices getting Azure OpenAI access.
+	- ## 4. Local / Open-weight Models
+	- **Models:**
+		- **GPT-OSS (20B, 120B)** – [OpenAI's open-weight release](https://openai.com/research/openai-open-weights).
+		- **Llama 3.1** – [Meta AI release](https://ai.meta.com/llama/).
+		- **Mistral** – [Mistral.ai](https://mistral.ai/).
+		- **Phi-3** – [Microsoft Research](https://arxiv.org/abs/2404.14219).
+	- **Licenses:** Apache 2.0 (GPT-OSS, Phi-3), custom open license (Llama 3.1), Mistral license (permissive).
+	- **Hardware:**
+		- 20B parameter models: ~24–32GB VRAM needed.
+		- 120B parameter: multiple GPUs or cloud.
+		- Solo lawyers can realistically run 7B–14B models locally with a high-end PC (RTX 4090 or Apple M2 Ultra).
+	- **Deployment:** [LM Studio](https://lmstudio.ai/) (recommended by Simon Willison) provides a GUI for running/testing models locally.
+	- **Practitioner Commentary:** See [Willison's blog](https://simonwillison.net/) on local LLMs for confidential workflows.
+	- ## 5. OpenRouter & Aggregators
+	- **OpenRouter:** [OpenRouter](https://openrouter.ai/) routes prompts to multiple models. Its [privacy policy](https://openrouter.ai/privacy) notes logs are retained for 30 days and not used for training. Adds a middleman risk versus direct API use.
+	- **Trade-offs:** Flexibility to switch models vs added trust layer. Not recommended for highly sensitive privileged data unless anonymized.
+	- ## 6. Bring Your Own Key (BYOK)
+	- **Frameworks:**
+		- [Goose](https://github.com/gooseai/gooseai)
+		- [Cline](https://github.com/cline/cline)
+		- Other BYOK IDE plugins
+	- **Privacy:** BYOK keeps keys and traffic under lawyer's control, reducing SaaS exposure. Still subject to base API provider's retention.
+	- **Practitioner Views:** Developers emphasize BYOK is safer than SaaS tools like Replit Ghostwriter, especially for confidential legal work.
+	- ## 7. AI Coding with Privacy Constraints
+	- **Context:** Lawyers coding doc automation need strong confidentiality.
+	- **Options:**
+		- **Claude Code Enterprise**: zero data retention possible.
+		- **GitHub Copilot Business**: [no training on business code](https://docs.github.com/en/copilot/about-github-copilot/about-github-copilot-for-business#data-privacy).
+		- **Local code models**: e.g. [StarCoder](https://huggingface.co/bigcode/starcoder), Phi-3 small.
+	- **Commentary:** Technical lawyers highlight running local models (via LM Studio or Ollama) for drafts, using redaction before API calls.
+	- ## 8. Practitioner Evidence
+	- **Redaction Pipelines:** Frameworks like [LegalGuardian](https://github.com/jxnl/LegalGuardian) mask client names before external API calls.
+	- **Commentary:**
+		- Simon Willison: strong on local-first for sensitive work.
+		- Latent Space podcast ([link](https://www.latent.space/)): debates on API vs local trade-offs.
+		- Berkman Klein Center: scholarship on privilege and AI tools in law.
+	- ## 9. Comparative Analysis
+	- ### OpenAI API
+		- Default Training Policy: No training
+		- Retention: 30 days
+		- Zero Data Retention: Yes (Enterprise)
+		- Jurisdiction Controls: US default
+		- Individual Access: Easy
+		- Expert Commentary: Some lawyers cautious
+	- ### Anthropic API
+		- Default Training Policy: No training
+		- Retention: 90 days
+		- Zero Data Retention: Yes (Enterprise)
+		- Jurisdiction Controls: US default, custom possible
+		- Individual Access: Easy
+		- Expert Commentary: Clear terms praised
+	- ### Azure OpenAI
+		- Default Training Policy: No training
+		- Retention: 30 days
+		- Zero Data Retention: Yes
+		- Jurisdiction Controls: Tenant-controlled
+		- Individual Access: Harder
+		- Expert Commentary: Enterprise trust
+	- ### AWS Bedrock
+		- Default Training Policy: No training
+		- Retention: 30 days
+		- Zero Data Retention: Yes
+		- Jurisdiction Controls: AWS region
+		- Individual Access: Harder
+		- Expert Commentary: Privacy-first stance
+	- ### Local Models
+		- Default Training Policy: N/A
+		- Retention: None
+		- Zero Data Retention: Full control
+		- Jurisdiction Controls: Local
+		- Individual Access: Hardware barrier
+		- Expert Commentary: Strong lawyer interest
+	- ### OpenRouter
+		- Default Training Policy: No training
+		- Retention: 30 days
+		- Zero Data Retention: No
+		- Jurisdiction Controls: US servers
+		- Individual Access: Easy
+		- Expert Commentary: Added risk vs direct
+	- ### BYOK
+		- Default Training Policy: Inherits provider policy
+		- Retention: Varies
+		- Zero Data Retention: If API supports
+		- Jurisdiction Controls: Varies
+		- Individual Access: Easy
+		- Expert Commentary: Safer than SaaS
+- **Summary:** For individual lawyers, safest client-facing options are **local LLMs (via LM Studio)** or **API use with strict retention controls (Anthropic or OpenAI with ZDR)**. Aggregators like OpenRouter increase risk. BYOK reduces exposure but still inherits base API retention. Cloud gateways (Azure, AWS) offer strong compliance but may be difficult for solos to access.
+-

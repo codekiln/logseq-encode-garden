@@ -1,0 +1,14 @@
+- [My 2025 New Mac Setup](https://www.swyx.io/new-mac-setup)
+	- - [Raycast the super app](#raycast-the-super-app)
+	- my goal is to replace as many small utilities i used to use, with raycast plugins
+	- Caffeine - [https://www.raycast.com/mooxl/coffee](https://www.raycast.com/mooxl/coffee)
+	- Rectangle - raycast’s default window management
+	- Raycast’s founder has more [here](https://x.com/thomaspaulmann/status/1932158501750796724).
+	- - [Claude maxxing](#claude-maxxing)
+	- Claude Desktop [https://claude.ai/download](https://claude.ai/download)
+	- Claude Code + [iMCP](https://github.com/mattt/iMCP) to read your imessages into AI
+	- - [other AI apps](#other-ai-apps)
+	- to try
+	- hypernote [https://deepwiki.com/fastrepl/hyprnote](https://deepwiki.com/fastrepl/hyprnote)
+	- voice dictation
+	- [whispering](https://github.com/epicenter-so/epicenter/tree/main/apps/whispering) and [voiceink](https://github.com/Beingpax/VoiceInk/)

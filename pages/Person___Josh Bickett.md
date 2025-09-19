@@ -1,0 +1,41 @@
+tags:: [[Person]], [[AI]], [[Machine Learning]], [[Software Engineer]]
+
+- # Josh Bickett
+	- ## Overview
+		- Self-taught software engineer specializing in machine learning and artificial intelligence systems
+		- Lead Frontend Engineer and Software Engineer at [[OthersideAI]]
+		- Co-founder of [[Gait]] (2020)
+		- Based in Bend, Oregon, United States
+	- ## Professional Background
+		- ### Current Role
+			- Lead Engineer at [[OthersideAI]] (2020-present)
+				- Developing AI-powered productivity and communication tools
+				- Focus on LLM-based writing tools and generative AI applications
+		- ### Previous Experience
+			- Co-Founder and Software Engineer at [[Gait]] (2020-present)
+			- Product Manager at [[Fix Auto USA]] (2018-2020)
+			- Financial Analyst at [[S&P Data]] (2014-2018)
+	- ## Education & Certifications
+		- University of California, San Diego (2011-2014)
+		- Neural Networks and Deep Learning Certification (Coursera, October 2022)
+		- Machine Learning Certification (Coursera, April 2021)
+	- ## Notable Work
+		- ### AI Agent Research
+			- Created influential content on "What is an AI Agent" (November 2023)
+				- Tweet thread explaining AI agent concepts
+				- Visual diagram illustrating agent architecture
+		- ### Open Source Contributions
+			- Self-Operating Computer Framework
+			- Multimodal-Gamer Framework
+	- ## Online Presence
+		- [LinkedIn Profile](https://www.linkedin.com/in/josh-bickett-4219b166)
+		- [Medium Blog](https://joshbickett.medium.com/about)
+		- [Twitter/X](https://x.com/josh_bickett)
+		- [Clubhouse](https://www.clubhouse.com/@bickett)
+		- [SoundCloud](https://soundcloud.com/josh-bickett-305757763)
+		- [Flickr](https://www.flickr.com/photos/72310740@N04/)
+	- ## Interests
+		- Space and science enthusiast
+		- Machine learning and AI systems
+		- Software development
+		- Gait analysis technology
