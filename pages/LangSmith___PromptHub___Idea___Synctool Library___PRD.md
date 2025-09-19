@@ -1,0 +1,147 @@
+- # Project Brief: LangSmith PromptHub Sync Tool
+	- ## Executive Summary
+		- This project is about creating a **developer-first workflow tool for managing prompts with LangSmith Prompt Hub** in a private setting.
+		- **Product Concept:** A Python-native library and CLI that let developers define prompts once — with structured outputs and model bindings — in a DRY fashion, version them in git, and automatically expand them into the required multiple Prompt Hub entries.
+		- **Problem Solved:** In LangSmith Prompt Hub today, each prompt can only have **one structured output** and **one model**. In practice, teams need to experiment with different schemas and multiple models — but doing so manually is repetitive, error-prone, and doesn't scale. There is also no reliable way to programmatically manage these variations while keeping them under git-based version control.
+		- **Target Market:** Teams using LangSmith PromptHub to build AI agents, where coders support Subject Matter Experts (SMEs) in prompt creation.
+		- **Value Proposition:** Provides a DRY, automated way to define prompts once locally and publish all model/schema combinations, while enabling push/pull sync with Prompt Hub, consistency across fragments, and future drift detection.
+	- ## Problem Statement
+		- Currently, LangSmith's Prompt Hub only supports associating a **single model** and a **single structured output schema** with each prompt. This creates significant friction for teams who want to experiment with multiple models and structured outputs:
+		- Developers are forced to **duplicate prompts** in order to test variations, violating DRY principles and introducing errors.
+		- There is **no programmatic, reliable way** to push prompts with schemas into Prompt Hub; official SDK support for Pydantic-based structured outputs is fragile and incomplete.
+		- Teams have to either rely on the UI or patch together custom scripts, which makes **version control, review, and CI/CD integration difficult**.
+		- Without drift detection, prompts in Prompt Hub can diverge from the versions in git, leading to **inconsistent behavior between environments**.
+		- A further challenge is the lack of **prompt composition**. In real-world use cases, many prompts share a common "base" section while varying in another. For example, an **instructor prompt** might be constant, while the **lesson plan content** varies. Today, LangSmith only allows two suboptimal approaches:
+			- 1. **Combine everything into one prompt**, which forces duplication of the shared fragment across every variant.
+			- 2. **Manually manage fragments outside Prompt Hub**, then copy-paste them together.
+		- Both approaches break DRY principles, create maintenance overhead, and increase the risk of inconsistency across prompts.
+		- As a result, prompt experimentation and management are slow, error-prone, and unscalable. Teams lack the tooling to handle prompts with the same rigor and automation as source code.
+	- ## Proposed Solution
+		- This project proposes a **Python library with a CLI** that enables developers to manage prompts for LangSmith Prompt Hub in a DRY, version-controlled, and scalable way.
+		- **MVP Workflow:**
+			- 1. **Meta Spec Definition** – Developers define a single "meta spec" for each prompt, written in Python or YAML. The spec includes:
+				- Prompt fragments (reusable sections)
+				- Model definitions
+				- Structured outputs
+				- Tool definitions
+				- Metadata (description, tags, etc.)
+			- 2. **Expansion into Concrete Prompts** – The CLI expands the meta spec into the Cartesian product of fragments × models × schemas × tools, creating one **Markdown file per combination**. Each file is saved with a predictable suffix such as `*_lsph.md` (LangSmith Prompt Hub Markdown).
+				- Example:
+					- ~~~
+					  arch-x___proj-y___lessonplan___variant1___gpt4o___schema-a_lsph.md
+					  ~~~
+			- 3. **Upload to Prompt Hub** – The CLI pushes the expanded `*_lsph.md` files to LangSmith Prompt Hub using predictable naming conventions.
+			- 4. **Download from Prompt Hub** – The CLI can pull the current versions from Prompt Hub into updated local `*_lsph.md` files, allowing developers to track changes and compare with git history.
+		- **Stretch Goals:**
+			- **Drift Detection** — Compare Prompt Hub versions against local `*_lsph.md` files and flag mismatches.
+			- **CI/CD Integration** — Automate prompt validation, testing, and syncing in pipelines.
+	- ## Target Users
+		- **Primary User Segment: Coders Supporting SMEs in LangSmith PromptHub**
+			- **Profile:** Software developers collaborating with Subject Matter Experts (SMEs) to build AI agents using LangSmith PromptHub.
+			- **Role:** Developers structure, sync, and version prompts while SMEs focus on editing and refining them in the Prompt Playground.
+			- **Needs & Pain Points:**
+				- **Consistency of Naming:** Ensure prompt files follow predictable, hierarchical conventions.
+				- **Consistency Across Variants:** Guarantee that prompt fragments shared across variants remain identical.
+				- **Controlled Experimentation:** Support evaluation workflows where only one part of a prompt changes at a time.
+				- **Git-Backed Reliability:** Provide a repeatable way to sync Playground-edited prompts into source control.
+			- **Goals:**
+				- Maintain consistency across prompt variants and fragments.
+				- Enable valid experimentation and evaluations.
+				- Bridge SME creativity in the Playground with coder-managed workflows.
+		- **Secondary User Segment: Teams Needing PromptHub Backup & Fallback Scenarios**
+			- **Profile:** Teams that rely on LangSmith PromptHub but need stronger **backup and resilience**.
+			- **Needs & Pain Points:**
+				- **PromptHub Backup:** Export/snapshot all prompts into git.
+				- **AI Coding Enablement:** Backed-up prompts should be accessible to AI coding workflows.
+				- **Fallback Scenarios:** If two prompts are variants, enable fallback strategies between them.
+			- **Goals:**
+				- Secure local, version-controlled backups.
+				- Enable smarter fallbacks later.
+		- **Note:** Backup and fallback are **not part of the MVP** but should be architecturally anticipated.
+	- ## Goals & Success Metrics
+		- **Goals**
+			- Deliver a **minimal, focused Python library + CLI** that addresses consistency and DRY prompt management.
+			- Avoid scope creep or unnecessary features.
+			- Provide a clear, predictable workflow for meta-spec definition, expansion into `*_lsph.md`, and syncing to/from Prompt Hub.
+		- **Success Metrics**
+			- 📦 A published PyPI package with CLI.
+			- ✅ Good test coverage for core functionality.
+			- 🔄 Ability to round-trip prompts (meta-spec → files → Prompt Hub → back).
+			- 📂 Small, maintainable feature set with clear docs.
+			- 💻 Adopted in at least one real coder–SME workflow.
+	- ## MVP Scope
+		- **Core Features (Must Have)**
+			- 1. Meta-spec definition (fragments, models, schemas, tools, metadata).
+			- 2. CLI expansion into `*_lsph.md` files.
+			- 3. CLI upload to LangSmith Prompt Hub.
+			- 4. CLI download from LangSmith Prompt Hub.
+			- 5. Consistency enforcement for shared fragments.
+		- **Out of Scope**
+			- Drift detection (stretch goal).
+			- Dataset tools (future).
+			- PromptHub backup/restore beyond push/pull.
+			- Fallback logic.
+			- CI/CD automation (stretch goal).
+			- Any GUI — SMEs remain in LangSmith Playground.
+	- ## Post-MVP Vision
+		- **Phase 2 Features**
+			- Drift Detection
+			- CI/CD Integration
+			- PromptHub Backup
+			- Configurable Naming Schema
+		- **Long-Term Opportunities**
+			- Dataset integration aligned with prompt input schemas.
+			- Fallback scenarios across model providers.
+			- Richer metadata and visualization tooling.
+		- **Guiding Principle:** Stay lean, solve consistency and DRY management without bloat.
+	- ## Technical Considerations
+		- **Python:** ≥3.13, async-only.
+		- **LangSmith SDK:** Must use `AsyncClient`.
+		- **File Format:** Markdown + YAML front matter (`*_lsph.md`).
+		- **Environment & Packaging:** `mise` for environments; `uv` for dependencies.
+		- **Linting/Formatting:** Ruff (with Black + isort).
+		- **Testing:** Pytest (unit vs integration separation, async tests, httpx for integration).
+		- **Source Control:** GitHub with conventional commits; JIRA or GitHub issue references required.
+		- **Naming Convention:** Hierarchical with `___` separators and kebab-case elements. Example:
+			- ~~~
+			  arch-x___proj-y___lessonplan___variant1___gpt4o___schema-a_lsph.md
+			  ~~~
+		- **Sync Metadata:** YAML front matter includes `last-synced-commit` and `last-synced-at`.
+	- ## Constraints & Assumptions
+		- **Constraints**
+			- Keep scope small — not a full framework.
+			- Python ≥3.13 only.
+			- Async-only.
+			- Markdown + YAML only.
+			- LangSmith-only registry.
+			- MVP excludes drift detection, datasets, CI/CD, fallbacks.
+		- **Assumptions**
+			- Users are developers supporting SMEs, comfortable with git + CLI.
+			- SMEs continue editing in Playground; coders sync.
+			- Version control is the source of truth.
+			- Consistency across fragments is critical for evals.
+			- Architecture should allow growth into drift detection, dataset alignment, configurable naming, and fallbacks.
+	- ## Risks & Open Questions
+		- **Key Risks**
+			- **LangSmith SDK Limitations:** Fragility in structured prompt pushes may require JSON-based workarounds.
+			- **Naming Convention Complexity:** Names like `arch-x___proj-y___lessonplan___variant1___gpt4o___schema-a_lsph.md` may become verbose if many dimensions vary.
+			- **Consistency Guarantees:** Enforcing non-variant fragment identity could require extra checks.
+		- **Clarifications**
+			- **Async-Only Constraint:** This is intentional — aligns with LangGraph Cloud, which requires async contexts.
+		- **Open Questions**
+			- Should drift detection reconcile changes into meta-specs, or only track expanded files?
+			- When should naming schema configurability be introduced?
+			- How tightly should dataset/schema alignment integrate with prompts?
+			- How to best encode variant relationships for future fallbacks?
+			- Should Playground edits always sync down, even if they break DRY assumptions?
+	- ## Appendix: References and Related Work
+		- **LangSmith SDK Documentation:** [LangSmith Python Client](https://docs.smith.langchain.com/reference/python/client/langsmith.client.Client)
+		- **Open GitHub Issues:**
+			- [Issue #1462: Programmatically update a StructuredPrompt with Pydantic schema](https://github.com/langchain-ai/langsmith-sdk/issues/1462)
+			- [Issue #1690: Support pulling prompts and chaining with structured outputs](https://github.com/langchain-ai/langsmith-sdk/issues/1690)
+			- [Issue #1116: Serialization errors with model_dump](https://github.com/langchain-ai/langsmith-sdk/issues/1116)
+		- **Community Tools:**
+			- [PromptOps](https://github.com/llmhq-hub/promptops)
+			- [Promptfoo](https://github.com/promptfoo/promptfoo)
+			- [PromptKnit](https://promptknit.com)
+		- 📄 **End of Project Brief**
