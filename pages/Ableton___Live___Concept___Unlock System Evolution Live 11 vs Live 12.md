@@ -1,0 +1,70 @@
+tags:: [[Ableton/Live]], [[Licensing]], [[Diataxis/Explanation]]
+
+- # Ableton Live Unlock System: Live 11 vs Live 12 (Evidence-Based Analysis)
+	- ## Overview
+		- **CORRECTION**: Evidence shows that Ableton Live's device authorization system has remained **consistent** between Live 11 and Live 12
+		- Both versions use the same unlock mechanism: **2 device authorizations** per license
+		- No significant changes occurred in the unlock system between these versions
+		- Understanding the actual system helps users make informed upgrade decisions
+	- ## Context
+		- **Historical Context**: Ableton Live has consistently used a 2-device authorization model
+		- **User Confusion**: Common misconception that Live 11 had 5 unlocks vs Live 12's 2 unlocks
+		- **Reality**: Both versions use the same 2-device authorization system
+		- **Industry Standard**: 2-device authorization is common in professional software licensing
+	- ## Key Principles
+		- **Consistent Model**: Both Live 11 and Live 12 use 2 device authorizations per license
+		- **Device Ownership**: System assumes legitimate ownership of devices by a single individual
+		- **Upgrade Path**: Existing authorizations carry over when upgrading between versions
+		- **Request System**: Users can request additional unlocks through Ableton support for legitimate needs
+	- ## Mechanism
+		- ### Live 11 Suite Unlock System
+			- **Device Limit**: 2 device authorizations per license (not 5 as commonly believed)
+			- **Request Mechanism**: Users could request additional unlocks through Ableton support
+			- **Upgrade Behavior**: Authorizations carry over to Live 12 Suite
+			- **Evidence**: [Ableton Authorization FAQ](https://help.ableton.com/hc/en-us/articles/115000072830-Authorization-FAQ) confirms 2-authorization limit
+		- ### Live 12 Suite Unlock System
+			- **Device Limit**: 2 device authorizations per license (same as Live 11)
+			- **Request Mechanism**: Users can request additional unlocks through Ableton support
+			- **Consistency**: No changes from Live 11 system
+			- **Evidence**: [Ableton License Policy](https://help.ableton.com/hc/en-us/articles/209772745-License-policy-for-Live) confirms consistent 2-device policy
+	- ## Evidence
+		- ### Official Documentation
+			- [Ableton Authorization FAQ](https://help.ableton.com/hc/en-us/articles/115000072830-Authorization-FAQ) - Confirms 2-device authorization limit
+			- [Ableton License Policy](https://help.ableton.com/hc/en-us/articles/209772745-License-policy-for-Live) - Details consistent licensing across versions
+			- [Multi-user Authorization Guide](https://help.ableton.com/hc/en-us/articles/360004151880-Authorizing-Live-for-all-users-on-Windows) - Shows consistent unlock file system
+		- ### User Reports
+			- [Ableton Forum Discussion](https://forum.ableton.com/viewtopic.php?t=248904) - Users report Live 12 inherits Live 11 libraries and paths
+			- [German Forum Discussion](https://forum.ableton.de/viewtopic.php?t=250554) - Users retain Suite licenses when upgrading from Live 11 Suite to Live 12 Standard
+			- [Library Management Discussion](https://forum.ableton.com/viewtopic.php?t=249587) - No mention of unlock system changes
+		- ### Release Notes
+			- [Live 12 Release Notes](https://www.ableton.com/en/release-notes/live-12/) - Focus on features, no mention of licensing changes
+	- ## Examples
+		- ### Live 11 Suite User Scenario
+			- User has Live 11 Suite with 2 devices currently authorized
+			- Upgrades to Live 12 Suite
+			- **Result**: Still has 2 devices authorized (same limit)
+			- **System**: Can request additional unlocks if needed for legitimate devices
+		- ### Live 12 Suite New User Scenario
+			- New user purchases Live 12 Suite
+			- **Initial State**: 2 device authorizations available (same as Live 11)
+			- **Expansion**: Can request additional authorizations for legitimate devices through support
+			- **Process**: Contact Ableton support with device information and legitimate use case
+	- ## Misconceptions (Corrected)
+		- **Live 11 had 5 unlocks**: **False**. Live 11 also had 2 device authorizations
+		- **Live 12 changed the system**: **False**. The system remained consistent between versions
+		- **Upgrading gives you more unlocks**: **False**. You retain your existing authorization count
+		- **Request system is new in Live 12**: **False**. Request system existed in Live 11 as well
+	- ## Practical Implications
+		- ### For Live 11 Suite Users Considering Upgrade
+			- **Current Authorizations**: Your existing authorization count carries over to Live 12 Suite
+			- **Additional Needs**: Can request more authorizations if you have legitimate additional devices
+			- **Upgrade Benefit**: Access to Live 12 features while maintaining current device authorization
+		- ### For New Live 12 Suite Users
+			- **Initial Setup**: Plan for 2 devices initially (same as Live 11)
+			- **Expansion Planning**: Factor in support request process for additional devices
+			- **Device Management**: Keep track of authorized devices and legitimate use cases
+	- ## Related
+		- [Ableton Live License Policy](https://help.ableton.com/hc/en-us/articles/209772745-License-policy-for-Live) - Official Ableton licensing documentation
+		- [Ableton Authorization FAQ](https://help.ableton.com/hc/en-us/articles/115000072830-Authorization-FAQ) - Detailed authorization information
+		- [[Ableton/Live]] - General Ableton Live information
+		- [[Ableton/Live/Suite]] - Suite-specific features and information

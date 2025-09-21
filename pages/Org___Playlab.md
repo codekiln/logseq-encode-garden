@@ -1,0 +1,2 @@
+- [Playlab - Create Your Own AI Edtech](https://www.playlab.ai/)
+	- We are a 501c3 nonprofit organization devoted to creating a future where educators and students around the world have the agency to not just use AI, but to shape it. On their terms. As part of a global community working to improve education.

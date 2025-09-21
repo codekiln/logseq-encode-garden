@@ -1,0 +1,55 @@
+tags:: [[Person/Adam Murray]], [[Ableton/Max for Live]], [[Tutorial]], [[JavaScript]], [[MIDI]]
+
+alias:: [[Adam Murray/Max for Live]]
+
+- # Adam Murray's Max for Live Work
+	- ## Overview
+		- Comprehensive collection of Max for Live tutorials and devices by [[Person/Adam Murray]]
+		- Focuses on JavaScript programming within Ableton Live using Max's built-in JavaScript engine
+		- Provides practical tools for music production and MIDI manipulation
+		- Source: [Max for Live - Adam Murray's Blog](https://adammurray.link/max-for-live)
+	- ## JavaScript Tutorials
+		- ### Core Tutorial Series
+			- [JavaScript (V8) in Ableton Live Overview](https://adammurray.link/max-for-live/js-in-live/overview/) - Introduction to using JavaScript in Max for Live
+			- [Getting Started](https://adammurray.link/max-for-live/js-in-live/getting-started/) - Basic setup and first steps
+			- [Real Time MIDI Processing](https://adammurray.link/max-for-live/js-in-live/real-time-midi-processing/) - Working with MIDI data in real-time
+			- [The Max Console](https://adammurray.link/max-for-live/js-in-live/max-console/) - Debugging and logging techniques
+			- [The Live API](https://adammurray.link/max-for-live/js-in-live/live-api/) - Interacting with Ableton Live's Live Object Model
+			- [Generating MIDI Clips](https://adammurray.link/max-for-live/js-in-live/generating-midi-clips/) - Creating MIDI content programmatically
+			- [MIDI Tools #1: Transformations](https://adammurray.link/max-for-live/js-in-live/midi-tools-1/) - MIDI data manipulation techniques
+			- [MIDI Tools #2: Generators](https://adammurray.link/max-for-live/js-in-live/midi-tools-2/) - Creating MIDI patterns and sequences
+			- [Max Console #2: Logging Improvements](https://adammurray.link/max-for-live/js-in-live/max-console-2/) - Advanced debugging strategies
+	- ## Max for Live Devices
+		- ### MIDI Sculptor
+			- Tools for making variations of MIDI clips
+			- Enables creative MIDI manipulation and transformation
+			- Download available from [Max for Live page](https://adammurray.link/max-for-live)
+		- ### MIDI Modulation Tools
+			- Tools for modulating synthesizers with MIDI
+			- Provides advanced MIDI control capabilities
+			- Download available from [Max for Live page](https://adammurray.link/max-for-live)
+		- ### Launchpad Sequencer
+			- Step sequencer designed for the original Novation Launchpad
+			- Can be used without hardware
+			- New version in development for Launchpad X
+			- Download available from [Max for Live page](https://adammurray.link/max-for-live)
+	- ## Key Learning Resources
+		- ### JavaScript in Max for Live
+			- Comprehensive tutorial series covering JavaScript integration
+			- Focus on practical applications for music production
+			- Real-world examples and use cases
+		- ### Live API Integration
+			- Deep dive into Ableton Live's Live Object Model
+			- Techniques for controlling Live from Max for Live devices
+			- Best practices for device development
+	- ## Technical Focus Areas
+		- JavaScript (V8) engine integration
+		- MIDI processing and manipulation
+		- Real-time audio/MIDI processing
+		- Live API interaction
+		- Device development best practices
+		- Debugging and logging techniques
+	- ## Related Work
+		- Referenced in [[c74___max___js___How To___Run a function when the js is recompiled or initialized]] for JavaScript compilation techniques
+		- Part of broader [[Ableton/Max for Live]] ecosystem
+		- Connects to [[Person/Adam Murray]]'s work on [[producer-pal]] AI music assistant
