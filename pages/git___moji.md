@@ -1,0 +1,4 @@
+- alias: [[gitmoji]]
+- tags:: [[Emoji]]
+- # [gitmoji | An emoji guide for your commit messages](https://gitmoji.dev/)
+	-

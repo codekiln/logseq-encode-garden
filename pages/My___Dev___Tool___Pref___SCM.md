@@ -1,0 +1,17 @@
+# Preferences for Source Code Management (SCM)
+	- use git
+	- ## Git preferences
+		- each commit should group files into a single logical change to the codebase
+	- ## Commit Message Preferences
+		- 1 - use [[Conventional Commits]] as a standard for the commit messages (https://www.conventionalcommits.org/en/v1.0.0/)
+			- Recommendation: download the conventional commits specification and put it at `docs/dev/scm/convention_commits.md`
+		- 2 - commit style - use [[gitmoji]] (https://gitmoji.dev/) to communicate what's happening at this point in the project
+		- 3 - the last line(s) of the commit should (each) be referencs to the ID and Name of the task being worked on with respect to the task storage system of record
+			- [[JIRA]] example
+				- `AB-1234 The Jira Ticket Title`
+			- [[GitHub/Issue]] example
+				- `#123 The GitHub Issue Title`
+			- Local filesystem task, e.g. for use with [[Person/Brian Madison/GitHub/BMAD-METHOD]]
+				- `docs/stories/1.1.story.title`
+		-
+	-

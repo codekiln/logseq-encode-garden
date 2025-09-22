@@ -16,8 +16,8 @@ alias:: [[Person/Adam Murray]]
 			- [producer-pal](https://github.com/adamjmurray/producer-pal) - AI assistant for music composition inside Ableton Live
 			- Uses an [[MCP Server]] integrated into a [[Ableton/Max for Live]] device
 			- Enables AI-powered music composition workflows within Ableton Live
-		- ### Max for Live Tutorials and Devices
-			- [[Person/Adam Murray/Web/Max for Live]] - Comprehensive collection of JavaScript tutorials and Max for Live devices
+		- ### Max for Live Tutorials and Devices - [[Person/Adam Murray/Web/Max for Live]]
+			- Comprehensive collection of JavaScript tutorials and Max for Live devices
 			- JavaScript tutorial series for Max for Live development
 			- MIDI Sculptor, MIDI Modulation Tools, and Launchpad Sequencer devices
 			- Source: [Max for Live - Adam Murray's Blog](https://adammurray.link/max-for-live)
