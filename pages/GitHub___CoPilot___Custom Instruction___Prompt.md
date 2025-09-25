@@ -1,0 +1,3 @@
+# [Custom prompts in GitHub CoPilot](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions#about-repository-custom-instructions-for-copilot-1)
+	- **1:** Repository-wide instructions (using the `.github/copilot-instructions.md` file) are supported.
+	  **2:** Repository-wide instructions and path-specific instructions (using `.github/instructions/**/NAME.instructions.md` files) are supported.
