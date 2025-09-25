@@ -1,0 +1,35 @@
+tags:: [[Diataxis/How To]]
+
+- # How To Compare a File with Another Branch in VS Code (GitLens)
+	- ## Goal
+		- View file differences between a file in your current branch and a file in another Git branch, similar to PyCharm’s *“Compare With Branch”* feature.
+	- ## Preconditions
+		- VS Code installed
+		- Git repository initialized
+		- [[VSCode/Extension/GitLens]]  installed
+	- ## Procedure
+		- ### 1. Enable Branches View in GitLens for the [[VSCode/Panel/Source Control]] Source Code panel
+			- Open **Source Control panel** (`Ctrl+Shift+G` / `Cmd+Shift+G`).
+			- Expand the **GitLens** section.
+			- Click the **three dots (…) menu**.
+			- Select **Detach Branches View**.
+				- This makes “Branches” appear as its own section.
+				- See also: [Anyone else missing Branches and Commits with in Source Control? : r/vscode](https://www.reddit.com/r/vscode/comments/1gu94qp/anyone_else_missing_branches_and_commits_with_in/)
+		- ### 2. Diff a Specific File with Another Branch
+			- In the **Branches** view, locate your current branch
+			- Click the disclosure triangle for `BRANCHNAME`
+			- Click on the pencil icon in the entry `Compare BRANCHNAME`
+			- Enter the branch name you wish to compare with
+			- You should now see an entry underneath like `DDD files changed AAA additions (+), DDD deletions (-)`; click the disclosure triangle
+			- Locate the specific file under the disclosure triangle you wish to compare, right click on it
+			- Navigate to **Open Changes with → Open Changes with Working File**.
+			- A side-by-side diff opens between your working copy and the file in the other branch.
+		- ### 3. Diff All Files with Other Branch
+			- Press on the `+/-` file button, which has the tooltip "Open All Changes as Working Tree"
+			- ![image.png](../assets/image_1758794025341_0.png)
+	- ## Gripes
+		- There's no way to bring over individual lines from one side of the diff to the other, the way there is in [[PyCharm]] or [[JetBrains]]
+	- ## Troubleshooting
+		- If Branches aren’t showing, check the GitLens menu → **Detach Branches View**.
+	- ## References
+		- Use the command palette (`Ctrl+Shift+P`) → **GitLens: Compare with Branch** for a repo-wide compare.
