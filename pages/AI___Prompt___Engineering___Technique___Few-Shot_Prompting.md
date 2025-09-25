@@ -1,0 +1,35 @@
+alias:: [[AI/Prompt Engineering/Technique/Few-Shot Prompting]], [[Few-Shot Prompting]]
+
+- # Few-Shot Prompting
+	- ## Overview
+		- Few-shot prompting is a technique in [[Prompt Engineering]] where you provide the [[AI/LLM]] with a small number of examples (typically 2-5) to demonstrate the desired input-output pattern before asking it to perform the same task on new inputs
+		- This technique helps the model understand the task format, style, and expected behavior without requiring extensive fine-tuning
+	- ## How It Works
+		- ### Pattern Recognition
+			- The model learns from the provided examples to identify patterns in input-output relationships
+			- It uses these patterns to generate appropriate responses for new, similar inputs
+		- ### Context Learning
+			- Examples serve as context that guides the model's understanding of the task
+			- The model infers the underlying rules and constraints from the examples
+	- ## Best Practices
+		- ### Example Selection
+			- Choose diverse examples that represent the range of inputs you expect
+			- Ensure examples are high-quality and demonstrate the desired output format
+			- Include edge cases when relevant
+		- ### Format Consistency
+			- Maintain consistent formatting across all examples
+			- Use clear separators between examples and the actual prompt
+		- ### Example Order
+			- Place examples in logical order (e.g., simple to complex)
+			- Consider the order's impact on the model's learning
+	- ## Resources
+		- ### Tutorials and Examples
+			- [Using Examples & Few-Shot Prompting](https://github.com/anthropics/prompt-eng-interactive-tutorial/blob/master/AmazonBedrock/anthropic/07_Using_Examples%20_Few-Shot_Prompting.ipynb) - Interactive tutorial from Anthropic's prompt engineering series
+	- ## Related Techniques
+		- [[Zero-Shot Prompting]] - Providing no examples, just instructions
+		- [[One-Shot Prompting]] - Providing a single example
+		- [[Chain-of-Thought Prompting]] - Breaking down complex reasoning
+	- ## See Also
+		- [[Prompt Engineering]] - Main page for prompt engineering techniques
+		- [[Context Engineering]] - Broader concept of providing appropriate context to LLMs
+
