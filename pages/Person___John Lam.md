@@ -1,0 +1,16 @@
+- # John Lam
+	- ## Overview
+		- Software engineer and researcher known for his work in programming languages and developer tools
+		- GitHub profile: [jflam](https://github.com/jflam)
+		- Significant contributor to spec-driven development research and methodologies
+	- ## Professional Background
+		- Has worked on various programming language and compiler technologies
+		- Research focus on developer productivity and software engineering practices
+		- Known for contributions to spec-driven development approaches
+	- ## Notable Work
+		- Research and work that heavily influenced GitHub's SpecKit project
+		- Contributions to programming language tooling and development methodologies
+	- ## Links
+		- GitHub: https://github.com/jflam
+	- ## References
+		- Mentioned as a key influence in [[GitHub/SpecKit]] project documentation

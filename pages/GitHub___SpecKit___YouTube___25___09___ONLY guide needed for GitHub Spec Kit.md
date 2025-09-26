@@ -1,0 +1,148 @@
+created-by:: [[Person/Dan Delamarski]]
+
+- # [The ONLY guide you'll need for GitHub Spec Kit - YouTube](https://www.youtube.com/watch?v=a9eR1xsfvHg)
+	- ## [[Video]]
+		- {{video https://www.youtube.com/watch?v=a9eR1xsfvHg}}
+			- ### {{youtube-timestamp 0}} Introduction to SpecKit
+				- #### Project Overview
+					- **SpecKit** is a new experimental project from GitHub
+					- "16.3,000 stars... I was just celebrating yesterday that we hit 15,000 and it's 16.3,000 already a week after release"
+					- Rapid community adoption and feedback
+				- #### Community Engagement
+					- Encourages feedback through GitHub issues
+					- "Thank you to all of you who are trying this out, who are experimenting, who are filing issues, opening pull requests"
+					- Warning about proper issue reporting: "do not open a pull request that rewrites the entire thing as an MCP server"
+			- ### {{youtube-timestamp 61}} What is Spec-Driven Development?
+				- #### Problem with Vibe Coding
+					- "vibe coding some SAS app and there's a lot of this imprecision happening"
+					- "You end up in these random rabbit holes where the code is not quite what you wanted"
+					- "The implementation is not quite what you wanted. The design is not quite what you wanted"
+				- #### Spec-Driven Development Solution
+					- "spec driven development is something that can actually help you get out of that rabbit hole"
+					- "into a little bit more of a scalable solution for your software"
+					- Focus on **what** and **why** rather than **how**
+			- ### {{youtube-timestamp 120}} Getting Started with SpecKit
+				- #### Installation Options
+					- **CLI Installation** (recommended):
+						- "use uvx and you can install it directly from the GitHub repo"
+						- "Shout out to the folks at Astral. UVX. I use UV and UVX all the freaking time"
+					- **Manual Download**:
+						- "if you do not want to use a CLI, that's totally fine"
+						- "you can go to the releases and just download the templates yourself"
+				- #### Supported Agents
+					- GitHub Copilot
+					- Cloud Code
+					- Gemini CLI
+					- **Cursor** (newly added): "just today, actually, I launched support for Cursor"
+					- PowerShell and shell scripts for different operating systems
+			- ### {{youtube-timestamp 170}} Project Bootstrap Demo
+				- #### Creating a Podcast Website Project
+					- Project name: "pod site"
+					- "I am big at podcasting. If you have not listened to the work item, check it out"
+					- Using GitHub Copilot as the selected agent
+				- #### Script Selection
+					- "defaults smartly to the operating system that you're running in"
+					- PowerShell for Windows, shell scripts for Linux/Unix
+					- "this just launched today. It's hot off the press. You can actually now support PowerShell"
+			- ### {{youtube-timestamp 333}} Project Structure and Constitution
+				- #### Generated Project Structure
+					- `specify/` folder with metadata, scripts, and templates
+					- `GitHub/` folder with prompts for slash commands
+					- Helper scripts for deterministic operations
+				- #### Constitution File Concept
+					- "establishes a set of non-negotiable principles for your project"
+					- Examples: "I always have to have tests. I always got to make sure that I'm running Next.js of a specific version"
+					- "you encode that in the constitution"
+			- ### {{youtube-timestamp 438}} VS Code Integration
+				- #### Slash Commands
+					- `/specify` - Define baseline specification
+					- `/plan` - Specify technical requirements  
+					- `/tasks` - Break down work into manageable chunks
+					- "slash commands in VS Code is nothing other than custom prompts"
+				- #### Model Selection
+					- "I like GPD5 and cloud sonnet 4 personally"
+					- "depending on what you're building and the scope of things that you're building you might want to customize that"
+					- GPT-5 for spec scaffolding, Sonnet 4 for creative output
+			- ### {{youtube-timestamp 668}} Constitution Setup
+				- #### AI-Generated Constitution
+					- "fill the constitution with the bare minimum requirements for a static web app"
+					- Three key principles established:
+						- **Static first delivery**: "no static first delivery, no serverside execution"
+						- **Simplicity over tooling**: "Prefer vanilla HTML, CSS, JS"
+						- **Accessibility and SEO baseline**
+				- #### Manual Editing Capability
+					- "This can bootstrap it. It doesn't mean that you cannot do this manually"
+					- Constitution is editable markdown file
+					- "you can just keep them inside this specify folder"
+			- ### {{youtube-timestamp 898}} Specification Creation
+				- #### Using /specify Command
+					- "define the baseline specification... the what and the why"
+					- "We're not focusing on a technical requirements"
+					- "completely detached from the implementation"
+				- #### Podcast Website Requirements
+					- "modern podcast website to look sleek"
+					- Landing page with one featured episode
+					- Episodes page, about page, FAQ page
+					- 20 episodes with mocked data
+					- "we're just establishing the requirements. We're detaching ourselves from the technical details"
+			- ### {{youtube-timestamp 1089}} Git-Based Workflow
+				- #### Branch Management
+					- "it switched to a new branch because, as I mentioned, this is git based"
+					- "using these custom branches to help you organize your work"
+					- "you're not damaging anything in production and you can always roll back changes"
+				- #### Specification Artifacts
+					- Generated specification in `specs/` folder
+					- User scenarios and testing guidelines
+					- Functional requirements and acceptance criteria
+					- "review and acceptance checklist. This is key here"
+			- ### {{youtube-timestamp 1327}} Technical Planning
+				- #### Using /plan Command
+					- "specify the technical requirements"
+					- "Next.js with static site configuration. No databases"
+					- "make sure that the site is responsive and ready for mobile"
+				- #### Plan Artifacts
+					- Execution flow and technical context
+					- Primary dependencies and target platform
+					- Constitution checks and architecture requirements
+					- Research artifacts and data model outline
+			- ### {{youtube-timestamp 1451}} Task Breakdown
+				- #### Using /tasks Command
+					- "break the work down into manageable chunks that the agent can tackle one by one"
+					- Test-driven development approach
+					- "Test first must fail before implementation"
+				- #### Task Phases
+					- Setup: Initialize Next.js app skeleton
+					- Core implementation after tests are failing
+					- About page, FAQ page, episodes page
+					- Integration refinement with Lighthouse testing
+					- Polish: responsive images, documentation, accessibility
+			- ### {{youtube-timestamp 1803}} Implementation Process
+				- #### Model Switching Strategy
+					- "switch my model to Cloud Sonnet 4 because I like this the most for code"
+					- "GBD5 is good at setting up the spec scaffolding for us, but for creative output, Sonnet 4 is still unbeatable"
+				- #### Automated Implementation
+					- "implement the tasks for this project and update the task list as you go"
+					- Agent runs through all tasks automatically
+					- "Let the agent run wild and go and implement our website"
+			- ### {{youtube-timestamp 2030}} Final Results and Benefits
+				- #### Generated Website
+					- "Tada. Looks like it did it. It finished the work"
+					- Podcast website with featured episode, about page, FAQ, episodes list
+					- "it's not bad. master the art of podcasting"
+				- #### Spec-Driven Development Advantages
+					- **Structured approach** vs. vibe coding
+					- "now that I have the spec, now that I have the artifacts here in my spec implementation, I can easily customize it"
+					- "makes it easier for me to then reimplement and rebuild things and additively add features in a structured way"
+					- **Context preservation** for consistent software development
+			- ### {{youtube-timestamp 2187}} Future Enhancements and Community
+				- #### MCP Integration
+					- "if I plug in MCP tools like Figma MCP, I can link to actual design"
+					- "get it to build things that fit the design system of my organization"
+				- #### Community Feedback
+					- "this is not a production scenario... there's a lot for us to learn"
+					- "We want your feedback. We want your input"
+					- "if something breaks, if something doesn't work, if something that it produces is garbage, let us know"
+				- #### Next Steps
+					- "go to github.com/github/spec-kit. Download it. Use it. Tell me what's wrong"
+					- "next video where we're going to talk about more complex things"
+					- Experimentation and iterative improvement approach
