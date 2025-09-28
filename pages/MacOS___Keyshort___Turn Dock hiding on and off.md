@@ -1,0 +1,7 @@
+- #Keyshort
+	- `⌥⌘D` - Option Cmd D
+		- Interferes with using this command elsewhere, e.g. in an [[IDE]]
+	- Open **System Settings** (Ventura and later) or **System Preferences** (Monterey and earlier).
+	- Go to **Keyboard → Keyboard Shortcuts…**.
+	- Look under **Launchpad & Dock** or **Dock & Menu Bar** (depends on macOS version).
+	- Find **“Turn Dock Hiding On/Off”** (or similar).

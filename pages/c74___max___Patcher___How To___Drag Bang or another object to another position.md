@@ -1,0 +1,8 @@
+- I find it unintuitive to move objects like [[c74/max/obj/bang]] or a message box around in Max/MSP.
+- things to check:
+	- one must drag ONLY THE BORDER of the object
+		- with small objects like Bang, it can be hard to hover over the border. Consider zooming in and out with Cmd+ and Cmd- and scrolling into view (AFAIK there is no "grab canvas" feature in max; scrolling is the only way.)
+	- are you in presentation mode? if so, you can't move anything there. Toggle with #Keyshort cmd+alt+E
+	- is the patcher in Lock state? Check the lock button in the lower left.
+-
+- ######
