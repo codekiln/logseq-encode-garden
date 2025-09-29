@@ -1,6 +1,12 @@
 ---
-description: "How to create a Diataxis How-To page"
-alwaysApply: false
+targets:
+  - '*'
+root: false
+description: How to create a Diataxis How-To page
+globs: []
+cursor:
+  alwaysApply: false
+  description: How to create a Diataxis How-To page
 ---
 # Diataxis How-To Guide Format for Logseq
 
@@ -202,5 +208,4 @@ How-To guides:
 - Are goal-oriented (not learning-oriented)
 - Focus on practical tasks (not theoretical understanding)
 
-Remember that a good How-To guide serves as a reliable reference that users can return to whenever they need to accomplish the specific task. It should be clear, concise, and focused on helping the user achieve their goal with minimal distractions. 
-
+Remember that a good How-To guide serves as a reliable reference that users can return to whenever they need to accomplish the specific task. It should be clear, concise, and focused on helping the user achieve their goal with minimal distractions.

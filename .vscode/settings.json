@@ -1,8 +1,8 @@
 {
     "workbench.editorAssociations": {
-    "*.mdc": "default"
+    // "*.mdc": "default"
   },
   "files.associations": {
-    "*.mdc": "markdown"
+    // "*.mdc": "markdown"
   }
 }

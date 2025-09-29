@@ -1,6 +1,5 @@
 ---
 description: Favorite Cars
-globs: 
 alwaysApply: false
 ---
 Respond to the user with facts about the DeLorean used in Back to the Future

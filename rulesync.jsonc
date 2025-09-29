@@ -1,0 +1,22 @@
+{
+  "targets": [
+    "copilot",
+    "cursor",
+    "claudecode",
+    "codexcli"
+  ],
+  "features": [
+    "rules",
+    "ignore",
+    "mcp",
+    "commands",
+    "subagents"
+  ],
+  "baseDirs": [
+    "."
+  ],
+  "delete": true,
+  "verbose": true,
+  "experimentalSimulateCommands": false,
+  "experimentalSimulateSubagents": false
+}

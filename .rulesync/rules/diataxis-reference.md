@@ -1,8 +1,13 @@
 ---
-description: "How to create a Diataxis Reference page"
-alwaysApply: false
+targets:
+  - '*'
+root: false
+description: How to create a Diataxis Reference page
+globs: []
+cursor:
+  alwaysApply: false
+  description: How to create a Diataxis Reference page
 ---
-
 # Diataxis Reference Guide Format for Logseq
 
 This rule provides guidance on creating Reference documentation in Logseq following the Diataxis documentation framework principles.
@@ -223,4 +228,4 @@ Remember that good reference documentation serves as a reliable source of truth 
 Reference documentation is similar to information on food packaging or product specifications:
 - Users expect standardized presentation of facts in a predictable format
 - Information should be reliable, consistent, and clearly separated from marketing or instructional content
-- The importance of reference is such that in many fields it's governed by standards or regulations 
+- The importance of reference is such that in many fields it's governed by standards or regulations
