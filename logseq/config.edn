@@ -16,7 +16,10 @@
  ;; Example usage:
  ;; :hidden ["/archived" "/test.md" "../assets/archived"]
  :hidden [
- "README.md", 
+ ".rulesync/**/*.md",
+ "../.rulesync/rules/*.md",
+ ".rulesync/rules/*.md",
+ "README.md",
  "../README.md", 
  "../tools/my-logseq-tooling/README.md",
  "../.ai-coding/spec.md",
