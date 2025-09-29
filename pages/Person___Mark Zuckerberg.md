@@ -1,0 +1,23 @@
+- tags:: [[Person]]
+- # Mark Zuckerberg
+- ![Mark Zuckerberg](https://upload.wikimedia.org/wikipedia/commons/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg)
+- ## Basic Information
+	- Full Name: Mark Elliot Zuckerberg
+	- Born: May 14, 1984, White Plains, New York
+	- Occupation: Businessman, Computer Programmer
+	- Current Position: Co-founder, Chairman, and CEO of Meta Platforms (formerly Facebook, Inc.)
+- ## Background
+	- Founded Facebook in 2004 while studying at Harvard University
+	- Dropped out of Harvard to focus on Facebook
+	- Became the world's youngest self-made billionaire at age 23
+	- Currently one of the wealthiest people in the world
+- ## Notable Achievements
+	- Grew Facebook from a college project to a global tech company with billions of users
+	- Expanded Meta's portfolio by acquiring Instagram (2012) and WhatsApp (2014)
+	- Launched the Metaverse initiative, rebranding Facebook as Meta in 2021
+	- Co-founded the Chan Zuckerberg Initiative with his wife Priscilla Chan
+	- Pledged to donate 99% of his Facebook shares to charitable causes
+- ## External Links
+	- [Wikipedia](https://en.wikipedia.org/wiki/Mark_Zuckerberg)
+	- [Meta](https://about.meta.com/leadership/mark-zuckerberg/)
+	- [Chan Zuckerberg Initiative](https://chanzuckerberg.com/)
