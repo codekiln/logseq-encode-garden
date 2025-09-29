@@ -1,0 +1,2 @@
+- [EduBase](https://edubase.blog/)
+	- EduBase is an innovative, modular, online educational platform that makes learning more enjoyable, simpler and interactive, suitable for educational institutions or enterprises.

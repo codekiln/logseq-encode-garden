@@ -1,0 +1,48 @@
+---
+alias:: [[claude-sonnet-4-5]]
+tags:: [[AI/Model]]
+---
+
+- # [Claude Sonnet 4.5](https://www.anthropic.com/news/claude-sonnet-4-5)
+	- ## Key Features
+		- Released on September 29, 2025
+		- Described as "best coding model in the world"
+		- Strongest model for building complex agents
+		- Superior performance in computer use tasks
+		- Significant improvements in reasoning and math
+		- Enhanced domain-specific knowledge in finance, law, medicine, and STEM
+		- Knowledge cutoff: September 2025
+		- Model version status: Stable release
+	- ## Performance Highlights
+		- SWE-bench Verified: 77.2% (averaged over 10 trials)
+		- OSWorld benchmark: 61.4% (up from 42.2% four months prior)
+		- Can maintain focus for over 30 hours on complex tasks
+		- Reduced misaligned behaviors like sycophancy and deception
+		- Most aligned frontier model according to Anthropic
+	- ## Model Tiers
+		- [[claude-sonnet-4-5]]
+			- Full-featured flagship model
+			- Best performance across all metrics
+		- Previous versions:
+			- [[Claude 3.7 Sonnet]]
+			- [[Claude 3.5 Sonnet]]
+	- ## Access Details
+		- API availability: Available via `claude-sonnet-4-5` in the Claude API
+		- Pricing: $3/$15 per million tokens (same as Claude Sonnet 4)
+		- Released under AI Safety Level 3 (ASL-3) protections
+		- Available across all Claude products (API, web, apps)
+	- ## Technical Specifications
+		- Model architecture: Details not specified
+		- Training data: Details not specified
+		- Input/output formats: Text, images, code
+		- Special capabilities:
+			- Enhanced coding abilities
+			- Improved reasoning
+			- Complex agent building
+			- Long context focus (30+ hours)
+			- Native VS Code extension
+			- Context editing and memory tools
+			- Code execution and file creation in Claude apps
+	- ## References
+		- [Official announcement](https://www.anthropic.com/news/claude-sonnet-4-5)
+		- [Claude Agent SDK](https://www.anthropic.com/claude-agent-sdk)
