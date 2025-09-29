@@ -1,12 +1,9 @@
 ---
+root: false
 targets:
   - '*'
-root: false
-description: Creating AI model details logseq page
+description: ''
 globs: []
-cursor:
-  alwaysApply: false
-  description: Creating AI model details logseq page
 ---
 # AI Model Detailed Documentation Guide
 This rule extends `logseq-naming-conventions.mdc` for creating comprehensive AI model documentation pages.

@@ -1,12 +1,9 @@
 ---
+root: false
 targets:
   - '*'
-root: false
-description: Logseq-Flavored Markdown (LFM) YouTube transcript headings
+description: ''
 globs: []
-cursor:
-  alwaysApply: false
-  description: Logseq-Flavored Markdown (LFM) YouTube transcript headings
 ---
 # Logseq-Flavored Markdown (LFM) YouTube transcript headings
 

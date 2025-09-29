@@ -1,16 +1,9 @@
 ---
+root: false
 targets:
   - '*'
-root: false
-description: >-
-  When creating new Logseq page references or aliases, follow these naming
-  conventions
+description: ''
 globs: []
-cursor:
-  alwaysApply: false
-  description: >-
-    When creating new Logseq page references or aliases, follow these naming
-    conventions
 ---
 # Logseq Naming Conventions
 This is an extension to logseq-flavored-markdown `logseq-flavored-markdown.mdc` for maintaining consistent naming conventions in the knowledge graph.

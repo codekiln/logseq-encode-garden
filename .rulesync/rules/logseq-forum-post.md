@@ -1,10 +1,9 @@
 ---
+root: false
 targets:
   - '*'
-root: false
+description: ''
 globs: []
-cursor:
-  alwaysApply: false
 ---
 # Formatting Forum Posts in Logseq
 

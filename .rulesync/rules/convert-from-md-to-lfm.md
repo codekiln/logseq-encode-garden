@@ -1,16 +1,9 @@
 ---
+root: false
 targets:
   - '*'
-root: false
-description: >-
-  Checklist for Converting from Standard Markdown to Logseq Flavored Markdown
-  (LFM)
+description: ''
 globs: []
-cursor:
-  alwaysApply: false
-  description: >-
-    Checklist for Converting from Standard Markdown to Logseq Flavored Markdown
-    (LFM)
 ---
 # Converting from Standard Markdown to Logseq Flavored Markdown (LFM)
 

@@ -1,15 +1,9 @@
 ---
+root: false
 targets:
   - '*'
-root: false
-description: Writing logseq-flavored-markdown (LFM)
-globs:
-  - '*.md'
-cursor:
-  alwaysApply: false
-  description: Writing logseq-flavored-markdown (LFM)
-  globs:
-    - '*.md'
+description: ''
+globs: []
 ---
 # Formatting Logseq-Flavored Markdown (LFM)
 

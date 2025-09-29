@@ -1,7 +1,7 @@
 {
   "targets": [
     "copilot",
-    "cursor",
+//    "cursor",
     "claudecode",
     "codexcli"
   ],

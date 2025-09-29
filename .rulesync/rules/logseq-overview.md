@@ -1,15 +1,9 @@
 ---
+root: false
 targets:
   - '*'
-root: false
-description: Logseq Overview
-globs:
-  - '*.md'
-cursor:
-  alwaysApply: false
-  description: Logseq Overview
-  globs:
-    - '*.md'
+description: ''
+globs: []
 ---
 # Overview of Logseq
 

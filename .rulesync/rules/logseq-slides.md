@@ -1,12 +1,9 @@
 ---
+root: false
 targets:
   - '*'
-root: false
-description: Special Logseq-Flavored Markdown for Slides
+description: ''
 globs: []
-cursor:
-  alwaysApply: false
-  description: Special Logseq-Flavored Markdown for Slides
 ---
 - Slides should follow this structure precisely:
 	- Each markdown **unordered list item** (`-`) at the top level is treated as a section title (rendered as H2).

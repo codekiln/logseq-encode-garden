@@ -1,12 +1,9 @@
 ---
+root: false
 targets:
   - '*'
-root: false
-description: How to create a Diataxis Tutorial page
+description: ''
 globs: []
-cursor:
-  alwaysApply: false
-  description: How to create a Diataxis Tutorial page
 ---
 # How to create a Diataxis Tutorial page in the Knowledge Garden
 

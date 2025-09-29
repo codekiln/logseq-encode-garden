@@ -1,12 +1,9 @@
 ---
+root: false
 targets:
   - '*'
-root: false
-description: Standard file conventions and directory structure for logseq graphs
+description: ''
 globs: []
-cursor:
-  alwaysApply: false
-  description: Standard file conventions and directory structure for logseq graphs
 ---
 ## Logseq Directory Structure
 

@@ -1,12 +1,9 @@
 ---
+root: false
 targets:
   - '*'
-root: false
-description: How to reference an AI model in passing in a logseq page
+description: ''
 globs: []
-cursor:
-  alwaysApply: false
-  description: How to reference an AI model in passing in a logseq page
 ---
 # AI Model Reference Quick Guide
 This rule extends `logseq-naming-conventions.mdc` for quickly referencing AI models in the knowledge graph without creating detailed pages.

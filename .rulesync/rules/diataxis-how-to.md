@@ -1,12 +1,9 @@
 ---
+root: false
 targets:
   - '*'
-root: false
-description: How to create a Diataxis How-To page
+description: ''
 globs: []
-cursor:
-  alwaysApply: false
-  description: How to create a Diataxis How-To page
 ---
 # Diataxis How-To Guide Format for Logseq
 

@@ -1,10 +1,9 @@
 ---
+root: false
 targets:
   - '*'
-root: false
+description: ''
 globs: []
-cursor:
-  alwaysApply: false
 ---
 # Once a week setup to prepare week markdown files 
 - be familiar with [logseq-directory-structure.mdc](mdc:.cursor/rules/logseq-cursor-rules/logseq-directory-structure.mdc)

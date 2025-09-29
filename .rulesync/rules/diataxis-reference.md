@@ -1,12 +1,9 @@
 ---
+root: false
 targets:
   - '*'
-root: false
-description: How to create a Diataxis Reference page
+description: ''
 globs: []
-cursor:
-  alwaysApply: false
-  description: How to create a Diataxis Reference page
 ---
 # Diataxis Reference Guide Format for Logseq
 

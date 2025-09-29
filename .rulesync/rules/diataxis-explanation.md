@@ -1,12 +1,9 @@
 ---
+root: false
 targets:
   - '*'
-root: false
-description: How to create a Diataxis Explanation page
+description: ''
 globs: []
-cursor:
-  alwaysApply: false
-  description: How to create a Diataxis Explanation page
 ---
 # Diataxis Explanation Guide Format for Logseq
 
