@@ -1,3 +1,0 @@
-[submodule ".cursor/rules/logseq-cursor-rules"]
-	path = .cursor/rules/logseq-cursor-rules
-	url = git@github.com:codekiln/logseq-cursor-rules.git
