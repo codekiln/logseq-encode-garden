@@ -1,0 +1,50 @@
+tags:: [[Person]], [[AI Engineer]], [[GitHub]], [[OpenAI]], [[Codex]], [[ZSH]], [[Vim]], [[Python]]
+
+- # Tom Dörr
+	- ## Overview
+		- AI Engineer and open-source contributor
+		- Known for creating AI-powered developer tools and plugins
+		- Active on GitHub with 1k+ followers and 29,025+ contributions in the last year
+	- ## Contact Information
+		- Email: tomdoerr96@gmail.com
+		- GitHub: [@tom-doerr](https://github.com/tom-doerr)
+		- Stack Overflow: [Profile](https://meta.stackoverflow.com/users/6105651/tom-d%c3%b6rr?tab=profile)
+		- X (Twitter): [@tom_doerr](https://x.com/tom_doerr)
+	- ## Popular Repositories
+		- ### zsh_codex (1.7k stars, 97 forks)
+			- ZSH plugin that enables OpenAI's Codex AI in the command line
+			- Language: Python
+			- Repository: [zsh_codex](https://github.com/tom-doerr/zsh_codex)
+		- ### codex-readme (405 stars, 22 forks)
+			- Codex-README generator utilizing OpenAI's Codex for intelligent README creation
+			- Language: Python
+			- Repository: [codex-readme](https://github.com/tom-doerr/codex-readme)
+		- ### vim_codex (280 stars, 33 forks)
+			- AI-powered code completion for Vim using OpenAI Codex
+			- Language: Python
+			- Repository: [vim_codex](https://github.com/tom-doerr/vim_codex)
+		- ### dotfiles (275 stars, 21 forks)
+			- Personal configuration files
+			- Language: Shell
+			- Repository: [dotfiles](https://github.com/tom-doerr/dotfiles)
+		- ### perplexity_search (210 stars, 15 forks)
+			- Python tool for technical searches using Perplexity API
+			- Optimized for retrieving precise facts, code examples, and numerical data
+			- Language: Python
+			- Repository: [perplexity_search](https://github.com/tom-doerr/perplexity_search)
+		- ### dspy_nodes (195 stars, 10 forks)
+			- Work in progress: Create DSPy pipelines using ComfyUI
+			- Language: Python
+			- Repository: [dspy_nodes](https://github.com/tom-doerr/dspy_nodes)
+	- ## Expertise Areas
+		- AI/ML tooling and integration
+		- Developer productivity tools
+		- OpenAI Codex applications
+		- Shell scripting and automation
+		- Vim and ZSH customization
+		- Python development
+		- Technical search and information retrieval
+	- ## External Links
+		- [GitHub Profile](https://github.com/tom-doerr)
+		- [Stack Overflow Profile](https://meta.stackoverflow.com/users/6105651/tom-d%c3%b6rr?tab=profile)
+		- [X (Twitter)](https://x.com/tom_doerr)

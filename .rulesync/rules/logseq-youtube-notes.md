@@ -2,7 +2,7 @@
 root: false
 targets:
   - '*'
-description: ''
+description: 'How to intake and format notes on a youtube video'
 globs: []
 ---
 # Logseq-Flavored Markdown (LFM) YouTube transcript headings
