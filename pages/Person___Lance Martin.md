@@ -1,0 +1,48 @@
+tags:: [[Person]], [[LangChain]], [[AI Engineer]], [[Software Engineer]], [[Context Engineering]], [[RAG]], [[Agents]], [[Prompt Engineering]]
+
+- # Lance Martin
+	- ## Overview
+		- Software Engineer at LangChain focusing on open-source and applied projects
+		- Expert in context engineering for AI agents and retrieval-augmented generation (RAG)
+		- Created LangChain's first comprehensive course, LangChain Academy, with over 35 lessons on building agents
+		- Author of "RAG From Scratch" course featured on FreeCodeCamp with over 450,000 views
+		- PhD from Stanford, former tech lead and manager on vision systems in self-driving industry
+	- ## Contact Information
+		- GitHub: [@rlancemartin](https://github.com/rlancemartin)
+		- LinkedIn: [LangChain](https://www.linkedin.com/company/langchain)
+	- ## Popular Repositories
+		- ### auto-evaluator (1.1k stars)
+			- Evaluation tool for LLM QA chains
+			- Repository: [auto-evaluator](https://github.com/rlancemartin/auto-evaluator)
+		- ### lex-gpt (343 stars)
+			- Language model related repository
+			- Repository: [lex-gpt](https://github.com/rlancemartin/lex-gpt)
+		- ### generative_agents (96 stars)
+			- Forked from joonspk-research/generative_agents
+			- Interactive simulacra of human behavior
+			- Repository: [generative_agents](https://github.com/rlancemartin/generative_agents)
+		- ### besties-gpt (62 stars)
+			- ChatGPT for question-answering on the ALL IN podcast
+			- Repository: [besties-gpt](https://github.com/rlancemartin/besties-gpt)
+		- ### karpathy-gpt (37 stars)
+			- Language model related repository
+			- Repository: [karpathy-gpt](https://github.com/rlancemartin/karpathy-gpt)
+	- ## Expertise Areas
+		- Context engineering for AI agents
+		- Retrieval-Augmented Generation (RAG)
+		- Agent development and prompt engineering
+		- LLM evaluation and QA chains
+		- Computer vision systems
+		- Self-driving technology
+		- Educational content creation
+	- ## Notable Contributions
+		- Developed numerous LangChain Quickstarts on RAG, agents, and prompt engineering
+		- Created LangChain Academy with 35+ lessons on building agents
+		- Authored "RAG From Scratch" course with 450,000+ views on FreeCodeCamp
+		- Uses llms.txt with simple search tools instead of vector store indexing for code agents
+			- {{embed ((68dbb8b4-6466-4c91-be62-4b9b3c16c76e))}}
+	- ## External Links
+		- [GitHub Profile](https://github.com/rlancemartin)
+		- [LangChain Academy Live](https://www.langchain.com/langchain-academy-live)
+		- [LangChain LinkedIn](https://www.linkedin.com/company/langchain)
+		- [Context Engineering for Agents - Latent Space Podcast](https://youtu.be/_IlTcWciEC4?list=PLWEAb1SXhjlfkEF_PxzYHonU_v5LPMI8L&t=1155)
