@@ -10,14 +10,6 @@ A book entry is a logseq page where the page title matches one of the following 
 - [[Book/Title]] (corresponds to `pages/Book___Title.md`)
 - [[Person/Author/Book/Year/Title]] (corresponds to `pages/Person___Author___Book___Year___Title.md`)
 
-### When to Create a Book Page
-
-Book pages should be created for:
-- Books you've read or are reading
-- Books you want to reference or take notes on
-- Books relevant to your areas of interest or study
-- Books you want to annotate or extract quotes from
-
 ### Creating a Book Page
 
 If you are asked to make an entry for a book, you should:
