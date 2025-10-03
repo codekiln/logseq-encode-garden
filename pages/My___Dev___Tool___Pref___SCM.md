@@ -13,5 +13,9 @@
 				- `#123 The GitHub Issue Title`
 			- Local filesystem task, e.g. for use with [[Person/Brian Madison/GitHub/BMAD-METHOD]]
 				- `docs/stories/1.1.story.title`
-		-
+			- Note: Ticket references are optional for repositories that don't use ticket tracking systems
+		- 4 - For extended guidelines on commit conventions, see [[Conventional Emoji Commits]] which combines conventional commits with emoji
+	- ## RuleSync Rules
+		- A RuleSync rule for commit conventions is available at `.cursor/rules/logseq-cursor-rules/commit-conventions/rule.md`
+		- This rule helps ensure consistent commit messages across projects
 	-

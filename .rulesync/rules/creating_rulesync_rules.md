@@ -1,11 +1,7 @@
 ---
-root: true
+root: false
 targets:
-  - 'claude-code'
-  - 'cursor'
-  - 'gemini-cli'
-  - 'roo-code'
-  - 'claude'
+  - '*'
 description: 'Guide for creating and managing rulesync rules'
 globs:
   - '**/*.md'
