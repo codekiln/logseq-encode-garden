@@ -1,0 +1,14 @@
+- # OpenAI Academy
+  - An education technology startup backed by OpenAI
+  - Website: https://academy.openai.com/
+  - ## Overview
+    - OpenAI Academy is an AI-first edtech platform focusing on teaching AI/ML concepts
+    - Backed by OpenAI as part of their educational initiatives
+  - ## Key Features
+    - Interactive learning experiences powered by AI
+    - Courses on AI fundamentals, prompt engineering, and advanced ML topics
+    - Hands-on projects with OpenAI's models
+  - ## Related Resources
+    - [[OpenAI/Model/o3]]
+    - [[OpenAI/Model/GPT/4/1]]
+    - [Official Website](https://academy.openai.com/)
