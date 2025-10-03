@@ -1,4 +1,4 @@
-# DONE How to go to the next and previous changes in [[VSCode/Extension/GitHub Pull Requests]]? #Q
+# How to go to the next and previous changes in [[VSCode/Extension/GitHub Pull Requests]]? #Q
 	- ### What is #[[Keyshort/User]] and [[VSCode/Command]] for going to the next diff in [[VSCode/Extension/GitHub Pull Requests]]?: #card
 		- [[VSCode/Command/GitHub Pull Requests/Go to Next Diff in Pull Request]]
 			- **Command Name**: GitHub Pull Requests: Go to Next Diff in Pull Request
