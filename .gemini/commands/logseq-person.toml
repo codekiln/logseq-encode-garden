@@ -1,6 +1,5 @@
----
-description: Logseq-Flavored Markdown (LFM) Person Reference
----
+description = "Logseq-Flavored Markdown (LFM) Person Reference"
+prompt = """
 # How a Person is tracked in this Logseq knowledge garden
 This is an extension to logseq-flavored-markdown `logseq-flavored-markdown.mdc` for recording information about a person.
 
@@ -49,3 +48,4 @@ If you are asked to make an entry for a person, you should:
 
 4. **Journal Entry**
    - If the person page is new, make an entry in today's journal page that links to that person
+"""

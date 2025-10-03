@@ -1,6 +1,3 @@
----
-description: Logseq-Flavored Markdown (LFM) Person Reference
----
 # How a Person is tracked in this Logseq knowledge garden
 This is an extension to logseq-flavored-markdown `logseq-flavored-markdown.mdc` for recording information about a person.
 
