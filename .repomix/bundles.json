@@ -27,7 +27,7 @@
     "mise-607": {
       "name": "mise",
       "created": "2025-05-17T10:05:24.998Z",
-      "lastUsed": "2025-05-17T10:12:12.339Z",
+      "lastUsed": "2025-10-02T19:51:17.699Z",
       "tags": [],
       "files": [
         "pages/mise___config___Environment.md",
@@ -49,7 +49,15 @@
         "pages/mise___Template.md",
         "pages/mise___Todos.md",
         "pages/mise-en-place.md",
-        "pages/mise.md"
+        "pages/mise.md",
+        "pages/mise___How To___Install Mise___Shell Completions in Zsh.md",
+        "pages/mise___How To___Install Mise___The First Time.md",
+        "pages/mise___How To___List tasks available in zsh.md",
+        "pages/mise___Python___How To___Use mise to set up a virtualenv with poetry.md",
+        "pages/mise___Python___How To___Use mise to set up a virtualenv with uv.md",
+        "pages/mise___Shim.md",
+        "pages/mise___Task___How To___invoke aws_okta_keyman from mise with a configuration that references a default AWS account.md",
+        "pages/mise___Tool___Explanation___When to Declare Tools.md"
       ]
     },
     "coding-prefs-223": {
