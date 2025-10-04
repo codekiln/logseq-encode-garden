@@ -1,0 +1,2 @@
+- `rulesync gitignore` - add generated files to [[git/.gitignore]]
+	-

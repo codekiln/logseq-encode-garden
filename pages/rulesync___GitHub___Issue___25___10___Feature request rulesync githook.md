@@ -1,0 +1,11 @@
+- [Feature request: `rulesync githook` and `rulesync githook --install` which registers git post-checkout hook to regenerate rules in the case that `rulesync gitignore` · Issue #351 · dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync/issues/351)
+	- ## Summary
+		- If a `rulesync` user runs `rulesync gitignore` to treat all the non-rulesync AI Configs as ignored and generated assets. If they then pull a commit which changes a rule, then a git hook should regenerate the downstream AI Configs.
+	- ## Details
+		- `rulesync githook` could be the executable entrypoint for the hook, and `rulesync githook --install` could be the command which installed the git hook into the repository.
+	- ## Side note about wording - AI Configs and AI Config Manager
+		- From a marketing perspective, it would be advantageous to settle on the terminology for the types of assets that rulesync manages. In the readme, it currently says:
+		- > A Node.js CLI tool that automatically generates configuration files for various AI development tools from unified AI rule files.
+		- This is about as correct as one can get. But in issues and documentation, it's a little verbose to call these assets "configuration files for various AI development tools."
+		- Calling them "rules" seems intuitive but wrong, as rulesync now manages agents, commands, and other configuration items.
+		- Given that [configuration management](https://en.wikipedia.org/wiki/Configuration_management) is an established term, perhaps calling the assets rulesync manages "AI Configs" and branding rulesync as an "AI Config Manager" might be good enough? What do you think and what other terms have you considered? I asked ChatGPT and it came up with ten names, but the only one I kind of liked was AI DevConfig.

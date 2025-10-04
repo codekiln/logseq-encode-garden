@@ -1,3 +1,26 @@
+Please also reference the following documents as needed:
+
+@.claude/memories/commit-conventions.md description: "Commit conventions with optional ticket references" globs: ""
+@.claude/memories/convert-from-md-to-lfm.md description: "" globs: ""
+@.claude/memories/creating_rulesync_rules.md description: "Guide for creating and managing rulesync rules" globs: "**/*.md,**/*.mdc"
+@.claude/memories/diataxis-explanation.md description: "" globs: ""
+@.claude/memories/diataxis-how-to.md description: "" globs: ""
+@.claude/memories/diataxis-reference.md description: "" globs: ""
+@.claude/memories/diataxis-tutorial.md description: "" globs: ""
+@.claude/memories/journal-updates.md description: "Guidelines for updating journal entries when modifying pages" globs: ""
+@.claude/memories/logseq-ai-model-details-page.md description: "" globs: ""
+@.claude/memories/logseq-ai-model-reference.md description: "" globs: ""
+@.claude/memories/logseq-asset-linker.md description: "" globs: ""
+@.claude/memories/logseq-directory-structure.md description: "" globs: ""
+@.claude/memories/logseq-flavored-markdown.md description: "" globs: ""
+@.claude/memories/logseq-forum-post.md description: "" globs: ""
+@.claude/memories/logseq-naming-conventions.md description: "" globs: ""
+@.claude/memories/logseq-overview.md description: "" globs: ""
+@.claude/memories/logseq-page-naming-reference.md description: "Reference for correct Logseq page naming and linking conventions" globs: ""
+@.claude/memories/logseq-person.md description: "" globs: ""
+@.claude/memories/logseq-slides.md description: "" globs: ""
+@.claude/memories/logseq-youtube-notes.md description: "How to intake and format notes on a youtube video" globs: ""
+@.claude/memories/typical-week-structure.md description: "" globs: ""
 # Logseq Encode Garden - Instructions for Claude
 
 ## Repository Overview
