@@ -1,4 +1,5 @@
 tags:: [[Typescript]], [[Diataxis/Explanation]]
+
 - # TypeScript Barrel Files Conceptual Overview
 	- ## Overview
 		- A barrel file is a TypeScript/JavaScript file that re-exports multiple modules from a single entry point
@@ -25,7 +26,7 @@ tags:: [[Typescript]], [[Diataxis/Explanation]]
 				  export { formatDate } from './formatDate';
 				  export { parseJson } from './parseJson';
 				  export { validateEmail } from './validateEmail';
-
+				  
 				  // Usage elsewhere
 				  import { formatDate, parseJson } from './utils';
 				  ~~~
@@ -36,7 +37,7 @@ tags:: [[Typescript]], [[Diataxis/Explanation]]
 				- Load all referenced modules (even unused ones)
 				- Attempt tree-shaking to eliminate unused code
 			- This happens synchronously, potentially loading thousands of modules
-		- ### Comparison to Python's `__init__.py`
+		- ### Comparison to Python's `__init__.py` ([[Py/init.py]])
 			- Both serve as package entry points
 			- Both can re-export symbols from submodules
 			- Key difference: Python's import system handles lazy loading differently
@@ -62,7 +63,7 @@ tags:: [[Typescript]], [[Diataxis/Explanation]]
 			  export { Button } from './Button';
 			  export { Input } from './Input';
 			  export { Modal } from './Modal';
-
+			  
 			  // Usage - more concise
 			  import { Button, Input, Modal } from './components';
 			  ~~~
@@ -72,7 +73,7 @@ tags:: [[Typescript]], [[Diataxis/Explanation]]
 			  export { Button } from './Button';
 			  export { HeavyChart } from './HeavyChart'; // Large dependency
 			  export { Input } from './Input';
-
+			  
 			  // Even though you only want Button, bundler loads everything
 			  import { Button } from './components';
 			  // This loads Button, HeavyChart, and Input
@@ -99,7 +100,7 @@ tags:: [[Typescript]], [[Diataxis/Explanation]]
 			- **Bundle Size Impact** – Can prevent effective tree-shaking, increasing final bundle size
 			- **Module Loading Overhead** – Forces loading of all re-exported modules even when only one is needed
 			- **Test Performance** – Dramatically slows unit tests (example: 2.61s vs 1.32s)[^1]
-			- **Development Speed** – Can load thousands of unnecessary modules during development (example: 11,000 modules reduced to 3,500 after removing barrels)[^2]
+			- **Development Speed** – Can load thousands of unnecessary modules during development (example: 11,000 modules reduced to 3,500 after removing barrels, per [[Person/Dominik Dorfmeister]])[^2]
 		- ### Circular Dependency Problems
 			- Barrel files can create circular import chains
 			- Importing from a barrel within the same directory creates recursive dependencies

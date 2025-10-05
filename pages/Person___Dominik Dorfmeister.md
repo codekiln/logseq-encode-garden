@@ -1,0 +1,32 @@
+alias:: [[People/Dominik Dorfmeister]]
+- # Dominik Dorfmeister
+	- ## Bio
+		- Web developer and open source maintainer based in Vienna, Austria
+		- Known online as TkDodo
+		- Maintainer of TanStack Query and TanStack Router
+		- Expertise in React, TypeScript, and state management
+		- Author of influential blog posts on React and TypeScript best practices
+	- ## Notable Work
+		- ### TanStack Query
+			- Powerful asynchronous state management and data fetching library
+			- Widely used in the React ecosystem
+		- ### TanStack Router
+			- Type-safe routing solution for React applications
+		- ### Remeda
+			- Utility library for JavaScript and TypeScript
+		- ### Technical Writing
+			- Writes extensively about React, TypeScript, and open source development
+			- Blog at [tkdodo.eu](https://tkdodo.eu/blog)
+			- Known for articles on barrel files, React Query patterns, and TypeScript best practices
+	- ## Online Presence
+		- GitHub: [TkDodo](https://github.com/TkDodo)
+			- 3.1k+ followers
+			- Multiple GitHub achievements
+		- Website: [tkdodo.eu](https://tkdodo.eu)
+		- X (Twitter): [@TkDodo](https://x.com/TkDodo)
+		- Bluesky: [@tkdodo.eu](https://bsky.app/profile/tkdodo.eu)
+	- ## Related
+		- [[Typescript/Concept/Barrel File]] - wrote influential article against barrel files
+		- [[TanStack Query]]
+		- [[React]]
+		- [[Typescript]]
