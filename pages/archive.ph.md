@@ -1,0 +1,25 @@
+tags:: [[Tool]], [[Web Service]]
+- # [archive.ph](https://archive.ph)
+	- ## Overview
+		- Web archiving service that creates permanent snapshots of web pages
+		- Can be used to bypass paywalls and login walls on sites like [[Medium]]
+		- Provides time capsule of web content
+	- ## Key Features
+		- Creates permanent archives of web pages
+		- Bypasses login requirements and paywalls
+		- Free to use
+		- No registration required
+	- ## Usage
+		- Visit https://archive.ph
+		- Enter the URL you want to archive or access
+		- If an archive exists, view it; otherwise create a new one
+	- ## Use Cases
+		- Accessing [[Medium]] articles without login
+		- Preserving web content
+		- Sharing content that might be behind paywalls
+		- Creating permanent references to web pages
+	- ## Example
+		- [Deconstructing Serena's MCP-Powered Semantic Code Understanding Architecture | by Souradip Pal | Jul, 2025 | Medium](https://archive.ph/d5cf6)
+	- ## Related
+		- [[Medium]]
+		- [[Web Archiving]]
