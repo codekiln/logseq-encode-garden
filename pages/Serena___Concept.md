@@ -1,0 +1,106 @@
+tags:: [[AI Coding]], [[Tool]], [[Diataxis/Explanation]]
+- # [Serena](https://github.com/oraios/serena) Conceptual Overview
+	- ## Overview
+		- Serena is a coding agent toolkit that transforms [[LLM]]s into sophisticated coding agents through semantic code understanding
+		- Provides IDE-quality code intelligence to AI systems via the [[Model Context Protocol]] ([[MCP]])
+		- Enables direct, intelligent interaction with codebases across 15+ programming languages
+		- Open-source (MIT licensed) and [[LLM]]-agnostic
+	- ## Context
+		- Traditional AI coding assistants often struggle with large codebases due to:
+			- Token limitations requiring extensive context
+			- Lack of semantic understanding of code structure
+			- Difficulty navigating complex relationships between code elements
+		- Serena addresses these challenges by providing:
+			- Symbol-level code operations
+			- Type-aware semantic understanding
+			- Efficient, targeted code retrieval
+			- Cross-file code analysis
+	- ## Key Principles
+		- **Semantic Code Understanding** - Uses [[Language Server Protocol]] ([[LSP]]) for IDE-quality code intelligence beyond surface-level text processing
+		- **LLM-Agnostic Architecture** - Works with various AI assistants (Claude, Codex, Gemini, etc.), avoiding model lock-in
+		- **Token Efficiency** - Retrieves only relevant code through precise semantic analysis
+		- **Multi-Language Support** - Unified interface across 15+ programming languages
+		- **Flexible Integration** - Supports multiple client types and integration patterns
+		- **Protocol-First Design** - Clean separation of concerns:
+			- Code Analysis (LSP layer)
+			- Tool Execution
+			- AI Orchestration
+			- Client-agnostic User Interface
+	- ## Mechanism
+		- ### Core Architecture
+			- **SerenaAgent** - Central orchestrator managing:
+				- Project state and configuration
+				- Tool registry and discovery
+				- Language server integration
+				- Context management
+			- **Language Server Integration** - Leverages LSP through SolidLanguageServer framework:
+				- Automatic language server management
+				- Semantic analysis and type checking
+				- Symbol resolution and navigation
+			- **Tool System** - Over 30 specialized tools for code manipulation, organized in layers:
+				- *Semantic Analysis Tools* - `find_symbol`, `get_symbols_overview`
+				- *Intelligent Editing Tools* - `replace_symbol_body`
+				- *Context Management Tools* - Cross-session memory and insights
+				- Dynamically configurable based on context
+			- **Memory System** - Persistent project knowledge:
+				- Stores insights in `.serena/memories/` directory
+				- Maintains context across conversation sessions
+				- Enables continuity in long-term project work
+		- ### Integration Patterns
+			- **MCP Server** - Implements Model Context Protocol for standardized AI integration
+			- **Multiple Client Support**:
+				- Claude Desktop/Code
+				- VSCode extensions
+				- Terminal clients
+				- Web interfaces
+				- OpenAPI-compatible systems
+			- **Communication Modes**:
+				- stdio (standard input/output)
+				- HTTP server
+	- ## Examples
+		- ### Finding a Symbol
+			- Agent requests: "Find the definition of `calculateTotal` function"
+			- Serena uses LSP to locate exact definition across project
+			- Returns precise code location and context
+			- Avoids retrieving entire files or searching text patterns
+		- ### Cross-File Analysis
+			- Agent needs to understand how a class is used
+			- Serena finds all references across the codebase
+			- Provides type-aware information about each usage
+			- Enables accurate refactoring suggestions
+		- ### Token-Efficient Context
+			- Traditional approach: Send entire files to LLM (high token cost)
+			- Serena approach: Send only relevant symbols and references (low token cost)
+			- Result: More accurate responses with lower costs
+	- ## Misconceptions
+		- **Serena is a code editor** → **False**. Serena is a toolkit that provides semantic code understanding to AI agents, which can then perform editing operations.
+		- **Serena replaces language servers** → **False**. Serena leverages existing language servers through LSP to provide semantic analysis.
+		- **Serena only works with specific LLMs** → **False**. The architecture is LLM-agnostic and works with any AI system that can call tools.
+		- **Serena is limited to a few languages** → **False**. Through LSP, Serena supports 15+ programming languages with a unified interface.
+	- ## Getting Started
+		- ### Installation
+			- **Using uvx (recommended)**:
+				- ~~~bash
+				  uvx --from git+https://github.com/oraios/serena serena start-mcp-server
+				  ~~~
+			- **For Claude Code**:
+				- ~~~bash
+				  claude mcp add serena
+				  ~~~
+			- **Local development**:
+				- ~~~bash
+				  git clone https://github.com/oraios/serena
+				  cd serena
+				  uv run serena start-mcp-server
+				  ~~~
+		- ### Usage
+			- Activate your project: Tell the AI "Activate the project /path/to/my_project"
+			- For larger projects, index first: `serena project index`
+			- Tools become available to the AI for semantic code operations
+	- ## Related
+		- [[Model Context Protocol]]
+		- [[Language Server Protocol]]
+		- [[AI Coding]]
+		- [[DeepWiki]]
+		- [[GitHub/dyoshikawa/rulesync]] - Uses Serena in devcontainer configuration
+		- [Deconstructing Serena's MCP-Powered Semantic Code Understanding Architecture](https://readwise.io/reader/shared/01k6swr7ezgvvp286dtc2e3dqf) - Architectural deep dive
