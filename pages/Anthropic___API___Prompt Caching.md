@@ -1,0 +1,2 @@
+- [Prompt caching - Claude Docs](https://docs.claude.com/en/docs/build-with-claude/prompt-caching#what-is-the-cache-lifetime)
+- [claude-cookbooks/misc/prompt_caching.ipynb at main · anthropics/claude-cookbooks](https://github.com/anthropics/claude-cookbooks/blob/main/misc/prompt_caching.ipynb)
