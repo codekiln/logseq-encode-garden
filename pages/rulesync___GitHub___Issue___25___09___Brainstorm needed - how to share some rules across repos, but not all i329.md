@@ -1,17 +1,5 @@
-- [[Person/codekiln]] [[2025-09-29 Mon]]
-	- Each project usually requires a combination of shared and project-specific rules.
-	  
-	  For example, some of my projects use rules and commands that are specific to the context of FastAPI. Others, use rules and commands specific to the context of typescript CLIs. I don't need all of my rules and commands in each project.
-	  
-	  Ideally, it would be possible to define my rules for technology A, e.g. FastAPI, in one repo, my rules for technology B, e.g. TypeScript in another repo, and my rules for technology C, e.g. EnterprisePrivateTechnology in another private repo, and just marshal those rules into the current repo and then use `rulesync` to spread those out to the various providers.
-	  
-	  One possible solution could be to use git submodules, but those may have problems:
-	- in CI, if you have private repos, authentication permissions can get tricky with git submodules.
-	- it's not clear that rulesync would support subdirectories needed for git submodules
-	  
-	  So, let's talk about what possible solutions are out there for this use case.
-- [[Person/codekiln]] [[2025-09-30 Tue]] [here](https://github.com/dyoshikawa/rulesync/issues/329#issuecomment-3351131340) - #Idea about [[Context Engineering]]
-  id:: 68dbb819-d57c-4e8c-89c8-ffd781928be9
+# [[Person/codekiln]] [[2025-09-30 Tue]] [here](https://github.com/dyoshikawa/rulesync/issues/329#issuecomment-3351131340) - #Idea about [[Context Engineering]]
+id:: 68dbb819-d57c-4e8c-89c8-ffd781928be9
 	- > I guess, by resolving [#304](https://github.com/dyoshikawa/rulesync/issues/304), your request will also resolved at least partially.
 	- Yes, I think the `--global` feature support will help individual developers not be as repetitive, for sure. But in my opinion, the larger problem is that engineering teams need a way to standardize and encapsulate their best practices (rules, commands, etc) across developers.
 	- ## Side rant about context bloat in agentic coding tools
@@ -34,3 +22,11 @@
 	- ## Towards the future
 		- Perhaps rulesync could define and support a particular kind of MCP server which would know about a particular structure of a repository of agentic coding tool definitions, and then it could make that MCP server available to the coding agent, so the agent could name the things it wants in its context and load those things into context.
 		- Essentially, static context is dead; we need a river of context that changes with the problem.
+- # [[Person/codekiln]] [[2025-09-29 Mon]] [here](https://github.com/dyoshikawa/rulesync/issues/351#issue-3483572817)
+	- Each project usually requires a combination of shared and project-specific rules.
+	- For example, some of my projects use rules and commands that are specific to the context of FastAPI. Others, use rules and commands specific to the context of typescript CLIs. I don't need all of my rules and commands in each project.
+	- Ideally, it would be possible to define my rules for technology A, e.g. FastAPI, in one repo, my rules for technology B, e.g. TypeScript in another repo, and my rules for technology C, e.g. EnterprisePrivateTechnology in another private repo, and just marshal those rules into the current repo and then use `rulesync` to spread those out to the various providers.
+	- One possible solution could be to use git submodules, but those may have problems:
+	- in CI, if you have private repos, authentication permissions can get tricky with git submodules.
+	- it's not clear that rulesync would support subdirectories needed for git submodules
+	- So, let's talk about what possible solutions are out there for this use case.

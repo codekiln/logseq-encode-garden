@@ -1,0 +1,36 @@
+alias:: [[DRY]]
+tags:: [[Software/Engineering]], [[Principle]], [[Programming]]
+
+- # Don't Repeat Yourself (DRY)
+	- ## Definition
+		- DRY is a software development principle that states "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system"
+		- The principle was first introduced by Andy Hunt and Dave Thomas in their book "The Pragmatic Programmer"
+	- ## Core Concept
+		- **Single Source of Truth**: Each piece of knowledge should exist in only one place
+		- **Avoid Duplication**: Don't copy code, data, or logic across multiple locations
+		- **Maintain Consistency**: Changes to shared knowledge should propagate automatically
+	- ## Benefits
+		- **Reduced Maintenance**: Changes only need to be made in one place
+		- **Consistency**: Eliminates inconsistencies that arise from duplicate code
+		- **Easier Debugging**: Issues are easier to trace when logic exists in one location
+		- **Improved Reliability**: Less chance of bugs from forgetting to update duplicates
+	- ## Common Violations
+		- **Copy-Paste Programming**: Duplicating code blocks across functions or files
+		- **Magic Numbers/Strings**: Hard-coding the same values in multiple places
+		- **Duplicate Business Logic**: Implementing the same rules in different parts of the system
+		- **Repeated Configuration**: Same settings defined in multiple configuration files
+	- ## Implementation Strategies
+		- **Functions and Methods**: Extract common logic into reusable functions
+		- **Constants and Enums**: Define shared values in a single location
+		- **Configuration Management**: Centralize configuration in one place
+		- **Templates and Inheritance**: Use design patterns to avoid code duplication
+		- **Libraries and Modules**: Create reusable components for common functionality
+	- ## Related Principles
+		- **[[Software/Engineering/Principle/SOLID]]**: Single Responsibility Principle aligns with DRY
+		- **[[Software/Engineering/Principle/KISS]]**: Keep It Simple, Stupid - DRY helps maintain simplicity
+		- **[[Software/Engineering/Principle/YAGNI]]**: You Aren't Gonna Need It - Balance DRY with over-engineering
+	- ## Caveats and Considerations
+		- **Over-Abstraction**: Don't create unnecessary abstractions just to avoid duplication
+		- **Premature Optimization**: Sometimes duplication is acceptable for clarity or simplicity
+		- **Context Matters**: What constitutes "knowledge" can vary by context
+		- **Balance with Other Principles**: DRY should be balanced with maintainability and readability
