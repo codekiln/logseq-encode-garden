@@ -1,0 +1,57 @@
+# AI Agent Frameworks - More Familiar
+	- ## LangGraph
+		- **GitHub Stars (as of 2025-10-07):** 19,449
+		- **GitHub:** [https://github.com/langchain-ai/langgraph](https://github.com/langchain-ai/langgraph)
+		- **Company:** LangChain (LangChain Labs)
+		- LangGraph is LangChain's low-level orchestration framework designed for building stateful, long-running agent workflows. It was widely adopted in enterprise agent architectures by October 2025 and has become the backbone for complex LangChain-based applications where durability and replayable state are required.
+	- ## Claude Agent SDK (Anthropic)
+		- **GitHub Stars (as of 2025-10-07):** 2,245
+		- **GitHub:** [https://github.com/anthropics/claude-agent-sdk-python](https://github.com/anthropics/claude-agent-sdk-python)
+		- **Company:** Anthropic
+		- Anthropic's Claude Agent SDK was released in mid-2025 to support safe and structured multi-agent development around Claude 3.5 and its successors. It focuses on tool use, managed environments, and safety-first agent deployment.
+	- ## OpenAI AgentKit
+		- **GitHub Stars (as of 2025-10-07):** 15,406
+		- **GitHub:** [https://github.com/openai/openai-agents-python](https://github.com/openai/openai-agents-python)
+		- **Company:** OpenAI
+		- AgentKit, introduced at OpenAI's 2025 DevDay, is an end-to-end agent development framework featuring built-in deployment, evaluation, and UI tools. Despite being relatively new, it quickly gained traction and reflects strong adoption among OpenAI API users.
+	- ## DSPy
+		- **GitHub Stars (as of 2025-10-07):** 28,966
+		- **GitHub:** [https://github.com/stanfordnlp/dspy](https://github.com/stanfordnlp/dspy)
+		- **Company:** Stanford NLP Group
+		- DSPy is a declarative framework for LLM program optimization. It influences the agent orchestration world by offering a clean abstraction for reasoning pipelines and optimization loops.
+	- ## CrewAI
+		- **GitHub Stars (as of 2025-10-07):** 38,906
+		- **GitHub:** [https://github.com/crewAIInc/crewAI](https://github.com/crewAIInc/crewAI)
+		- **Company:** CrewAI Inc.
+		- CrewAI popularized the "crew" abstraction for multi-agent collaboration, combining orchestration with role-based task assignment. It has a thriving community around practical, no-code agent creation tools and hosted SaaS offerings.
+	- ## LlamaIndex
+		- **GitHub Stars (as of 2025-10-07):** 44,611
+		- **GitHub:** [https://github.com/run-llama/llama_index](https://github.com/run-llama/llama_index)
+		- **Company:** LlamaIndex (formerly GPT Index)
+		- LlamaIndex evolved from a RAG framework into a multi-agent workflow engine, emphasizing data-grounded reasoning. It is widely used in enterprise and research contexts for building agents over structured and unstructured data.
+	- ## Amazon Strands Agents SDK
+		- **GitHub Stars (as of 2025-10-07):** 3,638
+		- **GitHub:** [https://github.com/strands-agents/sdk-python](https://github.com/strands-agents/sdk-python)
+		- **Company:** Amazon (AWS AI Labs)
+		- Amazon's Strands SDK focuses on enterprise-scale multi-agent orchestration integrated with AWS services. While relatively niche, it's gaining attention for robust IAM-based permissions and audit logging. Enterprise adoption is strong.
+	- ## AutoGen
+		- **GitHub Stars (as of 2025-10-07):** 50,522
+		- **GitHub:** [https://github.com/microsoft/autogen](https://github.com/microsoft/autogen)
+		- **Company:** Microsoft Research
+		- AutoGen is Microsoft's open multi-agent conversation framework enabling multi-LLM and human-in-the-loop collaboration. It was among the earliest major open-source agent orchestration projects. Its ecosystem has diversified into both research and applied workflows.
+- # AI Agent Frameworks - Less Familiar
+	- ## Camel
+		- **GitHub Stars (as of 2025-10-07):** 14,437
+		- **GitHub:** [https://github.com/camel-ai/camel](https://github.com/camel-ai/camel)
+		- **Company:** CamelAI (research collective)
+		- Camel started as an experimental conversational multi-agent environment. It remains influential in benchmarks and testing inter-agent dialogue protocols.
+	- ## ChatDev
+		- **GitHub Stars (as of 2025-10-07):** 27,496
+		- **GitHub:** [https://github.com/OpenBMB/ChatDev](https://github.com/OpenBMB/ChatDev)
+		- **Company:** OpenBMB (Beijing Academy of AI)
+		- ChatDev simulates software development companies as multi-agent systems. It went viral in late 2024 for its novelty. Its influence is strongest in research and experimentation rather than production systems.
+	- ## letta
+		- **GitHub Stars (as of 2025-10-07):** 18,672
+		- **GitHub:** https://github.com/letta-ai/letta
+		- **Company:** Independent / academic
+		- Letta is the platform for building stateful agents: open AI with advanced memory that can learn and self-improve over time.
