@@ -1,4 +1,5 @@
 # AI Agent Frameworks - More Familiar
+	- see also [Competitive analysis of agent frameworks](https://chatgpt.com/c/68e50cdb-823c-8330-9ab5-a1a2002dc620) [[ChatGPT/Link]]
 	- ## LangGraph
 		- **GitHub Stars (as of 2025-10-07):** 19,449
 		- **GitHub:** [https://github.com/langchain-ai/langgraph](https://github.com/langchain-ai/langgraph)
@@ -39,6 +40,11 @@
 		- **GitHub:** [https://github.com/microsoft/autogen](https://github.com/microsoft/autogen)
 		- **Company:** Microsoft Research
 		- AutoGen is Microsoft's open multi-agent conversation framework enabling multi-LLM and human-in-the-loop collaboration. It was among the earliest major open-source agent orchestration projects. Its ecosystem has diversified into both research and applied workflows.
+	- ## Google Agent Development Kit (ADK)
+		- **GitHub Stars (as of 2025-10-07):** 13,497
+		- **GitHub:** [https://github.com/google/adk-python](https://github.com/google/adk-python)
+		- **Company:** Google
+		- An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control. While optimized for Gemini and the Google ecosystem, ADK is model-agnostic and deployment-agnostic, designed to make agent development feel more like software development.
 - # AI Agent Frameworks - Less Familiar
 	- ## Camel
 		- **GitHub Stars (as of 2025-10-07):** 14,437
