@@ -40,3 +40,8 @@ npx rulesync generate
 ## More Information
 
 For detailed documentation, see `pages/My___Dev___Tool___Pref___AI___Coding___Config___Management.md`.
+
+## Repository Access
+
+- **Local repository**: `~/GitHub/others/forks/rulesync`
+- **GitHub repository**: https://github.com/dyoshikawa/rulesync
