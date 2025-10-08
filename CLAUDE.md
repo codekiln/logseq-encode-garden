@@ -2,7 +2,7 @@ Please also reference the following documents as needed:
 
 @.claude/memories/commit-conventions.md description: "Commit conventions with optional ticket references" globs: ""
 @.claude/memories/convert-from-md-to-lfm.md description: "" globs: ""
-@.claude/memories/creating_rulesync_rules.md description: "Guide for creating and managing rulesync rules" globs: "**/*.md,**/*.mdc"
+@.claude/memories/rulesync-overview.md description: "Guide for creating and managing rulesync rules" globs: "**/*.md,**/*.mdc"
 @.claude/memories/diataxis-explanation.md description: "" globs: ""
 @.claude/memories/diataxis-how-to.md description: "" globs: ""
 @.claude/memories/diataxis-reference.md description: "" globs: ""

@@ -3,14 +3,18 @@ root: false
 targets:
   - '*'
 description: 'Guide for creating and managing rulesync rules'
-globs:
-  - '**/*.md'
-  - '**/*.mdc'
+globs: []
 ---
 
-# Creating and Managing Rulesync Rules
+# Rulesync Overview
 
 This guide explains how to create and manage rulesync rules, helping you maintain consistent AI rules across different AI coding tools.
+
+## Rulesync and how to update claude code commands, rules, subagents, gitignore
+* don't directly update claude code configuration
+* instead, use rulesync configuration to update claude code
+* for info about rulesync, check out the repo: ~/GitHub/others/forks/rulesync
+* if that is not available, use https://github.com/dyoshikawa/rulesync
 
 ## Rule File Structure
 
