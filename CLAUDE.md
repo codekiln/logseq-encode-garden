@@ -2,7 +2,6 @@ Please also reference the following documents as needed:
 
 @.claude/memories/commit-conventions.md description: "Commit conventions with optional ticket references" globs: ""
 @.claude/memories/convert-from-md-to-lfm.md description: "" globs: ""
-@.claude/memories/rulesync-overview.md description: "Guide for creating and managing rulesync rules" globs: "**/*.md,**/*.mdc"
 @.claude/memories/diataxis-explanation.md description: "" globs: ""
 @.claude/memories/diataxis-how-to.md description: "" globs: ""
 @.claude/memories/diataxis-reference.md description: "" globs: ""
@@ -20,6 +19,7 @@ Please also reference the following documents as needed:
 @.claude/memories/logseq-person.md description: "" globs: ""
 @.claude/memories/logseq-slides.md description: "" globs: ""
 @.claude/memories/logseq-youtube-notes.md description: "How to intake and format notes on a youtube video" globs: ""
+@.claude/memories/rulesync-overview.md description: "How I use Rulesync for AI coding tool configuration management" globs: ""
 @.claude/memories/typical-week-structure.md description: "" globs: ""
 # Logseq Encode Garden - Instructions for Claude
 

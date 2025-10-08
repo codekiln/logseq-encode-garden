@@ -9,10 +9,6 @@ Please also reference the following documents as needed. In this case, `@` stand
     <Path>@.github/instructions/convert-from-md-to-lfm.instructions.md</Path>
   </Document>
   <Document>
-    <Path>@.github/instructions/creating_rulesync_rules.instructions.md</Path>
-    <Description>Guide for creating and managing rulesync rules</Description>
-  </Document>
-  <Document>
     <Path>@.github/instructions/diataxis-explanation.instructions.md</Path>
   </Document>
   <Document>
@@ -65,6 +61,10 @@ Please also reference the following documents as needed. In this case, `@` stand
   <Document>
     <Path>@.github/instructions/logseq-youtube-notes.instructions.md</Path>
     <Description>How to intake and format notes on a youtube video</Description>
+  </Document>
+  <Document>
+    <Path>@.github/instructions/rulesync-overview.instructions.md</Path>
+    <Description>How I use Rulesync for AI coding tool configuration management</Description>
   </Document>
   <Document>
     <Path>@.github/instructions/typical-week-structure.instructions.md</Path>
