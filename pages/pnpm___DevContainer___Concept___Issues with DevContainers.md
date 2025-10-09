@@ -18,8 +18,13 @@
 		- **Configuration**:
 		  ```json
 		  {
-		  "postCreateCommand": "pnpm config set store-dir /home/vscode/.pnpm-store && pnpm install --frozen-lockfile"
+		  "postCreateCommand": "mkdir -p /home/vscode/.pnpm-store && pnpm config set store-dir /home/vscode/.pnpm-store && pnpm install --frozen-lockfile"
 		  }
+		  ```
+		- **Dockerfile Alternative**:
+		  ```dockerfile
+		  RUN mkdir -p /home/circleci/store
+		  RUN pnpm config set store-dir /home/circleci/store
 		  ```
 		- **Benefits**: Avoids cross-filesystem hard link issues
 		- **Trade-off**: No shared cache between containers
@@ -33,46 +38,75 @@
 		- **Benefits**: Shared cache, reduced downloads
 		- **Requirements**: Pre-create store directory on host
 	- ## Pattern 3: Multi-Stage Docker Builds
-		- **Approach**: Separate dependency installation and build stages
+		- **Approach**: Separate dependency installation and build stages with BuildKit cache mounts
 		- **Configuration**:
 		  ```dockerfile
-		  FROM node:20-slim AS base
+		  FROM node:22-alpine AS base
 		  ENV PNPM_HOME="/pnpm"
 		  ENV PATH="$PNPM_HOME:$PATH"
 		  RUN corepack enable
 		  
 		  FROM base AS deps
-		  RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
+		  WORKDIR /app
+		  COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+		  RUN --mount=type=cache,id=pnpm,target=/pnpm/store \
+		      pnpm install --frozen-lockfile
 		  
 		  FROM base AS build
-		  RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
-		  RUN pnpm run build
+		  WORKDIR /app
+		  COPY --from=deps /app/node_modules ./node_modules
+		  COPY . .
+		  RUN --mount=type=cache,id=pnpm,target=/pnpm/store \
+		      pnpm run build
 		  ```
-		- **Benefits**: Optimized image size, cached builds
+		- **Benefits**: Optimized image size, cached builds, faster CI/CD
 	- ## Pattern 4: DevContainer Features Integration
-		- **Approach**: Use official DevContainer features
+		- **Approach**: Use official DevContainer features with packageManager option
 		- **Configuration**:
 		  ```json
 		  {
 		  "features": {
 		  	"ghcr.io/devcontainers/features/node:1": {
-		  		"version": "18",
+		  		"version": "22",
 		  		"packageManager": "pnpm"
 		  	}
-		  }
+		  },
+		  "postCreateCommand": "corepack enable && corepack prepare pnpm@latest --activate && pnpm install"
 		  }
 		  ```
-		- **Benefits**: Standardized setup, maintained by community
+		- **Benefits**: Standardized setup, maintained by community, automatic pnpm installation
 	- ## Pattern 5: Corepack Integration
-		- **Approach**: Use Node.js built-in corepack for pnpm management
-		- **Configuration**:
+		- **Approach**: Use Node.js built-in corepack for pnpm management with proper activation
+		- **Dockerfile Configuration**:
 		  ```dockerfile
-		  FROM node:20-slim
+		  FROM node:22-alpine
 		  ENV PNPM_HOME="/pnpm"
 		  ENV PATH="$PNPM_HOME:$PATH"
 		  RUN corepack enable
+		  RUN corepack prepare pnpm@latest --activate
 		  ```
-		- **Benefits**: Version consistency, automatic pnpm installation
+		- **DevContainer Configuration**:
+		  ```json
+		  {
+		  "postCreateCommand": "corepack enable && corepack prepare pnpm@latest --activate && pnpm install"
+		  }
+		  ```
+		- **Custom Install Directory** (for specific environments):
+		  ```dockerfile
+		  RUN corepack enable --install-directory ~/bin
+		  ```
+		- **Benefits**: Version consistency, automatic pnpm installation, no manual version management
+	- ## Pattern 6: Monorepo UpdateContentCommand
+		- **Approach**: Use updateContentCommand for monorepos to handle workspace changes
+		- **Configuration**:
+		  ```json
+		  {
+		  "updateContentCommand": "corepack prepare & pnpm install",
+		  "postCreateCommand": "pnpm install"
+		  }
+		  ```
+		- **Benefits**: Automatically handles workspace updates, faster development cycles
+		- **Use Case**: Large monorepos with multiple packages that change frequently
 - # Searching for Examples of Repositories Using pnpm in Docker or DevContainers
 	- ## Improved Search Strategy (Two-Phase Pipeline)
 		- **Phase 1**: Find repositories with devcontainer configurations using code search API
