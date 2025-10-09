@@ -1,0 +1,2 @@
+- [Coder | Cloud Development Environment: Remote & Self Hosted](https://coder.com/)
+	- > Bring developers and coding agents together in self-hosted environments on your infrastructure. Open source and deployable anywhere, Coder helps enterprises adopt AI without compromising security or performance.

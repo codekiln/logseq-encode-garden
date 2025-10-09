@@ -1,4 +1,4 @@
-tags:: [[VSCode/Dev Container]], [[YouTube/@code/Playlist/Getting Started with Dev Containers]]
+tags:: [[DevContainer]], [[YouTube/@code/Playlist/Getting Started with Dev Containers]]
 
 - ## Notes
 	- example feature: having the azure CLI `az` executable available in the shell

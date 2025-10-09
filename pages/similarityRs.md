@@ -1,0 +1,2 @@
+- [mizchi/similarity](https://github.com/mizchi/similarity)
+	- High-performance code similarity detection tools written in Rust. Detects duplicate functions and similar code patterns across your codebase in multiple programming languages.

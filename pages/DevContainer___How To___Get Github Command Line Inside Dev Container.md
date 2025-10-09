@@ -1,4 +1,4 @@
-- [GitHub CLI on devcontainer - DEV Community](https://dev.to/r7kamura/github-cli-on-devcontainer-3od7) - how to get [[GitHub/CLI]] in a [[VSCode/Dev Container]]
+- [GitHub CLI on devcontainer - DEV Community](https://dev.to/r7kamura/github-cli-on-devcontainer-3od7) - how to get [[GitHub/CLI]] in a [[DevContainer]]
 	- To use the [GitHub CLI](https://cli.github.com/) (a.k.a. `gh`)  on devcontainer, you need to pass credentials for that.
 	  
 	  If you run `gh auth login` on the host side, the credentials will be stored at `~/.config/gh/hosts.yml`, so mounting it on the container side will work.

@@ -118,7 +118,7 @@ tags:: [[c74/M4L/Idea/Alits]]
 			  :LOGBOOK:
 			  CLOCK: [2025-02-10 Mon 05:39:20]--[2025-02-10 Mon 05:40:33] =>  00:01:13
 			  :END:
-				- currently, in order to get the [[VSCode/Dev Container]] to initialize correctly, I need to do:
+				- currently, in order to get the [[DevContainer]] to initialize correctly, I need to do:
 					- `docker compose build`
 					- `docker compose up`
 						- `ctrl+c` to exit
@@ -345,7 +345,7 @@ tags:: [[c74/M4L/Idea/Alits]]
 					-
 	- [[2025-02-08 Sat]]
 	  collapsed:: true
-		- tried to get [[VSCode/Dev Container]] spec from [[GitHub/zsteinkamp/m4l-typescript-base]] working with [[Person/codekiln/GitHub/alits]], which was created from [[GitHub/aptrn/maxmsp-ts-library-template]]
+		- tried to get [[DevContainer]] spec from [[GitHub/zsteinkamp/m4l-typescript-base]] working with [[Person/codekiln/GitHub/alits]], which was created from [[GitHub/aptrn/maxmsp-ts-library-template]]
 			- #Error
 				- Error from inside the dv container
 					- ```
@@ -423,7 +423,7 @@ tags:: [[c74/M4L/Idea/Alits]]
 				- [[GitHub/zsteinkamp/m4l-typescript-base]] has this in the package.json/scripts/dev:
 					- `yarn install --frozen-lockfile && yarn tsc --watch`
 					- so we could probably do something similar, installing inside of the dev command. but that seems a bit wasteful, since docker build could do the installation for us.
-				- #Discovered [[StackOverflow/How do I make pnpm work as intended in a vscode dev container?]] from [[2023/09]] which has significant debugging work needed to get [[pnpm]] working with [[VSCode/Dev Container]]s.
+				- #Discovered [[StackOverflow/How do I make pnpm work as intended in a vscode dev container?]] from [[2023/09]] which has significant debugging work needed to get [[pnpm]] working with [[DevContainer]]s.
 					- Conclusion: it's more trouble than it's worth. I was just trying to use pnpm because it was already baked into the template.
 			- Struggled with this for a few more hours.
 				- [[Reddit/node/PNPM devcontainer multiple project setup]]

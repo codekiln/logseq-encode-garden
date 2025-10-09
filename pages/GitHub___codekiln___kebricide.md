@@ -4,10 +4,13 @@ tags:: [[c74/M4L]]
 - [[2025-02-07 Fri]]
 	- TODO make a prototype of [[c74/M4L/Idea/Alits]] just for Track and Clip
 - [[2025-02-06 Thu]]
+  collapsed:: true
 	- DONE define [[CursorAI/Project Rule]] for Kebricide
 	- DONE figure out why I'm getting #Error `js: index.js: Javascript ReferenceError: window is not defined, line 6`
+	  collapsed:: true
 		- I think it's because yesterday I did [[Ableton/Menu/File/Collect All and Save]], and now I'm not interacting with the right version of the patcher
 	- DONE figure out why I'm STILL getting #Error `jsliveapi: get: no valid object set` even after loading the right device ANS see [[c74/max/Ref/How to only see max console messages for This Patcher]] and [[c74/M4L/obj/LiveAPI/prop/unquotedpath]]
+	  collapsed:: true
 		- ```
 		  js: BANG   
 		  js: initialize   
@@ -106,6 +109,7 @@ tags:: [[c74/M4L]]
 		  ```
 - [[2025-02-05 Wed]]
   id:: 67a32012-a455-4a23-825a-7fa91929ca9f
+  collapsed:: true
 	- DONE list the clips in track in the console
 		- DONE What are the best docs for the [[c74/M4L/Ref]]?
 			- [[c74/M4L/Ref/Live API Overview]]
@@ -118,7 +122,8 @@ tags:: [[c74/M4L]]
 	- [[c74/max/js/Q/What is get the error get: no valid object set about?]]
 	- [[c74/max/js/How To/Run a function when the js is recompiled or initialized]]
 - [[Feb 4th, 2025]]
-	- `yarn dev` starts the watcher inside the [[VSCode/Dev Container]]
+  collapsed:: true
+	- `yarn dev` starts the watcher inside the [[DevContainer]]
 	- DONE how do I add `Project/Device.amxd` [[c74/M4L/.amxd]] to #Ableton ? ANS: drag and drop
 	  collapsed:: true
 		- DONE where is my repo? ANS: `Documents/GithHub/kebricide`

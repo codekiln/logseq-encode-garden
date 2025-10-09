@@ -1,0 +1,2 @@
+- [DevPod - Open Source Dev-Environments-As-Code](https://devpod.sh/)
+	- > DevPod allows you to spin up dev environments based on the [[DevContainer/.devcontainer.json]] but it can also **set up a best-estimate dev environment by analyzing your project**.
