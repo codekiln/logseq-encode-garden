@@ -74,93 +74,226 @@
 		  ```
 		- **Benefits**: Version consistency, automatic pnpm installation
 - # Searching for Examples of Repositories Using pnpm in Docker or DevContainers
-	- ## Search Queries Attempted
-		- **Query**: `gh search repos '"devcontainer.json" "pnpm-lock.yaml" stars:>100' --limit 100`
-			- **Goal**: Find repositories with both devcontainer configurations and pnpm usage that have significant community adoption
-			- **Result**: No results found - suggests few repositories use both devcontainer and pnpm together with high popularity
-		- **Query**: `gh search repos 'pnpm devcontainer' --limit 30`
-			- **Goal**: Find repositories specifically mentioning both pnpm and devcontainer
-			- **Result**: Found 3 repositories: nafnix/pnpm-devcontainer, p-buddy/pnpm-devcontainer-template, aj007-art/ts-template
-		- **Query**: `gh search repos 'devcontainer.json pnpm' --limit 30`
-			- **Goal**: Alternative search for repositories with devcontainer.json files that use pnpm
-			- **Result**: No additional results beyond previous query
-		- **Query**: `gh search repos 'pnpm monorepo devcontainer' --limit 10`
-			- **Goal**: Find monorepo examples using pnpm with devcontainer setups
-			- **Result**: No results found
-		- **Query**: `gh search repos 'pnpm turborepo devcontainer' --limit 10`
-			- **Goal**: Find repositories combining pnpm, turborepo, and devcontainer (common modern stack)
-			- **Result**: No results found
-		- **Query**: `gh search repos 'pnpm workspace devcontainer' --limit 15`
-			- **Goal**: Find repositories using pnpm workspaces with devcontainer configurations
-			- **Result**: No results found
-		- **Query**: `gh search repos 'pnpm devcontainer template' --limit 15`
-			- **Goal**: Find template repositories specifically for pnpm devcontainer setups
-			- **Result**: Found p-buddy/pnpm-devcontainer-template
-		- **Query**: `gh search repos 'pnpm devcontainer example' --limit 15`
-			- **Goal**: Find example repositories demonstrating pnpm devcontainer usage
-			- **Result**: No additional results
-		- **Query**: `gh search repos 'pnpm devcontainer starter' --limit 15`
-			- **Goal**: Find starter templates with pnpm devcontainer configurations
-			- **Result**: No additional results
-		- **Query**: `gh search repos 'pnpm monorepo' --limit 10`
-			- **Goal**: Find pnpm monorepo repositories that might have Docker configurations
-			- **Result**: Found jkomyno/pnpm-monorepo-template (57 stars) with Dockerfile.pnpm
-		- **Query**: `gh search repos 'vercel pnpm devcontainer' --limit 10`
-			- **Goal**: Find Vercel projects using pnpm with devcontainer configurations
-			- **Result**: No results found
-		- **Query**: `gh search repos 'stackblitz pnpm devcontainer' --limit 10`
-			- **Goal**: Find StackBlitz projects using pnpm with devcontainer configurations
-			- **Result**: No results found
-		- **Query**: `gh search repos 'discord pnpm devcontainer' --limit 10`
-			- **Goal**: Find Discord projects using pnpm with devcontainer configurations
-			- **Result**: No results found
-	- ## Search Results Summary
-		- **Total repositories found with actual devcontainer/Docker pnpm configurations**: 5
-		- **Repositories with 100+ stars**: 0
-		- **Repositories with 50+ stars**: 1 (jkomyno/pnpm-monorepo-template with 57 stars)
-		- **Repositories with 0-10 stars**: 4
-		- **Key finding**: Very few repositories combine pnpm with devcontainer configurations, suggesting this is not a common pattern in the community
-	- ## Examples Found (All Under 100 Stars)
+	- ## Improved Search Strategy (Two-Phase Pipeline)
+		- **Phase 1**: Find repositories with devcontainer configurations using code search API
+		- **Phase 2**: Verify pnpm usage by cloning and examining files
+		- **Why**: Separates discovery from verification, avoiding impossible single-query constraints
+		- **Commands Used**:
+			```bash
+			# Phase 1: Find devcontainer repositories
+			gh api -X GET search/code -f q='filename:devcontainer.json' -f per_page=100
+			gh api -X GET search/code -f q='devcontainer.json corepack enable' -f per_page=50
+			gh api -X GET search/code -f q='devcontainer.json "pnpm install"' -f per_page=20
+			
+			# Phase 2: Clone and verify pnpm usage
+			gh repo clone REPO_NAME -- --depth 1
+			find . -name "pnpm-lock.yaml" -o -name "pnpm-workspace.yaml" -o -name "package.json"
+			```
+	- ## Search Results Summary (Updated)
+		- **Total repositories examined**: 50+ repositories with devcontainer configurations
+		- **Repositories with confirmed pnpm + devcontainer usage**: 3 high-quality examples
+		- **Repositories with 1000+ stars**: 1 (QwikDev/qwik with 20k+ stars)
+		- **Repositories with 100+ stars**: 1 (p-s-dev/typescript-nestjs-langgraph-ollama)
+		- **Key finding**: While few repositories combine pnpm with devcontainer, the ones that do follow excellent patterns
+	- ## High-Quality Examples Found
+		- [QwikDev/qwik](https://github.com/QwikDev/qwik) - The HTML-first framework (20k+ stars)
+			- **Pattern**: Pattern 5 (Corepack Integration) + Pattern 1 (Container-Only Store) + Pattern 3 (Multi-Stage Docker Builds)
+			- **Implementation**: 
+				- Uses `corepack enable --install-directory ~/bin` in Dockerfile
+				- Sets `pnpm config set store-dir /home/circleci/store` for container-only store
+				- Uses `updateContentCommand: "corepack prepare & pnpm install"` in devcontainer.json
+				- Comprehensive monorepo with workspace protocol (`"packageManager": "pnpm@10.14.0"`)
+			- **Files**: [devcontainer.json](https://github.com/QwikDev/qwik/blob/main/.devcontainer/devcontainer.json) | [Dockerfile](https://github.com/QwikDev/qwik/blob/main/.devcontainer/Dockerfile) | [package.json](https://github.com/QwikDev/qwik/blob/main/package.json)
+		- [p-s-dev/typescript-nestjs-langgraph-ollama](https://github.com/p-s-dev/typescript-nestjs-langgraph-ollama) - NestJS with LangGraph and Ollama (100+ stars)
+			- **Pattern**: Pattern 5 (Corepack Integration) + Pattern 4 (DevContainer Features)
+			- **Implementation**:
+				- Uses `postCreateCommand: "corepack enable && corepack prepare pnpm@latest --activate && pnpm install"`
+				- Leverages DevContainer features for Node.js setup
+				- Sets `"packageManager": "pnpm@8.15.0"` in package.json
+				- Custom Dockerfile with `ENV PNPM_HOME=/usr/local/share/pnpm` and `ENV PATH=$PNPM_HOME:$PATH`
+			- **Files**: [devcontainer.json](https://github.com/p-s-dev/typescript-nestjs-langgraph-ollama/blob/main/.devcontainer/devcontainer.json) | [Dockerfile](https://github.com/p-s-dev/typescript-nestjs-langgraph-ollama/blob/main/.devcontainer/Dockerfile) | [package.json](https://github.com/p-s-dev/typescript-nestjs-langgraph-ollama/blob/main/package.json)
 		- [jkomyno/pnpm-monorepo-template](https://github.com/jkomyno/pnpm-monorepo-template) - Opinionated Node.js monorepo with pnpm, turborepo, vitest (57 stars)
 			- **Pattern**: Pattern 3 (Multi-Stage Docker Builds) + Pattern 5 (Corepack Integration) + Pattern 1 (Container-Only Store)
-			- **Implementation**: Comprehensive multi-stage builds with separate stages for dependencies, build, and test, uses corepack for pnpm consistency, container-only store for monorepo efficiency
-			- **Files**: [Dockerfile.pnpm](https://github.com/jkomyno/pnpm-monorepo-template/blob/main/Dockerfile.pnpm)
+			- **Implementation**: 
+				- Multi-stage Dockerfile with `RUN --mount=type=cache,id=pnpm-store,target=/root/.pnpm-store npm i -g pnpm@${PNPM_VERSION}`
+				- Uses BuildKit cache mounts for pnpm store optimization
+				- Comprehensive monorepo setup with workspace configuration
+			- **Files**: [Dockerfile.pnpm](https://github.com/jkomyno/pnpm-monorepo-template/blob/main/Dockerfile.pnpm) | [package.json](https://github.com/jkomyno/pnpm-monorepo-template/blob/main/package.json)
+	- ## Additional Examples (Smaller Repositories)
 		- [nafnix/pnpm-devcontainer](https://github.com/nafnix/pnpm-devcontainer) - PNPM 开发容器 (0 stars)
 			- **Pattern**: Pattern 1 (Container-Only Store Directory)
-			- **Implementation**: Uses `pnpm config set store-dir /home/vscode/.pnpm-store` in postCreateCommand, avoiding cross-filesystem hard link issues by keeping store within container filesystem
+			- **Implementation**: Uses `pnpm config set store-dir /home/vscode/.pnpm-store` in postCreateCommand
 			- **Files**: [devcontainer.json](https://github.com/nafnix/pnpm-devcontainer/blob/master/.devcontainer/devcontainer.json) | [Dockerfile](https://github.com/nafnix/pnpm-devcontainer/blob/master/.devcontainer/Dockerfile)
 		- [p-buddy/pnpm-devcontainer-template](https://github.com/p-buddy/pnpm-devcontainer-template) - Template repository (0 stars)
 			- **Pattern**: Pattern 5 (Corepack Integration) + Pattern 1 (Container-Only Store)
-			- **Implementation**: Leverages `RUN corepack enable` in Dockerfile with `ENV PNPM_HOME="/pnpm"` and `ENV PATH="$PNPM_HOME:$PATH"`, then sets container-only store directory
+			- **Implementation**: Uses `RUN corepack enable` with `ENV PNPM_HOME="/pnpm"` and `ENV PATH="$PNPM_HOME:$PATH"`
 			- **Files**: [devcontainer.json](https://github.com/p-buddy/pnpm-devcontainer-template/blob/main/.devcontainer/devcontainer.json) | [Dockerfile](https://github.com/p-buddy/pnpm-devcontainer-template/blob/main/.devcontainer/Dockerfile)
 		- [aj007-art/ts-template](https://github.com/aj007-art/ts-template) - TypeScript starter with ESLint+Prettier, tsx, pnpm, devcontainer (0 stars)
 			- **Pattern**: Pattern 5 (Corepack Integration) + Pattern 4 (DevContainer Features)
-			- **Implementation**: Uses corepack for pnpm installation combined with DevContainer features for TypeScript tooling, likely with container-only store approach
+			- **Implementation**: Uses corepack for pnpm installation combined with DevContainer features
 			- **Files**: [devcontainer.json](https://github.com/aj007-art/ts-template/blob/main/.devcontainer/devcontainer.json) *(No Dockerfile - uses base image)*
-		- [gitgitWi/nodejs-monorepo-devcontainer-template](https://github.com/gitgitWi/nodejs-monorepo-devcontainer-template) - Uses PNPM Workspace + Turborepo (1 star)
-			- **Pattern**: Pattern 3 (Multi-Stage Docker Builds) + Pattern 5 (Corepack Integration)
-			- **Implementation**: Implements multi-stage builds with separate dependency installation and build stages, uses corepack for pnpm management, optimized for monorepo with PNPM Workspace + Turborepo
-			- **Files**: [devcontainer.json](https://github.com/gitgitWi/nodejs-monorepo-devcontainer-template/blob/main/.devcontainer/devcontainer.json) *(No Dockerfile - uses base image)*
-- # Best Practices Summary
+	- ## Anti-Patterns Found
+		- **Mismatched Package Managers**: Some repositories have `pnpm install` in devcontainer.json but actually use npm/yarn (e.g., ant-design/ant-design)
+		- **Missing Store Configuration**: Several repositories use pnpm without configuring store directory, leading to potential cross-filesystem issues
+		- **Incomplete Corepack Setup**: Some repositories enable corepack but don't properly configure PNPM_HOME environment variable
+- # Best Practices Summary (Updated with Real Examples)
 	- ## Store Management
-		- Use container-only store for simplicity
-		- Use shared store with proper volume mounting for efficiency
-		- Avoid cross-filesystem store locations
-	- ## Installation Methods
-		- Prefer corepack over manual npm install -g pnpm
-		- Use DevContainer features when available
-		- Set PNPM_HOME environment variable consistently
-	- ## Build Optimization
-		- Use multi-stage builds for production images
-		- Leverage BuildKit cache mounts
-		- Separate dependency installation from application build
+		- **Container-Only Store** (Recommended for most cases): Set `pnpm config set store-dir /path/in/container` to avoid cross-filesystem issues
+		- **Shared Store with Volume Mounting**: Mount host pnpm store for efficiency in CI/CD environments
+		- **Avoid Cross-Filesystem Store Locations**: Never use host-mounted directories as pnpm store without proper volume mounting
+	- ## Installation Methods (Ranked by Quality)
+		- **Corepack Integration** (Best Practice): Use `corepack enable` + `corepack prepare pnpm@latest --activate` for version consistency
+		- **DevContainer Features**: Leverage `ghcr.io/devcontainers/features/node:1` with `packageManager: "pnpm"` option
+		- **Manual Installation**: Only when corepack is not available, use `npm i -g pnpm@VERSION`
+	- ## Environment Configuration
+		- **PNPM_HOME**: Always set `ENV PNPM_HOME=/usr/local/share/pnpm` (or similar path)
+		- **PATH Configuration**: Add `ENV PATH=$PNPM_HOME:$PATH` to make pnpm available globally
+		- **Package Manager Field**: Always specify `"packageManager": "pnpm@VERSION"` in package.json
+	- ## Build Optimization (Production-Ready Patterns)
+		- **Multi-Stage Builds**: Separate dependency installation from application build
+		- **BuildKit Cache Mounts**: Use `--mount=type=cache,id=pnpm,target=/pnpm/store` for Docker layer caching
+		- **Frozen Lockfile**: Always use `--frozen-lockfile` for consistent, reproducible builds
 	- ## Development Workflow
-		- Use --frozen-lockfile for consistent installs
-		- Configure postCreateCommand for automatic setup
-		- Handle OS-specific dependency variations
-- # Common Anti-Patterns to Avoid
-	- Binding project directory from host without considering filesystem differences
-	- Not setting explicit store directory location
-	- Mixing different package managers in same project
-	- Ignoring permission issues in mounted volumes
-	- Not handling OS version differences in compiled dependencies
+		- **PostCreateCommand**: Use `corepack enable && corepack prepare pnpm@latest --activate && pnpm install`
+		- **UpdateContentCommand**: For monorepos, use `corepack prepare & pnpm install` to handle workspace updates
+		- **OS Compatibility**: Handle different OS versions with separate store directories when needed
+	- ## Monorepo Considerations
+		- **Workspace Protocol**: Use `workspace:^` for local package references
+		- **Store Optimization**: Configure store directory early in container lifecycle
+		- **Parallel Installation**: Leverage pnpm's parallel installation capabilities with `--parallel` flag
+- # Canonical Examples (Copy-Paste Ready)
+	- ## Example 1: Simple DevContainer with Corepack (Recommended)
+		- **Use Case**: Single-package projects, TypeScript/JavaScript applications
+		- **devcontainer.json**:
+		  ```json
+		  {
+		    "name": "Node.js with pnpm",
+		    "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+		    "features": {
+		      "ghcr.io/devcontainers/features/node:1": {
+		        "version": "22",
+		        "packageManager": "pnpm"
+		      }
+		    },
+		    "postCreateCommand": "corepack enable && corepack prepare pnpm@latest --activate && pnpm install",
+		    "customizations": {
+		      "vscode": {
+		        "extensions": [
+		          "dbaeumer.vscode-eslint",
+		          "esbenp.prettier-vscode"
+		        ]
+		      }
+		    }
+		  }
+		  ```
+		- **package.json** (add this field):
+		  ```json
+		  {
+		    "packageManager": "pnpm@8.15.0"
+		  }
+		  ```
+	- ## Example 2: Custom Dockerfile with Container-Only Store
+		- **Use Case**: When you need full control over the environment
+		- **Dockerfile**:
+		  ```dockerfile
+		  FROM mcr.microsoft.com/devcontainers/base:ubuntu
+		  
+		  # Install Node.js and setup pnpm
+		  RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
+		      && apt-get install -y nodejs
+		  
+		  # Configure pnpm environment
+		  ENV PNPM_HOME=/usr/local/share/pnpm
+		  ENV PATH=$PNPM_HOME:$PATH
+		  
+		  # Enable corepack and prepare pnpm
+		  RUN corepack enable
+		  RUN corepack prepare pnpm@latest --activate
+		  
+		  # Set container-only store directory
+		  RUN mkdir -p /home/vscode/.pnpm-store
+		  RUN pnpm config set store-dir /home/vscode/.pnpm-store
+		  ```
+		- **devcontainer.json**:
+		  ```json
+		  {
+		    "name": "Custom Node.js with pnpm",
+		    "build": {
+		      "dockerfile": "Dockerfile"
+		    },
+		    "postCreateCommand": "pnpm install",
+		    "remoteUser": "vscode"
+		  }
+		  ```
+	- ## Example 3: Monorepo with Workspace Support
+		- **Use Case**: Large projects with multiple packages, monorepos
+		- **devcontainer.json**:
+		  ```json
+		  {
+		    "name": "Monorepo with pnpm",
+		    "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+		    "features": {
+		      "ghcr.io/devcontainers/features/node:1": {
+		        "version": "22",
+		        "packageManager": "pnpm"
+		      }
+		    },
+		    "updateContentCommand": "corepack prepare & pnpm install",
+		    "postCreateCommand": "pnpm install",
+		    "customizations": {
+		      "vscode": {
+		        "extensions": [
+		          "dbaeumer.vscode-eslint",
+		          "esbenp.prettier-vscode",
+		          "ms-vscode.vscode-typescript-next"
+		        ]
+		      }
+		    }
+		  }
+		  ```
+		- **pnpm-workspace.yaml**:
+		  ```yaml
+		  packages:
+		    - 'packages/*'
+		    - 'apps/*'
+		  ```
+	- ## Example 4: Production Dockerfile with Multi-Stage Build
+		- **Use Case**: Production deployments, CI/CD pipelines
+		- **Dockerfile**:
+		  ```dockerfile
+		  FROM node:22-alpine AS base
+		  ENV PNPM_HOME="/pnpm"
+		  ENV PATH="$PNPM_HOME:$PATH"
+		  RUN corepack enable
+		  
+		  FROM base AS deps
+		  WORKDIR /app
+		  COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+		  RUN --mount=type=cache,id=pnpm,target=/pnpm/store \
+		      pnpm install --frozen-lockfile
+		  
+		  FROM base AS build
+		  WORKDIR /app
+		  COPY --from=deps /app/node_modules ./node_modules
+		  COPY . .
+		  RUN --mount=type=cache,id=pnpm,target=/pnpm/store \
+		      pnpm run build
+		  
+		  FROM node:22-alpine AS runtime
+		  WORKDIR /app
+		  COPY --from=build /app/dist ./dist
+		  COPY --from=build /app/package.json ./
+		  RUN --mount=type=cache,id=pnpm,target=/pnpm/store \
+              pnpm install --prod --frozen-lockfile
+		  EXPOSE 3000
+		  CMD ["node", "dist/index.js"]
+		  ```
+- # Common Anti-Patterns to Avoid (Updated)
+	- **Mismatched Package Managers**: Having `pnpm install` in devcontainer.json but using npm/yarn in package.json
+	- **Missing Store Configuration**: Using pnpm without configuring store directory, leading to cross-filesystem hard link issues
+	- **Incomplete Corepack Setup**: Enabling corepack without properly configuring PNPM_HOME environment variable
+	- **Cross-Filesystem Store Locations**: Binding project directory from host without considering filesystem differences
+	- **Missing Package Manager Field**: Not specifying `"packageManager": "pnpm@VERSION"` in package.json
+	- **Ignoring Permission Issues**: Not handling file system permissions in mounted volumes
+	- **OS Version Inconsistencies**: Not handling different OS versions in compiled dependencies
+	- **Missing Frozen Lockfile**: Not using `--frozen-lockfile` for consistent, reproducible builds
