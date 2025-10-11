@@ -1,0 +1,24 @@
+- [[2025-10-11 Sat]]
+	- ## Filed [[rulesync/GitHub/Issue/25/10/README clarification on simulated subagents and commands i388]] [README clarification on simulated commands and subagents · Issue #388 · dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync/issues/388)
+		- I think the README [section on simulated commands and subagents](https://github.com/dyoshikawa/rulesync?tab=readme-ov-file#-simulated-commands-and-subagents) could be clearer.
+		- I think of "simulated" commands like when I at-mention a specific cursor project rule ([Project Rules | Cursor Docs](https://cursor.com/docs/context/rules#project-rules): rule type `Manual` are "Only included when explicitly mentioned using @ruleName"). I think I have an idea of what these are because I think I used them in Cursor in the [bmad-code-org/BMAD-METHOD: Breakthrough Method for Agile Ai Driven Development](https://github.com/bmad-code-org/BMAD-METHOD/tree/main).
+		- Specifically, I think having an explanation for the motivation for why they exist and when one might want to use them or why they are necessary (e.g. in Claude Code you could do `/pr-review` but in Cursor you need to do `@pr-review`) as well what the caveats are for them would be helpful.
+		- My understanding is that one would only ever use "simulated" commands or subagents in an agentic coding tool that didn't actually support commands or subagents.
+		- Right now the readme says,
+			- > This is useful for shortening your prompts.
+		- This part makes me think I don't understand them the same way. Can you help me understand how they shorten prompts?
+		- Commands in general do save on context relative to rules ... is that what you meant?
+	- ## Filed [[rulesync/GitHub/Issue/25/10/Documentation clarification on globs i389]]
+		- The documentation could benefit from some clarifications on how the `globs` parameter impacts different coding agents. 
+		  
+		  My thoughts about what belongs in documentation for a library may be subtly changing due to deepwiki, though. I used [[rulesync/DeepWiki]] #DeepWiki [rulesync's deepwiki](https://deepwiki.com/search/what-formats-of-globs-can-i-us_146d4d84-894f-4a54-8f13-4fd11d3a87d0) to answer the following questions. Who knows, maybe in the future we will just use these types of auto-generated documentation with attached chatbots instead of fixing every use case into prose.
+			- ## What formats of globs can I use in rulesync?
+				- Suspected answer (deepwiki):
+					- > The glob implementation is handled by the standard [glob library's globSync](https://github.com/isaacs/node-glob?tab=readme-ov-file#usage)
+			- ## Are the globs relative to the root directory?
+				- Suspected answer (deepwiki):
+					- > Yes, glob patterns are relative to the project root directory. The implementation ... resolves patterns relative to the current working directory (the project root).
+			- ## What if I reference a file path in a project rule or a command? Some tools have specific syntaxes for this; for example, [claude code has both file-relative "import" syntax `@docs/git-instructions.md`](https://docs.claude.com/en/docs/claude-code/memory#claude-md-imports) and project-relative "import" syntax `@~/.claude/my-project-instructions.md`, and cursor [has a similar @path/to/file/from/project/root](https://cursor.com/docs/context/rules#rule-anatomy) syntax
+				- [Suspected answer (deepwiki):](https://deepwiki.com/search/what-formats-of-globs-can-i-us_146d4d84-894f-4a54-8f13-4fd11d3a87d0)
+					- > Rulesync does not currently perform automatic conversion of file path references between different tools' syntaxes. When you write content in .rulesync/rules/*.md or .rulesync/commands/*.md files, the body content is passed through to tool-specific files without modification. ... The @ symbol you mentioned appears in rulesync's reference section generation, but this is a different feature.
+		-
