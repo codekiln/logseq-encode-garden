@@ -1,0 +1,2 @@
+- [Cognition | Rebuilding Devin for Claude Sonnet 4.5: Lessons and Challenges](https://cognition.ai/blog/devin-sonnet-4-5-lessons-and-challenges)
+	- Example of the big difference between claude 4

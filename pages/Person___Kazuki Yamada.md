@@ -1,4 +1,5 @@
 alias:: [[People/Kazuki Yamada]], [[GitHub/User/dyoshikawa]]
+
 - # Kazuki Yamada
 	- ## Bio
 		- Software developer
@@ -39,6 +40,6 @@ alias:: [[People/Kazuki Yamada]], [[GitHub/User/dyoshikawa]]
 		- [[poml]]
 		- [[AI Coding]]
 		- [[Claude Code]]
-		- [[Cursor]]
+		- [[CursorAI]]
 	- [[Person/Kazuki Yamada/GitHub]]
 -

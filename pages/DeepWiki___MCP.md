@@ -1,0 +1,3 @@
+- [DeepWiki MCP - Devin Docs](https://docs.devin.ai/work-with-devin/deepwiki-mcp)
+	- The official MCP server of DeepWiki. Requires [[Devin]] account:
+		- > Want DeepWiki capabilities for private repositories? Sign up for a Devin account at [Devin.ai](https://devin.ai/) and use the [Devin MCP server](https://docs.devin.ai/work-with-devin/devin-mcp) with your Devin API key.
