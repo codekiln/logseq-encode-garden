@@ -1,0 +1,3 @@
+- [Omarchy — Beautiful, Modern & Opinionated Linux by DHH](https://omarchy.org/)
+	- via [Apple Introduces The Year Of The Linux Desktop! - YouTube](https://www.youtube.com/watch?v=GQJZ96l-XQ4) [[Person/Michael B Paulson/YouTube]]
+	- see also [My Journey from macOS to Arch Linux with Omarchy | ssp.sh](https://www.ssp.sh/blog/macbook-to-arch-linux-omarchy/)
