@@ -3,7 +3,7 @@ root: false
 targets:
   - '*'
 description: ''
-globs: []
+globs: ['journals/*.md', 'pages/*.md']
 ---
 # AI Model Reference Quick Guide
 This rule extends `logseq-naming-conventions.mdc` for quickly referencing AI models in the knowledge graph without creating detailed pages.

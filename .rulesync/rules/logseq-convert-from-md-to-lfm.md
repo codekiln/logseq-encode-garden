@@ -2,8 +2,8 @@
 root: false
 targets:
   - '*'
-description: ''
-globs: []
+description: 'Converting from Standard Markdown to Logseq Flavored Markdown (LFM)'
+globs: ['{journals,pages}/*.md']
 ---
 # Converting from Standard Markdown to Logseq Flavored Markdown (LFM)
 

@@ -1,9 +1,12 @@
 ---
+# true that is less than or equal to one file for overview such as `AGENTS.md`, false for details such as `.agents/memories/*.md`
 root: false
+# * = all, or specific tools
 targets:
   - '*'
-description: ''
-globs: []
+description: 'How a Person is tracked in this Logseq knowledge garden'
+# see https://github.com/isaacs/node-glob?tab=readme-ov-file#usage
+globs: ['{journals,pages}/*.md']
 ---
 # How a Person is tracked in this Logseq knowledge garden
 This is an extension to logseq-flavored-markdown `logseq-flavored-markdown.mdc` for recording information about a person.

@@ -3,7 +3,7 @@ root: false
 targets:
   - '*'
 description: ''
-globs: []
+globs: ['{journals,pages}/*.md']
 ---
 # AI Model Detailed Documentation Guide
 This rule extends `logseq-naming-conventions.mdc` for creating comprehensive AI model documentation pages.

@@ -3,6 +3,7 @@ root: false
 targets:
   - '*'
 description: 'Guidelines for updating journal entries when modifying pages'
+globs: ['journals/*.md']
 ---
 
 # Journal Updates for Page Changes

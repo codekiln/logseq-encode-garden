@@ -2,11 +2,9 @@
 root: false
 targets:
   - '*'
-description: 'Reference for correct Logseq page naming and linking conventions'
+description: Logseq Page Naming and Linking Reference'
+globs: ['journals/*.md', 'pages/*.md']
 ---
-
-# Logseq Page Naming and Linking Reference
-
 This document serves as a quick reference for creating and linking to pages in the Logseq knowledge garden.
 
 ## File Naming vs. Link Format

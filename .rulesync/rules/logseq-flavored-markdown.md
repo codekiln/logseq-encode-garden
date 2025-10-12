@@ -3,7 +3,7 @@ root: false
 targets:
   - '*'
 description: ''
-globs: []
+globs: ['journals/*.md', 'pages/*.md']
 ---
 # Formatting Logseq-Flavored Markdown (LFM)
 

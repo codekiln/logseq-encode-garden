@@ -3,7 +3,7 @@ root: false
 targets:
   - '*'
 description: ''
-globs: []
+globs: ['{journals,pages}/*.md']
 ---
 # How to create a Diataxis Tutorial page in the Knowledge Garden
 

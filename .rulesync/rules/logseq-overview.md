@@ -2,11 +2,9 @@
 root: false
 targets:
   - '*'
-description: ''
-globs: []
+description: 'Overview of Logseq'
+globs: ['journals/*.md', 'pages/*.md']
 ---
-# Overview of Logseq
-
 * Logseq is a privacy-first, open-source platform for knowledge management. 
 * A Logseq graph is a collection of markdown files and linked assets. 
 * Logseq is different from other markdown-based knowledge systems like Obsidian because it uses a block-centric approach with infinite nesting. Each block inherits the tags of its parent blocks. This relies on the unordere list item in markdown. Logseq uses a special flavor of markdown. 

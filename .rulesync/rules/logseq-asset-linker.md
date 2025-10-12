@@ -3,7 +3,7 @@ root: false
 targets:
   - '*'
 description: ''
-globs: []
+globs: ['journals/*.md', 'pages/*.md']
 ---
 # Constructing a Logseq Asset Link
 This project rule is an extension to [logseq-flavored-markdown](mdc:.cursor/rules/logseq-flavored-markdown.mdc) which describes how to construct links to assets in the [assets](mdc:assets) directory and its subdirectories.

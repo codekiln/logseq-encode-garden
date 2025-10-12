@@ -2,8 +2,8 @@
 root: false
 targets:
   - '*'
-description: ''
-globs: []
+description: 'Logseq Naming Conventions'
+globs: ['journals/*.md', 'pages/*.md']
 ---
 # Logseq Naming Conventions
 This is an extension to logseq-flavored-markdown `logseq-flavored-markdown.mdc` for maintaining consistent naming conventions in the knowledge graph.

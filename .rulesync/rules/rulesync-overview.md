@@ -2,7 +2,7 @@
 root: false
 targets:
   - '*'
-description: 'How I use Rulesync for AI coding tool configuration management'
+description: 'How I use Rulesync for AI coding tool configuration management (Claude Code, Cursor, Codex CLI, etc)'
 globs: []
 ---
 
