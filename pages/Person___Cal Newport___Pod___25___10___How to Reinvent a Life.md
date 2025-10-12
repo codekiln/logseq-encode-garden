@@ -3,7 +3,7 @@ tags:: [[Person/Cal Newport]], [[Podcast]], [[Productivity]], [[Life Planning]]
 - # Deep Questions – Episode 373
 	- ## "The Internet's Best Advice for Reinventing Your Life"
 		- Cal Newport (Snipd highlights synthesis)
-		- Below is a detailed reconstruction of the main ideas Cal Newport explored in episode 373, enriched with direct links to the Snipd excerpts so you can jump to the original audio at the exact moment each idea is discussed.
+		- Below is a detailed reconstruction of the main ideas Cal Newport explored in episode 373, enriched with direct links to podcast excerpts.
 	- ### 1. Empty Your Head Weekly
 		- **Brain-dump list** – a single, digital task inventory
 			- Why it matters: Working-memory overload turns many loose obligations into an anxious "amorphous blob". Writing them down expands "mental RAM" and removes the constant fear of forgetting.
@@ -29,7 +29,7 @@ tags:: [[Person/Cal Newport]], [[Podcast]], [[Productivity]], [[Life Planning]]
 			- [Template explanation](https://share.snipd.com/snip/967caa31-0e07-45de-81a7-9cb2a0d2dc92)
 	- ### 4. **Slayable Dragons** – Goal-Setting After Jordan Peterson
 		- 1. **Have a vision** for each life-bucket (health, work, relationships…). A short narrative of what "good" looks like
-		- 2. Pick **one "next goal"** that moves you closer; it must be *challenging yet clearly attainable* (a "dragon you can slay")
+		- 2. Pick **one "next goal"** that moves closer to the vision; it must be *challenging yet clearly attainable* (a "slayable dragon")
 		- 3. Work on only **one-to-two next goals at a time** to avoid log-jams. Finish, then choose the next dragon
 		- [Peterson clip](https://share.snipd.com/snip/4789f7a8-3892-4dc6-8f2b-13c8736868cd) · [Cal's analysis](https://share.snipd.com/snip/ec90e2e9-5557-4f2a-ac0a-ec5185404a12) · [Vision → Next-Goal method](https://share.snipd.com/snip/6b6b046e-3a44-4f5d-848d-9b6648f4dfcd)
 	- ### 5. **Read Fewer—but Harder—Books**
@@ -39,15 +39,15 @@ tags:: [[Person/Cal Newport]], [[Podcast]], [[Productivity]], [[Life Planning]]
 			- Rung 2: Accessible primary texts (Example: *Man's Search for Meaning*) - Direct but readable insight
 			- Rung 3: "Approachable-yet-tough" classics (Example: *Walden*; *Letters from a Stoic*) - Train for ambiguity
 			- Rung 4: Primary texts that *require* prep (Example: Jung, Nietzsche, Heidegger, Joyce) - Deep intellectual rewiring
-		- [Holiday's "re-read big books"](https://share.snipd.com/snip/31c42c8f-4a30-4a01-9263-ed1ea24a863c) · [Book Complexity Ladder – overview](https://share.snipd.com/snip/f97292af-0ca7-4ba1-b933-699c70fc1f91) · [Why it changes your world](https://share.snipd.com/snip/729d67f6-92a4-4f17-a499-7fbdebc17ff0)
+		- [Holiday's "re-read big books"](https://share.snipd.com/snip/31c42c8f-4a30-4a01-9263-ed1ea24a863c) · [Book Complexity Ladder – overview](https://share.snipd.com/snip/f97292af-0ca7-4ba1-b933-699c70fc1f91) · [Why it changes one's world](https://share.snipd.com/snip/729d67f6-92a4-4f17-a499-7fbdebc17ff0)
 	- ### 6. Multi-Scale Planning (Quarter ➜ Week ➜ Day)
 		- 1. **Seasonal/Quarterly plan** – big objectives & deadlines
 		- 2. **Weekly plan** – review calendar + brain-dump + quarterly plan; decide what to advance, block multi-hour tasks on the calendar immediately
 		- 3. **Daily time-block plan** – copy fixed appointments first, then plan remaining hours; shutdown when done
 		- [Concept intro](https://share.snipd.com/snip/8c80855f-daab-4126-911f-8ecc650107cd) · [Extended walk-through](https://share.snipd.com/snip/5e474056-00c9-4c9a-bccf-05f3d407fbff)
 	- ### 7. Capture **Resonance Notes**
-		- Whenever a scene, person or idea **"hits you in the gut"**, jot *what it was* & *the feeling it sparked*
-		- **Don't analyse yet**; review monthly to detect recurring themes—these guide your evolving visions
+		- Whenever a scene, person or idea **"hits in the gut"**, jot *what it was* & *the feeling it sparked*
+		- **Don't analyse yet**; review monthly to detect recurring themes—these guide evolving visions
 		- [Capture-what-resonates method](https://share.snipd.com/snip/34082047-679c-4937-a96e-5316e5ba98b1)
 	- ### 8. Visions = *Lifestyle Properties*, not Details
 		- Good vision statement: "I rarely work past 5 p.m., and spontaneous afternoons off are accepted."
@@ -56,7 +56,7 @@ tags:: [[Person/Cal Newport]], [[Podcast]], [[Productivity]], [[Life Planning]]
 		- [Properties vs. Details](https://share.snipd.com/snip/ad09aed4-15f3-460c-bab4-63354311074f)
 	- ### 9. Evidence-Based Career Moves
 		- Vet every proposed training or pivot by **talking to incumbents**; confirm job realities, hiring funnels, salary, hours
-		- Only pursue steps that demonstrably raise the probability of reaching your vision
+		- Only pursue steps that demonstrably raise the probability of reaching the vision
 		- [Evidence-based planning](https://share.snipd.com/snip/3938d778-ae41-4d67-9e02-35a56ddd835f)
 	- ### 10. Lifestyle-Centric Planning in Action
 		- **Case study – "Reese"**
@@ -75,17 +75,17 @@ tags:: [[Person/Cal Newport]], [[Podcast]], [[Productivity]], [[Life Planning]]
 		- [Lock-In explanation](https://share.snipd.com/snip/a7e7f6fd-997a-4f26-af7d-b25fd695ef5b) · [Need for better goal mechanics](https://share.snipd.com/snip/6170304e-a423-4718-98df-cf9fd43035f7) · [Focus needs better map](https://share.snipd.com/snip/552cd329-5989-496c-a26f-c1ebe067ec37)
 	- ## Five-Point Reset Cheat-Sheet (Cal's own wrap-up)
 		- 1. **Maintain & Weekly-Review a Brain-Dump**
-		- 2. **Plan your Information Diet** (run the 30-day log)
+		- 2. **Plan Information Diet** (run the 30-day log)
 		- 3. **Pursue Slayable Goals** (Vision ≠ Goal; focus few)
 		- 4. **Read Up the Complexity Ladder**
 		- 5. **Control Time at Multiple Scales**
 		- [Episode summary snip](https://share.snipd.com/snip/06baa352-e1bd-4f14-9992-a29e6c9f9dad)
 	- ## Key Take-away
 		- Radical, single-shot lifestyle makeovers rarely stick
-		- A sustainable "reinvention" emerges when you:
+		- A sustainable "reinvention" emerges when one:
 			- 1. Articulate **clear lifestyle properties** for each area
 			- 2. Choose **evidence-backed, tractable next goals**
 			- 3. Drive them with **multi-scale planning** and clean **information/attention hygiene**
-			- 4. Iterate—season by season—until your lived reality converges with your vision
-		- > *"When your brain gets more complicated, your world gets more complicated – and life becomes richer."*
+			- 4. Iterate—season by season—until lived reality converges with the vision
+		- > *"When the brain gets more complicated, the world gets more complicated – and life becomes richer."*
 		- > —Cal Newport
