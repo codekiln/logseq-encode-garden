@@ -1,0 +1,36 @@
+name: Publish
+
+on:
+  push:
+    branches: [ main ]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Logseq Publish
+        uses: logseq/publish-spa@main
+        with:
+          graph-directory: .
+          output-directory: www
+          accent-color: indigo
+
+      - name: Add .nojekyll file
+        run: touch www/.nojekyll
+
+      - name: Deploy to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: www
+          clean: true
+          clean-exclude: |
+            .nojekyll
