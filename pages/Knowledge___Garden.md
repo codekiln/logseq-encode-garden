@@ -16,6 +16,7 @@ see-also:: [[Knowledge Gardener]]
 		- [https://gwern.net/](https://gwern.net/) by [[Person/Gwern Branwen]]
 		- [https://arvid.xyz/commonplace-book/](https://arvid.xyz/commonplace-book/) by [[Person/Arvid Lunnemark]]
 		- https://wiki.xxiivv.com/ by [[Person/Devine Lu Linvega]]
+		- [Second Brain](https://www.ssp.sh/brain/) by [[Person/Simon Späti]]
 	- ## #History
 		- ### Early Roots
 			- 1. **Zettelkasten Method (Late 20th Century):** The term "Zettelkasten" was popularized by German sociologist Niklas Luhmann in the late 20th century. Luhmann used a system of index cards to capture ideas and notes, linking them through a numbering system, which allowed for a web of interrelated thoughts. His method emphasized the importance of context and connections over linear organization.

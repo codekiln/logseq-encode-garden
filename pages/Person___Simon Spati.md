@@ -1,0 +1,47 @@
+---
+tags:: [[Person]], [[Knowledge Gardener]]
+---
+
+- # [Simon Späti](https://www.ssp.sh/)
+	- ## About
+		- Data engineer, technical writer, and lifelong learner
+		- Over 20 years of experience in data engineering
+		- Technical author with articles featured in top publications
+		- Recognized as a leading voice in the data engineering field
+		- Proud dad and family person
+	- ## Knowledge Management
+		- **Second Brain methodology** - Uses [[Book/Building a Second Brain]] principles by [[Person/Tiago Forte]]
+		- **Digital Zettelkasten** - Implements interconnected note-taking system
+		- **PARA Method** - Organizes information using Projects, Areas, Resources, Archives
+		- **Public knowledge repository** - Maintains curated Second Brain at [ssp.sh/brain](https://www.ssp.sh/brain/)
+		- **Quartz-based static site** - Uses Quartz for digital garden publishing
+	- ## Professional Focus
+		- Data engineering design patterns and best practices
+		- Real-time analytics and data modeling
+		- Semantic layers and self-serve BI
+		- Technical writing and knowledge management
+	- ## Notable Work
+		- **Data Engineering Design Patterns Book** - Exploring timeless practices for data engineers
+		- **Data Engineering Vault** - Compilation of insights in the field
+		- **SELECT Insights Newsletter** - Curated content on data engineering, productivity, and digital note-taking
+		- Popular articles on building DE projects, analytics APIs, and tech independence
+	- ## Expertise Areas
+		- Data modeling for real-time analytics
+		- Declarative data stacks
+		- Personal knowledge management (PKM)
+		- Digital gardening and static site generators
+		- Productivity and workflow optimization
+		- Vim and technical writing
+	- ## Online Presence
+		- Website: [ssp.sh](https://www.ssp.sh/)
+		- Features a public Second Brain knowledge repository
+		- Connected blog with curated knowledge vault
+		- Newsletter: SELECT Insights
+	- ## Personal Interests
+		- Digital note-taking and PKM workflows
+		- Static site generators and digital gardening
+		- Writing and reading
+		- Productivity and finding flow states
+		- Tech independence and self-hosting
+	- ## Location
+		- Based in Switzerland (Alps region)
