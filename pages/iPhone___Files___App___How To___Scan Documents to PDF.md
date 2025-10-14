@@ -1,0 +1,60 @@
+tags:: [[Diataxis/How To]]
+
+- # How to Scan Documents to PDF using iPhone Files App
+	- ## Goal
+		- Create multi-page scanned PDFs directly from physical documents using the built-in iPhone Files app scanner
+	- ## Preconditions
+		- iPhone with iOS 11 or later
+		- Files app installed (built-in)
+		- Physical documents to scan
+	- ## Procedure
+		- ### 1. Open Files App
+			- Launch the **Files** app from your iPhone home screen
+			- Navigate to the folder where you want to save the PDF (e.g., iCloud Drive, On My iPhone)
+		- ### 2. Access Scan Documents
+			- Tap the **three dots** (⋯) in the top-right corner
+			- Select **Scan Documents** from the menu
+			- Alternatively, tap the **camera icon** in the top-right corner
+		- ### 3. Scan Your Documents
+			- Point your camera at the document
+			- The app will automatically detect document edges
+			- Tap the **shutter button** to capture each page
+			- For multiple pages, continue scanning additional pages
+			- The app will show thumbnails of scanned pages at the bottom
+		- ### 4. Review and Adjust Scans
+			- Tap any thumbnail to review/edit individual pages
+			- Use the **crop tool** to adjust document boundaries
+			- Use **filters** to adjust brightness, contrast, or convert to black & white
+			- Tap **Retake** if you need to rescan a page
+		- ### 5. Save as PDF
+			- Tap **Save** in the top-right corner
+			- Choose your desired location (iCloud Drive, On My iPhone, etc.)
+			- Enter a filename for your PDF
+			- Tap **Save** to complete the process
+	- ## Advanced Features
+		- ### Batch Scanning
+			- Scan multiple documents in one session
+			- Each document becomes a separate page in the final PDF
+			- Perfect for multi-page reports, contracts, or presentations
+		- ### Auto-Enhancement
+			- Automatic edge detection and perspective correction
+			- Built-in filters for better text readability
+			- Automatic brightness and contrast adjustment
+		- ### Integration Options
+			- Save directly to iCloud Drive for cross-device access
+			- Share via AirDrop, Messages, or email
+			- Open in other apps like Adobe Acrobat or PDF Expert
+	- ## Tips for Best Results
+		- Ensure good lighting when scanning
+		- Keep documents flat and avoid shadows
+		- Use the crop tool to remove unnecessary background
+		- Consider using black & white filter for text documents
+		- For multi-page documents, scan in order for proper page sequence
+	- ## Troubleshooting
+		- **Scanner not detecting edges**: Ensure document is flat and well-lit
+		- **Poor quality scans**: Try adjusting filters or retaking the scan
+		- **Missing pages**: Check thumbnails at bottom to ensure all pages were captured
+		- **Can't find saved PDF**: Check the folder you selected during save process
+	- ## Related
+		- [[MacOS/How To/Import Only Some Photos via USB from iPhone]]
+		- [[PDF/Tool/CLI/PDF To Markdown Tools]]
