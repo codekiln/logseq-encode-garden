@@ -1,0 +1,40 @@
+- # [[Person/John Searle]]
+	- ## Overview
+		- **Full Name**: John Rogers Searle
+		- **Born**: July 31, 1932
+		- **Died**: September 17, 2025
+		- **Nationality**: American
+		- **Field**: Philosophy
+	- ## Areas of Expertise
+		- Philosophy of mind
+		- Philosophy of language
+		- Social philosophy
+		- Consciousness studies
+		- Artificial intelligence theory
+	- ## Key Contributions
+		- ### Chinese Room Argument
+			- Famous thought experiment challenging strong AI and computational theories of mind
+			- Demonstrates that syntactic processing alone cannot produce semantic understanding
+		- ### Biological Naturalism
+			- Theory of consciousness emphasizing the biological basis of mental phenomena
+		- ### Speech Act Theory
+			- Developed theory of how language performs actions beyond mere description
+		- ### Social Ontology
+			- Explored the construction of social reality and institutional facts
+	- ## Academic Career
+		- Professor at University of California, Berkeley (1959-2019)
+		- Willis S. and Marion Slusser Professor Emeritus of Philosophy of Mind and Language
+	- ## Notable Publications
+		- "Speech Acts" (1969)
+		- "Intentionality" (1983)
+		- "The Construction of Social Reality" (1995)
+		- "Rationality in Action" (2001)
+	- ## Awards and Honors
+		- Jean Nicod Prize (2000)
+		- National Humanities Medal (2004)
+		- Mind & Brain Prize (2006)
+		- Member of American Philosophical Society
+		- Five honorary doctorate degrees
+	- ## External Links
+		- [Wikipedia](https://en.wikipedia.org/wiki/John_Searle)
+		- University of California, Berkeley Faculty Profile
