@@ -1,4 +1,4 @@
-tags:: [[YouTube]], [[yt-dlp]], [[Python/Library]], [[CLI]]
+tags:: [[YouTube]], [[Python/Library]], [[CLI/Tool/yt-dlp]]
 
 - # [[yt-dlp/PyPI]] [yt-dlp · PyPI](https://pypi.org/project/yt-dlp/)
 	- A feature-rich command-line audio/video downloader

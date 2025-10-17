@@ -1,0 +1,7 @@
+tags:: [[My Question]]
+
+- # What are the costs of this `LiteLLM` abstraction layer - and other abstraction layers on top of model providers, whether they are [[SDK]] or [[API]] based?
+	- One of the strategic costs of an abstraction layer is the latency of access to new tools. There is a tension between abstraction layers and the speed of new features being released from providers. This is true at every layer of the AI stack, from APIs to SDKs. A key question: in the era of [[AI Coding]] it may theoretically be more possible to keep up with and adapt with features in the underlying product, but practically speaking, how far behind do abstraction layers tend to be? Is it a penalty of 1-2 months, or more like 6-10 months? The former might be fine, but the latter might be intolerable.
+	- Many model providers will likely try to buffer themselves against high switching costs by adding features that are difficult to abstract over.
+		- For example, Claude 4.5 introduced a form of server side context compression that required [[CognitionAI]]'s [[Devin]] to rewrite its evals; [[CognitionAI/Blog/25/09/Rebuilding Devin for Claude Sonnet 4.5]]. It's unclear how well this sophisticated feature will line up with its use in a unifying proxy layer.
+		- An example from the SDK level is the issue I filed [[2025-10-17 Fri]] - [[rulesync/GitHub/Issue/25/10/Custom Claude Code Command Yaml Frontmatter i413]], which attempts to backfill new features from [[Claude Code]] into rulesync.
