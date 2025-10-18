@@ -1,0 +1,4 @@
+- AI Coding IDEs and extensions started to progress to be able to complete a logical chunk of work, though they weren't yet able to iterate on their own. They needed to be directly instructed about what changes to make.
+- Sub-Phases
+	- {{embed [[AI/Coding/History/Phase/2 - Basic Single Edits/IDE Single File Edits]]}}
+	- {{embed [[AI/Coding/History/Phase/2 - Basic Single Edits/IDE Multi-File Edits]]}}

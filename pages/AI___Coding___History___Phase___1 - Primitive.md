@@ -1,0 +1,4 @@
+- In this phase, things were just getting going.
+- Sub-Phases
+	- {{embed [[AI/Coding/History/Phase/1 - Primitive/IDE Autocomplete]]}}
+	- {{embed [[AI/Coding/History/Phase/1 - Primitive/Chat Model Copy Paste]]}}

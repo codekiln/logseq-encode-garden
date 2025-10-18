@@ -1,0 +1,1 @@
+- For many, [[Claude Code]] exemplified a new paradigm for coding, working as a [[CLI Tool]] which could even be parallelizable with

@@ -1,0 +1,5 @@
+- Ushered in by [[Claude Code]], in phase four, a developer could give an [[LLM]] an instruction, and an [[Agentic System]] would iterate on it for some time, sometimes 3-5 minutes, other times 5-10 minutes.
+- [[Person/Andrej Karpathy]] coined the term [[Vibe Coding]]
+- Sub-Phases
+	- {{embed [[AI/Coding/History/Phase/4 - Basic Autonomous Coding/Web-based Vibe Coding]]}}
+	- {{embed [[AI/Coding/History/Phase/4 - Basic Autonomous Coding/CLI-based]]}}

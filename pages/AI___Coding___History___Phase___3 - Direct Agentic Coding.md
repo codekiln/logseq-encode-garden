@@ -1,0 +1,5 @@
+- At this stage, a developer would directly instruct the [[LLM]] on what to do, and it would conduct multiple steps to achieve that. AI Coding systems weren't that good at working autonomously for more than 30 sec to 1min at this stage.
+- The crucial breakthrough at this stage was that both IDEs like [[CursorAI]] and CLIs like [[aider]] put an LLM in a loop with [[AI/LLM/Tool]]s to edit files. This enabled models with smaller context windows to increase their accuracy by focusing on executing smaller changes and then iterating until a single logical set of edits were successfully applied.
+- Sub-Phases
+	- {{embed [[AI/Coding/History/Phase/3 - Direct Agentic Coding/Hard-Coded Rules]]}}
+	-

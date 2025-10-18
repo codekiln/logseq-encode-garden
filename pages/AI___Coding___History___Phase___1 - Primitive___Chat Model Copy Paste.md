@@ -1,0 +1,2 @@
+- Many people used tools like [[Repomix]] to copy codebases into [[AI/Chat]], then do some coding, and get the result.
+- In addition, some [[AI/Chat]] tools like [[ChatGPT/Code/Interpreter]] were able to run basic programs in python, which could enable some basic iteration [[AI/Coding/AFK]].

@@ -1,0 +1,7 @@
+- {{embed [[AI/Coding/History/Phase/1 - Primitive]]}}
+- {{embed [[AI/Coding/History/Phase/2 - Basic Single Edits]]}}
+-
+- {{embed [[AI/Coding/History/Phase/3 - Direct Agentic Coding]]}}
+- {{embed [[AI/Coding/History/Phase/4 - Basic Autonomous Coding]]}}
+- [[AI/Coding/History/Phase/5 - Context Engineering/MCP Servers]]
+- [[AI/Coding/History/Phase/5 - Context Engineering/Skill Bundles]]

@@ -1,0 +1,1 @@
+- Pioneered by tools like [[BoltAI]], [[LoveableAI]], [[ReplitAI]] and [[Devin]], a new web-based, chat-driven form factor for coding emerged which aimed to bring [[Vibe Coding]] to people who had no experience with programming. Some [[Software Engineer]]s also used these tools to iterate faster [[AI/Coding/AFK]].

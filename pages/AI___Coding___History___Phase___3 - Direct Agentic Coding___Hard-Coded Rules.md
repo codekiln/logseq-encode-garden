@@ -1,0 +1,1 @@
+- [[CursorAI]], [[IDE/Cline]] and others pioneered the ability to have customizable rules files which were loaded into the [[AI/Context]]. This enabled developers to save time by not having to re-type preferences or information related to specific technologies.

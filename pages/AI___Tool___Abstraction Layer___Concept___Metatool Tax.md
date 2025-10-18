@@ -1,0 +1,2 @@
+# The Abstraction or Meta-Tool Tax in the Age of Accelerating Technology
+	- Recent history has brought unprecedented growth in the capabilities of as well as dramatic changes in the shape of technological systems, particularly in and around the use of AI. A history of these changes is outside of the scope of discussion, but as of the time of this writing, [[MCP]] and the rise of mature [[AI/Coding/Agentic]] is not even a year old, and already it is being disrupted by a new shape of the problem in [[Claude Code Skills]].

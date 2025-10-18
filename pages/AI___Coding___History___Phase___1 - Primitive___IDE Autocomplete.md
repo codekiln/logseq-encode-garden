@@ -1,0 +1,1 @@
+- [[GitHub/CoPilot/Autocomplete]] in [[IDE]] - code could be autocompleted

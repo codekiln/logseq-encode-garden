@@ -1,0 +1,1 @@
+- At first, [[IDE]]s added the ability to edit a single file. This was surprisingly challenging, as regenerating an entire file from scratch could introduce subtle changes in places where it was not necessary, and editing git diffs to introduce changes to just certain lines was not something the models were very skilled at.
