@@ -17,7 +17,7 @@ alias:: [[Anthropic/App/Claude Code]]
 			  id:: 682c8929-0966-45d2-906d-35ec3534d4eb
 			- TODO where does one find the [[Anthropic/App/Claude Code/Session/ID]] #Question ?
 			  id:: 682c8788-cefa-43d6-9cd6-b587b8f3ddb2
-			- TODO try out [[Anthropic/App/Claude Code/Command/Slash/memory]]
+			- TODO try out [[Claude Code/Command/Slash/memory]]
 			  id:: 682c98a3-464d-43f8-8e49-0ff1905b5321
 				- DONE figure out [[Claude Code/Bug/Failed to save memory: No tool use found in response]] when I try to use the memory command `#`
 				  id:: 682de8d7-b688-4d2f-bb69-9f5295a70558
