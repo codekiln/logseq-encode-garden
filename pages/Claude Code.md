@@ -55,7 +55,7 @@ alias:: [[Anthropic/App/Claude Code]]
 							  5. [past]     [past]           59     [Redacted: Attachment Test]
 							  6. [past]     [past]          145     [Redacted: Test]
 							  ```
-							- Awesome, this actually works REALLY well - it's a LOT more intuitive than [[Anthropic/App/Claude Code/Docs/CLI/usage]] let on; their example of `--resume` is claude -r "abc123" "Finish this PR" which assumes that you know what `abc123` is, and also, doesn't even mention that there is an interactive way to select the session.
+							- Awesome, this actually works REALLY well - it's a LOT more intuitive than [[Claude Code/Docs/CLI/usage]] let on; their example of `--resume` is claude -r "abc123" "Finish this PR" which assumes that you know what `abc123` is, and also, doesn't even mention that there is an interactive way to select the session.
 						- #Filed
 							- ((682c8788-cefa-43d6-9cd6-b587b8f3ddb2))
 							- ((682c891d-c2e3-4a21-829b-77ea8c442b73))
