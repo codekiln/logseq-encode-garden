@@ -1,4 +1,5 @@
 tags:: [[Diataxis/How To]]
+alias:: [[Anthropic/App/Claude Code/Tutorial/Dev Team Quickstart with Vue and AWS Bedrock]]
 
 - # How To Get Started with Claude Code in VSCode via AWS Bedrock & aws_okta_keyman
 	- ## Goal
