@@ -13,7 +13,7 @@ alias:: [[Anthropic/App/Claude Code]]
 				  id:: 682c99c4-2ec5-4215-9cdd-ee6272bdeab9
 			- TODO fill out page on [[claude --resume]], disambiguating it from [[claude --continue]]
 			  id:: 682c891d-c2e3-4a21-829b-77ea8c442b73
-			- TODO try out [[Anthropic/App/Claude Code/--continue]]
+			- TODO try out [[Claude Code/--continue]]
 			  id:: 682c8929-0966-45d2-906d-35ec3534d4eb
 			- TODO where does one find the [[Anthropic/App/Claude Code/Session/ID]] #Question ?
 			  id:: 682c8788-cefa-43d6-9cd6-b587b8f3ddb2
@@ -39,7 +39,7 @@ alias:: [[Anthropic/App/Claude Code]]
 					- #Filed
 						- ((682c815f-e2a5-429b-b5cb-a033598ac14e))
 					- it actually worked pretty well to have it go over the previous text file "manually"
-					- looked at [[Anthropic/App/Claude Code/--continue]] and [[Anthropic/App/Claude Code/--resume]] in `--help` - this is actually fairly intuitive, in theory.
+					- looked at [[Claude Code/--continue]] and [[Claude Code/--resume]] in `--help` - this is actually fairly intuitive, in theory.
 						- ```
 						    -c, --continue                  Continue the most recent conversation
 						    -r, --resume [sessionId]        Resume a conversation - provide a session ID or interactively select a conversation to resume

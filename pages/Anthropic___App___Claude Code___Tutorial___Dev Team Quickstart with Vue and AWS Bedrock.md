@@ -24,7 +24,7 @@ tags:: [[Diataxis/How To]]
 			- 1. Open *Settings → Extensions → Claude Code*.
 			- 2. Set **Model Provider** → *AWS Bedrock*.
 			- 3. Leave **Credentials Source** as *AWS CLI profile* (already loaded by `aws_okta_keyman`).
-			- 4. (Optional) Enable **Prompt Caching** for cost savings [[Anthropic/App/Claude Code/Bedrock/How To/Enable Prompt Caching]].
+			- 4. (Optional) Enable **Prompt Caching** for cost savings [[Claude Code/Bedrock/How To/Enable Prompt Caching]].
 		- ### 5. First-run smoke test
 			- 1. In VSCode press <kbd>⌘ ⇧ P</kbd> → `Claude: Chat`.
 			- 2. Prompt: “Summarise the repository in three bullets.”
