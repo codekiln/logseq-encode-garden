@@ -2,21 +2,23 @@
   "targets": [
     "copilot",
     "cursor",
-    "claudecode" //,
+    "claudecode"
     // "codexcli"
   ],
   "features": [
     "rules",
     "ignore",
-    "mcp",
+    // "mcp",
     "commands",
     "subagents"
   ],
   "baseDirs": [
     "."
   ],
-  "delete": true,
+  // marking as delete false because rulesync does not yet support custom yaml attrs in claude code slash commands
+  // see [Feature request: for claude code slash commands, support passing through claude-code-specific yaml markdown frontmatter keys to the generated command markdown files · Issue #413 · dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync/issues/413) 
+  "delete": false,
   "verbose": true,
-  "experimentalSimulateCommands": false,
+  "experimentalSimulateCommands": true,
   "experimentalSimulateSubagents": false
 }
