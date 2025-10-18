@@ -1,4 +1,5 @@
 created-by:: [[Person/Eric Buess]]
+alias:: [[Anthropic/App/Claude Code/GitHub/claude-code-docs]]
 
 - # [ericbuess/claude-code-docs](https://github.com/ericbuess/claude-code-docs)
 	- README
