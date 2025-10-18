@@ -2,7 +2,7 @@
 	- ## Problem
 		- I've had a local github MCP server set up for a while; see
 			- [[GitHub/MCP/How To/Set up in Cursor with 1Password GH token]]
-			- [[Anthropic/App/Claude Code/How To/Set Up Github MCP with 1Password GH token and mise]]
+			- [[Claude Code/How To/Set Up Github MCP with 1Password GH token and mise]]
 		- Today, I saw that github has new instructions for cursor, using "Remote Server Setup (Recommended):  
 		  https://github.com/github/github-mcp-server/blob/main/docs/installation-guides/install-cursor.md
 		- The guide suggests that we put the following in [[CursorAI/.cursor/mcp.json]], which uses the new "Streamable HTTP Configuration" which I'm not as familiar with in Anthropic's Model Context Protocol:

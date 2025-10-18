@@ -1,4 +1,4 @@
-alias:: [[GitHub/MCP/How To/Set up MCP in Claude Code with 1Password GH Token and mise]]
+alias:: [[GitHub/MCP/How To/Set up MCP in Claude Code with 1Password GH Token and mise]], [[Anthropic/App/Claude Code/How To/Set Up Github MCP with 1Password GH token and mise]]
 tags:: [[Diataxis/How To]]
 
 - # How to set up a single-repository MCP with fine-grained permissions for a single repository
