@@ -1,4 +1,5 @@
 tags:: [[Diataxis/How To]]
+alias:: [[Anthropic/App/Claude Code/How To/Get Started with AWS Bedrock]]
 
 - # How to get started with [[Claude Code]] using [[AWS/Bedrock/Model/Anthropic]]
 	- ## Problem

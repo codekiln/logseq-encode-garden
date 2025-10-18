@@ -63,5 +63,5 @@ alias:: [[Anthropic/App/Claude Code/How To/Bootstrap Claude Code with Mise + UV-
 		- **TOML parse error** → ensure `[tasks.claude.env]` is a nested table, not inline `{…}`.
 		- **Expired creds** → rerun `mise r bedrock-login`; STS tokens last ≈1 h.
 	- ## Related
-		- A less opinionated guide is available at [[Anthropic/App/Claude Code/How To/Get Started with AWS Bedrock]]
+		- A less opinionated guide is available at [[Claude Code/How To/Get Started with AWS Bedrock]]
 		- Claude Code Bedrock settings docs

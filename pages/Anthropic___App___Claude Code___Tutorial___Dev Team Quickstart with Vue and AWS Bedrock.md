@@ -46,6 +46,6 @@ tags:: [[Diataxis/How To]]
 		- VSCode shows *provider: Anthropic* instead of *Bedrock* → ensure **CLAUDE_CODE_USE_BEDROCK=1** in environment or set in extension settings.
 		- Long latency on identical prompts → confirm prompt caching toggle is **On**.
 	- ## References
-		- [[Anthropic/App/Claude Code/How To/Get Started with AWS Bedrock]]
+		- [[Claude Code/How To/Get Started with AWS Bedrock]]
 		- [[Anthropic/App/Claude Code/How To/Use Essential Commands]]
 		- [`aws_okta_keyman` GitHub](https://github.com/nathan-v/aws_okta_keyman)
