@@ -15,7 +15,7 @@ alias:: [[Anthropic/App/Claude Code]]
 			  id:: 682c891d-c2e3-4a21-829b-77ea8c442b73
 			- TODO try out [[Claude Code/--continue]]
 			  id:: 682c8929-0966-45d2-906d-35ec3534d4eb
-			- TODO where does one find the [[Anthropic/App/Claude Code/Session/ID]] #Question ?
+			- TODO where does one find the [[Claude Code/Session/ID]] #Question ?
 			  id:: 682c8788-cefa-43d6-9cd6-b587b8f3ddb2
 			- TODO try out [[Claude Code/Command/Slash/memory]]
 			  id:: 682c98a3-464d-43f8-8e49-0ff1905b5321
@@ -82,5 +82,5 @@ alias:: [[Anthropic/App/Claude Code]]
 			- I saw in [[Anthropic/App/Claude Code/Docs/Costs/Background token usage]] [Manage costs effectively - Anthropic](https://docs.anthropic.com/en/docs/claude-code/costs#background-token-usage) that there is a [[claude --resume]] flag. Was looking for that on Friday
 		- [[2025-05-16 Fri]]
 			- Started using Claude Code. Very impressive first day.
-			- Main problem was that my [[AWS/IAM/Role]] [[AWS/SSM]] session timed out in the middle of the session, and I couldn't figure out how to get [[Anthropic/App/Claude Code/Memory]] to work before EOD, so I just copied and pasted my terminal into a text file.
+			- Main problem was that my [[AWS/IAM/Role]] [[AWS/SSM]] session timed out in the middle of the session, and I couldn't figure out how to get [[Claude Code/Memory]] to work before EOD, so I just copied and pasted my terminal into a text file.
 				- update: ((682c815f-e2a5-429b-b5cb-a033598ac14e))

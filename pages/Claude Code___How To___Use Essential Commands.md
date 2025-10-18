@@ -1,4 +1,5 @@
 tags:: [[Diataxis/How To]]
+alias:: [[Anthropic/App/Claude Code/How To/Use Essential Commands]]
 
 - # How To Use Essential Claude Code Commands
 	- ## Goal
