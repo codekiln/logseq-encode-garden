@@ -21,7 +21,7 @@ alias:: [[Anthropic/App/Claude Code]]
 			  id:: 682c98a3-464d-43f8-8e49-0ff1905b5321
 				- DONE figure out [[Claude Code/Bug/Failed to save memory: No tool use found in response]] when I try to use the memory command `#`
 				  id:: 682de8d7-b688-4d2f-bb69-9f5295a70558
-		- TODO try out and take notes on [[Anthropic/App/Claude Code/Docs/Tutorial/Run parallel Claude Code sessions with Git worktrees]]
+		- TODO try out and take notes on [[Claude Code/Docs/Tutorial/Run parallel Claude Code sessions with Git worktrees]]
 		  id:: 682c8543-8869-4d54-a1ff-04c296c08f9a
 		- TODO get or create a #Bug ticket at [[Anthropic/App/Claude Code/GitHub]] related to the session timeout of [[AWS/Bedrock]] via [[AWS SSM]]
 	- ## [[My Notes]]
