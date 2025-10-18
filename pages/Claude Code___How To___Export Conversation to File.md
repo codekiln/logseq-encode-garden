@@ -118,4 +118,4 @@ alias:: [[Anthropic/App/Claude Code/How To/Export Conversation to File]]
 		- **MCP server not working**: Ensure the filesystem server is properly configured and connected
 		- **Extractor tools not working**: Verify the transcript files exist in `~/.claude/projects/<project-id>/transcript.jsonl`
 	- ## Related
-		- [[Anthropic/App/Claude Code/Tutorial/Connect to MCP Servers]]
+		- [[Claude Code/Tutorial/Connect to MCP Servers]]
