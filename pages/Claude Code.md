@@ -19,7 +19,7 @@ alias:: [[Anthropic/App/Claude Code]]
 			  id:: 682c8788-cefa-43d6-9cd6-b587b8f3ddb2
 			- TODO try out [[Anthropic/App/Claude Code/Command/Slash/memory]]
 			  id:: 682c98a3-464d-43f8-8e49-0ff1905b5321
-				- DONE figure out [[Anthropic/AI/App/Claude Code/Bug/Failed to save memory: No tool use found in response]] when I try to use the memory command `#`
+				- DONE figure out [[Claude Code/Bug/Failed to save memory: No tool use found in response]] when I try to use the memory command `#`
 				  id:: 682de8d7-b688-4d2f-bb69-9f5295a70558
 		- TODO try out and take notes on [[Anthropic/App/Claude Code/Docs/Tutorial/Run parallel Claude Code sessions with Git worktrees]]
 		  id:: 682c8543-8869-4d54-a1ff-04c296c08f9a
