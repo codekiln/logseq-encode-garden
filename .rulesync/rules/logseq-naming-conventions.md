@@ -44,24 +44,19 @@ This is an extension to logseq-flavored-markdown `logseq-flavored-markdown.mdc` 
 ### Examples
 
 <CORRECT_✅>
-```markdown
-# Good Examples
 - [[Person/John Smith]] (singular page name)
   - alias:: [[People/John Smith]]
 - [[Project/Cursor]] (singular page name)
   - alias:: [[Projects/Cursor]]
 - [[Related/Post]] (singular page name)
   - alias:: [[Related Posts]]
-```
+</CORRECT_✅>
 
 <INCORRECT_❌>
-```markdown
-# Bad Examples
 - [[People/John Smith]] (plural in page name)
 - [[Projects/Cursor]] (plural in page name)
 - [[Related Topics]] (plural in page name)
-```
-</CORRECT_✅>
+</INCORRECT_❌>
 
 ### When to Use This Convention
 - Creating new pages in the knowledge graph
