@@ -1,4 +1,5 @@
 tags:: [[Claude Code]], [[Mise]], [[AWS/Bedrock]], [[Okta]], [[Diataxis/How To]]
+alias:: [[Anthropic/App/Claude Code/How To/Bootstrap Claude Code with Mise + UV-Powered Okta Role Assumption]]
 
 - # How To Bootstrap [[Claude Code]] with [[mise]] + [[uv]] -Powered #Okta [[AWS/IAM/Role]] Assumption
 	- ## Overview
