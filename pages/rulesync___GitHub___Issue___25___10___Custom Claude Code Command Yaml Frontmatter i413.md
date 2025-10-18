@@ -1,4 +1,4 @@
-tags:: [[GitHub/Issue/My]], [[Anthropic/App/Claude Code/Command/Slash/Custom]]
+tags:: [[GitHub/Issue/My]], [[Claude Code/Command/Slash/Custom]]
 
 - # [Feature request: for claude code slash commands, support passing through claude-code-specific yaml markdown frontmatter keys to the generated command markdown files · Issue #413 · dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync/issues/413)
 	- ## [[Original Poster]]
