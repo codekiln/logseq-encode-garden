@@ -1,4 +1,5 @@
 tags:: [[Diataxis/Tutorial]]
+alias:: [[Anthropic/App/Claude Code/Tutorial/Connect to MCP Servers]]
 
 - # Tutorial: Connect Claude Code to [[MCP Servers]] (Filesystem & Web Browser)
 	- ## Summary

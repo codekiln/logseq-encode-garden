@@ -98,62 +98,62 @@ tags:: [[Diataxis/How To]]
 			  from typing import Optional
 			  
 			  class ConventionalCommitGenerator:
-				  def __init__(self):
-					  self.client = anthropic.Anthropic(
-						  api_key=os.getenv('ANTHROPIC_API_KEY')
-					  )
-				  
-				  def generate_commit(self, prompt: str, scope: Optional[str] = None) -> str:
-					  system_prompt = self._get_system_prompt()
-					  
-					  user_prompt = f"""
-					  Generate a conventional commit message for the following changes:
-					  
-					  {prompt}
-					  """
-					  
-					  if scope:
-						  user_prompt += f"\n\nScope: {scope}"
-					  
-					  response = self.client.messages.create(
-						  model="claude-3-5-sonnet-20241022",
-						  max_tokens=150,
-						  system=system_prompt,
-						  messages=[{"role": "user", "content": user_prompt}]
-					  )
-					  
-					  return response.content[0].text.strip()
-				  
-				  def _get_system_prompt(self) -> str:
-					  return """
-					  You are a git commit message generator that follows the Conventional Commits specification.
-					  
-					  The commit message should be structured as follows:
-					  <type>[optional scope]: <description>
-					  
-					  Types:
-					  - feat: A new feature
-					  - fix: A bug fix
-					  - docs: Documentation only changes
-					  - style: Changes that do not affect the meaning of the code
-					  - refactor: A code change that neither fixes a bug nor adds a feature
-					  - perf: A code change that improves performance
-					  - test: Adding missing tests or correcting existing tests
-					  - chore: Changes to the build process or auxiliary tools
-					  
-					  Rules:
-					  1. Use the imperative mood ("add" not "added" or "adds")
-					  2. Don't capitalize the first letter
-					  3. No dot (.) at the end
-					  4. Keep the description under 72 characters
-					  5. If scope is provided, include it in brackets
-					  
-					  Examples:
-					  - feat(auth): add OAuth2 authentication
-					  - fix(api): resolve user data retrieval issue
-					  - docs: update README with installation steps
-					  - refactor: simplify user validation logic
-					  """
+			   def __init__(self):
+			    self.client = anthropic.Anthropic(
+			  	  api_key=os.getenv('ANTHROPIC_API_KEY')
+			    )
+			   
+			   def generate_commit(self, prompt: str, scope: Optional[str] = None) -> str:
+			    system_prompt = self._get_system_prompt()
+			    
+			    user_prompt = f"""
+			    Generate a conventional commit message for the following changes:
+			    
+			    {prompt}
+			    """
+			    
+			    if scope:
+			  	  user_prompt += f"\n\nScope: {scope}"
+			    
+			    response = self.client.messages.create(
+			  	  model="claude-3-5-sonnet-20241022",
+			  	  max_tokens=150,
+			  	  system=system_prompt,
+			  	  messages=[{"role": "user", "content": user_prompt}]
+			    )
+			    
+			    return response.content[0].text.strip()
+			   
+			   def _get_system_prompt(self) -> str:
+			    return """
+			    You are a git commit message generator that follows the Conventional Commits specification.
+			    
+			    The commit message should be structured as follows:
+			    <type>[optional scope]: <description>
+			    
+			    Types:
+			    - feat: A new feature
+			    - fix: A bug fix
+			    - docs: Documentation only changes
+			    - style: Changes that do not affect the meaning of the code
+			    - refactor: A code change that neither fixes a bug nor adds a feature
+			    - perf: A code change that improves performance
+			    - test: Adding missing tests or correcting existing tests
+			    - chore: Changes to the build process or auxiliary tools
+			    
+			    Rules:
+			    1. Use the imperative mood ("add" not "added" or "adds")
+			    2. Don't capitalize the first letter
+			    3. No dot (.) at the end
+			    4. Keep the description under 72 characters
+			    5. If scope is provided, include it in brackets
+			    
+			    Examples:
+			    - feat(auth): add OAuth2 authentication
+			    - fix(api): resolve user data retrieval issue
+			    - docs: update README with installation steps
+			    - refactor: simplify user validation logic
+			    """
 			  ~~~
 		- ### 4. Create prompt templates
 			- Create a `prompts/` directory with template files:
@@ -217,98 +217,98 @@ tags:: [[Diataxis/How To]]
 			  import {execSync} from 'child_process'
 			  
 			  export default class Generate extends Command {
-				  static description = 'Generate conventional commit message'
-				  
-				  static flags = {
-					  'prompt-file': Flags.string({
-						  char: 'p',
-						  description: 'Path to file containing commit prompt',
-					  }),
-					  prompt: Flags.string({
-						  char: 'm',
-						  description: 'Direct commit prompt text',
-					  }),
-					  'dry-run': Flags.boolean({
-						  description: 'Show commit message without executing',
-					  }),
-					  scope: Flags.string({
-						  char: 's',
-						  description: 'Optional scope for the commit',
-					  }),
-				  }
-				  
-				  async run() {
-					  const {flags} = await this.parse(Generate)
-					  
-					  const anthropic = new Anthropic({
-						  apiKey: process.env.ANTHROPIC_API_KEY,
-					  })
-					  
-					  let promptText: string
-					  
-					  if (flags['prompt-file']) {
-						  promptText = fs.readFileSync(flags['prompt-file'], 'utf8').trim()
-					  } else if (flags.prompt) {
-						  promptText = flags.prompt
-					  } else {
-						  this.error('Must provide either --prompt-file or --prompt')
-					  }
-					  
-					  const systemPrompt = this.getSystemPrompt()
-					  const userPrompt = this.buildUserPrompt(promptText, flags.scope)
-					  
-					  const response = await anthropic.messages.create({
-						  model: 'claude-3-5-sonnet-20241022',
-						  max_tokens: 150,
-						  system: systemPrompt,
-						  messages: [{role: 'user', content: userPrompt}],
-					  })
-					  
-					  const commitMsg = response.content[0].text.trim()
-					  
-					  if (flags['dry-run']) {
-						  this.log('Generated commit message:')
-						  this.log(commitMsg)
-					  } else {
-						  execSync(`git commit -m "${commitMsg}"`, {stdio: 'inherit'})
-					  }
-				  }
-				  
-				  private getSystemPrompt(): string {
-					  return `You are a git commit message generator that follows the Conventional Commits specification.
-					  
-					  The commit message should be structured as follows:
-					  <type>[optional scope]: <description>
-					  
-					  Types:
-					  - feat: A new feature
-					  - fix: A bug fix
-					  - docs: Documentation only changes
-					  - style: Changes that do not affect the meaning of the code
-					  - refactor: A code change that neither fixes a bug nor adds a feature
-					  - perf: A code change that improves performance
-					  - test: Adding missing tests or correcting existing tests
-					  - chore: Changes to the build process or auxiliary tools
-					  
-					  Rules:
-					  1. Use the imperative mood ("add" not "added" or "adds")
-					  2. Don't capitalize the first letter
-					  3. No dot (.) at the end
-					  4. Keep the description under 72 characters
-					  5. If scope is provided, include it in brackets`
-				  }
-				  
-				  private buildUserPrompt(prompt: string, scope?: string): string {
-					  let userPrompt = `Generate a conventional commit message for the following changes:
-					  
-					  ${prompt}`
-					  
-					  if (scope) {
-						  userPrompt += `\n\nScope: ${scope}`
-					  }
-					  
-					  return userPrompt
-				  }
+			   static description = 'Generate conventional commit message'
+			   
+			   static flags = {
+			    'prompt-file': Flags.string({
+			  	  char: 'p',
+			  	  description: 'Path to file containing commit prompt',
+			    }),
+			    prompt: Flags.string({
+			  	  char: 'm',
+			  	  description: 'Direct commit prompt text',
+			    }),
+			    'dry-run': Flags.boolean({
+			  	  description: 'Show commit message without executing',
+			    }),
+			    scope: Flags.string({
+			  	  char: 's',
+			  	  description: 'Optional scope for the commit',
+			    }),
+			   }
+			   
+			   async run() {
+			    const {flags} = await this.parse(Generate)
+			    
+			    const anthropic = new Anthropic({
+			  	  apiKey: process.env.ANTHROPIC_API_KEY,
+			    })
+			    
+			    let promptText: string
+			    
+			    if (flags['prompt-file']) {
+			  	  promptText = fs.readFileSync(flags['prompt-file'], 'utf8').trim()
+			    } else if (flags.prompt) {
+			  	  promptText = flags.prompt
+			    } else {
+			  	  this.error('Must provide either --prompt-file or --prompt')
+			    }
+			    
+			    const systemPrompt = this.getSystemPrompt()
+			    const userPrompt = this.buildUserPrompt(promptText, flags.scope)
+			    
+			    const response = await anthropic.messages.create({
+			  	  model: 'claude-3-5-sonnet-20241022',
+			  	  max_tokens: 150,
+			  	  system: systemPrompt,
+			  	  messages: [{role: 'user', content: userPrompt}],
+			    })
+			    
+			    const commitMsg = response.content[0].text.trim()
+			    
+			    if (flags['dry-run']) {
+			  	  this.log('Generated commit message:')
+			  	  this.log(commitMsg)
+			    } else {
+			  	  execSync(`git commit -m "${commitMsg}"`, {stdio: 'inherit'})
+			    }
+			   }
+			   
+			   private getSystemPrompt(): string {
+			    return `You are a git commit message generator that follows the Conventional Commits specification.
+			    
+			    The commit message should be structured as follows:
+			    <type>[optional scope]: <description>
+			    
+			    Types:
+			    - feat: A new feature
+			    - fix: A bug fix
+			    - docs: Documentation only changes
+			    - style: Changes that do not affect the meaning of the code
+			    - refactor: A code change that neither fixes a bug nor adds a feature
+			    - perf: A code change that improves performance
+			    - test: Adding missing tests or correcting existing tests
+			    - chore: Changes to the build process or auxiliary tools
+			    
+			    Rules:
+			    1. Use the imperative mood ("add" not "added" or "adds")
+			    2. Don't capitalize the first letter
+			    3. No dot (.) at the end
+			    4. Keep the description under 72 characters
+			    5. If scope is provided, include it in brackets`
+			   }
+			   
+			   private buildUserPrompt(prompt: string, scope?: string): string {
+			    let userPrompt = `Generate a conventional commit message for the following changes:
+			    
+			    ${prompt}`
+			    
+			    if (scope) {
+			  	  userPrompt += `\n\nScope: ${scope}`
+			    }
+			    
+			    return userPrompt
+			   }
 			  }
 			  ~~~
 		- ### 4. Build and install

@@ -1,4 +1,5 @@
-tags:: [[Anthropic/App/Claude Code]], [[Diataxis/How To]]
+tags:: [[Claude Code]], [[Diataxis/How To]]
+alias:: [[Anthropic/App/Claude Code/How To/Export Conversation to File]]
 
 - # How To Export [[Claude Code]] Conversations to Files
 	- ## Overview
@@ -117,4 +118,4 @@ tags:: [[Anthropic/App/Claude Code]], [[Diataxis/How To]]
 		- **MCP server not working**: Ensure the filesystem server is properly configured and connected
 		- **Extractor tools not working**: Verify the transcript files exist in `~/.claude/projects/<project-id>/transcript.jsonl`
 	- ## Related
-		- [[Anthropic/App/Claude Code/Tutorial/Connect to MCP Servers]]
+		- [[Claude Code/Tutorial/Connect to MCP Servers]]

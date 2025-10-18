@@ -1,4 +1,4 @@
-alias:: [[Claude Code]]
+alias:: [[Anthropic/App/Claude Code]]
 
 - # [Claude Code overview - Anthropic](https://docs.anthropic.com/en/docs/claude-code/overview)
 	- ## Todos
@@ -13,15 +13,15 @@ alias:: [[Claude Code]]
 				  id:: 682c99c4-2ec5-4215-9cdd-ee6272bdeab9
 			- TODO fill out page on [[claude --resume]], disambiguating it from [[claude --continue]]
 			  id:: 682c891d-c2e3-4a21-829b-77ea8c442b73
-			- TODO try out [[Anthropic/App/Claude Code/--continue]]
+			- TODO try out [[Claude Code/--continue]]
 			  id:: 682c8929-0966-45d2-906d-35ec3534d4eb
-			- TODO where does one find the [[Anthropic/App/Claude Code/Session/ID]] #Question ?
+			- TODO where does one find the [[Claude Code/Session/ID]] #Question ?
 			  id:: 682c8788-cefa-43d6-9cd6-b587b8f3ddb2
-			- TODO try out [[Anthropic/App/Claude Code/Command/Slash/memory]]
+			- TODO try out [[Claude Code/Command/Slash/memory]]
 			  id:: 682c98a3-464d-43f8-8e49-0ff1905b5321
-				- DONE figure out [[Anthropic/AI/App/Claude Code/Bug/Failed to save memory: No tool use found in response]] when I try to use the memory command `#`
+				- DONE figure out [[Claude Code/Bug/Failed to save memory: No tool use found in response]] when I try to use the memory command `#`
 				  id:: 682de8d7-b688-4d2f-bb69-9f5295a70558
-		- TODO try out and take notes on [[Anthropic/App/Claude Code/Docs/Tutorial/Run parallel Claude Code sessions with Git worktrees]]
+		- TODO try out and take notes on [[Claude Code/Docs/Tutorial/Run parallel Claude Code sessions with Git worktrees]]
 		  id:: 682c8543-8869-4d54-a1ff-04c296c08f9a
 		- TODO get or create a #Bug ticket at [[Anthropic/App/Claude Code/GitHub]] related to the session timeout of [[AWS/Bedrock]] via [[AWS SSM]]
 	- ## [[My Notes]]
@@ -39,7 +39,7 @@ alias:: [[Claude Code]]
 					- #Filed
 						- ((682c815f-e2a5-429b-b5cb-a033598ac14e))
 					- it actually worked pretty well to have it go over the previous text file "manually"
-					- looked at [[Anthropic/App/Claude Code/--continue]] and [[Anthropic/App/Claude Code/--resume]] in `--help` - this is actually fairly intuitive, in theory.
+					- looked at [[Claude Code/--continue]] and [[Claude Code/--resume]] in `--help` - this is actually fairly intuitive, in theory.
 						- ```
 						    -c, --continue                  Continue the most recent conversation
 						    -r, --resume [sessionId]        Resume a conversation - provide a session ID or interactively select a conversation to resume
@@ -55,7 +55,7 @@ alias:: [[Claude Code]]
 							  5. [past]     [past]           59     [Redacted: Attachment Test]
 							  6. [past]     [past]          145     [Redacted: Test]
 							  ```
-							- Awesome, this actually works REALLY well - it's a LOT more intuitive than [[Anthropic/App/Claude Code/Docs/CLI/usage]] let on; their example of `--resume` is claude -r "abc123" "Finish this PR" which assumes that you know what `abc123` is, and also, doesn't even mention that there is an interactive way to select the session.
+							- Awesome, this actually works REALLY well - it's a LOT more intuitive than [[Claude Code/Docs/CLI/usage]] let on; their example of `--resume` is claude -r "abc123" "Finish this PR" which assumes that you know what `abc123` is, and also, doesn't even mention that there is an interactive way to select the session.
 						- #Filed
 							- ((682c8788-cefa-43d6-9cd6-b587b8f3ddb2))
 							- ((682c891d-c2e3-4a21-829b-77ea8c442b73))
@@ -71,7 +71,7 @@ alias:: [[Claude Code]]
 						- ((682c99c4-2ec5-4215-9cdd-ee6272bdeab9))
 				-
 			- #### #CLI [[UX]]
-				- I love how [[Anthropic/App/Claude Code]] able to link me to the test files in cursor from the CLI with my mouse! #Delight
+				- I love how [[Claude Code]] able to link me to the test files in cursor from the CLI with my mouse! #Delight
 				- I see "✓ Update installed · Restart to apply" and when I restarted via [[claude --resume]], I was given the option to resume my last session. Nice!
 				- Really enjoying the way I was given the ability to auto accept all `poetry run ...` commands in a particular directory. Greatly speeds up the progress.
 			- #### #Documentation
@@ -82,5 +82,5 @@ alias:: [[Claude Code]]
 			- I saw in [[Anthropic/App/Claude Code/Docs/Costs/Background token usage]] [Manage costs effectively - Anthropic](https://docs.anthropic.com/en/docs/claude-code/costs#background-token-usage) that there is a [[claude --resume]] flag. Was looking for that on Friday
 		- [[2025-05-16 Fri]]
 			- Started using Claude Code. Very impressive first day.
-			- Main problem was that my [[AWS/IAM/Role]] [[AWS/SSM]] session timed out in the middle of the session, and I couldn't figure out how to get [[Anthropic/App/Claude Code/Memory]] to work before EOD, so I just copied and pasted my terminal into a text file.
+			- Main problem was that my [[AWS/IAM/Role]] [[AWS/SSM]] session timed out in the middle of the session, and I couldn't figure out how to get [[Claude Code/Memory]] to work before EOD, so I just copied and pasted my terminal into a text file.
 				- update: ((682c815f-e2a5-429b-b5cb-a033598ac14e))

@@ -4,7 +4,7 @@ created-by:: [[Person/Michael Yong]]
 	- [[My Notes]]
 		- [[2025-07-18 Fri]]
 			- [[Person/Michael Yong]] really Gets It when it comes to the future of coding.
-			- These are his lessons learned building [[Background Agents]] while trying to make [[Anthropic/AI/App/Claude Code/Tool/Claude Code Terragon]]
+			- These are his lessons learned building [[Background Agents]] while trying to make [[Claude Code/Tool/Claude Code Terragon]]
 			- ## [[Cost Savings]]
 				- I didn't realize that one could get savings from [[Anthropic/Product/Claude/Max/20x]] vs [[Anthropic/Product/Claude]] individually billed.
 					- ![Claude Usage estimation](https://ymichael.com/static/img/blog/claude-code-usage.png)
@@ -21,7 +21,7 @@ created-by:: [[Person/Michael Yong]]
 					  * Which tab was this again?
 					  * What was the context of this change?
 					  * Which IDE window corresponds to this worktree?
-				- This is the inspiration for the thing he's building, [[Anthropic/AI/App/Claude Code/Tool/Claude Code Terragon]]
+				- This is the inspiration for the thing he's building, [[Claude Code/Tool/Claude Code Terragon]]
 					- #Goals
 						- > In the past week, I've averaged ~30 tasks running on terragon a day. Locally, I'm often testing and finishing up a task that was started by a background agent.
 					- [[Remind/s Me of]]
@@ -31,7 +31,7 @@ created-by:: [[Person/Michael Yong]]
 					- In time, I imagine that we will develop assistive technologies specifically to aid us with context switching in a concurrent workstream world!
 					- > Managing multiple agents requires a lot of context switching. This isn't normal! You're suddenly tracking 10+ concurrent work streams instead of 1-2. But you get to do a lot more things in a shorter amount of time. -- #Quote from [[Person/Michael Yong]]
 			- [[AI/Coding/Problem/Task Decomposition]]
-				- > Using [[Anthropic/AI/App/Claude Code/Tool/Claude Code Terragon]] has fundamentally changed how I think about breaking down work. I'm creating smaller, more agent-friendly tasks. #Quote from [[Person/Michael Yong]]
+				- > Using [[Claude Code/Tool/Claude Code Terragon]] has fundamentally changed how I think about breaking down work. I'm creating smaller, more agent-friendly tasks. #Quote from [[Person/Michael Yong]]
 					- [[Remind/s Me of]]
 						- asdf
 	-

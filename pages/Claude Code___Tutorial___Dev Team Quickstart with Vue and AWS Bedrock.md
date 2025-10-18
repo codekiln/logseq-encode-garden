@@ -1,4 +1,5 @@
 tags:: [[Diataxis/How To]]
+alias:: [[Anthropic/App/Claude Code/Tutorial/Dev Team Quickstart with Vue and AWS Bedrock]]
 
 - # How To Get Started with Claude Code in VSCode via AWS Bedrock & aws_okta_keyman
 	- ## Goal
@@ -24,7 +25,7 @@ tags:: [[Diataxis/How To]]
 			- 1. Open *Settings → Extensions → Claude Code*.
 			- 2. Set **Model Provider** → *AWS Bedrock*.
 			- 3. Leave **Credentials Source** as *AWS CLI profile* (already loaded by `aws_okta_keyman`).
-			- 4. (Optional) Enable **Prompt Caching** for cost savings [[Anthropic/App/Claude Code/Bedrock/How To/Enable Prompt Caching]].
+			- 4. (Optional) Enable **Prompt Caching** for cost savings [[Claude Code/Bedrock/How To/Enable Prompt Caching]].
 		- ### 5. First-run smoke test
 			- 1. In VSCode press <kbd>⌘ ⇧ P</kbd> → `Claude: Chat`.
 			- 2. Prompt: “Summarise the repository in three bullets.”
@@ -46,6 +47,6 @@ tags:: [[Diataxis/How To]]
 		- VSCode shows *provider: Anthropic* instead of *Bedrock* → ensure **CLAUDE_CODE_USE_BEDROCK=1** in environment or set in extension settings.
 		- Long latency on identical prompts → confirm prompt caching toggle is **On**.
 	- ## References
-		- [[Anthropic/App/Claude Code/How To/Get Started with AWS Bedrock]]
-		- [[Anthropic/App/Claude Code/How To/Use Essential Commands]]
+		- [[Claude Code/How To/Get Started with AWS Bedrock]]
+		- [[Claude Code/How To/Use Essential Commands]]
 		- [`aws_okta_keyman` GitHub](https://github.com/nathan-v/aws_okta_keyman)

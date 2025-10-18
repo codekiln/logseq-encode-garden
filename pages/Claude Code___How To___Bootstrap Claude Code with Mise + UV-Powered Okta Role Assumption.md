@@ -1,4 +1,5 @@
 tags:: [[Claude Code]], [[Mise]], [[AWS/Bedrock]], [[Okta]], [[Diataxis/How To]]
+alias:: [[Anthropic/App/Claude Code/How To/Bootstrap Claude Code with Mise + UV-Powered Okta Role Assumption]]
 
 - # How To Bootstrap [[Claude Code]] with [[mise]] + [[uv]] -Powered #Okta [[AWS/IAM/Role]] Assumption
 	- ## Overview
@@ -18,12 +19,12 @@ tags:: [[Claude Code]], [[Mise]], [[AWS/Bedrock]], [[Okta]], [[Diataxis/How To]]
 				  node = "lts"
 				  uv   = "latest"                           # UV installer/runtime
 				  "pipx:aws-okta-keyman"        = "latest"  # pipx uses UV under the hood
-
+				  
 				  [tasks.claude]
 				  # run mise install && mise reshim before running this.
 				  description = "Run Claude Code CLI"
 				  run = "npx @anthropic-ai/claude-code $@"
-
+				  
 				  [tasks.claude.env]                        # vars ONLY for Claude
 				  CLAUDE_CODE_USE_BEDROCK    = "true"
 				  AWS_PROFILE                = "bedrock"
@@ -62,5 +63,5 @@ tags:: [[Claude Code]], [[Mise]], [[AWS/Bedrock]], [[Okta]], [[Diataxis/How To]]
 		- **TOML parse error** → ensure `[tasks.claude.env]` is a nested table, not inline `{…}`.
 		- **Expired creds** → rerun `mise r bedrock-login`; STS tokens last ≈1 h.
 	- ## Related
-		- A less opinionated guide is available at [[Anthropic/App/Claude Code/How To/Get Started with AWS Bedrock]]
+		- A less opinionated guide is available at [[Claude Code/How To/Get Started with AWS Bedrock]]
 		- Claude Code Bedrock settings docs

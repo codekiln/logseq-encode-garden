@@ -1,4 +1,4 @@
-alias:: [[GitHub/MCP/How To/Set up MCP in Claude Code with 1Password GH Token and mise]]
+alias:: [[GitHub/MCP/How To/Set up MCP in Claude Code with 1Password GH Token and mise]], [[Anthropic/App/Claude Code/How To/Set Up Github MCP with 1Password GH token and mise]]
 tags:: [[Diataxis/How To]]
 
 - # How to set up a single-repository MCP with fine-grained permissions for a single repository
@@ -116,7 +116,7 @@ tags:: [[Diataxis/How To]]
 		- **401 Unauthorized** — verify PAT scopes and the secret reference in `github-mcp.env`.
 		- **`github-mcp.env` missing** — copy the template in *Step 1* and add your secret reference.
 	- ## References
-		- [[Anthropic/App/Claude Code/Docs/Tutorial/Set up Model Context Protocol]] [here](https://docs.anthropic.com/en/docs/claude-code/tutorials#set-up-model-context-protocol-mcp)
+		- [[Claude Code/Docs/Tutorial/Set up Model Context Protocol]] [here](https://docs.anthropic.com/en/docs/claude-code/tutorials#set-up-model-context-protocol-mcp)
 		- [Fine-grained PAT creation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#fine-grained-personal-access-tokens)
 		- [1Password CLI — `op run`](https://developer.1password.com/docs/cli/secrets-scripts/)
 		- [GitHub MCP Server README](https://github.com/github/github-mcp-server)

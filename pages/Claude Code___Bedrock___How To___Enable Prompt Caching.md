@@ -1,4 +1,5 @@
 tags:: [[Diataxis/How To]]
+alias:: [[Anthropic/App/Claude Code/Bedrock/How To/Enable Prompt Caching]]
 
 - # How To Enable Prompt Caching for Anthropic Models in AWS Bedrock
 	- ## Goal

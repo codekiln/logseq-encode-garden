@@ -1,4 +1,4 @@
-# [Introducing Claude Code - YouTube](https://www.youtube.com/watch?v=AJpK3YTTKZ4) - [[Anthropic/App/Claude Code]]
+# [Introducing Claude Code - YouTube](https://www.youtube.com/watch?v=AJpK3YTTKZ4) - [[Claude Code]]
 - runtime: 3min 54sec
 	- ## my #notes
 	  id:: 67bda95a-e5c3-4ba8-b5ec-a918606d2244
