@@ -12,7 +12,7 @@ tags:: [[HackerNews]]
 				- > I use [[aider]]+ [[OpenRouter]] with [[Gemini/2.5/pro]] and it cost 1/6 of what [[Claude 3.7 Sonnet]] does. The [[aider/docs/llms/leaderboard]] - includes relative pricing theses days. - [aitchnyu](https://news.ycombinator.com/user?id=aitchnyu) [here](https://news.ycombinator.com/item?id=43713490)
 					- This table mentions two different "Edit formats" - `architect` vs `diff` vs `diff-fenced` vs `whole` - these terms are new to me
 				- > [[Google/AI/Model/Gemini/2.5/pro/experimental]] is superior to [[Claude 3.7 Sonnet]] when I use it with Aider [1]. And it is free (with some high limit).
-				- A few people mention that [[Anthropic/App/Claude Code]] is actually **not** that expensive once you learn to control costs
+				- A few people mention that [[Claude Code]] is actually **not** that expensive once you learn to control costs
 					- [jasonjmcghee](https://news.ycombinator.com/user?id=jasonjmcghee) [1 day ago](https://news.ycombinator.com/item?id=43711801) on controlling claude code costs
 					  collapsed:: true
 						- If you get a hang of controlling costs, it's much cheaper. If you're exhausting the context window, I'm not surprised you're seeing high cost.

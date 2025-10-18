@@ -1,4 +1,4 @@
-tags:: [[Anthropic/App/Claude Code]], [[Diataxis/How To]]
+tags:: [[Claude Code]], [[Diataxis/How To]]
 
 - # How To Export [[Claude Code]] Conversations to Files
 	- ## Overview

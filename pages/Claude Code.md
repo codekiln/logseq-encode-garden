@@ -1,4 +1,4 @@
-alias:: [[Claude Code]]
+alias:: [[Anthropic/App/Claude Code]]
 
 - # [Claude Code overview - Anthropic](https://docs.anthropic.com/en/docs/claude-code/overview)
 	- ## Todos
@@ -71,7 +71,7 @@ alias:: [[Claude Code]]
 						- ((682c99c4-2ec5-4215-9cdd-ee6272bdeab9))
 				-
 			- #### #CLI [[UX]]
-				- I love how [[Anthropic/App/Claude Code]] able to link me to the test files in cursor from the CLI with my mouse! #Delight
+				- I love how [[Claude Code]] able to link me to the test files in cursor from the CLI with my mouse! #Delight
 				- I see "✓ Update installed · Restart to apply" and when I restarted via [[claude --resume]], I was given the option to resume my last session. Nice!
 				- Really enjoying the way I was given the ability to auto accept all `poetry run ...` commands in a particular directory. Greatly speeds up the progress.
 			- #### #Documentation

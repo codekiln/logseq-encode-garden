@@ -5,4 +5,4 @@ alias:: [[OpenAI/Codex/CLI]]
 	- ## [[My Notes]] 
 	  id:: 6802126f-043a-4b70-855d-34ea41dbe04d
 		- [[2025-04-18 Fri]]
-			- it's a response to [[Anthropic/App/Claude Code]] - a [[CLI/Tool]] for AI coding
+			- it's a response to [[Claude Code]] - a [[CLI/Tool]] for AI coding

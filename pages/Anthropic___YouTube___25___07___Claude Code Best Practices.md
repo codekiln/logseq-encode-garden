@@ -1,6 +1,6 @@
 created-by:: [[Person/Cal Rueb]]
 
-- # [Claude Code best practices - YouTube](https://www.youtube.com/watch?v=gv0WHhKelSE) - [[Anthropic/App/Claude Code]]
+- # [Claude Code best practices - YouTube](https://www.youtube.com/watch?v=gv0WHhKelSE) - [[Claude Code]]
 	- ## [[My Notes]]
 	  id:: 688e2332-502a-4106-aa81-ddeb8aed57cc
 		- Nice reminder of [[Agentic]] definition from [[Anthropic/Blog/24/12/Building Effective Agents]]

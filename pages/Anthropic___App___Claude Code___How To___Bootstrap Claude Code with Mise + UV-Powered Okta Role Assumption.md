@@ -18,12 +18,12 @@ tags:: [[Claude Code]], [[Mise]], [[AWS/Bedrock]], [[Okta]], [[Diataxis/How To]]
 				  node = "lts"
 				  uv   = "latest"                           # UV installer/runtime
 				  "pipx:aws-okta-keyman"        = "latest"  # pipx uses UV under the hood
-
+				  
 				  [tasks.claude]
 				  # run mise install && mise reshim before running this.
 				  description = "Run Claude Code CLI"
 				  run = "npx @anthropic-ai/claude-code $@"
-
+				  
 				  [tasks.claude.env]                        # vars ONLY for Claude
 				  CLAUDE_CODE_USE_BEDROCK    = "true"
 				  AWS_PROFILE                = "bedrock"
