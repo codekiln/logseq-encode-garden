@@ -47,5 +47,5 @@ tags:: [[Diataxis/How To]]
 		- Long latency on identical prompts → confirm prompt caching toggle is **On**.
 	- ## References
 		- [[Claude Code/How To/Get Started with AWS Bedrock]]
-		- [[Anthropic/App/Claude Code/How To/Use Essential Commands]]
+		- [[Claude Code/How To/Use Essential Commands]]
 		- [`aws_okta_keyman` GitHub](https://github.com/nathan-v/aws_okta_keyman)
