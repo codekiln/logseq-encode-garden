@@ -1,0 +1,1 @@
+- [Agent rules for git](https://gist.github.com/steipete/d3b9db3fa8eb1d1a692b7656217d8655)

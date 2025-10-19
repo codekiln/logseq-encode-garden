@@ -1,0 +1,3 @@
+# [Superpowers: How I'm using coding agents in October 2025](https://blog.fsck.com/2025/10/09/superpowers/)
+	- Documents how Jesse was working on a new feature "Superpowers" for his own AI coding workflow, and then [[Claude Code/Skill]]s came out, making this basically
+		- > I've spent the past couple of weeks working on a set of tools to better extract and systematize my processes and to help better steer my agentic buddy. I'd been planning to start to document the system this weekend, but then this morning, Anthropic went and rolled out [a plugin system for claude code](https://docs.claude.com/en/docs/claude-code/plugins).

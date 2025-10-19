@@ -3,5 +3,4 @@
 -
 - {{embed [[AI/Coding/History/Phase/3 - Direct Agentic Coding]]}}
 - {{embed [[AI/Coding/History/Phase/4 - Basic Autonomous Coding]]}}
-- [[AI/Coding/History/Phase/5 - Context Engineering/MCP Servers]]
-- [[AI/Coding/History/Phase/5 - Context Engineering/Skill Bundles]]
+- {{embed [[AI/Coding/History/Phase/5 - Context Engineering]]}}

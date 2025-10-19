@@ -1,0 +1,2 @@
+- https://lobste.rs/
+	- This is a community that's been around since [[2013]] that reminds me of [[HackerNews]]. Their [about page](https://lobste.rs/about) signals the intentionality of this community.

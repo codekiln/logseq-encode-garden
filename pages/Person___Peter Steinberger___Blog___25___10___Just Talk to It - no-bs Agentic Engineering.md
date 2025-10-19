@@ -1,0 +1,42 @@
+# [Just Talk To It - the no-bs Way of Agentic Engineering | Peter Steinberger](https://steipete.me/posts/just-talk-to-it?__readwiseLocation=)
+	- Header graphic credit https://x.com/thorstenball/status/1976224756669309195
+		- ![The Curve of Agentic Programming - x axis is Time and y axis is Complexity and something like a bell curve reveals that the author started with "plz fix this" then went through a more complex mode of "8 agents at the same time with complex orchestration" and then finally went to just asking the AI to do things like "Hey, look at these files and then do [med size change]"](https://steipete.me/assets/img/2025/just-talk-to-it/curve-angentic.jpg)
+	- Fantastic overview of the [[SOTA]] for [[Agentic AI Coding]]
+	- He has abandoned [[Claude Code]] for [[OpenAI/Codex/CLI]] because
+		- Codex CLI has `~230k` usable context vs `~156k` for Claude Code, and token use is more efficient
+		- Codex CLI is written in rust and it's faster
+		- the language Claude Code use is bad for his "mental health" - the "Absolutely right's," the "100% production ready," the gaslighting, etc, and he finds that Codex CLI has none of this.
+		- #Wow ==Peter is paying $1k per month for "4 OpenAI subs and 1 Anthropic sub"== in order to have "unlimited tokens" and he's got a lot of skin in the game. He says,
+			- > IMO there's simply not much space between the end user and the model company
+			- I'm not totally sure what he means, but this was said in a paragraph where he was making the point that if he coded with API calls it would cost "around 10x more," so basically subscriptions are the only way to go.
+	- He gives a nice overview of many tools,
+		- [[CursorAI]] - still has bugs from back in May
+		- [[Auggie]] - blip on timeline, nobody mentioned again
+		- > [[RAG]] might have been helpful for [[Anthropic/Model/Claude/Sonnet]] but [[gpt-5]] is so good at searching that you don't need a separate vector index for your code
+			- [[My Note]] - *why is it that people are not talking about vector indexes for documentation?*
+		- [[Open/Weights]] models like [[GLM/4.6]] and [[Kimi/K2.1]] "are strong contendors that slowly reach [[Anthropic/Model/Claude/Sonnet/3.7]] quality
+		- Web tools like [[Devin]], [[OpenAI/Codex/Web]], [[JulesAI]] from [[Google]],
+		- [[ConductorAI]], [[Claude Code Terragon]], [[SculptorAI]], "and the 1000 other ones. Some are hobby projects, some are drowning in VC money ... None stick."
+	- He uses [[Mac/App/WisprFlow]] for [[Speech-to-Text]]
+		- > Wispr Flow with semantic correction is still king.
+	- [[AI/Coding/Background Task]]s
+		- He reverted back to [[Claude Code]] for a while because of its support for background tasks, which [[OpenAI/Codex/CLI]] doesn't have yet, but now he just uses [[tmux]] instead and it can run CLIs in persistent sessions in the background, and there's plenty of knowledge about how to do that in the model, so you just need to say "run via tmux" great #Tip !
+	- [[MCP Server]]s
+		- > IMO most are something for the marketing department to make a checkbox and be proud. ==Almost all MCPs really should be clis==. I say that as someone who wrote 5 MCPs myself.
+			- #Example - [steipete/claude-code-mcp: Claude Code as one-shot MCP server to have an agent in your agent.](https://github.com/steipete/claude-code-mcp) #LOL
+		- > I can just refer to a [[CLI/Tool]] by name. I don’t need any explanation in my [[Agents.md]]. The agent will try `$randomcrap` on the first call, the cli will present the help menu, context now has full info how this works and from now on we good. I don’t have to pay a price for any tools, unlike [[MCP]]s which are a **constant cost and garbage in my context**. Use [[GitHub/MCP]] and see **23k tokens gone**. Heck, they did make it better because it was almost 50.000 tokens when it first launched. Or use the [[gh]] cli **which has basically the same feature set, models already know how to use it, and pay zero context tax**.
+		- He introduced me to some [[Observability]] tools that were [[New/To/Me]]
+			- [[Inngest]] [AI and backend workflows, orchestrated at any scale](https://www.inngest.com/) - a bit hard to tell, but if I squint, it looks like a [[LangSmith]] and [[langgraph/Platform]] competitor.
+			- [[BetterStack]] [Better Stack - Observability Meets Incident Management](https://betterstack.com/) Looks like a DataDog / Sentry / Splunk / New Relic competitor
+		- He says he uses [[Chrome/DevTools/MCP]] to replace [[Playwright/MCP]] "as my go-to MCP for web debugging ... I don't need to do it lots but when I do, it's quite useful to close the loop."
+			- > I **designed my website** so that I can **create api keys** that **allow my model to query any endpoint via curl**, which is faster and more token-efficient in almost all use cases, so even that MCP isn’t something I need daily.
+				- *I've not heard about this [[AI/Coding/Technique]] before... I'd love to read a more detailed description*
+	- #Refactoring
+		- [[New/To/Me]]
+			- [[jscpd]]
+			- [[knipDev]]
+		- > mentioning modern react patterns and rewriting code, e.g. [You Might Not Need an Effect – React](https://react.dev/learn/you-might-not-need-an-effect) #React
+			- also, uses [[ESLint]]'s [[React/Compiler]]
+	- ## [[AI/Coding/Technique/Spec-Driven Dev]]
+		- in [[2025/06]] he was using this [The Future of Vibe Coding: Building with AI, Live and Unfiltered | Peter Steinberger](https://steipete.me/posts/2025/the-future-of-vibe-coding)
+		- Now he says that the technique is not worth the time, and starts in chatgpt and moves to code later.

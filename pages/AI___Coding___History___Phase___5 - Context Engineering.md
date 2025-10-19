@@ -1,0 +1,4 @@
+- After agentic coding became the dominant paradigm, it took a while for engineers to understand how to let the agentic coding tools take actions in outside of the local filesystem, such as checking CI logs, reading JIRA or GitHub tickets, or opening PRs. After the introduction of [[MCP]] made this possible, there was a period of time where  developers struggled to understand how agentic tools quickly filled up the [[AI/Context/Window]] and led to [[Context Rot]]. The term [[Context Engineering]] emerged as a way to signal the importance for minimizing the context needed to solve the problem at hand while still providing access to powerful tools.
+- Sub-Phases
+	- {{embed [[AI/Coding/History/Phase/5 - Context Engineering/MCP Servers]]}}
+	- {{embed [[AI/Coding/History/Phase/5 - Context Engineering/Skill Bundles]]}}

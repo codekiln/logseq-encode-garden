@@ -1,4 +1,4 @@
-tags:: [[Person]], [[AI Engineer]], [[GitHub]], [[OpenAI]], [[Codex]], [[ZSH]], [[Vim]], [[Python]]
+tags:: [[Person]], [[AI Engineer]]
 
 - # Tom Dörr
 	- ## Overview

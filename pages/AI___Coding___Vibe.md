@@ -3,13 +3,9 @@ tags:: [[Term]]
 
 - # Vibe Coding
 	- ## #History of Vibe Coding as a Term and an Idea
-		- On [[2025-10-02 Thu]], [[Person/Andrej Karpathy]] coined the term "Vibe Coding" in a [tweet](https://x.com/karpathy/status/1886192184808149383).
-			- > There’s a new kind of coding I call “vibe coding”, where you fully give in to the vibes, embrace exponentials, and **forget that the code even exists**. It’s possible because the LLMs (e.g. Cursor Composer w Sonnet) are getting too good. Also I just talk to Composer with SuperWhisper so I barely even touch the keyboard.
-			- > I ask for the dumbest things like “decrease the padding on the sidebar by half” because I’m too lazy to find it. I “Accept All” always, I don’t read the diffs anymore. When I get error messages I just copy paste them in with no comment, usually that fixes it. The code grows beyond my usual comprehension, I’d have to really read through it for a while. Sometimes the LLMs can’t fix a bug so I just work around it or ask for random changes until it goes away.
-			- > **It’s not too bad for throwaway weekend projects, but still quite amusing**. I’m building a project or webapp, but it’s not really coding—I just see stuff, say stuff, run stuff, and copy paste stuff, and it mostly works.
+		- {{embed [[AI/Coding/Vibe/25/02/Karpathy Coins Term]]}}
 		- On [[2025-02-25 Tue]], I had my first real feeling of this [[CursorAI]], downstream from [[Person/Harper Reed/Blog/25/02/My LLM codegen workflow atm]].
-		- On [[2025-03-19 Wed]], [[Person/Simon Willison/Blog/25/03/Not all AI-assisted programming is vibe coding]], clarified
-			- > When I talk about vibe coding I mean **building software with an LLM without reviewing the code it writes**
+		- {{embed [[AI/Coding/Vibe/25/03/Willison Clarifies as Not Reviewing Code]]}}
 		- On [[2025-10-08 Wed]], [[Person/Simon Willison/Blog/25/10/Vibe Engineering]] suggested that [[Vibe Coding]] is the opposite of a new term [[Vibe Engineering]]:
 			- > the other end of the spectrum from [[Vibe Coding]], where **seasoned professionals accelerate their work with LLMs while staying proudly and confidently accountable for the software they produce**
 	- Related Concepts:

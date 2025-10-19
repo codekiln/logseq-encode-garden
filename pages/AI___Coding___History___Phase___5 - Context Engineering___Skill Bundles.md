@@ -1,0 +1,1 @@
+- [[Person/Simon Willison/Blog/25/10/Claude Skills]]

@@ -1,0 +1,2 @@
+- On [[2025-03-19 Wed]], [[Person/Simon Willison/Blog/25/03/Not all AI-assisted programming is vibe coding]], clarified
+	- > When I talk about vibe coding I mean **building software with an LLM without reviewing the code it writes**

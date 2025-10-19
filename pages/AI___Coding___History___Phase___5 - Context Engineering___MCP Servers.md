@@ -1,0 +1,4 @@
+- After March 2025, many [[IDE]]s such as [[CursorAI]] and some [[CLI]]s such as [[Claude Code]] implemented an [[MCP/Client]] into the agentic coding chat interface, so developers could give AI [[MCP Servers]] to which enabled them to ask the AI to both sense and act on external context, for example
+	- [[GitHub/MCP]] included the ability open and update [[PR]]s, to read [[CICD]] logs and [[GitHub/Issue]]s
+	- [[Atlassian/MCP]] included the ability to edit and read [[Confluence]], [[JIRA]]
+	- [[Playwright/MCP]] included the ability to check out a web application's display looked like in the browser, giving it the ability to "see"
