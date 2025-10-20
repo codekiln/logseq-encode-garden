@@ -1,4 +1,6 @@
-# [Just Talk To It - the no-bs Way of Agentic Engineering | Peter Steinberger](https://steipete.me/posts/just-talk-to-it?__readwiseLocation=)
+readwise-link:: https://readwise.io/reader/shared/01k7xyxn4w4vvh6gsh6zhcd2jb
+
+- # [Just Talk To It - the no-bs Way of Agentic Engineering | Peter Steinberger](https://steipete.me/posts/just-talk-to-it?__readwiseLocation=)
 	- Header graphic credit https://x.com/thorstenball/status/1976224756669309195
 		- ![The Curve of Agentic Programming - x axis is Time and y axis is Complexity and something like a bell curve reveals that the author started with "plz fix this" then went through a more complex mode of "8 agents at the same time with complex orchestration" and then finally went to just asking the AI to do things like "Hey, look at these files and then do [med size change]"](https://steipete.me/assets/img/2025/just-talk-to-it/curve-angentic.jpg)
 	- Fantastic overview of the [[SOTA]] for [[Agentic AI Coding]]
@@ -13,7 +15,7 @@
 		- [[CursorAI]] - still has bugs from back in May
 		- [[Auggie]] - blip on timeline, nobody mentioned again
 		- > [[RAG]] might have been helpful for [[Anthropic/Model/Claude/Sonnet]] but [[gpt-5]] is so good at searching that you don't need a separate vector index for your code
-			- [[My Note]] - *why is it that people are not talking about vector indexes for documentation?*
+			- [[My Note]] - *why is it that people are not talking about vector indexes for documentation? It's as though they think that the code is always enough*
 		- [[Open/Weights]] models like [[GLM/4.6]] and [[Kimi/K2.1]] "are strong contendors that slowly reach [[Anthropic/Model/Claude/Sonnet/3.7]] quality
 		- Web tools like [[Devin]], [[OpenAI/Codex/Web]], [[JulesAI]] from [[Google]],
 		- [[ConductorAI]], [[Claude Code Terragon]], [[SculptorAI]], "and the 1000 other ones. Some are hobby projects, some are drowning in VC money ... None stick."
