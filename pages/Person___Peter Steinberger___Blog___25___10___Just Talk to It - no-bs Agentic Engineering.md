@@ -33,6 +33,8 @@ readwise-link:: https://readwise.io/reader/shared/01k7xyxn4w4vvh6gsh6zhcd2jb
 		- He says he uses [[Chrome/DevTools/MCP]] to replace [[Playwright/MCP]] "as my go-to MCP for web debugging ... I don't need to do it lots but when I do, it's quite useful to close the loop."
 			- > I **designed my website** so that I can **create api keys** that **allow my model to query any endpoint via curl**, which is faster and more token-efficient in almost all use cases, so even that MCP isn’t something I need daily.
 				- *I've not heard about this [[AI/Coding/Technique]] before... I'd love to read a more detailed description*
+	- [Flo Crivello on X: "How I prompt my agents https://t.co/N4bm5e3VVw" / X](https://x.com/Altimor/status/1975752110164578576) #LOL #Terrible
+		- he mentions that [[Claude Code]] responds well to "yelling" but [[OpenAI/Codex/CLI]] does not, and this is better for his mental health
 	- #Refactoring
 		- [[New/To/Me]]
 			- [[jscpd]]
