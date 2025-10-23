@@ -1,0 +1,2 @@
+- [Video: Building a tool to copy-paste share terminal sessions using Claude Code for web](https://simonwillison.net/2025/Oct/23/claude-code-for-web-video/)
+	- see also [[Person/Simon Willison/YouTube/25/10/Claude Code Web Live Code Copy Past Terminal Share]]
