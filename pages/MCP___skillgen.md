@@ -1,0 +1,41 @@
+# `mcp-skillgen`
+	- ## Abstract idea
+		- Let `mytech-mcp` be an existing [[Open Source]] [[MCP/Server]].
+		- Let `mcp-skillgen` be a [[CLI/Tool]], or more appropriately, a CLI metatool, which facilitates the transformation of `mytech-mcp` into a dedicated `mytech-mcp-cli` CLI tool, and which also facilitate the use of that generated CLI to extract and instantiate subsets of functionality into dedicated Claude Code Skills.
+	- ## Concrete idea
+		- There's a Claude Code skill called `mcp-skillgen` which wraps a CLI tool of the same name.
+		- Let's say `mytech-mcp` contains 70 tools. You only need 3 - tool1, tool2, tool3. You call either instruct Claude to use the skill, or directly call
+			- `mcp-skillgen path/to/mytech-mcp/source --skillgen tool1 --skillgen tool2, --skillgen tool3`
+		- Result
+			- A `mytech-mcp-cli` is created
+				- which reimplements the functionality of tool1, tool2, tool3
+				- which knows that it has not compiled tool4 through tool70, and can answer questions about those tools but not execute them
+				- which knows how to use `mcp-skillgen` to compile any of the tools, if they needed
+			- A [[Claude Code Project Skill]] is created called `mytech` which wraps `mytech-mcp-cli`; it knows all the things `mytech-mcp-cli` knows and can do
+			- A [[Claude Code Project Skill]] is created for `mytech-tool1`, `mytech-tool2`, `mytech-tool3`, which tells it to use the generated `mytech-mcp-cli` to accomplish the skill. `mytech-mcp-cli` is located in `.claude/skills/mytech/resources/mytech-mcp-cli`
+		- Now
+			- Claude code knows how to use the skills from the MCP without weighing down the context.
+	- ## Impetus
+		- MCP is extremely wasteful. [[AI/Context/Rot]] is a very real problem, and MCPs exacerbate it.
+		- If an MCP server has 70 tools, it's quite likely that any given conversation will not need more than three of those tools. So 57 tool definitions clog the entire context. It's quite common for 2-3 MCP servers to consume > 40% of the context. Add Anthropic, GitHub and one more, and it will be at 40% of the context limit for [[Anthropic/Model/Claude/Sonnet/4.5]].
+		- MCP also loads tool definitions into context long before they are used. If there are ten turns to a conversation and the tool is needed on the 11th, then loading those tools before the 11th is wasteful.
+	- ## Elaboration and Questions
+		- ### Why generate a [[CLI]] for replacing the [[MCP/Server]]?
+			- Any good CLI will have documentation. By creating a dedicated CLI that reimplements the functionality of the MCP server, an AI agent will be able to use its documentation and help pages at the command line to discover how to use it.
+		- ### Why use a [[CLI]] to generate a [[CLI]]?
+			- In [[Agentic AI Coding]] agents, CLIs are more context efficient than MCP, for the reasons listed in the Impetus. As a result, the same holds true for
+			- coding agents know how to use CLI tools; we don't need to reinvent the world there, and also they don't need to be spoon-fed instructions about how to use the tools before they are needed.
+			- The reason why we want to use generated CLIs are the reason why we want to use a CLI to generate them.
+		- ### How will the CLI be generated?
+			- Given the source code for the MCP,  `mcp-skillgen` will wrap commands to a [[CLI]]-based [[AI/Coding/Tool]] to
+				- file information about the tool in a file for later
+					- one-time setup
+						- analyze the MCP architecture of the tool with respect to security, authentication and other NFRs
+					- some setup for all tools, whether implemented or not
+						- create a basic requirements spec for the tool's basic functional requirements
+					- some setup for all implemented tools
+						- create a detailed requirements spec for the tool's detailed functional requirements (for implemented tools)
+						- analyze the implementation and enhance the spec with key lessons learned
+				- implementation
+					- implement the CLI targets and their corresponding skills
+		-
