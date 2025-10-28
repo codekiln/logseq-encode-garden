@@ -1,0 +1,87 @@
+tags:: [[Blog]], [[LangChain]], [[LangGraph]], [[v1.0]]
+alias:: [[Blog/LangChain/v1.0]]
+
+- # LangChain and LangGraph Agent Frameworks Reach v1.0 Milestones
+	- ## Metadata
+		- **Author:** Sydney Runkle and the LangChain OSS team
+		- **Published:** October 22, 2024
+		- **Source:** [LangChain Blog](https://blog.langchain.com/)
+		- **Annotated in Readwise:** [Link](https://readwise.io/reader/shared/01k8njj6z4zxywfzx8pbj4q13j)
+	- ## Key Highlights
+		- LangChain 1.0 and LangGraph 1.0 released - first major versions
+		- Updated `langchain` to focus on core agent loop
+		- New middleware concept for flexibility
+		- Upgraded model integrations with latest content types
+		- Redesigned documentation site
+	- ## Framework Purposes
+		- **[[LangChain]]** - Fastest way to build an AI agent with standard tool calling architecture, provider agnostic design, and middleware for customization
+		- **[[LangGraph]]** - Lower level framework and runtime for highly custom and controllable agents, designed for production-grade, long running agents
+	- ## LangChain 1.0 Improvements
+		- ### `create_agent` Abstraction
+			- Built around the core agent loop for quick startup
+			- Built on LangGraph runtime for reliable agents
+			- Prebuilt and user defined middleware enable step by step control and customization
+			- Similar to `create_react_agent` from `langgraph.prebuilts` (used in production for a year)
+		- ### Middleware System
+			- Fine grained control at every step an agent takes
+			- Built-in middlewares for common use cases:
+				- **Human-in-the-loop:** Pause agent execution for user approval, editing, or rejection of tool calls
+				- **Summarization:** Condense message history when approaching context limits
+				- **PII redaction:** Identify and redact sensitive information before content is passed to the model
+			- Support for custom middleware that hooks into various points in the agent loop
+		- ### Structured Output Generation
+			- Improved structured output generation in agent loop
+			- Reduced latency and cost by eliminating extra LLM call
+			- Fine grained control over structured output generation via tool calling or provider-native structured output
+		- ### Standard Content Blocks
+			- Provider-agnostic spec for model outputs
+			- Consistent content types across providers
+			- Support for reasoning traces, citations, and tool calls
+			- Typed interfaces for complex response structures
+			- Full backward compatibility
+	- ## LangGraph 1.0 Features
+		- **Durable state** - Agent execution state persists automatically
+		- **Built-in persistence** - Save and resume agent workflows at any point
+		- **Human-in-the-loop patterns** - First-class API support for human review
+		- First stable major release in durable agent framework space
+		- After more than a year of iteration and adoption by companies like [[Uber]], [[LinkedIn]], and [[Klarna]]
+	- ## Breaking Changes
+		- `create_react_agent` deprecated in `langgraph.prebuilt` (moved to `langchain.agents`)
+		- Python 3.9 support dropped (EOL October 2025)
+		- v1.0 requires Python 3.10+
+		- Python 3.14 support coming soon
+		- Package surface area reduced, old functionality moved to `langchain-classic`
+	- ## When to Use Each Framework
+		- ### Choose LangChain 1.0 for:
+			- Shipping quickly with standard agent patterns
+			- Agents that fit the default loop (model → tools → response)
+			- Middleware-based customization
+			- Higher-level abstractions over low-level control
+		- ### Choose LangGraph 1.0 for:
+			- Workflows with mixture of deterministic and agentic components
+			- Long running business process automation
+			- Sensitive workflows requiring more oversight/human in the loop
+			- Highly custom or complex workflows
+			- Applications where latency and/or cost need careful control
+	- ## Installation
+		- Python:
+			- `uv pip install --upgrade langchain`
+			- `uv pip install langchain-classic`
+			- `uv pip install --upgrade langgraph`
+		- JavaScript:
+			- `npm install @langchain/langchain@latest`
+			- `npm install @langchain/langchain-classic`
+			- `npm install @langchain/langgraph@latest`
+	- ## Migration Resources
+		- Release overviews: Python, JavaScript
+		- Migration guides: Python, JavaScript
+	- ## New Documentation Site
+		- Completely redesigned documentation site at docs.langchain.com
+		- All LangChain and LangGraph docs—across Python and JavaScript—in one unified site
+		- Parallel examples, shared conceptual guides, and consolidated API references
+		- More intuitive navigation, thoughtful guides, and in-depth tutorials
+	- ## Community Impact
+		- 90M monthly downloads
+		- Production applications at [[Uber]], [[JP Morgan]], [[Blackrock]], [[Cisco]], and more
+		- Commitment to stability: no breaking changes until 2.0
+
