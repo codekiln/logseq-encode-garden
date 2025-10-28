@@ -2,5 +2,11 @@
 	- Feature of [[1Password/Desktop]] that opens a modal to search secrets
 		- ![example of quick access](https://i.1password.com/media/opw8/quick-access-windows1.png)
 	- ### How to access Quick Access - menu bar and #Keyshort #card
-		- **Keyshort**: Shift+Cmd+Space
+		- **Keyshort**: Shift+Cmd+Space (Mac)
+		- **Keyshort**: Ctrl+Shift+Space (Windows/Linux)
 		- ![menu bar - open quick access](https://i.1password.com/media/1password-menu-bar.png)
+	- ### Related Keyboard Shortcuts
+		- **Lock 1Password**: `Cmd+\` on Mac
+			- Note: This shortcut can conflict with development tools and rich text editors
+			- Can be disabled in **Settings > General** by leaving the field blank
+			- See [[1Password/How To/Disable Keyboard Shortcut]] for details

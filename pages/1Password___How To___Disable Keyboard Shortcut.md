@@ -1,0 +1,36 @@
+- # How To Disable or Change 1Password Keyboard Shortcuts
+	- ## Overview
+		- This guide shows how to disable or customize keyboard shortcuts in [[1Password]] desktop app
+		- Useful when shortcuts conflict with other applications (development tools, text editors, etc.)
+	- ## Prerequisites
+		- [[1Password]] desktop app installed on Mac, Windows, or Linux
+		- Access to 1Password settings
+	- ## Steps
+		- ### 1. Open 1Password Settings
+			- Click the [[1Password]] icon in your menu bar (Mac) or system tray (Windows/Linux)
+			- Select **Settings** or **Preferences** from the menu
+		- ### 2. Navigate to General Settings
+			- In the Settings window, select **General** from the sidebar
+			- Scroll to the keyboard shortcuts section
+		- ### 3. Modify or Disable Shortcuts
+			- Find the shortcut you want to change (e.g., `Cmd+\` for Lock 1Password)
+			- To disable: **Clear the field completely** (leave it blank)
+			- To change: Click the field and press your desired key combination
+			- Changes save automatically
+		- ### 4. Verify the Change
+			- Close the Settings window
+			- Test that the old shortcut no longer triggers [[1Password]]
+			- If you assigned a new shortcut, verify it works as expected
+	- ## Common Shortcuts That May Need Adjustment
+		- `Cmd+\` (Mac) - Lock 1Password - conflicts with strikethrough in text editors
+		- `Shift+Cmd+Space` (Mac) - [[1Password/Quick Access]] - conflicts with Spotlight alternatives
+		- `Shift+Cmd+X` (Mac) - Browser extension - conflicts with various apps
+	- ## Troubleshooting
+		- If the shortcut field won't accept your input, the combination may be reserved by macOS
+		- Some shortcuts may still conflict if another app captures them at system level
+		- Restart [[1Password]] if changes don't take effect immediately
+	- ## Related
+		- [[1Password/Quick Access]]
+		- [[1Password]]
+		- [1Password keyboard shortcuts documentation](https://support.1password.com/keyboard-shortcuts/)
+		- [1Password Community: keyboard shortcut conflicts](https://1password.community/search?q=keyboard+shortcut+conflict)
