@@ -1,5 +1,5 @@
 tags:: [[Blog]], [[LangChain]], [[LangGraph]], [[v1.0]]
-alias:: [[Blog/LangChain/v1.0]]
+alias:: [[LangChain/Blog/25/10/Agent Frameworks v1.0]]
 
 - # LangChain and LangGraph Agent Frameworks Reach v1.0 Milestones
 	- ## Metadata
