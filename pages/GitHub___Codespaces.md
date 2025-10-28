@@ -1,0 +1,143 @@
+alias:: [[GitHub Codespace]], [[Codespaces]], [[Codespace]]
+
+- # GitHub Codespaces - https://github.com/features/codespaces
+	- ## Overview
+		- Cloud-based development environments powered by [[DevContainer]]
+		- Runs in the cloud on GitHub's infrastructure as Docker containers on virtual machines
+		- Fully configured development environment accessible from anywhere
+		- Based on [[VSCode]] and [[Dev Container]] specifications
+		- Default environment uses Ubuntu Linux with popular languages and tools pre-installed
+	- ## Key Features
+		- Pre-configured development environments with configuration-as-code
+		- Access from web browser, [[VSCode]] desktop, or [[GitHub/CLI]]
+		- Powered by [[Azure]] infrastructure
+		- Integrated with [[GitHub]] repositories
+		- Supports [[Dev Container]] configurations
+		- Settings Sync and dotfiles for personalization
+		- Built-in source control
+	- ## Machine Types
+		- Available specifications range from 2 cores to 32 cores
+		- Options may be limited by organizational policies or repository requirements
+		- Machine type can be changed at any time through web, [[VSCode]], or [[GitHub/CLI]]
+		- ### Available Configurations
+			- 2-core machines (base configuration)
+			- 4-core machines
+			- 8-core machines
+			- 16-core machines
+			- 32-core machines with 128GB RAM (for ML workloads)
+		- ### How to Change Machine Type
+			- **Web**: Navigate to github.com/codespaces → ellipsis menu → "Change machine type"
+			- **VSCode**: Command Palette → "Codespaces: Change Machine Type"
+			- **CLI**: `gh codespace edit --machine MACHINE-TYPE-NAME`
+	- ## Lifecycle & Persistence
+		- ### Creation
+			- Can be created from repositories or templates
+			- Limits on simultaneous running codespaces
+			- Prebuilds can accelerate setup (if enabled by repository admin)
+		- ### Running State
+			- **CRITICAL**: Closing browser/editor does NOT stop the codespace
+			- Running processes continue after disconnect
+			- Must explicitly stop the codespace or wait for timeout
+			- Can reconnect to running codespace at any time
+		- ### Stopping
+			- Stopped codespaces retain all saved changes
+			- Only storage costs apply when stopped (no compute charges)
+			- Data persists until codespace is deleted or auto-deleted after 30 days
+			- **Methods to Stop**:
+				- Web: github.com/codespaces → ellipsis menu → "Stop codespace"
+				- CLI: `gh codespace stop`
+				- VSCode: Command Palette → "Codespaces: Stop Codespace"
+		- ### Deletion
+			- Permanent removal of codespace and all data
+			- Changes must be pushed to remote repository before deletion to preserve work
+	- ## Timeout Configuration
+		- ### Default Behavior
+			- Auto-stops after 30 minutes of inactivity by default
+			- Inactivity = no typing, mouse movement, or terminal activity
+			- "Your data is preserved from the last time your changes were saved"
+		- ### Configurable Range
+			- Minimum: 5 minutes
+			- Maximum: 240 minutes (4 hours)
+			- Organization policies may override personal settings
+		- ### How to Configure
+			- **Web**: Settings → Codespaces → "Default idle timeout" → Save
+			- **CLI**: `gh codespace create --idle-timeout 90m`
+		- ### Important Notes
+			- You are billed for entire duration codespace is active, regardless of use
+			- Cannot prevent auto-stop entirely (max 4 hours)
+			- Extended timeouts increase costs
+	- ## Pricing & Billing
+		- ### Compute Costs (per hour)
+			- 2-core: $0.18/hour
+			- 4-core: $0.36/hour
+			- 8-core: $0.72/hour
+			- 16-core: $1.44/hour
+			- 32-core: $2.88/hour
+			- Linear scaling: 16-core costs 8x more than 2-core
+		- ### Storage Costs
+			- $0.07 per GB-month
+			- Applies to stopped codespaces
+			- Time-based calculation of disk space used
+		- ### Free Quotas (Personal Accounts Only)
+			- **GitHub Free**: 120 hours compute + 15 GB-month storage
+			- **GitHub Pro**: 180 hours compute + 20 GB-month storage
+			- Organizations and enterprises have no free quota
+			- Valid payment method required for usage beyond quota
+	- ## Environment Variables
+		- ### Codespace-Specific
+			- `CODESPACE_NAME`: Name of the codespace
+			- `CODESPACES`: Always `true` in a codespace
+			- `GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN`: Port forwarding domain
+		- ### GitHub Integration
+			- `GITHUB_TOKEN`: Authenticated token for API calls
+			- `GITHUB_API_URL`: API endpoint URL
+			- `GITHUB_GRAPHQL_URL`: GraphQL endpoint
+			- `GITHUB_SERVER_URL`: GitHub server URL
+			- `GITHUB_REPOSITORY`: Owner and repository name
+			- `GITHUB_USER`: User who initiated the codespace
+		- ### Git Configuration
+			- `GIT_COMMITTER_EMAIL`: Committer email
+			- `GIT_COMMITTER_NAME`: Committer name
+		- **Note**: Environment variables are case-sensitive
+	- ## Use Cases
+		- ### Long-Running [[Claude Code]] Sessions
+			- **Perfect for AFK coding sessions**: Codespace continues running after closing browser/editor
+			- Cloud-based execution means local machine can be shut down or disconnected
+			- Process continues until explicit stop or timeout (up to 4 hours)
+			- **Recommended Configuration**:
+				- Set timeout to maximum 240 minutes for long sessions
+				- Use 4-core or 8-core machine for good performance
+				- Monitor costs: 8-core at $0.72/hour = $2.88 for 4-hour session
+				- Commit and push work regularly to avoid data loss
+			- **Workflow**:
+				- 1. Start codespace with extended timeout
+				- 2. Launch [[Claude Code]] session
+				- 3. Close browser/editor - session continues running
+				- 4. Reconnect later to check progress
+				- 5. Explicitly stop codespace when done to avoid charges
+		- ### Team Collaboration
+			- Standardized development environments for entire team
+			- Instant onboarding for new team members
+			- Configuration-as-code ensures consistency
+		- ### Resource-Intensive Workloads
+			- Machine learning with up to 32 cores and 128GB RAM
+			- Large builds or compilations
+			- Data processing tasks
+		- ### Quick Prototyping
+			- Test code from templates
+			- Experiment without local setup
+			- Try different configurations easily
+	- ## Documentation
+		- [Official Documentation](https://docs.github.com/en/codespaces)
+		- [Quickstart](https://docs.github.com/en/codespaces/getting-started/quickstart)
+		- [Dev Container Configuration](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)
+		- [Understanding the Codespace Lifecycle](https://docs.github.com/en/codespaces/getting-started/understanding-the-codespace-lifecycle)
+		- [Setting Timeout Period](https://docs.github.com/en/codespaces/customizing-your-codespace/setting-your-timeout-period-for-github-codespaces)
+		- [Stopping and Starting](https://docs.github.com/en/codespaces/developing-in-a-codespace/stopping-and-starting-a-codespace)
+		- [About Billing](https://docs.github.com/en/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces)
+		- [Changing Machine Type](https://docs.github.com/en/codespaces/customizing-your-codespace/changing-the-machine-type-for-your-codespace)
+	- ## Related
+		- [[DevContainer]] - Configuration format used by Codespaces
+		- [[Claude Code/Devcontainer]] - Claude Code's dev container setup
+		- [[VSCode]] - Primary editor interface
+		- [[GitHub/CLI]] - Command-line interface for managing codespaces
