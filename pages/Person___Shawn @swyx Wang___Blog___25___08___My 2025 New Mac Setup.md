@@ -1,7 +1,7 @@
 - [My 2025 New Mac Setup](https://www.swyx.io/new-mac-setup)
 	- - [Raycast the super app](#raycast-the-super-app)
 	- my goal is to replace as many small utilities i used to use, with raycast plugins
-	- Caffeine - [https://www.raycast.com/mooxl/coffee](https://www.raycast.com/mooxl/coffee)
+	- [[CaffeineApp]] - [https://www.raycast.com/mooxl/coffee](https://www.raycast.com/mooxl/coffee)
 	- Rectangle - raycast’s default window management
 	- Raycast’s founder has more [here](https://x.com/thomaspaulmann/status/1932158501750796724).
 	- - [Claude maxxing](#claude-maxxing)

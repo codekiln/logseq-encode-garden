@@ -1,0 +1,53 @@
+tags:: [[Mac/CLI]], [[CLI/Tool]]
+
+- # `caffeinate` command
+	- ## Overview
+		- Built-in macOS command-line utility that prevents the system from sleeping
+		- Part of the macOS system since OS X Mountain Lion (10.8)
+		- Operates at the system level, more powerful than GUI alternatives
+		- Note: This is different from [[CaffeineApp]] (the GUI application)
+	- ## Basic Usage
+		- `caffeinate [options] [command]`
+		- When run without a command, keeps the system awake until interrupted (Ctrl+C)
+		- When run with a command, keeps the system awake while the command executes
+	- ## Common Options
+		- `-d` - Prevent display from sleeping
+		- `-i` - Prevent system from idle sleeping
+		- `-m` - Prevent disk from idle sleeping
+		- `-s` - Prevent system from sleeping (only if AC power adapter is connected)
+		- `-u` - Simulate user activity and prevent display from sleeping
+		- `-t <seconds>` - Timeout after specified number of seconds
+		- Options can be combined (e.g., `-di` prevents both display and system sleep)
+	- ## Examples
+		- ### Keep system awake indefinitely
+			- `caffeinate` - Run until interrupted (Ctrl+C)
+			- `caffeinate -t 3600` - Keep awake for 1 hour (3600 seconds)
+		- ### Keep system awake for a specific duration
+			- `caffeinate -t 1800` - Stay awake for 30 minutes
+		- ### Prevent display sleep while system can sleep
+			- `caffeinate -d` - Keep display awake (useful when connected to external monitor)
+		- ### Keep system awake during a command execution
+			- `caffeinate make build` - Keep awake while building
+			- `caffeinate -d -i npm run test` - Prevent display and system sleep during tests
+			- `caffeinate -u -t 7200 python long_script.py` - Simulate user activity for 2 hours while script runs
+		- ### Combined options for maximum wakefulness
+			- `caffeinate -di` - Prevent both display and system idle sleep
+			- `caffeinate -dim` - Prevent display, system, and disk idle sleep
+	- ## Common Use Cases
+		- Preventing sleep during long-running builds or tests
+		- Keeping system awake during large downloads
+		- Maintaining wake state during automated scripts
+		- Preventing sleep during presentations or demos
+		- Running overnight processes or backups
+	- ## Comparison with GUI Alternatives
+		- More scriptable and automatable than [[CaffeineApp]]
+		- Can be integrated into build scripts and automation
+		- No installation required (built into macOS)
+		- Better suited for command-line workflows
+	- ## Related Tools
+		- [[CaffeineApp]] - GUI application with menu bar icon
+		- `pmset` - macOS power management command-line tool for viewing/setting sleep settings
+	- ## References
+		- [Apple Developer Documentation](https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/man8/caffeinate.8.html)
+		- View manual page: `man caffeinate`
+

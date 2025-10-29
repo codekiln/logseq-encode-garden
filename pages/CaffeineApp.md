@@ -1,0 +1,59 @@
+tags:: [[Mac/App]]
+
+- # [Caffeine](https://www.caffeine-app.net/)
+	- ## Overview
+		- Lightweight GUI utility for macOS that prevents your Mac from automatically going to sleep, dimming the screen, or starting the screensaver
+		- Places a coffee cup icon in the menu bar
+		- When the cup is full, Caffeine is active; when empty, it's inactive
+		- Note: This is the GUI application; for command-line usage, see [[CaffeinateCLI]] (the built-in `caffeinate` command)
+	- ## Key Features
+		- ### Simple Activation
+			- Click the coffee cup icon to enable or disable Caffeine
+			- Visual indicator shows active state
+		- ### Customizable Duration
+			- Set default duration for Caffeine to remain active
+			- Options range from 5 minutes to indefinitely
+		- ### Automatic Launch
+			- Configure Caffeine to start automatically upon login
+			- Option to activate immediately upon startup
+		- ### Preferences Access
+			- Right-click or Command-click the icon to access preferences
+			- Set timeout durations and startup options
+	- ## Installation Options
+		- ### Standalone Application
+			- Download from [official website](https://www.caffeine-app.net/)
+			- Available on [Mac App Store](https://apps.apple.com/us/app/caffeine-utility/id1642185952?mt=12)
+			- System Requirements: macOS 11 (Big Sur) or later
+		- ### Raycast Plugin
+			- Available as a Raycast extension: [Coffee plugin](https://www.raycast.com/mooxl/coffee)
+			- Provides Caffeine functionality through Raycast's unified interface
+			- Part of the trend to replace standalone utilities with Raycast plugins
+	- ## Usage Scenarios
+		- Preventing Mac from sleeping during presentations
+		- Keeping screen awake while reading long articles or watching videos
+		- Ensuring uninterrupted downloads or background processes
+		- Maintaining system wake state during long-running tasks
+	- ## Development & Maintenance
+		- Originally developed by Lighthead Software in 2006
+		- Maintained by IntelliScape Computer Solutions since 2018
+		- Open-source software licensed under MIT License
+		- Source code available on [GitHub](https://github.com/intelliscapesolutions/caffeine)
+	- ## Privacy and Security
+		- Open-source code ensures transparency
+		- MIT License allows inspection and modification
+		- No known privacy concerns
+	- ## Alternatives
+		- [[CaffeinateCLI]] - Built-in macOS command-line tool (`caffeinate` command)
+		- [[Amphetamine]] - Offers advanced scheduling and triggers
+		- [[KeepingYouAwake]] - Open-source alternative with straightforward interface
+		- [[Theine]] - Similar functionality with focus on simplicity
+	- ## Best Practices
+		- Disable Caffeine when not needed to conserve energy
+		- Use time-limited activation for specific tasks rather than leaving it on indefinitely
+		- Prevents unnecessary wear on hardware components
+	- ## References
+		- [Official Website](https://www.caffeine-app.net/)
+		- [Mac App Store Listing](https://apps.apple.com/us/app/caffeine-utility/id1642185952?mt=12)
+		- [Raycast Coffee Plugin](https://www.raycast.com/mooxl/coffee)
+		- [GitHub Repository](https://github.com/intelliscapesolutions/caffeine)
+
