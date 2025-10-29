@@ -62,6 +62,7 @@ repomix-*.xml
 **/.vscode/mcp.json
 **/.github/commands/
 **/.github/subagents/
+**/.github/prompts/
 **/.warp/
 **/WARP.md
 **/.codexignore
