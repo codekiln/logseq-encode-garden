@@ -1,0 +1,55 @@
+date-created:: [[2025-10-29 Wed]]
+alias:: [[CursorAI/v/2.0 - New Coding Model and Agent Interface]]
+tags:: [[CursorAI/Changelog]]
+
+- # [New Coding Model and Agent Interface · Cursor](https://cursor.com/changelog/2-0)
+	- ### Multi-Agents
+		- Manage up to eight agents simultaneously within the new editor interface
+		- Each agent operates in its own isolated copy of your codebase
+		- Utilizes git worktrees or remote machines to prevent file conflicts
+	- ### Composer
+		- Introducing Composer, a frontier coding model that is four times faster than similarly intelligent models
+		- Enhances coding efficiency
+	- ### Browser (General Availability)
+		- The Browser feature for Agent, previously in beta, is now generally available
+		- Includes embedded in-editor support with tools to select elements and forward DOM information to the agent
+	- ### Improved Code Review
+		- Easily view all changes made by the Agent across multiple files without needing to navigate between individual files
+	- ### Sandboxed Terminals (General Availability)
+		- Sandboxed terminals are now generally available for macOS
+		- Agent commands run in a secure sandbox by default
+		- Read/write access to your workspace with no internet access
+	- ### Team Commands
+		- Define and manage custom commands and rules for your team via the Cursor dashboard
+		- These settings are automatically applied to all team members without local storage requirements
+	- ### Voice Mode
+		- Control the Agent using voice commands with built-in speech-to-text conversion
+		- Custom submit keywords can be defined in settings to trigger the agent
+	- ### Improved Performance
+		- Enhanced performance of Language Server Protocols (LSPs) for all languages
+		- Leads to faster loading and usage, especially noticeable when working with agents and viewing diffs
+	- ### Plan Mode in Background
+		- Create plans with one model and build them with another
+		- Choose to build in the foreground or background
+		- Plan with parallel agents for multiple plan reviews
+	- ### Shareable Team Commands
+		- Share custom rules, commands, and prompts with your entire team
+		- Create deeplinks through the Cursor Docs
+	- ### Improved Prompt UI
+		- Files and directories are now displayed inline as pills
+		- Context menu has been streamlined
+		- Allows the Agent to self-gather context without manual attachment
+	- ### Improved Agent Harness
+		- Significant improvements to the underlying harness for working with Agent across all models
+		- Results in notable quality enhancements, especially for GPT-5 Codex
+	- ### Cloud Agents
+		- Cloud agents now offer 99.9% reliability, instant startup, and an improved user interface
+		- The experience of sending agents to the cloud from the editor has also been enhanced
+	- ### Cursor for Enterprise
+		- #### Sandboxed Terminals: Admin Controls
+			- Enterprise teams can enforce standard settings for sandboxed terminals across their team
+			- Configuring sandbox availability, git access, and network access at the team level
+		- #### Hooks: Cloud Distribution
+			- Enterprise teams can distribute hooks directly from the web dashboard
+			- Admins can add new hooks from the dashboard
+
