@@ -3,7 +3,7 @@ alias:: [[Anthropic/App/Claude Code/How To/Use Essential Commands]]
 
 - # How To Use Essential Claude Code Commands
 	- ## Goal
-		- Quickly apply five Claude Code commands that automate tests, reuse docs, save tokens, and deepen reasoning in any project.
+		- Quickly apply six Claude Code commands that automate tests, reuse docs, save tokens, deepen reasoning, and extend context access in any project.
 	- ## Preconditions
 		- Claude Code ≥ v1.0 installed and in `PATH`
 		- MCP server linked to GitHub
@@ -34,7 +34,14 @@ alias:: [[Anthropic/App/Claude Code/How To/Use Essential Commands]]
 			  ~~~bash
 			  claude -p "List 10 currency pairs with rates" --output-format json
 			  ~~~
-			- Extended thinking: prepend your query with **“Think deeply about …”** to trigger longer, more rigorous analysis.
+			- Extended thinking: prepend your query with **"Think deeply about …"** to trigger longer, more rigorous analysis.
+		- ### 6. Access Additional Working Directories with `--add-dir`
+			- Add additional working directories for Claude to access (validates each path exists as a directory):
+			  ~~~bash
+			  claude --add-dir ../apps ../lib
+			  ~~~
+			- Useful for monorepos or when working with related projects that need to be accessible in the same session
+			- Reference: [CLI flags documentation](https://docs.claude.com/en/docs/claude-code/cli-reference#cli-flags)
 	- ## Troubleshooting
 		- *Command not found* → confirm `claude --version` returns correctly.
 		- *Rules ignored* → ensure `claude.md` is at project root and committed.
