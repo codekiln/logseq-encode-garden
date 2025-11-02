@@ -1,0 +1,27 @@
+- # Clay Shirky
+	- ## Bio
+		- American writer, consultant, and educator known for insights into social and economic effects of Internet technologies
+		- Born 1964 in Columbia, Missouri
+		- Bachelor of Arts in fine art from Yale University (1986)
+		- Vice Provost for Educational Technologies at New York University (NYU)
+		- Associate Professor at the Arthur L. Carter Journalism Institute, NYU
+		- Associate Arts Professor at Tisch School of the Arts' Interactive Telecommunications Program, NYU
+	- ## Notable Work
+		- ### Situated Software (2004)
+			- Proposed the concept of "situated software" - software "designed in and for a particular social situation or context"
+			- Vision of applications for dozens of users rather than thousands or millions
+			- Communities getting form-fit tools for their particular needs
+		- ### Books
+			- *Here Comes Everybody* (2008) - Examines how digital platforms enable collective action without traditional organizational structures
+			- *Cognitive Surplus* (2010) - Discusses how technology enables collaborative creativity and generosity
+		- ### Writings
+			- Published in *The New York Times*, *The Wall Street Journal*, *Harvard Business Review*, and *Wired*
+	- ## Consulting
+		- Has consulted for Nokia, the BBC, and the Library of Congress
+		- Expertise in decentralized technologies like peer-to-peer networks, web services, and wireless systems
+	- ## External Links
+		- [Wikipedia](https://en.wikipedia.org/wiki/Clay_Shirky)
+	- ## Related Concepts
+		- [[Software/Situated]] - Concept he first proposed in 2004
+		- [[Dev/Home-Cooked Software]] - Related concept that built on his situated software ideas
+

@@ -1,0 +1,2 @@
+- [Antilibrary of Maggie Appleton](https://maggieappleton.com/antilibrary)
+	- > "Books I like the idea of having read"
