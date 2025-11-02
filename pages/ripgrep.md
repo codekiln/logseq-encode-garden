@@ -1,0 +1,3 @@
+- [ripgrep](https://github.com/BurntSushi/ripgrep) searches the contents of files by using `rg <pattern> <path>`, like `rg Controller app/` to find all mentions of `Controller` in the directory app.
+- This tool is also used by Neovim when you type `Space S G`.
+- The full manual can be found via `man rg`.

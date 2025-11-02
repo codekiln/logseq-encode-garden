@@ -1,0 +1,4 @@
+- [fzf](https://junegunn.github.io/fzf/) gives you fuzzy finding of files via the `ff` alias. Go to any directory, type `ff`, and you'll be able to fuzzy find your way to any file in that tree, while seeing a preview of the files you're narrowing down on the right-hand side.
+- You can use `Ctrl + R` to use fzf to fuzzy find through your command history.
+- This tool is also used by Neovim when you type `Space Space`.
+- The full manual can be found via `man fzf`.

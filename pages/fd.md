@@ -1,0 +1,2 @@
+- [fd](https://github.com/sharkdp/fd) is an easier to use replacement for `find`. Use `fd person.rb` to find a file called `person.rb` within the current tree. `fd person.rb /` will search the entire file system. `fd person.rb / -H` searches the entire file system, including hidden directories.
+- The full manual can be found via `man fd`.

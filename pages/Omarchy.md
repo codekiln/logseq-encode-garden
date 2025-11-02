@@ -1,3 +1,26 @@
+created-by:: [[Person/DHH]]
+
 - [Omarchy — Beautiful, Modern & Opinionated Linux by DHH](https://omarchy.org/)
+	- ## great [docs](https://learn.omacom.io/2/the-omarchy-manual)
+		- [Shell Tools · The Omarchy Manual · DHH](https://learn.omacom.io/2/the-omarchy-manual/57/shell-tools)
+			- [[fzf]]
+			- [[Zoxide]]
+			- [[ripgrep]]
+			- [[fd]]
+		- [TUIs · The Omarchy Manual · DHH](https://learn.omacom.io/2/the-omarchy-manual/59/tuis)
+			- [[Lazygit]]
+			- [[Lazydocker]]
+		- [GUIs · The Omarchy Manual · DHH](https://learn.omacom.io/2/the-omarchy-manual/60/guis)
+			- [[Obsidian]]
+			- [[LibreOffice]]
+			- [[OBS/Studio]]
+			- [[Kdenlive]]
+			- [[Signal]]
+		- [Development Tools · The Omarchy Manual · DHH](https://learn.omacom.io/2/the-omarchy-manual/62/development-tools)
+			- > The majority of these environments are managed by [[mise]] [Mise](https://mise.jdx.dev/). It's a tool that lets you install and run multiple versions of a programming language on the same machine. It's like rbenv or rvm for Ruby or virtualenv for Python, but it works for a bunch of different environments.
+		- [Fingerprint & Fido2 authentication · The Omarchy Manual · DHH](https://learn.omacom.io/2/the-omarchy-manual/77/fingerprint-fido2-authentication) [[Biometric]]
+			- > A lot of laptops, like my beloved [[FrameworkCo/Laptop/13]], come with a fingerprint sensor to do authentication. You can use this with Omarchy by running *Setup > Security > Fingerprint* in the Omarchy menu (`Super + Alt + Space`). That'll install the fingerprint package, collect your print, verify it, and you'll be set to go using your fingerprint to unlock from the lock screen (which you can trigger with `Super + Escape`), enter sudo mode, and authorize system prompts.
+		- [Gaming · The Omarchy Manual · DHH](https://learn.omacom.io/2/the-omarchy-manual/71/gaming)
+			- > Thanks to [[Valve]]'s incredible work on [the proton compatibility layer](https://en.wikipedia.org/wiki/Proton_(software)), there are now tens of thousands of playable modern games on Linux. Oh, and did you know that the [[Steam/Deck]] actually runs Arch!
 	- via [Apple Introduces The Year Of The Linux Desktop! - YouTube](https://www.youtube.com/watch?v=GQJZ96l-XQ4) [[Person/Michael B Paulson/YouTube]]
 	- see also [My Journey from macOS to Arch Linux with Omarchy | ssp.sh](https://www.ssp.sh/blog/macbook-to-arch-linux-omarchy/)
