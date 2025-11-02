@@ -1,0 +1,75 @@
+- # iOS App Development
+	- ## Distributing iOS Apps
+		- Apple's system is a "walled garden" - apps must be approved and "signed" by Apple to run on devices
+		- Family Sharing only works for App Store purchases, not custom-built apps
+		- ### Free Method (Impractical for Sharing)
+			- Can use free Apple ID to sideload apps from Xcode to connected devices
+			- **Major limitation**: Apps stop working after 7 days and must be reinstalled weekly
+			- Not practical for sharing with family members
+		- ### Apple Developer Program ($99/year)
+			- Required for practical distribution outside App Store
+			- Enables two main distribution methods:
+				- #### TestFlight (Recommended)
+					- Apple's official beta testing platform
+					- Best option for sharing with family and friends
+					- Process:
+						- Enroll in Apple Developer Program
+						- Upload app to App Store Connect
+						- Add testers' Apple IDs (up to 10,000 testers)
+						- Testers install TestFlight app from App Store
+						- Receive invitation email/notification
+						- App appears in TestFlight app, tap "Install"
+					- **Pros**:
+						- Extremely easy for testers (no technical steps)
+						- Works across all devices linked to Apple ID
+						- Can invite up to 10,000 testers
+					- **Cons**:
+						- Builds expire after 90 days - must upload new version to keep active
+				- #### Ad Hoc Distribution
+					- Creates app "locked" to specific devices via UDIDs
+					- Process:
+						- Enroll in Apple Developer Program
+						- Get UDID from each device (your iPhone, iPad, wife's iPhone, wife's iPad)
+						- Register UDIDs in developer account (limited to 100 devices per year)
+						- Create "Ad Hoc Provisioning Profile" with UDIDs
+						- Build app with that profile
+						- Distribute .ipa file to install
+					- **Pros**:
+						- App lasts for 1 year (until developer certificate expires)
+						- No 90-day expiry like TestFlight
+					- **Cons**:
+						- Complex setup process
+						- Must rebuild and re-register if tester gets new device
+						- Requires manual UDID collection and registration
+	- ## Progressive Web Apps (PWAs) on iOS
+		- Can make web pages act like native apps using PWA technology
+		- ### Full-Screen & Home Screen Installation
+			- Users can "Add to Home Screen" via Safari Share button
+			- **iOS Meta Tags** (required in HTML `<head>`):
+				- `<meta name="apple-mobile-web-app-capable" content="yes">`
+					- Enables standalone mode (full-screen, no browser UI)
+				- `<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">`
+					- Controls status bar appearance
+		- ### Web App Manifest
+			- JSON file that defines app metadata and behavior
+			- Link in HTML: `<link rel="manifest" href="/manifest.json">`
+			- Key properties:
+				- `"display": "standalone"` - Full app-like experience
+				- `"name"` - App name for home screen
+				- Start URL, icons (various sizes)
+		- ### Service Worker (Offline Capability)
+			- JavaScript file that runs in background
+			- Acts as network proxy to:
+				- Cache assets (HTML, CSS, images) for offline use
+				- Intercept network requests
+				- Serve cached content when offline
+			- Requires HTTPS (secure connection)
+		- ### iOS-Specific PWA Features
+			- **Push Notifications**: PWAs can send push notifications (requires Service Worker)
+			- **Web Share API**: Share content from web app to native iOS apps via Share Sheet
+		- ### User Installation Process
+			- User taps Share button (square with up arrow) in Safari
+			- Selects "Add to Home Screen"
+			- App icon appears on home screen
+			- Tapping icon opens app in standalone mode
+
