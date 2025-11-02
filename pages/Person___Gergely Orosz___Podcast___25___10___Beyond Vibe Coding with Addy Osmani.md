@@ -1,0 +1,39 @@
+tags:: [[Person/Addy Osmani]]
+created-by:: [[Person/Gergely Orosz]]
+
+- # [Beyond Vibe Coding with Addy Osmani - by Gergely Orosz](https://newsletter.pragmaticengineer.com/p/beyond-vibe-coding-with-addy-osmani)
+	- ## notes
+		- ### The 70%/30% problem - see also [The 70% problem: Hard truths about AI-assisted coding](https://addyo.substack.com/p/the-70-problem-hard-truths-about)
+			- [[Person/Addy Osmani/Substack]] is here: [Elevate | Addy Osmani | Substack](https://addyo.substack.com/)
+			- the last 30% (integration, debugging, security, maintainability, performance) is the hard “last mile.”
+			- Seniors vs juniors: Seniors can reliably finish that last 30%; juniors often stall even with AI at about 70%, cycling prompts instead of diagnosing root causes and reading systems.
+			- Practical implications:
+				- Structure work so juniors/AI draft the 70%; seniors own or guide the last-mile polish.
+				- Use pair/trio programming (junior + senior + AI) to teach debugging, code reading, and system understanding.
+				- Enforce last-mile gates: tests, security review, dependency strategy, and human code review to prevent tech debt.
+		- Mentioned technologies
+			- [[Chrome/DevTools/MCP]] for your AI agent: [https://developer.chrome.com/blog/chrome-devtools-mcp](https://developer.chrome.com/blog/chrome-devtools-mcp)
+			- *Beyond Vibe Coding: From Coder to AI-Era Developer*: [https://www.amazon.com/Beyond-Vibe-Coding-AI-Era-Developer/dp/B0F6S5425Y](https://www.amazon.com/Beyond-Vibe-Coding-AI-Era-Developer/dp/B0F6S5425Y/)
+			- *Building large scale web apps*: [https://www.amazon.com/Building-large-scale-web-apps-ebook/dp/B0CZ9H2XN5](https://www.amazon.com/Building-large-scale-web-apps-ebook/dp/B0CZ9H2XN5)
+			- How AI-assisted coding will change software engineering: hard truths: [https://newsletter.pragmaticengineer.com/p/how-ai-will-change-software-engineering](https://newsletter.pragmaticengineer.com/p/how-ai-will-change-software-engineering)
+			- Python, Go, Rust, TypeScript and AI with Armin Ronacher: [https://newsletter.pragmaticengineer.com/p/python-go-rust-typescript-and-ai](https://newsletter.pragmaticengineer.com/p/python-go-rust-typescript-and-ai)
+			- DeepMind: [https://deepmind.google](https://deepmind.google/)
+			- Gemini: [https://gemini.google.com](https://gemini.google.com/)
+			- Stackoverflow: [https://stackoverflow.com](https://stackoverflow.com/)
+			- Jules: [https://jules.google](https://jules.google/)
+			- CodeX: [https://chatgpt.com/codex](https://chatgpt.com/codex)
+			- JavaScript: [https://www.javascript.com](https://www.javascript.com/)
+			- Bolt: [https://bolt.new](https://bolt.new/)
+			- *Building Web Apps with Bolt: Unlock the Future of AI-First Development*: [https://www.amazon.com/Building-Web-Apps-Bolt-Development/dp/B0F6SP872Y](https://www.amazon.com/Building-Web-Apps-Bolt-Development/dp/B0F6SP872Y)
+			- *The Software Engineer's Guidebook: Navigating senior, tech lead, and staff engineer positions at tech companies and startups*: [https://www.amazon.com/dp/908338182X](https://www.amazon.com/dp/908338182X)
+			- *AI Engineering: Building Applications with Foundation Models*: [https://www.amazon.com/AI-Engineering-Building-Applications-Foundation/dp/1098166302](https://www.amazon.com/AI-Engineering-Building-Applications-Foundation/dp/1098166302)
+			- AI Engineering with Chip Huyen: [https://newsletter.pragmaticengineer.com/p/ai-engineering-with-chip-huyen](https://newsletter.pragmaticengineer.com/p/ai-engineering-with-chip-huyen)
+			- The AI Engineering Stack: [https://newsletter.pragmaticengineer.com/p/the-ai-engineering-stack](https://newsletter.pragmaticengineer.com/p/the-ai-engineering-stack)
+	- ## quotes
+		- ### Only commit code you can explain; don’t rely on AI to untangle messes later.
+			- > “If you care about production‑quality programming, you should probably only be committing code to your repo that you can fully explain to somebody else. Because just expecting that the AI is going to help you untangle whatever mess happens later on is probably not going to work out long term.” —Addy Osmani, Beyond Vibe Coding With Addy Osmani (The Pragmatic Engineer Podcast) https://readwise.io/bookreview/55952886/?highlight=952793343 #Quote
+		- ### Library vs AI snippets: if you replace libs with AI code, you own maintenance and security.
+			- > “Do I still need to use third‑party libraries if I can just prompt a smaller version myself?… You are now taking on the responsibility of making sure this is future‑proof for security issues… With a library, there’s a central point of leverage where fixes can be made and deployed.” —Addy Osmani #Quote
+			- > “The patterns in [training] code are probably… lowest common denominator. Are they going to be the most secure, the most high performance, the most accessible? Possibly not… you still need a lot of work to get to production quality.” —Addy Osmani #Quote
+		- ### Decompose work: small, verifiable chunks > “kitchen sink” prompts
+			- > “Break tasks into small, verifiable chunks… I’ve seen a lot of people throw the kitchen sink at the LLM… that doesn’t necessarily work the best. So, you know, small, verifiable chunks, clear expectations, and be prepared to iterate with the AI… That decomposition is really pretty similar to planning a sprint or writing pseudocode… and it reduces the risk of context loss and compounding errors.” — Addy Osmani #Quote
