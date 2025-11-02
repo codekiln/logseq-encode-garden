@@ -1,0 +1,3 @@
+- [Nix in 100 Seconds - YouTube](https://www.youtube.com/watch?v=FJVFXsNzYZQ)
+	- ## Video
+		- {{video https://www.youtube.com/watch?v=FJVFXsNzYZQ}}
