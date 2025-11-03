@@ -10,10 +10,10 @@ tags:: [[AI Coding]], [[Reference]]
   | [[RooCode]] | RooVet Developers | https://github.com/RooVetDevelopers/roocode |
   | [[CodexCLI]] | OpenAI | https://github.com/openai/codex |
   | [[FactoryCLI]] | Factory AI | https://github.com/Factory-AI/factory |
-  | [[CursorAI]] | Cursor AI | https://github.com/getcursor/cursor |
+  | [[CursorAI]] | Anysphere | https://github.com/getcursor/cursor |
   | [[GitHub/CoPilot]] | GitHub | https://github.com/features/copilot |
   | [[Windsurf]] | Codeium | https://github.com/codeium/windsurf |
-  | [[OpenCode]] | OpenCode AI | https://github.com/opencode-ai |
+  | [[OpenCode]] | Anomaly Innovations | https://github.com/sst/opencode |
   | [[Crush]] | Charmbracelet | https://github.com/charmbracelet/crush |
   | [[AugmentCode]] | Augment Code | https://github.com/augmentcode/augment |
   | [[GeminiCLI]] | Google DeepMind | https://github.com/google-deepmind/gemini |
