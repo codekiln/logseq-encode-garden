@@ -1,0 +1,42 @@
+tags:: [[Person]], [[Software Engineer]], [[AI Systems Architect]]
+
+- # Seth Hobson
+	- ## Overview
+		- Software Engineer | AI Systems Architect | Open Source Contributor
+		- Builds intelligent systems at the intersection of AI and finance
+		- Currently shipping reasoning-powered lifecycle analytics at [[Company/United Data Technologies]]
+		- Developing [[Project/Capital Companion]], an AI trading assistant for real-time market analysis
+	- ## Professional Experience
+		- ### Senior AI Engineer, [[Company/United Data Technologies]] (2025-present)
+		- ### Founder, [[Company/Major 7 Apps LLC]] (2024-present)
+		- ### Senior Software Engineer, [[Company/Kuali Inc.]] (2021-2023)
+		- ### Senior Software Engineer, [[Company/Apple]] (2015-2021)
+		- ### Software development and web technologies (2009-2015)
+	- ## What I'm Building
+		- ### [[Person/Seth Hobson/GitHub/agents]] — 14.5k+ stars
+			- A comprehensive production-ready system combining 84 specialized AI agents, 15 multi-agent workflow orchestrators, and 44 development tools organized into 62 focused, single-purpose plugins for Claude Code
+			- Repository: [agents](https://github.com/wshobson/agents)
+		- ### [[Project/Claude Code Slash Commands]] — 800+ stars
+			- 52 slash commands enabling multi-agent orchestration for complex software development tasks
+			- Repository: [commands](https://github.com/wshobson/commands)
+		- ### [[Project/Capital Companion]]
+			- AI-powered trading assistant using Claude for market analysis, risk management, and technical indicators
+			- Website: [capitalcompanion.ai](https://capitalcompanion.ai)
+		- ### [[Project/Maverick MCP]]
+			- Model Context Protocol server for stock analysis and trading data
+			- Repository: [maverick-mcp](https://github.com/wshobson/maverick-mcp)
+	- ## Skills
+		- Software Architecture and Design
+		- Full-Stack Development: Python, JavaScript/TypeScript, SQL, Go, C, Rust
+		- AI/ML/LLM Implementation and Integration
+		- LLM Performance Optimization: RAG, Agentic RAG, SFT, and RAFT
+		- API Engineering: REST, GraphQL, gRPC, MCP, A2A
+		- Database Design: RDBMS and NoSQL
+		- Data Pipeline Engineering
+		- Cloud Computing and Distributed Systems: Azure, AWS, Terraform
+		- Data Analysis and Visualization
+	- ## External Links
+		- [Personal Website](https://sethhobson.com/)
+		- [GitHub](https://github.com/wshobson)
+		- [LinkedIn](https://www.linkedin.com/in/sethhobson/)
+
