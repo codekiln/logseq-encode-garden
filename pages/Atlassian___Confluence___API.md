@@ -1,0 +1,17 @@
+- [Atlassian Confluence Cloud API Documentation](https://developer.atlassian.com/cloud/)
+	- Confluence Cloud provides multiple API options for integration and development
+	- Main API types:
+		- [[Atlassian/Confluence/API/GraphQL]]
+		- [[Atlassian/Confluence/API/REST/v2]]
+		- [[Atlassian/Confluence/API/REST/v1]]
+	- Additional API options:
+		- CQL (Confluence Query Language)
+		- App properties API
+		- Entity properties
+		- Connect
+	- Authentication:
+		- OAuth 2.0
+		- JWT (for cloud apps)
+		- Basic auth (for direct REST API calls)
+	- See also: [[Atlassian/Cloud/Developer/Documentation]]
+

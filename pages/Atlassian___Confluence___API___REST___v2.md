@@ -1,0 +1,27 @@
+- [Confluence Cloud REST API v2](https://developer.atlassian.com/cloud/confluence/rest/v2/intro/)
+	- Improved performance and definitions over v1
+	- Reference documentation available
+	- [OpenAPI specification downloadable](https://developer.atlassian.com/cloud/confluence/rest/v2/intro/)
+		- Click meatball menu (upper right) to download spec
+		- Postman collection also available
+	- Authentication:
+		- Cloud apps: JWT or OAuth 2.0
+		- Direct REST API calls: Basic auth
+	- Authorization:
+		- Cloud apps: Scopes or OAuth 2.0 user impersonation
+		- Direct calls: Based on authenticated user
+	- Pagination:
+		- Cursor-based pagination
+		- Use `limit` and `cursor` parameters
+		- Check `Link` header for next page (`rel="next"`)
+		- Also available via `_links.next` property in response body
+	- Example endpoint:
+		- `GET /wiki/api/v2/pages?limit=5`
+		- If more results available, `Link` header contains next cursor URL
+	- Available resources:
+		- Pages, Blog Posts, Comments
+		- Spaces, Labels, Attachments
+		- Users, Versions, Custom Content
+		- And more
+	- See also: [[Atlassian/Confluence/API]]
+

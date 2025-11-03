@@ -1,0 +1,29 @@
+- [Confluence Cloud GraphQL API](https://developer.atlassian.com/cloud/confluence/graphql/)
+	- Part of the Atlassian platform GraphQL API
+	- Access to Confluence data through unified GraphQL gateway
+	- Features:
+		- Strongly typed API
+		- Flexible queries - specify only the fields you need
+		- Efficient - get multiple related entities in a single request
+		- [GraphQL Explorer (GraphiQL)](https://developer.atlassian.com/cloud/confluence/graphql/explorer/)
+			- Interactive browser-based IDE
+			- Run queries and mutations
+			- Auto-complete suggestions (Ctrl+Space)
+			- Type system documentation
+	- Authentication:
+		- OAuth: `https://api.atlassian.com/graphql`
+		- Browser sessions and API tokens: `https://{subdomain}.atlassian.net/gateway/api/graphql`
+		- Anonymous access supported for some fields
+	- Authorization:
+		- Some fields require specific OAuth 2.0 authorization code grants (3LO)
+		- Check field descriptions in GraphQL explorer for required scopes
+	- Rate limiting:
+		- Cost-based per-user rate limiting
+		- Default: 10,000 points per currency per minute
+		- Returns HTTP 429 with `RETRY-AFTER` header when exceeded
+	- Schema changes:
+		- Single continuously evolving version (not versioned like REST APIs)
+		- Beta fields require `X-ExperimentalApi: <betaName>` header
+		- Deprecated fields are removed after deprecation period
+	- See also: [[Atlassian/Confluence/API]]
+
