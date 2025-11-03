@@ -1,0 +1,2 @@
+- [Overview | Toggl Engineering](https://engineering.toggl.com/docs/)
+	- Free plan API limits are 30 requests per hour
