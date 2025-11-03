@@ -1,0 +1,2 @@
+- [[JIRA/CLI/sprint/list]] [jira sprint list](https://github.com/ankitpokhrel/jira-cli?tab=readme-ov-file)
+	- `jira sprint list --state future,active`
