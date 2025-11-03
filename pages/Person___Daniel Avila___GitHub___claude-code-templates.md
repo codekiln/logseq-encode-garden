@@ -1,5 +1,6 @@
 - # [Claude Code Templates (aitmpl.com)](https://github.com/davila7/claude-code-templates)
 	- Repository: [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates)
+	- [[Person/Daniel Avila/GitHub/claude-code-templates/DeepWiki]] #DeepWiki
 	- Website: [aitmpl.com](https://aitmpl.com)
 	- Documentation: [docs.aitmpl.com](https://docs.aitmpl.com)
 	- Created by: [[Person/Daniel Avila]]
