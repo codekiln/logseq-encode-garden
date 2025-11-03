@@ -4,6 +4,7 @@
 		- [[Atlassian/Confluence/API/GraphQL]]
 		- [[Atlassian/Confluence/API/REST/v2]]
 		- [[Atlassian/Confluence/API/REST/v1]]
+		- Conceptual overview: [[Atlassian/Confluence/API/Concept/GraphQL vs REST]]
 	- Additional API options:
 		- CQL (Confluence Query Language)
 		- App properties API
