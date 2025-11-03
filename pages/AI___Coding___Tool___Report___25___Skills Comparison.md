@@ -1,6 +1,6 @@
-tags:: [[AI Coding]], [[Report]], [[Research]]
+tags:: [[AI Coding]], [[Report]], [[AI Deep Research]] 
 alias:: [[AI/Coding/Tool/Report/25/Skills Comparison]]
-date-created:: [[2025-11-03]]
+date-created:: [[2025-11-03 Mon]]
 
 - # Comparative Analysis of Agentic AI Coding Assistants: Modular "Skills" Systems Beyond Claude Code
 	- ## Executive Summary
@@ -89,4 +89,3 @@ date-created:: [[2025-11-03]]
 		- [^11]: https://github.com/warpdotdev/Warp
 		- [^12]: https://deepmind.google/discover/blog/google-jules-ai-code-understanding-and-generation/
 		- [^13]: https://github.com/openai/codex
-
