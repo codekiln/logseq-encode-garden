@@ -1,0 +1,1 @@
+- [Understanding Brave Sync – Brave Help Center](https://support.brave.app/hc/en-us/articles/360059793111-Understanding-Brave-Sync)
