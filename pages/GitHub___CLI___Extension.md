@@ -4,4 +4,5 @@ alias:: [[GitHub CLI Extensions]], [[gh extension]]
 	- Collection of GitHub CLI extensions
 	- ## Extensions
 		- [[GitHub/CLI/Extension/gh-sub-issue]]
+		- [[GitHub/CLI/Extension/gh-issue-dependency]]
 
