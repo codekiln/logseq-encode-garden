@@ -11,4 +11,6 @@ tags:: [[CLI/Tool]]
 			- [[GitHub/CLI/EnvVar/GH_TOKEN]]
 				- `Alternatively, populate the GH_TOKEN environment variable with a GitHub API authentication token.`
 				- See also [[GitHub/CLI/Q/Is it possible to scope gh CLI permissions by directory or repo]]
+	- ## Extensions
+		- [[GitHub/CLI/Extension]]
 		-
