@@ -1,0 +1,53 @@
+alias:: [[CursorAI/Feature/Browser Control]], [[CursorAI/MCP/Browser Extension]]
+- # Cursor Browser Control Feature
+	- ## Overview
+		- Cursor AI can control web browsers directly through the [[CursorAI/MCP/Browser Extension]] MCP server
+		- This feature allows the AI agent to interact with web pages, perform automated testing, debugging, and UI improvements
+		- Previously in beta, Browser feature achieved General Availability in [[CursorAI/v/2.0]]
+	- ## Capabilities
+		- ### Navigation
+			- Navigate to URLs
+			- Navigate back through browser history
+			- Resize browser window
+		- ### Interaction
+			- Click elements on pages
+			- Type into form fields
+			- Fill forms with multiple fields
+			- Select dropdown options
+			- Hover over elements
+			- Drag and drop between elements
+		- ### Inspection
+			- Take screenshots of pages or specific elements
+			- Capture accessibility snapshots (better than screenshots for understanding page structure)
+			- View console messages
+			- Monitor network requests
+			- Evaluate JavaScript expressions
+		- ### Advanced Features
+			- Wait for text to appear or disappear
+			- Handle dialogs (alerts, confirms, prompts)
+			- Manage multiple browser tabs
+			- Handle forms with validation
+	- ## Use Cases
+		- ### Automated Testing
+			- Execute end-to-end tests by navigating through user flows
+			- Fill forms and verify outputs
+			- Streamline the testing phase
+		- ### UI Enhancements
+			- Analyze web interfaces
+			- Propose or implement refinements directly within the browser
+			- Reduce need for manual back-and-forth adjustments
+		- ### Client-Side Debugging
+			- Detect and address client-side issues
+			- Access console logs and network activities
+			- Facilitate efficient debugging
+	- ## Technical Details
+		- Implemented as an MCP server: `cursor-browser-extension`
+		- Provides browser control tools through the Model Context Protocol
+		- Integrated into Cursor's agent interface
+		- Includes embedded in-editor support with tools to select elements and forward DOM information to the agent
+	- ## Related
+		- [[CursorAI/Settings/MCP]] - Configure MCP servers
+		- [[CursorAI/Docs/Context/Model Context Protocol]] - MCP documentation
+		- [[CursorAI/v/2.0]] - Browser feature GA announcement
+		- [[MCP Server]] - Model Context Protocol overview
+
