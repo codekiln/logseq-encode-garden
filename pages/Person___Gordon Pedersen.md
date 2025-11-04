@@ -1,0 +1,29 @@
+alias:: [[People/Gordon Pedersen]]
+- # [Gordon Pedersen](https://www.death.id.au/)
+	- Also known as: **death.au**
+	- ## About
+		- Software developer and tinkerer based in Melbourne, Australia
+		- Active in open source development, particularly browser extensions and Obsidian plugins
+	- ## Notable Work
+		- ### markdownload
+			- Maintainer of [markdownload](https://github.com/deathau/markdownload), a Firefox and Google Chrome extension to clip websites and download them into readable markdown files
+			- Forked from ariesdevil/markdown-clipper
+			- Popular open source project with 3.5k+ stars on GitHub
+		- ### Obsidian Plugins
+			- Multiple popular Obsidian plugins including:
+				- [obsidian-snippets](https://github.com/deathau/obsidian-snippets) - 879+ stars
+				- [sliding-panes-obsidian](https://github.com/deathau/sliding-panes-obsidian) - Andy Matuschak Mode as a plugin, 823+ stars
+				- [cm-editor-syntax-highlight-obsidian](https://github.com/deathau/cm-editor-syntax-highlight-obsidian) - Syntax highlighting for code blocks, 559+ stars
+				- [cm-typewriter-scroll-obsidian](https://github.com/deathau/cm-typewriter-scroll-obsidian) - Typewriter Scroll plugin, 206+ stars
+				- [Notation-for-Obsidian](https://github.com/deathau/Notation-for-Obsidian) - Theme inspired by Notion, 200+ stars
+	- ## Online Presence
+		- Website: [death.id.au](https://www.death.id.au/)
+		- GitHub: [@deathau](https://github.com/deathau)
+			- 324+ followers
+			- 53 repositories
+		- LinkedIn: [Gordon Pedersen](https://www.linkedin.com/in/gordon-pedersen/)
+		- Fediverse: [@death.au@death.id.au](https://death.id.au/profile/death.au)
+		- Email: death.au@death.id.au
+	- ## Location
+		- Based in Melbourne, Australia
+
