@@ -1,0 +1,87 @@
+# [Cross-account configuration with AWS AppConfig | AWS Cloud Operations Blog](https://aws.amazon.com/blogs/mt/cross-account-configuration-with-aws-appconfig/)
+	- Published: 2022-02-17
+	- Author: [[Person/Luis Gomez]]
+	- Blog: [[AWS/AppConfig/Blog]]
+	- Tags: #AWS #AppConfig #Cross-Account #Configuration #Multi-Account #Systems Manager
+	- 
+	- ## Overview
+	- Guide for managing application configurations across multiple AWS accounts using AWS AppConfig. Uses a centralized configuration account (typically in a Deployments OU) to manage configurations for applications running in separate accounts.
+	- 
+	- ## Key Concepts
+	- * Centralized configuration management: Use a dedicated configuration account to host AWS AppConfig resources
+	- * Cross-account access: Applications in other accounts assume IAM roles to read configurations from the config account
+	- * Multi-environment support: Deploy configurations to different environments (development, testing, production) from a single place
+	- 
+	- ## Architecture
+	- * Configuration Account (Config Account)
+		- Hosts AWS AppConfig application, configuration profiles, and environments
+		- Stores container images in Amazon ECR
+		- Provides IAM roles for cross-account access
+	- * Application Account (App Account)
+		- Runs the application (e.g., in AWS App Runner)
+		- Assumes IAM role in config account to read AppConfig
+		- Pulls container images from config account ECR
+	- 
+	- ## Setup Steps
+	- ### Account Setup
+	- * Create accounts using AWS Organizations or independent accounts
+	- * Configure AWS CLI access with SSO (e.g., "config" profile for config account, "dev" profile for app account)
+	- 
+	- ### Application Build
+	- * Containerized Python Flask app (example in blog post)
+	- * Push image to ECR in config account
+	- * Share ECR repository with app account via repository policy
+	- 
+	- ### AWS AppConfig Setup
+	- * Create application (e.g., "ListServices")
+	- * Create environments (development, testing, production)
+	- * Create configuration profile with JSON content
+	- * Add JSON Schema validator
+	- * Deploy initial configuration to development environment
+	- 
+	- ### IAM Roles & Permissions
+	- * Config Account:
+		- IAM policy: `AppConfigListServicesAccessPolicy`
+			- Permissions for AppConfig API calls (GetLatestConfiguration, StartConfigurationSession, etc.)
+		- IAM role: `AppConfigListServicesAccessRole`
+			- Trusts app account
+			- Attached to AppConfig access policy
+	- * App Account:
+		- IAM policy: `AssumeAppConfigListServicesAccessPolicy`
+			- Allows assuming the role in config account
+		- IAM role: `AppRunnerListServicesCrossConfigRole`
+			- For App Runner service
+			- Trusts `tasks.apprunner.amazonaws.com`
+			- Allows assuming config account role
+	- 
+	- ### Application Deployment
+	- * Deploy application using AWS App Runner (or other container service)
+	- * Set environment variables:
+		- `APPCONFIGAPPNAME`: Application name
+		- `APPCONFIGCONF`: Configuration profile identifier
+		- `APPCONFIGENV`: Environment identifier
+		- `APPCONFIGREADROLE`: ARN of IAM role in config account to assume
+	- 
+	- ## Configuration Management Pattern
+	- * Application code uses `boto3` to:
+		- Assume role in config account via STS
+		- Start AppConfig configuration session
+		- Poll for latest configuration using token
+		- Cache configuration data
+	- * Configuration changes are deployed from config account console
+	- * Applications automatically pick up changes without redeployment
+	- 
+	- ## Use Cases
+	- * Centralized configuration management across multiple accounts
+	- * Environment-specific configurations (dev/test/prod)
+	- * Dynamic configuration updates without application redeployment
+	- * Configuration isolation from application workloads
+	- 
+	- ## Related Resources
+	- * [[AWS/Systems Manager]]
+	- * [[AWS/AppConfig]]
+	- * [[AWS/Organizations]]
+	- * [[AWS/IAM/Cross-Account Access]]
+	- * [[AWS/App Runner]]
+	- * [[AWS/ECR]]
+
