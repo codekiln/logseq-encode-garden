@@ -1,0 +1,24 @@
+- # Technique: Using AWS IAM Identity Center for Long-Lived Temporary Credentials
+	- Related: [[AWS/IAM/Identity Center]] [[AWS/IAM/Role Chaining]] [[AWS/Okta Keyman]]
+	- ## Problem: Role Chaining Limitations
+		- Long-lived temporary credentials are a concern when using role chaining
+		- When assuming a role (e.g., via [[AWS/Okta Keyman]]) into a landing area and then assuming another role, that's considered role chaining
+		- AWS restricts chained sessions to a maximum of **one hour**
+	- ## Solution: AWS IAM Identity Center
+		- AWS IAM Identity Center provides a centralized landing page where users can:
+			- Access AWS accounts through the console, or
+			- Retrieve **temporary CLI credentials** on a per-account basis
+		- The lifespan of those temporary credentials can be configured anywhere from **1 hour up to 12 hours**
+	- ## Integration Approach
+		- Identity Center integrates with identity providers like [[Okta]]
+		- Create groups in the identity provider (e.g., Okta)
+		- Add users to those groups
+		- Sync them to AWS Identity Center within a centralized AWS account via **SCIM provisioning**
+		- Permissions are managed at the group level using **Terraform**
+	- ## AWS Recommendation
+		- AWS recommends using Identity Center for Bedrock API keys: [Accelerate AI development with Amazon Bedrock API keys](https://aws.amazon.com/blogs/machine-learning/accelerate-ai-development-with-amazon-bedrock-api-keys/)
+	- ## Related Pages
+		- [[AWS/IAM/Role]]
+		- [[AWS/Bedrock]]
+		- [[Claude Code/Bedrock]]
+
