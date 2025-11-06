@@ -15,4 +15,5 @@ tags:: [[AI/LLM/Observability]]
 		- [[HumanloopAI]] - LLM evaluation platform with observability features
 		- [[LangSmith]] - LLM observability and evaluation platform
 		- [[PromptFooAI]] - Testing framework with evals for LLM applications
+		- [[SplxAI]] - End-to-end security for AI with automated vulnerability scanning and continuous protection
 

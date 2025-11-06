@@ -13,6 +13,7 @@ alias:: [[Prompt Injection]]
 		- **Indirect Prompt Injection**: Malicious content is embedded in data sources that the AI processes (e.g., web pages, documents, GitHub issues)
 	- ## Detection and Testing
 	- [[PromptFooAI]] - Testing framework for detecting prompt injection attacks
+	- [[SplxAI]] - Automated security testing and continuous protection for AI systems
 - ## Related Concepts
 	- [[AI/Security/Attack/Toxic Agent Flow]] - Use of indirect prompt injection to trigger malicious tool use sequences
 
