@@ -1,0 +1,1 @@
+- What types of resource tags can be created? Can they be used, for example, to annotate whether a particular trace is an example of a particular [[AI/Behavior]]?
