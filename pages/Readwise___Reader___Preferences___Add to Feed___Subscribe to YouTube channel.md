@@ -1,0 +1,2 @@
+- This lets you subscribe to a [[YouTube]] channel without having to visit YouTube, which is ideal for protecting concentration. It is delivered twice daily: AM and PM.
+	- #Nit I wish they had a way to bulk import subscriptions from YouTube.

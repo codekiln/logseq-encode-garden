@@ -1,0 +1,1 @@
+alias:: [[My Side-Note]]

@@ -1,1 +1,1 @@
-- at read.readwise.io/add-to-feed location, you can set a readwise-personalized email address that you can then use to subscribe to newsletters elsewhere on the internet, freeing up your email inbox directly.
+- you can set a readwise-personalized email address that you can then use to subscribe to newsletters elsewhere on the internet, freeing up your email inbox directly.

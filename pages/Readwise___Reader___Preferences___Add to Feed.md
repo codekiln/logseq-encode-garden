@@ -6,4 +6,4 @@
 		- this is a great example of why I love readwise; it helps me funnel things like subscriptions into an app where my concentration is naturally protected and where I control the ability to highlight and then, later query (using [[Readwise/AI/Chat]] or [[Readwise/API]])
 		- {{embed [[Readwise/Reader/Preferences/Add to Feed/Upload OPML file]]}}
 		- {{embed [[Readwise/Reader/Preferences/Add to Feed/Subscribe to email newsletters]]}}
-		- {{embed [[Readwise/Reader/Preferences/Subscribe to YouTube channel]] }}
+		- {{embed [[Readwise/Reader/Preferences/Add to Feed/Subscribe to YouTube channel]] }}
