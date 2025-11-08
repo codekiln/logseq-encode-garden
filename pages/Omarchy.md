@@ -1,7 +1,8 @@
 created-by:: [[Person/DHH]]
 
 - [Omarchy — Beautiful, Modern & Opinionated Linux by DHH](https://omarchy.org/)
-	- ## great [docs](https://learn.omacom.io/2/the-omarchy-manual)
+	- ## great docs: [[Omarchy Docs]]
+		- [[My Side-Note]] the docs were written with [[Writebook]]
 		- [Shell Tools · The Omarchy Manual · DHH](https://learn.omacom.io/2/the-omarchy-manual/57/shell-tools)
 			- [[fzf]]
 			- [[Zoxide]]
