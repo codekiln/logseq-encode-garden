@@ -1,4 +1,4 @@
-tags:: [[Term]], [[Abbreviation]]
+tags:: [[Term]], [[Acronym]] 
 alias:: [[Away from Keyboard]], [[AFK]]
 
 - # Away from Keyboard (AFK)

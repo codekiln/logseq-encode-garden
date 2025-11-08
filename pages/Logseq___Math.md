@@ -1,4 +1,5 @@
-- # Logseq Math Rendering
+# Logseq Math Rendering
+	- [[My Note]] I have a [[rulesync/command]] in this repo for doing cleanup of logseq math in a #Markdown page: `.rulesync/commands/logseq-cleanup-math.md`
 	- Logseq supports **LaTeX math rendering** using **KaTeX** — both inline and block math. Here's how to use it:
 	- ## 🧮 Inline Math
 		- Wrap your LaTeX expression in single dollar signs:
