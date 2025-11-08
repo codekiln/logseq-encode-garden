@@ -1,3 +1,5 @@
+tags:: [[AI Deep Research]], [[Report]]
+
 - # Comprehensive Analysis of Claude Code Plugin Marketplace Precedents
 	- ## Overview
 		- This report presents a detailed analysis of Claude Code-related GitHub repositories and templates serving as precedents for a Claude Code Plugin Marketplace. The focus is on identifying core structural patterns, manifest schemas, plugin registration/discovery systems, architectural models for integrating and bundling Claude Code skills with GitHub CLI workflows, as well as surfacing limitations and gaps in current open-source efforts. Particular attention is paid to the repositories specified in the brief: `ehudhal/claude-code-marketplace`, `anthropic-samples/claude-code-plugins`, `anthropics/skills`, `wshobson/agents`, and `davila7/claude-code-templates`, as well as any other repositories discovered via GitHub search conventions.
@@ -22,7 +24,7 @@
 			- #### 1.1.5. [anthropic-samples/claude-code-plugins](https://github.com/anthropic-samples/claude-code-plugins)
 				- Potential reference for plugin samples or marketplace infrastructure; currently public availability and content not confirmed due to access issues.
 			- #### 1.1.6. Additional Repositories Located via Search Patterns
-				- Using GitHub path:**/.claude-plugin/marketplace.json search, several small marketplaces and plugin registries surfaced, but most were either forks or minimal experiments mirroring the standards set in official repositories.
+				- Using GitHub path: `**/.claude-plugin/marketplace.json` search, several small marketplaces and plugin registries surfaced, but most were either forks or minimal experiments mirroring the standards set in official repositories.
 	- ## 2. Plugin Registration, Discovery, and Metadata Management
 		- ### 2.1. Manifest Patterns—YAML/JSON
 			- The majority of Claude Code skills/plugins leverage a manifest structure, usually `skill.yaml`, `plugin.yaml`, or consolidated `marketplace.json` files within a `.claude-plugin` directory.

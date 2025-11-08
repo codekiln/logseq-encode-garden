@@ -1,0 +1,9 @@
+- Readwise Reader settings at https://read.readwise.io/add-to-feed
+	- Subscribe to various things on the newsletters and send them to your feed
+	- [[see-also]]
+		- [[Readwise/Reader/Doc/FAQ/Feed]]
+	- [[My Notes]]
+		- this is a great example of why I love readwise; it helps me funnel things like subscriptions into an app where my concentration is naturally protected and where I control the ability to highlight and then, later query (using [[Readwise/AI/Chat]] or [[Readwise/API]])
+		- {{embed [[Readwise/Reader/Preferences/Add to Feed/Upload OPML file]]}}
+		- {{embed [[Readwise/Reader/Preferences/Add to Feed/Subscribe to email newsletters]]}}
+		- {{embed [[Readwise/Reader/Preferences/Subscribe to YouTube channel]] }}

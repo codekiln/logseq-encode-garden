@@ -1,0 +1,1 @@
+- [[OPML]] and [[XML]] supported. I'm not sure whether it's a "replace" or whether uploading OPML will just "add." In particular, if it was possible to export YouTube subscriptions as OPML, that could help in porting over to just using readwise.
