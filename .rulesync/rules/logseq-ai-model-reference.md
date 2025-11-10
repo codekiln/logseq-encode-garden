@@ -6,7 +6,7 @@ description: ''
 globs: ['journals/*.md', 'pages/*.md']
 ---
 # AI Model Reference Quick Guide
-This rule extends `logseq-naming-conventions.mdc` for quickly referencing AI models in the knowledge graph without creating detailed pages.
+This rule extends the logseq-naming-conventions rule for quickly referencing AI models in the knowledge graph without creating detailed pages.
 
 ## When to Use This Rule
 - When mentioning a model in passing
@@ -73,7 +73,7 @@ When creating a stub page for a new model:
 - Create stub pages for new models to maintain consistency
 - Use aliases for common model references
 - Link to existing model pages when available
-- Follow the singular naming convention from `logseq-naming-conventions.mdc`
+- Follow the singular naming convention from the logseq-naming-conventions rule
 
 ## When to Create a Detailed Page
 - When the model is a primary focus of discussion
@@ -82,4 +82,4 @@ When creating a stub page for a new model:
 - When the model is frequently referenced
 - When detailed technical specifications are needed
 
-In these cases, refer to `logseq-ai-model-details-page.mdc` for creating comprehensive model documentation.
+In these cases, refer to the logseq-ai-model-details-page rule for creating comprehensive model documentation.

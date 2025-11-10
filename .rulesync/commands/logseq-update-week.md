@@ -185,4 +185,4 @@ The command maintains correct references between:
 ### Today's Link Template
 The command updates the `Logseq___Template___Today___Link.md` file with references to the new week and properly formatted date links for each day.
 
-All created files follow Logseq Flavored Markdown conventions as described in the logseq-flavored-markdown.md rule.
+All created files follow Logseq Flavored Markdown conventions as described in the logseq-flavored-markdown rule.

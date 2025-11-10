@@ -6,7 +6,7 @@ description: ''
 globs: ['{journals,pages}/*.md']
 ---
 # AI Model Detailed Documentation Guide
-This rule extends `logseq-naming-conventions.mdc` for creating comprehensive AI model documentation pages.
+This rule extends the logseq-naming-conventions rule for creating comprehensive AI model documentation pages.
 
 ## When to Use This Rule
 - When creating detailed model documentation for a specific model version
@@ -100,7 +100,7 @@ tags:: [[AI/Model]]
 - Document model variants and their differences
 - Keep pricing and availability information up to date
 - Link to related models and comparisons
-- Follow the singular naming convention from `logseq-naming-conventions.mdc`
+- Follow the singular naming convention from the logseq-naming-conventions rule
 - Use model codes in aliases (e.g., `[[gemini-2.5-pro-preview-05-06]]` instead of `[[Gemini 2.5 Pro Preview 05-06]]`)
 - Always document specific model versions, not model families
 - Include model version status (stable/preview/experimental) in key features
@@ -115,6 +115,6 @@ tags:: [[AI/Model]]
 - When model version status changes (e.g., from preview to stable)
 
 ## Related Rules
-- `logseq-ai-model-reference.mdc` - For quick model references
-- `logseq-naming-conventions.mdc` - For naming conventions
-- `logseq-directory-structure.mdc` - For page organization
+- logseq-ai-model-reference rule - For quick model references
+- logseq-naming-conventions rule - For naming conventions
+- logseq-directory-structure rule - For page organization

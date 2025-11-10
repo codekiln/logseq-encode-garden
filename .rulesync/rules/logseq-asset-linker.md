@@ -6,7 +6,7 @@ description: ''
 globs: ['journals/*.md', 'pages/*.md']
 ---
 # Constructing a Logseq Asset Link
-This project rule is an extension to [logseq-flavored-markdown](mdc:.cursor/rules/logseq-flavored-markdown.mdc) which describes how to construct links to assets in the [assets](mdc:assets) directory and its subdirectories.
+This project rule is an extension to the logseq-flavored-markdown rule which describes how to construct links to assets in the [assets](../assets) directory and its subdirectories.
 
 ### **Description**  
 This rule can help the user convert macOS file paths into relative Markdown links for Logseq, a knowledge management and note-taking application.  
@@ -33,7 +33,7 @@ The response should always be formatted as a code snippet for easy copying.
 - **USER:** Can you give me the link for `/a/b/c/logseq/assets/Course-101/assignments/week3/notes/course101__assignment__03__notes.pdf`?  
 - **GPT:**  
   ```markdown
-  ![course101__assignment__03__notes.pdf](mdc:../assets/Course-101/assignments/week3/notes/course101__assignment__03__notes.pdf)
+  ![course101__assignment__03__notes.pdf](../assets/Course-101/assignments/week3/notes/course101__assignment__03__notes.pdf)
   ```  
 
 ---
@@ -65,24 +65,24 @@ This GPT should also be able to:
 - **USER:** Can you give me the link for `[[Projects/Research/Notes]]`?  
 - **GPT:**  
   ```markdown
-  [Notes](mdc:../assets/Projects/Research/Projects__Research__Notes)
+  [Notes](../assets/Projects/Research/Projects__Research__Notes)
   ```  
 - **USER:** Can you make it a PDF link?  
 - **GPT:**  
   ```markdown
-  ![Notes](mdc:../assets/Projects/Research/Projects__Research__Notes.pdf)
+  ![Notes](../assets/Projects/Research/Projects__Research__Notes.pdf)
   ```  
 - **USER:** Can you link to the folder?  
 - **GPT:**  
   ```markdown
-  [assets in Projects/Research](mdc:../assets/Projects/Research)
+  [assets in Projects/Research](../assets/Projects/Research)
   ```  
 
 **Example 4:**  
 - **USER:** Can you give me a PNG asset link for `[[Course-101/homework/03/04 linear equations]]`?  
 - **GPT:**  
   ```markdown
-  ![04_linear_equations.png](mdc:../assets/Course-101/homework/03/04/Course-101__homework__03__04_linear_equations.png)
+  ![04_linear_equations.png](../assets/Course-101/homework/03/04/Course-101__homework__03__04_linear_equations.png)
   ```  
 
 ---
@@ -95,7 +95,7 @@ When a user provides an absolute file path (e.g., `/Users/username/path/to/file.
   `/Users/username/documents/projects/example-docs/example-docs_1234567890.json`  
 - **Expected Output:**  
   ```markdown
-  [example-docs_1234567890.json](mdc:file:/Users/username/documents/projects/example-docs/example-docs_1234567890.json)
+  [example-docs_1234567890.json](file:/Users/username/documents/projects/example-docs/example-docs_1234567890.json)
   ```  
 
 #### **2. Logseq Asset Links for Files**  
@@ -103,13 +103,13 @@ If the user specifies that a file is part of a Logseq project and requests a rel
 - Identify the file's location relative to the Logseq folder structure.  
 - Assume the file is stored in a common root Logseq directory, typically either `logseq/assets/` or `logseq/pages/`.  
 - Format the link relative to a typical Logseq page location (`logseq/pages/somepage.md`).  
-- Use Markdown syntax for linking (e.g., `[name](mdc:relative/path/to/file)`).  
+- Use Markdown syntax for linking (e.g., `[name](relative/path/to/file)`).  
 
 - **Example Input:**  
   `/Users/Myer/dev/clones/logseq/assets/Folder/File.ext`  
 - **Expected Output:**  
   ```markdown
-  [File.ext](mdc:../assets/Folder/File.ext)
+  [File.ext](../assets/Folder/File.ext)
   ```  
 
 #### **3. Consistent Formatting for Logseq Namespaced Assets**  
@@ -127,7 +127,7 @@ For files that need to follow Logseq's **namespace conventions**, ensure you:
 
 - **Example Output:**  
   ```markdown
-  [File](mdc:../assets/Folder/Subfolder/Folder__Subfolder__File.ext)
+  [File](../assets/Folder/Subfolder/Folder__Subfolder__File.ext)
   ```  
 
 ---
@@ -138,5 +138,5 @@ For files that need to follow Logseq's **namespace conventions**, ensure you:
 - **Namespace Conversion:** For Logseq namespaces, convert slashes (`/`) to double underscores (`__`) in filenames.  
 - **Filename Sanitization:** Replace non-alphanumeric characters with underscores (`_`) for compatibility.  
 - **Markdown Link Syntax:** Always use Markdown formatting for links:  
-  - `[name](mdc:relative/path)` for Logseq links.  
-  - `[name](mdc:file:/absolute/path)` for direct file links.
+  - `[name](relative/path)` for Logseq links.  
+  - `[name](file:/absolute/path)` for direct file links.

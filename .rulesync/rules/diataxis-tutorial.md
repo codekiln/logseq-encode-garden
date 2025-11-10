@@ -172,7 +172,7 @@ examples:
 metadata:
   priority: high
   version: 1.0
-  related_rules: ["logseq-flavored-markdown.mdc"]
+  related_rules: ["logseq-flavored-markdown"]
 </rule>
 
 ## Implementation Guide

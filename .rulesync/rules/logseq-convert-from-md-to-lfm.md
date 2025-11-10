@@ -7,7 +7,7 @@ globs: ['{journals,pages}/*.md']
 ---
 # Converting from Standard Markdown to Logseq Flavored Markdown (LFM)
 
-This guide provides a checklist for exceptional tasks that may require specific attention when converting standard markdown (particularly from ChatGPT or similar sources) to Logseq Flavored Markdown (LFM). For standard LFM rules, see [logseq-flavored-markdown.mdc](mdc:.cursor/rules/logseq-cursor-rules/logseq-flavored-markdown.mdc).
+This guide provides a checklist for exceptional tasks that may require specific attention when converting standard markdown (particularly from ChatGPT or similar sources) to Logseq Flavored Markdown (LFM). For standard LFM rules, see the logseq-flavored-markdown rule.
 
 ## Conversion Checklist
 
@@ -71,7 +71,7 @@ or
 - [ ] Format footnotes as `[^1]: url` (not `[^1]: [descriptive text](url)`)
 - [ ] Remove descriptive link text from footnote definitions - Logseq footnotes should contain URLs directly
 - [ ] Ensure footnotes are properly nested under bullet points
-- [ ] Reference: See [Logseq___How To___Create a Markdown Footnote.md](mdc:pages/Logseq___How To___Create a Markdown Footnote.md) for details
+- [ ] Reference: See [Logseq___How To___Create a Markdown Footnote.md](../pages/Logseq___How To___Create a Markdown Footnote.md) for details
 - [ ] Example conversion:
   ```
   FROM: [^1]: [Free tokens extended through April 30, 2025](https://example.com)
@@ -127,6 +127,6 @@ or
 </EXAMPLE_OUTPUT>
 
 ## Related Rules
-- [logseq-flavored-markdown.mdc](mdc:.cursor/rules/logseq-cursor-rules/logseq-flavored-markdown.mdc) - Standard LFM rules
-- [logseq-naming-conventions.mdc](mdc:.cursor/rules/logseq-cursor-rules/logseq-naming-conventions.mdc) - Tag and namespace conventions
-- [logseq-overview.mdc](mdc:.cursor/rules/logseq-cursor-rules/logseq-overview.mdc) - General Logseq concepts
+- logseq-flavored-markdown rule - Standard LFM rules
+- logseq-naming-conventions rule - Tag and namespace conventions
+- logseq-overview rule - General Logseq concepts

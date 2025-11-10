@@ -4,7 +4,7 @@ targets:
 description: Logseq-Flavored Markdown (LFM) Book Import
 ---
 # How a Book is tracked in this Logseq knowledge garden
-This is an extension to logseq-flavored-markdown `logseq-flavored-markdown.mdc` for recording information about a book.
+This is an extension to the logseq-flavored-markdown rule for recording information about a book.
 
 A book entry is a logseq page where the page title matches one of the following patterns:
 - [[Book/Title]] (corresponds to `pages/Book___Title.md`)

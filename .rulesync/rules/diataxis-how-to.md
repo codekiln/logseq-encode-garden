@@ -140,7 +140,7 @@ examples:
 metadata:
   priority: high
   version: 1.0
-  related_rules: ["logseq-flavored-markdown.mdc"]
+  related_rules: ["logseq-flavored-markdown"]
 </rule>
 
 ## Implementation Guide
@@ -164,7 +164,7 @@ When implementing a Diataxis How-To guide in Logseq, follow these steps:
    - Never remove existing tags when adding the Diataxis tag
 
 4. **Follow the Logseq-Flavored Markdown format**
-   - See [logseq-flavored-markdown.mdc](mdc:.cursor/rules/logseq-flavored-markdown.mdc) for detailed formatting rules
+   - See the logseq-flavored-markdown rule for detailed formatting rules
    - Remember all content must be prefixed with bullet points (`-`)
    - Use proper indentation with TAB characters
    - No blank lines between bullet points

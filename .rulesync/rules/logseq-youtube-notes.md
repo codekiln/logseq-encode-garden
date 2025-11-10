@@ -7,7 +7,7 @@ globs: []
 ---
 # Logseq-Flavored Markdown (LFM) YouTube transcript headings
 
-This rule applies to 'pages/*.md' that have a YouTube video with a transcript. It is an extension to Logseq Flavored Markdown (project rule in `logseq-flavored-markdown.mdc`).
+This rule applies to 'pages/*.md' that have a YouTube video with a transcript. It is an extension to the logseq-flavored-markdown rule.
 
 Youtube video begins with a block like this:
 

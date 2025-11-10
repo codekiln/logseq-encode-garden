@@ -6,7 +6,7 @@ description: 'Logseq Naming Conventions'
 globs: ['journals/*.md', 'pages/*.md']
 ---
 # Logseq Naming Conventions
-This is an extension to logseq-flavored-markdown `logseq-flavored-markdown.mdc` for maintaining consistent naming conventions in the knowledge graph.
+This is an extension to the logseq-flavored-markdown rule for maintaining consistent naming conventions in the knowledge graph.
 
 ## Singular vs Plural Naming Convention
 

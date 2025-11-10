@@ -6,20 +6,20 @@ description: ''
 globs: []
 ---
 # Once a week setup to prepare week markdown files 
-- be familiar with [logseq-directory-structure.mdc](mdc:.cursor/rules/logseq-cursor-rules/logseq-directory-structure.mdc)
+- be familiar with the logseq-directory-structure rule
 - Look at the files that match the glob `pages/2025___t1___w14*.md` to find the pattern of what the pages should look like. 
 
 ## Preparation - Setting up the links
-- the first step is to update [Logseq___Template___Today___Link.md](mdc:pages/Logseq___Template___Today___Link.md) to the next week. the user will tell you which week to update this to.
-- the next step is to have the user instantiate the current week logseq template [Logseq___Template___Week___Current.md](mdc:pages/Logseq___Template___Week___Current.md) inside the current week's markdown page, which will follow the template of `pages/YYYY___tT___wWW.md`, where YYYY is the year, T is the trimester (1, 2, 3), and WW is the week number of the trimester (zero-padded).
+- the first step is to update [Logseq___Template___Today___Link.md](../pages/Logseq___Template___Today___Link.md) to the next week. the user will tell you which week to update this to.
+- the next step is to have the user instantiate the current week logseq template [Logseq___Template___Week___Current.md](../pages/Logseq___Template___Week___Current.md) inside the current week's markdown page, which will follow the template of `pages/YYYY___tT___wWW.md`, where YYYY is the year, T is the trimester (1, 2, 3), and WW is the week number of the trimester (zero-padded).
 - The user may ask you to fill in the days of the week in the current week's page so they can take some notes under them.
 
 ## Filling out the day page headers
 - given the user's requested week number, set up the week's day pages to match the pattern of week 14
   - important note: the agendas and days for the current week will likely be different than week 14!
 - there should be two files created for each day of the week, 1-7. The first will be for the day, the second will be for the todos for that day.
-  - for each day's page I instantiate the logseq template [Logseq___Template___Today___Page Skeleton.md](mdc:pages/Logseq___Template___Today___Page Skeleton.md)
-  - for each day's today page I instantiate the logseq template [Logseq___Template___Today___Todos___Skeleton.md](mdc:pages/Logseq___Template___Today___Todos___Skeleton.md)
+  - for each day's page I instantiate the logseq template [Logseq___Template___Today___Page Skeleton.md](../pages/Logseq___Template___Today___Page Skeleton.md)
+  - for each day's today page I instantiate the logseq template [Logseq___Template___Today___Todos___Skeleton.md](../pages/Logseq___Template___Today___Todos___Skeleton.md)
 - DO NOT INVENT PAGE LEVEL ATTRIBUTES - I'm hoping you can basically simulate instantiating the logseq template for each day.
 - in particular, note the links to the next and previous day in the header, *particularly at d1 and d7* since those will reference the previous and next week, respectively. Also, note the relationship between the day files and the week files. 
 - "up" in the page properties refers to the page "up" in the logseq namespace. 
@@ -77,21 +77,21 @@ trimester-todos:: [[2025/t1/Todos]]
 
 
 ## Example week pages 
-- [2025___t1___w14.md](mdc:pages/2025___t1___w14.md)
-- [2025___t1___w14___Todos.md](mdc:pages/2025___t1___w14___Todos.md)
+- [2025___t1___w14.md](../pages/2025___t1___w14.md)
+- [2025___t1___w14___Todos.md](../pages/2025___t1___w14___Todos.md)
 
 ## Example day pages
-- [2025___t1___w14___d1.md](mdc:pages/2025___t1___w14___d1.md).md
-- [2025___t1___w14___d2___Todos.md](mdc:pages/2025___t1___w14___d2___Todos.md)
-- [2025___t1___w14___d2.md](mdc:pages/2025___t1___w14___d2.md)
-- [2025___t1___w14___d2___Todos.md](mdc:pages/2025___t1___w14___d2___Todos.md)
-- [2025___t1___w14___d3.md](mdc:pages/2025___t1___w14___d3.md)
-- [2025___t1___w14___d3___Todos.md](mdc:pages/2025___t1___w14___d3___Todos.md)
-- [2025___t1___w14___d4.md](mdc:pages/2025___t1___w14___d4.md)
-- [2025___t1___w14___d4___Todos.md](mdc:pages/2025___t1___w14___d4___Todos.md)
-- [2025___t1___w14___d5.md](mdc:pages/2025___t1___w14___d5.md)
-- [2025___t1___w14___d5___Todos.md](mdc:pages/2025___t1___w14___d5___Todos.md)
-- [2025___t1___w14___d6.md](mdc:pages/2025___t1___w14___d6.md)
-- [2025___t1___w14___d6___Todos.md](mdc:pages/2025___t1___w14___d6___Todos.md)
-- [2025___t1___w14___d7.md](mdc:pages/2025___t1___w14___d7.md)
-- [2025___t1___w14___d7___Todos.md](mdc:pages/2025___t1___w14___d7___Todos.md)
+- [2025___t1___w14___d1.md](../pages/2025___t1___w14___d1.md).md
+- [2025___t1___w14___d2___Todos.md](../pages/2025___t1___w14___d2___Todos.md)
+- [2025___t1___w14___d2.md](../pages/2025___t1___w14___d2.md)
+- [2025___t1___w14___d2___Todos.md](../pages/2025___t1___w14___d2___Todos.md)
+- [2025___t1___w14___d3.md](../pages/2025___t1___w14___d3.md)
+- [2025___t1___w14___d3___Todos.md](../pages/2025___t1___w14___d3___Todos.md)
+- [2025___t1___w14___d4.md](../pages/2025___t1___w14___d4.md)
+- [2025___t1___w14___d4___Todos.md](../pages/2025___t1___w14___d4___Todos.md)
+- [2025___t1___w14___d5.md](../pages/2025___t1___w14___d5.md)
+- [2025___t1___w14___d5___Todos.md](../pages/2025___t1___w14___d5___Todos.md)
+- [2025___t1___w14___d6.md](../pages/2025___t1___w14___d6.md)
+- [2025___t1___w14___d6___Todos.md](../pages/2025___t1___w14___d6___Todos.md)
+- [2025___t1___w14___d7.md](../pages/2025___t1___w14___d7.md)
+- [2025___t1___w14___d7___Todos.md](../pages/2025___t1___w14___d7___Todos.md)

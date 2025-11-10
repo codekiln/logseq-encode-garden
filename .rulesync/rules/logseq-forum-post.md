@@ -7,7 +7,7 @@ globs: []
 ---
 # Formatting Forum Posts in Logseq
 
-This rule defines the standard format for importing and structuring forum posts in Logseq, including posts from Cursor, Reddit, Stack Overflow, and other forums. This rule works in conjunction with [[logseq-person.mdc]] for handling person references.
+This rule defines the standard format for importing and structuring forum posts in Logseq, including posts from Cursor, Reddit, Stack Overflow, and other forums. This rule works in conjunction with the logseq-person rule for handling person references.
 
 ### ⚠️ CRITICAL: DO NOT MODIFY FRONTMATTER TAGS ⚠️
 
@@ -62,7 +62,7 @@ When referencing users in forum posts:
      - They have a substantial online presence
 
 2. **Person References**
-   - Follow [[logseq-person.mdc]] for creating/updating person references
+   - Follow the logseq-person rule for creating/updating person references
    - Only create new person pages for significant contributors
    - Update existing person pages if found
    - Include:

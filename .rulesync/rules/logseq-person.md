@@ -9,7 +9,7 @@ description: 'How a Person is tracked in this Logseq knowledge garden'
 globs: ['{journals,pages}/*.md']
 ---
 # How a Person is tracked in this Logseq knowledge garden
-This is an extension to logseq-flavored-markdown `logseq-flavored-markdown.mdc` for recording information about a person.
+This is an extension to the logseq-flavored-markdown rule for recording information about a person.
 
 A person entry is a logseq page where the page title matches one of the following patterns:
 - [[People/Full Name]] (corresponds to `pages/People___Full Name.md`)
