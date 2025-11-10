@@ -14,15 +14,12 @@ This command automates the creation of a complete week structure in the Logseq g
 
 ## Usage
 
-Execute this command with three parameters: year, trimester, and week number.
+Execute this command with zero parameters
 
-**Command:** `/logseq-update-week <year> <trimester> <week>`
-
-**Example:**
 ```
-/logseq-update-week 2025 3 6
+/logseq-update-week 
 ```
-This creates the complete structure for Week 6 of Trimester 3, 2025.
+This creates the complete structure for the current week.
 
 ## What This Command Does
 
@@ -34,7 +31,9 @@ This creates the complete structure for Week 6 of Trimester 3, 2025.
 6. **Creates** 7 daily pages (d1-d7) with correct navigation
 7. **Creates** 7 daily todo pages with proper references
 
-## Parameters
+## Info to gather
+
+use the `logseq-week-info-getter` agent to gather a report of the following data
 
 - **year**: 4-digit year (e.g., 2025)
 - **trimester**: 1, 2, or 3
@@ -42,6 +41,7 @@ This creates the complete structure for Week 6 of Trimester 3, 2025.
   - Trimester 2: Memorial Day to day before Labor Day
   - Trimester 3: Labor Day (first Monday in September) to Dec 31
 - **week**: Week number within the trimester (1-52)
+- **day**: list of days in the week
 
 ## Files Created
 
@@ -50,13 +50,12 @@ The command creates these files in the `pages/` directory:
 1. `YYYY___tT___wWW.md` - Main week page
 2. `YYYY___tT___wWW___Todos.md` - Week todos page
 3. `YYYY___tT___wWW___d1.md` through `YYYY___tT___wWW___d7.md` - Daily pages
-4. `YYYY___tT___wWW___d1___Todos.md` through `YYYY___tT___wWW___d7___Todos.md` - Daily todo pages
 
-Plus updates to `Logseq___Template___Today___Link.md` with the new week's day links.
+Plus it updates `Logseq___Template___Today___Link.md` with the new week's day links.
 
 ## Implementation Details
 
-The command performs these calculations and operations:
+The command performs relies on calculations and operations from `logseq-week-info-getter` subagent
 
 1. **Date Calculation**: Determines the Monday-Sunday dates for the specified week
    - Week N starts (N-1) weeks after the trimester start date
@@ -70,6 +69,10 @@ The command performs these calculations and operations:
 
 ## Template Structure
 
+In the below templates,
+* `tT` means to substitute T with the Trimester number. If it was trimester 3, then it should be `t3`. 
+* `wWW` means to subsitute WW with the zero-padded week number in the trimester. if it was, 6, then it should be `w06`. 
+
 ### Week Page Template
 ```markdown
 type:: [[Type/Logseq/Week/Page]]
@@ -81,31 +84,9 @@ next:: [[YYYY/tT/wNEXT]]
 week-todos:: [[YYYY/tT/wWW/Todos]]
 banner:: "../assets/Logseq/Plugins/logseq-banners-plugin/deep_springs_cow_camp_01.jpg"
 
-- # Week Notes
-  - ## Week Start (logseq-garden ONLY)
-    - ### DOING Week Setup
-      :LOGBOOK:
-      CLOCK: [YYYY-MM-DD Day HH:MM:SS]
-      :END:
-      - TODO update [[Logseq/Template/Today/Link]] to point to *this* week, and fill in all the days as well
-      - TODO create a "today link" with `d1 link`, `d2 link`, etc in Week Days below
-      - TODO book rooms for week and put on calendar
-      - TODO book any group exercise classes and put on calendar
-      - TODO fill in weather for each day of the week
-      - TODO export calendar
-      - TODO fill in day links below using cursor
-      - TODO create week todos page
-        - TODO open week todos page and instantiate the skeleton
-          - TODO take a look at [[Logseq/Template/Week/Todos/Skeleton]]
-          - TODO instantiate Week Todos Skeleton
-        - TODO if we're in a downstream repository, fill in the content of the week todos page
-          - TODO take a look at [[Logseq/Template/Week/Todos/Content]]
-          - TODO instantiate Week Todos Content
-        - TODO port over items from previous week, cutting and pasting
-      - TODO do a git commit
-    - ### TODO What's up this week
-  - ## Week Days - (logseq-garden ONLY)
-    note:: *for each day, first go to the today link for the downstream Logseq repo and fill it out, then use `Today Link` template, and inside that log entry, use [[Logseq/Template/Today/Setup Checklist]] template*
+- # tT wWW Week Notes
+  - ## What's up this week?
+  - ## Week Days
     - ### log [[YYYY/tT/wWW/d1]] - [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
     - ### log [[YYYY/tT/wWW/d2]] - [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
     - ### log [[YYYY/tT/wWW/d3]] - [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
@@ -113,11 +94,6 @@ banner:: "../assets/Logseq/Plugins/logseq-banners-plugin/deep_springs_cow_camp_0
     - ### log [[YYYY/tT/wWW/d5]] - [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
     - ### log [[YYYY/tT/wWW/d6]] - [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
     - ### log [[YYYY/tT/wWW/d7]] - [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
-  - ## Week End - (Downstream Repos ONLY)
-    - ### TODO Week Review
-- # Week Reference (Downstream Repos ONLY)
-  - ### Music
-  -
 ```
 
 ### Day Page Template
@@ -131,25 +107,12 @@ prev:: [[YYYY/tT/wWW/dPREV]]
 next:: [[YYYY/tT/wWW/dNEXT]]
 todos:: [[YYYY/tT/wWW/dD/Todos]]
 week-todos:: [[YYYY/tT/wWW/Todos]]
-
-- # log [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
-  - ## Agenda
-```
-
-### Day Todos Page Template
-```markdown
-type:: [[Type/Logseq/Today/Todos]]
-created-by-template:: [[Logseq/Template/Today/Todos/Skeleton]]
-banner:: "../assets/Logseq/Template/Week/Todos/ben_franklin_almanac.jpg"
-icon:: 📅✅
-up:: [[YYYY/tT/wWW/dD]]
-prev:: [[YYYY/tT/wWW/dPREV/Todos]]
-next:: [[YYYY/tT/wWW/dNEXT/Todos]]
-week-todos:: [[YYYY/tT/wWW/Todos]]
 trimester-todos:: [[YYYY/tT/Todos]]
 
-- # Todos [[YYYY/tT/wWW/dD/Todos]] - [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
+
+- # log [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
 ```
+
 
 ### Week Todos Page Template
 ```markdown
