@@ -7,7 +7,6 @@ tags:: [[AI Deep Research]], [[Report]]
 		- ### 1.1. Explicit Marketplace and Plugin System References
 			- #### 1.1.1. [ehudhal/claude-code-marketplace](https://github.com/ehudhal/claude-code-marketplace)
 				- Intended as a prototype for a Claude Code marketplace.
-				- Cited in research and community discussions, but actual repository content is currently inaccessible due to errors or repository privacy. No current conclusions can be drawn about its architecture or template structure.
 			- #### 1.1.2. [anthropics/skills](https://github.com/anthropics/skills)
 				- Appears to be the official Anthropic repository offering "skills" for Claude Code.
 				- Provides reference implementations, standardized manifest formats (`skill.yaml` and/or `skill.json`), and canonical examples for plugin structure, discovery, and CI validation workflows.
@@ -21,8 +20,8 @@ tags:: [[AI Deep Research]], [[Report]]
 				- Offers over 100 modular components (agents, commands, MCPs, hooks, skills) and a plugin dashboard.
 				- Includes extensive documentation (docs.aitmpl.com), analytics, and possible health-check utilities.
 				- Plugin discovery enabled via commands like `npx aitmpl browse`.
-			- #### 1.1.5. [anthropic-samples/claude-code-plugins](https://github.com/anthropic-samples/claude-code-plugins)
-				- Potential reference for plugin samples or marketplace infrastructure; currently public availability and content not confirmed due to access issues.
+			- #### 1.1.5. [claude-code/plugins at main · anthropics/claude-code](https://github.com/anthropics/claude-code/tree/main/plugins)
+				- Potential reference for plugin samples or marketplace infrastructure
 			- #### 1.1.6. Additional Repositories Located via Search Patterns
 				- Using GitHub path: `**/.claude-plugin/marketplace.json` search, several small marketplaces and plugin registries surfaced, but most were either forks or minimal experiments mirroring the standards set in official repositories.
 	- ## 2. Plugin Registration, Discovery, and Metadata Management

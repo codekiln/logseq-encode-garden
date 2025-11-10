@@ -1,0 +1,31 @@
+- # Picks & Shovels
+	- ## About
+		- Novel by [[Person/Corey Doctorow]], published February 18, 2025
+		- Origin story of Martin "Marty" Hench, a forensic accountant who later appears in [[Person/Corey Doctorow/Book/23/Red Team Blues]]
+		- Set in 1986 San Francisco during the early days of personal computing
+		- Explores how emerging technologies transform crime, business practices, and corporate dynamics
+	- ## Themes
+		- ### [[Interop]] Interoperability
+			- Illustrates how lack of interoperability enables monopolistic practices
+			- Shows how proprietary technologies that limit interoperability can stifle innovation and competition
+			- Demonstrates the importance of open systems and collaboration in fostering healthy technological environments
+			- Explores how early computing systems' inability to work together created opportunities for vendor lock-in
+		- ### Technology and Power
+			- Examines how personal computers transformed traditional industries
+			- Shows the early days of Silicon Valley and the rise of technology's first "enshittifiers"
+			- Explores the relationship between technological innovation and corporate control
+	- ## Connection to Doctorow's Work
+		- Complements themes explored in [[Person/Corey Doctorow/Book/25/Enshittification]]
+		- Relates to concepts in "The Internet Con: How to Seize the Means of Computation" (2023) about monopolistic practices and the criminalization of interoperability
+		- Part of a series featuring Marty Hench as a forensic accountant
+	- ## Title Meaning
+		- "Picks & Shovels" refers to the tools used by gold miners
+		- Metaphor for providing infrastructure and tools rather than the end product
+		- In tech context: building the foundational systems that enable others to create value
+	- ## Related
+		- [[Person/Corey Doctorow]]
+		- [[Interop]]
+		- [[Person/Corey Doctorow/Book/23/Red Team Blues]] - sequel featuring the same protagonist
+		- [[Person/Corey Doctorow/Book/25/Enshittification]] - related nonfiction work on platform decline
+		- [[rulesync/log/25/11/10 Mon - on abstraction costs and plugin marketplaces]] - discusses interoperability tools in the age of AI
+

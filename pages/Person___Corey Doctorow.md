@@ -1,0 +1,35 @@
+# Corey Doctorow
+	- ## Bio
+		- Canadian-British science fiction author, journalist, and technology activist
+		- Born July 17, 1971, in Toronto, Canada
+		- Resides in Los Angeles, California
+		- Known for works exploring themes of digital rights, privacy, and the societal impacts of technology, particularly the importance of [[Interoperability]]
+	- ## Notable Work
+		- ### Writing
+			- #Fiction #Novel
+				- "Down and Out in the Magic Kingdom" (2003)
+				- "Eastern Standard Tribe" (2004)
+				- "Someone Comes to Town, Someone Leaves Town" (2005)
+				- "Little Brother" (2008)
+				- "Homeland" (2013)
+				- "Attack Surface" (2020)
+				- "Red Team Blues" (2023)
+				- [[Person/Corey Doctorow/Book/25/Picks & Shovels]]
+			- #Nonfiction
+				- [[Person/Corey Doctorow/Book/25/Enshittification]] "Enshittification: Why Everything Got Worse and What to Do About It" (2025)
+		- ### Activism
+			- Served as European director of the Electronic Frontier Foundation (EFF) from 2002 to 2006
+			- Remains a special consultant to the EFF
+			- Co-founded the UK Open Rights Group, advocating for digital rights and privacy
+		- ### Journalism
+			- Co-edits the blog Boing Boing
+			- Contributes to various publications including Wired and The New York Times
+	- ## Awards and Honors
+		- Inducted into the Canadian Science Fiction and Fantasy Hall of Fame in 2020
+		- Recipient of the Sir Arthur Clarke Imagination in Service to Society Award
+	- ## Online Presence
+		- Website: [craphound.com](https://craphound.com)
+		- Boing Boing: [boingboing.net](https://boingboing.net)
+		- X (Twitter): [@doctorow](https://x.com/doctorow)
+	- ## Related
+		- [[rulesync/log/25/11/10 Mon - on abstraction costs and plugin marketplaces]] - mentioned in context of interoperability and vendor lock-in
