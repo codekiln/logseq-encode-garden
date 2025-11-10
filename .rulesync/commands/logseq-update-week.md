@@ -105,7 +105,6 @@ icon:: 📖
 up:: [[YYYY/tT/wWW]]
 prev:: [[YYYY/tT/wWW/dPREV]]
 next:: [[YYYY/tT/wWW/dNEXT]]
-todos:: [[YYYY/tT/wWW/dD/Todos]]
 week-todos:: [[YYYY/tT/wWW/Todos]]
 trimester-todos:: [[YYYY/tT/Todos]]
 
