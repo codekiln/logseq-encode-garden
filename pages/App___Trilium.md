@@ -1,0 +1,13 @@
+- # [Trilium Notes](https://github.com/TriliumNext/Trilium)
+	- ## About
+		- **Type:** Open-source personal knowledge base application
+		- **GitHub:** https://github.com/TriliumNext/Trilium
+		- **Description:** Build your personal knowledge base with Trilium Notes
+	- ## Features
+		- Hierarchical note organization
+		- Rich text editing
+		- Self-hosted knowledge management solution
+	- ## Related
+		- [[Personal Knowledge Management]]
+		- [[Knowledge Garden]]
+

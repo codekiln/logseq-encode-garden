@@ -1,0 +1,14 @@
+- # [Joplin](https://joplinapp.org/)
+	- ## About
+		- **Type:** Open-source note-taking and to-do application
+		- **Website:** https://joplinapp.org/
+	- ## Features
+		- Cross-platform note-taking application
+		- Markdown support
+		- Synchronization capabilities
+		- Open-source and privacy-focused
+	- ## Related
+		- [[Personal Knowledge Management]]
+		- [[Note-taking]]
+		- [[Markdown]]
+

@@ -1,0 +1,12 @@
+- # [Anytype](https://anytype.io/)
+	- ## About
+		- **Tagline:** The Everything App
+		- **Type:** Personal knowledge management and productivity application
+		- **Website:** https://anytype.io/
+	- ## Features
+		- Integrated workspace for notes, tasks, and knowledge management
+		- Designed as an all-in-one productivity solution
+	- ## Related
+		- [[Personal Knowledge Management]]
+		- [[Knowledge Garden]]
+

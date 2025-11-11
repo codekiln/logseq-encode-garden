@@ -1,0 +1,13 @@
+- # [Notebooks - Privacy Guides](https://www.privacyguides.org/en/notebooks/)
+	- ## About
+		- **Type:** Privacy-focused resource guide for notebook applications
+		- **Website:** https://www.privacyguides.org/en/notebooks/
+		- **Source:** Privacy Guides organization
+	- ## Purpose
+		- Recommendations for privacy-respecting notebook and note-taking applications
+		- Focus on security and privacy considerations for knowledge management tools
+	- ## Related
+		- [[Personal Knowledge Management]]
+		- [[Privacy]]
+		- [[Note-taking]]
+

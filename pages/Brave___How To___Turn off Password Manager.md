@@ -1,0 +1,38 @@
+tags:: [[Diataxis/How To]]
+- # How To Turn off Password Manager in Brave
+	- ## Overview
+		- This guide shows you how to disable Brave's built-in password manager
+		- Useful if you're using a third-party password manager like 1Password, NordPass, or Bitwarden
+		- Prevents Brave from prompting to save passwords or automatically signing you into websites
+	- ## Prerequisites
+		- Brave browser installed on your computer
+		- Access to Brave settings
+	- ## Steps
+		- ### 1. Open Brave Settings
+			- Click the three-line menu icon (☰) in the upper-right corner of the Brave browser window
+			- Select "Settings" from the dropdown menu
+		- ### 2. Navigate to Password Manager
+			- In the Settings menu, click on "Autofill and Passwords"
+			- Then select "Password Manager"
+		- ### 3. Disable Password Saving and Auto Sign-in
+			- In the Password Manager settings, toggle off "Offer to save passwords"
+			- Toggle off "Auto Sign-in"
+			- Brave will no longer prompt you to save passwords or automatically sign you into websites
+	- ## Optional: Remove Previously Saved Passwords
+		- If you have previously saved passwords in Brave and want to remove them:
+		- ### Delete Individual Passwords
+			- In the Password Manager settings, you'll see a list of saved passwords
+			- Click on each saved password entry you wish to remove
+			- Click the "Delete" button to remove the selected password
+		- ### Delete All Saved Passwords at Once
+			- Click the three-line menu icon (☰) in the upper-right corner
+			- Select "Settings", then "Privacy and Security"
+			- Click on "Clear browsing data"
+			- In the dialog box, set the "Time range" to "All time"
+			- Check the box for "Passwords and other sign-in data"
+			- Ensure other data types are unchecked if you don't wish to delete them
+			- Click "Clear data" to remove all saved passwords
+	- ## Troubleshooting
+		- If you don't see the "Autofill and Passwords" option: Make sure you're using a recent version of Brave browser
+		- If toggles don't appear: Try refreshing the Settings page or restarting Brave
+		- If passwords still appear: Clear your browsing data as described in the optional steps above

@@ -1,0 +1,13 @@
+- # [AppFlowy](https://appflowy.com/)
+	- ## About
+		- **Type:** Open-source Notion alternative
+		- **Website:** https://appflowy.com/
+		- **Description:** Open source alternative to Notion with multiple pricing plans
+	- ## Features
+		- **Pricing:** Several pricing plans available
+		- **Free tier:** Self-hosted 1-seat option available
+		- **Private local RAG:** Features include private local Retrieval-Augmented Generation
+	- ## Related
+		- [[Personal Knowledge Management]]
+		- [[App/Notion]]
+
