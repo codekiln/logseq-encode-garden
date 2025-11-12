@@ -1,0 +1,134 @@
+- # Installer Patterns and Best Practices for Rust-Based CLI Programs
+	- ## Introduction
+		- The Rust ecosystem has produced a wide variety of popular command line interface (CLI) tools. Ensuring these tools are easily installable for users—especially those without Rust development experience—is critical for widespread adoption. This report analyzes the prevailing patterns and best practices for building and distributing installers for Rust-based CLI programs. It reviews how prominent Rust CLI projects handle installation (including for non-developers), explores the use of automation tools like GitHub Actions, and provides a comparative analysis of installation methods, platform coverage, binary verification, upgrade mechanisms, and documentation/updater processes.
+	- ## Prominent Rust-Based CLI Tools and Their Installer Strategies
+		- ### 1. ripgrep (`rg`)
+			- **Overview:**  
+				- A fast search tool, ripgrep is one of the most widely-installed Rust CLIs.
+			- **Installation Methods:**
+				- **Pre-built binaries:** Releases provide downloadable binaries for Windows, macOS, and Linux.
+				- **Platform package managers:** Available via Homebrew (macOS/Linux), Chocolatey/Scoop (Windows), apt (Ubuntu), dnf (Fedora), and others.
+				- **Shell script:** No dedicated shell installer, but provided via package managers and binary downloads.
+			- **Automation and Release Process:**
+				- **GitHub Actions:** Used to build binaries for all supported platforms, create GitHub Releases, and attach artifacts.
+				- **Documentation:** The README lists install options but is updated manually.
+				- **Installer Scripts:** No auto-generated or updated installer scripts in the main repo.
+			- **Other Notables:**
+				- **Integrity:** SHA-256 checksums are published with releases.
+				- **Upgrades:** Managed via the package manager or by downloading the latest release.
+		- ### 2. starship
+			- **Overview:**  
+				- A cross-shell prompt highly popular in the developer community.
+			- **Installation Methods:**
+				- **Install shell script:** Provides a single-line `curl` or `wget` shell script that fetches the correct binary for the OS and installs it.
+				- **Pre-built binaries:** Provided on GitHub Releases for multiple platforms.
+				- **Package managers:** Available via Homebrew, Scoop, Chocolatey, and various Linux distros.
+			- **Automation and Release Process:**
+				- **GitHub Actions:** Handles multi-platform binary build and attaches them to Releases. The install script is automatically updated as part of the process.
+				- **Documentation:** Installation instructions in README are kept up to date with automation.
+			- **Other Notables:**
+				- **Integrity:** SHA-256 checksums available, and the install script verifies authenticity.
+				- **Upgrades:** Re-running the install script, or updating via package manager.
+		- ### 3. bat
+			- **Overview:**  
+				- A cat clone with syntax highlighting and Git integration.
+			- **Installation Methods:**
+				- **Pre-built binaries:** Downloadable for major OSes.
+				- **Package managers:** Homebrew, Chocolatey, Scoop, apt, dnf, pacman, etc.
+				- **No installer script:** Users are directed to download the binary or use their package manager.
+			- **Automation and Release Process:**
+				- **GitHub Actions:** Used to build binaries, publish releases, and generate checksums.
+				- **Documentation:** README manually guides users; no installer script auto-updates.
+			- **Other Notables:**
+				- **Integrity:** Checksums are provided.
+				- **Upgrades:** Via package manager or manual binary replacement.
+		- ### 4. exa
+			- **Overview:**  
+				- A modern replacement for `ls`.
+			- **Installation Methods:**
+				- **Pre-built binaries:** Available as assets.
+				- **Package managers:** Supported by Homebrew, apt, dnf, pacman, Chocolatey, etc.
+				- **No shell installer script:** Relies on package managers and binary downloads.
+			- **Automation and Release Process:**
+				- **GitHub Actions:** Builds binaries and checksums, automates release publishing.
+				- **Documentation:** README is manually maintained.
+			- **Other Notables:**
+				- **Integrity:** SHA-256 checksums provided.
+				- **Upgrades:** Via package manager or new binary.
+		- ### 5. fd
+			- **Overview:**  
+				- A simple, fast, user-friendly alternative to `find`.
+			- **Installation Methods:**
+				- **Pre-built binaries:** Available for all major platforms.
+				- **Package managers:** Widely available across Linux, macOS, and Windows.
+				- **No universal shell script:** Users directed to binary/package installs.
+			- **Automation and Release Process:**
+				- **GitHub Actions:** Orchestrates cross-platform builds and releases.
+				- **Documentation:** README updated manually.
+			- **Other Notables:**
+				- **Integrity:** SHA-256 checksums are posted.
+				- **Upgrades:** Via package manager or binary download.
+		- ### 6. deno
+			- **Overview:**  
+				- Secure JavaScript/TypeScript runtime built in Rust.
+			- **Installation Methods:**
+				- **Install shell script:** Offers a universal one-liner shell script, auto-detects platform and downloads correct binary.
+				- **Pre-built binaries:** Available for manual download.
+				- **Package managers:** Brew, Chocolatey, Scoop, apt, etc.
+			- **Automation and Release Process:**
+				- **GitHub Actions:** Builds, tests, signs, and publishes release binaries. The installation script is regenerated for new releases.
+				- **Documentation:** Installation options and script are kept in sync using CI workflows.
+			- **Other Notables:**
+				- **Integrity:** Binaries are signed; SHA-256 published.
+				- **Upgrades:** Users can re-run installer script, run `deno upgrade`, or use a package manager.
+	- ## Comparative Table of Installer Strategies
+		- | Project   | Binary Releases | Shell Script Installer | Package Managers | Automation with GitHub Actions | Integrity Verification | Auto-updated Docs/Installers | Upgrade Mechanisms | OS Support        |
+		  |-----------|----------------|-----------------------|------------------|-------------------------------|----------------------|------------------------------|-------------------|-------------------|
+		  | ripgrep   | Yes            | No                    | Yes              | Binaries/csums                 | Yes (SHA-256)         | No (manual)                  | Pkg mgr/download  | Win/macOS/Linux   |
+		  | starship  | Yes            | Yes                   | Yes              | Binaries/script/docs           | Yes (SHA-256)         | Yes                          | Script/pkg mgr    | Win/macOS/Linux   |
+		  | bat       | Yes            | No                    | Yes              | Binaries/csums                 | Yes (SHA-256)         | No                           | Pkg mgr/download  | Win/macOS/Linux   |
+		  | exa       | Yes            | No                    | Yes              | Binaries/csums                 | Yes (SHA-256)         | No                           | Pkg mgr/download  | Win/macOS/Linux   |
+		  | fd        | Yes            | No                    | Yes              | Binaries/csums                 | Yes (SHA-256)         | No                           | Pkg mgr/download  | Win/macOS/Linux   |
+		  | deno      | Yes            | Yes                   | Yes              | Binaries/script/docs           | Yes (signed/SHA-256)  | Yes                          | Script/pkg mgr/in-tool | Win/macOS/Linux |
+	- ## Recurring Patterns and Best Practices
+		- ### Distribution Channels
+			- **Pre-built Binaries:** All major projects provide downloadable release binaries for each supported OS. This is essential for non-developer installation.
+			- **Platform Package Managers:** Most Rust CLI tools are distributed through default package managers (Homebrew, apt, Scoop, Chocolatey, etc.), enabling seamless upgrades and trustworthy installs.
+			- **Shell Script Installers:** Increasingly popular, especially for "app-like" CLIs (e.g., starship, deno) as a single command that fetches and installs the binary appropriate for the user's platform.
+		- ### Use of GitHub Actions and CI
+			- **Automated Builds:** CI/CD (usually GitHub Actions) is used to cross-compile and package release binaries, often generating checksums and release assets.
+			- **Artifacts Management:** Attaching multiple platform binaries and checksum files to a Release is a common pattern.
+			- **Release Process Automation:** Advanced projects (e.g., starship, deno) use Actions not only for builds but also to update shell install scripts and portions of documentation (like version numbers) automatically.
+			- **Publishing Workflows:** Automation reduces human error, ensures artifacts match documentation, and speeds up release cadence.
+		- ### Platform and Upgrade Support
+			- **Multi-OS Support:** All prominent projects support at least Windows, Linux, and macOS, often with ARM builds for Apple Silicon or aarch64 Linux.
+			- **Upgrading:** Most tools recommend updating via a package manager or re-running the install script. Some tools (e.g., deno) support self-upgrading commands.
+		- ### Binary Integrity
+			- **Checksum Verification:** SHA-256 checksums are standard in release assets; users are encouraged to verify downloads.
+			- **Scripted Verification:** More polished installer scripts (starship, deno) include built-in verification steps.
+		- ### Documentation
+			- **Installation Guides:** Installation methods occupy prime space in READMEs. Some projects (notably those with installer shell scripts) automatically update these docs as part of the release workflow; most others require manual maintenance.
+	- ## Key Variations and Choices
+		- **Installer Shell Scripts:** Very user-friendly; automatically handle platform detection, download, and verification, but require ongoing script maintenance and pose a small risk for supply-chain attacks (thus must be https, version-pinned, and verified).
+		- **Direct Package Manager Use:** Trustworthy, well-known, auto-updating, but sometimes lag behind latest releases due to distribution latencies.
+		- **Manual Binary Download:** Universally available, but most user-unfriendly for novices; requires explicit path management.
+	- ## Best Practices Observed
+		- 1. **Provide Multiple Installation Options:** Package managers, shell scripts, and pre-built binaries for flexibility.
+		- 2. **Automate the Release Pipeline:** Use GitHub Actions (or similar) for building, packaging, attaching binaries and checksums, and updating installers/docs.
+		- 3. **Ensure Cross-Platform Support:** Always ship binaries for all major OSes and architectures.
+		- 4. **Publish and Verify Checksums:** Offer SHA-256 (or stronger) for all binaries, and integrate verification into installer scripts and documentation.
+		- 5. **Offer Up-to-date Documentation:** Automate README and install script updates as part of CI workflows to prevent outdated install instructions.
+		- 6. **Support Easy Upgrades:** Encourage installs via package managers or provide self-upgrade mechanisms in the tool or installer script.
+		- 7. **Sign Binaries Where Possible:** Offer additional assurance for end-users, especially on Windows and macOS.
+	- ## Conclusion
+		- The Rust CLI ecosystem demonstrates strong, consistent patterns for non-developer-friendly installation: reliable pre-built binaries, deep package manager integration, and increasingly, universal installer shell scripts. Automation via GitHub Actions is central for cross-compiling, integrity-checking, and sometimes updating docs/installers. Projects striking the best usability offer all three install options, automate releases and documentation, verify checksums, and provide clear upgrade paths—highlighting the importance of both end-user convenience and supply-chain security.
+	- ## Footnotes
+		- [^1]: https://github.com/BurntSushi/ripgrep/releases
+		- [^2]: https://starship.rs/guide/#%F0%9F%9A%80-installation
+		- [^3]: https://github.com/sharkdp/bat/releases
+		- [^4]: https://the.exa.website/install
+		- [^5]: https://github.com/sharkdp/fd/releases
+		- [^6]: https://deno.com/manual@v1.40.4/getting_started/installation
+		- [^7]: https://github.com/starship/starship/actions
+		- [^8]: https://github.com/denoland/deno/actions
+		- [^9]: https://www.keycdn.com/support/check-integrity
