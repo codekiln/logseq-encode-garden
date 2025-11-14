@@ -1,3 +1,5 @@
+alias:: [[aitmpl.com]]
+
 - # [Claude Code Templates (aitmpl.com)](https://github.com/davila7/claude-code-templates)
 	- Repository: [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates)
 	- [[Person/Daniel Avila/GitHub/claude-code-templates/DeepWiki]] #DeepWiki
@@ -91,4 +93,3 @@
 		- **awesome-claude-code Commands** by hesreallyhim - Licensed under CC0 1.0 Universal (21 commands)
 - ## License
 	- MIT License - see the [LICENSE file](https://github.com/davila7/claude-code-templates/blob/main/LICENSE) for details
-

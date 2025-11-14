@@ -12,7 +12,7 @@ alias:: [[Anthropic/App/Claude Code/Bedrock]]
 			  }
 			  ```
 	- ##### Configuration settings explained
-		- **`awsAuthRefresh`**: Use this for commands that modify the `.aws` directory (e.g., updating credentials, SSO cache, or config files). Output is shown to the user (but user input is not supported), making it suitable for browser-based authentication flows where the CLI displays a code to enter in the browser.**`awsCredentialExport`**: Only use this if you cannot modify `.aws` and must directly return credentials. Output is captured silently (not shown to the user). The command must output JSON in this format:
+		- **`awsAuthRefresh`**: Use this for commands that modify the `.aws` directory (e.g., updating credentials, SSO cache, or config files). Output is shown to the user (but user input is not supported), making it suitable for browser-based authentication flows where the CLI displays a code to enter in the browser.**`awsCredentialExport`**: Only use this if you cannot modify `.aws` and must directly return credentials. Output is captured silently (not shown to the user). The command must output JSON in this format:
 			- ```
 			  {
 			  "Credentials": {
@@ -22,3 +22,5 @@ alias:: [[Anthropic/App/Claude Code/Bedrock]]
 			  }
 			  }
 			  ```
+	- #### Troubleshooting credential expiration
+		- If you encounter the error "API Error: The security token included in the request is expired" and automatic credential refresh isn't working, see [[Claude Code/Bedrock/How To/Get Around Security Token Timeout]] for troubleshooting steps and workarounds.

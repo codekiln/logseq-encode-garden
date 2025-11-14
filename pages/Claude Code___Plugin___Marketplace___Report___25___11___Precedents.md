@@ -15,7 +15,7 @@ tags:: [[AI Deep Research]], [[Report]]
 				- A large community-maintained marketplace with 84 agents, 63 plugins, and 47 skills.
 				- Implements an internal `/plugin marketplace add` command for plugin management and orchestration, facilitating user-driven plugin registration and discovery.
 				- Features a progressive disclosure architecture for skills, likely mapping to manifest-driven discovery and dependency definition.
-			- #### 1.1.4. [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates)
+			- #### 1.1.4. [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) - see also [Claude Code Templates - Supercharge Your AI-Powered Development with Anthropic's Claude Code](https://www.aitmpl.com/hooks)
 				- A CLI-driven plugin/skill marketplace focused on Claude Code setups.
 				- Offers over 100 modular components (agents, commands, MCPs, hooks, skills) and a plugin dashboard.
 				- Includes extensive documentation (docs.aitmpl.com), analytics, and possible health-check utilities.

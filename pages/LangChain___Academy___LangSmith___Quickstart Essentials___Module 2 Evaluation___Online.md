@@ -1,0 +1,7 @@
+- [Quickstart: LangSmith Essentials - LangChain Academy](https://academy.langchain.com/courses/take/quickstart-langsmith-essentials/lessons/70020762-online-evaluation-insights)
+	- [[My Notes]]
+		- Pretty useful! Quite a few new things
+		- I learned about Waterfall view in LangSmith trace, which I wasn't as familiar with
+		- Has some demos of a new insights dashboard
+			- https://docs.langchain.com/langsmith/insights
+				- once again, it requires either an Anthropic or OpenAI key - likely does not work with Bedrock or Azure
