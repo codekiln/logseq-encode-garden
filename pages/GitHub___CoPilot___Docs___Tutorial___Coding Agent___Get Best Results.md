@@ -1,0 +1,17 @@
+- [Best practices for using GitHub Copilot to work on tasks - GitHub Enterprise Cloud Docs](https://docs.github.com/en/enterprise-cloud@latest/copilot/tutorials/coding-agent/get-the-best-results)
+	- ## Table of Contents - Top Tips
+		- ### [Write Clear and Specific Instructions](#write-clear-and-specific-instructions)
+			- Provide detailed context and requirements
+			- Break down complex tasks into smaller steps
+		- ### [Provide Context](#provide-context)
+			- Include relevant code snippets
+			- Reference existing patterns in your codebase
+		- ### [Use Iterative Refinement](#use-iterative-refinement)
+			- Start with high-level goals
+			- Refine based on initial suggestions
+		- ### [Review and Test Generated Code](#review-and-test-generated-code)
+			- Always review AI-generated code
+			- Test thoroughly before committing
+		- ### [Leverage Codebase Patterns](#leverage-codebase-patterns)
+			- Reference existing code structure
+			- Maintain consistency with project conventions
