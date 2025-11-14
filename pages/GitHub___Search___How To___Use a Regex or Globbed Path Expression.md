@@ -1,0 +1,70 @@
+tags:: [[GitHub]], [[Search]], [[Diataxis/How To]]
+
+- # How To Use a Regex Path Expression in GitHub Code Search
+	- ## Overview
+		- This guide shows you how to search GitHub repositories using regular expressions (regex) in the `path:` qualifier to find files matching specific path patterns.
+		- Use this when you need to find files that follow a naming pattern or directory structure, such as all pages starting with a specific prefix in a knowledge garden.
+	- ## Prerequisites
+		- A GitHub account
+		- Access to the repository you want to search
+		- Basic understanding of regular expressions (helpful but not required)
+	- ## Steps
+		- ### 1. Navigate to GitHub Code Search
+			- Go to [GitHub's search page](https://github.com/search)
+			- Select "Code" from the search type options
+		- ### 2. Construct the Search Query
+			- Use the `repo:` qualifier to specify the repository
+				- Format: `repo:owner/repository-name`
+				- Example: `repo:codekiln/logseq-encode-garden`
+			- Add the `path:` qualifier with a regex pattern
+				- Format: `path:/your-regex-pattern/`
+				- The regex pattern uses RE2 syntax (Golang flavor)
+				- Escape special characters with backslashes
+		- ### 3. Build Your Regex Pattern
+			- Start with `^` to match the beginning of the path
+			- Include directory names: `pages/` matches the pages directory
+			- Escape spaces in filenames: `Claude\ Code` matches "Claude Code"
+			- Use `.*` to match any characters after your pattern
+			- End with `/` to match directory paths or `.*` to match files
+			- Example pattern: `/^pages\/Claude\ Code.*/`
+				- `^pages\/` - matches paths starting with "pages/"
+				- `Claude\ Code` - matches "Claude Code" (space escaped)
+				- `.*` - matches any characters after "Claude Code"
+		- ### 4. Combine Qualifiers
+			- Join the `repo:` and `path:` qualifiers with a space
+			- Complete example: `repo:codekiln/logseq-encode-garden path:/^pages\/Claude\ Code.*/`
+		- ### 5. Execute the Search
+			- Enter the complete query into GitHub's search bar
+			- Press Enter or click the search button
+			- Review the results showing all matching files
+		- ### 6. Use the Search URL (Optional)
+			- GitHub generates a URL for your search
+			- Example: [Search for Claude Code pages](https://github.com/search?q=repo%3Acodekiln%2Flogseq-encode-garden+path%3A%2F%5Epages%5C%2FClaude%5C+Code.*%2F&type=code)
+			- Bookmark or share this URL to repeat the search later
+	- ## Troubleshooting
+		- If your search returns no results:
+			- Verify the repository name is correct in the `repo:` qualifier
+			- Check that you have access to the repository
+			- Ensure your regex pattern matches the actual file paths
+			- Test your regex pattern using an online tool like [regex101.com](https://regex101.com/) with the "Golang" flavor selected
+		- If special characters aren't matching:
+			- Escape spaces with backslashes: `\ ` instead of a space
+			- Escape forward slashes: `\/` instead of `/`
+			- Escape other regex special characters: `\.`, `\*`, `\+`, etc.
+		- If you need case-sensitive matching:
+			- Prepend your regex pattern with `(?-i)` to make it case-sensitive
+			- Example: `path:/(?-i)^pages\/Claude\ Code.*/`
+		- If the search is too broad:
+			- Make your pattern more specific by adding more directory levels
+			- Use more precise matching patterns instead of `.*`
+	- ## Example: Finding All Claude Code Pages
+		- To find all pages starting with "Claude Code" in this knowledge garden:
+			- Query: `repo:codekiln/logseq-encode-garden path:/^pages\/Claude\ Code.*/`
+			- This searches the `codekiln/logseq-encode-garden` repository
+			- Matches all files in the `pages/` directory that start with "Claude Code"
+			- Results include pages like `Claude Code.md`, `Claude Code___Bedrock.md`, `Claude Code___How To___Install.md`, etc.
+		- See related pages: [[Claude Code]]
+	- ## Related
+		- [[GitHub/Search]]
+		- [[Claude Code]]
+		- [GitHub Code Search Documentation](https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax#path-qualifier)
