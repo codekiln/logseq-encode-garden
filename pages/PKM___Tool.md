@@ -3,11 +3,16 @@ alias:: [[PKM Tools]]
 - Personal Knowledge Management Tools
 	- [[AffinePro]]
 	- [[Anytype]]
+		- Pretty interesting; web3, local-first, p2p sync'd
 	- [[AppFlowy]]
+		- Like notion but built with Rust and Flutter in an open source way, though the self-hosted community can't stand how it dockerizes xwindow.
 	- [[BeaverNotes]]
 	- [[Joplin]]
 	- [[Logseq]]
+	- [[Looksyk]]
+	- [[Markdown/Oxide]]
 	- [[NextCloud/Collective]]
+	- [[Notesnook]]
 	- [[Orgmode]]
 	- [[QOwnNotes]]
 	- [[StandardNotes]]

@@ -1,0 +1,6 @@
+- Finding an alternative to the database version of logseq
+	- [Is there any fork of logseq? : r/logseq](https://www.reddit.com/r/logseq/comments/1olnx4p/is_there_any_fork_of_logseq/)
+		- katafrakt
+			- I tried forking Logseq, just for me - stop DB, RTC and AI stuff I don't need, fix most annoying bugs. I do know some Clojure and ClojureScript, but navigating the code, even with help of LLMs, was a lot.
+			- At some point I even wanted to try from scratch. Rebuild main Logseq functionality in some more friendly stack. But only then I realized how many crucial.features it has. It would take month to build something that even starts to be comparable.
+			- So in my opinion, Logseq is more or less unforkable, unless you have some really dedicated team to do so. I would love to be proven wrong.

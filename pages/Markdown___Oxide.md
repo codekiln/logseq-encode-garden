@@ -1,0 +1,11 @@
+- [index - Markdown-Oxide Wiki](https://oxide.md/index)
+	- Promo
+		- Markdown-Oxide is a [PKMS](https://oxide.md/PKMS) that composes with your favorite text-editor through the [LSP](https://oxide.md/LSP).
+		- While other [PKMS](https://oxide.md/PKMS) implementations include their own text-editors, markdown-oxide is unbundled: it leaves text-editing to a dedicated text-editor and focuses solely on robust, performant knowledge management.
+		- inspired by and highly compatible with Obsidian.
+		- The best-supported text editor is Neovim, but also popular with users are VSCode, Helix, and Zed.
+		- If you are looking for all of the features we have, visit the [Features Index](https://oxide.md/Features+Index).
+	- Tech stack
+		- [[Rust]]
+	- [[My Notes]]
+		- discovered via https://www.reddit.com/r/logseq/comments/1oknsil/comment/nmfeqyc/
