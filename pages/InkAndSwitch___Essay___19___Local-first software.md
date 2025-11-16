@@ -1,0 +1,4 @@
+- [Local-first software](https://www.inkandswitch.com/essay/local-first) : You own your data, in spite of the cloud #2019 #Essay
+	- tagline: A new generation of collaborative software that allows users to retain ownership of their data.
+	- [[My Notes]]
+		- references [[CRDT]]s

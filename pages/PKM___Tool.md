@@ -1,0 +1,18 @@
+alias:: [[PKM Tools]]
+
+- Personal Knowledge Management Tools
+	- [[Logseq]]
+	- [[Orgmode]]
+	- [[Anytype]]
+	- [[AffinePro]]
+	- [[AppFlowy]]
+	- [[Trilium]]
+	- [[ZIM]]
+	- [[TreeSheets]]
+	- [[Zetteldeft]]
+	- [[QOwnNotes]]
+	- [[ToddlyWiki]]
+	- [[NextCloud/Collective]]
+	- [[BeaverNotes]]
+	- [[StandardNotes]]
+	- [[Joplin]]

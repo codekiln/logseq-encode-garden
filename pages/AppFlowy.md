@@ -1,4 +1,4 @@
-- # [AppFlowy](https://appflowy.com/)
+# [AppFlowy](https://appflowy.com/)
 	- ## About
 		- **Type:** Open-source Notion alternative
 		- **Website:** https://appflowy.com/
@@ -6,8 +6,10 @@
 	- ## Features
 		- **Pricing:** Several pricing plans available
 		- **Free tier:** Self-hosted 1-seat option available
+			- [[Help] Self Hosted Configuration : r/AppFlowy](https://www.reddit.com/r/AppFlowy/comments/1ooh9px/comment/nn8ppel/)
+				- It sounds like it's a relatively restricted configuration:
+				- > Update: Just seen the ridiculous rules on self hosting limits. No need to reply. Will look elsewhere. Welcome to drop recommendations though 😊
 		- **Private local RAG:** Features include private local Retrieval-Augmented Generation
 	- ## Related
 		- [[Personal Knowledge Management]]
 		- [[App/Notion]]
-

@@ -1,0 +1,14 @@
+- [Ink & Switch](https://www.inkandswitch.com/)
+	- ## [[My Notes]]
+		- [[RandD]] lab
+	- ## Research areas
+		- ## [Local-first Software](https://www.inkandswitch.com/local-first-software)
+			- Exploring software architecture that returns data to users and enables collaboration in every tool.
+		- ## [Malleable Software](https://www.inkandswitch.com/malleable-software)
+			- Designing software environments where people can customize tools in the moment to meet their unique needs.
+		- ## [Programmable Ink](https://www.inkandswitch.com/ink)
+			- Discovering a dynamic medium for sketching ideas where adding behaviors and interaction is as natural as applying ink to paper.
+		- ## [Universal Version Control](https://www.inkandswitch.com/universal-version-control)
+			- Building tools to help people explore alternatives, keep track of history, and collaborate better, across all kinds of media.
+	- ## Featured Work
+		- ### [[InkAndSwitch/Essay/19/Local-first software]]
