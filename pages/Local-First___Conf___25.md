@@ -1,0 +1,1 @@
+- [Local-First Conf 2025 - YouTube](https://www.youtube.com/playlist?list=PL4isNRKAwz2MabH6AMhUz1yS3j1DqGdtT)

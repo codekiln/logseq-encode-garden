@@ -1,3 +1,5 @@
+tags:: [[PKM/Tool]]
+
 - # [Joplin](https://joplinapp.org/)
 	- ## About
 		- **Type:** Open-source note-taking and to-do application

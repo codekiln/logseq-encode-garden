@@ -1,3 +1,5 @@
+tags:: [[PKM/Tool]]
+
 - # [Trilium Notes](https://github.com/TriliumNext/Trilium)
 	- ## About
 		- **Type:** Open-source personal knowledge base application

@@ -1,3 +1,5 @@
+tags:: [[PKM/Tool]]
+
 # [AppFlowy](https://appflowy.com/)
 	- ## About
 		- **Type:** Open-source Notion alternative

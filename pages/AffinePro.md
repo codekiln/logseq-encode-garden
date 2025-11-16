@@ -1,3 +1,5 @@
+tags:: [[PKM/Tool]]
+
 - [AFFiNE - All In One KnowledgeOS](https://affine.pro/)
 	- closed source
 	- high polish

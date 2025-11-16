@@ -22,7 +22,7 @@ tags:: [[Term]]
 		- Need "glue" between language model capabilities to build working applications
 	- ## Related Concepts
 		- [[Dev/Home-Cooked Software]]
-		- [[Dev/Local-First]]
+		- [[Local-First]]
 		- [[Software/Situated]]
 		- [[Dev/End-User Programming]]
 	- ## Source

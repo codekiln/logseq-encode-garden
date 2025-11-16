@@ -21,7 +21,7 @@ tags:: [[Term]]
 	- ## Related Concepts
 		- [[Dev/Home-Cooked Software]]
 		- [[Dev/Barefoot]]
-		- [[Dev/Local-First]]
+		- [[Local-First]]
 	- ## Source
 		- [Home-Cooked Software and Barefoot Developers](https://maggieappleton.com/home-cooked-software) - Talk by [[Person/Maggie Appleton]] at Local-first Conference, May 2024
 		- Original concept from [[Person/Clay Shirky]]'s 2004 essay on situated software

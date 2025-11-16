@@ -1,3 +1,5 @@
+tags:: [[PKM/Tool]]
+
 # [Anytype](https://anytype.io/)
 	- ## About
 		- **Tagline:** The Everything App
