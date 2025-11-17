@@ -1,0 +1,111 @@
+# DB Version vs Markdown Version (from [[Logseq/DB/FAQ/Unofficial]])
+	- ## Similarities
+		- Both versions support hierarchical, block-based note-taking with nested bullet points
+		- Both utilize [[Markdown]] for formatting (bold, italics, headings, etc.)
+		- Both support core Logseq features:
+			- Bi-directional linking with `[[wikilinks]]`
+			- Graph visualization
+			- Tags with `#tag` syntax
+			- Block references with `((...))` syntax
+			- Property blocks and queries
+		- Both maintain the same user interface and editing experience
+		- Both support Logseq Flavored Markdown (LFM) syntax
+	- ## Differences
+		- ### Storage Mechanism
+			- **Markdown Version:**
+				- Stores notes as individual `.md` files in the filesystem
+				- Files are the authoritative source of data
+				- Can be directly edited with any text editor
+				- Files stored in `pages/` and `journals/` directories
+			- **DB Version:**
+				- Stores notes in a centralized [[SQLite]] database file
+				- Database is the primary source of truth
+				- Notes can be exported to Markdown, but database remains authoritative
+				- Direct editing of database outside Logseq is not supported
+		- ### Git Compatibility
+			- **Markdown Version:**
+				- Fully compatible with Git version control
+				- Git can handle merge conflicts in plain text files
+				- Ideal for users who want to version control their notes with Git
+			- **DB Version:**
+				- Not compatible with Git version control
+				- Git cannot handle merge conflicts in SQLite database files
+				- Users wanting Git integration must use Markdown or Org mode
+		- ### Data Portability
+			- **Markdown Version:**
+				- High portability - files can be accessed by any Markdown editor
+				- Easy to migrate to other tools
+				- Can be read and edited with standard text editors
+				- Compatible with other Markdown-based applications
+			- **DB Version:**
+				- Lower portability - requires Logseq to access data
+				- Can export to Markdown, but primary storage is proprietary
+				- Limited interoperability with external tools
+				- Database structure is not human-readable
+		- ### Performance and Scalability
+			- **Markdown Version:**
+				- Performance can degrade with large numbers of files
+				- Slower indexing and search times as collection grows
+				- File system operations can become a bottleneck
+			- **DB Version:**
+				- Optimized for large datasets
+				- Faster search and retrieval through database queries
+				- Better indexing and performance with extensive note collections
+				- Designed for scalability
+		- ### Collaboration Features
+			- **Markdown Version:**
+				- Primarily single-user focused
+				- Collaboration requires external tools (Git, cloud storage)
+				- Manual file sharing and synchronization
+			- **DB Version:**
+				- Real-Time Collaboration (RTC) support
+				- Multiple users can work simultaneously on the same graph
+				- Immediate synchronization across users
+				- Enhanced collaboration features (may require Logseq Pro subscription)
+		- ### Open Source Status
+			- **Markdown Version:**
+				- Fully open source
+				- Community can contribute and modify
+			- **DB Version:**
+				- Not open source
+				- Proprietary implementation
+		- ### Feature Compatibility
+			- **Markdown Version:**
+				- Some Logseq-specific features may not translate to other Markdown editors
+				- Logseq syntax (`[[links]]`, `#tags`, `((block-refs))`) may not be recognized elsewhere
+				- Broad compatibility with Markdown ecosystem
+			- **DB Version:**
+				- Full support for all Logseq advanced features
+				- Enhanced query capabilities
+				- Optimized for Logseq's complete feature set
+				- Limited compatibility with external Markdown editors
+		- ### NewTags Feature
+			- **Markdown Version:**
+				- NewTags feature not available
+				- Tags are simple markers without associated properties
+			- **DB Version:**
+				- NewTags feature available - allows associating properties with tags
+				- When a tag with properties is applied to a page, those properties are automatically assigned
+				- Enables structured data entry and automatic property assignment
+				- Example: Applying `#contact` tag with `phone::` and `email::` properties automatically assigns those properties to the page
+				- Supports table views for tagged items with their associated properties
+				- [Introducing NewTags (with examples) - Customization / Look what I built - Logseq](https://discuss.logseq.com/t/introducing-newtags-with-examples/32310/3)
+		- ### Use Case Recommendations
+			- **Choose Markdown Version if:**
+				- You prioritize data portability and flexibility
+				- You want to use Git for version control
+				- You need compatibility with other Markdown tools
+				- You prefer open source solutions
+				- You want direct file access and editing
+			- **Choose DB Version if:**
+				- You prioritize performance with large note collections
+				- You need real-time collaboration features
+				- You want enhanced synchronization across devices
+				- You're building a large-scale knowledge base
+				- You don't need Git integration
+	- ## References
+		- [Backwards compatibility between current Logseq version and next DB - Questions & Help - Logseq](https://discuss.logseq.com/t/backwards-compatibility-between-current-logseq-version-and-next-db/31306/2)
+		- [docs/db-version-changes.md at master · logseq/docs](https://github.com/logseq/docs/blob/master/db-version-changes.md)
+		- [Will logseq sync be open source? - Questions & Help - Logseq](https://discuss.logseq.com/t/will-logseq-sync-be-open-source/31903/24)
+		- [[Logseq/DB]]
+		- [[SQLite]]
