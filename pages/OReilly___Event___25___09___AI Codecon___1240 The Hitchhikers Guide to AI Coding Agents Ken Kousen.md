@@ -25,7 +25,7 @@
 			- 3. MCP Server Wrapping
 				- Headless agents exposed as MCP servers
 			- 4. Claude Code Agent Orchestration
-				- [[Anthropic/App/Claude Code/Subagent]] [Subagents - Anthropic](https://docs.anthropic.com/en/docs/claude-code/sub-agents)
+				- [[Claude Code/Subagent]] [Subagents - Anthropic](https://docs.anthropic.com/en/docs/claude-code/sub-agents)
 		- 12:55 example: Opera generator
 			- gpt 4.1 and claude are taking turns generating the libretto
 			- all these services are stateless; you have to pass the memory back and forth
