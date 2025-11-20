@@ -1,0 +1,187 @@
+- # 10:05am - 10:24am | AI Leadership | Room: Times Center
+	- ![Steve Yegge](https://www.ai.engineer/speakers/steve-yegge.jpg) ![Gene Kim](https://www.ai.engineer/speakers/gene-kim.png)
+	- **[[Person/Steve Yegge]]** [Twitter](https://twitter.com/Steve_Yegge) [LinkedIn](https://www.linkedin.com/in/steveyegge) - Engineering Leader, Sourcegraph/Amp
+	- **[[Person/Gene Kim]]** [Twitter](https://twitter.com/RealGeneKim) [LinkedIn](https://www.linkedin.com/in/realgenekim) [Website](https://www.realgenekim.me/) - Author & Researcher, IT Revolution
+	- ## Talk: 2026: The Year the IDE Died
+		- As AI has grown more capable, software developers around the world have lagged behind the technology advances, and have consistently eschewed the most powerful tools. In this talk I explore why devs are staying 9-12 months behind the AI curve. I'll share a preview of what 2026's AI coding tools will be like, and paint a vision of where we go from here.
+	- ## [[Person/Steve Yegge]]
+		- ### AI Developer Trajectory — timeline layout
+		- A horizontal timeline with four numbered stations (1–4) spaced evenly across.
+		- **2023 (Step 1)** sits above the first marker: “code completions (Copilot).” Visual cue: early, narrow capability.
+		- **2024 (Step 2)** under the second marker: “chat-based programming (Cursor, Windsurf, Cody).” Visual cue: dialog-driven coding replacing autocomplete.
+		- **2025 (Step 3)** above the third marker: “agentic coding assistants (Claude Code, Codex, Cline, Amp, Gemini CLI, …).” Visual cue: richer toolchains with multi-step autonomy.
+		- **2026 (Step 4)** by the final marker: “???” signalling an open frontier.
+		- Caption beneath: "Agentic coding is not the Final Form." Emphasis: next phase = **orchestrators**, implying multi-agent coordination rather than single-agent assistance.
+		- ### Session context
+		- Title: *2026: The Year the IDE Died*.
+		- Framing: devs lag 9–12 months behind AI progress; 2026 tools shift from assistants to fully orchestrated coding systems.
+		- ### Coding Agents as Power Tools — conceptual layout
+		- Slide split left/right. Left block: analogy. Right block: limitation + need for evolution.
+		- **Left side:** Coding agents framed as *manual power tools* (drills, forklifts). Visual cue: interchangeable attachments → “an agent can be many tools.” Emphasis on *skill*: anyone can dabble, few master.
+		- **Right side:** Manual tools can build “anything” only until the project becomes too large/complex. Modern software exceeds individual capacity, even with AI. Closing line gestures toward industrial automation: **move from power tools → CNC machines**.
+		- Your gloss fits: Claude Code ≈ electric drill/saw — powerful but still fundamentally manual.
+		- ### The Problem: Adoption — two-tile comparison
+		- Slide foreground shows **two large rounded rectangles** side-by-side.
+			- **Left tile:** “Most developers are still using Cursor & Chat.” Subtext: 2024 tools are already *outdated* relative to 2025–26 agentic systems.
+			- **Right tile:** “The Staff Engineer Curse: 10–15 years of experience.” Subtext: senior ICs lag in AI uptake while the rest of the org adopts quickly.
+		- Background faintly shows a person + futuristic UI panels, stressing contrast between legacy habits and new capabilities.
+		- Bottom line: slow adoption is **dragging companies**, generating frustration; upcoming case study: OpenAI + Codex.
+		- Your note aligns: the **productivity gap is enormous** between adopters and holdouts.
+		- ### We've Seen This Movie Before — historical analogies
+		- Single-column layout listing past refusal patterns:
+			- Watchmakers resisted electric tools → precipitated the Swiss *Quartz Crisis*.
+			- 70s–80s drafters rejected CAD.
+			- Photographers resisted digital workflows.
+		- Framing question: senior engineers repeating the same resistance pattern with AI.
+		- Closing line: behavior change is slow; **automation always wins**.
+		- ### The New Quartz Crisis — stacked tiles
+		- **Top row:** two side-by-side boxes.
+			- Left: software ≈ mechanical watchmaking — elegant, artisanal, historically hand-crafted.
+			- Right: Linus Torvalds cast as a master “watchmaker,” skeptical of vibe-coding for “real” work; echoes past artisan resistance (drafters, watchmakers, photographers).
+		- **Bottom wide tile:** blunt prediction — **old-style software development will be automated away**, not over decades but **1–2 years**.
+		- Your note tracks: this mirrors prior industry upheavals.
+		- ### Adoption Depends on Having UI — two-column split
+		- **Left column:** Thesis: **CLI agents are too hard**; mass adoption requires a real UI. Supporting bullets:
+			- Claude Code forces constant supervision.
+			- You must monitor every action.
+			- Users need *helpers* (model-driven guidance) rather than raw terminals.
+		- **Right column:** Current agent tools **aren't moving toward UI**, but instead reinforcing the CLI paradigm. Rhetorical jab: has Claude Code meaningfully improved since February?
+		- Comment: I like the concept of a Moldable Development environment - an UI that adapts to the task at hand
+		- ### The Diver Problem — image-anchored metaphor
+		- Dominant visual: a lone scuba diver suspended in a narrow chasm, deep underwater — evokes isolation, depth, limited mobility.
+		- Text frames coding agents as **divers sent “underwater” into your codebase**.
+			- **Context window = oxygen tank**.
+			- A skilled diver can accomplish impressive tasks, but only until the air runs out.
+		- Closing question highlights the constraint: **why rely on a single diver for everything?**
+			- Sets up the need for multiple coordinated agents (orchestrators), not monolithic deep dives.
+		- "should you send a product manager diver first right" sarcasm
+	- ## [[Person/Gene Kim]]
+		- ### Gene Kim Book Timeline — six-cover grid
+			- Two rows of book covers arranged chronologically:
+				- **2013:** *The Phoenix Project*
+				- **2016:** *DevOps Handbook*
+				- **2017:** *Accelerate*
+				- **2019:** *The Unicorn Project*
+				- **2023:** *Wiring the Winning Organization*
+				- **Fall 2025:** *Vibe Coding* (with Steve Yegge)
+			- Visual cue: a decade-long arc of DevOps/engineering culture thought-leadership culminating in the forthcoming **Vibe Coding** era.
+		- ### The Great Amazon API Rearchitecture — mandate slide
+			- Left block: the famous Bezos API rules, with items **1–3** and **6** boxed in red for emphasis.
+				- Expose all data/functionality via service interfaces.
+				- All inter-team communication must go through those interfaces.
+				- **No other interprocess communication allowed.**
+				- **Non-compliance → fired.**
+			- Items **4–5** note tech-agnosticism and requirement for externalizable interfaces.
+			- Right black panel: aside noting #7 is a joke; enforcement attributed to Amazon CIO Rick Dalzell (ex–Army Ranger).
+			- Sets historical precedent for industry-wide architectural pivots driven by top-down mandates.
+		- ### Our Belief and Observations — bullet-driven thesis
+			- AI's impact will **reshape tech orgs at a scale ~100× larger** than agile/cloud/CI/CD/mobile transformations.
+			- Breakthroughs don't just adjust workflows — they **reconfigure entire organizations and economies** around new production modes.
+			- Early **case studies already hint** at what this AI-driven reorganization will look like.
+		- ### [[Person/Adrian Cockcroft]]: NoOps → NoDev — pull-quote layout
+			- Medium article: **[[Person/Adrian Cockcroft]], "Directing AI Native Development" (Oct 5, 2025)** — shown on the left with garden thumbnail.
+			- Right excerpt:
+				- Ops resisted cloud automation → "NoOps."
+				- Devs will resist AI-native build systems → "NoDevs."
+				- Ops eventually became DevOps; in the AI-native era, **developers shift toward product-manager-style direction of AI teams rather than hand-coding**.
+		- ### Elite vs. Low Performers
+		- #### Deployment Frequency
+			- Elite: On-demand (multiple/day)
+			- Low: Monthly/quarterly
+			- Difference: 208×
+		- #### Deployment Lead Time
+			- Elite: <1 hour
+			- Low: 1 week–1 month
+			- Difference: 106×
+			-
+		- #### Deploy Failure Rate
+			- Elite: 0–15%
+			- Low: 46–60%
+			- Difference: 7×
+			-
+		- #### Mean Time to Restore
+			- Elite: <1 hour
+			- Low: <1 day
+			- Difference: 2,604×
+			- **Source:** Google/DORA — 2019 State of DevOps Report ([https://cloud.google.com/devops/state-of-devops/](https://cloud.google.com/devops/state-of-devops/))
+		- ### Our Definition: Vibe Coding
+		- "When the AI writes the code, and the human supervises…"
+		- "Anything besides typing in code by hand."
+		- ### From [[Person/Dario Amodei]]'s Foreword
+		- Vibe coding is both *inspired* and *misleading*:
+			- Inspired because it captures the experience of vaguely describing intent to an AI and watching it turn that vibe into working software.
+			- Misleading because the playful name can make the practice seem trivial or unserious.
+		- Core claim: vibe coding — using natural language to direct an AI model to write and iteratively improve software — is **deadly serious**.
+		- As of mid-2025, it's **the only coding game in town** (according to [[Person/Dario Amodei]])
+		- ### [[Person/Erik Meijer]] (VB, C#, LINQ, Hack)
+		- "If we are the last generation of developers to write code by hand, let's have fun doing it."
+		- "Let's not waste our most precious resource — **time** — on things a machine can do. Time can't be stored or created."
+		- Right side: [[Person/Gene Kim]]'s post summarizing Meijer's talk:
+			- His team's Meta-built codegen/fix models were **outclassed by ChatGPT**.
+			- They were shocked ChatGPT could **write Hack**, despite the language's limited external footprint.
+		- ### Working With [[Person/Steve Yegge]] Developer of [[Programming Language/Hack]]
+			- Writing **thousands of lines of code per day** — described as *high-quality, production-ready, well-tested*.
+			- Daily spend of **$300–$500** across **3–5 Claude Code and Sourcegraph AMP sessions**, indicating heavy iterative agentic use at scale.
+		- ### Crazy Things We've Heard
+		- “As an engineer, **if I’m not spending the equivalent of my salary on tokens daily, I’m doing something wrong**.”
+		- Implication: some orgs expect engineers to burn **$500–$1000/day** in AI compute as normal operating cost.
+		- ### The Value of Vibe Coding [[Acronym/FAAFO]]
+		- **F:** Build what I want **faster**
+		- **A:** Become more **ambitious** about what I can build
+		- **A:** Build things **alone** without needing a team
+		- **F:** Have **more fun** doing it
+		- **O:** Get more **options** — more swings at bat, more explorations
+		- ### Irresistible Appeal To R&D Orgs
+		- **Andy Glover, Director of Dev Productivity, OpenAI:**
+			- “One of my top goals is to get more of our developers using agentic coding, to get everyone's productivity closer to what we see in our best Codex agent users.”
+			- "We're having meetings across the company about how to elevate developer productivity."
+		- ### Booking.com (2025)
+		- **[[Person/Bruno Passos]]**, Group Product Manager, Developer Experience
+			- Presents Booking.com scale: **1.5M rooms booked daily**, **500M monthly visitors**, **24k employees**, **$23.7B revenue**.
+		- **[[Person/Laura Tacho]]**, CTO, Developer Experience
+			- Shows internal metrics: **Daily AI users ship 30%+ more than non-AI users**.
+		- **Source:** [https://videos.itrevolution.com/watch/1121936057](https://videos.itrevolution.com/watch/1121936057)
+		- ### Travelopia (2025)
+		- **[[Person/Sree Balakrishna]]**, Technology Director, Innovation & Products
+			- Describes shift **from 10–12-person squads → 4–6 cross-functional engineers → future business+developer pairs**.
+			- States ambition: **scale from $100M → $500M with the same 200 people**.
+			- Highlights major win: **a $1.5B/year travel company rebuilt a legacy application in only six weeks** using AI-accelerated development.
+		- **Source:** [https://videos.itrevolution.com/watch/1121937327](https://videos.itrevolution.com/watch/1121937327)
+		- ### Fidelity (2025)
+		- **[[Person/Tapabrata Pal]]**, VP of Architecture
+			- Presents a **high-level architecture**: Neo4j DB → API → analytics UI, supported by repos, artifacts, containers, runtime.
+			- Demonstrates an AI-assisted prototype generating a **software bill-of-materials knowledge graph** UI from that architecture.
+			- He spent 5 days making this, instead of 6 months
+			- Even leaders with their own teams are frustrated, saying, can I prove this can be done
+			- Afterwards, he said, who can maintain this?
+			- Enter [[Person/Swathi]] (most junior on team), outlearning everyone on org
+			- Getting more headcount, because num consumers of app increase 10x
+		- **Source:** [https://videos.itrevolution.com/watch/1121938969](https://videos.itrevolution.com/watch/1121938969)
+		- ### Cisco (2024)
+		- **[[Person/John Rauser]]**, Senior Director of Software Engineering
+		- **[[Person/Anand Raghavan]]**, Senior Director of Engineering, AI
+			- Present Cisco's scale: **$52B revenue**, **85k employees**, **94% of Fortune 100 served**.
+			- Describe unifying Cisco's stack using GenAI.
+			- Note a major organizational mandate: **100 leaders were required to vibe-code an application within a single quarter** — a top-down adoption accelerator.
+		- **Source:** [https://videos.itrevolution.com/watch/1002959532](https://videos.itrevolution.com/watch/1002959532)
+		- ### AI Trust Increases With Experience
+		- Scatterplot with smoothing line: **months using AI tools (x-axis)** vs. **AI trust score (y-axis)**.
+		- Y-axis represents **how much you trust the AI**.
+		- Trend: trust **steadily rises** over the first ~20 months, then **levels around ~0.55–0.6**.
+		- ### Vibe Coding Workshop For Leaders
+		- Collage of apps, dashboards, data visualizations, mobile UIs, and interactive tools built during workshops.
+		- These represent **real artifacts produced by leaders** learning vibe coding hands-on.
+		- Key result: **a 3-hour workshop achieved a 100% completion rate** — every participant successfully built and shipped an AI-generated application.
+		- ### Crazy Things We've Heard
+		- Tech leader quote:
+			- “When I told my team that I wrote an app where **AI wrote 60K lines of code**, and I haven’t looked at any of it…
+			- …they looked at me as if they wished I were dead."
+		- ### Crazy Things We've Heard
+		- “We’ve had these stupid problems in applications that have been there for over a decade…
+		  
+		  …we’ve never worked in that codebase. We used AI to generate a fix, and we submitted a PR…
+		  
+		  …**and the team accepted it.**"
+		- ### Crazy Things We've Heard
+		- “Our **code velocity is so high** that we’ve concluded we can only have **one engineer per repo**.”
+		- Interpretation: once AI accelerates output, the **coordination cost** of having multiple humans in the same project becomes very high.

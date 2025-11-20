@@ -1,0 +1,15 @@
+- # 9:05am - 9:24am | AI Leadership | Room: Times Center
+	- ![Katelyn Lesse](https://www.ai.engineer/speakers/katelyn-lesse.jpg)
+	- **[[Person/Katelyn Lesse]]** [Twitter](https://twitter.com/katelyn_lesse) [LinkedIn](https://www.linkedin.com/in/katelynlesse) - Head of Engineering, Claude Developer Platform, Anthropic
+	- ## Talk: Evolving Claude APIs for Agents
+		- Developers are building more and more complex, long-running, agentic systems. Learn how the Anthropic team is evolving the Claude Developer Platform to enable developers to get the best outcomes from Claude.
+	- ## Memory Tool
+		- Originally just [[Anthropic/App/Claude Code/Claude.md]] file based
+		- There's a memory tool
+	- ## Context Editing
+		- 39% bump in internal evals
+		- For some models: 1M token context window
+		- They are teaching Claude to be better at understanding what's in its context window
+		- Responds dynamically
+	- ## Computer Use
+		- Give Claude a computer and let it do its thing

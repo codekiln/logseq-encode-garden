@@ -1,4 +1,4 @@
-alias:: [[@swyx]]
+alias:: [[@swyx]], [[Person/Shawn Wang]]
 
 - # Shawn @swyx Wang
 	- ## About Shawn @swyx Wang

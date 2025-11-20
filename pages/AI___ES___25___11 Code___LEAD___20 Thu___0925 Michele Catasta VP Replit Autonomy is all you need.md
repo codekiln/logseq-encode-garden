@@ -1,0 +1,142 @@
+- # 9:25am - 9:44am | AI Leadership | Room: Times Center
+	- ![Michele Catasta](https://www.ai.engineer/speakers/michele-catasta.jpg)
+	- **[[Person/Michele Catasta]]** [Twitter](https://twitter.com/pirroh) [LinkedIn](https://www.linkedin.com/in/pirroh) [GitHub](https://github.com/pirroh) - VP of AI, Replit
+	- ## Talk: Autonomy Is All You Need
+		- AI agents exhibit vastly different degrees of autonomy. Yet, the ability to accomplish objectives without supervision is the critical north star for agent progress, especially in software creation. For non-technical users who cannot supervise software creation, full autonomy is essential, not optional.
+		- First of all, I will discuss two foundational capabilities to achieve true autonomy: automatic testing to verify correctness without human validation, and advanced context management to maintain coherence across complex, long-horizon tasks.
+		- With autonomy established, parallelization becomes the key to delivering a compelling user experience. Sequential execution forces users to wait extensively before seeing progress, breaking the development flow. This talk explores parallelization models (task-level parallelism, out-of-order execution, plan decomposition, etc.) and their tradeoffs in latency, resource consumption, and correctness guarantees.
+	- ## Semi-Async Valley of Death
+		- Published by [[Person/Shawn @swyx Wang]]
+		- [Cognition | Introducing SWE-grep and SWE-grep-mini: RL for Multi-Turn, Fast Context Retrieval](https://cognition.ai/blog/swe-grep#fast-context-as-the-first-step-to-fast-agents)
+		- ![The Semi-Async Valley of Death](https://cdn.sanity.io/images/2mc9cv2v/production/a6e3d6c7846969e2a87835210c532ba7b1bad617-2198x1600.png)
+	- ## From Copilots to Autonomous Agents
+		- <1 minute feedback loop, constant supervision
+		- Completions → Assistant → v1 ReAct → v2 Tool Calling → v3 Autonomous Agents → Hours of independent work
+		- Code completion / assistant require deep technical expertise
+		- v1/v2 Agents were **not** sufficiently autonomous for wide adoption by knowledge workers ("valley of death")
+		- *Can we build fully autonomous Agents?*
+	- ## Scoped Autonomy
+		- Autonomy is *conflated with long run-times or loss of control*
+			- This is a mistake
+		- Autonomy can be given a **very specific scope**
+		- Replit Agent 3 makes technical decisions autonomously
+			- Long gaps if the **scope is broad** → no constant check-ins needed
+		- Agents can be **autonomous and fast** on a narrow scope
+		- The **user maintains control** over project aspects that matter to them
+	- ## Autonomy is not a vanity metric
+		- Tasks have irreducible complexity
+		- Agents plan → implement → test → loop
+			- Goal: **maximize irreducible runtime**
+		- At Replit:
+			- Users are nontechnical
+			- Agent must be trusted collaborator
+			- Abstract away software-creation pain
+			- Users control project but **trust Agent with technical decisions**
+	- ## Pillars of Autonomy
+		- **Frontier capabilities:** baseline IQ
+		- **Verification:** local correctness, 9s reliability, avoid compounding errors
+		- **Context Management:** global coherence, goal + task management
+		- Result: **multi-hour autonomous work**
+	- ## Verification - First Pillar
+	- **Testing fixes broken and hallucinated features**
+		- Mock data, no DB; button handlers not wired
+		- Without tests, Agents build “painted doors”
+			- [[My Note]] I like this term: Painted Door
+		- 30%+ of features are broken
+		- Nearly every app has at least one broken or fake feature
+	- **Feedback without Human Supervision**
+		- Agents must gather their own feedback
+			- Non-technical users can’t give technical feedback
+			- They can only do tedious QA (bad UX)
+		- **Why autonomous testing?**
+			- Break the feedback bottleneck
+			- Prevent small errors from accumulating
+			- Overcome frontier-model laziness by verifying completions
+	- **Spectrum of Code Verification**
+		- **Supervised Agents:**
+			- LSP + execution: basic correctness
+			- Unit tests: functional correctness
+			- API tests: end-to-end API, user-like consumption
+		- **Autonomous Agents:**
+			- Browser use: simulate UI
+			- Computer use: full UI, screenshots
+		- Fast/cheap code interaction → slow/expensive user interaction
+	- **Autonomous App Testing**
+		- Computer-use testing: screenshots ↔ actions
+		- Browser-use testing: DOM ↔ actions
+		- API testing: API calls ↔ app
+		- Replit Agent 3:
+			- Builds testable apps
+			- Merges feedback from multiple sources
+			- Uses computer-use only as fallback
+	- **Tools vs Code for Browser Use**
+		- Tool-based: agent issues clicks, fills, drags; hard to enumerate actions
+		- Agent 3: generates Playwright code
+			- Models can write it directly
+			- More expressive, higher coverage, more efficient
+	- ## Context Management and Coherent Trajectories
+		- Long-context models *not* required for long, coherent agent runs
+			- Most tasks fit well within ~200k tokens
+		- The **codebase becomes the memory**
+			- It stores evolving state, plans, and task lists directly in files
+		- Agents **persist context to disk** before clearing internal memory
+			- Externalizes working memory into artifacts the agent can reread
+		- **Anthropic quote:**
+			- Claude Sonnet 4.5 maintains focus for **30+ hours** on complex, multi-step software tasks
+			- Demonstrates long-trajectory stability without relying solely on massive context windows
+	- ## Context Management with Subagents
+		- Subagents run as *isolated workers*: each receives a fresh context and a single task from the core loop
+			- Keeps their reasoning self-contained and ephemeral
+		- This **separation of concerns** prevents the core agent from polluting its own context window with temporary details
+			- Core agent stays lean; subagents handle messy, localized reasoning
+		- Result: **more memories per compression cycle**
+			- The line chart (before vs. after) shows a jump from low-30s memory retention to low-40s, a steady uplift after introducing subagents
+	- ## Testing as a Subagent
+		- The slide shows a vertical stack: **Agent Loop → Browser Action → Observation → Browser Action → Observation → … → Agent Loop**
+			- Every browser step and observation gets appended into the main loop's context
+		- This **traditional setup** floods the core agent's context with low-level UI noise
+			- Leads to **context pollution**
+		- Consequences:
+			- Higher cost (more tokens)
+			- Slower execution
+			- Worse long-horizon performance
+	- ## Testing as a Subagent (Agent 3 redesign)
+		- The slide contrasts the **traditional stack** (agent ↔ browser ↔ observation, repeated) with the **Agent 3 architecture**, which inserts a **Verification subagent** between two clean agent-loop states.
+		- Instead of dumping every click/DOM event into the main context, Agent 3 delegates all low-level UI work to a **separate verification worker**.
+		- That worker runs a tight loop: **Playwright → Observation → Playwright → Observation**, entirely *outside* the core agent's memory stream.
+		- The dashed lines show the core agent "outsourcing" this noisy interaction to the subagent; the results are summarized, not streamed in raw.
+		- This design protects the core loop from context bloat, improves coherence across long trajectories, and keeps the main agent focused on reasoning rather than UI chatter.
+	- ## Parallelism
+		- ### Trading compute for time with parallel agents
+			- Running agents in parallel burns extra compute but buys speed.
+				- Each parallel worker must reconstruct **the same context** in its own window.
+					- "agents are sharing 80% of the context across the board"
+				- Their outputs introduce **merge conflicts** that must be resolved.
+			- But this unlocks capabilities that would be too slow sequentially:
+				- Continuous **testing** and ongoing code review in the background
+				- **Async processes** feeding new information into the main agent's memory
+				- **Sampling** many possible trajectories to pick the best path
+		- ### Background Agents (User as Orchestrator)
+			- The user manually decides which tasks to run, and each task is spun off in its own thread.
+			- **Dispatch:**
+				- A human expert decomposes tasks for the parallel agents.
+				- This decomposition is usually sub-optimal because it depends on human intuition.
+			- **Merge:**
+				- A human resolves merge conflicts after the parallel agents finish.
+				- Automatic merge-conflict resolution remains an unsolved general problem.
+			- Visual layout:
+				- **Human → Orchestrator → (LLM Call 1 / 2 / 3)** running in parallel → **Human Synthesizer → Output**.
+				- The user plays both dispatcher and merger, acting as the glue between parallel agent threads.
+		- ### Subagents (Core Loop as Orchestrator)
+			- Here, the *agent itself* becomes the dispatcher.
+				- The core loop identifies sub-tasks as it reasons, based on its understanding of the problem and its own abilities.
+			- **Dispatch:**
+				- The core loop spends tokens to analyze, break down, and launch tasks to subagents.
+				- Decisions about parallelism happen dynamically, not predetermined by a human.
+			- **Merge:**
+				- Because the core loop *chooses* how to decompose tasks, merges become easier—the tasks were created with "merge-conflict awareness" baked in.
+			- Subagents can be **specialized**
+				- Different models, prompts, personas, or even different tool capabilities.
+			- Diagram structure:
+				- **Core Loop Orchestrator → LLM Call 1/2/3 (Subagents) → Core Loop Synthesizer → Output**
+				- The "glue" is now inside the agent rather than the human.

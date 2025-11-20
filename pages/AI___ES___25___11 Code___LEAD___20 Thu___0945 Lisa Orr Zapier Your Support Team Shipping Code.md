@@ -1,0 +1,85 @@
+chatgpt-link:: https://chatgpt.com/g/g-p-691f249c2fac8191ab8b4b926da5cb3b-ai-es-25-11-code/c/691f2a43-888c-800a-bd67-c3657e6931d4
+
+- # 9:45am - 10:04am | AI Leadership | Room: Times Center
+	- ![Lisa Orr](https://www.ai.engineer/speakers/lisa-orr.jpg)
+	- **[[Person/Lisa Orr]]** [Twitter](https://twitter.com/orreither) [LinkedIn](https://www.linkedin.com/in/lisaorr) - Engineering Leader, Zapier
+	- ## Talk: Your Support Team Should Ship Code
+		- Zapier maintains 8000+ integrations that break as APIs change. We had thousands of backlog support tickets with dozens more arriving weekly. To keep up with the traffic, we started building AI tools to help ship integration fixes faster. We began by shadowing engineers fixing tickets and building tools we believed would expedite the fix process. Our first effort, an API playground hosting AI tools like diagnosis and test generation, failed to get engineering traffic because it pulled builders out of their workflows. We pivoted to MCP tools that engineers could use directly in their IDEs. MCP tools gained traction, but our most valuable tool, Diagnosis, took too long to run. Engineers wouldn't wait for it, revealing we needed an asynchronous approach. We built Scout Agent to string our tools together, autonomously reading support tickets, gathering context, generating fixes with tests, and submitting merge requests ready for review. This agent approach has gained traction with our support team handling high ticket volumes. An MR ready for review means they can validate and ship a fix quickly before needing to jump on the next incoming ticket. Throughout this process we've learned that the real challenge is everything surrounding code generation. Before writing code, Scout Agent needs both the right context and to show its work so engineers trust its recommendations. After generation, engineers need to quickly validate and correct the proposed fix, otherwise MRs sit unreviewed and abandoned. Embedding Scout Agent directly in GitLab solved this. Teams can iterate on proposed solutions without context switching. To track improvement, we measure three distinct failure modes: categorization accuracy (should Scout attempt this ticket?), fixability assessment (does this need a code fix?), and solution quality (does the generated code actually work?). Each reveals different improvement opportunities. Today, Scout drives 40% of support's integration fixes, with expansion to engineering teams and downstream automation (testing, shipping, migration) as our next frontiers.
+	- ## Intro - Grand Canyon
+		- Parallels between grand canyon and zapier: erosion
+		- 8k+ apps under change
+		- 14 years
+		- API changes and deprecations
+			- Creates reliability issues
+		- Salesforce, Excel, HubSpot, etc. needs constant attention
+	- ## They are huge users of [[CursorAI]]
+		- It made some of their tools obsolete
+		- They had a support team "diagnosis api"
+		- Support loved it enough that they put it in their process
+		- Embedding was important
+	- ## One major win: support now embeds diagnosis
+	- Left panel: **Autocode – Diagnose Issue** form
+		- Simple input surface: issue URL, optional prompt, research-effort dropdown (“Fast”).
+		- One-click **Diagnose Issue** triggers the AI workflow.
+	- Right panel: **Issue Diagnosis** viewer
+		- Dark code-pane shows a structured “research tree”:
+			- Root → branching search steps (Jira link → Google search → docs → GitLab MR trails).
+			- Live “current_path” showing the agent’s active hop through links and API docs.
+			- Buckets for sources, facts, analysis progress, map, issue details, and a generated report.
+		- Visual feel: like watching the agent think—hierarchical, telescoping nodes revealing its reasoning.
+		- Meaning: diagnosis moved directly into the support workflow, no context switching to external tools.
+	- ## Scout MCP: engineers now pull these tools straight into Cursor
+		- Slide shows a dark chat-style panel where the agent accepts an issue URL and begins analysis inline.
+		- MCP calls fire in sequence—`create_ticket_context`, `diagnose_issue`, `get_task_status`—each shown as expandable blocks with checkmarks.
+		- Visual rhythm: stacked tool-call cards, each representing one autonomous step in the chain.
+		- Meaning: diagnosis and context-gathering now live *inside* the engineer's IDE workflow—no jumping to portals.
+	- ## Challenges emerge
+		- **Diagnosis is slow** — the core tool takes too long to return, killing flow.
+		- **Falling behind demand** — tools can't keep pace with ticket volume and engineering needs.
+		- **Scattered adoption** — usage is uneven; engineers try it but don't stick because latency breaks trust.
+		- They were happy about tool usage
+			- Hypothesis: value from tying tools together
+	- ## Scout Agent
+		- ### "What if *we* owned orchestration?"
+			- Slide shows a hand-drawn block diagram: Diagnose → AI Code Gen, with Spec Gen feeding context.
+			- Central idea: pull together specs, zap data, Loki issues, and GitLab references into one shared **Context** block.
+			- Diagnose pulls from it; Code Gen pulls from it; Spec Gen updates it.
+			- Insight: engineers liked the tools individually, but the real value emerged when **chaining** them—one orchestrated flow instead of scattered utilities.
+		- ### Who would benefit from orchestration?
+			- The team fielding small emergent bugs and coming in hot off the queue ... support team
+		- ### Two paths converge: Scout Agent for Support
+			- Support + engineering workflows merge into a single agent-driven loop.
+			- Slack-style card shows Scout deciding an issue is fixable, identifying a root cause, and queueing an MR-prep job.
+		- ### End-to-end flow (visual diagram)
+			- Support files an issue → **Scout categorizes** it.
+			- **Feasibility check:** fixable vs. wrong category/not fixable.
+			- If fixable → **Scout generates a code fix** directly.
+			- Support tests the fix, gives feedback, and ultimately submits it for review.
+			- Feedback can route back into Scout for refinement before final submission.
+		- ### How Scout runs (triggered by a Zap)
+			- A Zap fires when support submits an issue → kicks off the full agent pipeline.
+			- Steps:
+				- Post the diagnosis back into Jira.
+				- Generate a merge request through GitLab CI/CD.
+				- Run **Plan → Execute → Validate** phases using Scout MCP + Cursor SDK.
+					- [[CursorAI/SDK]] what is this? [[Question/My]]
+				- Attach the resulting MR to the Jira ticket.
+			- Right side: a branching execution tree visualizing the agent's multi-step workflow.
+		- ### Is Scout Agent working?
+			- Diagram highlights three evaluation checkpoints across the flow:
+				- **Categorization:** Did Scout classify the issue correctly at intake?
+				- **Feasibility:** Was the issue actually fixable once analyzed?
+				- **Solution quality:** When Scout generated a fix, was it accurate when support tested it?
+			- These checkpoints map to the three failure modes they track.
+		- ### Impact on app "erosion"
+			- Support velocity jumps from **1–2 fixes/week** to **3–4 fixes/week** with Scout.
+			- Biggest relief: Scout surfaces fixable tickets directly in triage, removing friction and hunting through backlog.
+-
+	- ## Engineering Team
+		- Alejandro Lagos
+		- Greg Aiello
+		- Andy Pineda (called out as present in the audience)
+		- Justin Deal
+		- Dan Vagg
+		- Brady Skaurud
+		- Mason Geloso
