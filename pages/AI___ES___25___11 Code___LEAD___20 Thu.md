@@ -1,0 +1,6 @@
+- [AI Engineer Code Summit: Nov 19-22, NYC](https://www.ai.engineer/code)
+- [AI Engineer Code Summit 2025 - Schedule - 11/20](https://www.ai.engineer/schedule#2025-11-20)
+	- [[AI/ES/25/11 Code/LEAD/20 Thu/0905 Anthropic Claude APIs Agents]]
+	- [[AI/ES/25/11 Code/LEAD/20 Thu/0925 Michele Catasta VP Replit Autonomy is all you need]]
+	- [[AI/ES/25/11 Code/LEAD/20 Thu/0945 Lisa Orr Zapier Your Support Team Shipping Code]]
+	- [[AI/ES/25/11 Code/LEAD/20 Thu/1005 2026 year ide died steve yegge gene kim amp sourcegraph]]
