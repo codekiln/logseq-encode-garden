@@ -36,10 +36,17 @@ For other users, use site-specific namespaces:
 
 If you are asked to make an entry for a person, you should:
 
-1. **Search First**
-   - Search in `pages/People___*.md`, `pages/Person___*.md`, and in any file matching `pages/**___People___*.md` or `pages/**___Person___*.md` to find if a person already exists
-   - If it already exists, then you should **update** the existing entry
-   - A single person should not have more than one person page
+1. **Search First - CRITICAL for Deduplication**
+   - **Before creating or referencing a person page, you MUST search thoroughly:**
+     - Search in `pages/People___*.md`, `pages/Person___*.md`, and in any file matching `pages/**___People___*.md` or `pages/**___Person___*.md`
+     - Search by full name, partial name, username/handle, and common variations
+     - Check aliases in existing person pages (read the `alias::` frontmatter)
+     - Look for name variations (e.g., "Shawn Wang" vs "Shawn @swyx Wang" vs "@swyx")
+   - **If a person page already exists:**
+     - **DO NOT create a new page** - update the existing entry instead
+     - **When referencing the person, use the canonical page name** (the actual filename), NOT aliases
+     - Example: If page is `Person___Shawn @swyx Wang.md` with alias `[[Person/Shawn Wang]]`, reference it as `[[Person/Shawn @swyx Wang]]`, not `[[Person/Shawn Wang]]`
+   - **A single person should NEVER have more than one person page** - this is a critical deduplication rule
 
 2. **Verify Significance**
    - Confirm the person meets the criteria for a person page
@@ -54,5 +61,12 @@ If you are asked to make an entry for a person, you should:
    - If possible add an image link
    - Include relevant external links (GitHub, LinkedIn, etc.)
 
-4. **Journal Entry**
+4. **Referencing Existing Person Pages**
+   - **Always use the canonical page name** when creating references in content
+   - The canonical name is the actual page filename (e.g., `Person___Shawn @swyx Wang.md` → `[[Person/Shawn @swyx Wang]]`)
+   - **Do NOT use aliases** when referencing - aliases are for backward compatibility, not for new references
+   - If unsure of the canonical name, search for the person page first and use the exact page title
+
+5. **Journal Entry**
    - If the person page is new, make an entry in today's journal page that links to that person
+   - Use the canonical page name in the journal entry
