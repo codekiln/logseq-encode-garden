@@ -1,0 +1,74 @@
+- # 11:00am - 11:19am | AI Leadership | Room: Times Center
+	- ![Bill Chen](https://www.ai.engineer/speakers/bill-chen.jpg)![Brian Fioca](https://www.ai.engineer/speakers/brian-fioca.jpg)
+	- **[[Person/Bill Chen]]** [LinkedIn](https://www.linkedin.com/in/billchen99/) - Applied AI, [[OpenAI]]
+	- **[[Person/Brian Fioca]]** [Twitter](https://twitter.com/bfioca) [LinkedIn](https://www.linkedin.com/in/brianfioca) [GitHub](https://github.com/bfioca) [Website](https://fioca.com/) - Applied AI, [[OpenAI]]
+	- ## Talk: Future-Proof Coding Agents: Building Reliable Systems That Outlast Model Cycles
+		- Coding agents are becoming one of the most active areas in applied AI, yet many teams keep rebuilding fragile infrastructure every time models or providers change. We believe there is a better way. By anchoring on a stable abstraction layer like Codex, we can stop worrying about harness rewrites and focus on the parts of the stack that create lasting value. We treat models as interchangeable sub-agents, plug into shared primitives, and let upstream improvements flow through without breaking products. This lets teams move faster, stay resilient as the ecosystem evolves, and focus their energy on domain-specific workflows and user experience.
+	- ## Agenda
+		- Coding agents
+		- Coding agent harnesses
+		- Codex as both model + harness
+		- Agents and sub-agents
+		- Future of Codex
+	- ## Coding Agents: Core Components
+	- **User Interface** (left column; speech-bubble icon)
+		- CLI
+		- IDE (e.g., VS Code)
+		- Cloud / background agent
+	- **Models** (center column; robot icon)
+		- GPT-5.1
+		- GPT-5.1 Codex Max
+		- Claude Opus / Sonnet / Haiku
+		- Composer, SWE 1.5, Gemini, Grok
+	- **Harness** (right column; cluster icon)
+		- Open / closed source
+		- Prompts
+		- Agentic loop
+		- Tools + descriptions: Semantic search, Websearch, Patch/Edit, Browser
+	- ## Coding Agents: Active Frontier
+	- Dozens of teams build their own harnesses + prompts
+	- Tools are diverse/opinionated: search, context-gathering, edits, progress-tracking
+	- Models keep changing: different strengths, habits, API shapes
+	- **Problem:** every model revision forces teams to adapt harnesses + tools
+	- ## Building + maintaining a harness
+	- **DIY challenges:** custom tools out-of-distribution; prompt engineering to fit model; poor prompt portability
+	- **New model challenges:** latency; context-window strategy; API response + tool-call format changes
+	- ## Steerability = intelligence + habit
+	- **Training side-effects:** steerable vs baked-in behavior; tool-priming quirks; RL-shaped habits
+	- **Prompts aren’t interchangeable:** cloning Claude prompts to GPT-5 hurts latency/reasoning; harness-level steering beats prompt microtuning
+- ## 03 Codex as a model and a harness
+	- Codex: many built-in tools
+		- Parallel tools + shell cmds: `run_terminal_cmd`, `apply_patch`, `search`
+		- Security + sandboxing: permissions, ports
+		- Context compaction: prompting, triggers, re-injection, cache tuning
+		- MCP support: context + security
+		- Images/screenshots: processing, resizing
+		- Model is tuned tightly to this harness (and “way harder than you think”).
+	- Codex bundles capabilities
+		- Writes + executes code and terminal commands
+		- Therefore: a **computer-use agent** for the terminal
+		- If your task is expressible as file ops + CLI ops, just use Codex
+	- If your task is expressible as file ops + CLI ops, use Codex
+		- Even if it doesn’t feel like a coding task
+		- If it can be done by running tools from the command line, use Codex
+	- Assign agents to your agents
+		- Harness = new abstraction layer
+		- Treat Codex as a **pluggable agent inside your agent**
+		- Benefits: stability (swap models safely); prompt decoupling; automatic upgrades
+		- Result: durable platform that rides the wave, not drowned by it
+	- Sub-agent patterns
+		- **01 — Codex SDK**
+			- TS library; programmatic `exec`; GitHub Action integration
+		- **02 — Agents SDK + MCP**
+			- Expose Codex as an MCP tool; give it MCP hooks back into your API
+		- **03 — [[Zed]] ACP**
+			- Instead of IDE-specific harnesses, wrap Codex and let UI/UX pass through
+	- Direct Codex integration (harness + model)
+		- Codex SDK supports: CI/CD control; embedding Codex in your app; building agents that talk to Codex directly
+	- Or directly with the model
+		- **Tweet example (Jediah Katz, Oct 30):** [[CursorAI]] 2.0 agent-harness improvements boosted GPT-5 Codex quality; runs longer uninterrupted; less overthinking; more accurate edits
+		- **How to do it:**
+			- Check the prompting guide — primary resource for shaping Codex behavior
+			- Customize only after baselining — reach parity with first-party harness before adding features
+			- Align with the open-source harness — Codex CLI ships open-sourced prompt + tools for consistency
+	- ## Future of Codex

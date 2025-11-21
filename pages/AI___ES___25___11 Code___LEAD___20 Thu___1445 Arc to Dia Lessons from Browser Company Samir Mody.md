@@ -1,0 +1,87 @@
+- # 2:45pm - 3:04pm | AI Leadership | Room: Times Center
+	- ![Samir Mody](https://www.ai.engineer/speakers/samir-mody.jpg)
+	- **[[Person/Samir Mody]]** [Twitter](https://twitter.com/jedimody) [LinkedIn](https://www.linkedin.com/in/samir-mody) - Head of AI Engineering, [[Browser/Company]]
+	- ## Talk: From Arc to Dia: Lessons learned in building AI Browser
+		- What happens when you take a polished, beloved browser and rebuild it from the ground up around AI? In 2024, [[Browser/Company]] did exactly that: transforming Arc, a human-designed browser, into Dia, a browser with an AI-native browser experience. The journey forced us to unlearn what we knew about product design, system architecture, and even what "good UX" means when the interface itself can reason, plan, and act.
+		- In this talk, I'll share the lessons we learned along the way: how we redesigned for emergent behavior instead of deterministic control, how our engineering and design teams learned to prototype with language models, and how our culture evolved to ship fast in a world where we're still learning what a good system looks like. You'll leave with practical insights for building AI-native products, from technical architecture to team mindset, and a glimpse into how we're thinking about the future of AI browsing.
+	- ## Slide — “This year, we launched Dia, our AI-native browser.”**
+	- Full-bleed gradient background with a centered Mac-style browser window.
+	- Left pane: article page (“The strategy behind Dia’s design”) — clean, serif headline, large hero image, muted palette.
+	- Right pane: AI side panel (“Thought in 1.1 seconds”) summarizing the article, generating a calendar reminder, and offering a “Create event” button.
+	- Visual story: **Dia reads the page, interprets intent, drafts actions, and executes tasks** (calendar event) without manual copying.
+-
+- ## Slide — “Where we’ve invested in tooling”**
+	- **Prototyping for AI product features** — internal rapid-iteration playgrounds.
+	- **Building and running evals** — systematic model-behavior testing.
+	- **Collecting data for training + evals** — pipelines and instrumentation.
+	- **Automation for hill-climbing** — continuous self-improvement loops.
+-
+- ## Narrative context
+	- Early exploration → unified thesis: *AI will transform the browser itself.*
+	- Act II YouTube video was the public articulation of this thesis.
+	- Dia is the result: a browser rebuilt around **AI-native interactions**, not human-manual workflows.
+-
+- ## Slide — “Build tools that enable iteration *in* your product”**
+	- Large composite screenshot: top bar shows an **internal “Self Driving Dashboard”** with an agent prompt: *“Send a gmail email to [ali@thebrowser.company](mailto:ali@thebrowser.company) about having dinner next week while I’m in town.”*
+	- Below: live Gmail UI auto-drafting the message.
+	  
+	  Visual message: **engineers iterate *inside* the product surface**, not in external sandboxes.
+-
+- ## Slide — “Build tools that enable iteration *in* your product” (Slack example)**
+	- Slack message from “gem” sharing a power-prompt.
+	- Prompt invokes a **personal memory graph**: `@Search memory @Gmail @Google Calendar` then asks for a daily synthesized brief: tasks, meetings, transcripts, links.
+	- Shows Dia’s internal **memory → reasoning → synthesis** loop surfacing directly to users.
+-
+- ## Narrative detail
+	- They explored **10+ paradigms** for modeling user “memory” before converging on a **knowledge-graph-like system** that unifies email, calendar, transcripts, tasks.
+	- Core idea: **LLM agents improve fastest when embedded directly into the live workflow**, not isolated tools.
+- **GEPA idea**
+	- Use **prompt evolution** instead of RL: generate, score, select, mutate.
+	- Sample-efficient: no rollouts, no fine-tuning.
+	- System reflects on top performers → produces improved prompts → repeats.
+	- Hill-climbing loop that steadily raises task performance through **LLM-driven self-improvement**.
+- **Example GEPA run**
+	- Start: vague, underspecified prompt: *“Generate a Skill based on the user input.”*
+	- After: evolved prompt becomes **structured, constraint-rich, workflow-grounded**.
+	- Includes design principles, actionable requirements, context limits, and redundancy checks — a direct product of iterative GEPA refinement.
+- **Phases**
+	- **Prototype ↔ Dogfood (blue loop):** rapid ideation, wide funnel, quick utility checks.
+	- **Dogfood → Evals → GEPA/Human hill-climb (yellow loop):** once useful, iterate toward quality bar.
+	- **Ship (green):** only after eval-validated improvement.
+- **Goals**
+	- Faster ideation → shorten loop from idea → prototype → usefulness.
+	- More efficient shipping → structured path from prototype → evals → hill-climb → release.
+- **Principles**
+	- Optimize tools/process for rapid iteration.
+	- Treat **model behavior** as a craft: deliberate, repeatable, owned.
+- **Model Behavior definition**
+	- A function that **defines**, **evaluates**, and **ships** desired model behavior.
+	- Turn product principles into **prompts**, **evals**, and **criteria** that continuously refine the system.
+- **Three pillars**
+	- **Behavior design:** articulate desired capabilities, constraints, tone, failure modes.
+	- **Measurement + training:** build evals, score outputs, refine via data.
+	- **Model steering:** runtime control—prompts, system instructions, memory, and state shaping.
+- **Shift analogy**
+	- Early web: crude functional UIs → mature product design as complexity grew.
+	- Same arc now for **model behavior**.
+- **Timeline**
+	- **Early 2020s (Functional):** prompts, evals, “instructions in → output out.”
+	- **Today (Agentic):** goal reasoning, autonomous tasks, self-correction, personality.
+	- **Future:** open space for new behavioral paradigms as systems grow more complex.
+- **Point**
+	- Model behavior is becoming its own function, not owned solely by engineers.
+- **Lesson from Dia**
+	- Non-engineering teammates (strategy, ops) rewrote prompts, recorded rationale, and **unlocked major capability gains**.
+	- This work birthed the **Model Behavior team**.
+- **Answer**
+	- Yes — the people who can steer the model can come from **any role**: those with clarity of intent, strong communication, and product sense often outperform traditional engineers in shaping behavior.
+- **Prompt Injection Risk (Overview)**
+	- **Definition:** attacker text overrides original LLM instructions.
+	- **Harms:** data exfiltration, malicious actions, safety-rule bypass.
+	- collapsed:: true
+	  
+	  **Browser stakes:** highest risk because all three factors intersect:
+		- Access to private data
+		- Exposure to untrusted content
+		- Ability to externally communicate
+-

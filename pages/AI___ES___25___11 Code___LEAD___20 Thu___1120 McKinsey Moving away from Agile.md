@@ -1,0 +1,300 @@
+chatgpt-link:: https://chatgpt.com/g/g-p-691f249c2fac8191ab8b4b926da5cb3b-ai-es-25-11-code/c/691f4002-5ff8-800a-875f-b7a02e678f4f
+
+- # 11:20am - 11:39am | AI Leadership | Room: Times Center
+	- ![Martin Harrysson](https://www.ai.engineer/speakers/martin-harrysson.png)![Natasha Maniar](https://www.ai.engineer/speakers/natasha-maniar.jpg)
+	- **[[Person/Martin Harrysson]]** [Twitter](https://twitter.com/martinharrysson) [LinkedIn](https://www.linkedin.com/in/martinharrysson) - Partner, [[McKinsey]]
+	- **[[Person/Natasha Maniar]]** - Partner, [[McKinsey]]
+	- ## Talk: Moving away from Agile: What's Next?
+		- Most enterprises are not capturing much value from AI in software dev to date (at least relative to the potential). The reason is that most are adding AI tools to their dev teams without changing the people and operating model aspects (i.e., limited changes to ways of working, team configurations, role definitions, stage gates, etc.). Many core aspects of software development haven't changed in the past 10+ years, and that's holding us back from moving to the new paradigm of software development! We will share examples of what makes the difference.
+	- ## New technologies have given rise to new software dev methodologies
+	- **Overall visual structure:** A horizontal timeline across the top, spanning **Pre-2000s → 2000s → 2010s → 2020s**, with dots marking each era. Two horizontal rows: **Tech breakthrough** (top row) and **Software dev methodologies** (bottom row). Beneath each era is a large illustrative image capturing the “vibe” of that period’s development culture.
+	- **Pre-2000s**
+		- *Tech breakthrough:* **Mainframes, PCs**
+			- Shown as the far-left on the timeline, with an early computing era dot.
+		- *Software dev methodology:* **Waterfall**
+			- Image cue: a 1960s-style computing floor—rows of large tape-driven machines, operators at terminals, a woman in formal dress carrying a stack of punched cards—conveying rigid, sequenced, industrial software processes.
+	- **2000s**
+		- *Tech breakthrough:* **Web, client-server**
+			- Timeline moves to early internet adoption.
+		- *Software dev methodology:* **Agile dev**
+			- Image cue: an early-2000s office with a casual team gathered around a board labeled “To Do / Doing / Done.” Pizza boxes sit on the table, people crowded around bulky monitors—representing stand-ups, iterations, and cross-functional team ceremonies.
+	- **2010s**
+		- *Tech breakthrough:* **Cloud, APIs, mobile**
+			- This era’s dot marks the shift into distributed infrastructure and platform explosion.
+		- *Software dev methodology:* **Product and platform dev**
+			- Image cue: a modern team workshop scene—scrum boards, collaborative whiteboarding, engineers and PMs working together as a product-centric organization with platform thinking.
+	- **2020s**
+		- *Tech breakthrough:* **AI coding assistants**
+			- Positioned far-right in teal text, signaling the new paradigm.
+		- *Software dev methodology:* **AI-native dev**
+			- Image cue: a hypermodern office infused with digital effects—blue energy streaks and a central glowing AI orb—developers using AI copilots, indicating speed, parallelization, and human-AI collaboration as the core workflow.
+	- **Conceptual takeaway:**
+		- The slide argues that **each technological breakthrough historically reshaped software methodologies**, and the 2020s shift to **AI coding assistants** demands a comparable transition—from Agile/Product to **AI-native development**.
+	- ## Impact of AI in individual developer tasks is large
+	- **Top-left panel — Speed of code reviews**
+		- Big blue metric: **7×** with a green upward arrow.
+		- Source label: *[[GitHub/CoPilot]]*.
+		- Visual cue: dark-blue rounded rectangle emphasizing speed uplift.
+	- **Top-right panel — Speed of code refactors and prototyping**
+		- Metric: **2–5×** with green upward arrow.
+		- Source: *[[CursorAI]] at [[Monday.com]]*.
+		- Framed identical to other panels, signaling comparability across tasks.
+	- **Bottom-left panel — Speed of ETL platform migration**
+		- Metric: **12×** with green arrow (largest uplift on slide).
+		- Source: *Devin at [[Nubank]]*.
+		- The position gives the impression of a standout extreme case.
+	- **Bottom-right panel — Speed of unit test development**
+		- Metric: **7×** with green arrow.
+		- Source: *[[CursorAI]] at [[Salesforce]]*.
+		- Reinforces that testing—an often bottlenecked task—sees major acceleration.
+	- **Overall structure:** Four evenly sized tiles in a 2×2 grid, each dark blue, each showing a discrete AI impact metric tied to a specific organization and workflow.
+-
+- ## Slide 6 — Bottlenecks within current operating model and team setup (detailed version)
+	- **Overall structure:** Same sprint-loop diagram, now overlaid with **three red bottleneck boxes** highlighting where friction accumulates. Red circles mark bottleneck points along the track.
+	- **Left bottleneck block — Task assignment issues**
+		- Vertical red box with human + agent icons.
+		- Text: **“Inefficient task assignment among developers and agents due to hard-to-interpret specifications.”**
+		- This sits upstream of refinement and sprint planning, showing that unclear specs cause misallocation early.
+	- **Center-bottom bottleneck block — Rework during development**
+		- Red horizontal box under the Development lane.
+		- Icons: person ↔ LLM ↔ person, showing back-and-forth cycles.
+		- Text:
+			- **“Rework from reviewing and re-prompting AI-generated code among various agents.”**
+			- **“Manual PR reviews (following AI review).”**
+		- Indicates that even with AI coding, teams face churn due to prompt iteration and manual review overhead.
+	- **Top-center bottleneck block — Architectural drag**
+		- Small red rectangle above the loop.
+		- Text: **“Delays from increased complexity and security vulnerabilities.”**
+		- This shows systemic issues (tech debt, infra, compliance) that slow the cycle irrespective of development speed.
+	- **Placement of numbered stages remains:**
+		- **1 Refinement (Day 0)** — feeding into the left bottleneck.
+		- **2 Sprint planning (Day 1)** — adjacent to the task-allocation bottleneck.
+		- **3 Development (Day 2–3)** — sits above the large rework box.
+		- **4 Sprint review (Day 4)** — downstream of rework.
+		- **5 Retro (Day 5)** — closing the loop.
+	- **Key conceptual upgrade:**
+		- The updated slide makes explicit that bottlenecks come from **spec interpretation**, **rework loops with AI agents**, and **manual review constraints**, not from coding speed itself.
+-
+- ## Slide 7 — Productivity gap: most orgs at 1.1–1.3× vs top performers at 2–5×
+	- **Left panel — “Most organizations are at productivity of 1.1–1.3×”**
+		- Large blue metric: **1.1–1.3×** with a footnote marker.
+		- Subtext: *The current agile dev working model was developed with a set of constraints that are changing.*
+		- Diagram: a linear sequence of four circles — **Discover → Validate → Build → Launch/scale** — light teal arrows moving right.
+		- Small robot icons at intervals show places where AI is applied but constrained by old process boundaries.
+	- **Right panel — “Top performers can achieve productivity of 2–5×”**
+		- Large green metric: **2–5×**.
+		- Subtext: *By re-wiring the PDLC, operating model, and roles.*
+			- [[My Question]] what is PDLC? ANS: Product Development Life Cycle.
+		- Diagram: two **tight, circular, AI-heavy loops**, replacing linear flow:
+			- Left loop: **Discover, validate, experiment** — continuous, iterative.
+			- Right loop: **Build, launch, scale** — also circular.
+		- Many more robot icons placed around the loops indicate **multiple agents embedded directly in the lifecycle**, not gated by handoffs.
+	- **Conceptual shift illustrated:**
+		- Left = slow, stage-gated, waterfall-influenced agile.
+		- Right = **parallel, agent-rich, AI-native PDLC** that compounds velocity across the whole loop.
+	- **Footnote at bottom:**
+		- Mentions **16–30% productivity improvements (2025 McKinsey)** and **39% increase in merges/PR (2025 UChicago study about Cursor impact)**.
+-
+- ## Slide 8 — Different operating models for different tech functions
+	- **Left column — Types of work (color-coded):**
+		- **Modernization** (blue)
+		- **Maintenance** (purple)
+		- **Greenfield products** (green)
+		- **Brownfield products** (orange)
+		- **Infrastructure & operations** (red)
+	- **Middle column — Future example operating models:**
+		- **Modernization:**
+			- *Humans supervise factory of agents modernizing legacy continuously.*
+			- Emphasis: large-scale, always-on agent swarms.
+		- **Maintenance:**
+			- *Agents process lowest-complexity tickets with minimal human supervision.*
+			- Routine fixes delegated to autonomous agents.
+		- **Greenfield products:**
+			- *Factories of agents discover customer needs, generate designs, code, and tests with human supervision.*
+			- Agents handle full PDLC loops, humans direct.
+		- **Brownfield products:**
+			- (No explicit text block shown, but implied to follow similar mixed model.)
+		- **Infrastructure & operations:**
+			- *Agents process lowest-complexity tickets with high human supervision due to higher risk of impact on critical services.*
+			- Human safety net required.
+	- **Right column — Visual models:**
+		- **Agentic factory:** rows of LLM units between two human supervisors — a production line of agents.
+		- **AI co-creator innovation lab:** multiple humans each paired with an LLM, cycling ideas in parallel.
+		- **Human-led with co-pilots:** humans at the center, LLMs in support roles.
+	- **Core idea:**
+		- No single AI-native operating model fits all domains; **risk level, complexity, and novelty** determine how agent-heavy or human-heavy the workflow should be.
+-
+- ## Slide 9 — What differentiates top performers (survey of 300+ enterprises)
+	- **Headline:** A global survey highlights the factors where top performers differ sharply from bottom performers.
+	- **Left side — Shifts (big moves):**
+		- **7× — AI-native workflows**
+			- *End-to-end implementation of AI across 4+ use cases.*
+			- Bright purple tile with automation icon.
+		- **6× — AI-native roles**
+			- *Broader skillsets, newly defined roles.*
+			- Blue tile with team icon.
+		- A plus sign connects these two shifts, showing they compound one another.
+	- **Middle — Enablers (supporting changes):**
+		- **2× — Upskilling**
+			- *Hands-on learning.*
+		- **2× — Impact measurement**
+			- *Outcome metrics tracked.*
+		- **7× — Performance reviews**
+			- *Incentive structures aligned to AI-native performance.*
+		- These sit in a shared rounded rectangle at the bottom, visually grounding the shifts above.
+	- **Right side — Outcomes:**
+		- **5–6× faster time to market**
+			- Visual: sprint cycle shrinking from *2–3 weeks → 1–2 weeks.*
+		- **3–4× higher-quality artifacts**
+			- Visual: bug-highlighted screens replaced by clean ones.
+	- **Core idea:**
+		- Enterprises that *both* adopt AI-native workflows *and* redesign roles — supported by upskilling, measurement, and aligned incentives — see dramatic improvements in speed and quality.
+-
+- ## Slide 10 — What must shift beyond adopting tools?
+	- **Left column — Operating model: AI-native workflows (purple tiles):**
+		- **Team ceremonies**
+			- *Continuous planning with experiments.*
+			- Shift: **quarterly → continuous planning.**
+		- **Unit of work**
+			- *Spec-driven development instead of story-driven.*
+			- Shift: **story-driven → spec-driven dev.**
+		- **Ways of working**
+			- *Code-based prototypes instead of long PRDs.*
+			- Faster iteration cycles with working artifacts, not documents.
+	- **Right column — Talent: AI-native roles (blue tiles):**
+		- **Team size**
+			- *One-pizza team instead of two-pizza pod.*
+			- Smaller, tighter, higher-leverage teams.
+		- **Team configuration**
+			- *Definers and builders from specialized roles.*
+			- Increased role fluidity and convergence.
+		- **Roles and skills**
+			- *Agent managers instead of specialized practitioners.*
+			- People orchestrate fleets of agents rather than owning narrow slices.
+	- **Core conceptual shift:**
+		- AI-native development requires **continuous planning**, **spec-driven work**, and **agent-centric roles**, not just better tools.
+	- PMs are coding prototypes rather than iterating on [[PRD]]s.
+	- They mention how [[CursorAI]] team works - maybe they studied them? [[My Note]]
+-
+- ## Slide 12 — Positive impact of interventions
+	- **Adoption (top row):**
+		- **Agent consumption:**
+			- **60× ↑** vs end of Q2.
+			- Measures average ACUs (agent compute units).
+		- **Active users of AI coding assistant:**
+			- **+28% ↑** vs end of Q2.
+			- Highlights a rise in *highly active* users.
+	- **Speed (middle row):**
+		- **Number of code merges (biweekly, per frontrunner squad):**
+			- **+51% ↑** vs end of Q2.
+			- A clear signal of throughput increase.
+	- **Efficiency (bottom row):**
+		- **Business impact efficiency (avg hours per unit of work):**
+			- **–60% ↓** vs end of Q2.
+			- **–34% ↓** vs average of Q3.
+			- Indicates large reductions in labor hours needed per unit of shipped value.
+	- **Overall:**
+		- After the operating-model interventions, the bank saw **explosive adoption**, **faster delivery**, and **dramatically higher efficiency**, validating the bottleneck-removal approach.
+-
+- ## Slide 13 — Talent: AI is reshaping roles, not just workflows
+	- **Top 3 roles most shifted by AI (survey of 300 respondents):**
+	- **1. Software engineer — 71%**
+		- Quote: *Automating repetitive coding tasks… enables engineers to focus more on complex problem-solving and system architecture.*
+		- Emphasis: engineers move **up the stack** into design, decomposition, integration.
+	- **2. Product manager — 69%**
+		- Quote: *AI is reshaping product management by shifting focus from feature delivery to strategic oversight of data-driven, intelligent experiences.*
+		- PMs pivot from ticket shepherds to **strategy + intelligence orchestration**, using AI for insights earlier (no more waiting for analysts).
+	- **3. Testing / QA — 57%**
+		- Quote: *QA engineers are spending more time designing tests rather than running and assessing tests.*
+		- Agents handle execution; humans focus on **test intent, coverage, and quality criteria**.
+	- **Overall takeaway:**
+		- The roles with the most shift are those closest to the development cycle—engineering, PM, and QA—each moving toward **higher-order reasoning**, **oversight**, and **intent-level definition**, while agents perform execution.
+-
+- ## Slide 15 — Talent: Positive impact demonstrated within 8 weeks
+	- **Faster Discovery & Viability cycle time**
+		- **+30–50% ↑**
+		- Cycle shrinks from **6–10 weeks → 4–5 weeks**.
+		- Indicates tighter iteration loops early in the PDLC.
+	- **Faster Build cycle time (while maintaining DORA metrics)**
+		- **+30% ↑**
+		- Velocity increase without sacrificing stability, deployment frequency, MTTR, or change-failure rate.
+	- **Developer NPS score**
+		- **+50% ↑**
+		- Strong morale signal—developers feel more effective and less bogged down.
+	- **Time spent on certain tasks with 7 custom GPTs**
+		- **–70% ↓**
+		- Large task-level time reduction due to specialized automation.
+	- **Overall:**
+		- Within just 8 weeks of AI-native interventions, the airline sees major gains in **speed, quality of working experience, and task efficiency**, confirming rapid return on operating-model shifts.
+-
+- ## Slide 17 — How to go from a “10× engineer” → “10× team” → “10× company”
+	- **Top banner reminder:** Left text repeats the earlier provocation (“How can you go from 10× engineers to a 10× team?” → “How can you scale a 10× team to a 10× company?”).
+	- This slide marks a **transition** from team-level mechanics to **org-wide transformation**.
+-
+- ## Deeper organizational shifts required for large enterprises
+	- **Left cluster — “Rewiring the champions”**
+		- A ring of dark-gray team icons representing typical teams.
+		- One bright white circle in the center: the *champion team* already operating in an AI-native mode.
+		- Subtext: the initial work is changing the behaviors, tools, and operating model of a small set of high-leverage early adopters.
+	- **Center node — Change management**
+		- A large blue circle labeled **Change management** sits between the two clusters.
+		- Visually acts as a **gateway** between pilot success and scaled adoption.
+		- Implies that without structured change management (training, incentives, role redesign, workflow re-architecture), pilots never diffuse.
+	- **Right cluster — “Rewiring 100+ teams”**
+		- Many bright white circles (team icons) arranged radially, showing **broad organizational rollout**.
+		- These represent scaled transformation: turning a handful of AI-native pods into **dozens or hundreds** working this way.
+	- **Bottom arrow:**
+		- A long curved arrow flows from left → center → right, indicating the staged path:
+			- **Rewire champions**
+			- **Apply structured change management**
+			- **Rewire the entire org (100+ teams)**
+	- **Core meaning of the gear shift:**
+		- The presentation is moving from *team-level bottleneck removal* to *company-level transformation*.
+		- The message: **10× outcomes only emerge when you rewire not just squads, but the entire enterprise operating model.**
+-
+- ## Slide 18 — Case study: Scaling productivity in a top-10 technology company
+	- **Left side: DAU + retention trajectory**
+		- Blue line = **GenAI tool Daily Active Users** (absolute count).
+		- Gray line = **DAU retention (%)**.
+		- Y-axes:
+			- Left axis (0–450) for DAU count.
+			- Right axis (0–45%) for retention.
+		- X-axis: **Oct → Jul** (10-month period).
+		- **Pattern:**
+			- *Usage spiked during training weeks…* (early peaks ~300–350).
+			- Usage then collapsed around Dec–Jan (near-zero), signaling novelty drop-off.
+			- From Feb onward: sustained climb in both DAU and retention, reaching **~400 DAU and ~45% retention** by July.
+			- Callout: *…but many unlocks were needed to sustain behavior change.*
+	- **Right side: “Unlocks needed to scale adoption for long-term behavior change”**
+		- **Reset expectations of AI and agents**
+			- Teaching teams what AI *can* and *cannot* do; recalibrating mental models.
+		- **Hands-on upskilling and coaching**
+			- Real work sessions, not just training lectures.
+		- **Spark grassroots movement**
+			- Encourage peer champions and bottom-up excitement, not just top-down mandates.
+		- **Build measurement system**
+			- Track behavior, productivity, and usage to prevent backsliding and reinforce wins.
+	- **Core insight:**
+		- Scaling AI tooling is **not** a pure technology problem. Sustained adoption required **culture resets**, **ongoing coaching**, **grassroots energy**, and **instrumentation**, which then drove the long upward slope in usage and retention.
+-
+- ## Slide 19 — Change management example at an international airline (full system of interventions)
+	- **Centralized communications / influence**
+		- **Newsletter/blog** outlining new GenAI functionalities + use cases.
+		- **Leadership communication channel** emphasizing GenAI’s strategic importance; reinforces the transformation narrative.
+		- **Peer Slack channels** enabling best-practice sharing and community learning.
+	- **Rewards, recognition, and reviews**
+		- **Certifications** to validate capability and drive status incentives.
+		- **AI advisory champions** program to elevate internal experts.
+		- **AI adoption + impact included in year-end review**, tying the transformation to performance management.
+	- **Role-based training**
+		- Training for **PMs, Designers, Developers, Data Engineers** to introduce process changes.
+		- **Specific AI use case examples** included (e.g., using Google AI Studio for hi-fi prototypes during Viability).
+		- Goal: equip each role with **exactly how** AI changes their workflow.
+	- **Hands-on coaching**
+		- **Code labs** demonstrating complex real-world use cases.
+		- **Embedded coaches** who proactively remove blockers for developers and tech leads.
+		- **Library of GPTs + use cases** to share wins and accelerate reuse.
+		- **Product Coach (1–2 teams)** + **part-time Tech Coach** developing Cursor-based use cases with engineering teams.
+		- Emphasis: coaching is not episodic — it is *embedded in day-to-day work*.
+	- **Overall:**
+		- The airline’s change-management system spans **communication, incentives, training, and embedded coaching**, designed to shift behavior at scale and prevent reversion to pre-AI workflows.

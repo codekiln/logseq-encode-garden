@@ -14,3 +14,5 @@
 	- [[AI/ES/25/11 Code/LEAD/20 Thu/1405 Northwestern Mutual Asaf Bord Small Bets Big Impact]]
 	- [[AI/ES/25/11 Code/LEAD/20 Thu/1425 Lei Zhang Bloomberg Tech Infra Eng]]
 	- [[AI/ES/25/11 Code/LEAD/20 Thu/1445 Arc to Dia Lessons from Browser Company Samir Mody]]
+- ## Companies Mentioned
+	- [[Anthropic]], [[ReplitAI]], [[Zapier]], [[Sourcegraph]], [[OpenAI]], [[McKinsey]], [[QodoAI]], [[MiniMaxAI]], [[Google]], [[Northwestern Mutual]], [[Bloomberg]], [[Browser/Company]], [[Monday.com]], [[Nubank]], [[Salesforce]], [[Sonar]], [[Faros]], [[Nvidia]], [[Zed]], [[Booking.com]], [[Cisco]], [[Fidelity]], [[Travelopia]]

@@ -1,15 +1,15 @@
 - # 10:05am - 10:24am | AI Leadership | Room: Times Center
 	- ![Steve Yegge](https://www.ai.engineer/speakers/steve-yegge.jpg) ![Gene Kim](https://www.ai.engineer/speakers/gene-kim.png)
-	- **[[Person/Steve Yegge]]** [Twitter](https://twitter.com/Steve_Yegge) [LinkedIn](https://www.linkedin.com/in/steveyegge) - Engineering Leader, Sourcegraph/Amp
+	- **[[Person/Steve Yegge]]** [Twitter](https://twitter.com/Steve_Yegge) [LinkedIn](https://www.linkedin.com/in/steveyegge) - Engineering Leader, [[Sourcegraph]]/[[Amp]]
 	- **[[Person/Gene Kim]]** [Twitter](https://twitter.com/RealGeneKim) [LinkedIn](https://www.linkedin.com/in/realgenekim) [Website](https://www.realgenekim.me/) - Author & Researcher, IT Revolution
 	- ## Talk: 2026: The Year the IDE Died
 		- As AI has grown more capable, software developers around the world have lagged behind the technology advances, and have consistently eschewed the most powerful tools. In this talk I explore why devs are staying 9-12 months behind the AI curve. I'll share a preview of what 2026's AI coding tools will be like, and paint a vision of where we go from here.
 	- ## [[Person/Steve Yegge]]
 		- ### AI Developer Trajectory — timeline layout
 		- A horizontal timeline with four numbered stations (1–4) spaced evenly across.
-		- **2023 (Step 1)** sits above the first marker: “code completions (Copilot).” Visual cue: early, narrow capability.
-		- **2024 (Step 2)** under the second marker: “chat-based programming (Cursor, Windsurf, Cody).” Visual cue: dialog-driven coding replacing autocomplete.
-		- **2025 (Step 3)** above the third marker: “agentic coding assistants (Claude Code, Codex, Cline, Amp, Gemini CLI, …).” Visual cue: richer toolchains with multi-step autonomy.
+		- **2023 (Step 1)** sits above the first marker: "code completions ([[GitHub/CoPilot]])." Visual cue: early, narrow capability.
+		- **2024 (Step 2)** under the second marker: "chat-based programming ([[CursorAI]], Windsurf, Cody)." Visual cue: dialog-driven coding replacing autocomplete.
+		- **2025 (Step 3)** above the third marker: "agentic coding assistants (Claude Code, Codex, Cline, [[Amp]], Gemini CLI, …)." Visual cue: richer toolchains with multi-step autonomy.
 		- **2026 (Step 4)** by the final marker: “???” signalling an open frontier.
 		- Caption beneath: "Agentic coding is not the Final Form." Emphasis: next phase = **orchestrators**, implying multi-agent coordination rather than single-agent assistance.
 		- ### Session context
@@ -22,10 +22,10 @@
 		- Your gloss fits: Claude Code ≈ electric drill/saw — powerful but still fundamentally manual.
 		- ### The Problem: Adoption — two-tile comparison
 		- Slide foreground shows **two large rounded rectangles** side-by-side.
-			- **Left tile:** “Most developers are still using Cursor & Chat.” Subtext: 2024 tools are already *outdated* relative to 2025–26 agentic systems.
+			- **Left tile:** "Most developers are still using [[CursorAI]] & Chat." Subtext: 2024 tools are already *outdated* relative to 2025–26 agentic systems.
 			- **Right tile:** “The Staff Engineer Curse: 10–15 years of experience.” Subtext: senior ICs lag in AI uptake while the rest of the org adopts quickly.
 		- Background faintly shows a person + futuristic UI panels, stressing contrast between legacy habits and new capabilities.
-		- Bottom line: slow adoption is **dragging companies**, generating frustration; upcoming case study: OpenAI + Codex.
+		- Bottom line: slow adoption is **dragging companies**, generating frustration; upcoming case study: [[OpenAI]] + Codex.
 		- Your note aligns: the **productivity gap is enormous** between adopters and holdouts.
 		- ### We've Seen This Movie Before — historical analogies
 		- Single-column layout listing past refusal patterns:
@@ -132,22 +132,22 @@
 		- **F:** Have **more fun** doing it
 		- **O:** Get more **options** — more swings at bat, more explorations
 		- ### Irresistible Appeal To R&D Orgs
-		- **Andy Glover, Director of Dev Productivity, OpenAI:**
+		- **Andy Glover, Director of Dev Productivity, [[OpenAI]]:**
 			- “One of my top goals is to get more of our developers using agentic coding, to get everyone's productivity closer to what we see in our best Codex agent users.”
 			- "We're having meetings across the company about how to elevate developer productivity."
-		- ### Booking.com (2025)
+		- ### [[Booking.com]] (2025)
 		- **[[Person/Bruno Passos]]**, Group Product Manager, Developer Experience
-			- Presents Booking.com scale: **1.5M rooms booked daily**, **500M monthly visitors**, **24k employees**, **$23.7B revenue**.
+			- Presents [[Booking.com]] scale: **1.5M rooms booked daily**, **500M monthly visitors**, **24k employees**, **$23.7B revenue**.
 		- **[[Person/Laura Tacho]]**, CTO, Developer Experience
 			- Shows internal metrics: **Daily AI users ship 30%+ more than non-AI users**.
 		- **Source:** [https://videos.itrevolution.com/watch/1121936057](https://videos.itrevolution.com/watch/1121936057)
-		- ### Travelopia (2025)
+		- ### [[Travelopia]] (2025)
 		- **[[Person/Sree Balakrishna]]**, Technology Director, Innovation & Products
 			- Describes shift **from 10–12-person squads → 4–6 cross-functional engineers → future business+developer pairs**.
 			- States ambition: **scale from $100M → $500M with the same 200 people**.
 			- Highlights major win: **a $1.5B/year travel company rebuilt a legacy application in only six weeks** using AI-accelerated development.
 		- **Source:** [https://videos.itrevolution.com/watch/1121937327](https://videos.itrevolution.com/watch/1121937327)
-		- ### Fidelity (2025)
+		- ### [[Fidelity]] (2025)
 		- **[[Person/Tapabrata Pal]]**, VP of Architecture
 			- Presents a **high-level architecture**: Neo4j DB → API → analytics UI, supported by repos, artifacts, containers, runtime.
 			- Demonstrates an AI-assisted prototype generating a **software bill-of-materials knowledge graph** UI from that architecture.
@@ -157,11 +157,11 @@
 			- Enter [[Person/Swathi]] (most junior on team), outlearning everyone on org
 			- Getting more headcount, because num consumers of app increase 10x
 		- **Source:** [https://videos.itrevolution.com/watch/1121938969](https://videos.itrevolution.com/watch/1121938969)
-		- ### Cisco (2024)
+		- ### [[Cisco]] (2024)
 		- **[[Person/John Rauser]]**, Senior Director of Software Engineering
 		- **[[Person/Anand Raghavan]]**, Senior Director of Engineering, AI
-			- Present Cisco's scale: **$52B revenue**, **85k employees**, **94% of Fortune 100 served**.
-			- Describe unifying Cisco's stack using GenAI.
+			- Present [[Cisco]]'s scale: **$52B revenue**, **85k employees**, **94% of Fortune 100 served**.
+			- Describe unifying [[Cisco]]'s stack using GenAI.
 			- Note a major organizational mandate: **100 leaders were required to vibe-code an application within a single quarter** — a top-down adoption accelerator.
 		- **Source:** [https://videos.itrevolution.com/watch/1002959532](https://videos.itrevolution.com/watch/1002959532)
 		- ### AI Trust Increases With Experience

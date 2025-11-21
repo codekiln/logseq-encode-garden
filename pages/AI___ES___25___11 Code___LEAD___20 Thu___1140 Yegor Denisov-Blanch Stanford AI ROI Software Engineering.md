@@ -1,0 +1,369 @@
+chatgpt-link:: https://chatgpt.com/g/g-p-691f249c2fac8191ab8b4b926da5cb3b-ai-es-25-11-code/c/691f455b-fbe4-800a-be24-adb4242e34ac
+
+- # 11:40am - 11:59am | AI Leadership | Room: Times Center
+	- ![Yegor Denisov-Blanch](https://www.ai.engineer/speakers/yegor-denisov-blanch.jpg)
+	- **[[Person/Yegor Denisov-Blanch]]** [Twitter](https://twitter.com/yegordb) [LinkedIn](https://www.linkedin.com/in/ydenisov) - Researcher, Stanford
+	- ## Talk: How to Quantify AI ROI in Software Engineering (Stanford Study / 120k Devs)
+		- You're investing millions in AI for software engineering. Can you prove it's paying off?
+		- Benchmarks show models can write code, but in enterprise deployments ROI is hard to measure, easy to bias, and often distorted by activity metrics (PR counts, DORA) that say "more" without proving "better."
+		- Drawing on field data from 120k+ developers across 600+ companies, I'll show exactly where AI helps the most and how to measure the ROI of your software engineering AI deployment.
+		- We'll unpack why identical tools deliver ~0% lift in some orgs and 25%+ in others.
+		- You'll leave with a step-by-step ROI playbook: what to track, the traps to avoid, and the habits top-quartile teams use to make the most from AI.
+	- ## Slide 5 — Teams that master AI widen the productivity gap
+	- Left column (3-step study design):
+		- (1) 46 AI-using teams identified.
+		- (2) Matched with 46 comparable non-AI teams.
+		- (3) Net productivity gains measured quarterly.
+	- Chart (Difference-in-Differences):
+		- Y-axis: net productivity gain (%) vs. control.
+		- Curve rises from ~0% in Apr 2023 to ~10%+ by mid-2025.
+		- Early gap: 4.8% (Apr 2023, Q1–Q3).
+		- Later gap: 19% (Jul 2025, Q1–Q3).
+		- Shaded IQR widens; effect grows ~4× over time.
+-
+- ## Slide 6 — “The rich get richer”: compounding effects for early AI adopters
+	- Title claim: early adopters compound gains; laggards drift further behind.
+	- Chart: historical median impact rises slowly to ~20% by mid-2025; bottom quartile flat (~0–10%); top quartile accelerates sharply in projection.
+	- Extrapolation (2026–2030): widening divergence; green accelerating curve vs. red steady curve.
+	- By 2030: ~10× productivity gap between top and bottom quartiles.
+-
+- ## Slide 7 —  *Token spend is a weak & noisy predictor of AI productivity gains*
+	- **Left-side message blocks:**
+		- **Block 1 — “More token spend ≠ more AI productivity gains”**
+			- Token spend is a *poor* proxy for whether teams are actually getting more done.
+			- Statistical note: correlation is weak (linear R² ≈ 0.23; quadratic R² ≈ 0.39).
+			- High spend corresponds to *both extremes*: some teams achieve **+30%** net productivity lift while others drop to **–10%**, showing that raw consumption doesn’t explain outcomes.
+		- **Block 2 — “AI usage quality matters more than usage volume”**
+			- Token spend only indicates that people are calling models, not whether they’re using them well or integrating them into workflows that actually remove bottlenecks.
+			- The productivity signal depends on *how* work is structured around AI, not model invocation count.
+	- **Right-side chart — “AI Token Usage vs. Productivity Impact: Exploratory Association Analysis”:**
+		- **Axes & scale:**
+			- X-axis: **AI tokens per engineer per month**, log scale from ~1M → 500M.
+			- Y-axis: **Net productivity gain (%)**, team-level DiD estimate vs. matched controls.
+			- Horizontal zero line marks control baseline.
+		- **Data:**
+			- n = 27 teams, each measured over a 3-month window.
+			- Blue dots represent per-team DiD estimates.
+		- **Curves:**
+			- **Quadratic fit (solid blue):** bowl-shaped curve with a **deep dip in mid-range usage**.
+			- **Linear fit (dashed gray):** mild upward trend, but poorly captures variance.
+			- **Shaded CI:** wide, underscoring that token usage is a noisy variable.
+		- **“Death Valley” zone (~10M tokens/engineer/month):**
+			- The curve *bottoms out* here, with teams showing low or negative gains despite substantial model use.
+			- Indicates a pattern: **teams that use AI a bit but don’t redesign workflows regress or stagnate**.
+		- **High-usage recovery (>100M tokens):**
+			- Curve bends sharply upward.
+			- Represents teams that deeply integrate AI (e.g., structured workflows, toolchains, multi-step flows), creating compounding efficiency and quality gains.
+	- **Conceptual takeaway:**
+		- Token spend alone is not diagnostic.
+		- There is a *U-shaped relationship*:
+			- Very low spend → neutral gains (light experimentation).
+			- Mid spend (~10M) → “death valley” (tool misuse, thrash, un-integrated prompting).
+			- High spend (>100M) → accelerating gains (operationalized AI, systematic workflows).
+-
+- ## Slide 8 —  *Clean engineering environments tend to unlock more AI productivity gains*
+	- **Left panel — Environment Cleanliness Index (composite factors):**
+		- Test coverage
+		- Type coverage
+		- Documentation quality & breadth
+		- Modularity (low coupling, clear boundaries)
+		- Static code quality (linting, cyclomatic complexity, dead code, etc.)
+		- This is a **0–1 normalized composite score** capturing engineering hygiene.
+	- **Left panel — “Invest in codebase hygiene to unlock AI productivity gains”:**
+		- Large, messy, legacy systems are where AI help is *most tempting* but also **most dangerous**—AI amplifies existing chaos.
+		- Strategy implication:
+			- Don’t deploy AI heavily in low-hygiene teams first.
+			- Prioritize AI rollout in teams with strong engineering foundations; they get disproportionate benefit.
+			- Cleanliness compounds AI leverage (fewer hallucination cascades, fewer bad diffs, more accurate context embeddings, easier code repair).
+	- **Right panel — Chart: “Engineering Environment Cleanliness vs. Productivity Impact”**
+		- **Axes:**
+			- X-axis: Environment Cleanliness Index (0 → 1).
+			- Y-axis: Net productivity gain (%) vs. matched controls (DiD).
+		- **Data:**
+			- n = 27 teams, same 3-month DiD window as token-spend slide.
+			- Blue dots: per-team DiD estimates, showing wide spread at low cleanliness and tight clustering at high cleanliness.
+		- **Fit & stats:**
+			- Linear trend line slopes strongly upward.
+			- R² ≈ **0.40** — highest predictive power of all exploratory variables shown so far.
+			- 95% CI wedge widens as cleanliness increases, but median slope is consistently positive.
+		- **Interpretation:**
+			- Teams with low cleanliness (~0.1–0.2) cluster near zero or negative gains.
+			- Teams above ~0.5 cleanliness show steep gains, often **+20–40%**.
+			- Cleanliness is not framed as causal, but the association is strong and intuitive: AI thrives where structure, clarity, and signal quality are high.
+	- **Core takeaway:**
+		- Codebase hygiene is one of the **strongest predictors** of AI productivity gains.
+		- If you want AI ROI, *clean the environment first*.
+-
+- ## Slide 9 —  *Clean engineering environments allow AI to autonomously drive a larger share of the sprint*
+	- **Left panel — Three principles:**
+		- **Clean Code Amplifies AI Gains**
+			- Cleaner codebases let AI complete *entire tasks*, not just fragments.
+			- Structure, typing, and modularity enable high-fidelity diffs.
+		- **Manage Codebase Entropy**
+			- AI accelerates entropy in messy systems (bad patches, incoherent structure).
+			- Rising entropy → degraded future AI performance (context confusion, noisy embeddings).
+		- **Engineers Must Master Task Selection**
+			- Teams must know *when* AI should take the lead vs. when human-first is safer.
+			- Misclassification of tasks leads to rework, mistrust, and collapse of gains.
+	- **Right panel — Stacked-area diagram: AI involvement vs. environment cleanliness (illustrative):**
+		- X-axis: **Cleanliness Index** from 0 (legacy / big ball of mud) → 1.0 (modular, typed, tested).
+		- Y-axis: **Share of sprint tasks (%)**, broken into three color bands:
+			- **Green → “AI does most of the work.”**
+				- Expands dramatically as cleanliness approaches 1.0.
+			- **Yellow → “AI helps with pieces.”**
+				- Stable middle band; shrinks on both extremes.
+			- **Red → “Mostly human work.”**
+				- Dominates dirty environments; indicates *AI is not useful*—outputs rejected or require heavy rewriting.
+				- Declines steadily with cleanliness, falling below 20% only in the cleanest systems.
+		- **Left dashed boundary (~0.2 cleanliness):**
+			- “AI outputs are rejected or need heavy rewriting.”
+			- Developers lose trust.
+			- AI gains collapse.
+		- **Middle zone (~0.5 cleanliness):**
+			- “Must actively improve cleanliness.”
+			- AI helps but can also degrade quality if not carefully supervised.
+		- **Right dashed boundary (>0.7):**
+			- “AI use degrades cleanliness” warning: even in clean systems, careless mass generation can introduce entropy.
+			- Requires ongoing hygiene discipline.
+	- **Takeaway:**
+		- The red region = **AI has negative or negligible value**; most work stays human.
+		- The green region = **AI autonomy scales**; cleanliness is the gating factor.
+- # 2 — AI Engineering Practices Benchmark
+	- ## Slide 10 — Where we are in the agenda
+		- Four-part outline shown as a vertical sequence of numbered blocks.
+		- Current position highlighted in dark red: **2 — AI Engineering Practices Benchmark**.
+		- Prior section covered: **1 — What Drives AI Productivity Gains in Software Engineering?**
+		- Upcoming sections: **3 — Measuring AI ROI**, **4 — Case Study: Higher PR Counts, Lower Quality**.
+	-
+	- ## Slide 11 —  *Measure **how** your teams use AI — counting tokens & licenses is not enough*
+		- **Left panel — AI Engineering Practices Benchmark (3-step loop):**
+			- **1 — Scan**
+				- Automatically detect AI fingerprints in the repo: prompts, agent scripts, config files, workflow definitions, LangChain flows, GitHub Actions invoking AI, etc.
+			- **2 — Quantify**
+				- Compute the % of *active engineering work* that uses each AI pattern (L0–L4).
+				- Pattern detection is based on committed artifacts, not surveys or tool logs.
+			- **3 — Repeat Monthly**
+				- Use Git history to track progression of AI adoption and drift over time.
+				- Detect regressions, entropy, or emerging patterns.
+		- **Right panel — AI Adoption Patterns (L0 → L4 maturity scale):**
+			- **L0 — No observable AI use**
+				- *Humans write all the code.*
+				- No prompts, agents, or AI configs appear anywhere in the repo.
+			- **L1 — Opportunistic prompting**
+				- *Personal use.* Engineers use AI tools locally (Cursor, ChatGPT), but **no traces appear in version control**.
+			- **L2 — Systematized prompting**
+				- *Team use.* Prompts, rules, conventions, and templates are saved and versioned so others can reuse them.
+				- Beginning of shared standards.
+			- **L3 — Agent-backed development**
+				- *AI does specific tasks.*
+				- The repo contains dedicated scripts/agents performing particular jobs: code fixes, migrations, refactors, boilerplate, data prep.
+			- **L4 — Orchestrated agentic workflows**
+				- *AI runs the process.*
+				- Multiple AI tools linked together; end-to-end workflows automated (test generation → implementation → PR creation → review scaffolding).
+		- **Callout:**
+			- Open-source benchmark tool available; sign-up via Stanford SWEPR research portal.
+	-
+	- ## Slide 12 —  *Uniform access to AI tools doesn’t guarantee uniform AI usage across a company*
+		- **Context:** Case study comparing two business units with the *same AI access*, but different actual adoption trajectories.
+		- **Two side-by-side stacked-area charts:**
+			- **Metric:** *AI Maturity — Activity-Weighted AI Adoption*, normalized by repo, output, authorship, and recency.
+			- **Layers (bottom → top):**
+				- L0–L1: Ad-hoc AI use (lightest)
+				- L2: Systematized prompting
+				- L3: Agent-augmented development
+				- L4: Agentic orchestration (darkest)
+		- **Business Unit 1 (left):**
+			- Active repos: **562 → 685**; ~**410 engineers**.
+			- Adoption curve:
+				- Starts near zero in late 2024.
+				- By mid-2025, visible lift in L2 prompting.
+				- By Oct–Nov 2025, **~40%+** of activity-weighted engineering work uses L2–L3, with a thin L4 emergent layer.
+			- Visual story: steady, accelerating climb; heterogeneous adoption across teams but significant lift in high-maturity patterns.
+		- **Business Unit 2 (right):**
+			- Active repos: **1137 → 1612**; ~**670 engineers**.
+			- Adoption curve:
+				- Nearly flat: L0–L1 dominates for the full year.
+				- Only minor L2 appears; virtually **no L3 or L4**.
+				- Activity-weighted maturity never rises above ~15%.
+			- Visual story: despite larger team and equal access, adoption stagnates.
+		- **Callout box:** *“Teams in both Business Units had equal access to AI tools.”*
+			- Implication: tooling access doesn’t drive maturity; **culture, processes, incentives, and engineering hygiene do**.
+		- **Core takeaway:**
+			- Same tools + same licenses → *very different adoption curves*.
+			- Scaling AI requires structured practices, not simply provisioning access.
+- # 03
+	- ## Slide 14 —  *Measure AI ROI where the signal is clearest: engineering outcomes*
+		- **Left column — Why not business outcomes?**
+			- Business metrics are *lagging* and *noisy*.
+			- Too many confounders: sales execution, product strategy, macro conditions.
+			- Instead: tie AI usage to **engineering outcomes that AI directly affects**.
+		- **Center diagram — Clean vs. noisy signal path:**
+			- **AI Usage → (Clean Signal) → Engineering Outcomes**
+				- Direct, attributable impact: throughput, cycle time, bug density, PR review load, rework rate, code quality indicators.
+			- **Engineering Outcomes → (Noisy Signal) → Business Outcomes**
+				- Confounded by:
+					- Sales execution
+					- Wrong-feature strategy
+					- Macro environment
+				- Therefore: poor indicator of AI-specific ROI.
+		- **Bottom row — Three framing blocks:**
+			- **Throughput ≠ Value**
+				- AI increases engineering throughput—but product must choose the right work.
+				- Otherwise teams just ship the wrong features faster.
+			- **Caveats**
+				- Assumes engineering is a real bottleneck for value creation.
+				- Must guard against Goodhart’s Law: track a *balanced* metric set.
+				- Interpretation depends on company culture (how metrics are used).
+			- **Progress over Perfection**
+				- AI is new—proxy metrics are acceptable.
+				- Metrics don’t need to be perfect to be useful; measuring is better than not measuring.
+		- **Core takeaway:**
+			- The strongest, least-distorted ROI signal lives *between AI usage and engineering outcomes*, not business outcomes.
+		- [[My Notes]]
+			- measuring proxy metrics is better than not measuring anything
+			- Goodhart’s Law: **“When a measure becomes a target, it ceases to be a good measure.”**
+	-
+-
+	- ## Slide 16 —  *3 pragmatic ways to measure AI usage in the enterprise*
+		- **Left block — Access-based (when did people get access?)**
+			- **1 — Pilot vs. comparison group**
+				- Give AI to one team, compare against similar non-AI teams.
+				- Works for small pilots; hard to keep groups truly comparable.
+			- **2 — Same team, before/after**
+				- Compare pre-AI vs. post-AI metrics using Git history.
+				- Confounded by time trends; adoption varies by developer.
+		- **Right block — Usage-based (Gold Standard)**
+			- **3 — Access & usage telemetry**
+				- Use vendor APIs to see who uses AI and how often.
+				- Some vendors provide aggregated/obfuscated data (e.g., Copilot).
+				- More granular tools (e.g., Cursor) yield better insights.
+		- **Bottom banner — Retroactive measurement through Git**
+			- You can measure AI impact months after rollout because Git preserves historical signals.
+	-
+	- ## Slide 18 —  *What metrics? Framework for measuring AI impact on software engineering*
+		- **Primary Metric — Engineering Output**
+			- Defined *not* as lines of code, PR counts, or DORA.
+			- ML model scores every commit using criteria similar to panels of senior engineers.
+			- Output Units incorporate:
+				- Implementation time
+				- Quality / maintainability
+				- Complexity
+			- Model also measures **rework** and **refactoring**.
+			- Validation: exceptional correlation with expert panels (r ≈ 0.85+).
+		- **1 — Rework & Refactoring (guardrail metric)**
+			- **Rework:** editing recent code; tends to increase with AI as humans fix or rewrite AI-generated diffs.
+			- **Refactoring:** editing older code; structural cleanup rather than new feature work.
+			- Goal: maintain rework/refactor at healthy levels—don’t chase zero.
+		- **2 — Quality, Tech Debt, & Risk (guardrail metric)**
+			- **Quality & Tech Debt:**
+				- Code quality, hygiene, environment cleanliness.
+				- First-pass yield (how often code is accepted without rework).
+			- **Risk:**
+				- Incidents, especially major ones (severity-focused).
+			- Guardrail logic: keep these stable or improving while increasing output.
+		- **3 — People, DevOps (context, not productivity):**
+			- **Happiness surveys:** predict retention and burnout.
+			- **DORA metrics:** process health, not output.
+			- These contextualize productivity but do not measure it directly.
+		- **Framework Goal:**
+			- **Increase the primary metric (Engineering Output)**
+			- **…while keeping guardrail metrics healthy.**
+- # 4 — Case Study: Higher PR Counts, Lower Quality
+	-
+	- ## Slide 20 —  *Adopting AI increased PRs by 14%… but more PRs doesn’t mean better*
+		- **Headline insight:** AI drove more pull requests, but PR count is a **misleading productivity metric**.
+		- **Bar chart — Monthly PR count, pre-AI vs post-AI:**
+			- Pre-AI months (Jan–Apr 2025): ~3.7k–4.3k PRs/month.
+			- Post-AI months (May–Aug 2025): ~4.3k–5.0k PRs/month.
+			- **+13.6% change** after AI introduction (statistically significant, n ≈ 355 engineers).
+			- Purple dashed line shows higher post-AI average.
+		- **Right-side panel — Limitations of PR count:**
+			- **Reviewer burden:** more PRs increase load on humans.
+			- **Smaller/simpler PRs:** AI often decomposes work into many tiny patches.
+			- **Ignores quality:** PR count says nothing about correctness, maintainability, first-pass-yield, or rework.
+		- **Takeaway:**
+			- A rise in PR volume is not equivalent to a rise in engineering output or value.
+	- ## Slide 21 —  *Adopting AI decreased Code Quality by 9% and increased variance by 3.6×*
+		- **Headline finding:** After AI rollout, average code quality dropped and became *far more erratic*.
+		- **Left chart — Weekly Code Quality Score (Jan–Sep 2025):**
+			- Pre-AI (green): stable line around **8–8.5**, firmly in “Excellent/Good.”
+			- Post-AI (orange): dips into **7–7.8** with repeated fluctuations.
+			- Post-AI band shows visible instability and more week-to-week swings.
+			- Visual quality zones:
+				- 8–10: Excellent
+				- 6–8: Good
+				- <6: Low
+			- Interpretation: AI-generated diffs introduce inconsistency; humans spend cycles correcting, not strengthening, quality.
+		- **Right chart — Impact of AI (boxplot):**
+			- Pre-AI: median near 0% change, tight variance.
+			- Post-AI: median **–9%**, wide variance with heavy outliers (some weeks –40% to –50%).
+			- Variance increase: **3.6×** (statistically significant, p < 0.01).
+			- Indicates AI introduces a wider distribution of outcomes—some good, many worse.
+		- **Bottom summary banners:**
+			- **Worse Quality:** –9% decrease.
+			- **More Erratic Quality:** 3.6× increase in variance.
+		- **Core takeaway:**
+			- AI lifts throughput but risks degrading code quality unless paired with strong guardrails and hygiene.
+	-
+	- ## Slide 22 —  *Adopting AI didn’t increase “effective output” and increased rework by 2.6×*
+		- **Headline:** AI introduction boosted activity, but not effective engineered value.
+		- **Main stacked bar chart — Monthly Engineering Output Breakdown:**
+			- Bars segmented into:
+				- **Reworked** (orange) — editing recent code
+				- **Refactoring** (blue) — editing older code
+				- **Added** (green) — new value-creating output
+				- **Removed** (gray) — code deletion
+			- Pre-AI (Jan–Apr 2025): balanced distribution with moderate rework.
+			- Post-AI (May–Aug 2025):
+				- Rework noticeably larger; refactoring also rises.
+				- Added output (green) does **not** increase enough to offset extra rework.
+				- Quartile overlays show the overall shape of output distribution barely changes.
+		- **Right panel — Rework spike:**
+			- **Pre-AI:** 396 units/month
+			- **Post-AI:** 1,039 units/month
+			- **2.6× increase**, statistically significant (p < 0.01)
+			- Interpretation: AI-generated diffs require heavy human correction.
+		- **Right panel — Effective Output (value-creating “Added”):**
+			- **Pre-AI:** 5,726 total (516 removed, 5,210 added)
+			- **Post-AI:** 5,791 total (794 removed, 4,997 added)
+			- Net change: **+1%**, effectively flat
+			- Despite more activity, the actual value creation stayed the same.
+		- **Caption:** Not lines of code—this metric replicates a panel of senior human engineers.
+		- **Core takeaway:**
+			- AI raised raw activity but did **not** raise useful engineering output.
+			- The cost was significantly higher rework, consuming the gained throughput.
+	-
+	- ## Slide 23 —  *Adopting AI didn’t yield positive results for this company…*
+		- **Summary of pilot metrics:**
+			- **Pull Requests:**
+				- **+13.6% increase**
+				- Inconclusive — PR count ≠ better productivity.
+			- **Code Quality:**
+				- **–9% decrease**
+				- Clear red flag — quality degraded.
+			- **Effective Output:**
+				- **+1% increase**
+				- Essentially no meaningful gain.
+			- **Rework:**
+				- **2.6× increase**
+				- Strongly negative — indicates AI-generated thrash.
+		- **Overall message:**
+			- More activity, worse quality, same output, more cleanup.
+			- Leads into the punchline question: **What is the ROI of this AI adoption?**
+	-
+	- ## Slide 24 —  *Would you like similar insights for your company?*
+		- **Call to action:** Participate in Stanford’s SWEPR research program.
+		- **Three offerings:**
+			- **1 — Software Engineering Productivity**
+				- Monthly Engineering Output analysis (added vs. reworked vs. refactored vs. removed).
+				- Live dashboard available in the research portal.
+				- For companies with **>50 engineers**.
+			- **2 — AI Practices Benchmark**
+				- Activity-weighted AI adoption (L0–L4) across repos.
+				- Open to **any organization**.
+			- **3 — AI Engineering Impact (Cursor)**
+				- Code Quality score trends (Pre-AI vs Post-AI).
+				- Live dashboard in research portal.
+				- For **companies using Cursor Enterprise** (highlighted as “most needed”).
+		- **Sign-up link:** softwareengineeringproductivity.stanford.edu
+		- **Contact:** Yegor Denisov-Blanch (email shown).

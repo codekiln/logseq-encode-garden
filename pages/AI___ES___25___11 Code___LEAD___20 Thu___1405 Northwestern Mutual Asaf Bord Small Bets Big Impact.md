@@ -1,0 +1,83 @@
+chatgpt-link:: https://chatgpt.com/g/g-p-691f249c2fac8191ab8b4b926da5cb3b-ai-es-25-11-code/c/691f7067-fa80-8328-b513-b18cd12e640d
+
+- # 2:05pm - 2:24pm | AI Leadership | Room: Times Center
+	- ![Asaf Bord](https://www.ai.engineer/speakers/asaf-bord.jpg)
+	- **[[Person/Asaf Bord]]** [LinkedIn](https://www.linkedin.com/today/author/asafbord) [Website](https://asafbord.wixsite.com/home) - AI Product Lead, [[Northwestern Mutual]]
+	- ## Talk: Small Bets, Big Impact: Building GenBI at a Fortune 100
+		- Enterprises don't usually make moonshots, especially in GenAI. Governance, budgets, and risk aversion make it almost impossible to justify a huge, uncertain investment.
+		- At [[Northwestern Mutual]], we're building GenBI, an LLM-powered analytics copilot, by flipping that logic. Instead of one big bet, we created an incremental roadmap of small, fundable projects. Each is tied to real business outcomes, delivers measurable ROI, and builds the trust needed to move forward.
+		- This talk shares how we framed the problem, earned leadership support, and designed a modular architecture grounded in real data. We'll show how each research step can stand on its own - productized, measurable, and deployable. Attendees will leave with a clear blueprint for making AI transformation fundable, governable, and real inside large, risk-averse organizations.
+	- ## Slide — GenBI: Building an Automated BI Agent
+		- Solid deep-blue background with Northwestern Mutual logo in white at top-left.
+		- Center-left large title in gold: **GenBI: Building an Automated BI Agent**, underscored by a thin horizontal rule.
+		- Beneath the rule: **AI Engineer Code Summit — November 2025** in light gray.
+		- Bottom-left block: **Asaf Bord** in bold white; below it, **Data & AI Product Leader, [[Northwestern Mutual]]** in light gray.
+	-
+	- ## Slide 3 — What is GenBI — and Why Build It?
+		- Layout is a cascading staircase of light-blue rectangular blocks descending left→right, each carrying a core rationale.
+		- Top block: **Fusion of GenAI + Business Intelligence** — establishes the conceptual blend.
+		- Second block: **Answers come from an automated agent, not a BI team** — shifts human BI workload → autonomous system.
+		- Third block: **Delivers scale, speed, efficiency & fewer errors** — emphasizes operational uplift.
+		- Bottom block (widest): **Enables true data democratization** — highlights the meta-shift: BI becomes self-serve for the entire org.
+	-
+	- ## Slide 4 — Northwestern Mutual in 10 Seconds
+		- Left half: four horizontal gradient bars stacked vertically, each summarizing a pillar of scale and scope.
+			- **168 years** as one of the largest U.S. financial-services firms.
+			- **Fortune 100** | **5M+ clients** | **$378B assets** | **$2.4T protection**.
+			- **Dual engine:** life insurance + wealth management.
+			- **8,000+ employees**, **22,000+ agents**, enterprise-wide digital platforms.
+		- Right half: full-height image of Northwestern Mutual’s glass HQ with the white logo overlayed, visually anchoring corporate scale.
+		- [[My Notes]]
+			- it's a very risk-averse company. they sell people a decades-long commitment.
+			- stability is something that is very important; how do we balance with innovation?
+	-
+	- ## Slide 5 — Four Barriers to Overcome Before GenBI Can Truly Scale
+		- Four left→right cascading blue bars, each naming a structural blocker that must be neutralized before an automated BI agent is credible at enterprise scale.
+			- **Unknown Tech:** “Never been built before” — the *pie-in-the-sky* GenBI concept; no prior template, no precedent.
+			- **Messy Real Data:** Real production data > synthetic demos; forces confrontation with edge cases and entropy.
+			- **Blind-Trust Bias:** Official data source ≠ ground truth; BI consumers over-trust badges that may hide inaccuracies.
+			- **Budget & Impact:** Every sprint must land measurable value; incremental ROI is the currency that buys continuation.
+	-
+	- ## Slide 6 — Messy but Meaningful: Why We Insisted on Real Data
+		- Left column: five horizontal light-blue bars stacked vertically, each describing a realism requirement that anchors GenBI in *actual enterprise complexity* rather than synthetic sandboxes.
+			- **Embedded with the real team & goals** — co-located work with BI owners so constraints aren’t theoretical.
+			- **Ground-truth queries and reports to benchmark** — real SQL/report outputs become the gold standard to match.
+			- **Library of actual user questions for testing** — authentic intent patterns, not fabricated prompts.
+			- **[[SMEs]] on call for rapid feedback loops** — instant correction cycles to prevent hallucinated logic from persisting.
+			- **Masked export → sandbox to tap latest models** — privacy-safe extraction into an experimentation environment.
+		- Right side: blurred BI dashboards overlaid with a SQL snippet (“SELECT department… GROUP BY department”) and a lock icon — visually contrasting *open analytics* with *governed access*.
+		- [[My Notes]]
+			- gap between [[Prototype]] and reality is substantial, that's why they used
+			- brought business to be part of research product itself. they didn't just test something in the lab; end users were part of research process itself. when they brought it to production, they were there to use it and put it into practice.
+	-
+	- ## Slide 7 — Building Trust: Turning Bias-Land into Safe Ground
+		- Two-column table: left = **What We Do** (tactics), right = **Why It Builds Trust** (mechanics of credibility).
+		- **Sandbox Development** — PII-masked, separate accounts, fresh models → **isolated experiments, zero Prod blast radius**.
+		- **Crawl → Walk → Run Rollout** — SMEs → Managers → Execs.
+			- SMEs: *they know what “good” looks like*; quickest signal on accuracy.
+			- Managers: closer to workflows; willing to give corrective feedback.
+			- Execs: *not yet*—they need concise, trustworthy answers; current accuracy not sufficient.
+		- **Reuse Certified Content First** — pre-approved queries/reports → **prevents hallucinated or “shadow” outputs**.
+		- **Expectation Alignment** — reduce lookup drudgery, not analyst roles → **clear scope/pacing, fewer surprises**.
+	- ---
+	- lost a bit of interest; didn't capture notes
+	- ---
+	-
+	- ## Slide 14 — How It Works: Agentic Natural Language Querying
+		- Flow diagram showing a left→right, top→down multi-agent pipeline translating a *business question* into *executable SQL*.
+		- **Business Question → Orchestrator** — central controller deciding which specialist to invoke.
+		- Orchestrator splits into two upstream calls:
+			- **Metadata Agent** ←→ **Catalog** — resolves tables, fields, semantics.
+			- Metadata Agent ↓ feeds **RAG Agent** — retrieves definitions, joins, logic; also checks **Certified Reports** (“Existing Report?”) to return an approved answer when possible.
+		- RAG Agent ↓ flows to **SQL Agent** — composes or refines SQL.
+		- SQL Agent ↓ flows to **Execute Agent** — runs the query against **Database** and returns results.
+		- Visual structure reinforces a modular, pluggable multi-agent stack: catalog-aware, report-aware, SQL-generating, and execution-safe.
+	-
+	- ## Slide 18 — Where Is the Industry Going?
+		- **LLM-Ready Data Fabric** — schemas/lineage made *agent-readable* so models can self-serve data context.
+		- **Specialist-First Model Grid** — tiny domain experts → routed into large generalist models only when needed.
+		- **Invisible Copilots** — frictionless “one-click” LLM actions embedded directly in Slack/CRM/BI.
+		- **Secure Models from Within** — safety coming from *weights/logprobs*, not wrapper-layer heuristics.
+		- **Usage-Based Pricing Models** — fewer workers ⇒ fewer seats ⇒ SaaS shifts to metered usage.
+		- *Context from your note:* efficiency gains (10× worker leverage) break the seat-based model; usage pricing (à la Salesforce Data Cloud) becomes dominant because value now depends on *what the user accomplishes* and *the opportunity created by freed time*, not how many seats are occupied.
+-

@@ -1,0 +1,351 @@
+chatgpt-link:: https://chatgpt.com/g/g-p-691f249c2fac8191ab8b4b926da5cb3b-ai-es-25-11-code/c/691f4902-84cc-800a-9ed7-9caaaf08cb55
+
+- # 12:00pm - 12:19pm | AI Leadership | Room: Times Center
+	- ![Itamar Friedman](https://www.ai.engineer/speakers/itamar-friedman.jpg)
+	- **[[Person/Itamar Friedman]]** [Twitter](https://twitter.com/itamar_mar) [LinkedIn](https://www.linkedin.com/in/itamarf) - CEO, [[QodoAI]]
+	- ## Talk: The State of AI Code Quality: Hype vs. Reality
+		- AI is making code generation nearly effortless, but the critical question remains: can we trust AI-generated code for software that truly matters? Has it really become easier to build robust, high-quality systems?
+		- In this talk, we'll separate hype from reality. Drawing on the State of AI Code Quality report, we'll explore where AI tools excel, where they fall short, and which evaluation frameworks actually matter. We'll unpack benchmarks, pitfalls, and lessons learned from deploying AI in real-world engineering workflows. Attendees will leave with a clearer understanding of how to measure, trust, and improve both AI-generated code and AI-driven code review—and what's next for software quality in the age of AI.
+	- ## Slide — “3 Cloud Outages in 3 Weeks”
+		- **Title block (top-left)**
+			- Large, high-contrast headline: **3 Cloud Outages in 3 Weeks**.
+		- **Context block (center-left, light gray text)**
+			- “Companies are pushing to move faster…”
+			- AI-generated code share rising: **10% → 30% → 50%**.
+		- **Pivot question (center)**
+			- Single bold word: **Related?** — visually isolated to suggest causal suspicion.
+		- **Stat cards (bottom)**
+			- **Purple card**:
+				- *65% of developers* say **≥25% of each commit** is generated or shaped by AI.
+			- **Mint card**:
+				- *15%* say **>80%** of their code is AI-influenced.
+		- **Visual structure**
+			- Dark background with two bright rounded cards anchoring the bottom.
+			- Top → bottom movement implies: outages → acceleration → rising AI code → potential linkage.
+	-
+	- ## Slide — Claude Code Security Review Prompt (GitHub UI)
+		- **Overall layout**
+			- Full-width GitHub dark UI screenshot.
+			- Path shown: `.claude / commands / security-review.md` on branch **main**.
+			- File metadata: *191 lines (153 loc), 10.6 KB*, last updated *3 months ago* by `ddworken`.
+		- **Top table (center)**
+			- **allowed-tools** column lists:
+				- `Bash(git diff:*)`, `Bash(git status:*)`, `Bash(git log:*)`, `Bash(git show:*)`,
+				- `Bash(git remote show:*)`, `Read`, `Glob`, `Grep`, `LS`, `Task`.
+			- **description** column:
+				- “Complete a security review of the pending changes on the current branch.”
+		- **Primary prompt (blue highlight)**
+			- **“You are a senior security engineer conducting a focused security review of the changes on this branch.”**
+		- **Instruction block (below)**
+			- Read full diff; assess only new security implications in this PR.
+			- Objective: identify **high-confidence, exploitable** vulnerabilities.
+			- **Not a general code review**.
+		- **Critical instructions list (4 items)**
+			- **Minimize false positives** — only flag issues where **>80% confidence** of exploitability.
+			- **Avoid noise** — skip theoretical issues, style concerns, low-impact findings.
+			- **Focus on impact** — prioritize unauthorized access, data breach, system compromise.
+			- **Exclusions** — do **not** report:
+				- **Denial of Service (DoS) vulnerabilities**, *even if they allow service disruption.*
+				- Secrets or sensitive data stored on disk (handled elsewhere).
+	-
+	- ## Slide — Agenda (Sonar/Qodo/Faros dataset framing)
+		- **Left panel (agenda item)**
+			- Bullet **1** in a purple rounded square.
+			- Sources listed: **@[[QodoAI]], @[[Sonar]], @[[Faros]]**.
+			- Topic: *code quality / code review–related report*.
+			- Sample size summary:
+				- *Thousands* of developers.
+				- *Millions* of pull requests.
+				- *Billions* of lines of code.
+		- **Right panel (Sonar dataset explainer card)**
+			- **Headline: “About our dataset.”**
+			- Presented as a bordered info box with dense text.
+			- Describes SonarQube Cloud as a **pre-AI, rule-driven code analysis system** integrated with CI/CD platforms ([[GitHub]], GitLab, Azure DevOps, Bitbucket).
+			- Evaluates maintainability, reliability, and security by comparing code against **thousands of developer-authored rules**.
+		- **Dataset scope (3 metrics block)**
+			- **7.9B+ lines of code** analyzed.
+			- Work from **970k+ developers** across **40k+ organizations**.
+			- **445M code issues** across **5,300** unique quality/security rules.
+		- **Visual intent**
+			- Left side: agenda continuation.
+			- Right side: grounding the talk in a **pre-AI, rigorously rule-based baseline** that modern AI tooling is now compared against.
+	-
+	- ## Slide — Agenda (expanded with Part 1 preview)
+		- **Left column (agenda list)**
+			- **Item 1** (purple square “1”)
+				- Sources: **@[[QodoAI]], @[[Sonar]], @[[Faros]]**.
+				- Same sample-size framing:
+					- Thousands of developers.
+					- Millions of PRs.
+					- Billions of LOC.
+			- **Item 2** (purple square “2”)
+				- Analyze **State of Code Quality in the Age of AI**.
+				- Two sub-bullets:
+					- Break into dimensions.
+					- Share stats.
+		- **Right overlay (Part 1: State of AI coding adoption)**
+			- A tall, rounded card showing a **Qodo report page**.
+			- Header: **Part 1: State of AI coding adoption**.
+			- Context: AI now fully woven into developer workflows, not a curiosity.
+			- **Key insights block (purple):**
+				- 82% use AI coding tools daily or weekly.
+				- 59% run 3+ AI tools in parallel.
+				- 66% say AI touches ≥25% of their codebase.
+				- 78% report productivity gains.
+				- 57% say AI makes work more enjoyable.
+			- **Five horizontal bar charts**:
+				- Frequency of AI tool usage.
+				- AI impact on overall code quality.
+				- % of code generated or influenced by AI.
+				- Productivity change.
+				- Job satisfaction impact.
+		- **Visual intent**
+			- Left = agenda continuity.
+			- Right = preview of the **report-driven analytics** that the talk will unpack next.
+	-
+	- ## Slide — Productivity vs. Investment (Take-away Trajectory)
+		- **Axes**
+			- Y-axis: **Productivity** (upward).
+			- X-axis: **Investment** (rightward).
+		- **Four stacked curves (bottom → top)**
+			- **Code Gen** — lowest, slow early gain, flattens quickly.
+			- **Agentic Code Gen** — higher slope, plateaus at a mid-level productivity ceiling.
+			- **With Agentic Quality** — a further uplift once quality-focused agents enter the loop; reaches a higher but still bounded plateau.
+			- **Learning System Focused on Quality** — steepest curve; diverges upward instead of flattening, showing compounding returns.
+				- [[My Notes]]
+					- this is the keyword here
+		- **Visual narrative**
+			- Left → right: as organizations invest, they move from simple generation → agentic behaviors → agentic quality → **self-improving, quality-centric systems**.
+			- Only the top curve escapes the diminishing-returns ceiling.
+	-
+	- ## Slide — Market Adoption Status
+		- **Top row (3 statistic cards)**
+			- **82%** — devs use AI coding tools daily or weekly.
+			- **59%** — use three or more AI tools regularly.
+			- **20%** — manage five or more AI tools regularly.
+		- **Bottom row (3 statistic cards)**
+			- **Only 28%** — devs feel confident in their AI-generated code.
+			- **51%** — active AI users are in small teams (≤10 devs).
+			- **25%** — enterprises with 100+ devs are past the experimentation stage.
+		- **Visual structure**
+			- Six dark rounded rectangles arranged 3×2.
+			- Tight grid conveys a snapshot of broad but uneven adoption.
+			- Footer source: Qodo State of AI Code Quality Report + SonarSource State of Code.
+	- ---
+	- I took a break here
+	- ---
+	-
+	- ## Slide — The Catch and Crisis in Vibe Coding
+		- **Left column (4-step failure dynamic)**
+			- **More code** — AI accelerates raw output.
+			- **More PRs** — throughput increases across teams.
+			- **Not fewer bugs per LOC** — defect rate stays the same or worsens.
+			- **Review can’t keep up** — code is produced faster than humans can evaluate.
+		- **Right column (Faros velocity chart)**
+			- Title: **AI boosts output, but human review becomes the bottleneck**.
+			- Three bar metrics comparing low → high AI adoption:
+				- **Task Throughput per Dev**: +21.4% (green).
+				- **PR Merge Rate per Dev**: +97.8% (green).
+				- **Median Review Time**: +91.1% (red).
+			- Interpretation: productivity up → merge load up → review latency spikes.
+		- **Overall insight**
+			- The “vibe coding” surge creates a structural imbalance: generation scales, review does not.
+	-
+	- ## Slide — Where Quality Issues Emerge in the SDLC
+		- **1. Planning & Design**
+			- Incomplete requirements.
+			- Architectural decisions misaligned or unclear.
+			- Designs that are hard to implement at scale.
+		- **2. Development**
+			- Weak or missing error handling.
+			- Security considerations overlooked.
+			- Inconsistent adherence to team standards.
+		- **3. Code Review**
+			- Changes scattered across files make comprehension difficult.
+			- PR overload → unclear prioritization (“which to start?”).
+		- **4. Testing**
+			- Coverage gaps.
+			- Edge cases proliferate with AI-scaled code volume.
+		- **5. Deployment**
+			- Code not scoped to environment variables correctly.
+			- Breaking changes across dependencies.
+		- **Visual organization**
+			- Five rounded boxes arranged in a grid with slight stagger.
+			- Represents the SDLC as a chain where AI pressure introduces cracks at each stage.
+	-
+	- ## Slide — Quality Issues That Modern Engineering Teams Face
+		- **Left panel — Code-Level Problems (mint border)**
+			- **Functional** (collapsed heading).
+			- **Non-functional** (expanded list):
+				- Security vulnerabilities in AI-generated code.
+				- Insufficient test coverage for new code.
+				- Poor error handling and edge-case coverage.
+				- Inconsistent standards and patterns.
+				- Technical debt accumulation.
+				- Integration and compatibility issues.
+				- Inadequate documentation.
+		- **Right panel — Process-Level Challenges (purple border)**
+			- **Learning**
+				- Knowledge gaps in AI-generated solutions.
+			- **Verification**
+				- Rushed or incomplete code reviews.
+				- Little or no validation of AI output.
+			- **Guardrails**
+				- Insufficient guardrails on AI tools.
+				- Hard to track AI-originated code.
+		- **Standards**
+		- Quality practices inconsistent across teams.
+			- **Overall structure**
+				- Two-column contrast: *problems in the code* vs. *problems in the workflow surrounding the code*.
+	-
+	- ## Slide — The Cost of Poor Code Quality
+		- **Framing text**
+			- Poor quality compounds across the org; it’s not just slowdown—it's systemic cost.
+		- **Three impact cards (left → right)**
+			- **42% — Developer Time**
+				- Nearly half of dev hours go to bug fixes + tech debt instead of new value.
+			- **35% — Project Delays**
+				- Over a third of projects miss deadlines due to rework and remediation.
+			- **3× — Security Incidents**
+				- AI-assisted code shows triple the vulnerabilities vs. traditionally written code.
+		- **Visual layout**
+			- Three purple-centered rectangles in a clean horizontal row.
+			- Line beneath explaining business impact reinforces that quality failures ripple outward.
+	-
+	- ## Slide — The Cost of Poor Code Quality
+		- **Framing text**
+			- Poor quality compounds across the org; it’s not just slowdown—it's systemic cost.
+		- **Three impact cards (left → right)**
+			- **42% — Developer Time**
+				- Nearly half of dev hours go to bug fixes + tech debt instead of new value.
+			- **35% — Project Delays**
+				- Over a third of projects miss deadlines due to rework and remediation.
+			- **3× — Security Incidents**
+				- AI-assisted code shows triple the vulnerabilities vs. traditionally written code.
+		- **Visual layout**
+			- Three purple-centered rectangles in a clean horizontal row.
+			- Line beneath explaining business impact reinforces that quality failures ripple outward.
+	-
+	- ## Slide — Why is AI Testing Important?
+		- **Top framing**
+			- AI testing increases **confidence in test coverage**.
+		- **Left chart (bar comparison)**
+			- Metric: *Share “very” or “somewhat” confident (%).*
+			- **27%** — developers who **do NOT** use AI for testing.
+			- **61%** — developers who **DO** use AI for testing.
+			- Clear 2× uplift in perceived reliability.
+		- **Right card (highlight)**
+			- **2× Trust**
+				- Developers using AI-generated tests are **twice as confident** in their testing.
+		- **Visual message**
+			- AI testing provides the missing guardrail: speed + confidence instead of speed + uncertainty.
+	-
+	- ## Slide — Code Review as Gateway & Gatekeeper
+		- **Primary message (left block)**
+			- Code review is both **gateway** (improves quality) and **gatekeeper** (governs process).
+			- It operates at **two layers**:
+				- *Code-level quality* (correctness, security, style).
+				- *Process-level quality* (shared ownership, learning, standards).
+		- **Supporting note**
+			- Code review isn’t only about defect detection.
+			- It enables the team to **own and learn the code together**.
+		- **Right visual (screenshot)**
+			- A PR Compliance Guide UI from Qodo:
+				- Security checks, ticket compliance, duplication checks, custom compliance.
+				- Color-coded indicators (green/yellow/red).
+		- **Visual intent**
+			- Left: conceptual framing.
+			- Right: concrete example of structured, AI-supported review governance.\
+	-
+	- ## Slide — Why is AI Code Review Important?
+		- **Top framing**
+			- AI code review yields **more productivity** and **higher quality** simultaneously.
+		- **Two highlight cards (centered)**
+			- **2×** — AI code review delivers **double the quality gain**.
+			- **47%** — Developers are **47% more productive** when AI participates in review.
+		- **Visual emphasis**
+			- Two bright purple rectangles side-by-side to signal paired benefits: *quality ↑ + productivity ↑*.
+	-
+	- ## Slide — Qodo Code Review Stats
+		- **Framing**
+			- AI review acts as a **guardrail**: catches critical issues, accelerates throughput.
+			- Sample size: **~1M PRs**.
+		- **Two key metrics (purple cards)**
+			- **17%**
+				- PRs contained a **high-severity issue** (severity 9–10).
+			- **80%**
+				- With AI review enabled, **80% of PRs receive no human comments**—AI handles the review load.
+		- **Visual**
+			- Right side features Qodo’s anteater mascot with sparkles, reinforcing the “assistive agent” vibe.
+	-
+	- ## Slide — Qodo Context Stats
+		- **Framing**
+			- Context-handling is central to **agentic flows**; code review helps fix context gaps.
+		- **Two stat cards (center)**
+			- **60%**
+				- Of MCP tool usage in agentic chat is spent on **context identification + content retrieval**.
+				- Signals that agents need constant grounding to act correctly.
+			- **8%**
+				- Of Qodo’s code review suggestions relate to aligning PRs with **company best practices**.
+				- Shows a small but crucial slice is governance-focused.
+		- **Visual**
+			- Qodo anteater mascot on the right.
+			- Purple sparkles reinforce the “context magic” theme.
+	-
+	- ## Slide — Best-In-Class Context Engine
+		- **Left framing**
+			- [[Nvidia]] CEO **Jensen Huang** showcased **[[QodoAI]]'s Deep Context Engine (Memory)** on stage.
+			- Positions [[QodoAI]] as a top-tier partner in [[Nvidia]]'s agentic ecosystem.
+		- **Right visual (stage photo + architecture)**
+			- Large screen diagram showing Qodo’s multi-agent context stack:
+				- **Coding Agent** — Llama NeMo reasoning + tool usage.
+				- **Code Search & Retrieval Agent** — NeMo retriever embedding + re-ranking.
+				- **Extraction Agent** — processes enterprise codebase & files.
+				- **Graph Vector Database** — shared memory backbone.
+				- **Retrieval & Generation Pipeline** — merges ingest + reasoning.
+			- Jensen stands in front of the diagram, emphasizing Qodo’s role in Nvidia’s workflow.
+		- **Narrative intent**
+			- Establishes authority: Qodo’s context engine is validated by Nvidia at keynote scale.
+	-
+	- ## Slide — Software Development Gen-3.5+
+		- **Framing**
+			- Context-aware, multi-agent, “System II” intelligence.
+			- A *second brain* for dev orgs: human + a swarm of specialized agents.
+		- **Core triad (right diagram)**
+			- Three nodes in constant circulation:
+				- **Spec** (purple assistant circle)
+				- **Tests** (white assistant circle)
+				- **Implement** (deep purple assistant circle)
+			- Each node surrounded by **blue agent nodes**.
+				- Agents run in parallel, revising, cross-checking, and enriching each artifact.
+			- Arrows show **continuous bidirectional flow**:
+				- Spec ⇄ Tests
+				- Tests ⇄ Implement
+				- Implement ⇄ Spec
+				- Each loop has inner micro-loops where agents refine details.
+		- **Bottom inputs**
+			- **Env**, **SW DB**, **Tools** — infrastructure feeding real-time context.
+		- **Narrative intent**
+			- This is his long-term thesis:
+				- Future dev = human creativity + persistent agentic refinement across spec, code, and tests.
+				- Multiple agents operate concurrently, not sequentially—turning engineering into a *parallelized, iterative, always-learning* system.
+	-
+	- ## Slide — The Path Forward
+		- **Card 1 — Quality is a Competitive Advantage (purple)**
+			- Establish quality baselines.
+			- Shift reviews **left of commit**.
+			- Document + embed best practices.
+		- **Card 2 — AI is a Tool, Not a Solution (mint)**
+			- Multi-agent system design.
+			- Governance for code + tools.
+			- Build quality-specific **MCPs**.
+		- **Card 3 — Start Today, Iterate Tomorrow (white)**
+			- Your context engine.
+			- AI code review.
+			- AI quality workflows.
+			- Monitor continuously.
+		- **Narrative arc**
+			- Quality first → AI orchestrated, governed → adopt incrementally with compounding payoff.
+	- ### Demo - rigorous rules
+		- [[My Notes]]
+			- one of the examples of rules was that a todo was in the code without an issue link and person responsible

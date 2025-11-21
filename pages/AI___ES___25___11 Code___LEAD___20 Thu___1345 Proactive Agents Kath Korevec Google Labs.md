@@ -1,0 +1,121 @@
+- # 1:45pm - 2:04pm | AI Engineering | Room: Times Center
+	- ![Kath Korevec](https://www.ai.engineer/speakers/kath-korevec.jpg)
+	- **[[Person/Kathy Korevec]]** [Twitter](https://twitter.com/simpsoka) [LinkedIn](https://www.linkedin.com/in/kathleensimpson) - Director of Product, [[Google]] Labs
+	- ## Talk: Proactive Agents and [[JulesAI]]
+	- ## Slide — Proactive Agents (Google Labs)
+		- **Visual layout:** full-bleed pixel-art scene of a person overwhelmed at a sink, dwarfed by a chaotic mountain of dishes erupting upward in neon blue/yellow/pink. The pile visually “overflows” like a memory leak; stray pixel-noise and glitch-text (e.g., `DISH_PILE_EXE`, fragments of code) imply runaway processes.
+		- **Left-top text:** “Remember, do the dishes” — positioned as a prompt-style reminder, functioning as the *human need* that proactive agents should anticipate.
+		- **Center figure:** person in an apron, arms half-raised, facial expression exhausted/defeated. Their small scale vs. the towering dish-heap dramatizes *cognitive overload* → the problem space proactive agents aim to reduce.
+		- **Framing:** domestic chore = metaphor for unbounded, unaddressed tasks. Signals the theme: *agents that notice entropy accumulating and act before the user asks*.
+		- **Footer bar:** “PROACTIVE AGENTS” and speaker line: **KATH KOREVEC / Director of Product / Google**.
+		- notes
+			- she was remembering whether dishes were done
+			- that's like agents
+	- humans are unitaskers
+		- we think we're multitaskers, but we are executing many tasks very rapidly
+		- switching has huge costs
+	- for async agents
+		- how can we babysit 16 claude code monitors?
+		- I don't want to manage work or coding agents, I want to build
+		- she mentions anticipating needs ...
+	-
+	- ## Slide — Four essential systems in coding (for proactive agents)
+		- **Layout:** four pixel-art tiles in a 2×2 grid, each a different bright color on a starfield background:
+			- **Observation** (pink, top-left)
+			- **Personalization** (cyan, top-right)
+			- **Timely Action** (orange, bottom-left)
+			- **Seamless Integration** (purple, bottom-right)
+		- **Meaning:**
+			- **Observation:** continuous noticing—patterns, drift, emerging friction, silent failures.
+			- **Personalization:** filtering what *you* never want to deal with; tailoring boundaries of autonomy.
+			- **Timely Action:** appearing precisely where you already work—intercepts in-flow, not out-of-band interruptions.
+			- **Seamless Integration:** fitting across tools, surfaces, and workflows without seams or setup cost.
+		- **Speaker intent:** these four pillars must converge; stitching them together is the hard part of proactive systems design.
+	-
+	- ## Slide — Reactive systems
+		- **Visual scene:** a worker collapsed face-down on a desk, laptop still open. A thought bubble with an “X” shows cognitive shutdown.
+		- **Right side:** a frantic octopus-bot hovers, eight limbs flailing, each emitting yellow speech bubbles: “RESPOND TO EMAIL!”, “REVIEW DOCS!”, “FOLLOW UP!”, “URGENT! NOW!”, “REPLY FAST!!!!”. The creature embodies *interrupt-driven overload*.
+		- **Message:** reactive systems are “efficient” only in the narrow sense of responding instantly; experientially they are punishing. They trigger user stress, context-switching, and task debt.
+		- **Speaker intent:** contrast with proactive agents: dozens of background workers noticing friction, pre-resolving errors, prepping migrations, reducing user burden before the user even asks.
+	-
+	- ## Slide — Four essential systems in coding (for proactive agents)
+		- **Layout:** four pixel-art tiles in a 2×2 grid, each a different bright color on a starfield background:
+			- **Observation** (pink, top-left)
+			- **Personalization** (cyan, top-right)
+			- **Timely Action** (orange, bottom-left)
+			- **Seamless Integration** (purple, bottom-right)
+		- **Meaning:**
+			- **Observation:** continuous noticing—patterns, drift, emerging friction, silent failures.
+			- **Personalization:** filtering what *you* never want to deal with; tailoring boundaries of autonomy.
+			- **Timely Action:** appearing precisely where you already work—intercepts in-flow, not out-of-band interruptions.
+			- **Seamless Integration:** fitting across tools, surfaces, and workflows without seams or setup cost.
+		- **Speaker intent:** these four pillars must converge; stitching them together is the hard part of proactive systems design.
+	-
+	- ## Slide — Proactive systems
+		- **Scene:** the same apron-wearing character now relaxed, reclining into a chair, smiling. The environment is calm: a lamp softly lit, no clutter, no urgency.
+		- **Right side:** a circular thermostat UI reading **72°F**, green leaf icon, with pixel arrows pointing to it. Subtext: **AUTO-ADJUSTING FOR COMFORT**.
+		- **Concept:** proactive systems = Google Nest as archetype. You configure once; it observes departures/returns, learns habits, and eventually removes the cognitive load of climate control.
+		- **Analogy:** the body as the original proactive system — rising heart rate before collapse, anticipatory adjustments during movement.
+		- **Speaker intent:** proactivity isn’t sci-fi; it’s *human-native*. AI should behave like a good teammate: anticipating, smoothing friction, removing work before it appears.
+	-
+	- ## Slide — Jules (Google Labs) and the 4 levels of proactive async agents
+		- **Central metaphor:** Jules = octopus-chef agent. Multiple arms = parallel, asynchronous competencies. Kitchen = software project environment.
+		- **Level 1 — Collaboration emerges:** helper arms begin assisting without explicit prompting; agent picks up routine prep work, plating, chopping. Human + agent co-work naturally.
+		- **Level 2 — Framework & deployment awareness:** kitchen-manager mode. Jules recognizes *your* tools, stacks, conventions. Adjusts workflow to fit your style, not a generic template.
+		- **Level 3 — Context → consequence understanding:** December scene with many downstream tables: users eating the final dishes. Jules now sees effects of code changes on customers; telemetry and stats flow in from online store → kitchen → dining room.
+		- **Level 4 — Multi-agent ecosystem:**
+			- **Jules:** software-aware builder.
+			- **Stitch design agent:** UI/UX adaptation.
+			- **Data/insights agent:** interprets telemetry, connects signals, drives performance + design adjustments.
+		- **Core mechanic:** human stays in the loop—nudging, correcting, redirecting. The system learns when to act autonomously and when to defer.
+		- **Outcome:** aligned agents + humans collaborating across the entire project lifecycle.
+	-
+	- ## Slide — Where we are now, and where we’re headed
+		- **Visual:** two Jules avatars: left = casual T-shirt, phone in hand (today’s agents). Right = armored, glowing, tablet in hand (next-gen system-aware agents). Between them: a vertical stream of code, like DNA, marking evolution.
+		- **Current direction:**
+			- **System awareness:** agents understand environment shape, dependencies, consequences.
+			- **Memory:** agents write/edit their own memories; developers can inspect and steer them.
+			- **Critic agent:** adversarial validator—generates a Playwright script and runs it through trajectory before changes land.
+			- **TODO-bot:** crawls repo, surfaces future-intent notes, proactively offers implementations.
+			- **Best-practice layer:** continuous suggestions woven through workflow.
+			- **Environment-setup agent:** used in evals and external runs to infer env behavior automatically.
+			- **JIT context:** instant cheat-sheet injection for Jules—avoids repeated Q&A with the dev.
+	-
+	- ## Slide — Demo? (proactive task surface)
+		- **Visual:** dark background with a centered mock UI panel. Top input box reads **“Fix Jed’s code …”** with a GitHub repo tag (`sambecker/ios-boba-app`, branch: `main`).
+		- **Below:** **Suggested tasks** auto-generated by Jules:
+			- Improve frontend performance by redesigning card state (+199 / –299) — Review
+			- Fix security hole in backend authentication (+75 / –18) — Review
+		- **Other recommended tasks:**
+			- Create landing page A/B test
+			- Upgrade core dependency with known vulnerability
+			- Add new API endpoints for new UX
+		- **Intent:** although the live demo failed, this panel shows Jules’ proactive mode: surfacing actionable, ranked tasks before the user asks.
+	-
+	- ## Slide — Demo (ADK-Python proactive task mining)
+		- **Scene:** dark UI panel showing Jules’ recommendations for `roberttracz-g/adk-python` after repo indexing.
+		- **Task list:** items like removing LRO polling workaround, removing Streamlit timeout workaround, finishing Claude integration reason, refactoring append logic, adding credential exchanger support.
+		- **Signals:** right-side confidence bars—green for high confidence, descending intensity for lower. Each task has **Start**, edit, and delete controls.
+		- **Intent:** Jules extracts TODOs, best-practice violations, and structural smells, ranking what it *thinks it can accomplish* plus what it *believes should be done*.
+		- **Benefit:** no prompt-writing; tasks appear automatically. Cognitive load drops. Auto-start is in progress, but manual curation remains possible.
+	-
+	- ## Slide — Demo (task drill-down, coming in December)
+		- **View:** expanded recommendation for `roberttracz-g/adk-python`. Three high-confidence tasks shown; the third (“Implement Finish Reason in Claude Integration”) is expanded.
+		- **Details surfaced:**
+			- **Description:** finish_reason isn’t being set in `message_to_generate_content_response`.
+			- **Location:** file path + line (`anthropic_llm.py:194`).
+		- **Rationale:** code already exists but is commented out—just needs to be enabled.
+		- **Code context:** snippet shows surrounding logic, TODO comments, and exact insertion point.
+		- **Intent:** this level of proactive guidance—pinpointing location, rationale, and patch target—lands **in December**.
+	-
+	- ## Slide — A giant case study
+		- **Visual:** huge pixel-art bald head filling a Victorian bay window; somber, immobile expression. Purple brick exterior, teal curtains, glitchy scan-lines evoke a retro animatronic display.
+		- **Story:** she and her husband built a **6-foot animatronic head** in their Haight-Ashbury Victorian—foam, epoxy, fiberglass. Neighborhood kids call it *the bald head*. Inspired by the Pee-wee Herman window-head gag.
+		- **Problem:** her workflow with Jules was: prompt → wait 10 minutes → try again. Debugging, research, and “ugly” plumbing blocked momentum.
+		- **Insight:** she wanted Jules to autonomously research fixes, debug, and handle the tedious substrate so she could focus on creative work—lasers from eyes, head tracking pedestrians, fun behaviors.
+		- **Point:** current tools create *friction gaps* that suppress creative throughput. Proactive agents aim to remove that gap and unlock continuous creativity.
+	-
+	- ## Slide — Big steps
+		- **Scene:** pixel astronaut striding across a lunar surface; Earth hangs in the background. A flag with the squid-emblem flaps behind them—claiming new creative territory.
+		- **Message:** *Take bold steps. Question everything. The future is ours to build.*
+		- **Intent:** existing patterns—IDEs, code workflows—may vanish within months. Don’t cling to legacy assumptions. We collectively define how software will be built next; conferences like this are where that future is authored.

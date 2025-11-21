@@ -1,0 +1,104 @@
+- # 12:20pm - 12:39pm | AI Leadership | Room: Times Center
+	- ![Olive Song](https://www.ai.engineer/speakers/olive-song.jpg)
+	- **[[Person/Olive Song]]** [Twitter/X](https://x.com/olive_jy_song) - Senior Researcher, [[MiniMaxAI]]
+	- ## Talk: Minimax M2
+		- Introducing Minimax's latest AI model and its applications in code generation.
+	- ## Slide — MiniMax: Global Leading Independent Model Lab + App Developer
+		- **Top banner:** Bold claim of being a leading independent model lab + app developer.
+		- **Research row (left→right visual flow):**
+			- **MiniMax M2 (red card):** “Text Model,” “Efficient Model for the Agentic Era.” Positioned as flagship.
+			- **Hailuo Video (dark photo card):** “Breathtaking motion, lifelike emotion.” High-fidelity video generation.
+			- **Speech 2.6 (yellow card):** “Real-time response,” “Intelligent parsing,” “Fluent LoRA voice.” Indicates low latency + controllable voices.
+			- **Music 2.0 (purple card):** “Versatile, agile vocals,” “Precise instrument control,” “Professional.” Signals multi-instrument, multi-voice capability.
+			- **MiniMax MCP Server (gray card):** Unified “MCP” endpoint for video, image, speech generation, and voice cloning.
+		- **Left red text block:**
+			- **Models:** “Excel in all modalities.” Meta-point that MiniMax spans text, video, speech, music, and MCP tooling.
+		- **Product row (AI-native apps, left→right):**
+			- **Agent app:** “Minimize effort, maximize intelligence.” General assistant.
+			- **Hailuo Video:** “Your stories, amplified by AI.” Consumer video creation tool.
+			- **MiniMax Audio:** “Create lifelike speech.” Focused speech synthesis editor.
+			- **Video Agent (NEW):** “Vibe videoing with zero-touch.” Automated video creation pipeline.
+			- **Talkie Lab:** “Create characters you’ve imagined.” Character-driven AI companion platform.
+		- **Left red text block (product side):**
+			- **AI-native apps:** “150M users globally.” Scale claim.
+		- **Bottom-right:** Tagline “Intelligence with Everyone.”
+	-
+	- ## Slide — M2: Performance
+		- **Top text:** Benchmarks come from the Artificial Analysis Intelligence Index v3.0 (10-eval suite: MMLU-Pro, GPQA Diamond, Humanity’s Last Exam, LiveCodeBench, SciCode, AIME 2025, IFBench, AA-LCR, Terminal-Bench Hard, τ²-Bench Telecom).
+		- **Visual layout:** Eight mini-bar charts in a 2×4 grid, each comparing **MiniMax-M2 (red)** against open-source models (**DeepSeek-V3.2, GLM-4.6, Kimi K2 0905, Gemini 2.5 Pro OSS**) and Claude Sonnet 4.5.
+		- **Pattern across charts:**
+			- **M2 repeatedly leads or ties for first among open-weight models**, often approaching or matching proprietary frontier baselines.
+			- **SWE-bench Verified:** M2 ~69.4 tops open-source bands (mid-60s) and is close to Claude 4.5.
+			- **Multi-SWE-Bench:** M2 ~36.2 ahead of DeepSeek (~30.6) and GLM (~30.0).
+			- **Terminal-Bench:** M2 ~46.3 leading OSS peers (mid-30s to low-40s).
+			- **ArtifactsBench:** M2 ~66.8 second to GPT-5(Thinking) at 73.
+			- **τ²-Bench:** M2 ~77.2 ahead of all OSS (60–75 range).
+			- **GAIA (text-only):** M2 ~75.7 ahead of OSS models (63–71) and behind Claude 4.5 (~76.4).
+			- **BrowseComp:** M2 ~44.0 significantly above OSS (14–45).
+			- **FinSearchComp-global:** M2 ~65.5 ahead of OSS (26–42) and close to GPT-5(Thinking) (~63.9).
+		- **Takeaway:** Slide frames **M2 as the strongest open-weight model on coding-centric and agent-centric benchmarks**, consistently outperforming all open-source peers.
+	-
+	- ## Slide — Training Shapes M2 Behavior for Developers
+		- **Layout:** Two vertical stacks (left = model traits, right = training levers) joined by left-pointing arrows showing causality (training → capability).
+		- **Model Characteristics (top→bottom):**
+			- Coding & Dev Experience
+			- Long-Horizon State-tracking
+			- Robust Scaffold Generalization
+			- Multi-Agent Scalability
+		- **Training Methods (aligned right):**
+			- Scaled Environments & Experts
+			- Interleaved Thinking & RL
+			- Data & Eval Perturbations
+			- Small & Cost-effective
+		- **Interpretation:** Each training regime directly produces the listed developer-facing capability—emphasizing agentic behavior, long-context reasoning, code-scaffold reuse, and multi-agent orchestration.
+	-
+	- ## Slide — Scaled Multilingual Environments for Data & RL
+		- **Layout:** Three vertical columns labeled in red; each with bullet details beneath.
+		- **Multilingual Coding:** JS, TS, HTML, CSS, Python, Java, Go, C++, Kotlin, C, Rust, etc. Signals broad polyglot training corpus.
+		- **100,000+ Envs:** Real GitHub repos, issues, and tests used as RL environments, not synthetic toy tasks.
+		- **High-Concurrency Infrastructure:** 5k+ sandboxes per 10s window; tens of thousands running concurrently. Emphasizes massive parallel RL throughput.
+	-
+	- ## Slide — Expert Developers as “Reward Models”
+		- **Left block:** A rounded pink rectangle labeled *Expert developer* with roles listed: frontend, backend, data engineers, etc. Represents humans-in-the-loop.
+		- **Center arrows:**
+			- Right-pointing: **Feedback →** (experts shaping training signals).
+			- Left-pointing: **Developer-Friendly Model ←** (model improved via expert judgments).
+		- **Right stack (top→bottom):**
+			- Problem Definition
+			- Model Behaviors
+			- Evaluation & Reward
+			- Environments
+		- **Meaning:** Expert developers supply judgments that determine reward shaping, evaluation criteria, behavior expectations, and environment construction—effectively acting as the “reward model” for training M2.
+	- ---
+	- break
+	- ---
+	-
+	- ## Slide — Interleaved Thinking (10–100 turns per interaction)
+		- **Layout:** Two vertical pipelines: *Without* (left) vs. *With* (right); each step shown as a colored block. Shared header: *Tools Information, System Prompt, User Prompt*.
+		- **Without interleaving:** The model alternates **thinking → tool call → tool response**, repeating this rigid cycle until late in the sequence. Only at the *end* does it perform **Final Thinking → Final Content**. Thinking never happens *after* a tool response until the final stage.
+		- **With interleaving:** After *every* **Tool Response**, the model immediately re-enters **Thinking**, optionally produces **Content**, and only then decides on the next **Tool Calling** step. This repeats for many micro-turns (10–100) inside one user request.
+		- **Effect:** Tool output is always followed by fresh model reasoning, enabling tighter feedback loops, higher-quality plans, and more adaptive multi-step tool use.
+	-
+	- ## Slide — Interleaved Thinking Enables…
+		- **Left column (two outcomes):**
+			- *Adaptation to Environment Noise* — model can re-evaluate after every perturbed tool result, smoothing volatility.
+			- *Focus on Long-Horizon Tasks* — sustained reasoning across many micro-turns without collapsing into a single-shot plan.
+		- **Right visual:** An “AI Stock” live-trading dashboard with multiple model traces (M2, Gemini 2.5 Pro, Claude Sonnet 4.5, GPT-5).
+			- Chart shows **TOTAL ACCOUNT VALUE** trajectories over days; M2’s line maintains tighter control and fewer cascades during shocks.
+			- Voting + copy-trading UI suggests benchmarked agentic performance.
+		- **Interpretation:** Interleaving lets the model absorb noisy, shifting signals and recalibrate continuously, making it more reliable over long, multi-step environments.
+	-
+	- ## Slide — Perturbation Pipeline
+		- **Core layout:** A vertical agent-execution stack on the right; multiple **leftward arrows** indicating where perturbations can be injected into the pipeline.
+		- **Perturbation injection points (top→bottom):**
+			- **Tools Information** (purple)
+			- **System Prompt** (blue)
+			- **User Prompt** (green)
+			- **Tool Response** (pink, repeated at multiple layers)
+		- **Execution spine:** After each perturbed input, the model runs:
+			- **Thinking → Content → Tool Calling → Tool Response → (repeat)**
+			- Eventually ending with **Final Thinking → Final Content**.
+		- **Interpretation:** MiniMax maintains a *structured perturbation framework* that deliberately introduces noise or variation across **prompts, tool metadata, and tool outputs**.
+			- This forces M2 to become *robust across many agent scaffolds*, not overfit to a single orchestration pattern.
+			- By perturbing every layer—from system prompt to tool outputs—they train generalization across the entire agent loop, yielding stable behavior even when the surrounding agent system varies.
+	-
