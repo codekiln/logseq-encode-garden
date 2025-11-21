@@ -1,0 +1,4 @@
+- # 11:00am - 11:19am Talk: Code World Model: Building World Models for Computation [[Person/Jacob Kahn]]
+	- ## Talk: Code World Model: Building World Models for Computation
+		- Today, most neural models for code learn from code itself: sequences of tokens that capture syntax rather than computation. While this allows models to learn the shape of code, true reasoning about programs requires understanding execution and the dynamics of computation. In this talk, I'll present a world-model approach to learning from code: one that incorporates data from program execution to implicitly predict behavior while generating code. The Code World Model (CWM) embodies this paradigm, opening new capabilities for reasoning and offering a foundation for future research and prototyping in AI-driven software systems.
+

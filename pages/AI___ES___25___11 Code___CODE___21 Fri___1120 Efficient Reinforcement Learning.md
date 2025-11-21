@@ -1,0 +1,4 @@
+- # 11:20am - 11:39am Talk: Efficient Reinforcement Learning [[Person/Rhythm Garg]] [[Person/Linden Li]] [[Applied Compute]]
+	- ## Talk: Efficient Reinforcement Learning
+		- Reinforcement learning (RL) is a powerful mechanism for building agents that are superhuman and specialized in particular tasks. At Applied Compute, RL is one of the fundamental building blocks that enables us to deliver automations and real business value for customers. Effective RL training often involves several iterative derisking runs to better understand learning dynamics with different base models, and then doing "hero" runs with the best configurations. If done naively, this can be very time-consuming and expensive. In this talk, we will discuss some ways our proprietary RL stack allows us to train models efficiently.
+

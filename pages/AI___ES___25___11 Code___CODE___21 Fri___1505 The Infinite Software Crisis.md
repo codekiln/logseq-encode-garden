@@ -1,0 +1,11 @@
+- # 3:05pm - 3:24pm Talk: The Infinite Software Crisis [[Person/Jake Nations]]
+	- ## Talk: The Infinite Software Crisis
+		- In 1968, the term ""Software Crisis"" emerged when systems grew beyond what developers could manage. Every generation since has ""solved"" it with more powerful tools, only to create even bigger problems.
+		- **Today, AI accelerates the pattern into the Infinite Software Crisis.** AI-generated codebases mirror the meandering conversations that created them. Every clarification and pivot gets baked into your architecture. We're vibecoding our way to disaster.
+		- **The solution: choose simple over easy.** One long conversation is easy. Separate phases with clean boundaries are simple.
+		- This talk presents a three-phase methodology:
+			- **Research** to understand the existing system
+			- **Planning** to design the approach
+			- **Implementation** with clean context
+		- While everyone races to generate code at machine speed, the engineers who thrive will be those who know when a system is getting tangled. In the age of infinite code generation, human judgment applied at the right moments becomes your competitive advantage.
+

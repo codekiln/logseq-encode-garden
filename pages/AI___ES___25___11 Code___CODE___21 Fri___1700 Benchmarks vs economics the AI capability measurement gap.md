@@ -1,0 +1,4 @@
+- # 5:00pm - 5:19pm Talk: Benchmarks vs economics: the AI capability measurement gap [[Person/Joel Becker]]
+	- ## Talk: Benchmarks vs economics: the AI capability measurement gap
+		- AI models are crushing benchmarks. SWE-bench scores are climbing, and METR's measured time horizons are rising rapidly. Yet when we deployed these same models in a field study with experienced developers, they didn't speed up work. What's going on? Are benchmarks misleading us about AI capabilities? Are we missing something about how AI performs in the real world? In this talk, we'll reconcile lab and field evidence on AI capabilities. Drawing from METR's time horizon measurements and developer productivity RCT, we'll explore why impressive benchmark performance doesn't always translate to real-world impact. We'll examine potential explanations—from reliability requirements to task distribution to capability elicitation—and discuss what this means for automated AI R&D.
+

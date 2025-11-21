@@ -1,0 +1,6 @@
+chatgpt-link:: https://chatgpt.com/g/g-p-691f249c2fac8191ab8b4b926da5cb3b-ai-es-25-11-code/c/69207538-d780-8330-935d-0cf50a18f90a
+
+- # 9:10am - 9:30am Talk: Don't Build Agents, Build Skills Instead [[Person/Barry Zhang]] [[Person/Mahesh Murag]] [[Anthropic]]
+	- ## Talk: Don't Build Agents, Build Skills Instead
+		- In the past year, we've seen rapid advancement of model intelligence and convergence on agent scaffolding. But there's still a gap: agents often lack the domain expertise and specialized knowledge needed for real-world work. We think Skills are the solution—a minimal form factor for packaging procedural knowledge that agents can dynamically load. It's a portable, composable approach to giving one agent capabilities across domains. In this talk, we'll share how we built Skills at Anthropic, the network effects we're observing, and where we believe this leads: agents writing their own Skills from experience. Our thesis: equipping agents for real-world work means building reusable expertise.
+	-

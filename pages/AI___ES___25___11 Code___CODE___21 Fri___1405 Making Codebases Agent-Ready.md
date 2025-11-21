@@ -1,0 +1,6 @@
+- # 2:05pm - 2:24pm Talk: Making Codebases "Agent-Ready" [[Person/Eno Reyes]] [[FactoryCLI]]
+	- ## Talk: Making Codebases "Agent-Ready"
+		- Agents are eating software engineering. Yet teams deploying these tools face mixed results. Agents work great in demos but fail unreliably in production, frustrating engineering teams who expected better. The gap isn't model quality—it's environment readiness. Agents need fast feedback loops, explicit instructions, and predictable environments to work effectively. They break on missing environment variables, undocumented dependencies, and tribal knowledge that "everyone just knows."
+		- What if you could measure and fix what's holding your agents back? Enter Agent Readiness.
+		- In this talk, we'll explore eight categories that determine whether your codebase is agent-ready: from style validation and build systems to dev environments and observability. You'll learn how to score your repos, identify easy wins, and build environments where agents actually ship reliable code. We'll share real signals from Factory's work running autonomous agents in enterprise production repos—and give you a practical framework to make your team's agents more productive starting tomorrow.
+

@@ -1,0 +1,195 @@
+chatgpt-link:: https://chatgpt.com/g/g-p-691f249c2fac8191ab8b4b926da5cb3b-ai-es-25-11-code/c/692078d2-42b8-8327-8a02-8138aa550ed5
+
+- # 9:30am - 9:50am Talk: No Vibes Allowed: Solving Hard Problems in Complex Codebases [[Person/Dex Horthy]]
+	- ## Talk: No Vibes Allowed: Solving Hard Problems in Complex Codebases
+		- It seems pretty well-accepted that AI coding tools struggle with real production codebases. At AI Engineer 2025 in June, The Stanford study on AI's impact on developer productivity found:
+		- 1. A lot of the ""extra code"" shipped by AI tools ends up just reworking the slop that was shipped last week.
+		- 2. Coding agents are great for new projects or small changes, but in large established codebases, they can often make developers less productive.
+		- The common response is somewhere between the pessimist ""this will never work"" and the more measured ""maybe someday when there are smarter models.""
+		- After several months of tinkering, we've found that you can get really far with today's models if you embrace core context engineering principles.
+		- This isn't another ""10x your productivity"" pitch. I tend to be pretty measured when it comes to interfacing with the ai hype machine. But we've stumbled into workflows that leave me with considerable optimism for what's possible. We've gotten claude code to handle 300k LOC Rust codebases, ship a week's worth of work in a day, and maintain code quality that passes expert review. We use a family of techniques I call ""frequent intentional compaction"" - deliberately structuring how you feed context to the AI throughout the development process.
+		- In this talk, I'll share what we've learned since first sharing these techniques back in August, and some educated predictions on what's coming in the next 6-12 months for software engineers.
+	- ## Talk Overview
+		- **Speaker:** [[Person/Dex Horthy]]
+		- **Top-line claim:** AI coding tools *can* work in mature production codebases — but only when you design the *context* and the workflow around the model deliberately. This talk documents a pragmatic, artifact-driven workflow ("frequent intentional compaction") that allows current models (Dex uses Claude Code as an example) to handle large codebases (300k LOC Rust repo example), ship a week of work in a day, and produce changes that pass expert review.
+		- **Speaker intent & emphasis:** push engineers away from "vibe coding" and toward a spec-driven, artifact-heavy pipeline where research, planning, and implementation are distinct phases with required human review between them. Emphasize *mental alignment* and *context hygiene* rather than model tricks.
+	- ## Evidence & Baseline
+		- **Dataset / Observation:** study of 100k developers shows AI-assisted development creates a lot of rework; agents tend to produce "extra code" that fixes last week's slop rather than correct new solutions.
+		- **Quadrant model (Task Complexity × Project Maturity):**
+			- Greenfield × Low complexity: **+35–40%** productivity (repetitive, well-defined tasks; big wins).
+			- Brownfield × Low complexity: **+15–20%** (legacy still benefits on simple tasks).
+			- Greenfield × High complexity: **+10–15%** (requires deeper human insight).
+			- Brownfield × High complexity: **+0–10%** (blocked by outdated code & tangled dependencies).
+		- **Implication:** do not assume large productivity boosts in complex, brownfield work without structural changes in workflow.
+	- ## Goals
+		- **Four explicit goals:**
+			- AI works well in **brownfield** codebases (primary engineering challenge).
+			- Solves **complex problems**, not only trivial edits.
+			- **No slop** — no sloppy rewrites or regressions; maintain expert-review quality.
+			- **Mental alignment** — engineer and agent must share the same model of the system and intent.
+		- **Gag slide:** parenthetical joke: "(Spend as many tokens as possible)." — speaker emphasizes that token spend is not the actual goal.
+	- ## The Naive Way and Why It Fails
+		- **Diagram / pattern:** append everything to the context (system instructions, CLAUDE.md, builtin tools, MCP tools, then a long alternating stream of user messages, reads, searches, writes, assistant messages). Over time the context becomes bloated and incoherent.
+		- **Failure mode:** context bloat leads to drift and the model running out of its useful window. Repeated small reads/writes without summarizing leads to slop.
+	- ## When to "Start Over"
+		- **Heuristic (joke):** when the model starts saying "You're absolutely right," it's likely drifting — time to reset or re-steer.
+		- **Two cheaper options:**
+			- **Resteer** (inject a crisp user steer that overrides bad heuristics); or
+			- **Start over** (reset the context to core scaffolding + a small steering anchor).
+	- ## Optimize Context Window
+		- **Optimize for:** Correctness, Completeness, Size, Trajectory.
+		- **Core message:** LLM performance is effectively a function of token quality. The only lever we truly control is what tokens we put in the window and in what shape.
+	- ## Smart Zone vs Dumb Zone (40% rule)
+		- **Concept:** the top ~40% of the window is the **smart zone** (system scaffolding + critical anchors and compressed artifacts). Past ~40% you enter the **dumb zone** — ad-hoc chatter and long uncompressed history that degrades quality.
+		- **Rule of thumb:** keep the durable scaffolding (CLAUDE.md, context.md, constitution.md, AGENTS.md, the read-of-progress artifacts) *in the smart zone*; push ephemeral chatter into sub-agent windows or compress to progress.md.
+	- ## Intentional Compaction
+		- **Definition:** deliberate process that collapses detailed iteration history into a compact artifact (`progress.md`, `research.md`, `context.md`) that captures: the approach, steps taken, failures encountered, and current state.
+		- **Process:**
+			- Run many exploratory steps (reads/searches/tests) inside a sub-agent.
+			- Issue a single compaction command: "Write everything we did so far to `progress.md`, note approach, steps, and current failure."
+			- Replace the long history with `Read progress.md` in the main window.
+		- **Effect:** resets the token budget, aligns the mental model, avoids drift.
+	- ## Managing Context with Sub-Agents
+		- **Blueprint:** delegate noisy exploration ("Find where XYZ is handled") to sub-agents with their own fresh windows. The sub-agent performs multiple reads/searches/list actions in isolation and returns a distilled answer ("file is in `src/main/...`").
+		- **Result:** main agent remains clean; exploration noise doesn't pollute the smart zone; only distilled facts are injected upstream.
+	- ## Frequent Intentional Compaction: Build your entire workflow around it
+		- **Three-phase research plan (high-level):**
+			- **Phase 1 (Prototype):** prompt hub + versioning; `progress.md` compaction command; sub-agent pattern; Read/Write APIs.
+			- **Phase 2 (Integrate):** integrate MCP/tools; telemetry (invocations, compactions, dumb-zone breaches); automated compaction triggers (heuristic or telemetry-driven).
+			- **Phase 3 (Scale/Governance):** governance, onboarding UX, A/B evaluation, rollout metrics (quality, time saved, regression rate), audit trails.
+		- **Metrics:** prompt usage, compaction frequency, dumb-zone breaches, regressions found in human review, effective tokens per successful edit.
+	- ## Plan & Implement (practical rules)
+		- **Planning expectations:** outline exact implementation steps, include filenames/line numbers/snippets, be explicit about tests.
+		- **Implementation principle:** if properly planned, execution is straightforward. Implementation window must keep context < 40%.
+		- **Tactical rule:** write the plan like code diffs — reviewers should be able to validate intent without guessing.
+	- ## Putting it into Practice — Minimal Prototype
+		- **MVP components:**
+			- Prompt hub (versioned prompt files)
+			- `progress.md` generator (compaction writer)
+			- Sub-agent orchestration
+			- Read/Write APIs & secure file access
+			- Tests: unit for compaction generator, integration for sub-agent isolation, e2e measuring correctness/regression.
+		- **Enforce:** safety threshold to keep context <40% during runs or to trigger compaction.
+	- ## Spec-Driven Development (SDD)
+		- **Core claims about SDD:**
+			- Treat code like assembly: changes are mechanical and explicit.
+			- Write a PRD/spec first; spec is a compressed representation of intent.
+			- Use verifiable feedback loops: diffs + tests + logs are artifacts that can be re-ingested.
+			- Maintain multiple MD artifacts while coding: `PRD.md`, `progress.md`, `design.md`, `testplan.md` — these serve as token-efficient scaffolding for compaction.
+		- **Warning:** naive spec-driven dev that assumes stable semantic layers is brittle; LLM semantics drift and human review is required.
+	- ## Onboarding Agents ("Memento-mode")
+		- **Joke but critical point:** Agents need explicit onboarding — treat them like humans with short-term memory problems. Use `context.md` + CLAUDE.md + AGENTS.md as persistent onboarding artifacts.
+		- **Mechanic:** user prompt should often begin with `Read context.md` or `Read progress.md` to guarantee the agent starts in the smart zone.
+	- ## Org → Repo → Module → File: onboarding problem
+		- **Problem:** agents only see a tiny slice of an org-scale codebase. Without injected scaffolding they will wander or misinterpret.
+		- **Solution:** keep `context.md` injected into the top of the stack (always present in the smart zone) — it should describe repo purpose, module list, high-level architecture, and common patterns.
+	- ## Amount of Lies (chart explanation)
+		- **Interpretation of the chart:** the Y-axis is the *amount of lies* (semantic distortion) in different layers of code documentation. As you move upward from actual code → function names → comments → documentation, the probability of misleading or stale information increases.
+		- **Takeaway:** prefer compressed artifacts that are regenerated from truth (reads/tests) rather than trusting stale documentation.
+	- ## Keep Things Objective
+		- **Principles:**
+			- Discourage opinions and fuzzy language in artifacts — polluting the smart zone with opinions increases drift.
+			- Avoid implementation planning inside agent sessions — planning compresses intent and should be human-reviewed.
+			- Treat research as compression of truth: the agent must produce compact, factual research artifacts for planning.
+	- ## Code Review = Mental Alignment
+		- **Pyramid of priorities (top → least important):** Style → Find Bugs → Design Discussion → Correct Solution → **Mental Alignment** (most important)
+		- **Implication:** align reviewer and author mental models via explicit artifacts (research.md / plan.md) before asking the agent to implement.
+	- ## Reviews: Humans can still read 300 lines
+		- **Practical point:** tech leads and reviewers can and should read long implementation plans (300+ lines) to catch misalignments *before* implementation. The extra upfront human effort pays off massively because you avoid large cascades of bad code.
+	- ## Readability vs Reliability Curve
+		- **Chart explained:** as plan length/detail increases, readability falls but reliability rises — there is a sweet spot where combined readability + reliability is maximized. That sweet spot is where a plan is detailed enough to ensure correctness and alignment but still readable by a human reviewer.
+		- **Operational rule:** aim for that sweet spot; if a plan becomes unwieldy, break it into smaller sub-plans or phases.
+	- ## Three-phase workflow (Research → Planning → Implementation)
+		- **Detailed flow:**
+			- **Research phase:** spawn sub-agents to explore code, collect facts, and write `research.md`. Human review required to validate the compression of truth.
+			- **Planning phase:** ingest `research.md`, spawn sub-agents to craft the `plan.md` with file-level diffs, test scaffolding, and exact steps. Human review required.
+			- **Implementation phase:** with `plan.md` reviewed, run an implementation session that reads `plan.md` and executes exact edits (Read/Edit/Write/MultiEdit). Human review remains in the loop for final QA.
+		- **Key safety:** never let an agent implement a plan that hasn't been human-reviewed.
+	- ## Phase loops and the Jake Nations blog post ("Vibe Coding Our Way to Disaster")
+		- **Diagram:** every phase outputs an artifact that enters a human review gate. After review, artifacts may be revised; loop until reviewer signs off.
+		- **Blog post (Jake Nations, Sep 4, 2025):** argues that allowing agents to freely code without structured phases & human review leads to hallucinated structures and brittle code. Jake advocates explicitly separating research, planning, and implementation phases with mandatory human checkpoints.
+	- ## Hierarchy of Leverage
+		- **Leverage tiers (lowest → highest):**
+			- Code: 1 bad line → 1 bad line.
+			- Plan: 1 bad line → 10–100 bad lines (wrong solution).
+			- Research: 1 bad line → 1000+ bad lines (misunderstood system).
+			- Spec: 1 bad line → 10,000+ bad lines (wrong problem).
+			- Command/CLAUDE.md: 1 bad line → 100,000+ bad lines (core infrastructure failure).
+		- **Operational guidance:** allocate human effort to the highest-leverage items — commands, specs, research — to avoid catastrophic multipliers.
+	- ## Difficulty vs Compaction Curve
+		- **Chart summary:** the harder the engineering problem you want the agent to solve, the more compaction and context engineering you must do. Simple chat-based prompts solve tiny edits; multi-phase compaction workflows solve whole-system refactors.
+	- ## Context / Harness / Agent-building keywords
+		- **Key keywords to track, implement, or document for your system:**
+			- RAG (retrieval-augmented generation)
+			- Memory, State / History
+			- Prompt engineering and Prompt Hub
+			- Structured outputs (schemas)
+			- Subagents (isolate noise)
+			- Hooks, Commands, MCPs (Model Context Protocol)
+			- Context injection paths (context.md, CLAUDE.md, AGENTS.md)
+			- Tooling integration and telemetry
+	- ## Hiring & Adoption
+		- **Hiring blurb:** "We are Hiring — Help teams of all sizes speed-run the journey to 99% AI-generated code"
+		- **URL:** [https://hlyr.dev/jobs](https://hlyr.dev/jobs) (useful for recruiting or evaluating the product's roadmap)
+		- **Email contact:** [founders@humanlayer.dev](mailto:founders@humanlayer.dev)
+		- **IDE screenshot:** example of an agent-driven development session where edits, TODO updates, and file writes appear live in an IDE panel.
+	- ## Links & Resources
+		- GitHub repo for the show/podcast: [https://github.com/ai-that-works/ai-that-works](https://github.com/ai-that-works/ai-that-works)
+		- BoundaryML podcast page: [https://boundaryml.com/podcast](https://boundaryml.com/podcast)
+		- Luma event (AI That Works #17 hyper-engineering): [https://luma.com/aitw-hypereng](https://luma.com/aitw-hypereng) (speaker/event reference)
+	- ## Concrete Implementation Checklist
+		- **Create a Prompt Hub**
+			- Versioned prompt files (CLAUDE.md, AGENTS.md, constitution.md).
+			- Add metadata: `id`, `version`, `last-tested-with-model`, `owner`
+		- **Implement Read/Write APIs for agent sessions**
+			- Secure file I/O
+			- Snapshotting and rollback
+			- Support for small, human-reviewable diffs
+		- **Write the `progress.md` / `research.md` generators**
+			- Sub-agent orchestration for aggressive read/search/test
+			- Deterministic compression rules: headings, facts, failed attempts, current blocker
+			- Output schema for `research.md` (sections: repository overview, module list, invariants, failing tests, attempted fixes)
+		- **Sub-agent framework**
+			- Spawn isolated sessions with their own context.
+			- Return distilled answers only (single sentence or small bullet list) to the parent.
+			- Avoid returning raw JSON schema dumps; instead compress to `progress.md`.
+		- **Human Review gates**
+			- Integrate with code review flow (PR-like UI or review dashboard).
+			- Require explicit signoff on `research.md` and `plan.md` before implementation.
+		- **Telemetry & heuristics**
+			- Track context utilization (percent of window used by scaffolding vs chatter)
+			- Track compaction frequency, dumb-zone breaches, regression incidence
+			- Automate compaction suggestions (e.g., if >40% and >N messages without a compaction, trigger compaction)
+		- **Testing matrix**
+			- Unit tests for compaction writer and parser
+			- Integration tests verifying sub-agent isolation (no spillover of raw logs)
+			- E2E tests for a sample repo: research → plan → implement → revert on regression
+	- ## Templates & Example Prompts
+		- **Onboarding prompt (always start with):**
+			- ~~~
+			  Read context.md
+			  Read CLAUDE.md
+			  Then perform: /research_codebase --scope=module-A --depth=surface
+			  Output: research.md
+			  ~~~
+		- **Compaction command (user-facing):**
+			- ~~~
+			  Write everything we did so far to progress.md. Ensure you note: the approach, steps taken, current failure, and next steps. Keep it factual; avoid opinions.
+			  ~~~
+		- **Implementation prompt (after human review):**
+			- ~~~
+			  Read plan.md
+			  Implement plan.md exactly: apply diffs to files, add tests per the Testing section, run tests, and report failures.
+			  ~~~
+	- ## Suggested File Conventions
+		- `CLAUDE.md` — core system instructions + tool list
+		- `context.md` — repo purpose, module list, patterns, key invariants
+		- `AGENTS.md` — available subagents, responsibilities, and rookies
+		- `research.md` — compressed factual artifact with evidence
+		- `plan.md` — detailed plan with filenames, code snippets, tests, and expected outputs
+		- `progress.md` — rolling short-form history used for reloading context
+	- ## Notes on Trust & Drift
+		- **Do not trust upstream documentation without proof.** Always validate a claim by reading code or running a test and then compressing the truth into `research.md`.
+		- **Avoid streaming raw JSON into the smart zone.** JSON tool responses should be parsed and compressed outside the main window (sub-agent) and only distilled facts returned.
+	- ## Closing — Big Picture
+		- Frequent intentional compaction is **not** a marginal improvement — it reframes how you think about engineering with LLMs. Instead of treating the model like an oracle to be coaxed with prompts, treat it like a collaborator that **requires careful onboarding, repeated compression of truth, and human checkpoints at high-leverage decision points**. When practiced, this workflow elevates what current models can reliably do in brownfield codebases: complex fixes, large features, and refactors — but only with discipline.

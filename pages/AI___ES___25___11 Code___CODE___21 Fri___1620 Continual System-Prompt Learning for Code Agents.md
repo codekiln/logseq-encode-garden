@@ -1,0 +1,4 @@
+- # 4:20pm - 4:39pm Talk: Continual System-Prompt Learning for Code Agents [[Person/Aparna Dhinakaran]]
+	- ## Talk: Continual System-Prompt Learning for Code Agents
+		- Your coding agent writes code—but not like your team. RL has boosted base models, but it's opaque and hard to scale across enterprises. Most agents still rely on brittle, hand-edited system prompts or style guides (e.g., agent.md)—what if your agent learned from your reviews and updated them automatically? In this talk, I'll show a system-prompt learning loop—RL techniques applied to prompts, not model weights—that continually tunes an agents.md, so the agent learns instructions from your PR's, feedback & evaluations. You'll leave with a concrete recipe to capture runtime signals, and auto-tune system prompts—applicable to any type of agent you're building.
+
