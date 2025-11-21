@@ -13,6 +13,7 @@ tags:: [[AI Coding]], [[Reference]]
   | [[FactoryCLI]] | Factory AI | https://github.com/Factory-AI/factory |
   | [[CursorAI]] | Anysphere | https://github.com/getcursor/cursor |
   | [[GitHub/CoPilot]] | GitHub | https://github.com/features/copilot |
+  | [[GitHub/CoPilot/CLI]] | GitHub | https://github.com/github/copilot-cli |
   | [[Windsurf]] | Codeium | https://github.com/codeium/windsurf |
   | [[OpenCode]] | Anomaly Innovations | https://github.com/sst/opencode |
   | [[Crush]] | Charmbracelet | https://github.com/charmbracelet/crush |
