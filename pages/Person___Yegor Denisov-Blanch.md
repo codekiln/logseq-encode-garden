@@ -1,0 +1,11 @@
+- # Yegor Denisov-Blanch
+	- **Role:** Researcher, Stanford
+	- **Bio:** Yegor Denisov-Blanch is a researcher at Stanford, focusing on software engineering productivity and AI's impact on developer productivity. He leads one of the larger studies on software engineering productivity, analyzing data from 120k+ developers across 600+ companies.
+	- **External Links:**
+		- [Twitter](https://twitter.com/yegordb)
+		- [LinkedIn](https://www.linkedin.com/in/ydenisov)
+	- **Related Content:**
+		- [[Person___Yegor Denisov-Blanch___YouTube___25___07___Does AI Boost Developer Productivity - 100k Devs Study - Stanford]]
+	- **Related Events:**
+		- [[AI___ES___25___11 Code___LEAD___20 Thu___1140 Yegor Denisov-Blanch Stanford AI ROI Software Engineering]]
+

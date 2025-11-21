@@ -1,0 +1,12 @@
+- # Brian Fioca
+	- **Role:** Applied AI, OpenAI
+	- **Bio:** Brian Fioca works in Applied AI at OpenAI, focusing on coding agents and building reliable systems that outlast model cycles. He co-presented on "Future-Proof Coding Agents" at the AI Engineer Summit 2025.
+	- **External Links:**
+		- [Twitter](https://twitter.com/bfioca)
+		- [LinkedIn](https://www.linkedin.com/in/brianfioca)
+		- [GitHub](https://github.com/bfioca)
+		- [Website](https://fioca.com/)
+	- **Image:** ![Brian Fioca](https://www.ai.engineer/speakers/brian-fioca.jpg)
+	- **Related Events:**
+		- [[AI___ES___25___11 Code___LEAD___20 Thu___1100 OpenAI Applied AI Bill Chen Brian Fioca Future-Proof Coding Agents]]
+

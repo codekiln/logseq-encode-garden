@@ -1,2 +1,9 @@
-- ![Itamar Friedman](https://www.qodo.ai/wp-content/uploads/2025/02/user-itamar-new.png)
-- [[Co-Founder]] and [[CEO]] at [[QodoAI]]
+- # Itamar Friedman
+	- **Role:** Co-Founder and CEO, Qodo
+	- **Bio:** Itamar Friedman is the Co-Founder and CEO of Qodo (formerly QodoAI), a company focused on AI code quality and code review. He presented on "The State of AI Code Quality: Hype vs. Reality" at the AI Engineer Summit 2025.
+	- **External Links:**
+		- [Twitter](https://twitter.com/itamar_mar)
+		- [LinkedIn](https://www.linkedin.com/in/itamarf)
+	- **Image:** ![Itamar Friedman](https://www.qodo.ai/wp-content/uploads/2025/02/user-itamar-new.png)
+	- **Related Events:**
+		- [[AI___ES___25___11 Code___LEAD___20 Thu___1200 Itamar Friedman CEO Qodo State of AI Code Quality]]
