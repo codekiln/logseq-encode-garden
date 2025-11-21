@@ -1,5 +1,5 @@
 tags:: [[humanlayer/GitHub/12-factor-agents]], [[AI/Engineer/World's Fair/25/YouTube]] 
-created-by:: [[Person/Dexter Horthy]]
+created-by:: [[Person/Dex Horthy]]
 
 - # [12-Factor Agents: Patterns of reliable LLM applications — Dex Horthy, HumanLayer - YouTube](https://www.youtube.com/watch?v=8kMaTybvDUw)
 	- ## [[Video]]

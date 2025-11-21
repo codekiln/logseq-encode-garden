@@ -1,11 +1,11 @@
 tags:: [[AI Coding]], [[Context Engineering]], [[AI Agents]], [[YouTube]], [[YC/Conference/Context Eng/25]] 
-created-by:: [[Person/Dexter Horthy]]
+created-by:: [[Person/Dex Horthy]]
 
 - # [Advanced Context Engineering for Agents - YouTube](https://www.youtube.com/watch?v=IS_y40zY-hc)
 	- ## [[Video]]
 		- {{video https://www.youtube.com/watch?v=IS_y40zY-hc}}
 			- ### {{youtube-timestamp 0}} Introduction and Background
-				- **Speaker**: [[Person/Dexter Horthy]] [[Role/Founder]] of [[humanlayer]] (YC Fall 24 batch)
+				- **Speaker**: [[Person/Dex Horthy]] [[Role/Founder]] of [[humanlayer]] (YC Fall 24 batch)
 				- **Context Engineering History**:
 					- Wrote "12 Factor agents - principles of reliable LLM applications" manifesto [[2025-04-22 Tue]] - [[humanlayer/GitHub/12-factor-agents]]
 					- Term "context engineering" coined on June 4th
@@ -13,7 +13,7 @@ created-by:: [[Person/Dexter Horthy]]
 				- **Current Focus**: Moving beyond basic context engineering to advanced techniques for coding agents
 			- ### {{youtube-timestamp 55}} Industry Insights and Challenges
 				- #### Favorite Talks from [[AI/Engineer/World's Fair/25]] {{youtube-timestamp 55}}
-					- Context eng: [[Person/Dexter Horthy/YouTube/25/07/12-factor-agents]] 
+					- Context eng: [[Person/Dex Horthy/YouTube/25/07/12-factor-agents]] 
 					  Spec driven coding: [[Person/Sean Grove/YouTube/25/07/The New Code]]
 					  Dev Productivity: [[Person/Yegor Denisov-Blanch/YouTube/25/07/Does AI Boost Developer Productivity - 100k Devs Study - Stanford]]
 				- #### Sean Grove's "New Code" Talk - [[Person/Sean Grove/YouTube/25/07/The New Code]]
