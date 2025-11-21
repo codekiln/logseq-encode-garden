@@ -5,5 +5,5 @@
 		- [Twitter/X](https://x.com/olive_jy_song)
 	- **Image:** ![Olive Song](https://www.ai.engineer/speakers/olive-song.jpg)
 	- **Related Events:**
-		- [[AI___ES___25___11 Code___LEAD___20 Thu___1220 minimax M2 Olive Song]]
+		- [[AI/ES/25/11 Code/LEAD/20 Thu/1220 minimax M2 Olive Song]]
 

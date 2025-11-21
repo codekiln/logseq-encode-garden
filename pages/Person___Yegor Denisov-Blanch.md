@@ -5,7 +5,7 @@
 		- [Twitter](https://twitter.com/yegordb)
 		- [LinkedIn](https://www.linkedin.com/in/ydenisov)
 	- **Related Content:**
-		- [[Person___Yegor Denisov-Blanch___YouTube___25___07___Does AI Boost Developer Productivity - 100k Devs Study - Stanford]]
+		- [[Person/Yegor Denisov-Blanch/YouTube/25/07/Does AI Boost Developer Productivity - 100k Devs Study - Stanford]]
 	- **Related Events:**
-		- [[AI___ES___25___11 Code___LEAD___20 Thu___1140 Yegor Denisov-Blanch Stanford AI ROI Software Engineering]]
+		- [[AI/ES/25/11 Code/LEAD/20 Thu/1140 Yegor Denisov-Blanch Stanford AI ROI Software Engineering]]
 

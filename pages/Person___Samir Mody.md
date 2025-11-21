@@ -6,5 +6,5 @@
 		- [LinkedIn](https://www.linkedin.com/in/samir-mody)
 	- **Image:** ![Samir Mody](https://www.ai.engineer/speakers/samir-mody.jpg)
 	- **Related Events:**
-		- [[AI___ES___25___11 Code___LEAD___20 Thu___1445 Arc to Dia Lessons from Browser Company Samir Mody]]
+		- [[AI/ES/25/11 Code/LEAD/20 Thu/1445 Arc to Dia Lessons from Browser Company Samir Mody]]
 

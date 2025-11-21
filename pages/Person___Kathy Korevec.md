@@ -15,4 +15,4 @@ alias:: [[Person/Kath Korevec]]
 	- **Image:** ![Kath Korevec](https://www.ai.engineer/speakers/kath-korevec.jpg)
 	- **Related Events:**
 		- [[OReilly/Event/25/09/AI Codecon]]
-		- [[AI___ES___25___11 Code___LEAD___20 Thu___1345 Proactive Agents Kath Korevec Google Labs]]
+		- [[AI/ES/25/11 Code/LEAD/20 Thu/1345 Proactive Agents Kath Korevec Google Labs]]

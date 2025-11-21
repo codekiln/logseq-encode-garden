@@ -6,5 +6,5 @@
 		- [Website](https://asafbord.wixsite.com/home)
 	- **Image:** ![Asaf Bord](https://www.ai.engineer/speakers/asaf-bord.jpg)
 	- **Related Events:**
-		- [[AI___ES___25___11 Code___LEAD___20 Thu___1405 Northwestern Mutual Asaf Bord Small Bets Big Impact]]
+		- [[AI/ES/25/11 Code/LEAD/20 Thu/1405 Northwestern Mutual Asaf Bord Small Bets Big Impact]]
 

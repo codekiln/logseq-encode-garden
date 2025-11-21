@@ -5,5 +5,5 @@
 		- [LinkedIn](https://www.linkedin.com/in/billchen99/)
 	- **Image:** ![Bill Chen](https://www.ai.engineer/speakers/bill-chen.jpg)
 	- **Related Events:**
-		- [[AI___ES___25___11 Code___LEAD___20 Thu___1100 OpenAI Applied AI Bill Chen Brian Fioca Future-Proof Coding Agents]]
+		- [[AI/ES/25/11 Code/LEAD/20 Thu/1100 OpenAI Applied AI Bill Chen Brian Fioca Future-Proof Coding Agents]]
 

@@ -6,4 +6,4 @@
 		- [LinkedIn](https://www.linkedin.com/in/itamarf)
 	- **Image:** ![Itamar Friedman](https://www.qodo.ai/wp-content/uploads/2025/02/user-itamar-new.png)
 	- **Related Events:**
-		- [[AI___ES___25___11 Code___LEAD___20 Thu___1200 Itamar Friedman CEO Qodo State of AI Code Quality]]
+		- [[AI/ES/25/11 Code/LEAD/20 Thu/1200 Itamar Friedman CEO Qodo State of AI Code Quality]]
