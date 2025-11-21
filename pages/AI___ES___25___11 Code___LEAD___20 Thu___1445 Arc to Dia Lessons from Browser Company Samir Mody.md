@@ -1,4 +1,4 @@
-- # 2:45pm - 3:04pm | AI Leadership | Room: Times Center
+# 2:45pm - 3:04pm | AI Leadership | Room: Times Center
 	- ![Samir Mody](https://www.ai.engineer/speakers/samir-mody.jpg)
 	- **[[Person/Samir Mody]]** [Twitter](https://twitter.com/jedimody) [LinkedIn](https://www.linkedin.com/in/samir-mody) - Head of AI Engineering, [[Browser/Company]]
 	- ## Talk: From Arc to Dia: Lessons learned in building AI Browser
@@ -35,7 +35,8 @@
 - ## Narrative detail
 	- They explored **10+ paradigms** for modeling user “memory” before converging on a **knowledge-graph-like system** that unifies email, calendar, transcripts, tasks.
 	- Core idea: **LLM agents improve fastest when embedded directly into the live workflow**, not isolated tools.
-- **GEPA idea**
+- **GEPA idea** - [[AI/Paper/25/07/GEPA Reflective Prompt Evolution Can Outperform Reinforcement Learning]]
+	- {{video https://youtu.be/cMSprbJ95jg?t=21046}}
 	- Use **prompt evolution** instead of RL: generate, score, select, mutate.
 	- Sample-efficient: no rollouts, no fine-tuning.
 	- System reflects on top performers → produces improved prompts → repeats.
@@ -78,9 +79,7 @@
 - **Prompt Injection Risk (Overview)**
 	- **Definition:** attacker text overrides original LLM instructions.
 	- **Harms:** data exfiltration, malicious actions, safety-rule bypass.
-	- collapsed:: true
-	  
-	  **Browser stakes:** highest risk because all three factors intersect:
+	- **Browser stakes:** highest risk because all three factors intersect:
 		- Access to private data
 		- Exposure to untrusted content
 		- Ability to externally communicate
