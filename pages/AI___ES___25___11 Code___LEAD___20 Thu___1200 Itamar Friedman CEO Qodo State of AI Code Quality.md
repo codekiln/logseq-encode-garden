@@ -1,9 +1,9 @@
 chatgpt-link:: https://chatgpt.com/g/g-p-691f249c2fac8191ab8b4b926da5cb3b-ai-es-25-11-code/c/691f4902-84cc-800a-9ed7-9caaaf08cb55
 
-- # 12:00pm - 12:19pm | AI Leadership | Room: Times Center
+# 12:00pm - 12:19pm Talk: The State of AI Code Quality: Hype vs. Reality
 	- ![Itamar Friedman](https://www.ai.engineer/speakers/itamar-friedman.jpg)
 	- **[[Person/Itamar Friedman]]** [Twitter](https://twitter.com/itamar_mar) [LinkedIn](https://www.linkedin.com/in/itamarf) - CEO, [[QodoAI]]
-	- ## Talk: The State of AI Code Quality: Hype vs. Reality
+	- ## Talk: The State of AI Code Quality: Hype vs. Reality [03:12:12](https://www.youtube.com/watch?v=cMSprbJ95jg&t=11532s) - Qodo (Itamar Friedman): Breaking the "Glass Ceiling" of Productivity with Agentic Quality
 		- AI is making code generation nearly effortless, but the critical question remains: can we trust AI-generated code for software that truly matters? Has it really become easier to build robust, high-quality systems?
 		- In this talk, we'll separate hype from reality. Drawing on the State of AI Code Quality report, we'll explore where AI tools excel, where they fall short, and which evaluation frameworks actually matter. We'll unpack benchmarks, pitfalls, and lessons learned from deploying AI in real-world engineering workflows. Attendees will leave with a clearer understanding of how to measure, trust, and improve both AI-generated code and AI-driven code review—and what's next for software quality in the age of AI.
 	- ## Slide — “3 Cloud Outages in 3 Weeks”

@@ -1,9 +1,9 @@
 chatgpt-link:: https://chatgpt.com/g/g-p-691f249c2fac8191ab8b4b926da5cb3b-ai-es-25-11-code/c/691f455b-fbe4-800a-be24-adb4242e34ac
 
-- # 11:40am - 11:59am | AI Leadership | Room: Times Center
+# 11:40am - 11:59am Talk: How to Quantify AI ROI in Software Engineering (Stanford Study / 120k Devs)
 	- ![Yegor Denisov-Blanch](https://www.ai.engineer/speakers/yegor-denisov-blanch.jpg)
 	- **[[Person/Yegor Denisov-Blanch]]** [Twitter](https://twitter.com/yegordb) [LinkedIn](https://www.linkedin.com/in/ydenisov) - Researcher, Stanford
-	- ## Talk: How to Quantify AI ROI in Software Engineering (Stanford Study / 120k Devs)
+	- ## Talk: How to Quantify AI ROI in Software Engineering (Stanford Study / 120k Devs) [02:55:05](https://www.youtube.com/watch?v=cMSprbJ95jg&t=10505s) - Stanford (Yegor Denisov-Blanch): Research Shows Codebase Cleanliness Correlates Strongly with AI Productivity
 		- You're investing millions in AI for software engineering. Can you prove it's paying off?
 		- Benchmarks show models can write code, but in enterprise deployments ROI is hard to measure, easy to bias, and often distorted by activity metrics (PR counts, DORA) that say "more" without proving "better."
 		- Drawing on field data from 120k+ developers across 600+ companies, I'll show exactly where AI helps the most and how to measure the ROI of your software engineering AI deployment.

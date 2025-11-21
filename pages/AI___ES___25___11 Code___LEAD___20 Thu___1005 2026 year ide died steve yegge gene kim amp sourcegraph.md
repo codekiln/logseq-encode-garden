@@ -1,8 +1,8 @@
-- # 10:05am - 10:24am | AI Leadership | Room: Times Center
+# 10:05am - 10:24am Talk: 2026: The Year the IDE Died
 	- ![Steve Yegge](https://www.ai.engineer/speakers/steve-yegge.jpg) ![Gene Kim](https://www.ai.engineer/speakers/gene-kim.png)
 	- **[[Person/Steve Yegge]]** [Twitter](https://twitter.com/Steve_Yegge) [LinkedIn](https://www.linkedin.com/in/steveyegge) - Engineering Leader, [[Sourcegraph]]/[[Amp]]
 	- **[[Person/Gene Kim]]** [Twitter](https://twitter.com/RealGeneKim) [LinkedIn](https://www.linkedin.com/in/realgenekim) [Website](https://www.realgenekim.me/) - Author & Researcher, IT Revolution
-	- ## Talk: 2026: The Year the IDE Died
+	- ## Talk: 2026: The Year the IDE Died [01:10:31](https://www.youtube.com/watch?v=cMSprbJ95jg&t=4231s) - Steve Yegge & Gene Kim Begin Their High-Energy "Vibe Coding" Talk
 		- As AI has grown more capable, software developers around the world have lagged behind the technology advances, and have consistently eschewed the most powerful tools. In this talk I explore why devs are staying 9-12 months behind the AI curve. I'll share a preview of what 2026's AI coding tools will be like, and paint a vision of where we go from here.
 	- ## [[Person/Steve Yegge]]
 		- ### AI Developer Trajectory — timeline layout

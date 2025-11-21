@@ -1,10 +1,10 @@
 chatgpt-link:: https://chatgpt.com/g/g-p-691f249c2fac8191ab8b4b926da5cb3b-ai-es-25-11-code/c/691f4002-5ff8-800a-875f-b7a02e678f4f
 
-- # 11:20am - 11:39am | AI Leadership | Room: Times Center
+# 11:20am - 11:39am Talk: Moving away from Agile: What's Next?
 	- ![Martin Harrysson](https://www.ai.engineer/speakers/martin-harrysson.png)![Natasha Maniar](https://www.ai.engineer/speakers/natasha-maniar.jpg)
 	- **[[Person/Martin Harrysson]]** [Twitter](https://twitter.com/martinharrysson) [LinkedIn](https://www.linkedin.com/in/martinharrysson) - Partner, [[McKinsey]]
 	- **[[Person/Natasha Maniar]]** - Partner, [[McKinsey]]
-	- ## Talk: Moving away from Agile: What's Next?
+	- ## Talk: Moving away from Agile: What's Next? [02:35:51](https://www.youtube.com/watch?v=cMSprbJ95jg&t=9351s) - McKinsey (Martin Harrysson & Natasha Maniar): Argument that the Agile Operating Model is a Bottleneck
 		- Most enterprises are not capturing much value from AI in software dev to date (at least relative to the potential). The reason is that most are adding AI tools to their dev teams without changing the people and operating model aspects (i.e., limited changes to ways of working, team configurations, role definitions, stage gates, etc.). Many core aspects of software development haven't changed in the past 10+ years, and that's holding us back from moving to the new paradigm of software development! We will share examples of what makes the difference.
 	- ## New technologies have given rise to new software dev methodologies
 	- **Overall visual structure:** A horizontal timeline across the top, spanning **Pre-2000s → 2000s → 2010s → 2020s**, with dots marking each era. Two horizontal rows: **Tech breakthrough** (top row) and **Software dev methodologies** (bottom row). Beneath each era is a large illustrative image capturing the “vibe” of that period’s development culture.

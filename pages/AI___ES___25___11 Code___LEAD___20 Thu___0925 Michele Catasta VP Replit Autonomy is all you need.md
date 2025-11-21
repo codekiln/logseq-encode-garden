@@ -1,7 +1,7 @@
-- # 9:25am - 9:44am | AI Leadership | Room: Times Center
+# 9:25am - 9:44am Talk: Autonomy Is All You Need
 	- ![Michele Catasta](https://www.ai.engineer/speakers/michele-catasta.jpg)
 	- **[[Person/Michele Catasta]]** [Twitter](https://twitter.com/pirroh) [LinkedIn](https://www.linkedin.com/in/pirroh) [GitHub](https://github.com/pirroh) - VP of AI, Replit
-	- ## Talk: Autonomy Is All You Need
+	- ## Talk: Autonomy Is All You Need [00:31:36](https://www.youtube.com/watch?v=cMSprbJ95jg&t=1896s) - Replit (Michele Catasta): Supervised vs. Unsupervised Autonomy for Non-Technical Users
 		- AI agents exhibit vastly different degrees of autonomy. Yet, the ability to accomplish objectives without supervision is the critical north star for agent progress, especially in software creation. For non-technical users who cannot supervise software creation, full autonomy is essential, not optional.
 		- First of all, I will discuss two foundational capabilities to achieve true autonomy: automatic testing to verify correctness without human validation, and advanced context management to maintain coherence across complex, long-horizon tasks.
 		- With autonomy established, parallelization becomes the key to delivering a compelling user experience. Sequential execution forces users to wait extensively before seeing progress, breaking the development flow. This talk explores parallelization models (task-level parallelism, out-of-order execution, plan decomposition, etc.) and their tradeoffs in latency, resource consumption, and correctness guarantees.

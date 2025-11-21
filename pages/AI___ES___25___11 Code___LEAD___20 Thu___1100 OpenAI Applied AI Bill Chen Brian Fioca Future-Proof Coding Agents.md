@@ -1,8 +1,8 @@
-- # 11:00am - 11:19am | AI Leadership | Room: Times Center
+# 11:00am - 11:19am Talk: Future-Proof Coding Agents: Building Reliable Systems That Outlast Model Cycles
 	- ![Bill Chen](https://www.ai.engineer/speakers/bill-chen.jpg)![Brian Fioca](https://www.ai.engineer/speakers/brian-fioca.jpg)
 	- **[[Person/Bill Chen]]** [LinkedIn](https://www.linkedin.com/in/billchen99/) - Applied AI, [[OpenAI]]
 	- **[[Person/Brian Fioca]]** [Twitter](https://twitter.com/bfioca) [LinkedIn](https://www.linkedin.com/in/brianfioca) [GitHub](https://github.com/bfioca) [Website](https://fioca.com/) - Applied AI, [[OpenAI]]
-	- ## Talk: Future-Proof Coding Agents: Building Reliable Systems That Outlast Model Cycles
+	- ## Talk: Future-Proof Coding Agents: Building Reliable Systems That Outlast Model Cycles [02:11:38](https://www.youtube.com/watch?v=cMSprbJ95jg&t=7898s) - OpenAI Team (Bill Chen & Brian Fioca) Presentation Starts
 		- Coding agents are becoming one of the most active areas in applied AI, yet many teams keep rebuilding fragile infrastructure every time models or providers change. We believe there is a better way. By anchoring on a stable abstraction layer like Codex, we can stop worrying about harness rewrites and focus on the parts of the stack that create lasting value. We treat models as interchangeable sub-agents, plug into shared primitives, and let upstream improvements flow through without breaking products. This lets teams move faster, stay resilient as the ecosystem evolves, and focus their energy on domain-specific workflows and user experience.
 	- ## Agenda
 		- Coding agents

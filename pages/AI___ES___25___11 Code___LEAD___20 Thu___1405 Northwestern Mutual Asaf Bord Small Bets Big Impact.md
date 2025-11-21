@@ -1,9 +1,9 @@
 chatgpt-link:: https://chatgpt.com/g/g-p-691f249c2fac8191ab8b4b926da5cb3b-ai-es-25-11-code/c/691f7067-fa80-8328-b513-b18cd12e640d
 
-- # 2:05pm - 2:24pm | AI Leadership | Room: Times Center
+# 2:05pm - 2:24pm Talk: Small Bets, Big Impact: Building GenBI at a Fortune 100
 	- ![Asaf Bord](https://www.ai.engineer/speakers/asaf-bord.jpg)
 	- **[[Person/Asaf Bord]]** [LinkedIn](https://www.linkedin.com/today/author/asafbord) [Website](https://asafbord.wixsite.com/home) - AI Product Lead, [[Northwestern Mutual]]
-	- ## Talk: Small Bets, Big Impact: Building GenBI at a Fortune 100
+	- ## Talk: Small Bets, Big Impact: Building GenBI at a Fortune 100 [05:22:33](https://www.youtube.com/watch?v=cMSprbJ95jg&t=19353s) - Northwestern Mutual (Asaf Bord): Case Study on a Phased Rollout of a GenBI Agent
 		- Enterprises don't usually make moonshots, especially in GenAI. Governance, budgets, and risk aversion make it almost impossible to justify a huge, uncertain investment.
 		- At [[Northwestern Mutual]], we're building GenBI, an LLM-powered analytics copilot, by flipping that logic. Instead of one big bet, we created an incremental roadmap of small, fundable projects. Each is tied to real business outcomes, delivers measurable ROI, and builds the trust needed to move forward.
 		- This talk shares how we framed the problem, earned leadership support, and designed a modular architecture grounded in real data. We'll show how each research step can stand on its own - productized, measurable, and deployable. Attendees will leave with a clear blueprint for making AI transformation fundable, governable, and real inside large, risk-averse organizations.

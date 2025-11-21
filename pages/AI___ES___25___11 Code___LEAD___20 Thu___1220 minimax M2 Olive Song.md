@@ -1,4 +1,4 @@
-- # 12:20pm - 12:39pm | AI Leadership | Room: Times Center
+# 12:20pm - 12:39pm Talk: Minimax M2
 	- ![Olive Song](https://www.ai.engineer/speakers/olive-song.jpg)
 	- **[[Person/Olive Song]]** [Twitter/X](https://x.com/olive_jy_song) - Senior Researcher, [[MiniMaxAI]]
 	- ## Talk: Minimax M2

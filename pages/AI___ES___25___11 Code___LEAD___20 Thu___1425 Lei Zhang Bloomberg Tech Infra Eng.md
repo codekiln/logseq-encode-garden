@@ -1,9 +1,9 @@
 chatgpt-link:: https://chatgpt.com/g/g-p-691f249c2fac8191ab8b4b926da5cb3b-ai-es-25-11-code/c/691f76cb-dfec-8330-acea-3400a91a2aee
 
-- # 2:25pm - 2:44pm | AI Leadership | Room: Times Center
+# 2:25pm - 2:44pm Talk: What We Learned Deploying AI within Bloomberg's Engineering Organization
 	- ![Lei Zhang](https://www.ai.engineer/speakers/lei-zhang.jpg)
 	- **[[Person/Lei Zhang]]** - Head of Technology Infrastructure Engineering, [[Bloomberg]]
-	- ## Talk: What We Learned Deploying AI within Bloomberg's Engineering Organization
+	- ## Talk: What We Learned Deploying AI within Bloomberg's Engineering Organization [05:46:16](https://www.youtube.com/watch?v=cMSprbJ95jg&t=20776s) - Bloomberg (Lei Zhang): Creating a "Paved Path" for Enterprise AI Adoption
 		- When it comes to using AI for software engineering, much of the spotlight falls on how large language models (LLMs) can write code—sometimes entirely from scratch. Countless studies highlight productivity gains from turning requirements directly into runnable code. But the reality of applying AI at scale inside a mature engineering organization is far more complex and nuanced. Over the past year, we've been on that journey at [[Bloomberg]]—integrating AI into the workflows of 9,000+ software engineers—and we've learned a few important lessons worth sharing:
 		- Where the real ROI lies once you move beyond toy examples
 		- What it takes to actually enable AI across a large, established engineering org

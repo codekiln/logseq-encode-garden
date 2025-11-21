@@ -1,7 +1,7 @@
-- # 1:45pm - 2:04pm | AI Engineering | Room: Times Center
+# 1:45pm - 2:04pm Talk: Proactive Agents and [[JulesAI]]
 	- ![Kath Korevec](https://www.ai.engineer/speakers/kath-korevec.jpg)
 	- **[[Person/Kathy Korevec]]** [Twitter](https://twitter.com/simpsoka) [LinkedIn](https://www.linkedin.com/in/kathleensimpson) - Director of Product, [[Google]] Labs
-	- ## Talk: Proactive Agents and [[JulesAI]]
+	- ## Talk: Proactive Agents and [[JulesAI]] [05:00:11](https://www.youtube.com/watch?v=cMSprbJ95jg&t=18011s) - Google Labs (Kath Korevec): The Shift from Reactive to Proactive Agents ("Jules")
 	- ## Slide — Proactive Agents (Google Labs)
 		- **Visual layout:** full-bleed pixel-art scene of a person overwhelmed at a sink, dwarfed by a chaotic mountain of dishes erupting upward in neon blue/yellow/pink. The pile visually “overflows” like a memory leak; stray pixel-noise and glitch-text (e.g., `DISH_PILE_EXE`, fragments of code) imply runaway processes.
 		- **Left-top text:** “Remember, do the dishes” — positioned as a prompt-style reminder, functioning as the *human need* that proactive agents should anticipate.

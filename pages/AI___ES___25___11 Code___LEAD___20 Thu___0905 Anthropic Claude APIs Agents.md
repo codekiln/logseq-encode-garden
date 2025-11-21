@@ -1,7 +1,7 @@
-- # 9:05am - 9:24am | AI Leadership | Room: Times Center
+# 9:05am - 9:24am Talk: Evolving Claude APIs for Agents
 	- ![Katelyn Lesse](https://www.ai.engineer/speakers/katelyn-lesse.jpg)
 	- **[[Person/Katelyn Lesse]]** [Twitter](https://twitter.com/katelyn_lesse) [LinkedIn](https://www.linkedin.com/in/katelynlesse) - Head of Engineering, Claude Developer Platform, Anthropic
-	- ## Talk: Evolving Claude APIs for Agents
+	- ## Talk: Evolving Claude APIs for Agents [00:17:45](https://www.youtube.com/watch?v=cMSprbJ95jg&t=1065s) - Anthropic (Katelyn Lesse): 3 Pillars of Building Agentic Systems with Claude
 		- Developers are building more and more complex, long-running, agentic systems. Learn how the Anthropic team is evolving the Claude Developer Platform to enable developers to get the best outcomes from Claude.
 	- ## Memory Tool
 		- Originally just [[Anthropic/App/Claude Code/Claude.md]] file based

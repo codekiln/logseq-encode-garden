@@ -1,7 +1,7 @@
-# 2:45pm - 3:04pm | AI Leadership | Room: Times Center
+# 2:45pm - 3:04pm Talk: From Arc to Dia: Lessons learned in building AI Browser
 	- ![Samir Mody](https://www.ai.engineer/speakers/samir-mody.jpg)
 	- **[[Person/Samir Mody]]** [Twitter](https://twitter.com/jedimody) [LinkedIn](https://www.linkedin.com/in/samir-mody) - Head of AI Engineering, [[Browser/Company]]
-	- ## Talk: From Arc to Dia: Lessons learned in building AI Browser
+	- ## Talk: From Arc to Dia: Lessons learned in building AI Browser [06:03:13](https://www.youtube.com/watch?v=cMSprbJ95jg&t=21793s) - The Browser Co. (Samir Mody): Treating "Model Behavior" as a Craft & Discipline
 		- What happens when you take a polished, beloved browser and rebuild it from the ground up around AI? In 2024, [[Browser/Company]] did exactly that: transforming Arc, a human-designed browser, into Dia, a browser with an AI-native browser experience. The journey forced us to unlearn what we knew about product design, system architecture, and even what "good UX" means when the interface itself can reason, plan, and act.
 		- In this talk, I'll share the lessons we learned along the way: how we redesigned for emergent behavior instead of deterministic control, how our engineering and design teams learned to prototype with language models, and how our culture evolved to ship fast in a world where we're still learning what a good system looks like. You'll leave with practical insights for building AI-native products, from technical architecture to team mindset, and a glimpse into how we're thinking about the future of AI browsing.
 	- ## Slide — “This year, we launched Dia, our AI-native browser.”**
