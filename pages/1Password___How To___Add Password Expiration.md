@@ -1,0 +1,38 @@
+tags:: [[1Password]], [[Password Management]], [[Diataxis/How To]]
+
+- # How To Add Password Expiration to an Item in 1Password
+	- ## Overview
+		- This guide shows you how to add a password expiration date and reminder to an item in 1Password.
+		- For users who want to track when passwords or other sensitive items expire and receive notifications before they do.
+	- ## Prerequisites
+		- 1Password installed and set up on your device
+		- An existing item in 1Password that you want to add an expiration date to
+		- Access to edit the item
+	- ## Steps
+		- ### 1. Open 1Password
+			- Launch the 1Password application on your device
+		- ### 2. Select the Item
+			- Navigate to and select the item you want to add an expiration date to
+			- This can be a password, credit card, or any other sensitive item
+		- ### 3. Edit the Item
+			- Click the "Edit" button to modify the item's details
+		- ### 4. Add a Date Field
+			- Add a custom field to the item
+			- Set the field type to "date"
+			- This is required before the expiry reminder option will appear
+		- ### 5. Set the Expiration Date
+			- Enter your desired expiration date in the date field you just created
+		- ### 6. Configure the Reminder
+			- Once the date field is added, the expiry date reminder option will appear
+			- Set how far in advance you want to be reminded before the item expires
+		- ### 7. Save Changes
+			- Click "Save" to apply the expiration date and reminder settings
+			- 1Password's Watchtower feature will now alert you as the expiration date approaches
+	- ## Troubleshooting
+		- If you don't see the expiry reminder option: Make sure you've added a custom field of type "date" first
+		- If the reminder doesn't appear: Verify that the date field is properly set and saved
+		- If Watchtower isn't showing alerts: Check your 1Password notification settings
+	- ## Related
+		- [[1Password]]
+		- [[Diataxis/How To]]
+
