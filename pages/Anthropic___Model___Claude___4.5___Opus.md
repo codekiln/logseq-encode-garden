@@ -1,0 +1,64 @@
+---
+alias:: [[claude-opus-4-5]], [[claude-opus-4.5]]
+tags:: [[AI/Model]]
+---
+
+- # [Claude Opus 4.5](https://www.anthropic.com/claude/opus)
+	- ## Key Features
+		- Released in November 2025
+		- Extended Thinking capability: Allows the model to deliberate on complex problems before generating an output
+		- Effort Parameter: Users can control reasoning depth with Low, Medium, and High effort settings, balancing speed and intelligence
+		- Multilingual support: Handles multiple languages effectively
+		- Vision processing: Processes and understands visual inputs
+		- Enhanced reasoning: Excels in complex reasoning tasks
+		- Context window: 200,000 tokens
+		- Maximum output: 64,000 tokens
+		- Knowledge cutoff: March 2025
+		- Model version status: Stable release
+		- Tool Search Capability: Enables dynamic discovery and utilization of tools without preloading all definitions, improving efficiency
+	- ## Performance Highlights
+		- Industry-leading performance on complex reasoning tasks
+		- Enhanced Extended Thinking mode for improved response quality on complex tasks
+		- Optimized for advanced coding, agentic search, and creative writing
+	- ## Model Tiers
+		- [[claude-opus-4-5]]
+			- Full-featured flagship model
+			- Best performance across all metrics
+		- Previous versions:
+			- [[Anthropic/Model/Claude/4/Opus]]
+			- [[Anthropic/Model/Claude/Sonnet/4.5]]
+	- ## Access Details
+		- API availability: Available via `claude-opus-4-5-20251101` in the Claude API
+		- Pricing:
+			- Input tokens: $5.00 per million tokens
+			- Output tokens: $25.00 per million tokens
+		- Available across multiple platforms:
+			- Anthropic API: `claude-opus-4-5-20251101`
+			- AWS Bedrock: `anthropic.claude-opus-4-5-20251101-v1:0`
+			- Google Vertex AI: `claude-opus-4-5@20251101`
+			- Azure AI Foundry: `claude-opus-4-5-20251101`
+		- SDK support:
+			- Python: `pip install -U "anthropic"`
+			- TypeScript: `npm install @anthropic-ai/foundry-sdk`
+		- Effort parameter options:
+			- Low Effort: For simple tasks requiring quick responses
+			- Medium Effort: Balances speed and reasoning depth
+			- High Effort: Maximizes reasoning capabilities for complex tasks
+	- ## Technical Specifications
+		- Model architecture: Details not specified
+		- Training data: Details not specified
+		- Input/output formats: Text, images, code
+		- Special capabilities:
+			- Extended Thinking mode for complex problem-solving
+			- Configurable effort levels (Low, Medium, High)
+			- Dynamic tool discovery and utilization
+			- Enhanced multilingual support
+			- Vision processing capabilities
+			- Advanced reasoning capabilities
+		- Model version code: `claude-opus-4-5-20251101`
+		- Safety measures: Operates under strict safety protocols, including advanced cybersecurity measures and enhanced detection algorithms for harmful queries, as part of Anthropic's Responsible Scaling Policy
+	- ## References
+		- [Official documentation](https://www.anthropic.com/claude/opus)
+		- [Claude in Microsoft Foundry](https://docs.claude.com/en/docs/build-with-claude/claude-in-microsoft-foundry)
+		- [Claude Opus 4.5 in Amazon Bedrock](https://aws.amazon.com/blogs/machine-learning/claude-opus-4-5-now-in-amazon-bedrock/)
+
