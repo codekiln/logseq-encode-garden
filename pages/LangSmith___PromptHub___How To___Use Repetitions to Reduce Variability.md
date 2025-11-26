@@ -1,0 +1,22 @@
+- # LangSmith Prompt Hub - Using Repetitions to Reduce Variability
+	- ## Overview
+		- LangSmith Prompt Hub supports running the same prompt multiple times to reduce variability in results
+		- This feature is available in **Evaluate Mode** when testing prompts
+	- ## How It Works
+		- **Repetitions Setting:** Configure the number of times to run the same prompt
+			- Default appears to be configurable (shown as "5" in the UI)
+			- Controlled via a slider interface in the Prompt Hub evaluation settings
+		- **Purpose:** Running the same prompt multiple times helps:
+			- Reduce variability in results
+			- Get more consistent evaluation metrics
+			- Better understand the stability of prompt outputs
+	- ## Usage
+		- Access through the **Evaluate Mode** interface in LangSmith Prompt Hub
+		- The Repetitions setting appears as a card/panel in the evaluation configuration
+		- Adjust the number of repetitions using the slider control
+		- The "Learn more" link provides additional documentation
+	- ## Benefits
+		- **Statistical Reliability:** Multiple runs provide better statistical confidence in results
+		- **Variance Reduction:** Helps identify if prompt outputs are consistent or highly variable
+		- **Better Evaluation:** More data points lead to more reliable evaluation metrics
+
