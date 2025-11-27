@@ -8,4 +8,5 @@ alias:: [[Rust/Book/Command-Line Rust]]
 	- ISBN: 9781098109417
 	- A project-based guide that teaches Rust through the development of command-line programs
 	- See [[Rust/Book/CLR/GitHub]] for code samples
-
+	- [[My Notes]]
+		- Nice idea, but lots of deprecations when I work through the first chapter.
