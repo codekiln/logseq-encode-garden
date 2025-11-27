@@ -1,0 +1,3 @@
+- this is how to import packages in rust
+- some standard imports are already imported with [[Rust/prelude]]
+-

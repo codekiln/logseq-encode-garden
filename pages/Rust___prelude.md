@@ -1,0 +1,6 @@
+- a collection of items [[Rust]] auto-imports
+	- `String` and `str`
+	- `Vec<T>`
+	- `Option<T>` and `Result<T, E>`
+	- `Box<T>`
+- essentially the same as doing `use std::prelude::v1::*;`

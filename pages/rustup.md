@@ -1,0 +1,2 @@
+- `rustup update` - update rust
+-
