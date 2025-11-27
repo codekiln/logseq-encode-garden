@@ -1,0 +1,2 @@
+- [Rng in rand - Rust](https://rust-random.github.io/rand/rand/trait.Rng.html)
+	- Random Number Generator

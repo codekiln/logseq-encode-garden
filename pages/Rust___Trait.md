@@ -1,0 +1,7 @@
+- like an Interface in [[Java]] or [[Py/Protocol]]
+- seems to be usually upper-cased like [[Rust/crate/rand/Rng]]
+	- In this case, could think of Rng (Random Number Generator) like [[POSIX]]; it's a standard interface for which there are many distributions or variations
+	- [Programming a Guessing Game - The Rust Programming Language](https://rust-book.cs.brown.edu/ch02-00-guessing-game-tutorial.html)
+		- > This [`gen_range`] method is defined by the `Rng` trait that we brought into scope with the `use rand::Rng;` statement
+		-
+-

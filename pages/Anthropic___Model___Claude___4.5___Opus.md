@@ -1,7 +1,5 @@
----
 alias:: [[claude-opus-4-5]], [[claude-opus-4.5]]
 tags:: [[AI/Model]]
----
 
 - # [Claude Opus 4.5](https://www.anthropic.com/claude/opus)
 	- ## Key Features
@@ -61,4 +59,3 @@ tags:: [[AI/Model]]
 		- [Official documentation](https://www.anthropic.com/claude/opus)
 		- [Claude in Microsoft Foundry](https://docs.claude.com/en/docs/build-with-claude/claude-in-microsoft-foundry)
 		- [Claude Opus 4.5 in Amazon Bedrock](https://aws.amazon.com/blogs/machine-learning/claude-opus-4-5-now-in-amazon-bedrock/)
-
