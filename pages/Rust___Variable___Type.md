@@ -1,0 +1,2 @@
+- [[Rust/Variable/Type/Scalar]] - cpu primitives
+- [[Rust/Variable/Type/Compound]] - aggregations of cpu primitives

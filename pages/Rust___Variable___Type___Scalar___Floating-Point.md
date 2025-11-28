@@ -1,0 +1,1 @@
+- `u32` is available but default is `u64`; comparable speed greater precision

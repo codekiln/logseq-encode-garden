@@ -1,0 +1,55 @@
+- # [Zero-Based Indexing](https://en.wikipedia.org/wiki/Zero-based_numbering)
+	- Also known as: zero indexing, zero-based numbering
+	- A fundamental concept in computer science and programming where the first element of a sequence (array, list, tuple, etc.) is assigned the index 0, the second element the index 1, and so on
+	- ## Overview
+		- The first element is at index 0
+		- The second element is at index 1
+		- The nth element is at index n-1
+		- Contrasts with one-based indexing, where the first element is assigned the index 1
+	- ## Rationale
+		- ### Memory Address Calculation
+			- An array's name refers to the address of its first element
+			- The index represents an offset from this base address
+			- In C, the expression `array[i]` is equivalent to `*(array + i)`
+			- The element at index `i` is located at the memory address `array` plus `i` times the size of each element
+			- Starting the index at 0 simplifies this calculation, as the first element is at the base address with an offset of zero
+		- ### Simplified Range Calculations
+			- When defining ranges or performing calculations involving indices, zero-based indexing often leads to cleaner expressions
+			- The length of a sequence can be directly used as the upper bound in loops without additional adjustments
+			- Example: A loop from 0 to length-1 is more straightforward than from 1 to length
+	- ## Advantages
+		- **Simplified Calculations**: Cleaner and more intuitive expressions for ranges and loops
+		- **Alignment with Memory Addressing**: Aligns with the way memory addresses are computed, leading to more efficient pointer arithmetic
+		- **Widespread Adoption**: Used by most modern programming languages
+	- ## Programming Languages Using Zero-Based Indexing
+		- C
+		- C++
+		- Java
+		- Python
+		- JavaScript
+		- Go
+		- Swift
+		- Kotlin
+		- Rust
+	- ## Contrast with One-Based Indexing
+		- Some languages, particularly those used in scientific computing, prefer one-based indexing to align with traditional mathematical notation
+		- Examples:
+			- Fortran
+			- MATLAB
+			- R
+		- In these languages, the first element of a sequence is accessed with index 1
+		- Can be more intuitive for users familiar with mathematical conventions
+	- ## Examples
+		- ### Zero-Based (Most Languages)
+			- First element: `array[0]`
+			- Second element: `array[1]`
+			- Last element of n-length array: `array[n-1]`
+		- ### One-Based (Some Languages)
+			- First element: `array[1]`
+			- Second element: `array[2]`
+			- Last element of n-length array: `array[n]`
+	- ## Related
+		- Array indexing and access
+		- Memory addressing and pointer arithmetic
+		- Programming language design
+

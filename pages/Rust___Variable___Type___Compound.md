@@ -1,0 +1,1 @@
+- [[Rust/Variable/Type/Compound/Tuple]]

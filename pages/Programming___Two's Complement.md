@@ -1,0 +1,61 @@
+- # [Two's Complement](https://en.wikipedia.org/wiki/Two%27s_complement)
+	- A mathematical operation on binary numbers and the most common method for representing signed integers in computing
+	- Simplifies arithmetic operations and eliminates the issue of having two representations for zero
+	- ## Overview
+		- The most significant bit (MSB) indicates the sign of the number:
+			- `0` for positive numbers
+			- `1` for negative numbers
+		- Positive numbers are represented as usual in binary
+		- Negative numbers are represented by inverting all bits of their absolute value (one's complement) and adding one to the least significant bit (LSB)
+	- ## Range
+		- For an n-bit binary number:
+			- The range of representable integers is from `-2^(n-1)` to `2^(n-1) - 1`
+			- For example, an 8-bit system can represent integers from `-128` to `127`
+	- ## Advantages
+		- ### Single Zero Representation
+			- Unlike one's complement, which has both `00000000` and `11111111` representing zero, two's complement has a unique representation (`00000000`)
+		- ### Simplified Arithmetic
+			- Addition, subtraction, and multiplication operations are the same for both signed and unsigned numbers
+			- Simplifies hardware design
+			- No need for separate signed and unsigned arithmetic circuits
+	- ## Converting to Two's Complement
+		- To find the two's complement of a binary number:
+			- 1. Invert all bits (one's complement)
+			- 2. Add one to the LSB
+		- ### Example: Representing -5 in 8-bit
+			- Start with the binary representation of `5`: `00000101`
+			- Invert all bits: `11111010`
+			- Add one: `11111011`
+			- Thus, `-5` is represented as `11111011` in 8-bit two's complement
+	- ## Arithmetic Operations
+		- ### Addition
+			- Add the binary numbers directly
+			- If there's a carry out of the MSB, it's discarded
+		- ### Subtraction
+			- Convert the number to be subtracted into its two's complement
+			- Add it to the other number
+		- ### Example: Computing 5 - 3 in 4-bit
+			- Represent `5`: `0101`
+			- Represent `3`: `0011`
+			- Find two's complement of `3`:
+				- Invert bits: `1100`
+				- Add one: `1101`
+			- Add `5` and `-3`:
+				- `0101` + `1101` = `10010`
+				- Discard the carry: `0010` (which is `2` in decimal)
+	- ## Sign Extension
+		- When increasing the number of bits (e.g., from 8-bit to 16-bit), the sign bit (MSB) is extended to preserve the number's value
+		- **Positive numbers**: Pad with `0`s
+		- **Negative numbers**: Pad with `1`s
+		- ### Example
+			- Extending `-5` (`11111011` in 8-bit) to 16-bit: `11111111 11111011`
+	- ## Historical Context
+		- The concept of two's complement has been integral to computer arithmetic since the mid-20th century
+		- Notably utilized in early computers like the IBM System/360, introduced in 1964
+		- This contributed to its widespread adoption in the computing industry
+	- ## Related
+		- Binary number representation
+		- Signed integer representation
+		- Computer arithmetic
+		- Hardware design
+

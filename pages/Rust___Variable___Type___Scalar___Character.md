@@ -1,0 +1,3 @@
+- uses [[Rust/char]] keyword `char`
+- can put an emoji in it
+- most of unicode works, but unicode doesn't have a concept of a char, so that's potentially a footgun

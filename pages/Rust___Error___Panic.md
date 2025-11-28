@@ -1,0 +1,1 @@
+- Rust uses the term *panicking* when a program exits with an error

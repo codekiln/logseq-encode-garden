@@ -4,5 +4,7 @@
 	- `const` can be initialized with a specific subset of all possible expressions; see [Rust Reference’s section on constant evaluation](https://doc.rust-lang.org/reference/const_eval.html)
 	- `const` is required to have a type parameter
 - {{embed [[Rust/Variable/let]]}}
+- {{embed [[Rust/Variable/Shadowing]]}}
 	-
-		-
+	-
+	-
