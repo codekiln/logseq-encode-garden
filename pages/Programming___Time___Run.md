@@ -1,0 +1,74 @@
+alias:: [[Runtime]]
+
+- # Runtime
+	- Also known as: run-time, runtime execution, execution time
+	- The phase when a program is actually executing, after compilation
+	- Operations and evaluations that occur while the program is running
+	- ## Definition
+		- The period during which a compiled program executes
+		- The execution environment where program code runs
+		- Dynamic behavior that cannot be determined until the program runs
+	- ## Key Characteristics
+		- **Dynamic Execution**: Code is executed with actual data and user input
+		- **Runtime Environment**: The system that executes the program (virtual machine, interpreter, or native execution)
+		- **Dynamic Behavior**: Values and control flow determined by runtime conditions
+		- **Error Handling**: Runtime errors occur during execution
+	- ## Runtime Operations
+		- ### Program Execution
+			- Instruction execution
+			- Memory allocation and deallocation
+			- Function calls and stack management
+		- ### Dynamic Behavior
+			- User input processing
+			- Network requests
+			- File I/O operations
+			- Database queries
+		- ### Runtime Checks
+			- Array bounds checking (in some languages)
+			- Null pointer checks
+			- Type checks (in dynamically typed languages)
+			- Resource availability checks
+		- ### Memory Management
+			- Heap allocation
+			- Garbage collection (in managed languages)
+			- Stack management
+	- ## Runtime vs Compile-Time
+		- **Runtime**: Dynamic behavior, user interaction, actual execution
+		- **Compile-Time**: Static analysis, type checking, constant evaluation
+		- Some languages (like Python, JavaScript) have minimal compile-time checks
+	- ## Runtime Environments
+		- ### Virtual Machines
+			- JVM (Java Virtual Machine)
+			- .NET CLR (Common Language Runtime)
+			- Erlang BEAM
+		- ### Interpreters
+			- Python interpreter
+			- JavaScript engines (V8, SpiderMonkey)
+		- ### Native Execution
+			- Compiled languages that run directly on hardware
+			- Rust, C, C++, Go (when compiled to native code)
+	- ## Runtime Errors
+		- Errors that occur during program execution
+		- Examples:
+			- Null pointer exceptions
+			- Array index out of bounds
+			- Division by zero
+			- File not found
+			- Network timeouts
+		- Contrast with compile-time errors, which prevent the program from being built
+	- ## Language Examples
+		- ### Dynamically Typed Languages
+			- Python, JavaScript, Ruby: Most type checking happens at runtime
+			- Type errors only discovered when code executes
+		- ### Statically Typed Languages
+			- Rust, Java, C#: Most type checking at compile-time
+			- Runtime errors typically from logic errors or resource issues
+	- ## Benefits and Trade-offs
+		- **Flexibility**: Can handle dynamic data and user input
+		- **Runtime Optimization**: Just-in-time (JIT) compilation can optimize hot paths
+		- **Error Discovery**: Some errors only appear at runtime
+		- **Performance Overhead**: Runtime checks add execution overhead
+	- ## Related
+		- [[Programming/Time/Compile]] - The compilation phase before execution
+		- Runtime environments and virtual machines
+		- Dynamic typing vs static typing

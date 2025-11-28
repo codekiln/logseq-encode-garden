@@ -1,0 +1,5 @@
+- `let foo = 1`
+- `let` can only be used in function local scope
+- unlike `const`, it's not required to have a type annotation, but [[Rust/analyzer]] will likely make it difficult to create a new one without inserting the type, e.g. it will change `let foo = 1` to `let foo: u32 = 1`
+- [[Rust/mut]] - `let mut count = FOUR;`
+	- `mut` is a `let` suffix that makes the variable mutable

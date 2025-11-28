@@ -1,0 +1,58 @@
+alias:: [[Compile-time]], [[Compile-time Evaluation]]
+
+- # Compile-Time
+	- Also known as: compile time, compilation time, compile-time evaluation
+	- The phase of program development when source code is transformed into executable code by a compiler
+	- Operations and evaluations that occur during compilation, before the program runs
+	- ## Definition
+		- The period during which a compiler processes source code
+		- Includes syntax analysis, semantic analysis, type checking, optimization, and code generation
+		- Errors and checks that occur during this phase are called "compile-time errors"
+	- ## Key Characteristics
+		- **Static Analysis**: The compiler analyzes code without executing it
+		- **Type Checking**: Types are verified before execution
+		- **Constant Evaluation**: Constant expressions are evaluated during compilation
+		- **Optimization**: Code optimizations are applied before runtime
+		- **Code Generation**: Source code is transformed into machine code or bytecode
+	- ## Compile-Time Operations
+		- ### Syntax Analysis
+			- Parsing source code into an abstract syntax tree (AST)
+			- Detecting syntax errors
+		- ### Semantic Analysis
+			- Type checking and type inference
+			- Scope resolution
+			- Name resolution
+		- ### Constant Folding
+			- Evaluating constant expressions at compile-time
+			- Example: `const x = 2 + 3` becomes `const x = 5` at compile-time
+		- ### Macro Expansion
+			- Processing macros and metaprogramming constructs
+			- Template instantiation (in languages like C++)
+		- ### Optimization
+			- Dead code elimination
+			- Inlining
+			- Constant propagation
+	- ## Compile-Time vs Runtime
+		- **Compile-Time**: Errors caught before execution, constant values known, type safety enforced
+		- **Runtime**: Program execution, dynamic behavior, user input processing
+		- Many languages aim to catch as many errors as possible at compile-time
+	- ## Language Examples
+		- ### Rust
+			- `const` values must be computable at compile-time
+			- Type checking happens entirely at compile-time
+			- Borrow checker operates at compile-time
+		- ### C/C++
+			- Template metaprogramming evaluated at compile-time
+			- `constexpr` functions and variables
+		- ### TypeScript
+			- Type checking occurs at compile-time (transpilation)
+			- No runtime type information
+	- ## Benefits
+		- **Early Error Detection**: Catch errors before deployment
+		- **Performance**: Constant evaluation and optimization happen once, not on every execution
+		- **Type Safety**: Prevent type-related errors before runtime
+		- **Better Tooling**: IDEs can provide better autocomplete and error detection
+	- ## Related
+		- [[Programming/Time/Run]] - The execution phase of a program
+		- [[Rust/Variable/Constant]] - Constants evaluated at compile-time in Rust
+		- Static analysis and type systems
