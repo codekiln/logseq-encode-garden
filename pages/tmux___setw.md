@@ -1,4 +1,5 @@
-- Yes — **`setw` is only meaningful inside a tmux context.**
+- # About tmux setw
+- **`setw` is only meaningful inside a tmux context.**
 - But there are *two different ways* it can be valid, depending on how you run it.
 - ## 1. `setw` is a tmux command, not a shell command
   `setw` is short for:
