@@ -42,10 +42,12 @@ tags:: [[Keyshorts]]
 			- if you need to pass mouse wheel through to an application like [[Claude Code]], use one of these two:
 				- 1 - config approach
 					- add to `~/.tmux.conf`
+					  collapsed:: true
 						- ```tmux
 						  set -g mouse on
 						  ```
 					- reload conf:
+					  collapsed:: true
 						- `Ctrl-b : source-file ~/.tmux.conf`
 				- 2 - immediate application
 					- `ctrl-b : set -g mouse on`
