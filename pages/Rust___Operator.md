@@ -1,0 +1,78 @@
+alias:: [[Rust Operators]]
+- # Operator
+	- Operators in Rust are special symbols or keywords that perform operations on variables and values
+	- Source: [Appendix B: Operators and Symbols - The Rust Programming Language](https://rust-book.cs.brown.edu/appendix-02-operators.html)
+	- ## Overview
+		- Rust contains a glossary of operators and other symbols that appear by themselves or in the context of paths, generics, trait bounds, macros, attributes, comments, tuples, and brackets
+		- Many operators can be overloaded through traits
+	- ## Operators
+		- ### Arithmetic Operators
+			- `+` - Arithmetic addition (overloadable via `Add` trait)
+			- `+=` - Arithmetic addition and assignment (overloadable via `AddAssign` trait)
+			- `-` - Arithmetic negation (overloadable via `Neg` trait) or arithmetic subtraction (overloadable via `Sub` trait)
+			- `-=` - Arithmetic subtraction and assignment (overloadable via `SubAssign` trait)
+			- `*` - Arithmetic multiplication (overloadable via `Mul` trait) or dereference (overloadable via `Deref` trait)
+			- `*=` - Arithmetic multiplication and assignment (overloadable via `MulAssign` trait)
+			- `/` - Arithmetic division (overloadable via `Div` trait)
+			- `/=` - Arithmetic division and assignment (overloadable via `DivAssign` trait)
+			- `%` - Arithmetic remainder (overloadable via `Rem` trait)
+			- `%=` - Arithmetic remainder and assignment (overloadable via `RemAssign` trait)
+		- ### Comparison Operators
+			- `==` - Equality comparison (overloadable via `PartialEq` trait)
+			- `!=` - Nonequality comparison (overloadable via `PartialEq` trait)
+			- `<` - Less than comparison (overloadable via `PartialOrd` trait)
+			- `<=` - Less than or equal to comparison (overloadable via `PartialOrd` trait)
+			- `>` - Greater than comparison (overloadable via `PartialOrd` trait)
+			- `>=` - Greater than or equal to comparison (overloadable via `PartialOrd` trait)
+		- ### Logical Operators
+			- `&&` - Short-circuiting logical AND (not overloadable)
+			- `||` - Short-circuiting logical OR (not overloadable)
+			- `!` - Bitwise or logical complement (overloadable via `Not` trait)
+		- ### Bitwise Operators
+			- `&` - Bitwise AND (overloadable via `BitAnd` trait) or borrow (`&expr`, `&mut expr` - not overloadable)
+			- `&=` - Bitwise AND and assignment (overloadable via `BitAndAssign` trait)
+			- `|` - Bitwise OR (overloadable via `BitOr` trait) or pattern alternatives (`pat | pat` - not overloadable)
+			- `|=` - Bitwise OR and assignment (overloadable via `BitOrAssign` trait)
+			- `^` - Bitwise exclusive OR (overloadable via `BitXor` trait)
+			- `^=` - Bitwise exclusive OR and assignment (overloadable via `BitXorAssign` trait)
+			- `<<` - Left-shift (overloadable via `Shl` trait)
+			- `<<=` - Left-shift and assignment (overloadable via `ShlAssign` trait)
+			- `>>` - Right-shift (overloadable via `Shr` trait)
+			- `>>=` - Right-shift and assignment (overloadable via `ShrAssign` trait)
+		- ### Assignment and Other Operators
+			- `=` - Assignment/equivalence (not overloadable)
+			- `.` - Field access, method call, or tuple indexing (not overloadable)
+			- `..` - Right-exclusive range literal (overloadable via `PartialOrd` trait) or struct literal update syntax
+			- `..=` - Right-inclusive range literal (overloadable via `PartialOrd` trait)
+			- `->` - Function and closure return type (not overloadable)
+			- `?` - Error propagation (not overloadable)
+			- `@` - Pattern binding (not overloadable)
+			- `:` - Constraints, struct field initializer, or loop label (not overloadable)
+			- `;` - Statement and item terminator or part of fixed-size array syntax (not overloadable)
+			- `,` - Argument and element separator (not overloadable)
+			- `=>` - Part of match arm syntax (not overloadable)
+	- ## Operator Overloading
+		- Many operators in Rust can be overloaded through traits
+		- This allows custom types to use standard operator syntax
+		- Common overloadable operator traits include:
+			- `Add`, `Sub`, `Mul`, `Div`, `Rem` for arithmetic operations
+			- `AddAssign`, `SubAssign`, `MulAssign`, `DivAssign`, `RemAssign` for assignment operations
+			- `PartialEq`, `PartialOrd` for comparisons
+			- `BitAnd`, `BitOr`, `BitXor`, `Shl`, `Shr` for bitwise operations
+			- `Not`, `Neg` for unary operations
+			- `Deref` for dereferencing
+	- ## Non-operator Symbols
+		- Rust also includes many symbols that don't function as operators
+		- These include symbols for:
+			- Paths through the module hierarchy
+			- Generic type parameters
+			- Trait bound constraints
+			- Macros and attributes
+			- Comments
+			- Tuples, arrays, and brackets
+	- ## Related
+		- [[Programming/Operator]] - General programming concept of operators
+		- [[Rust/Trait]] - Traits used for operator overloading
+		- [[Rust/Book/TRPL]] - The Rust Programming Language book
+		- [[Programming/Language/Feature]] - Language features in general
+

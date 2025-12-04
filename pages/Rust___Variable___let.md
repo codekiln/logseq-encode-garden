@@ -29,3 +29,12 @@
 				  let x += 1;
 				  println!("{x}"); // 6
 				  ```
+- ### doesn't need initialization
+	- this compiles just fine:
+		- ```rust
+		  let x;
+		  let cond: bool = false
+		  if cond { x = 5; } else { x = 6; }
+		  println!({x}); // 6
+		  ```
+		- Lesson: just because x is immutable by default doesn't mean it has to be initialized with a value. It can be a placeholder for something that's filled up later.

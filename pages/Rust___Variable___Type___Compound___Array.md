@@ -15,4 +15,8 @@
 	  
 	  ```
 - has a **fixed length**
+- You can declare it like this ... which is a shorthand for `[3, 3, 3, 3, 3, 3]` - how weird is this? it reminds me of [[c74/max]] in a weird way.
+	- ```rust
+	  let a = [3; 5];
+	  ```
 -

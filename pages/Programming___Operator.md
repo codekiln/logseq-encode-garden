@@ -1,0 +1,41 @@
+- # Operator
+	- A symbol or keyword that performs operations on variables and values
+	- Fundamental to programming language syntax
+	- Used in various contexts including arithmetic, comparison, logical operations, and more
+	- ## Definition
+		- Operators are special symbols or keywords that perform operations on operands
+		- Operands are the values or variables that operators act upon
+		- Operators can be unary (one operand), binary (two operands), or ternary (three operands)
+	- ## Operator Categories
+		- ### Arithmetic Operators
+			- Perform mathematical operations: addition, subtraction, multiplication, division, remainder
+			- Examples: `+`, `-`, `*`, `/`, `%`
+		- ### Comparison Operators
+			- Compare values and return boolean results
+			- Examples: `==`, `!=`, `<`, `>`, `<=`, `>=`
+		- ### Logical Operators
+			- Perform logical operations: AND, OR, NOT
+			- Examples: `&&`, `||`, `!`
+		- ### Bitwise Operators
+			- Perform operations on individual bits
+			- Examples: `&`, `|`, `^`, `<<`, `>>`
+		- ### Assignment Operators
+			- Assign values to variables, often combined with other operations
+			- Examples: `=`, `+=`, `-=`, `*=`, `/=`
+		- ### Other Operators
+			- Language-specific operators for borrowing, dereferencing, pattern matching, error propagation, etc.
+	- ## Operator Overloading
+		- Many languages allow operators to be overloaded for custom types
+		- Enables user-defined types to use standard operator syntax
+		- Typically implemented through traits or interfaces
+		- Example: In Rust, operators can be overloaded through traits like `Add`, `Sub`, `Mul`, etc.
+	- ## Language-Specific Implementations
+		- Different languages have different operator sets and behaviors
+		- Some operators are overloadable, others are not
+		- Operator precedence and associativity vary by language
+	- ## Related
+		- [[Rust/Operator]] - Operators in the Rust programming language
+		- [[Programming/Language/Feature]] - Language features in general
+		- Arithmetic and mathematical operations
+		- Type systems and operator overloading
+
