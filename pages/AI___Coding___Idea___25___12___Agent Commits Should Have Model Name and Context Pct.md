@@ -1,0 +1,2 @@
+- Not all commits are created with the same LLM brain power.
+- Ideally we'd
