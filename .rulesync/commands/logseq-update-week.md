@@ -87,13 +87,13 @@ banner:: "../assets/Logseq/Plugins/logseq-banners-plugin/deep_springs_cow_camp_0
 - # tT wWW Week Notes
   - ## What's up this week?
   - ## Week Days
-    - ### log [[YYYY/tT/wWW/d1]] - [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
-    - ### log [[YYYY/tT/wWW/d2]] - [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
-    - ### log [[YYYY/tT/wWW/d3]] - [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
-    - ### log [[YYYY/tT/wWW/d4]] - [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
-    - ### log [[YYYY/tT/wWW/d5]] - [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
-    - ### log [[YYYY/tT/wWW/d6]] - [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
-    - ### log [[YYYY/tT/wWW/d7]] - [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
+    - log [[YYYY/tT/wWW/d1]] - [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
+    - log [[YYYY/tT/wWW/d2]] - [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
+    - log [[YYYY/tT/wWW/d3]] - [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
+    - log [[YYYY/tT/wWW/d4]] - [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
+    - log [[YYYY/tT/wWW/d5]] - [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
+    - log [[YYYY/tT/wWW/d6]] - [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
+    - log [[YYYY/tT/wWW/d7]] - [[YYYY/MM/DD]] - [[YYYY-MM-DD Day]]
 ```
 
 ### Day Page Template
