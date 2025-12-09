@@ -1,0 +1,4 @@
+- [[Rust/Book/TRPL/ch/04/01 What is Ownership]]
+	- A box is a special kind of pointer to memory in the heap.
+	- A variable that is a Box like `let b = Box(15)` contains a pointer to memory, so its ownership can be transferred.
+-
