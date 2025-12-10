@@ -1,0 +1,51 @@
+tags:: [[Programming]], [[Diataxis/Explanation]]
+
+- # Heap Conceptual Overview
+	- ## Overview
+		- The heap is a region of memory used for dynamic memory allocation
+		- Unlike the stack, heap memory is not automatically managed by the program's execution flow
+		- Allows for flexible allocation and deallocation of memory at runtime
+		- Memory allocated on the heap persists until explicitly freed or garbage collected
+	- ## Context
+		- **Memory Management Need**: Programs need memory that can outlive function calls and vary in size at runtime
+		- **Historical Development**: Heap memory management has been a core concern since early programming languages
+		- **Modern Relevance**: Critical for understanding memory safety, performance, and resource management in systems programming
+		- Addresses the need for data structures whose size is unknown at compile time or that must persist beyond the current scope
+	- ## Key Principles
+		- **Dynamic Allocation**: Memory is allocated at runtime, not at compile time
+		- **Manual or Automatic Management**: Depending on the language, heap memory may require manual deallocation or be managed automatically
+		- **Persistence**: Heap-allocated memory persists until explicitly freed or garbage collected
+		- **Flexible Size**: Can allocate variable-sized blocks of memory as needed
+		- **Slower Access**: Generally slower than stack access due to pointer indirection and potential fragmentation
+	- ## Mechanism
+		- Heap memory is managed by the runtime system or operating system
+		- Allocation typically involves:
+			- Requesting a block of memory of a specific size
+			- The memory allocator finds available space
+			- Returns a pointer to the allocated memory
+		- Deallocation can be:
+			- **Manual**: Programmer must explicitly free memory (C, C++, Rust)
+			- **Automatic**: Garbage collector reclaims unused memory (Java, Python, Go)
+		- Memory fragmentation can occur when blocks are allocated and freed in different orders
+	- ## Examples
+		- ### Manual Memory Management
+			- **C/C++**: Use `malloc()`/`free()` or `new`/`delete`
+			- **Rust**: Uses ownership system to automatically manage heap memory through types like `Box<T>`
+		- ### Automatic Memory Management
+			- **Java, Python, Go**: Garbage collectors automatically reclaim unused heap memory
+			- **Swift**: Uses Automatic Reference Counting (ARC) to manage heap memory
+		- ### Common Heap-Allocated Types
+			- Dynamic arrays and vectors
+			- Strings (in many languages)
+			- Objects and structs that need to outlive their creation scope
+			- Large data structures
+	- ## Misconceptions
+		- Heap is always slower than stack → **Context-dependent**. Heap access involves indirection, but for large or long-lived data, the heap is appropriate
+		- All languages require manual heap management → **False**. Many modern languages provide automatic garbage collection
+		- Heap memory is unlimited → **False**. Heap size is limited by available system memory and runtime constraints
+		- Heap and stack are physical locations → **False**. They are logical memory regions that may be implemented in various ways
+	- ## Related
+		- [[Programming/Concept/Stack]] - The stack, which contrasts with heap memory
+		- [[Rust/Box]] - Rust's heap-allocated pointer type
+		- [[Rust/Owner/ship]] - How Rust manages heap memory through ownership
+

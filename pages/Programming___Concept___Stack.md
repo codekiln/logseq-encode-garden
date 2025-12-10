@@ -1,0 +1,59 @@
+tags:: [[Programming]], [[Diataxis/Explanation]]
+
+- # Stack Conceptual Overview
+	- ## Overview
+		- The stack is a region of memory used for automatic, temporary storage during program execution
+		- Follows a Last-In-First-Out (LIFO) structure
+		- Automatically managed by the program's execution flow
+		- Memory is allocated when entering a function scope and deallocated when leaving it
+	- ## Context
+		- **Execution Model**: The stack is fundamental to how function calls and local variables are managed
+		- **Historical Development**: Stack-based execution has been a core feature of programming languages since the early days
+		- **Modern Relevance**: Essential for understanding function calls, recursion, local variables, and memory management
+		- Provides automatic, efficient memory management for temporary data that follows a predictable lifetime pattern
+	- ## Key Principles
+		- **LIFO Structure**: Last item pushed is the first item popped
+		- **Automatic Management**: Memory is automatically allocated and freed based on scope
+		- **Fast Access**: Stack memory is typically faster to access than heap memory
+		- **Limited Size**: Stack size is usually smaller and more constrained than heap
+		- **Scope-Based Lifetime**: Variables live only within their defining scope
+		- **Predictable Layout**: Stack frames are organized in a predictable, sequential manner
+	- ## Mechanism
+		- When a function is called:
+			- A new stack frame is pushed onto the stack
+			- Local variables and parameters are stored in this frame
+			- Return address is stored for when the function completes
+		- When a function returns:
+			- The stack frame is popped
+			- All local variables in that frame are automatically deallocated
+			- Execution returns to the calling function
+		- Stack pointer tracks the current top of the stack
+		- Stack overflow occurs when the stack grows beyond its allocated size (often from deep recursion)
+	- ## Examples
+		- ### Function Calls
+			- Each function call creates a new stack frame
+			- Local variables are stored in the current stack frame
+			- When the function returns, its frame is removed
+		- ### Recursion
+			- Each recursive call adds a new stack frame
+			- Deep recursion can cause stack overflow
+		- ### Common Stack-Allocated Types
+			- Local variables
+			- Function parameters
+			- Return addresses
+			- Small, fixed-size data structures
+		- ### Language Examples
+			- **C/C++**: Local variables are typically stack-allocated
+			- **Rust**: Most values are stack-allocated by default
+			- **Python**: Function call frames use a stack structure
+	- ## Misconceptions
+		- Stack is always faster than heap → **Generally true, but context matters**. Stack is faster for small, short-lived data
+		- All variables go on the stack → **False**. Large or dynamically-sized data often goes on the heap
+		- Stack size is unlimited → **False**. Stack size is limited and stack overflow is a real concern
+		- Stack and heap are physical locations → **False**. They are logical memory regions with different management strategies
+		- Stack frames are only for function calls → **False**. Stack frames can also contain exception handling information and other execution context
+	- ## Related
+		- [[Programming/Concept/Heap]] - The heap, which contrasts with stack memory
+		- [[Rust/Variable]] - How Rust uses the stack for variable storage
+		- [[Programming/Time/Run]] - Runtime behavior including stack management
+

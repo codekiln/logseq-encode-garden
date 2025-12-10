@@ -1,0 +1,37 @@
+# Ferris the Crab
+	- mascott of Rust
+	- ![Ferris the Crab](https://c.tenor.com/4GZQk1XepvYAAAAd/tenor.gif){:height 320, :width 393}
+	- ## Why a crab?
+		- ### 🦀 [[Rustaceans]]
+			- Rust community members often jokingly call themselves **Rustaceans** — a play on *crustacean*. If the people are Rustaceans, the mascot being a crustacean (crab) fits perfectly.
+		- ### 🦀 Ferris = “Ferri-cious” pun
+			- The name *Ferris* comes from *ferrous* (relating to iron), since *rust* is oxidized iron. So:
+			- **Rust → iron → ferrous → Ferris.**
+			- And Ferris just happened to be designed as an adorable crab.
+		- ### 🦀 Crabs are “safe”
+			- There’s also a cute metaphor floating around: crabs have a **hard shell** (safety) and **claws** (power) — mirroring Rust’s safety-and-control philosophy.
+	- ## History
+		- Ferris was created by [[Person/Karen Rustad Tolva]] (formerly Karen Rustad), an early member of the Rust community, around [[2015]]
+	- ## **Design Philosophy**
+		- Ferris was intentionally:
+			- **Friendly**, not fierce
+			- **Gender-neutral**
+			- **CC-BY licensed** so the community could remix and use it freely
+			- Drawn in a **simple, expressive vector style** that works at many sizes
+		- Ferris quickly became a symbol of Rust’s welcoming culture, especially important given Rust’s mission to make systems programming feel approachable.
+	- ## **Canonical Traits of Ferris**
+		- Always smiling or expressive
+		- Small legs, big claws
+		- Orange body
+		- No sharp angles or threatening posture
+		- Often shown interacting with code concepts (ownership, borrow checker, concurrency)
+	- ## **Ferris vs. Rust Logo**
+		- The **official Rust logo** is the gear-shaped “R”.
+		- **Ferris is not official**, but *widely used* by the community, conferences, crates, meetups, and merchandise.
+	- ## **Extended Family**
+		- The community later created variants:
+			- **“Oxidation” Ferris** (angry)
+			- **“Borrow Checker” Ferris** (glowing eyes)
+			- **“Safety Dance” Ferris**
+			- **“Rustacean” badge Ferris**
+		- Many more, all based on open, remixable SVGs
