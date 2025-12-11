@@ -1,0 +1,1 @@
+- [Cursor Debug Mode](https://cursor.com/docs/agent/modes#debug)
