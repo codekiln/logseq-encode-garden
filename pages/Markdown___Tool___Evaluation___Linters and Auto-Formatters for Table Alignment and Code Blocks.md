@@ -196,13 +196,13 @@ date-created:: [[2025-12-11 Wed]]
 			- **mdox:** Verified as Go-based, 75 stars (not Rust as implied)
 			- **Table formatting capabilities:** Verified for all three tools through documentation review
 			- **Pre-commit integration:** Verified through documentation and repository searches
-	- ## Sources
-		- [^1]: [dprint Documentation](https://dprint.dev/)
-		- [^2]: [dprint GitHub Repository](https://github.com/dprint/dprint)
-		- [^3]: [markdownlint-cli GitHub Repository](https://github.com/igorshubovych/markdownlint-cli)
-		- [^4]: [mdox GitHub Repository](https://github.com/bwplotka/mdox)
-		- [^5]: [A List of Markdown Linters and Formatters (awesome-lint)](https://github.com/lint-md/awesome-lint#markdown)
-		- [^6]: [mdformat Official Documentation](https://mdformat.readthedocs.io/)
-		- [^7]: [mdformat GitHub Repository](https://github.com/hukkin/mdformat)
-		- [^8]: [Prettier Official Documentation](https://prettier.io/)
-		- [^9]: [Prettier GitHub Repository](https://github.com/prettier/prettier)
+	- ## Footnotes
+		- [^1]: https://dprint.dev/
+		- [^2]: https://github.com/dprint/dprint
+		- [^3]: https://github.com/igorshubovych/markdownlint-cli
+		- [^4]: https://github.com/bwplotka/mdox
+		- [^5]: https://github.com/lint-md/awesome-lint#markdown
+		- [^6]: https://mdformat.readthedocs.io/
+		- [^7]: https://github.com/hukkin/mdformat
+		- [^8]: https://prettier.io/
+		- [^9]: https://github.com/prettier/prettier
