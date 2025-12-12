@@ -1,0 +1,2 @@
+- [References and Borrowing - The Rust Programming Language](https://rust-book.cs.brown.edu/ch04-02-references-and-borrowing.html)
+	-
