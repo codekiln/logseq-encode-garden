@@ -1,2 +1,2 @@
 # [Tools | Markdown Guide](https://www.markdownguide.org/tools/) - #Tools for using #Markdown
-	-
+	- See also: [[Markdown/Tool/Evaluation/Linters and Auto-Formatters for Table Alignment and Code Blocks]] for evaluation of linters and auto-formatters
