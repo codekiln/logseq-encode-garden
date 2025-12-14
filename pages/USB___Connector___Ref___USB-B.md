@@ -1,0 +1,94 @@
+tags:: [[Diataxis/Reference]], [[USB]], [[USB/Connector]]
+
+- alias:: [[USB Type-B]], [[Standard USB-B]]
+
+- # USB-B Connector Reference
+	- ## Overview
+		- Standard USB Type-B connector, designed for peripheral devices
+		- Introduced with USB 1.0 specification (1996)
+		- Square shape with beveled corners, non-reversible design
+		- Primarily used on peripheral devices (printers, scanners, external hard drives)
+	- ## Physical Specifications
+		- **Dimensions**: 
+			- Width: 11.5 mm
+			- Height: 10.5 mm
+			- Length: Variable (depends on plug design)
+		- **Pin Count**: 
+			- 4 pins (USB 1.0, 1.1, 2.0)
+			- 9 pins (USB 3.0 and later)
+		- **Orientation**: Non-reversible (must be inserted in correct orientation)
+		- **Gender**: Male connector (plugs into peripheral device)
+		- **Color Coding**: 
+			- Black or white interior: USB 2.0
+			- Blue interior: USB 3.0 and later
+	- ## Technical Specifications
+		- **USB Versions Supported**: USB 1.0, 1.1, 2.0, 3.0, 3.1, 3.2
+		- **Data Transfer Rates**: 
+			- USB 1.0/1.1: 1.5 Mbps (Low-Speed) / 12 Mbps (Full-Speed)
+			- USB 2.0: 480 Mbps (High-Speed)
+			- USB 3.0 (3.1 Gen 1, 3.2 Gen 1): 5 Gbps (SuperSpeed)
+			- USB 3.1 Gen 2 (3.2 Gen 2): 10 Gbps (SuperSpeed+)
+			- USB 3.2 Gen 2x2: 20 Gbps (requires USB-C on other end)
+		- **Power Delivery**: 
+			- USB 1.0/1.1/2.0: Up to 2.5W (5V @ 500mA)
+			- USB 3.0 and later: Up to 4.5W (5V @ 900mA)
+	- ## Pin Configuration
+		- ### USB 2.0 (4 pins)
+			- Pin 1: VCC (+5V) - Power supply
+			- Pin 2: D- (Data -) - Differential data pair negative
+			- Pin 3: D+ (Data +) - Differential data pair positive
+			- Pin 4: GND (Ground) - Ground reference
+		- ### USB 3.0+ (9 pins)
+			- Pins 1-4: Same as USB 2.0
+			- Pin 5: StdB_SSRX- (SuperSpeed receive negative)
+			- Pin 6: StdB_SSRX+ (SuperSpeed receive positive)
+			- Pin 7: GND_DRAIN (Ground for shielding)
+			- Pin 8: StdB_SSTX- (SuperSpeed transmit negative)
+			- Pin 9: StdB_SSTX+ (SuperSpeed transmit positive)
+	- ## Compatibility
+		- **Compatible Connectors**: 
+			- [[USB/Connector/Ref/USB-A]] (standard pairing)
+			- [[USB/Connector/Ref/USB-C]] (via adapter or cable)
+		- **Backward Compatibility**: 
+			- USB 3.0+ connectors are backward compatible with USB 2.0 devices
+			- USB 2.0 devices will operate at USB 2.0 speeds when connected to USB 3.0+ ports
+	- ## Common Use Cases
+		- Printers and scanners
+		- External hard drives and storage devices
+		- Audio interfaces and MIDI devices
+		- Some older digital cameras
+		- Network adapters
+		- Some docking stations
+	- ## Variants
+		- ### USB-B 2.0
+			- 4-pin configuration
+			- Black or white interior
+			- Supports up to USB 2.0 speeds (480 Mbps)
+		- ### USB-B 3.0 (USB 3.1 Gen 1, USB 3.2 Gen 1)
+			- 9-pin configuration
+			- Blue interior (standard color coding)
+			- Supports up to 5 Gbps (SuperSpeed)
+			- Larger physical size than USB-B 2.0
+		- ### USB-B 3.1 Gen 2 (USB 3.2 Gen 2)
+			- 9-pin configuration
+			- Blue or teal interior
+			- Supports up to 10 Gbps (SuperSpeed+)
+	- ## Visual Identification
+		- Square shape with beveled corners on top
+		- Slightly trapezoidal appearance
+		- Hollow interior with visible pins
+		- USB 3.0+ versions are physically larger than USB 2.0 versions
+		- Color coding: Blue interior indicates USB 3.0 or later
+	- ## Standards
+		- Defined in USB-IF specifications
+		- USB 1.0/1.1: USB 1.0 specification (1996)
+		- USB 2.0: USB 2.0 specification (2000)
+		- USB 3.0+: USB 3.0 and subsequent specifications
+	- ## Related References
+		- [[USB/Connector/Ref/Index]]
+		- [[USB/Connector/Ref/USB-A]]
+		- [[USB/Connector/Ref/USB-C]]
+		- [[USB/Connector/Ref/USB-B Mini]]
+		- [[USB/Connector/Ref/USB-B Micro]]
+		- [[USB/How To/Identify Connector Type]] (when created)
+		- [[USB/How To/Choose Correct Cable]] (when created)

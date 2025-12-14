@@ -1,0 +1,181 @@
+tags:: [[Diataxis/Reference]], [[USB]]
+
+- # USB Connector Documentation Plan
+	- ## Overview
+		- This plan outlines the structure for documenting various USB connector jacks in the Logseq knowledge base
+		- Documentation will follow Diataxis Reference format for technical specifications
+		- Uses hierarchical namespace structure consistent with existing knowledge base patterns
+	- ## Namespace Structure
+		- ### Main Namespace
+			- `[[USB/Connector/Ref/ConnectorName]]`
+			- File path: `pages/USB___Connector___Ref___ConnectorName.md`
+		- ### Rationale
+			- Follows existing pattern: `Topic/Subtopic/Ref/Specific Subject`
+			- Matches structure used in other technical reference documentation
+			- Enables easy discovery and linking
+	- ## Documentation Structure for Each Connector
+		- ### Required Sections (Diataxis Reference Format)
+			- **Overview**: Brief factual description
+			- **Physical Specifications**: Dimensions, pin count, orientation
+			- **Technical Specifications**: USB version, data rates, power delivery
+			- **Pin Configuration**: Pin assignments and functions
+			- **Compatibility**: Compatible connectors and cables
+			- **Common Use Cases**: Typical applications
+			- **Variants**: Different versions or form factors
+			- **Related References**: Links to related connector pages
+		- ### Optional Sections
+			- **Visual Reference**: Images or diagrams (stored in `assets/`)
+			- **Standards**: USB-IF specifications and standards
+			- **Troubleshooting Notes**: Common issues (link to How-To guides)
+	- ## Connector Types to Document
+		- ### USB-A Family
+			- `[[USB/Connector/Ref/USB-A]]` - Standard USB-A connector
+			- `[[USB/Connector/Ref/USB-A Mini]]` - Mini USB-A (if applicable)
+			- `[[USB/Connector/Ref/USB-A Micro]]` - Micro USB-A
+		- ### USB-B Family
+			- `[[USB/Connector/Ref/USB-B]]` - Standard USB-B connector
+			- `[[USB/Connector/Ref/USB-B Mini]]` - Mini USB-B
+			- `[[USB/Connector/Ref/USB-B Micro]]` - Micro USB-B
+		- ### USB-C Family
+			- `[[USB/Connector/Ref/USB-C]]` - USB Type-C connector
+			- `[[USB/Connector/Ref/USB-C Variants]]` - Different USB-C variants (if needed)
+		- ### Proprietary Connectors
+			- `[[USB/Connector/Ref/Lightning]]` - Apple Lightning connector (USB-based)
+			- Other proprietary connectors as needed
+	- ## Index/Overview Page
+		- ### Main Index
+			- `[[USB/Connector/Ref/Index]]` or `[[USB/Connector/Overview]]`
+			- File: `pages/USB___Connector___Ref___Index.md`
+			- Purpose: Quick reference table of all documented connectors
+			- Structure:
+				- Comparison table with key specifications
+				- Links to individual connector pages
+				- Visual guide to connector identification
+	- ## Integration with Existing Content
+		- ### Link to Existing USB Content
+			- `[[Adafruit/Understanding USB Type C - Cable Types Pitfalls etc]]` - Already exists
+			- Link from USB-C connector page to this resource
+			- Consider if Adafruit content should be moved/renamed to fit structure
+		- ### How-To Guides
+			- Keep procedural content separate in `[[USB/How To/...]]` namespace
+			- Examples:
+				- `[[USB/How To/Identify Connector Type]]`
+				- `[[USB/How To/Choose Correct Cable]]`
+				- `[[USB/How To/Troubleshoot Connection Issues]]`
+	- ## Asset Organization
+		- ### Image Storage
+			- Store connector images in `assets/usb-connectors/` directory
+			- Naming: `usb-connector-[name]-[view].png`
+			- Examples:
+				- `assets/usb-connectors/usb-connector-usb-a-front.png`
+				- `assets/usb-connectors/usb-connector-usb-c-side.png`
+		- ### Link Format
+			- Use Logseq asset linking: `![Description](assets/usb-connectors/filename.png)`
+	- ## Example Page Structure
+		- ### Template for USB-A Connector
+			- ```markdown
+			  tags:: [[Diataxis/Reference]], [[USB]], [[USB/Connector]]
+			  
+			  - # USB-A Connector Reference
+			    - ## Overview
+			      - Standard USB Type-A connector, most common USB connector type
+			      - Introduced with USB 1.0 specification (1996)
+			      - Rectangular shape, non-reversible design
+			    - ## Physical Specifications
+			      - **Dimensions**: [exact measurements]
+			      - **Pin Count**: 4 pins (USB 2.0) or 9 pins (USB 3.0+)
+			      - **Orientation**: Non-reversible (must be inserted in correct orientation)
+			      - **Gender**: Male connector (plugs into host/receptacle)
+			    - ## Technical Specifications
+			      - **USB Versions Supported**: USB 1.0, 1.1, 2.0, 3.0, 3.1, 3.2
+			      - **Data Transfer Rates**: 
+			        - USB 2.0: Up to 480 Mbps
+			        - USB 3.0: Up to 5 Gbps
+			        - USB 3.1 Gen 2: Up to 10 Gbps
+			      - **Power Delivery**: 
+			        - USB 2.0: Up to 2.5W (5V @ 500mA)
+			        - USB 3.0: Up to 4.5W (5V @ 900mA)
+			    - ## Pin Configuration
+			      - **USB 2.0 (4 pins)**:
+			        - Pin 1: VCC (+5V)
+			        - Pin 2: D- (Data -)
+			        - Pin 3: D+ (Data +)
+			        - Pin 4: GND (Ground)
+			      - **USB 3.0+ (9 pins)**:
+			        - Additional pins for SuperSpeed data lines
+			    - ## Compatibility
+			      - Compatible with: [[USB/Connector/Ref/USB-B]], [[USB/Connector/Ref/USB-C]] (via adapters)
+			      - Commonly paired with: [[USB/Connector/Ref/USB-B]], [[USB/Connector/Ref/USB-B Micro]]
+			    - ## Common Use Cases
+			      - Host devices (computers, hubs, chargers)
+			      - USB flash drives
+			      - Keyboard and mouse connections
+			      - Printer and scanner connections
+			    - ## Variants
+			      - USB-A 2.0 (4-pin)
+			      - USB-A 3.0 (9-pin, blue interior)
+			      - USB-A 3.1/3.2 (enhanced SuperSpeed)
+			    - ## Visual Reference
+			      - ![USB-A Connector](assets/usb-connectors/usb-connector-usb-a-front.png)
+			    - ## Related References
+			      - [[USB/Connector/Ref/Index]]
+			      - [[USB/Connector/Ref/USB-B]]
+			      - [[USB/Connector/Ref/USB-C]]
+			      - [[USB/How To/Identify Connector Type]]
+			```
+	- ## Implementation Priority
+		- ### Phase 1: Core Connectors
+			- USB-A
+			- USB-B
+			- USB-C
+			- Create index page
+		- ### Phase 2: Mini/Micro Variants
+			- USB-B Mini
+			- USB-B Micro
+			- USB-A Micro (if applicable)
+		- ### Phase 3: Specialized Connectors
+			- Lightning
+			- Other proprietary connectors
+		- ### Phase 4: Enhanced Documentation
+			- Add visual references
+			- Create comparison tables
+			- Link to troubleshooting guides
+	- ## Naming Conventions
+		- ### Page Names
+			- Use official USB-IF naming where available
+			- Be consistent with capitalization (USB-A, USB-B, USB-C)
+			- Use singular form per naming conventions
+		- ### Aliases
+			- Add common alternative names as aliases
+			- Example: `alias:: [[USB Type-A]], [[Standard USB]]`
+	- ## Quality Standards
+		- ### Reference Documentation Principles
+			- Factual, neutral descriptions only
+			- No opinions or marketing language
+			- Precise technical specifications
+			- Consistent formatting across all connector pages
+		- ### Verification
+			- Cross-reference with USB-IF specifications
+			- Verify pin configurations from official sources
+			- Ensure compatibility information is accurate
+	- ## Related Documentation Types
+		- ### Reference Pages (This Plan)
+			- Technical specifications
+			- Physical characteristics
+			- Pin configurations
+		- ### How-To Guides (Separate)
+			- `[[USB/How To/Identify Connector Type]]`
+			- `[[USB/How To/Choose Correct Cable]]`
+			- `[[USB/How To/Troubleshoot Connection Issues]]`
+		- ### Explanation Pages (If Needed)
+			- `[[USB/Explanation/How USB Works]]`
+			- `[[USB/Explanation/USB Versions and Speeds]]`
+	- ## Maintenance
+		- ### Updates
+			- Update when new USB specifications are released
+			- Keep compatibility information current
+			- Add new connector types as they emerge
+		- ### Cross-References
+			- Maintain links between related connectors
+			- Update index page when adding new connectors
+			- Link from How-To guides to relevant connector references

@@ -1,0 +1,128 @@
+tags:: [[Diataxis/Reference]], [[USB]], [[USB/Connector]]
+
+- alias:: [[USB Type-C]], [[USB-C]]
+
+- # USB-C Connector Reference
+	- ## Overview
+		- USB Type-C connector, the modern USB standard connector
+		- Introduced with USB 3.1 specification (2014)
+		- Oval/rounded rectangle shape, fully reversible (can be inserted either way)
+		- Supports USB4, Thunderbolt, DisplayPort Alt Mode, and Power Delivery
+		- Designed to replace USB-A, USB-B, and their variants
+	- ## Physical Specifications
+		- **Dimensions**: 
+			- Width: 8.3 mm
+			- Height: 2.5 mm
+			- Length: Variable (depends on plug design)
+		- **Pin Count**: 24 pins (12 pins per side, symmetrical)
+		- **Orientation**: Fully reversible (can be inserted either way)
+		- **Gender**: Male connector (plugs into device)
+		- **Symmetry**: Electrically and mechanically symmetrical
+	- ## Technical Specifications
+		- **USB Versions Supported**: USB 2.0, 3.0, 3.1, 3.2, USB4
+		- **Data Transfer Rates**: 
+			- USB 2.0: 480 Mbps (High-Speed)
+			- USB 3.0 (3.1 Gen 1, 3.2 Gen 1): 5 Gbps (SuperSpeed)
+			- USB 3.1 Gen 2 (3.2 Gen 2): 10 Gbps (SuperSpeed+)
+			- USB 3.2 Gen 2x2: 20 Gbps (dual-lane)
+			- USB4 Gen 2: 20 Gbps
+			- USB4 Gen 3: 40 Gbps
+		- **Power Delivery**: 
+			- USB 2.0/3.0: Up to 15W (5V @ 3A)
+			- USB Power Delivery 2.0: Up to 100W (20V @ 5A)
+			- USB Power Delivery 3.0: Up to 100W
+			- USB Power Delivery 3.1: Up to 240W (48V @ 5A)
+		- **Alternate Modes**: 
+			- DisplayPort Alt Mode (video output)
+			- Thunderbolt 3/4 (high-speed data and video)
+			- HDMI Alt Mode (video output)
+			- MHL Alt Mode (mobile video)
+	- ## Pin Configuration
+		- **24-pin configuration (12 pins per side)**:
+			- A1/B1: GND (Ground)
+			- A2/B2: TX1+ / TX2+ (SuperSpeed transmit positive)
+			- A3/B3: TX1- / TX2- (SuperSpeed transmit negative)
+			- A4/B4: VBUS (Power bus)
+			- A5/B5: CC1/CC2 (Configuration channel)
+			- A6/B6: D+ (USB 2.0 data positive)
+			- A7/B7: D- (USB 2.0 data negative)
+			- A8/B8: SBU1/SBU2 (Sideband use)
+			- A9/B9: VBUS (Power bus)
+			- A10/B10: RX2- / RX1- (SuperSpeed receive negative)
+			- A11/B11: RX2+ / RX1+ (SuperSpeed receive positive)
+			- A12/B12: GND (Ground)
+	- ## Compatibility
+		- **Compatible Connectors**: 
+			- [[USB/Connector/Ref/USB-A]] (via adapter or cable)
+			- [[USB/Connector/Ref/USB-B]] (via adapter or cable)
+			- [[USB/Connector/Ref/USB-B Micro]] (via adapter or cable)
+			- [[USB/Connector/Ref/Lightning]] (via adapter)
+			- Other USB-C connectors (native)
+		- **Backward Compatibility**: 
+			- USB-C ports support all previous USB versions (2.0, 3.0, 3.1, 3.2)
+			- Requires appropriate cables/adapters for older connector types
+			- USB-C to USB-A/B cables are commonly available
+	- ## Common Use Cases
+		- Modern laptops and tablets
+		- Smartphones (Android, some iPhones)
+		- External storage devices (SSDs, hard drives)
+		- Monitors and displays (via DisplayPort Alt Mode)
+		- Charging adapters and power banks
+		- Docking stations and hubs
+		- Audio interfaces and MIDI controllers
+		- Video capture devices
+		- Network adapters
+	- ## Variants and Capabilities
+		- ### USB-C with USB 2.0 Only
+			- Supports only USB 2.0 speeds (480 Mbps)
+			- Lower cost, used in charging cables and simple devices
+		- ### USB-C with USB 3.0/3.1/3.2
+			- Supports SuperSpeed data transfer
+			- May or may not support Power Delivery
+			- May or may not support Alternate Modes
+		- ### USB-C with USB4
+			- Supports USB4 Gen 2 (20 Gbps) or Gen 3 (40 Gbps)
+			- Typically supports Power Delivery
+			- May support Thunderbolt 4 compatibility
+		- ### USB-C with Thunderbolt
+			- Supports Thunderbolt 3 or 4 protocols
+			- Provides highest data transfer rates
+			- Supports DisplayPort and other Alt Modes
+			- Usually marked with Thunderbolt logo
+	- ## E-Marker Chips
+		- Most USB-C cables contain E-Marker chips that identify cable capabilities
+		- E-Marker provides information about:
+			- USB signaling protocol (2.0, 3.0, 3.1, 3.2, USB4)
+			- Power delivery capabilities
+			- Cable construction (passive/active)
+			- Supported Alternate Modes
+			- Vendor-specific functionality
+		- See: [[Adafruit/Understanding USB Type C - Cable Types Pitfalls etc]]
+	- ## Visual Identification
+		- Oval/rounded rectangle shape
+		- Fully symmetrical design
+		- No "up" or "down" orientation
+		- Smaller and more compact than USB-A or USB-B
+		- May have logos indicating capabilities (USB, Thunderbolt, etc.)
+	- ## Standards
+		- Defined in USB-IF USB Type-C specification
+		- USB 3.1 specification (2014) - initial USB-C standard
+		- USB 3.2 specification - enhanced USB-C capabilities
+		- USB4 specification - latest USB-C standard
+		- USB Power Delivery specification - power delivery protocol
+		- DisplayPort Alt Mode specification - video output capability
+	- ## Important Considerations
+		- **Cable Quality Matters**: Not all USB-C cables support the same capabilities
+		- **Power Delivery**: Requires compatible devices and cables for high-power charging
+		- **Data Speeds**: Actual speeds depend on both device and cable capabilities
+		- **Alternate Modes**: Not all USB-C ports support all Alternate Modes
+		- **Thunderbolt**: USB-C ports may or may not support Thunderbolt (check device specifications)
+	- ## Related References
+		- [[USB/Connector/Ref/Index]]
+		- [[USB/Connector/Ref/USB-A]]
+		- [[USB/Connector/Ref/USB-B]]
+		- [[USB/Connector/Ref/USB-B Micro]]
+		- [[USB/Connector/Ref/Lightning]]
+		- [[Adafruit/Understanding USB Type C - Cable Types Pitfalls etc]]
+		- [[USB/How To/Identify Connector Type]] (when created)
+		- [[USB/How To/Choose Correct Cable]] (when created)

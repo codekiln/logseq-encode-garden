@@ -1,0 +1,3 @@
+- [Buy a Raspberry Pi Zero 2 W – Raspberry Pi](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/)
+	- uses [[USB]] Micro
+	- There's a raspberry pi ISO burner for SD card
