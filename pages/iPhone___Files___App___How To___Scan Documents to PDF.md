@@ -57,4 +57,5 @@ tags:: [[Diataxis/How To]]
 		- **Can't find saved PDF**: Check the folder you selected during save process
 	- ## Related
 		- [[MacOS/How To/Import Only Some Photos via USB from iPhone]]
+		- [[iPhone/Files/App/How To/Transfer Files via USB to Mac]]
 		- [[PDF/Tool/CLI/PDF To Markdown Tools]]

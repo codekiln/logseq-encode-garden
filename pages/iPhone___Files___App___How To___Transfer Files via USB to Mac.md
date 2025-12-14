@@ -1,0 +1,79 @@
+tags:: [[Diataxis/How To]]
+
+- # How to Transfer Files from [[iPhone]] [[Files App]] to [[Mac]] via [[USB]]
+	- ## Goal
+		- Transfer files stored in the iPhone Files app to a Mac computer using a USB cable connection
+	- ## Preconditions
+		- iPhone with iOS 11 or later
+		- Mac computer (macOS Catalina or later uses Finder; earlier versions use iTunes)
+		- USB cable (Lightning-to-USB or USB-C, depending on your iPhone model)
+		- Files app installed (built-in)
+	- ## Important Limitations
+		- **File Location Matters**: Files stored in "On My iPhone" are app-specific and only accessible if the app supports file sharing
+		- **iCloud Drive Files**: Files in iCloud Drive sync automatically and don't require USB transfer
+		- **App Support Required**: Only apps that support file sharing will appear in Finder
+	- ## Procedure
+		- ### Method 1: Using Finder File Sharing (macOS Catalina and later)
+			- **Connect Your iPhone:**
+				- Use a USB cable to connect your iPhone to your Mac
+				- Unlock your iPhone
+				- If prompted, tap "Trust This Computer" and enter your iPhone passcode
+			- **Open Finder:**
+				- Open Finder on your Mac
+				- In the Finder sidebar, look for your iPhone under "Locations"
+				- Click on your iPhone to select it
+			- **Access File Sharing:**
+				- Click on the "Files" tab in the main Finder window
+				- You'll see a list of apps that support file sharing
+				- Select the app that contains the files you want to transfer
+			- **Transfer Files:**
+				- To copy files to your Mac: Drag and drop files from the app's list to a folder on your Mac
+				- To add files from your Mac to your iPhone: Drag and drop files from your Mac into the app's list in Finder
+		- ### Method 2: Using iCloud Drive (Recommended for Most Files)
+			- **On iPhone:**
+				- Open the Files app
+				- Navigate to the file you want to transfer
+				- Long-press the file and select "Move" or "Copy"
+				- Navigate to iCloud Drive
+				- Tap "Copy" or "Move" to place the file in iCloud Drive
+			- **On Mac:**
+				- Files in iCloud Drive will automatically sync to your Mac
+				- Open Finder and navigate to iCloud Drive in the sidebar
+				- Your files will be available there
+			- **Note**: This method doesn't require USB, but files sync automatically when both devices are connected to the internet
+		- ### Method 3: For Files in "On My iPhone" Location
+			- **Identify the Source App:**
+				- Files in "On My iPhone" are stored within specific apps
+				- Check which app created or stores the file
+			- **Check App File Sharing Support:**
+				- Connect iPhone via USB and open Finder
+				- Look for the app in the File Sharing section
+				- If the app appears, you can transfer files using Method 1
+				- If the app doesn't appear, it doesn't support file sharing via USB
+	- ## Alternative Methods (When USB File Sharing Isn't Available)
+		- **AirDrop:**
+			- Open Files app on iPhone
+			- Long-press the file and select "Share"
+			- Choose "AirDrop" and select your Mac
+			- Accept the transfer on your Mac
+		- **Email or Cloud Services:**
+			- Use the Share sheet in Files app
+			- Send files to yourself via email or upload to cloud storage
+		- **Third-Party Apps:**
+			- Use apps like Documents by Readdle or FileBrowser that support more file transfer options
+	- ## Troubleshooting
+		- **iPhone doesn't appear in Finder:**
+			- Ensure iPhone is unlocked and you've tapped "Trust This Computer"
+			- Try disconnecting and reconnecting the USB cable
+			- Check that you're using a data-capable USB cable (not just charging cable)
+		- **App doesn't appear in File Sharing:**
+			- The app may not support file sharing
+			- Try using iCloud Drive or AirDrop instead
+		- **Files not syncing from iCloud Drive:**
+			- Ensure both devices are signed into the same Apple ID
+			- Check that iCloud Drive is enabled in Settings > [Your Name] > iCloud
+			- Ensure both devices have internet connectivity
+	- ## Related
+		- [[MacOS/How To/Import Only Some Photos via USB from iPhone]]
+		- [[iPhone/Files/App/How To/Scan Documents to PDF]]
+
