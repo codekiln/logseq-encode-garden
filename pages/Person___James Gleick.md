@@ -1,0 +1,11 @@
+- # James Gleick
+	- ## Bio
+		- American author and science writer
+		- Known for writing about science, technology, and information theory
+	- ## Notable Work
+		- ### Writing
+			- #Nonfiction
+				- [[Person/James Gleick/Book/11/The Information: A History, a Theory, a Flood]]
+	- ## Related
+		- [The Information: A History, a Theory, a Flood - Wikipedia](https://en.wikipedia.org/wiki/The_Information:_A_History,_a_Theory,_a_Flood)
+

@@ -1,0 +1,11 @@
+- # Annette Vande Gorne
+	- ## Bio
+		- Belgian composer and teacher specializing in acousmatic music
+		- Known for her work in electroacoustic and acousmatic composition
+	- ## Notable Work
+		- ### Writing
+			- #Nonfiction #Music
+				- [[Person/Annette Vande Gorne/Book/18/Treatise on Writing Acousmatic Music on Fixed Media]]
+	- ## Related
+		- [Annette Vande Gorne: Treatise on Writing Acousmatic Music on Fixed Media (Book) – LIEN 2018](https://electrocd.com/en/album/5929-treatise-on-writing-acousmatic-music-on-fixed-media)
+
