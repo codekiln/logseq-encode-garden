@@ -1,0 +1,6 @@
+- [theredguild/devcontainer: The Red Guild's devcontainer focused in web3 and security.](https://github.com/theredguild/devcontainer/tree/main)
+	- [[My Notes]]
+		- their [Devcontainer Wizard](https://github.com/theredguild/devcontainer-wizard) can help in using any pre-built container, but perhaps most importantly, this repo has an example of [eight sub-folders in the .devcontainer each representing a distinct configuration](https://github.com/theredguild/devcontainer/tree/main/.devcontainer).
+		- has some interesting comments about the trade-offs for security with [[VSCode/Dev Containers]]
+			- > VS Code does a lot to improve user experience, but that doesn't come without security tradeoffs. VS Code might allow API calls that can lead to running arbitrary commands on the host machine, and by default, it shares sockets such as the gpg-agent’s, which means keys stored outside the container can be used for signing. This opens the door to blind-signing commits scenarios, where a process inside the container may trigger signatures without the user’s full awareness. If you want to deep dive into these "tricks", we're working on an article covering the most relevant of them — stay tuned.
+		-

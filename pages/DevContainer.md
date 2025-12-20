@@ -9,6 +9,9 @@ title:: DevContainer
 	- ## Key Concepts
 		- [[DevContainer/Docker Compose/Concept/Using Docker Compose]] - Multi-container development with Docker Compose
 		- [[DevContainer/Feature/Concept/Docker Build Order]] - How features map to Docker layers
+	- ## Reference
+		- [[DevContainer/Ref/Key]] - Configuration keys for `devcontainer.json`
+		- [[DevContainer/Ref/Variable]] - Variables available in `devcontainer.json`
 	- ## Language-Specific Configuration
 		- [[DevContainer/Rust/How To/Configure Debugging]] - Configuring Rust debugging with ptrace
 	- ## Competitors and Interacting Standards

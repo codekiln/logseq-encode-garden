@@ -1,0 +1,12 @@
+- # Variable: ${containerWorkspaceFolder}
+	- ## Description
+		- The absolute path of the workspace folder inside the container
+	- ## Usage
+		- Used in `devcontainer.json` configuration files to reference the container's workspace path
+		- Example: `"onCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}"`
+	- ## Context
+		- This variable is particularly useful when configuring Git safe directories, as the container path may differ from the host path
+	- ## Related
+		- [[DevContainer/Ref/Key/onCreateCommand]] - Common key that uses this variable
+		- [[DevContainer/Ref/Variable]] - Index of all variables
+

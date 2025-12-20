@@ -1,0 +1,7 @@
+- [mastodon/.devcontainer at main · mastodon/mastodon](https://github.com/mastodon/mastodon/tree/main/.devcontainer)
+	- [[My Notes]]
+		- has an example of two different `devcontainer.json` - one at `.devcontainer/devcontainer.json` and one at `.devcontainer/codespaces/.devcontainer.json` for [[GitHub/Codespaces]]
+			- the [[Codespace]] one makes use of environment variables like `CODESPACE_NAME`,  `${localWorkspaceFolderBasename}`, and points to the same compose file as `.devcontainer/devcontainer.json`
+				- I like how the codespace one has this bit, which has bit me a few times. Uses [[DevContainer/Ref/Key/onCreateCommand]] and [[DevContainer/Ref/Variable/containerWorkspaceFolder]]
+					- `  "onCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",`
+					-
