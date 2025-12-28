@@ -1,0 +1,2 @@
+- [Dimforge Home | Dimforge](https://dimforge.com/)
+	- [[Open Source]] company created by [[Person/Sebastien Crozet]] for various 3d and 2d simulation [[Rust]] crates such as [[Rapier]]

@@ -1,0 +1,7 @@
+tags:: [[Idea]]
+
+- At a high level, it’s a **casual, aesthetic, generative sandbox** centered on *making and tending a mandala*. You don’t “win,” manage money, or optimize efficiency. Instead, you **paint zones, symmetries, and patterns**, then watch a living system grow inside those constraints.
+- Mechanically, it sits somewhere between [[Game/Video/SimCity]] and [[Game/Video/Conway's Game of Life]], but without the focus on realism, economics, or raw cellular automata. You don’t micromanage agents; you shape conditions. Think zoning for *biomes* rather than buildings.
+- The player lays down parts of a [[Mandala]] such as radial regions, [[Tessellation]]s wedges, spiral arms, spirograph-ish constructions. Each of these is tuned to attract different fantasy flora and fauna. These creatures are whimsical hybrids (fawn-unicorns, fox-pigs, etc., see also [[Game/Video/Idea/Mandalife/Bestiary]]), and the system evolves over time in visually pleasing, semi-predictable ways. The joy comes from watching patterns emerge, collide, and stabilize.
+- There are also **interventions** rather than “disasters”: geometric events that permanently scar or reshape the mandala: spirograph-like cuts, symmetry-breaking fractures, radial ripples, which changes how life flows afterward. Some tools even let you force [[Symmetry]] or deliberately break it.
+- Aesthetically and experientially, it’s meant to feel **meditative, playful, and beautiful**, closer to tending a kinetic artwork than running a simulation.
