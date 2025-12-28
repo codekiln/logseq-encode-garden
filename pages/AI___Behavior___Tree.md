@@ -1,0 +1,83 @@
+tags:: [[Diataxis/Explanation]]
+
+- # Behavior Trees Conceptual Overview
+	- ## Overview
+		- **Behavior trees (BTs)** are a well-established concept in **computer science and AI**, completely independent of any specific implementation
+		- They are hierarchical, composable control structures used to define agent behavior through a tree of decision nodes
+		- Designed to be **reactive**, **deterministic**, and **readable by humans**
+		- Provide a structured way to encode both control flow and policy together
+		- ![Image](https://towardsdatascience.com/wp-content/uploads/2020/12/1QKcHS8xnKX0mDeJp1jEiAA.png)
+		- ![Image](https://edirlei.com/aulas/game-ai/GAME_AI_Lecture_08_Behavior_Trees_2018_files/img_07.png)
+		- ![Image](https://robohub.org/wp-content/uploads/2021/08/bt_vs_fsm.png)
+		- ![Image](https://www.researchgate.net/publication/312869797/figure/fig4/AS%3A1039702882795522%401624895892920/A-behavior-tree-including-selector-sequence-condition-and-action-nodes.png)
+	- ## Context
+		- **Historical Development**: Behavior trees emerged in the early 2000s, primarily from **game AI**, as a response to limitations in:
+			- Finite State Machines (FSMs)
+			- Hierarchical FSMs
+			- Hard-coded decision logic
+		- **Problem Addressed**: Traditional FSMs became unwieldy for complex NPC behaviors, leading to "spaghetti state machines" that were difficult to maintain and debug
+		- **Adoption**: Popularized by studios like **LucasArts**, **Bungie**, and **EA**, with a canonical reference being Isla, D. "Handling Complexity in the Halo 2 AI." GDC 2005
+		- **Current Relevance**: Now widely used in:
+			- Game engines (Unreal Engine, Unity)
+			- Robotics and autonomous systems (ROS/ROS2 ecosystems)
+			- Safety-critical applications requiring deterministic, explainable behavior
+			- Modern AI systems as high-level controllers for reinforcement learning and planning systems
+	- ## Key Principles
+		- **Hierarchical Structure**: Behavior trees organize decisions in a tree structure, allowing complex behaviors to be decomposed into simpler components
+		- **Composability**: Simple behaviors can be combined into more complex behaviors through composition
+		- **Reactivity**: BTs can respond to changing conditions and environment states
+		- **Determinism**: Given the same inputs and state, a behavior tree produces the same outputs
+		- **Human Readability**: The tree structure is more intuitive and maintainable than large state machines
+		- **Tick-Based Execution**: BTs use a tick-based execution semantics where the tree is evaluated periodically
+		- **Small Node Set**: Uses a closed set of node types (Sequence, Selector, Parallel, Decorators, Actions/Conditions) that can express complex behaviors
+	- ## Mechanism
+		- Behavior trees execute through a **tick-based evaluation** process:
+			- Starting from the root, nodes are evaluated in order
+			- Each node returns a status: Success, Failure, or Running
+			- Control flow is determined by composite nodes (Sequence, Selector, Parallel)
+		- **Core Node Types**:
+			- **Sequence**: Executes children in order until one fails (all must succeed)
+			- **Selector**: Executes children in order until one succeeds (at least one must succeed)
+			- **Parallel**: Executes multiple children simultaneously
+			- **Decorators**: Modify the behavior of child nodes (invert, repeat, etc.)
+			- **Actions/Conditions**: Leaf nodes that perform actual work or check conditions
+		- **Execution Flow**:
+			- The tree is ticked from the root
+			- Status propagates up the tree based on node semantics
+			- Running nodes maintain state between ticks
+			- The tree can be interrupted and resumed based on conditions
+		- **Control Flow + Policy**: Unlike pure control structures, BTs encode both the decision logic (control flow) and the policy (what actions to take) in a single structure
+	- ## Examples
+		- ### Game AI
+			- NPCs in games use BTs to determine behaviors like:
+				- Patrol routes (Sequence of waypoints)
+				- Combat decisions (Selector between attack, defend, retreat)
+				- Complex behaviors combining movement, combat, and interaction
+		- ### Robotics
+			- Robot control architectures use BTs for:
+				- Task decomposition (breaking complex tasks into simpler actions)
+				- Safety-critical behaviors (ensuring deterministic responses)
+				- Explainable autonomy (humans can understand and verify robot decisions)
+		- ### Modern AI Systems
+			- **BT + RL Hybrids**: Behavior trees provide high-level structure while reinforcement learning optimizes low-level actions
+			- **BT Compilation from Planners**: Automated planners generate behavior trees for execution
+			- **Formal Verification**: BTs can be formally verified for safety properties
+			- **Runtime BT Synthesis**: Systems that generate or modify BTs at runtime based on conditions
+		- ### Implementation Example: [[Person/Kristoffer Rakstad/GitHub/bonsai]]
+			- The **Bonsai** project provides a **Rust-native**, strongly typed implementation
+			- Demonstrates BTs' suitability for:
+				- Embedded systems
+				- Robotics applications
+				- Game engines
+				- Deterministic execution with concurrency-aware semantics
+	- ## Misconceptions
+		- Behavior trees are only for games → **False**. BTs are widely used in robotics, autonomous systems, and modern AI architectures
+		- BTs are just fancy state machines → **False**. While related, BTs offer hierarchical composition, better readability, and different execution semantics
+		- BTs are outdated compared to neural networks → **False**. BTs are actively used alongside and in combination with modern AI techniques like RL
+		- BTs can only express simple behaviors → **False**. Through composition, BTs can express very complex behaviors while remaining maintainable
+		- BTs are always deterministic → **True, but context matters**. BTs themselves are deterministic, but they can interact with non-deterministic systems (like RL policies)
+		- BTs replace all other AI techniques → **False**. BTs are often used as high-level controllers that coordinate with other AI systems
+	- ## Related
+		- [[AI/Behavior/Tree]] - Quick reference for behavior trees
+		- [Sollimann/bonsai: Rust implementation of behavior trees for deterministic AI](https://github.com/Sollimann/bonsai)
+		- [[Person/Kristoffer Rakstad]] - Creator of the Bonsai implementation
