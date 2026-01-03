@@ -10,7 +10,7 @@ globs:
 
 # Update Week Command
 
-This command automates the creation of a complete week structure in the Logseq garden, including week pages, day pages, and todo pages with proper navigation links and formatting.
+This command automates the creation of a complete week structure in the Logseq garden, including week pages, day pages, and week todo pages with proper navigation links and formatting.
 
 ## Usage
 
@@ -29,7 +29,6 @@ This creates the complete structure for the current week.
 4. **Creates** the week page with proper navigation links
 5. **Creates** the week todos page
 6. **Creates** 7 daily pages (d1-d7) with correct navigation
-7. **Creates** 7 daily todo pages with proper references
 
 ## Info to gather
 
@@ -140,7 +139,6 @@ When a week is at the end or beginning of a trimester, the `prev` and `next` lin
 ### Navigation Links
 The command maintains correct references between:
 - Week pages and their days
-- Day pages and their todos
 - Adjacent weeks (including across trimester boundaries)
 - Adjacent days (including across week boundaries)
 
