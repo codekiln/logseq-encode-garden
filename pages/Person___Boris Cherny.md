@@ -1,0 +1,42 @@
+- # Boris Cherny
+	- ## Overview
+		- Software engineer, author, and technical leader specializing in frontend development and TypeScript
+		- Creator of [[Claude Code]] at [[Anthropic]]
+		- Member of Technical Staff at [[Anthropic]] (September 2024 - Present)
+		- Author of "Programming TypeScript" published by O'Reilly Media
+	- ## Professional Experience
+		- ### Current Role
+			- **Member of Technical Staff** at [[Anthropic]] (September 2024 - Present)
+				- Creator and lead developer of [[Claude Code]]
+				- Contributing to AI safety and research initiatives
+		- ### Previous Experience
+			- **Principal Software Engineer** at [[Meta]] / Instagram (November 2017 - August 2024)
+				- Oversaw server architecture and development infrastructure
+				- Led code quality initiatives
+			- **Architect** at [[Coatue Management]] (January 2015 - April 2017)
+				- Responsible for all frontend systems
+			- **Lead Software Engineer** at [[Turn]] (January 2014 - December 2014)
+				- Managed frontend systems and DMP frontend systems
+			- **First Frontend Hire** at [[AgileMD]] (June 2012 - June 2013)
+				- Focused on frontend development
+	- ## Education
+		- **Bachelor's in Economics** from [[Uni/UC San Diego]] (2009 - 2011)
+	- ## Publications
+		- **Programming TypeScript** (O'Reilly Media)
+			- Comprehensive guide to TypeScript for developers
+			- Published by O'Reilly Media
+	- ## Notable Work
+		- ### Claude Code
+			- Creator and lead developer of [[Claude Code]]
+			- AI-powered coding assistant and development tool
+			- Actively shares insights and setup tips for using Claude Code effectively
+	- ## Online Presence
+		- [Personal Blog](https://borischerny.com)
+		- [GitHub](https://github.com/bcherny)
+		- Email: [email protected]
+	- ## Personal Interests
+		- Reading
+		- Running
+		- Culinary pursuits
+	- ## Related Content
+		- [[Claude Code/Reddit/26/01/Boris shares his setup with 13 detailed steps]] - Boris shares his Claude Code setup and workflow tips
