@@ -1,0 +1,55 @@
+tags:: [[Blog]], [[mgranda]], [[Claude Code]], [[Mobile Development]], [[Development Workflow]]
+date-created:: [[2026/01/02]]
+created-by:: [[Person/mgranda]]
+source:: https://granda.org/en/2026/01/02/claude-code-on-the-go/
+
+- # [Claude Code On-The-Go - granda](https://granda.org/en/2026/01/02/claude-code-on-the-go/)
+	- ## Key Insight
+		- Running six [[Claude Code]] agents in parallel from a phone using Termius on iOS and a cloud VM
+		- No laptop or desktop needed—just Termius on iOS and a cloud VM
+		- The loop: kick off a task, pocket the phone, get notified when Claude needs input. Async development from anywhere.
+	- ## Infrastructure
+		- A Vultr VM in Silicon Valley:
+			- Instance: vhf-8c-32gb
+			- Cost: $0.29/hr (~$7 per day when running)
+			- Pay only when working. Two scripts handle lifecycle:
+				- `vm-start`: Starts the VM, waits for Tailscale, and connects via mosh
+				- `vm-stop`: Halts the VM
+		- iOS Shortcut that calls the Vultr API directly—start the VM from phone before even opening Termius
+		- The VM's public IP has no SSH listener. All access goes through Tailscale's private network. Defense in depth: cloud firewall blocks everything except Tailscale coordination, local nftables as backup
+	- ## Mobile Terminal
+		- Termius handles SSH and mosh on iOS/Android
+		- Mosh is the key—it survives network transitions. Switch from WiFi to cellular, walk through a dead zone, put the phone to sleep. The connection persists
+		- One gotcha: mosh doesn't forward SSH agent. For git operations that need GitHub auth, use regular SSH inside tmux
+	- ## Session Persistence
+		- The shell auto-attaches to tmux on login. Close Termius, reopen hours later, everything's still there
+		- Multiple Claude agents run in parallel windows. C-a c for new window, C-a n to cycle. Works well on a phone keyboard
+	- ## Push Notifications
+		- This is what makes mobile development practical. Without notifications, you'd constantly check the terminal. With them, you can walk away
+		- The hook in `~/.claude/settings.json`:
+			- When Claude calls AskUserQuestion, the hook fires. A simple script extracts the question and POSTs to Poke's webhook
+		- Phone buzzes. Notifications show the question. Tap, respond, continue
+	- ## Trust Model
+		- Run Claude Code in permissive mode. The VM is isolated—no access to production systems, no secrets beyond what's needed for development. Worst case: Claude does something unexpected on a disposable VM
+		- Cost control adds another layer. The VM costs $0.29/hr. Even if something runs away, the daily cap is bounded
+	- ## Parallel Development
+		- Git worktrees let me run multiple features simultaneously:
+			- Each worktree gets its own tmux window with a Claude agent. Port allocation is hash-based—deterministic from branch name, no conflicts
+		- Six agents, six features, one phone
+	- ## What This Enables
+		- Review PRs while waiting for coffee. Kick off a refactor on the train. Fix a bug from the couch while watching TV
+		- The pattern: start a task that will take Claude 10-20 minutes, do something else, get notified, respond, repeat. Development fits into the gaps of the day instead of requiring dedicated desk time
+	- ## The Components
+		- Vultr: Cloud VM ($0.29/hr, pay-per-use)
+		- Tailscale: Private network, secure access
+		- Termius: iOS/Android SSH client
+		- mosh: Network-resilient shell
+		- tmux: Session persistence
+		- Poke: Push notifications via webhook
+		- Claude Code: The actual work
+	- ## Related
+		- The setup took one Claude Code session to build—gave it my Vultr API key and access to gh, asked for a secure dev VM. Now I code from my phone
+		- [[AI/Coding]]
+		- [[Mobile Development]]
+		- [[Development Workflow]]
+		- [[Claude Code]]

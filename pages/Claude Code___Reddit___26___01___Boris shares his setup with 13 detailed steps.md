@@ -1,0 +1,55 @@
+created-by:: [[Person/Boris Cherny]]
+- [Claude Code creator Boris shares his setup with 13 detailed steps,full details below : r/ClaudeAI](https://www.reddit.com/r/ClaudeAI/comments/1q2c0ne/claude_code_creator_boris_shares_his_setup_with/)
+	- I'm Boris and I created **Claude Code.** Lots of people have asked how I use Claude Code, so I wanted to show off my setup a bit.
+	- My **setup might be surprisingly vanilla.** Claude Code works great out of the box, so I personally don't customize it much.
+	- **There is no one correct way to use Claude Code:** we intentionally build it in a way that you can use it, customize it and hack it however you like. Each person on the Claude Code team uses it very differently. So, here goes.
+	- 1. I run 5 Claudes in parallel in my terminal. I number my tabs 1-5, and use system notifications to know when a Claude needs input
+		- 🔗: [https://code.claude.com/docs/en/terminal-config#iterm-2-system-notifications](https://code.claude.com/docs/en/terminal-config#iterm-2-system-notifications)
+	- 2. I also run 5-10 Claudes on claude.ai/code, in parallel with my local Claudes. As I **code** in my terminal, I will often hand off local sessions to web (using &), **or** manually kick off sessions in Chrome, and sometimes I will --teleport back and forth. I also start a few sessions from my phone (from the Claude iOS app) every morning and throughout the day, and check in on them later.
+	- 3. I use **Opus 4.5 with thinking** for everything. It's the best coding model I've ever used, and even though it's bigger & slower than Sonnet, since you have to **steer** it less and it's better at tool use, it is almost always faster than using a smaller model in the end.
+	- 4. Our team **shares** a single CLAUDE.md for the Claude Code repo. We check it into git, and the whole team contributes multiple times a week. Anytime we see Claude do something incorrectly we add it to the CLAUDE.md, so Claude **knows** not to do it next time.
+		- Other teams **maintain** their own CLAUDE.md's. It is each team's job to keep theirs up to date.
+	- 5. During code review, I will **often** tag @.claude on my coworkers' PRs to add something to the CLAUDE.md as part of the PR. We use the Claude Code Github action (/install-github-action) for this. It's our version of @danshipper's Compounding Engineering
+	- 6. Most sessions **start** in Plan mode (shift+tab twice). If my goal is to write a Pull Request, I will use Plan mode, and go back and forth with Claude until I like its plan. From there, I **switch** into auto-accept edits mode and Claude can usually 1-shot it. A good plan is really important.
+	- 7. I use **slash** commands for every "inner loop" workflow that I end up doing many times a day. This saves me from repeated prompting, and makes it so Claude can use these workflows, too. Commands are checked into git and live in .claude/commands/.
+		- **For example,** Claude and I use a /commit-push-pr slash command dozens of times every day. The command **uses** inline bash to pre-compute git status and a few other pieces of info to make the command run quickly and avoid back-and-forth with the model
+		- 🔗 [https://code.claude.com/docs/en/slash-commands#bash-command-execution](https://code.claude.com/docs/en/slash-commands#bash-command-execution)
+	- 8. I use a few subagents regularly: code-simplifier simplifies the **code after** Claude is done working, verify-app has detailed instructions for testing Claude Code end to end, and so on. **Similar** to slash commands, I think of subagents as automating the most common workflows that I do for most PRs.
+		- 🔗 [https://code.claude.com/docs/en/sub-agents](https://code.claude.com/docs/en/sub-agents)
+	- 9. We use a **PostToolUse hook** to format Claude's code. Claude usually generates well-formatted code out of the box, and the hook handles the last 10% to avoid formatting errors in CI later.
+	- 10. I **don't use** --dangerously-skip-permissions. Instead, I use /permissions to pre-allow common bash commands that I know are safe in my environment, to **avoid** unnecessary permission prompts. Most of these are checked into .claude/settings.json and shared with the team.
+	- 11. Claude Code **uses** all my tools for me. It often searches and posts to Slack (via the MCP server), runs BigQuery queries to answer analytics questions (using bq CLI), grabs error logs from Sentry, etc. The Slack MCP configuration is checked into our .mcp.json and shared with the team.
+	- 12. **For very long-running tasks,** I will either (a) prompt Claude to verify its work with a background agent when it's done, (b) use an agent Stop hook to do that more deterministically, or (c) use the ralph-wiggum plugin (originally dreamt up by @GeoffreyHuntley).
+		- I will also use either --permission-mode=dontAsk or --dangerously-skip-permissions in a sandbox to avoid permission prompts for the session, so Claude can cook without being blocked on me.
+		- 🔗: [https://github.com/anthropics/claude-plugins-official/tree/main/plugins%2Fralph-wiggum](https://github.com/anthropics/claude-plugins-official/tree/main/plugins%2Fralph-wiggum)
+		- [Hooks Guide](https://code.claude.com/docs/en/hooks-guide)
+	- 13. **A final tip:** probably the most important thing to get great results out of Claude Code -- give Claude a way to verify its work. If Claude has that feedback loop, it will 2-3x the quality of the final result.
+		- Claude tests **every single change** I land to claude.ai/code using the Claude Chrome extension. It opens a browser, tests the UI, and iterates until the code works and the UX feels good.
+		- Verification looks **different** for each domain. It might be as simple as running a bash command, or running a test suite, or testing the app in a browser or phone simulator. Make sure to invest in making this rock-solid.
+		- 🔗: [Chrome Extension Documentation](https://code.claude.com/docs/en/chrome)
+	- ~> **I hope this was helpful - Boris**
+	- ## Images order
+		- **Step_1** (Image-2)
+			- https://preview.redd.it/claude-code-creator-boris-shares-his-setup-with-13-detailed-v0-wzm9nmdhd0bg1.jpg?width=1080&crop=smart&auto=webp&s=8cb9c7a928a1b9f5f38fa6dc32ab9a767b70f89a
+		- **Step_2** (Image-3)
+			- https://preview.redd.it/claude-code-creator-boris-shares-his-setup-with-13-detailed-v0-yk4jrbnhd0bg1.jpg?width=1080&crop=smart&auto=webp&s=bce13694b87988a5dc504cb2ae6dcefdc7fd3939{:height 478, :width 718}
+		- **Step_4** (Image-4)
+			- https://preview.redd.it/claude-code-creator-boris-shares-his-setup-with-13-detailed-v0-6jv2r7vhd0bg1.jpg?width=640&crop=smart&auto=webp&s=edd86407cc238a2df1bd545f2542ff8138f22e64
+		- **Step_5** (Image-5)
+			- https://preview.redd.it/claude-code-creator-boris-shares-his-setup-with-13-detailed-v0-8fer78zhd0bg1.jpg?width=640&crop=smart&auto=webp&s=9d7608aebd34ebc788d66b845b84ba84de4ea673{:height 505, :width 640}
+		- **Step_6** (Image-6)
+			- https://preview.redd.it/claude-code-creator-boris-shares-his-setup-with-13-detailed-v0-h84s7k5id0bg1.jpg?width=1080&crop=smart&auto=webp&s=ee02e690e6aa08a6df65254b4c7a910c6a1098f4
+		- **Step_7** (Image-7)
+			- https://preview.redd.it/claude-code-creator-boris-shares-his-setup-with-13-detailed-v0-da8sm19id0bg1.png?width=640&crop=smart&auto=webp&s=83c1a4e58e2c96f1047a1568d634b0a8cd620839
+		- **Step_8** (Image-8)
+			- https://preview.redd.it/claude-code-creator-boris-shares-his-setup-with-13-detailed-v0-t2cxkicid0bg1.jpg?width=640&crop=smart&auto=webp&s=e21695aaba85f38feb33c47d7af70ef32778ab90
+		- **Step_9** (Image-9)
+			- https://preview.redd.it/claude-code-creator-boris-shares-his-setup-with-13-detailed-v0-g7wip0hid0bg1.png?width=320&crop=smart&auto=webp&s=bf883c44e500770c656932869032a7d6b48972e1{:height 228, :width 320}
+		- **Step_10** (Image-10)
+			- https://preview.redd.it/claude-code-creator-boris-shares-his-setup-with-13-detailed-v0-j6b8w2kid0bg1.jpg?width=640&crop=smart&auto=webp&s=3c0060e335197fef46ba9688750f572c8d0ed162
+		- **Step_11** (Image-11)
+			- https://preview.redd.it/claude-code-creator-boris-shares-his-setup-with-13-detailed-v0-2a330xmid0bg1.jpg?width=640&crop=smart&auto=webp&s=bdfde2f15b09061c3be18224b350df86958563c5
+		- **Step_12** (Image-12)
+			- https://preview.redd.it/claude-code-creator-boris-shares-his-setup-with-13-detailed-v0-fot1z4qid0bg1.jpg?width=640&crop=smart&auto=webp&s=18beaffce35db409a34aa6dc31a74b49152942d2
+		- **Source: Boris Cherny in X**
+			- 🔗: [https://x.com/i/status/2007179832300581177](https://x.com/i/status/2007179832300581177)
