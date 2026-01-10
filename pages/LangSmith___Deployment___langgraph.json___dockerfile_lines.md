@@ -1,0 +1,1 @@
+- Array of additional lines to add to Dockerfile following the import from parent image.
