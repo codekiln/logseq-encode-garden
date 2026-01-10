@@ -1,0 +1,5 @@
+- # Philippe Mion
+	- ## Bio
+		- Composer of acousmatic music
+	- ## Notable Work
+		- Confidence

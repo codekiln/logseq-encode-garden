@@ -1,0 +1,6 @@
+- # Jean Piaget
+	- ## Bio
+		- Swiss psychologist known for his work on child development
+		- Developed theories on cognitive development and learning
+	- ## Related
+		- [Jean Piaget - Wikipedia](https://en.wikipedia.org/wiki/Jean_Piaget)

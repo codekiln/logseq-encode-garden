@@ -1,0 +1,9 @@
+- # Pierre Henry
+	- ## Bio
+		- French composer and pioneer of musique concrète
+		- Known for his experimental electronic music and collaborations with Pierre Schaeffer
+	- ## Notable Work
+		- Variations pour une porte et un soupir
+		- Le voyage
+	- ## Related
+		- [Pierre Henry - Wikipedia](https://en.wikipedia.org/wiki/Pierre_Henry)

@@ -1,0 +1,8 @@
+- # Paul Klee
+	- ## Bio
+		- Swiss-German artist known for his work in expressionism, cubism, and surrealism
+		- Wrote "Théorie de l'art moderne" (Theory of Modern Art)
+	- ## Notable Work
+		- Théorie de l'art moderne (1968)
+	- ## Related
+		- [Paul Klee - Wikipedia](https://en.wikipedia.org/wiki/Paul_Klee)

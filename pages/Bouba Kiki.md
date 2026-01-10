@@ -1,0 +1,13 @@
+- In anthropology (and closely related fields like psychology and linguistics), **bouba / kiki** refers to the **Bouba–Kiki effect**: a robust cross-cultural tendency for people to associate certain **sounds** with certain **shapes**.
+- ![https://99designs-blog.imgix.net/blog/wp-content/uploads/2021/09/BoobaKiki.png?auto=format&fit=max&q=60&w=930](https://99designs-blog.imgix.net/blog/wp-content/uploads/2021/09/BoobaKiki.png?auto=format&fit=max&q=60&w=930)
+- ### The basic finding
+	- When shown two shapes—one **rounded**, one **spiky**—and asked which is called *bouba* and which is *kiki*:
+		- **Bouba** → rounded, soft, blobby shape
+		- **Kiki** → sharp, angular, spiky shape
+	- This holds across:
+		- languages
+		- cultures
+		- ages (including young children)
+		- even among people with little exposure to Western writing systems
+- ### Where it comes from
+	- The effect was first observed by [[Person/Wolfgang Köhler]] in the 1920s (originally using *takete* and *maluma*). Later replications standardized *bouba/kiki*.

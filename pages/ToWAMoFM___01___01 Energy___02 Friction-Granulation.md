@@ -2,15 +2,52 @@ prev:: [[ToWAMoFM/01/01 Energy/01 Percussion-Resonance]]
 next:: [[ToWAMoFM/01/01 Energy/03 Accumulation of Corpuscules]]
 
 - # [Friction-Granulation](https://sites.inagrm.com/avdg/activities/frottement-granulation.xhtml)
-	- ## Overview
-		- Exploration of friction-based energy and granular synthesis in acousmatic music
-		- Friction-granulation examines the relationship between continuous friction sounds and granular textural processes
-		- Understanding how friction generates granular sound particles and textures
-	- ## Key Concepts
-		- Friction: Continuous rubbing or scraping that generates sustained sound energy
-		- Granulation: The breaking down of sound into small particles or grains
-		- Texture: The resulting granular texture from friction-based sound generation
-		- Transformation: How friction sounds can be processed into granular textures
-	- ## Sound Examples
-		- *Note: Sound examples should be added from the website with media player hyperlinks*
-		- Example format: {{embed [[Person/Composer Name/Piece Title]]}}
+	- [[Friction]] is raw energy between two surfaces that meet
+	- It's a gestural model, a model of movement
+	- It's a mental representation of the gesture based on what we already know / see
+		- {{embed [[Person/Jean Piaget/Proprio-Perceptive]]}}
+	- The idea is to move from a sliding state to a stop, to explore all the states, the unstable balances (the [[Grain]]s) between these two poles
+	- There's a direct relationship between intention, gesture, and the resulting sounds
+	- The deep, emotional meaning is in the gesture: for the musician as well as the dancer, painter, or sculptor, emotion is transmitted through the quality and intense experience of physical gestures that express feeling
+	- ## Working Method
+		- This is a global model, we think of it more as an improvised sequence-game. We let ourselves be guided by gesture and listening through headphones. The hand-ear couple finds its full justification in this energetic model of [[Friction]]
+		- Recording [[Sound Body]]s in direct relationship with the human body
+		- The [[Mic]] is part of the [[Instrument]] (or part of how you hold the [[Instrument]])
+		- Moving from smooth to [[Granulation]] and to point-like
+		- The granular is a type of energy that results from effort:
+			- The person listening will feel it, with their own body, because they have a [[Proprio-Perceptive]] knowledge of the same movements
+				- [[My Note]]
+					- In [[Person/Arthur Schopenhauer/Book/The World as Will and Representation]]
+					- > **The body is the only object we know in two ways at once**
+						- as *representation* (perceived, spatial, causal)
+						- and as *will* (immediate, felt, enacted)
+		- Hold things back, let them go
+	- ## Commentary
+		- [[Friction]] generates a line-point relationship (see [[Person/Paul Klee]])
+		- The dynamics of the line, the dynamics of the point, and everything in between
+			- moving from one state to another of the same phenomenon
+			- the line as the state of rest, the release of the point, the iterative point
+			- [[My Note]]
+				- *the difference between line and point is [[Bouba Kiki]]*
+		- Caliber or size of points between each other, caliber or size of lines between each other
+		- Dynamics of movement, which isn't necessarily "straight"
+		- [[Friction]] is the energy that most allows the idea of movement to come through
+		- It's the most primary, most primitive energy, closest to children between 0 and 2 years old
+		- The factor of speed and the typological criterion of matter [[Grain]] come into play as perceptual variations of [[Friction]], as does the criterion of maintenance (iterative): maintenance of the sound cut up and repeated
+	- ## [[Sound]] [[Examples]]
+		- {{embed [[Person/Pierre Henry/variations pour une porte et un soupir]]}}
+		- {{embed [[Person/Pierre Henry/Le voyage Souffle 1]]}}
+		- {{embed [[Person/Pierre Henry/Le voyage Souffle 2]]}}
+		- {{embed [[Person/Bernard Parmegiani/De Natura Sonorum étude élastique]]}}
+		- {{embed [[Person/Bernard Parmegiani/Dedans-dehors proche-lointain]]}}
+		- {{embed [[Person/Bertrand Dubedout/Aux lampions Sous les planches]]}}
+		- {{embed [[Person/Annette Vande Gorne/TAO 2ème élément Feu]]}}
+		- {{embed [[Person/Philippe Mion/Confidence]]}}
+		- {{embed [[Person/Henri Kergomard/plume de roche]]}}
+		- {{embed [[Person/Helmut Lachenmann/Pression pour violoncelle]]}}
+		- {{embed [[Person/Helmut Lachenmann/Dal Niente intérieur III pour clarinette]]}}
+		- {{embed [[Person/Luigi Ceccarelli/Cadenza]]}}
+	- ## Bibliography
+		- [[Person/Jean Piaget]]'s theory: http://tecfa.unige.ch/tecfa/teaching/UVLibre/0001/bin66/textes/theoa.htm
+		- Bayle, F. 1993 musique acousmatique "propositions...positions", Paris : Buchet/Chastel p.17
+		- Klee, P. 1968 Théorie de l'art moderne, Genève : Denoël-Gonthier

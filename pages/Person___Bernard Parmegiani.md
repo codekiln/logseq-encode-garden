@@ -1,0 +1,9 @@
+- # Bernard Parmegiani
+	- ## Bio
+		- French composer of acousmatic music
+		- Known for his work with the Groupe de Recherches Musicales (GRM)
+	- ## Notable Work
+		- De Natura Sonorum
+		- Dedans-dehors
+	- ## Related
+		- [Bernard Parmegiani - Wikipedia](https://en.wikipedia.org/wiki/Bernard_Parmegiani)
