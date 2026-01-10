@@ -1,7 +1,7 @@
 prev:: [[ToWAMoFM/01/01 Energy/01 Percussion-Resonance]]
 next:: [[ToWAMoFM/01/01 Energy/03 Accumulation of Corpuscules]]
 
-- # Friction-Granulation
+- # [Friction-Granulation](https://sites.inagrm.com/avdg/activities/frottement-granulation.xhtml)
 	- ## Overview
 		- Exploration of friction-based energy and granular synthesis in acousmatic music
 		- Friction-granulation examines the relationship between continuous friction sounds and granular textural processes

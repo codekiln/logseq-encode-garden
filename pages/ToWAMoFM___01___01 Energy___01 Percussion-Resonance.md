@@ -6,12 +6,8 @@ next:: [[ToWAMoFM/01/01 Energy/02 Friction-Granulation]]
 		- [[Exciter]]
 		- [[Resonator]]
 		- [[Diffuser]]
-	- Instrumental sounds: excitation - attack and its consequence
-		- [[ADSR]]
-			- [[Attack]]
-			- [[Decay]]
-			- [[Sustain]]
-			- [[Release]]
+	- With [[Instrument]]s, we can refer to **excitation** - attack and its consequence
+		- {{embed [[ADSR]]}}
 	- ## [[Percussion]]
 		- Typically, with percussion sounds, it's common for people to pay more attention to the gesture that created the sound or the rhythm which is sounding, which hides the energy. We should look beyond the gesture and rhythm to the "perspective of the resulting sound."
 		- [[Person/Pierre Schaeffer/Make Hear]] pair is a concept that **making** and **hearing** are kind of bound up and entangled together
@@ -23,9 +19,10 @@ next:: [[ToWAMoFM/01/01 Energy/02 Friction-Granulation]]
 		- The [[Attack]] is given color by its resulting Resonance
 			- Changing the shape of the [[Resonator]] can change the resulting [[Harmonic]]s
 		- If you use gestures to play with a [[Mic]], you can shape Resonance
-			- [[My Note]] *[[Person/Ben Burtt]] swung a mic around, "The pitch changes of lightsaber movement were produced by playing the basic lightsaber tone on a loudspeaker and recording it on a moving microphone, generating [Doppler shift](https://en.wikipedia.org/wiki/Doppler_shift) to mimic a moving sound source" -- [wikipedia](https://en.wikipedia.org/wiki/Lightsaber#Sound)*
+			- *[[Person/Ben Burtt]] swung a mic around, "The pitch changes of lightsaber movement were produced by playing the basic lightsaber tone on a loudspeaker and recording it on a moving microphone, generating [Doppler shift](https://en.wikipedia.org/wiki/Doppler_shift) to mimic a moving sound source" -- [wikipedia](https://en.wikipedia.org/wiki/Lightsaber#Sound)*
 		- [[Contact Microphones]] make the sound appear flattened, without a third dimension
-		- By using different types of [[Exciter]]s (e.g. drumstick materials) on the same [[Sound Body]], one can change the [[Attack]] and [[Resonance]] as well as different "phenomena provoked by" them
+		- By using different types of [[Exciter]]s (e.g. striking materials) on the same [[Sound Body]], one can change the [[Attack]] and [[Resonance]] as well as different "phenomena provoked by" them
+			- *reminds me of [Forevertron - Wikipedia](https://en.wikipedia.org/wiki/Forevertron)*
 	- ## [[Instrument]] [[Examples]]
 		- [[Instrument/Trumpet]] has a hard attack and a sustained resonance
 		- [[Piano]] has a hard attack and an immediate decay resonance, without sustain, whose decay one does not control, except through the use of the pedal

@@ -1,0 +1,38 @@
+- Slides should follow this structure precisely:
+	- Each markdown **unordered list item** (`-`) at the top level is treated as a section title (rendered as H2).
+	- Nested markdown unordered list items (`\t-`) represent individual slides. 
+	- Each slide should have multiple bullet points `*` clearly describing the topic.
+	- Include an image relevant to the slide content, following a 16:9 aspect ratio:
+		- For slides containing **fewer than 10 words**, images can be up to `680px` wide.
+		- For slides containing **more than 10 words**, images should be approximately **400px** wide.
+- Prefer concise but clear bullet points on each slide. 
+- Example slide formatting:
+
+~~~markdown
+	- ## MCP Composability & [Sampling](https://modelcontextprotocol.io/docs/concepts/sampling)
+	  * Every MCP client can be an MCP Server.
+	  * [[MCP/Sampling]] allows **servers to request inference** from clients, ensuring **control of privacy and cost**.
+	  ![Hierarchical agent diagram](../assets/image_1740241876883_0.png){:height 225, :width 400}
+~~~
+
+- Use consistent image aspect ratios across slides, preferably **16:9**.
+- Keep each slide self-contained: one image, clear bullets, one coherent message.
+- Don't break a single slide up into multiple slides by using hyphens rather than `*`. 
+
+The following is three slides (three `-`)
+<COUNTER_EXAMPLE>
+```markdown
+	- ## MCP Inspector & OAuth Authentication
+		- Inspector provides debugging for MCP connections.
+		- OAuth integration simplifies secure service authentication. Scoped permission boundaries can apply.
+		  ![MCP Inspector OAuth](../assets/image_1740242601017_0.png){:height 225, :width 400}
+```
+</COUNTER_EXAMPLE>
+
+The following is a single slide (one `-`):
+<EXAMPLE>
+	- ## MCP Inspector & OAuth Authentication
+	  * Inspector provides debugging for MCP connections.
+	  * OAuth integration simplifies secure service authentication. Scoped permission boundaries can apply.
+	  ![MCP Inspector OAuth](../assets/image_1740242601017_0.png){:height 225, :width 400}
+</EXAMPLE>

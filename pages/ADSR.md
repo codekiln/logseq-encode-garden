@@ -1,0 +1,4 @@
+- [[Attack]]
+- [[Decay]]
+- [[Sustain]]
+- [[Release]]
