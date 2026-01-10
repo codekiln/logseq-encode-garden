@@ -1,1 +1,2 @@
+- Ricercare (Italian: "to seek" or "to search" - a contrapuntal composition)
 - ![Ricercare](https://sites.inagrm.com/avdg/res/3_23_accum_corpusc-Dhomont-Ricercare.mp3)

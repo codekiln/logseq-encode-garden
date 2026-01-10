@@ -1,1 +1,2 @@
+- Rain stick
 - ![Bâton de pluie](https://sites.inagrm.com/avdg/res/3_11_oscillation_FB-Baton-pluie.mp3)

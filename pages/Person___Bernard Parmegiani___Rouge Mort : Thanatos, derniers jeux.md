@@ -1,1 +1,2 @@
+- Red Death: Thanatos, last games. Mode of operation in oscillation.
 - ![Rouge Mort : Thanatos, derniers jeux. Mode de fonctionnement en oscillation.](https://sites.inagrm.com/avdg/res/3_6_accumul_corpusc-Parmegiani-thanatos-derniers-jeux.mp3)

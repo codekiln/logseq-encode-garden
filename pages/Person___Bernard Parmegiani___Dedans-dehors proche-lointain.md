@@ -1,1 +1,2 @@
+- Inside-outside near-far
 - ![Dedans-dehors proche-lointain](https://sites.inagrm.com/avdg/res/2_5_frottemt-granul-Pamegiani-lointain-prochefdedans-dehors.mp3)

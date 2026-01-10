@@ -1,1 +1,2 @@
+- On the Nature of Sounds: elastic study
 - ![De Natura Sonorum étude élastique](https://sites.inagrm.com/avdg/res/2_4_frottemt-granul-Pamegiani-etude-elastique.mp3)

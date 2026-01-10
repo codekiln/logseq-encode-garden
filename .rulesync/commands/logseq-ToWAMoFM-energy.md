@@ -123,10 +123,18 @@ For each sound example:
 
 3. Create sound example embed page:
    - File: `pages/Person___{Composer Name}___{Piece Title}.md`
-   - Content: Simple format with just the audio link:
+   - Content: If the piece title is in French or another language, add a translation line above the audio link:
+     ```markdown
+     - English translation of title
+     - ![Original Title](mp3-url)
+     ```
+   - If the title is already in English, use simple format:
      ```markdown
      - ![Piece Title](mp3-url)
      ```
+   - Examples:
+     - French: `variations pour une porte et un soupir` → `- variations for a door and a sigh\n- ![variations pour une porte et un soupir](mp3-url)`
+     - Italian: `Cadenza` → `- Cadenza (Italian: cadence, a virtuosic solo passage)\n- ![Cadenza](mp3-url)`
 
 4. Add embed to main energy page:
    - In the "Sound Examples" section, add: `{{embed [[Person/{Composer Name}/{Piece Title}]]}}`

@@ -1,1 +1,2 @@
+- On the Nature of Sounds 4: Dynamics of Resonance
 - ![De Natura Sonorum 4 : Dynamique de la résonance](https://sites.inagrm.com/avdg/res/1_5_percus-resonance-Parmegiani-dynamique.mp3)
