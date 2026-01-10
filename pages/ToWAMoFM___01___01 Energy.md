@@ -1,0 +1,10 @@
+- # Energy
+	- ## Overview
+		- Chapter 01 of [[ToWAMoFM]] exploring different types of energy in acousmatic music composition
+		- Energy as a fundamental concept in sound organization and transformation
+	- ## Subtopics
+		- [[ToWAMoFM/01/01 Energy/01 Percussion-Resonance]]
+		- [[ToWAMoFM/01/01 Energy/02 Friction-Granulation]]
+		- [[ToWAMoFM/01/01 Energy/03 Accumulation of Corpuscules]]
+	- ## Related
+		- [[ToWAMoFM/01/00 Play Sequence]]

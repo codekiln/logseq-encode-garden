@@ -1,0 +1,44 @@
+alias:: [[ToWAMoFM/Percussion-Resonance]]
+next:: [[ToWAMoFM/01/01 Energy/02 Friction-Granulation]]
+
+- # [Percussion-Resonance](https://sites.inagrm.com/avdg/activities/percussion-resonance.xhtml)
+	- What is an instrument or a [[Sound Body]]?
+		- [[Exciter]]
+		- [[Resonator]]
+		- [[Diffuser]]
+	- Instrumental sounds: excitation - attack and its consequence
+		- [[ADSR]]
+			- [[Attack]]
+			- [[Decay]]
+			- [[Sustain]]
+			- [[Release]]
+	- ## [[Percussion]]
+		- Typically, with percussion sounds, it's common for people to pay more attention to the gesture that created the sound or the rhythm which is sounding, which hides the energy. We should look beyond the gesture and rhythm to the "perspective of the resulting sound."
+		- [[Person/Pierre Schaeffer/Make Hear]] pair is a concept that **making** and **hearing** are kind of bound up and entangled together
+		- It's important to consider [[Microphones]] as well as any [[Sound/Speaker]]s and how they are set up together.
+			- Microphone movement can be a musical gesture
+			- Microphone manipulation can be part of [[Percussion]]
+	- ## [[Resonance]]
+		- [[Resonance]] is the result of [[Percussion]], its [[Harmonic Halo]]
+		- The [[Attack]] is given color by its resulting Resonance
+			- Changing the shape of the [[Resonator]] can change the resulting [[Harmonic]]s
+		- If you use gestures to play with a [[Mic]], you can shape Resonance
+			- [[My Note]] *[[Person/Ben Burtt]] swung a mic around, "The pitch changes of lightsaber movement were produced by playing the basic lightsaber tone on a loudspeaker and recording it on a moving microphone, generating [Doppler shift](https://en.wikipedia.org/wiki/Doppler_shift) to mimic a moving sound source" -- [wikipedia](https://en.wikipedia.org/wiki/Lightsaber#Sound)*
+		- [[Contact Microphones]] make the sound appear flattened, without a third dimension
+		- By using different types of [[Exciter]]s (e.g. drumstick materials) on the same [[Sound Body]], one can change the [[Attack]] and [[Resonance]] as well as different "phenomena provoked by" them
+	- ## [[Instrument]] [[Examples]]
+		- [[Instrument/Trumpet]] has a hard attack and a sustained resonance
+		- [[Piano]] has a hard attack and an immediate decay resonance, without sustain, whose decay one does not control, except through the use of the pedal
+		- [[Violin]] has a soft attack, and a controlled sustain, without decay, except that defined by the acoustics of the space
+		- Dry [[Percussion]] has a brief [[Attack]], of strong [[Amplitude]], without [[Sustain]], with rapid [[Decay]]
+		- The **Dynamic** factor (amplitude / loudness) and **[[Harmonic Halo]]** are part of the attack and sustain
+	- ## [[Sound]] [[Examples]]
+		- {{embed [[Person/Ivo Malec/Attaqua]]}}
+		- {{embed [[Person/François Bayle/Énergie libre, Énergie liée]]}}
+		- {{embed [[Person/Annette Vande Gorne/TAO, 4ème élément : Métal]]}}
+		- {{embed [[Person/Michael Obst/Metal drop music]]}}
+		- {{embed [[Person/Bernard Parmegiani/De Natura Sonorum 4 : Dynamique de la résonance]]}}
+		- {{embed [[Person/Pierre Schaeffer/étude aux allures]]}}
+		- {{embed [[Person/Jonty Harisson/Klang]]}}
+	- ## Bibliography
+		- Schaeffer P. 1966, rééd. 1977 *Traité des objets musicaux*, Paris : Seuil p.37

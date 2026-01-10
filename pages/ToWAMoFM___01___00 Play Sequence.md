@@ -1,0 +1,6 @@
+- # Play Sequence
+	- ## Overview
+		- Introduction to Chapter 01 of [[ToWAMoFM]]
+		- Play sequence for understanding energy types in acousmatic music
+	- ## Related
+		- [[ToWAMoFM/01/01 Energy]]
