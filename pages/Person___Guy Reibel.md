@@ -1,0 +1,11 @@
+- # Guy Reibel
+	- ## Bio
+		- French composer, conductor, and educator (born 1936)
+		- Member of Groupe de Recherches Musicales (GRM), collaborated with Pierre Schaeffer
+		- Professor of composition at Conservatoire de Paris (1976-2001)
+		- Conducted Groupe Vocal de France and Chœur de Radio France
+	- ## Notable Work
+		- "Variations en étoiles" (1967)
+		- "Granulations–sillages..." (1976)
+	- ## Related
+		- [Guy Reibel - Wikipedia](https://en.wikipedia.org/wiki/Guy_Reibel)

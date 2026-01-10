@@ -1,0 +1,11 @@
+- # Barry Truax
+	- ## Bio
+		- Canadian composer (born 1947) specializing in electroacoustic music and soundscape composition
+		- Developed real-time granular synthesis technique
+		- Key member of the World Soundscape Project
+		- Taught at Simon Fraser University from 1973-2015
+	- ## Notable Work
+		- "Riverrun" (1986) - awarded Magisterium at Bourges in 1991
+		- "Wings of Nike" (1987)
+	- ## Related
+		- [Barry Truax - Wikipedia](https://en.wikipedia.org/wiki/Barry_Truax)

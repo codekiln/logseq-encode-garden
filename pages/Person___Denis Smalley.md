@@ -1,0 +1,12 @@
+- # Denis Smalley
+	- ## Bio
+		- New Zealand composer and scholar (born 1946) specializing in electroacoustic music
+		- Pioneered the concept of "spectromorphology" for analyzing sound shapes
+		- Studied under Olivier Messiaen at Conservatoire de Paris
+		- Professor at City University London (1994-2009)
+	- ## Notable Work
+		- "Pentes" (1974)
+		- "The Pulses of Time" (1979)
+		- "Wind Chimes"
+	- ## Related
+		- [Denis Smalley - Wikipedia](https://en.wikipedia.org/wiki/Denis_Smalley)

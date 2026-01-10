@@ -1,0 +1,1 @@
+- ![Wind Chimes (aussi percussion-résonance)](https://sites.inagrm.com/avdg/res/3_14-accumul_corpusc-Smalley-Wind-Chimes-_extrait_.mp3)

@@ -1,0 +1,12 @@
+- # Michèle Bokanowski
+	- ## Bio
+		- French composer of electroacoustic music (born 1943)
+		- Intern at Service de la Recherche de l'ORTF under Pierre Schaeffer (1970-1972)
+		- Studied with Jean-Claude Risset, Francis Régnier, Éliane Radigue
+		- Composes for concert, theater, dance, and film (collaborates with filmmaker Patrick Bokanowski)
+	- ## Notable Work
+		- "Korè" (1972)
+		- "Tabou" (1984)
+		- "Cirque" (1994)
+	- ## Related
+		- [Michèle Bokanowski - Wikipedia](https://en.wikipedia.org/wiki/Mich%C3%A8le_Bokanowski)

@@ -1,0 +1,11 @@
+- # John Oswald
+	- ## Bio
+		- Canadian composer, saxophonist, and media artist (born 1953)
+		- Coined the term "plunderphonics" - creating music by sampling and manipulating existing recordings
+		- Involved with World Soundscape Project at Simon Fraser University
+		- Governor General's Award in Visual and Media Arts (2004)
+	- ## Notable Work
+		- "Plunderphonics" EP (1988)
+		- "Skindling Shades"
+	- ## Related
+		- [John Oswald - Wikipedia](https://en.wikipedia.org/wiki/John_Oswald_%28composer%29)

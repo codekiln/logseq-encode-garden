@@ -1,0 +1,12 @@
+- # François Bayle
+	- ## Bio
+		- French composer (born 1932) specializing in acousmatic music
+		- Director of Groupe de Recherches Musicales (GRM) from 1966-1997
+		- Studied under Olivier Messiaen and Karlheinz Stockhausen
+		- Instrumental in developing the Acousmonium loudspeaker orchestra
+	- ## Notable Work
+		- "L'Expérience Acoustique" (1972)
+		- "Erosphère" (1980)
+		- "Son Vitesse-Lumière" (1983)
+	- ## Related
+		- [François Bayle - Wikipedia](https://en.wikipedia.org/wiki/Fran%C3%A7ois_Bayle)

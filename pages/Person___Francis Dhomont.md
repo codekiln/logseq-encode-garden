@@ -1,0 +1,17 @@
+- # Francis Dhomont
+	- ## Bio
+		- French composer (1926-2023) of electroacoustic and acousmatic music
+		- Pioneered musique concrète independently in late 1940s
+		- Five-time winner at Bourges International Electroacoustic Music Competition
+		- Taught at Université de Montréal (1980-1996), founding member of Canadian Electroacoustic Community
+	- ## Notable Work
+		- "Sous le regard d'un soleil noir" (1981)
+		- "Forêt profonde" (1996)
+		- "Chambre de lumière"
+		- "En cuerdas"
+		- "Les moirures"
+		- "Phoenix XXI"
+		- "Ricercare"
+		- "Convulsive"
+	- ## Related
+		- [Francis Dhomont - Wikipedia](https://en.wikipedia.org/wiki/Francis_Dhomont)

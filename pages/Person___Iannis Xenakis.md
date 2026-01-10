@@ -1,0 +1,12 @@
+- # Iannis Xenakis
+	- ## Bio
+		- Greek-French composer, architect, and mathematician (1922-2001)
+		- Pioneered integration of mathematical models into music composition
+		- Developed "musique stochastique" based on probability theory
+		- Worked with architect Le Corbusier
+	- ## Notable Work
+		- "Metastaseis" (1953-54)
+		- "Pithoprakta" (1955-56)
+		- "Concret PH" (1958)
+	- ## Related
+		- [Iannis Xenakis - Wikipedia](https://en.wikipedia.org/wiki/Iannis_Xenakis)

@@ -1,0 +1,11 @@
+- # Robert Normandeau
+	- ## Bio
+		- Canadian composer (born 1955) specializing in electroacoustic and acousmatic music
+		- Describes his work as "cinema for the ear"
+		- Co-founded Canadian Electroacoustic Community (CEC) in 1987
+		- Professor at Université de Montréal (1999-2023)
+	- ## Notable Work
+		- "Murmures"
+		- "Le Renard et la Rose" (1996) - Golden Nica at Prix Ars Electronica
+	- ## Related
+		- [Robert Normandeau - Wikipedia](https://en.wikipedia.org/wiki/Robert_Normandeau)
