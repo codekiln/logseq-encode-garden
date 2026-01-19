@@ -1,0 +1,12 @@
+- # Michael Feathers
+	- ## Bio
+		- Software engineer, consultant, and author known for his work on legacy code and refactoring
+		- Best known for writing "Working Effectively with Legacy Code" (2004), a seminal book on techniques for working with and refactoring legacy codebases
+		- Has worked extensively with teams to improve code quality and maintainability
+	- ## Notable Work
+		- ### Writing
+			- #Nonfiction
+				- [[Person/Michael Feathers/Book/04/Working Effectively with Legacy Code]]
+	- ## Links
+		- [Wikipedia - Working Effectively with Legacy Code](https://en.wikipedia.org/wiki/Working_Effectively_with_Legacy_Code)
+		- [Amazon Author Page](https://www.amazon.com/stores/Michael-Feathers/author/B001IOFJ5K)
