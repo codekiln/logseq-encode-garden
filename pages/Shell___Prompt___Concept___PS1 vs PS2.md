@@ -1,0 +1,67 @@
+tags:: [[Diataxis/Concept]]
+
+- # [[PS1]] vs [[PS2]] (Diátaxis overview)
+	- ## Conceptual overview
+		- In interactive shells, a *prompt* is the UI that signals “the shell is ready for input”.
+		- Most shells support multiple “prompt states” depending on whether the shell is:
+			- ready for a new command
+			- waiting for you to finish the current command
+		- `PS1` and `PS2` are the classic names for these states in Bourne-style shells, and the concepts map cleanly to many other shells even if the exact variable names differ.
+	- ## Key idea
+		- `PS1` = “new command” prompt
+		- `PS2` = “continuation / incomplete command” prompt
+	- ## Reference model (mental model)
+		- Think of the shell as having a tiny parser running while you type.
+		- If the parser decides “I have a complete command”, you see `PS1`.
+		- If the parser decides “this isn’t complete yet; I need more input”, you see `PS2`.
+	- ## PS1: Primary prompt
+		- Purpose
+			- Signals the shell is ready for a *fresh* command.
+		- Typically includes context
+			- username / hostname
+			- current working directory
+			- git branch / dirty state
+			- exit status of the last command
+			- active environment (venv / conda / nix / etc.)
+		- Practical effect
+			- You spend most of your interactive time looking at `PS1`.
+	- ## PS2: Secondary (continuation) prompt
+		- Purpose
+			- Signals the shell is waiting for you to *finish the current command*.
+		- When it appears (common cases)
+			- unmatched quotes (single or double)
+			- a trailing line continuation `\`
+			- incomplete structures (e.g., `if`, `case`, `{ ... }`, subshells, etc.)
+			- multiline commands (some heredocs / command substitutions depending on shell)
+		- Typical style
+			- intentionally minimal (often just `> `) so it visually reads as “you’re still in the middle of something”.
+	- ## Relationship to Diátaxis
+		- ### Tutorial (learning path)
+			- Learn to *notice* when you’re in `PS2` mode so you don’t think the terminal “hung”.
+			- Practice: intentionally trigger `PS2` with a multiline command, then close it properly.
+		- ### How-to guide (task-focused)
+			- Configure `PS1` to include useful context (cwd, git status, etc.).
+			- Keep `PS2` short and obvious so continuation is visually clear.
+		- ### Reference (lookup)
+			- `PS1` = primary prompt string
+			- `PS2` = continuation prompt string
+			- Both are expanded/rendered by the shell according to its prompt-expansion rules.
+		- ### Explanation (deeper reasoning)
+			- `PS1` and `PS2` exist because interactive input is sometimes multi-step.
+			- `PS2` is a UX affordance: it tells you “the shell is still collecting input for the same command”.
+	- ## Quick examples
+		- Example: `PS1` (new command)
+			- `user@host ~/Documents/GitHub main %`
+		- Example: `PS2` (unfinished quote)
+			- `echo "hello`
+			- `> world"`
+		- Example: `PS2` (line continuation)
+			- `echo hello \`
+			- `> world`
+	- ## Practical heuristics
+		- If you see `PS2`:
+			- check for an unclosed quote
+			- check for unclosed parens/braces
+			- check whether you ended the previous line with `\`
+		- If you want to bail out:
+			- `Ctrl-C` usually cancels the current partial command and returns to `PS1`

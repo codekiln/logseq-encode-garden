@@ -1,2 +1,3 @@
 - [AuHau/toggl-cli: A simple command-line interface for toggl.com](https://github.com/AuHau/toggl-cli).
-	-
+	- [[Discovered]] [[Via]] [[Toggl/AI/Report/26/01/AI control of Toggl - Options Jan 2026]]
+	- How to set it up: [[Toggl/CLI/AuHau/How To/Set Up Toggl CLI]]
