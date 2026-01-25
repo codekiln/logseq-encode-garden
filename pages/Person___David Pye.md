@@ -1,0 +1,5 @@
+- # David Pye
+	- British furniture designer, maker, and writer
+	- Known for his work on the theory of workmanship and craft
+	- ## Works
+		- [[Book/The Nature and Art of Workmanship]] (1968)

@@ -1,0 +1,35 @@
+tags:: [[Claude Code]], [[Q]]
+alias:: [[Anthropic/App/Claude Code/Q/Is it possible to see the compaction text]]
+
+- # Is it possible to see the compaction text in [[Claude Code]]?
+	- ## Answer
+		- Yes, it is possible to see the compaction text in Claude Code. There are several methods available.
+	- ## Methods to View Compaction Text
+		- ### Immediate View After Compaction
+			- Use **CTRL+O** on some terminal setups to see the full summary immediately after running `/compact`
+			- This displays the compaction summary right after it's generated
+		- ### View JSONL Transcript Files
+			- Claude Code stores all conversation history, including compaction summaries, as `.jsonl` files locally
+			- Location: `~/.claude/projects/[path]/[session_id].jsonl`
+			- The compaction summary is saved in the logs with `type:summary`
+			- You can open these files directly in a text editor to view the raw JSONL data
+			- The original conversation is preserved with a "compact boundary" marker, so you can see both the summary and the original messages
+		- ### Using Extraction Tools
+			- **claude-code-log** – Converts JSONL files to readable HTML/Markdown
+				- Install: `pip install claude-code-log` or use `uvx claude-code-log`
+				- Features include session navigation, token usage tracking, and message filtering
+				- [GitHub](https://github.com/daaain/claude-code-log)
+			- **claude-code-transcripts** – Generates detailed HTML pages with summaries
+				- Can be run with `uvx` if you have the uv package manager
+				- Creates shareable HTML pages with multi-page transcripts
+				- [Simon Willison's blog post](https://simonw.substack.com/p/a-new-way-to-extract-detailed-transcripts)
+	- ## How Compaction Works
+		- When you run `/compact`, Claude Code creates a summary of your entire conversation history
+		- The summary is used as the new context for subsequent messages
+		- The original conversation is **not deleted** – it's preserved with a "compact boundary" in the conversation file
+		- This allows you to retrieve details from the original conversation if needed
+		- Compaction can be triggered manually or automatically when context reaches ~95% of the 200,000 token limit
+	- ## Related
+		- [[Claude Code/How To/Export Conversation to File]]
+		- [[Anthropic/YouTube/25/07/Claude Code Best Practices]]
+		- [[Claude Code/Command/Slash/compact]]
