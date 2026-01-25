@@ -1,0 +1,2 @@
+- Similar to the spirit of [[Shopping/Mouse/Gaming/MMO/Feature/Open-Source Hardware]], I'd prefer to have a mouse that can be modded and repaired. I prefer things that are built with the spirit of [[FrameworkCo]] products.
+- I'd prefer one that has a [[Battery/AA]] to a built-in battery, since those can be replaced.

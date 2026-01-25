@@ -1,0 +1,1 @@
+- For MMO gaming functionality and programming complex UIs (Photoshop, Ableton, games)

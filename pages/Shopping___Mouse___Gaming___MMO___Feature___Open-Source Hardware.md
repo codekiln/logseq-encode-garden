@@ -1,0 +1,1 @@
+- [[Open/Source/Hardware]] principles like [[FrameworkCo]]. See also [[Shopping/Mouse/Gaming/MMO/Feature/Repairable Modular]].

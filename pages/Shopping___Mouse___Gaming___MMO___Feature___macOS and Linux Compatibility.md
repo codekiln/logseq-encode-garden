@@ -1,0 +1,1 @@
+- most [[Mice]] for [[Video Games]] tend to target [[Windows]]; [[Linux]] and [[MacOS]] are usually an afterthought. I will primarily use a mouse on Mac and Linux, though.

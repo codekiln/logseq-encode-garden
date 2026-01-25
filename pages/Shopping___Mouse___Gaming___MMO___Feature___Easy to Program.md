@@ -1,0 +1,1 @@
+- it should be easy to customize what each button does on the mouse. This should preferably be customizable per-application. [[Logitech/GHub]] has an ability to do this; it's a pretty clunky UI, but it does work.

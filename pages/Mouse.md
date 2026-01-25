@@ -1,0 +1,3 @@
+alias:: [[Mice]]
+
+- Computer Mouse

@@ -1,0 +1,6 @@
+- log [[PERS/2026/t1/w03/d1]] - [[PERS/2026/01/19]] - [[2026-01-19 Mon]]
+	- My [[Logitech/Mouse/G604]] has finally gotten to the point where it's almost unusable.
+	- Last time I was looking for this it was [[Shopping/Mouse/Gaming/MMO/24/11/03 initial research for replacement for Logitech G604 Mouse]]
+	- Ok, I set up the main place to capture the ask at [[Shopping/Mouse/Gaming/MMO]]
+	- TODO move this shopping thing [[logseq-garden]] or [[Logseq/Garden/Encode]] because it's not privacy-centric ...
+	-

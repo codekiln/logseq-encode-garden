@@ -1,0 +1,10 @@
+- Logitech G Hub
+	- Ostensibly a [[Computer/Peripheral]] configuration [[GUI]] software
+	- It's possible to use this application to program mouse buttons in a per-application way
+	- It has several major drawbacks
+		- Like [[Logitech/Options/Plus]] it regularly has issues where peripherals will not work as expected without freshly pairing the device with the software open
+		- It shows ads and offers "up-sells"
+		- It uses [[Persuasive Design]] and [[Dark Patterns]] to try to get users to sign in to reveal information about which programs are used
+		- It has security issues; it requests elevated permissions that are unnecessary for a mouse or a keyboard
+		- it's riddled with bugs; it regularly won't start up and requires downloading new software
+		- it's unintuitive; things that should take only a few clicks require many clicks

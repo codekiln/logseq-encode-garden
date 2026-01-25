@@ -1,0 +1,1 @@
+- I prefer a text configuration file to a [[GUI]] configuration for the programmable features of a mouse. [[Logitech/Mouse/G604]] works with [[Logitech/GHub]] software to configure the product, but the software is a GUI with several issues.

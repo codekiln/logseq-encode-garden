@@ -1,0 +1,1 @@
+- I dislike [[Computer/Peripheral]]s that last less than five years. I particularly loathe the feel of degrading plastic. I want to avoid hardware designed with [[Planned Obsolescence]] in mind. I'd prefer some kind of material with a long lifespan.

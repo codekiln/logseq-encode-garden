@@ -1,0 +1,1 @@
+- Prefer companies in the spirit of Framework (open source, modular, repairable, right-to-repair friendly)

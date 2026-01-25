@@ -1,0 +1,1 @@
+- Simple configuration process, preferably open-source firmware (e.g., QMK)

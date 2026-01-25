@@ -1,0 +1,2 @@
+- For MMO gaming functionality and programming complex UIs (Photoshop, Ableton, games), I need programmable buttons
+- I'd prefer 8-12 buttons, but I'd settle for less if other features were available.

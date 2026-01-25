@@ -1,0 +1,55 @@
+# [[2024/Trimester/t3/w09/d7]] shopping for replacement for [[Logitech/Mouse/G604]]
+	- I'm looking for a programmable multi-function ergonomic modular wireless gaming mouse with an ability to configure it with a text file that I can put in version control. I'd prefer a 8-12 button version that doesn't have rubber that would degrade easily. I'm also looking for something that's repairable and easily programmable. I've learned that the logitech software for my [[Logitech/Mouse/G604]] is hard for me to quickly use on multiple computers (or maybe it's just taking a while for me to learn to use).
+	- ## UtechSmart Venus mouse $32.99 [amazon](https://www.amazon.com/UtechSmart-Precision-Programmable-Computer-Recommendation/dp/B00FNKMVUO?crid=2WSCXXT9AIBV6&dib=eyJ2IjoiMSJ9.TpEtiZrsdk2rWGlieYrH7aeDobuBZ7seGFsL-zoYyiw2DtcYrcwsjTbcV3bxkES6_sXzPnVYyTUOAkN6KvvrdqKlRvcOy-XVSWpjwnTDc-Z4AD7g9p1G38mhR22KWlbjAp07j2R5QVeQA9YngL6XnfvtZ8AhcLQTZkjA0y9Uy6ZnY6jfrXBlqibytpOsEKAPR4JVfiuu1vsjg7z2oGFTWUFATm9NyZ7MSz9EXj1O_Iu5qteIBu-5TDS0e_OAcdUWlUn-WVgo--4ANJ5IpifMPqaaxbAqw9n3Q6Ess4EYVF4.IS-YytmRilZhe8aDRaOWQBUvZnObMZ6DlHPXCe3R4qM&dib_tag=se&keywords=Razer%2BNaga%2BPro&qid=1730650309&s=electronics&sprefix=razer%2Bnaga%2Bpro%2Celectronics%2C126&sr=1-18&th=1)
+		- Apparently you need [USB Overdrive – Take full advantage of any USB or Bluetooth mouse, keyboard, trackball, joystick or gamepad.](https://www.usboverdrive.com/) which supports even [[MacOS/15 Sequoia]].
+			- {{video https://www.youtube.com/watch?v=_EDuw4btiOA}}
+				- it will be in applications folder
+				- it's freeware
+				- he selects keyboard
+				- {{youtube-timestamp 102}} Location is port (you will have to remap if you move the port)
+				- {{youtube-timestamp 220}} he will do two ways, first of which you don't want to do
+				- {{youtube-timestamp 300}} instead of keyboard shortcut you do type press key
+				- {{youtube-timestamp 440}} it can do applescript
+				- {{youtube-timestamp 486}} you can have it open a file or a folder ...
+				- {{youtube-timestamp 529}} you have to do it for each USB port ...
+				- you can duplicate it ...
+	- #Review #Article [The Best MMO Mouse - Fall 2024: Mice Reviews - RTINGS.com](https://www.rtings.com/mouse/reviews/best/mmo)
+		- ok, I asked chatgpt to summarize this [here](https://chatgpt.com/c/6727a350-a8a4-8000-93e8-64dc99ad461a) and the result is that basically none of these mice are in my price range at this time. they are only for windows, are wired, or are > $100 or so.
+	- [[Mouse/Ploopy]] [Mouse – Ploopy](https://ploopy.co/mouse/)
+		- ![ploopy mouse](https://ploopy.co/wp-content/uploads/2021/07/mouse-scaled.jpg)
+		- **Ploopy Mouse**
+		- The Ploopy Mouse is an open-source device running QMK firmware, renowned for its flexibility and customization. With eight programmable buttons, you can define their functions directly through text-based configuration files, eliminating the need for proprietary software. This mouse is particularly appealing to users who prefer a high degree of control over their hardware.
+		- #Question what is #QMK?
+			- QMK (Quantum Mechanical Keyboard) Firmware is an open-source project that enables users to customize the functionality of their computer input devices, such as keyboards, mice, and MIDI controllers. It allows for extensive personalization, including remapping keys, creating macros, and defining complex behaviors. QMK supports a wide range of devices and is compatible with various microcontrollers, particularly those in the Atmel AVR and ARM families. The firmware is written in C and is designed to be both powerful and user-friendly, catering to both beginners and advanced users. The project is community-driven, with contributions from developers and enthusiasts worldwide, and is maintained by QMK collaborators and contributors.
+			- [QMK.fm](https://qmk.fm/guide)
+			- [[Computer Keyboard/VIA]] is a graphical configuration tool that interfaces with QMK-enabled devices, allowing users to remap keys, program macros, and adjust settings in real-time without recompiling firmware. While VIA was initially developed for keyboards, it has been extended to support other input devices, including certain mice that run QMK firmware. For instance, the Ploopy Mouse is a QMK-powered mouse that is compatible with VIA, enabling users to reprogram its buttons and functions easily.
+			- [Ploopy](https://ploopy.co/mouse/)
+			- In summary, QMK serves as the customizable firmware for input devices, providing the foundational capabilities for personalization. VIA acts as a user-friendly interface to modify these settings dynamically, enhancing the accessibility and convenience of configuring QMK-enabled devices.
+		- Here's a ploopy review [[YouTube]]
+			- {{video https://www.youtube.com/watch?v=TWEF2jkXgzo}}
+			- there's a DIY kit that's cheaper, but you do have to solder yourself
+			- all 8 buttons are remappable in [[Computer Keyboard/VIA]]
+			- {{youtube-timestamp 244}} sliding between [[MacOS/Virtual Desktop]] - cool idea
+			- {{youtube-timestamp 270}} [[SaneSideButtons]] software found earlier today for making back and forward buttons work as expected.
+				- he printed his own
+			- #Observation
+				- *I love how if you are CAD savvy, you can change the stiffness of buttons, etc*
+			- {{youtube-timestamp 375}} it's bigger than the MX Master 3 - dimensions here
+			- {{youtube-timestamp 418}} it's relatively light
+			- {{youtube-timestamp 425}} grittier feel takes getting used to
+			- {{youtube-timestamp 440}} the scroller may be tighter than expected
+			- {{youtube-timestamp 455}} it's wired, not wireless (**!**)
+			- {{youtube-timestamp 517}} use of [[Computer Keyboard/VIA]]
+				- it's not as robust as the app-specific mapping for [[Logitech/Mouse/G604]]
+					- #Observation
+						- but I find the logitech software to be really hard to use, personally
+	- [[Mouse/Modular]]
+		- [GitHub - wareya/DIY-Gaming-Mouse: Completely open source DIY gaming mouse, including hardware (PCB, shell) design files](https://github.com/wareya/DIY-Gaming-Mouse)
+	- [[Mouse/Modular]]
+		- [Orbitalworks | Pathfinder mouse](https://orbitalworks.co/)
+			- it's $189 bucks though, dang!
+			- basically it's kinda endgame because you can adjust everything and 3d print your own parts for it.
+			- designed for high-end pro gamers
+	- [[Mouse]]
+		- [SensibleSideButtons](https://sensible-side-buttons.archagon.net/) software for [[MacOS]] It allows you to remap side buttons to simulate 3-finger swipes, facilitating navigation across various applications. *it's a bit old*
+		-

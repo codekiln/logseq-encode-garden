@@ -1,0 +1,1 @@
+- Prefer wireless over wired connection

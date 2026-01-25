@@ -1,0 +1,1 @@
+- Comfortable for extended gaming sessions

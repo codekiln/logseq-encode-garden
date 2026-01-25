@@ -1,0 +1,1 @@
+- (version control friendly) - Preferably be programmable via config file, not proprietary GUI software

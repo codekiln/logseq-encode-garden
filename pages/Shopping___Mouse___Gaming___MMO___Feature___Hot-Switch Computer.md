@@ -1,0 +1,1 @@
+- I'd prefer to be able to quickly switch between more than one computer. Some [[Computer Keyboard]]s have "remember connection" presets that allow saving 2-3 devices and then switching between them.
