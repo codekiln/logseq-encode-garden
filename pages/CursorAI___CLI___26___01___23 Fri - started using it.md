@@ -1,0 +1,4 @@
+- [[2026-01-23 Fri]]
+	- installed; seems pretty slick! love that there's a cloud agent handoff, though I haven't used it yet.
+	- This is basically a [[Claude Code/Competitor]]
+	-
