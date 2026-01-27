@@ -1,0 +1,3 @@
+alias:: [[OpenAI/Codex/Web]]
+
+-
