@@ -109,7 +109,7 @@ tags:: [[CursorAI/Settings/MCP]], [[Diataxis/How To]]
 		- ### 2 - authorize cursor with biometrics
 			- I personally got three pop-ups - not sure why
 	- ## 5 - test out MCP
-		- ### 1 - In [[CursorAI/Agent Mode]] try "Can you tell me what <YOUR_GITHUB_USERNAME>'s repositories you have access to"
+		- ### 1 - In [[CursorAI/Agent]] try "Can you tell me what <YOUR_GITHUB_USERNAME>'s repositories you have access to"
 			- you should get back a list
 		- ### 2 - Press `Cmd+Shift+J` to open [[CursorAI/Settings/MCP]], view the `github` item - press refresh
 			- it should turn green

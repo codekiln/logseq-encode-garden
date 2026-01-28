@@ -16,7 +16,7 @@ tags:: [[Idea]]
 		- checking on status of github actions
 	- This page proposes an idea for how to create reusable, agential workflows for SLDC automation using Cursor Project Rules.
 - ## Project Rules for wrapping `gh`
-	- When using [[CursorAI/Agent Mode]], the agent can read [[CursorAI/Project Rule]] to craft CLI command invocations for the GitHub CLI, `gh`. A lot of information about this CLI is likely already in the training data, but Project Rules may let users focus the AI's attention on the details about how to use it in an AI-assisted [[Software/Engineering/Development Life Cycle (SDLC)]] and specifically within the context of Cursor.
+	- When using [[CursorAI/Agent]], the agent can read [[CursorAI/Project Rule]] to craft CLI command invocations for the GitHub CLI, `gh`. A lot of information about this CLI is likely already in the training data, but Project Rules may let users focus the AI's attention on the details about how to use it in an AI-assisted [[Software/Engineering/Development Life Cycle (SDLC)]] and specifically within the context of Cursor.
 	- A centerpiece of this approach is that rather than explicitly saying what should be done in the composer chat, the [[Product Requirements Document]] should most likely be specified in a external project management software like a GitHub issue.
 	- ### Defining the [[PRD]] in the [[GitHub/Issue]]
 		- A project rule `gh-issue-update.mdc` rule could be created to help with the ideating phase of the issue. Perhaps a [[GitHub/Project]] `status` could be applied to the issue to signal that it is in a design phase.

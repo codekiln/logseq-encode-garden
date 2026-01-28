@@ -140,7 +140,7 @@ tags:: [[CursorAI/Settings/MCP]]
 		- ### 2 - authorize cursor with biometrics
 			- You may get multiple authorization prompts
 	- ## 5 - test out MCP
-		- ### 1 - In [[CursorAI/Agent Mode]] try "Can you search for pages in Confluence containing 'getting started'"
+		- ### 1 - In [[CursorAI/Agent]] try "Can you search for pages in Confluence containing 'getting started'"
 			- You should get back search results
 		- ### 2 - Press `Cmd+Shift+J` to open [[CursorAI/Settings/MCP]], view the `mcp-atlassian` item - press refresh
 			- It should turn green if the connection is successful

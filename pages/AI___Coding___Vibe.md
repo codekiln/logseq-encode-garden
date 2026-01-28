@@ -9,7 +9,7 @@ tags:: [[Term]]
 		- On [[2025-10-08 Wed]], [[Person/Simon Willison/Blog/25/10/Vibe Engineering]] suggested that [[Vibe Coding]] is the opposite of a new term [[Vibe Engineering]]:
 			- > the other end of the spectrum from [[Vibe Coding]], where **seasoned professionals accelerate their work with LLMs while staying proudly and confidently accountable for the software they produce**
 	- Related Concepts:
-		- [[CursorAI/Agent Mode]]
+		- [[CursorAI/Agent]]
 	- See also:
 		- [Vibe Coding. AI-Assisted Coding for Non-Developers | by Niall McNulty | Feb, 2025 | Medium](https://medium.com/@niall.mcnulty/vibe-coding-b79a6d3f0caa)
 			- "Tools will come / Tools will go / Only the vibe coder / remains" - #Quote from [[Person/Rick Rubin]] [[2025-02-22 Sat]]
