@@ -1,0 +1,1 @@
+- `cmd+t` - quickly search for repositories
