@@ -1,4 +1,5 @@
 tags:: [[tmux]], [[macOS]], [[Diataxis/Tutorial]]
+
 - # Tutorial: Use tmux on Mac
 	- ## What You'll Create
 		- A named tmux session with multiple windows and panes
@@ -15,23 +16,27 @@ tags:: [[tmux]], [[macOS]], [[Diataxis/Tutorial]]
 	- ## Steps
 		- ### 1. Install tmux with Homebrew
 			- Run:
-				~~~
-				brew install tmux
-				~~~
-			- You should see Homebrew install tmux successfully.
+			  ~~~
+			  brew install tmux
+			  ~~~
+			- You should see Homebrew install tmux successfully, along with a message about a default configuration
+			- ```
+			  Example configuration has been installed to:
+			    /opt/homebrew/opt/tmux/share/tmux
+			  ```
 		- ### 2. Start your first session
 			- Create a session named "work":
-				~~~
-				tmux new -s work
-				~~~
+			  ~~~
+			  tmux new -s work
+			  ~~~
 			- Notice the status bar at the bottom showing the session name.
 		- ### 3. Detach and reattach
 			- Detach with the tmux prefix, then `d`:
 				- Press `Ctrl-b`, then `d`
 			- Reattach later:
-				~~~
-				tmux attach -t work
-				~~~
+			  ~~~
+			  tmux attach -t work
+			  ~~~
 			- You should return to the same terminal state.
 		- ### 4. Create and manage windows
 			- Create a new window:
@@ -65,15 +70,15 @@ tags:: [[tmux]], [[macOS]], [[Diataxis/Tutorial]]
 			- You should be able to scroll and paste text without leaving tmux.
 		- ### 7. Save a minimal config
 			- Create or edit `~/.tmux.conf`:
-				~~~
-				set -g mouse on
-				setw -g mode-keys vi
-				set -g history-limit 50000
-				~~~
+			  ~~~
+			  set -g mouse on
+			  setw -g mode-keys vi
+			  set -g history-limit 50000
+			  ~~~
 			- Reload the config:
-				~~~
-				tmux source-file ~/.tmux.conf
-				~~~
+			  ~~~
+			  tmux source-file ~/.tmux.conf
+			  ~~~
 			- You should now be able to scroll with the mouse and use vi keys in copy mode.
 	- ## What You've Learned
 		- How to start, detach, and reattach tmux sessions

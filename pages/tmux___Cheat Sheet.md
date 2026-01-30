@@ -29,8 +29,8 @@ tags:: [[Keyshorts]]
 	- ## Pane management
 		- | Shortcut (after prefix)     | Action                                   |
 		  |-----------------------------|------------------------------------------|
-		  | `%`                         | Split pane **vertically**                |
-		  | `"`                         | Split pane **horizontally**              |
+		  | `%`                         | Split pane **vertically**   (there will be a line going from top to bottom with terminals at left and right)             |
+		  | `"`                         | Split pane **horizontally**   (there will be a line going from left to right with terminals above and below)           |
 		  | `x`                         | Kill current pane                        |
 		  | `o`                         | Switch to next pane                      |
 		  | `;`                         | Toggle last active pane                  |

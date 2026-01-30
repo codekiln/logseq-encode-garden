@@ -1,0 +1,7 @@
+- [Managing your account-specific secrets for GitHub Codespaces - GitHub Docs](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-your-account-specific-secrets-for-github-codespaces)
+	- > You can add development environment secrets to your personal account that you want to use in your codespaces. For example, you may want to store and access the following sensitive information as secrets:
+		- Access tokens to cloud services
+		- Service principals
+		- Subscription identifiers
+		- Credentials for a private image registry (for more information, see [Allowing your codespace to access a private registry](https://docs.github.com/en/codespaces/reference/allowing-your-codespace-to-access-a-private-registry))
+-

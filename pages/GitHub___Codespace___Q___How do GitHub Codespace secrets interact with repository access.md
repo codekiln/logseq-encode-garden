@@ -1,0 +1,39 @@
+- # How do [[GitHub/Codespace]] secrets interact with repository access?
+	- Can anyone who has read access to the repository create a codespace which accesses secrets defined for that codespace? What about people who have write access?
+- ## Answer
+	- **No.** Read access alone does not grant access to Codespace secrets.
+	- ### Key Security Rule
+		- **Development environment secrets are not copied into the environment if you don't have write access to the codespace's repository.**
+		- This is an explicit security measure documented by GitHub.
+	- ### Types of Codespace Secrets
+		- **User secrets** (personal account level)
+			- Stored in your personal GitHub settings
+			- You explicitly choose which repositories can access each secret
+			- Only available in codespaces *you* create for repositories you've granted access to
+		- **Repository secrets**
+			- Require **administrator access** to create
+			- Available to users with write access who create codespaces for that repo
+		- **Organization secrets**
+			- Require **organization owner** access to create
+			- Can use access policies to limit which repositories can use them (all repos, private repos only, or a specific list)
+	- ### Additional Protections
+		- **PR from fork protection**: When you create a codespace from a PR branch from a fork, GitHub does *not* inject any of your codespace secrets into the environment
+			- This prevents malicious PRs from exfiltrating your secrets
+		- **Token scope varies by access level**:
+			- Read-only access → token only allows cloning the source repo
+			- Write access → token has read/write access to the repo
+	- ### Summary
+		- Someone with only read access to your repository:
+			- ✅ Can create a codespace for that repo
+			- ❌ Cannot access repository-level or organization-level secrets
+			- ❌ Cannot access your personal user secrets (those are tied to your account, not the repo)
+		- Someone with write access:
+			- ✅ Can create a codespace and access repository/organization secrets (if configured for that repo)
+			- ❌ Still cannot access *your* personal user secrets
+		- Secrets are protected by requiring write access, and further protected against fork-based attacks
+- ## My Notes
+	- 
+- ## Related
+	- [[GitHub/Codespaces]]
+	- [GitHub Docs: Security in GitHub Codespaces](https://docs.github.com/en/codespaces/codespaces-reference/security-in-github-codespaces)
+	- [GitHub Docs: Managing development environment secrets](https://docs.github.com/en/codespaces/managing-codespaces-for-your-organization/managing-secrets-for-your-repository-and-organization-for-github-codespaces)
