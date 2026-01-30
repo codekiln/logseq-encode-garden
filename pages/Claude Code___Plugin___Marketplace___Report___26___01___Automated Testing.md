@@ -1,0 +1,107 @@
+tags:: [[ChatGPT/Deep Research]]
+chatgpt-link:: https://chatgpt.com/c/697b69a0-a06c-8329-9f46-7ad7e80ed941?ref=mini
+
+- # Automated Testing of Claude Code Plugins in Practice
+	- ## Executive overview
+		- Automated testing for Claude Code plugins (skills/slash commands, agents, hooks, MCP servers, and related components) is currently built from three layers rather than a single "plugin test runner": structural validation (manifest + layout), conventional unit/integration tests for any non-LLM code bundled with the plugin (scripts/servers), and "agent-in-the-loop" checks that execute Claude Code non-interactively (or via CI harnesses) and assert machine-readable outputs. [^1]
+		- In the community, the most repeatable automation patterns rely on Claude Code's headless/print mode (`claude -p ...`) with structured outputs (`--output-format json` / `stream-json`) and guardrails (`--max-turns`, `--max-budget-usd`, tool allowlists/denylists). These are used to make CI runs bounded, parseable, and less likely to hang or mutate repos unexpectedly. [^2]
+		- A key practical constraint is that some capabilities people associate with "plugin commands" are still tightly coupled to interactive mode. The official headless docs explicitly note that user-invoked skills like `/commit` (and built-in commands) are only available in interactive mode; in `-p` mode you must describe the task instead. This materially affects how engineers can "call" a plugin command during automation, and pushes many test strategies toward trigger-based evaluation plus log/JSON assertions. [^2]
+	- ## Official CLI automation surface for plugin testing
+		- ### CLI flags engineers use for automated testing beyond -p
+			- Claude Code's official CLI reference and headless (programmatic) guide document a set of flags that—taken together—form today's "native" automation surface for testing plugins and their integrations. [^2]
+			- The highest-leverage flags for automated testing scenarios are:
+				- **Load a plugin (dev/local) for a session**: `--plugin-dir <dir>` (repeatable). Test a plugin without installing into user/project scopes; isolate revisions by pointing at a specific checkout. Documented in CLI reference. [^4]
+				- **Make outputs machine-assertable**: `--output-format json` / `stream-json`. Parse results in CI (jq, Python, etc.), capture metadata (session ID, usage), stream progress. Documented in headless guide. [^2]
+				- **Enforce output shape**: `--json-schema '<schema>'` (with `--output-format json`). Convert "LLM output" into a contract CI can validate; reduce flaky string-matching. Documented in CLI reference + headless guide. [^4]
+				- **Bound runtime + cost**: `--max-turns <n>`, `--max-budget-usd <amount>`. Prevent runaway agents in CI; enforce deterministic stopping conditions. Documented in CLI reference. [^4]
+				- **Control permissions non-interactively**: `--allowedTools ...`, `--disallowedTools ...`, `--skip-permissions`, `--tools ...`, `--dangerously-permission-mode ...`. Make CI runs either (a) safe and read-only, or (b) explicitly allow needed ops (tests, formatting) without prompts. Documented in CLI reference + headless guide. [^4]
+				- **Replace interactive approvals with an MCP "approval tool"**: `--permission-prompt-tool <mcp_tool>`. Enabling headless automation that still enforces policy decisions. Documented in CLI reference, but community reports minimal working examples are lacking. [^4]
+				- **Keep test runs isolated**: `--no-session-persistence`. No saved session reuse. Documented in CLI reference. [^4]
+				- **See plugin registration, MCP initialization errors, hook registrations**: `--debug ...`, `--verbose`. Documented in CLI reference + plugin ref. [^4]
+				- **Isolate configuration**: `--settings <file|json>`, `--setting-sources ...`, `--mcp-config ...`, `--strict-mcp-config`. Make CI reproducible by pinning settings/MCP servers and ignoring developer machine config. Documented in CLI reference. [^4]
+			- Two flags that often matter specifically for automated plugin tests (and are easy to miss) are:
+				- `--plugin-dir` for per-session plugin loading in dev/CI contexts. [^4]
+				- `--permission-prompt-tool` for "headless approvals," which the community often treats as an advanced/fragile feature due to limited end-to-end examples. [^4]
+		- ### Official plugin-management commands used as "tests"
+			- The official plugin reference emphasizes that Claude Code includes non-interactive plugin management commands intended for scripting/automation (install, uninstall, enable, disable, update) and debugging support (`claude --debug`). [^1]
+			- In practice, many repositories treat these as "smoke tests" for plugin packaging:
+				- Validate that plugin manifests are correct and components load. The plugin reference explicitly recommends validating manifests and mentions `claude plugin validate` as a way to validate invalid plugin.json problems. [^1]
+				- Debug loading to ensure skills/commands/hooks/agents/MCP servers are registered as expected. [^1]
+		- ### An important official limitation for automated plugin tests
+			- The official headless guide notes that user-invoked skills and built-in commands are interactive-only, and that in `-p` mode you should describe the task instead of invoking `/skill-name`. [^2]
+			- This creates a fork in automation strategies:
+				- If you need to explicitly run `/my-command` and assert behavior, engineers often resort to higher-complexity harnesses (PTY automation, editor integrations, or running via GitHub Action wrappers that simulate command invocation).
+				- If you can express your test as "Given X context, the plugin should trigger and do Y," engineers use `-p` plus structured outputs and explicit constraints. [^2]
+	- ## Concrete real-world workflows from public repositories
+		- ### Local "integration smoke tests" with --plugin-dir
+			- A very common developer pattern is: run unit tests for bundled code (scripts/servers), then do a quick manual or semi-automated integration check by launching Claude Code with the plugin loaded from a local checkout. [^17]
+			- The jarrodwatts/claude-stt plugin README exemplifies this: it includes conventional Python unit tests (`python -m unittest discover -s tests`) and recommends testing the plugin locally without installing by running `claude --plugin-dir /path/to/claude-stt`. [^17]
+			- That split—language-native tests for deterministic code plus `--plugin-dir` smoke testing for Claude Code integration—shows up repeatedly across plugin repos because it's much more stable than trying to fully assert LLM-driven behavior end-to-end. [^17]
+		- ### "Evals as tests" for skill quality and correctness
+			- Some teams treat plugin testing as an evaluation problem, not only a correctness problem. The braintrustdata/braintrust-claude-plugin repository is explicit about this: it provides an evals/ directory with tests, and recommends running evals via the Braintrust tooling (`braintrust eval ...`) to verify that a skill produces correct outputs (e.g., valid SQL queries, correct logging). [^19]
+			- This is a notable "industry-style" approach because it acknowledges that for skills (prompt-based behaviors), you often need graded evaluation (pass/fail with tolerances, judge models, or constrained output formats) rather than strict snapshot tests. [^19]
+		- ### Marketplace repos validating plugin structure in CI and locally
+			- Large plugin marketplace repos commonly implement automated validation gates that function like tests: [^21]
+				- kivilaid/plugin-marketplace documents validating a plugin with `claude plugin validate ./plugins/your-plugin` and then testing the marketplace locally via `/plugin marketplace add ./` + `/plugin install ...`. [^21]
+				- sgaunet/claude-plugins similarly instructs developers to validate individual plugins with `claude plugin validate` inside plugin directories. [^22]
+			- This reflects a widespread baseline: ensure all manifests and structures conform before attempting any behavioral testing. [^1]
+		- ### GitHub Actions as an automation harness around claude -p
+			- Anthropic's official anthropics/claude-code-action discussion about the v1 design shows how teams run Claude Code in CI by passing a prompt plus CLI arguments like `--max-turns` and `--mcp-config`. It also shows a pattern of using a slash-command-like prompt (e.g., `/review {{github.event}}`) at the GitHub Action layer. [^24]
+			- Even when teams aren't "testing a plugin" per se, this is the same orchestration substrate plugin authors can use to test their plugin behaviors in PRs: trigger a run, capture structured output, assert on generated artifacts, and fail the workflow if checks don't pass. [^24]
+		- ### Wrapper tools that embed "review + test + fix" loops
+			- Community wrappers such as AnandChowdhary/continuous-claude run Claude Code iteratively and explicitly support running a reviewer pass after each iteration (e.g., "Run npm test and npm run lint, fix any failures"), forwarding unrecognized flags to the underlying claude CLI. [^26]
+			- This pattern matters for plugins because many plugins exist to enforce workflow discipline (run tests, lint, review). Wrappers like this become test harnesses by repeatedly applying the plugin's workflow logic and verifying the repo remains green after changes. [^26]
+		- ### Community tools and frameworks that assist plugin testing
+			- **Guardrail plugins that enforce "test-first" and review cycles**: Community plugins such as Chachamaru127/claude-code-harness position themselves as workflow guardrails (Plan → Work → Review → Commit) and ship multi-component plugin structures (commands/skills/agents/hooks/MCP). These plugins often include their own tests/ directories and provide installation paths via marketplace or `--plugin-dir`, implying a development workflow where the plugin's behavior is validated in controlled cycles. [^28]
+			- Even when these repos don't provide a single "plugin test runner," they demonstrate a practice: treat plugin development like product development, with repeatable flows and enforcement hooks that reduce nondeterministic LLM behavior (e.g., blocking dangerous commands, auto-reviewing changes). [^28]
+		- ### Plugins and component-specific testing
+			- **Skills**: Often tested via evals (Braintrust-style) or headless runs with structured output; slash-command invocation is interactive-only. [^2]
+			- **Slash commands**: Same as skills for automation—describe the task in `-p` or use PTY/editor harnesses. [^2]
+			- **Agents**: Subagent/orchestrator plugins (e.g., gruckion/nested-subagent) use streaming output and event assertions; tests tend to be medium–high complexity. [^30]
+			- **Hooks**: Hooks are deterministic; engineers typically test them with conventional methods: unit or integration tests for the scripts themselves (shellcheck, bats, pytest, node test runners depending on language), and a thin Claude Code integration smoke test to verify the hook is wired correctly (load via `--plugin-dir`, run a minimal tool action that should trigger the hook, inspect side effects). The plugin reference includes explicit troubleshooting checklists: executable bit, correct shebang, and use of `${CLAUDE_PLUGIN_ROOT}`. [^37]
+			- **MCP servers bundled in plugins**: Plugins can ship MCP servers via .mcp.json or inline config. Testing patterns: test the MCP server independently (as a normal service) with protocol-level tests first; use `claude --debug` to surface MCP initialization issues and tool registration problems; in headless automation, isolate MCP config with `--mcp-config` and `--strict-mcp-config` so tests don't accidentally depend on developer machine MCP servers. [^40] [^4]
+		- ### Plugin loading behavior and caching concerns
+			- The official plugin reference explains that, for "security and verification purposes," installed plugins are copied into a cache rather than used in-place, and paths that traverse outside the plugin root will not work after installation. [^1]
+			- This affects tests in two ways:
+				- Developers prefer `--plugin-dir` for development testing because it avoids "install → cache → stale content" issues during rapid iteration, which is reflected in feature requests asking for persistent in-place plugin loading. [^43]
+				- Test fixtures must be located inside the plugin root (or symlinked) to match post-install behavior; otherwise tests pass locally and fail when installed/cached. [^1]
+		- ### Workflow diagram: typical CI strategy seen in the ecosystem
+			- Flow: Commit / PR → Structural validation (`claude plugin validate` + lint) → Deterministic code tests (pytest / unittest / node test / shellcheck) → Claude-run smoke tests (`claude -p ... --output-format json`) → Assertions (jq / python asserts) → Pass? → Merge / Release or Fail CI with artifacts (logs, JSON output, debug traces). [^2]
+			- This diagram reflects "what works today": treat deterministic parts like normal software, and constrain/structure the model-driven checks so they can be asserted in CI. [^2]
+	- ## Limitations, gaps, and a comparison matrix of testing approaches
+		- ### Reported limitations and ecosystem gaps
+			- Claude Code's headless mode is powerful for automation, but it still has feature parity gaps relative to interactive workflows, especially around explicit slash-command invocation. The official headless docs explicitly warn that user-invoked skills and built-in commands are interactive-only. [^2]
+			- Plugin development friction also comes from caching and session-local plugin loading:
+				- Installed plugins are copied to a cache (by design), which can make in-place dev iteration harder and can cause subtle "works in repo, fails when installed" issues if files live outside the plugin root. [^1]
+				- The community has asked for persistent in-place plugin loading beyond repeatedly using `--plugin-dir`, indicating the current dev ergonomics are still evolving. [^43]
+			- On the automation-control side, `--permission-prompt-tool` exists but community reports highlight missing minimal, maintained examples for implementing the permission handler MCP tool end-to-end, making this feature harder to adopt reliably in CI. [^46]
+			- Finally, the headless execution surface itself can be affected by regressions and schema/tooling issues, which impacts tests that depend on `claude -p` stability (examples include reports of `-p` failing immediately with API error 400, and other headless-mode hang conditions). [^47]
+		- ### Comparison table of common testing approaches
+			- | Approach | What it tests best | Uses Claude Code CLI? | Complexity | Suitability by plugin type | Notes |
+			  | Manifest/layout validation | Packaging correctness: plugin.json, structure, paths | Yes (claude plugin validate) | Low | All plugins | Widely used in marketplaces; catches the most common install/load failures early. [^1] |
+			  | Deterministic unit tests | Scripts, MCP servers, CLIs bundled with plugin | No (language-native) | Low–Medium | Hooks, MCP servers, supporting automation | Example: plugins running Python unittest. [^17] |
+			  | Hook integration smoke tests | Wiring + lifecycle triggering | Indirect (load plugin, trigger event) | Medium | Hooks, MCP servers | Official docs emphasize hooks are deterministic; troubleshooting guidance focuses on executable + paths. [^37] |
+			  | Headless functional tests with contracts | LLM-driven workflows with assertable JSON outputs | Yes (claude -p --output-format json --json-schema) | Medium | Skills, agent workflows, some MCP tool usage | Most CI-friendly approach for model-involved tests; requires careful bounding (--max-turns, tool allowlists). [^2] |
+			  | Streaming run + event assertions | Long-running workflows, progress tracking, tool-call events | Yes (--output-format stream-json, --include-partial-messages) | Medium–High | Orchestrator plugins (multiagent), "task runner" patterns | Used by plugins that spawn subprocess agents and need realtime progress streams. [^30] |
+			  | Interactive command invocation tests | Explicit /command behavior and UI-coupled flows | Not reliably via -p | High | Slash-command heavy plugins | Official headless docs warn interactive-only for user-invoked skills; requires PTY harnessing or editor integration. [^2] |
+			  | Eval harnesses ("quality tests") | Trigger reliability, correctness under varied prompts, regression over time | Sometimes (often via SDKs / eval tools) | High | Skills and agent behaviors | Braintrust plugin is an example of "evals as tests." Valuable when "correctness" is distributional. [^19] |
+	- ## Footnotes
+		- [^1]: https://code.claude.com/docs/en/plugins-reference
+		- [^2]: https://code.claude.com/docs/en/headless
+		- [^4]: https://code.claude.com/docs/en/cli-reference
+		- [^17]: https://github.com/jarrodwatts/claude-stt
+		- [^19]: https://github.com/braintrustdata/braintrust-claude-plugin?utm_source=chatgpt.com
+		- [^21]: https://github.com/kivilaid/plugin-marketplace
+		- [^22]: https://github.com/sgaunet/claude-plugins?utm_source=chatgpt.com
+		- [^24]: https://github.com/anthropics/claude-code-action/discussions/428
+		- [^26]: https://github.com/AnandChowdhary/continuous-claude
+		- [^28]: https://github.com/Chachamaru127/claude-code-harness
+		- [^30]: https://github.com/gruckion/nested-subagent
+		- [^32]: https://github.com/mmarcen/test_permission-prompt-tool?utm_source=chatgpt.com
+		- [^34]: https://github.com/ZenterFlow/claude-code-plugin-template
+		- [^36]: https://github.com/stbenjam/claude-marketplace-template?utm_source=chatgpt.com
+		- [^37]: https://code.claude.com/docs/en/hooks-guide?utm_source=chatgpt.com
+		- [^40]: https://code.claude.com/docs/en/mcp
+		- [^43]: https://github.com/anthropics/claude-code/issues/17663?utm_source=chatgpt.com
+		- [^46]: https://github.com/anthropics/claude-code/issues/1175?utm_source=chatgpt.com
+		- [^47]: https://github.com/anthropics/claude-code/issues/11678?utm_source=chatgpt.com

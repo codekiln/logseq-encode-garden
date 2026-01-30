@@ -1,0 +1,1 @@
+- [GitHub Desktop keyboard shortcuts - GitHub Docs](https://docs.github.com/en/desktop/overview/github-desktop-keyboard-shortcuts)
