@@ -10,7 +10,7 @@ created-by:: [[Person/Brian Madison]]
 			- once I approve it will execute and generally also use TDD
 			- sometimes it thinks it is done, so i will tell it to run the tests (if it did not) and it will iterate on testing until it is all working
 			- Between stories, I start a new chat - the nice thing is I can just greet the AI or ask it whats up, and it will know and suggest to generate a new story file or continue on the current one.
-		- [[CursorAI/Agent Mode/Cost]]
+		- [[CursorAI/Agent/Cost]]
 			- > **Using Agent mode in cursor of course it not the most cost effective, but it will give you a glimpse** ... it works very well!
 			- > don’t burn tool usage on simple things that you can be scripted into simple commands
 			- [[CursorAI/Technique/Frontload Design]]

@@ -1,0 +1,1 @@
+- ctrl+backtick - open in configured terminal emulator

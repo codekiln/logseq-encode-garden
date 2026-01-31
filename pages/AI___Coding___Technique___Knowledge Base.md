@@ -1,3 +1,3 @@
 # Technique - Giving an AI Access to [[Knowledge Bases]]
 	- In this technique, the project repository either directly contains #Documentation, or the project repository is configured so as to give the AI access to an [[MCP/Server]] that can access documentation.
-	- [[CursorAI/@/Docs]] is almost a form of this, but to my knowledge, as of [[CursorAI/v/0.46 - Agent is ready and UI Refresh]], I haven't seen the [[CursorAI/Agent Mode]] initiate draw upon Docs itself. Instead, it tends to do a web search or a file system grep.
+	- [[CursorAI/@/Docs]] is almost a form of this, but to my knowledge, as of [[CursorAI/v/0.46 - Agent is ready and UI Refresh]], I haven't seen the [[CursorAI/Agent]] initiate draw upon Docs itself. Instead, it tends to do a web search or a file system grep.

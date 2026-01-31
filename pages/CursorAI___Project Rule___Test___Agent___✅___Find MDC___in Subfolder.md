@@ -1,5 +1,5 @@
 # Can Cursor Agent Mode pick up mdc files in subfolders? **YES**
-	- Tests whether [[CursorAI/Agent Mode]] activates `.mdc` project rules by description when they are found in a subdirectory of `.cursor/rules`, such as in `.cursor/rules/subfolder/*.mdc`
+	- Tests whether [[CursorAI/Agent]] activates `.mdc` project rules by description when they are found in a subdirectory of `.cursor/rules`, such as in `.cursor/rules/subfolder/*.mdc`
 	  id:: 67cd60f9-b734-486d-b050-7c9527e32250
 	- ## Test Cursor Project Rule File - [[CursorAI/Test/Fixture/Subfolder Favorite Apples project rule]]
 		- Install this cursor rule in the specified location (inside the `subfolder`):

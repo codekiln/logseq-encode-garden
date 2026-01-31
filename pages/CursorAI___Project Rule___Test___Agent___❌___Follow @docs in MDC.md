@@ -1,5 +1,5 @@
 # Can Cursor Agent Mode follow [[CursorAI/@/Docs]] references in [[.mdc]] files? **NO**
-	- Tests whether [[CursorAI/Agent Mode]] mode pulls documentation docs into context if a [[CursorAI/Project Rule]] is activated that attempts to reference `@docs`
+	- Tests whether [[CursorAI/Agent]] mode pulls documentation docs into context if a [[CursorAI/Project Rule]] is activated that attempts to reference `@docs`
 	  id:: 67cd6155-cbe2-435f-b834-0a271fa13258
 	- ## Test Preparation
 		- Try a docs query to one of the pre-built providers [[CursorAI/@/Docs/PreBuilt]]

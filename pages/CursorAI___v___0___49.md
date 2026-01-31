@@ -45,7 +45,7 @@ tags:: [[CursorAI/Changelog]]
 		- Git > @PR renamed to [[CursorAI/@/Branch]]
 	- ### Fixes
 		- [[CursorAI/Project Rule/Type/AutoAttached]] now persist correctly across summarization
-		- [[CursorAI/Project Rules]] in [[.mdc]] files can now be created and edited without issue by [[CursorAI/Agent Mode]]
+		- [[CursorAI/Project Rules]] in [[.mdc]] files can now be created and edited without issue by [[CursorAI/Agent]]
 		- Fixed selection issues with `@mention` nodes at the start of the input box
 		- Performance improvements in core editor
 	- ### Business / Teams

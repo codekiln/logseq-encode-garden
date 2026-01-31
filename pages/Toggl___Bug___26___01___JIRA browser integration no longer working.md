@@ -1,1 +1,2 @@
 - The Start Timer button no longer appears on browser pages as of today. Tried in Chrome and Brave.
+- as of [[2026-01-27 Tue]] it's working again in Brave.

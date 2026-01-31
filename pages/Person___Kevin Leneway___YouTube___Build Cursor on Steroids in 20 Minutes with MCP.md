@@ -160,8 +160,8 @@ CLOCK: [2025-02-16 Sun 03:05:45]--[2025-02-16 Sun 04:35:08] =>  01:29:23
 			- it said, "**let's perform a code review**"
 			- when it calls a tool {{youtube-timestamp 981}}
 				- #Observation
-					- [[CursorAI/Agent Mode]] here says "Calling MCP tool: `code-review`"
-					- [[CursorAI/Agent Mode/Yolo]] is NOT on, it's asking him for confirmation to run the tool
+					- [[CursorAI/Agent]] here says "Calling MCP tool: `code-review`"
+					- [[CursorAI/Agent/Yolo]] is NOT on, it's asking him for confirmation to run the tool
 			- it asks for any kind of attributes
 			- I need to know where this is [on the MCP Server] to run that that diff command,
 			- I'm asking for the folder path

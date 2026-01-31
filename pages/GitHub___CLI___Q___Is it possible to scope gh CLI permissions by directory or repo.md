@@ -3,7 +3,7 @@
 CLOCK: [2025-02-21 Fri 05:19:05]
 :END:
 	- ## Impetus
-		- [[CursorAI/Agent Mode]] can invoke the #gh when instructed to do so in a [[CursorAI/Project Rule]]. It would be great if the `gh` cli permissions could be locked down to modifying just the assets associated with a certain repo.
+		- [[CursorAI/Agent]] can invoke the #gh when instructed to do so in a [[CursorAI/Project Rule]]. It would be great if the `gh` cli permissions could be locked down to modifying just the assets associated with a certain repo.
 	- ## Follow-up #Questions
 		- ### DOING Is it possible that the GitHub CLI access token could source an [[EnvVar/.env]] file in the current repo to obtain a [[GitHub Personal Access Token]] that's scoped to the current repository?
 		  :LOGBOOK:

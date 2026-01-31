@@ -3,7 +3,7 @@ tags:: [[CursorAI/Project Rule]], [[AI Knowledge Gardening]]
 - # Cursor Rule for creating [[Diataxis/How To]] guides
 	- ## Summary of `diataxis-how-to.mdc`
 	  id:: 67c47e97-888c-4d70-b6c8-2911ceea95c0
-		- This cursor rule specifies how [[CursorAI/Agent Mode]] can to author a **Diataxis-style How To guide** and add it to the [[Knowledge Garden]].
+		- This cursor rule specifies how [[CursorAI/Agent]] can to author a **Diataxis-style How To guide** and add it to the [[Knowledge Garden]].
 		- **Use Case:** If you are about to ask [[CursorAI/Chat]] for the answer to a particular question, instead, ask Cursor to research a question and create a How-To guide for it. This way the answer will be in the knowledge base for easy reference in the future.
 		- ### #Examples of pages created with this Cursor Project Rule
 			- [[Diataxis/How To/Create a How To]]

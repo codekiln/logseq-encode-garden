@@ -23,4 +23,4 @@ tags:: Idea
 		  id:: 67b34ff1-a5f9-4b33-ae50-1b9bd81c36ff
 			- [[Inference Time Compute]] cost and latency grows with the length of the [[Chain of Thought]]. It may eventually be structurally important to bifurcate when and where we use reasoning models.
 				- The cost structure of reasoning models encourage Cursor and likely also other [[AI Coding Tool]]s to develop licensing models that restricts the use of reasoning models in their agent mode.
-			- But there remains an important need to develop a well-reasoned plan on what to do. CICD may have a role in doing some [[System/2 Thinking]] pre-work and sequencing to help the [[System/1 Thinking]] [[CursorAI/Agent Mode]] make the most of its resources.
+			- But there remains an important need to develop a well-reasoned plan on what to do. CICD may have a role in doing some [[System/2 Thinking]] pre-work and sequencing to help the [[System/1 Thinking]] [[CursorAI/Agent]] make the most of its resources.

@@ -1,4 +1,4 @@
-# DOING How to have [[CursorAI/Agent Mode]] execute a [[VSCode/Command]]
+# DOING How to have [[CursorAI/Agent]] execute a [[VSCode/Command]]
 :LOGBOOK:
 CLOCK: [2025-02-12 Wed 06:44:56]
 :END:

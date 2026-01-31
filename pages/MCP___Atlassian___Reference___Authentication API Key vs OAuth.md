@@ -1,0 +1,35 @@
+- # [[MCP]] [[Atlassian/MCP]] Authentication: API Key / Secret vs [[OAuth]] Flow
+	- Reference on whether you can use a stored **API key/secret** instead of going through the **OAuth flow** when using Atlassian's Model Context Protocol (MCP).
+	- ## Official MCP Authentication Requirements
+		- ### Atlassian-hosted MCP / Rovo MCP
+			- The **official Atlassian MCP (a.k.a. "Rovo MCP Server")** uses **OAuth 2.1** for authentication. The client you connect (IDE, agent, etc.) must go through a browser-based OAuth authorization flow — you don't simply pass an API key. ([Atlassian Support – Authentication and authorization](https://support.atlassian.com/atlassian-rovo-mcp-server/docs/authentication-and-authorization/))
+			- Community discussion about using API keys/OpenID with the official MCP indicates that **API tokens and OIDC aren't supported** in place of OAuth for authenticating with the Atlassian MCP. ([Can I use the official Atlassian MCP with OpenID or API Key?](https://community.atlassian.com/forums/Rovo-questions/Can-I-use-the-official-Atlassian-MCP-with-OpenID-or-API-Key/qaq-p/3081493))
+	- ## Self-Hosted MCP Servers (Community / Custom)
+		- If you host your own MCP server (e.g., the [[mcp-atlassian]] project on GitHub):
+		- ### Authentication Between MCP Server → Atlassian APIs
+			- On the **server side**, you *can* authenticate to Jira/Confluence using an **API token or personal access token** stored in environment variables/config — just like any other REST client. That means your MCP server itself can store credentials (API token) and call the Atlassian REST APIs using basic auth or PAT. ([sooperset/mcp-atlassian](https://github.com/sooperset/mcp-atlassian))
+			- This is how guides for self-hosting show authentication being configured: put the API token in an `.env` file and the MCP server uses that to call Jira's REST APIs. ([Workato – Jira MCP Integration](https://www.workato.com/the-connector/jira-mcp/))
+		- ### Authentication Between MCP Client → Your MCP Server
+			- For MCP communication itself (between the AI agent/IDE and your MCP server), a simple API key or token **could be implemented** *if you design your own auth on that layer*. MCP is essentially a JSON-RPC protocol; you can add token headers or static secrets at that transport layer.
+			- However, this is **custom application logic**, not part of the MCP spec from Atlassian. That means you'd need to implement that yourself on your MCP server and in your clients.
+	- ## Summary: What's Possible vs. Not
+		- | Scenario | Supported? | Notes |
+		- | --- | --- | --- |
+		- | **Using a stored API key instead of OAuth for official Atlassian MCP (Rovo)** | ❌ | Official MCP requires a browser OAuth flow. ([Atlassian Community](https://community.atlassian.com/forums/Rovo-questions/Can-I-use-the-official-Atlassian-MCP-with-OpenID-or-API-Key/qaq-p/3081493)) |
+		- | **Using API token to authenticate MCP server → Atlassian REST APIs** | ✅ | Typical for self-hosted MCP server setups. ([Workato](https://www.workato.com/the-connector/jira-mcp/)) |
+		- | **Using API key for MCP client → self-hosted MCP server** | ⚠️ With custom implementation | You could build this yourself — not part of spec. |
+		- | **Using OAuth refresh tokens / server-to-server 2LO** | ⚠️ Only via OAuth workarounds (not standard for official Rovo MCP) | OAuth access tokens can be managed server-side, but official Rovo MCP flow still needs user authorization. |
+	- ## Practical Takeaways
+		- ### Avoiding OAuth redirects in clients/IDE/agents
+			- With **official Atlassian MCP**, that isn't currently possible; the Rovo server enforces OAuth 2.1. ([Atlassian Support](https://support.atlassian.com/atlassian-rovo-mcp-server/docs/authentication-and-authorization/))
+		- ### Storing credentials once and automating auth server-side
+			- You *can* avoid the user flow by **self-hosting an MCP server** (e.g. [[mcp-atlassian]]) that uses an API token stored as a secret to call Jira/Confluence.
+			- Your AI agent/IDE talks to your MCP server; the MCP server handles auth to Atlassian.
+			- If you don't want OAuth entirely, you can layer your own API key check between your client and MCP server.
+		- ### Non-OAuth access to Atlassian APIs directly
+			- For typical scripts or agents calling REST APIs directly (outside of MCP), Atlassian supports **API tokens/basic auth**. ([Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/))
+	- ## Recommendations for Next Steps
+		- **Self-host an MCP server** (e.g. via [[mcp-atlassian]]) so you control the auth layer.
+		- Use environment variables or a secrets store to hold your Jira/Confluence API token.
+		- Add a simple **API key or token** to secure your MCP server's endpoint from clients.
+		- If you eventually need proper OAuth scopes/refresh and multi-user access, integrate an OAuth token refresh flow on the server.
