@@ -1,1 +1,2 @@
-- [codekiln/beans: A coffee log.](https://github.com/codekiln/beans)
+- Github: [codekiln/beans: A coffee log.](https://github.com/codekiln/beans)
+- Web: https://codekiln.github.io/beans/
