@@ -1,0 +1,39 @@
+- [gpakosz/.tmux: Oh my tmux! My self-contained, pretty & versatile tmux configuration made with 💛🩷💙🖤❤️🤍](https://github.com/gpakosz/.tmux)
+	- By [[Person/Grégory Pakosz]]
+	- > If you're new to tmux, I recommend you to read the [tmux getting started guide](https://github.com/tmux/tmux/wiki/Getting-Started), as well as the [tmux 3: Productive Mouse-Free Development](https://pragprog.com/titles/bhtmux3/tmux-3/)
+	- See also [[tmux]]
+	- ## [Bindings](https://github.com/gpakosz/.tmux#bindings)
+		- tmux may be controlled from an attached client by using a key combination of a prefix key, followed by a command key. This configuration uses `C-a` as a secondary prefix while keeping `C-b` as the default prefix. In the following list of key bindings:
+		- `<prefix>` means you have to either hit Ctrl + a or Ctrl + b
+		- `<prefix> c` means you have to hit Ctrl + a or Ctrl + b followed by c
+		- `<prefix> C-c` means you have to hit Ctrl + a or Ctrl + b followed by Ctrl + c
+		- This configuration uses the following bindings:
+			- `<prefix> e` opens the `.local` customization file copy with the editor defined by the `VISUAL` or `EDITOR` environment variable (defaults to `vim` when empty)
+			- `<prefix> r` reloads the configuration
+			- `C-l` clears both the screen **and** the tmux history
+			- `<prefix> C-c` creates a new session
+			- `<prefix> C-f` lets you switch to another session by name
+			- `<prefix> C-h` and `<prefix> C-l` let you navigate windows (default `<prefix> n` is unbound and `<prefix> p` is repurposed)
+			- `<prefix> Tab` brings you to the last active window
+			- `<prefix> -` splits the current pane vertically
+			- `<prefix> _` splits the current pane horizontally
+			- `<prefix> h`, `<prefix> j`, `<prefix> k` and `<prefix> l` let you navigate panes ala Vim
+			- `<prefix> H`, `<prefix> J`, `<prefix> K`, `<prefix> L` let you resize panes
+			- `<prefix> <` and `<prefix> >` let you swap panes
+			- `<prefix> +` maximizes the current pane to a new window
+			- `<prefix> m` toggles mouse mode on or off
+			- `<prefix> U` launches Urlscan (preferred) or Urlview, if available
+			- `<prefix> F` launches Facebook PathPicker, if available
+			- `<prefix> Enter` enters copy-mode
+			- `<prefix> b` lists the paste-buffers
+			- `<prefix> p` pastes from the top paste-buffer
+			- `<prefix> P` lets you choose the paste-buffer to paste from
+		- Additionally, `copy-mode-vi` matches [my own Vim configuration](https://github.com/gpakosz/.vim.git)
+		- Bindings for `copy-mode-vi`:
+			- `v` begins selection / visual mode
+			- `C-v` toggles between blockwise visual mode and visual mode
+			- `H` jumps to the start of line
+			- `L` jumps to the end of line
+			- `y` copies the selection to the top paste-buffer
+			- `Escape` cancels the current operation
+		- It's also possible to preserve the tmux stock bindings by setting the `tmux_conf_preserve_stock_bindings` variable to `true` in your `.local` customization file copy.

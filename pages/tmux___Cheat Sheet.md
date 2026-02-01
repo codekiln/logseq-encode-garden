@@ -47,7 +47,6 @@ tags:: [[Keyshorts]]
 						  set -g mouse on
 						  ```
 					- reload conf:
-					  collapsed:: true
 						- `Ctrl-b : source-file ~/.tmux.conf`
 				- 2 - immediate application
 					- `ctrl-b : set -g mouse on`

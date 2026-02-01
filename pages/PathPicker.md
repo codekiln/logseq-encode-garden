@@ -1,0 +1,5 @@
+- [facebook/PathPicker: PathPicker accepts a wide range of input -- output from git commands, grep results, searches -- pretty much anything. After parsing the input, PathPicker presents you with a nice UI to select which files you're interested in. After that you can open them in your favorite editor or execute arbitrary commands.](https://github.com/facebook/PathPicker)
+	- works well with [[vim]]
+	- demo
+		- <a href="https://asciinema.org/a/19519" target="_blank"><img src="https://asciinema.org/a/19519.svg" /></a>
+		-

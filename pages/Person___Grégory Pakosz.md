@@ -1,0 +1,17 @@
+alias:: [[People/Grégory Pakosz]], [[gpakosz]]
+- # Grégory Pakosz
+	- ![Grégory Pakosz](https://avatars.githubusercontent.com/u/553208?v=4)
+	- ## About
+		- Software engineer; Nantes / Paris, France
+		- Works at [[Apple]]
+		- Maintainer of popular open-source projects including Oh my tmux! ([[Person/Grégory Pakosz/GitHub/tmux]])
+		- > "If you're not appearing, you're disappearing." — Art Blakey
+	- ## Online
+		- [GitHub](https://github.com/gpakosz) (gpakosz)
+		- [Website](https://pempek.net/)
+		- [X / Twitter](https://twitter.com/gpakosz)
+		- [Mastodon](https://mastodon.gamedev.place/@gpakosz)
+		- [LinkedIn](https://www.linkedin.com/in/gpakosz/)
+	- ## Related
+		- [[Person/Grégory Pakosz/GitHub/tmux]] — Oh my tmux! configuration
+		- [[tmux]] — tmux resources
