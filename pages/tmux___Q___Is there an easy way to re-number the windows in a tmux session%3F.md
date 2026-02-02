@@ -1,0 +1,8 @@
+- # Is there an easy way to re-number the windows in a [[tmux]] session?
+	- For example, what if I want what's currently in window 3 to be in window 0?
+- ## Answer
+	- 
+- ## My Notes
+	- 
+- ## Related
+	- 

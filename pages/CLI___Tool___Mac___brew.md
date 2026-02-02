@@ -1,1 +1,1 @@
-alias:: [[brew]]
+alias:: [[brew]], [[homebrew]]

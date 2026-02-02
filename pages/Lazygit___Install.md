@@ -1,0 +1,3 @@
+- [[brew]] `brew install lazygit`
+- There is a third-party [[DevContainer/Feature]]  [dev container feature](https://github.com/GeorgOfenbeck/features/tree/main/src/lazygit-linuxbinary) based on the binary releases for [[Codespaces]]
+- when you first start it up, you're going to see a [[TUI]] [[UX/Screen/Splash]]
