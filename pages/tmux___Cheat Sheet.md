@@ -2,7 +2,7 @@ tags:: [[Keyshorts]]
 
 - # tmux Cheat Sheet
 	- ## Prefix key
-		- Default: `Ctrl+b`
+		- Default: `Ctrl+b` ([[gpakosz/.tmux]] *also* maps `Ctrl+a`)
 	- ## Session management
 		- | Command                     | Action                                   |
 		  |-----------------------------|------------------------------------------|
@@ -15,7 +15,7 @@ tags:: [[Keyshorts]]
 		  | `tmux kill-session -a`      | Kill all sessions except current         |
 		  | `tmux kill-server`          | Terminate all sessions and the server    |
 	- ## Window management (within a session)
-		- default prefix is `ctrl+b`
+		- default prefix is `ctrl+b` ([[gpakosz/.tmux]] *also* maps `Ctrl+a`)
 		- | Shortcut (after prefix)     | Action                                   |
 		  |-----------------------------|------------------------------------------|
 		  | `c`                         | Create a new window                      |
