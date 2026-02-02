@@ -1,0 +1,38 @@
+created-by:: [[Person/Boris Cherny]]
+
+- # Boris Tips for Claude Code pt2 - [Boris Cherny on Threads](https://www.threads.com/@boris_cherny/post/DUMZr4VElyb?xmt=AQF0WlWmpsZK2wku7FFr7S6vX5GroJiBF839KtKKzW9PucGjnWRZ51lyWEGZavkP7fZ2vgc&slof=1)
+	- > I'm Boris and I created Claude Code. I wanted to quickly share a few tips for using Claude Code, sourced directly from the Claude Code team. The way the team uses Claude is different than how I use it. Remember: there is no one right way to use Claude Code -- everyones' setup is different. You should experiment to see what works for you!
+	- ## Tip 1: Do more in parallel
+		- Run **3–5 git worktrees at once**, each with its own Claude Code session. The team calls this the **single biggest productivity unlock** and the **top tip**.
+		- Boris personally uses multiple git checkouts; most of the Claude Code team prefers **worktrees**, which is why native worktree support was added to the Claude Desktop app.
+		- **Basic workflow:**
+			- Create a worktree: `git worktree add .claude/worktrees/my-worktree origin/main`
+			- Enter it and start Claude: `cd .claude/worktrees/my-worktree && claude`
+		- **Team variations:**
+			- Some name worktrees (e.g. `za`, `zb`, `zc`) and use **shell aliases** to jump between them quickly.
+			- Others keep **dedicated worktrees** for specific tasks (e.g. an "analysis" worktree for reading logs and running BigQuery).
+		- See [Common workflows](https://code.claude.com/docs) in Claude Code docs for more.
+	- ## Tip 2: Start every complex task in plan mode
+		- **Core idea:** Put your energy into the **plan** so Claude can often **1-shot the implementation**. Start every complex task in **plan mode** (e.g. shift+Tab to cycle into it).
+		- **Two team patterns:**
+			- **Plan + review:** One person has one Claude write the plan, then spins up a **second Claude** to review it "as a staff engineer."
+			- **Re-plan when things go wrong:** The moment something goes sideways, **switch back to plan mode and re-plan** instead of pushing on. They also tell Claude to use plan mode for **verification steps**, not only for the initial build.
+		- Don’t keep pushing when the approach is off; re-plan and then execute again.
+	- ## Tip 3: Invest in your CLAUDE.md
+		- **Correction loop:** After every correction you make, **update your `CLAUDE.md`** so that mistake doesn’t happen again.
+		- Claude is **very good at writing rules for itself**; feeding it examples of corrections helps it internalize better behavior.
+		- **Iterate:** Edit `CLAUDE.md` ruthlessly over time and keep iterating until Claude’s **mistake rate measurably drops**.
+		- **Example workflow:** One engineer keeps a **notes directory per task/project**, updates it after every PR, then **points `CLAUDE.md` at that directory** so context stays in sync.
+		- **Memory files:** You can have both a global `~/.claude/CLAUDE.md` (e.g. 76 tokens) and a project `CLAUDE.md` (e.g. 4k tokens); use both for rules and context.
+	- ## Tip 4: Create your own skills and commit them to git
+		- **Reuse across every project** by turning repeated workflows into **skills** (and commands) and committing them to git.
+		- **Team heuristics:**
+			- **Automation rule:** If you do something **more than once a day**, turn it into a **skill or slash command**.
+			- **Tech debt:** Build a `/techdebt` slash command and run it at the **end of every session** to find and remove duplicated code.
+			- **Context sync:** Use a slash command that syncs **7 days of Slack, GDrive, Asana, and GitHub** into one context dump so Claude has a single, up-to-date view.
+			- **Specialized agents:** Build analytics-engineer-style agents that write dbt models, review code, and test changes in dev.
+		- See [Claude Code Docs – Extend with skills](https://code.claude.com/docs) for details.
+	- ## Tip 5: Claude fixes most bugs by itself — here’s how the team does it
+		- **Slack MCP + “fix”:** Enable the **Slack MCP**, paste a **Slack bug thread** into Claude, and say **"fix."** No context switching; Claude has the thread and codebase in one place.
+		- **Failing CI:** Tell Claude to **"Go fix the failing CI tests"** and **don’t micromanage how**; let it run, read failures, and iterate.
+		- **Distributed systems:** **Point Claude at docker logs** (or similar); Claude is **surprisingly capable** at reasoning from logs to find and fix issues.
