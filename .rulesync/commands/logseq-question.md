@@ -1,7 +1,7 @@
 ---
 targets:
   - '*'
-description: Log a question in the knowledge garden under a logical namespace and record it in today's journal, avoiding duplicates
+description: Log a question in the knowledge garden under a logical namespace, record it in today's journal, and attempt to research and answer it
 argument-hint: Question text (required); optional topic/namespace (e.g., Claude Code, git, LangSmith)
 ---
 # Log a Question in the Knowledge Garden
@@ -57,10 +57,26 @@ This command records a question in a logical place in the Logseq knowledge garde
 - Add a bullet linking to the new question page using forward slashes: `- [[Namespace/Q/Question text]]`
 - Place the entry in an appropriate position in the journal (e.g., with other question or topic entries).
 
+### Step 5: Research and answer the question
+
+- After creating the page and journal entry, attempt to answer the question.
+- Use available tools (web search, documentation, MCP servers, existing knowledge graph pages) to research the answer.
+- Update the `## Answer` section of the newly created question page with the findings.
+- **Attribution**: Place the answer under an `[[AI/Response]]` node to attribute it as AI-generated. Example:
+  ~~~markdown
+  - ## Answer
+  	- [[AI/Response]]
+  		- The answer content goes here...
+  		- [Source](https://example.com)
+  ~~~
+- **Cite sources**: Include links to documentation, web pages, or references used to formulate the answer. Use markdown link format (e.g., `[Source Title](https://example.com)`).
+- Keep the answer concise but informative; use bullet points and proper LFM formatting.
+- If the answer cannot be determined or requires user input, note this in the Answer section and inform the user.
+
 ## Report
 
 - **If duplicate found**: Report the existing page link and confirm the journal entry was added for today.
-- **If new page created**: Report the new page path and link, and confirm the journal entry was added for today.
+- **If new page created**: Report the new page path and link, confirm the journal entry was added, and summarize the answer (or note if the question remains unanswered).
 
 ## Related
 
