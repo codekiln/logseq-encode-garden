@@ -1,0 +1,7 @@
+- `y`
+- opens up a [[Curses]] [[Modal]]
+	- `n` - `File name`
+	- `p` - `Relative path`
+	- `P` - `Absolute path`
+	- `s` - `Diff of selected files` - *requires a selection*
+	- `a` - `Diff of all files`
