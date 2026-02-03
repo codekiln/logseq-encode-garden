@@ -1,5 +1,6 @@
 ---
-paths: '{journals,pages}/*.md'
+paths:
+  - '{journals,pages}/*.md'
 ---
 # How to create a Diataxis Tutorial page in the Knowledge Garden
 

@@ -1,5 +1,7 @@
 ---
-paths: 'journals/*.md, pages/*.md'
+paths:
+  - journals/*.md
+  - pages/*.md
 ---
 # AI Model Reference Quick Guide
 This rule extends the logseq-naming-conventions rule for quickly referencing AI models in the knowledge graph without creating detailed pages.

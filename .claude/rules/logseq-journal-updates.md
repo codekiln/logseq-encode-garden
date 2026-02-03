@@ -1,5 +1,6 @@
 ---
-paths: '*.md'
+paths:
+  - '*.md'
 ---
 # Journal Updates for Page Changes
 

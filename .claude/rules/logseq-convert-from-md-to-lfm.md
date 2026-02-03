@@ -1,5 +1,6 @@
 ---
-paths: '{journals,pages}/*.md'
+paths:
+  - '{journals,pages}/*.md'
 ---
 # Converting from Standard Markdown to Logseq Flavored Markdown (LFM)
 

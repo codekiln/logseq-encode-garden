@@ -1,5 +1,6 @@
 ---
-paths: '{journals,pages}/*.md'
+paths:
+  - '{journals,pages}/*.md'
 ---
 # AI Model Detailed Documentation Guide
 This rule extends the logseq-naming-conventions rule for creating comprehensive AI model documentation pages.

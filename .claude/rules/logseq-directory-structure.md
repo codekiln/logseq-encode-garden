@@ -1,5 +1,7 @@
 ---
-paths: 'journals/*.md, pages/*.md'
+paths:
+  - journals/*.md
+  - pages/*.md
 ---
 ## Logseq Directory Structure
 - note, in the following example, `logseq-graph` is the project root for a Logseq repository.

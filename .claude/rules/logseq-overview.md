@@ -1,5 +1,7 @@
 ---
-paths: 'journals/*.md, pages/*.md'
+paths:
+  - journals/*.md
+  - pages/*.md
 ---
 * Logseq is a privacy-first, open-source platform for knowledge management. 
 * A Logseq graph is a collection of markdown files and linked assets. 

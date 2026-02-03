@@ -1,5 +1,7 @@
 ---
-paths: 'journals/*.md, pages/*.md'
+paths:
+  - journals/*.md
+  - pages/*.md
 ---
 # Formatting Logseq-Flavored Markdown (LFM)
 

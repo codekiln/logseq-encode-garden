@@ -1,5 +1,6 @@
 ---
-paths: '{journals,pages}/*.md'
+paths:
+  - '{journals,pages}/*.md'
 ---
 # How a Person is tracked in this Logseq knowledge garden
 This is an extension to the logseq-flavored-markdown rule for recording information about a person.

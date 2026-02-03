@@ -1,5 +1,7 @@
 ---
-paths: 'journals/*.md, pages/*.md'
+paths:
+  - journals/*.md
+  - pages/*.md
 ---
 # Constructing a Logseq Asset Link
 This project rule is an extension to the logseq-flavored-markdown rule which describes how to construct links to assets in the [assets](../assets) directory and its subdirectories.

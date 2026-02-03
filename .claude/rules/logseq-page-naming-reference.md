@@ -1,5 +1,7 @@
 ---
-paths: 'journals/*.md, pages/*.md'
+paths:
+  - journals/*.md
+  - pages/*.md
 ---
 This document serves as a quick reference for creating and linking to pages in the Logseq knowledge garden.
 

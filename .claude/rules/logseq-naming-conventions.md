@@ -1,5 +1,7 @@
 ---
-paths: 'journals/*.md, pages/*.md'
+paths:
+  - journals/*.md
+  - pages/*.md
 ---
 # Logseq Naming Conventions
 This is an extension to the logseq-flavored-markdown rule for maintaining consistent naming conventions in the knowledge graph.
