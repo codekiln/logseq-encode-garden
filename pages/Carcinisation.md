@@ -1,0 +1,35 @@
+tags:: [[Biology]], [[Evolution]], [[Diataxis/Explanation]]
+
+- # Carcinisation Conceptual Overview
+	- ## Overview
+		- Carcinisation is an evolutionary pattern where distantly related crustaceans evolve crab-like body forms
+		- It is a classic example of convergent evolution, where similar forms arise under similar pressures
+		- The phenomenon appears multiple times across decapod crustaceans
+	- ## Context
+		- **Taxonomic Scope**: Most often discussed in decapods (e.g., true crabs, king crabs, porcelain crabs)
+		- **Historical Framing**: The term highlights repeated evolution toward a compact, crab-like body plan
+		- **Modern Relevance**: Used to study convergent evolution, form-function relationships, and developmental constraints
+	- ## Key Principles
+		- **Convergence**: Similar body forms can evolve independently from different ancestors
+		- **Selection Pressures**: Crab-like shapes may offer advantages in mobility, protection, and ecological niche use
+		- **Modularity**: Body segments can reorganize through evolutionary changes in development
+		- **Constraint and Opportunity**: Repeated outcomes suggest a limited set of viable morphological solutions
+	- ## Mechanism
+		- Changes in segment proportions can shorten the abdomen and broaden the carapace
+		- Folding the abdomen under the body creates a compact, crab-like silhouette
+		- Limb specialization supports sideways walking and substrate interaction
+		- Similar ecological pressures can channel different lineages toward the same overall form
+	- ## Examples
+		- **True crabs (Brachyura)**: The archetypal crab-like form
+		- **King crabs (Lithodidae)**: Evolved crab-like features from hermit crab ancestors
+		- **Porcelain crabs (Porcellanidae)**: Crab-like appearance despite distinct ancestry
+	- ## Misconceptions
+		- Carcinisation means all crab-like animals are closely related → **False**. Many are only distantly related
+		- Carcinisation happened only once → **False**. It has occurred multiple times independently
+		- Crab-like form is always superior → **False**. It is advantageous in some ecological contexts, not all
+	- ## Related
+		- [[Convergent Evolution]] - Independent evolution of similar traits
+		- [[Crustacea]] - The broader group where carcinisation is observed
+		- [[Evolution]] - The mechanisms that drive repeated forms
+	- ## Sources
+		- https://en.wikipedia.org/wiki/Carcinisation
