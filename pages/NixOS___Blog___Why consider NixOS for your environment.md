@@ -1,0 +1,3 @@
+- [Why consider NixOS for your environment - DEV Community](https://dev.to/hamed0406/why-consider-nixos-for-your-environment-2989)
+	- [[NixOS]]
+	- [[Hackathon]]
