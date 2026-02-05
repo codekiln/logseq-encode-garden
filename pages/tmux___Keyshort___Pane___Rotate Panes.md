@@ -1,0 +1,5 @@
+- [[Keyshort]] [[tmux]] [[tmux/Keyshort]] [[tmux/Keyshort/Pane]]
+	- **Rotate Panes** #card
+		- Shortcut: `Ctrl+b, Ctrl+o`
+		- Description: Rotates panes within the window, swapping their positions
+		- Note: Easily confused with [[tmux/Keyshort/Pane/Focus Next Pane]] (`Ctrl+b, o`) — if you meant to change focus, release Ctrl before pressing `o`

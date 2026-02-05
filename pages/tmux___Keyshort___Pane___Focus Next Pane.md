@@ -1,0 +1,5 @@
+- [[Keyshort]] [[tmux]] [[tmux/Keyshort]] [[tmux/Keyshort/Pane]]
+	- **Focus Next Pane** #card
+		- Shortcut: `Ctrl+b, o`
+		- Description: Moves focus to the next pane in the window
+		- Note: Easily confused with [[tmux/Keyshort/Pane/Rotate Panes]] (`Ctrl+b, Ctrl+o`) — if panes are moving instead of focus, you're still holding Ctrl

@@ -79,10 +79,23 @@ This command creates or updates Logseq Keyshort pages using the canonical `<Scop
 		- Description: Moves the pane down.
 ~~~
 
+### Step 5: Update the journal
+
+- Add an entry to today's journal (`journals/YYYY_MM_DD.md`) referencing the created/updated page(s).
+- Use the full namespace link format: `[[<Scope>/Keyshort/<Action>]]` or `[[<Scope>/Keyshort/<Subscope>/<Action>]]`.
+- If multiple related pages were created, group them in a single journal entry.
+
+#### Example journal entry
+
+~~~markdown
+- Added [[tmux/Keyshort/Pane/Focus Next Pane]] and [[tmux/Keyshort/Pane/Rotate Panes]]
+~~~
+
 ## Report
 
 - Report the created/updated page path.
 - Summarize the cards added or updated.
+- Confirm the journal entry was added.
 
 ## Related
 

@@ -1,1 +1,1 @@
-alias:: [[3rd Party Tool]]
+alias:: [[3rd Party Tool]], [[3P]]

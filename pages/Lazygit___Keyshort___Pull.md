@@ -1,0 +1,4 @@
+- [[Keyshort]] [[Lazygit]] [[Lazygit/Keyshort]]
+	- **Pull** #card
+		- Shortcut: `p`
+		- Description: Performs a git pull
