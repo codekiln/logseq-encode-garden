@@ -1,7 +1,19 @@
-- `y`
-- opens up a [[Curses]] [[Modal]]
-	- `n` - `File name`
-	- `p` - `Relative path`
-	- `P` - `Absolute path`
-	- `s` - `Diff of selected files` - *requires a selection*
-	- `a` - `Diff of all files`
+- [[Keyshort]] [[Lazygit]] [[Lazygit/Keyshort]]
+	- **Copy to clipboard** #card
+		- Shortcut: `y`
+		- Description: Opens a [[Curses]] [[Modal]] with copy options.
+	- **Copy file name to clipboard** #card
+		- Shortcut: `y` then `n`
+		- Description: Copies the file name to clipboard.
+	- **Copy relative path to clipboard** #card
+		- Shortcut: `y` then `p`
+		- Description: Copies the relative path to clipboard.
+	- **Copy absolute path to clipboard** #card
+		- Shortcut: `y` then `P`
+		- Description: Copies the absolute path to clipboard.
+	- **Copy diff of selected files to clipboard** #card
+		- Shortcut: `y` then `s`
+		- Description: Copies the diff of selected files to clipboard. Requires a selection.
+	- **Copy diff of all files to clipboard** #card
+		- Shortcut: `y` then `a`
+		- Description: Copies the diff of all files to clipboard.
