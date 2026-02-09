@@ -1,4 +1,4 @@
-alias:: [[gpakosz/.tmux]], [[tmux/oh-my-tmux]]
+alias:: [[gpakosz/.tmux]], [[Person/Grégory Pakosz/GitHub/tmux]]
 
 - [gpakosz/.tmux: Oh my tmux! My self-contained, pretty & versatile tmux configuration made with 💛🩷💙🖤❤️🤍](https://github.com/gpakosz/.tmux)
 	- By [[Person/Grégory Pakosz]]

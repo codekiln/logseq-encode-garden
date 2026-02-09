@@ -1,4 +1,4 @@
-- in [[Person/Grégory Pakosz/GitHub/tmux]] aka [[tmux/oh-my-tmux]] the bottom status line has some  conventions for the coloring.
+- in [[tmux/oh-my-tmux]] aka [[tmux/oh-my-tmux]] the bottom status line has some  conventions for the coloring.
 	- `❐ logseq  ↑ 51d 5h 14m  0 encode-logseq  1 work-logseq  2 logseq-my-tooling  3 logseq-garden`
 		- ^^ in the above, `3 logseq-garden` is "faint" blue highlight with light blue text against black background, and `1 work-logseq` is "bright" blue background with which background text, indicating it's foreground.
 		- AFAICT this does not mean that `3 logseq-garden` has a command that has issued a terminal bell. I think it means that in the "history order," if I were to "go back" to the prior window, it would be `3 logseq-garden`, based only on experimenting with it.

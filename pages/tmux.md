@@ -1,5 +1,5 @@
 - tmux resources
 	- [tmux.info tmux Tutorial - Master Terminal Multiplexing | Complete Guide & Commands](https://tmux.info/)
 	- extensions
-		- [[Person/Grégory Pakosz/GitHub/tmux]] — by [[Person/Grégory Pakosz]]
+		- [[tmux/oh-my-tmux]] — by [[Person/Grégory Pakosz]]
 			- > If you're new to tmux, I recommend you to read the [tmux getting started guide](https://github.com/tmux/tmux/wiki/Getting-Started), as well as the [tmux 3: Productive Mouse-Free Development](https://pragprog.com/titles/bhtmux3/tmux-3/)

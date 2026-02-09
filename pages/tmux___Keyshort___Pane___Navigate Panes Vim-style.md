@@ -1,0 +1,15 @@
+- [[Keyshort]] [[tmux]] [[tmux/Keyshort]] [[tmux/Keyshort/Pane]]
+	- **Navigate Pane Left** #card
+		- Shortcut: `<prefix> h`
+		- Description: Moves focus to the pane on the left. This is an [[tmux/oh-my-tmux]] binding using Vim-style navigation.
+		- Note: Easily confused with `<prefix> Ctrl-h` which navigates **windows** (not panes) — see [[tmux/Keyshort/Window/Navigate Windows]]
+	- **Navigate Pane Down** #card
+		- Shortcut: `<prefix> j`
+		- Description: Moves focus to the pane below. This is an [[tmux/oh-my-tmux]] binding using Vim-style navigation.
+	- **Navigate Pane Up** #card
+		- Shortcut: `<prefix> k`
+		- Description: Moves focus to the pane above. This is an [[tmux/oh-my-tmux]] binding using Vim-style navigation.
+	- **Navigate Pane Right** #card
+		- Shortcut: `<prefix> l`
+		- Description: Moves focus to the pane on the right. This is an [[tmux/oh-my-tmux]] binding using Vim-style navigation.
+		- Note: Easily confused with `<prefix> Ctrl-l` which navigates **windows** (not panes) — see [[tmux/Keyshort/Window/Navigate Windows]]
