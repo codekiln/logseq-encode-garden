@@ -1,0 +1,26 @@
+- # How can I do fire and forget tasks in each CLI AI coding tool like [[Claude Code]], [[CursorAI]], and [[OpenAI/Codex]]?
+	- ## My Notes
+		- In [[Claude Code]], `claude -p "<request>"` runs non-interactively.
+		- Need equivalent "run to completion and exit" flows for `cursor-agent`, `codex` CLI, and similar tools.
+	- ## Answer
+		- [[AI/Response]]
+			- Yes, each has a non-interactive/headless mode:
+			- [[Claude Code]]: `claude -p "<request>"`
+			- [[CursorAI]] (`cursor-agent`): use `--print` (not prompt `-p`), e.g. `cursor-agent --print "<request>"`
+			- [[OpenAI/Codex]]: use `codex exec "<request>"`
+			- Useful automation flags:
+				- `cursor-agent --print --output-format json "<request>"`
+				- `cursor-agent --print --force "<request>"` (auto-approve commands unless denied)
+				- `codex exec --json "<request>"` (JSONL events)
+				- `codex exec --full-auto "<request>"` (low-friction autonomous execution in workspace sandbox)
+			- Notes:
+				- In current `cursor-agent`, `-p` means `--print`; prompt text is positional.
+				- In current `codex`, `exec` is the explicit non-interactive command.
+			- Sources:
+				- [Claude Code CLI reference](https://docs.anthropic.com/en/docs/claude-code/cli-reference)
+				- [Cursor CLI overview](https://docs.cursor.com/en/cli/overview)
+				- [Cursor headless/print mode](https://docs.cursor.com/en/cli/headless)
+				- [OpenAI Codex CLI getting started](https://help.openai.com/en/articles/11096431-openai-codex-ci-getting-started)
+				- [OpenAI Codex docs collection](https://help.openai.com/en/collections/13193998-codex-cli)
+	- ## Related
+		- [[AI/Coding/Tool]]
