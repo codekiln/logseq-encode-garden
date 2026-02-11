@@ -1,0 +1,3 @@
+- # [strongdm/attractor](https://github.com/strongdm/attractor)
+	- Non-interactive coding agent project published in a spec-first style (repo intentionally centered on markdown specs, not a conventional source tree).
+	- Mentioned in [[Person/Simon Willison/Blog/26/02/How StrongDM's AI team build serious software without even looking at the code]].
