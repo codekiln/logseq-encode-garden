@@ -6,8 +6,8 @@ tags:: [[AI/Coding]], [[CLI/Tool]]
 - # [Introducing Showboat and Rodney, so agents can demo what they've built](https://simonwillison.net/2026/Feb/10/showboat-and-rodney/)
 	- ## [[My Notes]]
 		- [[Person/Simon Willison]] introduces two new CLI tools focused on agent demonstration workflows.
-		- [[GitHub/simonw/showboat]] turns terminal session recordings into videos so coding agents can produce reproducible demos of what they built.
-		- [[GitHub/simonw/rodney]] gives agents a browser automation path via Chrome DevTools so they can operate a real browser, not just take static screenshots.
+		- [[Person/Simon Willison/GitHub/showboat]] turns terminal session recordings into videos so coding agents can produce reproducible demos of what they built.
+		- [[Person/Simon Willison/GitHub/rodney]] gives agents a browser automation path via Chrome DevTools so they can operate a real browser, not just take static screenshots.
 		- This feels like a practical extension of the broader shift toward agent-first developer tooling: less "describe what happened", more "show the run artifact".
 	- ## Highlights
 		- Showboat: CLI for turning terminal recordings into demo videos.
