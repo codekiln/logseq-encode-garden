@@ -1,0 +1,7 @@
+- # [StrongDM](https://www.strongdm.com/)
+	- Infrastructure access platform; currently very interesting because of their public work on [[AI/Coding/Dark Factory]] and software-factory style agentic development.
+	- ## [[StrongDM/GitHub]]
+		- [[StrongDM/GitHub/attractor]]
+		- [[StrongDM/GitHub/cxdb]]
+	- ## [[StrongDM/AI]]
+		- [[StrongDM/Digital Twin Universe]]

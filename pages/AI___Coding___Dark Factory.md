@@ -1,0 +1,7 @@
+- # [[AI/Coding/Dark Factory]]
+	- A style of AI-native software delivery where humans design goals, specs, scenarios, and evaluation harnesses, while coding agents perform the implementation loops.
+	- Core claim: humans should not manually write or line-review production code; instead, trust is built through scenario-based validation, holdout-style evaluation, and continuous empirical checks.
+	- Related ideas:
+		- [[AI/Coding/Technique/Spec-Driven Dev]]
+		- [[StrongDM/Digital Twin Universe]]
+		- [[Person/Simon Willison/Blog/26/02/How StrongDM's AI team build serious software without even looking at the code]]

@@ -1,0 +1,4 @@
+- # [[StrongDM/Digital Twin Universe]]
+	- StrongDM term for high-fidelity behavioral clones of external SaaS dependencies used for large-scale scenario validation in agentic software factories.
+	- Goal: test edge cases and failure modes without production rate limits, quota costs, or risk to live systems.
+	- Source: [[Person/Simon Willison/Blog/26/02/How StrongDM's AI team build serious software without even looking at the code]].

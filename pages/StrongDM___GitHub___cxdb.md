@@ -1,0 +1,3 @@
+- # [strongdm/cxdb](https://github.com/strongdm/cxdb)
+	- "AI Context Store" from StrongDM for immutable DAG-based storage of agent context and tool outputs.
+	- Mentioned in [[Person/Simon Willison/Blog/26/02/How StrongDM's AI team build serious software without even looking at the code]].
