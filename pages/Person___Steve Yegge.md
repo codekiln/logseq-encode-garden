@@ -16,4 +16,4 @@ alias:: [[People/Steve Yegge]]
 	- ## Work
 		- Writing thousands of lines of code per day using AI coding tools
 		- Daily spend of `$300`–`$500` across 3–5 Claude Code and Sourcegraph AMP sessions
-		- Co-authoring "Vibe Coding" book with [[Person/Gene Kim]] (Fall 2025)
+		- Co-author of [[Person/Steve Yegge/Book/25/Vibe Coding]] with [[Person/Gene Kim]]

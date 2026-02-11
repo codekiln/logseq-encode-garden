@@ -13,8 +13,7 @@ alias:: [[People/Gene Kim]]
 		- **2017:** *Accelerate*
 		- **2019:** *The Unicorn Project*
 		- **2023:** *Wiring the Winning Organization*
-		- **Fall 2025:** *Vibe Coding* (with [[Person/Steve Yegge]])
+		- **2025:** [[Person/Steve Yegge/Book/25/Vibe Coding]] (with [[Person/Steve Yegge]])
 	- ## Work
 		- Expert in DevOps, IT operations, and software delivery performance
-		- Co-authoring "Vibe Coding" book with [[Person/Steve Yegge]]
-
+		- Co-author of [[Person/Steve Yegge/Book/25/Vibe Coding]] with [[Person/Steve Yegge]]

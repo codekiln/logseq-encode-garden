@@ -1,0 +1,5 @@
+- # Dan Shapiro
+	- ## About
+		- Tech founder and writer focused on software, AI, and product development.
+	- ## Links
+		- [[Person/Dan Shapiro/Blog]] https://www.danshapiro.com/blog/
