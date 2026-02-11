@@ -11,6 +11,14 @@ globs: ['*.md']
 ⚠️ **CRITICAL**: When creating or modifying pages in the Logseq knowledge garden, you MUST always add an entry to today's journal to record the change.
 
 ## Guidelines
+## Scope Clarification (Standard Practice)
+
+This applies to **all** page work, including imports from Readwise or other sources.
+
+- If you create a new page from imported annotations/content, add a journal entry for it the same day.
+- If you update an existing page (for example, linking a new person-scoped page from a person page), add a journal entry for that update too.
+- Do this even when the request focuses on page import/formatting and does not explicitly ask for a journal update.
+
 
 1. **For New Pages** (REQUIRED):
    - ⚠️ **MUST** add a journal entry with a link to the new page

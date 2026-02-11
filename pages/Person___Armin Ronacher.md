@@ -5,3 +5,4 @@
 		- Author of blog post about agentic coding experiences
 	- ## Links
 		- [[Person/Armin Ronacher/Blog]] https://lucumr.pocoo.org/2025/6/12/agentic-coding/
+		- [[Person/Armin Ronacher/Blog/26/02/A Language For Agents]] https://lucumr.pocoo.org/2026/2/9/a-language-for-agents/
