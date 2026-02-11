@@ -2,8 +2,8 @@
   "targets": [
     "copilot",
     "cursor",
-    "claudecode"
-    // "codexcli"
+    "claudecode",
+    "codexcli"
   ],
   "features": [
     "rules",
