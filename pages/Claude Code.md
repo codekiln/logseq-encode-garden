@@ -25,7 +25,58 @@ alias:: [[Anthropic/App/Claude Code]]
 		  id:: 682c8543-8869-4d54-a1ff-04c296c08f9a
 		- TODO get or create a #Bug ticket at [[Anthropic/App/Claude Code/GitHub]] related to the session timeout of [[AWS/Bedrock]] via [[AWS SSM]]
 	- ## [[My Notes]]
-	  collapsed:: true
+		- (reverse cron)
+		- ### [[2026-02-13 Fri]]
+			- #### [[MCP]] config research: session-specific vs persistent setup
+				- Goal: run some terminal sessions with [[Atlassian/MCP]] enabled and some without it, while reusing auth where possible.
+				- ### What Claude Code supports right now
+					- Session-only MCP profile loading:
+						- `claude --mcp-config <file-or-json> --strict-mcp-config`
+						- `--strict-mcp-config` means only servers from `--mcp-config` are loaded for that run.
+					- Persistent MCP registration with scope:
+						- `claude mcp add -s local ...` (current project, local machine)
+						- `claude mcp add -s project ...` (shared in project `.mcp.json`)
+						- `claude mcp add -s user ...` (all projects for this user)
+					- Config file locations by scope (per docs):
+						- local: `.claude.json`
+						- project: `.mcp.json`
+						- user: `~/.claude.json`
+				- ### Repo-specific pattern that scales to many repos + many servers
+					- Keep per-profile JSON files (examples):
+						- `~/.claude/mcp/profiles/base.json`
+						- `~/.claude/mcp/profiles/atlassian.json`
+						- `~/.claude/mcp/profiles/github-and-atlassian.json`
+					- Start Claude with the profile you want for that session:
+						- ~~~bash
+						  claude --mcp-config ~/.claude/mcp/profiles/atlassian.json --strict-mcp-config
+						  ~~~
+					- Keep repo defaults in `.mcp.json` only for truly always-on project servers; use profile files + `--strict-mcp-config` for optional servers.
+				- ### Shared auth across terminal sessions
+					- For remote servers bridged with [[mcp-remote]], auth can be reused across sessions and across clients if config is identical.
+					- `mcp-remote` stores tokens under `~/.mcp-auth` (or `$MCP_REMOTE_CONFIG_DIR`).
+					- Token cache keys are derived from URL + `--resource` + headers, so even small differences create separate auth entries.
+					- Practical implication:
+						- Use exactly the same `mcp-remote` args in all profiles/clients if you want one shared Atlassian login.
+				- ### Current Atlassian endpoint + example
+					- Atlassian docs now show the MCP endpoint as `https://mcp.atlassian.com/v1/mcp` with `mcp-remote`.
+					- ~~~json
+					  {
+					    "mcpServers": {
+					      "atlassian": {
+					        "command": "npx",
+					        "args": ["-y", "mcp-remote", "https://mcp.atlassian.com/v1/mcp"]
+					      }
+					    }
+					  }
+					  ~~~
+				- ### Existing KB pages relevant to this topic
+					- [[MCP/Atlassian/Q/Can Atlassian authentication be system wide and cached]]
+					- [[MCP/Atlassian/Q/Can I authenticate without loading the server into context]]
+					- [[mcp-remote]]
+					- [[Claude Code/Settings]]
+					- [[Claude Code/Tutorial/Connect to MCP Servers]]
+				- ### Follow-up
+					- TODO create a [[Diataxis/How To]] for "Session-specific MCP profiles in Claude Code with shared mcp-remote auth"
 		- ### [[2025-05-23 Fri]]
 			- updated to [[Anthropic/App/Claude Code/v/1/0/2]]. Had a few issues with #AWS/Bedrock authentication but eventually (after enough restarting), managed to get it to work without changing anything.
 		- ### [[2025-05-21 Wed]]

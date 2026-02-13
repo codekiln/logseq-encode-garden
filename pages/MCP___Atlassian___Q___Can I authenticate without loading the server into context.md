@@ -29,5 +29,5 @@ tags:: [[MCP]], [[Atlassian]], [[Q]]
 		- This is also useful for debugging — if authentication fails inside Cursor or Claude Code, running `mcp-remote-client` shows more detailed error output
 	- ## Related
 		- [[MCP/Atlassian/Q/Can Atlassian authentication be system wide and cached]]
-		- [[MCP/npm/mcp-remote]]
+		- [[mcp-remote]]
 		- [[Atlassian/MCP/How To/Set up in Cursor]]
