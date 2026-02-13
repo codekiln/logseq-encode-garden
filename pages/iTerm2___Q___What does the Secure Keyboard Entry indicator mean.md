@@ -1,0 +1,4 @@
+- In [[iTerm2]], what does the indicator "Secure Keyboard Entry is enabled because another app has turned it on" mean?
+	- ## Context
+		- The iTerm2 indicator says: "Secure Keyboard Entry is enabled because another app has turned it on."
+		- I want to understand what behavior changes when this is active, and whether I should disable it.
