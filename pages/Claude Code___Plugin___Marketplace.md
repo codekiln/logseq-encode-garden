@@ -10,7 +10,7 @@ alias:: [[Claude Code Marketplace]], [[Claude Code Marketplaces]]
 				- **[[Claude Code/Subagent]]s**: Create agent definitions in `agents/` directory
 				- **[[Claude Code Skills]]**: Create `SKILL.md` files in `skills/` directory
 				- **[[Claude Code/Hook]]s**: Create `hooks/hooks.json` for event handling
-				- **[[Claude Code/MCP Server]]s**: Create `.mcp.json` for external tool integration
+				- **[[Claude Code/MCP/Server]]s**: Create `.mcp.json` for external tool integration
 			- For example, [[Person/Daniel Avila/GitHub/claude-code-templates]] defines within its marketplace.json a [supabase-toolkit plugin](https://github.com/davila7/claude-code-templates/blob/main/.claude-plugin/marketplace.json#L31-L55) for [[Supabase]] (among dozens of other plugins)
 				- ```
 				  {

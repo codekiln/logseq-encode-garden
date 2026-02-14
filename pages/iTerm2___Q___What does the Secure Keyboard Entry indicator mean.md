@@ -2,3 +2,26 @@
 	- ## Context
 		- The iTerm2 indicator says: "Secure Keyboard Entry is enabled because another app has turned it on."
 		- I want to understand what behavior changes when this is active, and whether I should disable it.
+	- ## AI/Response
+		- ### What it means
+			- This indicates macOS Secure Keyboard Entry (Secure Input) is currently active at the OS level, and the app that enabled it was not the current iTerm2 session.
+			- In practice: keystroke interception by other apps is blocked while it is active.
+		- ### Why this exists
+			- Per Apple Terminal docs, secure keyboard entry prevents other apps (or the network) from detecting what you type in terminal contexts.
+			- iTerm2 also documents that Secure Keyboard Entry can block other programs from seeing typed input and may disable some global hotkeys.
+		- ### Should I disable it?
+			- If you are entering secrets (passwords, tokens), leaving it enabled is a reasonable security default.
+			- If your workflow depends on global key listeners (autocomplete tools, text expanders, global hotkeys), disable it when needed.
+			- If iTerm2 cannot uncheck Secure Keyboard Entry, another app likely enabled it and still holds it.
+		- ### How to troubleshoot when another app enabled it
+			- Check `iTerm2 > Secure Keyboard Entry` first.
+			- If it cannot be unchecked, identify the owning process and restart/quit that app.
+			- Useful command to identify owner process:
+				- ~~~bash
+				  ioreg -l -w 0 | tr ',' '\n' 2>/dev/null | grep kCGSSessionSecureInputPID | cut -f 2 -d = | uniq | xargs ps -o command= -p
+				  ~~~
+			- Common culprits reported in docs: terminal apps and sometimes password managers if they fail to release Secure Input.
+	- ## Sources
+		- [Apple: Use secure keyboard entry in Terminal on Mac](https://support.apple.com/en-bw/guide/terminal/trml109/mac)
+		- [iTerm2 docs: Menu Items > Secure Keyboard Entry](https://iterm2.com/3.0/documentation-menu-items.html)
+		- [Fig docs: Secure Keyboard Input troubleshooting and owner-process command](https://fig.io/docs/support/secure-keyboard-input)

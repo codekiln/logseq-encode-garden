@@ -1,0 +1,8 @@
+- [[Keyshort]] [[tmux]] [[tmux/Keyshort]] [[tmux/Keyshort/Pane]]
+	- **Resize Pane (Directional)** #card
+		- Shortcut:
+			- `<prefix> Alt-Up` resize pane up
+			- `<prefix> Alt-Down` resize pane down
+			- `<prefix> Alt-Left` resize pane left
+			- `<prefix> Alt-Right` resize pane right
+		- Description: Adjusts the current pane size incrementally in the arrow direction in [[tmux/oh-my-tmux]]
