@@ -1,0 +1,74 @@
+- # Garbage Collection for the Human Mind
+	- This morning I had a small realization while walking in the cold sunlight after doing a batch of digital chores: paying bills, sorting mail, and staring at notices I did not feel like following up on.
+	- I threw away several class action lawsuit letters tied to various data breaches.
+	- I consciously decided I am not going to spend time on this.
+	- The moment I dropped them in the trash, I felt lighter.
+	- It struck me that this felt exactly like garbage collection.
+	- ## Allocation Is Cheap
+		- In modern programming languages, allocation is cheap.
+		- You can create objects freely without manually freeing them.
+		- If you never reclaim unreachable objects, the heap fragments.
+		- Latency increases.
+		- Eventually, the system thrashes.
+		- Lately, I have been allocating freely:
+			- Learning [[tmux]].
+			- Standardizing dev containers.
+			- Experimenting with dotfile managers.
+			- Designing small AI agents to automate parts of my workflow.
+			- Considering spinning up a secure sandbox to test a personal coding agent.
+		- None of these are bad ideas.
+		- They are just allocated.
+	- ## The Real Problem: Reachability
+		- In a GC system, objects are collected when they are no longer reachable.
+		- In life, tasks linger because they are still referenced in the background:
+			- Unopened mail.
+			- Emails waiting for replies.
+			- Side projects with no clear completion criteria.
+		- They sit in working memory as low-level interrupts.
+		- When I threw away those notices, I was explicitly dereferencing.
+	- ## Generational Garbage Collection
+		- Most modern runtimes use generational GC:
+			- Minor collections for short-lived objects.
+			- Major collections for long-lived ones.
+		- Humans need the same thing.
+		- Minor collection (daily):
+			- Random notices.
+			- Low-probability follow-ups.
+			- Micro-optimizations.
+		- Major collection (weekly or monthly):
+			- Decide which experiments get promoted to active focus.
+			- Demote the rest to a trusted backlog.
+		- The mistake is not experimentation.
+		- The mistake is keeping everything in the young generation forever.
+	- ## Infrastructure as Recursive Allocation
+		- When I feel friction, my instinct is to build infrastructure:
+			- Automate the inbox.
+			- Standardize the environment.
+			- Create a cleaner dev container baseline.
+		- That instinct is powerful.
+		- Sometimes infrastructure is just another allocation.
+		- I feel behind, then I build tooling, then tooling becomes another open loop.
+	- ## Stop-the-World GC
+		- There is a reason some collectors pause everything.
+		- Sometimes you need to stop allocating.
+		- Clear the physical desk.
+		- Close one loop.
+		- Reply to one person.
+		- Finish one small, concrete task.
+		- That is not optimization.
+		- That is defragmentation.
+	- ## Identity Objects
+		- In a heap, some objects are meant to live a long time.
+		- In life, some commitments should never be garbage collected:
+			- Relationships.
+			- Integrity.
+			- Physical order.
+		- If experimental projects consume too much memory, they starve the long-lived objects that actually define who you are.
+	- ## The Question
+		- The insight was not about productivity.
+		- It was about memory pressure.
+		- The feeling of relief came from reducing reachability.
+		- The real question is not:
+			- What should I build next?
+		- It is:
+			- What references am I willing to null out?
