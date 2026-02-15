@@ -1,0 +1,4 @@
+- Trying [[Omarchy/Install/Manual]] another time with [[Omarchy/v/3/3/0]]
+- TODO use [[balenaEtcher]] to install on usb drive
+-
+-

@@ -1,0 +1,1 @@
+- [Manual installation · The Omarchy Manual · DHH](https://learn.omacom.io/2/the-omarchy-manual/96/manual-installation)
