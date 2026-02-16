@@ -1,0 +1,23 @@
+## UTM
+	- UTM is an open-source [[Virtual Machine]] application for [[Apple]] platforms, used to create and manage full system VMs on [[MacOS]], [[iOS]], and visionOS.
+	- ### Architecture and core design
+		- **[[QEMU]]** → CPU + device emulation
+		- **[[Apple/Hypervisor.framework]]** → hardware-assisted virtualization on Apple Silicon & Intel Macs
+		- UTM → native macOS GUI around QEMU configs
+		- Two execution modes:
+			- [[Virtualization]] (hardware accelerated)
+				- Near-native speed
+				- Requires same CPU architecture as host
+				- Best for: Linux ARM on Apple Silicon, Windows ARM on Apple Silicon
+			- [[Emulation]]
+				- Cross-architecture (e.g., x86 on Apple Silicon)
+				- Slower (full CPU translation)
+				- Useful for legacy systems or testing
+		- UTM is essentially a GUI virtual machine manager built on top of [[QEMU]]. On macOS it integrates with Apple’s Hypervisor framework for near-native virtualization of  [[ARM64]] and  [[CPU/Arch/x86]] guests when the host CPU is compatible, falling back to QEMU’s [[JIT]] or interpreter for cross-architecture emulation (for example, x86 on Apple silicon).
+		- This design lets users pick between speed (virtualization) and flexibility (emulation), while UTM’s UI generates and manages the underlying QEMU configurations, so users typically don’t have to hand-craft QEMU command lines.
+	- ### Key facts
+		- **Type:**  [[Virtual Machine]] manager / system emulator
+		- **Developer:** Turing Software, LLC
+		- **Platforms:** macOS, iOS, visionOS on Intel and Apple silicon hardware
+		- **License:** Apache License 2.0 (open source)
+		- **Distribution:** Free builds via GitHub; paid convenience build on Mac App Store

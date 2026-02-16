@@ -1,0 +1,37 @@
+- # JIT Conceptual Overview
+	- ## Overview
+		- JIT (Just-In-Time) compilation translates code during program execution instead of fully ahead of time.
+		- It balances flexibility and speed by compiling only the code paths that are actually used.
+		- JIT is common in managed runtimes and dynamic binary translation systems.
+	- ## Context
+		- Pure interpretation is flexible but can be slow for repeated execution.
+		- Full ahead-of-time compilation can be fast but less adaptive to runtime behavior.
+		- JIT emerged as a middle path: start quickly, then optimize hot paths as execution data becomes available.
+	- ## Key Principles
+		- **Profile-guided optimization**
+			- Runtime profiling identifies frequently executed paths ("hot" code).
+		- **Adaptive compilation**
+			- The system can recompile with stronger optimizations as confidence increases.
+		- **Tiered execution**
+			- Many systems begin with interpretation or baseline codegen, then graduate to optimized native code.
+		- **Cost tradeoff**
+			- Compilation work at runtime adds overhead up front but can repay that cost for long-running workloads.
+	- ## Mechanism
+		- The runtime starts by executing bytecode or an intermediate form.
+		- It records counters, types, and branch behavior to guide optimization decisions.
+		- Hot sections are compiled to machine code and cached for reuse.
+		- Some engines perform deoptimization when earlier assumptions are invalidated.
+	- ## Examples
+		- JavaScript engines JIT-compile frequently executed functions to speed up web app execution.
+		- JVM runtimes optimize hot methods based on observed runtime types.
+		- [[QEMU]] can use JIT-style dynamic binary translation for cross-architecture emulation.
+	- ## Misconceptions
+		- JIT always makes every program faster -> **False**. Short-lived programs may not run long enough to recover compilation overhead.
+		- JIT means no interpretation occurs -> **False**. Many systems use interpretation or baseline execution before optimized tiers.
+		- JIT is only for high-level languages -> **False**. It is also used in emulators and VM systems.
+	- ## Related
+		- [[Programming/Time/Run]]
+		- [[Emulation]]
+		- [[QEMU]]
+		- [[UTM]]
+

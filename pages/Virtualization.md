@@ -1,0 +1,36 @@
+- # Virtualization Conceptual Overview
+	- ## Overview
+		- Virtualization is the creation of isolated virtual computers on one physical machine.
+		- A [[Hypervisor]] allows each guest system to behave like it has dedicated hardware.
+		- The goal is efficient isolation with high performance.
+	- ## Context
+		- Physical servers were traditionally underutilized when one workload owned one machine.
+		- Virtualization improved utilization, portability, and operational control by consolidating many workloads on shared hardware.
+		- It remains central in cloud infrastructure, testing environments, and local development.
+	- ## Key Principles
+		- **Isolation**
+			- Each guest has separated memory, storage, and execution context.
+		- **Hardware-assisted execution**
+			- CPU virtualization extensions allow most guest instructions to run directly on host hardware.
+		- **Resource scheduling**
+			- CPU time, RAM, and I/O are multiplexed across guests.
+		- **Encapsulation**
+			- A VM can be represented as files and configuration, making migration and backup practical.
+	- ## Mechanism
+		- The hypervisor mediates privileged operations while exposing virtual hardware devices to guests.
+		- Guest operating systems run their own kernels, unlike process-level isolation models such as [[Container]]s.
+		- Virtualization is most performant when guest and host architectures match.
+	- ## Examples
+		- Running multiple Linux server VMs on one physical host in a data center.
+		- Running an ARM64 Linux VM on Apple Silicon with hardware acceleration.
+		- Using [[UTM]] with hypervisor acceleration for same-architecture guests.
+	- ## Misconceptions
+		- Virtualization and [[Emulation]] are identical -> **False**. Virtualization typically executes guest code on native hardware, while emulation translates different hardware behavior.
+		- Virtualization only matters in cloud platforms -> **False**. It is also common in local dev, QA, security labs, and education.
+		- Containers are virtual machines -> **False**. Containers share a kernel; VMs run separate kernels.
+	- ## Related
+		- [[Emulation]]
+		- [[Programming/Concept/Virtualization vs Emulation]]
+		- [[UTM]]
+		- [[Container]]
+

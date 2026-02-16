@@ -1,0 +1,39 @@
+- # USB Host Mode vs Client Mode for Virtual Ethernet over USB Conceptual Overview
+	- ## Overview
+		- USB links are asymmetric by design: one side is the [[Host]], and the other side is the [[Client]] (also called peripheral or device mode).
+		- This asymmetry is why a USB cable is not automatically a "network cable."
+		- A USB cable can carry virtual Ethernet only when protocol roles and software support align on both ends.
+	- ## Context
+		- People often expect two computers connected by USB to behave like two computers connected by Ethernet.
+		- Ethernet is peer-to-peer at the cable level, but USB is controller-to-device at the bus level.
+		- The misunderstanding usually comes from focusing on the connector shape (for example, [[USB/Connector/Ref/USB-C]]) instead of the protocol roles.
+	- ## Key Principles
+		- **Single-bus control**
+			- The host owns bus scheduling, enumeration, and power policy.
+			- The client responds to host requests and exposes functions.
+		- **Role is a protocol state, not just a plug shape**
+			- USB-C connectors are physically reversible, but role assignment still must resolve to host/client behavior.
+			- Dual-role-capable hardware can switch roles, but both ends cannot behave as host on the same USB link.
+		- **Cable capability is necessary but not sufficient**
+			- A cable may carry only power, or power plus limited data lanes.
+			- Even with a full data-capable cable, virtual Ethernet still requires compatible USB networking functions and drivers at both endpoints.
+	- ## Mechanism
+		- For virtual Ethernet over USB, one side presents a USB network device function (for example ECM, NCM, or RNDIS-class behavior), and the other side runs the matching host-side driver.
+		- The host enumerates the device and binds a network interface.
+		- The operating system then treats that interface like a NIC, but transport is still USB transactions underneath.
+		- If both connected systems only expose host mode on that port, enumeration does not complete as a host/client pair, so no USB network interface appears.
+	- ## Examples
+		- **Works**
+			- A laptop (host) connected to an embedded board in USB device/gadget mode that exposes a USB Ethernet function.
+		- **Usually does not work directly**
+			- Two laptops connected with an ordinary USB-C cable when neither side exposes a compatible USB device-mode network function for that link.
+		- **Role-dependent**
+			- Two dual-role USB-C systems may work only if one side successfully enters device mode and both OS stacks support a common USB networking protocol.
+	- ## Misconceptions
+		- "Any USB cable can be used as an Ethernet cable" -> **False**. The cable alone cannot create peer networking semantics.
+		- "If the connector is USB-C, networking should just work" -> **False**. USB-C defines connector and negotiation mechanisms, not guaranteed network-function support.
+		- "Power delivery implies data networking support" -> **False**. Many cables and port modes negotiate power without exposing the needed data/function path.
+	- ## Related
+		- [[USB/Connector/Ref/USB-C]]
+		- [[USB/Connector/Ref/USB-A]]
+		- [[USB/Connector/Ref/USB-B]]

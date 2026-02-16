@@ -1,0 +1,35 @@
+- # Emulation Conceptual Overview
+	- ## Overview
+		- Emulation reproduces one system's hardware or instruction set behavior in software on another system.
+		- It enables software built for one architecture or device model to run where native support does not exist.
+		- The goal is compatibility and behavioral fidelity.
+	- ## Context
+		- Teams use emulation to run legacy software, test cross-architecture builds, and preserve historical systems.
+		- It becomes necessary when the guest and host CPU architectures differ or when specific device behavior must be reproduced.
+	- ## Key Principles
+		- **Instruction translation**
+			- Guest instructions are interpreted or translated to host instructions.
+		- **Hardware modeling**
+			- CPU, memory maps, devices, and firmware expectations are represented in software.
+		- **Compatibility over speed**
+			- The primary outcome is "runs correctly," even when overhead is higher than virtualization.
+		- **Deterministic behavior**
+			- High-fidelity models can support debugging, reverse engineering, and repeatable experiments.
+	- ## Mechanism
+		- An emulator decodes guest binary instructions and executes equivalent host operations.
+		- Dynamic binary translation can improve throughput by caching translated code blocks.
+		- Full-system emulation can include virtual peripherals and boot firmware workflows.
+	- ## Examples
+		- Running x86 guest software on an ARM-only host.
+		- Testing old operating systems that require specific legacy hardware behavior.
+		- Using [[QEMU]] in emulation mode when guest and host architectures do not match.
+	- ## Misconceptions
+		- Emulation is obsolete because virtualization exists -> **False**. Emulation solves cross-architecture and hardware-fidelity problems virtualization cannot.
+		- Emulation is only for retro computing -> **False**. It is also used in CI, malware analysis, and platform migration testing.
+		- Emulated software is always unusably slow -> **False**. Performance varies by workload, translator quality, and host resources.
+	- ## Related
+		- [[Virtualization]]
+		- [[Programming/Concept/Virtualization vs Emulation]]
+		- [[QEMU]]
+		- [[UTM]]
+

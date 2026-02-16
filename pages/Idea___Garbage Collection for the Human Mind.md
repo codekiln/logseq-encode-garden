@@ -1,12 +1,12 @@
-- # Garbage Collection for the Human Mind
+# Garbage Collection for the Human Mind
 	- This morning I had a small realization while walking in the cold sunlight after doing a batch of digital chores: paying bills, sorting mail, and staring at notices I did not feel like following up on.
 	- I threw away several class action lawsuit letters tied to various data breaches.
 	- I consciously decided I am not going to spend time on this.
-	- The moment I dropped them in the trash, I felt lighter.
+	- The moment I dropped them in the shredder, I felt lighter.
 	- It struck me that this felt exactly like garbage collection.
 	- ## Allocation Is Cheap
 		- In modern programming languages, allocation is cheap.
-		- You can create objects freely without manually freeing them.
+		- You can create objects easily without manually freeing them.
 		- If you never reclaim unreachable objects, the heap fragments.
 		- Latency increases.
 		- Eventually, the system thrashes.
