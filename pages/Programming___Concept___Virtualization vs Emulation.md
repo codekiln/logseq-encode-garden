@@ -1,0 +1,41 @@
+- # Virtualization vs Emulation Conceptual Overview
+	- ## Overview
+		- [[Virtualization]] and [[Emulation]] both let one machine run software intended for another environment, but they optimize for different outcomes.
+		- Virtualization prioritizes near-native performance by reusing the host CPU architecture.
+		- Emulation prioritizes compatibility by reproducing a different CPU or hardware model in software.
+	- ## Context
+		- Teams often need to run workloads that were built for different operating systems, kernel assumptions, or processor architectures.
+		- The practical question is usually: "Do I need speed on similar hardware, or compatibility across different hardware?"
+	- ## Key Principles
+		- **Instruction path**
+			- Virtualization executes most guest instructions directly on host hardware.
+			- Emulation translates or interprets guest instructions for a different target architecture.
+		- **Architecture coupling**
+			- Virtualization is strongest when guest and host CPU families match (for example, ARM on ARM or x86 on x86).
+			- Emulation is used when guest and host CPU families differ (for example, x86 guest on ARM host).
+		- **Performance profile**
+			- Virtualization usually has lower overhead.
+			- Emulation usually has higher overhead because of instruction translation.
+		- **Fidelity goals**
+			- Virtualization models an isolated machine boundary.
+			- Emulation models hardware behavior and instruction semantics.
+	- ## Mechanism
+		- ### Virtualization
+			- A hypervisor coordinates privileged operations, memory mapping, and device access while letting most CPU instructions run natively.
+			- Hardware extensions (for example VT-x or ARM virtualization support) reduce trap-and-emulate overhead.
+		- ### Emulation
+			- An emulator decodes guest instructions and maps them into host operations (interpreter or dynamic binary translation).
+			- Device models and firmware behavior are reproduced in software to match target expectations.
+	- ## Examples
+		- Running a Linux ARM64 VM on an Apple Silicon Mac with hardware acceleration is primarily virtualization.
+		- Running legacy x86 software on an ARM-only host without native x86 hardware support requires emulation.
+		- Hybrid systems (for example [[UTM]] via [[QEMU]]) may use virtualization when architectures match and emulation when they do not.
+	- ## Misconceptions
+		- Virtualization and emulation are the same thing -> **False**. They can look similar at the UI level, but the execution model is different.
+		- Emulation is always unacceptable for real work -> **False**. It can be essential for compatibility testing, reverse engineering, and legacy workloads.
+		- Virtualization always works for any guest OS on any host -> **False**. Cross-architecture scenarios generally require emulation.
+	- ## Related
+		- [[UTM]]
+		- [[QEMU]]
+		- [[Container]]
+		- [[Apple/Hypervisor.framework]]
