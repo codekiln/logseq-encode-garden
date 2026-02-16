@@ -31,6 +31,28 @@ The headings should have an "editorial" feel that is:
 - **Evocative**: Use clever wordplay, alliteration, or unexpected phrasing
 - **Revealing through contrast**: The structure itself should hint at connections or tensions
 
+## Operational Change Log Rule
+
+When the journal includes page maintenance activity (new/imported pages or page updates), format those entries as concise link lists:
+
+- The journal is a public-facing "now page" snapshot of technical adventures, not an audit log
+- Use `[[Filed]]` for newly created or imported pages
+- Use `[[Updated]]` for modified pages
+- Default to bare link-only bullets under each section
+- Do not add inline action text next to links (for example, avoid `[[Page]] updated to ...`)
+- Do not use repetitive boilerplate such as `Imported [[...]]` or `Updated [[...]] with ...`
+- Optional context is allowed only when meaningful to readers, and only as one sentence under the relevant link
+
+Example:
+
+```markdown
+- [[Filed]]
+	- [[Person/Example]]
+		- Added from a conference note that introduced their research.
+- [[Updated]]
+	- [[Project/Example]]
+```
+
 ### What This Command Does NOT Do
 
 - **Does NOT create fictitious facts or statistics** (unlike Harper's Index itself)
@@ -107,4 +129,3 @@ The headings transform generic categories into editorial-style sections that sug
 - It's okay to have a mix of serious and playful headings
 - The goal is to make the journal entry feel more like a curated editorial piece
 - When in doubt, err on the side of subtlety and understatement
-
