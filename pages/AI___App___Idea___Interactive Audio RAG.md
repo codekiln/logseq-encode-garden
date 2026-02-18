@@ -1,5 +1,6 @@
 tags:: [[Idea/My]], [[RAG]], [[AI/Voice]]
 cgpt-link:: [ideas - AI/App/Idea/Interactive Audio RAG](https://chatgpt.com/g/g-p-67bb3068c36c819193bfbae3b1258056-ideas/c/682486df-ac58-800a-8633-6a45e625bc65)
+related-ideas:: [[AI/App/Idea/Audio-First Learning Platform with Layered Lenses]]
 
 - # Interactive Audiobook with Real-Time RAG
 	- ## Concept

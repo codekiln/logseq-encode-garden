@@ -4,6 +4,8 @@
 	- The nice thing about [[Markdown]] with [[yaml]] frontmatter is that **both humans and LLMs can read or write them with ease**.
 	- As a result of these properties, humans and AI could work together to **break courses down** into [[LMS Course Segments]], and **AI could help with re-authoring them** in a way that stitched them together.
 	- If an LMS can write an exporter and an importer that translated from their format to LearnMark, it would enable courses to be exported to LearnMark, and then an AI system could be used on the LearnMark to identify the re-usable segments, where they could be re-uploaded up to the source platforms.
+	- ## Related Ideas
+		- [[AI/App/Idea/Audio-First Learning Platform with Layered Lenses]] - Could use a similar modular, LMS-agnostic approach for structuring hierarchical audio content
 	- ## Metadata that could be a part of the YAML Frontmatter
 		- Metadata that should travel along with the segments could include the following - see also [[IEEE/LOM]] or [[Dublin Core Metadata]]
 			- content creation info
