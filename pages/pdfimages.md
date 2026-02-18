@@ -1,0 +1,60 @@
+tags:: [[CLI/Tool]], [[PDF/Tool]]
+- # pdfimages
+	- [pdfimages - Wikipedia](https://en.wikipedia.org/wiki/Pdfimages)
+	- An open-source command-line utility for **lossless extraction of images** from [[PDF]] files
+	- ## Overview
+		- Extracts images embedded within PDFs as PPM/PBM, PNG, TIFF, JPEG, JPEG2000, and JBIG2 files
+		- Can convert and output images to any of the formats it can extract
+		- Freely available as part of [[poppler]]-utils and [[Xpdf]]-utils
+		- Included in many Linux distributions by default
+	- ## Toolchain
+		- ### Origins: [[Xpdf]]
+			- pdfimages originally came from the [Xpdf](https://www.xpdfreader.com/) package, created by Derek Noonburg of Glyph & Cog, LLC
+			- Xpdf is a free and open-source PDF viewer and toolkit, first released December 1995
+			- Current stable release: Xpdf 4.06 (November 2025)
+			- Licensed under GPL-2.0 or GPL-3.0
+			- The associated package `xpdf-utils` contains tools like `pdftotext` and `pdfimages`
+		- ### Modern home: [[Poppler]]
+			- [Poppler](https://poppler.freedesktop.org/) is a fork of Xpdf-3.0, maintained by [freedesktop.org](https://freedesktop.org)
+			- Written in C++, licensed under GPLv2 or GPLv3
+			- Current stable release: poppler-26.02.0 (February 2026)
+			- Source: [gitlab.freedesktop.org/poppler/poppler](https://gitlab.freedesktop.org/poppler/poppler)
+			- Poppler is the PDF rendering library behind [[Evince]], [[Okular]], [[GIMP]], [[Inkscape]], and [[LibreOffice]]
+		- ### poppler-utils
+			- pdfimages is one of several CLI utilities in the `poppler-utils` package:
+			- `pdfimages` - extract all embedded images at native resolution
+			- `pdftotext` - extract all text from PDF
+			- `pdftoppm` - convert a PDF page to a bitmap
+			- `pdftohtml` - convert PDF to HTML format
+			- `pdftocairo` - convert pages using Cairo
+			- `pdfseparate` - extract single pages
+			- `pdfunite` - merge several PDFs
+			- `pdfinfo` - list all information of a PDF
+			- `pdffonts` - list fonts used
+			- `pdfdetach` / `pdfattach` - manage embedded files
+		- ### Installation
+			- macOS: `brew install poppler`
+			- Debian/Ubuntu: `apt install poppler-utils`
+			- Fedora: `dnf install poppler-utils`
+			- Windows: [poppler-windows](https://github.com/oschwartz10612/poppler-windows)
+	- ## Security
+		- ### JBIG2 / FORCEDENTRY exploit (CVE-2021-30860)
+			- A vulnerability in the Xpdf implementation of the [[JBIG2]] image format was exploited by [[NSO Group]]'s [[Pegasus]] spyware
+			- The exploit was a **zero-click attack** on iPhones -- no user interaction required
+			- Apple's CoreGraphics PDF parser used Xpdf's JBIG2 code; the attackers:
+				- Exploited an integer overflow in the JBIG2 segment collation code
+				- Used the overflow to "unbound" a bitmap drawing canvas
+				- Leveraged JBIG2's refinement coding operators (AND, OR, XOR, XNOR) to build **logical circuits**
+				- Constructed a full emulated computer architecture inside a JBIG2 stream using over 70,000 segment commands
+				- Used this to run the sandbox escape exploit
+			- Google Project Zero called it "one of the most technically sophisticated exploits we've ever seen"
+			- Source: [A deep dive into an NSO zero-click iMessage exploit - Google Project Zero](https://googleprojectzero.blogspot.com/2021/12/a-deep-dive-into-nso-zero-click.html)
+			- Apple fixed this in iOS 14.8 (September 2021)
+		- ### Poppler security posture
+			- Poppler is fuzzed by [OSS-Fuzz](https://issues.oss-fuzz.com/issues?q=is:open%20poppler), Google's continuous fuzzing infrastructure
+			- The latest release (26.02.0) includes "Fix crashes in malformed documents" and "Improvements in signature checking"
+			- Poppler has a history of CVEs related to malformed PDF parsing (heap overflows, null pointer dereferences, infinite loops)
+			- As a C++ PDF parser handling untrusted input, it has a significant attack surface
+			- **Recommendation**: keep poppler-utils updated, and avoid running pdfimages on untrusted PDFs without sandboxing
+	- ## See also
+		- [[PDF/Tool/CLI/PDF To Markdown Tools]] - comprehensive comparison of PDF-to-Markdown CLI tools
