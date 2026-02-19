@@ -1,0 +1,18 @@
+alias:: [[People/Drew DeVault]]
+- # Drew DeVault
+	- ## About
+		- Free software advocate, systems programmer, and prolific blogger. Founder of [[SourceHut]] (sr.ht), a software forge built on open standards like email-driven workflows and git. Creator of the [[Programming Language/Hare]] programming language, the [[sway]] Wayland compositor, [[wlroots]], and [[aerc]] terminal email client. Known online as **sircmpwn**.
+		- Has been working on microkernel projects, including Helios and its successor Hermes.
+		- Based in the Netherlands.
+	- ## Online Presence
+		- [Blog](https://drewdevault.com/)
+		- [GitHub (@ddevault)](https://github.com/ddevault)
+		- [SourceHut (~sircmpwn)](https://sr.ht/~sircmpwn/)
+		- [Fediverse (@sir@emelia.space)](https://emelia.space/@sir)
+	- ## Projects
+		- [[SourceHut]] - Software forge built on open standards (git, email, mailing lists)
+		- [[Programming Language/Hare]] - Systems programming language
+		- [[sway]] - i3-compatible Wayland compositor
+		- [[wlroots]] - Modular Wayland compositor library
+		- [[aerc]] - Terminal email client
+		- Helios / Hermes - Microkernel projects
