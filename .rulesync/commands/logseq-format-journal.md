@@ -38,6 +38,8 @@ When the journal includes page maintenance activity (new/imported pages or page 
 - The journal is a public-facing "now page" snapshot of technical adventures, not an audit log
 - Use `[[Filed]]` for newly created or imported pages
 - Use `[[Updated]]` for modified pages
+- Enforce exclusivity: a page link can appear in only one section per day
+- If a page is both created and edited on the same day, keep it only in `[[Filed]]`
 - Default to bare link-only bullets under each section
 - Do not add inline action text next to links (for example, avoid `[[Page]] updated to ...`)
 - Do not use repetitive boilerplate such as `Imported [[...]]` or `Updated [[...]] with ...`
