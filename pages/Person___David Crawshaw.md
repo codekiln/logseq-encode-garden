@@ -1,0 +1,9 @@
+- # David Crawshaw
+	- ## Bio
+		- Software engineer and writer behind [[crawshaw.io]], focused on developer tooling, agents, and systems engineering.
+	- ## Links
+		- [crawshaw.io](https://crawshaw.io/)
+		- [GitHub (@crawshaw)](https://github.com/crawshaw)
+		- [X (@davidcrawshaw)](https://twitter.com/davidcrawshaw)
+	- ## Related
+		- [[Person/David Crawshaw/Blog/26/02/Eight more months of agents]]

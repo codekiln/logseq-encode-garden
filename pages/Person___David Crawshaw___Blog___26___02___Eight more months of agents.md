@@ -1,0 +1,31 @@
+readwise-link:: https://readwise.io/reader/shared/01kh5qndkevd7ath5yq1xg6twe
+
+- # [Eight more months of agents](https://crawshaw.io/blog/eight-more-months-of-agents)
+	- Author: **[[Person/David Crawshaw]]**
+	- Source: [crawshaw.io](https://crawshaw.io/)
+	- Journal link: [[2026/02/17]]
+	- ## High-level takeaways
+		- I 100% agree with most of this framing on the state of AI-assisted engineering: frontier model capability is moving quickly, practical workflows matter most, and teams that adapt their tooling around agents gain a real speed advantage.
+	- ## Notes on the argument (summary + excerpts)
+		- **Model progress is the main driver right now; harnesses matter, but capability jumps are coming mostly from frontier models.**
+			- > "Right now, it is all about the model."
+			- > "In February last year, Claude Code could write a quarter of my code. In February this year, the latest Opus model can write nine tenths of my code."
+		- **The coding workflow is shifting away from IDE-centered interaction toward agent-centered interaction.**
+			- > "In 2021, the IDE had won."
+			- > "In 2026, I don't use an IDE any more."
+			- > "The only IDE-like feature I use today is go-to-def... here I am, 2026, and I am back on Vi."
+		- **Using weaker/cheaper models can teach the wrong operational instincts when the frontier keeps moving.**
+			- > "if you try some penny-saving cheap model... you do worse than waste your time, you learn the wrong lessons."
+			- > "you will not know what models will be capable of unless you use the best."
+		- **Built-in safety sandboxes create too much friction for serious use; in practice, people bring their own isolated runtime.**
+			- > "Built-in agent sandboxes do not work"
+			- > "You have to turn off the sandbox, which means you have to provide your own sandbox... use a fresh VM."
+		- **He is building `[[exe.dev]]` to make unconstrained, disposable VM-based agent execution practical for everyday one-liner ideas.**
+			- > "This is why I am building exe.dev."
+			- > "I need a VM, with an unconstrained agent, that I can trivially start up and type the one liner I would have otherwise put into an Apple Note named TODO and forgotten about."
+			- > "A good portion of the time Shelley turns a one-liner into a useful program."
+		- **His broader product thesis: customers now arrive with agents, so products should be easy for programmers (and thus agents) to compose against.**
+			- > "I implemented that entire Stripe product (as it relates to me) by typing three sentences."
+			- > "the best software for an agent is whatever is best for a programmer."
+	- ## Personal annotations integrated
+		- The points above line up with my own experience, including doing similar CLI-centric workflows (e.g., with `langstar`) instead of relying on heavy UI-first flows.
