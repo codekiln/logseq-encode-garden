@@ -1,0 +1,5 @@
+- 1 - the MCP server's author is malicious
+	- **illustrative fictitious example**: someone publishes `<companyname>–mcp` (note, that's an endash, not a hyphen) on [[pypi]], [[AI Coding/Security/Slop Squatting]]. A user asks an AI Chatbot asks how to get access to their `<companyname>` data and it makes a mistake, generating the endash instead of the hyphen. User installs it without doing a security audit.
+	- *root problem: the person who has connected / installed / authorized the software is responsible; they did insufficient due diligence*
+	- [[see-also]]
+		- [[MITM]] - it may be that an official MCP server or toolchain has been forked and modified

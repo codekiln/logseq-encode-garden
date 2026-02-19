@@ -1,0 +1,24 @@
+- # Techno-Feudalism Conceptual Overview
+	- ## Overview
+		- **Techno-feudalism** is a framework that argues parts of the digital economy now work less like competitive capitalism and more like a system of platform-controlled dependency.
+		- Instead of owning land, dominant firms own digital infrastructure: platforms, cloud layers, app stores, ad exchanges, and identity rails.
+		- Users, workers, creators, and even businesses operate inside those controlled ecosystems and pay ongoing "rents" through fees, data extraction, lock-in, or dependence.
+	- ## Core Idea
+		- The claim is not that capitalism disappeared, but that platform power has concentrated so heavily that access is mediated by a few gatekeepers.
+		- Market participation increasingly requires compliance with private platform rules.
+		- Value capture often comes from controlling the "terrain" rather than producing differentiated goods.
+	- ## How It Works
+		- **Infrastructure control**: a small number of firms control distribution, discovery, and compute.
+		- **Rent extraction**: recurring fees, commissions, ad tolls, and data capture function like rents.
+		- **Lock-in dynamics**: switching costs, network effects, and proprietary standards make exit difficult.
+		- **Rule-making power**: platforms can unilaterally change terms, visibility, and monetization.
+	- ## Why It Matters
+		- Economic dependence can shift bargaining power away from workers, creators, and small firms.
+		- Political and social influence can concentrate alongside infrastructure ownership.
+		- Innovation can be shaped by platform incentives rather than broad public welfare.
+	- ## Common Critiques
+		- Some argue "techno-feudalism" is metaphorical and that these dynamics are still best explained within advanced capitalism.
+		- Others argue the term is useful because it highlights governance and dependency, not just market exchange.
+	- ## Related
+		- [[Capital/ism]]
+		- [[Pigouvian externalities]]

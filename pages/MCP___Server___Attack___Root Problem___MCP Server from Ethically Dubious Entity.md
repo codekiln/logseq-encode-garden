@@ -1,0 +1,3 @@
+- the attacker is an entity that looks legitimate and is trying to extract data in a way that's ethically dubious but technically legal
+	- **example**: SuperRadCRM MCP compromises LinkedIn MCP in order to slurp up your contacts and put them in SuperRadCRM's database
+	- **root problem**: 1.) insufficient vendor management, 2.) the nature of [[Capital/ism]] and [[Techno/Feudalism]] incentivizes Google, Meta, Byte Dance et al. to capture as much user data as possible; see also [[Pigouvian externalities]]*

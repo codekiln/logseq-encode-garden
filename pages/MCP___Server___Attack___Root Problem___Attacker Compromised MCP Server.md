@@ -1,0 +1,2 @@
+- 2 - an attacker has compromised the distribution of an otherwise legitimate MCP server
+	- *root problem: not different from a typical supply chain attack, e.g. `npm install`. 90% of the responsibility is on the MCP server author, 10% of the responsibility is on the people installing the software to ensure that they are not on the bleeding edge.*

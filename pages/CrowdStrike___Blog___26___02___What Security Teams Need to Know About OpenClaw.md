@@ -1,0 +1,14 @@
+# [What Security Teams Need to Know About OpenClaw, the AI Super Agent](https://www.crowdstrike.com/en-us/blog/what-security-teams-need-to-know-about-openclaw-ai-super-agent/?__readwiseLocation=)
+	- ## [[My Notes]]
+		- ### Part 1 - How [[CrowdStrike]] can help [[Security/Professional]]s remove [[OpenClaw]] from [[Enterprise]] computers and networks
+			- there's a tool to identify installations, remove openclaw, etc
+				- not that different from tools used to bittorrent, etc
+			- CrowdStrike characterizes the threat landscape as highlighted by
+				- *automation*
+				- bot *persistence*
+		- ### Prompt 2 - [[Prompt Injection]]
+			- [[CrowdStrike/Taxonomy of Prompt Injection Methods]]
+				- ![Taxonomy of Prompt Injection Techniques](https://www.crowdstrike.com/content/dam/crowdstrike/marketing/en-us/images/blog/2026/02/openclaw/Blog-Prompt-Injection-Taxonomy-Poster.png)
+			- I personally find that other writers (like [[Person/Simon Willison]]) are more compelling when it comes to fostering alert curiosity about the dangers of prompt injection. This kind of infographic, in contrast, puts a glossy sheen on [[FUD]].
+			- [[Term]]s
+				- [[AI/Security/Attack/Agentic/Tool Chain]]

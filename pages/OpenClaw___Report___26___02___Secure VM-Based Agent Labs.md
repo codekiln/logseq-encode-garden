@@ -1,0 +1,80 @@
+tags:: [[OpenClaw]], [[Report]], [[AI Deep Research]], [[UTM]], [[Ubuntu]]
+- # Secure VM-Based Agent Labs on Apple Silicon with UTM, Ubuntu ARM64, and Rootless Containers
+	- ## Source
+		- Imported from: [Secure VM-Based Agent Labs on Apple Silicon with UTM, Ubuntu ARM64, and Rootless Containers.pdf](../assets/Secure VM-Based Agent Labs on Apple Silicon with UTM, Ubuntu ARM64, and Rootless Containers.pdf)
+	- ## Executive Summary
+		- A practical, security-first lab pattern on Apple Silicon is: run agents inside a Linux VM, keep networking NAT/shared by default, avoid host file sharing, and run the agent stack in rootless containers.
+		- UTM provides the VM boundary. Inside the VM, the OpenClaw ecosystem provides multiple deployment paths: Docker/Compose workflows, rootless Podman workflows, and hardened automation playbooks.
+		- The strongest reusable building blocks for `UTM + Ubuntu ARM64 + rootless container runtime` are:
+			- `vagrant_utm` for reproducible VM creation on Apple Silicon.
+			- Lima's rootless Docker provisioning logic (`templates/docker.yaml`) transplanted into the Ubuntu VM.
+			- Hardened OpenClaw playbooks that add egress control, reverse proxying, and non-root execution.
+	- ## Reference Architecture
+		- ### VM Layer
+			- Use UTM as the trust boundary so the agent does not run directly on macOS host context.
+			- Prefer shared/NAT networking over bridged mode unless you explicitly need L2 network presence.[^5][^6]
+			- Operate headless where possible to minimize convenience integrations that widen the attack surface.[^8]
+		- ### Container Layer
+			- Run the agent runtime in rootless containers inside the VM to reduce blast radius.
+			- Disable rootful Docker daemon and switch to rootless Docker context.[^4][^18]
+		- ### Network/Egress Layer
+			- Route outbound requests through an allowlisting proxy pattern for high-risk agent workflows.
+			- Keep gateway/UI exposure loopback-bound and tunnel outward explicitly when needed.[^7]
+	- ## High-Value Repositories and Guides
+		- [[GitHub/openclaw/openclaw]]: runtime reference with Docker/Compose and rootless Podman setup script; useful for baseline OpenClaw deployment patterns.[^7][^10][^11][^12]
+		- [[GitHub/openclaw/openclaw-ansible]]: Ansible automation with firewall-first hardening posture and virtualization-first operational direction.[^13]
+		- [[GitHub/Next-Kick/openclaw-hardened-ansible]]: hardened deployment approach with rootless containers and outbound control emphasis.[^1]
+		- [[GitHub/naveenrajm7/vagrant_utm]]: UTM Vagrant provider that makes VM setup reproducible from `vagrant up`.[^14][^15]
+		- [[GitHub/SrivatsaRv/vagrant-utm-demo]]: concrete Docker-in-UTM via Vagrant example; useful as a pattern reference, but tighten default exposure in security-focused labs.[^16]
+		- [[GitHub/lima-vm/lima]]: strongest public rootless Docker bootstrap sequence for adaptation inside Ubuntu guest.[^4][^18]
+		- Small Sharp Software Tools tutorial: practical Apple Silicon UTM + Vagrant walkthrough with `utm/ubuntu-24.04` ARM64 base usage.[^3]
+	- ## Recommended Blueprints
+		- ### Blueprint 1: Reproducible UTM VM with Vagrant
+			- Use `vagrant_utm` and `utm/ubuntu-24.04` ARM64 base box.
+			- Keep directory sharing disabled for stricter isolation unless explicitly needed.
+			- Add provisioning only inside guest VM for deterministic rebuilds.
+		- ### Blueprint 2: Rootless Docker in Ubuntu ARM64 Guest
+			- Install Docker packages.
+			- Disable rootful daemon.
+			- Install `uidmap` and `dbus-user-session`.
+			- Run `dockerd-rootless-setuptool.sh install` and verify `rootlesskit`.
+			- Use rootless Docker context for all agent runtime execution.[^4]
+		- ### Blueprint 3: Defense-in-Depth Hardening
+			- Add outbound allowlisting proxy.
+			- Keep reverse proxy and TLS boundary separate from agent runtime.
+			- Run services under non-root users and restrict public ingress paths.[^1][^13]
+	- ## UTM-Specific Notes
+		- `Shared` mode is NAT-based and a safer default for agent labs than bridged mode unless specific requirements justify bridged networking.[^5][^6]
+		- For selective host access, use explicit forwarding patterns rather than broad exposure.[^19]
+		- Snapshot workflows are strongest with qcow2-backed disks; this enables rapid rollback after risky experiments.[^20][^21]
+	- ## Operational Risk Controls
+		- Treat all autonomous agent runs as untrusted.
+		- Keep host credentials, SSH keys, and sensitive files out of guest VM and out of mounted shares.
+		- Use disposable VM lifecycle: build, run, snapshot, destroy/rebuild.
+		- Restrict outbound domains for agent tools that can execute code or fetch arbitrary resources.
+		- Prefer loopback-only service bindings plus explicit tunnel/exposure controls.
+	- ## Implementation Sequence
+		- 1. Provision Ubuntu ARM64 VM in UTM via `vagrant_utm`.[^14]
+		- 2. Apply rootless Docker bootstrap in guest.[^4]
+		- 3. Deploy OpenClaw stack with loopback-constrained exposure model.[^7]
+		- 4. Apply hardening automation (firewall baseline, outbound control, non-root service model).[^1][^13]
+		- 5. Add snapshot checkpoints before each major capability increase.[^20]
+	- ## Footnotes
+		- [^1]: https://github.com/Next-Kick/openclaw-hardened-ansible
+		- [^3]: https://smallsharpsoftwaretools.com/tutorials/utm-vagrant/
+		- [^4]: https://raw.githubusercontent.com/lima-vm/lima/master/templates/docker.yaml
+		- [^5]: https://docs.getutm.app/scripting/reference/
+		- [^6]: https://docs.getutm.app/settings-apple/devices/network/
+		- [^7]: https://github.com/openclaw/openclaw
+		- [^8]: https://docs.getutm.app/advanced/headless/
+		- [^10]: https://raw.githubusercontent.com/openclaw/openclaw/main/docker-compose.yml
+		- [^11]: https://raw.githubusercontent.com/openclaw/openclaw/main/setup-podman.sh
+		- [^12]: https://raw.githubusercontent.com/openclaw/openclaw/main/docker-setup.sh
+		- [^13]: https://github.com/openclaw/openclaw-ansible
+		- [^14]: https://github.com/naveenrajm7/vagrant_utm
+		- [^15]: https://github.com/naveenrajm7/vagrant_utm/discussions/15
+		- [^16]: https://github.com/SrivatsaRv/vagrant-utm-demo
+		- [^18]: https://github.com/lima-vm/lima
+		- [^19]: https://docs.getutm.app/settings-qemu/devices/network/port-forwarding/
+		- [^20]: https://qemu-project.gitlab.io/qemu/system/images.html
+		- [^21]: https://github.com/Metamogul/UTM-Snapshot-Manager

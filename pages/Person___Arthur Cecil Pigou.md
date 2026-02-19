@@ -1,0 +1,13 @@
+alias:: [[People/Arthur Cecil Pigou]]
+- # Arthur Cecil Pigou
+	- ## Bio
+		- British economist (1877-1959) associated with welfare economics.
+		- Best known for work on externalities and corrective taxation.
+		- The term **Pigouvian** is named after him.
+	- ## Why He Matters
+		- Pigou formalized how private incentives can diverge from social costs or benefits.
+		- His framework motivates policy tools like the [[Pigouvian externalities]] page's **Pigouvian tax** concept.
+	- ## Pronunciation
+		- Pigouvian: *pig-OO-vee-uhn*
+	- ## External Links
+		- [Wikipedia: A. C. Pigou](https://en.wikipedia.org/wiki/A._C._Pigou)

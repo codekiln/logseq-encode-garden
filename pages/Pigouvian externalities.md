@@ -1,0 +1,26 @@
+- # Pigouvian Externalities Conceptual Overview
+	- ## Overview
+		- **Pigouvian** means "related to [[Person/Arthur Cecil Pigou]]."
+		- Pigouvian externalities describe costs or benefits created by one party but experienced by third parties.
+		- Classic example: pollution imposes health and environmental costs on people not involved in the original transaction.
+	- ## Context
+		- Markets allocate resources through private costs and private benefits.
+		- When third-party effects are not priced in, market outcomes can become socially inefficient.
+		- Pigou's contribution was to frame this gap between private and social outcomes in a way policy can address.
+	- ## Key Principles
+		- **Negative externality**: private activity imposes outside costs (for example, emissions).
+		- **Positive externality**: private activity creates outside benefits (for example, vaccination spillovers).
+		- **Social cost/benefit** can differ from **private cost/benefit**.
+	- ## Mechanism
+		- A **Pigouvian tax** raises the private cost of a harmful activity to better reflect its social cost.
+		- A Pigouvian subsidy can encourage activities with positive spillover benefits.
+		- The policy goal is to align private incentives with social welfare.
+	- ## Examples
+		- Carbon taxes on emissions.
+		- Congestion charges in crowded city centers.
+		- Subsidies for preventive health measures that reduce broader public costs.
+	- ## Misconceptions
+		- Pigouvian policy is not only about taxes; subsidies can also be Pigouvian.
+		- It is not about punishment; it is about pricing external costs or benefits more accurately.
+	- ## Related
+		- [[Person/Arthur Cecil Pigou]]

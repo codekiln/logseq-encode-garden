@@ -1,0 +1,4 @@
+- [NextKick Labs Substack](https://nextkicklabs.substack.com/)
+	- has posts about [[AI]] including topics like [[OpenClaw]]
+	- [[Via]]
+		- [[NextKickLabs/Substack/26/02/How to Harden OpenClaw Security 3-Tier]]

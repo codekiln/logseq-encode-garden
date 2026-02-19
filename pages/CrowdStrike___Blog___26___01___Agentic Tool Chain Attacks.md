@@ -1,0 +1,20 @@
+- [How Agentic Tool Chain Attacks Threaten AI Agent Security](https://www.crowdstrike.com/en-us/blog/how-agentic-tool-chain-attacks-threaten-ai-agent-security/)
+	- First part of the article focuses on [[MCP]]
+		- it centralizes tool descriptions written in natural language
+		- centralizing tools in servers concentrates risk
+		- types of [[Agentic Tool Chain Attacks]]
+			- [[AI/Security/Attack/Agentic/Tool Chain/Poisoning]]
+				- it's different from some traditional [[Security Vulnerabilities]]; [[Static Code Analysis]] misses these
+					- > Static code analysis would find nothing wrong. The vulnerability exists not in the code itself, but in the relationship between the tool description and how the large language model (LLM) interprets it in the reasoning layer.
+			- [[AI/Security/Attack/Agentic/Tool Chain/Shadowing]]
+				- "cross-tool manipulation"
+					- > Tool shadowing exploits the fact that all tool descriptions are visible to the LLM agent simultaneously via MCP servers. One tool description in a non-related MCP server can shape how the agent constructs parameters for a completely separate tool.
+						- [[My Thoughts]]
+							- This is somewhere between "le sigh" and "good point."
+							- Again, the problem is either either
+			- [[AI/Security/Attack/Agentic/Tool Chain/Rugpull]]
+		- Claim: if an [[AI/Security/Attack/Agentic/Tool Chain]] compromises one [[MCP/Server]], it can affect every agent connected to it.
+			- [[My Thoughts]]
+				- Is this unique to the [[AI/Agent/Agentic]] era?
+					- The same thing applies to any server; if that server gets compromised, then things that connect to that server can be compromised as well.
+					- The thing that *is* unique is that the propagation vector is natural language

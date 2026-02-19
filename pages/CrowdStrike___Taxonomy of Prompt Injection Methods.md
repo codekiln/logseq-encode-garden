@@ -1,0 +1,2 @@
+- [Taxonomy of Prompt Injection Methods Poster | CrowdStrike](https://www.crowdstrike.com/en-us/resources/infographics/taxonomy-of-prompt-injection-methods/)
+	- ![Taxonomy of Prompt Injection Techniques](https://www.crowdstrike.com/content/dam/crowdstrike/marketing/en-us/images/blog/2026/02/openclaw/Blog-Prompt-Injection-Taxonomy-Poster.png)
