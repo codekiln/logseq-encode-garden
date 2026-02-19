@@ -1,5 +1,6 @@
 readwise-link:: https://readwise.io/reader/shared/01khttdgm48g3rc8ewh5zscvgy
-- # [How to Harden OpenClaw Security: Complete 3-Tier Implementation Guide](https://nextkicklabs.substack.com/p/how-to-harden-openclaw-security)
+
+- # [How to Harden OpenClaw Security: Complete 3-Tier Implementation Guide](https://aimaker.substack.com/p/openclaw-security-hardening-guide)
 	- Source: [[NextKickLabs/Substack]]
 	- Author(s): Wyndo, [[Person/Fernando Lucktermberg]]
 	- ## [[My Notes]]
