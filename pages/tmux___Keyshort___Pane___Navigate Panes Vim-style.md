@@ -19,6 +19,12 @@
 		- Shortcut: `<prefix> j`
 		- Description: Moves focus to the pane below. This is an [[tmux/oh-my-tmux]] binding using Vim-style navigation.
 	- **Navigate Pane Up** #card
+	  card-last-interval:: 4
+	  card-repeats:: 1
+	  card-ease-factor:: 2.6
+	  card-next-schedule:: 2026-02-22T09:34:54.671Z
+	  card-last-reviewed:: 2026-02-18T09:34:54.672Z
+	  card-last-score:: 5
 		- Shortcut: `<prefix> k`
 		- Description: Moves focus to the pane above. This is an [[tmux/oh-my-tmux]] binding using Vim-style navigation.
 	- **Navigate to the Pane at Right** #card

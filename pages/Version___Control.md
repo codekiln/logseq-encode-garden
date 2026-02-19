@@ -1,0 +1,15 @@
+alias:: [[VCS]], [[Version Control System]]
+- Version control is the practice of tracking and managing changes to files over time.
+	- Also known as revision control or source control.
+	- It is a core component of [[source/control/management]].
+	- ## Tools
+		- [[git]] — the most widely used distributed version control system
+		- [[mercurial]] — a distributed version control system similar to git
+		- [[svn]] — a centralized version control system (Apache Subversion)
+		- [[cvs]] — an early centralized version control system (Concurrent Versions System)
+	- ## Key Concepts
+		- [[Repository]] — the storage unit that holds files and their change history
+		- **Commit** — a snapshot of changes at a point in time
+		- **Branch** — a parallel line of development
+		- **Merge** — combining changes from different branches
+		- **Diff** — the difference between two versions of a file

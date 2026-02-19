@@ -8,7 +8,7 @@ tags:: [[Diataxis/How To]]
 		- [[CLI/Tool/displayplacer]] [`displayplacer`](https://github.com/jakehilborn/displayplacer) is installed via Homebrew:
 			- `brew install displayplacer`
 		- `displayplacer` should be globally available in `PATH`. **Do not use `mise link` for this case**, as versioning or plugin behavior is unnecessary for helper CLIs.
-		- Environment variables `VISUAL` or `EDITOR` should be set for the edit functionality.
+		- Environment variables [[EnvVar/VISUAL]] or [[EnvVar/EDITOR]] should be set for the edit functionality.
 	- ## Procedure
 		- ### 1. Create a storage directory for layouts
 			- ```bash
@@ -198,13 +198,13 @@ tags:: [[Diataxis/How To]]
 			  ```bash
 			  mise run monitors-home edit standing
 			  ```
-			- This opens the layout file in your preferred editor (uses `$VISUAL` or falls back to `$EDITOR`)
+			- This opens the layout file in your preferred editor (uses [[EnvVar/VISUAL]] or falls back to [[EnvVar/EDITOR]])
 	- ## Troubleshooting
 		- *Command not found: displayplacer* → Run `brew install displayplacer`.
 		- *No layout saved for profile* → Run with `save` action to store layout before restoring.
 		- *Permission denied* → Make sure the layout directory and file are writable and readable.
 		- *Failed to parse KDL document* → The layout file may be corrupted; try recreating it with the save action.
-		- *No editor found* → Set `VISUAL` or `EDITOR` environment variable for the edit functionality.
+		- *No editor found* → Set [[EnvVar/VISUAL]] or [[EnvVar/EDITOR]] environment variable for the edit functionality.
 		- *Argument parsing error* → Ensure you're using the correct action syntax (e.g., `mise run monitors-home restore standing`).
 	- ## References
 		- [displayplacer GitHub](https://github.com/jakehilborn/displayplacer)

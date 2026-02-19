@@ -1,0 +1,13 @@
+- git is a distributed [[Version/Control]] system and [[CLI/Tool]] created by Linus Torvalds in 2005.
+	- It is the most widely used tool for [[source/control/management]].
+	- git tracks changes to [[Code]] within a [[Repository]], enabling collaboration and history management.
+	- ## Key Features
+		- Distributed — every clone is a full [[Repository]] with complete history
+		- Branching and merging are lightweight and fast
+		- Supports non-linear development workflows
+	- ## Common Commands
+		- `git init` — initialize a new repository
+		- `git clone` — clone an existing repository
+		- `git commit` — record changes to the repository
+		- `git push` / `git pull` — synchronize with a remote repository
+		- `git branch` / `git merge` — manage branches

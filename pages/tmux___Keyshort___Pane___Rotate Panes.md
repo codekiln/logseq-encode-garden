@@ -3,8 +3,8 @@
 	  card-last-interval:: -1
 	  card-repeats:: 1
 	  card-ease-factor:: 2.5
-	  card-next-schedule:: 2026-02-15T05:00:00.000Z
-	  card-last-reviewed:: 2026-02-14T13:31:24.269Z
+	  card-next-schedule:: 2026-02-19T05:00:00.000Z
+	  card-last-reviewed:: 2026-02-18T09:35:37.411Z
 	  card-last-score:: 1
 		- Shortcut: `<tmux-prefix> Ctrl+o`
 		- Description: Rotates panes within the window, swapping their positions

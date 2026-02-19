@@ -1,0 +1,4 @@
+- Mercurial is a distributed [[Version/Control]] system and [[CLI/Tool]].
+	- Similar to [[git]], it tracks changes to [[Code]] within a [[Repository]].
+	- It was created by Olivia Mackall in 2005, around the same time as git.
+	- The command-line tool is invoked as `hg`.

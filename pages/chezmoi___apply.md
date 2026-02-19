@@ -1,0 +1,4 @@
+- `chezmoi apply` - make it so the actual configuration will subsequently have the declared configuration
+	- minimal subset of commands needed to sync this desired state to the home directory is run
+	- for each config file, for example, [[zsh/.zshrc]], the diff of the current vs desired state is computed and applied to the target file
+	- see [[chezmoi/concept]] for more accurate description

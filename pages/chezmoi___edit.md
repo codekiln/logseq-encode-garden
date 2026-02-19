@@ -1,0 +1,3 @@
+- `chezmoi edit` opens a config file in a [[EnvVar]]
+	- example
+		- `chezmoi edit ~/.bashrc`: open [[Bash/.bashrc]] in `$EDITOR`

@@ -1,0 +1,9 @@
+- Configuration management is the practice of systematically handling changes to a system's configuration to maintain integrity over time.
+	- In a developer context, this often refers to managing [[dotfile]]s and other settings across machines and [[Environment]]s.
+	- ## Approaches
+		- **Dotfiles repositories** — versioning configuration files in a [[dotfile/dotfiles repo]] using [[source/control/management]] tools like [[git]]
+		- **Dedicated tools** — tools like [[chezmoi]] that manage dotfiles across multiple machines with templating support
+		- **Infrastructure as Code** — tools like Ansible, Puppet, and Chef that manage configuration at scale
+	- ## Related
+		- [[Version/Control]]
+		- [[Repository]]

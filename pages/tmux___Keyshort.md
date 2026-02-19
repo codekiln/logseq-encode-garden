@@ -1,2 +1,5 @@
 - {{cards [[tmux/Keyshort]] }}
+	- Summary: 5 items, 5 review counts [[2026-02-18 Wed]]
+		- Remembered:   3 (60%)
+		- Forgotten :   2 (40%)
 -

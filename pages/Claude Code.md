@@ -113,7 +113,7 @@ alias:: [[Anthropic/App/Claude Code]]
 							- ((682c8929-0966-45d2-906d-35ec3534d4eb))
 				- When I tried [[Claude Code/Slash/memory]] it said
 					- `To use a different editor, set the $EDITOR or $VISUAL environment variable.`
-						- #Learned that [[Shell/Var/VISUAL]] `$VISUAL` was a thing
+						- #Learned that [[EnvVar/VISUAL]] `$VISUAL` was a thing
 						  id:: 682c9937-4635-440b-874a-89e38bce4274
 					- ((682c99c4-2ec5-4215-9cdd-ee6272bdeab9))
 						- This actually worked fairly well. I asked it to update a specific directory's `CLAUDE.md` and it did.  I wish I had a better mental model for how this relates to "compacting."

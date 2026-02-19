@@ -1,0 +1,2 @@
+- [Concepts - chezmoi](https://www.chezmoi.io/reference/concepts/) has a more complete description.
+	- the config file is stored at `~/.config/chezmoi/chezmoi.toml`; this is the [[chezmoi/config/file]]

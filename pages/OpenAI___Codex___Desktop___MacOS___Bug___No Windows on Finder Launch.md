@@ -1,0 +1,1 @@
+- https://chatgpt.com/c/69959410-d43c-838a-8e12-2b10ba4a94f2?ref=mini

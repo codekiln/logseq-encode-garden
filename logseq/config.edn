@@ -314,7 +314,7 @@
  ;;  :charge-range    600}   ; Default value: 600
 
  ;; Favorites to list on the left sidebar
- :favorites ["edtech/idea/learnmark/q/what precedents exist for lms-agnostic format" "ai/coding/technique/phased planning/ai-coding dir" "person/harper reed/blog/25/02/my llm codegen workflow atm"]
+ :favorites ["tmux" "Lazygit" "chezmoi"]
 
  ;; Set flashcards interval.
  ;; Expected value:
