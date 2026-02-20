@@ -1,0 +1,7 @@
+- # Paul Ford
+	- ## About
+		- Essayist and technologist.
+		- Author of [[Person/Paul Ford/Article/26/02/The A.I. Disruption Is Actually Here, and It’s Not Terrible]].
+	- ## Links
+		- [New York Times author page/search](https://www.nytimes.com/)
+		- [Readwise shared annotation](https://readwise.io/reader/shared/01khws4rxq7a6ktx4jvkpgcjwe)
