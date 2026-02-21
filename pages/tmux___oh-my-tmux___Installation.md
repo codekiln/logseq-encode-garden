@@ -1,0 +1,24 @@
+## automatic installation from a script
+	- `curl -fsSL "https://github.com/gpakosz/.tmux/raw/refs/heads/master/install.sh#$(date +%s)" | bash`
+- ## manual installation
+	- Clone just a single branch of the repo into `~/.tmux`
+		- `git clone --single-branch https://github.com/gpakosz/.tmux.git`
+	- ### manual install in `~`
+		- `cd ~`
+		- Make a symbolic link from `~/.tmux.conf` to `~/.tmux/.tmux.conf`
+	- ==there's no `.` before `tmux.conf` whenever there is a dedicated directory for config files for tmux==
+		- ### manual install in [[XDG/EnvVar/XDG_CONFIG_HOME]]
+			- make sure that `$XDG_CONFIG_HOME` exists
+				- `mkdir -p $XDG_CONFIG_HOME`
+			- make a symbolic link from the XDG config home for [[tmux/Config]] to the locally cloned oh-my-tmux config file
+				- `ln -s ~/.tmux/.tmux.conf "$XDG_CONFIG_HOME/tmux/tmux.conf"`
+			- copy oh-my-tmux's default [[tmux/Config/local]] to the config directory
+				- `cp ~/.tmux/.tmux.conf.local "$XDG_CONFIG_HOME/tmux/tmux.conf`
+		- ### manual install in [[dot/config]]
+			- make sure a config dir for tmux exists
+				- `mkdir -p ~/.config/tmux`
+			- symlink oh-my-tmux's [[tmux/Config]] to the tmux config file location in the dotconfig file
+				- `ln -s ~/.tmux/.tmux.conf ~/.config/tmux/tmux.conf`
+			- copy oh-my-tmux's default [[tmux/Config/local]] to the dotconfig dir
+				- `cp ~/.tmux/.tmux.conf.local ~/.config/tmux/tmux.conf.local`
+		-

@@ -1,0 +1,52 @@
+---
+alias:: [[Plugin Manager]]
+---
+- # Plugin Manager
+	- ## Overview
+		- A **plugin manager** (or extension/package manager) installs, updates, and optionally configures add-ons for a host application or runtime. Related: [[Package/Manager]] for language and system package managers.
+		- Common across editors, shells, languages, and package ecosystems.
+	- ## Vim / Neovim
+		- ### Traditional Vim
+			- **vim-plug**
+				- Minimal, fast; declarative `Plug 'owner/repo'` in vimrc; supports lazy loading and post-update hooks.
+			- **Vundle**
+				- Plugin list in vimrc; `:PluginInstall`; precursor to many modern managers.
+			- **Pathogen**
+				- Only adds plugin directories to `runtimepath`; no install/update; manual git clone into a bundle dir.
+			- **dein.vim**
+				- TOML/config-driven; lazy load by file type or command; cache and parallel install.
+		- ### Neovim
+			- **packer.nvim**
+				- Lua-based; `use 'owner/repo'`; lazy loading via `opt`, `ft`, `cmd`, etc.
+			- **lazy.nvim**
+				- Lua; lazy-by-default; spec in `lua/plugins/*.lua`; lockfile and robust dependency handling.
+			- **vim-plug** also works in Neovim.
+	- ## Zsh
+		- **Oh My Zsh**
+			- Framework + plugin manager; themes and plugins via `$ZSH_CUSTOM/plugins` and `plugins=(...)` in `.zshrc`.
+		- **antigen**
+			- Declarative bundles; `antigen bundle owner/repo`; uses Oh My Zsh–style plugin layout where applicable.
+		- **zinit** (formerly zplugin)
+			- Fast (turbo mode); rich syntax for ice modifiers (load conditions, snippets, as''); supports GitHub and other sources.
+		- **sheldon**
+			- TOML config; written in Rust; no runtime in shell; plugin dirs and git clones managed externally.
+		- **zplug**
+			- Declarative; lazy loading; self-managed (install via one-liner).
+		- **znap**
+			- Pure zsh; no external binary; fast clone/update via git; simple function-based loading.
+	- ## Other technologies
+		- ### Editors / IDEs
+			- **VSCode / Cursor**: built-in Extensions marketplace; install/update via UI or `code --install-extension`.
+			- **JetBrains**: built-in Plugins marketplace per product.
+			- **Emacs**: package.el, use-package, straight.el, Borg (for Git-based packages).
+		- ### Languages / runtimes
+			- **npm** (Node): packages and optional CLI tools; `npm install`, `npx` for run-once.
+			- **pip** (Python): `pip install`; optional tools like pip-tools, uv for lockfiles and venvs.
+			- **cargo** (Rust): crates; `cargo install` for binaries.
+			- **gem** (Ruby): `gem install`; Bundler for project deps.
+		- ### System / distro
+			- **apt**, **dnf**, **pacman**, etc.: OS-level packages; not “plugin” managers per se but analogous (install, upgrade, remove).
+	- ## Comparison notes
+		- **Declarative vs imperative**: vim-plug, packer, lazy, sheldon use config files; Pathogen is “add dirs yourself.”
+		- **Lazy loading**: reduces startup time; common in vim (dein, packer, lazy) and zsh (zinit turbo, zplug).
+		- **Config format**: vimscript vs Lua (Neovim); shell vs TOML (zsh); often a tradeoff between flexibility and simplicity.

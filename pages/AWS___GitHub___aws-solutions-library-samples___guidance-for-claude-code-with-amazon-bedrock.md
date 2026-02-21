@@ -1,0 +1,5 @@
+# [aws-solutions-library-samples/guidance-for-claude-code-with-amazon-bedrock: This Guidance demonstrates how organizations can implement secure enterprise authentication for Amazon Bedrock using industry-standard protocols and AWS services](https://github.com/aws-solutions-library-samples/guidance-for-claude-code-with-amazon-bedrock/tree/main)
+	- Many examples use [[AWS/IAM Identity Center]]
+		- See [Monitoring Guide](https://github.com/aws-solutions-library-samples/guidance-for-claude-code-with-amazon-bedrock/blob/main/assets/docs/MONITORING.md) for setup details and dashboard examples. See [Analytics Guide](https://github.com/aws-solutions-library-samples/guidance-for-claude-code-with-amazon-bedrock/blob/main/assets/docs/ANALYTICS.md) for SQL queries on historical data.
+		- [Monitoring Guide](https://github.com/aws-solutions-library-samples/guidance-for-claude-code-with-amazon-bedrock/blob/main/assets/docs/MONITORING.md) - OpenTelemetry setup and dashboards
+		- [Analytics Guide](https://github.com/aws-solutions-library-samples/guidance-for-claude-code-with-amazon-bedrock/blob/main/assets/docs/ANALYTICS.md) - S3 data lake and Athena SQL queries

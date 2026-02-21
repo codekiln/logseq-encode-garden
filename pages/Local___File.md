@@ -1,0 +1,11 @@
+# `.<config_file>.local.<suffix>`
+	- ## Where  `.local`  Comes From
+		- The `.local` suffix is a long-standing Unix convention meaning:
+		- > “Local customizations layered on top of upstream defaults.”
+		- You’ll see similar patterns in:
+			- `/etc/foo.conf` + `/etc/foo.conf.local`
+			- `/etc/profile` + `/etc/profile.local`
+			- `/etc/apache2/apache2.conf` + `/etc/apache2/conf.d/*.conf`
+			- vim: `vimrc` + `vimrc.local`
+			- zsh frameworks with `*.local` overrides
+		- It’s a **layering strategy**, not a standard.

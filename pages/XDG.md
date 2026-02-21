@@ -1,0 +1,17 @@
+# Cross-Desktop Group
+	- ## used to be a working group under [[freedesktop.org]]
+		- defined standards for [[Linux]] and [[Unix]] [[Desktop/Environment]]s
+			- [[GNOME]]
+			- [[KDE]]
+			- [[XFCE]]
+	- ## defines where applications should store files
+		- [[Configuration/File]]s
+		- [[Data/File]]s
+		- [[Cache/File]]s
+		- [[runtime/File]]s
+		- [[Desktop/Entry]] (`.desktop` launchers / [[Shortcut]])
+	- ## [[EnvVars]] that determine the core XDG directories
+		- [[XDG/EnvVar/XDG_CONFIG_HOME]] has user config files; default `~/.config`
+		- [[XDG/EnvVar/XDG_DATA_HOME]] has user data files; default `~/.local/share`
+		- [[XDG/EnvVar/XDG_CACHE_HOME]] has cache files; default `~/.cache`
+		- [[XDG/EnvVar/XDG_RUNTIME_DIR]] has runtime sockets and [[IPC]]

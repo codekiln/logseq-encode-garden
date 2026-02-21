@@ -10,5 +10,6 @@
 	- https://musics.steinkamp.us/local/minidiscs/Journey%20Into%20Ambient%20Groove
 - His blog has some cool posts on getting [[c74/M4L]] to work nice with [[Git]]
 	- [[Person/Zack Steinkamp/blog/posts/2022-02-15-git-diff-amxd-max]]
+	- [[Person/Zack Steinkamp/Blog/21/05/The Best Ways To Run a Short Script in a Container]]
 	-
 -

@@ -1,9 +1,15 @@
 alias:: [[gpakosz/.tmux]], [[Person/Grégory Pakosz/GitHub/tmux]]
+created-by:: [[Person/Grégory Pakosz]]
 
-- [gpakosz/.tmux: Oh my tmux! My self-contained, pretty & versatile tmux configuration made with 💛🩷💙🖤❤️🤍](https://github.com/gpakosz/.tmux)
-	- By [[Person/Grégory Pakosz]]
-	- > If you're new to tmux, I recommend you to read the [tmux getting started guide](https://github.com/tmux/tmux/wiki/Getting-Started), as well as the [tmux 3: Productive Mouse-Free Development](https://pragprog.com/titles/bhtmux3/tmux-3/)
-	- See also [[tmux]]
+- # [gpakosz/.tmux: Oh my tmux! My self-contained, pretty & versatile tmux configuration](https://github.com/gpakosz/.tmux)
+	- ## Instructions
+		- [[tmux/oh-my-tmux/Installation]]
+	- ## Guidelines
+		- 🚨 **You should never alter the main [[.tmux.conf]] file. If you do, you're on your own. Instead, every customization should happen in your  [[.tmux.conf.local]] copy.**
+		- set [[EnvVar/VISUAL]] or [[EnvVar/EDITOR]] to [[vim]] to enable `vi-style` [[Keyshort]]s.
+	- ## Recommendations
+		- > If you're new to tmux, I recommend you to read the [tmux getting started guide](https://github.com/tmux/tmux/wiki/Getting-Started), as well as the [tmux 3: Productive Mouse-Free Development](https://pragprog.com/titles/bhtmux3/tmux-3/)
+		- [[Person/Grégory Pakosz/GitHub/.vim]]
 	- ## [Bindings](https://github.com/gpakosz/.tmux#bindings)
 		- tmux may be controlled from an attached client by using a key combination of a prefix key, followed by a command key. This configuration uses `C-a` as a secondary prefix while keeping `C-b` as the default prefix. In the following list of key bindings:
 		- `<prefix>` means you have to either hit Ctrl + a or Ctrl + b

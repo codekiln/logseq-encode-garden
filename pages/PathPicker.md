@@ -1,5 +1,12 @@
-- [facebook/PathPicker: PathPicker accepts a wide range of input -- output from git commands, grep results, searches -- pretty much anything. After parsing the input, PathPicker presents you with a nice UI to select which files you're interested in. After that you can open them in your favorite editor or execute arbitrary commands.](https://github.com/facebook/PathPicker)
-	- works well with [[vim]]
-	- demo
-		- <a href="https://asciinema.org/a/19519" target="_blank"><img src="https://asciinema.org/a/19519.svg" /></a>
-		-
+- # PathPicker
+  - Official site: [facebook.github.io/PathPicker](https://facebook.github.io/PathPicker/)
+  - Repo: [facebook/pathpicker](https://github.com/facebook/pathpicker/) — prefer [[gh]] CLI (e.g. `gh repo clone facebook/pathpicker`, `gh repo view facebook/pathpicker`)
+  - ## What it does
+    - Parses a wide range of input (git command output, grep results, search results, etc.) and shows a terminal UI to select which files you care about. You can then open them in your editor or run arbitrary commands on the selection.
+  - ## Any input
+    - Accepts output from git commands, grep results, searches — pretty much anything. After parsing, PathPicker presents a UI to select files, then you can open them in your favorite editor or execute arbitrary commands.
+  - ## Arbitrary commands
+    - Besides opening files in an editor, you can run arbitrary commands with the selected files: add to version control, change permissions, scp, delete, etc.
+  - ## Integration and demo
+    - Works well with [[vim]]
+    - Demo: [asciinema 19519](https://asciinema.org/a/19519) — <a href="https://asciinema.org/a/19519" target="_blank"><img src="https://asciinema.org/a/19519.svg" /></a>

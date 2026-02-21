@@ -1,4 +1,4 @@
-alias:: [[Anthropic/App/Claude Code/Settings]]
+alias:: [[Anthropic/App/Claude Code/Settings]], [[Claude Code/Config]]
 
 - # [Claude Code settings](https://docs.claude.com/en/docs/claude-code/settings)
   
@@ -105,14 +105,8 @@ alias:: [[Anthropic/App/Claude Code/Settings]]
   * **MCP servers**: Extend Claude Code with additional tools and integrations
   * **Precedence**: Higher-level configurations (Enterprise) override lower-level ones (User/Project)
   * **Inheritance**: Settings are merged, with more specific settings adding to or overriding broader ones
-- ### System prompt availability
-  
-  <Note>
-  Unlike for claude.ai, we do not publish Claude Code's internal system prompt on this website. Use CLAUDE.md files or `--append-system-prompt` to add custom instructions to Claude Code's behavior.
-  </Note>
 - ### Excluding sensitive files
-  
-  To prevent Claude Code from accessing files containing sensitive information (e.g., API keys, secrets, environment files), use the `permissions.deny` setting in your `.claude/settings.json` file:
+- To prevent Claude Code from accessing files containing sensitive information (e.g., API keys, secrets, environment files), use the `permissions.deny` setting in your `.claude/settings.json` file:
   
   ```json
   {
