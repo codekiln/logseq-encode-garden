@@ -1,0 +1,52 @@
+- # Docker vs Dagger and Devcontainers Conceptual Overview
+	- ## Overview
+		- Three different layers of abstraction sit in the container ecosystem: **Docker** (container runtime + image builder), **Devcontainers** (development environment spec on top of Docker), and **Dagger** (programmable CI/CD pipeline engine built on containers). They operate at different layers of the stack and are orthogonal, not competitors.
+	- ## Context
+		- Docker established the industry standard for container runtimes and image builds; Devcontainers emerged to standardize reproducible development environments (Docker + Microsoft spec); Dagger was created by Docker's founders (including Solomon Hykes) as a pipeline-as-code engine that runs CI/CD inside containers using Docker/BuildKit.
+		- Reproducibility, dev-environment parity, and CI symmetry are common goals; each tool addresses a different slice—runtime, dev UX, or pipeline logic.
+	- ## Key Principles
+		- **Vertical stack mental model**:
+			- Infrastructure layer → Docker
+			- Development UX layer → Devcontainers
+			- CI/CD logic layer → Dagger
+		- **Philosophical distinction**:
+			- Docker: containers as infrastructure
+			- Devcontainers: containers as developer workspaces
+			- Dagger: containers as programmable build graphs
+		- **Orthogonality**: Devcontainer defines "what is my development machine"; Dagger defines "how is my software built, tested, and released"; Docker defines "how is code executed in isolation."
+	- ## Mechanism
+		- **Docker**: Container runtime + image build system + distribution. Compose orchestrates multi-service setups. No built-in pipeline or dev-environment opinion.
+		- **Devcontainers**: Specification layered over Docker: declarative `devcontainer.json`, features system, editor auto-attach semantics. Targets local machines, Codespaces, and cloud dev platforms.
+		- **Dagger**: Pipelines written in real code (Go, Python, TypeScript). Execute as containerized DAGs via Docker/BuildKit. Example pattern:
+			- ~~~go
+			  client.Container().
+			    From("node:18").
+			    WithMountedDirectory("/src", src).
+			    WithExec([]string{"npm", "test"})
+			  ~~~
+			- Pipelines are composable, reusable functions; same pipeline runs locally (`dagger call build`) and in CI.
+	- ## Layer Comparison
+		- | Layer | Docker | Devcontainers | Dagger |
+			- | Container runtime | ✅ | Uses Docker | Uses Docker |
+			- | Dev environment standardization | ❌ | ✅ | ❌ |
+			- | CI/CD orchestration | ❌ | ❌ | ✅ |
+			- | Pipeline as real code | ❌ | ❌ | ✅ |
+			- | Editor integration | ❌ | ✅ | ❌ |
+			- | Cloud dev symmetry | ⚠️ manual | ✅ | ⚠️ pipeline only |
+			- | Shell-first friendly | ✅ | ⚠️ editor-centric | ⚠️ CI-centric |
+	- ## Strengths and Weaknesses
+		- **Docker**: Strengths—lowest-level control, industry standard, works locally and in CI, Compose for multi-service, production-ready. Weaknesses—no developer UX opinion, no pipeline orchestration, CI is external, reproducibility depends on discipline.
+		- **Devcontainers**: Strengths—declarative config, features system, editor auto-attach, reproducible onboarding, strong Codespaces integration. Weaknesses—development-only, tied to editor workflows, not a CI engine, extra abstraction.
+		- **Dagger**: Strengths—pipeline as typed/testable/composable code, local/CI symmetry, deterministic container graph, composable build graph, reusable modules. Weaknesses—does not replace Docker (uses it), does not manage dev environment/editor/dotfiles/shell/IDE, adds conceptual complexity (Docker + Dagger + CI provider).
+	- ## When Dagger Fits
+		- Ideal if: you dislike YAML CI, want reusable pipeline modules, identical local + CI execution, composable build graphs, or deterministic supply chains. Especially compelling for monorepos, complex build graphs, multi-language systems, and build-caching optimization.
+		- Strategic stack: Devcontainer defines local shell/editor; Docker defines runtime services; Dagger defines CI/CD and release logic—yielding dev-environment reproducibility, runtime parity, and pipeline determinism.
+	- ## Misconceptions
+		- **They compete**: They are complementary layers; a fully containerized dev stack can use all three for different concerns.
+		- **Dagger replaces Docker**: Dagger uses Docker/BuildKit underneath; it is a pipeline engine, not a runtime.
+		- **Devcontainers are for CI**: They standardize dev environments and editor integration, not build/release pipelines.
+	- ## Related
+		- [[DevContainer]]
+		- [[Docker/Compose]]
+		- [[GitHub/Codespaces]]
+		- [[Latent Space/Pod/25/06/Solomon Hykes with Dagger to Contain Agent Chaos/Agentic Impetus]]
