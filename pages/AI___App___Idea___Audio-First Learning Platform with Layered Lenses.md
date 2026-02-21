@@ -1,0 +1,86 @@
+tags:: [[Idea/My]], [[AI/Voice]], [[EdTech]], [[Audio]], [[Learning Platform]], [[Podcast]], [[Interactive Learning]]
+related-ideas:: [[AI/App/Idea/Interactive Audio RAG]], [[EdTech/Idea/LearnMark]], [[LiaScript]]
+example-use-case:: [[Person/Annette Vande Gorne/Book/18/Treatise on Writing Acousmatic Music on Fixed Media]]
+
+- # Audio-First Learning Platform with Layered Lenses
+	- ## Core Idea
+		- A learning platform that goes beyond "studying" and functions as a new kind of **media substrate** for books and complex works.
+		- Built primarily around **audio**, with tight integration to text.
+		- Similar in spirit to [[AI/App/Idea/Interactive Audio RAG]] but with a focus on multi-perspective interpretation and community discourse.
+	- ## Layer 1: Primary Work (Source Layer)
+		- Unabridged audio recording of the original work (e.g., audiobook).
+		- Structured hierarchically:
+			- Book
+			- Chapter
+			- Section / Subsection (e.g., musical "energies" in Chapter 1 of [[Person/Annette Vande Gorne/Book/18/Treatise on Writing Acousmatic Music on Fixed Media]])
+	- ## Layer 2: Lenses (Interpretive Layers)
+		- Each subsection can have multiple **lenses** layered on top.
+		- A lens = an alternative explanatory or interpretive audio track.
+		- Examples of lenses:
+			- Explaining the concept to a high-school composition student
+			- Explaining the same concept to a six-year-old
+			- Scholarly / academic lens
+			- Social-justice or cultural lens
+			- Practitioner / composer lens
+		- Conceptually similar to DVD director's commentary, but:
+			- Multiple lenses available
+			- Community-generated
+			- Switchable on demand
+	- ## Real-Time Interaction While Listening
+		- While listening to the audiobook or a lens:
+			- Receive audio notifications when a lens is available
+			- Switch lenses via UI or voice command
+				- e.g. "Switch to high-school lens"
+				- e.g. "Switch to scholastic lens"
+	- ## Questions as First-Class Audio Objects
+		- At any moment, a listener can:
+			- Press a button or use a voice command
+			- Record a spoken question tied to a precise location in the work
+		- Future listeners:
+			- Receive an audio notification that a question exists
+			- Can listen to the question
+			- Can record an audio reply immediately
+		- This creates an **asynchronous voice discourse** layer over the work.
+	- ## Emergent Discourse Tree
+		- Questions and replies form a branching, time-indexed conversation tree.
+		- Discourse grows organically over the fixed substrate of the original work.
+		- The work becomes:
+			- A living dialogue
+			- A collective interpretive space
+			- A pedagogical commons
+	- ## Audio-First, Text-Integrated
+		- Everything exists in audio form for on-the-go use (walking, commuting, running).
+		- A synchronized textual layer:
+			- Transcriptions of audio
+			- Searchable and browsable
+			- Navigable via web or app
+		- Audio ↔ text reinforce each other rather than compete.
+	- ## Outcome / Vision
+		- An **interactive podcast-like medium for deep study**.
+		- Learning as **layered listening, dialogue, and collective sense-making**.
+		- A way to "build knowledge in motion" rather than only at a desk.
+	- ## Relation to Other Ideas
+		- **[[AI/App/Idea/Interactive Audio RAG]]**: Shares the audio-first interaction model and ability to ask questions while listening, but this idea extends it with:
+			- Multiple interpretive lenses (not just Q&A)
+			- Community-generated content
+			- Persistent discourse threads
+		- **[[EdTech/Idea/LearnMark]]**: Could potentially use a similar modular, LMS-agnostic approach for structuring the hierarchical content (books → chapters → sections).
+		- **[[LiaScript]]**: Similar in creating interactive educational content, but LiaScript is text-first while this is audio-first.
+	- ## Technical Considerations
+		- **Audio synchronization**: Precise time-stamping of questions, replies, and lens switches
+		- **Voice commands**: Real-time speech recognition for navigation
+		- **Content management**: System for community contributions and moderation
+		- **Metadata**: Rich tagging of sections, lenses, and discourse threads
+		- **Mobile-first design**: Optimized for listening on-the-go
+	- ## Example Use Case
+		- [[Person/Annette Vande Gorne/Book/18/Treatise on Writing Acousmatic Music on Fixed Media]]
+			- Primary layer: Audiobook of the treatise
+			- High-school lens: Simplified explanations of [[Music/Acousmatic]] concepts
+			- Practitioner lens: Composer perspectives and studio techniques
+			- Questions: Learners asking about specific "energies" discussed in Chapter 1
+			- Discourse: Community discussions about applying concepts to their own compositions
+	- ## Applications
+		- **Education**: Students engage deeply with complex academic texts
+		- **Accessibility**: Audio-first interfaces make learning available to more people
+		- **Communities of Practice**: Professionals building shared understanding around seminal works
+		- **Lifelong Learning**: Transform commute time into deep learning time
