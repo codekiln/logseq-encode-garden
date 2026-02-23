@@ -1,0 +1,6 @@
+- [[Keyshort]] [[vim]] [[vim/Keyshort]]
+	- **Move by Word (Forward/Backward)** #card
+		- Shortcut:
+			- `w` moves forward to the start of the next word
+			- `b` moves backward to the start of the previous word
+		- Description: Navigates by word boundaries for faster in-line movement while editing in [[vim]].
