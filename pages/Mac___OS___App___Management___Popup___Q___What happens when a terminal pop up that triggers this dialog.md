@@ -1,0 +1,38 @@
+tags:: [[Question]]
+- # What happens when a terminal opens which causes it to trigger the [[Mac/OS/App/Management/Popup]]
+	- ## [[AI/Research]]
+		- ### What this popup is
+			- Apple classifies this under **App Management** privacy controls ("<App> would like to access data from other apps").
+			- It appears when one app (for example, Terminal or iTerm) attempts to read/write data that macOS treats as belonging to another app domain.
+			- Apple overview: [Controlling app access to files in macOS](https://support.apple.com/guide/security/controlling-app-access-to-files-secddd1d86a6/web)
+			- Apple overview: [Protecting app access to user data](https://support.apple.com/guide/security/protecting-app-access-to-user-data-sec35dd877d0/web)
+		- ### What happens when you click buttons
+			- **Allow** grants the requesting app permission for that protected access path/category.
+			- **Don't Allow** denies it; the requesting action fails (or degrades) until permission is granted later.
+			- Apple Developer Technical Support (DTS) guidance says this specific container-access privilege is **transient (process lifetime)**, so prompts can recur as process instances change.
+			- Source (Apple Developer Forums, DTS): [macOS keeps showing "[App] would like to access data from other apps" warning even if accepting it each time](https://developer.apple.com/forums/thread/742147)
+		- ### Why Terminal/iTerm can trigger it
+			- #### Mental model
+				- Think of macOS as enforcing **"app-owned neighborhoods"** for data.
+				- Terminal/iTerm itself is usually not the main issue; the issue is what runs *inside* the shell at startup.
+				- If startup logic reaches into data/sockets/containers that macOS treats as belonging to another app, macOS asks for consent.
+			- #### Typical trigger chain
+				- Terminal launches.
+				- Your shell init (`.zshrc`, `.zprofile`, plugins, agent bootstrap scripts) runs automatically.
+				- One of those steps tries to use another app's managed resource (for example, an SSH-agent or credential helper socket exposed via an app-group/container path).
+				- macOS interprets that as cross-app data access and shows: `"<App> would like to access data from other apps"`.
+			- #### Why it can feel surprising
+				- The popup names Terminal/iTerm because that is the **requesting process**.
+				- But the *root cause* is often an integration command in startup config, not an explicit action you just took in the terminal window.
+			- #### Why it may reappear
+				- Per Apple Developer Technical Support (DTS) guidance for this area, this permission can be transient to process lifetime in some cases.
+				- Practically, that means a new process instance can cause the consent check again, which feels like "I already allowed this."
+			- #### Sources behind this model
+				- WWDC reference (Apple): [What’s new in privacy](https://developer.apple.com/videos/play/wwdc2024/10123/)
+				- App-group security context (Apple Platform Security): [App protection and app groups in macOS](https://support.apple.com/guide/security/app-protection-and-app-groups-in-macos-sec8ed1be8f3/web)
+				- Apple DTS deep dive (renamed from "Fight!" to "Working Towards Harmony"): [App Groups: macOS vs iOS: Working Towards Harmony](https://developer.apple.com/forums/thread/721701)
+				- Local proxy page: [[Apple/Forum/22/12/App Groups macOS vs iOS Working Towards Harmony]]
+		- ### Practical interpretation for this question
+			- If this appears when terminal launches, the trigger is likely not "terminal startup itself," but a command/integration run at startup that crosses an app-data boundary.
+			- If access is denied, features depending on that cross-app data path may fail (for example: auth helpers, SSH agent access, keychain-like bridges exposed by third-party apps).
+			- To isolate the trigger, test with a minimal shell startup (temporarily bypass custom init files) and then re-enable integrations one-by-one.

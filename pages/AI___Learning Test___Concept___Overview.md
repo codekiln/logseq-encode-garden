@@ -1,0 +1,38 @@
+tags:: [[Diataxis/Concept]], [[AI]], [[Testing]]
+
+- # Conceptual Overview of Learning Tests
+	- [[tldr]] A **learning test** is a test written primarily to understand an unfamiliar system’s current behavior, not to validate a desired design.
+- ### Core Idea
+	- In legacy or poorly understood codebases, tests can be used as an investigative tool.
+	- Instead of starting with a specification of what *should* happen, you write executable probes to observe what *does* happen.
+	- This approach is associated with [[Person/Michael Feathers]] in *Working Effectively with Legacy Code*.
+- ### Why It Matters
+	- Learning tests help reduce uncertainty before refactoring.
+	- They turn hidden behavior into explicit, repeatable evidence.
+	- They speed up onboarding to unfamiliar code by building a concrete mental model.
+	- They create a safer path toward change because surprising behavior gets documented early.
+- ### How Learning Tests Work
+	- You identify an area of code you do not yet understand.
+	- You write small tests that “poke” the system through public seams or reachable entry points.
+	- You capture observed outputs, side effects, and edge-case responses.
+	- You iterate until the behavior landscape is clear enough to modify code with confidence.
+- ### Learning Tests vs Characterization Tests
+	- **Learning test** emphasizes *intent*: learning and discovery.
+	- **Characterization test** emphasizes *artifact*: a durable test that records existing behavior.
+	- In practice, learning tests often evolve directly into characterization tests once the observations are stable and worth preserving.
+- ### Typical Use Cases
+	- Untangling legacy modules with unclear contracts.
+	- Exploring third-party APIs or SDK behavior in ambiguous scenarios.
+	- Investigating regression-prone areas before making structural changes.
+	- Validating assumptions during dependency-breaking and separation work.
+- ### Conceptual Pattern
+	- **Unknown behavior** → **exploratory test probe** → **observed behavior captured** → **mental model improved** → **safer refactoring**.
+- ### Practical Heuristics
+	- Start with small, focused cases.
+	- Prefer readability over cleverness; the goal is understanding.
+	- Keep observed behavior explicit, even if the behavior appears strange.
+	- Label tests to indicate exploratory intent, then rename/reorganize when they become characterization tests.
+- ### Summary
+	- Learning tests recast testing as a method of inquiry.
+	- They are especially useful in AI and software systems where behavior is complex, emergent, or under-documented.
+	- The key shift is from “proving we are correct” to “discovering what is true before we change anything.”
