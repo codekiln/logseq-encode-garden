@@ -1,0 +1,33 @@
+- # Land the plane
+	- ## Podcast and source entries
+		- 1. [[Person/Steve Yegge/YouTube/26/02/Beyond Instructions How Beads Lets AI Agents Build Like Engineers]] (with Joe Reis; AI Engineer World's Fair talk and #Snipd transcript) [^1]
+		- 2. AI Tinkerers, "Beyond Instructions: How Beads Lets AI Agents Build Like Engineers" (edited article/transcript) [^2]
+		- 3. [[Latent Space/Pod]], "Steve Yegge's Vibe Coding Manifesto: Why Claude Code Isn't It & What Comes After the IDE" [^3]
+	- ## What "land the plane" is
+		- "Land the plane" is a scripted end-of-session cleanup protocol that [[Person/Steve Yegge]] gives to his AI coding agents.
+		- When he says "let's land the plane," the agent runs a checklist of wrap-up tasks so the repo, issues, and context are left in a clean, ready-to-resume state [^1], [^2].
+		- He created it because he was "so sick of telling the agents that they had to clean up after themselves" after coding sessions [^1], [^2].
+	- ## What the command actually does
+		- When the user says "land the plane," the agent follows a fixed checklist, roughly:
+			- Update [[Beads]] issues and carefully sync the issue tracker with what actually happened [^1], [^2].
+			- Clean up Git state: remove stashes, old branches, and other cruft [^1], [^2].
+			- Remove debugging artifacts and temporary files the agents left lying around [^1], [^2].
+			- Walk the [[Beads]] work tracker, choose the next thing to work on, and emit a suggested prompt for the next session so you can paste it in when you come back [^1], [^2].
+		- He treats this as a "clean session ending protocol" that always runs before you leave, primarily to combat agent "dementia" and human context loss between sessions [^1], [^2].
+	- ## Why it works well with LLM agents
+		- [[Person/Steve Yegge]] notes that models "love" checklists, acceptance criteria, and being able to declare they are done, because they were trained and rewarded on that pattern [^2].
+		- Even when they are low on context, asking them to "land the plane" tends to produce thorough, reliable cleanup because:
+			- The task has clear, enumerated steps.
+			- Success is easy to self-evaluate: did each checklist item get done? [^2]
+		- So "land the plane" is both:
+			- A UX pattern: a named ritual at session end.
+			- A prompt-engineering pattern: turn messy wrap-up into a checklist the model can execute and self-assess.
+	- ## How it fits into Yegge's broader system
+		- **[[Beads]]**: [[Person/Steve Yegge]]'s Git-based issue/work tracker that agents constantly update; "land the plane" is tightly coupled to [[Beads]] state management [^1], [^2].
+		- **Vibe Coder / [[gastown]]-style orchestrators**: his Go-based orchestrator (Vibe Coder) runs full workflows that include the "land the plane" step: cost optimization, retries, self-healing agent colonies, and cleanup at the end of each workflow/session [^3].
+		- Conceptually, "land the plane" is:
+			- A standardized, automated, agent-executed shutdown and handoff ritual that leaves code, issues, and future context in a clean, consistent state at the end of every session.
+	- ## Footnotes
+		- [^1]: https://www.youtube.com/watch?v=s96O9oWI_tI
+		- [^2]: https://www.aideveloper.world/p/beyond-instructions-how-beads-lets
+		- [^3]: https://www.latent.space/p/steve-yegge

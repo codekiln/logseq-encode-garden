@@ -1,0 +1,34 @@
+alias:: [[Beehiiv]]
+website:: https://www.beehiiv.com/
+- # [[beehiv]] (Beehiiv)
+	- Newsletter publishing platform that combines web posts, email distribution, audience growth tooling, and monetization workflows.
+	- This page uses your requested spelling (`[[beehiv]]`) and tracks the canonical brand as Beehiiv.
+	- ## Why it matters in this garden
+		- The AI Daily Brief episode notes are published on Beehiiv:
+			- [[Nathaniel Whittemore/Pod/26/02 The Rise of the Anti-AI Movement]]
+	- ## Core capabilities
+		- Website + newsletter publishing in one workflow.
+		- Paid subscriptions via Stripe.
+		- Podcast support via RSS-based episode syncing and podcast-specific site pages.
+		- Monetization programs including ad marketplace/network features.
+	- ## Comparison with [[substack]]
+		- Revenue share model:
+			- Beehiiv: positions paid subscriptions and digital product monetization as 0% platform fee (Stripe/payment fees still apply).
+			- Substack: support docs state a 10% platform fee on paid subscriptions, plus Stripe fees.
+		- Growth loops:
+			- Beehiiv: emphasizes ad network and growth/monetization tooling inside the publisher workflow.
+			- Substack: emphasizes network discovery via Recommendations and recommendation digests.
+		- Podcast workflow:
+			- Beehiiv: supports podcast website pages and RSS-driven sync for episodes.
+			- Substack: supports creating/importing podcasts and distributing to major podcast apps.
+		- Practical takeaway:
+			- Beehiiv often fits creators optimizing for configurable monetization and owned-site workflows.
+			- Substack often fits creators optimizing for in-network discovery and reader graph effects.
+	- ## Sources
+		- Beehiiv homepage: https://www.beehiiv.com/
+		- Beehiiv podcast feature page: https://www.beehiiv.com/features/podcasts
+		- Beehiiv paid subscriptions feature page: https://www.beehiiv.com/features/paid-subscriptions
+		- Beehiiv Ad Network FAQ: https://www.beehiiv.com/support/article/17507491038231
+		- Substack pricing/fees: https://support.substack.com/hc/en-us/articles/360037607131-How-much-does-Substack-cost
+		- Substack recommendations: https://support.substack.com/hc/en-us/articles/5036794583828-How-can-I-recommend-other-publications-on-Substack
+		- Substack podcast publishing: https://support.substack.com/hc/en-us/articles/360037462092-How-do-I-create-and-publish-a-podcast-on-Substack

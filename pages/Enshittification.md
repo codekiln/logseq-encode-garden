@@ -1,0 +1,28 @@
+- # Enshittification
+	- ## Conceptual Overview
+		- [[Enshittification]] is a pattern where digital platforms progressively degrade the experience for users and business participants as platform owners gain power and begin optimizing for extraction.
+		- It is best understood as a lifecycle, not a one-time event:
+			- 1. Early stage: platforms subsidize users with convenience, reach, and low friction to drive rapid adoption.
+			- 2. Middle stage: once users are locked in, value shifts toward paying business customers (advertisers, sellers, publishers, developers) to maximize revenue.
+			- 3. Late stage: after both sides are dependent, platform owners extract most of the surplus for themselves, reducing quality and fairness for everyone else.
+	- ## Structural Drivers
+		- High switching costs and network effects make exit expensive for users and suppliers.
+		- Control over ranking, recommendation, and API access lets platforms change outcomes unilaterally.
+		- Weak [[Interop]] and anti-competitive behavior reduce outside alternatives.
+		- Financial pressure and monopoly incentives reward short-term extraction over long-term trust.
+	- ## Typical Symptoms
+		- Declining relevance/quality in feeds and search.
+		- Increased ads, paywalls, fees, and self-preferencing behavior.
+		- Reduced transparency, portability, and user control.
+		- Policy/rule changes that shift risk and cost onto creators, sellers, or developers.
+	- ## Why the Concept Matters
+		- It provides a practical lens for diagnosing platform decline as a governance and market-structure problem, not just a product-design problem.
+		- It connects personal UX frustration to broader questions of competition policy, rights, and institutional power.
+	- ## Countermeasures
+		- Interoperability requirements and data portability rights.
+		- Competition enforcement against lock-in and self-preferencing.
+		- User and developer leverage through open standards, federation, and exit options.
+	- ## Related
+		- [[Person/Corey Doctorow]]
+		- [[Person/Corey Doctorow/Book/25/Enshittification]]
+		- [[Interop]]
