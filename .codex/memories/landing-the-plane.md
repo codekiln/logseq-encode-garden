@@ -1,0 +1,27 @@
+# Landing the Plane (Session Completion)
+
+When ending a work session, complete all steps below. Work is not complete until `git push` succeeds.
+
+## Mandatory Workflow
+
+1. File issues for remaining work.
+2. Run quality gates if code changed (tests, lint, build as applicable).
+3. Update issue status (close finished work, update in-progress work).
+4. Push to remote:
+   ```bash
+   git pull --rebase
+   bd sync
+   git push
+   git status
+   ```
+   `git status` must show the branch is up to date with origin.
+5. Clean up git state (for example: stale stashes, pruned remotes).
+6. Verify all local changes are committed and pushed.
+7. Provide handoff context for the next session.
+
+## Critical Rules
+
+- Work is not complete until `git push` succeeds.
+- Never stop before pushing.
+- Never say "ready to push when you are"; the agent must push.
+- If push fails, resolve the problem and retry until it succeeds.
