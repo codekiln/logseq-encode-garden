@@ -2,7 +2,7 @@ date-created:: [[2026/02/24]]
 tags:: [[Podcast/Episode]]
 
 - # [The Rise of the Anti-AI Movement](https://podcasters.spotify.com/pod/show/nlw/episodes/The-Rise-of-the-Anti-AI-Movement-e3fiem1)
-	- Podcast: [[Nathaniel Whittemore/Podcast]]
+	- Podcast: [[Person/Nathaniel Whittemore/Podcast]]
 	- Host: [[Person/Nathaniel Whittemore]]
 	- Episode date: [[2026/02/24]]
 	- Podscan episode: [The Rise of the Anti-AI Movement](https://podscan.fm/podcasts/the-ai-daily-brief-artificial-intelligence-news-and-analysis/episodes/the-rise-of-the-anti-ai-movement)

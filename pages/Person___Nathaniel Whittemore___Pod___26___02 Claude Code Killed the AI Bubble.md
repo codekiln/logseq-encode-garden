@@ -2,7 +2,7 @@ date-created:: [[2026/02/08]]
 tags:: [[Podcast/Episode]]
 
 - # [Claude Code Killed the AI Bubble](https://podcasters.spotify.com/pod/show/nlw/episodes/Claude-Code-Killed-the-AI-Bubble-e3eq5fr)
-	- Podcast: [[Nathaniel Whittemore/Podcast]]
+	- Podcast: [[Person/Nathaniel Whittemore/Podcast]]
 	- Host: [[Person/Nathaniel Whittemore]]
 	- Episode date: [[2026/02/08]]
 	- Source notes: [Readwise book review](https://readwise.io/bookreview/58196027/)

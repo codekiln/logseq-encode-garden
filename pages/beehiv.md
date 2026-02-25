@@ -1,11 +1,12 @@
 alias:: [[Beehiiv]]
 website:: https://www.beehiiv.com/
+
 - # [[beehiv]] (Beehiiv)
 	- Newsletter publishing platform that combines web posts, email distribution, audience growth tooling, and monetization workflows.
 	- This page uses your requested spelling (`[[beehiv]]`) and tracks the canonical brand as Beehiiv.
 	- ## Why it matters in this garden
 		- The AI Daily Brief episode notes are published on Beehiiv:
-			- [[Nathaniel Whittemore/Pod/26/02 The Rise of the Anti-AI Movement]]
+			- [[Person/Nathaniel Whittemore/Pod/26/02 The Rise of the Anti-AI Movement]]
 	- ## Core capabilities
 		- Website + newsletter publishing in one workflow.
 		- Paid subscriptions via Stripe.

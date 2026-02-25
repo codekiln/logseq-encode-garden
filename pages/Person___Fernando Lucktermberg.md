@@ -1,6 +1,6 @@
 # Fernando Lucktermberg
 	- [[My Notes]]
-		- I discovered his writing in the context of [[Nathaniel Whittemore/Class/ClawCamp/00 The Security Briefing]]
+		- I discovered his writing in the context of [[Person/Nathaniel Whittemore/Class/ClawCamp/00 The Security Briefing]]
 	- [[AI/Summary]]
 		- **Fernando Lucktemberg** is a technology professional known for his work in enterprise software, particularly in the SAP ecosystem. He has a background in computer engineering and business, and is based in Brazil where he has worked as a consultant and solutions architect in SAP technologies. He holds experience with SAP BTP (Business Technology Platform) and other ERP implementations and has been involved in consulting roles with companies like Echelon Solutions Group and F&H Consultoria. ([Datanyze](https://www.datanyze.com/people/Fernando-Lucktemberg/2308462317?utm_source=chatgpt.com))
 		- In addition to his professional consulting work, Lucktemberg has been active in writing and sharing technical and security-oriented content, especially around topics like AI tools and secure deployment practices. ([AI Maker](https://aimaker.substack.com/p/openclaw-security-hardening-guide?utm_source=chatgpt.com))

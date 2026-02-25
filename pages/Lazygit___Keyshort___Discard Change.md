@@ -1,0 +1,7 @@
+- [[Keyshort]] [[Lazygit]] [[Lazygit/Keyshort]]
+	- **Discard Selected Change** #card
+		- Shortcut:
+			- `d` on selected file/hunk
+		- Description:
+			- Discards the currently selected change (file or hunk), not every change in the repository.
+			- `D` opens broader reset/discard options.
