@@ -1,0 +1,6 @@
+- [[Keyshort]] [[vim]] [[vim/Keyshort]]
+	- **Find and Replace in the Current Document** #card
+		- Shortcut:
+			- `:%s/old/new/g` replaces all matches in the current file
+			- `:%s/old/new/gc` prompts for confirmation on each match
+		- Description: Uses Vim substitution across the entire current buffer (`%`) to do find-and-replace in one command.
