@@ -1,0 +1,149 @@
+- # Report - [[Neovim]] parity with [[PyCharm]] for symbol navigation and reference copying
+	- source-markdown:: /Users/pnore/Downloads/deep-research-report.md
+	- source-pdf:: /Users/pnore/Downloads/Neovim Python “Find Usages” and “Copy Reference” in the 2025–2026 Ecosystem.pdf
+	- ## Goal
+		- Determine how to reproduce (or closely approximate) [[PyCharm]] workflows in [[Neovim]] for:
+			- "Find usages" of symbol under cursor
+			- "Copy reference" for symbol under cursor as a dotted [[Python]] import path
+	- ## [[ChatGPT/Deep Research/Query]]
+		- You are doing deep technical research on modern [[Neovim]] (2025-2026 era) with built-in [[LSP]] support and ecosystem plugins.
+		- I want concrete, battle-tested ways to reproduce two [[PyCharm]] features for [[Python]] development:
+			- 1. Find usages of the symbol under cursor (class, function, method, variable, imported symbol), with fast navigation across a medium-to-large codebase.
+			- 2. Copy a dotted Python reference path for the symbol under cursor (for example: `package.subpackage.module.ClassName` or `package.module.function_name`) with minimal friction.
+		- Research questions:
+			- Which combinations of [[Neovim]] plugins and [[LSP]] servers are most commonly used for high-quality "find references/usages" in [[Python]]?
+			- How do these options compare in correctness, speed, UX, and setup complexity?
+			- What exact keymap patterns do experienced users apply for "symbol under cursor -> usages list -> jump and backtrack" workflows?
+			- What options exist to copy the dotted Python path for the symbol under cursor?
+			- If no single plugin gives exact "copy reference" parity, what are practical implementations (Lua snippets, Treesitter-based approaches, LSP symbol APIs, Telescope pickers, etc.)?
+			- How do solutions differ when using [[Pyright]] vs [[basedpyright]] vs [[jedi-language-server]]?
+			- What are known failure modes (namespace packages, re-exported imports, dynamic attributes, monkeypatching, generated code, editable installs, src-layout repos, tests importing from app code)?
+			- What configuration details matter most for large repos and monorepos (root detection, virtualenv/venv activation, extra paths, stub packages, indexing limits, performance tuning)?
+		- Required output format:
+			- 1. Executive summary with a recommended default stack for most users.
+			- 2. Comparison table of viable stacks:
+				- [[Neovim]] distribution/baseline config assumptions
+				- Plugin set
+				- LSP server
+				- "Find usages" quality
+				- "Copy dotted path" strategy
+				- Setup complexity
+				- Performance notes
+			- 3. Step-by-step implementation guide for the top recommendation:
+				- Minimal plugin list
+				- Example `init.lua` or modular Lua config snippets
+				- Keymaps for references/usages and navigation history
+				- Command or mapping to copy dotted path under cursor to clipboard
+			- 4. Alternative implementations (at least 2) with tradeoffs.
+			- 5. Verification checklist:
+				- test scenarios I can run on a sample codebase to verify parity with [[PyCharm]] behaviors
+			- 6. Troubleshooting section for common "no references found" or incorrect path issues.
+		- Source quality constraints:
+			- Prefer primary sources in this order:
+				- Official docs/repos for [[Neovim]], plugins, and language servers
+				- Maintainer issue threads/discussions
+				- High-signal community writeups with reproducible configs
+			- Avoid stale advice older than 2023 unless still explicitly valid.
+			- Cite exact links for every important claim.
+		- Practical constraints:
+			- Assume macOS first, but call out Linux differences when relevant.
+			- Assume terminal-first workflow and git-based Python projects.
+			- Prioritize low-latency navigation and minimal keystrokes over flashy UI.
+	- ## [[ChatGPT/Deep Research/Response]]
+		- ## Executive summary
+			- A [[Neovim]] setup can get close to [[PyCharm]] for "find usages", but indexing depth is bounded by the Python language server, not by UI plugins.[^1][^12]
+			- Recommended default stack for terminal-first [[Python]] on macOS:
+				- [[Neovim]] >= 0.11 built-in LSP + `nvim-lspconfig` defaults.[^3][^24]
+				- `basedpyright` as default server, with optional fallback to `pyright`.[^4][^13]
+				- `fzf-lua` for low-latency references list and jump flow.[^5][^15]
+				- Optional `trouble.nvim` for persistent reference/result panes.[^6]
+				- `python-copy-reference.vim` or `copy-python-path.nvim` for dotted reference copy workflows.[^7][^8]
+			- Important caveat: pyright maintainer guidance and open issues indicate reference-finding is limited compared with Pylance indexing behavior.[^1][^11][^12]
+		- ## Viable stacks
+			- [[Neovim]] + `basedpyright` + `fzf-lua` + `python-copy-reference.vim`
+				- Best balance of speed, setup effort, and practical workflow parity.[^5][^7][^13]
+			- [[Neovim]] + `pyright` + [[Telescope]] + copy-reference plugin
+				- Strong preview UX and common community defaults, with same server limits.[^16][^17][^23]
+			- [[LazyVim]] Python extra + `pyright` or `basedpyright`
+				- Lowest setup overhead if distro defaults are acceptable.[^18][^19]
+			- [[Neovim]] + `jedi-language-server`
+				- Can work for some dynamic codebases, but environment/path configuration becomes critical.[^20][^45][^46]
+		- ## Implementation notes
+			- Use workspace-aware analysis for cross-file references in medium/large repos where possible.[^13][^38]
+			- Validate LSP root detection (`pyproject.toml`, `.git`, `pyrightconfig.json`) to avoid false "no references" behavior.[^27][^37][^39]
+			- For dotted path copy, prefer dedicated plugins over raw LSP-only reconstruction.[^7][^8][^29]
+			- In src-layout or monorepos, configure prefix stripping/root heuristics explicitly.[^7][^35]
+		- ## Sample keymaps
+			- ~~~lua
+				local fzf = require("fzf-lua")
+				vim.keymap.set("n", "gr", function()
+				  fzf.lsp_references({ includeDeclaration = false })
+				end, { desc = "References (usages)" })
+				vim.keymap.set("n", "gd", function() fzf.lsp_definitions({ jump1 = true }) end)
+				vim.keymap.set("n", "gY", "<cmd>PythonCopyReferenceDotted<cr>")
+				vim.keymap.set("n", "<leader>yI", "<cmd>CopyPythonPath import<cr>")
+			- ~~~
+		- ## Verification checklist
+			- Confirm cross-file references from a symbol with callsites in multiple modules.[^29][^34]
+			- Confirm `includeDeclaration=false` yields true "usages" style result sets.[^29]
+			- Confirm jump/backtracking with `<C-o>` and `<C-i>` is smooth after reference jumps.[^30]
+			- Confirm dotted path copy for:
+				- top-level functions/classes
+				- nested symbols
+				- imported aliases
+				- src-layout paths[^7][^8][^21][^35]
+		- ## Troubleshooting highlights
+			- Incomplete references:
+				- Verify request path is `vim.lsp.buf.references()` and LSP is attached to the right root.[^9][^36][^40]
+				- Switch from open-files-only analysis to workspace analysis where feasible.[^13][^37][^38]
+				- Accept known pyright limitations on global reference indexing in some projects.[^1][^11][^12]
+			- Incorrect dotted paths:
+				- Tune plugin root/prefix behavior first.
+				- Watch for namespace-package and re-export edge cases that make path resolution ambiguous.[^41][^42][^43][^44]
+		- ## Footnotes
+			- [^1]: https://github.com/microsoft/pyright/discussions/3554
+			- [^2]: https://github.com/microsoft/pyright/discussions/3554
+			- [^3]: https://raw.githubusercontent.com/neovim/nvim-lspconfig/master/doc/lspconfig.txt
+			- [^4]: https://docs.basedpyright.com/v1.26.0/benefits-over-pyright/pylance-features/
+			- [^5]: https://github.com/ibhagwan/fzf-lua
+			- [^6]: https://github.com/folke/trouble.nvim
+			- [^7]: https://github.com/ranelpadon/python-copy-reference.vim
+			- [^8]: https://github.com/AnsonH/copy-python-path.nvim
+			- [^9]: https://git.api.net.tw/neovim/neovim/src/commit/443bbfd59e2818aeee72d2ed77af1cb24617e46f/runtime/doc/lsp.txt
+			- [^10]: https://github.com/AnsonH/copy-python-path.nvim
+			- [^11]: https://github.com/microsoft/pyright/discussions/3554
+			- [^12]: https://github.com/microsoft/pyright/issues/10086?utm_source=chatgpt.com
+			- [^13]: https://docs.basedpyright.com/v1.31.0/configuration/language-server-settings/?utm_source=chatgpt.com
+			- [^14]: https://github.com/ranelpadon/python-copy-reference.vim
+			- [^15]: https://github.com/ibhagwan/fzf-lua
+			- [^16]: https://github.com/nvim-telescope/telescope.nvim
+			- [^17]: https://github.com/nvim-telescope/telescope.nvim
+			- [^18]: https://lazyvim.github.io/extras/lang/python?utm_source=chatgpt.com
+			- [^19]: https://lazyvim.github.io/extras/lang/python?utm_source=chatgpt.com
+			- [^20]: https://jedi.readthedocs.io/en/v0.16.0/docs/api.html?utm_source=chatgpt.com
+			- [^21]: https://github.com/AnsonH/copy-python-path.nvim
+			- [^22]: https://www.seanh.cc/2025/10/13/helix-lsp-virtualenv/?utm_source=chatgpt.com
+			- [^23]: https://github.com/nvim-telescope/telescope.nvim
+			- [^24]: https://raw.githubusercontent.com/neovim/nvim-lspconfig/master/doc/lspconfig.txt
+			- [^25]: https://docs.astronvim.com/recipes/advanced_lsp/
+			- [^26]: https://raw.githubusercontent.com/neovim/nvim-lspconfig/master/lsp/basedpyright.lua
+			- [^27]: https://raw.githubusercontent.com/neovim/nvim-lspconfig/master/lsp/pyright.lua
+			- [^28]: https://github.com/ibhagwan/fzf-lua
+			- [^29]: https://microsoft.github.io/language-server-protocol/specifications/lsp/3.18/specification/
+			- [^30]: https://neo.vimhelp.org/motion.txt.html?utm_source=chatgpt.com
+			- [^31]: https://vimhelp.org/quickref.txt.html?utm_source=chatgpt.com
+			- [^32]: https://github.com/nvim-telescope/telescope.nvim
+			- [^33]: https://nvimdev.github.io/lspsaga/finder/
+			- [^34]: https://microsoft.github.io/language-server-protocol/specifications/lsp/3.18/specification/
+			- [^35]: https://github.com/ranelpadon/python-copy-reference.vim
+			- [^36]: https://git.api.net.tw/neovim/neovim/src/commit/443bbfd59e2818aeee72d2ed77af1cb24617e46f/runtime/doc/lsp.txt
+			- [^37]: https://raw.githubusercontent.com/neovim/nvim-lspconfig/master/lsp/pyright.lua
+			- [^38]: https://docs.basedpyright.com/v1.31.0/configuration/language-server-settings/?utm_source=chatgpt.com
+			- [^39]: https://raw.githubusercontent.com/neovim/nvim-lspconfig/master/lsp/pyright.lua
+			- [^40]: https://git.api.net.tw/neovim/neovim/src/commit/443bbfd59e2818aeee72d2ed77af1cb24617e46f/runtime/doc/lsp.txt
+			- [^41]: https://github.com/microsoft/pyright/blob/main/docs/configuration.md?utm_source=chatgpt.com
+			- [^42]: https://packaging.python.org/guides/packaging-namespace-packages/?utm_source=chatgpt.com
+			- [^43]: https://github.com/microsoft/pyright/issues/3430?utm_source=chatgpt.com
+			- [^44]: https://docs.basedpyright.com/v1.34.0/usage/import-statements/?utm_source=chatgpt.com
+			- [^45]: https://www.seanh.cc/2025/10/13/helix-lsp-virtualenv/?utm_source=chatgpt.com
+			- [^46]: https://github.com/pappasam/jedi-language-server/blob/master/jedi_language_server/server.py?utm_source=chatgpt.com
