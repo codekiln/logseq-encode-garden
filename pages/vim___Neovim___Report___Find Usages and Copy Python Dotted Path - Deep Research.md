@@ -1,6 +1,4 @@
-- # Report - [[Neovim]] parity with [[PyCharm]] for symbol navigation and reference copying
-	- source-markdown:: /Users/pnore/Downloads/deep-research-report.md
-	- source-pdf:: /Users/pnore/Downloads/Neovim Python “Find Usages” and “Copy Reference” in the 2025–2026 Ecosystem.pdf
+# Report - [[Neovim]] parity with [[PyCharm]] for symbol navigation and reference copying
 	- ## Goal
 		- Determine how to reproduce (or closely approximate) [[PyCharm]] workflows in [[Neovim]] for:
 			- "Find usages" of symbol under cursor
@@ -75,14 +73,14 @@
 			- In src-layout or monorepos, configure prefix stripping/root heuristics explicitly.[^7][^35]
 		- ## Sample keymaps
 			- ~~~lua
-				local fzf = require("fzf-lua")
-				vim.keymap.set("n", "gr", function()
-				  fzf.lsp_references({ includeDeclaration = false })
-				end, { desc = "References (usages)" })
-				vim.keymap.set("n", "gd", function() fzf.lsp_definitions({ jump1 = true }) end)
-				vim.keymap.set("n", "gY", "<cmd>PythonCopyReferenceDotted<cr>")
-				vim.keymap.set("n", "<leader>yI", "<cmd>CopyPythonPath import<cr>")
-			- ~~~
+			  local fzf = require("fzf-lua")
+			  vim.keymap.set("n", "gr", function()
+			   fzf.lsp_references({ includeDeclaration = false })
+			  end, { desc = "References (usages)" })
+			  vim.keymap.set("n", "gd", function() fzf.lsp_definitions({ jump1 = true }) end)
+			  vim.keymap.set("n", "gY", "<cmd>PythonCopyReferenceDotted<cr>")
+			  vim.keymap.set("n", "<leader>yI", "<cmd>CopyPythonPath import<cr>")
+			  ~~~
 		- ## Verification checklist
 			- Confirm cross-file references from a symbol with callsites in multiple modules.[^29][^34]
 			- Confirm `includeDeclaration=false` yields true "usages" style result sets.[^29]
