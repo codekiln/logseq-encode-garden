@@ -1,10 +1,11 @@
 - # DevContainer Keys Reference
 	- Configuration keys that can be used in `devcontainer.json` files
+	- This namespace is for schema-style reference material when a key needs documentation that is distinct from the conceptual hook pages.
 	- ## Lifecycle Hooks
-		- [[DevContainer/Ref/Key/onCreateCommand]] - Command to run when the container is created
-		- *More lifecycle hooks will be added here as they are documented*
+		- [[DevContainer/Hook]] - Conceptual overview of how the lifecycle hooks fit together
+		- The hook-specific explanation pages live under [[DevContainer/Hook]] rather than under `[[DevContainer/Ref/Key/...]]`.
+		- Add `[[DevContainer/Ref/Key/...]]` pages only when a configuration key needs distinct reference-oriented documentation such as type details, schema constraints, or JSON examples.
 	- ## Container Configuration
 		- *Container configuration keys will be added here as they are documented*
 	- ## Feature Configuration
 		- *Feature configuration keys will be added here as they are documented*
-

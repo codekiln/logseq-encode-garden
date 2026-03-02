@@ -7,6 +7,5 @@
 	- ## Context
 		- This variable is particularly useful when configuring Git safe directories, as the container path may differ from the host path
 	- ## Related
-		- [[DevContainer/Ref/Key/onCreateCommand]] - Common key that uses this variable
+		- [[DevContainer/Hook/onCreateCommand]] - Common lifecycle hook that uses this variable
 		- [[DevContainer/Ref/Variable]] - Index of all variables
-

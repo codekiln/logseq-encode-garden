@@ -1,0 +1,12 @@
+- [Announcing SecretSpec: Declarative Secrets Management - devenv](https://devenv.sh/blog/2025/07/21/announcing-secretspec-declarative-secrets-management/)
+	- [[My Notes]]
+		- Good point about [[Secrets Manager]]s
+			- [[dotenvx]] can encrypt [[dotenv]] files or [[sops]] can encrypt any file to your repo, but these bring new challenges
+				- 1 - anxiety about having them committed to repo, potentially public
+				- 2 - single key management -
+					- requires distributing and managing a master key to unlock all the secrets
+				- 3 - trust requirements
+					- everyone with the key can decrypt all secrets
+				- 4 - rotation complexity
+					- departing team members require key rotation and re-encrypting all secrets
+			-

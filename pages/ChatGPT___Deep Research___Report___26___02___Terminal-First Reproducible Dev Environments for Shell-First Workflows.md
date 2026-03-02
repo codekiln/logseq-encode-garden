@@ -1,13 +1,14 @@
 tags:: [[ChatGPT/Deep Research]]
 cgpt-link:: https://chatgpt.com/g/g-p-69999e9f1d1481918e21b7d8d1450208-devcontainer/c/697d057b-ea84-8396-9e3c-abe358451022?ref=mini
+
 - # Terminal-First Reproducible Dev Environments for Shell-First Workflows
 	- ## Executive summary
 		- A terminal-first, standardized, reproducible, dependency-managed dev environment is achievable today without making an IDE your control plane, but there is no single dominant cross-platform standard that literally replaces `/bin/zsh` with a universal `/usr/bin/devcontainersh` across all terminals and IDEs.
 		- The ecosystem clusters into three practical patterns.
-		- The most standardized container-native option for making a container feel like your default shell already exists in Toolbx (`toolbox`). Its documentation describes `toolbox enter` as usable as the default shell in a terminal emulation application, and it can create a default container when none exists. [^1]
+		- The most standardized container-native option for making a container feel like your default shell already exists in [[Toolbx]] (`toolbox`). Its documentation describes `toolbox enter` as usable as the default shell in a terminal emulation application, and it can create a default container when none exists. [^1]
 		- If you want per-workspace standardization with the Dev Containers ecosystem (`devcontainer.json`), the best-aligned primitive is the `devcontainer` CLI. It provides lifecycle commands like `devcontainer up` and `devcontainer exec`, which makes a `devcontainersh` wrapper straightforward and idempotent. [^2]
-		- For teams wanting Dev Container compatibility plus local and remote backends and terminal-only usage, DevPod is a prominent approach. It creates environments from `devcontainer.json` on local Docker or remote machines and clusters, and can be driven from CLI. [^3]
-		- Outside containers, the most mature terminal-as-environment approach is directory-activated environment management: `direnv` (and cousins like Shadowenv) with reproducible shells (`nix develop`, Devbox, devenv, Flox). [^4]
+		- For teams wanting Dev Container compatibility plus local and remote backends and terminal-only usage, [[DevPod]] is a prominent approach. It creates environments from `devcontainer.json` on local Docker or remote machines and clusters, and can be driven from CLI. [^3]
+		- Outside containers, the most mature terminal-as-environment approach is directory-activated environment management: [[direnv]] (and cousins like Shadowenv) with reproducible shells ( [[nix/develop]] `nix develop`, Devbox, devenv, Flox). [^4]
 		- Recommended shortlist (high-level):
 			- On Linux: Toolbx as a containerized default shell baseline, with optional per-repo Dev Containers via a wrapper when strict per-workspace reproducibility is required. [^1]
 			- Cross-platform (macOS/Windows/Linux): `devcontainer` CLI plus a wrapper script is the closest to per-workspace shell-container semantics aligned to the Dev Containers spec. [^2]
@@ -136,29 +137,29 @@ cgpt-link:: https://chatgpt.com/g/g-p-69999e9f1d1481918e21b7d8d1450208-devcontai
 		- Comparison table (preserved as text block from source export to avoid column corruption):
 		- ~~~text
 		  Candidate: Toolbx (toolbox)
-		  - Standardizes: persistent host-integrated container shell on Linux
-		  - Repo/License: github.com/containers/toolbox, Apache-2.0
-		  - Maturity: last commit Feb 4, 2026
-		  - Workspace detection: default host container; create if missing
-		  - Lifecycle UX: toolbox enter interactive shell
-		  Candidate: devcontainer CLI
-		  - Standardizes: devcontainer.json as per-repo metadata
-		  - Repo/License: github.com/devcontainers/cli, MIT
-		  - Maturity: ~2.5k; Feb 18, 2026
-		  - Workspace detection: spec-based locations
-		  - Lifecycle UX: up + exec; wrapper required for default shell semantics
-		  Candidate: DevPod
-		  - Standardizes: Dev Containers spec across local/remote backends
-		  - Repo/License: github.com/loft-sh/devpod, MPL-2.0
-		  - Maturity: ~14.7k; Nov 14, 2025
-		  - Workspace detection: devcontainer.json in repo
-		  - Lifecycle UX: provider-based up flow
-		  Candidate: Distrobox
-		  - Standardizes: integrated container-in-terminal model
-		  - Repo/License: github.com/89luca89/distrobox, GPL-3.0
-		  - Maturity: ~13.2k; Feb 18, 2026
-		  Candidate: Devbox / devenv / direnv / Shadowenv
-		  - Standardize: reproducible per-directory shell environments (non-container by default)
+			- Standardizes: persistent host-integrated container shell on Linux
+			- Repo/License: github.com/containers/toolbox, Apache-2.0
+			- Maturity: last commit Feb 4, 2026
+			- Workspace detection: default host container; create if missing
+			- Lifecycle UX: toolbox enter interactive shell
+			  Candidate: devcontainer CLI
+			- Standardizes: devcontainer.json as per-repo metadata
+			- Repo/License: github.com/devcontainers/cli, MIT
+			- Maturity: ~2.5k; Feb 18, 2026
+			- Workspace detection: spec-based locations
+			- Lifecycle UX: up + exec; wrapper required for default shell semantics
+			  Candidate: DevPod
+			- Standardizes: Dev Containers spec across local/remote backends
+			- Repo/License: github.com/loft-sh/devpod, MPL-2.0
+			- Maturity: ~14.7k; Nov 14, 2025
+			- Workspace detection: devcontainer.json in repo
+			- Lifecycle UX: provider-based up flow
+			  Candidate: Distrobox
+			- Standardizes: integrated container-in-terminal model
+			- Repo/License: github.com/89luca89/distrobox, GPL-3.0
+			- Maturity: ~13.2k; Feb 18, 2026
+			  Candidate: Devbox / devenv / direnv / Shadowenv
+			- Standardize: reproducible per-directory shell environments (non-container by default)
 		- ~~~
 	- ## Recommended shortlist with pros/cons and suggested integration steps
 		- Toolbx (Linux-first default container shell):

@@ -1,0 +1,25 @@
+tags:: [[DevContainer]], [[Diataxis/Explanation]]
+
+- # onCreateCommand
+	- ## Overview
+		- `onCreateCommand` is a first-creation hook that runs inside the container after the container has been created and started.
+		- It runs once per container creation, not on every restart.
+	- ## When It Is Called
+		- After the initial build and container startup for a new dev container instance.
+		- It does not rerun just because the container starts again later.
+	- ## Why You Would Use It
+		- Use it for one-time bootstrap steps that should happen when the environment first comes into existence.
+		- Typical cases include:
+			- Initial project bootstrapping
+			- One-time tool or dependency setup
+			- Safe-directory Git configuration
+			- Migrations or initialization tasks that should not repeat on every start
+	- ## Practical Distinction
+		- `onCreateCommand` is about *first creation*.
+		- If the task should instead run after the workspace is fully mounted and ready for normal project setup, `[[DevContainer/Hook/postCreateCommand]]` is often a better fit.
+	- ## Misconceptions
+		- **It runs on every restart** -> **False**. It only runs when the container is first created.
+		- **It replaces `postCreateCommand` for all setup** -> **False**. Many teams still prefer `postCreateCommand` for the main dependency-install step.
+	- ## Related
+		- [[DevContainer/Hook]]
+		- [[DevContainer/Ref/Key]]

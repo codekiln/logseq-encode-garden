@@ -1,2 +1,15 @@
 - [DevPod - Open Source Dev-Environments-As-Code](https://devpod.sh/)
-	- > DevPod allows you to spin up dev environments based on the [[DevContainer/.devcontainer.json]] but it can also **set up a best-estimate dev environment by analyzing your project**.
+	- About
+		- > DevPod allows you to spin up dev environments based on the [[DevContainer/.devcontainer.json]] but it can also **set up a best-estimate dev environment by analyzing your project**.
+		- Compared to hosted services such as Github Codespaces, JetBrains Spaces, or Google Cloud Workstations, DevPod has the following advantages:
+			- cost savings
+			- no vendor lock-in
+			- same developer experience locally (no need for cloud provider)
+			- cross-IDE support (VSCode, JetBrains, all others through SSH)
+			- client only (no need to install server backend; DevPod runs on computer)
+			- [[Open Source]]
+			- rich features
+				- pre-builds
+				- auto inactivity shutdown
+				- git and docker credentials sync
+			- Desktop app

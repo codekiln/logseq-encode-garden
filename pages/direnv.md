@@ -10,3 +10,4 @@ tags:: [[CLI/Tool]]
 	- ## [[My Notes]]
 		- #Via
 			- [[mise/GitHub/Issue/24/02/Struggles with integrating 1Password op]]
+			- Came here again via a Deep Research report looking to make reproducible dev envs

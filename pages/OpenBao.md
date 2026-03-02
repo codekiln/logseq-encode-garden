@@ -1,0 +1,2 @@
+- [OpenBao](https://openbao.org/)
+	- OpenBao is an open source, community-driven fork of Vault managed by the Linux Foundation.

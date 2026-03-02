@@ -7,6 +7,7 @@ title:: DevContainer
 		- [Introduction to dev containers - GitHub Docs](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)
 		- [Create a Dev Container - VS Code Docs](https://code.visualstudio.com/docs/devcontainers/create-dev-container)
 	- ## Key Concepts
+		- [[DevContainer/Hook]] - Conceptual overview of lifecycle hooks
 		- [[DevContainer/Docker Compose/Concept/Using Docker Compose]] - Multi-container development with Docker Compose
 		- [[DevContainer/Feature/Concept/Docker Build Order]] - How features map to Docker layers
 	- ## Reference

@@ -1,0 +1,1 @@
+alias:: [[MacOS /Applications Folder]]

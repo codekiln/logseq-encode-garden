@@ -1,0 +1,14 @@
+- # Can you use agentic engineering tools to test TUI or Curses applications?
+	- ## Answer
+		- [[AI/Response]]
+			- Yes. You can use agentic tools (e.g. Codex-style CLIs, [[Claude Code]], other AI agents) to *test* TUI/Curses applications by combining them with tooling that automates terminal interaction; there is no turnkey agent that understands TUI screen semantics out of the box.
+			- **Automate terminal interaction:** Agentic CLIs run commands and modify code; interacting with a TUI requires automating input and capturing output from a pseudo-terminal. Tools: **Expect** / **autoexpect** (Tcl), **Python pexpect**, **[[tmux]]** / **screen** scripting. These let an AI CLI drive the TUI via generated scripts.
+			- **Combine AI with TUI automation:** Spawn the TUI inside an expect/pexpect harness; send sequences of inputs (arrows, text, escapes); capture output for validation; validate with prompt-based or scripted assertions. The agent generates and refines automation scripts rather than interpreting the TUI directly.
+			- **CI/TDD:** Use e.g. `tests/tui_test.py` with pexpect, run in CI; the agent can generate or update tests and validate failures.
+			- **What's not yet native:** No built-in terminal screen semantic understanding (blit-level buffer/screen regions, semantic TUI layout). Practical approach: automation + script generation + validation.
+			- **Summary:** Agentic CLI → generates Expect/pexpect script → runs TUI, sends keystrokes, captures output → agent reads results, refines scripts/tests → repeat.
+			- Sources:
+				- [Compare the Top 5 Agentic CLI Coding Tools](https://getstream.io/blog/agentic-cli-tools/)
+				- [Expect (Wikipedia)](https://en.wikipedia.org/wiki/Expect)
+	- ## My Notes
+	- ## Related
