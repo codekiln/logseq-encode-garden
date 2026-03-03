@@ -8,11 +8,11 @@ cgpt-link:: https://chatgpt.com/g/g-p-69999e9f1d1481918e21b7d8d1450208-devcontai
 		- The most standardized container-native option for making a container feel like your default shell already exists in [[Toolbx]] (`toolbox`). Its documentation describes `toolbox enter` as usable as the default shell in a terminal emulation application, and it can create a default container when none exists. [^1]
 		- If you want per-workspace standardization with the Dev Containers ecosystem (`devcontainer.json`), the best-aligned primitive is the `devcontainer` CLI. It provides lifecycle commands like `devcontainer up` and `devcontainer exec`, which makes a `devcontainersh` wrapper straightforward and idempotent. [^2]
 		- For teams wanting Dev Container compatibility plus local and remote backends and terminal-only usage, [[DevPod]] is a prominent approach. It creates environments from `devcontainer.json` on local Docker or remote machines and clusters, and can be driven from CLI. [^3]
-		- Outside containers, the most mature terminal-as-environment approach is directory-activated environment management: [[direnv]] (and cousins like Shadowenv) with reproducible shells ( [[nix/develop]] `nix develop`, [[Devbox]], [[devenv]], [[Flox]] ). [^4]
+		- Outside containers, the most mature terminal-as-environment approach is directory-activated environment management: [[direnv]] (and cousins like Shadowenv) with reproducible shells ( [[Nix/develop]], [[Devbox]], [[devenv]], [[Flox]] ). [^4]
 		- Recommended shortlist (high-level):
-			- On Linux: Toolbx as a containerized default shell baseline, with optional per-repo Dev Containers via a wrapper when strict per-workspace reproducibility is required. [^1]
-			- Cross-platform (macOS/Windows/Linux): `devcontainer` CLI plus a wrapper script is the closest to per-workspace shell-container semantics aligned to the Dev Containers spec. [^2]
-			- If speed and ergonomics matter more than container isolation: `direnv` plus a reproducible shell tool (`nix develop`, Devbox, devenv, or Flox). [^4]
+			- On Linux: [[Toolbx]] as a containerized default shell baseline, with optional per-repo Dev Containers via a wrapper when strict per-workspace reproducibility is required. [^1]
+			- Cross-platform (macOS/Windows/Linux): [[DevContainer/CLI]] plus a wrapper script is the closest to per-workspace shell-container semantics aligned to the Dev Containers spec. [^2]
+			- If speed and ergonomics matter more than container isolation: [[direnv]] plus a reproducible shell tool ([[Nix/develop]], [[Devbox]], [[devenv]], or [[Flox]]). [^4]
 	- ## Standards and primitives that enable a standardized environment shell
 		- The strongest standardization point for containerized development environments is the [[DevContainer]] specification (`devcontainer.json`). It defines config locations, lifecycle hooks, and behavioral knobs for tooling that supports the spec. [^8]
 		- Relevant spec properties for terminal-first behavior:
@@ -20,7 +20,7 @@ cgpt-link:: https://chatgpt.com/g/g-p-69999e9f1d1481918e21b7d8d1450208-devcontai
 			- `shutdownAction` to control stop behavior on disconnect or window shutdown. [^8]
 			- `mounts` and `workspaceMount` aligned with Docker `--mount` semantics. [^8]
 			- `updateRemoteUserUID` to reduce bind-mount permission friction (especially on Linux). [^8]
-		- A second standardization line for non-container reproducibility is Nix development shells. `nix develop` plus flake `devShells` gives a standard place to define repo-local environments. [^11]
+		- A second standardization line for non-container reproducibility is Nix development shells. [[Nix/develop]] plus flake `devShells` gives a standard place to define repo-local environments. [^11]
 		- Directory-activated loaders provide UX glue: `direnv` checks `.envrc` before each prompt and loads or unloads environment variables based on directory. [^4]
 	- ## Survey of projects and conventions that implement terminal as environment
 		- This section covers projects that standardize configuration, manage lifecycle, and can plausibly drive terminal-first workflows.
@@ -56,7 +56,7 @@ cgpt-link:: https://chatgpt.com/g/g-p-69999e9f1d1481918e21b7d8d1450208-devcontai
 				- Lifecycle: `toolbox create`, `toolbox enter`.
 				- Host integration: home, display sockets, networking, D-Bus, SSH agent, host filesystem access.
 				- Limitation: integration-first, not a strong sandbox model. [^33]
-			- #### Distrobox
+			- #### [[Distrobox]]
 				- Description: any Linux distribution inside your terminal; optimized for integration and speed, not sandboxing. [^35]
 				- Repo: https://github.com/89luca89/distrobox [^35]
 				- License: GPL-3.0.
@@ -75,7 +75,7 @@ cgpt-link:: https://chatgpt.com/g/g-p-69999e9f1d1481918e21b7d8d1450208-devcontai
 				- Repo: https://github.com/Shopify/shadowenv [^43]
 				- License: MIT.
 				- Maturity: ~453 stars; last commit shown February 10, 2026.
-			- #### Nix [[nix/develop]] + [[Nix/flake]] `devShells`
+			- #### [[Nix/develop]] + [[Nix/flake]] `devShells`
 				- Description: shell environments derived from Nix build environments with reproducible declarations. [^11]
 				- Common detection: `flake.nix` and `devShells` definitions.
 			- #### [[Devbox]]
@@ -102,7 +102,7 @@ cgpt-link:: https://chatgpt.com/g/g-p-69999e9f1d1481918e21b7d8d1450208-devcontai
 			- nerdctl: https://github.com/containerd/nerdctl [^79]
 			- Moby (Docker engine lineage): https://github.com/moby/moby [^84]
 		- ### macOS Linux-VM toolchain
-			- Lima: https://github.com/lima-vm/lima [^15]
+			- [[Lima]]: https://github.com/lima-vm/lima [^15]
 			- Colima: https://github.com/abiosoft/colima [^90]
 		- ### VM hosts (heavier isolation boundary)
 			- UTM: https://github.com/utmapp/UTM [^95]
