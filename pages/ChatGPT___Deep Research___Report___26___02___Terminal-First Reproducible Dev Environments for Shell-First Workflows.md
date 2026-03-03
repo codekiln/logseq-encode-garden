@@ -14,7 +14,7 @@ cgpt-link:: https://chatgpt.com/g/g-p-69999e9f1d1481918e21b7d8d1450208-devcontai
 			- Cross-platform (macOS/Windows/Linux): `devcontainer` CLI plus a wrapper script is the closest to per-workspace shell-container semantics aligned to the Dev Containers spec. [^2]
 			- If speed and ergonomics matter more than container isolation: `direnv` plus a reproducible shell tool (`nix develop`, Devbox, devenv, or Flox). [^4]
 	- ## Standards and primitives that enable a standardized environment shell
-		- The strongest standardization point for containerized development environments is the Dev Containers specification (`devcontainer.json`). It defines config locations, lifecycle hooks, and behavioral knobs for tooling that supports the spec. [^8]
+		- The strongest standardization point for containerized development environments is the [[DevContainer]] specification (`devcontainer.json`). It defines config locations, lifecycle hooks, and behavioral knobs for tooling that supports the spec. [^8]
 		- Relevant spec properties for terminal-first behavior:
 			- `overrideCommand` to keep containers alive when needed. [^8]
 			- `shutdownAction` to control stop behavior on disconnect or window shutdown. [^8]
@@ -24,8 +24,8 @@ cgpt-link:: https://chatgpt.com/g/g-p-69999e9f1d1481918e21b7d8d1450208-devcontai
 		- Directory-activated loaders provide UX glue: `direnv` checks `.envrc` before each prompt and loads or unloads environment variables based on directory. [^4]
 	- ## Survey of projects and conventions that implement terminal as environment
 		- This section covers projects that standardize configuration, manage lifecycle, and can plausibly drive terminal-first workflows.
-		- ### Dev Containers ecosystem
-			- #### devcontainer CLI (Dev Containers)
+		- ### [[DevContainer]] ecosystem
+			- #### [[DevContainer/CLI]] (Dev Containers)
 				- Description: CLI to build/start a dev container and execute commands inside it based on `devcontainer.json`. [^2]
 				- Repo: https://github.com/devcontainers/cli [^2]
 				- License: MIT.
@@ -64,18 +64,18 @@ cgpt-link:: https://chatgpt.com/g/g-p-69999e9f1d1481918e21b7d8d1450208-devcontai
 				- Workspace model: user-chosen container naming; not `devcontainer.json`-driven per repo.
 				- Limitation: explicitly not a sandbox model.
 		- ### Terminal-first reproducibility without containers
-			- #### direnv
+			- #### [[direnv]]
 				- Description: shell extension that loads and unloads environment variables from `.envrc` by directory. [^4]
 				- Repo: https://github.com/direnv/direnv [^41]
 				- License: MIT.
 				- Maturity: ~14.7k stars; last commit shown January 7, 2026.
 				- Lifecycle commands: `direnv allow` plus shell hooks.
-			- #### Shadowenv
+			- #### [[shadowenv]]
 				- Description: reversible directory-local environment manipulations using `.shadowenv.d`.
 				- Repo: https://github.com/Shopify/shadowenv [^43]
 				- License: MIT.
 				- Maturity: ~453 stars; last commit shown February 10, 2026.
-			- #### Nix `nix develop` + flake `devShells`
+			- #### Nix [[nix/develop]] + [[Nix/flake]] `devShells`
 				- Description: shell environments derived from Nix build environments with reproducible declarations. [^11]
 				- Common detection: `flake.nix` and `devShells` definitions.
 			- #### [[Devbox]]
@@ -98,7 +98,7 @@ cgpt-link:: https://chatgpt.com/g/g-p-69999e9f1d1481918e21b7d8d1450208-devcontai
 		- On Linux, containers are native.
 		- On macOS and Windows, most container workflows run in a Linux VM and differ by ergonomics, compatibility, and resource behavior.
 		- ### OCI/container CLIs and runtimes
-			- Podman: https://github.com/containers/podman [^74]
+			- [[Podman]]: https://github.com/containers/podman [^74]
 			- nerdctl: https://github.com/containerd/nerdctl [^79]
 			- Moby (Docker engine lineage): https://github.com/moby/moby [^84]
 		- ### macOS Linux-VM toolchain
@@ -118,7 +118,7 @@ cgpt-link:: https://chatgpt.com/g/g-p-69999e9f1d1481918e21b7d8d1450208-devcontai
 		- Workspace detection strategies:
 			- Spec-driven: detect supported `devcontainer.json` locations.
 			- Config-driven: detect `devbox.json`, `devenv.nix`/`devenv.yaml`, `.envrc`, `.shadowenv.d`, `.tool-versions`.
-			- Toolbx global model: default container per host release unless explicitly overridden.
+			- [[Toolbx]] global model: default container per host release unless explicitly overridden.
 		- Recursion guards:
 			- Toolbx markers include `/run/.toolboxenv` and toolbox labels.
 			- Wrapper pattern: set/read env var such as `DEVCONTAINER_SHELL=1` to prevent reentry loops.
@@ -127,58 +127,56 @@ cgpt-link:: https://chatgpt.com/g/g-p-69999e9f1d1481918e21b7d8d1450208-devcontai
 			- DevPod advertises git and Docker credentials sync.
 			- Dev Containers typically handle this through mounts and environment injection.
 		- Startup/resource tradeoffs:
-			- Distrobox highlights fast startup.
+			- [[Distrobox]] highlights fast startup.
 			- Dev Containers can be slow on first build/pull and hook execution.
 			- Nix shells can reduce VM/filesystem overhead for local workflows.
 		- Security/isolation tradeoffs:
-			- Toolbx and Distrobox are integration-oriented, not sandbox-first.
-			- Dev Containers expose explicit security switches (`privileged`, `capAdd`, `securityOpt`) and should default to least privilege when possible.
+			- [[Toolbx]] and [[Distrobox]] are integration-oriented, not sandbox-first.
+			- [[DevContainer]]s expose explicit security switches (`privileged`, `capAdd`, `securityOpt`) and should default to least privilege when possible.
 	- ## Comparative evaluation and recommended shortlist
 		- Comparison table (preserved as text block from source export to avoid column corruption):
-		- ~~~text
-		  Candidate: Toolbx (toolbox)
+		- Candidate: **[[Toolbx]]** (toolbox)
 			- Standardizes: persistent host-integrated container shell on Linux
 			- Repo/License: github.com/containers/toolbox, Apache-2.0
 			- Maturity: last commit Feb 4, 2026
 			- Workspace detection: default host container; create if missing
 			- Lifecycle UX: toolbox enter interactive shell
-			  Candidate: devcontainer CLI
+		- Candidate: [[DevContainer/CLI]]
 			- Standardizes: devcontainer.json as per-repo metadata
 			- Repo/License: github.com/devcontainers/cli, MIT
 			- Maturity: ~2.5k; Feb 18, 2026
 			- Workspace detection: spec-based locations
 			- Lifecycle UX: up + exec; wrapper required for default shell semantics
-			  Candidate: DevPod
+		- Candidate: [[DevPod]]
 			- Standardizes: Dev Containers spec across local/remote backends
 			- Repo/License: github.com/loft-sh/devpod, MPL-2.0
 			- Maturity: ~14.7k; Nov 14, 2025
 			- Workspace detection: devcontainer.json in repo
 			- Lifecycle UX: provider-based up flow
-			  Candidate: Distrobox
+		- Candidate: [[Distrobox]]
 			- Standardizes: integrated container-in-terminal model
 			- Repo/License: github.com/89luca89/distrobox, GPL-3.0
 			- Maturity: ~13.2k; Feb 18, 2026
 			  Candidate: Devbox / devenv / direnv / Shadowenv
 			- Standardize: reproducible per-directory shell environments (non-container by default)
-		- ~~~
 	- ## Recommended shortlist with pros/cons and suggested integration steps
-		- Toolbx (Linux-first default container shell):
+		- [[Toolbx]] (Linux-first default container shell):
 			- Pros: minimal glue, auto-create behavior, default-shell fit. [^31]
 			- Cons: not per-repo reproducibility standard; not a sandbox-first model. [^33]
 			- Integration: set terminal shell command to `toolbox enter` (optionally with explicit container).
-		- `devcontainer` CLI + wrapper (portable per-workspace standardization):
+		- [[DevContainer/CLI]] + wrapper (portable per-workspace standardization):
 			- Pros: aligns with `devcontainer.json`; clean `up` + `exec` lifecycle model. [^2]
 			- Cons: wrapper logic needed (workspace detection, naming, recursion guard); first build can be slow. [^8]
 			- Integration: implement `devcontainersh`; configure terminal/IDE shell entrypoint to call wrapper.
-		- DevPod (local + remote Dev Containers backends):
+		- [[DevPod]] (local + remote Dev Containers backends):
 			- Pros: reusable `devcontainer.json`; local/remote/Kubernetes options.
 			- Cons: provider and auth complexity; activity recency considerations.
 			- Integration: decide `.devcontainer/` reuse vs dual-config approach.
-		- `direnv` + Nix ecosystem (speed/ergonomics, low attach latency):
+		- [[direnv]] + [[Nix]] ecosystem (speed/ergonomics, low attach latency):
 			- Pros: fast per-directory activation and deterministic toolchains.
 			- Cons: no default container isolation boundary.
 	- ## Mermaid flowchart: terminal -> wrapper -> container lifecycle
-		- ~~~mermaid
+		- ```mermaid
 		  flowchart TD
 		    A[Terminal opens new session] --> B[Wrapper shell entrypoint<br/>devcontainersh / toolbox enter / devbox shell]
 		    B --> C{Recursion guard?<br/>Already inside env?}
@@ -193,7 +191,8 @@ cgpt-link:: https://chatgpt.com/g/g-p-69999e9f1d1481918e21b7d8d1450208-devcontai
 		    I --> L[Spawn interactive shell in env<br/>devcontainer exec zsh]
 		    J --> M[Spawn interactive shell in env<br/>default shell or bash fallback]
 		    K --> N[Shell prompt in reproducible env]
-		- ~~~
+		  ```
+		-
 	- ## Example wrapper scripts and config snippets
 		- Minimal `devcontainersh` wrapper (conceptual) using devcontainer CLI (bash):
 		- ~~~bash
@@ -219,7 +218,8 @@ cgpt-link:: https://chatgpt.com/g/g-p-69999e9f1d1481918e21b7d8d1450208-devcontai
 		  devcontainer up --workspace-folder "$root"
 		  devcontainer exec --workspace-folder "$root" env DEVCONTAINER_SHELL=1 \
 		    "${SHELL:-/bin/bash}" -l
-		- ~~~
+		  ~~~
+		-
 		- Example `devcontainer.json` knobs relevant to terminal-first lifecycle behavior:
 		- ~~~json
 		  {
