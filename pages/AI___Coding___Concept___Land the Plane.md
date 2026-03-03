@@ -1,4 +1,6 @@
-- # Land the plane
+# Land the plane
+	- ## Examples
+		- see [.rulesync/rules/landing-the-plane.md](https://github.com/codekiln/logseq-encode-garden/blob/ae8912476b7efe540a6a0637d3ce544f866006f3/.claude/rules/landing-the-plane.md)
 	- ## Podcast and source entries
 		- 1. [[Person/Steve Yegge/YouTube/26/02/Beyond Instructions How Beads Lets AI Agents Build Like Engineers]] (with Joe Reis; AI Engineer World's Fair talk and #Snipd transcript) [^1]
 		- 2. AI Tinkerers, "Beyond Instructions: How Beads Lets AI Agents Build Like Engineers" (edited article/transcript) [^2]
