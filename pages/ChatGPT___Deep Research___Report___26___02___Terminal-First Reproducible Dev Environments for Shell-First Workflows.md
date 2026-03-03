@@ -8,7 +8,7 @@ cgpt-link:: https://chatgpt.com/g/g-p-69999e9f1d1481918e21b7d8d1450208-devcontai
 		- The most standardized container-native option for making a container feel like your default shell already exists in [[Toolbx]] (`toolbox`). Its documentation describes `toolbox enter` as usable as the default shell in a terminal emulation application, and it can create a default container when none exists. [^1]
 		- If you want per-workspace standardization with the Dev Containers ecosystem (`devcontainer.json`), the best-aligned primitive is the `devcontainer` CLI. It provides lifecycle commands like `devcontainer up` and `devcontainer exec`, which makes a `devcontainersh` wrapper straightforward and idempotent. [^2]
 		- For teams wanting Dev Container compatibility plus local and remote backends and terminal-only usage, [[DevPod]] is a prominent approach. It creates environments from `devcontainer.json` on local Docker or remote machines and clusters, and can be driven from CLI. [^3]
-		- Outside containers, the most mature terminal-as-environment approach is directory-activated environment management: [[direnv]] (and cousins like Shadowenv) with reproducible shells ( [[nix/develop]] `nix develop`, Devbox, devenv, Flox). [^4]
+		- Outside containers, the most mature terminal-as-environment approach is directory-activated environment management: [[direnv]] (and cousins like Shadowenv) with reproducible shells ( [[nix/develop]] `nix develop`, [[Devbox]], [[devenv]], [[Flox]] ). [^4]
 		- Recommended shortlist (high-level):
 			- On Linux: Toolbx as a containerized default shell baseline, with optional per-repo Dev Containers via a wrapper when strict per-workspace reproducibility is required. [^1]
 			- Cross-platform (macOS/Windows/Linux): `devcontainer` CLI plus a wrapper script is the closest to per-workspace shell-container semantics aligned to the Dev Containers spec. [^2]
@@ -38,7 +38,7 @@ cgpt-link:: https://chatgpt.com/g/g-p-69999e9f1d1481918e21b7d8d1450208-devcontai
 				- Description: specification for `devcontainer.json` metadata and tool behavior (user, mounts, lifecycle hooks, security options, config locations). [^8]
 				- Docs: https://containers.dev/ and https://containers.dev/implementors/json_reference/ [^8]
 				- Key knobs: `overrideCommand`, lifecycle hooks, `shutdownAction`, `mounts`, `remoteUser`/`containerUser`, `privileged`, `capAdd`, `securityOpt`. [^8]
-			- #### DevPod
+			- #### [[DevPod]]
 				- Description: client-only tool to create developer environments from `devcontainer.json` on local and remote backends. [^3]
 				- Repo: https://github.com/loft-sh/devpod [^3]
 				- License: MPL-2.0.
@@ -47,7 +47,7 @@ cgpt-link:: https://chatgpt.com/g/g-p-69999e9f1d1481918e21b7d8d1450208-devcontai
 				- Lifecycle: `up`-centric model plus provider integrations.
 				- Limitation: activity recency and provider complexity should be weighed.
 		- ### Container-as-shell projects
-			- #### Toolbx (`toolbox`)
+			- #### [[Toolbx]] (`toolbox`)
 				- Description: interactive container environments on Linux with deep host integration. [^27]
 				- Repo: https://github.com/containers/toolbox [^27]
 				- License: Apache-2.0.
@@ -78,17 +78,17 @@ cgpt-link:: https://chatgpt.com/g/g-p-69999e9f1d1481918e21b7d8d1450208-devcontai
 			- #### Nix `nix develop` + flake `devShells`
 				- Description: shell environments derived from Nix build environments with reproducible declarations. [^11]
 				- Common detection: `flake.nix` and `devShells` definitions.
-			- #### Devbox
+			- #### [[Devbox]]
 				- Description: isolated shells from `devbox.json` using Nix.
 				- Repo: https://github.com/jetify-com/devbox [^53]
 				- License: Apache-2.0.
 				- Maturity: ~11.3k stars; last commit shown February 17, 2026.
-			- #### devenv
+			- #### [[devenv]]
 				- Description: declarative dev environments with packages, services, tasks, and container support.
 				- Repo: https://github.com/cachix/devenv [^62]
 				- License: Apache-2.0.
 				- Maturity: ~6.3k stars; last commit shown February 21, 2026.
-			- #### Flox
+			- #### [[Flox]]
 				- Description: Nix-backed per-directory virtual environments and package management.
 				- Repo: https://github.com/flox/flox [^69]
 				- License: GPL-2.0.

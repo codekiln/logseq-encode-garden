@@ -1,0 +1,7 @@
+- [What is Devbox? - Jetify Docs](https://www.jetify.com/docs/devbox)
+	- Devbox is a command-line tool that lets you easily create isolated shells for development. You start by defining the list of packages required for your project, and Devbox creates an isolated, reproducible environment with those packages installed.
+	- In practice, Devbox works similar to a package manager like yarn – except the packages it manages are at the operating-system level (the sort of thing you would normally install with brew or apt-get).
+	- it’s based on [[Nix]] under the hood, it supports **many packages and precise version control** without typical Nix complexity.
+	- [[My Note]]
+		- not the same as [[Microsoft/Dev/Box]]
+- https://www.jetify.com/devbox
