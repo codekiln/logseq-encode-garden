@@ -132,4 +132,12 @@ alias:: [[Claude Code/EnvVar/CLAUDE_CODE_MAX_OUTPUT_TOKENS/Report/Avoid api erro
 		- [5] GitHub Issue: Claude output too large (Token Limit Error): https://github.com/anthropics/claude-code/issues/21
 		- [6] AWS re:Post Discussion on Output Token Limits: https://repost.aws/questions/QU93whOKytQYOnaCWusbti0w
 		- [7] Anthropic Community: Output Token Limit Discussion: https://community.anthropic.com/t/how-to-handle-output-token-limits
-
+	- ## Garden lookup and GitHub link (Cursor Agent 2026-03-03)
+		- Session: Cursor Agent v2026.02.27-e7d2ef6, in `logseq-encode-garden` on `main`.
+		- Query: *Is there anything in the garden about CLAUDE_CODE_MAX_OUTPUT_TOKENS?*
+		- Grep found 13 matches; summary of references:
+			- 1. [[Claude Code/Settings]] — table row: "Set the maximum number of output tokens for most requests."
+			- 2. This report page — handling "response exceeded the 4096 output token maximum" with Bedrock; env var vs SDK `maxTokens`; examples and `MAX_THINKING_TOKENS` for heavy workloads.
+			- 3. Journal [[2025_11_04]] — entry linking to this report.
+		- Follow-up: *Link to this page on GitHub.*
+		- GitHub (blob on `main`): [Claude Code___EnvVar___CLAUDE_CODE_MAX_OUTPUT_TOKENS___Report___Avoid api error token max on bedrock.md](https://github.com/pnore/logseq-encode-garden/blob/main/pages/Claude%20Code___EnvVar___CLAUDE_CODE_MAX_OUTPUT_TOKENS___Report___Avoid%20api%20error%20token%20max%20on%20bedrock.md)
