@@ -1,10 +1,134 @@
+tags:: [[CMMC]], [[Security/CUI space]]
+
 - 4:00 - 4:45 CMMC & NIST 800-171 Panel
 	- [[BCWSC/26]]
-	- Panelists
-		- [[Person/Erik Yost]] (MIT)
-		- [[Person/Michael Hilborn]] (Harvard Business School Online)
-		- [[Person/Roy Wattansin]] (MIT)
-		- [[Person/Andy Rivers]] (Amazon)
-	- Abstract
-		- If you support research at your university, you have likely heard about CMMC and [[NIST/800-171]].
-		- This panel discusses the current state of protecting research data, current progress and pain points, and where the next year may take security practitioners.
+	- Meta
+		- Panelists
+			- [[Person/Roy Wattansin]]
+				- (MIT)
+			- [[Person/Michael Hilborn]]
+				- (Harvard Business School Online)
+			- [[Person/Erik Yost]]
+				- (MIT) [[CUI]] space
+			- [[Person/Andy Rivers]]
+				- (Amazon)
+		- Abstract
+			- If you support research at your university, you have likely heard about CMMC and [[NIST/800-171]].
+			- This panel discusses the current state of protecting research data, current progress and pain points, and where the next year may take security practitioners.
+	- # Intro
+	  collapsed:: true
+		- CyberSecurity Maturity Model Certification. It's the DoW's way of knowing you have conformed to NIST 800-171.
+		- there's been increasing
+		- [[MIT]]
+		  collapsed:: true
+			- [[Person/Roy Wattansin]]
+				- the idea is that it's only protecting US information in the hands of US people
+		- [[Person/Michael Hilborn]]
+		- [[Person/Erik Yost]]
+		  collapsed:: true
+			- if it's [[CUI]] ,
+				- 1 - they ship it to [[MIT/Lincoln Labs]]
+				- 2 - they argue to get it "out of the award"
+				- 3 - if they couldn't do both, they would just not accept the award
+			- with funding constraints and the breadth of opportunity in the [[CUI]] world, they can build out a remote environment. they started with 10 [[Investigator/Principal]]
+		- [[Person/Andy Rivers]]
+		  collapsed:: true
+			- they found that it was a recruiting thing, sometimes people wanted to use this data
+		- how have you prioritized handling each one of these
+		  collapsed:: true
+			- [[Person/Roy Wattansin]]
+				- Microsoft Azure is like a managed service provider (MSP) that configures the secure enclave house
+				- they looked at three different vendors
+				- they interviewed and did their own due diligence
+				- they wanted something they could trust
+					- they couldn't trust an endpoint
+				- there are a lot of different scenarios
+					- what kinds of applications do they whitelist
+				- we are just talking about online security
+					- but with [[CMMC]] you should also have physical security
+			- [[Person/Michael Hilborn]]
+				- [[NIST/800-171]] has over 100 different things in 14 different domains
+					- from physical access to electronic access
+				- the way we go about this, we're all engineers
+				- we try to do the amount that has the most impact
+				- we are in fortunate position, because we can collaborate with HUIT and HBS IT
+				- so the most impact is infrastructure
+				- prioritize system integrity
+				- network integrity
+				- data encryption
+				- electronic and digital level
+				- at user and organizational level
+				- we prioritize account management
+					- right folks have right access to the right things at the right time
+				- between those two things we cover a lot of ground
+			- [[Person/Erik Yost]]
+				- it's policies and technical aspects
+				- for MIT, the technical stuff was easy
+				- but the policy stuff was very hard
+				- when to initiate background checks, when to confirm US background status
+				- for lincoln labs, people stuff is easy for them, but technical stuff is a nightmare, becasue everything is cmmc level 2 there, every printer, every computer
+				- they will do physical environment after c3io (did I hear this right)? comes through
+				- are policies being followed as they are supposed to be
+			- [[Person/Andy Rivers]]
+				- many of us, first mind is assessments
+				- we funded the assessments but not the action taking
+				- make sure we have a mind to the procedural things
+			- [[Person/Erik Yost]]
+				- when you're looking for physical stuff, you need sign-in sheet for every printer
+				- whatever you're going to scope for, then
+			- [[Person/Roy Wattansin]]
+				- for level 2 cmmc, msp might be a great vendor, but you might want to change every few years
+		- how have you handled the culture of things?
+		  collapsed:: true
+			- [[Person/Erik Yost]]
+				- most of these policies are written for defense industrial base, not for academia
+				- when you have a few students in your lab that are foreign nationals, how are you going to sanitize publications - how do you publish cui information
+				- divide the research and publications
+			- [[Person/Michael Hilborn]]
+				- support from management is important for the culture
+				- the original question
+				- What [[NIST/800-171]] is good information security hygiene
+			-
+		- for your self-attestation, how good is good enough?
+		  collapsed:: true
+			- [[Person/Roy Wattansin]]
+				- **DFARS** = **Defense Federal Acquisition Regulation Supplement**
+				- there are three levels of CMMC
+				- MSP = managed search provider ...?
+				- every week, they look at the documents, get the right people to sign it or approve it
+				- it's a combination of rinse and repeat
+				- everything they see on paper, they need to see equivalent technical controls
+			- [[Person/Michael Hilborn]]
+				- always room for improvement, you never get to good enough
+				- for self-assessments, you have a combination of assessments
+				- through university itself
+				- third party come in and do neutral assessment
+					- they release a report
+				- what follows from those assessments is, you identify what the gaps are
+				- you put into motion ways to address those gaps
+				- put it in project planning for whole year
+				- **[[C3PAO]]** = **[[CMMC]] Third-Party Assessment Organization**
+			- [[Person/Erik Yost]]
+				- > because of the false claims act I won't say anything other than 110%
+			- [[Person/Andy Rivers]]
+				- it helps to define your scope, and use that
+				-
+		- has anyone moved to CMMC level 2?
+		  collapsed:: true
+			- [[Person/Erik Yost]]
+				- getting HR to share a redacted copy of a background check
+					- shared screen and approvals
+			- [[Person/Roy Wattansin]]
+				- lesson learned - there are list of people waiting
+				- they did indicent response tabletops
+					- be aware of the people you include, it may not be as easy
+				- when you include too many people, a lot of issues
+				- not just for incident response
+				- security awareness
+				- "this is just the house, this is just the enclave"
+				- "we still need the people"
+			-
+	- # Q&A
+		- budgeting question
+			- consider having a separate funding source from main budget
+			-

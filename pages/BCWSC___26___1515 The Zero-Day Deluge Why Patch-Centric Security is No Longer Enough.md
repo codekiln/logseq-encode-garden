@@ -1,8 +1,150 @@
-- 3:15 - 4:00 The Zero-Day Deluge Why Patch-Centric Security is No Longer Enough
-	- [[BCWSC/26]]
-	- Speaker
-		- [[Person/Nathan Hall]] (Harvard)
-	- Abstract
-		- The risk and impact of zero-day and near-zero-day vulnerabilities are rising significantly.
-		- This session examines why those risks are surging and why patch-centric defenses are increasingly ineffective.
-		- It includes Harvard's recent experience responding to a major zero-day incident, along with response strategies, risk-reduction approaches, and the role of data minimization when advance warning cannot be assumed.
+- 3:15 - 4:00 The Zero-Day Deluge Why Patch-Centric Security is No Longer Enough [[Person/Nathan Hall]] [[Uni/Harvard]]
+	- # Meta
+	  collapsed:: true
+		- Abstract
+			- The risk and impact of zero-day and near-zero-day vulnerabilities are rising significantly.
+			- This session examines why those risks are surging and why patch-centric defenses are increasingly ineffective.
+			- It includes Harvard's recent experience responding to a major zero-day incident, along with response strategies, risk-reduction approaches, and the role of data minimization when advance warning cannot be assumed.
+		- Agenda
+			- collapsing patch window
+			- real-world case study
+				- Zero day that hit harvard
+			- designing for pre-patch exploitation
+	- # First part
+	  collapsed:: true
+		- [[Definition]]s
+			- [[Zero/Day]]
+				- vuln exploited prior to patch or public awareness
+					- it's *not possible* in this case
+			- [[Zero/Day/Near]] - remediation is available, but exploitation happens far faster than remediation
+				- we are patching now within 30 days
+		- Examples
+			- [[2025-10-14 Tue]] MS releases patch
+			- [[2025-10-15 Wed]] HU issues patch now
+			- [[2025-10-23 Thu]]
+		- Exploitation speed is compressiong
+			- [N-Day Vulnerability Trends: The Shrinking Window of Exposure and the Rise of "Turn-Key" Exploitation | Flashpoint](https://flashpoint.io/blog/n-day-vulnerability-trends-turn-key-exploitation/)
+				- goes from 745 days in 2020 to 44 days in 2024
+				- going the wrong day
+			- 2025 Verizon DBIR, Figure 31. Distribution of difference in days between CVE and CISA KEV
+		- number of zero-days by year
+			- www.zero-day.ca - zero-day tracking project - elsa found this
+			- things were steady state until 2020, then they jump in
+			- Google/Mandiant - "Hello 0-Days, My Old Friend: a 2024 Zero-Day..."
+		- Drivers
+			- patch diffing automation
+				- quickly targeting the attack to go after the thing that was patched
+					- they can take ms's release and turn it around
+			- internet scale scanning
+				- [[Shodan]]
+				- [[Censys]]
+				- they go to database they've already built
+				- they can go after and attack systems much more quickly
+			- motivation: [[Crypto/Currency]]
+				- specialization and economics of financially motivated actors
+			- New: AI-assisted vuln discovery
+		- AI as a multiplier
+			- AISLE Discovered 12 out of 12 OpenSSL Vulns
+			- Sean Heelan's Blog how I used o3 to find CVE-2025-37899, a remote zeroday vuln in the linux kernel's smb implementation
+		- Brian Krebs - "I'm a little concerned that our over-reliance on racing to patch everything 24/7 isn't going to scale well for much longer (if indeed it ever has)"
+	- # Case Study
+	  collapsed:: true
+		- [[Oracle]] enterprise business suite (EBS) last fall. hit many orgs running oracle EBS too
+		- started with extortion email
+			- **is the email real**? maybe? maybe not?
+			- they kick off IR Process (incident response)
+		- gather right people
+			- validate
+			- contain
+		- initial efforts
+			- is this real?
+			- what is the vector?
+			- which EBS?
+				- how did they get this information that they claimed to get?
+		- Is it real?
+			- CL0P  is a real organization. they have a history of it.
+			- next morning, it's making the news that others are receiving the email.
+				- it's either a large, well-organized, fake attempt, or it's real
+			- "we have good tenable data on the host that tells us about the patches that are applied"
+				- TODO what's the "tenable" here?
+				- there's a lot of guesswork here - was it the logs, the backups?
+				- they know the patching did happen at some point
+			- 2 week turnaround -
+			- [[Co/Halcyon]] [Halcyon Anti Ransomware and Cyber Resilience Platform](https://www.halcyon.ai/)
+				- they claim it's via abuse of password reset functionality
+			- exploitation back as far as august
+			- engaging in [[CrowdStrike]] quick reference Guide
+			- two months threat actors had... they can't patch fast enough.
+		- containment and analysis
+			- they took the system off the internet
+				- disruptive
+					- behind vpn without any user notice
+					- specific vpn tunnels
+					- phone calls, manual data entry
+				- engage external partners for incident response, understand timelines
+				- confirm impacted EBS environment
+			- Request "proof of life"
+				- engage threat actor to try to figure out what they do have.
+				- they usually give a listing of the files they have
+				- they usually say "give us 3-5 files" then they can verify
+				- it buys them time
+				- hopefully, they can know what's the list of the files
+			- Data Publication
+				- 1.4TB published by BL0P
+				- Analysis of contents
+				- [[Dark/Web]]
+					- it's actualy 3TB of data when you look at it
+					- it's a lot to go through
+				- a ton of system files.
+				- they scraped everything they could get off of the system
+				- Breach notifications
+					- considering scope, they made it out really well
+			- it took months for them to get through
+				-
+	- # What can we do?
+	  collapsed:: true
+		- strengthening existing controls
+			- risk informed patching (aka harvard vulnerability exposure risk score)
+				- if you're not exposed to internet, not as much of a thing
+			- outbound traffic filtering
+				- you have to have it everywhere you need to have it
+				- making sure there aren't any loopholes
+				- double checking these to make sure you have good control over this
+			- validating critical controls
+				- EDR/MDR
+				- [[Vulnerability/Scanning]]
+			- Strengthen [[iam]] IAM controls (Passwordless)
+				- aka [[Passkey]]
+		- reduce exposure
+			- authenticate before network access (not after)
+				- [[My Notes]] interesting idea
+			- Zero-Trust Network Access (ZTNA) instead of VPN
+				- improved user experience
+				- Application specific access
+				- [[Okta]]
+				- thinking about
+					- [[Fortinet]]
+					- [[ZScaler]]
+					- [[Acamai]]
+			- Reducing Impact - Data Risk Minimization
+				- identify where sensitive data exists
+				- eliminate unneeded sensitive data
+				- Data archival for infrequently needed sensitive data
+				- data lifecycle tools so minimization is the default
+					- delete the data you don't need anymore
+					- put it in archive by default
+					- if you don't call us, poof now it's gone
+					- they are looking to get there
+					- farther out and more ambitious
+					- if any of you are doing pieces of this,
+			- Strategy
+				- expect pre-patch exploitation
+		-
+	- # Q&A
+		- if you look at EDUCASE cybersecurity professionals thing from last year, look at slides
+		- many look at CVE score,
+		- EPSS = prediction of how likely a patch is to be exploited
+		- specific to environment
+			- exposed to internet
+			- take these different pieces into account
+			-
