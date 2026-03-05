@@ -1,0 +1,8 @@
+- 3:15 - 4:00 The Zero-Day Deluge Why Patch-Centric Security is No Longer Enough
+	- [[BCWSC/26]]
+	- Speaker
+		- [[Person/Nathan Hall]] (Harvard)
+	- Abstract
+		- The risk and impact of zero-day and near-zero-day vulnerabilities are rising significantly.
+		- This session examines why those risks are surging and why patch-centric defenses are increasingly ineffective.
+		- It includes Harvard's recent experience responding to a major zero-day incident, along with response strategies, risk-reduction approaches, and the role of data minimization when advance warning cannot be assumed.

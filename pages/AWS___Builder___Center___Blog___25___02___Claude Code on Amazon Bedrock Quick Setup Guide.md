@@ -1,0 +1,2 @@
+- [Claude Code on Amazon Bedrock: Quick Setup Guide | AWS Builder Center](https://builder.aws.com/content/2tXkZKrZzlrlu0KfH8gST5Dkppq/claude-code-on-amazon-bedrock-quick-setup-guide)
+	- > By setting `CLAUDE_CODE_MAX_OUTPUT_TOKENS=4096`, you're still giving Claude Code plenty of room (13x the average usage) while keeping 90% of your quota available for concurrent requests.

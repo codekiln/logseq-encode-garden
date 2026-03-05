@@ -1,0 +1,10 @@
+- 4:00 - 4:45 CMMC & NIST 800-171 Panel
+	- [[BCWSC/26]]
+	- Panelists
+		- [[Person/Erik Yost]] (MIT)
+		- [[Person/Michael Hilborn]] (Harvard Business School Online)
+		- [[Person/Roy Wattansin]] (MIT)
+		- [[Person/Andy Rivers]] (Amazon)
+	- Abstract
+		- If you support research at your university, you have likely heard about CMMC and [[NIST/800-171]].
+		- This panel discusses the current state of protecting research data, current progress and pain points, and where the next year may take security practitioners.

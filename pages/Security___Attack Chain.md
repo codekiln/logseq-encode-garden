@@ -1,0 +1,72 @@
+alias:: [[Attack Lifecycle]], [[Kill Chain]], [[Attack Chains]]
+- # Attack Chain (Higher-Education Context)
+	- In higher-education cybersecurity programs run by **Trustwave**, an **attack chain** (also called an *attack lifecycle* or *kill chain*) is the sequence of steps an attacker takes to compromise a university environment.
+	- Security teams use this model to understand where they can detect or stop an attack.
+	- It is conceptually similar to the Lockheed Martin Cyber Kill Chain and overlaps with the MITRE ATT&CK model.
+	- ## Typical Trustwave Attack Chain (Higher-Ed Context)
+		- ### 1. Reconnaissance
+			- The attacker gathers information about the university.
+			- Examples:
+				- Scraping faculty and staff emails from public pages
+				- Scanning campus IP ranges
+				- Looking for exposed services such as VPN, web apps, and SSH
+		- ### 2. Initial Access
+			- The attacker gains a foothold.
+			- Common higher-ed examples:
+				- Phishing faculty or students
+				- Exploiting vulnerable web applications
+				- Compromising VPN credentials
+		- ### 3. Execution
+			- Malicious code runs on a compromised system.
+			- Examples:
+				- Opening a malicious attachment
+				- Running a PowerShell payload
+				- Installing a dropper or loader
+		- ### 4. Persistence
+			- The attacker ensures continued access to the environment.
+			- Examples:
+				- Creating new accounts
+				- Installing scheduled tasks
+				- Adding SSH keys
+		- ### 5. Privilege Escalation
+			- The attacker gains higher privileges.
+			- Examples:
+				- Exploiting local vulnerabilities
+				- Dumping credentials from memory
+				- Stealing admin tokens
+		- ### 6. Lateral Movement
+			- The attacker moves across campus systems.
+			- Examples:
+				- Accessing research clusters
+				- Pivoting into administrative systems
+				- Using stolen credentials to access file shares
+		- ### 7. Data Access / Exfiltration
+			- The attacker targets valuable assets.
+			- Common university targets:
+				- Research data
+				- Student records
+				- Financial data
+				- Intellectual property
+		- ### 8. Impact
+			- The final stage of the attack.
+			- Examples:
+				- Data theft
+				- Ransomware deployment
+				- Destruction of research datasets
+	- ## Why Trustwave Teaches Attack-Chain Thinking
+		- Train SOC analysts to recognize attacker behavior.
+		- Map detections to stages of compromise.
+		- Design defense-in-depth controls.
+		- Support incident response investigations.
+	- ## Stage-to-Detection Mapping (Example)
+		- Initial access: Email security and phishing detection
+		- Execution: EDR alerts
+		- Lateral movement: Abnormal authentication logs
+		- Exfiltration: DLP or network monitoring
+	- ## Why It Matters in Higher Education
+		- Universities are high-value targets because they often have:
+			- Open networks
+			- Large user populations (students and researchers)
+			- Valuable research IP
+			- Decentralized IT
+		- Attack-chain thinking helps defenders interrupt attacks before they reach sensitive data.

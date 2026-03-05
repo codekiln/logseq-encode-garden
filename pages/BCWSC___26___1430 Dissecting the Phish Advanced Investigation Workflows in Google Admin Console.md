@@ -1,0 +1,9 @@
+- 2:30 - 2:45 Dissecting the Phish Advanced Investigation Workflows in Google Admin Console
+	- [[BCWSC/26]]
+	- Speaker
+		- [[Person/Stephen Jarjoura]] (Boston College)
+	- Abstract
+		- In phishing response, it is important to use every available tool.
+		- For institutions using Google, the Investigation Tool can be pivotal for protecting campus and responding to threats.
+		- This session includes a live demonstration of responding to a phishing incident using Google's Investigation Tool.
+	-

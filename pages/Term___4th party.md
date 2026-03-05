@@ -1,0 +1,12 @@
+alias:: [[4th party]], [[Fourth party]]
+- A 4th party is a vendor, service, or dependency used by a 3rd-party vendor your organization works with.
+	- In a chain:
+		- your organization
+		- your 3rd party vendor
+		- that vendor's 4th party providers
+- Why this matters for security and risk:
+	- Your data or operations can still be affected by incidents at the 4th-party layer.
+	- Visibility is usually lower than with direct (3rd-party) vendors.
+- Context:
+	- [[Vendor/Management]]
+	- [[BCWSC/26/1100 Managing 3rd Party Vendor Relationships Panel]]

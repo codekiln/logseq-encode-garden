@@ -1,0 +1,3 @@
+- https://nixos.org/download/
+	- I found the interactive UI on this installer beautiful, clear and easy to use
+	- it asks for sudo once clearly demarcates what it's doing.

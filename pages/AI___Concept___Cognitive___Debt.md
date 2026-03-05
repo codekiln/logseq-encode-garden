@@ -1,0 +1,1 @@
+alias:: [[Cognitive Debt]]

@@ -1,0 +1,19 @@
+- 2:15 - 2:30 An Abnormal Relationship Augmenting Email Security with Abnormal AI
+	- [[BCWSC/26]]
+	- Speaker
+		- [[Person/Christopher Andrews]] (Boston College)
+	- Abstract
+		- After years of constant work to protect campus email inboxes from spam, phishing, and scams, Boston College Collaboration Systems and Security procured Abnormal AI.
+		- This talk covers why the tool was selected and how it improves campus email security while reducing manual effort.
+	- 2022 - [[DMARC]] reject policy for all domains
+	- [[AbnormalAI]]
+		- uptick in financial scams targeting students
+		- a number of students lost 1000s of dollars
+		- as soon as a message lands in an inbox, it downloads it, analyzes it, it deletes it if it's unsafe. if it's spam, it's placed in junk folder. if it's deemed threat, placed in trash
+		- account takeover protection
+			- leverages google authentication logs
+			- geolocation of IP addresses
+			- combined with email behavior
+				- email burst
+				- suspicious sign-in
+			-

@@ -1,0 +1,80 @@
+- 11:45 - 12:30 Why Passkeys Are the Right Answer-and Still a Nightmare
+	- [[BCWSC/26]]
+	- Speakers from [[College/Babson]]
+		- [[Person/Jacob Backon]]
+		- [[Person/Mat Cunha]]
+	- Abstract
+		- [[Passkey]]s promise phishing-resistant authentication and a future without passwords, but implementing them in higher education is complex.
+		- This session covers real-world deployment challenges including legacy systems, device diversity, user experience, and institutional constraints.
+		- It shares what worked, what broke, what the team would do differently, and practical takeaways for institutions considering phishing-resistant [[MFA]].
+	- [[Person/Mat Cunha]]
+	  collapsed:: true
+		- the attack
+			- adversary in the middle
+				- actual email
+				- legitimate sharepoint email from someone compromised by someone else
+				- bait is the esteemed president of babson.
+				- came from Adarsh public school
+				- this is the initial attack vector
+			- when you click on the link you get onedrive verification code
+				- that makes it seem rather
+			- once you get in, you see something with stratford university, now you have another link to click
+			- then you're brought to a sign-in page. al.gortyphilo.ru/wnefkwlekn2l3kn this is a ms sign-in page
+			- it will send your credentials to microsoft - your ms login tenant
+			- but now you need to do mfa, that goes to this mfa, then it goes to you in your auth
+			- you log in, accept request, they confirm
+			- now your mfa is useless
+			- DONE how does knowing one mfa let you indefinitely compromise?
+				- well, they look for more credentials with the short term cred that they have
+			- with these scam emails, they just send scam emails. for them at least
+			- they got a few. usually students would get it. many students are anxious about getting jobs
+			- they jump at employment opportunities
+			- they get a lot of pianos
+			- sometimes they are free
+			- again, with apologizing for AI image
+		- overview of auth with ms entra
+			- [[Passkey]] is private key stored on device, theoretically, and a public key sent to them
+				- *in practice, it could be stored in a password manager*
+			- phishing-resistant mfa
+	- [[Person/Mat Cunha]]
+		- they are using [[Microsoft/Authenticator]] as passkey app
+		- they did a staged roll-out based on persona
+			- they did high risk users first
+		- technical implementation
+			- very simple
+				- FIDO2
+		- [[WHfB]] is [[Windows/Hello/for Business]]
+			- face id
+		- challenges
+			- macos
+				- big problem
+				- managed macbooks still use very old webbrowser and can't do OAuth 2.0
+				- they had to convince them to use outlook rather than mail app
+			- Users without smartphones
+				- many faculty members don't believe in smartphone
+					- laughs, faculty that put money under the mattress
+			- the matrix
+				- chrome
+				- android
+				- edge
+				- safari
+				- lots of help guides
+					- training and communications team
+		- lessons learned about [[Passkey]]s
+			- shift in thought about authentication
+				- removes "somethig you know" for "something you are"
+				- it's a new authentication method -
+			- [[WHfB]] vs other passkey
+				- diff between WHfB and "personal device passkey"
+					- they had to do it on their phone and their laptop
+			- phased rollout
+			- High-touch support
+		- someone asks about sync'd passkeys
+			- they will allow it
+	- another q: how do you think about the device used for passkeys
+		- they chose authenticator because everyone had authenticator, they didn't think about sync'd vs unsync'd.
+	- [[yubikey]] you set up a pin on it
+		- you type 6 digits in and you tap the thing,
+		- passkey by itself is a single factor
+		- you need an additional factor
+	-

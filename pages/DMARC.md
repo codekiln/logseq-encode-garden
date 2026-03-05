@@ -1,0 +1,45 @@
+- # DMARC `p=reject`
+	- **DMARC `p=reject`** is the strictest enforcement policy in **Domain-based Message Authentication, Reporting and Conformance (DMARC)**.
+	- It instructs receiving mail servers to reject email that fails DMARC authentication so the message is not delivered.
+	- ## What DMARC checks
+		- DMARC builds on two underlying mechanisms:
+			- **SPF** verifies that the sending server is authorized by the domain.
+			- **DKIM** verifies the message was cryptographically signed by the domain.
+		- For a message to pass DMARC:
+			- 1. SPF or DKIM must pass authentication.
+			- 2. The passing mechanism must align with the domain in the `From` header.
+	- ## What `p=reject` specifically does
+		- Example policy:
+			- ~~~
+			  v=DMARC1; p=reject; rua=mailto:dmarc-reports@example.com
+			  ~~~
+		- If SPF and DKIM both fail, or pass without alignment, the receiver should reject the message during SMTP.
+		- Result:
+			- The message should not reach inbox or spam.
+			- The sending system usually receives an SMTP rejection response.
+	- ## Conceptual overview of DKIM (with `p=reject` emphasis)
+		- DKIM is a domain-level signature system for email content and selected headers.
+		- The sender signs the message with a private key.
+		- The receiver verifies the signature using a public key published in DNS.
+		- A DKIM pass means the signed parts of the message were not modified in transit and the signer controls the key for that domain.
+		- Under `p=reject`, DKIM is often the most reliable path to DMARC pass for forwarded email because SPF frequently breaks on forwarding.
+		- What matters for DMARC is not only DKIM pass, but DKIM alignment:
+			- The DKIM signing domain (the `d=` value) must align with the visible `From` domain (strictly or organizationally, depending on `adkim`).
+		- Why this matters with `p=reject`:
+			- If DKIM fails, modified, or stripped by intermediaries, and SPF also fails or misaligns, the message is rejected.
+			- If DKIM passes but `d=` is from a different non-aligned domain, DMARC still fails and can be rejected.
+			- If multiple DKIM signatures exist, at least one aligned signature can satisfy DMARC.
+		- Operational implication:
+			- Every legitimate sender must produce an aligned DKIM signature or aligned SPF path.
+			- Common breakpoints are third-party mail tools, mailing list modifications, and misconfigured selectors or DNS records.
+	- ## Comparison with other DMARC policies
+		- `p=none`: monitor only, no enforcement.
+		- `p=quarantine`: accept but treat failing mail as suspicious (commonly routed to junk).
+		- `p=reject`: reject failing mail during SMTP.
+	- ## Typical rollout path
+		- 1. `p=none` to measure alignment/authentication failures.
+		- 2. `p=quarantine` for partial enforcement.
+		- 3. `p=reject` for full enforcement.
+	- ## Reference
+		- RFC 7489:
+			- [RFC 7489 - Domain-based Message Authentication, Reporting, and Conformance (DMARC)](https://www.rfc-editor.org/rfc/rfc7489)

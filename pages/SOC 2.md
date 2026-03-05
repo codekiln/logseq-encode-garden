@@ -1,0 +1,25 @@
+alias:: [[SOC2]], [[System and Organization Controls 2]], [[Service Organization Controls 2]]
+- # SOC 2
+	- ## Overview
+		- **SOC 2** (System and Organization Controls 2) is an independent security audit framework created by the [[American Institute of Certified Public Accountants]].
+		- It evaluates whether a company handles customer data securely.
+		- It is widely used for SaaS vendors, cloud providers, and technology companies that store or process customer data.
+	- ## Trust Service Criteria
+		- SOC 2 audits assess controls across five Trust Service Criteria:
+			- **Security**: protection against unauthorized access.
+			- **Availability**: systems remain operational and reliable.
+			- **Processing Integrity**: systems process data correctly.
+			- **Confidentiality**: sensitive information is protected.
+			- **Privacy**: personal data is handled appropriately.
+	- ## Report Types
+		- **SOC 2 Type I**
+			- Evaluates design of security controls at a point in time.
+			- Answers: *Are the controls defined properly?*
+		- **SOC 2 Type II**
+			- Evaluates operation of controls over a period, usually 3 to 12 months.
+			- Answers: *Are the controls actually working consistently?*
+			- Type II is commonly requested by security teams during vendor reviews.
+	- ## Sharing and Access
+		- SOC 2 reports are confidential documents typically shared under NDA during vendor security reviews.
+	- ## Related
+		- [[HECVAT]]

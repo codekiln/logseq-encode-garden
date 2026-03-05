@@ -1,0 +1,15 @@
+- 1:30 - 2:15 Breaking Up with Your MSSP Building In-House SecOps with a Small Team
+	- [[BCWSC/26]]
+	- Speakers
+		- [[Person/Mike Gioia]] (Babson)
+		- [[Person/Sam Chung]] (Babson)
+	- Abstract
+		- Outsourcing security operations can seem like the only viable option until it stops scaling.
+		- This session covers transitioning away from an MSSP and building an in-house security operations function with a small team.
+		- It covers decision drivers, key challenges, tools and processes that mattered most, and lessons learned for higher ed institutions seeking more visibility, control, and sustainability.
+	- [[ArcticWolf]]
+	- [[Security/Attack Chain]]
+	- using Logic apps automation (o365)
+	- Azure Function App
+		- function as a service that lives in Azure
+		- Saturday April 11th at boston mariott, OWASP

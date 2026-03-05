@@ -1,3 +1,4 @@
+filters:: {"ai/security" true}
 alias:: [[MCP]]
 
 - [[MCP/Web]] https://modelcontextprotocol.io/introduction

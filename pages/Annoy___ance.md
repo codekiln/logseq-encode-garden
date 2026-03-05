@@ -1,0 +1,1 @@
+alias:: [[Annoyance]], [[Annoyances]]

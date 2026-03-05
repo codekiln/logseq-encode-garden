@@ -73,6 +73,8 @@ date-created:: [[2025-11-03 Mon]]
 		                                  +---------------------+
 		  ```
 		- *(L1 = metadata, L2 = instructions, L3 = resources/scripts)*
+	- ## Related skill ecosystems
+		- Beyond the coding-assistant matrix above, other skill-repository and agent-skills efforts have emerged: [[Vercel/GitHub/Skills]] (Vercel Labs' open agent skills tool and skill repository management system, `npx skills`) and [[LangChain/GitHub/langchain-skills]] (LangChain's new skills repo). Claude Code skills remain the first prominent implementation of this idea.
 	- ## Conclusion
 		- As of late 2025, Anthropic's Claude Code Skills continue to represent a unique advance in agentic AI extensibility—combining persistent, autonomous, modular skill systems with context-efficient progressive disclosure, executable assets, and robust composability. Competing products offer skill-like features only in incomplete form, lacking both staged context management and true agent-side modular extensibility. Claude's engineering and user documentation sets a benchmark for transparency and safe extensibility not seen elsewhere. Developers seeking reusable, context-efficient, and agentically invokable skill extensions will find no equivalent to Claude Code Skills outside the Anthropic ecosystem at this time.
 	- ## Footnotes

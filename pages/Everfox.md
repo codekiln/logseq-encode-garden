@@ -1,0 +1,30 @@
+- # Everfox
+	- Cybersecurity vendor focused on high-assurance environments for classified, defense, and critical infrastructure operations
+	- ## What they do
+		- Focuses on cross-domain security and secure data transfer between networks with different classification levels
+		- Typical context is moving data between classified and unclassified networks with policy enforcement and inspection controls
+	- ## Key product areas
+		- Cross Domain Solutions (CDS)
+			- Controlled transfer of data between networks with different security classifications
+			- Filtering, inspection, and policy enforcement before transfer
+		- High-assurance guards
+			- Gateway systems that inspect and sanitize files or data streams before crossing boundaries
+		- Secure workstations and remote access
+			- Thin client and virtualization-oriented solutions for classified environments
+		- Threat protection
+			- Malware analysis, file sanitization, and secure browsing capabilities
+	- ## Typical customers
+		- U.S. Department of Defense
+		- Intelligence agencies
+		- NATO and allied governments
+		- Defense contractors
+		- Critical infrastructure operators
+	- ## Background
+		- Formerly [[Forcepoint Federal]]
+		- In 2023, Forcepoint's government-focused division was spun out and rebranded as Everfox
+		- Maintains a focus on national security and classified operating environments
+	- ## Why it appears in security reviews
+		- Frequently appears in SOC 2 and vendor risk questionnaires for high-assurance network environments
+		- Often evaluated as infrastructure security components rather than standard SaaS applications
+	- ## Mental model
+		- Everfox builds security gateways that safely move data between networks that are intentionally separated

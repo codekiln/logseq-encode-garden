@@ -1,0 +1,6 @@
+- This option in the drop-down ensures that iTerm2 follows the [[MacOS/Setting/Dipsplays/Night Shift]] schedule if [[MacOS/Setting/Appearance/LightDark/Auto]] is selected.
+- iterm2 has the concept of terminal profiles. Each terminal profile can store separate settings for light and dark mode.
+- Regardless of the value of [[MacOS/Setting/Dipsplays/Night Shift]] or [[MacOS/Setting/Appearance/LightDark/Auto]] values,
+	- If you select [[iTerm2/Setting/Appearance/Theme/Light Mode]], it will make it so that [[iTerm2/Setting/Profiles/Colors/Editing/Light Mode]] profile settings are activated,
+	- If you select [[iTerm2/Setting/Appearance/Theme/Dark Mode]], it will make it so that [[iTerm2/Setting/Profiles/Colors/Editing/Dark Mode]] profile settings are activated.
+	-

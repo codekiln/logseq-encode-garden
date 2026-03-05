@@ -1,0 +1,24 @@
+alias:: [[Fast Identity Online 2]]
+- # FIDO2
+	- FIDO2 is an open authentication standard for phishing-resistant, passwordless, or multi-factor sign-in.
+	- It combines two core pieces:
+		- [[WebAuthn]] (W3C): browser and platform API for credential creation and authentication
+		- [[CTAP]] (FIDO Alliance): protocol between an authenticator and a client device
+	- FIDO2 enables the modern [[Passkey]] model.
+- ## Core Concepts
+	- **Relying Party (RP)**: the service a user signs into
+	- **Authenticator**: hardware key, phone, laptop TPM/Secure Enclave, or other credential container
+	- **Public-key cryptography**: private key stays on the authenticator; public key is registered with the RP
+	- **User verification**: local PIN/biometric checks can be required by policy (for example [[Face ID]] or [[Fingerprint ID]])
+- ## Security Properties
+	- Resistant to phishing because credentials are bound to RP IDs (origins/domains)
+	- Eliminates shared secrets on the server side for authentication
+	- Supports hardware-backed keys and attestation options when needed
+	- Reduces account takeover risk compared with password-only flows
+- ## Related
+	- [[Passkey]]
+	- [[WebAuthn]]
+	- [[CTAP]]
+	- [[Face ID]]
+	- [[Fingerprint ID]]
+	- [[Security]]

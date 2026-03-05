@@ -1,0 +1,30 @@
+alias:: [[SANS Internet Storm Center]], [[SANS ISC]], [[Internet Storm Center]]
+- # [SANS Internet Storm Center](https://isc.sans.edu/)
+	- ## Summary
+		- The [[SANS Internet Storm Center]] (ISC) is a global cyber-threat monitoring and early-warning service run by [[SANS Institute]].
+		- ISC tracks internet-wide attack activity and publishes actionable analysis for defenders.
+	- ## Purpose
+		- Detect and track internet-wide attack activity.
+		- Provide early warning on emerging threats such as worms, mass scanning, botnets, and exploit campaigns.
+		- Publish technical analysis for security defenders.
+	- ## How It Works
+		- ISC aggregates telemetry from many volunteer sensors and security devices worldwide.
+		- Typical telemetry includes:
+			- Port scans
+			- Exploit attempts
+			- Malware callbacks
+			- Unusual traffic patterns
+		- Security analysts ("handlers") review activity and publish daily analysis.
+	- ## Typical Outputs
+		- Handler diaries with short technical write-ups.
+		- Threat level indicators for internet "storm" severity.
+		- Top target ports and scanning trend observations.
+		- Malware and exploit observations.
+	- ## Why Teams Watch ISC
+		- Supports SOC situational awareness.
+		- Helps teams detect what attack activity is actively spreading, often before formal advisories.
+	- ## Images
+		- ![SANS ISC Banner](https://miro.medium.com/v2/resize%3Afit%3A1400/1%2AsFHUvHrD85hNSFNUuldH5g.png)
+		- ![SANS ISC Handler](https://isc.sans.edu/diaryimages/images/Joseph_Gruen_Picture3.png)
+		- ![SANS ISC Diary Image 2026-03-04](https://isc.sans.edu/diaryimages/images/isc-20260304-3.png)
+		- ![SANS ISC Diary Image 2026-02-11](https://isc.sans.edu/diaryimages/images/isc-20260211-1.png)

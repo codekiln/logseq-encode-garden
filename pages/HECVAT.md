@@ -1,0 +1,39 @@
+alias:: [[Higher Education Community Vendor Assessment Toolkit]]
+
+- # HECVAT
+	- ## Overview
+		- **HECVAT** stands for **Higher Education Community Vendor Assessment Toolkit**.
+		- It was created by [[EDUCAUSE]] and [[Internet2]].
+		- It is a standardized vendor security questionnaire used by universities to evaluate technology vendors.
+	- ## Common Use Cases
+		- Universities use HECVAT during vendor risk assessments, especially for:
+			- cloud services
+			- learning tools
+			- research platforms
+			- student-data systems
+	- ## Questionnaire Coverage
+		- HECVAT questionnaires ask vendors for detailed information about:
+			- encryption
+			- data storage
+			- authentication
+			- incident response
+			- compliance frameworks
+			- data retention
+			- access controls
+	- ## Versions
+		- **HECVAT Lite**: shorter vendor assessment.
+		- **HECVAT Full**: comprehensive security questionnaire.
+		- **HECVAT On-Premise**: for software installed locally.
+	- ## Relationship to [[SOC 2]]
+		- [[SOC 2]] and HECVAT serve different purposes:
+			- SOC 2 is an independent audit report.
+			- HECVAT is a self-reported questionnaire.
+			- SOC 2 is conducted by CPA auditors.
+			- HECVAT is completed by the vendor.
+			- SOC 2 validates security controls.
+			- HECVAT provides detailed answers about security practices.
+			- SOC 2 is used across industries.
+			- HECVAT is primarily used in higher education.
+		- Many universities request both:
+			- a SOC 2 Type II report
+			- a completed HECVAT questionnaire

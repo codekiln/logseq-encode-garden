@@ -1,0 +1,13 @@
+alias:: [[Touch ID]], [[Apple/Touch ID]]
+- # Fingerprint ID
+	- Fingerprint ID is biometric user verification using a stored fingerprint template.
+	- On Apple devices this is known as [[Touch ID]].
+- ## Where It Fits
+	- Used for local device unlock, payment approvals, and app-level user verification.
+	- In passkey and [[WebAuthn]] sign-in, it can satisfy the local verification step for a platform authenticator.
+- ## Related
+	- [[Face ID]]
+	- [[FIDO2]]
+	- [[Passkey]]
+	- [[Biometric]]
+	- [[Apple]]

@@ -1,0 +1,93 @@
+tags:: [[Vendor/Management]]
+
+- 11:00 - 11:45 Managing 3rd Party Vendor Relationships Panel
+	- [[BCWSC/26]]
+	- Panelists
+		- [[Person/Adam Scaramella]]
+			- [[Uni/Harvard]]
+			- works at [[Org/HU/HBS]]
+				- 26 years there
+		- [[Person/Mike Gioia]]
+			- (Babson)
+			- CISO
+			- has been at higher ed institutions
+			- is a championship ironer
+		- [[Person/Jeffrey Holman]]
+			- (SNHU) [[Uni/SNH]]
+			- on engineering team
+			- does 3rd party risk and use cases
+			- he has collectable coins from alexander the great 3rd century bc
+		- [[Person/Eric Boughton]]
+			- (Fitchburg State)
+			- plays Zelda - tri-state champion in the NES version LOL not the tri-force champion
+	- Abstract
+	  collapsed:: true
+		- Managing 3rd party vendor relationships is complicated.
+		- This panel discusses lessons learned and contemporary strategies in light of current cybersecurity challenges in higher education.
+	- Intro
+	  collapsed:: true
+		- [[Person/Adam Scaramella]]
+			- b-school is piloting idea that if a person is contracting with a vendor, they might not have the expertise
+				- run it through the security team
+				- they walk them through that
+				- procurement and following the money is important
+				- they are re-kicking an annual process to work with the people that handle the contracts to make sure they have an inventory, and when they realize their contract doesn't include something, can it wait for the contract renewal period? or do we have to renegotiate
+		- [[Person/Jeffrey Holman]]
+			- if someone is high enough up the org chain (higher than director), then they can accept the risk
+		- [[Person/Adam Scaramella]]
+			- they are working with a vendor called [[Upguard]] https://www.upguard.com
+			- if a partner says they don't want to do the security assessment
+				- they had a wonderful back and forth with a contract reviewer. the answers were "run away screaming" until they realized they weren't engaging their IT dept. Then they gave the rec to not use this vendor. if they want to override that, they need to get the CIO and the exec dir of their dept to understand the risk and make a conscious decision to accept it (it sounds more formal than it is)
+		- [[Person/Eric Boughton]]
+			- smaller systems are a problem, 3d printer where it makes you make an account in china
+		- [[Person/Mike Gioia]]
+			- offers a tip that if you can get the legal team in, you can leverage them to help you decline asks for new technology
+		- [[Person/Jeffrey Holman]]
+			- I get a lot of situations where people say "how can I make this happen" and I have to tell them to have their boss call my boss
+	- what can we do to make it pleasant for stakeholders interacting with vendors
+	  collapsed:: true
+		- try to be actually helpful
+			- if we need [[HECVAT]] or soc2, and vendor doesn't know what that is, explain that to them
+		- [[Person/Adam Scaramella]] - explain to them the why
+			- when we first get contacted, they have a question that they fill out
+		- [[Person/Eric Boughton]]
+			- we tell them that it's flipped, what data are you putting in there? let's protect that data
+		- [[Person/Jeffrey Holman]]
+			- make it feasible, whether it's for the vendor or the stakeholder, because they are going to accept the risk
+			- now they don't give more than ten requirements, because there are too many problems
+	- who is the [[Term/4th party]]
+	  collapsed:: true
+		- these people use AWS, etc. it's over a dozen fourth parties
+		- do you worry about fourth parties?
+		- is there any difference if there's an AI component
+		- [[Person/Eric Boughton]]
+		  collapsed:: true
+			- [[HECVAT]] is pretty good
+			- they don't do stuff with vendor unless they understand the data
+			- "we're lucky that we're a small institution and not many people are trying to buy AI"
+			- they again orient towards the data feeding into it
+			- seems to be enough to get people thinking about it
+		- [[Person/Adam Scaramella]]
+		  collapsed:: true
+			- [[SBOM]]
+				- if they demonstrate that they have that then they are not as concerned
+			- [[AI]]
+				- everything has AI components
+				- we don't want third parties training on behaviors of people using the tools
+				- they go to the website
+					- they don't look at the privacy policy
+				- you want to look for terms of use, terms of service
+					- user data
+					- user service
+					- a lot of companies understand that they need to silo that data
+					- but many people are thinking about it in terms of [[CrowdSourcing]]
+		- [[Person/Jeffrey Holman]]
+		  collapsed:: true
+			- Azure, AWS, Google, they aren't going to talk to us, so we're not going to review them
+			- we have training, and they have to take that before they can do AI stuff
+			- We went to Optive (consulting firm) - AI addendum
+				- they have to do it on all AI reviews (which feels random, because everything has Ai in it)most of these AI features are
+		-
+	- [[Person/Jeffrey Holman]] mentions an AI PoC team that has to be involved whenever they do things
+	- General sense that the security take here is to be a good gatekeeper and it's better to not use vendors.
+	-

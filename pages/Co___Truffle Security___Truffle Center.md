@@ -1,0 +1,29 @@
+alias:: [[Truffle Center]], [[Truffle Security]], [[TruffleHog]]
+- # [Truffle Security](https://trufflesecurity.com/)
+	- ## Summary
+		- "Truffle Center" usually refers to resources and dashboards associated with [[Co/Truffle Security]].
+		- [[Truffle Security]] is known for [[TruffleHog]], focused on finding exposed secrets across code and infrastructure.
+	- ## What It Detects
+		- API keys
+		- AWS credentials
+		- OAuth tokens
+		- Private keys
+		- Database passwords
+	- ## Core Technology: [[TruffleHog]]
+		- Scans:
+			- Git repositories
+			- CI/CD logs
+			- Docker images
+			- S3 buckets
+			- Developer machines
+		- Goal:
+			- Detect and help revoke accidentally leaked credentials quickly.
+	- ## Why It Matters
+		- Secret leaks are a frequent source of security incidents.
+		- Attackers continuously search public code hosting for usable credentials.
+		- TruffleHog supports [[DevSecOps]] workflows by surfacing leaked secrets early.
+	- ## Images
+		- ![Truffle Security Logo](https://framerusercontent.com/assets/rtM6HbNTWKwA3fZ5ECw6PGhY.svg)
+		- ![Truffle Demo](https://storage.googleapis.com/truffle-demos/non-interactive.svg)
+		- ![Truffle Product Screenshot 1](https://framerusercontent.com/images/c9rqEcTgLk1priOj0eoCUkzAVbY.png)
+		- ![Truffle Product Screenshot 2](https://framerusercontent.com/images/SoMOfI93qPJzKF9DMXX9DiHUus.png?height=898&width=1600)

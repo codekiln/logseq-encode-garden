@@ -1,0 +1,78 @@
+- 10:00 - 10:45 AI Lessons Learned the Hard Way - [[Person/Reid Gilman]] (Boston Children's Hospital)
+	- [[BCWSC/26]]
+	- Abstract
+		- There's tremendous opportunity in [[AI]] for many cybersecurity organizations, but there's also a lot of stumbling blocks.
+		- This talk will be a discussion of some lessons learned trying to solve real problems our cybersecurity team encounters using generative AI.
+		- This talk will not get into specific technical issues but will focus on themes and challenges we've encountered resolving real world problems.
+	- [[My Notes]]
+		- So many tickets, So Little Time
+			- How many tickets were there yesterday related to [[MFA]]?
+		- arch
+			- ticketing system <-> python app <-> identity system
+				- [[AI/Agent]]
+					- summarizer agent
+					- topic agent
+					- reviewer agent
+		- flow
+			- retrieve tickets
+			- discard tickets using static rules to save money
+			- summarize description and comments
+			- begin topic-reviewer [[AI/Agent]] loop
+				- up to three iterations
+				- several "short-circuit termination criteria"
+			- save ticket metadata, content, and AI analysis to a database
+				- DONE do they use an external database
+					- [[Excel]] "is the second best tool for every problem
+		- topic-reviewer loop aka the topic agent
+			- sometimes summary is wrong.
+				- example is subject is "email problem" that's just hard to summarize
+			- rule database
+				- this goes into the topic agent context window
+					- take a downselected set of rules / filtered set of rules based on keywords
+					- use the title, description and comments of ticket (the contents)
+				- example rules
+					- if the ticket describes the problem using mfa app, topic is mfa
+			- topic agent spits out the topics it selected,
+				- the rules he used
+				- "i used rules 1 and 5, and I selected topic mfa for this ticket"
+				- reviewer agent: go
+			- reviewer agent is a boss and makes sure that the agent makes stuff up
+				- > this works really well
+				- > having this loop almost eliminated having it not make sense
+				- > you still get things that don't make sense; there's "co morbidity" between not having mfa and not getting on vpn
+				- > that brought me to a place where I was able to look at this and say that while the data we may have, when we assign a topic it's right enough to be useful
+	- but does it work?
+		- it has to cite specific chunks of the ticket
+			- it will even say "this person talks about the vpn agent"
+		- his example has a table that includes how many topics there are and what the confidence is
+		- key win is taking
+	- lessons learned
+		- ==pick problems where it's okay to be wrong==
+			- [[My Note]] great wording
+		- An LLM can do a great job error-checking another LLM
+		- But not without Specific Instructions
+			- having stable output is really important
+				- if you put in same ticket in 10 times, you should get same answer
+					- same topic and same ballpark of confidence
+		- Track your token use
+		- [[CodexCLI]] and [[Claude Code]] are powerful tools
+			- > I'm not going to say [[Vibe Coding]]
+			- > references the idea of, if not the term of [[AI/Concept/Cognitive/Debt]]
+				- you can level someone up but you can get people into trouble they don't see coming.
+				- powerful tool, be careful
+	- ## Q&A
+		- ### What were some application security concerns you ran into while developing your app
+			- > making sure that LLM provider is not using it for training
+			- mentions [[OWASP/LLM/Top 10]]
+			- mentions [[Prompt Injection]] but it's hyperbolic in the sense of "you could rm -rf my hard drive"
+			- doesn't really take this risk seriously
+		- service now offers something like this
+			- they route cases automatically based on what they need
+			-
+		- [[My Note]] most of the questions are not about prompt injection or the security of this
+			- most people are concerned about the quality of it and improving it
+			- and the jobs
+		- ### TODO what about prompt injection, do tickets only enter in through trusted channels? [[Question/My]]
+			-
+		- ### what is policy about what people put into tickets
+			- they don't have a lot of people putting passwords or api keys in

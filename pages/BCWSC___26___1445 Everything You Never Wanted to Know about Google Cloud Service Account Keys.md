@@ -1,0 +1,33 @@
+- 2:45 - 3:00 Everything You Never Wanted to Know about Google Cloud Service Account Keys
+	- [[BCWSC/26]]
+	- Speaker
+		- [[Person/Jordan Bradford]] (Boston College)
+	- Abstract
+		- Google Cloud service account keys are easy to create, difficult to track, and high impact if leaked.
+		- This short presentation covers what they are and how they work, ways to increase key visibility, options to reduce risk from key usage, and better paths forward.
+	- private key file
+		- used to be [[P12]] format
+		- it's a private key and other information  in json
+		- unlike temporary tokens that expire in an hour, these keys are persistent and remain valid until deleted. By default, they never expire
+		- [[CIS/Benchmark]]
+			- 1.4 ensure there are only GCP-Managed service account keys for each service account
+				- you. never have to look at them - they are managed for you
+				- they pass them around when
+			- 1.7 ensure user account keys are rotated
+				- essentially they are saying, don't use managed account keys, but rotate them if you do
+		- why use them?
+			- pros
+				- low barrier to entry
+					- you don't need IDP
+			- cons
+				- static creds
+					- non-expiring keys
+					- portability risk
+					- accidental exposure
+		- Cloud Asset Inventory
+			- point in time snapshot of all keys to BigQuery/GCS
+				- good for bulk audits, identifying old keys, and compliance recording
+		- Direct REST API Listeing
+			- calls IAM API directly to enumerate keys for a specific account
+				- targeted, real-time checks during troubleshooting
+			-

@@ -1,6 +1,6 @@
 chatgpt-link:: https://chatgpt.com/g/g-p-691f249c2fac8191ab8b4b926da5cb3b-ai-es-25-11-code/c/691f76cb-dfec-8330-acea-3400a91a2aee
 
-# 2:25pm - 2:44pm Talk: What We Learned Deploying AI within Bloomberg's Engineering Organization
+- # 2:25pm - 2:44pm Talk: What We Learned Deploying AI within Bloomberg's Engineering Organization
 	- ![Lei Zhang](https://www.ai.engineer/speakers/lei-zhang.jpg)
 	- **[[Person/Lei Zhang]]** - Head of Technology Infrastructure Engineering, [[Bloomberg]]
 	- ## Talk: What We Learned Deploying AI within Bloomberg's Engineering Organization [05:46:16](https://www.youtube.com/watch?v=cMSprbJ95jg&t=20776s) - Bloomberg (Lei Zhang): Creating a "Paved Path" for Enterprise AI Adoption
