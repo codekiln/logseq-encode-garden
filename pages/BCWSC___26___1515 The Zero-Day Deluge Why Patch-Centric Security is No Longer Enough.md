@@ -1,6 +1,7 @@
+created-by:: [[Person/Nathan Hall]]
+
 - 3:15 - 4:00 The Zero-Day Deluge Why Patch-Centric Security is No Longer Enough [[Person/Nathan Hall]] [[Uni/Harvard]]
 	- # Meta
-	  collapsed:: true
 		- Abstract
 			- The risk and impact of zero-day and near-zero-day vulnerabilities are rising significantly.
 			- This session examines why those risks are surging and why patch-centric defenses are increasingly ineffective.
@@ -11,7 +12,6 @@
 				- Zero day that hit harvard
 			- designing for pre-patch exploitation
 	- # First part
-	  collapsed:: true
 		- [[Definition]]s
 			- [[Zero/Day]]
 				- vuln exploited prior to patch or public awareness

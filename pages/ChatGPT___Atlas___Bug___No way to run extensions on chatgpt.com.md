@@ -1,0 +1,2 @@
+- noticed that if I try to envoke the keyboard shortcut to invoke the [[Readwise/Reader/Browser/Extension]], it doesn't work on chatgpt.com. This is most likely a decision on the part of the [[OpenAI]] team to lock down behavior. Google Chrome won't let you run chrome extensions on Google websites, either.
+- Reminds me of [[ChatGPT/Atlas/Bug/No way to save a webpage]]

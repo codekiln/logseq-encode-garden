@@ -1,0 +1,29 @@
+- [[AI/Public/Sentiment]] in the [[Security/Community]]
+	- **picture this**: a roving rural gang/cult called "the AIs" started coming into cities, mostly spraying graffiti but also causing some misdemeanors and isolated crimes. the gang/cult also has a public outreach program and they want to do good it's disorganized and many of people who want to be in the gang are causing problems. you attend a one-day city police conference. imagine their attitude toward "the AIs." that's a rough approximation of the security community's opinion of ai right now.
+	- I didn't hear the word [[AI/Agent]] more than once or twice.
+- AI optimizations
+	- [[BCWSC/26/1000 AI Lessons Learned the Hard Way]]
+		- at a one day security conference, the term [[Prompt Injection]] is only mentioned once, and it's in the context of why it's not actually a risk to be concerned about when scanning incoming service tickets for summarizing and classification.
+- Pen Testing
+	- [[BCWSC/26/0900 Lessons from PenTesting]]
+		- Pen testing is fun to talk about. People who are into pen testing do not mention the AI surface area. I personally think that AI applications should be pen tested for prompt injection and one level deeper, but the security community doesn't hold that in as high of esteem because they really think that we should just not be using AI.
+- [[Enterprise/Data/Policy]]
+	- [[BCWSC/26/1515 The Zero-Day Deluge Why Patch-Centric Security is No Longer Enough]]
+		- because of the reality of zero day exploits, enterprises are in the midst of a tectonic policy shift towards eliminating any data that could be used against the organization.
+		- we are currently in a temporary period of time where ai is likely to be able to have access to enterprise data without major controls and approval chains
+- [[Vendor/Management]]
+	- [[BCWSC/26/1100 Managing 3rd Party Vendor Relationships Panel]]
+		- security professionals are gatekeepers. this gives them power that they need and use but they are ultimately resentful of that responsibility's obligations. they actually don't want teams to add new technologies which expose them to new risk. they will try to help by getting on the zoom call with vendors and explaining to the startup why they need a [[SOC2]]. conferences like this let them share techniques to control the narrative and add fewer technologies to the organization.
+- [[Passkey]]s
+	- [[BCWSC/26/1145 Why Passkeys Are the Right Answer-and Still a Nightmare]]
+		- passkeys are an important step forward, but security professionals are put in the position of having to introduce a technology and behavior change onto the public, and it's really overwhelming for both users and for security teams. there are many edge cases to handle.
+- [[Secrets Management]]
+	- [[BCWSC/26/1445 Everything You Never Wanted to Know about Google Cloud Service Account Keys]]
+		- don't use long-lived secrets. ever. phase them out.
+- [[Security/Standard]]s
+	- [[BCWSC/26/1600 CMMC & NIST 800-171 Panel]]
+		- adhering to security standards is important. it helps us all know what we're doing and what each other are doing.
+		- start with a small, knowable scope, then work from there.
+		- in security there are tons of insider acronyms, and everyone talks around what they're really enabling.
+		- if you can create a security enclave, it can mean that you can get more unique revenue opportunities for your organization or maybe even make your organization more desirable for highly talented individuals.
+		- highly secure environments likely need a separate funding mechanism than the basic budget.
