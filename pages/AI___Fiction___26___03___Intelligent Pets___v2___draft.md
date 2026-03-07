@@ -1,0 +1,128 @@
+source-page:: [[AI/Fiction/26/03/Intelligent Pets]]
+uses-notes-from:: [[AI/Fiction/26/03/Intelligent Pets/Readwise Highlights and Critique]]
+uses-notes-from:: [[AI/Fiction/26/03/Intelligent Pets/V2 Workshop and Regeneration Prompt]]
+
+- # Intelligent Pets / v2 / draft
+- The ad that sold the future was thirty seconds long.
+- A silver-haired man forgot his daughter’s name, took a treatment called Lattice-9, and remembered the street where he had learned to ride a bicycle in 1958. He cried. She cried. A calm voice said the platform had shown "promising gains in recall, orientation, and adaptive reasoning." Fine print flickered for less than a second at the bottom of the screen: **adverse events under continued review**.
+- Arun Vale watched that ad in his kitchen while his cat Mina sat on the counter, tail wrapped around a coffee grinder, and said through her throat-band speaker, “That actor was twenty years younger than they made him look. You can see it in his neck.”
+- “Good morning to you too,” Arun said.
+- “You left your medication on the sink again,” Mina said. “Also your mother texted at 06:11, 06:13, and 06:17. She used three different guilt strategies. Impressive range.”
+- Mina did not sound cruel. She sounded like a sharp colleague in a small apartment where no one could pretend to be alone.
+- The treatment had been designed for human neurodegeneration, then repurposed by grief, vanity, and venture funding. Arun knew the history because he had helped model early adaptation curves at Peregrine Biologic. He had not predicted that the fastest curves would belong to domestic animals.
+- In humans, Lattice-9 outcomes had stabilized after two or three years: modest executive-function gains, mild memory repair, expensive maintenance. In dogs and cats, especially lines selected for social intelligence and stress tolerance, the same platform interacted with dense sensory-motor mapping in ways no one had fully modeled. Gains compounded. Interface training mattered. Enrichment mattered. Household language exposure mattered. So did money.
+- The first families who could afford full-stack enhancement bought custom veterinary packages, machine tutors, and clean-room aftercare. Their pets learned symbol boards, then predictive keyboarding, then wearable signal translation. Within a decade, elite neighborhoods had concierge legal services for custody disputes involving articulate dogs.
+- The poor got cheaper knockoff edits from back-alley clinics and livestream promises. Arun had seen those outcomes too: seizure disorders, chronic pain from badly seated hardware, brilliant animals with no stable communication training and no legal standing to refuse anything.
+- “You are spiraling before breakfast,” Mina said, hopping down from the counter. “Eat.”
+- ---
+- The first time Arun met Ilya, the border collie therapist waited with professional stillness on a low platform beside two chairs sized for humans.
+- The clinic was warm without smelling medicinal. One wall displayed accreditation seals from mixed-species boards: Veterinary Cognitive Practice, Interpersonal Trauma Mediation, Licensed Clinical Counselor (Canine).
+- Arun stared too long at the seals.
+- “You can ask if they are real,” Ilya said through a matte-black collar speaker tuned low and unhurried. “Most first-session clients do.”
+- “I was looking,” Arun said, “at how quickly institutions rebrand once authority changes species.”
+- Ilya blinked once. “And what feeling did that observation protect?”
+- Arun almost laughed. “That fast?”
+- “We can spend forty minutes discussing history in the abstract,” Ilya said. “You are good at that. Or we can discuss why you haven’t slept through the night in nine months.”
+- Arun sat down hard. “I don’t like the reversal theater. Humans line up to confess to dogs who used to need us to open doors.”
+- Ilya’s ears tilted back, not submissive, just attentive. “You opened doors. We learned what doors are for. These are related but not identical facts.”
+- Arun looked at the carpet. Tight weave, dark blue, no pattern. “My daughter doesn’t tell me things anymore. She tells Mina first.”
+- The room stayed quiet long enough for Arun to regret speaking.
+- Ilya finally said, “That is the first non-theory sentence you have offered.”
+- “You enjoy this,” Arun muttered.
+- “No,” Ilya said. “I am good at this. Different.”
+- He asked Arun to describe one recent argument at home in sequence, without summaries and without adjectives. Arun resisted, then complied.
+- Friday, 19:10. Aria wanted to attend a student assembly on recognition rights for modified animals in public housing. Arun said the assembly was performative and badly timed before her exams. Aria asked whether "performative" meant "politics I don’t control." Arun raised his voice. Mina interrupted and asked both of them to lower volume because elevated frequencies triggered her hardware headaches.
+- “What did you do then?” Ilya asked.
+- “I told Mina not to parent my child.”
+- “And then?”
+- “Aria left. Mina locked the bedroom door from inside and would not talk to me for three hours.”
+- Ilya nudged a rubber ring with one paw, a tiny grounding motion. “What did you feel when Aria left?”
+- “Disrespected.”
+- Ilya waited.
+- “Afraid,” Arun said.
+- “Of?”
+- “That I am becoming a museum exhibit in my own family. An educational example of pre-transition masculinity.”
+- Ilya exhaled. “Better. Keep that sentence.”
+- Arun walked out of the clinic angry and lighter, which he hated.
+- ---
+- The wolf story began as data anomalies nobody trusted.
+- Sensor arrays in an Alberta wildlife corridor recorded patrol routes bending around camera cones before cameras rotated. Audio logs captured short bursts of modulated clicks layered under wind and spruce friction. A provincial analyst flagged possible tampering, then withdrew the report after being mocked on an internal call.
+- Juniper, a German shepherd who ran comparative cognition audits for the federal ethics office, revived the file three weeks later. She called Arun because he had built an early-generation error detector for communication-stack artifacts.
+- “I need you in Montreal by Thursday,” she said on encrypted video. “Bring your old paranoia and a clean laptop.”
+- “You know I don’t work government incidents anymore.”
+- “You do when the math is yours.”
+- The working group met in a secure conference room with bad fluorescent lighting and deliberately good coffee.
+- Juniper chaired from the center. To her right sat Céleste, a compact tabby engineer whose left ear had a notched tip and whose tablet displayed hardware schematics in three layered windows. Basil, a retriever statistician with an unfortunate talent for press charm, occupied the corner seat nearest the camera and pretended not to notice.
+- Human delegates included two ministry lawyers, a military liaison, a public-health deputy, and Arun, invited as external technical witness.
+- “Agenda item one,” Juniper said. “Are these signal features environmental artifacts, hostile spoofing, or intentional communication from modified canids in the corridor zone?”
+- “Or feral domestic escapees,” the military liaison said.
+- Céleste swiveled her tablet and highlighted jaw-muscle telemetry signatures embedded in the noise. “Not feral domestic. Implant geometry is wrong for commercial collars. This is improvised submandibular hardware with scar-pattern jitter. Pain likely.”
+- The public-health deputy frowned. “Could natural injury mimic that?”
+- “Not with periodic checksum framing,” Céleste said. “Someone taught these bodies to transmit.”
+- The room cooled by several degrees without the thermostat moving.
+- The first legal fight started before lunch.
+- If the wolves were enhanced, were they protected persons, research victims, biosecurity threats, or unlawful property? Each classification implied a different response: rescue, asylum, containment, or armed intervention.
+- “Pick wrong once,” Juniper said, “and we manufacture a catastrophe to prove we were prudent.”
+- Basil added, “Media will call them superpredators by sundown. We should decide whether we are governing facts or headlines.”
+- No one laughed.
+- ---
+- Arun returned home that night to find Aria and Mina at the table surrounded by poster board and thermal printer scraps.
+- Aria, sixteen and chronically unimpressed by adult panic, looked up only long enough to say, “You’re late.”
+- Mina said, “He smells like committee fear.”
+- “That’s oddly specific.”
+- “I have had years of practice.”
+- One of Aria’s signs read **PERSONHOOD IS NOT A BREED STANDARD**. Another read **NO FIRST GENERATION SACRIFICES**.
+- Arun set down his bag. “Where did that second line come from?”
+- Aria shrugged toward Mina.
+- Mina’s whiskers twitched. “From history.”
+- They ate lentils in a silence that was not hostile, exactly, but full.
+- Halfway through dinner Aria said, “If this is about the corridor, people at school already know. Clips are circulating. Some are fake. Some aren’t.”
+- “You’re not posting about it,” Arun said.
+- Aria put down her spoon. “You don’t get to decide that by default.”
+- Mina spoke before he could answer. “Pause. Arun, you are about to escalate volume. Aria, you are about to weaponize principle. Please choose one concrete request each.”
+- Aria said, “I want one hour online tonight with no surveillance software.”
+- Arun said, after a long breath, “I want you to send me any footage before you share it publicly.”
+- “Done,” Aria said.
+- Mina resumed eating as if she had merely adjusted room temperature.
+- Later, while washing dishes, Arun said quietly, “Thank you.”
+- Mina flicked water from one paw. “You thanked me last week and then ignored me for two days. I prefer consistency to gratitude.”
+- ---
+- On day three in Montreal, they cleaned a recovered uplink fragment from an abandoned ranger station.
+- Engineers removed interference bands from generator hum and weather static. Céleste recalibrated the decoder twice because the first pass overfit human vowel expectations.
+- When playback finally ran through the speakers, everyone in the room sat still enough to hear their own breathing.
+- Clicks. A wet metallic rasp. A burst of compressed carrier tone.
+- Then translation, rough and broken:
+- —hear fence before fence—
+- —metal in jaw hurts in rain—
+- —we were told after pain there would be open—
+- —where is the one who promised open—
+- The ministry lawyer covered her mouth.
+- The military liaison stared at the table, jaw clenched so tightly a tendon jumped.
+- Basil pressed both forepaws flat to the floor and did not speak.
+- Juniper broke the silence. “That is testimony.”
+- Arun found he was gripping his pen hard enough to split the barrel. He set it down carefully.
+- “We cannot classify this as hostile chatter,” he said. “There is intent, memory, and grievance.”
+- “And pain,” Céleste added. “Don’t erase the pain because the syntax impresses you.”
+- By evening they had drafted emergency recommendations: no lethal response absent imminent threat, immediate field med teams with sedation protocols designed for augmented cognition, independent legal observers, and a temporary moratorium on non-therapeutic enhancement in wild canids.
+- The military liaison refused to sign until language was added permitting defensive force if contact failed.
+- Juniper accepted the amendment with visible disgust. “Fine. But define ‘failed contact’ in writing, not adrenaline.”
+- ---
+- Two weeks later, at 23:40, Arun found Aria on the apartment roof under a blanket, city lights smearing orange across low cloud.
+- He sat beside her without asking questions first.
+- After a minute, she said, “At school they keep asking whether Mina is basically my sister now.”
+- “And what do you say?”
+- “That family isn’t a taxonomy quiz.”
+- Arun laughed once, softly. “That’s better than anything I said at sixteen.”
+- Aria picked at the blanket seam. “Are you scared all the time now?”
+- “Not all the time.” He considered. “Often enough.”
+- “Of the wolves?”
+- “Of us,” he said. “Of how fast we build power and how slowly we build rules for mercy.”
+- Aria leaned against his shoulder. “Mina says you think contradiction is a software bug.”
+- “That sounds like Mina.”
+- “Maybe it’s just… operating conditions.”
+- Below them, a delivery drone traced a white line between towers. Somewhere down the block a dog barked, then a synthetic voice from a collar asked, politely, for the back door to be opened.
+- Arun listened to the layered city sounds: engines, rain starting, one human shouting into a phone, one cat somewhere laughing in short chirps at something only she could see.
+- “I don’t know what this becomes,” he said.
+- “You don’t have to know tonight,” Aria replied.
+- He nodded. The uncertainty did not shrink, but it changed shape. It felt less like a wall and more like weather: still dangerous, still real, and not solved by pretending the sky was clear.
+- They stayed until the rain pushed them downstairs, where Mina waited by the door with a towel in her mouth and an expression that managed, somehow, to be both smug and relieved.
