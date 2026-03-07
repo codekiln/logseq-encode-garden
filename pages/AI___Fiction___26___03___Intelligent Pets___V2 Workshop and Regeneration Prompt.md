@@ -1,0 +1,71 @@
+source-page:: [[AI/Fiction/26/03/Intelligent Pets]]
+uses-notes-from:: [[AI/Fiction/26/03/Intelligent Pets/Readwise Highlights and Critique]]
+
+- # Intelligent Pets - V2 Workshop and Regeneration Prompt
+- ## 1) Story analysis (creative writing seminar mode)
+	- This is a speculative social novel compressed into short-story form.
+	- The real subject is not "smart animals" but **status reversal**:
+		- who gets personhood,
+		- who gets professional authority,
+		- who is allowed interiority,
+		- and who pays the moral cost of progress.
+	- Structurally, the piece moves in three arcs:
+		- **Worldbuilding escalation:** treatment -> enhancement -> interface -> institutions.
+		- **Domestic interior turn:** Arun + Aria + Mina + therapy with Ilya.
+		- **Political-moral crisis:** enhanced wolves expose the violence of uneven ethics.
+	- The strongest thematic thread is this paradox:
+		- empathy expands,
+		- but institutions still distribute dignity unevenly.
+	- The ending argues for psychological enlargement, not utopian resolution:
+		- coexistence remains absurd,
+		- maturity means holding contradiction without denial.
+- ## 2) Instructor feedback for second draft
+	- ### What is working
+		- Excellent high-concept premise with social stakes.
+		- Distinct tonal blend: satirical, elegiac, and philosophical.
+		- Effective pivot from macro-history to personal vulnerability.
+		- Memorable lines around therapy, species hierarchy, and first-generation harm.
+	- ### What needs revision
+		- **Abstraction overload:** too many declarative "big claims" without concrete scene evidence.
+		- **Metaphor clarity:** several images feel ornate but not precise (house/rooms, ladder/kitchen, "grown large enough").
+		- **Character load density:** named figures enter faster than readers can emotionally index.
+		- **Cadence repetition:** sentence patterns repeat "thesis sentence + aphoristic tag," flattening impact.
+		- **Causality gaps in science logic:** selective biological outcomes need in-world mechanisms or at least observed evidence.
+	- ### Revision directives
+		- For every abstract claim, add one sensory or procedural example.
+		- Cut or rewrite metaphors that cannot survive literal paraphrase.
+		- Reduce cast or stage entrances with one-line anchoring traits.
+		- Keep the wolf crisis as centerpiece, but seed it earlier with faint signals.
+		- Let one consequential scene play in real time (dialogue + gesture + consequence), not summary.
+- ## 3) V2 regeneration prompt (for external AI)
+	- Copy/paste prompt:
+		- You are revising a literary speculative short story titled "Intelligent Pets." Write a complete second draft that preserves the core premise (animal cognitive enhancement, social restructuring, therapy inversion, wolf crisis), but significantly improves narrative precision, scene grounding, and emotional continuity.
+		- Requirements:
+			- Keep a serious literary tone with occasional dry irony.
+			- Length target: 4,000-6,000 words.
+			- Third-person limited centered on Arun Vale.
+			- Preserve key characters: Arun, Aria, Mina (enhanced cat), Ilya (border collie therapist), Juniper, Basil, Céleste.
+			- Preserve key macro events: enhancement history, social/professional inversion, legal/ethical tensions, emergence of enhanced wolves, emergency policy working group.
+		- Critical improvements to implement:
+			- Replace vague proclamations with concrete examples (lab procedure, clinic interaction, media reaction, legal argument, field evidence).
+			- Ensure every major metaphor is intelligible on first read; prefer fresh-but-clear imagery.
+			- Reduce rhetorical repetition; vary sentence rhythm and paragraph architecture.
+			- Tighten chronology and causality of biotech effects across species.
+			- Introduce characters with immediate functional context so readers are never disoriented.
+			- Build through scenes, not only narrated summary.
+		- Non-negotiable scene list:
+			- First therapy session between Arun and Ilya with conflict and one genuine breakthrough.
+			- Domestic scene with Mina that reveals household power, affection, and friction.
+			- Working-group meeting that reveals political factions and fear.
+			- Playback of recovered wolf signal with visceral reaction from the room.
+			- Final intimate scene between Arun and Aria that lands on unresolved but earned hope.
+		- Thematically, foreground:
+			- personhood vs ownership,
+			- ethics lagging innovation,
+			- class stratification in cognitive enhancement,
+			- the cost borne by first-generation experimental subjects,
+			- maturation as capacity to hold contradiction.
+		- Output format:
+			- Title line.
+			- Story only (no commentary).
+			- After the story, include a 6-bullet craft note explaining exactly what changed from a likely first draft (scene density, metaphor handling, pacing, character clarity, thematic integration, ending strategy).

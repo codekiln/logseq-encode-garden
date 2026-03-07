@@ -1,0 +1,40 @@
+readwise-link:: https://readwise.io/reader/shared/01kk2jwr2z060gk1ptzq6087px
+source-page:: [[AI/Fiction/26/03/Intelligent Pets]]
+
+- # Intelligent Pets - Readwise Highlights and Critique
+- Imported from shared Readwise annotations.
+- ## Highlights + notes
+	- > The ethics boards grew cautious. Then porous. Then expensive.
+		- Note: Why porus?
+	- > A woman in São Paulo with a dying shepherd mix and a husband on the project.
+		- Note: This doesn’t make any sense. Why would you want to increase the intelligence of a dying pet?
+	- > A lab director in Kyoto who ran the protocol on an elderly cat because she could not bear the thought of the animal fading into confusion.
+		- Note: This seems pretty weird. With this researcher really worried about cat dementia?
+	- > Rats became too fragile.
+		- Note: This makes me laugh because it’s so nonsensical. How in the world would rats become fragile when given a neural stimulant
+	- > Their intelligence did not resemble a human increase so much as an unlocking. Their learning rates accelerated. Their attention deepened. Their curiosity became selective. They retained more than expected, inferred more than expected, generalized from less data than expected.
+		- Note: This part is just dying for examples. Without them, it is almost incomprehensible. What the heck does it mean to generalize from data more than expected for a dog?
+	- > Then society did what it always does with a profound rearrangement of reality: it converted it, wherever possible, into a profession.
+		- Note: This is stated so confidently, but it’s not very clear that it’s actually a useful statement to make. Examples are necessary.
+	- > But watching him—it was like seeing a house remain standing while more and more rooms became inaccessible from the inside.”
+		- Note: Clumsy comparison
+	- > When Arun tried, the dog would lift one paw slightly—a gesture Arun came to dread—and say, “You are presenting a conference version of an injury.” Or, “This sentence contains six defenses and no event.” Or, on one memorable morning, “I understand that irony has served you. It is not serving you now.”
+		- Note: Possibly too repetitive
+	- > “It is obscene,” she said one evening, “to build a ladder and then announce that only those already living in one’s kitchen may climb.”
+		- Note: How does a ladder in the kitchen make sense? Is this because of ladders for sentient cats climbing up?
+	- > Which usually means the first generation pays for everyone’s certainty.” That sentence lodged in him.
+		- Note: Good point… ?
+	- > He did know. Therapy had not made him happy. It had made him less hidden from himself, which was more disruptive and more useful. There were days he resented Ilya with an intensity that confirmed the work was real.
+	- > Juniper recruited him to an emergency working group because his expertise in adaptive systems intersected with the communication-stack signatures found in the corridor data. Basil joined for reasons that included both mathematical necessity and an inability to avoid any event with cameras. Céleste came because the interface artifacts suggested custom hardware. Mina insisted on reviewing every document before Arun left the apartment.
+		- Note: Have all these characters been introduced… and does that matter?
+	- > Arun found himself unable to sleep. He kept hearing the line: where is the one who said after this it would open. The sentence carried not just intelligence but betrayal.
+		- Note: Remarkably self aware
+	- > She glanced at him. “You may mourn the harms without fantasizing a world in which no door ever opened.” A world in which no door ever opened. The phrase stayed.
+		- Note: Ok now this is getting silly, it’s telling us when to pay attention, breaking the fourth wall
+	- > Another, a female called Ash by the media and something untranslatable by her observers, began participating through mediated signals in the drafting of her own treatment regimen. The world watched with the indecent hunger it always brought to firsts. Meanwhile life, stubbornly, continued in domestic dimensions.
+		- Note: Good
+	- > Aria asleep on a train years before enhancement politics remade public quiet.
+		- Note: Remade public quiet… what???
+	- > The world had not become harmonious. It had become more populated with minds.
+	- > Not because the absurdity had vanished, but because he had grown large enough to include it.
+		- Note: Large enough to include absurdity… this doesn’t make sense
