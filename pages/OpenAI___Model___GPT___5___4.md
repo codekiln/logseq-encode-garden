@@ -1,0 +1,62 @@
+alias:: [[gpt-5.4]]
+tags:: [[AI/Model]]
+
+- # [GPT-5.4](https://developers.openai.com/api/docs/models/gpt-5.4)
+	- ## Key Features
+		- OpenAI's frontier model for complex professional work
+		- Supports reasoning effort levels: `none`, `low`, `medium`, `high`, and `xhigh`
+		- Supports up to 1,050,000 tokens context window
+		- Max output: 128,000 tokens
+		- Knowledge cutoff: [[2025/08]]
+	- ## Performance Highlights
+		- Positioned by OpenAI as its most capable model for professional work
+		- Large-context pricing note
+			- For prompts above 272K input tokens, pricing increases to 2x input and 1.5x output for the full session
+	- ## Access Details
+		- Latest model alias: `gpt-5.4`
+		- Current snapshot: `gpt-5.4-2026-03-05`
+		- Endpoints
+			- `v1/chat/completions`
+			- `v1/responses`
+		- Modalities
+			- Input: text and images
+			- Output: text
+			- Audio and video: not supported
+		- Text pricing per 1M tokens
+			- Input: $2.50
+			- Cached input: $0.25
+			- Output: $15.00
+		- Regional processing endpoints are charged a 10% uplift
+	- ## Technical Specifications
+		- Supports reasoning tokens
+		- Features
+			- Streaming
+			- Function calling
+			- Structured outputs
+			- Distillation
+		- Tools in the Responses API
+			- Web search
+			- File search
+			- Image generation
+			- Code interpreter
+			- Hosted shell
+			- Apply patch
+			- Skills
+			- Computer use
+			- MCP
+			- Tool search
+		- Tier 1 rate limits
+			- 500 RPM
+			- 500,000 TPM
+			- 1,500,000 batch queue limit
+	- ## Related Tooling
+		- [playwright-interactive](https://github.com/openai/skills/tree/main/skills/.curated/playwright-interactive)
+			- New curated Codex skill from `openai/skills`
+			- Uses a persistent `js_repl` Playwright session for iterative browser and Electron debugging
+			- Emphasizes both functional QA and a separate visual QA pass
+			- Currently requires `js_repl` and `danger-full-access` according to the skill's `SKILL.md`
+	- ## References
+		- [OpenAI API model docs](https://developers.openai.com/api/docs/models/gpt-5.4)
+		- [OpenAI API pricing](https://developers.openai.com/api/pricing/)
+		- [Release announcement](https://openai.com/index/introducing-gpt-5-4/)
+		- [Playwright Interactive skill](https://raw.githubusercontent.com/openai/skills/main/skills/.curated/playwright-interactive/SKILL.md)
