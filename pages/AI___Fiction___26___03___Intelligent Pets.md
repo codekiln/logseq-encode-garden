@@ -2,6 +2,9 @@ cgpt-link:: https://chatgpt.com/share/69aad32d-c2b0-8000-b5f8-c8b9da34173c
 cgpt-public-link:: https://chatgpt.com/share/69aad32d-c2b0-8000-b5f8-c8b9da34173c
 
 - # Intelligent Pets
+- Related
+	- [[AI/Fiction/26/03/Intelligent Pets/Readwise Highlights and Critique]]
+	- [[AI/Fiction/26/03/Intelligent Pets/V2 Workshop and Regeneration Prompt]]
 - By the time humans admitted they were no longer the cleverest creatures in their own houses, it had already become impolite to call the transition an accident.
 - At first it had been marketed as a medical adjunct. Not for animals at all, officially. The treatment was supposed to support neural plasticity in aging humans, restore damaged cognitive pathways, sharpen memory, extend working attention. It belonged to that glittering, dangerous category of invention that began as therapy and drifted, almost immediately, toward enhancement. Investors liked the phrase recursive support architecture. Journalists liked gene lattice. The public liked any phrase that hinted they might become faster, brighter, less afraid of forgetting.
 - The treatment was not one thing. It was a choreography: a viral carrier descended from CRISPR systems, a scaffold of synthetic proteins, a bacteriophage-based delivery mesh, and a training regimen administered by machine tutors that adapted to the altered brain in real time. In humans the gains were real but uneven. A minority experienced startling improvements. Most became a little better at some things and worse at others. A few broke in ways that could not be repaired: insomnia, panic, obsessive loops, sensory shredding. The ethics boards grew cautious. Then porous. Then expensive.
