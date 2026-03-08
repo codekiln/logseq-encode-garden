@@ -1,4 +1,4 @@
-tags:: [[Diataxis/How To]]
+tags:: [[Diataxis/How To]], [[Apple/iOS/Scan Document]]
 
 - # How to Scan Documents to PDF using iPhone Files App
 	- ## Goal
@@ -10,7 +10,8 @@ tags:: [[Diataxis/How To]]
 	- ## Procedure
 		- ### 1. Open Files App
 			- Launch the **Files** app from your iPhone home screen
-			- Navigate to the folder where you want to save the PDF (e.g., iCloud Drive, On My iPhone)
+			- Navigate to the folder where you want to save the PDF
+			- If you know the PDF needs to land on your Mac soon, choose a destination that already has a clear export path
 		- ### 2. Access Scan Documents
 			- Tap the **three dots** (⋯) in the top-right corner
 			- Select **Scan Documents** from the menu
@@ -28,7 +29,9 @@ tags:: [[Diataxis/How To]]
 			- Tap **Retake** if you need to rescan a page
 		- ### 5. Save as PDF
 			- Tap **Save** in the top-right corner
-			- Choose your desired location (iCloud Drive, On My iPhone, etc.)
+			- Choose your desired location
+			- If you want the smoothest Mac handoff, prefer saving into a location that you can export directly to the Mac
+				- If you save to "On My iPhone," later USB transfer depends on whether that storage location appears in Finder under one of the app names in the `Files` tab
 			- Enter a filename for your PDF
 			- Tap **Save** to complete the process
 	- ## Advanced Features
@@ -41,7 +44,6 @@ tags:: [[Diataxis/How To]]
 			- Built-in filters for better text readability
 			- Automatic brightness and contrast adjustment
 		- ### Integration Options
-			- Save directly to iCloud Drive for cross-device access
 			- Share via AirDrop, Messages, or email
 			- Open in other apps like Adobe Acrobat or PDF Expert
 	- ## Tips for Best Results
@@ -55,6 +57,7 @@ tags:: [[Diataxis/How To]]
 		- **Poor quality scans**: Try adjusting filters or retaking the scan
 		- **Missing pages**: Check thumbnails at bottom to ensure all pages were captured
 		- **Can't find saved PDF**: Check the folder you selected during save process
+		- **Can't get the PDF onto a Mac later**: See [[iPhone/Files/App/How To/Transfer Files via USB to Mac]] because Files-app locations do not all map cleanly to Finder
 	- ## Related
 		- [[MacOS/How To/Import Only Some Photos via USB from iPhone]]
 		- [[iPhone/Files/App/How To/Transfer Files via USB to Mac]]

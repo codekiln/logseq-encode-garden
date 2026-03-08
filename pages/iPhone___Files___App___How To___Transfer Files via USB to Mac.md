@@ -10,8 +10,9 @@ tags:: [[Diataxis/How To]]
 		- Files app installed (built-in)
 	- ## Important Limitations
 		- **File Location Matters**: Files stored in "On My iPhone" are app-specific and only accessible if the app supports file sharing
-		- **iCloud Drive Files**: Files in iCloud Drive sync automatically and don't require USB transfer
+		- **Finder "Files" Tab Is App-Based**: Finder shows app containers that support file sharing, not a general browser for everything visible in the iPhone Files app
 		- **App Support Required**: Only apps that support file sharing will appear in Finder
+		- **Files App Scans Can Get Stuck**: PDFs created with Scan Documents and saved under "On My iPhone" may not appear in Finder unless that storage location shows up there under one of the app names in the `Files` tab
 	- ## Procedure
 		- ### Method 1: Using Finder File Sharing (macOS Catalina and later)
 			- **Connect Your iPhone:**
@@ -29,19 +30,7 @@ tags:: [[Diataxis/How To]]
 			- **Transfer Files:**
 				- To copy files to your Mac: Drag and drop files from the app's list to a folder on your Mac
 				- To add files from your Mac to your iPhone: Drag and drop files from your Mac into the app's list in Finder
-		- ### Method 2: Using iCloud Drive (Recommended for Most Files)
-			- **On iPhone:**
-				- Open the Files app
-				- Navigate to the file you want to transfer
-				- Long-press the file and select "Move" or "Copy"
-				- Navigate to iCloud Drive
-				- Tap "Copy" or "Move" to place the file in iCloud Drive
-			- **On Mac:**
-				- Files in iCloud Drive will automatically sync to your Mac
-				- Open Finder and navigate to iCloud Drive in the sidebar
-				- Your files will be available there
-			- **Note**: This method doesn't require USB, but files sync automatically when both devices are connected to the internet
-		- ### Method 3: For Files in "On My iPhone" Location
+		- ### Method 2: For Files in "On My iPhone" Location
 			- **Identify the Source App:**
 				- Files in "On My iPhone" are stored within specific apps
 				- Check which app created or stores the file
@@ -56,9 +45,7 @@ tags:: [[Diataxis/How To]]
 			- Long-press the file and select "Share"
 			- Choose "AirDrop" and select your Mac
 			- Accept the transfer on your Mac
-		- **Email or Cloud Services:**
-			- Use the Share sheet in Files app
-			- Send files to yourself via email or upload to cloud storage
+			- If AirDrop works reliably in your setup, this is often the fastest path for one-off PDFs
 		- **Third-Party Apps:**
 			- Use apps like Documents by Readdle or FileBrowser that support more file transfer options
 	- ## Troubleshooting
@@ -68,12 +55,15 @@ tags:: [[Diataxis/How To]]
 			- Check that you're using a data-capable USB cable (not just charging cable)
 		- **App doesn't appear in File Sharing:**
 			- The app may not support file sharing
-			- Try using iCloud Drive or AirDrop instead
-		- **Files not syncing from iCloud Drive:**
-			- Ensure both devices are signed into the same Apple ID
-			- Check that iCloud Drive is enabled in Settings > [Your Name] > iCloud
-			- Ensure both devices have internet connectivity
+			- Try AirDrop instead
+			- **File is visible on iPhone but not in Finder:**
+				- This usually means the place where the file is stored on the iPhone does not appear in Finder's `Files` tab
+				- If the file is under "On My iPhone," move or copy it into a folder that does appear there under one of the listed apps
+				- As a workaround, you may be able to move the file into a visible app folder, then drag it out from Finder on the Mac
+		- **USB transfer is unexpectedly slow:**
+			- Adapter chains and flaky Lightning connections can make small document transfers much slower than expected
+			- For one-off documents, prefer the simplest point-to-point path that works in your setup: Finder file sharing or AirDrop
 	- ## Related
 		- [[MacOS/How To/Import Only Some Photos via USB from iPhone]]
 		- [[iPhone/Files/App/How To/Scan Documents to PDF]]
-
+		- [[iPhone/Files/App/How To/Transfer Files via USB to Mac/26/03/08 Sun]]
