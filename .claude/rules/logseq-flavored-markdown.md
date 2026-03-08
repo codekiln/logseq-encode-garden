@@ -167,8 +167,8 @@ tags: Q, topicA
 - Footnotes in Logseq should use markdown footnote syntax such as `[^1]`
 - Footnote definitions should appear in a `Footnotes` section when collected at the end of a page
 - Footnote definitions should use URL-only style when citing sources: `[^1]: https://example.com`
-- When multiple footnote references appear inline next to each other, always separate them with commas and spaces
-- Correct inline format: `[^4], [^5]`
+- When multiple footnote references appear inline next to each other, always separate them with spaces
+- Correct inline format: `[^4] [^5]`
 - Incorrect inline format: `[^4][^5]`
 - Do not concatenate adjacent footnote markers, because some renderers visually collapse them into misleading numbers such as `45` or `145`
 - Ensure footnote definitions are nested properly under bullet points when used in Logseq Flavored Markdown

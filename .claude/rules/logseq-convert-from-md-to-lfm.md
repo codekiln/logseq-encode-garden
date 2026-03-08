@@ -68,7 +68,7 @@ or
 - [ ] Format footnotes as `[^1]: url` (not `[^1]: [descriptive text](url)`)
 - [ ] Remove descriptive link text from footnote definitions - Logseq footnotes should contain URLs directly
 - [ ] Ensure footnotes are properly nested under bullet points
-- [ ] When multiple footnote references appear next to each other inline, separate them with commas and spaces for readability (for example, `[^4], [^5]`, not `[^4][^5]`)
+- [ ] When multiple footnote references appear next to each other inline, separate them with spaces for readability (for example, `[^4] [^5]`, not `[^4][^5]`)
 - [ ] Do not concatenate adjacent footnote markers, because some renderers visually collapse them into misleading numbers such as `45` or `145`
 - [ ] Reference: See [Logseq___How To___Create a Markdown Footnote.md](../pages/Logseq___How To___Create a Markdown Footnote.md) for details
 - [ ] Example conversion:
@@ -79,7 +79,7 @@ or
 - [ ] Example inline conversion:
   ```
   FROM: Finder supports this.[^4][^5]
-  TO:   Finder supports this.[^4], [^5]
+  TO:   Finder supports this.[^4] [^5]
   ```
 
 ## Common Pitfalls That Required Correction

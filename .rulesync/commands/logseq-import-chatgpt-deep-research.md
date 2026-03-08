@@ -69,7 +69,7 @@ Follow the logseq-convert-from-md-to-lfm rule:
 
 - [ ] Identify all numbered references in the PDF (typically superscript numbers or bracketed numbers like `1`, `2`, `[1]`, `[2]`)
 - [ ] Convert these to Logseq footnote format: `[^1]`, `[^2]`, `[^3]`
-- [ ] When citing multiple footnotes inline, separate them with commas and spaces: `[^4], [^5]` not `[^4][^5]`
+- [ ] When citing multiple footnotes inline, separate them with spaces: `[^4] [^5]` not `[^4][^5]`
 - [ ] Avoid adjacent footnote markers without separators, because some renderers visually collapse them into fake numbers like `45` or `145`
 - [ ] **Extract URLs from the PDF**: ChatGPT Deep Research reports should already contain URLs in the footnotes/references section. Extract these URLs directly from the PDF.
 - [ ] **If URLs are missing or incomplete** (fallback only):
@@ -94,7 +94,7 @@ Follow the logseq-convert-from-md-to-lfm rule:
 - [ ] Ensure each unique URL appears only once in the footnotes section
 
 **Example**: If `[^3]`, `[^4]`, `[^5]`, `[^6]` all point to the same URL, consolidate to `[^3]` and update all references.
-When multiple different footnotes remain inline after consolidation, render them as `[^3], [^7]` rather than `[^3][^7]`.
+When multiple different footnotes remain inline after consolidation, render them as `[^3] [^7]` rather than `[^3][^7]`.
 
 ### Step 7: Add Frontmatter
 
@@ -140,7 +140,7 @@ After completing the import, report:
 2. **Using wrong namespace format** - Remember: `___` in filenames, `/` in links
 3. **Footnotes with descriptive text** - Use URL only: `[^1]: https://url.com` not `[^1]: [text](url)`
 4. **Not consolidating duplicates** - Always deduplicate footnotes pointing to same URL
-5. **Adjacent footnotes without separators** - Use commas between inline footnotes so renderers do not display misleading merged numbers such as `45`
+5. **Adjacent footnotes without separators** - Use spaces between inline footnotes so renderers do not display misleading merged numbers such as `45`
 6. **Modifying frontmatter tags** - Never modify existing `tags::` frontmatter, only add if missing
 7. **Missing footnote URLs** - All footnotes should have actual hyperlinks, not placeholder text
 8. **Over-linking entities** - Only link when user confirms and when it adds semantic value
