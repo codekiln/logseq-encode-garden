@@ -17,3 +17,10 @@ tags:: [[Gripe]]
 		- ==INANE WORKAROUND==
 			- I transferred my document to the "Spotify" folder in the files app. Then I was able to use go to MacBook's Finder > Locations > iPhone > Files > Spotify, locate the file, drag to downloads. Spotify's folder to get it off my iPhone and onto my mac.
 	- Surely, there must be a way to do this via the CLI / terminal? I freaking hate Apple's UX.
+	- [Transferring files direct to PC without iTunes/iCloud : r/iphonehelp](https://www.reddit.com/r/iphonehelp/comments/1gxfg1v/comment/lyguqsm/)
+		- LOL, apparently I'm not the only one with this question. Everyone is saying,
+			- use [[Telegram]]
+			- use [[Email]]
+			- use [[LocalSend]] (new to me!)
+			- use [[Apple/AirDrop]] (which, as far as I can tell, requires [[Apple/iCloud]] or [[Apple/Continuity]], which as far as I'm concerned are three flavors of the same thing, in order to work reliably)
+		- Ok, I'm starting to realize that I need to start to make my own app for iphone

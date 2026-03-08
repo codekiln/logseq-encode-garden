@@ -1,0 +1,28 @@
+date-created:: [[2025/08]]
+- # [Faircamp lets you put sound, podcasts, and music on your own site - CDM Create Digital Music](https://cdm.link/faircamp-intro/)
+	- ![faircamp](https://cdm.link/app/uploads/2025/08/darkweb.jpg)
+	- Peter Kirn, August 21, 2025
+	- ## [[My Notes]]
+		- [[FairCamp]] turns a folder of audio into a complete static site with a web player, playlists, RSS, downloads, and optional purchase or unlock flows.
+		- The article frames it as more useful than a simple [[Bandcamp]] alternative because it solves self-hosted publishing on infrastructure you control.
+		- Emphasis is on free, non-profit, AGPLv3+ software that avoids ongoing server maintenance and does not require coding.
+		- The article also points to embeds, accessibility, responsive layouts, and private or unlisted releases as part of the appeal.
+	- ## Feature Highlights
+		- Runs on Windows, macOS, and Linux.
+		- Streaming support with web player and embeds.
+		- Browse and search.
+		- Automatic transcoding.
+		- Podcast RSS.
+		- M3U playlist support.
+		- Generated downloads for tracks and full releases.
+		- Unlock codes and a soft paycurtain.
+		- External download or purchase links.
+		- Label mode for multiple projects on one site.
+		- Accessible and responsive design.
+		- Unlisted releases.
+	- ## Links
+		- [Faircamp](https://simonrepp.com/faircamp)
+		- [Faircamp integration: How I integrated Faircamp within my website](https://www.lucamancini.com/stuff/faircamp-integration/)
+		- [faircamp.webr.ing](https://faircamp.webr.ing)
+		- [Hyper 8](https://simonrepp.com/hyper8)
+		- [simonrepp/hyper8](https://codeberg.org/simonrepp/hyper8)

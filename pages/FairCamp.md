@@ -1,0 +1,9 @@
+- # [Faircamp](https://simonrepp.com/faircamp)
+	- Static site generator for audio producers.
+	- Point it at a folder hierarchy of audio files and it builds a complete static website.
+	- Runs on Windows, macOS, and Linux.
+	- Includes a web player, embeds, podcast RSS, M3U playlists, automatic transcoding, downloads, and label mode.
+	- Source code: [simonrepp/faircamp](https://codeberg.org/simonrepp/faircamp)
+	- See also:
+		- [[cdm/Blog/25/08/Faircamp lets you put sound on your own site]]
+		- [[Person/Webmaster Henry]]

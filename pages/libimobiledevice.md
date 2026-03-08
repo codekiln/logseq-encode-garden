@@ -1,0 +1,8 @@
+- # [libimobiledevice](https://libimobiledevice.org/)
+	- A cross-platform FOSS library written in C to communicate with iOS devices natively.
+	- The project also includes libraries and command-line tools for tasks such as reading device information, app management, backup, filesystem access, debugging, activation, and firmware work.
+	- Supports both USB access and wireless access for devices with Wi-Fi Sync enabled on iOS 11 and later.
+	- ## Links
+		- [Homepage](https://libimobiledevice.org/)
+		- [GitHub](https://github.com/libimobiledevice/libimobiledevice)
+		- [[ifuse]]

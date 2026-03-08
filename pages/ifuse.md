@@ -1,0 +1,7 @@
+- # [ifuse](https://github.com/libimobiledevice/ifuse)
+	- A FUSE filesystem implementation to access the contents of iOS devices.
+	- Uses [[libimobiledevice]] for communication with the device.
+	- Can mount an iOS device's media directory, app documents or containers, and on some jailbroken devices the root filesystem.
+	- ## Links
+		- [GitHub](https://github.com/libimobiledevice/ifuse)
+		- [Homepage](https://libimobiledevice.org/)
