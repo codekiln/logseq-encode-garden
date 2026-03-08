@@ -1,68 +1,79 @@
 tags:: [[Diataxis/How To]]
-
 - # How to Transfer Files from [[iPhone]] [[Files App]] to [[Mac]] via [[USB]]
 	- ## Goal
-		- Transfer files stored in the iPhone Files app to a Mac computer using a USB cable connection
+		- Transfer PDF and document files from [[iPhone]] to [[Mac]] over a direct wired USB connection, without depending on [[Apple/iCloud]] or [[Apple/AirDrop]]
+	- ## Executive Conclusion
+		- The best first-party wired workflow is to use Finder's `Files` tab, but deliberately save the PDF inside the on-device folder of an app that supports File Sharing, such as Pages or Numbers.[^1], [^2], [^4], [^5]
+		- Finder does not expose a general browser for everything visible in the [[Files App]]. It only exposes app-specific shared document containers.[^1], [^2]
+		- If a PDF lives in a Files location that is not part of a File Sharing-enabled app container, there is no official Apple-supported direct USB path to drag it out from Finder.[^1], [^2]
 	- ## Preconditions
-		- iPhone with iOS 11 or later
-		- Mac computer (macOS Catalina or later uses Finder; earlier versions use iTunes)
-		- USB cable (Lightning-to-USB or USB-C, depending on your iPhone model)
-		- Files app installed (built-in)
+		- [[iPhone]] with the built-in [[Files App]]
+		- [[Mac]] running a version of macOS that uses Finder for device file sharing
+		- A USB cable that supports both data and charging, not charging only.[^6]
+		- The destination PDF must already be in, or be movable into, a File Sharing-enabled app container.[^1], [^2]
 	- ## Important Limitations
-		- **File Location Matters**: Files stored in "On My iPhone" are app-specific and only accessible if the app supports file sharing
-		- **Finder "Files" Tab Is App-Based**: Finder shows app containers that support file sharing, not a general browser for everything visible in the iPhone Files app
-		- **App Support Required**: Only apps that support file sharing will appear in Finder
-		- **Files App Scans Can Get Stuck**: PDFs created with Scan Documents and saved under "On My iPhone" may not appear in Finder unless that storage location shows up there under one of the app names in the `Files` tab
+		- **File location matters**: A document being visible in `On My iPhone` does not mean Finder can access it.[^1], [^2]
+		- **Finder `Files` is app-based**: Finder shows apps that support File Sharing, not a general-purpose view of the [[Files App]].[^1]
+		- **App support is required**: If an app does not appear in Finder's `Files` tab, its documents are not available there.[^1]
+		- **Scan destination matters**: If you scan a PDF into a non-shareable location, you may need to move it into a shareable app folder before USB export works.[^3], [^4], [^5]
 	- ## Procedure
-		- ### Method 1: Using Finder File Sharing (macOS Catalina and later)
-			- **Connect Your iPhone:**
-				- Use a USB cable to connect your iPhone to your Mac
-				- Unlock your iPhone
-				- If prompted, tap "Trust This Computer" and enter your iPhone passcode
-			- **Open Finder:**
-				- Open Finder on your Mac
-				- In the Finder sidebar, look for your iPhone under "Locations"
-				- Click on your iPhone to select it
-			- **Access File Sharing:**
-				- Click on the "Files" tab in the main Finder window
-				- You'll see a list of apps that support file sharing
-				- Select the app that contains the files you want to transfer
-			- **Transfer Files:**
-				- To copy files to your Mac: Drag and drop files from the app's list to a folder on your Mac
-				- To add files from your Mac to your iPhone: Drag and drop files from your Mac into the app's list in Finder
-		- ### Method 2: For Files in "On My iPhone" Location
-			- **Identify the Source App:**
-				- Files in "On My iPhone" are stored within specific apps
-				- Check which app created or stores the file
-			- **Check App File Sharing Support:**
-				- Connect iPhone via USB and open Finder
-				- Look for the app in the File Sharing section
-				- If the app appears, you can transfer files using Method 1
-				- If the app doesn't appear, it doesn't support file sharing via USB
+		- ### Recommended First-Party Workflow
+			- 1. Open Pages or Numbers on the iPhone at least once so its on-device folder exists in `On My iPhone`.[^4], [^5]
+			- 2. In the [[Files App]], create a staging folder such as `To Mac (USB)` inside that app's folder.
+			- 3. When scanning a document, save it directly into that staging folder instead of a random location in `On My iPhone`.[^3]
+			- 4. Connect the iPhone to the Mac with a data-capable USB cable.[^6]
+			- 5. Unlock the iPhone. If prompted on the Mac, allow the accessory connection. If prompted on the iPhone, tap `Trust This Computer`.[^6], [^7]
+			- 6. In Finder, select the iPhone under `Locations`, click `Files`, expand the app you used as the staging location, then drag the PDF to a folder on the Mac.[^1], [^4], [^5]
+		- ### Why This Works
+			- Finder can copy files out of app containers that participate in File Sharing.[^1]
+			- Pages and Numbers explicitly document Finder-based transfer into and out of their app folders, which makes them practical staging apps for scanned PDFs.[^4], [^5]
+			- The important trick is not "scan first, solve later." It is "choose a USB-exportable save location at scan time."[^3], [^4], [^5]
+		- ### What Finder Can and Cannot Access
+			- Finder can:
+				- Show apps that support File Sharing.[^1]
+				- Drag files from those app containers to the Mac.[^1]
+			- Finder cannot:
+				- Browse the iPhone like a normal external drive.[^1], [^2]
+				- Show every folder or file visible in the [[Files App]].[^1], [^2]
+				- Reach arbitrary `On My iPhone` locations unless they belong to a shareable app container.[^1], [^2]
 	- ## Alternative Methods (When USB File Sharing Isn't Available)
-		- **AirDrop:**
-			- Open Files app on iPhone
-			- Long-press the file and select "Share"
-			- Choose "AirDrop" and select your Mac
-			- Accept the transfer on your Mac
-			- If AirDrop works reliably in your setup, this is often the fastest path for one-off PDFs
-		- **Third-Party Apps:**
-			- Use apps like Documents by Readdle or FileBrowser that support more file transfer options
+		- **Apple Configurator**:
+			- Apple Configurator can export user-created documents over USB, but the document still has to be associated with an app that allows document management.[^8]
+			- This is a heavier workflow than Finder, but still first-party.
+		- **iMazing**:
+			- iMazing can access app documents and can be more forgiving in practice, but it still inherits Apple's app-container boundary for direct file-sharing style access.[^10]
+		- **ifuse / libimobiledevice**:
+			- `ifuse` can mount iOS content and app document containers for technical users, but it does not turn the entire [[Files App]] into a mountable general filesystem.[^9]
+			- This is mainly useful if you specifically want a CLI workflow.
 	- ## Troubleshooting
-		- **iPhone doesn't appear in Finder:**
-			- Ensure iPhone is unlocked and you've tapped "Trust This Computer"
-			- Try disconnecting and reconnecting the USB cable
-			- Check that you're using a data-capable USB cable (not just charging cable)
-		- **App doesn't appear in File Sharing:**
-			- The app may not support file sharing
-			- Try AirDrop instead
-			- **File is visible on iPhone but not in Finder:**
-				- This usually means the place where the file is stored on the iPhone does not appear in Finder's `Files` tab
-				- If the file is under "On My iPhone," move or copy it into a folder that does appear there under one of the listed apps
-				- As a workaround, you may be able to move the file into a visible app folder, then drag it out from Finder on the Mac
-		- **USB transfer is unexpectedly slow:**
-			- Adapter chains and flaky Lightning connections can make small document transfers much slower than expected
-			- For one-off documents, prefer the simplest point-to-point path that works in your setup: Finder file sharing or AirDrop
+		- **iPhone doesn't appear in Finder**:
+			- Unlock the iPhone.[^6], [^7]
+			- If macOS shows `Allow accessory to connect?`, click `Allow`.[^6]
+			- If iPhone shows `Trust This Computer?`, tap `Trust`.[^6], [^7]
+			- Try another USB cable or port. The cable must support data as well as charging.[^6]
+		- **The app does not appear under Finder `Files`**:
+			- The app probably does not support File Sharing.[^1]
+			- Move the PDF into a folder for an app that does support Finder transfer, such as Pages or Numbers, then reconnect.[^4], [^5]
+		- **The file is visible on iPhone but not in Finder**:
+			- This usually means the file is stored in a Files location that Finder cannot access directly.[^1], [^2]
+			- Move or save the PDF into a visible app container, then retry.[^4], [^5]
+		- **USB transfer is unexpectedly slow or flaky**:
+			- Suspect cable quality, adapter chains, trust prompts, or unstable device recognition before suspecting PDF size.[^6], [^7]
+	- ## CLI Notes
+		- Apple's practical first-party USB export workflow is Finder, or Apple Configurator's GUI export, not a polished built-in CLI for document export.[^8]
+		- If you want terminal-driven export, `ifuse` is the most realistic open-source path, but it still only helps with content Apple exposes through the same app-container model.[^9]
+		- CLI does not remove the main limitation: the file must already live in an eligible app container.[^1], [^2], [^9]
+	- ## Footnotes
+		- [^1]: https://support.apple.com/en-us/HT210598
+		- [^2]: https://support.apple.com/en-me/guide/iphone/iph339bafff3/ios
+		- [^3]: https://support.apple.com/en-my/108963
+		- [^4]: https://support.apple.com/en-lamr/guide/pages-iphone/tanb5b5c055/ios
+		- [^5]: https://support.apple.com/guide/numbers-iphone/transfer-spreadsheets-with-the-finder-tan33125c726/ios
+		- [^6]: https://support.apple.com/en-us/108643
+		- [^7]: https://support.apple.com/en-ph/HT208857
+		- [^8]: https://support.apple.com/et-ee/guide/apple-configurator-mac/cadbf9cc10/mac
+		- [^9]: https://github.com/libimobiledevice/ifuse
+		- [^10]: https://support.imazing.com/hc/en-us/articles/206140907-iOS-8-3-File-Sharing
 	- ## Related
 		- [[MacOS/How To/Import Only Some Photos via USB from iPhone]]
 		- [[iPhone/Files/App/How To/Scan Documents to PDF]]

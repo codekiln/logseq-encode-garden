@@ -68,11 +68,18 @@ or
 - [ ] Format footnotes as `[^1]: url` (not `[^1]: [descriptive text](url)`)
 - [ ] Remove descriptive link text from footnote definitions - Logseq footnotes should contain URLs directly
 - [ ] Ensure footnotes are properly nested under bullet points
+- [ ] When multiple footnote references appear next to each other inline, separate them with commas and spaces for readability (for example, `[^4], [^5]`, not `[^4][^5]`)
+- [ ] Do not concatenate adjacent footnote markers, because some renderers visually collapse them into misleading numbers such as `45` or `145`
 - [ ] Reference: See [Logseq___How To___Create a Markdown Footnote.md](../pages/Logseq___How To___Create a Markdown Footnote.md) for details
 - [ ] Example conversion:
   ```
   FROM: [^1]: [Free tokens extended through April 30, 2025](https://example.com)
   TO:   [^1]: https://example.com
+  ```
+- [ ] Example inline conversion:
+  ```
+  FROM: Finder supports this.[^4][^5]
+  TO:   Finder supports this.[^4], [^5]
   ```
 
 ## Common Pitfalls That Required Correction
@@ -83,6 +90,7 @@ or
 4. Tables being left in markdown format instead of being converted to bullet points
 5. Headings not matching their indentation level (e.g., using `##` at root level or `#` at indented level)
 6. Footnotes formatted with descriptive link text instead of direct URLs (e.g., `[^1]: [text](url)` instead of `[^1]: url`)
+7. Adjacent footnote references being written without separators, causing the renderer to display misleading merged numbers such as `45`
 
 ## Example of Required Changes
 
