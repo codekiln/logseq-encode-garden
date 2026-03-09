@@ -1,0 +1,22 @@
+alias:: [[People/Esther Duflo]]
+- # Esther Duflo
+	- ## About
+		- French economist at MIT, where she is Abdul Latif Jameel Professor of Poverty Alleviation and Development Economics.
+		- Co-founder and co-director of J-PAL, and winner of the 2019 Nobel Memorial Prize in Economic Sciences with Abhijit Banerjee and Michael Kremer for the experimental approach to alleviating global poverty.
+		- Known for breaking large social problems into testable questions and using field experiments to evaluate what actually improves outcomes.
+	- ## Why she is interesting
+		- Her posture toward AI reads as pragmatic rather than skeptical: she is interested in using machine learning where it helps target programs better, while keeping the focus on measurable human outcomes.
+		- A recurring theme in her work is distributed capability building through education, not just centralized expertise.
+		- She has invested heavily in open and blended teaching formats so people outside MIT can learn the tools of policy evaluation and apply them locally.
+	- ## Education and distributed learning
+		- Through MITx and the DEDP MicroMasters, she helped build a model for teaching policy evaluation at global scale.
+		- That work emphasizes that people should be able to learn rigorous methods wherever they are, then reuse them in their own institutions and contexts.
+		- The same orientation shows up in her broader research program: train more people, share methods widely, and let knowledge travel instead of remaining concentrated in a few elite centers.
+	- ## AI and evaluation
+		- In public remarks, she has described machine learning as useful for understanding where programs are most effective and where limited budgets should be deployed.
+		- That fits her larger style: AI as an applied tool inside evaluation and decision-making, not as a substitute for policy judgment or ground-truth evidence.
+	- ## External Links
+		- [J-PAL profile](https://www.povertyactionlab.org/person/duflo)
+		- [Nobel Prize facts](https://www.nobelprize.org/prizes/economic-sciences/2019/duflo/facts/)
+		- [MIT Open Learning impact report feature](https://impact-openlearning.mit.edu/2024-2025-open-learning-impact-report)
+		- [Infinite MIT interview](https://infinite.mit.edu/video/esther-duflo/)

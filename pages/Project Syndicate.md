@@ -1,0 +1,20 @@
+- ## Project Syndicate
+	- Project Syndicate is a global opinion journalism organization that distributes commentary and analysis by prominent economists, political leaders, scholars, and activists.
+	- Based in Prague, it provides high-quality, multilingual op-eds to media outlets worldwide, aiming to broaden access to informed global debate on economic, political, and social issues.
+	- https://www.project-syndicate.org/
+	- ### Key facts
+		- **Founded:** 1995
+		- **Headquarters:** Prague, Czech Republic
+		- **Content languages:** Over 12
+		- **Network:** 500+ media outlets in 150+ countries
+		- **Founder:** George Soros's Open Society Foundations provided early support
+	- ### Mission and scope
+		- Project Syndicate's mission is to democratize access to expert opinion by providing newspapers and online platforms with thought-provoking analysis at low or no cost in developing regions.
+		- It seeks to counter media concentration by amplifying diverse global perspectives on pressing international challenges.
+	- ### Contributors and content
+		- The organization's roster includes influential figures such as [[Person/Joseph E. Stiglitz]], [[Person/Ngaire Woods]], and [[Person/Ana Palacio]].
+		- Columns cover topics like global economics, governance, sustainability, and technology.
+		- Each piece is syndicated to partner publications and translated into multiple languages for worldwide reach.
+	- ### Influence and reach
+		- By serving as a bridge between academia, policy, and the public sphere, Project Syndicate helps shape international discourse.
+		- Its articles appear in leading outlets across continents, from Latin America and Africa to Europe and Asia, making it a significant node in the global flow of ideas and policy debates.

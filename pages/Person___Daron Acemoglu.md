@@ -1,0 +1,24 @@
+alias:: [[People/Daron Acemoglu]]
+date-created:: [[1967-09-03 Fri]]
+- # Daron Acemoglu
+	- ## Bio
+		- Turkish-American economist, MIT Institute Professor, and 2024 Nobel laureate in economic sciences.
+		- Best known for work on how institutions shape prosperity, democracy, inequality, labor, and long-run economic development.
+		- A useful thought leader for questioning technological inevitability: he tends to ask who benefits, who loses power, and what kinds of institutions channel innovation toward shared prosperity.
+		- On AI, his stance is not simple rejection but sustained skepticism toward hype, concentrated corporate control, labor displacement, weakened democracy, and systems that make people less capable rather than more capable.
+		- His work with Simon Johnson on *Power and Progress* and related research argues for a more pro-worker, pro-human direction for AI and automation.
+	- ## Suggested Tags
+		- economics
+		- political economy
+		- institutions
+		- democracy
+		- inequality
+		- automation
+		- artificial intelligence
+		- labor
+	- ## Related
+		- [MIT Sloan faculty page](https://mitsloan.mit.edu/faculty/directory/daron-acemoglu)
+		- [Nobel Prize facts page](https://www.nobelprize.org/laureate/1044)
+		- [Nobel interview](https://www.nobelprize.org/prizes/economic-sciences/2024/acemoglu/interview/)
+		- [Brookings: The promises and risks of artificial intelligence](https://www.brookings.edu/events/the-promises-and-risks-of-artificial-intelligence-a-conversation-with-daron-acemoglu/)
+		- [MIT News on the 2024 Nobel Prize](https://news.mit.edu/2024/mit-economists-daron-acemoglu-simon-johnson-nobel-prize-economics-1014)
