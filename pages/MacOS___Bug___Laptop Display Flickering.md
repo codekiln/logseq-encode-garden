@@ -1,0 +1,3 @@
+- [[2026-03-10 Tue]]
+	- discovered that my built-in macbook display was flickering on and off.
+	- there was a slight moisture / residue near the back left part of the keyboard to display attachment. it's possible that some moisture from a sealed but leaky container in my backpack made it inside.

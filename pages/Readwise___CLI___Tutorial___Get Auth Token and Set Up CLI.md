@@ -1,6 +1,6 @@
 tags:: [[Readwise]], [[CLI/Tool]], [[Diataxis/Tutorial]]
 
-- # Tutorial: Get Auth Token and Set Up Readwise CLI
+- # Tutorial: Get Auth Token and Set Up [[Readwise/CLI]] Readwise CLI
 	- ## What You'll Create
 		- A working Readwise CLI setup that allows you to interact with your Readwise Reader library from the command line
 		- You'll be able to add articles, list documents, and manage your reading list using `rw-cli` commands
@@ -25,15 +25,15 @@ tags:: [[Readwise]], [[CLI/Tool]], [[Diataxis/Tutorial]]
 			- Open your terminal
 			- Install `rw-cli` using pip:
 				- ~~~bash
-				pip install readwise-reader-cli
-				~~~
+				  pip install readwise-reader-cli
+				  ~~~
 			- Wait for the installation to complete
 			- You should see a success message when installation finishes
 		- ### 3. Configure the CLI with Your Token
 			- Set your Readwise access token as an environment variable:
 				- ~~~bash
-				export READWISE_ACCESS_TOKEN="your_token_here"
-				~~~
+				  export READWISE_ACCESS_TOKEN="your_token_here"
+				  ~~~
 			- Replace `your_token_here` with the actual token you copied in step 1
 			- Notice that we're using the environment variable `READWISE_ACCESS_TOKEN` which the CLI will automatically detect
 			- **Optional:** To make this permanent, add the export command to your shell configuration file:
@@ -43,20 +43,20 @@ tags:: [[Readwise]], [[CLI/Tool]], [[Diataxis/Tutorial]]
 		- ### 4. Verify Your Setup
 			- Test that the CLI is installed and working:
 				- ~~~bash
-				rw-cli --help
-				~~~
+				  rw-cli --help
+				  ~~~
 			- You should see a list of available commands
 			- Try listing your documents to verify authentication:
 				- ~~~bash
-				rw-cli list
-				~~~
+				  rw-cli list
+				  ~~~
 			- If successful, you'll see a list of documents from your Readwise Reader library
 			- If you get an authentication error, double-check that your token is set correctly
 		- ### 5. Try Adding an Article (Optional)
 			- Test adding a new article to your Reader library:
 				- ~~~bash
-				rw-cli add https://example.com/article
-				~~~
+				  rw-cli add https://example.com/article
+				  ~~~
 			- Replace the URL with any article you want to save
 			- You should see a success message confirming the article was added
 			- Check your Readwise Reader to verify the article appears in your library
