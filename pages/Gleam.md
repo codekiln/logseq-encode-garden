@@ -1,0 +1,27 @@
+tags:: [[Programming/Language]], [[Diataxis/Explanation]]
+- # Gleam Conceptual Overview
+	- ## Overview
+		- Gleam is a statically typed functional programming language for building reliable systems on the Erlang runtime, with an additional JavaScript compilation target.[^1]
+		- The project positions itself around friendly tooling and operationally serious workloads: compiler, build tool, formatter, editor integrations, and package manager are built in.[^1]
+	- ## Context
+		- Gleam sits in the BEAM ecosystem alongside Erlang and [[Elixir]], but aims for a more explicitly typed and uniform developer experience.[^1]
+		- Its practical appeal is that it combines BEAM concurrency and fault-tolerance with a modern syntax and cross-language interoperability.[^1]
+	- ## Key Principles
+		- **Type-safe by default** - The language emphasizes static typing, clear errors, and the absence of null values and exceptions in the style promoted on the official site.[^1]
+		- **BEAM-native** - Gleam can use packages from Gleam, Erlang, and Elixir, which means it inherits a large existing ecosystem instead of starting from zero.[^1]
+		- **Dual-target mindset** - Gleam targets the Erlang VM for backend/runtime use and JavaScript for browser or JS runtime use, with generated TypeScript definitions for integration.[^1]
+		- **Tooling included** - The language bundles the core developer workflow instead of outsourcing it to a pile of third-party tools.[^1]
+	- ## Mechanism
+		- A new project starts with `gleam new`, dependencies are managed with `gleam add`, and tests run with `gleam test`.[^1]
+		- On the BEAM side, Gleam leans on actor-style concurrency and immutable data structures.[^1]
+		- On the interop side, Gleam can call into Erlang and Elixir code and can also compile code to JavaScript for browser-facing or mixed-runtime applications.[^1]
+	- ## Misconceptions
+		- **Gleam is just Elixir with types** -> Not really. The runtime overlap is real, but the language design, syntax, and developer ergonomics are their own thing.
+		- **Gleam is backend-only** -> False. The official project also supports JavaScript output and TypeScript definitions.[^1]
+		- **Using Gleam means giving up the BEAM ecosystem** -> False. Interop with Erlang and Elixir is one of the main value propositions.[^1]
+	- ## Related
+		- [[Elixir]]
+		- [[Ash Framework]]
+		- [[Mog]]
+		- ### Footnotes
+			- [^1]: https://gleam.run/

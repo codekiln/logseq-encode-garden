@@ -1,0 +1,29 @@
+tags:: [[Framework]], [[Elixir]], [[Diataxis/Explanation]]
+- # Ash Framework Conceptual Overview
+	- ## Overview
+		- Ash is an opinionated, declarative application framework for [[Elixir]] that focuses on modeling an application's domain and deriving large amounts of application behavior from that model.[^1] [^2]
+		- The official positioning is concise: model your domain, derive the rest.[^2]
+	- ## Context
+		- Ash is aimed at the repetitive parts of serious application work: domain logic, authorization, filtering, sorting, pagination, relationships, APIs, and extension points.[^1]
+		- It is commonly used with Phoenix and PostgreSQL, but is designed to slot into a normal Elixir codebase rather than replace the language or runtime.[^1] [^2]
+	- ## Key Principles
+		- **Resources and actions** - Ash describes the application primarily through resources and the actions those resources expose.[^1]
+		- **Behavior-first modeling** - The framework emphasizes meaningful domain operations like `:publish_post` or `:approve_order` rather than exposing raw tables and ad hoc controller logic everywhere.[^1]
+		- **Declarative extensibility** - The core framework is extended by packages for data layers, API layers, auth, admin, jobs, and other concerns.[^1]
+		- **Productivity with structure** - The framework trades some low-level freedom for consistency and leverage in larger applications.
+	- ## Mechanism
+		- Domains act as entry points for related resources and operations.[^1]
+		- Resources describe attributes, relationships, validations, calculations, aggregates, and policies, while actions describe reads, creates, updates, destroys, and custom workflows.[^3]
+		- The surrounding ecosystem includes packages such as AshPostgres, AshSqlite, AshGraphql, AshJsonApi, AshPhoenix, and AshAuthentication.[^3]
+	- ## Misconceptions
+		- **Ash is a programming language** -> False. It is an [[Elixir]] framework.
+		- **Ash is only an ORM** -> Too small. Data access is part of the story, but the framework also covers domain actions, policies, APIs, and extensions.[^1] [^3]
+		- **Ash replaces Phoenix** -> Not exactly. The official site explicitly presents it as something that works with Phoenix and Phoenix LiveView.[^2]
+	- ## Related
+		- [[Elixir]]
+		- [[Gleam]]
+		- [[Mog]]
+		- ### Footnotes
+			- [^1]: https://hexdocs.pm/ash/what-is-ash.html
+			- [^2]: https://ash-hq.org/
+			- [^3]: https://hexdocs.pm/ash/readme.html

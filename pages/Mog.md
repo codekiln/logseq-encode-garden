@@ -1,0 +1,28 @@
+tags:: [[Programming/Language]], [[AI/Agent]], [[Diataxis/Explanation]]
+- # Mog Conceptual Overview
+	- ## Overview
+		- Mog presents itself as a programming language for AI agents, with the public guide centered on embeddability, explicit capabilities, async host interaction, and native compilation.[^1]
+		- Compared with mainstream application languages, Mog appears aimed less at general product development and more at constrained agent scripting and host-orchestrated workflows.[^1]
+	- ## Context
+		- The official language guide frames Mog around a host-and-script model: the language stays relatively small while the host application provides capabilities such as I/O, HTTP, plugins, or ML operations.[^1]
+		- This makes Mog notable less as "another general-purpose language" and more as a language design experiment for agent execution boundaries.[^1] [^2]
+	- ## Key Principles
+		- **Capability-oriented design** - Scripts declare what capabilities they require, and the guide describes those capabilities as the boundary for what code is allowed to do.[^1]
+		- **Ahead-of-time native compilation** - The compiler documentation says Mog compiles to ARM64 and x86 binaries through `rqbe`, described there as a safe Rust implementation of the QBE backend.[^1]
+		- **Host-provided effects** - The host provides capabilities and heavy operations, while the script focuses on coordination logic.[^1]
+		- **ML-adjacent data model** - Mog includes tensor data structures, but the guide explicitly says the host provides the math and execution backend.[^1]
+	- ## Mechanism
+		- Mog programs describe behavior in the language and call into host capabilities for side effects or specialized operations.[^1]
+		- Async capability calls are a first-class pattern in the public guide, which fits the agent and orchestration positioning.[^1]
+		- Tensor values are built into the language as data containers, but advanced numerical work is expected to happen in the host environment.[^1]
+	- ## Misconceptions
+		- **Mog is just a tensor language** -> False. Tensors are present, but the guide treats them as containers while the host performs the real computation.[^1]
+		- **Mog is a drop-in replacement for Python or JavaScript** -> Not from the material I found. The official framing is much narrower and more host-driven.[^1]
+		- **Mog and Ash are direct comparables** -> False. Mog is a language design for agent scripting; [[Ash Framework]] is an [[Elixir]] application framework.
+	- ## Related
+		- [[Gleam]]
+		- [[Ash Framework]]
+		- [[AI/Agent]]
+		- ### Footnotes
+			- [^1]: https://moglang.org/
+			- [^2]: https://github.com/voltropy/mog
