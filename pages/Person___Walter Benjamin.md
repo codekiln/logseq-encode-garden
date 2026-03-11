@@ -1,0 +1,9 @@
+- # Walter Benjamin
+	- ## About
+		- German philosopher, cultural critic, media theorist, and essayist.
+		- Lived from 1892 to 1940.
+		- Best known for writing on aesthetics, technology, and modern culture.
+		- Author of [[Person/Walter Benjamin/Essay/35/The Work of Art in the Age of Mechanical Reproduction]].
+	- ## Links
+		- [Wikipedia](https://en.wikipedia.org/wiki/Walter_Benjamin)
+		- [[Person/Walter Benjamin/Essay/35/The Work of Art in the Age of Mechanical Reproduction]]

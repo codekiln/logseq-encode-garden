@@ -1,0 +1,8 @@
+- # Martin Heidegger
+	- ## About
+		- German philosopher associated with phenomenology and existential thought.
+		- Lived from 1889 to 1976.
+		- Author of [[Person/Martin Heidegger/Essay/35/The Origin of the Work of Art]].
+	- ## Links
+		- [Wikipedia](https://en.wikipedia.org/wiki/Martin_Heidegger)
+		- [[Person/Martin Heidegger/Essay/35/The Origin of the Work of Art]]
