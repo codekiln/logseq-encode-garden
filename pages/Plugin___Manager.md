@@ -17,9 +17,9 @@ alias:: [[Plugin Manager]]
 				- TOML/config-driven; lazy load by file type or command; cache and parallel install.
 		- ### Neovim
 			- **packer.nvim**
-				- Lua-based; `use 'owner/repo'`; lazy loading via `opt`, `ft`, `cmd`, etc.
+				- [[Lua]]-based; `use 'owner/repo'`; lazy loading via `opt`, `ft`, `cmd`, etc.
 			- **lazy.nvim**
-				- Lua; lazy-by-default; spec in `lua/plugins/*.lua`; lockfile and robust dependency handling.
+				- [[Lua]]; lazy-by-default; spec in `lua/plugins/*.lua`; lockfile and robust dependency handling.
 			- **vim-plug** also works in Neovim.
 	- ## Zsh
 		- **Oh My Zsh**
@@ -49,4 +49,4 @@ alias:: [[Plugin Manager]]
 	- ## Comparison notes
 		- **Declarative vs imperative**: vim-plug, packer, lazy, sheldon use config files; Pathogen is “add dirs yourself.”
 		- **Lazy loading**: reduces startup time; common in vim (dein, packer, lazy) and zsh (zinit turbo, zplug).
-		- **Config format**: vimscript vs Lua (Neovim); shell vs TOML (zsh); often a tradeoff between flexibility and simplicity.
+		- **Config format**: vimscript vs [[Lua]] (Neovim); shell vs TOML (zsh); often a tradeoff between flexibility and simplicity.

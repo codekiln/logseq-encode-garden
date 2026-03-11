@@ -33,7 +33,7 @@ created-by:: [[Person/Randy Syring]]
 					  _.source = 'op-run.sh'
 					  ~~~
 				- Issue: Gets executed on every prompt
-			- #### 2. Lua Plugin POC
+			- #### 2. [[Lua]] Plugin POC
 				- Created `mise_env.lua` hook
 				- Successfully modified environment vars
 				- Same issue: Executes on every prompt

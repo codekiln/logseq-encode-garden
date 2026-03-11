@@ -1,0 +1,1 @@
+- [NotAShelf/nvf: Modular, extensible and distro-agnostic Neovim configuration framework for Nix/NixOS](https://github.com/NotAShelf/nvf)

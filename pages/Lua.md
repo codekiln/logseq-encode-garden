@@ -1,0 +1,21 @@
+alias:: [[Programming/Language/Lua]]
+
+- # Lua
+	- [[Lua]] is a small, embeddable, dynamically typed programming language designed to be easy to integrate into larger applications.
+	- ## History
+		- Created in 1993 at PUC-Rio in Brazil by Roberto Ierusalimschy, Waldemar Celes, and Luiz Henrique de Figueiredo.
+		- It was designed in part as a lightweight extension language that host programs could embed without taking on a large runtime.
+	- ## What It Solves
+		- Gives applications a compact scripting language for configuration, automation, and extension.
+		- Works well when the host system wants users to customize behavior without exposing the whole implementation language.
+		- Fits environments where a small runtime, simple C API, and portability matter.
+	- ## Good At
+		- Embedding inside tools, games, editors, and music devices.
+		- Scripting and extension points where startup cost and implementation size matter.
+		- Data-table-oriented programming with a relatively small core language.
+	- ## Bad At
+		- Large codebases that need strong static guarantees by default.
+		- Complex package-management and tooling workflows compared with larger ecosystems.
+		- Readability and maintainability when code leans too heavily on dynamic patterns and table metaprogramming.
+	- ## Related
+		- Often shows up in [[Neovim]] configuration and embedded scripting environments like [[Monome/Norns]].

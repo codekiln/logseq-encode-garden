@@ -25,8 +25,8 @@
 			  | (i) Hack | 24.02 | (i) PHP | 27.64 | (i) JavaScript | 4.59 |
 			  | (i) PHP | 29.30 | (v) Erlang | 36.71 | (i) TypeScript | 4.69 |
 			  | (v) Erlang | 42.23 | (i) Jruby | 43.44 | (v) Java | 6.01 |
-			  | (i) Lua | 45.98 | (i) TypeScript | 46.20 | (i) Perl | 6.62 |
-			  | (i) Jruby | 46.54 | (i) Ruby | 59.34 | (i) Lua | 6.72 |
+			  | (i) [[Lua]] | 45.98 | (i) TypeScript | 46.20 | (i) Perl | 6.62 |
+			  | (i) Jruby | 46.54 | (i) Ruby | 59.34 | (i) [[Lua]] | 6.72 |
 			  | (i) Ruby | 69.91 | (i) Perl | 65.79 | (v) Erlang | 7.20 |
 			  | (i) Python | 75.88 | (i) Python | 71.90 | (i) Dart | 8.64 |
-			  | (i) Perl | 79.58 | (i) Lua | 82.91 | (i) Jruby | 19.84 |
+			  | (i) Perl | 79.58 | (i) [[Lua]] | 82.91 | (i) Jruby | 19.84 |

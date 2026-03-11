@@ -8,4 +8,4 @@ tags:: [[Markdown/Flavor]]
 		- [Quick start for Markdown users](https://github.com/jgm/djot/blob/main/doc/quickstart-for-markdown-users.md)
 		- [Discussion forum](https://github.com/jgm/djot/discussions)
 		- [Live sandbox](https://djot.net/playground/)
-	- Implementations in [JavaScript](https://github.com/jgm/djot.js), [Lua](https://github.com/jgm/djot.lua), [Prolog](https://github.com/aarroyoc/djota), [Rust](https://github.com/hellux/jotdown), [Go](https://github.com/sivukhin/godjot).
+	- Implementations in [JavaScript](https://github.com/jgm/djot.js), [[Lua]] ([djot.lua](https://github.com/jgm/djot.lua)), [Prolog](https://github.com/aarroyoc/djota), [Rust](https://github.com/hellux/jotdown), [Go](https://github.com/sivukhin/godjot).

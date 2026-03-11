@@ -1,0 +1,8 @@
+- Luix something or other
+- from Switzerland
+- [[Username/luixos/GitHub]] https://github.com/devluixos
+	- [[Nix/Config]]
+		- [devluixos/luix_nix_config](https://github.com/devluixos/luix_nix_config/tree/master)
+- [[Username/luixos/YouTube]] https://www.youtube.com/@LuixBits
+	- lots of episodes about [[NixOS]], including a playlist called "[Daily Driving NixOS](https://www.youtube.com/watch?v=F7Nijix97Zk&list=PLcJIqaE6XxRfpCP29d5gx4uPsFR31TtHW)"
+	-

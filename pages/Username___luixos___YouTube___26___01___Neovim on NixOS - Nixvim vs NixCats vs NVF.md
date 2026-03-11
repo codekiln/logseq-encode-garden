@@ -1,0 +1,101 @@
+# [Neovim on NixOS: Nixvim vs NixCats vs NVF - YouTube](https://www.youtube.com/watch?v=VTIGSxpzlIM)
+	- ## [[AI Notes]]
+		- ### Core Idea of the Video
+			- All three tools solve the same problem:
+				- **Make Neovim configuration reproducible using Nix** instead of manually managing plugins and [[Lua]] config on every machine.
+			- They differ mainly in **how much of the configuration lives in Nix vs [[Lua]]**.
+			- Think of them as a spectrum:
+				- ~~~
+				  Lua-first  ------------------------------  Nix-first
+				  [[nixCats-nvim]]  [[nixvim]]             [[nvf]]
+				  ~~~
+		- ### [[nixCats-nvim]]
+			- **Philosophy:**
+				- Keep your normal **[[Lua]]-based Neovim config**, and use Nix only to fetch dependencies.
+			- #### How it works
+				- Nix installs plugins, binaries, LSP servers, etc.
+				- Your actual config stays as **regular [[Lua]] (`init.lua`)**
+				- You can keep using plugin managers like `lazy.nvim`.
+			- #### Pros
+				- Easiest if you already have a Neovim [[Lua]] config
+				- Minimal rewrites required
+				- Familiar workflow for traditional Neovim users
+				- Nix handles dependency installation reproducibly
+			- #### Cons
+				- Not fully declarative in Nix
+				- Config logic is split between **[[Lua]] + Nix**
+				- Plugin behavior still depends on [[Lua]] plugin manager logic
+			- #### Best for
+				- People who:
+					- Already have a **[[Lua]] Neovim setup**
+					- Want **Nix for dependency management**
+					- Don't want to rewrite their config.
+		- ### [[nixvim]]
+			- **Philosophy:**
+				- Configure Neovim primarily through **Nix modules**, and let Nix generate the [[Lua]].
+			- #### How it works
+				- You declare plugins, themes, LSP, etc. as **Nix options**
+				- [[nixvim]] generates the corresponding [[Lua]] configuration
+				- Integrates well with **NixOS, Home Manager, and Flakes**
+				- Example style:
+					- ~~~
+					  programs.nixvim.enable = true;
+					  plugins.telescope.enable = true;
+					  ~~~
+			- #### Pros
+				- Strong integration with the Nix ecosystem
+				- Declarative configuration through modules
+				- Sensible defaults
+				- Less handwritten [[Lua]] required
+			- #### Cons
+				- Complex [[Lua]] snippets must be translated into Nix expressions
+				- Sometimes awkward when plugin configuration is very [[Lua]]-heavy
+				- Lazy-loading historically weaker than [[nvf]] (improving)
+			- #### Best for
+				- People who:
+					- Want a **mostly Nix-driven configuration**
+					- Use **Home Manager / NixOS modules**
+					- Prefer declarative configuration but still allow [[Lua]] if needed.
+		- ### [[nvf]] (Nix Vim Framework)
+			- **Philosophy:**
+				- Go **fully Nix-first**: everything about Neovim is defined declaratively in Nix.
+			- #### How it works
+				- Plugins, LSP, treesitter, themes, lazy loading, all declared in Nix
+				- [[Lua]] is optional and used only when necessary
+				- Configuration becomes a **single Nix derivation**
+			- #### Pros
+				- Extremely modular
+				- Fully reproducible
+				- Built-in lazy loading
+				- Flexible plugin sources
+				- Can run standalone (`nix run`) or integrate with NixOS/Home Manager
+			- #### Cons
+				- Requires stronger Nix knowledge
+				- Harder if you're coming from a [[Lua]]-based config
+				- Steeper learning curve
+			- #### Best for
+				- People who:
+					- Want **maximum reproducibility**
+					- Prefer **Nix for everything**
+					- Are comfortable with advanced Nix usage.
+		- ### Ease of Use (According to the Video)
+			- From easiest to hardest:
+				- [[nixCats-nvim]] is the easiest
+				- [[nixvim]] is medium
+				- [[nvf]] is most powerful but hardest
+			- Reason:
+				- **[[nixCats-nvim]]:** keep [[Lua]] config
+				- **[[nixvim]]:** mixed Nix/[[Lua]] but structured
+				- **[[nvf]]:** full Nix configuration
+		- ### Practical Decision Rule
+			- Use **[[nixCats-nvim]]** if:
+				- You already have a [[Lua]] config
+				- You just want Nix to install dependencies.
+			- Use **[[nixvim]]** if:
+				- You want declarative Nix modules
+				- You're comfortable mixing Nix and [[Lua]].
+			- Use **[[nvf]]** if:
+				- You want a **fully declarative Nix editor**
+				- Maximum reproducibility matters.
+	- ## [[Video]]
+		- {{video https://www.youtube.com/watch?v=VTIGSxpzlIM}}

@@ -13,7 +13,7 @@
 			- How do these options compare in correctness, speed, UX, and setup complexity?
 			- What exact keymap patterns do experienced users apply for "symbol under cursor -> usages list -> jump and backtrack" workflows?
 			- What options exist to copy the dotted Python path for the symbol under cursor?
-			- If no single plugin gives exact "copy reference" parity, what are practical implementations (Lua snippets, Treesitter-based approaches, LSP symbol APIs, Telescope pickers, etc.)?
+			- If no single plugin gives exact "copy reference" parity, what are practical implementations ([[Lua]] snippets, Treesitter-based approaches, LSP symbol APIs, Telescope pickers, etc.)?
 			- How do solutions differ when using [[Pyright]] vs [[basedpyright]] vs [[jedi-language-server]]?
 			- What are known failure modes (namespace packages, re-exported imports, dynamic attributes, monkeypatching, generated code, editable installs, src-layout repos, tests importing from app code)?
 			- What configuration details matter most for large repos and monorepos (root detection, virtualenv/venv activation, extra paths, stub packages, indexing limits, performance tuning)?
@@ -29,7 +29,7 @@
 				- Performance notes
 			- 3. Step-by-step implementation guide for the top recommendation:
 				- Minimal plugin list
-				- Example `init.lua` or modular Lua config snippets
+				- Example `init.lua` or modular [[Lua]] config snippets
 				- Keymaps for references/usages and navigation history
 				- Command or mapping to copy dotted path under cursor to clipboard
 			- 4. Alternative implementations (at least 2) with tradeoffs.
