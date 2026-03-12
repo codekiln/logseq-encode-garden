@@ -1,5 +1,6 @@
 tags:: [[Term]]
 alias:: [[Vibe Engineering]]
+see-also [[Vibe Coding]]
 
 - # Vibe Engineering
 	- via [[Person/Simon Willison/Blog/25/10/Vibe Engineering]]:

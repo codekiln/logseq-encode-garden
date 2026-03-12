@@ -1,0 +1,17 @@
+date-created:: [[2026/01/12]]
+- # [The Missing Semester of Your CS Education](https://missing.csail.mit.edu/)
+	- A practical [[MIT]] course about the tools and workflows that are often assumed but not explicitly taught in standard [[Computer Science]] classes.
+	- The 2026 course description says that AI-enabled and AI-enhanced tools are folded into each lecture rather than treated as a standalone topic.
+	- ## 2026 Topics
+		- **1/12/26**: Course Overview + Introduction to the Shell
+		- **1/13/26**: Command-line Environment
+		- **1/14/26**: Development Environment and Tools
+		- **1/15/26**: Debugging and Profiling
+		- **1/16/26**: Version Control and Git
+		- **1/20/26**: Packaging and Shipping Code
+		- **1/21/26**: Agentic Coding
+		- **1/22/26**: Beyond the Code
+		- **1/23/26**: Code Quality
+	- ## Links
+		- [2026 Lectures](https://missing.csail.mit.edu/2026/)
+		- [About the Class](https://missing.csail.mit.edu/about/)

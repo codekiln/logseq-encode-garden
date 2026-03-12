@@ -1,0 +1,10 @@
+- # [dolthub/dolt: Dolt - Git for Data](https://github.com/dolthub/dolt)
+	- A [[SQL]] [[Database]] that combines relational tables with [[git]]-style version control operations such as branching, merging, cloning, push, and pull.
+	- Connects like a MySQL database and adds a CLI for importing data, committing table changes, and collaborating on database state as if it were a code [[Repository]].
+	- ## Links
+		- [DoltHub](https://www.dolthub.com/)
+		- [Docs](https://docs.dolthub.com/)
+	- ## [[My Notes]]
+		- via [Steve Yegge - Gastown Orchestrates Mayor And Worker Agents (1min)](https://share.snipd.com/snip/d530b835-5be2-45d4-9539-376c75a611c4)
+		- [[Person/Steve Yegge]] says he has been migrating [[Gastown]] to Dolt because [[Beads]] was effectively "Git plus database crammed together badly", and Dolt already implements that hybrid directly.
+		- That makes it an interesting example of a database that treats tables the way [[git]] treats files, which seems especially relevant for agent tooling that needs auditable state and mergeable structured data.
