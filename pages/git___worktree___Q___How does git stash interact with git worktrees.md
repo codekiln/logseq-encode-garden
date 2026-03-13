@@ -1,0 +1,32 @@
+tags:: [[Git]], [[Q]], [[git/worktree]]
+
+- # How does [[git stash]] interact with [[git/worktree]]?
+	- ## Short Answer
+		- `git stash` is shared across all worktrees in the same repository because the stash lives at the repository ref `refs/stash`, not in a per-worktree ref.
+		- In practice, that means you can create a stash in one worktree and list, show, apply, pop, or drop it from another worktree attached to the same repo.
+	- ## What Is Shared
+		- `git stash list` shows the repo-wide stash stack, including stashes created from other worktrees.
+		- A stash entry records the branch/commit context it was created from, so the message often includes the source branch, such as `On feature-x: ...`.
+		- Because the stash stack is shared, `stash@{0}` means "most recent stash in the repository", not "most recent stash from this worktree".
+	- ## What Is Not Isolated
+		- Worktrees have some worktree-specific refs, but stash is not one of them.
+		- So there is no built-in "one stash stack per worktree" behavior.
+		- If you are juggling several worktrees, descriptive stash messages become much more important.
+	- ## Applying Across Worktrees
+		- You can apply a stash from a different worktree.
+		- Whether it applies cleanly depends on how closely the target worktree matches the commit the stash was created from.
+		- If the branches have diverged, `git stash apply` or `git stash pop` can produce conflicts just like a patch or merge can.
+		- `git stash branch <new-branch> <stash>` is often the safest recovery path when a stash was made against a different branch state.
+	- ## Practical Takeaways
+		- Treat stash as repo-wide scratch space, not as worktree-local scratch space.
+		- Always use messages, for example: `git stash push -m 'wt-api: partial parser refactor'`.
+		- Be careful with `git stash pop` in the "wrong" worktree, since it both applies and removes the shared stash entry if the apply succeeds.
+		- If you want truly isolated temporary state per worktree, a lightweight WIP commit or a dedicated branch is usually clearer than relying on stash names alone.
+	- ## Why
+		- The `git worktree` docs describe a small set of refs as worktree-specific.
+		- `refs/stash` is not in that worktree-specific set, which matches the behavior documented by `git stash` and the practical behavior of Git in a multi-worktree repo.
+	- ## Sources
+		- [git-stash documentation](https://git-scm.com/docs/git-stash)
+		- [git-worktree documentation](https://git-scm.com/docs/git-worktree)
+	- ## Note
+		- I also verified this behavior in a throwaway local repo by creating stashes in two worktrees, confirming that `git stash list` showed both entries, and applying one worktree's stash from the other worktree.
