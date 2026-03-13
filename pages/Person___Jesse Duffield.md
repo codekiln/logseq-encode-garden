@@ -1,0 +1,8 @@
+- # Jesse Duffield
+	- ## About
+		- Creator of [[Lazygit]] and [[Lazydocker]]
+		- Builds terminal-first developer tools with a practical, keyboard-driven style
+	- ## Web
+		- [[Person/Jesse Duffield/GitHub]] https://github.com/jesseduffield
+	- ## #YouTube
+		- [[Person/Jesse Duffield/YouTube/15 Lazygit Features In Under 15 Minutes]]
