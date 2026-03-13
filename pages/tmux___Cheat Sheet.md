@@ -47,10 +47,11 @@ tags:: [[Keyshorts]]
 						  set -g mouse on
 						  ```
 					- reload conf:
+					  collapsed:: true
 						- `Ctrl-b : source-file ~/.tmux.conf`
 				- 2 - immediate application
 					- `ctrl-b : set -g mouse on`
-				-
+			- as of [[2026-03-13 Fri]], my dotfiles automatically are working with tmux and claude code, so this was likely a temporary thing
 		- | Shortcut                     | Action                                  |
 		  |-----------------------------|------------------------------------------|
 		  | `[`                          | Enter copy mode                           |

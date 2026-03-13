@@ -1,4 +1,4 @@
-tags:: [[Git]], [[Q]], [[git/worktree]]
+tags:: [[Question]], [[git/worktree]]
 
 - # How does [[git stash]] interact with [[git/worktree]]?
 	- ## Short Answer
