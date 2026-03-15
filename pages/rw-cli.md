@@ -1,6 +1,7 @@
 - [rw-cli](https://github.com/Scarvy/readwise-reader-cli) - An open-source Python CLI by Scarvy that interacts with the Readwise Reader API
 	- ## Commands
 		- ### `rw-cli list` - list items in [[Readwise/Reader]]
+			- **Options:** `--location` (new | later | archive | feed), `--category` (article | email | rss | highlight | note | pdf | epub | tweet | video), `--date-range` (day | week | month), `--update-after` (ISO date), `--layout` (table | list), `--num-results` N, `--pager`. No text or author search; filter only by location, category, and date.
 			- `rw-cli list --location new` - nice table. its width is based on the width of the terminal. But there are strange misalignments at every width, AFAICT.
 			  collapsed:: true
 				- ```
@@ -158,12 +159,19 @@
 				                ❌ No tags
 				  ```
 			- surprisingly, there isn't an AI-optimized view / layout, like `rw-cli list --layout json` or `rw-cli list --layout yaml`
-		-
+		- ### `rw-cli add` - add document by URL
+			- `rw-cli add <URL>`
+		- ### `rw-cli upload` - upload reading list file
+			- `rw-cli upload [--file-type html|csv] <INPUT_FILE>`
+		- ### `rw-cli validate` - validate token
+			- `rw-cli validate TOKEN`
 	- ## [[My Notes]]
 		- ### [[2026-03-10 Tue]]
 			- got it working. It seems to work, though it could use some spit polish, and it's not quite optimized for AI use just yet in my opinion.
 			- Issues
-				- #### `rw-cli lib` is meant to give "library breakdown" but it yields a pydantic error
+				- #### API returns `category: "podcast"` but CLI enum does not include it
+					- Readwise API can return documents with `category: "podcast"`. The CLI's `DocumentInfo` Pydantic model only allows: article, email, rss, highlight, note, pdf, epub, tweet, video. Any list that includes a podcast document fails with a validation error before results are shown. Workaround: use `--category article` (or another single category) so the API only returns that category—but then see layout bug below.
+					- Affects both `rw-cli list` (e.g. `--date-range month` or unfiltered) and `rw-cli lib`.
 				  collapsed:: true
 					- ```
 					  readwise_reader_cli/api.py", line 184, in list_documents
@@ -173,6 +181,14 @@
 					  category
 					    Input should be 'article', 'email', 'rss', 'highlight', 'note', 'pdf', 'epub', 'tweet' or 'video' [type=enum, input_value='podcast', input_type=str]
 					      For further information visit https://errors.pydantic.dev/2.12/v/enum
+					  ```
+				- #### Layout code assumes `document["category"]`; KeyError when printing
+					- When `list` fetches documents and passes them to `table_layout()` or `list_layout()`, the code does `document["category"] == "highlight" or document["category"] == "note"` but the dict passed in does not always have a `"category"` key. Result: `KeyError: 'category'` and the command exits even when the API returned data. Observed with both `--layout table` and `--layout list`. So even with `--category article` (which avoids the podcast enum error), the CLI can still crash at the print step.
+				  collapsed:: true
+					- ```
+					  File ".../layout.py", line 137, in table_layout
+					    document["category"] == "highlight" or document["category"] == "note"
+					  KeyError: 'category'
 					  ```
 				- #### all commands have usage that lists `rw-cli-unwrapped`
 					- not a big deal, just a bit unpolished.
