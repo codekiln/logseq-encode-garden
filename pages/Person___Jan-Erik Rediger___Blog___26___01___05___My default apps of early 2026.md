@@ -1,0 +1,21 @@
+---
+date-created:: [[2026/01/05]]
+---
+- # [My default apps of early 2026](https://fnordig.de/2026/01/05/my-default-apps-of-early-2026/)
+	- Author: **[[Person/Jan-Erik Rediger]]**
+	- Source: [fnordig.de](https://fnordig.de/)
+	- Journal link: [[2026/01/05]]
+	- ## Summary
+		- Updated "default apps" list; overlaps with my stack: [[Obsidian]], [[Syncthing]], [[Bitwarden]], [[Neovim]], [[Tailscale]]. They use [WezTerm](https://wezfurlong.org/wezterm/) as terminal, which was new to me.
+	- ## Apps (from post)
+		- Password: [[Bitwarden]]
+		- Word processing / notes / to-do: [[Obsidian]], Google Docs, vim
+		- Bookmarks: self-hosted [linkding](https://github.com/sissbruecker/linkding)
+		- Cloud storage: [[Syncthing]] on own server
+		- VPN: [[Tailscale]], Mullvad, Viscosity
+		- Terminal: [WezTerm](https://wezfurlong.org/wezterm/)
+		- Code editor: [[Neovim]]
+		- RSS: self-hosted [Stringer](https://github.com/stringer-rss/stringer)
+		- Document management: [Paperless-ngx](https://docs.paperless-ngx.com/)
+		- Backup: [Vorta Backup](https://vorta.borgbase.com/)
+		- Plus: Deckset, Thunderbird, Firefox Nightly, Instapaper, Alfred, Acorn, etc.
