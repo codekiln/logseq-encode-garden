@@ -1,8 +1,7 @@
----
-alias: 
----
+alias:: [[Username/badboy]]
+
 - # Person/Jan-Erik Rediger
-	- ## Bio
+	- ## Bio [[About]] [About me](https://fnordig.de/about/)
 		- Works at [[Mozilla]]. Developer and speaker; into [[rust]], self-hosting, and open source. Blogs at [fnordig.de](https://fnordig.de/). GitHub: [badboy](https://github.com/badboy/). Discovered when an agentic coding tool tried to access their [[TIL]] post on a minimal Nix flake.
 	- ## Interests / Stack (from their "default apps" post)
 		- [[Obsidian]], [[Syncthing]], [[Bitwarden]], [[Neovim]], [[Tailscale]], [WezTerm](https://wezfurlong.org/wezterm/), self-hosted linkding, Stringer RSS, Paperless-ngx, and related tooling.
@@ -14,6 +13,6 @@ alias:
 	- ## External Links
 		- [Blog (fnordig.de)](https://fnordig.de/)
 		- [Posts](https://fnordig.de/posts/) — "A count of all posts by year — 16 years running!" infographic; I really love it.
-		- [GitHub (badboy)](https://github.com/badboy/)
+		- [[Person/Jan-Erik Rediger/GitHub]]
 		- [Talks](https://fnordig.de/talks/)
 		- Contact: [janerik@fnordig.de](mailto:janerik@fnordig.de)
