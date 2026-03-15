@@ -1,0 +1,89 @@
+tags:: [[AI Deep Research]], [[Report]]
+
+- # Survey of Rust-Centric CLI and TUI Weather Apps for Forecasting
+	- ## What "Wunderground-style graphs" imply for terminal tools
+		- The screenshot you shared (the classic multi-day forecast grid with compact graphs) strongly suggests three terminal-friendly requirements:
+		- First, you want **multi-day forecast context** (at least a week, ideally 10 days) with a "shape" you can internalize quickly—typically highs/lows, precipitation probability/amount, and wind. Second, you want **graph-like affordances** that work in a monospace terminal: sparklines, Unicode block charts, or small horizontal bar "thermometers." Third, your workflow splits cleanly into two modes: a **machine-callable CLI** that emits stable, parseable output for agentic summarization, and a **human-driven TUI** where richer visuals (charts, multiple panels, keyboard navigation) are worth the extra interaction cost.
+		- That framing is useful because many terminal weather projects choose either (a) "pretty current conditions," or (b) "forecast dashboard," but not both—and fewer still are designed to be both **interactive** and **pipe-friendly**.
+	- ## Weather APIs that match "open, keyless, and forecast-capable"
+		- A large fraction of modern Rust terminal weather tools converge on **Open-Meteo** because it is broadly usable without an API key and explicitly positioned as an open weather API. [^1] [^2]
+		- For forecast horizon, Open-Meteo's documentation describes model-dependent forecast lengths that commonly reach (and exceed) the 10‑day window you liked in Wunderground's UI (for example: several global models advertised at roughly 14–16 days). [^3]
+		- Two other endpoints show up repeatedly in privacy/geo flows:
+			- GeoIP "city guess" lookups (for "no-args" auto-location) such as ipapi.co or ip-api.com (varies by project). [^1] [^5]
+			- Coordinate reverse geocoding via Nominatim / OpenStreetMap in some clients that accept `--lat/--lon`. [^1] [^7] [^8]
+		- This matters for your use case because agentic tools calling a CLI will usually run in environments where **deterministic location** (explicit city or lat/lon) is preferable to GeoIP guessing.
+	- ## Rust-first CLIs optimized for agentic use
+		- The key differentiator for agentic calling is not "pretty output," but whether the tool offers **machine-oriented output modes** (JSON or otherwise stable schema), plus predictable config and caching behavior.
+		- ### outside
+			- `outside` is explicitly multi-output: it supports `tui`, `simple`, `detailed`, `json`, and `waybar` output modes, plus a streaming mode (`--stream`) for periodic refresh. [^10]
+			- For automation, its `-o json` mode is the most directly usable: the README shows a rich JSON object including location, temperature (current/high/low), wind, humidity, pressure, sunrise/sunset, UV index, precipitation probability/amount, and a multi-day `forecast` array—exactly the sort of schema an agent can summarize reliably. [^10]
+			- It also supports a config file at `~/.config/outside/config.yaml` with templating for output (including Waybar integration), giving you a lever to standardize output formatting for downstream consumers. [^10]
+			- Maintenance status is "recent but not bleeding edge": the commit history shows activity clustered around July 2025 (including a 0.5.0 release commit and subsequent fixes). [^11]
+		- ### rustormy
+			- `rustormy` is a "neofetch-like" CLI focused on current conditions, but it stands out for agentic use because it advertises **multiple output modes including JSON**, a live/refresh mode, and provider fallback. [^8]
+			- It defaults to Open-Meteo (no API key) and also supports other providers (some requiring keys), including the Nordic `yr.no` endpoint. [^8]
+			- On Linux it explicitly follows the XDG base directory conventions and defaults its config file to `~/.config/rustormy/config.toml`. [^8]
+			- In terms of recency, the commit history shows active development through early 2026 (for example, commits in January and February 2026). [^13]
+			- The main limitation relative to your Wunderground preference is that, as documented, it reads more like a **current-conditions CLI** than a "multi-day forecast with graphs." (That may still be perfect for agentic summarization if what you need most days is "what's happening now + today's risk.") [^8]
+		- ### open-meteo-cli
+			- `open-meteo-cli` is narrow but extremely script-friendly: it provides a `current-weather` subcommand and supports output formats including "Clean" (comma-separated) and JSON. [^14]
+			- It documents that it can auto-use your IP-derived location (or accept explicit coordinates), and its flags allow selecting which fields to emit—useful if you want to minimize noise for an agent. [^14]
+			- The repo shows its most recent commit in August 2024, which is not "fresh," but it may still be stable for its limited scope. [^14]
+		- ### girouette — great XDG + Nix integration, but stale and key-based
+			- `girouette` is packaged in Nixpkgs (MyNixOS lists it at version 0.7.4), so it fits the "available in nix" requirement better than many newer Rust tools. [^16]
+			- It is also explicit about XDG config search paths: it looks for `"$XDG_CONFIG_HOME/girouette/config.yml"` (or `~/.config/girouette/config.yml`), and it supports a `--config` flag for overriding the config file location. [^5]
+			- However, it relies on OpenWeather and requires an API key for non-trivial usage, which conflicts with your preference for open/keyless APIs. [^5]
+			- Most importantly, upstream appears unmaintained: the commit history shows its latest commits in 2022. [^19]
+	- ## Rust TUIs with the strongest "graph and dashboard" feel
+		- If you want something that emotionally matches "multi-day forecast + graphs" in the terminal, you generally want a multi-panel TUI with at least one chart view and a weekly forecast panel.
+		- ### terminal-weather
+			- `terminal-weather` is the closest match (among the projects reviewed) to your two-mode workflow: it is **interactive** yet explicitly "scriptable by design." [^1]
+			- Its README describes a 3‑panel layout (Current "hero," Hourly panel with multiple modes including chart, and a 7‑day forecast panel), along with auto-location, multiple themes, and a `--one-shot` mode meant for "scripts, cron, and shell prompts." [^1]
+			- Configuration persistence is straightforward: settings are written to `~/.config/terminal-weather/settings.json`, with an override via `TERMINAL_WEATHER_CONFIG_DIR` (and a legacy env var name for compatibility). [^1]
+			- On privacy and "open APIs," it is unusually explicit: when auto-location is used it may query ipapi.co; forecast and geocoding requests go to Open-Meteo; reverse geocoding uses Nominatim; and no account or API key is required. [^1]
+			- Maintenance is very recent: the commit history shows multiple commits on March 14, 2026 (i.e., within the last day relative to your current date). [^21]
+		- ### wthrr-the-weathercrab
+			- `wthrr` is a weather "companion" TUI built in Rust and powered by Open-Meteo. [^3] [^22]
+			- It has explicit support for forecast spans like "today / tomorrow / week / a number of days," and it includes configurable graph rendering—exactly the kind of terminal charting that resembles your Wunderground graph preference. [^22]
+			- Its configuration is stored under `~/.config/weathercrab/`, and the config allows choosing graph style (lines/dots/custom), grid on/off, and other rendering options. [^22]
+			- It also includes a Nix flake in-repo (`flake.nix` / `flake.lock`), which makes it meaningfully "Nix-available" even if it is not in nixpkgs proper. [^22]
+			- The main caveat is maintenance recency: the commit history shown is concentrated around January 2025 (mostly dependency updates), and the latest release listed is October 2024—suggesting it is not dead, but not as actively evolving as the 2026-updated tools. [^25]
+		- ### weathr — delightful, but more "conditions visualization" than forecast analytics
+			- `weathr` is a Rust terminal app focused on ASCII animations driven by real-time weather (rain/snow/thunderstorms/day-night cycles, etc.) using Open-Meteo. [^26]
+			- Its Nix story is strong: it is "available as a flake," includes a Home Manager module (`programs.weathr`), and clearly documents the Linux config path as `~/.config/weathr/config.toml` with explicit support for `$XDG_CONFIG_HOME`. [^26]
+			- It is also actively maintained: the commit history includes multiple commits in March 2026. [^7]
+			- For your specific Wunderground-style need, the limitation is that it's primarily a **weather-themed terminal backdrop / visualization**, not a dense multi-day graph grid for planning. [^26]
+	- ## Nix availability and XDG configuration support in practice
+		- A practical way to interpret your constraint set ("Rust, open APIs, XDG, available in nix, active") is to treat "available in nix" as one of three tiers:
+		- Tier A: **in nixpkgs**
+			- `girouette` is explicitly tracked in nixpkgs (MyNixOS shows version 0.7.4), but upstream is stale and it requires an OpenWeather API key. [^16]
+		- Tier B: **ships a flake / Home Manager module**
+			- `weathr` is strong here (flake + Home Manager module; explicit `$XDG_CONFIG_HOME` support). [^26] [^7]
+			- `wthrr` includes a flake in the repository (flake files present), and its config lives under `~/.config/weathercrab/`. [^22]
+		- Tier C: **XDG-like defaults but not explicitly Nix-packaged**
+			- `terminal-weather` persists settings under `~/.config/terminal-weather/` but uses its own env var override rather than explicitly mentioning `$XDG_CONFIG_HOME`. [^1]
+			- `outside` stores config at `~/.config/outside/config.yaml` and provides JSON output suitable for automation, but the README does not describe flake or nixpkgs packaging. [^10]
+			- `rustormy` is explicitly XDG-aware (`~/.config/rustormy/config.toml`) and actively maintained, but nix packaging is listed as a planned feature rather than documented as existing. [^8]
+	- ## Shortlist recommendations aligned with your two-mode workflow
+		- If the goal is to replicate the *functional feel* of your Wunderground 10‑day+graph workflow—but adapted to a terminal + agentic tooling split—two pairings stand out.
+		- For the "I want a rich TUI with charts and a forecast panel" role, `terminal-weather` is the strongest match: it gives you a 7‑day view, an hourly chart mode, fast switching between table/hybrid/chart, explicit config persistence, and a dedicated `--one-shot` mode for non-interactive runs. [^1]
+		- For the "I want an agent-friendly CLI that yields structured data" role, `outside` and `rustormy` are the most directly aligned with agentic summarization. `outside` provides a rich JSON schema including multi-day forecast arrays and precipitation/UV/sunrise-sunset fields, while `rustormy` provides JSON output and multiple providers with XDG config support and very recent development activity. [^10] [^8]
+		- If you specifically want "graph-like forecast visualization" in a TUI and are comfortable with somewhat older maintenance cadence, `wthrr` is noteworthy because it makes graphs a first-class concept (configurable styles) and supports time windows like week/days; it also ships with a flake. [^22]
+		- Finally, if your priority shifts toward Nix-native distribution and XDG correctness over forecast analytics, `weathr` is the cleanest "flake + Home Manager + XDG" story among the Rust tools surveyed—though it is better thought of as "ambient conditions visualization" than as a dense planning dashboard. [^26]
+	- ## Footnotes
+		- [^1]: https://github.com/markpasternak/terminal-weather
+		- [^2]: https://open-meteo.com/
+		- [^3]: https://open-meteo.com/en/docs
+		- [^5]: https://github.com/gourlaysama/girouette
+		- [^7]: https://github.com/Veirt/weathr/commits/main/
+		- [^8]: https://github.com/Tairesh/rustormy
+		- [^10]: https://github.com/BaconIsAVeg/outside
+		- [^11]: https://github.com/BaconIsAVeg/outside/commits/main/
+		- [^13]: https://github.com/Tairesh/rustormy/commits/main/
+		- [^14]: https://git.midefos.com/midefos/open-meteo-cli
+		- [^16]: https://mynixos.com/nixpkgs/package/girouette
+		- [^19]: https://github.com/gourlaysama/girouette/commits/main/
+		- [^21]: https://github.com/markpasternak/terminal-weather/commits/main/
+		- [^22]: https://github.com/ttytm/wthrr-the-weathercrab
+		- [^25]: https://github.com/ttytm/wthrr-the-weathercrab/commits/main/
+		- [^26]: https://github.com/Veirt/weathr
