@@ -1,0 +1,2 @@
+- [WezTerm](https://wezfurlong.org/wezterm/)
+	- supports [[iTerm2/Image/Protocol]]
