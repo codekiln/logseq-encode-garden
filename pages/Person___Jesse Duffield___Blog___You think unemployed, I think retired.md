@@ -1,0 +1,3 @@
+- # [You think unemployed, I think retired](https://jesseduffield.com/You-Think-Unemployed-I-Think-Retired/)
+	- Author: **[[Person/Jesse Duffield]]**
+	- Source: [jesseduffield.com](https://jesseduffield.com/)

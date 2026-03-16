@@ -1,0 +1,2 @@
+- # Blog – Jesse Duffield
+	- [Pursuit Of Laziness](https://jesseduffield.com/)

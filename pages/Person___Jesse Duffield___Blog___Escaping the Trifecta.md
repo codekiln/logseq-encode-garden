@@ -1,0 +1,3 @@
+- # [Escaping the Trifecta](https://jesseduffield.com/Escaping-the-Trifecta/)
+	- Author: **[[Person/Jesse Duffield]]**
+	- Source: [jesseduffield.com](https://jesseduffield.com/)

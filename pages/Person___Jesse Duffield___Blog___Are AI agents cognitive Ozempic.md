@@ -1,0 +1,3 @@
+- # [Are AI agents cognitive Ozempic?](https://jesseduffield.com/Are-AI-Agents-Cognitive-Ozempic/)
+	- Author: **[[Person/Jesse Duffield]]**
+	- Source: [jesseduffield.com](https://jesseduffield.com/)
