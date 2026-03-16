@@ -42,7 +42,8 @@ actions:
       
       ```
       tags:: [[ExistingTag1]], [[ExistingTag2]], [[Diataxis/How To]]
-      
+      see-also:: [[Page1]], [[Page2]]
+
       - # How To [Specific Task]
         - ## Overview
           - Brief description of what this guide helps accomplish
@@ -58,8 +59,6 @@ actions:
             - And so on...
         - ## Troubleshooting
           - Common issues and their solutions
-        - ## Related
-          - Links to related pages: [[Page1]], [[Page2]]
       ```
       
       ## Naming Convention and File Paths
@@ -107,7 +106,8 @@ actions:
 examples:
   - input: |
       tags:: [[Python]], [[macOS]], [[Installation]], [[Diataxis/How To]]
-      
+      see-also:: [[Programming/Python/How To/Set Up a Virtual Environment]], [[Programming/Tools/Homebrew]]
+
       - # How To Install Python on macOS
         - ## Overview
           - This guide walks you through installing Python on macOS
@@ -125,9 +125,6 @@ examples:
             - Run `brew install python`
         - ## Troubleshooting
           - If you see "command not found": Ensure Homebrew is in your PATH
-        - ## Related
-          - [[Programming/Python/How To/Set Up a Virtual Environment]]
-          - [[Programming/Tools/Homebrew]]
     output: "Correctly formatted Diataxis How-To guide in Logseq with proper tags"
 
 metadata:
