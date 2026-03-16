@@ -75,7 +75,13 @@ The following example is incorrect because it lacks indentation, unordered list 
 - In the filesystem, Logseq replaces `/` with `___`, storing namespaced pages as single markdown files.
 - It's important that you not invent namespace links that don't already exist, to avoid polluting the knowledge garden with duplicate content.
 
+### Do not link to a page from within that same page
+
+- Do not include a page link that points to the page you are currently editing (no self-referential links).
+- For example, on the page whose title is "Logseq/Entity", do not write `[[Logseq/Entity]]` in the body. On a type page such as "Logseq/Entity/software-project", do not write `[[Logseq/Entity/software-project]]` in the body. Use the page title as plain text in headings or refer to "this page" in prose instead of linking.
+
 **Example:**
+
 
 ```markdown
 [[Project/Tasks]]

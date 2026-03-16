@@ -84,13 +84,8 @@ Classify results as:
 
 ### Creation Blockers
 
-If a creator person page does not already exist, do not silently create it.
-
-Present recommended choices to the user, such as:
-
-- create the software page now without creator metadata
-- create the person page first
-- skip creation until the identity model is clarified
+- If the creator is clear and a person page does not yet exist, create the person page so the software entity can link to it.
+- If it is not clear who the creator is, do not guess. Ask the human what should be done (e.g. create the software page without creator metadata, create a person page first, or skip until the identity is clarified).
 
 ### Source-Block Handling
 

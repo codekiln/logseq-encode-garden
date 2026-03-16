@@ -1,0 +1,21 @@
+- # software-project
+	- This page is the standard operating procedure for how we do knowledge gardening for software in this garden. Software here means applications for end users, libraries, frameworks, CLIs, desktop or web apps, editors, runtimes, and the like. Below: how we name them, what the page looks like, how we handle creators and duplicates, and links to examples already in the garden.
+	- ## Examples in this garden
+		- [[Yamtrack]], [[Neovim]], [[Lazygit]], and [[tmux]] show how we name and shape software-project pages. Use them as reference.
+	- ## How to name the main page for a software project
+		- Give a software entity a root-level (one-word or short) main page when: (1) its primary name is not confusing, and (2) it is either reputable or nascent but likely to "grow branches"—we'll add sub-namespaces for shortcuts, config, docs, etc. A short main name leaves room; long names (`owner/repo` or `person/project`) make every child path longer and harder to work with. Example: [[Lazygit]] rather than `Person/Jesse Duffield/GitHub/Lazygit`. Aliases can point from other namespaces (e.g. `Programming/Language/Rust`, `Person/Name/GitHub/Project`) to that main page when useful.
+		- When we're interested in a company or a person, we may instead keep some of their projects under a sub-namespace (e.g. `Anthropic/App/Some Tool`) for situational awareness. If one of those sub-namespace pages is a software entity and later becomes heavily used in the garden, refactor it: give it a root-level page and add an alias from the old path. Example: this garden originally had `Anthropic/App/Claude Code` because the focus was on the company; after more content and Claude Code becoming a cultural force, it got its own [[Claude Code]] page with an alias to the old location.
+		- Having more than one rule here is intentional but can feel confusing. The aim is to avoid spamming the top level with every similar piece of software, and to use placement as a subtle signal: root-level primacy for software that has "arrived" or is clearly going to grow; under company or person when we're tracking it in context of that entity.
+	- ## When we treat something as a software project
+		- Strong signals: GitHub or similar repo links, official project homepages, article or post titles that name a software project, or notes that describe a tool, editor, library, app, CLI, or server. We may infer a software entity from context; when we do, we note that in the report.
+	- ## Finding and deduplicating
+		- Check in this order: exact main page name, exact alias, partial title match, repo owner and repo name, then page-body mentions of the same homepage, repo, or description. Classify as: existing, similar, new, or blocked.
+	- ## Frontmatter
+		- To mark a page as a software-project instance, add `logseq-entity:: [[Logseq/Entity/software-project]]` in frontmatter. The type page then gets backlinks to all software-project pages.
+		- Add only other frontmatter we actually know. Use `created-by::` pointing to a person page when that page exists (create the person page first when the creator is clear). Add an alias in the form `Person/Name/GitHub/Project` when that person page exists and the alias is useful.
+	- ## Page shape
+		- File: `pages/<ProjectName>.md`. In links, use the main page name with forward slashes for namespaces where we use them (e.g. `Lazygit/Keyshort/Some action`). First block: H1 with the project title (or a reference link to the project). Keep the page lean: title plus a few descriptive bullets.
+	- ## Creator (person) handling
+		- If the creator is clear and a person page does not yet exist, create the person page so the software page can link to it. If it is not clear who the creator is, do not guess—ask the human (e.g. create the software page without creator metadata, create a person page first, or skip until the identity is clarified).
+	- ## Source blocks
+		- Do not move source blocks from the journal or source page by default. Move or transplant only when explicitly asked.
