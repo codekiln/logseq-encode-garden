@@ -2,7 +2,6 @@ tags:: [[AI Deep Research]], [[Report]]
 
 - # Survey of Rust-Centric CLI and TUI Weather Apps for Forecasting
 	- ## What "Wunderground-style graphs" imply for terminal tools
-		- The screenshot you shared (the classic multi-day forecast grid with compact graphs) strongly suggests three terminal-friendly requirements:
 		- First, you want **multi-day forecast context** (at least a week, ideally 10 days) with a "shape" you can internalize quickly—typically highs/lows, precipitation probability/amount, and wind. Second, you want **graph-like affordances** that work in a monospace terminal: sparklines, Unicode block charts, or small horizontal bar "thermometers." Third, your workflow splits cleanly into two modes: a **machine-callable CLI** that emits stable, parseable output for agentic summarization, and a **human-driven TUI** where richer visuals (charts, multiple panels, keyboard navigation) are worth the extra interaction cost.
 		- That framing is useful because many terminal weather projects choose either (a) "pretty current conditions," or (b) "forecast dashboard," but not both—and fewer still are designed to be both **interactive** and **pipe-friendly**.
 	- ## Weather APIs that match "open, keyless, and forecast-capable"
