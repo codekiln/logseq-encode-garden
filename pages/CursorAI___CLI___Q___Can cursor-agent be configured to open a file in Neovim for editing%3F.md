@@ -1,0 +1,16 @@
+- # Can [[CursorAI/CLI]] (cursor-agent) be configured to open a file in [[Neovim]] for editing?
+	- For example, if the AI lists files modified, can cursor-agent CLI be configured so that clicking the file paths in the terminal opens them in Neovim? Or is there a command that does the same?
+	- ## Answer
+		- [[AI/Response]]
+			- **cursor-agent itself** does not expose a setting to open files in an external editor (Neovim or otherwise). The documented config (`~/.cursor/cli-config.json`) includes `editor.vimMode` only for Vim-style keybindings in the CLI input area, not for launching an external editor. There is no `EDITOR`/`VISUAL`-style option or a slash command like `/open-in-editor`.
+			- **Click-to-open in terminal:** Whether a path in the terminal is clickable and what happens on click is controlled by your **terminal emulator**, not by cursor-agent. Many terminals (e.g. iTerm2, Kitty, Ghostty, Warp) support clickable file paths (e.g. OSC 8 hyperlinks or Cmd+click). You can often configure the action on click (e.g. run a custom command such as `nvim "$path"` or open with a specific app). So you can get “click path → open in Neovim” by configuring the terminal, not cursor-agent.
+			- **Workarounds:** (1) Copy the path from the agent output and run `nvim <path>` (or `$EDITOR <path>`) yourself. (2) Configure your terminal so that clicking (or Cmd+clicking) a path runs `nvim` (or your preferred editor) on that path. (3) Use the CLI’s built-in review with Ctrl+R to inspect changes; that stays inside the CLI and does not open an external editor.
+			- Sources:
+				- [Cursor CLI – Configuration](https://cursor.com/docs/cli/reference/configuration) (schema: no external-editor option)
+				- [Cursor CLI – Using Agent in CLI](https://cursor.com/docs/cli/using) (review with Ctrl+R, no EDITOR)
+				- [Cursor CLI – Terminal setup](https://cursor.com/docs/cli/reference/terminal-setup) (keybindings/theme only)
+	- ## My Notes
+	- ## Related
+		- [[CursorAI/CLI]]
+		- [[CursorAI/CLI/Q/Can cursor-agent CLI accept image input? If so, how?]]
+		- [[Neovim]]
