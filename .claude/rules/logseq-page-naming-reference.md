@@ -22,6 +22,8 @@ This document serves as a quick reference for creating and linking to pages in t
    - Wrong: `[[OpenAI___Academy]]`
    - Correct: `[[OpenAI/Academy]]`
 
+3. **When discussing Logseq hierarchies in the abstract** (in prose, not as a live link), put the path in backticks so it is visually distinct, e.g. `Person/Name/GitHub/Project`, `Lazygit/Keyshort/Some action`.
+
 ## Creating a New Page: Step by Step
 
 1. Create the file with proper naming: `Namespace___SubNamespace___PageName.md`
