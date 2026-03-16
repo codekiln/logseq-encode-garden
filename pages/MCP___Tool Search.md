@@ -1,0 +1,30 @@
+tags:: [[MCP]], [[AI/Coding]], [[Claude Code]], [[OpenAI]]
+
+- # MCP Tool Search
+	- Both [[Anthropic]] ([[Claude Code]]) and [[OpenAI]] have independently shipped a mechanism for loading [[MCP]] tool definitions **on-demand** rather than injecting all of them into the context window upfront — directly addressing the context bloat problem described in [[MCP/Concept/On-Demand Tool Loading]].
+	- ## The Problem
+		- Geoffrey Huntley's [too many model context protocol servers and LLM allocations on the dance floor](https://simonwillison.net/2025/Aug/22/too-many-mcps/) (via [[Person/Simon Willison]]) crystallised the issue:
+			- Claude's 200k-token window shrinks to ~176k after system prompts in tools like Amp or Cursor
+			- The GitHub MCP server alone consumes ~55,000 of those tokens
+			- Multiple MCP servers stack this penalty; LLMs also perform worse when irrelevant information fills the prompt
+	- ## Anthropic's Solution: MCP Tool Search (Claude Code)
+		- [Scale with MCP Tool Search - Claude Docs](https://code.claude.com/docs/en/mcp#scale-with-mcp-tool-search)
+		- Enabled by default in [[Claude Code]] when MCP tool schemas would exceed **10% of the context window**
+		- When triggered:
+			- MCP tools are **deferred** — not loaded into context upfront
+			- Claude uses a built-in `MCPSearch` tool to discover relevant tools when it needs them
+			- Only the tools actually needed are loaded into context for that turn
+		- Controlled via `ENABLE_TOOL_SEARCH` env var; requires Sonnet 4+ or Opus 4+
+		- See also: [[Claude Code/Q/In what sense are MCP tools loaded on-demand]]
+	- ## OpenAI's Solution: Tool Search (GPT-5.4+)
+		- [Tool Search - OpenAI API Docs](https://developers.openai.com/api/docs/guides/tools-tool-search)
+		- Introduced with `gpt-5.4`; tools marked `"defer_loading": true` are not injected upfront
+		- Two modes:
+			- **Hosted**: OpenAI's servers handle discovery automatically; model receives a `tool_search_call` then `tool_search_output`
+			- **Client-executed**: The application controls discovery logic and returns matching tools via `tool_search_output`
+		- Loaded tools are injected at the **end** of the context window, preserving cache across requests
+		- Works with functions, namespaces, or MCP servers
+	- ## Significance
+		- Both implementations converge on the same architecture: tools as a **searchable index** rather than a flat pre-loaded list
+		- This makes large MCP inventories (dozens of servers, hundreds of tools) practical without the context tax
+		- Likely to become a baseline expectation for AI coding tools and agent frameworks going forward

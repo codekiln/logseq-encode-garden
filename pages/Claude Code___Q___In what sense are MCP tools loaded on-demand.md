@@ -1,0 +1,21 @@
+- # In what sense are [[MCP]] tools "loaded on-demand" in [[Claude Code]]?
+	- ## Answer
+		- [[AI/Response]]
+			- "Loaded on-demand" refers to a specific [[Claude Code]] feature called **MCP Tool Search**. [Official docs: Scale with MCP Tool Search](https://code.claude.com/docs/en/mcp#scale-with-mcp-tool-search)
+			- **How it works** (from official docs):
+				- Claude Code automatically enables Tool Search when MCP tool descriptions would consume more than **10% of the context window**
+				- When triggered: MCP tools are **deferred** rather than loaded into context upfront
+				- Claude uses a built-in search tool (`MCPSearch`) to discover relevant MCP tools when it needs them
+				- Only the tools Claude actually needs are then loaded into context
+			- **Why?** Tool definitions from many MCP servers can be verbose and numerous — loading them all upfront could consume a significant slice of the context window even when most are never used in a session.
+			- **Default behaviour**: Enabled by default (except when `ANTHROPIC_BASE_URL` points to a non-first-party host, since most proxies don't forward `tool_reference` blocks). Requires Sonnet 4+ or Opus 4+; Haiku models don't support it.
+			- **Control via env var** `ENABLE_TOOL_SEARCH`:
+				- `(unset)` — enabled by default
+				- `auto` — activates when MCP tools exceed 10% of context
+				- `auto:<N>` — custom threshold (e.g. `auto:5` for 5%)
+				- `true` — always on, including non-first-party base URLs
+				- `false` — disabled; all MCP tools loaded upfront
+			- You can also disable the search tool specifically: `permissions.deny: ["MCPSearch"]`
+	- ## Related
+		- [[MCP]]
+		- [[Claude Code]]
