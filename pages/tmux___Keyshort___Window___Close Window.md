@@ -1,0 +1,8 @@
+- [[Keyshort]] [[tmux]] [[tmux/Keyshort]] [[tmux/Keyshort/Window]]
+	- **Close Window** #card
+		- Shortcut: `<prefix> &` (e.g. Ctrl+b then &), then type `y` at the prompt to confirm.
+		- Description: Closes the current tmux window. Tmux prompts for confirmation before closing.
+		- From the command line:
+			- Close current window: `tmux kill-window`
+			- Close a specific window: `tmux kill-window -t 1` or `tmux kill-window -t my-window-name`
+		- Mouse: Right-click the window name in the status bar → choose **Kill** (or the X option) in the menu. See [[tmux/Window/Right Click]].

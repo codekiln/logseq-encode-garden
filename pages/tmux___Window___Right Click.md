@@ -1,0 +1,6 @@
+- [[tmux]] [[tmux/Window]]
+	- # Right-click on a window in the status bar
+		- Right-clicking a window name (tab) in the tmux status bar opens a context menu.
+		- The menu offers actions for that window, including **Kill** (or an X option) to close the window without using the keyboard.
+		- Same outcome as `<prefix> &` then `y` or `tmux kill-window` for the current window — just a different way to trigger closing that window.
+		- See also: [[tmux/Keyshort/Window/Close Window]]
