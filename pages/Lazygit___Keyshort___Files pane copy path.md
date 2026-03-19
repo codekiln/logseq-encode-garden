@@ -1,0 +1,5 @@
+- [[Keyshort]] [[Lazygit]] [[Lazygit/Keyshort]]
+	- **Copy path (files pane)** #card
+		- Shortcut: `Ctrl+o`
+		- Context: In the files pane
+		- Description: Copies the path of the selected file to the clipboard.

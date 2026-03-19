@@ -67,3 +67,7 @@ repomix-*.xml
 **/WARP.md
 **/.codexignore
 **/.codex/
+
+# Dolt database files (added by bd init)
+.dolt/
+*.db
