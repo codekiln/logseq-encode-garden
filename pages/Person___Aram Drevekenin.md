@@ -1,0 +1,6 @@
+- # [Aram Drevekenin](https://github.com/imsnif)
+	- Open source developer and creator of [[Zellij]], the [[Rust]]-based terminal multiplexer
+	- Also created [[Bandwhich]], a terminal bandwidth utilization tool written in [[Rust]]
+	- Active contributor to the Rust CLI/TUI ecosystem
+	- ## Links
+		- [GitHub: imsnif](https://github.com/imsnif)
