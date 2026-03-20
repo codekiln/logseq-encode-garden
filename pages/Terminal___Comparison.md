@@ -1,0 +1,52 @@
+tags:: [[Terminal/Emulator]]
+see-also:: [[yazi]]
+
+- # Terminal Emulator Comparison
+	- Covers: [[iTerm2]], [[Alacritty]], [[Ghostty]], [[WezTerm]], [[Kitty]]
+	- ## Platform Support
+		- macOS, Linux, and Windows
+			- [[Alacritty]], [[WezTerm]]
+		- macOS and Linux only
+			- [[Ghostty]], [[Kitty]]
+		- macOS only
+			- [[iTerm2]]
+	- ## Implementation Language
+		- [[Rust]]
+			- [[Alacritty]], [[WezTerm]]
+		- [[Zig]]
+			- [[Ghostty]]
+		- Python + C
+			- [[Kitty]]
+		- Objective-C / Swift (macOS native frameworks)
+			- [[iTerm2]]
+	- ## Image Protocol Support
+		- Relevant for tools like [[yazi]] that display inline images in the terminal
+		- Invented the [[iTerm2/Image/Protocol]]
+			- [[iTerm2]]
+		- Invented the [[Kitty/Graphics/Protocol]]
+			- [[Kitty]]
+		- Supports both [[iTerm2/Image/Protocol]] and [[Kitty/Graphics/Protocol]]
+			- [[WezTerm]]
+		- Supports [[Kitty/Graphics/Protocol]]
+			- [[Alacritty]], [[Ghostty]]
+	- ## Nix Support
+		- Idiomatic `programs.*` home-manager module
+			- [[Alacritty]] via `programs.alacritty`
+			- [[WezTerm]] via `programs.wezterm`
+			- [[Kitty]] via `programs.kitty`
+		- Available in nixpkgs; home-manager module available via the official flake
+			- [[Ghostty]] — install via `ghostty.packages.${system}.default`, config via `programs.ghostty` in home-manager
+		- Available in nixpkgs as a package; no `programs.*` home-manager module (macOS-only app)
+			- [[iTerm2]] — configured via nix-darwin or manually
+	- ## Notable Creators
+		- [[Person/Mitchell Hashimoto]] — [[Ghostty]] — also founded [[HashiCorp]] (Terraform, Vagrant, Vault)
+		- [[Person/Kovid Goyal]] — [[Kitty]] — also created [[Calibre]]
+		- [[Person/Wez Furlong]] — [[WezTerm]]
+		- [[Person/George Nachman]] — [[iTerm2]]
+		- [[Person/Joe Wilm]] — [[Alacritty]] (original author)
+	- ## Approximate Age (as of 2026)
+		- [[iTerm2]] — ~15 years (2011)
+		- [[Alacritty]] — ~10 years (2016)
+		- [[Kitty]] — ~9 years (2017)
+		- [[WezTerm]] — ~8 years (2018)
+		- [[Ghostty]] — ~2 years (public release December 2024)

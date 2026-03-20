@@ -1,0 +1,9 @@
+- # [Mitchell Hashimoto](https://mitchellh.com/)
+	- Co-founded [[HashiCorp]] in 2012 alongside Armon Dadgar; served as CTO until stepping back in 2021, and departed entirely around the time of the IBM acquisition in 2023
+	- Created or co-created nearly all of HashiCorp's flagship open source tools: [[Terraform]], [[Vagrant]], [[Vault]], [[Consul]], [[Packer]], [[Nomad]]
+	- After HashiCorp, returned to independent open source work and created [[Ghostty]], a terminal emulator written in [[Zig]], publicly released in December 2024
+	- Known for deep systems programming work and prolific open source output
+	- ## Links
+		- [GitHub: mitchellh](https://github.com/mitchellh)
+		- [Blog: mitchellh.com](https://mitchellh.com/)
+		- [Twitter/X: @mitchellh](https://x.com/mitchellh)
