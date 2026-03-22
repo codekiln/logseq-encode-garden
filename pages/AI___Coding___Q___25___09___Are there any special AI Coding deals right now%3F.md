@@ -39,7 +39,7 @@ cgpt-link:: [[AI coding token deals](https://chatgpt.com/c/68be89ad-8cd8-832d-ae
 			- Notes: Eligibility required, uncertain beyond April.
 		- **Google**:
 			- Open Source / Local Option: Gemini CLI (open source)
-			- Free or Discounted Token Incentives: Free preview: 1,000 req/day + Code Assist free tier [^5][^6]
+			- Free or Discounted Token Incentives: Free preview: 1,000 req/day + Code Assist free tier [^5] [^6]
 			- Notes: Generous quotas.
 		- **Anthropic**:
 			- Open Source / Local Option: No open‑weights
@@ -52,7 +52,7 @@ cgpt-link:: [[AI coding token deals](https://chatgpt.com/c/68be89ad-8cd8-832d-ae
 	- ## Recommendations for Open‑Source Developers
 		- Run **GPT‑OSS locally or via OpenRouter/Requesty** to avoid token costs.
 		- Enable **OpenAI data sharing** if eligible before April 30, 2025 [^1].
-		- Use **Google Gemini CLI + Code Assist** for strong free coding support [^5][^6].
+		- Use **Google Gemini CLI + Code Assist** for strong free coding support [^5] [^6].
 		- Monitor **Anthropic** for future programs; leverage MCP for Claude [^7].
 		- Explore **Hugging Face, Cohere, Ollama** for additional free/open options [^9].
 	- ## Footnotes

@@ -12,21 +12,21 @@ tags:: [[OpenClaw]], [[Report]], [[AI Deep Research]], [[UTM]], [[Ubuntu]]
 	- ## Reference Architecture
 		- ### VM Layer
 			- Use UTM as the trust boundary so the agent does not run directly on macOS host context.
-			- Prefer shared/NAT networking over bridged mode unless you explicitly need L2 network presence.[^5][^6]
+			- Prefer shared/NAT networking over bridged mode unless you explicitly need L2 network presence.[^5] [^6]
 			- Operate headless where possible to minimize convenience integrations that widen the attack surface.[^8]
 		- ### Container Layer
 			- Run the agent runtime in rootless containers inside the VM to reduce blast radius.
-			- Disable rootful Docker daemon and switch to rootless Docker context.[^4][^18]
+			- Disable rootful Docker daemon and switch to rootless Docker context.[^4] [^18]
 		- ### Network/Egress Layer
 			- Route outbound requests through an allowlisting proxy pattern for high-risk agent workflows.
 			- Keep gateway/UI exposure loopback-bound and tunnel outward explicitly when needed.[^7]
 	- ## High-Value Repositories and Guides
-		- [[GitHub/openclaw/openclaw]]: runtime reference with Docker/Compose and rootless Podman setup script; useful for baseline OpenClaw deployment patterns.[^7][^10][^11][^12]
+		- [[GitHub/openclaw/openclaw]]: runtime reference with Docker/Compose and rootless Podman setup script; useful for baseline OpenClaw deployment patterns.[^7] [^10] [^11] [^12]
 		- [[GitHub/openclaw/openclaw-ansible]]: Ansible automation with firewall-first hardening posture and virtualization-first operational direction.[^13]
 		- [[GitHub/Next-Kick/openclaw-hardened-ansible]]: hardened deployment approach with rootless containers and outbound control emphasis.[^1]
-		- [[GitHub/naveenrajm7/vagrant_utm]]: UTM Vagrant provider that makes VM setup reproducible from `vagrant up`.[^14][^15]
+		- [[GitHub/naveenrajm7/vagrant_utm]]: UTM Vagrant provider that makes VM setup reproducible from `vagrant up`.[^14] [^15]
 		- [[GitHub/SrivatsaRv/vagrant-utm-demo]]: concrete Docker-in-UTM via Vagrant example; useful as a pattern reference, but tighten default exposure in security-focused labs.[^16]
-		- [[GitHub/lima-vm/lima]]: strongest public rootless Docker bootstrap sequence for adaptation inside Ubuntu guest.[^4][^18]
+		- [[GitHub/lima-vm/lima]]: strongest public rootless Docker bootstrap sequence for adaptation inside Ubuntu guest.[^4] [^18]
 		- Small Sharp Software Tools tutorial: practical Apple Silicon UTM + Vagrant walkthrough with `utm/ubuntu-24.04` ARM64 base usage.[^3]
 	- ## Recommended Blueprints
 		- ### Blueprint 1: Reproducible UTM VM with Vagrant
@@ -42,11 +42,11 @@ tags:: [[OpenClaw]], [[Report]], [[AI Deep Research]], [[UTM]], [[Ubuntu]]
 		- ### Blueprint 3: Defense-in-Depth Hardening
 			- Add outbound allowlisting proxy.
 			- Keep reverse proxy and TLS boundary separate from agent runtime.
-			- Run services under non-root users and restrict public ingress paths.[^1][^13]
+			- Run services under non-root users and restrict public ingress paths.[^1] [^13]
 	- ## UTM-Specific Notes
-		- `Shared` mode is NAT-based and a safer default for agent labs than bridged mode unless specific requirements justify bridged networking.[^5][^6]
+		- `Shared` mode is NAT-based and a safer default for agent labs than bridged mode unless specific requirements justify bridged networking.[^5] [^6]
 		- For selective host access, use explicit forwarding patterns rather than broad exposure.[^19]
-		- Snapshot workflows are strongest with qcow2-backed disks; this enables rapid rollback after risky experiments.[^20][^21]
+		- Snapshot workflows are strongest with qcow2-backed disks; this enables rapid rollback after risky experiments.[^20] [^21]
 	- ## Operational Risk Controls
 		- Treat all autonomous agent runs as untrusted.
 		- Keep host credentials, SSH keys, and sensitive files out of guest VM and out of mounted shares.
@@ -57,7 +57,7 @@ tags:: [[OpenClaw]], [[Report]], [[AI Deep Research]], [[UTM]], [[Ubuntu]]
 		- 1. Provision Ubuntu ARM64 VM in UTM via `vagrant_utm`.[^14]
 		- 2. Apply rootless Docker bootstrap in guest.[^4]
 		- 3. Deploy OpenClaw stack with loopback-constrained exposure model.[^7]
-		- 4. Apply hardening automation (firewall baseline, outbound control, non-root service model).[^1][^13]
+		- 4. Apply hardening automation (firewall baseline, outbound control, non-root service model).[^1] [^13]
 		- 5. Add snapshot checkpoints before each major capability increase.[^20]
 	- ## Footnotes
 		- [^1]: https://github.com/Next-Kick/openclaw-hardened-ansible

@@ -39,7 +39,7 @@ actions:
       3. **Build Insight** - Help users think about problems and solutions
       4. **Use Examples** - Illustrate concepts with concrete examples
       5. **Address Misconceptions** - Clarify common misunderstandings
-      6. **Link to Related Content** - Connect to tutorials, how-to guides, and reference material
+      6. **Link related pages in frontmatter** - Use `see-also:: [[Page1]], [[Page2]]` for related tutorials, how-to guides, and reference material (do not use a `## Related` body section in this repository)
       
       ## Structure for Logseq Explanation Documentation
       
@@ -47,6 +47,7 @@ actions:
       
       ```
       tags:: [[ExistingTag1]], [[ExistingTag2]], [[Diataxis/Explanation]]
+      see-also:: [[Page1]], [[Page2]]
       
       - # [Topic Name] Conceptual Overview
         - ## Overview
@@ -72,8 +73,6 @@ actions:
           - Common misunderstandings about the concept
           - Clarifications and corrections
           - What it is NOT
-        - ## Related
-          - Links to related pages: [[Page1]], [[Page2]]
       ```
       
       ## Naming Convention and File Paths
@@ -103,6 +102,10 @@ actions:
       - If the page has no tags yet, add: `tags:: [[Diataxis/Explanation]]`
       - Never remove existing tags when adding the Diataxis tag
       
+      ## Related pages (`see-also::`)
+      
+      **IMPORTANT**: In this repository, point to related pages with **`see-also::`** page frontmatter: a comma-separated list of `[[wikilinks]]`. Place it after `tags::` (and any other frontmatter lines) and before the first outline block. Do **not** add a `## Related` section in the page body unless the user explicitly asks.
+      
       ## Language Guidelines
       
       - Use clear, accessible language
@@ -110,7 +113,7 @@ actions:
       - Use analogies and metaphors when helpful
       - Provide concrete examples
       - Address common questions and misconceptions
-      - Link to related tutorials, how-to guides, and reference material
+      - Put related page links in `see-also::` frontmatter (repository convention); avoid a `## Related` section unless the user explicitly requests it
       - Focus on building understanding rather than providing instructions
       
       ## Explanation Writing Process
@@ -127,6 +130,7 @@ actions:
          - Show how it works in practice
          - Include concrete examples
          - Address misconceptions
+         - Add `see-also:: [[...]], [[...]]` for cross-links instead of a `## Related` section
       
       3. **Test for Understanding**
          - Can someone new to the topic follow the explanation?
@@ -137,6 +141,7 @@ actions:
 examples:
   - input: |
       tags:: [[Python]], [[Programming]], [[Diataxis/Explanation]]
+      see-also:: [[Programming/Python/How To/Create Virtual Environment]], [[Programming/Python/Ref/Pip Commands]]
       
       - # Python Virtual Environments Conceptual Overview
         - ## Overview
@@ -163,10 +168,7 @@ examples:
         - ## Misconceptions
           - Virtual environments are only for large projects → **False**. Even small projects benefit from isolation.
           - You need to recreate environments frequently → **False**. Environments persist until deleted.
-        - ## Related
-          - [[Programming/Python/How To/Create Virtual Environment]]
-          - [[Programming/Python/Ref/Pip Commands]]
-    output: "Correctly formatted Diataxis Explanation in Logseq with proper tags"
+    output: "Correctly formatted Diataxis Explanation in Logseq with proper tags and see-also frontmatter"
 
 metadata:
   priority: high

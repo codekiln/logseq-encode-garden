@@ -18,14 +18,14 @@ date-created:: [[2025-12-11 Wed]]
 	- ## Evaluation of Rust-Based Tools
 		- ### [[dprint]]
 			- **dprint** stands out as the most mature, popular, and feature-rich Rust-based CLI formatter for Markdown.
-			- **Popularity & Ecosystem:** 3,699+ GitHub stars (verified 2025-12-11) and active community engagement. Developed with a plugin architecture for extendibility and performance[^1][^2].
+			- **Popularity & Ecosystem:** 3,699+ GitHub stars (verified 2025-12-11) and active community engagement. Developed with a plugin architecture for extendibility and performance[^1] [^2].
 			- **Execution Speed:** Implemented in Rust, dprint is notably faster than alternatives written in interpreted languages, making it ideal for tight feedback loops (pre-commit/CI).
 			- **Robust Formatting:**
 				- Best-in-class auto-formatting of Markdown tables, ensuring visually aligned columns in plain text.
 				- Correct, consistent formatting of fenced code blocks, including blocks containing Markdown or other complex contents.
 				- Supports `tableColumnAlignment` configuration option for controlling table column alignment[^verified].
 			- **Integration:**
-				- Comprehensive documentation for use as a git pre-commit hook and in CI/CD (including example configs for GitHub Actions)[^1][^2].
+				- Comprehensive documentation for use as a git pre-commit hook and in CI/CD (including example configs for GitHub Actions)[^1] [^2].
 				- Configurations supported in `dprint.json` or `dprint.config.toml`, scalable for monorepos or large projects.
 				- **Note:** The report originally referenced a `dprint/solutions` repository for pre-commit hooks, but this repository does not exist. Pre-commit integration can be achieved through direct dprint installation or via `dprint-plugin-exec` repository (34 stars, verified 2025-12-11)[^correction].
 			- **Configuration Example:**
@@ -73,13 +73,13 @@ date-created:: [[2025-12-11 Wed]]
 					- The dprint CLI itself is written in Rust and includes a WASM runtime to execute these plugins securely. This architecture allows dprint to support plugins written in various languages (Rust, TypeScript, etc.) that compile to WASM, while maintaining security and performance.
 			- **Extensibility:** Supports plugins for other languages (JSON, TypeScript, etc.), making it suitable for polyglot repos.
 			- **Weaknesses:** Focused on formatting (not deep linting), but this is in line with requirements emphasizing auto-formatting.
-			- **References:** [dprint Documentation][^1], [dprint GitHub][^2]
+			- **References:** [dprint Documentation] [^1], [dprint GitHub] [^2]
 		- ### Other Rust-Based Alternatives
-			- Comprehensive research reveals no other established Rust-based Markdown formatters/linters that match dprint in popularity, features, or adoption for pre-commit/CI integration. Projects such as *markdownlint-cli* (JavaScript-based, 981 stars, verified 2025-12-11) or *mdox* (Go-based, 75 stars, verified 2025-12-11) are either not in Rust or lack critical features such as column alignment or robust code block handling[^3][^4][^5].
+			- Comprehensive research reveals no other established Rust-based Markdown formatters/linters that match dprint in popularity, features, or adoption for pre-commit/CI integration. Projects such as *markdownlint-cli* (JavaScript-based, 981 stars, verified 2025-12-11) or *mdox* (Go-based, 75 stars, verified 2025-12-11) are either not in Rust or lack critical features such as column alignment or robust code block handling[^3] [^4] [^5].
 	- ## Evaluation of Non-Rust Alternatives
 		- When Rust-native is not a strict requirement, two mature alternatives emerge: **mdformat** (Python) and **Prettier** (JavaScript/TypeScript).
 		- ### mdformat
-			- **Popularity:** 678 GitHub stars (verified 2025-12-11; report originally stated 750+)[^correction], active development, especially in scientific and technical communities[^6][^7].
+			- **Popularity:** 678 GitHub stars (verified 2025-12-11; report originally stated 750+)[^correction], active development, especially in scientific and technical communities[^6] [^7].
 			- **Repository Location:** The mdformat repository is maintained under `hukkin/mdformat` (not `executablebooks/mdformat` as originally stated, though executablebooks maintains related plugins)[^correction].
 			- **Auto-Formatting:** Highly robust table alignment, excellent handling of complex/nested code blocks, supports plugins.
 			- **Table Formatting:** Requires `mdformat-tables` or `mdformat-gfm` plugin for table formatting support. Tables can be formatted with alignment indicators (`:---`, `:---:`, `---:`)[^verified].
@@ -98,9 +98,9 @@ date-created:: [[2025-12-11 Wed]]
 				  ~~~
 			- **Strengths:** Fine-grained control and clean Markdown output, especially for documentation-centric projects.
 			- **Weaknesses:** Requires Python runtime; less performant on very large projects compared to dprint; smaller user base.
-			- **References:** [mdformat Docs][^6], [mdformat GitHub][^7]
+			- **References:** [mdformat Docs] [^6], [mdformat GitHub] [^7]
 		- ### Prettier
-			- **Popularity:** Over 51,281 GitHub stars (verified 2025-12-11; report originally stated 46,000+)[^correction]. Most widely adopted code formatter in the JavaScript/TypeScript world with mature Markdown support[^8][^9].
+			- **Popularity:** Over 51,281 GitHub stars (verified 2025-12-11; report originally stated 46,000+)[^correction]. Most widely adopted code formatter in the JavaScript/TypeScript world with mature Markdown support[^8] [^9].
 			- **Formatting:** Good Markdown support, including tables and code blocks (though table alignment is less precise/customizable than dprint or mdformat)[^verified].
 			- **Table Limitations:** Users have reported issues with table formatting, particularly with non-ASCII characters, inconsistent formatting, and limited customization options[^verified].
 			- **Integration:** Near-universal CI and pre-commit integration (`lint-staged`, `pretty-quick`).
@@ -119,7 +119,7 @@ date-created:: [[2025-12-11 Wed]]
 				  ~~~
 			- **Strengths:** Maximal adoption, speed, multi-language support, easiest for JavaScript codebases.
 			- **Weaknesses:** Table formatting less advanced, limited options for Markdown-specific formatting quirks.
-			- **References:** [Prettier Docs][^8], [Prettier GitHub][^9]
+			- **References:** [Prettier Docs] [^8], [Prettier GitHub] [^9]
 	- ## Comparative Summary Table
 		- | Feature          | dprint (Rust)         | mdformat (Python)      | Prettier (JS/TS)         |
 		  |------------------|----------------------|------------------------|--------------------------|
@@ -133,11 +133,11 @@ date-created:: [[2025-12-11 Wed]]
 		  | **Dependencies** | Standalone binary    | Python 3               | Node.js                  |
 	- ## Practical Recommendations
 		- **If Rust-based, high-speed CLI, robust table/code block formatting, and ease of integration are top priorities:**
-			- **dprint** is the clear choice ([Docs][^1], [GitHub][^2]). It provides superior table alignment, best handling of nested code blocks, and is easy to automate with both pre-commit and GitHub Actions. It is also future-proof for large, polyglot monorepos.
+			- **dprint** is the clear choice ([Docs] [^1], [GitHub] [^2]). It provides superior table alignment, best handling of nested code blocks, and is easy to automate with both pre-commit and GitHub Actions. It is also future-proof for large, polyglot monorepos.
 		- **If Python ecosystem integration or advanced documentation features are required (e.g., for scientific/technical docs):**
-			- **mdformat** is best-in-class, with excellent formatting, strong plugin system, and mature pre-commit support ([Docs][^6], [GitHub][^7]).
+			- **mdformat** is best-in-class, with excellent formatting, strong plugin system, and mature pre-commit support ([Docs] [^6], [GitHub] [^7]).
 		- **If maximal popularity and broadest ecosystem integration are most important (especially for Node.js/JS projects):**
-			- **Prettier** is unrivaled for overall adoption, speed, and integration options, with solid (though less customizable) Markdown support ([Docs][^8], [GitHub][^9]).
+			- **Prettier** is unrivaled for overall adoption, speed, and integration options, with solid (though less customizable) Markdown support ([Docs] [^8], [GitHub] [^9]).
 		- For all tools, extensive documentation and canonical usage patterns are readily available.
 	- ## Example Integrations
 		- ### dprint

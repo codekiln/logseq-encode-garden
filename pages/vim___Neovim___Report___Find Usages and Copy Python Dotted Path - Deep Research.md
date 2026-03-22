@@ -49,28 +49,28 @@
 			- Prioritize low-latency navigation and minimal keystrokes over flashy UI.
 	- ## [[ChatGPT/Deep Research/Response]]
 		- ## Executive summary
-			- A [[Neovim]] setup can get close to [[PyCharm]] for "find usages", but indexing depth is bounded by the Python language server, not by UI plugins.[^1][^12]
+			- A [[Neovim]] setup can get close to [[PyCharm]] for "find usages", but indexing depth is bounded by the Python language server, not by UI plugins.[^1] [^12]
 			- Recommended default stack for terminal-first [[Python]] on macOS:
-				- [[Neovim]] >= 0.11 built-in LSP + `nvim-lspconfig` defaults.[^3][^24]
-				- `basedpyright` as default server, with optional fallback to `pyright`.[^4][^13]
-				- `fzf-lua` for low-latency references list and jump flow.[^5][^15]
+				- [[Neovim]] >= 0.11 built-in LSP + `nvim-lspconfig` defaults.[^3] [^24]
+				- `basedpyright` as default server, with optional fallback to `pyright`.[^4] [^13]
+				- `fzf-lua` for low-latency references list and jump flow.[^5] [^15]
 				- Optional `trouble.nvim` for persistent reference/result panes.[^6]
-				- `python-copy-reference.vim` or `copy-python-path.nvim` for dotted reference copy workflows.[^7][^8]
-			- Important caveat: pyright maintainer guidance and open issues indicate reference-finding is limited compared with Pylance indexing behavior.[^1][^11][^12]
+				- `python-copy-reference.vim` or `copy-python-path.nvim` for dotted reference copy workflows.[^7] [^8]
+			- Important caveat: pyright maintainer guidance and open issues indicate reference-finding is limited compared with Pylance indexing behavior.[^1] [^11] [^12]
 		- ## Viable stacks
 			- [[Neovim]] + `basedpyright` + `fzf-lua` + `python-copy-reference.vim`
-				- Best balance of speed, setup effort, and practical workflow parity.[^5][^7][^13]
+				- Best balance of speed, setup effort, and practical workflow parity.[^5] [^7] [^13]
 			- [[Neovim]] + `pyright` + [[Telescope]] + copy-reference plugin
-				- Strong preview UX and common community defaults, with same server limits.[^16][^17][^23]
+				- Strong preview UX and common community defaults, with same server limits.[^16] [^17] [^23]
 			- [[LazyVim]] Python extra + `pyright` or `basedpyright`
-				- Lowest setup overhead if distro defaults are acceptable.[^18][^19]
+				- Lowest setup overhead if distro defaults are acceptable.[^18] [^19]
 			- [[Neovim]] + `jedi-language-server`
-				- Can work for some dynamic codebases, but environment/path configuration becomes critical.[^20][^45][^46]
+				- Can work for some dynamic codebases, but environment/path configuration becomes critical.[^20] [^45] [^46]
 		- ## Implementation notes
-			- Use workspace-aware analysis for cross-file references in medium/large repos where possible.[^13][^38]
-			- Validate LSP root detection (`pyproject.toml`, `.git`, `pyrightconfig.json`) to avoid false "no references" behavior.[^27][^37][^39]
-			- For dotted path copy, prefer dedicated plugins over raw LSP-only reconstruction.[^7][^8][^29]
-			- In src-layout or monorepos, configure prefix stripping/root heuristics explicitly.[^7][^35]
+			- Use workspace-aware analysis for cross-file references in medium/large repos where possible.[^13] [^38]
+			- Validate LSP root detection (`pyproject.toml`, `.git`, `pyrightconfig.json`) to avoid false "no references" behavior.[^27] [^37] [^39]
+			- For dotted path copy, prefer dedicated plugins over raw LSP-only reconstruction.[^7] [^8] [^29]
+			- In src-layout or monorepos, configure prefix stripping/root heuristics explicitly.[^7] [^35]
 		- ## Sample keymaps
 			- ~~~lua
 			  local fzf = require("fzf-lua")
@@ -82,22 +82,22 @@
 			  vim.keymap.set("n", "<leader>yI", "<cmd>CopyPythonPath import<cr>")
 			  ~~~
 		- ## Verification checklist
-			- Confirm cross-file references from a symbol with callsites in multiple modules.[^29][^34]
+			- Confirm cross-file references from a symbol with callsites in multiple modules.[^29] [^34]
 			- Confirm `includeDeclaration=false` yields true "usages" style result sets.[^29]
 			- Confirm jump/backtracking with `<C-o>` and `<C-i>` is smooth after reference jumps.[^30]
 			- Confirm dotted path copy for:
 				- top-level functions/classes
 				- nested symbols
 				- imported aliases
-				- src-layout paths[^7][^8][^21][^35]
+				- src-layout paths[^7] [^8] [^21] [^35]
 		- ## Troubleshooting highlights
 			- Incomplete references:
-				- Verify request path is `vim.lsp.buf.references()` and LSP is attached to the right root.[^9][^36][^40]
-				- Switch from open-files-only analysis to workspace analysis where feasible.[^13][^37][^38]
-				- Accept known pyright limitations on global reference indexing in some projects.[^1][^11][^12]
+				- Verify request path is `vim.lsp.buf.references()` and LSP is attached to the right root.[^9] [^36] [^40]
+				- Switch from open-files-only analysis to workspace analysis where feasible.[^13] [^37] [^38]
+				- Accept known pyright limitations on global reference indexing in some projects.[^1] [^11] [^12]
 			- Incorrect dotted paths:
 				- Tune plugin root/prefix behavior first.
-				- Watch for namespace-package and re-export edge cases that make path resolution ambiguous.[^41][^42][^43][^44]
+				- Watch for namespace-package and re-export edge cases that make path resolution ambiguous.[^41] [^42] [^43] [^44]
 		- ## Footnotes
 			- [^1]: https://github.com/microsoft/pyright/discussions/3554
 			- [^2]: https://github.com/microsoft/pyright/discussions/3554
