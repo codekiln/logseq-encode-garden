@@ -1,0 +1,1 @@
+- {{cards [[fzf/Keyshort]] }}

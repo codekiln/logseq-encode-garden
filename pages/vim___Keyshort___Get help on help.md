@@ -1,0 +1,4 @@
+- [[Keyshort]] [[vim/Keyshort]]
+	- **View the [[vim/help]] page related to browsing the vim help** #card
+		- `:help helphelp`
+		- this opens up the help page which has all the commands needed to browse

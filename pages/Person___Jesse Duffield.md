@@ -1,3 +1,5 @@
+alias:: [[CLI/Craftsperson/Jesse Duffield]]
+tags:: [[CLI/Craftsperson]]
 - # Jesse Duffield
 	- ## About
 		- Creator of [[Lazygit]] and [[Lazydocker]]

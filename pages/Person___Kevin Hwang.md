@@ -1,5 +1,5 @@
-alias:: [[kevinhwang91]]
-
+alias:: [[kevinhwang91]], [[CLI/Craftsperson/Kevin Hwang]]
+tags:: [[CLI/Craftsperson]]
 - # Kevin Hwang
 	- [kevinhwang91 (Kevin)](https://github.com/kevinhwang91) on GitHub
 	- Neovim plugin developer known for high-quality, well-maintained plugins

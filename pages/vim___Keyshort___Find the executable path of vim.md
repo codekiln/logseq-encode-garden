@@ -1,0 +1,5 @@
+- [[Keyshort]] [[vim/Keyshort]]
+	- **find the place on the disk where the vim executable is found** #card
+		- Shortcut:
+			- `:echo $VIMRUNTIME`
+			- `:set runtimepath?`

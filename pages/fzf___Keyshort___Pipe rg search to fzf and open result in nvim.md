@@ -1,0 +1,3 @@
+- [[fzf/Keyshort]] [[Keyshort]] [[CLI command]]
+	- **Pipe [[rg]] search into fzf, and open result in an editor** #card
+		- `nvim "$(rg --files-with-matches <search-query> | fzf)"`

@@ -9,6 +9,7 @@ date-created:: [[2026-03-21 Sat]]
 	- ## Coaches (concept)
 		- **AI Terminal Coach** — guides how to do things in the terminal rather than performing them for you; pairs with interactive review.
 		- **AI Engineering Coach** — same spirit for broader engineering workflow; overlaps with teaching-oriented agent skills (see related link below).
+		- [[Learning/Idea/26/03/Terminal toolbelt learning and Readwise-like CLI/Proto Session/26/03/21 Sat]] — proto session log (dated filename); cursor-agent + tmux split-pane coaching experiment.
 	- ## Snip / highlight pipeline (missing standard)
 		- While reading `man rg` (example), used tmux copy mode and yanked a tip — but yank-only does not attach **source**, **section**, or a path into the knowledge garden.
 		- Wish: a **standard flow** from “selection in pager or tmux” → **personal notes** with **attribution** → optional **flashcard** and **coach context** (quizzes, “what flag was that?”).

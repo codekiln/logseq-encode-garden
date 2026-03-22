@@ -1,5 +1,5 @@
-alias:: [[Username/badboy]]
-
+alias:: [[Username/badboy]], [[CLI/Craftsperson/Jan-Erik Rediger]]
+tags:: [[CLI/Craftsperson]]
 - # Person/Jan-Erik Rediger
 	- ## Bio [[About]] [About me](https://fnordig.de/about/)
 		- Works at [[Mozilla]]. Developer and speaker; into [[rust]], self-hosting, and open source. Blogs at [fnordig.de](https://fnordig.de/). GitHub: [badboy](https://github.com/badboy/). Discovered when an agentic coding tool tried to access their [[TIL]] post on a minimal Nix flake.

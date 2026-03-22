@@ -1,5 +1,5 @@
-alias:: [[Username/NotAShelf]]
-tags:: [[Coder]]
+alias:: [[Username/NotAShelf]], [[CLI/Craftsperson/raf]]
+tags:: [[Coder]], [[CLI/Craftsperson]]
 
 - # [raf](https://notashelf.dev)
 	- > Political Scientist, Open source advocate, (dys)functional/high-level programmer. @NixOS hacker and nixpkgs contributor.

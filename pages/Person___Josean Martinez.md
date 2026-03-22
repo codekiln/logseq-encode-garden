@@ -1,3 +1,6 @@
+alias:: [[CLI/Craftsperson/Josean Martinez]]
+tags:: [[CLI/Craftsperson]]
+
 - # Josean Martinez
 	- ## About
 		- YouTube creator focused on **Neovim**, **Lazygit**, and terminal workflows
@@ -5,6 +8,7 @@
 	- ## Web
 		- Newsletter: https://buttondown.email/josean
 		- Support: https://www.buymeacoffee.com/joseanmartinez
-		- Dotfiles: https://bit.ly/4cFlPyq
+		- [[dotfiles]]
+			- [[Person/Josean Martinez/GitHub/dev-environment-files]] is [[Person/Josean Martinez/Config/dotfiles]]
 	- ## #YouTube
 		- [[Person/Josean Martinez/YouTube/Lazygit - Best Way to Git and Neovim]]
