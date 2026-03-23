@@ -1,0 +1,3 @@
+- [typecraft - YouTube](https://www.youtube.com/@typecraft_dev)
+	- [[Person/Chris Power/YouTube/25/01/lazydocker]]
+	- [[Person/Chris Power/YouTube/25/11/yazi]]

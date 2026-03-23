@@ -10,6 +10,8 @@ see-also:: [[yazi]]
 			- [[Ghostty]], [[Kitty]]
 		- macOS only
 			- [[iTerm2]]
+	- ## [[GPU]] rendering
+		-
 	- ## Implementation Language
 		- [[Rust]]
 			- [[Alacritty]], [[WezTerm]]
@@ -29,7 +31,7 @@ see-also:: [[yazi]]
 			- [[WezTerm]]
 		- Supports [[Kitty/Graphics/Protocol]]
 			- [[Alacritty]], [[Ghostty]]
-	- ## Nix Support
+	- ## [[Nix]] Support
 		- Idiomatic `programs.*` home-manager module
 			- [[Alacritty]] via `programs.alacritty`
 			- [[WezTerm]] via `programs.wezterm`
@@ -44,6 +46,17 @@ see-also:: [[yazi]]
 		- [[Person/Wez Furlong]] — [[WezTerm]]
 		- [[Person/George Nachman]] — [[iTerm2]]
 		- [[Person/Joe Wilm]] — [[Alacritty]] (original author)
+	- ## Notable Users
+		- [[Person/Josean Martinez]]
+			- [[WezTerm]] - see [josean-dev/dev-environment-files](https://github.com/josean-dev/dev-environment-files)
+		- [[Username/typecraft]] aka [[Person/Chris Power]]
+			- [[Ghostty]] - he says in [[Person/Chris Power/YouTube/25/11/yazi]] "I use Ghostty as my main terminal" - if this guy uses it as his main terminal emulator then it must not ready for some attention.
+	- ## Notable Comments
+		- [[Zig]] and [[Nix]] pilled
+			- https://www.reddit.com/r/NixOS/comments/1ho57k2/comment/m46ytos/
+				- Honestly yes. It’s subjective but I find a significant performance between it and [Alacritty](https://www.reddit.com/search/?q=Alacritty+terminal+emulator&cId=66973f19-24f7-44c7-8eaa-2bed141c9229&iId=f6702e7f-817a-4307-93a3-1b0a1a3ba6e9). I will caveat that I’m mostly comparing Ghostty and Alacritty both using fish and zellij on 2015 hardware.
+				- The part I quite like is that it’s a project developed in [Zig](https://www.reddit.com/search/?q=Zig+programming+language&cId=a70d5d2a-4bf4-445f-84cf-b567d03125b6&iId=219cf3ae-2d3d-4a54-b53b-f3cec526801f), with Nix/NixOS being their primary dev and CI environment so I’ll likely never have compatibility issues or weird quirks.
+				- Is it the best thing since sliced bread? Absolutely not. Do I like it because of a very subjective difference it makes to me? Absolutely. Am I biased because I like Zig and Nix? Abso-f&$@ing-lutely
 	- ## Approximate Age (as of 2026)
 		- [[iTerm2]] — ~15 years (2011)
 		- [[Alacritty]] — ~10 years (2016)

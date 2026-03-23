@@ -1,0 +1,2 @@
+- [🚀 Getting Started | LazyVim](https://www.lazyvim.org/)
+	-
