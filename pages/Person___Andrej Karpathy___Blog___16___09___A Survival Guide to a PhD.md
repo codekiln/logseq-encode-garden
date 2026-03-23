@@ -1,0 +1,58 @@
+date-created:: [[2016-09-07]]
+created-by:: [[Person/Andrej Karpathy]]
+
+- # [A Survival Guide to a PhD](https://karpathy.github.io/2016/09/07/phd/)
+	- Retrospective guide by [[Person/Andrej Karpathy]] after finishing his PhD; written in the spirit of his earlier undergrad post [Doing well in your courses](http://cs.stanford.edu/people/karpathy/advice.html)
+	- Many specifics reflect CS / machine learning / computer vision, but much generalizes; Karpathy frames it as navigation tips, not recruitment
+- ## Should you do a PhD?
+	- ### Possible appeals
+		- Freedom in what to pursue; ownership of research with your name on it; exclusivity of top programs; cultural status
+		- Flexible schedule tied to output, not clock time; keeps future options comparatively open; more “variance” while young
+		- Intense learning, self-management, dense peer quality; rare chance to drill deep and work at the edge of knowledge
+	- ### Disclaimer / downsides
+		- Crunch before deadlines; isolation; salary envy; discarded work; low-citation papers vs friends in industry; identity strain
+		- Need tolerance for unstructured pursuit of research; if unsure, lean negative; prior research experience helps you know what you are signing up for
+	- Argues a PhD can be intrinsically valuable, not only a path to academia
+- ## Admission and choosing a program
+	- Strong reference letters dominate; ideal letters attest initiative and results, not only grades
+	- Publications from summer research help but are not strictly required if letters are stellar; grades matter little unless bad—time is better spent on research (and multiple mentors for 3+ letters)
+	- Avoid cold, aggressive outreach that annoys busy faculty
+	- Pick schools that are strong (for peer feedback loops), have several plausible advisers (backup if your first choice fails), and sit in a place you can live happily for 5+ years
+- ## Adviser
+	- Relationship is symbiotic; understand incentives—tenure, funding, politics, how they gain standing
+	- Pre-tenure vs post-tenure caricature: younger faculty often more hands-on and intense; senior faculty often higher-level, with detail coming from senior students and postdocs
+	- Many axes: management warmth, micromanagement, modeling vs task focus, meeting frequency, email responsiveness, hours expectations, hardware support, conference travel policy, theory vs applied, internship tolerance
+	- Choose via in-person fit, intellectual overlap, and “references” from students (specific questions work better than vague prompts) and alumni trajectories
+	- Impress by passion, independence, and going beyond assigned suggestions
+	- Evaluate the whole lab—you collaborate daily with labmates and postdocs, not only the PI
+- ## Research topics (the “outer loop”)
+	- Most time is choosing what is worth solving and ripe to solve, not only executing (inner loop)
+	- “Taste” is real—advisers rapidly judge importance, difficulty, novelty, history, grant fit; you refine taste with practice
+	- Choose problems that leave room for a thesis-length chain of papers
+	- Align with adviser strengths so they invest and their talks showcase your work (e.g. extending their “default talk”)
+	- Be ambitious: a far more important problem is often only modestly harder; big goals can force real innovation
+	- Important problems need a plausible *attack* (Hamming), not only huge consequences—see [You and Your Research](https://www.cs.virginia.edu/~robins/YouAndYourResearch.html) (Richard Hamming)
+	- Aim to be “the person who did X” in a describable slice of the field; consider whether expertise you are building will stay exciting or valuable
+	- Avoid “incremental” +2% benchmark papers (“cockroach papers” that clear review but lack impact) and lazy motivations (“obvious next step,” “easy poster”)
+	- Personal arc: ~2 years exploring 3D/video before thesis direction; pivot after a late-night chat with Richard Socher toward images-and-language; fertile problem, timing with data and deep learning, fit with Fei-Fei Li’s interests; adviser can still steer (e.g. image-to-sentence vs ranking)
+	- Advisers err; independent bets sometimes work, sometimes not (story with early Andrew Ng advice)
+	- “Don’t play only the paper game”—community impact can include blog posts, benchmarks (e.g. ImageNet human accuracy), tools (e.g. arXiv sanity), teaching (CS231n), even at cost to conventional metrics
+- ## Writing papers
+	- Learn the expected genre—structure, tone, stats, figures
+	- Review many *bad* papers (and journal clubs), not only good ones, to train a mental classifier of failure modes
+	- Senior researchers use gestalt: typical length sections, citation density, pull and system figures, math, bolded table entries, filling the page limit cleanly
+	- Identify a *single* core contribution; extra bundled contributions often dilute the narrative (examples from his video and CVPR work)
+	- Default skeleton: Intro, Related Work, Model, Experiments, Conclusions—then execute tightly around the one claim
+	- Release code when possible (Docker helps reproducibility); document for “future you” who will forget the codebase
+- ## Talks
+	- Primary goals: excite people about the *problem*, teach something (including related work), entertain—not merely recap the paper
+	- Prefer images over walls of text; actionable takeaways; live demos when feasible; narrative arc; generous citations; practice repeatedly
+	- Avoid outline slides for short talks; beware bored-then-confused arc; don’t run out of time before the interesting part; notice audience phone-check triggers
+- ## Conferences and community
+	- Attend top 1–2 venues even if self-funded (~$2k); science is social—hallway knowledge matters
+	- Sometimes choose talks by speaker quality, not only topic
+	- Hallways and posters often matter more than talks because ML moves faster than the proceedings cycle
+	- Joke framing of three PhD stages: unknown references → recognize all references → drank beer with every first author
+- ## Closing
+	- No durable win from gaming proxies in a small, connected field—do good work and communicate it well
+	- Discussion thread noted on the original post ([Hacker News](https://news.ycombinator.com/item?id=12447495))

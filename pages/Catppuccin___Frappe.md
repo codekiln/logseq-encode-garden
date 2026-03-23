@@ -1,0 +1,13 @@
+- # Frappé
+	- A **dark** flavor of [[Catppuccin]] — softer contrast than Macchiato or Mocha; good middle ground for long sessions. [^1]
+	- ![Frappé UI preview (official)](../assets/Catppuccin/preview-frappe.webp) [^2]
+	- ## Typical config ids
+		- Short: `frappe`
+		- Ghostty / many terminals: `catppuccin-frappe`
+		- Neovim: `flavour = "frappe"`
+		- tmux: `@catppuccin_flavour 'frappe'` (or upstream’s current variable name)
+	- ## See also
+		- Hub: [[Catppuccin]] — full stack matrix and palette links
+	- ## Footnotes
+		- [^1]: https://github.com/catppuccin/palette
+		- [^2]: https://github.com/catppuccin/catppuccin/blob/main/assets/previews/frappe.webp

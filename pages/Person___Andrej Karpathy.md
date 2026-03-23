@@ -10,5 +10,6 @@ tags:: [[Person]]
 	- [[Person/Andrej Karpathy/Web/Personal]] https://karpathy.ai/
 	- [[Person/Andrej Karpathy/Web/X]] https://x.com/karpathy
 - ## [[Person/Andrej Karpathy/Related Content]]
+	- [[Person/Andrej Karpathy/Blog/16/09/A Survival Guide to a PhD]] - Karpathy’s retrospective PhD advice (Sep 2016)
 	- [[Person/Andrej Karpathy/Blog/25/12/Andrej Karpathy warns Programmers]] - Medium article discussing Karpathy's perspective on the evolving programming landscape
 

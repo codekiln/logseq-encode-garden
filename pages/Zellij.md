@@ -26,6 +26,7 @@ see-also:: [[tmux]], [[Terminal/Multiplexer]]
 			    };
 			  };
 			  ~~~
+		- `theme` uses a [[Catppuccin]] flavor; see [[Catppuccin]] for palette details and other apps.
 	- ## Notable Features
 		- Layout system using KDL config files — define named layouts for projects
 		- WebAssembly plugin system — plugins run sandboxed in WASM

@@ -1,4 +1,5 @@
 - tmux resources
+	- For coordinated palette setup (e.g. [[Catppuccin]] with TPM ports), see [[Catppuccin]] and [[tmux/Config]].
 	- [tmux.info tmux Tutorial - Master Terminal Multiplexing | Complete Guide & Commands](https://tmux.info/)
 	- extensions
 		- [[tmux/oh-my-tmux]] — by [[Person/Grégory Pakosz]]

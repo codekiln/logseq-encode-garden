@@ -1,0 +1,7 @@
+- # Beads / Dolt task DB — corruption and sync pain
+	- Parent namespace for dated notes when [[Beads]] on the [[Dolt]]-backed task database misbehaves (repo state, journal files, remotes, or `bd` itself).
+	- ## Prior mentions in the journal
+		- [[2026-03-19 Thu]] — “[[Beads]] and [[Dolt]] woes”: upgrade felt unusable; thread on [steveyegge/beads#2573](https://github.com/steveyegge/beads/issues/2573); umbrella [issue #2685](https://github.com/steveyegge/beads/issues/2685); discomfort with tasks living in both JSONL and Dolt and merge conflicts returning
+		- [[2026-02-01 Sun]] — `bd` socket `broken pipe` / flush failures when using `bd create-form` (runtime reliability before the Dolt default, same rough failure mode: can’t trust local beads state)
+	- ## Dated incident notes
+		- [[Beads/Bug/Dolt Difficulties/Corruption/26/03/23]]

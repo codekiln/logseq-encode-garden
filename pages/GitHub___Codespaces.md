@@ -141,3 +141,6 @@ alias:: [[GitHub Codespace]], [[Codespaces]], [[Codespace]]
 		- [[Claude Code/Devcontainer]] - Claude Code's dev container setup
 		- [[VSCode]] - Primary editor interface
 		- [[GitHub/CLI]] - Command-line interface for managing codespaces
+	- ## Agent runtimes & sandboxes (adjacent, not substitutes)
+		- **[[e2b]]**: API‑first **ephemeral sandboxes** for agent/code execution at scale—overlaps with Codespaces only in “remote box that runs code”; different tenancy (many per‑user sandboxes vs per‑dev codespace), GitHub integration, and threat model emphasis.
+		- **[[OpenAI/Blog/26/02/27/Stateful Runtime Environment for Agents in Amazon Bedrock]]**: **Bedrock‑native** **stateful agent orchestration** in **AWS** for production workflows—not a devcontainer IDE story; compare on **persistent multi‑step agent state**, not on repo editing UX.

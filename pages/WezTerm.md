@@ -28,6 +28,7 @@ see-also:: [[Terminal/Comparison]]
 			    '';
 			  };
 			  ~~~
+		- `color_scheme` uses [[Catppuccin]]; see [[Catppuccin]] for flavors and other tools.
 	- ## Notable Features
 		- Lua-based configuration (`.wezterm.lua`)
 		- Built-in multiplexer (tabs, splits, panes) — no tmux required

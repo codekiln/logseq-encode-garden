@@ -1,0 +1,13 @@
+alias:: [[E2B]]
+
+- # E2B (vendor product)
+	- Commercial **AI sandbox / agent runtime** platform ([E2B | The Enterprise AI Agent Cloud](https://e2b.dev/)): short‑lived isolated environments (positioned as microVM‑backed, e.g. Firecracker) for running **untrusted or LLM‑generated code**, browsers, desktops for computer‑use agents, notebooks, batch RL experiments, and similar **agent tool** workloads—not a general “rent a VPS” or “deploy my monolith API” product by default.
+		- [Documentation](https://e2b.dev/docs)
+	- **BYOC / self‑host**: E2B markets deployment in a customer’s own cloud (including AWS accounts / VPC). That path is adjacent to “build on AWS primitives yourself” but still productized around the **sandbox API and templates**, not around simplifying long‑running ECS services.
+		- On AWS, see [[AWS/GitHub/sample-e2b-on-aws]] for an AWS‑Samples reference deployment of E2B infrastructure in your account.
+	- **Market sector vs typical AWS compute stories**
+		- **Same neighborhood (cloud compute, containers, isolation)** as [[AWS/Lightsail]] and Amazon ECS offerings such as [[AWS/ECS/Express Mode]] in the sense that all ultimately run workloads on AWS (or can).
+		- **Different primary job‑to‑be‑done** than Lightsail (simple VPS / managed app building blocks) and than ECS Express Mode (opinionated **production web/API** on Fargate with auto‑wired ALB, DNS, scaling): E2B optimizes for **high churn, many ephemeral sandboxes, agent SDK ergonomics, and template‑driven images** rather than steady‑state service hosting.
+	- Open‑source oriented company with public cookbooks and examples on GitHub under the `e2b-dev` org (e.g. [github.com/e2b-dev](https://github.com/e2b-dev)).
+	- **Adjacent AWS agent story (different layer)**: OpenAI and Amazon announced a **Stateful Runtime Environment for Agents in Amazon Bedrock**—Bedrock‑native **persistent orchestration and state** for multi‑step agents, not a substitute for **sandbox compute**. See [[OpenAI/Blog/26/02/27/Stateful Runtime Environment for Agents in Amazon Bedrock]].
+	- **Vs [[GitHub/Codespaces]]**: both offer **cloud environments where code runs**, but Codespaces optimizes the **human (or single‑workspace agent) dev loop**—[[GitHub]] repo, [[DevContainer]], IDE—while E2B optimizes **many short‑lived, API‑created sandboxes** for **untrusted / LLM‑generated** execution. Teams sometimes use Codespaces to **host** coding agents (see that page’s long‑running [[Claude Code]] notes); E2B targets **productized sandbox scale** for end‑user or multi‑tenant agent tools, not replacing the primary Codespaces use case.

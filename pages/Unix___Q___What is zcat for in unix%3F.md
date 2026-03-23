@@ -1,0 +1,12 @@
+- # What is [[zcat]] for in [[Unix]]?
+	- ## Answer
+		- [[AI/Response]]
+			- **`zcat`** decompresses **one or more compressed files** and writes the **uncompressed bytes to standard output** (stdout), **without replacing or deleting** the on-disk archives — the same idea as **`cat`**, but for compressed data.
+			- On **GNU/Linux and macOS (BSD-derived) systems where `zcat` is the `gzip` front-end** (see **`gzip(1)`** / **`man zcat`**), **`zcat`** is equivalent to invoking **`gzip` with decompression + write-to-stdout** (documented as the **`-c`** and **`-d`** behavior when the program is run as **`zcat`**). Multiple file arguments are decompressed **in sequence**, concatenated to stdout like **`cat`**. [macOS gzip(1) / zcat](https://man.freebsd.org/cgi/man.cgi?gzip(1)) — same family as Linux man pages for GNU gzip.
+			- **Typical uses**: peek or pipe the contents of **`.gz`** logs without unpacking them (`zcat file.gz | less`), feed decompressed data into **filters**, or chain in **[[Unix/Pipe]]** pipelines.
+			- **Historical / cross-Unix caveat**: on some older or minimal systems, **`zcat`** referred specifically to **`.Z` files** from **`compress(1)`**; on modern desktops **`zcat` is very often the `gzip` tool’s alias** and expects **gzip-format** data (while still often able to decompress **other formats** if the particular `gzip` build supports them — check local **`man gzip`**).
+			- **Close relatives**: **`gzip -dc`**, **`gunzip -c`**, and on many systems **`gzcat`** (same gzip family); **`zstd -dc`** for **`.zst`**, etc., are the analogous pattern for other codecs.
+	- ## Related
+		- [[zcat]]
+		- [[Unix/Pipe]]
+		- [gzip(1) — Debian manpages.org](https://manpages.org/gzip)

@@ -1,0 +1,13 @@
+- # Macchiato
+	- A **dark** flavor of [[Catppuccin]] — medium contrast between [[Catppuccin/Frappe]] and [[Catppuccin/Mocha]]. [^1]
+	- ![Macchiato UI preview (official)](../assets/Catppuccin/preview-macchiato.webp) [^2]
+	- ## Typical config ids
+		- Short: `macchiato`
+		- Ghostty / many terminals: `catppuccin-macchiato`
+		- Neovim: `flavour = "macchiato"`
+		- tmux: `@catppuccin_flavour 'macchiato'` (or upstream’s current variable name)
+	- ## See also
+		- Hub: [[Catppuccin]] — full stack matrix and palette links
+	- ## Footnotes
+		- [^1]: https://github.com/catppuccin/palette
+		- [^2]: https://github.com/catppuccin/catppuccin/blob/main/assets/previews/macchiato.webp

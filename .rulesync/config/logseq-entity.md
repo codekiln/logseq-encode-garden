@@ -21,11 +21,12 @@ Use this file when those pages do not exist yet, are incomplete, or need bootstr
 
 ## Enabled Entity Types
 
-The garden may eventually model many entity types. For now, the highest-priority type for this garden is:
+The garden may eventually model many entity types. Types with Logseq-native SOP pages (authoritative):
 
-- software-project
+- software-project — see `[[Logseq/Entity/software-project]]`
+- color-theme — see `[[Logseq/Entity/color-theme]]`
 
-Other entity types may be added here later without changing the skill itself.
+Other entity types may be added here later without changing the skill itself. Prefer the `[[Logseq/Entity/<Type>]]` pages over this file when both exist.
 
 ## Entity Type: software-project
 
@@ -91,6 +92,31 @@ Classify results as:
 
 - By default, do not move source blocks from the journal or source page.
 - Only move or transplant source blocks when the user explicitly asks.
+
+## Entity Type: color-theme
+
+Authoritative documentation: `[[Logseq/Entity/color-theme]]`. This section is bootstrap-only.
+
+### Recognition
+
+Strong signals:
+
+- Named palette family with official style guide or shared flavor names across ports
+- Official org or repo listing many app-specific themes (terminal, editor, tmux, etc.)
+
+### Canonical Naming
+
+- Short top-level page name when unambiguous (e.g. `[[Catppuccin]]`).
+- Optional hierarchical `alias::` (e.g. `[[UI/Color/Theme/Catppuccin]]`) for namespace visibility.
+
+### Frontmatter
+
+- `logseq-entity:: [[Logseq/Entity/color-theme]]` on instances.
+- Never modify `tags::` on existing pages without explicit human instruction.
+
+### Page Shape
+
+- Hub page: identity, flavors, palette link, stack matrix linking to app pages (e.g. [[Ghostty]], [[Neovim]], [[tmux]], [[yazi]]).
 
 ## Reporting Contract
 

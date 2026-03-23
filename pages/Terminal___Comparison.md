@@ -11,7 +11,16 @@ see-also:: [[yazi]]
 		- macOS only
 			- [[iTerm2]]
 	- ## [[GPU]] rendering
-		-
+		- All of the terminals on this page target GPU-accelerated grid and glyph drawing rather than purely CPU framebuffer updates
+		- OpenGL as the primary portable API
+			- [[Alacritty]], [[Kitty]]
+			- [[WezTerm]] — default `OpenGL` front end (configurable in Lua)
+			- [[Ghostty]] — on Linux, OpenGL 4.3+ renderer
+		- Metal on macOS
+			- [[Ghostty]] — native Metal pipeline (MSL shaders)
+			- [[iTerm2]] — GPU rendering mode uses Metal (CPU fallback remains available)
+		- Optional WebGPU front end
+			- [[WezTerm]] — `WebGpu` front end; runtime selects Metal, Vulkan, or Direct3D 12 depending on platform and drivers
 	- ## Implementation Language
 		- [[Rust]]
 			- [[Alacritty]], [[WezTerm]]

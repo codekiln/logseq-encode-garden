@@ -1,0 +1,22 @@
+- # How do I use [[Glow]] as a default pager for markdown documents when I'm in a terminal?
+	- ## My Notes
+		- Related enjoyment / context: journal [[2026-03-23 Mon]] (“starting to enjoy [[Glow]]”).
+	- ## Answer
+		- [[AI/Response]]
+			- **Two different meanings of “pager”** matter here: (1) when **you run `glow`**, you can make *its* output go through a pager; (2) setting **`PAGER=glow`** makes *other programs* call `glow` the way they call `less` — that second case is only sometimes safe, because many tools pass **`less`-specific flags** or **non‑Markdown** content to `$PAGER`.
+			- **Use Glow’s own paging (recommended for Markdown you open with `glow`)**:
+				- CLI: run **`glow -p`** (or **`glow --pager`**) so rendered Markdown is piped through **`$PAGER`**. If `$PAGER` is unset, Glow defaults to **`less -r`** (ANSI‑aware), per the upstream README.
+				- Persistent default: run **`glow config`** (or edit **`glow.yml`** in Glow’s config dir — see **`glow --help`** for paths) and set **`pager: true`** so you do not need `-p` every time. Optional: set **`style`**, **`width`**, etc. in the same file. [Glow README — Config File](https://github.com/charmbracelet/glow/blob/master/README.md)
+				- **What `$PAGER` means here**: it is the **outer** pager Glow invokes **after** rendering (usually still **`less -R`** / **`less -r`** so colors survive). Glow is not replacing `less` in that pipeline unless you point `$PAGER` at something else.
+			- **Using `glow` as the global `PAGER` for the whole terminal (usually a bad default)**:
+				- Tools like **`git`**, **`man`**, and **`systemctl`** often expect a **`less(1)`-compatible** pager (options like **`+line`**, **`--`**, etc.). **`PAGER=glow`** can break those flows or render **non‑Markdown** as if it were Markdown.
+				- If you only need **stdin** as Markdown, some invocations work with **`glow -`** (Glow reads **`-`** as stdin in the README), but **flag compatibility** remains the main problem for a global default.
+			- **Practical patterns for “Markdown in the terminal”** instead of a global `PAGER`:
+				- **Shell alias or function**, e.g. treat “open this `.md`” as **`glow -p file.md`** or **`glow -p "$@"`**.
+				- **Git only**: consider **`git config core.pager 'glow -p'`** (or a small wrapper) *if* you accept breakage on non‑Markdown pager use cases — many people keep Git on **`less`** and use **`glow`** only for `*.md`.
+			- Sources:
+				- [Glow README — Paging, CLI, config `pager:`](https://github.com/charmbracelet/glow/blob/master/README.md)
+				- [charmbracelet/glow issue #109 — `-p` and `$PAGER`](https://github.com/charmbracelet/glow/issues/109)
+	- ## Related
+		- [[CLI/Tool/bat]] — different tool (syntax highlighting); also interacts with pagers in its own way
+		- [Glow repository](https://github.com/charmbracelet/glow)

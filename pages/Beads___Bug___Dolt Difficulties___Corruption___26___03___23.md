@@ -1,0 +1,4 @@
+- [[2026-03-23 Mon]]
+	- Only two computers in the mix, yet beads on the new [[Dolt]]-backed task database still produces journal corruption, failed pushes, and corrupted-looking state about once a day.
+	- Symptoms called out here: damaged or inconsistent journal/task data, inability to push, general loss of trust in the working copy — needs a durable recovery playbook (and possibly pinning or escaping the Dolt path until upstream stabilizes).
+	- Index of this thread in the graph: [[Beads/Bug/Dolt Difficulties/Corruption]]

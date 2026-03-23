@@ -9,4 +9,5 @@ alias:: [[Logseq Entities]]
 		- In the page’s frontmatter, add `logseq-entity::` with a link to the entity-type page that documents that kind of entity. Example: `logseq-entity:: [[Logseq/Entity/software-project]]`. One such link per page. Why: the type page then gets backlinks to all pages that declare it, so the type page doubles as an index of instances and we can see at a glance which pages follow which SOP.
 	- ## Entity types in this garden
 		- **software-project** — Tools, editors, libraries, apps, CLIs, servers. Conventions (naming, dedup, page shape, creator handling) are documented on the software-project type page. Fallback when type pages are missing: `.rulesync/config/logseq-entity.md`.
+		- **color-theme** — Coordinated palette families reused across apps (terminals, editors, TUIs). Conventions are on the color-theme type page. Fallback/bootstrap notes: `.rulesync/config/logseq-entity.md` (section **color-theme**).
 		- Deferred for follow-up: other types (e.g. person, book) may be added later; not yet documented as entity-type pages in this garden.

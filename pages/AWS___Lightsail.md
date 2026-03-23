@@ -1,0 +1,8 @@
+- # Amazon Lightsail
+	- **What it is**: AWS’s **simplified virtual servers, databases, load balancers, CDN, and managed application bundles** (WordPress, etc.) aimed at **predictable pricing and a small number of clicks**—closest AWS analogue to a classic VPS / small PaaS, not a container orchestrator.
+		- [Amazon Lightsail](https://aws.amazon.com/lightsail/)
+	- **Typical use**: Static sites, small web apps, dev/test servers, simple databases, lift‑and‑shift modest workloads where you want **long‑lived instances** and minimal AWS service surface area.
+	- **Relation to [[e2b]] (market sector)**
+		- **Partial overlap**: You could run **custom** agent sandboxes or batch workers on Lightsail VMs if you build and operate everything yourself; both sit in “cloud compute.”
+		- **Not the same sector by default**: Lightsail does **not** provide an **API‑first, ephemeral microVM sandbox fabric** tuned for **LLM tool calls, per‑user isolation, and second‑scale lifecycle** the way E2B does. Lightsail is **hosting**; E2B is **managed agent execution infrastructure** (often many short‑lived environments + SDK).
+	- **Relation to [[AWS/ECS/Express Mode]]**: Lightsail is **VM / bundle oriented**; Express Mode is **Fargate/ECS service oriented** for **containerized web/API** apps. Different onboarding stories; Express Mode is closer to “production container service” than to “single VPS.”

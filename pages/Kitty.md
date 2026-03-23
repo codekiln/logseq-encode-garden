@@ -29,6 +29,7 @@ see-also:: [[Terminal/Comparison]]
 			    };
 			  };
 			  ~~~
+		- `theme` uses [[Catppuccin]]; see [[Catppuccin]] for flavors and the rest of the stack.
 	- ## Notable Features
 		- GPU rendering via OpenGL/Metal
 		- Built-in tabs and window splits ("windows" in Kitty terminology)
