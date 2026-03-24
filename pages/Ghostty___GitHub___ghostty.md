@@ -1,0 +1,1 @@
+- [ghostty-org/ghostty: 👻 Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration.](https://github.com/ghostty-org/ghostty)

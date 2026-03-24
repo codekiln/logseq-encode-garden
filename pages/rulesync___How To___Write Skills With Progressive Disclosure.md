@@ -1,0 +1,33 @@
+tags:: [[rulesync]], [[Diataxis/How To]]
+see-also:: [[AI/LLM/Technique/Skill/Progressive Disclosure]], [[rulesync]]
+
+- # How To write rulesync skills with progressive disclosure
+	- ## Overview
+		- This guide tells an AI agent how to author a skill under `.rulesync/skills/<skill-name>/` so discovery stays cheap, `SKILL.md` loads only when relevant, and heavy material stays on disk until the workflow needs it — matching the staged-loading idea in [[Progressive Disclosure]].
+		- Rulesync’s bundled examples (for example the upstream `skill-creator` and `playwright-cli` skills) follow the same shape: compact YAML metadata, a focused main file, optional `references/` and `scripts/`
+	- ## Prerequisites
+		- A rulesync project with the `skills` feature enabled and a target directory such as `.rulesync/skills/<skill-name>/`
+		- Familiarity with why staged loading matters (context cost).
+			- For more detailed information on best practices for progressive disclosure, see [Claude Code's skills overview](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview.md).
+			- If you have access to `logseq-encode-garden`, see [[Progressive Disclosure]].
+	- ## Steps
+		- ### 1. Design the three layers before writing prose
+			- **Level 1 (always visible)**: plan `name` and `description` in YAML — these are the only fields agents use to decide whether to open the skill; the description must say what the skill does **and when to use it** (triggers, tools, file types, user intents)
+			- **Level 2 (load on match)**: plan the body of `SKILL.md` as the minimum procedure to complete the usual task — workflows, guardrails, and pointers to deeper files — not a dump of every edge case
+			- **Level 3 (on demand)**: list optional `references/*.md`, `scripts/*`, templates, or assets; each file should have one clear reason to exist and be named so the agent knows when to open it
+		- ### 2. Write `SKILL.md` frontmatter for discovery, not documentation
+			- Keep `description` self-contained: a stranger agent should know from that text alone whether this skill applies to the current request
+			- Avoid putting long tutorials or reference tables in YAML; that defeats progressive disclosure and bloats the always-on layer
+		- ### 3. Keep the `SKILL.md` body action-first
+			- Open with the shortest path that works (a “quick start” or numbered happy path), then optional sections for variants
+			- Prefer short imperative steps and small examples over general explanations; if the reader needs theory, link or point to a `references/` file instead of inlining it
+			- State explicitly when to **read** a reference file versus **run** a script so the agent does not preload everything “just in case”
+		- ### 4. Split depth into `references/` and automation into `scripts/`
+			- Move rarely needed detail (API tables, long command catalogs, style guides) into `references/<topic>.md` and cite paths from `SKILL.md` only when that topic is in scope
+			- Put repeatable, fragile, or token-heavy operations in `scripts/` when execution can return **stdout or artifacts** without pasting the whole program into context; note in `SKILL.md` how to invoke and what output to trust
+		- ### 5. Review against token discipline
+			- For every paragraph in `SKILL.md`, ask whether the model already knows it; cut or demote to `references/` if not task-critical
+			- Ensure unrelated skills still pay almost nothing: no essential steps hidden only in bundled files unless `SKILL.md` tells the agent when to load them
+	- ## Troubleshooting
+		- **Skill never triggers**: rewrite `description` with concrete triggers (verbs, tools, file globs, error messages users mention)
+		- **Skill pulls too much context**: move long sections out of `SKILL.md` into `references/`; replace inlined scripts with `scripts/` plus a one-line invocation contract

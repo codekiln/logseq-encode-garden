@@ -1,0 +1,12 @@
+- # What is necessary in order to use [[Dolt]] in a private Git repository that should never be pushed to GitHub as a backing for [[Beads]] (`bd`)?
+	- ## Answer
+		- [[AI/Response]]
+			- Nothing about [[Dolt]] requires GitHub. For replication you configure a **Dolt remote** pointing at **any** Git remote whose URL is accepted as a Git-style remote (HTTPS or SSH to self-hosted GitLab, Gitea, Forgejo, a **bare repo on disk** (`file://…` or a path ending in `.git`), etc.). Dolt stores its sync payload under a Git ref (default `refs/dolt/data`). [Dolt docs — Using Remotes (Git remotes)](https://docs.dolthub.com/sql-reference/version-control/remotes)
+			- **Tooling prerequisites** — Install `dolt` and ensure **`git` is on your `PATH`** (Dolt shells out to Git for Git remotes). The empty-repo caveat: the Git remote must **already have at least one branch**; initialize it with a seed commit before the first `dolt push`. [Same section — Requirements and caveats](https://docs.dolthub.com/sql-reference/version-control/remotes)
+			- **Private / never-on-GitHub** — Use a non-GitHub URL when you run `dolt remote add` **inside the Beads Dolt database directory** (typically `.beads/dolt/` after `bd init`). Examples from the docs: `git+https://host/org/repo.git`, `git@host:org/repo.git`, `../remote.git`, or `file:///abs/path/to/repo.git`. Authentication is ordinary Git access (SSH keys, HTTPS credentials, etc.) to that host. [Git remotes — Accepted URL formats](https://docs.dolthub.com/sql-reference/version-control/remotes)
+			- **Beads-specific** — `bd` keeps the live DB under `.beads/dolt/` and sync is “Dolt-native”; configure remotes the same way you would for standalone Dolt, then use Beads’ Dolt commands (e.g. `bd dolt …`) per project docs. If CLI and the embedded server disagree on remotes, `bd doctor --fix` and issues around `bd dolt pull` vs `dolt pull` are documented in the tracker (remote config must live where both see it). [Beads Quick Start — Database location](https://steveyegge.github.io/beads/getting-started/quickstart)
+			- **Alternatives if you do not want Git at all for the remote** — Dolt also supports filesystem, S3/GCS/OCI, SSH-to-directory, DoltHub/DoltLab, etc., but **Git-backed** workflows specifically mean “any Git server,” not GitHub. [Remotes overview](https://docs.dolthub.com/sql-reference/version-control/remotes)
+	- ## Related
+		- [[Dolt]]
+		- [[Beads]]
+		- [[Task/Management/In Git/Report/26/CRDT vs SQLite in git for task management]]

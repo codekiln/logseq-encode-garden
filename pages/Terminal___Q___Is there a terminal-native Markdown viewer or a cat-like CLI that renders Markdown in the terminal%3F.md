@@ -1,0 +1,11 @@
+- # Is there a terminal-native [[Markdown]] viewer or a CLI tool like `cat` that renders Markdown in the terminal?
+	- ## Answer
+		- [[AI/Response]]
+			- Yes. Several CLIs render Markdown with terminal styling (headings, emphasis, lists, code blocks); many accept a file path or stdin, similar to `cat`.
+			- [[glow]] — Go, from Charm. Renders local files, stdin (`glow -`), and remote READMEs; includes a TUI file browser, paging (`-p`), and themes. [charmbracelet/glow on GitHub](https://github.com/charmbracelet/glow)
+			- [[mdcat]] — Rust “cat for Markdown” (CommonMark, syntax-highlighted fences); aimed at capable terminals (e.g. kitty, WezTerm, iTerm2, Ghostty). [swsnr/mdcat on GitHub](https://github.com/swsnr/mdcat) · [mdcat on crates.io](https://crates.io/crates/mdcat)
+			- **Other options** — [[Pandoc]] ([pandoc.org](https://pandoc.org/)) (`-f markdown -t plain` or `-t ansi`) for plain text or ANSI-ish output; [[CLI/Tool/bat]] shows `.md` with syntax highlighting but does not fully render Markdown semantics like headings-as-structure. [sharkdp/bat on GitHub](https://github.com/sharkdp/bat)
+			- [[glow]] builds on the same rendering ecosystem as [[Glamour]] (stylesheet-based terminal Markdown).
+	- ## Related
+		- [[Glamour]]
+		- [[Markdown/Guide/Tools]]

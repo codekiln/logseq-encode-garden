@@ -1,0 +1,2200 @@
+This file is a merged representation of a subset of the codebase, containing specifically included files, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of a subset of the repository's contents that is considered the most important context.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Only files matching these patterns are included: pages/AI___Coding___Tool___Report___25___Skills Comparison.md, pages/AI___LLM___Technique___Skill___Progressive Disclosure.md, .rulesync/skills/rulesync-create-skill/references/checklist.md, .rulesync/skills/rulesync-create-skill/references/layers.md, .rulesync/skills/rulesync-create-skill/SKILL.md, .rulesync/skills/rulesync/case-studies.md, .rulesync/skills/rulesync/cli-commands.md, .rulesync/skills/rulesync/configuration.md, .rulesync/skills/rulesync/declarative-sources.md, .rulesync/skills/rulesync/dry-run.md, .rulesync/skills/rulesync/faq.md, .rulesync/skills/rulesync/file-formats.md, .rulesync/skills/rulesync/global-mode.md, .rulesync/skills/rulesync/installation.md, .rulesync/skills/rulesync/mcp-server.md, .rulesync/skills/rulesync/official-skills.md, .rulesync/skills/rulesync/programmatic-api.md, .rulesync/skills/rulesync/quick-start.md, .rulesync/skills/rulesync/simulated-features.md, .rulesync/skills/rulesync/SKILL.md, .rulesync/skills/rulesync/supported-tools.md, .rulesync/skills/rulesync/why-rulesync.md, pages/rulesync___GitHub___Issue___25___09___Brainstorm needed - how to share some rules across repos, but not all i329.md, pages/rulesync___GitHub___Issue___25___10___Custom Claude Code Command Yaml Frontmatter i413.md, pages/rulesync___GitHub___Issue___25___10___Documentation clarification on globs i389.md, pages/rulesync___GitHub___Issue___25___10___Feature request rulesync githook.md, pages/rulesync___GitHub___Issue___25___10___README clarification on simulated subagents and commands i388.md, pages/rulesync___gitignore.md, pages/rulesync___How To___Write Skills With Progressive Disclosure.md, pages/rulesync___Ignore.md, pages/rulesync___log___25___09___29 Mon - First time with rulesync.md, pages/rulesync___log___25___10___04 Sat - Issues with gitignore.md, pages/rulesync___log___25___10___07 Tue - DRYing out AI Coding Configs.md, pages/rulesync___log___25___10___11 Sat - globs and simulated commands.md, pages/rulesync___log___25___11___10 Mon - on abstraction costs and plugin marketplaces.md, pages/rulesync___log.md, pages/rulesync___mise.md, pages/rulesync___Skill___Declarative Source.md, pages/rulesync.md
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+.rulesync/
+  skills/
+    rulesync/
+      case-studies.md
+      cli-commands.md
+      configuration.md
+      declarative-sources.md
+      dry-run.md
+      faq.md
+      file-formats.md
+      global-mode.md
+      installation.md
+      mcp-server.md
+      official-skills.md
+      programmatic-api.md
+      quick-start.md
+      simulated-features.md
+      SKILL.md
+      supported-tools.md
+      why-rulesync.md
+    rulesync-create-skill/
+      references/
+        checklist.md
+        layers.md
+      SKILL.md
+pages/
+  AI___Coding___Tool___Report___25___Skills Comparison.md
+  AI___LLM___Technique___Skill___Progressive Disclosure.md
+  rulesync___GitHub___Issue___25___10___Custom Claude Code Command Yaml Frontmatter i413.md
+  rulesync___GitHub___Issue___25___10___Documentation clarification on globs i389.md
+  rulesync___GitHub___Issue___25___10___Feature request rulesync githook.md
+  rulesync___GitHub___Issue___25___10___README clarification on simulated subagents and commands i388.md
+  rulesync___gitignore.md
+  rulesync___How To___Write Skills With Progressive Disclosure.md
+  rulesync___Ignore.md
+  rulesync___log___25___09___29 Mon - First time with rulesync.md
+  rulesync___log___25___10___04 Sat - Issues with gitignore.md
+  rulesync___log___25___10___07 Tue - DRYing out AI Coding Configs.md
+  rulesync___log___25___10___11 Sat - globs and simulated commands.md
+  rulesync___log___25___11___10 Mon - on abstraction costs and plugin marketplaces.md
+  rulesync___log.md
+  rulesync___mise.md
+  rulesync___Skill___Declarative Source.md
+  rulesync.md
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path=".rulesync/skills/rulesync-create-skill/references/checklist.md">
+# Checklist: Rulesync skill with progressive disclosure
+
+## Before writing
+
+- [ ] **Problem**: What single class of user requests should trigger this skill?
+- [ ] **Level 1**: Draft `description` first; can a stranger agent say yes/no without reading the body?
+- [ ] **Level 2**: What is the minimum sequence that completes 80% of tasks?
+- [ ] **Level 3**: What belongs in `references/` or `scripts/` instead of the body?
+
+## While writing `SKILL.md`
+
+- [ ] YAML has no long prose, duplicated docs, or reference tables.
+- [ ] Body opens with the shortest working path; edge cases point to `references/`.
+- [ ] Every `references/*.md` file is linked from the body with a **when to read** cue.
+- [ ] Scripts have a stated contract: command, cwd assumptions, expected output.
+
+## Token discipline pass
+
+- [ ] Remove text the base model already knows unless it is safety- or repo-specific.
+- [ ] No essential step exists **only** in a bundled file unless the body says when to load it.
+- [ ] Large command catalogs or API dumps live in `references/`, not in the body.
+
+## Troubleshooting
+
+| Symptom | Likely fix |
+|--------|------------|
+| Skill rarely triggers | Add concrete triggers and examples to `description`; narrow or broaden scope explicitly. |
+| Agents load too much | Move sections to `references/`; split topics; shorten body to a workflow index. |
+| Duplication across skills | Shared content belongs in a rule, command, or one shared reference linked from several skills. |
+| Generate does not update tool skills | Add `"skills"` to `features` in `rulesync.jsonc` and run `rulesync generate` for your targets. |
+
+## Optional: Logseq garden mirror
+
+In the logseq-encode-garden graph, the same authoring ideas are summarized as a Diataxis how-to page titled **rulesync/How To/Write Skills With Progressive Disclosure** (filesystem: `rulesync___How To___Write Skills With Progressive Disclosure.md`). Use that page for human-oriented narrative; this skill stays repo-local for agents.
+</file>
+
+<file path=".rulesync/skills/rulesync-create-skill/references/layers.md">
+# Three layers for a Rulesync skill
+
+Progressive disclosure means **staging** what enters the model context: metadata first, core instructions when the skill matches, bundled files only when the task needs them.
+
+## Level 1 — Discovery (YAML on `SKILL.md`)
+
+- **Always-on cost**: frontmatter is what agents use to **select** among skills.
+- **Rulesync**: keep `name` stable; set `targets` appropriately; add tool-specific blocks only when they change real behavior (for example `allowed-tools`, `short-description`).
+- **Write `description` like a trigger spec**: concrete user intents, technologies, and boundaries (“use when…”, “do not use for…”).
+
+## Level 2 — Core procedure (body of `SKILL.md`)
+
+- Loaded **after** the skill is chosen; still shared with everything else in the window, so keep it **short and procedural**.
+- Start with **quick start** or numbered default path.
+- Tell the agent **when to open** each reference file or **when to run** each script so it does not preload “just in case.”
+- Prefer **relative links** (`./references/foo.md`) so the skill stays portable across clones.
+
+## Level 3 — Bundled resources (same directory)
+
+Typical layout:
+
+```text
+.rulesync/skills/<skill-name>/
+├── SKILL.md
+├── references/     # long tables, API notes, rare branches
+├── scripts/        # deterministic or token-heavy steps
+└── assets/         # templates, static files for outputs
+```
+
+- **`references/`**: one topic per file when possible; filenames should signal when to load them.
+- **`scripts/`**: document invocation, inputs, and what to trust in stdout or artifacts; execution can avoid loading entire source into context.
+- **Precedence**: local skills under `.rulesync/skills/<name>/` override curated copies with the same name (see Rulesync declarative sources docs).
+
+## Relation to the generic `skill-creator` skill
+
+Upstream `skill-creator` (for example from `anthropics/skills`) is **general** skill authoring. This garden’s workflow is **Rulesync-shaped**: same directory model, plus `targets` and tool-specific YAML from Rulesync. Follow both: Rulesync file-format constraints here, token discipline from `skill-creator` where it does not conflict.
+</file>
+
+<file path=".rulesync/skills/rulesync-create-skill/SKILL.md">
+---
+name: rulesync-create-skill
+description: >-
+  Create or refactor a Rulesync skill under .rulesync/skills/<skill-name>/ using
+  progressive disclosure: small YAML for discovery, a lean SKILL.md body, and
+  optional references/ and scripts/ loaded only when needed. Use when the user
+  asks for a new skill, wants an oversized SKILL.md split up, or should align a
+  skill with staged-loading practices for AI agents.
+targets: ["*"]
+---
+
+# Rulesync: create a progressive-disclosure skill
+
+## When this applies
+
+Use this skill for **authoring or restructuring** `.rulesync/skills/<skill-name>/`, not for learning the Rulesync CLI. For CLI reference, use the `rulesync` documentation skill or [file-formats.md](../rulesync/file-formats.md#rulesyncskillsskillmd) in this repo.
+
+## Quick start
+
+1. Pick a **kebab-case** directory name under `.rulesync/skills/<skill-name>/` (match the skill’s `name` in frontmatter when practical).
+2. Add `SKILL.md` with YAML containing at least `name`, `description`, and `targets` (see [file-formats.md](../rulesync/file-formats.md#rulesyncskillsskillmd) for tool-specific keys such as `claudecode.allowed-tools` or `codexcli.short-description`).
+3. Write `description` so another agent can decide **from that field alone** whether to load the skill: what it does, **when** to use it (verbs, tools, file types, user intents). Do not put tutorials or long tables in YAML.
+4. In the markdown **body**, put only the **shortest happy path** and guardrails. Link to `./references/...` for depth; use `./scripts/` for repeatable automation (invoke via shell; prefer trusting stdout over pasting full source).
+5. Before finishing, run the checklist in [references/checklist.md](./references/checklist.md).
+
+## Deeper material (load on demand)
+
+- [references/layers.md](./references/layers.md) — map progressive disclosure levels to Rulesync layout and Rulesync-specific notes.
+- [references/checklist.md](./references/checklist.md) — design review, token discipline, troubleshooting.
+
+## After files exist
+
+If this project uses `rulesync generate`, ensure `rulesync.jsonc` includes `"skills"` in `features`, then run generate for your targets so tool-specific skill outputs stay in sync.
+</file>
+
+<file path="pages/rulesync___GitHub___Issue___25___10___Custom Claude Code Command Yaml Frontmatter i413.md">
+tags:: [[GitHub/Issue/My]], [[Claude Code/Command/Slash/Custom]]
+
+- # [Feature request: for claude code slash commands, support passing through claude-code-specific yaml markdown frontmatter keys to the generated command markdown files · Issue #413 · dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync/issues/413)
+	- ## [[Original Poster]]
+		- # Feature Request: Support Claude Code-Specific YAML Frontmatter Keys for Commands
+		  
+		  NOTE: *this feature request was drafted with the assistance of [this deepwiki thread](https://deepwiki.com/search/claude-code-slash-commands-all_82ed05e6-e4cf-4c98-af1f-295a538d8954).*
+		- ## Summary
+		  
+		  Currently, rulesync commands defined in `.rulesync/commands/*.md` only support a minimal frontmatter schema with `description` as the only field that gets passed through to Claude Code slash commands. However, Claude Code's native slash command format [supports additional YAML frontmatter keys](https://docs.claude.com/en/docs/claude-code/slash-commands#frontmatter) like `allowed-tools`, `argument-hint`, `model`, and `disable-model-invocation` that enable powerful command customization. This feature request proposes adding support for passing through these Claude Code-specific keys from rulesync command definitions to generated Claude Code command files.
+		- ## Current Limitation
+		  
+		  When converting from `RulesyncCommand` to `ClaudecodeCommand`, only the `description` field is extracted and passed through. The `ClaudecodeCommand` schema itself only defines `description` in its frontmatter, meaning there's no mechanism to specify tool-specific configuration like `allowed-tools` or `model`.
+		- ## Precedent: Subagents Already Support This Pattern
+		  
+		  Interestingly, rulesync **subagents** already implement a solution to this exact problem. The `RulesyncSubagent` frontmatter schema includes a `claudecode:` section that allows tool-specific configuration. This configuration gets properly passed through during conversion to `ClaudecodeSubagent`.
+		- ## Proposed Feature Specification
+		- ### 1. Extend RulesyncCommand Frontmatter Schema
+		  
+		  Add a `claudecode:` section to the `RulesyncCommandFrontmatter` schema (similar to how subagents work)<cite />:
+		  
+		  ```yaml
+		  ---
+		  description: "Create a git commit"
+		  claudecode:
+		  allowed-tools: "Bash(git add:*), Bash(git status:*), Bash(git commit:*)"
+		  argument-hint: "[message]"
+		  model: "claude-3-5-haiku-20241022"
+		  disable-model-invocation: false
+		  ---
+		  
+		  Create a git commit with message: $ARGUMENTS
+		  ```
+		- ### 2. Supported Claude Code Keys
+		  
+		  The `claudecode:` section should support all Claude Code-specific frontmatter keys:
+		- **`allowed-tools`**: Restrict which tools the command can use (e.g., `"Bash(git add:*), Bash(git status:*)"`)
+		- **`argument-hint`**: Display hint for command arguments (e.g., `"[message]"` or `"[pr-number] [priority] [assignee]"`)
+		- **`model`**: Specify which Claude model to use (e.g., `"claude-3-5-haiku-20241022"`)
+		- **`disable-model-invocation`**: Whether to prevent `SlashCommand` tool from calling this command
+		- ### 3. Conversion Behavior
+		  
+		  When generating Claude Code commands via `rulesync generate --targets claudecode --features commands`<cite />:
+		  
+		  1. Extract the `claudecode:` section from the rulesync command frontmatter
+		  2. Merge these keys into the generated Claude Code command's YAML frontmatter
+		  3. Preserve the `description` field at the top level (as it currently works)
+		  4. For other tool targets (Cursor, Roo, etc.), ignore the `claudecode:` section
+		- ### 4. Backward Compatibility
+		- Existing commands without a `claudecode:` section should continue to work as they do today
+		- The `description` field should remain at the top level of frontmatter for all tools
+		- Other tool-specific sections (e.g., `roo:`, `cursor:`) could be added in the future following the same pattern
+		- ## Example Usage
+		  
+		  **Input**: `.rulesync/commands/git-commit.md`
+		  ```yaml
+		  ---
+		  description: "Create a git commit"
+		  claudecode:
+		  allowed-tools: "Bash(git add:*), Bash(git status:*), Bash(git commit:*)"
+		  argument-hint: "[message]"
+		  model: "claude-3-5-haiku-20241022"
+		  ---
+		  
+		  Create a git commit with message: $ARGUMENTS
+		  ```
+		  
+		  **Output**: `.claude/commands/git-commit.md` (after `rulesync generate`)
+		  ```yaml
+		  ---
+		  allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*)
+		  argument-hint: [message]
+		  description: Create a git commit
+		  model: claude-3-5-haiku-20241022
+		  ---
+		  
+		  Create a git commit with message: $ARGUMENTS
+		  ```
+		- ## Benefits
+		  
+		  1. **Feature Parity**: Commands would have the same tool-specific configuration capabilities that subagents already have<cite />
+		  2. **Full Claude Code Support**: Users could leverage all Claude Code slash command features through rulesync
+		  3. **Consistent Pattern**: Follows the established `claudecode:` section pattern used by subagents 
+		  4. **Extensibility**: The pattern could be extended to other tools (e.g., `roo:`, `cursor:`) in the future
+		- ## Notes
+		- The Roo command implementation already supports `argument-hint` as a top-level field, but this is tool-specific rather than following a general pattern
+		- This feature would make commands a first-class citizen alongside subagents in terms of tool-specific configuration support
+		- Global mode currently supports commands for Claude Code, so this feature would enhance that capability as well
+	-
+</file>
+
+<file path="pages/rulesync___GitHub___Issue___25___10___Documentation clarification on globs i389.md">
+tags:: [[GitHub/Issue/My]]
+
+- [Documentation clarification on globs · Issue #389 · dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync/issues/389)
+	-
+</file>
+
+<file path="pages/rulesync___GitHub___Issue___25___10___Feature request rulesync githook.md">
+- [Feature request: `rulesync githook` and `rulesync githook --install` which registers git post-checkout hook to regenerate rules in the case that `rulesync gitignore` · Issue #351 · dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync/issues/351)
+	- ## Summary
+		- If a `rulesync` user runs `rulesync gitignore` to treat all the non-rulesync AI Configs as ignored and generated assets. If they then pull a commit which changes a rule, then a git hook should regenerate the downstream AI Configs.
+	- ## Details
+		- `rulesync githook` could be the executable entrypoint for the hook, and `rulesync githook --install` could be the command which installed the git hook into the repository.
+	- ## Side note about wording - AI Configs and AI Config Manager
+		- From a marketing perspective, it would be advantageous to settle on the terminology for the types of assets that rulesync manages. In the readme, it currently says:
+		- > A Node.js CLI tool that automatically generates configuration files for various AI development tools from unified AI rule files.
+		- This is about as correct as one can get. But in issues and documentation, it's a little verbose to call these assets "configuration files for various AI development tools."
+		- Calling them "rules" seems intuitive but wrong, as rulesync now manages agents, commands, and other configuration items.
+		- Given that [configuration management](https://en.wikipedia.org/wiki/Configuration_management) is an established term, perhaps calling the assets rulesync manages "AI Configs" and branding rulesync as an "AI Config Manager" might be good enough? What do you think and what other terms have you considered? I asked ChatGPT and it came up with ten names, but the only one I kind of liked was AI DevConfig.
+</file>
+
+<file path="pages/rulesync___GitHub___Issue___25___10___README clarification on simulated subagents and commands i388.md">
+tags:: [[GitHub/Issue/My]]
+
+- [README clarification on simulated commands and subagents · Issue #388 · dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync/issues/388)
+</file>
+
+<file path="pages/rulesync___gitignore.md">
+- `rulesync gitignore` - add generated files to [[git/.gitignore]]
+	-
+</file>
+
+<file path="pages/rulesync___How To___Write Skills With Progressive Disclosure.md">
+tags:: [[rulesync]], [[Diataxis/How To]]
+see-also:: [[AI/LLM/Technique/Skill/Progressive Disclosure]], [[rulesync]]
+
+- # How To write rulesync skills with progressive disclosure
+	- ## Overview
+		- This guide tells an AI agent how to author a skill under `.rulesync/skills/<skill-name>/` so discovery stays cheap, `SKILL.md` loads only when relevant, and heavy material stays on disk until the workflow needs it — matching the staged-loading idea in [[Progressive Disclosure]].
+		- Rulesync’s bundled examples (for example the upstream `skill-creator` and `playwright-cli` skills) follow the same shape: compact YAML metadata, a focused main file, optional `references/` and `scripts/`
+	- ## Prerequisites
+		- A rulesync project with the `skills` feature enabled and a target directory such as `.rulesync/skills/<skill-name>/`
+		- Familiarity with why staged loading matters (context cost).
+			- For more detailed information on best practices for progressive disclosure, see [Claude Code's skills overview](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview.md).
+			- If you have access to `logseq-encode-garden`, see [[Progressive Disclosure]].
+	- ## Steps
+		- ### 1. Design the three layers before writing prose
+			- **Level 1 (always visible)**: plan `name` and `description` in YAML — these are the only fields agents use to decide whether to open the skill; the description must say what the skill does **and when to use it** (triggers, tools, file types, user intents)
+			- **Level 2 (load on match)**: plan the body of `SKILL.md` as the minimum procedure to complete the usual task — workflows, guardrails, and pointers to deeper files — not a dump of every edge case
+			- **Level 3 (on demand)**: list optional `references/*.md`, `scripts/*`, templates, or assets; each file should have one clear reason to exist and be named so the agent knows when to open it
+		- ### 2. Write `SKILL.md` frontmatter for discovery, not documentation
+			- Keep `description` self-contained: a stranger agent should know from that text alone whether this skill applies to the current request
+			- Avoid putting long tutorials or reference tables in YAML; that defeats progressive disclosure and bloats the always-on layer
+		- ### 3. Keep the `SKILL.md` body action-first
+			- Open with the shortest path that works (a “quick start” or numbered happy path), then optional sections for variants
+			- Prefer short imperative steps and small examples over general explanations; if the reader needs theory, link or point to a `references/` file instead of inlining it
+			- State explicitly when to **read** a reference file versus **run** a script so the agent does not preload everything “just in case”
+		- ### 4. Split depth into `references/` and automation into `scripts/`
+			- Move rarely needed detail (API tables, long command catalogs, style guides) into `references/<topic>.md` and cite paths from `SKILL.md` only when that topic is in scope
+			- Put repeatable, fragile, or token-heavy operations in `scripts/` when execution can return **stdout or artifacts** without pasting the whole program into context; note in `SKILL.md` how to invoke and what output to trust
+		- ### 5. Review against token discipline
+			- For every paragraph in `SKILL.md`, ask whether the model already knows it; cut or demote to `references/` if not task-critical
+			- Ensure unrelated skills still pay almost nothing: no essential steps hidden only in bundled files unless `SKILL.md` tells the agent when to load them
+	- ## Troubleshooting
+		- **Skill never triggers**: rewrite `description` with concrete triggers (verbs, tools, file globs, error messages users mention)
+		- **Skill pulls too much context**: move long sections out of `SKILL.md` into `references/`; replace inlined scripts with `scripts/` plus a one-line invocation contract
+</file>
+
+<file path="pages/rulesync___log___25___09___29 Mon - First time with rulesync.md">
+### [[2025-09-29 Mon]]
+	- I tried running it in [[Person/codekiln/GitHub/logseq-cursor-rules]] in the root directory with ` rulesync import --targets cursor` and it didn't load any, because they were in the root of the directory. There's a [[GitHub/Issue]] for this here: [rulesync import ignores subdirectories in .cursor/rules · Issue #56 · dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync/issues/56).
+	- I also tried running it in [[GitHub/codekiln/logseq-encode-garden]], which did have non-nested [[CursorAI/Project Rules]], but it did not import any rules, as far as I can tell, nor did it output any debug information.
+	- As a result, I think this project is of limited utility at this time.
+	- I filed [[GitHub/Issue]] [rulesync import --targets cursor does not import .cursor/rules/*.mdc · Issue #328 · dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync/issues/328)
+	- result of running `rulesync generate --targets "*" --features "*" after importing` - ALL the [[AI/Coding/Tool]]s had rules imported!
+		- ![image.png](../assets/image_1759154003791_0.png)
+	- Again, this made me think that we need [[Package Management]] for [[Knowledge Gardens]], because what if we wanted to share some rules in multiple repositories. It does make me wonder if I need to just make my own MCP server which would be a gateway MCP server.
+		- #Filed [[GitHub/Issue/My]]
+			- [Brainstorm needed - how to share some rules across repos, but not all · Issue #329 · dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync/issues/329)
+				- Each project usually requires a combination of shared and project-specific rules.
+				- For example, some of my projects use rules and commands that are specific to the context of FastAPI. Others, use rules and commands specific to the context of typescript CLIs. I don't need all of my rules and commands in each project.
+				- Ideally, it would be possible to define my rules for technology A, e.g. FastAPI, in one repo, my rules for technology B, e.g. TypeScript in another repo, and my rules for technology C, e.g. EnterprisePrivateTechnology in another private repo, and just marshal those rules into the current repo and then use `rulesync` to spread those out to the various providers.
+				- One possible solution could be to use git submodules, but those may have problems:
+				- in CI, if you have private repos, authentication permissions can get tricky with git submodules.
+				- it's not clear that rulesync would support subdirectories needed for git submodules
+				- So, let's talk about what possible solutions are out there for this use case.
+			- [Feature request: pre-made rules for how AI can use rulesync · Issue #330 · dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync/issues/330)
+				- In order for AI to aid in updating rules, AI needs the context of how `rulesync` works. It would be great if there was an [llms.txt with docs for AI](https://llmstxt.org/) or some other facility for instruction AI on how to update rulesync rules, and what the syntax is for the frontmatter.
+				- Is it expected that a rulesync user will edit rules in the AI tool of their choice, then re-import them? Or is the target use case for those who wish to import and thereafter maintain `.rulesync/rules/*.md`?
+</file>
+
+<file path="pages/rulesync___log___25___10___04 Sat - Issues with gitignore.md">
+### [[2025-10-04 Sat]] - [[git/.gitignore]] issues
+id:: 68e0f877-fcfc-438c-a9d8-a9d625d68232
+	- Yesterday I discovered that the [[rulesync/gitignore]] command implies a usage of rulesync in which the configuration files for any given tool are treated as compiled build artifacts. I was curious about trying out this workflow, so I ran it, which added a bunch of rules to `.gitignore` for each [[AI/Coding/Tool]] - [[CursorAI]], [[Claude Code]], etc.
+	- Today, on another computer I discovered the classic problem with introducing [[git/.gitignore]] rules after some subset of files have been tracked to the repo. I asked Claude Code about it.
+		- #### [[AI/Response]]
+			- The `.gitignore` patterns (lines 24-25 and 29-31) will only prevent untracked files from being added, but they don't affect files that are already in the git repository.
+			- Here's what happened:
+				- 1. These files were previously committed to your repository
+				- 2. When you ran rulesync generate, it modified these already-tracked files
+				- 3. Git shows them as modified because they're already being tracked
+				- 4. The `.gitignore` patterns don't apply to files already in git's tracking
+			- To fix this, you have two options:
+				- **Option 1**: Remove these files from git tracking (recommended if you want rulesync to manage them independently):
+					- `git rm --cached .cursor/rules/*.mdc .github/instructions/*.instructions.md CLAUDE.md .claude/memories/*.md`
+				- **Option 2**: Keep them tracked and commit the changes (if you want these in version control):
+					- `git add .cursor/rules/ .github/instructions/ CLAUDE.md .claude/memories/
+					  git commit -m "chore: update generated AI tool rules"`
+		- So, what do I want to do?
+			- #### Option 1 - Remove AI configuration files in repo
+				- ###### Pros
+					- Some [[Search]] tools (like [[PyCharm]]) can respect [[git/.gitignore]], and it would be convenient to not pollute the search space with a bunch of duplicate information.
+					- It will be clearer to AI coding tools that respect gitignore which are the "canonical" versions of the files, which will be particularly useful in the common use case of asking AI tools to updating AI rules files.
+				- ##### Cons
+					- Sometimes when I talk to people about how I accomplish certain things with AI, it's helpful to be able to hyperlink them to the exact prompt I use, and for many, it would be less confusing if that rule were in the format that they know.
+					- I have to regenerate them regularly, which implies running them in a post-checkout hook.
+			- #### Option 2 - Keep AI configuration files in repo
+				- ##### Pros
+					- No need to regenerate them each time; one would regenerate every time a rule is updated, and then commit the changes
+					- I can refer coders (be they human or AI) to a file in github that has the version of my rule in their framework of choice.
+				- ##### Cons
+					- Often times I update AI configuration files in the middle of a task. Explaining to AI how to carefully stage only the items related to an AI configuration change when the git stage is dirty might be tricky and unreliable.
+		- I ended up filing [[rulesync/GitHub/Issue/25/10/Feature request rulesync githook]]
+</file>
+
+<file path="pages/rulesync___log___25___10___07 Tue - DRYing out AI Coding Configs.md">
+# [[2025-10-07 Tue]]
+	- ## How to [[DRY]] out [[AI/Coding/Config]]s
+		- ### Thinking About [[rulesync/GitHub/Issue/25/09/Brainstorm needed - how to share some rules across repos, but not all i329]]
+			- Rules, commands, subagents and other AI coding configurations need to be defined at different scopes. In general, there's a need for `public`, `team` and `private` scopes. In addition, within each of these, sub-scopes would be necessary for individual projects and specific technologies.
+				- Here are some examples that illustrate why three high-level scopes—`public`, `team`, `private`—and their sub-scopes (per-technology and per-project) are all useful. They are grouped by scope, then shown a few sub-scope situations for each.
+				- ### 1. PUBLIC SCOPE (usable by anyone, even outside the company)
+					- "General Secure-Coding Rules"
+						- Lint-style guardrails: *"Always sanitize user input before DB insertion."*
+						- Works for every repo, language, and organisation; no sensitive data.
+					- "Inclusive Language Checker" command
+						- Shell-style command a developer can call: `check-inclusive-language`.
+						- Prompts the AI to flag non-inclusive terms in docs or code comments.
+					- "Open-Source License Explainer" subagent
+						- User can ask: *"Is GPL-3 compatible with MIT for this file?"*
+						- Perfectly safe to share with the broader open-source community.
+					- Public • Technology sub-scope
+						- A public FastAPI rule pack: *"When creating FastAPI endpoints, always return Pydantic models, never raw dicts."*
+					- Public • Project sub-scope
+						- Open-source SDK project: *"SDK must not depend on non-standard library modules."*
+				- ### 2. TEAM SCOPE (shared only by the internal engineering org)
+					- "Company Commit-Message Convention" rule
+						- *"Always start commit messages with `[JIRA-ticket]`."*
+					- "Standard Staging-Env Spin-Up" command
+						- Command: `spin-up-staging`.
+						- AI agent runs Terraform in a specific AWS account that only the team uses.
+					- "Logging Style Enforcer" subagent
+						- Looks at any log lines and rewrites them to match the org's `jsonlog` schema.
+					- Team • Technology sub-scope
+						- TypeScript CLI rule set: *"Disallow `console.log`; use our `logger.ts` wrapper."*
+					- Team • Project sub-scope
+						- "Mobile-App" subagent that knows the internal feature flag system used only by the mobile team.
+				- ### 3. PRIVATE SCOPE (individual or very restricted use)
+					- "Experimental Algorithm" rule
+						- Describes proprietary heuristics for an upcoming product feature.
+						- Only the inventor keeps this in her personal repo.
+					- "Internal Metrics Dashboard" command
+						- Command: `query-sales-funnel`. Hits an internal Grafana API with a secret token.
+					- "Contract-Drafting" subagent
+						- Personal-use GPT-based helper that loads the user's saved prompts and legal templates.
+					- Private • Technology sub-scope
+						- GPU-cluster optimisation rules the research team is experimenting with, hidden from everyone else.
+					- Private • Project sub-scope
+						- One-off migration script commands for a stealth project codenamed "Project Quartz".
+				- ### Why the distinctions matter
+					- Public vs. Team vs. Private keeps confidential knowledge isolated.
+					- Technology sub-scopes avoid polluting every repo with rules that only apply to, say, FastAPI or React.
+					- Project sub-scopes stop cross-talk (the "mobile" rules don't appear in the "data-pipeline" repo).
+			- Let's elaborate a bit on specific recommendations for how teams and developers could use `rulesync` in a way that better honors the [[Software/Engineering/Principle/DRY]] (Don't Repeat Yourself).
+				- ### [[Markdown/Frontmatter/Yaml]] `remote` Config Key
+					- In the `.rulesync/{commands,rules,subagents,...}/*.md`'s yaml frontmatter, you could support a yaml key like `remote` which could have a pointer to where the command/rule/subagent definition was located:
+						- Places with a risk of prompt injection
+							- a webpage on the internet
+							- a file in another github (or gitlab, or any SCM) repo
+						- Places with mitigated risks of prompt injection
+							- a local file outside of the repository
+							- a pointer to a file within a
+					- Then upon `rulesync generate`, it would pull in the rule file into the `targets`.
+					- As indicated above, there are issues. Introducing a `remote` key may encourage less experienced engineers to open up their system to prompt injection.
+				- ### Rulesync `include` Config Keys
+					- `rulesync.jsonc` could support a config like the following
+					- #### Proposed extension: rulesync.jsonc → "include" array
+						- Top-level schema change:
+							- ~~~
+							  {
+							  ...
+							  "include": [<IncludeObject>, <IncludeObject>, ...]
+							  }
+							  ~~~
+						- If `include` is absent or empty, current behaviour is unchanged.
+						- Entries are evaluated **in array order**; each may add, merge or override files that ultimately flow into the local `.rulesync` workspace.
+					- #### IncludeObject specification
+						- ##### Required
+							- `repo` (`string`): URI, URL, or relative path that resolves to a Git repository containing a `.rulesync` folder.
+						- ##### Optional
+							- `ref` (`string`): Git reference (commit SHA, tag, or branch). Default = repository default branch.
+							- `subDir` (`string`): Path inside the repo where the root `.rulesync` directory lives if it is **not** at repo root.
+							- `features` (`array<string>` | `"*"`): Subset of tool-agnostic "features" to import: `"rules"`, `"commands"`, `"ignore"`, `"mcp"`, `"subagents"`. Default = `"*"` (all recognised features).
+							- `patterns` (`array<string>` | `Record<Feature,array<string>>`): Glob patterns (minimatch style) applied **after** `features` filtering. Shorthand array applies to every selected feature; map form lets you specify per-feature patterns.
+								- Example:
+									- ~~~
+									  "patterns": {
+									    "rules": ["**/fastapi/**", "!**/experimental/**"],
+									    "commands": ["deploy-prod.md"]
+									  }
+									  ~~~
+							- `select` (`Record<Feature,array<string>>`): Explicit file list (relative to the feature directory) that must be present. If `select` is provided for a feature, it overrides `patterns` for that feature.
+							- `exclude` (`array<string>`): Additional glob exclusions applied last, across all chosen features.
+							- `mode` (`"merge"` | `"override"`): merge – included files are added only when **no** equally-named file exists locally. override – included files replace conflicting local files. Default = "merge".
+							- `rename` (`Record<string,string>`): Mapping `sourcePath → targetPath` (paths relative to their feature roots) for files that need to land under a different name locally.
+							- `transform` (`string`): Command (executed with the file streamed to STDIN, transformed content from STDOUT) that post-processes each included file. Optional ‑ for advanced use only.
+					- #### Resolution rules & precedence
+						- 1. Iterate through `include` array in order.
+						- 2. For each IncludeObject:
+							- a. Clone or fetch `repo` at `ref`.
+							- b. Identify the `.rulesync` directory (`/` by default or `subDir`).
+							- c. Filter by `features`, then `patterns`, then `select`, then `exclude`.
+							- d. For each remaining file, determine destination path (after optional `rename`).
+							- e. Apply `transform` if present.
+							- f. Place file into the local staging area, respecting `mode`.
+						- 3. After all includes are processed, run the normal local generation / export logic.
+					- #### Illustrative examples
+						- ##### Example 1 – Pull in a public rule pack verbatim
+							- ~~~
+							  "include": [
+							  {
+							    "repo": "https://github.com/public-ai/rules-general.git",
+							    "ref": "v1.0.3",
+							    "mode": "merge"
+							  }
+							  ]
+							  ~~~
+						- ##### Example 2 – Cherry-pick FastAPI rules and two deployment commands from an internal repo
+							- ~~~
+							  "include": [
+							  {
+							    "repo": "git@github.com:mycorp/fastapi-rules.git",
+							    "features": ["rules", "commands"],
+							    "patterns": {
+							      "rules": ["fastapi/**"],
+							      "commands": ["deploy-staging.md", "deploy-prod.md"]
+							    },
+							    "exclude": ["**/legacy/**"],
+							    "mode": "override"
+							  }
+							  ]
+							  ~~~
+						- ##### Example 3 – Rename and transform a private subagent definition
+							- ~~~
+							  "include": [
+							  {
+							    "repo": "../personal-ai-snippets",
+							    "features": ["subagents"],
+							    "select": { "subagents": ["draft-legalese.md"] },
+							    "rename": { "draft-legalese.md": "private/draft-legalese.md" },
+							    "transform": "sed 's/ACME_CORP/FOOBAR_INC/g'"
+							  }
+							  ]
+							  ~~~
+					- #### Error handling
+						- Missing repo, unreachable ref, or absent `.rulesync` directory → hard error; generation stops.
+						- `select` item not found → hard error.
+						- Overwrite conflicts when `mode == "merge"` → warning; local file is kept.
+						- `transform` exit code ≠ 0 → hard error for that file.
+					- #### Compatibility note
+						- The new `include` key is entirely additive. Existing projects without it run exactly as before.
+</file>
+
+<file path="pages/rulesync___log___25___10___11 Sat - globs and simulated commands.md">
+- [[2025-10-11 Sat]]
+	- ## Filed [[rulesync/GitHub/Issue/25/10/README clarification on simulated subagents and commands i388]] [README clarification on simulated commands and subagents · Issue #388 · dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync/issues/388)
+		- I think the README [section on simulated commands and subagents](https://github.com/dyoshikawa/rulesync?tab=readme-ov-file#-simulated-commands-and-subagents) could be clearer.
+		- I think of "simulated" commands like when I at-mention a specific cursor project rule ([Project Rules | Cursor Docs](https://cursor.com/docs/context/rules#project-rules): rule type `Manual` are "Only included when explicitly mentioned using @ruleName"). I think I have an idea of what these are because I think I used them in Cursor in the [bmad-code-org/BMAD-METHOD: Breakthrough Method for Agile Ai Driven Development](https://github.com/bmad-code-org/BMAD-METHOD/tree/main).
+		- Specifically, I think having an explanation for the motivation for why they exist and when one might want to use them or why they are necessary (e.g. in Claude Code you could do `/pr-review` but in Cursor you need to do `@pr-review`) as well what the caveats are for them would be helpful.
+		- My understanding is that one would only ever use "simulated" commands or subagents in an agentic coding tool that didn't actually support commands or subagents.
+		- Right now the readme says,
+			- > This is useful for shortening your prompts.
+		- This part makes me think I don't understand them the same way. Can you help me understand how they shorten prompts?
+		- Commands in general do save on context relative to rules ... is that what you meant?
+	- ## Filed [[rulesync/GitHub/Issue/25/10/Documentation clarification on globs i389]]
+		- The documentation could benefit from some clarifications on how the `globs` parameter impacts different coding agents. 
+		  
+		  My thoughts about what belongs in documentation for a library may be subtly changing due to deepwiki, though. I used [[rulesync/DeepWiki]] #DeepWiki [rulesync's deepwiki](https://deepwiki.com/search/what-formats-of-globs-can-i-us_146d4d84-894f-4a54-8f13-4fd11d3a87d0) to answer the following questions. Who knows, maybe in the future we will just use these types of auto-generated documentation with attached chatbots instead of fixing every use case into prose.
+			- ## What formats of globs can I use in rulesync?
+				- Suspected answer (deepwiki):
+					- > The glob implementation is handled by the standard [glob library's globSync](https://github.com/isaacs/node-glob?tab=readme-ov-file#usage)
+			- ## Are the globs relative to the root directory?
+				- Suspected answer (deepwiki):
+					- > Yes, glob patterns are relative to the project root directory. The implementation ... resolves patterns relative to the current working directory (the project root).
+			- ## What if I reference a file path in a project rule or a command? Some tools have specific syntaxes for this; for example, [claude code has both file-relative "import" syntax `@docs/git-instructions.md`](https://docs.claude.com/en/docs/claude-code/memory#claude-md-imports) and project-relative "import" syntax `@~/.claude/my-project-instructions.md`, and cursor [has a similar @path/to/file/from/project/root](https://cursor.com/docs/context/rules#rule-anatomy) syntax
+				- [Suspected answer (deepwiki):](https://deepwiki.com/search/what-formats-of-globs-can-i-us_146d4d84-894f-4a54-8f13-4fd11d3a87d0)
+					- > Rulesync does not currently perform automatic conversion of file path references between different tools' syntaxes. When you write content in .rulesync/rules/*.md or .rulesync/commands/*.md files, the body content is passed through to tool-specific files without modification. ... The @ symbol you mentioned appears in rulesync's reference section generation, but this is a different feature.
+		-
+</file>
+
+<file path="pages/rulesync___log___25___11___10 Mon - on abstraction costs and plugin marketplaces.md">
+## High Level Reflections
+	- Corey Doctorow's books (particularly [[Person/Corey Doctorow/Book/25/Picks & Shovels]] and [[Person/Corey Doctorow/Book/25/Enshittification]]) have taught me that [[Interop]] tools like `rulesync` are important because in the age of AI, vendor lock-in is likely to become a serious issue. [[pandoc]] could serve as an example for how to do an interop tool like `rulesync`
+	- But the pace of AI progress is fast. The feature surface area of the underlying tools is exploding. The cost of using and maintaining an abstraction layer like `rulesync` is becoming high. If I keep my canonical [[AI/Coding/Config]]s in `rulesync`'s formats, then I can't easily use the latest features of Claude Code, such as
+		- [Support for Claude Skills · Issue #422 · dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync/issues/422)
+		- [Feature request: for claude code slash commands, support passing through claude-code-specific yaml markdown frontmatter keys to the generated command markdown files · Issue #413 · dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync/issues/413)
+		- [Support for Claude Code plugins and Gemini CLI extensions · Issue #382 · dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync/issues/382)
+	- In the past couple weeks, as Claude Code Skills emerged, I stopped primarily using `rulesync` because the latest features can't be represented in rulesync's format yet.
+	  I have been thinking about [Programmatic API · Issue #377 · dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync/issues/377), and from the perspective of someone using the tool, maybe it could make sense to optimize for lossless modeling of AI code configs and best effort conversion.
+	- ### Proposed rulesync architectural assumptions
+		- 1 - **assume users will store AI code configs some AI coding tool's native format**, whether that's cursor, claude code, or any of the many tools that are out there
+		- 2 - **optimize rulesync for "lossless conversion" within each tool**. This means that if I store my configs in Claude Code, then if I import into rulesync, then wipe away my `.claude` directory and regenerate from rulesync, every file and folder should work the way it did before.
+		- 3 - **make rulesync "best effort" or "lossy" between tools**. The tools are not always going to have feature parity with each other, and the concepts are not going to match. Rulesync would
+	- ### Benefits of this approach
+		- Even if tool X adds feature Y which hasn't been added as a feature to rulesync, a user can still use feature Y until it's supported for conversion.
+	- ### What could this look like?
+		- 1 - `rulesync` could assume that one tool is the "parent" from which other code configs are adapted from that source
+-
+</file>
+
+<file path="pages/rulesync___log.md">
+## [[rulesync]] - [[My Notes]]
+	- see sub-pages
+</file>
+
+<file path="pages/rulesync___mise.md">
+- [[mise]] config
+	- ```toml
+	  [tasks.rulesync]
+	  # https://github.com/dyoshikawa/rulesync/tree/main
+	  description = "Node.js CLI tool to sync AI coding rules across multiple tools."
+	  run = "npx rulesync $@"
+	  ```
+</file>
+
+<file path=".rulesync/skills/rulesync/case-studies.md">
+# Case Studies
+
+Rulesync is trusted by leading companies and recognized by the industry:
+
+- **Anthropic Official Customer Story**: [Classmethod Inc. - Improving AI coding tool consistency with Rulesync](https://claude.com/customers/classmethod)
+- **Asoview Inc.**: [Adopting Rulesync for unified AI development rules](https://tech.asoview.co.jp/entry/2025/12/06/100000)
+- **KAKEHASHI Tech Blog**: [Building multilingual systems for the LLM era with a monorepo and a "living specification"](https://kakehashi-dev.hatenablog.com/entry/2025/12/08/110000)
+- **Cloudflare**: [Adopting Rulesync for AI coding assistant configuration](https://github.com/cloudflare/cloudflare-docs/pull/28232)
+</file>
+
+<file path=".rulesync/skills/rulesync/cli-commands.md">
+# CLI Commands
+
+## Quick Commands
+
+```bash
+# Initialize new project (recommended: organized rules structure)
+rulesync init
+
+# Import existing configurations (to .rulesync/rules/ by default)
+rulesync import --targets claudecode --features rules,ignore,mcp,commands,subagents,skills
+
+# Fetch configurations from a Git repository
+rulesync fetch owner/repo
+rulesync fetch owner/repo@v1.0.0 --features rules,commands
+rulesync fetch https://github.com/owner/repo --conflict skip
+
+# Generate all features for all tools (new preferred syntax)
+rulesync generate --targets "*" --features "*"
+
+# Generate specific features for specific tools
+rulesync generate --targets copilot,cursor,cline --features rules,mcp
+rulesync generate --targets claudecode --features rules,subagents
+
+# Generate only rules (no MCP, ignore files, commands, or subagents)
+rulesync generate --targets "*" --features rules
+
+# Generate simulated commands and subagents
+rulesync generate --targets copilot,cursor,codexcli --features commands,subagents --simulate-commands --simulate-subagents
+
+# Dry run: show changes without writing files
+rulesync generate --dry-run --targets claudecode --features rules
+
+# Check if files are up to date (for CI/CD pipelines)
+rulesync generate --check --targets "*" --features "*"
+
+# Install skills from declarative sources in rulesync.jsonc
+rulesync install
+
+# Force re-resolve all source refs (ignore lockfile)
+rulesync install --update
+
+# Fail if lockfile is missing or out of sync (for CI); fetch missing skills using locked refs
+rulesync install --frozen
+
+# Install then generate (typical workflow)
+rulesync install && rulesync generate
+
+# Add generated files to .gitignore
+rulesync gitignore
+
+# Update rulesync to the latest version (single-binary installs)
+rulesync update
+
+# Check for updates without installing
+rulesync update --check
+
+# Force update even if already at latest version
+rulesync update --force
+```
+
+## Fetch Command
+
+The `fetch` command allows you to fetch configuration files directly from a Git repository (GitHub/GitLab).
+
+> [!NOTE]
+> This feature is in development and may change in future releases.
+
+**Note:** The fetch command searches for feature directories (`rules/`, `commands/`, `skills/`, `subagents/`, etc.) directly at the specified path, without requiring a `.rulesync/` directory structure. This allows fetching from external repositories like `vercel-labs/agent-skills` or `anthropics/skills`.
+
+### Source Formats
+
+```bash
+# Full URL format
+rulesync fetch https://github.com/owner/repo
+rulesync fetch https://github.com/owner/repo/tree/branch
+rulesync fetch https://github.com/owner/repo/tree/branch/path/to/subdir
+rulesync fetch https://gitlab.com/owner/repo  # GitLab (planned)
+
+# Prefix format
+rulesync fetch github:owner/repo
+rulesync fetch gitlab:owner/repo              # GitLab (planned)
+
+# Shorthand format (defaults to GitHub)
+rulesync fetch owner/repo
+rulesync fetch owner/repo@ref        # Specify branch/tag/commit
+rulesync fetch owner/repo:path       # Specify subdirectory
+rulesync fetch owner/repo@ref:path   # Both ref and path
+```
+
+### Options
+
+| Option                  | Description                                                                                | Default                          |
+| ----------------------- | ------------------------------------------------------------------------------------------ | -------------------------------- |
+| `--target, -t <target>` | Target format to interpret files as (e.g., 'rulesync', 'claudecode')                       | `rulesync`                       |
+| `--features <features>` | Comma-separated features to fetch (rules, commands, subagents, skills, ignore, mcp, hooks) | `*` (all)                        |
+| `--output <dir>`        | Output directory relative to project root                                                  | `.rulesync`                      |
+| `--conflict <strategy>` | Conflict resolution: `overwrite` or `skip`                                                 | `overwrite`                      |
+| `--ref <ref>`           | Git ref (branch/tag/commit) to fetch from                                                  | Default branch                   |
+| `--path <path>`         | Subdirectory in the repository                                                             | `.` (root)                       |
+| `--token <token>`       | Git provider token for private repositories                                                | `GITHUB_TOKEN` or `GH_TOKEN` env |
+
+### Examples
+
+```bash
+# Fetch skills from external repositories
+rulesync fetch vercel-labs/agent-skills --features skills
+rulesync fetch anthropics/skills --features skills
+
+# Fetch all features from a public repository
+rulesync fetch dyoshikawa/rulesync --path .rulesync
+
+# Fetch only rules and commands from a specific tag
+rulesync fetch owner/repo@v1.0.0 --features rules,commands
+
+# Fetch from a private repository (uses GITHUB_TOKEN env var)
+export GITHUB_TOKEN=ghp_xxxx
+rulesync fetch owner/private-repo
+
+# Or use GitHub CLI to get the token
+GITHUB_TOKEN=$(gh auth token) rulesync fetch owner/private-repo
+
+# Preserve existing files (skip conflicts)
+rulesync fetch owner/repo --conflict skip
+
+# Fetch from a monorepo subdirectory
+rulesync fetch owner/repo:packages/my-package
+```
+</file>
+
+<file path=".rulesync/skills/rulesync/configuration.md">
+# Configuration
+
+You can configure Rulesync by creating a `rulesync.jsonc` file in the root of your project.
+
+## JSON Schema Support
+
+Rulesync provides a JSON Schema for editor validation and autocompletion. Add the `$schema` property to your `rulesync.jsonc`:
+
+```jsonc
+// rulesync.jsonc
+{
+  "$schema": "https://raw.githubusercontent.com/dyoshikawa/rulesync/refs/heads/main/config-schema.json",
+  "targets": ["claudecode"],
+  "features": ["rules"],
+}
+```
+
+## Configuration Options
+
+Example:
+
+```jsonc
+// rulesync.jsonc
+{
+  "$schema": "https://raw.githubusercontent.com/dyoshikawa/rulesync/refs/heads/main/config-schema.json",
+
+  // List of tools to generate configurations for. You can specify "*" to generate all tools.
+  "targets": ["cursor", "claudecode", "geminicli", "opencode", "codexcli"],
+
+  // Features to generate. You can specify "*" to generate all features.
+  "features": ["rules", "ignore", "mcp", "commands", "subagents", "hooks"],
+
+  // Alternatively, you can use object format to specify features per target:
+  // "features": {
+  //   "claudecode": ["rules", "commands"],
+  //   "cursor": ["rules", "mcp"],
+  // },
+
+  // Base directories for generation.
+  // Basically, you can specify a `["."]` only.
+  // However, for example, if your project is a monorepo and you have to launch the AI agent at each package directory, you can specify multiple base directories.
+  "baseDirs": ["."],
+
+  // Delete existing files before generating
+  "delete": true,
+
+  // Verbose output
+  "verbose": false,
+
+  // Silent mode - suppress all output (except errors)
+  "silent": false,
+
+  // Advanced options
+  "global": false, // Generate for global(user scope) configuration files
+  "simulateCommands": false, // Generate simulated commands
+  "simulateSubagents": false, // Generate simulated subagents
+  "simulateSkills": false, // Generate simulated skills
+
+  // Declarative skill sources — installed via 'rulesync install'
+  // See the "Declarative Skill Sources" section for details.
+  // "sources": [
+  //   { "source": "owner/repo" },
+  //   { "source": "org/repo", "skills": ["specific-skill"] },
+  // ],
+}
+```
+
+## Per-Target Features
+
+The `features` option accepts both an array and an object format. Use the object format when you want to generate different features for different targets:
+
+```jsonc
+// rulesync.jsonc
+{
+  "targets": ["claudecode", "cursor", "copilot"],
+  "features": {
+    "claudecode": ["rules", "commands"],
+    "cursor": ["rules", "mcp"],
+    "copilot": ["rules", "subagents"],
+  },
+}
+```
+
+In this example:
+
+- `claudecode` generates rules and commands
+- `cursor` generates rules and MCP configuration
+- `copilot` generates rules and subagents
+
+You can also use `*` (wildcard) for specific targets:
+
+```jsonc
+{
+  "targets": ["claudecode", "cursor"],
+  "features": {
+    "claudecode": ["*"], // Generate all features for Claude Code
+    "cursor": ["rules"], // Only rules for Cursor
+  },
+}
+```
+
+## Local Configuration
+
+Rulesync supports a local configuration file (`rulesync.local.jsonc`) for machine-specific or developer-specific settings. This file is automatically added to `.gitignore` by `rulesync gitignore` and should not be committed to the repository.
+
+**Configuration Priority** (highest to lowest):
+
+1. CLI options
+2. `rulesync.local.jsonc`
+3. `rulesync.jsonc`
+4. Default values
+
+Example usage:
+
+```jsonc
+// rulesync.local.jsonc (not committed to git)
+{
+  "$schema": "https://raw.githubusercontent.com/dyoshikawa/rulesync/refs/heads/main/config-schema.json",
+  // Override targets for local development
+  "targets": ["claudecode"],
+  // Enable verbose output for debugging
+  "verbose": true,
+}
+```
+
+## Target Order and File Conflicts
+
+When multiple targets write to the same output file, **the last target in the array wins**. This is the "last-wins" behavior.
+
+For example, both `agentsmd` and `opencode` generate `AGENTS.md`:
+
+```jsonc
+{
+  // opencode wins because it comes last
+  "targets": ["agentsmd", "opencode"],
+  "features": ["rules"],
+}
+```
+
+In this case:
+
+1. `agentsmd` generates `AGENTS.md` first
+2. `opencode` generates `AGENTS.md` second, overwriting the previous file
+
+If you want `agentsmd`'s output instead, reverse the order:
+
+```jsonc
+{
+  // agentsmd wins because it comes last
+  "targets": ["opencode", "agentsmd"],
+  "features": ["rules"],
+}
+```
+</file>
+
+<file path=".rulesync/skills/rulesync/declarative-sources.md">
+# Declarative Skill Sources
+
+Rulesync can fetch skills from external GitHub repositories using the `install` command. Instead of manually running `fetch` for each skill source, declare them in your `rulesync.jsonc` and run `rulesync install` to resolve and fetch them. Then `rulesync generate` picks them up as local curated skills. Typical workflow: `rulesync install && rulesync generate`.
+
+## Configuration
+
+Add a `sources` array to your `rulesync.jsonc`:
+
+```jsonc
+{
+  "$schema": "https://raw.githubusercontent.com/dyoshikawa/rulesync/refs/heads/main/config-schema.json",
+  "targets": ["copilot", "claudecode"],
+  "features": ["rules", "skills"],
+  "sources": [
+    // Fetch all skills from a repository
+    { "source": "owner/repo" },
+
+    // Fetch only specific skills by name
+    { "source": "anthropics/skills", "skills": ["skill-creator"] },
+
+    // With ref pinning and subdirectory path (same syntax as fetch command)
+    { "source": "owner/repo@v1.0.0:path/to/skills" },
+  ],
+}
+```
+
+Each entry in `sources` accepts:
+
+| Property | Type       | Description                                                                                                 |
+| -------- | ---------- | ----------------------------------------------------------------------------------------------------------- |
+| `source` | `string`   | Repository source using the same format as the `fetch` command (`owner/repo`, `owner/repo@ref:path`, etc.). |
+| `skills` | `string[]` | Optional list of skill names to fetch. If omitted, all skills are fetched.                                  |
+
+## How It Works
+
+When `rulesync install` runs and `sources` is configured:
+
+1. **Lockfile resolution** — Each source's ref is resolved to a commit SHA and stored in `rulesync.lock` (at the project root). On subsequent runs the locked SHA is reused for deterministic builds.
+2. **Remote skill listing** — The `skills/` directory (or the path specified in the source URL) is listed from the remote repository.
+3. **Filtering** — If `skills` is specified, only matching skill directories are fetched.
+4. **Precedence rules**:
+   - **Local skills always win** — Skills in `.rulesync/skills/` (not in `.curated/`) take precedence; a remote skill with the same name is skipped.
+   - **First-declared source wins** — If two sources provide a skill with the same name, the one declared first in the `sources` array is used.
+5. **Output** — Fetched skills are written to `.rulesync/skills/.curated/<skill-name>/`. This directory is automatically added to `.gitignore` by `rulesync gitignore`.
+
+## CLI Options
+
+The `install` command accepts these flags:
+
+| Flag              | Description                                                                                                                                                  |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--update`        | Force re-resolve all source refs, ignoring the lockfile (useful to pull new updates).                                                                        |
+| `--frozen`        | Fail if lockfile is missing or out of sync. Fetches missing skills using locked refs without updating the lockfile. Useful for CI to ensure reproducibility. |
+| `--token <token>` | GitHub token for private repositories.                                                                                                                       |
+
+```bash
+# Install skills using locked refs
+rulesync install
+
+# Force update to latest refs
+rulesync install --update
+
+# Strict CI mode — fail if lockfile doesn't cover all sources (missing locked skills are fetched)
+rulesync install --frozen
+
+# Install then generate
+rulesync install && rulesync generate
+
+# Skip source installation — just don't run install
+rulesync generate
+```
+
+## Lockfile
+
+The lockfile at `rulesync.lock` (at the project root) records the resolved commit SHA and per-skill integrity hashes for each source so that builds are reproducible. It is safe to commit this file. An example:
+
+```json
+{
+  "lockfileVersion": 1,
+  "sources": {
+    "owner/skill-repo": {
+      "requestedRef": "main",
+      "resolvedRef": "abc123def456...",
+      "resolvedAt": "2025-01-15T12:00:00.000Z",
+      "skills": {
+        "my-skill": { "integrity": "sha256-abcdef..." },
+        "another-skill": { "integrity": "sha256-123456..." }
+      }
+    }
+  }
+}
+```
+
+To update locked refs, run `rulesync install --update`.
+
+## Authentication
+
+Source fetching uses the `GITHUB_TOKEN` or `GH_TOKEN` environment variable for authentication. This is required for private repositories and recommended for better rate limits.
+
+```bash
+# Using environment variable
+export GITHUB_TOKEN=ghp_xxxx
+npx rulesync install
+
+# Or using GitHub CLI
+GITHUB_TOKEN=$(gh auth token) npx rulesync install
+```
+
+> [!TIP]
+> The `install` command also accepts a `--token` flag for explicit authentication: `rulesync install --token ghp_xxxx`.
+
+## Curated vs Local Skills
+
+| Location                            | Type    | Precedence | Committed to Git |
+| ----------------------------------- | ------- | ---------- | ---------------- |
+| `.rulesync/skills/<name>/`          | Local   | Highest    | Yes              |
+| `.rulesync/skills/.curated/<name>/` | Curated | Lower      | No (gitignored)  |
+
+When both a local and a curated skill share the same name, the local skill is used and the remote one is not fetched.
+</file>
+
+<file path=".rulesync/skills/rulesync/dry-run.md">
+# Dry Run
+
+Rulesync provides two dry run options for the `generate` command that allow you to see what changes would be made without actually writing files:
+
+## `--dry-run`
+
+Show what would be written or deleted without actually writing any files. Changes are displayed with a `[DRY RUN]` prefix.
+
+```bash
+rulesync generate --dry-run --targets claudecode --features rules
+```
+
+## `--check`
+
+Same as `--dry-run`, but exits with code 1 if files are not up to date. This is useful for CI/CD pipelines to verify that generated files are committed.
+
+```bash
+# In your CI pipeline
+rulesync generate --check --targets "*" --features "*"
+echo $?  # 0 if up to date, 1 if changes needed
+```
+
+> [!NOTE]
+> `--dry-run` and `--check` cannot be used together.
+</file>
+
+<file path=".rulesync/skills/rulesync/faq.md">
+# FAQ
+
+## The generated `.mcp.json` doesn't work properly in Claude Code
+
+You can try adding the following to `.claude/settings.json` or `.claude/settings.local.json`:
+
+```diff
+{
++ "enableAllProjectMcpServers": true
+}
+```
+
+According to [the documentation](https://code.claude.com/docs/en/settings), this means:
+
+> Automatically approve all MCP servers defined in project .mcp.json files
+
+## Google Antigravity doesn't load rules when `.agent` directories are in `.gitignore`
+
+Google Antigravity has a known limitation where it won't load rules, workflows, and skills if the `.agent/rules/`, `.agent/workflows/`, and `.agent/skills/` directories are listed in `.gitignore`, even with "Agent Gitignore Access" enabled.
+
+**Workaround:** Instead of adding these directories to `.gitignore`, add them to `.git/info/exclude`:
+
+```bash
+# Remove from .gitignore (if present)
+# **/.agent/rules/
+# **/.agent/workflows/
+# **/.agent/skills/
+
+# Add to .git/info/exclude
+echo "**/.agent/rules/" >> .git/info/exclude
+echo "**/.agent/workflows/" >> .git/info/exclude
+echo "**/.agent/skills/" >> .git/info/exclude
+```
+
+`.git/info/exclude` works like `.gitignore` but is local-only, so it won't affect Antigravity's ability to load the rules while still excluding these directories from Git.
+
+Note: `.git/info/exclude` can't be shared with your team since it's not committed to the repository.
+</file>
+
+<file path=".rulesync/skills/rulesync/file-formats.md">
+# File Formats
+
+## `rulesync/rules/*.md`
+
+Example:
+
+```md
+---
+root: true # true that is less than or equal to one file for overview such as `AGENTS.md`, false for details such as `.agents/memories/*.md`
+localRoot: false # (optional, default: false) true for project-specific local rules. Claude Code: generates CLAUDE.local.md; Others: appends to root file
+targets: ["*"] # * = all, or specific tools
+description: "Rulesync project overview and development guidelines for unified AI rules management CLI tool"
+globs: ["**/*"] # file patterns to match (e.g., ["*.md", "*.txt"])
+agentsmd: # agentsmd and codexcli specific parameters
+  # Support for using nested AGENTS.md files for subprojects in a large monorepo.
+  # This option is available only if root is false.
+  # If subprojectPath is provided, the file is located in `${subprojectPath}/AGENTS.md`.
+  # If subprojectPath is not provided and root is false, the file is located in `.agents/memories/*.md`.
+  subprojectPath: "path/to/subproject"
+cursor: # cursor specific parameters
+  alwaysApply: true
+  description: "Rulesync project overview and development guidelines for unified AI rules management CLI tool"
+  globs: ["*"]
+antigravity: # antigravity specific parameters
+  trigger: "always_on" # always_on, glob, manual, or model_decision
+  globs: ["**/*"] # (optional) file patterns to match when trigger is "glob"
+  description: "When to apply this rule" # (optional) used with "model_decision" trigger
+---
+
+# Rulesync Project Overview
+
+This is Rulesync, a Node.js CLI tool that automatically generates configuration files for various AI development tools from unified AI rule files. The project enables teams to maintain consistent AI coding assistant rules across multiple tools.
+
+...
+```
+
+## `.rulesync/hooks.json`
+
+Hooks run scripts at lifecycle events (e.g. session start, before tool use). Events use **canonical camelCase** in this file; Cursor uses them as-is; Claude Code gets PascalCase in `.claude/settings.json`; OpenCode hooks are generated as a JavaScript plugin at `.opencode/plugins/rulesync-hooks.js`.
+
+**Event support:**
+
+- **Cursor:** `sessionStart`, `preToolUse`, `postToolUse`, `stop`, `sessionEnd`, `beforeSubmitPrompt`, `subagentStop`, `preCompact`, `afterFileEdit`, `afterShellExecution`, `postToolUseFailure`, `subagentStart`, `beforeShellExecution`, `beforeMCPExecution`, `afterMCPExecution`, `beforeReadFile`, `afterAgentResponse`, `afterAgentThought`, `beforeTabFileRead`, `afterTabFileEdit`
+- **Claude Code:** `sessionStart`, `preToolUse`, `postToolUse`, `stop`, `sessionEnd`, `beforeSubmitPrompt`, `subagentStop`, `preCompact`, `permissionRequest`, `notification`, `setup`
+- **OpenCode:** `sessionStart`, `preToolUse`, `postToolUse`, `stop`, `afterFileEdit`, `afterShellExecution`, `permissionRequest`
+- **GitHub Copilot:** `sessionStart`, `sessionEnd`, `afterSubmitPrompt`, `preToolUse`, `postToolUse`, `afterError`
+
+> **Note:** Rulesync implements OpenCode hooks as a plugin, so importing from OpenCode to rulesync is not supported. OpenCode only supports command-type hooks (not prompt-type).
+
+> **Note:** GitHub Copilot's format uses separate `powershell` and `bash` fields for hooks. Rulesync supports only a single `command` field and resolves this by emitting the command under the `powershell` key on Windows, and under the `bash` key on all other platforms.
+
+Use optional **override keys** so tool-specific events and config live in one file without leaking to others: `cursor.hooks` for Cursor-only events, `claudecode.hooks` for Claude-only, `opencode.hooks` for OpenCode-only. Events in shared `hooks` that a tool does not support are skipped for that tool (and a warning is logged at generate time).
+
+Example:
+
+```json
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [{ "type": "command", "command": ".rulesync/hooks/session-start.sh" }],
+    "postToolUse": [{ "matcher": "Write|Edit", "command": ".rulesync/hooks/format.sh" }],
+    "stop": [{ "command": ".rulesync/hooks/audit.sh" }]
+  },
+  "cursor": {
+    "hooks": {
+      "afterFileEdit": [{ "command": ".cursor/hooks/format.sh" }]
+    }
+  },
+  "claudecode": {
+    "hooks": {
+      "notification": [
+        {
+          "matcher": "permission_prompt",
+          "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/notify.sh"
+        }
+      ]
+    }
+  },
+  "opencode": {
+    "hooks": {
+      "afterShellExecution": [{ "command": ".rulesync/hooks/post-shell.sh" }]
+    }
+  }
+}
+```
+
+## `rulesync/commands/*.md`
+
+Example:
+
+```md
+---
+description: "Review a pull request" # command description
+targets: ["*"] # * = all, or specific tools
+copilot: # copilot specific parameters (optional)
+  description: "Review a pull request"
+antigravity: # antigravity specific parameters
+  trigger: "/review" # Specific trigger for workflow (renames file to review.md)
+  turbo: true # (Optional, default: true) Append // turbo for auto-execution
+---
+
+target_pr = $ARGUMENTS
+
+If target_pr is not provided, use the PR of the current branch.
+
+Execute the following in parallel:
+
+...
+```
+
+## `rulesync/subagents/*.md`
+
+Example:
+
+```md
+---
+name: planner # subagent name
+targets: ["*"] # * = all, or specific tools
+description: >- # subagent description
+  This is the general-purpose planner. The user asks the agent to plan to
+  suggest a specification, implement a new feature, refactor the codebase, or
+  fix a bug. This agent can be called by the user explicitly only.
+claudecode: # for claudecode-specific parameters
+  model: inherit # opus, sonnet, haiku or inherit
+copilot: # for GitHub Copilot specific parameters
+  tools:
+    - web/fetch # agent/runSubagent is always included automatically
+opencode: # for OpenCode-specific parameters
+  mode: subagent # (optional, defaults to "subagent") OpenCode agent mode
+  model: anthropic/claude-sonnet-4-20250514
+  temperature: 0.1
+  tools:
+    write: false
+    edit: false
+    bash: false
+  permission:
+    bash:
+      "git diff": allow
+---
+
+You are the planner for any tasks.
+
+Based on the user's instruction, create a plan while analyzing the related files. Then, report the plan in detail. You can output files to @tmp/ if needed.
+
+Attention, again, you are just the planner, so though you can read any files and run any commands for analysis, please don't write any code.
+```
+
+## `.rulesync/skills/*/SKILL.md`
+
+Example:
+
+```md
+---
+name: example-skill # skill name
+description: >- # skill description
+  A sample skill that demonstrates the skill format
+targets: ["*"] # * = all, or specific tools
+claudecode: # for claudecode-specific parameters
+  allowed-tools:
+    - "Bash"
+    - "Read"
+    - "Write"
+    - "Grep"
+codexcli: # for codexcli-specific parameters
+  short-description: A brief user-facing description
+---
+
+This is the skill body content.
+
+You can provide instructions, context, or any information that helps the AI agent understand and execute this skill effectively.
+
+The skill can include:
+
+- Step-by-step instructions
+- Code examples
+- Best practices
+- Any relevant context
+
+Skills are directory-based and can include additional files alongside SKILL.md.
+```
+
+## `.rulesync/mcp.json`
+
+Example:
+
+```json
+{
+  "mcpServers": {
+    "serena": {
+      "description": "Code analysis and semantic search MCP server",
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/oraios/serena",
+        "serena",
+        "start-mcp-server",
+        "--context",
+        "ide-assistant",
+        "--enable-web-dashboard",
+        "false",
+        "--project",
+        "."
+      ],
+      "env": {}
+    },
+    "context7": {
+      "description": "Library documentation search server",
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"],
+      "env": {}
+    }
+  }
+}
+```
+
+### MCP Tool Config (`enabledTools` / `disabledTools`)
+
+You can control which individual tools from an MCP server are enabled or disabled using `enabledTools` and `disabledTools` arrays per server.
+
+```json
+{
+  "mcpServers": {
+    "serena": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": ["--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-server"],
+      "enabledTools": ["search_symbols", "find_references"],
+      "disabledTools": ["rename_symbol"]
+    }
+  }
+}
+```
+
+- `enabledTools`: An array of tool names that should be explicitly enabled for this server.
+- `disabledTools`: An array of tool names that should be explicitly disabled for this server.
+
+## `.rulesync/.aiignore` or `.rulesyncignore`
+
+Rulesync supports a single ignore list that can live in either location below:
+
+- `.rulesync/.aiignore` (recommended)
+- `.rulesyncignore` (project root)
+
+Rules and behavior:
+
+- You may use either location.
+- When both exist, Rulesync prefers `.rulesync/.aiignore` (recommended) over `.rulesyncignore` (legacy) when reading.
+- If neither file exists yet, Rulesync defaults to creating `.rulesync/.aiignore`.
+
+Notes:
+
+- Running `rulesync init` will create `.rulesync/.aiignore` if no ignore file is present.
+
+Example:
+
+```ignore
+tmp/
+credentials/
+```
+</file>
+
+<file path=".rulesync/skills/rulesync/global-mode.md">
+# Global Mode
+
+You can use global mode via Rulesync by enabling `--global` option. It can also be called as user scope mode.
+
+Currently, supports rules generation for Claude Code, GitHub Copilot, and OpenCode. Import for global files is supported for rules and commands. Command generation in global mode remains Claude Code only.
+
+1. Create an any name directory. For example, if you prefer `~/.aiglobal`, run the following command.
+
+   ```bash
+   mkdir -p ~/.aiglobal
+   ```
+
+2. Initialize files for global files in the directory.
+
+   ```bash
+   cd ~/.aiglobal
+   rulesync init
+   ```
+
+3. Edit `~/.aiglobal/rulesync.jsonc` to enable global mode.
+
+   ```jsonc
+   {
+     "global": true,
+   }
+   ```
+
+4. Edit `~/.aiglobal/.rulesync/rules/overview.md` to your preferences.
+
+   ```md
+   ---
+   root: true
+   ---
+
+   # The Project Overview
+
+   ...
+   ```
+
+5. Generate rules for global settings.
+
+   ```bash
+   # Run in the `~/.aiglobal` directory
+   rulesync generate
+   ```
+
+> [!NOTE]
+> Currently, when in the directory enabled global mode:
+>
+> - `rulesync.jsonc` only supports `global`, `features`, `delete` and `verbose`. `Features` can be set `"rules"` and `"commands"`. Other parameters are ignored.
+> - `rules/*.md` only supports single file has `root: true`, and frontmatter parameters without `root` are ignored.
+> - Only Claude Code is supported for global mode commands.
+> - Global mode rules are supported for Claude Code, GitHub Copilot, and OpenCode.
+</file>
+
+<file path=".rulesync/skills/rulesync/installation.md">
+# Installation
+
+## Package Managers
+
+```bash
+npm install -g rulesync
+# or
+brew install rulesync
+
+# And then
+rulesync --version
+rulesync --help
+```
+
+## Single Binary (Experimental)
+
+Download pre-built binaries from the [latest release](https://github.com/dyoshikawa/rulesync/releases/latest). These binaries are built using [Bun's single-file executable bundler](https://bun.sh/docs/bundler/executables).
+
+**Quick Install (Linux/macOS - No sudo required):**
+
+```bash
+curl -fsSL https://github.com/dyoshikawa/rulesync/releases/latest/download/install.sh | bash
+```
+
+Options:
+
+- Install specific version: `curl -fsSL https://github.com/dyoshikawa/rulesync/releases/latest/download/install.sh | bash -s -- v6.4.0`
+- Custom directory: `RULESYNC_HOME=~/.local curl -fsSL https://github.com/dyoshikawa/rulesync/releases/latest/download/install.sh | bash`
+
+### Manual installation (requires sudo)
+
+### Linux (x64)
+
+```bash
+curl -L https://github.com/dyoshikawa/rulesync/releases/latest/download/rulesync-linux-x64 -o rulesync && \
+  chmod +x rulesync && \
+  sudo mv rulesync /usr/local/bin/
+```
+
+### Linux (ARM64)
+
+```bash
+curl -L https://github.com/dyoshikawa/rulesync/releases/latest/download/rulesync-linux-arm64 -o rulesync && \
+  chmod +x rulesync && \
+  sudo mv rulesync /usr/local/bin/
+```
+
+### macOS (Apple Silicon)
+
+```bash
+curl -L https://github.com/dyoshikawa/rulesync/releases/latest/download/rulesync-darwin-arm64 -o rulesync && \
+  chmod +x rulesync && \
+  sudo mv rulesync /usr/local/bin/
+```
+
+### macOS (Intel)
+
+```bash
+curl -L https://github.com/dyoshikawa/rulesync/releases/latest/download/rulesync-darwin-x64 -o rulesync && \
+  chmod +x rulesync && \
+  sudo mv rulesync /usr/local/bin/
+```
+
+### Windows (x64)
+
+```powershell
+Invoke-WebRequest -Uri "https://github.com/dyoshikawa/rulesync/releases/latest/download/rulesync-windows-x64.exe" -OutFile "rulesync.exe"; `
+  Move-Item rulesync.exe C:\Windows\System32\
+```
+
+Or using curl (if available):
+
+```bash
+curl -L https://github.com/dyoshikawa/rulesync/releases/latest/download/rulesync-windows-x64.exe -o rulesync.exe && \
+  mv rulesync.exe /path/to/your/bin/
+```
+
+### Verify checksums
+
+```bash
+curl -L https://github.com/dyoshikawa/rulesync/releases/latest/download/SHA256SUMS -o SHA256SUMS
+
+# Linux/macOS
+sha256sum -c SHA256SUMS
+
+# Windows (PowerShell)
+# Download SHA256SUMS file first, then verify:
+Get-FileHash rulesync.exe -Algorithm SHA256 | ForEach-Object {
+  $actual = $_.Hash.ToLower()
+  $expected = (Get-Content SHA256SUMS | Select-String "rulesync-windows-x64.exe").ToString().Split()[0]
+  if ($actual -eq $expected) { "✓ Checksum verified" } else { "✗ Checksum mismatch" }
+}
+```
+</file>
+
+<file path=".rulesync/skills/rulesync/mcp-server.md">
+# Rulesync MCP Server
+
+Rulesync provides an MCP (Model Context Protocol) server that enables AI agents to manage your Rulesync files. This allows AI agents to discover, read, create, update, and delete files dynamically.
+
+> [!NOTE]
+> The MCP server exposes the only one tool to minimize your agent's token usage. Approximately less than 1k tokens for the tool definition.
+
+## Usage
+
+### Starting the MCP Server
+
+```bash
+rulesync mcp
+```
+
+This starts an MCP server using stdio transport that AI agents can communicate with.
+
+### Configuration
+
+Add the Rulesync MCP server to your `.rulesync/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "rulesync-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "rulesync", "mcp"],
+      "env": {}
+    }
+  }
+}
+```
+</file>
+
+<file path=".rulesync/skills/rulesync/official-skills.md">
+# Official Skills
+
+Rulesync provides official skills that you can install using the fetch command or declarative sources:
+
+```bash
+# One-time fetch
+rulesync fetch dyoshikawa/rulesync --features skills
+
+# Or declare in rulesync.jsonc and run 'rulesync install'
+```
+
+This will install the Rulesync documentation skill to your project.
+</file>
+
+<file path=".rulesync/skills/rulesync/programmatic-api.md">
+# Programmatic API
+
+Rulesync can be used as a library in your Node.js/TypeScript projects. The `generate` and `importFromTool` functions are available as named exports.
+
+```typescript
+import { generate, importFromTool } from "rulesync";
+
+// Generate configurations
+const result = await generate({
+  targets: ["claudecode", "cursor"],
+  features: ["rules", "mcp"],
+});
+console.log(`Generated ${result.rulesCount} rules, ${result.mcpCount} MCP configs`);
+
+// Import existing tool configurations into .rulesync/
+const importResult = await importFromTool({
+  target: "claudecode",
+  features: ["rules", "commands"],
+});
+console.log(`Imported ${importResult.rulesCount} rules`);
+```
+
+## `generate(options?)`
+
+Generates configuration files for the specified targets and features.
+
+| Option              | Type           | Default           | Description                                  |
+| ------------------- | -------------- | ----------------- | -------------------------------------------- |
+| `targets`           | `ToolTarget[]` | from config file  | Tools to generate configurations for         |
+| `features`          | `Feature[]`    | from config file  | Features to generate                         |
+| `baseDirs`          | `string[]`     | `[process.cwd()]` | Base directories for generation              |
+| `configPath`        | `string`       | auto-detected     | Path to `rulesync.jsonc`                     |
+| `verbose`           | `boolean`      | `false`           | Enable verbose logging                       |
+| `silent`            | `boolean`      | `true`            | Suppress all output                          |
+| `delete`            | `boolean`      | from config file  | Delete existing files before generating      |
+| `global`            | `boolean`      | `false`           | Generate global (user scope) configurations  |
+| `simulateCommands`  | `boolean`      | `false`           | Generate simulated commands                  |
+| `simulateSubagents` | `boolean`      | `false`           | Generate simulated subagents                 |
+| `simulateSkills`    | `boolean`      | `false`           | Generate simulated skills                    |
+| `dryRun`            | `boolean`      | `false`           | Show changes without writing files           |
+| `check`             | `boolean`      | `false`           | Exit with code 1 if files are not up to date |
+
+## `importFromTool(options)`
+
+Imports existing tool configurations into `.rulesync/` directory.
+
+| Option       | Type         | Default          | Description                               |
+| ------------ | ------------ | ---------------- | ----------------------------------------- |
+| `target`     | `ToolTarget` | (required)       | Tool to import configurations from        |
+| `features`   | `Feature[]`  | from config file | Features to import                        |
+| `configPath` | `string`     | auto-detected    | Path to `rulesync.jsonc`                  |
+| `verbose`    | `boolean`    | `false`          | Enable verbose logging                    |
+| `silent`     | `boolean`    | `true`           | Suppress all output                       |
+| `global`     | `boolean`    | `false`          | Import global (user scope) configurations |
+</file>
+
+<file path=".rulesync/skills/rulesync/quick-start.md">
+# Quick Start
+
+## New Project
+
+```bash
+# Install rulesync globally
+npm install -g rulesync
+
+# Create necessary directories, sample rule files, and configuration file
+rulesync init
+
+# Install official skills (recommended)
+rulesync fetch dyoshikawa/rulesync --features skills
+
+# Or add skill sources to rulesync.jsonc and run 'rulesync install' (see "Declarative Skill Sources")
+```
+
+## Existing AI Tool Configurations
+
+If you already have AI tool configurations:
+
+```bash
+# Import existing files (to .rulesync/**/*)
+rulesync import --targets claudecode    # From CLAUDE.md
+rulesync import --targets cursor        # From .cursorrules
+rulesync import --targets copilot       # From .github/copilot-instructions.md
+rulesync import --targets claudecode --features rules,mcp,commands,subagents
+
+# And more tool supports
+
+# Generate unified configurations with all features
+rulesync generate --targets "*" --features "*"
+```
+
+## Quick Commands
+
+```bash
+# Initialize new project (recommended: organized rules structure)
+rulesync init
+
+# Import existing configurations (to .rulesync/rules/ by default)
+rulesync import --targets claudecode --features rules,ignore,mcp,commands,subagents,skills
+
+# Fetch configurations from a Git repository
+rulesync fetch owner/repo
+rulesync fetch owner/repo@v1.0.0 --features rules,commands
+rulesync fetch https://github.com/owner/repo --conflict skip
+
+# Generate all features for all tools (new preferred syntax)
+rulesync generate --targets "*" --features "*"
+
+# Generate specific features for specific tools
+rulesync generate --targets copilot,cursor,cline --features rules,mcp
+rulesync generate --targets claudecode --features rules,subagents
+
+# Generate only rules (no MCP, ignore files, commands, or subagents)
+rulesync generate --targets "*" --features rules
+
+# Generate simulated commands and subagents
+rulesync generate --targets copilot,cursor,codexcli --features commands,subagents --simulate-commands --simulate-subagents
+
+# Dry run: show changes without writing files
+rulesync generate --dry-run --targets claudecode --features rules
+
+# Check if files are up to date (for CI/CD pipelines)
+rulesync generate --check --targets "*" --features "*"
+
+# Install skills from declarative sources in rulesync.jsonc
+rulesync install
+
+# Force re-resolve all source refs (ignore lockfile)
+rulesync install --update
+
+# Fail if lockfile is missing or out of sync (for CI); fetch missing skills using locked refs
+rulesync install --frozen
+
+# Install then generate (typical workflow)
+rulesync install && rulesync generate
+
+# Add generated files to .gitignore
+rulesync gitignore
+
+# Update rulesync to the latest version (single-binary installs)
+rulesync update
+
+# Check for updates without installing
+rulesync update --check
+
+# Force update even if already at latest version
+rulesync update --force
+```
+</file>
+
+<file path=".rulesync/skills/rulesync/simulated-features.md">
+# Simulated Commands, Subagents and Skills
+
+Simulated commands, subagents and skills allow you to generate simulated features for cursor, codexcli and etc. This is useful for shortening your prompts.
+
+1. Prepare `.rulesync/commands/*.md`, `.rulesync/subagents/*.md` and `.rulesync/skills/*/SKILL.md` for your purposes.
+2. Generate simulated commands, subagents and skills for specific tools that are included in cursor, codexcli and etc.
+
+   ```bash
+   rulesync generate \
+     --targets copilot,cursor,codexcli \
+     --features commands,subagents,skills \
+     --simulate-commands \
+     --simulate-subagents \
+     --simulate-skills
+   ```
+
+3. Use simulated commands, subagents and skills in your prompts.
+   - Prompt examples:
+
+     ```txt
+     # Execute simulated commands. By the way, `s/` stands for `simulate/`.
+     s/your-command
+
+     # Execute simulated subagents
+     Call your-subagent to achieve something.
+
+     # Use simulated skills
+     Use the skill your-skill to achieve something.
+     ```
+</file>
+
+<file path=".rulesync/skills/rulesync/SKILL.md">
+---
+name: rulesync
+description: >-
+  Rulesync CLI tool documentation - unified AI rule file management
+  for various AI coding tools
+targets: ["*"]
+---
+
+# Rulesync
+
+A Node.js CLI tool that automatically generates configuration files for various AI development tools from unified AI rule files.
+
+## Table of Contents
+
+### Getting Started
+
+- [Installation](./installation.md)
+- [Quick Start](./quick-start.md)
+
+### Guide
+
+- [Why Rulesync?](./why-rulesync.md)
+- [Configuration](./configuration.md)
+- [Global Mode](./global-mode.md)
+- [Simulated Features](./simulated-features.md)
+- [Declarative Sources](./declarative-sources.md)
+- [Official Skills](./official-skills.md)
+- [Dry Run](./dry-run.md)
+- [Case Studies](./case-studies.md)
+
+### Reference
+
+- [Supported Tools](./supported-tools.md)
+- [CLI Commands](./cli-commands.md)
+- [File Formats](./file-formats.md)
+- [MCP Server](./mcp-server.md)
+
+### API
+
+- [Programmatic API](./programmatic-api.md)
+
+- [FAQ](./faq.md)
+</file>
+
+<file path=".rulesync/skills/rulesync/supported-tools.md">
+# Supported Tools and Features
+
+Rulesync supports both **generation** and **import** for All of the major AI coding tools:
+
+| Tool               | --targets    | rules | ignore |   mcp    | commands | subagents | skills | hooks |
+| ------------------ | ------------ | :---: | :----: | :------: | :------: | :-------: | :----: | :---: |
+| AGENTS.md          | agentsmd     |  ✅   |        |          |    🎮    |    🎮     |   🎮   |       |
+| AgentsSkills       | agentsskills |       |        |          |          |           |   ✅   |       |
+| Claude Code        | claudecode   | ✅ 🌏 |   ✅   |  ✅ 🌏   |  ✅ 🌏   |   ✅ 🌏   | ✅ 🌏  |  ✅   |
+| Codex CLI          | codexcli     | ✅ 🌏 |        | ✅ 🌏 🔧 |    🌏    |    ✅     | ✅ 🌏  |       |
+| Gemini CLI         | geminicli    | ✅ 🌏 |   ✅   |  ✅ 🌏   |  ✅ 🌏   |    🎮     | ✅ 🌏  |       |
+| GitHub Copilot     | copilot      | ✅ 🌏 |        |    ✅    |    ✅    |    ✅     |   ✅   |  ✅   |
+| Goose              | goose        | ✅ 🌏 |        |          |          |           |        |       |
+| Cursor             | cursor       |  ✅   |   ✅   |    ✅    |  ✅ 🌏   |   ✅ 🌏   | ✅ 🌏  |  ✅   |
+| Factory Droid      | factorydroid | ✅ 🌏 |        |  ✅ 🌏   |  ✅ 🌏   |   ✅ 🌏   | ✅ 🌏  |       |
+| OpenCode           | opencode     | ✅ 🌏 |        |  ✅ 🔧   |  ✅ 🌏   |   ✅ 🌏   | ✅ 🌏  | ✅ 🌏 |
+| Cline              | cline        |  ✅   |   ✅   |    ✅    |  ✅ 🌏   |           | ✅ 🌏  |       |
+| Kilo Code          | kilo         | ✅ 🌏 |   ✅   |    ✅    |  ✅ 🌏   |           | ✅ 🌏  |       |
+| Roo Code           | roo          |  ✅   |   ✅   |    ✅    |    ✅    |    🎮     | ✅ 🌏  |       |
+| Qwen Code          | qwencode     |  ✅   |   ✅   |          |          |           |        |       |
+| Kiro               | kiro         |  ✅   |   ✅   |    ✅    |    ✅    |    ✅     |   ✅   |       |
+| Google Antigravity | antigravity  |  ✅   |        |          |    ✅    |           | ✅ 🌏  |       |
+| JetBrains Junie    | junie        |  ✅   |   ✅   |    ✅    |          |           |        |       |
+| AugmentCode        | augmentcode  |  ✅   |   ✅   |          |          |           |        |       |
+| Windsurf           | windsurf     |  ✅   |   ✅   |          |          |           |        |       |
+| Warp               | warp         |  ✅   |        |          |          |           |        |       |
+| Replit             | replit       |  ✅   |        |          |          |           |   ✅   |       |
+| Zed                | zed          |       |   ✅   |          |          |           |        |       |
+
+- ✅: Supports project mode
+- 🌏: Supports global mode
+- 🎮: Supports simulated commands/subagents/skills (Project mode only)
+- 🔧: Supports MCP tool config (`enabledTools`/`disabledTools`)
+</file>
+
+<file path=".rulesync/skills/rulesync/why-rulesync.md">
+# Why Rulesync?
+
+## Single Source of Truth
+
+Author rules once, generate everywhere. Rulesync turns a unified ruleset into tool-native formats so teams stop duplicating instructions across multiple AI assistants.
+
+## Tool Freedom Without Friction
+
+Let developers pick the assistant that fits their flow—Copilot, Cursor, Cline, Claude Code, and more—without rewriting team standards.
+
+## Clean, Auditable Outputs
+
+Rulesync emits plain configuration files you can commit, review, and ship. If you ever uninstall Rulesync, your generated files keep working.
+
+## Fast Onboarding & Consistency
+
+New team members get the same conventions, context, and guardrails immediately, keeping code style and quality consistent across tools.
+
+## Multi-Tool & Modular Workflows
+
+Compose rules, MCP configs, commands, and subagents for different tools or scopes (project vs. global) without fragmenting your workflow.
+
+## Ready for What's Next
+
+AI tool ecosystems evolve quickly. Rulesync helps you add, switch, or retire tools while keeping your rules intact.
+</file>
+
+<file path="pages/AI___LLM___Technique___Skill___Progressive Disclosure.md">
+tags:: [[Diataxis/Concept]], [[Term]]
+alias:: [[Progressive Disclosure]] 
+see-also:: [[AI/LLM]], [[AI/LLM/Problem/Context Limit]], [[AI/Coding/Tool/Report/25/Skills Comparison]]
+
+- # Progressive disclosure — conceptual overview
+	- ## Overview
+		- **Progressive disclosure** here means an agent loads **domain knowledge in stages**, pulling each layer from the environment only when it becomes relevant, instead of putting the full bundle into the model context up front
+		- In Anthropic's **Agent Skills** design, that staging is explicit: lightweight **discovery metadata** stays always available; **procedural instructions** load when a skill matches the task; **extra guides, data, and code** load or run only as the workflow needs them[^1] [^2]
+		- The goal is practical: keep the **context window** for reasoning focused on what matters for the current step while still allowing **large, composable** capability packs on disk
+	- ## Context
+		- **Bounded context**: Large language models operate under a fixed or costly context budget, so shipping entire playbooks, references, and scripts into every turn wastes capacity and dilutes attention
+		- **Skills vs one-off prompts**: A long user or system prompt repeats the same guidance every conversation; filesystem-based skills are **reusable**, **discoverable**, and **loaded on demand**, which scales better as you add more specialties[^1]
+		- **Why a VM and bash matter**: Skills are described as living in a **code-execution environment with filesystem access**. The agent can **read files** and **run scripts** like a developer opening the right section of an onboarding binder—navigation replaces preloading[^1]
+	- ## Key Principles
+		- **Separation of “that it exists” from “what it contains”**: The system can know many skills cheaply if only **names and trigger descriptions** sit in the always-on layer
+		- **Match, then expand**: After the user’s intent aligns with a skill’s description, the agent pulls the **main instruction file**; unrelated skills never pay that token cost[^1]
+		- **Depth on demand**: Follow-up files (guides, schemas, examples) and **executable utilities** participate only when instructions or the task point at them
+		- **Different media, different costs**: Prose instructions are flexible; **deterministic scripts** can do reliable work; the doc emphasizes that **script source** need not flood the window if only **stdout or results** return[^1]
+		- **Composition without context explosion**: Many skills can coexist as directories; **unused files on disk cost no tokens** until read[^1]
+	- ## Mechanism
+		- Anthropic's overview describes **three loading levels** for a typical skill directory[^1]:
+			- **Level 1 — Metadata (always loaded)**: YAML frontmatter on the skill’s main markdown file (for example `name` and a rich `description` of what the skill does **and when to use it**) is included **at startup** so the model can choose skills without loading bodies[^1]
+			- **Level 2 — Core instructions (loaded when triggered)**: The body of `SKILL.md` (workflows, conventions, steps) is read **via the shell** only after the skill is selected, so that text enters context **just for matching tasks**[^1]
+			- **Level 3 — Bundled resources (as needed)**: Additional markdown, reference material, templates, and **scripts** are accessed **when referenced**; running a script can surface **only outputs** to the model rather than the full program text[^1]
+		- **Illustrative flow** (PDF-oriented example from the same documentation): at startup the model sees a short **summary line** derived from metadata; when the user asks to extract text, the agent **reads** `SKILL.md`; if form filling is irrelevant, **optional** files such as a forms guide are **never read**; work proceeds from the loaded slice only[^1]
+	- ## Examples
+		- **Skill-shaped directory** (conceptual layout)[^1]:
+			- ~~~
+			  pdf-skill/
+			    SKILL.md
+			    FORMS.md
+			    REFERENCE.md
+			    scripts/
+			      fill_form.py
+			  ~~~
+		- **Token posture** (order of magnitude from the doc's table): metadata on the order of **~100 tokens per skill** at baseline; main instructions often **under roughly five thousand tokens** when loaded; **large reference corpora** can remain on disk until a read pulls in a slice[^1]
+	- ## Misconceptions
+		- **“More installed skills always mean a bigger system prompt”** — Incorrect for this architecture: **many skills** can register through **compact descriptions**; cost spikes when a skill is actually **activated and read**[^1]
+		- **“The agent must paste every script into context to use it”** — Misrepresents the documented pattern: **execution** can return **results or logs** without treating the whole source file as prompt text[^1]
+		- **“Progressive disclosure is only marketing language”** — In this design it is **operational**: loading is **gated** on filesystem reads and tool use, not on a single static block of instructions[^1]
+	- ## Footnotes
+		- [^1]: https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview.md
+		- [^2]: https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills
+</file>
+
+<file path="pages/rulesync___Ignore.md">
+- [Rulesync Combined gitignore rules](https://rulesync.dyoshikawa.com/reference/file-formats.html#rulesync-aiignore-or-rulesyncignore)
+	- Rulesync supports a single ignore list that can live in either location below:
+	- `.rulesync/.aiignore` (recommended)
+	- `.rulesyncignore` (project root)
+	  
+	  Rules and behavior:
+	- You may use either location.
+	- When both exist, Rulesync prefers `.rulesync/.aiignore` (recommended) over `.rulesyncignore` (legacy) when reading.
+	- If neither file exists yet, Rulesync defaults to creating `.rulesync/.aiignore`.
+	  
+	  Notes:
+	- Running `rulesync init` will create `.rulesync/.aiignore` if no ignore file is present.
+	  
+	  Example:
+	  
+	  ```
+	  tmp/
+	  credentials/
+	  ```
+</file>
+
+<file path="pages/rulesync___Skill___Declarative Source.md">
+# [Declarative Skill Sources | Rulesync](https://rulesync.dyoshikawa.com/guide/declarative-sources.html)
+	- Rulesync can fetch skills from external repositories using the [[rulesync/install]] command. Instead of manually running `fetch` for each skill source, declare them in your `rulesync.jsonc` and run `rulesync install` to resolve and fetch them. Then [[rulesync/generate]] picks them up as local curated skills. Typical workflow: `rulesync install && rulesync generate`.
+	- This lets you import sources from another repository
+	- ## Configuration
+		- Add a `sources` array to your `rulesync.jsonc`:
+			- ```json
+			  {
+			    "$schema": "https://github.com/dyoshikawa/rulesync/releases/latest/download/config-schema.json",
+			    "targets": ["copilot", "claudecode"],
+			    "features": ["rules", "skills"],
+			    "sources": [
+			      // Fetch all skills from a GitHub repository (default transport)
+			      { "source": "owner/repo" },
+			  
+			      // Fetch only specific skills by name
+			      { "source": "anthropics/skills", "skills": ["skill-creator"] },
+			  
+			      // With ref pinning and subdirectory path (same syntax as fetch command)
+			      { "source": "owner/repo@v1.0.0:path/to/skills" },
+			  
+			      // Git transport — works with any git remote (Azure DevOps, Bitbucket, etc.)
+			      {
+			        "source": "https://dev.azure.com/org/project/_git/repo",
+			        "transport": "git",
+			        "ref": "main",
+			        "path": "exports/skills",
+			      },
+			  
+			      // Git transport with a local repository
+			      { "source": "file:///path/to/local/repo", "transport": "git" },
+			    ],
+			  }
+			  ```
+	- ## [How it works](https://rulesync.dyoshikawa.com/guide/declarative-sources.html#how-it-works)
+		- The `skills/` directory (or the path specified in the source URL) is listed from the remote repository.
+	-
+</file>
+
+<file path="pages/rulesync.md">
+# [dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync?tab=readme-ov-file#supported-tools-and-features)
+	- [[rulesync/docs]] https://rulesync.dyoshikawa.com
+	- ## Overview
+		- > A Node.js CLI tool that automatically generates configuration files for various AI development tools from unified AI rule files. Features selective generation, comprehensive import/export capabilities, and supports major AI development tools with rules, commands, MCP, ignore files, and subagents. Uses the recommended `.rulesync/rules/*.md` structure, with full backward compatibility for legacy `.rulesync/*.md` layouts.
+	- ## Installation
+		- Pick one of the two
+		- ### 1 - Install globally using npm:
+			- ```bash
+			  npm install -g rulesync
+			  ```
+		- ### 2 - Add to [[mise/Config/mise.toml]] in home directory
+			- {{embed [[rulesync/mise]]}}
+	- ## Usage
+		- ### Basic Commands
+			- **Import AI tool configs to unified rules files**:
+				- ```bash
+				  rulesync import [--targets <tool-names>]
+				  ```
+			- **Generate AI tool configs from unified rules files**:
+				- ```bash
+				  rulesync generate [--targets <tool-names>] [--features <feature-names>]
+				  ```
+			- #### Generate all AI tool configs
+				- ```
+				  rulesync generate --targets "*" --features "*"
+				  ```
+		- ### File Structure
+			- Rulesync uses the `.rulesync` directory at the root of your project
+			- Recommended structure:
+				- `.rulesync/rules/*.md` - Rule files
+				- `.rulesync/commands/*.md` - Command files (slash commands)
+				- `.rulesync/subagents/*.md` - Subagent definitions
+			- Legacy structure (still supported):
+				- `.rulesync/*.md`
+		- ### File Format
+			- Rules, commands, and subagents are defined in Markdown files with YAML frontmatter
+			- Rule file example:
+				- ```yaml
+				  ---
+				  root: true               # Make this rule available globally
+				  targets:                 # Which AI tools this applies to
+				    - 'claude-code'
+				    - 'cursor'
+				  description: ''          # Optional description
+				  globs:                   # File patterns this rule applies to
+				    - '**/*.py'
+				  ---
+				  # Python Best Practices
+				  
+				  [Rule content here...]
+				  ```
+	- ## Supported Tools
+		- > A Node.js CLI tool that automatically generates configuration files for various AI development tools from unified AI rule files. Features selective generation, comprehensive import/export capabilities, and supports major AI development tools with rules, commands, MCP, ignore files, and subagents. Uses the recommended `.rulesync/rules/*.md` structure, with full backward compatibility for legacy `.rulesync/*.md` layouts.
+		- Rulesync supports both **generation** and **import** for All of the major AI coding tools:
+		  | Tool | rules | ignore | mcp | commands | subagents |
+		  | ---- | ---- | ---- |
+		  | AGENTS.md | ✅ |  |  |  |  |
+		  | Claude Code | ✅ | ✅ | ✅ | ✅ | ✅ |
+		  | Codex CLI | ✅ | ✅ |  | 🎮 | 🎮 |
+		  | Gemini CLI | ✅ | ✅ |  | ✅ | 🎮 |
+		  | GitHub Copilot | ✅ |  | ✅ | 🎮 | 🎮 |
+		  | Cursor | ✅ | ✅ | ✅ | ✅ | 🎮 |
+		  | OpenCode | ✅ |  |  |  |  |
+		  | Cline | ✅ | ✅ | ✅ |  |  |
+		  | Roo Code | ✅ | ✅ | ✅ | ✅ | 🎮 |
+		  | Qwen Code | ✅ | ✅ |  |  |  |
+		  | Kiro IDE | ✅ | ✅ |  |  |  |
+		  | Amazon Q Developer CLI | ✅ |  | ✅ |  |  |
+		  | JetBrains Junie | ✅ | ✅ |  |  |  |
+		  | AugmentCode | ✅ | ✅ |  |  |  |
+		  | Windsurf | ✅ | ✅ |  |  |  |
+		  | Warp | ✅ |  |  |  |  |
+		- 🎮: Simulated Commands/Subagents (Experimental Feature)
+	- ## Advanced Features
+		- ### Command Line Options
+			- `--targets <tool-names>`: Specify which AI tools to target
+				- Use comma-separated values or "*" for all tools
+				- Example: `--targets "claude-code,cursor"`
+			- `--features <feature-names>`: Specify which features to generate
+				- Options: "rules", "commands", "subagents", "mcp", "ignore"
+				- Example: `--features "rules,commands"`
+			- `--global`: Use global rules (in home directory) instead of project rules
+			- `--verbose`: Enable verbose logging
+		- ### Frontmatter Options
+			- **Rules Files**:
+				- `root`: Boolean, make rule available globally (default: false)
+				- `targets`: Array of tool names this rule applies to
+				- `description`: String, optional description
+				- `globs`: Array of file patterns this rule applies to
+			- **Commands Files**:
+				- `targets`: Array of tool names this command applies to
+				- `description`: Short description for the slash command
+			- **Subagents Files**:
+				- `targets`: Array of tool names this subagent applies to
+				- `description`: Description of what the subagent does
+	- ## Common Workflows
+		- ### Syncing Between AI Tools
+			- **Import from one tool, generate for others**:
+				- ```bash
+				  # Import from Cursor
+				  rulesync import --targets cursor
+				  # Generate for all other tools
+				  rulesync generate --targets "*" --features "*"
+				  ```
+		- ### Creating Shared Rules
+			- 1. Create rule files in `.rulesync/rules/*.md`
+			- 2. Add appropriate frontmatter targeting desired tools
+			- 3. Run `rulesync generate` to apply to all AI tools
+		- ### Global vs Project-Specific Rules
+			- Global rules apply to all projects
+				- Import: `rulesync import --global`
+				- Generate: `rulesync generate --global`
+			- Project rules apply only to current project
+				- Import: `rulesync import`
+				- Generate: `rulesync generate`
+	-
+</file>
+
+<file path="pages/AI___Coding___Tool___Report___25___Skills Comparison.md">
+tags:: [[AI Coding]], [[Report]], [[AI Deep Research]] 
+alias:: [[AI/Coding/Tool/Report/25/Skills Comparison]]
+date-created:: [[2025-11-03 Mon]]
+
+- # Comparative Analysis of Agentic AI Coding Assistants: Modular "Skills" Systems Beyond Claude Code
+	- ## Executive Summary
+		- This report comprehensively evaluates whether any agentic AI coding assistants, beyond Anthropic's Claude Code, presently offer or plan to offer modular, persistent, declarative skill systems comparable to "Claude Code Skills." Such systems are defined by reusable, filesystem-based, metadata-rich bundles that can be autonomously discovered and invoked, leverage progressive disclosure (staged, context-efficient loading), and support safe, composable code augmentation. The assessment examines 11 well-known AI coding agents across six critical dimensions: modular skill support, progressive disclosure, persistence and composability, supported surfaces, security/runtime constraints, and architectural documentation. Official documentation, engineering blogs, and product pages are prioritized throughout.
+	- ## Claude Code Skills: The Baseline
+		- Claude Code's "Skills" system provides reusable, persistent agent capabilities via organized directory bundles (`SKILL.md` with YAML metadata, scripts, resources), allowing agents to autonomously discover and invoke skills relevant to user or project context. Its hallmark is progressive disclosure: skill metadata always in context; instructions loaded only if the skill is activated; resources/scripts loaded and executed (with output only shared to the LLM) as needed. Skills are persistent, composable, and discoverable across multiple modalities (local project, API, workspace, or cloud). Security boundaries and runtime constraints are tied to the execution surface, with high transparency and documented best practices[^1] [^2].
+	- ## Comparative Matrix of Agentic Coding Assistants
+		- | Agent Name | Modular Skill Support | Progressive Disclosure | Persistence & Composability | Surfaces | Security/Runtime Constraints | Documentation/Arch. Transparency |
+		  | ---------- | --------------------- | ---------------------- | --------------------------- | -------- | ----------------------------- | -------------------------------- |
+		  | **[[Claude Code]]** | Full (see above) | Yes (multi-level) | Filesystem skill bundles/auto-discovery | Web, API, IDE plugin, local | VM with varied network/fs limits | Extensive [^1] [^2] |
+		  | [[GitHub/CoPilot]] | None; only prompt & cmd | No | Stateless, API-driven, no skill model | IDEs, Cloud | Execution in ephemeral/run-only snips | Product docs, no extension/skill docs [^3] |
+		  | [[CursorAI]] | Partial (macros/tasks) | No (all-in-context) | Custom actions/macros; not persistent | Local IDE fork | Script snippets run only on explicit user command | GitHub repo/docs; no skill API [^4] |
+		  | Cline | None | No | NA | CLI/Editor | NA | Repo; no mentions of modular skills [^5] |
+		  | [[RooCode]] | None | No | NA | VSCode ext, Web IDE | Basic sandboxing | Repo/docs; no mention of skills [^6] |
+		  | [[Windsurf]] | None | No | NA | Browser-based | Stateless/workspace isolation | Docs sparse; skills not present [^7] |
+		  | Replit Agents | Partial (tools, "custom agents") | No (MCP style) | Tool lists per agent ("bundles"), but context preloaded | Web IDE, API | Code sandboxing, user isolation | Docs [^8]; no skill bundles/progressive load |
+		  | Amazon Q Developer | None | No | No skill model, stateless prompting | IDEs (JetBrains/VSc), AWS | Follows enterprise AWS IAM/app sandbox | AWS docs; no agent skills public [^9] |
+		  | JetBrains Junie | None/Partial (actions) | No | IDE actions, not reusable skills | JetBrains IDEs | IDE plugin sandboxing | JetBrains AI docs, limited info [^10] |
+		  | [[Warp]] | Partial (Snippets/Aliases) | No | Snippets/aliases, not autonomous | Terminal | Secure shell sandboxing | No docs on skill system [^11] |
+		  | Google Jules | Research (auton tools) | No (classic MCP) | Pre-loaded tool manifest (stateless) | Research IDE, select public | Internal security/Google sandbox | DeepMind blog/papers [^12] |
+		  | [[CodexCLI]] | Partial (tools via API) | No (all manifest) | Tool manifests, not persistent skills | CLI, API | Codex VM+sandbox | API docs, no mention of skills [^13] |
+		- **Legend:**
+			- **Full:** Modular, persistent, autonomously-invoked skills with reusable, lazy-loadable resource bundles.
+			- **Partial:** Actions/macros/tools definable, but lacking full autonomy or progressive disclosure, or persistence via bundles.
+			- **None:** Lacking any concept of persistent, agent-discoverable, autonomously invoked skill bundles.
+	- ## Detailed Vendor Narrative and Analysis
+		- ### 1. [[GitHub/CoPilot]]
+			- Copilot integrates deeply with IDEs and the VSCode ecosystem as a code completion and chat agent. It allows *slash commands* (e.g., `/tests`, `/explain`), but these are stateless—the agent cannot gain new, persistent capabilities via reusable bundled scripts. There is no user-extensible system for defining persistent skills—capabilities are centrally updated by GitHub. There is no evidence of agent-side autonomous skill invocation, and all functionality is prompt-driven. There is also no mention of progressive disclosure or staged resource loading, nor support for filesystem-based discoverable bundles. Copilot's prompts and APIs are monolithic; capabilities must be re-provided in each session, precluding composable or persistent agent extension. [^3]
+		- ### 2. [[CursorAI]]
+			- Cursor, a fork of VSCode with heavy AI agent integration, supports custom **macros** and scripted actions (i.e., "Tasks") that automate certain local code or workflow steps. However, these are user-defined, manually triggered, and not discoverable or autonomously invoked by the agent. Macros and custom actions are not packaged as persistent, shareable, or discoverable bundles; there's no system resembling "skills" as in Claude's model. All resources are loaded as defined in the macro, so there is no progressive disclosure. The context model remains flat, and there is no agent-executed action unless the user requests it. [^4]
+		- ### 3. Cline, [[RooCode]], [[Windsurf]]
+			- These platforms operate essentially as AI-augmented CLI tools or code interpreters (Cline, Roo), or as browser IDEs with limited agentic behavior (Windsurf). None offers a modular or persistent agent "skill" system; capabilities are either stateless or fixed functions. Capabilities are defined in-code or via hardcoded flows. There are no public documentation references to persistent skills, dynamic extension, or staged loading. [^5] [^6] [^7]
+		- ### 4. Replit Agents
+			- Replit Agents are among the closest in terms of conceptual similarity. They enable users to define "custom agents" using combinations of tools, scripts, and prompts—but these *tools* are largely "manifest preloaded" (i.e., the full tool list and spec is loaded into the context up-front—a classic MCP approach). Skills/tools can be persistent per agent, and users can share agent configurations, but there's no staged or progressive disclosure of tool instructions/resources: everything is exposed in full to the LLM context at invocation or at agent startup, potentially leading to context inefficiency. Security is handled via the Replit code sandbox. [^8]
+		- ### 5. Amazon Q Developer, JetBrains Junie
+			- Both integrate AI into professional IDEs, providing AI chat, code assistance, and advice, but do not expose user-extensible "skills" or persistent, reusable agent extensions. All "actions" are stateless prompt-driven or IDE feature integration. There is no manifest, bundle, or discovery concept for agent skills, nor is there staged context management. Any future roadmap for such features is not public. [^9] [^10]
+		- ### 6. [[Warp]]
+			- Warp offers command-line augmentation with AI, including snippets, aliases, and some agentic code modification, but these are manually defined and never agent-discoverable or autonomously triggered. There is no evidence of modular skill extension, nor staged loading—snippets are loaded as defined and only via explicit invocation. [^11]
+		- ### 7. Google Jules, [[CodexCLI]]
+			- Both project MCP-style "tools" or APIs that can be attached to agents at runtime, typically via static manifests describing each tool's functions, input/output schemas, and documentation. These tools can be invoked by agents autonomously (classically in Jules research), but *all* instructions/specs/resources for all tools are loaded into context at startup. There is no "on-demand" or staged asset loading. This approach leads to context bloat as the agent scales in capability. There is no skill packaging or filesystem-based bundling; composability relies on agent replumbing. [^12] [^13]
+	- ## Trade-offs and Architectural Implications
+		- ### Context Efficiency
+			- Claude's progressive disclosure mechanism provides clear context efficiency gains over agent models that require upfront manifest/context loads (as in MCP). This becomes increasingly significant as the number of available tools grows.
+		- ### Persistence and Composability
+			- Only Claude's skills system allows persistent, modular extension via local or cloud-stored reusable bundles that the agent can autonomously discover and invoke as contextually appropriate.
+		- ### Extensibility
+			- Some platforms (Cursor, Replit) allow user macros or tool lists, but lack agent-side autonomous discovery or invocation, progressive disclosure, or composability via bundles.
+		- ### Security Surface
+			- All platforms enforce sandboxing of code execution, but only Claude provides a clear audit and runtime restriction model for skill bundles, with explicit caution on skill trustworthiness.
+		- ### Documentation and Transparency
+			- Anthropic's engineering and user documentation is detailed and explicit about capability models and security, which is not the case for most competitors. Replit and Cursor have some transparency; others are limited to high-level product documentation.
+	- ## Uniqueness Assessment: Is Claude Code Skills Still Unique in 2025?
+		- No major competitor offers a system matching all core capabilities of Claude Code's Skills:
+			- **Modular, persistent skill bundles with agent autonomous discovery and invocation**
+			- **Progressive disclosure: staged/lazy loading of skill content/assets to minimize context cost**
+			- **Filesystem-based composability and richness, not just prompt templates, tool manifests, or command scripts**
+			- **Explicit persistence and reusability across project, workspace, or API surfaces**
+		- Other platforms offer **partial analogues** (manifest-based tool definition, user macros, custom tools/groups) but do not deliver on the progressive disclosure model, persistent file bundle extensibility, nor the agent's ability to "learn" new skills via discovery and staged loading. Replit and Google Jules (research) are closest conceptually in exposing agent-autonomous tool invocation, but even these depend on manifest preloading and lack persistent or composable skill bundles. No platform documents movement toward a Claude Skills-equivalent architecture.
+		- Unless an unannounced product or roadmap appears after November 2025, Anthropic's Claude Code Skills remains the only system offering this blend of modular, persistent, context-efficient, autonomously-invoked skill systems. Claude Code Skills are thus, as of this analysis, unique among major agentic coding assistants[^1] [^2].
+	- ## ASCII Visual: MCP vs. Claude Skills Progressive Disclosure
+		- ```
+		  [MCP/Tool Manifest Model]   --> [ Claude Skills Model ]
+		  
+		  +----------------------+        +---------------------+
+		  | Load all tools/specs |        | Metadata only (L1)  |
+		  | at startup           |  VS.   | → add instructions |
+		  | [context bloat]      |        | (L2) on invocation |
+		  +----------------------+        | → run scripts (L3) |
+		                                  | as needed           |
+		                                  +---------------------+
+		  ```
+		- *(L1 = metadata, L2 = instructions, L3 = resources/scripts)*
+	- ## Related skill ecosystems
+		- Beyond the coding-assistant matrix above, other skill-repository and agent-skills efforts have emerged: [[Vercel/GitHub/Skills]] (Vercel Labs' open agent skills tool and skill repository management system, `npx skills`) and [[LangChain/GitHub/langchain-skills]] (LangChain's new skills repo). Claude Code skills remain the first prominent implementation of this idea.
+	- ## Conclusion
+		- As of late 2025, Anthropic's Claude Code Skills continue to represent a unique advance in agentic AI extensibility—combining persistent, autonomous, modular skill systems with context-efficient progressive disclosure, executable assets, and robust composability. Competing products offer skill-like features only in incomplete form, lacking both staged context management and true agent-side modular extensibility. Claude's engineering and user documentation sets a benchmark for transparency and safe extensibility not seen elsewhere. Developers seeking reusable, context-efficient, and agentically invokable skill extensions will find no equivalent to Claude Code Skills outside the Anthropic ecosystem at this time.
+	- ## Footnotes
+		- [^1]: https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills
+		- [^2]: https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview#three-types-of-skill-content%2C-three-levels-of-loading
+		- [^3]: https://github.com/features/copilot
+		- [^4]: https://github.com/getcursor/cursor
+		- [^5]: https://github.com/cline-tools
+		- [^6]: https://github.com/RooVetDevelopers/roocode
+		- [^7]: https://github.com/codeium/windsurf
+		- [^8]: https://replit.com/agents
+		- [^9]: https://aws.amazon.com/q/developer/
+		- [^10]: https://www.jetbrains.com/ai/
+		- [^11]: https://github.com/warpdotdev/Warp
+		- [^12]: https://deepmind.google/discover/blog/google-jules-ai-code-understanding-and-generation/
+		- [^13]: https://github.com/openai/codex
+</file>
+
+</files>

@@ -1,4 +1,5 @@
 tags:: [[Diataxis/Concept]], [[Term]]
+alias:: [[Progressive Disclosure]] 
 see-also:: [[AI/LLM]], [[AI/LLM/Problem/Context Limit]], [[AI/Coding/Tool/Report/25/Skills Comparison]]
 
 - # Progressive disclosure — conceptual overview

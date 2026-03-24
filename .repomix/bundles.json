@@ -565,6 +565,53 @@
         "pages/Logitech___Mouse___G604.md",
         "pages/Logitech___GHub.md"
       ]
+    },
+    "rulesync-871": {
+      "name": "rulesync",
+      "created": "2026-03-23T09:11:54.443Z",
+      "lastUsed": "2026-03-23T09:13:07.838Z",
+      "tags": [],
+      "files": [
+        "pages/AI___Coding___Tool___Report___25___Skills Comparison.md",
+        "pages/AI___LLM___Technique___Skill___Progressive Disclosure.md",
+        ".rulesync/skills/rulesync-create-skill/references/checklist.md",
+        ".rulesync/skills/rulesync-create-skill/references/layers.md",
+        ".rulesync/skills/rulesync-create-skill/SKILL.md",
+        ".rulesync/skills/rulesync/case-studies.md",
+        ".rulesync/skills/rulesync/cli-commands.md",
+        ".rulesync/skills/rulesync/configuration.md",
+        ".rulesync/skills/rulesync/declarative-sources.md",
+        ".rulesync/skills/rulesync/dry-run.md",
+        ".rulesync/skills/rulesync/faq.md",
+        ".rulesync/skills/rulesync/file-formats.md",
+        ".rulesync/skills/rulesync/global-mode.md",
+        ".rulesync/skills/rulesync/installation.md",
+        ".rulesync/skills/rulesync/mcp-server.md",
+        ".rulesync/skills/rulesync/official-skills.md",
+        ".rulesync/skills/rulesync/programmatic-api.md",
+        ".rulesync/skills/rulesync/quick-start.md",
+        ".rulesync/skills/rulesync/simulated-features.md",
+        ".rulesync/skills/rulesync/SKILL.md",
+        ".rulesync/skills/rulesync/supported-tools.md",
+        ".rulesync/skills/rulesync/why-rulesync.md",
+        "pages/rulesync___GitHub___Issue___25___09___Brainstorm needed - how to share some rules across repos, but not all i329.md",
+        "pages/rulesync___GitHub___Issue___25___10___Custom Claude Code Command Yaml Frontmatter i413.md",
+        "pages/rulesync___GitHub___Issue___25___10___Documentation clarification on globs i389.md",
+        "pages/rulesync___GitHub___Issue___25___10___Feature request rulesync githook.md",
+        "pages/rulesync___GitHub___Issue___25___10___README clarification on simulated subagents and commands i388.md",
+        "pages/rulesync___gitignore.md",
+        "pages/rulesync___How To___Write Skills With Progressive Disclosure.md",
+        "pages/rulesync___Ignore.md",
+        "pages/rulesync___log___25___09___29 Mon - First time with rulesync.md",
+        "pages/rulesync___log___25___10___04 Sat - Issues with gitignore.md",
+        "pages/rulesync___log___25___10___07 Tue - DRYing out AI Coding Configs.md",
+        "pages/rulesync___log___25___10___11 Sat - globs and simulated commands.md",
+        "pages/rulesync___log___25___11___10 Mon - on abstraction costs and plugin marketplaces.md",
+        "pages/rulesync___log.md",
+        "pages/rulesync___mise.md",
+        "pages/rulesync___Skill___Declarative Source.md",
+        "pages/rulesync.md"
+      ]
     }
   }
 }
