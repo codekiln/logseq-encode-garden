@@ -6,7 +6,7 @@ created-by:: [[Person/DHH]]
 		- [Shell Tools · The Omarchy Manual · DHH](https://learn.omacom.io/2/the-omarchy-manual/57/shell-tools)
 			- [[fzf]]
 			- [[Zoxide]]
-			- [[ripgrep]]
+			- [[rg]]
 			- [[fd]]
 		- [TUIs · The Omarchy Manual · DHH](https://learn.omacom.io/2/the-omarchy-manual/59/tuis)
 			- [[Lazygit]]
