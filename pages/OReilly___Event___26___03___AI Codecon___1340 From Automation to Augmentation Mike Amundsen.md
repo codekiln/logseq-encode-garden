@@ -1,0 +1,10 @@
+- # From Automation to Augmentation: Designing AI Coaches That Amplify Expertise
+	- ## Overview
+		- **Duration:** 10 minutes
+		- **Slot (EDT):** 13:40–13:50
+		- **Speaker:** [[Person/Mike Amundsen]]
+		- **Event:** [[OReilly/Event/26/03/AI Codecon]]
+	- ## Description
+		- Generative AI vs **durable capability**—Anthropic-leaning research on short-term lift vs long-term skill.
+		- **Engelbart** (augment intellect) and **Licklider** (human–computer partnership)—cognitive phases: expand possibilities, structure and interrogate, execute deliberately.
+		- **AI coaches** as a concrete pattern; live demo.

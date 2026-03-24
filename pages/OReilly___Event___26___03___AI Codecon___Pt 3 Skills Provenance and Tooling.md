@@ -1,0 +1,27 @@
+### Part 3: Skills, Provenance, and Tooling
+	- #### The Mythical Agent-Month
+		- **Session:** [[OReilly/Event/26/03/AI Codecon/1320 Mythical Agent-Month Wes McKinney]]
+		- **Speaker:** [[Person/Wes McKinney]]
+		- **Length:** 20 min
+		- **Description:** Parallel Claude sessions and speed vs compounding complexity—Brooks’ lessons when code is “free.”
+	- #### From Automation to Augmentation: Designing AI Coaches That Amplify Expertise
+		- **Session:** [[OReilly/Event/26/03/AI Codecon/1340 From Automation to Augmentation Mike Amundsen]]
+		- **Speaker:** [[Person/Mike Amundsen]]
+		- **Length:** 10 min
+		- **Description:** Skill formation vs one-off answers; Engelbart/Licklider; demo of an AI coach pattern.
+	- #### Agent-to-Agent Collaboration and Agent Provenance
+		- **Session:** [[OReilly/Event/26/03/AI Codecon/1350 Agent Provenance Tatiana Botskina]]
+		- **Speaker:** [[Person/Tatiana Botskina]]
+		- **Length:** 5 min
+		- **Description:** Agent registries, ownership, versioning, lineage, and trust for composable multi-agent systems.
+	- #### Automating MCP Server Testing: Engineering Reliability for Agentic Systems
+		- **Session:** [[OReilly/Event/26/03/AI Codecon/1355 Automating MCP Server Testing Neethu Elizabeth Simon]]
+		- **Speaker:** [[Person/Neethu Elizabeth Simon]]
+		- **Length:** 5 min
+		- **Description:** Arm’s MCP server tested with pytest, Testcontainers, and real servers in CI—not mocking LLM outputs.
+	- #### How Multi-Agent Systems Enable Personalized Messaging at Scale
+		- **Session:** [[OReilly/Event/26/03/AI Codecon/1400 Personalized Messaging LangGraph Arushee Garg]]
+		- **Speaker:** [[Person/Arushee Garg]]
+		- **Length:** 5 min
+		- **Description:** LinkedIn Premium’s supervisor-based LangGraph workflow for tailored jobseeker messages.
+	- #### Break — 5 min

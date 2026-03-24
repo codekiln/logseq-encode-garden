@@ -1,0 +1,6 @@
+- # Juliette van der Laarse
+	- **Role:** Engineering Manager (international financial services firm)
+	- **Bio:** Juliette van der Laarse presents the **AI Flower**, a public capability architecture for orienting engineers and teams from scattered AI experiments to integrated, accountable practice—using a “skill fossilization” lens as tools churn.
+	- **Related Events:**
+		- [[OReilly/Event/26/03/AI Codecon]]
+		- [[OReilly/Event/26/03/AI Codecon/1410 AI Flower Juliette van der Laarse]]

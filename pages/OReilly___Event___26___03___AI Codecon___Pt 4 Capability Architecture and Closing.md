@@ -1,0 +1,16 @@
+### Part 4: Capability Architecture and Closing
+	- #### The AI Flower: A Public Capability Architecture for AI-Native Engineering
+		- **Session:** [[OReilly/Event/26/03/AI Codecon/1410 AI Flower Juliette van der Laarse]]
+		- **Speaker:** [[Person/Juliette van der Laarse]]
+		- **Length:** 20 min
+		- **Description:** A capability model to navigate overload—skill fossilization lens, mapping practice and gaps without lowering quality bar.
+	- #### Fireside Chat
+		- **Session:** [[OReilly/Event/26/03/AI Codecon/1430 Fireside Chat Aaron Levie and Tim OReilly]]
+		- **Speakers:** [[Person/Aaron Levie]] and [[Person/Tim O'Reilly]]
+		- **Length:** 20 min
+		- **Description:** Box, intelligent content management, context for AI, file systems as core primitives, API-first software, agentic identities.
+	- #### Closing Remarks
+		- **Session:** [[OReilly/Event/26/03/AI Codecon/1450 Closing Remarks Tim OReilly and Addy Osmani]]
+		- **Speakers:** [[Person/Tim O'Reilly]] and [[Person/Addy Osmani]]
+		- **Length:** 5 min
+		- **Description:** Wrap-up for the day.

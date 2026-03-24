@@ -1,0 +1,22 @@
+### Part 1: Opening and Orchestration
+	- #### Introduction
+		- **Session:** [[OReilly/Event/26/03/AI Codecon/1100 Introduction Tim OReilly and Addy Osmani]]
+		- **Speakers:** [[Person/Tim O'Reilly]] and [[Person/Addy Osmani]]
+		- **Length:** 10 min
+		- **Description:** Welcome to Software Craftsmanship in the Age of AI.
+	- #### Fireside Chat
+		- **Session:** [[OReilly/Event/26/03/AI Codecon/1110 Fireside Chat Cat Wu and Addy Osmani]]
+		- **Speakers:** [[Person/Cat Wu]] and [[Person/Addy Osmani]]
+		- **Length:** 25 min
+		- **Description:** How the software engineer role is shifting in 2026; Claude Code and Anthropic’s integration of AI-assisted development (~90% of Anthropic’s code written by Claude).
+	- #### How to Create a Team of Agents in OpenClaw and Ship Code with One Command
+		- **Session:** [[OReilly/Event/26/03/AI Codecon/1135 Antfarm OpenClaw Team of Agents Ryan Carson]]
+		- **Speaker:** [[Person/Ryan Carson]]
+		- **Length:** 20 min
+		- **Description:** Antfarm on [[OpenClaw]]—multi-agent YAML workflows (Planner, Developer, Verifier, Tester), Ralph loop, verification gates, shipping with one command.
+	- #### Orchestrating Coding Agents
+		- **Session:** [[OReilly/Event/26/03/AI Codecon/1155 Orchestrating Coding Agents Addy Osmani]]
+		- **Speaker:** [[Person/Addy Osmani]]
+		- **Length:** 20 min
+		- **Description:** Patterns for parallel agents, isolated workspaces, decomposition, and orchestration as a first-class engineering skill.
+	- #### Break — 5 min

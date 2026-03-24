@@ -1,0 +1,22 @@
+### Part 2: Production Systems and Evaluation
+	- #### The Hidden Cost of Agentic Failure and the Next Phase of Agentic AI
+		- **Session:** [[OReilly/Event/26/03/AI Codecon/1220 Hidden Cost of Agentic Failure Nicole Koenigstein]]
+		- **Speaker:** [[Person/Nicole Koenigstein]]
+		- **Length:** 20 min
+		- **Description:** Why multi-agent systems fail at the pipeline level—error propagation, handoffs, cost, and system-level optimization vs better single agents.
+	- #### From Prompt to Multi-Agent System: The Evolution of Our AI Product
+		- **Session:** [[OReilly/Event/26/03/AI Codecon/1240 From Prompt to Multi-Agent System Hila Fox]]
+		- **Speaker:** [[Person/Hila Fox]]
+		- **Length:** 25 min
+		- **Description:** Qodo’s path from one agent to multi-agent code review with LangGraph and MCPs.
+	- #### When AI Agents Break Production and What We Did About It
+		- **Session:** [[OReilly/Event/26/03/AI Codecon/1305 When AI Agents Break Production Advait Patel]]
+		- **Speaker:** [[Person/Advait Patel]]
+		- **Length:** 5 min
+		- **Description:** Broadcom war story—an agent change that passed tests but degraded production hours later.
+	- #### Is Your Eval Lying to You? Catching Hidden Failures in Agent Evaluation
+		- **Session:** [[OReilly/Event/26/03/AI Codecon/1310 Is Your Eval Lying Abhimanyu Anand]]
+		- **Speaker:** [[Person/Abhimanyu Anand]]
+		- **Length:** 5 min
+		- **Description:** Hidden trade-offs, sycophantic judges, and significance testing—Elastic’s experiment design.
+	- #### Break — 5 min

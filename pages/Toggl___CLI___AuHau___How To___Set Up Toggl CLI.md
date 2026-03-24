@@ -87,7 +87,7 @@ tags:: [[Toggl]], [[CLI/Tool]], [[Diataxis/Tutorial]]
 		- How to verify your setup by checking current entries, starting entries, and listing projects
 		- You can now use `toggl` commands to manage your time tracking from the terminal
 	- ## Related
-		- [[Toggl/CLI/AuHau]]
+		- [[Toggl/CLI/Python/AuHau/toggl-cli]]
 		- [[Toggl/AI/Report/26/01/AI control of Toggl - Options Jan 2026]]
 		- [[Toggl/API]]
 		- [AuHau/toggl-cli GitHub Repository](https://github.com/AuHau/toggl-cli)

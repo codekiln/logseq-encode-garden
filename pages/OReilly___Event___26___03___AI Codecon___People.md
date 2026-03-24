@@ -1,0 +1,46 @@
+- # AI Codecon People [[2026-03-26 Thu]] · 11:00–15:00 EDT
+	- ## [[Person/Tim O'Reilly]]
+		- **Role:** Founder, CEO, and Chairman, O'Reilly Media
+		- **Bio:** Tim O'Reilly is the founder, CEO, and chairman of O'Reilly Media, which has been providing learning resources for the tech industry for over 40 years. He has shaped key conversations around open source software, Web 2.0, the Maker movement, government as a platform, and the "WTF economy." He is also a partner at O'Reilly AlphaTech Ventures (OATV) and serves on several boards, including Code for America and Civis Analytics. Tim authored many technical books, including *WTF? What's the Future and Why It's Up to Us* (2017), and is working on a book about antitrust in the internet era.
+	- ## [[Person/Addy Osmani]]
+		- **Role:** Engineering Leader, Google Chrome
+		- **Bio:** Addy Osmani leads Chrome's Developer Experience organization at Google, helping reduce friction for developers and improve user experiences. He is the author of several books, including *Leading Effective Engineering Teams: Lessons for Individual Contributors and Managers from 10 Years at Google*.
+	- ## [[Person/Cat Wu]]
+		- **Role:** Product Lead, [[Claude Code]], Anthropic
+		- **Bio:** Cat Wu leads product for Claude Code at Anthropic; her team integrates AI-assisted development into engineering workflows across the company.
+	- ## [[Person/Ryan Carson]]
+		- **Role:** Founder and CEO/CTO (stealth startup)
+		- **Bio:** Ryan Carson introduces Antfarm, an open source framework on the [[OpenClaw]] ecosystem for multi-agent, deterministic workflows (Planner, Developer, Verifier, Tester) with YAML and the Ralph loop pattern.
+	- ## [[Person/Nicole Koenigstein]]
+		- **Role:** AI Researcher
+		- **Bio:** Nicole Koenigstein researches multi-agent reliability, system-level optimization, validation boundaries, LLM-as-judge patterns, and reinforcement learning for agent collaboration.
+	- ## [[Person/Hila Fox]]
+		- **Role:** Principal Engineer, Qodo
+		- **Bio:** Hila Fox leads engineering on Qodo’s evolution from a single agent through agentic agents to multi-agent systems, including LangGraph and MCP-based code review.
+	- ## [[Person/Advait Patel]]
+		- **Role:** Senior Site Reliability Engineer, Broadcom
+		- **Bio:** Advait Patel works on production cloud operations where background AI agents analyze logs, propose fixes, and refactor asynchronously.
+	- ## [[Person/Abhimanyu Anand]]
+		- **Role:** Senior Data Scientist, Elastic
+		- **Bio:** Abhimanyu Anand focuses on rigorous agent evaluation: hidden metric trade-offs, nondeterministic LLM judges, and significance testing for shipping decisions.
+	- ## [[Person/Wes McKinney]]
+		- **Role:** Open Source Developer; creator of pandas
+		- **Bio:** Wes McKinney is known for pandas and the Python data stack; he speaks on parallel agent sessions, accidental vs essential complexity, and lessons from Fred Brooks in the agentic era.
+	- ## [[Person/Mike Amundsen]]
+		- **Role:** Author and API architect
+		- **Bio:** Mike Amundsen explores AI coaches and augmentation over raw generation, drawing on Engelbart and Licklider and patterns that strengthen human reasoning.
+	- ## [[Person/Tatiana Botskina]]
+		- **Role:** AI Researcher
+		- **Bio:** Tatiana Botskina works on agent-to-agent collaboration, provenance, registries, and governance for production multi-agent systems.
+	- ## [[Person/Neethu Elizabeth Simon]]
+		- **Role:** Staff Solution Architect, Arm
+		- **Bio:** Neethu Elizabeth Simon helped build CI-enforced integration testing for Arm’s custom MCP server using pytest and Testcontainers.
+	- ## [[Person/Arushee Garg]]
+		- **Role:** Senior Software Engineer, LinkedIn (Premium team)
+		- **Bio:** Arushee Garg works on supervisor-based multi-agent workflows with LangGraph for personalized jobseeker messaging at scale.
+	- ## [[Person/Juliette van der Laarse]]
+		- **Role:** Engineering Manager (international financial services)
+		- **Bio:** Juliette van der Laarse presents the AI Flower, a public capability architecture for orienting teams amid shifting AI tools and practice.
+	- ## [[Person/Aaron Levie]]
+		- **Role:** Cofounder and CEO, Box
+		- **Bio:** Aaron Levie leads Box’s Intelligent Content Management direction for the agentic era, emphasizing context management, file systems as primitives, and API-first software.

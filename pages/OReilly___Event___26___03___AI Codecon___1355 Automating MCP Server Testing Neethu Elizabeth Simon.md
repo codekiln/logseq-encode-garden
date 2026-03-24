@@ -1,0 +1,9 @@
+- # Automating MCP Server Testing: Engineering Reliability for Agentic Systems
+	- ## Overview
+		- **Duration:** 5 minutes
+		- **Slot (EDT):** 13:55–14:00
+		- **Speaker:** [[Person/Neethu Elizabeth Simon]]
+		- **Event:** [[OReilly/Event/26/03/AI Codecon]]
+	- ## Description
+		- Arm’s custom **MCP server** for architecture/migration/optimization assistants—testing **nondeterministic** tool-using systems.
+		- **pytest** + **Testcontainers**: real MCP servers in Docker on every PR; contract between agents and tools; MCP as production infrastructure not glue code.

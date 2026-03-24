@@ -1,0 +1,10 @@
+- # Is Your Eval Lying to You? Catching Hidden Failures in Agent Evaluation
+	- ## Overview
+		- **Duration:** 5 minutes
+		- **Slot (EDT):** 13:10–13:15
+		- **Speaker:** [[Person/Abhimanyu Anand]]
+		- **Event:** [[OReilly/Event/26/03/AI Codecon]]
+	- ## Description
+		- **Hidden trade-off:** better accuracy with more tool calls, latency, masked degradation.
+		- **Sycophantic judge:** LLM evaluators nondeterministic—score jumps may be prompt sensitivity, not UX.
+		- **Noise floor:** without significance testing, coin-flip “gains.” Elastic example—eval setup, significance tests, evaluator prompt structure, audit design for your agents.

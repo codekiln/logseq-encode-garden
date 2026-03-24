@@ -1,0 +1,9 @@
+- # From Prompt to Multi-Agent System: The Evolution of Our AI Product
+	- ## Overview
+		- **Duration:** 25 minutes
+		- **Slot (EDT):** 12:40–13:05
+		- **Speaker:** [[Person/Hila Fox]]
+		- **Event:** [[OReilly/Event/26/03/AI Codecon]]
+	- ## Description
+		- Qodo’s journey from single agent → agentic agent → **multi-agent system** in about a year.
+		- Agentifying code generation, multi-agent **code review** with LangGraph and MCPs, and preparing for the next shift in a fast-moving field.

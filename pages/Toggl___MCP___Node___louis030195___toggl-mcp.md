@@ -1,0 +1,32 @@
+logseq-entity:: [[Logseq/Entity/software-project]]
+tags:: [[JavaScript]], [[MCP/Server]]
+- # Toggl MCP Server (Node) — @louis030195/toggl-mcp
+	- ## Notes
+		- GitHub louis030195/toggl-mcp: ~2 stars; last push 2025-10-16 (at check). Thin MCP wrapper; good match for agent weekly/today summaries.
+		- *Subjective:* Practical bridge for Claude/Cursor-style MCP clients needing start/stop/list/delete + light reporting.
+	- ## Summary
+		- [louis030195/toggl-mcp on GitHub](https://github.com/louis030195/toggl-mcp)
+		- npm: [@louis030195/toggl-mcp](https://www.npmjs.com/package/@louis030195/toggl-mcp) [^9]
+	- ## Provider
+		- Third-party
+	- ## Open source
+		- Yes (MIT)
+	- ## Time entry CRUD
+		- Yes — start/stop timers, current entry, list today, delete by ID[^9]
+	- ## Projects CRUD
+		- Partial — list projects (`toggl_projects`); no create/update via MCP[^9]
+	- ## Clients CRUD
+		- No — can pass client context when starting timers but no client CRUD via MCP[^9]
+	- ## Reports
+		- Yes — weekly summary (hours, per day/project); `toggl_today`, `toggl_last_week` helpers[^9]
+	- ## Language / environment
+		- Node.js (npm package)
+	- ## [[AI/Response]] from [[Toggl/AI/Report/26/01/AI control of Toggl - Options Jan 2026]]
+		- **Description:** This is an unofficial MCP server for Toggl Track written in Node.js (available as an npm package `@louis030195/toggl-mcp`). It exposes a set of tools (commands) that an AI or any MCP client can call to perform time tracking operations[^9]. The features supported include: starting and stopping time entries (timers), retrieving the current running entry, listing all time entries for today, listing all projects, deleting a time entry by ID, and even generating a weekly summary report (total hours tracked with breakdown by day and by project)[^9]. Essentially, it covers time entry CRUD (create via start, read via queries, update via stop, delete by ID) and basic project listing[^9]. It does not create new projects or clients (it can list projects so that you can reference them when starting timers).
+		- **Usage:** Once the MCP server is running, you (or an AI agent) can issue natural language commands or JSON-formatted MCP requests such as: "Start tracking Project X – Design task for client Acme Corp" or "Stop the current timer", etc. The MCP server translates these into Toggl API actions. For example, the server defines tools like `toggl_start` (to start a new entry with a given description and project) and `toggl_stop` (to stop the running entry)[^9]. The weekly summary tool (`toggl_weekly`) can be invoked to get a report of hours tracked this week or a past week[^9].
+		- **Projects/Clients:** This MCP interface allows listing projects (`toggl_projects`)[^9] so that an AI can query available project names/IDs. It does not support creating or editing projects/clients – those would still be done via Toggl's API or interface outside MCP. In usage, you might start an entry with a project name, and the MCP server will look up the project ID via the Toggl API. "Managing projects" in this context means you can fetch and choose existing projects, not create new ones[^9]. Client names may be passed when starting entries but there is no client CRUD[^9].
+		- **Reports:** The inclusion of the weekly summary command is a nice addition – it provides a high-level report of total hours and breakdowns by day and project for the week[^9]. There's also a convenience tool `toggl_today` for listing today's entries and a `toggl_last_week` alias for last week's summary[^9]. For more complex reporting (arbitrary date ranges, filtering), you would still use Toggl's Reports API directly. But for conversational interfaces, these built-in summaries cover common needs (e.g., "How many hours did I work this week on Project X?").
+		- **Usability & Notes:** This Node-based MCP server is open source (MIT)[^9]. It can be installed via npm and configured with your Toggl API token and workspace ID[^9]. One caveat is that MCP servers in general are meant to be run as background services or integrated in AI platforms – you wouldn't use this as a typical user-facing app by itself. It's most useful if you plan to control Toggl through natural language (for example, using an AI assistant that supports MCP). The developer provides instructions for integrating with Claude AI and others[^9]. In summary, the Toggl MCP (Node) is a handy bridge to make Toggl Track "AI-accessible," supporting all crucial time entry operations and simple reports[^9].
+	- ## Provenance
+		- [[Toggl/AI/Report/26/01/AI control of Toggl - Options Jan 2026]]
+		- [^9]: https://www.npmjs.com/package/@louis030195/toggl-mcp

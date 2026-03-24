@@ -1,0 +1,38 @@
+# AI Codecon: Software Craftsmanship in the Age of AI
+	- ## [[OReilly/Event/26/03/AI Codecon/People]]
+	- ## When
+		- [[2026-03-26 Thu]]
+		- **Start:** 11:00 **EDT** (11am Eastern)
+		- **End:** 15:00 **EDT** (3pm Eastern)
+		- **Window:** **11:00–15:00 EDT** (four hours)
+	- ## Agenda source
+		- O’Reilly’s public schedule markup lists **segment order** and **length** (`10 min`, `25 min`, …) for each `<li>`—that **is** the official minute-by-minute agenda; it does **not** include separate clock start/end fields.
+		- **Timeline** below assigns **wall-clock slots in EDT** by cumulating those lengths from the **11:00 EDT** start; the listed segments total **3h 55m**, so the programme ends **14:55 EDT** with **5 minutes** before the **15:00 EDT** end time.
+	- ## Timeline (11:00–15:00 EDT)
+		- **11:00–11:10** — Introduction — [[OReilly/Event/26/03/AI Codecon/1100 Introduction Tim OReilly and Addy Osmani]]
+		- **11:10–11:35** — Fireside — [[OReilly/Event/26/03/AI Codecon/1110 Fireside Chat Cat Wu and Addy Osmani]]
+		- **11:35–11:55** — Antfarm / OpenClaw — [[OReilly/Event/26/03/AI Codecon/1135 Antfarm OpenClaw Team of Agents Ryan Carson]]
+		- **11:55–12:15** — Orchestrating coding agents — [[OReilly/Event/26/03/AI Codecon/1155 Orchestrating Coding Agents Addy Osmani]]
+		- **12:15–12:20** — Break (5 min)
+		- **12:20–12:40** — Hidden cost of agentic failure — [[OReilly/Event/26/03/AI Codecon/1220 Hidden Cost of Agentic Failure Nicole Koenigstein]]
+		- **12:40–13:05** — Prompt → multi-agent system — [[OReilly/Event/26/03/AI Codecon/1240 From Prompt to Multi-Agent System Hila Fox]]
+		- **13:05–13:10** — When agents break production — [[OReilly/Event/26/03/AI Codecon/1305 When AI Agents Break Production Advait Patel]]
+		- **13:10–13:15** — Is your eval lying — [[OReilly/Event/26/03/AI Codecon/1310 Is Your Eval Lying Abhimanyu Anand]]
+		- **13:15–13:20** — Break (5 min)
+		- **13:20–13:40** — Mythical Agent-Month — [[OReilly/Event/26/03/AI Codecon/1320 Mythical Agent-Month Wes McKinney]]
+		- **13:40–13:50** — Automation → augmentation / AI coaches — [[OReilly/Event/26/03/AI Codecon/1340 From Automation to Augmentation Mike Amundsen]]
+		- **13:50–13:55** — Agent provenance — [[OReilly/Event/26/03/AI Codecon/1350 Agent Provenance Tatiana Botskina]]
+		- **13:55–14:00** — MCP server testing — [[OReilly/Event/26/03/AI Codecon/1355 Automating MCP Server Testing Neethu Elizabeth Simon]]
+		- **14:00–14:05** — Personalized messaging at scale — [[OReilly/Event/26/03/AI Codecon/1400 Personalized Messaging LangGraph Arushee Garg]]
+		- **14:05–14:10** — Break (5 min)
+		- **14:10–14:30** — AI Flower — [[OReilly/Event/26/03/AI Codecon/1410 AI Flower Juliette van der Laarse]]
+		- **14:30–14:50** — Fireside — [[OReilly/Event/26/03/AI Codecon/1430 Fireside Chat Aaron Levie and Tim OReilly]]
+		- **14:50–14:55** — Closing — [[OReilly/Event/26/03/AI Codecon/1450 Closing Remarks Tim OReilly and Addy Osmani]]
+	- ## Resources
+		- Event page: [O'Reilly AI Codecon](https://www.oreilly.com/AI-Codecon/)
+		- Code of Conduct: [Link](https://www.oreilly.com/online-learning/events-code-of-conduct.html)
+	- ## Schedule — Links
+		- {{embed [[OReilly/Event/26/03/AI Codecon/Pt 1 Opening and Orchestration]]}}
+		- {{embed [[OReilly/Event/26/03/AI Codecon/Pt 2 Production Systems and Evaluation]]}}
+		- {{embed [[OReilly/Event/26/03/AI Codecon/Pt 3 Skills Provenance and Tooling]]}}
+		- {{embed [[OReilly/Event/26/03/AI Codecon/Pt 4 Capability Architecture and Closing]]}}

@@ -1,0 +1,6 @@
+- # Tatiana Botskina
+	- **Role:** AI Researcher
+	- **Bio:** Tatiana Botskina works on agent-to-agent collaboration, **agent provenance** (ownership, versioning, lineage, trust), and **agent registries** as infrastructure for governed, auditable multi-agent systems.
+	- **Related Events:**
+		- [[OReilly/Event/26/03/AI Codecon]]
+		- [[OReilly/Event/26/03/AI Codecon/1350 Agent Provenance Tatiana Botskina]]

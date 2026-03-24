@@ -1,0 +1,9 @@
+- # The Hidden Cost of Agentic Failure and the Next Phase of Agentic AI
+	- ## Overview
+		- **Duration:** 20 minutes
+		- **Slot (EDT):** 12:20–12:40
+		- **Speaker:** [[Person/Nicole Koenigstein]]
+		- **Event:** [[OReilly/Event/26/03/AI Codecon]]
+	- ## Description
+		- Failures are often **error propagation** in probabilistic pipelines, not weak models—looping supervisors, runaway tokens, brittle workflows, API cost spikes, hard-to-reproduce incidents.
+		- Next phase: **system-level optimization**—validation boundaries, LLMs as judges, structured collaboration, RL for better collaboration and tool use; design, observe, and continuously optimize so systems improve instead of drift.

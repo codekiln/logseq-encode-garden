@@ -1,0 +1,9 @@
+- # Orchestrating Coding Agents: Patterns for Coordinating Agents in Real-World Software Workflows
+	- ## Overview
+		- **Duration:** 20 minutes
+		- **Slot (EDT):** 11:55–12:15
+		- **Speaker:** [[Person/Addy Osmani]]
+		- **Event:** [[OReilly/Event/26/03/AI Codecon]]
+	- ## Description
+		- From solo assistant to **multi-agent parallel execution**—developers as conductors.
+		- Concurrent agents with scoped roles and isolated workspaces; structured communication without blowing context windows; decomposing work, managing agent interaction, orchestration patterns that scale with codebase complexity.

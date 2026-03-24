@@ -1,0 +1,9 @@
+- # How to Create a Team of Agents in OpenClaw and Ship Code with One Command
+	- ## Overview
+		- **Duration:** 20 minutes
+		- **Slot (EDT):** 11:35–11:55
+		- **Speaker:** [[Person/Ryan Carson]]
+		- **Event:** [[OReilly/Event/26/03/AI Codecon]]
+	- ## Description
+		- **Antfarm**—open source on the [[OpenClaw]] ecosystem—turns unpredictable LLMs into specialized agent teams (Planner, Developer, Verifier, Tester) via YAML and the **Ralph loop** pattern.
+		- Self-correcting pipelines with verification in fresh, isolated contexts; shipping production-ready code with one command; zero-infra complex workflows, verification gates, repeatable playbooks vs prompt drift.

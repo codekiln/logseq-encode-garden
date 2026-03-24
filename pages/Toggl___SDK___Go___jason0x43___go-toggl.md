@@ -1,0 +1,27 @@
+logseq-entity:: [[Logseq/Entity/software-project]]
+tags:: [[Go]], [[SDK]]
+- # Go client for Toggl Track — jason0x43/go-toggl
+	- ## Notes
+		- GitHub jason0x43/go-toggl: ~17 stars; last push 2024-05-28 (at check). Full Track entity CRUD for time entries, projects, clients; no Reports API.
+		- *Subjective:* Best library fit when agents must create/update projects and clients in Go without raw REST.
+	- ## Summary
+		- [jason0x43/go-toggl on GitHub](https://github.com/jason0x43/go-toggl) [^16]
+	- ## Provider
+		- Third-party
+	- ## Open source
+		- Yes (MIT)
+	- ## Time entry CRUD
+		- Yes — `CreateTimeEntry`, `UpdateTimeEntry`, `DeleteTimeEntry`, etc.[^16]
+	- ## Projects CRUD
+		- Yes — project create/update/delete supported[^16]
+	- ## Clients CRUD
+		- Yes — client create/update/delete supported[^16]
+	- ## Reports
+		- No — Reports API not implemented[^16]
+	- ## Language / environment
+		- Go module / library
+	- ## [[AI/Response]] from [[Toggl/AI/Report/26/01/AI control of Toggl - Options Jan 2026]]
+		- **Go (report excerpt):** The Toggl-Go Client — this page — is an open-source Go library (MIT) that provides full CRUD for time entries, projects, and clients[^16]. It includes methods like `CreateTimeEntry`, `UpdateTimeEntry`, `DeleteTimeEntry`[^16], and similar for projects and clients[^16]. The Reports API is not implemented in this library. It's a solid choice if you're building Go-based tools or services that need to integrate with Toggl Track.
+	- ## Provenance
+		- [[Toggl/AI/Report/26/01/AI control of Toggl - Options Jan 2026]]
+		- [^16]: https://github.com/jason0x43/go-toggl

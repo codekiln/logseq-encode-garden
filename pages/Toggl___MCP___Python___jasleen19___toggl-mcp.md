@@ -1,0 +1,33 @@
+logseq-entity:: [[Logseq/Entity/software-project]]
+tags:: [[Py]], [[MCP/Server]]
+- # Toggl MCP Server (Python) — toggl-mcp (PyPI)
+	- ## Notes
+		- GitHub jasleen19/toggl-mcp: ~2 stars; last push 2025-09-10 (at check). PyPI package `toggl-mcp`; often run via `uvx toggl-mcp`.
+		- *Subjective:* Lighter docs than Node variant; fine for “AI drives time entries” without rich reporting.
+	- ## Summary
+		- [jasleen19/toggl-mcp on GitHub](https://github.com/jasleen19/toggl-mcp)
+		- [toggl-mcp on PyPI](https://pypi.org/project/toggl-mcp/) [^13]
+	- ## Provider
+		- Third-party
+	- ## Open source
+		- Yes (MIT)
+	- ## Time entry CRUD
+		- Yes — full time entry control via API v9 over MCP tools (start/stop, query running/recent, delete)[^13]
+	- ## Projects CRUD
+		- No — time-entry focus; project/client management not documented[^13]
+	- ## Clients CRUD
+		- No
+	- ## Reports
+		- No — no built-in report tools in current version[^13]
+	- ## Language / environment
+		- Python (e.g. Uvicorn/ASGI or `uvx` per PyPI README); requires Python ≥3.11
+	- ## [[AI/Response]] from [[Toggl/AI/Report/26/01/AI control of Toggl - Options Jan 2026]]
+		- **Description:** Another unofficial MCP server for Toggl Track, this one implemented in Python. It's available via PyPI (`toggl-mcp`) and was released in late 2025[^13]. Like the Node version, it leverages Toggl Track's API v9 to perform actions, exposing them as MCP tools. While detailed documentation is lighter than the Node version, the core functionality is similar: it allows an MCP client to start and stop time entries, query current or recent entries, etc., using structured prompts or natural language. Essentially, it wraps the Toggl API endpoints (start time entry, stop entry, get running entry) in an MCP-compatible interface[^13].
+		- **Capabilities:** This Python MCP server ensures full CRUD for time entries – you can create (start) entries, read data (e.g., list entries or get current entry), update (stop or edit running entry), and delete entries – through the MCP commands. It likely has equivalents to the Node version's tools, though named slightly differently. (For example, a command to start an entry, one to stop, one to fetch today's entries, etc.) Being maintained by "Toggl MCP Contributors," it seems to be a community effort to provide a Toggl integration in Python for the MCP ecosystem.
+		- **Projects/Clients:** Based on what's known, this interface focuses on time entries primarily. There is no indication of project or client management features in the current version. It may allow specifying a project when starting an entry (so that the entry is associated with a project), but you would need to know the project name/ID up front. There isn't evidence of a "list projects" command in the Python MCP like the Node version has, so it might be limited in that regard (or the documentation is just sparse). For now, assume project and client CRUD are not directly exposed via this MCP server.
+		- **Reports:** There's no mention of built-in reporting in the Python MCP server. It likely sticks to operational commands (tracking and retrieving entries). Any reporting (like totals) would have to be done by querying entries (e.g., "list my entries for today") and then summarizing on the client side. This is in contrast to the Node MCP which explicitly provided a weekly summary tool. The Python MCP server's goal appears to be enabling voice/AI control for basic Toggl operations rather than analytics.
+		- **Usability & Notes:** The Python Toggl MCP server is open source (MIT license)[^13]. It can be run with a tool like Uvicorn (an ASGI server) or integrated into an MCP Gateway. The README on PyPI provides sample configuration for Cursor (another MCP client) and Claude AI[^13]. Essentially, you configure it with your `TOGGL_API_TOKEN` (and workspace) and then your AI assistant can invoke Toggl actions. If you are comfortable in Python and want to extend or tweak the MCP server, this is a good option. It's worth noting that MCP is a new and evolving protocol (born in late 2024[^20]), so these Toggl MCP projects are on the cutting edge – great for AI integration, but they do assume you have a use case involving conversational or autonomous AI agents. For standard automation needs, a direct CLI or SDK might be simpler.
+	- ## Provenance
+		- [[Toggl/AI/Report/26/01/AI control of Toggl - Options Jan 2026]]
+		- [^13]: https://pypi.org/project/toggl-mcp/
+		- [^20]: https://modelcontextprotocol.io/

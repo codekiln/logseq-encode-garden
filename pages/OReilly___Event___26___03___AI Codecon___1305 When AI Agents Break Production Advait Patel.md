@@ -1,0 +1,9 @@
+- # When AI Agents Break Production and What We Did About It
+	- ## Overview
+		- **Duration:** 5 minutes
+		- **Slot (EDT):** 13:05–13:10
+		- **Speaker:** [[Person/Advait Patel]]
+		- **Event:** [[OReilly/Event/26/03/AI Codecon]]
+	- ## Description
+		- Broadcom **background agents** in production cloud—logs, proposed fixes, async refactors.
+		- True story: a change looked correct, passed tests, merged cleanly, then caused **subtle production degradation** hours later—lessons for craftsmanship when systems reason and act on their own.

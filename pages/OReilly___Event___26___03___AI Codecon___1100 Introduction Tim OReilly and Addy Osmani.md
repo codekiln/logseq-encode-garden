@@ -1,0 +1,8 @@
+- # Introduction — Tim O’Reilly and Addy Osmani
+	- ## Overview
+		- **Duration:** 10 minutes
+		- **Slot (EDT):** 11:00–11:10
+		- **Speakers:** [[Person/Tim O'Reilly]] and [[Person/Addy Osmani]]
+		- **Event:** [[OReilly/Event/26/03/AI Codecon]]
+	- ## Description
+		- Tim and Addy welcome attendees to **Software Craftsmanship in the Age of AI**.

@@ -1,0 +1,10 @@
+- # Fireside Chat — Aaron Levie and Tim O’Reilly
+	- ## Overview
+		- **Duration:** 20 minutes
+		- **Slot (EDT):** 14:30–14:50
+		- **Speakers:** [[Person/Aaron Levie]] and [[Person/Tim O'Reilly]]
+		- **Event:** [[OReilly/Event/26/03/AI Codecon]]
+	- ## Description
+		- **Aaron Levie** (CEO, Box): Intelligent Content Management for the agentic era; **“era of context for AI”**—enterprise success = context management and workflows that let agents work.
+		- **File systems** as core primitives for agents—manipulation of data and durable context.
+		- Building software in the agentic era; context; **API-first** software; new agentic identities.

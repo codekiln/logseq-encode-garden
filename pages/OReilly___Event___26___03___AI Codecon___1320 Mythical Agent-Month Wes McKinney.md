@@ -1,0 +1,10 @@
+- # The Mythical Agent-Month
+	- ## Overview
+		- **Duration:** 20 minutes
+		- **Slot (EDT):** 13:20–13:40
+		- **Speaker:** [[Person/Wes McKinney]]
+		- **Event:** [[OReilly/Event/26/03/AI Codecon]]
+	- ## Description
+		- Parallel Claude Code sessions, new languages, faster shipping—vs agents **chasing tails** in bloated codebases they helped create.
+		- **Fred Brooks** revisited: adding people (or agents) to late work; agents remove accidental complexity but can’t distinguish accidental from **essential**, generating complexity at machine speed.
+		- When code is cheap, **knowing what to build—and not to build** remains the decisive skill.

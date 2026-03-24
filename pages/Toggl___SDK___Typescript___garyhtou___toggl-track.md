@@ -1,0 +1,28 @@
+logseq-entity:: [[Logseq/Entity/software-project]]
+tags:: [[Typescript]], [[SDK]]
+- # Toggl Track TypeScript client — garyhtou/toggl-track
+	- ## Notes
+		- GitHub garyhtou/toggl-track: ~28 stars; last push 2024-05-08 (at check). API v9-focused; quieter maintenance pulse vs active CLIs.
+		- *Subjective:* Strong typed surface for Track API including projects; no Reports API in-library.
+	- ## Summary
+		- [garyhtou/toggl-track on GitHub](https://github.com/garyhtou/toggl-track) [^14]
+		- npm package name: `toggl-track`
+	- ## Provider
+		- Third-party
+	- ## Open source
+		- Yes (MIT)
+	- ## Time entry CRUD
+		- Yes — core time entry endpoints for API v9[^14]
+	- ## Projects CRUD
+		- Yes — Projects API supported (“Projects… More to come!” in upstream README at time of report)[^14]
+	- ## Clients CRUD
+		- No — Track API coverage; Reports API not included; client surface not in supported list per report[^14]
+	- ## Reports
+		- No — Reports API not in library[^14]
+	- ## Language / environment
+		- Node.js / TypeScript (npm library)
+	- ## [[AI/Response]] from [[Toggl/AI/Report/26/01/AI control of Toggl - Options Jan 2026]]
+		- **Node.js / TypeScript (report excerpt):** There are a couple of options. The newest is Toggl Track TypeScript Client (often just called `toggl-track` on npm) by Gary Tou — this page — which specifically targets the API v9[^14]. This library is open source (MIT) and provides classes/methods to interact with Toggl. It currently supports time entries and projects (and tags) among others[^14]. For instance, you can create a time entry or fetch all time entries through a simple function call, rather than manually crafting HTTP requests. Project CRUD is supported (the author lists "Projects" as implemented, and possibly tags), but clients are not yet in his supported list. The library covers the Track API; the Reports API is not included. Another option is older community libraries, but many target API v8 which is deprecated.
+	- ## Provenance
+		- [[Toggl/AI/Report/26/01/AI control of Toggl - Options Jan 2026]]
+		- [^14]: https://github.com/garyhtou/toggl-track

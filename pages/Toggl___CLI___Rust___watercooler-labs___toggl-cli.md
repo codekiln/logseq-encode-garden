@@ -1,0 +1,33 @@
+logseq-entity:: [[Logseq/Entity/software-project]]
+tags:: [[Rust]], [[CLI/Tool]]
+- # Toggl CLI (Rust) — watercooler-labs/toggl-cli
+	- ## Notes
+		- GitHub watercooler-labs/toggl-cli: ~57 stars; last push 2025-11-27 (at check); crate `toggl` latest 0.4.11. Binary `toggl`; keychain token storage.
+		- *Subjective:* Fast single-binary workflow; gaps (e.g. delete-by-ID in CLI) may matter for full agent CRUD.
+	- ## Summary
+		- [watercooler-labs/toggl-cli on GitHub](https://github.com/watercooler-labs/toggl-cli)
+		- [Crate toggl on lib.rs](https://lib.rs/crates/toggl)
+		- [docs.rs/toggl](https://docs.rs/toggl/) [^7] [^8]
+	- ## Provider
+		- Third-party
+	- ## Open source
+		- Yes (MIT)
+	- ## Time entry CRUD
+		- Mostly — start/stop, list current/recent entries; delete not yet exposed as a CLI command (as of report / 0.4.x narrative)[^7] [^8]
+	- ## Projects CRUD
+		- No — time-entry focused; reference project by name when starting only[^7] [^8]
+	- ## Clients CRUD
+		- No
+	- ## Reports
+		- No — listing only; use official reports/API or other tools[^7] [^8]
+	- ## Language / environment
+		- Rust — `cargo install toggl`; also Homebrew / AUR as `toggl-cli`[^7]
+	- ## [[AI/Response]] from [[Toggl/AI/Report/26/01/AI control of Toggl - Options Jan 2026]]
+		- **Description:** A command-line tool written in Rust (by Watercooler Labs) for Toggl Track[^7]. It uses the official API v9 under the hood and compiles to a single binary for speed and easy installation. It supports the fundamental time entry actions: starting a new entry, stopping the running entry, showing the current entry, listing recent entries, etc. For example, you can run `toggl start "Task description" -p ProjectName` to start a timer, `toggl stop` to stop it, and `toggl list -n 5` to list your last 5 entries[^8]. The CLI is designed for efficiency, including features like an interactive project picker (with `--fzf` flag for fuzzy finding projects).
+		- **Projects/Clients:** Currently, this Rust CLI is focused on time entries and does not have commands to create or manage projects or clients. You can reference projects by name when starting an entry (as noted above), and it will map that to a project ID, but you can't create new projects or list projects via this CLI yet. Project and client management would still be done via Toggl's web or another tool.
+		- **Reports:** There are no built-in reporting commands in the Rust CLI. Its scope is limited to tracking and querying time entries (active or recent). For reports, you would use Toggl's official reporting tools or APIs.
+		- **Usability & Notes:** Being written in Rust, the CLI is very fast and can be installed via Cargo (`cargo install toggl`) or via pre-built binaries (it's available in Homebrew and Arch Linux's AUR as `toggl-cli` as well)[^7]. It stores the API token securely using your OS keychain by default[^7]. As of version 0.4.x, one limitation is the lack of a direct delete command for entries – if you need to delete an entry, you'd currently have to use another method (though you could stop an entry and edit it). This project is active, so features like deletion might be added in the future. Overall, it's a convenient open-source option if you prefer a compiled tool and command-line speed.
+	- ## Provenance
+		- [[Toggl/AI/Report/26/01/AI control of Toggl - Options Jan 2026]]
+		- [^7]: https://lib.rs/crates/toggl
+		- [^8]: https://docs.rs/toggl/

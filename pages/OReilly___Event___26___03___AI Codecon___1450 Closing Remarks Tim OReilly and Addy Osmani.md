@@ -1,0 +1,8 @@
+- # Closing Remarks — Tim O’Reilly and Addy Osmani
+	- ## Overview
+		- **Duration:** 5 minutes
+		- **Slot (EDT):** 14:50–14:55
+		- **Speakers:** [[Person/Tim O'Reilly]] and [[Person/Addy Osmani]]
+		- **Event:** [[OReilly/Event/26/03/AI Codecon]]
+	- ## Description
+		- Tim and Addy close the event.

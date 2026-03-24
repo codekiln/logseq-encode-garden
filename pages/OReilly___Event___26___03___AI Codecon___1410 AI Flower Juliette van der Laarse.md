@@ -1,0 +1,9 @@
+- # The AI Flower: A Public Capability Architecture for AI-Native Engineering
+	- ## Overview
+		- **Duration:** 20 minutes
+		- **Slot (EDT):** 14:10–14:30
+		- **Speaker:** [[Person/Juliette van der Laarse]]
+		- **Event:** [[OReilly/Event/26/03/AI Codecon]]
+	- ## Description
+		- Bottleneck: **orientation and integration**—what matters, where to start, durable embedding of AI in engineering beyond hype.
+		- **AI Flower** capability architecture; **skill fossilization** lens for stability as tools change; map practice, find gaps, choose next steps without lowering quality and accountability.

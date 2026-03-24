@@ -1,0 +1,10 @@
+- # Agent-to-Agent Collaboration and Agent Provenance
+	- ## Overview
+		- **Duration:** 5 minutes
+		- **Slot (EDT):** 13:50–13:55
+		- **Speaker:** [[Person/Tatiana Botskina]]
+		- **Event:** [[OReilly/Event/26/03/AI Codecon]]
+	- ## Description
+		- Production shift from model quality to **coordination, trust, traceability**.
+		- **Agent provenance**—ownership, versioning, lineage, trust signals; without them, multi-agent systems go opaque and fragile.
+		- **Agent registries** as infrastructure: discoverable, composable, auditable agents and governance patterns.

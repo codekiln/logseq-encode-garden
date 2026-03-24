@@ -1,2 +1,32 @@
-- [Overview | Toggl Engineering](https://engineering.toggl.com/docs/)
-	- Free plan API limits are 30 requests per hour
+logseq-entity:: [[Logseq/Entity/software-project]]
+tags:: [[API/REST]]
+- # Toggl Track API v9 (REST)
+	- ## Notes
+		- Official surface: most complete option (time entries, projects, clients, read-only reports). You own HTTP auth, pagination, and error handling.
+		- Free plan: commonly cited limit of 30 requests per hour (confirm against current Toggl pricing/docs).
+	- ## Summary
+		- [Overview | Toggl Engineering](https://engineering.toggl.com/docs/)
+		- [Tracking API](https://engineering.toggl.com/docs/tracking/) [^23]
+		- [API me / workspace docs](https://engineering.toggl.com/docs/api/me/) [^24]
+		- [Reports / summary docs](https://engineering.toggl.com/docs/summary/) [^26]
+	- ## Provider
+		- Official Toggl Track
+	- ## Open source
+		- No (hosted product + documented REST API; not an open-source repo)
+	- ## Time entry CRUD
+		- Yes — e.g. `POST /time_entries`, `PUT/PATCH /time_entries/{id}`, `DELETE /time_entries/{id}` [^23]
+	- ## Projects CRUD
+		- Yes — project create, update, archive/delete per API v9[^24]
+	- ## Clients CRUD
+		- Yes — client create, update, delete per API v9[^24]
+	- ## Reports
+		- Yes — read-only Reports API v3 for summary and detailed data[^26]
+	- ## Language / environment
+		- Any HTTP-capable runtime (language-agnostic REST)
+	- ## [[AI/Response]] from [[Toggl/AI/Report/26/01/AI control of Toggl - Options Jan 2026]]
+		- **Official Toggl API v9 (REST) (report excerpt):** The official Toggl Track API is a RESTful HTTP API (no official GraphQL API). It provides endpoints to create, update, and delete time entries[^23] (e.g. `POST /time_entries`, `PUT/PATCH /time_entries/{id}`, `DELETE /time_entries/{id}`). It also supports full CRUD for projects and clients[^24], and includes a read-only Reports API v3 for summary and detailed data[^26]. This is the most complete option but requires you to handle HTTP requests, authentication, and response parsing yourself. Any language that can make HTTP requests can use this API.
+	- ## Provenance
+		- [[Toggl/AI/Report/26/01/AI control of Toggl - Options Jan 2026]]
+		- [^23]: https://engineering.toggl.com/docs/tracking/
+		- [^24]: https://engineering.toggl.com/docs/api/me/
+		- [^26]: https://engineering.toggl.com/docs/summary/

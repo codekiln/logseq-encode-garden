@@ -1,0 +1,9 @@
+- # How Multi-Agent Systems Enable Personalized Messaging at Scale
+	- ## Overview
+		- **Duration:** 5 minutes
+		- **Slot (EDT):** 14:00–14:05
+		- **Speaker:** [[Person/Arushee Garg]]
+		- **Event:** [[OReilly/Event/26/03/AI Codecon]]
+	- ## Description
+		- LinkedIn **Premium**—personalized jobseeker-to-recruiter messages via a **supervisor-based LangGraph** workflow.
+		- Context, job signals, persona; lessons on prompt management, evaluation, and operating agentic systems in production.

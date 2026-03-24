@@ -1,0 +1,6 @@
+- # Abhimanyu Anand
+	- **Role:** Senior Data Scientist, Elastic
+	- **Bio:** Abhimanyu Anand works on evaluation design for AI agents—metric trade-offs, nondeterministic LLM-as-judge effects, and statistical significance so teams do not ship illusory improvements.
+	- **Related Events:**
+		- [[OReilly/Event/26/03/AI Codecon]]
+		- [[OReilly/Event/26/03/AI Codecon/1310 Is Your Eval Lying Abhimanyu Anand]]

@@ -1,0 +1,31 @@
+logseq-entity:: [[Logseq/Entity/software-project]]
+tags:: [[JavaScript]], [[CLI/Tool]]
+- # Toggl CLI (Node) — @beauraines/toggl-cli
+	- ## Notes
+		- GitHub beauraines/toggl-cli: ~11 stars; last push 2026-03-24 (at check). Actively touched; smaller community than Python CLI.
+		- *Subjective:* Good fit for a Node stack plus quick console summaries (today / week).
+	- ## Summary
+		- [beauraines/toggl-cli on GitHub](https://github.com/beauraines/toggl-cli)
+		- npm: [@beauraines/toggl-cli](https://www.npmjs.com/package/@beauraines/toggl-cli) — install e.g. `npm i -g @beauraines/toggl-cli`[^3]
+	- ## Provider
+		- Third-party
+	- ## Open source
+		- Yes (MIT)
+	- ## Time entry CRUD
+		- Yes — full CRUD: start/stop, continue, add manual entry, delete by ID[^3]
+	- ## Projects CRUD
+		- No — can assign entries to existing projects only (no project object management)[^3]
+	- ## Clients CRUD
+		- No — can reference client when starting (filtering); does not manage clients[^3]
+	- ## Reports
+		- Yes — basic summaries: today by project, weekly by day/project in the console[^3]
+	- ## Language / environment
+		- Node.js (npm)
+	- ## [[AI/Response]] from [[Toggl/AI/Report/26/01/AI control of Toggl - Options Jan 2026]]
+		- **Description:** A Node.js-based CLI tool (by Beau Raines) inspired by the above Python project. It was updated to use the Toggl Track API v9[^3]. This CLI supports starting and stopping time entries, continuing existing entries, and editing the running entry. Notably, it also supports adding manual entries (with specified start and stop times) and deleting entries by ID – features contributed by the community[^3]. It provides interactive prompts for some commands and configuration.
+		- **Projects/Clients:** This tool can assign a time entry to a project (you can specify project by name or ID when starting an entry) and likewise assign a client via project selection, but it does not manage project or client objects itself (no commands to list or create projects/clients)[^3]. You'd need to create projects/clients in Toggl Track first, then use their names/IDs in the CLI for time entries. The config file supports setting a default workspace and project, and you can also specify a client name when starting an entry which helps select the project[^3] (it doesn't create new clients, just filters projects by client name).
+		- **Reports:** This CLI provides simple built-in reports. It can show a breakdown of today's tracked time by project, and a week summary (by project per day) – essentially quick summaries in the console[^3]. This is helpful for quick insights, though for detailed reporting or date ranges beyond the current week you'd use Toggl's reports API or web UI.
+		- **Usability & Notes:** This tool is also open source (MIT). It's distributed via npm as `@beauraines/toggl-cli`, so you can install it with `npm i -g @beauraines/toggl-cli`. It takes a similar approach to the Python CLI in syntax (for familiarity). One caveat is that, as with many third-party tools, you'll need to store your API token (in a config file or env variables) to authenticate. It's a solid choice if you prefer a Node/JavaScript stack or want those quick report commands in your CLI.
+	- ## Provenance
+		- [[Toggl/AI/Report/26/01/AI control of Toggl - Options Jan 2026]]
+		- [^3]: https://www.npmjs.com/package/@beauraines/toggl-cli

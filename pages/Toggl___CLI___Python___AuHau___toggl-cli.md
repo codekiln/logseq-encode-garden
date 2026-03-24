@@ -1,0 +1,35 @@
+logseq-entity:: [[Logseq/Entity/software-project]]
+tags:: [[Py]], [[CLI/Tool]]
+- # Toggl CLI (Python) — AuHau / toggl-cli
+	- ## Notes
+		- GitHub AuHau/toggl-cli: ~394 stars; last push 2025-11-02 (at check). Mature, API v9-oriented; Unix-first CLI ergonomics.
+		- *Subjective:* Strong default if you want both a CLI and importable Python wrappers for projects/clients in code.
+	- ## Summary
+		- [AuHau/toggl-cli on GitHub](https://github.com/AuHau/toggl-cli)
+		- [Documentation / site](https://toggl.uhlir.dev/)
+		- Install via PyPI package [togglCli](https://pypi.org/project/togglCli/) [^17]
+		- Detailed setup: [[Toggl/CLI/AuHau/How To/Set Up Toggl CLI]]
+	- ## Provider
+		- Third-party
+	- ## Open source
+		- Yes (MIT)
+	- ## Time entry CRUD
+		- Yes — full CRUD via CLI and Python API wrappers (start/stop, edit, delete)[^1]
+		- Examples: `toggl start`, `toggl now` (show/edit current), `toggl stop`[^2]
+	- ## Projects CRUD
+		- Partial — list projects (`toggl projects ls`); edit via Python API wrappers (e.g. rename and save). No dedicated CLI subcommand for create in the usual flow[^2]
+	- ## Clients CRUD
+		- Partial — API wrapper supports clients; limited CLI surface for client management[^2]
+	- ## Reports
+		- No — focused on tracking; no built-in report summary command[^2] (can script from fetched entries)
+	- ## Language / environment
+		- Python (pip package); config at `~/.togglrc`[^2]
+	- ## [[AI/Response]] from [[Toggl/AI/Report/26/01/AI control of Toggl - Options Jan 2026]]
+		- **Description:** A popular command-line tool maintained by Adam Uhlir (originally by D.R. Adams) that uses Toggl Track's API. It also provides a Python library (ORM-like wrappers) for scripting[^1]. You can start and stop timers, list and edit entries, and delete entries via the CLI. For example, `toggl start` begins a new time entry, `toggl now` shows or edits the current running entry, and `toggl stop` stops it[^2]. Projects can be listed (`toggl projects ls`) and edited through the Python API (e.g. changing a project name and saving it)[^2], though the CLI interface itself focuses on time entry actions. Full CRUD on time entries is supported (including creating, updating, and deleting entries).
+		- **Projects/Clients:** The tool can **list projects** and **allows editing** via its Python API wrappers (it treats projects, clients, tags, etc., as objects you can fetch and modify in code)[^1]. However, there **may not be a direct CLI subcommand to create a new project or client** – those would be done via the Python library or web interface. It's primarily time-tracking-centric on the CLI.
+		- **Reports:** Toggl CLI (Python) does not generate report summaries itself. It can retrieve time entry data (e.g. you could script a summary by fetching entries), but there's no built-in reporting command.
+		- **Usability & Notes:** This tool is open source (MIT licensed)[^17] and quite mature, with frequent updates (supports Toggl API v9). It runs on any Python-supporting platform. On first use it creates a `~/.togglrc` config and can store your API token or credentials for convenience. Caveat: The CLI is Unix-oriented (automated config setup isn't as smooth on Windows, requiring manual config edits)[^2]. Overall, Toggl CLI (Python) is a robust choice for full time entry CRUD with the bonus of a scriptable Python API[^1].
+	- ## Provenance
+		- [^1]: https://github.com/AuHau/toggl-cli
+		- [^2]: https://toggl.uhlir.dev/
+		- [^17]: https://pypi.org/project/togglCli/
