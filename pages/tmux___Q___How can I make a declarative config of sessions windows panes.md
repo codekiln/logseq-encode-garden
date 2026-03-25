@@ -1,6 +1,8 @@
 tags:: [[Question]]
 
 - I'd like to be able to have predefined tmux sessions, windows, and panes, all renamed and ready to go. Can I do this with tmux, something kind of like IaC but for shells?
+	- [[My Notes]]
+		- I saw that [[Username/typecraft]] had an example of implementing something like this in his [[Person/Chris Power/GitHub/dotfiles]] for tmux.  Unfortunately, it was kind of cobbled together, but it looked like it worked for him.
 	- [[AI/Response]]
 		- Nix users approach declarative tmux in a few distinct ways, depending on how "pure" and reproducible they want the environment to be. Below is a structured map of the ecosystem.
 		- ## 1. Home Manager: Declarative `tmux` as a First-Class Module
