@@ -1,0 +1,2 @@
+- [marcus/sidecar: Use sidecar next to CLI agents for diffs, file trees, conversation history, and task management with td](https://github.com/marcus/sidecar?tab=readme-ov-file) (docs: [You might never open your editor again | Sidecar](https://sidecar.haplab.com/))
+	-

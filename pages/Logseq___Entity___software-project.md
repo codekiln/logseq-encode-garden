@@ -12,10 +12,11 @@
 		- Check in this order: exact main page name, exact alias, partial title match, repo owner and repo name, then page-body mentions of the same homepage, repo, or description. Classify as: existing, similar, new, or blocked.
 	- ## Frontmatter
 		- To mark a page as a software-project instance, add `logseq-entity:: [[Logseq/Entity/software-project]]` in frontmatter. The type page then gets backlinks to all software-project pages.
-		- Add only other frontmatter we actually know. Use `created-by::` pointing to a person page when that page exists (create the person page first when the creator is clear). Add an alias in the form `Person/Name/GitHub/Project` when that person page exists and the alias is useful.
+		- Add only other frontmatter we actually know. Use `created-by::` pointing to a **person** page (`[[Person/...]]`) or **company** page (e.g. `[[Charm]]` with `logseq-entity:: [[Logseq/Entity/company]]`) when that entity page exists—create the person or company page first when the creator is clear. Add an alias in the form `Person/Name/GitHub/Project` when that person page exists and the alias is useful.
 	- ## Page shape
 		- File: `pages/<ProjectName>.md`. In links, use the main page name with forward slashes for namespaces where we use them (e.g. `Lazygit/Keyshort/Some action`). First block: H1 with the project title (or a reference link to the project). Keep the page lean: title plus a few descriptive bullets.
-	- ## Creator (person) handling
-		- If the creator is clear and a person page does not yet exist, create the person page so the software page can link to it. If it is not clear who the creator is, do not guess—ask the human (e.g. create the software page without creator metadata, create a person page first, or skip until the identity is clarified).
+	- ## Creator (person or company) handling
+		- If the creator is clear and is an individual, create or use a [[Person/...]] page and point `created-by::` there. If the creator is clearly an organization you want to track, create or use a company entity page (`logseq-entity:: [[Logseq/Entity/company]]`) and point `created-by::` there.
+		- If it is not clear who the creator is, do not guess—ask the human (e.g. create the software page without creator metadata, create the entity page first, or skip until the identity is clarified).
 	- ## Source blocks
 		- Do not move source blocks from the journal or source page by default. Move or transplant only when explicitly asked.

@@ -10,4 +10,5 @@ alias:: [[Logseq Entities]]
 	- ## Entity types in this garden
 		- **software-project** — Tools, editors, libraries, apps, CLIs, servers. Conventions (naming, dedup, page shape, creator handling) are documented on the software-project type page. Fallback when type pages are missing: `.rulesync/config/logseq-entity.md`.
 		- **color-theme** — Coordinated palette families reused across apps (terminals, editors, TUIs). Conventions are on the color-theme type page. Fallback/bootstrap notes: `.rulesync/config/logseq-entity.md` (section **color-theme**).
-		- Deferred for follow-up: other types (e.g. person, book) may be added later; not yet documented as entity-type pages in this garden.
+		- **company** — Organizations or brands you track as first-class pages (e.g. vendors with multiple tools). Conventions are on the company type page.
+		- Deferred for follow-up: other types (e.g. person, book) may be added later as dedicated entity-type pages when needed.

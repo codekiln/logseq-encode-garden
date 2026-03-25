@@ -1,0 +1,23 @@
+- # company
+	- This page is the standard operating procedure for **company** entities: organizations (businesses, product firms, devtool vendors) that you want to track as first-class pages—often because they ship multiple [[Logseq/Entity/software-project]] pages you link with `created-by::`.
+	- ## Examples in this garden
+		- [[Charm]] — vendor behind the Charmbracelet GitHub org; `created-by:: [[Charm]]` on [[gum]]; ecosystem siblings include [[glow]] and [[Glamour]].
+	- ## When we treat something as a company
+		- Strong signals: official site positioning as a company or team, a stable trade name, GitHub org or product suite under one brand, or notes that keep returning to “who makes this.”
+		- Prefer a **person** entity when the subject is an individual maintainer; use **company** when the subject is the organization or brand (even if it is small).
+	- ## How to name the main page for a company
+		- Prefer a **short top-level canonical name** that matches how you want to type links (e.g. [[Charm]] for “Charm” even when the GitHub org is `charmbracelet`).
+		- Add **`alias::`** for common alternate names (legal name, GitHub org label, “Foo Inc.” vs “Foo”) so search and backlinks stay unified.
+		- If the company is only context for one product and unlikely to recur, you may skip a company page and document the vendor inline on the software page—create a company entity when you expect to refer to the org again.
+	- ## Finding and deduplicating
+		- Check in this order: exact canonical page name, exact alias, official domain, GitHub org name, then page-body mentions of the same site or org. Classify as: existing, similar, new, or blocked.
+	- ## Relationship to software-project
+		- Software entities may set `created-by:: [[CompanyName]]` when the maintainer is the organization and a company page exists. If the creator is an individual with a [[Person/...]] page, use that instead (or both only when both are accurate and useful).
+	- ## Frontmatter
+		- To mark a page as a company instance, add `logseq-entity::` with a link to this type page in frontmatter. The type page then gets backlinks to all company pages.
+		- Add only other frontmatter that is actually known (e.g. `alias::`, `see-also::`, `date-founded::` or `date-created::` if you adopt those and have a defensible date). Do not modify **`tags::`** on existing pages when editing; follow garden tagging rules for new pages.
+	- ## Page shape
+		- File: `pages/<CompanyName>.md` for the canonical short name. First block: H1 with a link to the official site (or primary public presence).
+		- Keep the page lean: what they are, notable products or org links, and backlinks from software you track.
+	- ## Source blocks
+		- Do not move source blocks from the journal or source page by default. Move or transplant only when explicitly asked.

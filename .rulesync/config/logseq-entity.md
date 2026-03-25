@@ -25,6 +25,7 @@ The garden may eventually model many entity types. Types with Logseq-native SOP 
 
 - software-project — see `[[Logseq/Entity/software-project]]`
 - color-theme — see `[[Logseq/Entity/color-theme]]`
+- company — see `[[Logseq/Entity/company]]`
 
 Other entity types may be added here later without changing the skill itself. Prefer the `[[Logseq/Entity/<Type>]]` pages over this file when both exist.
 
@@ -73,7 +74,7 @@ Classify results as:
 
 - Never modify, add, or remove `tags::` in an existing document.
 - For newly created pages, only add frontmatter that is actually known.
-- Use `created-by:: [[Person/<personname>]]` only when the person page already exists.
+- Use `created-by:: [[Person/<personname>]]` or `created-by:: [[CompanyName]]` (company page with `logseq-entity:: [[Logseq/Entity/company]]`) only when that entity page already exists.
 - Add `alias:: [[Person/<personname>/GitHub/<projectname>]]` when appropriate and when that person page already exists.
 
 ### Page Shape
@@ -85,8 +86,8 @@ Classify results as:
 
 ### Creation Blockers
 
-- If the creator is clear and a person page does not yet exist, create the person page so the software entity can link to it.
-- If it is not clear who the creator is, do not guess. Ask the human what should be done (e.g. create the software page without creator metadata, create a person page first, or skip until the identity is clarified).
+- If the creator is clear and a person page does not yet exist, create the person page so the software entity can link to it. If the creator is clearly an organization, create a company entity page first when using `created-by::` to that org.
+- If it is not clear who the creator is, do not guess. Ask the human what should be done (e.g. create the software page without creator metadata, create the entity page first, or skip until the identity is clarified).
 
 ### Source-Block Handling
 
@@ -117,6 +118,27 @@ Strong signals:
 ### Page Shape
 
 - Hub page: identity, flavors, palette link, stack matrix linking to app pages (e.g. [[Ghostty]], [[Neovim]], [[tmux]], [[yazi]]).
+
+## Entity Type: company
+
+Authoritative documentation: `[[Logseq/Entity/company]]`. This section is bootstrap-only.
+
+### Recognition
+
+Strong signals: official company or product site, stable brand name, GitHub org representing the vendor, repeated references to “who makes” multiple tools.
+
+### Canonical Naming
+
+- Short top-level page name (e.g. `[[Charm]]`) with `alias::` for alternate names (e.g. GitHub org label).
+
+### Frontmatter
+
+- `logseq-entity:: [[Logseq/Entity/company]]` on instances.
+- Never modify `tags::` on existing pages without explicit human instruction.
+
+### Page Shape
+
+- Lean hub: H1 link to primary site, one-line positioning, links to notable software entities.
 
 ## Reporting Contract
 
