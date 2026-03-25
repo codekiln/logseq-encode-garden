@@ -1,0 +1,3 @@
+- was in a [[CLI/Coach]] session with [[CursorAI/CLI]]
+- was entering in the chat box at the bottom
+- the `k` key somehow killed cursor and even left me without one of those normal, helpful resume commands at the end that would have been printed if the `/exit` command had been used

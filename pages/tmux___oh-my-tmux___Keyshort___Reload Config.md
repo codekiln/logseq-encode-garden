@@ -1,0 +1,4 @@
+- [[Keyshort/User]] [[tmux/oh-my-tmux/Keyshort]]
+	- [[card]] **Reload Config**
+		- Shortcut: `<tmux-prefix> r`
+		- Description: accomplish the same thing as [[tmux/How To/Reload/Config]] in a single keyboard shortcut

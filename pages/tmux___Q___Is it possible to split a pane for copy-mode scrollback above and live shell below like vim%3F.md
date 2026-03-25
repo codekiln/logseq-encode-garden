@@ -1,0 +1,20 @@
+- # Is it possible to split a [[tmux]] pane for copy-mode scrollback above and live shell below like [[vim]]?
+	- Motivation: browse scrollback and copy with visual selection in one area while composing or quoting in another — analogous to two views of one buffer in [[vim]] (without shared-buffer semantics).
+	- ## Answer
+		- [[AI/Response]]
+			- **Short answer:** [[tmux]] does not offer a vim-style “one buffer, two views” for a single pane’s scrollback. **Copy mode always occupies the whole pane** you started it in, and it only shows **that pane’s** history. A split gives **two independent PTYs** with **separate** scrollback buffers, so a copy-mode browser in the top pane is **not** automatically the same stream as the shell in the bottom pane.
+			- **What the “other” pane is doing:** In a split layout, each pane is just another shell (or another program). There is no built-in “mirror this pane’s scrollback here” mode. The bottom can stay your normal shell; the top would only match that scrollback if you **copy data over** (see below), not because tmux links two views of one buffer.
+			- **Practical workflows that get close:**
+				- **Split + copy mode in the pane that owns the history** — If all the output you care about is in the **bottom** pane, enter copy mode **there** (`Prefix+[`). You lose simultaneous typing in that same pane until you exit copy mode, but you can **yank** to tmux’s buffer or the OS clipboard and then move focus to another pane to paste (`Prefix+]`, or `Cmd+V` if your config bridges to the clipboard). That matches “select upstairs, use downstairs” **across panes**, but not two live views of one scrollback.
+				- **Snapshot scrollback into the other pane** — From the pane that has the history, push text out with `capture-pane` and read it in the second pane, e.g. `tmux capture-pane -S -5000 -p -t 'session:window.pane' | less` or into [[nvim]]. That is a **point-in-time copy**, not a continuously synced second view (re-run to refresh).
+				- **Log the stream for a true second window** — `pipe-pane` (or shell `tee`) can append live output to a file; a split can run `less +F file` / `tail -f` on that file. Good for **forward-looking** duplication; older scrollback before logging started is not magically shared.
+				- **`synchronize-panes`** — Sends the **same keystrokes** to multiple panes; it does **not** tie scrollback together like `scrollbind`, and it is a poor fit for “browse in copy mode while typing elsewhere.” See discussion in [this Stack Overflow thread](https://stackoverflow.com/questions/63169079/tmux-how-to-scroll-two-pane-like-vim-scrollbind).
+			- **Bottom line:** The vim analogy breaks because a terminal pane is not a text buffer — it is a PTY with one display state. For “read old output while editing,” splitting in [[tmux]] helps **spatially** (reference + work side by side); bridging content is via **yank/paste**, **capture-pane**, or **logging**, not a native dual-view scrollback.
+			- Sources:
+				- [tmux(1) — copy mode, capture-pane, pipe-pane](https://man7.org/linux/man-pages/man1/tmux.1.html)
+				- [Stack Overflow — tmux scroll two panes like vim scrollbind](https://stackoverflow.com/questions/63169079/tmux-how-to-scroll-two-pane-like-vim-scrollbind)
+	- ## My Notes
+		- *Add working bindings or scripts here if you settle on capture-pane or pipe-pane.*
+	- ## Related
+		- [[tmux/Q/What is a conceptual overview of how copy paste works in oh-my-tmux with nvim?]]
+		- [[tmux/Q/Is there a way to do rectangular selection when using oh-my-tmux and tmux with vim visual selection mode?]]

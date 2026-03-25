@@ -1,4 +1,9 @@
+see-also:: [[tmux/How To/Reload/Config/and zshrc/in all panes in session]]
+tags:: [[Diataxis/How To]]
+
 - # How can I refresh `.zshrc` in all of my open panes and windows in [[tmux]]?
+	- ## [[My Notes]]
+		- I don't yet have an answer to this that satisfies me. The answer below is a nod to an approach, not a workable solution.
 	- ## Answer
 		- [[AI/Response]]
 			- Use `tmux send-keys` to broadcast a `source ~/.zshrc` command to every pane across all sessions:
@@ -19,6 +24,3 @@
 				- Panes running something other than a shell prompt (e.g. `vim`, `python`) will receive the literal text `source ~/.zshrc` — interrupt/exit those first if needed
 				- New panes opened after running this will automatically source the updated `.zshrc` since they start fresh shells
 			- [tmux send-keys docs](https://man7.org/linux/man-pages/man1/tmux.1.html)
-	- ## My Notes
-	- ## Related
-		- [[tmux]]
