@@ -1,4 +1,5 @@
 tags:: [[ChatGPT/Deep Research]]
+
 - # Toggl Track Integration Options (Time Entry CRUD Focus)
 	- Below is a comparison of CLI tools, MCP (Model Context Protocol) interfaces, SDKs/libraries, and the official Toggl Track API for performing full Create/Read/Update/Delete (CRUD) on time entries. Each option is noted as official or third-party, whether it's open source, its capabilities (time entry CRUD is mandatory; project/client management and reporting are optional), the required environment/language, and any notable caveats. Longer per-option narrative from the original deep-research run lives on each embedded page under an **AI/Response** heading that cites this report.
 - ## Comparison Table

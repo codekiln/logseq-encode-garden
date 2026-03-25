@@ -29,8 +29,8 @@ tags:: [[Toggl]], [[CLI/Tool]], [[Diataxis/Tutorial]]
 			- Ensure `uv` is available (if managed by mise, it should already be on your PATH)
 			- Install `togglCli` using `uv tool install` (per [[My Dev Tool Preferences]]):
 				- ~~~bash
-				uv tool install togglCli --pre
-				~~~
+				  uv tool install togglCli --pre
+				  ~~~
 			- Wait for the installation to complete
 			- You should see a success message when installation finishes
 			- Notice that `uv tool install` creates an isolated environment for the CLI tool, similar to pipx but faster
@@ -39,8 +39,8 @@ tags:: [[Toggl]], [[CLI/Tool]], [[Diataxis/Tutorial]]
 		- ### 3. Configure the CLI with Your Token
 			- Run the Toggl CLI for the first time to trigger the bootstrap setup:
 				- ~~~bash
-				toggl --help
-				~~~
+				  toggl --help
+				  ~~~
 			- The CLI will prompt you for setup information
 			- When asked about authentication, you can either:
 				- Enter your **username and password** (the CLI will convert these to an API token automatically), or
@@ -50,33 +50,33 @@ tags:: [[Toggl]], [[CLI/Tool]], [[Diataxis/Tutorial]]
 		- ### 4. Verify Your Setup
 			- Test that the CLI is installed and working:
 				- ~~~bash
-				toggl --help
-				~~~
+				  toggl --help
+				  ~~~
 			- You should see a list of available commands
 			- Try viewing your current time entry to verify authentication:
 				- ~~~bash
-				toggl now
-				~~~
+				  toggl now
+				  ~~~
 			- If successful, you'll see information about your current time entry (or a message if no entry is running)
 			- If you get an authentication error, double-check that your token was entered correctly during setup
 		- ### 5. Try Starting a Time Entry (Optional)
 			- Test starting a new time entry:
 				- ~~~bash
-				toggl start "Test entry"
-				~~~
+				  toggl start "Test entry"
+				  ~~~
 			- Replace "Test entry" with any description you want
 			- You should see a success message confirming the time entry was started
 			- Verify it's running:
 				- ~~~bash
-				toggl now
-				~~~
+				  toggl now
+				  ~~~
 			- You should see your active time entry displayed
 			- Check your Toggl Track web interface to verify the entry appears there
 		- ### 6. List Your Projects (Optional)
 			- View your available projects:
 				- ~~~bash
-				toggl projects ls
-				~~~
+				  toggl projects ls
+				  ~~~
 			- You should see a list of all your Toggl projects
 			- This confirms that your authentication is working and you can access your Toggl data
 	- ## What You've Learned
