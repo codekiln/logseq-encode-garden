@@ -1,0 +1,14 @@
+- # Journal — Editorial headings
+	- Parent registry: [[Logseq/Journal]]. Command reference: **`logseq-format-journal`** in rulesync.
+	- ## Goal
+		- Section titles should feel **curated**: wry, juxtaposed, a little magazine-like. The outline should suggest tensions (tool vs platform, freedom vs friction) without explaining the joke in prose.
+	- ## Grouping
+		- Cluster related bullets under one heading so contrast **between** sections does work (editorial juxtaposition), not just long flat lists.
+		- It is fine for headings to use **`[[Topic]]` links** when the day is organized around entities or areas you already track; wit is welcome but not mandatory every line.
+	- ## Examples in the spirit of this garden
+		- Topic-led H1-style openers that encode the day’s main stage (e.g. a craft or theme as a page link).
+		- Nested **Friction**, **Questions**, and similar *meaning-loaded* section links when they match how you think.
+	- ## Anti-patterns
+		- Generic single-word bins: “Notes”, “Misc”, “Thoughts.”
+		- Headings that narrate process (“What I did today”) instead of implying it.
+		- Replacing factual content with clever titles — headings organize; they do not substitute for links and specifics.

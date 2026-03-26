@@ -1,0 +1,13 @@
+- # Journal section — garddiff
+	- Parent registry: [[Logseq/Journal]].
+	- ## Purpose
+		- End the day with a compact answer to: *what moved in the graph?* This block is the **operational change log**, still written as a readable snapshot, not CI output.
+	- ## Required shape
+		- Top-level **garddiff** (or equivalent label you keep consistent).
+		- One short line of intent (optional but typical): what this block is for.
+		- **Second-level `Filed`** — link-only bullets for **new** pages that first appeared today; default `- [[Page]]` with no “Created …” boilerplate.
+		- **Second-level `Updated`** — link-only bullets for **modified** pages that already existed; same discipline.
+	- ## Mutual exclusivity
+		- A given **`[[Page]]` must appear under only one of `Filed` or `Updated`** for that calendar day. If a page was both created and edited the same day, keep it only under **`Filed`**.
+	- ## Optional context
+		- At most **one short child sentence** under a link when it helps readers; avoid status narration and duplicate prose already on the page.

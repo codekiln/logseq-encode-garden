@@ -1,0 +1,14 @@
+- # Journal section — Friction
+	- Parent registry: [[Logseq/Journal]] (do not treat this page as optional when modeling “friction” in a day’s journal).
+	- ## Purpose
+		- Capture **where the day resisted you** without turning the journal into a complaint log. Split **useful** friction (learning, practice) from **frustration** (blocked goals, bugs, rough edges).
+	- ## Structure (default)
+		- Under the day’s narrative, use a second-level block titled with the **Friction** topic link in the heading, then nest:
+			- **Useful friction** — optional third level; fourth level **when Learning** (or similar) if you are separating practice notes.
+			- **Frustration** — bugs, failed attempts, tooling fights; link out to **Q**, **Bug**, or **How To** pages instead of long procedural paste.
+	- ## Do
+		- Link concrete follow-ups: **Filed** sessions, bug pages, questions, or updated docs.
+		- Keep one-sentence context on the same bullet when it clarifies emotion or stakes (still a snapshot, not a ticket dump).
+	- ## Don’t
+		- Replace **garddiff** — operational page lists stay under **garddiff** / **Filed** / **Updated**, not duplicated as paragraphs here.
+		- Turn **Friction** into the only section of the journal; story and questions still deserve their own headings.

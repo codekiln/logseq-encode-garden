@@ -71,3 +71,4 @@ Use the prefix that matches the type: `rule:` for rules, `command:` for commands
 - rule: `logseq-flavored-markdown` – Bullet structure, headings, LFM syntax
 - rule: `logseq-typical-week-structure` – Week/day page naming for trimester-based repos
 - rule: `logseq-journal-updates` – Journal entry conventions
+- rule: `logseq-journal-style` – Prefer `[[Logseq/Journal]]` when editing `journals/*.md`

@@ -2,6 +2,11 @@
 paths:
   - '*.md'
 ---
+## Configuration order (garden-first journal style)
+
+- If **`[[Logseq/Journal]]`** and linked **`Logseq/Journal/...`** pages exist (`pages/Logseq___Journal.md` and related files), read them first. Use them as **authoritative for section vocabulary, narrative patterns, and worked examples** when they conflict with this rule.
+- If those pages are missing or silent on a point, apply the guidelines below as the default.
+
 # Journal Updates for Page Changes
 
 ⚠️ **CRITICAL**: When creating or modifying pages in the Logseq knowledge garden, you MUST always add an entry to today's journal to record the change.

@@ -6,6 +6,11 @@ globs:
   - 'journals/*.md'
 ---
 
+## Configuration order (garden-first journal style)
+
+- If **`[[Logseq/Journal]]`** and linked **`Logseq/Journal/...`** pages exist, read them first. Use them as **authoritative for heading voice, recurring sections, and exemplar days** when they conflict with this command’s defaults.
+- If silent, use the style principles below and the **`logseq-journal-updates`** rule.
+
 # Format Journal Entry Command
 
 This command formats a Logseq journal entry with editorial-style headings that evoke the spirit of publications like Harper's Magazine, The Economist, and The New Yorker—particularly the wry, juxtaposed style of Harper's Index.
