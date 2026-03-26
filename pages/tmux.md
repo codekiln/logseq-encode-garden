@@ -1,4 +1,7 @@
 - tmux resources
+	- ideas
+		- [[tmux/Idea/Pomodoro with status line and silent flash]]
+		- [[tmux/Idea/Toggl Track status in status line]]
 	- For coordinated palette setup (e.g. [[Catppuccin]] with TPM ports), see [[Catppuccin]] and [[tmux/Config]].
 	- [tmux.info tmux Tutorial - Master Terminal Multiplexing | Complete Guide & Commands](https://tmux.info/)
 	- extensions

@@ -1,7 +1,8 @@
 alias:: [[pre-actualization trace]], [[protoform]], [[vector artifact]]
 tags:: [[philosophy/process]] [[ai/co-creation]] [[creativity]] [[cybernetics]]
+
 - # Shadow of something that does not yet exist
-	- I noticed this while making a coffee log entry. I had a poem and a scene in mind. I tried to render the scene as an image, but I ran out of time and settled on something that felt close but not right. The image I used was not the thing I had in mind. It was not even a clean approximation. It felt like a shadow of something that had not fully formed. The thing itself did not exist yet in the world or even in my own mind as a stable object.
+	- I noticed this while making a [[Person/codekiln/GitHub/beans]] [coffee log entry](https://codekiln.github.io/beans/log/2026-03-24/). I had a poem and a scene in mind. I tried to render the scene as an image, but I ran out of time and settled on something that felt close but not right. The image I used was not the thing I had in mind. It was not even a clean approximation. It felt like a shadow of something that had not fully formed. The thing itself did not exist yet in the world or even in my own mind as a stable object.
 	- ## A different model of creation
 		- It is not idea then execution then artifact. It is more like a field that gives rise to a direction, and that direction produces a series of attempts. Each attempt changes the field. The direction shifts as I follow it. The artifact is one temporary stabilization in that loop. It is not the goal. It is a trace left behind as the system moves.
 	- ## Shadows, becoming, virtual and actual

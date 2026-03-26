@@ -1,0 +1,16 @@
+- # In [[tmux]] copy mode, can you yank soft-wrapped lines without embedded newlines?
+	- Context: a long line (for example a file path) wraps across several screen rows; selecting across the wrap often puts newline characters in the yanked text.
+	- ## Answer
+		- [[AI/Response]]
+			- **No first-class “word-wrap–aware visual mode.”** [[tmux]] copy mode selects from the **screen grid**. What you yank is whatever the grid stores for those rows. There is no dedicated mode that means “treat this as one logical line because the terminal soft-wrapped it,” separate from real line breaks from the application.
+			- **Behavior has improved in recent tmux.** Copy-mode motion (`end-of-line`, `next-word`, `select-line`, etc.) used to stop at the **screen edge**, which made wrapped content painful. Maintainer discussion and the grid-reader refactor ([PR #2497](https://github.com/tmux/tmux/pull/2497), following [issue #2414](https://github.com/tmux/tmux/issues/2414)) aimed to make many commands follow the **wrapped logical line**. Upgrading tmux and retesting your exact workflow is worthwhile—selection across a wrap may still include `\n` in some cases (for example when the application or GNU readline actually wrote linefeeds, as in historical [issue #530](https://github.com/tmux/tmux/issues/530)).
+			- **Practical workarounds**
+				- **`capture-pane -J`** — From the shell or a binding, `tmux capture-pane -p -J …` emits pane text with **wrapped lines joined** (see [tmux(1) — `capture-pane`](https://man7.org/linux/man-pages/man1/tmux.1.html): `-J` joins wrapped lines). You can capture a slice of history (`-S` / `-E`), grep or edit, then pipe to `pbcopy` / `xclip` / `wl-copy`. This is not the same as interactive rectangle select, but it gives **clipboard-safe single logical lines** when the wrap is tmux’s soft wrap.
+				- **Post-process the yank** — A `copy-pipe` / `copy-pipe-and-cancel` binding can run a filter before sending text to the OS clipboard; stripping **all** newlines (`tr -d '\n'`) is blunt but sometimes acceptable for a single path. Plugins such as [tmux-yank](https://github.com/tmux-plugins/tmux-yank) have explored newline-related behavior ([issue #42](https://github.com/tmux-plugins/tmux-yank/issues/42)).
+				- **Terminal-native selection** — Some terminal emulators merge wrapped rows when copying. That path bypasses tmux’s buffer (depends on `mouse`, passthrough, and the emulator). Compare with behavior described in discussions like [WezTerm #5016](https://github.com/wez/wezterm/issues/5016).
+			- **Bottom line:** Expect **grid-faithful** copy from vanilla copy mode; use **`capture-pane -J`**, a **pipe filter**, or **the terminal’s own copy** when you need “one string, no wrap newlines.”
+	- ## My Notes
+		- *Add lived experience after trying on your tmux version + terminal.*
+	- ## Related
+		- [[tmux/Q/What is a conceptual overview of how copy paste works in oh-my-tmux with nvim?]]
+		- [[tmux/Q/Is there a way to do rectangular selection when using oh-my-tmux and tmux with vim visual selection mode?]]

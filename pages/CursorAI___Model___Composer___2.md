@@ -1,0 +1,33 @@
+---
+alias:: [[cursor-composer-2]]
+tags:: [[AI/Model]]
+---
+- # [Composer 2 (Cursor)](https://cursor.com/docs/models/cursor-composer-2)
+  - ## Key Features
+    - Cursor's own **agentic** coding model (continued pretraining plus reinforcement learning on long-horizon coding tasks)
+    - Strong on long-horizon work via [self-summarization](https://cursor.com/blog/self-summarization) during training
+    - Tuned for tool use, file edits, and terminal operations inside Cursor
+    - **Fast** variant is the default in the product (same capability profile, higher throughput pricing tier)
+    - Announced and documented March 2026; see [Introducing Composer 2](https://cursor.com/blog/composer-2)
+  - ## Performance Highlights
+    - Reported benchmark snapshot (Cursor blog, Composer vs earlier Cursor Composer generations):
+      - CursorBench: 61.3 (vs 44.2 Composer 1.5, vs 38.0 Composer 1)
+      - Terminal-Bench 2.0: 61.7 (vs 47.9 / 40.0)
+      - SWE-bench Multilingual: 73.7 (vs 65.9 / 56.9)
+    - [CursorBench methodology](https://cursor.com/blog/cursorbench)
+  - ## Model Tiers
+    - **Standard:** $0.50/M input tokens, $2.50/M output tokens
+    - **Fast:** $1.50/M input, $7.50/M output — default for interactive use; Cursor positions it as cost-competitive vs other fast models at similar speeds
+  - ## Access Details
+    - Cursor IDE and **Cursor CLI** (`cursor-agent`); see [CLI overview](https://cursor.com/docs/cli/overview)
+    - On individual plans, usage draws from a **standalone Composer usage pool** with included usage; team/enterprise billing noted in [models and pricing](https://cursor.com/docs/models-and-pricing#usage-pools)
+    - Early access to a new UI mentioned in the [blog post](https://cursor.com/blog/composer-2) (Glass)
+  - ## Technical Notes
+    - Training story: continued pretraining for a stronger base, then RL on long-horizon coding; aimed at tasks requiring many sequential actions
+    - Evaluation: Terminal-Bench 2.0 scoring for Cursor used the [Harbor](https://github.com/laude-institute/harbor) harness per Laude Institute; details in the composer-2 blog footnotes
+  - ## References
+    - [Composer 2 model docs](https://cursor.com/docs/models/cursor-composer-2)
+    - [Introducing Composer 2](https://cursor.com/blog/composer-2)
+    - [Cursor – Models](https://docs.cursor.com/settings/models)
+    - Related garden page: [[CursorAI/Settings/Models]]
+    - CLI entry point: [[CursorAI/CLI]]

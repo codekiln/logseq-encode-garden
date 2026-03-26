@@ -1,0 +1,16 @@
+- # How do I get [[Lazygit]] to show files and folders that begin with a dot or period, aka hidden files and folders?
+- ## Answer
+	- [[AI/Response]]
+		- [[Lazygit]] does not implement a separate “show hidden / dotfiles” mode like a file browser. The Files panel is built from whatever `git status` reports for the repo, and the [user config](https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md) has no `gui.showHiddenFiles`-style switch.
+		- If dot-prefixed paths are missing, check these (in order):
+			- 1. **Ignore rules** — Paths may be excluded by `.gitignore`, `.git/info/exclude`, or a global exclude file. Git (and therefore lazygit) will not list ignored untracked files.
+			- 2. **`status.showUntrackedFiles`** — If Git is set to hide untracked files (`git config status.showUntrackedFiles` is `no` or `false`), lazygit’s Files view will not show untracked entries, including many dotfiles people expect to see. Set to `normal` / `yes` if you want untracked files back. See [git-config: status.showUntrackedFiles](https://git-scm.com/docs/git-config#Documentation/git-config.txt-statusshowUntrackedFiles).
+			- 3. **Tree view** — In tree mode, ensure directories are expanded (`=` expand all, `-` collapse all; `Enter` on a folder toggles that folder) so nested content is visible.
+			- 4. **Status filter** — Use the Files panel “filter files by status” binding (default `Ctrl+b` per [Keybindings_en.md](https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Keybindings_en.md)) if a filter is hiding untracked or other groups.
+			- 5. **Misleading “dot-folder” bugs** — Older reports of “files under `.something` not showing” were often [parse issues when `git status` emitted warnings](https://github.com/jesseduffield/lazygit/issues/2056), not lazygit hiding dots. Update lazygit if you see `git status` warnings and a sparse file list.
+		- Note: A GitHub [Q&A thread titled “Show hidden files by default”](https://github.com/jesseduffield/lazygit/discussions/4435) was about **LazyVim / snacks.nvim**, not lazygit; there is no lazygit equivalent of that editor toggle.
+- ## My Notes
+	- *placeholder*
+- ## Related
+	- [[Lazygit/Install]]
+	- [[Lazygit/Keyshort]]

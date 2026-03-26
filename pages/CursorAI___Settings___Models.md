@@ -12,6 +12,12 @@
 			- **Agent:** ❌
 			- **Pricing:** Free
 			- **Note:** —
+		- [[CursorAI/Model/Composer/2]]
+			- **Provider:** CursorAI
+			- **Premium:** ✅ (Composer usage pool on individual plans; see [models and pricing](https://cursor.com/docs/models-and-pricing#usage-pools))
+			- **Agent:** ✅
+			- **Pricing:** Standard $0.50/M in · $2.50/M out; Fast (default) $1.50/M in · $7.50/M out
+			- **Note:** In-house agentic model; available in IDE and [[CursorAI/CLI]] as of Mar 2026
 		- [[Anthropic/Model/Claude/3.5/Sonnet]]
 			- **Provider:** Anthropic
 			- **Premium:** ✅

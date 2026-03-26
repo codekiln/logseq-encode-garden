@@ -1,0 +1,22 @@
+- # How can I click on links in [[Ghostty]] and have them load in the default browser?
+- ## Answer
+	- [[AI/Response]]
+		- **Prefer [[tmux]] (multiplexer) for portable behavior:** Workflows wired into **tmux**—copy-mode keys, **`copy-pipe`** / **`copy-pipe-and-cancel`**, clipboard bridges—**stay with your session** when you switch **terminal emulators** (e.g. from [[Ghostty]] to [[Kitty]] or anything else). Anything that exists **only in the emulator** (Ghostty’s modifier-click, `copy_url_to_clipboard`, read-only toggles) **does not transfer**. For “one habit everywhere,” implementing **open this selection in the default browser** as a **tmux copy-mode** action is the layer that actually survives an emulator change.
+		- **tmux-oriented pattern:** In **copy mode**, move to a URL, **select** it, then either **yank to the OS clipboard** and paste in a browser (many configs already bridge yank → clipboard) or **pipe the selection** to **`open`** (macOS) / **`xdg-open`** (Linux) with **`copy-pipe-and-cancel`** so the OS default handler runs—see [tmux(1)](https://man.openbsd.org/tmux.1). Garden walkthrough of copy mode ↔ clipboard: [[tmux/Q/What is a conceptual overview of how copy paste works in oh-my-tmux with nvim?]]. Caveats: tmux operates on the **pane grid** (wrap/newlines matter); **OSC 8** hyperlinks help only if the **whole stack** preserves them (tmux version, **`terminal-features`** / hyperlinks, emulator)—see [discussion #4618](https://github.com/ghostty-org/ghostty/discussions/4618).
+		- **Emulator-side — modifier + click ([[Ghostty]]):** Plain URLs and **OSC 8** hyperlinks are opened with the system default handler (your default browser for `https://`). You **hold a modifier** while clicking — not a bare left-click.
+			- **macOS:** **⌘-click** (`super`)
+			- **Linux (GTK):** **Ctrl-click** (`control`)
+		- **Hover feedback:** With the modifier held, Ghostty highlights the link (e.g. underline / pointer cursor). If nothing highlights, the text may not be a recognized URL or OSC 8 link (plain file paths in compiler output are usually not clickable unless wrapped in OSC 8).
+		- **tmux / mouse reporting:** If the running program captures the mouse (common in **tmux**), you may need **Shift** in addition to the modifier so the click reaches the **emulator** for link handling — see [discussion #4618](https://github.com/ghostty-org/ghostty/discussions/4618) and [[Ghostty]].
+		- **Platform behavior (emulator path):** Opening uses the OS (e.g. macOS APIs for default URL scheme handlers), not a hard-coded browser.
+		- **Ghostty-only — read-only and `copy_url_to_clipboard`:**
+			- **`toggle_readonly`:** Keys/mouse are not forwarded to the shell, but **Ghostty keybinds** still run; **try ⌘-click / Ctrl-click first**. You can also bind **`copy_url_to_clipboard`** ([action reference](https://ghostty.org/docs/config/keybind/reference)).
+			- That action uses **the mouse** (`mouse.over_link` + position in [`Surface.zig`](https://github.com/ghostty-org/ghostty/blob/main/src/Surface.zig)), not the keyboard cursor cell—see [issue #4633](https://github.com/ghostty-org/ghostty/issues/4633).
+			- **No `open_url` keybind** in [`Binding.zig`](https://github.com/ghostty-org/ghostty/blob/main/src/input/Binding.zig); copy then open via clipboard / **`open`** / **`xdg-open`** after leaving read-only, or use **`performable:`** on the binding ([#4633](https://github.com/ghostty-org/ghostty/issues/4633)).
+		- **tmux copy mode:** While **tmux** owns copy mode, **Ghostty keybinds do not apply**—this is exactly where the **tmux pipe/yank** workflow above pays off; alternatively exit copy mode and use the **emulator** modifier-click path.
+		- **Sources:** [Ghostty](https://ghostty.org/); [Configuration](https://ghostty.org/docs/config/reference); [Keybind reference](https://ghostty.org/docs/config/keybind/reference); [tmux(1)](https://man.openbsd.org/tmux.1); [[Ghostty]]; [[tmux/Q/What is a conceptual overview of how copy paste works in oh-my-tmux with nvim?]]; [discussion #4618](https://github.com/ghostty-org/ghostty/discussions/4618); [PR #3903](https://github.com/ghostty-org/ghostty/pull/3903); [issue #4633](https://github.com/ghostty-org/ghostty/issues/4633); [`Surface.zig`](https://github.com/ghostty-org/ghostty/blob/main/src/Surface.zig).
+- ## My Notes
+	- *placeholder*
+- ## Related
+	- [[Ghostty]]
+	- [[tmux]]

@@ -1,0 +1,1 @@
+- `tmux rename-window`
