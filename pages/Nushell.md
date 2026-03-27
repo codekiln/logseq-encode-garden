@@ -1,0 +1,4 @@
+- [Nushell](https://www.nushell.sh/)
+	- [[My Notes]]
+		- looks cool!
+	- ![nushell example](https://www.nushell.sh/frontpage/ls-example.png)

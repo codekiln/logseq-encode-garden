@@ -1,0 +1,3 @@
+- https://ghostty.org/docs/features/shell-integration
+	- [[My Notes]]
+		- I noticed this in the [[Ghostty/Inspector]]
