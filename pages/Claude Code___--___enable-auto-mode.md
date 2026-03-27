@@ -1,0 +1,3 @@
+- [Auto mode for Claude Code | Claude](https://claude.com/blog/auto-mode?utm_source=tldrai)
+	- For developers: Run \`claude --enable-auto-mode\` to enable auto mode, then cycle to it with Shift+Tab. On Desktop and in the VS Code extension, first toggle auto mode on in Settings -> Claude Code, then select it from the permission mode drop-down in a session.
+	- [Explore the docs](https://code.claude.com/docs/en/permission-modes?utm_source=tldrai#eliminate-prompts-with-auto-mode) for more information.
