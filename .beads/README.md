@@ -26,17 +26,20 @@ bd show <issue-id>
 bd update <issue-id> --status in_progress
 bd update <issue-id> --status done
 
-# Sync with git remote
-bd sync
+# Verify backend health
+bd doctor --agent
+
+# Sync with Dolt remote
+DOLT_REMOTE_PASSWORD=$(gh auth token) bd dolt push
 ```
 
 ### Working with Issues
 
 Issues in Beads are:
-- **Git-native**: Stored in `.beads/issues.jsonl` and synced like code
+- **Dolt-backed**: The active Beads store is the Dolt backend
 - **AI-friendly**: CLI-first design works perfectly with AI coding agents
 - **Branch-aware**: Issues can follow your branch workflow
-- **Always in sync**: Auto-syncs with your commits
+- **Explicitly synced**: Push/pull task state with the Dolt commands instead of `bd sync`
 
 ## Why Beads?
 
