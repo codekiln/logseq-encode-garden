@@ -6,7 +6,7 @@ argument-hint: Question text (required); optional topic/namespace (e.g., Claude 
 ---
 # Log a Question in the Knowledge Garden
 
-This command records a question in a logical place in the Logseq knowledge garden and documents that the question was asked in today's journal. It follows existing question-page patterns and attempts to avoid duplicate question pages.
+This command records a question in a logical place in the Logseq knowledge garden and documents that the question was asked in today's journal. Each question is treated as a **question** entity instance: follow the **logseq-entity** skill’s configuration-first workflow, the question entity-type rules, deduplication discipline, then create or link the canonical page.
 
 ## Variables
 
@@ -18,11 +18,19 @@ This command records a question in a logical place in the Logseq knowledge garde
 - **Namespace pattern**: Questions live under a topic namespace, then `/Q/`, then the question text.
   - Link format: `[[Namespace/Q/Question text]]` or `[[Namespace/SubNamespace/Q/Question text]]`
   - File format: `Namespace___Q___Question text.md` (triple underscores; special characters like `?` become `%3F` in filenames)
-- **Page content**: Logseq Flavored Markdown (LFM). H1 is the question (often with linked terms). Optional sections: `## Answer`, `## My Notes`, `## Related`.
+- **Page content**: Logseq Flavored Markdown (LFM). H1 is the question (often with linked terms). Optional sections: `## Answer`, `## My Notes`. Prefer frontmatter **`see-also::`** for **garden pages** that are “see also” reading—**strongest tie first**—instead of a `## Related` section that only lists internal links. Do **not** use **`see-also::`** to restate **parent namespace** context the title already encodes (see `[[Logseq/Entity]]` and `[[Logseq/Entity/question]]`). Use optional **`via::`** only for **what prompted filing** the page (journal/import/session), not for general related pages.
 - **Journal**: Today's journal gets a bullet with the page link: `- [[Namespace/Q/Question text]]`
-- **Frontmatter**: Do not add or remove `tags::` on existing pages. When creating a new page, do not invent new tags; follow patterns only if the user has specified tag conventions for question pages.
+- **Frontmatter**: Do not add or remove `tags::` on existing pages. On **new** pages, include `logseq-entity:: [[Logseq/Entity/question]]` so the entity type page indexes instances. Optional **`see-also::`** and **`via::`** as above. Other frontmatter (`tags::`, `alias::`) should match patterns on sibling question pages in that namespace when available; do not invent new tag schemes.
 
 ## Workflow
+
+### Step 0: Load question entity configuration
+
+- In order, read and apply:
+  - `[[Logseq/Entity]]` (registry)
+  - `[[Logseq/Entity/question]]` (type SOP for question entities)
+  - If either is missing or insufficient, fall back to `.rulesync/config/logseq-entity.md` (section **question**)
+- If no question-type configuration can be found and conventions cannot be inferred safely, stop and ask the user how to proceed (same spirit as the logseq-entity skill when config is absent).
 
 ### Step 1: Normalize and clarify inputs
 
@@ -31,25 +39,35 @@ This command records a question in a logical place in the Logseq knowledge garde
 
 ### Step 2: Search for existing question pages (deduplication)
 
-- Search for pages that may already represent the same question:
+- Treat the incoming question as a **question** entity candidate. Apply the dedup process in `.rulesync/skills/logseq-entity/references/entity-search-and-dedup.md` together with the question type rules (search order, classify **existing** / **similar** / **new** / **blocked**).
+- Practical search (align with that reference):
   - Grep for the question text (normalized, key phrases) in `pages/**___Q___*.md`
-  - Search by namespace + "Q" (e.g., `Claude Code___Q___*`, `git___Q___*`)
+  - Search by namespace + `Q` (e.g., `Claude Code___Q___*`, `git___Q___*`)
   - Check page titles and first-level headings; consider rephrasings and minor wording differences
-- **If a matching or near-duplicate question page exists:**
+- **If a matching or near-duplicate question page exists (existing):**
   - Do **not** create a new page.
   - Add an entry to **today's journal** (`journals/YYYY_MM_DD.md`) with a link to the existing page, e.g. `- [[Namespace/Q/Existing question text]]`
   - Tell the user the question was already in the garden and that the journal was updated.
   - Stop.
+- **If results are ambiguous (similar):** follow the skill reference: present candidates and prefer human judgment before creating a duplicate.
+- **Blocked:** if topic namespace or configuration prerequisites are unclear, stop and ask.
 
 ### Step 3: Create the question page (new question only)
 
 - **File name**: `pages/Namespace___Q___Question text.md`
   - Use triple underscores for namespace segments. Replace `?` with `%3F` (or equivalent) in the filename if the question contains it.
+- **Frontmatter** (new pages only, before the first bullet):
+  - Required: `logseq-entity:: [[Logseq/Entity/question]]`
+  - Optional: `see-also:: [[Page1]], [[Page2]], ...` (internal **see also** links, **strongest tie first**, no parent-namespace-only entries)
+  - Optional: `via:: [[Page1]], ...` only when recording **what put this in the garden** (e.g. today’s journal as provenance is usually enough; use `via::` for a specific stub or source page when that is clearer)
+  - Optional: `tags::`, `alias::`, and other keys only when they match established patterns for question pages in this namespace. Never alter **`tags::`** on files that already exist.
+  - Place page attributes first (if `tags::` is used, keep project frontmatter order expectations).
 - **Content** (LFM):
   - All content as bullets; no blank lines between bullets.
   - H1: the question, with key terms linked to existing pages where appropriate (e.g., `- # Is it possible to see the compaction text in [[Claude Code]]?`).
-  - Optionally add placeholder sections: `- ## Answer`, `- ## My Notes`, `- ## Related` (empty or with a single placeholder bullet).
-- Follow the logseq-page-naming-reference and logseq-flavored-markdown rules. Do not add or remove `tags::` unless the user has specified tag conventions for new question pages.
+  - Optionally add placeholder sections: `- ## Answer`, `- ## My Notes` (empty or with a single placeholder bullet). Do not add `## Related` solely for internal page links—use **`see-also::`** instead.
+- Follow the logseq-page-naming-reference and logseq-flavored-markdown rules.
+- **Non-goal:** Do not bulk-edit older `___Q___` pages to add `logseq-entity::` unless the user explicitly asks (migration is optional).
 
 ### Step 4: Add today's journal entry
 
@@ -69,7 +87,7 @@ This command records a question in a logical place in the Logseq knowledge garde
   		- The answer content goes here...
   		- [Source](https://example.com)
   ~~~
-- **Cite sources**: Include links to documentation, web pages, or references used to formulate the answer. Use markdown link format (e.g., `[Source Title](https://example.com)`).
+- **Cite sources**: Put **external** documentation or web URLs in the Answer (markdown links). When the answer points to other **garden pages** as further reading, add or update **`see-also::`** (**strongest tie first**), not a tail `## Related` list. Use **`via::`** only for provenance of **filing**, not for “see also” links.
 - Keep the answer concise but informative; use bullet points and proper LFM formatting.
 - If the answer cannot be determined or requires user input, note this in the Answer section and inform the user.
 
@@ -82,6 +100,8 @@ This command records a question in a logical place in the Logseq knowledge garde
 
 Use the prefix that matches the type: `rule:` for rules, `command:` for commands, `skill:` for skills.
 
+- skill: `logseq-entity` – Configuration-first entity workflow; use with type page below
+- Type page: `[[Logseq/Entity/question]]` – Canonical SOP for question entities
 - rule: `logseq-page-naming-reference` – File naming (`___`), link format (`/`), creating new pages
 - rule: `logseq-journal-updates` – Always add a journal entry when creating or updating pages
 - rule: `logseq-flavored-markdown` – Bullet structure, headings, LFM syntax

@@ -26,6 +26,7 @@ The garden may eventually model many entity types. Types with Logseq-native SOP 
 - software-project — see `[[Logseq/Entity/software-project]]`
 - color-theme — see `[[Logseq/Entity/color-theme]]`
 - company — see `[[Logseq/Entity/company]]`
+- question — see `[[Logseq/Entity/question]]`
 
 Other entity types may be added here later without changing the skill itself. Prefer the `[[Logseq/Entity/<Type>]]` pages over this file when both exist.
 
@@ -139,6 +140,46 @@ Strong signals: official company or product site, stable brand name, GitHub org 
 ### Page Shape
 
 - Lean hub: H1 link to primary site, one-line positioning, links to notable software entities.
+
+## Entity Type: question
+
+Authoritative documentation: `[[Logseq/Entity/question]]`. This section is bootstrap-only.
+
+### Recognition
+
+Strong signals:
+
+- A single answerable question stored under a topic namespace with a `/Q/` segment in the page title
+- On disk: `pages/*___Q___*.md` between topic prefix and question slug
+
+### Search And Dedup
+
+Prefer `rg`. Search in this order unless the type page specifies otherwise:
+
+1. Exact expected filepath / title under the topic namespace
+2. Normalized question text and key phrases in `pages/**___Q___*.md`
+3. Namespace-scoped glob (topic + `___Q___`)
+4. H1 and opening blocks; allow minor rephrasing
+
+Classify as: `existing`, `similar`, `new`, or `blocked`. Full process: see the logseq-entity skill reference `entity-search-and-dedup.md`.
+
+### Frontmatter
+
+- `logseq-entity:: [[Logseq/Entity/question]]` on new instances.
+- Optional `see-also:: [[Page1]], [[Page2]], ...` for internal “see also” pages (**strongest tie first**). Prefer over a `## Related` section that only lists internal links. Do not list parent namespace pages whose only role is restating context already implied by the page title. External URLs stay in the body (e.g. under Answer).
+- Optional `via:: [[Page1]], ...` **only** for what **prompted** adding the page (journal/import/session stub)—not for general related reading.
+- Never modify `tags::` on existing pages. For new pages, optional `tags::` may mirror sibling question pages in the same topic (often `[[Q]]` plus a topic tag); see the type page.
+- `alias::` optional when it matches local question-page patterns.
+
+### Page Shape
+
+- Link: `[[Topic/Q/Question text]]` (multi-segment topics allowed).
+- File: `pages/Topic___Q___Question text.md`; use `%3F` for `?` in filenames when needed.
+- Body: LFM; H1 is the question; optional `## Answer`, `## My Notes`. Use `see-also::` instead of `## Related` when appropriate for internal links.
+
+### Legacy
+
+- Older question pages may omit `logseq-entity::`. Do not bulk-edit unless the author requests migration.
 
 ## Reporting Contract
 
