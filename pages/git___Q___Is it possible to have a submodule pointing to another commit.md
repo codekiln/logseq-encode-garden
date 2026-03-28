@@ -1,4 +1,6 @@
 tags:: [[Question]]
+logseq-entity:: [[Logseq/Entity/question]]
+see-also:: [[langgraph/Platform/Deployment]], [[langgraph/Platform]]
 
 - # Is it possible to have a [[git/submodule]] which points to a different commit of the same git repo?
 	- Use case: [[langgraph/Platform]] allows deploying more than one AI graph at once, as long as there are separately addressable python applications. If it was possible to have a submodule in a `<ai-app-name>-prod` folder which pointed to a specific commit, then two versions of the same application could be accessed in one [[langgraph/Platform/Deployment]].

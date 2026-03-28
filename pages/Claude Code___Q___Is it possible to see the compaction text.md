@@ -1,5 +1,7 @@
 tags:: [[Claude Code]], [[Q]]
 alias:: [[Anthropic/App/Claude Code/Q/Is it possible to see the compaction text]]
+logseq-entity:: [[Logseq/Entity/question]]
+see-also:: [[Claude Code/Command/Slash/compact]], [[Claude Code/How To/Export Conversation to File]], [[Anthropic/YouTube/25/07/Claude Code Best Practices]]
 
 - # Is it possible to see the compaction text in [[Claude Code]]?
 	- ## Answer
@@ -29,7 +31,3 @@ alias:: [[Anthropic/App/Claude Code/Q/Is it possible to see the compaction text]
 		- The original conversation is **not deleted** – it's preserved with a "compact boundary" in the conversation file
 		- This allows you to retrieve details from the original conversation if needed
 		- Compaction can be triggered manually or automatically when context reaches ~95% of the 200,000 token limit
-	- ## Related
-		- [[Claude Code/How To/Export Conversation to File]]
-		- [[Anthropic/YouTube/25/07/Claude Code Best Practices]]
-		- [[Claude Code/Command/Slash/compact]]

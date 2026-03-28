@@ -1,4 +1,6 @@
 tags:: [[Analysis]], [[EdTech/AI/Pedagogy]]
+logseq-entity:: [[Logseq/Entity/question]]
+see-also:: [[US/Gov/ADL]], [[AICC]]
 
 - # What precedents exist for an LMS-agnostic format that an AI could both read and write?
 	- ## [[My Notes]]

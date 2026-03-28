@@ -1,3 +1,6 @@
+logseq-entity:: [[Logseq/Entity/question]]
+see-also:: [[Unix/Pipe]]
+
 - # What is [[zcat]] for in [[Unix]]?
 	- ## Answer
 		- [[AI/Response]]
@@ -6,7 +9,4 @@
 			- **Typical uses**: peek or pipe the contents of **`.gz`** logs without unpacking them (`zcat file.gz | less`), feed decompressed data into **filters**, or chain in **[[Unix/Pipe]]** pipelines.
 			- **Historical / cross-Unix caveat**: on some older or minimal systems, **`zcat`** referred specifically to **`.Z` files** from **`compress(1)`**; on modern desktops **`zcat` is very often the `gzip` tool’s alias** and expects **gzip-format** data (while still often able to decompress **other formats** if the particular `gzip` build supports them — check local **`man gzip`**).
 			- **Close relatives**: **`gzip -dc`**, **`gunzip -c`**, and on many systems **`gzcat`** (same gzip family); **`zstd -dc`** for **`.zst`**, etc., are the analogous pattern for other codecs.
-	- ## Related
-		- [[zcat]]
-		- [[Unix/Pipe]]
-		- [gzip(1) — Debian manpages.org](https://manpages.org/gzip)
+			- External reference: [gzip(1) — Debian manpages.org](https://manpages.org/gzip)
