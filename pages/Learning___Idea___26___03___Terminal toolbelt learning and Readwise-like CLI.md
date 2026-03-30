@@ -2,6 +2,7 @@ tags:: [[Idea]]
 date-created:: [[2026-03-21 Sat]]
 
 - # Terminal-first toolbelt learning: snips, flashcards, coaches, Readwise-style reading
+    - [[CursorAI/CLI/Thread]] `e79ba087-945a-4a4b-a058-ee5b5be43812`
 	- Want external systems that help learn the coding toolbelt end-to-end: Neovim, tmux, ripgrep, lazygit, VS Code, PyCharm, and similar — not only reference, but retention.
 	- Prefer staying in the terminal: take notes from the shell, use `rg` and other CLIs there, and reduce “AI does it for me” in favor of **teaching**.
 	- ## Flashcards
