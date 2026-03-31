@@ -1,0 +1,13 @@
+# Heresy
+	- ## What Yegge means by "heresies"
+		- In [[Person/Steve Yegge]]'s agentic-coding vocabulary, **heresies** are situations where the same kind of truth is represented in **more than one place**—for example tasks or plans living both in human-oriented markdown and in a machine-oriented store (JSONL, SQL, issue rows)—so agents (and people) can **diverge**, **merge-conflict**, or **believe the wrong copy** [^1].
+		- The risk shows up whenever you duplicate workflow state: e.g. instructing agents to ignore `.beads/issues.jsonl` while also relying on another canonical task list, without a disciplined single source of truth [^2].
+	- ## Relation to the rest of his stack
+		- **[[Beads]]** and moving work into issues (often backed by [[Dolt]]) is partly a response to drowning in competing markdown files and reducing that class of failure mode [^3].
+		- **[[AI/Coding/Concept/Land the Plane]]** is complementary: end-of-session cleanup and issue sync reduce drift; heresies are the structural problem duplicate stores create.
+	- ## In this garden
+		- [[Comment/My]] on Beads + Dolt referenced the Snipd clip when discussing tasks stored in two places and merge conflicts [^1], [^2].
+	- ## Footnotes
+		- [^1]: https://share.snipd.com/snip/5c783761-e82a-4258-9938-63994560ae9a
+		- [^2]: https://github.com/steveyegge/beads/issues/2573#issuecomment-4089004854
+		- [^3]: https://www.youtube.com/watch?v=s96O9oWI_tI
