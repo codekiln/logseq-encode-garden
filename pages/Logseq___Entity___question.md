@@ -1,4 +1,4 @@
-- # question
+# question
 	- This page is the standard operating procedure for **question** entities: scoped research questions stored under a topic namespace with a dedicated `/Q/` segment so they stay findable and deduplicable.
 	- ## Examples in this garden
 		- Pages on disk match `pages/*___Q___*.md` (e.g. a tmux question lives as a file whose name contains `___Q___` between the topic prefix and the question slug).
@@ -26,9 +26,10 @@
 		- `alias::` is optional when a longer hierarchical title improves discoverability; follow patterns on nearby question pages.
 	- ## Page shape
 		- First content block: H1 with the question; link key terms to existing pages where it helps.
-		- Typical sections: `## Answer`, `## My Notes` (any may start empty). Use **`see-also::`** instead of **`## Related`** when the only content would be links to other graph pages.
+		- Typical sections: `## My Notes` (may start empty), `## Answer`. Use **`see-also::`** instead of **`## Related`** when the only content would be links to other graph pages.
 		- Use Logseq Flavored Markdown throughout (bullets, headings as bullets, tab nesting, no blank lines between bullets).
-	- ## Source blocks
-		- Do not move source blocks from the journal or source page by default. Move or transplant only when explicitly asked.
-	- ## Legacy instances
-		- Older question pages may lack `logseq-entity::`, `see-also::`, or `via::`. Do not bulk-migrate unless the author requests it; new pages should follow the frontmatter rules above.
+	- ## [[AI/Agent/Guidance]]
+		- ### Journal Entry
+			- When a question is asked, it may have come from an accompanying [[Logseq/Journal]] entry. This should stay intact to preserve the original context in which the question was asked; don't move that block into the question page.
+		- ### Legacy instances
+			- Older question pages may lack `logseq-entity::`, `see-also::`, or `via::`. Do not bulk-migrate unless the author requests it; new pages should follow the frontmatter rules above.

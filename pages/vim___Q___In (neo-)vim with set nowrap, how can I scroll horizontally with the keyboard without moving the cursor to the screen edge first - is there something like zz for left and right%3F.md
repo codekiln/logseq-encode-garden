@@ -1,0 +1,15 @@
+logseq-entity:: [[Logseq/Entity/question]]
+see-also:: [[nvim]], [[vim/Q/How can I configure (neo-)vim so that by default it wraps in a way that takes word boundaries into account, rather than splitting words in the middle?]]
+via:: [[2026-04-01 Wed]]
+
+- # In (neo-)vim with set nowrap, how can I scroll horizontally with the keyboard without moving the cursor to the screen edge first - is there something like zz for left and right?
+	- Applies to [[vim]] and [[nvim]] with **`nowrap`** (same Normal-mode commands).
+	- ## Answer
+		- [[AI/Response]]
+			- **Scroll the window directly (no need to hit the edge first):** With **`wrap` off**, use **`zL`** to shift the view **half a window-width** “right” (text moves left on screen) and **`zH`** for the opposite. For smaller steps, **`zl`** / **`zh`** (or **`z`** + **Left** / **Right**) move the view by **`count`** columns (default 1). These are documented under [`:help scroll-horizontal`](https://vimhelp.org/scroll.txt.html#scroll-horizontal).
+			- **Cursor vs. view:** For **`zl` / `zh` / `zL` / `zH`**, the help says the **cursor follows the view**; if the cursor would leave the visible area, Vim moves it to the nearest on-screen character. For **`zs` / `ze`**, the **cursor stays on the same buffer column** while the text scrolls: **`zs`** puts the cursor at the **left** edge of the window, **`ze`** at the **right** edge—useful for alignment, not really “nudge the view from the middle.”
+			- **No built-in `zz` for columns:** Vertical **`zz` / `zt` / `zb`** reposition the **line** the cursor is on; there is **no first-class Normal-mode command** that centers the **cursor’s column** in the window the way **`zz`** centers the line. People who want that usually **map** something that combines **`normal!`** / **`exec`** with **`wincol()`**, **`winwidth(0)`**, and a horizontal scroll command (or use plugins).
+			- **Make edge-triggered scrolling less painful:** If the annoyance is **`h` / `l` / `w`** scrolling only when the cursor hits the margin, raise **`sidescrolloff`** so Vim keeps the cursor **`N`** columns away from the left/right edge (similar spirit to **`scrolloff`** vertically). Tune **`sidescroll`** for how many columns jump when the window does scroll. See [`:help 'sidescrolloff'`](https://vimhelp.org/options.txt.html#'sidescrolloff') and [`:help 'sidescroll'`](https://vimhelp.org/options.txt.html#'sidescroll').
+			- **Mouse / GUI:** Horizontal scroll wheel events map to column scrolling when **`nowrap`** is on (see the same **scroll-horizontal** / mouse-wheel sections in [`:help scroll.txt`](https://vimhelp.org/scroll.txt.html)).
+			- **Repeating `zl` / `zh`:** **`.`** repeats the last **change** (text/operator), not arbitrary Normal-mode actions—see [`:help .`](https://vimhelp.org/repeat.txt.html#.)—so **`zl`** then **`.`** will not replay the scroll. Use a **count** instead: **`10zl`** applies ten column steps in one go (same for **`zh`**). **`@:`** repeats the last **Ex** line, not **`zl`**. If you want a single key for “bigger nudge,” add **`nnoremap`** bindings (e.g. **`<leader>l`** → **`5zl`**).
+	- ## My Notes
