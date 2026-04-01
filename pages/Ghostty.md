@@ -30,7 +30,7 @@ see-also:: [[Terminal/Comparison]]
 			    };
 			  };
 			  ~~~
-		- `theme` uses a [[Catppuccin]] flavor; see [[Catppuccin]] for other flavors and wiring [[Neovim]], [[tmux]], [[yazi]], and other terminals.
+		- `theme` uses a [[Catppuccin]] flavor; see [[Catppuccin]] for other flavors and wiring [[nvim]], [[tmux]], [[yazi]], and other terminals.
 	- ## Notable Features
 		- Native UI on each platform (not electron / cross-platform widget toolkit)
 		- Built-in tabs and splits

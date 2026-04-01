@@ -1,5 +1,5 @@
 created-by:: [[Person/Josean Martinez]]
-tags:: [[Neovim]], [[Lazygit]], [[YouTube]]
+tags:: [[nvim]], [[Lazygit]], [[YouTube]]
 
 - # [Lazygit - The Best Way To Use Git On The Terminal & Neovim - YouTube](https://www.youtube.com/watch?v=Ihg37znaiBo)
 	- ## [[My Notes]]

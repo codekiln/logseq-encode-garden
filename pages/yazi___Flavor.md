@@ -1,0 +1,5 @@
+- [yazi - "Flavor"](https://yazi-rs.github.io/docs/flavors/overview)
+	- a [[yazi/Theme]] is the user's own theme, that is, `~/.config/yazi/theme.toml`
+	- a "flavor" is a pre-made Yazi theme
+		- a user can layer their preeferences on top
+			- [[My Note]] it sounds a bit like [[nvim/Distro]]

@@ -1,0 +1,20 @@
+- [[Keyshort]] [[eilmeldung]] [[eilmeldung/Keyshort]]
+	- Source: [eilmeldung keybindings](https://github.com/christo-auer/eilmeldung/blob/main/docs/keybindings.md)
+	- **Toggle zen mode** #card
+		- Shortcut: `z`
+		- Context: Reading / article view
+		- Description: Toggle distraction-free mode, hiding all panels except the article content.
+	- Opening links in articles with hints
+		- Source: [Opening links in articles with hints](https://github.com/christo-auer/eilmeldung/blob/main/docs/keybindings.md#opening-links-in-articles-with-hints)
+		- **Open a hinted article link in the browser** #card
+			- Shortcut: `; ;`
+			- Context: Article content with visible link hints
+			- Description: Opens the hinted link in the web browser after you enter the hint code.
+		- **Share the URL for a hinted article link** #card
+			- Shortcut: `; s`
+			- Context: Article content with visible link hints
+			- Description: Shares the hinted link URL by first choosing a share target and then entering the hint code.
+		- **Copy the URL for a hinted article link** #card
+			- Shortcut: `; y`
+			- Context: Article content with visible link hints
+			- Description: Copies the hinted link URL to the clipboard after you enter the hint code.

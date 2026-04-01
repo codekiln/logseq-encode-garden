@@ -18,4 +18,4 @@ alias:: [[Programming/Language/Lua]]
 		- Complex package-management and tooling workflows compared with larger ecosystems.
 		- Readability and maintainability when code leans too heavily on dynamic patterns and table metaprogramming.
 	- ## Related
-		- Often shows up in [[Neovim]] configuration and embedded scripting environments like [[Monome/Norns]].
+		- Often shows up in [[nvim]] configuration and embedded scripting environments like [[Monome/Norns]].

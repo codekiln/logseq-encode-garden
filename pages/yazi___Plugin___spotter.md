@@ -1,0 +1,3 @@
+- yazi has a [plugin](https://yazi-rs.github.io/docs/term/#plugin-system) for looking up the metadata of a single file.
+	- > spotter: A [[Lua]] plugin used to spot the metadata of a single file.
+-

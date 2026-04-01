@@ -1,0 +1,10 @@
+- # What does it mean when a W appears next to the line number in a document in [[nvim]]?
+	- ## Answer
+		- [[AI/Response]]
+			- The **W** is the default **sign-column** marker for a **warning**-severity diagnostic from Neovim’s diagnostics system (`vim.diagnostic`). It usually comes from an **LSP server**, **linter**, or another tool that reports diagnostics into a buffer.
+			- Neovim defines default sign text per severity: **E** (error), **W** (warn), **I** (info), **H** (hint). So **W** specifically means **WARN**, not (for example) a modified file flag.
+			- The symbol appears in the **sign column** (gutter). If your UI shows the number column and sign column together, it sits beside the line numbers, which is why it reads as “next to” the line number.
+			- Useful built-ins: move between diagnostics with `]d` / `[d`; open the full message with `vim.diagnostic.open_float()` (often bound in configs); customize or hide signs via `vim.diagnostic.config()` (see `signs.text` per severity).
+			- ### Sources
+				- [Neovim help: Diagnostic signs (default E/W/I/H)](https://neovim.io/doc/user/diagnostic.html#diagnostic-signs)
+				- [Neovim help: `vim.diagnostic` / severity](https://neovim.io/doc/user/diagnostic.html#diagnostic-severity)

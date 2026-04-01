@@ -1,6 +1,6 @@
-- # How do I use [[Glow]] as a default pager for markdown documents when I'm in a terminal?
+# How do I use [[Glow]] as a default pager for markdown documents when I'm in a terminal?
 	- ## My Notes
-		- Related enjoyment / context: journal [[2026-03-23 Mon]] (“starting to enjoy [[Glow]]”).
+		- [[2026-03-23 Mon]] (“starting to enjoy [[Glow]]”).
 	- ## Answer
 		- [[AI/Response]]
 			- **Two different meanings of “pager”** matter here: (1) when **you run `glow`**, you can make *its* output go through a pager; (2) setting **`PAGER=glow`** makes *other programs* call `glow` the way they call `less` — that second case is only sometimes safe, because many tools pass **`less`-specific flags** or **non‑Markdown** content to `$PAGER`.

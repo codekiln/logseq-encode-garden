@@ -1,7 +1,7 @@
-- # software-project
+# software-project
 	- This page is the standard operating procedure for how we do knowledge gardening for software in this garden. Software here means applications for end users, libraries, frameworks, CLIs, desktop or web apps, editors, runtimes, and the like. Below: how we name them, what the page looks like, how we handle creators and duplicates, and links to examples already in the garden.
 	- ## Examples in this garden
-		- [[Yamtrack]], [[Neovim]], [[Lazygit]], and [[tmux]] show how we name and shape software-project pages. Use them as reference.
+		- [[Yamtrack]], [[nvim]], [[Lazygit]], and [[tmux]] show how we name and shape software-project pages. Use them as reference.
 	- ## How to name the main page for a software project
 		- Give a software entity a root-level (one-word or short) main page when: (1) its primary name is not confusing, and (2) it is either reputable or nascent but likely to "grow branches"—we'll add sub-namespaces for shortcuts, config, docs, etc. A short main name leaves room; long names (`owner/repo` or `person/project`) make every child path longer and harder to work with. Example: [[Lazygit]] rather than `Person/Jesse Duffield/GitHub/Lazygit`. Aliases can point from other namespaces (e.g. `Programming/Language/Rust`, `Person/Name/GitHub/Project`) to that main page when useful.
 		- When we're interested in a company or a person, we may instead keep some of their projects under a sub-namespace (e.g. `Anthropic/App/Some Tool`) for situational awareness. If one of those sub-namespace pages is a software entity and later becomes heavily used in the garden, refactor it: give it a root-level page and add an alias from the old path. Example: this garden originally had `Anthropic/App/Claude Code` because the focus was on the company; after more content and Claude Code becoming a cultural force, it got its own [[Claude Code]] page with an alias to the old location.

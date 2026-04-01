@@ -1,4 +1,4 @@
-- # color-theme
+# color-theme
 	- This page is the standard operating procedure for **color theme** entities: coordinated palette families (foreground, background, accent colors) reused across terminals, editors, multiplexers, file managers, and other UI tools. A color-theme instance is the *aesthetic system* (e.g. [[Catppuccin]] with subpages [[Catppuccin/Latte]], [[Catppuccin/Frappe]], [[Catppuccin/Macchiato]], [[Catppuccin/Mocha]]); individual ports often stay **software-project** pages that link back to the theme hub.
 	- ## Examples in this garden
 		- [[Catppuccin]] — hub with palette overview asset, stack matrix, and flavor subpages for per-variant config ids and previews.
@@ -18,6 +18,6 @@
 		- Add only other frontmatter that is actually known (e.g. `date-created::` for when the theme family was first published, `see-also::` for peer themes). Do not modify **`tags::`** on existing pages when editing; follow garden tagging rules for new pages.
 	- ## Page shape
 		- File: `pages/<ThemeName>.md` for the canonical short name. First block: H1 with a link to the official site or palette repo.
-		- Keep a **lean hub**: identity, **flavor index** (links to `[[Theme/Flavor]]` subpages or inline list if no subpages), optional **overview image** in `assets/` with source footnote, **palette reference** (link out), **stack matrix** (per app: mechanism, config hook, links to [[Ghostty]], [[Neovim]], [[tmux]], [[yazi]], etc., and to your config subpages when detail lives there). Put per-flavor detail (ids, previews) on subpages when they exist.
+		- Keep a **lean hub**: identity, **flavor index** (links to `[[Theme/Flavor]]` subpages or inline list if no subpages), optional **overview image** in `assets/` with source footnote, **palette reference** (link out), **stack matrix** (per app: mechanism, config hook, links to [[Ghostty]], [[nvim]], [[tmux]], [[yazi]], etc., and to your config subpages when detail lives there). Put per-flavor detail (ids, previews) on subpages when they exist.
 	- ## Source blocks
 		- Do not move source blocks from the journal or source page by default. Move or transplant only when explicitly asked.

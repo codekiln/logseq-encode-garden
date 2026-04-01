@@ -15,7 +15,7 @@ see-also:: [[Ghostty]], [[Kitty]], [[WezTerm]], [[Zellij]]
 		- Port directory: [github.com/catppuccin/catppuccin — ports](https://github.com/catppuccin/catppuccin#-ports)
 	- ## Stack matrix (how to wire it)
 		- **[[Ghostty]]** — built-in themes; set `theme = "catppuccin-<flavor>"` (e.g. [[Catppuccin/Mocha]] → `catppuccin-mocha`) in Ghostty config or `programs.ghostty.settings` in Nix/home-manager — see [[Ghostty]]
-		- **[[Neovim]]** — main port [catppuccin/nvim](https://github.com/catppuccin/nvim); enable colorscheme `catppuccin` and set `flavour` to `latte` / `frappe` / `macchiato` / `mocha` in plugin setup (see each [[Catppuccin/Latte]] … [[Catppuccin/Mocha]] for the keyword)
+		- **[[nvim]]** — main port [catppuccin/nvim](https://github.com/catppuccin/nvim); enable colorscheme `catppuccin` and set `flavour` to `latte` / `frappe` / `macchiato` / `mocha` in plugin setup (see each [[Catppuccin/Latte]] … [[Catppuccin/Mocha]] for the keyword)
 		- **[[tmux]]** — common pattern: [catppuccin/tmux](https://github.com/catppuccin/tmux) via TPM; set flavour variable (e.g. `@catppuccin_flavour`) to match the flavor name — detail on [[tmux/Config]] or [[tmux/oh-my-tmux]] as you maintain it
 		- **[[yazi]]** — use a Catppuccin flavor pack (e.g. [catppuccin/yazi](https://github.com/catppuccin/yazi)) or equivalent `theme` / flavor configuration in `yazi.toml` per upstream instructions
 	- ## Other terminals in this garden

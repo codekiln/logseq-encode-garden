@@ -1,0 +1,3 @@
+# Neovim Distributions
+	- [[LazyVim]]
+	- [[AstroNvim]]

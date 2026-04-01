@@ -1,15 +1,15 @@
-# Report - [[Neovim]] parity with [[PyCharm]] for symbol navigation and reference copying
+# Report - [[nvim]] parity with [[PyCharm]] for symbol navigation and reference copying
 	- ## Goal
-		- Determine how to reproduce (or closely approximate) [[PyCharm]] workflows in [[Neovim]] for:
+		- Determine how to reproduce (or closely approximate) [[PyCharm]] workflows in [[nvim]] for:
 			- "Find usages" of symbol under cursor
 			- "Copy reference" for symbol under cursor as a dotted [[Python]] import path
 	- ## [[ChatGPT/Deep Research/Query]]
-		- You are doing deep technical research on modern [[Neovim]] (2025-2026 era) with built-in [[LSP]] support and ecosystem plugins.
+		- You are doing deep technical research on modern [[nvim]] (2025-2026 era) with built-in [[LSP]] support and ecosystem plugins.
 		- I want concrete, battle-tested ways to reproduce two [[PyCharm]] features for [[Python]] development:
 			- 1. Find usages of the symbol under cursor (class, function, method, variable, imported symbol), with fast navigation across a medium-to-large codebase.
 			- 2. Copy a dotted Python reference path for the symbol under cursor (for example: `package.subpackage.module.ClassName` or `package.module.function_name`) with minimal friction.
 		- Research questions:
-			- Which combinations of [[Neovim]] plugins and [[LSP]] servers are most commonly used for high-quality "find references/usages" in [[Python]]?
+			- Which combinations of [[nvim]] plugins and [[LSP]] servers are most commonly used for high-quality "find references/usages" in [[Python]]?
 			- How do these options compare in correctness, speed, UX, and setup complexity?
 			- What exact keymap patterns do experienced users apply for "symbol under cursor -> usages list -> jump and backtrack" workflows?
 			- What options exist to copy the dotted Python path for the symbol under cursor?
@@ -20,7 +20,7 @@
 		- Required output format:
 			- 1. Executive summary with a recommended default stack for most users.
 			- 2. Comparison table of viable stacks:
-				- [[Neovim]] distribution/baseline config assumptions
+				- [[nvim]] distribution/baseline config assumptions
 				- Plugin set
 				- LSP server
 				- "Find usages" quality
@@ -38,7 +38,7 @@
 			- 6. Troubleshooting section for common "no references found" or incorrect path issues.
 		- Source quality constraints:
 			- Prefer primary sources in this order:
-				- Official docs/repos for [[Neovim]], plugins, and language servers
+				- Official docs/repos for [[nvim]], plugins, and language servers
 				- Maintainer issue threads/discussions
 				- High-signal community writeups with reproducible configs
 			- Avoid stale advice older than 2023 unless still explicitly valid.
@@ -49,22 +49,22 @@
 			- Prioritize low-latency navigation and minimal keystrokes over flashy UI.
 	- ## [[ChatGPT/Deep Research/Response]]
 		- ## Executive summary
-			- A [[Neovim]] setup can get close to [[PyCharm]] for "find usages", but indexing depth is bounded by the Python language server, not by UI plugins.[^1] [^12]
+			- A [[nvim]] setup can get close to [[PyCharm]] for "find usages", but indexing depth is bounded by the Python language server, not by UI plugins.[^1] [^12]
 			- Recommended default stack for terminal-first [[Python]] on macOS:
-				- [[Neovim]] >= 0.11 built-in LSP + `nvim-lspconfig` defaults.[^3] [^24]
+				- [[nvim]] >= 0.11 built-in LSP + `nvim-lspconfig` defaults.[^3] [^24]
 				- `basedpyright` as default server, with optional fallback to `pyright`.[^4] [^13]
 				- `fzf-lua` for low-latency references list and jump flow.[^5] [^15]
 				- Optional `trouble.nvim` for persistent reference/result panes.[^6]
 				- `python-copy-reference.vim` or `copy-python-path.nvim` for dotted reference copy workflows.[^7] [^8]
 			- Important caveat: pyright maintainer guidance and open issues indicate reference-finding is limited compared with Pylance indexing behavior.[^1] [^11] [^12]
 		- ## Viable stacks
-			- [[Neovim]] + `basedpyright` + `fzf-lua` + `python-copy-reference.vim`
+			- [[nvim]] + `basedpyright` + `fzf-lua` + `python-copy-reference.vim`
 				- Best balance of speed, setup effort, and practical workflow parity.[^5] [^7] [^13]
-			- [[Neovim]] + `pyright` + [[Telescope]] + copy-reference plugin
+			- [[nvim]] + `pyright` + [[Telescope]] + copy-reference plugin
 				- Strong preview UX and common community defaults, with same server limits.[^16] [^17] [^23]
 			- [[LazyVim]] Python extra + `pyright` or `basedpyright`
 				- Lowest setup overhead if distro defaults are acceptable.[^18] [^19]
-			- [[Neovim]] + `jedi-language-server`
+			- [[nvim]] + `jedi-language-server`
 				- Can work for some dynamic codebases, but environment/path configuration becomes critical.[^20] [^45] [^46]
 		- ## Implementation notes
 			- Use workspace-aware analysis for cross-file references in medium/large repos where possible.[^13] [^38]

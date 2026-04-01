@@ -1,0 +1,5 @@
+- [[Keyshort]] [[yazi]] [[yazi/Keyshort]]
+	- **Open help from the file list** #card
+		- Shortcut: `~` (tilde) or `F1`
+		- Context: File list / manager pane (`[mgr]` layer, default keymap)
+		- Description: Opens Yazi’s help overlay listing actions and keys for the current UI layer. Same bindings repeat in other layers (tasks, spot, pick, input, confirm, cmp) with layer-specific entries. See [keymap.toml | Yazi](https://yazi-rs.github.io/docs/configuration/keymap/) and [preset keymap-default.toml](https://github.com/sxyazi/yazi/blob/shipped/yazi-config/preset/keymap-default.toml).

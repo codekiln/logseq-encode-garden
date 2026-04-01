@@ -1,0 +1,5 @@
+- [[Keyshort]] [[yazi]] [[yazi/Keyshort]]
+	- **Comma prefix for default sort chords** #card
+		- Shortcut: `,` (comma), then a second key (two-key sequence)
+		- Context: File list / manager pane (`[mgr]` layer, default keymap)
+		- Description: The shipped preset groups **sort** bindings under `,` as the first key—for example `,` then `m` for modification time. This page treats **comma** as the conventional “leader” for those chords (not a separate `leader` action in Yazi). See the **Sorting** section of [preset keymap-default.toml](https://github.com/sxyazi/yazi/blob/shipped/yazi-config/preset/keymap-default.toml).

@@ -1,1 +1,7 @@
 - {{cards [[yazi/Keyshort]] }}
+	- [[yazi/Keyshort/Toggle hidden files]]
+	- [[yazi/Keyshort/Help/Open]]
+	- [[yazi/Keyshort/Help/Filter]]
+	- [[yazi/Keyshort/Leader]]
+	- [[yazi/Keyshort/Sort/Time/Modification]]
+	- [[yazi/Keyshort/Sort/Time/Birth]]

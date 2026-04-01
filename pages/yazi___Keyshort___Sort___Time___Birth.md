@@ -1,0 +1,9 @@
+- [[Keyshort]] [[yazi]] [[yazi/Keyshort]]
+	- **Sort by birth time (normal order)** #card
+		- Shortcut: `,` `b` (comma, then lowercase `b`)
+		- Context: File list / manager pane (default keymap)
+		- Description: Runs `sort btime --reverse=no` and sets **linemode** to `btime`. Pair with `,` `B` for reversed order. Birth time availability depends on the filesystem. See [keymap — mgr.sort](https://yazi-rs.github.io/docs/configuration/keymap/#mgrsort) and [preset keymap-default.toml](https://github.com/sxyazi/yazi/blob/shipped/yazi-config/preset/keymap-default.toml).
+	- **Sort by birth time (reverse order)** #card
+		- Shortcut: `,` `B` (comma, then uppercase `B` / Shift+b)
+		- Context: File list / manager pane (default keymap)
+		- Description: Runs `sort btime --reverse=yes` and sets **linemode** to `btime`. See [preset keymap-default.toml](https://github.com/sxyazi/yazi/blob/shipped/yazi-config/preset/keymap-default.toml).

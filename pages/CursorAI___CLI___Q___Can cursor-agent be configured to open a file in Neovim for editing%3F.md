@@ -1,4 +1,4 @@
-- # Can [[CursorAI/CLI]] (cursor-agent) be configured to open a file in [[Neovim]] for editing?
+# Can [[CursorAI/CLI]] (cursor-agent) be configured to open a file in [[nvim]] for editing?
 	- For example, if the AI lists files modified, can cursor-agent CLI be configured so that clicking the file paths in the terminal opens them in Neovim? Or is there a command that does the same?
 	- ## Answer
 		- [[AI/Response]]
@@ -13,4 +13,4 @@
 	- ## Related
 		- [[CursorAI/CLI]]
 		- [[CursorAI/CLI/Q/Can cursor-agent CLI accept image input? If so, how?]]
-		- [[Neovim]]
+		- [[nvim]]
