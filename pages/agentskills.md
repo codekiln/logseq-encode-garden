@@ -1,0 +1,3 @@
+- github: [agentskills/agentskills: Specification and documentation for Agent Skills](https://github.com/agentskills/agentskills)
+- Web: [Overview - Agent Skills](https://agentskills.io/home)
+-
