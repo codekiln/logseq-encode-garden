@@ -1,0 +1,16 @@
+- [[Person/Andrej Karpathy]] [here](https://youtu.be/kwSVtQ7dziU?t=3707)
+	- Projects like **Micrograd, NanoGPT, and now MicroGPT** are all part of a long-running obsession to **compress LLMs down to their conceptual essence**.
+	- The core insight: the *actual algorithm* behind LLM training is **surprisingly small (~200 lines of Python)**. Most real-world complexity is just **engineering for speed and scale**, not conceptual necessity.
+	- Historically, he would explain these systems directly to humans (videos, walkthroughs), but that’s changing.
+	- Now his shift is:
+		- **Don’t explain to humans → explain to agents**
+		- If an agent understands the code, it can **translate, teach, and adapt explanations infinitely better than a static tutorial**
+	- This leads to a new model of education:
+		- Instead of docs for humans → **docs for agents (e.g., markdown)**
+		- Instead of lectures → **“skills” that guide how an agent should teach something**
+		- The agent becomes the **interface layer between knowledge and the learner**
+	- His role changes too:
+		- Humans contribute the **hard, irreducible insights** (like designing MicroGPT itself)
+		- Everything else (explanation, onboarding, teaching) gets **outsourced to agents**
+	- The punchline:
+		- *“The things agents can do, they’ll do better than you. The things they can’t do — that’s your job.”*
