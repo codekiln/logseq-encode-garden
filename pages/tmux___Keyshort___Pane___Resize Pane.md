@@ -3,8 +3,8 @@
 	  card-last-interval:: -1
 	  card-repeats:: 1
 	  card-ease-factor:: 2.5
-	  card-next-schedule:: 2026-02-19T05:00:00.000Z
-	  card-last-reviewed:: 2026-02-18T09:34:37.831Z
+	  card-next-schedule:: 2026-04-03T04:00:00.000Z
+	  card-last-reviewed:: 2026-04-02T05:59:14.016Z
 	  card-last-score:: 1
 		- Shortcut:
 			- `<prefix> Alt-Up` resize pane up
