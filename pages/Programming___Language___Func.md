@@ -4,7 +4,6 @@ alias:: [[Software/Paradigm/Functional]], [[Functional Programming Language]]
 see-also:: [[Software/Paradigm/Object-Oriented]], [[Programming/Language/General Purpose]], [[Declarative]]
 
 - # Functional programming
-	- This page is the canonical on-disk home for **functional programming** as both a **paradigm** and a **family of languages**. The title **[[Software/Paradigm/Functional]]** is an **`alias::`** of this page so paradigm-oriented links land here without a separate file under `Software/Paradigm/`.
 	- ## Overview
 		- Functional programming treats **computation as the evaluation of expressions** built from **pure functions**, **immutable data**, and **explicit composition** (higher-order functions, pipelines, recursion) rather than as sequences of statements that mutate shared state.
 		- It matters because it narrows the space of what a program can do between observation points: fewer hidden side effects often yields **easier reasoning**, **safer concurrency**, and **more modular** reuse—at the cost of different idioms and sometimes different performance tradeoffs than imperative or object-oriented styles.

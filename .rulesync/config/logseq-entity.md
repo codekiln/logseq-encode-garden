@@ -196,8 +196,7 @@ Strong signals:
 
 ### Canonical Naming
 
-- Programming-language-related concepts often live on disk under `[[Programming/Language/...]]` with optional `alias:: [[Software/Paradigm/...]]` (or similar) so one file answers under multiple titles.
-- Other domains may use `Topic/.../Concept/...` or hub pages; follow the concept type page for examples.
+- Use namespaces and titles consistent with sibling pages in the same domain; see existing concept entities for patterns.
 
 ### Frontmatter
 

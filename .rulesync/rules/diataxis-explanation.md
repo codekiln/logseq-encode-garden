@@ -23,7 +23,7 @@ actions:
 
       ## Authority order
 
-      1. Read **`[[Logseq/Entity/concept]]`** in the graph (`pages/Logseq___Entity___concept.md`) for **instance SOP**: frontmatter (`logseq-entity::`, optional `see-also::`, `via::`, `alias::`), when to use concept vs term entities, and recommended body sections.
+      1. Read **`[[Logseq/Entity/concept]]`** in the graph (`pages/Logseq___Entity___concept.md`) for **instance SOP**: frontmatter (`logseq-entity::`, optional `see-also::`, `via::`), when to use concept vs term entities, and recommended body sections.
       2. Read **`[[Diataxis/Explanation]]`** (aliases **`[[Diataxis/Concept]]`**) for Diataxis vocabulary in this graph.
       3. Read **`[[Logseq/Entity]]`** for shared entity conventions (`see-also::` vs `## Related`, `via::`, etc.).
 
@@ -33,7 +33,6 @@ actions:
       - **Logseq Flavored Markdown**: bullets, headings as bullets, tab nesting, no blank lines between bullets.
       - **Tags**: include **`[[Diataxis/Concept]]`** (or **`[[Diataxis/Explanation]]`**, same cluster via alias) when adding tags to new concept-shaped pages; **never remove** existing `tags::` without explicit author instruction.
       - **Related graph pages**: use **`see-also::`** in frontmatter (strongest tie first); avoid a **`## Related`** section that only lists internal links unless the author asks.
-      - **Programming-language paradigms**: canonical files live under **`Programming/Language/...`**; **`Software/Paradigm/...`** titles are optional **`alias::`** targets—see **`[[Logseq/Entity/concept]]`** examples.
 
       ## Rulesync note
 

@@ -1,30 +1,26 @@
 # concept
 	- This page is the standard operating procedure for **concept** entities: understanding-oriented pages that follow the garden’s Diataxis-style shape (aligned with [[Diataxis/Concept]] / [[Diataxis/Explanation]]). Paradigms, architectural lenses, and other “big ideas” you explain rather than only define.
 	- ## Examples in this garden
-		- **Functional paradigm (canonical on disk):** [[Programming/Language/Func]] with **`alias:: [[Software/Paradigm/Functional]]`** so paradigm links and language-subtree links are one node.
-		- **Object-oriented paradigm (canonical on disk):** [[Programming/Language/Concept/Object-Oriented]] with **`alias:: [[Software/Paradigm/Object-Oriented]]`**.
-		- Other concept pages may live under `Topic/.../Concept/...` or domain hubs such as [[Programming/Language]]; use **`alias::`** when the same entity should appear under an alternate namespace (e.g. `Software/Paradigm/...` titles) without a second file.
+		- [[Programming/Language/Func]]
+		- [[Programming/Language/Concept/Object-Oriented]]
 	- ## When we treat something as a concept entity
 		- Strong signals: the page’s purpose is **understanding**—what something is, why it matters, how it relates to neighboring ideas—not primarily a how-to, tutorial walkthrough, or lookup reference.
 		- Good fit: programming paradigms, frameworks of thought, architectural patterns explained in prose.
 		- Not a concept entity: short glossary stubs better modeled as **term** entities; step procedures (how-to); bare link lists; **question** entities (use [[Logseq/Entity/question]] and `/Q/` naming).
-	- ## Canonical naming and on-disk home (programming languages)
-		- Prefer **`[[Programming/Language/...]]`** as the **file** location for language-related concepts. Optional **`alias:: [[Software/Paradigm/...]]`** (or other paths) when you want the same entity reachable under a paradigm-oriented title—**one file**, multiple graph titles.
-		- Do **not** maintain a separate `pages/Software___Paradigm___*.md` file when that title is already an alias of a `Programming/Language/...` page.
 	- ## Finding and deduplicating
 		- Follow the logseq-entity skill reference `entity-search-and-dedup.md` (configuration first, then ordered search).
-		- Search order hints: exact title, **`alias::`** targets, normalized topic phrases, parent namespace siblings.
+		- Search order hints: exact title, alternate titles from frontmatter, normalized topic phrases, sibling pages in the same topic area.
 		- Classify as: **existing**, **similar** (needs human judgment), **new**, or **blocked**.
 	- ## Frontmatter
 		- On instances, set **`logseq-entity::`** to a link to **this** entity-type page so backlinks list all concept entities.
-		- Optional **`see-also:: [[Page1]], [[Page2]], ...`** — internal pages worth reading next (**strongest tie first**). Do **not** list links that only restate **parent namespace** context implied by the title. Do **not** link an **`alias::`** twin of the same page (same node). Prefer **`see-also::`** over a **`## Related`** section that is only internal wikilinks. External URLs stay in the body.
+		- Optional **`see-also:: [[Page1]], [[Page2]], ...`** — internal pages worth reading next (**strongest tie first**). Do **not** list links that only restate **parent namespace** context implied by the title. Do **not** use **`see-also::`** for another title that already resolves to the same page. Prefer **`see-also::`** over a **`## Related`** section that is only internal wikilinks. External URLs stay in the body.
 		- Optional **`via:: [[Page1]], ...`** — only what **prompted** creating or heavily revising the page (journal, import, session)—not general “see also.”
 		- **`tags::`:** For new or updated concept pages, include **`[[Diataxis/Concept]]`** (equivalently the [[Diataxis/Explanation]] cluster via alias). Never remove existing tags on legacy pages unless the author explicitly asks.
-		- **`alias::`** when the same entity should answer under another title (paradigm path vs language path, etc.).
+		- Optional **`alias::`** and other page attributes follow normal garden naming patterns—this type page does not prescribe where topics live on disk.
 	- ## Page shape (body)
 		- Use Logseq Flavored Markdown (bullets, headings as bullets, tab nesting, no blank lines between bullets).
 		- Recommended sections (Diataxis explanation style): **Overview**, **Context**, **Key Principles**, **Mechanism**, **Examples**, **Misconceptions**. Adapt headings to the topic; not every section must be long.
 		- First heading after frontmatter: H1 matching the page’s primary topic.
-	- ## Relationship to Diataxis and the graph
+	- ## Relationship to Diataxis
 		- Diataxis framing in the graph: [[Diataxis/Explanation]] (aliases [[Diataxis/Concept]]). This type page is the **operational** template; those pages are the **vocabulary** of the framework.
 		- Agent rules in **Rulesync** should point here rather than duplicating the full template; regenerate tool outputs after changing `.rulesync/rules/diataxis-explanation.md`.

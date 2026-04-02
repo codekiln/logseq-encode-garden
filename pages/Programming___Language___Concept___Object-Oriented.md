@@ -4,7 +4,6 @@ alias:: [[Software/Paradigm/Object-Oriented]]
 see-also:: [[Programming/Language/Func]], [[Programming/Language/General Purpose]]
 
 - # Object-oriented programming
-	- Canonical on-disk page under **[[Programming/Language/Concept/Object-Oriented]]**; **[[Software/Paradigm/Object-Oriented]]** is an **`alias::`** so paradigm-oriented links resolve here without a separate `Software/Paradigm/` file.
 	- ## Overview
 		- Object-oriented programming (OOP) organizes programs around **objects**: bundles of **state** (fields) and **behavior** (methods or messages), grouped by **classes** or prototypes, with **polymorphism** so the same interface can name different implementations.
 		- It matters because many problem domains map naturally to “things” with lifecycles (UI widgets, accounts, documents); OOP supports **encapsulation** (hide invariants behind interfaces) and **substitutability** (program to abstractions).
