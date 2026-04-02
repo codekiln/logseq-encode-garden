@@ -1,5 +1,5 @@
 tags:: [[Term]]
-alias:: [[Programming/Language/DSL]]
+alias:: [[Programming/Language/DSL]], [[Domain Specific Language]]
 
 - # Domain-specific languages (DSLs)
 	- Languages designed for specific tasks/domains.

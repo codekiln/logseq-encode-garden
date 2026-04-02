@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/software-project]]
 created-by:: [[Person/raf]]
 
 - # [nvf](https://github.com/NotAShelf/nvf)
-	- A highly modular, extensible, and distro-agnostic [[nvim]] configuration framework for [[Nix]]/[[NixOS]].
+	- A highly modular, extensible, and distro-agnostic [[nvim]] configuration framework for [[Nix]]/[[Nix/OS]].
 	- Documentation: https://nvf.notashelf.dev
 	- ## Key Features
 		- Declarative [[nvim]] configuration using [[Nix]]

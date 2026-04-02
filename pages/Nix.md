@@ -1,0 +1,9 @@
+- [Nix & NixOS | Declarative builds and deployments](https://nixos.org/)
+	- Nix is weird. It's a lot of things. It's
+		- a [[Functional Programming Language]] - [[Nix/Lang]]
+			- this is a [[DSL]] specifically oriented towards solving the problem of execution context reproducibility in the domain of [[Package/Management]]
+		- a [[Package Manager]] - [[Nix/Pkgs]]
+			- `nixpkgs` is a package manager that abstracts away other package managers. This means th at npm, pypi, system packages, everything can be represented in it.
+			- Packages are packaged up, and in the case of [[Nix/home-manager]]
+		- an [[Operating System]] - [[Nix/OS]]
+			- while it's not unrelated to linux, `NixOS` is *very different* than typical [[Linux/Distro]]s; it's a whole operating system designed around the idea that [[nixpkgs]] and [[Nix/Lang]] can determine the entire configuration of your operating system.

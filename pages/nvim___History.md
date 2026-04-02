@@ -1,0 +1,8 @@
+- # Neovim history
+	- **[[nvim]]** emerged in **2014** as a **community fork of [[vim]]**, motivated by limits in Vim’s then-development model and a desire for built-in **async** tooling, better **testability**, first-class **[[Lua]]**, and defaults closer to what modern users expect—without abandoning Vim’s modal editing model.
+	- ## Creators and early leadership (selected)
+		- [[Person/Thiago de Arruda Padilha]] — initiated the public fork and much of the early technical direction.
+		- [[Person/Justin M. Keyes]] — core maintainer and long-standing project leadership (releases, design, and day-to-day stewardship).
+	- ## References
+		- [Neovim — home](https://neovim.io/)
+		- [neovim/neovim](https://github.com/neovim/neovim)

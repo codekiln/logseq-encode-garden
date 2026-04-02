@@ -6,7 +6,7 @@ tags:: [[Question]]
 	- [[AI/Response]]
 		- Nix users approach declarative tmux in a few distinct ways, depending on how "pure" and reproducible they want the environment to be. Below is a structured map of the ecosystem.
 		- ## 1. Home Manager: Declarative `tmux` as a First-Class Module
-			- [[Nix/GitHub/home-manager]], [[tmux]]
+			- [[Nix/home-manager]], [[tmux]]
 			- This is the most common Nix-native approach. Home Manager exposes:
 			- ~~~nix
 			  programs.tmux = {
