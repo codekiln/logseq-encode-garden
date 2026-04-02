@@ -314,7 +314,7 @@
  ;;  :charge-range    600}   ; Default value: 600
 
  ;; Favorites to list on the left sidebar
- :favorites ["tmux" "Lazygit" "chezmoi"]
+ :favorites ["fzf" "zoxide" "yazi" "tmux" "Lazygit" "chezmoi"]
 
  ;; Set flashcards interval.
  ;; Expected value:
