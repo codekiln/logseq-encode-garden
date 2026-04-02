@@ -27,6 +27,8 @@ The garden may eventually model many entity types. Types with Logseq-native SOP 
 - color-theme — see `[[Logseq/Entity/color-theme]]`
 - company — see `[[Logseq/Entity/company]]`
 - question — see `[[Logseq/Entity/question]]`
+- concept — see `[[Logseq/Entity/concept]]`
+- term — see `[[Logseq/Entity/term]]`
 
 Other entity types may be added here later without changing the skill itself. Prefer the `[[Logseq/Entity/<Type>]]` pages over this file when both exist.
 
@@ -180,6 +182,54 @@ Classify as: `existing`, `similar`, `new`, or `blocked`. Full process: see the l
 ### Legacy
 
 - Older question pages may omit `logseq-entity::`. Do not bulk-edit unless the author requests migration.
+
+## Entity Type: concept
+
+Authoritative documentation: `[[Logseq/Entity/concept]]`. This section is bootstrap-only.
+
+### Recognition
+
+Strong signals:
+
+- Understanding-oriented documentation: what something is, why it matters, how it relates to other ideas (Diataxis explanation / concept style)
+- Paradigms, frameworks, architectural or design “lenses” captured as narrative, not only as a short definition
+
+### Canonical Naming
+
+- Programming-language-related concepts often live on disk under `[[Programming/Language/...]]` with optional `alias:: [[Software/Paradigm/...]]` (or similar) so one file answers under multiple titles.
+- Other domains may use `Topic/.../Concept/...` or hub pages; follow the concept type page for examples.
+
+### Frontmatter
+
+- `logseq-entity:: [[Logseq/Entity/concept]]` on new instances.
+- Include `[[Diataxis/Concept]]` (or `[[Diataxis/Explanation]]`) in `tags::` when adding tags to concept-shaped pages. Never remove existing `tags::` without explicit instruction.
+- Optional `see-also::`, `via::`, `alias::` per the type page and `[[Logseq/Entity]]`.
+
+### Page Shape
+
+- Logseq Flavored Markdown; recommended sections: Overview, Context, Key Principles, Mechanism, Examples, Misconceptions (adapt as needed).
+- Prefer `see-also::` over a `## Related` section that only lists internal links.
+
+## Entity Type: term
+
+Authoritative documentation: `[[Logseq/Entity/term]]`. This section is bootstrap-only.
+
+### Recognition
+
+Strong signals: short definition or disambiguation; glossary-style vocabulary; pages that already use `tags:: [[Term]]`.
+
+### Frontmatter
+
+- `logseq-entity:: [[Logseq/Entity/term]]` on new instances.
+- Additive to existing `tags:: [[Term]]`; do not remove legacy tags in bulk.
+
+### Page Shape
+
+- Lean body: H1 plus brief bullets; link to concept entities when a full explanation is warranted.
+
+### Legacy
+
+- Many term-tagged pages predate `logseq-entity::`. Do not bulk-backfill unless the author requests it.
 
 ## Reporting Contract
 

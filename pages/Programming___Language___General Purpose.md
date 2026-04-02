@@ -8,4 +8,4 @@ tags:: [[Term]]
 		- [[Java]]
 		- [[c++]]
 		- [[Rust]]
-	- Paradigms: imperative, object-oriented, functional, etc.
+	- Paradigms: imperative, [[Software/Paradigm/Object-Oriented]], [[Software/Paradigm/Functional]], and other styles; many languages mix several.

@@ -16,4 +16,6 @@ alias:: [[Logseq Entities]]
 		- **color-theme** — Coordinated palette families reused across apps (terminals, editors, TUIs). Conventions are on the color-theme type page. Fallback/bootstrap notes: `.rulesync/config/logseq-entity.md` (section **color-theme**).
 		- **company** — Organizations or brands you track as first-class pages (e.g. vendors with multiple tools). Conventions are on the company type page.
 		- **question** — Topic-scoped research questions using a `/Q/` segment in the page title (`*___Q___*` on disk). Conventions are on the question type page. Fallback/bootstrap notes: `.rulesync/config/logseq-entity.md` (section **question**).
+		- **concept** — Understanding-oriented pages (Diataxis-style explanations): paradigms, architectural lenses, and other big ideas. Conventions are on the concept type page. Fallback/bootstrap notes: `.rulesync/config/logseq-entity.md` (section **concept**).
+		- **term** — Short glossary-style vocabulary pages; **`logseq-entity::`** is additive alongside existing **`tags:: [[Term]]`** where present. Conventions are on the term type page. Fallback/bootstrap notes: `.rulesync/config/logseq-entity.md` (section **term**).
 		- Deferred for follow-up: other types (e.g. person, book) may be added later as dedicated entity-type pages when needed.
