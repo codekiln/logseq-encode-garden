@@ -1,4 +1,4 @@
-- # What is necessary in order to use [[Dolt]] in a private Git repository that should never be pushed to GitHub as a backing for [[Beads]] (`bd`)?
+# What is necessary in order to use [[Dolt]] in a private Git repository that should never be pushed to GitHub as a backing for [[Beads]] (`bd`)?
 	- ## Answer
 		- [[AI/Response]]
 			- Nothing about [[Dolt]] requires GitHub. For replication you configure a **Dolt remote** pointing at **any** Git remote whose URL is accepted as a Git-style remote (HTTPS or SSH to self-hosted GitLab, Gitea, Forgejo, a **bare repo on disk** (`file://…` or a path ending in `.git`), etc.). Dolt stores its sync payload under a Git ref (default `refs/dolt/data`). [Dolt docs — Using Remotes (Git remotes)](https://docs.dolthub.com/sql-reference/version-control/remotes)
@@ -9,4 +9,4 @@
 	- ## Related
 		- [[Dolt]]
 		- [[Beads]]
-		- [[Task/Management/In Git/Report/26/CRDT vs SQLite in git for task management]]
+		- [[Task/Management/Git-Friendly/Report/26/CRDT vs SQLite in git for task management]]

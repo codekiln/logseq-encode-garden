@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/software-project]]
 created-by:: [[Person/Steve Yegge]]
 alias:: [[Person/Steve Yegge/GitHub/beads]]
-- # Beads
+tags:: [[Task/Management/Git-Friendly]]
+
+- # [Beads](https://github.com/gastownhall/beads)
 	- AI agent workflow/task tracker backed by [[Dolt]].
-	- ## Links
-		- [GitHub](https://github.com/steveyegge/beads)

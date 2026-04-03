@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/software-project]]
-- # HamsterBase Tasks
+tags:: [[Task/Management/Git-Friendly]]
+
+- # [HamsterBase Tasks](https://github.com/hamsterbase/tasks)
 	- Local-first task app using Loro CRDT with encrypted sync.
-	- ## Links
-		- [GitHub](https://github.com/hamsterbase/tasks)
