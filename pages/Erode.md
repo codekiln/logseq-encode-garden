@@ -1,0 +1,2 @@
+- [erode-app/erode](https://github.com/erode-app/erode?tab=readme-ov-file)
+	- basic idea is that if you use [[C4]] for [[Arch/itecture/Software]] diagrams you use an [[LLM]] in [[CICD]] at the time of making a [[PR]] in the [[SDLC]] as a check. If you code something that goes against the spirit of the architecture, then you're prompted to update the architecture. [[Cool]]! very nascent.
