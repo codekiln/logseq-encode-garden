@@ -1,0 +1,4 @@
+- # Jason Allum
+	- [GitHub](https://github.com/jallum) (jallum)
+	- ## Projects
+		- [[Person/Jason Allum/GitHub/beadwork]]
