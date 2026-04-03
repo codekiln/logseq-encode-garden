@@ -1,0 +1,2 @@
+- [Static site | Structurizr](https://docs.structurizr.com/export/static-site)
+	- [Demo](https://c4model.com/example/)

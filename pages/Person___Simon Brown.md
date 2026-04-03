@@ -1,0 +1,11 @@
+alias:: [[People/Simon Brown]]
+- # Simon Brown
+	- ## About
+		- Independent **software architecture** consultant, speaker, and author; founder of **[[Structurizr]]**; originated the **[[C4]]** model for visualising software architecture at multiple levels of abstraction.
+		- Author of *Software Architecture for Developers* and related material; runs workshops and writes at his site below.
+	- ## Web
+		- [simonbrown.je](https://www.simonbrown.je)
+		- [[Person/Simon Brown/GitHub]] https://github.com/simonbrowndotje
+		- [C4 model](https://c4model.com/) (site and docs for **[[C4]]**)
+		- [Structurizr](https://structurizr.com/) (product home for **[[Structurizr]]**)
+		- [LinkedIn](https://www.linkedin.com/in/simonbrownjersey)

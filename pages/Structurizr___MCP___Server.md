@@ -1,0 +1,1 @@
+- [MCP server | Structurizr](https://docs.structurizr.com/ai/mcp)
