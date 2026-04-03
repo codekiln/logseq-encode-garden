@@ -1,10 +1,16 @@
 ---
 name: logseq-entity
 description: >-
-  Work with Logseq entities in a configurable way. Use for checking whether an
-  entity already exists, searching for similar entities, creating a new entity
-  page using garden-specific rules, and extracting entities from a Logseq page
-  such as "add entities from today's journal page".
+  Metaskill for Logseq entity work in the active graph: open the entity registry
+  and type pages, dedupe, create or update instance pages per type rules, infer
+  entities from journals, initialize ontology. Type pages define all operational
+  detail for that garden (naming, frontmatter, import pipelines, hub updates,
+  discovery)—this skill does not hardcode domain workflows. When this repository
+  ships optional companion skills named logseq-entity-<entity>-<skill>, use them
+  for narrower task discovery; authoritative procedures for those tasks still
+  live on linked Logseq pages, not under companion skill references/. Use for
+  questions like entity exists?, similar entities?, new entity page?, add
+  entities from today's journal?, define or refresh entity types?
 ---
 # Logseq Entity
 
@@ -47,6 +53,12 @@ Treat those garden-owned sources as the source of truth for:
 - reporting expectations
 
 If the Logseq entity pages and fallback config are both missing, inspect the garden for conventions, say that no explicit entity configuration was found, and ask whether to proceed with inferred conventions or create the entity-type pages first.
+
+## Polymorphism And Optional Companion Skills
+
+- **Same skill, different graphs:** Identical `logseq-entity` text may be deployed in multiple gardens; effective behavior follows whatever `[[Logseq/Entity]]` and `[[Logseq/Entity/<Type>]]` pages exist **in the workspace graph**. Do not assume another garden’s entity types.
+- **Type pages are full SOPs:** Everything on `[[Logseq/Entity/<Type>]]` is binding—not only naming and frontmatter. If a type page defines imports, index updates, checklists, or search patterns, follow it end-to-end.
+- **Optional companions:** Some types may add thin Rulesync skills named `logseq-entity-<EntityName>-<SkillName>` (kebab-case) for **task discovery** or routing. Their `SKILL.md` should only point to Logseq; **do not** duplicate type-page content into `./references/` for domain procedures—keep that material on Logseq pages.
 
 ## Quick Start
 
@@ -146,6 +158,8 @@ When the user says something like `add entities from today's journal page`:
 
 ## Reference Guide
 
+- Filing a topic-scoped **question** page (`*___Q___*` / `Topic/Q/...`): skill **logseq-question** (builds on this skill plus `[[Logseq/Entity/question]]`).
+- Polymorphism and companion skills: see **Polymorphism And Optional Companion Skills** above and [references/logseq-entity-type-pages.md](./references/logseq-entity-type-pages.md)
 - Configuration contract: [references/configuration-contract.md](./references/configuration-contract.md)
 - Logseq entity-type pages: [references/logseq-entity-type-pages.md](./references/logseq-entity-type-pages.md)
 - Entity-type initialization: [references/entity-type-initialization.md](./references/entity-type-initialization.md)

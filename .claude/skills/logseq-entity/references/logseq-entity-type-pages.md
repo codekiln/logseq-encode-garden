@@ -31,6 +31,16 @@ That page should ideally describe:
 - inference policy
 - example entities
 - page template guidance
+- operational workflows that belong in the garden (imports, hub or index updates, discovery or search patterns, CLI notes)—not in Rulesync skill `references/`
+
+## Optional Companion Rulesync Skills
+
+Some entity types add a **thin** Rulesync skill named `logseq-entity-<EntityName>-<SkillName>` (kebab-case) so agents discover a heavy workflow. Conventions:
+
+- The companion’s YAML `description` targets task routing; its `SKILL.md` body routes to the relevant `[[Logseq/Entity/<Type>]]` pages (and any linked Logseq SOP notes).
+- **Authoritative detail stays in Logseq** on the type page (and linked pages). Do not mirror long checklists in `./references/` for domain-specific procedures.
+- Not every type needs a companion—only where extra discovery helps.
+- The type page may list its companion skill name in a short bullet for humans and agents.
 
 ## Template Guidance
 
