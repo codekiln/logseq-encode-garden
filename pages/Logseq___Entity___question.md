@@ -2,7 +2,7 @@
 	- This page is the standard operating procedure for **question** entities: scoped research questions stored under a topic namespace with a dedicated `/Q/` segment so they stay findable and deduplicable.
 	- ## Examples in this garden
 		- Pages on disk match `pages/*___Q___*.md` (e.g. a tmux question lives as a file whose name contains `___Q___` between the topic prefix and the question slug).
-		- In-graph titles use a slash path such as `Topic/Q/Question text` (see command logseq-question and rule logseq-page-naming-reference).
+		- In-graph titles use a slash path such as `Topic/Q/Question text` (see skill **logseq-question** — Rulesync slash command `logseq-question` is a thin entrypoint — and rule logseq-page-naming-reference).
 	- ## When we treat something as a question entity
 		- Strong signals: you are capturing a single answerable question, usually with a planned Answer section; the title belongs under a topic (tool, domain, idea) plus a fixed **Q** segment before the question wording.
 		- Not a question entity: general notes without the `/Q/` naming convention, dashboards, or long-running threads better modeled as non-Q pages.
@@ -29,6 +29,8 @@
 		- Typical sections: `## My Notes` (may start empty), `## Answer`. Use **`see-also::`** instead of **`## Related`** when the only content would be links to other graph pages.
 		- Use Logseq Flavored Markdown throughout (bullets, headings as bullets, tab nesting, no blank lines between bullets).
 	- ## [[AI/Agent/Guidance]]
+		- ### From AI tooling (slash command / agent)
+			- To file a new question from Rulesync or an agent: use skill **logseq-question** (`.rulesync/skills/logseq-question/SKILL.md`); the command **`logseq-question`** only points into that skill. Shared entity configuration and dedup live in skill **logseq-entity** and on **this** type page.
 		- ### Journal Entry
 			- When a question is asked, it may have come from an accompanying [[Logseq/Journal]] entry. This should stay intact to preserve the original context in which the question was asked; don't move that block into the question page.
 		- ### Legacy instances
