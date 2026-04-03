@@ -1,0 +1,3 @@
+- [[fzf/Keyshort]] [[Keyshort]]
+	- **How to use `fzf` to search for items beginning with a prefix** [[card]]
+		- `^<prefix>` regex works in fzf for requiring that `<prefix>` occurs at the beginning

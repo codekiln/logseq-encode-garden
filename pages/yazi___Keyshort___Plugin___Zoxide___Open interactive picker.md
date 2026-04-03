@@ -1,0 +1,5 @@
+- [[Keyshort]] [[yazi]] [[yazi/Keyshort]] [[yazi/Keyshort/Plugin/Zoxide]]
+	- **Jump with zoxide’s interactive picker (fzf-backed)** #card
+		- Shortcut: `Z` (uppercase)
+		- Context: File list / manager pane (default keymap); built-in **zoxide** plugin
+		- Description: Opens **zoxide’s interactive UI** to jump by frecency; that UI **uses fzf** as its picker (requires **zoxide** and **fzf** installed, and zoxide initialized so the DB is populated). Optional: `require("zoxide"):setup { update_db = true }` in `~/.config/yazi/init.lua` to record dirs on cd. See [Builtins | Yazi — zoxide.lua](https://yazi-rs.github.io/docs/plugins/builtins).
