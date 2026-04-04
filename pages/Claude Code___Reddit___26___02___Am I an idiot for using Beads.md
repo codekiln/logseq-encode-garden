@@ -1,0 +1,4 @@
+- [Am I an idiot for using Beads rather than PROJECT.md? : r/ClaudeCode](https://www.reddit.com/r/ClaudeCode/comments/1r6uhgw/comment/o9rrhjp/?solution=e7b52d729c376f48e7b52d729c376f48&js_challenge=1&token=bbbe4bf1c9a2b5160829c4be34da5861dae90b7fb3d6ce2e4f686a992ae676ea)
+	- few suggestions
+		- [[beadwork]] via [here](https://www.reddit.com/r/ClaudeCode/comments/1r6uhgw/comment/o9rrhjp/)
+		- [[BeansTasks]] via [here](https://www.reddit.com/r/ClaudeCode/comments/1r6uhgw/comment/o5t2757/)

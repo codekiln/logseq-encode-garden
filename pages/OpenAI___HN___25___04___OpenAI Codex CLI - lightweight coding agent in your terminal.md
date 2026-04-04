@@ -1,11 +1,11 @@
-tags:: [[HackerNews]]
+tags:: [[HN]]
 
 - # [OpenAI Codex CLI: Lightweight coding agent that runs in your terminal | Hacker News](https://news.ycombinator.com/item?id=43708025)
 	- ## [[My Notes]] [[2025-04-18 Fri]]
 	  id:: 68021420-5b60-4dcf-a5b6-b18dba954e26
 	  collapsed:: true
 		- great discussion comparing various [[AI Coding]] tools and [[AI Coding Techniques]] and related issues
-			- nobody is very impressed with [[OpenAI Codex]] at [[HackerNews]] at this time
+			- nobody is very impressed with [[OpenAI Codex]] at [[HN]] at this time
 			- first I've heard anyone have anything nice to say about [[AWS/Q]]
 				- > Claude Code is just way too expensive. These days I’m using Amazon Q Pro on the CLI. Very similar experience to Claude Code minus a few batteries. But it’s capped at $20/mo and won’t set my credit card on fire. --[artdigital here](https://news.ycombinator.com/item?id=43712470)
 			- a lot of people are very passionate about [[IDE/Cline]], [[Claude Code]], [[aider]] but say Claude Code is too [[Expensive]]

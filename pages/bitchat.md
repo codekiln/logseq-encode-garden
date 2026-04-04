@@ -1,0 +1,3 @@
+- [bitchat](https://bitchat.free/)
+	- bitchat is a decentralized peer-to-peer messaging application that operates over bluetooth mesh networks. no internet required, no servers, no phone numbers.
+	- this approach provides censorship resistance, surveillance resistance, and infrastructure independence. the network remains functional during internet outages, natural disasters, protests, or in regions with limited connectivity.

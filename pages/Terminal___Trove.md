@@ -1,0 +1,2 @@
+- [Terminal Trove - The $HOME of all things in the terminal.](https://terminaltrove.com/)
+	- an aggregator for [[TUI]]s, [[CLI/Tool]]s, etc.
