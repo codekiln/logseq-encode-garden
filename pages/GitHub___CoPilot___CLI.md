@@ -6,7 +6,7 @@ alias:: [[GitHub Copilot CLI]]
 	- ## Links
 		- GitHub: https://github.com/github/copilot-cli
 		- Website: https://github.com/github/copilot-cli?utm_source=web-hpace-copilot-cli-primary-cta&utm_medium=web&utm_campaign=universe25post
+		- Npm: https://www.npmjs.com/package/%40github/copilot
 	- ## Related
 		- [[GitHub/CoPilot]] - The IDE extension version of GitHub Copilot
 		- [[AI/Coding/Tool]] - List of agentic AI coding tools
-

@@ -1,0 +1,2 @@
+- [llm-agents.nix/packages/copilot-cli/package.nix at main · numtide/llm-agents.nix](https://github.com/numtide/llm-agents.nix)
+	-
