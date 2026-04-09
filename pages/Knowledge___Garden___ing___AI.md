@@ -1,4 +1,4 @@
-alias:: [[AI Knowledge Gardening]]
+alias:: [[AI Knowledge Gardening]], [[AI/Knowledge/Gardening]] 
 tags:: [[Term]]
 
 - # #AI #[[Knowledge Gardening]]

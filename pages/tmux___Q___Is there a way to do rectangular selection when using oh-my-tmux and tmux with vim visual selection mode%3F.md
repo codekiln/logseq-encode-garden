@@ -3,11 +3,11 @@ see-also:: [[tmux/Q/What is a conceptual overview of how copy paste works in oh-
 
 - # Is there a way to do rectangular selection when using [[tmux/oh-my-tmux]] and [[tmux]] with vim visual selection mode?
 	- ## [[My Notes]]
-		- I haven't done this successfully yet. I find it difficult to quickly determine what to edit at which layer - of configuration; there's tmux itself, then there's oh-my-tmux, then there are my configurations layered on top in the [[.tmux.conf.local]]. Could use some [[CLI/Coach]]ing
+		- I haven't done this successfully yet. I find it difficult to quickly determine what to edit at which layer - of configuration; there's tmux itself, then there's oh-my-tmux, then there are my configurations layered on top in the [[.tmux.conf.local]]. Could use some [[CLI/Coach]]ing.
 	- ## Answer
 		- [[AI/Response]]
 			- **Yes.** tmux copy mode with vi keys supports rectangular (block) selection. Behavior depends on your bindings.
-			- ### Default / toggle-based (no config)
+			- ### Default / toggle-based (no config) [[AI/Need/Confirmation]]
 				- Enter copy mode: `Prefix+[`
 				- Press `v` to toggle rectangle mode on/off (in default vi copy mode, `v` is bound to `rectangle-toggle`)
 				- **Press Space** to start the selection (required)

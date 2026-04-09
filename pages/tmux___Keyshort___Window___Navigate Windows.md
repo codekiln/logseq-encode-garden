@@ -9,7 +9,7 @@
 		- Shortcut: `<prefix> Ctrl-h`
 		- Description: Focuses the window to the left of the current window in the session. This is an [[tmux/oh-my-tmux]] binding that replaces the default `<prefix> p`.
 		- Note: Easily confused with `<prefix> h` which navigates **panes** (not windows) — see [[tmux/Keyshort/Pane/Navigate Panes Vim-style]]
-	- **Navigate to the Window just to the Right** #card
+	- **Navigate to the Window just to the Right in [[tmux/oh-my-tmux]]** #card
 	  card-last-score:: 5
 	  card-repeats:: 2
 	  card-next-schedule:: 2026-04-06T05:58:22.214Z
