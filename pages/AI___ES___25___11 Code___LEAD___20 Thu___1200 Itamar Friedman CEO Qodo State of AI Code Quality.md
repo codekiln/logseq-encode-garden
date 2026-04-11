@@ -1,6 +1,6 @@
 chatgpt-link:: https://chatgpt.com/g/g-p-691f249c2fac8191ab8b4b926da5cb3b-ai-es-25-11-code/c/691f4902-84cc-800a-9ed7-9caaaf08cb55
 
-# 12:00pm - 12:19pm Talk: The State of AI Code Quality: Hype vs. Reality
+- # 12:00pm - 12:19pm Talk: The State of AI Code Quality: Hype vs. Reality
 	- ![Itamar Friedman](https://www.ai.engineer/speakers/itamar-friedman.jpg)
 	- **[[Person/Itamar Friedman]]** [Twitter](https://twitter.com/itamar_mar) [LinkedIn](https://www.linkedin.com/in/itamarf) - CEO, [[QodoAI]]
 	- ## Talk: The State of AI Code Quality: Hype vs. Reality [03:12:12](https://www.youtube.com/watch?v=cMSprbJ95jg&t=11532s) - Qodo (Itamar Friedman): Breaking the "Glass Ceiling" of Productivity with Agentic Quality
@@ -294,7 +294,7 @@ chatgpt-link:: https://chatgpt.com/g/g-p-691f249c2fac8191ab8b4b926da5cb3b-ai-es-
 	-
 	- ## Slide — Best-In-Class Context Engine
 		- **Left framing**
-			- [[Nvidia]] CEO **Jensen Huang** showcased **[[QodoAI]]'s Deep Context Engine (Memory)** on stage.
+			- [[Nvidia]] CEO **[[Person/Jensen Huang]]** showcased **[[QodoAI]]'s Deep Context Engine (Memory)** on stage.
 			- Positions [[QodoAI]] as a top-tier partner in [[Nvidia]]'s agentic ecosystem.
 		- **Right visual (stage photo + architecture)**
 			- Large screen diagram showing Qodo’s multi-agent context stack:

@@ -1,0 +1,96 @@
+# The Architecture of Intelligence
+	- meta
+		- A deep dive into how frontier AI systems are built — from model architecture and reasoning to scaling laws and the path toward more general intelligence.
+		- [Panel]
+		- [Building Intelligence]
+		- 1:30 PM
+		- [[Person/Dave Blundin]]
+			- Link Ventures
+			- Managing Partner
+		- [[Person/Peter Danenberg]]
+			- [[Google/DeepMind]]
+			- Senior Software Engineer
+		- [[Person/Alexander Amini]]
+			- [[LiquidAI]]
+			- Co-Founder & Chief Science Officer
+	- topics
+		- [[AI/Arch/Transformer]] is it going to change?
+		  collapsed:: true
+			- [[Person/Alexander Amini]]
+				- almost every single closed source labe is working with non-transformer architecture.
+				- we are so [[Optimized/Hyper]] on transformers at the moment
+			- [[Person/Peter Danenberg]]
+				- LLMs might get cheaper to design whatever comes next in silicon
+					- TODO what does this mean?
+		- [[Person/Dave Blundin]] where do chips go in the world?
+		  collapsed:: true
+			- [[TPU]]s get manufactured at [[TSMC]]
+			- [[TPU]]s - is it secret, is it transformer-optimized
+				- [[Person/Peter Danenberg]]
+					- I don't know if it's widely known
+					- I can't talk about it much
+					- we don't only optimize for the tensor
+					- whatever we optimize for, we can embed that in [[Silicon]]
+			- [[Person/Alexander Amini]]
+				- optimize for different things -
+					- did I hear him say that architecture and hardware should be married together?
+						- *isn't that the opposite of optimizing for different things*
+		- [[Person/Peter Danenberg]] is asked about the relationship between [[TSMC]]
+		- one of the biggest backers of [[LiquidAI]] is [[AMD]]
+		  collapsed:: true
+			- [[Person/Alexander Amini]]
+				- *didn't hear his response; something about optimizing in [[TSMC]]*
+		- [[Person/Alexander Amini]]
+		  collapsed:: true
+			- obvious to me: when we go to chatgpt, [[CLAUDE]], etc, these are optimized to be [[General/Purpose]]
+				- vast array
+				- their nature is general purpose
+					- that pushes them into massive [[Param/eter/Space]]
+				- but usually, [[Enterprise]]s have specific tasks
+					- with as little energy as possible and as quickly as possible
+						- [[Dist/il/ation]] ([[AI/Model/Distillation]])
+							- you don't need it to be optimized at the level of PhD physics for all use cases
+				- TODO [[AI/Mixture of Experts]] vs [[AI/Model/Distillation]] vs [[AI/Fine Tuning]] ... ?
+		- [[Person/Peter Danenberg]]
+		  collapsed:: true
+			- always been bearish on [[AGI]], I don't even know if it's an interesting problem
+			- if you have interesting properties at 10+T [[Param/eter/Space]], why do you have to go that far out to get that
+			- will an encounter with [[AGI]] give you an [[Ick]] response?
+				- [[AI/Model/World]] comes up with unique questions
+					- when you introduce [[AI/Model/Distillation]], it looses [[creativity]]
+						- [[Interest/ing/Point]]
+		- on topic of [[Focused Models]] vs [[AI/Model/General]]
+		  collapsed:: true
+			- [[Person/Dave Blundin]]
+				- > it doesn't make any sense to me that you can go to the same model for Taylor Swift's birthday that you go to for Biotech research
+			- [[Person/Alexander Amini]]
+				- if a task is fuzzy, then a bigger model can push us beyond our comfort models
+				- but if we know exactly what we don't know, then we can use a focused model
+				- the world is so dynamic
+				- use cases are being come up with on the fly
+				- so many are being created on the fly
+				- large space of [[Use Cases]] that have yet to be invented
+					- these will be emergent use cases that we will discover and then they will move out of the big models, and into specialized models
+						- then we can invest into the small models to get them
+							- it's a discovery mechanism [[Idea/Cool]]
+			- [[Person/Dave Blundin]]
+				- students used to get very jazzed training their own models
+				- but what if the models all get firewalled and general, how do we take advantage of that creativity of students?
+				- specialized models for fusion reactor magnetic containment might not be developed because of generalized models sucking the money out of the room
+			- [[Person/Alexander Amini]]
+				-
+		- [[LiquidAI]] is probably most closely guarded secret in the world, how different is it from [[AMD]]?
+			- [[Person/Alexander Amini]] they are optimized towards the [[AI/Arch/Transformer]] because they want to exploit vs explore the parameter space
+		- [[Person/Dave Blundin]] said that Amini said to grad class that the energy of the transformer scales quadratically, which is "a clusterfuck"
+			- does it end up being with a massive amount of HDN (???)
+			- [[Person/Alexander Amini]] we've moved away from hierarchical memory because we are storing all of it in context. that's all very brute force. that's not how humans operate
+				- we don't read a book by looking at every token and attending to every token to answer a question. we have concepts as intermediate layer
+				- the challenge is that today, [[AI/Arch/itechture]] doesn't take this into account
+				- over time, we will make arch that's more hierarchical
+				- > software first has to create the technology and then hardware has to emulate it
+		- [[Person/Dave Blundin]] if I sample random person 2 years ago no AI and said my target is 10x productivity
+			- [[Person/Peter Danenberg]] - I'm at a loss to think of things that aren't [[10x/able]]
+			- [[Person/Alexander Amini]] this is two years away
+				- software engineering are more than [[10x]] more productivity. is the job more than [[10x]] productive using AI than not? if you look across the board, it's the majority it is today.
+		- [[Person/Dave Blundin]] - these guys have courtside seats with the true reality of AI.
+			- look at what people are doing on the street, and the degree of underreaction is phenomenal.

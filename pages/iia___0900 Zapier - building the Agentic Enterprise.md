@@ -1,0 +1,44 @@
+# Building agentic systems at enterprise scale — how automation, AI agents, and the future of work are converging inside real organizations.
+- meta
+  collapsed:: true
+	- [Fireside]
+	- [Deploying Intelligence]
+	- 9:00 AM
+	- Building the Agentic Enterprise
+	- [[Person/John Werner]] moderator
+		- Senior Fellow at MIT
+		- Founder & CEO of Imagination In Action
+	- [[Person/Wade Foster]] key guest
+		- [[Zapier]]
+		- [[Co-Founder]], [[CEO]]
+- topics
+	- [[AI/Security]]
+		- [[Idea]]
+			- we need something like [[Kerberos]] where a dedicated [[AI/Security]] [[AI/Agent]] on the fly grants a permission boundary meeting some subset of a known user's [[Security/RBAC]] for a task on a task-to-task basis
+			- TODO write this up
+	- 09:17 [[Person/Wade Foster]]
+		- [[AI Fluency]] test in [[Performance/Review]]s and [[Hiring]] decisions
+		- helpful framework to take it from "we must be ai first" to being tactical and practical
+		- one challenge with it - churn
+		- they just launched v2. 6mos they will have v3, v4
+	- 09:18 they run [[Hackathon]]s at [[Zapier]] 2-3 times per year - [[Person/Wade Foster]]
+		- protected time to set aside daily work and look at old problems, new technology, and see if we can solve problems we couldn't 6mos ago. keeps everybody up to date on what to do
+		- that pattern is in enterprises
+		- these hackathons are not just for engineers
+		- once every 6mos is good
+		- companies getting started will do a workshop with a smaller slice of people responsible for rolling it out to the masses, maybe execs, maybe some pocket
+		- but the *best* companies think how do we get this from small group of people to everyone
+			- some companies think it's just going to be a centralized team that will do everything
+			- but the companies that are moving the fastest are those that are pushing the boundary outwards
+	- 09:20 tip [[Person/Wade Foster]]
+		- make an [[AI/Daily/Brief]] skill and wake up to that every morning, [[Tip/Great]]
+	- 09:21 biggest mistake
+		- [[Person/Wade Foster]] says getting started
+			- teams that don't have access to models and tools
+			- biggest mistake is to keep it in the committe land rather than "let's build"
+	- 09:22 human skill that will be more valuable
+		- creativity
+	- 09:23 how will ai affect competition?
+		- [[Person/Wade Foster]]
+			- in our space, it's fiercer than ever
+	-

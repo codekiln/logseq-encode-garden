@@ -1,0 +1,43 @@
+# Innovations
+	- meta
+		- The research and engineering frontiers of the agentic web — which of today's assumptions break first, and which primitives have to get invented next.
+		- [Panel]
+		- [Deploying Intelligence]
+		- 2:30 PM
+		- [[Person/Anil Sharma]]
+			- Global Head, Co-Innovation Network
+			- Tata Consultancy Services
+		- [[Person/Chris Gardner]] moderator
+			- Underscore VC
+			- General Partner
+		- [[Person/Abhishek Mehta]]
+			- [[Tresata]] Data Factories
+			- CEO
+		- [[Person/Phillip Isola]]
+			- MIT
+			- Associate Professor
+			- scientifically understand [[Intel/ligence]]
+		- [[Person/Ayush Chopra]]
+			- MIT
+			- PhD Candidate
+		- [[Person/Manuela Veloso]]
+			- Carnegie Mellon University
+			- Herbert A. Simon University Professor Emerita
+			- was at jp morgan for 80 years and now teaching about [[AI/Agent/Multi]]
+	- discussion
+		- 14:39 [[Person/Chris Gardner]] what's going to look dumb?
+			- [[Person/Anil Sharma]] everything is about agent is intelligent enough to do everything the fundamental flip is that intelligence is in the interaction. how do you design the perfect kind of protocols that allow agents to be [[JIT]] Intelligent - this goes beyond [[A2A]] - [[Learn/ing/Proto/col]]s.
+		- 14:41 [[Person/Anil Sharma]] everything breaks, [[Open Source]] is dead. the idea that we can live and build a society where trillions of agents are automating the last remaining vestage of services economy, infra won't support it. it's centralized data today. in 3T agents, you can't wait for a mothership to provide the right signals needed that can provide decisions when they need to be made. chips and agents and everything in the middle is up for grabs. it's like the time of tim burners lee. [[NANDA/Nandini]].
+		- 14:43 [[Person/Ayush Chopra]] what do you want to see? if you look at every person on the earth,  how can you uplift capability to next level. avg software engineer or doctor vs best software engineer or doctor is big difference today. how do you create agents in a way that uplift cognitive capability?
+		- 14:44 [[Person/Manuela Veloso]] - what will break is this assumption that communication will be understood. unless we come up with an esperanto, I might ask, what is the address of the ceo, but doesn't give state or zip code. when an agent asks something to another agent, what breaks is this assumption that *what's understood* is reliable, that we live in *the same space* of *level of detail*
+		- 14:46 [[Person/Phillip Isola]] - one possibility is that this future will look like. right now they look like [[Computer Science]]. Maybe a better model is to think of them like [[Org/ani/sm/s]].
+		- 14:47 [[Person/Chris Gardner]] what does it mean to study this at scale?
+		- 14:47 [[Person/Manuela Veloso]] - today was the first time I heard about trillions of [[AI Agents]]. each agent is going to find tons of alternative agents to get information from. it's a market. it's not like this single one has the information you need. in the future, what you are going to be doing is building trust that these agents know how to do what they are doing. some will be specific, but agents every relies on, they are not going to be many. when faced with the choice of markets, only some are reliable, trustful, understand what you say, etc. there will not be trillions of good agents, some will die off becasue they are not of much use to anyone. the concept of thinking ... who do you collaborate with, who do you ask first, that's the ai question. we put in the middle of the agents, deceiving agents, or incomplete agents, and try to figure out if they could figure out reliable from unreliable source. this is an effort to let them separate from experience that effect. we have learned a lot about agent modeling - modeling what the agents do. we are not in the agent modeling business. we are going to figure out how to figure out which agents are reliable
+		- 14:51 [[Person/Anil Sharma]] - the movie [[Duplicity]]. how far do work agents go? how far into human skills and effort go?
+		- 14:52 [[Person/Ayush Chopra]] - two sided markets. today,
+		- 14:54 [[Person/Anil Sharma]] - human motivation - modeling supply chains, large models of societies, in all of these systems - they are small world in nature. you may have 1M followers on twitter, but then that person only follows 1K. humans have limited cognitive capacity - [[Dunbar/Ceiling]] 150 people. [[Anti/Fragile]], [[Fault/Tolerance]]. [[Law/Power]]. Friend of friend feedback loop is what allows feedback to scale.
+		- 14:56 [[Person/Manuela Veloso]] Trillions of [[AI Agents]] will be for billions of [[Human]]s. all of them need feedback. if these agents are just scale, then they are not very interesting, but if they interact with humans. I can't wait for the day when agents say, "I don't know." [[Point/Good]]. trillions of self-sufficient agents is ridiculous, we don't even know the whole thing. we have to accept that they are going to be less than perfect. that's what makes them interesting to have around.
+		- 14:58 [[Person/Anil Sharma]] - what surprises me is how little conversation we have about the principles that the [[Internet]]. they may actually end up doing more than what we want them to.
+		- 14:59 [[Person/Abhishek Mehta]] - we are doing a demonstration of [[NANDA]] - how do you orchestrate services for these people. they come with very different languages and participation.
+		- 15:00 [[Person/Phillip Isola]] - is open agentic web actually going to happen, or will it get rolled up by [[Google]], [[OpenAI]], etc?
+			- in my experience there's less than. a year gap. people keep talking about diversity of ais vs one monolithic ai. open source has proliferation of projects.

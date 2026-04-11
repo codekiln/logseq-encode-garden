@@ -1,0 +1,114 @@
+tags:: [[AI/Voice]]
+
+-
+- intro
+	- left to right
+		- [[Person/Nicholas Leonard]]
+	- [[Person/Krishna Gupta]]
+		- doing voice for 15 years
+			- used to do headl
+		- presto is leading player for restaurant drive-through automation
+			- it sounds easy but it's hard
+- controversial topics
+	- [[Person/Nicholas Leonard]]
+		- most orgs use "prompt and pray"
+		- they use python harness
+		- decreasing latency is everything
+			- in event we get disconnected, can I call you back?
+				- realistically, you will get 100 possible responses
+					- do you need to go to LLM for that? no, you can exact string match [[Point/Good]]
+	- [[Person/Karan Kashyap]]
+		- highly regulated environments
+		- latency isn't just in product, it's in queries to legacy databases
+		- sometimes when you do something that has to do a lookup in a customer system, those systems can be decades old
+		- when a human like a customer service rep is doing that, they are incurring that latency, but they are narrating what they are doing.
+		- [[WWHD]] [[Acronym]] what would a human do
+		- even two businesses that are similar, when implementing solution, they have their *own* [[SOP]]s
+		- 80% in common, but 20% their client customers "have to be their way"
+		- forward-deployed engineers
+		- surprising how two companies that should be very similar have lots of differences
+			- that can be a moat, too
+	- [[Person/Krishna Gupta]]
+		- [[WWHD]] - the end customer has less tolerance for increased [[laten/cy]] relative to interacting with a [[Human]]
+			- he works out of the restaurants so he can hear the orders come in
+			- often times the resolution of the audio on the AI streams is higher, but the audience is more critical than if they had a
+	- [[Person/Nicholas Leonard]]
+		- I just went through a drive-through, and the AI was really friendly, and then it cut to the human, who was more curt, intervening with "what do you want?" in a flat execution
+	- [[Person/Krishna Gupta]]
+		- last night, heard a place where they lost one order, and the [[Human]] CSR intervened the next ten times because of that lost [[Confidence]]
+			- [[Skeptic/ism]]
+- Should companies be building fully automated solutions, and if not, what is the right level of human engineering that should go in?
+	- I think this is a "bitter lesson" question
+	- [[Person/Krishna Gupta]]
+		- the question is, what degree of automation?
+		- [[Neuro/Symbolic/System]]s are not going away any time soon?
+		- a lot of people think that [[AI/Model/General]] can do everything, but those of us in the field can't just do that.
+	- [[Person/Nicholas Leonard]]
+		- you need a system that will code itself.
+		- [[Claude Code]] and [[OpenClaw]] can't change the weights.
+		- There's a whole other level of optimizing the harness to optimize to your use case.
+		- They should still take human input, the [[AI]] should propose fixes to [[Bug]]s mentioned by the [[Human]]
+		- [[AI/Lab/Frontier]] are pushing everything
+		- the levers are test time and latency
+		- [[Anthropic/Model/Mythos]] is supposed to be amazing, but no [[AI/Voice/Agent]] is going to run on it
+	- [[Person/Karan Kashyap]]
+		- elevation of [[Product/Manager]] today
+		- [[AI/Engineer]]s are managing more too
+		- [[Posh]] does text-based interactions, too
+			- in text they trade off accuracy for latency
+			- but in voice they do the opposite
+				- [[Google/AI/Model/Gemini]] ...
+		- You can use [[ChatGPT]] to get very good [[Advice/Financ/ial]]
+			- but bank is not allowed to give that to you!
+- 08:49 what is distinctive about [[AI/Voice]]?
+	- [[Person/Karan Kashyap]]
+		- voice is more complex
+		- chat is a "subset" of problems for voice
+		- if you can solve a problem with chat with LLMs, you can likely solve it with voice but just with more work
+			- example, a background noise child saying, "no, I don't want that!"
+		- addition layer of speaker recognition, background noise
+		- a lot of voice networks are going over telephony systems, which are *not modernized!* [[Point/Good]]
+	- [[Person/Nicholas Leonard]]
+		- none of the people on the stage are like [[ElevenLabs]]s
+		- you have a cap on how bit the models can get because of the [[laten/cy]] requirements of the problem space
+		- so it's really exciting. It's not like [[OpenAI]]
+		- it's an exciting, competitive space
+			- [[ModulateAI]] in [[US/MA/Cambridge]] is 30 people
+			- Gradium AI or is it Gradient AI in france is 10 people
+			- TODO
+	- [[Person/Krishna Gupta]]
+		- he mentions [[Mac/App/WisprFlow]] which is how he uses [[Email]]
+		- it's a [[Random/Walk]] when we speak. The computer keyboard is a detour in human evolution.
+			- dealing with the [[Random/Walk]] of how we [[Think]] is a total nightmare.
+			- you have to capture that in [[Time/Real]]
+		- do we go with [[Speech-to-Speech]]?
+			- [[Person/Nicholas Leonard]]
+				- what's amazing about these is that they are so much better about
+					- turn taking
+					- handling the emotions
+				- they are processing the audio waves
+				- He mentions [[AI/Model/Cascade]]
+					- this is [[Speech-to-Text]] -> [[Text-to-Speech]] combo
+				- what is [[SOTA]] - [[Convolut/ion/al/Neural/Net]]
+			- [[Person/Krishna Gupta]]
+				- so important to recognize affect
+				- if a person is pissed, don't upsell them in the drive-through window
+			- [[Person/Karan Kashyap]]
+				- mentions [[ChatJimmy]]
+- voice and emotion analysis
+	- [[Person/Krishna Gupta]]
+		- was involved with [[US/MA/Cambridge]] company [[Cogito]] they did [[AI/Voice/App/Call Center]]
+		- "quick service restaurant industry"
+		- 0.1% of customers write google reviews, and that powers a whole industry
+		- for them to get [[CSat]], they need to do analysis
+		- in terms of *generating* emotion, it's about the small things
+			- they don't get as much time as other panel participants, they are trying to end it within 60-70 seconds
+			- they are trying to connection
+			- in south, "my pleasure," "sir," "ma'am,"
+			- they are partnered with [[ElevenLabs]]s
+	- [[Person/Nicholas Leonard]]
+		- most of the value of [[AI/Analysis/Sentiment]] or [[AI/Analysis/Emotion]] is [[OLAP]], in post
+		- very offensive in [[Human]] is to presume you understand how you feel and be wrong [[Point/Good]]
+		- challenge: prompting llm to do more and give metadata along the way
+			- if you have a second call, you add [[laten/cy]]
+	-

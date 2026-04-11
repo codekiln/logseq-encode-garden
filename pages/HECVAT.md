@@ -3,7 +3,7 @@ alias:: [[Higher Education Community Vendor Assessment Toolkit]]
 - # HECVAT
 	- ## Overview
 		- **HECVAT** stands for **Higher Education Community Vendor Assessment Toolkit**.
-		- It was created by [[EDUCAUSE]] and [[Internet2]].
+		- It was created by [[EDUCAUSE]] and [[Internet/2]].
 		- It is a standardized vendor security questionnaire used by universities to evaluate technology vendors.
 	- ## Common Use Cases
 		- Universities use HECVAT during vendor risk assessments, especially for:

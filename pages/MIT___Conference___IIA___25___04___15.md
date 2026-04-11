@@ -457,7 +457,7 @@
 			  [[Person/Ayush Chopra]] – Camera Culture
 				- https://lpm.media.mit.edu/
 				- [Ayush Chopra | LinkedIn](https://www.linkedin.com/in/ayushchopra96/)
-			- [[Person/Michael Casey]] – [[Decentralized AI Society]] DAIS
+			- [[Person/Michael Casey]] – [[De/centralize/d/AI/Society]] DAIS
 			- Dave ...
 				- what's his name?
 			- [[My Notes]]

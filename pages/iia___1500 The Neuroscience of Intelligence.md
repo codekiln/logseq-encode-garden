@@ -1,0 +1,41 @@
+# The Neuroscience of Intelligence
+	- meta
+		- What neuroscience reveals about how intelligence actually works — and how those insights are informing the next generation of AI architectures.
+		- [Panel]
+		- [Sustaining Intelligence]
+		- 3:00 PM
+		- [[Person/Alexander D. Wissner-Gross]]
+			- Founder & Investor
+		- [[Person/David Rock]]
+			- NeuroLeadership Institute
+				- Founder & CEO
+		- [[Person/Simran Chana]]
+			- University of Cambridge
+			- Director of Frontier Technologies Laboratory
+		- [[Person/Manolis Kellis]]
+			- MIT and Broad Institute
+			- Professor
+	- discussion
+		- 15:08 what's the obstacle to bidirectional brain computer interfaces [[BCI]]s
+			- [[Person/David Rock]] - [[Human/Memory/Working]] no question. key unlock is dealing with memory.
+			- [[Person/Simran Chana]] - didn't understand
+			- [[Person/Manolis Kellis]] - ngrams are distributed - memories are everywhere at once. [[Hippo/campus]] is an important part. if you have to read, it's going to be impossible. to read the diversity with which brain is encoded.  rewiring state of neurons is ludicrous. if you want to learn kung fu, the best way is through traditional channels.
+			- [[Person/David Rock]] it's like when we cracked genomic code, that didn't unlock all diseases. plugging a computer into the brain is like plugging an iphone into a whole city.
+			- [[Person/Alexander Wissner-Gross]] decoding from brain from [[FMRI]] to encodings
+			- [[Person/Manolis Kellis]] brain can comporess things, but  we can't...
+			- [[Person/Alexander D. Wissner-Gross]] we can read brains ... being able to decode visual qualia is interesting. I'd love to watch my dreams.
+			- [[Person/Manolis Kellis]] when I'm imagining I'm working with dozens of variables at a time, but when I speak I focus
+			- [[Person/Alexander D. Wissner-Gross]] provocation - biology has given nothing to ai but ai has given everything to biology - agree or disagree?
+			- [[Person/David Rock]] - mckinsey just said, ai isn't a tech problem, it's a human problem, we don't know how to do that. it's a capacity issue - you have to work within the working capacity of the brain.
+			- [[Person/Manolis Kellis]] we've learned data paradigms - [[Excel]]. another paradigm is innate. 3 year old on carpet red ball with the red circle, yellow ball, yellow circle. choose a feature space and see and feel the structure of the data. a lot of people say, what of my processes can be translated to ai speech, but existing processes are *pretty terrible*. I think we'll be thinking, how stupid were we that we had 97% failure for clinical trials, armies of accountants. today's ways of working with data are based on SPARK way of working with things, no where near natural ability to interact with the world. if you are playing a game of conquest with a map, how do you encode that into [[Excel]]? traditional [[Data/Science]] is not very compatible. right now we get text and tables. humans are great at diagrams and conceptual exploration. if you go to any consulting firm and ask them what they want, they'll say better powerpoint
+		- [[Person/Alexander D. Wissner-Gross]] apparent complication of human brain is reflection of complexity of ancestral environment. maybe seemingly easy to decode brain ideas into activations of llms like gpt-2 class llms, the provocation - agree or disagree - do you think that the complexity of the human brain vs the llm is due to ancestral complications?
+			- 15:23 [[Person/David Rock]] there are more ways of connecting neurons than there are atoms in the universe. one of the most [[Human]] experiences that [[AI]] can rob us from is reconnecting things in a new moment. [[Aha]] moment. This is intrinsically meaningful. If we don't let people do hard things. The complexity of AI
+			- 15:24 [[Person/Manolis Kellis]] what is the inherent dimensionality of what goes on in the brain.
+				- 1 - at the cellular level, we've studied millions. a small number of states for 20k genes. even if they were binary, it would be 2^20k states. but there's a small number of points of convergence or archetypes. you have regulators that are controlling that state.
+					- in the same way, our brain could be complex to encode simple things.
+				- 2 - how can we understand particle physics that is unchanged since we were throwing sticks in africa? is this guy going to throw this stick at me, which requires knowing the state of the person. I'm one of those agents, so social hierarchies are extraordinarily complex, and a lot of our abilities come from the hierarchies we built. but we have built tech on top of that.
+				- B - humans have limitations. educational attainment 20k vs 10k vs 5k vs 100 year ago, the genetic substrate has been increasing extraordinarily - [[Human]]s have been selected for [[Intelligence]] long before today's society. there's a co-evolution between humans who can handle complexity of environment and modulate their own instincts.
+					- a lot has changed in 2k years
+		- 15:28 where do emotions fit in?
+			- [[Person/Manolis Kellis]] -
+			- [[Person/David Rock/Book/Your Brain At Work]] I wrote a whole book about it

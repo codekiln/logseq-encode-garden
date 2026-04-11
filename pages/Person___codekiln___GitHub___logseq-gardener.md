@@ -1,0 +1,2 @@
+- [logseq-gardener](https://github.com/codekiln/logseq-gardener/tree/main)
+	- nascent project to use [[nx]] to cross-link and manage multiple garden "patches" in [[Knowledge Gardening]]

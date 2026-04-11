@@ -1,0 +1,101 @@
+# Built in Boston: Scaling a Global AI Company
+id:: 69d91948-c0e5-413a-85f4-279b1635a27f
+	- meta
+	  collapsed:: true
+		- How Jellyfish scaled globally by embedding generative AI into creative, media, and data — and what that journey says about building global tech from the MA ecosystem.
+		- [Panel]
+		- [Building Intelligence]
+		- 11:30 AM
+		- moderator [[Person/Sarah Krouse]]
+			- [[wsj]] The Wall Street Journal
+				- Technology & Media Editor
+		- panelists
+			- [[Person/Brian Elliott]]
+				- [[Blitzy]]
+				- [[Co-Founder]] & [[CEO]]
+			- [[Person/Andrew Lau]]
+				- [[Jellyfish]]
+				- [[Co-Founder]] & [[CEO]]
+	- discussion
+		- [[Person/Andrew Lau]]
+			- last year less than 50% were doing [[AI Coding]]
+			- now it's greater than 80%
+		- [[Person/Brian Elliott]]
+			- moving from [[Engineer/ing]] being the [[Bottle/neck]] to [[Product]] teams being bottleneck
+		- what about at the human review level?
+			- [[Person/Brian Elliott]] we need [[Taste]]
+		- can humans keep up?
+			- [[Person/Brian Elliott]] test coverage, [[TDD]]
+			- [[Person/Andrew Lau]] implicit here is [[Role]] transformation
+				- the impediment is that we are going to change jobs
+				- there used to be split between product and engineers, now there's no code writing, so maybe half our jobs are obsolete. Architects vs Product Managers, who wins?
+				- here are the new [[Role]]s - we are unbundling and rebundling of roles
+					- a role is a collection of [[Task]]s and [[Job]]s.
+					- our titles and definitions have to change, and that's not a thing for organizations to go through
+				- the act of [[Coding]] is no longer there, so the coding [[Role]]s are going away
+					- the line engineer is going away. Everyone is suddenly [[Arch/itect]]
+		- as adoption speeds up, are we heading towards more [[Layoffs]].
+			- [[Person/Andrew Lau]]
+				- everybody is making so many things, can your customers really absorb those things? [[Question/Good]]
+			- [[Person/Brian Elliott]]
+				- we are ultimately constrained by [[creativity]] not a bayesian transformer architecture
+		- how do your customers measure [[ROI]]?
+			- [[Person/Andrew Lau]]
+				- let's look at how much value is created
+				- look across the entire system, not just amount of code created
+				- [[Person/Brian Elliott]] says that people at [[Jellyfish]] might be the best to talk about this
+		- we've heard about [[Token/Max/ing]]
+			- [[Person/Andrew Lau]]
+				- the times just had an article about token maxing
+				- think of a [[Diagram/2x2]]
+					- who is spending tokens and not doing anything?
+			- [[Person/Brian Elliott]]
+				- the "cold call" maxers comparison - just because you are calling a lot of people doesn't mean you're the best salesperson
+				- token maxing is a metric, but it's messy
+			- [[Person/Andrew Lau]]
+				- [[Salary]] vs [[Token]]s
+					- companies are trying to allocate
+						- which teams can use which models
+						- there are [[Trade/Off]]s
+							- companies are allocating `$1000` / month for engineers for [[AI Coding]]
+				- desire of want to use these things, but "upside down by accident" [[Confused]]
+		- where are these resources coming from?
+			- [[Person/Andrew Lau]]
+				- we all watched [[2025/10]] to january [[2026/01]] and they are all reacting
+				- here's a riff
+					- we need to separate marketing vs r&d vs etc
+					- these are significant
+			- [[Person/Andrew Lau]]
+				- [[Person/Jensen Huang]] said, [[Quote]]:
+					- > if a `$500k` engineer isn't spending `$250k` in tokens, something is wrong
+				- 10 years ago, [[CTO]], [[CFO]], [[COO]] would bicker once per year about headcount allocations to meet [[CEO]] vision
+					- today, it's every 10 days, because it's about [[Token]] allocations
+			- [[Person/Brian Elliott]]
+				- we are evaluating [[AI/Model/Provider]]s every day full time
+				- [[OpenAI]] is amazing at [[Structured Output]]
+				- [[Anthropic]] is good at entropy
+					- TODO what does he mean by that? [[My Question]]
+				- [[Gemini]] is better at effective context window
+					- there's advertised context window, but google is good at actually expanding the context window
+					- I haven't heard this before; [[Tip/Great]]
+			- [[Person/Andrew Lau]]
+				- these tools are very volatile
+				- 9 months ago it was [[CursorAI]] and now it's [[Claude Code]]
+				- at the very least, the way people are viewing [[Claude Code]] as a command line thing they can dispatch
+				- in the [[IDE]] cursor is more dominant
+				- all these tools allow you to do picking of [[AI/Model]]s
+				- [[CursorAI]] is starting to use [[Open Source]] models in their training
+				- [[CodexCLI]] is also going there (they support it)
+				- people figure out what works in [[Word/of/Mouth]]
+				- every time we think we have a pattern, then boom, there's another idiom that shows up.
+				- think about autonomous tools that go and submit [[PR]]s.
+				- [[AI/Agent/Agentic/Engineering/Autonomous]] autonomous agents - top companies 15% are autonomous [[PR]]s, last year it was 0.x%! transfor
+				- until we see that second order derivative change all cards are on the table
+			- [[Person/Brian Elliott]]
+				- there are mid-market pure bespoke tools
+				- there are also very solely for the [[Enterprise]] tools
+			- [[Person/Andrew Lau]]
+				- labor force is a big factor here.
+		- what's the next pocket of transformation
+			- [[Person/Andrew Lau]]
+				- [[Anthropic/App/CoWork]]

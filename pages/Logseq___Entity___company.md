@@ -2,6 +2,7 @@
 	- This page is the standard operating procedure for **company** entities: organizations (businesses, product firms, devtool vendors) that you want to track as first-class pages—often because they ship multiple [[Logseq/Entity/software-project]] pages you link with `created-by::`.
 	- ## Examples in this garden
 		- [[Charm]] — vendor behind the Charmbracelet GitHub org; `created-by:: [[Charm]]` on [[gum]]; ecosystem siblings include [[glow]] and [[Glamour]].
+		- [[Jellyfish]] — engineering management platform (Boston); [[Person/Andrew Lau]] is co-founder and CEO; appears on [[iia/1130 Built in Boston Scaling Global AI Company]].
 	- ## When we treat something as a company
 		- Strong signals: official site positioning as a company or team, a stable trade name, GitHub org or product suite under one brand, or notes that keep returning to “who makes this.”
 		- Prefer a **person** entity when the subject is an individual maintainer; use **company** when the subject is the organization or brand (even if it is small).

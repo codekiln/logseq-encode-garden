@@ -1,0 +1,19 @@
+-
+- # [World Models and the Inflection Point of Intelligence](https://imaginationinaction.co/2604mit/stages/forum)
+  Frontier AI research, world models, and the inflection point where machine intelligence begins to reshape scientific discovery.
+- meta
+	- [Fireside]
+	- [Building Intelligence]
+		- 10:30 AM
+	- [[Person/Daniela Rus]]
+		- MIT CSAIL
+		- Director
+	- [[Person/Aleksander Madry]]
+		- [[OpenAI]]
+			- Member of Technical Staff
+- topics
+	- just caught the last 10 min
+	- talked a lot about "what do we want ai to do"
+	- "what does ai mean for education"
+		- the question is, what should we be teaching our students?
+	-

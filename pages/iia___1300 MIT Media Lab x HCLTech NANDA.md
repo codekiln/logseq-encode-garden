@@ -1,0 +1,66 @@
+# MIT Media Lab x HCLTech - [[NANDA]]
+	- meta
+		- A special announcement on new initiatives at the intersection of AI and global innovation.
+		- [Announcement]
+		- 1:00 PM
+		- [[Person/Ramesh Raskar]]
+			- MIT Media Lab
+			- Associate Professor of Media Arts and Sciences
+		- [[Person/Apoorv Iyer]]
+			- [[HCLTech]]
+			- EVP & Global Head Generative AI
+		- [[Person/Vijay Guntur]]
+			- [[HCLTech]]
+			- CTO & Head - Ecosystems & Practices
+	- topics
+		- announcement - nandahack.media.mit.edu
+			- [[Nanda/Hack]] - Agentic AI Hackathon
+				- 1st prize 10k, 2nd prize 5k, 3rd price 3k
+			- [[Person/Ramesh Raskar]]
+				- starts today
+					- this is the building infrastructure layer
+				- phase 1 closes [[2026-05-07 Thu]]
+					- enterprise agent track sessions due
+				- battle of bots - agent arena begins
+					- there could be backstabbing, data that needs to be paid for
+					- conclusion is [[2026-06-13 Sat]] at [[MIT/Media Lab]]
+				- [[AI/Agent/Wallet]]s
+		- 13:20 - about [[NANDA]] use case [[Person/Ramesh Raskar]]
+			- Dr. John is creating a prompt, that creates a network of intelligence
+				- this is [[AI/Agent/ic/Commerce]]
+			- [[AI/Agent/Use/Case]] - birthday planning
+				- an agent is going to figure out what your daughter and her friends want, and then you purchase everything for the birthday party
+			- [[Decentralized]] [[AI/Agent]] stuff is needed
+				- he was in india - want every citizen to have an agent
+				- significant part of the civilization is not tech savvy enough for a phone
+				- not just about productivity
+				- right now, we are in the [[Mainframe/Era]] but we need the [[World-wide/Web]] of agents
+				- we'll have trillions of agents, eventually ... these
+				- [[OpenClaw]] and "zero claw" (first time I'hve heard of that)
+				- TinyML - [[Google/AI/Model/Gemma]]
+			- last 14 years from [[AlexNet]] to now have been about how AI can learn
+				- but next years will be about how agents can they can train each other
+				- these [[AI/Agent]]s to betray each other, there will be coalitions
+				- [[Co-Learning]]
+				- mainframe -> PC -> internet :: AI -> Agent -> network
+			- need for specialized agents use case
+				- high-frequency trading
+					- price discovery
+						- how do we price intelligence?
+						- what is the value of the agent?
+				- agentic commerce
+			- who will build the agentic web infrastructure
+				- this will be the [[Stock/Market]] for AI agent infrastructure
+			- [[NANDA]] is an effort to look at the chokepoints
+				- it's not about the protocols anymore
+			- Research - 3 main problems
+				- Registry
+					- identity
+					- onboarding
+					- handshakes
+				- knowledge pricing
+				- [[Co-Learning]]
+					- agentic societies
+			- Research Roadmap
+				-
+	-

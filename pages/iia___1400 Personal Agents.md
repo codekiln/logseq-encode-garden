@@ -1,0 +1,66 @@
+# Personal Agents
+	- meta
+		- How a personal agent can carry your identity, memory, and preferences across services — and actually be owned by you.
+		- [Panel]
+		- [Deploying Intelligence]
+		- 2:00 PM
+		- [[Person/Gunjan Sinha]]
+			- OpenGrowth.Ventures
+			- Founder & Chairman
+		- [[Person/Maria Gorskikh]]
+			- Co-Founder of Maritime
+			- Researcher at Project NANDA & Visiting Lecturer at MIT
+		- [[Person/Jordan Tian]]
+			- [[ZeroClaw/Labs]]
+			- Co-Founder
+		- [[Person/Uzma Farheen]]
+			- Keep AI Safe Foundation
+			- Director of Responsible AI Strategy
+		- [[Person/Greg Raiz]]
+			- Founders Edge
+			- General Partner
+		- [[Person/Niresh Agarwal]]
+			- Amazon
+			  GM - AGI Proactive Information & Strategic Areas
+	- discussion
+		- [[Person/Jordan Tian]] developer of [[ZeroClaw/Labs]]
+			- if you can build on edge, then you can build on mobile, so as compute gets better and language models get smaller, then everything like [[OpenClaw]] can be done on the phone
+		- so how do you think about safety?
+			- [[Person/Jordan Tian]] [[OpenClaw]] when you set it up is that it can do everything. instead,  [[ZeroClaw]] is given incremental access from nothing
+		- [[Person/Uzma Farheen]] simulate human interactions to see where human and models interact, then creating safeguards and frameworks.
+		- [[Person/Gunjan Sinha]] power in agent swarms is in prediction
+		- [[Person/Greg Raiz]] how many people have personal agent here?
+			- *it's maybe 20-40%*
+			- simplification of user experience - we can use voice, we can delegate
+			- we're in early innings of building trust
+			- at best they are a competent intern
+		- [[Person/Niresh Agarwal]] I can [[AI/Agent/Personal]] *Consumer Agents*
+			- before, it was hard to understand what agents were *going to be*
+			- it used to be that noone knew what an app on an iphone was
+			- soon, we will have an ecosystem of Ai agents where we can find these consumer agents for our own purpose, easier than what apps and agents have made so far
+		- [[Person/Gunjan Sinha]] are there technical problems we need to solve? what's the hard part?
+			- [[Person/Niresh Agarwal]] there are tons of problems, but consumer trust is the hardest.
+			- [[Person/Greg Raiz]] memory, as you give [[AI/Agent]]s context, that's hard to manage. lots of techniques - trees of knowledge, [[Person/Andrej Karpathy]]'s coming up with new methods (is he talking about llm-wiki obsidian?)
+			- [[Person/Uzma Farheen]] the quality of data is important, and *defining that* is important, and having *access* to that is hard
+			- [[Person/Jordan Tian]] infra problem. right now, it will just go to amazon. things need more [[API]]s or [[MCP]]s to make [[AI/Agent]]s to doing things
+			- [[Person/Maria Gorskikh]] [[Cost]]of hosting agent on [[Cloud]] and cost of [[Inference]]
+		- what would success look like w.r.t. the future
+			- [[Person/Maria Gorskikh]] everyone in the future will have agents, and they will have multiple specialized agents for each part of their life or profession. these will be owned by young [[StartUp]]s. It might even be geographically specialized.
+			- [[Person/Jordan Tian]] - he did a demo - find me a date tonight and schedule it - scope will grow as apps are tailored to allow them to do things. it can do things more autonomously over time
+			- [[Person/Uzma Farheen]] - for me, an agent which is autonomous where I can be the observer and there is delineation and accountability. there should be difference between steps I did and actions I took and steps my agent did and steps my agent took. that has an in-built concept of [[AI/Safe/ty]] in it [[Point/Good]]
+			- [[Person/Greg Raiz]] - [[Paper/Attention is All You Need]] is [[Iron/ic]] because the result of this has resulted in people getting their attention fractured, not protected.
+			- [[Person/Niresh Agarwal]] - most people think of [[CursorAI]], [[ReplitAI]], coding agents have had a major breakthrough with every software engineer. we need something to come out that every person is talking about it, like what [[Uber]] did. it may be one small thing, but it will make people trust it.
+			- [[Person/Gunjan Sinha]] - long term view, what will we do to make the agent better? let's flip it on how will we make the humans better? is it there for agents to solve our [[ADHD]] that they created in the first place?
+		- tbd topic
+			- [[Person/Maria Gorskikh]] I don't trust my [[Claw]]s to do my [[Email]]. but maybe in the future I will
+			- [[Person/Jordan Tian]] when you use apps like social media, once it understands your preferences, it can curate what you want.
+			- [[Person/Uzma Farheen]] let's be realistic - are [[AI Agents]] going to augment us or are they just going to engage us? that's the crux of the problem. [[Point/Good]]
+			- [[Person/Gunjan Sinha]] we've got to start to think in 2026 about the genuine human needs. most llms were trained on datasets created over the last 30 years. a lot of companies are more oriented towards ...
+		- walled garden app stores vs open solutions
+			- [[Person/Greg Raiz]] bunch of different
+		- [[Person/Gunjan Sinha]] a person a [[YCombinator]] [[Person/Gary Tan]] just [[Open Source]]d his intelligence
+		- [[Person/Maria Gorskikh]] I don't want to live in a world where everyone is working with [[Claude Code]] or [[CodexCLI]], ideally, it should be [[Decentralized]], one registry that is a registry of registries so you can discover any type of agent. that's project [[NANDA]]
+		- [[Person/Jordan Tian]] - if we get it to run on edge, then it's baked into your OS. If Gemini or Siri can actually do things for you
+		- [[Person/Uzma Farheen]] - right now we are keeping it closed, but to keep children safe, we want to make it open eventually
+		- [[Person/Greg Raiz]] centralizing concext of my life in a standardized way is the thing
+			- [[Interest/ing/Point]] about [[Context Engineering]]

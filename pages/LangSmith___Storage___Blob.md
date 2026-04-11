@@ -1,0 +1,3 @@
+- [Enable blob storage - Docs by LangChain](https://docs.langchain.com/langsmith/self-host-blob-storage)
+	- **For cloud-specific setup**, choose your platform:
+		- [[AWS/S3]] - see [[LangSmith/Storage/Blob/S3]]
