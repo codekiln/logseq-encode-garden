@@ -7,6 +7,12 @@
 		- Cursor predicted the next location, and suggested an edit there.
 	- ## Partial Accepts
 		- ### In [[CursorAI/Tab]] what is the #Keyshort to accept the next word? #card
+		  card-last-interval:: -1
+		  card-repeats:: 1
+		  card-ease-factor:: 2.5
+		  card-next-schedule:: 2026-04-13T04:00:00.000Z
+		  card-last-reviewed:: 2026-04-12T08:19:14.514Z
+		  card-last-score:: 1
 			- You can accept the next word of a suggestion by pressing **⌘ and the right arrow**
 			- (or by setting `editor.action.inlineSuggest.acceptNextWord` to your preferred keybinding).
 			- To enable partial accepts, navigate to [[CursorAI/Settings/Features/Cursor Tab]] .

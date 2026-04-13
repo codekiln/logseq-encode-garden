@@ -1,0 +1,4 @@
+- [[Keyshort]] [[Logseq]] [[Logseq/Keyshort]]
+	- **Add to or remove from favorites** #card
+		- Shortcut: `⌘⇧f`
+		- Description: Toggles whether the current page is listed in the sidebar Favorites section (adds it if not favorited, removes it if already favorited).

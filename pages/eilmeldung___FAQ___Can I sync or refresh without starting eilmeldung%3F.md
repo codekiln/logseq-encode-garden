@@ -1,0 +1,2 @@
+### [Can I sync/refresh without starting eilmeldung?](https://github.com/christo-auer/eilmeldung/blob/main/docs/faq.md#can-i-syncrefresh-without-starting-eilmeldung)
+	- Yes, use `--sync`. See [CLI Arguments](https://github.com/christo-auer/eilmeldung/blob/main/docs/cli_args.md). This even outputs sync statistics for further shell shenanigans.

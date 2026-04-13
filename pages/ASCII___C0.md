@@ -1,0 +1,8 @@
+- # C0 control codes
+	- In **ASCII** and related standards, **C0** names the **32 control codes** in the range **0x00–0x1F**. The same chart is standardized as the **C0 set** in **ISO/IEC 6429** (and historically aligned with ECMA-6 / ECMA-48); it is **not** specific to Unix—Unix and POSIX **use** these bytes everywhere in text, ttys, and binary protocols.
+	- ## Why keep this under `ASCII/`
+		- **`ASCII/C0/...`** is the **definition-first** spine: code position, official name, hex. Tool pages ([[rg]], [[xargs]], `find`, libc) stay free to describe **behavior** while linking here for **“what byte is this?”**
+	- ## Pages in this garden (grow over time)
+		- [[ASCII/C0/NUL]]
+	- ## See also (outside the graph)
+		- [Wikipedia — C0 and C1 control codes](https://en.wikipedia.org/wiki/C0_and_C1_control_codes)

@@ -1,0 +1,28 @@
+- # Logseq Flashcard Review
+	- This page is a **hand-curated deck switcher**: it foregrounds flashcard scopes I care about **now**, and pushes the rest to **TBD** or **Past** so the built-in Flashcards sidebar is less noisy. The stock reader still lists every `{{cards …}}` root; this page is where ordering and intent live.
+	- ## Signals this page follows
+		- **Favorites (sidebar)** — Foreground decks should stay aligned with pages in **`logseq/config.edn`** under **`:favorites`**, currently `rg`, `vim`, `nvim`, `fzf`, `zoxide`, `yazi`, `tmux`, `Lazygit`, `chezmoi`. See [[Logseq/Favorite]] and [[Logseq/Keyshort/Add to or remove from favorites]] for how that list is edited.
+		- **“Lately” from journals** — When refreshing this page, skim roughly the **last month** of `journals/2026_*.md` (as of the last refresh, **2026-03-13** onward through the current week) for repeated `[[…]]` links, new `[[Filed]]` bursts, and narrative emphasis. Promote scopes that show up often; demote scopes that go quiet or that you explicitly deprioritize.
+		- **Non-Keyshort / topic cards** — Prefer new memorization on **technology topics** (CLI flags, protocols, concepts) on normal pages with `#card`, not only under `*/Keyshort/*`. Parent blocks still need the right `[[…]]` ancestry so `{{cards [[Root]]}}` on a hub page can see them (same rule as Keyshort pages).
+	- ## Active
+		- These are **in the foreground**: favorites-aligned scopes with a **Keyshort hub** that already exposes `{{cards [[…/Keyshort]]}}`, ordered with **recent journal weight** (Apr 2026: `[[yazi]]`, `[[rg]]`-related pages, `[[fzf]]`, `[[vim]]` / `[[nvim]]`, `[[tmux]]`, `[[Lazygit]]`, then the rest).
+		- ### [[yazi]]
+			- {{embed [[yazi/Keyshort]]}}
+		- ### [[fzf]]
+			- {{embed [[fzf/Keyshort]]}}
+		- ### [[vim]]
+			- {{embed [[vim/Keyshort]]}}
+		- ### [[tmux]]
+			- {{embed [[tmux/Keyshort]]}}
+		- ### [[Lazygit]]
+			- {{embed [[Lazygit/Keyshort]]}}
+		- ### Favorites without a Keyshort hub yet
+			- **`[[rg]]`** — high journal traffic (flag pages, `[[ASCII/C0/NUL]]`, `[[xargs]]`); cards may live on leaf pages until a dedicated hub exists.
+			- **`[[nvim]]`** — active alongside vim; no `nvim/Keyshort` hub file in this graph yet; many cards may still roll up under `[[vim/Keyshort]]` ancestry—split when it hurts clarity.
+			- **`[[zoxide]]`**, **`[[chezmoi]]`** — sidebar favorites; add or link a small hub with `{{cards [[zoxide]]}}` / `{{cards [[chezmoi]]}}` when those decks exist.
+		- ### Topic fronts (not editor Keyshorts)
+			- Recent journals cluster on **Nix**, **LangSmith / LangGraph**, **Obsidian**, **rulesync**, **Logseq/Entity**, and **misc CLI** topics—good candidates for `#card` blocks on those pages (and later a scoped `{{cards [[Topic]]}}` block on a summary page if you want a second deck column here).
+	- ## TBD
+		- Scopes to **promote** after the next journal pass or after you add a hub: e.g. **`[[rg]]`** hub page mirroring other `*/Keyshort` parents; **`[[nvim]]`** if vim cards should split; any favorite that gains several `#card` lines but no embed target yet.
+	- ## Past
+		- **`[[VSCode]]`** — **Deprioritized** as a primary editor (see journal **2026-04-09**); keep only a handful of exceptions on their own pages (e.g. Dev Containers log habits). For rare full review, open [[VSCode/Flashcards]] directly instead of embedding it here so this page stays oriented to current tools.

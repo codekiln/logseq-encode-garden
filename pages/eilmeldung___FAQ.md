@@ -1,0 +1,3 @@
+- [eilmeldung/docs/faq.md at main · christo-auer/eilmeldung](https://github.com/christo-auer/eilmeldung/blob/main/docs/faq.md)
+	- {{embed [[eilmeldung/FAQ/Can I automatically sync on startup or every n minutes?]]}}
+	- {{embed [[eilmeldung/FAQ/Can I sync or refresh without starting eilmeldung?]]}}

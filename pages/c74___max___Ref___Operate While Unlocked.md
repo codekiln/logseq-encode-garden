@@ -7,6 +7,12 @@
 	- You can select one or more objects by mouse-dragging over them.
 	- To perform actions with UI objects that require the option key, hold down the option and command keys.
 	- ## [[c74/max/Keyshort]] #Keyshort for toggling Operate While Unlocked #card
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-04-13T04:00:00.000Z
+	  card-last-reviewed:: 2026-04-12T08:20:32.762Z
+	  card-last-score:: 1
 		- **Shift + Option + Command + E** on Mac
 		- see [[c74/max/Ref/Shortcuts]]
 		- see also [Key command for Operate While Unlocked - MaxMSP Forum | Cycling '74](https://cycling74.com/forums/key-command-for-operate-while-unlocked) [[c74/Forum]]

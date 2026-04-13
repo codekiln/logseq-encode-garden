@@ -1,0 +1,20 @@
+- # xargs
+	- `xargs` reads whitespace-separated tokens from **stdin** and runs a **utility** with those tokens as arguments, often in several invocations so each command line stays under **ARG_MAX** (`man xargs` documents the implementation on your OS; macOS ships BSD `xargs`).
+	- ## Why it shows up in pipelines
+		- Tools such as [[rg]] with [[rg/--files-with-matches]] (or `find -print`) emit **lists of paths**; the next step is usually another command that needs those paths as arguments. `xargs` turns streamed names into argument lists.
+	- ## NUL-separated input (`-0`)
+		- By default, `xargs` splits on spaces, tabs, and newlines, so ordinary file names that contain spaces break.
+		- Pass **`-0`** so arguments are separated by [[ASCII/C0/NUL]] bytes (same value as the C **'\0'** escape), and pair it with producers that emit NUL-terminated records (for example `find ... -print0`, or [[rg/--null]] with [[rg]]).
+		- Example chaining file lists: `rg -l --null 'foo' . | xargs -0 rg -l 'bar'`
+	- ## Placeholder form (`-I`)
+		- **`-I replstr`** (common idiom: `-I {}`) runs the utility once per input item (or per `-L` group), replacing `replstr` in the template. On BSD/macOS this mode implies **`-x`** (stop if a single expansion would overflow `-s`); see `man xargs`.
+		- Example: `rg -l --null 'TODO' . | xargs -0 -I{} ls -ld {}`
+	- ## Batching and size limits (`-n`, `-s`)
+		- **`-n max`** limits how many stdin arguments each invocation receives; **`-s max`** caps the total command-line byte length. These matter when you hit `Argument list too long` without `-0` batching.
+	- ## Parallel runs (`-P`)
+		- **`-P maxprocs`** runs up to `maxprocs` copies of the utility at once (`0` means as many as the implementation allows). Useful for CPU-bound work over independent files; combine with `-0` when paths are arbitrary.
+	- ## Empty stdin and dialects
+		- **GNU** `xargs` historically ran the utility once even when stdin was empty unless **`--no-run-if-empty`** (often **`-r`**) was set. **BSD/macOS** `xargs` usually runs **nothing** on empty input; **`-r`** exists for compatibility with GNU scripts but may be a no-op—check `man xargs` on the machine you run on.
+		- For portable scripts, do not rely on GNU-only flags without a fallback (for example `command -v gxargs` from findutils, or an explicit `if` that checks whether the upstream list is empty).
+	- ## Further reading
+		- [GNU findutils manual — xargs invocation](https://www.gnu.org/software/findutils/manual/html_node/xargs-invocation.html)

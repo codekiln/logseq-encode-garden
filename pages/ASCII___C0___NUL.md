@@ -1,0 +1,9 @@
+- # NUL (C0 control)
+	- **Code position:** **0x00** (binary zero). **ASCII / ISO 6429** name **NUL** (often spelled **NULL** in prose). Same scalar value as **Unicode U+0000** (general category **Cc**, “control”).
+	- **Notation:** in C source, **'\0'** is the familiar escape for a single byte of value **0x00**; **NUL-terminated** means a sequence of non-NUL bytes followed by one final **0x00** sentinel.
+	- ## POSIX and Unix lens
+		- **C strings:** the language ABI ends strings with **NUL**; APIs such as `strlen` stop at the first **0x00**. Binary data that may contain interior NULs is not representable in a classic C string without an explicit length.
+		- **Path lists on stdin:** many tools default to **newline-** or **whitespace-separated** text, which breaks when paths contain spaces. A common pattern is **NUL-terminated records**: producers emit **`0x00` between paths** (see [[rg/--null]]; `find -print0`), and consumers read that stream with **`xargs -0`** or similar (see [[xargs]]).
+		- **Line-oriented text:** POSIX text files are usually modeled as **lines separated by LF**; **NUL** is generally **not** treated as “another newline” by line-based tools, so mixing **NUL** into what you think of as “plain text” often surprises tools and humans.
+	- ## Parent
+		- [[ASCII/C0]]

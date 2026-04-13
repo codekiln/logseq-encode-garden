@@ -10,6 +10,12 @@
 						- [[My Note]]: these are actually `-` or `=` keys, respectively; it doesn't matter if you press `Shift` or not
 							- `Cmd`+mouse wheel: zoom left/right like the above
 				- ### Pan left/right or up/down around selection in Arrangement View #card
+				  card-last-interval:: -1
+				  card-repeats:: 1
+				  card-ease-factor:: 2.5
+				  card-next-schedule:: 2026-04-13T04:00:00.000Z
+				  card-last-reviewed:: 2026-04-12T08:33:28.864Z
+				  card-last-score:: 1
 					- [[Keyshort]] use `Cmd+Opt` while clicking and dragging a selection to pan up, down, left, right
 		- ## 3 - Zooming into [[Ableton/Selection]] in [[Ableton/Arrangement View/Track/Display Area]] *Completely*
 			- > To zoom in the current selection completely, press `Z` or use the View menu's Zoom to Arrangement Time Selection command. Note that if you select time on a single Arrangement clip, the [Clip Content Editor in Clip View](https://www.ableton.com/en/live-manual/11/clip-view/#zooming-and-scrolling) will zoom in on that selected time. You can revert back to the previous zoom state by pressing the `X` key. Note that when zooming in multiple times using the `Z` key, the `X` key can be pressed multiple times to go back one step each time the key is pressed.
@@ -23,6 +29,12 @@
 			- > To optimize the height of all tracks to fit the Arrangement View, click the Optimize Arrangement Height button or press the `H` shortcut key. To adjust the Arrangement View's horizontal zoom so that the whole song fits to the view, click the Optimize Arrangement Width button or press the `W` shortcut key.
 			- [[My Notes]]
 				- ### Keyshorts and Buttons to see all tracks vertically or horizontally in Arrangement View #card
+				  card-last-interval:: -1
+				  card-repeats:: 1
+				  card-ease-factor:: 2.5
+				  card-next-schedule:: 2026-04-13T04:00:00.000Z
+				  card-last-reviewed:: 2026-04-12T08:19:03.936Z
+				  card-last-score:: 1
 					- little buttons located next to [[Ableton/Arrangement View/Overview]] in the top right, very small: `[ H ]  [ W ]`.
 					- Both of the #Keyshort `H` and `W` can be **toggled** to quickly display the entirety of the left-right or top-bottom extents of all tracks in the arrangement view, respectively.
 		- ## 6-8 [[Ableton/Arrangement View/Overview]]
@@ -36,6 +48,12 @@
 			- > To have the Arrangement display follow the song position and scroll automatically, turn on the `Follow` switch, or use the `Follow` command from the Options menu. `Follow` will pause if you make an edit or scroll the view horizontally in the Arrangement, or if you click on the beat-time ruler. `Follow` will start again once you stop or restart playback, or click in the Arrangement or clip scrub area. If you zoom the Arrangement while `Follow` is enabled, Live will zoom to the playhead.
 			- [[My Notes]]
 				- ### Toggle whether or not playing scrolls through Arrangement View when following #card
+				  card-last-interval:: -1
+				  card-repeats:: 1
+				  card-ease-factor:: 2.5
+				  card-next-schedule:: 2026-04-13T04:00:00.000Z
+				  card-last-reviewed:: 2026-04-12T08:35:27.665Z
+				  card-last-score:: 1
 					- [[Ableton/Menu/Options/Follow]]
 						- This is the `➔╌` button in top of Arrangement View in the Transport
 						- Activate with `Cmd+Shift+F` #Keyshort

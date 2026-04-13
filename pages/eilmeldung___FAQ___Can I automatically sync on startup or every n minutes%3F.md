@@ -1,0 +1,2 @@
+### [Can I automatically sync on startup/every n minutes?](https://github.com/christo-auer/eilmeldung/blob/main/docs/faq.md#can-i-automatically-sync-on-startupevery-n-minutes)
+	- Yes, in your [[eilmeldung/config/.toml]]  add `sync` to your `startup_commands` (`startup_commands=["sync"]`). To automatically sync every `10` minutes, set `sync_every_minutes=10`.

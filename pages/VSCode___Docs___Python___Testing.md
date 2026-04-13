@@ -356,6 +356,12 @@ CLOCK: [2025-01-03 Fri 06:34:13]--[2025-01-15 Wed 03:26:46] =>  284:52:33
 	  CLOCK: [2025-01-15 Wed 03:19:37]--[2025-01-15 Wed 03:26:39] =>  00:07:02
 	  :END:
 		- ### What's the difference between the [[VSCode/Command]]s that begin with Testing and those that begin with Test #card
+		  card-last-interval:: -1
+		  card-repeats:: 1
+		  card-ease-factor:: 2.5
+		  card-next-schedule:: 2026-04-13T04:00:00.000Z
+		  card-last-reviewed:: 2026-04-12T08:41:37.793Z
+		  card-last-score:: 1
 			- > **The settings that affect the UI of the testing features are provided by VS Code itself**, and can be found in the **[VS Code Settings editor](https://code.visualstudio.com/docs/getstarted/settings) [[VSCode/Docs/Getting Started/Settings]]  when you search for "Testing"**.
 		- ### DONE [General Python settings](https://code.visualstudio.com/docs/python/testing#_general-python-settings)
 			- `autoTestDiscoverOnSaveEnabled` - discover tests in each file on each save
