@@ -30,7 +30,7 @@ This command imports a **blog post**, **article**, or **essay** into the Logseq 
 - If the user provided a URL, fetch or use the content to determine title and author/source.
 - If no URL was provided, ask the user for the post URL or paste/content.
 - Determine the **entity** that owns the piece:
-  - **Person**: e.g. `Person/Simon Willison`, `Person/Zack Steinkamp`. Search first per logseq-person rule to avoid duplicate person pages; use the canonical person page name when linking.
+  - **Person**: e.g. `Person/Simon Willison`, `Person/Zack Steinkamp`. Search first per `[[Logseq/Entity/person]]` (and **logseq-entity** skill / `logseq-person` router) to avoid duplicate person hubs; use the canonical person page name when linking.
   - **Company or technology**: e.g. `Anthropic`, `CrowdStrike`, `LangChain`, `FormalCo`, `InvariantLabsAI`. Use existing namespace if the entity already has pages in the garden; otherwise use a consistent, existing-style name.
 - Choose **type**: **Blog**, **Article**, or **Essay**. Use Blog for blog-style or recurring posts; use Article or Essay for one-off pieces (article = e.g. magazine/publication; essay = e.g. long-form/opinion). When in doubt, use Blog or ask the user.
 
@@ -71,7 +71,7 @@ This command imports a **blog post**, **article**, or **essay** into the Logseq 
 
 ## Related Rules and Conventions
 
-- **logseq-person**: Search before creating person references; use canonical person page name; one page per person.
+- **logseq-person** (router): Search before creating person hubs; follow `[[Logseq/Entity/person]]`; use canonical `[[Person/...]]` title; one hub per human.
 - **logseq-flavored-markdown**: Bullet prefix, TAB indent, no blank lines between content, headings under bullets.
 - **Logseq Best Practice**: Use `ENTITY/Type/YY/MM/<POST>` (Type = Blog, Article, or Essay) for date namespacing and chronological order.
 - **Frontmatter**: Do not modify, add, or remove the `tags::` frontmatter item on existing pages; when creating a new page, set `tags:: [[Blog/Post]]`, `[[Article]]`, or `[[Essay]]` to match the type, and any other tags the user or existing convention requires.

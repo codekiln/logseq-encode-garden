@@ -29,6 +29,7 @@ The garden may eventually model many entity types. Types with Logseq-native SOP 
 - question — see `[[Logseq/Entity/question]]`
 - concept — see `[[Logseq/Entity/concept]]`
 - term — see `[[Logseq/Entity/term]]`
+- person — see `[[Logseq/Entity/person]]`
 
 Other entity types may be added here later without changing the skill itself. Prefer the `[[Logseq/Entity/<Type>]]` pages over this file when both exist.
 
@@ -229,6 +230,41 @@ Strong signals: short definition or disambiguation; glossary-style vocabulary; p
 ### Legacy
 
 - Many term-tagged pages predate `logseq-entity::`. Do not bulk-backfill unless the author requests it.
+
+## Entity Type: person
+
+Authoritative documentation: `[[Logseq/Entity/person]]`. This section is bootstrap-only.
+
+### Recognition
+
+Strong signals: individual maintainer, author, speaker, or public figure you will link repeatedly; confirmed identity; bios, handles, or repeated references to the same human.
+
+### Namespace vs entity type
+
+- Titles under `Person/...` with extra segments (e.g. `Person/Name/GitHub/repo`) are **not** person entities by default—often **software-project**. See the Logseq-native type page.
+
+### Canonical naming
+
+- Person **hub** only: `[[Person/Full Name]]` — disk `Person___Full Name.md` where the name segment contains no `___`.
+- Do **not** use `[[People/...]]` as a title or alias for persons in this garden.
+
+### Search and dedup
+
+Search in order: exact `Person___<Name>.md` hub; `alias::` match; partial name/handle in `pages/Person___*.md`; body (same profile URL). Classify: existing, similar, new, blocked. One hub page per human.
+
+### Frontmatter
+
+- On **person hub** pages only: `logseq-entity:: [[Logseq/Entity/person]]`.
+- Never modify `tags::` on existing pages without explicit human instruction.
+- Optional `alias::` for real alternates (handles, spelling, rename)—never `People/` aliases.
+
+### Page shape
+
+- LFM; lean hub (About, Online presence, Projects). Child SCM pages use `[[Logseq/Entity/software-project]]` when they are repo/tool pages.
+
+### Legacy
+
+- Older person hubs may omit `logseq-entity::` until backfilled. Child pages under `Person/...` are not bulk-marked as person.
 
 ## Reporting Contract
 

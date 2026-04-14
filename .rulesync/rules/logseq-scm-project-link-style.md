@@ -35,11 +35,11 @@ Do not introduce or keep generic SCM path styles such as:
 
 1. When adding or editing GitHub/GitLab project references, rewrite them to the canonical person-first namespace.
 2. If the person page exists, use that exact canonical person name in links.
-3. If the person page does not exist and the task requires creating references, create/update the person page first using existing person-page conventions.
+3. If the person page does not exist and the task requires creating references, create/update the person **hub** first per `[[Logseq/Entity/person]]` (and the **logseq-entity** skill).
 4. For legacy content updates, normalize existing non-canonical SCM links to this style.
 
 ## Related
 
 - command: `logseq-normalize-scm-project-links` - Normalize GitHub/GitLab project links in a file or across changed files
-- rule: `logseq-person` - Person page deduplication and canonical person naming
+- rule: `logseq-person` (router) — see `[[Logseq/Entity/person]]` for person hub dedup and naming
 - rule: `logseq-page-naming-reference` - Namespace/file naming rules

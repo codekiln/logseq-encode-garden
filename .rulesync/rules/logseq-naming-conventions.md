@@ -22,7 +22,7 @@ This is an extension to the logseq-flavored-markdown rule for maintaining consis
    - Use singular form: `[[Project]]` not `[[Projects]]`
 
 2. **Aliases**
-   - Add plural form as an alias in the page's frontmatter
+   - Add a plural or contextual form as an alias in the page's frontmatter when you want that link text to resolve to the singular canonical page.
    - Example:
      ```markdown
      ---
@@ -31,8 +31,8 @@ This is an extension to the logseq-flavored-markdown rule for maintaining consis
      ```
 
 3. **References**
-   - Use plural form in references: `[[Related Posts]]`
-   - The alias will resolve to the singular page name
+   - Use the alias link text in references when you want the plural or contextual surface form: `[[Related Posts]]`
+   - The alias resolves to the singular page name
    - This maintains consistency while allowing for sub-namespaces
 
 ### Benefits
@@ -44,8 +44,7 @@ This is an extension to the logseq-flavored-markdown rule for maintaining consis
 ### Examples
 
 <CORRECT_✅>
-- [[Person/John Smith]] (singular page name)
-  - alias:: [[People/John Smith]]
+- [[Person/John Smith]] (singular person hub; see `[[Logseq/Entity/person]]` — do not use a parallel `[[People/...]]` alias)
 - [[Project/Cursor]] (singular page name)
   - alias:: [[Projects/Cursor]]
 - [[Related/Post]] (singular page name)
@@ -53,7 +52,7 @@ This is an extension to the logseq-flavored-markdown rule for maintaining consis
 </CORRECT_✅>
 
 <INCORRECT_❌>
-- [[People/John Smith]] (plural in page name)
+- [[People/John Smith]] (plural in page name — not used for persons in this garden)
 - [[Projects/Cursor]] (plural in page name)
 - [[Related Topics]] (plural in page name)
 </INCORRECT_❌>

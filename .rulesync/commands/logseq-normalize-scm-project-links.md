@@ -34,4 +34,4 @@ Normalize GitHub/GitLab project links to the canonical style:
 ## Related
 
 - rule: `logseq-scm-project-link-style` - SCM namespace policy
-- rule: `logseq-person` - Canonical person naming and deduplication
+- rule: `logseq-person` (router) — see `[[Logseq/Entity/person]]` for person hub naming and deduplication
