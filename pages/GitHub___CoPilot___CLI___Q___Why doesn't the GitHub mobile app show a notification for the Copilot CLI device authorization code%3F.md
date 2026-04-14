@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/question]]
+see-also:: [[GitHub/CoPilot/CLI]]
+
+- # Why doesn't the [[GitHub]] mobile app show a notification for the [[GitHub/CoPilot/CLI]] device authorization code?
+	- ## [[My Notes]]
+		- [[PEBCAK]]: it turns out that the authentication flow in `copilot login` gave me an eight digit code that I needed to manually copy and paste out of the terminal into the web browser.
+		- This seems like poor [[DX]] or [[UX]] to me. Copy paste is a poor "proof of life" from a [[Security]] standpoint. Why couldn't they just provide it as a query param?
+	- ## Answer
+		- [[AI/Response]]
+			- **What the flow actually is:** [[GitHub/CoPilot/CLI]] signs you in with the **OAuth device flow**. GitHub’s documented steps are to open **`https://github.com/login/device` in a browser**, paste the one-time code, review permissions, click **Authorize GitHub Copilot CLI**, then return to the terminal while the CLI polls until the token is issued. That procedure does **not** mention the mobile app or a push notification as part of the path. See [Authenticating GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/authenticate-copilot-cli).
+			- **Why no notification:** For this grant type, GitHub is modeled as “another device with a browser” where you **manually enter the user code** (RFC 8628–style device authorization). A signed-in [[GitHub]] mobile app does not imply GitHub will push an “approve this code” alert to your phone for every OAuth device authorization; the supported completion surface in the docs is the **device verification page** in a browser session where you can paste the code. If you only wait for a phone alert, authorization may never complete even though the account matches.
+			- **What to do instead:** On your phone, open a browser (or use the in-app browser if you prefer), go to `https://github.com/login/device`, enter the code, authorize **GitHub Copilot CLI**, then switch back to the machine running `copilot login` or `/login`. If the terminal still hangs after you authorized in the browser, see [Troubleshooting GitHub Copilot CLI authentication](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/troubleshoot-copilot-cli-auth) (keychain, env var overrides, non-interactive token options).
+			- **Optional nuance:** Some GitHub experiences use mobile prompts for *different* kinds of sign-in or security events; that does not mean every CLI device-code challenge is wired to the same notification channel. Rely on the documented URL + code + browser approval for Copilot CLI.
