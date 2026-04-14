@@ -1,6 +1,6 @@
 alias:: [[Person/Dexter Horthy]]
 tags:: [[Person]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Dex Horthy
 	- ## Overview
 		- Founder of [[humanlayer]] (YC Fall 24 batch)

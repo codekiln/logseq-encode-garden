@@ -1,4 +1,4 @@
-alias:: [[People/Dominik Dorfmeister]]
+logseq-entity:: [[Logseq/Entity/person]]
 - # Dominik Dorfmeister
 	- ## Bio
 		- Web developer and open source maintainer based in Vienna, Austria

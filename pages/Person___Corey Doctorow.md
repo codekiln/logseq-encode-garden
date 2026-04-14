@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 # Corey Doctorow
 	- ## Bio
 		- Canadian-British science fiction author, journalist, and technology activist

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # [Kovid Goyal](https://kovidgoyal.net/)
 	- Prolific open source developer best known for creating [[Calibre]], the comprehensive e-book management application, and [[Kitty]], the GPU-accelerated terminal emulator
 	- [[Calibre]] has been in continuous development since 2006 and is one of the most widely used e-book tools in existence

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 # Ramesh Raskar
 	- **Role:** Associate Professor, MIT Media Lab
 	- **Bio:** Ramesh Raskar directs the Camera Culture group and leads decentralized AI initiatives at MIT. His research spans AI and imaging for health, sustainability, and mobility. He has received numerous awards and holds over 100 US patents, with prior work at Google X, Apple, and Facebook.

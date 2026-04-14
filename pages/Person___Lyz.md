@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - Not much about this person online other than their amazing [[Knowledge Garden]]
 	- ## [[Person/Lyz/Garden]] [lyz-code (Lyz)](https://github.com/lyz-code)
 		- ### [[My Notes]] on Lyz's "blue-book"

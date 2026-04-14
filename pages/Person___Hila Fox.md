@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Hila Fox
 	- **Role:** Principal Engineer, Qodo
 	- **Bio:** Hila Fox works on Qodo’s AI products—from single agent to multi-agent code generation and review—using LangGraph and MCPs in production-facing workflows.

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Paul Ford
 	- ## About
 		- Essayist and technologist.

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Josh Woodward
 	- **Role:** Leads Google Labs & Gemini app
 	- **Bio:** Josh Woodward leads Google Labs and the Gemini app teams, focused on discovering and delivering new AI products. He co-founded Google's Next Billion Users initiative and helped create Chromebooks, aiming to make technology more accessible globally.

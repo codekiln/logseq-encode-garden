@@ -1,5 +1,5 @@
 alias:: [[llimllib]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - Website: [billmill.org](https://billmill.org)
 - Mastodon: [@llimllib@hachyderm.io](https://hachyderm.io/@llimllib)
 - GitHub: [llimllib (Bill Mill)](https://github.com/llimllib)

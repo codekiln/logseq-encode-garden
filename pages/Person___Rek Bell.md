@@ -1,5 +1,5 @@
 alias:: [[Person/Rekka]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - [[Person/Rek Bell/Garden]] https://kokorobot.ca/site/notes.html
 - [[Person/Rek Bell/Bio]] [Rek Bell — rek](https://kokorobot.ca/site/rek.html)
 	- [[Gender/Agnostic]], if you must talk about me use  [[Gender Neutral Pronouns]].

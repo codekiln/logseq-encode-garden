@@ -1,6 +1,6 @@
 alias:: [[Username/tiangolo]]
 tags:: [[Coder]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Sebastián Ramírez
 	- [[Person/Sebastian Ramirez/GitHub]] [tiangolo (Sebastián Ramírez) · GitHub](https://github.com/tiangolo)
 	- ## About

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Mike Amundsen
 	- **Role:** Author; API and distributed systems practitioner
 	- **Bio:** Mike Amundsen writes and speaks on APIs, hypermedia, and developer experience. At O’Reilly AI Codecon he presents **AI coaches**—patterns that augment human reasoning (Engelbart/Licklider lineage) rather than replacing skill formation with one-shot generation.

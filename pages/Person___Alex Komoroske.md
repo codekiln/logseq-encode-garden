@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Alex Komoroske
 	- **Role:** CEO, Common Tools
 	- **Bio:** Alex Komoroske has been a product manager and director of product management for platforms such as Chrome, Google Maps, and Google Earth. At Google, he authored *Practical PM Stuff*, widely known as the Product Manager's Bible. He promotes the "Gardening Platforms" approach—guiding ecosystems toward greatness instead of controlling them. At Common Tools, he's building open, private, and composable AI infrastructure that prioritizes human agency.

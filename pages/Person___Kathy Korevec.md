@@ -1,5 +1,5 @@
 alias:: [[Person/Kath Korevec]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Kathy Korevec
 	- **Role:** Director of Product, Google Labs
 	- **Bio:** Kathy Korevec (also known as Kath Korevec) is a product leader with an engineering background, currently leading an AI coding agent named Jules at Google Labs. Previously, she was VP of product and design at Vercel and senior director at GitHub, focusing on developer tools and documentation.

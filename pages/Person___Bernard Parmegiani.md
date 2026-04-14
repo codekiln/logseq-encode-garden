@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Bernard Parmegiani
 	- ## Bio
 		- French composer of acousmatic music

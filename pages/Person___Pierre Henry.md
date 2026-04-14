@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Pierre Henry
 	- ## Bio
 		- French composer and pioneer of musique concrète

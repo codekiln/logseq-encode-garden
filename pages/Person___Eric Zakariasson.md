@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - #Website: [any blockers?](https://anyblockers.com/) #Blog
 	- [[Person/Eric Zakariasson/Blog/24/10/18 observations from using Cusor]]
 - [[TwitX/ericzakariasson]]: https://x.com/ericzakariasson

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Abhimanyu Anand
 	- **Role:** Senior Data Scientist, Elastic
 	- **Bio:** Abhimanyu Anand works on evaluation design for AI agents—metric trade-offs, nondeterministic LLM-as-judge effects, and statistical significance so teams do not ship illusory improvements.

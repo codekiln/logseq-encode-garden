@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - [[Person/Nick Huang/LinkedIn]] https://www.linkedin.com/in/ncchuang/
 	- Works at [[LangChain]]
 	- Before that, worked at [[Palantir]]

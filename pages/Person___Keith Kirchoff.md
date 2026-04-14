@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - #Bio/Short
 	- Co-founded SPLICE Institute
 - #Bio/Long

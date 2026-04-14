@@ -1,6 +1,5 @@
 tags:: [[Person]], [[Composer]], [[Performer]]
-alias:: [[People/Douglas Geers]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # [[Person/Douglas Geers]]
 	- ## Bio
 		- Composer and computer musician

@@ -1,5 +1,5 @@
 tags:: [[Coder]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - Henry Mao
 - Building [[smithery.ai]]
 - [[Person/Henry Mao/TwitX]] https://x.com/Calclavia

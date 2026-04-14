@@ -1,6 +1,5 @@
-alias:: [[People/B. J. Fogg]]
 tags:: [[Person]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - [[Person/B. J. Fogg]]
 	- **B.J. Fogg** (Brian Jeffrey Fogg, born August 7, 1963) is an American social scientist and researcher known for his work on persuasive technology and behavior design.
 	- **Key Contributions:**

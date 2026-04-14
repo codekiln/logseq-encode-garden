@@ -1,5 +1,4 @@
-alias:: [[People/Lisa Orr]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Lisa Orr
 	- ## About
 		- Engineering Leader, Zapier

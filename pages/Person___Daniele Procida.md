@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 # Daniele Procida
 	- ## #[[My Notes]] from https://vurt.eu/
 	  id:: 67c4470b-774c-466f-8885-896c2d5b6115

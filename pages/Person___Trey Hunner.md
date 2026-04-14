@@ -1,5 +1,5 @@
 tags:: [[Coder]], [[Teacher]], [[Course/Author]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - [Trey Hunner](https://treyhunner.com/)
 	- [[Person/Trey Hunner/About]]
 		- My name is Trey Hunner and I help Python developers level-up their skills through [Python Morsels](https://www.pythonmorsels.com/), my weekly Python exercise service.

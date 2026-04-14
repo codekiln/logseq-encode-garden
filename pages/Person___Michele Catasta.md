@@ -1,5 +1,4 @@
-alias:: [[People/Michele Catasta]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Michele Catasta
 	- ## About
 		- VP of AI, Replit

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Amit Rustagi
 	- **Role:** AI & Big Data Technologist
 	- **Bio:** Amit Rustagi has over 20 years of experience designing AI, generative AI, and analytics solutions. He specializes in building ML architectures and models for impactful outcomes and has spoken at multiple industry events.

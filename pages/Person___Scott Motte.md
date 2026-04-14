@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 # Scott Motte
 	- Creator of [[dotenv-org/dotenv]], [[EnvVar/.env/tool/dotenvx]]
 	- ![Scott Motte profile photo from GitHub](https://avatars.githubusercontent.com/u/3848?v=4){:height 152, :width 135}

@@ -1,4 +1,4 @@
-alias:: [[People/Arthur Cecil Pigou]]
+logseq-entity:: [[Logseq/Entity/person]]
 - # Arthur Cecil Pigou
 	- ## Bio
 		- British economist (1877-1959) associated with welfare economics.

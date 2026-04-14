@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Yegor Denisov-Blanch
 	- **Role:** Researcher, Stanford
 	- **Bio:** Yegor Denisov-Blanch is a researcher at Stanford, focusing on software engineering productivity and AI's impact on developer productivity. He leads one of the larger studies on software engineering productivity, analyzing data from 120k+ developers across 600+ companies.

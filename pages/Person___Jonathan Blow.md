@@ -1,5 +1,4 @@
-alias:: [[People/Jonathan Blow]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Jonathan Blow
 	- ## About
 		- Game designer and developer. On the *On the Metal* podcast, argued that composing many small Unix-style tools can yield inefficient systems without holistic architecture—drawing a parallel to microservices-style critiques of naïve modularity.

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # David Crawshaw
 	- ## Bio
 		- Software engineer and writer behind [[crawshaw.io]], focused on developer tooling, agents, and systems engineering.

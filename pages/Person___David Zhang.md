@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - [[GitHub/dzhng]]
 - [[TwitX]]: https://x.com/dzhng
 - co-founder of [[Aoomni]]

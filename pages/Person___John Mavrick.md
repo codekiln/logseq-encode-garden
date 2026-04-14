@@ -1,5 +1,5 @@
 tags:: [[Knowledge Gardener]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - John Mavrick
 	- ## About
 		- [Welcome 🌌 - John's Digital Galaxy 🌌](https://notes.johnmavrick.com/Digital+Galaxy/Welcome+%F0%9F%8C%8C#Who%20am%20I??%20%F0%9F%A7%90)

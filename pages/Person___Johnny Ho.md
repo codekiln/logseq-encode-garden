@@ -1,2 +1,3 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - [[Person/Johnny Ho/LinkedIn]] https://www.linkedin.com/in/hjohnny/
 - [[Co-Founder]] of [[PerplexityAI]]

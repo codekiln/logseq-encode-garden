@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Annette Vande Gorne
 	- ## Bio
 		- Belgian composer and teacher specializing in acousmatic music

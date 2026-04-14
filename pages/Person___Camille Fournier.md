@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 # Camille Fournier
 	- ## Biography
 		- Camille Fournier is a technology executive and author. She is the former Chief Technology Officer of Rent the Runway, former Vice President of Technology at Goldman Sachs, and currently a Managing Director at JPMorgan Chase.

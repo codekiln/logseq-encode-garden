@@ -1,5 +1,5 @@
 alias:: [[Person/sooperset]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - [[Country/South Korea]]
 - research scientist at #Company [[Lunit]]
 - Created a few cool [[MCP Servers]]

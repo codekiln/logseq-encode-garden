@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 # Dan VanHassell
 	- #Pic
 		- ![](https://icmc2025.sites.northeastern.edu/files/2024/10/VanHassel-240x300.jpg)

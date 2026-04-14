@@ -1,5 +1,4 @@
-alias:: [[People/Andy Weir]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Andy Weir
 	- ## About
 		- American novelist; known for hard-science, near-future fiction.

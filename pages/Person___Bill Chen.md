@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Bill Chen
 	- **Role:** Applied AI, OpenAI
 	- **Bio:** Bill Chen works in Applied AI at OpenAI, focusing on coding agents and building reliable systems that outlast model cycles. He co-presented on "Future-Proof Coding Agents" at the AI Engineer Summit 2025.

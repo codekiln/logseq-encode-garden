@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 ## About
 	- Co-Founder of [[Zine/WIRED]]
 	- Author of

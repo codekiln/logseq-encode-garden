@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 # John MacFarlane
 	- [[Person/John MacFarlane/Web]]
 		- [John MacFarlane - Home](https://johnmacfarlane.net/)

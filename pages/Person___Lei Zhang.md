@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Lei Zhang
 	- **Role:** Head of Technology Infrastructure Engineering, Bloomberg
 	- **Bio:** Lei Zhang leads Technology Infrastructure Engineering at Bloomberg, overseeing AI deployment across Bloomberg's engineering organization of 9,000+ software engineers. He presented on "What We Learned Deploying AI within Bloomberg's Engineering Organization" at the AI Engineer Summit 2025.

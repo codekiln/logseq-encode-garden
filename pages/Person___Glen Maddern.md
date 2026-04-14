@@ -1,6 +1,5 @@
-alias:: [[People/Glen Maddern]]
 tags:: [[Person]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Glen Maddern
 	- ## About
 		- Independent web developer from Melbourne/Naarm.

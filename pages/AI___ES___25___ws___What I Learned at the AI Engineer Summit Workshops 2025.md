@@ -127,7 +127,7 @@ tags:: [[Logseq/Slideshow]]
 		- Example: Agent system to do deep research on Quantum computing cybersecurity implications 
 		  ![MCP-Agent project structure](https://lh3.googleusercontent.com/pw/AP1GczMwwnFzwCmTQrAIOfOJwG_Hz3G5yPrx4P-1i3rBPwtx1IclV5EHvIjjmp6e7ZWYQWVpFU3dN8DwB_FnBChNN3AMkZytcjAQdmvT4gaKVgKYC_8gx5k=w1920-h1080){:height 313, :width 538}
 		  * Uses **sub-agents**: `search_agent`, `fact_checker`, `report_writer`
-		  * side note - [[People/Mahesh Murag]] uses [[Windsurf]] here
+		  * side note - [[Person/Mahesh Murag]] uses [[Windsurf]] here
 	- ## MCP Composability & [Sampling](https://modelcontextprotocol.io/docs/concepts/sampling)
 	  * Every MCP client can be an MCP Server.
 	  * [[MCP/Sampling]] allows **servers to request inference** from clients, ensuring **control of privacy and cost**.

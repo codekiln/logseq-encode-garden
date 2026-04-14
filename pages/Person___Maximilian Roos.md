@@ -1,5 +1,5 @@
 alias:: [[Username/max-sixty]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - Website: [GitHub - max-sixty (Maximilian Roos)](https://github.com/max-sixty)
 - X (Twitter): [@max_sixty](https://x.com/max_sixty)
 - Location: Los Angeles

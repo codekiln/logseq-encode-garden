@@ -1,6 +1,5 @@
-alias:: [[People/Sam Altman]]
 tags:: [[Person]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Sam Altman
 	- ## Overview
 		- **Sam Altman** is the CEO of [[OpenAI]], the AI research company behind [[OpenAI/Model/GPT/4/1]], [[OpenAI/Model/o3]], and ChatGPT

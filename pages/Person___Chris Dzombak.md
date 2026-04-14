@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Chris Dzombak
 	- ## About
 		- Software engineer and developer

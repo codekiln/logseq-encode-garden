@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Aaron Levie
 	- **Role:** Cofounder and CEO, Box
 	- **Bio:** Aaron Levie leads Box’s direction on **Intelligent Content Management** for the agentic era—enterprise context strategy, file systems as primitives for agents, and API-first platforms.

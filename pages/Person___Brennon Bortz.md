@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 # Brennon Bortz
 	- **Role:** Chief Engineer, Leidos R&D
 	- **Bio:** Brennon Bortz leads engineering across [[Co/Leidos]]'s 500-person innovation organization. He focuses on integrating agentic AI into enterprise software. He holds a PhD in computer science from Virginia Tech and has published in computer science and affective computing.

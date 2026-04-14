@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Itamar Friedman
 	- **Role:** Co-Founder and CEO, Qodo
 	- **Bio:** Itamar Friedman is the Co-Founder and CEO of Qodo (formerly QodoAI), a company focused on AI code quality and code review. He presented on "The State of AI Code Quality: Hype vs. Reality" at the AI Engineer Summit 2025.

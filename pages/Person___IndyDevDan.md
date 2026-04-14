@@ -1,5 +1,5 @@
 tags:: [[Coder]], [[AI Coder]], [[Course/Author]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - [[Person/IndyDevDan/Web]] - [[Course]] Principled AI Coding (PAIC) - paid course ($250) https://agenticengineer.com/principled-ai-coding
 - [[Person/IndyDevDan/Compute Advantage]]
 	- ### Compute Advantage Insight

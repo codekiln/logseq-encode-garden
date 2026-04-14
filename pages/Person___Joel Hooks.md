@@ -1,5 +1,5 @@
 tags:: [[EdTech/Person]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - [[Person/Joel Hooks/Web]] [Make Life-Changing Money Teaching What You Know - badass.dev](https://badass.dev/)
 	- [[My Notes]]
 		- [[2025-05-10 Sat]]

@@ -1,5 +1,5 @@
-alias:: [[People/Kazuki Yamada]], [[GitHub/User/dyoshikawa]]
-
+alias:: [[GitHub/User/dyoshikawa]]
+logseq-entity:: [[Logseq/Entity/person]]
 - # Kazuki Yamada
 	- ## Bio
 		- Software developer

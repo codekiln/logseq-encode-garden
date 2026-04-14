@@ -1,5 +1,4 @@
-alias:: [[People/Adrianne Lenker]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Adrianne Lenker
 	- ## About
 		- American singer-songwriter, guitarist, and principal songwriter of the indie rock band [[Big Thief]]

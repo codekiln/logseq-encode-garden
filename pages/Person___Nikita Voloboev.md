@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - About
 	- An avid [[Knowledge Gardener]]
 		- https://wiki.nikiv.dev/

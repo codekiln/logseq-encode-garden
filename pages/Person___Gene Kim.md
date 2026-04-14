@@ -1,5 +1,4 @@
-alias:: [[People/Gene Kim]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Gene Kim
 	- ## About
 		- Author & Researcher, IT Revolution

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Barry Truax
 	- ## Bio
 		- Canadian composer (born 1947) specializing in electroacoustic music and soundscape composition

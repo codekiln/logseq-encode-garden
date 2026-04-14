@@ -1,5 +1,4 @@
-alias:: [[People/Michael Pollan]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Michael Pollan
 	- ## About
 		- American author and journalist; writes about nature, food, agriculture, and (in later work) mind-altering substances and consciousness.

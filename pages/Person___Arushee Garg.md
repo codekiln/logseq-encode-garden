@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Arushee Garg
 	- **Role:** Senior Software Engineer, LinkedIn (Premium)
 	- **Bio:** Arushee Garg builds production AI systems for personalized jobseeker messaging—supervisor-style **LangGraph** workflows combining user context, job signals, and persona.

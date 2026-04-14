@@ -1,5 +1,6 @@
-alias:: [[Person/Elaine Radigue]], [[People/Eliane Radigue]]
+alias:: [[Person/Elaine Radigue]]
 date-created:: [[1932-01-24 Sun]]
+logseq-entity:: [[Logseq/Entity/person]]
 - # Eliane Radigue
 	- ## Bio
 		- French composer associated with electroacoustic music, electronic music, drone, and minimalist composition.

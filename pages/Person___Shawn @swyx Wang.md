@@ -1,5 +1,5 @@
 alias:: [[@swyx]], [[Person/Shawn Wang]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Shawn @swyx Wang
 	- ## About Shawn @swyx Wang
 	  id:: 67d9437f-1cc1-4fcd-ac88-d804c5ceb2d6

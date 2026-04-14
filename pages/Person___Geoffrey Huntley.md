@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - #Website - [Geoffrey Huntley](https://ghuntley.com/)
 	- > principal developer advocate. A software engineer and DevOps engineer with a "Jack-of-All-Trades" background
 	- #Blog

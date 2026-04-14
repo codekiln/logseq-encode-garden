@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Boris Cherny
 	- ## Overview
 		- Software engineer, author, and technical leader specializing in frontend development and TypeScript

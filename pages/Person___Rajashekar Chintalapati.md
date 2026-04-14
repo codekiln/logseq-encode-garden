@@ -1,5 +1,5 @@
 tags:: [[Coder]], [[Knowledge Gardener]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Rajashekar Chintalapati
 	- ## [[My Notes]]
 	  id:: 67c48ebc-07e8-498f-b9ee-08d339d0469d

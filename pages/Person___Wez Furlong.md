@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # [Wez Furlong](https://wezfurlong.org/)
 	- Systems programmer and long-time open source contributor; creator of [[WezTerm]]
 	- Has worked at Meta/Facebook on infrastructure and developer tooling

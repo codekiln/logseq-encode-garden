@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 # [Eric Buess](https://github.com/ericbuess)
 	- See also
 		- [[Person/Eric Buess/GitHub/claude-ericbuess]]

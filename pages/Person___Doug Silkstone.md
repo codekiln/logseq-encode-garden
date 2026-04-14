@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - [[CursorAI/Forum/User/dougwithseismic]]
 	- Knows a lot about where [[CursorAI/Notepad]]s
 - #Resume https://withseismic.com/cv/Doug_Silkstone__Senior_Full-stack_Engineer._.pdf

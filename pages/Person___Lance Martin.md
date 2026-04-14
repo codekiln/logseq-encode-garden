@@ -1,5 +1,5 @@
 tags:: [[Person]], [[LangChain]], [[AI Engineer]], [[Software Engineer]], [[Context Engineering]], [[RAG]], [[Agents]], [[Prompt Engineering]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Lance Martin
 	- ## Overview
 		- Software Engineer at LangChain focusing on open-source and applied projects

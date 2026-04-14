@@ -1,6 +1,5 @@
-alias:: [[People/Harry Brignull]]
 tags:: [[Person]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - [[Person/Harry Brignull]]
 	- **Harry Brignull** (Dr. Harry Brignull) is a UX designer and researcher who coined the term **"dark patterns"** in 2010.
 	- **Key Contributions:**

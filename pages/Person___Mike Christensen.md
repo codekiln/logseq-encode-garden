@@ -1,2 +1,3 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - VP, Engineering at [[Fundrise]]
 - [[Person/Mike Christensen/LinkedIn]] https://www.linkedin.com/in/mike-christensen-sgvsbg8gv29ybgqh/

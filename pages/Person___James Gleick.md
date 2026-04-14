@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # James Gleick
 	- ## Bio
 		- American author and science writer

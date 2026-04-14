@@ -1,6 +1,5 @@
 tags:: [[Person]], [[Composer]], [[Performer]]
-alias:: [[People/Shuyu Lin]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # [[Person/Shuyu Lin]]
 	- ## Bio
 		- Composer/performer whose interests span traditional Chinese instruments, electronic music and audiovisual design

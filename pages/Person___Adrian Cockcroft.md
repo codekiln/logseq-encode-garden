@@ -1,5 +1,4 @@
-alias:: [[People/Adrian Cockcroft]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Adrian Cockcroft
 	- ## About
 		- Technology executive and cloud computing expert

@@ -1,5 +1,5 @@
 tags:: [[Person]], [[ICMC]], [[Computer Music]], [[Csound]], [[Berklee]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Richard Boulanger
   - ## Title
     - Professor of Electronic Production and Design (EPD) at Berklee College of Music

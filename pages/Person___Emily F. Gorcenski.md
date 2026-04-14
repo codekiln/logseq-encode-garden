@@ -1,5 +1,5 @@
 tags:: [[Knowledge Gardener]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - ## [[Person/Emily F. Gorcenski/About]] - [About](https://emilygorcenski.com/about/)
 	- I am a Technologist, Activist, and Writer based in Berlin, Germany and Charlottesville, Virginia. My background is in computational mathematics and research engineering. I also study far-right extremism and write often about the topic.
 	- I studied Aeronautical Engineering and Mathematics at Rensselaer Polytechnic Institute in Troy, NY. My degree is in Mathematics, and my focus is on Numerical Analysis and Uncertainty Quantification. My undergraduate research fellowship was done at the Princeton Plasma Physics Laboratory, and I spent the first part of my career in research and development before shifting to data science and engineering. I have worked in a wide range of technical fields, from aerospace control systems, signal processing, video game development, occupational therapy for rehabilitation, and more.

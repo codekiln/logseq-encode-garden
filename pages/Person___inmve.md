@@ -1,5 +1,5 @@
 alias:: [[Username/inmve]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # inmve
 	- [[Person/inmve/GitHub]] https://github.com/inmve
 	- [[Person/inmve/GitHub/coding-with-ai]]

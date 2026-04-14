@@ -1,4 +1,4 @@
-alias:: [[People/Simon Brown]]
+logseq-entity:: [[Logseq/Entity/person]]
 - # Simon Brown
 	- ## About
 		- Independent **software architecture** consultant, speaker, and author; founder of **[[Structurizr]]**; originated the **[[C4]]** model for visualising software architecture at multiple levels of abstraction.

@@ -1,4 +1,4 @@
-created-by:: [[People/Mahesh Murag]]
+created-by:: [[Person/Mahesh Murag]]
 tags:: [[Anthropic/Model Context Protocol]], [[MCP]]
 alias:: [[AIES 25 WS 1 - Building Agents with MCP - Mahesh Murag]]
 

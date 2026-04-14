@@ -1,5 +1,6 @@
 alias:: [[CLI/Craftsperson/Jesse Duffield]]
 tags:: [[CLI/Craftsperson]]
+logseq-entity:: [[Logseq/Entity/person]]
 - # Jesse Duffield
 	- ## About
 		- Creator of [[Lazygit]] and [[Lazydocker]]

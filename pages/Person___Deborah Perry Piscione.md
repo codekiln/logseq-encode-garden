@@ -1,5 +1,6 @@
 tags:: [[Author]]
 wikipedia-link:: https://en.wikipedia.org/wiki/Deborah_Perry_Piscione
+logseq-entity:: [[Logseq/Entity/person]]
 	- New York Times Best-selling Author of [[Book/Secrets of Silicon Valley]]
 	- Serial Entrepreneur of 6 Companies
 	- LinkedIn Learning Author

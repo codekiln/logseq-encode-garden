@@ -1,5 +1,4 @@
-alias:: [[People/Erik Meijer]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Erik Meijer
 	- ## About
 		- Computer scientist and programming language designer

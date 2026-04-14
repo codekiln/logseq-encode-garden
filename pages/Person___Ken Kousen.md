@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 # Ken Kousen
 	- Kousen is pronounced  "Cousin"
 	- **Role:** Author & Trainer, Kousen I.T., Inc.

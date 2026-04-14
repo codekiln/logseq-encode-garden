@@ -1,5 +1,5 @@
 tags:: [[Person]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Steph Ango
 	- ## About
 		- Chief executive of **Obsidian**; publishes open-source work under the GitHub [[Username/kepano]] **kepano**.

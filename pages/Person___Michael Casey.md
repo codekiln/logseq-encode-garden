@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 # [Michael Casey | LinkedIn](https://www.linkedin.com/in/michaeljohncasey/)
 	- After a more than three-decade career on five continents, my interests have coalesced around the social, economic and political impact of digital technology and globalization. Mostly, I've been a journalist, including 18 years at Dow Jones and The Wall Street Journal. I've since embraced other descriptors: author, researcher, teacher, mentor, communicator, advisor, entrepreneur, and media executive. I focus on projects that harness blockchains and other technologies to improve access to the digital economy and I seek to advance public understanding of the potential for digital innovation to further public good.
 	- I'm currently focused on two projects dear to my heart:

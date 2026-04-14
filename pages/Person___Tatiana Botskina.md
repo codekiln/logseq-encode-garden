@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Tatiana Botskina
 	- **Role:** AI Researcher
 	- **Bio:** Tatiana Botskina works on agent-to-agent collaboration, **agent provenance** (ownership, versioning, lineage, trust), and **agent registries** as infrastructure for governed, auditable multi-agent systems.

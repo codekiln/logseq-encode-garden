@@ -1,4 +1,5 @@
-alias:: [[People/Nathaniel Whittemore]], [[Nathaniel Whittemore]]
+alias:: [[Nathaniel Whittemore]]
+logseq-entity:: [[Logseq/Entity/person]]
 - # Nathaniel Whittemore
 	- Host of [[Person/Nathaniel Whittemore/Podcast]] and operator of [[AI Daily Brief]].
 	- Website: [AI Daily Brief](https://aidailybrief.ai/)

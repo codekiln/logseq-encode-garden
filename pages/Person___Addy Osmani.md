@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 # Addy Osmani
 	- **Role:** Engineering Leader, Google Chrome
 	- **Bio:** Addy Osmani leads Chrome's Developer Experience organization at Google, helping reduce friction for developers and improve user experiences. He is the author of several books, including *Leading Effective Engineering Teams: Lessons for Individual Contributors and Managers from 10 Years at Google*.

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Armin Ronacher
 	- ## About
 		- Python developer and creator of Flask web framework

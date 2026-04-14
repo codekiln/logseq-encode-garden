@@ -1,6 +1,5 @@
 tags:: [[Person]], [[Composer]]
-alias:: [[People/Yue Zhang]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # [[Person/Yue Zhang]]
 	- ## Bio
 		- Studies Computer Music Composition at the China Conservatory

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # [Aram Drevekenin](https://github.com/imsnif)
 	- Open source developer and creator of [[Zellij]], the [[Rust]]-based terminal multiplexer
 	- Also created [[Bandwhich]], a terminal bandwidth utilization tool written in [[Rust]]

@@ -1,6 +1,6 @@
-alias:: [[Person/Blaise Agüera y Arcas]], [[People/Blaise Aguera y Arcas]], [[People/Blaise Agüera y Arcas]], [[Blaise Agüera y Arcas]]
+alias:: [[Person/Blaise Agüera y Arcas]], [[Blaise Agüera y Arcas]]
 tags:: [[Person]], [[AI]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Blaise Aguera y Arcas
 	- ## Overview
 		- Mexican-American researcher, technologist, and inventor working across [[AI]], machine perception, human-computer interaction, and computational media.

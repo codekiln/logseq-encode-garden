@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # François Bayle
 	- ## Bio
 		- French composer (born 1932) specializing in acousmatic music

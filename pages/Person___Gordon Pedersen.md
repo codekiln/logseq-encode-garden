@@ -1,4 +1,4 @@
-alias:: [[People/Gordon Pedersen]]
+logseq-entity:: [[Logseq/Entity/person]]
 - # [Gordon Pedersen](https://www.death.id.au/)
 	- Also known as: **death.au**
 	- ## About

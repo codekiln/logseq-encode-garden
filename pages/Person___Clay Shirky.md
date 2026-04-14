@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Clay Shirky
 	- ## Bio
 		- American writer, consultant, and educator known for insights into social and economic effects of Internet technologies

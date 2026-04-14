@@ -1,6 +1,6 @@
 alias:: [[Person/Ville-Matias Heikkilä]]
 tags:: [[Coder]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Viznut, aka Ville-Matias Heikkilä
 	- ## [[My Notes]]
 	  id:: 67c4b361-6c2f-409f-acbc-37f36ac86418

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Indragie Karunaratne
 	- ## About
 		- macOS app developer

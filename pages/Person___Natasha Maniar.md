@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Natasha Maniar
 	- **Role:** Partner, McKinsey
 	- **Bio:** Natasha Maniar is a Partner at McKinsey, specializing in AI transformation and software development methodologies. She co-presented on "Moving away from Agile: What's Next?" at the AI Engineer Summit 2025.

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Denis Smalley
 	- ## Bio
 		- New Zealand composer and scholar (born 1946) specializing in electroacoustic music

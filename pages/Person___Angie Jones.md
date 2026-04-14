@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Angie Jones
 	- **Role:** Global VP of Developer Relations, Block Inc.
 	- **Bio:** Angie Jones is an award-winning educator, IBM Master Inventor, and international keynote speaker. She has 27 patented inventions spanning virtual worlds, social networking, smarter planet initiatives, and software development processes.

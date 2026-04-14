@@ -1,4 +1,4 @@
-alias:: [[People/Esther Duflo]]
+logseq-entity:: [[Logseq/Entity/person]]
 - # Esther Duflo
 	- ## About
 		- French economist at MIT, where she is Abdul Latif Jameel Professor of Poverty Alleviation and Development Economics.

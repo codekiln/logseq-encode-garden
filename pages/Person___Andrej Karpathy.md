@@ -1,5 +1,5 @@
 tags:: [[Person]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - ## [[Person/Andrej Karpathy/About]]
 	- [[Person/Andrej Karpathy]] is a renowned artificial intelligence researcher and educator
 	- Former Director of AI at [[Tesla]], where he led the development of the company's Autopilot neural networks

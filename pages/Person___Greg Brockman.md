@@ -1,6 +1,5 @@
-alias:: [[People/Greg Brockman]]
 tags:: [[Person]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Greg Brockman
 	- ## About
 		- President and co-founder of [[OpenAI]].

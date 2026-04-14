@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Clay Bavor
 	- **Role:** Cofounder, Sierra
 	- **Bio:** Clay Bavor cofounded Sierra, which helps businesses build better customer experiences with AI. He spent 18 years at Google, where he led Google Labs and projects such as AR/VR, Project Starline, Google Lens, Gmail, Google Docs, Google Drive, and Workspace.

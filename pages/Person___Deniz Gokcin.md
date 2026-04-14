@@ -1,6 +1,6 @@
 alias:: [[Person/Deniz Gökçin]], [[CursorAI/Forum/User/gokcin]]
 tags:: [[Coder]],
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Deniz Gökçin
 	- ## [[My Notes]]
 	  id:: 67d7e191-74a1-4453-8db0-39536fcceb69

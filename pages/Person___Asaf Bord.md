@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Asaf Bord
 	- **Role:** AI Product Lead, Northwestern Mutual
 	- **Bio:** Asaf Bord is the AI Product Lead at Northwestern Mutual, where he leads the development of GenBI, an LLM-powered analytics copilot. He presented on "Small Bets, Big Impact: Building GenBI at a Fortune 100" at the AI Engineer Summit 2025.

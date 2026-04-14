@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 # Dr. Matthew Wright
 	- #Pic
 		- ![Matthew Wright](https://icmc2025.sites.northeastern.edu/files/2025/05/Matt-head-shot-2x2-1-221x300.jpg)

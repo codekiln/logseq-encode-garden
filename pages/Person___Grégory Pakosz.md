@@ -1,5 +1,5 @@
-alias:: [[People/Grégory Pakosz]], [[gpakosz]]
-
+alias:: [[gpakosz]]
+logseq-entity:: [[Logseq/Entity/person]]
 - # Grégory Pakosz
 	- ![Grégory Pakosz](https://avatars.githubusercontent.com/u/553208?v=4)
 	- ## About

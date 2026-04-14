@@ -1,6 +1,6 @@
 alias:: [[Benjamin Bloom]], [[Benjamin S. Bloom]]
 tags:: [[Person]], [[Researcher]], [[Education]], [[Psychology]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # Benjamin S. Bloom
   - American educational psychologist and professor (1913-1999)
   - Known for his contributions to the classification of educational objectives (Bloom's Taxonomy)

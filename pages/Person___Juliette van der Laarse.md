@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Juliette van der Laarse
 	- **Role:** Engineering Manager (international financial services firm)
 	- **Bio:** Juliette van der Laarse presents the **AI Flower**, a public capability architecture for orienting engineers and teams from scattered AI experiments to integrated, accountable practice—using a “skill fossilization” lens as tools churn.

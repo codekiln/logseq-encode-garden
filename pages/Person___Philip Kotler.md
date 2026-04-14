@@ -1,6 +1,5 @@
 tags:: [[Person]]
-alias:: [[People/Philip Kotler]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - # [Philip Kotler](https://www.kotlermarketing.com/)
 	- ## About
 		- Known as the "Father of Modern Marketing"

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Helmut Lachenmann
 	- ## Bio
 		- German composer known for his experimental and extended techniques

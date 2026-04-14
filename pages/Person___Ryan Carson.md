@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/person]]
 - # Ryan Carson
 	- **Role:** Founder and CEO/CTO (stealth startup)
 	- **Bio:** Ryan Carson presents **Antfarm**, an open source multi-agent framework on the [[OpenClaw]] ecosystem—YAML-defined roles (Planner, Developer, Verifier, Tester), Ralph loop pattern, and verification gates to ship code with a single command.

@@ -1,5 +1,5 @@
 tags:: [[Coder]]
-
+logseq-entity:: [[Logseq/Entity/person]]
 - [[Person/Karen Etheridge/GitHub]] https://github.com/karenetheridge
 - [[Person/Karen Etheridge/StackOverflow]] https://stackoverflow.com/users/40468/ether
 - [[Person/Karen Etheridge/LinkedIn]] https://www.linkedin.com/in/karenetheridge/
