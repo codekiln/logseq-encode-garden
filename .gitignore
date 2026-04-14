@@ -74,3 +74,9 @@ repomix-*.xml
 
 # Beads / Dolt files (added by bd init)
 .beads-credential-key
+
+# Local Gemini CLI directory (rulesync may generate commands; keep local)
+/.gemini/
+
+# Rulesync-generated Goose CLI hints at repo root
+/.goosehints
