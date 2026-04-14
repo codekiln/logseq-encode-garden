@@ -1,186 +1,50 @@
 ---
 trigger: always_on
 ---
-# Diataxis Explanation Guide Format for Logseq
+# Diataxis Explanation / Concept (Logseq)
 
-This rule provides guidance on creating Explanation documentation in Logseq following the Diataxis documentation framework principles.
+This rule points agents at the **knowledge graph** for understanding-oriented (“explanation” / “concept”) pages. Full template and naming policy live in Logseq, not in a long duplicated checklist here.
 
 <rule>
 name: diataxis_explanation_format
-description: Guidelines for creating effective Explanation documentation in Logseq following the Diataxis framework
+description: Diataxis-style explanation pages in Logseq — load Logseq/Entity/concept and Diataxis hub pages first
 filters:
   - type: file_path
-    pattern: ".*Concept.*\\.md$|.*Explanation.*\\.md$"
+    pattern: ".*Concept.*\\.md$|.*Explanation.*\\.md$|Programming___Language___Func\\.md$|Programming___Language___Concept___Object-Oriented\\.md$|Logseq___Entity___concept\\.md$"
 
 actions:
   - type: suggest
     message: |
-      # Creating Diataxis Explanation Documentation in Logseq
+      # Diataxis explanation / concept documentation in this garden
 
-      ## Purpose
-      
-      Explanations are **understanding-oriented** guides that help users grasp concepts, ideas, and principles. They focus on building comprehension and insight rather than teaching specific skills or providing reference information.
-      
-      According to the Diataxis framework, Explanations:
-      - Help users understand concepts, ideas, and principles
-      - Build comprehension and insight
-      - Focus on "why" and "how" rather than "what" or "when"
-      - Provide context and reasoning behind decisions and approaches
-      - Help users think about problems and solutions
-      
-      ## Key Principles
-      
-      1. **Focus on Understanding** - Help users grasp concepts and principles
-      2. **Provide Context** - Explain the "why" behind concepts and decisions
-      3. **Build Insight** - Help users think about problems and solutions
-      4. **Use Examples** - Illustrate concepts with concrete examples
-      5. **Address Misconceptions** - Clarify common misunderstandings
-      6. **Link related pages in frontmatter** - Use `see-also:: [[Page1]], [[Page2]]` for related tutorials, how-to guides, and reference material (do not use a `## Related` body section in this repository)
-      
-      ## Structure for Logseq Explanation Documentation
-      
-      When creating Explanation documentation in Logseq, follow this structure using Logseq-Flavored Markdown (LFM):
-      
-      ```
-      tags:: [[ExistingTag1]], [[ExistingTag2]], [[Diataxis/Explanation]]
-      see-also:: [[Page1]], [[Page2]]
-      
-      - # [Topic Name] Conceptual Overview
-        - ## Overview
-          - Brief, clear description of the concept or topic
-          - What it is and why it matters
-        - ## Context
-          - Historical background or current relevance
-          - Why this concept exists or is important
-          - Related problems or challenges it addresses
-        - ## Key Principles
-          - Core ideas and fundamental concepts
-          - Important distinctions and relationships
-          - Guiding principles or philosophies
-        - ## Mechanism
-          - How the concept works in practice
-          - Technical details and implementation approaches
-          - Components and their interactions
-        - ## Examples
-          - Concrete examples that illustrate the concept
-          - Code snippets, diagrams, or case studies
-          - Real-world applications
-        - ## Misconceptions
-          - Common misunderstandings about the concept
-          - Clarifications and corrections
-          - What it is NOT
-      ```
-      
-      ## Naming Convention and File Paths
-      
-      Use the namespace pattern: `Topic/Subtopic/Concept/Specific Subject`
-      
-      **Note**: Following the official Diataxis framework, explanation titles should be able to be prefixed with "About". For example: "About Virtual Environments" or "About User Authentication". This reflects that explanations are _about_ a topic in the sense that they are _around_ it.
-      
-      Examples:
-      - `[[Programming/Python/Concept/Virtual Environments]]` (About Virtual Environments)
-      - `[[AI/Machine Learning/Concept/Overfitting]]` (About Overfitting)
-      
-      In Logseq, namespaces using `/` are translated into file paths using triple underscores `___`. For example:
-      
-      - The page `[[Programming/Python/Concept/Virtual Environments]]` will be stored as:
-        `pages/Programming___Python___Concept___Virtual Environments.md`
-      
-      - The page `[[AI/Machine Learning/Concept/Overfitting]]` will be stored as:
-        `pages/AI___Machine Learning___Concept___Overfitting.md`
-      
-      ## Required Tags
-      
-      **IMPORTANT**: All Diataxis Explanation pages MUST include the `[[Diataxis/Explanation]]` tag in the frontmatter.
-      
-      - If the page already has tags, add `[[Diataxis/Explanation]]` to the existing tags list
-      - Example: `tags:: [[ExistingTag1]], [[ExistingTag2]], [[Diataxis/Explanation]]`
-      - If the page has no tags yet, add: `tags:: [[Diataxis/Explanation]]`
-      - Never remove existing tags when adding the Diataxis tag
-      
-      ## Related pages (`see-also::`)
-      
-      **IMPORTANT**: In this repository, point to related pages with **`see-also::`** page frontmatter: a comma-separated list of `[[wikilinks]]`. Place it after `tags::` (and any other frontmatter lines) and before the first outline block. Do **not** add a `## Related` section in the page body unless the user explicitly asks.
-      
-      ## Language Guidelines
-      
-      - Use clear, accessible language
-      - Explain concepts step by step
-      - Use analogies and metaphors when helpful
-      - Provide concrete examples
-      - Address common questions and misconceptions
-      - Put related page links in `see-also::` frontmatter (repository convention); avoid a `## Related` section unless the user explicitly requests it
-      - Focus on building understanding rather than providing instructions
-      
-      ## Explanation Writing Process
-      
-      1. **Identify the Core Concept**
-         - What fundamental idea needs to be understood?
-         - What misconceptions commonly arise?
-         - What context is needed for comprehension?
-      
-      2. **Structure the Explanation**
-         - Start with a clear overview
-         - Provide necessary context
-         - Explain key principles
-         - Show how it works in practice
-         - Include concrete examples
-         - Address misconceptions
-         - Add `see-also:: [[...]], [[...]]` for cross-links instead of a `## Related` section
-      
-      3. **Test for Understanding**
-         - Can someone new to the topic follow the explanation?
-         - Are common misconceptions addressed?
-         - Are examples clear and relevant?
-         - Does it build toward deeper understanding?
+      ## Authority order
+
+      1. Read **`[[Logseq/Entity/concept]]`** in the graph (`pages/Logseq___Entity___concept.md`) for **instance SOP**: frontmatter (`logseq-entity::`, optional `see-also::`, `via::`), when to use concept vs term entities, and recommended body sections.
+      2. Read **`[[Diataxis/Explanation]]`** (aliases **`[[Diataxis/Concept]]`**) for Diataxis vocabulary in this graph.
+      3. Read **`[[Logseq/Entity]]`** for shared entity conventions (`see-also::` vs `## Related`, `via::`, etc.).
+
+      ## Shape (summary)
+
+      - **Understanding-oriented**: why and how ideas fit together—not primarily a how-to, tutorial, or reference table.
+      - **Logseq Flavored Markdown**: bullets, headings as bullets, tab nesting, no blank lines between bullets.
+      - **Tags**: include **`[[Diataxis/Concept]]`** (or **`[[Diataxis/Explanation]]`**, same cluster via alias) when adding tags to new concept-shaped pages; **never remove** existing `tags::` without explicit author instruction.
+      - **Related graph pages**: use **`see-also::`** in frontmatter (strongest tie first); avoid a **`## Related`** section that only lists internal links unless the author asks.
+
+      ## Rulesync note
+
+      Edit **`.rulesync/rules/diataxis-explanation.md`** (this file) to change agent guidance; run **`rulesync generate`**. Do not hand-edit generated outputs under `.codex/`, `.cursor/rules`, etc.
 
 examples:
   - input: |
-      tags:: [[Python]], [[Programming]], [[Diataxis/Explanation]]
-      see-also:: [[Programming/Python/How To/Create Virtual Environment]], [[Programming/Python/Ref/Pip Commands]]
-      
-      - # Python Virtual Environments Conceptual Overview
-        - ## Overview
-          - Virtual environments are isolated Python environments that allow you to manage dependencies for different projects without conflicts.
-        - ## Context
-          - Python packages are installed globally by default, leading to version conflicts between projects.
-          - Virtual environments solve this by creating isolated spaces with their own Python interpreter and package installations.
-        - ## Key Principles
-          - *Isolation* – Each environment has its own Python interpreter and packages
-          - *Reproducibility* – Dependencies can be exactly specified and reproduced
-          - *Project-specific* – Each project can have its own environment
-        - ## Mechanism
-          - Virtual environments create a directory with a Python interpreter and site-packages
-          - The `venv` module creates environments: `python -m venv myenv`
-          - Activation modifies PATH to use the environment's Python
-          - `pip` installs packages into the active environment
-        - ## Examples
-          - ~~~bash
-            # Create and activate a virtual environment
-            python -m venv myproject
-            source myproject/bin/activate  # On Unix/macOS
-            pip install requests
-            ~~~
-        - ## Misconceptions
-          - Virtual environments are only for large projects → **False**. Even small projects benefit from isolation.
-          - You need to recreate environments frequently → **False**. Environments persist until deleted.
-    output: "Correctly formatted Diataxis Explanation in Logseq with proper tags and see-also frontmatter"
+      Creating or expanding a concept page in pages/*.md
+    output: "Load Logseq/Entity/concept and Diataxis/Explanation before applying structure; use see-also:: and LFM per type page"
 
 metadata:
   priority: high
-  version: 1.0
+  version: 2.0
   related_rules: ["logseq-flavored-markdown"]
 </rule>
 
-## Implementation Guide
+## Maintainer note
 
-When implementing Diataxis Explanation documentation in Logseq, follow these steps:
-
-1. **Identify the concept that needs explanation**
-   - Focus on ideas that benefit from deeper understanding
-   - Choose concepts that are commonly misunderstood
-   - Ask: "What fundamental understanding will help users work more effectively?"
-
-2. **Create the page with the proper namespace**
-   - Use `Topic/Subtopic/Concept/Specific Subject` format
-   - This will create a file at `
+Long-form Diataxis templates previously embedded in this rule now live on **`[[Logseq/Entity/concept]]`** so the ontology and agent instructions stay aligned.
