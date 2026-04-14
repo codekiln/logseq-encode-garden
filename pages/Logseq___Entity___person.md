@@ -1,0 +1,28 @@
+- # person
+	- Standard operating procedure for **person** entities: real individuals you track as first-class pages under `[[Person/Full Name]]`. Full workflow: use the **logseq-entity** skill and dedupe before creating anything new.
+	- ## Namespace vs entity type
+		- A **hierarchical title** under `Person/` does **not** imply every child page is a person entity. Example: `[[Person/Someone/GitHub/dotfiles]]` is usually a **software-project** (or another type), nested for organization and SCM style—not a second “person” instance. Choose `logseq-entity::` from **content and role**, not from the `Person___` filename prefix alone.
+	- ## What counts as a person entity (instance)
+		- **Person hub pages only**: disk file `Person___<Name>.md` where `<Name>` contains **no** `___` (Logseq title is exactly `Person/<Name>` — two path segments). Examples: `Person___Drew DeVault.md`, `Person___Jan-Erik Rediger.md`.
+		- **Not** person entities: deeper paths such as `Person___Foo___GitHub___bar.md`, `Person___Foo___Blog___...`, `Person___Foo___YouTube___...`—model those with the appropriate type (often `[[Logseq/Entity/software-project]]` for `.../GitHub/...` per the software-project type page and SCM link rule).
+	- ## When to create a person page
+		- Strong signals: individual is a maintainer, author, speaker, or public figure you will link repeatedly; confirmed identity; useful to attach bios, handles, and project subpages.
+		- Prefer **site-specific namespaces** for low-signal identities (forum users, one-off commenters)—see router rule `logseq-person` for examples (`[[Reddit/User/...]]`, etc.).
+	- ## Canonical naming and links
+		- Default canonical page: `[[Person/Full Name]]` — disk `Person___Full Name.md`.
+		- When linking in prose or new notes, use the **canonical** page title (the real filename / Logseq title), not convenience aliases.
+		- **Do not** introduce `[[People/...]]` as a page title, alias, or “plural reference” pattern. This garden does not use a parallel `People/` namespace for persons.
+		- Optional `alias::` is only for **real alternates**: prior title after a rename, spelling variants, handles, or other non-`People/` contextual links—same spirit as **company** alternate names.
+	- ## Finding and deduplicating
+		- Search in order: exact `Person___*.md` title; `alias::` match; partial name / handle in `pages/Person___*.md`; body text (bio, same GitHub profile URL). Classify: existing, similar, new, or blocked.
+		- **One page per person.** Never split the same human across two hub pages; merge or pick one canonical title.
+	- ## SCM projects under a person
+		- For repos, follow **`logseq-scm-project-link-style`**: `[[Person/<Name>/GitHub/<Project>]]` (person hub must exist or be created when the maintainer is clear). Those project pages are **software-project** entities, not person entities.
+	- ## Frontmatter on person hub pages
+		- Mark the hub in frontmatter with `logseq-entity::` plus the standard link to the person entity type page (same marker pattern as other entity instances in this garden).
+		- Never modify, add, or remove **`tags::`** on existing pages unless you have explicit human instruction that overrides garden tagging rules.
+		- Optional: `see-also::`, `via::`, other known keys—only when accurate.
+	- ## Page shape
+		- LFM; first content block is typically `- # …` with the person’s name; lean sections (About, Online presence, Projects) and links to child pages as needed.
+	- ## Source blocks
+		- Do not move source blocks from the journal or source page by default; move or transplant only when explicitly asked.
