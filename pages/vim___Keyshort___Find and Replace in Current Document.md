@@ -1,11 +1,11 @@
 - [[Keyshort]] [[vim]] [[vim/Keyshort]]
 	- **Find and Replace in the Current Document** #card
-	  card-last-interval:: 4
-	  card-repeats:: 2
+	  card-last-interval:: -1
+	  card-repeats:: 1
 	  card-ease-factor:: 2.22
-	  card-next-schedule:: 2026-04-13T07:54:40.561Z
-	  card-last-reviewed:: 2026-04-09T07:54:40.561Z
-	  card-last-score:: 3
+	  card-next-schedule:: 2026-04-15T04:00:00.000Z
+	  card-last-reviewed:: 2026-04-14T07:54:18.347Z
+	  card-last-score:: 1
 		- Shortcut:
 			- `:%s/old/new/g` replaces all matches in the current file
 			- `:%s/old/new/gc` prompts for confirmation on each match

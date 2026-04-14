@@ -1,2 +1,5 @@
 -
 - {{cards [[vim/Keyshort]] }}
+	- Summary: 4 items, 3 review counts [[2026-04-14 Tue]]
+		- Remembered:   2 (66%)
+		- Forgotten :   1 (33%)

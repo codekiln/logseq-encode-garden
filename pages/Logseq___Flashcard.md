@@ -1,4 +1,5 @@
 logseq-proxy-url:: logseq://graph/logseq-docs?page=Flashcards
+alias:: [[Logseq Flashcards]]
 
 - ## Usage
 	- To create a card:

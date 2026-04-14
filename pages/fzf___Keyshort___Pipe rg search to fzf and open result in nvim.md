@@ -1,10 +1,10 @@
 - [[fzf/Keyshort]] [[Keyshort]] [[CLI command]]
-	- **Pipe [[rg]] search into fzf, and open result in an editor** #card
-	  card-last-interval:: 4
-	  card-repeats:: 2
-	  card-ease-factor:: 2.36
-	  card-next-schedule:: 2026-04-13T07:30:41.909Z
-	  card-last-reviewed:: 2026-04-09T07:30:41.909Z
-	  card-last-score:: 3
+	- **Pipe [[rg]] search for `search-query` into fzf, and open result in an editor** #card
+	  card-last-score:: 5
+	  card-repeats:: 3
+	  card-next-schedule:: 2026-04-24T03:53:31.763Z
+	  card-last-interval:: 9.84
+	  card-ease-factor:: 2.46
+	  card-last-reviewed:: 2026-04-14T07:53:31.764Z
 		- [[rg/--files-with-matches]]
 			- `nvim "$(rg --files-with-matches <search-query> | fzf)"`

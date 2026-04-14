@@ -1,2 +1,4 @@
 - https://www.chezmoi.io/
 	- [[chezmoi/Quick start]]
+	- [[My Notes]]
+		- I used this for about a month before I started using [[Nix/home-manager]] for all my dotfiles

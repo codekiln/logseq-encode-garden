@@ -1,4 +1,7 @@
 - {{cards [[Lazygit/Keyshort]] }}
+	- Summary: 5 items, 4 review counts [[2026-04-14 Tue]]
+		- Remembered:   2 (50%)
+		- Forgotten :   2 (50%)
 	- Summary: 7 items, 7 review counts [[2026-02-18 Wed]]
 		- Remembered:   3 (42%)
 		- Forgotten :   4 (57%)

@@ -1,20 +1,20 @@
 - [[Keyshort]] [[Lazygit]] [[Lazygit/Keyshort]]
 	- **Open the Copy to [[Clipboard]] [[Modal]]** #card
 	  card-last-score:: 5
-	  card-repeats:: 2
-	  card-next-schedule:: 2026-04-06T05:53:17.434Z
-	  card-last-interval:: 4
-	  card-ease-factor:: 2.7
-	  card-last-reviewed:: 2026-04-02T05:53:17.434Z
+	  card-repeats:: 3
+	  card-next-schedule:: 2026-04-25T12:00:37.524Z
+	  card-last-interval:: 11.2
+	  card-ease-factor:: 2.8
+	  card-last-reviewed:: 2026-04-14T08:00:37.524Z
 		- Shortcut: `y`
 		- Description: Opens a [[Curses]] [[Modal]] with copy options.
 	- **Copy file name to clipboard** #card
-	  card-last-interval:: -1
-	  card-repeats:: 1
-	  card-ease-factor:: 2.5
-	  card-next-schedule:: 2026-04-03T04:00:00.000Z
-	  card-last-reviewed:: 2026-04-02T05:51:48.024Z
-	  card-last-score:: 1
+	  card-last-interval:: 4.14
+	  card-repeats:: 2
+	  card-ease-factor:: 2.36
+	  card-next-schedule:: 2026-04-18T10:56:02.426Z
+	  card-last-reviewed:: 2026-04-14T07:56:02.426Z
+	  card-last-score:: 3
 		- Shortcut: `y` then `n`
 			- [[Mnemonic]]: yank name
 		- Description: Copies the file name to clipboard.
@@ -40,11 +40,12 @@
 	  card-last-interval:: -1
 	  card-repeats:: 1
 	  card-ease-factor:: 2.5
-	  card-next-schedule:: 2026-04-03T04:00:00.000Z
-	  card-last-reviewed:: 2026-04-02T05:50:52.880Z
+	  card-next-schedule:: 2026-04-15T04:00:00.000Z
+	  card-last-reviewed:: 2026-04-14T07:56:44.680Z
 	  card-last-score:: 1
 		- Shortcut: `y` then `s`
 		- Description: Copies the diff of selected files to clipboard. Requires a selection.
+		- [[Mnemonic]]: ==y==ank the ==s==elected files
 	- **Copy diff of all files to clipboard** #card
 	  card-last-interval:: -1
 	  card-repeats:: 1

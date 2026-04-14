@@ -1,4 +1,7 @@
 - {{cards [[yazi/Keyshort]] }}
+	- Summary: 5 items, 4 review counts [[2026-04-14 Tue]]
+		- Remembered:   4 (100%)
+		- Forgotten :   0 (0%)
 	- [[yazi/Keyshort/Toggle hidden files]]
 	- [[yazi/Keyshort/Help/Open]]
 	- [[yazi/Keyshort/Help/Filter]]

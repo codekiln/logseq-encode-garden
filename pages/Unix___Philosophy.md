@@ -1,0 +1,27 @@
+alias:: [[Principle/One Thing Well]]
+
+- # Unix philosophy
+	- Overview distilled from [Unix philosophy (Wikipedia)](https://en.wikipedia.org/wiki/Unix_philosophy); key people are linked as [[Person/...]] below.[^1]
+	- ## Core idea
+		- Cultural norms from Bell Labs Unix: favor **small**, **clear**, **modular**, **extensible** programs that **compose** through streams and conventions—power from how tools connect, not from single monolithic suites.[^1]
+	- ## Origins and early formulation
+		- **1974 — [[Person/Dennis Ritchie]] and [[Person/Ken Thompson]]** (*The UNIX time-sharing system*, CACM): prioritize ease of writing and testing programs, interactive use, economical design under size pressure, and a self-hosting system maintained under Unix itself.[^1]
+		- **1978 — [[Person/Douglas McIlroy]]** (with Pinson and Tague, BSTJ foreword): four rules for the “characteristic style”—do one job per program (build fresh rather than bolt on features); expect every program’s output to become another’s input (avoid noisy or rigid formats); ship early and rewrite what is clumsy; build tools (even throwaway ones) instead of muscling work by hand.[^1]
+		- **1994 — [[Person/Peter H. Salus]]** in *A Quarter Century of UNIX* explicitly named “The Unix philosophy” for the three-line summary he credited to McIlroy (below).[^1]
+	- ## McIlroy’s three lines
+		- 1. Write programs that do one thing and do it well (often abbreviated **DOTADIW**).[^1]
+		- 2. Write programs to work together.
+		- 3. Write programs to handle text streams, because that is a universal interface.
+		- McIlroy also framed Unix taste as competing for “simple and beautiful” over “intricate and beautiful complexities,” and contrasted early research Unix with later distribution bloat.[^1]
+	- ## Kernighan and Pike
+		- **[[Person/Brian Kernighan]]** and **[[Person/Rob Pike]]** in *The UNIX Programming Environment* (1984) and *Program Design in the UNIX Environment* (1984) describe Unix strength as relationships among programs—many utilities are trivial alone but general in combination—and they caution against option sprawl and Swiss-army-knife commands.[^1]
+	- ## Later summaries
+		- **[[Person/Eric S. Raymond]]** in *The Art of Unix Programming* (2003) collects practical rules (modularity, readability, composition, separate mechanism from policy, small transparent programs, sensible failure modes, favor developer time, prototype before polish, and more).[^1]
+		- **[[Person/Mike Gancarz]]** in *The UNIX Philosophy* (1994) lists nine DEC-era tenets (e.g., small is beautiful, prototype quickly, prefer portability, store data in flat text, use shell scripts and filters, avoid captive user interfaces).[^1]
+		- **[[Person/Richard P. Gabriel]]** argues “worse is better”—simplicity of interface and implementation can outcompete correctness-on-paper in the market of ideas that shaped Unix adoption.[^1]
+	- ## Criticism and pushback
+		- **[[Person/Don Norman]]** (1981, *Datamation*) criticized Unix for poor end-user cognitive ergonomics relative to cognitive-engineering ideals.[^1]
+		- **[[Person/Patrick Volkerding]]** cited DOTADIW when arguing that one mega-daemon supervising everything conflicts with classical Unix decomposition.[^1]
+		- **[[Person/Jonathan Blow]]** (*On the Metal*) argued chained small tools can be inefficient without holistic design—drawing parallels to microservices-style coordination costs.[^1]
+	- ## Footnotes
+		- [^1]: https://en.wikipedia.org/wiki/Unix_philosophy
