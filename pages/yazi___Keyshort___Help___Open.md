@@ -1,10 +1,10 @@
 - [[Keyshort]] [[yazi]] [[yazi/Keyshort]]
 	- **Open help from the file list** #card
-	  card-last-interval:: 4.91
-	  card-repeats:: 1
-	  card-ease-factor:: 2.6
-	  card-next-schedule:: 2026-04-07T03:29:55.960Z
-	  card-last-reviewed:: 2026-04-02T06:29:55.961Z
+	  card-last-interval:: 4
+	  card-repeats:: 2
+	  card-ease-factor:: 2.7
+	  card-next-schedule:: 2026-04-19T07:30:13.571Z
+	  card-last-reviewed:: 2026-04-15T07:30:13.571Z
 	  card-last-score:: 5
 		- Shortcut: `~` (tilde) or `F1`
 		- Context: File list / manager pane (`[mgr]` layer, default keymap)

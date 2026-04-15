@@ -1,10 +1,10 @@
 - [[Keyshort]] [[tmux]] [[tmux/Keyshort]]
 	- **Reload Config** - [[oh-my-tmux]] [[Keyshort/User]] [[Keyshort/Plugin]] #card
-	  card-last-interval:: 11.2
-	  card-repeats:: 3
-	  card-ease-factor:: 2.8
-	  card-next-schedule:: 2026-04-25T11:55:42.774Z
-	  card-last-reviewed:: 2026-04-14T07:55:42.774Z
+	  card-last-interval:: 33.64
+	  card-repeats:: 4
+	  card-ease-factor:: 2.9
+	  card-next-schedule:: 2026-05-18T22:37:35.129Z
+	  card-last-reviewed:: 2026-04-15T07:37:35.129Z
 	  card-last-score:: 5
 		- Shortcut: `<prefix> r`
 		- Description: Reloads the tmux configuration file without restarting the server.

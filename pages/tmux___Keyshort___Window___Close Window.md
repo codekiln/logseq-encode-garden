@@ -2,11 +2,11 @@ alias:: [[tmux/Keyshort/Window/Kill Window]]
 
 - [[Keyshort]] [[tmux]] [[tmux/Keyshort]] [[tmux/Keyshort/Window]]
 	- **Close / Kill Window** [[card]]
-	  card-last-interval:: 4.91
-	  card-repeats:: 1
-	  card-ease-factor:: 2.6
-	  card-next-schedule:: 2026-04-14T04:33:57.882Z
-	  card-last-reviewed:: 2026-04-09T07:33:57.882Z
+	  card-last-interval:: 4.14
+	  card-repeats:: 2
+	  card-ease-factor:: 2.7
+	  card-next-schedule:: 2026-04-19T10:39:42.309Z
+	  card-last-reviewed:: 2026-04-15T07:39:42.310Z
 	  card-last-score:: 5
 		- Shortcut: `<prefix> &` (e.g. Ctrl+b then &), then type `y` at the prompt to confirm.
 		- Description: Closes / kills the current tmux window. Tmux prompts for confirmation before closing.
