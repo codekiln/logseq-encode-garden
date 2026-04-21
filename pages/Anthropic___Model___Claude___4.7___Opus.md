@@ -1,0 +1,52 @@
+alias:: [[claude-opus-4-7]], [[claude-opus-4.7]]
+tags:: [[AI/Model]]
+
+- # [Claude Opus 4.7](https://www.anthropic.com/news/claude-opus-4-7)
+	- ## Key Features
+		- Generally available as of April 2026; positioned as Anthropic's most capable generally available model for complex reasoning and agentic coding
+		- Context window: 1M input tokens at standard API pricing (no separate long-context surcharge on the Messages API)
+		- Max output: 128k tokens on the synchronous Messages API (higher limits on Message Batches API with beta headers per Anthropic docs)
+		- Adaptive thinking only: `thinking: {"type": "adaptive"}` is the supported thinking-on mode; extended thinking with explicit `budget_tokens` is not supported and returns HTTP 400
+		- New `xhigh` effort level between `high` and `max` on the Messages API for finer latency vs. depth tradeoffs
+		- High-resolution vision: up to 2576px on the long edge (~3.75MP); image coordinates map 1:1 to pixels for tool and UI workflows
+		- Task budgets (beta): advisory per-loop token budgets via beta header `task-budgets-2026-03-13` and `output_config.task_budget`
+		- New tokenizer vs. prior Opus models: expect roughly 1.0x-1.35x text token counts vs. Opus 4.6 for similar content; validate with `/v1/messages/count_tokens`
+		- Sampling parameters: non-default `temperature`, `top_p`, and `top_k` return HTTP 400; omit them and steer behavior in prompts
+		- Cyber safeguards: automated refusals on prohibited or high-risk cybersecurity requests; legitimate security workflows may require Anthropic's Cyber Verification Program
+		- Reliable knowledge cutoff: January 2026 (per Anthropic models overview); training data cutoff: January 2026
+		- Model version status: Stable (general availability)
+	- ## Performance Highlights
+		- Strong gains on difficult software engineering and long-horizon agentic work vs. Claude Opus 4.6 in Anthropic's public messaging and partner evaluations
+		- Improved knowledge work where the model must visually verify its own outputs (documents, slides, charts)
+		- Better use of filesystem-style memory and scratchpads across multi-turn agent runs
+	- ## Model Tiers
+		- Flagship Opus release in the Claude 4 generation
+		- Earlier Opus pages in this garden:
+			- [[Anthropic/Model/Claude/4.5/Opus]]
+			- [[Anthropic/Model/Claude/4/Opus]]
+		- Speed-focused sibling line (separate page in graph when curated): Claude Sonnet 4.6 (`claude-sonnet-4-6` in Anthropic's model table)
+	- ## Access Details
+		- API availability: Claude Messages API model string `claude-opus-4-7` (alias resolves to the current snapshot; see Anthropic's models overview for snapshot-pinned IDs)
+		- Pricing (standard tier, per million tokens): $5 input · $25 output (unchanged vs. Opus 4.6 per Anthropic announcement)
+		- Platforms: Claude consumer and enterprise plans, Claude API, Amazon Bedrock, Google Cloud Vertex AI, Microsoft Foundry
+		- Amazon Bedrock base model ID: `anthropic.claude-opus-4-7` (plus `global.`, `us.`, `eu.`, and `jp.` inference routing variants per AWS model card)
+		- Google Vertex AI ID: `claude-opus-4-7` (see Google Cloud model registry for regional endpoint strings)
+		- SDK support:
+			- Python: `pip install -U "anthropic"`
+			- TypeScript: `@anthropic-ai/sdk` (and provider-specific Bedrock helpers per Anthropic's Bedrock integration docs)
+	- ## Technical Specifications
+		- Model architecture: Proprietary Anthropic large language model (undisclosed weights)
+		- Input/output formats: Text and images in; text (and tool use) out; same tool-use platform as Opus 4.6 aside from thinking and sampling changes above
+		- Special capabilities:
+			- Adaptive thinking with optional `display: "summarized"` to stream or summarize reasoning blocks (thinking blocks may be empty by default)
+			- Task budgets beta for agentic loops
+			- High-resolution image understanding and improved low-level perception tasks
+		- Model version code: `claude-opus-4-7` (API alias; consult Anthropic's models overview for dated snapshot IDs used for cross-provider reproducibility)
+		- Safety measures: Automated cybersecurity refusal classifiers plus Anthropic's broader safety stack; stricter handling of high-risk cyber prompts than prior Opus releases
+	- ## References
+		- [Introducing Claude Opus 4.7 (Anthropic)](https://www.anthropic.com/news/claude-opus-4-7)
+		- [What's new in Claude Opus 4.7 (Claude API docs)](https://platform.claude.com/docs/en/about-claude/models/whats-new-claude-4-7)
+		- [Models overview (Claude API docs)](https://platform.claude.com/docs/en/about-claude/models/overview)
+		- [Migrating to Claude Opus 4.7 (Claude API docs)](https://platform.claude.com/docs/en/about-claude/models/migration-guide#migrating-to-claude-opus-4-7)
+		- [Claude Opus 4.7 on Amazon Bedrock (AWS News Blog)](https://aws.amazon.com/blogs/aws/introducing-anthropics-claude-opus-4-7-model-in-amazon-bedrock/)
+		- [Claude Opus 4.7 model card (AWS Bedrock User Guide)](https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-opus-4-7.html)
