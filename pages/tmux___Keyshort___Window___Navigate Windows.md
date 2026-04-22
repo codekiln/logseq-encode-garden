@@ -1,10 +1,10 @@
 - [[Keyshort]] [[tmux]] [[tmux/Keyshort]] [[tmux/Keyshort/Window]]
 	- **Navigate to Window to the Left** #card
-	  card-last-interval:: 11.2
-	  card-repeats:: 3
-	  card-ease-factor:: 2.8
-	  card-next-schedule:: 2026-04-26T11:29:14.590Z
-	  card-last-reviewed:: 2026-04-15T07:29:14.590Z
+	  card-last-interval:: 33.64
+	  card-repeats:: 4
+	  card-ease-factor:: 2.9
+	  card-next-schedule:: 2026-05-25T23:41:46.072Z
+	  card-last-reviewed:: 2026-04-22T08:41:46.073Z
 	  card-last-score:: 5
 		- Shortcut: `<prefix> Ctrl-h`
 		- Description: Focuses the window to the left of the current window in the session. This is an [[tmux/oh-my-tmux]] binding that replaces the default `<prefix> p`.

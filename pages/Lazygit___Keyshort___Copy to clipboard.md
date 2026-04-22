@@ -19,20 +19,20 @@
 			- [[Mnemonic]]: ==y==ank ==n==ame
 		- Description: Copies the file name to clipboard.
 	- **Copy relative path to clipboard** #card
-	  card-last-interval:: -1
-	  card-repeats:: 1
-	  card-ease-factor:: 2.22
-	  card-next-schedule:: 2026-04-16T04:00:00.000Z
-	  card-last-reviewed:: 2026-04-15T07:28:20.973Z
-	  card-last-score:: 1
+	  card-last-interval:: 4
+	  card-repeats:: 2
+	  card-ease-factor:: 2.08
+	  card-next-schedule:: 2026-04-26T08:41:40.437Z
+	  card-last-reviewed:: 2026-04-22T08:41:40.437Z
+	  card-last-score:: 3
 		- Shortcut: `y` then `p`
 		- Description: Copies the relative path to clipboard.
 	- **Copy absolute path to clipboard** #card
-	  card-last-interval:: 5.08
-	  card-repeats:: 2
-	  card-ease-factor:: 2.6
-	  card-next-schedule:: 2026-04-20T08:24:42.194Z
-	  card-last-reviewed:: 2026-04-15T07:24:42.194Z
+	  card-last-interval:: 10.36
+	  card-repeats:: 3
+	  card-ease-factor:: 2.7
+	  card-next-schedule:: 2026-05-02T16:39:55.791Z
+	  card-last-reviewed:: 2026-04-22T08:39:55.792Z
 	  card-last-score:: 5
 		- Shortcut: `y` then `P`
 		- Description: Copies the absolute path to clipboard.
@@ -47,12 +47,12 @@
 		- Description: Copies the diff of selected files to clipboard. Requires a selection.
 		- [[Mnemonic]]: ==y==ank the ==s==elected files
 	- **Copy diff of all files to clipboard** #card
-	  card-last-interval:: 5.08
-	  card-repeats:: 2
+	  card-last-interval:: -1
+	  card-repeats:: 1
 	  card-ease-factor:: 2.6
-	  card-next-schedule:: 2026-04-20T08:26:31.368Z
-	  card-last-reviewed:: 2026-04-15T07:26:31.368Z
-	  card-last-score:: 5
+	  card-next-schedule:: 2026-04-23T04:00:00.000Z
+	  card-last-reviewed:: 2026-04-22T08:41:21.333Z
+	  card-last-score:: 1
 		- Shortcut: `y` then `a`
 		- Description: Copies the diff of all files to clipboard.
 		- [[Mnemonic]]: ==y==ank ==all== diffs
