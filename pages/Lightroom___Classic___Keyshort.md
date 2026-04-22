@@ -1,3 +1,4 @@
--
+- # [Keyboard shortcuts for Lightroom Classic](https://helpx.adobe.com/lightroom-classic/help/keyboard-shortcuts.html)
 - {{cards [[Lightroom/Classic/Keyshort]] }}
-	- Summary: Library culling shortcuts (pick / reject / unflag / star ratings) sourced from Adobe Help.
+	- Summary: Library culling shortcuts (pick / reject / unflag / star ratings) and module navigation shortcuts sourced from Adobe Help.
+	- See also: [[Lightroom/Classic/Keyshort/Navigate modules]]

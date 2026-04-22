@@ -1,0 +1,46 @@
+- [[Keyshort]] [[Lightroom/Classic]] [[Lightroom/Classic/Keyshort]]
+	- **Go to Library module** #card
+		- macOS: `Command + Option + 1`
+		- Windows: `Ctrl + Alt + 1`
+		- Context: Module navigation; defaults per [Adobe's shortcut list](https://helpx.adobe.com/lightroom-classic/help/keyboard-shortcuts.html).
+		- Description: Jumps directly to the Library module.
+	- **Go to Develop module** #card
+		- macOS: `Command + Option + 2`
+		- Windows: `Ctrl + Alt + 2`
+		- Context: Module navigation; defaults per [Adobe's shortcut list](https://helpx.adobe.com/lightroom-classic/help/keyboard-shortcuts.html).
+		- Description: Jumps directly to the Develop module.
+	- **Go to Map module** #card
+		- macOS: `Command + Option + 3`
+		- Windows: `Ctrl + Alt + 3`
+		- Context: Module navigation; defaults per [Adobe's shortcut list](https://helpx.adobe.com/lightroom-classic/help/keyboard-shortcuts.html).
+		- Description: Jumps directly to the Map module.
+	- **Go to Book module** #card
+		- macOS: `Command + Option + 4`
+		- Windows: `Ctrl + Alt + 4`
+		- Context: Module navigation; defaults per [Adobe's shortcut list](https://helpx.adobe.com/lightroom-classic/help/keyboard-shortcuts.html).
+		- Description: Jumps directly to the Book module.
+	- **Go to Slideshow module** #card
+		- macOS: `Command + Option + 5`
+		- Windows: `Ctrl + Alt + 5`
+		- Context: Module navigation; defaults per [Adobe's shortcut list](https://helpx.adobe.com/lightroom-classic/help/keyboard-shortcuts.html).
+		- Description: Jumps directly to the Slideshow module.
+	- **Go to Print module** #card
+		- macOS: `Command + Option + 6`
+		- Windows: `Ctrl + Alt + 6`
+		- Context: Module navigation; defaults per [Adobe's shortcut list](https://helpx.adobe.com/lightroom-classic/help/keyboard-shortcuts.html).
+		- Description: Jumps directly to the Print module.
+	- **Go to Web module** #card
+		- macOS: `Command + Option + 7`
+		- Windows: `Ctrl + Alt + 7`
+		- Context: Module navigation; defaults per [Adobe's shortcut list](https://helpx.adobe.com/lightroom-classic/help/keyboard-shortcuts.html).
+		- Description: Jumps directly to the Web module.
+	- **Go back or forward in module history** #card
+		- macOS: `Command + Option + Left Arrow` / `Command + Option + Right Arrow`
+		- Windows: `Ctrl + Alt + Left Arrow` / `Ctrl + Alt + Right Arrow`
+		- Context: Module navigation history; defaults per [Adobe's shortcut list](https://helpx.adobe.com/lightroom-classic/help/keyboard-shortcuts.html).
+		- Description: Moves backward or forward through Lightroom Classic's navigation history.
+	- **Go back to previous module** #card
+		- macOS: `Command + Option + Up Arrow`
+		- Windows: `Ctrl + Alt + Up Arrow`
+		- Context: Module navigation history; defaults per [Adobe's shortcut list](https://helpx.adobe.com/lightroom-classic/help/keyboard-shortcuts.html).
+		- Description: Returns to the module you were using immediately before the current one.
