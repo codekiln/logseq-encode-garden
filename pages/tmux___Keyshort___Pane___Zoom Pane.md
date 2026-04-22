@@ -1,0 +1,4 @@
+- [[Keyshort]] [[tmux]] [[tmux/Keyshort]] [[tmux/Keyshort/Pane]]
+	- **Zoom pane (toggle)** #card
+		- Shortcut: `<prefix> z` (same chord toggles zoom **off**; tmux calls this key the **prefix**, not Vim’s **leader**)
+		- Description: **Zooms** the active [[tmux]] pane so it **fills the window**; other panes in that window are **hidden until you press the same shortcut again** to restore the split layout.
