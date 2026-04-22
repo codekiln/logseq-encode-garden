@@ -1,0 +1,2 @@
+- Image Viewer tools in the Command Line
+	- TODO compile a list of possible tools

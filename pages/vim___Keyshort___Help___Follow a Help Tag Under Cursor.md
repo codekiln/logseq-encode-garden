@@ -1,0 +1,3 @@
+- [[vim]] [[Keyshort]] [[vim/Keyshort]]
+	- **follow a vim help file tag under the cursor** [[card]]
+		- **shortcut**: `CTRL+]`

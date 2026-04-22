@@ -1,0 +1,10 @@
+- [[Keyshort]] [[Lightroom/Classic]] [[Lightroom/Classic/Keyshort]] [[Lightroom/Classic/Keyshort/Library]]
+	- **Cycle flag settings** #card
+		- Cycle: `` ` `` (back quote; same key as tilde on many US keyboards)
+		- Context: Library module; defaults per [Adobe's shortcut list](https://helpx.adobe.com/lightroom-classic/help/keyboard-shortcuts.html).
+		- Description: Steps the selection through flag states without targeting pick/reject/unflag directly.
+	- **Increase or decrease flag status** #card
+		- macOS: `Command + Up Arrow` / `Command + Down Arrow`
+		- Windows: `Ctrl + Up Arrow` / `Ctrl + Down Arrow`
+		- Context: Library module; defaults per [Adobe's shortcut list](https://helpx.adobe.com/lightroom-classic/help/keyboard-shortcuts.html).
+		- Description: Moves the pick/reject flag along Adobe's flag axis (useful when you want keyboard adjustment without single-letter pick/reject).

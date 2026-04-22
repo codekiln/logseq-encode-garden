@@ -1,0 +1,62 @@
+- jr 2 anatomy - fpga
+- audio 'card'
+	- sn76489
+	- two gideon sid instances
+	- yamaha opl3
+- other i/o
+- [[Chip/Dream]]
+	- general midi
+	- stereo
+	- 1053b - general
+- [[BASIC/Super]] superbasic
+	- now hardware key for volume control
+	- f256 jr 2
+	- basic interpreter
+	- cls
+	- `/fm` file manager
+	- demo
+		- primitive audio
+			- xmas24_k2.pgz
+			- someone says, that's serial right?
+			- reset button in lower right
+			- there was a lo-fi ho ho ho
+			- commodore magic voice and everything
+			- early 80's commodore had ghostbusters that exploited flaw in sid chip to say "ghostbust"
+			- people freaked out
+			- lo-tech pcm of a sample
+			- downsampled and thrown at the chip
+			- listened to whole thing, but it was that
+			- pulse code moduled
+			- psga in FPGA
+			- jumpman epics game
+			- psga chip can do square waves
+			- psga chip is low-level low-budget
+			- supports it in superbasic
+			- it's some basic music and a basic game
+		- now we move on to another christmas demo
+			- it's really grating, it's some sid music from 1982 christmas demo
+			- load
+		- `load "foenix.bas`
+			- that loads
+			- then `run`
+			- triangle, square wave, noise, sawtooth, [[Chip/SID]] SID chip - each
+				- 4 stage adsr
+				- high pass,
+				- each voice could be put in
+				- 25 registers
+				- 25 bytes had to be set for all these settings
+				- 0 to 255 for each register
+				- it was gated
+				- they produced this demo (commodore) was in 1982
+		- the actual chip - he has them
+	- [[MIDI]]
+		- serial stream
+		- runs at 30 baud across a wire
+		- the soundblaster was incredible step up in music. moved from psg chip which made beeps to something that sounded like real instruments. there were wars between one sound card and another. you'd compare the voice numbers from 0-127 which say 0 is the piano (one of the pianos) then you have electric pianos, every 8 instrument numbers was the next group, woodwinds, percussion, etc.
+		- midi.org did a favor to industry by saying 0 will always be piano
+		- in the hundreds it was sound effects - it didn't say that gunshot should say one should sound like this or that.
+		- roland and mk32 became gold standard - baseline for gaming
+		- instrument you could plug into a midi controller or a synthesizer
+		- music in [[Game/Monkey Island]] was demo on [[Atari]] 800
+		- loadrunner game
+		-

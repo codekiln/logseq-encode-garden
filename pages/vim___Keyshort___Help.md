@@ -1,0 +1,1 @@
+- this namespace is for keyshorts related to browsing [[vim/help]]

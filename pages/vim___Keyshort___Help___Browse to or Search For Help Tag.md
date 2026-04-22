@@ -1,0 +1,10 @@
+- [[vim]] [[Keyshort]] [[vim/Keyshort]]
+	- ### How to browse directly to a known, named [[vim/help/Tag]] [[card]]
+		- [[Command]]: `:ta <subject>`
+		- [[Examples]]
+			- `:ta add-local-help` browses to the `add-local-help` subject in [[vim/help]]
+		- mnemonic: ==ta== is short for **tag**
+	- ### search for [[vim/help/Tag]]s that contain `write` [[card]]
+		- [[Command]] `:ta /write` with the leading `/` searches for vim help tags that **contain** `write` (it doesn't need to appear at the beginning of the tag)
+	- ### after searching for a [[vim/help/Tag]]s that contain `write`, browse to next and previous matches [[card]]
+		- [[Command]]s `:tnext` and `:tprev` browse to next and previous vim help tag matches

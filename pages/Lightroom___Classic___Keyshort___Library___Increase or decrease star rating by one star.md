@@ -1,0 +1,6 @@
+- [[Keyshort]] [[Lightroom/Classic]] [[Lightroom/Classic/Keyshort]] [[Lightroom/Classic/Keyshort/Library]]
+	- **Increase or decrease star rating by one star** #card
+		- Increase one star: `]`
+		- Decrease one star: `[`
+		- Context: Library module (Adobe groups these under rating/filtering keys); defaults per [Adobe's shortcut list](https://helpx.adobe.com/lightroom-classic/help/keyboard-shortcuts.html).
+		- Description: Nudges the star count up or down without picking a fixed number key.

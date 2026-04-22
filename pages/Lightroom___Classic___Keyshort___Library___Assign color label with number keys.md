@@ -1,0 +1,9 @@
+- [[Keyshort]] [[Lightroom/Classic]] [[Lightroom/Classic/Keyshort]] [[Lightroom/Classic/Keyshort/Library]]
+	- **Assign color labels with number keys (Library)** #card
+		- `6` — red label
+		- `7` — yellow label
+		- `8` — green label
+		- `9` — blue label
+		- With auto-advance to next photo: `Shift + 6` through `Shift + 9`
+		- Context: Library module; defaults per [Adobe's shortcut list](https://helpx.adobe.com/lightroom-classic/help/keyboard-shortcuts.html).
+		- Description: Single-key color labels alongside star and flag triage in the Library module.

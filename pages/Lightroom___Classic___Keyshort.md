@@ -1,0 +1,3 @@
+-
+- {{cards [[Lightroom/Classic/Keyshort]] }}
+	- Summary: Library culling shortcuts (pick / reject / unflag / star ratings) sourced from Adobe Help.
