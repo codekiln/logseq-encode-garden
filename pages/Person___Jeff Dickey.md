@@ -4,5 +4,5 @@ alias:: [[@jdx]]
 logseq-entity:: [[Logseq/Entity/person]]
 - [[Person/Jeff Dickey/Web]] https://jdx.dev/
 - [[Person/Jeff Dickey/GitHub]] https://github.com/jdx/
-	- > author of mise-en-place, #oclif and [[heroku/CLI]]
--
+	- > author of [[mise]] mise-en-place, [[oclif]] and [[heroku/CLI]]
+	- also maintains [[fnox]] (secrets CLI; docs at https://fnox.jdx.dev/) alongside [[mise]]

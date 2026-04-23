@@ -1,0 +1,4 @@
+- GitHub: [jdx/fnox: Fort Knox for your secrets](https://github.com/jdx/fnox)
+- Docs: https://fnox.jdx.dev/
+- Author: [[Person/Jeff Dickey]] (same ecosystem as [[mise]])
+- Related: [[fnox]], [[fnox/vs/secretspec]]

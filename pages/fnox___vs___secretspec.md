@@ -1,0 +1,47 @@
+- Purpose of this page
+	- Highlight **capabilities that show up in one tool’s public story but not the other’s**, so you can scan for gaps instead of reading two parallel product pitches. Provider catalogs change; treat bullets as **“documented on the official site when this note was written”**, then verify in each project’s current docs. [^1] [^2]
+- ## Features emphasized for **fnox** but not for **[[secretspec]]**
+	- **Encrypt-to-git in the project file**
+		- **fnox** documents storing **encrypted ciphertext** (or KMS-style encrypted payloads) **inside `fnox.toml`** that you commit—for example via **age** (including SSH-key flows) or **AWS / Azure / GCP KMS**—so teammates clone **values-in-repo** without plaintext in history. [^1]
+		- **[[secretspec]]**’s public positioning is the opposite: **`secretspec.toml` declares requirements only**; it should **not** carry real secret material, even encrypted—the committed file is the **contract**, not the vault. [^2]
+	- **Inline non-provider “plain” defaults in the same repo file**
+		- **fnox** documents a **`plain` provider for defaults** (explicitly “for defaults only”) so local dev can ship **cleartext defaults beside** encrypted or remote-backed entries in **`fnox.toml`**. [^1]
+		- **[[secretspec]]** steers defaults through **providers** (for example **dotenv**, **keyring**) rather than treating the committed spec as a place for inline secret values. [^2]
+	- **Directory-based shell auto-export**
+		- **fnox** documents **`fnox activate`** so a shell can **auto-load secrets when you `cd`** into a tree that contains **`fnox.toml`**. [^1]
+		- **[[secretspec]]**’s homepage narrative centers on **`secretspec run` / `check` / `set`** style workflows and SDK loading—not an equivalent **“activate my shell on directory entry”** feature in the same first-class way. [^2]
+	- **Providers called out on fnox’s landing page but not on SecretSpec’s homepage list**
+		- Examples from **fnox** marketing/docs: **AWS Systems Manager Parameter Store (`aws-ps`)**, **Azure Key Vault secrets (`azure-sm`)**, **Bitwarden Secrets Manager**, **Doppler**, **Infisical**, plus the **encrypt-to-git** stack (**age**, **AWS/Azure/GCP KMS**) as a headline cluster. [^1]
+		- **[[secretspec]]**’s homepage provider gallery at the time emphasized **keyring**, **dotenv**, **`env` (read-only for CI)**, **`pass`**, **[[1Password]]**, **LastPass**, **GCP Secret Manager**, **AWS Secrets Manager**, **Vault/OpenBao**—a different shape (no **Doppler**, **Infisical**, **Parameter Store**, **Azure** entries, or **age/KMS encrypt-to-git** in that same list). [^2]
+- ## Features emphasized for **[[secretspec]]** but not for **fnox**
+	- **Committed file is never a value store (even encrypted)**
+		- **[[secretspec]]** repeats that **`secretspec.toml` only declares names, descriptions, required/optional rules, and shapes**—**values always come from providers at runtime**. That is a **design guarantee** in how they describe the system. [^2]
+		- **fnox** intentionally supports **ciphertext and plain defaults inside `fnox.toml`**, so it does **not** share that same “spec never holds secrets” invariant. [^1]
+	- **First-party in-process Rust SDK with codegen**
+		- **[[secretspec]]** documents a **type-safe Rust SDK**: `declare_secrets!` over **`secretspec.toml`**, builder-style `load()`, typed fields, optional secrets as `Option`, helpers like **`set_as_env_vars`**, and invites other language SDKs via contributions. [^2]
+		- **fnox**’s landing page is **CLI + TOML + shell integration**-centric; it does **not** advertise a comparable **generated Rust API surface** the same way. [^1]
+	- **Built-in cross-provider migration (`import`)**
+		- **[[secretspec]]** documents **`secretspec import`** (example flow: import from **`dotenv://.env.production`** into **`keyring://`**) as a first-class way to **move material between backends without changing app code**. [^2]
+		- **fnox** docs summarized here do **not** foreground an **`import`-style** “bulk move between providers” command in the same way (you may still accomplish moves manually per provider). [^1]
+	- **Secret requirement primitives beyond name + provider**
+		- **[[secretspec]]** documents **`as_path`** (materialize to **temporary files** for consumers that need paths), plus **`type` + `generate`** so some secrets can be **auto-created when missing** (for example generated passwords). [^2]
+		- **fnox**’s quick examples center on **provider + value/reference**; those **declaration-level** knobs are **not** the headline in the same public comparison surface. [^1]
+	- **User-global provider configuration with interactive setup**
+		- **[[secretspec]]** shows **`secretspec config init`** writing **`~/.config/secretspec/config.toml`**, interactive provider picking, and **per-secret provider overrides / fallback lists** wired through **named provider aliases** in that config. [^2]
+		- **fnox**’s intro emphasizes **project-local `fnox.toml`** and providers declared there; it does **not** mirror that exact **interactive user-wide config wizard + alias layer** in the excerpted homepage material. [^1]
+	- **Providers called out on SecretSpec’s homepage but not on fnox’s landing list**
+		- Examples: **LastPass**, the dedicated **read-only `env` provider for CI**, and the **dotenv** provider as a first-class “traditional `.env`” backend sit in **[[secretspec]]**’s story. [^2]
+		- **fnox** lists **OS keychain**, **`pass`**, cloud managers, etc., but **does not list LastPass, dotenv-as-provider, or a read-only env backend** in the same marketing provider grid. [^1]
+- ## Overlap (intentionally brief)
+	- Both offer **multi-environment profiles**, a **TOML project file**, CLI flows to **run subprocesses with secrets injected**, and overlapping remote backends such as **[[1Password]]**, **Vault-class** stores, **GCP/AWS secret managers**, and Unix **`pass`**. Treat this section as **shared baseline**, not the differentiator. [^1] [^2]
+- ## One-line positioning (reminder)
+	- **fnox**: one committed **`fnox.toml`** can orchestrate **remote refs**, **encrypt-to-git**, and **plain defaults**, plus optional **shell activation on `cd`**. [^1]
+	- **[[secretspec]]**: one committed **`secretspec.toml`** is the **policy and inventory**; **values and migrations** live in **providers**, with a **Rust SDK** for typed in-app access. [^2]
+- ## Related in this graph
+	- [[fnox]] — hub note for the tool
+	- [[secretspec]] — existing stub and links
+	- [[devenv/Blog/25/07/Announcing SecretSpec]] — motivation and critique of “encrypted secrets in repo” approaches from the devenv perspective
+	- [[Person/Jeff Dickey/GitHub/fnox]] — canonical repo link
+- ## Footnotes
+	- [^1]: https://fnox.jdx.dev/
+	- [^2]: https://secretspec.dev/
