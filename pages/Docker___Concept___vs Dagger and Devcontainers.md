@@ -1,4 +1,4 @@
-- # Docker vs Dagger and Devcontainers Conceptual Overview
+# Docker vs Dagger and Devcontainers Conceptual Overview
 	- ## Overview
 		- Three different layers of abstraction sit in the container ecosystem: **Docker** (container runtime + image builder), **Devcontainers** (development environment spec on top of Docker), and **Dagger** (programmable CI/CD pipeline engine built on containers). They operate at different layers of the stack and are orthogonal, not competitors.
 	- ## Context
@@ -48,5 +48,5 @@
 	- ## Related
 		- [[DevContainer]]
 		- [[Docker/Compose]]
-		- [[GitHub/Codespaces]]
+		- [[GitHub/Codespace]]
 		- [[Latent Space/Pod/25/06/Solomon Hykes with Dagger to Contain Agent Chaos/Agentic Impetus]]

@@ -1,6 +1,8 @@
-alias:: [[GitHub Codespace]], [[Codespaces]], [[Codespace]]
-
-- # GitHub Codespaces - https://github.com/features/codespaces
+logseq-entity:: [[Logseq/Entity/software-project]]
+alias:: [[GitHub Codespaces]], [[GitHub/Codespaces]], [[Codespaces]], [[Codespace]], [[GitHub Codespace]]
+- # GitHub Codespace
+	- [Product home](https://github.com/features/codespaces)
+	- Hosted **cloud development environment** from GitHub: each codespace is a VM-backed container workspace (Ubuntu by default) that attaches [[VSCode]] (desktop, web, or compatible editors) to a clone of a [[GitHub]] repository, using the same [[DevContainer]] configuration as local devcontainers.
 	- ## Overview
 		- Cloud-based development environments powered by [[DevContainer]]
 		- Runs in the cloud on GitHub's infrastructure as Docker containers on virtual machines

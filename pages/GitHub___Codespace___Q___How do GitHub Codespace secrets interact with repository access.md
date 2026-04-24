@@ -1,4 +1,4 @@
-- # How do [[GitHub/Codespace]] secrets interact with repository access?
+# How do [[GitHub/Codespace]] secrets interact with repository access?
 	- Can anyone who has read access to the repository create a codespace which accesses secrets defined for that codespace? What about people who have write access?
 - ## Answer
 	- **No.** Read access alone does not grant access to Codespace secrets.
@@ -32,8 +32,8 @@
 			- ❌ Still cannot access *your* personal user secrets
 		- Secrets are protected by requiring write access, and further protected against fork-based attacks
 - ## My Notes
-	- 
+	-
 - ## Related
-	- [[GitHub/Codespaces]]
+	- [[GitHub/Codespace]]
 	- [GitHub Docs: Security in GitHub Codespaces](https://docs.github.com/en/codespaces/codespaces-reference/security-in-github-codespaces)
 	- [GitHub Docs: Managing development environment secrets](https://docs.github.com/en/codespaces/managing-codespaces-for-your-organization/managing-secrets-for-your-repository-and-organization-for-github-codespaces)
