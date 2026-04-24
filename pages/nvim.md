@@ -5,5 +5,6 @@ date-created:: [[2014]]
 see-also:: [[vim]]
 
 - [Neovim](https://neovim.io/) is a **Vim-forked** text editor aimed at **extensibility**, **async** plugins, and a maintainable codebase; configuration is typically **[[Lua]]**, with a built-in **[[LSP]]** client and strong **terminal** integration.
+	- [[nvim/treesitter]] — historical **[[Tree-Sitter]]** plugin org (main repo archived April 2026); see page for links and commentary
 	- [[nvim/History]] — fork narrative and selected people behind the project
 	- [Source repository](https://github.com/neovim/neovim)
