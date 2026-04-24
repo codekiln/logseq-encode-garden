@@ -1,6 +1,10 @@
-- Purpose of this page
-	- Highlight **capabilities that show up in one tool’s public story but not the other’s**, so you can scan for gaps instead of reading two parallel product pitches. Provider catalogs change; treat bullets as **“documented on the official site when this note was written”**, then verify in each project’s current docs. [^1] [^2]
-- ## Features emphasized for **fnox** but not for **[[secretspec]]**
+# [[fnox]] vs [[secretspec]]
+	- An attempt to highlight **capabilities that show up in one tool’s public story but not the other’s**.
+	- [[My Notes]]
+		- [[My Thoughts]] [[2026-04-24 Fri]]
+			- think that [[@jdx]] took a look at secretspec's blog post [[devenv/Blog/25/07/Announcing SecretSpec]] and said "this seems too perfectionistic" and "i could do better than that" w.r.t. how [[secretspec]] thinks that using tools like [[sops]] and `age` to encrypt [[Secrets]] in a [[git/repo]] repo is not a good idea, while [[@jdx]] included that as a core featureset in [[fnox]].
+			- in general, [[fnox]] seems like it has more integrations and is moving faster, but it doesn't have a [[GitHub Issues]] tab, which is the first time I've ever seen that. this decision reminds me of when youtube videos and blog posts have comments disabled. basically, he's offering his own solution for himself to the public, but not asking for contributions. part of me reticulates a bit at that thought; how will he catch all the bugs? but then again, this makes me think about how [[nvim/treesitter]]'s creator recently archived the project because the [[Open Source]] community was just nasty to him. If this is his way of making his personally useful stuff public while staying sane, ... that seems fine to me!
+- ## Features emphasized for [[fnox]] but not for **[[secretspec]]**
 	- **Encrypt-to-git in the project file**
 		- **fnox** documents storing **encrypted ciphertext** (or KMS-style encrypted payloads) **inside `fnox.toml`** that you commit—for example via **age** (including SSH-key flows) or **AWS / Azure / GCP KMS**—so teammates clone **values-in-repo** without plaintext in history. [^1]
 		- **[[secretspec]]**’s public positioning is the opposite: **`secretspec.toml` declares requirements only**; it should **not** carry real secret material, even encrypted—the committed file is the **contract**, not the vault. [^2]
