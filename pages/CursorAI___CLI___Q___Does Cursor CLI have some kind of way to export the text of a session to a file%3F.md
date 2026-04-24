@@ -1,0 +1,21 @@
+logseq-entity:: [[Logseq/Entity/question]]
+
+- # Does [[CursorAI/CLI]] have some kind of way to export the text of a session to a file?
+	- ## My Notes
+		- Discovered this by accident while trying to export an [[ai-transcript]] into [[Logseq]].
+	- ## Answer
+		- [[AI/Response]]
+			- **Built-in “export session to file”:** The `cursor-agent` / `agent` CLI (as of the current `--help` surface) does **not** document a dedicated subcommand or flag to dump an **interactive** session transcript to a path (no `export`, `save`, or `transcript` command in the help output).
+			- **Headless / print mode:** With **`--print`** (`-p`), the agent writes its run to **stdout**. You can capture that in a file with normal shell redirection, for example `agent -p "your prompt" > transcript.txt`, or pipe through **`tee`** to see and save at once. **`--output-format`** (`text`, `json`, or `stream-json`) only applies together with **`--print`** and controls how structured the stream is—not a file path option.
+			- **Interactive sessions:** The CLI exposes **session continuity** (`ls`, `resume`, **`--resume [chatId]`**, **`--continue`**) so chats are stored for resuming, but that is not the same as a documented, user-facing “export this chat to markdown” workflow in the CLI itself.
+			- **Practical workarounds:** (1) Use **`--print`** and redirect or **`tee`** when you need a reproducible log file. (2) For interactive runs, use your terminal’s session logging (**`script`**, **`tmux` capture**, terminal “save scrollback”, etc.) if you need everything that appeared on screen. (3) Community tools exist that read Cursor’s local chat storage (e.g. forum threads and projects such as [cursor-session](https://github.com/iksnae/cursor-session)); those are **not** first-party Cursor CLI features.
+			- **Contrast with the desktop app:** The Cursor **editor** has separate UX for transcripts (e.g. export/share flows in the UI). That behavior is not what `agent --help` exposes as a CLI file export.
+			- Sources:
+				- Local check: `cursor-agent` / `agent --help` (no export subcommand; documents `-p` / `--print`, `--output-format`, `--resume`, `ls`, `resume`)
+				- [Using Agent in CLI](https://cursor.com/docs/cli/using) (print/headless patterns; pair with shell redirection in practice)
+				- [Cursor CLI headless](https://cursor.com/docs/cli/headless) (non-interactive / `-p` usage)
+				- [cursor-session (community)](https://github.com/iksnae/cursor-session) (third-party export from stored sessions)
+	- ## Related
+		- [[CursorAI/CLI]]
+		- [[CursorAI/CLI/Q/Can cursor-agent CLI accept image input? If so, how?]]
+		- [[CursorAI/CLI/Q/Can cursor-agent be configured to open a file in Neovim for editing?]]

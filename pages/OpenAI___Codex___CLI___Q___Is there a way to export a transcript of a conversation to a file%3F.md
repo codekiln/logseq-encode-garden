@@ -1,0 +1,22 @@
+logseq-entity:: [[Logseq/Entity/question]]
+
+- # Is there a way to export a transcript of a conversation to a file in [[OpenAI/Codex/CLI]]?
+	- ## My Notes
+		- [[AI/Agent/Agentic/Engineering/Tool/Idea/26/04/Abstraction Layer over agentic CLI tools]]
+	- ## Answer
+		- [[AI/Response]]
+			- **There is no single “export this chat to `transcript.md`” command** for the interactive TUI on the main `codex` help surface, but you can get **machine-readable logs** and **on-disk session artifacts** depending on how you run Codex.
+			- **`codex exec` (non-interactive):**
+				- **`--json`** (alias `--experimental-json`): prints **newline-delimited JSON events** to stdout instead of formatted text—redirect with the shell to a file, e.g. `codex exec --json "…" > run.jsonl`.
+				- **`-o` / `--output-last-message <FILE>`:** writes only the **assistant’s final message** to a path (pairs well with `--json` in CI-style flows per OpenAI’s own reference).
+				- **`--ephemeral`:** when set, exec runs **without persisting** rollout/session files to disk—so the inverse is: by default, exec sessions **can** leave persisted rollout data unless you opt out.
+			- **Interactive `codex` / `codex resume` / `codex fork`:** the CLI is built around **resumable sessions** (rollouts). Detailed history is represented in **local session/rollout files** under your Codex data directory (commonly `~/.codex/sessions/`, with dated subfolders and `rollout-*.json` style artifacts on disk). That is **not** the same as a one-click “export readable transcript,” but you can **copy or process those files** if you need a full record. Layout can evolve between releases.
+			- **Other capture options:** formatted exec output can go to a file with `>` / `tee`; the TUI supports **`--no-alt-screen`** so normal terminal scrollback is preserved (helpful for manual copy/save).
+			- **Upstream note:** users have asked for a clearer “export entire session” affordance in the open-source tracker ([feature request #13267](https://github.com/openai/codex/issues/13267)).
+			- Sources:
+				- Local: `codex --help`, `codex exec --help` (`--json`, `--output-last-message`, `--ephemeral`)
+				- [Command line options – Codex CLI](https://developers.openai.com/codex/cli/reference) (`codex exec`: “Stream results to stdout or JSONL”; `--json`; `--output-last-message`; `--ephemeral`)
+				- [openai/codex#13267](https://github.com/openai/codex/issues/13267) (export entire session — discussion / feature request)
+	- ## Related
+		- [[OpenAI/Codex/CLI]]
+		- [[AI/Coding/Tool/Q/How can I do fire and forget tasks in each CLI AI coding tool like Claude Code cursor-agent and codex?]]

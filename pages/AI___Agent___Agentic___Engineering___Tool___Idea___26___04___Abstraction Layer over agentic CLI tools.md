@@ -1,0 +1,2 @@
+# Abstraction Layer over agentic CLI tools
+	- [[AI/Coding/Tool]]s are disincentivized from supporting [[Interoperability]] with other CLI tools. They are trying to [[Diff/eren/tia/te]] themselves from each other. As a result, those who use these tools have a reciprocal incentive to build [[Interop/Adversarial]]
