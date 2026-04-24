@@ -78,7 +78,7 @@
 		- [[Person/Alexander D. Wissner-Gross]]
 			- you get there by having rigorous [[AI Evals]]
 		- 09:53 [[Person/Annika Thomas]]
-			- with [[Diff/eren/tiabil/ity]] we will get there
+			- with [[Diff/eren/tia/bil/ity]] we will get there
 			- I want to emphasize that you made a great point about [[AI Evals]]. Many of those systems in the past were based on [[Average]] [[Performance]], but we need [[Cert/if/iab/ility]], and [[Case/Edge]] matters.
 	- 09:54 [[Person/Navid Aghasadeghi]] we think about replacing physical jobs with [[Robot/ics]], but where are the opportunities to expand the market, such as for applications in [[Space]]?
 		- [[Person/Annika Thomas]]
