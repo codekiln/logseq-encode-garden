@@ -1,0 +1,5 @@
+- [[git]] [[Version/Control]]
+	- **How do I use `git show` to inspect an old file?** [[Card]]
+		- `git show <commit> -- <path>` shows the patch for that path in that commit.
+		- `git show <commit>:<path>` shows the file contents as they existed at that commit.
+		- For recovery work, the patch form is better for understanding what changed, while the `:<path>` form is better for copying the whole historical file or block.

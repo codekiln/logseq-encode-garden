@@ -1,0 +1,7 @@
+- [[Keyshort]] [[Lazygit]] [[Lazygit/Keyshort]]
+	- **Show reflog from the commits view** [[Card]]
+		- Shortcut: `]`
+		- Context: In the commits panel.
+		- Description: Switches the commits context to `Reflog`, which is useful for finding commits that were rewritten away from normal branch history.
+		- [[My Note]]
+			- This was how I found `84f0092` after the [[git/rebase]] rewrote it.

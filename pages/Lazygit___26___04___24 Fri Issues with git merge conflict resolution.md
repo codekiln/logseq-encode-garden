@@ -1,0 +1,52 @@
+- # [[Issue]]s with [[git/merge/conflict/resolution]] in [[Lazygit]] - [[2026-04-24 Fri]]
+	- tried to use [[Lazygit]] to resolve a merge conflict on [[2026-04-23 Thu]]'s journal page. ended up accepting the first hunk from the remote and discarding the content I had committed locally, even though I expected to keep both.
+		- part of the problem was insufficient [[UI/Color/Contrast]] between the selected hunk and the text color in my current theme.
+		- the other problem was that I had not done a careful examination of the keyboard shortcuts related to hunk selection and merge conflict resolution.
+	- used a [[CodexCLI]] based [[CLI/Coach]] to guide me through the recovery.
+		- ai-transcript:: [[Lazygit/26/04/24 Fri Issues with git merge conflict resolution/Transcript]]
+		- ai-session-id::
+	- ## What Happened
+		- my local journal content lived in commit `84f0092` with message `adobe sniping`.
+		- I then ran `git pull --no-edit`, which started a [[git/rebase]] onto upstream commit `f086c38`.
+		- after the rebase completed, my rewritten local commit became `5e5012a`, but the journal content from `84f0092` was mostly gone.
+		- the current `main` version of `journals/2026_04_23.md` kept the upstream `exe.dev` and `secretspec` notes, while the local `[[Adobe]]` section disappeared.
+	- ## Mistakes
+		- I treated the [[Lazygit]] conflict UI as though I was selecting from two equal hunks, when in practice I needed to reason about rebase semantics and what side each hunk represented.
+		- I was looking at the upstream commit and its `Diff files` view, not the lost local commit that contained the missing journal content.
+		- I did not yet understand that in a [[git/rebase]] conflict, `ours` refers to the upstream branch being rebased onto, while `theirs` refers to my replayed local commit.
+		- I initially searched for `84f0092` in ordinary commit history, even though the commit had been rewritten away and was only easy to find in [[git/reflog]].
+		- I expected `e` in [[Lazygit]] to open the historical file from the old commit, but it opens the currently checked out file on `main`.
+		- when trying to copy the old file contents, I ran `git show 84f0092:journals/2026_04_23.md > pbcopy`, which redirected into a file literally named `pbcopy` instead of piping to [[pbcopy]].
+	- ## What I Learned
+		- `84f0092` was still recoverable even after the rebase rewrite because [[git/reflog]] preserved the old HEAD state.
+		- in [[Lazygit]], the `]` shortcut in the commits view can switch to `Reflog`, which made it possible to search for `84f0092` and inspect it.
+		- when a commit exists only in reflog, `git show <commit> -- <path>` can still show the patch for a specific file.
+		- `git show <commit>:<path>` shows the historical file contents, which is better for copying the full block back into the working tree.
+		- `e` in the commit patch view opens the current checked out file in the editor, not a detached historical snapshot.
+		- [[pbcopy]] needs a pipe (`|`), and [[pbpaste]] is the simplest verification step.
+	- ## Recovery Notes
+		- created `rescue-84f0092` as a safety branch pointing at the lost local commit.
+		- the safest recovery path was to inspect the old commit, then merge the missing `[[Adobe]]` block back into the current journal file on `main`.
+		- for this kind of issue, it is safer to use [[Lazygit]] for navigation and inspection, then use the editor or `git show` to reconstruct the final merged file.
+	- ## Related
+		- [[Lazygit]]
+		- [[Lazygit/Keyshort]]
+		- [[Lazygit/Keyshort/Pull]]
+		- [[Lazygit/Keyshort/Copy to clipboard]]
+		- [[Lazygit/Keyshort/Show Reflog]]
+		- [[Lazygit/Q/What are the main keyboard shortcuts for lazygit?]]
+		- [[Lazygit/Q/In lazygit, what's a basic workflow for listing modified files in a worktree and then committing them on the worktree?]]
+		- [[git]]
+		- [[git/rebase]]
+		- [[git/reflog]]
+		- [[git/show]]
+		- [[pbcopy]]
+		- [[tmux]]
+		- [[tmux/Q/What is a conceptual overview of how copy paste works in oh-my-tmux with nvim?]]
+		- [[tmux/Q/In copy mode, can you yank soft-wrapped lines without embedded newlines?]]
+	- ## Flashcards Filed
+		- [[Lazygit/Keyshort/Show Reflog]]
+		- [[git/rebase]]
+		- [[git/reflog]]
+		- [[git/show]]
+		- [[pbcopy]]

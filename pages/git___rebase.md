@@ -1,0 +1,5 @@
+- [[git]] [[Version/Control]]
+	- **In a rebase conflict, what do `ours` and `theirs` mean?** [[Card]]
+		- In a [[git/rebase]] conflict, `ours` means the upstream branch being rebased onto.
+		- `theirs` means the replayed local commit currently being applied.
+		- This is the opposite of the intuition many people bring from ordinary merge conflict resolution, so it is easy to accept the wrong side.

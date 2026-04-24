@@ -1,0 +1,5 @@
+- [[git]] [[Version/Control]]
+	- **What is reflog good for?** [[Card]]
+		- `git reflog` shows where `HEAD` and branch refs have pointed locally, even when a commit is no longer visible in normal branch history.
+		- This makes it a recovery tool for commits lost after operations like [[git/rebase]], [[git/reset]], or branch deletion.
+		- In this session, it was the way to rediscover commit `84f0092` after it disappeared from the ordinary [[Lazygit]] commits view.

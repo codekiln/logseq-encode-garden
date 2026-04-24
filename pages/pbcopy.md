@@ -1,0 +1,6 @@
+- [[CLI/Tool]]
+	- **What is the correct way to copy command output with `pbcopy`?** [[Card]]
+		- Use a pipe, for example: `git show 84f0092:journals/2026_04_23.md | pbcopy`
+		- `> pbcopy` is a redirection, so it writes to a file named `pbcopy` instead of sending text to the macOS clipboard.
+		- Verify the clipboard contents with `pbpaste`.
+		- If clipboard behavior still seems wrong, [[tmux]] can be part of the problem, but first confirm the shell command itself is correct.
