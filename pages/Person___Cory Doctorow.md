@@ -1,5 +1,6 @@
 logseq-entity:: [[Logseq/Entity/person]]
-# Corey Doctorow
+alias:: [[Person/Corey Doctorow]]
+# Cory Doctorow
 	- ## Bio
 		- Canadian-British science fiction author, journalist, and technology activist
 		- Born July 17, 1971, in Toronto, Canada
@@ -15,9 +16,9 @@ logseq-entity:: [[Logseq/Entity/person]]
 				- "Homeland" (2013)
 				- "Attack Surface" (2020)
 				- "Red Team Blues" (2023)
-				- [[Person/Corey Doctorow/Book/25/Picks & Shovels]]
+				- [[Person/Cory Doctorow/Book/25/Picks & Shovels]]
 			- #Nonfiction
-				- [[Person/Corey Doctorow/Book/25/Enshittification]] "Enshittification: Why Everything Got Worse and What to Do About It" (2025)
+				- [[Person/Cory Doctorow/Book/25/Enshittification]] "Enshittification: Why Everything Got Worse and What to Do About It" (2025)
 		- ### Activism
 			- Served as European director of the Electronic Frontier Foundation (EFF) from 2002 to 2006
 			- Remains a special consultant to the EFF

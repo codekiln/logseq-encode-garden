@@ -1,9 +1,9 @@
 alias:: [[Book/Enshittification]]
-created-by:: [[Person/Corey Doctorow]]
+created-by:: [[Person/Cory Doctorow]]
 date-created:: [[2025]]
 - # Enshittification
 	- ## About
-		- Nonfiction book by [[Person/Corey Doctorow]].
+		- Nonfiction book by [[Person/Cory Doctorow]].
 		- Examines why many digital platforms degrade over time and become hostile to users, creators, and smaller businesses.
 		- Frames platform decline as a predictable outcome of concentrated market power, weak interoperability, and regulatory capture.
 	- ## Conceptual Overview
@@ -24,7 +24,7 @@ date-created:: [[2025]]
 			- Strong competition policy and enforcement.
 			- User rights around portability, transparency, and fair access.
 	- ## Related
-		- [[Person/Corey Doctorow]]
+		- [[Person/Cory Doctorow]]
 		- [[Enshittification]]
 		- [[Interop]]
-		- [[Person/Corey Doctorow/Book/25/Picks & Shovels]]
+		- [[Person/Cory Doctorow/Book/25/Picks & Shovels]]

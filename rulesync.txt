@@ -597,7 +597,7 @@ id:: 68e0f877-fcfc-438c-a9d8-a9d625d68232
 
 <file path="pages/rulesync___log___25___11___10 Mon - on abstraction costs and plugin marketplaces.md">
 ## High Level Reflections
-	- Corey Doctorow's books (particularly [[Person/Corey Doctorow/Book/25/Picks & Shovels]] and [[Person/Corey Doctorow/Book/25/Enshittification]]) have taught me that [[Interop]] tools like `rulesync` are important because in the age of AI, vendor lock-in is likely to become a serious issue. [[pandoc]] could serve as an example for how to do an interop tool like `rulesync`
+	- Cory Doctorow's books (particularly [[Person/Cory Doctorow/Book/25/Picks & Shovels]] and [[Person/Cory Doctorow/Book/25/Enshittification]]) have taught me that [[Interop]] tools like `rulesync` are important because in the age of AI, vendor lock-in is likely to become a serious issue. [[pandoc]] could serve as an example for how to do an interop tool like `rulesync`
 	- But the pace of AI progress is fast. The feature surface area of the underlying tools is exploding. The cost of using and maintaining an abstraction layer like `rulesync` is becoming high. If I keep my canonical [[AI/Coding/Config]]s in `rulesync`'s formats, then I can't easily use the latest features of Claude Code, such as
 		- [Support for Claude Skills · Issue #422 · dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync/issues/422)
 		- [Feature request: for claude code slash commands, support passing through claude-code-specific yaml markdown frontmatter keys to the generated command markdown files · Issue #413 · dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync/issues/413)

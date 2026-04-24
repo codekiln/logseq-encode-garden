@@ -1,4 +1,4 @@
-- # Enshittification
+# Enshittification
 	- ## Conceptual Overview
 		- [[Enshittification]] is a pattern where digital platforms progressively degrade the experience for users and business participants as platform owners gain power and begin optimizing for extraction.
 		- It is best understood as a lifecycle, not a one-time event:
@@ -23,6 +23,6 @@
 		- Competition enforcement against lock-in and self-preferencing.
 		- User and developer leverage through open standards, federation, and exit options.
 	- ## Related
-		- [[Person/Corey Doctorow]]
-		- [[Person/Corey Doctorow/Book/25/Enshittification]]
+		- [[Person/Cory Doctorow]]
+		- [[Person/Cory Doctorow/Book/25/Enshittification]]
 		- [[Interop]]
