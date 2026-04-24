@@ -1,0 +1,50 @@
+tags:: [[Idea]]
+date-created:: [[2026-03-21 Sat]]
+
+- # Proto Session — [[2026-03-21 Sat]] — AI Terminal Coach (cursor-agent + tmux)
+	- Running notes from experimenting with **split-pane pedagogical** use of Cursor agent + shell/tmux, without a separate coach daemon. Updated as the prototype continues.
+	- ## [[2026-03-21 Sat]] — Setup and norms
+		- **Intent:** Coach increases user **terminal [[Fingerspitzengefühl]]**; incremental dialog (short turns), not lecture blocks. Prefer user running commands; coach observes and nudges.
+		- **Tmux layout (observed):** session `logsqeq`, window `logseq-encode-garden` (index 3). Coach runs in pane **3.3** (`node`, title “AI Terminal Coach”). Student shell (zsh, repo `logseq-encode-garden`) in pane **3.2** — agreed as default **student pane**.
+		- **Scaffold to “see” student:** `tmux capture-pane -t logsqeq:3.2 -p -S -30` (adjust `-S` depth as needed). If focus moves: student runs `tmux display-message -p '#{session_name}:#{window_index}.#{pane_index}'` and pastes target.
+		- **Task in play:** After dotfiles refresh at `~/Documents/GitHub/codekiln/dotfiles`, user wanted every zsh pane to pick up new `~/.zshrc`; user recalled a **Logseq question page** (likely mentions tmux) from earlier in the week — coach must **not** fetch that page for them.
+		- **Pedagogy slip:** Coach printed a full `rg` glob for `___Q___` question pages; user asked to push work back to them for muscle memory.
+		- **Revised contract:** Coach suggests *kind* of tool/flag; user tries first; coach reacts to pane capture or user report.
+	- ## Design threads (not decided)
+		- **Real-time observation:** `script` typescript + background `tail`/watcher vs **`tmux capture-pane` in a loop** with a small ring buffer of snapshots vs a hypothetical **`lsh`** (learn shell) wrapper emitting structured events (precmd/postcmd, cwd, exit code).
+		- **Privacy:** “Learning mode” contract — no sensitive input while wide logging; applies especially to typescript and full-screen capture.
+		- **Open prompt (from coach):** optimize for **every keystroke** vs **every finished command + output** — picks among script-like vs hook-log vs capture-loop approaches.
+	- ## [[2026-03-21 Sat]] — Tools mentioned
+		- `rg`, `fzf`, `tmux`, `script` (typescript), asciinema (README-style recordings, named for contrast).
+	- ## [[2026-03-21 Sat]] — Session outcomes (local help, modalities, lessons)
+		- **Theme:** Teaching **how to find answers in local docs** (man, `:help`, `helpgrep`) paid off more than one-shot answers; matches the “coach, not clerk” goal for long-term recall.
+		- **Modalities we used**
+			- **Incremental chat** — short coach turns; user runs commands first where possible.
+			- **Tmux** — student zsh in **3.2**; **man** / **Neovim :help** often in **3.1** (“pinned reference pane” pattern); coach process in **3.3**; `capture-pane` on student pane when needed.
+			- **Pipeline exploration** — `rg --help | fzf` to skim flags, then **man** for semantics of **`-l` / `--files-with-matches`**.
+			- **Vim help navigation** — `:help`, `:helpg` / `:helpgrep`, `CTRL-]`, `CTRL-T`, jump list `CTRL-O` / `CTRL-I`; distinction between **tag jump** and **full-text** search.
+		- **What worked**
+			- **Man pinned in its own pane** while experimenting in another.
+			- **`/^/` with `:helpgrep`** — sanity check that help files are actually being scanned (when `E480` is confusing).
+			- **Bare pattern for `:helpgrep`** — e.g. `:helpgrep helpgrep` (no `/…/`); the shipped examples use **no slashes**; `/pattern/` was searching for **literal slashes** in the text → false “no match.”
+			- **`:help {subject}`** and **`CTRL-]`** on tags — fast when the tag exists; **`:helpgrep`** for “I don’t know the tag.”
+			- **less / man search tips** — `^` anchor; **`-` `i`** toggles ignore-case when `-l` and `-L` collide; optional smarter pattern with an uppercase letter.
+		- **What confused us (and the fix)**
+			- **`helpgrep` vs `:help`** — tags vs **on-disk help text**; on-screen `CTRL-]` may not appear as the ASCII string you grep for (`<C-]>` etc.).
+			- **`E480`** — “no line matched,” not necessarily “broken runtime.”
+			- **Regex in man** — useful, but easy to forget; worth re-deriving from the pager’s behavior, not myth.
+		- **Garden / Keyshort convention (agreed, not yet filed as cards)**
+			- Scope **`vim`** for shared Vim+Neovim bindings; **Neovim-only** pages only for **deltas**.
+			- **Document `CTRL-]`, `CTRL-T`, `g CTRL-]`** (tag / `:tjump`) as keyshorts — prefer **one `vim/Keyshort/Help` page** with **multiple `#card`** children (grouped cards), not many tiny subpages.
+		- **What you (user) learned / re-learned**
+			- **`:helpg`** is the short form of **`:helpgrep`**.
+			- **Return after tag:** **`CTRL-T`** (tag stack); **`CTRL-O` / `CTRL-I`** move on the **jump list** (broader than tags; **`CTRL-I`** may overlap **Tab** in terminals).
+			- **`:help` corpus** = **User Manual** + **Reference Manual** in one linked system — not a separate “mystery manual.”
+			- **`rg -l`** prints **paths only**, suppresses match lines — check behavior in **man**, not `--help` alone.
+		- **Side context**
+			- Hardware: **e** and **Space** misfires → planning new switches; affects tolerance for typo noise while learning.
+		- **Suggestions for future sessions / rulesync**
+			- Coach rule: **“Before the agent answers a Vim/Neovim factual, ask whether `:help` / `:helpgrep` was tried; prefer teaching the lookup path.”**
+			- Add **`vim/Keyshort/Help`** cards when ready; link from this log.
+			- Optional one-liner cheat block in rules: **`:helpgrep {word}`** (no slashes), **`cn` / `copen`**, **`CTRL-]` / `CTRL-T` / `CTRL-O`**.
+			- Revisit **dotfiles → reload zsh in all tmux panes** + **finding the old Logseq `___Q___` note** when the user wants to close the original thread.

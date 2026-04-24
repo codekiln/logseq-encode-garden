@@ -1,8 +1,10 @@
 tags:: [[CLI/Tool]], [[AI Coding]]
-alias:: [[OpenAI/Codex/CLI]]
+alias:: [[CodexCLI]]
 
 - # [openai/codex: Lightweight coding agent that runs in your terminal](https://github.com/openai/codex)
-	- ## [[My Notes]] 
+	- ## [[My Notes]]
 	  id:: 6802126f-043a-4b70-855d-34ea41dbe04d
+		- [[2026-04-24 Fri]]
+			- renamed this page to `OpenAI/Codex/CLI` from `OpenAI/GitHub/codex`. need to make a more intuitive space for this, like `Codex/CLI`
 		- [[2025-04-18 Fri]]
 			- it's a response to [[Claude Code]] - a [[CLI/Tool]] for AI coding

@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/question]]
-see-also:: [[Learning/Idea/26/03/Terminal toolbelt learning and Readwise-like CLI/Proto Session/26/03/25 Wed]], [[CLI/Craftsperson]], [[dotfiles]]
+see-also:: [[Learning/Idea/26/03/Terminal toolbelt learning/Proto Session/26/03/25 Wed]], [[CLI/Craftsperson]], [[dotfiles]]
 via:: [[2026-04-01 Wed]]
 
 - # Are there CLI or terminal apps to manage hierarchical keyboard-shortcut reference for CLI and TUI tools, with spaced repetition?
@@ -18,4 +18,4 @@ via:: [[2026-04-01 Wed]]
 			- **Closing the “knows my Neovim config” gap** — products rarely parse your full config for flashcards. Typical pattern: **generate** reference text on demand (`:map`, `:verbose map`, help tags, or a small Lua/`nvim --headless` script that dumps bindings) and pipe that into markdown/cheat files or a deck import. Same idea for TUIs: maintain cards from each app’s **upstream keybinding doc** (e.g. lazygit’s published tables) plus **your overrides** if you wrap or alias the binary.
 			- **Compared to Logseq Keyshort** — terminal tools trade graph linking for **git-native, scriptable** plain text; you gain dotfiles integration and automation at the cost of building your own hierarchy and import pipeline.
 	- ## My Notes
-		- Prior art in this graph: [[Learning/Idea/26/03/Terminal toolbelt learning and Readwise-like CLI/Proto Session/26/03/25 Wed]] (Readwise-like CLI learning thread); [[Lazygit/Keyshort]] style pages for per-app structure.
+		- Prior art in this graph: [[Learning/Idea/26/03/Terminal toolbelt learning/Proto Session/26/03/25 Wed]] (Readwise-like CLI learning thread); [[Lazygit/Keyshort]] style pages for per-app structure.
