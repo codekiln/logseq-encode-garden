@@ -1,0 +1,44 @@
+alias:: [[gpt-5.5]]
+tags:: [[AI/Model]]
+
+- # [GPT-5.5](https://openai.com/index/introducing-gpt-5-5/)
+	- ## Key Features
+		- OpenAI product announcement dated April 23, 2026: positioned as its smartest and most intuitive frontier model yet for real work—agentic coding, computer use, knowledge work, and early scientific research
+		- OpenAI reports **per-token latency** in real-world serving **on par with** [[OpenAI/Model/GPT/5/4]] while improving capability, and **lower token use** than 5.4 on the same Codex tasks
+		- Variants: **GPT-5.5** (general) and **GPT-5.5 Pro** (harder questions, higher accuracy; stronger latency vs prior Pro in early testing)
+		- **Codex**: **400K** context; optional **Fast mode** (tokens generated **1.5×** faster at **2.5×** cost)
+		- API identifiers **`gpt-5.5`** and **`gpt-5.5-pro`** announced as coming **very soon** to Responses and Chat Completions (rollout timing may trail ChatGPT/Codex product availability)
+		- Preparedness: **High** for cybersecurity and biological/chemical capabilities under OpenAI’s Preparedness Framework; stricter cyber-oriented classifiers at launch with iterative tuning expected
+	- ## Performance Highlights
+		- **Terminal-Bench 2.0**: 82.7% (vs GPT-5.4 75.1%)
+		- **SWE-Bench Pro** (public): 58.6% (vs 57.7%)
+		- **Expert-SWE** (internal): 73.1% (vs 68.5%)
+		- **GDPval** (wins or ties): 84.9% (vs 83.0%)
+		- **OSWorld-Verified**: 78.7% (vs 75.0%)
+		- **Tau2-bench Telecom** (original prompts, no prompt tuning): 98.0% (vs 92.8%)
+		- **BrowseComp**: 84.4% (vs 82.7%)
+		- **GeneBench**: 25.0% (vs 19.0%); GPT-5.5 Pro 33.2% (vs GPT-5.4 Pro 25.6%)
+		- **CyberGym**: 81.8% (vs 79.0%)
+	- ## Model Tiers
+		- **GPT-5.5**: default frontier tier for ChatGPT “Thinking,” Codex engineering workflows, and (soon) API `gpt-5.5`
+		- **GPT-5.5 Pro**: ChatGPT Pro/Business/Enterprise; API **`gpt-5.5-pro`** at higher per-token pricing for higher accuracy
+	- ## Access Details
+		- **ChatGPT**: Plus, Pro, Business, Enterprise — GPT-5.5; Pro, Business, Enterprise — GPT-5.5 Pro
+		- **Codex**: Plus, Pro, Business, Enterprise, Edu, Go — GPT-5.5 (400K context, Fast mode optional)
+		- **API** (per announcement; verify on live docs when shipped)
+			- **`gpt-5.5`**: $5 / 1M input tokens, $30 / 1M output tokens; **1M** context window; **Batch** and **Flex** at half the listed rate; **Priority** at **2.5×** the listed rate
+			- **`gpt-5.5-pro`**: $30 / 1M input, $180 / 1M output
+			- Intended endpoints: `v1/chat/completions`, `v1/responses`
+		- **Cyber defense**: expanded access narrative via [Trusted Access for Cyber](https://openai.com/index/scaling-trusted-access-for-cyber-defense/), [chatgpt.com/cyber](http://chatgpt.com/cyber), and Codex [cyber-safety](https://developers.openai.com/codex/concepts/cyber-safety) documentation
+	- ## Technical Specifications
+		- Co-designed for training and serving on **NVIDIA GB200 and GB300 NVL72** systems
+		- OpenAI describes inference as an integrated system (load balancing / partitioning heuristics, production traffic–driven optimizations) to hold latency while scaling capability
+		- Third-party quote (Cursor): Michael Truell on stronger coding, tool use, and persistence vs GPT-5.4 for long-running delegated work
+	- ## References
+		- [Introducing GPT-5.5](https://openai.com/index/introducing-gpt-5-5/) (primary announcement)
+		- [GPT-5.5 system card](https://deploymentsafety.openai.com/gpt-5-5)
+		- [OpenAI API pricing](https://openai.com/api/pricing/)
+		- [GDPval](https://openai.com/index/gdpval/)
+		- [GeneBench PDF](https://cdn.openai.com/pdf/6dc7175d-d9e7-4b8d-96b8-48fe5798cd5b/oai_genebench_benchmark.pdf)
+		- [Preparedness Framework v2 PDF](https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf)
+		- Prior generation: [[OpenAI/Model/GPT/5/4]]
