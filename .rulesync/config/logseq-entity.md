@@ -144,6 +144,27 @@ Strong signals: official company or product site, stable brand name, GitHub org 
 
 - Lean hub: H1 link to primary site, one-line positioning, links to notable software entities.
 
+## Entity Type: organization
+
+Authoritative documentation: `[[Logseq/Entity/organization]]`. This section is bootstrap-only.
+
+### Recognition
+
+Strong signals: standards bodies, foundations, nonprofits, public institutions, consortia, professional associations, governance/community bodies, and other durable non-company organizations.
+
+### Canonical Naming
+
+- Short top-level page name when stable and recognizable, with `alias::` for full names, acronyms, legal names, former names, and common variants.
+
+### Frontmatter
+
+- `logseq-entity:: [[Logseq/Entity/organization]]` on instances.
+- Never modify `tags::` on existing pages without explicit human instruction.
+
+### Page Shape
+
+- Lean hub: H1 link to primary site, one-line identity, notable work, structure, and relationships.
+
 ## Entity Type: question
 
 Authoritative documentation: `[[Logseq/Entity/question]]`. This section is bootstrap-only.

@@ -1,0 +1,24 @@
+- # organization
+	- This page is the standard operating procedure for **organization** entities: non-company bodies you want to track as first-class pages, including standards organizations, foundations, nonprofits, public institutions, consortia, professional associations, and governance or community bodies.
+	- ## Examples in this garden
+		- [[IETF]] - standards organization for Internet protocols and related technical documents.
+	- ## When we treat something as an organization
+		- Strong signals: official nonprofit, foundation, standards body, public institution, consortium, working group host, professional association, or other durable public/community body.
+		- Prefer **company** when the subject is a commercial vendor, product firm, startup, consulting company, or brand you track because it ships or sells products and services.
+		- Prefer **person** when the subject is an individual maintainer or author.
+	- ## How to name the main page for an organization
+		- Prefer a short top-level canonical name when it is stable and recognizable, such as [[IETF]].
+		- Add **`alias::`** for common alternate names, full names, legal names, acronyms, and former names when useful.
+	- ## Finding and deduplicating
+		- Check in this order: exact canonical page name, exact alias, official domain, acronym or full-name variants, then page-body mentions of the same site, public role, or description. Classify as: existing, similar, new, or blocked.
+	- ## Relationship to company
+		- Use organization for non-commercial standards, public-interest, community, foundation, government, or institutional bodies.
+		- Use company for commercial vendors and brands. If a body has both a commercial arm and a foundation/community arm, model the page according to the entity the note is actually about.
+	- ## Frontmatter
+		- To mark a page as an organization instance, add `logseq-entity:: [[Logseq/Entity/organization]]` in frontmatter. The type page then gets backlinks to all organization pages.
+		- Add only other frontmatter that is actually known, such as `alias::`, `see-also::`, or `via::`. Do not modify **`tags::`** on existing pages when editing; follow garden tagging rules for new pages.
+	- ## Page shape
+		- File: `pages/<OrganizationName>.md` for the canonical short name. First block: H1 with a link to the official site or primary public presence.
+		- Keep the page lean: what it is, what work it is known for, and notable structure or relationships.
+	- ## Source blocks
+		- Do not move source blocks from the journal or source page by default. Move or transplant only when explicitly asked.
