@@ -1,0 +1,14 @@
+---
+date-created:: [[2026/04/07]]
+---
+- # [3 constraints before I build anything](https://jordanlord.co.uk/blog/3-constraints/)
+	- Author: **[[Person/Jordan Lord]]**
+	- Published: 2026-04-07 (on [jordanlord.co.uk](https://jordanlord.co.uk/blog/3-constraints/))
+	- ## Summary
+		- **[[Person/Jordan Lord]]** argues **constraints enable creativity**: they shrink the search space so you can find sharper solutions. After ~10 years building, he uses **three gates** before starting anything; if an idea fails any of them, he does not build it.
+	- ## The three constraints
+		- 1. **One page or it doesn’t get built** — Write a **single one-pager** per idea: north star, non‑negotiable, precise, ambitious, lean. Use it for investors, collaborators, and yourself. If something matters in a dispute, it belongs in the one-pager or the one-pager changes; otherwise it is not the fight. If you cannot fill one page without fluff, you are not ready—research, plan, prototype, rewrite. If it needs **more than one page**, it is **too complex** to build (yet).
+		- 2. **The core tech must be separable from the product** — Ship a **core capability** (method, skill, tool, or extractable library) that **supports** the product but **survives without** it—reusable IP that compounds while products pivot. Examples in the post: **git** for Linux, **HCL** for HashiCorp, **Kubernetes** at Google; yours might be smaller (a library or a methodology). If the idea does not enable **core tech**, it is not **high enough leverage**.
+		- 3. **One defining constraint must shape the product** — Pick **one obvious constraint** users see constantly; it is the product’s **identity** and limits **feature creep** (e.g. **Minecraft**’s blocks, **IKEA**’s flat-pack). A good constraint **reduces decision space** so design can “fall out” of it; weak or missing constraints yield bloated “do everything” products. That constraint should also be **front and centre in the one-pager**.
+	- ## Closing rule (from post)
+		- If it fails **any** of the three, **do not build it**.

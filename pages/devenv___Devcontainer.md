@@ -1,0 +1,2 @@
+- [Codespaces / devcontainer - devenv](https://devenv.sh/integrations/codespaces-devcontainer/)
+	- `devcontainer.enable = true;` put this in `devenv.nix` - this will make an auto-generated `.devcontainer.json` file (wish it was `.devcontainer/devcontainer.json`!)

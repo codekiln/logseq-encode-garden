@@ -1,0 +1,3 @@
+- via https://github.com/devcontainers/cli/tree/main/.devcontainer
+	- there's now a `devcontainer-lock.json` which locks the osi image ... not sure what produces this
+	-
