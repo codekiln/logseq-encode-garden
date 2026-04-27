@@ -1,9 +1,10 @@
 source:: https://www.kaggle.com/whitepaper-prompt-engineering
-readwise:: https://read.readwise.io/new/read/01kpzvspkx7rx0nvf42ep7g9ts
+readwise-link:: https://read.readwise.io/new/read/01kpzvspkx7rx0nvf42ep7g9ts
 author:: [[Person/Lee Boonstra]]
 kind:: whitepaper
 page-count:: 68
 intake-status:: partial
+
 - # Prompt Engineering
 	- ## Intake
 		- Primary: [Prompt Engineering — Kaggle whitepaper](https://www.kaggle.com/whitepaper-prompt-engineering)

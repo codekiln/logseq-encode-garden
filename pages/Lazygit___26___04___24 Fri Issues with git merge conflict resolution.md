@@ -1,4 +1,4 @@
-- # [[Issue]]s with [[git/merge/conflict/resolution]] in [[Lazygit]] - [[2026-04-24 Fri]]
+# [[Issue]]s with [[git/merge/conflict/resolution]] in [[Lazygit]] - [[2026-04-24 Fri]]
 	- tried to use [[Lazygit]] to resolve a merge conflict on [[2026-04-23 Thu]]'s journal page. ended up accepting the first hunk from the remote and discarding the content I had committed locally, even though I expected to keep both.
 		- part of the problem was insufficient [[UI/Color/Contrast]] between the selected hunk and the text color in my current theme.
 		- the other problem was that I had not done a careful examination of the keyboard shortcuts related to hunk selection and merge conflict resolution.
@@ -20,9 +20,8 @@
 	- ## What I Learned
 		- `84f0092` was still recoverable even after the rebase rewrite because [[git/reflog]] preserved the old HEAD state.
 		- in [[Lazygit]], the `]` shortcut in the commits view can switch to `Reflog`, which made it possible to search for `84f0092` and inspect it.
-		- when a commit exists only in reflog, `git show <commit> -- <path>` can still show the patch for a specific file.
-		- `git show <commit>:<path>` shows the historical file contents, which is better for copying the full block back into the working tree.
-		- `e` in the commit patch view opens the current checked out file in the editor, not a detached historical snapshot.
+		- when a commit exists only in reflog, [[git/show]] `git show <commit> -- <path>` can still show the patch for a specific file.
+		- [[git/show]] `git show <commit>:<path>` shows the historical file contents, which is better for copying the full block back into the working tree.
 		- [[pbcopy]] needs a pipe (`|`), and [[pbpaste]] is the simplest verification step.
 	- ## Recovery Notes
 		- created `rescue-84f0092` as a safety branch pointing at the lost local commit.

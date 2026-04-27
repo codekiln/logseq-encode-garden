@@ -21,12 +21,12 @@ chatgpt-link:: https://chatgpt.com/c/69bbc164-0ce0-8327-bdfa-ebd271c750d3?ref=mi
 	- Other tools/libraries: Various experimental libs target file-based CRDT DBs (e.g. 3timeslazy/crdtover-fs which abstracts a file-sync as a CRDT store). These are still prototypes. Also, open-source local-first DBs like OctoBase (Rust, AGPL-3.0, 2k stars) aim to sync via CRDT, though not task-specific.
 	- ## Summary table
 	- The table below summarizes the key options (with illustrative data). Rows are given as bullet label-value pairs per project.
-	- ff: License GPL-3.0 [^3]; Data model: Tasks/notes as CRDT (RON); Storage: Plain text (files); Git: Any file-sync (incl. Git) [^3]; Merge: CRDT merge (RON) ⇒ no conflicts [^3]; Maturity: 201★, active (910 commits) [^3]; Example: CLI adds task, no central server; Git/Dropbox merges.
+	- [[ff]]: License GPL-3.0 [^3]; Data model: Tasks/notes as CRDT (RON); Storage: Plain text (files); Git: Any file-sync (incl. Git) [^3]; Merge: CRDT merge (RON) ⇒ no conflicts [^3]; Maturity: 201★, active (910 commits) [^3]; Example: CLI adds task, no central server; Git/Dropbox merges.
 	- HamsterBase Tasks: License AGPL-3.0 [^5]; Data model: To-do lists (Loro CRDT); Storage: JSON + E2EE (IndexedDB/SQLite); Git: No (app sync only); Merge: CRDT merge (Loro); Maturity: 244★, active (2025 release); Example: Use app offline, sync via server, changes merge.
 	- WillBeDone: License AGPL-3.0 [^8]; Data model: Hierarchical tasks (custom LWW CRDT); Storage: SQLite; Git: No (container sync); Merge: CRDT merge (LWW set); Maturity: 51★ (new) [^8], active; Example: Run Docker, tasks sync; local updates.
 	- Beads (bd): License MIT [^10]; Data model: Task graph in SQL (Dolt); Storage: Dolt (SQL tables); Git: Native (Dolt = Git) [^10]; Merge: Dolt cell-level merge; unique IDs reduce conflicts [^10]; Maturity: 7.8k commits, 174★ [^10], very active; Example: bd init, bd create; push branches, merge.
-	- td (Haplab): License MIT; Data model: Tasks (rows) in SQLite; Storage: SQLite file; Git: Optional (snapshot to Git); Merge: No auto-merge (single-user); Maturity: 641 commits, 155★ [^14], active; Example: td create row; view tasks; commit DB.
-	- Sidecar (UI): License MIT [^16]; Data model: –; Storage: –; Git: –; Merge: –; Maturity: 139 commits; Example: Integrates td, git; not a DB tool.
+	- [[td]] (Haplab): License MIT; Data model: Tasks (rows) in SQLite; Storage: SQLite file; Git: Optional (snapshot to Git); Merge: No auto-merge (single-user); Maturity: 641 commits, 155★ [^14], active; Example: td create row; view tasks; commit DB.
+	- [[td/sidecar]] (UI): License MIT [^16]; Data model: –; Storage: –; Git: –; Merge: –; Maturity: 139 commits; Example: Integrates td, git; not a DB tool.
 	- git-sqlite: License MIT [^1]; Data model: SQLite rows as SQL; Storage: SQLite file + shell scripts; Git: Git diff/merge drivers [^1]; Merge: Sqldiff output; manual merge step [^1]; Maturity: 220★ [^1] (last 2021); Example: git-sqlite diff my.db; no auto-merge.
 	- crsqlite (nimmen): License Apache-2.0 [^29]; Data model: SQLite tables → CRDT (CRR); Storage: SQLite file + triggers; Git: None (built-in sync API); Merge: CRDT apply via crsql_changes; Maturity: 544 commits, small ★ (WIP) [^22]; Example: .load crsqlite; crsql_as_crr(table); sync via export.
 	- SQLiteSync: License Elastic 2.0 [^24]; Data model: SQLite tables (CRDT); Storage: SQLite file + extension; Git: No (uses own sync); Merge: CRDT algorithm; Maturity: 420★ [^24], active (2024); Example: Use cloud/peer sync.
@@ -40,7 +40,7 @@ chatgpt-link:: https://chatgpt.com/c/69bbc164-0ce0-8327-bdfa-ebd271c750d3?ref=mi
 	- Performance/Size: CRDT metadata can bloat size; choosing the right CRDT (OR-set vs. RGA, etc.) and compaction strategy is key. SQLite+CRDT (like CR-SQLite) stores logs that grow indefinitely unless tombstones are cleaned. A JSONL approach keeps history if committed, but garbage-collecting old entries (e.g. squashing) will be needed. For small personal task lists, these costs are minor; for enterprise-scale, a DB like Dolt may be more robust.
 	- ### Mermaid flowchart (file-first sync)
 	- Devices A and B independently apply user edits locally. Each has a CRDT merge engine that updates its local tasks file (JSONL). They push/pull to a shared Git repo: the canonical task file is committed, creating history. Upon syncing, each side takes the new commit, and the CRDT engine merges changes from the repo into its local state (resolving any conflict-free).
-	- ~~~mermaid
+	- ```mermaid
 	  flowchart LR
 	  subgraph "Local Device A"
 	    A1[User edits tasks]
@@ -62,7 +62,7 @@ chatgpt-link:: https://chatgpt.com/c/69bbc164-0ce0-8327-bdfa-ebd271c750d3?ref=mi
 	  B3 --- G1
 	  G1 --> G2
 	  A2 --> B2
-	  ~~~
+	  ```
 	- ### Mermaid sequence (agent + Git)
 	- User instructs an agent (or CLI) to change a task. The agent updates the local DB (SQLite or JSON file). That change is exported (via text diff or SQL) and committed to the Git repo. The repo merges incoming changes (textual or via branch), and each device pulls updates back. A local merge procedure (CRDT or SQL diff driver) integrates those changes into the LocalDB. The user sees the task state synchronized.
 	- ~~~mermaid

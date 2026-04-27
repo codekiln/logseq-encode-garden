@@ -1,4 +1,4 @@
-tags:: [[Blog]], [[mgranda]], [[Claude Code]], [[Mobile Development]], [[Development Workflow]]
+tags:: [[Blog]], [[mgranda]], [[Claude Code]], [[Mobile/Development]], [[Development Workflow]]
 date-created:: [[2026/01/02]]
 created-by:: [[Person/mgranda]]
 source:: https://granda.org/en/2026/01/02/claude-code-on-the-go/
@@ -50,6 +50,6 @@ source:: https://granda.org/en/2026/01/02/claude-code-on-the-go/
 	- ## Related
 		- The setup took one Claude Code session to build—gave it my Vultr API key and access to gh, asked for a secure dev VM. Now I code from my phone
 		- [[AI/Coding]]
-		- [[Mobile Development]]
+		- [[Mobile/Development]]
 		- [[Development Workflow]]
 		- [[Claude Code]]

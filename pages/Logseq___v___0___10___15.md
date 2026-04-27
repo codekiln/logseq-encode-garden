@@ -1,0 +1,2 @@
+- https://github.com/logseq/logseq/releases/tag/0.10.15
+	- has a fix for youtube rendering issues
