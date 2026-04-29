@@ -1,0 +1,4 @@
+- [[2026-04-28 Tue]] MCP was working before; now it's not
+	- while trying to approve [[MCP/Server]]s for cursor cli in [[CursorAI/CLI/v/2026.04.17]], I see "needs approval" but when I hit enter to approve it, I see "error" - no idea what's going on. There is a message beneath that reads,
+	- > Failed to load MCP 'atlassian': MCP server "atlassian" has not been approved
+	- If I'm not mistaken, I encountered something similar before with cursor. I think it might have to do with [[rulesync]]-defined MCP.

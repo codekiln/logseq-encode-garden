@@ -1,8 +1,12 @@
 tags:: [[AI Coding]], [[Tool]], [[Diataxis/Explanation]]
+logseq-entity:: [[Logseq/Entity/software-project]]
+alias:: [[Serena]]
+created-by:: [[Oraios]]
 
 - # [Serena](https://github.com/oraios/serena) Conceptual Overview
 	- ## Overview
 		- Serena is a coding agent toolkit that transforms [[LLM]]s into sophisticated coding agents through semantic code understanding
+		- [About Serena](https://oraios.github.io/serena/01-about/000_intro.html) — official framing (*IDE for your coding agent*), MCP-centric integration, and evaluation write-up
 		- ### The Problem They Set Out to Solve [^1]
 			- > **Model Lock-in**: Most tools tie you to specific AI providers
 			- > **Subscription Fatigue**: $20–200/month for each tool adds up quickly
@@ -109,7 +113,7 @@ tags:: [[AI Coding]], [[Tool]], [[Diataxis/Explanation]]
 		- [[Language Server Protocol]]
 		- [[AI Coding]]
 		- [[DeepWiki]]
-		- [[GitHub/dyoshikawa/rulesync]] - Uses Serena in devcontainer configuration
+		- [[rulesync]] — [[Person/Kazuki Yamada]] ships Serena in MCP and devcontainer examples in that project; a common discovery path when maintaining unified AI tool config from `.rulesync`
 		- [Deconstructing Serena's MCP-Powered Semantic Code Understanding Architecture](https://readwise.io/reader/shared/01k6swr7ezgvvp286dtc2e3dqf) - Architectural deep dive
 		- ### Footnotes
 			- [^1]: https://readwise.io/reader/shared/01k6swr7ezgvvp286dtc2e3dqf

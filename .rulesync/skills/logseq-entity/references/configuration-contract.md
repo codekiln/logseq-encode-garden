@@ -54,6 +54,7 @@ The skill should keep only reusable process:
 - classify candidates as existing, similar, new, or blocked
 - create or update entities according to config
 - report what happened and what needs human judgment
+- when graph pages under `pages/` change, apply [entity-session-journal.md](./entity-session-journal.md) (today’s journal / **Filed** / **Updated**) before treating the session as complete
 
 ## Suggested Config Shape
 

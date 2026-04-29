@@ -1,0 +1,13 @@
+- Fierljeppen is a traditional Dutch canal vaulting sport in which athletes run, vault, and climb a long pole to cross a body of water. Originating in the rural provinces of Friesland and Utrecht, it combines sprinting, pole climbing, and controlled landing, making it both a test of strength and precision.
+- ### Key facts
+	- **Origin:** Friesland, Netherlands
+	- **Meaning:** “Far leaping” in Frisian
+	- **Equipment:** Long flexible pole with a flat base
+	- **Typical pole length:** About 11–13 meters (36–43 feet)
+	- **Governing body:** Nederlandse Fierljep Bond (NFB)
+- ### History and tradition
+	- Fierljeppen dates back to at least the 18th century, when farmers used long poles to cross canals and drainage ditches in the Dutch countryside. Over time, the practice evolved into a competitive sport with formalized rules and organized events, particularly popular in Friesland, where local and national championships are held.
+- ### Technique and competition
+	- Competitors sprint toward the canal, plant the pole in the water, climb it as it tilts forward, and push off at the peak to land as far as possible on a sand pit. Success depends on timing, grip, and body control; top athletes can leap more than 20 meters. Distances are measured from the takeoff point to the nearest mark in the sand on landing.
+- ### Cultural significance
+	- Fierljeppen reflects the Dutch relationship with water management and the ingenuity needed to navigate a landscape of canals and dikes. It is a celebrated regional sport featured in summer festivals and local media, symbolizing Frisian athleticism and tradition. Efforts to expand its popularity beyond the Netherlands continue, with demonstration events and international exhibitions promoting this distinctive form of canal vaulting.

@@ -1,0 +1,2 @@
+- Claude Desktop was enabled for AWS Bedrock use I was able to get it going last night. This was just the basic inference integration without MCP and with Telemetry to Anthropic turned off. I used the info on this page: [https://claude.com/docs/cowork/3p/installation](https://claude.com/docs/cowork/3p/installation)
+-

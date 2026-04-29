@@ -19,5 +19,7 @@
 	- ## Page shape
 		- File: `pages/<ThemeName>.md` for the canonical short name. First block: H1 with a link to the official site or palette repo.
 		- Keep a **lean hub**: identity, **flavor index** (links to `[[Theme/Flavor]]` subpages or inline list if no subpages), optional **overview image** in `assets/` with source footnote, **palette reference** (link out), **stack matrix** (per app: mechanism, config hook, links to [[Ghostty]], [[nvim]], [[tmux]], [[yazi]], etc., and to your config subpages when detail lives there). Put per-flavor detail (ids, previews) on subpages when they exist.
+	- ## Agents — journal (garddiff)
+		- After creating or materially updating any **instance** of this type under `pages/`, add **link-only** bullets to **`journals/YYYY_MM_DD.md`**: new pages today under **`[[Filed]]`**, touched existing pages under **`[[Updated]]`**—never both for the same **`[[Page]]`** the same calendar day. Follow **`[[Logseq/Journal/Section/Garddiff]]`** and **`logseq-journal-updates`**. Skill **logseq-entity** → **`entity-session-journal`** reference.
 	- ## Source blocks
 		- Do not move source blocks from the journal or source page by default. Move or transplant only when explicitly asked.

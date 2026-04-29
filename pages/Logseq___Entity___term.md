@@ -20,6 +20,8 @@
 	- ## Page shape
 		- Use Logseq Flavored Markdown.
 		- Keep the body **lean**: H1 + a few bullets, or a single short definition block. Link out to **concept** pages when the idea deserves a full explanation.
+	- ## Agents — journal (garddiff)
+		- After creating or materially updating any **instance** of this type under `pages/`, add **link-only** bullets to **`journals/YYYY_MM_DD.md`**: new pages today under **`[[Filed]]`**, touched existing pages under **`[[Updated]]`**—never both for the same **`[[Page]]`** the same calendar day. Follow **`[[Logseq/Journal/Section/Garddiff]]`** and **`logseq-journal-updates`**. Skill **logseq-entity** → **`entity-session-journal`** reference.
 	- ## Legacy and migration
 		- Do **not** bulk-add **`logseq-entity::`** to every legacy **`tags:: [[Term]]`** page unless the author requests a backfill pass.
 		- New term-like pages should declare **`logseq-entity::`** to **this** page alongside existing tag patterns.

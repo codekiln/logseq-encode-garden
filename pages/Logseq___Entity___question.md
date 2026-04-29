@@ -28,6 +28,8 @@
 		- First content block: H1 with the question; link key terms to existing pages where it helps.
 		- Typical sections: `## My Notes` (may start empty), `## Answer`. Use **`see-also::`** instead of **`## Related`** when the only content would be links to other graph pages.
 		- Use Logseq Flavored Markdown throughout (bullets, headings as bullets, tab nesting, no blank lines between bullets).
+	- ## Agents — journal (garddiff)
+		- After creating or materially updating any **instance** of this type under `pages/`, add **link-only** bullets to **`journals/YYYY_MM_DD.md`**: new question pages today under **`[[Filed]]`**, touched existing pages under **`[[Updated]]`**—never both for the same **`[[Page]]`** the same calendar day. Follow **`[[Logseq/Journal/Section/Garddiff]]`** and **`logseq-journal-updates`**. Skill **logseq-entity** → **`entity-session-journal`** reference; filing order and narrative options are spelled out in skill **logseq-question** → **`question-workflow.md`** (Step 4).
 	- ## [[AI/Agent/Guidance]]
 		- ### From AI tooling (slash command / agent)
 			- To file a new question from Rulesync or an agent: use skill **logseq-question** (`.rulesync/skills/logseq-question/SKILL.md`); the command **`logseq-question`** only points into that skill. Shared entity configuration and dedup live in skill **logseq-entity** and on **this** type page.

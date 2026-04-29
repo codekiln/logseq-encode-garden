@@ -21,6 +21,8 @@
 		- Use Logseq Flavored Markdown (bullets, headings as bullets, tab nesting, no blank lines between bullets).
 		- Recommended sections (Diataxis explanation style): **Overview**, **Context**, **Key Principles**, **Mechanism**, **Examples**, **Misconceptions**. Adapt headings to the topic; not every section must be long.
 		- First heading after frontmatter: H1 matching the page’s primary topic.
+	- ## Agents — journal (garddiff)
+		- After creating or materially updating any **instance** of this type under `pages/`, add **link-only** bullets to **`journals/YYYY_MM_DD.md`**: new pages today under **`[[Filed]]`**, touched existing pages under **`[[Updated]]`**—never both for the same **`[[Page]]`** the same calendar day. Follow **`[[Logseq/Journal/Section/Garddiff]]`** and **`logseq-journal-updates`**. Skill **logseq-entity** → **`entity-session-journal`** reference.
 	- ## Relationship to Diataxis
 		- Diataxis framing in the graph: [[Diataxis/Explanation]] (aliases [[Diataxis/Concept]]). This type page is the **operational** template; those pages are the **vocabulary** of the framework.
 		- Agent rules in **Rulesync** should point here rather than duplicating the full template; regenerate tool outputs after changing `.rulesync/rules/diataxis-explanation.md`.

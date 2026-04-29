@@ -21,5 +21,7 @@
 	- ## Page shape
 		- File: `pages/<CompanyName>.md` for the canonical short name. First block: H1 with a link to the official site (or primary public presence).
 		- Keep the page lean: what they are, notable products or org links, and backlinks from software you track.
+	- ## Agents — journal (garddiff)
+		- After creating or materially updating any **instance** of this type under `pages/`, add **link-only** bullets to **`journals/YYYY_MM_DD.md`**: new pages today under **`[[Filed]]`**, touched existing pages under **`[[Updated]]`**—never both for the same **`[[Page]]`** the same calendar day. Follow **`[[Logseq/Journal/Section/Garddiff]]`** and **`logseq-journal-updates`**. Skill **logseq-entity** → **`entity-session-journal`** reference.
 	- ## Source blocks
 		- Do not move source blocks from the journal or source page by default. Move or transplant only when explicitly asked.

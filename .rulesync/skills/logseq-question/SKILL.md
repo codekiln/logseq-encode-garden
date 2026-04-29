@@ -26,6 +26,8 @@ A **question** is one **entity type** in this garden. Shared rules apply:
 
 This skill adds **question-specific** filing steps: namespace/`___Q___` naming, journal bullet, Answer section shape, and the research pass. Do not duplicate the full entity-type definition; treat **`[[Logseq/Entity/question]]`** as authoritative for frontmatter and page shape.
 
+For **non-question** entity work (software, company, person hubs, ontology pages, etc.), skill **logseq-entity** owns **garddiff** closeout (**Filed** / **Updated** on today’s journal). Follow that skill’s **Graph edits and today’s journal** section and [references/entity-session-journal.md](../logseq-entity/references/entity-session-journal.md)—journal discipline is **not** exclusive to this question skill.
+
 ## Procedure
 
 1. Load type configuration (Step 0): `[[Logseq/Entity]]`, `[[Logseq/Entity/question]]`, then `.rulesync/config/logseq-entity.md` if needed.
@@ -41,3 +43,4 @@ This skill adds **question-specific** filing steps: namespace/`___Q___` naming, 
 - Full workflow: [references/question-workflow.md](./references/question-workflow.md)
 - Entity dedup: [references/entity-search-and-dedup.md](../logseq-entity/references/entity-search-and-dedup.md)
 - Entity config contract: [references/configuration-contract.md](../logseq-entity/references/configuration-contract.md)
+- Entity sessions and garddiff: [references/entity-session-journal.md](../logseq-entity/references/entity-session-journal.md)

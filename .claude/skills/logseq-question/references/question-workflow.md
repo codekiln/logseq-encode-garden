@@ -13,7 +13,7 @@ Authoritative step-by-step for logging a research question in this garden. The *
   - Link format: `[[Namespace/Q/Question text]]` or `[[Namespace/SubNamespace/Q/Question text]]`
   - File format: `Namespace___Q___Question text.md` (triple underscores; special characters like `?` become `%3F` in filenames)
 - **Page content**: Logseq Flavored Markdown (LFM). H1 is the question (often with linked terms). Optional sections: `## Answer`, `## My Notes`. Prefer frontmatter **`see-also::`** for **garden pages** that are “see also” reading—**strongest tie first**—instead of a `## Related` section that only lists internal links. Do **not** use **`see-also::`** to restate **parent namespace** context the title already encodes (see `[[Logseq/Entity]]` and `[[Logseq/Entity/question]]`). Use optional **`via::`** only for **what prompted filing** the page (journal/import/session), not for general related pages.
-- **Journal**: Today's journal gets a bullet with the page link: `- [[Namespace/Q/Question text]]`
+- **Journal**: Record the filing in **`journals/YYYY_MM_DD.md`**. When **`[[Logseq/Journal/Section/Garddiff]]`** (or your day’s **Gard/Diff** block) defines **`[[Filed]]`** / **`[[Updated]]`**, put **new** question pages under **`[[Filed]]`** as a link-only line: `- [[Namespace/Q/Question text]]`. If the day file has **no** garddiff block, add the same link where topical bullets live. Follow **`logseq-journal-updates`** and skill **logseq-entity** → [entity-session-journal.md](../../logseq-entity/references/entity-session-journal.md) for mutual exclusivity and “no boilerplate” rules.
 - **Frontmatter**: Do not add or remove `tags::` on existing pages. On **new** pages, include `logseq-entity:: [[Logseq/Entity/question]]` so the entity type page indexes instances. Optional **`see-also::`** and **`via::`** as above. Other frontmatter (`tags::`, `alias::`) should match patterns on sibling question pages in that namespace when available; do not invent new tag schemes.
 
 ## Workflow
@@ -41,7 +41,7 @@ Authoritative step-by-step for logging a research question in this garden. The *
   - Check page titles and first-level headings; consider rephrasings and minor wording differences
 - **If a matching or near-duplicate question page exists (existing):**
   - Do **not** create a new page.
-  - Add an entry to **today's journal** (`journals/YYYY_MM_DD.md`) with a link to the existing page, e.g. `- [[Namespace/Q/Existing question text]]`
+  - Add a **narrative** journal note **outside** the garddiff **`[[Filed]]` / `[[Updated]]`** link lists when those lists are reserved for **`pages/`** graph edits only; link `- [[Namespace/Q/Existing question text]]`. **Unless** you also **edited** that question page—then log that page under **`[[Updated]]`** per **`[[Logseq/Journal/Section/Garddiff]]`** / **`logseq-journal-updates`**.
   - Tell the user the question was already in the garden and that the journal was updated.
   - Stop.
 - **If results are ambiguous (similar):** follow the skill reference: present candidates and prefer human judgment before creating a duplicate.
@@ -64,11 +64,13 @@ Authoritative step-by-step for logging a research question in this garden. The *
 - Follow the logseq-page-naming-reference and logseq-flavored-markdown rules.
 - **Non-goal:** Do not bulk-edit older `___Q___` pages to add `logseq-entity::` unless the user explicitly asks (migration is optional).
 
-### Step 4: Add today's journal entry
+### Step 4: Add today's journal entry (garddiff + narrative)
 
 - Open today's journal file: `journals/YYYY_MM_DD.md`.
-- Add a bullet linking to the new question page using forward slashes: `- [[Namespace/Q/Question text]]`
-- Place the entry in an appropriate position in the journal (e.g., with other question or topic entries).
+- **New question page (after Step 3):** Under the day’s **garddiff** / **Gard/Diff** block, append a **link-only** line under **`[[Filed]]`**: `- [[Namespace/Q/Question text]]` (forward slashes in the link). That page is **new in `pages/`** today—this satisfies **`logseq-journal-updates`** without duplicating the same link under **`[[Updated]]`**.
+- **Optional narrative:** If your journal style uses a topical block (questions, friction, etc.), you may add a short child or sibling bullet for context—keep it one sentence max per **`[[Logseq/Journal/Section/Garddiff]]`** optional-context rules.
+- **While answering (Step 5):** If you **edit** other existing **`pages/**/*.md`** files, add each under **`[[Updated]]`** (link-only). New files created during research → **`[[Filed]]`**. Never list the same **`[[Page]]`** under both **Filed** and **Updated** the same day.
+- If the graph has **no** garddiff convention yet, fall back to a single topical bullet with `- [[Namespace/Q/Question text]]` and still follow **`logseq-journal-updates`**.
 
 ### Step 5: Research and answer the question
 
@@ -88,8 +90,8 @@ Authoritative step-by-step for logging a research question in this garden. The *
 
 ## Report
 
-- **If duplicate found**: Report the existing page link and confirm the journal entry was added for today.
-- **If new page created**: Report the new page path and link, confirm the journal entry was added, and summarize the answer (or note if the question remains unanswered).
+- **If duplicate found**: Report the existing page link and confirm the journal entry was added for today (narrative or **`[[Updated]]`** per Step 2).
+- **If new page created**: Report the new page path and link, confirm **`[[Filed]]`** / garddiff (or fallback journal) per Step 4, and summarize the answer (or note if the question remains unanswered).
 
 ## Related
 

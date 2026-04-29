@@ -18,5 +18,7 @@
 	- ## Creator (person or company) handling
 		- If the creator is clear and is an individual, create or use a [[Person/...]] page and point `created-by::` there. If the creator is clearly an organization you want to track, create or use a company entity page (`logseq-entity:: [[Logseq/Entity/company]]`) and point `created-by::` there.
 		- If it is not clear who the creator is, do not guess—ask the human (e.g. create the software page without creator metadata, create the entity page first, or skip until the identity is clarified).
+	- ## Agents — journal (garddiff)
+		- After creating or materially updating any **instance** of this type under `pages/`, add **link-only** bullets to **`journals/YYYY_MM_DD.md`**: new pages today under **`[[Filed]]`**, touched existing pages under **`[[Updated]]`**—never both for the same **`[[Page]]`** the same calendar day. Follow **`[[Logseq/Journal/Section/Garddiff]]`** and **`logseq-journal-updates`**. Skill **logseq-entity** → **`entity-session-journal`** reference.
 	- ## Source blocks
 		- Do not move source blocks from the journal or source page by default. Move or transplant only when explicitly asked.

@@ -3,8 +3,9 @@ name: logseq-entity
 description: >-
   Metaskill for Logseq entity work in the active graph: open the entity registry
   and type pages, dedupe, create or update instance pages per type rules, infer
-  entities from journals, initialize ontology. Type pages define all operational
-  detail for that garden (naming, frontmatter, import pipelines, hub updates,
+  entities from journals, initialize ontology, and record graph edits in today's
+  journal (garddiff / Filed / Updated). Type pages define all operational detail
+  for that garden (naming, frontmatter, import pipelines, hub updates,
   discovery)—this skill does not hardcode domain workflows. When this repository
   ships optional companion skills named logseq-entity-<entity>-<skill>, use them
   for narrower task discovery; authoritative procedures for those tasks still
@@ -13,7 +14,7 @@ description: >-
   entities from today's journal?, define or refresh entity types?
 targets: ["*"]
 codexcli:
-  short-description: Logseq entity registry, dedupe, create, journal extract
+  short-description: Logseq entity registry, dedupe, create, journal extract, garddiff after graph edits
 ---
 
 # Logseq Entity
@@ -58,6 +59,12 @@ Treat those garden-owned sources as the source of truth for:
 
 If the Logseq entity pages and fallback config are both missing, inspect the garden for conventions, say that no explicit entity configuration was found, and ask whether to proceed with inferred conventions or create the entity-type pages first.
 
+## Graph edits and today’s journal
+
+When **any graph pages** under `pages/` are **created or materially edited** during entity work—including **imports** that only add `logseq-entity::`, prerequisite **person** / **company** pages, or **`Logseq/Entity/<Type>`** edits—you are **not done** until **`journals/YYYY_MM_DD.md`** records the change set (**`[[Filed]]`** vs **`[[Updated]]`**, mutual exclusivity, link-first lists). Load **`[[Logseq/Journal]]`** / **`[[Logseq/Journal/Section/Garddiff]]`** when they exist; otherwise follow rule **`logseq-journal-updates`**.
+
+Procedure: [references/entity-session-journal.md](./references/entity-session-journal.md).
+
 ## Polymorphism And Optional Companion Skills
 
 - **Same skill, different graphs:** Identical `logseq-entity` text may be deployed in multiple gardens; effective behavior follows whatever `[[Logseq/Entity]]` and `[[Logseq/Entity/<Type>]]` pages exist **in the workspace graph**. Do not assume another garden’s entity types.
@@ -99,6 +106,7 @@ If the Logseq entity pages and fallback config are both missing, inspect the gar
 5. Confirm it does not already exist using [references/entity-search-and-dedup.md](./references/entity-search-and-dedup.md).
 6. Create the page using the configured page shape, frontmatter, naming rules, and template guidance.
 7. If configuration-defined prerequisites are missing, stop and present recommended choices to the user.
+8. Complete **Graph edits and today’s journal** (section above): update `journals/YYYY_MM_DD.md` for every new or changed graph page from this workflow.
 
 ### Initialize entity types for this garden
 
@@ -119,6 +127,7 @@ When the user says something like `initialize entity types for this garden`:
    - create or update `[[Logseq/Entity]]` and the approved `[[Logseq/Entity/<Type>]]` pages
    - keep ontology and instance-template guidance together on the type page by default
    - keep `.rulesync/config/logseq-entity.md` as fallback/bootstrap support rather than replacing the Logseq pages as the primary source of truth
+   - after any new or changed graph pages: complete **Graph edits and today’s journal** (section above)
 7. Report:
    - what the skill inferred during research
    - which types were proposed
@@ -139,6 +148,7 @@ When the user wants to define a new entity type for the garden:
 2. Put both ontology and instance-template guidance on that page by default.
 3. Only create a dedicated `[[Logseq/Template/Entity/<Type>/Page]]` page when the template needs to be instantiated directly through Logseq or grows too large for the type page.
 4. If the garden is still being bootstrapped, keep `.rulesync/config/logseq-entity.md` aligned enough to remain a useful fallback until the Logseq-native pages are complete.
+5. Complete **Graph edits and today’s journal** (section above) for every graph page touched.
 
 ### Add entities from today's journal page
 
@@ -153,12 +163,14 @@ When the user says something like `add entities from today's journal page`:
 7. Extract in-scope entity candidates from direct links and strong indirect context.
 8. Deduplicate each candidate using [references/entity-search-and-dedup.md](./references/entity-search-and-dedup.md).
 9. For each missing entity, create a page using the active garden configuration.
-10. Summarize:
+10. Complete **Graph edits and today’s journal** (section above) for all new or changed graph pages from step 9 (and any prerequisite pages).
+11. Summarize:
    - entities found
    - entities already present
    - entities created
    - aggressive inferences that may need correction
    - blocked cases that require a human choice
+   - journal: which `[[Filed]]` / `[[Updated]]` links were added (or that none applied)
 
 ## Reference Guide
 
@@ -169,3 +181,4 @@ When the user says something like `add entities from today's journal page`:
 - Entity-type initialization: [references/entity-type-initialization.md](./references/entity-type-initialization.md)
 - Search and dedup rules: [references/entity-search-and-dedup.md](./references/entity-search-and-dedup.md)
 - Journal extraction and aggressive inference: [references/entity-inference-from-journal.md](./references/entity-inference-from-journal.md)
+- After graph edits (garddiff / Filed / Updated): [references/entity-session-journal.md](./references/entity-session-journal.md)
