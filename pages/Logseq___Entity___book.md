@@ -1,26 +1,22 @@
 - # book
-	- Standard operating procedure for **book** entities: published works you track as first-class pages under `[[Book/Title]]`. Full workflow: use the **logseq-entity** skill and dedupe before creating anything new.
+	- Standard operating procedure for **book** entities: published works tracked as first-class pages under `Book/Title`.
 	- ## What counts as a book entity (instance)
 		- A page whose Logseq title is **`Book/<short title>`** — disk file `Book___<short title>.md` where `<short title>` is the stable shelf label (often the cover title; subtitle after a colon is fine when that is how the work is cited).
 		- **Not** book entities: reading notes, chapter logs, or imports living under **`Person/.../Book/...`** or other namespaces—those stay whatever type they are; link them to a **`Book/...`** hub when the underlying work should be indexed as a book.
 	- ## Canonical naming and links
-		- Default canonical page: `[[Book/Title]]` — disk `Book___Title.md`.
+		- Default canonical page: [[Book/Title]] — disk `Book___Title.md`.
 		- Prefer the **title people search for** over publishing metadata in the page name; use `alias::` for cover variants, acronyms, or older paths.
 	- ## Finding and deduplicating
 		- Search in order: exact `Book___*.md` title; `alias::` match; normalized title words in `pages/Book___*.md`; author + distinctive phrase in body text. Classify: existing, similar, new, or blocked.
-		- **One page per distinct edition family** unless you intentionally split translations or major revisions; when in doubt, one hub and describe variants in the body.
+		- **One page per distinct edition family** unless translations or major revisions intentionally need separate pages; when in doubt, keep one hub and describe variants in the body.
 	- ## Relationship to author **person** hubs
 		- When the author is clear, set **`created-by:: [[Person/Full Name]]`** in frontmatter and ensure that **person** hub exists (or create it first). Multiple authors: pick the primary credited author for `created-by::` and name co-authors in the body—or omit `created-by::` until the split is decided.
 	- ## Frontmatter on book pages
 		- Mark instances with **`logseq-entity:: [[Logseq/Entity/book]]`** so this type page collects backlinks to every book entity.
-		- Never modify, add, or remove **`tags::`** on existing pages unless you have explicit human instruction that overrides garden tagging rules.
-		- Optional: **`created-by::`**, **`alias::`**, **`date-created::`** (publication year as `[[YYYY]]` when useful), **`see-also::`**, **`via::`** — only when accurate.
+		- Book-specific frontmatter can include `created-by::` when the author entity is clear.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
 		- LFM; lean hub: H1 with the book’s title, **About**, optional **Editions / notes**, **Links** (publisher, Wikipedia, author).
-	- ## Agents — journal (garddiff)
-		- After creating or materially updating any **instance** of this type under `pages/`, add **link-only** bullets to **`journals/YYYY_MM_DD.md`**: new pages today under **`[[Filed]]`**, touched existing pages under **`[[Updated]]`**—never both for the same **`[[Page]]`** the same calendar day. Follow **`[[Logseq/Journal/Section/Garddiff]]`** and **`logseq-journal-updates`**. Skill **logseq-entity** → **`entity-session-journal`** reference.
-	- ## Source blocks
-		- Do not move source blocks from the journal or source page by default; move or transplant only when explicitly asked.
 	- ## Examples in this garden
 		- [[Book/Gödel, Escher, Bach: an Eternal Golden Braid]]
 		- [[Book/Synergetics: Explorations in the Geometry of Thinking]]

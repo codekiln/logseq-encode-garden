@@ -2,38 +2,29 @@
 	- This page is the standard operating procedure for **question** entities: scoped research questions stored under a topic namespace with a dedicated `/Q/` segment so they stay findable and deduplicable.
 	- ## Examples in this garden
 		- Pages on disk match `pages/*___Q___*.md` (e.g. a tmux question lives as a file whose name contains `___Q___` between the topic prefix and the question slug).
-		- In-graph titles use a slash path such as `Topic/Q/Question text` (see skill **logseq-question** — Rulesync slash command `logseq-question` is a thin entrypoint — and rule logseq-page-naming-reference).
+		- In-graph titles use a slash path such as `Topic/Q/Question text`.
 	- ## When we treat something as a question entity
-		- Strong signals: you are capturing a single answerable question, usually with a planned Answer section; the title belongs under a topic (tool, domain, idea) plus a fixed **Q** segment before the question wording.
+		- Strong signals: the page captures a single answerable question, usually with a planned Answer section; the title belongs under a topic (tool, domain, idea) plus a fixed **Q** segment before the question wording.
 		- Not a question entity: general notes without the `/Q/` naming convention, dashboards, or long-running threads better modeled as non-Q pages.
 	- ## Canonical naming and links
-		- **Link shape:** `[[Topic/Q/Question text]]` or `[[Topic/SubTopic/Q/Question text]]` as needed.
+		- **Link shape:** [[Topic/Q/Question text]] or [[Topic/SubTopic/Q/Question text]] as needed.
 		- **File shape:** `pages/Topic___Q___Question text.md` with triple underscores between namespace parts; encode `?` as `%3F` in the filename when present, consistent with existing question pages.
-		- Use forward slashes in journal and body links; never triple underscores inside `[[...]]` links.
+		- Use forward slashes in journal and body links; never triple underscores inside Logseq links.
 	- ## Finding and deduplicating
-		- Treat every new question as a question-entity candidate. Follow the search-and-dedup process in the logseq-entity skill reference `entity-search-and-dedup.md` (configuration first, then ordered search, then classify outcomes).
-		- Practical search order for this type (aligns with that reference):
+		- Treat every new question as a question-entity candidate.
+		- Practical search order for this type:
 			- 1. Exact expected page title / filepath under the topic namespace.
 			- 2. Grep normalized question text and key phrases across `pages/**___Q___*.md`.
 			- 3. Namespace-restricted globs (e.g. topic prefix + `___Q___`).
 			- 4. H1 and first blocks on candidate pages; allow for minor rephrasing.
 		- Classify each candidate as: **existing**, **similar** (needs human judgment), **new**, or **blocked** (missing config or ambiguous topic).
 	- ## Frontmatter
-		- On **new** question pages, include `logseq-entity::` pointing at the Logseq entity-type page for question (the file you are reading now). That gives this type page backlinks to all instances.
-		- Optional **`see-also:: [[Page1]], [[Page2]], ...`** — internal pages worth reading next (**strongest tie first**). Do **not** list **parent namespace** pages just to restate context the title already encodes. Prefer **`see-also::`** over a **`## Related`** section that is only a list of internal links. External URLs stay in the body (usually under **Answer**).
-		- Optional **`via:: [[Page1]], ...`** — **only** what **prompted filing** this question (journal day, import stub, session you’re capturing from). Not for “see also” (that is **`see-also::`**). Not for parent namespace.
-		- Never modify, add, or remove **`tags::`** on existing pages. For new pages, optional tags often mirror siblings in the same topic (commonly `[[Q]]` plus a topic tag when that matches established pages in that namespace); do not invent a new tagging scheme.
-		- `alias::` is optional when a longer hierarchical title improves discoverability; follow patterns on nearby question pages.
+		- On **new** question pages, include `logseq-entity::` pointing at this entity-type page. That gives this type page backlinks to all instances.
+		- Question-specific tags may mirror siblings in the same topic when that pattern is established.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
 		- First content block: H1 with the question; link key terms to existing pages where it helps.
 		- Typical sections: `## My Notes` (may start empty), `## Answer`. Use **`see-also::`** instead of **`## Related`** when the only content would be links to other graph pages.
 		- Use Logseq Flavored Markdown throughout (bullets, headings as bullets, tab nesting, no blank lines between bullets).
-	- ## Agents — journal (garddiff)
-		- After creating or materially updating any **instance** of this type under `pages/`, add **link-only** bullets to **`journals/YYYY_MM_DD.md`**: new question pages today under **`[[Filed]]`**, touched existing pages under **`[[Updated]]`**—never both for the same **`[[Page]]`** the same calendar day. Follow **`[[Logseq/Journal/Section/Garddiff]]`** and **`logseq-journal-updates`**. Skill **logseq-entity** → **`entity-session-journal`** reference; filing order and narrative options are spelled out in skill **logseq-question** → **`question-workflow.md`** (Step 4).
-	- ## [[AI/Agent/Guidance]]
-		- ### From AI tooling (slash command / agent)
-			- To file a new question from Rulesync or an agent: use skill **logseq-question** (`.rulesync/skills/logseq-question/SKILL.md`); the command **`logseq-question`** only points into that skill. Shared entity configuration and dedup live in skill **logseq-entity** and on **this** type page.
-		- ### Journal Entry
-			- When a question is asked, it may have come from an accompanying [[Logseq/Journal]] entry. This should stay intact to preserve the original context in which the question was asked; don't move that block into the question page.
-		- ### Legacy instances
-			- Older question pages may lack `logseq-entity::`, `see-also::`, or `via::`. Do not bulk-migrate unless the author requests it; new pages should follow the frontmatter rules above.
+	- ## Legacy instances
+		- Older question pages may lack `logseq-entity::`. Do not bulk-migrate unless the author requests it; new pages should follow the frontmatter rules above.

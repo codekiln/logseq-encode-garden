@@ -1,0 +1,24 @@
+- # Logseq Frontmatter
+	- This page defines shared page-level frontmatter conventions for the knowledge garden.
+	- ## Protected fields
+		- **`tags::`** is protected on existing pages: do not modify, add, or remove it unless explicit human instruction overrides the garden tagging rules.
+		- For new pages, add `tags::` only when the relevant page-type convention explicitly requires it or nearby pages establish the same pattern.
+	- ## Entity marker
+		- **`logseq-entity::`** marks a page as an instance of a Logseq entity type.
+		- The value should be the relevant entity type page, such as [[Logseq/Entity/Game]], [[Logseq/Entity/software-project]], or [[Logseq/Entity/question]].
+		- Use one entity marker per page unless a future convention explicitly defines multi-typing.
+	- ## Aliases
+		- **`alias::`** is for real alternate names, plural or contextual link surfaces, previous paths, handles, acronyms, and other useful discovery forms.
+		- Canonical page names should remain singular where the garden naming convention calls for singular names; plural or contextual references belong in aliases.
+		- Do not create an alias that only repeats parent namespace context already expressed by the page title.
+	- ## See also
+		- **`see-also::`** is for useful internal pages worth reading next.
+		- Order links strongest tie first.
+		- Do not list parent namespace pages only to restate context already encoded by the page title.
+		- Prefer `see-also::` over a body `## Related` section when the section would only contain internal wikilinks.
+	- ## Provenance
+		- **`via::`** records what caused the page to exist or be substantially revised in the garden, such as a journal day, import stub, or source page.
+		- Do not use `via::` for general related reading; use `see-also::` instead.
+	- ## Dates
+		- **`date-created::`** records when the entity described by the page was created, published, founded, or first released.
+		- Do not use `date-created::` for the date the page was added to the garden.

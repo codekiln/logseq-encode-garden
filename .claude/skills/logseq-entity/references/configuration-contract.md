@@ -12,6 +12,7 @@ Look for configuration in this order:
 
 - `[[Logseq/Entity]]`
 - `[[Logseq/Entity/<Type>]]`
+- `[[Logseq/Frontmatter]]`
 - `.rulesync/config/logseq-entity.md`
 
 If none of these exist, the skill should:
@@ -30,19 +31,18 @@ When the user wants to initialize entity types for a garden:
 
 ## What Belongs In Garden Configuration
 
-Store garden-specific policy on **`[[Logseq/Entity]]`** and **`[[Logseq/Entity/<Type>]]`**, including:
+Store garden-specific policy on **`[[Logseq/Entity]]`**, **`[[Logseq/Entity/<Type>]]`**, and **`[[Logseq/Frontmatter]]`**, including:
 
 - which entity types this garden actively models
 - how to recognize those entity types
 - canonical naming preferences
 - allowed or preferred namespaces
 - alias strategy
-- frontmatter expectations by entity type
+- shared frontmatter expectations and entity-specific frontmatter expectations
 - minimum page shape by entity type
 - creation blockers
 - whether to infer aggressively or conservatively
-- whether source blocks should remain in place, be copied, or be moved
-- required follow-up actions such as journaling or backlink insertion
+- type-specific required follow-up actions such as backlink insertion when they are part of the entity model
 
 ## What Stays In The Skill
 
@@ -55,6 +55,7 @@ The skill should keep only reusable process:
 - create or update entities according to config
 - report what happened and what needs human judgment
 - when graph pages under `pages/` change, apply [entity-session-journal.md](./entity-session-journal.md) (today’s journal / **Filed** / **Updated**) before treating the session as complete
+- keep graph SOP pages free of Rulesync/skill/agent workflow references
 
 ## Suggested Config Shape
 
@@ -64,6 +65,7 @@ Preferred Logseq-native shape:
 
 - `[[Logseq/Entity]]` as the registry
 - `[[Logseq/Entity/<Type>]]` as the canonical type page
+- `[[Logseq/Frontmatter]]` as the shared page-level attribute convention page
 
 Fallback file-based shape:
 

@@ -37,6 +37,7 @@ Before doing entity work, read [references/configuration-contract.md](./referenc
 
 - `[[Logseq/Entity]]`
 - `[[Logseq/Entity/<Type>]]`
+- `[[Logseq/Frontmatter]]`
 
 Use this fallback when the Logseq entity pages do not exist yet or are incomplete:
 
@@ -64,6 +65,17 @@ Procedure: [references/entity-session-journal.md](./references/entity-session-jo
 - **Same skill, different graphs:** Identical `logseq-entity` text may be deployed in multiple gardens; effective behavior follows whatever `[[Logseq/Entity]]` and `[[Logseq/Entity/<Type>]]` pages exist **in the workspace graph**. Do not assume another garden’s entity types.
 - **Type pages are full SOPs:** Everything on `[[Logseq/Entity/<Type>]]` is binding—not only naming and frontmatter. If a type page defines imports, index updates, checklists, or search patterns, follow it end-to-end.
 - **Narrow workflows:** A garden or repo may ship additional skills for routing (for example topic-specific filing). **Do not assume** their names or locations—discover from the graph, from type-page bullets, or by listing the repo’s skill directories. Those skills should route to Logseq type pages; **do not** duplicate long type SOPs under this skill’s `./references/`.
+
+## Graph Page Hygiene
+
+When creating or editing `[[Logseq/Entity]]`, `[[Logseq/Entity/<Type>]]`, `[[Logseq/Frontmatter]]`, or other graph SOP pages:
+
+- Keep graph pages self-contained and graph-native. Do **not** add Rulesync, skill, slash-command, generated-file, repo-path, or agent-workflow references to Logseq pages.
+- Do **not** add agent-only reminders such as journal bookkeeping or source-block handling to entity type pages. Those operational duties live in Rulesync rules/skills and journal guidance.
+- Keep actual Logseq links clickable. Do **not** wrap `[[Page]]` links in backticks; use backticks only for non-link path shapes, filenames, globs, or property syntax.
+- Use declarative garden voice instead of second-person instructions.
+- Put shared frontmatter conventions on `[[Logseq/Frontmatter]]`; type pages should mention only entity-specific frontmatter plus a short reference to that page.
+- Entity type page names should follow garden naming conventions: singular and capitalized where natural. Existing legacy lower-case type pages should not be renamed unless the user explicitly requests a rename/migration.
 
 ## Quick Start
 

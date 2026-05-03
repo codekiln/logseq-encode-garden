@@ -7,19 +7,15 @@
 		- Weak signals alone (a single app’s built-in scheme with no shared branding) are usually **not** a color-theme entity — note them on the app page instead.
 	- ## How to name the main page for a color theme
 		- Prefer a **short top-level canonical name** when the theme name is unambiguous (e.g. [[Catppuccin]]), matching the spirit of software-project hubs like [[Lazygit]].
-		- Add **`alias::`** to a hierarchical path when you want the graph to sit under a UI namespace — e.g. `alias:: [[UI/Color/Theme/Catppuccin]]` on the [[Catppuccin]] page for visibility under [[UI/Color]].
-		- Use **`[[Theme/Flavor]]` sub-namespaces** when the upstream theme names discrete variants (e.g. Catppuccin’s four flavors): hub page links the set; each subpage holds typical config keywords, optional preview image from `../assets/…`, and points back to the hub for the full stack matrix. For themes without named variants, keep a single hub section instead.
+		- Add **`alias::`** to a hierarchical path when the graph should sit under a UI namespace, such as `alias:: [[UI/Color/Theme/Catppuccin]]` on the [[Catppuccin]] page for visibility under [[UI/Color]].
+		- Use `Theme/Flavor` sub-namespaces when the upstream theme names discrete variants (e.g. Catppuccin’s four flavors): hub page links the set; each subpage holds typical config keywords, optional preview image from `../assets/…`, and points back to the hub for the full stack matrix. For themes without named variants, keep a single hub section instead.
 	- ## Finding and deduplicating
 		- Check in this order: exact canonical page name, exact alias, official homepage or org/repo, then page-body mentions of the same palette names and upstream links. Classify as: existing, similar, new, or blocked.
 	- ## Relationship to software-project
-		- Official or community **ports** (Neovim plugin repo, tmux plugin, etc.) can be **software-project** entities with `logseq-entity:: [[Logseq/Entity/software-project]]`; they should **link to** the color-theme hub for palette and flavor semantics. The theme hub lists *how you wire it* in each app without duplicating full plugin documentation.
+		- Official or community **ports** (Neovim plugin repo, tmux plugin, etc.) can be **software-project** entities with `logseq-entity::` [[Logseq/Entity/software-project]]; they should **link to** the color-theme hub for palette and flavor semantics. The theme hub lists app wiring without duplicating full plugin documentation.
 	- ## Frontmatter
 		- To mark a page as a color-theme instance, add `logseq-entity:: [[Logseq/Entity/color-theme]]` in frontmatter. The type page then gets backlinks to all color-theme pages.
-		- Add only other frontmatter that is actually known (e.g. `date-created::` for when the theme family was first published, `see-also::` for peer themes). Do not modify **`tags::`** on existing pages when editing; follow garden tagging rules for new pages.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
 		- File: `pages/<ThemeName>.md` for the canonical short name. First block: H1 with a link to the official site or palette repo.
-		- Keep a **lean hub**: identity, **flavor index** (links to `[[Theme/Flavor]]` subpages or inline list if no subpages), optional **overview image** in `assets/` with source footnote, **palette reference** (link out), **stack matrix** (per app: mechanism, config hook, links to [[Ghostty]], [[nvim]], [[tmux]], [[yazi]], etc., and to your config subpages when detail lives there). Put per-flavor detail (ids, previews) on subpages when they exist.
-	- ## Agents — journal (garddiff)
-		- After creating or materially updating any **instance** of this type under `pages/`, add **link-only** bullets to **`journals/YYYY_MM_DD.md`**: new pages today under **`[[Filed]]`**, touched existing pages under **`[[Updated]]`**—never both for the same **`[[Page]]`** the same calendar day. Follow **`[[Logseq/Journal/Section/Garddiff]]`** and **`logseq-journal-updates`**. Skill **logseq-entity** → **`entity-session-journal`** reference.
-	- ## Source blocks
-		- Do not move source blocks from the journal or source page by default. Move or transplant only when explicitly asked.
+		- Keep a **lean hub**: identity, **flavor index** (links to `Theme/Flavor` subpages or inline list if no subpages), optional **overview image** in `assets/` with source footnote, **palette reference** (link out), **stack matrix** (per app: mechanism, config hook, links to [[Ghostty]], [[nvim]], [[tmux]], [[yazi]], etc., and to config subpages when detail lives there). Put per-flavor detail (ids, previews) on subpages when they exist.

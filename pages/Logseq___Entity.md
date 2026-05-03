@@ -6,23 +6,23 @@ alias:: [[Logseq Entities]]
 		- **Entity** — a single thing that has its own page in the garden: one person, one software project, one book, etc. Each entity is an instance of exactly one entity type.
 		- **Entity type** — a category of entities that share the same modeling rules. For example, "software-project" is a type; each individual tool or library (e.g. Neovim, Yamtrack) is an entity of that type. This page is the registry of entity types; each type has its own documentation page that describes how to recognize, name, and create entities of that type.
 	- ## How we mark a page as an entity of a given type
-		- In the page’s frontmatter, add `logseq-entity::` with a link to the entity-type page that documents that kind of entity. Example: `logseq-entity:: [[Logseq/Entity/software-project]]`. One such link per page. Why: the type page then gets backlinks to all pages that declare it, so the type page doubles as an index of instances and we can see at a glance which pages follow which SOP.
-	- ## Cross-links without a `## Related` section (`see-also::`)
-		- Optional frontmatter: **`see-also:: [[Page A]], [[Page B]], ...`** for **garden pages** that are useful “see also” context—same role as a tail **`## Related`** list of internal links, but kept in frontmatter. Order **strongest tie first**. Do **not** include links whose only role is **parent namespace** context; the page title’s hierarchy already implies that in Logseq. External URLs still belong inline in the body (e.g. under **Answer**). Applies garden-wide; especially handy for **question** pages.
-	- ## Provenance — what went into the garden (`via::`)
-		- Optional frontmatter: **`via:: [[Page A]], ...`** only for **what made this page exist here** (e.g. a journal day that prompted it, a specific import or chat deep-research stub, a session note you are filing from). **Not** for general related reading—use **`see-also::`** for that. **Not** for parent namespace context. Multiple entries: strongest causal tie first.
-	- ## Agents — journal after entity graph edits
-		- When entity work **creates or edits** pages under `pages/`, also update **today’s** `journals/YYYY_MM_DD.md` under **`[[Filed]]`** / **`[[Updated]]`** per **`[[Logseq/Journal/Section/Garddiff]]`** and rule **`logseq-journal-updates`**. Skill **logseq-entity** documents the checklist in **`entity-session-journal`** (`references/entity-session-journal.md` beside that skill).
+		- In frontmatter, add `logseq-entity::` with a link to the entity-type page that documents that kind of entity.
+		- One such link per page. The type page then gets backlinks to all pages that declare it, so the type page also acts as an index of instances.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Naming
+		- Canonical entity type pages should follow garden naming conventions: singular and capitalized where natural.
+		- Existing lower-case entity type page names are legacy names and are not renamed by this registry.
+		- Plural or contextual reference forms belong in `alias::` frontmatter on the canonical page when they are useful.
 	- ## Entity types in this garden
-		- For **agents** (Cursor, Codex, etc.) that read the repo without the full graph open: shared resolution order and reporting expectations for entity work live in **`.rulesync/config/logseq-entity.md`**. Per-type rules (recognition, naming, dedup, frontmatter, page shape) live only on each **`[[Logseq/Entity/<Type>]]`** page linked below—not in named sections of that repo file.
 		- **software-project** — Tools, editors, libraries, apps, CLIs, servers. Conventions (naming, dedup, page shape, creator handling) are documented on the software-project type page.
 		- **color-theme** — Coordinated palette families reused across apps (terminals, editors, TUIs). Conventions are on the color-theme type page.
-		- **company** — Organizations or brands you track as first-class pages (e.g. vendors with multiple tools). Conventions are on the company type page.
+		- **company** — Organizations or brands tracked as first-class pages, such as vendors with multiple tools. Conventions are on the company type page.
 		- **organization** — Non-company bodies such as standards organizations, foundations, nonprofits, public institutions, consortia, professional associations, and governance/community bodies. Conventions are on the organization type page.
 		- **question** — Topic-scoped research questions using a `/Q/` segment in the page title (`*___Q___*` on disk). Conventions are on the question type page.
 		- **concept** — Understanding-oriented pages (Diataxis-style explanations): paradigms, architectural lenses, and other big ideas. Conventions are on the concept type page.
-		- **term** — Short glossary-style vocabulary pages; **`logseq-entity::`** is additive alongside existing **`tags:: [[Term]]`** where present. Conventions are on the term type page.
-		- **person** — Real individuals tracked as `[[Person/Full Name]]` hub pages (not every page under the `Person/` namespace). Conventions are on the person type page.
-		- **book** — Published books tracked as `[[Book/Title]]` hub pages. Conventions are on the book type page.
+		- **term** — Short glossary-style vocabulary pages; `logseq-entity::` is additive alongside existing term tagging patterns where present. Conventions are on the term type page.
+		- **person** — Real individuals tracked as `Person/Full Name` hub pages (not every page under the `Person/` namespace). Conventions are on the person type page.
+		- **book** — Published books tracked as `Book/Title` hub pages. Conventions are on the book type page.
 		- **standard** — Normative specifications and widely adopted conventions (RFCs, community specs, semantic-versioning and commit-message rules, schema/protocol definitions, etc.) when the page’s primary identity is **the standard**, not the publishing **organization** or a **software-project** implementation. Conventions are on the standard type page.
-		- **game** (entity type page [[Logseq/Entity/Game/Type]]) — Playable works, genres, mechanics, and game-first hubs under `[[Game/...]]` for **any medium** (video, board, card, tabletop RPG, sport-as-game, etc.) when the page is not better modeled as **software-project**, **book**, or **concept**. Conventions are on that type page.
+		- **[[Logseq/Entity/Game]]** — Individual playable works or systems: video games, board games, card games, tabletop RPG systems, sport-as-game pages, folk games, and similar game-first hubs across any namespace. Conventions are on that type page.
+		- **[[Logseq/Entity/Game/Type]]** — Game types, genres, families, mechanics, modes, and reusable game-design categories such as [[Game/Video/Platformer]]. Conventions are on that type page.

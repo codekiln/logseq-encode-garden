@@ -1,30 +1,22 @@
-- # Game
-	- This page is the standard operating procedure for **game** entities: first-class pages whose primary identity is a **game** in the everyday sense—something with **rules**, **pieces or verbs**, and **play**—across **any medium**. That includes digital **video** games, **board** and **card** games, **tabletop RPGs** as systems you run at the table, **party** or **children’s** games, **sport** when you are treating it as a **game system** (rules, positions, seasons) rather than as general fitness or news, and similar. It is **not** limited to `[[Game/Video/...]]`.
+- # Game Type
+	- This page is the standard operating procedure for **game type** entities: reusable categories used to describe games, such as genres, families, mechanics, modes, and design patterns. It is for pages whose primary identity is a type of game, not an individual playable work or system.
 	- ## What counts as an instance
-		- **Titles** — a specific published or folk game you track as a hub (e.g. `[[Game/Video/Cookie Clicker]]`; later e.g. `[[Game/Board/Catan]]` if you add that tree).
-		- **Genres, families, and mechanics** — reusable design lenses (e.g. `[[Game/Video/Platformer]]` for a **video**-game genre hub).
-		- **Play-adjacent game stack** — engines, controllers, digital tables, etc., when the page is written as **game hobby** infrastructure; if the page is really neutral **developer tooling**, prefer **software-project** instead.
-	- ## Canonical naming and links
-		- Prefer a **`[[Game/<Medium>/...]]`** path where **Medium** disambiguates how the thing is played: **`Video`**, **`Board`**, **`Card`**, **`Tabletop`**, **`Sport`**, etc. The garden already uses **`[[Game/Video/...]]`**; add sibling segments under **`[[Game]]`** when you need them—do not force non-video games under **`Video`**.
-		- Use **singular** short leaf names where it reads naturally (`Platformer` as a genre hub, not `Platformers`).
-		- Prefer **`alias::`** for alternate surface titles without creating a second canonical file.
+		- **Genres and families** — reusable catalog labels such as [[Game/Video/Platformer]].
+		- **Mechanics and modes** — recurring game-design categories when the page is about the game-design lens itself.
+		- **Not individual titles** — pages such as [[Game/Video/Cookie Clicker]] or [[Co/Nintendo/Game/Super Mario]] are [[Logseq/Entity/Game]] instances when their primary identity is the playable game.
 	- ## Relationship to other entity types
-		- **software-project** — Use when the main story is shipping or maintaining **software as a tool** (repo, CLI, library) even if it is a game engine or mod SDK; use **game** when the page is primarily **about playing, cataloging, or designing games**.
-		- **book** — A **RPG rulebook** or **boxed manual** qua **publication** may be a **book** entity; a page that is primarily **the game system as played** still belongs here. When both fit, pick the type that matches the page’s **primary** job and cross-link the other.
-		- **concept** — Cross-domain explanations (Diataxis); a genre page can stay **game** when it is **hobby- and rules-first** on the **`Game/...`** tree. Promote to **concept** when the page is really a **general paradigm** article, not a game-catalog hub.
+		- **[[Logseq/Entity/Game]]** — Use for individual playable works or systems.
+		- **[[Logseq/Entity/concept]]** — Use when the page is a cross-domain explanation or general paradigm article rather than a game-catalog lens.
+		- **[[Logseq/Entity/software-project]]** — Use for tools, engines, SDKs, libraries, or apps whose primary identity is software infrastructure rather than a category of games.
 	- ## Finding and deduplicating
-		- Search in order: exact `Game___*.md` title matching the intended path; `alias::` match; distinctive title or designer phrases in body; sibling pages under the same **`[[Game/<Medium>]]`** branch. Classify: existing, similar, new, or blocked.
+		- Search for an existing page before creating a new game type entity. Stop early only when a result is clearly the same game category, genre, mechanic, family, or mode.
+		- Search namespace-flexibly: exact expected page title; aliases; singular/plural and medium-specific variants; page-body mentions; and sibling or related game taxonomy branches. Do not assume every game type entity lives under the [[Game]] namespace, though that namespace is often a strong candidate.
+		- Classify as: **existing**, **similar** (needs human judgment), **new**, or **blocked**.
 	- ## Frontmatter
-		- On instances, set **`logseq-entity::`** to a link to **this** entity-type page so backlinks list all game entities regardless of medium.
-		- Never modify, add, or remove **`tags::`** on existing pages unless a human explicitly overrides garden tagging rules.
-		- Optional: **`alias::`**, **`see-also::`** (strongest tie first; skip links that only restate parent namespace context), **`via::`** (what prompted creating or heavily revising the page).
+		- On instances, set **`logseq-entity::`** [[Logseq/Entity/Game/Type]] so backlinks list game type entities.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
-		- Logseq Flavored Markdown: bullets, headings as bullets, tab nesting, no blank lines between bullets.
-		- Lean hub: H1 with the game or topic title, **Overview**, optional **Rules / Components / Examples / Links** (publisher, BGG, Wikipedia, store) as the topic warrants.
+		- Use garden-wide Logseq Flavored Markdown and naming conventions by reference; this type page only adds game-type semantics.
+		- Lean hub: H1 with the type name, **Overview**, optional **Context / Examples / Subtypes / Links** as the topic warrants.
 	- ## Examples in this garden
 		- [[Game/Video/Platformer]] (genre; **video** medium)
-		- [[Game/Video/Cookie Clicker]] (title; **video** medium)
-	- ## Agents — journal (garddiff)
-		- After creating or materially updating any **instance** of this type under `pages/`, add **link-only** bullets to **`journals/YYYY_MM_DD.md`**: new pages today under **`[[Filed]]`**, touched existing pages under **`[[Updated]]`**—never both for the same **`[[Page]]`** the same calendar day. Follow **`[[Logseq/Journal/Section/Garddiff]]`** and **`logseq-journal-updates`**. Skill **logseq-entity** → **`entity-session-journal`** reference.
-	- ## Source blocks
-		- Do not move source blocks from the journal or source page by default; move or transplant only when explicitly asked.

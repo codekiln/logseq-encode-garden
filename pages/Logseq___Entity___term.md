@@ -1,7 +1,7 @@
 # term
-	- This page is the standard operating procedure for **term** entities: short, vocabulary-style pages—jargon, definitions, abbreviations, and cross-domain labels that you want indexed as entities without the full Diataxis explanation arc of a **concept** entity.
+	- This page is the standard operating procedure for **term** entities: short, vocabulary-style pages—jargon, definitions, abbreviations, and cross-domain labels indexed as entities without the full Diataxis explanation arc of a **concept** entity.
 	- ## Examples in this garden
-		- Many pages use **`tags:: [[Term]]`** today; new or revised term-like pages should add **`logseq-entity::`** pointing at **this** entity-type page so backlinks list all term entities.
+		- Many legacy term pages use term tags today; new or revised term-like pages should add **`logseq-entity::`** pointing at **this** entity-type page so backlinks list all term entities.
 		- See also the meta page [[Term]] (“a word with a specific meaning”) for how “term” is used in prose.
 	- ## When we treat something as a term entity
 		- Strong signals: the page is mainly a **definition** or short disambiguation; readers need a quick anchor, not a full conceptual tour.
@@ -9,19 +9,16 @@
 		- Prefer **concept** instead when the page needs multiple sections (overview, context, misconceptions, examples at length) and Diataxis-style explanation.
 		- Not a term entity: **question**, **software-project**, **company**, or other dedicated entity types.
 	- ## Finding and deduplicating
-		- Follow the logseq-entity skill reference `entity-search-and-dedup.md`.
-		- Search: exact title, **`tags:: [[Term]]`** candidates missing `logseq-entity::`, alias matches, phrase grep across `pages/`.
+		- Search for an existing page before creating a new term entity.
+		- Search: exact title, existing term-tagged candidates missing `logseq-entity::`, alias matches, and phrase grep across `pages/`.
 		- Classify as: **existing**, **similar**, **new**, or **blocked**.
 	- ## Frontmatter
 		- **`logseq-entity::`** on instances must point at **this** entity-type page.
-		- The `tags:: [[Term]]` are often already present; **do not remove** existing tags. Adding **`logseq-entity::`** is **additive** to the tagging scheme.
-		- Optional **`see-also::`**, **`via::`** — same semantics as on [[Logseq/Entity]] (see-also for related reading; via for provenance only).
-		- Optional extra tags ([[Abbreviation]], [[Acronym]], topic tags) should mirror sibling pages in the same namespace.
+		- Existing term tagging patterns may remain alongside `logseq-entity::`.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
 		- Use Logseq Flavored Markdown.
 		- Keep the body **lean**: H1 + a few bullets, or a single short definition block. Link out to **concept** pages when the idea deserves a full explanation.
-	- ## Agents — journal (garddiff)
-		- After creating or materially updating any **instance** of this type under `pages/`, add **link-only** bullets to **`journals/YYYY_MM_DD.md`**: new pages today under **`[[Filed]]`**, touched existing pages under **`[[Updated]]`**—never both for the same **`[[Page]]`** the same calendar day. Follow **`[[Logseq/Journal/Section/Garddiff]]`** and **`logseq-journal-updates`**. Skill **logseq-entity** → **`entity-session-journal`** reference.
 	- ## Legacy and migration
-		- Do **not** bulk-add **`logseq-entity::`** to every legacy **`tags:: [[Term]]`** page unless the author requests a backfill pass.
-		- New term-like pages should declare **`logseq-entity::`** to **this** page alongside existing tag patterns.
+		- Do **not** bulk-add **`logseq-entity::`** to every legacy term-tagged page unless the author requests a backfill pass.
+		- New term-like pages should declare **`logseq-entity::`** to **this** page alongside established tag patterns when those patterns apply.

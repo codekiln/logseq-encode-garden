@@ -1,5 +1,5 @@
 # concept
-	- This page is the standard operating procedure for **concept** entities: understanding-oriented pages that follow the garden’s Diataxis-style shape (aligned with [[Diataxis/Concept]] / [[Diataxis/Explanation]]). Paradigms, architectural lenses, and other “big ideas” you explain rather than only define.
+	- This page is the standard operating procedure for **concept** entities: understanding-oriented pages that follow the garden’s Diataxis-style shape (aligned with [[Diataxis/Concept]] / [[Diataxis/Explanation]]). Paradigms, architectural lenses, and other “big ideas” explained rather than only defined.
 	- ## Examples in this garden
 		- [[Programming/Language/Func]]
 		- [[Programming/Language/Concept/Object-Oriented]]
@@ -8,21 +8,16 @@
 		- Good fit: programming paradigms, frameworks of thought, architectural patterns explained in prose.
 		- Not a concept entity: short glossary stubs better modeled as **term** entities; step procedures (how-to); bare link lists; **question** entities (use [[Logseq/Entity/question]] and `/Q/` naming).
 	- ## Finding and deduplicating
-		- Follow the logseq-entity skill reference `entity-search-and-dedup.md` (configuration first, then ordered search).
+		- Search for an existing page before creating a new concept entity.
 		- Search order hints: exact title, alternate titles from frontmatter, normalized topic phrases, sibling pages in the same topic area.
 		- Classify as: **existing**, **similar** (needs human judgment), **new**, or **blocked**.
 	- ## Frontmatter
 		- On instances, set **`logseq-entity::`** to a link to **this** entity-type page so backlinks list all concept entities.
-		- Optional **`see-also:: [[Page1]], [[Page2]], ...`** — internal pages worth reading next (**strongest tie first**). Do **not** list links that only restate **parent namespace** context implied by the title. Do **not** use **`see-also::`** for another title that already resolves to the same page. Prefer **`see-also::`** over a **`## Related`** section that is only internal wikilinks. External URLs stay in the body.
-		- Optional **`via:: [[Page1]], ...`** — only what **prompted** creating or heavily revising the page (journal, import, session)—not general “see also.”
-		- **`tags::`:** For new or updated concept pages, include **`[[Diataxis/Concept]]`** (equivalently the [[Diataxis/Explanation]] cluster via alias). Never remove existing tags on legacy pages unless the author explicitly asks.
-		- Optional **`alias::`** and other page attributes follow normal garden naming patterns—this type page does not prescribe where topics live on disk.
+		- Concept-specific tags may mirror the established Diataxis concept cluster when the page is new and that convention applies.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape (body)
 		- Use Logseq Flavored Markdown (bullets, headings as bullets, tab nesting, no blank lines between bullets).
 		- Recommended sections (Diataxis explanation style): **Overview**, **Context**, **Key Principles**, **Mechanism**, **Examples**, **Misconceptions**. Adapt headings to the topic; not every section must be long.
 		- First heading after frontmatter: H1 matching the page’s primary topic.
-	- ## Agents — journal (garddiff)
-		- After creating or materially updating any **instance** of this type under `pages/`, add **link-only** bullets to **`journals/YYYY_MM_DD.md`**: new pages today under **`[[Filed]]`**, touched existing pages under **`[[Updated]]`**—never both for the same **`[[Page]]`** the same calendar day. Follow **`[[Logseq/Journal/Section/Garddiff]]`** and **`logseq-journal-updates`**. Skill **logseq-entity** → **`entity-session-journal`** reference.
 	- ## Relationship to Diataxis
 		- Diataxis framing in the graph: [[Diataxis/Explanation]] (aliases [[Diataxis/Concept]]). This type page is the **operational** template; those pages are the **vocabulary** of the framework.
-		- Agent rules in **Rulesync** should point here rather than duplicating the full template; regenerate tool outputs after changing `.rulesync/rules/diataxis-explanation.md`.

@@ -1,0 +1,24 @@
+- # Game
+	- This page is the standard operating procedure for **game** entities: individual playable works or systems tracked as first-class pages. A game entity can be a commercial video game, board game, card game, tabletop RPG system, sport-as-game, folk game, or similar playable thing, as long as the page’s primary identity is the game itself rather than a book, software tool, company, person, or general concept.
+	- ## What counts as an instance
+		- **Specific titles and systems** — pages such as [[Game/Video/Cookie Clicker]], [[Co/Nintendo/Game/Super Mario]], or later [[Game/Board/Catan]] when the page tracks the playable work/system.
+		- **Published and folk games** — the entity does not need a software release, publisher page, or root [[Game]] namespace; the test is whether the page is about the playable game.
+		- **Not game types** — genres, mechanics, families, and reusable design categories belong to [[Logseq/Entity/Game/Type]] instead.
+	- ## Relationship to other entity types
+		- **[[Logseq/Entity/Game/Type]]** — Use for reusable taxonomic categories like [[Game/Video/Platformer]], not for individual game titles.
+		- **[[Logseq/Entity/software-project]]** — Use when the page is primarily about shipping or maintaining software as a tool, even if it is game-adjacent infrastructure such as an engine or mod SDK.
+		- **[[Logseq/Entity/book]]** — Use for an RPG rulebook, boxed manual, or strategy guide when the page’s primary identity is the publication; use game when the page is about the playable system.
+		- **[[Logseq/Entity/concept]]** — Use for cross-domain explanations or general ideas; keep game entities game-first and cross-link concepts when useful.
+	- ## Finding and deduplicating
+		- Search for an existing page before creating a new game entity. Stop early only when a result is clearly the same playable work/system.
+		- Search namespace-flexibly: exact expected page title; aliases; distinctive title, franchise, designer, publisher, or rules phrases; page-body mentions; and related creator, company, or game branches. Do not assume every game entity lives under the [[Game]] namespace.
+		- Classify as: **existing**, **similar** (needs human judgment), **new**, or **blocked**.
+	- ## Frontmatter
+		- On instances, set **`logseq-entity::`** [[Logseq/Entity/Game]] so backlinks list individual game entities.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- Use garden-wide Logseq Flavored Markdown and naming conventions by reference; this type page only adds game-specific semantics.
+		- Lean hub: H1 with the game title, **Overview**, optional **Rules / Components / History / Versions / Links** as the topic warrants.
+	- ## Examples in this garden
+		- [[Co/Nintendo/Game/Super Mario]]
+		- [[Game/Video/Cookie Clicker]]

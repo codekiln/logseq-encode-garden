@@ -8,12 +8,15 @@ Use these pages when they exist:
 
 - `[[Logseq/Entity]]` as the registry of entity types in the garden
 - `[[Logseq/Entity/<Type>]]` as the canonical page for a specific entity type
+- `[[Logseq/Frontmatter]]` as the shared convention page for page-level attributes
 
 `<Type>` is **whatever page titles exist** under the `Logseq/Entity/` namespace in **this** garden (for example a page titled `Logseq/Entity/software-project`—the exact spelling and depth are garden-defined).
 
 ## Default Interpretation
 
 Treat `[[Logseq/Entity/<Type>]]` as the canonical reference point for that type in the current garden.
+
+Nested entity-type pages may represent narrower taxonomic scopes under a broader type. For example, a garden may use `[[Logseq/Entity/Game]]` for individual game instances and `[[Logseq/Entity/Game/Type]]` for game genres or mechanics. Treat that relationship as implicit unless the graph explicitly defines a property or workflow for it; do not add `extends::` or similar fields on behalf of the garden.
 
 That page should ideally describe:
 
@@ -27,7 +30,20 @@ That page should ideally describe:
 - inference policy
 - example entities
 - page template guidance
-- operational workflows that belong in the garden (imports, hub or index updates, discovery or search patterns, CLI notes)—not in Rulesync skill `references/`
+- type-specific workflows that are part of the entity model itself, such as required index updates or discovery/search patterns
+
+Prefer references to garden-wide rules over copying shared conventions into every type page. Type pages should focus on what is specific to recognizing, deduplicating, and shaping that entity type.
+
+## Graph Page Hygiene
+
+Entity type pages are graph documentation, not agent documentation:
+
+- Do not write Rulesync, skill, slash-command, generated-file, repo-path, or agent workflow references into Logseq entity pages.
+- Do not add `Agents`, `garddiff`, journal-update, or source-block sections to entity type pages. Those are garden-wide operational rules handled outside the type page.
+- Do not wrap actual `[[Page]]` wikilinks in backticks. Keep them clickable in graph pages.
+- Use declarative garden voice, not second-person voice.
+- Keep shared frontmatter semantics on `[[Logseq/Frontmatter]]`; type pages should state only the entity marker and any type-specific frontmatter.
+- Follow garden naming conventions for new entity type page names: singular and capitalized where natural, with plural/contextual forms handled through `alias::` when needed.
 
 ## Narrow Rulesync skills (repo-specific)
 
@@ -61,8 +77,9 @@ When working with an entity type:
 
 1. Read `[[Logseq/Entity]]` if it exists to discover the garden's entity types.
 2. Read `[[Logseq/Entity/<Type>]]` for the type-specific rules.
-3. If that page points to a dedicated template page, read that too.
-4. Only fall back to `.rulesync/config/logseq-entity.md` when the Logseq entity pages do not yet exist or are incomplete.
+3. Read `[[Logseq/Frontmatter]]` when it exists for shared page-level attributes.
+4. If that page points to a dedicated template page, read that too.
+5. Only fall back to `.rulesync/config/logseq-entity.md` when the Logseq entity pages do not yet exist or are incomplete.
 
 ## Initializing entity pages in the graph
 
@@ -72,5 +89,6 @@ When the garden does not yet have complete Logseq-native entity pages:
 2. Use `.rulesync/config/logseq-entity.md` for shared fallback text (resolution order, reporting) when present—not for a full per-type rule dump.
 3. Create or update `[[Logseq/Entity]]` as the registry.
 4. Create or update `[[Logseq/Entity/<Type>]]` for the initial supported types.
-5. Keep template guidance on the type page by default.
-6. Keep the repo config file short; per-type rules belong on the graph pages above.
+5. Create or update `[[Logseq/Frontmatter]]` when shared page-level conventions are needed.
+6. Keep template guidance on the type page by default.
+7. Keep the repo config file short; per-type rules belong on the graph pages above.
