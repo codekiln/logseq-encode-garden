@@ -1,10 +1,12 @@
 logseq-entity:: [[Logseq/Entity/book]]
-alias:: [[Book/Metamagical Themas]], [[Book/Metamagical Themas: Questing for the Essence of Mind and Pattern]]
+alias:: [[Book/Metamagical Themas]]
 created-by:: [[Person/Douglas Hofstadter]]
 published:: 1985
 isbn:: 0-465-04566-9
 
 - # [Metamagical Themas: Questing for the Essence of Mind and Pattern](https://en.wikipedia.org/wiki/Metamagical_Themas)
+	- ## [[My Notes]]
+		- gifted this as a kid, read parts of it, but never read it cover to cover.
 	- ## About
 		- Essay collection by [[Person/Douglas Hofstadter]], first published in 1985 by Basic Books.
 		- Collects his early-1980s *Scientific American* columns on mind, pattern, language, art, logic, self-reference, analogies, memes, cooperation, and superrationality.
