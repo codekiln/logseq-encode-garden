@@ -1,9 +1,26 @@
 alias:: [[Agentic CLI Principles]]
 
 - # Agentic CLI Principles
-	- ## Project Description
-		- I want to make a git repository to help foster the best practices / principles of the CLIs.
-		- It should contain a knowledge garden that is maintained by agents who research and evaluate precedents.
+	- ## Project Overview
+		- ### [[Thesis]]
+			- Engineers shouldn't design each new [[CLI/Tool]] to be a unique snowflake in terms of its structure, flags, documentation, etc. Instead, engineers and [[AI/Agent]]s should maintain a standard for creating CLIs that measurably improves both human and AI performance at using that CLI.
+		- ### [[Goal]]
+			- #### IF
+				- A Developer is making a new CLI tool and wants to optimize for the [[DX]] and [[AI/Agent/AX]] AI agents that will use that
+			- #### WHEN
+				- the developer points their [[Agentic Coding Tool]] at the project's repo
+			- #### THEN
+				- the coding agent will
+					- ##### design a CLI that follows the standard
+						- which is specifically designed to measurably help agents as well as humans use that CLI
+						- familiarity with one CLI that follows the standard should help agents and humans use all CLIs that follow the standard
+					- ##### measure the designed CLI against its standard
+						- evaluate the adherence to and the performance of agent usage of the CLI
+	- ## Project Elaboration
+		- A git repository should exist that helps foster best practices / principles of the CLIs.
+		- It should contain a [[Knowledge Garden]] maintained by [[AI Agents]] that research and evaluate precedents for agentic CLIs.
 			- The precedents should include
 				- 1 - case studies of existing CLIs
-				- 2 -
+				- 2 - other [[Standards]] related to CLIs
+			-
+		-

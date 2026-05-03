@@ -32,6 +32,7 @@ The garden may eventually model many entity types. Types with Logseq-native SOP 
 - person — see `[[Logseq/Entity/person]]`
 - book — see `[[Logseq/Entity/book]]`
 - standard — see `[[Logseq/Entity/standard]]`
+- game — see `[[Logseq/Entity/Game/Type]]`
 
 Other entity types may be added here later without changing the skill itself. Prefer the `[[Logseq/Entity/<Type>]]` pages over this file when both exist.
 
@@ -359,6 +360,39 @@ Search in order: exact title; `alias::` match; distinctive spec phrases; normati
 ### Legacy
 
 - Do not bulk-add `logseq-entity::` to every page that mentions a standard unless the author requests migration.
+
+## Entity Type: game
+
+Authoritative documentation: `[[Logseq/Entity/Game/Type]]`. This section is bootstrap-only.
+
+### Recognition
+
+Strong signals:
+
+- Page title under `Game/<Medium>/...` (e.g. `Game/Video/...`, or later `Game/Board/...`) with primary identity **play**, **rules**, **genre**, or **game hobby stack** (not neutral dev tooling).
+- Notes about a specific title, a genre or mechanic hub, or game-first gear/software framed as part of playing games.
+
+### Canonical Naming
+
+- Prefer `[[Game/<Medium>/<Short name>]]` — disk `Game___<Medium>___<Short name>.md` (triple underscore between namespace segments).
+- Use **Medium** to disambiguate: **Video**, **Board**, **Card**, **Tabletop**, **Sport**, etc. Do not file non-video games under `Game/Video` just because that branch exists.
+- Use singular short names where natural.
+
+### Search and dedup
+
+Search in order: exact `Game___*.md` path; `alias::` match; distinctive phrases in body; siblings under the same `Game/<Medium>` branch. Classify: existing, similar, new, blocked.
+
+### Frontmatter
+
+- `logseq-entity:: [[Logseq/Entity/Game/Type]]` on instances.
+- Optional `alias::`, `see-also::`, `via::` per type page.
+- Never modify `tags::` on existing pages without explicit human instruction.
+
+### Relationship to other types
+
+- **software-project** — when the page is mainly about shipping or using software as a tool, not playing or cataloging games.
+- **book** — publications (e.g. RPG hardcovers) may be **book**; the **played system** hub stays **game** when that is the page’s primary job.
+- **concept** — cross-domain explanation pages; **game** stays rules- and play-first on the `Game/...` tree unless the page is really a general paradigm article.
 
 ## Reporting Contract
 

@@ -1,0 +1,30 @@
+- # Game
+	- This page is the standard operating procedure for **game** entities: first-class pages whose primary identity is a **game** in the everyday sense—something with **rules**, **pieces or verbs**, and **play**—across **any medium**. That includes digital **video** games, **board** and **card** games, **tabletop RPGs** as systems you run at the table, **party** or **children’s** games, **sport** when you are treating it as a **game system** (rules, positions, seasons) rather than as general fitness or news, and similar. It is **not** limited to `[[Game/Video/...]]`.
+	- ## What counts as an instance
+		- **Titles** — a specific published or folk game you track as a hub (e.g. `[[Game/Video/Cookie Clicker]]`; later e.g. `[[Game/Board/Catan]]` if you add that tree).
+		- **Genres, families, and mechanics** — reusable design lenses (e.g. `[[Game/Video/Platformer]]` for a **video**-game genre hub).
+		- **Play-adjacent game stack** — engines, controllers, digital tables, etc., when the page is written as **game hobby** infrastructure; if the page is really neutral **developer tooling**, prefer **software-project** instead.
+	- ## Canonical naming and links
+		- Prefer a **`[[Game/<Medium>/...]]`** path where **Medium** disambiguates how the thing is played: **`Video`**, **`Board`**, **`Card`**, **`Tabletop`**, **`Sport`**, etc. The garden already uses **`[[Game/Video/...]]`**; add sibling segments under **`[[Game]]`** when you need them—do not force non-video games under **`Video`**.
+		- Use **singular** short leaf names where it reads naturally (`Platformer` as a genre hub, not `Platformers`).
+		- Prefer **`alias::`** for alternate surface titles without creating a second canonical file.
+	- ## Relationship to other entity types
+		- **software-project** — Use when the main story is shipping or maintaining **software as a tool** (repo, CLI, library) even if it is a game engine or mod SDK; use **game** when the page is primarily **about playing, cataloging, or designing games**.
+		- **book** — A **RPG rulebook** or **boxed manual** qua **publication** may be a **book** entity; a page that is primarily **the game system as played** still belongs here. When both fit, pick the type that matches the page’s **primary** job and cross-link the other.
+		- **concept** — Cross-domain explanations (Diataxis); a genre page can stay **game** when it is **hobby- and rules-first** on the **`Game/...`** tree. Promote to **concept** when the page is really a **general paradigm** article, not a game-catalog hub.
+	- ## Finding and deduplicating
+		- Search in order: exact `Game___*.md` title matching the intended path; `alias::` match; distinctive title or designer phrases in body; sibling pages under the same **`[[Game/<Medium>]]`** branch. Classify: existing, similar, new, or blocked.
+	- ## Frontmatter
+		- On instances, set **`logseq-entity::`** to a link to **this** entity-type page so backlinks list all game entities regardless of medium.
+		- Never modify, add, or remove **`tags::`** on existing pages unless a human explicitly overrides garden tagging rules.
+		- Optional: **`alias::`**, **`see-also::`** (strongest tie first; skip links that only restate parent namespace context), **`via::`** (what prompted creating or heavily revising the page).
+	- ## Page shape
+		- Logseq Flavored Markdown: bullets, headings as bullets, tab nesting, no blank lines between bullets.
+		- Lean hub: H1 with the game or topic title, **Overview**, optional **Rules / Components / Examples / Links** (publisher, BGG, Wikipedia, store) as the topic warrants.
+	- ## Examples in this garden
+		- [[Game/Video/Platformer]] (genre; **video** medium)
+		- [[Game/Video/Cookie Clicker]] (title; **video** medium)
+	- ## Agents — journal (garddiff)
+		- After creating or materially updating any **instance** of this type under `pages/`, add **link-only** bullets to **`journals/YYYY_MM_DD.md`**: new pages today under **`[[Filed]]`**, touched existing pages under **`[[Updated]]`**—never both for the same **`[[Page]]`** the same calendar day. Follow **`[[Logseq/Journal/Section/Garddiff]]`** and **`logseq-journal-updates`**. Skill **logseq-entity** → **`entity-session-journal`** reference.
+	- ## Source blocks
+		- Do not move source blocks from the journal or source page by default; move or transplant only when explicitly asked.
