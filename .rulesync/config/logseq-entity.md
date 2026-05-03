@@ -30,6 +30,8 @@ The garden may eventually model many entity types. Types with Logseq-native SOP 
 - concept — see `[[Logseq/Entity/concept]]`
 - term — see `[[Logseq/Entity/term]]`
 - person — see `[[Logseq/Entity/person]]`
+- book — see `[[Logseq/Entity/book]]`
+- standard — see `[[Logseq/Entity/standard]]`
 
 Other entity types may be added here later without changing the skill itself. Prefer the `[[Logseq/Entity/<Type>]]` pages over this file when both exist.
 
@@ -286,6 +288,77 @@ Search in order: exact `Person___<Name>.md` hub; `alias::` match; partial name/h
 ### Legacy
 
 - Older person hubs may omit `logseq-entity::` until backfilled. Child pages under `Person/...` are not bulk-marked as person.
+
+## Entity Type: book
+
+Authoritative documentation: `[[Logseq/Entity/book]]`. This section is bootstrap-only.
+
+### Recognition
+
+Strong signals: a published monograph or trade book you will cite repeatedly; stable title; author known; ISBN or major publisher page optional.
+
+### Canonical naming
+
+- Canonical hub: `[[Book/Title]]` — disk `Book___Title.md`. Prefer the usual citation title; subtitles after a colon are fine when that is how the work is named.
+
+### Search and dedup
+
+Search in order: exact `Book___<Title>.md`; `alias::` match; title keywords in `pages/Book___*.md`; author + distinctive phrase in body.
+
+### Frontmatter
+
+- On book hub pages: `logseq-entity:: [[Logseq/Entity/book]]`.
+- Optional `created-by:: [[Person/...]]` when the author person hub exists or is created alongside the book.
+- Never modify `tags::` on existing pages without explicit human instruction.
+
+### Page shape
+
+- LFM; lean hub: title, about, links (Wikipedia, publisher, author).
+
+### Legacy
+
+- Older `Book/...` pages may omit `logseq-entity::` until backfilled.
+
+## Entity Type: standard
+
+Authoritative documentation: `[[Logseq/Entity/standard]]`. This section is bootstrap-only.
+
+### Recognition
+
+Strong signals:
+
+- Normative or canonical spec URL (versioned doc, RFC, official recommendation)
+- Page purpose is **the named convention or specification** (what products and docs conform to)
+- Vocabulary: *specification*, *RFC*, *semantic conventions*, *conforms to*, *this document defines*
+
+### Canonical Naming
+
+- Prefer the **name the ecosystem uses** for the standard (short top-level or namespaced title consistent with sibling pages in that domain).
+- Use `alias::` for official long titles, acronyms, and former names.
+
+### Search and dedup
+
+Search in order: exact title; `alias::` match; distinctive spec phrases; normative URL in `pages/` body; RFC or standard number. Classify: existing, similar, new, blocked.
+
+### Frontmatter
+
+- `logseq-entity:: [[Logseq/Entity/standard]]` on instances.
+- Optional `see-also::` for maintainer **organization**, related **software-project** implementations, adjacent **standard** pages (**strongest tie first**).
+- Never modify `tags::` on existing pages without explicit human instruction.
+
+### Page shape
+
+- LFM; lean hub: **Normative links**, short **Scope**, optional **Maintainer** (link **organization**), optional **Implementations** (link **software-project**).
+
+### Relationship to other types
+
+- **organization** — the body that publishes or maintains the standard, not the standard text itself.
+- **concept** — explanation-first pages; use **standard** when anchoring the normative rules is the point.
+- **software-project** — validators, reference implementations, and tools.
+
+### Legacy
+
+- Do not bulk-add `logseq-entity::` to every page that mentions a standard unless the author requests migration.
 
 ## Reporting Contract
 
