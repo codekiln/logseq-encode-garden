@@ -89,7 +89,7 @@ id:: 69d91948-c0e5-413a-85f4-279b1635a27f
 				- people figure out what works in [[Word/of/Mouth]]
 				- every time we think we have a pattern, then boom, there's another idiom that shows up.
 				- think about autonomous tools that go and submit [[PR]]s.
-				- [[AI/Agent/Agentic/Engineering/Autonomous]] autonomous agents - top companies 15% are autonomous [[PR]]s, last year it was 0.x%! transfor
+				- [[AI/Agent/Agentic/Engineer/ing/Autonomous]] autonomous agents - top companies 15% are autonomous [[PR]]s, last year it was 0.x%! transfor
 				- until we see that second order derivative change all cards are on the table
 			- [[Person/Brian Elliott]]
 				- there are mid-market pure bespoke tools

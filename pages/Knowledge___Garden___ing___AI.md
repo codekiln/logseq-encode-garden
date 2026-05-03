@@ -11,3 +11,4 @@ tags:: [[Term]]
 		- This knowledge garden uses [[CursorAI/Project Rules]] to help assist with knowledge gardening
 			- [[CursorAI/Project Rule/diataxis-how-to.mdc]]
 			- [[CursorAI/Project Rule/logseq-flavored-markdown.mdc]]
+		- [[Person/Yuxiang Lin/GitHub/Understand-Anything]] — third-party OSS that turns a repo or wiki into an interactive knowledge graph for exploration and Q&A alongside coding agents.

@@ -1,4 +1,4 @@
-- # Rulesync Beads skill abstraction
+# Rulesync Beads skill abstraction
 	- **In [[Beads/Todo]]:** this page is filed here as a reminder to capture **one portable story** for [[Beads]] / `[[bd]]` across [[Agentic Engineering Tools]], instead of re-deriving setup from each vendor doc every time.
 	- ## Problem
 		- Official docs describe **per-IDE / per-agent** wiring so agents know how to use **`bd`** (hooks, plugins, CLI setup, etc.). [Beads — IDE setup](https://steveyegge.github.io/beads/getting-started/ide-setup) is the hub for that.
@@ -12,7 +12,7 @@
 		- Optional stretch: a **progressive-disclosure skill** (see **`[[rulesync/How To/Write Skills With Progressive Disclosure]]`**) so lightweight installs only see a checklist, and deep references stay in `references/`.
 	- ## Prior art in this graph
 		- [[2026-03-17 Tue]] journal: **`bd setup claude`**, the beads **[[Claude Code/Plugin]]**, and **`bd prime`** on **[[Claude Code/Hook/SessionStart]]** / **[[Claude Code/Hook/PreCompact]]**—useful pattern, **Claude-specific**; the abstraction should generalize the *intent* (agent always has Beads context + consistent CLI entry points) across tools.
-		- [[2026-03-25 Wed]] journal: **[[Beads]]** / **`[[bd]]`** with **[[tmux]]** and **[[Parallel]]** **[[AI/Agent/Agentic/Engineering]]**—orthogonal to IDE registration, but relevant to “many agents, one task graph.”
+		- [[2026-03-25 Wed]] journal: **[[Beads]]** / **`[[bd]]`** with **[[tmux]]** and **[[Parallel]]** **[[AI/Agent/Agentic/Engineer/ing]]**—orthogonal to IDE registration, but relevant to “many agents, one task graph.”
 	- ## Done when
 		- A **generated** rule/skill lands in the targets you care about (Cursor, Claude Code, Codex CLI, …) from **rulesync**, and agents reliably **register** or **reuse** Beads per [IDE setup](https://steveyegge.github.io/beads/getting-started/ide-setup) without one-off instructions in each session.
 	- ## Related

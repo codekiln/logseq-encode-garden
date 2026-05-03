@@ -1,72 +1,69 @@
 alias:: [[Attack Lifecycle]], [[Kill Chain]], [[Attack Chains]]
-- # Attack Chain (Higher-Education Context)
-	- In higher-education cybersecurity programs run by **Trustwave**, an **attack chain** (also called an *attack lifecycle* or *kill chain*) is the sequence of steps an attacker takes to compromise a university environment.
-	- Security teams use this model to understand where they can detect or stop an attack.
-	- It is conceptually similar to the Lockheed Martin Cyber Kill Chain and overlaps with the MITRE ATT&CK model.
-	- ## Typical Trustwave Attack Chain (Higher-Ed Context)
+- # Attack Chain
+	- An **attack chain** (also called an *attack lifecycle* or *kill chain*) is the **ordered sequence of steps** an adversary takes to compromise and operate inside an environment—from first reconnaissance through impact.
+	- Security teams use this framing to decide **where to detect, contain, or disrupt** an attack, and to align controls and playbooks to observable behavior.
+	- It is conceptually similar to the **Lockheed Martin Cyber Kill Chain** and overlaps with **MITRE ATT&CK** (ATT&CK organizes tactics and techniques; kill-chain models emphasize **ordering** and breakpoints).
+	- ## Typical stages (generic pattern)
 		- ### 1. Reconnaissance
-			- The attacker gathers information about the university.
+			- The attacker gathers information about the target organization and its attack surface.
 			- Examples:
-				- Scraping faculty and staff emails from public pages
-				- Scanning campus IP ranges
-				- Looking for exposed services such as VPN, web apps, and SSH
+				- Collecting employee or role emails from public sources
+				- Scanning external IP ranges and exposed services
+				- Reviewing leaked credentials, code, or metadata for foothold hints
 		- ### 2. Initial Access
-			- The attacker gains a foothold.
-			- Common higher-ed examples:
-				- Phishing faculty or students
-				- Exploiting vulnerable web applications
-				- Compromising VPN credentials
+			- The attacker gains a foothold in the environment.
+			- Examples:
+				- Phishing or social engineering
+				- Exploiting vulnerable internet-facing applications
+				- Stolen or guessed credentials (including VPN or IdP abuse)
 		- ### 3. Execution
 			- Malicious code runs on a compromised system.
 			- Examples:
-				- Opening a malicious attachment
-				- Running a PowerShell payload
-				- Installing a dropper or loader
+				- Malicious attachments or documents
+				- Scripting runtimes (e.g. PowerShell) used as loaders
+				- Droppers that fetch second-stage payloads
 		- ### 4. Persistence
-			- The attacker ensures continued access to the environment.
+			- The attacker keeps access across reboots, credential rotation, or short-term cleanup.
 			- Examples:
-				- Creating new accounts
-				- Installing scheduled tasks
-				- Adding SSH keys
+				- New local or cloud accounts
+				- Scheduled tasks, services, or cron jobs
+				- SSH keys, WMI subscriptions, or agent implants
 		- ### 5. Privilege Escalation
-			- The attacker gains higher privileges.
+			- The attacker obtains higher privileges than the initial foothold.
 			- Examples:
-				- Exploiting local vulnerabilities
-				- Dumping credentials from memory
-				- Stealing admin tokens
+				- Local privilege-escalation exploits
+				- Credential theft from memory or stores
+				- Abuse of tokens, Kerberos, or cloud IAM bindings
 		- ### 6. Lateral Movement
-			- The attacker moves across campus systems.
+			- The attacker moves from system to system inside the estate.
 			- Examples:
-				- Accessing research clusters
-				- Pivoting into administrative systems
-				- Using stolen credentials to access file shares
-		- ### 7. Data Access / Exfiltration
-			- The attacker targets valuable assets.
-			- Common university targets:
-				- Research data
-				- Student records
-				- Financial data
-				- Intellectual property
+				- Authenticated access to servers or workstations via stolen creds
+				- Remote admin tools and remote execution
+				- Pivoting through jump hosts, VDI, or trust relationships
+		- ### 7. Data access / exfiltration
+			- The attacker reaches valuable data or prepares to remove it.
+			- Examples:
+				- Access to regulated or sensitive data (PII, PHI, financial records)
+				- Intellectual property, source code, or model weights
+				- Staging archives before exfiltration over allowed channels
 		- ### 8. Impact
-			- The final stage of the attack.
+			- The adversary achieves their end goal or visible harm.
 			- Examples:
-				- Data theft
-				- Ransomware deployment
-				- Destruction of research datasets
-	- ## Why Trustwave Teaches Attack-Chain Thinking
-		- Train SOC analysts to recognize attacker behavior.
-		- Map detections to stages of compromise.
-		- Design defense-in-depth controls.
-		- Support incident response investigations.
-	- ## Stage-to-Detection Mapping (Example)
-		- Initial access: Email security and phishing detection
-		- Execution: EDR alerts
-		- Lateral movement: Abnormal authentication logs
-		- Exfiltration: DLP or network monitoring
-	- ## Why It Matters in Higher Education
-		- Universities are high-value targets because they often have:
-			- Open networks
-			- Large user populations (students and researchers)
-			- Valuable research IP
-			- Decentralized IT
-		- Attack-chain thinking helps defenders interrupt attacks before they reach sensitive data.
+				- Large-scale data theft
+				- Ransomware or wiper deployment
+				- Sabotage of backups or critical services
+	- ## Why defenders use attack-chain thinking
+		- Train analysts to recognize **sequences** of behavior, not isolated alerts.
+		- Map detections and telemetry to **stages** so gaps are visible.
+		- Design **defense in depth** so failure at one layer does not imply total loss.
+		- Structure **incident response**: contain footholds, cut persistence, then scope blast radius.
+	- ## Stage-to-detection mapping (examples)
+		- Initial access: email security, phishing controls, secure remote access posture
+		- Execution: EDR, script control, application control
+		- Lateral movement: authentication anomalies, tiered-admin hygiene, network segmentation signals
+		- Exfiltration: DLP, egress monitoring, SaaS audit logs, large transfer baselines
+	- ## Why it matters in practice
+		- Many organizations combine **open collaboration** (partners, contractors, BYOD), **heterogeneous systems**, and **high-value data**, which widens the attack surface and rewards patient adversaries.
+		- Attack-chain framing helps defenders **interrupt** campaigns earlier—before impact—by prioritizing breakpoints that match their architecture and risk.
+	- ## Related: shipped-software defensive tooling
+		- For **product security** classes (composition vs static vs dynamic testing vs dependency bots), see **[[Security/DevSecOps/Taxonomy]]**—orthogonal to kill-chain **SOC** framing above, but useful when mapping **CVE** intake to engineering workflows.

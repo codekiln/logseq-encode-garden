@@ -2,7 +2,7 @@ logseq-entity:: [[Logseq/Entity/question]]
 
 - # Is there a way to export a transcript of a conversation to a file in [[OpenAI/Codex/CLI]]?
 	- ## My Notes
-		- [[AI/Agent/Agentic/Engineering/Tool/Idea/26/04/Abstraction Layer over agentic CLI tools]]
+		- [[AI/Agent/Agentic/Engineer/ing/Tool/Idea/26/04/Abstraction Layer over agentic CLI tools]]
 	- ## Answer
 		- [[AI/Response]]
 			- **There is no single “export this chat to `transcript.md`” command** for the interactive TUI on the main `codex` help surface, but you can get **machine-readable logs** and **on-disk session artifacts** depending on how you run Codex.

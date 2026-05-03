@@ -1,0 +1,29 @@
+tags:: [[mise]]
+date-created:: [[2026/03/02]]
+- # [Top 10 Features in Mise You're Not Using — @jdx](https://jdx.dev/posts/2026-03-02-10-mise-features/)
+	- Author: **[[Person/Jeff Dickey]]** · Site: [jdx.dev](https://jdx.dev/)
+	- ## Summary
+		- Round-up of **less obvious [[mise]]** capabilities: incremental tasks, extra install backends, DotSlash-style tool stubs, typed task args, lockfiles, supply-chain defaults, env profiles, shell aliases, experimental prepare/monorepo tasks, plus pointers to **[[fnox]]**, **hk**, and **pitchfork**.
+	- ## 1. Task `sources` and `outputs`
+		- Tasks can declare input/output globs; if outputs are newer than sources, the task is skipped. `outputs = { auto = true }` can hash outputs when `sources` is set instead of listing every artifact.
+	- ## 2. `github`, `http`, and `s3` backends
+		- **`github:`** installs from GitHub releases with platform inference (quick one-offs; **aqua** often better for OSS with odd asset layouts). **`http:`** templated URLs for arbitrary binaries. **`s3:`** (experimental) for private buckets / MinIO-style endpoints.
+	- ## 3. Tool stubs (DotSlash)
+		- Self-contained scripts (inspired by Meta’s **[[DotSlash]]**) that download and run a tool on first use; shebang `#!/usr/bin/env -S mise tool-stub`, generate with `mise generate tool-stub`, optional `--lock` (URLs + checksums) and `--bootstrap` (install mise if missing).
+	- ## 4. Typed task arguments with `usage`
+		- TOML `usage = '''...'''` blocks give real CLI args, defaults, `choices`, and completions; `mise run <task> --help` and tab completion follow from the spec.
+	- ## 5. Lockfiles (`mise lock`)
+		- Pins versions, checksums, and URLs per platform so installs avoid GitHub API resolution (rate limits / token hassle); `--locked` in CI fails when the lock is missing or stale.
+	- ## 6. Supply chain security
+		- Most registry tools install via **[[aqua]]** with checksums, Cosign, SLSA, GitHub attestations, Minisign, etc.; remaining plugin-backed tools are largely forked under **mise-plugins** org control.
+		- Broader **DevSecOps product** framing (SCA vs suites vs update bots): **[[Security/DevSecOps/Taxonomy]]**.
+	- ## 7. Environment profiles (`MISE_ENV`)
+		- Layer `mise.<env>.toml` on top of `mise.toml`; `MISE_ENV` cannot be set from `mise.toml` itself—use **`.miserc.toml`** for early defaults (e.g. `env = ["development"]`).
+	- ## 8. Shell aliases
+		- Project-scoped `[shell_alias]` entries that appear/disappear with `cd` (bash, zsh, fish).
+	- ## 9. `mise prepare` [experimental]
+		- Detects lockfiles / outputs and installs deps when stale; built-in providers for npm/yarn/pnpm/bun/go/pip/poetry/uv/bundler/composer; can hook `auto = true` before `mise run` / `mise exec`.
+	- ## 10. Monorepo tasks [experimental]
+		- Wildcard task addresses like `mise //...:test`; opt-in with `experimental_monorepo_root = true` in root `mise.toml`.
+	- ## Bonus ecosystem (from post)
+		- **[[fnox]]**, **[hk](https://github.com/jdx/hk)** (git hooks, parallel check/fix locking), **[pitchfork](https://github.com/jdx/pitchfork)** (dev service daemons with ready checks and dependencies).

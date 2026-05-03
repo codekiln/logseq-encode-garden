@@ -17,6 +17,9 @@ alias:: [[GitHub Codespaces]], [[GitHub/Codespaces]], [[Codespaces]], [[Codespac
 		- Supports [[Dev Container]] configurations
 		- Settings Sync and dotfiles for personalization
 		- Built-in source control
+	- ## Listing codespaces
+		- **CLI**: `gh codespace list` (aliases `gh codespace ls`, `gh cs ls`) lists codespaces for the authenticated user. Use `-R owner/repo` to restrict to one repository; `--json` with optional `-q` / `-t` for scripted output (see `gh help formatting`); `-L` to change the row limit (default 30). `--web` opens the list at [github.com/codespaces](https://github.com/codespaces) instead of printing to the terminal.
+		- **Org billing**: Organization admins can list codespaces billed to the organization with `--org` (and `--user` when applicable); see `gh codespace list --help`.
 	- ## Machine Types
 		- Available specifications range from 2 cores to 32 cores
 		- Options may be limited by organizational policies or repository requirements
@@ -139,6 +142,7 @@ alias:: [[GitHub Codespaces]], [[GitHub/Codespaces]], [[Codespaces]], [[Codespac
 		- [About Billing](https://docs.github.com/en/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces)
 		- [Changing Machine Type](https://docs.github.com/en/codespaces/customizing-your-codespace/changing-the-machine-type-for-your-codespace)
 	- ## Related
+		- [[GitHub/Codespace/Image/Universal]] - Published **universal** dev container image source ([`devcontainers/images` `src/universal`](https://github.com/devcontainers/images/tree/main/src/universal))
 		- [[DevContainer]] - Configuration format used by Codespaces
 		- [[Claude Code/Devcontainer]] - Claude Code's dev container setup
 		- [[VSCode]] - Primary editor interface

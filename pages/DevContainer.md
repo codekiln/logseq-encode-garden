@@ -13,6 +13,7 @@ title:: DevContainer
 	- ## Reference
 		- [[DevContainer/Ref/Key]] - Configuration keys for `devcontainer.json`
 		- [[DevContainer/Ref/Variable]] - Variables available in `devcontainer.json`
+		- [[GitHub/Codespace/Image/Universal]] - Source tree for the published **universal** image (`devcontainers/images` `src/universal`), a common [[GitHub/Codespace]] base image
 	- ## Language-Specific Configuration
 		- [[DevContainer/Rust/How To/Configure Debugging]] - Configuring Rust debugging with ptrace
 	- ## Competitors and Interacting Standards

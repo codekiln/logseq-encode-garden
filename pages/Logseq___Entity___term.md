@@ -14,7 +14,7 @@
 		- Classify as: **existing**, **similar**, **new**, or **blocked**.
 	- ## Frontmatter
 		- **`logseq-entity::`** on instances must point at **this** entity-type page.
-		- **`tags:: [[Term]]`** often already present; **do not remove** existing tags. Adding **`logseq-entity::`** is **additive** to the tagging scheme.
+		- The `tags:: [[Term]]` are often already present; **do not remove** existing tags. Adding **`logseq-entity::`** is **additive** to the tagging scheme.
 		- Optional **`see-also::`**, **`via::`** — same semantics as on [[Logseq/Entity]] (see-also for related reading; via for provenance only).
 		- Optional extra tags ([[Abbreviation]], [[Acronym]], topic tags) should mirror sibling pages in the same namespace.
 	- ## Page shape
