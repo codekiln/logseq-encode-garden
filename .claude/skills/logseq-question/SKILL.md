@@ -16,13 +16,13 @@ Use this skill when the user wants to **capture a single answerable question** i
 
 A **question** is one **entity type** in this garden. Shared rules apply:
 
-- **Ontology and instance SOP:** `[[Logseq/Entity/question]]` (`pages/Logseq___Entity___question.md`).
-- **Registry and fallbacks:** `[[Logseq/Entity]]` and `.rulesync/config/logseq-entity.md` (section **question**).
+- **Entity type SOP:** `[[Logseq/Entity/question]]` (`pages/Logseq___Entity___question.md`).
+- **Registry and shared fallback:** `[[Logseq/Entity]]`, then `.rulesync/config/logseq-entity.md` only when graph pages are missing or insufficient (that file is short graph-first fallback text, not per-type sections).
 - **Search, dedup, and “existing / similar / new / blocked”:** skill **logseq-entity** — read [references/configuration-contract.md](../logseq-entity/references/configuration-contract.md) and [references/entity-search-and-dedup.md](../logseq-entity/references/entity-search-and-dedup.md) when executing dedup (Step 2 of the workflow).
 
 This skill adds **question-specific** filing steps: namespace/`___Q___` naming, journal bullet, Answer section shape, and the research pass. Do not duplicate the full entity-type definition; treat **`[[Logseq/Entity/question]]`** as authoritative for frontmatter and page shape.
 
-For **non-question** entity work (software, company, person hubs, ontology pages, etc.), skill **logseq-entity** owns **garddiff** closeout (**Filed** / **Updated** on today’s journal). Follow that skill’s **Graph edits and today’s journal** section and [references/entity-session-journal.md](../logseq-entity/references/entity-session-journal.md)—journal discipline is **not** exclusive to this question skill.
+For **non-question** entity work (other types per `[[Logseq/Entity]]`, registry edits, etc.), skill **logseq-entity** owns **garddiff** closeout (**Filed** / **Updated** on today’s journal). Follow that skill’s **Graph edits and today’s journal** section and [references/entity-session-journal.md](../logseq-entity/references/entity-session-journal.md)—journal discipline is **not** exclusive to this question skill.
 
 ## Procedure
 

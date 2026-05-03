@@ -1,6 +1,6 @@
 # Entity-Type Initialization
 
-Use this reference when the user wants to bootstrap or refresh the garden's entity ontology, such as:
+Use this reference when the user wants to bootstrap or refresh the garden's entity model in Logseq, such as:
 
 - `initialize entity types for this garden`
 - `help me figure out which entity types this garden should cover`
@@ -19,7 +19,7 @@ The fallback/bootstrap source should remain:
 
 - `.rulesync/config/logseq-entity.md`
 
-Do not invert that relationship. The fallback config can seed or support initialization, but the Logseq-native pages should remain authoritative once they exist.
+Do not invert that relationship. The repo file can seed shared process text and support initialization, but **per-type rules** should live on the Logseq type pages once they exist.
 
 ## RPI Workflow
 
@@ -32,7 +32,7 @@ Inspect the garden before proposing entity types.
 Look for:
 
 - existing `[[Logseq/Entity]]` or `[[Logseq/Entity/<Type>]]` pages
-- `.rulesync/config/logseq-entity.md` as bootstrap guidance
+- `.rulesync/config/logseq-entity.md` for shared fallback text when present
 - repeated page patterns, namespaces, aliases, and frontmatter conventions
 - journal entries and reference pages that repeatedly mention the same kinds of entities
 - existing template pages related to entity creation
@@ -46,7 +46,7 @@ Research outputs should include:
 
 ### Plan
 
-Propose the smallest useful initial ontology.
+Propose the smallest useful initial model.
 
 The plan should usually include:
 
@@ -68,7 +68,7 @@ Prefer starting with a small number of well-supported types instead of enumerati
 Pause after the plan when:
 
 - the evidence is ambiguous
-- multiple ontology shapes seem reasonable
+- multiple shapes for the registry seem reasonable
 - the garden has conflicting naming conventions
 
 ### Implement
@@ -77,16 +77,16 @@ Once the direction is clear:
 
 1. Create or update `[[Logseq/Entity]]` as the registry.
 2. Create or update the approved `[[Logseq/Entity/<Type>]]` pages.
-3. Keep ontology and instance-template guidance on the type page by default.
+3. Keep type definition and instance-template guidance on the type page by default.
 4. Create a dedicated `[[Logseq/Template/Entity/<Type>/Page]]` page only when the type page should point to a separately instantiable or significantly larger template.
-5. Keep `.rulesync/config/logseq-entity.md` as fallback/bootstrap support if it still adds value.
+5. Keep `.rulesync/config/logseq-entity.md` short—shared fallback only; do not recreate per-type catalogs in the repo file.
 
 ## Reporting
 
 After initialization work, report:
 
 - researched signals and candidate types
-- the proposed ontology shape
+- the proposed registry and type-page set
 - pages created or updated
-- fallback/bootstrap config that remains in effect
+- what remains in the repo fallback file (if anything beyond shared text)
 - open questions or deferred types

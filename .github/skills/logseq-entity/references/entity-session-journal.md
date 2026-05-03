@@ -2,7 +2,7 @@
 
 ## When this applies
 
-Whenever an agent **creates** a new file under `pages/` or **materially edits** an existing graph page while doing **logseq-entity** work—new or updated entity instances, prerequisite **person** or **company** hubs, `Logseq/Entity/<Type>` or registry edits, imports that add `logseq-entity::` / `created-by::` / `alias::`, etc.—the task is **not finished** until today’s journal records those graph moves.
+Whenever an agent **creates** a new file under `pages/` or **materially edits** an existing graph page while doing **logseq-entity** work—new or updated entity instances, prerequisite pages **when the active type page or registry requires them**, `Logseq/Entity/<Type>` or registry edits, imports that add `logseq-entity::` / `created-by::` / `alias::`, etc.—the task is **not finished** until today’s journal records those graph moves.
 
 This is independent of whether the user asked for a journal note; it is **repo policy** when `[[Logseq/Journal]]` / **`logseq-journal-updates`** apply.
 
@@ -28,6 +28,5 @@ End-of-task summary should **confirm** which journal links were added (or state 
 
 ## Related
 
-- skill: `logseq-question` — already folds journal steps into `references/question-workflow.md`; entity-only sessions still need this reference.
 - rule: `logseq-journal-updates` — default checklist when garddiff pages are missing.
 - rule: `logseq-journal-style` — load **`[[Logseq/Journal]]`** before editing `journals/*.md`.

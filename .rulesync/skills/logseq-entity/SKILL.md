@@ -1,17 +1,15 @@
 ---
 name: logseq-entity
 description: >-
-  Metaskill for Logseq entity work in the active graph: open the entity registry
-  and type pages, dedupe, create or update instance pages per type rules, infer
-  entities from journals, initialize ontology, and record graph edits in today's
-  journal (garddiff / Filed / Updated). Type pages define all operational detail
-  for that garden (naming, frontmatter, import pipelines, hub updates,
-  discovery)—this skill does not hardcode domain workflows. When this repository
-  ships optional companion skills named logseq-entity-<entity>-<skill>, use them
-  for narrower task discovery; authoritative procedures for those tasks still
-  live on linked Logseq pages, not under companion skill references/. Use for
-  questions like entity exists?, similar entities?, new entity page?, add
-  entities from today's journal?, define or refresh entity types?
+  Metaskill for Logseq entity work in the active graph: open [[Logseq/Entity]] and
+  [[Logseq/Entity/<Type>]] pages, dedupe, create or update instances per those
+  type rules, infer candidates from journals, help initialize entity pages when
+  asked, and record graph edits in today's journal (garddiff / Filed / Updated).
+  All type-specific rules live in the graph; this skill does not list entity
+  types or repo companion skills by name. Other skills in a repo may wrap narrow
+  workflows—discover them from the graph, type pages, or the repo's skill layout.
+  Use for: entity exists?, similar entities?, new entity page?, add entities from
+  today's journal?, define or refresh entity types?
 targets: ["*"]
 codexcli:
   short-description: Logseq entity registry, dedupe, create, journal extract, garddiff after graph edits
@@ -50,7 +48,7 @@ Use this fallback when the Logseq entity pages do not exist yet or are incomplet
 
 Treat those garden-owned sources as the source of truth for:
 
-- enabled entity types
+- which entity types this garden models (from the registry, not from this skill)
 - naming and namespace rules
 - dedup heuristics
 - frontmatter and page-shape expectations
@@ -61,15 +59,15 @@ If the Logseq entity pages and fallback config are both missing, inspect the gar
 
 ## Graph edits and today’s journal
 
-When **any graph pages** under `pages/` are **created or materially edited** during entity work—including **imports** that only add `logseq-entity::`, prerequisite **person** / **company** pages, or **`Logseq/Entity/<Type>`** edits—you are **not done** until **`journals/YYYY_MM_DD.md`** records the change set (**`[[Filed]]`** vs **`[[Updated]]`**, mutual exclusivity, link-first lists). Load **`[[Logseq/Journal]]`** / **`[[Logseq/Journal/Section/Garddiff]]`** when they exist; otherwise follow rule **`logseq-journal-updates`**.
+When **any graph pages** under `pages/` are **created or materially edited** during entity work—including **imports** that only add `logseq-entity::`, **prerequisite pages required by the active type page or registry**, or **`Logseq/Entity/<Type>`** edits—you are **not done** until **`journals/YYYY_MM_DD.md`** records the change set (**`[[Filed]]`** vs **`[[Updated]]`**, mutual exclusivity, link-first lists). Load **`[[Logseq/Journal]]`** / **`[[Logseq/Journal/Section/Garddiff]]`** when they exist; otherwise follow rule **`logseq-journal-updates`**.
 
 Procedure: [references/entity-session-journal.md](./references/entity-session-journal.md).
 
-## Polymorphism And Optional Companion Skills
+## Polymorphism and other skills in the repo
 
 - **Same skill, different graphs:** Identical `logseq-entity` text may be deployed in multiple gardens; effective behavior follows whatever `[[Logseq/Entity]]` and `[[Logseq/Entity/<Type>]]` pages exist **in the workspace graph**. Do not assume another garden’s entity types.
 - **Type pages are full SOPs:** Everything on `[[Logseq/Entity/<Type>]]` is binding—not only naming and frontmatter. If a type page defines imports, index updates, checklists, or search patterns, follow it end-to-end.
-- **Optional companions:** Some types may add thin Rulesync skills named `logseq-entity-<EntityName>-<SkillName>` (kebab-case) for **task discovery** or routing. Their `SKILL.md` should only point to Logseq; **do not** duplicate type-page content into `./references/` for domain procedures—keep that material on Logseq pages.
+- **Narrow workflows:** A garden or repo may ship additional skills for routing (for example topic-specific filing). **Do not assume** their names or locations—discover from the graph, from type-page bullets, or by listing the repo’s skill directories. Those skills should route to Logseq type pages; **do not** duplicate long type SOPs under this skill’s `./references/`.
 
 ## Quick Start
 
@@ -117,7 +115,7 @@ When the user says something like `initialize entity types for this garden`:
 3. Read [references/entity-type-initialization.md](./references/entity-type-initialization.md).
 4. Research:
    - inspect existing `[[Logseq/Entity]]` pages if they already exist
-   - inspect `.rulesync/config/logseq-entity.md` as fallback/bootstrap input
+   - inspect `.rulesync/config/logseq-entity.md` as shared fallback text when present
    - inspect representative garden pages and journals to infer repeated entity kinds, naming conventions, and page-shape expectations
 5. Plan:
    - propose a small initial set of entity types the garden appears to cover
@@ -125,8 +123,8 @@ When the user says something like `initialize entity types for this garden`:
    - call out whether any dedicated `[[Logseq/Template/Entity/<Type>/Page]]` pages are actually needed
 6. Implement:
    - create or update `[[Logseq/Entity]]` and the approved `[[Logseq/Entity/<Type>]]` pages
-   - keep ontology and instance-template guidance together on the type page by default
-   - keep `.rulesync/config/logseq-entity.md` as fallback/bootstrap support rather than replacing the Logseq pages as the primary source of truth
+   - keep registry and instance-template guidance together on the type page by default
+   - keep `.rulesync/config/logseq-entity.md` limited to shared fallback material (resolution order, reporting)—**not** a duplicate catalog of per-type rules
    - after any new or changed graph pages: complete **Graph edits and today’s journal** (section above)
 7. Report:
    - what the skill inferred during research
@@ -138,16 +136,16 @@ Prefer an explicit RPI flow:
 
 - `research`: inspect the garden and gather evidence
 - `plan`: propose the initial entity-type model and pause when ambiguity is material
-- `implement`: write the ontology pages once the direction is clear
+- `implement`: write the `Logseq/Entity` pages once the direction is clear
 
 ### Create or update an entity type page
 
 When the user wants to define a new entity type for the garden:
 
 1. Create or update `[[Logseq/Entity/<Type>]]` as the canonical page for that type.
-2. Put both ontology and instance-template guidance on that page by default.
+2. Put both type definition and instance-template guidance on that page by default.
 3. Only create a dedicated `[[Logseq/Template/Entity/<Type>/Page]]` page when the template needs to be instantiated directly through Logseq or grows too large for the type page.
-4. If the garden is still being bootstrapped, keep `.rulesync/config/logseq-entity.md` aligned enough to remain a useful fallback until the Logseq-native pages are complete.
+4. If the garden is still being bootstrapped, keep `.rulesync/config/logseq-entity.md` as a short shared fallback (see that file’s headings)—do not grow it back into per-type duplication.
 5. Complete **Graph edits and today’s journal** (section above) for every graph page touched.
 
 ### Add entities from today's journal page
@@ -174,8 +172,8 @@ When the user says something like `add entities from today's journal page`:
 
 ## Reference Guide
 
-- Filing a topic-scoped **question** page (`*___Q___*` / `Topic/Q/...`): skill **logseq-question** (builds on this skill plus `[[Logseq/Entity/question]]`).
-- Polymorphism and companion skills: see **Polymorphism And Optional Companion Skills** above and [references/logseq-entity-type-pages.md](./references/logseq-entity-type-pages.md)
+- **Another skill invoked for the same task:** follow that skill’s scope and steps; this skill still supplies **shared** entity behavior (configuration order, dedup references, **garddiff** / **Filed** / **Updated** when `pages/` change) unless the other skill explicitly documents a different journal contract for the same edit.
+- Polymorphism and narrow repo skills: see **Polymorphism and other skills in the repo** above and [references/logseq-entity-type-pages.md](./references/logseq-entity-type-pages.md)
 - Configuration contract: [references/configuration-contract.md](./references/configuration-contract.md)
 - Logseq entity-type pages: [references/logseq-entity-type-pages.md](./references/logseq-entity-type-pages.md)
 - Entity-type initialization: [references/entity-type-initialization.md](./references/entity-type-initialization.md)

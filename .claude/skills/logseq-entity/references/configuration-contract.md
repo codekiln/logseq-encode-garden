@@ -24,13 +24,13 @@ If none of these exist, the skill should:
 
 When the user wants to initialize entity types for a garden:
 
-- use `.rulesync/config/logseq-entity.md` as bootstrap guidance when it exists
-- create or update `[[Logseq/Entity]]` and `[[Logseq/Entity/<Type>]]` as the primary source of truth
-- keep the file-based config as fallback/bootstrap support instead of replacing the Logseq-native ontology pages
+- use `.rulesync/config/logseq-entity.md` for **shared** fallback text (resolution order, reporting contract) when it exists
+- create or update `[[Logseq/Entity]]` and `[[Logseq/Entity/<Type>]]` as the **primary** place for per-type rules
+- keep the file-based config **short**—do not duplicate long per-type sections from the graph into the repo file
 
 ## What Belongs In Garden Configuration
 
-Store garden-specific policy there, including:
+Store garden-specific policy on **`[[Logseq/Entity]]`** and **`[[Logseq/Entity/<Type>]]`**, including:
 
 - which entity types this garden actively models
 - how to recognize those entity types
@@ -67,16 +67,6 @@ Preferred Logseq-native shape:
 
 Fallback file-based shape:
 
-- `.rulesync/config/logseq-entity.md`
-
-Recommended sections:
-
-- purpose and scope of this garden
-- enabled entity types
-- per-entity-type rules
-- search and dedup preferences
-- page templates or minimum shape
-- creation blockers and escalation rules
-- examples
+- `.rulesync/config/logseq-entity.md` — **shared** material only (for example resolution order, garden-wide intent, reporting expectations). **Per-type** recognition, naming, dedup, frontmatter, and templates belong on the graph type pages, not in long sections here.
 
 The skill should treat the garden-owned configuration as the source of truth for entity behavior in that garden.

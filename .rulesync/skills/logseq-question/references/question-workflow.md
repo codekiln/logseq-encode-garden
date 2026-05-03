@@ -23,7 +23,7 @@ Authoritative step-by-step for logging a research question in this garden. The *
 - In order, read and apply:
   - `[[Logseq/Entity]]` (registry)
   - `[[Logseq/Entity/question]]` (type SOP for question entities)
-  - If either is missing or insufficient, fall back to `.rulesync/config/logseq-entity.md` (section **question**)
+  - If either is missing or insufficient, fall back to `.rulesync/config/logseq-entity.md` for shared fallback text (resolution order, reporting)—per-type rules still belong on `[[Logseq/Entity/question]]` once you create it
 - For **deduplication mechanics** and classification outcomes, use skill **logseq-entity**: [entity-search-and-dedup.md](../../logseq-entity/references/entity-search-and-dedup.md) together with the question type rules below.
 - If no question-type configuration can be found and conventions cannot be inferred safely, stop and ask the user how to proceed (same spirit as the logseq-entity skill when config is absent).
 
