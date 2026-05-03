@@ -61,6 +61,7 @@ Authoritative step-by-step for logging a research question in this garden. The *
   - All content as bullets; no blank lines between bullets.
   - H1: the question, with key terms linked to existing pages where appropriate (e.g., `- # Is it possible to see the compaction text in [[Claude Code]]?`).
   - Optionally add placeholder sections: `- ## Answer`, `- ## My Notes` (empty or with a single placeholder bullet). Do not add `## Related` solely for internal page links—use **`see-also::`** instead.
+  - In answers (and elsewhere in body LFM), do **not** wrap backtick monospaced spans in `**…**` or nest `**` against commands — use bold for labels only; see rule **logseq-flavored-markdown** → *Bold and inline code (monospace)*.
 - Follow the logseq-page-naming-reference and logseq-flavored-markdown rules.
 - **Non-goal:** Do not bulk-edit older `___Q___` pages to add `logseq-entity::` unless the user explicitly asks (migration is optional).
 

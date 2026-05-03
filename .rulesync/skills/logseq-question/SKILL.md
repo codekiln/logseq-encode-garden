@@ -37,6 +37,7 @@ For **non-question** entity work (software, company, person hubs, ontology pages
 
 - **This file** — when to use the skill and how it relates to **logseq-entity** / **`[[Logseq/Entity/question]]`**.
 - **[references/question-workflow.md](./references/question-workflow.md)** — full variables, conventions, numbered steps, reporting, and related rules/commands.
+- Answer body LFM: follow rule **logseq-flavored-markdown** (*Bold and inline code (monospace)*) — do not wrap `` `inline code` `` in `**…**`.
 
 ## Reference guide
 

@@ -27,6 +27,10 @@ I use Rulesync to manage AI coding tool configurations across projects. This inc
 - Kebab-case filenames with category prefixes (`logseq-*`, `javascript-*`, etc.)
 - Commit generated files (no git hooks needed)
 
+## Canonical sources vs generated outputs (agents)
+
+- **Binding policy:** Follow the **rulesync-canonical-sources** rule: edit **only** **`.rulesync/`** for rules/commands/skills/subagents/config; **never** patch tool outputs that **`rulesync generate`** writes—regenerate from the repo root after source changes.
+
 ## Commands
 
 ```bash

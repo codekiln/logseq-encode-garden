@@ -113,6 +113,26 @@ The following example is incorrect because it lacks indentation, unordered list 
   ~~~
   ```
 
+### Bold and inline code (monospace)
+
+- In **body LFM** (especially answers under `[[AI/Response]]`), do **not** wrap inline monospaced spans in bold by placing `**` immediately outside the backticks — avoid `**`:example`**` and avoid titles like `**Troubleshooting — **`:cmd`**` (nested `**` + backticks). Logseq’s parser does not treat that combination as reliable Markdown.
+- Prefer **labels or prose in bold**, with commands/options in plain backticks beside them: e.g. **Ex check:** `:set clipboard?` or **Run** `:checkhealth`.
+- Avoid opening `**` before a troubleshooting lead-in if the same fragment immediately continues into `` `...` `` on the same line unless you have verified rendering; split the label from the command (command in backticks only).
+
+<CORRECT_✅>
+~~~markdown
+- **Read the option:** run `:set clipboard?` (or `:echo &clipboard`).
+- **Troubleshooting — no echo:** `:messages` after `:set clipboard?`.
+~~~
+</CORRECT_✅>
+
+<INCORRECT_❌>
+~~~markdown
+- Run **`:set clipboard?`** to inspect the value.
+- **Troubleshooting — **`:registers`** flashes:** …
+~~~
+</INCORRECT_❌>
+
 ### Page-level attributes in Logseq
 
 **CRITICAL: NEVER modify the `tags::` frontmatter item in any document.** The user has a specific tagging system that follows particular rules not documented here. Any modification to the `tags::` frontmatter will disrupt their categorization system. Always preserve existing frontmatter tags exactly as they appear.
