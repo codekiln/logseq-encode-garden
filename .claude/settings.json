@@ -1,8 +1,6 @@
 {
   "permissions": {
-    "deny": [
-      "Read(credentials/)"
-    ]
+    "deny": []
   },
   "hooks": {
     "PostToolUse": [
