@@ -3,6 +3,7 @@ location:: [[US/TX/Dallas]]
 alias:: [[@jdx]]
 logseq-entity:: [[Logseq/Entity/person]]
 - [[Person/Jeff Dickey/Web]] https://jdx.dev/
+- [[Person/Jeff Dickey/Blog/18/10/09/12 Factor CLI Apps]]
 - [[Person/Jeff Dickey/Blog/26/03/02/Top 10 Features in Mise You're Not Using]]
 - [[Person/Jeff Dickey/GitHub]] https://github.com/jdx/
 	- > author of [[mise]] mise-en-place, [[oclif]] and [[heroku/CLI]]

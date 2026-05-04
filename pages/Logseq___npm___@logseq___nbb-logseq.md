@@ -1,12 +1,23 @@
 tags:: [[npm/lib]]
+alias:: [[nbb-logseq]], [[NBB-Logseq]], [[logseq/nbb-logseq]], [[@logseq/nbb-logseq]]
+created-by:: [[Logseq]]
+source-link:: https://github.com/logseq/nbb-logseq
+logseq-entity:: [[Logseq/Entity/software-project]]
 
-- # `nbb-logseq`
-	- [[AI Notes]]
-		- [[2025-05-10 Sat]]
-			- This package provides a [[ClojureScript]] scripting environment tailored for Logseq, enabling advanced queries and operations that go beyond the capabilities of the standard [[Logseq/Plugin/API]]. It leverages `nbb`, a ClojureScript runtime for Node.js, and includes support for libraries like [[Datascript]], facilitating powerful interactions with Logseq graphs.
-			- For instance, `nbb-logseq` allows you to execute scripts that can query any Logseq graph, making it a valuable tool for tasks such as graph validation, data export, and complex data manipulations [citation](https://www.npmjs.com/package/%40logseq/nbb-logseq).
-			- In contrast, **`@logseq/libs`** is the official Logseq SDK, primarily written in [[Typescript]], and is designed for developing Logseq plugins. While it provides a comprehensive set of APIs for plugin development, it may not offer the same level of flexibility for detailed queries as `nbb-logseq`.
-	- ### For Logseq users
-		- `nbb-logseq` provides [easy CLJS scripting on Node.js](https://github.com/babashka/nbb) for Logseq. Since logseq is primarily written with [ClojureScript](https://clojurescript.org/), this scripting environment has capabilities that are not possible in any other environment. For example, [see here](https://github.com/logseq/nbb-logseq/blob/HEAD/examples/#query.cljs) for a script that queries any logseq graph.
-	- ### [](https://www.npmjs.com/package/%40logseq/nbb-logseq?#for-clojure-users) For Clojure users
-		- `nbb-logseq` is a custom version of [nbb](https://github.com/babashka/nbb) that bundles support for datascript, datascript-transit and a couple other cljs libraries that are useful to logseq. A good amount of the datascript API is available as [seen by its tests](https://github.com/babashka/nbb-features/blob/main/test/features/datascript/test_runner.cljs). Since nbb only loads features/libraries when they are required, users can write datascript based CLIs without concern of loading the other libraries.
+- # [logseq/nbb-logseq: nbb with features enabled for logseq](https://github.com/logseq/nbb-logseq)
+	- Software project by [[Logseq]] that packages [nbb](https://github.com/babashka/nbb) with Logseq-oriented features for ClojureScript scripting on Node.js.
+	- ## What it is
+		- `nbb-logseq` provides a script runtime for querying and validating Logseq graphs from command-line scripts.
+		- It is a custom version of [nbb](https://github.com/babashka/nbb) that bundles Logseq-useful libraries, including [[Datascript]] and datascript-transit support.
+		- It is useful for graph validation, export, query automation, and agent-side checks that need more structure than ad hoc text search.
+	- ## Usage
+		- Install the CLI globally through [[mise]]:
+			- `mise use -g npm:@logseq/nbb-logseq@latest`
+		- Run scripts with:
+			- `nbb-logseq path/to/script.cljs`
+		- The database-version branch is separate from the npm release path while Logseq DB graph support stabilizes.
+	- ## In this garden
+		- First used on [[2026/05/04]] while creating `logseq-link-hygiene`, a Rulesync skill that checks newly added Logseq wikilinks against existing pages and aliases before agents leave behind accidental stub links.
+	- ## Links
+		- GitHub: [logseq/nbb-logseq](https://github.com/logseq/nbb-logseq)
+		- npm: [@logseq/nbb-logseq](https://www.npmjs.com/package/@logseq/nbb-logseq)

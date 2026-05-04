@@ -1,0 +1,35 @@
+alias:: [[Articles]]
+
+- # Article
+	- Standard operating procedure for **Article** entities: published web articles, blog posts, essays, and similar authored pieces imported as first-class reading notes.
+	- ## What counts as an Article entity
+		- A page whose primary identity is a specific authored article-like work, usually with a stable source URL, title, byline, and publication date.
+		- Article entities may live under the author, publisher, site, or existing source namespace that best matches the garden, such as `Person/<Name>/Blog/YY/MM/DD/<Title>`, `<Publication>/Article/YY/MM/<Title>`, or another established nearby pattern.
+		- Namespace labels such as `Blog`, `Article`, and `Essay` organize the page; `logseq-entity:: [[Logseq/Entity/Article]]` identifies the entity type.
+		- Not Article entities: author hub pages, publication hub pages, software/project pages mentioned by an article, books, standards, or concept pages that synthesize ideas across sources.
+	- ## Canonical naming and links
+		- Prefer the source title as the final page segment, with year/month/day segments when the surrounding namespace uses date-based import structure.
+		- Use the author or publisher namespace already present in the garden when it exists. Do not create a new author or organization page only for a weak one-off byline unless the source is likely to recur.
+		- Use `alias::` only for real alternate titles, previous paths, or short names likely to be searched.
+	- ## Finding and deduplicating
+		- Search in order: exact source URL; exact title; normalized title words under likely author, publication, Blog, Article, and Essay namespaces; byline plus distinctive title phrase. Classify: existing, similar, new, or blocked.
+		- One page per source work. If the same work is mirrored in multiple places, keep one canonical import page and list alternate source links in body or frontmatter when useful.
+	- ## Creator relationship
+		- When the author, company, or organization that wrote the piece is clear, set **`created-by::`** to that entity page.
+		- Prefer a person page for an individual byline, a company page for corporate authorship, and an organization page for institutional authorship.
+		- If the creator page already exists, link to the new Article entity from that creator page under the most fitting existing writing/source section.
+	- ## Frontmatter
+		- Mark instances with **`logseq-entity:: [[Logseq/Entity/Article]]`** so this type page collects backlinks to every Article entity.
+		- Set **`created-by::`** when the creator is known.
+		- Set **`date-created::`** to the publication date when known.
+		- Use **`source-link::`** for the original source URL.
+		- Optional: **`readwise-link:: <URL>`** when a Readwise Reader URL is available.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- Logseq Flavored Markdown.
+		- The first body block is the H1 heading with the article title linked to the original article: `- # [Article Title](https://example.com/original)`.
+		- Recommended body sections are **Summary**, **Notes**, **Highlights**, and **Links**, adapted to the import source and amount of source material available.
+		- Prefer concise summary and notes over pasting the full article unless the import source or human request explicitly calls for full-text archival.
+	- ## Examples in this garden
+		- [[Person/Paul Ford/Article/26/02/The A.I. Disruption Is Actually Here, and It’s Not Terrible]]
+		- [[Person/Jeff Dickey/Blog/18/10/09/12 Factor CLI Apps]]
