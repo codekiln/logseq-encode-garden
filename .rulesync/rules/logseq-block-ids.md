@@ -67,6 +67,24 @@ Before removing an existing `id::`, search the graph for any `((uuid))` referenc
 
 When files containing `id::` blocks are edited outside Logseq (e.g., via an agent or text editor), Logseq may need a moment to re-index before `((refs))` render correctly in the UI. This is **not data loss** — it is a normal re-indexing delay. The references will resolve once Logseq has scanned the updated files.
 
+### 5. Never Wrap `((uuid))` in Backticks
+
+Block refs are live syntax. Writing `` `((uuid))` `` (with backticks) makes Logseq treat the ref as inline code and render it as a literal UUID string instead of embedding the referenced block.
+
+Wrong:
+```
+- This page answers questions raised in `((69f8b4c0-0487-493b-85a0-3de2f27ade64))`.
+```
+→ renders the UUID verbatim, no embed, no link.
+
+Correct:
+```
+- This page answers questions raised in ((69f8b4c0-0487-493b-85a0-3de2f27ade64)).
+```
+→ Logseq embeds the referenced block inline.
+
+The same pitfall exists for page links: `` `[[Page/Name]]` `` renders as quoted text, not a link. Use plain `[[Page/Name]]`. Reserve backticks for literal code tokens (filenames, flags, package names, CLI subcommands) and for discussing Logseq path *shapes* in the abstract (e.g. the hierarchy `Person/Name/GitHub/Project`) — never for live `((uuid))` or `[[Page]]` syntax intended to render.
+
 ## Summary
 
 | Situation | What to do |
@@ -76,3 +94,4 @@ When files containing `id::` blocks are edited outside Logseq (e.g., via an agen
 | Copying a block | Copy the `id::` line along with the content |
 | Block has no `id::` and you need to ref it | Add a new UUID v4 as `id::` |
 | `((refs))` not rendering after file edit | Wait for Logseq to re-index; not data loss |
+| Writing a live block ref or page link in prose | No backticks — plain `((uuid))` / `[[Page]]` |
