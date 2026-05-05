@@ -1,0 +1,5 @@
+- # [Personalizing GitHub Codespaces for your account - GitHub Docs](https://docs.github.com/en/codespaces/setting-your-user-preferences/personalizing-github-codespaces-for-your-account#dotfiles)
+	- Account-level preferences for [[GitHub/Codespace]]: editor, terminal, dotfiles, and other defaults. The **Dotfiles** section covers pointing Codespaces at a public **[[dotfiles]]** Git repository so install scripts run when a codespace is created (complements Settings Sync for editor settings).
+	- ## Related in this garden
+		- [[GitHub/Codespace]]
+		- [[dotfiles]] — [[dotfile/dotfiles repo]], [[Configuration/Management]]; prior tooling notes include [[chezmoi]], [[Nix/home-manager]]

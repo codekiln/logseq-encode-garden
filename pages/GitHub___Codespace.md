@@ -134,6 +134,7 @@ alias:: [[GitHub Codespaces]], [[GitHub/Codespaces]], [[Codespaces]], [[Codespac
 			- Try different configurations easily
 	- ## Documentation
 		- [Official Documentation](https://docs.github.com/en/codespaces)
+		- [[GitHub/Docs/Codespaces/Setting your user preferences/Personalizing GitHub Codespaces for your account]] — account defaults including **dotfiles** repository install ([Dotfiles](https://docs.github.com/en/codespaces/setting-your-user-preferences/personalizing-github-codespaces-for-your-account#dotfiles))
 		- [Quickstart](https://docs.github.com/en/codespaces/getting-started/quickstart)
 		- [Dev Container Configuration](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)
 		- [Understanding the Codespace Lifecycle](https://docs.github.com/en/codespaces/getting-started/understanding-the-codespace-lifecycle)
