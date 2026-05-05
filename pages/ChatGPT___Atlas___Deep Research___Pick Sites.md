@@ -1,0 +1,11 @@
+# Pick Sites for Deep Research in ChatGPT Atlas
+	- In [[ChatGPT/Atlas/Deep Research]], you can restrict research to specific sites instead of the open web.
+	- ## How to use
+		- 1. Click the **Sites** dropdown in the deep research interface
+		- 2. Choose **Specific sites**
+		- 3. Click **Manage sites**
+		- 4. Enter site URLs separated by commas, then click **Add**
+	- ## Notes
+		- The default is "Search the web" (all sites)
+		- "Specific sites (0)" shows when no sites are configured yet
+		- Useful for scoping research to trusted sources or a known corpus
