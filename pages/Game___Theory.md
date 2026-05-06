@@ -1,0 +1,8 @@
+- # Game theory
+	- ## Overview
+		- **Game theory** studies **strategic interaction**: choices by multiple decision-makers where outcomes depend on **everyone’s** actions, often analyzed via **equilibrium concepts**, **information structures**, and **payoffs** rather than isolated optimization.
+		- It underpins microeconomics (pricing, auctions, bargaining), evolutionary analogies, political science, and CS (multi-agent systems, mechanism design).
+	- ## Relation to [[Game]]
+		- In this garden, **[[Game]]** names **playable games** as artifacts and culture; **Game/Theory** names the **mathematical / social-science field** about rational (or boundedly rational) **players**, **strategies**, and **incentives**—the slash is a namespace partition, not “theory of video games” unless explicitly bridged in prose.
+	- ## Topics in this garden
+		- **[[Game/Theory/Winner/Curse]]** — selection logic when “winning” an auction or contest reveals **overoptimism** about common value; also reachable as **[[Winner's Curse]]** via alias on that page.

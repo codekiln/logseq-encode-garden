@@ -5,8 +5,7 @@ tags:: [[Question]]
 		- I saw that [[Username/typecraft]] had an example of implementing something like this in his [[Person/Chris Power/GitHub/dotfiles]] for tmux.  Unfortunately, it was kind of cobbled together, but it looked like it worked for him.
 	- [[AI/Response]]
 		- Nix users approach declarative tmux in a few distinct ways, depending on how "pure" and reproducible they want the environment to be. Below is a structured map of the ecosystem.
-		- ## 1. Home Manager: Declarative `tmux` as a First-Class Module
-			- [[Nix/home-manager]], [[tmux]]
+		- ## 1. [[Nix/home-manager]]: Declarative [[tmux]] as a First-Class Module
 			- This is the most common Nix-native approach. Home Manager exposes:
 			- ~~~nix
 			  programs.tmux = {

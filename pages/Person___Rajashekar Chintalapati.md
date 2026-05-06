@@ -1,5 +1,6 @@
 tags:: [[Coder]], [[Knowledge Gardener]]
 logseq-entity:: [[Logseq/Entity/person]]
+
 - # Rajashekar Chintalapati
 	- ## [[My Notes]]
 	  id:: 67c48ebc-07e8-498f-b9ee-08d339d0469d
@@ -17,5 +18,5 @@ logseq-entity:: [[Logseq/Entity/person]]
 			  **Machine Frameworks**: [[PyTorch]], [[Tensorflow]], ONNX, Scikit, [[Pandas]], [[Numpy]], [[Jupyter]] 
 			  **Web Frameworks**: Flask, [[Django]], Express.js, Node.js, Reactjs
 			  **Database Frameworks**: SQL, [[PostgreSQL]], NoSQL
-			  **Cloud**: [[Kubernetes]], Microsoft Azure, Google Cloud Platform, [[AWS]] 
+			  **Cloud**: [[K8s]], Microsoft Azure, Google Cloud Platform, [[AWS]] 
 			  **Other tools**: Apache Airflow, CI/CD pipeline, [[Splunk]]

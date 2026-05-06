@@ -141,6 +141,7 @@ alias:: [[GitHub Codespaces]], [[GitHub/Codespaces]], [[Codespaces]], [[Codespac
 		- [Setting Timeout Period](https://docs.github.com/en/codespaces/customizing-your-codespace/setting-your-timeout-period-for-github-codespaces)
 		- [Stopping and Starting](https://docs.github.com/en/codespaces/developing-in-a-codespace/stopping-and-starting-a-codespace)
 		- [About Billing](https://docs.github.com/en/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces)
+		- [[GitHub/Codespace/Billing/Discussion]] — community **Discussion #181042** digest (budgets, storage vs compute, FAQs); see official docs for current rates
 		- [Changing Machine Type](https://docs.github.com/en/codespaces/customizing-your-codespace/changing-the-machine-type-for-your-codespace)
 	- ## Related
 		- [[GitHub/Codespace/Image/Universal]] - Published **universal** dev container image source ([`devcontainers/images` `src/universal`](https://github.com/devcontainers/images/tree/main/src/universal))

@@ -1,0 +1,44 @@
+- # Community discussion: Codespaces billing explained
+	- **Source:** [Confused About GitHub Codespaces Billing? Here’s How It Really Works](https://github.com/orgs/community/discussions/181042) — GitHub Community **Discussion #181042** (Codespaces category; community-maintained guide; verify rates against [official pricing](https://docs.github.com/en/billing/concepts/product-billing/github-codespaces)).
+	- **Author / editor:** Question by [shinybrightstar](https://github.com/shinybrightstar); edited by samus-aran (per thread).
+	- **Scope (per post):** Covers compute vs storage, individual vs org billing, budgets, usage monitoring, machine types, retention/timeouts, edge cases. Does *not* replace general GitHub billing, Codespaces how-to, Actions/Packages/Copilot billing, or enterprise custom pricing.
+	- ## What makes billing distinctive
+		- Two charge types: **compute** while running, **storage** while the codespace exists (including stopped).
+		- **Stopping** ends compute charges only; **deleting** ends storage charges.
+		- Free-tier limits reset monthly; overage billing cadence may differ from subscription anniversary.
+		- **Budget** configuration is required for usage beyond free tiers (even with a paid plan)—minimum budget often cited as **$1**.
+	- ## Compute vs storage
+		- **Compute:** billed in **core-hours** (cores × hours while running). Stops when codespace is stopped or deleted.
+		- **Storage:** billed in **GB-months** for disk contents, prebuild images, caches—until the codespace is **deleted**.
+		- **Illustrative rates** (always confirm current numbers on GitHub): ~$0.18/hr for 2-core scaling linearly with core count; storage ~$0.07/GB-month.
+		- **Machine type vs free tier:** larger machines consume core-hours faster (e.g. 4-core uses the monthly compute allowance about twice as fast as 2-core for the same wall-clock time).
+	- ## Free tier (personal, per guide)
+		- **GitHub Free:** ~120 core-hours/month, ~15 GB-months storage.
+		- **GitHub Pro:** ~180 core-hours/month, ~20 GB-months storage.
+		- **Team / Enterprise:** org-configured.
+		- Free tier reset: **1st of month (UTC)**, not necessarily subscription anniversary.
+	- ## Individual vs organization
+		- **Individual:** personal free tier; overages need payment method **and** budget; spending controls are personal.
+		- **Organization:** owners set policies; org may pay for member usage when enabled; centralized budgets and reporting.
+	- ## Budgets and blocks
+		- Personal path described: **Settings → Billing and licensing → Budgets and alerts → New budget** → service **Codespaces**, set amount (e.g. $10–50), behavior **Pause at limit** vs **Allow overage**.
+		- Common block: *“You seem to have a billing issue…”* — often **no budget**, **$0** spending limit, PayPal authorization, or exceeded free tier without overage allowance; fix budgets/payment then wait a few minutes.
+		- **Students:** Student Pack accounts may need a **payment method on file** to unlock budget controls; staying within free tier should avoid charges if usage stays under quota (per discussion).
+	- ## Cost-saving settings (summarized)
+		- **Idle timeout:** shorter idle stop → less compute (defaults ~30m; can go more aggressive e.g. 15m).
+		- **Retention:** auto-delete after inactivity (e.g. 7–14 days) → less lingering storage.
+		- **Default machine:** prefer smaller (e.g. 2-core) unless more CPU is needed.
+		- **Prebuilds:** build uses **Actions** compute; storage of prebuild images costs the **repo owner/org**; using a prebuild in a codespace still uses normal Codespace rates for the user session. Disable or delete prebuilds on inactive repos to avoid stray compute/storage.
+	- ## Troubleshooting patterns (from FAQ)
+		- **Stopped but still charged:** expect **storage** on stopped environments; delete unused codespaces or tighten retention.
+		- **No recent Codespaces use but charges:** check [github.com/codespaces](https://github.com/codespaces) for stopped instances, repo **Prebuilds**, and 24–48h billing lag; export usage CSV under billing settings.
+		- **Multiple orgs:** personal vs org quotas depend on which account pays and org policies.
+		- **Forks:** usage on your fork bills to **you** as fork owner.
+		- **Charges after deletion:** if usage persists 48h+, document with CSV, screenshots, timestamps; contact GitHub Support.
+	- ## Official references linked in thread
+		- [About billing for Codespaces](https://docs.github.com/en/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces)
+		- [Viewing Codespaces usage](https://docs.github.com/en/billing/managing-billing-for-github-codespaces/viewing-your-github-codespaces-usage)
+		- [Managing spending limits](https://docs.github.com/en/billing/managing-billing-for-github-codespaces/managing-the-spending-limit-for-github-codespaces)
+		- Related community threads: [Billing & Subscription Guide #178128](https://github.com/orgs/community/discussions/178128), [Codespaces FAQ #122950](https://github.com/orgs/community/discussions/122950)
+	- ## In this garden
+		- Parent topic: [[GitHub/Codespace]] — pricing section there overlaps; treat **official docs** as authoritative for current dollars and policy.
