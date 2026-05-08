@@ -4,7 +4,7 @@ tags:: [[YouTube]], [[Python/Library]], [[CLI/Tool/yt-dlp]]
 	- A feature-rich command-line audio/video downloader
 	- [[yt-dlp/GitHub]] [https://github.com/yt-dlp/yt-dlp](https://github.com/yt-dlp/yt-dlp)
 	- ## [Installation](https://github.com/yt-dlp/yt-dlp/wiki/Installation)
-		- [[CLI/Tool/Mac/brew]] might be easier - `brew install yt-dlp`
+		- [[Brew]] might be easier - `brew install yt-dlp`
 			- see also [Idiot guide to download yt-dlp to Mac : r/youtubedl](https://www.reddit.com/r/youtubedl/comments/1br16c5/idiot_guide_to_download_ytdlp_to_mac/)
 				- You'll be using the Terminal app on macOS, which resides in Applications > Utilities.
 				- Install [Homebrew](https://brew.sh/) following their instructions.
