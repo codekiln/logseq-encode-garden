@@ -1,5 +1,5 @@
 tags:: [[dotfile/dotfiles repo]] 
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Shunsuke KITADA]]
 
 - # [shunk031/dotfiles: 💻 My dotfiles powered by chezmoi; Primarily built with Rust-based applications (sheldon/starship/mise etc.)](https://github.com/shunk031/dotfiles)

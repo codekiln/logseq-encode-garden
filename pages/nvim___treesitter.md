@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Thomas Vigouroux]]
 alias:: [[nvim-treesitter]]
 see-also:: [[Tree-Sitter]], [[nvim]]

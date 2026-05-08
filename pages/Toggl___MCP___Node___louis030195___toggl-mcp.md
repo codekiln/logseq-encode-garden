@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 tags:: [[JavaScript]], [[MCP/Server]]
 - # Toggl MCP Server (Node) — @louis030195/toggl-mcp
 	- ## Notes

@@ -1,5 +1,5 @@
 tags:: [[dotfile/dotfiles repo]]
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Chris Krycho]]
 via:: https://github.com/chriskrycho/dotfiles
 

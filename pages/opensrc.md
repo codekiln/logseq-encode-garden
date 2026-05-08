@@ -1,5 +1,5 @@
 alias:: [[Vercel/GitHub/opensrc]]
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 via:: [[Person/Matan Kushner/GitHub/dotfiles]]
 
 - # [opensrc](https://github.com/vercel-labs/opensrc)

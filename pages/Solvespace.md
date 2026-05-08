@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 alias:: [[SolveSpace]]
 
 - # [Solvespace](https://solvespace.com/index.pl)

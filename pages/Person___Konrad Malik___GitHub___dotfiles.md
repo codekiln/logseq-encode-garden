@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Konrad Malik]]
 date-created:: [[2020/02/16]]
 - # [konradmalik/dotfiles: Dotfiles for Linux and MacOS. Currently on Nix.](https://github.com/konradmalik/dotfiles)

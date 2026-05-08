@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 tags:: [[Go]], [[SDK]]
 - # Go client for Toggl Track — jason0x43/go-toggl
 	- ## Notes

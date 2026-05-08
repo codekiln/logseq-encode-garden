@@ -6,7 +6,7 @@
 		- **Not game types** — genres, mechanics, families, and reusable design categories belong to [[Logseq/Entity/Game/Type]] instead.
 	- ## Relationship to other entity types
 		- **[[Logseq/Entity/Game/Type]]** — Use for reusable taxonomic categories like [[Game/Video/Platformer]], not for individual game titles.
-		- **[[Logseq/Entity/software-project]]** — Use when the page is primarily about shipping or maintaining software as a tool, even if it is game-adjacent infrastructure such as an engine or mod SDK.
+		- **[[Logseq/Entity/Software/Project]]** — Use when the page is primarily about shipping or maintaining software as a tool, even if it is game-adjacent infrastructure such as an engine or mod SDK.
 		- **[[Logseq/Entity/book]]** — Use for an RPG rulebook, boxed manual, or strategy guide when the page’s primary identity is the publication; use game when the page is about the playable system.
 		- **[[Logseq/Entity/concept]]** — Use for cross-domain explanations or general ideas; keep game entities game-first and cross-link concepts when useful.
 	- ## Finding and deduplicating

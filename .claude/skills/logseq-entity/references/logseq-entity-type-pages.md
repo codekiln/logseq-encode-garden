@@ -10,7 +10,7 @@ Use these pages when they exist:
 - `[[Logseq/Entity/<Type>]]` as the canonical page for a specific entity type
 - `[[Logseq/Frontmatter]]` as the shared convention page for page-level attributes
 
-`<Type>` is **whatever page titles exist** under the `Logseq/Entity/` namespace in **this** garden (for example a page titled `Logseq/Entity/software-project`—the exact spelling and depth are garden-defined).
+Documentation uses `[[Logseq/Entity/<Type>]]` as shorthand: substitute the **actual** type path from **`[[Logseq/Entity]]`** in the workspace graph. In this encode garden, multi-word types prefer **nested Title Case segments**—for example **`[[Logseq/Entity/Software/Project]]`**, **`[[Logseq/Entity/Article]]`**, or **`[[Logseq/Entity/Game/Type]]`**—not a single **kebab-case** segment. **`[[Logseq/Entity]]`** lists each canonical title (including types awaiting rename).
 
 ## Default Interpretation
 
@@ -43,7 +43,7 @@ Entity type pages are graph documentation, not agent documentation:
 - Do not wrap actual `[[Page]]` wikilinks in backticks. Keep them clickable in graph pages.
 - Use declarative garden voice, not second-person voice.
 - Keep shared frontmatter semantics on `[[Logseq/Frontmatter]]`; type pages should state only the entity marker and any type-specific frontmatter.
-- Follow garden naming conventions for new entity type page names: singular and capitalized where natural, with plural/contextual forms handled through `alias::` when needed.
+- Follow garden naming conventions for new entity type page names: singular where natural; **nested Title Case segments** for multi-word types; plural or contextual forms through `alias::` when needed (see **`[[Logseq/Pref/Page/Name]]`** when it exists).
 
 ## Narrow Rulesync skills (repo-specific)
 
@@ -78,8 +78,9 @@ When working with an entity type:
 1. Read `[[Logseq/Entity]]` if it exists to discover the garden's entity types.
 2. Read `[[Logseq/Entity/<Type>]]` for the type-specific rules.
 3. Read `[[Logseq/Frontmatter]]` when it exists for shared page-level attributes.
-4. If that page points to a dedicated template page, read that too.
-5. Only fall back to `.rulesync/config/logseq-entity.md` when the Logseq entity pages do not yet exist or are incomplete.
+4. Skim `[[Logseq/Pref]]` (and linked preference pages such as **`[[Logseq/Pref/Page/Name]]`**) when present for encode-wide naming defaults.
+5. If the type page points to a dedicated template page, read that too.
+6. Only fall back to `.rulesync/config/logseq-entity.md` when the Logseq entity pages do not yet exist or are incomplete.
 
 ## Initializing entity pages in the graph
 

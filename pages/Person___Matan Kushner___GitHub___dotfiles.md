@@ -1,5 +1,5 @@
 tags:: [[dotfiles]]
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Matan Kushner]]
 via:: https://github.com/matchai/dotfiles
 

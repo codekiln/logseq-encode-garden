@@ -2,7 +2,7 @@ tags:: [[npm/lib]]
 alias:: [[nbb-logseq]], [[NBB-Logseq]], [[logseq/nbb-logseq]], [[@logseq/nbb-logseq]]
 created-by:: [[Logseq]]
 source-link:: https://github.com/logseq/nbb-logseq
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 
 - # [logseq/nbb-logseq: nbb with features enabled for logseq](https://github.com/logseq/nbb-logseq)
 	- Software project by [[Logseq]] that packages [nbb](https://github.com/babashka/nbb) with Logseq-oriented features for ClojureScript scripting on Node.js.

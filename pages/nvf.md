@@ -1,5 +1,5 @@
 alias:: [[Person/raf/GitHub/nvf]]
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/raf]]
 
 - # [nvf](https://github.com/NotAShelf/nvf)

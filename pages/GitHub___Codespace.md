@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 alias:: [[GitHub Codespaces]], [[GitHub/Codespaces]], [[Codespaces]], [[Codespace]], [[GitHub Codespace]]
 - # GitHub Codespace
 	- [Product home](https://github.com/features/codespaces)

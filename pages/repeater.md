@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 tags:: [[CLI/Tool]], [[Rust]]
 see-also:: [[CLI/Q/Are there CLI or terminal apps to manage hierarchical keyboard-shortcut reference for CLI and TUI tools, with spaced repetition?]]
 

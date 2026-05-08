@@ -1,10 +1,10 @@
 - # person
 	- Standard operating procedure for **person** entities: real individuals tracked as first-class hub pages under `Person/Full Name`.
 	- ## Namespace vs entity type
-		- A **hierarchical title** under `Person/` does **not** imply every child page is a person entity. Example: [[Person/Someone/GitHub/dotfiles]] is usually a **software-project** (or another type), nested for organization and SCM style—not a second “person” instance. Choose `logseq-entity::` from **content and role**, not from the `Person___` filename prefix alone.
+		- A **hierarchical title** under `Person/` does **not** imply every child page is a person entity. Example: [[Person/Someone/GitHub/dotfiles]] is usually a [[Logseq/Entity/Software/Project]] instance (or another type), nested for organization and SCM style—not a second “person” instance. Choose `logseq-entity::` from **content and role**, not from the `Person___` filename prefix alone.
 	- ## What counts as a person entity (instance)
 		- **Person hub pages only**: disk file `Person___<Name>.md` where `<Name>` contains **no** `___` (Logseq title is exactly `Person/<Name>` — two path segments). Examples: `Person___Drew DeVault.md`, `Person___Jan-Erik Rediger.md`.
-		- **Not** person entities: deeper paths such as `Person___Foo___GitHub___bar.md`, `Person___Foo___Blog___...`, or other child pages—model those with the appropriate type, often [[Logseq/Entity/software-project]] for GitHub project pages.
+		- **Not** person entities: deeper paths such as `Person___Foo___GitHub___bar.md`, `Person___Foo___Blog___...`, or other child pages—model those with the appropriate type, often [[Logseq/Entity/Software/Project]] for GitHub project pages.
 	- ## When to create a person page
 		- Strong signals: individual is a maintainer, author, speaker, or public figure likely to be linked repeatedly; confirmed identity; useful to attach bios, handles, and project subpages.
 		- Prefer **site-specific namespaces** for low-signal identities such as forum users or one-off commenters.
@@ -17,7 +17,7 @@
 		- Search in order: exact `Person___*.md` title; `alias::` match; partial name / handle in `pages/Person___*.md`; body text (bio, same GitHub profile URL). Classify: existing, similar, new, or blocked.
 		- **One page per person.** Never split the same human across two hub pages; merge or pick one canonical title.
 	- ## SCM projects under a person
-		- Repos under a person use `Person/<Name>/GitHub/<Project>` when the maintainer is clear and the person hub exists or should exist. Those project pages are **software-project** entities, not person entities.
+		- Repos under a person use `Person/<Name>/GitHub/<Project>` when the maintainer is clear and the person hub exists or should exist. Those project pages are [[Logseq/Entity/Software/Project]] entities, not person entities.
 	- ## Frontmatter on person hub pages
 		- Mark the hub in frontmatter with `logseq-entity::` plus the standard link to the person entity type page (same marker pattern as other entity instances in this garden).
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Konrad Malik]]
 date-created:: [[2024/01/25]]
 - # [konradmalik/darwin-docker: nix-darwin module to run docker](https://github.com/konradmalik/darwin-docker)

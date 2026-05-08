@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 tags:: [[Software/Library]]
 see-also:: [[D2]], [[Graphviz]], [[Structurizr]], [[Diagram/Mermaid]]
 - # [mingrammer/diagrams](https://github.com/mingrammer/diagrams)

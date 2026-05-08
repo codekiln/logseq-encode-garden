@@ -1,5 +1,5 @@
 alias:: [[nvim/Plugin/nvim-ufo]], [[Person/kevinhwang91/GitHub/nvim-ufo]]
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Kevin Hwang]]
 
 - # [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo)

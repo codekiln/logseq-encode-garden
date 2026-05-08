@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 
 - # [MuPDF](https://mupdf.com/)
 	- minimal, fast PDF engine and viewer

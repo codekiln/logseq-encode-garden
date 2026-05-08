@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[LiquidAI]]
 
 - # [Liquid Foundation Models (LFM)](https://liquid.ai)

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Konrad Malik]]
 date-created:: [[2024/09/18]]
 - # [konradmalik/incomplete.nvim: Use completefunc for snippets in neovim](https://github.com/konradmalik/incomplete.nvim)

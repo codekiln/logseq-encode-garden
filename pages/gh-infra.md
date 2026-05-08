@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Masaki Ishiyama]]
 
 - # [gh-infra](https://babarot.me/gh-infra/)

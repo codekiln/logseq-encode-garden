@@ -1,5 +1,5 @@
 - # company
-	- This page is the standard operating procedure for **company** entities: commercial vendors, businesses, product firms, devtool vendors, consulting companies, and brands tracked as first-class pages—often because they ship multiple [[Logseq/Entity/software-project]] pages linked with `created-by::`.
+	- This page is the standard operating procedure for **company** entities: commercial vendors, businesses, product firms, devtool vendors, consulting companies, and brands tracked as first-class pages—often because they ship multiple [[Logseq/Entity/Software/Project]] pages linked with `created-by::`.
 	- ## Examples in this garden
 		- [[Charm]] — vendor behind the Charmbracelet GitHub org; `created-by:: [[Charm]]` on [[gum]]; ecosystem siblings include [[glow]] and [[Glamour]].
 		- [[Jellyfish]] — engineering management platform (Boston); [[Person/Andrew Lau]] is co-founder and CEO; appears on [[iia/1130 Built in Boston Scaling Global AI Company]].
@@ -13,7 +13,7 @@
 		- If the company is only context for one product and unlikely to recur, the vendor can be documented inline on the software page. Create a company entity when the organization is likely to recur.
 	- ## Finding and deduplicating
 		- Check in this order: exact canonical page name, exact alias, official domain, GitHub org name, then page-body mentions of the same site or org. Classify as: existing, similar, new, or blocked.
-	- ## Relationship to software-project
+	- ## Relationship to Software/Project
 		- Software entities may set `created-by:: [[CompanyName]]` when the maintainer is the organization and a company page exists. If the creator is an individual with a [[Person/...]] page, use that instead (or both only when both are accurate and useful).
 	- ## Frontmatter
 		- To mark a page as a company instance, add `logseq-entity::` with a link to this type page in frontmatter. The type page then gets backlinks to all company pages.

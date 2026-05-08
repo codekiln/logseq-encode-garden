@@ -13,6 +13,7 @@ Look for configuration in this order:
 - `[[Logseq/Entity]]`
 - `[[Logseq/Entity/<Type>]]`
 - `[[Logseq/Frontmatter]]`
+- `[[Logseq/Pref]]` (and linked pages such as **`[[Logseq/Pref/Page/Name]]`**) when present—encode-wide naming and editorial defaults, not per-type entity rules
 - `.rulesync/config/logseq-entity.md`
 
 If none of these exist, the skill should:
@@ -66,6 +67,7 @@ Preferred Logseq-native shape:
 - `[[Logseq/Entity]]` as the registry
 - `[[Logseq/Entity/<Type>]]` as the canonical type page
 - `[[Logseq/Frontmatter]]` as the shared page-level attribute convention page
+- `[[Logseq/Pref]]` optionally as the hub for cross-cutting garden preferences (see skill **logseq-pref** when installed)
 
 Fallback file-based shape:
 

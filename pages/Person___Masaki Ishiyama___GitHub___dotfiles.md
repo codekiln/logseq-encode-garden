@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Masaki Ishiyama]]
 via:: https://github.com/babarot/dotfiles
 - # [babarot/dotfiles: A repository that gathered files starting with dot](https://github.com/babarot/dotfiles)

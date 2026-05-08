@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 tags:: [[Py]], [[MCP/Server]]
 - # Toggl MCP Server (Python) — toggl-mcp (PyPI)
 	- ## Notes

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 tags:: [[CLI/Tool]], [[Go]], [[TUI]]
 see-also:: [[gita]], [[gitopolis]]
 

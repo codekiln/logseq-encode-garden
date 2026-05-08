@@ -1,5 +1,5 @@
 tags:: [[dotfile/dotfiles repo]]
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/lv416e]]
 via:: https://github.com/lv416e/dotfiles
 - # [lv416e/dotfiles: Modern dotfiles management with chezmoi](https://github.com/lv416e/dotfiles)

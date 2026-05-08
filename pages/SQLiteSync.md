@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 - # SQLiteSync
 	- SQLite extension for CRDT-based local-first synchronization.
 	- ## Links

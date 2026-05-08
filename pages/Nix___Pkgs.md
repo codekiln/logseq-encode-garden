@@ -1,5 +1,5 @@
 alias:: [[nixpkgs]]
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 
 - # `Nixpkgs` - Nix Package Manager
 	- The **default package collection** for [[Nix]]: Nix expressions and build recipes for a large set of software, consumed via channels, flakes, and `NIX_PATH`.

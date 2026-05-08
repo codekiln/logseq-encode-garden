@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 see-also:: [[Binary/Cache]], [[Nix]]
 
 - # [Cachix](https://www.cachix.org/)

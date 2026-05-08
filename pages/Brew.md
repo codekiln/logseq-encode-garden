@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 alias:: [[brew]], [[homebrew]], [[Homebrew]], [[CLI/Tool/Mac/brew]]
 
 - # [Homebrew](https://brew.sh/)

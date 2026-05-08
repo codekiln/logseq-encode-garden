@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 alias:: [[Google AI Edge Eloquent]]
 created-by:: [[Google]]
 

@@ -38,6 +38,7 @@ Before doing entity work, read [references/configuration-contract.md](./referenc
 - `[[Logseq/Entity]]`
 - `[[Logseq/Entity/<Type>]]`
 - `[[Logseq/Frontmatter]]`
+- `[[Logseq/Pref]]` when present (optional encode-wide naming prefs under **`[[Logseq/Pref/Page/Name]]`** and siblings)
 
 Use this fallback when the Logseq entity pages do not exist yet or are incomplete:
 
@@ -75,7 +76,7 @@ When creating or editing `[[Logseq/Entity]]`, `[[Logseq/Entity/<Type>]]`, `[[Log
 - Keep actual Logseq links clickable. Do **not** wrap `[[Page]]` links in backticks; use backticks only for non-link path shapes, filenames, globs, or property syntax.
 - Use declarative garden voice instead of second-person instructions.
 - Put shared frontmatter conventions on `[[Logseq/Frontmatter]]`; type pages should mention only entity-specific frontmatter plus a short reference to that page.
-- Entity type page names should follow garden naming conventions: singular and capitalized where natural. Existing legacy lower-case type pages should not be renamed unless the user explicitly requests a rename/migration.
+- Entity type page names follow **`[[Logseq/Entity]]`**: multi-word types prefer nested Title Case segments (for example **`Software/Project`**); deferred legacy paths stay listed on the registry until migrated.
 
 ## Quick Start
 

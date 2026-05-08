@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 tags:: [[Py]], [[CLI/Tool]]
 - # Toggl CLI (Python) — AuHau / toggl-cli
 	- ## Notes

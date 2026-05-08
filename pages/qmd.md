@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 via:: [[Person/Andrej Karpathy/GitHub/Gist/26/04/llm-wiki]]
 alias:: [[Person/Tobi Lutke/GitHub/qmd]]
 tags:: [[CLI/Tool]]

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Mischa van den Burg]]
 date-created:: [[2024/03/30]]
 via:: https://github.com/mischavandenburg/zettelkasten

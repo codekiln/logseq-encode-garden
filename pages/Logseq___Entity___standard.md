@@ -7,7 +7,7 @@
 	- ## Relationship to other entity types
 		- **[[Logseq/Entity/organization]]** — Use for the **maintainer or standards body** (IETF, W3C, FIDO Alliance, JSON Schema Organization, industry consortia). Use **standard** for the **artifact** (the RFC, the published recommendation, the community spec). Link them in the body or **`see-also::`** when both exist.
 		- **[[Logseq/Entity/concept]]** — Use when the goal is **understanding** (Diataxis-style explanation of why semver exists, tradeoffs, history) **without** the page acting as the spec hub. Prefer **standard** when the page’s job is to **anchor the normative rules** (canonical links, version, sections) even with light prose.
-		- **[[Logseq/Entity/software-project]]** — Use for **validators, reference implementations, CLIs, and servers**. A standard page may **`see-also::`** or list implementations; the implementing repo is usually **software-project**.
+		- **[[Logseq/Entity/Software/Project]]** — Use for **validators, reference implementations, CLIs, and servers**. A standard page may **`see-also::`** or list implementations; the implementing repo is usually a [[Logseq/Entity/Software/Project]] instance.
 		- **[[Logseq/Entity/term]]** — Glossary stubs only; a full spec is **standard**, not **term**.
 	- ## Finding and deduplicating
 		- Search in order: exact title and **`alias::`**; spec URL in `pages/`; normative phrases (“Semantic Versioning”, “Conventional Commits”, RFC numbers); sibling pages under the same topic namespace. Classify: **existing**, **similar**, **new**, or **blocked**.
@@ -16,12 +16,12 @@
 		- On instances, set **`logseq-entity:: [[Logseq/Entity/standard]]`** so this type page collects backlinks to every standard entity.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape (body)
-		- Logseq Flavored Markdown; lean hub. Suggested sections (adapt as needed): **Normative links** (canonical spec, RFC, latest version), **Scope** (one short bullet), **Maintainer** (link **organization** if present), **Implementations** (optional pointers to **software-project**), **Related standards** (internal links in prose when useful).
+		- Logseq Flavored Markdown; lean hub. Suggested sections (adapt as needed): **Normative links** (canonical spec, RFC, latest version), **Scope** (one short bullet), **Maintainer** (link **organization** if present), **Implementations** (optional pointers to [[Logseq/Entity/Software/Project]] instances), **Related standards** (internal links in prose when useful).
 	- ## Diataxis note
 		- Many standard hubs behave like **Diataxis/Reference** pages: lookup-oriented, stable, and rules-focused. This type page is the entity marker; Diataxis pages in the graph remain the vocabulary for documentation shape.
 	- ## Candidates in this garden (review before backfill)
 		- **Canonical titles only:** Each bullet is **one disk page** (one place for **`logseq-entity::`**). If that page has **`alias::`** (e.g. friendlier link text), that is **not** a second page—search and dedup still resolve to the **same** file. When backfilling, add **`logseq-entity::`** only on the **canonical** page, not on alias-only link text as if it were separate.
 		- **Strong fits** — pages whose main job is the spec or a named multi-vendor standard: [[git/commit/Conventional]], [[json/Schema]], [[DevContainer/GitHub/spec]], [[OpenTelemetry/Spec/Semantic Conventions/Generative AI]], [[gitmoji]], [[FIDO2]], [[DMARC]] (RFC-oriented protocol).
-		- **Judgment calls** — mixed **hub + spec** (often keep one page; optional child **standard** stub for the normative doc only): [[DevContainer]] vs [[DevContainer/GitHub/spec]]; CLI “specification” repos such as [[Person/Jeff Dickey/GitHub/usage]] (treat as **standard** vs **software-project** depending on whether the page indexes the **rules document** or the **shipping tool**).
+		- **Judgment calls** — mixed **hub + spec** (often keep one page; optional child **standard** stub for the normative doc only): [[DevContainer]] vs [[DevContainer/GitHub/spec]]; CLI “specification” repos such as [[Person/Jeff Dickey/GitHub/usage]] (treat as **standard** vs a [[Logseq/Entity/Software/Project]] page depending on whether the page indexes the **rules document** or the **shipping tool**).
 		- **Often cited, no dedicated hub yet** — **Semantic Versioning** (semver), **Command Line Interface Guidelines** ([clig.dev](https://clig.dev/)), **POSIX.1** / Open Group, agent capability specifications, **OpenAPI**, **SPDX** / **CycloneDX** (as SBOM formats)—good future **standard** stubs.
 		- **Do not bulk-add** **`logseq-entity::`** to legacy pages unless the author requests migration; listing here is **inventory**, not an automatic retag.

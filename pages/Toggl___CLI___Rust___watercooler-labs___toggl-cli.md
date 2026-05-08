@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 tags:: [[Rust]], [[CLI/Tool]]
 - # Toggl CLI (Rust) — watercooler-labs/toggl-cli
 	- ## Notes

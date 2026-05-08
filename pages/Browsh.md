@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 
 - # [Browsh](https://www.brow.sh/)
 	- Purely text-based browser for TTY terminal environments and browsers.

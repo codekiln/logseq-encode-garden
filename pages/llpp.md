@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 
 - # [llpp](https://repo.or.cz/w/llpp.git)
 	- lightweight, keyboard-centric PDF viewer

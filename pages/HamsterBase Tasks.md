@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 tags:: [[Task/Management/Git-Friendly]]
 
 - # [HamsterBase Tasks](https://github.com/hamsterbase/tasks)

@@ -7,7 +7,7 @@
 	- ## Relationship to other entity types
 		- **[[Logseq/Entity/Game]]** — Use for individual playable works or systems.
 		- **[[Logseq/Entity/concept]]** — Use when the page is a cross-domain explanation or general paradigm article rather than a game-catalog lens.
-		- **[[Logseq/Entity/software-project]]** — Use for tools, engines, SDKs, libraries, or apps whose primary identity is software infrastructure rather than a category of games.
+		- **[[Logseq/Entity/Software/Project]]** — Use for tools, engines, SDKs, libraries, or apps whose primary identity is software infrastructure rather than a category of games.
 	- ## Finding and deduplicating
 		- Search for an existing page before creating a new game type entity. Stop early only when a result is clearly the same game category, genre, mechanic, family, or mode.
 		- Search namespace-flexibly: exact expected page title; aliases; singular/plural and medium-specific variants; page-body mentions; and sibling or related game taxonomy branches. Do not assume every game type entity lives under the [[Game]] namespace, though that namespace is often a strong candidate.

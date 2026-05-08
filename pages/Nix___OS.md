@@ -1,6 +1,6 @@
 tags:: [[Operating System]]
 alias:: [[NixOS]]
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 
 - # NixOS
 	- **Declarative Linux distribution** built on the [[Nix]] package manager: kernel, services, and user environments are defined in `.nix` configuration and are reproducible and rollback-friendly.

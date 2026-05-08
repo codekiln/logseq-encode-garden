@@ -1,18 +1,18 @@
 # color-theme
-	- This page is the standard operating procedure for **color theme** entities: coordinated palette families (foreground, background, accent colors) reused across terminals, editors, multiplexers, file managers, and other UI tools. A color-theme instance is the *aesthetic system* (e.g. [[Catppuccin]] with subpages [[Catppuccin/Latte]], [[Catppuccin/Frappe]], [[Catppuccin/Macchiato]], [[Catppuccin/Mocha]]); individual ports often stay **software-project** pages that link back to the theme hub.
+	- This page is the standard operating procedure for **color theme** entities: coordinated palette families (foreground, background, accent colors) reused across terminals, editors, multiplexers, file managers, and other UI tools. A color-theme instance is the *aesthetic system* (e.g. [[Catppuccin]] with subpages [[Catppuccin/Latte]], [[Catppuccin/Frappe]], [[Catppuccin/Macchiato]], [[Catppuccin/Mocha]]); individual ports often stay [[Logseq/Entity/Software/Project]] instance pages that link back to the theme hub.
 	- ## Examples in this garden
 		- [[Catppuccin]] — hub with palette overview asset, stack matrix, and flavor subpages for per-variant config ids and previews.
 	- ## When we treat something as a color theme
 		- Strong signals: a named palette family with official style-guide or palette specs; many first- or third-party ports sharing the same flavor names; users think in terms of “using X everywhere” (terminal, editor, shell tools).
 		- Weak signals alone (a single app’s built-in scheme with no shared branding) are usually **not** a color-theme entity — note them on the app page instead.
 	- ## How to name the main page for a color theme
-		- Prefer a **short top-level canonical name** when the theme name is unambiguous (e.g. [[Catppuccin]]), matching the spirit of software-project hubs like [[Lazygit]].
+		- Prefer a **short top-level canonical name** when the theme name is unambiguous (e.g. [[Catppuccin]]), matching the spirit of software project hubs like [[Lazygit]].
 		- Add **`alias::`** to a hierarchical path when the graph should sit under a UI namespace, such as `alias:: [[UI/Color/Theme/Catppuccin]]` on the [[Catppuccin]] page for visibility under [[UI/Color]].
 		- Use `Theme/Flavor` sub-namespaces when the upstream theme names discrete variants (e.g. Catppuccin’s four flavors): hub page links the set; each subpage holds typical config keywords, optional preview image from `../assets/…`, and points back to the hub for the full stack matrix. For themes without named variants, keep a single hub section instead.
 	- ## Finding and deduplicating
 		- Check in this order: exact canonical page name, exact alias, official homepage or org/repo, then page-body mentions of the same palette names and upstream links. Classify as: existing, similar, new, or blocked.
-	- ## Relationship to software-project
-		- Official or community **ports** (Neovim plugin repo, tmux plugin, etc.) can be **software-project** entities with `logseq-entity::` [[Logseq/Entity/software-project]]; they should **link to** the color-theme hub for palette and flavor semantics. The theme hub lists app wiring without duplicating full plugin documentation.
+	- ## Relationship to Software/Project
+		- Official or community **ports** (Neovim plugin repo, tmux plugin, etc.) can be software project entities with `logseq-entity::` [[Logseq/Entity/Software/Project]]; they should **link to** the color-theme hub for palette and flavor semantics. The theme hub lists app wiring without duplicating full plugin documentation.
 	- ## Frontmatter
 		- To mark a page as a color-theme instance, add `logseq-entity:: [[Logseq/Entity/color-theme]]` in frontmatter. The type page then gets backlinks to all color-theme pages.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 tags:: [[API/REST]]
 - # Toggl Track API v9 (REST)
 	- ## Notes

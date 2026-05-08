@@ -1,5 +1,5 @@
 tags:: [[CLI/Tool]]
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Ken'ichiro Oyama]]
 via:: [[Person/Matan Kushner/GitHub/dotfiles]]
 

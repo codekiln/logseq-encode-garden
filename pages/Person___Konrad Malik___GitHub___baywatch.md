@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Konrad Malik]]
 date-created:: [[2023/11/29]]
 - # [konradmalik/baywatch: Watch files, execute commands on changes.](https://github.com/konradmalik/baywatch)

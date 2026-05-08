@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 
 - # [Zathura](https://pwmt.org/projects/zathura/)
 	- keyboard-first, minimal, composable document viewer

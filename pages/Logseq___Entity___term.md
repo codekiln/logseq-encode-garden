@@ -7,7 +7,7 @@
 		- Strong signals: the page is mainly a **definition** or short disambiguation; readers need a quick anchor, not a full conceptual tour.
 		- Good fit: glossary entries, named techniques that are one paragraph, abbreviations expanded once.
 		- Prefer **concept** instead when the page needs multiple sections (overview, context, misconceptions, examples at length) and Diataxis-style explanation.
-		- Not a term entity: **question**, **software-project**, **company**, or other dedicated entity types.
+		- Not a term entity: **question**, [[Logseq/Entity/Software/Project]], **company**, or other dedicated entity types.
 	- ## Finding and deduplicating
 		- Search for an existing page before creating a new term entity.
 		- Search: exact title, existing term-tagged candidates missing `logseq-entity::`, alias matches, and phrase grep across `pages/`.

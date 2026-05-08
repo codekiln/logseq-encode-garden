@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 tags:: [[Software/Library]], [[CLI/Tool]]
 created-by:: [[Person/Steph Ango]]
 date-created:: [[2025/02/27]]

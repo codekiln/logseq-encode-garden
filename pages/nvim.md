@@ -1,5 +1,5 @@
 alias:: [[Neovim]]
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Thiago de Arruda Padilha]], [[Person/Justin M. Keyes]]
 date-created:: [[2014]]
 see-also:: [[vim]]

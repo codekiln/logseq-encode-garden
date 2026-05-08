@@ -1,0 +1,4 @@
+- # Page name preferences
+	- This encode garden prefers **singular** canonical page titles and **Title Case** namespace segments where English prose allows.
+	- Multi-word concepts use **nested paths** (`Parent/Child/...`) rather than kebab-combining a phrase into one segment when a type or topic warrants hierarchy—for entity type documentation see [[Logseq/Entity]] (for example [[Logseq/Entity/Software/Project]]).
+	- Plural, shortened, or contextual link surfaces belong in **`alias::`** per [[Logseq/Frontmatter/alias]]; do not encode parent context twice in `alias::` when the title already carries it.

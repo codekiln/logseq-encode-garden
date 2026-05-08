@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 tags:: [[JavaScript]], [[CLI/Tool]]
 - # Toggl CLI (Node) — @beauraines/toggl-cli
 	- ## Notes

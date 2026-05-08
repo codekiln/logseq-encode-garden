@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 
 - # [mdcat](https://github.com/swsnr/mdcat)
 	- Rust CLI “cat for Markdown” ([[Markdown/Flavor/CommonMark]], syntax-highlighted code blocks); targets capable terminals (e.g. [[Kitty]], [[WezTerm]], [[iTerm2]], [[Ghostty]]). [crates.io/crates/mdcat](https://crates.io/crates/mdcat)

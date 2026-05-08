@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 alias:: [[GitHub/dolthub/dolt]]
 - # Dolt
 	- Git-like SQL database for versioning and merging tabular data.

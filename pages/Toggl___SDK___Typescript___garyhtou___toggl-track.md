@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 tags:: [[Typescript]], [[SDK]]
 - # Toggl Track TypeScript client — garyhtou/toggl-track
 	- ## Notes

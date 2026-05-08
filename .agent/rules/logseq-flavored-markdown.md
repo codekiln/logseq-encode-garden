@@ -77,7 +77,7 @@ The following example is incorrect because it lacks indentation, unordered list 
 ### Do not link to a page from within that same page
 
 - Do not include a page link that points to the page you are currently editing (no self-referential links).
-- For example, on the page whose title is "Logseq/Entity", do not write `[[Logseq/Entity]]` in the body. On a type page such as "Logseq/Entity/software-project", do not write `[[Logseq/Entity/software-project]]` in the body. Use the page title as plain text in headings or refer to "this page" in prose instead of linking.
+- For example, on the page whose title is "Logseq/Entity", do not write `[[Logseq/Entity]]` in the body. On a type page such as "Logseq/Entity/Software/Project", do not write `[[Logseq/Entity/Software/Project]]` in the body. Use the page title as plain text in headings or refer to "this page" in prose instead of linking.
 
 **Example:**
 

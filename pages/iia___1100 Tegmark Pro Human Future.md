@@ -49,7 +49,7 @@
 					- FMxAI "virtuous circle
 						- larger benchmarks -> better ML-powered verifiers and vericoders
 						- greater [[FV]] adoption
-					- [[FV]] [[Logseq/Entity/software-project]]s
+					- [[FV]] [[Logseq/Entity/Software/Project]]s
 						- [[Dafny]]
 						- [[Rust]] / [[Verus]]
 						- [[Lean]]

@@ -1,5 +1,5 @@
 alias:: [[Nx]]
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 
 - # Nx
 	- [Official site — Smart Monorepos · Fast Builds](https://nx.dev/)

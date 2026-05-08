@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 tags:: [[Software/Library]]
 see-also:: [[diagrams]], [[D2]], [[Diagram/Mermaid]]
 

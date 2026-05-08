@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Konrad Malik]]
 date-created:: [[2023/06/06]]
 - # [konradmalik/neovim-flake: standalone neovim flake with my configuration](https://github.com/konradmalik/neovim-flake)

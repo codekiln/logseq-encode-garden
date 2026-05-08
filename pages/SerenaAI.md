@@ -1,5 +1,5 @@
 tags:: [[AI Coding]], [[Tool]], [[Diataxis/Explanation]]
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 alias:: [[Serena]]
 created-by:: [[Oraios]]
 

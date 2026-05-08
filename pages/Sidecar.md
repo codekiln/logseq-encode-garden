@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 - # Sidecar
 	- Terminal UI integrating agent chats, git workflows, and td task management.
 	- ## Links

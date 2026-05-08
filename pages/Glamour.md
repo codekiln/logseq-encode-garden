@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 tags:: [[Markdown]], [[Programming/Language/Go]], [[Go/Library]]
 
 - [[GitHub/charmbracelet/glamour]]

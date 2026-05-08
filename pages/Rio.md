@@ -1,5 +1,5 @@
 alias:: [[Rio Terminal]], [[Rio terminal]]
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Raphael Amorim]]
 see-also:: [[Glyph Protocol]]
 

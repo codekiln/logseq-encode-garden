@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 alias:: [[Person/Steve Yegge/beads]], [[Beads]]
 tags:: [[CLI/Tool]], [[Task/Management/Git-Friendly]]
 created-by:: [[Person/Steve Yegge]]

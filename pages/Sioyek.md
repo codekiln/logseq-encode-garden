@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 
 - # [Sioyek](https://sioyek.info/)
 	- in theory, could be a successor to [[zathura]]

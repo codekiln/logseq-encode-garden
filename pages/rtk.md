@@ -1,5 +1,5 @@
 alias:: [[rtk-ai/rtk]]
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 tags:: [[CLI/Tool]]
 via:: https://github.com/chriskrycho/dotfiles/blob/main/tasks/setup/rtk.sh
 

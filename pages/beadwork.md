@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/software-project]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Jason Allum]]
 tags:: [[Task/Management/Git-Friendly]]
 alias:: [[Person/Jason Allum/GitHub/beadwork]]
