@@ -1,24 +1,29 @@
-- # Logseq Frontmatter
+# Logseq Frontmatter
 	- This page defines shared page-level frontmatter conventions for the knowledge garden.
-	- ## Protected fields
-		- **`tags::`** is protected on existing pages: do not modify, add, or remove it unless explicit human instruction overrides the garden tagging rules.
+	- ## `tags::`- treat [[Logseq/Tags]] with care
+		- Logseq tags have a special impact on the Logseq UI, but their implementation is buggy and inconsistent. In addition, the human gardener's use of `tags::` pre-dated the more mature [[Logseq/Entity]] entity system, and the human's rules for applying them are fuzzy and ill-defined. It's easier to use them incorrectly than to use them correctly.
+		- As a result, their use is considered protected on existing pages: AI should not modify, add, or remove it unless explicit human instruction overrides the garden tagging rules.
 		- For new pages, add `tags::` only when the relevant page-type convention explicitly requires it or nearby pages establish the same pattern.
-	- ## Entity marker
-		- **`logseq-entity::`** marks a page as an instance of a Logseq entity type.
+	- ## `logseq-entity::` marks page as an instance of a Logseq entity type
 		- The value should be the relevant entity type page, such as [[Logseq/Entity/Game]], [[Logseq/Entity/software-project]], or [[Logseq/Entity/question]].
 		- Use one entity marker per page unless a future convention explicitly defines multi-typing.
-	- ## Aliases
-		- **`alias::`** is for real alternate names, plural or contextual link surfaces, previous paths, handles, acronyms, and other useful discovery forms.
+	- ## `alias::` for more convenient or alternate names
+		- In Logseq, if page `[[Super Long Name]]` has frontmatter `alias:: [[Shortname]]`, then clicking on `[[Shortname]]` in the wiki will take you to page `[[Super Long Name]]`.
+		- It is appropriate and useful for making note of real alternate names, plural or contextual link surfaces, handles, acronyms, and other useful discovery forms.
+		- By default, this garden tries to use the singular form for the canonical page name, and may use alias for the plural form.
 		- Canonical page names should remain singular where the garden naming convention calls for singular names; plural or contextual references belong in aliases.
 		- Do not create an alias that only repeats parent namespace context already expressed by the page title.
-	- ## See also
-		- **`see-also::`** is for useful internal pages worth reading next.
+	- ## `see-also::` for related pages
 		- Order links strongest tie first.
 		- Do not list parent namespace pages only to restate context already encoded by the page title.
 		- Prefer `see-also::` over a body `## Related` section when the section would only contain internal wikilinks.
-	- ## Provenance
-		- **`via::`** records what caused the page to exist or be substantially revised in the garden, such as a journal day, import stub, or source page.
+	- ## `via::` for how the page's entity was discovered AKA [[Provenance]]
+		- `via::` records what caused the page to receive attention
+			- what caused the page exist in the garden or be substantially revised or expanded in the garden
+		- Usually it is another entity. For example, while reading a particular person's dotfiles, if a new CLI is discovered and added to the garden, it should have `via:: [[Person/Cool Coder]]`such as a journal day, import stub, or source page.
 		- Do not use `via::` for general related reading; use `see-also::` instead.
-	- ## Dates
-		- **`date-created::`** records when the entity described by the page was created, published, founded, or first released.
-		- Do not use `date-created::` for the date the page was added to the garden.
+	- ## `date-created::` - when the entity itself was created, published, founded, released
+		- The format of the date should match [[Logseq/Date]].
+		- ### Do not use `date-created::`
+			- for the date the page was added to the garden
+			- unless the date created is factually correct in a proven way

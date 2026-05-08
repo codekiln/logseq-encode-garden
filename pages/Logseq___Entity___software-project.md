@@ -1,4 +1,4 @@
-- # software-project
+# software-project
 	- This page is the standard operating procedure for software-project entities. Software here means applications for end users, libraries, frameworks, CLIs, desktop or web apps, editors, runtimes, and the like.
 	- ## Examples in this garden
 		- [[Yamtrack]], [[nvim]], [[Lazygit]], and [[tmux]] show how we name and shape software-project pages. Use them as reference.
@@ -11,9 +11,9 @@
 	- ## Finding and deduplicating
 		- Check in this order: exact main page name, exact alias, partial title match, repo owner and repo name, then page-body mentions of the same homepage, repo, or description. Classify as: existing, similar, new, or blocked.
 	- ## Frontmatter
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 		- To mark a page as a software-project instance, add `logseq-entity:: [[Logseq/Entity/software-project]]` in frontmatter. The type page then gets backlinks to all software-project pages.
 		- Software-project-specific frontmatter can include `created-by::` pointing to a **person** or **company** page when the creator entity is clear.
-		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
 		- File: `pages/<ProjectName>.md`. In links, use the main page name with forward slashes for namespaces where we use them (e.g. `Lazygit/Keyshort/Some action`). First block: H1 with the project title (or a reference link to the project). Keep the page lean: title plus a few descriptive bullets.
 	- ## Creator (person or company) handling

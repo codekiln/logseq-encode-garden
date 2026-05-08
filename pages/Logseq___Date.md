@@ -1,0 +1,20 @@
+# Logseq Date
+	- This page defines how dates appear as wikilinks in this garden: which precision, which separator, and when to include the weekday. See [[Logseq/Frontmatter]] for which properties take dates and [[Logseq/Journal]] for journal page conventions.
+	- ## Date property names
+		- `date-created::` — when the entity itself was created, published, founded, or released. The dominant date property; see [[Logseq/Frontmatter]].
+		- `date-completed::` — when a finite activity (course module, lesson, project) was finished.
+		- Use kebab-case `date-<verb>::` shape for any new date property. Do not invent `<verb>-date::` variants; legacy `created-date::` and `publication-date::` should be migrated to `date-created::` when touched.
+	- ## Format by precision
+		- **Day (preferred when known)** — `[[YYYY-MM-DD Day]]`, e.g. `[[2026-05-07 Thu]]`. This is the Logseq journal page format, so the link clicks through to that day's journal entry.
+		- **Day (slash form, acceptable)** — `[[YYYY/MM/DD]]`, e.g. `[[2024/02/02]]`. Used historically and still common, but does not link to the journal page; prefer the dash-with-weekday form for new writes.
+		- **Month** — `[[YYYY/MM]]`, e.g. `[[2026/05]]`.
+		- **Year** — `[[YYYY]]`, e.g. `[[1979]]`.
+		- **Older Dates Grouped by Decade** - [[17/40/9]] for 1749 or [[18/30/2]] for 1832. Useful for older dates so as to cluster them together by decade.
+	- ## Rules
+		- Use the most precise form the source actually supports. Do not pad with `01` to fake higher precision (e.g. don't write `[[2025-08-01 Fri]]` when only the month is known — use `[[2025/08]]`).
+		- Use four-digit years. Two-digit-year wikilinks like `[[26/05]]` or `[[YY/MM/D]]` appear on a handful of legacy pages and should not be copied into new pages.
+		- The weekday in `[[YYYY-MM-DD Day]]` must be the actual day of the week for that date (`Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`, `Sun`).
+		- Two-digit-year date components inside *page namespaces* (e.g. `Person/Chris Krycho/Blog/24/02/02/jj init`) are a separate naming convention from wikilink dates and are not governed by this page.
+	- ## Disk vs link
+		- Journal files on disk are named `journals/YYYY_MM_DD.md` (underscores).
+		- The matching wikilink surface is `[[YYYY-MM-DD Day]]` (dashes plus weekday).
