@@ -1,2 +1,4 @@
-# [Canonical](https://canonical.com/)
-	- The company that makes [[Ubuntu]] (see also [[Linux/Distro/Ubuntu]])
+logseq-entity:: [[Logseq/Entity/company]]
+
+- # [Canonical](https://canonical.com/)
+	- Company behind [[Ubuntu]] (see also [[Linux/Distro/Ubuntu]]) and steward of [[cloud-init]].

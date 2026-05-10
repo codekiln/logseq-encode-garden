@@ -14,7 +14,7 @@ tags:: [[Term]]
 		- This creates an efficient allocation of attention across a large body of knowledge.
 	- ## Key concepts
 		- ### 1. The forgetting curve
-			- Originating from Hermann Ebbinghaus’ work, memory retention declines exponentially without reinforcement.
+			- Originating from [[Person/Hermann Ebbinghaus]]’ work, memory retention declines exponentially without reinforcement.
 			- Each review resets or strengthens the curve.
 		- ### 2. Retrieval practice
 			- SRS relies on *active recall*, not passive review.
@@ -77,9 +77,9 @@ tags:: [[Term]]
 		- It is a *retention layer* that sits on top of understanding.
 	- ## Composable view
 		- You can think of SRS as:
-			~~~
-			knowledge acquisition → encoding → spaced retrieval scheduling → long-term retention
-			~~~
+		  ~~~
+		  knowledge acquisition → encoding → spaced retrieval scheduling → long-term retention
+		  ~~~
 		- It integrates best when paired with:
 			- Meaningful context (why something matters)
 			- Generative use (writing, explaining, building)

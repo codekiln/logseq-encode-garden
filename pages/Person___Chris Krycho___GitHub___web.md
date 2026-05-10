@@ -1,0 +1,5 @@
+- [chriskrycho/web: The (very WIP) home of the next versions of my web presences](https://github.com/chriskrycho/web)
+	- [[Eleventy]] → lx, and the case for overlapping taxonomies
+		- [[Person/Chris Krycho]]'s site engine [`lx`](https://github.com/chriskrycho/web/tree/canon/lx) (his successor to [[Eleventy]] for [v5.chriskrycho.com](https://v5.chriskrycho.com/), not a general-purpose SSG) names a design goal worth stealing:
+			- > custom taxonomies, allowing overlapping/non-hierarchical relationships beyond a single kind of 'tag': something might need to live in both Art and Family as top-level subjects, while going specifically in Poetry and Cat, while also being filed specifically as Writing rather than, say, audio. That kind of overlapping categorization exists in very few other tools.
+		- The friction it surfaces: most [[Static Site Generator]]s and [[CMS]]s collapse **subject**, **specific topic**, and **kind/medium** into a single `tags` axis. lx separates them, so one post can be subject *Art* **and** *Family*, specifically *Poetry* **and** *Cat*, while still being kind *Writing* rather than *audio*.

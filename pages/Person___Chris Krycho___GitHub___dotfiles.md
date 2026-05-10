@@ -12,4 +12,6 @@ via:: https://github.com/chriskrycho/dotfiles
 		- [[Brew]] assumptions
 			- I thought brew was [[MacOS]] specific, but it turns out it's also able to be used in [[Linux]].
 			- But [dotfiles/tasks/setup/install/homebrew.sh at main · chriskrycho/dotfiles](https://github.com/chriskrycho/dotfiles/blob/main/tasks/setup/install/homebrew.sh) does have some evidence of `linuxbrew`
+		- [dotfiles/tasks/setup/zed.sh at main · chriskrycho/dotfiles](https://github.com/chriskrycho/dotfiles/blob/main/tasks/setup/zed.sh)
+			- script checks to see if we are in an [[Ona]] environment
 	- GitHub metadata at import: **5** stars; **0** forks; created **2025-04-21**; last push **2026-05-06** (no SPDX license on GitHub at check time).
