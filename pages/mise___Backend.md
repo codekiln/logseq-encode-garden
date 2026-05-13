@@ -1,0 +1,20 @@
+# mise [Backends](https://mise.jdx.dev/dev-tools/backend_architecture.html#universal-installers)
+	- In mise, each [[mise/Tool]] is supported by and implemented through a **Backend**, which is essentialy a type of mise plugin that adds support for a new type of [[mise/Tool]]s for the mise ecosystem. The term **Backend** in mise refers to the rust code needed to run a tool, even if the tool is written in another language or uses another CLI tool.
+	- ## Types of Backends
+		- ### [Core Tools](https://mise.jdx.dev/dev-tools/backend_architecture.html#core-tools)
+			- This category of tool backend wraps [[Programming Languages]] with [[Rust]] code so mise can run things from that language very easily.
+			- #### [[Examples]]
+				- each of these have native rust tool backends that make it so mise can run things in those languages:
+					- [[NodeJS]]
+					- [[Python]]
+					- [[Ruby]]
+					- [[Go]]
+					- [[Java]]
+			- #### important conceptual distinction about core tools
+				- each of these (e.g. Node.js) is itself also an *instance* of a single [[mise/Tool]] that *happens to be* implemented in mise in rust as a dedicated backend.
+		- ### [[Programming Language]] [[Package Managers]] - [Language Package Managers](https://mise.jdx.dev/dev-tools/backend_architecture.html#language-package-managers)
+			- This category of backends wrap package managers themselves and make them directly executable in mise.
+			- #### [[Examples]]
+				- [[npm]]
+				- [[pipx]]
+				- [[cargo]]

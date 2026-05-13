@@ -12,13 +12,15 @@ created-by:: [[Person/Jeff Dickey]]
 			- **before one begins cooking, a professional chef should have all their utensils and ingredients ready to go and in their place**
 	- use `mise.toml` describes consistent way to setup and interact with projects across languages
 	- ### 3 categories of usage for `mise`
-		- `1`: installs [[NodeJS]], [[Py]], [[tf]]
+		- `1`: **package installer** - installs [[NodeJS]], [[Py]], [[tf]]
 			- specify versions of tools per project
 			- `mise` supports [hundreds](https://mise.jdx.dev/plugins.html) of dev tools
-		- `2`: manages [[EnvVar]]s
+		- `2`: **environment manager** - manages [[EnvVar]]s
 			- lets you specify configuration like `AWS_ACCESS_KEY_ID` that may differ between projects. It can also be used to automatically activate a [Python virtualenv](https://mise.jdx.dev/lang/python.html) when entering projects too.
-		- `3`: task runner to share common tasks *within* a project
+		- `3`: **task runner** to share common tasks *within* a project
 			- for example, run a task when a file changes
 - [[mise/Docs/Guides/Getting Started]]
 	- [[mise/Todos]]
 - [[mise/Docs/Guides/Walkthrouh]]
+	- ## mise commands
+		- [[mise/install]]

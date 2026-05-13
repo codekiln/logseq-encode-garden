@@ -1,0 +1,27 @@
+# Rewriting Logseq in Rust
+	- possible name: Sextant
+	- prior art
+		- documented in this garden
+			- [[PKM/Tool]]s
+				- [[Looksyk]] - rust-based logseq
+			- [[Knowledge/Garden]] — definition of digital gardens / Zettelkasten, curated public examples, and a history thread that situates wikis, [[PKM]], and the Roam/Obsidian-era graph-note wave alongside earlier tools.
+			- [[Knowledge/Concept/Knowledge Base vs Knowledge Garden]] — contrasts organizational knowledge bases with personal gardening; useful for deciding what a rewrite must preserve versus what belongs to a different product shape.
+			- [[Knowledge/Gardening]] — practice-level framing (curating, refining) and pointers to related terms such as [[Note-taking]] and [[PKM]].
+			- [[Logseq]] — incumbent open block–outliner and Markdown host this idea reacts to.
+			- [[Logseq/Garden]] — local vocabulary for a single Logseq-hosted graph; that page relates Logseq usage to common Obsidian vault wording without duplicating it here.
+			- [[Trilium]] — self-hosted hierarchical PKM with rich text; tagged in-garden as a [[PKM/Tool]] and cross-linked from [[Knowledge/Garden]].
+			- [[Anytype]] — local-first / P2P workspace lane (notes, tasks, objects) tracked as [[PKM/Tool]] and related to [[Knowledge/Garden]].
+			- [[App/Obsidian/Markdown]] — file-first vault markdown conventions the garden contrasts with [[Logseq/Flavored Markdown]] when thinking about parsers and portability.
+			- [[QuartzMD]] — static-site publishing stack for Markdown gardens; in this graph it appears beside published Logseq Zettelkasten flows such as [[Person/Mischa van den Burg/GitHub/zettelkasten]].
+			- [[qmd]] — local CLI search over docs and knowledge bases; example of “instrument the corpus” tooling orthogonal to which outliner wrote the files.
+			- [[Knowledge/Garden/ing/AI]] — agent-assisted gardening patterns; lists [[CursorAI/Project Rules]] and [[Person/Yuxiang Lin/GitHub/Understand-Anything]] as in-repo tooling precedents.
+			- [[Logseq/Idea/Proxy]] — idea of stitching views across multiple [[Logseq/Garden]]s with an [[AI Skill]].
+			- [[Person/codekiln/GitHub/logseq-gardener]] — early sketch for orchestrating multiple garden patches with [[nx]].
+			- [[Logseq/DB/Alternative]] — captures community discussion of forking versus clean-room rebuilds when the stock Logseq stack feels unmaintainable.
+		- Rust implementations and related tools (external)
+			- [Hulunote](https://github.com/hulunote/hulunote) — outliner-style notes as nested blocks, drag-and-drop reorder, bidirectional links and backlinks, daily notes, full-text search, Markdown import/export, MCP integration; [Leptos](https://leptos.dev/) + [Rust UI](https://www.rust-ui.com/) [web client](https://github.com/hulunote/hulunote-app) with a [Rust API backend](https://github.com/hulunote/hulunote-rust) and optional [Tauri](https://v2.tauri.app/) desktop packaging in the client repo.
+			- [IWE](https://github.com/iwe-org/iwe) — plain-Markdown hierarchical knowledge graph with polyhierarchy and inclusion semantics, LSP support (VS Code, Neovim, Zed, Helix), CLI, and an MCP server for agent access; [documentation hub](https://iwe.md/docs/).
+			- [Qipu](https://github.com/mwaldstein/qipu) — git-backed knowledge graph CLI in Rust (`qipu-core` crate) with typed links, value scoring, full-text search, and agent-oriented commands such as `prime` and `context`; oriented at durable research memory rather than interactive outliner editing.
+			- [Vulcan](https://github.com/tionis/vulcan) — Rust CLI for Obsidian-style vaults: graph-aware indexing, backlinks, tasks, interactive TUI, and safe vault mutations including link rewriting; page-centric vault model rather than Logseq block granularity.
+			- [Rucola](https://github.com/Linus-Mussmaecher/rucola) — terminal Zettelkasten manager over Markdown with link graph navigation, filters, stats, and HTML export; complements editor-centric workflows without a block outliner UI.
+			- [mdzk](https://github.com/mdzk-rs/mdzk) — Rust toolkit that treats Zettelkasten Markdown as a compiled directed graph (static-site / publishing angle); under active iteration rather than a full Logseq-class interactive client.

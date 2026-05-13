@@ -1,4 +1,7 @@
-- [SebastianRzk/Looksyk: A markdown centric, fast and local personal knowledge platform](https://github.com/sebastianrzk/looksyk)
+tags:: [[PKM/Tool]]
+tags:: [[Codeberg/Repo]]
+
+- [SebastianRzk/Looksyk: A markdown centric, fast and local personal knowledge platform - Codeberg.org](https://codeberg.org/sebastianrzk/looksyk)
 	- [[My Notes]]
 		- discovered via [Looksyk: A simple and open source Logseq alternative : r/PKMS](https://www.reddit.com/r/PKMS/comments/1lc5zy4/looksyk_a_simple_and_open_source_logseq/)
 			- > So, as a hobby, on a small scale: No whiteboard, no flashcards, and no blockchain-based AI assistant. Instead, it's a PKMS based on Markdown files on the hard drive with a wiki and a journal, queries (kept very simple), templates, a context assistant, and diverse file support.

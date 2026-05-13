@@ -4,13 +4,16 @@
 	- foregrounds flashcard scopes related to my [[Logseq/Favorite]]s.
 	- ## Combos - All Flashcards
 		- ## All Flashcards by Active and Background
-			- ### ==Active== [[Logseq Flashcards]]
-				- {{cards ( or [[rg]] [[vim]] [[nvim]] [[fzf]] [[Zoxide]] [[yazi]] [[tmux]] [[Lazygit]] [[Lightroom/Classic]] )}}
+			- ### Foreground / ==Active== [[Logseq Flashcards]]
+				- {{cards ( or [[rg]] [[vim]] [[nvim]] [[fzf]] [[Zoxide]] [[yazi]] [[tmux]] [[Lazygit]] [[Lightroom/Classic]] [[mise]] )}}
 			- ### Background
 			  collapsed:: true
-				- {{cards ( not ( or [[rg]] [[vim]] [[nvim]] [[fzf]] [[Zoxide]] [[yazi]] [[tmux]] [[Lazygit]] [[Lightroom/Classic]] ) ) }}
+				- {{cards ( not ( or [[rg]] [[vim]] [[nvim]] [[fzf]] [[Zoxide]] [[yazi]] [[tmux]] [[Lazygit]] [[Lightroom/Classic]] [[mise]] ) ) }}
 				  query-properties:: [:block]
 	- ## Individual Flashcard Groups
+		- ### [[mise]]
+		  collapsed:: true
+			- {{cards [[mise]] }}
 		- ### [[yazi]]
 		  collapsed:: true
 			- {{cards [[yazi]] }}
@@ -19,6 +22,7 @@
 					- Forgotten :   2 (20%)
 			-
 		- ### [[fzf]]
+		  collapsed:: true
 			- {{embed [[fzf/Keyshort]]}}
 		- ### [[vim]]
 		  collapsed:: true

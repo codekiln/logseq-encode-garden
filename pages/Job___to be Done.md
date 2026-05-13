@@ -1,0 +1,89 @@
+alias:: [[Jobs to be Done]]
+logseq-entity:: [[Logseq/Entity/concept]]
+
+- # Job to be Done (JTBD)
+	- The Jobs to Be Done (JTBD) framework is a way of understanding why people choose products, services, or behaviors. The core claim is simple:
+		- People do not fundamentally buy products. They “hire” them to make progress in a particular situation.
+	- The framework is associated most strongly with [[Person/Clayton Christensen]], though related ideas also came from thinkers like Anthony Ulwick and Bob Moesta.
+	- A canonical Christensen example is the milkshake story. Fast food customers were buying milkshakes in the morning, often alone, during long commutes. Traditional segmentation focused on flavor, sweetness, demographics, or price. JTBD reframed the question:
+		- > “What job is the customer hiring the milkshake to do?”
+	- The answer was something closer to:
+		- make the commute less boring
+		- provide sustained fullness
+		- occupy the hands and attention
+		- be easy to consume in a car
+	- Suddenly, the milkshake competes not just with other milkshakes, but with bananas, bagels, podcasts, cigarettes, coffee, or even boredom itself.
+	- That shift is the essence of JTBD:
+		- competition is defined by the progress someone is trying to make, not by product category.
+	- The framework pushes against several assumptions common in business and product design:
+	- Customers are not stable “types”
+		- A person can “hire” radically different products in different contexts.
+		- The same person might:
+			- hire [[Apple/Note]]s for quick capture
+			- hire [[Notion]] for project planning
+			- hire paper notebooks for emotional reflection
+			- hire voice memos while driving
+		- Demographics alone explain very little.
+	- Consumption is situational
+		- JTBD focuses heavily on that situational context:
+			- What triggered the search?
+			- What struggle existed beforehand?
+			- What tradeoffs were considered?
+			- What anxieties delayed adoption?
+			- What counts as “progress” for the user?
+		- This is why JTBD interviews often reconstruct timelines rather than asking preference questions.
+	- Functional needs are only part of the story
+		- A “job” usually has multiple layers:
+			- Functional job: accomplish a task
+			- Emotional job: feel a certain way
+			- Social job: be perceived a certain way
+		- For example, someone may "hire" a luxury watch:
+			- *functionally*: to tell time
+			- *emotionally*: to feel accomplished
+			- *socially*: to signal taste or status
+		- The emotional and social layers are often more important than the functional one.
+	- People resist change more than they seek novelty
+		- Christensen framed adoption as a battle between forces:
+			- push of the current problem
+			- pull of a new solution
+			- anxiety about the new thing
+			- habit/inertia of the old thing
+		- This is one reason many technically superior products fail. They solve the wrong struggle or introduce too much behavioral friction.
+		- JTBD became influential because it changes how innovation is approached.
+			- Instead of asking:
+				- “What features do customers want?”
+				- “What market segment are we targeting?”
+				- “How do we beat competitors?”
+			- You ask:
+				- “What progress is the person trying to make?”
+				- “What circumstances create the struggle?”
+				- “What prevents satisfactory progress today?”
+				- “What would a better resolution look like?”
+	- This often reveals hidden markets.
+	- A classic Christensen theme is that [[Innovation/Disruptive]] initially look “worse” according to traditional metrics because they serve a different job. Early personal computers looked inferior to minicomputers. Early digital photography looked worse than film. But they solved other jobs:
+		- convenience
+		- portability
+		- immediacy
+		- accessibility
+	- JTBD is also closely tied to Christensen’s broader theory of disruptive innovation:
+	  incumbents optimize for existing customers and existing jobs, while disruptors often discover overlooked jobs or lower-friction ways of accomplishing them.
+	- There are several practical implications:
+		- Product design:
+			- Design around moments of struggle and desired progress rather than abstract personas.
+		- Marketing:
+			- Messaging becomes more about the situation and transformation than about product specifications.
+		- Research:
+			- Good JTBD research focuses on decision narratives:
+			- “What was happening the day you decided to switch?”
+		- Strategy:
+			- You start seeing adjacent competition everywhere because customers compare against alternative ways of making progress, including non-consumption.
+	- Critiques of JTBD include:
+		- definitions of “job” can become vague
+		- practitioners sometimes overgeneralize from interviews
+		- it can underweight culture, identity, and network effects
+		- some versions become so broad they lose predictive power
+	- Still, the framework remains influential because it gives a disciplined language for understanding motivation without reducing people to demographics or feature checklists.
+	- Christensen’s version of JTBD ultimately reflects a deeper philosophical stance about human behavior:
+		- People are not primarily optimizing for products.
+		- They are trying to move from one state of life to another.
+		- Products matter because they participate in that movement.
