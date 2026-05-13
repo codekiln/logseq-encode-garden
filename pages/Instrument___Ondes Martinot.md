@@ -6,3 +6,4 @@
 		- **Sound generation:** Heterodyne oscillators (radio-frequency mixing)
 		- **Play method:** Keyboard and ring-controlled pitch ribbon
 		- **Notable composers:** Olivier Messiaen, André Jolivet, Jonny Greenwood
+		- **Notable performers**: [[Person/Christine Ott]]
