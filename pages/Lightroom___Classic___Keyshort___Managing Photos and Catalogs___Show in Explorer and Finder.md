@@ -9,5 +9,3 @@
 		- Shortcut:
 			- `Command+R` [[MacOS]]
 			- `Ctrl+R` [[Windows]]
-		-
-		-

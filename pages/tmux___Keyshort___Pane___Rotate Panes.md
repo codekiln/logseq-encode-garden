@@ -11,4 +11,3 @@
 		- [[My Notes]]
 			- It's a bit strange; I'm not quite sure what the use case is. Perhaps if you were running some workflow that required a three terminal rotation, and needed to do things subsequently in multiple terminals, you could keep eyes focused on a subset of the screen
 			- Easily confused with [[tmux/Keyshort/Pane/Focus Next Pane]] (`Ctrl+b, o`) — if you meant to change focus, release Ctrl before pressing `o`
-		-
