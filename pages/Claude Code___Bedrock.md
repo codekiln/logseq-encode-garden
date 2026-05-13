@@ -1,6 +1,8 @@
 alias:: [[Anthropic/App/Claude Code/Bedrock]]
 
 - # [Claude Code on Amazon Bedrock - Claude Docs](https://docs.claude.com/en/docs/claude-code/amazon-bedrock)
+	- #### Related: Claude Platform on AWS
+		- **[[Anthropic/Product/Claude/Platform/AWS]]** · **[[Anthropic/Blog/26/05/Introducing the Claude Platform on AWS]]** · **[[AWS/Blog/26/05/Claude Platform on AWS]]** — this doc remains **Claude Code → Bedrock** only.
 	- #### Advanced credential configuration
 		- Claude Code supports automatic credential refresh for AWS SSO and corporate identity providers. Add these settings to your Claude Code settings file (see [Settings](https://docs.claude.com/en/docs/claude-code/settings) for file locations).When Claude Code detects that your AWS credentials are expired (either locally based on their timestamp or when Bedrock returns a credential error), it will automatically run your configured `awsAuthRefresh` and/or `awsCredentialExport` commands to obtain new credentials before retrying the request.##### Example configuration
 			- ```
