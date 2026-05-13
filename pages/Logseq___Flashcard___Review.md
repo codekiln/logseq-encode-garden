@@ -14,9 +14,11 @@
 		- ### [[yazi]]
 		  collapsed:: true
 			- {{cards [[yazi]] }}
+				- Summary: 10 items, 10 review counts [[2026-05-13 Wed]]
+					- Remembered:   8 (80%)
+					- Forgotten :   2 (20%)
 			-
 		- ### [[fzf]]
-		  collapsed:: true
 			- {{embed [[fzf/Keyshort]]}}
 		- ### [[vim]]
 		  collapsed:: true

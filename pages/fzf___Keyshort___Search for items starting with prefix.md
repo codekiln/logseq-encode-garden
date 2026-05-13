@@ -1,9 +1,9 @@
 - [[fzf/Keyshort]] [[Keyshort]]
-	- **How to use `fzf` to search for items beginning with a prefix** [[card]]
-	  card-last-interval:: 4.14
-	  card-repeats:: 2
-	  card-ease-factor:: 2.7
-	  card-next-schedule:: 2026-04-19T10:39:22.013Z
-	  card-last-reviewed:: 2026-04-15T07:39:22.013Z
+	- **How to use `fzf` to search for items beginning with a `<prefix>`** [[card]]
 	  card-last-score:: 5
+	  card-repeats:: 3
+	  card-next-schedule:: 2026-05-24T12:41:37.055Z
+	  card-last-interval:: 11.2
+	  card-ease-factor:: 2.8
+	  card-last-reviewed:: 2026-05-13T08:41:37.055Z
 		- `^<prefix>` regex works in fzf for requiring that `<prefix>` occurs at the beginning

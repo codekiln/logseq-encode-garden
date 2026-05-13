@@ -1,10 +1,10 @@
 - [[Keyshort]] [[yazi]] [[yazi/Keyshort]]
 	- **`<yazi-sort-leader>` for default sort chords** #card
-	  card-last-interval:: 10.24
-	  card-repeats:: 3
-	  card-ease-factor:: 2.56
-	  card-next-schedule:: 2026-04-25T12:30:03.896Z
-	  card-last-reviewed:: 2026-04-15T07:30:03.897Z
+	  card-last-interval:: 28.3
+	  card-repeats:: 4
+	  card-ease-factor:: 2.66
+	  card-next-schedule:: 2026-06-10T15:39:44.835Z
+	  card-last-reviewed:: 2026-05-13T08:39:44.836Z
 	  card-last-score:: 5
 		- Shortcut: `,` (comma), then a second key (two-key sequence)
 		- Context: File list / manager pane (`[mgr]` layer, default keymap)

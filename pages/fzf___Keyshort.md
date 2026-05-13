@@ -1,1 +1,4 @@
 - {{cards [[fzf/Keyshort]] }}
+	- Summary: 2 items, 2 review counts [[2026-05-13 Wed]]
+		- Remembered:   2 (100%)
+		- Forgotten :   0 (0%)
