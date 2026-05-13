@@ -1,12 +1,12 @@
 ---
 targets:
   - '*'
-description: Create Logseq Keyshort pages with #card flashcards using the <Scope>/Keyshort/<Action> (and optional <Subscope>) format
+description: Create Logseq Keyshort pages with [[Card]] flashcards using the <Scope>/Keyshort/<Action> (and optional <Subscope>) format
 argument-hint: Scope (required); Action (required); optional Subscope; Shortcut; Description; optional Grouped cards
 ---
-# Create a Logseq Keyshort Page (with #card flashcards)
+# Create a Logseq Keyshort Page (with [[Card]] flashcards)
 
-This command creates or updates Logseq Keyshort pages using the canonical `<Scope>/Keyshort/<Action>` format, with optional `<Subscope>` segments. It ensures `#card` flashcards are children of a parent block that carries the needed ancestry tags for Logseq's `{{cards ...}}` queries.
+This command creates or updates Logseq Keyshort pages using the canonical `<Scope>/Keyshort/<Action>` format, with optional `<Subscope>` segments. It ensures `[[Card]]` flashcards are children of a parent block that carries the needed ancestry tags for Logseq's `{{cards ...}}` queries.
 
 ## Variables
 
@@ -26,7 +26,7 @@ This command creates or updates Logseq Keyshort pages using the canonical `<Scop
   - `[[<Scope>/Keyshort]]` and optionally `[[<Scope>/Keyshort/<Subscope>]]`
   - Always include `[[Keyshort]]` and `[[<Scope>]]` in the parent block.
 - **Flashcards**:
-  - Use `#card` blocks only.
+  - Use `[[Card]]` blocks for new shortcut cards.
   - Avoid `Question :: Answer` blocks and any "Flashcard Questions" section.
 - **Frontmatter**:
   - Do not add or remove `tags::` on existing pages.
@@ -55,14 +55,14 @@ This command creates or updates Logseq Keyshort pages using the canonical `<Scop
 - Create a parent block that includes ancestry tags:
   - `[[Keyshort]] [[<Scope>]] [[<Scope>/Keyshort]]`
   - Add `[[<Scope>/Keyshort/<Subscope>]]` if applicable.
-- Add `#card` blocks as children of that parent block.
-- For grouped cards, place multiple `#card` blocks under the same tagged parent block.
+- Add `[[Card]]` blocks as children of that parent block.
+- For grouped cards, place multiple `[[Card]]` blocks under the same tagged parent block.
 
 #### Example (single card)
 
 ~~~markdown
 - [[Keyshort]] [[VSCode]] [[VSCode/Keyshort]] [[VSCode/Keyshort/Git]]
-	- **Open the Source Control Panel** #card
+	- **Open the Source Control Panel** [[Card]]
 		- Shortcut: `Ctrl+Shift+G`
 		- Description: Opens the Source Control panel.
 ~~~
@@ -71,10 +71,10 @@ This command creates or updates Logseq Keyshort pages using the canonical `<Scop
 
 ~~~markdown
 - [[Keyshort]] [[tmux]] [[tmux/Keyshort]] [[tmux/Keyshort/Pane]]
-	- **Move Pane Up** #card
+	- **Move Pane Up** [[Card]]
 		- Shortcut: `<keys>`
 		- Description: Moves the pane up.
-	- **Move Pane Down** #card
+	- **Move Pane Down** [[Card]]
 		- Shortcut: `<keys>`
 		- Description: Moves the pane down.
 ~~~

@@ -49,7 +49,7 @@ From **Queries** docs: most filters apply to **blocks**. Some apply only to **pa
 - Either tag: `(or [[tag1]] [[tag2]])`
 - Tag2 but not tag1: `(and [[tag2]] (not [[tag1]]))`
 
-These patterns are the same whether the macro is `query` or `cards`; **cards** additionally requires blocks to behave as **cards** (`#card` / `[[card]]` in stock Logseq — this garden standardizes on **`#card`** only).
+These patterns are the same whether the macro is `query` or `cards`; **cards** additionally requires blocks to behave as **cards** (`#card` / `[[card]]` in stock Logseq). This garden uses **`[[Card]]`** for new card work and treats `#card` / `[[card]]` as legacy-compatible forms.
 
 ## Advanced queries (when simple expressions are not enough)
 
@@ -64,7 +64,7 @@ Beginner links from upstream docs: [Learn Datalog Today](https://www.learndatalo
 
 ## Practical notes for agents (encode garden)
 
-1. **Scope deck**: A page like `[[vim/Keyshort]]` that embeds `{{cards [[vim/Keyshort]]}}` only picks up `#card` blocks whose **ancestors** include that link (and siblings’ inheritance rules follow Logseq’s block tree). Fixing ancestry is an **editorial/graph** task, not a query-syntax change — see Keyshort references.
+1. **Scope deck**: A page like `[[vim/Keyshort]]` that embeds `{{cards [[vim/Keyshort]]}}` only picks up review-card blocks whose **ancestors** include that link (and siblings’ inheritance rules follow Logseq’s block tree). Fixing ancestry is an **editorial/graph** task, not a query-syntax change — see Keyshort references.
 2. **Negation**: `(not [[X]])` is documented for cards; use **`(and … (not …))`** when you need “must match A and must not match B”.
 3. **Escalation**: If the user needs card sets that **simple expressions cannot express**, consider an **advanced query** whose `:query` is still a simple expression, or full Datalog for block pulls — then map results to review UX separately (cards UI vs query table differ in product).
 

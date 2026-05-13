@@ -1,6 +1,8 @@
-# Create a new Logseq flashcard page (general)
+# Create a legacy Logseq flashcard page (general)
 
-Use when the target is **not** a straight Keyshort create (for that, follow command `logseq-create-shortcut`), or when the user gives a **full page title** like `[[vim/Keyshort/Inspect/Setting Value]]` and source prose to turn into a card.
+Use when the target is **not** a straight Keyshort create (for that, follow command `logseq-create-shortcut`) and the user wants a card on an ordinary namespaced page rather than a first-class `/Card/` entity page.
+
+If the user asks to **factor out cards**, create a **Card entity**, or use a target like `[[Source/Page/Card/Title]]`, read [card-entity-and-factor-out.md](./card-entity-and-factor-out.md) instead.
 
 ## Guardrails
 
@@ -22,14 +24,14 @@ Use when the target is **not** a straight Keyshort create (for that, follow comm
 
 ~~~markdown
 - [[Keyshort]] [[vim/Keyshort]] [[vim/Keyshort/Inspect]]
-	- **Card prompt text here** #card
+	- **Card prompt text here** [[Card]]
 ~~~
 
-2. **Card line** — one bullet with `#card`. Put the **SRS cue** in bold (question or recall hook); keep it short.
+2. **Card line** — one bullet with `[[Card]]`. Put the **SRS cue** in bold (question or recall hook); keep it short.
 
 3. **Answer bullets** — children of the card line: shortcuts, definitions, contrasts, examples. Reformulate prose into scannable bullets.
 
-4. **SRS properties** (optional) — as child properties of the `#card` block, aligned with sibling cards in the same graph, for example:
+4. **SRS properties** (optional) — as child properties of the `[[Card]]` block, aligned with sibling cards in the same graph, for example:
 
 ~~~text
   card-last-interval:: -1

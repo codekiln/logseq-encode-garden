@@ -1,0 +1,30 @@
+- # Card
+	- This page is the standard operating procedure for **card** entities: first-class Logseq review cards stored as pages under a fixed `/Card/` namespace segment.
+	- ## Examples in this garden
+		- [[mise/Architecture/Card/Jobs to be Done]] is a card factored out from [[mise/Architecture]] and embedded back into the source page.
+		- Keyshort pages such as `Scope/Keyshort/Action` are legacy card-bearing pages and may be migrated or treated as specialized card entities when they follow the card page shape.
+	- ## When we treat something as a card entity
+		- Strong signals: the page title contains a `/Card/` namespace segment and the page contains a Logseq review card block marked with `[[Card]]`.
+		- A card entity captures one durable review prompt plus its answer or recall notes. If a source page contains several independent review prompts, factor them into separate `/Card/` pages.
+		- Legacy inline `#card`, `[[card]]`, or `[[Card]]` blocks remain valid Logseq cards, but new first-class card pages use `[[Card]]`.
+	- ## Canonical naming and links
+		- **Link shape:** `[[Source/Page/Card/Short Card Title]]`.
+		- **File shape:** `pages/Source___Page___Card___Short Card Title.md`.
+		- The `Card` segment marks the page as a single card. Text after `Card` names the card, not a subsection collection.
+		- Use forward slashes in body and journal links; never triple underscores inside Logseq links.
+	- ## Finding and deduplicating
+		- Search first for the exact expected `/Card/` page title, then for the normalized card prompt text across existing `pages/*___Card___*.md` files, then for the same prompt in legacy inline card blocks.
+		- Treat a matching inline card on the source page as a candidate to factor out, not as a duplicate page.
+		- Classify candidates as **existing**, **similar** (needs human judgment), **new**, or **blocked**.
+	- ## Frontmatter
+		- On new card pages, include `logseq-entity::` pointing at this entity-type page so backlinks collect card instances.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- First content block: H1 with the short card title or prompt context.
+		- Include a parent block with enough source and scope links for scoped `{{cards [[...]]}}` review pages to find the card.
+		- The review prompt is one child block marked with `[[Card]]`. Answer bullets are children of that prompt.
+		- Use Logseq Flavored Markdown throughout: bullets for body lines, tab indentation, and no blank lines between bullets.
+	- ## Factoring cards out of source pages
+		- Move the review prompt and its answer children into the target `/Card/` page.
+		- Replace the original block on the source page with a page embed using `{{embed [[Source/Page/Card/Short Card Title]]}}`.
+		- Preserve the original source page's surrounding structure; the source page should point to the card page, while the card page carries the reviewable content.

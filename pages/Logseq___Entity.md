@@ -25,6 +25,7 @@ alias:: [[Logseq Entities]]
 		- **person** — Real individuals tracked as `Person/Full Name` hub pages (not every page under the `Person/` namespace). Conventions are on the person type page.
 		- **book** — Published books tracked as `Book/Title` hub pages. Conventions are on the book type page.
 		- **standard** — Normative specifications and widely adopted conventions (RFCs, community specs, semantic-versioning and commit-message rules, schema/protocol definitions, etc.) when the page’s primary identity is **the standard**, not the publishing **organization** or a [[Logseq/Entity/Software/Project]] implementation. Conventions are on the standard type page.
+		- **[[Logseq/Entity/Card]]** — First-class Logseq review cards stored under a `/Card/` namespace segment, with one durable prompt per page. Conventions are on that type page.
 		- **[[Logseq/Entity/Article]]** — Published web articles, blog posts, essays, and similar authored pieces imported as first-class reading notes. Conventions are on that type page.
 		- **[[Logseq/Entity/Game]]** — Individual playable works or systems: video games, board games, card games, tabletop RPG systems, sport-as-game pages, folk games, and similar game-first hubs across any namespace. Conventions are on that type page.
 		- **[[Logseq/Entity/Game/Type]]** — Game types, genres, families, mechanics, modes, and reusable game-design categories such as [[Game/Video/Platformer]]. Conventions are on that type page.

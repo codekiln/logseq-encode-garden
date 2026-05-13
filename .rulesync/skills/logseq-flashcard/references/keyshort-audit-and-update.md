@@ -1,6 +1,6 @@
 # Keyshort flashcards: audit and update
 
-Canonical workflow ported from command `logseq-manage-shortcut-flashcards`. Use when the user wants to **audit** or **fix** `#card` blocks on **Keyshort** pages only.
+Canonical workflow ported from command `logseq-manage-shortcut-flashcards`. Use when the user wants to **audit** or **fix** review-card blocks on **Keyshort** pages only.
 
 ## Variables
 
@@ -17,7 +17,8 @@ Canonical workflow ported from command `logseq-manage-shortcut-flashcards`. Use 
   - Include `[[Keyshort]]` and `[[<Scope>]]`.
   - Include `[[<Scope>/Keyshort]]` and `[[<Scope>/Keyshort/<Subscope>]]` when applicable.
 - **Flashcards**:
-  - Use `#card` blocks only.
+  - New or migrated Keyshort review cards use `[[Card]]`.
+  - Existing `#card` or `[[card]]` blocks are legacy review cards; preserve them unless the task is to migrate them.
   - Do not add `Question :: Answer` blocks.
 - **Frontmatter**:
   - Do not add or remove `tags::` on existing pages.
@@ -35,14 +36,14 @@ Check for:
 
 - Parent block containing `[[Keyshort]]` and `[[<Scope>]]`.
 - `[[<Scope>/Keyshort]]` (and `[[<Scope>/Keyshort/<Subscope>]]` if the path implies subscope).
-- `#card` blocks as **children** of that parent block.
+- `[[Card]]`, `#card`, or `[[card]]` blocks as **children** of that parent block.
 - Any "Flashcard Questions" sections or `Question :: Answer` blocks (flag for removal or refactor).
 
 ### Step 3: Apply updates (only in `update` mode)
 
 - Add missing ancestry links to the parent block without altering unrelated content.
-- If shortcut content exists but has no `#card`, wrap or convert the relevant block into a `#card` block.
-- If `Question :: Answer` blocks exist, convert to `#card` or remove the section (ask if ambiguous).
+- If shortcut content exists but has no review marker, wrap or convert the relevant block into a `[[Card]]` block.
+- If `Question :: Answer` blocks exist, convert to `[[Card]]` or remove the section (ask if ambiguous).
 
 ### Step 4: Summarize
 

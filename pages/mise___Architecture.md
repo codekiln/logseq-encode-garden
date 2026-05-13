@@ -1,0 +1,11 @@
+- # [mise Architecture](https://mise.jdx.dev/architecture.html)
+	- This docs page is a conceptual overview for contributors to the project
+	- ## System Overview
+		- {{embed [[mise/Architecture/Card/Jobs to be Done]]}}
+	- ## Core Arch Components
+		- ### Command Layer
+			- Each command is a separate [[Rust/Module]].
+				- [[Examples]]
+					- [`install.rs`](https://github.com/jdx/mise/blob/main/src/cli/install.rs)
+					- [`use.rs`](https://github.com/jdx/mise/blob/main/src/cli/use.rs)
+					- [`run.rs`](https://github.com/jdx/mise/blob/main/src/cli/run.rs)
