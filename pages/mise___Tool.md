@@ -11,4 +11,6 @@ alias:: [[mise/Docs/Tool]], [[mise Dev Tool]]
 			- anything from [[npm]], [[pipx]], [[cargo]], etc
 		- Anything from a "[Universal Installer](https://mise.jdx.dev/dev-tools/backend_architecture.html#universal-installers)" such as [[aqua]]
 			- `aqua` is a tool that [[Person/Jeff Dickey]] wrote to be a "meta" package manager
+	- ## [[mise/Tool/GitHub Token]]
+		- Credential patterns for tools that call the GitHub API—start at [[mise/Tool/GitHub Token/Native GitHub OAuth]].
 	-

@@ -1,0 +1,5 @@
+- # [GitHub Tokens | mise-en-place](https://mise.jdx.dev/dev-tools/github-tokens.html)
+	- Umbrella notes for [[mise Dev Tool]] stacks: rate limits, **`MISE_GITHUB_TOKEN`** / **`GITHUB_TOKEN`** precedence, **`github_tokens.toml`**, **`gh`** `hosts.yml` integration, **`credential_command`** (including **Using ghtkn**), **native GitHub OAuth**, git credential helpers, lockfiles, and CI.
+	- Many CLIs ([[GitHub/CLI]], package managers, [[MCP Server]]s) expect `GH_TOKEN` or `GITHUB_TOKEN`. With [[mise]], binaries are often pinned via [[mise/Backend/aqua]] or other backends; **how mise obtains a token for its own GitHub API calls** follows the guide above and may differ from what a given child process uses unless you export or wrap commands.
+	- ## Topics
+		- [[mise/Tool/GitHub Token/Native GitHub OAuth]] — mise’s built-in experimental device-flow OAuth (doc anchor `#native-github-oauth`), distinct from **`gh`** `hosts.yml` tokens and from **`ghtkn`** via **`credential_command`**.
