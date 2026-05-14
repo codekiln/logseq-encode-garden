@@ -2,7 +2,7 @@
 	- Nix is weird. It's a lot of things. It's
 		- a [[Functional Programming Language]] - [[Nix/Lang]]
 			- this is a [[DSL]] specifically oriented towards solving the problem of execution context reproducibility in the domain of [[Package/Management]]
-		- a [[Package Manager]] - [[Nix/Pkgs]]
+		- a [[Package Manager]] - [[Nix/Package/Registry]]
 			- `nixpkgs` is a package manager that abstracts away other package managers. This means th at npm, pypi, system packages, everything can be represented in it.
 			- Packages are packaged up, and in the case of [[Nix/home-manager]]
 		- an [[Operating System]] - [[Nix/OS]]

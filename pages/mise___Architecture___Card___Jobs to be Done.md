@@ -1,4 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Card]]
+alias:: [[mise Jobs to be Done]]
+
 - # Jobs to be Done
 	- [[mise]] [[mise/Architecture]]
 		- ### What are the three core [[Job/to be Done]] by [[mise]]? [[Card]]

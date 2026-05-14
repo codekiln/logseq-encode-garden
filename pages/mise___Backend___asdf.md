@@ -1,0 +1,4 @@
+- [asdf Backend | mise-en-place](https://mise.jdx.dev/dev-tools/backends/asdf.html)
+	- asdf plugins are considered legacy. **New asdf and vfox plugins are not accepted into the [mise registry](https://github.com/jdx/mise/blob/main/registry/) for supply-chain security reasons** — for registry submissions use the [[aqua]] (see also [[mise/Backend/aqua]])  (preferred) or [github](https://mise.jdx.dev/dev-tools/backends/github.html) backend instead.
+	- > `asdf` is the original backend for mise.
+	-

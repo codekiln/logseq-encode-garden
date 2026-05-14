@@ -15,6 +15,9 @@
 		- ### [[Programming Language]] [[Package Managers]] - [Language Package Managers](https://mise.jdx.dev/dev-tools/backend_architecture.html#language-package-managers)
 			- This category of backends wrap package managers themselves and make them directly executable in mise.
 			- #### [[Examples]]
-				- [[npm]]
+				- [[npm]] - [[mise/Backend/npm]]
 				- [[pipx]]
 				- [[cargo]]
+		- ### Other
+			- [[Examples]]
+				- [[vfox]] - [[mise/Backend/vfox]]

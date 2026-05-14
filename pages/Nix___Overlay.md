@@ -1,6 +1,6 @@
 logseq-entity:: [[Logseq/Entity/concept]]
 tags:: [[Diataxis/Concept]]
-see-also:: [[Nix/Pkgs]]
+see-also:: [[Nix/Package/Registry]]
 via:: [[2026-04-27 Mon]]
 
 - # Overlay
@@ -8,7 +8,7 @@ via:: [[2026-04-27 Mon]]
 		- In **[[Nix]]** / **[[nixpkgs]]**, an **overlay** is a small piece of configuration that says: when you build the package set, **add or change these attributes** on top of whatever nixpkgs already defines.
 		- New keys become new packages; **same keys replace** the previous definition.
 	- ## Context
-		- **[[Nix/Pkgs]]** is consumed as one large attribute set (`pkgs.git`, `pkgs.bash`, `pkgs.zed-editor`, …). Overlays are how you **customise** that set without forking nixpkgs wholesale.
+		- **[[Nix/Package/Registry]]** is consumed as one large attribute set (`pkgs.git`, `pkgs.bash`, `pkgs.zed-editor`, …). Overlays are how you **customise** that set without forking nixpkgs wholesale.
 	- ## Mechanism
 		- An overlay is a function with this shape:
 			- ~~~
