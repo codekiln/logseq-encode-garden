@@ -1,0 +1,2 @@
+- mise [[Job/to be Done]] `3`: as a **task runner** to share common tasks *within* a project
+	- for example, run a task when a file changes

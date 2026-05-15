@@ -1,0 +1,5 @@
+- [[Job/to be Done]] `1`: as a **[[Declarative]] [[mise Dev Tool]] installer of [[Programming Languages]] and [[Package Managers]] packages**
+	- installs versions of [[NodeJS]], [[Py]], [[tf]] as well as any package from those ecosystems
+	- specify versions of tools per project or globally
+	- `mise` supports [hundreds](https://mise.jdx.dev/plugins.html) of dev tools
+	- [[Person/Jeff Dickey]] has also created [[aqua]] to be a "better" aka more secure meta-package manager

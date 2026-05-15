@@ -1,0 +1,3 @@
+- mise [[Job/to be Done]] `2`: as a [[Declarative]] **environment manager** - [[mise/Environment]]
+	- manages [[EnvVar]]s for project or globally
+	- lets you specify configuration like `AWS_ACCESS_KEY_ID` that may differ between projects. It can also be used to automatically activate a [Python virtualenv](https://mise.jdx.dev/lang/python.html) when entering projects too.
