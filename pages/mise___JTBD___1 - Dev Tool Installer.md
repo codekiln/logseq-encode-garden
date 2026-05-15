@@ -3,3 +3,4 @@
 	- specify versions of tools per project or globally
 	- `mise` supports [hundreds](https://mise.jdx.dev/plugins.html) of dev tools
 	- [[Person/Jeff Dickey]] has also created [[aqua]] to be a "better" aka more secure meta-package manager
+	- {{embed [[mise/JTBD/1 - Dev Tool Installer/Card/How do I upgrade my global mise Tools]]}}
