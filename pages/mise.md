@@ -16,7 +16,7 @@ created-by:: [[Person/Jeff Dickey]]
 			- `mise.toml` describes consistent way to setup and interact with projects across languages
 			- `mise.toml` is a file type used by the `mise` cli that lets developers globally declare or individual projects locally declare the programming languages, the package manager packages, the environment variables, and the common tasks that need to be run
 		- #### [[Package/Manager/Meta]]
-			-
+			- Mise integrates with multiple [[Meta Package Manager]]s or [[Universal Installer]]s. In that sense, it's a meta-meta-package-manager (LOL).
 	- ### The Three Core [[Jobs to be Done]] or Main Use Cases for `mise`
 		- {{embed [[mise/JTBD/1 - Dev Tool Installer]]}}
 		- {{embed [[mise/JTBD/2 - Environment Manager]]}}
