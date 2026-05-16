@@ -67,9 +67,10 @@
 				- improved local searchability
 					- for example, *being able to ripgrep across an entire org in github*
 			- Sourcer is conceptually closer to a shared source corpus than a traditional package manager.
-		- ### Explicit Trust Model
+		- ### Explicit access boundary
 			- Sourcer is designed around constrained repository access.
-			- Instead of allowing arbitrary repository cloning, administrators or users can define trusted repository patterns, including wildcards. For example, it should be possible to pre-authorize a clone of any repository from a particular provider and owner, or only the repositories that begin with a given prefix.
+			- In the MVP, every identity listed in `[sources]` is **allowed** and **installed by default** when `srcr install` runs (see [[Person/codekiln/GitHub/sourcer/Project/Overview/Config]]).
+			- In Phase 2, optional `[allow]` patterns (including wildcards) can permit download without auto-install; see [[Person/codekiln/GitHub/sourcer/Project/Overview/Trust]].
 		- ### Human and Agent Friendly
 			- The command-line interface should work equally well for:
 				- humans
@@ -78,20 +79,7 @@
 				- local automation
 				- AI agents
 			- Commands should support structured output from the beginning.
-			- Example:
-				- ~~~sh
-				  srcr use github.com/example/project --json
-				  ~~~
-			- Example output:
-				- ~~~json
-				  {
-				    "uri": "github.com/example/project",
-				    "path": "/home/user/sources/github.com/example/project",
-				    "exists": true,
-				    "cloned": false,
-				    "trusted": true
-				  }
-				  ~~~
+			- MVP agents and scripts rely on `srcr install`, `srcr where`, and `srcr status --json` (see [[Person/codekiln/GitHub/sourcer/Project/Overview/CLI]]).
 			- Machine-readable interfaces are a first-class design requirement.
 		- ### Compatibility with [[DevContainer]]s and related technologies like [[DevContainer/Feature]]s and [[GitHub Codespaces]]
 			- DevContainers are typically created in a way that touches a single repository, and in many cases that's likely because people don't understand any way to bring more than one repository into a devcontainer. `srcr` aims to provide a sensible and easy way to do that in devcontainers.
@@ -103,9 +91,9 @@
 			- environment variable
 			- configuration file
 			- default
-		- Example:
+		- Example (MVP):
 			- ~~~sh
-			  srcr use github.com/example/project --root /mnt/ssd/sources
+			  srcr install --root /mnt/ssd/sources
 			  ~~~
 		- Example environment override:
 			- ~~~sh
@@ -128,7 +116,26 @@
 			- perform builds
 			- manage deployment pipelines
 			- provide repository hosting
-		- Its responsibility is repository location, trust policy, and local source materialization.
+		- Its responsibility is repository location, access policy (allow + install), and local source materialization.
+	- ## Phase 2
+		- Phase 2 extends the MVP with ad-hoc materialization and richer access policy. See [[Person/codekiln/GitHub/sourcer/Project/Overview/CLI]] and [[Person/codekiln/GitHub/sourcer/Project/Overview/Config]].
+		- **`srcr use <identity>`** — materialize one repository by identity (replaces the defunct `srcr ensure`); may also imperatively update `srcr.toml` when config-mutating mode is enabled (see non-goals above).
+		- **`[allow]`** — wildcard patterns that permit download without listing the repo in `[sources]` (no auto-install on `srcr install`).
+		- **`install = false` on a `[sources]` entry** — allowed and path-resolvable, but not cloned until `srcr use`.
+		- Example (Phase 2 preview):
+			- ~~~sh
+			  srcr use github.com/example/project --json
+			  ~~~
+		- Example output:
+			- ~~~json
+			  {
+			    "uri": "github.com/example/project",
+			    "path": "/home/user/sources/github.com/example/project",
+			    "exists": true,
+			    "cloned": false,
+			    "allowed": true
+			  }
+			  ~~~
 	- ## Design
 		- [[Person/codekiln/GitHub/sourcer/Project/Overview/Design/Thinking]] — structured design-thinking workshop (empathy → test).
 	- ## Example CLI

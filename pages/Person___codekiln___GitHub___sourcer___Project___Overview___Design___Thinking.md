@@ -1,0 +1,64 @@
+# Design thinking — Sourcer (`srcr`)
+	- Greenfield product design workshop (five phases). Phases 2–5 pending facilitator input.
+	- ## Phase 1 — Empathize
+		- ### Goal
+			- Surface who feels the pain, what they say and do today, and which frictions matter most before locking problem statements or MVP scope.
+		- ### Stakeholder empathy map
+			- #### Solo developer
+				- **Says:** "I know this library is on GitHub somewhere — where did I clone it last time?" / "Let me `git clone` into `~/projects` again."
+				- **Thinks:** Onboarding should be one obvious path; I should not maintain a mental map of ten clone locations; [[mise]]-style declarative setup should work for repos too.
+				- **Feels:** Annoyed by duplicate clones and wasted disk; relieved when `rg` works across an org cache; wary of agents doing their own thing in `/tmp`.
+				- **Does:** Ad hoc `git clone`; bookmarks paths in shell aliases; sometimes adds [[git submodules]] and regrets it; runs agents against whatever paths the tool invents.
+			- #### Platform / security team
+				- **Says:** "Agents cannot have repo:all." / "We need an auditable allowlist, not 'whatever the model asks for'."
+				- **Thinks:** Prompt injection on hosting sites is real; whitelisting github.com is insufficient; local corpus must be bounded and policy-driven.
+				- **Feels:** Pressure to enable AI productivity without reopening the whole internet; skeptical of tools that fail open.
+				- **Does:** Network egress rules; PAT scopes; reviews agent tool configs; pushes standardized dev images and config fragments (`[sources]`, Phase 2 `[allow]`).
+			- #### AI agent operator
+				- **Says:** "Read the implementation before you refactor." / "Use structured output so the planner does not guess paths."
+				- **Thinks:** Primary source beats docs; paths must be deterministic across sessions; `allowed: false` must hard-stop automation.
+				- **Feels:** Frustrated when agents clone to `/tmp` and discard context; anxious about injection via issue comments when browsing live repos.
+				- **Does (MVP):** `srcr install` + `srcr where` / `status --json`; pre-bakes corpora in sandboxes; prompts reference canonical identity, not host paths.
+				- **Does (Phase 2):** wraps `srcr use … --json` for optional repos not in install set.
+			- #### OSS contributor
+				- **Says:** "I forked upstream — which path is 'the' one for search?" / "I do not want a corporate trust file for a weekend hack."
+				- **Thinks:** Defaults should be lightweight; public GitHub identities should work without a security team; shared cache still helps across my own projects.
+				- **Feels:** Wary of heavy ceremony; willing to adopt convention if install is one command after editing a small TOML.
+				- **Does:** Clones into `~/src` or `~/go/src`-style trees; uses upstream + fork remotes manually; contributes without org-wide policy.
+			- #### DevContainer maintainer
+				- **Says:** "Our devcontainer only has the service repo — engineers still need contracts and shared libs on disk."
+				- **Thinks:** `postCreateCommand` clone scripts rot; Docker layer caching matters; trust at build time must match runtime agent profile.
+				- **Feels:** Stuck between single-repo templates and fragile shell scripts; wants mise-native ergonomics without submodule weight.
+				- **Does:** Hand-rolls `git clone` in Dockerfile or `postCreateCommand`; bind-mounts host caches sometimes; pairs with [[mise]] for tools.
+			- #### CI author
+				- **Says:** "The job needs to grep two other repos before tests run." / "Fail the pipeline if required sources are missing or wrong ref."
+				- **Thinks:** Same `srcr.toml` as local dev; JSON status for gates; no interactive allow break-glass in CI.
+				- **Feels:** Impatient with non-deterministic paths; needs exit codes that distinguish not-allowed vs git vs config errors.
+				- **Does:** Runs install in setup job; uses `srcr where` in scripts; caches `root` between runs when policy allows.
+		- ### Top 5 pain statements (ranked)
+			- 1. **Unpredictable local paths** — Humans, scripts, and agents resolve the same logical repo to different directories (`/tmp/…`, `~/projects/…`, random workspace folders), so search, skills, and prompts do not compose across sessions.
+			- 2. **Agent and network attack surface** — Unrestricted or broad hosting access lets agents ingest prompt injection from issues, PRs, and wikis; "read GitHub" is not the same as "read trusted source trees on disk."
+			- 3. **Missing onboarding corpus** — Neither humans nor agents inherit a declared set of contextually related repositories for a project; discovery is tribal knowledge or heavyweight [[git submodules]].
+			- 4. **Duplicate materialization** — Repeated ad hoc clones waste disk, API quota, and time; org-wide `rg` across a shared corpus is impossible when every tool clones afresh.
+			- 5. **Single-repo sandbox defaults** — [[DevContainer]]s and Codespaces ship one repo; adjacent libraries require brittle `postCreateCommand` scripts without auditable trust or stable layout under `root`.
+		- ### Phase 1 — Decisions
+			- Workshop will treat **canonical identity** (`provider/owner/repo`) as the shared language across all stakeholders (aligned with overview design goals).
+			- Pain ranking assumes **agentic workflows are a first-class stressor**, not an edge case, for MVP prioritization.
+		- ### Phase 1 — Open questions (for facilitator)
+			- Which stakeholder is the **beachhead** for first real-world validation: solo dev, agent operator, or platform team rolling out org policy?
+			- On a developer laptop with no Phase 2 `[allow]` table, should default posture for ad-hoc clone be **deny-all until configured**, **allow only `[sources]` entries**, or **allow provider wildcards** (Phase 2)?
+			- Who **owns** `srcr.toml` in a service repo — team in-repo, platform-published fragment, or personal overlay merged at install time?
+		- ### Phase 1 — Risks
+			- **Over-indexing on agents** may burden OSS contributors with trust ceremony they do not need — mitigate with tiered defaults or profiles (`dev` vs `agent`).
+			- **Shared cache** on multi-user machines can leak path existence across Unix users if permissions are wrong — mitigate with documented `root` ownership and optional per-user roots.
+			- **Declarative-only MVP** may frustrate DevContainer Feature authors who want one-line `srcr use` — mitigate by documenting fragment-file patterns until Phase 2 imperative API.
+	- ## Phase 2 — Define
+		- *(pending)*
+	- ## Phase 3 — Ideate
+		- *(pending)*
+	- ## Phase 4 — Prototype (conceptual)
+		- *(pending)*
+	- ## Phase 5 — Test
+		- *(pending)*
+	- ## Workshop outputs (end state)
+		- *(pending — recommended MVP scope, decision log, risks, experiments)*
