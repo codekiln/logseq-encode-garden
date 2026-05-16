@@ -1,4 +1,6 @@
-# DevContainer Features
+alias:: [[DevContainer Feature]], [[DevContainer Features]]
+
+- # DevContainer Features
 	- ## Links
 		- [[DevContainer/Feature/Reference]] [Dev Container Features reference](https://containers.dev/implementors/features/)
 			- the spec in github: https://github.com/devcontainers/spec/blob/main/docs/specs/devcontainer-features.md

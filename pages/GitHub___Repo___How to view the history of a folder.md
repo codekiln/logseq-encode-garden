@@ -1,0 +1,3 @@
+- Click on the `History` button on the right of any folder
+	- In the root of the repo, this is the "Commits" button
+- You can even filter the commits by user to see a particular user's commits to the folder
