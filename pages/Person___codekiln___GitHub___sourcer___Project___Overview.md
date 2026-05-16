@@ -80,7 +80,7 @@
 			- Commands should support structured output from the beginning.
 			- Example:
 				- ~~~sh
-				  srcr ensure github.com/example/project --json
+				  srcr use github.com/example/project --json
 				  ~~~
 			- Example output:
 				- ~~~json
@@ -105,7 +105,7 @@
 			- default
 		- Example:
 			- ~~~sh
-			  srcr ensure github.com/example/project --root /mnt/ssd/sources
+			  srcr use github.com/example/project --root /mnt/ssd/sources
 			  ~~~
 		- Example environment override:
 			- ~~~sh
@@ -129,8 +129,10 @@
 			- manage deployment pipelines
 			- provide repository hosting
 		- Its responsibility is repository location, trust policy, and local source materialization.
+	- ## Design
+		- [[Person/codekiln/GitHub/sourcer/Project/Overview/Design/Thinking]] — structured design-thinking workshop (empathy → test).
 	- ## Example CLI
-		- TBD pending design review
+		- TBD pending design review — see [[Person/codekiln/GitHub/sourcer/Project/Overview/CLI]].
 	- ## Long-Term Possibilities
 		- Potential future directions include:
 			- migrate existing local repository locations that are outside of the convention to move them into a location that's matches the convention
