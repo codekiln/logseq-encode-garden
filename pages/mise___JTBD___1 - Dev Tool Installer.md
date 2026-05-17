@@ -2,5 +2,5 @@
 	- installs versions of [[NodeJS]], [[Py]], [[tf]] as well as any package from those ecosystems
 	- specify versions of tools per project or globally
 	- `mise` supports [hundreds](https://mise.jdx.dev/plugins.html) of dev tools
-	- [[Person/Jeff Dickey]] has also created [[aqua]] to be a "better" aka more secure meta-package manager
+	- [[Person/Shunsuke Suzuki]] created [[aqua]] as a more secure [[Meta Package Manager]]; [[mise]] uses it as a default backend for verified OSS binaries
 	- {{embed [[mise/JTBD/1 - Dev Tool Installer/Card/How do I upgrade my global mise Tools]]}}
