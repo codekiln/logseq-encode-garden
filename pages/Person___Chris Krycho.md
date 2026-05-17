@@ -1,4 +1,5 @@
 logseq-entity:: [[Logseq/Entity/person]]
+tags:: [[CLI/Craftsperson]]
 
 - # Chris Krycho
 	- Software engineer and writer; publishes the technical site *Sympolymathesy* at [v5.chriskrycho.com](https://v5.chriskrycho.com/).

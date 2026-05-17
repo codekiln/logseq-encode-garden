@@ -73,3 +73,8 @@
 			- `sourcer search [gh|github|gl|gitlab|cb|codeberg|sh|sourcehut|...] <owner>/<repo-prefix>`
 		- `sourcer goto <repo-ref>` - cd to the local repo
 			- *unnecessary! we can just cd there*
+	- 14:19 discovered [[Person/Hironao OTSUBO/GitHub/ghq]] which does basically what I'm looking for.
+		- comparison
+			- written in go instead of rust
+			- doesn't use a config file to declare repositories that are safe to clone or ones to pre-clone in advance
+			- does use [[git/.gitconfig]] to configure it, which seems smart
