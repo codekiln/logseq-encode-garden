@@ -1,0 +1,3 @@
+- [Configuration | mise-en-place](https://mise.jdx.dev/configuration.html)
+	- [[mise/Config/Global]]
+	- [[mise/Config/Setting]]

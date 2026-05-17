@@ -1,0 +1,3 @@
+- Original “logic-less” template language
+- Uses `{{ }}` delimiters
+- Intentionally minimal

@@ -1,4 +1,5 @@
 - https://www.chezmoi.io/
 	- [[chezmoi/Quick start]]
 	- [[My Notes]]
-		- I used this for about a month before I started using [[Nix/home-manager]] for all my dotfiles
+		- I used this for about a month before I started using [[Nix/home-manager]] for all my dotfiles.
+		- as of [[2026-05-17 Sun]], I returned to using it after [[Nix/home-manager]] and nix burned me out.

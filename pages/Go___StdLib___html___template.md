@@ -1,0 +1,2 @@
+- Same syntax as `text/template`
+- Adds automatic HTML escaping

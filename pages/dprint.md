@@ -4,3 +4,5 @@ tags:: [[CLI/Tool]], [[Markdown/Tool]]
 	- written in [[Rust]]
 	- it formates code that's in [[Markdown/Code/Fenced Block]]
 	- See also: [[Markdown/Tool/Evaluation/Linters and Auto-Formatters for Table Alignment and Code Blocks]] for comprehensive evaluation
+	- [[mise/search]] `dprint` comes up with answers
+		-

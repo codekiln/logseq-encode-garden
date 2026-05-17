@@ -1,2 +1,3 @@
-- [Concepts - chezmoi](https://www.chezmoi.io/reference/concepts/) has a more complete description.
+- [Concepts - chezmoi](https://www.chezmoi.io/reference/concepts/)
 	- the config file is stored at `~/.config/chezmoi/chezmoi.toml`; this is the [[chezmoi/config/file]]
+	-

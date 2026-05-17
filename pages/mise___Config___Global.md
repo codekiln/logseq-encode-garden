@@ -1,0 +1,2 @@
+- [Mise Global Config](https://mise.jdx.dev/configuration.html#global-config-config-mise-config-toml) `~/.config/mise/config.toml`
+	-
