@@ -12,7 +12,7 @@
 		- `root` — filesystem root for all materialized sources (default `~/sources`).
 		- `[sources]` — table of canonical identities → ref or source object (see access policy below).
 	- ## Access policy (MVP vs Phase 2)
-		- Sourcer separates two concepts (see [[Person/codekiln/GitHub/sourcer/Project/Overview/Trust]]):
+		- Sourcer separates two concepts (see [[Person/codekiln/GitHub/sourcer/Project/v0 AI Spec/Trust]]):
 			- **Install by default** — identity is in `[sources]`; `srcr install` clones or updates it at the declared ref.
 			- **Allowed to download** — identity or wildcard may be materialized; identities not in `[sources]` need an explicit allow rule before clone (Phase 2).
 		- **MVP:** listing under `[sources]` means **allowed** and **installed on `install`**. No separate `[allow]` table in MVP.
@@ -39,6 +39,7 @@
 				- `"main"`, `"v1.2.3"` — checkout that ref after clone or on update.
 				- `"latest"` — provider-defined resolution (e.g. default branch tip); document per-provider behavior in implementation.
 		- ### Object form
+		  id:: 6a085afb-5050-427b-bac3-03f0f7093063
 			- ~~~toml
 			  [sources]
 			  "github.com/example/project" = "main"
@@ -124,7 +125,7 @@
 			- If entry removed from config: **do not** delete by default in MVP (safe default); explicit prune command is a future addition.
 		- Partial failure: document whether `install` stops on first error or continues and reports aggregate status (recommend aggregate + non-zero exit for CI).
 	- ## What config deliberately does not do (MVP)
-		- No imperative mutation: no `srcr use` / `srcr unuse` writing the file (Phase 2; see [[Person/codekiln/GitHub/sourcer/Project/Overview]] non-goals and [[Person/codekiln/GitHub/sourcer/Project/Overview/CLI]] Phase 2 commands).
+		- No imperative mutation: no `srcr use` / `srcr unuse` writing the file (Phase 2; see [[Person/codekiln/GitHub/sourcer/Project/v0 AI Spec]] non-goals and [[Person/codekiln/GitHub/sourcer/Project/v0 AI Spec/CLI]] Phase 2 commands).
 		- No dependency graph between sources (ordering is declaration order or topological sort later).
 		- No build or compile hooks.
 		- No replacement for [[git submodules]] when a hard submodule pin is required for reproducible builds.
@@ -143,4 +144,4 @@
 		- Included config fragments (`import = "allow.d/*.toml"`).
 		- Per-source TTL or eviction metadata for garbage collection.
 		- Content-addressed snapshot pins (commit SHA required, immutability guarantees).
-		- Imperative `srcr use` for [[DevContainer/Feature]] one-liners without hand-editing the developer's global config (see [[Person/codekiln/GitHub/sourcer/Project/Overview/CLI]]).
+		- Imperative `srcr use` for [[DevContainer/Feature]] one-liners without hand-editing the developer's global config (see [[Person/codekiln/GitHub/sourcer/Project/v0 AI Spec/CLI]]).

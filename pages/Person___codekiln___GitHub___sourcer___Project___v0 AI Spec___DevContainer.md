@@ -1,5 +1,5 @@
-- # DevContainer integration
-	- Parent: [[Person/codekiln/GitHub/sourcer/Project/Overview]]
+# DevContainer integration
+	- Parent: [[Person/codekiln/GitHub/sourcer/Project/v0 AI Spec]]
 	- DevContainers, [[DevContainer/Feature]]s, and [[GitHub Codespaces]] usually open **one** repository. Sourcer provides a repeatable way to materialize **many** trusted repos into predictable paths inside the container filesystem.
 	- ## Problem being solved
 		- Service development often needs adjacent repos: API contracts, shared libraries, platform SDKs, infra modules, internal docs.
@@ -12,7 +12,7 @@
 		- Declarative `srcr.toml` in the **project repo** lists `[sources]` required for this codebase.
 		- `srcr install` during **image build** or **container create** populates `root` (default `~/sources`).
 		- `srcr where` gives stable paths for editor multi-root, scripts, and agent tools.
-		- Access policy (see [[Person/codekiln/GitHub/sourcer/Project/Overview/Trust]]): MVP `[sources]` defines what `install` fetches; Phase 2 `[allow]` may permit optional `srcr use` — important for images baked with credentials.
+		- Access policy (see [[Person/codekiln/GitHub/sourcer/Project/v0 AI Spec/Trust]]): MVP `[sources]` defines what `install` fetches; Phase 2 `[allow]` may permit optional `srcr use` — important for images baked with credentials.
 	- ## Recommended placement in devcontainer lifecycle
 		- ### Image build (best cache behavior)
 			- Copy `srcr.toml` (and optional Phase 2 `allow` fragments) early.
@@ -47,7 +47,7 @@
 			- Feature accepts parameters: list of identities + refs, or path to bundled `srcr.toml` snippet.
 			- Feature runs `srcr install` in feature install phase.
 		- MVP constraint: config is **file-edited** — feature should ship a `srcr.toml` fragment or env-injected temp config, not mutate user's global dotfiles; run `srcr install`, not `srcr use`.
-		- Phase 2: `srcr use github.com/org/lib` inside feature install enables one-line feature definitions and cache-friendly layers (see [[Person/codekiln/GitHub/sourcer/Project/Overview]] Phase 2).
+		- Phase 2: `srcr use github.com/org/lib` inside feature install enables one-line feature definitions and cache-friendly layers (see [[Person/codekiln/GitHub/sourcer/Project/v0 AI Spec]] Phase 2).
 	- ## Codespaces and CI parity
 		- Same `srcr.toml` in repo root for:
 			- local devcontainer,

@@ -1,6 +1,6 @@
 # Access boundary
 	- Sourcer's access model defines which repository identities may be cloned, updated, or exposed to automation. Everything else is out of scope for the tool and should be unreachable via `srcr` commands.
-	- Parent concepts: [[Person/codekiln/GitHub/sourcer/Project/Overview/Config]] (install by default vs allow-only), [[Person/codekiln/GitHub/sourcer/Project/Overview/CLI]] (enforcement per command).
+	- Parent concepts: [[Person/codekiln/GitHub/sourcer/Project/v0 AI Spec/Config]] (install by default vs allow-only), [[Person/codekiln/GitHub/sourcer/Project/v0 AI Spec/CLI]] (enforcement per command).
 	- ## Why an access boundary exists
 		- AI agents need **primary sources** — implementation code, not only summaries — to plan and refactor accurately.
 		- Unrestricted access creates two classes of risk:
@@ -40,7 +40,7 @@
 		- `srcr where` — resolves path without clone; JSON reports `allowed: false` so planners do not treat the tree as approved for fetch.
 		- Future: read-only mode where agents may read existing allowed paths but cannot trigger clone.
 	- ## JSON and fail-closed behavior
-		- Access verdict surfaces in structured output (see [[Person/codekiln/GitHub/sourcer/Project/Overview/CLI]]):
+		- Access verdict surfaces in structured output (see [[Person/codekiln/GitHub/sourcer/Project/v0 AI Spec/CLI]]):
 			- ~~~json
 			  {
 			    "uri": "github.com/evil/example",

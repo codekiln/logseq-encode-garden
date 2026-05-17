@@ -1,0 +1,75 @@
+- [[2026-05-17 Sun]]
+	- Got frustrated with the AI-generated specs in [[Person/codekiln/GitHub/sourcer/Project/v0 AI Spec]] and sub-namespaces. Every time I try to use AI to design a CLI like this, it seems like it ends up generating so much [[AI/Slop]].
+		- It proposes CLI commands and configuration options that add little utility, doesn't follow a coherent philosophy, but adds a lot of maintenance burden.
+		  collapsed:: true
+			- For example, it suggested adding `srcr status` which is implied by or derivative of [[git/status]]
+				- {{embed ((6a085b0f-f4f7-4b8b-92e7-2c82b657e34e))}}
+				- I don't see any reason for this.
+			- As another example, it suggested adding configuration options in toml for specifying the ref that should be downloaded
+				- {{embed ((6a085afb-5050-427b-bac3-03f0f7093063))}}
+				- all of these options provide a feature: ability to specify parts of a repo, but each new option opens up a space for bugs. It's very difficult to get AI to come up with designs that are minimal, verifiable, and move away from surface area and towards simplicity.
+			- I tried having it lead me through some design thinking, starting with a stakeholder empathy map:
+				- {{embed ((6a085d7c-91e5-49b3-b4eb-e90ed4f833c7))}}
+				- In theory this makes sense, but it just feels sloppy. One of my key stakeholders is the AI agent itself, and that's not even listed. There's AI agent operator, but not AI agent. Also, it gets rather fixated with things that are not central to the design. Why is "OSS contributor" saying "I do not want a corporate trust file for a weekend hack?" of course OSS contributors wouldn't want that, but in what world would that stakeholder say that? it implies something: that we need a corporate trust file. That opens up a whole world where [[AI/Coding/Concept/Heresy]] can enter the system.
+	- What I want in v1 is likely just the simplest thing possible
+		- principles
+			- written in idiomatic rust
+			- well-tested
+			- secure
+				- as few dependencies as possible
+			- simple and understandable. anti-complicated. does one thing well.
+				- anyone should feel like they can read the source and grok it
+				- prefer fewer features rather than feature rich and bloated
+		- use cases
+			- 0.1.x - getting started
+				- `sourcer --version` prints version
+				- `sourcer --help` prints help saying it does nothing as of yet
+				- `README.md` exists
+				- ability to generate `sourcer` binary in github CI and publish to release using semvar and conventional commits
+				- ability to install `sourcer` binary from github release
+					- instructions on how to install as a mise tool
+				- each PR should generate and publish a new version
+				- PR CI checks
+					- rust formatting
+					- unit test
+					- integration test
+						- target environment for integration test: devcontainer
+			- 0.2.x - the most basic feature that can make it useful
+				- `sourcer get <repo-ref>` - get the repo
+					- if it doesn't exist on disk
+						- clone the repo into the folder specified by the convention
+							- exit code 0
+						- if it isn't clone-able
+							- display error
+							- nonzero exit code
+					- if it already exists locally,
+						- print the location of the repo locally
+						- nonzero exit code
+			- 0.3.x - the next most useful thing that can make it useful
+				- `sourcer list` - list all the repos in `<sourcer-root>`
+					- for piping into fzf
+					- *is there a way this can be done without adding a feature to sourcer, for example, just with ls?*
+			- 0.4.x
+				- `sourcer migrate [<repo-path>]`
+					- if `<repo-path>` or CWD is a valid repo that is outside place it should be according to the `sourcer` system, move it to the place it should be according to sourcer
+			- 0.5.x
+				- `sourcer config`
+					- display the configuration file and its location
+				- `sourcer config SOURCES_ROOT [<file-path>]`
+					- if `[<file-path>]`
+						- if its valid
+							- write the config file to set the file path for the `SOURCES_ROOT`
+						- if invalid path
+							- nonzero exit code
+					- if config exists and `SOURCES_ROOT` is in it
+						- display the value of `SOURCES_ROOT`
+					- display default value of `SOURCES_ROOT`
+			- 0.6.x
+				- ability to specify in a config file
+					- what repo refs or repo ref patterns are approved for clone when needed
+	- Later I could consider
+		- `sourcer migrate`
+		- `sourcer search` - search for names of repos
+			- `sourcer search [gh|github|gl|gitlab|cb|codeberg|sh|sourcehut|...] <owner>/<repo-prefix>`
+		- `sourcer goto <repo-ref>` - cd to the local repo
+			- *unnecessary! we can just cd there*

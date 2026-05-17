@@ -4,6 +4,7 @@
 		- ### Goal
 			- Surface who feels the pain, what they say and do today, and which frictions matter most before locking problem statements or MVP scope.
 		- ### Stakeholder empathy map
+		  id:: 6a085d7c-91e5-49b3-b4eb-e90ed4f833c7
 			- #### Solo developer
 				- **Says:** "I know this library is on GitHub somewhere — where did I clone it last time?" / "Let me `git clone` into `~/projects` again."
 				- **Thinks:** Onboarding should be one obvious path; I should not maintain a mental map of ten clone locations; [[mise]]-style declarative setup should work for repos too.

@@ -69,8 +69,8 @@
 			- Sourcer is conceptually closer to a shared source corpus than a traditional package manager.
 		- ### Explicit access boundary
 			- Sourcer is designed around constrained repository access.
-			- In the MVP, every identity listed in `[sources]` is **allowed** and **installed by default** when `srcr install` runs (see [[Person/codekiln/GitHub/sourcer/Project/Overview/Config]]).
-			- In Phase 2, optional `[allow]` patterns (including wildcards) can permit download without auto-install; see [[Person/codekiln/GitHub/sourcer/Project/Overview/Trust]].
+			- In the MVP, every identity listed in `[sources]` is **allowed** and **installed by default** when `srcr install` runs (see [[Person/codekiln/GitHub/sourcer/Project/v0 AI Spec/Config]]).
+			- In Phase 2, optional `[allow]` patterns (including wildcards) can permit download without auto-install; see [[Person/codekiln/GitHub/sourcer/Project/v0 AI Spec/Trust]].
 		- ### Human and Agent Friendly
 			- The command-line interface should work equally well for:
 				- humans
@@ -79,7 +79,7 @@
 				- local automation
 				- AI agents
 			- Commands should support structured output from the beginning.
-			- MVP agents and scripts rely on `srcr install`, `srcr where`, and `srcr status --json` (see [[Person/codekiln/GitHub/sourcer/Project/Overview/CLI]]).
+			- MVP agents and scripts rely on `srcr install`, `srcr where`, and `srcr status --json` (see [[Person/codekiln/GitHub/sourcer/Project/v0 AI Spec/CLI]]).
 			- Machine-readable interfaces are a first-class design requirement.
 		- ### Compatibility with [[DevContainer]]s and related technologies like [[DevContainer/Feature]]s and [[GitHub Codespaces]]
 			- DevContainers are typically created in a way that touches a single repository, and in many cases that's likely because people don't understand any way to bring more than one repository into a devcontainer. `srcr` aims to provide a sensible and easy way to do that in devcontainers.
@@ -118,7 +118,7 @@
 			- provide repository hosting
 		- Its responsibility is repository location, access policy (allow + install), and local source materialization.
 	- ## Phase 2
-		- Phase 2 extends the MVP with ad-hoc materialization and richer access policy. See [[Person/codekiln/GitHub/sourcer/Project/Overview/CLI]] and [[Person/codekiln/GitHub/sourcer/Project/Overview/Config]].
+		- Phase 2 extends the MVP with ad-hoc materialization and richer access policy. See [[Person/codekiln/GitHub/sourcer/Project/v0 AI Spec/CLI]] and [[Person/codekiln/GitHub/sourcer/Project/v0 AI Spec/Config]].
 		- **`srcr use <identity>`** — materialize one repository by identity (replaces the defunct `srcr ensure`); may also imperatively update `srcr.toml` when config-mutating mode is enabled (see non-goals above).
 		- **`[allow]`** — wildcard patterns that permit download without listing the repo in `[sources]` (no auto-install on `srcr install`).
 		- **`install = false` on a `[sources]` entry** — allowed and path-resolvable, but not cloned until `srcr use`.
@@ -137,9 +137,10 @@
 			  }
 			  ~~~
 	- ## Design
-		- [[Person/codekiln/GitHub/sourcer/Project/Overview/Design/Thinking]] — structured design-thinking workshop (empathy → test).
+		- [[Person/codekiln/GitHub/sourcer/Project/v0 AI Spec/Design/Thinking]] — structured design-thinking workshop (empathy → test).
+		- [[Person/codekiln/GitHub/sourcer/Project/v0 AI Spec/Mise]] — speculative mise-inspired repo conventions (Rust layout, CLI modules, tooling).
 	- ## Example CLI
-		- TBD pending design review — see [[Person/codekiln/GitHub/sourcer/Project/Overview/CLI]].
+		- TBD pending design review — see [[Person/codekiln/GitHub/sourcer/Project/v0 AI Spec/CLI]].
 	- ## Long-Term Possibilities
 		- Potential future directions include:
 			- migrate existing local repository locations that are outside of the convention to move them into a location that's matches the convention

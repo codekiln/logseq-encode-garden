@@ -1,5 +1,5 @@
 # CLI (`srcr`)
-	- The CLI is the reconciler and inspector for Sourcer: it reads [[Person/codekiln/GitHub/sourcer/Project/Overview/Config]], applies allow/install policy from config, and reports canonical paths and materialization state in forms humans and machines can rely on.
+	- The CLI is the reconciler and inspector for Sourcer: it reads [[Person/codekiln/GitHub/sourcer/Project/v0 AI Spec/Config]], applies allow/install policy from config, and reports canonical paths and materialization state in forms humans and machines can rely on.
 	- ## Design principles
 		- **Config-first in MVP** — most workflows are edit `srcr.toml`, then run a small set of verbs.
 		- **Deterministic paths** — given identity + config, `where` always prints the same path; never depends on cwd of a prior clone.
@@ -22,6 +22,7 @@
 				- Exit non-zero if any source failed (recommended for CI).
 			- Does not remove repos dropped from config in MVP (avoid accidental data loss).
 		- ### `srcr status`
+		  id:: 6a085b0f-f4f7-4b8b-92e7-2c82b657e34e
 			- Compare desired vs realized state for each declared source (and optionally scan disk for undeclared trees).
 			- Human output: table of identity, ref wanted, ref on disk, dirty/clean, allowed, path.
 			- JSON: array of per-source status objects (schema aligned with `use` output fields; see Phase 2).
@@ -44,7 +45,7 @@
 			- Reports misconfiguration early (wrong `SRCR_ROOT`, schema-invalid TOML, SSH agent missing for ssh clones).
 			- Use in devcontainer `postCreateCommand` and CI setup jobs before expensive `install`.
 	- ## Phase 2 commands
-		- Phase 2 is out of MVP scope. See [[Person/codekiln/GitHub/sourcer/Project/Overview]] Phase 2 section.
+		- Phase 2 is out of MVP scope. See [[Person/codekiln/GitHub/sourcer/Project/v0 AI Spec]] Phase 2 section.
 		- ### `srcr use <identity>` (ad hoc materialization)
 			- Materialize one repository by identity (replaces the defunct `srcr ensure`); optionally with ref override flags for one-shot use outside config.
 			- Subject to allow policy: identity must match `[sources]` or an `[allow]` pattern.
@@ -94,7 +95,7 @@
 		- **CI** — `install` + `status --json` gate merges when required sources must be present at pinned refs.
 		- **AI agents (MVP)** — `install`, `where`, `status --json`, and `list --json`; planners use `path` + `allowed` without inventing `/tmp` clones.
 		- **AI agents (Phase 2)** — `use … --json` for optional repos not in the install set.
-		- **Devcontainers** — `install` during image build; `doctor` in `postCreateCommand` (see [[Person/codekiln/GitHub/sourcer/Project/Overview/DevContainer]]).
+		- **Devcontainers** — `install` during image build; `doctor` in `postCreateCommand` (see [[Person/codekiln/GitHub/sourcer/Project/v0 AI Spec/DevContainer]]).
 	- ## Comparison to adjacent tools
 		- Not [[git]] — does not commit, branch, or merge; may shell out to git for clone/fetch/checkout only.
 		- Not [[aqua]] / [[asdf]] — those install binaries; Sourcer installs source trees.
