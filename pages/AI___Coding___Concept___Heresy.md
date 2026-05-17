@@ -1,4 +1,6 @@
-# Heresy
+alias:: [[Heresies]]
+
+- # Heresy
 	- ## What Yegge means by "heresies"
 		- In [[Person/Steve Yegge]]'s agentic-coding vocabulary, **heresies** are situations where the same kind of truth is represented in **more than one place**—for example tasks or plans living both in human-oriented markdown and in a machine-oriented store (JSONL, SQL, issue rows)—so agents (and people) can **diverge**, **merge-conflict**, or **believe the wrong copy** [^1].
 		- The risk shows up whenever you duplicate workflow state: e.g. instructing agents to ignore `.beads/issues.jsonl` while also relying on another canonical task list, without a disciplined single source of truth [^2].
