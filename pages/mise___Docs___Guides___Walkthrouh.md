@@ -15,13 +15,14 @@ tags:: [[Tutorial]]
 	- ### [[My Notes]] on `mise.toml`
 		- [[2025-05-11 Sun]]
 			- #### [[CLI command]] to find the currently active [[mise/Config]] #card
-			  card-last-score:: 1
-			  card-repeats:: 1
-			  card-next-schedule:: 2026-04-10T04:00:00.000Z
-			  card-last-interval:: -1
-			  card-ease-factor:: 2.5
-			  card-last-reviewed:: 2026-04-09T07:55:54.648Z
+			  card-last-score:: 3
+			  card-repeats:: 2
+			  card-next-schedule:: 2026-05-26T00:25:46.363Z
+			  card-last-interval:: 3.69
+			  card-ease-factor:: 2.36
+			  card-last-reviewed:: 2026-05-22T08:25:46.363Z
 				- [[mise/config/ls]] - `mise config ls` - run this to find the currently active mise config
+					- aka [[mise/Config/list]]
 			- Here's a [[mise/Task]] definition for the mise config file which will  use [[mise/config/ls]] to find the currently active mise config and open it in preferred [[IDE]] - (Cursor, here)
 				- ```toml
 				  [tasks]

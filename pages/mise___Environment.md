@@ -41,14 +41,21 @@ alias:: [[mise Environments]]
 			  ```
 			- [[My Notes]]
 				- *This is also a bit [[Astonishing]] to me; I would expect `mise list` or something similar*
-	- ## What are the 6 places that [[EnvVars]] can be used in [[mise]]? [[card]]
+	- ## What are the 6 places that [[EnvVars]] declared in a [[mise/Config/mise.toml]] can be used in [[mise]]? [[card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-05-23T04:00:00.000Z
+	  card-last-reviewed:: 2026-05-22T08:21:53.450Z
+	  card-last-score:: 1
 		- ### 1 - [[mise/exec]]
 			- ```sh
 			  mise set MY_VAR=123
 			  mise exec -- bash -c 'echo $MY_VAR'
 			  # 123
 			  ```
-		- ### 2 - in [[mise/Tool]] (invoked via mise exec, after mise activate, or via mise shims)
+		- ### 2 - in a [[mise/Tool]] (invoked via mise exec, after mise activate, or via mise shims)
+			- [[My Notes]] AFAIK it's not possible to make a tool-specific EnvVar unless one wraps it in a [[mise/Task]], unfortunately
 			- ```sh
 			  mise use node@26
 			  mise set MY_VAR=123
@@ -60,7 +67,7 @@ alias:: [[mise Environments]]
 			  mise exec -- node --eval 'console.log(process.env.MY_VAR)'
 			  # 123
 			  ```
-		- ### 3 - [[mise/activate]]
+		- ### 3 - in the shell, after [[mise/activate]]
 			- As long as your [[zsh/.zshrc]], [[Bash/.bashrc]] etc has `eval "$(mise activate zsh)"` in it, any declared environment variables will be available
 			- ```sh
 			  cd /path/to/project
@@ -72,7 +79,7 @@ alias:: [[mise Environments]]
 			  echo $NODE_ENV
 			  # production
 			  ```
-		- ### 4 - [[mise/Shim]]
+		- ### 4 - when using a [[mise/Shim]]'d version of a [[mise/Tool]]
 			- If, instead of using `mise activate` in one's zshrc shell, one is using mise shims, whereby tools are symlinks that are configured to point to the executable that's been configured to have the mise environment, then the declared mise environment will be available to that binary
 			- ```sh
 			  mise set NODE_ENV=production
@@ -80,7 +87,7 @@ alias:: [[mise Environments]]
 			  # using the absolute path for the example
 			  ~/.local/share/mise/shims/node --eval 'console.log(process.env.NODE_ENV)'
 			  ```
-		- ### 5 - [[mise/en]]
+		- ### 5 - after calling [[mise/en]] to activate just mise's declared environment vars
 			- The `mise en` command is perhaps comparable to activating a [[Py/Virtualenv]]; subsequent commands make use of certain set environment variables.
 			- ```sh
 			  mise set FOO=bar
@@ -88,10 +95,11 @@ alias:: [[mise Environments]]
 			  echo $FOO
 			  # bar
 			  ```
-		- ### 6 - [[mise/Tasks]]
-			- you can modify environment variables just for a particular mise task
-			- ```toml
-			  [tasks.print]
-			  run = "echo $MY_VAR"
-			  env = { _.file = '/path/to/file.env', "MY_VAR" = "my variable" }
-			  ```
+		- ### 6 - per task environment vars in [[mise/Tasks]]
+			- you can modify environment variables just for a particular mise task.
+			- Here's an example of a [[mise/Task/TOML]] version of this, but it's also possible in [[mise/Task/File]]
+				- ```toml
+				  [tasks.print]
+				  run = "echo $MY_VAR"
+				  env = { _.file = '/path/to/file.env', "MY_VAR" = "my variable" }
+				  ```

@@ -3,8 +3,8 @@
 	  card-last-interval:: -1
 	  card-repeats:: 1
 	  card-ease-factor:: 2.5
-	  card-next-schedule:: 2026-04-16T04:00:00.000Z
-	  card-last-reviewed:: 2026-04-15T07:32:58.750Z
+	  card-next-schedule:: 2026-05-23T04:00:00.000Z
+	  card-last-reviewed:: 2026-05-22T08:26:12.873Z
 	  card-last-score:: 1
 		- Shortcut: `Ctrl+o`
 		- Context: In the files pane

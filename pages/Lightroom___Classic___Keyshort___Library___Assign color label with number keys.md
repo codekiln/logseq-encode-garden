@@ -3,8 +3,8 @@
 	  card-last-interval:: -1
 	  card-repeats:: 1
 	  card-ease-factor:: 2.5
-	  card-next-schedule:: 2026-04-28T04:00:00.000Z
-	  card-last-reviewed:: 2026-04-27T09:38:52.544Z
+	  card-next-schedule:: 2026-05-23T04:00:00.000Z
+	  card-last-reviewed:: 2026-05-22T08:44:37.885Z
 	  card-last-score:: 1
 		- `6` — red label
 		- `7` — yellow label

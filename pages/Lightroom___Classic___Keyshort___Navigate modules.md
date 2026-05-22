@@ -25,8 +25,8 @@
 	  card-last-interval:: -1
 	  card-repeats:: 1
 	  card-ease-factor:: 2.5
-	  card-next-schedule:: 2026-04-28T04:00:00.000Z
-	  card-last-reviewed:: 2026-04-27T09:32:49.394Z
+	  card-next-schedule:: 2026-05-23T04:00:00.000Z
+	  card-last-reviewed:: 2026-05-22T08:43:25.069Z
 	  card-last-score:: 1
 		- macOS: `Command + Option + 5`
 		- Windows: `Ctrl + Alt + 5`
@@ -36,8 +36,8 @@
 	  card-last-interval:: -1
 	  card-repeats:: 1
 	  card-ease-factor:: 2.5
-	  card-next-schedule:: 2026-04-28T04:00:00.000Z
-	  card-last-reviewed:: 2026-04-27T09:34:51.599Z
+	  card-next-schedule:: 2026-05-23T04:00:00.000Z
+	  card-last-reviewed:: 2026-05-22T08:44:06.047Z
 	  card-last-score:: 1
 		- macOS: `Command + Option + Left Arrow` / `Command + Option + Right Arrow`
 		- Windows: `Ctrl + Alt + Left Arrow` / `Ctrl + Alt + Right Arrow`
@@ -49,8 +49,8 @@
 	  card-last-interval:: -1
 	  card-repeats:: 1
 	  card-ease-factor:: 2.5
-	  card-next-schedule:: 2026-04-28T04:00:00.000Z
-	  card-last-reviewed:: 2026-04-27T09:58:22.594Z
+	  card-next-schedule:: 2026-05-23T04:00:00.000Z
+	  card-last-reviewed:: 2026-05-22T08:44:52.688Z
 	  card-last-score:: 1
 		- macOS: `Command + Option + Up Arrow`
 		- Windows: `Ctrl + Alt + Up Arrow`

@@ -1,11 +1,11 @@
 - [[Keyshort]] [[Lazygit]] [[Lazygit/Keyshort]]
 	- **Discard Selected Change** #card
-	  card-last-interval:: 10.24
-	  card-repeats:: 3
-	  card-ease-factor:: 2.56
-	  card-next-schedule:: 2026-04-25T12:28:09.977Z
-	  card-last-reviewed:: 2026-04-15T07:28:09.978Z
-	  card-last-score:: 3
+	  card-last-interval:: 28.3
+	  card-repeats:: 4
+	  card-ease-factor:: 2.66
+	  card-next-schedule:: 2026-06-19T15:38:42.852Z
+	  card-last-reviewed:: 2026-05-22T08:38:42.852Z
+	  card-last-score:: 5
 		- Shortcut:
 			- `d` on selected file/hunk
 		- Description:
