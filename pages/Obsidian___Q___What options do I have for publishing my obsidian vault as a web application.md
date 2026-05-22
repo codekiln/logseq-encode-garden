@@ -1,0 +1,61 @@
+logseq-entity:: [[Logseq/Entity/question]]
+tags:: [[Question]]
+see-also:: [[QuartzMD]], [[Knowledge/Garden]], [[App/Obsidian/Markdown]]
+
+- # What options do I have for publishing my [[Obsidian]] vault as a web application?
+	- ## Answer
+		- [[AI/Response]]
+			- You can treat “publish the vault as a web app” as a spectrum: **hosted product**, **plugin-driven git deploy**, or **static-site generator (SSG) pipeline**—each with different cost, fidelity to Obsidian features, and ops burden.
+			- ### 1. Official hosted publishing — [[Obsidian]] Publish
+				- **What it is:** Obsidian’s built-in, managed publishing service ([obsidian.md/publish](https://obsidian.md/publish))—enable from the app, pick notes, push updates (including mobile).
+				- **Best for:** Lowest friction; readers get Obsidian-like UX (hover previews, graph view, stacked panes, backlinks) without you running infrastructure.
+				- **Tradeoffs:** Subscription (**$8/mo** billed yearly or **$10/mo** monthly per site); **community plugins do not run on the published site** (Dataview, Canvas, etc. won’t behave as in the vault); less flexible than a DIY stack for custom app logic.
+			- ### 2. Community plugins that publish from the vault
+				- **Digital Garden** ([oleeskild/obsidian-digital-garden](https://github.com/oleeskild/obsidian-digital-garden)) — mark notes with frontmatter (e.g. `dg-publish: true`), push to a GitHub repo, host on **GitHub Pages** / Netlify / Vercel. Selective publishing by default; widely used for digital gardens.
+				- **Enveloppe** ([enveloppe/obsidian-enveloppe](https://github.com/enveloppe/obsidian-enveloppe)) — publish notes to a **GitHub** repo from Obsidian; supports templates aimed at **MkDocs**, **Hugo**, **Jekyll**, etc.; converts wikilinks and can automate PR merges.
+				- **Selective Publisher** ([ivan1248/obsidian-selective-publisher](https://github.com/ivan1248/obsidian-selective-publisher)) — filter by tags, paths, or frontmatter before pushing to git; pairs well with an SSG downstream.
+				- **Best for:** Staying in Obsidian for “what goes public” while keeping hosting cheap (often free static hosting).
+				- **Tradeoffs:** You maintain repo + hosting + plugin config; not every Obsidian plugin feature survives export.
+			- ### 3. Static-site generators (DIY “web app” from markdown)
+				- **[[QuartzMD]]** ([quartz.jzhao.xyz](https://quartz.jzhao.xyz/)) — batteries-included SSG aimed at Obsidian vaults: wikilinks, backlinks, graph, search, SPA routing. Deploy to **GitHub Pages**, Netlify, Cloudflare Pages, etc. (Node **v22+** per current docs).
+				- **Hugo / MkDocs / Jekyll / Astro / Eleventy** — general SSGs; common pattern is **export or sync vault → build → deploy**. Examples in the wild: Hugo + `obsidian-git` + Cloudflare Pages ([jasonheppler.org Obsidian–Hugo workflow](https://jasonheppler.org/2026/03/05/the-obsidian-hugo-workflow/)); `obsidian-export` + Hugo ([jacobian.org TIL](https://jacobian.org/til/hugo-obsidian)); MkDocs-oriented tooling ([dentropy/obsidian-publisher](https://github.com/dentropy/obsidian-publisher)).
+				- **Best for:** Full control, no per-site SaaS fee, custom domains, and a “real” static web app you own—especially if the garden already uses tools like [[QuartzMD]] (see also [[Person/Simon Spati]]’s Quartz write-up linked from that page).
+				- **Tradeoffs:** Highest setup time; you own broken wikilinks, theme, and plugin syntax that doesn’t map to the SSG.
+			- ### 4. Export / conversion utilities (glue in a pipeline)
+				- **obsidian-export** ([zoni/obsidian-export](https://github.com/zoni/obsidian-export)) — CLI to turn Obsidian markdown into plainer markdown + frontmatter for Hugo and friends.
+				- **obsidian-hugo-export** ([sagarbehere/obsidian-hugo-export](https://github.com/sagarbehere/obsidian-hugo-export)) — scripts for Hugo paths, wikilink → `ref`, backlinks, assets.
+				- **Best for:** Vault stays canonical in Obsidian; CI or git hooks run the converter before `hugo` / `mkdocs build`.
+			- ### 5. Lighter sharing (usually not a full vault web app)
+				- **GitHub Pages on raw markdown** — possible but weak wikilink/backlink UX unless themed.
+				- **Per-note link services** (e.g. MDtoLink-style tools) — share individual notes, not a navigable vault site.
+				- **Gist / export plugins** — fine for snippets, not a browsable garden.
+			- ### Practical chooser
+				- **Want Obsidian-native reading UX with minimal ops?** → **Publish**.
+				- **Want free hosting + selective “public” notes from inside Obsidian?** → **Digital Garden** or **Enveloppe** (+ GitHub Pages / Cloudflare / Netlify).
+				- **Want maximum control and Obsidian-like site features without Publish fees?** → **Quartz** (or Hugo/MkDocs + export scripts).
+				- **Need dynamic server features (auth DB, APIs)?** → static paths above won’t suffice; you’d add a separate app layer (uncommon for personal vaults).
+			- ### GitHub Pages + Obsidian-native static site (recommended stack)
+				- **Primary pick: [[QuartzMD]] (Quartz 4)** — SSG built for Obsidian vaults (wikilinks, backlinks, graph, search, popover previews). Official **GitHub Pages** path: fork/create a Quartz repo, point it at your vault content, add the `deploy.yml` workflow from [Quartz hosting — GitHub Pages](https://quartz.jzhao.xyz/hosting), set repo **Pages → Source: GitHub Actions**, set `baseUrl` in `quartz.config.ts` to your `https://<user>.github.io/<repo>/` URL, then publish with `npx quartz sync` after edits. Requires **Node v22+** and npm.
+				- **Typical Quartz + GitHub Pages workflow**
+					- 1. `git clone https://github.com/jackyzha0/quartz.git` → `npm i` → `npx quartz create` (imports or links vault markdown).
+					- 2. Commit; enable GitHub Actions Pages deploy (workflow builds with `npx quartz build`, uploads `public/`).
+					- 3. Keep editing in Obsidian; sync vault into the Quartz content directory (or use a separate content repo/submodule—many gardens symlink or copy `content/`).
+					- 4. Push to the `v4` branch (or whatever your workflow targets); site updates automatically.
+				- **Alternative on GitHub Pages: Digital Garden plugin** — if you want **selective publish from inside Obsidian** (`dg-publish: true` per note) rather than building the whole vault, install [oleeskild/obsidian-digital-garden](https://github.com/oleeskild/obsidian-digital-garden), push to a GitHub repo, deploy `gh-pages` (or the plugin’s documented GitHub Pages flow). Less “full SSG control,” more “mark notes public in Obsidian.”
+				- **What to skip for this goal** — raw markdown on Pages without an SSG (broken wikilinks); Hugo/MkDocs unless you already run an export pipeline (more glue than Quartz for Obsidian-first gardens). **Obsidian Publish** is not GitHub Pages.
+				- **Caveats** — Community plugins (Dataview, Canvas, etc.) still do not execute on the static site; Quartz documents a trailing-slash quirk on GitHub Pages vs Cloudflare if you care about old URLs ([hosting note](https://quartz.jzhao.xyz/hosting)).
+			- ### Sources (GitHub Pages)
+				- [Quartz — Setting up your GitHub repository](https://quartz.jzhao.xyz/setting-up-your-GitHub-repository)
+				- [Quartz — Hosting (GitHub Pages workflow)](https://quartz.jzhao.xyz/hosting)
+				- [Quartz — Obsidian compatibility](https://quartz.jzhao.xyz/features/Obsidian-compatibility)
+				- [Public Second Brain with Quartz (Simon Spati)](https://www.ssp.sh/brain/public-second-brain-with-quartz) — worked example in this garden via [[Person/Simon Spati]]
+			- ### Sources
+				- [Obsidian Publish](https://obsidian.md/publish)
+				- [Quartz 4 — Get Started](https://quartz.jzhao.xyz/)
+				- [oleeskild/obsidian-digital-garden](https://github.com/oleeskild/obsidian-digital-garden)
+				- [enveloppe/obsidian-enveloppe](https://github.com/enveloppe/obsidian-enveloppe)
+				- [ivan1248/obsidian-selective-publisher](https://github.com/ivan1248/obsidian-selective-publisher)
+				- [Publishing an Obsidian vault with Hugo (Jacob Kaplan-Moss)](https://jacobian.org/til/hugo-obsidian)
+				- [The Obsidian-Hugo Workflow (Jason Heppler)](https://jasonheppler.org/2026/03/05/the-obsidian-hugo-workflow/)
+				- [dentropy/obsidian-publisher](https://github.com/dentropy/obsidian-publisher)
+	- ## My Notes
