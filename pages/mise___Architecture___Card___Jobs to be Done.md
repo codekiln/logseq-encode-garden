@@ -10,6 +10,6 @@ alias:: [[mise Jobs to be Done]]
 		  card-next-schedule:: 2026-05-27T17:24:43.782Z
 		  card-last-reviewed:: 2026-05-22T08:24:43.782Z
 		  card-last-score:: 5
-			- 1 - Tool Version Management - installing different versions of development tools
-			- 2 - Environment Management - setting up [[EnvVars]]
-			- 3 - Task Running - Executing Project Tasks with [[Dependency/Management]]
+			- 1 - Tool Version Management - installing different versions of development tools - [[mise/JTBD/1 - Dev Tool Installer]]
+			- 2 - Environment Management - setting up [[EnvVars]] - [[mise/JTBD/2 - Environment Manager]]
+			- 3 - Task Running - Executing Project Tasks with [[Dependency/Management]] - [[mise/JTBD/3 - Task Runner]]
