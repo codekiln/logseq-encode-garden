@@ -95,7 +95,7 @@ alias:: [[mise Environments]]
 			  echo $FOO
 			  # bar
 			  ```
-		- ### 6 - per task environment vars in [[mise/Tasks]]
+		- ### 6 - per task environment vars in [[mise/tasks]]
 			- you can modify environment variables just for a particular mise task.
 			- Here's an example of a [[mise/Task/TOML]] version of this, but it's also possible in [[mise/Task/File]]
 				- ```toml

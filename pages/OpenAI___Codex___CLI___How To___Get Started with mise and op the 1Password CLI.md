@@ -1,6 +1,6 @@
 tags:: [[Diataxis/How To]]
 
-- # How To get started with OpenAI Codex CLI using [[mise/Tasks]] and [[1Password/Dev/op/run]]
+- # How To get started with OpenAI Codex CLI using [[mise/tasks]] and [[1Password/Dev/op/run]]
 	- ## Goal
 		- Provide a minimal, secure workflow to install and run the OpenAI Codex CLI, with API credentials managed via 1Password and injected at runtime using `op run`.
 	- ## Preconditions

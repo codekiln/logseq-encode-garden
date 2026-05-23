@@ -1,6 +1,6 @@
 tags:: [[Diataxis/How To]], [[mise]], [[zsh]], [[OhMyZsh]]
 
-- # How To List Available [[mise/Tasks]] in zsh
+- # How To List Available [[mise/tasks]] in zsh
 	- ## Overview
 		- **IMPORTANT NOTE** - If you have followed [[mise/How To/Install Mise/Shell Completions in Zsh]], you should be able to just do [[mise/run]] then `tab` and get them autocompleted
 		- This guide shows you **another** way to list and discover available mise tasks in your zsh shell

@@ -2,7 +2,7 @@ tags:: mise, [[llm-cli]], repomix
 created-by:: [[Person/Harper Reed]]
 alias:: [[Person/Harper Reed/Sample Mise Rules]]
 
-- # Harper Reed - Sample [[mise/Tasks]] for [[AI/Coding]]
+- # Harper Reed - Sample [[mise/tasks]] for [[AI/Coding]]
 	- #notes
 		- See [[Person/Harper Reed/GitHub/dotfiles/mise]] [here](https://github.com/harperreed/dotfiles/blob/560ebda30d1b8cea81acee8d44ebe1cf8be3aa2e/.config/mise/config.toml)
 			- To install:

@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/question]]
-see-also:: [[mise]], [[mise/Backend/aqua]], [[mise/Tasks]]
+see-also:: [[mise]], [[mise/Backend/aqua]], [[mise/tasks]]
 
-- # How can I run [[mise]] commands to update pinned global dev tools (for example under `~/.config/mise/mise.toml`) using [[mise/Backend/aqua]], and define a [[mise/Tasks]] task that bumps all pinned versions?
+- # How can I run [[mise]] commands to update pinned global dev tools (for example under `~/.config/mise/mise.toml`) using [[mise/Backend/aqua]], and define a [[mise/tasks]] task that bumps all pinned versions?
 - ## Answer
 	- [[AI/Response]]
 		- **Inspect what is stale:** run [[mise/outdated]] (optionally with `mise outdated --json` for scripting). That lists tools whose installed versions lag the resolved target for each entry in the merged config.
