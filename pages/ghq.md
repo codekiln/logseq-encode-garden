@@ -1,5 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Hironao OTSUBO]]
+alias:: [[Person/Hironao OTSUBO/GitHub/ghq]]
 tags:: [[CLI/Tool]], [[Go]]
 
 - # [ghq](https://github.com/x-motemen/ghq)

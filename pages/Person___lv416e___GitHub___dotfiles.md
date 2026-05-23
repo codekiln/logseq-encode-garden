@@ -2,9 +2,10 @@ tags:: [[dotfile/dotfiles repo]]
 logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/lv416e]]
 via:: https://github.com/lv416e/dotfiles
+
 - # [lv416e/dotfiles: Modern dotfiles management with chezmoi](https://github.com/lv416e/dotfiles)
 	- Public **[[dotfiles]]** for [[Person/lv416e]], managed with **[[chezmoi]]** (templated files, optional **age** and **1Password CLI** for secrets). After `chezmoi apply`, setup continues with **`brew bundle`** from the chezmoi-managed Brewfile and **`mise install`** / **`mise trust`** (see upstream README).
-	- **Homebrew** — `dot_Brewfile.tmpl` drives a large CLI stack (**[[mise]]**, **[[chezmoi]]**, **[[jj-vcs]]**, **[[nvim]]**, **[[Docker]]**, **[[ripgrep]]**/[[fzf]]/[[fd]]/[[eza]]/[[bat]], **[[starship]]**, **[[tmux]]**, **[[zellij]]**, **[[Person/Hironao OTSUBO/GitHub/ghq]]**, etc.) and, on **macOS** (`darwin`), conditional **casks** (terminals, editors, daily apps). Useful as a reference layout for “modern Rust/CLI + GUI” Brew bundles.
+	- **Homebrew** — `dot_Brewfile.tmpl` drives a large CLI stack (**[[mise]]**, **[[chezmoi]]**, **[[jj-vcs]]**, **[[nvim]]**, **[[Docker]]**, **[[ripgrep]]**/[[fzf]]/[[fd]]/[[eza]]/[[bat]], **[[starship]]**, **[[tmux]]**, **[[zellij]]**, **[[ghq]]**, etc.) and, on **macOS** (`darwin`), conditional **casks** (terminals, editors, daily apps). Useful as a reference layout for “modern Rust/CLI + GUI” Brew bundles.
 	- **[[tmux]] / [[zellij]]** — [docs/reference/keybindings-reference.md](https://github.com/lv416e/dotfiles/blob/main/docs/reference/keybindings-reference.md) documents **[[Keyshort]]**-style bindings and an **equivalency table** between **[[zellij]]** and **[[tmux]]** (same mental model across their multiplexer abstraction).
 	- **[[mise]]** — universal tool versions and tasks (`mise sync`, `mise a`, docs for tasks in-repo).
 	- **[[fnox]]** — [docs/guides/secrets-management-fnox.md](https://github.com/lv416e/dotfiles/blob/main/docs/guides/secrets-management-fnox.md) documents **[[fnox]]** from [[Person/Jeff Dickey]] (jdx), the same ecosystem as **[[mise]]**, for secrets in this dotfiles layout (complements **age** / **1Password CLI** paths above).
