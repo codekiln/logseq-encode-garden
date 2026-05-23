@@ -20,3 +20,4 @@
 		- Lean hub: H1 with the type name, **Overview**, optional **Context / Examples / Subtypes / Links** as the topic warrants.
 	- ## Examples in this garden
 		- [[Game/Video/Platformer]] (genre; **video** medium)
+		- [[Game/Video/Tower Defense]] (genre; **video** medium)

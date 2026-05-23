@@ -1,0 +1,6 @@
+logseq-entity:: [[Logseq/Entity/Game/Type]]
+
+- # Tower Defense
+	- **Overview** — **Tower defense** is a video game genre where the player places and upgrades **static defenses** (towers, traps, units in fixed slots) to stop **waves of enemies** moving along **paths** or **lanes** before they reach a **base**, **exit**, or **objective**. The core loop is **earn resources from kills or waves** → **build and upgrade** structures with different **ranges**, **damage types**, and **special effects** → **survive** escalating waves or scripted assaults.
+	- **Context** — Maps emphasize **chokepoints**, **path length**, and **coverage**; play is usually **real-time** with optional **pause** for planning. The genre tag fits when **lane or path defense with placed structures** is the main loop, not when base building and army control dominate as in a full **RTS**. Hybrids include **MOBA** lane defense, **reverse** tower defense (control the waves), and puzzle-action blends such as **Plants vs. Zombies**. Lineage runs from **Dune II**–style defense segments and **StarCraft** custom maps through standalones such as **Bloons TD**, **Kingdom Rush**, and **Defense Grid**.
+	- **Links** — Wikipedia’s [Tower defense](https://en.wikipedia.org/wiki/Tower_defense) article is a reasonable orientation anchor for vocabulary and history.
