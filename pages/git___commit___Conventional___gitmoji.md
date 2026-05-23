@@ -9,9 +9,9 @@ alias:: [[Conventional Emoji Commits]]
 	- ## Core Format
 		- ```
 		  <emoji> <type>[optional scope]: <description>
-
+		  
 		  [optional body]
-
+		  
 		  [optional footer(s)]
 		  ```
 	- ## Primary Commit Types
@@ -33,9 +33,9 @@ alias:: [[Conventional Emoji Commits]]
 	- ## Examples
 		- ```
 		  ✨ feat(auth): add OAuth2 support
-
+		  
 		  Implements OAuth2 authentication flow for third-party logins
-
+		  
 		  BREAKING CHANGE: removes legacy authentication endpoints
 		  ```
 		- ```
@@ -45,10 +45,10 @@ alias:: [[Conventional Emoji Commits]]
 		- For ticket-based projects, add the ticket reference as the last line:
 		- ```
 		  ✨ feat: implement user profile page
-
+		  
 		  PD-12345 User Profile Implementation
 		  ```
 		- For non-ticket projects, this reference is optional
 	- ## References
 		- Extended documentation: [conventional_commits.md](https://github.com/codekiln/alits/blob/feature/story-1.1-foundation-core-package-setup/docs/dev/scm/conventional_commits.md)
-		- See also: [[My/Dev/Tool/Pref/SCM]] for commit message preferences
+		- See also: [[My/Pref/Dev/Tool/SCM]] for commit message preferences

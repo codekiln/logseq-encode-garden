@@ -79,7 +79,7 @@ alias:: [[aitmpl.com]]
 - ## Related Concepts
 	- [[Claude Code/Command/Slash/Docs/Comparison with Skills]]
 	- [[Claude Code/Skill/Project]]
-	- [[My/Dev/Tool/Pref/AI/Coding/Config/Management]]
+	- [[My/Pref/Dev/AI/Config/Management]]
 - ## Links
 	- **🌐 Browse Templates**: [aitmpl.com](https://aitmpl.com)
 	- **📚 Documentation**: [docs.aitmpl.com](https://docs.aitmpl.com)

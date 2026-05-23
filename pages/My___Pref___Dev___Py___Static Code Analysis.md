@@ -1,0 +1,3 @@
+- [[Linting]], [[Programming/Language/Formatter]], [[Static Code Analysis]] tools
+	- [[Ruff]] for both, using [[Py/Lib/black]] and [[Py/Lib/isort]] under the hood
+- [[Type Checking]] - Make heavy use of [[Mypy]]

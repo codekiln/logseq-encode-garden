@@ -19,4 +19,4 @@ source:: https://simonwillison.net/2025/Oct/25/claude-docs/
 		- [[AI/Coding]]
 		- [[Documentation]]
 		- [[Claude]]
-		- [[My/Dev/Tool/Pref/AI/Coding/Config/Management]]
+		- [[My/Pref/Dev/AI/Config/Management]]

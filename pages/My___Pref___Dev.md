@@ -1,0 +1,11 @@
+# My Dev Preferences
+	- ## Take a [[mise]]-centric approach
+		- {{embed [[My/Pref/Dev/mise]]}}
+	- ## Preferred [[Programming Language]]s from Highest to Lowest
+		- ### [[Rust]]
+			- {{embed [[My/Pref/Dev/Rust]]}}
+		- ### [[Python]]
+			- {{embed [[My/Pref/Dev/Py]]}}
+		- ## [[Typescript]]
+			-
+-

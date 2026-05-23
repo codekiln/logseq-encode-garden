@@ -1,0 +1,4 @@
+- [[Server/Side]] [[API]]s
+	- Primary Preference is [[FastAPI]] for one-off APIs
+		- Only use [[PostgreSQL]] and [[Alembic]] when absolutely necessary or explicitly requested
+	- Secondary Preference is [[Django]] for bigger [[Monoliths]], getting things done with modularity, ORM-powered migrations.
