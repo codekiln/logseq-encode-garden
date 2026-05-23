@@ -1,3 +1,5 @@
+alias:: [[dotfiles repo]], [[dotfiles repos]]
+
 - A [[source/control/management]] [[Repository]] which versions all of the configuration files for one or more [[Environment]].
 - Maintaining a personal dotfiles repo is an example of [[Configuration/Management]].
 -
