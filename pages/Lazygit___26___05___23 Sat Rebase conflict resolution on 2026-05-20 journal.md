@@ -1,0 +1,15 @@
+# Resolved [[git/rebase]] conflict in [[Lazygit]] on [[2026-05-20]] journal - [[2026-05-23 Sat]]
+	- replayed local commit `1245c96` (`rg --context=8 PATTERN path/ is +/- 8 lines of context`) onto `c47ab2f` during a [[git/rebase]] of `main`. [[Lazygit]] showed one conflict: `journals/2026_05_20.md` (`AA`, both sides added the file).
+	- contrast with [[Lazygit/26/04/24 Fri Issues with git merge conflict resolution]] — this time I kept both sides instead of picking one hunk and losing journal content.
+	- ## What Happened
+		- upstream (`HEAD` / **ours** during rebase) had a `[[Gard/Diff]]` **Filed** entry for [[Obsidian/Q/What options do I have for publishing my obsidian vault as a web application]].
+		- the replayed local commit (**theirs** during rebase) had a **Filed** entry for [[rg/Q/Using rg, how can I display + or - 8 lines of context around a match, plus line numbers?]] plus the new Q page and a `.beads/issues.jsonl` touch.
+		- after resolution, the rebase finished as commit `3e4245e` and `main` matched `origin/main`.
+	- ## Workflow That Worked
+		- **`e`** in the Files panel opened `journals/2026_05_20.md` in [[nvim]] with conflict markers still present.
+		- merged manually: one `[[Gard/Diff]]` block with both **Filed** links; removed all conflict markers.
+		- when lazygit prompted *All merge conflicts resolved. Continue the rebase?*, **`Enter`** continued the rebase (`git rebase --continue`).
+	- ## What I Learned
+		- for journal pages where both sides added different **Filed** entries, manual edit in `$EDITOR` is safer than **`M`** merge-conflict menu options that take a whole side.
+		- lazygit's command log is useful confirmation that staging and editor launches happened as expected.
+		- the April recovery note still holds: use [[Lazygit]] for navigation and inspection, then reconstruct the final file in the editor when both sides carry real content.
