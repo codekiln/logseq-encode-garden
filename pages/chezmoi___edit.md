@@ -1,3 +1,16 @@
-- `chezmoi edit` opens a config file in a [[EnvVar]]
-	- example
+# `chezmoi edit` opens a config file in [[EnvVar/EDITOR]]
+	- [[Example]]
 		- `chezmoi edit ~/.bashrc`: open [[Bash/.bashrc]] in `$EDITOR`
+- # [Chezmoi > User Guide > Editor](https://www.chezmoi.io/user-guide/tools/editor/)
+	- ## Use chezmoi with VIM
+		- There's a telling line in here:
+			- > Alternatively, you can use an `autocmd` to run `chezmoi apply` whenever you save a dotfile, but you must disable `chezmoi edit`'s hardlinking:
+		- what does it say about `chezmoi edit` that it has "hardlinking"?
+			- `chezmoi edit` normally uses hardlinks as an optimization and convenience mechanism.
+			- The idea is:
+				- your “source of truth” lives in the chezmoi source directory
+				- your actual dotfile in `$HOME` is managed/generated from that source
+				- when you run `chezmoi edit ~/.zshrc`, chezmoi temporarily makes the editable file and the source file refer to the same inode via a hardlink
+			- So while you are editing, changes immediately affect the source file directly without needing an extra sync step.
+- # [Chezmoi > Reference > Editor](https://www.chezmoi.io/reference/configuration-file/editor/)
+	-
