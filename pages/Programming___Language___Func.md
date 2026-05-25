@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/concept]]
 tags:: [[Term]], [[Category]], [[Diataxis/Concept]]
 alias:: [[Software/Paradigm/Functional]], [[Functional Programming Language]] 
-see-also:: [[Software/Paradigm/Object-Oriented]], [[Programming/Language/General Purpose]], [[Declarative]]
+see-also:: [[Software/Paradigm/Object-Oriented]], [[Programming/Language/General Purpose]], [[Declar/at/ive]]
 
 - # Functional programming
 	- ## Overview
@@ -15,7 +15,7 @@ see-also:: [[Software/Paradigm/Object-Oriented]], [[Programming/Language/General
 		- **First-class and higher-order functions** — Functions are values; functions can take and return functions (callbacks, combinators).
 		- **Immutability by default** — New values instead of in-place mutation where the paradigm is taken seriously; persistent data structures are common in FP ecosystems.
 		- **Referential transparency (ideal)** — In **pure** FP, an expression’s value depends only on its inputs; side effects are pushed to the edges (IO monad, effect systems, etc.) or accepted as pragmatic leaks.
-		- **Declarative composition** — Express *what* to compute from *what* (pipelines, queries) more than *how* to mutate memory step by step—overlaps with [[Declarative]] style in places.
+		- **Declarative composition** — Express *what* to compute from *what* (pipelines, queries) more than *how* to mutate memory step by step—overlaps with [[Declar/at/ive]] style in places.
 	- ## Mechanism
 		- **Evaluation strategies** matter in language design: strict vs lazy, tail-call optimization for recursion, and how closures capture environment.
 		- **Type systems** range from strong static typing with inference (ML/Haskell) to dynamic Lisps; **algebraic data types** and **pattern matching** often pair with FP.

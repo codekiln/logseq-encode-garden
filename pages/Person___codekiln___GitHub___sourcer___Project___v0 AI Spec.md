@@ -42,7 +42,7 @@
 			- This identity is the primary abstraction.
 			- Filesystem layout, clone URLs, caching strategy, and trust policies are all derived from this canonical identity.
 		- ### Be a light-weight [[Universal Installer]] or [[Meta Package Manager]] for [[SCM]] tools
-			- Tools like [[aqua]] and [[asdf]] provide a centralized, [[Declarative]] ways to express dependencies from multiple [[Package Managers]]. In a similar way, `srcr` provides a centralized way to clone, update or remove repositories from multiple providers, whether that's [[Gitlab]], [[SourceHut]], [[Codeberg]], or [[GitHub]].
+			- Tools like [[aqua]] and [[asdf]] provide a centralized, [[Declar/at/ive]] ways to express dependencies from multiple [[Package Managers]]. In a similar way, `srcr` provides a centralized way to clone, update or remove repositories from multiple providers, whether that's [[Gitlab]], [[SourceHut]], [[Codeberg]], or [[GitHub]].
 			- Like [[mise]], [[npm]] and similar tools, the config file for `srcr` should declare the desired disk state that the CLI executable should ensure. `srcr install` should bring the disk to match that desired state.
 		- ### Predictable Local Paths
 			- Repositories always resolve to deterministic local filesystem paths.

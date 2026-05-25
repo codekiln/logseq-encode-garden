@@ -3,7 +3,7 @@ tags:: [[chezmoi/Concept]]
 
 - # What is the Chezmoi *Source Directory*? [[card]]
 	- ## [[My Answer]]
-		- It's the [[dotfiles repo]] directory on disk that contains the [[Declarative]] chezmoi representation of what you want your [[dotfiles]] to be.
+		- It's the [[dotfiles repo]] directory on disk that contains the [[Declar/at/ive]] chezmoi representation of what you want your [[dotfiles]] to be.
 	- ## [[Their Answer]]
 		- According to [[chezmoi/Ref/Concepts]], it's
 			- > where chezmoi stores the [[chezmoi/Source/State]]. By default it is `~/.local/share/chezmoi`

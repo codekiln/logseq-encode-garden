@@ -42,11 +42,11 @@
 				  aws sts get-caller-identity
 				  ```
 	- ## [Option 3](https://developer.1password.com/docs/cli/secrets-scripts/#option-3-use-op-inject-to-load-secrets-into-a-config-file) - use [[1Password/Dev/op/inject]] to [load secrets into a config file](https://developer.1password.com/docs/cli/secrets-scripts/#option-3-use-op-inject-to-load-secrets-into-a-config-file)
-		- If your script uses a configuration file, you can [[Template]] the config file with [[1Password Secret References]], then use [`op inject`](https://developer.1password.com/docs/cli/reference/commands/inject/) to pass the config file with the resolved secrets to your script at runtime.
+		- If your script uses a configuration file, you can [[Templat/e]] the config file with [[1Password Secret References]], then use [`op inject`](https://developer.1password.com/docs/cli/reference/commands/inject/) to pass the config file with the resolved secrets to your script at runtime.
 		- This allows you to check config files into source control and keep them in sync throughout developer workstations, CI, and production servers. And you can include template variables within the secret references to [load different sets of secrets for different environments](https://developer.1password.com/docs/cli/secrets-config-files/#step-3-differentiate-between-environments).
 		- [Learn how to load secrets into config files](https://developer.1password.com/docs/cli/secrets-config-files/).
 		- [[My Notes]] on option 3
-			- This uses a specific [[Template]] sytax reminiscent of [[Jinja]] - see [[1Password/Dev/CLI/Ref/Concept/Template Syntax]]
+			- This uses a specific [[Templat/e]] sytax reminiscent of [[Jinja]] - see [[1Password/Dev/CLI/Ref/Concept/Template Syntax]]
 				- {{embed ((67dfea45-d135-4607-9190-07c6918ce936))}}
 			- of course, now you have the secret sitting around unencrypted on disk, which goes against [[Security/Quest/Zero Secrets on Disk]]
 			- rant about this part

@@ -1,0 +1,3 @@
+alias:: [[Declares]]
+
+- To Declare

@@ -1,0 +1,51 @@
+logseq-entity:: [[Logseq/Entity/concept]]
+- # Projection
+	- ## Overview
+		- A projection is a way of turning something into the part of itself that matters for a chosen direction, subspace, coordinate system, or question.
+		- In vector geometry, the central picture is shadow-casting: a vector can be "dropped" onto a line or plane, producing the component that lies along that target and leaving behind a remainder that points away from it.
+		- The point is not merely to make a smaller object. A projection separates a thing into **seen-through-this-lens** and **left-over-after-that-lens**.
+	- ## Context
+		- Projection appears whenever mathematics asks: what part of this object belongs to this simpler structure?
+		- A 3D point projected onto a 2D screen keeps the information needed for the screen and discards depth.
+		- A vector projected onto a direction keeps the amount of motion in that direction and discards the perpendicular motion.
+		- A dataset projected onto a smaller set of coordinates keeps the variation expressible in those coordinates and treats the rest as residual.
+	- ## Vector Projection
+		- Given a vector `v` and a nonzero vector `u`, the projection of `v` onto the line spanned by `u` is the part of `v` that points in the same direction as `u`.
+		- The usual formula is:
+			- `proj_u(v) = ((v . u) / (u . u)) u`
+		- The dot product `v . u` measures how much `v` aligns with `u`.
+		- Dividing by `u . u` normalizes for the length of `u`, so the result depends on the direction of `u`, not on how long the chosen direction vector happens to be.
+		- If `u` is a unit vector, the formula becomes simpler:
+			- `proj_u(v) = (v . u) u`
+		- The scalar `v . u` is the signed length of the shadow of `v` along `u`: positive if it points with `u`, negative if it points against `u`, and zero if it is perpendicular.
+	- ## Mechanism
+		- Projection splits a vector into two pieces:
+			- `v = projected part + residual part`
+		- For orthogonal projection, the residual is perpendicular to the target line or subspace.
+		- This perpendicular residual is what makes orthogonal projection feel like the "closest point" on the target: among all vectors on the target line or subspace, the projected vector is the one nearest to the original.
+		- The same idea generalizes from projecting onto a line to projecting onto a plane or any subspace.
+	- ## Key Principles
+		- **A projection chooses a target.** Nothing is projected "in general"; it is projected onto a line, plane, subspace, basis, screen, or model.
+		- **A projection keeps what the target can express.** The projected object is the best version of the original that lives inside the chosen target.
+		- **A projection creates a residual.** What does not fit the target has not vanished conceptually; it becomes the error, remainder, perpendicular component, or lost information.
+		- **Orthogonal projection is closest-fit projection.** In Euclidean geometry, dropping at a right angle gives the nearest point on the target.
+		- **Projection can be lossy or exact.** Projecting onto a lower-dimensional target usually loses information, while projecting an object already in the target changes nothing.
+	- ## Idempotence
+		- Many mathematical projections have the property `P(P(x)) = P(x)`.
+		- Once an object has been projected onto the target, projecting it again does not change it.
+		- This is why projections often behave like filters: after the off-target part has been removed, the operation has nothing more to remove.
+	- ## Examples
+		- A shadow on the ground is a physical projection from 3D space onto a 2D plane.
+		- Resolving a force into horizontal and vertical components projects the force vector onto coordinate axes.
+		- Least-squares regression projects an observed vector of data onto the subspace spanned by the model's predictors; the residual is the part the model cannot explain.
+		- Computer graphics projects 3D geometry onto a 2D image plane so it can be drawn on a screen.
+		- A conceptual model can act like a projection when it preserves some structure of a situation and deliberately suppresses other structure.
+	- ## Misconceptions
+		- Projection is not the same thing as scaling a vector down. Scaling keeps the vector on its original line; projection changes the vector so that it lies in the target.
+		- Projection is not always visual perspective. Perspective projection in graphics is one kind; orthogonal projection in linear algebra is another.
+		- The residual is not necessarily "mistake" in a moral sense. It is the part of the original that the chosen target cannot represent.
+		- A projection is only meaningful relative to the choice of target and geometry. Change the target, distance measure, or inner product, and the projected result can change.
+	- ## Why It Matters
+		- Projection is one of mathematics' basic tools for turning complex structure into tractable structure.
+		- It lets a problem be decomposed: part along this direction, part outside it; part explained by this model, part not explained; part visible in this representation, part hidden.
+		- For vectors, projection is the bridge between geometry and algebra: the intuitive shadow becomes a dot-product formula, and the formula becomes a reusable operation across higher-dimensional spaces.

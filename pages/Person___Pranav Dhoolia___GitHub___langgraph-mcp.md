@@ -1,5 +1,5 @@
 date-created:: [[2025/01]]
-tags:: [[langgraph]], [[MCP]], [[Template]] 
+tags:: [[langgraph]], [[MCP]], [[Templat/e]] 
 created-by:: [[Person/Pranav Dhoolia]]
 
 - # [esxr/langgraph-mcp: LangGraph solution template for MCP](https://github.com/esxr/langgraph-mcp)

@@ -11,7 +11,7 @@ created-by:: [[Person/Jeff Dickey]]
 		- name refers to French culinary phrase roughly translating to "setup" or "put in place"
 			- **before one begins cooking, a professional chef should have all their utensils and ingredients ready to go and in their place**
 	- ### Key Ideas for `mise`
-		- #### [[Declarative]] configuration
+		- #### [[Declar/at/ive]] configuration
 			- The main idea of `mise` is that [[mise/Config/mise.toml]] can let either a project or a user declare the
 			- `mise.toml` describes consistent way to setup and interact with projects across languages
 			- `mise.toml` is a file type used by the `mise` cli that lets developers globally declare or individual projects locally declare the programming languages, the package manager packages, the environment variables, and the common tasks that need to be run
