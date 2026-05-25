@@ -3,7 +3,7 @@ see-also:: [[Person/Jimmy Song/AI/OpenSpec]], [[AI/Coding/Technique/Phased Plann
 
 - # [OpenSpec](https://github.com/fission-ai/openspec)
 	- ## Overview
-		- [[AI/Coding/Technique/Spec-Driven Dev]] framework for [[Agentic Coding Tool]]s
+		- [[AI/Coding/Technique/Spec-Driven Dev]] framework for [[AI/Coding/Tool]]s
 		- Is intended to be more lightweight than [[GitHub/SpecKit]].
 		- It adds a lightweight spec layer around feature work: proposals, requirements/specs, design notes, tasks, implementation, and archive steps.
 		- Claims to support both [[Brownfield Coding]] and [[Greenfield Coding]]

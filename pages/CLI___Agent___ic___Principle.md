@@ -8,7 +8,7 @@ alias:: [[Agentic CLI Principles]]
 			- #### IF
 				- A Developer is making a new CLI tool and wants to optimize for the [[DX]] and [[AI/Agent/AX]] AI agents that will use that
 			- #### WHEN
-				- the developer points their [[Agentic Coding Tool]] at the project's repo
+				- the developer points their [[AI/Coding/Tool]] at the project's repo
 			- #### THEN
 				- the coding agent will
 					- ##### design a CLI that follows the standard

@@ -1,4 +1,4 @@
-tags:: [[CLI/Tool]], [[Agentic Coding Tool]], [[AI/Coding/Agentic]]
+tags:: [[CLI/Tool]], [[AI/Coding/Tool]], [[AI/Coding/Agentic]]
 logseq-entity:: [[Logseq/Entity/Software/Project]]
 
 - # [openai/codex: Lightweight coding agent that runs in your terminal](https://github.com/openai/codex)

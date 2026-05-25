@@ -2,7 +2,7 @@
 	- This is from [[Numtide/llm-agents.nix]]
 		- [llm-agents.nix/packages/copilot-cli/package.nix at main · numtide/llm-agents.nix](https://github.com/numtide/llm-agents.nix)
 			- ok, it's up to date at least!
-			- Maybe I should use this for all my [[Agentic Coding Tool]]s?
+			- Maybe I should use this for all my [[AI/Coding/Tool]]s?
 			- ```
 			  nix run github:numtide/nix-ai-tools#copilot-cli -- --version
 			  GitHub Copilot CLI 1.0.21.

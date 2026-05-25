@@ -1,4 +1,4 @@
-alias:: [[AI Coding Tool]], [[AI Coding Tools]]
+alias:: [[AI Coding Tool]], [[AI Coding Tools]], [[Agentic Coding Tool]] 
 tags:: [[AI Coding]], [[Reference]]
 
 - # AI Coding Tools
@@ -24,3 +24,4 @@ tags:: [[AI Coding]], [[Reference]]
   | [[AWS/Q Developer]] | Amazon | https://aws.amazon.com/q/developer/ |
   | [[Junie]] | JetBrains | https://www.jetbrains.com/ai/ |
   | [[JulesAI]] | Google DeepMind | https://deepmind.google/discover/blog/google-jules-ai-code-understanding-and-generation/ |
+-
