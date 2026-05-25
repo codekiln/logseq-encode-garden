@@ -16,7 +16,7 @@ tags:: [[AI/Voice]]
 		- decreasing latency is everything
 			- in event we get disconnected, can I call you back?
 				- realistically, you will get 100 possible responses
-					- do you need to go to LLM for that? no, you can exact string match [[Point/Good]]
+					- do you need to go to LLM for that? no, you can exact string match [[Good point]]
 	- [[Person/Karan Kashyap]]
 		- highly regulated environments
 		- latency isn't just in product, it's in queries to legacy databases
@@ -67,7 +67,7 @@ tags:: [[AI/Voice]]
 		- if you can solve a problem with chat with LLMs, you can likely solve it with voice but just with more work
 			- example, a background noise child saying, "no, I don't want that!"
 		- addition layer of speaker recognition, background noise
-		- a lot of voice networks are going over telephony systems, which are *not modernized!* [[Point/Good]]
+		- a lot of voice networks are going over telephony systems, which are *not modernized!* [[Good point]]
 	- [[Person/Nicholas Leonard]]
 		- none of the people on the stage are like [[ElevenLabs]]s
 		- you have a cap on how bit the models can get because of the [[laten/cy]] requirements of the problem space
@@ -108,7 +108,7 @@ tags:: [[AI/Voice]]
 			- they are partnered with [[ElevenLabs]]s
 	- [[Person/Nicholas Leonard]]
 		- most of the value of [[AI/Analysis/Sentiment]] or [[AI/Analysis/Emotion]] is [[OLAP]], in post
-		- very offensive in [[Human]] is to presume you understand how you feel and be wrong [[Point/Good]]
+		- very offensive in [[Human]] is to presume you understand how you feel and be wrong [[Good point]]
 		- challenge: prompting llm to do more and give metadata along the way
 			- if you have a second call, you add [[laten/cy]]
 	-

@@ -9,7 +9,7 @@ tags:: [[AI Coding]], [[Reference]]
   | [[Warp]] | Warp | https://github.com/warpdotdev/Warp |
   | [[Claude Code]] | Anthropic | https://github.com/anthropics/claude-code |
   | [[RooCode]] | RooVet Developers | https://github.com/RooVetDevelopers/roocode |
-  | [[CodexCLI]] | OpenAI | https://github.com/openai/codex |
+  | [[Codex/CLI]] | OpenAI | https://github.com/openai/codex |
   | [[FactoryCLI]] | Factory AI | https://github.com/Factory-AI/factory |
   | [[CursorAI]] | Anysphere | https://github.com/getcursor/cursor |
   | [[GitHub/CoPilot]] | GitHub | https://github.com/features/copilot |

@@ -1,13 +1,14 @@
 created-by:: [[Person/Sadjow Leão]]
+
 - # [sadjow/codex-cli-nix](https://github.com/sadjow/codex-cli-nix)
 	- Repository: [sadjow/codex-cli-nix](https://github.com/sadjow/codex-cli-nix)
 	- Created by: [[Person/Sadjow Leão]]
 	- Created: 2025-09-04
 	- GitHub status on 2026-03-12: 59 stars, 14 forks, 0 open issues
 	- **Nix flake for OpenAI Codex CLI with a native Rust binary default, hourly updates, and multi-platform caching.**
-	- It packages [[OpenAI/Codex/CLI]] for Nix users who want declarative installs, quick release pickup, and a native binary that avoids a Node.js dependency by default.
+	- It packages [[Codex/CLI]] for Nix users who want declarative installs, quick release pickup, and a native binary that avoids a Node.js dependency by default.
 	- ## Why It Exists
-		- Gives Nix users near-immediate access to new [[OpenAI/Codex/CLI]] releases
+		- Gives Nix users near-immediate access to new [[Codex/CLI]] releases
 		- Avoids the fragility of `npm install -g @openai/codex` when switching Node.js versions across projects
 		- Provides a focused flake with binary caching and a dedicated update workflow
 	- ## Packaging Model
@@ -44,7 +45,7 @@ created-by:: [[Person/Sadjow Leão]]
 	- ## Comparison Notes
 		- Compared with `npm install -g @openai/codex`, this flake is more stable across Node.js version switching and easier to manage declaratively
 		- Compared with raw source builds, this repo emphasizes pre-built multi-platform binaries and quick installation
-		- It is a close parallel to [[Person/Sadjow Leão/GitHub/claude-code-nix]], but targeted at [[OpenAI/Codex/CLI]] instead of [[Claude Code]]
+		- It is a close parallel to [[Person/Sadjow Leão/GitHub/claude-code-nix]], but targeted at [[Codex/CLI]] instead of [[Claude Code]]
 	- ## Links
 		- README: [README.md](https://github.com/sadjow/codex-cli-nix/blob/main/README.md)
 		- Issues: [GitHub Issues](https://github.com/sadjow/codex-cli-nix/issues)

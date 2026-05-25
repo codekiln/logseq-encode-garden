@@ -1,6 +1,6 @@
 logseq-entity:: [[Logseq/Entity/question]]
 
-- # Is there a way to export a transcript of a conversation to a file in [[OpenAI/Codex/CLI]]?
+- # Is there a way to export a transcript of a conversation to a file in [[Codex/CLI]]?
 	- ## My Notes
 		- [[AI/Agent/Agentic/Engineer/ing/Tool/Idea/26/04/Abstraction Layer over agentic CLI tools]]
 	- ## Answer
@@ -18,5 +18,5 @@ logseq-entity:: [[Logseq/Entity/question]]
 				- [Command line options – Codex CLI](https://developers.openai.com/codex/cli/reference) (`codex exec`: “Stream results to stdout or JSONL”; `--json`; `--output-last-message`; `--ephemeral`)
 				- [openai/codex#13267](https://github.com/openai/codex/issues/13267) (export entire session — discussion / feature request)
 	- ## Related
-		- [[OpenAI/Codex/CLI]]
+		- [[Codex/CLI]]
 		- [[AI/Coding/Tool/Q/How can I do fire and forget tasks in each CLI AI coding tool like Claude Code cursor-agent and codex?]]

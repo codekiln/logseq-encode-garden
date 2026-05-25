@@ -1,3 +1,5 @@
+tags:: [[Agent/Command]]
+
 - [Slash commands - Claude Docs](https://docs.claude.com/en/docs/claude-code/slash-commands#skills-vs-slash-commands)
 - # Skills vs slash commands
 	- **Slash commands** and **Agent Skills** serve different purposes in Claude Code

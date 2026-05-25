@@ -55,7 +55,7 @@
 				- if you put in same ticket in 10 times, you should get same answer
 					- same topic and same ballpark of confidence
 		- Track your token use
-		- [[CodexCLI]] and [[Claude Code]] are powerful tools
+		- [[Codex/CLI]] and [[Claude Code]] are powerful tools
 			- > I'm not going to say [[Vibe Coding]]
 			- > references the idea of, if not the term of [[AI/Concept/Cognitive/Debt]]
 				- you can level someone up but you can get people into trouble they don't see coming.

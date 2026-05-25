@@ -85,7 +85,7 @@ id:: 69d91948-c0e5-413a-85f4-279b1635a27f
 				- in the [[IDE]] cursor is more dominant
 				- all these tools allow you to do picking of [[AI/Model]]s
 				- [[CursorAI]] is starting to use [[Open Source]] models in their training
-				- [[CodexCLI]] is also going there (they support it)
+				- [[Codex/CLI]] is also going there (they support it)
 				- people figure out what works in [[Word/of/Mouth]]
 				- every time we think we have a pattern, then boom, there's another idiom that shows up.
 				- think about autonomous tools that go and submit [[PR]]s.

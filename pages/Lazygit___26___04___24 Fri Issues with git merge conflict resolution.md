@@ -2,7 +2,7 @@
 	- tried to use [[Lazygit]] to resolve a merge conflict on [[2026-04-23 Thu]]'s journal page. ended up accepting the first hunk from the remote and discarding the content I had committed locally, even though I expected to keep both.
 		- part of the problem was insufficient [[UI/Color/Contrast]] between the selected hunk and the text color in my current theme.
 		- the other problem was that I had not done a careful examination of the keyboard shortcuts related to hunk selection and merge conflict resolution.
-	- used a [[CodexCLI]] based [[CLI/Coach]] to guide me through the recovery.
+	- used a [[Codex/CLI]] based [[CLI/Coach]] to guide me through the recovery.
 		- ai-transcript:: [[Lazygit/26/04/24 Fri Issues with git merge conflict resolution/Transcript]]
 		- ai-session-id::
 	- ## What Happened

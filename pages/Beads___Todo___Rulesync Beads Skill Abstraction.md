@@ -2,7 +2,7 @@
 	- **In [[Beads/Todo]]:** this page is filed here as a reminder to capture **one portable story** for [[Beads]] / `[[bd]]` across [[Agentic Engineering Tools]], instead of re-deriving setup from each vendor doc every time.
 	- ## Problem
 		- Official docs describe **per-IDE / per-agent** wiring so agents know how to use **`bd`** (hooks, plugins, CLI setup, etc.). [Beads — IDE setup](https://steveyegge.github.io/beads/getting-started/ide-setup) is the hub for that.
-		- This garden already uses **`[[rulesync]]`** as the **single source** for rules, commands, skills, and related AI-tool config that fans out to [[Claude Code]], [[CursorAI/CLI]], [[CodexCLI]], Copilot-style targets, and the rest.
+		- This garden already uses **`[[rulesync]]`** as the **single source** for rules, commands, skills, and related AI-tool config that fans out to [[Claude Code]], [[CursorAI/CLI]], [[Codex/CLI]], Copilot-style targets, and the rest.
 		- **Gap:** there is no **rulesync-authored rule or skill** yet that tells every tool the same baseline: *this repo uses Beads; run these setup or registration steps for your runtime; keep issue state in sync the same way*.
 	- ## Goal
 		- Add something under **`.rulesync/rules/`** and/or **`.rulesync/skills/`** that:

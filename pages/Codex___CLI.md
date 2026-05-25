@@ -1,9 +1,11 @@
-tags:: [[CLI/Tool]], [[AI Coding]]
-alias:: [[CodexCLI]]
+tags:: [[CLI/Tool]], [[Agentic Coding Tool]], [[AI/Coding/Agentic]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 
 - # [openai/codex: Lightweight coding agent that runs in your terminal](https://github.com/openai/codex)
 	- ## [[My Notes]]
 	  id:: 6802126f-043a-4b70-855d-34ea41dbe04d
+		- [[2026-05-24 Sun]]
+			- renamed this page to `Codex/CLI` from `OpenAI/Codex/CLI` to make more space.
 		- [[2026-04-24 Fri]]
 			- renamed this page to `OpenAI/Codex/CLI` from `OpenAI/GitHub/codex`. need to make a more intuitive space for this, like `Codex/CLI`
 		- [[2025-04-18 Fri]]

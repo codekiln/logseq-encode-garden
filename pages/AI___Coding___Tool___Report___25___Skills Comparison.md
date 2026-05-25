@@ -21,7 +21,7 @@ date-created:: [[2025-11-03 Mon]]
 		  | JetBrains Junie | None/Partial (actions) | No | IDE actions, not reusable skills | JetBrains IDEs | IDE plugin sandboxing | JetBrains AI docs, limited info [^10] |
 		  | [[Warp]] | Partial (Snippets/Aliases) | No | Snippets/aliases, not autonomous | Terminal | Secure shell sandboxing | No docs on skill system [^11] |
 		  | Google Jules | Research (auton tools) | No (classic MCP) | Pre-loaded tool manifest (stateless) | Research IDE, select public | Internal security/Google sandbox | DeepMind blog/papers [^12] |
-		  | [[CodexCLI]] | Partial (tools via API) | No (all manifest) | Tool manifests, not persistent skills | CLI, API | Codex VM+sandbox | API docs, no mention of skills [^13] |
+		  | [[Codex/CLI]] | Partial (tools via API) | No (all manifest) | Tool manifests, not persistent skills | CLI, API | Codex VM+sandbox | API docs, no mention of skills [^13] |
 		- **Legend:**
 			- **Full:** Modular, persistent, autonomously-invoked skills with reusable, lazy-loadable resource bundles.
 			- **Partial:** Actions/macros/tools definable, but lacking full autonomy or progressive disclosure, or persistence via bundles.
@@ -39,7 +39,7 @@ date-created:: [[2025-11-03 Mon]]
 			- Both integrate AI into professional IDEs, providing AI chat, code assistance, and advice, but do not expose user-extensible "skills" or persistent, reusable agent extensions. All "actions" are stateless prompt-driven or IDE feature integration. There is no manifest, bundle, or discovery concept for agent skills, nor is there staged context management. Any future roadmap for such features is not public. [^9] [^10]
 		- ### 6. [[Warp]]
 			- Warp offers command-line augmentation with AI, including snippets, aliases, and some agentic code modification, but these are manually defined and never agent-discoverable or autonomously triggered. There is no evidence of modular skill extension, nor staged loading—snippets are loaded as defined and only via explicit invocation. [^11]
-		- ### 7. Google Jules, [[CodexCLI]]
+		- ### 7. Google Jules, [[Codex/CLI]]
 			- Both project MCP-style "tools" or APIs that can be attached to agents at runtime, typically via static manifests describing each tool's functions, input/output schemas, and documentation. These tools can be invoked by agents autonomously (classically in Jules research), but *all* instructions/specs/resources for all tools are loaded into context at startup. There is no "on-demand" or staged asset loading. This approach leads to context bloat as the agent scales in capability. There is no skill packaging or filesystem-based bundling; composability relies on agent replumbing. [^12] [^13]
 	- ## Trade-offs and Architectural Implications
 		- ### Context Efficiency

@@ -5,4 +5,4 @@
 		- [[2025-05-19 Mon]]
 			- used this project as a case study for the BMAD method in ChatGPT projects
 		- [[2025-05-18 Sun]]
-			- started this as a way to check out [[OpenAI/Codex/CLI]]
+			- started this as a way to check out [[Codex/CLI]]

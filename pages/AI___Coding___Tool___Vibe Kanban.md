@@ -3,7 +3,7 @@ tags:: [[AI Coding]], [[Tool]]
 - # [Vibe Kanban - Orchestrate AI Coding Agents](https://www.vibekanban.com/)
 	- ## Overview
 		- Platform designed to orchestrate AI coding agents, enabling developers to run multiple agents in parallel, manage tasks visually, and streamline code reviews
-		- Integrates with various AI coding agents such as [[Claude Code]], [[OpenAI/Codex]], [[GitHub/CoPilot]], and others
+		- Integrates with various AI coding agents such as [[Claude Code]], [[Codex]], [[GitHub/CoPilot]], and others
 		- Claims to be open source and built by developers for developers
 	- ## Concerns / Risks
 		- ### Not Actually Open Source
@@ -38,14 +38,13 @@ tags:: [[AI Coding]], [[Tool]]
 			- Requires Node.js 18+
 			- Install via: `npx vibe-kanban`
 		- ### Setup Steps
-			1. Connect your preferred AI coding agents (Claude Code, Gemini CLI, Codex, etc.)
-			2. Create tasks on your kanban board
-			3. Assign tasks to appropriate AI agents
-			4. Review code, merge changes, and deploy
+		  1. Connect your preferred AI coding agents (Claude Code, Gemini CLI, Codex, etc.)
+		  2. Create tasks on your kanban board
+		  3. Assign tasks to appropriate AI agents
+		  4. Review code, merge changes, and deploy
 	- ## Documentation
 		- [Vibe Kanban Documentation](https://www.vibekanban.com/docs)
 		- [Supported Coding Agents](https://www.vibekanban.com/docs/supported-coding-agents)
 	- ## Related Concepts
 		- [[AI/Coding/Concept/Multi-Agent Orchestration]]
 		- [[AI/Coding/Technique/Knowledge Base/Agentic]]
-
