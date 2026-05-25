@@ -7,4 +7,4 @@ alias:: [[Every Inc]], [[EveryInc]]
 	- ## People
 		- [[Person/Dan Shipper]] — CEO and cofounder; [[Chain of Thought]] column and *AI & I* podcast.
 	- ## Compound engineering
-		- [[Compound Engineering]] — in-house development style and open plugin: [[Person/Every/GitHub/compound-engineering-plugin]].
+		- [[Engineer/ing/Compound]] — in-house development style and open plugin: [[Person/Every/GitHub/compound-engineering-plugin]].

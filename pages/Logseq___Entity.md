@@ -21,6 +21,7 @@ alias:: [[Logseq Entities]]
 		- **organization** — Non-company bodies such as standards organizations, foundations, nonprofits, public institutions, consortia, professional associations, and governance/community bodies. Conventions are on the organization type page.
 		- **question** — Topic-scoped research questions using a `/Q/` segment in the page title (`*___Q___*` on disk). Conventions are on the question type page.
 		- **concept** — Understanding-oriented pages (Diataxis-style explanations): paradigms, architectural lenses, and other big ideas. Conventions are on the concept type page.
+		- **[[Logseq/Entity/UX/Pattern]]** — Reusable interaction patterns and interface affordances such as [[UX/Pattern/Dark]], [[UX/Pattern/Text Input/Slash Command]], and [[UX/Pattern/Text Input/Suggest/Completion]]. Conventions are on that type page.
 		- **term** — Short glossary-style vocabulary pages; `logseq-entity::` is additive alongside existing term tagging patterns where present. Conventions are on the term type page.
 		- **person** — Real individuals tracked as `Person/Full Name` hub pages (not every page under the `Person/` namespace). Conventions are on the person type page.
 		- **book** — Published books tracked as `Book/Title` hub pages. Conventions are on the book type page.

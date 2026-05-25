@@ -1,4 +1,4 @@
-- # [Build plugins – Codex](https://developers.openai.com/codex/plugins/build)
+# [Build plugins – Codex](https://developers.openai.com/codex/plugins/build)
 	- Author-facing guide; for installing and using plugins in Codex, see [Plugins](https://developers.openai.com/codex/plugins).
 	- Prefer a local [[Codex/Skill]] while iterating on one repo or one personal workflow; build a plugin to share across teams, bundle app integrations or MCP config, package lifecycle hooks, or publish a stable package.
 	- ## Scaffold with `@plugin-creator`
@@ -52,4 +52,4 @@
 		- Unresolvable entries are skipped without failing the whole marketplace.
 	- Official Plugin Directory self-serve publishing: coming soon.
 	- ## Related
-		- [[Person/Every/GitHub/compound-engineering-plugin]] — example marketplace plugin (`codex plugin marketplace add EveryInc/compound-engineering-plugin`); see [[Compound Engineering]].
+		- [[Person/Every/GitHub/compound-engineering-plugin]] — example marketplace plugin (`codex plugin marketplace add EveryInc/compound-engineering-plugin`); see [[Engineer/ing/Compound]].

@@ -7,4 +7,4 @@ logseq-entity:: [[Logseq/Entity/person]]
 		- *AI & I* podcast
 		- Profile: [every.to/@danshipper](https://every.to/@danshipper)
 	- ## Related
-		- [[Compound Engineering]]
+		- [[Engineer/ing/Compound]]

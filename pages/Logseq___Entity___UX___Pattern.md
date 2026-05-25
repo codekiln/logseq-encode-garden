@@ -1,0 +1,26 @@
+# UX Pattern
+	- This page is the standard operating procedure for **UX pattern** entities: reusable interaction patterns and interface affordances that describe how an interface behaves, how people invoke it, and what kind of action space it opens up.
+	- ## Namespace vs entity type
+		- A page under `UX/Pattern/...` is a strong candidate for this entity type, but the namespace alone does not decide the type.
+		- Neighboring `UX/...` pages may still be better modeled as **term** or **concept** pages when they are mainly a definition, essay, or design lens rather than a reusable interaction pattern.
+	- ## What counts as an instance
+		- Good fit: recurring interface behaviors such as [[UX/Pattern/Dark]], [[UX/Pattern/Text Input/Slash Command]], and [[UX/Pattern/Text Input/Suggest/Completion]].
+		- Good fit: patterns whose primary identity is the interaction itself, not one vendor's implementation.
+		- Not this type: tool-specific notes such as [[Claude Code/Command/Slash]] when the page is mainly about one product's feature surface rather than the general pattern.
+		- Prefer **concept** when the page is a broader design or ethics explanation.
+		- Prefer **term** when the page is only a short vocabulary anchor.
+	- ## Finding and deduplicating
+		- Search for an existing page before creating a new UX pattern entity.
+		- Search in this order: exact expected title, alias matches, sibling branches under `UX/Pattern/`, product-specific pages that may be describing the same interaction, then page-body mentions.
+		- Classify as: **existing**, **similar** (needs human judgment), **new**, or **blocked**.
+	- ## Frontmatter
+		- On instances, set **`logseq-entity::`** to **this** entity-type page so backlinks list all UX pattern entities.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Canonical naming and namespaces
+		- Prefer singular, Title Case namespace segments.
+		- Use nested paths when the host surface or interaction family adds useful structure, for example [[UX/Pattern/Text Input/Slash Command]].
+		- Keep cross-cutting patterns top-level when they are not tied to one host surface, for example [[UX/Pattern/Dark]].
+		- Use `alias::` for legacy titles, common shorthand, or alternate surface forms such as [[Slash Command]] or [[Autocomplete]].
+	- ## Page shape
+		- Use a lean hub shape: H1 with the pattern name, then brief sections such as **Overview**, **Interaction**, **Examples**, and **Related** as the topic warrants.
+		- Keep examples concrete and product-facing, but keep the page centered on the reusable interaction pattern rather than one implementation.

@@ -1,4 +1,5 @@
 logseq-entity:: [[Logseq/Entity/concept]]
+alias:: [[Compound Engineering]]
 
 - # Compound engineering
 	- Development approach from [[Every]]: each unit of engineering work should make the next unit **easier**, not harder—by documenting bugs, review lessons, and patterns so agents and humans compound context over time.

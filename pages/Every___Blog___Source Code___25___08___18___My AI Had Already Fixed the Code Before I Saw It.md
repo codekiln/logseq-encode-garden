@@ -19,5 +19,5 @@ logseq-entity:: [[Logseq/Entity/Article]]
 		- Feature ship time: **>1 week → 1–3 days** average over ~three months.
 		- More bugs caught pre-production; PR review cycles **days → hours**.
 	- ## Links
-		- [[Compound Engineering]]
+		- [[Engineer/ing/Compound]]
 		- [[Person/Dan Shipper/Blog/25/12/11/Compound Engineering - How Every Codes With Agents]]

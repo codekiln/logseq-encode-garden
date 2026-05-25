@@ -1,5 +1,6 @@
 alias:: [[Dark Pattern]], [[Dark Patterns]]
 tags:: [[Term]]
+logseq-entity:: [[Logseq/Entity/UX/Pattern]]
 
 - [Dark Patterns](https://en.wikipedia.org/wiki/Dark_pattern)
 	- **Dark patterns** (also called "deceptive patterns") = user interface designs that intentionally mislead or manipulate users into doing things they didn't really want to do—often benefiting the business instead of the user. ([Wikipedia](https://en.wikipedia.org/wiki/Dark_pattern))

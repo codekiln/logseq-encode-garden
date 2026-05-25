@@ -16,5 +16,5 @@ logseq-entity:: [[Logseq/Entity/Article]]
 		- **Compound:** capture what was learned so the next agent session inherits it (feeds into `CLAUDE.md`-style context and team memory).
 		- Tool-agnostic framing: [[Claude Code]] primary internally; also Factory Droid and [[Codex/CLI]].
 	- ## Links
-		- [[Compound Engineering]]
+		- [[Engineer/ing/Compound]]
 		- [[Every/Blog/Source Code/25/08/18/My AI Had Already Fixed the Code Before I Saw It]] — earlier narrative on the same idea.

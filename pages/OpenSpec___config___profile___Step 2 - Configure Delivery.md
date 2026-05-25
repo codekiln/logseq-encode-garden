@@ -20,6 +20,6 @@
 - There are three options:
 	- 1 - Both
 	- 2 - opsx installed in project as [[Agent/Skills]]
-	- 3 - opsx installed in project as [[Slash Command]]
+	- 3 - opsx installed in project as [[UX/Pattern/Text Input/Slash Command]]
 - Why might we want both?
 	- {{embed [[Agent/Command/vs Agent Skills]]}}
