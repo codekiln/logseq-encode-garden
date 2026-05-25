@@ -48,7 +48,7 @@ tags:: [[CursorAI]], [[git]], [[Diataxis/How To]]
 	  collapsed:: true
 		- ### Copy and paste
 			- Of course, it's possible to copy and paste cursor project rules from one repository into the `.cursor/rules` directory of each project or user. Over time, though, there will be drift between the most up-to-date version of the rules from the upstream repository and the one that was copied in.
-		- ### Use [[Symlinks]]
+		- ### Use [[OS/File/System/Link/Soft]]
 			- While I have not yet documented it under [[CursorAI Project Rule Tests]], I have found that Cursor does follow rules that are symlinked under `.cursor/rules`. To achieve similar behavior to git submodules, one can clone a repository of project rules and then symlink in the rules.
 			- #### Downsides
 				- ##### Extra Tooling
