@@ -30,3 +30,4 @@ alias:: [[Logseq Entities]]
 		- **[[Logseq/Entity/Article]]** — Published web articles, blog posts, essays, and similar authored pieces imported as first-class reading notes. Conventions are on that type page.
 		- **[[Logseq/Entity/Game]]** — Individual playable works or systems: video games, board games, card games, tabletop RPG systems, sport-as-game pages, folk games, and similar game-first hubs across any namespace. Conventions are on that type page.
 		- **[[Logseq/Entity/Game/Type]]** — Game types, genres, families, mechanics, modes, and reusable game-design categories such as [[Game/Video/Platformer]]. Conventions are on that type page.
+		- **[[Logseq/Entity/Security/Vuln]]** — Security vulnerabilities, exploit classes, attack techniques, attack chains, and defensive-relevant abuse patterns. Conventions are on that type page.

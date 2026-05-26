@@ -1,4 +1,5 @@
 alias:: [[Attack Lifecycle]], [[Kill Chain]], [[Attack Chains]]
+
 - # Attack Chain
 	- An **attack chain** (also called an *attack lifecycle* or *kill chain*) is the **ordered sequence of steps** an adversary takes to compromise and operate inside an environment—from first reconnaissance through impact.
 	- Security teams use this framing to decide **where to detect, contain, or disrupt** an attack, and to align controls and playbooks to observable behavior.

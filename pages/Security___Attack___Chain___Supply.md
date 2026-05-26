@@ -1,0 +1,33 @@
+logseq-entity:: [[Logseq/Entity/Security/Vuln]]
+alias:: [[Supply Chain Attacks]]
+
+- # Supply Chain Attacks
+	- A **supply chain attack** compromises a target through something the target already trusts: a dependency, package registry, build pipeline, vendor integration, maintainer account, release artifact, update channel, or tool distribution path.
+	- The attacker does not need to break the final organization directly. They can poison the upstream path and wait for normal installation, upgrade, CI, deployment, or vendor-access workflows to carry the compromise inside.
+	- ## Where it fits in the attack chain
+		- Supply chain compromise is often an **initial access** path: the victim installs or executes something that appears legitimate.
+		- It can also support **persistence** or **lateral movement** when a compromised tool, agent, package, or vendor integration already has privileged access across repositories, hosts, clouds, or customer environments.
+		- In [[Security/Attack/Chain]] terms, the important defender question is: *which trusted handoff lets attacker-controlled code or instructions cross the boundary?*
+	- ## Common forms
+		- **Compromised dependency** - a legitimate package, library, container image, plugin, or model artifact is modified maliciously.
+		- **Typosquatting and slopsquatting** - the attacker publishes a confusing or hallucination-friendly package name so a person or AI coding tool installs the attacker's package; see [[AI Coding/Security/Slop Squatting]].
+		- **Build or release compromise** - CI secrets, signing keys, build scripts, release automation, or artifact storage are abused so the shipped output differs from the reviewed source.
+		- **Maintainer or account compromise** - the attacker takes over a trusted maintainer, package registry, cloud, GitHub, npm, PyPI, container registry, or vendor account.
+		- **Poisoned tools or integrations** - a tool looks useful but carries attacker-controlled behavior or instructions, as in [[AI/Security/Attack/Agentic/Tool Chain/Poisoning]] or compromised MCP server distribution paths such as [[MCP/Server/Attack/Root Problem/Attacker Compromised MCP Server]].
+		- **Vendor access abuse** - a third party with legitimate access becomes the route into the target environment.
+	- ## Why it is hard to defend
+		- The attack hides inside **normal trust**: dependency updates, vendor tooling, CI jobs, editor plugins, package installation, or automated agent workflows.
+		- Many controls focus on known [[Security/Vulnerability]] records, but supply chain attacks can happen before an advisory, CVE, or scanner rule exists.
+		- Software teams often optimize for freshness and automation; attackers exploit the same speed by racing malicious releases into downstream environments.
+	- ## Defensive levers
+		- Maintain a clear inventory of dependencies and artifacts with [[Software/Composition/Analysis]] and SBOM-style provenance where it matters.
+		- Pin versions, review lockfile changes, and require trusted release channels for privileged tooling.
+		- Delay automatic adoption of newly published versions when practical. Settings such as [[mise/Config/Setting/minimum_release_age]] create a cooling-off window so compromised releases are more likely to be discovered before local tools install them.
+		- Protect release credentials, CI secrets, signing keys, and maintainer accounts with strong authentication and least privilege.
+		- Treat AI agent tool access, package suggestions, and public issue/PR context as supply chain inputs, not automatically trusted knowledge.
+	- ## Related
+		- [[Security/Attack/Chain]]
+		- [[Security/Vulnerability]]
+		- [[Software/Composition/Analysis]]
+		- [[Security/DevSecOps/Taxonomy]]
+		- [[Dependency/Update/Automation]]
