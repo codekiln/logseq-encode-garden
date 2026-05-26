@@ -1,0 +1,9 @@
+- # [AI-Engineer-Skool/prompt-vault obisidian-knowledge-graph AGENTS.md](https://github.com/AI-Engineer-Skool/prompt-vault/blob/main/obisidian-knowledge-graph/AGENTS.md)
+	- Repository: [AI-Engineer-Skool/prompt-vault](https://github.com/AI-Engineer-Skool/prompt-vault)
+	- Related concept: [[AGENTS.md]]
+	- Related video: [[Person/Zen van Riel/YouTube/25/09/Learn Faster with an AI Knowledge Graph in Obsidian]]
+	- Related idea: [[Person/Andrej Karpathy/GitHub/Gist/26/04/llm-wiki]]
+	- The agent instructions for the Obsidian knowledge-graph workflow shown in Zen van Riel's video.
+	- Focuses on maintaining a tightly linked knowledge base from transcripts and supporting material.
+	- Includes a CLI query playbook built around `rg` and `fd` for auditing links, frontmatter, note structure, and coverage.
+	- Emphasizes naming conventions, metadata consistency, core-node linking, link validation, hub refreshes, and dashboard maintenance.
