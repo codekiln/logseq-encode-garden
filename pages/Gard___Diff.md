@@ -1,3 +1,5 @@
+alias:: [[Guard/Diff]], [[garddiff]]
+
 # Garden Differences
 	- This term is shorthand for "today's changes in the garden." It typically consists of lists pages under the [[Filed]] and [[Updated]] tags.
 	- This section of the journal page is a **curated subset** of the added and modified files in git for that date.
