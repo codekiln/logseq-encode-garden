@@ -1,0 +1,4 @@
+- use [[Aube]] as the preferred package manager for [[NodeJS]], with [[npm]] as a fallback
+	- [[Why]] use aube? - it's written by [[Person/Jeff Dickey]] to integrate natively into [[mise]], it's compatible with npm and faster and more secure than other npm package managers
+	- In order to use aube, it should be added to [[mise/Config/mise.toml]]. According to [[mise/Backend/npm]], as long as aube is installed, mise will use it by default.
+	- use [[mise/Config/Setting/minimum_release_age]] of `5d` in mise settings, which aube respects

@@ -1,0 +1,3 @@
+- # [Joe's Blog - a non-linear personal web notebook](https://joearms.github.io/index.html)
+	- Personal site and notebook by [[Person/Joe Armstrong]].
+	- Includes essays such as [[Person/Joe Armstrong/Blog/14/06/25/Minimal Viable Program]].

@@ -1,8 +1,18 @@
-alias:: [[ticket]]
+alias:: [[ticketCLI]]
 tags:: [[Task/Management/Git-Friendly]]
 
 - [wedow/ticket: Fast, powerful, git-native ticket tracking in a single bash script. Dependency graphs, priority levels, zero setup.](https://github.com/wedow/ticket)
   title:: tk
-	- The git-backed issue tracker for AI agents. Rooted in the Unix Philosophy, `tk` is inspired by Joe Armstrong's [Minimal Viable Program](https://joearms.github.io/published/2014-06-25-minimal-viable-program.html) with additional quality of life features for managing and querying against complex issue dependency graphs.
-	- `tk` was written as a full replacement for  [[Beads]]. It shares many similar commands but without the need for keeping a [[SQLite]] in sync or a rogue background daemon mangling your changes. It ships with a `migrate-beads` command to make this a smooth transition.
-	- there's even a "migrating from beads" section with a [[Beads]] [uninstall script](https://gist.github.com/banteg/1a539b88b3c8945cd71e4b958f319d8d)
+	- [[CLI/Tool]] that implements a git-backed issue tracker for AI agents.
+	- ## Data Model
+		- [[Markdown Yaml Frontmatter]] files in `.tickets/`.
+	- ## Notable
+		- there's a "migrating from beads" section with a [[Beads]] [uninstall script](https://gist.github.com/banteg/1a539b88b3c8945cd71e4b958f319d8d) `migrate-beads`
+		- Rooted in the Unix Philosophy
+			- inspired by [[Person/Joe Armstrong/Blog/14/06/25/Minimal Viable Program]]
+	- ## Features
+		- supposedly allows managing and querying against complex issue dependency graphs (unverified)
+	- ## [[Engineering]] decisions
+		- written in [[Shell/Script]]; see the [ticket executable](https://github.com/wedow/ticket/blob/master/ticket).
+		- uses [[Behavior/Driven/Development]] with the [[behave]] python library; see the [features directory](https://github.com/wedow/ticket/tree/master/features) for files such as [ticket_notes.feature](https://github.com/wedow/ticket/blob/master/features/ticket_notes.feature).
+	-

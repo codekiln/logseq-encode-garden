@@ -4,6 +4,7 @@ alias:: [[Programming/Language/DSL]], [[Domain Specific Language]]
 - # Domain-specific languages (DSLs)
 	- Languages designed for specific tasks/domains.
 	- Examples:
+		- [[Gherkin]] – executable behavior specifications for [[Behavior/Driven/Development]]
 		- [[SQL]] – for relational database queries
 		- [[Regex]] – for text pattern matching
 		- [[HTML]] – for web layout
