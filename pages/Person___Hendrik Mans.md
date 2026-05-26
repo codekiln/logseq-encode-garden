@@ -3,3 +3,4 @@ logseq-entity:: [[Logseq/Entity/person]]
 	- [GitHub](https://github.com/hmans) (hmans)
 	- ## Projects
 		- [[BeansTasks]]
+		- [[miniplex]]
