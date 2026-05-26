@@ -1,20 +1,8 @@
-# Preferences for Source Code Management (SCM)
-	- use git
-	- ## Git preferences
+# My Preferences for Source Code Management ([[SCM]]) - use [[git]] for everything
+	- ## Use [[git]] for everything
 		- each commit should group files into a single logical change to the codebase
-	- ## Commit Message Preferences
-		- 1 - use [[Conventional Commits]] as a standard for the commit messages (https://www.conventionalcommits.org/en/v1.0.0/)
-			- Recommendation: download the conventional commits specification and put it at `docs/dev/scm/convention_commits.md`
-		- 2 - commit style - use [[gitmoji]] (https://gitmoji.dev/) to communicate what's happening at this point in the project
-		- 3 - the last line(s) of the commit should (each) be referencs to the ID and Name of the task being worked on with respect to the task storage system of record
-			- [[JIRA]] example
-				- `AB-1234 The Jira Ticket Title`
-			- [[GitHub/Issue]] example
-				- `#123 The GitHub Issue Title`
-			- Local filesystem task, e.g. for use with [[Person/Brian Madison/GitHub/BMAD-METHOD]]
-				- `docs/stories/1.1.story.title`
-			- Note: Ticket references are optional for repositories that don't use ticket tracking systems
-		- 4 - For extended guidelines on commit conventions, see [[Conventional Emoji Commits]] which combines conventional commits with emoji
+	- ## [[git/commit/message]] Preferences
+		- {{embed [[My/Pref/Dev/Tool/SCM/Commit Message Style Preferences]]}}
 	- ## RuleSync Rules
 		- A RuleSync rule for commit conventions is available at `.cursor/rules/logseq-cursor-rules/commit-conventions/rule.md`
 		- This rule helps ensure consistent commit messages across projects

@@ -1,1 +1,2 @@
 - This namespace is for my things.
+- It's a personal context portfolio primarily for [[AI/Agent]]s that want to

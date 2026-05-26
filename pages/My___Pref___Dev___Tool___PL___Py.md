@@ -4,6 +4,6 @@
 	- deps go in [[pyproject.toml]] with [[uv/sync]] for lockfile
 	- [[mise/Task/File]]s for build scripts
 	- prefer [[Py/asyncio]] when possible
-	- {{embed [[My/Pref/Dev/Py/Testing]]}}
-	- {{embed [[My/Pref/Dev/Py/Static Code Analysis]]}}
-	- {{embed [[My/Pref/Dev/Py/Server Side APIs]]}}
+	- {{embed [[My/Pref/Dev/Tool/PL/Py/Testing]]}}
+	- {{embed [[My/Pref/Dev/Tool/PL/Py/Static Code Analysis]]}}
+	- {{embed [[My/Pref/Dev/Tool/PL/Py/Server Side APIs]]}}

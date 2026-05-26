@@ -1,0 +1,2 @@
+- prefer [[mise/Task/File]] over [[mise/Task/TOML]] because of syntax highlighting in editors
+- be sure to use [[usageCLI]] syntax for defining autocompletion parameters

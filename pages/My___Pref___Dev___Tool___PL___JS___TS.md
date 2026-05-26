@@ -1,0 +1,2 @@
+# My [[Typescript]] Preferences
+	- Don't use "Barrel files" (see also [[Typescript/Concept/Barrel File]]) as they are harmful to tree-shaking and import path transparency.

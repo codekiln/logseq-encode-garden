@@ -1,0 +1,4 @@
+- [[Why]] I prefer to use [[mise/Task]]s for managing jobs
+	- it integrates with [[usageCLI]] which provides [[Autocomplete]] at the [[CLI]]
+	- it provides an opinionated and yet lightweight way to add descriptive metadata and dependencies
+	- I'm already using mise as an installer, so it avoids additional dependencies
