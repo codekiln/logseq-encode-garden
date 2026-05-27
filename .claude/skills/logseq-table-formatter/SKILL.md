@@ -31,14 +31,14 @@ From repo root:
 ```sh
 python3 .rulesync/skills/logseq-table-formatter/scripts/format-table.py \
   --tabs 2 \
-  --rows 'Command|Primary effect|Cache' \
-  --rows '----|----|----' \
-  --rows '[[mise/unuse]]|remove config and binary|✓'
+  --rows='Command|Primary effect|Cache' \
+  --rows='----|----|----' \
+  --rows='[[mise/unuse]]|remove config and binary|✓'
 ```
 
 - `--tabs N` — tab count before the table (default `2`).
-- `--rows 'a|b|c'` — one row per flag; first row is emitted with `- |`, rest with aligned `  |`.
-- Or pipe TSV on stdin (one row per line).
+- `--rows='a|b|c'` — one row per flag (use `=` so separator rows like `----|----` are not parsed as CLI flags). First row is emitted with `- |`, rest with aligned `  |`.
+- Or pipe one row per line on stdin: `printf '%s\n' 'H|H' '---|---' 'a|b' | python3 …/format-table.py --tabs 2`
 
 Trust script output for column widths; fix wikilinks and wording before running.
 
