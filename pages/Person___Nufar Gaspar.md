@@ -1,0 +1,28 @@
+logseq-entity:: [[Logseq/Entity/person]]
+
+- # [Nufar Gaspar](https://www.nufargaspar.com/)
+	- ## About
+		- Expert AI consultant and trainer; algorithms MSc., former Intel AI leader; ~14 years building AI businesses and shipping AI products.
+		- Focus: AI and agent adoption strategy, training, product architecture, internal AI communities, and executive upskilling.
+		- Trained 14,000+ engineers and executives in 30 countries; built the Intel AI Everywhere community (12,000+ members).
+	- ## Online presence
+		- [nufargaspar.com](https://www.nufargaspar.com/) — consulting, training catalog, writing
+		- [Resources](https://www.nufargaspar.com/resources)
+		- [Features / media](https://www.nufargaspar.com/features)
+	- ## Citations
+		- ### In this garden
+			- [[Person/Nathaniel Whittemore/Pod/26/05/26 The 4 AI Team Members Execs Should Hire Right Now]] — AI Operators bonus, [[Person/Nathaniel Whittemore/Pod]], [[2026/05/26]]
+		- ### AI Daily Brief ([[Person/Nathaniel Whittemore/Pod]])
+			- [The 4 AI Team Members Execs Should Hire Right Now](https://www.youtube.com/watch?v=WnhyCJJdq1Y) — guest; four “digital employees” for executives (research analyst, strategic advisor, communication expert, operational powerhouse)
+			- Agent use cases and readiness — guest; which agent use cases are most mature and whether to wait on agent readiness (see [resources](https://www.nufargaspar.com/resources))
+			- [25 Agent Predictions for 2025](https://www.nufargaspar.com/resources) — two-part guest appearance (listed on [nufargaspar.com](https://www.nufargaspar.com/))
+		- ### Writing
+			- [The 7 Biggest Mistakes Companies are Making in AI and Agent Adoption (and How to Overcome Them)](https://www.nufargaspar.com/post/the-7-biggest-mistakes-companies-are-making-in-ai-and-agent-adoption-and-how-to-overcome-them)
+			- [My 20 Favorite AI Podcasts (and Why You Might Love Them Too)](https://www.nufargaspar.com/post/my-20-favorite-ai-podcasts-and-why-you-might-love-them-too)
+			- More posts and appearances: [Resources](https://www.nufargaspar.com/resources) (e.g. use-case-first mindset, agent UX commandments, fintech adoption, prompting guide)
+		- ### Other media
+			- [Intel is Enabling AI Everywhere](https://www.nufargaspar.com/resources) — community showcase video
+			- Q&A with Prof. Yann LeCun — Intel AI Everywhere conference ([resources](https://www.nufargaspar.com/resources))
+			- Q&A with Prof. Yoshua Bengio — Intel AI Everywhere ([resources](https://www.nufargaspar.com/resources))
+			- *Making History* network — “Disrupting Intel from within with AI” (Hebrew; [resources](https://www.nufargaspar.com/resources))
+			- DATA FUTUROLOGY PODCAST #80 — Rising Through the Ranks in Data Science ([resources](https://www.nufargaspar.com/resources))
