@@ -1,9 +1,15 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/question]], [[Logseq/Entity/Card]] 
 see-also:: [[mise]], [[mise/unuse]], [[mise/uninstall]], [[mise/cache/clear]], [[mise/Q/How do I remove a mise tool?]], [[mise/Q/How do I clear the installed mise tools?]]
 
-- # What's the difference between [[mise/unuse]], [[mise/uninstall]], and [[mise/cache/clear]]?
-	- ## Answer
-	- [[AI/Response]]
+- # What's the difference between [[mise/unuse]], [[mise/uninstall]], and [[mise/cache/clear]]? [[card]]
+	- ## [[My Answer]]
+		- | Command              | Primary effect           | Config `[tools]` | Installed binaries | Cache |
+		  | -------------------- | ------------------------ | ---------------- | ------------------ | ----- |
+		  | [[mise/unuse]]       | remove config and binary | ✓                | ✓                  | ✗     |
+		  | [[mise/uninstall]]   | remove binary            | ✗                | ✓                  | ✗     |
+		  | [[mise/cache/clear]] | remove build cache       | ✗                | ✗                  | ✓     |
+		- Cache clear does not uninstall, but symlinked backends may need [[mise/install]] after a full clear.
+	- ## [[AI Answer]]
 		- **Short answer:** they operate on three different layers. [[mise/unuse]] removes a tool from **config** and usually prunes the install too; [[mise/uninstall]] deletes **installed versions on disk** without touching config; [[mise/cache/clear]] wipes **mise's download/build cache** without editing config.
 		- **[[mise/unuse]]** — removes `TOOL@VERSION` entries from `mise.toml` (or global / env-specific config with flags). Aliases: `mise rm`, `mise remove`. By default it **also prunes** the installed copy when no other config still references that version; pass `--no-prune` to drop the config line but keep the binary. This is the usual way to stop tracking a tool in a project or globally. [mise unuse](https://mise.jdx.dev/cli/unuse.html)
 		- **[[mise/uninstall]]** — deletes installed version trees from disk only. Docs: “This only removes the installed version, it does not modify mise.toml.” After uninstall, `mise ls` can still show the tool from config until you run `mise install` again or remove it with [[mise/unuse]]. Use when you want to reclaim disk space but keep the pin in config, or before reinstalling a broken copy. [mise uninstall](https://mise.jdx.dev/cli/uninstall.html)
@@ -13,4 +19,3 @@ see-also:: [[mise]], [[mise/unuse]], [[mise/uninstall]], [[mise/cache/clear]], [
 			- **Installed tool binaries:** unuse ✓ (default prune) · uninstall ✓ · cache clear ✗ (may require reinstall after cache issues)
 			- **Download/build cache:** unuse ✗ · uninstall ✗ · cache clear ✓
 		- **Pick one:** stop using a tool in this config → `mise unuse`; keep config but drop binaries → `mise uninstall`; fix stale downloads or cache corruption → `mise cache clear`. See also [[mise/Q/How do I remove a mise tool?]].
-	- ## My Notes
