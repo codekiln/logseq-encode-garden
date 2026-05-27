@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/CLI/Command]]
 tags:: [[mise/Commands]]
 
 - # [mise cache path](https://mise.jdx.dev/cli/cache/path.html)

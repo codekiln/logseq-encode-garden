@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/CLI/Command]]
 tags:: [[mise/Commands]]
 
 - # `mise tasks` [mise tasks | mise-en-place](https://mise.jdx.dev/cli/tasks.html)

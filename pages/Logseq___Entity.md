@@ -16,6 +16,8 @@ alias:: [[Logseq Entities]]
 		- **Deferred renames:** [[Logseq/Entity/color-theme]] remains at its current path until migrated to a nested Title Case title (candidate [[Logseq/Entity/Color/Theme]]). Other single-segment types are listed below as-is until reviewed.
 	- ## Entity types in this garden
 		- **[[Logseq/Entity/Software/Project]]** — Tools, editors, libraries, apps, CLIs, servers. Conventions (naming, dedup, page shape, creator handling) are documented on that type page. Prior path `Logseq/Entity/software-project` is an alias on the canonical page.
+		- **[[Logseq/Entity/CLI/Command]]** — Per-subcommand CLI reference pages under a tool namespace (e.g. `mise/cache/clear`). Conventions are on that type page.
+		- **[[Logseq/Entity/CLI/Flag]]** — Per-flag or per-option pages nested under a command path (e.g. `mise/unuse/--global`). Conventions are on that type page.
 		- **color-theme** — Coordinated palette families reused across apps (terminals, editors, TUIs). Conventions are on the color-theme type page. *(Rename to nested Title Case deferred; see Naming entity type pages.)*
 		- **company** — Organizations or brands tracked as first-class pages, such as vendors with multiple tools. Conventions are on the company type page.
 		- **organization** — Non-company bodies such as standards organizations, foundations, nonprofits, public institutions, consortia, professional associations, and governance/community bodies. Conventions are on the organization type page.

@@ -1,4 +1,6 @@
-# [mise install](https://mise.jdx.dev/cli/install.html)
+logseq-entity:: [[Logseq/Entity/CLI/Command]]
+
+- # [mise install](https://mise.jdx.dev/cli/install.html)
 	- **Usage**: `mise install [FLAGS] [TOOL@VERSION]…`
 	- **Aliases**: `i`
 	- ## [[mise]] questions

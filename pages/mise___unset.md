@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/CLI/Command]]
 tags:: [[mise/Commands]]
 see-also:: [[mise/Environment]]
 

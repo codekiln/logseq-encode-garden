@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/CLI/Flag]]
 alias:: [[mise/unuse/-g]]
 tags:: [[mise/Commands]]
 

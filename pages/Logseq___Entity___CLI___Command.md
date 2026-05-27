@@ -1,0 +1,37 @@
+# CLI/Command
+	- This page is the standard operating procedure for **CLI command** entities: one invocable subcommand of a command-line tool, documented as a page under that tool’s namespace.
+	- ## Examples in this garden
+		- [[mise/unuse]] — top-level `mise` subcommand.
+		- [[mise/cache/clear]] — nested subcommand under [[mise/cache]].
+		- [[mise/tasks/add]] — subcommand with its own stub and flag children.
+	- ## When we treat something as a CLI command entity
+		- Strong signals: the page title mirrors the CLI invocation path (`tool/subcommand/...`); the body includes **Usage** (and often **Aliases**, upstream doc URL in H1, source link).
+		- Good fit: reference stubs for `mise install`, `mise cache clear`, `git status`, etc.
+		- Not this type: the **tool hub** ([[mise]], other `tags:: [[CLI/Tool]]` pages), config/settings concepts, task definitions, backends, how-tos, Q pages, or [[Agent/Command]] (AI slash commands).
+		- Not [[Logseq/Entity/Software/Project]]: that type models the **product**; command entities model **individual subcommands** under the product namespace.
+	- ## Canonical naming and links
+		- **Link shape:** `[[{tool}/{command/path}]]` matching the vendor CLI (e.g. `[[mise/cache/clear]]`).
+		- **File shape:** `pages/{tool}___{command}___{path}.md` with triple underscores between segments; preserve `--flag`-style segments when they are command-level (rare); flag **options** use [[Logseq/Entity/CLI/Flag]] instead.
+		- Use forward slashes in body and journal links; never triple underscores inside Logseq links.
+	- ## Finding and deduplicating
+		- Search order:
+			- 1. Exact expected page under the tool namespace.
+			- 2. Grep for the upstream CLI doc URL or normalized command string in `pages/{tool}___*.md`.
+			- 3. Compare H1 and Usage on candidates.
+		- Classify as: **existing**, **similar**, **new**, or **blocked** (ambiguous tool namespace).
+	- ## Frontmatter
+		- On **new** command pages, include `logseq-entity::` pointing at this entity-type page.
+		- Topic tags such as `tags:: [[mise/Commands]]` may remain alongside `logseq-entity::`; do not remove established `tags::` when adding the entity marker.
+		- Optional `see-also:: [[mise]]` (or the relevant tool hub) when it helps navigation.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- H1: command name with link to upstream documentation when available.
+		- Typical bullets: **Usage**, **Aliases**, **Source code**, short description.
+		- Parent commands may list child command links (e.g. [[mise/cache]] listing clear, path, prune).
+		- Use Logseq Flavored Markdown throughout.
+	- ## Relationship to other types
+		- **Tool hub:** [[CLI/Tool]] vocabulary; instance pages live under the tool name (e.g. [[mise]]).
+		- **Flags:** options for a command are [[Logseq/Entity/CLI/Flag]] pages nested under the command path (e.g. [[mise/unuse/--global]]).
+		- **Future stubs:** walkthrough or docs may link commands before a stub exists; create a command entity page when filing reference content, not for every unresolved wikilink.
+	- ## Legacy instances
+		- Older command stubs may only have `tags:: [[mise/Commands]]` (or no entity marker). Add `logseq-entity::` when touching or backfilling a namespace; do not bulk-migrate unrelated tools unless requested.

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/CLI/Command]]
 tags:: [[mise/Commands]]
 
 - # [mise cache prune](https://mise.jdx.dev/cli/cache/prune.html)

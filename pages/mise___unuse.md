@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/CLI/Command]]
 tags:: [[mise/Commands]]
 
 - # [mise unuse](https://mise.jdx.dev/cli/unuse.html)

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/CLI/Command]]
 tags:: [[mise/Commands]]
 
 - [mise en | mise-en-place](https://mise.jdx.dev/cli/en.html)

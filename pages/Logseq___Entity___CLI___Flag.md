@@ -1,0 +1,31 @@
+# CLI/Flag
+	- This page is the standard operating procedure for **CLI flag** entities: one flag or option of a documented CLI command, as its own page nested under that command’s namespace.
+	- ## Examples in this garden
+		- [[mise/unuse/--global]] — long flag with `alias::` for `[[mise/unuse/-g]]`.
+		- [[mise/use/--global]] — global install/activate for [[mise/use]].
+		- [[mise/tasks/add/file]] — short option name for `-f|--file` on [[mise/tasks/add]].
+	- ## When we treat something as a CLI flag entity
+		- Strong signals: the page documents a single flag or option; the title is nested under a known command path; the body references the parent command and upstream flag documentation when available.
+		- Good fit: `--global`, `--dry-run`, short segment names when that is how the garden titles the page (`file` for `-f|--file`).
+		- Not this type: standalone subcommands (use [[Logseq/Entity/CLI/Command]]), global config keys, environment variables, or [[Agent/Command]].
+	- ## Canonical naming and links
+		- **Link shape:** `[[{tool}/{command}/--{flag}]]` or `[[{tool}/{command}/{shortName}]]` when the garden uses a short option segment.
+		- **File shape:** `pages/{tool}___{command}___--{flag}.md` or `...___{shortName}.md`; triple underscores between namespace parts.
+		- Use `alias::` on the flag page for common short forms (`-g`, etc.) when established on sibling pages.
+	- ## Finding and deduplicating
+		- Search under the parent command namespace first, then grep for the flag string and upstream doc anchor.
+		- Classify as: **existing**, **similar**, **new**, or **blocked** (parent command missing or unclear).
+	- ## Frontmatter
+		- On **new** flag pages, include `logseq-entity::` pointing at this entity-type page.
+		- Existing topic tags may remain; do not remove established `tags::` when adding the entity marker.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- Link the parent command in the opening bullets.
+		- Brief description of what the flag does; optional upstream doc link.
+		- Use Logseq Flavored Markdown throughout.
+	- ## Relationship to other types
+		- **Parent:** always a [[Logseq/Entity/CLI/Command]] instance (or command stub) for the owning subcommand.
+		- **Tool hub:** the tool ([[mise]], etc.) is not a flag entity.
+		- Distinct from [[Agent/Command]] and from settings pages under tool config namespaces.
+	- ## Legacy instances
+		- Some flag notes exist only as embeds or untagged pages; add `logseq-entity::` when creating or backfilling flag stubs under a tool namespace.

@@ -1,4 +1,6 @@
-# [mise use | mise-en-place](https://mise.jdx.dev/cli/use.html)
+logseq-entity:: [[Logseq/Entity/CLI/Command]]
+
+- # [mise use | mise-en-place](https://mise.jdx.dev/cli/use.html)
 	- **Usage**: `mise use [FLAGS] [TOOL@VERSION]…`
 	- **Aliases**: `u`
 	- **Source code**: [`src/cli/use.rs`](https://github.com/jdx/mise/blob/main/src/cli/use.rs)
