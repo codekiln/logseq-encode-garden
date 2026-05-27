@@ -1,0 +1,21 @@
+logseq-entity:: [[Logseq/Entity/question]]
+
+- # When using [[QuartzMD]], how can I set the favicon of the website?
+	- ## [[AI Answer]]
+		- [[AI/Response]]
+			- **Short answer:** Replace `quartz/static/icon.png` with your own PNG, keep `Plugin.Favicon()` in the `emitters` list in `quartz.config.ts` (it is on by default), then rebuild. Quartz resizes that file to 48×48 and emits `favicon.ico`; the site `<head>` also links to `static/icon.png`.
+			- **Steps**
+				- 1. Put your artwork at `quartz/static/icon.png` (overwrite the template file). Square PNG works best; the Favicon emitter resizes to 48×48 with Sharp.
+				- 2. Confirm `quartz.config.ts` still includes `Plugin.Favicon()` under `plugins.emitters` (default Quartz 4 config does).
+				- 3. Run a build (`npx quartz build` or your usual `npx quartz sync` / deploy workflow) so the emitter writes `favicon.ico` into the output folder and static assets are copied.
+			- **How it works**
+				- **Emitter:** `Plugin.Favicon()` reads `quartz/static/icon.png`, resizes it, and emits `favicon.ico` ([favicon.ts](https://github.com/jackyzha0/quartz/blob/v4/quartz/plugins/emitters/favicon.ts)).
+				- **Head:** `Head.tsx` adds `<link rel="icon" href="…/static/icon.png" />` relative to each page ([Head.tsx](https://github.com/jackyzha0/quartz/blob/v4/quartz/components/Head.tsx)).
+				- The plugin has **no extra configuration options**; the source file path is fixed at `quartz/static/icon.png`.
+			- **Optional**
+				- To stop generating `favicon.ico`, remove `Plugin.Favicon()` from `emitters` (you still get the `icon.png` link from `Head` if the file exists).
+				- For other touchpoints (e.g. social preview), Quartz also uses `quartz/static/og-image.png` via the Custom OG Images plugin—not the favicon path.
+			- ### Sources
+				- [Quartz — Favicon plugin (docs)](https://github.com/jackyzha0/quartz/blob/v4/docs/plugins/Favicon.md)
+				- [quartz/plugins/emitters/favicon.ts](https://github.com/jackyzha0/quartz/blob/v4/quartz/plugins/emitters/favicon.ts)
+				- [quartz.config.ts (default emitters)](https://github.com/jackyzha0/quartz/blob/v4/quartz.config.ts)

@@ -1,0 +1,11 @@
+# [GitHub Star Lists](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars)
+	- Curate repositories that you've starred with public lists. You can create public lists that appear on your stars page at `https://github.com/USERNAME?tab=stars`.
+	- ![GitHub Star Lists Tab](https://docs.github.com/assets/cb-198931/mw-1440/images/help/stars/lists-overview-on-stars-page.webp)
+	- ## [[My Notes]]
+		- ### Maximum number of GitHub Star Lists
+			- GitHub Docs, “Saving repositories with stars,” section “Organizing starred repositories with lists”: [https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars#organizing-starred-repositories-with-lists](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars#organizing-starred-repositories-with-lists)
+			- GitHub Community discussion 8633, “the total allow lists is too small, it's only 16”: [https://github.com/orgs/community/discussions/8633](https://github.com/orgs/community/discussions/8633)
+			- GitHub Community discussion 42823, “Why GitHub Stars List couldn't no longer be created?”: [https://github.com/orgs/community/discussions/42823](https://github.com/orgs/community/discussions/42823)
+			- GitHub Community discussion 65827, “Bump the max # lists (limit) from 32 to 64”: [https://github.com/orgs/community/discussions/65827](https://github.com/orgs/community/discussions/65827)
+			- GitHub Community discussion 113251, “Why is there a Limit on 32 Lists?”: [https://github.com/orgs/community/discussions/113251](https://github.com/orgs/community/discussions/113251)
+			- GitHub Community discussion 46887, “[Feature Request] Please Allow More Than 32 Lists!”: [https://github.com/orgs/community/discussions/46887](https://github.com/orgs/community/discussions/46887)

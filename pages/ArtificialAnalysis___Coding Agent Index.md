@@ -1,0 +1,8 @@
+- # [Artificial Analysis Coding Agent Benchmarks](https://artificialanalysis.ai/agents/coding-agents)
+	- Composite score: average pass@1 across three benchmarks (three runs each).
+	- Components:
+		- SWE-Bench-Pro-Hard-AA — code generation, 150 tasks
+		- Terminal-Bench v2 — agentic terminal use, 84 tasks
+		- SWE-Atlas-QnA — technical Q&A, 124 tasks
+	- Headline metrics on the leaderboard:
+		- [[ArtificialAnalysis/Coding Agent Index/Cost per Task]]
