@@ -1,2 +1,2 @@
 - [jackyzha0/quartz: 🌱 a fast, batteries-included static-site generator that transforms Markdown content into fully functional websites](https://github.com/jackyzha0/quartz)
-	- [Welcome to Quartz 4](https://quartz.jzhao.xyz/)
+	- web [Welcome to Quartz](https://quartz.jzhao.xyz/)
