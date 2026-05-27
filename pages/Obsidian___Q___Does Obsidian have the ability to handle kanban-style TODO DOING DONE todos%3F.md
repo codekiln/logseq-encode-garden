@@ -1,0 +1,54 @@
+logseq-entity:: [[Logseq/Entity/question]]
+see-also:: [[QuartzMD]], [[Obsidian/Q/What options do I have for publishing my obsidian vault as a web application?]]
+tags:: [[Question]]
+
+- # Does [[Obsidian]] have the ability to handle kanban-style TODO DOING DONE todos?
+	- ## Answer
+		- [[AI/Response]]
+			- **Short answer:** **Not in core.** Obsidian’s built-in checklists are only **todo** (`- [ ]`) and **done** (`- [x]`). There is no native kanban board and no native `TODO` / `DOING` / `DONE` keyword markers like [[Logseq]]. You get that workflow with **community plugins**—pick either **Logseq-style keywords** or **kanban columns**, or combine plugins.
+			- **Logseq-style `TODO` / `DOING` / `DONE` (keyword markers)**
+				- Use the community plugin **TODOseq** ([scross01/obsidian-todoseq](https://github.com/scross01/obsidian-todoseq)): it scans the vault for lines with state keywords (`TODO`, `DOING`, `DONE`, `LATER`, `NOW`, `WAIT`, etc.), shows them in a unified task list, and documents **Logseq compatibility** (same syntax, priorities, `SCHEDULED:` / `DEADLINE:` patterns on markdown-based Logseq exports).
+				- Core Obsidian and the popular **Tasks** plugin treat tasks as **characters inside the brackets** (` `, `/`, `x`, `-`), not as leading keywords—so plain `- TODO …` lines are just text unless a plugin recognizes them.
+			- **Kanban-style columns (visual board)**
+				- [[obsidian-kanban]] — dedicated board notes; columns are typically **H2 headings**, cards are **list items** under each column. Widely used; board state lives in one markdown file (with plugin metadata in HTML comments).
+				- **Task List Kanban** ([TimWilde/task-list-kanban](https://github.com/TimWilde/task-list-kanban)) — builds a kanban from **checkbox tasks** (`- [ ]`) across the vault; assign columns with **tags**; includes a **Done** column and drag-and-drop between columns (syncs back to source files).
+				- **Kanban Block** ([ldomaradzki/obsidian-kanban-block](https://github.com/ldomaradzki/obsidian-kanban-block)) — renders a `todo` **code block** as a three-column board mapping `[ ]` → To Do, `[/]` → In Progress, `[x]` → Done (column names configurable)—closer to a compact TODO/DOING/DONE *feel* without Logseq keywords.
+			- **Checkbox workflow without a board (still three states)**
+				- **Tasks** ([obsidian-tasks-group/obsidian-tasks](https://github.com/obsidian-tasks-group/obsidian-tasks)) ships with **Todo** (` `), **In Progress** (`/`), **Done** (`x`), and **Cancelled** (`-`). Configure symbols and cycling under **Settings → Tasks → Task statuses**; query and group tasks in `tasks` code blocks. This is not a kanban UI unless you add another plugin or a manual board.
+			- **Migrating from Logseq**
+				- Converters such as [logseq-to-obsidian](https://pypi.org/project/logseq-to-obsidian/) map `TODO` / `DOING` → `- [ ]` and `DONE` → `- [x]` for Obsidian-native checklists. To **keep** keyword syntax in Obsidian, prefer **TODOseq** over conversion, or run conversion only for notes you do not need to round-trip to Logseq.
+			- **Practical picks**
+				- **Same vault as Logseq, same `TODO`/`DOING`/`DONE` lines:** **TODOseq** (+ optional [[obsidian-kanban]] for a separate board view of selected work).
+				- **Kanban first, standard markdown tasks:** [[obsidian-kanban]] or **Task List Kanban**.
+				- **Three states in lists, queries, no Logseq keywords:** **Tasks** (optionally plus **Kanban Block** for an inline board).
+			- **Publishing with [[QuartzMD]] (static site)**
+				- [[QuartzMD]] is a **static** SSG: it renders **markdown on disk**, not Obsidian plugin UIs. None of the kanban plugins above run at build time. What you get on the published site is whatever is **already in the `.md` files** (plus Quartz’s built-in Obsidian-flavored transforms).
+				- **Most compatible for Quartz**
+					- **Plain GFM task lists** (`- [ ]`, `- [x]`) — render as normal HTML lists/checkboxes. Turn on **`enableCheckbox: true`** in `Plugin.ObsidianFlavoredMarkdown()` in `quartz.config.ts` for interactive checkboxes in the browser ([ObsidianFlavoredMarkdown](https://quartz.jzhao.xyz/plugins/ObsidianFlavoredMarkdown)); without it, checkboxes still appear but are not enhanced by Quartz’s toggle script.
+					- [[obsidian-kanban]] board files — often publish **acceptably as static outline**: `##` column headings and bullet cards under each. You lose drag-and-drop, lane chrome, and plugin-only metadata; embedded **HTML comments** used by [[obsidian-kanban]] may still appear in source or be ignored depending on the markdown pipeline—do not expect a board UI on the site.
+					  id:: 6a16edcf-00d5-4e0f-aeb4-5a4426d6c6f0
+					- **Pre-converted Logseq-style lines** — if you convert `TODO`/`DOING`/`DONE` to `- [ ]` / `- [x]` before publish ([logseq-to-obsidian](https://pypi.org/project/logseq-to-obsidian/)), Quartz shows ordinary checklists.
+				- **Poor or no Quartz rendering (without extra tooling)**
+					- **TODOseq keyword lines** (`- TODO …`, `- DOING …`) — publish as **plain list text**; no task panel, no state cycling.
+					- **Tasks** plugin query fences (`tasks` code blocks) and **Dataview** task queries — **not executed** by Quartz ([community note](https://github.com/jackyzha0/quartz/issues/102)); you see the raw fenced block or empty output unless you **pre-render** in Obsidian.
+					- **Task List Kanban** aggregated board — **no live board** on the site; only the underlying per-note `- [ ]` lines if those notes are included in `content/`.
+					- **Kanban Block** `todo` code fences — typically a **code block**, not a three-column board, unless you write a custom Quartz transformer.
+				- **If you need plugin output on the published site**
+					- **Bake in Obsidian before push:** e.g. [Quartz Syncer](https://github.com/saberzero1/quartz-syncer) compiles **Dataview/Datacore** (and related) to static HTML in the markdown Quartz builds—same pattern as “render queries in Obsidian, commit the result.” There is no first-class Quartz support for TODOseq or [[obsidian-kanban]] views; you would manually snapshot boards or use a custom compile step.
+					- Aligns with the caveat on [[Obsidian/Q/What options do I have for publishing my obsidian vault as a web application?]]: community plugins do not run on the static site by default.
+				- **Quartz-friendly workflow for TODO/DOING/DONE *on the web***
+					- Author in Obsidian with **checkboxes** (` ` / `/` / `x`) or **headings + lists** on [[obsidian-kanban]] board notes, not plugin-only views.
+					- Enable **`enableCheckbox`** in Quartz if you want clickable tasks on the site.
+					- For dashboards, use **static** lists/tables in markdown, or pre-render Dataview/Tasks output before `npx quartz build`.
+			- ### Sources
+				- [TODOseq — Introduction (Logseq compatibility)](https://github.com/scross01/obsidian-todoseq/blob/main/docs/introduction.md)
+				- [obsidian-todoseq](https://github.com/scross01/obsidian-todoseq)
+				- [[obsidian-kanban]]
+				- [task-list-kanban](https://github.com/TimWilde/task-list-kanban)
+				- [obsidian-kanban-block](https://github.com/ldomaradzki/obsidian-kanban-block)
+				- [obsidian-tasks](https://github.com/obsidian-tasks-group/obsidian-tasks)
+				- [logseq-to-obsidian (task marker conversion)](https://pypi.org/project/logseq-to-obsidian/0.1.3/)
+				- [Quartz — Obsidian compatibility](https://quartz.jzhao.xyz/features/Obsidian-compatibility)
+				- [Quartz — ObsidianFlavoredMarkdown (`enableCheckbox`)](https://quartz.jzhao.xyz/plugins/ObsidianFlavoredMarkdown)
+				- [Quartz issue #102 — Dataview not native](https://github.com/jackyzha0/quartz/issues/102)
+				- [Quartz Syncer](https://github.com/saberzero1/quartz-syncer)
