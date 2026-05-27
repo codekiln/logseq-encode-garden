@@ -1,0 +1,21 @@
+see-also:: [[GitHub/Auth]], [[GitHub/Auth/OAuth/Scope]], [[GitHub/CLI]]
+
+- # GitHub OAuth
+	- **OAuth scopes** are named permission groups an OAuth app (including [[GitHub/CLI]] during `gh auth login`) can request. Scopes limit what a token can do; they do not grant rights beyond what the authenticated user already has.
+	- Distinct from [[GitHub/Auth/Personal/Fine-Grained]] permissions and from `permissions:` on `GITHUB_TOKEN` in [[GitHub/Action]] workflows.
+	- ## Normalization
+		- Requesting multiple scopes may be stored as a **normalized** list: subscopes implied by a broader scope are dropped (e.g. `user,gist,user:email` → `user`, `gist` because `user:email` is included in `user`).
+	- ## Inspect what a token has
+		- **REST headers:** `X-OAuth-Scopes` (granted) and `X-Accepted-OAuth-Scopes` (required for the endpoint) on API responses.
+		- **gh:** `gh auth status` shows active account and scopes for stored credentials.
+	- ## gh CLI
+		- **Login:** `gh auth login` establishes credentials (browser/device flow).
+		- **Add scopes:** `gh auth refresh -h github.com -s <scope>[,<scope>…]` — opens browser to authorize additional scopes; without `-s`, maintains existing scopes.
+		- **Remove:** `gh auth refresh --remove-scopes <scope>…` — idempotent; cannot remove minimum set `repo`, `read:org`, `gist`.
+		- **Reset:** `gh auth refresh --reset-scopes` — back to default minimum for the auth flow.
+		- Manual: [gh auth refresh](https://cli.github.com/manual/gh_auth_refresh)
+	- ## When to use something else
+		- **Fine-grained PAT** — per-repo permission matrix; see [[GitHub/Auth/Personal/Fine-Grained]].
+		- **GitHub App** — fine-grained permissions instead of classic OAuth scopes (GitHub’s recommended direction for new integrations).
+	- ## Scope catalog
+		- [[GitHub/Auth/OAuth/Scope]] — one page per documented scope name

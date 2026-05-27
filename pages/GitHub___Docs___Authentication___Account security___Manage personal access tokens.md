@@ -10,7 +10,7 @@
 				- personal access tokens (classic)
 			- ==GitHub recommends that you use [[GitHub Fine-Grained PAT]]s instead of [[GitHub Personal Access Token (Classic)]] whenever possible.==
 			  id:: 67dfca39-5780-49ba-8673-bcafd5a169bd
-	- ## [[GitHub/Auth/How To/Create a Fine Grained Personal Access Token]] via [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token)
+	- ## [[GitHub/CLI/How to create a Fine Grained Personal Access Token]] via [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token)
 		- In the upper-right corner of any page on GitHub, click your profile photo, then click **Settings**.
 		- In the left sidebar, click **Developer settings** - *this is the lowest option, you may have to scroll*
 		- In the left sidebar, under ** Personal access tokens**, click **Fine-grained tokens**.

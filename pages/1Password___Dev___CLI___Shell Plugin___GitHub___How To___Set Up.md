@@ -39,6 +39,6 @@ alias:: [[1Password/Dev/How To/Set up the 1Password GitHub Shell Plugin]]
 	- ## Prerequisites
 		- [[1Password/Desktop]] installed and authenticated
 		- [[1Password/Dev/CLI]] installed and activated in desktop
-		- [[GitHub/Auth/How To/Create a Fine Grained Personal Access Token]] done and stored in 1Password
+		- [[GitHub/CLI/How to create a Fine Grained Personal Access Token]] done and stored in 1Password
 	-
 		-

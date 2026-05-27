@@ -1,0 +1,53 @@
+alias:: [[GitHub OAuth scopes]], [[gh scopes]]
+see-also:: [[GitHub/Auth/OAuth]], [[GitHub/CLI]]
+
+- # [Scopes for OAuth apps](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps)
+	- Reference index for **OAuth scope names** used by [[GitHub/CLI]] (`gh auth refresh -s`), classic PATs, and OAuth apps. Official descriptions live on the linked docs page; each scope below has a local leaf with gh notes and cross-links.
+	- ## gh minimum scopes
+		- Cannot be removed via `gh auth refresh --remove-scopes`: [[GitHub/Auth/OAuth/Scope/repo]], [[GitHub/Auth/OAuth/Scope/read:org]], [[GitHub/Auth/OAuth/Scope/gist]]
+	- ## No scope
+		- `(no scope)` — read-only access to public information (profile, public repos, gists). No separate leaf page; used when an app does not request scopes (e.g. some CLI device flows).
+	- ## Repository
+		- [[GitHub/Auth/OAuth/Scope/repo]] — full public/private repo access (also org resources, projects, invitations, webhooks)
+			- [[GitHub/Auth/OAuth/Scope/repo:status]] — commit statuses without full code access
+			- [[GitHub/Auth/OAuth/Scope/repo_deployment]] — deployment statuses without code access
+			- [[GitHub/Auth/OAuth/Scope/public_repo]] — public repos only (incl. star public repos)
+			- [[GitHub/Auth/OAuth/Scope/repo:invite]] — accept/decline repo collaboration invites
+			- [[GitHub/Auth/OAuth/Scope/security_events]] — code scanning security events without code access
+	- ## Repository hooks
+		- [[GitHub/Auth/OAuth/Scope/admin:repo_hook]] — full hook admin (`repo` / `public_repo` already include hooks; use this to limit to hooks only)
+			- [[GitHub/Auth/OAuth/Scope/write:repo_hook]] — read, write, ping hooks
+			- [[GitHub/Auth/OAuth/Scope/read:repo_hook]] — read and ping hooks
+	- ## Organization
+		- [[GitHub/Auth/OAuth/Scope/admin:org]] — fully manage org, teams, projects, memberships
+			- [[GitHub/Auth/OAuth/Scope/write:org]] — read/write org membership and org projects
+			- [[GitHub/Auth/OAuth/Scope/read:org]] — read org membership, projects, team membership (gh minimum)
+	- ## Public keys
+		- [[GitHub/Auth/OAuth/Scope/admin:public_key]] — fully manage public keys
+			- [[GitHub/Auth/OAuth/Scope/write:public_key]] — create, list, view public keys
+			- [[GitHub/Auth/OAuth/Scope/read:public_key]] — list and view public keys
+	- ## Organization hooks
+		- [[GitHub/Auth/OAuth/Scope/admin:org_hook]] — org hooks (OAuth tokens only on hooks created by the same OAuth app)
+	- ## Gist, notifications, user
+		- [[GitHub/Auth/OAuth/Scope/gist]] — write gists (gh minimum)
+		- [[GitHub/Auth/OAuth/Scope/notifications]] — notifications, mark read, watch/unwatch, thread subscriptions
+		- [[GitHub/Auth/OAuth/Scope/user]] — read/write profile (includes `user:email`, `user:follow` when normalized)
+			- [[GitHub/Auth/OAuth/Scope/read:user]] — read profile data
+			- [[GitHub/Auth/OAuth/Scope/user:email]] — read email addresses (normalized into `user` if both requested)
+			- [[GitHub/Auth/OAuth/Scope/user:follow]] — follow/unfollow users (normalized into `user` if both requested)
+	- ## Projects
+		- [[GitHub/Auth/OAuth/Scope/project]] — read/write user and organization projects
+			- [[GitHub/Auth/OAuth/Scope/read:project]] — read-only projects
+	- ## Packages
+		- [[GitHub/Auth/OAuth/Scope/write:packages]] — upload/publish GitHub Packages
+		- [[GitHub/Auth/OAuth/Scope/read:packages]] — download/install packages
+		- [[GitHub/Auth/OAuth/Scope/delete:packages]] — delete packages
+	- ## GPG keys
+		- [[GitHub/Auth/OAuth/Scope/admin:gpg_key]] — fully manage GPG keys
+			- [[GitHub/Auth/OAuth/Scope/write:gpg_key]] — create, list, view GPG keys
+			- [[GitHub/Auth/OAuth/Scope/read:gpg_key]] — list and view GPG keys
+	- ## Other
+		- [[GitHub/Auth/OAuth/Scope/delete_repo]] — delete adminable repositories
+		- [[GitHub/Auth/OAuth/Scope/codespace]] — create and manage [[GitHub/Codespace]]s
+		- [[GitHub/Auth/OAuth/Scope/workflow]] — add/update GitHub Actions workflow files
+		- [[GitHub/Auth/OAuth/Scope/read:audit_log]] — read audit log data

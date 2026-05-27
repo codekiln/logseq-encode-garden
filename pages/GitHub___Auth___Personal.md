@@ -3,5 +3,6 @@ tags:: Token
 
 - # GitHub Personal Access Token (Classic)
 	- These are kind of deprecated. [[GitHub/Auth/Personal/Fine-Grained]] are the alternative to replace them.
+	- Classic PATs use the same **OAuth scope names** as [[GitHub/Auth/OAuth/Scope]] (`repo`, `workflow`, …). Fine-grained PATs use a different permission model (repository + checkboxes), not those scope strings.
 	- [[GitHub/Docs/Authentication/Account security/Manage personal access tokens]]
 		-
