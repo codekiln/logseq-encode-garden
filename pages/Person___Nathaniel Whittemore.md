@@ -8,4 +8,5 @@ logseq-entity:: [[Logseq/Entity/person]]
 	- Related:
 		- [[Person/Nathaniel Whittemore/Pod/26/02 Claude Code Killed the AI Bubble]]
 		- [[Person/Nathaniel Whittemore/Pod/26/02 The Rise of the Anti-AI Movement]]
+		- [[Person/Nathaniel Whittemore/Pod/26/05/26 The 4 AI Team Members Execs Should Hire Right Now]]
 		- [[Person/Nathaniel Whittemore/Class/ClawCamp]]
