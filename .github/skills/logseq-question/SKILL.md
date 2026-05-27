@@ -10,7 +10,7 @@ description: >-
 ---
 # Logseq question
 
-Use this skill when the user wants to **capture a single answerable question** in the knowledge graph using the **`/Q/`** namespace pattern, **log it in today’s journal**, and **fill in an Answer** (with sources and `[[AI/Response]]` when applicable).
+Use this skill when the user wants to **capture a single answerable question** in the knowledge graph using the **`/Q/`** namespace pattern, **log it in today’s journal**, and **research an answer** using the page shape on **`[[Logseq/Entity/question]]`**.
 
 ## Relationship to logseq-entity
 
@@ -20,7 +20,7 @@ A **question** is one **entity type** in this garden. Shared rules apply:
 - **Registry and shared fallback:** `[[Logseq/Entity]]`, then `.rulesync/config/logseq-entity.md` only when graph pages are missing or insufficient (that file is short graph-first fallback text, not per-type sections).
 - **Search, dedup, and “existing / similar / new / blocked”:** skill **logseq-entity** — read [references/configuration-contract.md](../logseq-entity/references/configuration-contract.md) and [references/entity-search-and-dedup.md](../logseq-entity/references/entity-search-and-dedup.md) when executing dedup (Step 2 of the workflow).
 
-This skill adds **question-specific** filing steps: namespace/`___Q___` naming, journal bullet, Answer section shape, and the research pass. Do not duplicate the full entity-type definition; treat **`[[Logseq/Entity/question]]`** as authoritative for frontmatter and page shape.
+This skill adds **question-specific** filing steps: namespace/`___Q___` naming, journal bullet, and the research pass. Do not duplicate the entity-type definition; treat **`[[Logseq/Entity/question]]`** as authoritative for **frontmatter, section headings, page shape, and AI attribution**.
 
 For **non-question** entity work (other types per `[[Logseq/Entity]]`, registry edits, etc.), skill **logseq-entity** owns **garddiff** closeout (**Filed** / **Updated** on today’s journal). Follow that skill’s **Graph edits and today’s journal** section and [references/entity-session-journal.md](../logseq-entity/references/entity-session-journal.md)—journal discipline is **not** exclusive to this question skill.
 
@@ -33,7 +33,7 @@ For **non-question** entity work (other types per `[[Logseq/Entity]]`, registry 
 
 - **This file** — when to use the skill and how it relates to **logseq-entity** / **`[[Logseq/Entity/question]]`**.
 - **[references/question-workflow.md](./references/question-workflow.md)** — full variables, conventions, numbered steps, reporting, and related rules/commands.
-- Answer body LFM: follow rule **logseq-flavored-markdown** (*Bold and inline code (monospace)*) — do not wrap `` `inline code` `` in `**…**`.
+- Answer body LFM (formatting only, not section names): rule **logseq-flavored-markdown** → *Bold and inline code (monospace)*.
 
 ## Reference guide
 

@@ -7,14 +7,14 @@ Authoritative step-by-step for logging a research question in this garden. The *
 - **Question text** – **Required**: The question as phrased (e.g., "Is it possible to see the compaction text?"). Used for the page title and for deduplication.
 - **Topic/namespace** – **Optional**: The domain or tool the question is about (e.g., `Claude Code`, `git`, `LangSmith`, `EdTech/Idea/LearnMark`). If not provided, infer from the question text or ask the user.
 
-## Conventions (from existing question pages)
+## Conventions (question filing only)
+
+This file defines **namespace, dedup, journal, and research** steps. It does **not** define question page body shape, section headings, or frontmatter keys—those come from **`[[Logseq/Entity/question]]`** (read in Step 0 before Steps 3 and 5).
 
 - **Namespace pattern**: Questions live under a topic namespace, then `/Q/`, then the question text.
   - Link format: `[[Namespace/Q/Question text]]` or `[[Namespace/SubNamespace/Q/Question text]]`
   - File format: `Namespace___Q___Question text.md` (triple underscores; special characters like `?` become `%3F` in filenames)
-- **Page content**: Logseq Flavored Markdown (LFM). H1 is the question (often with linked terms). Optional sections: `## Answer`, `## My Notes`. Prefer frontmatter **`see-also::`** for **garden pages** that are “see also” reading—**strongest tie first**—instead of a `## Related` section that only lists internal links. Do **not** use **`see-also::`** to restate **parent namespace** context the title already encodes (see `[[Logseq/Entity]]` and `[[Logseq/Entity/question]]`). Use optional **`via::`** only for **what prompted filing** the page (journal/import/session), not for general related pages.
 - **Journal**: Record the filing in **`journals/YYYY_MM_DD.md`**. When **`[[Logseq/Journal/Section/Garddiff]]`** (or your day’s **Gard/Diff** block) defines **`[[Filed]]`** / **`[[Updated]]`**, put **new** question pages under **`[[Filed]]`** as a link-only line: `- [[Namespace/Q/Question text]]`. If the day file has **no** garddiff block, add the same link where topical bullets live. Follow **`logseq-journal-updates`** and skill **logseq-entity** → [entity-session-journal.md](../../logseq-entity/references/entity-session-journal.md) for mutual exclusivity and “no boilerplate” rules.
-- **Frontmatter**: Do not add or remove `tags::` on existing pages. On **new** pages, include `logseq-entity:: [[Logseq/Entity/question]]` so the entity type page indexes instances. Optional **`see-also::`** and **`via::`** as above. Other frontmatter (`tags::`, `alias::`) should match patterns on sibling question pages in that namespace when available; do not invent new tag schemes.
 
 ## Workflow
 
@@ -22,10 +22,15 @@ Authoritative step-by-step for logging a research question in this garden. The *
 
 - In order, read and apply:
   - `[[Logseq/Entity]]` (registry)
-  - `[[Logseq/Entity/question]]` (type SOP for question entities)
+  - `[[Logseq/Entity/question]]` (`pages/Logseq___Entity___question.md`) — **authoritative for page shape, frontmatter, section headings, and AI attribution**
   - If either is missing or insufficient, fall back to `.rulesync/config/logseq-entity.md` for shared fallback text (resolution order, reporting)—per-type rules still belong on `[[Logseq/Entity/question]]` once you create it
-- For **deduplication mechanics** and classification outcomes, use skill **logseq-entity**: [entity-search-and-dedup.md](../../logseq-entity/references/entity-search-and-dedup.md) together with the question type rules below.
+- From the type page, apply at minimum:
+  - **Frontmatter** (required `logseq-entity::`, optional keys, `tags::` discipline)
+  - **Page shape (canonical)** — H1, section order, which sections to omit when empty, `[[AI/Response]]` placement, and “do not use `## Related` for internal links”
+  - **Legacy instances** — how to treat older pages that differ from canonical shape (do not bulk-migrate unless asked)
+- For **deduplication mechanics** and classification outcomes, use skill **logseq-entity**: [entity-search-and-dedup.md](../../logseq-entity/references/entity-search-and-dedup.md) together with the **Finding and deduplicating** section on the type page.
 - If no question-type configuration can be found and conventions cannot be inferred safely, stop and ask the user how to proceed (same spirit as the logseq-entity skill when config is absent).
+- **Do not** invent section titles or frontmatter keys from this workflow file or from memory when the type page is available.
 
 ### Step 1: Normalize and clarify inputs
 
@@ -51,19 +56,9 @@ Authoritative step-by-step for logging a research question in this garden. The *
 
 - **File name**: `pages/Namespace___Q___Question text.md`
   - Use triple underscores for namespace segments. Replace `?` with `%3F` (or equivalent) in the filename if the question contains it.
-- **Frontmatter** (new pages only, before the first bullet):
-  - Required: `logseq-entity:: [[Logseq/Entity/question]]`
-  - Optional: `see-also:: [[Page1]], [[Page2]], ...` (internal **see also** links, **strongest tie first**, no parent-namespace-only entries)
-  - Optional: `via:: [[Page1]], ...` only when recording **what put this in the garden** (e.g. today’s journal as provenance is usually enough; use `via::` for a specific stub or source page when that is clearer)
-  - Optional: `tags::`, `alias::`, and other keys only when they match established patterns for question pages in this namespace. Never alter **`tags::`** on files that already exist.
-  - Place page attributes first (if `tags::` is used, keep project frontmatter order expectations).
-- **Content** (LFM):
-  - All content as bullets; no blank lines between bullets.
-  - H1: the question, with key terms linked to existing pages where appropriate (e.g., `- # Is it possible to see the compaction text in [[Claude Code]]?`).
-  - Optionally add placeholder sections: `- ## Answer`, `- ## My Notes` (empty or with a single placeholder bullet). Do not add `## Related` solely for internal page links—use **`see-also::`** instead.
-  - In answers (and elsewhere in body LFM), do **not** wrap backtick monospaced spans in `**…**` or nest `**` against commands — use bold for labels only; see rule **logseq-flavored-markdown** → *Bold and inline code (monospace)*.
-- Follow the logseq-page-naming-reference and logseq-flavored-markdown rules.
-- **Non-goal:** Do not bulk-edit older `___Q___` pages to add `logseq-entity::` unless the user explicitly asks (migration is optional).
+- **Frontmatter and body**: Implement **`[[Logseq/Entity/question]]`** → **Frontmatter** and **Page shape (canonical)** from Step 0. For `tags::` / `alias::` on new pages, match sibling question pages in the same namespace when the type page allows it.
+- **LFM mechanics** (not section names): rule **logseq-flavored-markdown** — bullets, tab indentation, no blank lines between bullets; rule **logseq-page-naming-reference** for links vs filenames.
+- **Non-goal:** Do not bulk-edit older `___Q___` pages unless the user explicitly asks (see **Legacy instances** on the type page).
 
 ### Step 4: Add today's journal entry (garddiff + narrative)
 
@@ -77,17 +72,10 @@ Authoritative step-by-step for logging a research question in this garden. The *
 
 - After creating the page and journal entry, attempt to answer the question.
 - Use available tools (web search, documentation, MCP servers, existing knowledge graph pages) to research the answer.
-- Update the `## Answer` section of the newly created question page with the findings.
-- **Attribution**: Place the answer under an `[[AI/Response]]` node to attribute it as AI-generated. Example:
-  ~~~markdown
-  - ## Answer
-  	- [[AI/Response]]
-  		- The answer content goes here...
-  		- [Source](https://example.com)
-  ~~~
-- **Cite sources**: Put **external** documentation or web URLs in the Answer (markdown links). When the answer points to other **garden pages** as further reading, add or update **`see-also::`** (**strongest tie first**), not a tail `## Related` list. Use **`via::`** only for provenance of **filing**, not for “see also” links.
-- Keep the answer concise but informative; use bullet points and proper LFM formatting.
-- If the answer cannot be determined or requires user input, note this in the Answer section and inform the user.
+- Add findings under the **AI answer section** defined on **`[[Logseq/Entity/question]]`** → **Page shape (canonical)** (section heading, `[[AI/Response]]` child, and any “Short answer” / formatting bullets there). Do not assume legacy section titles on older `___Q___` pages unless you are editing one of those pages as-is.
+- **Cite sources** per the type page: external URLs in the answer body; garden “see also” pages in **`see-also::`** when the type page says so—not a tail `## Related` list.
+- Keep the answer concise but informative; use bullet points and LFM per **logseq-flavored-markdown** (including *Bold and inline code* in answer bodies).
+- If the answer cannot be determined or requires user input, note that in the appropriate section per the type page and inform the user.
 
 ## Report
 
