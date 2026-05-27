@@ -2,3 +2,5 @@
 	- it integrates with [[usageCLI]] which provides [[Autocomplete]] at the [[CLI]]
 	- it provides an opinionated and yet lightweight way to add descriptive metadata and dependencies
 	- I'm already using mise as an installer, so it avoids additional dependencies
+	- [[mise/Task/TOML]] have more features ()like templating) compared with file tasks, and this is a signal that I'm not using and don't need those
+	- they are stackable; my organization can have its file tasks, and I can have my file tasks, and we can use two different dotfiles systems to manage that. if we used toml tasks, we'd be editing the same file.

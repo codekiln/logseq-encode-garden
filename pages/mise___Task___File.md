@@ -1,8 +1,7 @@
 alias:: [[mise File Tasks]]
 
 - # [Mise File Tasks](https://mise.jdx.dev/tasks/file-tasks.html)
-	- Mise file tasks are [[Shell/Script]]s placed in directories relative to [[mise/Config/mise.toml]] such as
-		- [[My Note]] it's not clear to me that this includes the root ~/.config/mise/tasks directory out of the box. I think that in a directory that has `mise.toml`, the subdirectories are valid, but I'm still not quite sure where the mise file tasks should be placed that are global. It is possible to [manually define task directories](https://mise.jdx.dev/tasks/task-configuration.html#task-config-includes) but I'd prefer to rely on convention over configuration where possible.
+	- Mise file tasks are [[Shell/Script]]s placed in directories relative to each config scope’s `config_root` (the directory containing that scope’s [[mise/Config/mise.toml]] or [[mise/Config/Global]] file). For global config at `~/.config/mise/config.toml`, `~/.config/mise/tasks/` is discovered via the default `.config/mise/tasks` entry—see [[mise/Q/If I place an executable file task in ~/.config/mise/tasks/myscript, will mise run myscript work without extra configuration?]].
 		- `mise-tasks/:task_name`
 		- `.mise-tasks/:task_name`
 		- `mise/tasks/:task_name`
