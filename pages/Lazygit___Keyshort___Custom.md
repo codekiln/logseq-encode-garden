@@ -1,0 +1,2 @@
+- [lazygit/docs/keybindings/Custom_Keybindings.md at master · jesseduffield/lazygit](https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Custom_Keybindings.md)
+	- introduced in [[Lazygit/v/0/62]] [Release v0.62.0 · jesseduffield/lazygit](https://github.com/jesseduffield/lazygit/releases/tag/v0.62.0)

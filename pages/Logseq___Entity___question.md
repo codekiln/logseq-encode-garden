@@ -1,14 +1,14 @@
 # question
 	- This page is the standard operating procedure for **question** entities: scoped research questions stored under a topic namespace with a dedicated `/Q/` segment so they stay findable and deduplicable.
 	- ## Examples in this garden
-		- Pages on disk match `pages/*___Q___*.md` (e.g. a tmux question lives as a file whose name contains `___Q___` between the topic prefix and the question slug).
-		- In-graph titles use a slash path such as `Topic/Q/Question text`.
+		- Pages on disk match `pages/*___Q___*.md` (e.g. [[mise/Q/How do I remove a mise tool?]] → `mise___Q___How do I remove a mise tool%3F.md`).
+		- In-graph titles use a slash path such as `Topic/Q/Question text` or `Topic/SubTopic/Q/Question text`.
 	- ## When we treat something as a question entity
-		- Strong signals: the page captures a single answerable question, usually with a planned Answer section; the title belongs under a topic (tool, domain, idea) plus a fixed **Q** segment before the question wording.
-		- Not a question entity: general notes without the `/Q/` naming convention, dashboards, or long-running threads better modeled as non-Q pages.
+		- Strong signals: the page captures a single answerable question; the title uses a topic namespace plus a fixed **Q** segment before the question wording; the body holds an answer (human, AI, or both).
+		- Not a question entity: general notes without the `/Q/` naming convention, dashboards, CLI command stubs, or long-running threads better modeled as non-Q pages.
 	- ## Canonical naming and links
-		- **Link shape:** [[Topic/Q/Question text]] or [[Topic/SubTopic/Q/Question text]] as needed.
-		- **File shape:** `pages/Topic___Q___Question text.md` with triple underscores between namespace parts; encode `?` as `%3F` in the filename when present, consistent with existing question pages.
+		- **Link shape:** `[[Topic/Q/Question text]]` or `[[Topic/SubTopic/Q/Question text]]` as needed.
+		- **File shape:** `pages/Topic___Q___Question text.md` with triple underscores between namespace parts; encode `?` as `%3F` in the filename when present.
 		- Use forward slashes in journal and body links; never triple underscores inside Logseq links.
 	- ## Finding and deduplicating
 		- Treat every new question as a question-entity candidate.
@@ -19,12 +19,24 @@
 			- 4. H1 and first blocks on candidate pages; allow for minor rephrasing.
 		- Classify each candidate as: **existing**, **similar** (needs human judgment), **new**, or **blocked** (missing config or ambiguous topic).
 	- ## Frontmatter
-		- On **new** question pages, include `logseq-entity::` pointing at this entity-type page. That gives this type page backlinks to all instances.
-		- Question-specific tags may mirror siblings in the same topic when that pattern is established.
+		- On **new** question pages, include `logseq-entity:: [[Logseq/Entity/question]]` so this type page indexes instances.
+		- **Card-backed questions:** when the H1 carries `[[card]]` and the page is a first-class review target, add a second entity marker: `logseq-entity:: [[Logseq/Entity/question]], [[Logseq/Entity/Card]]` (see [[Logseq/Entity/Card]]).
+		- [[Logseq/Frontmatter/see-also]]
+			- **`see-also::`** — optional; extremely parsimonious list of 1-2 not obvious **garden pages** that are the best adjacent reading (**strongest tie first**). Do not put anything obvious in this list, do not restate parent-namespace context the title already encodes. Do not use `see-also::` for external URLs (put those in the answer body).
+		- [[Logseq/Frontmatter/via]]
+			- **`via::`** — optional; only for **what logseq page best represents the context in which the question appeared** - only useful when astonishing; be parsimonious and only use this when it's not obvious.
+		- **`tags::` / `alias::`** — only when they match established patterns on sibling question pages in the same topic; never alter existing **`tags::`** on a page you did not create for tagging migration.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
-	- ## Page shape
-		- First content block: H1 with the question; link key terms to existing pages where it helps.
-		- Typical sections: `## My Notes` (may start empty), `## Answer`. Use **`see-also::`** instead of **`## Related`** when the only content would be links to other graph pages.
-		- Use Logseq Flavored Markdown throughout (bullets, headings as bullets, tab nesting, no blank lines between bullets).
+	- ## Page shape (canonical)
+		- **H1** — the question text; link key terms to existing pages where it helps. Optional inline `[[card]]` at the end when the question is good SRS material.
+		- **Section order** (omit empty sections):
+			- `## [[My Answer]]` — optional; [[Human]] [[Gard/en/er/Human]] working answer (steps, tables, `[[tldr]]`, command examples you have verified).
+			- `## [[My Notes]]` — optional. Don't include by default; human gardener will add at their perogative. Tangents, ideas, and links that are not the direct answer.
+			- `## [[AI Answer]]` — wrapper for the researched answer when using the AI attribution node below.
+				- Lead with **Short answer:** when useful; cite **external** docs with markdown links; use bold for labels and backticks for commands (do not wrap `` `commands` `` in `**…**` per [[Logseq/Flavored Markdown]] conventions).
+		- **Do not** add `## Related` solely to list internal wikilinks; use **`see-also::`** instead.
+	- ## Relationship to other types
+		- **Card:** `[[card]]` on the H1 plus `[[Logseq/Entity/Card]]` in frontmatter when the question page itself is reviewable; distinct from factoring a prompt into a `/Card/` namespace page under [[Logseq/Entity/Card]].
+		- **CLI commands / flags:** questions *about* commands link to [[Logseq/Entity/CLI/Command]] and [[Logseq/Entity/CLI/Flag]] instances; they are not substitutes for command reference stubs.
 	- ## Legacy instances
-		- Older question pages may lack `logseq-entity::`. Do not bulk-migrate unless the author requests it; new pages should follow the frontmatter rules above.
+		- Older `___Q___` pages may lack `logseq-entity::`, use `## Related` for internal links, or use non-canonical AI section titles. Do not bulk-migrate unless requested; new pages should follow the rules above.
