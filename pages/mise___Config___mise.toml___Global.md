@@ -1,0 +1,1 @@
+- The global version of [[mise/Config/mise.toml]] is at `~/.config/mise/mise.toml`
