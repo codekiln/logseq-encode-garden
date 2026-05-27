@@ -28,12 +28,17 @@
 		- **`tags::` / `alias::`** — only when they match established patterns on sibling question pages in the same topic; never alter existing **`tags::`** on a page you did not create for tagging migration.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape (canonical)
-		- **H1** — the question text; link key terms to existing pages where it helps. Optional inline `[[card]]` at the end when the question is good SRS material.
+		id:: 69cd1d51-7708-4021-8c21-f7e864ec017e
+		- **H1** — the question text; link key terms to existing pages where it helps.
+		- Optional inline `[[card]]` at the end of the H1 when the question is good SRS material.
 		- **Section order** (omit empty sections):
-			- `## [[My Answer]]` — optional; [[Human]] [[Gard/en/er/Human]] working answer (steps, tables, `[[tldr]]`, command examples you have verified).
-			- `## [[My Notes]]` — optional. Don't include by default; human gardener will add at their perogative. Tangents, ideas, and links that are not the direct answer.
-			- `## [[AI Answer]]` — wrapper for the researched answer when using the AI attribution node below.
-				- Lead with **Short answer:** when useful; cite **external** docs with markdown links; use bold for labels and backticks for commands (do not wrap `` `commands` `` in `**…**` per [[Logseq/Flavored Markdown]] conventions).
+			- `## [[My Answer]]` — optional; [[Human]] / [[Gard/en/er/Human]] working answer (steps, tables, `[[tldr]]`, verified command examples).
+			- `## [[My Notes]]` — optional; do not create by default. Tangents and links that are not the direct answer.
+			- `## [[AI Answer]]` — optional wrapper for researched answers.
+				- Child bullet: `[[AI/Response]]` — attribution for AI-generated content.
+				- Lead with **Short answer:** when useful.
+				- Cite **external** docs with markdown links in the answer body.
+				- Bold for labels; backticks for commands. Do not wrap `` `commands` `` in `**…**` (see [[Logseq/Flavored Markdown]]).
 		- **Do not** add `## Related` solely to list internal wikilinks; use **`see-also::`** instead.
 	- ## Relationship to other types
 		- **Card:** `[[card]]` on the H1 plus `[[Logseq/Entity/Card]]` in frontmatter when the question page itself is reviewable; distinct from factoring a prompt into a `/Card/` namespace page under [[Logseq/Entity/Card]].
