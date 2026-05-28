@@ -49,6 +49,44 @@ title:: Claude/Routine
 		- ### Usage and limits
 			- Routine **starts** count toward a **per-account daily cap** (plan-dependent; shown at claude.ai/code/routines); session work also draws **Claude Code subscription** usage like interactive sessions.
 			- Hitting limits yields `429` on API fire with `Retry-After`; orgs with usage credits may continue on metered overage.
+	- ## CLI scheduling
+		- Claude Code in the terminal exposes **two different scheduling models**: **`/schedule`** (same product as cloud **Routines**) and **`/loop`** plus **cron tools** (session-local, not Routines). Official comparison: [Run prompts on a schedule](https://code.claude.com/docs/en/scheduled-tasks).
+		- ### `/schedule` — cloud Routines from the CLI
+			- **`/schedule`** creates and manages **Routines** saved to the claude.ai account; runs happen on **Anthropic cloud**, not in the local process.
+			- | Command | Effect |
+			  |---------|--------|
+			  | `/schedule` | Conversational setup (prompt, repos, schedule) |
+			  | `/schedule daily PR review at 9am` | Create with natural-language schedule |
+			  | `/schedule list` | List routines on the account |
+			  | `/schedule update` | Edit a routine (including custom cron; minimum interval one hour) |
+			  | `/schedule run` | Start a run immediately |
+			- **CLI scope**: **schedule** triggers only. Add **API** or **GitHub** triggers in the [web editor](https://claude.ai/code/routines).
+			- **Requirements**: claude.ai subscription login (not Console API-key / Bedrock-only auth), Claude Code on the web enabled, CLI **≥ v2.1.81**. If `/schedule` is unknown, check auth mode, growthbook/telemetry disable flags, or whether the session is already Claude Code on the web.
+		- ### `/loop` and cron tools — session-local (not Routines)
+			- **`/loop`** repeats a prompt **while the current CLI session stays open** on the **local machine**; it inherits session MCP, permissions, and local files. Requires Claude Code **≥ v2.1.72** for scheduled tasks generally.
+			- | Form | Example | Behavior |
+			  |------|---------|----------|
+			  | Interval + prompt | `/loop 5m check the deploy` | Fixed cadence (`s`, `m`, `h`, `d`; cron min 1 minute) |
+			  | Prompt only | `/loop check the deploy` | Claude picks delay each iteration (1m–1h) |
+			  | Bare `/loop` | `/loop` | Built-in maintenance prompt, or `.claude/loop.md` / `~/.claude/loop.md` |
+			  | Skill/command as prompt | `/loop 20m /review-pr 1234` | Each tick runs that slash command |
+			- **One-shot reminders** (same session, not `/loop`): natural language such as `remind me at 3pm to push the release branch` or `in 45 minutes, check whether the integration tests passed`.
+			- **Cron tools** (Claude invokes when asked, or via natural language “list/cancel scheduled tasks”):
+				- `CronCreate` — 5-field cron expression + prompt + recurring vs one-shot
+				- `CronList` — IDs, schedules, prompts (up to **50** tasks per session)
+				- `CronDelete` — cancel by **8-character** task ID
+			- **Session rules**: tasks fire only while Claude Code is **running and idle**; closing the terminal stops firing. **New conversation** clears tasks; `claude --resume` / `claude --continue` restores unexpired tasks (recurring within **7 days**, one-shots before fire time). Recurring session tasks **expire after 7 days**. No catch-up for missed intervals while Claude is busy on a long turn.
+			- **Disable**: `CLAUDE_CODE_DISABLE_CRON=1` turns off `/loop`, cron tools, and pending fires.
+			- **Bedrock / Vertex / Foundry**: bare `/loop` and dynamic-interval behavior differ (e.g. fixed 10-minute default, no `loop.md` on some paths); cloud **`/schedule`** may also be unavailable when not on claude.ai auth.
+		- ### Scheduling comparison (CLI-relevant)
+			- | | Cloud routine (`/schedule`) | `/loop` + cron |
+			  |---|---|---|
+			  | Runs on | Anthropic cloud | Local machine |
+			  | Open session required | No | Yes |
+			  | Survives laptop closed | Yes | No |
+			  | API / GitHub triggers | Yes (web for API/GitHub setup) | No |
+			  | Min interval | 1 hour (routine schedule) | ~1 minute |
+			  | Permission prompts during run | No (autonomous) | Inherits session |
 	- ## Examples
 		- **Nightly backlog grooming**: schedule trigger + issue-tracker connector; label, assign, Slack summary.
 		- **Alert triage**: monitoring tool `POST`s to `/fire` with Sentry body in `text`; routine correlates commits and opens a draft fix PR.
@@ -76,3 +114,4 @@ title:: Claude/Routine
 	- ## Footnotes
 		- [^1]: https://code.claude.com/docs/en/routines
 		- [^2]: https://platform.claude.com/docs/en/api/claude-code/routines-fire
+		- [^3]: https://code.claude.com/docs/en/scheduled-tasks
