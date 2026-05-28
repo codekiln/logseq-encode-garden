@@ -1,0 +1,54 @@
+alias:: [[claude-opus-4-8]], [[claude-opus-4.8]]
+tags:: [[AI/Model]]
+
+- # [Claude Opus 4.8](https://www.anthropic.com/news/claude-opus-4-8)
+	- ## Key Features
+		- Generally available as of May 28, 2026; Anthropic's most capable generally available model for complex reasoning, long-horizon agentic coding, and high-autonomy work
+		- Context window: 1M input tokens at standard API pricing
+		- Max output: 128k tokens on the synchronous Messages API (300k on Message Batches API with `output-300k-2026-03-24` beta header)
+		- Adaptive thinking only: uses `thinking: {"type": "adaptive"}`; extended thinking with explicit `budget_tokens` is not supported
+		- Effort parameter defaults to `high` on all surfaces including Claude API and Claude Code; set explicitly to use a different level
+		- ~4x less likely than Opus 4.7 to overlook flaws in generated code
+		- Superior judgment in agentic tasks: better at catching mistakes and questioning unsound plans
+		- Enhanced tool calling efficiency
+		- Stronger performance on legal and financial workflows
+		- Improved multimodal reasoning over documents and diagrams
+		- Dynamic workflows for Claude Code: parallel subagent processing
+		- Messages API now accepts system entries mid-conversation
+		- Reliable knowledge cutoff: January 2026; training data cutoff: January 2026
+		- Model version status: Stable (general availability)
+	- ## Performance Highlights
+		- 84% on Online-Mind2Web (computer-use benchmark); meaningful improvement over Opus 4.7 and GPT-5.5
+		- Highest-ever score on Legal Agent Benchmark; first model to exceed 10% on the all-pass standard
+		- Exceeds Opus 4.7 across all effort levels on CursorBench
+		- Outperforms GPT-5.5 on multiple proprietary evaluations including the Super-Agent benchmark
+	- ## Model Tiers
+		- Flagship Opus release succeeding [[Anthropic/Model/Claude/4.7/Opus]] in the Claude 4 generation
+		- Earlier Opus pages in this garden:
+			- [[Anthropic/Model/Claude/4.7/Opus]]
+			- [[Anthropic/Model/Claude/4.5/Opus]]
+			- [[Anthropic/Model/Claude/4/Opus]]
+		- Speed-focused sibling: Claude Sonnet 4.6 (`claude-sonnet-4-6`)
+	- ## Access Details
+		- API availability: Claude Messages API model string `claude-opus-4-8` (dateless format, pinned snapshot per Anthropic versioning starting with the 4.6 generation)
+		- Pricing (standard tier, per million tokens): $5 input · $25 output
+		- Fast mode pricing: $10 input · $50 output
+		- Batch API: 50% discount; prompt caching: up to 90% cost savings
+		- Platforms: Claude Pro, Max, Team, and Enterprise; Claude API; Amazon Bedrock; Google Cloud Vertex AI; Microsoft Foundry (note: 200k-token context window on Microsoft Foundry)
+		- Amazon Bedrock model ID: `anthropic.claude-opus-4-8`
+		- Google Vertex AI ID: `claude-opus-4-8`
+		- SDK support:
+			- Python: `pip install -U "anthropic"`
+			- TypeScript: `@anthropic-ai/sdk`
+	- ## Technical Specifications
+		- Model architecture: Proprietary Anthropic large language model (undisclosed weights)
+		- Input/output formats: Text and images in; text (and tool use) out
+		- Special capabilities:
+			- Adaptive thinking
+			- Dynamic workflows for parallel subagent processing in Claude Code
+			- Improved multimodal document and diagram reasoning
+		- Model version code: `claude-opus-4-8`
+	- ## References
+		- [Introducing Claude Opus 4.8 (Anthropic)](https://www.anthropic.com/news/claude-opus-4-8)
+		- [Models overview (Claude API docs)](https://platform.claude.com/docs/en/about-claude/models/overview)
+		- [Migrating from Claude Opus 4.7 (Claude API docs)](https://platform.claude.com/docs/en/about-claude/models/migration-guide#migrating-from-claude-opus-47)
