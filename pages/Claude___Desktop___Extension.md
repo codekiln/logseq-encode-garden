@@ -1,0 +1,76 @@
+title:: Claude/Desktop/Extension
+see-also:: [[Claude/Desktop]], [[Claude/Desktop/Connector]], [[MCP]], [[Claude/Desktop/Capability/AI-powered artifacts]]
+date-created:: [[2026/03/16]]
+
+- # [Getting Started with Local MCP Servers on Claude Desktop](https://support.claude.com/en/articles/10949351-getting-started-with-local-mcp-servers-on-claude-desktop)
+	- ## Overview
+		- **Desktop extensions** let Claude **directly interact with apps, data, and tools on your computer** via local [[MCP]] servers packaged as single-click installs (like browser extensions).
+		- **Location:** [[Claude/Desktop]] → **Settings > Extensions**
+		- Packages use the **`.mcpb`** (MCP Bundle) format; legacy **`.dxt`** files still work.
+		- Help center overview also in [Install Claude Desktop](https://support.claude.com/en/articles/10065433-install-claude-desktop) (desktop extensions section).
+	- ## Relation to connectors
+		- **Remote connectors** (Slack, Linear, Google Drive, custom remote MCP) are configured under **Customize > Connectors** or **Settings > Connectors** — see [[Claude/Desktop/Connector]].
+		- **Desktop extensions** install here (**Settings > Extensions**) but enabled tools appear in the chat **+** → **Connectors** menu alongside remote connectors.
+		- Notable extensions often enabled from the directory: **Filesystem**, **Control Chrome**, **pdf-viewer** (summarized on the Connector page).
+	- ## What desktop extensions are
+		- Streamlined install and management of **local MCP servers**—no manual JSON config or dependency wrangling for typical users.
+		- **Model Context Protocol (MCP):** open protocol connecting LLM apps to external data sources and tools.
+		- Each extension bundles server code, dependencies, and **`manifest.json`** metadata; Claude Desktop supplies built-in **Node.js**, **automatic updates** (directory extensions), and **OS keychain** storage for secrets.
+		- **Curated directory** in-app (Anthropic-reviewed); developers can submit via [desktop extensions interest form](https://docs.google.com/forms/d/14_Dmcig4z8NeRMB_e7TOyrKzuZ88-BLYdLvS6LPhiZU/viewform?edit_requested=true).
+		- Architecture post: [Claude Desktop Extensions (Anthropic Engineering)](https://www.anthropic.com/engineering/desktop-extensions)
+	- ## Installing from the directory
+		- 1. **Settings > Extensions** → **Browse extensions**
+		- 2. Choose an Anthropic-reviewed extension → **Install**
+		- 3. Configure required settings (e.g. API keys) in the UI
+		- 4. Extension is available in conversations automatically
+	- ## Installing custom extensions
+		- **Settings > Extensions** → **Advanced settings** → **Extension Developer** → **Install Extension…**
+		- Select a **`.mcpb`** file and follow prompts
+		- Developer docs: [anthropics/mcpb](https://github.com/anthropics/mcpb)
+	- ## Admin controls (Team and Enterprise)
+		- Owners and Primary Owners can:
+			- Enable or disable **public** desktop extensions per org security standards
+			- **Upload custom** extensions for one-click team install
+		- Customize registries: add needed extensions, remove others
+		- **Allowlist:** manage which extensions members can use — [Enabling and using the desktop extension allowlist](https://support.claude.com/en/articles/12592343-enabling-and-using-the-desktop-extension-allowlist)
+		- **Custom uploads:** org-specific workflows not in the public directory (same Extension Developer flow)
+	- ## Enterprise policy controls
+		- **Machine-level policies override in-app** blocklist/allowlist. For in-app allowlist, do not set `isDesktopExtensionEnabled` and `isDesktopExtensionDirectoryEnabled` to `"false"`.
+		- System policy reference: [Enterprise configuration for Claude Desktop](https://support.claude.com/en/articles/12622667-enterprise-configuration-for-claude-desktop)
+		- Safeguards (preview): OS keychain for secrets, automatic updates, audit installed extensions; **Group Policy** (Windows) / **MDM** (macOS), pre-install approved extensions, blocklist publishers, disable directory, private registries
+	- ## Troubleshooting
+		- ### Extension won't install
+			- Latest Claude Desktop version
+			- Re-download if file corrupted
+			- Sufficient disk space
+		- ### Installed but tools unavailable
+			- Restart Claude Desktop
+			- Check extension configuration for missing required fields
+			- Verify API keys / credentials
+		- ### Configuration issues
+			- **Settings > Extensions** → open extension → review settings
+			- Required fields complete; file paths exist and are accessible
+		- ### Permission or security errors
+			- macOS: **System Preferences > Security & Privacy**
+			- Windows: Claude Desktop permissions for required directories
+			- Enterprise: verify org policies allow desktop extensions
+	- ## Developer FAQ
+		- **Check MCP connection:** chat **+** → **Connectors** (servers and tools); or **Developer settings** under **Desktop app** (status and logs)
+		- **Convert existing MCP server:** add `manifest.json` → `mcpb pack` → [MCPB documentation](https://github.com/anthropics/mcpb)
+		- **Languages:** Node.js, Python, binary MCP servers; Claude Desktop includes Node.js (no separate Node install required)
+		- **Sensitive config:** `"sensitive": true` in `manifest.json` → encrypted in OS secure storage (Keychain / Credential Manager)
+		- **Private distribution:** share `.mcpb` directly; submit to official directory for broader reach
+		- **Debug:** debug logging in settings, extension logs in Extensions panel, [MCP debugging guide](https://modelcontextprotocol.io/docs/tools/debugging)
+		- **Updates:** directory extensions auto-update by default; private `.mcpb` installs are manual
+	- ## MCPB package format (summary)
+		- **`.mcpb`:** ZIP archive with required **`manifest.json`** plus server implementation and bundled dependencies
+		- **Before extensions:** terminal install, manual `claude_desktop_config.json`, dependency conflicts, no discovery
+		- **After:** download/double-click → Install (no terminal for end users)
+		- **Tooling:** `npm install -g @anthropic-ai/mcpb` → `mcpb init` → `mcpb pack`
+		- **Manifest highlights:** `user_config` drives settings UI; `${user_config.*}`, `${__dirname}`, `${HOME}` template substitution; optional `tools` / `prompts` declarations
+		- **Open ecosystem:** MCPB spec and toolchain open-sourced for portability beyond Claude Desktop
+	- ## Learn more about MCP
+		- [MCP Quickstart Guide](https://modelcontextprotocol.io/docs/getting-started/intro)
+		- [Model Context Protocol GitHub](https://github.com/modelcontextprotocol)
+		- [Guide to debugging MCP integrations](https://modelcontextprotocol.io/docs/tools/debugging)
+		- Enterprise deployment: [Deploying enterprise-grade MCP servers with desktop extensions](https://support.claude.com/en/articles/12702546-deploying-enterprise-grade-mcp-servers-with-desktop-extensions)

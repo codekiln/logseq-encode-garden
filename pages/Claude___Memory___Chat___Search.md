@@ -1,0 +1,84 @@
+title:: Claude/Memory/Chat/Search
+see-also:: [[Claude/Desktop]], [[Claude/Code/Memory]]
+
+- # [Use Claude's chat search and memory to build on previous context](https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context)
+	- Claude can search previous conversations and remember context across chats. Search pulls relevant past sessions into new chats; memory synthesizes chat history into ongoing context.
+	- ## Search past chats with Claude
+		- Available on **paid plans** (Pro, Max, Team, Enterprise) on web, [[Claude/Desktop]], and Claude Mobile.
+		- Prompt Claude to search previous conversations for relevant information across sessions. Ask naturally (e.g. what you discussed about a topic, find a conversation, continue a project).
+		- Searches use **Retrieval-Augmented Generation (RAG)** and appear as **tool calls** in the current chat.
+		- ### What Claude can search
+			- All chats **outside of projects**.
+			- **Individual project** conversations (search is limited to within each project).
+		- ### Search and reference past chats
+			- Rolled out accounts: enabled **by default**. Ask about previous conversations naturally.
+			- Example prompts:
+				- "What did we discuss about [topic]?"
+				- "Can you find our conversation about [subject]?"
+				- "Let's continue where we left off with [project]."
+			- When Claude searches, the current chat shows a tool call.
+		- ### Prevent searching past chats
+			- **Settings > Capabilities** → **Preferences** → turn off **Search and reference chats**.
+		- ### Exclude a specific past chat from searches
+			- **Incognito chats** (all plans): ghost icon upper right when starting a chat outside a project.
+			- Incognito = temporary conversation not saved to chat history; not used when searching previous conversations.
+			- **Enterprise / Team:** incognito chats still included in standard data exports and follow org data retention policies.
+	- ## What is Claude's memory?
+		- **Memory from chat history** is available to **all** Claude users (free, Pro, Max, Team, Enterprise) on web, Desktop, and Mobile.
+		- Claude generates memory from chat history so conversations build continuity over time (not a stateless interface).
+	- ## How does Claude's memory work?
+		- Beyond search, enabling memory adds:
+		- ### Memory summary
+			- Automatic summarization of conversations; synthesis of key insights across chat history (**excluding project chats**).
+			- Synthesis updates every **24 hours** and provides context for every new standalone conversation.
+		- ### Project memory and summary
+			- Each **project** has its own memory space and project summary; context stays focused per project, separate from other projects and non-project chats.
+	- ## Enable Claude's memory
+		- **Enterprise:** members can enable individually only when an Owner enables it for the org.
+		- Toggle: **Settings > Capabilities**.
+		- Disable options:
+			- **Pause memory:** keeps existing memory but does not use or create new memory; chats while paused are not summarized if memory is turned back on.
+			- **Reset memory:** permanently deletes all memories including project memories; cannot be undone; re-enabling starts from scratch.
+		- **Enterprise:** all memory retained and exportable by admins per enterprise chat data retention policies.
+	- ## What does Claude remember?
+		- Work-related context for collaboration (visible in memory or project summary):
+			- Role, projects, professional context
+			- Communication preferences and working style
+			- Technical preferences and coding style
+			- Project details and ongoing work
+	- ## What Claude doesn't remember
+		- ### Incognito chats
+			- Ghost icon when starting a chat outside a project; incognito mode on → chats not saved to memory or chat history.
+			- Close the incognito chat to resume normal remembering.
+	- ## Data retention and privacy
+		- Memory retained per existing chat data retention policies.
+		- Deleted conversations removed from memory synthesis.
+		- Memory updates within **24 hours** when conversations are created, modified, or deleted.
+		- All memory data included in data exports.
+		- Enterprise data retention policies apply to memory-related data, including incognito chats.
+	- ## User controls and visibility
+		- ### View and manage memory summary
+			- **Settings > Capabilities** → **View and edit memory** → **Manage memory** modal.
+			- Edit via Claude or pencil icon (custom instructions in lower left of summary).
+			- Updates from chat ("remember X") apply to the **next** conversation immediately (no wait for daily synthesis).
+		- ### Past chat citations
+			- When Claude references previous conversations: citations link to original chats; option to delete specific conversations.
+		- ### Toggle search and memory
+			- Disable or re-enable **Search and reference chats** and memory in **Settings > Capabilities**.
+		- ### Importing memory from other AI tools
+			- Transfer memory between Claude and other AI services (import/export); **experimental**, active development.
+	- ## Controls for Enterprise plan owners
+		- Owners and Primary Owners manage memory features org-wide.
+		- ### Organization-level memory controls
+			- **Generate memory from chat history** enabled by default; users manage own settings when on.
+			- Disable org-wide: **Organization settings > Capabilities** → immediately deletes all existing memory synthesis for all users; users cannot access memory synthesis setting.
+			- **Disabling at org level permanently deletes all memory data for all users.**
+		- ### Data handling and compliance
+			- Chat summaries stored with conversation data; follow org retention; deleted when conversation deleted.
+			- Memory synthesis: encryption at rest, tied to conversations; updates as conversations expire or delete.
+			- Incognito: no memory contribution, not in user chat history; still in Owner data exports and retention (≥30 days for safety).
+		- ### Audit logging and data exports
+			- Audit: org-level memory toggle changes by Owners; standard conversation access logging for synthesis; individual user memory edits **not** logged.
+			- Exports: synthesis and chat summaries in standard conversation exports; incognito in org exports; summaries tied to source conversations.
+		- ### Team plan limitations
+			- No org-level memory controls; Team members manage memory individually.
