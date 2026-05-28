@@ -14,4 +14,5 @@ alias:: [[Compound Engineering]]
 		- Primary stack at Every includes [[Claude/Code]], [[Codex/CLI]], and Factory [[Droid]]; packaged for others as [[Person/Every/GitHub/compound-engineering-plugin]] ([[Codex/Plugin]] marketplace: `EveryInc/compound-engineering-plugin`).
 	- ## Sources
 		- [[Person/Dan Shipper/Blog/25/12/11/Compound Engineering - How Every Codes With Agents]]
+		- [[Person/Dan Shipper/Blog/26/05/21/After Automation]]
 		- [[Every/Blog/Source Code/25/08/18/My AI Had Already Fixed the Code Before I Saw It]]
