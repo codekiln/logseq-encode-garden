@@ -68,12 +68,11 @@ repomix-*.xml
 **/.codexignore
 **/.codex/
 
-# Dolt database files (added by bd init)
+# Beads / Dolt (legacy; repo no longer uses bd)
+.beads/
 .dolt/
-*.db
-
-# Beads / Dolt files (added by bd init)
 .beads-credential-key
+*.db
 
 # Local Gemini CLI directory (rulesync may generate commands; keep local)
 /.gemini/
