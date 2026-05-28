@@ -1,0 +1,5 @@
+- [[Keyshort]] [[Claude/Desktop]] [[Claude/Desktop/Keyshort]]
+	- **Dictate** [[Card]]
+		- Shortcut: `⇪` (Caps Lock); press again to finish
+		- Description: Start and stop voice dictation in Claude Desktop.
+		- Related: [[Speech-to-Text]], [[AI/Voice/to/Text]], [[Tool/Dictation]]

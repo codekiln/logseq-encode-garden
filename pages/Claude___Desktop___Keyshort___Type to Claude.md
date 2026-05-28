@@ -1,0 +1,4 @@
+- [[Keyshort]] [[Claude/Desktop]] [[Claude/Desktop/Keyshort]]
+	- **Type to Claude** [[Card]]
+		- Shortcut: `⌥⌥` (press Option twice)
+		- Description: Opens quick type input to Claude. Customize the shortcut in Claude Desktop **Settings → General**.
