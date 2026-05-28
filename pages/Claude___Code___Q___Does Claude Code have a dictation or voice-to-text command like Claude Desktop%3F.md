@@ -1,0 +1,23 @@
+logseq-entity:: [[Logseq/Entity/question]]
+see-also:: [[Claude/Desktop/Keyshort/Dictate]], [[AI/Voice/to/Text]]
+- # Does [[Claude/Code]] have a dictation or [[AI/Voice/to/Text]] command like [[Claude/Desktop]]? [[card]]
+	- ## [[AI Answer]]
+		- [[AI/Response]]
+		- **Short answer:** Yes — Claude Code has native voice dictation via the `/voice` command, available since v2.1.69.
+		- **How to enable:**
+			- Type `/voice` in the Claude Code prompt to activate
+			- Two modes:
+				- **Hold mode** (default): hold `Space` while speaking, release to finish
+				- **Tap mode** (v2.1.116+): tap `Space` once to start, tap again to send — enable with `/voice tap`
+		- **Key differences from Claude Desktop:**
+			- Claude Desktop uses `⇪` (Caps Lock) as the dictation shortcut
+			- Claude Code's default trigger key is `Space`; rebind in `~/.claude/keybindings.json` (e.g. to `meta+k`)
+			- No warmup period in tap mode or with modifier-key bindings
+		- **Requirements and limitations:**
+			- Requires a Claude.ai account — does **not** work with API key, Bedrock, Vertex, or Foundry auth
+			- Microphone access required
+			- Does **not** work in remote/SSH sessions or WSL without WSLg
+			- Supported on macOS, Linux, and Windows (WSL2 + WSLg)
+		- **Audio processing:** transcription runs on Anthropic servers; does not consume tokens or count toward usage limits
+		- **Languages:** 20+ supported (English, Spanish, French, Japanese, Chinese, and more)
+		- Source: [Claude Code voice dictation docs](https://code.claude.com/docs/en/voice-dictation.md)
