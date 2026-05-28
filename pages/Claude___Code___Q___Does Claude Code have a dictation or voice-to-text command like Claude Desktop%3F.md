@@ -16,7 +16,7 @@ see-also:: [[Claude/Desktop/Keyshort/Dictate]], [[AI/Voice/to/Text]]
 		- **Requirements and limitations:**
 			- Requires a Claude.ai account — does **not** work with API key, Bedrock, Vertex, or Foundry auth
 			- Microphone access required
-			- Does **not** work in remote/SSH sessions or WSL without WSLg
+			- Does **not** work in remote/SSH sessions, WSL without WSLg, or **devcontainers** — the Claude Code process inside a container has no access to the host microphone; VS Code audio forwarding does not bridge this gap
 			- Supported on macOS, Linux, and Windows (WSL2 + WSLg)
 		- **Audio processing:** transcription runs on Anthropic servers; does not consume tokens or count toward usage limits
 		- **Languages:** 20+ supported (English, Spanish, French, Japanese, Chinese, and more)
