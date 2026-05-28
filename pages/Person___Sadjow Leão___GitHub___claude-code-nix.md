@@ -1,14 +1,15 @@
 created-by:: [[Person/Sadjow Leão]]
+
 - # [sadjow/claude-code-nix](https://github.com/sadjow/claude-code-nix)
 	- Repository: [sadjow/claude-code-nix](https://github.com/sadjow/claude-code-nix)
 	- Created by: [[Person/Sadjow Leão]]
 	- Created: 2025-06-20
 	- GitHub status on 2026-03-12: 251 stars, 17 forks, 0 open issues
 	- **Always up-to-date Nix package for Claude Code with hourly updates, native binary default, and Node.js/Bun alternatives.**
-	- It packages [[Claude Code]] for Nix users who want faster updates than upstream `nixpkgs`, plus explicit version pinning and rollback.
+	- It packages [[Claude/Code]] for Nix users who want faster updates than upstream `nixpkgs`, plus explicit version pinning and rollback.
 	- ## Why It Exists
 		- Targets the gap between Anthropic's official installer and the slower update cadence of upstream `nixpkgs`
-		- Keeps new [[Claude Code]] releases available within about an hour of upstream release
+		- Keeps new [[Claude/Code]] releases available within about an hour of upstream release
 		- Gives Nix users a declarative install that does not disappear when switching Node.js versions with tools like `asdf` or `nvm`
 	- ## Packaging Model
 		- Default package is a native self-contained binary with no runtime dependency
@@ -20,7 +21,7 @@ created-by:: [[Person/Sadjow Leão]]
 		- `claude-code-node`: Node.js runtime, exposed as `claude-node`
 		- `claude-code-bun`: Bun runtime, exposed as `claude-bun`
 	- ## Versioning and Updates
-		- GitHub Actions checks for new [[Claude Code]] versions every hour
+		- GitHub Actions checks for new [[Claude/Code]] versions every hour
 		- The repository supports both moving refs and immutable refs
 		- Exact version tags such as `v2.1.71` and commit SHAs are the real reproducible pins
 		- Major tags like `v2`, the `latest` tag, and the default branch intentionally move forward over time

@@ -63,8 +63,8 @@ tags:: [[GitHub]], [[Search]], [[Diataxis/How To]]
 			- This searches the `codekiln/logseq-encode-garden` repository
 			- Matches all files in the `pages/` directory that start with "Claude Code"
 			- Results include pages like `Claude Code.md`, `Claude Code___Bedrock.md`, `Claude Code___How To___Install.md`, etc.
-		- See related pages: [[Claude Code]]
+		- See related pages: [[Claude/Code]]
 	- ## Related
 		- [[GitHub/Search]]
-		- [[Claude Code]]
+		- [[Claude/Code]]
 		- [GitHub Code Search Documentation](https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax#path-qualifier)

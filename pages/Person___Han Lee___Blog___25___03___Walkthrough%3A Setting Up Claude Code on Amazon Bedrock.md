@@ -1,4 +1,4 @@
-tags:: [[Claude Code]], [[AWS/Bedrock]]
+tags:: [[Claude/Code]], [[AWS/Bedrock]]
 
 - # [Walkthrough: Setting Up Claude Code on Amazon Bedrock](https://leehanchung.github.io/blogs/2025/03/08/claude-code-bedrock/)
 	- [[My Notes]]

@@ -1,11 +1,11 @@
-# How can I do fire and forget tasks in each CLI AI coding tool like [[Claude Code]], [[CursorAI]], and [[Codex]]?
+# How can I do fire and forget tasks in each CLI AI coding tool like [[Claude/Code]], [[CursorAI]], and [[Codex]]?
 	- ## My Notes
-		- In [[Claude Code]], `claude -p "<request>"` runs non-interactively.
+		- In [[Claude/Code]], `claude -p "<request>"` runs non-interactively.
 		- Need equivalent "run to completion and exit" flows for `cursor-agent`, `codex` CLI, and similar tools.
 	- ## Answer
 		- [[AI/Response]]
 			- Yes, each has a non-interactive/headless mode:
-			- [[Claude Code]]: `claude -p "<request>"`
+			- [[Claude/Code]]: `claude -p "<request>"`
 			- [[CursorAI]] (`cursor-agent`): use `--print` (not prompt `-p`), e.g. `cursor-agent --print "<request>"`
 			- [[Codex]]: use `codex exec "<request>"`
 			- Useful automation flags:

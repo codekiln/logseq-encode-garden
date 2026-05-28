@@ -1,4 +1,4 @@
-# [Building a Personal AI Factory (July 2025 snapshot)](https://www.john-rush.com/posts/ai-20250701.html) with [[Claude Code]]
+# [Building a Personal AI Factory (July 2025 snapshot)](https://www.john-rush.com/posts/ai-20250701.html) with [[Claude/Code]]
 	- [[My Notes]]
 		- uses [[git/worktree]]
 		- uses [[o3]] for planning and [[Anthropic/Model/Claude/4.0/Sonnet]]

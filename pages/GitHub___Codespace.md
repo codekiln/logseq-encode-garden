@@ -1,5 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Software/Project]]
 alias:: [[GitHub Codespaces]], [[GitHub/Codespaces]], [[Codespaces]], [[Codespace]], [[GitHub Codespace]]
+
 - # GitHub Codespace
 	- [Product home](https://github.com/features/codespaces)
 	- Hosted **cloud development environment** from GitHub: each codespace is a VM-backed container workspace (Ubuntu by default) that attaches [[VSCode]] (desktop, web, or compatible editors) to a clone of a [[GitHub]] repository, using the same [[DevContainer]] configuration as local devcontainers.
@@ -105,7 +106,7 @@ alias:: [[GitHub Codespaces]], [[GitHub/Codespaces]], [[Codespaces]], [[Codespac
 			- `GIT_COMMITTER_NAME`: Committer name
 		- **Note**: Environment variables are case-sensitive
 	- ## Use Cases
-		- ### Long-Running [[Claude Code]] Sessions
+		- ### Long-Running [[Claude/Code]] Sessions
 			- **Perfect for AFK coding sessions**: Codespace continues running after closing browser/editor
 			- Cloud-based execution means local machine can be shut down or disconnected
 			- Process continues until explicit stop or timeout (up to 4 hours)
@@ -116,7 +117,7 @@ alias:: [[GitHub Codespaces]], [[GitHub/Codespaces]], [[Codespaces]], [[Codespac
 				- Commit and push work regularly to avoid data loss
 			- **Workflow**:
 				- 1. Start codespace with extended timeout
-				- 2. Launch [[Claude Code]] session
+				- 2. Launch [[Claude/Code]] session
 				- 3. Close browser/editor - session continues running
 				- 4. Reconnect later to check progress
 				- 5. Explicitly stop codespace when done to avoid charges
@@ -146,7 +147,7 @@ alias:: [[GitHub Codespaces]], [[GitHub/Codespaces]], [[Codespaces]], [[Codespac
 	- ## Related
 		- [[GitHub/Codespace/Image/Universal]] - Published **universal** dev container image source ([`devcontainers/images` `src/universal`](https://github.com/devcontainers/images/tree/main/src/universal))
 		- [[DevContainer]] - Configuration format used by Codespaces
-		- [[Claude Code/Devcontainer]] - Claude Code's dev container setup
+		- [[Claude/Code/Devcontainer]] - Claude Code's dev container setup
 		- [[VSCode]] - Primary editor interface
 		- [[GitHub/CLI]] - Command-line interface for managing codespaces
 	- ## Agent runtimes & sandboxes (adjacent, not substitutes)

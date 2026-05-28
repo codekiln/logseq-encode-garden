@@ -1,4 +1,4 @@
-- # Fireside Chat — Cat Wu and Addy Osmani
+# Fireside Chat — Cat Wu and Addy Osmani
 	- ## Overview
 		- **Duration:** 25 minutes
 		- **Slot (EDT):** 11:10–11:35
@@ -6,6 +6,6 @@
 		- **Event:** [[OReilly/Event/26/03/AI Codecon]]
 	- ## Description
 		- Reshuffling of work, skills, and priorities in 2026—how the software engineer role is shifting and how to respond in real time.
-		- Cat Wu (product lead of [[Claude Code]], Anthropic) on superpowers Claude Code enables and the future of agentic coding; O’Reilly cites reporting that a large share of Anthropic’s code is now written by Claude.[^1]
+		- Cat Wu (product lead of [[Claude/Code]], Anthropic) on superpowers Claude Code enables and the future of agentic coding; O’Reilly cites reporting that a large share of Anthropic’s code is now written by Claude.[^1]
 	- ## Footnotes
 		- [^1]: https://www.businessinsider.com/most-anthropic-teams-coding-with-claude-ai-not-replacing-humans-2025-10

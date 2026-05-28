@@ -1,4 +1,4 @@
-- # Technique: Using AWS IAM Identity Center for Long-Lived Temporary Credentials
+# Technique: Using AWS IAM Identity Center for Long-Lived Temporary Credentials
 	- Related: [[AWS/IAM/Identity Center]] [[AWS/IAM/Role Chaining]] [[AWS/Okta Keyman]]
 	- ## Problem: Role Chaining Limitations
 		- Long-lived temporary credentials are a concern when using role chaining
@@ -21,4 +21,3 @@
 		- [[AWS/IAM/Role]]
 		- [[AWS/Bedrock]]
 		- [[Claude Code/Bedrock]]
-

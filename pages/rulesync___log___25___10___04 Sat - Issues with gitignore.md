@@ -1,6 +1,6 @@
 ### [[2025-10-04 Sat]] - [[git/.gitignore]] issues
 id:: 68e0f877-fcfc-438c-a9d8-a9d625d68232
-	- Yesterday I discovered that the [[rulesync/gitignore]] command implies a usage of rulesync in which the configuration files for any given tool are treated as compiled build artifacts. I was curious about trying out this workflow, so I ran it, which added a bunch of rules to `.gitignore` for each [[AI/Coding/Tool]] - [[CursorAI]], [[Claude Code]], etc.
+	- Yesterday I discovered that the [[rulesync/gitignore]] command implies a usage of rulesync in which the configuration files for any given tool are treated as compiled build artifacts. I was curious about trying out this workflow, so I ran it, which added a bunch of rules to `.gitignore` for each [[AI/Coding/Tool]] - [[CursorAI]], [[Claude/Code]], etc.
 	- Today, on another computer I discovered the classic problem with introducing [[git/.gitignore]] rules after some subset of files have been tracked to the repo. I asked Claude Code about it.
 		- #### [[AI/Response]]
 			- The `.gitignore` patterns (lines 24-25 and 29-31) will only prevent untracked files from being added, but they don't affect files that are already in the git repository.

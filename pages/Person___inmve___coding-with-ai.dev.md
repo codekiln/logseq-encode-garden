@@ -1,6 +1,6 @@
 alias:: [[Person/inmve/GitHub/coding-with-ai]]
 
-- # Practical techniques for [[Claude Code]] and [[Codex/CLI]] - https://coding-with-ai.dev/
+- # Practical techniques for [[Claude/Code]] and [[Codex/CLI]] - https://coding-with-ai.dev/
 	- These notes grew out of a summer spent in Claude Code and Codex CLI.
 	- It draws on posts by
 		- [[Person/Simon Willison]]

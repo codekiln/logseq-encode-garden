@@ -25,4 +25,4 @@ alias:: [[Anthropic/App/Claude Code/Bedrock]]
 			  }
 			  ```
 	- #### Troubleshooting credential expiration
-		- If you encounter the error "API Error: The security token included in the request is expired" and automatic credential refresh isn't working, see [[Claude Code/Bedrock/How To/Get Around Security Token Timeout]] for troubleshooting steps and workarounds.
+		- If you encounter the error "API Error: The security token included in the request is expired" and automatic credential refresh isn't working, see [[Claude/Code/Bedrock/How To/Get Around Security Token Timeout]] for troubleshooting steps and workarounds.

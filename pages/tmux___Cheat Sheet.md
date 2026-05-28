@@ -39,7 +39,7 @@ tags:: [[Keyshorts]]
 		  | `<Arrow keys>` (with prefix+Ctrl) | Resize pane in direction           |
 	- ## Copy mode & scrolling
 		- ==NOTE - tmux intercepts mouse wheel by default==
-			- if you need to pass mouse wheel through to an application like [[Claude Code]], use one of these two:
+			- if you need to pass mouse wheel through to an application like [[Claude/Code]], use one of these two:
 				- 1 - config approach
 					- add to `~/.tmux.conf`
 					  collapsed:: true

@@ -1,6 +1,7 @@
 tags:: [[MCP]], [[Atlassian]], [[Q]]
+
 - # Can [[Atlassian]] [[MCP]] authentication be system wide and cached?
-	- When signing in to Atlassian MCP in Cursor via OAuth in the browser, the authentication does not persist to other tools like [[Claude Code]] or cursor-agent CLI.
+	- When signing in to Atlassian MCP in Cursor via OAuth in the browser, the authentication does not persist to other tools like [[Claude/Code]] or cursor-agent CLI.
 	- ## Answer
 		- **Short answer**: Yes, but only if all tools use [[mcp-remote]] with *identical* configurations. Otherwise, each tool requires separate authentication.
 		- ### How mcp-remote stores credentials
@@ -44,4 +45,4 @@ tags:: [[MCP]], [[Atlassian]], [[Q]]
 		- [[Atlassian/MCP/How To/Set up in Cursor]]
 		- [[mcp-atlassian]]
 		- [[mcp-remote]]
-		- [[Claude Code/Tutorial/Connect to MCP Servers]]
+		- [[Claude/Code/Tutorial/Connect to MCP Servers]]

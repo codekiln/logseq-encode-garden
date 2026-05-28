@@ -3,7 +3,7 @@ date-created:: [[2026-03-25 Wed]]
 
 - # Weekly review via rulesync: agent chat history, patterns, session names
 	- ## Sketch
-		- Define **`[[rulesync]]`** rules (or commands / skills) for a **weekly review** that spans **[[Agentic Engineering Tools]]** — e.g. [[Claude Code]], [[CursorAI]] and [[CursorAI/CLI]], [[Codex/CLI]], and any similar CLIs — instead of a one-off ritual that lives in a single vendor’s UI.
+		- Define **`[[rulesync]]`** rules (or commands / skills) for a **weekly review** that spans **[[Agentic Engineering Tools]]** — e.g. [[Claude/Code]], [[CursorAI]] and [[CursorAI/CLI]], [[Codex/CLI]], and any similar CLIs — instead of a one-off ritual that lives in a single vendor’s UI.
 	- ## What it could do
 		- Walk **chat or session history** for each tool (storage paths and formats differ by product; likely needs per-tool adapters or a phased v1).
 		- **Notice patterns**: recurring friction, prompts that worked, blind spots, tool limits, “land the plane” gaps.

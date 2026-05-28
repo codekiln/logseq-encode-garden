@@ -3,7 +3,7 @@ tags:: [[AI Coding]], [[Tool]]
 - # [Vibe Kanban - Orchestrate AI Coding Agents](https://www.vibekanban.com/)
 	- ## Overview
 		- Platform designed to orchestrate AI coding agents, enabling developers to run multiple agents in parallel, manage tasks visually, and streamline code reviews
-		- Integrates with various AI coding agents such as [[Claude Code]], [[Codex]], [[GitHub/CoPilot]], and others
+		- Integrates with various AI coding agents such as [[Claude/Code]], [[Codex]], [[GitHub/CoPilot]], and others
 		- Claims to be open source and built by developers for developers
 	- ## Concerns / Risks
 		- ### Not Actually Open Source

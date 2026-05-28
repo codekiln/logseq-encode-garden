@@ -1,4 +1,4 @@
-- Ushered in by [[Claude Code]], in phase four, a developer could give an [[LLM]] an instruction, and an [[Agentic System]] would iterate on it for some time, sometimes 3-5 minutes, other times 5-10 minutes.
+- Ushered in by [[Claude/Code]], in phase four, a developer could give an [[LLM]] an instruction, and an [[Agentic System]] would iterate on it for some time, sometimes 3-5 minutes, other times 5-10 minutes.
 - {{embed [[AI/Coding/Vibe/25/02/Karpathy Coins Term]]}}
 - {{embed [[AI/Coding/Vibe/25/03/Willison Clarifies as Not Reviewing Code]]}}
 - Sub-Phases

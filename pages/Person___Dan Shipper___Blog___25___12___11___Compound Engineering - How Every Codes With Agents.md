@@ -14,7 +14,7 @@ logseq-entity:: [[Logseq/Entity/Article]]
 		- **Plan:** agents study repo structure, commit history, and external best practices before planning—most human time lives here.
 		- **Review:** engineer judges output and meta-lessons, not just line-by-line nits.
 		- **Compound:** capture what was learned so the next agent session inherits it (feeds into `CLAUDE.md`-style context and team memory).
-		- Tool-agnostic framing: [[Claude Code]] primary internally; also Factory Droid and [[Codex/CLI]].
+		- Tool-agnostic framing: [[Claude/Code]] primary internally; also Factory Droid and [[Codex/CLI]].
 	- ## Links
 		- [[Engineer/ing/Compound]]
 		- [[Every/Blog/Source Code/25/08/18/My AI Had Already Fixed the Code Before I Saw It]] — earlier narrative on the same idea.

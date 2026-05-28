@@ -8,11 +8,11 @@ tags:: [[HN]]
 			- nobody is very impressed with [[OpenAI Codex]] at [[HN]] at this time
 			- first I've heard anyone have anything nice to say about [[AWS/Q]]
 				- > Claude Code is just way too expensive. These days I’m using Amazon Q Pro on the CLI. Very similar experience to Claude Code minus a few batteries. But it’s capped at $20/mo and won’t set my credit card on fire. --[artdigital here](https://news.ycombinator.com/item?id=43712470)
-			- a lot of people are very passionate about [[IDE/Cline]], [[Claude Code]], [[aider]] but say Claude Code is too [[Expensive]]
+			- a lot of people are very passionate about [[IDE/Cline]], [[Claude/Code]], [[aider]] but say Claude Code is too [[Expensive]]
 				- > I use [[aider]]+ [[OpenRouter]] with [[Gemini/2.5/pro]] and it cost 1/6 of what [[Claude 3.7 Sonnet]] does. The [[aider/docs/llms/leaderboard]] - includes relative pricing theses days. - [aitchnyu](https://news.ycombinator.com/user?id=aitchnyu) [here](https://news.ycombinator.com/item?id=43713490)
 					- This table mentions two different "Edit formats" - `architect` vs `diff` vs `diff-fenced` vs `whole` - these terms are new to me
 				- > [[Google/AI/Model/Gemini/2.5/pro/experimental]] is superior to [[Claude 3.7 Sonnet]] when I use it with Aider [1]. And it is free (with some high limit).
-				- A few people mention that [[Claude Code]] is actually **not** that expensive once you learn to control costs
+				- A few people mention that [[Claude/Code]] is actually **not** that expensive once you learn to control costs
 					- [jasonjmcghee](https://news.ycombinator.com/user?id=jasonjmcghee) [1 day ago](https://news.ycombinator.com/item?id=43711801) on controlling claude code costs
 					  collapsed:: true
 						- If you get a hang of controlling costs, it's much cheaper. If you're exhausting the context window, I'm not surprised you're seeing high cost.
@@ -27,7 +27,7 @@ tags:: [[HN]]
 						- For a company, massively worth it. Insanely cheap productivity boost (if developers are responsible / don't get lazy / don't misuse it).
 					- [Implicated](https://news.ycombinator.com/user?id=Implicated) [1 day ago](https://news.ycombinator.com/item?id=43712547) on controlling claude code costs
 					  collapsed:: true
-						- I keep seeing this sentiment [that [[Claude Code]] is too [[Expensive]]]and it's wild to me.
+						- I keep seeing this sentiment [that [[Claude/Code]] is too [[Expensive]]]and it's wild to me.
 						- Sure, it might cost a few dollars here and there. But what I've personally been getting from it, for that cost, is so far away from "expensive" it's laughable.
 						  Not only does it do things I don't want to do, in a _super_ efficient manner. It does things I don't know how to do - contextually, within my own project, such that when it's done I _do_ know how to do it.
 						  Like others have said - if you're exhausting the context window, the problem is you, not the tool.

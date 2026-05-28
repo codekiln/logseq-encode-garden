@@ -3,7 +3,7 @@ created-by:: [[Every]]
 date-created:: [[2025/12/11]]
 
 - # [EveryInc/compound-engineering-plugin: Official Compound Engineering plugin for Claude Code, Codex, Cursor, and more](https://github.com/EveryInc/compound-engineering-plugin)
-	- Ships the [[Engineer/ing/Compound]] workflow as skills and agents across [[Claude Code]], [[Codex/CLI]], [[CursorAI]], and related tools.
+	- Ships the [[Engineer/ing/Compound]] workflow as skills and agents across [[Claude/Code]], [[Codex/CLI]], [[CursorAI]], and related tools.
 	- npm: [@every-env/compound-plugin](https://www.npmjs.com/package/@every-env/compound-plugin)
 	- Philosophy: **each unit of engineering work should make subsequent units easier** — plan and review heavily, codify learnings, keep quality high so future changes stay cheap.
 	- ## Core skills (slash commands)

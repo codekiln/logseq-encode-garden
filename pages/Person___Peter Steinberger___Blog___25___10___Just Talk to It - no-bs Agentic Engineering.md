@@ -4,7 +4,7 @@ readwise-link:: https://readwise.io/reader/shared/01k7xyxn4w4vvh6gsh6zhcd2jb
 	- Header graphic credit https://x.com/thorstenball/status/1976224756669309195
 		- ![The Curve of Agentic Programming - x axis is Time and y axis is Complexity and something like a bell curve reveals that the author started with "plz fix this" then went through a more complex mode of "8 agents at the same time with complex orchestration" and then finally went to just asking the AI to do things like "Hey, look at these files and then do [med size change]"](https://steipete.me/assets/img/2025/just-talk-to-it/curve-angentic.jpg)
 	- Fantastic overview of the [[SOTA]] for [[Agentic AI Coding]]
-	- He has abandoned [[Claude Code]] for [[Codex/CLI]] because
+	- He has abandoned [[Claude/Code]] for [[Codex/CLI]] because
 		- Codex CLI has `~230k` usable context vs `~156k` for Claude Code, and token use is more efficient
 		- Codex CLI is written in rust and it's faster
 		- the language Claude Code use is bad for his "mental health" - the "Absolutely right's," the "100% production ready," the gaslighting, etc, and he finds that Codex CLI has none of this.
@@ -22,7 +22,7 @@ readwise-link:: https://readwise.io/reader/shared/01k7xyxn4w4vvh6gsh6zhcd2jb
 	- He uses [[Mac/App/WisprFlow]] for [[Speech-to-Text]]
 		- > Wispr Flow with semantic correction is still king.
 	- [[AI/Coding/Background Task]]s
-		- He reverted back to [[Claude Code]] for a while because of its support for background tasks, which [[Codex/CLI]] doesn't have yet, but now he just uses [[tmux]] instead and it can run CLIs in persistent sessions in the background, and there's plenty of knowledge about how to do that in the model, so you just need to say "run via tmux" great #Tip !
+		- He reverted back to [[Claude/Code]] for a while because of its support for background tasks, which [[Codex/CLI]] doesn't have yet, but now he just uses [[tmux]] instead and it can run CLIs in persistent sessions in the background, and there's plenty of knowledge about how to do that in the model, so you just need to say "run via tmux" great #Tip !
 	- [[MCP Server]]s
 		- > IMO most are something for the marketing department to make a checkbox and be proud. ==Almost all MCPs really should be clis==. I say that as someone who wrote 5 MCPs myself.
 			- #Example - [steipete/claude-code-mcp: Claude Code as one-shot MCP server to have an agent in your agent.](https://github.com/steipete/claude-code-mcp) #LOL
@@ -34,7 +34,7 @@ readwise-link:: https://readwise.io/reader/shared/01k7xyxn4w4vvh6gsh6zhcd2jb
 			- > I **designed my website** so that I can **create api keys** that **allow my model to query any endpoint via curl**, which is faster and more token-efficient in almost all use cases, so even that MCP isn’t something I need daily.
 				- *I've not heard about this [[AI/Coding/Technique]] before... I'd love to read a more detailed description*
 	- [Flo Crivello on X: "How I prompt my agents https://t.co/N4bm5e3VVw" / X](https://x.com/Altimor/status/1975752110164578576) #LOL #Terrible
-		- he mentions that [[Claude Code]] responds well to "yelling" but [[Codex/CLI]] does not, and this is better for his mental health
+		- he mentions that [[Claude/Code]] responds well to "yelling" but [[Codex/CLI]] does not, and this is better for his mental health
 	- #Refactoring
 		- [[New/To/Me]]
 			- [[jscpd]]

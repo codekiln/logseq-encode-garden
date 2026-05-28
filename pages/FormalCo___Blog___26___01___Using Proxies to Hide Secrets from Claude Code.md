@@ -1,6 +1,6 @@
 created-by:: [[Person/Drew Gregory]]
 
-- # [Using Proxies to Hide Secrets from](https://www.joinformal.com/blog/using-proxies-to-hide-secrets-from-claude-code/) [[Claude Code]]
+- # [Using Proxies to Hide Secrets from](https://www.joinformal.com/blog/using-proxies-to-hide-secrets-from-claude-code/) [[Claude/Code]]
 - ## Summary
 - ### Key Problems Identified
 - **Unrestricted access to secrets**: Claude Code has default access to environment variables (like `ANTHROPIC_API_KEY`) and files (.env, etc.) in the project directory, which can include sensitive credentials

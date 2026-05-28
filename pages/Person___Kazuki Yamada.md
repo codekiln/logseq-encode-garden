@@ -1,5 +1,6 @@
 alias:: [[GitHub/User/dyoshikawa]]
 logseq-entity:: [[Logseq/Entity/person]]
+
 - # Kazuki Yamada
 	- ## Bio
 		- Software developer
@@ -39,7 +40,7 @@ logseq-entity:: [[Logseq/Entity/person]]
 		- [[rulesync]]
 		- [[poml]]
 		- [[AI Coding]]
-		- [[Claude Code]]
+		- [[Claude/Code]]
 		- [[CursorAI]]
 	- [[Person/Kazuki Yamada/GitHub]]
 -

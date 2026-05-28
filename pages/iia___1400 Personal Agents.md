@@ -59,7 +59,7 @@
 		- walled garden app stores vs open solutions
 			- [[Person/Greg Raiz]] bunch of different
 		- [[Person/Gunjan Sinha]] a person a [[YCombinator]] [[Person/Gary Tan]] just [[Open Source]]d his intelligence
-		- [[Person/Maria Gorskikh]] I don't want to live in a world where everyone is working with [[Claude Code]] or [[Codex/CLI]], ideally, it should be [[Decentralized]], one registry that is a registry of registries so you can discover any type of agent. that's project [[NANDA]]
+		- [[Person/Maria Gorskikh]] I don't want to live in a world where everyone is working with [[Claude/Code]] or [[Codex/CLI]], ideally, it should be [[Decentralized]], one registry that is a registry of registries so you can discover any type of agent. that's project [[NANDA]]
 		- [[Person/Jordan Tian]] - if we get it to run on edge, then it's baked into your OS. If Gemini or Siri can actually do things for you
 		- [[Person/Uzma Farheen]] - right now we are keeping it closed, but to keep children safe, we want to make it open eventually
 		- [[Person/Greg Raiz]] centralizing concext of my life in a standardized way is the thing

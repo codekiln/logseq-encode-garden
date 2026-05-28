@@ -45,7 +45,7 @@ tags:: [[AI/Voice]]
 		- a lot of people think that [[AI/Model/General]] can do everything, but those of us in the field can't just do that.
 	- [[Person/Nicholas Leonard]]
 		- you need a system that will code itself.
-		- [[Claude Code]] and [[OpenClaw]] can't change the weights.
+		- [[Claude/Code]] and [[OpenClaw]] can't change the weights.
 		- There's a whole other level of optimizing the harness to optimize to your use case.
 		- They should still take human input, the [[AI]] should propose fixes to [[Bug]]s mentioned by the [[Human]]
 		- [[AI/Lab/Frontier]] are pushing everything

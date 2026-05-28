@@ -7,7 +7,7 @@ tags:: [[AI Coding]], [[Reference]]
   | ---------- | ------- | -------------------- |
   | [[Zed]] | Zed Industries | https://github.com/zed-industries/zed |
   | [[Warp]] | Warp | https://github.com/warpdotdev/Warp |
-  | [[Claude Code]] | Anthropic | https://github.com/anthropics/claude-code |
+  | [[Claude/Code]] | Anthropic | https://github.com/anthropics/claude-code |
   | [[RooCode]] | RooVet Developers | https://github.com/RooVetDevelopers/roocode |
   | [[Codex/CLI]] | OpenAI | https://github.com/openai/codex |
   | [[FactoryCLI]] | Factory AI | https://github.com/Factory-AI/factory |

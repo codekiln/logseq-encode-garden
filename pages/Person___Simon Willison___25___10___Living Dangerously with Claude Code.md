@@ -1,4 +1,4 @@
-- [Living dangerously with Claude](https://simonwillison.net/2025/Oct/22/living-dangerously-with-claude/?__readwiseLocation=#atom-everything) - [[Claude Code/--dangerously-skip-permissions]]
+- [Living dangerously with Claude](https://simonwillison.net/2025/Oct/22/living-dangerously-with-claude/?__readwiseLocation=#atom-everything) - [[Claude/Code/--dangerously-skip-permissions]]
 	- [[Person/Simon Willison]] talks about You Only Live Once ([[YOLO]]) mode, aka [--dangerously-skip-permissions - for use in special Development containers - Claude Docs](https://docs.claude.com/en/docs/claude-code/devcontainer), which has advantages ...
 	  
 	  > The wild thing is that all three of these projects weren’t even a priority for me—**they were side quests**, representing pure curiosity that I could outsource to Claude Code and solve in the background while I was occupied with something else.

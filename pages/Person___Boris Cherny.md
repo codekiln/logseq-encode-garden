@@ -1,14 +1,15 @@
 logseq-entity:: [[Logseq/Entity/person]]
+
 - # Boris Cherny
 	- ## Overview
 		- Software engineer, author, and technical leader specializing in frontend development and TypeScript
-		- Creator of [[Claude Code]] at [[Anthropic]]
+		- Creator of [[Claude/Code]] at [[Anthropic]]
 		- Member of Technical Staff at [[Anthropic]] (September 2024 - Present)
 		- Author of "Programming TypeScript" published by O'Reilly Media
 	- ## Professional Experience
 		- ### Current Role
 			- **Member of Technical Staff** at [[Anthropic]] (September 2024 - Present)
-				- Creator and lead developer of [[Claude Code]]
+				- Creator and lead developer of [[Claude/Code]]
 				- Contributing to AI safety and research initiatives
 		- ### Previous Experience
 			- **Principal Software Engineer** at [[Meta]] / Instagram (November 2017 - August 2024)
@@ -28,7 +29,7 @@ logseq-entity:: [[Logseq/Entity/person]]
 			- Published by O'Reilly Media
 	- ## Notable Work
 		- ### Claude Code
-			- Creator and lead developer of [[Claude Code]]
+			- Creator and lead developer of [[Claude/Code]]
 			- AI-powered coding assistant and development tool
 			- Actively shares insights and setup tips for using Claude Code effectively
 	- ## Online Presence
@@ -40,4 +41,4 @@ logseq-entity:: [[Logseq/Entity/person]]
 		- Running
 		- Culinary pursuits
 	- ## Related Content
-		- [[Claude Code/Reddit/26/01/Boris shares his setup with 13 detailed steps]] - Boris shares his Claude Code setup and workflow tips
+		- [[Claude/Code/Reddit/26/01/Boris shares his setup with 13 detailed steps]] - Boris shares his Claude Code setup and workflow tips

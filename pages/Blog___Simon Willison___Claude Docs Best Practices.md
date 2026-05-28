@@ -8,7 +8,7 @@ source:: https://simonwillison.net/2025/Oct/25/claude-docs/
 		- Documentation best practice for Claude Code:
 			- > If you have an `AGENTS.md` file, you can source it in your `CLAUDE.md` using `@AGENTS.md` to maintain a single source of truth.
 	- ## Context
-		- This tip addresses documentation organization in [[Claude Code]]
+		- This tip addresses documentation organization in [[Claude/Code]]
 		- Enables centralized agent configuration management
 		- Prevents duplication across documentation files
 	- ## Implementation

@@ -1,4 +1,4 @@
-- # AI Codecon People [[2026-03-26 Thu]] · 11:00–15:00 EDT
+# AI Codecon People [[2026-03-26 Thu]] · 11:00–15:00 EDT
 	- ## [[Person/Tim O'Reilly]]
 		- **Role:** Founder, CEO, and Chairman, O'Reilly Media
 		- **Bio:** Tim O'Reilly is the founder, CEO, and chairman of O'Reilly Media, which has been providing learning resources for the tech industry for over 40 years. He has shaped key conversations around open source software, Web 2.0, the Maker movement, government as a platform, and the "WTF economy." He is also a partner at O'Reilly AlphaTech Ventures (OATV) and serves on several boards, including Code for America and Civis Analytics. Tim authored many technical books, including *WTF? What's the Future and Why It's Up to Us* (2017), and is working on a book about antitrust in the internet era.
@@ -6,7 +6,7 @@
 		- **Role:** Engineering Leader, Google Chrome
 		- **Bio:** Addy Osmani leads Chrome's Developer Experience organization at Google, helping reduce friction for developers and improve user experiences. He is the author of several books, including *Leading Effective Engineering Teams: Lessons for Individual Contributors and Managers from 10 Years at Google*.
 	- ## [[Person/Cat Wu]]
-		- **Role:** Product Lead, [[Claude Code]], Anthropic
+		- **Role:** Product Lead, [[Claude/Code]], Anthropic
 		- **Bio:** Cat Wu leads product for Claude Code at Anthropic; her team integrates AI-assisted development into engineering workflows across the company.
 	- ## [[Person/Ryan Carson]]
 		- **Role:** Founder and CEO/CTO (stealth startup)

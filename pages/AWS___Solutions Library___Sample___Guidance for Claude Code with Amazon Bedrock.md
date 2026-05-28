@@ -1,4 +1,4 @@
-- # [Guidance for Claude Code with Amazon Bedrock](https://github.com/aws-solutions-library-samples/guidance-for-claude-code-with-amazon-bedrock)
+# [Guidance for Claude Code with Amazon Bedrock](https://github.com/aws-solutions-library-samples/guidance-for-claude-code-with-amazon-bedrock)
 	- Repository: [aws-solutions-library-samples/guidance-for-claude-code-with-amazon-bedrock](https://github.com/aws-solutions-library-samples/guidance-for-claude-code-with-amazon-bedrock)
 	- This Guidance demonstrates how organizations can implement secure enterprise authentication for [[AWS/Bedrock]] using industry-standard protocols and AWS services.
 	- ## Key Features
@@ -52,11 +52,10 @@
 				  poetry run ccwb destroy
 				  ~~~
 	- ## Related Pages
-		- [[Claude Code]]
+		- [[Claude/Code]]
 		- [[Claude Code/Bedrock]]
 		- [[AWS/Bedrock]]
 		- [[AWS/Bedrock/Model/Anthropic]]
 		- [[GitHub/Codespace/Q/Can OIDC Grant Access to AWS Bedrock as in GitHub Actions for Claude Code]]
 		- [[Okta]]
 		- [[AWS/IAM/Role]]
-

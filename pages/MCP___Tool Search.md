@@ -1,7 +1,7 @@
-tags:: [[MCP]], [[AI/Coding]], [[Claude Code]], [[OpenAI]]
+tags:: [[MCP]], [[AI/Coding]], [[Claude/Code]], [[OpenAI]]
 
 - # MCP Tool Search
-	- Both [[Anthropic]] ([[Claude Code]]) and [[OpenAI]] have independently shipped a mechanism for loading [[MCP]] tool definitions **on-demand** rather than injecting all of them into the context window upfront — directly addressing the context bloat problem described in [[MCP/Concept/On-Demand Tool Loading]].
+	- Both [[Anthropic]] ([[Claude/Code]]) and [[OpenAI]] have independently shipped a mechanism for loading [[MCP]] tool definitions **on-demand** rather than injecting all of them into the context window upfront — directly addressing the context bloat problem described in [[MCP/Concept/On-Demand Tool Loading]].
 	- ## The Problem
 		- Geoffrey Huntley's [too many model context protocol servers and LLM allocations on the dance floor](https://simonwillison.net/2025/Aug/22/too-many-mcps/) (via [[Person/Simon Willison]]) crystallised the issue:
 			- Claude's 200k-token window shrinks to ~176k after system prompts in tools like Amp or Cursor
@@ -9,13 +9,13 @@ tags:: [[MCP]], [[AI/Coding]], [[Claude Code]], [[OpenAI]]
 			- Multiple MCP servers stack this penalty; LLMs also perform worse when irrelevant information fills the prompt
 	- ## Anthropic's Solution: MCP Tool Search (Claude Code)
 		- [Scale with MCP Tool Search - Claude Docs](https://code.claude.com/docs/en/mcp#scale-with-mcp-tool-search)
-		- Enabled by default in [[Claude Code]] when MCP tool schemas would exceed **10% of the context window**
+		- Enabled by default in [[Claude/Code]] when MCP tool schemas would exceed **10% of the context window**
 		- When triggered:
 			- MCP tools are **deferred** — not loaded into context upfront
 			- Claude uses a built-in `MCPSearch` tool to discover relevant tools when it needs them
 			- Only the tools actually needed are loaded into context for that turn
 		- Controlled via `ENABLE_TOOL_SEARCH` env var; requires Sonnet 4+ or Opus 4+
-		- See also: [[Claude Code/Q/In what sense are MCP tools loaded on-demand]]
+		- See also: [[Claude/Code/Q/In what sense are MCP tools loaded on-demand]]
 	- ## OpenAI's Solution: Tool Search (GPT-5.4+)
 		- [Tool Search - OpenAI API Docs](https://developers.openai.com/api/docs/guides/tools-tool-search)
 		- Introduced with `gpt-5.4`; tools marked `"defer_loading": true` are not injected upfront

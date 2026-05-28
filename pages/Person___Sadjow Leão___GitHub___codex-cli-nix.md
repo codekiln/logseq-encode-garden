@@ -45,7 +45,7 @@ created-by:: [[Person/Sadjow Leão]]
 	- ## Comparison Notes
 		- Compared with `npm install -g @openai/codex`, this flake is more stable across Node.js version switching and easier to manage declaratively
 		- Compared with raw source builds, this repo emphasizes pre-built multi-platform binaries and quick installation
-		- It is a close parallel to [[Person/Sadjow Leão/GitHub/claude-code-nix]], but targeted at [[Codex/CLI]] instead of [[Claude Code]]
+		- It is a close parallel to [[Person/Sadjow Leão/GitHub/claude-code-nix]], but targeted at [[Codex/CLI]] instead of [[Claude/Code]]
 	- ## Links
 		- README: [README.md](https://github.com/sadjow/codex-cli-nix/blob/main/README.md)
 		- Issues: [GitHub Issues](https://github.com/sadjow/codex-cli-nix/issues)

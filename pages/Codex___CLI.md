@@ -9,4 +9,4 @@ logseq-entity:: [[Logseq/Entity/Software/Project]]
 		- [[2026-04-24 Fri]]
 			- renamed this page to `OpenAI/Codex/CLI` from `OpenAI/GitHub/codex`. need to make a more intuitive space for this, like `Codex/CLI`
 		- [[2025-04-18 Fri]]
-			- it's a response to [[Claude Code]] - a [[CLI/Tool]] for AI coding
+			- it's a response to [[Claude/Code]] - a [[CLI/Tool]] for AI coding

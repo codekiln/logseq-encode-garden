@@ -80,8 +80,8 @@ id:: 69d91948-c0e5-413a-85f4-279b1635a27f
 					- I haven't heard this before; [[Tip/Great]]
 			- [[Person/Andrew Lau]]
 				- these tools are very volatile
-				- 9 months ago it was [[CursorAI]] and now it's [[Claude Code]]
-				- at the very least, the way people are viewing [[Claude Code]] as a command line thing they can dispatch
+				- 9 months ago it was [[CursorAI]] and now it's [[Claude/Code]]
+				- at the very least, the way people are viewing [[Claude/Code]] as a command line thing they can dispatch
 				- in the [[IDE]] cursor is more dominant
 				- all these tools allow you to do picking of [[AI/Model]]s
 				- [[CursorAI]] is starting to use [[Open Source]] models in their training

@@ -1,5 +1,5 @@
 - [BerriAI/litellm: Python SDK, Proxy Server (LLM Gateway) to call 100+ LLM APIs in OpenAI format - [Bedrock, Azure, OpenAI, VertexAI, Cohere, Anthropic, Sagemaker, HuggingFace, Replicate, Groq]](https://github.com/BerriAI/litellm)
-	- via [[Claude Code]] docs page [LLM gateway configuration - Claude Docs](https://docs.claude.com/en/docs/claude-code/llm-gateway)
+	- via [[Claude/Code]] docs page [LLM gateway configuration - Claude Docs](https://docs.claude.com/en/docs/claude-code/llm-gateway)
 		- > Learn how to configure Claude Code with LLM gateway solutions, including LiteLLM setup, authentication methods, and enterprise features like usage tracking and budget management.
 		- > LLM gateways provide a centralized proxy layer between Claude Code and model providers, offering:
 			- > Centralized authentication - Single point for API key management

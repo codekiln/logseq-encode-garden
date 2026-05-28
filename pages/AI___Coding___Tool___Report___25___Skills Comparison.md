@@ -10,7 +10,7 @@ date-created:: [[2025-11-03 Mon]]
 	- ## Comparative Matrix of Agentic Coding Assistants
 		- | Agent Name | Modular Skill Support | Progressive Disclosure | Persistence & Composability | Surfaces | Security/Runtime Constraints | Documentation/Arch. Transparency |
 		  | ---------- | --------------------- | ---------------------- | --------------------------- | -------- | ----------------------------- | -------------------------------- |
-		  | **[[Claude Code]]** | Full (see above) | Yes (multi-level) | Filesystem skill bundles/auto-discovery | Web, API, IDE plugin, local | VM with varied network/fs limits | Extensive [^1] [^2] |
+		  | **[[Claude/Code]]** | Full (see above) | Yes (multi-level) | Filesystem skill bundles/auto-discovery | Web, API, IDE plugin, local | VM with varied network/fs limits | Extensive [^1] [^2] |
 		  | [[GitHub/CoPilot]] | None; only prompt & cmd | No | Stateless, API-driven, no skill model | IDEs, Cloud | Execution in ephemeral/run-only snips | Product docs, no extension/skill docs [^3] |
 		  | [[CursorAI]] | Partial (macros/tasks) | No (all-in-context) | Custom actions/macros; not persistent | Local IDE fork | Script snippets run only on explicit user command | GitHub repo/docs; no skill API [^4] |
 		  | Cline | None | No | NA | CLI/Editor | NA | Repo; no mentions of modular skills [^5] |

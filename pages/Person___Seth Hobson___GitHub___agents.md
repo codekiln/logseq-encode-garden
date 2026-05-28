@@ -1,4 +1,4 @@
-tags:: [[GitHub]], [[Claude Code]]
+tags:: [[GitHub]], [[Claude/Code]]
 
 - # [Claude Code Plugins (wshobson/agents)](https://github.com/wshobson/agents)
 	- Repository: [wshobson/agents](https://github.com/wshobson/agents)
@@ -79,4 +79,3 @@ tags:: [[GitHub]], [[Claude Code]]
 - ## External Links
 	- [GitHub Repository](https://github.com/wshobson/agents)
 	- [Person/Seth Hobson]([[Person/Seth Hobson]]) - Creator and maintainer
-

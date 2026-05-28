@@ -1,11 +1,11 @@
-tags:: [[Blog]], [[mgranda]], [[Claude Code]], [[Mobile/Development]], [[Development Workflow]]
+tags:: [[Blog]], [[mgranda]], [[Claude/Code]], [[Mobile/Development]], [[Development Workflow]]
 date-created:: [[2026/01/02]]
 created-by:: [[Person/mgranda]]
 source:: https://granda.org/en/2026/01/02/claude-code-on-the-go/
 
 - # [Claude Code On-The-Go - granda](https://granda.org/en/2026/01/02/claude-code-on-the-go/)
 	- ## Key Insight
-		- Running six [[Claude Code]] agents in parallel from a phone using Termius on iOS and a cloud VM
+		- Running six [[Claude/Code]] agents in parallel from a phone using Termius on iOS and a cloud VM
 		- No laptop or desktop needed—just Termius on iOS and a cloud VM
 		- The loop: kick off a task, pocket the phone, get notified when Claude needs input. Async development from anywhere.
 	- ## Infrastructure
@@ -52,4 +52,4 @@ source:: https://granda.org/en/2026/01/02/claude-code-on-the-go/
 		- [[AI/Coding]]
 		- [[Mobile/Development]]
 		- [[Development Workflow]]
-		- [[Claude Code]]
+		- [[Claude/Code]]

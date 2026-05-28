@@ -3,14 +3,14 @@ alias:: [[Claude Code Marketplace]], [[Claude Code Marketplaces]]
 - # Claude Code Plugin Marketplaces
 	- Official docs: [Plugin marketplaces - Claude Code Docs](https://code.claude.com/docs/en/plugin-marketplaces)
 	- ## [[My Notes]]
-		- Claude Code Plugin Marketplaces are defined by [[Claude Code/.claude-plugin/marketplace.json]] [docs here](https://code.claude.com/docs/en/plugin-marketplaces#create-your-own-marketplace).
+		- Claude Code Plugin Marketplaces are defined by [[Claude/Code/.claude-plugin/marketplace.json]] [docs here](https://code.claude.com/docs/en/plugin-marketplaces#create-your-own-marketplace).
 			- A **[[Claude Code Marketplace]]** can define many [[Claude Code Plugin]]s.
 			- Each **[[Claude Code Plugin]]** can have many
 				- **[[Claude Code/Command]]s**: Create markdown files in `commands/` directory
-				- **[[Claude Code/Subagent]]s**: Create agent definitions in `agents/` directory
+				- **[[Claude/Code/Subagent]]s**: Create agent definitions in `agents/` directory
 				- **[[Claude Code Skills]]**: Create `SKILL.md` files in `skills/` directory
-				- **[[Claude Code/Hook]]s**: Create `hooks/hooks.json` for event handling
-				- **[[Claude Code/MCP/Server]]s**: Create `.mcp.json` for external tool integration
+				- **[[Claude/Code/Hook]]s**: Create `hooks/hooks.json` for event handling
+				- **[[Claude/Code/MCP/Server]]s**: Create `.mcp.json` for external tool integration
 			- For example, [[Person/Daniel Avila/GitHub/claude-code-templates]] defines within its marketplace.json a [supabase-toolkit plugin](https://github.com/davila7/claude-code-templates/blob/main/.claude-plugin/marketplace.json#L31-L55) for [[Supabase]] (among dozens of other plugins)
 				- ```
 				  {

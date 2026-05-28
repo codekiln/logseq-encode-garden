@@ -1,13 +1,13 @@
 created-by:: [[Person/Cal Rueb]]
 
-- # [Claude Code best practices - YouTube](https://www.youtube.com/watch?v=gv0WHhKelSE) - [[Claude Code]]
+- # [Claude Code best practices - YouTube](https://www.youtube.com/watch?v=gv0WHhKelSE) - [[Claude/Code]]
 	- ## [[My Notes]]
 	  id:: 688e2332-502a-4106-aa81-ddeb8aed57cc
 		- Nice reminder of [[Agentic]] definition from [[Anthropic/Blog/24/12/Building Effective Agents]]
 			- ((688e1ee0-8a38-4879-a2f1-6aad419c8020))
 		- It's interesting to hear how skeptical he sounds of [[MCP]] use in Claude Code at this time; it sounds "advanced" and he advises that people prefer well-documented [[CLI/Tool]]s over MCP Servers
 			- {{embed ((688e1ee0-c23d-408c-8541-e7ef92b40df3))}}
-		- I don't think I've managed to use the [[AI/Image/Processing]] features of [[Claude Code]] yet
+		- I don't think I've managed to use the [[AI/Image/Processing]] features of [[Claude/Code]] yet
 			- ((688e1ee0-cf83-4625-88a8-c3a8ead1e454))
 	- ## [[Video]]
 		- {{video https://www.youtube.com/watch?v=gv0WHhKelSE}}
@@ -160,7 +160,7 @@ created-by:: [[Person/Cal Rueb]]
 					- [[VSCode]] VS Code and [[JetBrains]] integrations
 						- Claude knows what file you have open
 						- Enhanced development workflow
-				- #### Staying Updated about new things in [[Claude Code]] {{youtube-timestamp 1261}}
+				- #### Staying Updated about new things in [[Claude/Code]] {{youtube-timestamp 1261}}
 					- #Tip
 						- Public GitHub project: Claude Code under Anthropic
 						- **Check changelog weekly**

@@ -5,7 +5,7 @@
 			- then call [[rulesync/generate]]
 		- ### use `rulesync.jsonc` for project defaults
 			- use rulesync includes
-			- only generate for [[Codex/CLI]], [[CursorAI]], [[Claude Code]], [[GitHub/CoPilot/CLI]] for now
+			- only generate for [[Codex/CLI]], [[CursorAI]], [[Claude/Code]], [[GitHub/CoPilot/CLI]] for now
 		- ### prefer skills to mcp and rules
 			- each rule goes in context, which leads to bloat
 		- ### Kebab-case filenames

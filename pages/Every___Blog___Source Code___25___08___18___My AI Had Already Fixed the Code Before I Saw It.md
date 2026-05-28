@@ -7,7 +7,7 @@ logseq-entity:: [[Logseq/Entity/Article]]
 	- By Kieran Klaassen (GM of [[Cora]]); [[Source Code]] column at [[Every]].
 	- ## Summary
 		- Introduces **compounding engineering**: development systems with memory where PRs, bugs, and reviews permanently upgrade defaults—not one-off prompts.
-		- Example: [[Claude Code]] review comments cited prior PR patterns (naming, test scope, error handling) without being asked.
+		- Example: [[Claude/Code]] review comments cited prior PR patterns (naming, test scope, error handling) without being asked.
 		- Contrasts short-term “prompt, ship, reset” AI coding with systems that make tomorrow faster than today.
 	- ## Playbook (five steps)
 		- 1. **Teach through work** — `CLAUDE.md` for taste; `llms.txt` for architecture-level rules.
