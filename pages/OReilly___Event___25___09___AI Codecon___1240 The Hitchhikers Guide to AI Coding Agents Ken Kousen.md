@@ -16,7 +16,7 @@
 		- Best practices for working with AI coding tools
 	- ## [[My Notes]]
 		- 12:52 he teaches classes on them. He's a [[Java]] dev
-		- 12:52 [[Claude/Code]] is his favorite
+		- 12:52 [[Claude Code]] is his favorite
 		- 12:53 Four Collaboration Patterns coming up
 			- 1. Programmatic Orchestration
 				- LangChain4j passing chat memory between agents
@@ -25,7 +25,7 @@
 			- 3. MCP Server Wrapping
 				- Headless agents exposed as MCP servers
 			- 4. Claude Code Agent Orchestration
-				- [[Claude/Code/Subagent]] [Subagents - Anthropic](https://docs.anthropic.com/en/docs/claude-code/sub-agents)
+				- [[Claude Code/Subagent]] [Subagents - Anthropic](https://docs.anthropic.com/en/docs/claude-code/sub-agents)
 		- 12:55 example: Opera generator
 			- gpt 4.1 and claude are taking turns generating the libretto
 			- all these services are stateless; you have to pass the memory back and forth

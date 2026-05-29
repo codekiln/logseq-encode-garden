@@ -77,8 +77,8 @@ alias:: [[aitmpl.com]]
 		  npx claude-code-templates@latest --plugins
 		  ```
 - ## Related Concepts
-	- [[Claude/Code/Command/Slash/Docs/Comparison with Skills]]
-	- [[Claude/Code/Skill/Project]]
+	- [[Claude Code/Command/Slash/Docs/Comparison with Skills]]
+	- [[Claude Code/Skill/Project]]
 	- [[My/Pref/Dev/AI/Config/Management]]
 - ## Links
 	- **🌐 Browse Templates**: [aitmpl.com](https://aitmpl.com)

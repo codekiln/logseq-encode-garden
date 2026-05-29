@@ -3,8 +3,8 @@ created-by:: [[Person/Kristian Fagerlie]]
 - # [5 AMAZING Claude Code Commands You MUST Know About - YouTube](https://www.youtube.com/watch?v=eM_Tg8_BGx4)
 	- ## [[My Notes]]
 		- [[2025-05-16 Fri]]
-			- I turned this into a How To guide - [[Claude/Code/How To/Use Essential Commands]]
-	- ## #Video - [[Claude/Code]]
+			- I turned this into a How To guide - [[Claude Code/How To/Use Essential Commands]]
+	- ## #Video - [[Claude Code]]
 		- {{video https://www.youtube.com/watch?v=eM_Tg8_BGx4}}
 			- ### {{youtube-timestamp 0}} Introduction & Overview
 				- "Today I want to go over five different commands you probably haven't used yet in Claude Code."

@@ -2,7 +2,7 @@ logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Jason Allum]]
 tags:: [[Task/Management/Git-Friendly]]
 alias:: [[Person/Jason Allum/GitHub/beadwork]]
-via:: [[Claude/Code/Reddit/26/02/Am I an idiot for using Beads]]
+via:: [[Claude Code/Reddit/26/02/Am I an idiot for using Beads]]
 
 - # [jallum/beadwork](https://github.com/jallum/beadwork)
 	- [[CLI/Tool]] that implements a git-backed issue tracker for AI agents.
