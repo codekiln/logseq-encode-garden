@@ -1,1 +1,1 @@
-alias:: [[Text-to-Speech]]
+alias:: [[Text-to-Speech]], [[TTS]]

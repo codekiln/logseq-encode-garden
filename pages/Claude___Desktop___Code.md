@@ -1,0 +1,1 @@
+- This is basically [[Claude/Code]] but inside the dekstop app

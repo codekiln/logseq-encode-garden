@@ -50,5 +50,6 @@ tags:: [[AI/Model]]
 		- Model version code: `claude-opus-4-8`
 	- ## References
 		- [Introducing Claude Opus 4.8 (Anthropic)](https://www.anthropic.com/news/claude-opus-4-8)
+		- [[Anthropic/Blog/26/05/Introducing dynamic workflows in Claude Code]]
 		- [Models overview (Claude API docs)](https://platform.claude.com/docs/en/about-claude/models/overview)
 		- [Migrating from Claude Opus 4.7 (Claude API docs)](https://platform.claude.com/docs/en/about-claude/models/migration-guide#migrating-from-claude-opus-47)

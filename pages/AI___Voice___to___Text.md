@@ -1,1 +1,1 @@
-alias:: [[Voice-to-Text]], [[Speech-to-Text]]
+alias:: [[Voice-to-Text]], [[Speech-to-Text]], [[STT]]
