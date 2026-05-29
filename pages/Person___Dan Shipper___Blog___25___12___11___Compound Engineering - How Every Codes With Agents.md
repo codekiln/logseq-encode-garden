@@ -9,7 +9,7 @@ logseq-entity:: [[Logseq/Entity/Article]]
 		- At [[Every]], essentially **100% of code is agent-written**; engineering shifts from typing to orchestrating agents in a **plan → work → review → compound** loop.
 		- **Compound engineering** expects each feature to make the *next* feature easier by persisting lessons (bugs, failed tests, review insights) for future agents—while codebase complexity still grows, agent knowledge of the codebase grows faster.
 		- Five in-house products run primarily by single owners serving thousands of users; claim: one developer with the right system can match ~five developers of a few years ago.
-		- Open-sourced workflow: [[Person/Every/GitHub/compound-engineering-plugin]].
+		- Open-sourced workflow: [[Every/GitHub/compound-engineering-plugin]].
 	- ## Notes
 		- **Plan:** agents study repo structure, commit history, and external best practices before planning—most human time lives here.
 		- **Review:** engineer judges output and meta-lessons, not just line-by-line nits.

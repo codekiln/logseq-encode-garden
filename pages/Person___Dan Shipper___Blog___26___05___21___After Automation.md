@@ -25,6 +25,6 @@ logseq-entity:: [[Logseq/Entity/Article]]
 		- [[Person/Dan Shipper/Blog/25/12/11/Compound Engineering - How Every Codes With Agents]]
 		- [[Every/Blog/Source Code/25/08/18/My AI Had Already Fixed the Code Before I Saw It]]
 		- [[Engineer/ing/Compound]]
-		- [[Person/Every/GitHub/compound-engineering-plugin]]
+		- [[Every/GitHub/compound-engineering-plugin]]
 		- [[AI/ES/25/11 Code/CODE/21 Fri/1700 Benchmarks vs economics the AI capability measurement gap]] — related lab-vs-field measurement theme
 		- Author index: [every.to/@danshipper](https://every.to/@danshipper?sort=newest)

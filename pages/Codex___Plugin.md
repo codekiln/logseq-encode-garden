@@ -52,4 +52,4 @@
 		- Unresolvable entries are skipped without failing the whole marketplace.
 	- Official Plugin Directory self-serve publishing: coming soon.
 	- ## Related
-		- [[Person/Every/GitHub/compound-engineering-plugin]] — example marketplace plugin (`codex plugin marketplace add EveryInc/compound-engineering-plugin`); see [[Engineer/ing/Compound]].
+		- [[Every/GitHub/compound-engineering-plugin]] — example marketplace plugin (`codex plugin marketplace add EveryInc/compound-engineering-plugin`); see [[Engineer/ing/Compound]].
