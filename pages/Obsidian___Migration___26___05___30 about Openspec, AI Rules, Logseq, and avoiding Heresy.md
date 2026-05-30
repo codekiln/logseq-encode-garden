@@ -1,0 +1,51 @@
+-
+- # on [[OpenSpec]], [[Agent/Skills]], [[Logseq]], and considering a Migration to Obsidian
+	- ## The itch
+		- I want [[OpenSpec/Spec]] and my [[AI Agent Skills]] and rules to live inside this knowledge garden as first-class content I can edit alongside the rest of my wiki. It feels silly that I can't use Logseq to maintain all the markdown files govern this Logseq garden. It increasingly bothers me that the language of agentic tools is typical [[Markdown Yaml Frontmatter]] that is incompatible with [[Logseq]]. I *can* use Logseq-flavored markdown with agents, just not with typical agent tooling, which expects things to be presented a certain way.
+	- ## Unwilling to proxy skills and specs into the Logseq garden
+		- An AI brainstorming partner suggested I could proxy skills and specs into the garden, but I want to avoid Heresies - when two or more files represent different versions of the same truth. This is especially bad in the case of agent skills or specs, where disagreement can cause "split brain" or divergence of plan or behavior.
+		- So I'm unwilling to "make the specs visible in the graph" by generating an LFM copy of each spec or skill for Logseq to render. A generated mirror is a cache, and agents also tend to get confused about which is the source of truth, editing the wrong one. This leads to heresy and confusion. In addition, the whole point is to use Logseq to edit the files, not just view them.
+	- ## Why Logseq resists integration with the wider common Markdown tools
+		- ### Logseq requires unique filenames
+			- Page [[Identity]] comes from a **unique filename** across the whole graph; duplicate basenames raise warnings.
+			- Content is **bulleted blocks** (Logseq Flavored Markdown): every line is a bullet, headings included, with no blank lines.
+			- Logseq **rewrites a file** when it edits it — injecting bullets, normalizing headings, stripping blank lines.
+		- ### [[OpenSpec]], [[Agent/Skills]]  `SKILL.md`, [[Obsidian]] identify files by their folder
+			- With `OpenSpec`, the [[Identity]] of a file comes from its **directory path**, so the same constant filenames recur everywhere — many files named `spec.md`, `proposal.md`, `tasks.md`.
+			- Similarly, with [[Agent/Skills]] such as those expressed in [[rulesync]], it's required that the skill be called `SKILL.md`, deriving its identity from the folder it is in.
+			- In Obsidian, as well, the [[Identity]] of a file also comes from the **file path**; folders are native and duplicate basenames in different folders are fine.
+			- This conflicts with logseq because the same filename might be repeated multiple times in different folders.
+		- ### [[OpenSpec]] Validates first character of headings, conflicting with Logseq
+			- Content is **freeform CommonMark plus YAML**, with headings that must sit at column zero in specific positions (`## Purpose`, `## Requirements`, `### Requirement:`, `#### Scenario:`, delta headers like `## ADDED Requirements`). This means that [[Logseq Flavored Markdown]] would break this; it would add the leading hyphen: `- ## Purpose`. OpenSpec validation would fail.
+		- ### [[Obsidian]] allows typical YAML frontmatter, while [[Logseq]] requires specialized frontmatter
+			- In Obsidian, content is **freeform markdown** with typical [[Markdown Yaml Frontmatter]].
+			- In Logseq, the [[Logseq/Frontmatter]] is not compatible with the [[Agent/Skills]] specification. It uses a [[ClojureScript]]-derived property delimiter with `::`.
+		- ### The hard wall
+			- The real blocker is not filename collisions or indexing noise — Logseq's `:hidden` setting silences those cleanly (it already hides things like `.rulesync/**/*.md`).
+			- The wall is the editor itself: the moment an OpenSpec spec is opened and edited in Logseq, Logseq reformats it into bulleted LFM, which breaks the column-zero heading structure the spec requires. **Editing specs in Logseq is therefore not possible without breaking them.**
+	- ## The options, as I see it
+		- ### Create a new `.metagarden` folder with an [[Obsidian/Vault]] of [[OpenSpec]] and [[Agent/Skills]]
+			- I could keep the specs and skills as plain markdown hidden from Logseq in a [[dot/folder]] like `.specs` and edit them in another tool (such as [[Obsidian]]). This isn't a terrible idea, but it's fundamentally weird to bifurcate a part of the repo into Obsidian just to use typical Markdown.
+		- ### Create a separate repo for my [[Agent/Skills]] ... and [[OpenSpec]] specs, too?
+			- I could create `codekiln/agents` and `codekiln/specs` with agents and spec blueprints for other repos, then install them into this repo.
+				- I could use [[rulesync/Skill/Declarative Source]] in the case of agents.
+				- I could use [[git submodules]] in the case of specs.
+		- ### Migrate to [[Obsidian]] for my tech garden
+			- Lately I've been really happy with [[Logseq]], even though the project as a whole is headed in a direction with [[Logseq/DB]] that I'm not interested in pursuing.
+	- ## This is already true for my AI rules and skills
+		- My agent skills already live as `.rulesync/skills/*/SKILL.md` and are hidden from Logseq. The graph already cannot see or edit them — the same bifurcation, present today, not hypothetical.
+		- In the Obsidian-based garden there is no such split: the skills are simply part of the vault. That contrast is the whole tension in one sentence.
+	- ## Options on the table
+		- ### 1. Document and decide later
+			- Capture the situation (this page) and make no structural change yet.
+		- ### 2. Dual-editor, one repo — no migration
+			- The OpenSpec tree and the skills stay as the single canonical plain-markdown files, hidden from Logseq. Point Obsidian or an editor at the repo as a second editing surface for exactly those corners. Logseq owns `pages/` and `journals/`; the freeform-markdown corners are edited elsewhere. One set of files, two editors over disjoint paths. Single source, no heresy, no migration — but Logseq's own graph still can't see them.
+		- ### 3. Migrate this garden to Obsidian
+			- The structurally correct substrate for OpenSpec, skills, and true single-source authoring in one editor. The cost is large: roughly four thousand pages of LFM, block references, queries, and several dozen LFM-tuned rules and skills would all need to come across. The OpenSpec question alone shouldn't force this — but OpenSpec, skills-as-garden-content, and heresy-aversion all point the same direction, which is worth taking seriously rather than dismissing.
+	- ## A naming thought that rides along
+		- I've been considering reserving a `Meta` namespace for *how I garden in this garden* (subjective gardening decisions) and keeping `Logseq` for *knowledge about Logseq the tool*. The point is to signal, to both humans and agents, which is which.
+		- Under that split, a spec hub — if one ever exists in the graph — would be `Meta/Spec` (tool-agnostic, surviving any future replacement of OpenSpec) rather than `Meta/OpenSpec`, since [[OpenSpec]] already documents the tool. This parallels a possible move of entity docs toward `Meta/Entity`.
+	- ## Open questions
+		- Does the dual-editor path actually scratch the "specs are part of the garden" itch, or does it still feel bifurcated precisely because Logseq's graph can't see those files?
+		- Is a full migration to Obsidian worth it for a graph this size, or is Obsidian only the right default for new gardens?
+		- If I do migrate, does the Obsidian-based garden absorb this one, or do they stay separate?
