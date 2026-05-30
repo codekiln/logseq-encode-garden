@@ -1,0 +1,13 @@
+- [[Keyshort]] [[Yazi]] [[Yazi/Keyshort]]
+	- **Find Next File** [[Card]]
+		- Shortcut: `/`
+		- Description: Open find prompt searching forward (smart case).
+	- **Find Previous File** [[Card]]
+		- Shortcut: `?`
+		- Description: Open find prompt searching backward (smart case).
+	- **Next Found** [[Card]]
+		- Shortcut: `n`
+		- Description: Jump to the next search match.
+	- **Previous Found** [[Card]]
+		- Shortcut: `N`
+		- Description: Jump to the previous search match.
