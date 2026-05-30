@@ -31,12 +31,12 @@ Garden examples: `pages/nvim___Q___What does %22 mean in nvim%3F.md`, `pages/mis
 | Plain text | Labels, ✓/✗, short phrases |
 | `` `command` `` | Ephemeral shell tokens with no graph page; flags like `` `--no-prune` `` |
 
-Do not wrap wikilinks in `**…**` (see rule **logseq-flavored-markdown** → *Bold and inline code*).
+Do not wrap wikilinks in `**…**` (see rule **logseq-core** → *Bold and inline code*; advanced detail: skill **logseq-lfm**).
 
 ## Two-column vs wide tables
 
 - **Two columns**, compact comparisons: table is fine inside a bullet.
-- **Many columns** or long prose per cell: prefer nested bullets (label → value) per **logseq-convert-from-md-to-lfm**.
+- **Many columns** or long prose per cell: prefer nested bullets (label → value) per skill **logseq-convert-md-to-lfm**.
 
 ## Footnotes under the table
 

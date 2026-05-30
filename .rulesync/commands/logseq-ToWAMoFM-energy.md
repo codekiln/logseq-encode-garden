@@ -45,7 +45,7 @@ This command imports an "Energy" section from the Treatise on Writing Acousmatic
 
 ### Step 4: Extract Keywords and Create Links
 
-**CRITICAL: Follow Logseq Flavored Markdown (LFM) rules strictly. See the logseq-flavored-markdown rule for complete guidelines.**
+**CRITICAL: Follow Logseq Flavored Markdown (LFM) rules strictly. See the logseq-core rule (advanced detail: skill logseq-lfm) for complete guidelines.**
 
 1. **Identify key musical concepts and terms** from the content
 
@@ -88,7 +88,7 @@ This command imports an "Energy" section from the Treatise on Writing Acousmatic
    - Terms found in angle brackets in the original French text
 
 6. **Create person references for composers mentioned:**
-   - Follow `[[Logseq/Entity/person]]` and the **logseq-person** router for person hub creation
+   - Follow `[[Logseq/Entity/person]]` and the **logseq-person** command (router) / skill **logseq-entity** for person hub creation
    - Search first to avoid duplicates
    - Use `[[Person/{Composer Name}]]` format
 
@@ -142,7 +142,7 @@ For each sound example:
 ### Step 7: Formatting Guidelines
 
 1. **Follow Logseq Flavored Markdown (LFM) rules strictly:**
-   - **CRITICAL: Refer to the logseq-flavored-markdown rule for complete guidelines**
+   - **CRITICAL: Refer to the logseq-core rule (advanced detail: skill logseq-lfm) for complete guidelines**
    - All content must be in bullet points (`-`)
    - Use TAB indentation (not spaces) for nesting
    - No blank lines between content blocks
@@ -178,7 +178,7 @@ For each sound example:
 
 **Output:**
 - Creates `pages/ToWAMoFM___01___01 Energy___01 Percussion-Resonance.md`
-- Creates person hubs for all composers — following `[[Logseq/Entity/person]]` / **logseq-person** router
+- Creates person hubs for all composers — following `[[Logseq/Entity/person]]` / **logseq-person** command (router) / skill **logseq-entity**
 - Creates embed pages for each sound example
 - Updates journal with entry
 

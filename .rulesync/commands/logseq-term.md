@@ -99,6 +99,6 @@ alias:: [[Alternate Name]]
 
 Use the prefix that matches the type: `rule:` for rules, `command:` for commands, `skill:` for skills.
 
-- rule: `logseq-flavored-markdown` – Logseq bullet structure and frontmatter rules
-- rule: `logseq-page-naming-reference` – File naming and link naming conventions
-- rule: `logseq-journal-updates` – Record creations and updates in today's journal
+- rule: `logseq-core` – Logseq bullet structure and frontmatter rules (advanced detail: skill `logseq-lfm`)
+- rule: `logseq-core` – File naming and link naming conventions (detail: skill `logseq-lfm`)
+- rule: `logseq-core` – Record creations and updates in today's journal (journal updates)

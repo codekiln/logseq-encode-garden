@@ -12,6 +12,10 @@ A Node.js CLI tool that automatically generates configuration files for various 
 
 ## Table of Contents
 
+### This repo
+
+- [How this repo uses Rulesync](./this-repo.md) — targets, canonical-sources policy, the always-on core vs skills split, and the generate/commit workflow specific to this garden.
+
 ### Getting Started
 
 - [Installation](./installation.md)

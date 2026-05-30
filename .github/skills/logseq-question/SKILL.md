@@ -33,7 +33,7 @@ For **non-question** entity work (other types per `[[Logseq/Entity]]`, registry 
 
 - **This file** — when to use the skill and how it relates to **logseq-entity** / **`[[Logseq/Entity/question]]`**.
 - **[references/question-workflow.md](./references/question-workflow.md)** — full variables, conventions, numbered steps, reporting, and related rules/commands.
-- Answer body LFM (formatting only, not section names): rule **logseq-flavored-markdown** → *Bold and inline code (monospace)*.
+- Answer body LFM (formatting only, not section names): rule **logseq-core** → *Bold and inline code (monospace)* (advanced detail: skill **logseq-lfm**).
 
 ## Reference guide
 

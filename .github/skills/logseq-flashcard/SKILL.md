@@ -22,7 +22,7 @@ description: >-
 
 ## Always
 
-- Rules: `logseq-flavored-markdown`, `logseq-page-naming-reference`, `logseq-link-hygiene`, `journal-updates` (link new pages under `[[Filed]]`, edits under `[[Updated]]`, default link-only).
+- Rules: `logseq-core` (LFM + naming; advanced detail: skill `logseq-lfm`), `logseq-link-hygiene`, journal-updates (link new pages under `[[Filed]]`, edits under `[[Updated]]`, default link-only).
 - For new card work, use `[[Card]]` as the Logseq review marker and `logseq-entity:: [[Logseq/Entity/Card]]` for first-class card pages. Treat `#card` and `[[card]]` as legacy forms to preserve or migrate intentionally.
 - Avoid `Question :: Answer` and “Flashcard Questions” sections on Keyshort pages.
 

@@ -123,6 +123,6 @@ tags:: [[Podcast/Episode]]
 
 Use the prefix that matches the type: `rule:` for rules, `command:` for commands, `skill:` for skills.
 
-- rule: `logseq-page-naming-reference` - Namespace and filename conventions
-- rule: `logseq-flavored-markdown` - Logseq markdown structure
-- rule: `logseq-journal-updates` - Journal update requirements
+- rule: `logseq-core` - Namespace and filename conventions (detail: skill `logseq-lfm`)
+- rule: `logseq-core` - Logseq markdown structure (advanced detail: skill `logseq-lfm`)
+- rule: `logseq-core` - Journal update requirements (journal updates)

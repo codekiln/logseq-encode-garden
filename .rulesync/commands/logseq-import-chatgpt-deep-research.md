@@ -37,7 +37,7 @@ This command imports a ChatGPT Deep Research report PDF into a Logseq page, conv
 
 ### Step 3: Convert to Logseq Flavored Markdown
 
-Follow the logseq-convert-from-md-to-lfm rule:
+Follow the logseq-convert-md-to-lfm skill:
 
 - [ ] Convert all content to bullet-point structure with TAB indentation
 - [ ] Ensure all headings are prefixed with bullet points (`-`)
@@ -128,11 +128,11 @@ After completing the import, report:
 
 ## Related Rules
 
-- **logseq-convert-from-md-to-lfm** - Conversion checklist for markdown to LFM
-- **logseq-flavored-markdown** - Standard LFM formatting rules
-- **logseq-naming-conventions** - Page naming and namespace conventions
-- **logseq-page-naming-reference** - File vs link format reference
-- **logseq-journal-updates** - How to update journal entries
+- skill **logseq-convert-md-to-lfm** - Conversion checklist for markdown to LFM
+- rule **logseq-core** - Standard LFM formatting rules (advanced detail: skill **logseq-lfm**)
+- rule **logseq-core** - Page naming and namespace conventions (detail: skill **logseq-lfm**)
+- rule **logseq-core** - File vs link format reference (detail: skill **logseq-lfm**)
+- rule **logseq-core** - How to update journal entries (journal updates)
 
 ## Common Pitfalls
 

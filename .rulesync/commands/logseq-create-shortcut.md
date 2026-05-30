@@ -102,6 +102,6 @@ This command creates or updates Logseq Keyshort pages using the canonical `<Scop
 Use the prefix that matches the type: `rule:` for rules, `command:` for commands, `skill:` for skills.
 
 - skill: `logseq-flashcard` – Flashcard creation and Keyshort maintenance (includes this command’s shape)
-- rule: `logseq-page-naming-reference` – File naming and link conventions
-- rule: `logseq-flavored-markdown` – LFM formatting rules
+- rule: `logseq-core` – File naming and link conventions (detail: skill `logseq-lfm`)
+- rule: `logseq-core` – LFM formatting rules (advanced detail: skill `logseq-lfm`)
 - command: `logseq-manage-shortcut-flashcards` – Audit and maintain Keyshort pages

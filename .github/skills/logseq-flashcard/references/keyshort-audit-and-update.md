@@ -52,6 +52,6 @@ Check for:
 
 ## Related project rules and commands
 
-- rule: `logseq-page-naming-reference`
-- rule: `logseq-flavored-markdown`
+- rule: `logseq-core` (naming/paths; detail: skill `logseq-lfm`)
+- rule: `logseq-core` (LFM; detail: skill `logseq-lfm`)
 - command: `logseq-create-shortcut`

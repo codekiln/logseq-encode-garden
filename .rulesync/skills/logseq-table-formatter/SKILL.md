@@ -6,7 +6,7 @@ description: >-
   for readable plain text, and [[wikilinks]] for graph commands or pages when they exist.
   Use when adding or fixing tables in pages/*.md or journals/*.md, when the user asks
   for column alignment, or after editing comparison tables. Do not use to convert wide
-  tables to bullets (rule logseq-convert-from-md-to-lfm) or for non-Logseq markdown.
+  tables to bullets (skill logseq-convert-md-to-lfm) or for non-Logseq markdown.
 targets: ["*"]
 codexcli:
   short-description: Align LFM tables with padded columns and wikilinks
@@ -18,7 +18,7 @@ Use when a table lives **inside** an LFM bullet tree (`pages/`, `journals/`) and
 
 ## Default path
 
-1. Confirm the table should stay a table (not a bullet label/value list). If more than two columns and the content is not a compact comparison, consider bullets per rule **logseq-convert-from-md-to-lfm**.
+1. Confirm the table should stay a table (not a bullet label/value list). If more than two columns and the content is not a compact comparison, consider bullets per skill **logseq-convert-md-to-lfm**.
 2. Build row data (header + separator + body). Prefer **short** cell text; put detail in child bullets under the table.
 3. Use **wikilinks** in cells when a canonical page exists (`[[mise/unuse]]`, not `` `mise unuse` ``). Run skill **logseq-link-hygiene** when unsure a page exists.
 4. Format with aligned columns:
@@ -51,6 +51,6 @@ Trust script output for column widths; fix wikilinks and wording before running.
 
 ## Related
 
-- rule: **logseq-flavored-markdown** — bullets, tabs, no blank lines between blocks.
-- rule: **logseq-convert-from-md-to-lfm** — when **not** to keep a table.
+- rule: **logseq-core** — bullets, tabs, no blank lines between blocks (advanced detail: skill **logseq-lfm**).
+- skill: **logseq-convert-md-to-lfm** — when **not** to keep a table.
 - skill: **logseq-link-hygiene** — resolve `[[wikilinks]]` before filing.

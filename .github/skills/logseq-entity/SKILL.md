@@ -57,7 +57,7 @@ If the Logseq entity pages and fallback config are both missing, inspect the gar
 
 ## Graph edits and today’s journal
 
-When **any graph pages** under `pages/` are **created or materially edited** during entity work—including **imports** that only add `logseq-entity::`, **prerequisite pages required by the active type page or registry**, or **`Logseq/Entity/<Type>`** edits—you are **not done** until **`journals/YYYY_MM_DD.md`** records the change set (**`[[Filed]]`** vs **`[[Updated]]`**, mutual exclusivity, link-first lists). Load **`[[Logseq/Journal]]`** / **`[[Logseq/Journal/Section/Garddiff]]`** when they exist; otherwise follow rule **`logseq-journal-updates`**.
+When **any graph pages** under `pages/` are **created or materially edited** during entity work—including **imports** that only add `logseq-entity::`, **prerequisite pages required by the active type page or registry**, or **`Logseq/Entity/<Type>`** edits—you are **not done** until **`journals/YYYY_MM_DD.md`** records the change set (**`[[Filed]]`** vs **`[[Updated]]`**, mutual exclusivity, link-first lists). Load **`[[Logseq/Journal]]`** / **`[[Logseq/Journal/Section/Garddiff]]`** when they exist; otherwise follow rule **`logseq-core`** (journal updates).
 
 Procedure: [references/entity-session-journal.md](./references/entity-session-journal.md).
 
@@ -189,3 +189,5 @@ When the user says something like `add entities from today's journal page`:
 - Search and dedup rules: [references/entity-search-and-dedup.md](./references/entity-search-and-dedup.md)
 - Journal extraction and aggressive inference: [references/entity-inference-from-journal.md](./references/entity-inference-from-journal.md)
 - After graph edits (garddiff / Filed / Updated): [references/entity-session-journal.md](./references/entity-session-journal.md)
+- `date-created::` (entity creation/publication date, not import date): [references/date-created-frontmatter.md](./references/date-created-frontmatter.md)
+- External entity pages (canonical H1 link, no duplicate URL/macros): [references/external-entity-page.md](./references/external-entity-page.md)

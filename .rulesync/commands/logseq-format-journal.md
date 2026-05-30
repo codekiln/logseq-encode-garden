@@ -8,8 +8,12 @@ globs:
 
 ## Configuration order (garden-first journal style)
 
-- If **`[[Logseq/Journal]]`** and linked **`Logseq/Journal/...`** pages exist, read them first. Use them as **authoritative for heading voice, recurring sections, and exemplar days** when they conflict with this command’s defaults.
-- If silent, use the style principles below and the **`logseq-journal-updates`** rule.
+- If **`[[Logseq/Journal]]`** (`pages/Logseq___Journal.md`) and linked **`Logseq/Journal/...`** pages exist, read them first. Use them as **authoritative for heading voice, recurring sections, narrative patterns, and exemplar days** when they conflict with this command’s defaults. Examples of linked section pages: **`[[Logseq/Journal/Section/Friction]]`**, **`[[Logseq/Journal/Section/Garddiff]]`**, **`[[Logseq/Journal/Editorial headings]]`**.
+- If those pages are missing or silent on a point, use the style principles below, the always-on `logseq-core` journal-updates guardrail, and the LFM formatting in `logseq-core` (advanced detail: the `logseq-lfm` skill).
+
+## Agent workflow
+
+Mirror the entity workflow: load **`[[Logseq/Entity]]`** for entity policy (via the **logseq-entity** skill); load **`[[Logseq/Journal]]`** before restructuring or extending a journal file.
 
 # Format Journal Entry Command
 

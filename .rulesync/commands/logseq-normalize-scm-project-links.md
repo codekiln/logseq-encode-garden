@@ -11,6 +11,16 @@ Normalize GitHub/GitLab project links to the canonical style:
 - `[[Person/<Name>/GitHub/<ProjectName>]]`
 - `[[Person/<Name>/GitLab/<ProjectName>]]`
 
+Examples: `[[Person/Simon Willison/GitHub/showboat]]`, `[[Person/Jane Doe/GitLab/internal-platform]]`.
+
+## Disallowed styles (rewrite these)
+
+- `[[GitHub/<owner>/<project>]]`
+- `[[GitLab/<owner>/<project>]]`
+- `[[GitHub/<project>]]`
+- `[[GitLab/<project>]]`
+- Any other non-canonical GitHub/GitLab namespace link.
+
 ## Workflow
 
 1. Identify candidate links in target files:
@@ -33,5 +43,5 @@ Normalize GitHub/GitLab project links to the canonical style:
 
 ## Related
 
-- rule: `logseq-scm-project-link-style` - SCM namespace policy
-- rule: `logseq-person` (router) — see `[[Logseq/Entity/person]]` for person hub naming and deduplication
+- command: `logseq-person` (router) and skill `logseq-entity` — see `[[Logseq/Entity/person]]` for person hub naming and deduplication. If a person page does not exist and the task requires references, create/update the person **hub** first per that SOP.
+- naming/path rules: `logseq-core` rule and `logseq-lfm` skill (file-name ↔ link translation).
