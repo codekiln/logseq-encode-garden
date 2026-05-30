@@ -17,9 +17,12 @@
   "baseDirs": [
     "."
   ],
-  // marking as delete false because rulesync does not yet support custom yaml attrs in claude code slash commands
-  // see [Feature request: for claude code slash commands, support passing through claude-code-specific yaml markdown frontmatter keys to the generated command markdown files · Issue #413 · dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync/issues/413) 
-  "delete": false,
+  // delete:true lets `rulesync generate` auto-remove orphaned outputs for the configured
+  // targets when a source under .rulesync/ is deleted (needed for the rules->skills refactor).
+  // Note: the claude-code-only `argument-hint` command frontmatter (Issue #413) is dropped from
+  // generated commands on every generate regardless of this flag, so flipping it changes nothing there.
+  // see https://github.com/dyoshikawa/rulesync/issues/413
+  "delete": true,
   "verbose": true,
   "experimentalSimulateCommands": true,
   "experimentalSimulateSubagents": false

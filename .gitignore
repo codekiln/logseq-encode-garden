@@ -68,6 +68,22 @@ repomix-*.xml
 **/.codexignore
 **/.codex/
 
+# Non-target tools (only copilot/cursor/claudecode/codexcli are configured in rulesync.jsonc).
+# Ignore these whole dirs so a stray `rulesync generate --targets <all>` doesn't re-track them.
+**/.agent/
+**/.agents/
+**/.gemini/
+**/.geminiignore
+**/.junie/
+**/.kilocode/
+**/.kilocodeignore
+**/.qwen/
+**/.augment/
+**/.roo/
+**/.cline/
+**/.clinerules/
+**/.opencode/
+
 # Beads / Dolt (legacy; repo no longer uses bd)
 .beads/
 .dolt/
