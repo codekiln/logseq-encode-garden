@@ -1,5 +1,6 @@
 tags:: [[Agent/Command]]
 
+- > **Note (2026-06):** [[Claude/Code]] merged custom commands into skills. The distinction described below is now historical — `.claude/commands/` files still work but skills (`.claude/skills/`) are the recommended format. The old docs URL below is stale; current reference: [Extend Claude with skills](https://code.claude.com/docs/en/skills). See also [[Claude/Code/Skill]] and the parallel [[Codex/CLI]] migration ([[Codex/CLI/Q/Why doesn't CodexCLI support slash commands?]]).
 - [Slash commands - Claude Docs](https://docs.claude.com/en/docs/claude-code/slash-commands#skills-vs-slash-commands)
 - # Skills vs slash commands
 	- **Slash commands** and **Agent Skills** serve different purposes in Claude Code
