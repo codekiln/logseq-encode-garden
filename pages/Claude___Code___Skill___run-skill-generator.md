@@ -1,0 +1,12 @@
+- # [run-skill-generator](https://code.claude.com/docs/en/skills#run-and-verify-your-app)
+	- A bundled [[Claude/Code/Skill]] that teaches [[Claude/Code/Skill/run]] and [[Claude/Code/Skill/verify]] how to build and launch the current project by recording a reliable per-project recipe.
+	- ## How it works
+		- Invoked as `/run-skill-generator` once per project (and again when the build or launch process changes).
+		- Interactively determines what works: install commands, required env vars, launch script, expected output.
+		- Commits the result as a per-project skill at `.claude/skills/run-<name>/`.
+		- After that, `/run`, `/verify`, and other agents follow the recorded recipe instead of guessing.
+		- Solves inference failures for projects requiring databases, env files, graphical sessions, or multi-step builds.
+	- ## Differs from
+		- [[Claude/Code/Skill/run]] and [[Claude/Code/Skill/verify]] — those execute against the project; `/run-skill-generator` creates the configuration they rely on.
+	- ## See also
+		- [Extend Claude with skills – Claude Code](https://code.claude.com/docs/en/skills#run-and-verify-your-app)

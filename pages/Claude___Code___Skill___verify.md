@@ -1,0 +1,11 @@
+- # [verify](https://code.claude.com/docs/en/skills#run-and-verify-your-app)
+	- A bundled [[Claude/Code/Skill]] that builds and runs the app to confirm a code change does what it should, without falling back to tests or type checks.
+	- ## How it works
+		- Invoked as `/verify` inside a Claude Code session, typically after implementing a change.
+		- Launches the app (using the same inference or recorded recipe as [[Claude/Code/Skill/run]]) and specifically checks whether the targeted change behaves as expected.
+		- Does NOT substitute passing tests or type checks — it observes actual runtime behavior.
+	- ## Differs from
+		- [[Claude/Code/Skill/run]] — `/run` launches the app to show any change; `/verify` is scoped to confirming one specific change.
+		- [[Claude/Code/Skill/run-skill-generator]] — records the launch recipe that `/verify` depends on in complex projects.
+	- ## See also
+		- [Extend Claude with skills – Claude Code](https://code.claude.com/docs/en/skills#run-and-verify-your-app)

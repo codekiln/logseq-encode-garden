@@ -1,0 +1,12 @@
+- # [run](https://code.claude.com/docs/en/skills#run-and-verify-your-app)
+	- A bundled [[Claude/Code/Skill]] that launches and drives the current project's app to observe a change working.
+	- ## How it works
+		- Invoked as `/run` inside a Claude Code session.
+		- Infers the launch method from project type (CLI, server, TUI, browser-driven) and from README, `package.json`, or `Makefile`.
+		- Drives the app to the relevant state and reports what it observes.
+		- Inference becomes unreliable for projects requiring databases, env files, graphical sessions, or multi-step builds — use [[Claude/Code/Skill/run-skill-generator]] to record a reliable recipe first.
+	- ## Differs from
+		- [[Claude/Code/Skill/verify]] — `/verify` is targeted at confirming one specific code change; `/run` just launches the app.
+		- [[Claude/Code/Skill/run-skill-generator]] — generates the per-project recipe that `/run` follows in complex projects.
+	- ## See also
+		- [Extend Claude with skills – Claude Code](https://code.claude.com/docs/en/skills#run-and-verify-your-app)
