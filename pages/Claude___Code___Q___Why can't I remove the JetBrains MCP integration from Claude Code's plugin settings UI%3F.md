@@ -1,0 +1,23 @@
+logseq-entity:: [[Logseq/Entity/question]]
+
+- # Why can't I remove the [[JetBrains]] [[MCP]] integration from [[Claude/Code]]'s plugin settings UI? [[card]]
+	- ## [[AI Answer]]
+		- [[AI/Response]]
+		- **Short answer:** The plugin settings UI only offers **Authenticate**, **Reconnect**, and **Disable** — there is no Remove button. This is a known missing feature ([issue #30138](https://github.com/anthropics/claude-code/issues/30138)). To fully remove the integration you must use the CLI or edit the config file directly.
+		- **Why the UI lacks Remove:**
+			- The `/plugin` settings screen was built with only three actions: authenticate, reconnect, and disable. Uninstall/remove was not included in the initial UI design.
+			- The [[JetBrains]] [[MCP]] Server entry was injected into `~/.claude.json` (global scope) automatically when the JetBrains IDE plugin registered itself — the UI does not expose a way to delete entries from that config.
+		- **How to remove it:**
+			- Via CLI: `claude mcp remove jetbrains` (use the exact server name as listed)
+			- Via manual edit: open `~/.claude.json`, find the `mcpServers` block containing the `http://localhost:64342/sse` entry, and delete it
+			- Via third-party tool: `npx mcpick remove <server-name>` ([McPick](https://scottspence.com/posts/mcpick-manage-mcp-servers-and-plugins-in-claude-code))
+		- **Re-registration risk:** If the JetBrains IDE plugin is still installed and active, it may re-add the entry the next time the IDE starts. Disable or uninstall the JetBrains Claude Code plugin from the IDE's plugin manager to prevent this.
+		- **How to disable or uninstall the plugin from within the IDE:**
+			- Open Settings: `Cmd+,` (macOS) or `Ctrl+Alt+S` (Windows/Linux)
+			- Navigate to **Plugins → Installed** tab
+			- Search for `JetBrains MCP Server` (or `Claude Code` to find all related plugins)
+			- To **disable**: uncheck the checkbox next to the plugin name — the MCP server will stop auto-registering without removing the plugin files
+			- To **uninstall**: click the gear icon or expand the **Disable** dropdown button and select **Uninstall**
+			- Restart the IDE when prompted
+			- Source: [Install plugins | IntelliJ IDEA Documentation](https://www.jetbrains.com/help/idea/managing-plugins.html)
+		- Sources: [No option to uninstall/remove MCP servers or plugins from UI · Issue #30138](https://github.com/anthropics/claude-code/issues/30138), [Connect Claude Code to tools via MCP](https://code.claude.com/docs/en/mcp)
