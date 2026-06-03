@@ -2,7 +2,7 @@ tags:: [[Person/Tiago Forte/PARA]]
 
 - # [The PARA Method: The Simple System for Organizing Your Digital Life in Seconds](https://fortelabs.com/blog/para/)
 	- PARA is based on a simple observation: that there are only four categories that encompass all the information in your life.
-	- ![PARA explained](https://fortelabs.com/wp-content/uploads/2017/02/3-BASB_Illos_Gray_211015_PARA-1024x537.jpg)
+	- ![PARA explained](https://fortelabs.com/wp-content/uploads/2017/02/3-BASB_Illos_Gray_211015_PARA-1024x537.jpg){:height 401, :width 749}
 	- You have **projects** you’re actively working on – short-term efforts (in your work or personal life) that you take on with a certain goal in mind. For example:
 		- Complete webpage design
 		- Buy a new computer
