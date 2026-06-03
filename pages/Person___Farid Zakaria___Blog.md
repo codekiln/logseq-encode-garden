@@ -1,0 +1,4 @@
+- # [Farid Zakaria's Blog](https://fzakaria.com/)
+	- Personal blog by [[Person/Farid Zakaria]] covering build systems, low-level performance, package management, and systems programming.
+	- ## Posts
+		- [[Person/Farid Zakaria/Blog/26/06/01/Every Byte Matters]]
