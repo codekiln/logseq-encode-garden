@@ -1,0 +1,30 @@
+alias:: [[Logseq/Entity/Software/Extension]]
+
+- # Software/Plugin
+	- A plugin, extension, or add-on that extends the behavior of a specific host application. The garden uses **the host app's own terminology** for the namespace segment: apps that say "plugin" get a `/Plugin/` segment; apps that say "extension" get an `/Extension/` segment.
+	- ## Vocabulary
+		- **Plugin** — term used by Obsidian, Neovim, 1Password CLI, Claude Code, and similar tools (e.g. [[Obsidian/Plugin/Easy Copy]], `1Password/Dev/CLI/Shell Plugin`).
+		- **Extension** — term used by VS Code, browsers, and Claude Desktop (e.g. `Claude/Desktop/Extension`, `1Password/Browser Extension/…`).
+		- Both map to this entity type; the namespace segment follows the host app's word, not a normalized garden term.
+	- ## Examples in this garden
+		- [[Obsidian/Plugin/Easy Copy]] and [[Obsidian/Plugin/Copy Link]] are [[Obsidian]] community plugins.
+	- ## When we treat something as this entity type
+		- Strong signals: described as a "plugin", "extension", or "add-on" that only functions inside a specific host application; distributed through a host-specific marketplace (Obsidian Community Plugins, VS Code Marketplace, browser extension stores, Neovim plugin registry, etc.).
+		- Not this type: standalone tools, CLIs, or libraries that work independently of a host application — use [[Logseq/Entity/Software/Project]] instead.
+	- ## How to name the page
+		- Page path: `<Host>/Plugin/<Name>` or `<Host>/Extension/<Name>`, matching the host app's own word.
+		- Use the plugin's canonical display name as published in its marketplace.
+		- Placing the item under the host namespace makes the dependency relationship explicit without cluttering the top-level namespace.
+	- ## Finding and deduplicating
+		- Check in this order: exact `<Host>/Plugin/<Name>` or `<Host>/Extension/<Name>` page, aliases, page-body mentions of the same repo URL or marketplace ID. Classify as: existing, similar, new, or blocked.
+	- ## Frontmatter
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+		- `logseq-entity:: [[Logseq/Entity/Software/Plugin]]` marks a page as an instance of this type (use the canonical path regardless of whether the host calls it a plugin or extension).
+		- `created-by::` — optional; link to a person or company page when the creator entity is clear and in the graph.
+		- `see-also::` — optional; sibling plugins or the host app page when the tie is strong.
+	- ## Page shape
+		- H1: a Markdown link to the plugin's canonical homepage or marketplace listing.
+		- Brief description bullets: what the plugin does, key commands, and notable behavior.
+		- Keep it lean — title, purpose, key links.
+	- ## Relationship to [[Logseq/Entity/Software/Project]]
+		- Plugins and extensions are a specialization of software projects. Use [[Logseq/Entity/Software/Plugin]] when the host-application dependency is core to the entity's identity.
