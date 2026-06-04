@@ -1,8 +1,8 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/question]], [[Logseq/Entity/Card]]
 tags:: [[Question]]
 see-also:: [[Obsidian/Q/Is there a VS Code extension that helps obsidian users have an obsidian-compatible view of obsidian markdown files and navigate between wiki links?]]
 
-- # In obsidian, can I do transclusions so element from one document appears in another document? If so, how?
+- # In obsidian, can I do transclusions so element from one document appears in another document? If so, how? [[card]]
 	- ## My Notes
 		- Obsidian’s docs call this **embedding**; community discussion often calls the same behavior **transclusion** (live include of source content).
 	- ## Answer
