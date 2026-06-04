@@ -10,8 +10,8 @@ see-also:: [[Obsidian/Q/What Obsidian keyboard shortcuts are most useful for poi
 			- **Short answer:** Obsidian has no native "copy link to heading" command. A community plugin is required.
 			- ### Community plugins that fill the gap
 				- [[Obsidian/Plugin/Easy Copy]] (Community Plugins → `easy-copy`) — place cursor on the heading line, run **Easy Copy: Contextual Copy** from the command palette (or assign a hotkey). Writes `[[Note#Heading]]` to clipboard. Works on blocks and paragraphs too.
-				- [[Obsidian/Plugin/Copy Link]] (`greetclammy/copy-link`) — similar commands covering files, headings, and blocks including anchor forms.
+				- [[Obsidian/Plugin/Copy Link]] (`churnish/copy-link`, install via [[BRAT]]) — commands covering files, headings, and blocks in wikilink, embed, footnote, anchor, and `obsidian://` URL forms.
 			- ### Sources
 				- [Easy Copy plugin — Obsidian Community Plugins](https://obsidian.md/plugins?id=easy-copy)
-				- [Copy Link plugin — GitHub](https://github.com/greetclammy/copy-link)
+				- [Copy Link plugin — GitHub](https://github.com/churnish/copy-link)
 				- [Forum: Add "Copy Wikilink" command](https://forum.obsidian.md/t/add-copy-wikilink-command/56121)
