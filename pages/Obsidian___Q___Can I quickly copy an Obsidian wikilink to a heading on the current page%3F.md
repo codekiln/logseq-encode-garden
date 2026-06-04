@@ -5,6 +5,7 @@ see-also:: [[Obsidian/Q/What Obsidian keyboard shortcuts are most useful for poi
 - # Can I quickly copy an [[Obsidian]] wikilink to a heading on the current page? [[card]]
 	- ## [[My Answer]]
 		- Obsidian has **no native command** to copy a heading wikilink — a community plugin is required in any view mode.
+		- Went with [[Obsidian/Plugin/Easy Copy]]. Assigned `⌥⇧C` — the README-suggested `⌘⌥C` could not be registered in the [[Obsidian]] hotkeys UI.
 	- ## [[AI Answer]]
 		- [[AI/Response]]
 			- **Short answer:** Obsidian has no native "copy link to heading" command. A community plugin is required.

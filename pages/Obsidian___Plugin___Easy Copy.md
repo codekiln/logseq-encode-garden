@@ -19,4 +19,4 @@ created-by:: [[Person/Moy]]
 			- **Right-click menu** — can add Contextual Copy to the editor context menu.
 	- ## Installation
 		- Search **Easy Copy** in Settings → Community plugins → Browse.
-		- No default hotkey — assign one (e.g. `Ctrl+Alt+C`) in Settings → Hotkeys.
+		- No default hotkey — assign one in Settings → Hotkeys. The README suggests `Ctrl+Alt+C` (`⌘⌥C` on macOS) but that combo may not be registerable in the Obsidian hotkeys UI; `⌥⇧C` is a working alternative.
