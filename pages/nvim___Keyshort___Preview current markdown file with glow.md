@@ -1,4 +1,0 @@
-- [[Keyshort]] [[nvim]] [[nvim/Keyshort]]
-	- **Preview current markdown file with glow** [[Card]]
-		- Shortcut: `:!glow %`
-		- Description: Runs [[glow]] on the current file, shows rendered [[Markdown]] output in the shell, then returns to nvim.
