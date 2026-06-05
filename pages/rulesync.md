@@ -113,4 +113,15 @@
 			- Project rules apply only to current project
 				- Import: `rulesync import`
 				- Generate: `rulesync generate`
-	-
+	- ## Skills
+		- Rulesync supports generating skills files via `--features skills`.
+		- ### Codex CLI skills: use `agentsskills` target
+			- Codex CLI reads agent skills from `.agents/skills/` following the [agentskills.io](https://agentskills.io) open standard:
+				- `.agents/skills/` — project scope (walked from cwd up to repo root)
+				- `$HOME/.agents/skills/` — user scope
+				- `/etc/codex/skills/` — admin scope
+			- The `codexcli` rulesync target writes skills to `.codex/skills/` — a directory Codex does not read.
+			- Use `--targets agentsskills` to generate skills readable by Codex CLI; the `agentsskills` adapter correctly writes to `.agents/skills/`.
+			- Note: `agentsskills --global` is not yet supported (throws); Codex's user-scope at `$HOME/.agents/skills/` is therefore unimplemented in rulesync.
+		- ### See also
+			- [[skillshare]] — narrower Go CLI focused on skills sync with team sharing and security audit; a rulesync alternative for the skills use case.
