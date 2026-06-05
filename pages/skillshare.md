@@ -1,4 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Software/Project]]
+created-by:: [[Person/Willie]]
 
 - # [skillshare](https://skillshare.runkids.cc)
 	- [github: runkids/skillshare](https://github.com/runkids/skillshare) · Go · 2.1k ★
