@@ -113,5 +113,11 @@ tags:: [[CursorAI/Settings/MCP]], [[Diataxis/How To]]
 			- you should get back a list
 		- ### 2 - Press `Cmd+Shift+J` to open [[CursorAI/Settings/MCP]], view the `github` item - press refresh
 			- it should turn green
-		-
-		-
+	- ## Limitations
+		- **Frequent 1Password prompts** — every MCP tool call triggers a [[1Password]] unlock prompt, which becomes disruptive during active Cursor sessions.
+		- **Authorization transparency** — the [[1Password/Dev/CLI/1Password Access Requested PopUp]] does not describe *what* action is being authorized; over time it becomes habitual to approve without understanding the scope, which undermines the security model.
+		- **No per-call context** — unlike browser-based OAuth flows, there is no dialogue stating which tool is being called or what data it will access.
+	- ## Value as a pattern
+		- Despite the friction, this script is a reference implementation for injecting secrets from a [[Secrets Manager]] into a stdio [[MCP Server]] without ever writing them to disk.
+		- The core pattern — `op run --env-file <(echo "VAR=op://vault/item/field") -- <command>` — is reusable for any MCP server that accepts a secret via environment variable.
+		- See [[Claude/Code/How To/Set Up Github MCP with 1Password GH token and mise]] for an evolution of this approach using [[mise/Task]]s instead of a standalone shell script.
