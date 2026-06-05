@@ -1,0 +1,3 @@
+- As of [[2026-06-04 Thu]] it's not currently possible to put specs anywhere but `<PROJECT_ROOT>/openspec/`.
+	- [Feature Request - Allow configurable OpenSpec directory name · Issue #581 · Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec/issues/581)
+	- [Proposal: Configurable specs path (`specsPath` in config.yaml) · Issue #664 · Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec/issues/664)

@@ -9,4 +9,4 @@ see-also:: [[Person/Jimmy Song/AI/OpenSpec]], [[AI/Coding/Technique/Phased Plann
 		- Claims to support both [[Brownfield Coding]] and [[Greenfield Coding]]
 	- Docs
 		- [[OpenSpec/Docs/Getting Started]]
-	-
+	- Limitations
