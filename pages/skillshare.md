@@ -1,8 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Willie]]
 
-- # [skillshare](https://skillshare.runkids.cc)
+- # [skillshare](https://skillshare.runkids.cc) - [[Declarative]] [[Agent/Skills]]
 	- [github: runkids/skillshare](https://github.com/runkids/skillshare) · Go · 2.1k ★
+	- [[My Notes]]
+		- the developer is an ai enthusiast, but it's not clear that they are very established as an open source contributor
 	- Syncs agent skills to 60+ AI CLI tools (Claude Code, Codex, Cursor, Copilot, Gemini CLI, …) from a single command. Stores skills in `.skillshare/` (project) or a tracked Git repo (org-wide).
 	- Features a `skillshare ui` web dashboard, team sharing via tracked repos, and built-in audit for prompt injection and data exfiltration. Install skills from GitHub, GitLab, Bitbucket, or self-hosted Git.
 	- Narrower scope than [[rulesync]]: skillshare focuses on skills (with stronger team and security tooling); rulesync also handles rules, commands, subagents, and MCP across the same tool targets.

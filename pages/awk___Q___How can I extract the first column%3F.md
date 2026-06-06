@@ -1,5 +1,8 @@
 logseq-entity:: [[Logseq/Entity/question]], [[Logseq/Entity/Card]]
+
 - # How can I extract the first column? [[card]]
+	- ## [[My Answer]]
+		- `ls -l | awk '{print $1}'`
 	- ## [[AI Answer]]
 		- [[AI/Response]]
 		- Short answer: use `awk '{print $1}'` — `$1` is the first whitespace-delimited field.
