@@ -1,1 +1,1 @@
-- → [[skills.sh]]
+- https://github.com/vercel-labs/skills · TypeScript · 21.4k ★ (see [[Vercel/Skills/CLI]])
