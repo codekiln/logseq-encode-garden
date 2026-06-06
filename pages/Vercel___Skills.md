@@ -1,4 +1,5 @@
 logseq-entity:: [[Logseq/Entity/concept]]
+created-by:: [[Person/Guillermo Rauch]]
 
 - # Vercel Skills Ecosystem
 	- Vercel's open agent skills platform: a registry of security-audited, installable agent skills discoverable through a web interface and a CLI.

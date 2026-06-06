@@ -1,4 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Software/Project]]
+created-by:: [[Person/Guillermo Rauch]]
 see-also:: [[Vercel/Skills/CLI]], [[Vercel/Skills]]
 
 - # skills.sh — Vercel Skills Web

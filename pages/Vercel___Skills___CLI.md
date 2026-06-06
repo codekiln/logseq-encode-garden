@@ -1,4 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Software/Project]]
+created-by:: [[Person/Guillermo Rauch]]
 see-also:: [[Vercel/Skills/Web]], [[Vercel/Skills]]
 date-created:: [[2026-01-14 Wed]]
 
