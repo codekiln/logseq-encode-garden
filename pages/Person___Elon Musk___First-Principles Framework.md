@@ -1,0 +1,29 @@
+logseq-entity:: [[Logseq/Entity/concept]]
+
+- # Elon Musk / First-Principles Framework
+	- Five-step engineering heuristic developed through SpaceX practice, applied to software architecture and system design.
+	- ## The Five Steps
+		- ### 1. Question every requirement
+			- Every requirement should have a name attached to it. Never accept "it's always been done that way."
+			- Trace every architectural decision to its original author and reason; validate assumptions against current business needs.
+			- Distinguish hard constraints (laws of physics, real business rules) from soft constraints (preferences, legacy patterns).
+		- ### 2. Delete
+			- "If you're not occasionally adding things back in, you're not deleting enough."
+			- The most common error is optimizing something that shouldn't exist.
+			- Remove layers of abstraction before optimizing them. Inline single-consumer abstractions.
+		- ### 3. Simplify
+			- Simplify only after the deletion phase is complete.
+			- Reduce cognitive complexity; consolidate similar patterns; optimize for clarity before performance.
+		- ### 4. Accelerate cycle time
+			- Speed up the process, but only after the first three steps.
+			- Going faster makes bad processes worse.
+			- Reduce coupling to enable parallel development; eliminate unnecessary approval gates.
+		- ### 5. Automate
+			- Automate last. Automating unnecessary complexity is worse than manual unnecessary complexity.
+			- Only automate validated, simplified processes.
+	- ## Software Modularity Corollary
+		- "Modularity without reuse is bureaucracy."
+		- The 2-3 Rule: extract services/helpers when 2+ consumers exist; extract hooks/utilities at 3+ uses. Before those thresholds, keep code cohesive and localized.
+	- ## See also
+		- [[Person/Elon Musk]]
+		- [[Person/mahidalhan/GitHub/claude-hacks]] — `architecture-introspector` skill applies this framework to codebase analysis
