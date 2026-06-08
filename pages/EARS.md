@@ -3,7 +3,7 @@ alias:: [[Easy Approach to Requirements Syntax]]
 see-also:: [[Product Requirements Document]], [[OpenSpec]], [[AI/Coding/Technique/Spec-Driven Dev]]
 
 - # EARS — Easy Approach to Requirements Syntax
-	- Lightweight requirements-writing method created by [[Person/Alistair Mavin]] to help teams write requirements that are unambiguous, testable, and consistent — without a full formal specification language.
+	- Lightweight requirements-writing notation developed by [[Person/Alistair Mavin]] and colleagues at Rolls-Royce PLC (first published 2009) to help teams write requirements that are unambiguous, testable, and consistent — without a full formal specification language.
 	- Popular in systems engineering, safety-critical systems, and [[AI/Coding/Technique/Spec-Driven Dev]] workflows.
 	- ## Core Patterns
 		- ### Ubiquitous
