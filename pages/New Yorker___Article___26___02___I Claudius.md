@@ -1,9 +1,8 @@
 readwise-link:: https://readwise.io/reader/shared/01khrk8p02hr21ew8d4tcp7e1s
-source-link:: https://www.newyorker.com/magazine/2026/02/16/what-is-claude-anthropic-doesnt-know-either
 created-by:: [[Person/Gideon Lewis-Kraus]]
 date-created:: [[2026-02-17 Tue]]
 
-- # [I Claudius](https://readwise.io/reader/shared/01khrk8p02hr21ew8d4tcp7e1s)
+- # [I Claudius](https://www.newyorker.com/magazine/2026/02/16/what-is-claude-anthropic-doesnt-know-either)
 	- Original article: [What Is Claude? Anthropic Doesn’t Know, Either](https://www.newyorker.com/magazine/2026/02/16/what-is-claude-anthropic-doesnt-know-either)
 	- ## [[My Notes]]
 		- The central tension is that LLMs are statistical systems we can operate at scale, but not fully explain in mechanism-level terms.

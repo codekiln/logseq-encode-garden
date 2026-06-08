@@ -1,7 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Article]]
 created-by:: [[Person/Moxie Marlinspike]]
 date-created:: [[2025/12/23]]
-source-link:: https://confer.to/blog/2025/12/confessions-to-a-data-lake/
 
 - # [Confessions to a data lake](https://confer.to/blog/2025/12/confessions-to-a-data-lake/)
 	- Author: [[Person/Moxie Marlinspike]]

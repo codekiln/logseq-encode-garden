@@ -1,6 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Article]]
 created-by:: [[Person/Jimmy Song]]
-source-link:: https://jimmysong.io/ai/openspec/
 date-created:: [[2025/08/05]]
 see-also:: [[OpenSpec]], [[Product Requirements Document]], [[AI/Coding/Technique/Phased Planning/ai-coding dir]]
 - # [OpenSpec](https://jimmysong.io/ai/openspec/)

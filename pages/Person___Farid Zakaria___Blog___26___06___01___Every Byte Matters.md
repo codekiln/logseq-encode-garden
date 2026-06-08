@@ -1,5 +1,4 @@
 created-by:: [[Person/Farid Zakaria]]
-source-link:: https://fzakaria.com/2026/06/01/every-byte-matters
 date-created:: [[2026/06/01]]
 logseq-entity:: [[Logseq/Entity/Article]]
 

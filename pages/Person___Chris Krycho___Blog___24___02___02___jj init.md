@@ -1,6 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Article]]
 created-by:: [[Person/Chris Krycho]]
-source-link:: https://v5.chriskrycho.com/essays/jj-init/
 date-created:: [[2024/02/02]]
 see-also:: [[jj-vcs]]
 - # [jj init](https://v5.chriskrycho.com/essays/jj-init/)

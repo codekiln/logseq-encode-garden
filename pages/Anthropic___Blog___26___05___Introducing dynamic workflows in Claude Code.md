@@ -1,5 +1,4 @@
 logseq-entity:: [[Logseq/Entity/Article]]
-source-link:: https://claude.com/blog/introducing-dynamic-workflows-in-claude-code
 date-created:: [[2026/05/28]]
 via:: [[2026-05-28 Wed]]
 

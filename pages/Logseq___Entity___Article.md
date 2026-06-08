@@ -22,7 +22,6 @@ alias:: [[Articles]]
 		- Mark instances with **`logseq-entity:: [[Logseq/Entity/Article]]`** so this type page collects backlinks to every Article entity.
 		- Set **`created-by::`** when the creator is known.
 		- Set **`date-created::`** to the publication date when known.
-		- Use **`source-link::`** for the original source URL.
 		- Optional: **`readwise-link:: <URL>`** when a Readwise Reader URL is available.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape

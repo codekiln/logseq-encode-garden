@@ -1,5 +1,4 @@
 logseq-entity:: [[Logseq/Entity/Article]]
-source-link:: https://claude.com/blog/claude-platform-on-aws
 date-created:: [[2026/05/11]]
 via:: [[2026-05-12 Tue]]
 

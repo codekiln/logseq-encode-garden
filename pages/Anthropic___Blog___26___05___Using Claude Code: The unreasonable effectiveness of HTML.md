@@ -1,5 +1,4 @@
 logseq-entity:: [[Logseq/Entity/Article]]
-source-link:: https://claude.com/blog/using-claude-code-the-unreasonable-effectiveness-of-html
 date-created:: [[2026/05/20]]
 - # [Using Claude Code: The unreasonable effectiveness of HTML](https://claude.com/blog/using-claude-code-the-unreasonable-effectiveness-of-html)
 	- ## Summary

@@ -1,5 +1,4 @@
 created-by:: [[Person/Joe Armstrong]]
-source-link:: https://joearms.github.io/published/2014-06-25-minimal-viable-program.html
 date-created:: [[2014/06/25]]
 logseq-entity:: [[Logseq/Entity/Article]]
 alias:: [[Minimal Viable Program]]

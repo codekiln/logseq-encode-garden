@@ -1,5 +1,4 @@
 created-by:: [[Person/Jeff Dickey]]
-source-link:: https://jdxcode.medium.com/12-factor-cli-apps-dd3c227a0e46
 readwise-link:: https://read.readwise.io/search/read/01kqqp7v0s6rn2ckz53w5xvyw9
 date-created:: [[2018/10/09]]
 logseq-entity:: [[Logseq/Entity/Article]]

@@ -1,5 +1,4 @@
 readwise-link:: https://readwise.io/reader/shared/01khws4rxq7a6ktx4jvkpgcjwe
-source-link:: https://www.nytimes.com/2026/02/18/opinion/ai-software.html?smid=nytcore-ios-share
 
 - # [The A.I. Disruption Is Actually Here, and It’s Not Terrible](https://www.nytimes.com/2026/02/18/opinion/ai-software.html?smid=nytcore-ios-share)
 	- Author: **[[Person/Paul Ford]]**

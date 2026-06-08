@@ -1,5 +1,4 @@
 created-by:: [[Person/Dan Shipper]]
-source-link:: https://every.to/chain-of-thought/compound-engineering-how-every-codes-with-agents
 date-created:: [[2025/12/11]]
 logseq-entity:: [[Logseq/Entity/Article]]
 

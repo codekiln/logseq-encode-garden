@@ -1,5 +1,4 @@
 created-by:: [[Person/Dan Shipper]]
-source-link:: https://every.to/p/after-automation
 readwise-link:: https://read.readwise.io/new/read/01ksq4db7jpe953c6kc47279rt
 date-created:: [[2026/05/21]]
 logseq-entity:: [[Logseq/Entity/Article]]

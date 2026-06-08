@@ -1,5 +1,4 @@
 created-by:: [[Every]]
-source-link:: https://every.to/source-code/my-ai-had-already-fixed-the-code-before-i-saw-it
 date-created:: [[2025/08/18]]
 logseq-entity:: [[Logseq/Entity/Article]]
 
