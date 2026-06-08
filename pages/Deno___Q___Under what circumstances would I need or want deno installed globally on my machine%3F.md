@@ -1,0 +1,19 @@
+logseq-entity:: [[Logseq/Entity/question]]
+- # Under what circumstances would I need or want deno installed globally on my machine? [[card]]
+	- ## [[AI Answer]]
+		- [[AI/Response]]
+		- **Short answer:** When you're running Deno-native scripts, using Deno-first tools/frameworks, or want TypeScript execution without a build step.
+		- **Main reasons to install Deno globally:**
+			- **Run TypeScript files directly** — `deno run script.ts` works out of the box; no `ts-node`, `tsx`, or transpile step needed. Good for personal utility scripts.
+			- **Deno-native tooling** — tools distributed as Deno scripts (installed via `deno install`) require Deno in your PATH; examples: [`deployctl`](https://github.com/denoland/deployctl) for [[Deno Deploy]], Fresh dev server
+			- **IDE / language-server support** — the [VS Code Deno extension](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno) needs `deno` on PATH to provide accurate IntelliSense for Deno-scoped `.ts` files
+			- **`deno fmt` / `deno lint` / `deno check`** — usable as standalone code-quality tools even in non-Deno projects; `deno fmt` covers TypeScript, JavaScript, JSON, and Markdown
+			- **`deno compile`** — compiles a TypeScript/JavaScript entry point into a self-contained native binary; requires a local Deno install
+			- **Fresh / Hono-on-Deno development** — Deno's first-party web framework ([Fresh](https://fresh.deno.dev/)) and Hono configs targeting Deno both assume `deno` is available globally
+			- **JSR / `jsr:` specifiers** — [[JSR]] (jsr.io) is the Deno-first package registry; some packages only publish there and are consumed naturally via Deno
+			- **Deno KV / Deno Deploy projects** — local development with `deno.json` task runners (`deno task dev`) requires a local install
+		- **When you probably don't need it:**
+			- Pure [[Node.js]] / [[npm]] / [[Bun]] projects with no Deno-specific dependencies
+			- Your team uses Docker or CI containers that supply Deno — no host install needed
+			- You manage runtimes with [[mise]] or [[asdf]] and only activate Deno inside specific project dirs (this is a valid alternative to a true "global" install)
+		- **Version-manager note:** installing via [[mise]] (`mise use -g deno`) gives you a global install that is still version-controlled and switchable — functionally equivalent to "globally installed" for PATH purposes.
