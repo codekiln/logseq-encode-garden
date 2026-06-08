@@ -15,4 +15,5 @@ readwise-link:: https://readwise.io/reader/shared/01ktk327hvp0nw2g1dnp9dzvck
 		- "pumping immense, disproportionate resources into a previously casual or complex activity to forcefully extract the purest dopamine hit, with no regard for anything except dopamine"
 		- "Everything converges on a single point, there's quite literally no room for anything else."
 		- [[Thought]] removal is the sincerest form of attention
+		  id:: 6a267cf8-e679-4151-859b-b9aee152189f
 			- > I've been gradually turning off dopamine fracking in my life: deleting channels and feeds that infuriate me or milk my triggers (positive or negative), uninstalling apps, and setting boundaries on what I will and won't engage with and consume. Becoming aware of this concept has made it easier to navigate the world. And it's becoming easier and easier for me to simply stop a video and close a tab when I sense that it's just trying to give me a hit of dopamine. It's so immensely liberating to be able to do that.
