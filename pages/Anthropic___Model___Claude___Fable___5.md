@@ -1,0 +1,43 @@
+alias:: [[claude-fable-5]]
+tags:: [[AI/Model]]
+
+- # [Claude Fable 5](https://platform.claude.com/docs/en/about-claude/models/overview)
+	- ## Key Features
+		- Anthropic's most powerful and most intelligent model; new tier above Opus
+		- Context window: 1M input tokens at standard API pricing
+		- Max output: 128K tokens on the synchronous Messages API
+		- Adaptive thinking only: uses `thinking: {"type": "adaptive"}`; explicit `thinking: {"type": "disabled"}` returns a 400 — omit the `thinking` param entirely to run without thinking
+		- Extended thinking with explicit `budget_tokens` not supported (returns 400)
+		- Sampling parameters (`temperature`, `top_p`, `top_k`) removed — passing them returns 400
+		- Effort parameter: `low` | `medium` | `high` | `xhigh` | `max`; default `high`; `xhigh` recommended for coding and agentic workloads
+		- Task Budgets (beta, `task-budgets-2026-03-13`): `output_config: {task_budget: {type: "tokens", total: N}}`; minimum 20,000 tokens
+		- Thinking content omitted by default; set `thinking: {type: "adaptive", display: "summarized"}` to restore visible reasoning
+		- Model version status: Active (current flagship tier)
+	- ## Performance Highlights
+		- Highest-capability tier in the Claude model family, exceeding [[Anthropic/Model/Claude/4.8/Opus]] across all evaluated dimensions
+		- Anthropic's most intelligent model
+	- ## Model Tiers
+		- New flagship tier above the Opus line in the Claude model hierarchy
+		- Previous top tier: [[Anthropic/Model/Claude/4.8/Opus]] (`claude-opus-4-8`)
+		- Earlier Opus pages in this garden:
+			- [[Anthropic/Model/Claude/4.7/Opus]]
+			- [[Anthropic/Model/Claude/4.5/Opus]]
+			- [[Anthropic/Model/Claude/4/Opus]]
+	- ## Access Details
+		- API availability: Claude Messages API model string `claude-fable-5`
+		- Pricing (standard tier, per million tokens): $10 input · $50 output
+		- Batch API: 50% discount; prompt caching: up to 90% cost savings
+		- SDK support:
+			- Python: `pip install -U "anthropic"`
+			- TypeScript: `@anthropic-ai/sdk`
+	- ## Technical Specifications
+		- Model architecture: Proprietary Anthropic large language model (undisclosed weights)
+		- Input/output formats: Text and images in; text (and tool use) out
+		- Special capabilities:
+			- Adaptive thinking (only mode; omit `thinking` key entirely to suppress — cannot pass `{type: "disabled"}`)
+			- Task Budgets for agentic loop token awareness (beta)
+			- Effort parameter including `xhigh` and `max` levels
+		- Model version code: `claude-fable-5`
+	- ## References
+		- [Models overview (Claude API docs)](https://platform.claude.com/docs/en/about-claude/models/overview)
+		- [Migration Guide (Claude API docs)](https://platform.claude.com/docs/en/about-claude/models/migration-guide)
