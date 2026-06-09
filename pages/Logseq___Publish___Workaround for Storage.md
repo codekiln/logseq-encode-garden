@@ -1,0 +1,33 @@
+- # Workaround: Keeping index.html Under GitHub's 100 MB Push Limit
+	- ## Problem
+		- [[logseq/publish-spa]] bundles the entire graph as a single JavaScript variable (`window.logseq_db`) embedded inline inside `index.html`. As the graph grows, this file exceeds [[GitHub]]'s hard 100 MB per-file push limit, breaking the [[GitHub/Actions]] deploy step.
+		- The limit applies to every `git push`, including the force-push that the `gh-pages` deploy action makes. There is no way to configure `logseq/publish-spa` to split or exclude content.
+	- ## Solution
+		- Extract the `window.logseq_db` assignment from `index.html`, gzip-compress it to a separate file (`static/js/db.gz`), and replace the inline script with a small async loader that fetches and decompresses the data at page load time.
+		- A [[Python]] script (`.github/scripts/compress_logseq_db.py`) runs as a [[GitHub/Actions]] workflow step immediately after the `logseq/publish-spa` build step.
+	- ## Implementation
+		- ### Python script
+			- The script (`compress_logseq_db.py`) does three things:
+				- 1. Locates `<script>window.logseq_db="…"</script>` in `www/index.html` and extracts the **complete JS assignment** (including the `window.logseq_db="` prefix and closing `"`).
+				- 2. Gzip-compresses the assignment (~90% reduction) and writes `www/static/js/db.gz`.
+				- 3. Rewrites `index.html`: removes the inline DB script block and all `static/js/*.js` script tags, then injects a single `<script>` loader before `</body>` that:
+					- fetches `static/js/db.gz`
+					- decompresses it via the browser's `DecompressionStream("gzip")` Web API
+					- `eval()`s the full assignment text
+					- then loads the original script tags in order
+		- ### Why `eval()` rather than direct assignment
+			- The inline `<script>` source stores the graph data as a [[JavaScript]] string literal, which may contain escape sequences like `\n`, `\\`, `\uXXXX`. When a `<script>` block is evaluated, the JS engine processes those escape sequences.
+			- If the decompressed text were assigned directly (`window.logseq_db = text`), the escape sequences would appear as literal characters (e.g. a backslash followed by `n` instead of a newline), corrupting the [[Transit/JSON]] data.
+			- `eval()` reproduces the exact same semantics as the original inline script.
+		- ### Why the full assignment must be stored (not just the data)
+			- [[Logseq]] uses a custom encoding: special characters (`"`, `&`, `<`, `>`, `'`) are replaced with `logseq____&quot;` and similar markers before `JSON.stringify` embeds the data. The decode function in `main.js` reverses those replacements after reading `window.logseq_db`.
+			- Storing only the raw bytes between the outer quote delimiters and assigning directly would leave the `logseq____&quot;` markers in place but cause the JS escape sequences to be unprocessed — breaking the decode step.
+			- Storing and `eval()`ing the complete `window.logseq_db="…"` statement is the minimal change that preserves both the escape-sequence semantics and the marker-based encoding.
+		- ### Workflow change
+			- A step is added to `.github/workflows/gh-pages.yml` after the `logseq/publish-spa` step and before the deploy step:
+			  ~~~yaml
+			  - name: Compress graph data (stay under GitHub's 100 MB file limit)
+			    run: python3 .github/scripts/compress_logseq_db.py
+			  ~~~
+	- ## See also
+		- [[Logseq/Publish/Explanation/Options for Hosting Larger Files]]
