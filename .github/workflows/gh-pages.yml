@@ -26,6 +26,9 @@ jobs:
       - name: Add .nojekyll file
         run: touch www/.nojekyll
 
+      - name: Compress graph data (stay under GitHub's 100 MB file limit)
+        run: python3 .github/scripts/compress_logseq_db.py
+
       - name: Deploy to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
