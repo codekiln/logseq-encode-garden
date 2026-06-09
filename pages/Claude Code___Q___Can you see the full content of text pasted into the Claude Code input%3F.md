@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/question]]
+- # Can you see the full content of text pasted into the [[Claude Code]] input?
+	- ## [[AI Answer]]
+		- [[AI/Response]]
+		- **Short answer:** There is no built-in inline expand for the `[Pasted N lines]` summary. The most practical workaround is `Ctrl+G` (or `Ctrl+X Ctrl+E`) to open the full prompt in your external editor before submitting.
+		- When you paste multiple lines into [[Claude Code]]'s terminal input, the UI compacts them into a `[Pasted N lines]` indicator to save screen space. No keyboard shortcut or command expands this back to full text inline.
+		- Practical alternatives:
+			- **`Ctrl+G`** or **`Ctrl+X Ctrl+E`** — both trigger `chat:externalEditor`, opening the full prompt (including pasted content) in your `$EDITOR`. `Ctrl+X Ctrl+E` is the readline-native Emacs chord; `Ctrl+G` is a Claude alias for the same action. `Ctrl+X` is not a general Claude leader key — it only chains with `Ctrl+E` here via readline convention.
+				- Optional: enable **Show last response in external editor** in `/config` to prepend Claude's previous reply as `#`-commented context above your prompt (stripped on save).
+			- **`Shift+Enter`** — enters multiline input mode before pasting, but does not change the compact display behavior.
+			- **`Ctrl+U`** — clears from cursor to line start if you want to discard and re-paste.
+		- Both shortcuts are customizable in `~/.claude/keybindings.json`.
+		- To request a native expand/preview toggle, use `/feedback` inside [[Claude Code]].

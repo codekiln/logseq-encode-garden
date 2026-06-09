@@ -1,4 +1,6 @@
-# [mise-vscode](https://github.com/hverlin/mise-vscode)
+logseq-entity:: [[Logseq/Entity/Software/Plugin]]
+
+- # [mise-vscode](https://marketplace.visualstudio.com/items?itemName=hverlin.mise-vscode)
 	- High level info about `mise-vscode`
 	  id:: 67f78229-4fd0-4dd6-9c76-41eeccec01bf
 		- > This VSCode extension provides an easy way to manage `mise` [tasks](https://hverlin.github.io/mise-vscode/reference/tasks/), [tools](https://hverlin.github.io/mise-vscode/reference/tools/), and [environment variables](https://hverlin.github.io/mise-vscode/reference/environment-variables/) directly from your editor.
