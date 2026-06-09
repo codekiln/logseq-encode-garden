@@ -54,7 +54,7 @@
 <script>
 (async function(){
   var r=await fetch("static/js/db.gz");
-  window.logseq_db=await new Response(r.body.pipeThrough(new DecompressionStream("gzip"))).text();
+  eval(await new Response(r.body.pipeThrough(new DecompressionStream("gzip"))).text());
   var srcs=["static/js/react.production.min.js", "static/js/react-dom.production.min.js", "static/js/ui.js", "static/js/main.js", "static/js/interact.min.js", "static/js/highlight.min.js", "static/js/katex.min.js", "static/js/html2canvas.min.js", "static/js/code-editor.js", "static/js/custom.js"];
   for(var i=0;i<srcs.length;i++){
     await new Promise(function(ok,err){
