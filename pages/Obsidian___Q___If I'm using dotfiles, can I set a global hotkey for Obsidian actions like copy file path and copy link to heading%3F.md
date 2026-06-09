@@ -5,6 +5,7 @@ see-also:: [[Obsidian/Q/What Obsidian keyboard shortcuts are most useful for poi
 - # If I'm using [[dotfiles]], can I set a global hotkey for [[Obsidian]] actions like copy file path and copy link to heading? [[card]]
 	- ## [[My Answer]]
 		- this isn't sufficiently answered yet. it's unclear what would let you copy the path to a heading
+		- for copy link to heading you can use [[Obsidian/Plugin/Easy Copy]]
 	- ## [[AI Answer]]
 		- **Short answer:** Yes — two distinct things both go by "global hotkey" here, and dotfiles cover both paths.
 		- ### 1. Managing in-app Obsidian hotkeys via dotfiles

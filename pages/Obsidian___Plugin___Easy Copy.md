@@ -4,6 +4,10 @@ created-by:: [[Person/Moy]]
 - # [Easy Copy](https://obsidian.md/plugins?id=easy-copy)
 	- [[Obsidian]] community plugin by Moy ([Moyf/easy-copy](https://github.com/Moyf/easy-copy)) that copies content intelligently based on cursor position.
 	- **Downloads:** ~8,100 · **Status:** in official Community Plugins directory · **Version:** 1.7.1 (actively maintained)
+	- ## [[My Notes]]
+		- ### What is my user-defined keyshort for [[Obsidian/Plugin/Easy Copy]] to copy a link to the heading?
+			- [[My Answer]] `Opt+Shift+C`
+				- see ((6a218786-743c-420e-babe-492761235524))
 	- ## Features
 		- ### Contextual Copy (single command)
 			- The core command **Easy Copy: Contextual Copy** detects what's at the cursor and acts accordingly — no need to think about which command to use.
@@ -20,3 +24,4 @@ created-by:: [[Person/Moy]]
 	- ## Installation
 		- Search **Easy Copy** in Settings → Community plugins → Browse.
 		- No default hotkey — assign one in Settings → Hotkeys. The README suggests `Ctrl+Alt+C` (`⌘⌥C` on macOS) but that combo may not be registerable in the Obsidian hotkeys UI; `⌥⇧C` is a working alternative.
+		  id:: 6a218786-743c-420e-babe-492761235524

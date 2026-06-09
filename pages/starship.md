@@ -2,12 +2,8 @@ tags:: [[CLI/Tool]]
 logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Matan Kushner]]
 via:: [[devenv]]
+tags:: [[Rust]]
 
 - # [Starship](https://starship.rs/guide/)
-	- **The minimal, blazing-fast, and infinitely customizable prompt for any shell!**
-	- **Fast:** it's fast – *really really* fast! 🚀 - written in [[Rust]]
-	- **Customizable:** configure every aspect of your prompt.
-	- **Universal:** works on any shell, on any operating system.
-	- **Intelligent:** shows relevant information at a glance.
-	- **Feature rich:** support for all your favorite tools.
-	- **Easy:** quick to install – start using it in minutes.
+	- This is a [[Rust]]-based [[PS1]] shell prompt customizer.
+	- It's used in [[Person/Omer Hamerman/GitHub/dotfiles]]

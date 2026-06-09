@@ -1,2 +1,1 @@
-- This namespace is for my things.
-- It's a personal context portfolio primarily for [[AI/Agent]]s that want to
+- The `My` namespace is for my things or things about me. It's a personal context portfolio. [[AI/Context/Portfolio/Personal]].
