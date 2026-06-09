@@ -77,7 +77,7 @@ alias:: [[AI/Coding/Technique/Phased Planning]]
 			- #### Phase Files
 				- **Output:** [[AI/Coding/v0/File/1-TICKET-original-issue.md]] - Original ticket details and high-level #AC
 					- this is for [[Project/Management]] stakeholders and likely doesn't have the detail needed for implementation
-					- pulled in from a tool like [[JIRA/CLI]], [[GitHub/CLI]], [[Gitlab/CLI]] if not using a tool like [[GitHub/MCP]]
+					- pulled in from a tool like [[JIRA/CLI]], [[GitHub/CLI]], [[glab]] if not using a tool like [[GitHub/MCP]]
 				- **Output:** [[AI/Coding/v0/File/1-TICKET-repomix.config.json]] - defines issue-related repository paths for [[Repomix]]
 					- used to gather repo context for external tools like [[ChatGPT]] or [[Claude/Desktop]]
 				- **Output:** [[AI/Coding/v0/File/1-TICKET-repo-context.txt]] - Contains the repo context sent to an external LLM in the next step.
