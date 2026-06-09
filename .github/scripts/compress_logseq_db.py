@@ -14,9 +14,9 @@ expands.  This script:
 
 IMPORTANT — why eval(), not direct assignment:
   The inline <script> source contains JS string-literal escape sequences
-  (\n, \\, \uXXXX, etc.).  Assigning the raw text to window.logseq_db would
-  leave those escapes un-evaluated (e.g. literal backslash-n instead of a
-  newline), corrupting the Transit/JSON data and breaking JSON.parse inside
+  (\\n, \\\\, \\uXXXX, etc.).  Assigning the raw text to window.logseq_db
+  would leave those escapes un-evaluated (e.g. literal backslash-n instead of
+  a newline), corrupting the Transit/JSON data and breaking JSON.parse inside
   the Logseq SPA.  eval() reproduces the exact same effect as the original
   inline script.
 """
