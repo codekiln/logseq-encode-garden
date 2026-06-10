@@ -1,11 +1,11 @@
-- # Favorite Flashcards
+# Favorite Flashcards
 	- foregrounds flashcard scopes for my [[Logseq/Favorite]]s ([[Logseq/Queries]]).
 	- ## All Favorite Flashcards
-		- {{cards (or [[Obsidian]] [[Codex]] [[chezmoi]] [[DevContainer]] [[mise]] [[Lightroom/Classic]] [[rg]] [[vim]] [[nvim]] [[fzf]] [[Zoxide]] [[yazi]] [[tmux]] [[Lazygit]]) }}
+		- {{cards (or [[Obsidian]] [[Codex]] [[chezmoi]] [[DevContainer]] [[mise]] [[rg]] [[vim]] [[nvim]] [[fzf]] [[Zoxide]] [[yazi]] [[tmux]] [[Lazygit]]) }}
 		  favorite-deck:: aggregate
 	- ## Background / Non-Favorite
 	  collapsed:: true
-		- {{cards (not (or [[Obsidian]] [[Codex]] [[chezmoi]] [[DevContainer]] [[mise]] [[Lightroom/Classic]] [[rg]] [[vim]] [[nvim]] [[fzf]] [[Zoxide]] [[yazi]] [[tmux]] [[Lazygit]])) }}
+		- {{cards (not (or [[Obsidian]] [[Codex]] [[chezmoi]] [[DevContainer]] [[mise]] [[rg]] [[vim]] [[nvim]] [[fzf]] [[Zoxide]] [[yazi]] [[tmux]] [[Lazygit]])) }}
 		  favorite-deck:: background
 		  query-properties:: [:block]
 	- ## By Favorite
