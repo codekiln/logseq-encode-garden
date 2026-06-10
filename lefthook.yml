@@ -1,0 +1,7 @@
+# Block commits that contain personal/employer identifiers before they can be
+# committed to this (public) graph. Uses the global mise `secrets:scan` task,
+# which sources its patterns from a private graph + the machine username.
+pre-commit:
+  commands:
+    identity-guard:
+      run: mise run secrets:scan {staged_files}
