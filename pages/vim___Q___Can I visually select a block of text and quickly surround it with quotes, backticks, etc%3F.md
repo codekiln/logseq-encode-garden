@@ -1,0 +1,32 @@
+logseq-entity:: [[Logseq/Entity/question]]
+
+- # Can I visually select a block of text and quickly surround it with quotes, backticks, etc?
+	- ## [[AI Answer]]
+		- [[AI/Response]]
+			- **Short answer:** Yes — with the `vim-surround` (or `nvim-surround`) plugin, visually select text and press `S` followed by the delimiter character. Without a plugin it is awkward; a plugin is the standard approach.
+			- ## With `vim-surround` / `nvim-surround`
+				- Install [tpope/vim-surround](https://github.com/tpope/vim-surround) (Vim / Neovim) or [kylechui/nvim-surround](https://github.com/kylechui/nvim-surround) (Neovim-native Lua port).
+				- **Visual-mode surround workflow:**
+					- 1. Enter visual mode: `v` (char), `V` (line), or `Ctrl-v` (block).
+					- 2. Select the target text.
+					- 3. Press `S` (capital S) then the delimiter:
+						- `S"` → `"text"`
+						- `S'` → `'text'`
+						- `` S` `` → `` `text` ``
+						- `S(` or `S)` → `( text )` / `(text)` (opening adds spaces; closing does not)
+						- `S[` → `[text]`, `S{` → `{text}`, `S<` → `<text>`
+						- `St` → prompts for an HTML/XML tag name, e.g. `St` then `span` → `<span>text</span>`
+				- **Normal-mode shortcuts (no visual selection needed):**
+					- `ys<motion><char>` — surround a motion. E.g. `ysiw"` surrounds the inner word with `"`.
+					- `yss"` — surrounds the whole line.
+					- `cs<old><new>` — change surrounding: `cs"'` turns `"text"` into `'text'`.
+					- `ds"` — delete surrounding `"` from `"text"` → `text`.
+				- With `nvim-surround` the keymap defaults are identical; it also supports Treesitter-aware selections.
+			- ## Without a plugin (vanilla Vim)
+				- Visual select, then `c` to change the selection, then manually type the surrounding characters. Fast for one-off edits but there is no dedicated motion for it.
+				- Ex substitute on a visual range: `:'<,'>s/\%V\(.*\)\%V./"\1"/` — possible but unwieldy.
+			- ## `mini.surround` (alternative)
+				- Part of [echasnovski/mini.nvim](https://github.com/echasnovski/mini.nvim). Uses `sa` (surround add) by default: visual select + `sa"`. Keybindings differ from `vim-surround` but the concept is identical.
+			- [vim-surround README](https://github.com/tpope/vim-surround)
+			- [nvim-surround README](https://github.com/kylechui/nvim-surround)
+			- [mini.surround docs](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md)

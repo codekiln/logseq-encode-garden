@@ -1,0 +1,23 @@
+see-also:: [[My/Principle/Favor Readers Over Writers]], [[My/Principle/Create Uniform Interfaces]]
+
+- # what it means
+	- use the type system to make invalid combinations of state literally impossible to construct
+	- if a bad state cannot be represented, no code path can accidentally produce it
+	- ## [[Examples]]
+		- ### discriminated union vs. flag fields
+			- instead of `{connected: bool; socket: socket option}` where `connected=true` and `socket=None` is a contradictory state, use `Connected(socket) | Disconnected`
+			- the invalid combination cannot exist at the type level
+		- ### non-empty list
+			- instead of `T list` with a runtime non-empty check, represent as `{head: T; tail: T list}`
+			- callers never need to handle the empty case because it is not part of the type
+		- ### validated types
+			- instead of `string` for an email address with runtime validation scattered everywhere, use an opaque `Email` type whose only constructor validates the format
+	- ## [[Why]]
+		- runtime checks can be forgotten or skipped under pressure; compile-time type constraints cannot
+		- making invariants part of the data model shifts enforcement from "every callsite must check" to "the type guarantees it"
+		- bugs from illegal state are often the hardest to reproduce because they depend on a particular sequence of mutations
+	- ## origin
+		- phrase coined by [[@yminsky]] ([[Yaron Minsky]]) in the context of [[OCaml]] at [[Jane Street]]
+		- popularized further in the [[Elm]] and [[Haskell]] communities
+	- ## source
+		- via [[@yminsky]] slide in [[Jane Street]] talk — see [[My/Principle]] for context
