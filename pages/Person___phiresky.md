@@ -1,0 +1,14 @@
+logseq-entity:: [[Logseq/Entity/person]]
+- # Person/phiresky
+	- ## Bio
+		- German open-source developer and technical writer; builds practical command-line and web tools in [[Rust]], [[Typescript]], and [[Py]]. Maintainer of Lemmy, the federated link aggregator. Won first prize ($10k) in a book-metadata visualization contest. Goes by the handle phiresky; blogs at [phiresky.github.io/blog](https://phiresky.github.io/blog).
+	- ## Projects
+		- [[rga]] — [[rg]] extended to search inside PDFs, e-books, Office documents, and archives.
+		- [[Person/phiresky/GitHub/timetrackrs]] — automatic, rule-based time tracker.
+		- [sqlite-zstd](https://github.com/phiresky/sqlite-zstd) — transparent row-level compression for [[SQLite]].
+		- [pandoc-url2cite](https://github.com/phiresky/pandoc-url2cite) — cite URLs directly in Markdown via Pandoc.
+	- ## Writing
+		- [[Person/phiresky/Blog/21/04/17/Hosting SQLite Databases on Github Pages]]
+	- ## External Links
+		- [Blog](https://phiresky.github.io/blog)
+		- [GitHub](https://github.com/phiresky)

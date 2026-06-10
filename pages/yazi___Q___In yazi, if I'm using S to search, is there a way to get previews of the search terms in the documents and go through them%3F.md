@@ -9,6 +9,6 @@ logseq-entity:: [[Logseq/Entity/question]]
 			- **Plugins that add search previews:**
 				- [[yazi/Plugin/fr.yazi]] (51 ★, [[Lua]]) — pipes [[rg]] results into [[fzf]] with [[bat]]-powered syntax-highlighted previews; navigate matches with `Ctrl-J/K` / arrow keys.
 				- [[yazi/Plugin/yafg.yazi]] (12 ★, [[Lua]]) — fuzzy find + grep with interactive rg/fzf; opens selected match in your editor at the matched line.
-				- [[yazi/Plugin/fazif.yazi]] (15 ★, Shell) — searches with `fd`, `rg`, `rga` and spawns fzf with preview.
+				- [[yazi/Plugin/fazif.yazi]] (15 ★, Shell) — searches with `fd`, [[rg]], and [[rga]] and spawns fzf with preview.
 			- **Navigation:** All plugin approaches rely on fzf for cycling through matches (standard fzf keys: arrow keys or `Ctrl-J/K`, `Enter` to confirm).
 			- Docs: [yazi keymap](https://yazi-rs.github.io/docs/configuration/keymap/), [yazi plugins overview](https://yazi-rs.github.io/docs/plugins/overview/)
