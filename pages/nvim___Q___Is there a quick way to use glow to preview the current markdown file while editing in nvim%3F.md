@@ -2,6 +2,12 @@ logseq-entity:: [[Logseq/Entity/question]], [[Logseq/Entity/Card]]
 see-also:: [[glow]], [[vim/Q/How can I get a VS Code-style split Markdown preview in (neo-)vim that renders in the terminal (e.g. glow)?]]
 
 - # Is there a quick way to use [[glow]] to preview the current [[Markdown]] file while editing in [[nvim]]? [[card]]
+  card-last-interval:: -1
+  card-repeats:: 1
+  card-ease-factor:: 2.5
+  card-next-schedule:: 2026-06-11T04:00:00.000Z
+  card-last-reviewed:: 2026-06-10T07:55:57.151Z
+  card-last-score:: 1
 	- ## [[My Answer]]
 		- ### Haven't found a good answer to this yet
 			- I'm looking for something in vim that displays markdown as well as glow for flipping between reading mode and editing mode.

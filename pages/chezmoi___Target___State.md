@@ -3,8 +3,14 @@ alias:: [[chezmoi/Concept/Target/State]]
 tags:: [[chezmoi/Concept]]
 
 - # What does the [[Term]] *target state* mean in [[chezmoi]]? [[card]]
+  card-last-interval:: 3.69
+  card-repeats:: 1
+  card-ease-factor:: 2.36
+  card-next-schedule:: 2026-06-13T23:43:43.121Z
+  card-last-reviewed:: 2026-06-10T07:43:43.121Z
+  card-last-score:: 3
 	- ## [[My Answer]]
-		- The *target state* of a [[chezmoi/Target]] is the chezmoi-computed runtime value that answers: *Given the value of the target file [[Declared]] in the [[dotfiles repo]], what should be the file that chezmoi should write to the [[Home/Dir]]?* It depends on [[chezmoi/.toml]], [[EnvVar]]s, etc.
+		- The *target state* of a [[chezmoi/Target]] is the chezmoi-computed runtime value that answers: *Given the value of the target file [[Declared]] in the [[dotfiles repo]], what **should be** the file that chezmoi **should write** to the [[Home/Dir]]?* It depends on [[chezmoi/.toml]], [[EnvVar]]s, etc.
 		- ### [[Example]]
 			- For the *target state* of the [[zsh/.zshrc]], is the [[Declared]] representation of `dot_zshrc.tmpl`, including everything configured about chezmoi, such as aspects of [[chezmoi/.toml]] such as how to handle templates, what context variables there are, the values of environment variables, etc.
 		- ### Why it matters
@@ -16,3 +22,4 @@ tags:: [[chezmoi/Concept]]
 		- The *target state* is the **desired** state of the [[chezmoi/Destination/Directory]]. It is computed from the source state, the [[chezmoi/.toml]] config file, and the [[chezmoi/Destination/State]]. The target state includes regular files and directories, and may also include symbolic links, scripts to be run, and targets to be removed.
 	- [[My Notes]]
 		- This is like [[Math/Projection]]
+		- [[Confused]] because I just did the flashcard for [[chezmoi/Source/State]] and it seems like it's the same thing?

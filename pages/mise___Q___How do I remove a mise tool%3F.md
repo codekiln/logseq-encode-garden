@@ -2,9 +2,18 @@ logseq-entity:: [[Logseq/Entity/question]]
 see-also:: [[mise]], [[mise/use/--global]], [[mise/Config/Global]], [[mise/unset]]
 
 - # How do I remove a [[mise/Tool]]? [[card]]
+  card-last-interval:: 5.4
+  card-repeats:: 1
+  card-ease-factor:: 2.6
+  card-next-schedule:: 2026-06-15T16:39:08.859Z
+  card-last-reviewed:: 2026-06-10T07:39:08.859Z
+  card-last-score:: 5
 	- ## [[My Answer]]
 		- [[tldr]]
-			- filter [[mise/ls]] with [[rg]] to find `<TOOL_REFERENCE>` then call [[mise/unuse]] `<TOOL_REFERENCE>`
+			- to find a tool
+				- filter [[mise/ls]] with [[rg]] to find `<TOOL_REFERENCE>`
+			- to remove a tool
+				- call [[mise/unuse]] `<TOOL_REFERENCE>`
 		- ### Step 1 - find the tool reference with [[mise/ls]]
 			- basic
 				- `mise ls | rg claude`

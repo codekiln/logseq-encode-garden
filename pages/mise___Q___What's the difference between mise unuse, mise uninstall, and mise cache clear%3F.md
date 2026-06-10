@@ -2,13 +2,20 @@ logseq-entity:: [[Logseq/Entity/question]], [[Logseq/Entity/Card]]
 see-also:: [[mise]], [[mise/unuse]], [[mise/uninstall]], [[mise/cache/clear]], [[mise/Q/How do I remove a mise tool?]], [[mise/Q/How do I clear the installed mise tools?]]
 
 - # What's the difference between [[mise/unuse]], [[mise/uninstall]], and [[mise/cache/clear]]? [[card]]
+  card-last-interval:: -1
+  card-repeats:: 1
+  card-ease-factor:: 2.5
+  card-next-schedule:: 2026-06-11T04:00:00.000Z
+  card-last-reviewed:: 2026-06-10T07:49:17.536Z
+  card-last-score:: 1
 	- ## [[My Answer]]
 		- | Command              | Primary effect           | Config `[tools]` | Installed binaries | Cache |
 		  | -------------------- | ------------------------ | ---------------- | ------------------ | ----- |
 		  | [[mise/unuse]]       | remove config and binary | ✓                | ✓                  | ✗     |
 		  | [[mise/uninstall]]   | remove binary            | ✗                | ✓                  | ✗     |
 		  | [[mise/cache/clear]] | remove build cache       | ✗                | ✗                  | ✓     |
-		- Cache clear does not uninstall, but symlinked backends may need [[mise/install]] after a full clear.
+		- Cache clear does **not** uninstall, but symlinked backends may need [[mise/install]] after a full clear.
+			- TODO fix the other flashcard about how to uninstall all commands in mise
 	- ## [[AI Answer]]
 		- **Short answer:** they operate on three different layers. [[mise/unuse]] removes a tool from **config** and usually prunes the install too; [[mise/uninstall]] deletes **installed versions on disk** without touching config; [[mise/cache/clear]] wipes **mise's download/build cache** without editing config.
 		- **[[mise/unuse]]** — removes `TOOL@VERSION` entries from `mise.toml` (or global / env-specific config with flags). Aliases: `mise rm`, `mise remove`. By default it **also prunes** the installed copy when no other config still references that version; pass `--no-prune` to drop the config line but keep the binary. This is the usual way to stop tracking a tool in a project or globally. [mise unuse](https://mise.jdx.dev/cli/unuse.html)

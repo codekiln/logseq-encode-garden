@@ -2,6 +2,12 @@ logseq-entity:: [[Logseq/Entity/question]]
 see-also:: [[mise]], [[mise/Backend/npm]], [[mise/search]], [[Aube]]
 
 - # How can I search for an [[npm]]/ [[Aube]] [[mise/Tool]]? [[card]]
+  card-last-interval:: -1
+  card-repeats:: 1
+  card-ease-factor:: 2.5
+  card-next-schedule:: 2026-06-11T04:00:00.000Z
+  card-last-reviewed:: 2026-06-10T07:56:23.523Z
+  card-last-score:: 1
 	- ## [[My Answer]]
 		- Step 1 - [[npm/search/--searchlimit]] for discovery
 			- `npm search --searchlimit 1 rulesync`
