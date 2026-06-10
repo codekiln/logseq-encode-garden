@@ -16,6 +16,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Guard against publish-spa sentinel collision
+        run: |
+          if grep -rnE 'logseq____&(amp|lt|gt|quot|apos);' pages journals; then
+            echo "::error::Literal publish-spa sentinel token found in graph content; it will corrupt the published JSON and blank the site."
+            exit 1
+          fi
+
       - name: Logseq Publish
         uses: logseq/publish-spa@main
         with:

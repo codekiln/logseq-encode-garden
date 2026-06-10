@@ -20,8 +20,8 @@
 			- If the decompressed text were assigned directly (`window.logseq_db = text`), the escape sequences would appear as literal characters (e.g. a backslash followed by `n` instead of a newline), corrupting the [[Transit/JSON]] data.
 			- `eval()` reproduces the exact same semantics as the original inline script.
 		- ### Why the full assignment must be stored (not just the data)
-			- [[Logseq]] uses a custom encoding: special characters (`"`, `&`, `<`, `>`, `'`) are replaced with `logseq____&quot;` and similar markers before `JSON.stringify` embeds the data. The decode function in `main.js` reverses those replacements after reading `window.logseq_db`.
-			- Storing only the raw bytes between the outer quote delimiters and assigning directly would leave the `logseq____&quot;` markers in place but cause the JS escape sequences to be unprocessed — breaking the decode step.
+			- [[Logseq]] uses a custom encoding: special characters (`"`, `&`, `<`, `>`, `'`) are replaced with sentinel markers — a `logseq____` prefix joined to the matching HTML entity (`&quot;`, `&amp;`, …) — before `JSON.stringify` embeds the data. The decode function in `main.js` reverses those replacements after reading `window.logseq_db`.
+			- Storing only the raw bytes between the outer quote delimiters and assigning directly would leave those sentinel markers in place but cause the JS escape sequences to be unprocessed — breaking the decode step.
 			- Storing and `eval()`ing the complete `window.logseq_db="…"` statement is the minimal change that preserves both the escape-sequence semantics and the marker-based encoding.
 		- ### Workflow change
 			- A step is added to `.github/workflows/gh-pages.yml` after the `logseq/publish-spa` step and before the deploy step:
