@@ -12,6 +12,7 @@
 				  query-properties:: [:block]
 	- ## Individual Flashcard Groups
 		- ### [[mise]]
+		  collapsed:: true
 			- {{cards [[mise]] }}
 		- ### [[yazi]]
 		  collapsed:: true
