@@ -40,6 +40,7 @@ This repository is a personal Logseq knowledge graph (not a software project): p
 - Entities (dedup, create/update, type pages, journal record) → **logseq-entity**; person hubs → **logseq-person** command; garden naming prefs → **logseq-pref**
 - Wikilink resolution / stub prevention → **logseq-link-hygiene**
 - Flashcards / Keyshort cards → **logseq-flashcard**
+- Favorite-driven flashcard decks (generated from :favorites, kept in sync) → **logseq-flashcard-favorite**
 - Questions (`/Q/` pages) → **logseq-question**
 - Weekly page setup → **logseq-update-week** command
 - Journal editorial formatting → **logseq-format-journal** command

@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+#MISE description="Reconcile Logseq/Flashcard/Review/Favorite decks with config.edn :favorites"
+#MISE tools={ "npm:@logseq/nbb-logseq" = "latest" }
+
+#USAGE flag "--write" help="Apply changes to the graph (default: dry-run preview)"
+#USAGE flag "--prune" help="Delete subpages for favorites no longer in config (default: report only)"
+
+# usage exposes parsed flags as usage_* env vars; forward them to the cljs engine.
+args=()
+[ "${usage_write:-false}" = "true" ] && args+=("--write")
+[ "${usage_prune:-false}" = "true" ] && args+=("--prune")
+
+engine="${MISE_PROJECT_ROOT:-$PWD}/.rulesync/skills/logseq-flashcard-favorite/scripts/generate-favorite-decks.cljs"
+
+# Run from the graph root so the engine sees pages/, journals/, and logseq/config.edn.
+cd "${MISE_PROJECT_ROOT:-$PWD}"
+exec nbb-logseq "$engine" "${args[@]}"
