@@ -5,7 +5,7 @@
 	- ## Combos - All Flashcards
 		- ## All Flashcards by Active and Background
 			- ### Foreground / ==Active== [[Logseq Flashcards]]
-				- {{cards ( or [[rg]] [[vim]] [[nvim]] [[fzf]] [[Zoxide]] [[yazi]] [[tmux]] [[Lazygit]] [[Lightroom/Classic]] [[mise]] )}}
+				- {{cards ( or [[rg]] [[vim]] [[nvim]] [[fzf]] [[Zoxide]] [[yazi]] [[tmux]] [[Lazygit]] [[Lightroom/Classic]] [[mise]] [[DevContainer]])}}
 			- ### Background
 			  collapsed:: true
 				- {{cards ( not ( or [[rg]] [[vim]] [[nvim]] [[fzf]] [[Zoxide]] [[yazi]] [[tmux]] [[Lazygit]] [[Lightroom/Classic]] [[mise]] ) ) }}
