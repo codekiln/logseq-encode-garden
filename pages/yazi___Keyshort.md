@@ -8,5 +8,7 @@
 	- [[yazi/Keyshort/Leader]]
 	- [[yazi/Keyshort/Plugin/fzf/Fuzzy pick subtree]]
 	- [[yazi/Keyshort/Plugin/Zoxide/Open interactive picker]]
+	- [[yazi/Keyshort/Plugin/fr/Search file by content (rg)]]
+	- [[yazi/Keyshort/Plugin/fr/Search file by content (rga)]]
 	- [[yazi/Keyshort/Sort/Time/Modification]]
 	- [[yazi/Keyshort/Sort/Time/Birth]]
