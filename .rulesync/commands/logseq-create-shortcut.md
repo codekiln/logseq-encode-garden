@@ -28,8 +28,7 @@ This command creates or updates Logseq Keyshort pages using the canonical `<Scop
 - **Flashcards**:
   - Use `[[Card]]` blocks for new shortcut cards.
   - Avoid `Question :: Answer` blocks and any "Flashcard Questions" section.
-- **Frontmatter**:
-  - Do not add or remove `tags::` on existing pages.
+- **Frontmatter**: standard attributes only; no new keys unless specified.
 
 ## Workflow
 

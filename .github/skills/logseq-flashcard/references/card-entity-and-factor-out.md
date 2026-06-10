@@ -31,7 +31,7 @@ logseq-entity:: [[Logseq/Entity/Card]]
 
 - The ancestry parent block should include enough source/scope links for scoped `{{cards [[...]]}}` decks to pick up the card.
 - Do not self-link the current card page in its own body.
-- Do not add, remove, or alter `tags::` frontmatter on existing pages.
+- `tags::` is protected per `logseq-core`; do not alter it on existing pages.
 
 ## Factor-out workflow
 

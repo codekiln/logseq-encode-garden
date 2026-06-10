@@ -12,7 +12,7 @@ Understanding-oriented pages explain **why** and **how ideas fit together** — 
 
 - **Understanding-oriented**: why and how ideas fit together.
 - **LFM**: bullets, headings as bullets, TAB nesting, no blank lines between bullets.
-- **Tags**: include **`[[Diataxis/Concept]]`** (or **`[[Diataxis/Explanation]]`**, same cluster via alias) on new concept-shaped pages; **never remove** existing `tags::`.
+- **Tags**: include **`[[Diataxis/Concept]]`** (or **`[[Diataxis/Explanation]]`**, same cluster via alias) on new concept-shaped pages (`tags::` is protected per `logseq-core`).
 - **Related graph pages**: use **`see-also::`** in frontmatter (strongest tie first); avoid a **`## Related`** section that only lists internal links unless the author asks.
 
 ## Relationship to entity work

@@ -98,7 +98,7 @@ When multiple different footnotes remain inline after consolidation, render them
 
 ### Step 7: Add Frontmatter
 
-- [ ] **Preserve existing frontmatter** (especially `tags::`) - DO NOT modify existing `tags::` frontmatter
+- [ ] **Preserve existing frontmatter** — `tags::` is protected per `logseq-core`; do not modify it
 - [ ] Add `tags:: [[ChatGPT/Deep Research]]` if not already present
 - [ ] **Ask user for ChatGPT conversation link**: "Please provide the ChatGPT conversation link for this Deep Research report"
 - [ ] Add `chatgpt-link:: {link}` to frontmatter where `{link}` is the URL provided by the user
@@ -141,7 +141,6 @@ After completing the import, report:
 3. **Footnotes with descriptive text** - Use URL only: `[^1]: https://url.com` not `[^1]: [text](url)`
 4. **Not consolidating duplicates** - Always deduplicate footnotes pointing to same URL
 5. **Adjacent footnotes without separators** - Use spaces between inline footnotes so renderers do not display misleading merged numbers such as `45`
-6. **Modifying frontmatter tags** - Never modify existing `tags::` frontmatter, only add if missing
-7. **Missing footnote URLs** - All footnotes should have actual hyperlinks, not placeholder text
-8. **Over-linking entities** - Only link when user confirms and when it adds semantic value
-9. **Creating new pages for entities** - Only link to existing pages, never create new ones
+6. **Missing footnote URLs** - All footnotes should have actual hyperlinks, not placeholder text
+7. **Over-linking entities** - Only link when user confirms and when it adds semantic value
+8. **Creating new pages for entities** - Only link to existing pages, never create new ones

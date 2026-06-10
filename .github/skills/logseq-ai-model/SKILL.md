@@ -26,5 +26,5 @@ When the model is a primary focus (capabilities, benchmarks, comparisons, full s
 
 ## Always
 
-- Never modify existing `tags::` (protected). New model pages use `tags:: [[AI/Model]]`.
+- New model pages use `tags:: [[AI/Model]]` (`tags::` is protected per `logseq-core`).
 - Link existing model pages when available; use `logseq-link-hygiene` before inventing links.

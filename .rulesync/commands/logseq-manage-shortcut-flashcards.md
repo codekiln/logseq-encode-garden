@@ -25,8 +25,7 @@ This command audits or updates Keyshort pages to ensure `#card` flashcards inher
 - **Flashcards**:
   - Use `#card` blocks only.
   - Do not add `Question :: Answer` blocks.
-- **Frontmatter**:
-  - Do not add or remove `tags::` on existing pages.
+- **Frontmatter**: standard attributes only; no new keys unless specified.
 
 ## Workflow
 

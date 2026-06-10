@@ -50,7 +50,6 @@ This command creates or updates a `[[Term]]` page in the Logseq knowledge garden
 
 ### Step 3: Create or update the page
 
-- Preserve any existing `tags::` exactly as written on existing pages.
 - For a **new** page, create frontmatter as needed:
   - `tags:: [[Term]]`
   - optional `alias:: ...`

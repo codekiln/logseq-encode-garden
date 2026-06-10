@@ -20,8 +20,7 @@ Canonical workflow ported from command `logseq-manage-shortcut-flashcards`. Use 
   - New or migrated Keyshort review cards use `[[Card]]`.
   - Existing `#card` or `[[card]]` blocks are legacy review cards; preserve them unless the task is to migrate them.
   - Do not add `Question :: Answer` blocks.
-- **Frontmatter**:
-  - Do not add or remove `tags::` on existing pages.
+- **Frontmatter**: standard attributes only (`tags::` is protected per `logseq-core`).
 
 ## Workflow
 

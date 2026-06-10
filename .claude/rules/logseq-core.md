@@ -40,7 +40,7 @@ These guardrails apply to every edit of a page or journal in this garden. Deeper
 ## Namespaces and naming
 
 - Links use `/`: `[[Project/Tasks]]`. On disk that is `Project___Tasks.md` (triple underscore). Never create real folders for namespaces; never use `___` inside a `[[link]]`.
-- Page names are **singular**; expose plural/contextual forms via `alias::`, not in the page name (`[[Project]]` + `alias:: [[Projects]]`, not `[[Projects]]`).
+- Page names are **singular**; plural or contextual forms belong in `alias::`, not in the page name (`[[Project]]` + `alias:: [[Projects]]`, not `[[Projects]]`). Do not add `alias::` values speculatively — aliases are human-curated. If an alias seems useful, suggest it in the chat response; do not write it to the page without explicit instruction.
 - Do not invent namespaces or link to pages that don't already exist (use the `logseq-link-hygiene` skill if unsure).
 - Do not link a page to itself (no `[[This Page]]` in its own body).
 

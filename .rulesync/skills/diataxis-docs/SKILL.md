@@ -34,7 +34,7 @@ Then read the matching reference:
 ## Shared rules (all quadrants)
 
 - **LFM**: bullets, headings as bullets (`- # Heading`), TAB nesting, no blank lines (see `logseq-core`).
-- **Tags**: ADD the quadrant's `[[Diataxis/...]]` tag to new doc pages; **never remove or edit existing `tags::`** (protected).
+- **Tags**: ADD the quadrant's `[[Diataxis/...]]` tag to new doc pages only (`tags::` is protected per `logseq-core`).
 - **Namespace ↔ file**: `[[A/B/How To/X]]` → `pages/A___B___How To___X.md` (triple underscore).
 - **Related pages**: prefer `see-also::` in frontmatter over a `## Related` list of internal links, unless the author asks.
 - Use `logseq-link-hygiene` before adding `[[...]]`; do not invent pages.

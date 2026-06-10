@@ -22,7 +22,7 @@ Capture a forum thread as a hierarchical Logseq page.
 
 ## Critical
 
-- **Never modify `tags::` frontmatter** (the single protected attribute). Add topical tags only where the format calls for them, never edit existing ones.
+- `tags::` is protected per `logseq-core`. Add topical tags only where the format calls for them.
 - Use site-specific user namespaces (`[[CursorAI/Forum/User/...]]`, `[[Reddit/User/...]]`, `[[StackOverflow/User/...]]`); only create `[[Person/Full Name]]` for confirmed cross-platform identities — route those through the logseq-person command + logseq-entity skill.
 
 ## Reference
