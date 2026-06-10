@@ -4,3 +4,5 @@
 	- By default, this garden tries to use the singular form for the canonical page name, and may use alias for the plural form.
 	- Canonical page names should remain singular where the garden naming convention calls for singular names; plural or contextual references belong in aliases.
 	- Do not create an alias that only repeats parent namespace context already expressed by the page title.
+	- Aliases are human-curated, not agent-generated. Agents should suggest alias candidates in the chat response rather than writing them to the page without explicit instruction.
+	- When auditing or pruning aliases, verify each with `rg '[[Candidate Name]]' pages/ journals/` to check graph usage before keeping it. For a graph-wide audit, [[nbb-logseq]] is more appropriate than ad hoc text search.

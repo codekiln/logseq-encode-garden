@@ -1,12 +1,13 @@
 logseq-entity:: [[Logseq/Entity/concept]]
-alias:: [[Different Types of File Operating System Links]], [[Different Types of File System Links]], [[File System Link Comparison]], [[Filesystem Link Comparison]]
+alias:: [[File System Link Comparison]]
 see-also:: [[OS/File/System/Link]], [[OS/File/System/Link/Hard]], [[OS/File/System/Link/Soft]], [[System/Operating]]
 
 - # Different Types of File System Links
 	- ## Overview
 		- [[POSIX]]-style file-system links let one file-system location reach content through more than one name, but the main link types do this in different ways.
-		- A [[OS/File/System/Link/Hard]] is another name for the same underlying file object. A [[OS/File/System/Link/Soft]] is a separate object that stores a path to another file or directory.
-		- The practical difference is whether the link names the **object itself** or names a **path to find another object**.
+		- A [[OS/File/System/Link/Hard]] is a direct name-to-[[OS/File/System/Inode]] mapping: the name *is* the file object. No path resolution happens; the OS reaches the file directly by inode number.
+		- A [[OS/File/System/Link/Soft]] stores a path string as its payload. Each time it is followed, the OS walks the [[OS/File/System/Directory]] tree to resolve that string. If the target has moved or been deleted, the stored string leads nowhere — the link is dangling.
+		- The practical difference: hard links cannot go stale because there is no path to become wrong; symlinks can go stale because the stored path may stop resolving.
 	- ## Context
 		- File systems separate several ideas that are easy to blur together: bytes on storage, file metadata, directory entries, and pathnames. Links are where those layers become visible.
 		- A pathname such as `notes/today.md` is resolved by walking directory entries. A hard link adds another directory entry to the same file object; a symbolic link inserts a path-redirection step into that walk.
@@ -34,6 +35,44 @@ see-also:: [[OS/File/System/Link]], [[OS/File/System/Link/Hard]], [[OS/File/Syst
 		- **Config indirection**: `ln -s ~/dotfiles/zshrc ~/.zshrc` creates a symbolic link. The home-directory path points to the dotfiles path.
 		- **Tool shims**: A version manager may put commands on `PATH` as symlinks to a dispatcher binary, letting many command names route through one implementation.
 		- **Project-local references**: A repository may symlink local rules or assets into a standard directory, but those symlinks can break when collaborators use a different directory layout.
+	- ## Investigation
+		- The tools below let you observe the inode/path distinction directly in a terminal.
+		- ### See inode numbers with `ls -li`
+			- The first column is the [[OS/File/System/Inode]] number. Two names with the same inode number are hard links to the same file object. The second numeric column is the link count.
+			- ~~~sh
+			  ls -li report.md archive.md
+			  # 1234567 -rw-r--r-- 2 user group 42 Jun 10 report.md
+			  # 1234567 -rw-r--r-- 2 user group 42 Jun 10 archive.md
+			  ~~~
+			- Both names share inode `1234567` and link count `2`. A symlink would show a different inode number and an `l` in the permission field.
+		- ### Deep-inspect a single file with `stat`
+			- `stat <file>` shows the inode number, link count, permissions, owner, and all three timestamps in one view.
+			- ~~~sh
+			  stat report.md
+			  # Inode: 1234567   Links: 2
+			  ~~~
+		- ### Read a symlink's stored path with `readlink`
+			- `readlink <link>` prints the raw path string stored inside the symlink — the thing that can go stale.
+			- `readlink -f <link>` resolves the full chain to a canonical absolute path, or exits non-zero if any step in the chain is broken.
+			- ~~~sh
+			  readlink ~/.zshrc
+			  # /home/user/dotfiles/zshrc
+			  readlink -f ~/.zshrc
+			  # /home/user/dotfiles/zshrc
+			  ~~~
+		- ### Find all hard links that share an inode
+			- Once you know an inode number (from `ls -li` or `stat`), `find -inum` locates every hard link to it.
+			- ~~~sh
+			  find . -inum 1234567
+			  # ./report.md
+			  # ./archive.md
+			  ~~~
+		- ### Find dangling symlinks with `find -xtype l`
+			- `-type l` matches any symlink. `-xtype l` matches symlinks whose target cannot be resolved — the practical definition of a dangling link.
+			- ~~~sh
+			  find . -xtype l
+			  # ./broken-link
+			  ~~~
 	- ## Misconceptions
 		- **"A hard link is a shortcut."** Not quite. A hard link is another real name for the same file object; there is no special shortcut file to follow.
 		- **"Deleting the original deletes the hard-linked file."** False. After a hard link is created, no pathname is technically the original; each hard link is an equal directory entry for the same file object. The content remains while any hard link remains.
