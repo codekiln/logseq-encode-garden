@@ -1,0 +1,22 @@
+- [[Book/The Laws of Simplicity]]
+- # Law 9 — Failure: Some things can never be made simple.
+	- ## What it means
+		- Not everything yields to simplification. Some systems, experiences, or problems are irreducibly complex.
+		- Recognizing this is not defeat — it's wisdom. Forcing simplicity onto genuinely complex things can destroy their value.
+		- Failure to simplify still has a return: the ROF (Return On Failure) — you learn where simplicity's limits are.
+	- ## ROF: Return On Failure
+		- Every failed attempt to simplify teaches something.
+		- One person's failed simplification can become another's beautiful complexity — the shift is in perspective, not in the object.
+		- A failed experiment in reduction can reveal the irreducible core of what you're working with.
+	- ## Complexity can be beautiful
+		- A flower is complex — thin strands, gradients of hue, fractal structure — and that complexity is the beauty.
+		- Trying to simplify a flower into a dot loses everything that makes it a flower.
+		- Google's search experience is simple; the infrastructure behind it is staggeringly complex. Both are true and appropriate.
+	- ## Simplicity is relative
+		- "Simple" and "complex" are not absolute properties — they depend on frame of reference, expertise, and purpose.
+		- A relatively simple line of code can produce visually complex art. A simple seed produces a complex plant.
+		- The appropriate goal isn't always maximum simplicity — it's the right *level* of simplicity for the context.
+	- ## How to apply it
+		- Before simplifying, ask whether complexity is a bug or a feature. Some things need to be complex.
+		- Set a budget for simplification effort: if a thing resists simplification after genuine attempts, document what you learned and move on.
+		- Use failures as a diagnostic — they tell you which parts of the system are load-bearing complexity.

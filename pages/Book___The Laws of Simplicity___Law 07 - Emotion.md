@@ -1,0 +1,18 @@
+- [[Book/The Laws of Simplicity]]
+- # Law 7 — Emotion: More emotions are better than less.
+	- ## What it means
+		- Simplicity isn't always what people want. Emotional resonance can matter more than efficiency or minimalism.
+		- Rational arguments for simplicity (cheaper to make, easier to use) don't always win against the human desire for expressiveness, richness, and meaning.
+		- When designing for people, don't be afraid to add ornament, color, or layers of meaning if they serve emotional connection.
+	- ## The limits of minimalism
+		- Some people, like Maeda's mother, find minimalist objects cold, cheap, or unattractive.
+		- She prefers neon flowers, bejeweled frogs, and decorative richness — the opposite of the Modernist aesthetic.
+		- Both preferences are valid. Simplicity is not a universal good; it's a design choice with tradeoffs.
+	- ## Simplicity can read as "cheap"
+		- IKEA produces simple, affordable products that many people love — but others perceive as disposable or impersonal.
+		- The iPod, elegant by any Modernist standard, was unattractive to Maeda's mother.
+		- Self-expression is a deep human drive, and many purchase decisions are emotional, not rational.
+	- ## How to apply it
+		- Know your audience: design for the actual emotional needs of users, not for an idealized user who only values efficiency.
+		- Simplicity and emotional richness are not opposites — ornamentation can be simple in its own right.
+		- When users crave expressiveness, complexity, or "bling," those are valid signals to respond to, not correct away.

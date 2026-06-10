@@ -1,0 +1,18 @@
+- [[Book/The Laws of Simplicity]]
+- # Law 5 — Differences: Simplicity and complexity need each other.
+	- ## What it means
+		- Simplicity only registers as simplicity against a backdrop of complexity.
+		- Without contrast, there is no way to recognize or appreciate either quality.
+		- The relationship is symbiotic: a simple design stands out *because* competitors are complex.
+	- ## Contrast as perception
+		- We experience color, texture, and design through difference: pink in a sea of olive green reads as vivid and bold.
+		- A product that is simple but surrounded by other simple products loses its edge.
+		- Similarly, a dessert-only diet loses its appeal — sweetness needs savory to stay desirable.
+	- ## Strategic implication
+		- As markets grow more complex (more features, more options, more noise), simplicity becomes a *competitive advantage*.
+		- Apple's iPod was simple relative to the bloated interfaces of competing MP3 players — that contrast was the strategy.
+		- Deliberately making complexity visible somewhere in the system can make the simpler parts feel even more simple.
+	- ## How to apply it
+		- Use complexity purposefully — put it where users expect depth (settings, advanced mode, documentation) so the primary surface can remain clean.
+		- Position your product or design against complex alternatives to make its simplicity legible.
+		- Don't remove *all* complexity: sometimes a glimpse of depth signals power and capability.

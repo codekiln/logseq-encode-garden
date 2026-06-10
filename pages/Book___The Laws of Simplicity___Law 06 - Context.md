@@ -1,0 +1,20 @@
+- [[Book/The Laws of Simplicity]]
+- # Law 6 — Context: What lies in the periphery of simplicity is definitely not peripheral.
+	- ## What it means
+		- A simple design doesn't exist in isolation — it exists inside a context, and that context matters.
+		- What surrounds the core experience (the background, the environment, the peripheral details) shapes how the whole thing feels.
+		- Stripping away everything in service of focus can blind you to what the background was quietly providing.
+	- ## Light bulb vs. laser beam
+		- Nicholas Negroponte advised Maeda: become a light bulb, not a laser beam.
+			- A laser beam concentrates all energy on a single point — maximal precision, minimal spread.
+			- A light bulb uses the same energy to illuminate the entire room.
+		- Extreme focus is celebrated as "dedication" or "excellence," but it trades away awareness of context.
+		- The best designers notice what's happening at the edges — the pot boiling over, the cut hand — not just the foreground task.
+	- ## Practical examples
+		- At the pottery wheel, total focus on the clay makes you miss the stove and the doorbell.
+		- In UI design, peripheral elements (empty state, error state, hover affordances) are often what make a product feel polished or broken.
+		- A minimalist design can feel cold and inhospitable if the surrounding context — tone, copy, branding — is ignored.
+	- ## How to apply it
+		- When simplifying, audit the periphery: what are you removing that users were relying on without noticing?
+		- Look for "silent features" — things that feel unimportant until they're missing.
+		- The context a design lives in (physical, cultural, competitive) shapes its meaning as much as the design itself.

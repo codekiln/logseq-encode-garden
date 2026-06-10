@@ -1,0 +1,18 @@
+- [[Book/The Laws of Simplicity]]
+- # Law 8 — Trust: In simplicity we trust.
+	- ## What it means
+		- The ultimate expression of simplicity is a system you trust so completely that you don't need to understand it.
+		- You press one button and the right thing happens — no friction, no second-guessing, no checking.
+		- This requires delegating complexity to the system and trusting its judgment.
+	- ## The one-button ideal
+		- Imagine a device with a single unlabeled button. You press it and your immediate task is done — a letter sent, an order placed.
+		- That's the extreme end of simplicity: the system absorbs all complexity so the user absorbs none.
+		- The tradeoff: you surrender control and oversight in exchange for ease.
+	- ## The role of intelligence
+		- Computers already know your name, address, and habits. A sufficiently intelligent system could compose a message to Aunt Mabel on your behalf — just click once.
+		- Whether the result is *correct* is secondary to whether it's *trusted*. We accept autocorrect mistakes, GPS rerouting, and email filters because the 90% case is handled for us.
+		- Trust is built through consistent, accurate behavior over time.
+	- ## How to apply it
+		- Design systems that handle complexity invisibly, surfacing only what the user needs to decide.
+		- Build trust incrementally — start with high-confidence automation (spell check, autosave) before attempting high-stakes decisions.
+		- Identify moments where users second-guess the system and reduce the anxiety, either through better defaults or better feedback.

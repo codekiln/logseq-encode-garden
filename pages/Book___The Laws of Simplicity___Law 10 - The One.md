@@ -1,0 +1,22 @@
+- [[Book/The Laws of Simplicity]]
+- # Law 10 — The One: Simplicity is about subtracting the obvious, and adding the meaningful.
+	- ## What it means
+		- This is the meta-law that contains all the others in a single principle.
+		- Two moves: remove what is obvious (assumed, expected, taken for granted), and add back what is *meaningful* (what creates value, resonance, or connection).
+		- The goal isn't zero — it's the irreducible essence plus the things that matter most.
+	- ## The wordplay
+		- There are ten laws (10). Remove none (0). You're left with one (1).
+		- 10 → remove the 0 → 1. That's the joke and the point: when in doubt, simplify to the one.
+	- ## Two distinct acts
+		- **Subtracting the obvious**: remove what users already assume is there, what adds no information, what is noise.
+			- The "obvious" includes redundant labels, unnecessary steps, features no one uses, and decoration that communicates nothing.
+		- **Adding the meaningful**: restore or introduce what creates genuine value — even if it adds apparent complexity.
+			- Meaning can come from delight, emotional resonance, context, narrative, or depth.
+	- ## Why this is the synthesis
+		- Laws 1–4 (Reduce, Organize, Time, Learn) are about removing friction and complexity.
+		- Laws 5–9 (Differences, Context, Emotion, Trust, Failure) add nuance: context matters, emotion matters, trust matters, and some complexity is irreducible.
+		- Law 10 holds the tension: simplify *and* enrich. Neither maximalism nor minimalism — purposefulness.
+	- ## How to apply it
+		- For every element in a design, ask: is this *obvious* (remove it) or *meaningful* (keep or add it)?
+		- "Subtracting the obvious" means ruthless editing of the assumed and the decorative.
+		- "Adding the meaningful" means asking what would make this resonate — and being willing to add that back even if it adds complexity.

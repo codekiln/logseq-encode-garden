@@ -1,0 +1,19 @@
+- [[Book/The Laws of Simplicity]]
+- # Law 2 — Organize: Organization makes a system of many appear fewer.
+	- ## What it means
+		- When you can't reduce the number of things, organize them into groups.
+		- Grouping collapses many into few — a wardrobe of a thousand items becomes six categories (neckties, shirts, slacks, jackets, socks, shoes).
+		- This works only when the number of groups is significantly smaller than the number of items.
+	- ## Three strategies for managing clutter
+		- 1. **Buy more space** — larger home, bigger drawer, extra storage. Creates room but also invites more stuff.
+		- 2. **Hide it** — put things in storage or out of sight. Effective short-term; clutter returns.
+		- 3. **Organize systematically** — group by principle so things stay findable and manageable.
+			- This is the only strategy that scales over time.
+	- ## The key question
+		- Most tidying asks "What to hide?" and "Where to put it?"
+		- The harder, more powerful question is: **"What goes with what?"**
+			- Good groupings create mental models that make the whole system feel smaller.
+	- ## How to apply it
+		- Audit complexity by counting categories, not items. Fewer categories = simpler feel.
+		- Design groupings around how users *think*, not how the system is structured internally.
+		- Consistent organizing principles must be easy to follow, or they won't stick.

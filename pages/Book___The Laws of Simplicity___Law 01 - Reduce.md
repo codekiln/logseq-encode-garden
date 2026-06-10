@@ -1,0 +1,18 @@
+- [[Book/The Laws of Simplicity]]
+- # Law 1 — Reduce: The simplest way to achieve simplicity is through thoughtful reduction.
+	- ## What it means
+		- The easiest way to simplify a system is to remove functionality.
+		- The question is always: **how simple can you make it?** vs. **how complex does it have to be?**
+			- Strip too much and the thing stops being useful.
+			- Leave too much and it feels overwhelming.
+		- The process of reaching an ideal state of simplicity is itself complex — but the heuristic is: **when in doubt, just remove**.
+			- Be careful of *what* you remove, though. Some features look optional until they're gone.
+	- ## Example from the book
+		- A DVD player with too many buttons — Rewind, Forward, Eject, etc. — when all you want to do is watch a movie.
+			- The minimal version would have only a Play button.
+			- But then you lose the ability to revisit a scene or pause for a break.
+		- The simplification challenge is finding the irreducible core: what must stay, and what can go?
+	- ## How to apply it
+		- Start from maximum reduction, then add back only what is essential.
+		- Ask of every feature, button, or step: "does removing this break the core use case?"
+		- Thoughtful reduction differs from arbitrary removal — understand what each element does before cutting.

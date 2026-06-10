@@ -1,0 +1,18 @@
+- [[Book/The Laws of Simplicity]]
+- # Law 3 — Time: Savings in time feel like simplicity.
+	- ## What it means
+		- When an interaction is fast, we experience it as simple — even if the underlying system is complex.
+		- Waiting creates frustration, which reads as complexity.
+		- Speed and perceived simplicity are strongly coupled in user experience.
+	- ## Waiting is everywhere
+		- We wait for water from the faucet, for pages to load, in traffic, for medical results.
+		- Some waiting is subtle and tolerated (seasons changing). Some is acute and maddening (a slow website).
+		- The *type* of waiting matters: urgent waits feel longer and worse than passive ones.
+	- ## Examples
+		- FedEx overnight delivery — the speed itself is the value proposition.
+		- McDonald's ordering process — the entire system is optimized to minimize time-to-product.
+		- A slow web page feels "broken" even when it eventually loads correctly.
+	- ## How to apply it
+		- Optimize for perceived speed, not just actual speed. Progress indicators and instant feedback reduce frustration even without changing real wait time.
+		- Identify where users are forced to wait and treat each one as a simplicity failure.
+		- Fast interactions build loyalty; slow ones erode it, even if everything else is polished.

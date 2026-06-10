@@ -1,0 +1,19 @@
+- [[Book/The Laws of Simplicity]]
+- # Law 4 — Learn: Knowledge makes everything simpler.
+	- ## What it means
+		- An object or system that seems simple to an expert can be bewildering to a novice.
+		- The complexity isn't in the object — it's in the gap between the object and the user's knowledge.
+		- Investing in learning reduces perceived complexity permanently.
+	- ## Example from the book
+		- A screw is a "simple" object, but using it requires knowing:
+			- Which way to turn it — "righty tighty, lefty loosy."
+			- What that means relative to a clock face or left/right.
+		- Even a child must acquire this layered knowledge to use a screw correctly.
+	- ## The learning-time tradeoff
+		- Learning feels like a waste of time (see [[Book/The Laws of Simplicity/Law 03 - Time]]).
+		- The "dive-in-head-first" instinct — skipping the manual — often takes *longer* than reading the instructions.
+		- Short-term time cost of learning pays back as long-term speed and simplicity.
+	- ## How to apply it
+		- Design for learnability: a system that takes 30 minutes to learn but then feels effortless is simpler in practice than one that requires constant looking up.
+		- Reduce the learning curve through good defaults, progressive disclosure, and mnemonics.
+		- Distinguish between *apparent* simplicity (looks simple now) and *experienced* simplicity (feels simple after use).
