@@ -1,0 +1,22 @@
+tags:: [[chezmoi/Docs]]
+
+- # [[chezmoi]] Scripts
+	- Scripts are files in the [[chezmoi/Source/Directory]] whose names begin with `run_`. They are executed by `chezmoi apply` in alphabetical order.
+	- ## Script types
+		- [[chezmoi/Script/run_]] — executes every `chezmoi apply`
+		- [[chezmoi/Script/run_onchange_]] — executes only when the script's rendered content has changed since the last successful run
+		- [[chezmoi/Script/run_once_]] — executes once per unique rendered-content SHA256; will not re-run unless the content itself changes
+	- ## Timing modifiers
+		- By default scripts run during the target-state update pass, interleaved alphabetically with file updates.
+		- Add `before_` to run before any target files are updated: e.g. `run_once_before_install-password-manager.sh`
+		- Add `after_` to run after all target files are updated: e.g. `run_onchange_after_reload-config.sh`
+		- Modifiers combine freely with any script type.
+	- ## Common conventions
+		- Place scripts in `.chezmoiscripts/` at the source root so they execute as normal scripts without creating a directory in the [[chezmoi/Target/State]].
+		- Add a `.tmpl` suffix to use [[chezmoi/Template]] variables. If the rendered output is empty or whitespace-only, the script is skipped — useful for OS-gating scripts.
+		- Scripts must include a `#!` shebang line. No need to set the executable bit manually.
+		- All scripts must be idempotent, including `run_onchange_` and `run_once_` variants.
+		- A numeric ordering prefix (e.g. `75-`) controls execution order when alphabetical order alone is insufficient.
+	- ## Scripts vs. config hooks
+		- In dry-run mode (`--dry-run`), scripts are **not** executed.
+		- [[chezmoi/Hook]] (the `[hooks]` section in `chezmoi.toml`) is a separate mechanism: hook commands run before/after lifecycle events and **always** execute, even in dry-run mode.
