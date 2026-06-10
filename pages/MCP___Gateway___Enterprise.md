@@ -1,0 +1,22 @@
+logseq-entity:: [[Logseq/Entity/concept]]
+
+- # MCP/Gateway/Enterprise
+	- An enterprise MCP gateway is a proxy layer that sits in front of one or more [[MCP/Server]] instances and adds the controls required for production, multi-tenant, or regulated deployments
+	- Raw MCP servers expose tools directly to any client with network access; the gateway adds the security and operational envelope that enterprises need before they can approve MCP in their environment
+	- ## Core responsibilities
+		- **Authentication** — enforce [[Auth/M2M]] (client credentials / JWT) or user-delegated OAuth before any tool is invoked
+		- **Authorization** — policy-driven tool allowlisting; restrict which tools a given client or role can call
+		- **Audit logging** — immutable record of every tool call, input, and output for compliance and forensics
+		- **Rate limiting** — prevent runaway agents from exhausting quotas or triggering abuse detection downstream
+		- **Secrets management** — inject credentials into tool calls server-side so the client never sees raw secrets
+		- **Multi-tenant isolation** — route each tenant to scoped tool sets; prevent cross-tenant data leakage
+	- ## Why it matters
+		- MCP has a large attack surface: [[MCP/Server/Attack/Root Problem]] catalogs the key failure modes
+		- An enterprise gateway converts MCP from a developer-local pattern into a deployable, auditable service
+		- Enables centralized policy rather than per-server hardening
+	- ## Notable implementations
+		- [[WorkOS]] Enterprise-grade MCP — see [[AI/ES/25/11 Code/CODE/21 Fri/1040 WorkOS Enterprise-grade MCP]]
+	- ## See also
+		- [[Auth/M2M]]
+		- [[MCP/Server]]
+		- [[MCP/Server/Attack/Root Problem]]

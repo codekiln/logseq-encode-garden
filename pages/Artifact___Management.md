@@ -1,0 +1,22 @@
+logseq-entity:: [[Logseq/Entity/concept]]
+
+- # Artifact/Management
+	- The practice of controlling, cataloging, and tracking the software artifacts — container images, packages, libraries, binaries — that are deployed across an environment
+	- ## Relationship to zero-day defense
+		- When a zero-day hits a library or base image, artifact management lets you answer "who is running this?" immediately
+		- Without it, the patch window is consumed hunting for affected systems; with it, you can go straight to remediation
+		- Complements [[Zero/Day/Near]] response by collapsing the time between "patch available" and "all instances identified"
+		- Core idea: shrink the exposure window by knowing your inventory, not by patching faster
+	- ## Key practices
+		- **SBOM** (Software Bill of Materials) — machine-readable manifest of all components in an artifact
+		- **Version pinning** — pin dependencies to known-good digests, not floating tags
+		- **Private artifact mirrors** — proxy public registries so you control what enters the environment
+		- **Artifact scanning** — scan on push and on schedule; integrate with CVE feeds
+		- **Artifact promotion** — move artifacts through dev → staging → prod registries only after passing gates
+	- ## Common tools
+		- [[JFrog]] Artifactory, Sonatype Nexus, AWS CodeArtifact, GitHub Packages, [[Cloudsmith]]
+	- ## See also
+		- [[Zero/Day]]
+		- [[Zero/Day/Near]]
+		- [[SBOM]]
+		- [[Security/SCA]]
