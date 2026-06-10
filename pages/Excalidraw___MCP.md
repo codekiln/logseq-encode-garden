@@ -1,0 +1,4 @@
+- # MCP Server for Excalidraw
+	- ## Notable
+		- MCP server for creating and managing [[Excalidraw]] diagrams via AI assistants
+		- Enables AI-driven whiteboard and diagramming workflows

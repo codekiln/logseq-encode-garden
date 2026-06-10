@@ -1,0 +1,4 @@
+- # MCP Servers for AWS
+	- ## Notable
+		- AWS provides MCP servers for interacting with cloud services such as S3, EC2, Lambda, and Bedrock
+		- Enables AI assistants to manage cloud infrastructure and invoke AWS APIs

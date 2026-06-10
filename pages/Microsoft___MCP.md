@@ -1,0 +1,4 @@
+- # MCP Servers for Microsoft
+	- ## Notable
+		- Microsoft offers MCPs for products including Azure services, Microsoft 365, and developer tooling
+		- Enables AI assistants to interact with Microsoft Graph, Teams, Outlook, and other services

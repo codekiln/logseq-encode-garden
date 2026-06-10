@@ -1,0 +1,4 @@
+- # MCP Server: Filesystem
+	- Reference MCP server for local filesystem access, part of the official [[MCP/GitHub/servers]] collection
+	- Provides tools for reading and writing files and navigating directories
+	- One of the canonical reference servers distributed with the [[MCP]] specification

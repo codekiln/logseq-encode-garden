@@ -1,0 +1,4 @@
+- # MCP Server: Database
+	- Reference category for database MCP servers; implementations exist for PostgreSQL, SQLite, and other backends
+	- Part of the official [[MCP/GitHub/servers]] reference collection
+	- Enables AI assistants to query and manage databases via structured tools

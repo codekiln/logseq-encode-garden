@@ -1,0 +1,4 @@
+- # MCP Server for Google Calendar
+	- ## Notable
+		- MCP server for [[Google]] Calendar integration
+		- Enables AI assistants to read, create, and manage calendar events

@@ -1,0 +1,4 @@
+- # MCP Server for Slack
+	- ## Notable
+		- Official MCP for Slack workspace integration
+		- Enables reading channels, sending messages, and managing Slack workspaces via AI assistants
