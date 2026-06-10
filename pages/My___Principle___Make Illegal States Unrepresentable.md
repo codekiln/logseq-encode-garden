@@ -20,4 +20,4 @@ see-also:: [[My/Principle/Favor Readers Over Writers]], [[My/Principle/Create Un
 		- phrase coined by [[@yminsky]] ([[Yaron Minsky]]) in the context of [[OCaml]] at [[Jane Street]]
 		- popularized further in the [[Elm]] and [[Haskell]] communities
 	- ## source
-		- via [[@yminsky]] slide in [[Jane Street]] talk — see [[My/Principle]] for context
+		- [[Person/Yaron Minsky/Talk/Effective ML]] ([~18 min](https://youtu.be/-J8YyfrSwTk?t=1081))

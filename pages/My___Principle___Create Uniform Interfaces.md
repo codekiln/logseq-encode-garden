@@ -1,4 +1,4 @@
-see-also:: [[My/Principle/Favor Readers Over Writers]], [[My/Principle/Make Illegal States Unrepresentable]]
+see-also:: [[My/Principle/Minimize Surface Area]]
 
 - # what it means
 	- design [[API]]s, [[CLI]]s, and data models so all parts follow the same patterns and conventions
@@ -17,4 +17,4 @@ see-also:: [[My/Principle/Favor Readers Over Writers]], [[My/Principle/Make Ille
 		- when users can predict behavior from pattern-matching, they make fewer errors and need less documentation
 		- see also [[My/Principle/Minimize Surface Area]] — uniformity is one way to keep surface area manageable
 	- ## source
-		- via [[@yminsky]] slide in [[Jane Street]] talk — see [[My/Principle]] for context
+		- [[Person/Yaron Minsky/Talk/Effective ML]] ([~18 min](https://youtu.be/-J8YyfrSwTk?t=1081))

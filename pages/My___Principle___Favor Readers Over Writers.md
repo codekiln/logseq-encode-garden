@@ -16,4 +16,4 @@ see-also:: [[My/Principle/Create Uniform Interfaces]], [[My/Principle/Make Illeg
 		- writing code is a one-time event; reading it happens dozens of times across many people and months
 		- the cognitive cost of deciphering dense code compounds across every future reader
 	- ## source
-		- via [[@yminsky]] slide in [[Jane Street]] talk — see [[My/Principle]] for context
+		- [[Person/Yaron Minsky/Talk/Effective ML]] ([~18 min](https://youtu.be/-J8YyfrSwTk?t=1081))
