@@ -1,7 +1,5 @@
-see-also:: [[My/Principle/Simplify to Avoid Cognitive Load]]
-
-- # what it means
-	- use fewer tools or standards **deeply** rather than using many tools or standards
+# what it means
+	- learn fewer tools or standards **deeply** rather than learning many tools or standards
 	- ## [[Examples]]
 		- ### Use [[mise]] instead of sub-component services
 			- rather than using separate [[CLI/Tool]]s for the jobs to be done of [[mise]] (for example, use mise for environment variable management, tool instalation, task runner)

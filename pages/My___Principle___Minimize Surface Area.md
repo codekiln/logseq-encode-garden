@@ -1,7 +1,7 @@
 see-also:: [[My/Principle/Fewer is Better than Many]], [[Unix/Philosophy]], [[My/Principle/Simplify to Avoid Cognitive Load]]
 
 - # what it means
-	- [[API]]s and [[CLI]]s are better when they have **fewer responsibilities**
+	- [[API]]s, [[CLI]]s and any [[Dependency]] chain is better when it have **fewer responsibilities**
 	- prefer a narrow, well-defined contract over a broad, multi-purpose one
 	- ## [[Examples]]
 		- ### [[CLI]] design
