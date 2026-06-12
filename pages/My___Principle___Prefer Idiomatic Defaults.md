@@ -1,0 +1,24 @@
+see-also:: [[Software/Engineering/Principle/Convention over Configuration]], [[My/Principle/Create Uniform Interfaces]], [[My/Principle/Simplify to Avoid Cognitive Load]], [[My/Principle/Minimize Surface Area]]
+
+- # what it means
+	- prefer a tool's sensible defaults and idiomatic usage over extensive configuration
+	- when a tool has a documented, conventional way to do something — a default file name, a default location, a default keybinding — use it, unless it genuinely conflicts with another of my principles
+	- customizations should be driven by a "must," not by something that would be "nifty"
+	- ## [[Examples]]
+		- ### config file names
+			- [[Ghostty]] documents `~/.config/ghostty/config` as its default config path; a nix-era setup had produced `config.ghostty`, which happens to work but is the undocumented variant
+			- choosing the documented name means the layout is predictable from Ghostty's own docs — no archaeology required
+		- ### default locations
+			- I use [[ghq]]'s default root of `~/ghq` rather than customizing it
+			- "what's laid flat cannot be knocked over" ([[Tao Te Ching]]) — everything we do to customize a setup also decreases its utility to others and, in a sense, the "power" of the configuration
+		- ### canonical config formats
+			- the dotfiles `tool-canonical-config-format` spec: when a tool rewrites its own config (e.g. [[Lazygit]] config migrations), store the chezmoi source byte-for-byte in the tool's canonical output form rather than fighting it
+		- ### keybindings (aspirational)
+			- future plan: use only the [[tmux]] default keybindings, dropping customizations that are merely convenient
+	- ## [[Why]]
+		- idiomatic usage makes a setup legible to future-me and to anyone (or any agent) who already knows the tool — the tool's own documentation becomes documentation for my setup
+		- defaults are the most-tested, most-supported path; departures rot as tools evolve
+		- this is [[Software/Engineering/Principle/Convention over Configuration]] ([[Person/David Heinemeier Hansson]]'s framing from [[Ruby/Rails]]) applied to personal tooling: routine choices belong to the tool's conventions; my configuration should carry only my actual exceptions
+		- see also [[My/Principle/Create Uniform Interfaces]] — a tool's idiom is a uniform interface, maintained by someone else for free
+	- ## tension
+		- defaults can conflict with other principles (e.g. a default that scatters state outside [[XDG]] paths); when they do, the other principle may win — but the departure should be documented as a deliberate exception
