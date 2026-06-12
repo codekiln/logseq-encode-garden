@@ -1,12 +1,13 @@
-- # [[awk]] `-F` — field separator flag
+# [[awk]] `-F` — field separator flag
 	- `-F` sets the **field separator** (`FS`) used to split each input line into fields.
+	- [[My Note]] by default the field separator is any whitespace (space or tab chars). `awk -F` is useful if you need to customize that some more.
 	- ## Syntax
 		- ~~~bash
 		  awk -F'<sep>' '{ ... }' file
 		  ~~~
 		- `<sep>` can be a literal character or an ERE (extended regular expression).
 	- ## How it works
-		- Without `-F`, `awk` splits on runs of whitespace (spaces and tabs, collapsing consecutive ones).
+		- Without `-F`, `awk` splits on **runs of whitespace** (spaces and tabs, collapsing consecutive ones).
 		- With `-F`, each line is split on the given separator; fields are referenced as `$1`, `$2`, ... `$NF`.
 		- The field separator is also available as the built-in variable `FS`; `-F'\t'` is equivalent to `BEGIN { FS = "\t" }`.
 	- ## Common examples
