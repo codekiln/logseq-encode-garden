@@ -60,6 +60,7 @@ see-also:: [[Claude/Code/Settings]]
 			- `/plugin install plugin@marketplace` installs to **user scope** (`~/.claude/settings.json`) by default.
 			- The interactive UI (and `--scope`) let you choose **project** scope (writes to `.claude/settings.json`, shared) or **local** scope (writes to `.claude/settings.local.json`, personal to the repo). `/plugin enable` / `/plugin disable` toggle the corresponding `enabledPlugins` entry.
 	- ## Does Claude walk up parent directories?
+	  id:: 6a2ac000-5dd8-4d50-b2ad-6a35978704e7
 		- **`settings.json`: no.** The scopes are fixed, known paths (user home, the project's `.claude/`, managed locations). Claude Code does not climb parent directories hunting for a `settings.json`; it reads the four scopes and applies the precedence above.
 		- **`CLAUDE.md` / `CLAUDE.local.md`: yes.** *"Claude Code reads CLAUDE.md files by walking up the directory tree from your current working directory, checking each directory along the way."* All discovered files are **concatenated** (root → cwd order), not overridden — so a parent `CLAUDE.md` and a nested one both apply. Files in subdirectories load on demand when Claude reads files there. `.claude/rules/*.md` follow the same model.
 	- ## Worked example: one shared Codespace, different plugins per person
