@@ -2,13 +2,13 @@ logseq-entity:: [[Logseq/Entity/question]]
 tags:: [[Question]]
 see-also:: [[Obsidian/CLI]], [[Obsidian/Q/What Obsidian keyboard shortcuts are most useful for pointing to pages and headings when working with external agentic coding tools like Claude Code?]]
 
-- # Does a [[CLI]] for [[Obsidian]] exist, and if so, can it quickly generate references like wikilinks to pages and headings? [[card]]
-  card-last-interval:: -1
-  card-repeats:: 1
-  card-ease-factor:: 2.5
-  card-next-schedule:: 2026-06-13T04:00:00.000Z
-  card-last-reviewed:: 2026-06-12T05:40:03.008Z
+- # Can the official [[CLI]] for [[Obsidian]]  generate wikilinks to pages and headings? [[card]]
   card-last-score:: 1
+  card-repeats:: 1
+  card-next-schedule:: 2026-06-13T04:00:00.000Z
+  card-last-interval:: -1
+  card-ease-factor:: 2.5
+  card-last-reviewed:: 2026-06-12T05:40:03.008Z
 	- ## [[My Answer]]
 		- CLI exists but there's no built-in way to generate wikilinks to pages and headings. These commands could be scripted to do that, though
 			- [[Obsidian/CLI/file]] lists details for a given page.
