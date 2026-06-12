@@ -1,11 +1,11 @@
 - [[Keyshort]] [[Lazygit]] [[Lazygit/Keyshort]]
 	- **Open the Copy to [[Clipboard]] [[Modal]]** #card
 	  card-last-score:: 5
-	  card-repeats:: 4
-	  card-next-schedule:: 2026-05-18T22:28:31.931Z
-	  card-last-interval:: 33.64
-	  card-ease-factor:: 2.9
-	  card-last-reviewed:: 2026-04-15T07:28:31.932Z
+	  card-repeats:: 5
+	  card-next-schedule:: 2026-09-28T07:01:34.805Z
+	  card-last-interval:: 108
+	  card-ease-factor:: 3
+	  card-last-reviewed:: 2026-06-12T07:01:34.805Z
 		- Shortcut: `y`
 		- Description: Opens a [[Curses]] [[Modal]] with copy options.
 	- **Copy file name to clipboard** #card
