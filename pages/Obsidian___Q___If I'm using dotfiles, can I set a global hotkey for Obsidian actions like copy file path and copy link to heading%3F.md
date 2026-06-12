@@ -2,7 +2,7 @@ logseq-entity:: [[Logseq/Entity/question]]
 tags:: [[Question]]
 see-also:: [[Obsidian/Q/What Obsidian keyboard shortcuts are most useful for pointing to pages and headings when working with external agentic coding tools like Claude Code?]]
 
-- # If I'm using [[dotfiles]], can I set a global hotkey for [[Obsidian]] actions like copy file path and copy link to heading? [[card]]
+- # If I'm using [[dotfiles]], can I set a global hotkey for [[Obsidian]] actions like copy file path and copy link to heading?
   card-last-interval:: -1
   card-repeats:: 1
   card-ease-factor:: 2.5
@@ -15,7 +15,7 @@ see-also:: [[Obsidian/Q/What Obsidian keyboard shortcuts are most useful for poi
 		- this isn't sufficiently answered yet.
 			- unclear:
 				- how to reference a plugin command in a hotkeys.json file
-				- whether global hotkeys can be registered and managed in a [[dotfiles repo]]
+				- whether global hotkeys can be registered and managed in a [[dotfiles repo]] (see [[Obsidian/Q/Does Obsidian have a global config location like XDG home for cross-vault defaults, and do vault-local settings override them?]] )
 	- ## [[AI Answer]]
 		- **Short answer:** Yes — two distinct things both go by "global hotkey" here, and dotfiles cover both paths.
 		- ### 1. Managing in-app Obsidian hotkeys via dotfiles
