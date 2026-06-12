@@ -1,0 +1,2 @@
+- [[Keyshort]] [[Obsidian]] [[Obsidian/Keyshort]]
+	- {{embed [[Obsidian/Keyshort/Open Link in New Split/Card/Open Link in New Split]]}}

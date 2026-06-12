@@ -1,0 +1,2 @@
+- [[Keyshort]] [[Obsidian]] [[Obsidian/Keyshort]]
+	- {{embed [[Obsidian/Keyshort/Add Metadata Property/Card/Add Metadata Property]]}}

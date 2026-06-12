@@ -1,0 +1,2 @@
+- [[Keyshort]] [[Obsidian]] [[Obsidian/Keyshort]]
+	- {{embed [[Obsidian/Keyshort/Toggle Preview/Card/Toggle Preview]]}}

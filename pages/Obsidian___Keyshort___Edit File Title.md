@@ -1,0 +1,2 @@
+- [[Keyshort]] [[Obsidian]] [[Obsidian/Keyshort]]
+	- {{embed [[Obsidian/Keyshort/Edit File Title/Card/Edit File Title]]}}

@@ -1,0 +1,2 @@
+- [[Keyshort]] [[Obsidian]] [[Obsidian/Keyshort]]
+	- {{embed [[Obsidian/Keyshort/Open Search/Card/Open Search]]}}
