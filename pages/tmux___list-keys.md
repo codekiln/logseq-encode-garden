@@ -1,11 +1,14 @@
-- `list-keys [-1aN] [-P prefix-string] [-T key-table] [key]`
-                   (alias: lsk)
-             List key bindings.  There are two forms: the default lists keys as bind-key
-             commands; -N lists only keys with attached notes and shows only the key and
-             note for each key.
-	- With the default form, all key tables are listed by default.  -T lists only
-	             keys in key-table.
-	- With the -N form, only keys in the root and prefix key tables are listed by
-	             default; -T also lists only keys in key-table.  -P specifies a prefix to print
-	             before each key and -1 lists only the first matching key.  -a lists the
-	             command for keys that do not have a note rather than skipping them.
+logseq-entity:: [[Logseq/Entity/CLI/Command]]
+
+- # [tmux list-keys](https://man.openbsd.org/tmux.1#list-keys)
+	- **Usage**: `list-keys [-1aN] [-P prefix-string] [-T key-table] [key]`
+	- **Aliases**: `lsk`
+	- List key bindings. Two forms:
+		- Default: lists all bindings as `bind-key` commands (suitable for `.tmux.conf`). All key tables are shown unless `-T key-table` is given.
+		- `-N`: shows only bindings with attached notes; only root and prefix tables by default. This is what `prefix ?` (`C-b ?`) runs internally.
+	- **Flags**
+		- `-T key-table` — restrict output to a single table (e.g. `prefix`, `root`, `copy-mode`, `copy-mode-vi`).
+		- `-N` — show only noted bindings; output is `key   note` format.
+		- `-a` — with `-N`, include bindings that lack a note (shows command instead of skipping).
+		- `-1` — print only the first matching key.
+		- `-P prefix-string` — prepend a string before each key in the output.
