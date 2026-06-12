@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/question]]
-see-also:: [[Obsidian/CLI]]
+see-also:: [[Obsidian/CLI]], [[awk/-F]]
 
 - # Using the [[Obsidian/CLI]], what one-liner filters `obsidian hotkeys` to show only actually-mapped commands?
 	- ## [[AI Answer]]
