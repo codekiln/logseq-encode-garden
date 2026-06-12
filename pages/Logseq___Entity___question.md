@@ -34,8 +34,8 @@
 		- **Section order** (omit empty sections):
 			- `## [[My Answer]]` — optional; [[Human]] / [[Gard/en/er/Human]] working answer (steps, tables, `[[tldr]]`, verified command examples).
 			- `## [[My Notes]]` — optional; do not create by default. Tangents and links that are not the direct answer.
-			- `## [[AI Answer]]` — optional wrapper for researched answers.
-				- Child bullet: `[[AI/Response]]` — attribution for AI-generated content.
+			- `## [[AI Answer]]` — optional section heading for researched answers. Its presence already marks the content as AI-generated; **do not** add `[[AI/Response]]` as a child bullet inside this section — the two are mutually exclusive.
+			- `[[AI/Response]]` — standalone attribution bullet used **instead of** `## [[AI Answer]]` when no section heading is desired.
 				- Lead with **Short answer:** when useful.
 				- Cite **external** docs with markdown links in the answer body.
 				- Bold for labels; backticks for commands. Do not wrap `` `commands` `` in `**…**` (see [[Logseq/Flavored Markdown]]).
