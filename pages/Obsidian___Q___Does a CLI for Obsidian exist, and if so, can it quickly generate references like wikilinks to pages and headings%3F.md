@@ -3,8 +3,26 @@ tags:: [[Question]]
 see-also:: [[Obsidian/CLI]], [[Obsidian/Q/What Obsidian keyboard shortcuts are most useful for pointing to pages and headings when working with external agentic coding tools like Claude Code?]]
 
 - # Does a [[CLI]] for [[Obsidian]] exist, and if so, can it quickly generate references like wikilinks to pages and headings? [[card]]
+  card-last-interval:: -1
+  card-repeats:: 1
+  card-ease-factor:: 2.5
+  card-next-schedule:: 2026-06-13T04:00:00.000Z
+  card-last-reviewed:: 2026-06-12T05:40:03.008Z
+  card-last-score:: 1
 	- ## [[My Answer]]
-		- [[Obsidian/CLI/file]] has the ability
+		- CLI exists but there's no built-in way to generate wikilinks to pages and headings. These commands could be scripted to do that, though
+			- [[Obsidian/CLI/file]] lists details for a given page.
+			- [[Obsidian/CLI/files]] lists all files in the vault.
+			- [[Obsidian/CLI/outline]] lists headings for a file. use `format=md` to get the outline.
+				- [[Example]]
+					- ```
+					   ~/ghq/github.com/albion-house/defend   main  obsidian outline file=2026-06-10 for
+					  mat=md
+					  # killbox weapons-first playtest
+					  ## runs
+					  ## useful pressure
+					  
+					  ```
 	- ## [[AI Answer]]
 		- **Short answer:** Yes — the official [[Obsidian/CLI]] (requires Obsidian 1.12.4+ running) gets you close, but has no single "output a wikilink" command. You combine two or three of its outputs with a shell alias in your dotfiles to produce `[[Page#Heading]]` strings.
 		- ### Official Obsidian CLI (built-in, requires running app)
