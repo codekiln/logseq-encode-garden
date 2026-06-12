@@ -27,6 +27,7 @@ This command creates or updates Logseq Keyshort pages using the canonical `<Scop
   - Always include `[[Keyshort]]` and `[[<Scope>]]` in the parent block.
 - **Flashcards**:
   - Use `[[Card]]` blocks for new shortcut cards.
+  - The Keyshort page itself is the card entity. Do not create a companion `/Card/` page or any separate page for the card.
   - Avoid `Question :: Answer` blocks and any "Flashcard Questions" section.
 - **Frontmatter**: standard attributes only; no new keys unless specified.
 
