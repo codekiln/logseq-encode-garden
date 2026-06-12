@@ -1,2 +1,4 @@
 - [[Keyshort]] [[Obsidian]] [[Obsidian/Keyshort]]
-	- {{embed [[Obsidian/Keyshort/Add Metadata Property/Card/Add Metadata Property]]}}
+	- **Add Metadata Property** [[Card]]
+		- Shortcut: `⌘ ;`
+		- Description: Adds a new property to the note's frontmatter.

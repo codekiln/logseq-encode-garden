@@ -1,2 +1,4 @@
 - [[Keyshort]] [[Obsidian]] [[Obsidian/Keyshort]]
-	- {{embed [[Obsidian/Keyshort/Toggle Preview/Card/Toggle Preview]]}}
+	- **Toggle Preview** [[Card]]
+		- Shortcut: `⌘ E`
+		- Description: Toggles between source (edit) and reading (preview) mode.

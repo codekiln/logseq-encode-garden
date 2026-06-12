@@ -1,2 +1,4 @@
 - [[Keyshort]] [[Obsidian]] [[Obsidian/Keyshort]]
-	- {{embed [[Obsidian/Keyshort/Open Search/Card/Open Search]]}}
+	- **Open Search** [[Card]]
+		- Shortcut: `⌘ F`
+		- Description: Opens the search panel within the current editor.

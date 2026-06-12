@@ -1,2 +1,4 @@
 - [[Keyshort]] [[Obsidian]] [[Obsidian/Keyshort]]
-	- {{embed [[Obsidian/Keyshort/Open Search Replace/Card/Open Search Replace]]}}
+	- **Open Search Replace** [[Card]]
+		- Shortcut: `⌘ ⌥ F`
+		- Description: Opens the search and replace panel.

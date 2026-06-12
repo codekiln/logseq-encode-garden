@@ -1,2 +1,4 @@
 - [[Keyshort]] [[Obsidian]] [[Obsidian/Keyshort]]
-	- {{embed [[Obsidian/Keyshort/Edit File Title/Card/Edit File Title]]}}
+	- **Edit File Title** [[Card]]
+		- Shortcut: `F2`
+		- Description: Focuses the note title field for renaming.

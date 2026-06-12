@@ -1,2 +1,4 @@
 - [[Keyshort]] [[Obsidian]] [[Obsidian/Keyshort]]
-	- {{embed [[Obsidian/Keyshort/Toggle Checklist Status/Card/Toggle Checklist Status]]}}
+	- **Toggle Checklist Status** [[Card]]
+		- Shortcut: `⌘ L`
+		- Description: Toggles the checked/unchecked status of the current list item.

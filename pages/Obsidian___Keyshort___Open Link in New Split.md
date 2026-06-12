@@ -1,2 +1,4 @@
 - [[Keyshort]] [[Obsidian]] [[Obsidian/Keyshort]]
-	- {{embed [[Obsidian/Keyshort/Open Link in New Split/Card/Open Link in New Split]]}}
+	- **Open Link in New Split** [[Card]]
+		- Shortcut: `⌘ ⌥ Enter`
+		- Description: Opens the link under the cursor in a new split pane.
