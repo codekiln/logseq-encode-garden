@@ -1,2 +1,5 @@
-- prefer [[mise/Task/File]] over [[mise/Task/TOML]] because of syntax highlighting in editors
+- strongly prefer [[mise/Task/File]] over [[mise/Task/TOML]]
+	- put tasks in `(~/.config/mise/)tasks/<namespace>/<subnamespace>/<executable_name>`, almost never inline TOML `[tasks."..."]` entries in [[mise/Config/mise.toml]], unless they are one-liners.
 - be sure to use [[usageCLI]] syntax for defining autocompletion parameters
+	- Always annotate file tasks with `#MISE description="..."` and `#USAGE` directives (flags, args) for autocompletion via usageCLI.
+- see [[My/Pref/Dev/mise/Tasks/Why]] for rationelle
