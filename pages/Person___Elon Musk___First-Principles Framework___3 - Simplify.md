@@ -1,0 +1,2 @@
+- Simplify only after the deletion phase is complete.
+- Reduce cognitive complexity; consolidate similar patterns; optimize for clarity before performance.

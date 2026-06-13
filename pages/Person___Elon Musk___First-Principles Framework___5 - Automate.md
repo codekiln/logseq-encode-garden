@@ -1,0 +1,2 @@
+- Automate last. Automating unnecessary complexity is worse than manual unnecessary complexity.
+- Only automate validated, simplified processes.

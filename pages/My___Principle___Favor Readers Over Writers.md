@@ -1,4 +1,4 @@
-see-also:: [[My/Principle/Create Uniform Interfaces]], [[My/Principle/Make Illegal States Unrepresentable]]
+see-also:: [[My/Principle/Simplify/Create Uniform Interfaces]], [[My/Principle/Make Illegal States Unrepresentable]]
 
 - # what it means
 	- code is read far more often than it is written, so optimize for the reader's comprehension over the writer's convenience

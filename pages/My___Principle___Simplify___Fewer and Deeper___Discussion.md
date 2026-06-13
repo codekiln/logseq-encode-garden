@@ -1,0 +1,16 @@
+# [[Why]] rebalance to fewer and deeper?
+	- ### To counteract my "liberal arts" bias
+		- If you put a marble in my brain, the floor slopes downwards towards investigation of possibilities.
+		- I have a natural tendency towards breadth first search, and left unchecked it leads to shallow relationships to many things.
+	- ### to shape my "ability profile"
+		- with respect to my abilities, I want to be a "T-shaped" person w.r.t. my abilities, not a "sinusoidal-corrugation-shaped" person (like corrugated tin roofing).
+	- ### combat [[Entropy]]
+		- many things are more [[Complex]] than fewer things. Complexity is fragile.
+	- ### to increase [[Security]]
+		- fewer tools that are more secure have a more understandable [[Risk/Profile]]
+- # What it doesn't mean
+	- ## important non-implications of this principle
+		- this principle does not imply
+			- A - "never explore" in the "explore vs exploit" trade-off
+			- B - "no redundancy" - having a backup method is sensible
+	-

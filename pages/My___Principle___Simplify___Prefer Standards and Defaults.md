@@ -1,0 +1,4 @@
+- prefer to use tools whose defaults are designed to be sensible
+- prefer to use documented standards where possible
+- learn parameters of well-chosen tools and standards
+- limit configuration; customizations should be driven by "must," not by "nice to have"

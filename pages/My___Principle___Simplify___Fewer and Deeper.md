@@ -1,0 +1,7 @@
+- move towards a deeper relationship with fewer things rather than a superficial relationship with many things.
+- cultivate systems that focus on fewer things rather than awareness of all possibilities.
+- implication: if there are credible meta-tools or abstraction layers, use those instead of component tools.
+- # [[Examples]]
+	- ### Use [[mise]] instead of sub-component services
+		- rather than using separate [[CLI/Tool]]s for the jobs to be done of [[mise]] (for example, use mise for environment variable management, tool instalation, task runner)
+			- alternative would be to use [[direnv]] for environment variables, a custom task runner like [[Makefile]], and using individual [[Package Manager]]s like [[npm]], [[cargo]], [[pypi]] separately

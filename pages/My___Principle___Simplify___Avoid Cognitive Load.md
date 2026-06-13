@@ -1,0 +1,2 @@
+- when given alternatives, pick the one that's easier to explain to someone who is new
+- if we have two ways of doing something, try to turn that into one

@@ -1,4 +1,4 @@
-see-also:: [[My/Principle/Fewer is Better than Many]], [[Unix/Philosophy]], [[My/Principle/Simplify to Avoid Cognitive Load]]
+see-also:: [[My/Principle/Simplify/Fewer and Deeper]], [[Unix/Philosophy]], [[My/Principle/Simplify/Avoid Cognitive Load]]
 
 - # what it means
 	- [[API]]s, [[CLI]]s and any [[Dependency]] chain is better when it have **fewer responsibilities**

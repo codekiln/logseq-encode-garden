@@ -1,1 +1,3 @@
-- The `My` namespace is for my things or things about me. It's a personal context portfolio. [[AI/Context/Portfolio/Personal]].
+- The `My` namespace is for my things or things about me.
+- Starting from the root of the garden, [[AI Agents]] can use `ls pages/My___*` to learn about me. This information will not be repeated on every page.
+- It's a personal context portfolio. [[AI/Context/Portfolio/Personal]].

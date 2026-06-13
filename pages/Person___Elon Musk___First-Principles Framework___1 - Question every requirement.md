@@ -1,0 +1,3 @@
+- Every requirement should have a name attached to it. Never accept "it's always been done that way."
+- Trace every architectural decision to its original author and reason; validate assumptions against current business needs.
+- Distinguish hard constraints (laws of physics, real business rules) from soft constraints (preferences, legacy patterns).

@@ -1,0 +1,15 @@
+## [[Examples]]
+	- ### [[REST API]] [[Design]]
+		- all endpoints return the same error shape, the same pagination envelope, the same field naming convention
+		- callers can apply knowledge from one endpoint to every other endpoint without consulting docs
+	- ### [[CLI]] [[Design]]
+		- all [[CLI commands]] accept `--dry-run` and `--verbose` with the same semantics
+		- flag names for similar concepts (e.g. `--output`, `--format`) are spelled identically across commands
+	- ### [[Software Library]] [[Design]]
+		- a collection type exposes the same iteration, filtering, and mapping interface as built-in types
+- ## [[Why]]
+	- consistent interfaces reduce the total interface surface a user must learn
+	- when users can predict behavior from pattern-matching, they make fewer errors and need less documentation
+	- see also [[My/Principle/Simplify/Minimize Surface Area]] — uniformity is one way to keep surface area manageable
+- ## source
+	- [[Person/Yaron Minsky/Talk/Effective ML]] ([~18 min](https://youtu.be/-J8YyfrSwTk?t=1081))

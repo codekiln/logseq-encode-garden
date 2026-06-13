@@ -1,0 +1,3 @@
+- Speed up the process, but only after the first three steps.
+- Going faster makes bad processes worse.
+- Reduce coupling to enable parallel development; eliminate unnecessary approval gates.

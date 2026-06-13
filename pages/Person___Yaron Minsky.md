@@ -5,7 +5,7 @@ logseq-entity:: [[Logseq/Entity/person]]
 		- Chief Technology Officer (and co-founder) of [[Jane Street]], a quantitative trading firm that runs almost entirely on [[OCaml]]. Instrumental in making [[OCaml]] a production language at scale; coined the phrase "[[My/Principle/Make Illegal States Unrepresentable]]". Co-author of [[Book/Real World OCaml]]. PhD in Computer Science from [[Cornell University]].
 	- ## Principles
 		- [[My/Principle/Favor Readers Over Writers]]
-		- [[My/Principle/Create Uniform Interfaces]]
+		- [[My/Principle/Simplify/Create Uniform Interfaces]]
 		- [[My/Principle/Make Illegal States Unrepresentable]]
 	- ## External Links
 		- [GitHub](https://github.com/yminsky)

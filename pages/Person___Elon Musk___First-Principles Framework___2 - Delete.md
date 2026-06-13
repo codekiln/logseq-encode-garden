@@ -1,0 +1,3 @@
+- "If you're not occasionally adding things back in, you're not deleting enough."
+- The most common error is optimizing something that shouldn't exist.
+- Remove layers of abstraction before optimizing them. Inline single-consumer abstractions.

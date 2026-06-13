@@ -1,0 +1,2 @@
+- follow [[Book/The Laws of Simplicity]]
+- follow [[Person/Elon Musk/First-Principles Framework/2 - Delete]] and then [[Person/Elon Musk/First-Principles Framework/3 - Simplify]]
