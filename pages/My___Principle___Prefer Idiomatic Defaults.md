@@ -10,7 +10,7 @@ see-also:: [[Software/Engineering/Principle/Convention over Configuration]], [[M
 			- choosing the documented name means the layout is predictable from Ghostty's own docs — no archaeology required
 		- ### default locations
 			- I use [[ghq]]'s default root of `~/ghq` rather than customizing it
-			- "what's laid flat cannot be knocked over" ([[Tao Te Ching]]) — everything we do to customize a setup also decreases its utility to others and, in a sense, the "power" of the configuration
+			- "what's laid flat cannot be knocked over" ([[Book/Tao Te Ching]]) — everything we do to customize a setup also decreases its utility to others and, in a sense, the "power" of the configuration
 		- ### canonical config formats
 			- the dotfiles `tool-canonical-config-format` spec: when a tool rewrites its own config (e.g. [[Lazygit]] config migrations), store the chezmoi source byte-for-byte in the tool's canonical output form rather than fighting it
 		- ### keybindings (aspirational)
