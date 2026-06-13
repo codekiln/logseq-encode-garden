@@ -4,7 +4,6 @@ see-also:: [[Claude/Code/Settings]]
 
 - # How do I disable the Update available notification in [[Claude/Code]]?
 	- ## [[AI Answer]]
-		- [[AI/Response]]
 		- **Short answer:** Set `DISABLE_AUTOUPDATER=1` in `~/.claude/settings.json` under the `env` key.
 		- Add to `~/.claude/settings.json`:
 			- ~~~json

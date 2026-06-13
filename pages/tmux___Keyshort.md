@@ -1,3 +1,5 @@
+alias:: [[tmux Keyshorts]]
+
 - {{cards [[tmux/Keyshort]] }}
 	- Summary: 6 items, 3 review counts [[2026-04-09 Thu]]
 		- Remembered:   3 (100%)

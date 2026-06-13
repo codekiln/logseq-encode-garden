@@ -1,0 +1,11 @@
+# Google Photos App Requires Full Access to photos on iPhone App to Display Any Cloud Photos
+	- [[My Notes]]
+		- [[2026-06-13 Sat]]
+			- ![Allow access to photos so that you can continue backup - blocking photos](https://i.redd.it/vf7td7iwe90g1.jpeg){:height 1500, :width 688}
+			- as far as I can tell, there's no way for me to see my cloud photos in the google photos app without enabling Full Access. I have Full Access disabled specifically because of Google Photos' auto-backup which is just designed to use up space and prevent me from selecting which memories to save.
+			- [[Workaround]] Sadly, the main workaround is to delete the [[Google/Photos/App/Mobile]] and start using [[Google/Photos/App/Web]] in a browser in my mobile device. It's actually much better, because it can't prompt you to back up your photos. What a world we live in.
+			- [[Conclusion]] It's only a matter of time until I no longer use Google for my photos. Hopefully will be [[Self-hosted]] soon.
+			- [[Reference]]
+				- [Can’t view my photos without turning on backup : r/googlephotos](https://www.reddit.com/r/googlephotos/comments/1osnwzg/cant_view_my_photos_without_turning_on_backup)
+				- [How do I permanently disable Google Photos pop-up prompt to backup my photos? I - Google Photos Community](https://support.google.com/photos/thread/256212140/how-do-i-permanently-disable-google-photos-pop-up-prompt-to-backup-my-photos-i?hl=en)
+				- [[cgpt-link]] https://chatgpt.com/c/6a2d656a-7d48-83ea-901f-354997061a59?ref=mini
