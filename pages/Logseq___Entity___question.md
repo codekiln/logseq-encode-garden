@@ -34,7 +34,10 @@
 		- **Section order** (omit empty sections):
 			- `## [[My Answer]]` — optional; [[Human]] / [[Gard/en/er/Human]] working answer (steps, tables, `[[tldr]]`, verified command examples).
 			- `## [[My Notes]]` — optional; do not create by default. Tangents and links that are not the direct answer.
-			- `## [[AI Answer]]` — optional section heading for researched answers.
+			- `## Answer` (with attribution child) — preferred heading for researched answers; the first child block is an attribution tag:
+				- `[[AI/Response]]` — used when the answer is AI-generated; content is children of that block.
+				- `[[Answer/Official]]` (alias `[[Official Answer]]`) — used when the answer is from official documentation; include a markdown link inline: `[[Answer/Official]] from [Source Title](url)`.
+				- `## [[AI Answer]]` — accepted alternative heading when no inline attribution tag is used.
 				- Lead with **Short answer:** when useful.
 				- Cite **external** docs with markdown links in the answer body.
 				- Bold for labels; backticks for commands. Do not wrap `` `commands` `` in `**…**` (see [[Logseq/Flavored Markdown]]).
@@ -43,4 +46,6 @@
 		- **Card:** `[[card]]` on the H1 plus `[[Logseq/Entity/Card]]` in frontmatter when the question page itself is reviewable; distinct from factoring a prompt into a `/Card/` namespace page under [[Logseq/Entity/Card]].
 		- **CLI commands / flags:** questions *about* commands link to [[Logseq/Entity/CLI/Command]] and [[Logseq/Entity/CLI/Flag]] instances; they are not substitutes for command reference stubs.
 	- ## Legacy instances
-		- Older `___Q___` pages may lack `logseq-entity::`, use `## Related` for internal links, or use non-canonical AI section titles. Do not bulk-migrate unless requested; new pages should follow the rules above.
+		- Older `___Q___` pages may lack `logseq-entity::`, use `## Related` for internal links (use `see-also::` instead), or use `## [[AI Answer]]` as the section heading (now documented as an accepted form).
+		- Some card-backed question pages have `[[Logseq/Entity/Card]]` listed before `[[Logseq/Entity/question]]` in `logseq-entity::`. The canonical order is question-first: `logseq-entity:: [[Logseq/Entity/question]], [[Logseq/Entity/Card]]`.
+		- Do not bulk-migrate unless requested; new pages should follow the rules above.
