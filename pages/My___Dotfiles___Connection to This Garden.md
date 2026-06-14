@@ -1,2 +1,3 @@
 - My dotfiles are connected to this knowledge garden (logseq-encode-garden).
-- I want my dotfiles to be as self-explanatory as possible, but have the dependencies of my dotfiles documented in my garden. Therefore I have the technologies and dependencies declare their [[logseq-url]]
+- I want my dotfiles to be as self-explanatory as possible. That said, pretty much every technology I use is one I do not understand completely, and this knowledge garden is my system for learning things about technology.
+- Therefore I aspire to converge upon the invariant that the technologies and dependencies in my dotfiles should declare in code comments a [[logseq-url]] to the logseq-encode-garden page pointing to the [[Logseq/Entity]] page in this garden where I'm learning about and keeping track that software project or plugin or whatever.
