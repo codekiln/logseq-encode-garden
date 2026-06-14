@@ -1,6 +1,6 @@
 tags:: [[Claude/Code]], [[Q]]
 alias:: [[Anthropic/App/Claude Code/Q/How can I fix dark text on a dark background in the terminal]]
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Claude/Code/Settings]]
 
 - # How can I fix dark text on a dark background in the [[Claude/Code]] terminal?

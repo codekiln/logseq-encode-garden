@@ -1,6 +1,6 @@
 tags:: [[Claude/Desktop]], [[Q]]
 alias:: [[Anthropic/App/Claude Desktop/Q/Is it possible to fork a conversation in Claude Desktop]]
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Claude/Desktop]], [[LibreChat/Fork]]
 title:: Claude/Desktop/Q/Is it possible to fork a conversation in Claude Desktop?
 

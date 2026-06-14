@@ -4,8 +4,8 @@ description: >-
   Load [[Logseq/Pref]] and linked pages for encode-wide garden preferences (page
   naming, namespaces, editorial defaults) before creating pages or entity types.
   Use when aligning new titles with [[Logseq/Pref/Page/Name]], refreshing prefs
-  in-graph, or routing alongside logseq-entity for naming—not for per-type
-  entity SOP (those stay on [[Logseq/Entity/<Type>]]).
+  in-graph, or routing alongside logseq-entity for naming—not for per-entity
+  definitions (those stay on [[Logseq/Entity/<Type>]]).
 ---
 # Logseq Pref
 
@@ -19,7 +19,7 @@ Use this skill when work touches **how** this encode garden titles pages and nam
 
 ## Relationship to other skills
 
-- **logseq-entity** covers registry, dedupe, instances, and **`[[Logseq/Entity/<Type>]]`** SOPs. Load **logseq-pref** first when naming **new** type pages or choosing canonical paths so prefs and registry stay aligned.
+- **logseq-entity** covers registry, dedupe, instances, and **`[[Logseq/Entity/<Type>]]`** entity definitions. Load **logseq-pref** first when naming **new** entity definition pages or choosing canonical paths so prefs and registry stay aligned.
 
 ## References
 

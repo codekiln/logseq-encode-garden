@@ -1,5 +1,5 @@
 tags:: [[Coder]], [[Knowledge Gardener]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - > I'm a Senior Developer Advocate at [[Grafana/Labs]] and I talk about learning in public, taking notes, and making cool stuff.
 - [[Person/Nicole van der Hoeven/Web]] https://nicolevanderhoeven.com/
 - [[Person/Nicole van der Hoeven/Garden]] https://notes.nicolevanderhoeven.com/

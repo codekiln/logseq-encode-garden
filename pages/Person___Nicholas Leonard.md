@@ -1,2 +1,2 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - [[CEO]] and [[Co-Founder]] of [[VoiceRun]]

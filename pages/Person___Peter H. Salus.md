@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Peter H. Salus
 	- ## About
 		- Historian of computing; in *A Quarter Century of UNIX* (1994) gave the explicit label “The Unix philosophy” to the three-part formulation he credited to [[Person/Douglas McIlroy]].

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/standard]]
+logseq-entity:: [[Logseq/Entity/Standard]]
 source-link:: https://specification.website/
 
 - # [The Website Specification](https://specification.website/)

@@ -1,5 +1,5 @@
 tags:: [[Person]], [[Software Development]], [[Clojure]], [[Programming Languages]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Rich Hickey
 	- ## [[Bio]]
 		- Rich Hickey is an American software developer and programming language designer, best known as the creator of the Clojure programming language. He is a prominent figure in the software development community, particularly in the areas of functional programming, concurrency, and software design.

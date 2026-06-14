@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/book]]
+logseq-entity:: [[Logseq/Entity/Book]]
 created-by:: [[Person/Buckminster Fuller]]
 date-created:: [[1975]]
 - # Synergetics: Explorations in the Geometry of Thinking

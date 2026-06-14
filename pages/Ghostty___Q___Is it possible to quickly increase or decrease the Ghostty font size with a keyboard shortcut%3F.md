@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]], [[Logseq/Entity/Card]]
+logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]]
 - # Is it possible to quickly increase or decrease the [[Ghostty]] font size with a keyboard shortcut? [[card]]
 	- ## [[AI Answer]]
 		- [[AI/Response]]

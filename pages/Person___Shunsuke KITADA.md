@@ -1,5 +1,5 @@
 alias:: [[shunk031]], [[GitHub/shunk031]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 
 - # Shunsuke KITADA
 	- ## About

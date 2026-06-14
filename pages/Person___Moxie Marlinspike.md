@@ -1,5 +1,5 @@
 alias:: [[moxie0]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 
 - # Moxie Marlinspike
 	- Moxie Marlinspike is a security engineer and founder associated with end-to-end encrypted communication systems, including Signal.

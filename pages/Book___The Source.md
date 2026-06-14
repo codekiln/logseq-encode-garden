@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/book]]
+logseq-entity:: [[Logseq/Entity/Book]]
 created-by:: [[Person/James A. Michener]]
 date-created:: [[1965]]
 see-also:: [[Archaeology/Tell]]

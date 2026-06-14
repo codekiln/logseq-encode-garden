@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 tags:: [[Question]]
 see-also:: [[Obsidian/Q/In obsidian, how can I link to a heading in another file?]], [[Obsidian/Q/Is there a keyboard shortcut in Obsidian for quickly finding keyboard shortcuts in Obsidian?]]
 

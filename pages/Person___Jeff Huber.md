@@ -1,3 +1,3 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 # Jeff Huber
 	- [[Co-Founder]] of [[Chroma]]

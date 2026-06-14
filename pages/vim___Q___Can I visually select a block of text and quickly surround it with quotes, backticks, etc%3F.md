@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 
 - # Can I visually select a block of text and quickly surround it with quotes, backticks, etc?
 	- ## [[AI Answer]]

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 # Chris Butler
 	- **Role:** Product Leader, GitHub
 	- **Bio:** Chris Butler has led product efforts at GitHub, Google, Facebook, and Microsoft. He co-founded The Uncertainty Project and specializes in AI, productivity, and responsible technology. His work bridges speculative design and practical product leadership.

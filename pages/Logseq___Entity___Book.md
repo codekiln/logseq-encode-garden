@@ -1,5 +1,5 @@
 - # book
-	- Standard operating procedure for **book** entities: published works tracked as first-class pages under `Book/Title`.
+	- Entity definition for **book** entities: published works tracked as first-class pages under `Book/Title`.
 	- ## What counts as a book entity (instance)
 		- A page whose Logseq title is **`Book/<short title>`** — disk file `Book___<short title>.md` where `<short title>` is the stable shelf label (often the cover title; subtitle after a colon is fine when that is how the work is cited).
 		- **Not** book entities: reading notes, chapter logs, or imports living under **`Person/.../Book/...`** or other namespaces—those stay whatever type they are; link them to a **`Book/...`** hub when the underlying work should be indexed as a book.
@@ -12,7 +12,7 @@
 	- ## Relationship to author **person** hubs
 		- When the author is clear, set **`created-by:: [[Person/Full Name]]`** in frontmatter and ensure that **person** hub exists (or create it first). Multiple authors: pick the primary credited author for `created-by::` and name co-authors in the body—or omit `created-by::` until the split is decided.
 	- ## Frontmatter on book pages
-		- Mark instances with **`logseq-entity:: [[Logseq/Entity/book]]`** so this type page collects backlinks to every book entity.
+		- Mark instances with **`logseq-entity:: [[Logseq/Entity/Book]]`** so this type page collects backlinks to every book entity.
 		- Book-specific frontmatter can include `created-by::` when the author entity is clear.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape

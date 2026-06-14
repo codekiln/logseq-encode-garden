@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 tags:: [[Question]]
 
 - # What [[Obsidian]] tools are there for integrating with Atlassian [[Jira]] to easily make a digital twin of any ticket?

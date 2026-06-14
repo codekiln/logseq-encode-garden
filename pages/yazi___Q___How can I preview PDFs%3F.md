@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 via:: [[2026-03-28 Sat]]
 
 - # How can I preview PDFs in [[yazi]]?

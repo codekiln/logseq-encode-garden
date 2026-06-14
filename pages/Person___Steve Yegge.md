@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Steve Yegge
 	- ## About
 		- Engineering Leader, Sourcegraph/Amp

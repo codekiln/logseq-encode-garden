@@ -1,6 +1,6 @@
 alias:: [[Masaki ISHIYAMA]], [[babarot]]
 via:: https://babarot.me
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Masaki Ishiyama
 	- SRE and programmer based in Tokyo; creator of [[gh-infra]].
 	- ## Projects

@@ -1,5 +1,5 @@
 tags:: [[Person]], [[AI Engineer]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Tom Dörr
 	- ## Overview
 		- AI Engineer and open-source contributor

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/company]]
+logseq-entity:: [[Logseq/Entity/Company]]
 alias:: [[endevco]]
 
 - # [en.dev](https://en.dev)

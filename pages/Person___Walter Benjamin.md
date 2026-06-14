@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Walter Benjamin
 	- ## About
 		- German philosopher, cultural critic, media theorist, and essayist.

@@ -1,5 +1,5 @@
 alias:: [[Jobs to be Done]]
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 
 - # Job to be Done (JTBD)
 	- The Jobs to Be Done (JTBD) framework is a way of understanding why people choose products, services, or behaviors. The core claim is simple:

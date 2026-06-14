@@ -1,5 +1,5 @@
 alias:: [[Person/Alexander Wissner-Gross]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Alexander D. Wissner-Gross
 	- ## About
 		- American research scientist and entrepreneur working across applied technology and theoretical physics; fellow at Harvard’s Institute for Applied Computational Science.

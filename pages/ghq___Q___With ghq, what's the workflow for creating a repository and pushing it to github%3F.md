@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[ghq]], [[gh]]
 - # With [[ghq]], what's the workflow for creating a repository and pushing it to github?
 - ## Answer

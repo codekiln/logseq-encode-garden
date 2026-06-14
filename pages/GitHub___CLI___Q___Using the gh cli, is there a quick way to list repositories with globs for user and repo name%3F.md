@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 via:: [[2026-04-03 Fri]]
 
 - # Using the [[GitHub/CLI]] (`gh`), is there a quick way to list repositories with globs for user and repo name?

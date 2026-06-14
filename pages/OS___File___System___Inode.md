@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/term]]
+logseq-entity:: [[Logseq/Entity/Term]]
 alias:: [[Inode]], [[Inodes]], [[Index Node]]
 see-also:: [[OS/File/System/Directory]], [[OS/File/System/Link/Hard]], [[OS/File/System/Link]]
 - # Inode

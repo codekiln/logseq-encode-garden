@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Learning/Idea/26/03/Terminal toolbelt learning/Proto Session/26/03/25 Wed]], [[CLI/Craftsperson]], [[dotfiles]]
 via:: [[2026-04-01 Wed]]
 

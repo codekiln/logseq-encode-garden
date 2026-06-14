@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Orta Therox
 	- ## About
 		- Developer and writer known for work on React Native and TypeScript

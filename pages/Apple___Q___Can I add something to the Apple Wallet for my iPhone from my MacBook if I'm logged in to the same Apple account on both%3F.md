@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 tags:: [[Question]]
 
 - # Can I add something to the Apple Wallet for my iPhone from my MacBook if I'm logged in to the same Apple account on both?

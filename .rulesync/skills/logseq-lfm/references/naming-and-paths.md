@@ -24,7 +24,7 @@
 ### Examples
 
 <CORRECT_✅>
-- [[Person/John Smith]] (singular person hub; see `[[Logseq/Entity/person]]` — do not use a parallel `[[People/...]]` alias)
+- [[Person/John Smith]] (singular person hub; see `[[Logseq/Entity/Person]]` — do not use a parallel `[[People/...]]` alias)
 - [[Project/Cursor]] (singular page name) — alias:: [[Projects/Cursor]]
 - [[Related/Post]] (singular page name) — alias:: [[Related Posts]]
 </CORRECT_✅>

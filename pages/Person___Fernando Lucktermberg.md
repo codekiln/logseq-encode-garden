@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 # Fernando Lucktermberg
 	- [[My Notes]]
 		- I discovered his writing in the context of [[Person/Nathaniel Whittemore/Class/ClawCamp/00 The Security Briefing]]

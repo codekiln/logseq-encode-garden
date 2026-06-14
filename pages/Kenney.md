@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/company]]
+logseq-entity:: [[Logseq/Entity/Company]]
 see-also:: [[Game/Video/Pico TD]], [[itch.io]]
 
 - # [Kenney](https://kenney.nl)

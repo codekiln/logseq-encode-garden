@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[yazi/Keyshort]]
 
 - # Using [[yazi]], how do I move a file from one location to another?

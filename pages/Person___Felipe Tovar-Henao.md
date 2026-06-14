@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 # **Felipe Tovar-Henao**
 	- #Pic
 		- ![Felipe Tovar-Henao](https://icmc2025.sites.northeastern.edu/files/2025/05/uf_headshot_small_square-221x300.jpg)

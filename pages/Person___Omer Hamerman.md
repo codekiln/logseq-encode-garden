@@ -1,5 +1,5 @@
 tags:: [[CLI/Craftsperson]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Omer Hamerman
 	- ## About
 		- Engineer and content creator focused on **DevOps**, **Kubernetes**, **Neovim**, **Tmux**, and developer productivity; writes at [omerxx.com](https://omerxx.com/) (also syndicated on Cloud Native Now, The New Stack, DevOps.com, InfoQ, and similar outlets)

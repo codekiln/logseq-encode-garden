@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 via:: [[2026-04-27 Mon]]
 see-also:: [[Readwise]]
 

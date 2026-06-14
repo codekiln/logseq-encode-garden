@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 tags:: [[Question]]
 see-also:: [[tmux/Q/What is a conceptual overview of how copy paste works in oh-my-tmux with nvim?]], [[tmux/Q/Is there a way to do rectangular selection when using oh-my-tmux and tmux with vim visual selection mode?]]
 

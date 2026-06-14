@@ -1,5 +1,5 @@
 tags:: [[AI/Security]]
-logseq-entity:: [[Logseq/Entity/company]]
+logseq-entity:: [[Logseq/Entity/Company]]
 
 - # [Confer](https://confer.to/)
 	- Confer is an AI chat service focused on end-to-end encrypted conversations.

@@ -1,5 +1,5 @@
 tags:: [[Person]], [[Developer]], [[Microsoft]], [[.NET]], [[Azure]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Aaron Powell
 	- ## Overview
 		- Developer Advocate at Microsoft, focusing on .NET and Azure

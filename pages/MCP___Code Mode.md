@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 
 - # MCP/Code Mode
 	- An execution strategy built on top of [[MCP]] (not part of the MCP spec itself) that emerged as a popular pattern in late 2025

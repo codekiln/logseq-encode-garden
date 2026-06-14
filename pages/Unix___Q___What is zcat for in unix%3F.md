@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Unix/Pipe]]
 
 - # What is [[zcat]] for in [[Unix]]?

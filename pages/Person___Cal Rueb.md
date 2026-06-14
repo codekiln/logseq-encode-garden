@@ -1,5 +1,5 @@
 tags:: [[AI Coder]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 
 - # Cal Rueb
 	- Works at #Anthropic

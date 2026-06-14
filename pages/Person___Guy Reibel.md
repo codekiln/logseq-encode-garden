@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Guy Reibel
 	- ## Bio
 		- French composer, conductor, and educator (born 1936)

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 tags:: [[Question]]
 
 - # Does [[Obsidian]] have an **official** MCP or AI agent skill collection? If not, are there any community skills or MCPs that are by far more popular and recently updated than others?

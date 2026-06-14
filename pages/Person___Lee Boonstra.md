@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # [Lee Boonstra](https://www.leeboonstra.dev/)
 	- Generative-AI and conversational-AI practitioner at Google; developer-advocacy work spans LLMs on Google Cloud, Dialogflow, and customer-facing analytics for contact centers.
 	- ## Writing

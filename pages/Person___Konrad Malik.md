@@ -1,5 +1,5 @@
 alias:: [[Person/Konrad]], [[GitHub/konradmalik]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Konrad Malik
 	- ## About
 		- Polish technologist and GitHub user [@konradmalik](https://github.com/konradmalik), with public work around [[Nix]], [[nvim]], developer environments, infrastructure, and data/engineering demos.

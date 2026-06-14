@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 
 - # Does [[CursorAI/CLI]] have some kind of way to export the text of a session to a file?
 	- ## My Notes

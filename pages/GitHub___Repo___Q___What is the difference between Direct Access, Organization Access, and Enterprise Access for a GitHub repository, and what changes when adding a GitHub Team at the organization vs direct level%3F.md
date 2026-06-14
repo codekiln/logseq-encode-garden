@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 
 - # What is the difference between [[GitHub]] Direct Access, Organization Access, and Enterprise Access for a repository, and what changes when adding a [[GitHub/Team]] at the organization vs direct level?
 	- ## Answer

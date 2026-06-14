@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[GitHub/Pages]], [[GitHub/CLI/gh/browse]]
 - # Is there any way with the gh cli to open the github pages site associated with a given repo, something like `gh repo view --web`, but for the github page?
 	- ## [[AI Answer]]

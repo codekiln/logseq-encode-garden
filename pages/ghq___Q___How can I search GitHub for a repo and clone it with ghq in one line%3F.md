@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]], [[Logseq/Entity/Card]]
+logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]]
 see-also:: [[awk/Q/How can I extract the first column?]]
 - # How can I search GitHub for a repo and clone it with ghq in one line? [[card]]
 	- ## [[AI Answer]]

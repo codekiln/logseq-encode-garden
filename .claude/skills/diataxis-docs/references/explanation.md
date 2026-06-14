@@ -4,7 +4,7 @@ Understanding-oriented pages explain **why** and **how ideas fit together** — 
 
 ## Authority order
 
-1. Read **`[[Logseq/Entity/concept]]`** (`pages/Logseq___Entity___concept.md`) for the instance SOP: frontmatter (`logseq-entity::`, optional `see-also::`, `via::`), when to use concept vs term entities, and recommended body sections.
+1. Read **`[[Logseq/Entity/Concept]]`** (`pages/Logseq___Entity___concept.md`) for the entity definition: frontmatter (`logseq-entity::`, optional `see-also::`, `via::`), when to use concept vs term entities, and recommended body sections.
 2. Read **`[[Diataxis/Explanation]]`** (aliases **`[[Diataxis/Concept]]`**) for Diataxis vocabulary in this graph.
 3. Read **`[[Logseq/Entity]]`** for shared entity conventions (`see-also::` vs `## Related`, `via::`, etc.).
 
@@ -17,4 +17,4 @@ Understanding-oriented pages explain **why** and **how ideas fit together** — 
 
 ## Relationship to entity work
 
-This quadrant overlaps the entity system — concept/term pages are entities. Load the **logseq-entity** skill and **`[[Logseq/Entity/concept]]`** when creating or refreshing concept instances, so ontology and structure stay aligned.
+This quadrant overlaps the entity system — concept/term pages are entities. Load the **logseq-entity** skill and **`[[Logseq/Entity/Concept]]`** when creating or refreshing concept instances, so ontology and structure stay aligned.

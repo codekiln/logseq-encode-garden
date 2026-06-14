@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 tags:: [[Question]]
 see-also:: [[tmux/Keyshort/Pane/Resize Pane]], [[oh-my-tmux]]
 via:: [[tmux/Keyshort/Pane/Resize Pane]]

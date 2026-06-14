@@ -1,7 +1,7 @@
 alias:: [[Logseq/Entity/Security/Vulnerability]], [[Logseq/Entity/Security/Attack]]
 
 - # Security/Vuln
-	- This page is the standard operating procedure for **security vuln** entities: pages whose primary purpose is to document a vulnerability, exploit class, attack technique, attack chain, or defensive-relevant abuse pattern.
+	- This page is the entity definition for **security vuln** entities: pages whose primary purpose is to document a vulnerability, exploit class, attack technique, attack chain, or defensive-relevant abuse pattern.
 	- ## Examples in this garden
 		- [[Security/Attack/Chain/Supply]]
 		- [[Security/Vulnerability]]
@@ -11,8 +11,8 @@ alias:: [[Logseq/Entity/Security/Vulnerability]], [[Logseq/Entity/Security/Attac
 	- ## When we treat something as a Security/Vuln entity
 		- Strong signals: the page describes how a system can be attacked, how a weakness can be exploited, how an adversary gets leverage, or how defenders should recognize and reduce that attack path.
 		- Good fit: CVE/GHSA/CWE-centered notes, exploit classes, named attack techniques, attack chains, post-exploitation patterns, insecure defaults, dependency or tool-distribution risks, and attacker-controlled workflow abuse.
-		- Prefer [[Logseq/Entity/concept]] when the page is mainly an explanatory lens or broad security idea rather than a concrete attackable weakness or technique.
-		- Prefer [[Logseq/Entity/term]] when the page is only a short glossary definition and does not need attack mechanics, defender relevance, or related controls.
+		- Prefer [[Logseq/Entity/Concept]] when the page is mainly an explanatory lens or broad security idea rather than a concrete attackable weakness or technique.
+		- Prefer [[Logseq/Entity/Term]] when the page is only a short glossary definition and does not need attack mechanics, defender relevance, or related controls.
 		- Prefer [[Logseq/Entity/Software/Project]] when the page's primary identity is a tool, library, application, scanner, framework, or platform, even if the tool is security-related.
 		- Existing concept or term pages can remain as-is until they are intentionally migrated; new or materially revised pages should use this type when the vulnerability or attack path is the page's primary identity.
 	- ## Finding and deduplicating

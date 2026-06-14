@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[mise]], [[mise/ls]], [[mise/ls/--installed]], [[mise/uninstall]], [[mise/Task/File]], [[mise/Task/File/Group]], [[usageCLI/spec]], [[mise/Q/How do I remove a mise tool?]], [[mise/Q/What's the difference between mise unuse, mise uninstall, and mise cache clear?]], [[chezmoi]]
 
 - # How do I list installed [[mise]] tools that aren't in any [[mise/Config/mise.toml]] (or other config) file?

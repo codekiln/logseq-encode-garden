@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Iannis Xenakis
 	- ## Bio
 		- Greek-French composer, architect, and mathematician (1922-2001)

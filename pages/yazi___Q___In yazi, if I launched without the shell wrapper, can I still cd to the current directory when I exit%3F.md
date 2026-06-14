@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[yazi/Q/In yazi, if I navigate to a directory, is there a way to exit yazi into that directory?]]
 
 - # In [[yazi]], if I launched without the shell wrapper, can I still cd to the current directory when I exit?

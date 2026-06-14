@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 tags:: [[Question]]
 
 - # Is ChatGPT Atlas blocked by the Chrome extension web store when installing extensions like Obsidian Web Clipper? If so, what recourse do users have?

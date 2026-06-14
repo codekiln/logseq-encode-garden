@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 alias:: [[Software Architecture]], [[Software/Architecture]]
 see-also:: [[C4]], [[Architecture/Decision/Record]], [[Structurizr]]
 

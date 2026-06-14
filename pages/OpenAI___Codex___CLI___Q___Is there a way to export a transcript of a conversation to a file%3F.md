@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 
 - # Is there a way to export a transcript of a conversation to a file in [[Codex/CLI]]?
 	- ## My Notes

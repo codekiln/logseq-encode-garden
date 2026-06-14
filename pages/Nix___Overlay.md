@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 tags:: [[Diataxis/Concept]]
 see-also:: [[Nix/Package/Registry]]
 via:: [[2026-04-27 Mon]]

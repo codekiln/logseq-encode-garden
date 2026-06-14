@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 
 - # Shunsuke Suzuki
 	- Creator of [[aqua]]; maintainer of related GitHub automation tooling. GitHub handle [suzuki-shunsuke](https://github.com/suzuki-shunsuke).

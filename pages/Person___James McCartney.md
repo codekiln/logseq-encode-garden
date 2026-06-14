@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 # James McCartney
 	- #Bio
 		- Original author of the [[SuperCollider]] audio programming language. Sixteen years on the Apple CoreAudio team.

@@ -1,5 +1,5 @@
 ---
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Shell/Builtin/type]]
 via:: [[2026-05-01 Fri]]
 ---

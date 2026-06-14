@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Martin Harrysson
 	- **Role:** Partner, McKinsey
 	- **Bio:** Martin Harrysson is a Partner at McKinsey, specializing in AI transformation and software development methodologies. He co-presented on "Moving away from Agile: What's Next?" at the AI Engineer Summit 2025.

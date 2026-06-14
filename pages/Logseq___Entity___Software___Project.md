@@ -1,7 +1,7 @@
 alias:: [[Logseq/Entity/software-project]]
 
 - # Software/Project
-	- This page is the standard operating procedure for software project entities. Software here means applications for end users, libraries, frameworks, CLIs, desktop or web apps, editors, runtimes, and the like.
+	- This page is the entity definition for software project entities. Software here means applications for end users, libraries, frameworks, CLIs, desktop or web apps, editors, runtimes, and the like.
 	- ## Examples in this garden
 		- [[Yamtrack]], [[nvim]], [[Lazygit]], and [[tmux]] show how we name and shape software project pages. Use them as reference.
 	- ## How to name the main page for a software project

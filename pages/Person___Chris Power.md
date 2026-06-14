@@ -1,5 +1,5 @@
 alias:: [[Username/typecraft]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - [typecraft.dev - Learn Programming - Master Vim, Docker, Linux, and | Typecraft Learn](https://typecraft.dev/)
 	- [Chris Power (@typecraft_dev) / X](https://x.com/typecraft_dev)
 	- {{embed [[Person/Chris Power/YouTube]]}}

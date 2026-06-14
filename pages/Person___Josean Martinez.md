@@ -1,6 +1,6 @@
 alias:: [[CLI/Craftsperson/Josean Martinez]]
 tags:: [[CLI/Craftsperson]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Josean Martinez
 	- ## About
 		- YouTube creator focused on **Neovim**, **Lazygit**, and terminal workflows

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # [[Person/John Searle]]
 	- ## Overview
 		- **Full Name**: John Rogers Searle

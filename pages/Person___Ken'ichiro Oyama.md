@@ -1,5 +1,5 @@
 alias:: [[k1LoW]], [[GitHub/k1LoW]], [[Ken’ichiro Oyama]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 via:: [[gh/grep]]
 
 - # Ken'ichiro Oyama

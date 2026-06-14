@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Adrian Cockcroft
 	- ## About
 		- Technology executive and cloud computing expert

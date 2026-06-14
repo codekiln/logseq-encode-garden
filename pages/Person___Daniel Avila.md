@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Person/Daniel Avila
 	- **GitHub:** [@davila7](https://github.com/davila7)
 	- ## Bio

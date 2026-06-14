@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 tags:: [[Question]]
 
 - # In [[Lightroom/Classic]], can I use a filepath regex filter in LrC 15.3 to reject duplicate iPhone imports (keep edited `IMG_E…` files)?

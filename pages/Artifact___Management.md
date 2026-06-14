@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 
 - # Artifact/Management
 	- The practice of controlling, cataloging, and tracking the software artifacts — container images, packages, libraries, binaries — that are deployed across an environment

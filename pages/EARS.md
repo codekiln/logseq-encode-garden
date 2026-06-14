@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 alias:: [[Easy Approach to Requirements Syntax]]
 see-also:: [[Product Requirements Document]], [[OpenSpec]], [[AI/Coding/Technique/Spec-Driven Dev]]
 

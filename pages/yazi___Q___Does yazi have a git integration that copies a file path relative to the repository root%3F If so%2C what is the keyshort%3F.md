@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[yazi/Keyshort]]
 
 - # Does [[yazi]] have a [[git]] integration that copies a file path relative to the repository root? If so, what is the keyshort?

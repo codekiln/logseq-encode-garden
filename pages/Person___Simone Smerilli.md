@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 # [About Me | Simone Smerilli](https://www.simosme.com/about)
 	- a "company of one" that makes automations
 		- Notion, Coda, Airtable, Zapier

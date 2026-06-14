@@ -1,5 +1,5 @@
 tags:: [[Person]], [[Software Engineer]], [[AI Systems Architect]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Seth Hobson
 	- ## Overview
 		- Software Engineer | AI Systems Architect | Open Source Contributor

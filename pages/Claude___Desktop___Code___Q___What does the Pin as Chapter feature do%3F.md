@@ -1,6 +1,6 @@
 tags:: [[Claude/Desktop]], [[Claude/Code]], [[Q]]
 alias:: [[Anthropic/App/Claude Desktop/Code/Q/What does the Pin as Chapter feature do]]
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Claude/Desktop/Q/Is it possible to fork a conversation in Claude Desktop?]]
 title:: Claude/Desktop/Code/Q/What does the Pin as Chapter feature do?
 

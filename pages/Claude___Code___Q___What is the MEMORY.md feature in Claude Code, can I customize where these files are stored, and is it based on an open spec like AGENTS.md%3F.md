@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 
 - # What is the MEMORY.md feature in [[Claude/Code]], can I customize where these files are stored, and is it based on an open spec like AGENTS.md?
 	- ## [[AI Answer]]

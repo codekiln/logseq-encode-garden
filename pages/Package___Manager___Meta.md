@@ -1,5 +1,5 @@
 alias:: [[Meta Package Manager]], [[Universal Installer]] 
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 
 - # Meta [[Package Manager]] aka Universal Installer
 	- A special class of package manager that itself can reference packages from multiple package managers.

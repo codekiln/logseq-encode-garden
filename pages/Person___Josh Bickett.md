@@ -1,5 +1,5 @@
 tags:: [[Person]], [[AI]], [[Machine Learning]], [[Software Engineer]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Josh Bickett
 	- ## Overview
 		- Self-taught software engineer specializing in machine learning and artificial intelligence systems

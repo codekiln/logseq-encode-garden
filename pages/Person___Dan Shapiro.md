@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Dan Shapiro
 	- ## About
 		- Tech founder and writer focused on software, AI, and product development.

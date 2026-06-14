@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[mise]], [[mise/Backend/aqua]], [[mise/tasks]]
 
 - # How can I run [[mise]] commands to update pinned global dev tools (for example under `~/.config/mise/mise.toml`) using [[mise/Backend/aqua]], and define a [[mise/tasks]] task that bumps all pinned versions?

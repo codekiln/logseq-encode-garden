@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Jensen Huang
 	- ## Overview
 		- Co-founder, president, and CEO of [[Nvidia]]; electrical engineer and a widely cited public figure on accelerated computing, GPUs, and AI infrastructure.

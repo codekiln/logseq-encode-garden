@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[rg]], [[rg/manpage]]
 via:: [[2026-05-20 Wed]]
 

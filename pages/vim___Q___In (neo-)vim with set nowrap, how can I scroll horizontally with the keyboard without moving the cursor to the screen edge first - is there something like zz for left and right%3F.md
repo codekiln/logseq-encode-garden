@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[nvim]], [[vim/Q/How can I configure (neo-)vim so that by default it wraps in a way that takes word boundaries into account, rather than splitting words in the middle?]]
 via:: [[2026-04-01 Wed]]
 

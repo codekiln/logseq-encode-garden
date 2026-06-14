@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - Deputy Chief Information Security and Data Privacy Officer , [[Uni/Harvard]]
 - ## talks
 	- [[BCWSC/26/1515 The Zero-Day Deluge Why Patch-Centric Security is No Longer Enough]]

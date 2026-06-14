@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - [[Person/Tim Rogers/Website]] https://timrogers.co.uk/
 - # About
 	- I'm Tim, and I'm a product leader and polyglot software engineer based in London, UK 🇬🇧

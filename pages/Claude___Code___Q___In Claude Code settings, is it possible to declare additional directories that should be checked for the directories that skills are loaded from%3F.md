@@ -1,6 +1,6 @@
 tags:: [[Claude/Code]], [[Q]]
 alias:: [[Anthropic/App/Claude Code/Q/In Claude Code settings, is it possible to declare additional directories that should be checked for the directories that skills are loaded from]]
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Claude/Code/Settings]], [[Claude/Code/Skill]], [[Agent/Skills/Dir]]
 
 - # In [[Claude/Code]] settings, is it possible to declare additional directories that should be checked for the directories that skills are loaded from?

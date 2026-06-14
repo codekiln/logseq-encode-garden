@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[mise]], [[mise/Backend/npm]], [[mise/search]], [[Aube]]
 
 - # How can I search for an [[npm]]/ [[Aube]] [[mise/Tool]]? [[card]]

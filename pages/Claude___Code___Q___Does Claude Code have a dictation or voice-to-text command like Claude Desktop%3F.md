@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Claude/Desktop/Keyshort/Dictate]], [[AI/Voice/to/Text]]
 - # Does [[Claude/Code]] have a dictation or [[AI/Voice/to/Text]] command like [[Claude/Desktop]]? [[card]]
 	- ## [[AI Answer]]

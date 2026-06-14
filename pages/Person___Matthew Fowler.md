@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 # Matthew Fowler
 	- ## My Notes
 		- author of [[Book/Python Concurrency with asyncio]]

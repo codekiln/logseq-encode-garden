@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[yazi/Q/In yazi, if nvim is my $EDITOR, is there a key which can open it up in my editor in read-only mode?]]
 
 - # Once I open a file in read-only mode in [[vim]] or [[nvim]], can I flip to edit mode?

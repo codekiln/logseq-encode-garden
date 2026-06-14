@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Codex/CLI]], [[Claude Code/Command/Slash/Docs/Comparison with Skills]], [[rulesync]], [[OpenSpec]]
 
 - # Why doesn't [[Codex/CLI]] support slash commands?

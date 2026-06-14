@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Jordan Lord
 	- ## About
 		- Builds **radically simple, open tools and worlds** through **constraint-driven engineering** (from [jordanlord.co.uk](https://jordanlord.co.uk/)).

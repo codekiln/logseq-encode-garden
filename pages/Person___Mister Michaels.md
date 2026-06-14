@@ -1,5 +1,5 @@
 - tags:: [[Architect]], [[Knowledge Gardener]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Person/Mister Michaels
 	- **Full Name:** Mister Michaels
 	- **GitHub:** [@mistermicheels](https://github.com/mistermicheels)

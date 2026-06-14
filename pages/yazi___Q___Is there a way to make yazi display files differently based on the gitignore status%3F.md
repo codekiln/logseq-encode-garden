@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[yazi/Q/Does yazi have a git integration that copies a file path relative to the repository root? If so, what is the keyshort?]]
 
 - # Is there a way to make [[yazi]] display files differently based on the [[gitignore]] status?

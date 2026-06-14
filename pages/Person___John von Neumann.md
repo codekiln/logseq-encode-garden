@@ -1,5 +1,5 @@
 alias:: [[Neumann János Lajos]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # John von Neumann
 	- ## About
 		- Hungarian-American mathematician, physicist, computer scientist, and engineer (1903–1957). Born **Neumann János Lajos** in Budapest; naturalized U.S. citizen in 1937.

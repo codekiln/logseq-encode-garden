@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[vim/Keyshort/Move by Display Line]], [[nvim]]
 via:: [[2026-04-01 Wed]]
 

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 via:: [web/lx at canon · chriskrycho/web](https://github.com/chriskrycho/web/tree/canon/lx#notes)
 
 - # [POSSE - IndieWeb](https://indieweb.org/POSSE)

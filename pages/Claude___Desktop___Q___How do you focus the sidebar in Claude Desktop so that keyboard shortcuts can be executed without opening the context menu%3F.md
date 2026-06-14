@@ -1,5 +1,5 @@
 tags:: [[Claude/Desktop]], [[Q]]
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Claude/Desktop]]
 
 - # How do you focus the sidebar in [[Claude/Desktop]] so that keyboard shortcuts can be executed without opening the context menu?

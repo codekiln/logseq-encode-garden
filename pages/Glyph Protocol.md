@@ -1,5 +1,5 @@
 alias:: [[Glyph Terminal Protocol]]
-logseq-entity:: [[Logseq/Entity/standard]]
+logseq-entity:: [[Logseq/Entity/Standard]]
 created-by:: [[Person/Raphael Amorim]]
 see-also:: [[Rio]], [[Font/Tofu]], [[iTerm2/Image/Protocol]]
 

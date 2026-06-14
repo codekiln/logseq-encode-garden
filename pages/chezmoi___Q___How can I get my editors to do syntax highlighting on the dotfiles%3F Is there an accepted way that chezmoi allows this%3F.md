@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 
 - # When using [[chezmoi]], how can I get my editors to do syntax highlighting on the [[dotfiles]]? Is there an accepted way that chezmoi allows this? [[card]]
   card-last-interval:: -1

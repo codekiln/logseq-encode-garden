@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Olive Song
 	- **Role:** Senior Researcher, MiniMax
 	- **Bio:** Olive Song is a Senior Researcher at MiniMax, working on AI models including the M2 model. She presented on "Minimax M2" at the AI Engineer Summit 2025.

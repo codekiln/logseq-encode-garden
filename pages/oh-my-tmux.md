@@ -2,6 +2,7 @@ alias:: [[gpakosz/.tmux]], [[Person/Grégory Pakosz/GitHub/tmux]]
 created-by:: [[Person/Grégory Pakosz]]
 
 - # [gpakosz/.tmux: Oh my tmux! My self-contained, pretty & versatile tmux configuration](https://github.com/gpakosz/.tmux)
+	- this is essentially a [[Distro]] for [[tmux]]
 	- ## Instructions
 		- [[oh-my-tmux/Installation]]
 	- ## Guidelines

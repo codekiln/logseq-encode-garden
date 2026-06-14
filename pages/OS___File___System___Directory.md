@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/term]]
+logseq-entity:: [[Logseq/Entity/Term]]
 alias:: [[File System Directory]], [[POSIX Directory]]
 see-also:: [[OS/File/System/Inode]], [[OS/File/System/Link/Hard]], [[OS/File/System/Link]]
 - # File system directory

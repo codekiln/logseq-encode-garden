@@ -1,3 +1,3 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 # [Chelsea Troy](https://chelseatroy.com/)
 	-

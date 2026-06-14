@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Flashcard/Spaced Repetition System]], [[Flashcard/Spaced Repetition System/Free]]
 tags:: [[Question]]
 

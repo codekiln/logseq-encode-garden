@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Card]], [[Logseq/Entity/term]]
+logseq-entity:: [[Logseq/Entity/Card]], [[Logseq/Entity/Term]]
 alias:: [[chezmoi/Concept/Destination]]
 tags:: [[chezmoi/Concept]]
 

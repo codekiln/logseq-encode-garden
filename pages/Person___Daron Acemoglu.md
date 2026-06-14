@@ -1,5 +1,5 @@
 date-created:: [[1967-09-03 Fri]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Daron Acemoglu
 	- ## Bio
 		- Turkish-American economist, MIT Institute Professor, and 2024 Nobel laureate in economic sciences.

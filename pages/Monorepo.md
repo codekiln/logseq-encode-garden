@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 tags:: [[Diataxis/Concept]]
 see-also:: [[nx]], [[GitHub/vercel/turborepo]], [[Dependency/Update/Automation]], [[Security/DevSecOps/Taxonomy]]
 

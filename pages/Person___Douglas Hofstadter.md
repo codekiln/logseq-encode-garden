@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Douglas Hofstadter
 	- ## About
 		- American scholar of cognitive science, physics, and comparative literature; professor and author.

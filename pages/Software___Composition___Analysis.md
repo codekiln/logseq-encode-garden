@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 tags:: [[Diataxis/Concept]]
 alias:: [[SCA]]
 see-also:: [[Security/DevSecOps/Taxonomy]], [[Dependency/Update/Automation]]

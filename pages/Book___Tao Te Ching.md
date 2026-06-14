@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/book]]
+logseq-entity:: [[Logseq/Entity/Book]]
 created-by:: [[Person/Lao Tzu]]
 - # Tao Te Ching
 	- ## About

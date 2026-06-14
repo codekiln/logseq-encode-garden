@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 - # Projection
 	- ## Overview
 		- A projection is a way of turning something into the part of itself that matters for a chosen direction, subspace, coordinate system, or question.

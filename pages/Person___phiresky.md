@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Person/phiresky
 	- ## Bio
 		- German open-source developer and technical writer; builds practical command-line and web tools in [[Rust]], [[Typescript]], and [[Py]]. Maintainer of Lemmy, the federated link aggregator. Won first prize ($10k) in a book-metadata visualization contest. Goes by the handle phiresky; blogs at [phiresky.github.io/blog](https://phiresky.github.io/blog).

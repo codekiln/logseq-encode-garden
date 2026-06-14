@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Ken Thompson
 	- ## About
 		- American pioneer of computer science; co-creator of Unix with [[Person/Dennis Ritchie]] at Bell Labs. Credited with originating the cultural norms later called the [[Unix/Philosophy]].

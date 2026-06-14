@@ -1,5 +1,5 @@
 alias:: [[Person/raphamorim]], [[raphamorim]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 
 - # Raphael Amorim
 	- ## About

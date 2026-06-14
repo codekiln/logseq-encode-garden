@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Lazygit/Keyshort]]
 
 - # In [[Lazygit]], what's a basic workflow for listing modified files in a worktree and then committing them on the worktree?

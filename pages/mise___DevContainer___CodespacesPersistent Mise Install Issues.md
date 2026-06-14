@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 tags:: [[Diataxis/Concept]], [[mise]], [[DevContainer]]
 see-also:: [[mise]], [[DevContainer]], [[GitHub/Codespace]], [[DevContainer/Hook/postCreateCommand]], [[mise/Tool/Explanation/When to Declare Tools]]
 via:: [[2026-05-18 Mon]]

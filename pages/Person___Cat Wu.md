@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 
 - # Cat Wu
 	- **Role:** Product Lead, [[Claude/Code]], Anthropic

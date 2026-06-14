@@ -1,5 +1,5 @@
 tags:: [[Question]]
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[langgraph/Platform/Deployment]], [[langgraph/Platform]]
 
 - # Is it possible to have a [[git/submodule]] which points to a different commit of the same git repo?

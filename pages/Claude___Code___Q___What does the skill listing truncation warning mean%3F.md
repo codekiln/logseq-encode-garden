@@ -1,6 +1,6 @@
 tags:: [[Claude/Code]], [[Q]]
 alias:: [[Anthropic/App/Claude Code/Q/What does the skill listing truncation warning mean]]
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Claude/Code/Skill]], [[Claude/Code/Settings]]
 
 - # What does the skill listing truncation warning in [[Claude/Code]] mean?

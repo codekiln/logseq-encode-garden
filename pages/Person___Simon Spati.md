@@ -1,6 +1,6 @@
 tags:: [[Knowledge Gardener]]
 alias:: [[Person/Simon Späti]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # [Simon Späti](https://www.ssp.sh/)
 	- ## About
 		- Data engineer, technical writer, and lifelong learner

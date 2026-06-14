@@ -1,5 +1,5 @@
 alias:: [[Binary Cache]]
-logseq-entity:: [[Logseq/Entity/term]]
+logseq-entity:: [[Logseq/Entity/Term]]
 see-also:: [[Nix]], [[Nix/OS]]
 
 - # Binary Cache

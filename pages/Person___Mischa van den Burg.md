@@ -1,5 +1,5 @@
 via:: https://mischavandenburg.com/aboutme/
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - [[Person/Mischa van den Burg/Garden]] https://zettelkasten.mischavandenburg.net/
 - # Mischa van den Burg
 	- ## About

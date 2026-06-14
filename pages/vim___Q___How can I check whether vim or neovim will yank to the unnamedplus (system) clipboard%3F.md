@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[nvim/Q/What does " mean in nvim?]], [[tmux/Q/What is a conceptual overview of how copy paste works in oh-my-tmux with nvim?]]
 via:: [[2026-05-01 Fri]]
 

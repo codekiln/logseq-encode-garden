@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Buckminster Fuller
 	- ## About
 		- American designer, architect, systems theorist, and futurist (1895–1983).

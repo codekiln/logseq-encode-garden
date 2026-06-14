@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 
 - # When using [[bat]] as a pager, is there a keyboard shortcut that brings up the keyboard shortcuts?
 	- ## [[AI Answer]]

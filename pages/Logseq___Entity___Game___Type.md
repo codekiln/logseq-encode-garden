@@ -1,12 +1,12 @@
 - # Game Type
-	- This page is the standard operating procedure for **game type** entities: reusable categories used to describe games, such as genres, families, mechanics, modes, and design patterns. It is for pages whose primary identity is a type of game, not an individual playable work or system.
+	- This page is the entity definition for **game type** entities: reusable categories used to describe games, such as genres, families, mechanics, modes, and design patterns. It is for pages whose primary identity is a type of game, not an individual playable work or system.
 	- ## What counts as an instance
 		- **Genres and families** — reusable catalog labels such as [[Game/Video/Platformer]].
 		- **Mechanics and modes** — recurring game-design categories when the page is about the game-design lens itself.
 		- **Not individual titles** — pages such as [[Game/Video/Cookie Clicker]] or [[Co/Nintendo/Game/Super Mario]] are [[Logseq/Entity/Game]] instances when their primary identity is the playable game.
 	- ## Relationship to other entity types
 		- **[[Logseq/Entity/Game]]** — Use for individual playable works or systems.
-		- **[[Logseq/Entity/concept]]** — Use when the page is a cross-domain explanation or general paradigm article rather than a game-catalog lens.
+		- **[[Logseq/Entity/Concept]]** — Use when the page is a cross-domain explanation or general paradigm article rather than a game-catalog lens.
 		- **[[Logseq/Entity/Software/Project]]** — Use for tools, engines, SDKs, libraries, or apps whose primary identity is software infrastructure rather than a category of games.
 	- ## Finding and deduplicating
 		- Search for an existing page before creating a new game type entity. Stop early only when a result is clearly the same game category, genre, mechanic, family, or mode.

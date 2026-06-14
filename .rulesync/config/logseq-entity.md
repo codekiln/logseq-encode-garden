@@ -7,7 +7,7 @@ Repo-side support for the **logseq-entity** skill. **Per-type rules** (recogniti
 Agents read configuration in this order and stop relying on lower layers once the graph answers the question:
 
 1. **`[[Logseq/Entity]]`** — registry: which types exist in this garden and how instances are marked (`logseq-entity::`, etc.).
-2. **`[[Logseq/Entity/<Type>]]`** — full SOP for that type (whatever titles appear under `Logseq/Entity/` in this garden).
+2. **`[[Logseq/Entity/<Type>]]`** — entity definition for that entity (whatever titles appear under `Logseq/Entity/` in this garden).
 3. **`[[Logseq/Frontmatter]]`** — shared page-level attribute conventions (`tags::`, `alias::`, `see-also::`, `via::`, `date-created::`, etc.).
 4. **`[[Logseq/Pref]]`** (and children such as **`[[Logseq/Pref/Page/Name]]`**) — optional encode-wide preferences when present (page naming, editorial defaults).
 5. **This file** — only when those pages are missing, incomplete, or the workspace has no graph copy yet.
@@ -16,7 +16,7 @@ Agents read configuration in this order and stop relying on lower layers once th
 
 - Personal Logseq knowledge garden; canonical names follow gardening practice, not external site layout alone.
 - Prefer short stable page titles when a topic will grow sub-namespaces; use `alias::` for contextual paths.
-- Keep graph SOP pages self-contained. Do not write Rulesync, skill, slash-command, generated-file, repo-path, or agent-workflow references into Logseq pages.
+- Keep graph entity definition pages self-contained. Do not write Rulesync, skill, slash-command, generated-file, repo-path, or agent-workflow references into Logseq pages.
 - Keep actual `[[Page]]` links clickable in graph pages; do not put them inside backticks.
 - New entity type page names should be singular where natural; **multi-word types** use **nested Title Case namespace segments** under `Logseq/Entity/` (for example **`Software/Project`**); plural or contextual surfaces belong in `alias::`. **`[[Logseq/Entity]]`** is authoritative for which titles exist and which renames are still deferred.
 - **Never** modify, add, or remove **`tags::`** on existing pages unless a human explicitly overrides garden rules.

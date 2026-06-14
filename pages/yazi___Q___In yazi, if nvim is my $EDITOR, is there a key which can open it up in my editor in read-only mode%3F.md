@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 
 - # In [[yazi]], if nvim is my `$EDITOR`, is there a key which can open it up in my editor in read-only mode?
 	- ## [[AI Answer]]

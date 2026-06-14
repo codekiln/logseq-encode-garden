@@ -1,6 +1,6 @@
 alias:: [[EBook]]
 tags:: [[Term]]
-logseq-entity:: [[Logseq/Entity/term]]
+logseq-entity:: [[Logseq/Entity/Term]]
 see-also:: [[Book/Physical]]
 
 - # E-Books

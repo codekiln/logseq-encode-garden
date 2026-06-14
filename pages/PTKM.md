@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 alias:: [[Project, Task, and Knowledge Management]]
 see-also:: [[Obsidian]], [[PKM]], [[Person/wenlzhang]], [[App/Obsidian/Markdown]], [[obsidian-file-title-updater]]
 

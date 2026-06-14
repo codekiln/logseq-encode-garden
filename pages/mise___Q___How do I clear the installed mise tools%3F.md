@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 
 - # How do I clear the installed [[mise/Tool]]s (either all of them, or the recently used ones) so you can reinstall them? [[card]]
   card-last-interval:: -1

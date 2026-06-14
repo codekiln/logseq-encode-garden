@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[DevContainer]]
 
 - # In [[GitHub/Codespace]] I am prompted for read permissions when I create a codespace; if I download or merge an updated devcontainer that lists new read permissions for other repos, must I delete the codespace to go through authorization again, or is there a way to re-sync permissions from `devcontainer.json` without creating a new codespace?

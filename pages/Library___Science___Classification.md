@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 tags:: [[Diataxis/Concept]]
 alias:: [[Bibliographic classification]], [[Library classification scheme]]
 see-also:: [[Library/Science/Classification/Dewey]], [[Library/Science/Classification/Library of Congress]], [[Taxonomy]]

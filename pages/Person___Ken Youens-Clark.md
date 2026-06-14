@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Ken Youens-Clark
 	- Author of [[Rust/Book/CLR]]
 	- GitHub: [kyclark](https://github.com/kyclark)

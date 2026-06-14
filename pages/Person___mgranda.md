@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - #Website [granda.org](https://granda.org/)
 - Author of technical blog posts about development workflows and tools
 - Creator of the granda blog, which features AI-assisted content creation

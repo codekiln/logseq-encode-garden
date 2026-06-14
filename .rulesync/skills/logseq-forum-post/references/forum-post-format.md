@@ -1,6 +1,6 @@
 # Formatting Forum Posts in Logseq
 
-Standard format for importing and structuring forum posts in Logseq (Cursor, Reddit, Stack Overflow, and other forums). For person hubs, use the logseq-person router and `[[Logseq/Entity/person]]` (logseq-entity skill).
+Standard format for importing and structuring forum posts in Logseq (Cursor, Reddit, Stack Overflow, and other forums). For person hubs, use the logseq-person router and `[[Logseq/Entity/Person]]` (logseq-entity skill).
 
 ### ⚠️ CRITICAL: DO NOT MODIFY FRONTMATTER TAGS ⚠️
 
@@ -35,7 +35,7 @@ Standard format for importing and structuring forum posts in Logseq (Cursor, Red
    - Reddit: `[[Reddit/User/Username]]`
    - Stack Overflow: `[[StackOverflow/User/Username]]`
    - Only create `[[Person/Full Name]]` when: the person is known across platforms, identity confirmed, significant contributor/maintainer, or substantial online presence.
-2. **Person References** — follow `[[Logseq/Entity/person]]` and the logseq-person router; only create new person pages for significant contributors; update existing person pages if found; include bio, links (GitHub/LinkedIn), image if available; add a journal entry linking the new person.
+2. **Person References** — follow `[[Logseq/Entity/Person]]` and the logseq-person router; only create new person pages for significant contributors; update existing person pages if found; include bio, links (GitHub/LinkedIn), image if available; add a journal entry linking the new person.
 3. **Formatting** — use the appropriate namespace; include user references for original poster, respondents, and mentioned users.
 
 ### Formatting Guidelines

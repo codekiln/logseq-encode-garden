@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[QuartzMD]], [[Obsidian/Q/What options do I have for publishing my obsidian vault as a web application?]]
 tags:: [[Question]]
 

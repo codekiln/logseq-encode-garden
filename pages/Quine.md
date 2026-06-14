@@ -1,6 +1,6 @@
 alias:: [[Quine (computing)]]
 tags:: [[Diataxis/Concept]]
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 see-also:: [[Book/Gödel, Escher, Bach: an Eternal Golden Braid]], [[Person/Joe Armstrong/Blog]]
 via:: [[Person/Joe Armstrong]]
 - # Quine

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/standard]]
+logseq-entity:: [[Logseq/Entity/Standard]]
 
 - # [H5P](https://h5p.org/)
 	- Open framework and packaging specification for interactive HTML5 content objects, distributed as self-contained `.h5p` ZIP files embeddable in any LMS or web page.

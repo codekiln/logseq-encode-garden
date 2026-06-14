@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 see-also:: [[Agent/Skills/Dir]], [[Agent/Skills/Dir/Compatibility]], [[skillshare]], [[rulesync]]
 
 - # Agent Skills: Support Across Multiple Tools

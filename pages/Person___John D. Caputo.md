@@ -1,2 +1,2 @@
 wikipedia-link:: https://en.wikipedia.org/wiki/John_D._Caputo
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]

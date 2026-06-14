@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]], [[Logseq/Entity/Card]] 
+logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]] 
 see-also:: [[mise]], [[mise/unuse]], [[mise/uninstall]], [[mise/cache/clear]], [[mise/Q/How do I remove a mise tool?]], [[mise/Q/How do I clear the installed mise tools?]]
 
 - # What's the difference between [[mise/unuse]], [[mise/uninstall]], and [[mise/cache/clear]]? [[card]]

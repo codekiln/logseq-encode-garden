@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 via:: [[yazi/Plugin/fr.yazi]]
 
 - # What are some good options for managing [[yazi]] plugins using [[chezmoi]]?

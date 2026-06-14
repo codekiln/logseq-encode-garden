@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 tags:: [[Diataxis/Concept]]
 see-also:: [[My/Principle/Simplify/Minimize Surface Area]], [[My/Principle/Simplify/Fewer and Deeper]], [[My/Principle/Simplify/Prefer Standards and Defaults]]
 

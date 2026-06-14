@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 tags:: [[Question]]
 see-also:: [[Obsidian/Q/In obsidian, can I do transclusions so element from one document appears in another document? If so, how?]]
 

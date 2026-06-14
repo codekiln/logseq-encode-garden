@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/book]]
+logseq-entity:: [[Logseq/Entity/Book]]
 alias:: [[Book/Metamagical Themas]]
 created-by:: [[Person/Douglas Hofstadter]]
 published:: 1985

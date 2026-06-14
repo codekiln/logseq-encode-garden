@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[mise]], [[mise/use/--global]], [[mise/Config/Global]], [[mise/unset]]
 
 - # How do I remove a [[mise/Tool]]? [[card]]

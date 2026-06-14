@@ -1,6 +1,6 @@
 tags:: [[Claude/Code]], [[Q]]
 alias:: [[Anthropic/App/Claude Code/Q/Does aqua have a package for the native installer of claude code]]
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[aqua]], [[mise/Backend/aqua]], [[Claude/Code]]
 title:: Claude/Code/Q/Does aqua have a package for the native installer of claude code
 

@@ -1,5 +1,5 @@
 tags:: [[Person]], [[Python]], [[Coder]], [[Course/Author]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Raymond Hettinger
 	- Role and Background
 		- [[Python]] Core Developer

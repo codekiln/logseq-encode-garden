@@ -1,5 +1,5 @@
 tags:: [[Question]]
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Bevy]], [[Game/Video/Engine]], [[Rust]]
 
 - # What are the main [[Game/Video/Engine]]s for [[Rust]]?

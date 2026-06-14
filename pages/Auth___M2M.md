@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 
 - # Auth/M2M
 	- Machine-to-Machine (M2M) authentication covers server-to-server and service-to-service communication flows where no human user is present to authorize the request

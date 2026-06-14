@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]], [[Logseq/Entity/Card]]
+logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]]
 tags:: [[Question]]
 see-also:: [[Obsidian/Q/Is there a VS Code extension that helps obsidian users have an obsidian-compatible view of obsidian markdown files and navigate between wiki links?]]
 

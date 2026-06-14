@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - #Website [Simon Willison’s Weblog](https://simonwillison.net/)
 - One of the core developers that made #Django, #GOAT
 - [[Person/Simon Willison/GitHub]] https://github.com/simonw

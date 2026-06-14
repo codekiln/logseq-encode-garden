@@ -1,12 +1,12 @@
 # concept
-	- This page is the standard operating procedure for **concept** entities: understanding-oriented pages that follow the garden’s Diataxis-style shape (aligned with [[Diataxis/Concept]] / [[Diataxis/Explanation]]). Paradigms, architectural lenses, and other “big ideas” explained rather than only defined.
+	- This page is the entity definition for **concept** entities: understanding-oriented pages that follow the garden’s Diataxis-style shape (aligned with [[Diataxis/Concept]] / [[Diataxis/Explanation]]). Paradigms, architectural lenses, and other “big ideas” explained rather than only defined.
 	- ## Examples in this garden
 		- [[Programming/Language/Func]]
 		- [[Programming/Language/Concept/Object-Oriented]]
 	- ## When we treat something as a concept entity
 		- Strong signals: the page’s purpose is **understanding**—what something is, why it matters, how it relates to neighboring ideas—not primarily a how-to, tutorial walkthrough, or lookup reference.
 		- Good fit: programming paradigms, frameworks of thought, architectural patterns explained in prose.
-		- Not a concept entity: short glossary stubs better modeled as **term** entities; step procedures (how-to); bare link lists; **question** entities (use [[Logseq/Entity/question]] and `/Q/` naming).
+		- Not a concept entity: short glossary stubs better modeled as **term** entities; step procedures (how-to); bare link lists; **question** entities (use [[Logseq/Entity/Question]] and `/Q/` naming).
 	- ## Finding and deduplicating
 		- Search for an existing page before creating a new concept entity.
 		- Search order hints: exact title, alternate titles from frontmatter, normalized topic phrases, sibling pages in the same topic area.

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 # Mark Carney
 	- [[Pic/Profile]]
 		- ![Mark Carney](https://icmc2025.sites.northeastern.edu/files/2025/01/Mark_Canrey-1.jpg){:height 344, :width 379}

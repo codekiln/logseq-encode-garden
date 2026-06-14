@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - [[GitHub]]
 	- [dandavison (Dan Davison)](https://github.com/dandavison)
 	- [[dotfiles]] [dandavison/devenv](https://github.com/dandavison/devenv)

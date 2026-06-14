@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 tags:: [[CLI/Craftsperson]]
 
 - # Chris Krycho

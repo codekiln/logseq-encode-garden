@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 tags:: [[Question]]
 see-also:: [[Obsidian/Q/If I'm using dotfiles, can I set a global hotkey for Obsidian actions like copy file path and copy link to heading?]]
 

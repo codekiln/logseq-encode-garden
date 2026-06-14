@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[glow]], [[Terminal/Q/Is there a terminal-native Markdown viewer or a cat-like CLI that renders Markdown in the terminal?]], [[Glow/Q/How do I use Glow as a default pager for markdown documents when I'm in a terminal?]]
 via:: [[2026-04-01 Wed]]
 

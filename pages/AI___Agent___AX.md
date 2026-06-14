@@ -1,5 +1,5 @@
 tags:: [[Term]], [[Idea]] 
-logseq-entity:: [[Logseq/Entity/term]]
+logseq-entity:: [[Logseq/Entity/Term]]
 alias:: [[AX]]
 
 - # Agent Experience (`AX`)

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Martin Heidegger
 	- ## About
 		- German philosopher associated with phenomenology and existential thought.

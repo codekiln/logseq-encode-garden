@@ -49,7 +49,7 @@ Entity type pages are graph documentation, not agent documentation:
 
 A repository may add **small** skills whose only job is to route agents to heavy workflows. Conventions:
 
-- The narrow skill’s `description` targets task routing; its body should **point at** the relevant `[[Logseq/Entity/<Type>]]` pages (and any linked Logseq SOP notes).
+- The narrow skill’s `description` targets task routing; its body should **point at** the relevant `[[Logseq/Entity/<Type>]]` pages (and any linked entity definition pages).
 - **Authoritative detail stays in Logseq** on the type page (and linked pages). Do not mirror long checklists in `./references/` for domain-specific procedures.
 - Not every type needs a narrow skill—only where extra discovery helps.
 - The type page may list a companion skill name in a short bullet for humans and agents.

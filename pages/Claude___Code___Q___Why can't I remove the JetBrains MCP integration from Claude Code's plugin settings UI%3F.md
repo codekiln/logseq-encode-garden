@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 
 - # Why can't I remove the [[JetBrains]] [[MCP]] integration from [[Claude/Code]]'s plugin settings UI? [[card]]
 	- ## [[AI Answer]]

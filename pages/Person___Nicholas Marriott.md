@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 
 - # [Nicholas Marriott](https://github.com/nicm)
 	- Original author of [[tmux]], the terminal multiplexer

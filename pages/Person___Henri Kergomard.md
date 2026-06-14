@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Henri Kergomard
 	- ## Bio
 		- Composer of acousmatic music

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Jay McTighe
 	- ## About
 		- Educator, consultant, and author; co-authored [[Book/Understanding by Design]] with [[Person/Grant Wiggins]]; known for curriculum, assessment, and instructional design.

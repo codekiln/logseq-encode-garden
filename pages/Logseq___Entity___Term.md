@@ -1,5 +1,5 @@
 # term
-	- This page is the standard operating procedure for **term** entities: short, vocabulary-style pages—jargon, definitions, abbreviations, and cross-domain labels indexed as entities without the full Diataxis explanation arc of a **concept** entity.
+	- This page is the entity definition for **term** entities: short, vocabulary-style pages—jargon, definitions, abbreviations, and cross-domain labels indexed as entities without the full Diataxis explanation arc of a **concept** entity.
 	- ## Examples in this garden
 		- Many legacy term pages use term tags today; new or revised term-like pages should add **`logseq-entity::`** pointing at **this** entity-type page so backlinks list all term entities.
 		- See also the meta page [[Term]] (“a word with a specific meaning”) for how “term” is used in prose.

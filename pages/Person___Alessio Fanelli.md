@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 # Alessio Fanelli
 	- ## About Alessio Fanelli
 	  id:: 67d947ef-69e5-4848-a652-658077c58cfc

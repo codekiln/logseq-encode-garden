@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[vim/Q/How can I check whether vim or neovim will yank to the unnamedplus (system) clipboard?]]
 via:: [[2026-05-01 Fri]]
 

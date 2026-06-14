@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]], [[Logseq/Entity/Card]]
+logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]]
 see-also:: [[glow]], [[vim/Q/How can I get a VS Code-style split Markdown preview in (neo-)vim that renders in the terminal (e.g. glow)?]]
 
 - # Is there a quick way to use [[glow]] to preview the current [[Markdown]] file while editing in [[nvim]]? [[card]]

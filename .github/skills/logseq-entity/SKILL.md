@@ -64,12 +64,12 @@ Procedure: [references/entity-session-journal.md](./references/entity-session-jo
 ## Polymorphism and other skills in the repo
 
 - **Same skill, different graphs:** Identical `logseq-entity` text may be deployed in multiple gardens; effective behavior follows whatever `[[Logseq/Entity]]` and `[[Logseq/Entity/<Type>]]` pages exist **in the workspace graph**. Do not assume another garden’s entity types.
-- **Type pages are full SOPs:** Everything on `[[Logseq/Entity/<Type>]]` is binding—not only naming and frontmatter. If a type page defines imports, index updates, checklists, or search patterns, follow it end-to-end.
-- **Narrow workflows:** A garden or repo may ship additional skills for routing (for example topic-specific filing). **Do not assume** their names or locations—discover from the graph, from type-page bullets, or by listing the repo’s skill directories. Those skills should route to Logseq type pages; **do not** duplicate long type SOPs under this skill’s `./references/`.
+- **Entity definition pages are authoritative:** Everything on `[[Logseq/Entity/<Type>]]` is binding—not only naming and frontmatter. If an entity definition page defines imports, index updates, checklists, or search patterns, follow it end-to-end.
+- **Narrow workflows:** A garden or repo may ship additional skills for routing (for example topic-specific filing). **Do not assume** their names or locations—discover from the graph, from entity definition bullets, or by listing the repo’s skill directories. Those skills should route to Logseq entity definition pages; **do not** duplicate long entity definitions under this skill’s `./references/`.
 
 ## Graph Page Hygiene
 
-When creating or editing `[[Logseq/Entity]]`, `[[Logseq/Entity/<Type>]]`, `[[Logseq/Frontmatter]]`, or other graph SOP pages:
+When creating or editing `[[Logseq/Entity]]`, `[[Logseq/Entity/<Type>]]`, `[[Logseq/Frontmatter]]`, or other graph entity definition pages:
 
 - Keep graph pages self-contained and graph-native. Do **not** add Rulesync, skill, slash-command, generated-file, repo-path, or agent-workflow references to Logseq pages.
 - Do **not** add agent-only reminders such as journal bookkeeping or source-block handling to entity type pages. Those operational duties live in Rulesync rules/skills and journal guidance.

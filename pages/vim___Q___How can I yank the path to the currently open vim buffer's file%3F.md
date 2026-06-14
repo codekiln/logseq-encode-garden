@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 via:: [[2026-04-01 Wed]]
 
 - # How can I yank the path to the currently open [[vim]] buffer's file?

@@ -1,5 +1,5 @@
 alias:: [[Joseph Leslie Armstrong]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Joe Armstrong
 	- ## About
 		- British-Swedish computer scientist, author, and teacher best known as a co-creator of Erlang and OTP and for work on fault-tolerant distributed systems.

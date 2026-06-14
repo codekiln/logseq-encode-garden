@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Lisa Orr
 	- ## About
 		- Engineering Leader, Zapier

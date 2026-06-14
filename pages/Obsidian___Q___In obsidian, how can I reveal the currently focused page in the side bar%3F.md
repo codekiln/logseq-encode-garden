@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]], [[Logseq/Entity/Card]]
+logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]]
 tags:: [[Question]]
 see-also:: [[Obsidian/Q/Is there a keyboard shortcut in Obsidian to search for a page?]]
 

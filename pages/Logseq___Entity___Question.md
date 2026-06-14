@@ -1,5 +1,5 @@
 # question
-	- This page is the standard operating procedure for **question** entities: scoped research questions stored under a topic namespace with a dedicated `/Q/` segment so they stay findable and deduplicable.
+	- This page is the entity definition for **question** entities: scoped research questions stored under a topic namespace with a dedicated `/Q/` segment so they stay findable and deduplicable.
 	- ## Examples in this garden
 		- Pages on disk match `pages/*___Q___*.md` (e.g. [[mise/Q/How do I remove a mise tool?]] → `mise___Q___How do I remove a mise tool%3F.md`).
 		- In-graph titles use a slash path such as `Topic/Q/Question text` or `Topic/SubTopic/Q/Question text`.
@@ -19,8 +19,8 @@
 			- 4. H1 and first blocks on candidate pages; allow for minor rephrasing.
 		- Classify each candidate as: **existing**, **similar** (needs human judgment), **new**, or **blocked** (missing config or ambiguous topic).
 	- ## Frontmatter
-		- On **new** question pages, include `logseq-entity:: [[Logseq/Entity/question]]` so this type page indexes instances.
-		- **Card-backed questions:** when the H1 carries `[[card]]` and the page is a first-class review target, add a second entity marker: `logseq-entity:: [[Logseq/Entity/question]], [[Logseq/Entity/Card]]` (see [[Logseq/Entity/Card]]).
+		- On **new** question pages, include `logseq-entity:: [[Logseq/Entity/Question]]` so this type page indexes instances.
+		- **Card-backed questions:** when the H1 carries `[[card]]` and the page is a first-class review target, add a second entity marker: `logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]]` (see [[Logseq/Entity/Card]]). Card-backed questions use the compact page shape — see **Card-backed page shape** under Page shape below.
 		- [[Logseq/Frontmatter/see-also]]
 			- **`see-also::`** — optional; extremely parsimonious list of 1-2 not obvious **garden pages** that are the best adjacent reading (**strongest tie first**). Do not put anything obvious in this list, do not restate parent-namespace context the title already encodes. Do not use `see-also::` for external URLs (put those in the answer body).
 		- [[Logseq/Frontmatter/via]]
@@ -42,10 +42,20 @@
 				- Cite **external** docs with markdown links in the answer body.
 				- Bold for labels; backticks for commands. Do not wrap `` `commands` `` in `**…**` (see [[Logseq/Flavored Markdown]]).
 		- **Do not** add `## Related` solely to list internal wikilinks; use **`see-also::`** instead.
+		- ### Card-backed page shape
+			- When `logseq-entity::` includes [[Logseq/Entity/Card]] and the H1 ends with `[[card]]`, omit the `## Answer` section header and attribution block. The answer sits directly as a child bullet of the H1, as short as a card prompt requires:
+				- ~~~
+				  logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]]
+				  
+				  - # Question text linking [[Key/Concept]]? [[card]]
+				  	- Terse answer, e.g. [[tmux/Keyshort/Prefix]] `w`
+				  ~~~
+			- Use `==highlight==` to mark mnemonic cues in the answer (e.g. `==N==ext Window`).
+			- Wikilink key terms in both the question and the answer to canonical entity pages.
 	- ## Relationship to other types
 		- **Card:** `[[card]]` on the H1 plus `[[Logseq/Entity/Card]]` in frontmatter when the question page itself is reviewable; distinct from factoring a prompt into a `/Card/` namespace page under [[Logseq/Entity/Card]].
 		- **CLI commands / flags:** questions *about* commands link to [[Logseq/Entity/CLI/Command]] and [[Logseq/Entity/CLI/Flag]] instances; they are not substitutes for command reference stubs.
 	- ## Legacy instances
 		- Older `___Q___` pages may lack `logseq-entity::`, use `## Related` for internal links (use `see-also::` instead), or use `## [[AI Answer]]` as the section heading (now documented as an accepted form).
-		- Some card-backed question pages have `[[Logseq/Entity/Card]]` listed before `[[Logseq/Entity/question]]` in `logseq-entity::`. The canonical order is question-first: `logseq-entity:: [[Logseq/Entity/question]], [[Logseq/Entity/Card]]`.
+		- Some card-backed question pages have `[[Logseq/Entity/Card]]` listed before `[[Logseq/Entity/Question]]` in `logseq-entity::`. The canonical order is question-first: `logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]]`.
 		- Do not bulk-migrate unless requested; new pages should follow the rules above.

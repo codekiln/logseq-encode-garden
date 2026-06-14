@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Jean Piaget
 	- ## Bio
 		- Swiss psychologist known for his work on child development

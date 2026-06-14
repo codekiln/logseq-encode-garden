@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Grant Wiggins
 	- ## About
 		- Educational theorist; co-developed **backward design** and co-authored [[Book/Understanding by Design]] with [[Person/Jay McTighe]].

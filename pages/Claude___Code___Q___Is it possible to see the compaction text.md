@@ -1,6 +1,6 @@
 tags:: [[Claude/Code]], [[Q]]
 alias:: [[Anthropic/App/Claude Code/Q/Is it possible to see the compaction text]]
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Claude/Code/Command/Slash/compact]], [[Claude/Code/How To/Export Conversation to File]], [[Anthropic/YouTube/25/07/Claude Code Best Practices]]
 title:: Claude/Code/Q/Is it possible to see the compaction text
 

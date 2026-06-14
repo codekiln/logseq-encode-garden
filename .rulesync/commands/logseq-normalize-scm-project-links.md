@@ -43,5 +43,5 @@ Examples: `[[Person/Simon Willison/GitHub/showboat]]`, `[[Person/Jane Doe/GitLab
 
 ## Related
 
-- command: `logseq-person` (router) and skill `logseq-entity` — see `[[Logseq/Entity/person]]` for person hub naming and deduplication. If a person page does not exist and the task requires references, create/update the person **hub** first per that SOP.
+- command: `logseq-person` (router) and skill `logseq-entity` — see `[[Logseq/Entity/Person]]` for person hub naming and deduplication. If a person page does not exist and the task requires references, create/update the person **hub** first per that entity definition.
 - naming/path rules: `logseq-core` rule and `logseq-lfm` skill (file-name ↔ link translation).

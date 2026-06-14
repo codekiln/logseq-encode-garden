@@ -1,5 +1,5 @@
 tags:: [[Person]], [[Composer]], [[Sound Artist]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # [[Person/Washington Plada]]
 	- ## Bio
 		- Mexican sound-artist

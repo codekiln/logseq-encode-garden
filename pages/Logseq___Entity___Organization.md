@@ -1,5 +1,5 @@
 - # organization
-	- This page is the standard operating procedure for **organization** entities: non-company bodies tracked as first-class pages, including standards organizations, foundations, nonprofits, public institutions, consortia, professional associations, and governance or community bodies.
+	- This page is the entity definition for **organization** entities: non-company bodies tracked as first-class pages, including standards organizations, foundations, nonprofits, public institutions, consortia, professional associations, and governance or community bodies.
 	- ## Examples in this garden
 		- [[IETF]] - standards organization for Internet protocols and related technical documents.
 	- ## When we treat something as an organization
@@ -15,7 +15,7 @@
 		- Use organization for non-commercial standards, public-interest, community, foundation, government, or institutional bodies.
 		- Use company for commercial vendors and brands. If a body has both a commercial arm and a foundation/community arm, model the page according to the entity the note is actually about.
 	- ## Frontmatter
-		- To mark a page as an organization instance, add `logseq-entity:: [[Logseq/Entity/organization]]` in frontmatter. The type page then gets backlinks to all organization pages.
+		- To mark a page as an organization instance, add `logseq-entity:: [[Logseq/Entity/Organization]]` in frontmatter. The type page then gets backlinks to all organization pages.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
 		- File: `pages/<OrganizationName>.md` for the canonical short name. First block: H1 with a link to the official site or primary public presence.

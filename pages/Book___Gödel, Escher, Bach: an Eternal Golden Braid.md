@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/book]]
+logseq-entity:: [[Logseq/Entity/Book]]
 created-by:: [[Person/Douglas Hofstadter]]
 date-created:: [[1979]]
 - # Gödel, Escher, Bach: an Eternal Golden Braid

@@ -1,5 +1,5 @@
 tags:: [[Term]]
-logseq-entity:: [[Logseq/Entity/term]]
+logseq-entity:: [[Logseq/Entity/Term]]
 
 - # [Tofu - Google Fonts Knowledge glossary](https://fonts.google.com/knowledge/glossary/tofu)
 	- Slang for the replacement glyph shown when a font cannot render a character.

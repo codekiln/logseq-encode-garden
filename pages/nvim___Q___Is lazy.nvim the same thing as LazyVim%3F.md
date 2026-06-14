@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[nvim/Distro/LazyVim]]
 
 - # Is **lazy.nvim** the same thing as [[nvim/Distro/LazyVim]]?

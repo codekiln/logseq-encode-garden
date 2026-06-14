@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]], [[Logseq/Entity/Card]]
+logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]]
 
 - # What [[Keyshort]]s let me browse between next and prvious [[tmux/Window]]s? [[card]]
 	- [[tmux/Keyshort/Prefix]] `n`: ==N==ext Window

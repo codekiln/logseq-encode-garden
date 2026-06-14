@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 via:: [[2026-04-02 Thu]]
 
 - # Is it possible to show the resolution of images in [[yazi]]?

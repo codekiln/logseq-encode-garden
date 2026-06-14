@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - [[Person/Sebastian Raschka/Blog]] #Substack https://magazine.sebastianraschka.com/
 - [[Person/Sebastian Raschka/GitHub]] https://github.com/rasbt
 - [[Person/Sebastian Raschka/TwitX]] https://x.com/rasbt

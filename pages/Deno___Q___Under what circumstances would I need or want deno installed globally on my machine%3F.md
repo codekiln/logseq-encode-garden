@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 - # Under what circumstances would I need or want deno installed globally on my machine? [[card]]
 	- ## [[AI Answer]]
 		- [[AI/Response]]

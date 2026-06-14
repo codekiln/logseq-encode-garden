@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 # Siddharth Ahuja
 	- **Role:** Developer & Creator
 	- **Bio:** Siddharth Ahuja is a developer who created Blender MCP, demonstrating how Large Language Models can drive 3D modeling through Model Context Protocol (MCP). His work showcases the creative potential of MCPs in enabling AI agents to interact with complex software tools.

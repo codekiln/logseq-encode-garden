@@ -1,6 +1,6 @@
 alias:: [[GitHub/sadjow]], [[CLI/Craftsperson/Sadjow Leão]]
 tags:: [[CLI/Craftsperson]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 
 - # Person/Sadjow Leão
 	- **GitHub:** [@sadjow](https://github.com/sadjow)

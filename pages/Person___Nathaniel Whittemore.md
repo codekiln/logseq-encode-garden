@@ -1,5 +1,5 @@
 alias:: [[Nathaniel Whittemore]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 
 - # Nathaniel Whittemore
 	- Host of [[Person/Nathaniel Whittemore/Pod]] and operator of [[AI Daily Brief]].

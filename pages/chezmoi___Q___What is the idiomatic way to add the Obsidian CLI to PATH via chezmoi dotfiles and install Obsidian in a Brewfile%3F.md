@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Zsh/Init/File]]
 
 - # What is the idiomatic way to add the [[Obsidian]] CLI to [[PATH]] via [[chezmoi]] dotfiles, and install [[Obsidian]] in a [[Brewfile]]?

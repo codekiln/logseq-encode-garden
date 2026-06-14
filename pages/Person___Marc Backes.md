@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - [[Person/Marc Backes/Website]] https://marc.dev/
 - [[Person/Marc Backes/Blog]] https://marc.dev/
 - [[Person/Marc Backes/TwitX]] https://x.com/themarcba

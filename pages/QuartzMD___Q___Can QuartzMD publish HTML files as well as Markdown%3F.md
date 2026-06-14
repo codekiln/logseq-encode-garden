@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 
 - # Can [[QuartzMD]] publish HTML files as well as Markdown?
 	- ## [[AI Answer]]

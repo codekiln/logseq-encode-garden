@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Card]], [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Card]], [[Logseq/Entity/Question]]
 
 - # Will the [[tmux/Command/Prompt]] use [[vim]] or [[Emacs]] style key bindings? [[card]]
 	- [[Answer/Official]] from [Getting Started](https://github.com/tmux/tmux/wiki/Getting-Started#the-command-prompt)

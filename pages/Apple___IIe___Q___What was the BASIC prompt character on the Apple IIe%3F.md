@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 
 - # What was the BASIC prompt character on the Apple IIe? [[card]]
 	- ## [[AI Answer]]

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Hermann Broch
 	- ## About
 		- Austrian writer and modernist novelist.

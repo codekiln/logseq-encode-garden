@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/standard]]
+logseq-entity:: [[Logseq/Entity/Standard]]
 tags:: [[Diataxis/Reference]]
 alias:: [[MADR]], [[Markdown Architectural Decision Records]]
 see-also:: [[Architecture/Decision/Record]]

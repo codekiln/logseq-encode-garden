@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 - # Using ghq, what's the easiest way to cd to the local repo if it exists? [[card]]
 	- ## [[AI Answer]]
 		- [[AI/Response]]

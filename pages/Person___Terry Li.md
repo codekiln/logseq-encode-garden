@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - [Terry Li | LinkedIn](https://www.linkedin.com/in/terrylica/?originalSubdomain=ca)
 	- Director Of Operations at Eon Labs Ltd. https://www.eonlabs.com/
 	- Vancouver, British Columbia, Canada

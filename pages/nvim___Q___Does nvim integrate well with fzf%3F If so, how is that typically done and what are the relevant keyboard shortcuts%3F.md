@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[fzf]], [[fzf/Keyshort]]
 via:: [[2026-04-02 Thu]]
 - # Does [[nvim]] integrate well with [[fzf]]? If so, how is that typically done and what are the relevant keyboard shortcuts?

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/term]]
+logseq-entity:: [[Logseq/Entity/Term]]
 alias:: [[Symlink]], [[Symlinks]], [[Symbolic Link]], [[Symbolic Links]], [[Soft Link]], [[Soft Links]]
 tags:: [[Term]]
 wikipedia-link:: https://en.wikipedia.org/wiki/Symbolic_link

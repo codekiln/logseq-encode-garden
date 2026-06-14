@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # John Oswald
 	- ## Bio
 		- Canadian composer, saxophonist, and media artist (born 1953)

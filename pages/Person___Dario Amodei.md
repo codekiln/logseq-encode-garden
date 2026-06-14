@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Dario Amodei
 	- ## About
 		- Co-founder and CEO of Anthropic

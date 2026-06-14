@@ -1,5 +1,5 @@
 alias:: [[Obsidian/Feature/Checklists]], [[Obsidian/Feature/Checkboxes]], [[Obsidian/Feature/Todos]], [[Obsidian/Feature/Task lists]]
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 see-also:: [[Obsidian/Q/Does Obsidian have the ability to handle kanban-style TODO DOING DONE todos?]], [[App/Obsidian/Markdown]], [[Markdown/Flavor]], [[Logseq]], [[PTKM]]
 - # [Task lists — checkboxes & todos (Obsidian)](https://help.obsidian.md/syntax#Task%20lists)
 	- ## Overview

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 via:: [[2026-03-28 Sat]]
 see-also:: [[Glow/Q/How do I use Glow as a default pager for markdown documents when I'm in a terminal?]]
 

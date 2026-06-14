@@ -1,5 +1,5 @@
 # color-theme
-	- This page is the standard operating procedure for **color theme** entities: coordinated palette families (foreground, background, accent colors) reused across terminals, editors, multiplexers, file managers, and other UI tools. A color-theme instance is the *aesthetic system* (e.g. [[Catppuccin]] with subpages [[Catppuccin/Latte]], [[Catppuccin/Frappe]], [[Catppuccin/Macchiato]], [[Catppuccin/Mocha]]); individual ports often stay [[Logseq/Entity/Software/Project]] instance pages that link back to the theme hub.
+	- This page is the entity definition for **color theme** entities: coordinated palette families (foreground, background, accent colors) reused across terminals, editors, multiplexers, file managers, and other UI tools. A color-theme instance is the *aesthetic system* (e.g. [[Catppuccin]] with subpages [[Catppuccin/Latte]], [[Catppuccin/Frappe]], [[Catppuccin/Macchiato]], [[Catppuccin/Mocha]]); individual ports often stay [[Logseq/Entity/Software/Project]] instance pages that link back to the theme hub.
 	- ## Examples in this garden
 		- [[Catppuccin]] — hub with palette overview asset, stack matrix, and flavor subpages for per-variant config ids and previews.
 	- ## When we treat something as a color theme
@@ -14,7 +14,7 @@
 	- ## Relationship to Software/Project
 		- Official or community **ports** (Neovim plugin repo, tmux plugin, etc.) can be software project entities with `logseq-entity::` [[Logseq/Entity/Software/Project]]; they should **link to** the color-theme hub for palette and flavor semantics. The theme hub lists app wiring without duplicating full plugin documentation.
 	- ## Frontmatter
-		- To mark a page as a color-theme instance, add `logseq-entity:: [[Logseq/Entity/color-theme]]` in frontmatter. The type page then gets backlinks to all color-theme pages.
+		- To mark a page as a color-theme instance, add `logseq-entity:: [[Logseq/Entity/Color/Theme]]` in frontmatter. The type page then gets backlinks to all color-theme pages.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
 		- File: `pages/<ThemeName>.md` for the canonical short name. First block: H1 with a link to the official site or palette repo.

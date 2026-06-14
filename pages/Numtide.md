@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/company]]
+logseq-entity:: [[Logseq/Entity/Company]]
 see-also:: [[Nix]], [[Nix/OS]]
 
 - # [Numtide](https://numtide.com/)

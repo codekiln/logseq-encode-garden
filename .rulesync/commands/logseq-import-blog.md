@@ -1,14 +1,14 @@
 ---
 targets:
   - '*'
-description: Import a blog post, article, or essay as an Article entity by applying the logseq-entity skill and the graph's Logseq/Entity/Article SOP
+description: Import a blog post, article, or essay as an Article entity by applying the logseq-entity skill and the graph's Logseq/Entity/Article entity definition
 argument-hint: Source URL (optional); article source and canonical namespace can be prompted if omitted
 ---
 # Import Blog Post, Article, or Essay as an Article Entity
 
 Use this command to import a blog post, article, essay, or similar web-published writing into the Logseq garden. The authoritative workflow is the **logseq-entity** skill plus the graph page **[[Logseq/Entity/Article]]**.
 
-This command is only a routing guide. Do not maintain a separate Blog/Article/Essay import SOP here; update **[[Logseq/Entity/Article]]** when the garden's Article model changes.
+This command is only a routing guide. Do not maintain a separate Blog/Article/Essay import workflow here; update **[[Logseq/Entity/Article]]** when the garden's Article entity definition changes.
 
 ## Required Inputs
 

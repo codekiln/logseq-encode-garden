@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Dominik Dorfmeister
 	- ## Bio
 		- Web developer and open source maintainer based in Vienna, Austria

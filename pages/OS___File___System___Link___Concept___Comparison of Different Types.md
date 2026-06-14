@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 alias:: [[File System Link Comparison]]
 see-also:: [[OS/File/System/Link]], [[OS/File/System/Link/Hard]], [[OS/File/System/Link/Soft]], [[System/Operating]]
 

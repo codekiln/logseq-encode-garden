@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Webmaster Henry
 	- Former [[WFMU]] webmaster.
 	- Shared some cool AI music at [Ilong](http://arty.fish:82/Ilong/ilong/).

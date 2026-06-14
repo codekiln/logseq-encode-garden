@@ -1,6 +1,6 @@
 # Question workflow (full procedure)
 
-Authoritative step-by-step for logging a research question in this garden. The **logseq-question** skill centers on this file; **question** entity semantics and shared dedup rules live in skill **logseq-entity** and on **`[[Logseq/Entity/question]]`** (`pages/Logseq___Entity___question.md`).
+Authoritative step-by-step for logging a research question in this garden. The **logseq-question** skill centers on this file; **question** entity semantics and shared dedup rules live in skill **logseq-entity** and on **`[[Logseq/Entity/Question]]`** (`pages/Logseq___Entity___question.md`).
 
 ## Variables
 
@@ -9,7 +9,7 @@ Authoritative step-by-step for logging a research question in this garden. The *
 
 ## Conventions (question filing only)
 
-This file defines **namespace, dedup, journal, and research** steps. It does **not** define question page body shape, section headings, or frontmatter keys—those come from **`[[Logseq/Entity/question]]`** (read in Step 0 before Steps 3 and 5).
+This file defines **namespace, dedup, journal, and research** steps. It does **not** define question page body shape, section headings, or frontmatter keys—those come from **`[[Logseq/Entity/Question]]`** (read in Step 0 before Steps 3 and 5).
 
 - **Namespace pattern**: Questions live under a topic namespace, then `/Q/`, then the question text.
   - Link format: `[[Namespace/Q/Question text]]` or `[[Namespace/SubNamespace/Q/Question text]]`
@@ -22,8 +22,8 @@ This file defines **namespace, dedup, journal, and research** steps. It does **n
 
 - In order, read and apply:
   - `[[Logseq/Entity]]` (registry)
-  - `[[Logseq/Entity/question]]` (`pages/Logseq___Entity___question.md`) — **authoritative for page shape, frontmatter, section headings, and AI attribution**
-  - If either is missing or insufficient, fall back to `.rulesync/config/logseq-entity.md` for shared fallback text (resolution order, reporting)—per-type rules still belong on `[[Logseq/Entity/question]]` once you create it
+  - `[[Logseq/Entity/Question]]` (`pages/Logseq___Entity___question.md`) — **authoritative for page shape, frontmatter, section headings, and AI attribution**
+  - If either is missing or insufficient, fall back to `.rulesync/config/logseq-entity.md` for shared fallback text (resolution order, reporting)—per-type rules still belong on `[[Logseq/Entity/Question]]` once you create it
 - From the type page, apply at minimum:
   - **Frontmatter** (required `logseq-entity::`, optional keys, `tags::` discipline)
   - **Page shape (canonical)** — H1, section order, which sections to omit when empty, `[[AI/Response]]` placement, and “do not use `## Related` for internal links”
@@ -56,7 +56,7 @@ This file defines **namespace, dedup, journal, and research** steps. It does **n
 
 - **File name**: `pages/Namespace___Q___Question text.md`
   - Use triple underscores for namespace segments. Replace `?` with `%3F` (or equivalent) in the filename if the question contains it.
-- **Frontmatter and body**: Implement **`[[Logseq/Entity/question]]`** → **Frontmatter** and **Page shape (canonical)** from Step 0. For `tags::` / `alias::` on new pages, match sibling question pages in the same namespace when the type page allows it.
+- **Frontmatter and body**: Implement **`[[Logseq/Entity/Question]]`** → **Frontmatter** and **Page shape (canonical)** from Step 0. For `tags::` / `alias::` on new pages, match sibling question pages in the same namespace when the type page allows it.
 - **LFM mechanics** (not section names): rule **logseq-core** — bullets, tab indentation, no blank lines between bullets (advanced detail: skill **logseq-lfm**); rule **logseq-core** for links vs filenames (detail: skill **logseq-lfm**).
 - **Non-goal:** Do not bulk-edit older `___Q___` pages unless the user explicitly asks (see **Legacy instances** on the type page).
 
@@ -72,7 +72,7 @@ This file defines **namespace, dedup, journal, and research** steps. It does **n
 
 - After creating the page and journal entry, attempt to answer the question.
 - Use available tools (web search, documentation, MCP servers, existing knowledge graph pages) to research the answer.
-- Add findings under the **AI answer section** defined on **`[[Logseq/Entity/question]]`** → **Page shape (canonical)** (section heading, `[[AI/Response]]` child, and any “Short answer” / formatting bullets there). Do not assume legacy section titles on older `___Q___` pages unless you are editing one of those pages as-is.
+- Add findings under the **AI answer section** defined on **`[[Logseq/Entity/Question]]`** → **Page shape (canonical)** (section heading, `[[AI/Response]]` child, and any “Short answer” / formatting bullets there). Do not assume legacy section titles on older `___Q___` pages unless you are editing one of those pages as-is.
 - **Cite sources** per the type page: external URLs in the answer body; garden “see also” pages in **`see-also::`** when the type page says so—not a tail `## Related` list.
 - Keep the answer concise but informative; use bullet points and LFM per rule **logseq-core** (advanced detail: skill **logseq-lfm**; including *Bold and inline code* in answer bodies).
 - If the answer cannot be determined or requires user input, note that in the appropriate section per the type page and inform the user.
@@ -87,7 +87,7 @@ This file defines **namespace, dedup, journal, and research** steps. It does **n
 Use the prefix that matches the type: `rule:` for rules, `command:` for commands, `skill:` for skills.
 
 - skill: `logseq-entity` – Configuration-first entity workflow; shared dedup and config contract
-- Type page: `[[Logseq/Entity/question]]` – Canonical SOP for question entities in the graph
+- Type page: `[[Logseq/Entity/Question]]` – Canonical entity definition for question entities in the graph
 - skill: `logseq-question` – This workflow (garden filing + journal + answer pass)
 - command: `logseq-question` – Rulesync slash entrypoint; defers to this reference
 - rule: `logseq-core` – File naming (`___`), link format (`/`), creating new pages (detail: skill `logseq-lfm`)

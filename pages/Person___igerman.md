@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 alias:: [[Person/German S.]]
 - #Website https://igerman.cc/
 - #YouTube https://www.youtube.com/@igerman

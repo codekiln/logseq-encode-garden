@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 
 - # How do I refresh the feeds in eilmeldung? [[card]]
 	- [[eilmeldung/FAQ/Can I sync or refresh without starting eilmeldung?]]

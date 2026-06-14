@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 
 - # In [[yazi]], if I'm using `S` to search, is there a way to get previews of the search terms in the documents and go through them?
 	- ## [[AI Answer]]

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Samir Mody
 	- **Role:** Head of AI Engineering, The Browser Company
 	- **Bio:** Samir Mody is Head of AI Engineering at The Browser Company, where he led the transformation of Arc browser into Dia, an AI-native browser. He presented on "From Arc to Dia: Lessons learned in building AI Browser" at the AI Engineer Summit 2025.

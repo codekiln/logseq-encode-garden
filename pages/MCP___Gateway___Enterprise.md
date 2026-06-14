@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 
 - # MCP/Gateway/Enterprise
 	- An enterprise MCP gateway is a proxy layer that sits in front of one or more [[MCP/Server]] instances and adds the controls required for production, multi-tenant, or regulated deployments

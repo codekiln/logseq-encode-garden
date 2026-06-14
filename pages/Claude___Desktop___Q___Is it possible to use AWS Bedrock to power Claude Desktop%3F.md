@@ -1,6 +1,6 @@
 tags:: [[Claude/Desktop]], [[Q]]
 alias:: [[Anthropic/App/Claude Desktop/Q/Is it possible to use AWS Bedrock to power Claude Desktop]]
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Claude/Desktop/How To/Use BYOK with AWS Bedrock]], [[Claude/Code/Bedrock]]
 title:: Claude/Desktop/Q/Is it possible to use AWS Bedrock to power Claude Desktop?
 

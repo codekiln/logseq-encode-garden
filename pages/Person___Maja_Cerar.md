@@ -1,5 +1,5 @@
 tags:: [[Person]], [[Composer]], [[Performer]], [[Violinist]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # [[Person/Maja Cerar]]
 	- ## Bio
 		- Slovenian violinist specializing in mixed-media performance

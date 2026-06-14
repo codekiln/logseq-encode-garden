@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 
 - # How can I find a more complete list of the default [[Keyshort]]s for [[tmux]] from the CLI? [[card]]
 	- ## [[My Answer]]

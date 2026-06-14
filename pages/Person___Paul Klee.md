@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Paul Klee
 	- ## Bio
 		- Swiss-German artist known for his work in expressionism, cubism, and surrealism

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 
 - # In [[yazi]], if I navigate to a directory, is there a way to exit yazi into that directory?
 	- ## [[AI Answer]]

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 
 - # When using [[QuartzMD]], how can I set the favicon of the website?
 	- ## [[AI Answer]]

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[ghq]], [[git/.gitconfig]]
 - # In [[ghq]], is there a way to create a repository at a specified location?
 - ## Answer

@@ -88,7 +88,7 @@ This command imports an "Energy" section from the Treatise on Writing Acousmatic
    - Terms found in angle brackets in the original French text
 
 6. **Create person references for composers mentioned:**
-   - Follow `[[Logseq/Entity/person]]` and the **logseq-person** command (router) / skill **logseq-entity** for person hub creation
+   - Follow `[[Logseq/Entity/Person]]` and the **logseq-person** command (router) / skill **logseq-entity** for person hub creation
    - Search first to avoid duplicates
    - Use `[[Person/{Composer Name}]]` format
 
@@ -119,7 +119,7 @@ For each sound example:
 
 2. Create person page if needed:
    - Check if `pages/Person___{Composer Name}.md` exists
-   - If not, create a basic person hub following **`[[Logseq/Entity/person]]`** (see **logseq-person** command / router)
+   - If not, create a basic person hub following **`[[Logseq/Entity/Person]]`** (see **logseq-person** command / router)
 
 3. Create sound example embed page:
    - File: `pages/Person___{Composer Name}___{Piece Title}.md`
@@ -178,7 +178,7 @@ For each sound example:
 
 **Output:**
 - Creates `pages/ToWAMoFM___01___01 Energy___01 Percussion-Resonance.md`
-- Creates person hubs for all composers — following `[[Logseq/Entity/person]]` / **logseq-person** command (router) / skill **logseq-entity**
+- Creates person hubs for all composers — following `[[Logseq/Entity/Person]]` / **logseq-person** command (router) / skill **logseq-entity**
 - Creates embed pages for each sound example
 - Updates journal with entry
 
@@ -186,6 +186,6 @@ For each sound example:
 
 - The command assumes pages are numbered sequentially (01, 02, 03, etc.)
 - Sound example MP3 URLs are found by monitoring network requests when the page loads
-- Person hubs follow `[[Logseq/Entity/person]]` conventions
+- Person hubs follow `[[Logseq/Entity/Person]]` conventions
 - All content is translated from French to accessible English
 - The language is simplified for teenaged musical experimenters, not academic researchers (make it simple and unpretentious)

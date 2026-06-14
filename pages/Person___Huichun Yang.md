@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - #Pic
 	- ![](https://icmc2025.sites.northeastern.edu/files/2025/06/398-1-221x300.jpg)
 - #Bio

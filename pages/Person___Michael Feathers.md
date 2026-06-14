@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Michael Feathers
 	- ## Bio
 		- Software engineer, consultant, and author known for his work on legacy code and refactoring

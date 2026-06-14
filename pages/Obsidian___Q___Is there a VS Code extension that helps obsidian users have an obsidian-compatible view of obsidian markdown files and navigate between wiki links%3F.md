@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 tags:: [[Question]]
 see-also:: [[VSCode/Extension]], [[VSCode/Command/Markdown/Open Preview]]
 via:: [[2026-04-09 Thu]]

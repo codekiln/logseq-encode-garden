@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[GitHub/CLI/Q/Using the gh cli, is there a quick way to list repositories with globs for user and repo name?]]
 
 - # What's the most idiomatic way to use `gh search repos` while also displaying primary language and number of stars in a table?

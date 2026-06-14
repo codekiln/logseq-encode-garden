@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[mise/Environment]], [[mise/Config/mise.toml/env]]
 
 - # In [[TOML]], is `false` a first-class primitive?

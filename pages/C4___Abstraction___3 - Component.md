@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 tags:: [[Diataxis/Concept]]
 see-also:: [[C4/Diagram/3 - Components]], [[C4/Abstraction/2 - Container]], [[C4/Abstraction/4 - Code]]
 

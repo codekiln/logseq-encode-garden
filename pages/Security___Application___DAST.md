@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 tags:: [[Diataxis/Concept]]
 see-also:: [[Security/DevSecOps/Taxonomy]], [[Security/Application/SAST]], [[Software/Composition/Analysis]]
 

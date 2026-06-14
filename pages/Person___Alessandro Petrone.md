@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - from [[Country/Italy]]
 - [[GitHub/aptrn]]
 - created several [[c74/max]] items for [[Typescript]]

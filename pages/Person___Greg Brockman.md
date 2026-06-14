@@ -1,5 +1,5 @@
 tags:: [[Person]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Greg Brockman
 	- ## About
 		- President and co-founder of [[OpenAI]].

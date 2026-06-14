@@ -1,5 +1,5 @@
 alias:: [[Tiago Forte]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Tiago Forte
 	- ## About
 		- Productivity writer, educator, and founder of Forte Labs

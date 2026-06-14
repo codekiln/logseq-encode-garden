@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Card]], [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Card]], [[Logseq/Entity/Question]]
 
 - # How can multiple [[tmux/Command/Prompt]] commands be entered in one prompt? [[card]]
 	- [[Answer/Official]] from [Getting Started](https://github.com/tmux/tmux/wiki/Getting-Started#the-command-prompt)

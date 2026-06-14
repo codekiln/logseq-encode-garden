@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Brian Fioca
 	- **Role:** Applied AI, OpenAI
 	- **Bio:** Brian Fioca works in Applied AI at OpenAI, focusing on coding agents and building reliable systems that outlast model cycles. He co-presented on "Future-Proof Coding Agents" at the AI Engineer Summit 2025.

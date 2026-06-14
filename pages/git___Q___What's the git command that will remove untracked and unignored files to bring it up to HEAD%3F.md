@@ -1,5 +1,5 @@
 tags:: [[Question]]
-logseq-entity:: [[Logseq/Entity/question]], [[Logseq/Entity/Card]] 
+logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]] 
 see-also:: [[git/How To/Discard Changes to Working Dir]], [[git/reset]]
 
 - # What's the [[git]] command that will remove untracked and unignored files to bring it up to HEAD? [[card]]

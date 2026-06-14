@@ -1,5 +1,5 @@
 tags:: [[Claude/Code]], [[Q]]
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Claude/Code/Settings]]
 
 - # How do I disable the Update available notification in [[Claude/Code]]?

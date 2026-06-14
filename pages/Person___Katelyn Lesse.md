@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Katelyn Lesse
 	- ## About
 		- Head of Engineering, Claude Developer Platform, Anthropic

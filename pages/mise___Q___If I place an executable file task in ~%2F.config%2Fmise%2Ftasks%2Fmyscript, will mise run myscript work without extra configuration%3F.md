@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[mise]], [[mise/Task/File]], [[mise/Task/File/Group]], [[mise/Config/Global]], [[mise/tasks]], [[mise/Q/How do I list installed mise tools that aren't in any config file?]]
 
 - # If I place an executable [[mise/Task/File]] at `~/.config/mise/tasks/myscript`, will `mise run myscript` work without extra configuration?

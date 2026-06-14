@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 # Jessica Kerr - https://jessitron.com/
 	- **Role:** Engineering Manager, Honeycomb
 	- **Bio:** Jessica Kerr is the engineering manager at [[Co/Honeycomb]] which is an [[Observability]] platform, specializing in observability and developer experience.

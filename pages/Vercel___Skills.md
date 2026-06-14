@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 created-by:: [[Person/Guillermo Rauch]]
 
 - # Vercel Skills Ecosystem

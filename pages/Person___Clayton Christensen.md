@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # [Clayton Christensen](https://en.wikipedia.org/wiki/Clayton_Christensen)
 	- ## About
 		- American management scholar (1952–2020) best known for **disruptive innovation** research at Harvard Business School and for helping popularize **[[Job/to be Done]]** language in product and strategy practice.

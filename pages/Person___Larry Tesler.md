@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Larry Tesler
 	- ## About
 		- Computer scientist (1945–2020) known for **modeless** interaction design and for advancing **cut, copy, and paste** in text editing (including work at Xerox PARC and Apple). Associated with the phrase **“no modes”** as a UX principle.

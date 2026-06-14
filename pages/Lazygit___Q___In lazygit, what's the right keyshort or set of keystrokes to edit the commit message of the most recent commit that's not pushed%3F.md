@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Lazygit/Keyshort]]
 
 - # In [[Lazygit]], what's the right keyshort or set of keystrokes to edit the commit message of the most recent commit that's not pushed?

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/company]]
+logseq-entity:: [[Logseq/Entity/Company]]
 
 - # [Jellyfish](https://jellyfish.co)
 	- Boston-based **engineering management platform**: visibility into engineering work and organizations, resource allocation, and alignment with business objectives—not the unrelated [Jellyfish digital marketing group](https://www.jellyfish.com).

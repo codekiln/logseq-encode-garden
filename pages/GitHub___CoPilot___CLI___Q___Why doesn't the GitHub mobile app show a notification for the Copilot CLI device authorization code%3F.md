@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[GitHub/CoPilot/CLI]]
 
 - # Why doesn't the [[GitHub]] mobile app show a notification for the [[GitHub/CoPilot/CLI]] device authorization code?

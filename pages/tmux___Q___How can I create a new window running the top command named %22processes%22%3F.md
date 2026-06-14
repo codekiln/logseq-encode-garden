@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]], [[Logseq/Entity/Card]]
+logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]]
 
 - # How can I create a new window running the top command named "processes"? [[card]]
 	- in the [[tmux/Command/Prompt]]:

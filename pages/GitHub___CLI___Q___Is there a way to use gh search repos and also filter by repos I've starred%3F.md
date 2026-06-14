@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[GitHub/CLI/Q/What's the most idiomatic way to use gh search repos while also displaying primary language and number of stars in a table?]]
 
 - # Is there a way to use `gh search repos` and also filter by repos I've starred?

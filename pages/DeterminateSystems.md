@@ -1,6 +1,6 @@
 tags:: [[Nix]]
 alias:: [[Determinate Systems]]
-logseq-entity:: [[Logseq/Entity/company]]
+logseq-entity:: [[Logseq/Entity/Company]]
 see-also:: [[Binary/Cache]], [[Nix]], [[Nix/OS]]
 
 - # [Determinate Systems](https://determinate.systems/)

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 alias:: [[GitHub/motemen]]
 
 - # Hironao OTSUBO

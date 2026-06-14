@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/term]]
+logseq-entity:: [[Logseq/Entity/Term]]
 alias:: [[Hard Link]], [[Hard Links]]
 see-also:: [[OS/File/System/Link/Soft]], [[OS/File/System/Link/Concept/Comparison of Different Types]], [[OS/File/System/Link]], [[OS/File/System/Directory]], [[OS/File/System/Inode]]
 - # Hard link

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - Website: https://steinkamp.us/
 - GitHub: [zsteinkamp (Zack Steinkamp)](https://github.com/zsteinkamp)
 - Website about Max plugins: [Zack's Plugins](https://plugins.steinkamp.us/about) - https://plugins.steinkamp.us/

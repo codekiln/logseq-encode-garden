@@ -1,7 +1,7 @@
 alias:: [[Articles]]
 
 - # Article
-	- Standard operating procedure for **Article** entities: published web articles, blog posts, essays, and similar authored pieces imported as first-class reading notes.
+	- Entity definition for **Article** entities: published web articles, blog posts, essays, and similar authored pieces imported as first-class reading notes.
 	- ## What counts as an Article entity
 		- A page whose primary identity is a specific authored article-like work, usually with a stable source URL, title, byline, and publication date.
 		- Article entities may live under the author, publisher, site, or existing source namespace that best matches the garden, such as `Person/<Name>/Blog/YY/MM/DD/<Title>`, `<Publication>/Article/YY/MM/<Title>`, or another established nearby pattern.

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Zen van Riel
 	- Senior AI engineer and educator focused on practical AI systems and AI engineering workflows.
 	- Website: [zenvanriel.com](https://zenvanriel.com/)

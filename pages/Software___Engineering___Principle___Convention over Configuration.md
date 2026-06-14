@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 tags:: [[Diataxis/Concept]]
 alias:: [[Convention over Configuration]], [[CoC]]
 see-also:: [[Person/David Heinemeier Hansson]], [[Ruby/Rails]], [[Software/Engineering/Principle/DRY]], [[Configuration/Management]]

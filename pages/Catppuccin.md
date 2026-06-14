@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/color-theme]]
+logseq-entity:: [[Logseq/Entity/Color/Theme]]
 alias:: [[UI/Color/Theme/Catppuccin]]
 date-created:: [[2021]]
 see-also:: [[Ghostty]], [[Kitty]], [[WezTerm]], [[Zellij]]

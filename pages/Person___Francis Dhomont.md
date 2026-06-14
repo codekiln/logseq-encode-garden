@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Francis Dhomont
 	- ## Bio
 		- French composer (1926-2023) of electroacoustic and acousmatic music

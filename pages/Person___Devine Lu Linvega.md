@@ -1,6 +1,6 @@
 tags:: [[Knowledge Gardener]]
 alias:: [[Username/neauoire]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - "Runs" the [[Merveilles Webring]]
 - [[Person/Devine Lu Linvega/Garden]] https://wiki.xxiivv.com/
 - [[Person/Devine Lu Linvega/Garden/Identity]]

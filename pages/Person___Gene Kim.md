@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Gene Kim
 	- ## About
 		- Author & Researcher, IT Revolution

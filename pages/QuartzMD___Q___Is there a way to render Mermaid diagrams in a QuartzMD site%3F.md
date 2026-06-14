@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Diagram/Mermaid]]
 
 - # Is there a way to render [[Mermaid]] diagrams in a [[QuartzMD]] site?

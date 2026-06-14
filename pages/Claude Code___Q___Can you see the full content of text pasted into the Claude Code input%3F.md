@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 - # Can you see the full content of text pasted into the [[Claude Code]] input?
 	- ## [[AI Answer]]
 		- [[AI/Response]]

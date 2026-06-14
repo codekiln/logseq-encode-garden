@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 tags:: [[Question]]
 - # What does `nix config show download-buffer-size` reporting `67108864` mean in practice?
 	- ## Answer

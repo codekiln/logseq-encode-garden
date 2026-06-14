@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 tags:: [[Diataxis/Concept]]
 alias:: [[Software/Paradigm/Object-Oriented]]
 see-also:: [[Programming/Language/Func]], [[Programming/Language/General Purpose]]

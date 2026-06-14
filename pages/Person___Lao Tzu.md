@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Lao Tzu
 	- ## About
 		- Traditionally credited as the author of [[Book/Tao Te Ching]] and a foundational figure in Daoism.

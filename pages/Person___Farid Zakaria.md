@@ -1,5 +1,5 @@
 tags:: [[Person]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Farid Zakaria
 	- ## About
 		- Software engineer, father, and wishful amateur surfer

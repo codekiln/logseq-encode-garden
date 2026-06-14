@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]], [[Logseq/Entity/Card]]
+logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]]
 see-also:: [[Claude/Code/Q/What is the new TUI mode in Claude Code about?]]
 
 - # Why can't I scroll up in [[tmux]] copy mode when [[Claude/Code]] is in [[TUI]] mode? [[card]]

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 # Matt Pocock
 	- **Role:** TypeScript educator and developer
 	- **Bio:** Matt Pocock is a TypeScript educator known for [[Total TypeScript]], a comprehensive TypeScript training platform. He creates TypeScript tips, workshops, and courses, and maintains [[Person/Matt Pocock/GitHub/skills]], a repository of [[Claude/Code/Skill]]s and agent skills.

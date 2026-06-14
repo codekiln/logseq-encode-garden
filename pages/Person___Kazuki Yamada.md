@@ -1,5 +1,5 @@
 alias:: [[GitHub/User/dyoshikawa]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 
 - # Kazuki Yamada
 	- ## Bio

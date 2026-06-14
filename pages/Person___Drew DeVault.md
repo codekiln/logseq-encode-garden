@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Drew DeVault
 	- ## About
 		- Free software advocate, systems programmer, and prolific blogger. Founder of [[SourceHut]] (sr.ht), a software forge built on open standards like email-driven workflows and git. Creator of the [[Programming Language/Hare]] programming language, the [[sway]] Wayland compositor, [[wlroots]], and [[aerc]] terminal email client. Known online as **sircmpwn**.

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 tags:: [[Diataxis/Concept]]
 alias:: [[Game/Video/Dev/Entity Component System]], [[Entity Component System]]
 see-also:: [[miniplex]], [[Programming/Language/Concept/Object-Oriented]]

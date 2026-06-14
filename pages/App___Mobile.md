@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/term]]
+logseq-entity:: [[Logseq/Entity/Term]]
 tags:: [[Term]]
 alias:: [[Mobile App]]
 

@@ -12,7 +12,7 @@
 		- **Older Dates Grouped by Century and Decade** - [[17/40/9]] for 1749 or [[18/30/2]] for 1832. Useful for older dates so as to cluster them together by decade. Maybe eventually decades or centuries will be named or have themes for mnemonic purposes.
 	- ## Rules
 		- Most of the time, more precision is preferred if factually confirmed, but not always.
-			- For the dates that correspond to when a durable work like a [[Logseq/Entity/book]] was published, it's probably better use use a longer time horizon representation like `[[YYYY]]`. There's a reason copyright pages don't list "Jan 29, 1946, 3:36 PM Trieste"
+			- For the dates that correspond to when a durable work like a [[Logseq/Entity/Book]] was published, it's probably better use use a longer time horizon representation like `[[YYYY]]`. There's a reason copyright pages don't list "Jan 29, 1946, 3:36 PM Trieste"
 		- Do not pad with `01` to fake higher precision (e.g. don't write `[[2025-08-01 Fri]]` when only the month is known — use `[[2025/08]]`).
 		- Use four-digit years for years starting with 1900. Two-digit-year wikilinks like `[[YY/MM]]` or `[[YY/MM/D]]` appear on a handful of legacy pages and should not be copied into new pages as they produce ambiguity with the older dates grouped by century and decade.
 		- The weekday in `[[YYYY-MM-DD Day]]` must be the actual day of the week for that date (`Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`, `Sun`).

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
 
 - # Elon Musk / First-Principles Framework
 	- Five-step engineering heuristic developed through SpaceX practice, applied to software architecture and system design.

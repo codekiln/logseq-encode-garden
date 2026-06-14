@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - [[Person/Rob Shocks/Website]]
 	- He runs a paid [[CursorAI]] #Course https://www.switchdimension.com/courses/cursor-ai
 - [[Person/Rob Shocks/TwitX]]

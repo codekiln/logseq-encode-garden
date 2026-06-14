@@ -1,5 +1,5 @@
 alias:: [[Internet Engineering Task Force]]
-logseq-entity:: [[Logseq/Entity/organization]]
+logseq-entity:: [[Logseq/Entity/Organization]]
 see-also:: [[Standard]]
 
 - # [IETF](https://www.ietf.org/)

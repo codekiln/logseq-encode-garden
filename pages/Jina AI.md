@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/company]]
+logseq-entity:: [[Logseq/Entity/Company]]
 
 - # [Jina AI](https://jina.ai/)
 	- AI infrastructure company building multimodal AI services and developer tooling.

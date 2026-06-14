@@ -1,5 +1,5 @@
 alias:: [[GitHub/Lum1104]]
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # Yuxiang Lin
 	- ## About
 		- Maintainer of [[Person/Yuxiang Lin/GitHub/Understand-Anything]]; GitHub [@Lum1104](https://github.com/Lum1104).
