@@ -1,0 +1,2 @@
+- My dotfiles are connected to this knowledge garden (logseq-encode-garden).
+- I want my dotfiles to be as self-explanatory as possible, but have the dependencies of my dotfiles documented in my garden. Therefore I have the technologies and dependencies declare their [[logseq-url]]

@@ -1,5 +1,5 @@
 tags:: [[Claude/Code]], [[Q]]
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Claude/Code/Settings]]
 
 - # Can the `~` tilde character be used in [[Claude/Code]]'s `additionalDirectories` setting in settings.json?
@@ -14,7 +14,7 @@ see-also:: [[Claude/Code/Settings]]
 				- ~~~json
 				  {
 				    "permissions": {
-				      "additionalDirectories": ["/Users/pnore/other-repo"]
+				      "additionalDirectories": ["/Users/yourname/other-repo"]
 				    }
 				  }
 				  ~~~

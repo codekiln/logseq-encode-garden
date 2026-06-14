@@ -1,0 +1,1 @@
+- a logseq url is a link to a logseq entity, for example, this page's logseq url is `logseq://graph/logseq-encode-garden?page=logseq-url`

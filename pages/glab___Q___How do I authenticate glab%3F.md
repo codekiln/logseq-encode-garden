@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/question]]
+logseq-entity:: [[Logseq/Entity/Question]]
 - # How do I authenticate [[glab]]?
 	- ## [[AI Answer]]
 		- [[AI/Response]]
@@ -17,7 +17,7 @@ logseq-entity:: [[Logseq/Entity/question]]
 			- `write_repository`
 		- **Non-interactive** (paste token directly):
 		- ~~~bash
-		  glab auth login --token glpat-xxxxxxxxxxxxxxxxxxxx
+		  glab auth login --token glpat-<your-token>
 		  ~~~
 		- Credentials are stored in `~/.config/glab-cli/config.yml` (or OS keyring with `--use-keyring`).
 		- Verify with:

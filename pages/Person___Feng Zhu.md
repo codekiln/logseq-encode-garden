@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/person]]
+logseq-entity:: [[Logseq/Entity/Person]]
 - # [Feng Zhu](https://www.hbs.edu/faculty/Pages/profile.aspx?facId=14938)
 	- ## About
 		- Harry E. Figgie, Jr. Professor of Business Administration at Harvard Business School; leads the Platform Lab within the Harvard Business School AI Institute and co-chairs the Harvard Business Analytics Program. Faculty associate at the Fairbank Center for Chinese Studies.
