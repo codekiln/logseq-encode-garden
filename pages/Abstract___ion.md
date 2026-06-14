@@ -1,4 +1,5 @@
 tags:: [[Term]]
+logseq-entity:: [[Logseq/Entity/Term]]
 alias:: [[Abstraction]]
 see-also:: [[Declarative]], [[Imperative]]
 
