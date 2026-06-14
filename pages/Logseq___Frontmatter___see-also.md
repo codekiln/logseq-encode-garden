@@ -1,12 +1,12 @@
-## `see-also::` for relevant, related, non-obvious pages that are not mentioned in the body of the page
-	- The **purpose** of the see-also frontmatter field is to aid humans in **discovery** of actually related pages that are not mentioned in the body of the page that are not obvious.
+- # `see-also::` for relevant, related, non-obvious pages not mentioned in the body
+	- The purpose of `see-also::` is to aid discovery of genuinely related pages that do not appear in the body of the page.
 	- ## Standards
-		- Order links strongest tie first.
-		- If there happens to be a `## Related` section at the bottom, it should **not** contain logseq links to logseq pages. It should only contain hyperlinks to web pages. The proper place for related logseq pages is in the `see-also:: ` frontmatter field, **never** in a related section at the end of the document.
-	- ## Avoid Obvious or Tautological see-also Links
-		- Do not list parent namespace pages only to restate context already encoded by the page title.
-	- ## Be parsimonious when adding "see-also" links
-		- [[Bad Examples]] of see-also
-			- while creating [[Programming/Language/Concept/Declarative vs Imperative]], an AI agent added a `see-also::` of [[Programming/Language/Func]] and [[Programming/Language/Concept/Object-Oriented]].
-				- **why these are bad examples**
-					- While those pages might be lexicographically adjacent to the page and the structure and spirit of the conceptual overviews they contain may have some similarity to the concept of declarative vs imperative, the functional programming language page and the object oriented programming page are not actually related to the concept of declarative vs imperative.
+		- Order links strongest-tie first.
+		- Only add a link if it is truly related — not merely adjacent in namespace or topic space.
+		- If a page has a `## Related` section, it should contain only external hyperlinks. Related Logseq pages belong in `see-also::` frontmatter, not in a body section.
+	- ## Avoid obvious or tautological links
+		- Do not list parent namespace pages that only restate context already encoded in the page title.
+	- ## Be parsimonious
+		- [[Bad Examples]]
+			- While creating [[Programming/Language/Concept/Declarative vs Imperative]], an AI agent added `see-also:: [[Programming/Language/Func]], [[Programming/Language/Concept/Object-Oriented]]`.
+				- **Why these are bad**: functional programming and OOP are lexicographically adjacent and structurally similar, but they are not actually related to the declarative-vs-imperative distinction. Proximity is not relatedness.

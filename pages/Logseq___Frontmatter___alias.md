@@ -1,14 +1,13 @@
-# `alias::` for more convenient or alternate names
-	- In Logseq, if page `[[Super Long Name]]` has frontmatter `alias:: [[Shortname]]`, then clicking on `[[Shortname]]` in the wiki will take you to page `[[Super Long Name]]`.
-	- It is appropriate and useful for making note of real alternate names, plural or contextual link surfaces, handles, acronyms, and other useful discovery forms.
+- # `alias::` for more convenient or alternate names
+	- In Logseq, if page `[[Super Long Name]]` has frontmatter `alias:: [[Shortname]]`, then clicking `[[Shortname]]` anywhere in the graph navigates to `[[Super Long Name]]`.
+	- Appropriate uses: real alternate names, plural or contextual link surfaces, handles, acronyms, and other useful discovery forms.
 	- ## Aliases are human-curated, not agent-generated
 		- Agents should suggest alias candidates in the chat response rather than writing them to the page without explicit instruction.
-	- ## Do not proliferate many aliases, be judicious
-		- Every alias added to the graph slows down the auto-complete time and potentially confuses the human operator as to which is the "canonical" version.
-	- ## Use Aliases for Plural Forms
-		- By default, this garden tries to use the singular form for the canonical page name, and may use alias for the plural form.
-		- Canonical page names should remain singular where the garden naming convention calls for singular names; plural or contextual references belong in aliases.
-	- ## Do not be redundant with aliases
+	- ## Be judicious — do not proliferate aliases
+		- Every alias added to the graph slows down auto-complete and may confuse the human operator about which form is canonical.
+	- ## Use singular canonical names; alias the plural
+		- This garden uses singular canonical page names; plural or contextual references belong in `alias::`.
+	- ## Do not create redundant aliases
 		- Do not create an alias that only repeats parent namespace context already expressed by the page title.
-	- ## Searching for Aliases
+	- ## Searching for aliases
 		- When auditing or pruning aliases, verify each with `rg '[[Candidate Name]]' pages/ journals/` to check graph usage before keeping it. For a graph-wide audit, [[nbb-logseq]] is more appropriate than ad hoc text search.
