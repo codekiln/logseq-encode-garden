@@ -34,10 +34,8 @@
 		- **Section order** (omit empty sections):
 			- `## [[My Answer]]` — optional; [[Human]] / [[Gard/en/er/Human]] working answer (steps, tables, `[[tldr]]`, verified command examples).
 			- `## [[My Notes]]` — optional; do not create by default. Tangents and links that are not the direct answer.
-			- `## Answer` (with attribution child) — preferred heading for researched answers; the first child block is an attribution tag:
-				- `[[AI/Response]]` — used when the answer is AI-generated; content is children of that block.
+			- `## [[AI Answer]]` — standard heading for AI-researched answers. First child block is `[[AI/Response]]`; answer content is children of that block.
 				- `[[Answer/Official]]` (alias `[[Official Answer]]`) — used when the answer is from official documentation; include a markdown link inline: `[[Answer/Official]] from [Source Title](url)`.
-				- `## [[AI Answer]]` — accepted alternative heading when no inline attribution tag is used.
 				- Lead with **Short answer:** when useful.
 				- Cite **external** docs with markdown links in the answer body.
 				- Bold for labels; backticks for commands. Do not wrap `` `commands` `` in `**…**` (see [[Logseq/Flavored Markdown]]).
