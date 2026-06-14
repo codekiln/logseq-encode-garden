@@ -1,0 +1,65 @@
+tags:: [[Programming]], [[Diataxis/Concept]]
+see-also:: [[12factor/app]]
+
+- # [[Stateful]] vs [[Stateless]] (Diátaxis overview)
+	- ## Conceptual overview
+		- *State* is information a system remembers between one interaction and the next.
+		- A component is **stateful** if its behavior depends on data carried over from prior interactions, and **stateless** if each interaction is handled purely from the inputs it is given right now.
+		- The distinction is relative to a boundary: the same overall system is usually stateless *at one layer* by pushing its state *down to another* (a database, cache, token, or client).
+	- ## Key idea
+		- **Stateful** = the component itself remembers; identity and history live *inside* it.
+		- **Stateless** = the component remembers nothing; everything it needs arrives with the request, and state (if any) lives *outside* it.
+		- "Stateless" almost never means "no state anywhere" — it means "no state *retained here between calls*".
+	- ## Stateful
+		- Mental model
+			- Each interaction can read and mutate memory left behind by previous interactions.
+			- The component has an identity that must be tracked: which session, which connection, which instance.
+		- Properties
+			- Context is implicit — the caller can send less because the component already "knows where we were".
+			- Affinity: a client must often keep talking to the *same* instance that holds its state (sticky sessions).
+			- Recovery is harder — if the instance dies, the in-memory state dies with it unless it was persisted.
+		- Typical examples
+			- TCP connections (sequence numbers, window state)
+			- A shell session (cwd, environment, variables)
+			- An in-memory shopping cart tied to one server process
+			- A long-lived agent/runtime that accumulates working memory across turns
+	- ## Stateless
+		- Mental model
+			- Treat each request as if it were the first the component has ever seen.
+			- Same inputs → same behavior, regardless of what came before (closely related to a *pure function*).
+		- Properties
+			- Context is explicit — every request must carry whatever the handler needs (auth token, ids, parameters).
+			- No affinity — any instance can serve any request, because none of them hold private history.
+			- Recovery and scaling are easy — instances are interchangeable and disposable; restart or add more freely.
+		- Typical examples
+			- HTTP as a protocol (each request is self-contained)
+			- REST endpoints (state, if any, lives in the resource store, not the handler)
+			- Pure functions
+			- A CDN edge node or load-balanced web worker behind a shared datastore
+	- ## Trade-offs
+		- ### Scaling
+			- Stateless scales horizontally almost for free: put N identical instances behind a load balancer.
+			- Stateful resists horizontal scaling because requests must be routed to the instance that owns the state, or that state must be replicated.
+		- ### Recovery & resilience
+			- Stateless instances are disposable — crash one and route around it.
+			- Stateful instances are precious — losing one loses data unless state was externalized or replicated.
+		- ### Performance & cost
+			- Stateful can be faster per request: the context is already in memory, nothing to refetch.
+			- Stateless pays a re-establishment cost each call (re-send context, re-read from the store) in exchange for elasticity.
+		- ### Complexity location
+			- The choice does not delete state — it relocates it.
+			- Going stateless usually means *externalizing* state into a database, cache, or a token the client carries, which moves the hard problems (consistency, expiry, size) to that layer.
+	- ## Examples (concrete contrasts)
+		- ### TCP vs HTTP
+			- TCP is **stateful**: both ends track connection state for the life of the connection.
+			- HTTP (the protocol) is **stateless**: each request stands alone; continuity is faked with cookies/tokens that re-supply context.
+		- ### REST
+			- A core REST constraint is statelessness: the server keeps no client session; each request includes everything needed to interpret it.
+			- The *application* still has state — it lives in the resources/database, not in the request handler.
+		- ### Pure vs impure functions
+			- A pure function is stateless: output depends only on arguments.
+			- A function reading/writing shared mutable state is stateful: the same arguments can yield different results over time.
+	- ## Practical heuristics
+		- Ask "if this instance vanished mid-request, what is lost?" — if the answer is "nothing the next instance can't reconstruct from inputs/store", it's effectively stateless.
+		- Prefer stateless components at the edges (web tier, agents, workers) and concentrate necessary state in a small number of deliberately stateful stores.
+		- When something "must" be stateful, make the state explicit and externalizable rather than hidden in instance memory — it makes scaling and recovery a configuration choice rather than a rewrite.
