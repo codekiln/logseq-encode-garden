@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Concept]]
 tags:: [[Diataxis/Concept]]
 alias:: [[Software/Paradigm/Object-Oriented]]
-see-also:: [[Programming/Language/Func]], [[Programming/Language/General Purpose]]
+see-also:: [[Programming/Language/Func]], [[Programming/Language/General Purpose]], [[Programming/Language/Concept/Declarative vs Imperative]]
 
 - # Object-oriented programming
 	- ## Overview

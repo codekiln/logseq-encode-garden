@@ -5,5 +5,6 @@ alias:: [[Programming Language]], [[Programming Languages]], [[PL]]
 	- ## Paradigms
 		- [[Software/Paradigm/Functional]]
 		- [[Software/Paradigm/Object-Oriented]]
+		- [[Programming/Language/Concept/Declarative vs Imperative]]
 	- ## See also
 		- [[Programming/Language/General Purpose]]
