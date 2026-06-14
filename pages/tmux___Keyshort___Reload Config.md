@@ -8,6 +8,6 @@
 	  card-last-score:: 5
 		- Shortcut: `<prefix> r`
 		- Description: Reloads the tmux configuration file without restarting the server.
-		- Note: This keybinding is provided by [[tmux/oh-my-tmux]] ([[gpakosz/.tmux]]). It is not a default tmux binding.
+		- Note: This keybinding is provided by [[oh-my-tmux]] ([[gpakosz/.tmux]]). It is not a default tmux binding.
 		- Without oh-my-tmux, reload manually via command mode: `<prefix> :` then `source-file ~/.tmux.conf`
 		- See also: [[tmux/Config]]

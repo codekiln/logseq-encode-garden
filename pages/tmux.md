@@ -1,9 +1,16 @@
-- tmux resources
+created-by:: [[Person/Nicholas Marriott]]
+
+- # tmux
 	- ideas
 		- [[tmux/Idea/Pomodoro with status line and silent flash]]
 		- [[tmux/Idea/Toggl Track status in status line]]
-	- For coordinated palette setup (e.g. [[Catppuccin]] with TPM ports), see [[Catppuccin]] and [[tmux/Config]].
-	- [tmux.info tmux Tutorial - Master Terminal Multiplexing | Complete Guide & Commands](https://tmux.info/)
+	- customization
+		- For coordinated palette setup (e.g.  with TPM ports)
+		- [[tmux/Config]]
+		- [[Catppuccin]]
 	- extensions
-		- [[tmux/oh-my-tmux]] — by [[Person/Grégory Pakosz]]
-			- > If you're new to tmux, I recommend you to read the [tmux getting started guide](https://github.com/tmux/tmux/wiki/Getting-Started), as well as the [tmux 3: Productive Mouse-Free Development](https://pragprog.com/titles/bhtmux3/tmux-3/)
+		- [[oh-my-tmux]] — by [[Person/Grégory Pakosz]]
+	- learning
+		- [[tmux/Docs/Getting Started]]
+		- [[Person/Brian P. Hogan/Book/25/tmux 3]]
+		- [[tmux/man]]

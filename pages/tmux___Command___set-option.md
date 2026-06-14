@@ -1,0 +1,4 @@
+alias:: [[tmux set]]
+
+-
+-

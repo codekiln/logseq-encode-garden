@@ -13,4 +13,4 @@ date-created:: [[2026-03-25 Wed]]
 	- ## Related in this graph
 		- [[Toggl/CLI/Python/AuHau/toggl-cli]]
 		- [[Toggl/AI/Report/26/01/AI control of Toggl - Options Jan 2026]]
-		- [[tmux/oh-my-tmux]] — if a theme already reserves status segments
+		- [[oh-my-tmux]] — if a theme already reserves status segments

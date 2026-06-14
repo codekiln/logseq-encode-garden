@@ -1,10 +1,10 @@
-- in [[tmux/oh-my-tmux]] aka [[tmux/oh-my-tmux]] the bottom status line has some  conventions for the coloring.
+- in [[oh-my-tmux]] aka [[oh-my-tmux]] the bottom status line has some  conventions for the coloring.
 	- `❐ logseq  ↑ 51d 5h 14m  0 encode-logseq  1 work-logseq  2 logseq-my-tooling  3 logseq-garden`
 		- ^^ in the above, `3 logseq-garden` is "faint" blue highlight with light blue text against black background, and `1 work-logseq` is "bright" blue background with which background text, indicating it's foreground.
 		- AFAICT this does not mean that `3 logseq-garden` has a command that has issued a terminal bell. I think it means that in the "history order," if I were to "go back" to the prior window, it would be `3 logseq-garden`, based only on experimenting with it.
 	- ## AI/Response
 		- ### What the light blue tinge means
-			- The "faint blue" styling is the **last window** indicator, defined by `window-status-last-style` in [[tmux]]. In [[tmux/oh-my-tmux]], the theme sets:
+			- The "faint blue" styling is the **last window** indicator, defined by `window-status-last-style` in [[tmux]]. In [[oh-my-tmux]], the theme sets:
 				- **Last window**: light blue text (`#00afff`) on gray background (`#303030`) -- the faint/subtle blue tinge
 				- **Current window**: dark text (`#080808`) on light blue background (`#00afff`), bold -- the bright blue
 			- This confirms the hypothesis: the faint blue marks the **most recently visited window** before the current one, not a terminal bell indicator.

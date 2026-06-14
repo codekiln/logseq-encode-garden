@@ -1,0 +1,3 @@
+- ensure man pages are installed
+- ensure there's an easy way to get at source code quickly
+	- use [[gh/search/repos]] to find repos and [[ghq/get/--update]] to get them locally

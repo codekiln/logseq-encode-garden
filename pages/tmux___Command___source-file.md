@@ -1,0 +1,7 @@
+- [`source-file`](https://man.openbsd.org/OpenBSD-current/man1/tmux.1#source-file) [`-Fnqv`] [`-t` target-pane] ==path== ...
+	- (alias: `source`)
+	- Executes commands from one or more files specified by ==path== (which may be a [[glob]] patterns).
+	- If `-F` is present, then path is expanded as a format.
+	- If `-q` is given, no error will be returned if path does not exist.
+	- With `-n`, the file is parsed but no commands are executed.
+	- `-v` shows the parsed commands and line numbers if possible.

@@ -14,4 +14,4 @@ date-created:: [[2026-03-25 Wed]]
 	- ## Related in this graph
 		- [[tmux/Idea/Toggl Track status in status line]] — sibling sketch: always-visible timer context from a **tracker** (vs local Pomodoro countdown)
 		- [[tmux/Config]] — status-line and hooks
-		- [[tmux/oh-my-tmux]] — if theme or status segments need coordination
+		- [[oh-my-tmux]] — if theme or status segments need coordination

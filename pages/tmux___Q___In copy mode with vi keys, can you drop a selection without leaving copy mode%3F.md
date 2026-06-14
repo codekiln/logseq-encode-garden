@@ -7,7 +7,7 @@ see-also:: [[tmux/Q/What is a conceptual overview of how copy paste works in oh-
 		- [[AI/Response]]
 			- **Yes, tmux can do this** with the copy-mode command **`clear-selection`**, which removes the highlight **without** leaving copy mode, so your **scroll position stays put**.
 			- ### Why `v` does not “toggle off” like Vim
-				- In typical **[[tmux/oh-my-tmux]]**-style vi copy-mode tables, **`v` is bound to `begin-selection`**, not to “exit visual.” Pressing **`v` again usually starts or resets selection behavior rather than acting like Vim’s visual toggle—so your observation is expected.
+				- In typical **[[oh-my-tmux]]**-style vi copy-mode tables, **`v` is bound to `begin-selection`**, not to “exit visual.” Pressing **`v` again usually starts or resets selection behavior rather than acting like Vim’s visual toggle—so your observation is expected.
 				- **`C-v`** is often **`rectangle-toggle`** in the default vi table (orthogonal to “exit visual”).
 			- ### Why **Escape** may kick you out entirely
 				- Many configs (including common **oh-my-tmux** patterns) bind **`Escape` in `copy-mode-vi` to `cancel`**, which **exits copy mode**—the opposite of “only clear the selection.” That matches **`tmux list-keys -T copy-mode-vi`** on typical setups. Stock documentation sometimes describes **`Escape` as “clear selection”** in older tables or mixed emacs/vi docs; **trust `tmux list-keys -T copy-mode-vi` for your session**.

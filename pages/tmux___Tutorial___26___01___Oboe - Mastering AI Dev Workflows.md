@@ -2,6 +2,6 @@
 	- ## [[tmux/Config]] - Advanced tmux Configuration
 		- [[Tip]] Many users find the default [[tmux/Keyshort/Prefix]] prefix key, `Ctrl+b`, a bit awkward. A common alternative is `Ctrl+a`, which is easier to reach
 		- [[tmux/How To/Reload/Config]]
-			- use [[tmux/Keyshort/Prefix]] then `:` then type `source-file ~/.tmux.conf` and press Enter.
+			- use [[tmux/Command/Prompt]] to enter [[tmux/Command/source-file]]  `source-file ~/.tmux.conf` and press Enter.
 			  id:: 697d04c1-9250-4237-953e-dd6d4160380c
 			-

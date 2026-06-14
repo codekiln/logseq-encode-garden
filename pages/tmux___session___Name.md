@@ -1,0 +1,1 @@
+- Each [[tmux/session]] can have a name. by default this appears in the leftmost part of the [[tmux/Status Line]]

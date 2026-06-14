@@ -1,4 +1,4 @@
-# Can Cursor Agent Mode find [[.mdc]] files that lack [[globs]]? **YES**
+# Can Cursor Agent Mode find [[.mdc]] files that lack [[glob]]? **YES**
 	- Tests whether [[CursorAI/Agent]] mode activates `.mdc` project rules by description even if they do not have any have globs attached to them
 	  id:: 67cd6044-e287-4722-8c96-cc5d9b743728
 	- ## Test Cursor Project Rule File

@@ -1,0 +1,8 @@
+- [catppuccin/tmux](https://github.com/catppuccin/tmux)
+- [[Install]]
+	- get it
+		- recommended - git clone the repo
+		- rebackup - via [[tmux/Plugin/Manager]]
+	- activate it
+		- see https://github.com/catppuccin/tmux/blob/main/docs/tutorials/01-getting-started.md
+		- be sure to update [[tmux/Config]] to include the flavor, `set -g @catppuccin_flavor 'mocha'`

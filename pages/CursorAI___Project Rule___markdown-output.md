@@ -1,5 +1,5 @@
 description:: If you are outputting markdown, follow these rules
-globs:: `*.md,*.mdc`
+glob:: `*.md,*.mdc`
 link:: https://gist.github.com/codekiln/71f9497eaece99ba4d1c95b89d40b315
 
 - # Rules to follow when outputting markdown

@@ -1,0 +1,3 @@
+- [tmux(1) - Linux manual page](https://man7.org/linux/man-pages/man1/tmux.1.html)
+	- warning, bright screen
+	- [[My/Dotfiles]] uses [[mise]] to install tmux via [[Aube]], which doesn't ship the [[man/page]]. My [[Workaround]] is to create a [[mise/Task/File]] that's a mise hidden task

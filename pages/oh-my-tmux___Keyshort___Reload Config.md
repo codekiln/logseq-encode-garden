@@ -1,4 +1,4 @@
-- [[Keyshort/User]] [[tmux/oh-my-tmux/Keyshort]]
+- [[Keyshort/User]] [[oh-my-tmux/Keyshort]]
 	- [[card]] **Reload Config**
 	  card-last-interval:: 11.2
 	  card-repeats:: 3

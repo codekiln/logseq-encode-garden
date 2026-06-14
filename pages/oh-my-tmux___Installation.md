@@ -1,7 +1,7 @@
 ## chezmoi-managed installation (preferred)
 	- oh-my-tmux is declared as a [[chezmoi/External]] git-repo in [[codekiln/dotfiles]]
-	- `chezmoi/dot_local/share/tmux/.chezmoiexternal.toml` clones it to `~/.local/share/tmux/oh-my-tmux/` and refreshes weekly
-	- `chezmoi/dot_config/tmux/symlink_tmux.conf` creates `~/.config/tmux/tmux.conf` → `../../.local/share/tmux/oh-my-tmux/.tmux.conf`
+	- `chezmoi/dot_local/share/tmux/.chezmoiexternal.toml` clones it to `~/.local/share/oh-my-tmux/` and refreshes weekly
+	- `chezmoi/dot_config/tmux/symlink_tmux.conf` creates `~/.config/tmux/tmux.conf` → `../../.local/share/oh-my-tmux/.tmux.conf`
 	- `chezmoi/dot_config/tmux/tmux.conf.local` holds all customizations (Catppuccin Mocha theme, true color, fat borders)
 	- `chezmoi apply` handles everything on a new machine — no manual cloning needed
 - ## automatic installation from a script

@@ -1,7 +1,7 @@
 tags:: [[Question]] 
 see-also:: [[tmux/Q/What is a conceptual overview of how copy paste works in oh-my-tmux with nvim?]]
 
-- # Is there a way to do rectangular selection when using [[tmux/oh-my-tmux]] and [[tmux]] with vim visual selection mode?
+- # Is there a way to do rectangular selection when using [[oh-my-tmux]] and [[tmux]] with vim visual selection mode?
 	- ## [[My Notes]]
 		- I haven't done this successfully yet. I find it difficult to quickly determine what to edit at which layer - of configuration; there's tmux itself, then there's oh-my-tmux, then there are my configurations layered on top in the [[.tmux.conf.local]]. Could use some [[CLI/Coach]]ing.
 	- ## Answer
@@ -14,7 +14,7 @@ see-also:: [[tmux/Q/What is a conceptual overview of how copy paste works in oh-
 				- Move with `h`/`j`/`k`/`l` to define the block
 				- Press `Enter` (or `y` if bound) to copy; paste with `Prefix+]`
 			- ### Vim-like bindings (recommended)
-				- If [[tmux/oh-my-tmux]] has already bound `v` to `begin-selection`, rectangle mode can be unavailable unless you add explicit bindings. In `.tmux.conf.local` (oh-my-tmux's user override - [[.tmux.conf.local]]), you can make it behave like vim:
+				- If [[oh-my-tmux]] has already bound `v` to `begin-selection`, rectangle mode can be unavailable unless you add explicit bindings. In `.tmux.conf.local` (oh-my-tmux's user override - [[.tmux.conf.local]]), you can make it behave like vim:
 				- `v` = character-wise selection, `C-v` = rectangular selection, `y` = yank. No need to press Space after `C-v`:
 				- ~~~text
 				  bind -T copy-mode-vi v   send -X rectangle-off \; send -X begin-selection

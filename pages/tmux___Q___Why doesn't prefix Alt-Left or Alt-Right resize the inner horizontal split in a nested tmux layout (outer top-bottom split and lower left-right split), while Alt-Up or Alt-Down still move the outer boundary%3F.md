@@ -1,6 +1,6 @@
 logseq-entity:: [[Logseq/Entity/question]]
 tags:: [[Question]]
-see-also:: [[tmux/Keyshort/Pane/Resize Pane]], [[tmux/oh-my-tmux]]
+see-also:: [[tmux/Keyshort/Pane/Resize Pane]], [[oh-my-tmux]]
 via:: [[tmux/Keyshort/Pane/Resize Pane]]
 
 - # Why doesn't prefix Alt-Left or Alt-Right resize the inner horizontal split in a nested [[tmux]] layout (outer top-bottom split and lower left-right split), while Alt-Up or Alt-Down still move the outer boundary?
@@ -17,7 +17,7 @@ via:: [[tmux/Keyshort/Pane/Resize Pane]]
 				- **Asymmetric slack:** After a **top/bottom** split, the **bottom row** may be **short in height** but still **wide**; the limiting factor for **horizontal** resize is **columns shared with the sibling**, not the whole window. **Vertical** resize of the outer split uses **full window width** and **many rows**, so it **succeeds more often** even in the same session.
 			- ### Things to verify
 			  collapsed:: true
-				- Run [[tmux/list-keys]] (pipe through **`rg resize`** if you like) and confirm **prefix + M-Left / M-Right** are bound to **`resize-pane -L` / `-R`** as expected for [[tmux/oh-my-tmux]].
+				- Run [[tmux/list-keys]] (pipe through **`rg resize`** if you like) and confirm **prefix + M-Left / M-Right** are bound to **`resize-pane -L` / `-R`** as expected for [[oh-my-tmux]].
 				- Check pane widths with **`tmux display-message -p '#{pane_width}'`** after **`select-pane -L`** / **`-R`** to see whether the **sibling** is **pinned at a tiny width** (minimum-size panes block further horizontal steals).
 				- If you need **deeper** layout changes than one border, use **`resize-pane -t <target>`** on specific panes, **`select-layout`**, or **mouse** dragging ([Super User — adjusting split sizes](https://superuser.com/questions/863295/adjusting-screen-split-pane-sizes-in-tmux)).
 			- ### Sources

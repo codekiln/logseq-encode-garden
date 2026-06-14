@@ -5,7 +5,7 @@ logseq-entity:: [[Logseq/Entity/person]]
 	- ## About
 		- Software engineer; Nantes / Paris, France
 		- Works at [[Apple]]
-		- Maintainer of popular open-source projects including Oh my tmux! ([[tmux/oh-my-tmux]])
+		- Maintainer of popular open-source projects including Oh my tmux! ([[oh-my-tmux]])
 		- > "If you're not appearing, you're disappearing." — Art Blakey
 	- ## Online
 		- [GitHub](https://github.com/gpakosz) (gpakosz)
@@ -14,5 +14,5 @@ logseq-entity:: [[Logseq/Entity/person]]
 		- [Mastodon](https://mastodon.gamedev.place/@gpakosz)
 		- [LinkedIn](https://www.linkedin.com/in/gpakosz/)
 	- ## Related
-		- [[tmux/oh-my-tmux]] — Oh my tmux! configuration
+		- [[oh-my-tmux]] — Oh my tmux! configuration
 		- [[tmux]] — tmux resources

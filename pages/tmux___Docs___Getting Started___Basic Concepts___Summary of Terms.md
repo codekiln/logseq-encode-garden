@@ -1,0 +1,5 @@
+- [Tmux Getting Started Summary of Terms](https://github.com/tmux/tmux/wiki/Getting-Started#summary-of-terms)
+	- [[tmux/session]]
+	- [[tmux/Window]]
+	- [[tmux/Pane]]
+	- [[tmux/Pane/Active]]

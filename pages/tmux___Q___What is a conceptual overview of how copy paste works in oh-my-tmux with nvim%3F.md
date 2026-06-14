@@ -1,4 +1,4 @@
-- # What is a conceptual overview of how copy paste works in [[tmux/oh-my-tmux]] with [[nvim]]?
+- # What is a conceptual overview of how copy paste works in [[oh-my-tmux]] with [[nvim]]?
 	- ## Answer
 		- [[AI/Response]]
 			- ### The Three Clipboard Layers
