@@ -314,7 +314,7 @@
  ;;  :charge-range    600}   ; Default value: 600
 
  ;; Favorites to list on the left sidebar
- :favorites ["logseq/flashcard/review/favorite" "obsidian" "codex" "chezmoi" "devcontainer" "mise" "rg" "vim" "nvim" "fzf" "zoxide" "yazi" "tmux" "Lazygit"]
+ :favorites ["LazyVim" "logseq/flashcard/review/favorite" "obsidian" "codex" "chezmoi" "devcontainer" "mise" "rg" "vim" "nvim" "fzf" "zoxide" "yazi" "tmux" "Lazygit"]
 
  ;; Set flashcards interval.
  ;; Expected value:
