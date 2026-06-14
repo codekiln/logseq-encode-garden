@@ -1,0 +1,21 @@
+- # Software/Plugin/Collection
+	- A specialization of the [[Logseq/Entity/Collection]] pattern: a **curated, composable collection of plugins** (plus the supporting tooling/config they need) for a specific host application, added *into* a host rather than standing alone. Members are [[Logseq/Entity/Software/Plugin]] instances.
+	- ## Vocabulary
+		- Every ecosystem has its own word for this same concept; use the host's own word in instance page paths:
+			- [[nvim]] / [[LazyVim]] — "extra"
+			- VS Code — "Extension Pack"
+			- Emacs — "module" (Doom), "layer" (Spacemacs)
+			- OS package managers — "metapackage" / "package group" (analogy)
+	- ## Examples in this garden
+		- The LazyVim language extras: [[LazyVim/plugins/extras/lang/markdown]], [[LazyVim/plugins/extras/lang/python]], … — each enables a curated set of plugins + LSP/formatter tooling for one language.
+	- ## When a page might be modeling a plugin collection
+		- Strong signals: a named, curated set of plugins/extensions for one host, addressing a concern (a language, a workflow); composed *into* a config rather than adopted as the whole base; may also pull supporting tooling (LSP servers, formatters, parsers) and config.
+		- Not this type: a single plugin (use [[Logseq/Entity/Software/Plugin]]); the complete standalone curated system that ships these (use [[Logseq/Entity/Software/Distribution]]); a plain library, CLI, or app (use [[Logseq/Entity/Software/Project]]).
+	- ## Relationship to distributions
+		- A [[Logseq/Entity/Software/Distribution]] is the *maximal* curated collection and typically **ships** these partial collections; a plugin collection is *partial* and composed into a host. A distro page may declare both entities when it both is a distro and is meaningfully modeled as a collection.
+	- ## How to name instance pages
+		- Use the host's own term and mirror its module/package path where one exists. E.g. the LazyVim extras mirror their Lua module path: `LazyVim/plugins/extras/lang/<lang>`.
+	- ## Frontmatter
+		- `logseq-entity:: [[Logseq/Entity/Software/Plugin/Collection]]`. Additive — list comma-separated with any other entities the page models, primary first (see [[Logseq/Entity]]).
+	- ## Page shape
+		- H1: a link to the collection's upstream doc/homepage. Lean bullets: the host, what it bundles (its component plugins + tooling), and where to find them.

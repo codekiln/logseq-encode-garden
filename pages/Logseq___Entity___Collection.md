@@ -1,0 +1,20 @@
+- # Collection
+	- This page defines the **Collection pattern**: a cross-cutting entity pattern for a *curated collection whose members are all instances of some other entity type*. It is not instantiated directly — it is specialized per member type as `<EntityType>/Collection` (e.g. [[Logseq/Entity/Software/Plugin/Collection]]), and each specialization points back here for the shared rules.
+	- ## The pattern, and the reserved `/Collection` segment
+		- A specialization lives at the member type's namespace with a trailing `/Collection` segment. That trailing segment is a **reserved pattern marker**: `X/Collection` means *"a curated collection whose members are instances of X"* (a collection-**of**-X), **not** a kind-of-X. This deliberately flips the usual is-a reading of namespace nesting — `Software/Plugin` *is a* plugin, but `Software/Plugin/Collection` *is a collection of* plugins. The flip applies only to the reserved trailing `/Collection` segment.
+	- ## Distinct from multiple entity membership
+		- This is a different axis from [[Logseq/Entity]] → multiple entity membership. Multiple membership = one page **is** several entity types at once (e.g. Question + Card). The Collection pattern = one page is a single entity whose **members** are of type X. (A collection page may still use multiple membership for unrelated reasons.)
+	- ## Common shape — what every collection shares
+		- **Curated** — an intentional, purposeful selection, not an arbitrary or exhaustive list.
+		- **Typed members** — members are instances of one declared entity type (the X in `X/Collection`).
+		- **Has identity** — the collection is itself an entity with its own page, name, and purpose/curator.
+		- **Ordered or unordered** — each specialization states which (a series is ordered; a pack is unordered).
+	- ## Specializations in this garden
+		- [[Logseq/Entity/Software/Plugin/Collection]] — curated collections of plugins for a host (LazyVim extras, VS Code Extension Packs, …).
+	- ## When to create a new specialization
+		- Lazily. Create `X/Collection` only when there is a real instance to file under it — the pattern earns generality from use, not speculation. Candidates that may earn pages later: `Book/Collection` (a series/anthology), `Article/Collection` (a special issue), a playlist, a card deck.
+	- ## Frontmatter
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+		- Instances declare the **specialization**, not this pattern page: e.g. `logseq-entity:: [[Logseq/Entity/Software/Plugin/Collection]]`. This page is the shared definition each specialization references.
+	- ## Prior art
+		- Mirrors established collection primitives: `skos:Collection`, `bibo:Collection` / `bibo:Series`, and parametric container types (`Collection<T>`).

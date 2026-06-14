@@ -24,6 +24,8 @@ alias:: [[Logseq Entities]]
 	- ## Entity types in this garden
 		- **[[Logseq/Entity/Software/Project]]** — Tools, editors, libraries, apps, CLIs, servers. Entity definition on that page. Prior path `Logseq/Entity/software-project` is an alias on the canonical page.
 			- **[[Logseq/Entity/Software/Plugin]]** — Plugins, extensions, and add-ons that extend a specific host application. Aliased as [[Logseq/Entity/Software/Extension]]. Entity definition on that page.
+				- **[[Logseq/Entity/Software/Plugin/Collection]]** — Curated, composable collections of plugins for a host (LazyVim extras, VS Code Extension Packs, Doom modules); a specialization of the [[Logseq/Entity/Collection]] pattern. Entity definition on that page.
+			- **[[Logseq/Entity/Software/Distribution]]** — Complete, standalone, opinionated curated systems built on a base platform (OS or editor distros): Debian, Arch, LazyVim, AstroNvim. Aliased as [[Logseq/Entity/Software/Distro]]. Entity definition on that page.
 		- **[[Logseq/Entity/CLI/Command]]** — Per-subcommand CLI reference pages under a tool namespace (e.g. `mise/cache/clear`). Entity definition on that page.
 		- **[[Logseq/Entity/CLI/Flag]]** — Per-flag or per-option pages nested under a command path (e.g. `mise/unuse/--global`). Entity definition on that page.
 		- **[[Logseq/Entity/Color/Theme]]** — Coordinated palette families reused across apps (terminals, editors, TUIs). Entity definition on that page.
@@ -41,3 +43,4 @@ alias:: [[Logseq Entities]]
 		- **[[Logseq/Entity/Game]]** — Individual playable works or systems: video games, board games, card games, tabletop RPG systems, sport-as-game pages, folk games, and similar game-first hubs across any namespace. Entity definition on that page.
 		- **[[Logseq/Entity/Game/Type]]** — Game types, genres, families, mechanics, modes, and reusable game-design categories such as [[Game/Video/Platformer]]. Entity definition on that page.
 		- **[[Logseq/Entity/Security/Vuln]]** — Security vulnerabilities, exploit classes, attack techniques, attack chains, and defensive-relevant abuse patterns. Entity definition on that page.
+		- **[[Logseq/Entity/Collection]]** — Cross-cutting pattern for a curated collection whose members are all of one entity type, specialized per type as `X/Collection` (e.g. [[Logseq/Entity/Software/Plugin/Collection]]). Entity definition on that page.
