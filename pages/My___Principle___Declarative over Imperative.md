@@ -1,3 +1,2 @@
-- Where possible, prefer [[Declarative]] approaches over imperative ones — describe *what* should be true rather than *how* to achieve it.
-	- See [[Programming/Language/Concept/Declarative vs Imperative]] for a conceptual overview of the paradigm contrast.
-	- Declarative code tends to be more readable, easier to reason about, and opens more room for runtime optimization; reach for imperative code when you need explicit control over ordering, performance, or side effects.
+- Where possible, prefer [[Declarative]] approaches over [[Imperative]] ones — describe *what* should be true rather than *how* to achieve it.
+	- [[My/Principle/Declarative over Imperative/Discussion]]
