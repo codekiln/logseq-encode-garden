@@ -1,4 +1,6 @@
-# Favorite Flashcards
+alias:: [[LFRF]]
+
+- # Favorite Flashcards
 	- foregrounds flashcard scopes for my [[Logseq/Favorite]]s ([[Logseq/Queries]]).
 	- ## All Favorite Flashcards
 		- {{cards (or [[Obsidian]] [[Codex]] [[chezmoi]] [[DevContainer]] [[mise]] [[rg]] [[vim]] [[nvim]] [[fzf]] [[Zoxide]] [[yazi]] [[tmux]] [[Lazygit]]) }}
