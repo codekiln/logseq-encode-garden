@@ -1,0 +1,23 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+
+- # Does starting tmux in a GitHub Codespace keep it alive?
+	- ## [[AI Answer]]
+		- [[AI/Response]]
+			- **Short answer:** No. [[tmux]] keeps processes running *within* the container while it is running, but does not prevent the [[GitHub/Codespace]] from timing out due to inactivity. When the Codespace stops, tmux and all its sessions stop with it.
+			- **Key distinction — container vs. session:**
+				- [[tmux]] preserves shell sessions and long-running processes inside the container.
+				- [[GitHub/Codespace]] timeout is governed by GitHub's inactivity detection, not by what processes are running inside the container.
+			- **What GitHub counts as activity:**
+				- Active client connections: browser editor, [[VS Code]] with the Codespaces extension, or an open `gh codespace ssh` session.
+				- Terminal output — GitHub's [docs](https://docs.github.com/en/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces) state that ongoing terminal output resets the idle timer; however, a [community discussion](https://github.com/orgs/community/discussions/35428) (still open as of early 2025) reports this does not always work reliably.
+			- **What happens when the Codespace times out:**
+				- The container hibernates; all processes (including tmux) are stopped.
+				- File system changes are preserved; in-memory state (tmux sessions, running processes) is lost.
+				- On reconnect the Codespace restarts, but tmux sessions from before the stop are gone unless you use a plugin like `tmux-resurrect`.
+			- **Where tmux IS useful in a Codespace:**
+				- If you SSH in via `gh codespace ssh`, the active SSH connection itself keeps you "connected." Within that session, tmux lets you detach/reattach without losing processes for as long as the SSH link is up.
+				- Multiplexing multiple terminal windows and running long jobs you can check on during the same connected session.
+			- **Workarounds to extend uptime:**
+				- Increase the idle timeout (default 30 min, max 4 hours) in [GitHub Codespaces user preferences](https://docs.github.com/en/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces).
+				- Keep an active `gh codespace ssh` connection open in a local terminal.
+				- For truly persistent background jobs, consider [[GitHub Actions]] or a self-hosted runner instead of a Codespace.

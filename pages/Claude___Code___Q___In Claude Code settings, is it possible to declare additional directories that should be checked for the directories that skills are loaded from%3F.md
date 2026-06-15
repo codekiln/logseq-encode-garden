@@ -3,7 +3,7 @@ alias:: [[Anthropic/App/Claude Code/Q/In Claude Code settings, is it possible to
 logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Claude/Code/Settings]], [[Claude/Code/Skill]], [[Agent/Skills/Dir]]
 
-- # In [[Claude/Code]] settings, is it possible to declare additional directories that should be checked for the directories that skills are loaded from?
+- # In [[Claude/Code/Settings]], is it possible to declare additional directories that should be checked for the directories that skills are loaded from?
 	- ## [[AI Answer]]
 		- [[AI/Response]]
 			- **Short answer:** There is **no** `settings.json` key that points Claude Code at arbitrary extra skill roots (for example a custom path like `~/my-skills`). Discovery is fixed to known layouts (`~/.claude/skills/`, project `.claude/skills/`, parent/nested project trees, plugins, enterprise). The closest settings-based knob is **`permissions.additionalDirectories`**, but that grants **file access only** and **does not** load skills from `.claude/skills/` inside those paths — unlike **`--add-dir`** / **`/add-dir`**, which **do** load skills when the added tree contains `.claude/skills/`.
