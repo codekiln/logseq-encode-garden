@@ -1,0 +1,1 @@
+- Prefer to make things explicit rather than relying on implicit, latent, tacit information

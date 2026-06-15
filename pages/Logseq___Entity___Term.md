@@ -5,6 +5,7 @@
 		- See also the meta page [[Term]] (“a word with a specific meaning”) for how “term” is used in prose.
 	- ## When we treat something as a term entity
 		- Strong signals: the page is mainly a **definition** or short disambiguation; readers need a quick anchor, not a full conceptual tour.
+		- The primary legacy indication of a term is the `tags:: [[Term]]` in the frontmatter.
 		- Good fit: glossary entries, named techniques that are one paragraph, abbreviations expanded once.
 		- Prefer **concept** instead when the page needs multiple sections (overview, context, misconceptions, examples at length) and Diataxis-style explanation.
 		- Not a term entity: **question**, [[Logseq/Entity/Software/Project]], **company**, or other dedicated entity types.
