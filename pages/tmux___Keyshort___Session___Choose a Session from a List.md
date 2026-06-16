@@ -1,0 +1,4 @@
+- [[Keyshort]] [[tmux]] [[tmux/Keyshort]] [[tmux/Keyshort/Session]]
+	- **Choose a Session from a List** [[Card]]
+		- Shortcut: `<prefix> s` [[Keyshort/Default]]
+		- Description: Opens an interactive tree of sessions and windows; navigate with arrow keys and press Enter to switch.

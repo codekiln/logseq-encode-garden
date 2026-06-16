@@ -1,0 +1,4 @@
+- [[Keyshort]] [[tmux]] [[tmux/Keyshort]] [[tmux/Keyshort/Session]]
+	- **Rename Current Session** [[Card]]
+		- Shortcut: `<prefix> $` [[Keyshort/Default]]
+		- Description: Prompts for a new name for the current [[tmux/session]].
