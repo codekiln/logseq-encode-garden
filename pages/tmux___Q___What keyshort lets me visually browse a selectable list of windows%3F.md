@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]]
 
 - # What keyshort lets me visually browse a selectable list of [[tmux/Window]]s? [[card]]
-	- [[tmux/Keyshort/Prefix]] `w`
+	- [[tmux/Prefix]] `w`
 	-

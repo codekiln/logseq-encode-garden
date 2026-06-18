@@ -1,8 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Question]]
 
-- # How do I activate [[Key/Meta]] 1 through [[Key/Meta]] 7 to select a [[tmux/Pane]] layout?
+- # How do I activate  to select a [[tmux/Pane]] layout?
+  - ## [[My Answer]]
+      - use [[Key/Meta]] 1 through [[Key/Meta]] 7
 	- ## [[AI Answer]]
-		- **Short answer:** `M-` means **Meta** = `Alt`/`Option` (not `Cmd`). After pressing your prefix, press `Option+1` through `Option+7`.
+		- **Short answer:** `M-` means [[Key/Meta]] = `Alt`/`Option` (not `Cmd`). After pressing your prefix, press `Option+1` through `Option+7`.
 		- ### Why `Cmd` doesn't work
 			- In [[tmux]] binding notation, `M-` is the **Meta** modifier, which maps to `Alt` (or `Option` on macOS) — not `Command`. `Prefix Cmd+1` sends a key tmux does not recognize for these bindings.
 		- ### Default layout bindings (`-T prefix`)

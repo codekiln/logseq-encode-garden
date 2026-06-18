@@ -1,0 +1,6 @@
+- [[Keyshort]] [[tmux]] [[tmux/Keyshort]] [[tmux/Keyshort/Window]]
+	- What is the [[tmux/Command]] and `<tmux-prefix>` [[tmux/Keyshort]]? [[card]]
+		- [[My Answer]]
+			- [[tmux/Command/last-window]]
+			- `<tmux-prefix> l`
+			- it toggles back and forth between two tmux windows.

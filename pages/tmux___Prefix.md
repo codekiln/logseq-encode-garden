@@ -1,0 +1,1 @@
+alias:: [[tmux/Keyshort/Prefix]]

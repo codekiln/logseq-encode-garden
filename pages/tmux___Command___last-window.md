@@ -1,0 +1,3 @@
+- Select the last (previously active) window in the current session.
+	- Switches back to whichever window was active before the current one, toggling between two windows.
+	- Default binding: `<prefix> l` (may be overridden by [[oh-my-tmux]])

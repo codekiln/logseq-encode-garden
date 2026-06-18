@@ -7,5 +7,5 @@ logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]]
   card-next-schedule:: 2026-06-16T04:00:00.000Z
   card-last-reviewed:: 2026-06-15T11:02:53.141Z
   card-last-score:: 1
-	- [[tmux/Keyshort/Prefix]] `n`: ==N==ext Window
-	- [[tmux/Keyshort/Prefix]]: `p`: ==P==revious Window
+	- [[tmux/Prefix]] `n`: ==N==ext Window
+	- [[tmux/Prefix]]: `p`: ==P==revious Window

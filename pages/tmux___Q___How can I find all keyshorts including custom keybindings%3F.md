@@ -8,7 +8,7 @@ logseq-entity:: [[Logseq/Entity/Question]]
 			- My favorite way - at the CLI, pipe list-keys into [[bat]]
 				- `tmux list-keys | bat`
 			- inside of tmux
-				- open the [[tmux/Command/Prompt]]  with [[tmux/Keyshort/Prefix]] `:`
+				- open the [[tmux/Command/Prompt]]  with [[tmux/Prefix]] `:`
 					- enter `list-keys`
 					- hit `Enter` to get out
 		- [[My Notes]]
