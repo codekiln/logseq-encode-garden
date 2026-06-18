@@ -43,7 +43,7 @@
 
          id:: 69cd1d51-7708-4021-8c21-f7e864ec017e
          - **H1** — the question text; link key terms to existing pages where it helps.
-         - Optional inline `[[card]]` at the end of the H1 when the question is good SRS material.
+         - Optional inline `[[card]]` at the end of the H1 — **only when the human operator explicitly requests it**. Do not add `[[card]]` speculatively, even if the question seems like good SRS material.
          - **Section order** (omit empty sections):
           - `## [[My Answer]]` — optional; [[Human]] / [[Gard/en/er/Human]] working answer (steps, tables, `[[tldr]]`, verified command examples).
           - `## [[My Notes]]` — optional; do not create by default. Tangents and links that are not the direct answer.
