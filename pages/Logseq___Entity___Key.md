@@ -1,0 +1,30 @@
+# *Key* entities
+	- Pages that are Key entities model a single physical or logical [[Keyboard/Computer]] key. These pages are anchor points for expressing [[Keyshorts]] along with some optional historical commentary on certain special computer keyboard keys.
+	- ## Examples in this garden
+		- [[Key/Meta]] — the Meta/Alt modifier key
+		- Future instances: [[Key/Control]], [[Key/Shift]], [[Key/Command]], [[Key/Option]], [[Key/Escape]], [[Key/Return]], [[Key/Tab]]
+	- ## When we treat something as a Key entity
+		- Strong signals: the page represents or refers to a key on a computer keyboard.
+		- ### Good Fit
+			- modifier keys (Meta, Control, Shift, Command/Super), special keys (Escape, Return, Tab, Backspace), function keys (F1–F12).
+		- ### Not Key Entity
+			- key combos or shortcuts (those are [[Keyshort]] entities); sequences of multiple keys (e.g. Emacs `C-x C-f`).
+	- ## Canonical naming and links
+		- Use the most general, cross-platform name as the page name: `[[Key/Meta]]`, `[[Key/Control]]`, `[[Key/Shift]]`.
+		- Platform-specific or notation-specific alternate names belong in `alias::` on the instance page (e.g. `[[Key/Alt]]`, `[[Key/Option]]`, `[[Key/Meta (M-)]]`).
+		- File on disk: `pages/Key___<Name>.md` (triple underscores between namespace segments).
+	- ## Finding and deduplicating
+		- Before creating a new Key page, grep `pages/Key___*.md` for the key name and check existing `alias::` values for alternate names.
+		- Classify: **existing**, **similar** (check aliases), **new**, or **blocked** (ambiguous name).
+	- ## Frontmatter
+	  id:: 6a33af25-3c06-4b5c-9e9c-29549aad0b3f
+		- Standard [[Logseq/Frontmatter/logseq-entity]] attribution rules
+		- Standard [[Logseq/Frontmatter/alias]] rules. Include the symbol/notation form `[[Key/Name (symbol)]]` when a standard notation exists (e.g. `[[Key/Meta (M-)]]`, `[[Key/Control (C-)]]`, `[[Key/Shift (⇧)]]`), plus common alternate names (e.g. `[[Key/Alt]]` for Meta).
+			- Platform-specific names go in the alias too: e.g. `[[Key/Mac/Command (⌘)]]` as the symbol alias for `[[Key/Mac/Command]]`, and `[[Key/Alt (⌥)]]` as the symbol alias for `[[Key/Alt]]`.
+	- ## Page shape (canonical)
+		- **H1** — key name with symbol or notation in parens: `# Meta (M-)`, `# Control (C-)`, `# Shift (⇧)`. Omit parens if no standard symbol exists.
+		- One sentence directly under H1: what the key is and its primary use.
+		- `## Larger Context` — optional; historical origin, OS-specific mapping, terminal emulator notes. Omit when not needed.
+	- ## Relationship to other types
+		- [[Keyshort]] pages reference Key instances inline to express key combinations (e.g. `[[Key/Meta]] 1`).
+		- A Key page is not itself a shortcut; it models the key component only.
