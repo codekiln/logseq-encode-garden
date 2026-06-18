@@ -28,6 +28,7 @@ alias:: [[Logseq Entities]]
 			- **[[Logseq/Entity/Software/Distribution]]** — Complete, standalone, opinionated curated systems built on a base platform (OS or editor distros): Debian, Arch, LazyVim, AstroNvim. Aliased as [[Logseq/Entity/Software/Distro]]. Entity definition on that page.
 		- **[[Logseq/Entity/CLI/Command]]** — Per-subcommand CLI reference pages under a tool namespace (e.g. `mise/cache/clear`). Entity definition on that page.
 		- **[[Logseq/Entity/CLI/Flag]]** — Per-flag or per-option pages nested under a command path (e.g. `mise/unuse/--global`). Entity definition on that page.
+		- **[[Logseq/Entity/Key]]** — Individual keyboard keys (modifier keys, special keys, function keys). Keyshort pages reference Key instances to express combos. Entity definition on that page.
 		- **[[Logseq/Entity/Color/Theme]]** — Coordinated palette families reused across apps (terminals, editors, TUIs). Entity definition on that page.
 		- **[[Logseq/Entity/Company]]** — Organizations or brands tracked as first-class pages, such as vendors with multiple tools. Entity definition on that page.
 		- **[[Logseq/Entity/Organization]]** — Non-company bodies such as standards organizations, foundations, nonprofits, public institutions, consortia, professional associations, and governance/community bodies. Entity definition on that page.
