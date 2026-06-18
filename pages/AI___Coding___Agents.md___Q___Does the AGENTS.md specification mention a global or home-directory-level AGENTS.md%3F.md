@@ -1,0 +1,22 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+
+- # Does the [[AI/Coding/Agents.md]] specification mention a global or home-directory-level AGENTS.md?
+	- ## [[AI Answer]]
+		- [[Answer/Official]] from [agentsmd/agents.md GitHub](https://github.com/agentsmd/agents.md) and [agents.md](https://agents.md/)
+		- **Short answer:** No — the current AGENTS.md specification only addresses project-level (repository-local) files. Global/home-directory support is an open proposal ([issue #91](https://github.com/agentsmd/agents.md/issues/91)), not yet in the spec.
+		- **What the spec says about file discovery:**
+			- AGENTS.md files are discovered by walking the directory tree from the edited file upward to the Git root
+			- The closest file wins; explicit user chat prompts override everything
+			- Nested AGENTS.md files in monorepos are supported — the nearest file takes precedence for that subtree
+			- No mention of `~` or system-wide paths in the specification
+		- **Each tool currently implements its own global path:**
+			- `~/.claude/CLAUDE.md` — [[Claude/Code]]
+			- `~/.codex/AGENTS.md` — OpenAI Codex CLI
+			- `~/.factory/AGENTS.md` — Factory droid
+			- `~/.config/AGENTS.md` — Amp
+		- **Open proposal — issue #91:**
+			- [Standardize global user-level AGENTS.md at ~/.config/agents/AGENTS.md](https://github.com/agentsmd/agents.md/issues/91) (OPEN as of 2026-06-18)
+			- Proposes `~/.config/agents/AGENTS.md` (Linux/macOS, following XDG: `$XDG_CONFIG_HOME/agents/AGENTS.md`); `%APPDATA%\agents\AGENTS.md` on Windows
+			- Uses a subdirectory (`agents/`) rather than a lone file to follow XDG convention and allow extensibility (`rules/`, `commands/`, templates)
+			- Project-level config would take precedence over global; per-tool merging behavior left to implementors
+			- Status: open, not yet merged into the spec
