@@ -1,0 +1,26 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+
+- # In [[Obsidian]], is there a way to insert a reference to a future date, something like a command to look up a date and be able to create the standard reference?
+	- ## [[AI Answer]]
+		- [[AI/Response]]
+			- **Short answer:** Obsidian's built-in tools only insert today's date. For future-date wikilinks (e.g. `[[2026-06-25]]`), the community **Natural Language Dates** plugin is the most direct fit — type `@next friday` or `@in 2 weeks` anywhere in a note and it resolves to the correctly formatted daily-note link. The **Templater** plugin handles scripted offset dates.
+			- **Built-in (core Templates plugin)**
+				- `{{date}}` and `{{date:YYYY-MM-DD}}` resolve to **today's date only**; no offset is supported.
+				- No date picker or command exists in core Obsidian for selecting a specific future date.
+			- **Natural Language Dates (community plugin) — recommended**
+				- Install from community plugins. After enabling, type `@` followed by a natural-language expression:
+					- `@tomorrow` → `[[2026-06-18]]`
+					- `@next monday` → next Monday's ISO date as a daily-note wikilink
+					- `@in 2 weeks` → two weeks from today
+					- `@June 25` → `[[2026-06-25]]`
+				- **Command palette:** "Natural Language Dates: Parse natural language date" — prompts for input and inserts the resolved wikilink at the cursor.
+				- The wikilink format matches your **Daily notes → Date format** setting, so it creates a proper reference to the future daily note page.
+				- [Natural Language Dates plugin GitHub](https://github.com/argenos/nldates-obsidian)
+			- **Templater plugin — scripted offset**
+				- `<% tp.date.now("YYYY-MM-DD", 7) %>` inserts the date 7 days from today.
+				- `<% tp.date.now("YYYY-MM-DD", 14) %>` → 14 days out.
+				- For interactive input: `<% await tp.system.prompt("Days from now?") %>` then use the result as the offset.
+				- Wrap in `[[…]]` to create a wikilink: `[[<% tp.date.now("YYYY-MM-DD", 7) %>]]`.
+				- [Templater docs — tp.date.now](https://silentvoid13.github.io/Templater/internal-functions/internal-modules/date-module.html)
+			- **Calendar plugin — sidebar picker**
+				- Adds a calendar sidebar panel. Click any future date to open or create that daily note. Does not insert an inline wikilink directly, but navigates to the future note.
