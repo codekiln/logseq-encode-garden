@@ -28,12 +28,12 @@
 		- Shortcut: `y` then `p`
 		- Description: Copies the relative path to clipboard.
 	- **Copy absolute path to clipboard** #card
-	  card-last-interval:: 10.36
-	  card-repeats:: 3
-	  card-ease-factor:: 2.7
-	  card-next-schedule:: 2026-05-02T16:39:55.791Z
-	  card-last-reviewed:: 2026-04-22T08:39:55.792Z
-	  card-last-score:: 5
+	  card-last-interval:: 27.14
+	  card-repeats:: 4
+	  card-ease-factor:: 2.56
+	  card-next-schedule:: 2026-07-15T10:26:03.144Z
+	  card-last-reviewed:: 2026-06-18T07:26:03.144Z
+	  card-last-score:: 3
 		- Shortcut: `y` then `P`
 		- Description: Copies the absolute path to clipboard.
 	- **Copy diff of selected files to clipboard** #card

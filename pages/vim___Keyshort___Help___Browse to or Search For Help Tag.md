@@ -1,10 +1,10 @@
 - [[vim]] [[Keyshort]] [[vim/Keyshort]]
 	- ### How to browse directly to a known, named [[vim/help/Tag]], such as `add-local-help` [[card]]
-	  card-last-interval:: 6.03
-	  card-repeats:: 1
-	  card-ease-factor:: 2.6
-	  card-next-schedule:: 2026-05-03T09:33:44.103Z
-	  card-last-reviewed:: 2026-04-27T09:33:44.103Z
+	  card-last-interval:: 4.14
+	  card-repeats:: 2
+	  card-ease-factor:: 2.7
+	  card-next-schedule:: 2026-06-22T10:26:28.690Z
+	  card-last-reviewed:: 2026-06-18T07:26:28.692Z
 	  card-last-score:: 5
 		- [[Command]]: `:ta <subject>`
 		- [[Examples]]
@@ -22,8 +22,8 @@
 	  card-last-interval:: -1
 	  card-repeats:: 1
 	  card-ease-factor:: 2.46
-	  card-next-schedule:: 2026-05-14T04:00:00.000Z
-	  card-last-reviewed:: 2026-05-13T08:37:04.785Z
+	  card-next-schedule:: 2026-06-19T04:00:00.000Z
+	  card-last-reviewed:: 2026-06-18T08:26:57.908Z
 	  card-last-score:: 1
 		- [[Command]]s `:tnext` and `:tprev` browse to next and previous vim help tag matches
 			- also `:tn` and `:tp` or `[t` or `]t`

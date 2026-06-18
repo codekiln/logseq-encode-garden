@@ -1,10 +1,10 @@
 - [[vim]] [[Keyshort]] [[vim/Keyshort]]
 	- **how to browse backwards and forwards in help tags in vim** [[card]]
-	  card-last-interval:: 3.45
-	  card-repeats:: 1
-	  card-ease-factor:: 2.36
-	  card-next-schedule:: 2026-04-30T19:57:45.200Z
-	  card-last-reviewed:: 2026-04-27T09:57:45.200Z
+	  card-last-interval:: 4
+	  card-repeats:: 2
+	  card-ease-factor:: 2.22
+	  card-next-schedule:: 2026-06-22T07:25:40.479Z
+	  card-last-reviewed:: 2026-06-18T07:25:40.480Z
 	  card-last-score:: 3
 		- **shortcut**: `CTRL-O` backwards, `CTRL-I` forwards
 			- `CTRL-O` go to the Older help tag
