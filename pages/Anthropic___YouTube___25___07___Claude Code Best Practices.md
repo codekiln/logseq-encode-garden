@@ -173,7 +173,7 @@ created-by:: [[Person/Cal Rueb]]
 					- Encourages Claude to read relevant files in subdirectories {{youtube-timestamp 1330}}
 						- Can reference other files with @ symbol in `Claude.md`
 					- Example: `@package.json`
-				- #### [[Anthropic/App/Claude Code/Claude.md]] Effectiveness - Why doesn't it work? {{youtube-timestamp 1372}}
+				- #### [[Claude/Code/Claude.md]] Effectiveness - Why doesn't it work? {{youtube-timestamp 1372}}
 					- > I have not had luck having Claude honor Claude.md, for example, inline comments #Quote -- Claude User
 						- Model behavior issues (excessive commenting) mostly fixed in Claude 4
 						- Better instruction following in newer models

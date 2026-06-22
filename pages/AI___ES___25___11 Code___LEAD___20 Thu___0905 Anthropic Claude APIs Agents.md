@@ -4,7 +4,7 @@
 	- ## Talk: Evolving Claude APIs for Agents [00:17:45](https://www.youtube.com/watch?v=cMSprbJ95jg&t=1065s) - Anthropic (Katelyn Lesse): 3 Pillars of Building Agentic Systems with Claude
 		- Developers are building more and more complex, long-running, agentic systems. Learn how the Anthropic team is evolving the Claude Developer Platform to enable developers to get the best outcomes from Claude.
 	- ## Memory Tool
-		- Originally just [[Anthropic/App/Claude Code/Claude.md]] file based
+		- Originally just [[Claude/Code/Claude.md]] file based
 		- There's a memory tool
 	- ## Context Editing
 		- 39% bump in internal evals
