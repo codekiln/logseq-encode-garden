@@ -1,4 +1,3 @@
-alias:: [[Nathaniel Whittemore]]
 logseq-entity:: [[Logseq/Entity/Person]]
 
 - # Nathaniel Whittemore
