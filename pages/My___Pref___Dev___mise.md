@@ -9,4 +9,4 @@
 			- Prefer to use [[mise/Task]]s as the task orchestration system and task runner and "structure" around [[Scripting]].
 			- {{embed [[My/Pref/Dev/mise/Tasks]]}}
 				- [[Why]]?
-					- {{embed [[My/Pref/Dev/mise/Tasks/Why]]}}
+					- {{embed [[My/Pref/Dev/mise/Tasks/Discussion]]}}
