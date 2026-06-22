@@ -1,0 +1,10 @@
+- My preferences related to [[git/worktree]]s
+	- DO
+		- store worktrees **inside** of the project folder inside a [[gitignore]]d `<proj-root>/.wt/` subfolder with slugs of the feature we are working on
+			- [[Example/Good]]
+				- `<proj-root>/.wt/openspec-spec-slug-we-are-working-on`
+				- `<proj-root>/.wt/gh-123-feature-slug`
+				- `<proj-root/.wt/JIRA-123-feature-slug>`
+	- DO NOT
+		- store worktrees as siblings of the project folder
+-
