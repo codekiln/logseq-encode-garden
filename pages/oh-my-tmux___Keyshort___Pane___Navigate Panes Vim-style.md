@@ -1,4 +1,4 @@
-- [[Keyshort/User]] [[tmux]] [[tmux/Keyshort]] [[tmux/Keyshort/Pane]]
+- [[Keyshort/User]] [[oh-my-tmux]] [[oh-my-tmux/Keyshort]] [[oh-my-tmux/Keyshort/Pane]]
 	- **Navigate to the Pane at Left in [[oh-my-tmux]]** #card
 	  card-last-interval:: 33.64
 	  card-repeats:: 4

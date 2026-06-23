@@ -8,7 +8,7 @@
 	  card-last-reviewed:: 2026-04-22T08:41:46.073Z
 		- Shortcut: `<prefix> Ctrl-h`
 		- Description: Focuses the window to the left of the current window in the session. This is an [[oh-my-tmux]] binding that replaces the default `<prefix> p`.
-		- Note: Easily confused with `<prefix> h` which navigates **panes** (not windows) — see [[tmux/Keyshort/Pane/Navigate Panes Vim-style]]
+		- Note: Easily confused with `<prefix> h` which navigates **panes** (not windows) — see [[oh-my-tmux/Keyshort/Pane/Navigate Panes Vim-style]]
 	- ## [[oh-my-tmux/Keyshort]] Navigate to [[tmux/Window]] just to the Right [[card]]
 	  card-last-score:: 1
 	  card-repeats:: 1
@@ -18,4 +18,4 @@
 	  card-last-reviewed:: 2026-06-18T07:28:16.111Z
 		- Shortcut: `<prefix> Ctrl-l`
 		- Description: Focuses the window to the right of the current window in the session. This is an [[oh-my-tmux]] binding that replaces the default `<prefix> n`.
-		- Note: Easily confused with `<prefix> l` which navigates **panes** (not windows) — see [[tmux/Keyshort/Pane/Navigate Panes Vim-style]]
+		- Note: Easily confused with `<prefix> l` which navigates **panes** (not windows) — see [[oh-my-tmux/Keyshort/Pane/Navigate Panes Vim-style]]
