@@ -74,7 +74,7 @@ tags:: [[JS/Library]], [[Linter]], [[Diataxis/Explanation]]
 		- **It only works with JavaScript** → False. Supports JavaScript, TypeScript, JSON, HTML, CSS, GraphQL, and their variants (JSX, TSX)
 		- **It's incompatible with existing setups** → Mostly false. 97% Prettier compatibility and includes ESLint rule equivalents
 	- ## Related
-		- [[GitHub/dyoshikawa/rulesync]] - Uses BiomeJS in its development environment
+		- [[rulesync]] - Uses BiomeJS in its development environment
 		- [[ESLint]] - Traditional JavaScript linter that BiomeJS aims to replace
 		- [[Prettier]] - Code formatter that BiomeJS is 97% compatible with
 		- [[Rust]] - Programming language BiomeJS is built with for performance

@@ -72,7 +72,7 @@ tags:: [[Diataxis/Explanation]]
 		- Only works with specific LLMs → **False**. POML is LLM-agnostic and compiles to plain text prompts
 	- ## Related
 		- [[rulesync]] - Tool that could benefit from POML's templating and include capabilities
-		- [[Person/Kazuki Yamada]] - Creator of rulesync who discussed POML integration
+		- [[Person/dyoshikawa]] - Creator of rulesync who discussed POML integration
 		- [[Prompt Engineering]]
 		- [[LLM]]
 		- [[Microsoft]]

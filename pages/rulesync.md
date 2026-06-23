@@ -1,3 +1,6 @@
+alias:: [[Person/dyoshikawa/GitHub/rulesync]]
+created-by:: [[Person/dyoshikawa]]
+
 # [dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync?tab=readme-ov-file#supported-tools-and-features)
 	- [[rulesync/docs]] https://rulesync.dyoshikawa.com
 	- ## Overview

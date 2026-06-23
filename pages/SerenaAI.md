@@ -113,7 +113,7 @@ created-by:: [[Oraios]]
 		- [[Language Server Protocol]]
 		- [[AI Coding]]
 		- [[DeepWiki]]
-		- [[rulesync]] — [[Person/Kazuki Yamada]] ships Serena in MCP and devcontainer examples in that project; a common discovery path when maintaining unified AI tool config from `.rulesync`
+		- [[rulesync]] — [[Person/dyoshikawa]] ships Serena in MCP and devcontainer examples in that project; a common discovery path when maintaining unified AI tool config from `.rulesync`
 		- [Deconstructing Serena's MCP-Powered Semantic Code Understanding Architecture](https://readwise.io/reader/shared/01k6swr7ezgvvp286dtc2e3dqf) - Architectural deep dive
 		- ### Footnotes
 			- [^1]: https://readwise.io/reader/shared/01k6swr7ezgvvp286dtc2e3dqf

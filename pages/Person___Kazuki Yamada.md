@@ -1,46 +1,14 @@
-alias:: [[GitHub/User/dyoshikawa]]
 logseq-entity:: [[Logseq/Entity/Person]]
 
-- # Kazuki Yamada
+- # Kazuki Yamada aka https://github.com/yamadashy
 	- ## Bio
 		- Software developer
-		- Student at Open University of Japan
-		- Known on GitHub as dyoshikawa
-		- Creator of several developer tools for AI coding workflows
-		- Focus on improving developer experience with AI coding assistants
+		- Known on GitHub as yamadashy
 	- ## Notable Work
-		- ### rulesync
-			- CLI tool for managing rules across multiple AI coding tools
-			- Written in TypeScript
-			- 332 stars, 12 forks on GitHub
-			- Enables developers to maintain consistent rules across Claude Code, Cursor, and other AI tools
-			- See [[GitHub/dyoshikawa/rulesync]]
-		- ### ccsettings
-			- Tool to simplify and share Claude Code's settings.json
-			- Improves configuration management for Claude Code users
-		- ### Community Engagement
-			- Active on Hacker News with "Show HN" posts
-			- Shares development tools focused on AI coding workflows
-			- Participates in discussions about AI tool integration
+		- ### [[Repomix]]
+			- Tool for packing repositories for AI/LLM integration
+		- ### slack-channels-grouping
+			- Chrome extension for grouping Slack channels
+			- See [[Person/Kazuki Yamada/GitHub/slack-channels-grouping]]
 	- ## Online Presence
-		- GitHub: [dyoshikawa](https://github.com/dyoshikawa)
-			- 15 followers
-			- Following 7 people
-			- 45 repositories
-			- GitHub achievements: Starstruck, Pair Extraordinaire, Arctic Code Vault Contributor
-		- Hacker News: [dyoshikawa](https://news.ycombinator.com/submitted?id=dyoshikawa)
-			- Regular submissions of development tools
-			- Focus on AI coding tool improvements
-	- ## Contributions to the Field
-		- Identified need for [[poml]] integration in rulesync ([Issue #136](https://github.com/dyoshikawa/rulesync/issues/136))
-		- Suggested using [[Microsoft/GitHub/poml]] for prompt templating with includes and substitutions
-		- Advocates for DRY principles in AI coding prompts
-		- Bridges gap between different AI coding tools through standardization
-	- ## Related
-		- [[rulesync]]
-		- [[poml]]
-		- [[AI Coding]]
-		- [[Claude/Code]]
-		- [[CursorAI]]
-	- [[Person/Kazuki Yamada/GitHub]]
--
+		- [[Person/Kazuki Yamada/GitHub]] https://github.com/yamadashy

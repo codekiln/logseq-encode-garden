@@ -1,0 +1,24 @@
+logseq-entity:: [[Logseq/Entity/Person]]
+
+- # dyoshikawa
+	- ## Bio
+		- Software developer
+		- Known on GitHub as dyoshikawa
+		- Creator of developer tools for AI coding workflows
+		- Focus on improving developer experience with AI coding assistants
+		- Active on Hacker News
+	- ## Notable Work
+		- ### [[rulesync]]
+			- CLI tool for managing rules across multiple AI coding tools
+			- Written in TypeScript
+			- Enables developers to maintain consistent rules across Claude Code, Cursor, and other AI tools
+			- See [[Person/dyoshikawa/GitHub/rulesync]]
+		- ### ccsettings
+			- Tool to simplify and share Claude Code's settings.json
+			- Improves configuration management for Claude Code users
+	- ## Online Presence
+		- [[Person/dyoshikawa/GitHub]] https://github.com/dyoshikawa
+		- Hacker News: [dyoshikawa](https://news.ycombinator.com/submitted?id=dyoshikawa)
+	- ## Notes
+		- Identified need for [[poml]] integration in rulesync ([Issue #136](https://github.com/dyoshikawa/rulesync/issues/136))
+		- Suggested using [[Microsoft/GitHub/poml]] for prompt templating with includes and substitutions
