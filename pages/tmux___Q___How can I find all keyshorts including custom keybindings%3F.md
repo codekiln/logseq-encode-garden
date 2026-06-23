@@ -1,12 +1,24 @@
 logseq-entity:: [[Logseq/Entity/Question]]
 
 - # How can I find a more complete list of the default [[Keyshort]]s for [[tmux]] from the CLI? [[card]]
+  card-last-interval:: 5.4
+  card-repeats:: 1
+  card-ease-factor:: 2.6
+  card-next-schedule:: 2026-06-28T18:44:45.128Z
+  card-last-reviewed:: 2026-06-23T09:44:45.129Z
+  card-last-score:: 5
 	- ## [[My Answer]]
 		- use `C-b ?` to see some of the
 			- This list **doesn’t** show any of the **custom** keybindings you create
-		- to see all keyshorts, use [[tmux/list-keys]]
+		- to see **all** keyshorts, use [[tmux/list-keys]]
 			- My favorite way - at the CLI, pipe list-keys into [[bat]]
 				- `tmux list-keys | bat`
+			- For interactive browsing, pipe through [[fzf]] with a [[bat]] preview
+				- `tmux list-keys | fzf --preview 'echo {} | bat -l sh -p --color=always'`
+				- [[fzf/--preview]] runs a command on each candidate and shows output in a side pane
+				- [[bat/--language]] (`-l sh`) forces shell syntax highlighting
+				- [[bat/--style]] (`-p`) removes UI chrome (no header, line numbers, or borders)
+				- [[bat/--color]] (`--color=always`) keeps syntax colors even in a subprocess (bat strips them when stdout is not a TTY)
 			- inside of tmux
 				- open the [[tmux/Command/Prompt]]  with [[tmux/Prefix]] `:`
 					- enter `list-keys`
