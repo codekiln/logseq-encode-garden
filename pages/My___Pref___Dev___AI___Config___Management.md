@@ -1,5 +1,7 @@
 # My Dev Tool Preferences -  [[AI/Coding/Config]] Management - use [[rulesync]]
-	- I use Rulesync to manage AI coding tool configurations across my projects. This allows me to maintain consistent rules and settings across different AI tools while keeping everything in version control.
+	- I use Rulesync to manage AI coding tool configurations across my projects.
+	-
+	- This allows me to maintain consistent rules and settings across different AI tools while keeping everything in version control.
 	- ## only use [[rulesync]] to manage AI coding tool configurations
 		- ### do not directly edit any individual agentic coding tool config (`.cursor`, `.claude`, etc) instead, update rulesync
 			- then call [[rulesync/generate]]
