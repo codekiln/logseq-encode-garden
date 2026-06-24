@@ -7,8 +7,6 @@
 			- then call [[rulesync/generate]]
 		- ### use `rulesync.jsonc` for project defaults
 			- generate for `agentsskills`, `claudecode`, `codexcli`; see [[My/Pref/Dev/AI/Config/Management/Rulesync]] for rationale
-		- ### prefer skills to mcp and rules
-			- each rule goes in context, which leads to bloat
 		- ### Kebab-case filenames
 			- `logseq-page-naming.md`, `javascript-best-practices.md`
 		- ### Category Organization with Prefixes
