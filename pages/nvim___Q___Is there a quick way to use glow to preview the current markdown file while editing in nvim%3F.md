@@ -5,14 +5,17 @@ see-also:: [[glow]], [[vim/Q/How can I get a VS Code-style split Markdown previe
   card-last-interval:: -1
   card-repeats:: 1
   card-ease-factor:: 2.5
-  card-next-schedule:: 2026-06-11T04:00:00.000Z
-  card-last-reviewed:: 2026-06-10T07:55:57.151Z
+  card-next-schedule:: 2026-06-25T04:00:00.000Z
+  card-last-reviewed:: 2026-06-24T06:59:35.121Z
   card-last-score:: 1
 	- ## [[My Answer]]
 		- ### Haven't found a good answer to this yet
 			- I'm looking for something in vim that displays markdown as well as glow for flipping between reading mode and editing mode.
-		- ### Current Workaround - vsplit
+			- I'm currently using [[LazyVim/plugins/extras/lang/markdown]], which bundles [[nvim/Plugin/render-markdown.nvim]] for in-buffer rendering (toggle `<leader>um`) and [[nvim/Plugin/markdown-preview.nvim]] for browser preview
+		- ### Current [[Workaround]] - [[vim/split/v]] `vsplit`
 			- `:vsplit | terminal glow -p %` opens a vertical split using [[nvim]]'s built-in terminal buffer, which renders [[glow]]'s [[ANSI]] output properly.
+				- `terminal` opens a proper [[PTY]] (pseudoterminal) buffer in [[nvim]] that renders [[ANSI]] escape codes; `:!glow %` runs in a non-PTY subprocess and strips ANSI sequences, showing garbled text
+				- In [[vim]]'s command-line mode, `%` is a special filename modifier that expands to the current buffer's filename — so `glow -p %` becomes `glow -p /path/to/file.md`
 			- ### Extra
 				- To map it to `<leader>mg`, add to `init.lua`:
 					- ~~~lua
