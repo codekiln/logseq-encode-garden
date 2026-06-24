@@ -1,0 +1,17 @@
+# My Dev AI Config Management - Rulesync
+	- see [[My/Pref/Dev/AI/Config/Management]] for the overview policy
+	- ## Targets
+		- generate for `agentsskills` and `claudecode` only
+			- `agentsskills` covers most non-Claude tools via the AgentSkills standard
+			- `claudecode` is separate — Claude Code does not consume AgentSkills
+	- ## Features
+		- enable only `rules` and `skills`
+		- do not enable `commands` because they are generally deprecated in favor of skills
+	- ## Clean Regeneration
+		- set `delete: true` in `rulesync.jsonc` — each run removes stale generated files before writing
+	- ## Project Scope
+		- use `outputRoots: ["."]` — project-scoped only
+		- never write to user-global locations such as `~/.claude`
+	- ## Rule Philosophy
+		- keep `.rulesync/rules/` minimal: a single root rule that defers to skills for behavior
+		- rationale: rules add to every-request context; skills load on demand
