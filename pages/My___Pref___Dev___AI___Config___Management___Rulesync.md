@@ -1,9 +1,10 @@
 # My Dev AI Config Management - Rulesync
 	- see [[My/Pref/Dev/AI/Config/Management]] for the overview policy
 	- ## Targets
-		- generate for `agentsskills` and `claudecode` only
+		- generate for `agentsskills`, `claudecode`, and `codexcli`
 			- `agentsskills` covers most non-Claude tools via the AgentSkills standard
 			- `claudecode` is separate — Claude Code does not consume AgentSkills
+			- `codexcli` is included solely because `agentsskills` does not generate `AGENTS.md`
 	- ## Features
 		- enable only `rules` and `skills`
 		- do not enable `commands` because they are generally deprecated in favor of skills

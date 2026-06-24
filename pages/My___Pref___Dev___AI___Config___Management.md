@@ -6,8 +6,7 @@
 		- ### do not directly edit any individual agentic coding tool config (`.cursor`, `.claude`, etc) instead, update rulesync
 			- then call [[rulesync/generate]]
 		- ### use `rulesync.jsonc` for project defaults
-			- use rulesync includes
-			- only generate for [[Codex/CLI]], [[CursorAI]], [[Claude/Code]], [[GitHub/CoPilot/CLI]] for now
+			- generate for `agentsskills`, `claudecode`, `codexcli`; see [[My/Pref/Dev/AI/Config/Management/Rulesync]] for rationale
 		- ### prefer skills to mcp and rules
 			- each rule goes in context, which leads to bloat
 		- ### Kebab-case filenames
@@ -24,14 +23,18 @@
 	- ## `rulesync.jsonc` Configuration File
 		- ```jsonc
 		  {
-		  "targets": ["cursor", "claudecode", "geminicli", "opencode", "codexcli"],
-		  "features": ["rules", "ignore", "mcp", "commands", "subagents"],
-		  "baseDirs": ["."],
-		  "delete": true,
-		  "verbose": false,
-		  "experimentalGlobal": false,
-		  "experimentalSimulateCommands": false,
-		  "experimentalSimulateSubagents": false
+		    "$schema": "https://github.com/dyoshikawa/rulesync/releases/latest/download/config-schema.json",
+		    "targets": [
+		      "agentsskills",
+		      "claudecode",
+		      "codexcli"
+		    ],
+		    "features": ["rules", "skills"],
+		    "outputRoots": ["."],
+		    "global": false,
+		    "delete": true,
+		    "gitignoreTargetsOnly": true,
+		    "verbose": false
 		  }
 		  ```
 	- ## Rule File Structure
