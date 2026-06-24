@@ -1,10 +1,10 @@
 - [[Keyshort]] [[tmux]] [[tmux/Keyshort]]
 	- **Detach Current Session** #card
-	  card-last-interval:: 31.36
-	  card-repeats:: 4
-	  card-ease-factor:: 2.8
-	  card-next-schedule:: 2026-06-22T16:29:53.564Z
-	  card-last-reviewed:: 2026-05-22T08:29:53.564Z
+	  card-last-interval:: 93.18
+	  card-repeats:: 5
+	  card-ease-factor:: 2.9
+	  card-next-schedule:: 2026-09-25T11:40:03.960Z
+	  card-last-reviewed:: 2026-06-24T07:40:03.961Z
 	  card-last-score:: 5
 		- Shortcut: `<prefix> d` [[Keyshort/Default]]
 		- Description: Detaches the current client from the tmux session while leaving the session and its running programs intact.

@@ -1,10 +1,10 @@
 - [[Keyshort]] [[yazi]] [[yazi/Keyshort]]
 	- **Toggle hidden files (dot-prefixed names)** #card
-	  card-last-interval:: 33.64
-	  card-repeats:: 4
-	  card-ease-factor:: 2.9
-	  card-next-schedule:: 2026-06-15T23:40:37.454Z
-	  card-last-reviewed:: 2026-05-13T08:40:37.454Z
+	  card-last-interval:: 108
+	  card-repeats:: 5
+	  card-ease-factor:: 3
+	  card-next-schedule:: 2026-10-10T07:26:37.514Z
+	  card-last-reviewed:: 2026-06-24T07:26:37.514Z
 	  card-last-score:: 5
 		- Shortcut: `.` (period)
 		- Context: File list / manager pane (default keymap)

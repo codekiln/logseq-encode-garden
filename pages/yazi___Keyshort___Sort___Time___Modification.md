@@ -1,10 +1,10 @@
 - [[Keyshort]] [[yazi]] [[yazi/Keyshort]]
 	- **Sort by modification time (normal order)** #card
-	  card-last-interval:: 31.36
-	  card-repeats:: 4
-	  card-ease-factor:: 2.8
-	  card-next-schedule:: 2026-06-13T16:40:06.864Z
-	  card-last-reviewed:: 2026-05-13T08:40:06.864Z
+	  card-last-interval:: 90.49
+	  card-repeats:: 5
+	  card-ease-factor:: 2.9
+	  card-next-schedule:: 2026-09-22T18:17:14.100Z
+	  card-last-reviewed:: 2026-06-24T07:17:14.100Z
 	  card-last-score:: 5
 		- Shortcut: `,` `m` (comma, then lowercase `m`)
 		- Context: File list / manager pane (default keymap)
@@ -12,11 +12,11 @@
 		- [[My Notes]]
 			- `,` is the sorting leader in yazi - brings up a panel pop up [[Modal]] at the bottom of the screen which has 13 options for sorting.
 	- **Sort by modification time (reverse order)** #card
-	  card-last-interval:: 31.36
-	  card-repeats:: 4
-	  card-ease-factor:: 2.8
-	  card-next-schedule:: 2026-06-13T16:40:12.637Z
-	  card-last-reviewed:: 2026-05-13T08:40:12.637Z
+	  card-last-interval:: 90.49
+	  card-repeats:: 5
+	  card-ease-factor:: 2.9
+	  card-next-schedule:: 2026-09-22T18:17:17.648Z
+	  card-last-reviewed:: 2026-06-24T07:17:17.649Z
 	  card-last-score:: 5
 		- Shortcut: `,` `M` (comma, then uppercase `M` / Shift+m)
 		- Context: File list / manager pane (default keymap)

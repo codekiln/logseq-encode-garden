@@ -5,6 +5,9 @@ alias:: [[LFRF]]
 	- ## All Favorite Flashcards
 		- {{cards (or [[Obsidian]] [[Codex]] [[chezmoi]] [[DevContainer]] [[mise]] [[rg]] [[vim]] [[nvim]] [[fzf]] [[Zoxide]] [[yazi]] [[tmux]] [[Lazygit]]) }}
 		  favorite-deck:: aggregate
+			- Summary: 96 items, 96 review counts [[2026-06-24 Wed]]
+				- Remembered:   78 (81%)
+				- Forgotten :   18 (18%)
 	- ## Background / Non-Favorite
 	  collapsed:: true
 		- {{cards (not (or [[Obsidian]] [[Codex]] [[chezmoi]] [[DevContainer]] [[mise]] [[rg]] [[vim]] [[nvim]] [[fzf]] [[Zoxide]] [[yazi]] [[tmux]] [[Lazygit]])) }}

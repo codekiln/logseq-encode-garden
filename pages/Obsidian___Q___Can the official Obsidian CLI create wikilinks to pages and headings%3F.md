@@ -3,14 +3,15 @@ tags:: [[Question]]
 see-also:: [[Obsidian/CLI]], [[Obsidian/Q/What Obsidian keyboard shortcuts are most useful for pointing to pages and headings when working with external agentic coding tools like Claude Code?]]
 
 - # Can the official [[CLI]] for [[Obsidian]]  generate wikilinks to pages and headings? [[card]]
-  card-last-score:: 1
-  card-repeats:: 1
-  card-next-schedule:: 2026-06-13T04:00:00.000Z
-  card-last-interval:: -1
-  card-ease-factor:: 2.5
-  card-last-reviewed:: 2026-06-12T05:40:03.008Z
+  card-last-score:: 3
+  card-repeats:: 2
+  card-next-schedule:: 2026-06-28T05:17:07.465Z
+  card-last-interval:: 3.95
+  card-ease-factor:: 2.36
+  card-last-reviewed:: 2026-06-24T07:17:07.465Z
 	- ## [[My Answer]]
-		- CLI exists but there's no built-in way to generate wikilinks to pages and headings. These commands could be scripted to do that, though
+		- CLI exists but there's **no** built-in way to generate wikilinks to pages and headings.
+		- ### commands that could be scripted to do that
 			- [[Obsidian/CLI/file]] lists details for a given page.
 			- [[Obsidian/CLI/files]] lists all files in the vault.
 			- [[Obsidian/CLI/outline]] lists headings for a file. use `format=md` to get the outline.
@@ -43,9 +44,10 @@ see-also:: [[Obsidian/CLI]], [[Obsidian/Q/What Obsidian keyboard shortcuts are m
 				  ~~~
 			- More robustly: `obsidian file file="$1"` gives the canonical page name; parse it and wrap in `[[ ]]`.
 		- ### Community CLI alternatives
-			- **`rjzxvi/obsidian-vault-cli`** (GitHub) — 100+ commands; includes link operations and note management without needing the Obsidian app running.
-			- **`davidpp/obsidian-cli`** — AI-optimized with a REST API mode; designed for agentic tools like [[Claude Code]].
-			- **`nightisyang/obsidian-cli`** — headless-first with ripgrep search and a backlink index; no running app required.
+			- [`davidpp/obsidian-cli`](https://github.com/davidpp/obsidian-cli) — AI-optimized with a REST API mode; designed for agentic tools like [[Claude Code]].
+				- [[My Note]]s 3 stars, typescript, funny. uses an API key to secure the localhost Obsidian server (which might be standard for obsidian)
+			- [nightisyang/obsidian-cli](https://github.com/nightisyang/obsidian-cli) — headless-first with ripgrep search and a backlink index; no running app required.
+				- [[My Note]] 1 star, go
 		- ### Sources
 			- [Obsidian Help — CLI](https://obsidian.md/help/cli)
 			- [DEV.to — Obsidian's Official CLI Is Here](https://dev.to/shimo4228/obsidians-official-cli-is-here-no-more-hacking-your-vault-from-the-back-door-3123)

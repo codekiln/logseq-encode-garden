@@ -3,11 +3,11 @@ alias:: [[Obsidian/Command/Open Search]]
 - [[Keyshort]] [[Obsidian]] [[Obsidian/Keyshort]]
 	- ## Search in a Tab [[Card]]
 	  card-last-score:: 5
-	  card-repeats:: 2
-	  card-next-schedule:: 2026-06-23T15:43:10.309Z
-	  card-last-interval:: 5.4
-	  card-ease-factor:: 2.6
-	  card-last-reviewed:: 2026-06-18T06:43:10.309Z
+	  card-repeats:: 3
+	  card-next-schedule:: 2026-07-08T23:40:11.681Z
+	  card-last-interval:: 14.68
+	  card-ease-factor:: 2.7
+	  card-last-reviewed:: 2026-06-24T07:40:11.681Z
 		- Shortcut: `⌘ F`
 		- Description: Opens the search panel within the current editor.
 		- [[My Note]]

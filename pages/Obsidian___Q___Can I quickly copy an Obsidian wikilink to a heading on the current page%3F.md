@@ -3,11 +3,11 @@ tags:: [[Question]]
 see-also:: [[Obsidian/Q/What Obsidian keyboard shortcuts are most useful for pointing to pages and headings when working with external agentic coding tools like Claude Code?]], [[Obsidian/Q/In obsidian, how can I link to a heading in another file?]]
 
 - # Can I quickly copy an [[Obsidian]] wikilink to a heading on the current page? [[card]]
-  card-last-interval:: 5.4
-  card-repeats:: 1
-  card-ease-factor:: 2.6
-  card-next-schedule:: 2026-06-15T16:55:18.616Z
-  card-last-reviewed:: 2026-06-10T07:55:18.616Z
+  card-last-interval:: 4.28
+  card-repeats:: 2
+  card-ease-factor:: 2.7
+  card-next-schedule:: 2026-06-28T13:25:36.380Z
+  card-last-reviewed:: 2026-06-24T07:25:36.381Z
   card-last-score:: 5
 	- ## [[My Answer]]
 		- Obsidian has **no native command** to copy a heading wikilink — a community plugin is required in any view mode.

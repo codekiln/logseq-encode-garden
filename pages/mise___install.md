@@ -5,12 +5,12 @@ logseq-entity:: [[Logseq/Entity/CLI/Command]]
 	- **Aliases**: `i`
 	- ## [[mise]] questions
 		- ### Where does [[mise/install]] `mise install TOOL@VERSION` place the installed [[mise/Tool]]? [[card]]
-		  card-last-interval:: 3.69
-		  card-repeats:: 1
-		  card-ease-factor:: 2.36
-		  card-next-schedule:: 2026-05-19T03:04:46.085Z
-		  card-last-reviewed:: 2026-05-15T11:04:46.086Z
-		  card-last-score:: 3
+		  card-last-interval:: 4
+		  card-repeats:: 2
+		  card-ease-factor:: 2.46
+		  card-next-schedule:: 2026-06-28T06:00:45.109Z
+		  card-last-reviewed:: 2026-06-24T06:00:45.109Z
+		  card-last-score:: 5
 			- It installs `TOOL@VERSION` to `~/.local/share/mise/installs/<PLUGIN>/<VERSION>`
 			- #### [[Example]]
 				- In a directory with `mise.toml`:

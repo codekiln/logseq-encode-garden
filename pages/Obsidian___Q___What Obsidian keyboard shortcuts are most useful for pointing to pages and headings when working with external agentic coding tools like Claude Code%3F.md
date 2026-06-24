@@ -2,13 +2,13 @@ logseq-entity:: [[Logseq/Entity/Question]]
 tags:: [[Question]]
 see-also:: [[Obsidian/Q/In obsidian, how can I link to a heading in another file?]], [[Obsidian/Q/Is there a keyboard shortcut in Obsidian for quickly finding keyboard shortcuts in Obsidian?]]
 
-- # What [[Obsidian]] keyboard shortcuts are most useful for pointing to pages and headings when working with external agentic coding tools like [[Claude Code]]? [[card]]
-  card-last-interval:: -1
-  card-repeats:: 1
-  card-ease-factor:: 2.5
-  card-next-schedule:: 2026-06-11T04:00:00.000Z
-  card-last-reviewed:: 2026-06-10T07:48:04.308Z
-  card-last-score:: 1
+- # What [[Obsidian]] [[Keyshort/User]] assigned to a plugin is useful for pointing to pages and headings when working with external agentic coding tools like [[Claude Code]]? [[card]]
+  card-last-score:: 5
+  card-repeats:: 2
+  card-next-schedule:: 2026-06-28T20:45:31.520Z
+  card-last-interval:: 4.61
+  card-ease-factor:: 2.6
+  card-last-reviewed:: 2026-06-24T06:45:31.520Z
 	- ## [[My Answer]]
 		- given you've installed [[Obsidian/Plugin/Easy Copy]] and have mapped the hotkeys to my preferences, `SHIFT + OPTION + C` copies a link to a heading
 	- ## [[AI Answer]]

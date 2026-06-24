@@ -2,14 +2,15 @@ logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]]
 see-also:: [[Claude/Code/Q/What is the new TUI mode in Claude Code about?]]
 
 - # Why can't I scroll up in [[tmux]] copy mode when [[Claude/Code]] is in [[TUI]] mode? [[card]]
-  card-last-interval:: 5.4
-  card-repeats:: 1
-  card-ease-factor:: 2.6
-  card-next-schedule:: 2026-06-10T17:52:43.007Z
-  card-last-reviewed:: 2026-06-05T08:52:43.008Z
+  card-last-interval:: 4.28
+  card-repeats:: 2
+  card-ease-factor:: 2.7
+  card-next-schedule:: 2026-06-28T12:25:22.559Z
+  card-last-reviewed:: 2026-06-24T06:25:22.559Z
   card-last-score:: 5
 	- ## [[My Answer]]
-		- inside of claude, use `/tui default` to disable [[Claude Code/TUI]] mode. it was probably at `/tui fullscreen` before.
+		- when claude is in `/tui fullscreen` mode, it uses an off-screen render buffer, which interferes with tmux
+		- inside of claude, use `/tui default` to disable [[Claude Code/TUI]] mode.
 	- ## [[AI Answer]]
 		- [[AI/Response]]
 		- **Short answer:** [[Claude/Code]] TUI mode activates the terminal **alternate screen buffer**, which never writes to [[tmux]]'s main scrollback — so copy mode has nothing to scroll through.

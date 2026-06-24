@@ -6,8 +6,8 @@ see-also:: [[Obsidian/Q/What Obsidian keyboard shortcuts are most useful for poi
   card-last-interval:: -1
   card-repeats:: 1
   card-ease-factor:: 2.5
-  card-next-schedule:: 2026-06-11T04:00:00.000Z
-  card-last-reviewed:: 2026-06-10T07:40:02.234Z
+  card-next-schedule:: 2026-06-25T04:00:00.000Z
+  card-last-reviewed:: 2026-06-24T06:26:08.827Z
   card-last-score:: 1
 	- ## [[AI Answer]]
 		- **Short answer:** Yes — `Cmd+O` (macOS) / `Ctrl+O` (Windows/Linux) opens the **Quick Switcher**, Obsidian's equivalent to [[Logseq]]'s `Cmd+K` and Slack's `Cmd+K`. Type any part of a file name to jump to it; press `Enter` to open.

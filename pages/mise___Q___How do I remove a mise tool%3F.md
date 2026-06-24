@@ -2,11 +2,11 @@ logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[mise]], [[mise/use/--global]], [[mise/Config/Global]], [[mise/unset]]
 
 - # How do I remove a [[mise/Tool]]? [[card]]
-  card-last-interval:: 5.4
-  card-repeats:: 1
-  card-ease-factor:: 2.6
-  card-next-schedule:: 2026-06-15T16:39:08.859Z
-  card-last-reviewed:: 2026-06-10T07:39:08.859Z
+  card-last-interval:: 4.28
+  card-repeats:: 2
+  card-ease-factor:: 2.7
+  card-next-schedule:: 2026-06-28T13:23:03.022Z
+  card-last-reviewed:: 2026-06-24T07:23:03.022Z
   card-last-score:: 5
 	- ## [[My Answer]]
 		- [[tldr]]

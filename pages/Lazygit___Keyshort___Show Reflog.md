@@ -1,10 +1,10 @@
 - [[Keyshort]] [[Lazygit]] [[Lazygit/Keyshort]]
 	- **Show reflog after browsing to commits view** [[Card]]
-	  card-last-interval:: 4.14
-	  card-repeats:: 2
-	  card-ease-factor:: 2.7
-	  card-next-schedule:: 2026-06-22T10:26:36.572Z
-	  card-last-reviewed:: 2026-06-18T07:26:36.572Z
+	  card-last-interval:: 11.2
+	  card-repeats:: 3
+	  card-ease-factor:: 2.8
+	  card-next-schedule:: 2026-07-05T11:39:45.234Z
+	  card-last-reviewed:: 2026-06-24T07:39:45.234Z
 	  card-last-score:: 5
 		- Shortcut: `4]`
 		- Context: In the commits panel.

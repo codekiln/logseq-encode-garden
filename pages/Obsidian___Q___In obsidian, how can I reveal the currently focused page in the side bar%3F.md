@@ -3,12 +3,12 @@ tags:: [[Question]]
 see-also:: [[Obsidian/Q/Is there a keyboard shortcut in Obsidian to search for a page?]]
 
 - # In [[Obsidian]], how can I reveal the currently focused page in the side bar? [[Card]]
-  card-last-interval:: -1
-  card-repeats:: 1
-  card-ease-factor:: 2.5
-  card-next-schedule:: 2026-06-11T04:00:00.000Z
-  card-last-reviewed:: 2026-06-10T07:45:23.597Z
-  card-last-score:: 1
+  card-last-interval:: 4.61
+  card-repeats:: 2
+  card-ease-factor:: 2.6
+  card-next-schedule:: 2026-06-28T20:44:23.044Z
+  card-last-reviewed:: 2026-06-24T06:44:23.044Z
+  card-last-score:: 5
 	- ## [[My Answer]]
 		- cmd + P then search for "Files: Reveal current file in navigation" by searching for "Reveal"
 	- ## [[AI Answer]]

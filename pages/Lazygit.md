@@ -6,11 +6,11 @@ see-also:: [[Lazydocker]]
 	- You can run it directly, by going to any directory managed by git and running `lazygit`. Or you can run it inside Neovim where it can be started with `Space G G`.
 	- You hop between the different panes using `Tab`. In the Files pane, you select files for staging using `Space`, and then you can create a new commit using `c`. You can see all the commands available using `?`.
 	- **Open selected file from commit history in editor** #card
-	  card-last-interval:: 11.2
-	  card-repeats:: 3
-	  card-ease-factor:: 2.8
-	  card-next-schedule:: 2026-06-02T12:38:50.830Z
-	  card-last-reviewed:: 2026-05-22T08:38:50.830Z
+	  card-last-interval:: 33.64
+	  card-repeats:: 4
+	  card-ease-factor:: 2.9
+	  card-next-schedule:: 2026-07-27T21:23:33.391Z
+	  card-last-reviewed:: 2026-06-24T06:23:33.392Z
 	  card-last-score:: 5
 		- Shortcut: `e`
 		- Context: In the commit history patch view, select a file and press `e` to open it in `$VISUAL` or `$EDITOR` (for example, `vim`).

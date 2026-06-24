@@ -1,10 +1,10 @@
 - [[Keyshort]] [[yazi]] [[yazi/Keyshort]]
 	- **Filter entries in the help menu** #card
-	  card-last-interval:: 33.64
-	  card-repeats:: 4
-	  card-ease-factor:: 2.9
-	  card-next-schedule:: 2026-06-15T23:40:00.085Z
-	  card-last-reviewed:: 2026-05-13T08:40:00.085Z
+	  card-last-interval:: 108
+	  card-repeats:: 5
+	  card-ease-factor:: 3
+	  card-next-schedule:: 2026-10-10T07:26:12.509Z
+	  card-last-reviewed:: 2026-06-24T07:26:12.509Z
 	  card-last-score:: 5
 		- Shortcut: `f`
 		- Context: Help overlay (`[help]` layer, after opening help with `~` or `F1`)

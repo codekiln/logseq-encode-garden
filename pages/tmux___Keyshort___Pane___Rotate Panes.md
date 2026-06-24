@@ -1,10 +1,10 @@
 - [[Keyshort]] [[tmux]] [[tmux/Keyshort]] [[tmux/Keyshort/Pane]]
 	- **Rotate Panes** #card
-	  card-last-interval:: 4
-	  card-repeats:: 2
-	  card-ease-factor:: 2.22
-	  card-next-schedule:: 2026-06-16T07:01:28.668Z
-	  card-last-reviewed:: 2026-06-12T07:01:28.668Z
+	  card-last-interval:: 8.32
+	  card-repeats:: 3
+	  card-ease-factor:: 2.08
+	  card-next-schedule:: 2026-07-02T14:28:45.383Z
+	  card-last-reviewed:: 2026-06-24T07:28:45.383Z
 	  card-last-score:: 3
 		- Shortcut: `<tmux-prefix> Ctrl+o`
 		- Description: Rotate panes within the window, keeping the same visual pane focused (does change which pane is logically focused)

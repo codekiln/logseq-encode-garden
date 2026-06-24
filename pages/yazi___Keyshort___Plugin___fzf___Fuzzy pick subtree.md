@@ -1,10 +1,10 @@
 - [[Keyshort]] [[yazi]] [[yazi/Keyshort]] [[yazi/Keyshort/Plugin/fzf]]
 	- **Fuzzy pick files and directories under the current directory** #card
-	  card-last-interval:: 11.2
-	  card-repeats:: 3
-	  card-ease-factor:: 2.8
-	  card-next-schedule:: 2026-05-24T12:39:11.507Z
-	  card-last-reviewed:: 2026-05-13T08:39:11.508Z
+	  card-last-interval:: 33.64
+	  card-repeats:: 4
+	  card-ease-factor:: 2.9
+	  card-next-schedule:: 2026-07-27T21:17:06.522Z
+	  card-last-reviewed:: 2026-06-24T06:17:06.522Z
 	  card-last-score:: 5
 		- Shortcut: `z` (lowercase)
 		- Context: File list / manager pane (default keymap); built-in **fzf** plugin

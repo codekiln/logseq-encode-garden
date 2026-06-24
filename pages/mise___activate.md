@@ -8,12 +8,12 @@ tags:: [[mise/Commands]]
 	- This should go in [[zsh/.zshrc]], [[Bash/.bashrc]], [[Bash/.bash_profile]], etc:
 		- `eval "$(mise activate zsh)"`
 	- ## What does [[mise/activate]] actually do? [[card]]
-	  card-last-interval:: 3.69
-	  card-repeats:: 1
-	  card-ease-factor:: 2.36
-	  card-next-schedule:: 2026-05-19T03:03:12.260Z
-	  card-last-reviewed:: 2026-05-15T11:03:12.260Z
-	  card-last-score:: 3
+	  card-last-interval:: 4
+	  card-repeats:: 2
+	  card-ease-factor:: 2.46
+	  card-next-schedule:: 2026-06-28T06:00:09.232Z
+	  card-last-reviewed:: 2026-06-24T06:00:09.232Z
+	  card-last-score:: 5
 		- it makes it so that [every time the prompt is displayed](https://mise.jdx.dev/dev-tools/shims.html#overview),
 			- it updates the [[mise/Environment]] declarations
 			- it makes [[mise/Tool]]s available

@@ -1,14 +1,16 @@
 logseq-entity:: [[Logseq/Entity/Question]]
 
 - # When using [[chezmoi]], how can I get my editors to do syntax highlighting on the [[dotfiles]]? Is there an accepted way that chezmoi allows this? [[card]]
-  card-last-interval:: -1
-  card-repeats:: 1
-  card-ease-factor:: 2.5
-  card-next-schedule:: 2026-06-11T04:00:00.000Z
-  card-last-reviewed:: 2026-06-10T07:55:01.828Z
-  card-last-score:: 1
+  card-last-interval:: 4.61
+  card-repeats:: 2
+  card-ease-factor:: 2.6
+  card-next-schedule:: 2026-06-28T20:55:24.891Z
+  card-last-reviewed:: 2026-06-24T06:55:24.891Z
+  card-last-score:: 5
 	- [[My Answer]]
 		- Run [[chezmoi/edit]]. As long as [[EnvVar/EDITOR]] or [[EnvVar/VISUAL]] is set, it will open with syntax highlighting using a [[Hard Link]].
+		- For vim, you can prepend your docs with a [[vim/Mode/Line]] that tells vim what filetype the file should be, for example, `# vim: filetype=zsh` in `dot_zshrc`
+			- TODO make a [[vim/Mode/Line]] page to document with **Vim modeline** is
 	- [[AI/Response]]
 		- **Preferred chezmoi workflow — edit the target, not the source name:** run `chezmoi edit` with a destination path (for example `chezmoi edit ~/.zshrc`). chezmoi opens your `$EDITOR` on the file in its **target** location (by default via a hardlink when possible), so the buffer path looks like `.zshrc` or `.config/foo/bar` and normal editor filetype detection applies. The [design FAQ](https://www.chezmoi.io/user-guide/frequently-asked-questions/design/) states explicitly that `chezmoi edit` arguments are target paths so you do not have to reason about `dot_` prefixes while editing and **syntax highlighting works**.
 		- **Why source-tree names are awkward:** in the chezmoi **source state**, paths use filename metadata (`dot_bashrc`, `private_config`, `executable_`, templates as `*.tmpl`, and so on). Those names are not the final dotfile paths, so an editor opening `dot_zshrc` in the repo often picks the wrong language. That is expected; chezmoi’s accepted mitigation is `chezmoi edit`, not a special highlighter built into chezmoi itself.

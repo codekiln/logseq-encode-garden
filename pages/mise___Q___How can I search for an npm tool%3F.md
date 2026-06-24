@@ -2,13 +2,13 @@ logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[mise]], [[mise/Backend/npm]], [[mise/search]], [[Aube]]
 
 - # How can I search for an [[npm]]/ [[Aube]] [[mise/Tool]]? [[card]]
-  card-last-interval:: -1
-  card-repeats:: 1
-  card-ease-factor:: 2.5
-  card-next-schedule:: 2026-06-11T04:00:00.000Z
-  card-last-reviewed:: 2026-06-10T07:56:23.523Z
-  card-last-score:: 1
-	- ## [[My Answer]]
+  card-last-interval:: 4.61
+  card-repeats:: 2
+  card-ease-factor:: 2.6
+  card-next-schedule:: 2026-06-28T21:01:02.627Z
+  card-last-reviewed:: 2026-06-24T07:01:02.627Z
+  card-last-score:: 5
+	- ## [[My Answer]] - 3 steps
 		- Step 1 - [[npm/search/--searchlimit]] for discovery
 			- `npm search --searchlimit 1 rulesync`
 				- ```
@@ -50,6 +50,7 @@ see-also:: [[mise]], [[mise/Backend/npm]], [[mise/search]], [[Aube]]
 				  ```
 		- Step 3 - [[mise/use/--global]] for the tool, prefixed by npm
 			- `mise use -g npm:rulesync`
+			- note, if you do this, you'll subsequently need to do [[chezmoi/add]] on [[mise/Config/mise.toml/Global]] to make sure those changes make it into [[My/Dotfiles]]
 	- ## [[AI Answer]]
 		- **Short answer:** use `npm search <term>` for discovery, then `mise use npm:<package>` (or `mise use -g npm:<package>`) once you know the package name.
 		- **Why not `mise search`:** `mise search` searches the mise registry of tool shorthands, not arbitrary npm packages.

@@ -1,11 +1,11 @@
 - [[Keyshort]] [[vim]] [[vim/Keyshort]]
 	- **Close the `gO` outline / table-of-contents UI (help in location list)** #card
-	  card-last-score:: 1
-	  card-repeats:: 1
-	  card-next-schedule:: 2026-05-23T04:00:00.000Z
-	  card-last-interval:: -1
-	  card-ease-factor:: 2.7
-	  card-last-reviewed:: 2026-05-22T08:41:50.841Z
+	  card-last-score:: 5
+	  card-repeats:: 2
+	  card-next-schedule:: 2026-06-28T06:16:56.282Z
+	  card-last-interval:: 4
+	  card-ease-factor:: 2.8
+	  card-last-reviewed:: 2026-06-24T06:16:56.282Z
 		- **Direct close:** `:lclose` — closes the **location-list** window Neovim opens for the `gO` outline (`:lopen` under the hood). Prefer this when you only want rid of the outline split.
 		- **If other splits are left over (e.g. `[No Name]`, empty area):** `:only` — keep **only** the current window; heavier than `:lclose` but good when layout is confusing.
 		- **With focus inside the list split:** `:q` or `Ctrl-W c` — same idea as closing any window.
