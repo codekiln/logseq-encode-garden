@@ -1,4 +1,4 @@
-alias:: [[pseudoterminal]], [[pseudo-terminal]]
+alias:: [[pseudoterminal]]
 logseq-entity:: [[Logseq/Entity/Concept]]
 
 - # PTY (pseudoterminal)
