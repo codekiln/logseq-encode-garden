@@ -1,0 +1,5 @@
+- A [[tmux]] mode is a state where the pane content or status line is replaced by an interactive overlay and key bindings change accordingly.
+- [[tmux/Mode/Copy]] — pane replaced with scrollback history; key bindings via [[tmux/Option/mode-keys]]
+- [[tmux/Mode/Choose]] — pane replaced with an interactive session/window/pane/buffer tree; key bindings via [[tmux/Option/mode-keys]]
+- [[tmux/Mode/Clock]] — pane replaced with a large digital clock
+- [[tmux/Mode/Command]] — status line replaced with a command prompt; key bindings via [[tmux/Option/status-keys]]

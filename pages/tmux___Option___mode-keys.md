@@ -1,6 +1,6 @@
 see-also:: [[tmux/Option/status-keys]]
 
-- this affects copy mode and other interactive modes.
+- controls key bindings in [[tmux/Mode/Copy]] and [[tmux/Mode/Choose]].
 - [[Examples]]
 	- Scrolling history
 	- searching

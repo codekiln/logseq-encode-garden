@@ -1,7 +1,7 @@
 see-also:: [[tmux/Option/mode-keys]]
 
-- this affects the command prompt in the status line.
+- controls key bindings in [[tmux/Mode/Command]].
 - [[Examples]]
-	- `Prefix + :` (entering the command prompt)
+	- `Prefix :` ([[tmux/Mode/Command]])
 	- rename prompts
 	- search prompts

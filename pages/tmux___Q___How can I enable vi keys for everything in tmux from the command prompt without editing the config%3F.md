@@ -1,12 +1,24 @@
 logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]]
 see-also:: [[tmux/Command/Prompt/Q/Will the TMux Command prompt use Vim or Emacs keys?]]
 
-- # How can I enable [[vim|vi]] keys for everything in [[tmux]] from the [[tmux/Command/Prompt|command prompt]] without editing the config? [[card]]
-	- [[tmux/Command/Prompt|`Prefix :`]] → `set -g ==mode-keys== vi` (copy mode) · `set -g ==status-keys== vi` (command prompt); runtime-only—gone after `tmux kill-server`
+- # How can I enable [[vim]] keys for everything in [[tmux]] from the [[tmux/Command/Prompt]] without editing the config? [[card]]
+  card-last-interval:: 5.4
+  card-repeats:: 1
+  card-ease-factor:: 2.6
+  card-next-schedule:: 2026-06-29T14:56:11.352Z
+  card-last-reviewed:: 2026-06-24T05:56:11.352Z
+  card-last-score:: 5
+	- [[tmux/Command/Prompt]] (`Prefix :`)
+		- `set -g mode-keys vi`
+			- sets vi controls in [[tmux/Option/mode-keys]] (scrolling, search, text selection)
+		- `set -g status-keys vi`
+			- sets vi controls in [[tmux/Option/status-keys]] ([[tmux/Command/Prompt]], rename prompt, search prompts)
+		- these are runtime-only; it will be gone again after `tmux kill-server`
 	- ## [[AI Answer]]
+	  collapsed:: true
 		- **Short answer:** Press `Prefix :` and run `set -g mode-keys vi`, then repeat for `set -g status-keys vi`. Two commands, done. Changes are runtime-only—they vanish after `tmux kill-server`.
 		- ### The two options
-			- [[tmux/Option/mode-keys]] — controls [[tmux/Copy Mode|copy mode]], scrolling, search, and text selection. Default is `emacs`.
+			- [[tmux/Option/mode-keys]] — controls [[tmux/Mode/Copy]], scrolling, search, and text selection. Default is `emacs`.
 			- [[tmux/Option/status-keys]] — controls the [[tmux/Command/Prompt]] (`Prefix :`, rename prompts, search prompts). Default is `emacs` unless `$VISUAL` or `$EDITOR` contains `vi`.
 		- ### Steps at the command prompt
 			- 1. `Prefix :` → type `set -g mode-keys vi` → Enter
