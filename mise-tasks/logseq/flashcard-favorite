@@ -16,4 +16,4 @@ engine="${MISE_PROJECT_ROOT:-$PWD}/.rulesync/skills/logseq-flashcard-favorite/sc
 
 # Run from the graph root so the engine sees pages/, journals/, and logseq/config.edn.
 cd "${MISE_PROJECT_ROOT:-$PWD}"
-exec nbb-logseq "$engine" "${args[@]}"
+exec nbb-logseq "$engine" ${args[@]+"${args[@]}"}
