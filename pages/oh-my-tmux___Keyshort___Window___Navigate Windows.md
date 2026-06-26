@@ -1,11 +1,11 @@
 # [[Keyshort]]s related to Window Navigation in oh-my-tmux
 	- ## [[oh-my-tmux/Keyshort]] Navigate to tmux window to the Left [[card]]
-	  card-last-score:: 1
-	  card-repeats:: 1
-	  card-next-schedule:: 2026-06-25T04:00:00.000Z
-	  card-last-interval:: -1
-	  card-ease-factor:: 2.9
-	  card-last-reviewed:: 2026-06-24T06:19:10.531Z
+	  card-last-score:: 5
+	  card-repeats:: 2
+	  card-next-schedule:: 2026-06-30T07:35:22.903Z
+	  card-last-interval:: 4
+	  card-ease-factor:: 3
+	  card-last-reviewed:: 2026-06-26T07:35:22.904Z
 		- DONE make this not appear under favorites if oh-my-tmux is not selected *I have tried to do this by removing tmux tag in tmux window*
 		- Shortcut: `<prefix> Ctrl-h`
 		- Description: Focuses the window to the left of the current window in the session. This is an [[oh-my-tmux]] binding that replaces the default `<prefix> p`.

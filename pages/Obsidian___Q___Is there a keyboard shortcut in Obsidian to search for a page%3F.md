@@ -3,12 +3,12 @@ tags:: [[Question]]
 see-also:: [[Obsidian/Q/What Obsidian keyboard shortcuts are most useful for pointing to pages and headings when working with external agentic coding tools like Claude Code?]]
 
 - # Is there a keyboard shortcut in [[Obsidian]] to search for a page? [[card]]
-  card-last-interval:: -1
-  card-repeats:: 1
-  card-ease-factor:: 2.5
-  card-next-schedule:: 2026-06-25T04:00:00.000Z
-  card-last-reviewed:: 2026-06-24T06:26:08.827Z
-  card-last-score:: 1
+  card-last-interval:: 3.94
+  card-repeats:: 2
+  card-ease-factor:: 2.36
+  card-next-schedule:: 2026-06-30T05:19:25.570Z
+  card-last-reviewed:: 2026-06-26T07:19:25.571Z
+  card-last-score:: 3
 	- ## [[AI Answer]]
 		- **Short answer:** Yes — `Cmd+O` (macOS) / `Ctrl+O` (Windows/Linux) opens the **Quick Switcher**, Obsidian's equivalent to [[Logseq]]'s `Cmd+K` and Slack's `Cmd+K`. Type any part of a file name to jump to it; press `Enter` to open.
 		- The Quick Switcher is a **core plugin** enabled by default. It searches file names (not full content) across the vault. Modifier keys while pressing `Enter` change how the result opens:

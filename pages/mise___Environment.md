@@ -42,12 +42,12 @@ alias:: [[mise Environments]]
 			- [[My Notes]]
 				- *This is also a bit [[Astonishing]] to me; I would expect `mise list` or something similar*
 	- ## What are the 4 ways that [[EnvVars]] declared in a [[mise/Config/mise.toml]] can be used/expressed in [[mise]]? [[card]]
-	  card-last-score:: 1
-	  card-repeats:: 1
-	  card-next-schedule:: 2026-06-25T04:00:00.000Z
-	  card-last-interval:: -1
-	  card-ease-factor:: 2.5
-	  card-last-reviewed:: 2026-06-24T06:14:56.958Z
+	  card-last-score:: 3
+	  card-repeats:: 2
+	  card-next-schedule:: 2026-06-30T05:22:27.212Z
+	  card-last-interval:: 3.94
+	  card-ease-factor:: 2.36
+	  card-last-reviewed:: 2026-06-26T07:22:27.212Z
 		- ### 1 - in [[mise/exec]] with a shell command
 			- ```sh
 			  mise set MY_VAR=123

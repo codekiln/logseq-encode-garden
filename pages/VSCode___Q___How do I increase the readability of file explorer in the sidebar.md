@@ -1,6 +1,6 @@
 tags:: [[Question]]
 
-- # DOING How do I make the file explorer in the VSCode sidebar more readable?
+- # How do I make the file explorer in the VSCode sidebar more readable?
 	- The sidebar is quite small; I find myself squinting to figure out where files are.
 	- ## [[VSCode Extensions]]
 		- [[VSCode/Extension/Custom CSS and JS Loader]]

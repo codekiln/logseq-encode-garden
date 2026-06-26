@@ -1,10 +1,10 @@
 ## [[tmux]] [[Keyshort]] navigate to the [[tmux/Window]] to the **left** [[card]]
-card-last-interval:: -1
-card-repeats:: 1
-card-ease-factor:: 2.5
-card-next-schedule:: 2026-06-24T04:00:00.000Z
-card-last-reviewed:: 2026-06-23T09:45:16.868Z
-card-last-score:: 1
+card-last-interval:: 6.08
+card-repeats:: 2
+card-ease-factor:: 2.6
+card-next-schedule:: 2026-07-02T08:15:21.613Z
+card-last-reviewed:: 2026-06-26T07:15:21.614Z
+card-last-score:: 5
 	- [[tmux/Prefix]] `p`
 - # [[tmux]] [[Keyshort]] navigate to [[tmux/Window]] to the right [[card]]
   card-last-interval:: 5.4

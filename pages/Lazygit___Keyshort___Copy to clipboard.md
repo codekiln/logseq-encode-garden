@@ -37,12 +37,12 @@
 		- Shortcut: `y` then `P`
 		- Description: Copies the absolute path to clipboard.
 	- **Copy diff of selected files to clipboard** #card
-	  card-last-interval:: -1
-	  card-repeats:: 1
-	  card-ease-factor:: 2.6
-	  card-next-schedule:: 2026-06-25T04:00:00.000Z
-	  card-last-reviewed:: 2026-06-24T06:16:00.254Z
-	  card-last-score:: 1
+	  card-last-interval:: 3.86
+	  card-repeats:: 2
+	  card-ease-factor:: 2.46
+	  card-next-schedule:: 2026-06-30T03:48:48.301Z
+	  card-last-reviewed:: 2026-06-26T07:48:48.301Z
+	  card-last-score:: 3
 		- Shortcut: `y` then `s`
 		- Description: Copies the diff**S** of selected files to clipboard. Requires a selection.
 		- [[Mnemonic]]: ==y==ank the ==s==elected files, yank diff==s==
@@ -50,8 +50,8 @@
 	  card-last-interval:: -1
 	  card-repeats:: 1
 	  card-ease-factor:: 2.6
-	  card-next-schedule:: 2026-06-25T04:00:00.000Z
-	  card-last-reviewed:: 2026-06-24T06:16:08.330Z
+	  card-next-schedule:: 2026-06-27T04:00:00.000Z
+	  card-last-reviewed:: 2026-06-26T07:50:02.637Z
 	  card-last-score:: 1
 		- Shortcut: `y` then `a`
 		- Description: Copies the diff of all files to clipboard.

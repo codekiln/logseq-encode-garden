@@ -1,4 +1,5 @@
 alias:: [[Book/Vibe Coding]]
+logseq-entity:: [[Logseq/Entity/Book]] 
 created-by:: [[Person/Steve Yegge]], [[Person/Gene Kim]]
 tags:: [[Book]], [[AI/Coding]], [[Vibe Coding]]
 published:: 2025
