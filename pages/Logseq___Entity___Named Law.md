@@ -1,0 +1,23 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Named Law
+	- In this garden, **Named Law** pages model named, citable generalizations that get invoked as if authoritative—eponymous "laws," effects, fallacies, and adages—that are useful shortcuts or empirical observations rather than proven axioms. This is the "masquerading as laws" category: things people *call* laws but that can be gamed, can expire, or simply admit exceptions.
+	- ## Examples in this garden
+		- [[Goodhart's Law]], [[Campbell's Law]], [[Cobra Effect]], [[McNamara Fallacy]], [[Moore's Law]].
+	- ## When we treat something as a named-law entity
+		- Strong signals: it carries a **conventional name**, often eponymous ("X's law," "the Y effect," "the Z fallacy"); it is cited as a **generalization** about how systems, people, organizations, or technology behave; and it is **defeasible**—it has exceptions, can be gamed, or can stop holding as conditions change.
+		- Good fit: Goodhart's law, Campbell's law, the Cobra effect, the McNamara fallacy, Moore's law, Murphy's law, Conway's law, Parkinson's law, Hofstadter's law.
+		- Each instance notes its **kind**: a *heuristic* (a shortcut for judgment), an *empirical regularity or trend* (for example Moore's law), a *named effect* (the Cobra effect), or a *named fallacy* (the McNamara fallacy).
+	- ## Relationship to other types
+		- [[Logseq/Entity/Axiom]] — the contrast class. An axiom is provable with internal consistency, or an established law of nature; it is not a shortcut and is not defeasible by gaming or fashion. Genuine axioms and physical laws belong there, **not** here. The distinction itself is explained at [[Epistemics/Concept/Heuristic vs Axiom]].
+		- [[Logseq/Entity/Book]] — a book *titled* "The Laws of X" (for example [[Book/The Laws of Simplicity]]) is a **book**; its individual numbered "laws" are sections of that book, not Named Law instances.
+		- [[Logseq/Entity/Concept]] — use when the goal is an understanding-oriented essay rather than anchoring a single named generalization.
+		- [[Logseq/Entity/Term]] — glossary stubs only; a named law with an origin and a cautionary example is a **named law**, not a term.
+	- ## Finding and deduplicating
+		- Search for an existing page before creating a new named-law entity: exact title and common variants ("Goodhart's Law" / "Goodhart law"), the coiner's name, and the phrasing of the law across `pages/`.
+		- Classify as: **existing**, **similar** (needs human judgment), **new**, or **blocked**.
+	- ## Frontmatter
+		- On instances, set **`logseq-entity:: [[Logseq/Entity/Named Law]]`** so this type page collects backlinks to every named-law entity.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- Logseq Flavored Markdown; keep it lean. Suggested shape: H1 with the law's common name; a one-line **statement** of the law; its **origin** (who coined it, and the situation it came from); its **kind** (heuristic / empirical trend / effect / fallacy); a **canonical example** of it biting; and **see-also** links to related laws.
