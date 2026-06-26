@@ -27,14 +27,14 @@ If none of these exist, the skill should:
 When the user wants to initialize entity types for a garden:
 
 - use `.rulesync/config/logseq-entity.md` for **shared** fallback text (resolution order, reporting contract) when it exists
-- create or update `[[Logseq/Entity]]` and `[[Logseq/Entity/<Type>]]` as the **primary** place for per-type rules
+- ensure `[[Logseq/Entity]]` (the shared general model) is present, and create or update `[[Logseq/Entity/<Type>]]` as the **primary** place for per-type rules
 - keep the file-based config **short**—do not duplicate long per-type sections from the graph into the repo file
 
 ## What Belongs In Garden Configuration
 
-Store garden-specific policy on **`[[Logseq/Entity]]`**, **`[[Logseq/Entity/<Type>]]`**, and **`[[Logseq/Frontmatter]]`**, including:
+`[[Logseq/Entity]]` is the shared, garden-agnostic conceptual model (terms, how a page is marked, naming rules); it does **not** catalog the types. Garden-specific policy lives on **`[[Logseq/Entity/<Type>]]`** and **`[[Logseq/Frontmatter]]`**, including:
 
-- which entity types this garden actively models
+- which entity types this garden models — the set of `Logseq/Entity/<Type>` pages **is** the list; do not maintain a separate catalog on `[[Logseq/Entity]]`
 - how to recognize those entity types
 - canonical naming preferences
 - allowed or preferred namespaces
@@ -64,7 +64,7 @@ The configuration can stay in Markdown as long as it is explicit and machine-rea
 
 Preferred Logseq-native shape:
 
-- `[[Logseq/Entity]]` as the registry
+- `[[Logseq/Entity]]` as the shared, garden-agnostic conceptual model (not a catalog of types)
 - `[[Logseq/Entity/<Type>]]` as the canonical type page
 - `[[Logseq/Frontmatter]]` as the shared page-level attribute convention page
 - `[[Logseq/Pref]]` optionally as the hub for cross-cutting garden preferences (see skill **logseq-pref** when installed)

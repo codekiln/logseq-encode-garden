@@ -13,6 +13,18 @@ Decide whether a candidate is:
 - a genuinely new entity page
 - blocked by missing configuration or missing prerequisite entities
 
+## Discovering the garden's entity types
+
+`[[Logseq/Entity]]` holds the general conceptual model, not a catalog of types. To learn which entity types a garden actually models, list its `Logseq/Entity/<Type>` definition pages. Each such page opens with its heading and a one-line description, so this one-liner prints a self-describing index:
+
+~~~bash
+for f in pages/Logseq___Entity___*.md; do
+  awk 'h&&/[^[:space:]]/{print "  "$0; exit} /#[[:space:]]/{print FILENAME": "$0; h=1}' "$f"
+done
+~~~
+
+The glob excludes the model page itself (`Logseq___Entity.md` has no trailing `___`). Read a candidate type's page in full for its recognition, naming, and dedup rules before classifying.
+
 ## Search Order
 
 Search in the config-defined order and stop early only when the match is clearly canonical.

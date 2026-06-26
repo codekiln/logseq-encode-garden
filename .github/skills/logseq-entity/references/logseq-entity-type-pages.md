@@ -6,11 +6,11 @@ This skill should prefer Logseq-native entity-type pages as the primary source o
 
 Use these pages when they exist:
 
-- `[[Logseq/Entity]]` as the registry of entity types in the garden
+- `[[Logseq/Entity]]` as the general conceptual model for entities (garden-agnostic, copyable; not a catalog of types)
 - `[[Logseq/Entity/<Type>]]` as the canonical page for a specific entity type
 - `[[Logseq/Frontmatter]]` as the shared convention page for page-level attributes
 
-Documentation uses `[[Logseq/Entity/<Type>]]` as shorthand: substitute the **actual** type path from **`[[Logseq/Entity]]`** in the workspace graph. In this encode garden, multi-word types prefer **nested Title Case segments**—for example **`[[Logseq/Entity/Software/Project]]`**, **`[[Logseq/Entity/Article]]`**, or **`[[Logseq/Entity/Game/Type]]`**—not a single **kebab-case** segment. **`[[Logseq/Entity]]`** lists each canonical title (including types awaiting rename).
+Documentation uses `[[Logseq/Entity/<Type>]]` as shorthand: substitute the **actual** type path used in the workspace graph. Discover those paths by listing the `Logseq/Entity/<Type>` definition pages (see the one-liner in [entity-search-and-dedup.md](./entity-search-and-dedup.md)), not by reading a list off `[[Logseq/Entity]]`. In this encode garden, multi-word types prefer **nested Title Case segments**—for example **`[[Logseq/Entity/Software/Project]]`**, **`[[Logseq/Entity/Article]]`**, or **`[[Logseq/Entity/Game/Type]]`**—not a single **kebab-case** segment.
 
 ## Default Interpretation
 
@@ -75,7 +75,7 @@ When both exist:
 
 When working with an entity type:
 
-1. Read `[[Logseq/Entity]]` if it exists to discover the garden's entity types.
+1. Read `[[Logseq/Entity]]` for the general entity model; discover the garden's actual types by listing the `Logseq/Entity/<Type>` definition pages (one-liner in [entity-search-and-dedup.md](./entity-search-and-dedup.md)).
 2. Read `[[Logseq/Entity/<Type>]]` for the type-specific rules.
 3. Read `[[Logseq/Frontmatter]]` when it exists for shared page-level attributes.
 4. Skim `[[Logseq/Pref]]` (and linked preference pages such as **`[[Logseq/Pref/Page/Name]]`**) when present for encode-wide naming defaults.
@@ -88,7 +88,7 @@ When the garden does not yet have complete Logseq-native entity pages:
 
 1. Research the garden's existing entity-like patterns and current conventions.
 2. Use `.rulesync/config/logseq-entity.md` for shared fallback text (resolution order, reporting) when present—not for a full per-type rule dump.
-3. Create or update `[[Logseq/Entity]]` as the registry.
+3. Ensure `[[Logseq/Entity]]` (the shared general model) is present—copy it in rather than authoring a per-garden version; do not add a catalog of types to it.
 4. Create or update `[[Logseq/Entity/<Type>]]` for the initial supported types.
 5. Create or update `[[Logseq/Frontmatter]]` when shared page-level conventions are needed.
 6. Keep template guidance on the type page by default.

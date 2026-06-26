@@ -46,7 +46,8 @@ Use this fallback when the Logseq entity pages do not exist yet or are incomplet
 
 Treat those garden-owned sources as the source of truth for:
 
-- which entity types this garden models (from the registry, not from this skill)
+- the general entity model (from `[[Logseq/Entity]]`) — terms, how a page is marked, naming rules; this page does **not** catalog the types
+- which entity types this garden models — discover by listing the `Logseq/Entity/<Type>` definition pages (see the one-liner in [references/entity-search-and-dedup.md](./references/entity-search-and-dedup.md)), not from this skill or the model page
 - naming and namespace rules
 - dedup heuristics
 - frontmatter and page-shape expectations
@@ -128,11 +129,13 @@ When the user says something like `initialize entity types for this garden`:
    - inspect representative garden pages and journals to infer repeated entity kinds, naming conventions, and page-shape expectations
 5. Plan:
    - propose a small initial set of entity types the garden appears to cover
-   - propose the contents of `[[Logseq/Entity]]` and each `[[Logseq/Entity/<Type>]]` page
+   - `[[Logseq/Entity]]` is the shared, garden-agnostic conceptual model: reuse it as-is (copy from another garden) rather than authoring a per-garden version; the garden-specific work is the `[[Logseq/Entity/<Type>]]` pages
+   - propose the contents of each `[[Logseq/Entity/<Type>]]` page
    - call out whether any dedicated `[[Logseq/Template/Entity/<Type>/Page]]` pages are actually needed
 6. Implement:
-   - create or update `[[Logseq/Entity]]` and the approved `[[Logseq/Entity/<Type>]]` pages
-   - keep registry and instance-template guidance together on the type page by default
+   - ensure `[[Logseq/Entity]]` (the general model) is present, then create or update the approved `[[Logseq/Entity/<Type>]]` pages
+   - keep type definition and instance-template guidance together on the type page by default
+   - do **not** add a catalog of types back onto `[[Logseq/Entity]]`; the set of type pages is the list
    - keep `.rulesync/config/logseq-entity.md` limited to shared fallback material (resolution order, reporting)—**not** a duplicate catalog of per-type rules
    - after any new or changed graph pages: complete **Graph edits and today’s journal** (section above)
 7. Report:

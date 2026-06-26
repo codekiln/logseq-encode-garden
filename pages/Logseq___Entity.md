@@ -1,10 +1,13 @@
 alias:: [[Logseq Entities]]
 
 - # Logseq Entity
-	- This page defines the conceptual model for entities in this knowledge garden and lists the entity types the garden models.
+	- This page is the general conceptual model for entities in this knowledge garden: what an entity is, how a page is marked as one, and how entity definition pages are named. The entity types themselves are defined on their own child pages.
 	- ## Terms
 		- **Entity** — a single thing that has its own page in the garden: one person, one software project, one book, etc. A page models one or more entities. When it models more than one, it must satisfy the shape requirements of each.
-		- **Entity definition** — the documentation page for a category of entities that share the same modeling rules. For example, [[Logseq/Entity/Software/Project]] is the entity definition for software tools and libraries; each individual tool or library (e.g. Neovim, Yamtrack) is an instance. This page is the registry of entity definitions; each entity definition page describes how to recognize, name, and create instances of that kind.
+		- **Entity definition** — the documentation page for a category of entities that share the same modeling rules. Each entity definition page describes how to recognize, name, and create instances of that kind; individual pages that meet those rules are its instances.
+	- ## Finding the entity types
+		- Each entity type has its own definition page under the `Logseq/Entity/` namespace — one page per type. The set of those pages is the list of entity types the garden models; there is no separate catalog to maintain on this page.
+		- The first line under an entity definition page's heading is its short description, so the type pages together read as a self-describing index.
 	- ## How we mark a page as an entity
 		- In frontmatter, add `logseq-entity::` with a link to the entity definition page for each entity the page models.
 		- When a page models a single entity, use one link: `logseq-entity:: [[Logseq/Entity/Person]]`.
@@ -12,37 +15,9 @@ alias:: [[Logseq Entities]]
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Multiple entity membership
 		- A page that declares two or more entities in `logseq-entity::` is an instance of each. Its content must satisfy the shape requirements of all declared entity definitions.
-		- Known patterns in this garden:
-			- **Question + Card** — a research question that is also a compact flashcard. Canonical order: Question-first. Page shape: see the Question entity definition; the `## Answer` section header is omitted and the answer sits directly as a child bullet of the H1.
-			- **Card + Term** — a glossary-style vocabulary page that is also reviewable. Canonical order: Card-first.
-		- Canonical ordering for each combination is documented on the primary entity's definition page.
+		- The primary entity comes first in `logseq-entity::`. Canonical ordering for a combination, and any combination-specific page shape, is documented on the primary entity's definition page.
 	- ## Naming entity definition pages
-		- All entity definition pages under `Logseq/Entity/` use **Title Case** nouns. Multi-word types use **nested namespace segments**, for example [[Logseq/Entity/Software/Project]], [[Logseq/Entity/Game/Type]], [[Logseq/Entity/Article]].
-		- Exception: tools and executables that are conventionally lowercase (e.g. `tmux`, `git`) may stay lowercase *on their own topic pages*, but entity definition pages are modeling nouns and use Title Case: [[Logseq/Entity/Person]], [[Logseq/Entity/Book]], [[Logseq/Entity/Concept]].
+		- All entity definition pages under `Logseq/Entity/` use **Title Case** nouns. Multi-word types use **nested namespace segments**, for example [[Logseq/Entity/Software/Project]].
+		- Exception: tools and executables that are conventionally lowercase (e.g. `tmux`, `git`) may stay lowercase *on their own topic pages*, but entity definition pages are modeling nouns and use Title Case, for example [[Logseq/Entity/Person]].
 		- Do **not** use kebab-case segments (e.g. `software-project`, `color-theme`) for entity definition page names.
 		- Plural or contextual reference forms belong in `alias::` on the canonical entity definition page; instance naming follows [[Logseq/Frontmatter/alias]].
-	- ## Entity types in this garden
-		- **[[Logseq/Entity/Software/Project]]** — Tools, editors, libraries, apps, CLIs, servers. Entity definition on that page. Prior path `Logseq/Entity/software-project` is an alias on the canonical page.
-			- **[[Logseq/Entity/Software/Plugin]]** — Plugins, extensions, and add-ons that extend a specific host application. Aliased as [[Logseq/Entity/Software/Extension]]. Entity definition on that page.
-				- **[[Logseq/Entity/Software/Plugin/Collection]]** — Curated, composable collections of plugins for a host (LazyVim extras, VS Code Extension Packs, Doom modules); a specialization of the [[Logseq/Entity/Collection]] pattern. Entity definition on that page.
-			- **[[Logseq/Entity/Software/Distribution]]** — Complete, standalone, opinionated curated systems built on a base platform (OS or editor distros): Debian, Arch, LazyVim, AstroNvim. Aliased as [[Logseq/Entity/Software/Distro]]. Entity definition on that page.
-		- **[[Logseq/Entity/CLI/Command]]** — Per-subcommand CLI reference pages under a tool namespace (e.g. `mise/cache/clear`). Entity definition on that page.
-		- **[[Logseq/Entity/CLI/Flag]]** — Per-flag or per-option pages nested under a command path (e.g. `mise/unuse/--global`). Entity definition on that page.
-		- **[[Logseq/Entity/Key]]** — Individual keyboard keys (modifier keys, special keys, function keys). Keyshort pages reference Key instances to express combos. Entity definition on that page.
-		- **[[Logseq/Entity/Color/Theme]]** — Coordinated palette families reused across apps (terminals, editors, TUIs). Entity definition on that page.
-		- **[[Logseq/Entity/Company]]** — Organizations or brands tracked as first-class pages, such as vendors with multiple tools. Entity definition on that page.
-		- **[[Logseq/Entity/Organization]]** — Non-company bodies such as standards organizations, foundations, nonprofits, public institutions, consortia, professional associations, and governance/community bodies. Entity definition on that page.
-		- **[[Logseq/Entity/Question]]** — Topic-scoped research questions using a `/Q/` segment in the page title (`*___Q___*` on disk). Entity definition on that page.
-		- **[[Logseq/Entity/Concept]]** — Understanding-oriented pages (Diataxis-style explanations): paradigms, architectural lenses, and other big ideas. Entity definition on that page.
-		- **[[Logseq/Entity/UX/Pattern]]** — Reusable interaction patterns and interface affordances such as [[UX/Pattern/Dark]], [[UX/Pattern/Text Input/Slash Command]], and [[UX/Pattern/Text Input/Suggest/Completion]]. Entity definition on that page.
-		- **[[Logseq/Entity/Term]]** — Short glossary-style vocabulary pages; `logseq-entity::` is additive alongside existing term tagging patterns where present. Entity definition on that page.
-		- **[[Logseq/Entity/Person]]** — Real individuals tracked as `Person/Full Name` hub pages (not every page under the `Person/` namespace). Entity definition on that page.
-		- **[[Logseq/Entity/Book]]** — Published books tracked as `Book/Title` hub pages. Entity definition on that page.
-		- **[[Logseq/Entity/Standard]]** — Normative specifications and widely adopted conventions (RFCs, community specs, semantic-versioning and commit-message rules, schema/protocol definitions, etc.) when the page’s primary identity is **the standard**, not the publishing **organization** or a [[Logseq/Entity/Software/Project]] implementation. Entity definition on that page.
-		- **[[Logseq/Entity/Card]]** — First-class Logseq review cards stored under a `/Card/` namespace segment, with one durable prompt per page. Entity definition on that page.
-		- **[[Logseq/Entity/Article]]** — Published web articles, blog posts, essays, and similar authored pieces imported as first-class reading notes. Entity definition on that page.
-		- **[[Logseq/Entity/Game]]** — Individual playable works or systems: video games, board games, card games, tabletop RPG systems, sport-as-game pages, folk games, and similar game-first hubs across any namespace. Entity definition on that page.
-		- **[[Logseq/Entity/Game/Type]]** — Game types, genres, families, mechanics, modes, and reusable game-design categories such as [[Game/Video/Platformer]]. Entity definition on that page.
-		- **[[Logseq/Entity/Security/Vuln]]** — Security vulnerabilities, exploit classes, attack techniques, attack chains, and defensive-relevant abuse patterns. Entity definition on that page.
-		- **[[Logseq/Entity/Collection]]** — Cross-cutting pattern for a curated collection whose members are all of one entity type, specialized per type as `X/Collection` (e.g. [[Logseq/Entity/Software/Plugin/Collection]]). Entity definition on that page.
-		- **[[Logseq/Entity/Font]]** — Named typefaces and font families installed and used across terminals and editors (e.g. [[JetBrains/Font/Mono Nerd]]). Not for font patchers or aggregator projects — those stay [[Logseq/Entity/Software/Project]]. Entity definition on that page.
