@@ -48,6 +48,28 @@ If `nbb-logseq` is missing, the task self-declares it (`#MISE tools=…`); run
   `{{cards [[Favorite]]}}`.
 - Self-referential / meta favorites under `Logseq/Flashcard/*` are skipped.
 
+## Excluding namespaces from a deck (`deck-exclude::`)
+
+Add `deck-exclude:: [[PageName]]` as a block property on any managed `{{cards}}`
+block to exclude that namespace from the deck's query. The property is
+**user-configured** — the script reads it but never auto-generates it.
+
+~~~
+# on a subpage (e.g. Logseq___Flashcard___Review___Favorite___tmux.md):
+- {{cards (and [[tmux]] (not [[oh-my-tmux]])) }}
+  favorite-deck:: [[tmux]]
+  deck-exclude:: [[oh-my-tmux]]
+
+# on the aggregate page:
+- {{cards (and (or [[tmux]] …) (not [[oh-my-tmux]])) }}
+  favorite-deck:: aggregate
+  deck-exclude:: [[oh-my-tmux]]
+~~~
+
+Multiple excludes: `deck-exclude:: [[A]] [[B]]`. Re-runs are idempotent: the
+exclusion is baked into the desired macro, so `expr-sig` stays equal and the
+script never strips it. Full details: `references/algorithm.md`.
+
 ## Idempotency contract (why re-runs are safe)
 
 The script **merges**, never overwrites. It locates managed decks by their
