@@ -27,3 +27,9 @@ via:: [[tmux/Keyshort/Pane/Resize Pane]]
 				- [tmux/tmux #4381 — edge case resizing / nested grids](https://github.com/tmux/tmux/issues/4381)
 				- [tmux/tmux #1480 — minimum pane size behavior](https://github.com/tmux/tmux/issues/1480)
 				- [Super User — Adjusting screen split pane sizes in tmux](https://superuser.com/questions/863295/adjusting-screen-split-pane-sizes-in-tmux)
+		- [[2026-06-26 Fri]] Confirmed root cause on [[macOS]] / [[Ghostty]]
+			- The primary blocker is not tmux layout or minimum pane width — it is [[Ghostty]]'s built-in keybind defaults intercepting Option+Arrow before tmux sees them.
+			- `ghostty +list-keybinds` shows `alt+arrow_left=esc:b` and `alt+arrow_right=esc:f` ship as Ghostty defaults, sending readline word-jump (`ESC b` / `ESC f`) regardless of `macos-option-as-alt`. tmux's `M-Left`/`M-Right` bindings expect xterm sequences `\033[1;3D`/`\033[1;3C` and never receive the keystrokes.
+			- Confirmed by `cat -v` in a plain shell: pressing Option+Right prints `^[f`, not `^[[1;3C`.
+			- `Alt-Up`/`Alt-Down` work because Ghostty has no built-in default for those directions — they fall through as `\033[1;3A`/`\033[1;3B`, which tmux does expect.
+			- The fix (`keybind = alt+arrow_left=esc:[1;3D` in [[Ghostty]] config) resolves resize but breaks terminal word navigation. Accepted limitation: `<prefix> M-Left` / `<prefix> M-Right` are not usable on macOS with [[Ghostty]].

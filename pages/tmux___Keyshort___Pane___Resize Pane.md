@@ -13,7 +13,8 @@
 			- `<prefix> Alt-Right` resize pane right
 		- Description: Adjusts the current pane size incrementally in the arrow direction.
 		- [[My Notes]]
-			- if you have a sub-pane of a sub-pane, it doesn't work. Basically, the underlying tmux commands that are mapped here only work for the "top level" renames
-				- [[tmux/Q/Why doesn't prefix Alt-Left or Alt-Right resize the inner horizontal split in a nested tmux layout (outer top-bottom split and lower left-right split), while Alt-Up or Alt-Down still move the outer boundary?]]
-					- [[2026-05-22 Fri]] noticed that if I have a pane and I split it vertically so now there's a line from top to bottom, **none** of these resize. I can't explain this yet.
-						- [[2026-06-26 Fri]] noticed the same thing
+			- on [[macOS]] with [[Ghostty]], `<prefix> Alt-Left` and `<prefix> Alt-Right` do not work
+				- [[Ghostty]]'s built-in defaults bind `alt+arrow_left=esc:b` and `alt+arrow_right=esc:f` (readline word-jump). These ship regardless of `macos-option-as-alt` and take priority over Option-as-Meta. tmux's `M-Left`/`M-Right` expect xterm sequences `\033[1;3D`/`\033[1;3C` — not `ESC b`/`ESC f` — so they never fire.
+				- `Alt-Up` and `Alt-Down` still work because Ghostty has no built-in default for those directions, so they fall through as proper xterm modifier sequences (`\033[1;3A`/`\033[1;3B`).
+				- The fix (overriding Ghostty's defaults with `keybind = alt+arrow_left=esc:[1;3D`) breaks word navigation at the terminal, which is more valuable. Accepted limitation on macOS.
+				- see [[tmux/Q/Why doesn't prefix Alt-Left or Alt-Right resize the inner horizontal split in a nested tmux layout (outer top-bottom split and lower left-right split), while Alt-Up or Alt-Down still move the outer boundary?]]
