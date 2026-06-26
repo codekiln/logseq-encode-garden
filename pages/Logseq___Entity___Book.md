@@ -5,8 +5,8 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## What counts as a book entity (instance)
 		- A page whose Logseq title is **`Book/<short title>`** — disk file `Book___<short title>.md` where `<short title>` is the stable shelf label (often the cover title; subtitle after a colon is fine when that is how the work is cited).
 		- **Not** book entities: reading notes, chapter logs, or imports living under **`Person/.../Book/...`** or other namespaces—those stay whatever type they are; link them to a **`Book/...`** hub when the underlying work should be indexed as a book.
-	- ## Canonical naming and links
-		- Default canonical page: [[Book/Title]] — disk `Book___Title.md`.
+	- ## Naming and links
+		- Default page: [[Book/Title]] — disk `Book___Title.md`.
 		- Prefer the **title people search for** over publishing metadata in the page name; use `alias::` for cover variants, acronyms, or older paths.
 	- ## Finding and deduplicating
 		- Search in order: exact `Book___*.md` title; `alias::` match; normalized title words in `pages/Book___*.md`; author + distinctive phrase in body text. Classify: existing, similar, new, or blocked.

@@ -10,14 +10,14 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## When to create a person page
 		- Strong signals: individual is a maintainer, author, speaker, or public figure likely to be linked repeatedly; confirmed identity; useful to attach bios, handles, and project subpages.
 		- Prefer **site-specific namespaces** for low-signal identities such as forum users or one-off commenters.
-	- ## Canonical naming and links
-		- Default canonical page: [[Person/Full Name]] — disk `Person___Full Name.md`.
-		- When linking in prose or new notes, use the **canonical** page title (the real filename / Logseq title), not convenience aliases.
+	- ## Naming and links
+		- Default page: [[Person/Full Name]] — disk `Person___Full Name.md`.
+		- When linking in prose or new notes, use the page's real title (the filename / Logseq title), not convenience aliases.
 		- **Do not** introduce `People/...` as a page title, alias, or “plural reference” pattern. This garden does not use a parallel `People/` namespace for persons.
 		- Optional `alias::` is only for **real alternates**: prior title after a rename, spelling variants, handles, or other non-`People/` contextual links—same spirit as **company** alternate names.
 	- ## Finding and deduplicating
 		- Search in order: exact `Person___*.md` title; `alias::` match; partial name / handle in `pages/Person___*.md`; body text (bio, same GitHub profile URL). Classify: existing, similar, new, or blocked.
-		- **One page per person.** Never split the same human across two hub pages; merge or pick one canonical title.
+		- **One page per person.** Never split the same human across two hub pages; merge or pick one title.
 	- ## SCM projects under a person
 		- Repos under a person use `Person/<Name>/GitHub/<Project>` when the maintainer is clear and the person hub exists or should exist. Those project pages are [[Logseq/Entity/Software/Project]] entities, not person entities.
 	- ## Frontmatter on person hub pages

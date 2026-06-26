@@ -9,10 +9,10 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Prefer **company** when the subject is a commercial vendor, product firm, startup, consulting company, or brand tracked because it ships or sells products and services.
 		- Prefer **person** when the subject is an individual maintainer or author.
 	- ## How to name the main page for an organization
-		- Prefer a short top-level canonical name when it is stable and recognizable, such as [[IETF]].
+		- Prefer a short top-level name when it is stable and recognizable, such as [[IETF]].
 		- Add **`alias::`** for common alternate names, full names, legal names, acronyms, and former names when useful.
 	- ## Finding and deduplicating
-		- Check in this order: exact canonical page name, exact alias, official domain, acronym or full-name variants, then page-body mentions of the same site, public role, or description. Classify as: existing, similar, new, or blocked.
+		- Check in this order: exact page name, exact alias, official domain, acronym or full-name variants, then page-body mentions of the same site, public role, or description. Classify as: existing, similar, new, or blocked.
 	- ## Relationship to company
 		- Use organization for non-commercial standards, public-interest, community, foundation, government, or institutional bodies.
 		- Use company for commercial vendors and brands. If a body has both a commercial arm and a foundation/community arm, model the page according to the entity the note is actually about.
@@ -20,5 +20,5 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- To mark a page as an organization instance, add `logseq-entity:: [[Logseq/Entity/Organization]]` in frontmatter. The type page then gets backlinks to all organization pages.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
-		- File: `pages/<OrganizationName>.md` for the canonical short name. First block: H1 with a link to the official site or primary public presence.
+		- File: `pages/<OrganizationName>.md` for the short name. First block: H1 with a link to the official site or primary public presence.
 		- Keep the page lean: what it is, what work it is known for, and notable structure or relationships.

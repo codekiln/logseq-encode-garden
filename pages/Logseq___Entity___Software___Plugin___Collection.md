@@ -5,7 +5,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Vocabulary
 		- Every ecosystem has its own word for this same concept; use the host's own word in instance page paths:
 			- [[nvim]] / [[LazyVim]] — "extra"
-			- VS Code — "Extension Pack"
+			- VS Code (Visual Studio Code) — "Extension Pack"
 			- Emacs — "module" (Doom), "layer" (Spacemacs)
 			- OS package managers — "metapackage" / "package group" (analogy)
 	- ## Examples in this garden

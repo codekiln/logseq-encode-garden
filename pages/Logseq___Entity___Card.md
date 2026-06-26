@@ -9,11 +9,11 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Strong signals: the page title may contain a `/Card/` namespace segment and the page must contains a Logseq review card block marked with `[[Card]]`.
         - Usually a page that's a Card entity will have just one `[[Card]]` logseq link, but that isn't necessarily true; it's possible for a page that models a Card to also contain several related flashcards. 
 		- The garden used to use legacy `#card` instead of the preferred `[[card]]` or `[[Card]]` blocks. These are still valid Logseq cards, but new cards should always use the `[[Card]]` syntax. We'll migrate at a certain point.
-	- ## Canonical naming and links
+	- ## Naming and links
 		- **Link shape:** `[[Source/Page/Short Card Title]]`. See default logseq rules for creating the page from this logical namespace.
             - We used to support `[[Source/Page/Card/Short Card Title]]` where the `Card` segment served as an optional additional signal of a flashcard, but it didn't add enough value to have a distinct namespace, so that's now deprecated (but existing ones are unmigrated)
 	- ## Finding and deduplicating
-		- Consider using logseq skills related to searching logseq, in particular, the `nbb-logseq` executable can help you find `[[card]]` entities
+		- Consider using logseq skills related to searching logseq, in particular, [[nbb-logseq]] can help you find `[[card]]` entities
         - look for the logseq entity attribution for card, which is likely not the only entity attribution; you may see, for example, `logseq-entity: [[Logseq/Entity/Card]], [[Logseq/Entity/Question]]` on the same page. 
 		- Classify candidates as **existing**, **similar** (needs human judgment), **new**, or **blocked**.
 	- ## Frontmatter
@@ -26,6 +26,6 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Use Logseq Flavored Markdown throughout: bullets for body lines, tab indentation, and no blank lines between bullets.
 	- ## Factoring cards out of source pages
 		- This applies to complex content pages (e.g. `[[mise/Architecture]]`). Do not apply to Keyshort pages — they carry `[[Card]]` blocks inline and do not need a companion page.
-		- Move the review prompt and its answer children into the target page using the canonical naming shape `[[Source/Page/Short Card Title]]`.
+		- Move the review prompt and its answer children into the target page using the naming shape `[[Source/Page/Short Card Title]]`.
 		- Replace the original block on the source page with a page embed using `{{embed [[Source/Page/Short Card Title]]}}`.
 		- Preserve the original source page's surrounding structure; the source page should point to the card page, while the card page carries the reviewable content.

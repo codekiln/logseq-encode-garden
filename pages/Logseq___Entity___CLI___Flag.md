@@ -10,7 +10,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Strong signals: the page documents a single flag or option; the title is nested under a known command path; the body references the parent command and upstream flag documentation when available.
 		- Good fit: `--global`, `--dry-run`, short segment names when that is how the garden titles the page (`file` for `-f|--file`).
 		- Not this type: standalone subcommands (use [[Logseq/Entity/CLI/Command]]), global config keys, environment variables, or [[Agent/Command]].
-	- ## Canonical naming and links
+	- ## Naming and links
 		- **Link shape:** `[[{tool}/{command}/--{flag}]]` or `[[{tool}/{command}/{shortName}]]` when the garden uses a short option segment.
 		- **File shape:** `pages/{tool}___{command}___--{flag}.md` or `...___{shortName}.md`; triple underscores between namespace parts.
 		- Use `alias::` on the flag page for common short forms (`-g`, etc.) when established on sibling pages.

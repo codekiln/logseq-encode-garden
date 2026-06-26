@@ -8,7 +8,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## When we treat something as a question entity
 		- Strong signals: the page captures a single answerable question; the title uses a topic namespace plus a fixed **Q** segment before the question wording; the body holds an answer (human, AI, or both).
 		- Not a question entity: general notes without the `/Q/` naming convention, dashboards, CLI command stubs, or long-running threads better modeled as non-Q pages.
-	- ## Canonical naming and links
+	- ## Naming and links
 		- **Link shape:** `[[Topic/Q/Question text]]` or `[[Topic/SubTopic/Q/Question text]]` as needed.
 		- **File shape:** `pages/Topic___Q___Question text.md` with triple underscores between namespace parts; encode `?` as `%3F` in the filename when present.
 		- Use forward slashes in journal and body links; never triple underscores inside Logseq links.
@@ -29,7 +29,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 			- **`via::`** — optional; only for **what logseq page best represents the context in which the question appeared** - only useful when astonishing; be parsimonious and only use this when it's not obvious.
 		- **`tags::` / `alias::`** — only when they match established patterns on sibling question pages in the same topic; never alter existing **`tags::`** on a page you did not create for tagging migration.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
-	- ## Page shape (canonical)
+	- ## Page shape
 	  id:: 69cd1d51-7708-4021-8c21-f7e864ec017e
 		- **H1** — the question text; link key terms to existing pages where it helps.
 		- Optional inline `[[card]]` at the end of the H1 — **only when the human operator explicitly requests it**. Do not add `[[card]]` speculatively, even if the question seems like good SRS material.
@@ -50,7 +50,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 				   - Terse answer, e.g. [[tmux/Keyshort/Prefix]] `w`
 				  ~~~
 			- Use `==highlight==` to mark mnemonic cues in the answer (e.g. `==N==ext Window`).
-			- Wikilink key terms in both the question and the answer to canonical entity pages.
+			- Wikilink key terms in both the question and the answer to existing entity pages.
 	- ## Relationship to other types
 		- **Card:** `[[card]]` on the H1 plus `[[Logseq/Entity/Card]]` in frontmatter when the question page itself is reviewable; distinct from factoring a prompt into a `/Card/` namespace page under [[Logseq/Entity/Card]].
 		- **CLI commands / flags:** questions *about* commands link to [[Logseq/Entity/CLI/Command]] and [[Logseq/Entity/CLI/Flag]] instances; they are not substitutes for command reference stubs.

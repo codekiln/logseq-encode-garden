@@ -15,7 +15,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Check in this order: exact main page name, exact alias, partial title match, repo owner and repo name, then page-body mentions of the same homepage, repo, or description. Classify as: existing, similar, new, or blocked.
 	- ## Frontmatter
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
-		- To mark a page as a software project instance, add `logseq-entity::` pointing at this type page (canonical path uses nested segments: Logseq/Entity/Software/Project). The type page then gets backlinks to all software project pages.
+		- To mark a page as a software project instance, add `logseq-entity::` pointing at this type page (the namespace uses nested segments: Logseq/Entity/Software/Project). The type page then gets backlinks to all software project pages.
 		- Software-project-specific frontmatter can include `created-by::` pointing to a **person** or **company** page when the creator entity is clear.
 	- ## Page shape
 		- File: `pages/<ProjectName>.md`. In links, use the main page name with forward slashes for namespaces where we use them (e.g. `Lazygit/Keyshort/Some action`). First block: H1 with the project title (or a reference link to the project). Keep the page lean: title plus a few descriptive bullets.

@@ -18,7 +18,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Frontmatter
 		- On instances, set **`logseq-entity::`** to **this** entity-type page so backlinks list all UX pattern entities.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
-	- ## Canonical naming and namespaces
+	- ## Naming and namespaces
 		- Prefer singular, Title Case namespace segments.
 		- Use nested paths when the host surface or interaction family adds useful structure, for example [[UX/Pattern/Text Input/Slash Command]].
 		- Keep cross-cutting patterns top-level when they are not tied to one host surface, for example [[UX/Pattern/Dark]].

@@ -8,13 +8,13 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Article entities may live under the author, publisher, site, or existing source namespace that best matches the garden, such as `Person/<Name>/Blog/YY/MM/DD/<Title>`, `<Publication>/Article/YY/MM/<Title>`, or another established nearby pattern.
 		- Namespace labels such as `Blog`, `Article`, and `Essay` organize the page; `logseq-entity:: [[Logseq/Entity/Article]]` identifies the entity type.
 		- Not Article entities: author hub pages, publication hub pages, software/project pages mentioned by an article, books, standards, or concept pages that synthesize ideas across sources.
-	- ## Canonical naming and links
+	- ## Naming and links
 		- Prefer the source title as the final page segment, with year/month/day segments when the surrounding namespace uses date-based import structure.
 		- Use the author or publisher namespace already present in the garden when it exists. Do not create a new author or organization page only for a weak one-off byline unless the source is likely to recur.
 		- Use `alias::` only for real alternate titles, previous paths, or short names likely to be searched.
 	- ## Finding and deduplicating
 		- Search in order: exact source URL; exact title; normalized title words under likely author, publication, Blog, Article, and Essay namespaces; byline plus distinctive title phrase. Classify: existing, similar, new, or blocked.
-		- One page per source work. If the same work is mirrored in multiple places, keep one canonical import page and list alternate source links in body or frontmatter when useful.
+		- One page per source work. If the same work is mirrored in multiple places, keep one import page and list alternate source links in body or frontmatter when useful.
 	- ## Creator relationship
 		- When the author, company, or organization that wrote the piece is clear, set **`created-by::`** to that entity page.
 		- Prefer a person page for an individual byline, a company page for corporate authorship, and an organization page for institutional authorship.

@@ -9,7 +9,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Not this type: font patchers, aggregators, or patcher projects (e.g. [[Font/nerdfonts]], [[Font/Nerd Font]]) — model those as [[Logseq/Entity/Software/Project]].
 	- ## How to name the main page for a font
 		- When the font's creator has an existing namespace in the garden, use `Creator/Font/<Short Name>` — the `Font` segment is the type, and the leaf drops redundant creator and type words. Example: [[JetBrains/Font/Mono Nerd]] (not `JetBrains/JetBrains Mono Nerd Font`). See [[Logseq/Pref/Page/Name]] for the general creator-namespace rule.
-		- When no creator namespace exists, use `Font/<Canonical Font Name>` as a fallback (e.g. [[Font/unscii]], [[Font/Robotization Mono]]).
+		- When no creator namespace exists, use `Font/<Font Name>` as a fallback (e.g. [[Font/unscii]], [[Font/Robotization Mono]]).
 		- For nerd-font-patched variants under a creator namespace, append "Nerd" to the base name leaf (e.g. `Mono Nerd`); "Font" is already carried by the namespace segment.
 		- Add `alias::` for the full display name or common shorthand when useful (e.g. `alias:: [[JetBrains Mono Nerd Font]]`).
 	- ## Finding and deduplicating

@@ -11,7 +11,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 			- modifier keys (Meta, Control, Shift, Command/Super), special keys (Escape, Return, Tab, Backspace), function keys (F1–F12).
 		- ### Not Key Entity
 			- key combos or shortcuts (those are [[Keyshort]] entities); sequences of multiple keys (e.g. Emacs `C-x C-f`).
-	- ## Canonical naming and links
+	- ## Naming and links
 		- Use the most general, cross-platform name as the page name: `[[Key/Meta]]`, `[[Key/Control]]`, `[[Key/Shift]]`.
 		- Platform-specific or notation-specific alternate names belong in `alias::` on the instance page (e.g. `[[Key/Alt]]`, `[[Key/Option]]`, `[[Key/Meta (M-)]]`).
 		- File on disk: `pages/Key___<Name>.md` (triple underscores between namespace segments).
@@ -23,7 +23,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Standard [[Logseq/Frontmatter/logseq-entity]] attribution rules
 		- Standard [[Logseq/Frontmatter/alias]] rules. Include the symbol/notation form `[[Key/Name (symbol)]]` when a standard notation exists (e.g. `[[Key/Meta (M-)]]`, `[[Key/Control (C-)]]`, `[[Key/Shift (⇧)]]`), plus common alternate names (e.g. `[[Key/Alt]]` for Meta).
 			- Platform-specific names go in the alias too: e.g. `[[Key/Mac/Command (⌘)]]` as the symbol alias for `[[Key/Mac/Command]]`, and `[[Key/Alt (⌥)]]` as the symbol alias for `[[Key/Alt]]`.
-	- ## Page shape (canonical)
+	- ## Page shape
 		- **H1** — key name with symbol or notation in parens: `# Meta (M-)`, `# Control (C-)`, `# Shift (⇧)`. Omit parens if no standard symbol exists.
 		- One sentence directly under H1: what the key is and its primary use.
 		- `## Larger Context` — optional; historical origin, OS-specific mapping, terminal emulator notes. Omit when not needed.

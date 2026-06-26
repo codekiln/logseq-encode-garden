@@ -9,9 +9,16 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Not an Entity Definition: an instance page (an actual person, project, book, …), or [[Logseq/Entity]] itself, which is the general conceptual model rather than a single type.
 	- ## Page shape
 		- **Frontmatter** — `logseq-entity:: [[Logseq/Entity/Definition]]` marks the page as an entity definition, so this page collects a backlink to every entity type. Add `alias::` for plural or contextual forms when useful. Never alter `tags::`.
-		- **H1** — a single bullet-wrapped heading in human-friendly Title Case, with abbreviations expanded and no namespace path: `- # Software Plugin`, `- # Security Vulnerability`, `- # CLI Command`. The page's namespace already carries the canonical path.
+		- **H1** — a single bullet-wrapped heading in human-friendly Title Case, with abbreviations expanded and no namespace path: `- # Software Plugin`, `- # Security Vulnerability`, `- # CLI Command`. The page's namespace already carries it.
 		- **First line** — one sentence directly under the H1 in the form `In this garden, **<Name>** pages model <description>.` These first lines read together as a self-describing index of the garden's entity types.
-		- **Body sections** — describe what is specific to recognizing, naming, deduplicating, and shaping that type. Common sections: what counts as an instance, what does not, canonical naming and links, finding and deduplicating, frontmatter expectations, page shape, relationships to other types, and examples. Adapt to the type; short definitions do not need every section.
+		- **Body sections** — describe what is specific to recognizing, naming, deduplicating, and shaping that type. Adapt to the type; short definitions do not need every section. Common sections:
+			- what counts as an instance, and what does not
+			- naming and links
+			- finding and deduplicating
+			- frontmatter expectations
+			- page shape
+			- relationships to other types
+			- examples
 		- Keep shared conventions on [[Logseq/Frontmatter]] and [[Logseq/Pref]] rather than repeating them on each type page.
 	- ## Relationship to [[Logseq/Entity]]
 		- [[Logseq/Entity]] is the general conceptual model — what an entity is and how any page is marked as one. This page is the entity type whose instances are the definition pages themselves, so the garden's set of entity types is queryable through its backlinks rather than kept as a hand-maintained list.

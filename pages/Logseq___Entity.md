@@ -16,9 +16,9 @@ alias:: [[Logseq Entities]]
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Multiple entity membership
 		- A page that declares two or more entities in `logseq-entity::` is an instance of each. Its content must satisfy the shape requirements of all declared entity definitions.
-		- The primary entity comes first in `logseq-entity::`. Canonical ordering for a combination, and any combination-specific page shape, is documented on the primary entity's definition page.
+		- The primary entity comes first in `logseq-entity::`. Ordering for a combination, and any combination-specific page shape, is documented on the primary entity's definition page.
 	- ## Naming entity definition pages
 		- All entity definition pages under `Logseq/Entity/` use **Title Case** nouns. Multi-word types use **nested namespace segments**, for example [[Logseq/Entity/Software/Project]].
 		- Exception: tools and executables that are conventionally lowercase (e.g. `tmux`, `git`) may stay lowercase *on their own topic pages*, but entity definition pages are modeling nouns and use Title Case, for example [[Logseq/Entity/Person]].
 		- Do **not** use kebab-case segments (e.g. `software-project`, `color-theme`) for entity definition page names.
-		- Plural or contextual reference forms belong in `alias::` on the canonical entity definition page; instance naming follows [[Logseq/Frontmatter/alias]].
+		- Plural or contextual reference forms belong in `alias::` on the entity definition page; instance naming follows [[Logseq/Frontmatter/alias]].

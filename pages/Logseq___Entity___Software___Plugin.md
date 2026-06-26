@@ -14,17 +14,17 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Not this type: standalone tools, CLIs, or libraries that work independently of a host application — use [[Logseq/Entity/Software/Project]] instead.
 	- ## How to name the page
 		- Page path: `<Host>/Plugin/<Name>` or `<Host>/Extension/<Name>`, matching the host app's own word.
-		- Use the plugin's canonical display name as published in its marketplace.
+		- Use the plugin's display name as published in its marketplace.
 		- Placing the item under the host namespace makes the dependency relationship explicit without cluttering the top-level namespace.
 	- ## Finding and deduplicating
 		- Check in this order: exact `<Host>/Plugin/<Name>` or `<Host>/Extension/<Name>` page, aliases, page-body mentions of the same repo URL or marketplace ID. Classify as: existing, similar, new, or blocked.
 	- ## Frontmatter
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
-		- `logseq-entity:: [[Logseq/Entity/Software/Plugin]]` marks a page as an instance of this type (use the canonical path regardless of whether the host calls it a plugin or extension).
+		- `logseq-entity:: [[Logseq/Entity/Software/Plugin]]` marks a page as an instance of this type (use this exact link regardless of whether the host calls it a plugin or extension).
 		- `created-by::` — optional; link to a person or company page when the creator entity is clear and in the graph.
 		- `see-also::` — optional; sibling plugins or the host app page when the tie is strong.
 	- ## Page shape
-		- H1: a Markdown link to the plugin's canonical homepage or marketplace listing.
+		- H1: a Markdown link to the plugin's homepage or marketplace listing.
 		- Brief description bullets: what the plugin does, key commands, and notable behavior.
 		- Keep it lean — title, purpose, key links.
 	- ## Relationship to [[Logseq/Entity/Software/Project]]

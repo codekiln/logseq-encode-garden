@@ -20,4 +20,4 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- On instances, set **`logseq-entity:: [[Logseq/Entity/Named Law]]`** so this type page collects backlinks to every named-law entity.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
-		- Logseq Flavored Markdown; keep it lean. Suggested shape: H1 with the law's common name; a one-line **statement** of the law; its **origin** (who coined it, and the situation it came from); its **kind** (heuristic / empirical trend / effect / fallacy); a **canonical example** of it biting; and **see-also** links to related laws.
+		- Logseq Flavored Markdown; keep it lean. Suggested shape: H1 with the law's common name; a one-line **statement** of the law; its **origin** (who coined it, and the situation it came from); its **kind** (heuristic / empirical trend / effect / fallacy); an **example** of it biting; and **see-also** links to related laws.

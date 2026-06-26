@@ -10,16 +10,16 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Not a company entity: non-company standards bodies, foundations, nonprofits, public institutions, consortia, professional associations, or governance/community bodies. Use [[Logseq/Entity/Organization]] for those.
 		- Prefer a **person** entity when the subject is an individual maintainer; use **company** when the subject is the organization or brand (even if it is small).
 	- ## How to name the main page for a company
-		- Prefer a **short top-level canonical name** that matches natural garden linking, such as [[Charm]] for “Charm” even when the GitHub org is `charmbracelet`.
+		- Prefer a **short top-level name** that matches natural garden linking, such as [[Charm]] for “Charm” even when the GitHub org is `charmbracelet`.
 		- Add **`alias::`** for common alternate names (legal name, GitHub org label, “Foo Inc.” vs “Foo”) so search and backlinks stay unified.
 		- If the company is only context for one product and unlikely to recur, the vendor can be documented inline on the software page. Create a company entity when the organization is likely to recur.
 	- ## Finding and deduplicating
-		- Check in this order: exact canonical page name, exact alias, official domain, GitHub org name, then page-body mentions of the same site or org. Classify as: existing, similar, new, or blocked.
+		- Check in this order: exact page name, exact alias, official domain, GitHub org name, then page-body mentions of the same site or org. Classify as: existing, similar, new, or blocked.
 	- ## Relationship to Software/Project
 		- Software entities may set `created-by:: [[CompanyName]]` when the maintainer is the organization and a company page exists. If the creator is an individual with a [[Person/...]] page, use that instead (or both only when both are accurate and useful).
 	- ## Frontmatter
 		- To mark a page as a company instance, add `logseq-entity::` with a link to this type page in frontmatter. The type page then gets backlinks to all company pages.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
-		- File: `pages/<CompanyName>.md` for the canonical short name. First block: H1 with a link to the official site (or primary public presence).
+		- File: `pages/<CompanyName>.md` for the short name. First block: H1 with a link to the official site (or primary public presence).
 		- Keep the page lean: what the company is, notable products or org links, and backlinks from software entities.

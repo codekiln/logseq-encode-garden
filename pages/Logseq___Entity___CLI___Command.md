@@ -11,7 +11,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Good fit: reference stubs for `mise install`, `mise cache clear`, `git status`, etc.
 		- Not this type: the **tool hub** ([[mise]], other `tags:: [[CLI/Tool]]` pages), config/settings concepts, task definitions, backends, how-tos, Q pages, or [[Agent/Command]] (AI slash commands).
 		- Not [[Logseq/Entity/Software/Project]]: that type models the **product**; command entities model **individual subcommands** under the product namespace.
-	- ## Canonical naming and links
+	- ## Naming and links
 		- **Link shape:** `[[{tool}/{command/path}]]` matching the vendor CLI (e.g. `[[mise/cache/clear]]`).
 		- **File shape:** `pages/{tool}___{command}___{path}.md` with triple underscores between segments; preserve `--flag`-style segments when they are command-level (rare); flag **options** use [[Logseq/Entity/CLI/Flag]] instead.
 		- Use forward slashes in body and journal links; never triple underscores inside Logseq links.
