@@ -9,13 +9,13 @@
 		- Shortcut: `y`
 		- Description: Opens a [[Curses]] [[Modal]] with copy options.
 	- **Copy file name to clipboard** #card
-	  card-last-interval:: -1
-	  card-repeats:: 1
-	  card-ease-factor:: 2.22
-	  card-next-schedule:: 2026-06-25T04:00:00.000Z
-	  card-last-reviewed:: 2026-06-24T06:19:29.981Z
-	  card-last-score:: 1
-		- Shortcut: `y` then `n`
+	  card-last-interval:: 4
+	  card-repeats:: 2
+	  card-ease-factor:: 2.08
+	  card-next-schedule:: 2026-06-30T07:23:19.851Z
+	  card-last-reviewed:: 2026-06-26T07:23:19.851Z
+	  card-last-score:: 3
+		- Shortcut: `y` then `n` (via modal), or `<ctrl+o>` directly (no modal)
 			- [[Mnemonic]]: ==y==ank ==n==ame
 		- Description: Copies the file name to clipboard.
 	- **Copy relative path to clipboard** #card
