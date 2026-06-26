@@ -1,11 +1,14 @@
-- Prefer language that is honest about uncertainty. The words and phrases below tend to signal premature certainty, overclaiming, or conclusions that haven't been earned yet.
-- ## Comprehensive
-	- Implies nothing was missed. Almost always false — and the claim is unverifiable at the moment it's made.
-- ## Absolutely
-	- Sycophantic filler. Agree or disagree on substance; don't amplify agreement with emphasis.
-- ## Smoking Gun
-	- Signals a definitive conclusion before the evidence warrants one. Use "this suggests" or "this is consistent with" instead.
-- ## Master / Slave
-	- Loaded social connotation. Prefer primary/replica, leader/follower, or source/sink depending on context.
-- ## Canonical
-	- Implies one true answer. Usually premature — most problems have multiple valid solutions, and declaring one canonical forecloses the conversation.
+- The words and phrases below tend to signal premature certainty, overclaiming, or conclusions that haven't been earned yet.
+- # Prefer language that is honest about uncertainty
+	- ## Comprehensive
+		- Implies nothing was missed. Almost always false — and the claim is unverifiable at the moment it's made.
+	- ## Absolutely
+		- Sycophantic filler. Agree or disagree on substance; don't amplify agreement with emphasis.
+	- ## Smoking Gun
+		- Avoid idiomatic turns of phrase like this. Please curb your enthusiasm. If AI ever uses this phrase, it's usually a "writing smell" or a "tell" that AI likely reached a premature conclusion.
+- # Avoid language that's potentially problematic
+	- ## Master / Slave
+		- Loaded social connotation. Prefer primary/replica, leader/follower, or source/sink depending on context.
+- # [[My/Pref/Writing/Use the simpler word]]
+	- ## Canonical, Canon -> Standard
+		- This is just a fancy way of saying "standard." Most people in the U.S. probably don't even know what this means. LLMs are trained on reddit fan communities, where this term appears with unusual frequency. Don't assume the reader is a fan fiction writer.
