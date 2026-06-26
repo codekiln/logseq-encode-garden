@@ -1,5 +1,7 @@
-- # person
-	- Entity definition for **person** entities: real individuals tracked as first-class hub pages under `Person/Full Name`.
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Person
+	- In this garden, **Person** pages model real individuals tracked as first-class hub pages under `Person/Full Name`.
 	- ## Namespace vs entity type
 		- A **hierarchical title** under `Person/` does **not** imply every child page is a person entity. Example: [[Person/Someone/GitHub/dotfiles]] is usually a [[Logseq/Entity/Software/Project]] instance (or another type), nested for organization and SCM style—not a second “person” instance. Choose `logseq-entity::` from **content and role**, not from the `Person___` filename prefix alone.
 	- ## What counts as a person entity (instance)

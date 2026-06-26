@@ -1,5 +1,7 @@
-# CLI/Flag
-	- This page is the entity definition for **CLI flag** entities: one flag or option of a documented CLI command, as its own page nested under that command’s namespace.
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # CLI Flag
+	- In this garden, **CLI Flag** pages model one flag or option of a documented CLI command, as its own page nested under that command’s namespace.
 	- ## Examples in this garden
 		- [[mise/unuse/--global]] — long flag with `alias::` for `[[mise/unuse/-g]]`.
 		- [[mise/use/--global]] — global install/activate for [[mise/use]].

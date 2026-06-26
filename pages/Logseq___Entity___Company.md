@@ -1,5 +1,7 @@
-- # company
-	- This page is the entity definition for **company** entities: commercial vendors, businesses, product firms, devtool vendors, consulting companies, and brands tracked as first-class pages—often because they ship multiple [[Logseq/Entity/Software/Project]] pages linked with `created-by::`.
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Company
+	- In this garden, **Company** pages model commercial vendors, businesses, product firms, devtool vendors, consulting companies, and brands tracked as first-class pages—often because they ship multiple [[Logseq/Entity/Software/Project]] pages linked with `created-by::`.
 	- ## Examples in this garden
 		- [[Charm]] — vendor behind the Charmbracelet GitHub org; `created-by:: [[Charm]]` on [[gum]]; ecosystem siblings include [[glow]] and [[Glamour]].
 		- [[Jellyfish]] — engineering management platform (Boston); [[Person/Andrew Lau]] is co-founder and CEO; appears on [[iia/1130 Built in Boston Scaling Global AI Company]].

@@ -1,7 +1,8 @@
 alias:: [[Logseq/Entity/Software/Distro]]
+logseq-entity:: [[Logseq/Entity/Definition]]
 
-- # Software/Distribution
-	- This page is the entity definition for software **distributions** (distros): a complete, standalone, opinionated curated system built on a base platform. A distribution ships defaults plus a curated set of packages/plugins and (often) its own configuration framework, and you adopt it *as the whole base experience* — not as an add-on to one.
+- # Software Distribution
+	- In this garden, **Software Distribution** pages model a complete, standalone, opinionated curated system built on a base platform (a "distro"). A distribution ships defaults plus a curated set of packages/plugins and (often) its own configuration framework, and you adopt it *as the whole base experience* — not as an add-on to one.
 	- ## Vocabulary
 		- **Distribution / distro** — the term used in both operating systems (Debian, Ubuntu, Arch) and editors (Neovim distros like LazyVim/AstroNvim, Emacs distros like Doom/Spacemacs). Canonical type name is `Distribution`; `Distro` is an alias.
 	- ## Examples in this garden

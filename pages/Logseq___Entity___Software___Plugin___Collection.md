@@ -1,5 +1,7 @@
-- # Software/Plugin/Collection
-	- A specialization of the [[Logseq/Entity/Collection]] pattern: a **curated, composable collection of plugins** (plus the supporting tooling/config they need) for a specific host application, added *into* a host rather than standing alone. Members are [[Logseq/Entity/Software/Plugin]] instances.
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Software Plugin Collection
+	- In this garden, **Software Plugin Collection** pages model a specialization of the [[Logseq/Entity/Collection]] pattern: a **curated, composable collection of plugins** (plus the supporting tooling/config they need) for a specific host application, added *into* a host rather than standing alone. Members are [[Logseq/Entity/Software/Plugin]] instances.
 	- ## Vocabulary
 		- Every ecosystem has its own word for this same concept; use the host's own word in instance page paths:
 			- [[nvim]] / [[LazyVim]] — "extra"

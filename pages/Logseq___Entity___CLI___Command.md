@@ -1,5 +1,7 @@
-# CLI/Command
-	- This page is the entity definition for **CLI command** entities: one invocable subcommand of a command-line tool, documented as a page under that tool’s namespace.
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # CLI Command
+	- In this garden, **CLI Command** pages model one invocable subcommand of a command-line tool, documented as a page under that tool’s namespace.
 	- ## Examples in this garden
 		- [[mise/unuse]] — top-level `mise` subcommand.
 		- [[mise/cache/clear]] — nested subcommand under [[mise/cache]].

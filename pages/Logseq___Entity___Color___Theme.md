@@ -1,5 +1,7 @@
-# color-theme
-	- This page is the entity definition for **color theme** entities: coordinated palette families (foreground, background, accent colors) reused across terminals, editors, multiplexers, file managers, and other UI tools. A color-theme instance is the *aesthetic system* (e.g. [[Catppuccin]] with subpages [[Catppuccin/Latte]], [[Catppuccin/Frappe]], [[Catppuccin/Macchiato]], [[Catppuccin/Mocha]]); individual ports often stay [[Logseq/Entity/Software/Project]] instance pages that link back to the theme hub.
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Color Theme
+	- In this garden, **Color Theme** pages model coordinated palette families (foreground, background, accent colors) reused across terminals, editors, multiplexers, file managers, and other UI tools. A color-theme instance is the *aesthetic system* (e.g. [[Catppuccin]] with subpages [[Catppuccin/Latte]], [[Catppuccin/Frappe]], [[Catppuccin/Macchiato]], [[Catppuccin/Mocha]]); individual ports often stay [[Logseq/Entity/Software/Project]] instance pages that link back to the theme hub.
 	- ## Examples in this garden
 		- [[Catppuccin]] — hub with palette overview asset, stack matrix, and flavor subpages for per-variant config ids and previews.
 	- ## When we treat something as a color theme

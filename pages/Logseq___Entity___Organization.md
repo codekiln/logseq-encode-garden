@@ -1,5 +1,7 @@
-- # organization
-	- This page is the entity definition for **organization** entities: non-company bodies tracked as first-class pages, including standards organizations, foundations, nonprofits, public institutions, consortia, professional associations, and governance or community bodies.
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Organization
+	- In this garden, **Organization** pages model non-company bodies tracked as first-class pages, including standards organizations, foundations, nonprofits, public institutions, consortia, professional associations, and governance or community bodies.
 	- ## Examples in this garden
 		- [[IETF]] - standards organization for Internet protocols and related technical documents.
 	- ## When we treat something as an organization

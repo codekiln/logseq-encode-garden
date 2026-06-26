@@ -1,7 +1,8 @@
 alias:: [[Logseq/Entity/Security/Vulnerability]], [[Logseq/Entity/Security/Attack]]
+logseq-entity:: [[Logseq/Entity/Definition]]
 
-- # Security/Vuln
-	- This page is the entity definition for **security vuln** entities: pages whose primary purpose is to document a vulnerability, exploit class, attack technique, attack chain, or defensive-relevant abuse pattern.
+- # Security Vulnerability
+	- In this garden, **Security Vulnerability** pages model a vulnerability, exploit class, attack technique, attack chain, or defensive-relevant abuse pattern.
 	- ## Examples in this garden
 		- [[Security/Attack/Chain/Supply]]
 		- [[Security/Vulnerability]]

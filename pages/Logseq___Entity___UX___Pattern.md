@@ -1,5 +1,7 @@
-# UX Pattern
-	- This page is the entity definition for **UX pattern** entities: reusable interaction patterns and interface affordances that describe how an interface behaves, how people invoke it, and what kind of action space it opens up.
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # UX Pattern
+	- In this garden, **UX Pattern** pages model reusable interaction patterns and interface affordances that describe how an interface behaves, how people invoke it, and what kind of action space it opens up.
 	- ## Namespace vs entity type
 		- A page under `UX/Pattern/...` is a strong candidate for this entity type, but the namespace alone does not decide the type.
 		- Neighboring `UX/...` pages may still be better modeled as **term** or **concept** pages when they are mainly a definition, essay, or design lens rather than a reusable interaction pattern.

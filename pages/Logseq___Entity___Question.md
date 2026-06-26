@@ -1,5 +1,7 @@
-- # Question entity
-	- One of the most frequent entities in the garden, this entity models a Question I had at a particular time. Typically Questions are stored under a topic namespace with a dedicated `/Q/` segment so they stay findable and deduplicable.
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Question
+	- In this garden, **Question** pages model a question I had at a particular time — one of the most frequent entities here. Typically Questions are stored under a topic namespace with a dedicated `/Q/` segment so they stay findable and deduplicable.
 	- ## Examples in this garden
 		- Pages on disk match `pages/*___Q___*.md` (e.g. [[mise/Q/How do I remove a mise tool?]] → `mise___Q___How do I remove a mise tool%3F.md`).
 		- In-graph titles use a slash path such as `Topic/Q/Question text` or `Topic/SubTopic/Q/Question text`.

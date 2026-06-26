@@ -1,5 +1,7 @@
-# concept
-	- This page is the entity definition for **concept** entities: understanding-oriented pages that follow the garden’s Diataxis-style shape (aligned with [[Diataxis/Concept]] / [[Diataxis/Explanation]]). Paradigms, architectural lenses, and other “big ideas” explained rather than only defined.
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Concept
+	- In this garden, **Concept** pages model understanding-oriented topics that follow the garden’s Diataxis-style shape (aligned with [[Diataxis/Concept]] / [[Diataxis/Explanation]]): paradigms, architectural lenses, and other “big ideas” explained rather than only defined.
 	- ## Examples in this garden
 		- [[Programming/Language/Func]]
 		- [[Programming/Language/Concept/Object-Oriented]]

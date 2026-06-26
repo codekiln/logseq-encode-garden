@@ -1,5 +1,7 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
 - # Collection
-	- This page defines the **Collection pattern**: a cross-cutting entity pattern for a *curated collection whose members are all instances of some other entity type*. It is not instantiated directly — it is specialized per member type as `<EntityType>/Collection` (e.g. [[Logseq/Entity/Software/Plugin/Collection]]), and each specialization points back here for the shared rules.
+	- In this garden, the **Collection** pattern models a *curated collection whose members are all instances of some other entity type*. It is not instantiated directly — it is specialized per member type as `<EntityType>/Collection` (e.g. [[Logseq/Entity/Software/Plugin/Collection]]), and each specialization points back here for the shared rules.
 	- ## The pattern, and the reserved `/Collection` segment
 		- A specialization lives at the member type's namespace with a trailing `/Collection` segment. That trailing segment is a **reserved pattern marker**: `X/Collection` means *"a curated collection whose members are instances of X"* (a collection-**of**-X), **not** a kind-of-X. This deliberately flips the usual is-a reading of namespace nesting — `Software/Plugin` *is a* plugin, but `Software/Plugin/Collection` *is a collection of* plugins. The flip applies only to the reserved trailing `/Collection` segment.
 	- ## Distinct from multiple entity membership

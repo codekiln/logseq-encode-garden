@@ -1,5 +1,7 @@
-# *Key* entities
-	- Pages that are Key entities model a single physical or logical [[Keyboard/Computer]] key. These pages are anchor points for expressing [[Keyshorts]] along with some optional historical commentary on certain special computer keyboard keys.
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Key
+	- In this garden, **Key** pages model a single physical or logical [[Keyboard/Computer]] key. These pages are anchor points for expressing [[Keyshorts]] along with some optional historical commentary on certain special computer keyboard keys.
 	- ## Examples in this garden
 		- [[Key/Meta]] — the Meta/Alt modifier key
 		- Future instances: [[Key/Control]], [[Key/Shift]], [[Key/Command]], [[Key/Option]], [[Key/Escape]], [[Key/Return]], [[Key/Tab]]

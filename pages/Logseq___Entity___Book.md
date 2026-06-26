@@ -1,5 +1,7 @@
-- # book
-	- Entity definition for **book** entities: published works tracked as first-class pages under `Book/Title`.
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Book
+	- In this garden, **Book** pages model published works tracked as first-class pages under `Book/Title`.
 	- ## What counts as a book entity (instance)
 		- A page whose Logseq title is **`Book/<short title>`** — disk file `Book___<short title>.md` where `<short title>` is the stable shelf label (often the cover title; subtitle after a colon is fine when that is how the work is cited).
 		- **Not** book entities: reading notes, chapter logs, or imports living under **`Person/.../Book/...`** or other namespaces—those stay whatever type they are; link them to a **`Book/...`** hub when the underlying work should be indexed as a book.

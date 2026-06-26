@@ -4,9 +4,10 @@ alias:: [[Logseq Entities]]
 	- This page is the general conceptual model for entities in this knowledge garden: what an entity is, how a page is marked as one, and how entity definition pages are named. The entity types themselves are defined on their own child pages.
 	- ## Terms
 		- **Entity** — a single thing that has its own page in the garden: one person, one software project, one book, etc. A page models one or more entities. When it models more than one, it must satisfy the shape requirements of each.
-		- **Entity definition** — the documentation page for a category of entities that share the same modeling rules. Each entity definition page describes how to recognize, name, and create instances of that kind; individual pages that meet those rules are its instances.
+		- **Entity definition** — the documentation page for a category of entities that share the same modeling rules. Each entity definition page describes how to recognize, name, and create instances of that kind; individual pages that meet those rules are its instances. Entity definition pages are themselves an entity type, modeled by [[Logseq/Entity/Definition]].
 	- ## Finding the entity types
 		- Each entity type has its own definition page under the `Logseq/Entity/` namespace — one page per type. The set of those pages is the list of entity types the garden models; there is no separate catalog to maintain on this page.
+		- Every entity definition page carries `logseq-entity:: [[Logseq/Entity/Definition]]`, so the list of entity types is the backlinks of [[Logseq/Entity/Definition]] — queryable rather than hand-maintained.
 		- The first line under an entity definition page's heading is its short description, so the type pages together read as a self-describing index.
 	- ## How we mark a page as an entity
 		- In frontmatter, add `logseq-entity::` with a link to the entity definition page for each entity the page models.

@@ -1,5 +1,7 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
 - # Card
-	- This page describes the Card entities that are modeled in Logseq. Cards are flashcards. 
+	- In this garden, **Card** pages model flashcards reviewed in Logseq's spaced-repetition system.
 	- ## Examples in this garden
 		- [[mise/Architecture/Card/Jobs to be Done]] is a card factored out from [[mise/Architecture]] and embedded back into the source page.
 		- Keyshort pages such as `Scope/Keyshort/Action` may be card entities as well as [[Logseq/Entity/CLI/Command]] entities.

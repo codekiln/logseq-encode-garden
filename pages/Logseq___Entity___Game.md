@@ -1,5 +1,7 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
 - # Game
-	- This page is the entity definition for **game** entities: individual playable works or systems tracked as first-class pages. A game entity can be a commercial video game, board game, card game, tabletop RPG system, sport-as-game, folk game, or similar playable thing, as long as the page’s primary identity is the game itself rather than a book, software tool, company, person, or general concept.
+	- In this garden, **Game** pages model individual playable works or systems tracked as first-class pages. A game entity can be a commercial video game, board game, card game, tabletop RPG system, sport-as-game, folk game, or similar playable thing, as long as the page’s primary identity is the game itself rather than a book, software tool, company, person, or general concept.
 	- ## What counts as an instance
 		- **Specific titles and systems** — pages such as [[Game/Video/Cookie Clicker]], [[Co/Nintendo/Game/Super Mario]], or later [[Game/Board/Catan]] when the page tracks the playable work/system.
 		- **Published and folk games** — the entity does not need a software release, publisher page, or root [[Game]] namespace; the test is whether the page is about the playable game.

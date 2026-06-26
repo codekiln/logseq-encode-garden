@@ -1,5 +1,7 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
 - # Game Type
-	- This page is the entity definition for **game type** entities: reusable categories used to describe games, such as genres, families, mechanics, modes, and design patterns. It is for pages whose primary identity is a type of game, not an individual playable work or system.
+	- In this garden, **Game Type** pages model reusable categories used to describe games, such as genres, families, mechanics, modes, and design patterns — pages whose primary identity is a type of game, not an individual playable work or system.
 	- ## What counts as an instance
 		- **Genres and families** — reusable catalog labels such as [[Game/Video/Platformer]].
 		- **Mechanics and modes** — recurring game-design categories when the page is about the game-design lens itself.

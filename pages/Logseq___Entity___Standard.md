@@ -1,5 +1,7 @@
-- # standard
-	- Entity definition for **standard** entities: **normative or widely adopted conventions** tracked as first-class pages—published specifications, RFCs, semantic-versioning rules, commit-message and CLI design conventions, schema or protocol definitions, and similar artifacts—when the page’s **primary identity is the standard itself** (what implementations and documents **conform to**), not a **software product**, a **standards body** as an institution, or a **concept** essay that only explains the ideas without anchoring the spec.
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Standard
+	- In this garden, **Standard** pages model **normative or widely adopted conventions** tracked as first-class pages—published specifications, RFCs, semantic-versioning rules, commit-message and CLI design conventions, schema or protocol definitions, and similar artifacts—when the page’s **primary identity is the standard itself** (what implementations and documents **conform to**), not a **software product**, a **standards body** as an institution, or a **concept** essay that only explains the ideas without anchoring the spec.
 	- ## What counts as a standard entity (instance)
 		- Strong signals: stable **normative URL** (spec site, RFC editor, versioned doc); the page title or purpose is **the name of the convention**; repeated phrases like *specification*, *conforms to*, *RFC \d+*, *semantic conventions*, *this document defines*.
 		- Good fit: **community specs** with a canonical site (e.g. commit-message formats, CLI UX guidelines), **IETF/W3C/OASIS-style** documents when the garden models the **document**, **schema languages**, **semantic-convention** docs for observability, **authentication / messaging** protocol suites named as standards.

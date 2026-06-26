@@ -7,7 +7,7 @@ Repo-side support for the **logseq-entity** skill. **Per-type rules** (recogniti
 Agents read configuration in this order and stop relying on lower layers once the graph answers the question:
 
 1. **`[[Logseq/Entity]]`** — shared, garden-agnostic conceptual model: terms, how instances are marked (`logseq-entity::`), and naming rules. It does **not** catalog the types; the set of `Logseq/Entity/<Type>` pages is that list.
-2. **`[[Logseq/Entity/<Type>]]`** — entity definition for that entity (whatever titles appear under `Logseq/Entity/` in this garden).
+2. **`[[Logseq/Entity/<Type>]]`** — entity definition for that entity (whatever titles appear under `Logseq/Entity/` in this garden). Each is itself marked `logseq-entity:: [[Logseq/Entity/Definition]]`; that meta page holds the canonical shape of a type page, and its backlinks are the queryable list of types.
 3. **`[[Logseq/Frontmatter]]`** — shared page-level attribute conventions (`tags::`, `alias::`, `see-also::`, `via::`, `date-created::`, etc.).
 4. **`[[Logseq/Pref]]`** (and children such as **`[[Logseq/Pref/Page/Name]]`**) — optional encode-wide preferences when present (page naming, editorial defaults).
 5. **This file** — only when those pages are missing, incomplete, or the workspace has no graph copy yet.

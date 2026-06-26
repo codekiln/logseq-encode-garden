@@ -1,7 +1,8 @@
 alias:: [[Logseq/Entity/Software/Extension]]
+logseq-entity:: [[Logseq/Entity/Definition]]
 
-- # Software/Plugin
-	- A plugin, extension, or add-on that extends the behavior of a specific host application. The garden uses **the host app's own terminology** for the namespace segment: apps that say "plugin" get a `/Plugin/` segment; apps that say "extension" get an `/Extension/` segment.
+- # Software Plugin
+	- In this garden, **Software Plugin** pages model a plugin, extension, or add-on that extends the behavior of a specific host application. The garden uses **the host app's own terminology** for the namespace segment: apps that say "plugin" get a `/Plugin/` segment; apps that say "extension" get an `/Extension/` segment.
 	- ## Vocabulary
 		- **Plugin** — term used by Obsidian, Neovim, 1Password CLI, Claude Code, and similar tools (e.g. [[Obsidian/Plugin/Easy Copy]], `1Password/Dev/CLI/Shell Plugin`).
 		- **Extension** — term used by VS Code, browsers, and Claude Desktop (e.g. `Claude/Desktop/Extension`, `1Password/Browser Extension/…`).

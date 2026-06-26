@@ -1,5 +1,7 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
 - # Font
-	- This page is the entity definition for **font** entities: named typefaces and font families installed and used across terminals, editors, and other tools in the developer environment.
+	- In this garden, **Font** pages model named typefaces and font families installed and used across terminals, editors, and other tools in the developer environment.
 	- ## Examples in this garden
 		- [[JetBrains/Font/Mono Nerd]] — monospaced programming font patched with Nerd Font icon glyphs; installed via homebrew cask.
 	- ## When we treat something as a font
