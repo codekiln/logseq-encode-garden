@@ -109,6 +109,34 @@
 (defn neg-macro [favs] (str "{{cards (not " (or-expr favs) ") }}"))
 (defn one-macro [fav] (str "{{cards [[" fav "]] }}"))
 
+(defn not-clauses [excludes]
+  (str/join " " (map #(str "(not [[" % "]])") excludes)))
+
+;; subpage-macro: like one-macro but with optional namespace exclusions.
+;; deck-exclude:: [[oh-my-tmux]] on the {{cards}} block produces
+;; {{cards (and [[fav]] (not [[oh-my-tmux]])) }} instead of {{cards [[fav]] }}.
+(defn subpage-macro [fav excludes]
+  (if (empty? excludes)
+    (one-macro fav)
+    (str "{{cards (and [[" fav "]] " (not-clauses excludes) ") }}")))
+
+;; pos-macro-with-excludes: like pos-macro but excluding specific namespaces.
+;; deck-exclude:: [[oh-my-tmux]] on the aggregate {{cards}} block produces
+;; {{cards (and (or ...) (not [[oh-my-tmux]])) }}.
+(defn pos-macro-with-excludes [favs excludes]
+  (if (empty? excludes)
+    (pos-macro favs)
+    (str "{{cards (and " (or-expr favs) " " (not-clauses excludes) ") }}")))
+
+;; read-deck-excludes: parse deck-exclude:: [[Page]] from block-property lines
+;; immediately following the {{cards}} line (macro-idx + 1..5).
+;; Returns a seq of page-name strings, or nil.
+(defn read-deck-excludes [lines macro-idx]
+  (some (fn [line]
+          (when-let [m (re-find #"^\s*deck-exclude::\s*(.+)$" line)]
+            (seq (map second (re-seq #"\[\[([^\]]+)\]\]" (second m))))))
+        (take 5 (drop (inc macro-idx) lines))))
+
 (defn expr-sig
   "Whitespace/order/case-insensitive signature of a cards expression:
    [negated? #{normalized-links}]. Cosmetic edits Logseq makes never trip it."
@@ -203,7 +231,9 @@
       (do (when write? (write-file file (aggregate-template decks)))
           (swap! report conj [:create file "aggregate + background + by-favorite"]))
       (let [lines (vec (str/split-lines (read-file file)))
-            [lines c1] (rewrite-anchor lines "aggregate" (pos-macro decks))
+            agg-idx (macro-line-idx lines "aggregate")
+            excludes (or (and agg-idx (read-deck-excludes lines agg-idx)) [])
+            [lines c1] (rewrite-anchor lines "aggregate" (pos-macro-with-excludes decks excludes))
             [lines c2] (rewrite-anchor lines "background" (neg-macro decks))
             [lines c3] (ensure-by-favorite lines decks)
             changed? (or c1 c2 c3)
@@ -214,8 +244,7 @@
                             (if changed? notes "in sync")])))))
 
 (defn process-subpage [fav write? report]
-  (let [file (title->file (str root-page "/" fav))
-        desired (one-macro fav)]
+  (let [file (title->file (str root-page "/" fav))]
     (if-not (exists? file)
       (do (when write? (write-file file (subpage-template fav)))
           (swap! report conj [:create file (str "deck [[" fav "]]")]))
@@ -223,7 +252,9 @@
             idx (or (macro-line-idx lines (str "[[" fav "]]"))
                     (first (keep-indexed (fn [i l] (when (str/includes? l "{{cards") i)) lines)))]
         (if idx
-          (let [line (nth lines idx)
+          (let [excludes (or (read-deck-excludes lines idx) [])
+                desired (subpage-macro fav excludes)
+                line (nth lines idx)
                 changed? (not= (expr-sig line) (expr-sig desired))
                 lines (if changed? (assoc lines idx (replace-macro line desired)) lines)]
             (when (and write? changed?) (write-file file (join-lines lines)))

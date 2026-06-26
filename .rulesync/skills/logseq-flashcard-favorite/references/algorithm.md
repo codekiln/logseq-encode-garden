@@ -18,6 +18,20 @@ graph root). The mise task `mise-tasks/logseq/flashcard-favorite` forwards
    `Logseq/Flashcard` (e.g. the self-referential `logseq/flashcard/review`).
 4. **Reconcile** the aggregate page, each subpage, and stale subpages (below).
 
+## Namespace exclusions (`deck-exclude::`)
+
+Adding `deck-exclude:: [[oh-my-tmux]]` as a block property on any managed
+`{{cards}}` block causes the script to wrap the expression with `(not ...)`:
+
+- Subpage deck: `{{cards [[tmux]] }}` → `{{cards (and [[tmux]] (not [[oh-my-tmux]])) }}`
+- Aggregate deck: `{{cards (or ...) }}` → `{{cards (and (or ...) (not [[oh-my-tmux]])) }}`
+- Multiple excludes: `deck-exclude:: [[A]] [[B]]` → `(not [[A]]) (not [[B]])` within `(and ...)`
+
+The property is **user-configured** — the script reads it from the file but never
+auto-generates it. A second `--write` run is idempotent: since the desired macro
+now includes the exclusions, `expr-sig` comparisons stay equal and no rewrite
+happens. The exclusion survives all future favorite additions.
+
 ## Anchors
 
 Managed `{{cards}}` blocks carry a `favorite-deck::` property used to find them
