@@ -29,6 +29,7 @@ see-also:: [[Terminal/Comparison]]
 			    };
 			  };
 			  ~~~
+		- `font.name` uses [[JetBrains/Font/Mono Nerd]].
 		- `theme` uses [[Catppuccin]]; see [[Catppuccin]] for flavors and the rest of the stack.
 	- ## Notable Features
 		- GPU rendering via OpenGL/Metal

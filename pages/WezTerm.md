@@ -28,6 +28,7 @@ see-also:: [[Terminal/Comparison]]
 			    '';
 			  };
 			  ~~~
+		- `font` uses [[JetBrains/Font/Mono Nerd]].
 		- `color_scheme` uses [[Catppuccin]]; see [[Catppuccin]] for flavors and other tools.
 	- ## Notable Features
 		- Lua-based configuration (`.wezterm.lua`)

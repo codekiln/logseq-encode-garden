@@ -26,6 +26,7 @@ see-also:: [[Terminal/Comparison]]
 			    };
 			  };
 			  ~~~
+			- `font.normal.family` uses [[JetBrains/Font/Mono Nerd]].
 	- ## Notable Features
 		- GPU rendering via OpenGL/Metal
 		- Vi mode for keyboard-driven selection and navigation

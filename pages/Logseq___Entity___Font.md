@@ -1,0 +1,23 @@
+- # Font
+	- This page is the entity definition for **font** entities: named typefaces and font families installed and used across terminals, editors, and other tools in the developer environment.
+	- ## Examples in this garden
+		- [[JetBrains/Font/Mono Nerd]] — monospaced programming font patched with Nerd Font icon glyphs; installed via homebrew cask.
+	- ## When we treat something as a font
+		- Strong signals: a named typeface family installed on the system; referred to by font-family string in terminal or editor config; downloadable as a `.ttf`/`.otf`/`.woff` file or distributed via a homebrew cask.
+		- Not this type: font patchers, aggregators, or patcher projects (e.g. [[Font/nerdfonts]], [[Font/Nerd Font]]) — model those as [[Logseq/Entity/Software/Project]].
+	- ## How to name the main page for a font
+		- When the font's creator has an existing namespace in the garden, use `Creator/Font/<Short Name>` — the `Font` segment is the type, and the leaf drops redundant creator and type words. Example: [[JetBrains/Font/Mono Nerd]] (not `JetBrains/JetBrains Mono Nerd Font`). See [[Logseq/Pref/Page/Name]] for the general creator-namespace rule.
+		- When no creator namespace exists, use `Font/<Canonical Font Name>` as a fallback (e.g. [[Font/unscii]], [[Font/Robotization Mono]]).
+		- For nerd-font-patched variants under a creator namespace, append "Nerd" to the base name leaf (e.g. `Mono Nerd`); "Font" is already carried by the namespace segment.
+		- Add `alias::` for the full display name or common shorthand when useful (e.g. `alias:: [[JetBrains Mono Nerd Font]]`).
+	- ## Finding and deduplicating
+		- Check in this order: `Creator/Font/<Name>` page, `Font/<Name>` fallback, aliases, font-family string matches in terminal or editor config pages. Classify as: existing, similar, new, or blocked.
+	- ## Frontmatter
+		- `logseq-entity:: [[Logseq/Entity/Font]]` marks a page as a font instance.
+		- `is-nerd-font:: true` — include when the font is patched with Nerd Font icon glyphs; see also [[Font/Nerd Font]].
+		- `created-by::` — optional; link to the person or company page when the creator is tracked in the garden.
+		- `see-also::` — link to [[Font/Nerd Font]] for nerd font variants; related font or terminal pages.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- First block: H1 with a Markdown link to the font's official homepage or GitHub repo.
+		- Keep it lean: name, brief description, install command (e.g. `brew install --cask font-<name>`), font-family strings used in terminal configs, and nerd font status.

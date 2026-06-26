@@ -30,6 +30,7 @@ see-also:: [[Terminal/Comparison]]
 			    };
 			  };
 			  ~~~
+		- `font-family` uses [[JetBrains/Font/Mono Nerd]].
 		- `theme` uses a [[Catppuccin]] flavor; see [[Catppuccin]] for other flavors and wiring [[nvim]], [[tmux]], [[yazi]], and other terminals.
 	- ## Notable Features
 		- Native UI on each platform (not electron / cross-platform widget toolkit)

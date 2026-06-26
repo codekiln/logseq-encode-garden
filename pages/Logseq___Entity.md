@@ -45,3 +45,4 @@ alias:: [[Logseq Entities]]
 		- **[[Logseq/Entity/Game/Type]]** — Game types, genres, families, mechanics, modes, and reusable game-design categories such as [[Game/Video/Platformer]]. Entity definition on that page.
 		- **[[Logseq/Entity/Security/Vuln]]** — Security vulnerabilities, exploit classes, attack techniques, attack chains, and defensive-relevant abuse patterns. Entity definition on that page.
 		- **[[Logseq/Entity/Collection]]** — Cross-cutting pattern for a curated collection whose members are all of one entity type, specialized per type as `X/Collection` (e.g. [[Logseq/Entity/Software/Plugin/Collection]]). Entity definition on that page.
+		- **[[Logseq/Entity/Font]]** — Named typefaces and font families installed and used across terminals and editors (e.g. [[JetBrains/Font/Mono Nerd]]). Not for font patchers or aggregator projects — those stay [[Logseq/Entity/Software/Project]]. Entity definition on that page.
