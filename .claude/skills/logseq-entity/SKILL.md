@@ -90,7 +90,7 @@ When creating or editing `[[Logseq/Entity]]`, `[[Logseq/Entity/<Type>]]`, `[[Log
 5. Read [references/entity-search-and-dedup.md](./references/entity-search-and-dedup.md).
 6. Search according to garden configuration.
 7. Report one of:
-   - existing canonical entity
+   - existing entity
    - similar entities that need human judgment
    - no matching entity found
    - blocked because config or prerequisites are missing
@@ -154,7 +154,7 @@ Prefer an explicit RPI flow:
 
 When the user wants to define a new entity type for the garden:
 
-1. Create or update `[[Logseq/Entity/<Type>]]` as the canonical page for that type.
+1. Create or update `[[Logseq/Entity/<Type>]]` as the definition page for that type.
 2. Put both type definition and instance-template guidance on that page by default.
 3. Only create a dedicated `[[Logseq/Template/Entity/<Type>/Page]]` page when the template needs to be instantiated directly through Logseq or grows too large for the type page.
 4. If the garden is still being bootstrapped, keep `.rulesync/config/logseq-entity.md` as a short shared fallback (see that file’s headings)—do not grow it back into per-type duplication.
@@ -193,4 +193,4 @@ When the user says something like `add entities from today's journal page`:
 - Journal extraction and aggressive inference: [references/entity-inference-from-journal.md](./references/entity-inference-from-journal.md)
 - After graph edits (garddiff / Filed / Updated): [references/entity-session-journal.md](./references/entity-session-journal.md)
 - `date-created::` (entity creation/publication date, not import date): [references/date-created-frontmatter.md](./references/date-created-frontmatter.md)
-- External entity pages (canonical H1 link, no duplicate URL/macros): [references/external-entity-page.md](./references/external-entity-page.md)
+- External entity pages (H1 link, no duplicate URL/macros): [references/external-entity-page.md](./references/external-entity-page.md)

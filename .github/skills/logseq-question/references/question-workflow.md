@@ -30,7 +30,7 @@ This file defines **namespace, dedup, journal, and research** steps. It does **n
 
 ### Step 1: Normalize and clarify inputs
 
-* Treat the user's input as the question text. Strip or normalize trailing punctuation (e.g., `?`) for search only; keep the canonical form for the page title.
+* Treat the user's input as the question text. Strip or normalize trailing punctuation (e.g., `?`) for search only; keep the full form for the page title.
 * If topic/namespace was not given, infer a plausible namespace from the question (e.g., "compaction text in Claude Code" → `Claude Code`) or ask the user.
 
 ### Step 2: Search for existing question pages (deduplication)
@@ -81,7 +81,7 @@ This file defines **namespace, dedup, journal, and research** steps. It does **n
 Use the prefix that matches the type: `rule:` for rules, `command:` for commands, `skill:` for skills.
 
 * skill: `logseq-entity` – Configuration-first entity workflow; shared dedup and config contract
-* Type page: `[[Logseq/Entity/Question]]` – Canonical entity definition for question entities in the graph
+* Type page: `[[Logseq/Entity/Question]]` – Entity definition for question entities in the graph
 * skill: `logseq-question` – This workflow (garden filing + journal + answer pass)
 * command: `logseq-question` – Rulesync slash entrypoint; defers to this reference
 * rule: `logseq-core` – File naming (`___`), link format (`/`), creating new pages (detail: skill `logseq-lfm`)

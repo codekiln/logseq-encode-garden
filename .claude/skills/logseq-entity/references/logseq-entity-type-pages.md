@@ -2,28 +2,28 @@
 
 This skill should prefer Logseq-native entity-type pages as the primary source of truth.
 
-## Canonical Structure
+## Structure
 
 Use these pages when they exist:
 
 - `[[Logseq/Entity]]` as the general conceptual model for entities (garden-agnostic, copyable; not a catalog of types)
-- `[[Logseq/Entity/Definition]]` as the entity type whose instances are the definition pages themselves — the in-graph home of the canonical page shape for `[[Logseq/Entity/<Type>]]` pages, and the queryable index of types (its backlinks)
-- `[[Logseq/Entity/<Type>]]` as the canonical page for a specific entity type
+- `[[Logseq/Entity/Definition]]` as the entity type whose instances are the definition pages themselves — the in-graph home of the page shape for `[[Logseq/Entity/<Type>]]` pages, and the queryable index of types (its backlinks)
+- `[[Logseq/Entity/<Type>]]` as the definition page for a specific entity type
 - `[[Logseq/Frontmatter]]` as the shared convention page for page-level attributes
 
-## Canonical shape of an entity definition page
+## Shape of an entity definition page
 
 The authoritative shape lives in-graph on `[[Logseq/Entity/Definition]]`; defer to it. In brief, each `[[Logseq/Entity/<Type>]]` page:
 
 - carries `logseq-entity:: [[Logseq/Entity/Definition]]` in frontmatter (so the type joins the queryable index)
-- opens with a single bullet-wrapped H1 in human-friendly Title Case, abbreviations expanded, no namespace path (`- # Software Plugin`, `- # CLI Command`, `- # Security Vulnerability`) — the namespace already carries the canonical path
+- opens with a single bullet-wrapped H1 in human-friendly Title Case, abbreviations expanded, no namespace path (`- # Software Plugin`, `- # CLI Command`, `- # Security Vulnerability`) — the namespace already carries it
 - states its short description as the first child line in the form `In this garden, **<Name>** pages model <description>.` (not "This page is the entity definition for…"); these first lines read together as a self-describing index
 
 Documentation uses `[[Logseq/Entity/<Type>]]` as shorthand: substitute the **actual** type path used in the workspace graph. Discover those paths by listing the `Logseq/Entity/<Type>` definition pages (see the one-liner in [entity-search-and-dedup.md](./entity-search-and-dedup.md)), not by reading a list off `[[Logseq/Entity]]`. In this encode garden, multi-word types prefer **nested Title Case segments**—for example **`[[Logseq/Entity/Software/Project]]`**, **`[[Logseq/Entity/Article]]`**, or **`[[Logseq/Entity/Game/Type]]`**—not a single **kebab-case** segment.
 
 ## Default Interpretation
 
-Treat `[[Logseq/Entity/<Type>]]` as the canonical reference point for that type in the current garden.
+Treat `[[Logseq/Entity/<Type>]]` as the reference point for that type in the current garden.
 
 Nested entity-type pages may represent narrower taxonomic scopes under a broader type. For example, a garden may use `[[Logseq/Entity/Game]]` for individual game instances and `[[Logseq/Entity/Game/Type]]` for game genres or mechanics. Treat that relationship as implicit unless the graph explicitly defines a property or workflow for it; do not add `extends::` or similar fields on behalf of the garden.
 
@@ -31,7 +31,7 @@ That page should ideally describe:
 
 - what counts as the entity type
 - what does not count
-- canonical naming rules
+- naming rules
 - aliases or namespace rules
 - identity and dedup keys
 - frontmatter expectations
@@ -85,7 +85,7 @@ When both exist:
 When working with an entity type:
 
 1. Read `[[Logseq/Entity]]` for the general entity model; discover the garden's actual types by listing the `Logseq/Entity/<Type>` definition pages (one-liner in [entity-search-and-dedup.md](./entity-search-and-dedup.md)).
-2. Read `[[Logseq/Entity/Definition]]` for the canonical shape of a type page before creating or editing one.
+2. Read `[[Logseq/Entity/Definition]]` for the shape of a type page before creating or editing one.
 3. Read `[[Logseq/Entity/<Type>]]` for the type-specific rules.
 3. Read `[[Logseq/Frontmatter]]` when it exists for shared page-level attributes.
 4. Skim `[[Logseq/Pref]]` (and linked preference pages such as **`[[Logseq/Pref/Page/Name]]`**) when present for encode-wide naming defaults.

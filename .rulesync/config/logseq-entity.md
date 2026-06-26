@@ -7,14 +7,14 @@ Repo-side support for the **logseq-entity** skill. **Per-type rules** (recogniti
 Agents read configuration in this order and stop relying on lower layers once the graph answers the question:
 
 1. **`[[Logseq/Entity]]`** — shared, garden-agnostic conceptual model: terms, how instances are marked (`logseq-entity::`), and naming rules. It does **not** catalog the types; the set of `Logseq/Entity/<Type>` pages is that list.
-2. **`[[Logseq/Entity/<Type>]]`** — entity definition for that entity (whatever titles appear under `Logseq/Entity/` in this garden). Each is itself marked `logseq-entity:: [[Logseq/Entity/Definition]]`; that meta page holds the canonical shape of a type page, and its backlinks are the queryable list of types.
+2. **`[[Logseq/Entity/<Type>]]`** — entity definition for that entity (whatever titles appear under `Logseq/Entity/` in this garden). Each is itself marked `logseq-entity:: [[Logseq/Entity/Definition]]`; that meta page holds the shape of a type page, and its backlinks are the queryable list of types.
 3. **`[[Logseq/Frontmatter]]`** — shared page-level attribute conventions (`tags::`, `alias::`, `see-also::`, `via::`, `date-created::`, etc.).
 4. **`[[Logseq/Pref]]`** (and children such as **`[[Logseq/Pref/Page/Name]]`**) — optional encode-wide preferences when present (page naming, editorial defaults).
 5. **This file** — only when those pages are missing, incomplete, or the workspace has no graph copy yet.
 
 ## Garden intent (shared)
 
-- Personal Logseq knowledge garden; canonical names follow gardening practice, not external site layout alone.
+- Personal Logseq knowledge garden; page names follow gardening practice, not external site layout alone.
 - Prefer short stable page titles when a topic will grow sub-namespaces; use `alias::` for contextual paths.
 - Keep graph entity definition pages self-contained. Do not write Rulesync, skill, slash-command, generated-file, repo-path, or agent-workflow references into Logseq pages.
 - Keep actual `[[Page]]` links clickable in graph pages; do not put them inside backticks.

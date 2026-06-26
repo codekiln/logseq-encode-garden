@@ -26,7 +26,7 @@ Extends naming conventions (singular page names; see `logseq-core`) for AI model
 
 ## Detailed model page
 
-When the model is a primary focus (capabilities, benchmarks, comparisons, full specs), author a full page — read [references/detail-page.md](./references/detail-page.md) for the section structure, research sources, examples, and best practices (canonical H1 link, model-code aliases, version status).
+When the model is a primary focus (capabilities, benchmarks, comparisons, full specs), author a full page — read [references/detail-page.md](./references/detail-page.md) for the section structure, research sources, examples, and best practices (H1 link, model-code aliases, version status).
 
 ## Always
 

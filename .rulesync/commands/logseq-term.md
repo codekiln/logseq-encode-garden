@@ -10,7 +10,7 @@ This command creates or updates a `[[Term]]` page in the Logseq knowledge garden
 
 ## Variables
 
-- **Term name** – **Required**: The canonical term to add, such as `Headless Browser`, `Context Window`, or `Fingerspitzengefühl`.
+- **Term name** – **Required**: The term to add, such as `Headless Browser`, `Context Window`, or `Fingerspitzengefühl`.
 - **Namespace/context** – **Optional**: A namespace if the term clearly belongs under an existing hierarchy, such as `AI`, `Programming/Language`, or `EdTech`. If omitted, prefer a non-namespaced page when that matches existing garden patterns.
 - **Aliases** – **Optional**: Common alternate names, abbreviations, or singular/plural variants to include in `alias::`.
 - **Depth** – **Optional**: Either a minimal definition page or a fuller explanation-style page. Default to minimal unless the user asks for a deeper explainer or the concept clearly warrants one.
@@ -27,11 +27,11 @@ This command creates or updates a `[[Term]]` page in the Logseq knowledge garden
 
 ## Workflow
 
-### Step 1: Determine the canonical page name
+### Step 1: Determine the page name
 
 - Normalize the requested term.
 - If a namespace/context was provided and it matches existing garden conventions, use it.
-- Otherwise prefer the simplest canonical page name that fits the existing garden.
+- Otherwise prefer the simplest page name that fits the existing garden.
 - Use Logseq naming conventions:
   - Link form: `[[Namespace/Subnamespace/Term Name]]`
   - File form: `pages/Namespace___Subnamespace___Term Name.md`
@@ -46,7 +46,7 @@ This command creates or updates a `[[Term]]` page in the Logseq knowledge garden
 - **If an existing matching page is found:**
   - Do **not** create a duplicate.
   - Update the existing page instead.
-  - Use the canonical page name of the existing file for all new references.
+  - Use the page name of the existing file for all new references.
 
 ### Step 3: Create or update the page
 
@@ -91,7 +91,7 @@ alias:: [[Alternate Name]]
 ### Step 5: Report
 
 - If a duplicate was found, report which existing page was updated.
-- If a new page was created, report the canonical page link and file path.
+- If a new page was created, report the page link and file path.
 - Mention whether aliases were added and whether the journal was updated.
 
 ## Related

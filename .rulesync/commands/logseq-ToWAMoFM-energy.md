@@ -64,7 +64,7 @@ This command imports an "Energy" section from the Treatise on Writing Acousmatic
    - **If the term already exists:**
      - Use the existing page reference exactly as it appears in the knowledge garden
      - Do NOT create a new page
-     - Use the canonical page name (the actual filename) when referencing
+     - Use the page name (the actual filename) when referencing
    - **If the term does NOT exist:**
      - Create a new page at `pages/ToWAMoFM___{Term}.md` (which corresponds to `[[ToWAMoFM/{Term}]]`)
      - Add frontmatter with alias: `alias:: [[{Term}]]`

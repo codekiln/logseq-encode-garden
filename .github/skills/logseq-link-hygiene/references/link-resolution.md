@@ -27,7 +27,7 @@ Only `canonical`, `alias-match`, `normalized-match`, `date-link`, and `intention
 
 ## Replacement policy
 
-- One clear match: replace the new link with the canonical page link.
+- One clear match: replace the new link with the existing page link.
 - Multiple matches: do not choose silently; report candidates.
 - No match: leave as plain text unless the user asked for a placeholder or the target page is created now.
 - External reference only: use a Markdown URL link instead of a wikilink when the target is not meant to become a graph page.
@@ -36,7 +36,7 @@ Only `canonical`, `alias-match`, `normalized-match`, `date-link`, and `intention
 
 - Proposed `[[12 factor app]]`; existing page `[[12factor/app]]`: use `[[12factor/app]]`.
 - Proposed `[[People/Jane Doe]]`; existing `[[Person/Jane Doe]]`: use the existing person page, unless graph rules explicitly define a `People/` namespace.
-- Proposed `[[semantic versioning]]`; existing alias on `[[Semantic Versioning]]`: use the canonical page.
+- Proposed `[[semantic versioning]]`; existing alias on `[[Semantic Versioning]]`: use the existing page.
 - Proposed `[[some memorable phrase]]` with no existing page and no creation request: leave `some memorable phrase` as plain text.
 
 ## Shell fallback

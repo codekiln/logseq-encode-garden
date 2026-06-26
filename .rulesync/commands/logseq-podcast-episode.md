@@ -18,7 +18,7 @@ This command creates or updates podcast pages using the podcast conventions for 
 - **Episode Title** - **Required**: Episode title text.
 - **Episode Date** - **Required**: `YYYY/MM/DD`.
 - **Journal Date** - **Required**: `YYYY_MM_DD` (journal filename format).
-- **Episode URL** - Optional: Canonical episode link.
+- **Episode URL** - Optional: episode link.
 - **Notes/Highlights/Transcript** - Optional: User-provided content.
 
 ## Conventions

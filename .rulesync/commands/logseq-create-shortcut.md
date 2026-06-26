@@ -6,7 +6,7 @@ argument-hint: Scope (required); Action (required); optional Subscope; Shortcut;
 ---
 # Create a Logseq Keyshort Page (with [[Card]] flashcards)
 
-This command creates or updates Logseq Keyshort pages using the canonical `<Scope>/Keyshort/<Action>` format, with optional `<Subscope>` segments. It ensures `[[Card]]` flashcards are children of a parent block that carries the needed ancestry tags for Logseq's `{{cards ...}}` queries.
+This command creates or updates Logseq Keyshort pages using the `<Scope>/Keyshort/<Action>` format, with optional `<Subscope>` segments. It ensures `[[Card]]` flashcards are children of a parent block that carries the needed ancestry tags for Logseq's `{{cards ...}}` queries.
 
 ## Variables
 

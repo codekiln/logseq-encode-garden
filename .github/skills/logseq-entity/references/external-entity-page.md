@@ -2,9 +2,9 @@
 
 Many pages in this graph act as local proxy pages for internet pages, entities, projects, posts, documentation, and other external resources.
 
-## Canonical URL placement
+## URL placement
 
-When creating a page whose main subject has a canonical external URL, prefer one Markdown H1 link as the first body block after any page-level frontmatter:
+When creating a page whose main subject has an official external URL, prefer one Markdown H1 link as the first body block after any page-level frontmatter:
 
 ~~~markdown
 - # [Entity Name](https://example.com/)
@@ -17,7 +17,7 @@ If existing page conventions for a specific entity type clearly use a different 
 ## No duplicate representations
 
 Do not repeat the same URL, title, or entity fact in multiple blocks on a new page. Before finishing, scan the added page for duplicate representations of:
-- the canonical URL
+- the official URL
 - the page title
 - the external entity name
 - the same short description

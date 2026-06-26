@@ -19,11 +19,11 @@ Use this skill when work touches **how** this encode garden titles pages and nam
 
 1. Open **`[[Logseq/Pref]]`** when the page exists.
 2. Follow links to concrete preference pages—typically **`[[Logseq/Pref/Page/Name]]`** for singular Title Case segments and nested paths.
-3. Do **not** invent prefs that are not on those pages; defer gaps to the human or to **`[[Logseq/Entity]]`** for entity-specific canon.
+3. Do **not** invent prefs that are not on those pages; defer gaps to the human or to **`[[Logseq/Entity]]`** for entity-specific rules.
 
 ## Relationship to other skills
 
-- **logseq-entity** covers registry, dedupe, instances, and **`[[Logseq/Entity/<Type>]]`** entity definitions. Load **logseq-pref** first when naming **new** entity definition pages or choosing canonical paths so prefs and registry stay aligned.
+- **logseq-entity** covers registry, dedupe, instances, and **`[[Logseq/Entity/<Type>]]`** entity definitions. Load **logseq-pref** first when naming **new** entity definition pages or choosing their namespace so prefs and registry stay aligned.
 
 ## References
 

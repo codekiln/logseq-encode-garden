@@ -2,7 +2,7 @@
 targets:
   - '*'
 description: Import a blog post, article, or essay as an Article entity by applying the logseq-entity skill and the graph's Logseq/Entity/Article entity definition
-argument-hint: Source URL (optional); article source and canonical namespace can be prompted if omitted
+argument-hint: Source URL (optional); article source and namespace can be prompted if omitted
 ---
 # Import Blog Post, Article, or Essay as an Article Entity
 
@@ -13,7 +13,7 @@ This command is only a routing guide. Do not maintain a separate Blog/Article/Es
 ## Required Inputs
 
 - `{url}` - Optional source URL. If omitted, ask for the article URL or pasted source material.
-- Article title, byline/creator, publication date, source URL, and canonical page namespace are inferred from the source when possible.
+- Article title, byline/creator, publication date, source URL, and page namespace are inferred from the source when possible.
 
 ## Workflow
 
@@ -29,14 +29,14 @@ This command is only a routing guide. Do not maintain a separate Blog/Article/Es
    - title
    - author, company, or organization that wrote the piece
    - publication date
-   - canonical source URL
+   - source URL
    - publication/site when useful
 4. Deduplicate using **[[Logseq/Entity/Article]]**:
    - exact source URL
    - exact title
    - normalized title words under likely author, publication, Blog, Article, and Essay namespaces
    - byline plus distinctive title phrase
-5. Choose the canonical page namespace according to **[[Logseq/Entity/Article]]** and nearby garden precedent.
+5. Choose the page namespace according to **[[Logseq/Entity/Article]]** and nearby garden precedent.
    - Existing author or publication namespaces are preferred.
    - `Blog`, `Article`, and `Essay` path segments are organizational; the entity type is still marked with `logseq-entity:: [[Logseq/Entity/Article]]`.
 6. Create or update the page using Logseq Flavored Markdown:
@@ -56,7 +56,7 @@ This command is only a routing guide. Do not maintain a separate Blog/Article/Es
 
 After completing the import, report:
 
-- canonical page link and filename
+- page link and filename
 - creator linked through `created-by::`
 - whether a creator page was updated
 - journal links added under **[[Filed]]** and **[[Updated]]**

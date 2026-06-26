@@ -77,7 +77,7 @@ Once the direction is clear:
 
 1. Create or update `[[Logseq/Entity]]` as the registry.
 2. Ensure `[[Logseq/Entity/Definition]]` (the meta type codifying the type-page shape) exists; mark every type page with `logseq-entity:: [[Logseq/Entity/Definition]]` so the set of types is queryable via its backlinks.
-3. Create or update the approved `[[Logseq/Entity/<Type>]]` pages, following the canonical shape on `[[Logseq/Entity/Definition]]`.
+3. Create or update the approved `[[Logseq/Entity/<Type>]]` pages, following the shape on `[[Logseq/Entity/Definition]]`.
 4. Keep type definition and instance-template guidance on the type page by default.
 5. Create a dedicated `[[Logseq/Template/Entity/<Type>/Page]]` page only when the type page should point to a separately instantiable or significantly larger template.
 6. Keep `.rulesync/config/logseq-entity.md` short—shared fallback only; do not recreate per-type catalogs in the repo file.

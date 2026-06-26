@@ -8,7 +8,7 @@ Read [configuration-contract.md](./configuration-contract.md) and [logseq-entity
 
 Decide whether a candidate is:
 
-- an existing canonical entity
+- an existing entity
 - a likely duplicate or near-match that needs human review
 - a genuinely new entity page
 - blocked by missing configuration or missing prerequisite entities
@@ -27,11 +27,11 @@ The glob excludes the model page itself (`Logseq___Entity.md` has no trailing `_
 
 ## Search Order
 
-Search in the config-defined order and stop early only when the match is clearly canonical.
+Search in the config-defined order and stop early only when the match is clear.
 
 If the config does not specify an order, use this default:
 
-1. Exact canonical page name
+1. Exact page name
    - Check the expected page shape based on config.
    - Also check obvious case and punctuation variants.
 2. Exact alias match
@@ -50,8 +50,8 @@ Prefer `rg` for all searches.
 
 Treat a result as **existing** when one or more of these is true:
 
-- the canonical filename matches the intended entity
-- an alias clearly resolves the candidate to an existing canonical page
+- the filename matches the intended entity
+- an alias clearly resolves the candidate to an existing page
 - the page body makes clear that the page is the same entity
 
 Treat a result as **similar** when one or more of these is true:
@@ -63,7 +63,7 @@ Treat a result as **similar** when one or more of these is true:
 
 Treat a result as **new** only when:
 
-- no canonical page exists
+- no page exists
 - no alias resolves to the same entity
 - no existing page body or source identity strongly indicates it is already covered
 
@@ -73,9 +73,9 @@ Treat a result as **blocked** when:
 - the config requires prerequisite entities that do not yet exist
 - the config requires a human decision before page creation
 
-## Canonical Name Preference
+## Name Preference
 
-Take canonical naming rules from config.
+Take naming rules from config.
 
 The skill may infer likely conventions from existing pages, but the garden-owned configuration is the source of truth.
 
@@ -83,7 +83,7 @@ The skill may infer likely conventions from existing pages, but the garden-owned
 
 When reporting results, use this structure:
 
-- `existing`: canonical entities already present
+- `existing`: entities already present
 - `similar`: near-matches that may need human review
 - `new`: entities that appear safe to create
 - `blocked`: cases that need configuration or human choice

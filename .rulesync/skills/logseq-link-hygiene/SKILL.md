@@ -4,7 +4,7 @@ description: >-
   Check, resolve, and normalize Logseq wikilinks before or after editing graph
   pages. Use when adding links, importing notes, creating pages, reviewing
   unresolved references, preventing accidental stub pages, or replacing newly
-  invented wikilinks with canonical existing pages or aliases. Applies to all
+  invented wikilinks with existing pages or aliases. Applies to all
   Logseq graph work, not only entity pages.
 targets: ["*"]
 ---
@@ -23,7 +23,7 @@ Use this skill whenever graph edits add, change, or review `[[wikilinks]]`.
    - punctuation/spacing variants
    - slash namespace variants
    - garden-accepted structural links such as date links
-3. If one clear canonical page exists, use that canonical `[[Page/Title]]`.
+3. If one clear page exists, use that `[[Page/Title]]`.
 4. If multiple plausible pages exist, leave the current text alone and report the ambiguity.
 5. If no page exists and the link target is not being intentionally created now, use plain text instead of a wikilink.
 6. Only leave a new unresolved wikilink when the user explicitly wants a placeholder or when this workflow creates the target page in the same turn.
@@ -55,6 +55,6 @@ If installation is not appropriate for the current task, use shell search with t
 
 In the final answer, mention:
 
-- canonical link replacements made
+- link replacements made
 - unresolved links intentionally left as plain text
 - ambiguous links needing human judgment

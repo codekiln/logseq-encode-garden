@@ -1,6 +1,6 @@
 # Keyshort flashcards: audit and update
 
-Canonical workflow ported from command `logseq-manage-shortcut-flashcards`. Use when the user wants to **audit** or **fix** review-card blocks on **Keyshort** pages only.
+Workflow ported from command `logseq-manage-shortcut-flashcards`. Use when the user wants to **audit** or **fix** review-card blocks on **Keyshort** pages only.
 
 ## Variables
 

@@ -36,7 +36,7 @@ When the user wants to initialize entity types for a garden:
 
 - which entity types this garden models — the set of `Logseq/Entity/<Type>` pages **is** the list; do not maintain a separate catalog on `[[Logseq/Entity]]`
 - how to recognize those entity types
-- canonical naming preferences
+- naming preferences
 - allowed or preferred namespaces
 - alias strategy
 - shared frontmatter expectations and entity-specific frontmatter expectations
@@ -65,7 +65,7 @@ The configuration can stay in Markdown as long as it is explicit and machine-rea
 Preferred Logseq-native shape:
 
 - `[[Logseq/Entity]]` as the shared, garden-agnostic conceptual model (not a catalog of types)
-- `[[Logseq/Entity/<Type>]]` as the canonical type page
+- `[[Logseq/Entity/<Type>]]` as the type page
 - `[[Logseq/Frontmatter]]` as the shared page-level attribute convention page
 - `[[Logseq/Pref]]` optionally as the hub for cross-cutting garden preferences (see skill **logseq-pref** when installed)
 

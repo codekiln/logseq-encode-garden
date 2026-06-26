@@ -9,7 +9,7 @@
 
 ### Implementation
 1. **Page Names** — singular: `[[Related/Post]]` not `[[Related Topics]]`; `[[Person]]` not `[[People]]`; `[[Project]]` not `[[Projects]]`.
-2. **Aliases** — add a plural/contextual form as an alias in the page's frontmatter when you want that link text to resolve to the singular canonical page:
+2. **Aliases** — add a plural/contextual form as an alias in the page's frontmatter when you want that link text to resolve to the singular page:
    ```markdown
    ---
    alias:: [[Related Posts]]

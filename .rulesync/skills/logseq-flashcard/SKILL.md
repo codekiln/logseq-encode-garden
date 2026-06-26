@@ -20,7 +20,7 @@ codexcli:
 
 1. **Factor out or create a first-class Card entity page** (`[[Source/Page/Card/Title]]`) — read [references/card-entity-and-factor-out.md](./references/card-entity-and-factor-out.md), then load `[[Logseq/Entity]]` and `[[Logseq/Entity/Card]]` before editing graph pages.
 2. **Audit or repair Keyshort pages** (`*___Keyshort___*.md`) — read [references/keyshort-audit-and-update.md](./references/keyshort-audit-and-update.md) and run `audit` or `update` as specified there.
-3. **New Keyshort page** (canonical `<Scope>/Keyshort/<Action>` with optional subscope) — follow command `.rulesync/commands/logseq-create-shortcut.md` (slash: `logseq-create-shortcut`); it owns naming, ancestry tags, grouped cards, and journal wording.
+3. **New Keyshort page** (`<Scope>/Keyshort/<Action>` with optional subscope) — follow command `.rulesync/commands/logseq-create-shortcut.md` (slash: `logseq-create-shortcut`); it owns naming, ancestry tags, grouped cards, and journal wording.
 4. **New legacy flashcard on another namespaced page** (user gives `[[Page/Path/Title]]` and content but does not want a `/Card/` entity page) — read [references/create-flashcard-page.md](./references/create-flashcard-page.md), then implement: dedup → LFM page → parent ancestry for the right `{{cards [[...]] }}` root → `[[Card]]` + children → journal entry.
 5. **Design or debug `{{cards …}}` / simple vs advanced queries** — read [references/cards-macro-and-query-language.md](./references/cards-macro-and-query-language.md) for how card lookup relates to Logseq’s **simple query** language, combinators, filter constraints, and when to use **advanced queries**.
 

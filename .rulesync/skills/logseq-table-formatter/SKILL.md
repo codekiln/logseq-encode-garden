@@ -20,7 +20,7 @@ Use when a table lives **inside** an LFM bullet tree (`pages/`, `journals/`) and
 
 1. Confirm the table should stay a table (not a bullet label/value list). If more than two columns and the content is not a compact comparison, consider bullets per skill **logseq-convert-md-to-lfm**.
 2. Build row data (header + separator + body). Prefer **short** cell text; put detail in child bullets under the table.
-3. Use **wikilinks** in cells when a canonical page exists (`[[mise/unuse]]`, not `` `mise unuse` ``). Run skill **logseq-link-hygiene** when unsure a page exists.
+3. Use **wikilinks** in cells when a page exists (`[[mise/unuse]]`, not `` `mise unuse` ``). Run skill **logseq-link-hygiene** when unsure a page exists.
 4. Format with aligned columns:
    - First row: `- | col1 | col2 | … |` at the correct tab depth.
    - Following rows: same tab depth, **two spaces** instead of `- `, then `| … |` so every `|` shares the same column as row 1.

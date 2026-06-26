@@ -38,14 +38,14 @@ Example:
 
 - a Hacker News link titled `Helix: A Neovim inspired editor, written in Rust`
 
-For example, in a software-focused garden this is enough to infer `[[Helix]]`, but the final report should say that the inference came from indirect context rather than a canonical project link.
+For example, in a software-focused garden this is enough to infer `[[Helix]]`, but the final report should say that the inference came from indirect context rather than a direct project link.
 
 ## Extraction Workflow
 
 1. Read the entire journal page and list candidate entity mentions relevant to the active config.
 2. Normalize names:
    - preserve intended capitalization for human-facing output
-   - derive the likely canonical name for the page title
+   - derive the likely name for the page title
    - keep source-identity information needed for search and alias decisions
 3. Classify each candidate:
    - direct source-link candidate

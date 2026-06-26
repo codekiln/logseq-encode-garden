@@ -63,7 +63,7 @@ Check for:
 
 Use the prefix that matches the type: `rule:` for rules, `command:` for commands, `skill:` for skills.
 
-- skill: `logseq-flashcard` – Canonical home for this workflow; prefer the skill for agents
+- skill: `logseq-flashcard` – Home for this workflow; prefer the skill for agents
 - rule: `logseq-core` – File naming and link conventions (detail: skill `logseq-lfm`)
 - rule: `logseq-core` – LFM formatting rules (advanced detail: skill `logseq-lfm`)
 - command: `logseq-create-shortcut` – Create new Keyshort pages
