@@ -1,0 +1,11 @@
+- Prefer language that is honest about uncertainty. The words and phrases below tend to signal premature certainty, overclaiming, or conclusions that haven't been earned yet.
+- ## Comprehensive
+	- Implies nothing was missed. Almost always false — and the claim is unverifiable at the moment it's made.
+- ## Absolutely
+	- Sycophantic filler. Agree or disagree on substance; don't amplify agreement with emphasis.
+- ## Smoking Gun
+	- Signals a definitive conclusion before the evidence warrants one. Use "this suggests" or "this is consistent with" instead.
+- ## Master / Slave
+	- Loaded social connotation. Prefer primary/replica, leader/follower, or source/sink depending on context.
+- ## Canonical
+	- Implies one true answer. Usually premature — most problems have multiple valid solutions, and declaring one canonical forecloses the conversation.
