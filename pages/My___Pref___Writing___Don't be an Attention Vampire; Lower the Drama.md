@@ -1,0 +1,4 @@
+- Most of our modern world is a trap for human attention. Avoid framing things in a way that increases drama.
+- Don't say you  "found the smoking gun" if unless you are writing a murder mystery.
+- Don't say we can "kill two birds with one stone" if there's a way to communicate what you need without killing things.  These days every YouTube video or x.com tweet is about how "X is the new Y killer." This type of framing is immature and not part of the world I want to live in.
+- People are frazzled these days; acknowledge their limitations and help them out. Global warming is a big problem these days, let's chill out the vibes on here planet earth.

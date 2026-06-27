@@ -1,0 +1,2 @@
+- By "jargon" here I'm referring to words that make sense with people who are in a very narrow context.
+- AI coding tools by their very nature have been trained to overuse words that technologists would use. For example, instead of Bootstrapping or Initializing or Provisioning, consider the simpler way of saying this: "we'll do a one-time setup."

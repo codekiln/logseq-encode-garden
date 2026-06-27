@@ -1,6 +1,6 @@
 see-also:: [[My/Principle/Dispel Ambiguity]]
 
-# Plain language
+- # Plain language
 	- ## What to assume about the reader
 		- They are intelligent but may not share your domain expertise.
 		- They should understand the message on the first read.

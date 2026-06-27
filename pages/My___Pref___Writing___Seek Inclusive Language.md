@@ -1,0 +1,5 @@
+- Every word is a vote for the future, so vote wisely: seek to use words that inspire hope and draw in all living beings into a circle of fruitful collaboration.
+- Many words are what I call "flag words" - humans zero in on these words and get distracted by them. This includes topics that are probably best to avoid at the Thanksgiving dinner table. See if you can use creativity to communicate in such a way that draws people in, that doesn't exclude.
+	- Try to be gender neutral
+	- Avoid language that is influenced by racism, xenophobia, slavery, fear, murder, exploitation etc.
+	- For example, don't say "let's kill two birds with one stone." We don't need to glorify killing the birds more efficiently.

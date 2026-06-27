@@ -11,4 +11,4 @@ date-created:: [[2025-08-26 Tue]]
 		- Language models judge readability better — the best model reaches a 0.56 Pearson correlation with human judgments — and capture deeper factors the formulas miss, such as the background knowledge a text demands.
 		- Closes with recommendations for evaluating plain language summaries, and releases the analysis code and survey data.
 	- ## Why it matters here
-		- Direct evidence that readability formulas measure surface features, not comprehension — which is why [[My/Pref/Writing/Plain language]] treats the formula as a diagnostic, not a goal.
+		- Direct evidence that readability formulas measure surface features, not comprehension — which is why [[My/Pref/Writing/Use Plain language]] treats the formula as a diagnostic, not a goal.
