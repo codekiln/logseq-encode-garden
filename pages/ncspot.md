@@ -1,4 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Software/Project]]
+tags:: [[Spotify/Tool/TUI]]
+
 - # [ncspot](https://github.com/hrkfdn/ncspot)
 	- > An ncurses Spotify client written in Rust using librespot
 	- [[GitHub/Star]] count: 6,671 as of [[2026-06-27 Sat]]

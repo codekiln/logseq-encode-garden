@@ -1,6 +1,5 @@
 alias:: [[Logseq/Entity/software-project]]
 logseq-entity:: [[Logseq/Entity/Definition]]
-
 - # Software Project
 	- In this garden, **Software Project** pages model software products: applications for end users, libraries, frameworks, CLIs, desktop or web apps, editors, runtimes, and the like.
 	- ## Examples in this garden
@@ -19,6 +18,8 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Software-project-specific frontmatter can include `created-by::` pointing to a **person** or **company** page when the creator entity is clear.
 	- ## Page shape
 		- File: `pages/<ProjectName>.md`. In links, use the main page name with forward slashes for namespaces where we use them (e.g. `Lazygit/Keyshort/Some action`). First block: H1 with the project title (or a reference link to the project). Keep the page lean: title plus a few descriptive bullets.
+		- When the project is hosted on GitHub, include the [[GitHub/Star]] count when available: link to [[GitHub/Star]], record the count, and include the dated source-check day.
+			- One-line check: `gh repo view OWNER/REPO --json stargazerCount --jq .stargazerCount`
 	- ## Creator (person or company) handling
 		- If the creator is clear and is an individual, create or use a `Person/...` page and point `created-by::` there. If the creator is clearly an organization tracked in the garden, create or use a company entity page and point `created-by::` there.
 		- If it is not clear who the creator is, do not guess—ask the human (e.g. create the software page without creator metadata, create the entity page first, or skip until the identity is clarified).

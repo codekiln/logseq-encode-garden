@@ -1,6 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Software/Project]]
 tags:: [[Task/Management/Git-Friendly]]
-
 - # [ff](https://github.com/ff-notes/ff)
 	- Distributed note taker and task manager using RON [[CRDT]]s.
 	- it's pretty bare-bones:
@@ -53,7 +52,7 @@ tags:: [[Task/Management/Git-Friendly]]
 				- `type`: currently `SubNote` for [[Hierarchy]]
 	- ## [[My Notes]]
 		- no dependency tracking per se, but it does include a parent/child model
-		- as of [[2026-05-26 Tue]], has ~200 [[Github/Star]]s
+		- as of [[2026-05-26 Tue]], has ~200 [[GitHub/Star]]s
 	- ## [[Engineering Choices]]
 		- written in [[Haskell]]
 	- ## [[Installation]]

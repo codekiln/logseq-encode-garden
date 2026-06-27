@@ -1,7 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Hendrik Mans]]
 tags:: [[Task/Management/Git-Friendly]]
-
 - # [hmans/beans](https://github.com/hmans/beans)
 	- [[CLI/Tool]] that implements a git-backed issue tracker for AI agents.
 	- ## Data Model
@@ -9,7 +8,7 @@ tags:: [[Task/Management/Git-Friendly]]
 	- ## [[My Notes]]
 		- includes a [[TUI]]
 		- by [[2026-05-26 Tue]]
-			- ~800 [[Github/Star]]s
+			- ~800 [[GitHub/Star]]s
 			- hasn't been updated in a month
 		- creator [[Person/Hendrik Mans]] has many established [[Open Source]] projects
 		- includes [[AI/Coding/Tool/Plugin]]s

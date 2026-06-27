@@ -3,7 +3,6 @@ created-by:: [[Person/Jason Allum]]
 tags:: [[Task/Management/Git-Friendly]]
 alias:: [[Person/Jason Allum/GitHub/beadwork]]
 via:: [[Claude Code/Reddit/26/02/Am I an idiot for using Beads]]
-
 - # [jallum/beadwork](https://github.com/jallum/beadwork)
 	- [[CLI/Tool]] that implements a git-backed issue tracker for AI agents.
 	- ## [[Data/Model]]
@@ -12,7 +11,7 @@ via:: [[Claude Code/Reddit/26/02/Am I an idiot for using Beads]]
 		- [design.md looks like what I've thought about building](https://github.com/jallum/beadwork/blob/main/docs/design.md)
 			- > All data lives on a git orphan branch, manipulated directly in the object database via [go-git](https://github.com/go-git/go-git). Every operation is an atomic commit. Sync uses fetch-rebase-push with intent replay on conflict.
 			- > For storage layout and sync mechanics, see [docs/design.md](https://github.com/jallum/beadwork/blob/main/docs/design.md).
-		- ~44 [[Github/Star]]s as of [[2026-05-26 Tue]]
+		- ~44 [[GitHub/Star]]s as of [[2026-05-26 Tue]]
 		- includes [[Self/Update]] - To update an existing install: `bw upgrade`.
 	- ## [[CLI commands]]
 		- ```

@@ -1,4 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Software/Project]]
+tags:: [[Spotify/Tool/TUI]]
+
 - # [spotify-tui](https://github.com/Rigellute/spotify-tui)
 	- > A Spotify client for the terminal written in Rust.
 	- [[GitHub/Star]] count: 19,244 as of [[2026-06-27 Sat]]

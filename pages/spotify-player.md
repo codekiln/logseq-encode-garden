@@ -1,6 +1,7 @@
 created-by:: [[Person/Thang Pham]]
-tags:: [[Rust]], [[Spotify]], [[TUI]]
+tags:: [[Rust]], [[Spotify]], [[TUI]], [[Spotify/Tool/TUI]] 
 logseq-entity:: [[Logseq/Entity/Software/Project]]
+
 - # [spotify-player](https://github.com/aome510/spotify-player) by [[GitHub/User/aome510]] aka [[Person/Thang Pham]]
 	- > A Spotify player in the terminal with **full feature parity**
 	- [[GitHub/Star]] count: 6,888 as of [[2026-06-27 Sat]]
