@@ -1,6 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Software/Project]]
 tags:: [[Spotify/Tool/TUI]]
-
 - # [spotify-tui](https://github.com/Rigellute/spotify-tui)
 	- > A Spotify client for the terminal written in Rust.
 	- [[GitHub/Star]] count: 19,244 as of [[2026-06-27 Sat]]
@@ -9,7 +8,7 @@ tags:: [[Spotify/Tool/TUI]]
 	- ## Technical Aspects
 		- Built with [[Rust]] 2018.
 		- Binary name: `spt`.
-		- Uses Spotify's Web API. The Web API is Spotify's HTTP (Hypertext Transfer Protocol)-based application programming interface for searching, playback control, library actions, and account data.
+		- Uses Spotify's Web API. The Web API is Spotify's [[HTTP]]-based application programming interface for searching, playback control, library actions, and account data.
 		- Does not stream audio by itself. It controls another Spotify playback device, such as the official Spotify app or spotifyd.
 		- Uses OAuth for login. OAuth is the sign-in delegation protocol that lets the app ask Spotify for limited account access without storing the user's Spotify password.
 		- Stores Spotify client credentials in `${HOME}/.config/spotify-tui/client.yml`.
@@ -32,10 +31,10 @@ tags:: [[Spotify/Tool/TUI]]
 		- Configure theme colors, keybindings, playback step sizes, icons, and window-title behavior.
 		- Copy song or album web addresses to the clipboard.
 	- ## Supply Chain Notes
-		- Cargo.lock, Rust's dependency lockfile, shows about 255 locked package entries, 224 unique crate names, 14 direct dependencies, and an approximate longest dependency chain of 13 edges. A crate is a Rust package.
+		- Cargo.lock shows about 255 locked package entries, 224 unique [[Rust/crate]] names, 14 direct dependencies, and an approximate longest dependency chain of 13 edges.
 		- The tree is smaller than [[ncspot]] because spotify-tui mostly controls Spotify through the Web API instead of implementing audio playback.
 		- The most security-relevant parts are network authentication, token storage, clipboard access, and the local callback server used during OAuth login.
 		- The older stack is the main concern: `tokio` 0.2, `clap` 2, `tui` 0.16, `crossterm` 0.20, and `rspotify` 0.10 are all old by 2026 standards.
-		- `rspotify` brings in HTTP and TLS (Transport Layer Security) dependencies through `reqwest` and `native-tls`. On Linux, source builds also need OpenSSL development files and `pkg-config`.
+		- `rspotify` brings in [[HTTP]] and TLS (Transport Layer Security) dependencies through `reqwest` and `native-tls`. On Linux, source builds also need OpenSSL development files and `pkg-config`.
 		- The lockfile has multiple versions of some foundational crates, including `bytes`, `mio`, `rand`, `url`, `idna`, `proc-macro2`, `quote`, and `syn`. Duplicate versions are common in older Rust projects, but they increase review work.
 		- For security-sensitive use, prefer [[spotify-player]] or [[ncspot]] over this project unless there is a specific reason to use `spt`.

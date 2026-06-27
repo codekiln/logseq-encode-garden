@@ -1,0 +1,3 @@
+- # HTTP
+	- Hypertext Transfer Protocol: the request-response protocol used by web browsers, web servers, and many web APIs.
+	- HTTP is stateless: each request stands alone unless the client sends extra context such as cookies, tokens, or headers.

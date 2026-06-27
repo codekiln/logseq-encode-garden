@@ -1,0 +1,16 @@
+- Rust's unit of compilation — the smallest chunk of code the [[Rust]] compiler considers at once
+	- ## Two forms
+		- **Binary crate** — produces a standalone executable; must contain a `main` function
+		- **Library crate** — produces reusable code to be linked into other crates; the entry point is `lib.rs` by convention
+	- ## Relationship to packages
+		- A *package* is a `Cargo.toml`-bounded bundle of one or more crates; "crate" and "package" are often used interchangeably in conversation
+		- [[cargo]] is the tool that resolves, builds, and manages crate dependencies — see [[cargo/crate]]
+	- ## Registry
+		- Crates are published to and consumed from [crates.io](https://crates.io), Rust's official package registry
+		- See also [[Package/Management]] for the broader pattern
+	- ## Bringing crates into scope
+		- Declare a dependency in `Cargo.toml`, then import items with [[Rust/use]]
+		- Some items from `std` are available without any `use` statement via [[Rust/prelude]]
+	- ## Examples in this graph
+		- [[Rust/crate/rand/Rng]] — the `Rng` trait from the `rand` crate
+		- [[Rust/Lib/dotenvy]] — library crate for `.env` file loading
