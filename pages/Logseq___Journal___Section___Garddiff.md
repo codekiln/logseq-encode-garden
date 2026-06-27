@@ -11,3 +11,8 @@
 		- A given **`[[Page]]` must appear under only one of `Filed` or `Updated`** for that calendar day. If a page was both created and edited the same day, keep it only under **`Filed`**.
 	- ## Optional context
 		- At most **one short child sentence** under a link when it helps readers; avoid status narration and duplicate prose already on the page.
+	- ## Grouping
+		- When the section has several entries, group them under plain-text labels — bare words or short phrases (`tuis`, `entities`, `git tasks`), **not** `[[wikilinks]]`.
+		- Labels are chosen **interactively with the human**: they should jog memory and represent the actual clusters of discovery that day, not generic categories imposed by an agent.
+		- Sort group labels **alphabetically** within each section once confirmed.
+		- Items *within* a group keep semantic or narrative order.

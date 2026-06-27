@@ -62,6 +62,7 @@ When creating or modifying graph pages, add an entry to today's journal (`journa
 - Mutually exclusive: a page link appears under only one section per day; if created and later edited the same day, keep it under `[[Filed]]` only.
 - Default is link-only — no `Created [[...]]` / `Updated [[...]]` boilerplate, no inline action text. Add at most one child-bullet sentence of context only when it materially helps the narrative.
 - For editorial journal narrative and section vocabulary, defer to `[[Logseq/Journal]]` and the `logseq-format-journal` command.
+- **Grouping (interactive):** When Filed or Updated contains more than a handful of links, propose thematic group labels to the human before writing — the clusters should reflect the day's actual arcs of discovery, not be imposed by the AI. Labels are plain-text (bare word or short phrase, not a `[[wikilink]]`). Once the human confirms, sort the labels **alphabetically**; items within a group keep narrative/semantic order.
 
 ## Block-reference safety
 

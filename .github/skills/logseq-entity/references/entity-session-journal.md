@@ -17,6 +17,7 @@ This is independent of whether the user asked for a journal note; it is **repo p
 - **`[[Updated]]`** (or equivalent): **link-only** bullets for pages that **already existed** and were edited in this session.
 - Each **`[[Page]]` at most once** across Filed vs Updated for that calendar day; if both created and edited same day, keep it under **Filed** only.
 - Avoid repetitive boilerplate (`Created …`, `Imported …`) on those lines unless the garddiff page explicitly allows a single short child sentence.
+- **Grouping (interactive):** When several entries cluster naturally, propose labels to the human and confirm before finalizing. Labels are plain-text (bare word or short phrase, not a `[[wikilink]]`), alphabetically sorted once confirmed.
 
 ## Placement
 

@@ -11,7 +11,10 @@ alias:: [[Guard/Diff]], [[garddiff]]
 				- When I'm reading the journal page, for example, it should make me say to myself,
 					- > *oh yeah, this is when I was into Nix*
 		- ### To provide brief hierarchical groupings or commentary
-			- Similar changes should be grouped together under a parent block that may or may not be a heading
+			- Group related changes under a plain-text label (bare word or short phrase, not a `[[wikilink]]`), e.g. `tuis`, `entities`, `git tasks`.
+			- Labels are chosen interactively with the human — they should jog memory and represent actual clusters of discovery, not generic categories.
+			- Sort those group labels **alphabetically** within each section.
+			- Items within a group follow semantic order.
 			- [[Examples]]
 				- [[2026-05-23 Sat]]
 	- ## [[Bad Examples]]

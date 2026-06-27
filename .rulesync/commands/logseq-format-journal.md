@@ -53,15 +53,28 @@ When the journal includes page maintenance activity (new/imported pages or page 
 - Do not add inline action text next to links (for example, avoid `[[Page]] updated to ...`)
 - Do not use repetitive boilerplate such as `Imported [[...]]` or `Updated [[...]] with ...`
 - Optional context is allowed only when meaningful to readers, and only as one sentence under the relevant link
+- **Grouping (interactive):** For more than a handful of links, propose candidate group labels and ask the human to confirm. Labels are plain-text (not `[[wikilinks]]`); they should jog the human's memory and represent actual clusters of discovery. Sort confirmed labels **alphabetically**; items within a group keep semantic order.
 
 Example:
 
 ```markdown
 - [[Filed]]
-	- [[Person/Example]]
-		- Added from a conference note that introduced their research.
+	- entities
+		- [[Logseq/Entity/Abbreviation]]
+		- [[GitHub/Star]]
+	- madness
+		- [[Person/Jacques Derrida]]
+		- [[Person/Michel Foucault]]
+	- rust
+		- [[Rust/crate]]
 - [[Updated]]
-	- [[Project/Example]]
+	- tuis
+		- [[spotify-player]]
+		- [[HN/TUI]]
+	- tools
+		- [[BeansTasks]]
+			- Added from a session exploring git-backed task managers.
+		- [[ff]]
 ```
 
 ### What This Command Does NOT Do
