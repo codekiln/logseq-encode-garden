@@ -1,4 +1,5 @@
-tags:: [[Term]], [[Acronym]], [[Abbreviation]] 
+logseq-entity:: [[Logseq/Entity/Abbreviation]], [[Logseq/Entity/Term]]
+tags:: [[Term]], [[Acronym]]
 alias:: [[PPO]]
 
 - # **PPO — Proximal Policy Optimization**

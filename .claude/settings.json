@@ -1,7 +1,5 @@
 {
   "permissions": {
-    "deny": [
-      "Read(credentials/)"
-    ]
+    "deny": []
   }
 }

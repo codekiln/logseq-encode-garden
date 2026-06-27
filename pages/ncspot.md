@@ -19,11 +19,12 @@ tags:: [[Spotify/Tool/TUI]]
 		- Uses `image` and `viuer` for optional album-cover rendering in terminals.
 		- Uses `arboard` for optional clipboard sharing.
 	- ## Features
+	  id:: 6a3f6d42-818a-40bf-bade-690eaa0a6def
 		- Supports tracks, albums, playlists, genres, and search.
 		- Small resource footprint compared with the official Spotify desktop client.
 		- Supports macOS, Windows, Linux, and Berkeley Software Distribution systems.
 		- Vim keybindings by default.
-		- Inter-process communication socket for remote control.
+		- [[IPC]] socket for remote control.
 		- Optional cover art, desktop notification, clipboard sharing, and media-key integration.
 	- ## Supply Chain Notes
 	  id:: 6a3f6d42-27fa-4048-81ae-c1222d59d3bf

@@ -5,7 +5,7 @@ alias:: [[Server Message Block]]
 			- File sharing (network drives like `\\server\share`)
 			- Printer sharing
 			- Remote administration
-			- Inter-process communication
+			- [[IPC]]
 		- It typically runs over:
 			- `TCP/445` (modern SMB)
 			- `TCP/139` (older NetBIOS-based SMB)

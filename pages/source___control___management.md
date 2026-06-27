@@ -1,5 +1,6 @@
+logseq-entity:: [[Logseq/Entity/Abbreviation]], [[Logseq/Entity/Term]]
 alias:: [[SCM]]
-tags:: [[Abbreviation]], [[Term]]
+tags:: [[Term]]
 
 - Source Control Management (SCM)
 	- SCM is the practice of applying tools that provide the ability to apply [[Version/Control]] to [[Code]].

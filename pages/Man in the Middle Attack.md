@@ -1,4 +1,5 @@
-tags:: [[Term]], [[Abbreviation]]
+logseq-entity:: [[Logseq/Entity/Abbreviation]], [[Logseq/Entity/Term]]
+tags:: [[Term]]
 alias:: [[MITM]]
 
 - A man-in-the-middle (MITM) attack is when an attacker secretly positions themselves between two parties and intercepts their communication.
