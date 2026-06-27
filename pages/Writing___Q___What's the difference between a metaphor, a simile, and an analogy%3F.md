@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]]
-see-also:: [[My/Pref/Writing/Avoid Awkward or Superfluous Metaphors]]
+see-also:: [[My/Pref/Writing/Avoid Distractors such as Awkward or Superfluous Metaphors]]
 
 - # What's the difference between a [[Metaphor]], a [[Simile]], and an [[Analogy]]? [[Card]]
 	- ## [[AI Answer]]

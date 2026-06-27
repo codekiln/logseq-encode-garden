@@ -1,4 +1,0 @@
-- There are more ways to inappropriately use metaphors than to appropriately use them. They are best avoided unless the situation is worth the extra effort.
-- Metaphors are a special part of communication. They are like relish in cooking: a delicious and beautiful hot dog topping every once and a while, but not meant to be a daily, general purpose condiment or ingredient.
-- Keep metaphors special by only using them in places where you need to command the reader's attention in a special way. For example, if there's a crucial aspect of the design of a system that could go very wrong, and you need to talk about trade-offs between alternatives, maybe then it's appropriate to use a metaphor to heighten draw the reader's attention to how special that moment is.
-- When using metaphors, be careful with word choice and proximity to topics. Don't mix metaphors in the same paragraph.

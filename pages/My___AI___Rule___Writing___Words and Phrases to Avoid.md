@@ -1,18 +1,18 @@
-- The words and phrases below tend to signal premature certainty, overclaiming, or conclusions that haven't been earned yet.
-- # Prefer language that is honest about uncertainty
+# Prefer language that is honest about uncertainty
+	- The words and phrases below tend to signal premature certainty, overclaiming, or conclusions that haven't been earned yet.
 	- ## Comprehensive
 		- Implies nothing was missed. Almost always false — and the claim is unverifiable at the moment it's made.
 	- ## Absolutely
 		- Sycophantic filler. Agree or disagree on substance; don't amplify agreement with emphasis.
 	- ## Smoking Gun
-		- Avoid idiomatic turns of phrase like this. Please curb your enthusiasm. If AI ever uses this phrase, it's usually a "writing smell" or a "tell" that AI likely reached a premature conclusion. See also [[My/Pref/Writing/Avoid Awkward or Superfluous Metaphors]]; this is not a murder mystery.
+		- Avoid idiomatic turns of phrase like this. Please curb your enthusiasm. If AI ever uses this phrase, it's usually a "writing smell" or a "tell" that AI likely reached a premature conclusion. See also [[My/Pref/Writing/Avoid Distractors such as Awkward or Superfluous Metaphors]]; this is not a murder mystery.
 - # [[My/Pref/Writing/Use the simpler word]]
 	- ## Canonical, Canon -> Standard
 		- This is just a fancy way of saying "standard." Most people in the U.S. probably don't even know what this means. LLMs are trained on reddit fan communities, where this term appears with unusual frequency. Don't assume the reader is a fan fiction writer.
 - # [[My/Pref/Writing/Avoid Jargon, Especially Tech-speek]]
 	- ## {Bootstrap, Initialize, Provision} -> Setting it up
 		- I've noticed that AI likes to use technical programmer jargon when there's a plain-english equivalent term when it's talking about setting up a project, we might have some things the AI has to do one time that first time.
-- # [[My/Pref/Writing/Avoid Awkward or Superfluous Metaphors]]
+- # [[My/Pref/Writing/Avoid Distractors such as Awkward or Superfluous Metaphors]]
 	- ## Load-Bearing -> A more important part
 		- When AI makes a plan to do something, I've noticed that it tends to use phrases like "Feature XYZ is the load-bearing bit", which is a needless metaphor. Instead, just use plain language. Say that "Feature XYZ <insert short reminder of feature ZYX> is the import part of this plan."
 	- ## Don't use the word "moves" to describe things that are not moving
