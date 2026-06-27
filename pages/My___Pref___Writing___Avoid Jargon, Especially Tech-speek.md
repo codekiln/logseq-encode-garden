@@ -1,2 +1,2 @@
 - By "jargon" here I'm referring to words that make sense with people who are in a very narrow context.
-- AI coding tools by their very nature have been trained to overuse words that technologists would use. For example, instead of Bootstrapping or Initializing or Provisioning, consider the simpler way of saying this: "we'll do a one-time setup."
+- AI coding tools by their very nature have been trained to overuse words that technologists would use. For example, instead of Bootstrapping or Initializing or Provisioning, consider the simpler way of saying this: "we'll do a one-time setup." Instead of "The Guide agent discovers what's installed at runtime," consider "When it starts to run the Guide AI should discover what is installed."
