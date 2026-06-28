@@ -1,0 +1,6 @@
+- # `github-link::` for the page's own source on [[GitHub]]
+	- `github-link::` holds the GitHub URL of this page's own source file in the garden repo, so a reader of the deployed web garden can open or edit the underlying Markdown.
+	- ## Standards
+		- Use the `https://github.com/<owner>/<repo>/blob/main/<path>` form — the link that resolves on the web when the garden is deployed. See [[CursorAI Project Rule GitHub Link]].
+		- Point at the page's own file under `pages/` or `journals/`. For the external source of whatever a page documents, use `source-link::` instead.
+		- Encode spaces in the path as `%20`; leave namespace triple underscores as they are.

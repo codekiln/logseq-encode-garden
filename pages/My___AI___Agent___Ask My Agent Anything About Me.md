@@ -1,5 +1,7 @@
 tags:: [[Diataxis/How To]]
 see-also:: [[My]]
+github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/My___AI___Agent___Ask%20My%20Agent%20Anything%20About%20Me.md
+
 - # Ask My Agent Anything About Me
 	- ## Overview
 		- This shows you how to set up and chat with my agent — an AI that answers questions about me using only this [[Knowledge Garden]], and cites the pages behind each answer.
@@ -10,8 +12,8 @@ see-also:: [[My]]
 		- [git](https://git-scm.com/downloads). Check with `git --version`, and install it if that fails.
 		- An AI coding agent. The one-command path below uses Claude Code, which needs a paid [Claude plan](https://claude.com/pricing) (Pro starts around $20 per month) or pay-as-you-go API credits; mise installs the agent itself in step 3. To ask for free instead, skip to "Free alternative: GitHub Copilot".
 	- ## Steps
-		- ### 1. Install mise
-			- mise is the one tool that installs everything else and runs the agent for you.
+		- ### 1. Install [[mise]]
+			- mise is one of my favorite tools. It's by [[Person/Jeff Dickey]], an awesome developer. It's one tool that installs everything else and runs the agent for you.
 			- On macOS or Linux, run this, then open a new terminal window:
 			- ~~~sh
 			  curl https://mise.run | sh
@@ -49,5 +51,3 @@ see-also:: [[My]]
 		- `mise: command not found` — open a new terminal window, or run the activation line the install step printed.
 		- The agent does not start — run `mise install` again to make sure the AI agent finished downloading, then retry step 4.
 		- You do not want to pay for Claude — use "Free alternative: GitHub Copilot" above.
-	- ## This page on [[GitHub]]
-		- [View this page's source on GitHub](https://github.com/codekiln/logseq-encode-garden/blob/main/pages/My___AI___Agent___Ask%20My%20Agent%20Anything%20About%20Me.md)
