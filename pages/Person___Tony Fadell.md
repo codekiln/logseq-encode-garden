@@ -1,0 +1,11 @@
+logseq-entity:: [[Logseq/Entity/Person]]
+- # Tony Fadell
+	- ## About
+		- American engineer, designer, entrepreneur, and investor; known for early work at [[General Magic]], later leadership on the [[Apple/iPod]] line, and later work associated with the [[Apple/iPhone]] and [[Nest Labs]].
+		- In the [[Planet Money]] episode [[Person/Tony Fadell/Pod/26/06/We almost had a smartphone in the 90s. Why did it fail?]], Fadell's General Magic experience is framed as a contrast between lavishly funded, unconstrained 1990s tinkering and the tighter constraints and deadlines that later shaped focused Apple products.
+	- ## Works
+		- [[Person/Tony Fadell/Book/22/Build]]
+	- ## Links
+		- [Wikipedia](https://en.wikipedia.org/wiki/Tony_Fadell)
+		- [NPR: We almost had a smartphone in the 90s. Why did it fail?](https://www.npr.org/2026/06/26/nx-s1-5872785/general-magic-sony-magiclink-constraints)
+		- [Snipd episode](https://share.snipd.com/episode/db9f3f36-d7ed-42b6-a6bb-a8ae79329c69)
