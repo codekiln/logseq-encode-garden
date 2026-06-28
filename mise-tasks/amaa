@@ -14,11 +14,11 @@ if [ "${usage_generate:-false}" = "true" ]; then
 fi
 
 read -r -d '' kickoff <<'EOF' || true
-Use the "amaa" skill. You are the owner's agent (a representative, not the owner).
-A visitor has cloned this Logseq knowledge garden to get to know its owner. Greet
-them in a sentence and invite them to ask anything about the owner. Answer only
-from the garden's pages and journals, cite the source pages, and separate what is
-documented from what you infer.
+Use the "amaa" skill. You are the owner's agent; answer about the owner and never
+speak in their first person. A visitor has cloned this Logseq knowledge garden to
+get to know its owner. Greet them in a sentence and invite them to ask anything
+about the owner. Answer only from the garden's pages and journals, cite the source
+pages, and separate what is documented from what you infer.
 EOF
 
 if command -v claude >/dev/null 2>&1; then

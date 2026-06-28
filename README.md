@@ -4,8 +4,8 @@ My little [Knowledge Garden](https://codekiln.github.io/logseq-encode-garden/#/p
 
 ## Ask My Agent Anything
 
-Want to get to know me? Clone this repo and ask my agent — a representative, not me
-directly — questions about me, answered from the garden's own pages and journals:
+Want to get to know me? Clone this repo and ask my agent questions about me,
+answered from the garden's own pages and journals:
 
 ```bash
 mise run amaa
