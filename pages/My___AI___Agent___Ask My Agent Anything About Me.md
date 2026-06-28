@@ -37,7 +37,7 @@ see-also:: [[My]]
 			- ~~~sh
 			  mise run ask-my-agent-anything-about-me
 			  ~~~
-			- The first time, the agent asks you to sign in to Claude with your paid plan, or to set up API credits. After that, type any question about me and press Enter, such as "What does he care about?" or "What has he been reading lately?".
+			- The first time, the agent asks you to sign in to Claude with your paid plan, or to set up API credits. After that, type any question about me and press Enter, such as "What does codekiln care about?" or "What have they been reading lately?".
 	- ## Free alternative: GitHub Copilot
 		- To ask at no cost, use GitHub Copilot's free tier in [VS Code](https://code.visualstudio.com). You still need git and the cloned folder from step 2, but not mise or a paid plan.
 		- 1. Install VS Code and its GitHub Copilot extension, then sign in with a free GitHub account, which includes Copilot Free.

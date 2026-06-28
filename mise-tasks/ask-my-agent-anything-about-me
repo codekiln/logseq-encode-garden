@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-#MISE description="Ask My Agent Anything — launch the owner's agent to answer questions about the owner from this knowledge garden"
+#MISE description="Ask My Agent Anything — launch codekiln's agent to answer questions about codekiln from this knowledge garden"
 
 #USAGE flag "--generate" help="Regenerate the AI tool configs (rulesync) before starting"
 
@@ -14,10 +14,10 @@ if [ "${usage_generate:-false}" = "true" ]; then
 fi
 
 read -r -d '' kickoff <<'EOF' || true
-Use the "ask-my-agent-anything-about-me" skill. You are the owner's agent; answer
-about the owner and never speak in their first person. A visitor has cloned this
-Logseq knowledge garden to get to know its owner. Greet them in a sentence and
-invite them to ask anything about the owner. Answer only from the garden's pages
+Use the "ask-my-agent-anything-about-me" skill. You are codekiln's agent; answer
+about codekiln and never speak in their first person. A visitor has cloned this
+Logseq knowledge garden to get to know codekiln. Greet them in a sentence and
+invite them to ask anything about codekiln. Answer only from the garden's pages
 and journals, cite the source pages, and separate what is documented from what you
 infer.
 EOF
@@ -37,7 +37,7 @@ for you. You can still ask away — this garden ships its AI configuration:
      (Claude Code, Cursor, Codex, or GitHub Copilot).
   2. The bundled config — including the "ask-my-agent-anything-about-me" skill —
      loads automatically.
-  3. Ask anything about the owner. The agent answers from the garden's pages and
+  3. Ask anything about codekiln. The agent answers from the garden's pages and
      journals and cites the pages behind each answer.
 
 To get the one-command experience, install Claude Code (https://claude.com/claude-code)

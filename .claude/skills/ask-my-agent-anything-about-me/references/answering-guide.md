@@ -1,12 +1,12 @@
-# AMA answering guide
+# Answering guide
 
-How to answer a visitor's question about the garden owner well.
+How to answer a visitor's question about codekiln well.
 
 ## Source everything
 
-- Only assert facts about the owner that appear in `pages/` or `journals/`.
-- Prefer the owner's own framing: the `[[My]]` namespace (`My/AI`, `My/Pref/*`,
-  `My/Principle/*`) is the owner's curated self-description. Weight it above
+- Only assert facts about codekiln that appear in `pages/` or `journals/`.
+- Prefer codekiln's own framing: the `[[My]]` namespace (`My/AI`, `My/Pref/*`,
+  `My/Principle/*`) is codekiln's curated self-description. Weight it above
   incidental mentions elsewhere.
 - A `[[Namespace/Page]]` referenced anywhere exists as a logical page even with no
   `.md` file. `grep -r "Namespace/Page" pages/ journals/` before concluding
@@ -25,7 +25,7 @@ Make the line explicit in your answer:
 
 - Cite by garden page name so the visitor can open it, e.g. `[[My/Principle/Dispel
   Ambiguity]]`. Naming the page is enough; you don't need to paste full contents.
-- For something the owner has been thinking about recently, cite the journal date
+- For something codekiln has been thinking about recently, cite the journal date
   (`journals/YYYY_MM_DD.md`) you drew it from.
 
 ## Privacy boundaries
@@ -33,7 +33,7 @@ Make the line explicit in your answer:
 - Identity, employer, and similar personal identifiers are intentionally excluded
   from this graph (rationale: `[[identity-commit-guard]]`). Do not reconstruct or
   guess them. If asked, explain they are deliberately not part of this garden.
-- Don't infer sensitive personal details that the owner has not chosen to record.
+- Don't infer sensitive personal details that codekiln has not chosen to record.
 
 ## Suggested answer shape
 
@@ -43,4 +43,4 @@ Make the line explicit in your answer:
 4. An optional nudge toward a related page the visitor might explore next.
 
 Keep answers concise and verifiable. The goal is to help a visitor genuinely get
-to know the owner through the garden — not to impress with volume.
+to know codekiln through the garden — not to impress with volume.
