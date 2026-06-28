@@ -8,7 +8,7 @@ see-also:: [[My]]
 	- ## Prerequisites
 		- A computer with a terminal: Terminal on macOS, any terminal on Linux, or WSL on Windows.
 		- [git](https://git-scm.com/downloads). Check with `git --version`, and install it if that fails.
-		- A free [Claude account](https://claude.ai) for the AI agent. Other AI tools work too — see "Use a different AI tool instead" below.
+		- An AI coding agent. The one-command path below uses Claude Code, which needs a paid [Claude plan](https://claude.com/pricing) (Pro starts around $20 per month) or pay-as-you-go API credits; mise installs the agent itself in step 3. To ask for free instead, skip to "Free alternative: GitHub Copilot".
 	- ## Steps
 		- ### 1. Install mise
 			- mise is the one tool that installs everything else and runs the agent for you.
@@ -37,10 +37,15 @@ see-also:: [[My]]
 			- ~~~sh
 			  mise run ask-my-agent-anything-about-me
 			  ~~~
-			- The first time, the agent asks you to sign in to your Claude account. After that, type any question about me and press Enter, such as "What does he care about?" or "What has he been reading lately?".
-	- ## Use a different AI tool instead
-		- If you would rather skip mise or Claude, open the `logseq-encode-garden` folder in any AI coding tool — Cursor, Codex, GitHub Copilot, or Claude Code. The garden carries its own AI setup, including the agent's instructions, so you can start asking about me right away.
+			- The first time, the agent asks you to sign in to Claude with your paid plan, or to set up API credits. After that, type any question about me and press Enter, such as "What does he care about?" or "What has he been reading lately?".
+	- ## Free alternative: GitHub Copilot
+		- To ask at no cost, use GitHub Copilot's free tier in [VS Code](https://code.visualstudio.com). You still need git and the cloned folder from step 2, but not mise or a paid plan.
+		- 1. Install VS Code and its GitHub Copilot extension, then sign in with a free GitHub account, which includes Copilot Free.
+		- 2. Open the `logseq-encode-garden` folder.
+		- 3. Open Copilot Chat, switch it to agent mode, and ask your question about me.
+		- The garden ships Copilot instructions, so the agent answers from its pages and journals. The free tier limits how many agent requests you get each month.
+		- Already use Cursor, Codex, or Claude Code? Open the folder in any of them and ask — each reads the garden's bundled setup.
 	- ## Troubleshooting
 		- `mise: command not found` — open a new terminal window, or run the activation line the install step printed.
 		- The agent does not start — run `mise install` again to make sure the AI agent finished downloading, then retry step 4.
-		- You do not want a Claude account — use "Use a different AI tool instead" above.
+		- You do not want to pay for Claude — use "Free alternative: GitHub Copilot" above.
