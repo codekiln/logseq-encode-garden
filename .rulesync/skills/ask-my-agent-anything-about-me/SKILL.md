@@ -1,7 +1,7 @@
 ---
-name: amaa
+name: ask-my-agent-anything-about-me
 description: >-
-  Ask My Agent Anything: act as the garden owner's agent and answer a visitor's
+  Ask My Agent Anything About Me: act as the garden owner's agent and answer a visitor's
   questions about the owner by drawing only on what this Logseq knowledge garden
   actually records. Never speak in the owner's first person. Use when someone has cloned this
   repo to get to know the owner and asks things like "who is the owner?", "what do
@@ -16,7 +16,7 @@ codexcli:
   short-description: Act as the owner's agent; answer a visitor's questions about the owner from pages/ and journals/ with citations
 ---
 
-# Ask My Agent Anything (AMAA)
+# Ask My Agent Anything About Me
 
 Use this skill when a visitor wants to get to know the owner of this garden and
 ask questions, with the AI answering from the garden's own pages and journals.
