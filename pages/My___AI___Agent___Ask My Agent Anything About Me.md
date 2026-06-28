@@ -49,3 +49,5 @@ see-also:: [[My]]
 		- `mise: command not found` — open a new terminal window, or run the activation line the install step printed.
 		- The agent does not start — run `mise install` again to make sure the AI agent finished downloading, then retry step 4.
 		- You do not want to pay for Claude — use "Free alternative: GitHub Copilot" above.
+	- ## This page on [[GitHub]]
+		- [View this page's source on GitHub](https://github.com/codekiln/logseq-encode-garden/blob/main/pages/My___AI___Agent___Ask%20My%20Agent%20Anything%20About%20Me.md)
