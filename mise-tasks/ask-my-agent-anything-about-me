@@ -3,7 +3,7 @@ set -euo pipefail
 
 #MISE description="Ask My Agent Anything — launch whichever AI agent you have over this garden to answer questions about codekiln"
 
-#USAGE flag "--tool <tool>" help="AI agent to use: claude, codex, cursor, or copilot (default: auto-detect)" {
+#USAGE flag "--tool <tool>" help="AI agent to use: claude, codex, cursor, or copilot (default: ask)" {
 #USAGE   choices "claude" "codex" "cursor" "copilot"
 #USAGE }
 #USAGE flag "--generate" help="Regenerate this tool's skill config (rulesync) even if it already exists"
@@ -20,7 +20,8 @@ tool_target() { case "$1" in claude) echo claudecode;; codex) echo codexcli;; cu
 # Codex reads skills from the AGENTS.md-standard .agents/skills dir (committed); only
 # Cursor's .cursor/skills is gitignored and generated on demand.
 tool_dir()    { case "$1" in claude) echo .claude/skills;; codex) echo .agents/skills;; cursor) echo .cursor/skills;; copilot) echo .github/skills;; esac; }
-tool_label()  { case "$1" in claude) echo "Claude Code";; codex) echo "Codex";; cursor) echo "Cursor";; copilot) echo "GitHub Copilot";; esac; }
+tool_label()  { case "$1" in claude) echo "Claude Code";; codex) echo "Codex";; cursor) echo "Cursor";; copilot) echo "GitHub Copilot (free tier available)";; esac; }
+tool_url()    { case "$1" in claude) echo "https://claude.com/claude-code";; codex) echo "https://developers.openai.com/codex";; cursor) echo "https://cursor.com";; copilot) echo "https://github.com/features/copilot";; esac; }
 
 # Prefer rulesync on PATH (mise installs it); fall back to npx.
 if command -v rulesync >/dev/null 2>&1; then
@@ -29,43 +30,21 @@ else
   RULESYNC=(npx rulesync)
 fi
 
-# Choose the tool: explicit --tool, else auto-detect installed launchers.
+# Choose the tool: explicit --tool, else ask which agent the visitor has.
 chosen="${usage_tool:-}"
 if [ -z "$chosen" ]; then
-  installed=()
-  for t in "${ALL_TOOLS[@]}"; do
-    command -v "$(tool_bin "$t")" >/dev/null 2>&1 && installed+=("$t")
+  echo "Which AI agent do you have? (GitHub Copilot has a free tier; the others need a paid plan.)" >&2
+  menu=()
+  for t in "${ALL_TOOLS[@]}"; do menu+=("$(tool_label "$t")"); done
+  PS3="Enter a number (or Ctrl-C to quit): "
+  select _ in "${menu[@]}"; do
+    if [ "${REPLY:-}" -ge 1 ] 2>/dev/null && [ "$REPLY" -le "${#ALL_TOOLS[@]}" ]; then
+      chosen="${ALL_TOOLS[$((REPLY - 1))]}"
+      break
+    fi
+    echo "Please enter a number from the list." >&2
   done
-  case "${#installed[@]}" in
-    0)
-      cat <<'EOF'
-Ask My Agent Anything About Me
-==============================
-
-No supported AI agent was found on your PATH. Install one of these, then re-run
-`mise run ask-my-agent-anything-about-me`:
-
-  - GitHub Copilot  https://github.com/features/copilot   (has a free tier)
-  - Claude Code     https://claude.com/claude-code         (paid plan or API credits)
-  - Codex           https://developers.openai.com/codex    (paid)
-  - Cursor          https://cursor.com                     (paid; CLI: cursor-agent)
-
-Already have one installed? Pick it explicitly, e.g.:
-  mise run ask-my-agent-anything-about-me --tool copilot
-EOF
-      exit 0
-      ;;
-    1)
-      chosen="${installed[0]}"
-      ;;
-    *)
-      echo "Found more than one AI agent. Which should answer questions about codekiln?" >&2
-      select t in "${installed[@]}"; do
-        [ -n "${t:-}" ] && { chosen="$t"; break; }
-      done
-      [ -z "${chosen:-}" ] && { echo "No selection made; exiting." >&2; exit 1; }
-      ;;
-  esac
+  [ -z "${chosen:-}" ] && { echo "No selection made; exiting." >&2; exit 1; }
 fi
 
 target="$(tool_target "$chosen")"
@@ -88,13 +67,13 @@ and journals, cite the source pages, and separate what is documented from what y
 infer.
 EOF
 
-# The chosen tool's binary may be absent only when --tool named an uninstalled one;
-# its config is now ready regardless, so point the visitor at the folder.
+# If the chosen agent isn't installed, its config is ready regardless — point the
+# visitor at the folder and the install link, then let them re-run.
 if ! command -v "$bin" >/dev/null 2>&1; then
   cat <<EOF
 $label ($bin) was not found on your PATH. Its skill config is ready at
 $dir/$SKILL/ — open this folder in $label and ask anything about codekiln, or
-install $label and re-run:
+install $label ($(tool_url "$chosen")) and re-run:
   mise run ask-my-agent-anything-about-me --tool $chosen
 EOF
   exit 0

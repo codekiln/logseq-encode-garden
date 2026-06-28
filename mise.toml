@@ -8,5 +8,5 @@ node = "lts"
 # rulesync compiles this garden's AI configs (the skills) for each supported tool.
 # The ask-my-agent-anything-about-me task uses it to generate a tool's config on
 # demand. No AI agent is pinned — bring your own (Claude Code, Codex, Cursor, or
-# GitHub Copilot); the task detects and launches whichever one you have installed.
+# GitHub Copilot); the task asks which one you have, then launches it.
 "npm:rulesync" = "latest"

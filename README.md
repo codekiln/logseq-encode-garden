@@ -11,8 +11,8 @@ answered from the garden's own pages and journals:
 mise run ask-my-agent-anything-about-me
 ```
 
-That detects whichever AI agent you have — Claude Code, Codex, Cursor, or GitHub
-Copilot — sets up that tool's skill, and starts it. Pick one explicitly with
+That asks which AI agent you have — Claude Code, Codex, Cursor, or GitHub
+Copilot — sets up that tool's skill, and starts it. Skip the prompt with
 `--tool claude|codex|cursor|copilot`. GitHub Copilot has a free tier; the others
 need a paid plan.
 

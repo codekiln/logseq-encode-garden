@@ -10,11 +10,13 @@ github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/M
 		- Let's say you want to get in touch with me.
 			- Well, maybe send me an email, if you can.
 			- Or open a github issues on this knowledge garden, perhaps.
-		- But if you'd like to hang out in my little [[Knowledge Garden]] and get to know it and me a bit, and if you have an [[AI Coding Tool]], then this page shows you how to install [[Agent/Skills]] and get them set up so you can ask my agent about me, backed by this knowledge garden. It's a work-in-progress avatar of [[Person/codekiln]].
+		- But if you'd like to hang out in my little [[Knowledge Garden]] and get to know it and me a bit, and if you have an [[AI Coding Tool]], then this page shows you how to install [[Agent/Skills]] and get them set up so you can ask my agent about me, backed by this knowledge garden. It's a work-in-progress avatar / shadow of [[Person/codekiln]].
 	- ## Prerequisites
 		- A computer with a terminal: Terminal on macOS, any terminal on Linux, or WSL on Windows.
 		- [git](https://git-scm.com/downloads). Check with `git --version`, and install it if that fails.
-		- An AI coding agent — any one of [[Claude Code]], [[Codex]], [[CursorAI]], or [[GitHub/CoPilot]]. Install at least one before step 4; the task detects which you have and starts it. mise installs the setup tool ([[rulesync]]) for you in step 3, but not the agent itself. To ask for free, [[GitHub/CoPilot]] has a free tier; the others need a paid plan. See "Which AI agent?" below to choose.
+		- An AI coding agent — any one of [[Claude Code]], [[Codex]], [[CursorAI]], or [[GitHub/CoPilot]].
+			- [[Person/inmve/GitHub/free-ai-coding]] has a few tips for doing this for free.
+		- Install at least one before step 4; the task asks which you have and starts it. mise installs the setup tool ([[rulesync]]) for you in step 3, but not the agent itself. To ask for free, [[GitHub/CoPilot]] has a free tier; the others need a paid plan. See "Which AI agent?" below to choose.
 	- ## Steps
 		- ### 1. Install [[mise]] if you don't already have it
 			- mise is one of my favorite tools. It's by [[Person/Jeff Dickey]], an awesome developer. It's a [[CLI/Tool]] that provides a task runner harness and can install any version of any CLI tool.
@@ -50,7 +52,7 @@ github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/M
 			- #### What does this do?
 				- See [logseq-encode-garden/mise-tasks/ask-my-agent-anything-about-me at main · codekiln/logseq-encode-garden · GitHub](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/ask-my-agent-anything-about-me) for the source code.
 				- Technically, the [[AI Skill]] it relies upon is managed by [[rulesync]] and is available here: [logseq-encode-garden/.rulesync/skills/ask-my-agent-anything-about-me/SKILL.md at main · codekiln/logseq-encode-garden · GitHub](https://github.com/codekiln/logseq-encode-garden/blob/main/.rulesync/skills/ask-my-agent-anything-about-me/SKILL.md)
-			- The task finds your AI agent, sets up that tool's skill if it isn't ready, and starts it. If you have more than one agent, it asks which to use; to choose up front, run `mise run ask-my-agent-anything-about-me --tool copilot` (or `claude`, `codex`, `cursor`).
+			- The task asks which AI agent you have, sets up that tool's skill if it isn't ready, and starts it. To pick up front and skip the prompt, run `mise run ask-my-agent-anything-about-me --tool copilot` (or `claude`, `codex`, `cursor`).
 			- The first time, your agent may ask you to sign in or authorize it. After that, type any question about me and press Enter, such as "What does codekiln care about?" or "What have they been reading lately?".
 	- ## Which AI agent?
 		- The task works with any of these. Pick one, install it, and the one-command path above does the rest.
@@ -61,6 +63,6 @@ github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/M
 		- Prefer an editor to the terminal? Open the `logseq-encode-garden` folder in [VS Code](https://code.visualstudio.com) with GitHub Copilot, or in [[CursorAI]], switch the assistant to agent mode, and ask — each reads the garden's bundled skill. With Copilot, the free tier limits how many agent requests you get each month.
 	- ## Troubleshooting
 		- `mise: command not found` — open a new terminal window, or run the activation line the install step printed.
-		- "No supported AI agent was found" — install one from "Which AI agent?" above, then retry step 4. If yours is installed but not detected, name it: `mise run ask-my-agent-anything-about-me --tool <name>`.
+		- You picked an agent that isn't installed — install it from "Which AI agent?" above and retry, or open the folder the task points you to and ask there.
 		- The skill seems out of date — rebuild your tool's config: `mise run ask-my-agent-anything-about-me --generate`.
 		- You do not want to pay — use [[GitHub/CoPilot]]'s free tier (see "Which AI agent?").
