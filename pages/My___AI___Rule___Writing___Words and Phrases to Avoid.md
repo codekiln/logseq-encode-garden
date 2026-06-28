@@ -1,4 +1,5 @@
-# Prefer language that is honest about uncertainty
+- This page has rules for AI communication that should be used when it's trying to communicate with me as well as when it's helping me with my writing. Please follow these rules when talking to help me stay sane.
+- # Prefer language that is honest about uncertainty
 	- The words and phrases below tend to signal premature certainty, overclaiming, or conclusions that haven't been earned yet.
 	- ## Comprehensive
 		- Implies nothing was missed. Almost always false — and the claim is unverifiable at the moment it's made.
