@@ -2,7 +2,7 @@ tags:: [[Diataxis/How To]]
 see-also:: [[My]]
 - # Ask My Agent Anything About Me
 	- ## Overview
-		- This walks you from nothing to chatting with my agent — an AI that answers questions about me using only this [[Knowledge Garden]], and that cites the pages behind each answer.
+		- This shows you how to set up and chat with my agent — an AI that answers questions about me using only this [[Knowledge Garden]], and cites the pages behind each answer.
 		- It is for someone who has my link and wants to get to know me, even with no setup yet. You install two free tools, copy the garden to your computer, and start asking.
 		- It takes about ten minutes.
 	- ## Prerequisites
@@ -43,8 +43,8 @@ see-also:: [[My]]
 		- 1. Install VS Code and its GitHub Copilot extension, then sign in with a free GitHub account, which includes Copilot Free.
 		- 2. Open the `logseq-encode-garden` folder.
 		- 3. Open Copilot Chat, switch it to agent mode, and ask your question about me.
-		- The garden ships Copilot instructions, so the agent answers from its pages and journals. The free tier limits how many agent requests you get each month.
-		- Already use Cursor, Codex, or Claude Code? Open the folder in any of them and ask — each reads the garden's bundled setup.
+		- The garden includes Copilot instructions, so the agent answers from its pages and journals. The free tier limits how many agent requests you get each month.
+		- Already use Cursor, Codex, or Claude Code? Open the folder in any of them and ask — each reads the garden's included setup.
 	- ## Troubleshooting
 		- `mise: command not found` — open a new terminal window, or run the activation line the install step printed.
 		- The agent does not start — run `mise install` again to make sure the AI agent finished downloading, then retry step 4.
