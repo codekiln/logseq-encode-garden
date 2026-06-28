@@ -15,7 +15,7 @@ github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/M
 		- A computer with a terminal: Terminal on macOS, any terminal on Linux, or WSL on Windows.
 		- [git](https://git-scm.com/downloads). Check with `git --version`, and install it if that fails.
 		- An AI coding agent — any one of [[Claude Code]], [[Codex]], [[CursorAI]], [[GitHub/CoPilot]], or any other [[AI/Coding/Agents.md]]-compatible agent.
-			- [[Person/inmve/GitHub/free-ai-coding]] has a few tips for doing this for free.
+			- [[AI/Coding/Tool/Report/26/Free Tier Providers]] surveys which AI coding tools have a usable free tier right now.
 		- Install at least one before step 4; the task asks which you have and starts it. mise installs the setup tool ([[rulesync]]) for you in step 3, but not the agent itself. To ask for free, [[GitHub/CoPilot]] has a free tier; the others need a paid plan. See "Which AI agent?" below to choose.
 	- ## Steps
 		- ### 1. Install [[mise]] if you don't already have it

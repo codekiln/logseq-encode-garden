@@ -3,6 +3,7 @@ tags:: [[AI Coding]], [[Reference]]
 
 - # AI Coding Tools
 	- [[AI/Coding/Tool/Report/25/Skills Comparison]] - Comparative analysis of modular "Skills" systems across agentic AI coding assistants
+	- [[AI/Coding/Tool/Report/26/Free Tier Providers]] - Free-tier AI coding providers and their published limits, privacy defaults, and caps (June 2026)
 - | Agent Name | Company | GitHub / Website Link |
   | ---------- | ------- | -------------------- |
   | [[Zed]] | Zed Industries | https://github.com/zed-industries/zed |

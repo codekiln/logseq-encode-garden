@@ -1,0 +1,174 @@
+tags:: [[ChatGPT/Deep Research]]
+alias:: [[ChatGPT/Deep Research/Report/26/06/Free AI Coding Providers With Current Free Tiers]]
+cgpt-link:: https://chatgpt.com/c/6a4161be-577c-83ea-bb32-e2508c374848?ref=mini
+date-created:: [[2026-06-28 Sat]]
+
+- # Free AI Coding Tool Providers (June 2026)
+	- A snapshot of which [[AI/Coding/Tool]]s have a usable free tier as of June 28, 2026, with their published limits, privacy defaults, and caveats. The differentiator is no longer raw model quality; it is how clearly each vendor publishes limits, how much privacy control the free tier offers, and whether the tool runs mostly locally or in the cloud.
+	- ## Executive summary
+		- The strongest high-confidence free options are [[GitHub/CoPilot]] Free, [[AWS/Q Developer]] Free (for existing users), [[CursorAI]] Hobby, [[Windsurf]] Free (now branded around [[Devin]] Desktop), [[Google/Antigravity]] Individual Preview, [[JetBrains]] AI Free, [[ReplitAI]] Starter, and [[Tabnine]]'s still-marketed free version. Vendors with the clearest published free caps are GitHub, Amazon, and JetBrains; the most opaque are Cursor, Windsurf, Antigravity, Replit, and Tabnine. [^1] [^9] [^11] [^18] [^8] [^25] [^30] [^34]
+		- If privacy is the first filter, [[Tabnine]] has the strongest published default posture: it states a no-train, no-retain policy when using Tabnine models, and supports cloud, VPC, on-prem, and air-gapped deployment. [[CursorAI]] can be strong too, but only when Privacy Mode is enabled; otherwise Cursor says it may use and store codebase data and prompts to improve and train its models. [[GitHub/CoPilot]] Free and [[CognitionAI]]'s [[Windsurf]]/[[Devin]] Desktop are materially weaker defaults: from April 24, 2026 GitHub says personal plans including Copilot Free may be used for model training unless the user opts out, and Cognition's policy says user content may be used to improve services and, depending on applicable terms, train models. [^4] [^5] [^3] [^6]
+		- The market is unusually volatile. Two providers that looked attractive on older lists are already in transition: Google's Gemini Code Assist for individuals was deprecated for consumer access on June 18, 2026 with users told to migrate to [[Google/Antigravity]], yet Google's own "Free AI tools" roundup still listed Gemini Code Assist as free; [[AWS/Q Developer]] still publishes a perpetual free tier, but AWS separately announced that new Q Developer Free Tier account creation was blocked starting May 15, 2026. This is the clearest signal that "best free AI coding tools" roundups now go stale very quickly. [^7] [^8] [^9] [^10]
+		- Best zero-cost starting points differ by user type: hobbyists do best with GitHub Copilot Free or Cursor Hobby; students should consider GitHub's education path or JetBrains AI Free; startups should pilot Cursor, Windsurf, or Replit for agentic workflows but treat the free tier as evaluation-only; enterprises should use free tiers only for early proof-of-concept and gravitate toward stronger governance surfaces like Tabnine, JetBrains, Cursor Teams/Enterprise, or Replit Enterprise. [^1] [^11] [^25] [^30]
+	- ## Scope and method
+		- Covers providers that bundle AI coding assistance with a real free tier or free starter plan — code generation, completion, debugging, chat/agent workflows, copilots, or browser-native app generation. Primarily BYOK-only shells are excluded unless the provider itself bundles free inference or a provider-managed free plan. Facts rest on a hierarchy of official pricing pages, product docs, privacy/data-use docs, and changelogs, plus community clarifications only where vendors no longer publish exact numbers. Last checked: June 28, 2026. [^11] [^9] [^25]
+		- The key caveat is a vendor transparency gap: several vendors now use quota systems without public hard numbers. Cursor's pricing says only "limited Agent requests" and "limited Tab completions" for Hobby; Windsurf moved from explicit credits to daily and weekly allowances without a canonical free-tier number; Google Antigravity advertises no-cost preview access subject to unstated weekly rate limits. Where an exact cap was not specified in an official source, it is marked **unspecified**. [^11] [^18] [^8]
+	- ## Providers
+		- ### [[GitHub/CoPilot]] — Copilot Free
+			- Free tier availability: Yes.
+			- Free tier limits: 2,000 completions/month and 50 chat messages/month; 1 user seat. [^1]
+			- Core features: Inline code completion, IDE chat, GitHub web chat, model switching, [[MCP]] support across major Copilot surfaces. Cloud agent is paid-only. [^12]
+			- Languages & frameworks: Multi-language; no exhaustive official free-tier language matrix surfaced in reviewed sources. [^12]
+			- Models: OpenAI GPT-5.x, Claude 4.x, and Gemini 2.5/3.x families, plus Microsoft MAI-Code-1-Flash; Free/Student inline suggestions are hosted on Fireworks AI. [^13]
+			- Local vs cloud: Cloud.
+			- Privacy & retention (free tier): From April 24, 2026, GitHub may use inputs/outputs/code/context from Copilot Free and personal paid plans to train/improve models; users can opt out. Copilot Chat stores up to 100 recent conversations and retains messages for 28 days. [^3]
+			- Signup: GitHub account; no credit-card requirement surfaced. [^2]
+			- Edu/nonprofit: Separate free access for eligible students, teachers, and open-source maintainers on covered plans. [^1]
+			- Known limitations: Hard caps are low versus agentic competitors; cloud agent and advanced paid surfaces excluded.
+		- ### [[AWS/Q Developer]] — Amazon Q Developer Free
+			- Free tier availability: Yes, but effectively restricted.
+			- Free tier limits: 50 agentic requests/month in IDE/CLI, 1,000 LOC/month for Java upgrades. IDE/CLI free use is Builder ID-based; console access differs by identity. AWS also announced new free-tier signup creation blocked starting May 15, 2026. [^9] [^10]
+			- Core features: IDE and [[CLI]] assistant, Q&A chat, agentic coding, AWS Console Q&A, Java upgrade transformation. [^9]
+			- Languages & frameworks: Not exhaustively enumerated in reviewed pricing docs; Java upgrade capabilities are explicitly documented. [^9]
+			- Models: Pricing page highlights access to the latest Claude models. [^9]
+			- Local vs cloud: Cloud.
+			- Privacy & retention (free tier): AWS says Free-tier content may be used for service improvement, debugging, and model training; opt-out is available. Pro tier is automatically opted out. [^14]
+			- Signup: Builder ID for IDE/CLI free tier; IAM / IAM Identity Center for some console surfaces. [^15]
+			- Edu/nonprofit: Unspecified in reviewed sources.
+			- Known limitations: Biggest risk is availability — pricing still presents a perpetual free tier while AWS separately says new signups were blocked from 2026-05-15. [^9] [^10]
+		- ### [[CursorAI]] — Hobby
+			- Free tier availability: Yes.
+			- Free tier limits: No credit card required; limited Agent requests and limited Tab completions. Exact monthly cap is **unspecified** on the official pricing page, and a support-moderated forum post says exact Hobby limits are not publicly stated. [^11]
+			- Core features: Agent IDE, tab completion, [[MCP]]s, skills, hooks; the broader Cursor product adds CLI, cloud agents, and code-review surfaces, though not all are in Hobby. [^11]
+			- Languages & frameworks: Broad multi-language support via the VS Code / LSP ecosystem; official pages call out JavaScript/TypeScript and Java guides and say LSP performance improved for all languages. [^16]
+			- Models: The broader product uses models from OpenAI, Anthropic, Gemini, xAI, and Cursor itself; the Hobby-specific list is **unspecified**. [^17]
+			- Local vs cloud: Desktop IDE plus cloud back-end for inference; cloud-agent surfaces also exist. [^17]
+			- Privacy & retention (free tier): With Privacy Mode enabled, Cursor says customer data is not used for training and providers operate under zero-data-retention agreements. With Privacy Mode off, Cursor says it may use/store codebase data, prompts, snippets, and actions to improve AI features and train models. [^5]
+			- Signup: Account required; no credit card for Hobby. [^11]
+			- Edu/nonprofit: Unspecified in reviewed sources.
+			- Known limitations: Excellent product surface, but free-limit opacity is unusually high; treat Hobby as a first-look tier rather than a predictable monthly allocation.
+		- ### [[Windsurf]] / [[Devin]] Desktop — Free ([[CognitionAI]])
+			- Free tier availability: Yes (Windsurf Free now reflected in Devin Desktop pricing).
+			- Free tier limits: Light quota to code with agents; limited model availability; unlimited inline edits; unlimited Tab completions; concurrent session limit shown as up to 10. Daily/weekly refresh behavior is documented, but exact free quota is **unspecified**. [^18] [^22]
+			- Core features: Agentic IDE, Cascade, Tab, JetBrains plugin availability, multi-file coding, checkpoints, linter-aware workflows. [^19]
+			- Languages & frameworks: Exact matrix not exhaustively published; IDE/plugin coverage is broad. [^20]
+			- Models: Cognition SWE family, including SWE-1.6, SWE-1.5, and supporting models; paid plans unlock broader frontier-model access. [^21]
+			- Local vs cloud: Desktop IDE with cloud model access.
+			- Privacy & retention (free tier): Cognition's privacy policy says user content may be used to improve services and, depending on the terms that apply, to train and fine-tune models; retention is as-needed. [^6]
+			- Signup: Account required. [^18]
+			- Edu/nonprofit: Unspecified in reviewed sources.
+			- Known limitations: Free experience is compelling, but quota is opaque and the strongest privacy feature (automated zero data retention) is associated with paid plans, not the free tier. [^22]
+		- ### [[Google/Antigravity]] — Individual Preview
+			- Free tier availability: Yes.
+			- Free tier limits: Individual preview is $0 and includes unlimited tab completions and command requests, but a weekly rate limit applies and the exact number is **unspecified**. [^8]
+			- Core features: Agent-first IDE, multi-agent orchestration, full-stack build/refactor workflows, Antigravity [[CLI]]. [^23]
+			- Languages & frameworks: Reviewed sources describe full-stack / frontend / backend work but do not publish a formal language matrix. [^8]
+			- Models: Google's free-tools page says Antigravity uses models such as Gemini 3 Pro and Flash and includes access to a wide selection of leading agent models. [^8]
+			- Local vs cloud: Desktop plus cloud inference.
+			- Privacy & retention (free tier): Not clearly product-specified for the individual preview in reviewed sources; Google's general privacy policy applies. An enterprise use case says Google Cloud-authenticated enterprise data is never used for training, but no equally explicit individual-tier statement was found. [^24]
+			- Signup: Google account. [^8]
+			- Edu/nonprofit: Unspecified in reviewed sources.
+			- Known limitations: Promising, but documentation is in a transition state after Google moved consumer Gemini Code Assist into the Antigravity family; exact weekly quotas are not public. [^7] [^8]
+		- ### [[JetBrains]] — AI Free
+			- Free tier availability: Yes.
+			- Free tier limits: 3 AI Credits per 30 days. New users also get a 30-day AI Pro trial. AI Free is unavailable in Android Studio and in free Community editions of PyCharm and IntelliJ IDEA. [^25]
+			- Core features: AI Assistant in the IDE, chat, agent integrations (including [[Junie]]), BYOK support, optional local models, and cloud-backed features where quota applies. [^26]
+			- Languages & frameworks: Strong coverage across JetBrains IDE ecosystems; eligibility is tied more to IDE/edition than to a language matrix. [^25]
+			- Models: JetBrains' own models plus third-party cloud providers; BYOK for OpenAI, Anthropic, and compatible providers; local models can be connected for chat workflows. [^25]
+			- Local vs cloud: Mixed local and cloud.
+			- Privacy & retention (free tier): Opt-in detailed AI usage collection can include the full communication between you and the LLM, usable for product improvement and training. `.aiignore` can exclude files from AI Assistant processing, with some exceptions. [^28]
+			- Signup: JetBrains account plus supported IDE/version. [^29]
+			- Edu/nonprofit: Educational, classroom, open-source, startup, and other complimentary IDE licenses can access AI Free if they hold active JetBrains IDE licenses; nonprofit treatment not explicitly identified. [^27]
+			- Known limitations: Best if you already live in JetBrains IDEs; free quota is small and availability differs by IDE edition/version.
+		- ### [[ReplitAI]] — Starter
+			- Free tier availability: Yes.
+			- Free tier limits: Free daily Agent credits; your first prompt is free with no credit consumption; 1 published project; exact daily credit amount is **unspecified**. Starter users only get Lite build. [^30] [^33]
+			- Core features: Browser-native app creation, code generation, deployment, debugging help, database, slides/videos/animations. [^31]
+			- Languages & frameworks: Presented more as a build surface than a language matrix; no clean free-tier matrix published. [^30]
+			- Models: Model names on Starter pricing are largely **unspecified** in current docs. [^30]
+			- Local vs cloud: Cloud / browser.
+			- Privacy & retention (free tier): Replit's privacy policy cites a legitimate interest in improving the accuracy of its machine-learning technologies such as code generation; Enterprise adds advanced privacy controls and single-tenant options. [^32]
+			- Signup: Replit account. [^30]
+			- Edu/nonprofit: Unspecified in reviewed sources.
+			- Known limitations: Starter excludes Plan Mode, third-party connectors, Replit AI Integrations, and full autonomous build; best for lightweight exploration. [^33]
+		- ### [[Tabnine]] — Free version / Tabnine Basic
+			- Free tier availability: Yes, but poorly quantified in current pricing.
+			- Free tier limits: Tabnine still markets a free version and recent docs/blogs discuss Tabnine Basic, but the current pricing page does not publish a 2026 free-plan quota. Limits are therefore **unspecified**. [^34] [^40]
+			- Core features: Code completions, chat, [[CLI]], agentic workflows, IDE plugins. [^35]
+			- Languages & frameworks: Docs say LLM coverage spans 600+ languages, libraries, and frameworks; broad IDE coverage across JetBrains, VS Code, Visual Studio, and more. [^36]
+			- Models: Proprietary Tabnine models for completions/chat, including Tabnine Protected and Tabnine+Mistral; optional third-party models are also available. [^37]
+			- Local vs cloud: Cloud, VPC, on-prem, and air-gapped deployments are explicitly supported. [^38]
+			- Privacy & retention (free tier): Tabnine states a no-train, no-retain posture and says it never stores or shares your code with third parties when using Tabnine models. [^4]
+			- Signup: Account plus IDE plugin install. [^39]
+			- Edu/nonprofit: No current student/nonprofit page found in reviewed sources; Tabnine advertises a 90-day Pro trial and a separate NVIDIA startup benefit. [^40]
+			- Known limitations: Attractive on privacy and deployment freedom, but current free-plan specifics are harder to verify than top competitors.
+	- ## Market changes that matter more than feature lists
+		- More vendors are moving from simple monthly request counts to soft quota systems that reset daily or weekly. Windsurf replaced credits with daily/weekly allowances in March 2026; Cursor's Hobby tier no longer publishes exact caps; Antigravity's free preview advertises weekly limits without a public number. Comparing free plans by one neat "messages per month" figure is often impossible. [^22] [^11] [^8]
+		- Privacy on free tiers is diverging sharply. Tabnine says code is never retained or used for training; Cursor offers a strong privacy mode but makes it optional; GitHub, Cognition, Amazon, JetBrains, and Replit all publish some pathway by which free/consumer interaction data may be used for improvement or training, whether opt-out, opt-in, or policy-dependent. "Free" increasingly means subsidized by strict caps, looser privacy defaults, or both. [^4] [^5] [^3] [^6] [^14] [^28] [^32]
+		- Official aggregator pages now lag product reality. Google's free-AI-tools roundup still listed Gemini Code Assist for individuals as free while product docs said consumer access had been deprecated and moved to Antigravity on June 18, 2026. AWS pricing still shows a perpetual Amazon Q free tier while AWS separately announced that new signups were blocked starting May 15, 2026. Live docs must be read together with release notes, not alone. [^8] [^7] [^10]
+		- The most attractive free tiers for agentic coding are currently the least transparent. Cursor, Windsurf, Antigravity, and Replit all offer more modern "agent builds things for me" experiences than older completion-centric tools, but all four leave at least one of precise consumption rules, model routing, or hard monthly caps unclear on the free tier. GitHub, Amazon, and JetBrains publish clearer numbers, but their free tiers are smaller or more constrained. [^11] [^18] [^8] [^30] [^1]
+		- Timeline of free-tier market shifts:
+			- 2025-11: Google launches Antigravity public preview at no charge.
+			- 2026-03: Windsurf replaces credits with a daily/weekly quota model.
+			- 2026-04: GitHub says Copilot Free and personal plans may be used for training unless opted out.
+			- 2026-05: AWS blocks new Amazon Q Developer free-tier signups.
+			- 2026-06: Cursor updates its Data Use page around Privacy Mode and ZDR.
+			- 2026-06: Google deprecates consumer Gemini Code Assist and migrates users to Antigravity.
+	- ## Recommendations by user type
+		- ### Hobbyist
+			- Best fits: [[GitHub/CoPilot]] Free, [[CursorAI]] Hobby, [[ReplitAI]] Starter.
+			- Why: Copilot Free is the cleanest "just works" copilot if your usage fits 2,000 completions + 50 chat messages/month. Cursor Hobby is better for a more agentic IDE if you can tolerate unpublished caps. Replit Starter suits a browser-native builder with deployment included and no local setup. [^1] [^11] [^30]
+		- ### Student
+			- Best fits: [[GitHub/CoPilot]], [[JetBrains]] AI Free, [[ReplitAI]] Starter.
+			- Why: GitHub is the strongest student pick because it separately offers eligible education access beyond the narrow Copilot Free baseline. JetBrains AI Free is excellent if coursework already lives in JetBrains IDEs and your license qualifies. Replit is the lowest-friction route for demos, prototypes, and classroom collaboration. [^1] [^25] [^30]
+		- ### Startup
+			- Best fits: [[CursorAI]], [[Windsurf]] / [[Devin]] Desktop, [[Google/Antigravity]], [[ReplitAI]].
+			- Why: The most useful free evaluations are tools that already center agents rather than autocomplete. Cursor and Windsurf are the best desktop-IDE experiments, Antigravity is compelling if your team is close to Google's stack, and Replit is fastest for testing product ideas end to end. Expect to leave the free tier quickly once usage becomes real. [^11] [^18] [^8] [^30]
+		- ### Enterprise
+			- Best fits: [[Tabnine]], [[JetBrains]], [[CursorAI]] Teams/Enterprise path, [[ReplitAI]] Enterprise path.
+			- Why: Don't optimize for the "best free tier"; optimize for a free evaluation path into governance, privacy, and deployment controls. Tabnine stands out on privacy and deployment flexibility; JetBrains is strong for JetBrains-standardized orgs; Cursor and Replit are strongest for agentic acceleration but need careful policy configuration and paid controls for production. [^4] [^25] [^5] [^30]
+	- ## Open questions and limitations
+		- Several providers do not publish exact free-tier consumption in a comparable way. The most important **unspecified** fields are the exact free caps for [[CursorAI]] Hobby, [[Windsurf]] Free, [[Google/Antigravity]] Individual Preview, [[ReplitAI]] Starter daily agent credits, and [[Tabnine]] Basic / free version. That is a vendor transparency gap, not a research gap. [^11] [^18] [^8] [^30] [^34]
+		- Google and AWS each had a significant official-source inconsistency at review time: Google's free-tools roundup still listed Gemini Code Assist for individuals after consumer access was deprecated in favor of Antigravity, and AWS maintained a free-tier pricing page while announcing a block on new signups. Procurement or internal-standards work should re-check those two vendors manually before rollout. [^8] [^7] [^10]
+		- Educational and nonprofit discount data is unevenly published. GitHub and JetBrains clearly expose education paths; for most others, no current public education/nonprofit page tied to the coding product was found in reviewed materials, so those entries are marked unspecified rather than guessed. [^1] [^27]
+	- ## Footnotes
+		- [^1]: https://docs.github.com/en/copilot/get-started/plans
+		- [^2]: https://docs.github.com/en/copilot/concepts/billing/individual-plans
+		- [^3]: https://docs.github.com/copilot/how-tos/manage-your-account/managing-copilot-policies-as-an-individual-subscriber
+		- [^4]: https://docs.tabnine.com/main/welcome/readme/privacy
+		- [^5]: https://cursor.com/data-use
+		- [^6]: https://windsurf.com/privacy-policy
+		- [^7]: https://docs.cloud.google.com/gemini/docs/support/troubleshoot-code-assist
+		- [^8]: https://cloud.google.com/use-cases/free-ai-tools
+		- [^9]: https://aws.amazon.com/q/developer/pricing/
+		- [^10]: https://aws.amazon.com/blogs/devops/amazon-q-developer-end-of-support-announcement/
+		- [^11]: https://cursor.com/pricing
+		- [^12]: https://docs.github.com/enterprise-cloud%40latest/copilot/using-github-copilot/asking-github-copilot-questions-in-github
+		- [^13]: https://docs.github.com/en/copilot/reference/ai-models/model-hosting
+		- [^14]: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/service-improvement.html
+		- [^15]: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/q-tiers.html
+		- [^16]: https://cursor.com/for/javascript-typescript
+		- [^17]: https://cursor.com/
+		- [^18]: https://windsurf.com/pricing
+		- [^19]: https://docs.devin.ai/desktop/cascade/cascade
+		- [^20]: https://docs.devin.ai/windsurf/plugins/getting-started
+		- [^21]: https://docs.windsurf.com/windsurf/models
+		- [^22]: https://windsurf.com/blog/windsurf-pricing-plans
+		- [^23]: https://cloud.google.com/blog/topics/developers-practitioners/choosing-your-surface-antigravity-20-antigravity-cli-antigravityide-or-antigravity-sdk
+		- [^24]: https://policies.google.com/privacy?hl=en-US
+		- [^25]: https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html
+		- [^26]: https://www.jetbrains.com/ai-ides/
+		- [^27]: https://lp.jetbrains.com/ai-ides-faq
+		- [^28]: https://www.jetbrains.com/help/ai-assistant/how-we-handle-your-code-and-data.html
+		- [^29]: https://www.jetbrains.com/help/ai-assistant/installation-guide-ai-assistant.html
+		- [^30]: https://replit.com/pricing
+		- [^31]: https://replit.com/ai
+		- [^32]: https://replit.com/privacy-policy
+		- [^33]: https://docs.replit.com/billing/plans/starter-plan
+		- [^34]: https://www.tabnine.com/code-library/
+		- [^35]: https://docs.tabnine.com/main
+		- [^36]: https://docs.tabnine.com/main/welcome/readme/supported-languages
+		- [^37]: https://docs.tabnine.com/main/welcome/readme/ai-models
+		- [^38]: https://www.tabnine.com/platform/
+		- [^39]: https://docs.tabnine.com/main/getting-started/install
+		- [^40]: https://www.tabnine.com/pricing/
