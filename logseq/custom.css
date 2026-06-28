@@ -1,1 +1,11 @@
 @import url("https://cdn.jsdelivr.net/gh/pengx17/logseq-dev-theme@main/custom.css");
+
+/* Hide the global graph view entry points (it crashes on large graphs). */
+/* Left-sidebar "Graph view" link (app + published). */
+.graph-view-nav {
+  display: none !important;
+}
+/* Top-bar "Graph" button in the published site. */
+.cp__header a.button[href$="#/graph"] {
+  display: none !important;
+}
