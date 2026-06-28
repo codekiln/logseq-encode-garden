@@ -70,7 +70,7 @@ If a file is part of a Logseq project and a relative link is requested:
 - Identify the file's location relative to the Logseq folder structure (typically `logseq/assets/` or `logseq/pages/`).
 - Format relative to a typical page location (`logseq/pages/somepage.md`).
 - Use Markdown syntax `[name](relative/path/to/file)`.
-- Input: `/Users/Myer/dev/clones/logseq/assets/Folder/File.ext`
+- Input: `/Users/username/dev/clones/logseq/assets/Folder/File.ext`
   ```markdown
   [File.ext](../assets/Folder/File.ext)
   ```

@@ -1,16 +1,82 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-#MISE description="Ask My Agent Anything — launch codekiln's agent to answer questions about codekiln from this knowledge garden"
+#MISE description="Ask My Agent Anything — launch whichever AI agent you have over this garden to answer questions about codekiln"
 
-#USAGE flag "--generate" help="Regenerate the AI tool configs (rulesync) before starting"
+#USAGE flag "--tool <tool>" help="AI agent to use: claude, codex, cursor, or copilot (default: auto-detect)" {
+#USAGE   choices "claude" "codex" "cursor" "copilot"
+#USAGE }
+#USAGE flag "--generate" help="Regenerate this tool's skill config (rulesync) even if it already exists"
 
 # Run from the graph root so the agent sees pages/, journals/, and the AI configs.
 cd "${MISE_PROJECT_ROOT:-$PWD}"
 
-# usage exposes parsed flags as usage_* env vars.
-if [ "${usage_generate:-false}" = "true" ]; then
-  npx rulesync generate
+SKILL="ask-my-agent-anything-about-me"
+ALL_TOOLS=(claude codex cursor copilot)
+
+# Tool registry: launcher binary, rulesync target, skill output dir, label.
+tool_bin()    { case "$1" in claude) echo claude;; codex) echo codex;; cursor) echo cursor-agent;; copilot) echo copilot;; esac; }
+tool_target() { case "$1" in claude) echo claudecode;; codex) echo codexcli;; cursor) echo cursor;; copilot) echo copilot;; esac; }
+# Codex reads skills from the AGENTS.md-standard .agents/skills dir (committed); only
+# Cursor's .cursor/skills is gitignored and generated on demand.
+tool_dir()    { case "$1" in claude) echo .claude/skills;; codex) echo .agents/skills;; cursor) echo .cursor/skills;; copilot) echo .github/skills;; esac; }
+tool_label()  { case "$1" in claude) echo "Claude Code";; codex) echo "Codex";; cursor) echo "Cursor";; copilot) echo "GitHub Copilot";; esac; }
+
+# Prefer rulesync on PATH (mise installs it); fall back to npx.
+if command -v rulesync >/dev/null 2>&1; then
+  RULESYNC=(rulesync)
+else
+  RULESYNC=(npx rulesync)
+fi
+
+# Choose the tool: explicit --tool, else auto-detect installed launchers.
+chosen="${usage_tool:-}"
+if [ -z "$chosen" ]; then
+  installed=()
+  for t in "${ALL_TOOLS[@]}"; do
+    command -v "$(tool_bin "$t")" >/dev/null 2>&1 && installed+=("$t")
+  done
+  case "${#installed[@]}" in
+    0)
+      cat <<'EOF'
+Ask My Agent Anything About Me
+==============================
+
+No supported AI agent was found on your PATH. Install one of these, then re-run
+`mise run ask-my-agent-anything-about-me`:
+
+  - GitHub Copilot  https://github.com/features/copilot   (has a free tier)
+  - Claude Code     https://claude.com/claude-code         (paid plan or API credits)
+  - Codex           https://developers.openai.com/codex    (paid)
+  - Cursor          https://cursor.com                     (paid; CLI: cursor-agent)
+
+Already have one installed? Pick it explicitly, e.g.:
+  mise run ask-my-agent-anything-about-me --tool copilot
+EOF
+      exit 0
+      ;;
+    1)
+      chosen="${installed[0]}"
+      ;;
+    *)
+      echo "Found more than one AI agent. Which should answer questions about codekiln?" >&2
+      select t in "${installed[@]}"; do
+        [ -n "${t:-}" ] && { chosen="$t"; break; }
+      done
+      [ -z "${chosen:-}" ] && { echo "No selection made; exiting." >&2; exit 1; }
+      ;;
+  esac
+fi
+
+target="$(tool_target "$chosen")"
+dir="$(tool_dir "$chosen")"
+bin="$(tool_bin "$chosen")"
+label="$(tool_label "$chosen")"
+
+# Generate this tool's skill config if it isn't committed yet (codex/cursor), or on --generate.
+if [ "${usage_generate:-false}" = "true" ] || [ ! -f "$dir/$SKILL/SKILL.md" ]; then
+  echo "Setting up the $label skill config (rulesync -> $target)..." >&2
+  "${RULESYNC[@]}" generate --features skills --targets "$target"
 fi
 
 read -r -d '' kickoff <<'EOF' || true
@@ -22,25 +88,20 @@ and journals, cite the source pages, and separate what is documented from what y
 infer.
 EOF
 
-if command -v claude >/dev/null 2>&1; then
-  exec claude "$kickoff"
+# The chosen tool's binary may be absent only when --tool named an uninstalled one;
+# its config is now ready regardless, so point the visitor at the folder.
+if ! command -v "$bin" >/dev/null 2>&1; then
+  cat <<EOF
+$label ($bin) was not found on your PATH. Its skill config is ready at
+$dir/$SKILL/ — open this folder in $label and ask anything about codekiln, or
+install $label and re-run:
+  mise run ask-my-agent-anything-about-me --tool $chosen
+EOF
+  exit 0
 fi
 
-cat <<'EOF'
-Ask My Agent Anything About Me
-==============================
-
-Claude Code (`claude`) was not found on your PATH, so this task can't launch it
-for you. You can still ask away — this garden ships its AI configuration:
-
-  1. Open this repository's folder in any AI coding tool
-     (Claude Code, Cursor, Codex, or GitHub Copilot).
-  2. The bundled config — including the "ask-my-agent-anything-about-me" skill —
-     loads automatically.
-  3. Ask anything about codekiln. The agent answers from the garden's pages and
-     journals and cites the pages behind each answer.
-
-To get the one-command experience, install Claude Code (https://claude.com/claude-code)
-or run `mise install` to let mise provision it, then re-run:
-  mise run ask-my-agent-anything-about-me
-EOF
+echo "Starting $label. Ask anything about codekiln." >&2
+case "$chosen" in
+  copilot) exec "$bin" -p "$kickoff" ;;
+  *)       exec "$bin" "$kickoff" ;;
+esac

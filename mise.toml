@@ -3,8 +3,10 @@
 # file mainly anchors MISE_PROJECT_ROOT and pins the tools those tasks rely on.
 
 [tools]
-# node powers `npx rulesync generate`, used to compile the AI tool configs.
+# node backs the npm-installed rulesync below.
 node = "lts"
-# claude-code is the primary agent for `mise run ama`; the task falls back to
-# printed instructions for other AI tools if it is unavailable.
-claude-code = "latest"
+# rulesync compiles this garden's AI configs (the skills) for each supported tool.
+# The ask-my-agent-anything-about-me task uses it to generate a tool's config on
+# demand. No AI agent is pinned — bring your own (Claude Code, Codex, Cursor, or
+# GitHub Copilot); the task detects and launches whichever one you have installed.
+"npm:rulesync" = "latest"

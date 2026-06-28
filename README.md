@@ -11,8 +11,12 @@ answered from the garden's own pages and journals:
 mise run ask-my-agent-anything-about-me
 ```
 
-That launches the agent, primed to answer. No [mise](https://mise.jdx.dev/)? Open
-this folder in any AI coding tool (Claude Code, Cursor, Codex, Copilot) and just
+That detects whichever AI agent you have — Claude Code, Codex, Cursor, or GitHub
+Copilot — sets up that tool's skill, and starts it. Pick one explicitly with
+`--tool claude|codex|cursor|copilot`. GitHub Copilot has a free tier; the others
+need a paid plan.
+
+No [mise](https://mise.jdx.dev/)? Open this folder in any of those tools and just
 ask — the AI configuration ships with the garden, including an
 `ask-my-agent-anything-about-me` skill that teaches the agent how to answer and
 cite its sources.

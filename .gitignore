@@ -39,7 +39,8 @@ repomix-*.xml
 **/.claude/agents/
 **/.claude/settings.local.json
 **/AGENTS.md
-**/.agents/
+**/.agents/*
+!**/.agents/skills/
 **/.roo/rules/
 **/.rooignore
 **/.copilotignore
@@ -74,10 +75,11 @@ repomix-*.xml
 **/.codexignore
 **/.codex/
 
-# Non-target tools (only copilot/cursor/claudecode/codexcli are configured in rulesync.jsonc).
-# Ignore these whole dirs so a stray `rulesync generate --targets <all>` doesn't re-track them.
+# Non-target tools (only agentsskills/copilot/cursor/claudecode/codexcli are configured in
+# rulesync.jsonc). Ignore these whole dirs so a stray `rulesync generate --targets <all>` doesn't
+# re-track them. Note: agentsskills IS a target — its `.agents/skills/` dir is intentionally tracked
+# (the AGENTS.md-standard skills path), un-ignored above; only the rest of `.agents/` stays ignored.
 **/.agent/
-**/.agents/
 **/.gemini/
 **/.geminiignore
 **/.junie/

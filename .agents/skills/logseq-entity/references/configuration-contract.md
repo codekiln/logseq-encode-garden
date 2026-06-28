@@ -1,0 +1,76 @@
+# Configuration Contract
+
+This skill is intentionally general-purpose.
+
+Do not hardcode garden-specific entity rules into the skill. Instead, load them from garden-owned configuration sources.
+
+Prefer Logseq-native entity pages first. Use file-based config as fallback.
+
+## Default Config Location
+
+Look for configuration in this order:
+
+- `[[Logseq/Entity]]`
+- `[[Logseq/Entity/<Type>]]`
+- `[[Logseq/Frontmatter]]`
+- `[[Logseq/Pref]]` (and linked pages such as **`[[Logseq/Pref/Page/Name]]`**) when present—encode-wide naming and editorial defaults, not per-type entity rules
+- `.rulesync/config/logseq-entity.md`
+
+If none of these exist, the skill should:
+
+1. inspect the garden for obvious existing entity conventions
+2. state that no explicit `logseq-entity` config was found
+3. ask the user whether to proceed with inferred conventions or create config first
+
+## Bootstrap And Initialization
+
+When the user wants to initialize entity types for a garden:
+
+- use `.rulesync/config/logseq-entity.md` for **shared** fallback text (resolution order, reporting contract) when it exists
+- ensure `[[Logseq/Entity]]` (the shared general model) is present, and create or update `[[Logseq/Entity/<Type>]]` as the **primary** place for per-type rules
+- keep the file-based config **short**—do not duplicate long per-type sections from the graph into the repo file
+
+## What Belongs In Garden Configuration
+
+`[[Logseq/Entity]]` is the shared, garden-agnostic conceptual model (terms, how a page is marked, naming rules); it does **not** catalog the types. Garden-specific policy lives on **`[[Logseq/Entity/<Type>]]`** and **`[[Logseq/Frontmatter]]`**, including:
+
+- which entity types this garden models — the set of `Logseq/Entity/<Type>` pages **is** the list; do not maintain a separate catalog on `[[Logseq/Entity]]`
+- how to recognize those entity types
+- naming preferences
+- allowed or preferred namespaces
+- alias strategy
+- shared frontmatter expectations and entity-specific frontmatter expectations
+- minimum page shape by entity type
+- creation blockers
+- whether to infer aggressively or conservatively
+- type-specific required follow-up actions such as backlink insertion when they are part of the entity model
+
+## What Stays In The Skill
+
+The skill should keep only reusable process:
+
+- read garden configuration first
+- extract candidate entities from source material
+- deduplicate against the garden
+- classify candidates as existing, similar, new, or blocked
+- create or update entities according to config
+- report what happened and what needs human judgment
+- when graph pages under `pages/` change, apply [entity-session-journal.md](./entity-session-journal.md) (today’s journal / **Filed** / **Updated**) before treating the session as complete
+- keep graph entity definition pages free of Rulesync/skill/agent workflow references
+
+## Suggested Config Shape
+
+The configuration can stay in Markdown as long as it is explicit and machine-readable enough for an AI agent.
+
+Preferred Logseq-native shape:
+
+- `[[Logseq/Entity]]` as the shared, garden-agnostic conceptual model (not a catalog of types)
+- `[[Logseq/Entity/<Type>]]` as the type page
+- `[[Logseq/Frontmatter]]` as the shared page-level attribute convention page
+- `[[Logseq/Pref]]` optionally as the hub for cross-cutting garden preferences (see skill **logseq-pref** when installed)
+
+Fallback file-based shape:
+
+- `.rulesync/config/logseq-entity.md` — **shared** material only (for example resolution order, garden-wide intent, reporting expectations). **Per-type** recognition, naming, dedup, frontmatter, and templates belong on the graph type pages, not in long sections here.
+
+The skill should treat the garden-owned configuration as the source of truth for entity behavior in that garden.
