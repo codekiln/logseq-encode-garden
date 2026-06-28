@@ -1,14 +1,21 @@
 alias:: [[Logseq Journal]]
 
 - # Logseq Journal
-	- This page is the garden’s primary **journal style registry**: how a day reads, which recurring sections mean what, and where the operational change log lives. It parallels [[Logseq/Entity]] (entity types and SOPs live there); agents should load this registry and its subpages **before** applying generic journal instructions from rulesync when the two differ.
-	- ## Rulesync defaults (reference)
-		- **Rule** `logseq-journal-updates` — **Filed** / **Updated** discipline, mutual exclusivity, link-first change log, “now page not audit log.”
-		- **Command** `logseq-format-journal` — editorial grouping and evocative section titles (Harper’s / Economist / New Yorker spirit); reorganize headings only, do not invent facts.
-		- **Rule** `logseq-journal-style` — journal-only reminder to prefer this namespace when present.
-	- ## Subpages (canonical detail)
-		- [[Logseq/Journal/Editorial headings]] — voice for titles and grouping.
-		- [[Logseq/Journal/Section/Friction]] — useful vs frustration, nesting under learning.
-		- [[Logseq/Journal/Section/Garddiff]] — end-of-day garden diff, **Filed** / **Updated** lists.
+	- How a day reads in this garden: the topic-led narrative up top, the recurring sections, and the end-of-day change log. The conventions live here in one place; subpages carry section-specific detail. Parallels [[Logseq/Entity]].
+	- ## Change log — [[Filed]] and [[Updated]]
+		- Each day ends with a record of what changed in the graph, as two top-level blocks:
+			- **[[Filed]]** — pages that first appeared today.
+			- **[[Updated]]** — pages that already existed and were edited today.
+		- [[Filed]] and [[Updated]] are sibling top-level blocks — no parent wrapper and no intro line above them.
+		- A page appears under only one section per day. A page that was both created and edited today stays under [[Filed]] only.
+		- Lines are link-only: `- [[Some/Page]]`. No `Created …` / `Updated …` boilerplate and no inline action text; add at most one short child sentence when it genuinely helps a reader.
+		- This is a curated snapshot of the day's adventures — a [[Now/Page]] glimpse, not a full audit of every git change. Skip trivial stubs and noise.
+		- ### Grouping
+			- When a section runs past a handful of links, cluster them under plain-text labels — bare words or short phrases (`tuis`, `entities`, `git tasks`), not `[[wikilinks]]`.
+			- Choose labels with the human; they should jog memory and name the day's real clusters of discovery, not generic bins.
+			- Sort labels alphabetically; items within a group keep semantic order.
+	- ## Narrative and section titles
+		- Above the change log, a day carries topic-led blocks with editorial-style titles — voice, examples, and anti-patterns on [[Logseq/Journal/Editorial headings]].
+		- Recurring section: [[Logseq/Journal/Section/Friction]].
 	- ## Worked example
-		- Exemplar shape: `journals/2026_03_25.md` — topic-led narrative blocks, nested **Friction** and **Questions**, then **garddiff** with link-only **Filed** / **Updated** sections.
+		- `journals/2026_06_27.md` — a topic-led narrative block up top, then [[Filed]] and [[Updated]] as top-level blocks with grouped, link-only lists.

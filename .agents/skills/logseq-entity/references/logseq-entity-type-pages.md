@@ -48,7 +48,7 @@ Prefer references to garden-wide rules over copying shared conventions into ever
 Entity type pages are graph documentation, not agent documentation:
 
 - Do not write Rulesync, skill, slash-command, generated-file, repo-path, or agent workflow references into Logseq entity pages.
-- Do not add `Agents`, `garddiff`, journal-update, or source-block sections to entity type pages. Those are garden-wide operational rules handled outside the type page.
+- Do not add `Agents`, `Filed`/`Updated`, journal-update, or source-block sections to entity type pages. Those are garden-wide operational rules handled outside the type page.
 - Do not wrap actual `[[Page]]` wikilinks in backticks. Keep them clickable in graph pages.
 - Use declarative garden voice, not second-person voice.
 - Keep shared frontmatter semantics on `[[Logseq/Frontmatter]]`; type pages should state only the entity marker and any type-specific frontmatter.

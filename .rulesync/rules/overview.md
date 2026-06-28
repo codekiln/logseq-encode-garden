@@ -43,7 +43,7 @@ This repository is a personal Logseq knowledge graph (not a software project): p
 - Favorite-driven flashcard decks (generated from :favorites, kept in sync) → **logseq-flashcard-favorite**
 - Questions (`/Q/` pages) → **logseq-question**
 - Weekly page setup → **logseq-update-week** command
-- Journal editorial formatting → **logseq-format-journal** command
+- Journal formatting (change log + editorial titles) → load **[[Logseq/Journal]]** (graph page)
 - Git staging/commits → **git-conventions**; end-of-session checkout → **landing-the-plane**
 - Rulesync usage / authoring skills → **rulesync**, **rulesync-create-skill**
 - Visitor onboarding / act as codekiln's agent and answer a visitor's questions about codekiln from the garden → **ask-my-agent-anything-about-me**

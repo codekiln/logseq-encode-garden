@@ -4,10 +4,10 @@ description: >-
   Metaskill for Logseq entity work in the active graph: open [[Logseq/Entity]]
   and [[Logseq/Entity/<Type>]] pages, dedupe, create or update instances per
   those type rules, infer candidates from journals, help initialize entity pages
-  when asked, and record graph edits in today's journal (garddiff / Filed /
-  Updated). All type-specific rules live in the graph; this skill does not list
-  entity types or repo companion skills by name. Other skills in a repo may wrap
-  narrow workflows—discover them from the graph, type pages, or the repo's skill
+  when asked, and record graph edits in today's journal (Filed / Updated). All
+  type-specific rules live in the graph; this skill does not list entity types
+  or repo companion skills by name. Other skills in a repo may wrap narrow
+  workflows—discover them from the graph, type pages, or the repo's skill
   layout. Use for: entity exists?, similar entities?, new entity page?, add
   entities from today's journal?, define or refresh entity types?
 ---
@@ -58,7 +58,7 @@ If the Logseq entity pages and fallback config are both missing, inspect the gar
 
 ## Graph edits and today’s journal
 
-When **any graph pages** under `pages/` are **created or materially edited** during entity work—including **imports** that only add `logseq-entity::`, **prerequisite pages required by the active type page or registry**, or **`Logseq/Entity/<Type>`** edits—you are **not done** until **`journals/YYYY_MM_DD.md`** records the change set (**`[[Filed]]`** vs **`[[Updated]]`**, mutual exclusivity, link-first lists). Load **`[[Logseq/Journal]]`** / **`[[Logseq/Journal/Section/Garddiff]]`** when they exist; otherwise follow rule **`logseq-core`** (journal updates).
+When **any graph pages** under `pages/` are **created or materially edited** during entity work—including **imports** that only add `logseq-entity::`, **prerequisite pages required by the active type page or registry**, or **`Logseq/Entity/<Type>`** edits—you are **not done** until **`journals/YYYY_MM_DD.md`** records the change set (**`[[Filed]]`** vs **`[[Updated]]`**, mutual exclusivity, link-first lists). Load **`[[Logseq/Journal]]`** when it exists; otherwise follow rule **`logseq-core`** (journal updates).
 
 Procedure: [references/entity-session-journal.md](./references/entity-session-journal.md).
 
@@ -184,13 +184,13 @@ When the user says something like `add entities from today's journal page`:
 
 ## Reference Guide
 
-- **Another skill invoked for the same task:** follow that skill’s scope and steps; this skill still supplies **shared** entity behavior (configuration order, dedup references, **garddiff** / **Filed** / **Updated** when `pages/` change) unless the other skill explicitly documents a different journal contract for the same edit.
+- **Another skill invoked for the same task:** follow that skill’s scope and steps; this skill still supplies **shared** entity behavior (configuration order, dedup references, **Filed** / **Updated** when `pages/` change) unless the other skill explicitly documents a different journal contract for the same edit.
 - Polymorphism and narrow repo skills: see **Polymorphism and other skills in the repo** above and [references/logseq-entity-type-pages.md](./references/logseq-entity-type-pages.md)
 - Configuration contract: [references/configuration-contract.md](./references/configuration-contract.md)
 - Logseq entity-type pages: [references/logseq-entity-type-pages.md](./references/logseq-entity-type-pages.md)
 - Entity-type initialization: [references/entity-type-initialization.md](./references/entity-type-initialization.md)
 - Search and dedup rules: [references/entity-search-and-dedup.md](./references/entity-search-and-dedup.md)
 - Journal extraction and aggressive inference: [references/entity-inference-from-journal.md](./references/entity-inference-from-journal.md)
-- After graph edits (garddiff / Filed / Updated): [references/entity-session-journal.md](./references/entity-session-journal.md)
+- After graph edits (Filed / Updated): [references/entity-session-journal.md](./references/entity-session-journal.md)
 - `date-created::` (entity creation/publication date, not import date): [references/date-created-frontmatter.md](./references/date-created-frontmatter.md)
 - External entity pages (H1 link, no duplicate URL/macros): [references/external-entity-page.md](./references/external-entity-page.md)

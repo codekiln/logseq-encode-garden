@@ -14,7 +14,7 @@ This file defines **namespace, dedup, journal, and research** steps. It does **n
 * **Namespace pattern**: Questions live under a topic namespace, then `/Q/`, then the question text.
   * Link format: `[[Namespace/Q/Question text]]` or `[[Namespace/SubNamespace/Q/Question text]]`
   * File format: `Namespace___Q___Question text.md` (triple underscores; special characters like `?` become `%3F` in filenames)
-* **Journal**: Record the filing in **`journals/YYYY_MM_DD.md`**. When **`[[Logseq/Journal/Section/Garddiff]]`** (or your day’s **Gard/Diff** block) defines **`[[Filed]]`** / **`[[Updated]]`**, put **new** question pages under **`[[Filed]]`** as a link-only line: `- [[Namespace/Q/Question text]]`. If the day file has **no** garddiff block, add the same link where topical bullets live. Follow rule **`logseq-core`** (journal updates) and skill **logseq-entity** → [entity-session-journal.md](../../logseq-entity/references/entity-session-journal.md) for mutual exclusivity and “no boilerplate” rules.
+* **Journal**: Record the filing in **`journals/YYYY_MM_DD.md`**. Put **new** question pages under **`[[Filed]]`** as a link-only line: `- [[Namespace/Q/Question text]]`. Follow **`[[Logseq/Journal]]`** for the format (mutual exclusivity, “no boilerplate”) and skill **logseq-entity** → [entity-session-journal.md](../../logseq-entity/references/entity-session-journal.md).
 
 ## Workflow
 
@@ -42,7 +42,7 @@ This file defines **namespace, dedup, journal, and research** steps. It does **n
   * Check page titles and first-level headings; consider rephrasings and minor wording differences
 * **If a matching or near-duplicate question page exists (existing):**
   * Do **not** create a new page.
-  * Add a **narrative** journal note **outside** the garddiff **`[[Filed]]` / `[[Updated]]`** link lists when those lists are reserved for **`pages/`** graph edits only; link `- [[Namespace/Q/Existing question text]]`. **Unless** you also **edited** that question page—then log that page under **`[[Updated]]`** per **`[[Logseq/Journal/Section/Garddiff]]`** / rule **`logseq-core`** (journal updates).
+  * Add a **narrative** journal note **outside** the **`[[Filed]]` / `[[Updated]]`** link lists when those lists are reserved for **`pages/`** graph edits only; link `- [[Namespace/Q/Existing question text]]`. **Unless** you also **edited** that question page—then log that page under **`[[Updated]]`** per **`[[Logseq/Journal]]`**.
   * Tell the user the question was already in the garden and that the journal was updated.
   * Stop.
 * **If results are ambiguous (similar):** follow the skill reference: present candidates and prefer human judgment before creating a duplicate.
@@ -56,13 +56,13 @@ This file defines **namespace, dedup, journal, and research** steps. It does **n
 * **LFM mechanics**: rule **logseq-core** — bullets, tab indentation, no blank lines between bullets (advanced detail: skill **logseq-lfm**).
 * **Non-goal:** Do not bulk-edit older `___Q___` pages unless the user explicitly asks.
 
-### Step 4: Add today's journal entry (garddiff + narrative)
+### Step 4: Add today's journal entry (Filed/Updated + narrative)
 
 * Open today's journal file: `journals/YYYY_MM_DD.md`.
-* **New question page (after Step 3):** Under the day’s **garddiff** / **Gard/Diff** block, append a **link-only** line under **`[[Filed]]`**: `- [[Namespace/Q/Question text]]` (forward slashes in the link). That page is **new in `pages/`** today—this satisfies rule **`logseq-core`** (journal updates) without duplicating the same link under **`[[Updated]]`**.
-* **Optional narrative:** If your journal style uses a topical block (questions, friction, etc.), you may add a short child or sibling bullet for context—keep it one sentence max per **`[[Logseq/Journal/Section/Garddiff]]`** optional-context rules.
+* **New question page (after Step 3):** Under today’s **`[[Filed]]`** list, append a **link-only** line: `- [[Namespace/Q/Question text]]` (forward slashes in the link). That page is **new in `pages/`** today—this satisfies rule **`logseq-core`** (journal updates) without duplicating the same link under **`[[Updated]]`**.
+* **Optional narrative:** If your journal style uses a topical block (questions, friction, etc.), you may add a short child or sibling bullet for context—keep it to one sentence max per **`[[Logseq/Journal]]`**.
 * **While answering (Step 5):** If you **edit** other existing **`pages/**/\*.md`** files, add each under **`[[Updated]]`** (link-only). New files created during research → **`[[Filed]]`**. Never list the same **`[[Page]]`** under both **Filed** and **Updated\*\* the same day.
-* If the graph has **no** garddiff convention yet, fall back to a single topical bullet with `- [[Namespace/Q/Question text]]` and still follow rule **`logseq-core`** (journal updates).
+* If the graph defines no **`[[Filed]]`** / **`[[Updated]]`** convention, fall back to a single topical bullet with `- [[Namespace/Q/Question text]]` and still record the new page per **`[[Logseq/Journal]]`** / rule **`logseq-core`**.
 
 ### Step 5: Research and answer the question
 
@@ -74,7 +74,7 @@ This file defines **namespace, dedup, journal, and research** steps. It does **n
 ## Report
 
 * **If duplicate found**: Report the existing page link and confirm the journal entry was added for today (narrative or **`[[Updated]]`** per Step 2).
-* **If new page created**: Report the new page path and link, confirm **`[[Filed]]`** / garddiff (or fallback journal) per Step 4, and summarize the answer (or note if the question remains unanswered).
+* **If new page created**: Report the new page path and link, confirm **`[[Filed]]`** placement (or fallback journal) per Step 4, and summarize the answer (or note if the question remains unanswered).
 
 ## Related
 

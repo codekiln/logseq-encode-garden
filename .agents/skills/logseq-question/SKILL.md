@@ -24,7 +24,7 @@ A **question** is one **entity type** in this garden. Shared rules apply:
 
 This skill adds **question-specific** filing steps: namespace/`___Q___` naming, journal bullet, and the research pass. Do not duplicate the entity-type definition; **`[[Logseq/Entity/Question]]`** is the sole format authority.
 
-For **non-question** entity work (other types per `[[Logseq/Entity]]`, registry edits, etc.), skill **logseq-entity** owns **garddiff** closeout (**Filed** / **Updated** on today’s journal). Follow that skill’s **Graph edits and today’s journal** section and [references/entity-session-journal.md](../logseq-entity/references/entity-session-journal.md)—journal discipline is **not** exclusive to this question skill.
+For **non-question** entity work (other types per `[[Logseq/Entity]]`, registry edits, etc.), skill **logseq-entity** owns **Filed** / **Updated** closeout on today’s journal. Follow that skill’s **Graph edits and today’s journal** section and [references/entity-session-journal.md](../logseq-entity/references/entity-session-journal.md)—journal discipline is **not** exclusive to this question skill.
 
 ## Procedure
 
@@ -42,4 +42,4 @@ For **non-question** entity work (other types per `[[Logseq/Entity]]`, registry 
 * Full workflow: [references/question-workflow.md](./references/question-workflow.md)
 * Entity dedup: [references/entity-search-and-dedup.md](../logseq-entity/references/entity-search-and-dedup.md)
 * Entity config contract: [references/configuration-contract.md](../logseq-entity/references/configuration-contract.md)
-* Entity sessions and garddiff: [references/entity-session-journal.md](../logseq-entity/references/entity-session-journal.md)
+* Entity sessions and Filed/Updated: [references/entity-session-journal.md](../logseq-entity/references/entity-session-journal.md)
