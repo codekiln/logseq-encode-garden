@@ -1,22 +1,24 @@
 alias:: [[Digital Garden]], [[Knowledge Garden]], [[Knowledge Gardens]], [[Zettelkasten]], [[Zettelkastens]] 
 tags:: [[AI/Generated]]
-see-also:: [[Knowledge Gardener]]
+see-also:: [[Knowledge Gardener]], [[Knowledge/Concept/Knowledge Base vs Knowledge Garden]]
 
 - # Knowledge Gardens (KGs) and [[Knowledge/Base]] Knowledge Bases (KBs)
 	- ## About
 		- **Knowledge Gardens**, also known as Digital Gardens or Zettelkastens (a term derived from the German word for "slip box"), represent a method for personal knowledge management and nonlinear note-taking that emphasizes growth and interconnections of ideas. This approach has evolved over time and draws upon various historical threads.
-		- ### #[[see-also]]
-			- [[Knowledge/Concept/Knowledge Base vs Knowledge Garden]]
-	- ## #Examples of [[Knowledge Gardens]]
-		- [A Brief History & Ethos of the Digital Garden](https://maggieappleton.com/garden-history/) by [[Person/Maggie Appleton]]
-		- [Learn In Public](https://www.swyx.io/learn-in-public) by [[Person/Shawn @swyx Wang]]
-		- [James' Digital Garden](https://wiki.jamesravey.me/) by [[Person/James Ravenscroft]]
-		- [jzhao.xyz](https://jzhao.xyz/) by [[Person/Jacky Zhao]]
-		- [Introduction - The Blue Book](https://lyz-code.github.io/blue-book/) by [[Person/Lyz]]
-		- [https://gwern.net/](https://gwern.net/) by [[Person/Gwern Branwen]]
-		- [https://arvid.xyz/commonplace-book/](https://arvid.xyz/commonplace-book/) by [[Person/Arvid Lunnemark]]
-		- https://wiki.xxiivv.com/ by [[Person/Devine Lu Linvega]]
-		- [Second Brain](https://www.ssp.sh/brain/) by [[Person/Simon Spati]]
+	- ## [[Examples]] of [[Knowledge Gardens]]
+		- ### Other Examples of Knowledge Gardens
+			- [A Brief History & Ethos of the Digital Garden](https://maggieappleton.com/garden-history/) by [[Person/Maggie Appleton]]
+			- [Learn In Public](https://www.swyx.io/learn-in-public) by [[Person/Shawn @swyx Wang]]
+			- [James' Digital Garden](https://wiki.jamesravey.me/) by [[Person/James Ravenscroft]]
+			- [jzhao.xyz](https://jzhao.xyz/) by [[Person/Jacky Zhao]]
+			- [Introduction - The Blue Book](https://lyz-code.github.io/blue-book/) by [[Person/Lyz]]
+			- [https://gwern.net/](https://gwern.net/) by [[Person/Gwern Branwen]]
+			- [https://arvid.xyz/commonplace-book/](https://arvid.xyz/commonplace-book/) by [[Person/Arvid Lunnemark]]
+			- https://wiki.xxiivv.com/ by [[Person/Devine Lu Linvega]]
+			- [Second Brain](https://www.ssp.sh/brain/) by [[Person/Simon Spati]]
+		- ### My Knowledge Gardens
+			- {{embed [[My/Knowledge/Garden/logseq-encode-garden]]}}
+			-
 	- ## #History
 		- ### Early Roots
 			- 1. **Zettelkasten Method (Late 20th Century):** The term "Zettelkasten" was popularized by German sociologist Niklas Luhmann in the late 20th century. Luhmann used a system of index cards to capture ideas and notes, linking them through a numbering system, which allowed for a web of interrelated thoughts. His method emphasized the importance of context and connections over linear organization.

@@ -6,6 +6,7 @@ tags:: [[mise/Commands]]
 	- **Source code**: [`src/cli/activate.rs`](https://github.com/jdx/mise/blob/main/src/cli/activate.rs)
 	- Initializes mise in the current [[Shell]] session.
 	- This should go in [[zsh/.zshrc]], [[Bash/.bashrc]], [[Bash/.bash_profile]], etc:
+	  id:: 6a2148e7-de37-41eb-8e2a-be0625840863
 		- `eval "$(mise activate zsh)"`
 	- ## What does [[mise/activate]] actually do? [[card]]
 	  card-last-interval:: 4

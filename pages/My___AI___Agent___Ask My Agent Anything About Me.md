@@ -3,6 +3,8 @@ see-also:: [[My]]
 github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/My___AI___Agent___Ask%20My%20Agent%20Anything%20About%20Me.md
 
 - # Ask My Agent Anything About Me
+	- ## Where am I?
+		- you're at a page somewhere in the middle of [[My/Knowledge/Garden/logseq-encode-garden]] that's about to describe how you can ask an AI anything about me that's present in the garden.
 	- ## What the ...?
 		- Maybe this is corny, or maybe AI is not your thing. Avert your eyes if so. Otherwise, read on.
 		- Let's say you want to get in touch with me.
@@ -15,25 +17,27 @@ github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/M
 		- An AI coding agent. The one-command path below uses Claude Code, which needs a paid [Claude plan](https://claude.com/pricing) (Pro starts around $20 per month) or pay-as-you-go API credits; mise installs the agent itself in step 3. To ask for free instead, skip to "Free alternative: GitHub Copilot".
 	- ## Steps
 		- ### 1. Install [[mise]] if you don't already have it
-			- mise is one of my favorite tools. It's by [[Person/Jeff Dickey]], an awesome developer. It's one tool that installs everything else and runs the agent for you.
+			- mise is one of my favorite tools. It's by [[Person/Jeff Dickey]], an awesome developer. It's a [[CLI/Tool]] that provides a task runner harness and can install any version of any CLI tool.
 			- On macOS or Linux, run this, then open a new terminal window:
 			- ~~~sh
 			  curl https://mise.run | sh
 			  ~~~
 			- If it prints a line to add to your shell.
-				- If you want to use mise generally, then I recommend that you add that line to your shell so your terminal can find mise for each of the [[mise Jobs to be Done]].
-				- If you just want to get started here, without using mise generally on your system, just run `mise activate` before the next tasks.
+				- **If** you want to use mise generally, then I recommend that you add that line to your shell so your terminal can find mise for each of the [[mise Jobs to be Done]].
+					- see also
+						- {{embed ((6a2148e7-de37-41eb-8e2a-be0625840863))}}
+				- **Else** if you just want to get started here without using mise more generally on your computer, just run [[mise/activate]] before the next tasks.
 			- On Windows, install mise inside WSL, or follow the [mise install guide](https://mise.jdx.dev/getting-started.html).
 			- Check that it works:
 			- ~~~sh
 			  mise --version
 			  ~~~
-		- ### 2. Copy the garden to your computer
+		- ### 2. Copy this knowledge garden, `logseq-encode-garden` to your computer
 			- ~~~sh
 			  git clone https://github.com/codekiln/logseq-encode-garden
 			  cd logseq-encode-garden
 			  ~~~
-		- ### 3. Let mise set it up
+		- ### 3. Let [[mise]] set it up
 			- From inside the folder, allow this project's settings, then install what it needs. This step also downloads the AI agent.
 			- ~~~sh
 			  mise trust
