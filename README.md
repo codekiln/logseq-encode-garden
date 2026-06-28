@@ -11,10 +11,11 @@ answered from the garden's own pages and journals:
 mise run ask-my-agent-anything-about-me
 ```
 
-That asks which AI agent you have — Claude Code, Codex, Cursor, or GitHub
-Copilot — sets up that tool's skill, and starts it. Skip the prompt with
-`--tool claude|codex|cursor|copilot`. GitHub Copilot has a free tier; the others
-need a paid plan.
+That asks which AI agent you have — Claude Code, Codex, Cursor, GitHub Copilot,
+or any other AGENTS.md-compatible agent — sets up that tool's skill, and starts
+it. The choices are the garden's rulesync targets; skip the prompt with
+`--tool claudecode|codexcli|cursor|copilot|agentsskills`. GitHub Copilot has a
+free tier; the others need a paid plan.
 
 No [mise](https://mise.jdx.dev/)? Open this folder in any of those tools and just
 ask — the AI configuration ships with the garden, including an

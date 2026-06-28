@@ -14,7 +14,7 @@ github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/M
 	- ## Prerequisites
 		- A computer with a terminal: Terminal on macOS, any terminal on Linux, or WSL on Windows.
 		- [git](https://git-scm.com/downloads). Check with `git --version`, and install it if that fails.
-		- An AI coding agent — any one of [[Claude Code]], [[Codex]], [[CursorAI]], or [[GitHub/CoPilot]].
+		- An AI coding agent — any one of [[Claude Code]], [[Codex]], [[CursorAI]], [[GitHub/CoPilot]], or any other [[AI/Coding/Agents.md]]-compatible agent.
 			- [[Person/inmve/GitHub/free-ai-coding]] has a few tips for doing this for free.
 		- Install at least one before step 4; the task asks which you have and starts it. mise installs the setup tool ([[rulesync]]) for you in step 3, but not the agent itself. To ask for free, [[GitHub/CoPilot]] has a free tier; the others need a paid plan. See "Which AI agent?" below to choose.
 	- ## Steps
@@ -52,7 +52,7 @@ github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/M
 			- #### What does this do?
 				- See [logseq-encode-garden/mise-tasks/ask-my-agent-anything-about-me at main · codekiln/logseq-encode-garden · GitHub](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/ask-my-agent-anything-about-me) for the source code.
 				- Technically, the [[AI Skill]] it relies upon is managed by [[rulesync]] and is available here: [logseq-encode-garden/.rulesync/skills/ask-my-agent-anything-about-me/SKILL.md at main · codekiln/logseq-encode-garden · GitHub](https://github.com/codekiln/logseq-encode-garden/blob/main/.rulesync/skills/ask-my-agent-anything-about-me/SKILL.md)
-			- The task asks which AI agent you have, sets up that tool's skill if it isn't ready, and starts it. To pick up front and skip the prompt, run `mise run ask-my-agent-anything-about-me --tool copilot` (or `claude`, `codex`, `cursor`).
+			- The task asks which AI agent you have, sets up that tool's skill if it isn't ready, and starts it. The choices are this garden's [[rulesync]] targets. To pick up front and skip the prompt, run `mise run ask-my-agent-anything-about-me --tool copilot` (or `claudecode`, `codexcli`, `cursor`, `agentsskills`).
 			- The first time, your agent may ask you to sign in or authorize it. After that, type any question about me and press Enter, such as "What does codekiln care about?" or "What have they been reading lately?".
 	- ## Which AI agent?
 		- The task works with any of these. Pick one, install it, and the one-command path above does the rest.
@@ -60,6 +60,7 @@ github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/M
 			- [[Claude Code]] — paid: a [Claude plan](https://claude.com/pricing) (Pro starts around $20 per month) or API credits.
 			- [[Codex]] — paid, via an OpenAI account.
 			- [[CursorAI]] — paid; its terminal agent is `cursor-agent`.
+			- Any other [[AI/Coding/Agents.md]]-compatible agent (Gemini CLI, opencode, and the like) — choose `agentsskills`; the garden's `.agents/skills` works with it.
 		- Prefer an editor to the terminal? Open the `logseq-encode-garden` folder in [VS Code](https://code.visualstudio.com) with GitHub Copilot, or in [[CursorAI]], switch the assistant to agent mode, and ask — each reads the garden's bundled skill. With Copilot, the free tier limits how many agent requests you get each month.
 	- ## Troubleshooting
 		- `mise: command not found` — open a new terminal window, or run the activation line the install step printed.

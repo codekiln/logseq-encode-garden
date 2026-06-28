@@ -1,27 +1,28 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-#MISE description="Ask My Agent Anything — launch whichever AI agent you have over this garden to answer questions about codekiln"
+#MISE description="Ask My Agent Anything — launch your AI agent over this garden to answer questions about codekiln"
 
-#USAGE flag "--tool <tool>" help="AI agent to use: claude, codex, cursor, or copilot (default: ask)" {
-#USAGE   choices "claude" "codex" "cursor" "copilot"
+#USAGE flag "--tool <tool>" help="rulesync target to use: claudecode, codexcli, cursor, copilot, or agentsskills (default: ask)" {
+#USAGE   choices "claudecode" "codexcli" "cursor" "copilot" "agentsskills"
 #USAGE }
-#USAGE flag "--generate" help="Regenerate this tool's skill config (rulesync) even if it already exists"
+#USAGE flag "--generate" help="Regenerate this target's skill config (rulesync) even if it already exists"
 
 # Run from the graph root so the agent sees pages/, journals/, and the AI configs.
 cd "${MISE_PROJECT_ROOT:-$PWD}"
 
 SKILL="ask-my-agent-anything-about-me"
-ALL_TOOLS=(claude codex cursor copilot)
+# The selectable tools are exactly this garden's rulesync.jsonc targets.
+ALL_TOOLS=(claudecode codexcli cursor copilot agentsskills)
 
-# Tool registry: launcher binary, rulesync target, skill output dir, label.
-tool_bin()    { case "$1" in claude) echo claude;; codex) echo codex;; cursor) echo cursor-agent;; copilot) echo copilot;; esac; }
-tool_target() { case "$1" in claude) echo claudecode;; codex) echo codexcli;; cursor) echo cursor;; copilot) echo copilot;; esac; }
-# Codex reads skills from the AGENTS.md-standard .agents/skills dir (committed); only
-# Cursor's .cursor/skills is gitignored and generated on demand.
-tool_dir()    { case "$1" in claude) echo .claude/skills;; codex) echo .agents/skills;; cursor) echo .cursor/skills;; copilot) echo .github/skills;; esac; }
-tool_label()  { case "$1" in claude) echo "Claude Code";; codex) echo "Codex";; cursor) echo "Cursor";; copilot) echo "GitHub Copilot (free tier available)";; esac; }
-tool_url()    { case "$1" in claude) echo "https://claude.com/claude-code";; codex) echo "https://developers.openai.com/codex";; cursor) echo "https://cursor.com";; copilot) echo "https://github.com/features/copilot";; esac; }
+# Registry keyed by rulesync target: launcher binary, skill output dir, friendly
+# description, install URL. agentsskills is the AGENTS.md standard — no launcher.
+tool_bin()  { case "$1" in claudecode) echo claude;; codexcli) echo codex;; cursor) echo cursor-agent;; copilot) echo copilot;; agentsskills) echo "";; esac; }
+# codexcli and agentsskills both write to the AGENTS.md-standard .agents/skills dir
+# (committed); only cursor's .cursor/skills is gitignored and generated on demand.
+tool_dir()  { case "$1" in claudecode) echo .claude/skills;; codexcli) echo .agents/skills;; cursor) echo .cursor/skills;; copilot) echo .github/skills;; agentsskills) echo .agents/skills;; esac; }
+tool_desc() { case "$1" in claudecode) echo "Claude Code";; codexcli) echo "Codex";; cursor) echo "Cursor";; copilot) echo "GitHub Copilot, free tier";; agentsskills) echo "other AGENTS.md-compatible agent";; esac; }
+tool_url()  { case "$1" in claudecode) echo "https://claude.com/claude-code";; codexcli) echo "https://developers.openai.com/codex";; cursor) echo "https://cursor.com";; copilot) echo "https://github.com/features/copilot";; agentsskills) echo "https://agents.md";; esac; }
 
 # Prefer rulesync on PATH (mise installs it); fall back to npx.
 if command -v rulesync >/dev/null 2>&1; then
@@ -30,12 +31,12 @@ else
   RULESYNC=(npx rulesync)
 fi
 
-# Choose the tool: explicit --tool, else ask which agent the visitor has.
+# Choose the target: explicit --tool, else ask which agent the visitor has.
 chosen="${usage_tool:-}"
 if [ -z "$chosen" ]; then
   echo "Which AI agent do you have? (GitHub Copilot has a free tier; the others need a paid plan.)" >&2
   menu=()
-  for t in "${ALL_TOOLS[@]}"; do menu+=("$(tool_label "$t")"); done
+  for t in "${ALL_TOOLS[@]}"; do menu+=("$(printf '%-12s (%s)' "$t" "$(tool_desc "$t")")"); done
   PS3="Enter a number (or Ctrl-C to quit): "
   select _ in "${menu[@]}"; do
     if [ "${REPLY:-}" -ge 1 ] 2>/dev/null && [ "$REPLY" -le "${#ALL_TOOLS[@]}" ]; then
@@ -47,15 +48,12 @@ if [ -z "$chosen" ]; then
   [ -z "${chosen:-}" ] && { echo "No selection made; exiting." >&2; exit 1; }
 fi
 
-target="$(tool_target "$chosen")"
 dir="$(tool_dir "$chosen")"
-bin="$(tool_bin "$chosen")"
-label="$(tool_label "$chosen")"
 
-# Generate this tool's skill config if it isn't committed yet (codex/cursor), or on --generate.
+# Generate this target's skill config if it isn't committed yet (cursor), or on --generate.
 if [ "${usage_generate:-false}" = "true" ] || [ ! -f "$dir/$SKILL/SKILL.md" ]; then
-  echo "Setting up the $label skill config (rulesync -> $target)..." >&2
-  "${RULESYNC[@]}" generate --features skills --targets "$target"
+  echo "Setting up the $chosen skill config (rulesync)..." >&2
+  "${RULESYNC[@]}" generate --features skills --targets "$chosen"
 fi
 
 read -r -d '' kickoff <<'EOF' || true
@@ -67,19 +65,33 @@ and journals, cite the source pages, and separate what is documented from what y
 infer.
 EOF
 
+# agentsskills is the AGENTS.md open standard — no dedicated launcher. Point the
+# visitor at the ready skill config so they open it in their own compatible agent.
+if [ "$chosen" = "agentsskills" ]; then
+  cat <<EOF
+The AGENTS.md-standard skill config is ready at $dir/$SKILL/.
+Open this folder in any AGENTS.md-compatible agent (for example Gemini CLI or
+opencode) and ask anything about codekiln — it reads the bundled skill and answers
+from the garden's pages and journals.
+EOF
+  exit 0
+fi
+
+bin="$(tool_bin "$chosen")"
+
 # If the chosen agent isn't installed, its config is ready regardless — point the
 # visitor at the folder and the install link, then let them re-run.
 if ! command -v "$bin" >/dev/null 2>&1; then
   cat <<EOF
-$label ($bin) was not found on your PATH. Its skill config is ready at
-$dir/$SKILL/ — open this folder in $label and ask anything about codekiln, or
-install $label ($(tool_url "$chosen")) and re-run:
+$(tool_desc "$chosen") ($bin) was not found on your PATH. Its skill config is ready
+at $dir/$SKILL/ — open this folder in your agent and ask anything about codekiln,
+or install it ($(tool_url "$chosen")) and re-run:
   mise run ask-my-agent-anything-about-me --tool $chosen
 EOF
   exit 0
 fi
 
-echo "Starting $label. Ask anything about codekiln." >&2
+echo "Starting $(tool_desc "$chosen"). Ask anything about codekiln." >&2
 case "$chosen" in
   copilot) exec "$bin" -p "$kickoff" ;;
   *)       exec "$bin" "$kickoff" ;;
