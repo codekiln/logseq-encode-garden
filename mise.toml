@@ -1,0 +1,10 @@
+# Root mise config for the logseq-encode-garden.
+# Tasks are file tasks under mise-tasks/ (see [[My/Pref/Dev/mise/Tasks]]); this
+# file mainly anchors MISE_PROJECT_ROOT and pins the tools those tasks rely on.
+
+[tools]
+# node powers `npx rulesync generate`, used to compile the AI tool configs.
+node = "lts"
+# claude-code is the primary agent for `mise run ama`; the task falls back to
+# printed instructions for other AI tools if it is unavailable.
+claude-code = "latest"

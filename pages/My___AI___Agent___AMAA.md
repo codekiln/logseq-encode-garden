@@ -1,0 +1,12 @@
+- # [[My/AI/Agent]] AMAA — Ask My Agent Anything
+	- A way for someone who has met [[Person/codekiln]] to get to know them: clone this [[Knowledge Garden]] and ask an agent — a representative, not the owner — questions about the owner, answered from the garden's own pages and journals.
+	- It builds on [[My]], the owner's personal context portfolio for [[AI Agents]].
+	- ## How a visitor uses it
+		- Clone the repo and run `mise run amaa` from its root. That starts the agent, primed to answer questions about the owner from this garden.
+		- Without mise, open the repo in any AI coding tool and just ask. The AI configuration travels with the garden, including an "amaa" skill that teaches the agent how to answer.
+	- ## What it can answer
+		- The owner's preferences, principles, projects, and current thinking — grounded in [[My]] and the daily journals.
+		- It cites the garden pages behind each answer, so a visitor can open them and read more.
+	- ## Boundaries
+		- Answers come only from what the garden actually records, separating what is documented from what is inferred.
+		- Some details are intentionally kept out of the garden and are not reconstructed.

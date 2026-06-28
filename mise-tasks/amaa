@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+#MISE description="Ask My Agent Anything — launch the owner's agent to answer questions about the owner from this knowledge garden"
+
+#USAGE flag "--generate" help="Regenerate the AI tool configs (rulesync) before starting"
+
+# Run from the graph root so the agent sees pages/, journals/, and the AI configs.
+cd "${MISE_PROJECT_ROOT:-$PWD}"
+
+# usage exposes parsed flags as usage_* env vars.
+if [ "${usage_generate:-false}" = "true" ]; then
+  npx rulesync generate
+fi
+
+read -r -d '' kickoff <<'EOF' || true
+Use the "amaa" skill. You are the owner's agent (a representative, not the owner).
+A visitor has cloned this Logseq knowledge garden to get to know its owner. Greet
+them in a sentence and invite them to ask anything about the owner. Answer only
+from the garden's pages and journals, cite the source pages, and separate what is
+documented from what you infer.
+EOF
+
+if command -v claude >/dev/null 2>&1; then
+  exec claude "$kickoff"
+fi
+
+cat <<'EOF'
+Ask My Agent Anything (AMAA)
+============================
+
+Claude Code (`claude`) was not found on your PATH, so this task can't launch it
+for you. You can still ask away — this garden ships its AI configuration:
+
+  1. Open this repository's folder in any AI coding tool
+     (Claude Code, Cursor, Codex, or GitHub Copilot).
+  2. The bundled config — including the "amaa" skill — loads automatically.
+  3. Ask anything about the owner. The agent answers from the garden's pages and
+     journals and cites the pages behind each answer.
+
+To get the one-command experience, install Claude Code (https://claude.com/claude-code)
+or run `mise install` to let mise provision it, then re-run `mise run amaa`.
+EOF

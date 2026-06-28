@@ -46,3 +46,4 @@ This repository is a personal Logseq knowledge graph (not a software project): p
 - Journal editorial formatting → **logseq-format-journal** command
 - Git staging/commits → **git-conventions**; end-of-session checkout → **landing-the-plane**
 - Rulesync usage / authoring skills → **rulesync**, **rulesync-create-skill**
+- Visitor onboarding / act as the owner's agent and answer a visitor's questions about the owner from the garden (AMAA) → **amaa**
