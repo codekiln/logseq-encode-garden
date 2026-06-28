@@ -7,3 +7,4 @@ see-also:: [[My/AI/Agent/Ask My Agent Anything About Me]]
 			- available on the web at https://codekiln.github.io/logseq-encode-garden/. ==IMPORTANT - you likely won't have a good experience visiting that site on a mobile device! Sorry!==
 		- ## Back door
 			- It's also available on [[GitHub]] at [[Person/codekiln/GitHub/logseq-encode-garden]] ([GitHub - codekiln/logseq-encode-garden: codekiln's knowledge garden · GitHub](https://github.com/codekiln/logseq-encode-garden))
+			-
