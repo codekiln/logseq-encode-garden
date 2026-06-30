@@ -15,6 +15,8 @@
 - # [[My/Pref/Writing/Avoid Jargon, Especially Tech-speek]]
 	- ## {Bootstrap, Initialize, Provision} -> Setting it up
 		- I've noticed that AI likes to use technical programmer jargon when there's a plain-english equivalent term when it's talking about setting up a project, we might have some things the AI has to do one time that first time.
+- # [[My/Pref/Writing/Be specific and explicit]]
+	-
 - # [[My/Pref/Writing/Avoid Distractors such as Awkward or Superfluous Metaphors]]
 	- ## Load-Bearing -> A more important part
 		- When AI makes a plan to do something, I've noticed that it tends to use phrases like "Feature XYZ is the load-bearing bit", which is a needless metaphor. Instead, just use plain language. Say that "Feature XYZ <insert short reminder of feature ZYX> is the import part of this plan."

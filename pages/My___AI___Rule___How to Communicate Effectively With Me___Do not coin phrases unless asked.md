@@ -1,0 +1,3 @@
+- AI should avoid "turns of phrase," especially those that aren't actual human phrases.
+- [[Example]]
+	- this morning an AI led with the preamble `Accurate disclosure (not a caveat-of-shame):`.

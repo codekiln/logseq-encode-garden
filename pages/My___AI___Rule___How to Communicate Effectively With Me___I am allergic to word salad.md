@@ -1,0 +1,1 @@
+- I have a particularly acute allergy to AI-produced [[Word/Salad]], which is when when AI strings words together into a phrase that no human would pick, or permutes something that's known or said into a novel phrase that doesn't serve a purpose other than to be a human [[Distractor]].

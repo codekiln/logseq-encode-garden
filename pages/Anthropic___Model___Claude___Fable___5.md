@@ -41,3 +41,4 @@ tags:: [[AI/Model]]
 	- ## References
 		- [Models overview (Claude API docs)](https://platform.claude.com/docs/en/about-claude/models/overview)
 		- [Migration Guide (Claude API docs)](https://platform.claude.com/docs/en/about-claude/models/migration-guide)
+		- [[Person/Tamay Besiroglu/Post/26/06/One interesting pattern with Fable 5 is that it will]] — neuralese bleed / [[Word/Salad]] observed in practice
