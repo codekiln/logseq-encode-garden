@@ -1,4 +1,4 @@
-see-also:: [[My/AI/Rule/Writing/Words and Phrases to Avoid]]
+see-also:: [[My/AI/Rule/How to Communicate Effectively With Me/Words and Phrases to Avoid]]
 
 - # My Writing Preferences
 	- In writing, the goal is perfect communication.

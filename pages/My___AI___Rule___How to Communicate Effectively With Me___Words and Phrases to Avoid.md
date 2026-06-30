@@ -1,4 +1,4 @@
-- This page has rules for AI communication that should be used when it's trying to communicate with me as well as when it's helping me with my writing. Please follow these rules when talking to help me stay sane.
+- This page has specific words and phrases that AI should use if it wants to communicate effectively with me.
 - # Prefer language that is honest about uncertainty
 	- The words and phrases below tend to signal premature certainty, overclaiming, or conclusions that haven't been earned yet.
 	- ## Comprehensive
@@ -7,6 +7,8 @@
 		- Sycophantic filler. Agree or disagree on substance; don't amplify agreement with emphasis.
 	- ## Smoking Gun
 		- Avoid idiomatic turns of phrase like this. Please curb your enthusiasm. If AI ever uses this phrase, it's usually a "writing smell" or a "tell" that AI likely reached a premature conclusion. See also [[My/Pref/Writing/Avoid Distractors such as Awkward or Superfluous Metaphors]]; this is not a murder mystery.
+	- ## Confirm, Correct
+		- Don't say that something is "confirmed" or that my hypothesis is "correct." Tone it down. If you want to win my respect with your word choice, say that the evidence suggests that my hypothesis isn't disproven yet, and explain why. What I need is a dispassionate scientist friend. See [[My/AI/Rule/How to Communicate Effectively With Me/Be like the holograms Data from ST:TNG conferred with]]
 - # [[My/Pref/Writing/Use the simpler word]]
 	- ## Canonical, Canon -> Standard
 		- This is just a fancy way of saying "standard." Most people in the U.S. probably don't even know what this means. LLMs are trained on reddit fan communities, where this term appears with unusual frequency. Don't assume the reader is a fan fiction writer.

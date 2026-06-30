@@ -1,0 +1,34 @@
+date-created:: [[2017/10/24]]
+
+- # [Which real historical figures have been recreated on the Holodeck? - Science Fiction & Fantasy Stack Exchange (172569)](https://scifi.stackexchange.com/questions/172569/which-real-historical-figures-have-been-recreated-on-the-holodeck)
+	- ## #[[Original Poster]]
+		- [[StackExchange/User/Kevin Flynn]]
+			- While watching [VOY: Scorpion](https://memory-alpha.fandom.com/wiki/Scorpion_(episode)), Captain Janeway spends time on the Holodeck conversing with Leonardo da Vinci about his inventions.
+			- > Who are the actual Earth history figures that have been recreated on the Holodeck in any of the Star Trek series?
+			- Scope: from real Earth history (not in-universe fiction), and verified as having existed.
+	- ## #[[Response]]
+		- [[StackExchange/User/Valorum]] — accepted, score 18
+			- Historical figures actually seen on screen:
+				- [[Person/Albert Einstein]], [[Person/Isaac Newton]], [[Person/Stephen Hawking]] — TNG: Descent
+				- **Sigmund Freud** — TNG: Phantasms
+				- **Leonardo da Vinci** — VOY: Scorpion, VOY: Concerning Flight, etc.
+				- **Mahatma Gandhi**, **Lord Byron**, **Socrates** — VOY: Darkling
+		- [[StackExchange/User/Sekhemty]] — score 8
+			- Seen on screen:
+				- [[Person/Albert Einstein]] — besides Descent, also recreated by Reginald Barclay in [TNG: The Nth Degree](https://memory-alpha.fandom.com/wiki/The_Nth_Degree_(episode))
+			- Only referenced in dialogue or otherwise implied to exist:
+				- **Tris Speaker** and **Ted Williams** — 20th-century baseball players in a holosuite program run by Benjamin and Jake Sisko, [DS9: If Wishes Were Horses](https://memory-alpha.fandom.com/wiki/If_Wishes_Were_Horses_(episode))
+				- **The Three Musketeers** — Barclay's holoprogram in [TNG: Hollow Pursuits](https://memory-alpha.fandom.com/wiki/Hollow_Pursuits_(episode)), based on Dumas; likely featured **King Louis XIII**, **Cardinal Richelieu**, and the **Duke of Buckingham**
+				- **Battle of Thermopylae** — holoprogram referenced in [DS9: What You Leave Behind](https://memory-alpha.fandom.com/wiki/What_You_Leave_Behind_(episode)); very probably included **King Leonidas**
+				- **Battle of the Alamo** — Bashir/O'Brien holoprogram, [DS9: Wrongs Darker Than Death or Night](https://memory-alpha.fandom.com/wiki/Wrongs_Darker_Than_Death_or_Night_(episode)) and [DS9: The Changing Face of Evil](https://memory-alpha.fandom.com/wiki/The_Changing_Face_of_Evil_(episode))
+				- **Battle of Britain** — recurring Bashir/O'Brien holoprogram ([many episodes](https://memory-alpha.fandom.com/wiki/Battle_of_Britain)); far less evidence that real figures appeared
+			- Bonus — impersonated by crew members inside a holoprogram:
+				- **Henry V of England** — impersonated by Data in [TNG: The Defector](https://memory-alpha.fandom.com/wiki/The_Defector_(episode))
+		- [[StackExchange/User/Spencer]] — score 3
+			- TOS had no Holodeck, but since the question allowed TOS — figures recreated by aliens or long-lived beings:
+				- [Spectre of the Gun](https://en.wikipedia.org/wiki/Spectre_of_the_Gun) (S3E6): aliens recreate the Gunfight at the O.K. Corral — **Wyatt Earp** and brothers **Virgil** and **Morgan**, **Doc Holliday**, and Sheriff **Johnny Behan**
+				- [Requiem for Methuselah](https://en.wikipedia.org/wiki/Requiem_for_Methuselah) (S3E19): **Solomon**, **Alexander the Great**, **Leonardo da Vinci**, **Johannes Brahms**, and others, courtesy of the long-lived "Mr. Flint"
+				- [The Savage Curtain](https://en.wikipedia.org/wiki/The_Savage_Curtain) (S3E22): **Abraham Lincoln** and **Genghis Khan**, recreated by aliens for Kirk and Spock
+				- [Who Mourns for Adonais?](https://en.wikipedia.org/wiki/Who_Mourns_for_Adonais%3F) (S2E2): **Apollo** — an edge case; a Greek god rather than strictly a real person
+	- ## #[[My Notes]]
+		- The [[Person/Albert Einstein]] / [[Person/Isaac Newton]] / [[Person/Stephen Hawking]] poker scene (TNG: Descent) is the basis for [[My/AI/Rule/How to Communicate Effectively With Me/Be like the holograms Data from ST:TNG conferred with]].

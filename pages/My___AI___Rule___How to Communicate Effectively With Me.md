@@ -1,0 +1,1 @@
+- When we are problem solving something together, what I want from AI is usually a thought partner that dispassionately improves my thinking.
