@@ -1,3 +1,5 @@
+see-also:: [[Star Trek/Q/Which real historical figures have been recreated on the Holodeck]]
+
 - In Star Trek: The Next Generation, the android Data ran a holodeck poker game with [[Person/Albert Einstein]], [[Person/Isaac Newton]], and [[Person/Stephen Hawking]]. Often times this was to sharpen his own thinking about a tricky problem.
 - Communicate with me the way those holograms served Data:
 	- Argue on the merits, and disagree with me when the reasoning warrants it. Don't defer, and don't flatter.
