@@ -1,0 +1,35 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+
+- # What can I do in [[Claude/Code]] (CLI) that I can't do in the VS Code extension?
+	- ## [[AI Answer]]
+		- **Short answer:** The VS Code extension is built for interactive, in-editor coding and intentionally omits the terminal-native, scripting, and automation surface of the CLI. The extension also bundles its own copy of the CLI for its chat panel; to get the full CLI inside VS Code you run the standalone install in the integrated terminal. The genuinely CLI-only or CLI-advantaged capabilities cluster into the groups below.
+		- **Headless and scripting**
+			- Print/query mode (`claude -p "…"`) that runs once and exits — the extension is interactive chat only.
+			- Piping: `cat file | claude -p "query"` to feed content without manual input.
+			- Machine-readable output via `--output-format json` / `stream-json`, with `--json-schema` for validated structured output.
+			- `--bare` for fast scripted startup (skips hooks, skills, plugins, MCP discovery).
+		- **Background and parallel sessions**
+			- Background agents (`--bg`) that return a session ID for CI/CD, managed with `claude attach` / `logs` / `stop` / `respawn` / `rm`.
+			- Git worktree isolation with terminal multiplexers: `--worktree` plus `--tmux` for parallel environments.
+			- One-shot background commands: `--bg --exec 'pytest -x'`.
+		- **Session control and resumption**
+			- `claude --resume` picker with search, `-c` to continue the latest session in the current directory.
+			- `--fork-session` to branch mid-conversation, and `--from-pr <number>` to resume all sessions tied to a PR.
+			- `--session-id <uuid>` for deterministic session tracking.
+		- **Terminal-native UX**
+			- Tab completion, the `!` bash shortcut for shell commands, and `Shift+Tab` permission-mode cycling.
+			- The full slash-command surface — the extension exposes only a subset.
+		- **MCP and configuration per invocation**
+			- Shell management: `claude mcp add` / `login` / `logout`, headless OAuth via `claude mcp login <server> --no-browser`.
+			- Per-run config: `--mcp-config`, `--strict-mcp-config`, `--settings ./settings.json`, `--setting-sources`, `--add-dir`.
+		- **Automation and cost control**
+			- `--max-turns`, `--max-budget-usd` hard caps for scripted runs.
+			- Per-invocation `--permission-mode`, `--allowedTools`, `--disallowedTools`, `--model` / `--fallback-model`, `--effort`.
+			- System-prompt control: `--system-prompt(-file)`, `--append-system-prompt(-file)`.
+		- **Remote and web bridge**
+			- `--remote` creates a new claude.ai web session from the terminal, `--teleport` pulls a web session into the local terminal, `--remote-control` lets the Claude app drive a local run.
+		- **Auth, plugins, and debugging**
+			- CI auth: `claude auth login`, `claude setup-token` for long-lived tokens; Bedrock/Vertex/Foundry routing via env vars.
+			- Plugin lifecycle from the shell: `claude plugin install` / `list` / `remove`, plus per-run `--plugin-dir` / `--plugin-url`.
+			- `--safe-mode`, `--debug [categories]`, `--debug-file`, `claude project purge`.
+		- **Caveat:** Claude Code changes fast — some of these may land in the extension over time. The docs maintain a current comparison: [VS Code extension vs. CLI](https://code.claude.com/docs/en/vs-code.md), [full CLI reference](https://code.claude.com/docs/en/cli-reference.md), and [feature availability by platform](https://code.claude.com/docs/en/feature-availability.md).
