@@ -1,6 +1,8 @@
-- When making a plan for something or a specification, remove superfluous exclusions.
-- Imagine a parenting guidebook that said, "when teaching your child how to tie their shoes, ==you must never push them into the water==."
-- The instruction in the 2nd part of that phrase is an example of what I mean. It doesn't have anything to do with the context. While it might be logically true that you should never push your child into the water while teaching them how to tie their shoes, writing that one should not push your child into the water doesn't add any information or accomplish anything useful.
-- this is implied from [[My/Pref/Writing/Avoid double negatives]], but you should avoid putting into any documentation a statement to "always" or "never" do something that's unrelated.
-- I made this rule because I found an AI repeating citations to [[My/AI/Rule/No Recipe in the Cake]] in random places as a reminder to itself.
--
+see-also:: [[My/AI/Rule/No Recipe in the Cake]]
+
+- # Prune useless commandments
+	- When writing a plan or spec, cut prohibitions that don't apply to the topic.
+	- Imagine a parenting guide that says: "When teaching your child to tie their shoes, never push them into the water."
+	- That's a true statement. It just doesn't belong here — pushing a child into water has nothing to do with tying shoes. Being true isn't a reason to include it.
+	- I made this rule after finding an AI citing [[My/AI/Rule/No Recipe in the Cake]] in random, unrelated places, as if reminding itself of its own instructions.
+	- Before adding a rule to a plan or spec, ask: does this relate to what we're building? If not, cut it — even if it's true.

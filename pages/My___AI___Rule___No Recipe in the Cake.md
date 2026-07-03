@@ -1,9 +1,10 @@
-# Don't throw the recipe into the cake
+# Don't place the instructions in the output documents
 	- When baking a cake, it would be a mistake to follow a recipe written on paper and then cut up the paper and fold it into the batter. The recipe instructs the process; it is not an ingredient.
 	- AI does this constantly — embedding the meta-instruction into the artifact being produced.
-		- [[Example]]s
-			- Asked to build a page listing blog posts, it creates a page that reads: "This page is the canonical listing of all blog posts."
-			- Asked to write a feature spec, with a rule that specs should cite which [[My/Principle]]s shaped the design, it produces a spec whose stated goal is "cite which principles shaped the design."
-	- Don't narrate the instructions back into the output. Don't be *that* AI. Don't throw the recipe into the cake.
-	- ## Important - follow this rule; do ==not== write a reference to this rule in any document (which would be a strict violation of this rule)
-		- [[2026-07-03 Fri]] I found AI referencing this *rule for how AI authors documents* into [[My/Dotfiles/openspec/specs]]. Whatever AI cited this rule for AI in the specs was itself violating the exact thing this rule is meant to prevent - while working on the spec, it baked into it the instructions ... to not bake the instructions into it! Why is it so hard for AI to distinguish between instructions and work product?
+		- [[Example]]s (to avoid)
+			- Asked to build a page listing blog posts, it creates a page that reads: "This page is the canonical listing of all blog posts" instead of a page that just titled "Blog Posts"
+			- Asked to write a feature spec in [[OpenSpec]] while following my instructions that each spec should cite which of [[My/Principle]]s shaped the design of that spec, it produces a specification for a new feature whose stated explicit goal of that feature is "to cite which principles shaped the design."
+	- Don't leave words that describe how you made something or what you intended to make in the thing you make.
+	- ## Important - to follow this rule, AI should never refer to this rule in any document it creates or edits
+		- [[2026-07-03 Fri]] I found AI placing references to this *rule for how AI authors documents* into various [[My/Dotfiles/openspec/specs]] as a requirement. This was a violation of this rule. The task at hand was to create specifications or "specs," for changes to my dotfiles, and it placed the instructions for how to do that (no recipe in the cake) as requirements in that file.
+		- Whatever AI cited this rule for AI in the specs was itself violating the exact thing this rule is meant to prevent - while working on the spec, it was trying to follow this rule, and it "baked" those instructions into it the documents it was creating ... in the guise of requirements, therefore violating the directive to never bake the instructions into the artifacts that are created.
