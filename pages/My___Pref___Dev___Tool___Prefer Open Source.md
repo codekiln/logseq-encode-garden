@@ -1,0 +1,3 @@
+- # Prefer Open Source
+	- Prefer open-source dependencies: the source is inspectable, the project can be forked or self-hosted, and there is no vendor lock-in.
+	- A proprietary tool can still win when no credible open-source option meets the need — this is a preference, not an absolute.

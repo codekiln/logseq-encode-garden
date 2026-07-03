@@ -1,0 +1,3 @@
+- # 5 - Selected
+	- Chosen to advance into a dotfiles [[OpenSpec]] change, with the rationale recorded.
+	- Permitted value of [[Logseq/Entity/Dotfiles/Dep/Frontmatter/dotfiles-dep-stage]].

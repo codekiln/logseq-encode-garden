@@ -1,0 +1,23 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Frontmatter Definition
+	- In this garden, **Frontmatter Definition** pages model a custom frontmatter property that one entity type adds for its instances — the property's meaning, its permitted values, and how instances set it. Global, cross-type conventions stay on [[Logseq/Frontmatter]]; a Frontmatter Definition is scoped to a single entity type.
+	- ## What counts as an instance
+		- A page whose job is to define one custom property belonging to a single entity type: what the property means, which values are permitted, and how an instance uses it.
+		- Not an instance: a shared convention on [[Logseq/Frontmatter]] (those apply to every page, not one type); a [[Logseq/Entity/Definition]] page (that defines an entity type, not a property); an individual permitted value.
+	- ## Naming and namespace
+		- A Frontmatter Definition lives under its owning type at `Logseq/Entity/<Type>/Frontmatter/<key>`, where `<key>` is the literal frontmatter key it defines, in kebab-case to match the `::` property (for example `dotfiles-dep-stage`).
+		- The `/Frontmatter/` segment is the boundary: above it is the entity definition; at and below it are that type's frontmatter schema and values.
+	- ## Permitted values
+		- When the property draws from a closed set, enumerate the permitted values as child pages `Logseq/Entity/<Type>/Frontmatter/<key>/<Value>`. An instance references a value page, which gives autocomplete and turns each value page's linked references into the list of instances currently holding that value.
+		- Value pages are permitted values, not definitions and not entities: they carry no `logseq-entity::`. An ordered vocabulary uses a leading number so the sequence sorts in order, for example `1 - Incubating`.
+	- ## Frontmatter
+		- On instances, set `logseq-entity:: [[Logseq/Entity/Frontmatter/Definition]]` so this type page collects a backlink to every custom frontmatter property in the garden.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape (body)
+		- Logseq Flavored Markdown. Suggested sections: the property's **meaning**, its **permitted values** (link the value pages, in order), any **rules** between values, and the **owning type**.
+	- ## Relationships to other types
+		- [[Logseq/Entity/Definition]] — defines entity *types*; a Frontmatter Definition defines one *property* a type adds. A type page links its Frontmatter Definitions from its own `## Frontmatter` section.
+		- [[Schema]] — a Frontmatter Definition is a schema: a declared shape a property's value must satisfy to count as valid.
+	- ## Examples in this garden
+		- [[Logseq/Entity/Dotfiles/Dep/Frontmatter/dotfiles-dep-stage]]

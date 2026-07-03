@@ -1,0 +1,6 @@
+- # Prefer Well-Maintained Projects
+	- Prefer a dependency that passes two separate tests — a credible maintainer and healthy maintenance. Both matter; neither alone is enough.
+	- ## Credible maintainer
+		- Either an established individual with a track record of open-source contributions (for example [[Person/Jeff Dickey]] behind [[mise]]), or institutional backing that signals the project will not be abandoned. Either qualifies.
+	- ## Healthy maintenance
+		- Judged on its own, independent of who makes it: recent commits, responsiveness to issues, and a low bus-factor. Stars are not maintenance — a popular project from a new, unproven maintainer is a decision point, not an automatic pass.

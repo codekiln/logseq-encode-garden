@@ -1,0 +1,3 @@
+- # 1 - Incubating
+	- A dotfiles dependency noticed as a possible addition but not yet researched — a raw candidate.
+	- Permitted value of [[Logseq/Entity/Dotfiles/Dep/Frontmatter/dotfiles-dep-stage]].

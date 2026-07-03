@@ -1,0 +1,3 @@
+- # Retired
+	- A dependency removed from the dotfiles, typically superseded by another that does the same job. A terminal state.
+	- Permitted value of [[Logseq/Entity/Dotfiles/Dep/Frontmatter/dotfiles-dep-stage]].

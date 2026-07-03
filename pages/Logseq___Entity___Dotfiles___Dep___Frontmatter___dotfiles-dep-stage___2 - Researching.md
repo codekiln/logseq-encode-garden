@@ -1,0 +1,4 @@
+- # 2 - Researching
+	- The candidate is under active investigation against alternatives; a dated research report and a page per alternative are produced.
+	- Alternatives are evaluated against documented [[My/Pref]] and [[My/Principle]] pages — for example [[My/Principle/Simplify/Minimize Surface Area]] and [[My/Principle/Simplify/Fewer and Deeper]] (fewer dependencies) and [[My/Pref/Dev/Tool/PL/RS]] (Rust).
+	- Permitted value of [[Logseq/Entity/Dotfiles/Dep/Frontmatter/dotfiles-dep-stage]].

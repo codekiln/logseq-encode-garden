@@ -1,0 +1,6 @@
+- # 4 - Vetting
+	- Under review before selection, on three fronts:
+		- security and supply-chain risk, ranked against the other shortlisted candidates
+		- whether adding it aligns with [[My/Principle]] — whether it belongs at all
+		- whether it displaces an existing dependency, since adopting it may mean uninstalling another that does the same job (per [[My/Principle/Simplify/Minimize Surface Area]])
+	- Permitted value of [[Logseq/Entity/Dotfiles/Dep/Frontmatter/dotfiles-dep-stage]].

@@ -1,0 +1,3 @@
+- # Adopted
+	- Already present in the dotfiles, entered outside this intake system — the backlog of dependencies to run through vetting retroactively. A holding state; retroactive processing moves it into [[Logseq/Entity/Dotfiles/Dep/Frontmatter/dotfiles-dep-stage/4 - Vetting]].
+	- Permitted value of [[Logseq/Entity/Dotfiles/Dep/Frontmatter/dotfiles-dep-stage]].

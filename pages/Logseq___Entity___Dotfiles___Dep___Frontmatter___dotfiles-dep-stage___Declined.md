@@ -1,0 +1,3 @@
+- # Declined
+	- Not pursued — either the need was dropped or this candidate lost to another. A terminal off-ramp reachable from any earlier stage.
+	- Permitted value of [[Logseq/Entity/Dotfiles/Dep/Frontmatter/dotfiles-dep-stage]].

@@ -7,6 +7,45 @@ tags:: [[Idea]]
 			- [[My/Dotfiles/openspec/specs/config-comment-style]]
 			- [[My/Dotfiles/openspec/specs/garden-entity-links]]
 			- Ideally, I'd have an established, standardized, AI-guided process for adding dependencies. Since my dotfiles use openspec, the agent skills we would author together would form a sort of "superstructure" around openspec that would ensure that each new item added to the dotfiles met certain standards. The skills would instruct AI how to use openspec to "implement" them in the dotfiles.
+	- ## Pipeline
+		- The funnel lives in the garden; only the final handoff crosses into the dotfiles [[OpenSpec]] flow, where openspec's own change lifecycle (proposal → implemented → archived) takes over.
+		- ### Garden — thinking
+			- **1 · Incubating** ↓ the need is identified and described
+			- **2 · Researching** ↓ alternatives surveyed (web, GitHub, Hacker News, [[AI Deep Research]]) → dated research report + a page per alternative
+			- **3 · Shortlisted** ↓ front-runners chosen for closer evaluation
+			- **4 · Vetting** ↓ security review; options ranked by risk
+			- **5 · Selected** — one option advanced, rationale recorded
+		- ### Handoff
+			- the selected need becomes a dotfiles [[OpenSpec]] change
+		- ### Dotfiles — doing (existing flow)
+			- openspec change: proposal / design / tasks
+			- the change cites the originating need and the [[My/Principle]] / [[My/Pref]] pages it rests on
+	- ## Stage property
+		- Superseded by the current design direction below (tentative) — the flag-based stage is being replaced by deliverable-implied state.
+		- `dotfiles-dep-stage::` on [[Logseq/Entity/Dotfiles/Dep]], a [[Logseq/Entity/Frontmatter/Definition]]
+		- the value is one of the permitted value pages defined by [[Logseq/Entity/Dotfiles/Dep/Frontmatter/dotfiles-dep-stage]], for example `dotfiles-dep-stage:: [[Logseq/Entity/Dotfiles/Dep/Frontmatter/dotfiles-dep-stage/4 - Vetting]]`
+	- ## Current design direction (tentative — subject to design review)
+		- This is a working direction, not a settled decision. The details below are provisional and expected to change during design review; they supersede the flag-based stage sketch above.
+		- ### Two entities, not one
+			- A need and the dependency that fills it are modeled separately, because a dependency in an early stage — before any tool is chosen — is an illegal state under [[My/Principle/Make Illegal States Unrepresentable]].
+			- `Logseq/Entity/Dotfiles/Dep/Need` — an identified need for a dependency; a durable research and decision record that persists after selection. It lives at its natural topic page (for example [[Spotify/Tool/TUI]]) via the entity marker, not a dedicated namespace.
+			- [[Logseq/Entity/Dotfiles/Dep]] — the chosen or pre-existing tool; also a [[Logseq/Entity/Software/Project]].
+		- ### Assert facts; earn claims
+			- The tool's installed state is a fact, asserted with an explicit property — a `dep-status::` with values such as `Adopted`, `Active`, `Retired`.
+			- The need's funnel progress is a claim, so it is not asserted with a flag. It is implied by which structured deliverables exist on the need — a claim that cannot outrun the work that backs it.
+		- ### Stage implied by deliverables
+			- Each step of the funnel corresponds to a deliverable that conforms to a schema; the stage is the furthest deliverable present.
+			- researching → a research survey of the alternatives
+			- shortlisting → a comparison ranking candidates against the documented [[My/Pref]] and [[My/Principle]] rubric, kept on the need
+			- vetting → a security audit per candidate, as a subpage of each tool (`<tool>/Security Audit/...`)
+			- selection → a decision record naming the winner and citing the principles it rests on; a declined outcome is recorded the same way
+		- ### Why the flag was dropped
+			- A stored stage value can claim a stage whose work was never done; deliverable-implied state cannot. This mirrors [[OpenSpec]], where a change's progress is its artifacts rather than a status field.
+		- ### Open questions
+			- the minimal deliverable set to start with
+			- whether each deliverable is its own entity type or a plain schema-bearing subpage promoted later
+			- whether presence gates on the existence or the completion of a deliverable
+			- how to tolerate a need that skips a step (a trivial dependency may need no research survey)
 	- ## How to think about the process in the context of logseq.
 		- An important part of [[Logseq/Entity/Definition]]s is describing something akin to [[Structured Output]] or a schema for each page. The entities that are added in [[Logseq/Frontmatter/logseq-entity]] describe in some way the contents / shape / schema of the page.
 		- So a process that adds a new dependency could be thought of as creating certain deliverables at certain stages in the form of pages that conform to certain schemas for that process.

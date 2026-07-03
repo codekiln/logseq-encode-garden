@@ -1,0 +1,3 @@
+- # 3 - Shortlisted
+	- A front-runner kept for closer evaluation among the researched alternatives — the top-ranked candidates from the [[My/Pref]] and [[My/Principle]] evaluation.
+	- Permitted value of [[Logseq/Entity/Dotfiles/Dep/Frontmatter/dotfiles-dep-stage]].
