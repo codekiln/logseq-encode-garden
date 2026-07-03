@@ -1,0 +1,4 @@
+- [[Configuration control]] means knowing exactly what system exists, what has changed, and which assumptions are still valid.
+- In [[Nuclear power safety]], configuration control keeps plant design, procedures, maintenance history, and operator assumptions aligned.
+- In [[AI/Safety]], configuration control applies to models, weights, prompts, tools, policies, evaluations, deployment environments, and access controls.
+	- If any of those change without a traceable record, safety claims may stop applying.

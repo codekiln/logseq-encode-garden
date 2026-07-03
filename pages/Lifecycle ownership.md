@@ -1,0 +1,10 @@
+- [[Lifecycle ownership]] means one accountable institution remains responsible for a system from initial design through operation, maintenance, modification, and retirement.
+- In [[Nuclear power safety]], [[Person/Hyman G. Rickover]] used this principle through [[Naval Reactors]].
+	- The point was to prevent construction, operations, maintenance, and disposal from becoming separate silos with diffused responsibility.
+- In [[AI/Safety]], lifecycle ownership is a useful frame for asking who remains responsible after model design:
+	- deployment
+	- monitoring
+	- incident response
+	- updates
+	- access policy
+	- retirement or rollback

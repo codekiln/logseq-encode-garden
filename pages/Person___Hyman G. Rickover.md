@@ -1,0 +1,22 @@
+- Admiral Rickover was a U.S. naval officer and engineer who built the Navy's nuclear propulsion program, the [[Nuclear Navy]].
+	- The Navy describes him as the father of the [[Nuclear Navy]].
+	- He drove the development of the first nuclear-powered submarine, [[USS Nautilus]].
+- His central achievement was not only technical adoption of nuclear propulsion.
+	- He built [[Naval Reactors]] into an institutional safety regime for [[Nuclear power safety]].
+	- That regime fused engineering judgment, operator training, procurement expectations, design review, procedure, and operational culture.
+- Rickover's model collapsed the distance between engineering, operations, and accountability.
+	- A technically competent authority structure could decide whether a design was acceptable, a weld was unacceptable, a person was qualified, a procedure was mandatory, or a reactor would remain shut down until standards were met.
+	- That mattered because nuclear safety depends on the whole [[Sociotechnical system]], not only reactor physics.
+- Core Rickoverian safety practices:
+	- [[Design conservatism]]
+	- [[Procedural discipline]]
+	- [[Training and qualification]]
+	- [[Personal accountability]]
+	- [[Configuration control]]
+	- [[Lifecycle ownership]]
+- [[Naval Reactors]] became a kind of [[High-reliability organization]] factory.
+	- People trained under Rickover carried strict qualification, written procedures, independent technical review, conservative engineering, and a bias toward stopping work into civilian nuclear power.
+- The important caveat is that Rickover's system was unusually authoritarian, detail-obsessed, and personality-driven.
+	- Civilian nuclear organizations could borrow standards, trained people, and methods, but they could not always reproduce the same unified authority, military discipline, long tenure, or control over the whole lifecycle.
+- The analogy to [[AI/Safety]] is that powerful technology may need more than external regulation or safety slogans.
+	- Rickover's lesson is that safety can become an engineering culture when technical competence, procedural rigor, personal accountability, and lifecycle ownership are fused into the institution that builds and operates the system.

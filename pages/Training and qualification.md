@@ -1,0 +1,4 @@
+- [[Training and qualification]] means operators are selected, trained, examined, and authorized before they operate high-stakes systems.
+- [[Person/Hyman G. Rickover]] treated qualification as a technical safety control, not administrative paperwork.
+	- Operators needed deep understanding of the plant, not only the ability to follow checklists.
+- The parallel for [[AI/Safety]] is that people operating frontier systems may need tested competence in failure modes, procedures, escalation, and incident response.

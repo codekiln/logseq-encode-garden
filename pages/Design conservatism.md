@@ -1,0 +1,4 @@
+- [[Design conservatism]] means building high-stakes systems with margins, redundancy, tested components, and understood failure modes.
+- In [[Nuclear power safety]], it is a central part of the Rickoverian safety doctrine associated with [[Person/Hyman G. Rickover]] and [[Naval Reactors]].
+- The principle is not caution as mood.
+	- It is engineering discipline that makes normal operation boring, repeatable, and resilient to foreseeable failures.

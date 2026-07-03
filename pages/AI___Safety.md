@@ -1,0 +1,10 @@
+- [[AI/Safety]] is the discipline of making AI systems safe across design, training, evaluation, deployment, monitoring, incident response, access policy, and retirement.
+- The analogy to [[Nuclear power safety]] is institutional, not only technical.
+	- Both fields involve powerful systems where safety claims depend on engineering competence, operational discipline, configuration control, and the authority to stop or roll back unsafe operation.
+- Related:
+	- [[Lifecycle ownership]]
+	- [[Configuration control]]
+	- [[Procedural discipline]]
+	- [[Training and qualification]]
+	- [[Personal accountability]]
+	- [[High-reliability organization]]

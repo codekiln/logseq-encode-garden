@@ -1,0 +1,4 @@
+- [[Procedural discipline]] means normal operation follows written, practiced, auditable procedures.
+- In [[Nuclear power safety]], procedural discipline helps keep reactor operation boring and repeatable.
+	- It also makes deviations visible before they become normalized.
+- In [[AI/Safety]], the analogous question is whether deployment, monitoring, incident response, evaluation, and rollback are governed by real procedures or informal judgment calls.

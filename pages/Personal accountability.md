@@ -1,0 +1,4 @@
+- [[Personal accountability]] means named people are responsible for technical decisions.
+- In [[Nuclear power safety]], [[Person/Hyman G. Rickover]] opposed vague organizational diffusion.
+	- Someone had to be accountable for whether a design, person, procedure, or reactor was acceptable.
+- In [[AI/Safety]], personal accountability is a check against safety being displaced into committees, process theater, or abstract institutional ownership.

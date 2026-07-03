@@ -1,0 +1,15 @@
+- [[Naval Reactors]] is the institutional home of the U.S. naval nuclear propulsion program.
+	- It is closely associated with [[Person/Hyman G. Rickover]] and the [[Nuclear Navy]].
+- Its safety model is often described as cradle-to-grave responsibility for naval nuclear propulsion plants:
+	- research
+	- design
+	- construction
+	- testing
+	- operation
+	- maintenance
+	- training
+	- disposal
+- [[Executive Order 12344]] formalized a Rickover-style principle of unified technical authority across the Navy and Energy Department sides of the program.
+	- The same individual heads both sides, preserving continuity across the lifecycle.
+- The program matters as an example of [[Lifecycle ownership]] in a high-stakes [[Sociotechnical system]].
+	- Design, operations, maintenance, training, and disposal are not treated as disconnected silos.

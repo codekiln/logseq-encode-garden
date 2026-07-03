@@ -1,0 +1,8 @@
+- [[Executive Order 12344]] formalized core responsibilities of the naval nuclear propulsion program.
+- For [[Naval Reactors]], its important institutional point is unified technical authority across the Navy and Energy Department sides of the program.
+	- The same individual heads both sides.
+	- This preserves Rickover-style continuity across the lifecycle of naval nuclear propulsion plants.
+- Related:
+	- [[Person/Hyman G. Rickover]]
+	- [[Nuclear Navy]]
+	- [[Lifecycle ownership]]
