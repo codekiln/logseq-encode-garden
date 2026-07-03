@@ -3,7 +3,7 @@ tags:: [[Readwise]], [[CLI/Tool]]
 - # Readwise CLI
 	- Command-line interface tools for interacting with Readwise Reader and highlights
 	- ## Tools
-		- [[Readwise/CLI/Tutorial/Get Auth Token and Set Up CLI]] - Tutorial on getting an auth token and setting up the Readwise Reader CLI
+		- [[Readwise/CLI/Tutorial/Install and Log In]] - Tutorial on installing and logging in to the official Readwise CLI
 		- [[readwise-cli]] [readwise-cli](https://readwise.io/cli) - The official CLI, published by Readwise itself; my current preference
 		- [[rw-cli]] [rw-cli](https://github.com/Scarvy/readwise-reader-cli) - An open-source Python CLI by Scarvy that interacts with the Readwise Reader API; formerly my preference, superseded by [[readwise-cli]]
 			- Supports adding new items (documents) to your Reader library
