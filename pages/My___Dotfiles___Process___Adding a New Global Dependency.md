@@ -1,0 +1,9 @@
+- This page and its sub- [[Logseq Namespaces]] describe my preferred process for adding  a new global dependency such as a [[CLI Tool]], a global [[AI/Coding/Config]] or [[AI Agent Skills]] change, an [[MCP]] server, etc.
+- My dotfiles use [[OpenSpec]] for keeping track of their requirements, and several of them have
+- [[My/Dotfiles/openspec/specs/config-comment-style]]
+- [[My/Dotfiles/openspec/specs/garden-entity-links]]
+- Right now we have a bunch of todos to create logseq pages in the comments above brewfile deps or mise toml deps.
+- Ideally, I'd have an established, standardized, AI-guided process for adding dependencies.
+- It would begin with a kind AI researching my main technology knowledge garden  (logseq-encode-garden), importing the technology as a software project entity into there, reviewing my principles / priorities there, and interviewing me critically to help me meet my own goals and stay consistent with my principles and priorities, pushing back if appropriate to help me stay consistent and grounded in my stated preferences. AI would research this repo as well as the logseq garden and make sure that the technology stated doesn't duplicate another dependency. For example, I usually don't want more than one tool to do the same thing installed at the same time.
+- all of the above would likely be a guided form of openspec explore, perhaps with some additional skill wrapping or referencing that so that the exploration also did some research into the dotfiles and into the knowledge garden.
+- one of the first steps of adding a dependency would then be determining *whether* to add the dep.

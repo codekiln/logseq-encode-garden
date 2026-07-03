@@ -1,0 +1,12 @@
+- this spec describes standards for comments in the dotfiles repo
+	- 1 - at the place where a global dependency such as a [[CLI/Tool]] or an [[Application]] program is introduced into my dotfiles, for example, in
+		- `chezmoi/Brewfile`
+		- `chezmoi/dot_config/mise/config.toml`
+		- `chezmoi/dot_config/nvim/lua/plugins/*.lua`
+	- 2 - at the place where a setting is customized so as to be different from the defaults for that tool
+- the comments should clearly describe
+	- 1 - a [[logseq-url]] to the logseq encode garden page for that [[CLI/Tool]] or [[Application]] or config parameter (the format of this is described in [[My/Dotfiles/openspec/specs/garden-entity-links]])
+	- 2 - what it does / why it is there
+- this spec is meant to ensure that everything in my dotfiles
+	- has a purpose that's easy to understand at a glance
+	- has a dedicated place in my knowledge garden where I can go for more details
