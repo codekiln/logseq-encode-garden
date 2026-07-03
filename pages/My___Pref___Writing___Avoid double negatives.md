@@ -1,0 +1,4 @@
+- Avoid phrases that use excessive opposition or negation. Don't confuse the reader. A reader should never have to keep a logic table in their head.
+- For example, check out this AI-generated [[Word/Salad]]:
+	- > That's why example 1 (wrap/linebreak) felt like a non-example to you — an unfamiliar reader doesn't obviously know what linebreak does, so spelling it out is earning its place under the real preference, even though the spec's current wording would tell an agent to omit it.
+- This sentence has multiple issues, but "non-example" and "an unfamiliar reader doesn't obviously know" don't help the reader understand anything here.

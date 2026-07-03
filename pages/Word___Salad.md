@@ -8,10 +8,13 @@ logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Term]]
 		- Clinical term for incoherent speech associated with neurological and psychiatric conditions.
 		- Adopted in AI criticism for model output that sounds fluent but conveys little.
 		- > "Where I think the word 'hallucination' is useful ... is not to describe what the AI is doing, but what we do when we encounter a word salad, and we impute a writer to the word salad." — [[Person/Cory Doctorow]], [The Guardian, 2026/06/24](https://www.theguardian.com/technology/2026/jun/24/cory-doctorow-on-elon-musk-ai-bubble-bosses-cruel-fantasies)
-	- ## "Neuralese" [[Examples]] - Hall of Shame
-		- I have observed [[Claude Code]] coining useless phrases
+	- ## "Neuralese" [[Examples]]
+		- I have observed [[Claude Code]] and other agents coining useless phrases
 			- caveat-of-shame 😂
 				- > Accurate disclosure (not a caveat-of-shame):
+			- a departing setting
+				- > a departing setting's comment explains why, not what
+				- what claude should have used: "a setting that is customized"
 			- "the co-existence case" and "the absolute fallback"
 				- > A test that pins this — the co-existence case resolving to the absolute
 				    fallback.
@@ -19,8 +22,10 @@ logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Term]]
 			- > "The morning's slim-scan fix cured the scan hang"
 			- > "this is a latent-drift API-shape wrinkle", etc.
 		- PR description [Umbrella: consolidate Beads repo-local Dolt runtime layer · Issue #2685 · gastownhall/beads](https://github.com/gastownhall/beads/issues/2685)
-			- ah, the "final-tail hardening" 😂
+			- ah, "final-tail hardening" 😂
 				- > "The landing sequence follows that dependency order: lifecycle precursor / runtime foundations / doctor/runtime alignment / repair safety / final-tail hardening / embedded/schema tail"
+		- Double negatives and so many useless turns of phrase
+			- > That's why example 1 (wrap/linebreak) felt like a non-example to you — an unfamiliar reader doesn't obviously know what linebreak does, so spelling it out is earning its place under the real preference, even though the spec's current wording would tell an agent to omit it.
 	- ## Buzzword / Jargon [[Examples]]
 		- Fluent, grammatical language with near-zero falsifiable content; optimized for sounding reasonable rather than saying something.
 		- > "Organizations should leverage holistic synergy through adaptive transformational frameworks that maximize strategic innovation across scalable paradigms."
