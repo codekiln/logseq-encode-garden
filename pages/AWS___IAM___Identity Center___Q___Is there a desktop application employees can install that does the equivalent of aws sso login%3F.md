@@ -1,0 +1,10 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+see-also:: [[AWS/IAM/Identity Center/Technique/Long-Lived Temporary Credentials]]
+
+- # Is there a desktop application employees can install that does the equivalent of `aws sso login`?
+	- ## [[AI Answer]]
+		- Short answer: AWS doesn't ship a native desktop client for this; the closest match is the open-source **[Leapp](https://www.leapp.cloud/)** app, and for console-only access AWS's own browser-based access portal already covers it without any install.
+		- [[Answer/Official]] from [Configuring IAM Identity Center authentication with the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html) — `aws sso login` already opens a browser window for the actual sign-in step; the CLI command just triggers that flow and caches the resulting SSO token locally.
+		- If employees only need **console access** (not CLI credentials), skip `aws sso login` entirely: point them at the org's [[AWS/IAM/Identity Center]] AWS access portal URL. They sign in with their IdP credentials in a browser, pick an assigned account/role, and land in the console — no install required.
+		- For employees who need **CLI/programmatic credentials** through an actual desktop app (system tray, one-click session start, managed credential files), **[Leapp](https://www.leapp.cloud/)** ([GitHub](https://github.com/Noovolari/leapp), [Identity Center setup docs](https://docs.leapp.cloud/latest/configuring-integration/configure-aws-single-sign-on-integration/)) is the most mature option: it's free, open source, cross-platform (macOS/Windows/Linux), integrates directly with AWS IAM Identity Center, maps assigned roles into "Sessions," and generates short-lived credentials from a menu-bar icon — a GUI wrapper around the same SSO OIDC flow `aws sso login` uses.
+		- A narrower prototype also exists: [benkehoe/aws-sso-login-gui](https://github.com/benkehoe/aws-sso-login-gui), a small proof-of-concept for getting users an SSO token without touching the AWS CLI; the author flags it as not production-ready.
