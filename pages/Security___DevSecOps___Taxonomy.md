@@ -16,6 +16,7 @@ see-also:: [[Software/Composition/Analysis]], [[Dependency/Update/Automation]], 
 	- ## Dependency vulnerability scanning (narrow slice)
 		- **Focus** — Given manifests/lockfiles, **match coordinates** against **GHSA/NVD/OSV-style** databases and surface CVEs/CWEs; may skip deep license or provenance storytelling.
 		- **Relationship** — Often a **component of SCA** or of **supply chain security platforms**; still useful to name separately when procurement compares “CVE scanner” vs “full composition program.”
+		- **Example** — [[deptrust]] — single-package/version lookups against OSV + GitHub Advisory DB across 13 ecosystems; explicitly **no transitive resolution, no SBOM, no license checks**, so it is the narrow slice, not a full SCA program.
 	- ## Dependency update automation (freshness + mitigation)
 		- **Representatives** — **Dependabot**, **Renovate**, lockfile refresh bots, package-manager upgrade jobs.
 		- **Security angle** — They **do not replace SCA**; with **policy + CI**, they help **close disclosed issues quickly** (pin bumps, coordinated upgrades) and reduce **stale** transitive risk—see **[[Dependency/Update/Automation]]**.
