@@ -1,0 +1,6 @@
+- When making a plan for something or a specification, remove superfluous exclusions.
+- Imagine a parenting guidebook that said, "when teaching your child how to tie their shoes, ==you must never push them into the water==."
+- The instruction in the 2nd part of that phrase is an example of what I mean. It doesn't have anything to do with the context. While it might be logically true that you should never push your child into the water while teaching them how to tie their shoes, writing that one should not push your child into the water doesn't add any information or accomplish anything useful.
+- this is implied from [[My/Pref/Writing/Avoid double negatives]], but you should avoid putting into any documentation a statement to "always" or "never" do something that's unrelated.
+- I made this rule because I found an AI repeating citations to [[My/AI/Rule/No Recipe in the Cake]] in random places as a reminder to itself.
+-
