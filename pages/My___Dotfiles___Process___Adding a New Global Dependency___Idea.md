@@ -1,0 +1,33 @@
+tags:: [[Idea]]
+
+- # Refining the Process of Adding Dependencies to my Dotfiles with Agent Skills
+	- ## Intro
+		- This page and its sub- [[Logseq Namespaces]] describe a new preferred process I'd like to develop for adding  a new global dependency such as a [[CLI Tool]], a global [[AI/Coding/Config]] or [[AI Agent Skills]] change, an [[MCP]] server, etc. My goal is to develop related [[Agent/Skills]] for the process.
+		- My dotfiles use [[OpenSpec]] for keeping track of their requirements. A few of the specs relate to this knowledge garden, for example:
+			- [[My/Dotfiles/openspec/specs/config-comment-style]]
+			- [[My/Dotfiles/openspec/specs/garden-entity-links]]
+			- Ideally, I'd have an established, standardized, AI-guided process for adding dependencies. Since my dotfiles use openspec, the agent skills we would author together would form a sort of "superstructure" around openspec that would ensure that each new item added to the dotfiles met certain standards. The skills would instruct AI how to use openspec to "implement" them in the dotfiles.
+	- ## How to think about the process in the context of logseq.
+		- An important part of [[Logseq/Entity/Definition]]s is describing something akin to [[Structured Output]] or a schema for each page. The entities that are added in [[Logseq/Frontmatter/logseq-entity]] describe in some way the contents / shape / schema of the page.
+		- So a process that adds a new dependency could be thought of as creating certain deliverables at certain stages in the form of pages that conform to certain schemas for that process.
+	- ## Possible Steps
+		- below, "a knowledge garden" is probably but not exclusively [[GitHub/codekiln/logseq-encode-garden]]
+		- ### identify the needs
+			- a [[Logseq/Entity/Definition]] in the knowledge garden could be created for pages that "model" a need that I've identified for my dotfiles / global setup. an agent skill could help locate, create and curate these pages.
+			- up until now, the entity system has not included statuses, but it could be adapted to use custom, documented [[Logseq/Frontmatter]] to enable them to move a dotfiles dependency through the stages of incubation.
+			- **result**: after this step a knowledge garden will have a dedicated entity page filled out for the dotfiles need.
+		- ### research and identify alternatives that may meet the need
+			- the work for this stage would include internet searches, github searches, hacker new searches, [[AI Deep Research]] reports, etc.
+			- it may include importing those research reports into the garden.
+			- **result**: after this step, a knowledge garden will have a dated research report that has identified alternatives as dedicated pages in the garden.
+		- ### identify candidates to evaluate
+			- **result**: a few front-runners will be identified for the next steps.
+		- ### security review
+			- see [[2026-06-27 Sat]] for a description of the impetus here.
+			- **result**: all options are vetted and ranked by risk. consider running tools like [[deptrust]] (which itself hasn't been fully vetted yet!)
+		- ### select a dependency to advance
+			- **result**: after this step, the knowledge garden would somehow have acknowledged what was chosen and why**
+	- ## given a new technology
+		- the process would begin with a AI researching my main technology knowledge garden (`logseq-encode-garden`) importing the technology as a software project entity into there, reviewing my principles / priorities there, and interviewing me critically to help me meet my own goals and stay consistent with my principles and priorities, pushing back if appropriate to help me stay consistent and grounded in my stated preferences. AI would research this repo as well as the logseq garden and make sure that the technology stated doesn't duplicate another dependency. For example, I usually don't want more than one tool to do the same thing installed at the same time.
+		- all of the above would likely be a guided form of openspec explore, perhaps with some additional skill wrapping or referencing that so that the exploration also did some research into the dotfiles and into the knowledge garden.
+		- one of the first steps of adding a dependency would then be determining *whether* to add the dep.
