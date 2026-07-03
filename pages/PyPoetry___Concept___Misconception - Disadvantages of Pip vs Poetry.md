@@ -1,9 +1,9 @@
 tags:: [[Diataxis/Explanation]]
 
-- # Misconception - Disadvantages of [[uv]] with [[pip]] as compared to using [[Poetry]]
-	- ## Misconception - There's no easy way to use [[Py/pyproject.toml]] to do [[Py/Editable Install]]s with `uv pip` as there is with [[Poetry]]
+- # Misconception - Disadvantages of [[uv]] with [[pip]] as compared to using [[PyPoetry]]
+	- ## Misconception - There's no easy way to use [[Py/pyproject.toml]] to do [[Py/Editable Install]]s with `uv pip` as there is with [[PyPoetry]]
 	  id:: 67d6a7e5-3d9a-4b8e-97b1-975254980c95
-		- **WRONG - see [[Poetry/Concept/How to handle Monorepos in Poetry vs uv]] for an updated understandingPoetry/Concept/How to handle Monorepos in Poetry vs uv**
+		- **WRONG - see [[PyPoetry/Concept/How to handle Monorepos in Poetry vs uv]] for an updated understandingPoetry/Concept/How to handle Monorepos in Poetry vs uv**
 		  collapsed:: true
 			- In poetry, it's possible to have a python [[Monorepo]] with poetry by specifying editable installs. With `uv pip`, the recommended approach would be to specify `requirements-dev.txt` with `-e path/to/package` alongside `pyproject.toml`, which seems like a strange mixture of old and new package management techniques.
 			- | Feature | Poetry (`poetry install`) | `pip` / `uv pip install` |

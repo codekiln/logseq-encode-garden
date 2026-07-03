@@ -42,14 +42,14 @@
 			    426  rm -rf .python-version
 			    427  rm -rf gitp-acolyte/.python-version
 			  ```
-		- ### Reset [[Poetry]]
+		- ### Reset [[PyPoetry]]
 			- ### Reinstall Poetry using the official installer
 				- [Poetry Installation](https://python-poetry.org/docs/main/#installing-with-the-official-installer)
 				- ```
 				    432  curl -sSL https://install.python-poetry.org | python3 -
 				  ```
 				- Note that this script installs it into a virtualenv located in `~/Library/Application Support/pypoetry` (where the config also is; see below)
-			- ### Install [[Poetry/Shell/Zsh/OhMyZsh]] integration with [[Zsh/OhMyZsh]]
+			- ### Install [[PyPoetry/Shell/Zsh/OhMyZsh]] integration with [[Zsh/OhMyZsh]]
 				- ```
 				    438  vim ~/.zshrc # I had to add
 				    439  . ~/.zshrc
@@ -60,7 +60,7 @@
 				    444  . ~/.zsrhc
 				  ```
 			- ### Reset Poetry Config
-				- I had blindly tried many different [[Poetry/Configuration]]s ([poetry configurations](https://python-poetry.org/docs/main/configuration/)) while trying to debug this issue:
+				- I had blindly tried many different [[PyPoetry/Configuration]]s ([poetry configurations](https://python-poetry.org/docs/main/configuration/)) while trying to debug this issue:
 					- ```
 					  (gitp-acolyte)  ✘ Me@Home  ~/dev/gitpa/gitp-acolyte  ↱ cc/04-host-n-dist/03-ai-ep-yml  history | grep "poetry config"
 					    112  poetry config virtualenvs.prefer-active-python true\n
@@ -187,7 +187,7 @@
 			    495  poetry env info --path
 			    496  poetry env info --executable | pbcopy
 			  ```
-		- ### Reinitialize [[Poetry]] inside [[GitP/acolyte]]
+		- ### Reinitialize [[PyPoetry]] inside [[GitP/acolyte]]
 			- 494  poetry install
 		- ### Start VS Code and reinstall [[VSCode/Extension/Python]]; associate it with the pyenv virtualenv that poetry install installed to
 			- 495  poetry env info --path

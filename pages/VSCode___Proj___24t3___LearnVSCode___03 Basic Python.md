@@ -23,7 +23,7 @@ icon:: 🎯
 				- To explore [[GitHub/CoPilot]] with python
 		- ### Milestone #Scope
 			- [[Scope/In]] - [[MoSCoW/Must-Have]]
-				- Define a [[Poetry]] project interpreter with [[Pyenv]]
+				- Define a [[PyPoetry]] project interpreter with [[Pyenv]]
 				- Set up basic run configurations for python, specifically poetry
 				- Be able to use Intellisense to view and browse a python codebase
 				- Be able to do basic #Debugging in python using poetry

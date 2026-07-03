@@ -19,7 +19,7 @@ see-also:: [[nx]], [[GitHub/vercel/turborepo]], [[Dependency/Update/Automation]]
 		- **CI fan-out** — Path filters, affected-only pipelines, and merge queues prevent “every push rebuilds the world” unless necessary.
 	- ## Examples
 		- One Git root shipping a **mobile app**, **web app**, and **shared design-system package** with a single design-token bump spanning all three.
-		- **[[Poetry/Concept/How to handle Monorepos in Poetry vs uv]]** — language-specific packaging trade-offs inside a Python workspace.
+		- **[[PyPoetry/Concept/How to handle Monorepos in Poetry vs uv]]** — language-specific packaging trade-offs inside a Python workspace.
 	- ## Misconceptions
 		- “**Monorepo = one deployable**” — **False**; many deployables can live in one repo with separate release cadences.
 		- “**Monorepo fixes all coordination**” — **Oversold**; you still need **ownership**, **boundaries**, and tooling discipline or the tree becomes a **big ball of mud**.
