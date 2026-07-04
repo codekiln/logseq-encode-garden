@@ -16,3 +16,6 @@
 	- ## Rule Philosophy
 		- keep `.rulesync/rules/` minimal: a single root rule that defers to skills for behavior
 		- rationale: rules add to every-request context; skills load on demand
+	- ## Vendored skills (experimental)
+		- trying a technique: copy a third party's skills into `.rulesync/skills/` and regenerate, rather than the vendor's own installer or `rulesync import`
+		- not yet a preference — one case so far, the [[readwise-cli]] skills, where the decision and its rationale live

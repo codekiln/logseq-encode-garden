@@ -10,3 +10,15 @@ node = "lts"
 # demand. No AI agent is pinned — bring your own (Claude Code, Codex, Cursor, or
 # GitHub Copilot); the task asks which one you have, then launches it.
 "npm:rulesync" = "latest"
+# readwise gives agents the `readwise` command to search and read the graph owner's
+# Readwise + Reader library (see [[readwise-cli]]). Its workflow skills are vendored
+# under .rulesync/skills/ (readwise-cli, triage, quiz, …) and compiled by rulesync.
+# Auth is per-user: `readwise login` (or `login-with-token` for headless agents).
+"npm:@readwise/cli" = "latest"
+
+[env]
+# mise's npm backend (aube) refuses packages under its lowDownloadThreshold
+# (1000 weekly downloads) to catch typosquats. @readwise/cli is the vendor's own,
+# legitimately low-traffic package, so exempt just it — this keeps the gate (and the
+# OSV malicious-package check) active for everything else. See [[readwise-cli]].
+AUBE_ALLOWED_UNPOPULAR_PACKAGES = "@readwise/cli"

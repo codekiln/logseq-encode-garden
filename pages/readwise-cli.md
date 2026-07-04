@@ -22,3 +22,5 @@ see-also:: [[rw-cli]], [[Readwise/CLI]], [[Readwise/Reader]]
 	- ## [[My Notes]]
 		- ### [[2026-07-03 Fri]]
 			- Now my preferred CLI for [[Readwise]], replacing [[rw-cli]], which I used before.
+			- Vendored its workflow skills into [[My/Knowledge/Garden/logseq-encode-garden]] (`.rulesync/skills/`, refreshed by the `readwise-skills-sync` skill), skipping `readwise-mcp` since that garden wires the CLI, not the MCP server
+				- chose this over `readwise skills install` — the installer writes to `~/.claude` and copies only each `SKILL.md`, dropping sibling scripts like `build_graph.py`
