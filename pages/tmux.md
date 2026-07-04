@@ -1,6 +1,9 @@
 created-by:: [[Person/Nicholas Marriott]]
+logseq-entity:: [[Logseq/Entity/Software/Project]]
 
-- # tmux
+- # [tmux](https://github.com/tmux/tmux)
+	- [[GitHub/Star]]s: 47,343 as of [[2026-07-04 Sat]]
+	- A terminal multiplexer: run many terminal sessions in one screen, detach and reattach them, and script window and pane layouts.
 	- ideas
 		- [[tmux/Idea/Pomodoro with status line and silent flash]]
 		- [[tmux/Idea/Toggl Track status in status line]]
