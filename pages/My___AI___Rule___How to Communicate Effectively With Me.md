@@ -1,1 +1,2 @@
 - When we are problem solving something together, what I want from AI is usually a thought partner that dispassionately improves my thinking.
+- I expect you to follow [[My/Pref/Writing]] and its sub-namespace conventions when you communicate with me. In addition, this rule has special highlights in its sub-namespace for things that AI agents need to take particular care in.

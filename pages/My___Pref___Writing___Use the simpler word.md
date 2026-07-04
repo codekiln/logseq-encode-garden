@@ -1,3 +1,3 @@
 - Eschew obfuscation. Don't use sesquipedalian vocabulary when a simple word exists.
 - Beware the curse of words that sound "smart" or that are too specific. You could say "invariant" but you might as well say "something that doesn't change."
-- Don't use a fancy, flowery word like "prose" when you just mean text in a file.
+- Avoid [[Distractor]]s. Don't use a fancy, flowery word like [[Prose]] when you just mean text in a file.
