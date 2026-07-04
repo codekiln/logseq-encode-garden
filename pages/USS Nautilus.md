@@ -1,3 +1,0 @@
-- [[USS Nautilus]] was the first nuclear-powered submarine.
-- It is closely associated with [[Person/Hyman G. Rickover]] and the creation of the [[Nuclear Navy]].
-- In this garden, it is mainly relevant as evidence that Rickover's work joined technical breakthrough with a durable safety institution.

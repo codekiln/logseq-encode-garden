@@ -1,4 +1,0 @@
-- A [[Sociotechnical system]] is a system whose behavior comes from both technical machinery and human institutions.
-- [[Nuclear power safety]] is sociotechnical because reactor physics, engineering margins, procedures, training, authority, documentation, and operational culture interact.
-- [[AI/Safety]] is also sociotechnical.
-	- Model behavior matters, but so do deployment incentives, tool access, monitoring, incident response, evaluation culture, and who has authority to stop or roll back a system.

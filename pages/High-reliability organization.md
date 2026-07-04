@@ -1,7 +1,0 @@
-- A [[High-reliability organization]] is an organization designed to operate dangerous systems with unusually low failure rates.
-- [[Naval Reactors]] is a useful example because [[Person/Hyman G. Rickover]] built a culture around technical competence, procedure, accountability, and lifecycle control.
-- For [[AI/Safety]], the useful question is whether a lab or deployment organization behaves like a high-reliability organization when pressure rises.
-	- Can it stop work?
-	- Can it preserve technical authority?
-	- Can it notice weak signals?
-	- Can it keep configuration, evaluation, and operating assumptions aligned?

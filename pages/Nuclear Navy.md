@@ -1,8 +1,0 @@
-- The [[Nuclear Navy]] is the U.S. Navy's nuclear propulsion program.
-	- [[Person/Hyman G. Rickover]] was its central builder.
-	- Its first nuclear-powered submarine was [[USS Nautilus]].
-- The program is important to [[Nuclear power safety]] because it treated reactor safety as an operational culture and lifecycle responsibility, not only a design problem.
-- Related:
-	- [[Naval Reactors]]
-	- [[High-reliability organization]]
-	- [[Lifecycle ownership]]

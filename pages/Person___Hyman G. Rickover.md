@@ -1,22 +1,9 @@
-- Admiral Rickover was a U.S. naval officer and engineer who built the Navy's nuclear propulsion program, the [[Nuclear Navy]].
-	- The Navy describes him as the father of the [[Nuclear Navy]].
-	- He drove the development of the first nuclear-powered submarine, [[USS Nautilus]].
-- His central achievement was not only technical adoption of nuclear propulsion.
-	- He built [[Naval Reactors]] into an institutional safety regime for [[Nuclear power safety]].
-	- That regime fused engineering judgment, operator training, procurement expectations, design review, procedure, and operational culture.
-- Rickover's model collapsed the distance between engineering, operations, and accountability.
-	- A technically competent authority structure could decide whether a design was acceptable, a weld was unacceptable, a person was qualified, a procedure was mandatory, or a reactor would remain shut down until standards were met.
-	- That mattered because nuclear safety depends on the whole [[Sociotechnical system]], not only reactor physics.
-- Core Rickoverian safety practices:
-	- [[Design conservatism]]
-	- [[Procedural discipline]]
-	- [[Training and qualification]]
-	- [[Personal accountability]]
-	- [[Configuration control]]
-	- [[Lifecycle ownership]]
-- [[Naval Reactors]] became a kind of [[High-reliability organization]] factory.
-	- People trained under Rickover carried strict qualification, written procedures, independent technical review, conservative engineering, and a bias toward stopping work into civilian nuclear power.
-- The important caveat is that Rickover's system was unusually authoritarian, detail-obsessed, and personality-driven.
-	- Civilian nuclear organizations could borrow standards, trained people, and methods, but they could not always reproduce the same unified authority, military discipline, long tenure, or control over the whole lifecycle.
-- The analogy to [[AI/Safety]] is that powerful technology may need more than external regulation or safety slogans.
-	- Rickover's lesson is that safety can become an engineering culture when technical competence, procedural rigor, personal accountability, and lifecycle ownership are fused into the institution that builds and operates the system.
+logseq-entity:: [[Logseq/Entity/Person]]
+- # Hyman G. Rickover
+	- ## About
+		- U.S. Navy admiral and engineer (1900–1986), known as the "Father of the Nuclear Navy". He built the naval nuclear propulsion program and drove development of the first nuclear-powered submarine, *USS Nautilus*.
+	- ## [[My Notes]]
+		- His real achievement was institutional, not just technical: he turned reactor safety into an *engineering culture* rather than a regulatory afterthought — fusing conservative design, written procedure, deep operator training, personal accountability, and cradle-to-grave lifecycle ownership into the organization that built and ran the reactors. Someone always had the authority to stop work until standards were met.
+		- The reason to note him here is the analogy to [[AI/Safety]]: powerful technology may need more than external regulation or safety slogans. Safety becomes durable when technical competence, procedural rigor, accountability, and lifecycle ownership are built into the institution itself.
+	- ## External Links
+		- [Wikipedia](https://en.wikipedia.org/wiki/Hyman_G._Rickover)
