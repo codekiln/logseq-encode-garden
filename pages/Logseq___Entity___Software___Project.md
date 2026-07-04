@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 - # Software Project
 	- In this garden, **Software Project** pages model software products: applications for end users, libraries, frameworks, CLIs, desktop or web apps, editors, runtimes, and the like.
 	- ## Examples in this garden
-		- [[Yamtrack]], [[nvim]], [[Lazygit]], and [[tmux]] show how we name and shape software project pages. Use them as reference.
+		- [[MinIO]], [[Browsh]], and [[deptrust]] model the current page shape: a linked H1 title, the repository and star count directly beneath it, then lean descriptive bullets. [[Lazygit]], [[nvim]], and [[tmux]] show the naming instinct—short root-level pages—but predate this shape and lead with prose or an unlinked title; follow them for naming only, not for the first block.
 	- ## How to name the main page for a software project
 		- Give a software entity a root-level one-word or short main page when its primary name is not confusing and it is either reputable or nascent but likely to grow sub-namespaces for shortcuts, config, docs, or related notes. A short main name leaves room; long names (`owner/repo` or `person/project`) make every child path longer and harder to work with. Example: [[Lazygit]] rather than `Person/Jesse Duffield/GitHub/Lazygit`. Aliases can point from other namespaces, such as `Programming/Language/Rust` or `Person/Name/GitHub/Project`, to that main page when useful.
 		- When the garden is tracking a company or person context, some projects may stay under that sub-namespace for situational awareness. If one of those sub-namespace pages is a software entity and later becomes heavily used in the garden, refactor it: give it a root-level page and add an alias from the old path. Example: this garden originally had `Anthropic/App/Claude Code` because the focus was on the company; after more content and Claude Code becoming a cultural force, it got its own [[Claude/Code]] page with an alias to the old location.
@@ -17,8 +17,12 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- To mark a page as a software project instance, add `logseq-entity::` pointing at this type page (the namespace uses nested segments: Logseq/Entity/Software/Project). The type page then gets backlinks to all software project pages.
 		- Software-project-specific frontmatter can include `created-by::` pointing to a **person** or **company** page when the creator entity is clear.
 	- ## Page shape
-		- File: `pages/<ProjectName>.md`. In links, use the main page name with forward slashes for namespaces where we use them (e.g. `Lazygit/Keyshort/Some action`). First block: H1 with the project title (or a reference link to the project). Keep the page lean: title plus a few descriptive bullets.
-		- When the project is hosted on GitHub, include the [[GitHub/Star]] count when available: link to [[GitHub/Star]], record the count, and include the dated source-check day.
+		- File: `pages/<ProjectName>.md`. In links, use the main page name with forward slashes for namespaces where we use them (e.g. `Lazygit/Keyshort/Some action`).
+		- The first block is an H1 whose text links to the project: `- # [ProjectName](url)`. The H1 link points to the project's canonical home—its homepage when it has one, otherwise its repository. Descriptive prose never shares the H1 line; the description lives in child bullets below it.
+		- The top-of-page links come first, directly under the H1 and before the description. When the project has both a homepage and a repository, the H1 links the homepage and the first child bullet links the repository. When it lives only on a repository, the H1 links the repository and no separate repository bullet is added.
+		- Each external location appears exactly once. A repository already linked at the top is never repeated in a later "Source repository" or "Links" bullet.
+		- After the links, keep the page lean: a few descriptive child bullets. State the implementation language on its own short bullet (for example, "Written in [[Python]].") rather than folding it into prose.
+		- When the project is hosted on GitHub, include the [[GitHub/Star]] count when available: record the count with a dated source-check day on the repository line (or on its own bullet when the repository is the H1).
 			- One-line check: `gh repo view OWNER/REPO --json stargazerCount --jq .stargazerCount`
 	- ## Creator (person or company) handling
 		- If the creator is clear and is an individual, create or use a `Person/...` page and point `created-by::` there. If the creator is clearly an organization tracked in the garden, create or use a company entity page and point `created-by::` there.
