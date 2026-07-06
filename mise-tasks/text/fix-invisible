@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+#MISE description="Normalize invisible paste-artifact characters (nbsp, narrow nbsp, zero-width space, BOM) in tracked text files"
+#MISE tools={ "rust" = "latest" }
+
+# Args are forwarded verbatim (no #USAGE spec): an optional --check flag plus any
+# number of file paths. With no paths, every tracked file is normalized.
+#   mise run text:fix-invisible                 # fix whole repo
+#   mise run text:fix-invisible --check         # report only, non-zero if any
+#   mise run text:fix-invisible pages/foo.md    # fix specific files
+
+# Run from the graph root so tracked-file discovery and the binary cache resolve.
+cd "${MISE_PROJECT_ROOT:-$PWD}"
+
+src="mise-tasks/text/fix-invisible-whitespace.rs"
+bin_dir=".cache/mise-tasks"
+bin="$bin_dir/fix-invisible-whitespace"
+
+# Compile once; rebuild only when the source changes. The binary is machine
+# specific and gitignored (.cache/).
+mkdir -p "$bin_dir"
+if [ ! -x "$bin" ] || [ "$src" -nt "$bin" ]; then
+  rustc -O -o "$bin" "$src"
+fi
+
+# Split a --check flag (from anywhere) out of the explicit file list.
+check=()
+files=()
+for arg in "$@"; do
+  case "$arg" in
+    --check) check+=("--check") ;;
+    --) ;;
+    *) files+=("$arg") ;;
+  esac
+done
+
+# No explicit files → normalize the whole repo (every tracked file). Read
+# NUL-delimited paths so filenames with spaces, newlines, or non-ASCII bytes
+# survive intact (git otherwise C-quotes them).
+if [ "${#files[@]}" -eq 0 ]; then
+  while IFS= read -r -d '' f; do files+=("$f"); done < <(git ls-files -z)
+fi
+
+exec "$bin" ${check[@]+"${check[@]}"} ${files[@]+"${files[@]}"}

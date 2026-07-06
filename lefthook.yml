@@ -5,3 +5,9 @@ pre-commit:
   commands:
     identity-guard:
       run: mise run secrets:scan {staged_files}
+    # Normalize invisible paste-artifact characters (nbsp, narrow nbsp,
+    # zero-width space, BOM) in staged files, then re-stage the fixes so the
+    # commit records clean text. See mise-tasks/text/fix-invisible.
+    normalize-whitespace:
+      run: mise run text:fix-invisible {staged_files}
+      stage_fixed: true

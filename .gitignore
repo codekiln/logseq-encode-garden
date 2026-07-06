@@ -103,3 +103,6 @@ repomix-*.xml
 
 # Rulesync-generated Goose CLI hints at repo root
 /.goosehints
+
+# Compiled helper binaries for mise file tasks (machine-specific)
+.cache/
