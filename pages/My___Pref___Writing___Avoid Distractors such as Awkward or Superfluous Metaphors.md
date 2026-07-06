@@ -5,3 +5,7 @@
 - For example, don't refer to the "teeth of the spec," instead, refer to "how to check if something meets the specification," which is clearer and plainer ([[My/Pref/Writing/Use Plain language]]).
 - Often times, this intersects with [[My/Pref/Writing/Avoid Jargon, Especially Tech-speek]]; don't say that you "fork" something if what you mean is that you're going to make a copy of something or say "that's the real fork" to refer to a decision we need to make.
 - When using metaphors, be careful with word choice and proximity to topics. Don't mix metaphors in the same paragraph.
+	- [[Examples]] to avoid
+		- Five clashing metaphors in a single sentence:
+			- > Your sketch is ambiguous on one hinge, and it's the same illegal-state knot from before wearing new clothes.
+			- The images collide — sketching, a door hinge, a knot, and clothing, on top of the "illegal state" figure — so the reader decodes pictures instead of the point. Plainly: the description is unclear on one point, and it repeats an ambiguity from earlier.

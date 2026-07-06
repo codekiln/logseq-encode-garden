@@ -12,6 +12,8 @@
 - # [[My/Pref/Writing/Use the simpler word]]
 	- ## Canonical, Canon -> Standard
 		- This is just a fancy way of saying "standard." Most people in the U.S. probably don't even know what this means. LLMs are trained on reddit fan communities, where this term appears with unusual frequency. Don't assume the reader is a fan fiction writer.
+	- ## Durable
+		- AI overuses this, usually as filler on a noun ("durable record," "durable reasoning") where it adds nothing. Cut it, or say "lasting" when permanence is genuinely the point.
 - # [[My/Pref/Writing/Avoid Jargon, Especially Tech-speek]]
 	- ## {Bootstrap, Initialize, Provision} -> Setting it up
 		- I've noticed that AI likes to use technical programmer jargon when there's a plain-english equivalent term when it's talking about setting up a project, we might have some things the AI has to do one time that first time.

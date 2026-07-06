@@ -24,6 +24,8 @@ logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Term]]
 		- PR description [Umbrella: consolidate Beads repo-local Dolt runtime layer · Issue #2685 · gastownhall/beads](https://github.com/gastownhall/beads/issues/2685)
 			- ah, "final-tail hardening" 😂
 				- > "The landing sequence follows that dependency order: lifecycle precursor / runtime foundations / doctor/runtime alignment / repair safety / final-tail hardening / embedded/schema tail"
+		- Mixed metaphors stacked into one sentence — see [[My/Pref/Writing/Avoid Distractors such as Awkward or Superfluous Metaphors]]
+			- > Your sketch is ambiguous on one hinge, and it's the same illegal-state knot from before wearing new clothes.
 		- Double negatives and so many useless turns of phrase
 			- > That's why example 1 (wrap/linebreak) felt like a non-example to you — an unfamiliar reader doesn't obviously know what linebreak does, so spelling it out is earning its place under the real preference, even though the spec's current wording would tell an agent to omit it.
 	- ## Buzzword / Jargon [[Examples]]
