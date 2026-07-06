@@ -195,6 +195,7 @@ chatgpt-link:: https://chatgpt.com/g/g-p-691f249c2fac8191ab8b4b926da5cb3b-ai-es-
 		  
 		  → Clear APIs, standardized behaviors, and predictable integrations.
 	- **Intent (your note integrated)**
+	  id:: 6a214881-4588-4762-a808-1b4ac5bda666
 		- Core philosophy: **make the right thing easy and the wrong thing ridiculously hard.**
 		  
 		  → Golden paths = paved, safe, fast.

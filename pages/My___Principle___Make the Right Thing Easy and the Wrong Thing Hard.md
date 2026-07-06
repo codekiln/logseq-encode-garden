@@ -1,0 +1,4 @@
+- Make the right thing easy and the wrong thing ridiculously hard.
+	- The path worth taking should be paved, safe, and fast; the path worth avoiding should meet friction — reviews, warnings, incompatibility — or be impossible to reach at all.
+	- From [[Person/Lei Zhang]]'s [[Bloomberg]] talk on platform "golden paths": [[AI/ES/25/11 Code/LEAD/20 Thu/1425 Lei Zhang Bloomberg Tech Infra Eng]].
+	- Corollary from the same talk: demos are easy; production earns quality control. Keep experimentation low-friction, and raise the bar for what becomes load-bearing.
