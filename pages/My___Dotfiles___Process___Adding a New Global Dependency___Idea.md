@@ -1,72 +1,37 @@
 tags:: [[Idea]]
 
 - # Refining the Process of Adding Dependencies to my Dotfiles with Agent Skills
-	- ## Intro
-		- This page and its sub- [[Logseq Namespaces]] describe a new preferred process I'd like to develop for adding  a new global dependency such as a [[CLI Tool]], a global [[AI/Coding/Config]] or [[AI Agent Skills]] change, an [[MCP]] server, etc. My goal is to develop related [[Agent/Skills]] for the process.
-		- My dotfiles use [[OpenSpec]] for keeping track of their requirements. A few of the specs relate to this knowledge garden, for example:
-			- [[My/Dotfiles/openspec/specs/config-comment-style]]
-			- [[My/Dotfiles/openspec/specs/garden-entity-links]]
-			- Ideally, I'd have an established, standardized, AI-guided process for adding dependencies. Since my dotfiles use openspec, the agent skills we would author together would form a sort of "superstructure" around openspec that would ensure that each new item added to the dotfiles met certain standards. The skills would instruct AI how to use openspec to "implement" them in the dotfiles.
-	- ## Pipeline
-		- The funnel lives in the garden; only the final handoff crosses into the dotfiles [[OpenSpec]] flow, where openspec's own change lifecycle (proposal → implemented → archived) takes over.
-		- ### Garden — thinking
-			- **1 · Incubating** ↓ the need is identified and described
-			- **2 · Researching** ↓ alternatives surveyed (web, GitHub, Hacker News, [[AI Deep Research]]) → dated research report + a page per alternative
-			- **3 · Shortlisted** ↓ front-runners chosen for closer evaluation
-			- **4 · Vetting** ↓ security review; options ranked by risk
-			- **5 · Selected** — one option advanced, rationale recorded
-		- ### Handoff
-			- the selected need becomes a dotfiles [[OpenSpec]] change
-		- ### Dotfiles — doing (existing flow)
-			- openspec change: proposal / design / tasks
-			- the change cites the originating need and the [[My/Principle]] / [[My/Pref]] pages it rests on
-	- ## Stage property
-		- Superseded by the current design direction below (tentative) — the flag-based stage is being replaced by deliverable-implied state.
-		- `dotfiles-dep-stage::` on [[Logseq/Entity/Dotfiles/Dep]], a [[Logseq/Entity/Frontmatter/Definition]]
-		- the value is one of the permitted value pages defined by [[Logseq/Entity/Dotfiles/Dep/Frontmatter/dotfiles-dep-stage]], for example `dotfiles-dep-stage:: [[Logseq/Entity/Dotfiles/Dep/Frontmatter/dotfiles-dep-stage/4 - Vetting]]`
-	- ## Current design direction (tentative — subject to design review)
-		- This is a working direction, not a settled decision. The details below are provisional and expected to change during design review; they supersede the flag-based stage sketch above.
-		- ### Two entities, not one
-			- A need and the dependency that fills it are modeled separately, because a dependency in an early stage — before any tool is chosen — is an illegal state under [[My/Principle/Make Illegal States Unrepresentable]].
-			- `Logseq/Entity/Dotfiles/Dep/Need` — an identified need for a dependency; a durable research and decision record that persists after selection. It lives at its natural topic page (for example [[Spotify/Tool/TUI]]) via the entity marker, not a dedicated namespace.
-			- [[Logseq/Entity/Dotfiles/Dep]] — the chosen or pre-existing tool; also a [[Logseq/Entity/Software/Project]].
-		- ### Assert facts; earn claims
-			- The tool's installed state is a fact, asserted with an explicit property — a `dep-status::` with values such as `Adopted`, `Active`, `Retired`.
-			- The need's funnel progress is a claim, so it is not asserted with a flag. It is implied by which structured deliverables exist on the need — a claim that cannot outrun the work that backs it.
+	- ## Current vision
+		- ### The goal
+			- Bring rigor to how I garden my technologies. For each part of my global setup, have a written answer to what it is, why it is installed, and whether it is reliable — secure, dependable, and consistent with my [[My/Principle]]s — and surface the parts that are not. This applies to tools already installed as much as to new ones. Adding something new should be rigorous but low-friction; it is never blocked.
+		- ### Two loops
+			- Inner loop — the dotfiles [[OpenSpec]]. Concrete if / when / then requirements for how chezmoi, mise, LazyVim, and the rest are configured. It can be regenerated from its specs.
+			- Outer loop — a garden-side system of [[Agent/Skills]] whose specification is my [[My/Principle]]s, [[My/Pref]]s, and articulated ideas, and whose target is the dotfiles. It is the why and whether; the inner loop is the how.
+			- The two meet at eventual consistency, one tool at a time. A tool can be installed and only partly gardened; the outer loop surfaces that gap and closes it over time — lazily for what is already installed, with more scrutiny for new additions.
+		- ### The guiding principle
+			- [[My/Principle/Make the Right Thing Easy and the Wrong Thing Hard]]. The skills make the rigorous path the low-friction one, so the aim is not to slow adoption but to make the disciplined route the easy route. An undocumented, unvetted install is what should meet friction. The corollary fits the model: demos are easy, production earns quality control — a cheap idea versus a vetted adoption.
+		- ### Two entities, not three tiers
+			- [[Logseq/Entity/Dotfiles/Dep/Idea]] — an idea: a job to be done for the toolchain, keyed to the job rather than a tool, for example [[Terminal/Multiplexer/Idea]]. Cheap to record, no status property, progress shown by the notes present. It works forward — jot an idea, later adopt a tool — and backward — write the idea behind an already-installed tool.
+			- [[Logseq/Entity/Dotfiles/Dep]] — the tool that fills an idea, usually also a [[Logseq/Entity/Software/Project]], carrying its own adoption status (candidate, adopted, retired).
+			- An installed tool's status is an asserted fact; an idea's progress is a claim it should not assert, only show. [[My/Principle/Make Illegal States Unrepresentable]]: an idea is not a half-built dependency, so the two are separate pages and a dependency is always a real tool.
 		- ### Stage implied by deliverables
-			- Each step of the funnel corresponds to a deliverable that conforms to a schema; the stage is the furthest deliverable present.
-			- researching → a research survey of the alternatives
-			- shortlisting → a comparison ranking candidates against the documented [[My/Pref]] and [[My/Principle]] rubric, kept on the need
-			- vetting → a security audit per candidate, as a subpage of each tool (`<tool>/Security Audit/...`)
-			- selection → a decision record naming the winner and citing the principles it rests on; a declined outcome is recorded the same way
-		- ### Why the flag was dropped
-			- A stored stage value can claim a stage whose work was never done; deliverable-implied state cannot. This mirrors [[OpenSpec]], where a change's progress is its artifacts rather than a status field.
-		- ### Open questions
-			- the minimal deliverable set to start with
-			- whether each deliverable is its own entity type or a plain schema-bearing subpage promoted later
-			- whether presence gates on the existence or the completion of a deliverable
-			- how to tolerate a need that skips a step (a trivial dependency may need no research survey)
-	- ## How to think about the process in the context of logseq.
-		- An important part of [[Logseq/Entity/Definition]]s is describing something akin to [[Structured Output]] or a schema for each page. The entities that are added in [[Logseq/Frontmatter/logseq-entity]] describe in some way the contents / shape / schema of the page.
-		- So a process that adds a new dependency could be thought of as creating certain deliverables at certain stages in the form of pages that conform to certain schemas for that process.
-	- ## Possible Steps
-		- below, "a knowledge garden" is probably but not exclusively [[GitHub/codekiln/logseq-encode-garden]]
-		- ### identify the needs
-			- a [[Logseq/Entity/Definition]] in the knowledge garden could be created for pages that "model" a need that I've identified for my dotfiles / global setup. an agent skill could help locate, create and curate these pages.
-			- up until now, the entity system has not included statuses, but it could be adapted to use custom, documented [[Logseq/Frontmatter]] to enable them to move a dotfiles dependency through the stages of incubation.
-			- **result**: after this step a knowledge garden will have a dedicated entity page filled out for the dotfiles need.
-		- ### research and identify alternatives that may meet the need
-			- the work for this stage would include internet searches, github searches, hacker new searches, [[AI Deep Research]] reports, etc.
-			- it may include importing those research reports into the garden.
-			- **result**: after this step, a knowledge garden will have a dated research report that has identified alternatives as dedicated pages in the garden.
-		- ### identify candidates to evaluate
-			- **result**: a few front-runners will be identified for the next steps.
-		- ### security review
-			- see [[2026-06-27 Sat]] for a description of the impetus here.
-			- **result**: all options are vetted and ranked by risk. consider running tools like [[deptrust]] (which itself hasn't been fully vetted yet!)
-		- ### select a dependency to advance
-			- **result**: after this step, the knowledge garden would somehow have acknowledged what was chosen and why**
-	- ## given a new technology
-		- the process would begin with a AI researching my main technology knowledge garden (`logseq-encode-garden`) importing the technology as a software project entity into there, reviewing my principles / priorities there, and interviewing me critically to help me meet my own goals and stay consistent with my principles and priorities, pushing back if appropriate to help me stay consistent and grounded in my stated preferences. AI would research this repo as well as the logseq garden and make sure that the technology stated doesn't duplicate another dependency. For example, I usually don't want more than one tool to do the same thing installed at the same time.
-		- all of the above would likely be a guided form of openspec explore, perhaps with some additional skill wrapping or referencing that so that the exploration also did some research into the dotfiles and into the knowledge garden.
-		- one of the first steps of adding a dependency would then be determining *whether* to add the dep.
+			- An idea has no stored stage. Its progress is the furthest deliverable present on it:
+				- a survey of the alternatives
+				- a security read of the candidates — see [[2026-06-27 Sat]] for the impetus, and tools like [[deptrust]]
+				- a decision naming the tool chosen, or recording that none was and why
+			- This mirrors [[OpenSpec]], where progress is the artifacts rather than a status field. Each deliverable is a page or section that fits a schema, in the spirit of [[Logseq/Entity/Definition]] and [[Structured Output]].
+		- ### Handoff to the dotfiles
+			- A selected idea becomes a dotfiles [[OpenSpec]] change — proposal, design, tasks — that cites the originating idea and the [[My/Principle]] and [[My/Pref]] pages it rests on. Related specs: [[My/Dotfiles/openspec/specs/config-comment-style]] and [[My/Dotfiles/openspec/specs/garden-entity-links]].
+			- Each installed tool carries a link from the dotfiles to its garden page, so configuration and learning stay connected.
+		- ### Given a new technology
+			- The entry move is a guided [[OpenSpec]] explore, widened to research both the dotfiles and the garden. AI imports the technology as a [[Logseq/Entity/Software/Project]], reviews my principles and preferences, checks that it does not duplicate a tool already doing the same job, and interviews me critically — pushing back to keep me consistent with what I have written down. The first question is whether to add the dependency at all.
+	- ## Deprecated
+		- The flag-based `dotfiles-dep-stage::` enum (1 Incubating through 5 Selected, plus Adopted, Declined, Retired) as the funnel tracker. Replaced by deliverable-implied progress: a stored stage can claim work that was never done.
+		- The earlier Need-versus-Dep framing, where a Need held the record. Replaced by [[Logseq/Entity/Dotfiles/Dep/Idea]], keyed to the job.
+		- The want / need / desire tier. Dropped as a distinction not acted on differently, per [[My/Principle/Simplify/Not every distinction is worth recording]]; necessity is at most a note on an idea.
+	- ## Open questions
+		- the minimal deliverable set to start with
+		- each deliverable as a freeform section or subpage versus its own entity type — starting freeform, promoted only if it earns the distinction
+		- whether presence gates on the existence or the completion of a deliverable
+		- how to tolerate an idea that skips a step — a trivial one may need no survey
+		- whether the garden should link back to the dotfiles location; today the link runs one way, dotfiles to garden
