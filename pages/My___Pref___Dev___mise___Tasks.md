@@ -1,5 +1,7 @@
 - strongly prefer [[mise/Task/File]] over [[mise/Task/TOML]]
 	- put tasks in `(~/.config/mise/)tasks/<namespace>/<subnamespace>/<executable_name>`, almost never inline TOML `[tasks."..."]` entries in [[mise/Config/mise.toml]], unless they are one-liners.
 - be sure to use [[usageCLI]] syntax for defining autocompletion parameters
-	- Always annotate file tasks with `#MISE description="..."` and `#USAGE` directives (flags, args) for autocompletion via usageCLI.
+	- Always annotate file tasks with `#MISE description="..."` and `#USAGE` directives (flags, args) for autocompletion via usageCLI. See [mise docs: file tasks](https://mise.jdx.dev/tasks/file-tasks.html) and [mise docs: task arguments](https://mise.jdx.dev/tasks/task-arguments.html).
+	- install the `usage` CLI globally so it is available on `PATH` — `mise use -g usage`. It is not required to *run* tasks, but completions of `#USAGE`-annotated tasks only work when `usage` is installed. See [mise docs: autocompletion](https://mise.jdx.dev/installing-mise.html#autocompletion).
+	- install mise shell completions into the default shell (zsh) so `mise run <tab>` completes task names and their usage-defined args. Either use the oh-my-zsh `mise` plugin, or `mise completion zsh > "${fpath[1]}/_mise"`. See [mise docs: completion](https://mise.jdx.dev/cli/completion.html) and [usage docs: completions](https://usage.jdx.dev/cli/completions).
 - see [[My/Pref/Dev/mise/Tasks/Discussion]] for rationelle
