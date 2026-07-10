@@ -1,0 +1,60 @@
+created-by:: [[Person/Theo Browne]]
+date-created:: [[2026/07/08]]
+
+- # [What do we build now? — Theo Browne, @t3dotgg](https://www.youtube.com/watch?v=xUnRQ9vLXxo)
+	- ## [[Summary]]
+		- AI models now understand code deeply enough to plan and organize work themselves, not merely autocomplete it.
+		- The argument: push these tools further to build bigger, bolder projects instead of letting old habits and tooling cap ambition.
+		- A call to rethink workflows and compete at a higher level of what software can be.
+	- ## [[My Notes]]
+		- Talk by [[Person/Theo Browne]] at the [[AI/Engineer/World's Fair]] (2026)
+	- ## [[Video]]
+		- {{video https://www.youtube.com/watch?v=xUnRQ9vLXxo}}
+			- ### {{youtube-timestamp 17}} Opening: A Journey Through the Model Eras
+				- Frames the whole talk as a shared case of **"AI psychosis"** — the disorienting pace of recent model jumps.
+				- #### **Sonnet 3.5** — the tool-call era
+					- "Sonnet 3.5 was a big moment for me because it felt like these models could suddenly complete much more end-to-end tasks."
+					- Not the first model to call tools, "rather it was the first one that did them consistently and reliably enough in context of a code base."
+				- #### **Opus 4.5** — long-running tasks
+					- "A model that could test the work and actually get it into a good state and complete tasks that take hours instead of minutes."
+					- Where his "psychosis started in November and December of last year."
+				- #### **Mythos** & **Fable** — the jump to orchestration
+					- "The first model that doesn't just understand your code base, but it understands itself."
+					- "It knows how to spawn additional models and break up work... You don't need some custom system, some fancy software factory. You just need to prompt it to go a little further."
+			- ### {{youtube-timestamp 183}} We Have to Go Bigger
+				- "You're not going to see the benefits going forward if you're not pushing the model further, you're not pushing yourself further with what you're building."
+				- "The models are getting better faster than we are. So we can't necessarily get better. So instead we have to go bigger."
+				- Concedes he was wrong to claim models were "hitting a wall."
+			- ### {{youtube-timestamp 224}} Getting Over Ourselves: The Skeuomorphic Phase
+				- Developers carry strong opinions ingrained from tools like [[tmux]], GNU screen, and SSH — learned "before I even wrote code."
+				- #### The iOS 6 → iOS 7 analogy
+					- Skeuomorphic [[iOS]] apps had to *look* like the physical objects they replaced (a compass, a bookshelf) — designed "to convince you to use them, not to be useful."
+					- "iOS 7 represents the shift to not focusing on convincing anymore... stop convincing and start embracing" — uglier, but far more useful.
+				- #### Devs are still skeuomorphic
+					- "We're currently in our [[Skeuomorphism]] phase as software developers... We're pretending our terminals are the ultimate interface when they're not even good interfaces."
+					- "Natural language has no place in a terminal, but we pretend it does because the terminal's familiar" — said as someone who loves the terminal (and the [[Vim]] phase) deeply.
+			- ### {{youtube-timestamp 407}} The Identities We Cling To
+				- "Why can't we commit our environment files?... It's just how [[Git]] was built... and we aren't letting go of that."
+				- "Why do we qualify ourselves by the languages we know?" — an identity trap for juniors and seniors alike.
+				- "Why are we so scared of deleting code?... we have such a bad sunk cost mindset." Names the "guilt merged PR" — merging weak work to dodge a hard conversation.
+				- "The things we care about are not necessarily the things that matter anymore."
+			- ### {{youtube-timestamp 569}} Three Things I've Built, and the Shifting Tiers
+				- Walks three projects bottom-up: a [[Reddit]] meme scraper (side project); **Ping**, a "Zoom for streamers" [[Y Combinator]] startup built around OBS; and a full-stack cloud — "Vercel, but it goes further each direction."
+				- Old tiers: side project / startup / "too big."
+				- "Now that the models are bigger, the tiers have shifted. Everything is now one tier lower" — "what used to be a startup is now a side project."
+			- ### {{youtube-timestamp 688}} Executable Markdown: The "Galaxy-Brain" Tier
+				- Below "side project" is a new tier: "It's a [[Markdown]] file."
+				- "The fact that you can now execute markdown by just piping it to [[Codex]] or [[Claude]] is unbelievable."
+				- His PR-triage service is now a markdown file on a cron: "every morning at 9:00 a.m. this runs... my markdown file generates me my work for the day."
+			- ### {{youtube-timestamp 750}} What Does "Too Big" Even Mean Now?
+				- The full-stack cloud is his own next bet ("Don't do it... I wouldn't want to compete with me on this one").
+				- Above it sits a gap he can't name: "I don't know what too big means anymore. Is it training your own model from scratch?... building your own operating system?"
+				- "That's scary, but it's also exciting. It means I need to keep pushing myself to go bigger than makes sense in order to find these limits."
+			- ### {{youtube-timestamp 792}} Think Wider, Not Bigger: Breadth vs Depth
+				- Reframes "bigger" as **wider** — the breadth (range of things covered) versus depth (features per area) of software.
+				- [[Vercel]] never matches [[AWS]]'s range but wins on depth in front-end-leaning full-stack — "so much so that even the agents prefer it."
+				- What changed: "that range is viable in a way that it never was before... you can build a database platform into your product in a day or two of work with enough prompting."
+				- Architect so users extend it themselves: [[Slack]] "is the right shape for people to build the features they want" and accidentally became the platform people run their agents in.
+			- ### {{youtube-timestamp 914}} If Your Idea Doesn't Feel Stupid, It's Not Big Enough
+				- "It's time to compete with [[Slack]]. It's time to build your own [[AWS]]. It's time to challenge [[Salesforce]] directly."
+				- "If your idea doesn't feel stupid, it's cuz your idea's not big enough."
