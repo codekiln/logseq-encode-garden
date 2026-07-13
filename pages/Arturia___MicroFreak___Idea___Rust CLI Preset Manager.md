@@ -1,0 +1,32 @@
+tags:: [[Idea]], [[Rust]]
+date-created:: [[2026-07-12 Sun]]
+
+- # freakio — a Rust CLI preset manager for the Arturia MicroFreak
+	- A narrow, single-device [[Rust]] CLI for managing [[Arturia/MicroFreak]] presets, samples, and wavetables over MIDI, cross-platform (macOS, Linux, Windows), using [[Elektroid]] as a protocol and architecture reference.
+	- Working name: `freakio`. Checked 2026-07-12: no crate on crates.io (exact or fuzzy match) and no matching GitHub repo.
+	- ## Why Elektroid is the right reference
+		- [[Elektroid]] already ships mature MicroFreak support (since v3.1): preset, sample, and wavetable transfer, with the reverse-engineering acknowledged as legitimate by an Arturia staff member — see [[Arturia/Forum/24/05/MIDI Control Center alternative for MicroFreak on Linux]].
+		- An Arturia staff reply in that thread notes the MiniFreak (a different, newer instrument) dropped MIDI configuration entirely. That doesn't affect the MicroFreak line this idea targets.
+	- ## Protocol facts to reuse
+		- Elektroid's `src/connectors/microfreak.c` + `microfreak.h` + `microfreak_sample.c` (GPLv3, `dagargo/elektroid`) document the MicroFreak SysEx protocol in detail:
+			- Arturia manufacturer ID `00 20 6B`, MicroFreak family/model bytes, a firmware-major-version-5 gate in the handshake.
+			- Preset = a 0x23-byte header plus 146 parts of 32 bytes each.
+			- Sample and wavetable directory entries are 28-byte header structs (address, size, checksum, name, id).
+			- Samples transfer in 4096-byte blocks using 7-bit/8-bit MIDI-safe packing, with a documented memory-fragmentation model and a `defragment` operation.
+			- A storage-stats query reports free space; transfers carry a checksum.
+	- ## Architecture
+		- Elektroid's layering: MIDI/SysEx transport (generic identity handshake, send/receive with timeout and cancellation) → device protocol (MicroFreak-specific message framing) → data model (a generic byte-blob container) → CLI dispatch.
+		- `elektroid-cli` is already GTK-free (~1150 lines, buildable standalone via the `ELEKTROID_CLI_ONLY` build option) and shares all of the above with the GUI. Its verb set (`ld`, `info`, `df`, `ls`, `ul`/`dl`/`rdl`, `send`/`receive`) is a workable starting command surface, trimmed to the MicroFreak's three storage domains.
+	- ## What to leave out
+		- The GTK GUI, the multi-connector plugin registry (regex-based handshake dispatch across a dozen device families), every non-MicroFreak connector (Elektron, Casio, Korg, Moog, Novation, etc.), audio playback/recording, and the generic slot/VFS abstraction — a fixed set of three storage domains doesn't need a virtual filesystem layer.
+	- ## Transport
+		- The `midir` crate covers macOS (CoreMIDI), Linux (ALSA), and Windows (WinMM) behind one API, so the same transport code runs on all three without Elektroid's separate ALSA/RtMidi backend split.
+	- ## Testing
+		- Elektroid ships both unit tests (`test/tests_microfreak.c`) and per-filesystem integration shell scripts. Unit-test the message framing and packing in isolation, then integration-test against a real device (or recorded SysEx fixtures) per storage domain.
+	- ## v1 scope
+		- Presets and samples first, wavetables following once the core transfer-and-checksum path is proven.
+		- macOS first, with Linux and Windows following from the same `midir`-based transport.
+	- ## Crate split
+		- `freakio` — SDK crate: transport, handshake, and the MicroFreak protocol and data model.
+		- `freakio-cli` — thin binary crate: argument parsing and command dispatch, depending on `freakio`.
+		- A future `freakio-tui` could depend on the same `freakio` SDK.

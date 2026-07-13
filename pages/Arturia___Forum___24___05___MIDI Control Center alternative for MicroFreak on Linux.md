@@ -1,0 +1,31 @@
+created-by:: [[Arturia/Forum/User/freakoid]]
+date-created:: [[2024-05-04 Sat]]
+
+- # [Arturia MIDI Control Center alternative for MicroFreak on Linux - Freak/MicroFreak - Arturia Forum](https://forum.arturia.com/t/arturia-midi-control-center-alternative-for-microfreak-on-linux/3863/2)
+	- ## [[Original Poster]]
+		- [[Arturia/Forum/User/freakoid]]
+			- Announces that [[Elektroid]], a FLOSS Elektron Transfer alternative for Linux, now supports the [[Arturia/MicroFreak]] for presets, samples, and wavetables — equivalent to what MIDI Control Center offers.
+			- Notes occasional issues with lengthy samples but otherwise stable operation; invites bug reports and feature requests via GitHub. Mentions existing MicroBrute support as prior art.
+	- ## [[Response]]
+		- [[Arturia/Forum/User/Tim.Arturia]]
+			- Congratulates the developer on reverse-engineering the full MicroFreak preset serialisation and MIDI communication.
+			- Notes that the MiniFreak (a different, newer instrument) no longer uses MIDI for configuration and data transfer, so the same approach can't extend there.
+		- [[Arturia/Forum/User/freakoid]]
+			- Asks whether a full MicroFreak reset exists without reflashing firmware, suspecting corrupted sample data behind their technical issues.
+		- [[Arturia/Forum/User/Tim.Arturia]]
+			- Replies that no sample-memory erase exists other than erasing all samples through MCC; offers further detail by private message.
+		- [[Arturia/Forum/User/freakoid]]
+			- Announces Elektroid 3.1 with official MicroFreak support for samples, presets, and wavetables.
+		- [[Arturia/Forum/User/buscon]]
+			- Thanks the developer; suggests Arturia should support the tool officially.
+		- [[Arturia/Forum/User/piattica]]
+			- A Linux Mint user asks for simpler install instructions after a flatpak module-loading error.
+		- [[Arturia/Forum/User/freakoid]]
+			- Suggests reinstalling xapp package dependencies.
+		- [[Arturia/Forum/User/d3tuned]]
+			- Asks for the tool to expand beyond Linux.
+	- ## [[Related/Post]]
+		- [[Elektroid]]
+		- [[Arturia/MicroFreak/Idea/Rust CLI Preset Manager]]
+		- [Issue #123 · dagargo/elektroid](https://github.com/dagargo/elektroid/issues/123) — the GitHub issue where MicroFreak support was reverse-engineered and implemented.
+		- [Elektroid CLI docs](https://dagargo.github.io/elektroid/cli/)

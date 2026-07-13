@@ -21,3 +21,5 @@ logseq-entity:: [[Logseq/Entity/Article]]
 		- Open source, contribution docs, licenses, conduct guidelines, and plugin systems make a CLI easier to diagnose and extend.
 		- Multi-command CLIs need clear subcommand structure; the article favors colon-delimited topic commands in the Heroku style.
 		- Follow XDG-style locations for config and data, with platform-appropriate cache paths.
+	- ## Related
+		- Cited in [[CLI/Guidelines]]'s further reading.
