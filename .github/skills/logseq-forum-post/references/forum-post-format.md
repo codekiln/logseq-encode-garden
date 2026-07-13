@@ -19,14 +19,14 @@ Standard format for importing and structuring forum posts in Logseq (Cursor, Red
 1. **Title and Link** — `- # [Post Title - Forum Name](original-url)` (include the forum name; include category for clarity).
    - Example: `- # [How can I increase the indexing depth for @docs? - Discussion - Cursor - Community Forum](https://forum.cursor.com/t/how-can-i-increase-the-indexing-depth-for-docs/77949)`
 2. **Metadata**
-   - `date-created:: [[YYYY/MM/DD]]` if available.
+   - `date-created:: [[YYYY-MM-DD Ddd]]` if available (matches the graph's journal page-title format, e.g. `[[2025-04-11 Fri]]`).
    - Author: `created-by:: [[Person/Full Name]]` for known persons, else `created-by:: [[ForumName/User/Username]]`.
    - Tags: `tags:: [[ForumName]], [[Topic]]` (only when authoring a brand-new page; never edit existing tags).
 3. **Content Sections**
-   - Original Poster: `- ## #[[Original Poster]]` (person hub or `[[ForumName/User/Username]]`).
-   - Responses: `- ## #[[Response]]`.
-   - Related Topics: `- ## #[[Related/Post]]`.
-   - My Notes: `- ## #[[My Notes]]`.
+   - Original Poster: `- ## [[Original Poster]]` (person hub or `[[ForumName/User/Username]]`).
+   - Responses: `- ## [[Response]]`.
+   - Related Topics: `- ## [[Related/Post]]`.
+   - My Notes: `- ## [[My Notes]]`.
 
 ### User References
 
@@ -49,11 +49,11 @@ Standard format for importing and structuring forum posts in Logseq (Cursor, Red
 <CORRECT_✅>
 ~~~markdown
 tags:: [[ForumName]], [[Topic]]
-date-created:: [[2025/04/11]]
+date-created:: [[2025-04-11 Fri]]
 created-by:: [[CursorAI/Forum/User/johndoe]]
 
 - # [Post Title - Forum Name](https://forum.example.com/post/123)
-  - ## #[[Original Poster]]
+  - ## [[Original Poster]]
     - [[CursorAI/Forum/User/janesmith]]
       - First point of the original post
       - Second point with a quote:
@@ -63,15 +63,15 @@ created-by:: [[CursorAI/Forum/User/johndoe]]
         def example():
             return "Hello"
         ~~~
-  - ## #[[Response]]
+  - ## [[Response]]
     - [[Person/John Smith]]  # Known person with confirmed identity
       - > Response content here
     - [[CursorAI/Forum/User/bobjohnson]]  # Username only
       - > Another response
-  - ## #[[Related/Post]]
+  - ## [[Related/Post]]
     - [Related Post 1](https://forum.example.com/post/456)
     - [Related Post 2](https://forum.example.com/post/789)
-  - ## #[[My Notes]]
+  - ## [[My Notes]]
     - Personal observations or annotations
 ~~~
 </CORRECT_✅>

@@ -16,8 +16,8 @@ Capture a forum thread as a hierarchical Logseq page.
 ## Quick path
 
 1. Title block: `- # [Post Title - Forum Name](original-url)` (include category/subreddit/question-id as relevant).
-2. Metadata: `date-created:: [[YYYY/MM/DD]]`, `created-by::` (person hub for confirmed identities, else `[[ForumName/User/Username]]`).
-3. Sections: `## #[[Original Poster]]`, `## #[[Response]]`, `## #[[Related/Post]]`, `## #[[My Notes]]`.
+2. Metadata: `date-created:: [[YYYY-MM-DD Ddd]]` (journal page-title format), `created-by::` (person hub for confirmed identities, else `[[ForumName/User/Username]]`).
+3. Sections: `## [[Original Poster]]`, `## [[Response]]`, `## [[Related/Post]]`, `## [[My Notes]]`.
 4. Apply `logseq-core` LFM rules; use `logseq-link-hygiene` before adding `[[...]]`.
 
 ## Critical
