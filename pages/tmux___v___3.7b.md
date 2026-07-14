@@ -1,0 +1,17 @@
+- [Release tmux v3.7b · tmux/tmux-builds](https://github.com/tmux/tmux-builds/releases/tag/v3.7b)
+	- [[My Notes]]
+		- I encountered some rendering errors in [[tmux/v/3.7a]].
+		- For some reason, my [[mise/Config/mise.toml/Global/Lockfile]] had pinned tmux to 3.7a, and `mise upgrade tmux` / `mise upgrade tmux --bump` both kept reporting "up to date" even after 3.7b was out — see [[mise/Config/mise.toml/Global/Lockfile]] for why.
+		- # Symptom
+			- [[yazi]] and [[Lazygit]] opened to a blank pane inside [[tmux]], but rendered immediately in a plain [[Ghostty]] window outside tmux.
+			- Entering tmux copy-mode and leaving it again made the UI suddenly appear — the frame had been drawn the whole time, tmux just never flushed it to the client.
+		- # Root cause
+			- 3.7 added tmux support for synchronized-output escape sequences (`DECSET 2026`), which yazi and lazygit use to paint a full frame atomically.
+			- 3.7a's redraw-on-end-of-sync fix was incomplete, so the pane's client redraw wasn't always triggered when the synchronized update ended — the pane just sat on stale content until something else forced a full repaint, like copy-mode.
+			- tmux's CHANGES entry "Fix so that the end of a synchronized update again triggers a redraw" appears for both 3.6b→3.7a and 3.7a→3.7b.
+		- # Why this surfaced after removing Nix
+			- tmux had been [[Nix]]-managed, pinned below 3.7, predating synchronized-output support entirely.
+			- After [[My/Dotfiles]] moved tmux to [[mise]] with `version = "latest"`, mise resolved that to 3.7a — new enough to hit this bug.
+		- # Fix
+			- Pinned tmux to `3.7b` explicitly in [[mise/Config/mise.toml/Global]] (`~/.config/mise/config.toml`), since "latest" couldn't self-heal past the stuck lockfile entry.
+			- Confirmed: yazi and lazygit render immediately inside tmux again, no copy-mode trick needed.

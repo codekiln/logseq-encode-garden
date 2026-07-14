@@ -1,0 +1,6 @@
+- The global version of [[mise/Config/mise.toml/mise.lock]], at `~/.config/mise/mise.lock`
+	- [[My Notes]]
+		- Expectation, from [[mise]]'s own docs: "once a lockfile exists, mise will keep it updated as tools are installed or upgraded" — i.e. a `version = "latest"` entry should track forward on its own.
+		- What actually happened, in [[tmux/v/3.7b]]: the lock stayed pinned to tmux 3.7a after 3.7b released. `mise upgrade tmux` and `mise upgrade tmux --bump` both reported "up to date," even though `mise latest tmux` correctly returned `3.7b`.
+		- Cause: mise's version comparator doesn't treat `3.7b` as newer than `3.7a` — tmux's alpha-suffixed release scheme (`3.7a`, `3.7b`, ...) isn't ordered the way mise's outdated/upgrade check expects, so a stuck lock entry can't self-heal even under a `latest` constraint.
+		- A `mise install tmux@3.7b` did fetch and install the new version, but left it unreferenced by any config — this repo's own `mise run tool:missing:uninstall` orphan-cleanup task later removed it, since nothing pinned it. The version only stuck once explicitly pinned in `mise.toml`/`config.toml`.
