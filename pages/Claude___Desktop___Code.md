@@ -1,1 +1,3 @@
 - This is basically [[Claude/Code]] but inside the dekstop app
+- ## Features
+	- [[Claude/Desktop/Code/Browser]] — built-in browser pane for app previews and web browsing
