@@ -1,0 +1,28 @@
+- # clilint 0.0.2 plan
+	- ## Goal
+		- Rebuild [[Person/codekiln/GitHub/clilint]] as a small Rust CLI and a framework for testing whether command-line programs follow a global standard plus user-authored preferences.
+	- ## Accepted choices
+		- The global standard and user extensions use the same package format.
+		- User packages can add or strengthen requirements without silently weakening the global standard.
+		- Built-in deterministic checks are typed Rust code rather than dynamically loaded probe files.
+		- The repository has a top-level `skills/` folder whose Agent Skills can be installed with Vercel's `skills` CLI.
+		- Version 0.0.2 includes one working AI-agent rule: judge whether help teaches a new user how to perform a likely task with a useful example.
+		- Deterministic results and AI-agent assessments remain distinguishable in reports.
+		- [[mise]] manages the Rust toolchain, project development tools, environment settings, and task execution.
+		- Project jobs are executable mise file tasks with descriptions and usage metadata; local development and CI use the same task names.
+		- OpenSpec skills are kept in `.rulesync/skills/` and generated for supported agents. An agent loads the matching skill and queries the OpenSpec CLI instructions before drafting or editing an artifact.
+		- Pull request titles follow [[git/commit/Conventional/gitmoji]] and supply the information used to calculate Semantic Versioning changes.
+		- Release-plz prepares versions, changelogs, release pull requests, and tags. Dist builds checksummed binaries and creates GitHub Releases.
+		- Release pull requests merge automatically after required checks pass. Ordinary releases require no manual version choice or workflow dispatch.
+	- ## OpenSpec changes
+		- [rebuild-rust-core](https://github.com/codekiln/clilint/tree/main/openspec/changes/rebuild-rust-core) defines the Rust CLI, conformance packages, deterministic checks, reports, and first Agent Skill assessment.
+		- [automate-semver-releases](https://github.com/codekiln/clilint/tree/main/openspec/changes/automate-semver-releases) defines pull request title validation, automatic release preparation, tagging, binary builds, and GitHub Releases.
+	- ## Questions left for implementation planning
+		- Select the 0.0.2 operating system and architecture release targets supported by dist.
+		- Decide whether selecting a local extension package requires a command-line option or can also use project configuration.
+		- Determine which assessor and model details supported coding agents can report reliably.
+	- ## Current state
+		- Both OpenSpec changes have complete proposals, requirements, designs, and task lists. Their next validation run will include the mise and OpenSpec-skill revisions.
+		- The repository now keeps the OpenSpec workflow skills in RuleSync source and has generated project-local copies for AgentSkills and Claude Code.
+		- A root `mise.toml` manages Rust, OpenSpec, and RuleSync; the implementation plan adds the lockfile and file tasks.
+		- The Python implementation remains unchanged and no version tag has been created.

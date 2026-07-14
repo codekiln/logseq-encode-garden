@@ -1,0 +1,7 @@
+- # clilint 0.0.1
+	- The historical snapshot of the first clilint draft, implemented as a Python CLI.
+	- It established the main idea: exercise a target command, compare observed behavior with a shared command-line standard, and return evidence that a person or [[AI/Agent]] can use to improve the command.
+	- The draft separated JSON rule descriptions from dynamically loaded Python probes. That made extension possible, but it left the connection between a rule and its implementation dependent on strings and filesystem layout.
+	- The repository also separated rules, probes, schemas, prompts, fixtures, integrations, source, and the written standard into top-level folders before those boundaries had proven useful.
+	- The source identified itself as 0.1.0 even though this first draft will be recorded as 0.0.1. The snapshot work will align the displayed version before creating the `v0.0.1` tag.
+	- The tag will preserve this implementation while [[Person/codekiln/GitHub/clilint/0.0.2/plan]] replaces it with the Rust design.
