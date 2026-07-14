@@ -1,0 +1,25 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Website
+	- In this garden, **Website** pages model a specific published website treated as a thing in its own right — a site notable for its design, craft, experience, or usefulness, rather than for being one person's homepage or one codebase.
+	- ## Examples in this garden
+		- [[Website/Misato Town]] — a WebGL town-rebranding microsite by [[Shiftbrain]], notable for scroll-driven keyframed animation.
+	- ## When we treat something as a website
+		- Strong signals: a live site at a stable URL, cited for its design or experience; a showcase or award entry (e.g. [[Awwwards]]); a site whose identity is the *site itself*, not merely the org or product behind it.
+		- Not this type: a single post, essay, or article → [[Logseq/Entity/Article]]. A codebase, app, or tool that happens to have a URL → [[Logseq/Entity/Software/Project]]. The organization or company behind a site → [[Logseq/Entity/Organization]] or [[Logseq/Entity/Company]]. A person's personal site, which lives as a sub-page of that person, e.g. `Person/Name/Web`.
+		- A page may model more than one entity when it genuinely qualifies (see [[Logseq/Entity]] on multiple membership) — e.g. a site that is also the primary page for its software project.
+	- ## How to name the main page for a website
+		- When the site's maker (studio, org, person) already has a namespace in the garden, use `Creator/Website/<Short Name>` so the site nests under its maker.
+		- Otherwise use `Website/<Name>` as the fallback, where `<Name>` is the site's own recognizable name, e.g. [[Website/Misato Town]].
+		- Prefer the site's own short name over its full URL or a slug; put alternate names or the native-language title in `alias::`.
+	- ## Finding and deduplicating
+		- Check in this order: `Website/<Name>`, `Creator/Website/<Name>`, aliases, the maker's namespace, and body mentions of the URL. Classify as: existing, similar, new, or blocked.
+	- ## Frontmatter
+		- `logseq-entity:: [[Logseq/Entity/Website]]` marks a page as a website instance. Additive — list comma-separated with any other entities, primary first (see [[Logseq/Entity]]).
+		- `created-by::` — link to the studio, company, or person that made the site, when tracked in the garden.
+		- `date-created::` — when the site launched or was published, not when the page was added.
+		- `via::` records how the site was discovered (e.g. [[Awwwards]]); `see-also::` links genuinely related pages such as the collection it belongs to.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- First block: H1 with a Markdown link to the site's live URL.
+		- Keep it lean: what the site is, why it is notable, the techniques or stack that matter, its maker, and any awards. Curated collections of sites are modeled by [[Logseq/Entity/Website/Collection]].
