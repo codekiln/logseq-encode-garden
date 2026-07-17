@@ -1,0 +1,4 @@
+- https://github.com/logseq/logseq/releases/tag/2.0.1
+	- First release of Logseq 2.0 Beta, the [[Logseq/DB]] database version. Version numbering jumps from the file-based 0.10.x track to 2.x for this line; the last file-based release before it was [[Logseq/v/0/10/15]].
+	- Announcement: [Logseq is splitting into two versions](https://logseq.io/p/e3YDyX5AYr)
+	- Early beta — data loss is possible, back up before testing.
