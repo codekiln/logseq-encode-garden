@@ -1,6 +1,7 @@
 date-created:: [[2025-02-22 Sat]]
 tags:: [[AI/Agent]], [[LangChain]], [[Workshop]], [[Tutorial]]
 
+- [Published page](https://codekiln.github.io/logseq-encode-garden/#/page/ai%2Fes%2F25%2Fws%2F3%2Fhow%20clay%20performs%20agent%20evaluation)
 - # [How Clay Performs Agent Evaluation](https://www.ai.engineer/summit/2025/schedule/clay-evals)
 	- meta info
 		- **Date**: February 22, 2025
