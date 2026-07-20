@@ -1,0 +1,28 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Quote
+	- In this garden, **Quote** pages model a single quotation, popped out onto a page of its own under whoever said or wrote it.
+	- ## What counts as a Quote entity (and what doesn't)
+		- A page holding exactly one quotation, named `<Source>/Quote/<Summary>`.
+		- Not a Quote entity: a page collecting several quotes from one source, or an inline `[[Quote]]` / `#Quote` tag marking a quotation inside a larger note. Both stay whatever they already are; [[Person/James Clear/Book/18/Atomic Habits/Quote/Good Easy, Bad Difficult]] predates this type and is not migrated.
+	- ## Naming and namespace
+		- `<Source>/Quote/<Summary>`, nested under whichever hub already models the source:
+			- Said by a person directly: `Person/<Name>/Quote/<Summary>`.
+			- From a book: nested under the book, which itself nests under its author per [[Logseq/Entity/Book]] — [[Person/James Clear/Book/18/Atomic Habits/Quote/Fall to our Systems]].
+			- From an event or talk: nested under that event's existing page, for example `Conference/ORCwAI/Quote/<Summary>`. This garden has no formal Event or Conference entity page yet; treat whatever hub page already exists as home until one is defined.
+		- `<Summary>` is a short Title Case paraphrase of the quote's idea, not the quote text itself.
+	- ## Frontmatter
+		- `created-by:: [[Person/Full Name]]` for whoever said or wrote the quote.
+		- `logseq-entity:: [[Logseq/Entity/Quote]]`.
+	- ## Page shape
+		- Frontmatter, then a single blockquote bullet with the quote text — no heading.
+	- ## Popping a quote out and embedding it back
+		- The source's own page carries a linked bullet to the quote page with an indented `{{embed [[...]]}}` child, matching the Quotes section on [[Person/James Clear/Book/18/Atomic Habits]].
+	- ## Finding and deduplicating
+		- Search in order: exact page name; distinctive phrase substring across existing quote pages; `created-by::` backlinks.
+		- Classify as existing, similar, new, or blocked.
+	- ## Relationship to other types
+		- [[Logseq/Entity/Person]], [[Logseq/Entity/Book]] — common sources; the quote nests under whichever of these already models the source.
+		- Inline `[[Quote]]` / `#Quote` tags remain a separate, lighter convention for marking a quotation inside another page; this entity is for a quote popped out on its own.
+	- ## Examples in this garden
+		- [[Person/James Clear/Book/18/Atomic Habits/Quote/Fall to our Systems]]

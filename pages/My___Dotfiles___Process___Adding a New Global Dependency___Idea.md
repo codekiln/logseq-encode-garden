@@ -3,13 +3,14 @@ tags:: [[Idea]]
 - # Refining the Process of Adding Dependencies to my Dotfiles with Agent Skills
 	- ## Current vision
 		- ### The goal
-			- Bring rigor to how I garden my technologies. For each part of my global setup, have a written answer to what it is, why it is installed, and whether it is reliable — secure, dependable, and consistent with my [[My/Principle]]s — and surface the parts that are not. This applies to tools already installed as much as to new ones. Adding something new should be rigorous but low-friction; it is never blocked.
+			- As part of my effort to be guided by documented principles, for each thing configured in [[My/Dotfiles]], I want myself to have documented what each tool or configuration option, why it's necessary, and some analysis of that dependency's security and consistency with [[My/Principle]]s.
+			- I want a process that surface the parts that are not. This applies to tools already installed as much as to new ones. Adding something new should be rigorous but low-friction; it is never blocked.
 		- ### Two loops
 			- Inner loop — the dotfiles [[OpenSpec]]. Concrete if / when / then requirements for how chezmoi, mise, LazyVim, and the rest are configured. It can be regenerated from its specs.
 			- Outer loop — a garden-side system of [[Agent/Skills]] whose specification is my [[My/Principle]]s, [[My/Pref]]s, and articulated ideas, and whose target is the dotfiles. It is the why and whether; the inner loop is the how.
 			- The two meet at eventual consistency, one tool at a time. A tool can be installed and only partly gardened; the outer loop surfaces that gap and closes it over time — lazily for what is already installed, with more scrutiny for new additions.
-		- ### The guiding principle
-			- [[My/Principle/Make the Right Thing Easy and the Wrong Thing Hard]]. The skills make the rigorous path the low-friction one, so the aim is not to slow adoption but to make the disciplined route the easy route. An undocumented, unvetted install is what should meet friction. The corollary fits the model: demos are easy, production earns quality control — a cheap idea versus a vetted adoption.
+		- ### [[My/Principle/Make the Right Thing Easy and the Wrong Thing Hard]]
+			- The skills make the rigorous path the low-friction one, so the aim is not to slow adoption but to make the disciplined route the easy route. An undocumented, unvetted install is what should meet friction. The corollary fits the model: demos are easy, production earns quality control — a cheap idea versus a vetted adoption.
 		- ### Two entities, not three tiers
 			- [[Logseq/Entity/Dotfiles/Dep/Idea]] — an idea: a job to be done for the toolchain, keyed to the job rather than a tool, for example [[Terminal/Multiplexer/Idea]]. Cheap to record, no status property, progress shown by the notes present. It works forward — jot an idea, later adopt a tool — and backward — write the idea behind an already-installed tool.
 			- [[Logseq/Entity/Dotfiles/Dep]] — the tool that fills an idea, usually also a [[Logseq/Entity/Software/Project]], carrying its own adoption status (candidate, adopted, retired).

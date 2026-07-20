@@ -1,24 +1,15 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
 
 - # Book
-	- In this garden, **Book** pages model published works tracked as first-class pages under `Book/Title`.
-	- ## What counts as a book entity (instance)
-		- A page whose Logseq title is **`Book/<short title>`** — disk file `Book___<short title>.md` where `<short title>` is the stable shelf label (often the cover title; subtitle after a colon is fine when that is how the work is cited).
-		- **Not** book entities: reading notes, chapter logs, or imports living under **`Person/.../Book/...`** or other namespaces—those stay whatever type they are; link them to a **`Book/...`** hub when the underlying work should be indexed as a book.
-	- ## Naming and links
-		- Default page: [[Book/Title]] — disk `Book___Title.md`.
-		- Prefer the **title people search for** over publishing metadata in the page name; use `alias::` for cover variants, acronyms, or older paths.
-	- ## Finding and deduplicating
-		- Search in order: exact `Book___*.md` title; `alias::` match; normalized title words in `pages/Book___*.md`; author + distinctive phrase in body text. Classify: existing, similar, new, or blocked.
-		- **One page per distinct edition family** unless translations or major revisions intentionally need separate pages; when in doubt, keep one hub and describe variants in the body.
-	- ## Relationship to author **person** hubs
-		- When the author is clear, set **`created-by:: [[Person/Full Name]]`** in frontmatter and ensure that **person** hub exists (or create it first). Multiple authors: pick the primary credited author for `created-by::` and name co-authors in the body—or omit `created-by::` until the split is decided.
+	- **Book** pages are published works. They are usually tracked under `Person/<name>/Book/YY/<short title>`. They may be at `Book/YY/<short title>` if there are five or more sub-pages to the namespace or if the book has more than one author.
 	- ## Frontmatter on book pages
-		- Mark instances with **`logseq-entity:: [[Logseq/Entity/Book]]`** so this type page collects backlinks to every book entity.
-		- Book-specific frontmatter can include `created-by::` when the author entity is clear.
-		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+		- Standard [[Logseq/Frontmatter]] rules
+			- Mark instances with **`logseq-entity:: [[Logseq/Entity/Book]]`** so this type page collects backlinks to every book entity.
+			- When the author is clear, set **`created-by:: [[Person/Full Name]], [[Person/Full Name 2]]`** in frontmatter and ensure that person entity is in the garden.
 	- ## Page shape
-		- LFM; lean hub: H1 with the book’s title, **About**, optional **Editions / notes**, **Links** (publisher, Wikipedia, author).
+		- H1 with the book’s title, linking to the book
+		- **About**, optional [[My Notes]],  **Links** (publisher, Wikipedia, author).
 	- ## Examples in this garden
-		- [[Book/Gödel, Escher, Bach: an Eternal Golden Braid]]
-		- [[Book/Synergetics: Explorations in the Geometry of Thinking]]
+		- [[Person/Douglas Hofstadter/Book/79/Gödel, Escher, Bach]]
+		- [[Person/Buckminster Fuller/Book/75/Synergetics]]
+		- [[Person/James Clear/Book/18/Atomic Habits]]

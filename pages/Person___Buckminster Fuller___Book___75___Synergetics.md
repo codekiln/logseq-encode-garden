@@ -1,6 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Book]]
 created-by:: [[Person/Buckminster Fuller]]
 date-created:: [[1975]]
+
 - # Synergetics: Explorations in the Geometry of Thinking
 	- ## About
 		- Two-volume work presenting Fuller's **synergetics** as an empirical-philosophical geometry of thinking in terms of closest packing, tensegrity, and whole-system patterns.

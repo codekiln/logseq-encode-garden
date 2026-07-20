@@ -1,15 +1,16 @@
 alias:: [[Quine (computing)]]
 tags:: [[Diataxis/Concept]]
 logseq-entity:: [[Logseq/Entity/Concept]]
-see-also:: [[Book/Gödel, Escher, Bach: an Eternal Golden Braid]], [[Person/Joe Armstrong/Blog]]
+see-also:: [[Person/Douglas Hofstadter/Book/79/Gödel, Escher, Bach]], [[Person/Joe Armstrong/Blog]]
 via:: [[Person/Joe Armstrong]]
+
 - # Quine
 	- ## Overview
 		- A quine is a program that takes no input and prints its own source code as its only output.
 		- The idea matters because it turns self-reference into something executable: the program is both the description and the thing being described.
 	- ## Context
 		- Quines are usually treated as exploratory or recreational programs rather than production techniques, but they are a sharp way to think about self-reference, interpretation, and fixed points in programming languages.
-		- The term is associated with [[Book/Gödel, Escher, Bach: an Eternal Golden Braid]] and the broader tradition of indirect self-reference.
+		- The term is associated with [[Person/Douglas Hofstadter/Book/79/Gödel, Escher, Bach]] and the broader tradition of indirect self-reference.
 		- [[Person/Douglas Hofstadter]] [[Quote]]
 			- > The name "quine" was coined by Douglas Hofstadter, in his popular 1979 science book Gödel, Escher, Bach, in honor of philosopher Willard Van Orman Quine (1908-2000), who made an extensive study of indirect self-reference, and in particular for the following paradox-producing expression, known as Quine's paradox:
 			- > "Yields falsehood when preceded by its quotation" yields falsehood when preceded by its quotation.
