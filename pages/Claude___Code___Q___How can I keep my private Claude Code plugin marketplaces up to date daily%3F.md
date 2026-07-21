@@ -1,0 +1,16 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+see-also:: [[Claude Code/Plugin/Marketplace]]
+
+- # How can I keep my private [[Claude Code/Plugin/Marketplace]]s up to date daily?
+	- ## [[AI Answer]]
+		- [[Answer/Official]] from [Create and distribute a plugin marketplace - Claude Code Docs](https://code.claude.com/docs/en/plugin-marketplaces)
+			- **Short answer:** run `claude plugin marketplace update` yourself on a schedule (e.g. a daily cron job or launchd task) rather than relying on Claude Code's built-in auto-update — for a private marketplace, auto-update is both off by default and unreliable over HTTPS, while a manual/scripted `update` uses your normal git credentials the same as your terminal.
+			- **Manual/scripted update command:** `claude plugin marketplace update [name]` — omitting `[name]` updates all registered marketplaces in one call, which is what a daily cron entry would typically run.
+			- **Why the built-in auto-update doesn't already give you "daily":**
+				- It's **off by default** for exactly this case: official Anthropic marketplaces have auto-update enabled by default, but third-party and local/private marketplaces have it disabled by default. Enable it per marketplace via `/plugin` → **Marketplaces** → select the marketplace → **Enable auto-update**, or for a team set `"autoUpdate": true` on that marketplace's `extraKnownMarketplaces` entry in managed settings.
+				- Even enabled, it isn't a standalone daily timer — it's a background check that runs after a Claude Code session starts (with a random delay of up to ten minutes), so a marketplace only gets checked on days you actually launch a session, and updates apply on `/reload-plugins` or your next launch.
+			- **Private-repository credential caveat that a naive cron job can also hit:**
+				- Manual/scripted `claude plugin marketplace update` reuses your existing git credential helpers, so HTTPS via `gh auth login`/Keychain/`git-credential-store`, or SSH via a key loaded in `ssh-agent`, works the same as a normal `git pull` in your terminal.
+				- Background auto-update is more fragile: by default it disables git credential helpers for its `git pull`, so private HTTPS remotes can't authenticate even with a helper configured; SSH remotes with `ssh-agent` are unaffected. A failed background pull falls back to a full re-clone (which does use stored credentials but can time out on large repos), so private-marketplace auto-updates "may fail intermittently."
+				- To make a scheduled/background update reliable for a private HTTPS marketplace: configure a git URL rewrite scoped to that marketplace's repo or org with an embedded token (so the pull authenticates directly and skips the re-clone path), and/or set `CLAUDE_CODE_PLUGIN_KEEP_MARKETPLACE_ON_FAILURE=1` so a failed pull keeps the last-synced clone instead of deleting it. In CI/cron contexts, `gh auth setup-git` (or an equivalent credential helper) makes the fallback re-clone work unattended too.
+			- **Recommended daily setup:** a cron/launchd job that runs `claude plugin marketplace update` once a day (or per-marketplace with `[name]` if you want to script it against a curated list) sidesteps both limitations above — it isn't gated on starting a session, and it authenticates like a normal terminal `git pull` rather than the more restricted background-refresh path.
