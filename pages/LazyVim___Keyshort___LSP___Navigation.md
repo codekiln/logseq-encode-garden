@@ -1,0 +1,27 @@
+- [[Keyshort]] [[LazyVim]] [[LazyVim/Keyshort]] [[LazyVim/Keyshort/LSP]]
+	- **Go to Definition** [[Card]]
+		- Shortcut: `gd`
+		- Description: Jumps to where the symbol under the cursor is defined. Provided by the attached [[LSP]] (e.g. [[Pyright]]/[[basedpyright]] for [[Python]]).
+	- **Go to Declaration** [[Card]]
+		- Shortcut: `gD`
+		- Description: Jumps to the symbol's declaration.
+	- **Go to Implementation** [[Card]]
+		- Shortcut: `gI`
+		- Description: Jumps to the symbol's implementation.
+	- **Go to References** [[Card]]
+		- Shortcut: `gr`
+		- Description: Lists references to the symbol under the cursor.
+	- **Hover Documentation** [[Card]]
+		- Shortcut: `K`
+		- Description: Shows hover documentation for the symbol under the cursor.
+	- **Rename Symbol** [[Card]]
+		- Shortcut: `<leader>cr`
+		- Description: Renames the symbol under the cursor across the project.
+	- [[My Note]]
+		- These keymaps are [[LSP]]-dependent — `gd` only resolves when a language server is attached. If `gd` does nothing:
+			- 1. Check attached clients with `:LspInfo`.
+			- 2. Confirm the server is installed via `:Mason` (e.g. `pyright` or `basedpyright`).
+			- 3. Open Neovim from the project root (`nvim .`) so the LSP starts — a single file outside a project may not attach one.
+			- 4. Verify the symbol actually has a definition the LSP can resolve.
+			- 5. Deeper diagnosis: `:checkhealth vim.lsp`.
+		- For fuzzy navigation instead of jumping directly, LazyVim also offers Telescope/Snacks pickers — `gr` for references and `<leader>ss` / `<leader>s*` for workspace symbol search (varies by LazyVim version).
