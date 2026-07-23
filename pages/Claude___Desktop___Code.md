@@ -1,3 +1,4 @@
 - This is basically [[Claude/Code]] but inside the dekstop app
 - ## Features
 	- [[Claude/Desktop/Code/Browser]] — built-in browser pane for app previews and web browsing
+	- **Environment variables** — click the **Local** badge (bottom of a session, next to the repo/branch/worktree indicators) to open **Update local environment**: a `.env`-format textarea of variables stored securely and passed to Claude sessions in that repo

@@ -3,3 +3,4 @@
 - **Capabilities (Settings):** [[Claude/Desktop/Capability/AI-powered artifacts]] — toggle under **Artifacts** on the Capabilities tab; builds hosted mini-apps that call Claude inside the artifact panel.
 - **Connectors:** [[Claude/Desktop/Connector]] — remote integrations (directory + custom MCP) and in-chat **+** → **Connectors** tool toggles; includes cloud services and local tools installed as extensions.
 - **Extensions (Settings):** [[Claude/Desktop/Extension]] — local [[MCP]] servers as one-click **`.mcpb`** packages; connect Claude to desktop apps, files, and tools on the machine.
+- **General (Settings):** **Keep computer awake** — prevents the machine from idle-sleeping while the app is open (display can still turn off; closing the laptop lid still sleeps it), so [[Claude/Desktop/Scheduled Task]] runs aren't skipped. [Schedule recurring tasks in Claude Code Desktop](https://code.claude.com/docs/en/desktop-scheduled-tasks)

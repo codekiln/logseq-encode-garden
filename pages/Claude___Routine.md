@@ -1,9 +1,12 @@
 tags:: [[Claude/Code]], [[Diataxis/Explanation]], [[AI/Automation]]
 alias:: [[Claude Routines]]
-see-also:: [[Claude/Code]], [[Claude/Code/Subagent]], [[Claude/Code/Skill]]
+see-also:: [[Claude/Code/Q/What is the difference between the schedule command in Claude Code CLI and Routines in Claude Desktop's Code tab?]], [[Claude/Code]], [[Claude/Code/Subagent]], [[Claude/Code/Skill]]
 title:: Claude/Routine
 
 - # [Automate work with routines (Claude Code)](https://code.claude.com/docs/en/routines)
+	- ## [[My Notes]]
+		- The table at XXX is a good overview of the options
+		- [[Claude/Desktop/Scheduled Task]]
 	- ## Overview
 		- **Routines** are saved **Claude Code** configurations—prompt, repositories, cloud environment, and connectors—packaged to run **unattended** on **Anthropic-managed cloud infrastructure** (Claude Code on the web).
 		- A routine is a **template for repeated agent work**: define what Claude should do once, then start runs on a **schedule**, via **HTTP API**, or from **GitHub** repository events.
