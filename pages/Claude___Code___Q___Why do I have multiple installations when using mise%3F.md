@@ -1,9 +1,6 @@
 tags:: [[Claude/Code]], [[mise]], [[Q]]
-alias:: [[Claude/Code/Q/Why do I have multiple installations when using mise]]
 logseq-entity:: [[Logseq/Entity/Question]]
-see-also:: [[mise/Task]], [[dotfiles]]
 date-created:: [[2026/06/02]]
-title:: Claude/Code/Q/Why do I have multiple installations when using mise?
 
 - # Why does Claude Code warn about multiple installations when managed via mise?
 	- ## Symptom
