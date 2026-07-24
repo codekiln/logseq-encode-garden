@@ -1,0 +1,25 @@
+# My Dev AI OpenSpec Preferences
+	- see [[OpenSpec]] for what the tool is; this page covers how I want changes authored
+	- ## Self-review drafts against my writing and AI rules before asking me to review
+		- AI drafting an OpenSpec change usually doesn't apply [[My/AI/Rule]] or [[My/Pref/Writing]] (and their subpages!) on its own
+		- add an explicit review phase after drafting proposal/design/tasks: check the draft against those rules, revise, and only then hand it to me for review
+		- goal: OpenSpec documents should read as well-written on first read, not need a request for a rewrite pass from me
+	- ## Format design questions as numbered Resolved/Open sections
+		- `design.md` ends with two sections: `## Resolved Questions` and `## Open Questions`
+		- each question is its own numbered heading: `### N - <question text>`
+		- a resolved question is followed by its answer as prose
+		- an open question is followed by an `<ANSWER_HERE>` placeholder for me to fill in
+	- ## Put experimental prototypes in an `experiments/` folder
+		- when a change warrants a throwaway or comparative prototype, put it in an `experiments/` folder inside the change directory
+		- it archives with the rest of the proposal when the change is archived — no separate cleanup step
+	- ## Non-goals are real, reasonable goals deferred, not straw men
+		- every `Non-Goals` entry in `design.md` should be a goal I'd actually consider — something a future change could reasonably take on, not a nonsense thing nobody proposed
+		- state each one in the positive, as the goal itself, not as "does not do X"
+		- the purpose of the section is to fence off scope creep, not to pad the list
+	- ## Cite influencing `My` preferences and principles in `proposal.md` as GitHub links, not wikilinks
+		- `proposal.md` ends with a `## Citations` heading listing the `My` namespace preferences and principles that shaped the proposal
+		- these must be plain links to the `main` branch of [[Logseq/Encode/Garden]] on GitHub, not `[[wikilinks]]` — a wikilink only resolves inside this graph, and the change may live in a project that doesn't have it
+		- build the URL from the page name: join namespace segments with `___`, URL-encode spaces as `%20`, and add `.md` under `pages/`
+		- example: `My/Principle/CLI/Centricity/Offline Tools` becomes `https://github.com/codekiln/logseq-encode-garden/blob/main/pages/My___Principle___CLI___Centricity___Offline%20Tools.md`
+		- link text is the logical page name (`My/Principle/CLI/Centricity/Offline Tools`), not the raw URL
+		- a `README.md` in that folder should say what each prototype is for and how to run it
