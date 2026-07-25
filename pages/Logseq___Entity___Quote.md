@@ -6,10 +6,11 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- A page holding exactly one quotation, named `<Source>/Quote/<Summary>`.
 		- Not a Quote entity: a page collecting several quotes from one source, or an inline `[[Quote]]` / `#Quote` tag marking a quotation inside a larger note. Both stay whatever they already are; [[Person/James Clear/Book/18/Atomic Habits/Quote/Good Easy, Bad Difficult]] predates this type and is not migrated.
 	- ## Naming and namespace
-		- `<Source>/Quote/<Summary>`, nested under whichever hub already models the source:
-			- Said by a person directly: `Person/<Name>/Quote/<Summary>`.
+		- `<Source>/Quote/<Summary>`, nested under the most specific page that already models where the quote appeared. `created-by::` records who said or wrote it, which can differ from whoever owns that namespace.
 			- From a book: nested under the book, which itself nests under its author per [[Logseq/Entity/Book]] — [[Person/James Clear/Book/18/Atomic Habits/Quote/Fall to our Systems]].
+			- From a podcast episode: nested under the episode page, even when a guest is speaking — [[Person/Gergely Orosz/Podcast/26/01/The Creator of Clawd I Ship Code I Dont Read/Quote/Prompts Are Higher Signal Than Code]] carries `created-by:: [[Person/Peter Steinberger]]` under the host's episode namespace.
 			- From an event or talk: nested under that event's existing page, for example `Conference/ORCwAI/Quote/<Summary>`. This garden has no formal Event or Conference entity page yet; treat whatever hub page already exists as home until one is defined.
+			- Said by a person with no more specific source page (a tweet, an offhand remark): `Person/<Name>/Quote/<Summary>`.
 		- `<Summary>` is a short Title Case paraphrase of the quote's idea, not the quote text itself.
 	- ## Frontmatter
 		- `created-by:: [[Person/Full Name]]` for whoever said or wrote the quote.
