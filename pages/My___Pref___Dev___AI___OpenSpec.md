@@ -12,14 +12,22 @@
 	- ## Put experimental prototypes in an `experiments/` folder
 		- when a change warrants a throwaway or comparative prototype, put it in an `experiments/` folder inside the change directory
 		- it archives with the rest of the proposal when the change is archived — no separate cleanup step
+		- each individual experiment gets its own named subfolder under `experiments/` (e.g. `experiments/hierarchical-help-sample-cli/`), not loose files directly in `experiments/`
+		- a `README.md` in that subfolder should say what the prototype is for and how to run it
+	- ## Allow an optional `references/` folder for outside inspiration
+		- a change can have a `references/` folder holding markdown notes on other CLIs or projects that inspired the design
+		- one file per source, documenting the samples or behavior from that project that influenced this change
+		- optional — only add it when an outside example actually shaped a decision
+	- ## Keep `Resolved Questions` an append-only log; keep `Decisions` current
+		- `Decisions` holds the current state of the design as living prose — rewrite it as understanding changes
+		- `Resolved Questions` is a transcript of the dialog that produced those decisions — append new questions with the next number, never renumber or reorder past ones
 	- ## Non-goals are real, reasonable goals deferred, not straw men
-		- every `Non-Goals` entry in `design.md` should be a goal I'd actually consider — something a future change could reasonably take on, not a nonsense thing nobody proposed
-		- state each one in the positive, as the goal itself, not as "does not do X"
-		- the purpose of the section is to fence off scope creep, not to pad the list
+		- the purpose of the section is to help me identify my opportunities for distraction and fence off scope creep at this point, not to pad the list. follow [[My/Principle/Simplify]] and omit items that are unnecessary. If there are no non-goals, just put "none."
+		- every `Non-Goals` entry in `design.md` should be a goal I'd actually consider as a competing priority at this time. it should not be just "something to not do." See also [[My/AI/Rule/Prune useless commandments]]
+		- follow [[My/AI/Rule/State the Positive]]: state each one in the positive, as the goal itself, not as "does not do X" which would introduce a double negative; see also [[My/Pref/Writing/Avoid double negatives]]
 	- ## Cite influencing `My` preferences and principles in `proposal.md` as GitHub links, not wikilinks
 		- `proposal.md` ends with a `## Citations` heading listing the `My` namespace preferences and principles that shaped the proposal
 		- these must be plain links to the `main` branch of [[Logseq/Encode/Garden]] on GitHub, not `[[wikilinks]]` — a wikilink only resolves inside this graph, and the change may live in a project that doesn't have it
 		- build the URL from the page name: join namespace segments with `___`, URL-encode spaces as `%20`, and add `.md` under `pages/`
 		- example: `My/Principle/CLI/Centricity/Offline Tools` becomes `https://github.com/codekiln/logseq-encode-garden/blob/main/pages/My___Principle___CLI___Centricity___Offline%20Tools.md`
 		- link text is the logical page name (`My/Principle/CLI/Centricity/Offline Tools`), not the raw URL
-		- a `README.md` in that folder should say what each prototype is for and how to run it
