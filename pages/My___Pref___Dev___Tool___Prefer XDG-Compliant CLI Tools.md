@@ -1,0 +1,3 @@
+- # Prefer XDG-Compliant CLI Tools
+	- Prefer a [[CLI/Tool]] that follows the [[XDG]] base directory spec: config under `XDG_CONFIG_HOME`, data under `XDG_DATA_HOME`, cache under `XDG_CACHE_HOME`, rather than scattering dotfiles directly in `$HOME`.
+	- A tool that ignores XDG isn't disqualified on its own — this is a preference, not an absolute — but XDG compliance is a point in its favor when comparing otherwise-similar tools.

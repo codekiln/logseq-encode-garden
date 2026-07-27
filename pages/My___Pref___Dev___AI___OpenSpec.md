@@ -9,6 +9,12 @@
 		- each question is its own numbered heading: `### N - <question text>`
 		- a resolved question is followed by its answer as prose
 		- an open question is followed by an `<ANSWER_HERE>` placeholder for me to fill in
+	- ## Put agent-supplied context for an open question in a blockquote
+		- background the drafting agent adds to help me answer goes in a blockquote directly under the question heading, opening with a line like `> Context from the drafting agent, for question N.`
+		- the `<ANSWER_HERE>` placeholder sits on its own line outside the blockquote
+		- everything outside the blockquote is mine; without the marker, agent prose sits in the same position my answer would and I can't tell where it stops
+		- on resolution, drop the blockquote and replace the placeholder with the answer, so `Resolved Questions` keeps the plain question-then-prose shape
+		- the rule is mechanically checkable: every open question has exactly one `<ANSWER_HERE>` and no unquoted prose above it
 	- ## Put experimental prototypes in an `experiments/` folder
 		- when a change warrants a throwaway or comparative prototype, put it in an `experiments/` folder inside the change directory
 		- it archives with the rest of the proposal when the change is archived — no separate cleanup step
