@@ -1,7 +1,7 @@
 tags:: [[Claude/Desktop]], [[Claude/Code]], [[Q]]
 logseq-entity:: [[Logseq/Entity/Question]]
 title:: Claude/Desktop/Scheduled Task/Q/Is there a way to define a Claude Desktop scheduled task inside a repository's .claude directory so it's scoped to that repo and runs by default on any computer opening it?
-see-also:: [[Claude/Desktop/Scheduled Task]]
+see-also:: [[Claude/Desktop/Scheduled Task]], [[Claude/Desktop/Scheduled Task/Q/Is there a declarative, programmatic way to manage Claude Desktop scheduled tasks that's scoped to a specific repo?]]
 
 - # Is there a way to define a [[Claude/Desktop/Scheduled Task]] inside a repository's `.claude` directory so it's scoped to that repo and runs by default on any computer opening it?
 	- ## [[AI Answer]]
@@ -13,6 +13,7 @@ see-also:: [[Claude/Desktop/Scheduled Task]]
 		- **Net effect**: a scheduled task's identity (name, folder, schedule, model, permission mode) is registration state private to one Desktop installation. Nothing about it is discovered from repo contents, so opening the same repo on a second computer doesn't cause its scheduled tasks to reappear — each machine needs its own **New routine → Local** setup (UI or natural-language) pointed at that folder.
 		- **Closest available workaround:** keep the *prompt content* itself in the repo — e.g. as a `.claude/skills/<name>/SKILL.md` or a plain instructions file — and make each machine's task Instructions field just reference it (e.g. "follow the workflow in `.claude/skills/daily-review/SKILL.md`"). That keeps the task's behavior version-controlled and consistent across machines, but the task's existence, folder binding, and schedule still have to be created once per machine through Desktop.
 	- ## Symlink workflow
+		- Where a session has the `scheduled-tasks` MCP tools available, [[Claude/Desktop/Scheduled Task/Q/Is there a declarative, programmatic way to manage Claude Desktop scheduled tasks that's scoped to a specific repo?]] covers a cleaner, officially-supported alternative to the symlink approach below.
 		- A symlink can go further than the reference-workaround above: instead of the Instructions field merely *pointing at* a repo file, `~/.claude/scheduled-tasks/<task-name>/SKILL.md` itself becomes a symlink into the repo, so editing the repo file changes the live task with no copy step.
 		- 1. Commit the canonical prompt in the repo, e.g. `.claude/scheduled-tasks/<task-name>/SKILL.md`.
 		- 2. On each machine, create the task once through Desktop's normal **New routine → Local** flow — this step is unavoidable, since schedule, folder, model, and enabled state are local app state, not file content.
