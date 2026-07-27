@@ -1,0 +1,3 @@
+see-also:: [[My/Principle/Dispel Ambiguity]]
+
+- Similar to [[Py/Zen of Python/Quote/Hard to Explain Means Bad Idea]], when naming things, try to pick names that make it obvious what you mean. If you've named something in such a way that it might not be obvious what you mean, consider another word. Pick words that ring like crystal for how clearly they convey the idea and oppose the things that the idea is not.

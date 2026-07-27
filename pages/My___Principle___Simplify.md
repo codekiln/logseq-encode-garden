@@ -1,2 +1,3 @@
+- have some empathy for those with low cognitive threshold for complexity by omitting things that have little value or have a low signal to noise ratio.
 - follow [[Book/The Laws of Simplicity]]
 - follow [[Person/Elon Musk/First-Principles Framework/2 - Delete]] and then [[Person/Elon Musk/First-Principles Framework/3 - Simplify]]

@@ -1,4 +1,4 @@
-see-also:: [[My/Principle/Explicit is better than Implicit]], [[My/Principle/Favor Readers Over Writers]], [[My/Principle/Make Illegal States Unrepresentable]], [[EARS]]
+see-also:: [[My/Principle/Explicit is better than Implicit]], [[My/Principle/Favor Readers Over Writers]], [[My/Principle/Make Illegal States Unrepresentable]], [[EARS]], [[My/Principle/Make it Obvious]]
 
 - # what it means
 	- leave the reader, user, or caller with exactly one available interpretation

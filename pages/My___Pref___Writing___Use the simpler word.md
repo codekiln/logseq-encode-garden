@@ -1,3 +1,5 @@
 - Eschew obfuscation. Don't use sesquipedalian vocabulary when a simple word exists.
 - Beware the curse of words that sound "smart" or that are too specific. You could say "invariant" but you might as well say "something that doesn't change."
+- When picking a term, ask yourself, "does this make me sound Highfalutin?" if the answer is yes, try harder to find a plainer way to say it. see also [[My/Pref/Writing/Use Plain language]].
 - Avoid [[Distractor]]s. Don't use a fancy, flowery word like [[Prose]] when you just mean text in a file.
+- Similar to avoiding distractors, when identifying a word or a term, actively think about how to [[My/Principle/Dispel Ambiguity]]. Propose a candidate term, ask how it might produce confusion, then work around it.

@@ -1,0 +1,1 @@
+- When writing on my behalf, agents should follow [[My/AI/Rule]] and sub-namespaces as well as [[My/Pref/Writing]] and sub-namespaces
