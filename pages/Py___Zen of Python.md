@@ -1,25 +1,34 @@
-- # Zen of Python
+# Zen of Python
 	- Nineteen guiding aphorisms for writing [[Py]], by Tim Peters. Recorded as [PEP 20](https://peps.python.org/pep-0020/) and printed by running `import this`.
 	- ## Aphorisms
-		- > Beautiful is better than ugly.
-		- > Explicit is better than implicit.
-		- > Simple is better than complex.
-		- > Complex is better than complicated.
-		- > Flat is better than nested.
-		- > Sparse is better than dense.
-		- > Readability counts.
-		- > Special cases aren't special enough to break the rules.
-		- > Although practicality beats purity.
-		- > Errors should never pass silently.
-		- > Unless explicitly silenced.
-		- > In the face of ambiguity, refuse the temptation to guess.
-		- > There should be one-- and preferably only one --obvious way to do it.
-		- > Although that way may not be obvious at first unless you're Dutch.
-		- > Now is better than never.
-		- > Although never is often better than *right* now.
-		- > If the implementation is hard to explain, it's a bad idea.
-		- > If the implementation is easy to explain, it may be a good idea.
-		- > Namespaces are one honking great idea -- let's do more of those!
+		- [[Py/Zen of Python/Quote/Beautiful Beats Ugly]]
+			- {{embed [[Py/Zen of Python/Quote/Beautiful Beats Ugly]]}}
+		- [[Py/Zen of Python/Quote/Explicit Beats Implicit]]
+			- {{embed [[Py/Zen of Python/Quote/Explicit Beats Implicit]]}}
+		- [[Py/Zen of Python/Quote/Simple Beats Complex]]
+			- {{embed [[Py/Zen of Python/Quote/Simple Beats Complex]]}}
+		- [[Py/Zen of Python/Quote/Complex Beats Complicated]]
+			- {{embed [[Py/Zen of Python/Quote/Complex Beats Complicated]]}}
+		- [[Py/Zen of Python/Quote/Flat Beats Nested]]
+			- {{embed [[Py/Zen of Python/Quote/Flat Beats Nested]]}}
+		- [[Py/Zen of Python/Quote/Sparse Beats Dense]]
+			- {{embed [[Py/Zen of Python/Quote/Sparse Beats Dense]]}}
+		- [[Py/Zen of Python/Quote/Readability Counts]]
+			- {{embed [[Py/Zen of Python/Quote/Readability Counts]]}}
+		- [[Py/Zen of Python/Quote/Special Cases Do Not Break the Rules]]
+			- {{embed [[Py/Zen of Python/Quote/Special Cases Do Not Break the Rules]]}}
+		- [[Py/Zen of Python/Quote/Errors Should Never Pass Silently]]
+			- {{embed [[Py/Zen of Python/Quote/Errors Should Never Pass Silently]]}}
+		- [[Py/Zen of Python/Quote/Refuse to Guess in Ambiguity]]
+			- {{embed [[Py/Zen of Python/Quote/Refuse to Guess in Ambiguity]]}}
+		- [[Py/Zen of Python/Quote/One Obvious Way to Do It]]
+			- {{embed [[Py/Zen of Python/Quote/One Obvious Way to Do It]]}}
+		- [[Py/Zen of Python/Quote/Now Beats Never]]
+			- {{embed [[Py/Zen of Python/Quote/Now Beats Never]]}}
+		- [[Py/Zen of Python/Quote/Hard to Explain Means Bad Idea]]
+			- {{embed [[Py/Zen of Python/Quote/Hard to Explain Means Bad Idea]]}}
+		- [[Py/Zen of Python/Quote/Namespaces Are a Honking Great Idea]]
+			- {{embed [[Py/Zen of Python/Quote/Namespaces Are a Honking Great Idea]]}}
 	- ## In this garden
 		- [[My/Principle/Explicit is better than Implicit]] takes its name from the second aphorism.
 		- "There should be one-- and preferably only one --obvious way to do it" is the reason to write links one way — `[[double bracket]]` — rather than mixing in `#tag` links. One link syntax also keeps pages portable to [[Looksyk]], which imports `[[...]]` links but not `#tag`.
