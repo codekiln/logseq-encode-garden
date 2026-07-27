@@ -1,0 +1,64 @@
+logseq-entity:: [[Logseq/Entity/Concept]]
+see-also:: [[PiAI/Extension]], [[PiAI/Extension/Architecture]]
+
+- # Pi Extension Philosophy
+	- ## Overview
+		- The design commitments behind [[PiAI]]'s extension system, separated from the mechanics on [[PiAI/Extension/Architecture]]. Several of them cut against conventional plugin-system advice, so each is stated with the tension it creates rather than as a slogan.
+	- ## The agent is the intended extension author
+		- The first line of the extension documentation reads "pi can create extensions. Ask it to build one for your use case."
+		- This inverts the usual audience assumption. An API written for humans optimizes for a small, memorable, stable surface; an API written for an agent that can read the whole type definition file optimizes for **coverage and legibility** instead.
+		- It explains three otherwise-odd properties: a surface of roughly 35 events and dozens of methods, documentation running to nearly 3000 lines, and an examples directory of over 60 working extensions.
+		- The documentation also carries instructions aimed at the model rather than the reader — for instance, a warning that prompt-guideline bullets must name their own tool, because a flat list gives the model no antecedent for the phrase "this tool".
+		- The examples directory functions as part of the API. Sixty small, single-purpose, readable extensions specify the surface more effectively than an interface plus a tutorial.
+	- ## Expose seams rather than invent abstractions
+		- Every event corresponds to a real call site: an agent-loop step, a provider transport hook, a tool-execution boundary, a session-tree operation. The internals were named and published, not wrapped.
+		- The benefit is that an extension can do essentially anything the host can, including replacing built-in tools by re-registering their names, rewriting the provider payload, and filtering message history.
+		- The cost is coupling: refactoring the agent loop is an API break. That cost is accepted explicitly.
+		- The embedded judgment is that for a tool whose value is adaptability, completeness beats stability.
+	- ## Capability rather than configuration
+		- There is no manifest of declared capabilities, no permission list, no `contributes` block. An extension is code, and it declares intent by calling methods.
+		- VS Code needs a manifest because it activates plugins lazily and builds menus without executing plugin code. Pi has no lazy activation, so it neither needs the manifest nor pays the cost of keeping one synchronized with the code.
+		- Only distribution is declarative, through the `pi` key in `package.json`. Behavior never is.
+		- The consequence is that the host cannot tell a user what an extension will do before running it. That gap is answered with trust and source review rather than introspection.
+	- ## Trust as the boundary, sandboxing as someone else's job
+		- The project README states plainly that Pi includes no permission system for restricting filesystem, process, network, or credential access, and that it runs with the permissions of whoever launched it.
+		- The single boundary is project trust. Package documentation warns that packages run with full system access and that third-party source should be reviewed before installation.
+		- Every offered escape hatch moves the boundary outside the process: a container, a policy-controlled sandbox, or a micro-VM that keeps credentials on the host while tool execution happens elsewhere.
+		- This is a coherent position rather than an oversight. An in-process sandbox for arbitrary [[TypeScript]] is close to unachievable, so a partial one would mostly manufacture false confidence.
+		- It is nonetheless the commitment least likely to survive transplant. A host that runs genuinely untrusted third-party code has an adversary, and cannot borrow this stance.
+		- Note the asymmetry with the project's supply-chain rigor: exact-pinned dependencies, installs that skip lifecycle scripts by default, an explicit allowlist for dependencies that need them, and a minimum release age during resolution. Pi is strict about *what code arrives* and permissive about *what code may do*. Both choices concentrate control at install time.
+	- ## Fail open, except where the hook is a gate
+		- The default is that an extension error is logged and the agent continues. A broken extension degrades the host rather than stopping it.
+		- The documented exception is `tool_call`, where an error blocks the tool, annotated in the docs as fail-safe.
+		- The principle is that open-versus-closed is chosen **per hook, from the hook's meaning**. Observation hooks fail open; authorization hooks fail closed.
+		- The unresolved gap is that no timeout and no auto-disable exist, so "fail open" does not cover a hang or a slow leak. This is the clearest weakness in the design.
+	- ## No backward compatibility unless asked
+		- The contributor rules state it directly: do not preserve backward compatibility unless the user asks for it.
+		- Versioning is lockstep across all packages with no major releases; patch means fixes and additions, minor means breaking changes.
+		- There is no extension API version field and no capability negotiation. Compatibility is handled by a far cheaper mechanism: import aliases mapping the older `@mariozechner/pi-*` namespace to the current one, plus a deduplicated deprecation warning helper.
+		- The bet is that the ecosystem is small enough, and extensions short enough, that regenerating a broken extension costs less than carrying a compatibility layer. That bet is only available while an agent can do the rewriting.
+	- ## Persistence by event sourcing, so branching is free
+		- Extensions have no store; they append typed entries to the session log and rebuild state by replaying the current branch.
+		- The motivation is that sessions are trees rather than lines. Once state derives from the branch, forking produces correct extension state with no extension-side awareness of forking.
+		- The trade is that every stateful extension writes a reducer, and a careless reducer replays stale history.
+		- The generalizable rule: when a host has nonlinear history, derive plugin state from that history rather than storing it beside it.
+	- ## Order is authority, and authority is per-kind
+		- There is no priority number, dependency graph, or explicit ordering declaration. Load order decides everything, and load order follows a documented precedence of CLI over project over user over package.
+		- Conflict policy then varies by contribution kind, as catalogued on [[PiAI/Extension/Architecture]].
+		- The insight is that "who wins a collision" is a semantic question rather than an infrastructure one, and uniform conflict policy is a smell.
+		- The weakness is that order is implicit. Two extensions that must cooperate can only do so through an untyped event bus with no namespacing and no ordering guarantees.
+	- ## Registration time and action time are enforced phases
+		- The factory runs once, before any session exists, and may be async — the host awaits it, so remote configuration fetches and dynamic model discovery complete before `session_start`.
+		- Action methods throw until the runner binds them. Authors are further instructed not to start processes, sockets, watchers, or timers in the factory, because a factory may run in an invocation that never opens a session, and to register an idempotent shutdown handler for anything session-scoped they do start.
+		- Making the phase error throw rather than warn is what turns the convention into a contract.
+	- ## Escape hatches at every layer, including the frivolous ones
+		- Built-in tools can be overridden by re-registering their names, and the host exports its own tool constructors so an override can delegate instead of reimplementing.
+		- The provider payload can be inspected and replaced wholesale; headers can be added or deleted; message history can be filtered before every model call.
+		- The system prompt can be replaced, and the structured options that built it are handed over so an extension can make an informed edit rather than a blind concatenation.
+		- The editor component itself can be swapped; one bundled example implements modal Vim editing that way, and another runs DOOM in an overlay at 35 frames per second.
+		- The unserious examples make a serious point: they demonstrate that the seams are genuinely open rather than nominally open.
+	- ## Where this philosophy stops transferring
+		- A host whose plugins are untrusted needs a real capability model, which means a manifest, which means giving up the capability-not-configuration commitment.
+		- A host with a stable public contract cannot adopt the no-compatibility commitment.
+		- A host with linear history gains nothing from event-sourced plugin state and should use a store.
+		- A host without an in-process scripting runtime cannot expose seams this way at all, and must choose among declarative rules, subprocess protocols, and WebAssembly.

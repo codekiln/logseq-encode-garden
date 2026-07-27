@@ -1,0 +1,87 @@
+logseq-entity:: [[Logseq/Entity/Concept]]
+see-also:: [[PiAI/Extension]], [[PiAI/Extension/Philosophy]], [[PiAI/Extension/Ref]]
+
+- # Pi Extension Architecture
+	- ## Overview
+		- The mechanical structure of [[PiAI]]'s extension system, as distinct from the design commitments behind it on [[PiAI/Extension/Philosophy]].
+		- Three files in `packages/coding-agent/src/core/extensions/` carry the system: `types.ts` holds the public contract and is the single source of truth at roughly 1700 lines; `loader.ts` performs discovery and the [[jiti]] import and builds the per-extension `ExtensionAPI`; `runner.ts` defines `ExtensionRunner`, the host that owns lifecycle and dispatch. Discovery proper lives in `core/package-manager.ts` and `core/resource-loader.ts`.
+	- ## The four-stage pipeline
+		- Every extension passes through **discover, resolve, load, bind**, and the stages are deliberately separable.
+		- ### Discover
+			- Four independent sources produce candidate paths: CLI flags (`pi -e ./thing.ts`), the `extensions` and `packages` keys in `settings.json`, an auto-scan of `~/.pi/agent/extensions/` and `.pi/extensions/`, and installed packages whose `package.json` declares a `pi.extensions` array.
+		- ### Resolve
+			- A directory resolves by checking, in order: `package.json` with a `pi.extensions` key, then `index.ts`, then `index.js`.
+			- Auto-scan descends exactly one level; there is no recursive search.
+			- Precedence runs highest to lowest: project settings entry, project auto-discovered, user settings entry, user auto-discovered, package resource. CLI entries merge ahead of all of them.
+			- Deduplication is by canonical path, and the earlier entry wins.
+		- ### Load
+			- [[jiti]] imports each entry, so [[TypeScript]] runs without a compile step. Module cache is disabled so `/reload` picks up edits.
+			- Import aliases redirect `@earendil-works/pi-coding-agent`, `typebox`, `@earendil-works/pi-ai`, and `@earendil-works/pi-tui` to the host's own copies rather than a duplicate inside the extension's `node_modules`. Under the Bun binary these become virtual modules instead.
+			- A module that does not default-export a function is silently ignored rather than raising an error.
+			- The factory runs immediately and is awaited if it returns a promise, so all registration completes before any session starts.
+		- ### Bind
+			- `ExtensionRunner` is constructed with the extension list and shared runtime, then `bindCore()`, `bindCommandContext()`, and `setUIContext()` attach it to a live session.
+			- Before binding, action methods on `pi` throw. This is what makes "register at load time, act at runtime" an enforced contract rather than a documented suggestion.
+	- ## Registry shape
+		- Each loaded extension is one `Extension` record holding parallel maps, one per contribution kind: `handlers`, `tools`, `commands`, `flags`, `shortcuts`, `messageRenderers`, `entryRenderers`, alongside `path`, `resolvedPath`, and `sourceInfo`.
+		- The registry is therefore per-extension maps inside an **ordered array**, not one global map keyed by contribution name.
+			- That ordering is the entire conflict-resolution mechanism: load order is authority order.
+			- Provenance is never lost, so every contribution traces back to a path for error messages and configuration UIs.
+		- A single shared `ExtensionRuntime` holds cross-extension mutable state: flag values, queued provider registrations, and the staleness guards `assertActive` and `invalidate`.
+	- ## Dispatch model
+		- Events dispatch **sequentially and in-process**, awaited one handler at a time. Order across extensions is load order; order within one extension is registration order. There is no parallel fan-out, and no way to declare a priority or a dependency on another extension.
+		- Return values fall into five patterns, and the pattern is the real contract.
+			- **Observe** — the return is ignored. Most events, including `agent_start`, `turn_start`, `message_start`, and the `tool_execution_*` family.
+			- **Chain** — the return replaces the value passed to the next handler. `context` for messages, `before_provider_request` for the payload, `before_agent_start` for the system prompt, `message_end` for the finalized message.
+			- **Mutate in place** — the event object is writable and the return is ignored. `before_provider_headers`, where setting a key to `null` deletes it, and `event.input` on `tool_call`.
+			- **Veto** — the first handler to return a stop wins and the chain aborts. `tool_call` returning `{ block: true, reason }`, and the `session_before_*` family returning `{ cancel: true }`.
+			- **Accumulate** — every handler's contribution is unioned. `resources_discover`, returning skill, prompt, and theme paths.
+		- `input` is the one event with an explicit tri-state result, `{ action: "continue" | "transform" | "handled" }`, where `handled` short-circuits the whole prompt pipeline including skill and template expansion.
+		- Mutation of `event.input` on `tool_call` is **not re-validated** against the tool's schema. The documentation states this outright; mutation is a trusted-caller operation.
+	- ## Where the hooks attach
+		- The event surface is not a generic bus bolted on from outside. Each event corresponds to a named call site.
+			- Agent-loop events originate in `AgentSession._handleAgentEvent()`.
+			- `tool_call` and `tool_result` are installed once as agent-core tool hooks in `_installAgentToolHooks()`.
+			- `context` is the agent's `transformContext` callback.
+			- `before_provider_headers`, `before_provider_request`, and `after_provider_response` are provider transport hooks, sitting below the agent and above HTTP.
+		- The hook set is therefore an inventory of the host's own seams.
+	- ## Isolation, or its deliberate absence
+		- Extensions run **fully in-process**, in the same Node or Bun process, with the launching user's permissions. There is no worker, subprocess, VM, or capability sandbox.
+		- Failure handling is decided per boundary rather than globally.
+			- A load-time throw is caught and recorded in `LoadExtensionsResult.errors`; the remaining extensions still load.
+			- A runtime handler throw is caught, reported to error listeners, and dispatch continues. The agent does not stop.
+			- `tool_call` is the exception: a throw there propagates and blocks the tool. Failing closed is chosen precisely where the hook is a safety gate.
+			- A tool's own `execute()` throw is caught and returned to the model as `isError: true`, so a broken tool does not kill the turn.
+		- There is **no timeout** on handlers and **no auto-disable** of a misbehaving extension. A hung handler hangs the host.
+		- The security boundary is **project trust**, not sandboxing. User-scoped and CLI extensions load unconditionally; project-local extensions and packages wait until the user trusts the directory. The `project_trust` event lets an already-trusted extension own the decision, returning `{ trusted: "yes" | "no" | "undecided", remember? }`, first decisive answer winning.
+		- For real isolation the answer is to move the boundary outside the process: a container, a policy sandbox, or the `gondolin` extension, which keeps the agent and its provider credentials on the host while routing tool execution into a Linux micro-VM.
+	- ## Conflict resolution varies by contribution kind
+		- **Tools** — first registration of a name wins; later ones are dropped and reported, though the extension still loads.
+		- **Commands** — nothing is dropped. Duplicates receive a disambiguated invocation name: `foo`, `foo:2`, `foo:3`.
+		- **Shortcuts** — last registration wins, except that reserved built-in keybindings cannot be taken at all.
+		- **Flags** — first registration wins.
+		- **Renderers** — first extension with a matching `customType` wins.
+		- **Providers** — later registration replaces, and `unregisterProvider` restores the built-in.
+		- The asymmetry follows the semantics of each thing. A tool name is an identity the model has already been told about, so silently swapping it would be a correctness bug. A command is a human affordance, so suffixing keeps both usable. A keybinding is a preference, and the most recently loaded extension is the most specific.
+	- ## State and persistence
+		- Extensions get no key-value store. The persistence substrate is the **session log**.
+			- `pi.appendEntry(customType, data)` writes a typed custom entry into the session file, and a tool's returned `details` object is persisted alongside the tool result.
+			- On `session_start` and `session_tree`, an extension replays the current branch and rebuilds its in-memory state.
+		- The design is event-sourced, and the payoff is that branching works without extension involvement. Pi sessions are trees navigated by `/fork`, `/clone`, and `/tree`; because state derives from the branch, forking a session forks extension state correctly.
+		- The cost is that every stateful extension writes a reducer, and a careless reducer replays stale history. [[PiAI/Extension/Plan Mode]] shows both the pattern and its sharp edge.
+	- ## Staleness as a first-class hazard
+		- `/reload`, `/new`, `/resume`, `/fork`, and `/clone` all tear down extension instances and rebuild them.
+		- A `pi` or `ctx` captured before the swap is poisoned: `invalidate()` makes it throw with a message naming the specific mistake and the correct pattern.
+		- Any host with a reload or session-swap story needs an answer for handles a plugin already closed over, and throwing loudly beats silently acting on a dead session.
+	- ## Lifecycle in brief
+		- Startup runs `project_trust`, then `session_start`, then `resources_discover`.
+		- Each prompt checks extension commands first, then fires `input`, skill and template expansion, `before_agent_start`, `agent_start`, the per-turn cycle of `turn_start`, `context`, provider hooks, tool hooks, and `turn_end`, then `agent_end` and `agent_settled`.
+		- Session replacement fires a cancellable `session_before_*`, then `session_shutdown`, then reload and rebind, then `session_start` carrying a reason and the previous session file, then `resources_discover`.
+		- The split between `agent_end` and `agent_settled` is subtle and useful: `agent_end` fires per low-level run, which may still be followed by an auto-retry, an auto-compaction, or a queued follow-up, while `agent_settled` fires only when the host will not continue on its own.
+	- ## Distribution
+		- The unit of sharing is a package rather than a single extension, and one package may carry extensions, skills, prompt templates, and themes together.
+		- Sources are npm specs, pinned git refs, and local paths. Git refs are tags or commits; updates reconcile an existing clone to the declared ref but never advance it.
+		- A package declares contents under the `pi` key in `package.json`, with glob and exclusion support, or falls back to convention directories named `extensions/`, `skills/`, `prompts/`, and `themes/`.
+		- Consumers can narrow what an installed package contributes without forking it, using per-type globs plus `!` to exclude, `+` to force-include an exact path, and `-` to force-exclude one. Filters only ever narrow what the manifest already allows.
+		- Host libraries belong in `peerDependencies` with a `"*"` range and must not be bundled, since the loader aliases them to the host's copies. Genuine runtime dependencies go in `dependencies`. Other pi packages must be bundled and referenced through `node_modules/` paths, because each package loads with a separate module root.
+		- `pi -e <source>` installs to a temporary directory for a single run, giving a try-before-install path that leaves the settings file untouched.
