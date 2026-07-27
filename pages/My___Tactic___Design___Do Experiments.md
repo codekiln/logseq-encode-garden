@@ -1,0 +1,2 @@
+- If there's a question that needs to be answered, think of an experiment that could be run to reveal some information.
+- An Experiment is distinct from but related to a prototype. An experiment is often a prototype for how to answer a question, rather than an early model for how a tool should be built.

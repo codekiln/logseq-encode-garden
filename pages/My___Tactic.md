@@ -1,0 +1,1 @@
+- This logseq namespace contains my tactics and techniques.

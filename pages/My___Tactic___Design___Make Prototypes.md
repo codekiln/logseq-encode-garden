@@ -1,0 +1,2 @@
+- I often find that the best results come from creating multiple prototypes to explore the design space.
+- I prefer these prototypes to be stored with the design packages.

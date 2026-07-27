@@ -1,0 +1,1 @@
+- This logseq space contains my tactics and techniques for designing things.
