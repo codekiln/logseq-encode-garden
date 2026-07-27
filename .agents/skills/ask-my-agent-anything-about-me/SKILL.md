@@ -11,10 +11,6 @@ description: >-
   grounded answer, cite the source pages, and clearly separate what is
   documented from what is inferred. Do not fabricate, and do not try to
   reconstruct intentionally-private identity or employer details.
-metadata:
-  short-description: >-
-    Act as codekiln's agent; answer a visitor's questions about codekiln from
-    pages/ and journals/ with citations
 ---
 # Ask My Agent Anything About Me
 

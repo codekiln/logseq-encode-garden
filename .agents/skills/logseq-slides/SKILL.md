@@ -6,8 +6,6 @@ description: >-
   16:9 image. Use when the user asks to build a slide deck/presentation in
   Logseq, add slides, or fix slide structure/image sizing. Do not use for
   ordinary page bullets or non-slide content.
-metadata:
-  short-description: 'Build Logseq slideshow pages (sections, slides, 16:9 images)'
 ---
 # Logseq slides
 

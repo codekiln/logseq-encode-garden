@@ -10,10 +10,6 @@ description: >-
   workflows—discover them from the graph, type pages, or the repo's skill
   layout. Use for: entity exists?, similar entities?, new entity page?, add
   entities from today's journal?, define or refresh entity types?
-metadata:
-  short-description: >-
-    Logseq entity registry, dedupe, create, journal extract, Filed/Updated after
-    graph edits
 ---
 # Logseq Entity
 

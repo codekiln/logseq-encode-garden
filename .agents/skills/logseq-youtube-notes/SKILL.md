@@ -7,8 +7,6 @@ description: >-
   {{youtube-timestamp}} headings, or structure a {{video ...}} block's notes. Do
   not use for non-video transcripts or for general LFM formatting (that is the
   logseq-lfm skill / logseq-core rule).
-metadata:
-  short-description: Clean and structure YouTube transcripts into timestamped LFM
 ---
 # Logseq YouTube transcript notes
 

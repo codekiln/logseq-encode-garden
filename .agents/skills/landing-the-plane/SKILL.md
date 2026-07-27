@@ -6,8 +6,6 @@ description: >-
   state, and hand off context. Use when the user says "land the plane", "wrap
   up", "finish the session", or asks to make sure everything is committed and
   pushed. Work is not done until `git push` succeeds.
-metadata:
-  short-description: 'End-of-session checkout — commit, push, hand off'
 ---
 # Landing the plane
 

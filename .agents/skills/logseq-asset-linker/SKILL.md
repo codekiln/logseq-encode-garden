@@ -7,8 +7,6 @@ description: >-
   [[Namespace/Page]] and wants the asset/image/PDF link, an asset filename, or
   an asset folder path. Do not use for ordinary page wikilinks (logseq-core /
   logseq-link-hygiene).
-metadata:
-  short-description: Build relative Logseq asset links from paths or page names
 ---
 # Logseq asset linker
 

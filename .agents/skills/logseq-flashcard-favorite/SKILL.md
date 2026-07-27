@@ -9,8 +9,6 @@ description: >-
   the mise file task and preserves the review-history children Logseq appends to
   {{cards}} blocks. Do not use for ad-hoc card authoring (logseq-flashcard) or
   non-favorite decks.
-metadata:
-  short-description: 'Sync Logseq favorite flashcard decks from config.edn :favorites'
 ---
 # Logseq flashcard favorite decks
 

@@ -7,8 +7,6 @@ description: >-
   Tutorial, Reference, or Concept/Explanation page, or asks which Diataxis type
   fits. Adds the right `[[Diataxis/...]]` tag and namespace. Do not use for
   non-doc pages or to edit existing protected `tags::`.
-metadata:
-  short-description: Author Diataxis tutorial/how-to/reference/explanation pages
 ---
 # Diataxis docs in the garden
 

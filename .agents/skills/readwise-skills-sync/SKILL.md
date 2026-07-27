@@ -7,8 +7,6 @@ description: >-
   vendored readwise skills, after upstream changes, or when bumping the rulesync
   version in mise.toml. Do not use the `readwise skills install` command or
   `rulesync import` for this.
-metadata:
-  short-description: Refresh the vendored Readwise skills in .rulesync/ and regenerate
 ---
 # Readwise skills sync
 
