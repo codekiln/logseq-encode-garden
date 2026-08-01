@@ -1,0 +1,40 @@
+tags:: [[Diataxis/Reference]], [[Audio]], [[Audio/Connector]]
+
+- alias:: [[3.5mm Headset Jack]], [[TRRS Connector]]
+
+- # 3.5mm TRRS Connector Reference
+	- ## Visual Reference
+		- ![TRRS connector schematic showing tip, two rings, and sleeve](https://upload.wikimedia.org/wikipedia/commons/5/55/TRRS_connector_abbreviated.svg)
+		- Image: public domain (CC0), via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:TRRS_connector_abbreviated.svg)
+	- ## Overview
+		- TRRS stands for **Tip-Ring-Ring-Sleeve**: 4 conductors, 3 insulating rings
+		- Extends [[Audio/Connector/Ref/3.5mm TRS]] with a second ring, used to carry a microphone signal and/or inline remote-control signal (play/pause, volume, call answer)
+		- Standard connector for phone/tablet headsets that combine stereo output with a microphone
+	- ## Physical Specifications
+		- **Diameter**: 3.5 mm (1/8 in)
+		- **Conductors**: 4 (tip, ring, ring, sleeve)
+		- **Insulating rings**: 3
+		- **Orientation**: rotationally symmetric, no keying
+	- ## Pin Configuration — CTIA/AHJ (modern standard)
+		- **Tip**: left channel
+		- **Ring 1**: right channel
+		- **Ring 2**: ground
+		- **Sleeve**: microphone / inline remote
+	- ## Pin Configuration — OMTP (legacy standard)
+		- **Tip**: left channel
+		- **Ring 1**: right channel
+		- **Ring 2**: microphone / inline remote
+		- **Sleeve**: ground
+	- ## Compatibility
+		- CTIA/AHJ is used by Apple, most modern Android devices, and Windows laptops
+		- OMTP was used by older Nokia phones and some Asian-market handsets
+		- Plugging a headset wired to one standard into a jack wired to the other still passes left/right audio correctly (tip and ring 1 match), but the microphone does not work, since only the ring 2/sleeve pair is swapped
+		- Fits into the same jack as [[Audio/Connector/Ref/3.5mm TRS]] and [[Audio/Connector/Ref/3.5mm TS]] plugs, which simply leave the extra ring(s) unconnected
+	- ## Common Use Cases
+		- Smartphone and tablet headsets (earbuds with in-line mic and remote)
+		- Some cameras and action cams (external mic input, though wiring convention varies by manufacturer)
+		- Lavalier/lapel microphones for phones
+	- ## Related References
+		- [[Audio/Connector/Ref/Index]]
+		- [[Audio/Connector/Ref/3.5mm TS]]
+		- [[Audio/Connector/Ref/3.5mm TRS]]

@@ -1,0 +1,37 @@
+tags:: [[Diataxis/Reference]], [[RCA]], [[RCA/Connector]]
+
+- alias:: [[RCA Jack]], [[Phono Jack]], [[RCA Socket]]
+
+- # RCA Female Connector Reference
+	- ## Visual Reference
+		- ![RCA female jacks for component video](https://upload.wikimedia.org/wikipedia/commons/e/ef/Component_video_jack.jpg)
+		- Photo: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Component_video_jack.jpg)
+	- ## Overview
+		- Female RCA jack (socket), the receptacle mounted on a device that receives a male RCA plug
+		- Coaxial design: a center pin receptacle carries the signal, surrounded by a barrel that grounds against the plug's outer shell
+		- Almost always panel-mounted — on the back or side of audio/video equipment, rarely found on the end of a cable
+		- Carries a single signal per jack; devices expose one jack per channel/signal (e.g. a stereo pair, or a video + audio trio)
+	- ## Physical Specifications
+		- **Barrel inner diameter**: sized to accept the ~9.5 mm male shell
+		- **Orientation**: no keying; symmetrical around the barrel
+		- **Gender**: Female (jack/socket)
+		- **Mounting**: typically panel-mount (chassis-mounted), sometimes PCB-mount
+	- ## Signal Types and Color Coding
+		- **Yellow**: composite video
+		- **White or black**: left channel analog audio
+		- **Red**: right channel analog audio
+		- **Green / Blue / Red trio**: component video (Y/Pb/Pr)
+		- **Orange**: digital coax audio (S/PDIF)
+	- ## Compatibility
+		- **Mates with**: [[RCA/Connector/Ref/RCA Male]]
+	- ## Common Use Cases
+		- Input/output panels on TVs, AV receivers, amplifiers, and DVD/Blu-ray players
+		- Turntable and mixer line outputs
+		- Composite/component video inputs on displays
+		- Digital coax (S/PDIF) inputs on receivers and DACs
+	- ## Standards
+		- No single formal specification; the connector is a de facto standard maintained through consumer-electronics manufacturer compatibility
+		- Digital coax use is referenced in IEC 60958
+	- ## Related References
+		- [[RCA/Connector/Ref/Index]]
+		- [[RCA/Connector/Ref/RCA Male]]

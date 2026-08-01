@@ -1,0 +1,44 @@
+tags:: [[Diataxis/Reference]], [[RCA]], [[RCA/Connector]]
+
+- alias:: [[RCA Plug]], [[Phono Plug]]
+
+- # RCA Male Connector Reference
+	- ## Visual Reference
+		- ![RCA male plugs for composite video and stereo audio](https://upload.wikimedia.org/wikipedia/commons/9/91/Composite-cables.jpg)
+		- Photo: Evan-Amos, public domain, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Composite-cables.jpg)
+	- ## Overview
+		- Male RCA plug, the connector found on the end of an RCA cable
+		- Coaxial design: a center pin carries the signal, surrounded by an outer metal shell that carries ground/shield
+		- Introduced by the Radio Corporation of America in the late 1930s/1940s, originally to connect phonograph players to radio receivers
+		- Carries a single signal per connector — stereo audio, component video, etc. use multiple RCA plugs in parallel
+	- ## Physical Specifications
+		- **Outer shell diameter**: ~9.5 mm (3/8 in)
+		- **Center pin**: thin single pin, diameter varies slightly by manufacturer
+		- **Orientation**: no keying; the shell simply slides over the mating jack's barrel
+		- **Gender**: Male (plug)
+	- ## Signal Types and Color Coding
+		- **Yellow**: composite video
+		- **White or black**: left channel analog audio
+		- **Red**: right channel analog audio
+		- **Green / Blue / Red trio**: component video (Y/Pb/Pr)
+		- **Orange**: digital coax audio (S/PDIF)
+	- ## Compatibility
+		- **Mates with**: [[RCA/Connector/Ref/RCA Female]]
+		- Adapters exist to [[Audio/Connector/Ref/3.5mm TRS]] for stereo audio (common on portable devices)
+	- ## Common Use Cases
+		- Composite and component video cables
+		- Analog stereo audio cables (turntables, amplifiers, TVs, mixers)
+		- Subwoofer/LFE cables in home theater systems
+		- S/PDIF digital audio (coax)
+	- ## Variants
+		- ### Standard RCA Plug
+			- Solid center pin, simple crimp or solder construction
+		- ### "Bullet Plug"
+			- Audiophile variant (e.g. Eichmann) with a hollow center conductor and a separate return-signal pin, intended to reduce contact-related signal degradation
+	- ## Standards
+		- No single formal specification; the connector is a de facto standard maintained through consumer-electronics manufacturer compatibility
+		- Digital coax use is referenced in IEC 60958
+	- ## Related References
+		- [[RCA/Connector/Ref/Index]]
+		- [[RCA/Connector/Ref/RCA Female]]
+		- [[Audio/Connector/Ref/3.5mm TRS]]
