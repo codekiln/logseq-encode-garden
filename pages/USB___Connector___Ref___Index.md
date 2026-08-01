@@ -1,6 +1,9 @@
 tags:: [[Diataxis/Reference]], [[USB]], [[USB/Connector]]
 
 - # USB Connector Reference Index
+	- ## Visual Reference
+		- ![Common USB connectors side by side: proprietary, Mini-B, Standard-B, and Standard-A](https://upload.wikimedia.org/wikipedia/commons/f/f4/USB_types_2.jpg)
+		- Photo: public domain, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:USB_types_2.jpg)
 	- ## Overview
 		- Quick reference guide to USB connector types documented in this knowledge base
 		- Provides comparison of key specifications and links to detailed connector pages

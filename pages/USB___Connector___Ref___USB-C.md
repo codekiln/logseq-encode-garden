@@ -3,6 +3,9 @@ tags:: [[Diataxis/Reference]], [[USB]], [[USB/Connector]]
 - alias:: [[USB Type-C]], [[USB-C]]
 
 - # USB-C Connector Reference
+	- ## Visual Reference
+		- ![Two USB-C connectors](https://upload.wikimedia.org/wikipedia/commons/5/5c/Two_USB-C_connectors_being_held.jpg)
+		- Photo: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Two_USB-C_connectors_being_held.jpg)
 	- ## Overview
 		- USB Type-C connector, the modern USB standard connector
 		- Introduced with USB 3.1 specification (2014)

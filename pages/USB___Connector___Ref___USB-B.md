@@ -3,6 +3,9 @@ tags:: [[Diataxis/Reference]], [[USB]], [[USB/Connector]]
 - alias:: [[USB Type-B]], [[Standard USB-B]]
 
 - # USB-B Connector Reference
+	- ## Visual Reference
+		- ![USB Type-B male plug](https://upload.wikimedia.org/wikipedia/commons/0/0e/USB_Male_Plug_Type_B.jpg)
+		- Photo: [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/), via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:USB_Male_Plug_Type_B.jpg)
 	- ## Overview
 		- Standard USB Type-B connector, designed for peripheral devices
 		- Introduced with USB 1.0 specification (1996)

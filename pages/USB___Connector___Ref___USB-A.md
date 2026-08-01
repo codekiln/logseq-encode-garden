@@ -3,6 +3,9 @@ tags:: [[Diataxis/Reference]], [[USB]], [[USB/Connector]]
 - alias:: [[USB Type-A]], [[Standard USB]]
 
 - # USB-A Connector Reference
+	- ## Visual Reference
+		- ![USB Type-A male plug](https://upload.wikimedia.org/wikipedia/commons/2/27/USB_Male_Plug_Type_A.jpg)
+		- Photo: André Karwath, [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/), via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:USB_Male_Plug_Type_A.jpg)
 	- ## Overview
 		- Standard USB Type-A connector, the most common USB connector type
 		- Introduced with USB 1.0 specification (1996)
