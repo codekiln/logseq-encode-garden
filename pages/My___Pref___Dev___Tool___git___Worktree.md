@@ -1,10 +1,13 @@
 - My preferences related to [[git/worktree]]s
+	- the `hbso-ai` `git-tools` `git-worktrees` skill is the source of truth for naming and placement; this page follows it
 	- DO
-		- store worktrees **inside** of the project folder inside a [[gitignore]]d `<proj-root>/.wt/` subfolder with slugs of the feature we are working on
+		- store worktrees **inside** the project folder, in a [[gitignore]]d `<proj-root>/worktrees/` directory
+		- name each worktree after its branch, replacing `/` with `-` and dropping the branch-type prefix
 			- [[Example/Good]]
-				- `<proj-root>/.wt/openspec-spec-slug-we-are-working-on`
-				- `<proj-root>/.wt/gh-123-feature-slug`
-				- `<proj-root/.wt/JIRA-123-feature-slug>`
+				- branch `codekiln/130-add-auth` -> `<proj-root>/worktrees/codekiln-130-add-auth`
+				- branch `feature/PD-1234-add-auth` -> `<proj-root>/worktrees/AB-1234-add-auth`
+				- branch `docs/add-directory-grounding` -> `<proj-root>/worktrees/docs-add-directory-grounding`
+		- in [[Claude Desktop]], whose Worktree location setting stores worktrees inside the project, use its `<proj-root>/.claude/worktrees/` directory instead — also [[gitignore]]d
 	- DO NOT
 		- store worktrees as siblings of the project folder
--
+		- put the branch-type prefix (`feature/`, `fix/`, `docs/`) in the worktree directory name

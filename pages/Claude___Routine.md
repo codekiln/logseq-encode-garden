@@ -1,7 +1,6 @@
-tags:: [[Claude/Code]], [[Diataxis/Explanation]], [[AI/Automation]]
+tags:: [[Diataxis/Explanation]]
 alias:: [[Claude Routines]]
-see-also:: [[Claude/Code/Q/What is the difference between the schedule command in Claude Code CLI and Routines in Claude Desktop's Code tab?]], [[Claude/Code]], [[Claude/Code/Subagent]], [[Claude/Code/Skill]]
-title:: Claude/Routine
+see-also:: [[Claude/Code/Q/What is the difference between the schedule command in Claude Code CLI and Routines in Claude Desktop's Code tab?]]
 
 - # [Automate work with routines (Claude Code)](https://code.claude.com/docs/en/routines)
 	- ## [[My Notes]]
