@@ -8,3 +8,5 @@ logseq-entity:: [[Logseq/Entity/Person]]
 		- [Total TypeScript](https://www.totaltypescript.com/)
 	- **Projects:**
 		- [[Person/Matt Pocock/GitHub/skills]]
+	- **Talks:**
+		- [[Person/Matt Pocock/YouTube/26/06/Building Great Agent Skills: The Missing Manual]] — [[AI/Engineer/World's Fair/26]]

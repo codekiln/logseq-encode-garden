@@ -1,0 +1,133 @@
+date-created:: [[2026/06/29]]
+
+- # [Building Great Agent Skills: The Missing Manual - YouTube](https://www.youtube.com/watch?v=UNzCG3lw6O0)
+	- Speaker: [[Person/Matt Pocock]]
+	- Event: [[AI/Engineer/World's Fair/26]]
+	- Channel: [AI Engineer](https://www.youtube.com/@aiDotEngineer) · 20:43
+	- ## Thesis
+		- There is no shared rubric for telling a good [[AI/Agent/Skill]] from a bad one, so everyone lands in "skill hell." The talk supplies one: a four-part checklist of **trigger**, **structure**, **steering**, **pruning**.
+		- The checklist is itself encoded as a skill, `writing-great-skills`, in [[Person/Matt Pocock/GitHub/skills]].
+			- [writing-great-skills SKILL.md](https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-great-skills/SKILL.md)
+	- ## [[Video]]
+		- {{video https://www.youtube.com/watch?v=UNzCG3lw6O0}}
+			- ### {{youtube-timestamp 0}} Introduction and "skill hell"
+				- #### {{youtube-timestamp 114}} The missing rubric is what causes skill hell
+					- Snipd: https://share.snipd.com/snip/a743d800-756e-40c5-b2e1-641c6acc1cc0
+					- There is no shared rubric for distinguishing good skills from bad ones.
+					- "We don't know what makes a skill great. We can't yet look at a skill and go, OK, this skill is doing these good things, these bad things. There's no shared rubric, no framework for looking at a skill and making it better."
+			- ### {{youtube-timestamp 132}} Overview of the skill checklist framework
+				- #### {{youtube-timestamp 130}} The four-part checklist
+					- Snipd: https://share.snipd.com/snip/a86aff64-9ea6-4996-8c99-04336358109e
+					- 1. **Trigger** — how the skill is invoked, and the design decisions that follow.
+					- 2. **Structure** — how the skill is composed and laid out internally.
+					- 3. **Steering** — how the skill actually tells the agent what to do.
+					- 4. **Pruning** — how you make the skill as small as possible.
+					- "Once we've got a working skill, we then need to basically maximize it, prune out all of the irrelevant stuff, prune out all of the no-ops."
+			- ### {{youtube-timestamp 196}} Trigger — user-invoked vs model-invoked
+				- Model-invoked skills are more flexible but cost context load and unpredictability. User-invoked skills cost cognitive load on the pilot instead.
+				- #### {{youtube-timestamp 195}} Decide invocation mode deliberately
+					- Snipd: https://share.snipd.com/snip/f0c667ab-3d7f-4474-9756-1262bfd89c1c
+					- Every skill can always be user-invoked — the file is on disk and the agent can be told to read it. What's optional is the **description**, which is the part that lands in the agent's context.
+					- "That description serves as a kind of context pointer. It sits in the agent's context pointing to another file where the agent can go if it wants more context."
+					- Suppressing the description makes the skill user-invoke-only. His [[Claude/Code/Skill/Grill Me]] sets `disable model invocation: true` so the description shows to the user but not the agent; his codebase-design skill leaves it visible.
+					- Tip number one: decide if your skill is user-invoked or model-invoked.
+				- #### {{youtube-timestamp 317}} Model invocation trades flexibility for unpredictability
+					- Snipd: https://share.snipd.com/snip/558dfe0f-a2f6-4654-b6cf-194dd1b741c3
+					- Each model-invoked skill adds a description that costs tokens on every request and one more thing for the agent to weigh — 100 skills means 100 descriptions in context. He calls this **context load**.
+					- The mirror cost of going all-user-invoked is **cognitive load**: "the more things the user needs to keep in their head, the more skill you require from the pilot."
+					- "Every time you have a context pointer pointing from one resource to another, the model may just choose not to follow it. Even if it's absolutely perfect for the task, it may just choose not to invoke the skill."
+					- That unpredictability is what forces people to eval their skills to confirm they fire at the right time — "which is really nasty, and it's a problem that I prefer to avoid."
+				- #### {{youtube-timestamp 385}} Comparing his skills to Superpowers
+					- Snipd: https://share.snipd.com/snip/75fe8adf-cfc1-44e1-bf2d-ddb66fed456d
+					- [[Person/Jesse Vincent/Blog/25/10/Superpowers Oct 2025]] is primarily model-invoked — "it gives the agent superpowers." Pocock's set is primarily user-invoked because he prefers full control.
+					- He accepts the higher cognitive load on himself in exchange for keeping context load on the agent minimal and removing a whole class of problem.
+				- #### {{youtube-timestamp 392}} Neither choice is free
+					- Snipd: https://share.snipd.com/snip/722eddfc-1014-4ce3-af97-2b0998815bd7
+					- "Model invoked skills and user invoked skills both have their same costs. So it's not an easy decision which one you choose."
+			- ### {{youtube-timestamp 449}} Structure — steps and reference
+				- #### {{youtube-timestamp 451}} Build skills from two units
+					- Snipd: https://share.snipd.com/snip/d9b0367f-5ab3-4769-b1c9-1b519bc611fb
+					- **Steps** — the step-by-step procedure the skill walks through.
+					- **Reference** — any supporting information that helps it walk those steps.
+					- A skill can be all reference, or all steps, "but if you start thinking of skills as composed of these two units, it really helps just break them down a lot more."
+					- Worked example — his `to-prd` skill, which creates a product requirements document out of the current context window:
+						- Three steps: find the relevant context → confirm the test seams with the user → write the PRD.
+						- Two pieces of reference: what a test seam is, and a literal Markdown PRD template.
+						- The middle step is a deliberate human-in-the-loop checkpoint — "just to make sure we're not doing anything weird with the testing, which I find really important."
+					- Authoring order: work out the steps, then work out what reference material those steps need, and put it in its own spot.
+				- #### {{youtube-timestamp 490}} Small skill files cost less
+					- Snipd: https://share.snipd.com/snip/83259325-b727-492d-a120-5e28ddf4954e
+					- Smaller `skill.md` files are easier to maintain and audit, and every word shaved is tokens shaved off the skill's running cost.
+			- ### {{youtube-timestamp 540}} Making the skill.md file minimal
+				- #### {{youtube-timestamp 535}} Tip three — keep skill.md as small as possible
+					- Snipd: https://share.snipd.com/snip/e1644045-a152-4afb-9a2c-f7de191a20f2
+					- A skill is its description, plus `skill.md`, plus whatever reference material branches off that. Shrinking `skill.md` pays maintainers and users at once.
+					- The lever is **branches** — the different ways the skill can be used. Reference material used in only one branch is a candidate for eviction from `skill.md`.
+					- `to-prd` has one branch: it always writes a PRD and always asks about test seams, so both pieces of reference belong inline.
+					- His domain-modeling skill has two or three branches: it may update a local glossary `context.md`, may create architectural decision records, or may do neither. So neither the ADR template nor the `context.md` template needs to live in the main skill.
+					- The fix is a **context pointer** — the pointer says "if you need the template, go to this file," and the file sits alongside the skill. He calls that an **external reference**. Compare [[AI/LLM/Technique/Skill/Progressive Disclosure]].
+				- #### {{youtube-timestamp 661}} Hide branch references behind context pointers
+					- Snipd: https://share.snipd.com/snip/9f6be082-894a-4145-8764-db50f7b957f3
+					- "The agent can pull [an external reference] in very easily because it's bundled along with the skill."
+					- "If you feel like your skill is going to be used in lots of different ways, then take the reference material that's relevant for those branches and hide them behind context pointers."
+				- #### {{youtube-timestamp 661}} Same technique, restated with the structure recap
+					- Snipd: https://share.snipd.com/snip/4118aac2-62aa-449f-9507-0205ce60d136
+					- Structure in three moves: make `skill.md` very small, push branch-specific material out behind context pointers, and think in terms of steps and reference.
+			- ### {{youtube-timestamp 714}} Steering — leading words
+				- The one technique he most wants the audience to take away, aimed at the failure "I specified something in the skill, I think I've been clear, and it just doesn't do the thing."
+				- #### {{youtube-timestamp 686}} What a leading word is
+					- Snipd: https://share.snipd.com/snip/8f595a80-b617-4e59-a9db-d49c0d9c2b4b
+					- Leading words — *Leitwort*, "if you like literary theory" — are words that "pack in a bunch of meaning into a very small space."
+					- The mechanism: "You put the leading word in the skill itself, in the text, and then the agent will repeat the leading word back to itself as part of its operations, as part of its thinking tokens, and as part of its output to you. And then, because it's re-emphasizing that word... that then goes and changes its behavior."
+				- #### {{youtube-timestamp 718}} The worked example — "vertical slice"
+					- Snipd: https://share.snipd.com/snip/a70ae2b3-e511-46ca-a19f-d2e368e61249
+					- The problem: agents code layer by layer — all the database layer, then all the schemas, then all the API endpoints, then all the front end — instead of doing "the sort of typical human thing, which is to seek feedback early on, get something small working and then expand out from there."
+					- The weak fix is to say "don't code layer by layer." The strong fix is to name the thing: **vertical slice**, "a pretty well-known terminology in development, and so this will hopefully trigger the agent's priors."
+					  id:: 6a7099ea-dda4-4766-84a5-ec504dd26c2e
+					- The trick isn't a two-word skill — it's packing meaning into a short phrase and then repeating it throughout the skill.
+				- #### {{youtube-timestamp 753}} Repetition is the point
+					- Snipd: https://share.snipd.com/snip/6a451e51-192a-4de1-a6db-3a2f022875f9
+					- "What we're doing is we're packing lots of meaning into a relatively short phrase that we then repeat throughout the skill."
+				- #### {{youtube-timestamp 815}} You can verify it in the reasoning traces
+					- Snipd: https://share.snipd.com/snip/07e5c844-00a1-4dbc-8f7b-c600ca3e2b39
+					- "You can know if it's worked because you say vertical slice in your skill and then you'll notice in the reasoning traces that it's saying, OK, we're going to do this as a thin vertical slice — then you should get better implementation plans."
+					- Most people already do this ad hoc; the ask is to do it **consistently** inside skills and then watch the thinking traces adopt the phrasing.
+					- "If the agent isn't doing what you want, you need to make your leading words more consistent, more powerful."
+					- "English is a pretty wide API in terms of different functions you can call" — there are many leading-word candidates, and agents are good at helping you brainstorm them.
+			- ### {{youtube-timestamp 896}} Increasing legwork per step
+				- #### {{youtube-timestamp 901}} Plan mode as the canonical failure
+					- Snipd: https://share.snipd.com/snip/3cfe1816-4b11-478c-b593-14176d5b5afe
+					- Plan mode has two steps — ask clarifying questions, then create a plan — and in every implementation he's tried, the first step underinvests: "It sees that its ultimate goal is to create a plan. And so it just does a small amount of legwork with ask clarifying questions, asks you a couple of things, and then eagerly creates the plan."
+					- His fix: split the phases into separate skills. A `grill-with-docs` skill owns the clarifying-question phase (cf. [[Claude/Code/Skill/Grill Me]]), and only after it completes does `to-prd` run.
+					- "We have step one and step two, but the agent only sees one step at a time."
+				- #### {{youtube-timestamp 955}} Hiding the future step is the lever
+					- Snipd: https://share.snipd.com/snip/7cc22842-dce5-472e-8bb9-2b7e08275bed
+					- "This is a really cool technique for increasing legwork on the step that you're on by hiding the future goal, hiding the future steps."
+					- Not always necessary — but "in particular cases where you really want an extra chunk of legwork, there's no technique like it."
+			- ### {{youtube-timestamp 1008}} Pruning — sediment, crud, and no-ops
+				- Pruning is a quick-fire list of failure modes. Massive skills are the symptom, not the disease.
+				- #### {{youtube-timestamp 1010}} Duplication, then sediment
+					- Snipd: https://share.snipd.com/snip/894101c4-71d4-445b-8a8f-9da30abbb1c4
+					- **Don't repeat yourself** — every part of the skill gets a single source of truth, including across reference material.
+					- **Sediment** — "a classic thing when people are working on the same set of docs. Everyone starts contributing to a shared Markdown file. People add their own stuff. They don't feel brave enough to delete and modify anyone else's."
+					- The remedy for a sediment-heavy skill is structure first: check whether the added material is relevant to all branches, move it into the right branch if not, and kill it outright if it's stale.
+				- #### {{youtube-timestamp 1052}} No-ops and the deletion test
+					- Snipd: https://share.snipd.com/snip/be26c0ac-475e-4d7f-97d9-a04384b629ea
+					- **No-ops** are "things inside the skill that appear to do something but don't actually influence the agent's behavior inside the context of the skill." Very common when an agent writes your skills.
+					- The **deletion test**: an implement skill has a paragraph telling the agent to write a long detailed commit message — delete it and the agent still writes a decent long commit message. So the paragraph was a no-op.
+					- "People ask me a lot how I get my skills so small, and it's just using these techniques: using deletion tests, making sure that I compact things into leading words, I don't have anything irrelevant in there, and I don't have any sediment."
+				- #### {{youtube-timestamp 1110}} Only behavior-changing instructions survive
+					- Snipd: https://share.snipd.com/snip/a237dbc1-07d7-4943-8208-cc86bdc22498
+					- Restates the no-op test and rolls into the closing sweep of the checklist.
+			- ### {{youtube-timestamp 1146}} Final summary of the checklist
+				- #### {{youtube-timestamp 1149}} The full sweep
+					- Snipd: https://share.snipd.com/snip/6295abd3-d611-4872-aba4-bdd409f6b933
+					- **Trigger** — is it firing at the right times? Are you imposing context load or cognitive load?
+					- **Structure** — think in branches; split into steps and reference; keep single-branch material out of the main `skill.md`.
+					- **Steering** — condense text into leading words, and watch those leading words appear in the reasoning traces. Then ask whether to break the skill down further to focus it on the current phase by hiding the future phase.
+					- **Pruning** — a final pass over the whole skill, watching for sediment, crud, and especially no-ops.
+			- ### {{youtube-timestamp 1195}} Where to find the skill
+				- The framework ships as the `writing-great-skills` skill: [SKILL.md](https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-great-skills/SKILL.md) in [[Person/Matt Pocock/GitHub/skills]].
+	- ## Source
+		- Snipd episode: https://share.snipd.com/episode/f679031f-79e6-48bc-89ff-1c655c8eecce
+		- Readwise: https://readwise.io/bookreview/62448143
