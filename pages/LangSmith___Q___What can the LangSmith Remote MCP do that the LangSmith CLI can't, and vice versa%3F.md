@@ -1,0 +1,28 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+
+- # What can the [[LangSmith/MCP/Remote]] do that the [[LangSmith/CLI]] can't, and vice versa?
+	- ## [[AI Answer]]
+		- [[Answer/Official]] from [LangSmith Remote MCP](https://docs.langchain.com/langsmith/langsmith-remote-mcp), [LangSmith CLI](https://docs.langchain.com/langsmith/langsmith-cli), [LangSmith MCP Server](https://docs.langchain.com/langsmith/langsmith-mcp-server), [Sandbox CLI](https://docs.langchain.com/langsmith/sandbox-cli), and the [langsmith-cli README](https://github.com/langchain-ai/langsmith-cli).
+		- **Short answer:** yes, in both directions, and the CLI is the larger surface. Both read projects, traces, runs, threads, datasets, examples, and experiments — LangChain's own docs say the CLI "supports the same projects, traces, runs, datasets, experiments, and threads as the MCP server." Beyond that overlap, the Remote MCP uniquely offers typed prompt and billing tools plus zero-install OAuth from inside a client, while the CLI uniquely offers writes, exports, sandboxes, evaluators, Hub repos, agent tracing setup, and a raw REST escape hatch.
+		- ### Only the Remote MCP
+			- **Typed prompt tools.** `list_prompts` and `get_prompt_by_name` read [[LangSmith/PromptHub]] prompts and templates. The CLI has no `prompt` command group at all — it can only reach prompts through `langsmith api`.
+			- **Billing usage.** `get_billing_usage` returns organization trace counts for a date range, optionally filtered by workspace. There is no CLI billing command.
+			- **Nothing to install.** A client connects with a URL and an OAuth login; no binary, no `PATH`, no `self-update`. That matters for hosted or sandboxed agents that cannot install software.
+			- **Model-driven tool selection.** Tools arrive in the model's context with schemas, so the agent picks and fills them itself instead of an agent-authored shell command being parsed and executed.
+			- **Character-budget pagination.** `get_thread_history` and `fetch_runs` page by character count (`max_chars_per_page`, `preview_chars`) so a response fits a context window. The CLI's equivalent is `--limit` / `--offset` plus detail flags — item-based, not size-based.
+		- ### Only the CLI
+			- **Sandboxes.** `langsmith sandbox` builds snapshots from Docker images, boots VMs, runs `exec`, opens interactive consoles, and tunnels TCP ports into a sandbox. No MCP tool touches sandboxes.
+			- **Evaluator management.** `langsmith evaluator upload` uploads code evaluators as offline (dataset) or online (project) rules, with `--sampling-rate` and `--replace`; `evaluator list` and `evaluator delete` round it out. Compare [[LangSmith/Evaluator]] and [[LangSmith/Evaluator/Online]].
+			- **Real writes and deletes.** `dataset create` / `delete` / `upload`, `example create` / `delete`. The MCP's `create_dataset`, `update_examples`, `push_prompt`, and `run_experiment` are **documentation-only** tools — they return instructions on how to do the thing, not the thing itself.
+			- **Bulk export to disk.** `trace export`, `run export` (JSONL), `dataset export`, and the global `-o <path>`. MCP tools return payloads into a conversation, capped by the character budget.
+			- **[[LangSmith/Engine]] issues.** `langsmith project issues list --project <name>` lists Engine-detected issues.
+			- **Raw REST escape hatch.** `langsmith api` is a `gh api`-style authenticated wrapper over the whole LangSmith REST API, with `langsmith api ls` / `api info` to browse the OpenAPI spec. This makes the CLI a strict superset in reach: anything the API exposes, including endpoints behind MCP tools, is callable.
+			- **Hub repos.** `langsmith hub init` / `push` / `pull` / `list` / `get` / `delete` manage versioned agent and skill repos on the LangSmith Hub.
+			- **Tracing coding agents.** `langsmith trace setup claude` and `langsmith trace setup codex` write [[Claude/Code]] and [[Codex]] config and install the tracing plugin so the agent's own sessions land in a LangSmith project.
+			- **Shell-native ergonomics.** `--format pretty` tables, the filter DSL via `--filter`, `--show-hierarchy` run trees, `--min-latency` / `--min-tokens` filters, named profiles, and pipes into `jq`.
+			- **Works where MCP OAuth doesn't.** The docs explicitly route [[Codex]] users to the CLI because Codex's OAuth flow is incompatible with the Remote MCP.
+		- ### Where they differ on deployment and auth
+			- Both hit the same OAuth authorization server, so `langsmith auth login` and an MCP client's `/mcp` login are the same identity flow.
+			- Self-hosted: the Remote MCP requires LangSmith v0.16+ **and** an Ed25519 signing JWKS before `/api/mcp` stops returning 404. The CLI reaches any self-hosted instance with `LANGSMITH_ENDPOINT` and an API key, though `langsmith auth login` is Cloud-only.
+		- ### Practical read
+			- Use the Remote MCP when an agent should discover LangSmith capabilities on its own with no install step, or when prompts and billing are the target. Use the CLI when the task involves writing, exporting, sandboxes, evaluators, or anything scripted — and note that `langsmith api` means the CLI can eventually do everything the MCP can, while the reverse is not true.

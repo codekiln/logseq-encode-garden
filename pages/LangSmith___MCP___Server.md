@@ -1,4 +1,5 @@
 # [langchain-ai/langsmith-mcp-server](https://github.com/langchain-ai/langsmith-mcp-server)
+	- Deprecated in favor of the LangSmith-hosted [[LangSmith/MCP/Remote]], which exposes the same tool surface over OAuth with nothing to deploy. This standalone server remains the path for self-hosted LangSmith instances too old to serve the Remote MCP, and for anyone who prefers running it themselves.
 	- [langchain-ai/langsmith-mcp-server | DeepWiki](https://deepwiki.com/langchain-ai/langsmith-mcp-server) #DeepWiki - [[LangSmith/MCP/Server/DeepWiki]]
 		- | Category | Tools | Purpose |
 		  | ---- | ---- | ---- |
