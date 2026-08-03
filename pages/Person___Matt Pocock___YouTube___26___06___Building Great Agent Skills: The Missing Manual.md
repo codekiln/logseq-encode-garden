@@ -8,6 +8,17 @@ date-created:: [[2026/06/29]]
 		- There is no shared rubric for telling a good [[AI/Agent/Skill]] from a bad one, so everyone lands in "skill hell." The talk supplies one: a four-part checklist of **trigger**, **structure**, **steering**, **pruning**.
 		- The checklist is itself encoded as a skill, `writing-great-skills`, in [[Person/Matt Pocock/GitHub/skills]].
 			- [writing-great-skills SKILL.md](https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-great-skills/SKILL.md)
+		- ### What each part decides
+			- **Trigger** — *who invokes this?* User-invoked or model-invoked, and therefore which load you accept: context load on the agent, or cognitive load on the pilot.
+			- **Structure** — *where does each piece of text live?* Steps vs reference; what stays in `skill.md`; what moves out behind a context pointer.
+			- **Steering** — *which words go into the text the agent reads?* Leading words the agent echoes back and then acts on.
+			- **Pruning** — *what can be deleted outright?* Duplication, sediment, no-ops.
+		- ### Structure vs steering
+			- **Structure is placement; steering is diction.** Structure decides what the agent has in context at all. Steering decides what the words already in context do to it. A skill can be perfectly structured and still be ignored, because nothing in it was phrased in a way the agent picks up and repeats.
+			- The two get confused because they pull the same lever — hiding text — for different reasons:
+				- Structure hides material because it is **irrelevant to this branch** and costs tokens on every request. The goal is cheapness.
+				- Steering hides material because a **visible future step changes how much effort** the agent spends on the current one. The goal is behavior.
+			- That is why splitting a process into separate skills to force legwork is filed under steering even though the move is structural: you are editing file layout, but the thing you are buying is effort allocation, not token savings.
 	- ## [[Video]]
 		- {{video https://www.youtube.com/watch?v=UNzCG3lw6O0}}
 			- ### {{youtube-timestamp 0}} Introduction and "skill hell"
