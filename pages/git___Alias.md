@@ -1,0 +1,3 @@
+- Personal [[git]] aliases defined in the [[chezmoi]]-managed `~/.gitconfig` — as opposed to upstream git surface, which lives under pages like [[git/commit]] and [[git/clean/--force]].
+- {{cards [[git/Alias]] }}
+	- [[git/Alias/md-url]]

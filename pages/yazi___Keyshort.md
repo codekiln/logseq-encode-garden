@@ -12,3 +12,4 @@
 	- [[yazi/Keyshort/Plugin/fr/Search file by content (rga)]]
 	- [[yazi/Keyshort/Sort/Time/Modification]]
 	- [[yazi/Keyshort/Sort/Time/Birth]]
+	- [[yazi/Keyshort/Copy GitHub markdown link]]
