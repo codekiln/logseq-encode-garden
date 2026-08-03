@@ -1,0 +1,32 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+via:: [[Person/Matt Pocock/YouTube/26/06/Building Great Agent Skills: The Missing Manual]]
+see-also:: [[Person/Steve Yegge/YouTube/26/02/Beyond Instructions How Beads Lets AI Agents Build Like Engineers]]
+- # What is a vertical slice in tech?
+	- ## [[AI Answer]]
+		- **Short answer:** A **vertical slice** is a unit of work that cuts through *every* layer of a system — UI, business logic, persistence, deployment — to deliver one small piece of functionality that actually works end to end. The contrast is a **horizontal slice**, where you build one layer in its entirety before starting the next.
+		- ### Vertical vs horizontal
+			- **Horizontal:** finish the whole database schema, then all the repositories, then all the API endpoints, then the front end. Nothing is demonstrable until the last layer lands, and every integration risk is deferred to the end.
+			- **Vertical:** pick one thin behavior — "a user can save a profile" — and build only the schema, endpoint, and UI that behavior needs. It is narrow in features but complete in depth.
+			- The usual teaching image is a **layer cake**: a horizontal cut hands someone a plate of frosting, while a vertical cut gives them a small piece of the whole cake, in proportion.
+		- ### Why it works
+			- **Feedback arrives early.** Something real is running, so it can be demoed, tested, and criticized before the design is expensive to change.
+			- **Integration risk is pulled forward.** The layers have to actually talk to each other on day one instead of during a late big-bang merge.
+			- **It forces the [[Architecture]] to prove itself.** A slice that is painful to build is evidence about the design, delivered while the design is still cheap to revise.
+			- **It produces increments of value,** which is why it is the standard advice for splitting work in [[Agile]] practice: write stories as complete user journeys ("as a user, I can create and save my profile"), not as technical components ("implement the user table").
+		- ### The same idea under other names
+			- **Tracer bullet** — from *The Pragmatic Programmer*: fire one shot all the way through the system to see where it lands. [[Person/Steve Yegge]] uses exactly this framing for agent work — find the thinnest end-to-end workflow you can get running and hang the rest of the project on it.
+			- **Walking skeleton** — Alistair Cockburn's term for a minimal end-to-end implementation that links the main architectural components together and can then be fleshed out.
+			- **Steel thread**, and **elephant carpaccio** for the exercise of slicing a story into absurdly thin end-to-end pieces.
+		- ### A second sense — Vertical Slice Architecture
+			- A **code-organization** pattern, popularized in .NET by Jimmy Bogard around 2018: organize the codebase by *feature* rather than by *technical layer*. Everything the "Add Product" feature needs — endpoint, validation, business rules, data access — lives together in one folder, isolated from other features.
+			- The motivation is that layered, Onion, and Clean architectures force a single feature change to be threaded through many layers. Vertical slices trade that for high cohesion inside a feature and low coupling between features.
+			- Note that this is about *where code lives*, not about *how work is sequenced* — the two senses share a metaphor, not a definition.
+		- ### A third sense — game development
+			- In games, a **vertical slice** is a specific production milestone: a small but representative chunk of the game built to near-final quality, proving that gameplay, art, tech, UI, audio, and pipeline all hold together at shipping standard.
+			- It typically marks the end of preproduction, and because it is playable it doubles as the artifact studios pitch to publishers and investors to de-risk funding decisions.
+		- ### As a leading word for coding agents
+			- Coding agents default to horizontal work — all the schema, then all the endpoints, then all the front end — because they optimize for the stated goal rather than for early feedback.
+			- [[Person/Matt Pocock]] treats "vertical slice" as a **leading word**: rather than instructing an agent "don't code layer by layer," name the pattern, because the phrase is well-established enough in developer writing to trigger the model's priors, and it then echoes the phrase back in its reasoning traces.
+			- ((6a7099ea-dda4-4766-84a5-ec504dd26c2e))
+			- The verification trick is to watch for the phrase reappearing in the agent's thinking — if it says "we'll do this as a thin vertical slice," the steer landed. Relevant to [[AI/Coding]] prompt and skill design generally.
+		- Refs: [monday.com — What is a vertical slice?](https://monday.com/blog/rnd/vertical-slice/), [Milan Jovanović — Vertical Slice Architecture](https://milanjovanovic.tech/blog/vertical-slice-architecture), [DevIQ — Vertical Slice Architecture](https://deviq.com/architecture/vertical-slice-architecture/), [Xsolla — The impact of the vertical slice](https://xsolla.com/blog/funding-101-the-impact-of-the-vertical-slice)
