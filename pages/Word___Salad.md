@@ -9,7 +9,7 @@ logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Term]]
 		- Adopted in AI criticism for model output that sounds fluent but conveys little.
 		- > "Where I think the word 'hallucination' is useful ... is not to describe what the AI is doing, but what we do when we encounter a word salad, and we impute a writer to the word salad." — [[Person/Cory Doctorow]], [The Guardian, 2026/06/24](https://www.theguardian.com/technology/2026/jun/24/cory-doctorow-on-elon-musk-ai-bubble-bosses-cruel-fantasies)
 	- ## "Neuralese" [[Examples]]
-		- I have observed [[Claude Code]] and other agents coining useless phrases
+		- I have observed [[Claude/Code]] and other agents coining useless phrases
 			- caveat-of-shame 😂
 				- > Accurate disclosure (not a caveat-of-shame):
 			- a departing setting

@@ -44,7 +44,7 @@ see-also:: [[Obsidian/CLI]], [[Obsidian/Q/What Obsidian keyboard shortcuts are m
 				  ~~~
 			- More robustly: `obsidian file file="$1"` gives the canonical page name; parse it and wrap in `[[ ]]`.
 		- ### Community CLI alternatives
-			- [`davidpp/obsidian-cli`](https://github.com/davidpp/obsidian-cli) — AI-optimized with a REST API mode; designed for agentic tools like [[Claude Code]].
+			- [`davidpp/obsidian-cli`](https://github.com/davidpp/obsidian-cli) — AI-optimized with a REST API mode; designed for agentic tools like [[Claude/Code]].
 				- [[My Note]]s 3 stars, typescript, funny. uses an API key to secure the localhost Obsidian server (which might be standard for obsidian)
 			- [nightisyang/obsidian-cli](https://github.com/nightisyang/obsidian-cli) — headless-first with ripgrep search and a backlink index; no running app required.
 				- [[My Note]] 1 star, go

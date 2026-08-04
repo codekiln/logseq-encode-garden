@@ -10,7 +10,7 @@ see-also:: [[Claude/Code/Q/What is the new TUI mode in Claude Code about?]]
   card-last-score:: 5
 	- ## [[My Answer]]
 		- when claude is in `/tui fullscreen` mode, it uses an off-screen render buffer, which interferes with tmux
-		- inside of claude, use `/tui default` to disable [[Claude Code/TUI]] mode.
+		- inside of claude, use `/tui default` to disable [[Claude/Code/TUI]] mode.
 	- ## [[AI Answer]]
 		- [[AI/Response]]
 		- **Short answer:** [[Claude/Code]] TUI mode activates the terminal **alternate screen buffer**, which never writes to [[tmux]]'s main scrollback — so copy mode has nothing to scroll through.

@@ -53,7 +53,7 @@
 				  ~~~
 	- ## Related Pages
 		- [[Claude/Code]]
-		- [[Claude Code/Bedrock]]
+		- [[Claude/Code/Bedrock]]
 		- [[AWS/Bedrock]]
 		- [[AWS/Bedrock/Model/Anthropic]]
 		- [[GitHub/Codespace/Q/Can OIDC Grant Access to AWS Bedrock as in GitHub Actions for Claude Code]]

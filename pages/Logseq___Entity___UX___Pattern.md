@@ -8,7 +8,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## What counts as an instance
 		- Good fit: recurring interface behaviors such as [[UX/Pattern/Dark]], [[UX/Pattern/Text Input/Slash Command]], and [[UX/Pattern/Text Input/Suggest/Completion]].
 		- Good fit: patterns whose primary identity is the interaction itself, not one vendor's implementation.
-		- Not this type: tool-specific notes such as [[Claude Code/Command/Slash]] when the page is mainly about one product's feature surface rather than the general pattern.
+		- Not this type: tool-specific notes such as [[Claude/Code/Command/Slash]] when the page is mainly about one product's feature surface rather than the general pattern.
 		- Prefer **concept** when the page is a broader design or ethics explanation.
 		- Prefer **term** when the page is only a short vocabulary anchor.
 	- ## Finding and deduplicating

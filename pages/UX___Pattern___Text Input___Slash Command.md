@@ -17,4 +17,4 @@ logseq-entity:: [[Logseq/Entity/UX/Pattern]]
 	- ## Related
 		- [[UX/Pattern/Text Input/Suggest/Completion]]
 		- [[Agent/Command]] — a domain-specific use of this pattern in AI tooling.
-		- [[Claude Code/Command/Slash]] — a product-specific example.
+		- [[Claude/Code/Command/Slash]] — a product-specific example.

@@ -8,5 +8,5 @@ tags:: [[Agent/Command]], [[Claude/Code]]
 		- Claude reviews recent transcripts for repetitive safe tool calls
 		- Adds those calls to an allowlist in the project's `.claude/settings.json`
 	- ## See also
-		- [[Claude Code/Command/Slash]] — all Claude Code slash commands
+		- [[Claude/Code/Command/Slash]] — all Claude Code slash commands
 		- [[Agent/Command]]

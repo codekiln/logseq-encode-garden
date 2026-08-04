@@ -2,7 +2,7 @@ logseq-entity:: [[Logseq/Entity/Question]]
 tags:: [[Question]]
 see-also:: [[Obsidian/Q/In obsidian, how can I link to a heading in another file?]], [[Obsidian/Q/Is there a keyboard shortcut in Obsidian for quickly finding keyboard shortcuts in Obsidian?]]
 
-- # What [[Obsidian]] [[Keyshort/User]] assigned to a plugin is useful for pointing to pages and headings when working with external agentic coding tools like [[Claude Code]]? [[card]]
+- # What [[Obsidian]] [[Keyshort/User]] assigned to a plugin is useful for pointing to pages and headings when working with external agentic coding tools like [[Claude/Code]]? [[card]]
   card-last-score:: 5
   card-repeats:: 2
   card-next-schedule:: 2026-06-28T20:45:31.520Z
@@ -14,7 +14,7 @@ see-also:: [[Obsidian/Q/In obsidian, how can I link to a heading in another file
 	- ## [[AI Answer]]
 		- **Short answer:** Obsidian has no built-in hotkey for these by default, but two built-in commands cover files and two community plugins fill the heading-link gap. Assign hotkeys to them in **Settings → Hotkeys**.
 		- ### Built-in commands (no default hotkey — must assign)
-			- **Copy file path** — copies the vault-relative path (e.g. `folder/note.md`) to the clipboard. This is the most direct way to hand a file reference to [[Claude Code]] so it can read or edit that file.
+			- **Copy file path** — copies the vault-relative path (e.g. `folder/note.md`) to the clipboard. This is the most direct way to hand a file reference to [[Claude/Code]] so it can read or edit that file.
 			- **Copy Obsidian URL** — copies a deep-link URI in the form `obsidian://open?vault=VaultName&file=folder%2Fnote`. Useful when an external tool can open URLs, less useful for raw file-path needs.
 			- Fastest way to discover what a command's hotkey is (or assign one): open the **Command palette** (`Cmd+P` / `Ctrl+P`), search for "copy file path" or "copy obsidian url", and the assigned hotkey is shown beside the command. To assign one, go to **Settings → Hotkeys** and search for the command name.
 		- ### For headings (needs a community plugin)

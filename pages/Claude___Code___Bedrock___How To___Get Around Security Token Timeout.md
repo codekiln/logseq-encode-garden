@@ -157,7 +157,7 @@ title:: Claude/Code/Bedrock/How To/Get Around Security Token Timeout
 			  ```
 			  4. **Retry Claude Code request**
 	- ## Related Pages
-		- [[Claude Code/Bedrock]] - Main Bedrock integration guide
+		- [[Claude/Code/Bedrock]] - Main Bedrock integration guide
 		- [[mise/Task/How To/invoke aws_okta_keyman from mise with a configuration that references a default AWS account]] - Example of setting up credential refresh scripts
 		- [[Claude/Code/Settings]] - Claude Code settings documentation
 	- ## References

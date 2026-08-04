@@ -9,5 +9,5 @@ tags:: [[Agent/Command]], [[Claude/Code]]
 		- Claude produces an `ONBOARDING.md` file summarizing your usage
 		- The file is uploaded and a shareable URL is returned
 	- ## See also
-		- [[Claude Code/Command/Slash]] — all Claude Code slash commands
+		- [[Claude/Code/Command/Slash]] — all Claude Code slash commands
 		- [[Agent/Command]]

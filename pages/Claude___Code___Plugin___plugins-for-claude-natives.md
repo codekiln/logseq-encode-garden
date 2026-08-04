@@ -3,7 +3,7 @@ created-by:: [[Team Attention]]
 date-created:: [[2026/01/01]]
 
 - # [plugins-for-claude-natives](https://github.com/team-attention/plugins-for-claude-natives)
-	- [[Claude Code]] plugin suite for power users by [[Team Attention]].
+	- [[Claude/Code]] plugin suite for power users by [[Team Attention]].
 	- **Stars:** 802 · **License:** MIT · **Install:** `/plugin marketplace add team-attention/plugins-for-claude-natives`
 	- ## Included plugins
 		- **agent-council** — collect opinions from multiple AI models (Gemini, GPT, Codex) for consensus decisions

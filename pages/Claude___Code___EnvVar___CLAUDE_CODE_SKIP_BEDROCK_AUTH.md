@@ -30,5 +30,5 @@
 		- [[Claude/Code/EnvVar/ANTHROPIC_MODEL]] - Model selection when using Bedrock
 	- ## References
 		- [[Claude/Code/Settings]] - Official Claude Code settings documentation
-		- [[Claude Code/Bedrock]] - AWS Bedrock integration guide
+		- [[Claude/Code/Bedrock]] - AWS Bedrock integration guide
 		- [[LiteLLM]] - Example LLM gateway implementation

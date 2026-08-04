@@ -11,7 +11,7 @@
 			- Aligns with existing workflow rules—e.g. **`[[AI/Coding/Concept/Land the Plane]]`** / `.rulesync` **landing-the-plane** material that already expects agents to run **`bd sync`** before push where Beads is in use.
 		- Optional stretch: a **progressive-disclosure skill** (see **`[[rulesync/How To/Write Skills With Progressive Disclosure]]`**) so lightweight installs only see a checklist, and deep references stay in `references/`.
 	- ## Prior art in this graph
-		- [[2026-03-17 Tue]] journal: **`bd setup claude`**, the beads **[[Claude Code/Plugin]]**, and **`bd prime`** on **[[Claude/Code/Hook/SessionStart]]** / **[[Claude/Code/Hook/PreCompact]]**—useful pattern, **Claude-specific**; the abstraction should generalize the *intent* (agent always has Beads context + consistent CLI entry points) across tools.
+		- [[2026-03-17 Tue]] journal: **`bd setup claude`**, the beads **[[Claude/Code/Plugin]]**, and **`bd prime`** on **[[Claude/Code/Hook/SessionStart]]** / **[[Claude/Code/Hook/PreCompact]]**—useful pattern, **Claude-specific**; the abstraction should generalize the *intent* (agent always has Beads context + consistent CLI entry points) across tools.
 		- [[2026-03-25 Wed]] journal: **[[Beads]]** / **`[[bd]]`** with **[[tmux]]** and **[[Parallel]]** **[[AI/Agent/Agentic/Engineer/ing]]**—orthogonal to IDE registration, but relevant to “many agents, one task graph.”
 	- ## Done when
 		- A **generated** rule/skill lands in the targets you care about (Cursor, Claude Code, Codex CLI, …) from **rulesync**, and agents reliably **register** or **reuse** Beads per [IDE setup](https://steveyegge.github.io/beads/getting-started/ide-setup) without one-off instructions in each session.

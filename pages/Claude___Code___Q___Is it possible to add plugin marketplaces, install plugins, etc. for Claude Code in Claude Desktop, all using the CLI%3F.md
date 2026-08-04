@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Question]]
-see-also:: [[Claude Code/Plugin/Marketplace]], [[Claude/Desktop/Extension]]
+see-also:: [[Claude/Code/Plugin/Marketplace]], [[Claude/Desktop/Extension]]
 
 - # Is it possible to add plugin marketplaces, install plugins, etc. for Claude Code in Claude Desktop, all using the CLI?
 	- ## [[AI Answer]]

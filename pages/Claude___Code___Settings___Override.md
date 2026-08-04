@@ -70,8 +70,8 @@ see-also:: [[Claude/Code/Settings]]
 		- 3. Because **local > project > user**, the local file wins for exactly the plugins it names and leaves the rest of the shared config untouched. Pushing customization into `settings.local.json` (rather than `~/.claude/settings.json`) is what makes per-person opt-out of a project-enabled plugin possible.
 	- ## See also
 		- [[Claude/Code/Settings]] — full settings reference (keys, env vars, the precedence list).
-		- [[Claude Code/Plugin/Marketplace]] — marketplace `marketplace.json` structure.
-		- [[Claude Code/Plugin]]
+		- [[Claude/Code/Plugin/Marketplace]] — marketplace `marketplace.json` structure.
+		- [[Claude/Code/Plugin]]
 	- ## Sources
 		- [Claude Code settings](https://code.claude.com/docs/en/settings) — settings files, precedence, replace-vs-merge.
 		- [Discover and install prebuilt plugins](https://code.claude.com/docs/en/discover-plugins) — `enabledPlugins`, scopes, `/plugin install` defaults.

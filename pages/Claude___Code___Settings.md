@@ -1,4 +1,4 @@
-alias:: [[Anthropic/App/Claude Code/Settings]], [[Claude Code/Config]]
+alias:: [[Anthropic/App/Claude Code/Settings]], [[Claude/Code/Config]]
 title:: Claude/Code/Settings
 - # [Claude Code settings](https://docs.claude.com/en/docs/claude-code/settings)
 	- > Configure Claude Code with global and project-level settings, and environment variables.

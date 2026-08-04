@@ -14,7 +14,7 @@ github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/M
 	- ## Prerequisites
 		- A computer with a terminal: Terminal on macOS, any terminal on Linux, or WSL on Windows.
 		- [git](https://git-scm.com/downloads). Check with `git --version`, and install it if that fails.
-		- An AI coding agent — any one of [[Claude Code]], [[Codex]], [[CursorAI]], [[GitHub/CoPilot]], or any other [[AI/Coding/Agents.md]]-compatible agent.
+		- An AI coding agent — any one of [[Claude/Code]], [[Codex]], [[CursorAI]], [[GitHub/CoPilot]], or any other [[AI/Coding/Agents.md]]-compatible agent.
 			- [[AI/Coding/Tool/Report/26/Free Tier Providers]] surveys which AI coding tools have a usable free tier right now.
 		- Install at least one before step 4; the task asks which you have and starts it. mise installs the setup tool ([[rulesync]]) for you in step 3, but not the agent itself. To ask for free, [[GitHub/CoPilot]] has a free tier; the others need a paid plan. See "Which AI agent?" below to choose.
 	- ## Steps
@@ -57,7 +57,7 @@ github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/M
 	- ## Which AI agent?
 		- The task works with any of these. Pick one, install it, and the one-command path above does the rest.
 			- [[GitHub/CoPilot]] — has a **free tier**, so this is the no-cost option. A free GitHub account includes Copilot Free.
-			- [[Claude Code]] — paid: a [Claude plan](https://claude.com/pricing) (Pro starts around $20 per month) or API credits.
+			- [[Claude/Code]] — paid: a [Claude plan](https://claude.com/pricing) (Pro starts around $20 per month) or API credits.
 			- [[Codex]] — paid, via an OpenAI account.
 			- [[CursorAI]] — paid; its terminal agent is `cursor-agent`.
 			- Any other [[AI/Coding/Agents.md]]-compatible agent (Gemini CLI, opencode, and the like) — choose `agentsskills`; the garden's `.agents/skills` works with it.

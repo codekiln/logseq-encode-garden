@@ -1,11 +1,11 @@
 logseq-entity:: [[Logseq/Entity/Concept]]
 tags:: [[Diataxis/Concept]]
-see-also:: [[Claude Code/Plugin]], [[Claude Code/Plugin/Marketplace]], [[Claude Code Skills]]
+see-also:: [[Claude/Code/Plugin]], [[Claude/Code/Plugin/Marketplace]], [[Claude Code Skills]]
 
 - # Skills-Directory Plugin
 	- ## Overview
-		- A **skills-directory plugin** is an ordinary [[Claude Code/Plugin]] that Claude Code finds because it sits inside a *skills directory* — `~/.claude/skills/` or a project's `.claude/skills/`. One file flips a plain skill folder into a plugin: any folder there that holds a `.claude-plugin/plugin.json` manifest loads as a plugin named `<name>@skills-dir` on the next session, with no marketplace and no install step.
-		- The `@skills-dir` suffix is the plugin's source label, the slot where a marketplace name would otherwise go. Claude Code reads such a plugin from where it lives; a [[Claude Code/Plugin/Marketplace]] install instead copies the plugin into the cache at `~/.claude/plugins/cache`. Discovery in place is what lets you edit the files directly and have the graph pick them up.
+		- A **skills-directory plugin** is an ordinary [[Claude/Code/Plugin]] that Claude Code finds because it sits inside a *skills directory* — `~/.claude/skills/` or a project's `.claude/skills/`. One file flips a plain skill folder into a plugin: any folder there that holds a `.claude-plugin/plugin.json` manifest loads as a plugin named `<name>@skills-dir` on the next session, with no marketplace and no install step.
+		- The `@skills-dir` suffix is the plugin's source label, the slot where a marketplace name would otherwise go. Claude Code reads such a plugin from where it lives; a [[Claude/Code/Plugin/Marketplace]] install instead copies the plugin into the cache at `~/.claude/plugins/cache`. Discovery in place is what lets you edit the files directly and have the graph pick them up.
 	- ## What a skills directory can hold
 		- The same folder tree carries three different things, told apart by whether a `plugin.json` manifest is present.
 		- | What you have | What it is |

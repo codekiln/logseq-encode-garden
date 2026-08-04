@@ -20,4 +20,4 @@
 	- ## Related Pages
 		- [[AWS/IAM/Role]]
 		- [[AWS/Bedrock]]
-		- [[Claude Code/Bedrock]]
+		- [[Claude/Code/Bedrock]]

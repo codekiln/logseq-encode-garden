@@ -1,6 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Question]]
 
-- # Is there a [[Claude Code]] CLI slash command to see a diff of changed files, and why doesn't `/diff` show the diff content?
+- # Is there a [[Claude/Code]] CLI slash command to see a diff of changed files, and why doesn't `/diff` show the diff content?
 	- ## [[AI Answer]]
 		- [[Answer/Official]] from [Claude Code Commands Reference](https://code.claude.com/docs/en/commands.md)
 		- **Short answer:** `/diff` exists; the "New file not yet staged" message for untracked files is a side effect of the **Current** tab being `git diff HEAD` under the hood, not intentional concealment — `git` has no index entry to diff an untracked file against.

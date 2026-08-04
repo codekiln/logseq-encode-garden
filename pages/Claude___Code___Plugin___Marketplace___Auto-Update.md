@@ -1,10 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Concept]]
 tags:: [[Diataxis/Concept]]
-see-also:: [[Claude Code/Plugin/Marketplace]], [[Claude/Desktop/Code]], [[Claude Code/Plugin]]
+see-also:: [[Claude/Code/Plugin/Marketplace]], [[Claude/Desktop/Code]], [[Claude/Code/Plugin]]
 
 - # Claude Code Plugin Marketplace Auto-Update
 	- ## Overview
-		- The use case: a team publishes a [[Claude Code/Plugin]] to a **private** [[Claude Code/Plugin/Marketplace]], and everyone consuming it through the [[Claude/Desktop/Code]] tab (Windows and macOS) should end up on each new version without manual steps.
+		- The use case: a team publishes a [[Claude/Code/Plugin]] to a **private** [[Claude/Code/Plugin/Marketplace]], and everyone consuming it through the [[Claude/Desktop/Code]] tab (Windows and macOS) should end up on each new version without manual steps.
 		- Bottom line (as of [[2026-07-28 Tue]]): the marketplace file itself cannot declare auto-update, and the built-in per-marketplace auto-update is unreliable for third-party marketplaces — it refreshes the catalog but often fails to move installed plugins forward, silently. The dependable path is **version discipline in CI plus a small updater shipped in the marketplace**. On macOS that updater runs as a `SessionStart` hook; on Windows, where plugin hooks silently do nothing before Desktop v1.24012.9, the same script runs instead as a logon [[Claude/Desktop/Scheduled Task]] — a delivery path that does not depend on the app's hook system.
 	- ## Three surfaces called "plugin controls"
 		- Only some of these exist on the desktop Code tab; match the instruction to the surface.

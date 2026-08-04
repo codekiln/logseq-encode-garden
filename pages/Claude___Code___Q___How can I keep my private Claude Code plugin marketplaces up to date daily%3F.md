@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Question]]
-see-also:: [[Claude Code/Plugin/Marketplace]]
+see-also:: [[Claude/Code/Plugin/Marketplace]]
 
-- # How can I keep my private [[Claude Code/Plugin/Marketplace]]s up to date daily?
+- # How can I keep my private [[Claude/Code/Plugin/Marketplace]]s up to date daily?
 	- ## [[AI Answer]]
 		- [[Answer/Official]] from [Create and distribute a plugin marketplace - Claude Code Docs](https://code.claude.com/docs/en/plugin-marketplaces)
 			- **Short answer:** run `claude plugin marketplace update` yourself on a schedule (e.g. a daily cron job or launchd task) rather than relying on Claude Code's built-in auto-update — for a private marketplace, auto-update is both off by default and unreliable over HTTPS, while a manual/scripted `update` uses your normal git credentials the same as your terminal.
