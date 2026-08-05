@@ -6,4 +6,5 @@ tags:: [[CLI/Tool]], [[Programming/Code/Analysis/Static/Lint/er]]
 	- Implements the **CLI Lint** standard — versioned, testable criteria distilled from [[CLI/Guidelines]] and [[Person/Jeff Dickey/Blog/18/10/09/12 Factor CLI Apps]].
 	- Realizes [[CLI/Agent/ic/Principle]]: a shared standard that measurably improves both human and AI-agent use of a CLI, plus the tooling to measure adherence.
 	- Reports carry stable rule identifiers (prefix `CLI-`), evidence, severity, score impact, and remediation, so an [[AI/Agent]] can loop: generate a CLI, lint it, repair violations, and re-check conformance.
+	- Prior art for the standard-plus-checker shape: [[Vale]], a markup-aware prose linter whose configurable rule sets and machine-readable output do for documentation what CLI Lint rules do for command-line interfaces.
 	- Vocabulary: CLI Lint standard, CLI Lint rules, CLI Lint score, CLI Lint conformance, and the `clilint` command.
