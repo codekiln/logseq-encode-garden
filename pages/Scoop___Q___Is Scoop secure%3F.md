@@ -1,0 +1,40 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+see-also:: [[Security/Attack/Chain/Supply]], [[mise/Config/Setting/minimum_release_age]]
+
+- # Is [[Scoop]] secure?
+	- ## [[AI Answer]]
+		- **Short answer:** Scoop's model is *trust the bucket, verify the bytes*. It checks a SHA256 hash for every download and installs without admin rights, but it does not review or scan what's inside a package, it lets manifests run arbitrary [[PowerShell]] at install time, and its own bootstrap is an unverified `irm | iex`. For [[mise]] on [[Windows]] specifically the exposure is small — `mise` sits in the official Main bucket as a hash-pinned zip from [[GitHub/Release]] with no install scripts — so `scoop install mise` is roughly equivalent to downloading the release zip and checking the checksum by hand.
+		- ### What Scoop does verify
+			- Every manifest carries a hash (SHA256 by default) and Scoop checks it after download, before install. A tampered or MITM'd artifact fails.
+			- Downloads point at the vendor's own URLs rather than a Scoop-hosted mirror. `scoop cat <app>` shows the manifest, so the download source is inspectable before installing.
+			- Trust is granted at the **bucket** level: the client ships with a known-bucket list, and manifests inside those buckets are hash-verified per package.
+		- ### What it doesn't do
+			- **No automatic malware scanning.** `scoop virustotal` and `scoop download` exist, but they are opt-in manual steps. Manifest pull requests get human maintainer review, not a validation pipeline.
+			- **Hashes are auto-generated, not attested.** The Excavator bot regenerates versions, URLs, and hashes from upstream release metadata (e.g. a release's `SHASUMS256.txt`). The hash therefore proves the file matches what upstream published — it says nothing about whether upstream published something benign, and nothing about a compromised maintainer account.
+			- **Hash-less manifests still install**, with only a warning (`Warning: No hash in manifest. SHA256 for '<app>' is: …`). A request to block those by default is open, not implemented.
+			- **Manifests are executable.** `installer`, `pre_install`, and `post_install` run PowerShell as your user at install time, and there is no per-package allowlist for that — `scoop bucket add` grants a third-party repo the same trust as the core buckets. This puts Scoop in the same category as Homebrew and Chocolatey, and behind winget, whose manifests are non-executable descriptions of a signed installer plus a checksum.
+			- **The installer itself is unverified.** The documented bootstrap is `irm get.scoop.sh | iex` with no published hash or signature to check it against — the "don't pipe curl to shell" objection, raised as an issue years ago and still the shipping path.
+		- ### The no-admin design cuts both ways
+			- **In its favor:** the default install lands in `C:\Users\<you>\scoop`, admin installs are *disabled by default* "for security considerations" (you must pass `-RunAsAdmin` explicitly), and there are no UAC prompts to habituate you into clicking through. A malicious package compromises your user account, not the machine.
+			- **Against:** everything under `~\scoop\apps` plus the shims on `PATH` stays writable by your own user, so any process already running as you can trojanize an installed binary without ever needing elevation — a protection `C:\Program Files` does give you. Code signing plus SmartScreen catch part of that, not all of it.
+		- ### For mise on Windows
+			- mise's own docs put Scoop first (it wires shims into `PATH` automatically), winget second, Chocolatey third with an "outdated" caveat, manual install last.
+			- The Main-bucket `mise` manifest downloads `mise-v<version>-windows-x64.zip` (and an arm64 variant) from GitHub Releases with SHA256 hashes autoupdated from the release's `SHASUMS256.txt`, and carries no `pre_install` / `post_install` scripts. The install-time attack surface here is the release artifact itself, not Scoop's scripting.
+			- winget is the more conservative pick if the Scoop trust model is the concern: a Microsoft-run repository with a review pipeline and non-executable manifests. The cost is doing shim and `PATH` setup yourself.
+		- ### Practical hardening
+			- Stay on the official buckets. Treat every `scoop bucket add <third-party>` as a decision to run that person's PowerShell.
+			- `scoop cat <app>` before installing anything unfamiliar; `scoop download` then `scoop virustotal` when a package warrants it.
+			- Don't install Scoop elevated unless a specific app requires a global install.
+			- Keep antivirus on and expect false positives — Scoop maintains a wiki page just for AV interference.
+			- Orthogonal but complementary on the mise side: [[mise/Config/Setting/minimum_release_age]] delays adoption of freshly published *tool* versions, which is where most supply-chain compromises get caught. It does not cover Scoop's own installs.
+		- ### Sources
+			- [What measures does scoop take to keep malware out of its packages? — ScoopInstaller/Scoop Discussion #6153](https://github.com/ScoopInstaller/Scoop/discussions/6153)
+			- [\[Feature\] Block apps without file hash by default for security reasons — Issue #6387](https://github.com/ScoopInstaller/Scoop/issues/6387)
+			- [Installation steps for Scoop itself (security considerations) — Issue #2583](https://github.com/ScoopInstaller/Scoop/issues/2583)
+			- [ScoopInstaller/Install — install instructions and `-RunAsAdmin`](https://github.com/ScoopInstaller/Install)
+			- [App Manifest Autoupdate — Scoop wiki](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifest-Autoupdate)
+			- [Chocolatey and Winget Comparison — Scoop wiki](https://github.com/ScoopInstaller/Scoop/wiki/Chocolatey-and-Winget-Comparison)
+			- [Antivirus and Anti Malware Problems — Scoop wiki](https://github.com/ScoopInstaller/scoop/wiki/Antivirus-and-Anti-Malware-Problems)
+			- [Install-script allowlists — Andrew Nesbitt](https://nesbitt.io/2026/06/05/install-script-allowlists.html)
+			- [mise — Installing mise](https://mise.jdx.dev/installing-mise.html)
+			- [ScoopInstaller/Main — bucket/mise.json](https://github.com/ScoopInstaller/Main/blob/master/bucket/mise.json)

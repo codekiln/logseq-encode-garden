@@ -10,6 +10,11 @@ tags:: [[Readwise]], [[CLI/Tool]]
 			- Supports listing documents with various filters
 			- Example: `rw-cli add <URL>` to save an article
 			- Example: `rw-cli list --location later --category article` to list saved articles
+	- ## Limitations
+		- RSS feed subscriptions cannot be managed from the CLI. There is no subscribe command, because the underlying [Reader API](https://readwise.io/reader_api) only saves and lists documents — feed management is not exposed. Subscribing stays a manual step in the app via [[Readwise/Reader/Preferences/Add to Feed]].
+			- Workaround for a site with no feed: save each URL with `readwise reader-create-document --url <URL>`, driven from the site's `sitemap.xml` if it has one.
+		- `reader-create-document --tags` can silently fail to apply tags — the document is created, but comes back with empty tags. Apply them in a second call with `readwise reader-add-tags-to-document --document-id <id> --tag-names <a,b>`, then verify.
+		- Titles come from Reader's own scrape of the URL, which can prefer a page's `<h1>` over its `<title>`. On sites where the `<h1>` is a shared series heading, several distinct articles land under one identical title. Check the title after saving and correct it with `readwise reader-bulk-edit-document-metadata`.
 	- ## Related
 		- [[Readwise/AI/Report/26/01/AI control of Readwise - Options Jan 2026]]
 		- [Readwise API Documentation](https://readwise.io/api_deets)

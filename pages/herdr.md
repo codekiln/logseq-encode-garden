@@ -1,0 +1,16 @@
+logseq-entity:: [[Logseq/Entity/Software/Project]]
+created-by:: [[Person/Can Celik]]
+date-created:: [[2026/03/27]]
+see-also:: [[tmux]], [[Zellij]], [[Terminal/Multiplexer]]
+
+- # [herdr](https://herdr.dev)
+	- Terminal-native agent multiplexer: surfaces the state of every coding agent at a glance — blocked, working, done — as real terminal panes rather than a wrapped interpretation of them. Self-described as "the runtime your coding agents live on."
+	- [herdrdev/herdr](https://github.com/herdrdev/herdr) — [[GitHub/Star]]: 24,249 (checked 2026-08-04). Apache 2.0.
+	- Written in [[Rust]]; ships as a single binary rather than an Electron app, and runs inside whatever terminal is already in use.
+	- ## Where it sits against [[tmux]]
+		- Covers the multiplexer basics that make it a plausible [[tmux]] replacement rather than a companion: detach and reattach from any terminal, sessions that survive restarts, and attach over SSH. Weighed on [[Terminal/Multiplexer/Idea]].
+		- Keeps tmux-style prefix keys while treating mouse click, drag, and split as equally first-class, so neither input mode is the fallback.
+	- ## What the agent orientation adds
+		- Agent state detection is the premise: panes are labeled by whether the agent inside is blocked, working, or done, which is the piece a general-purpose multiplexer leaves to the human to infer.
+		- A socket API lets agents drive the multiplexer themselves — spawning panes, reading output, and waiting on each other — rather than only being driven by a human at the prefix key.
+		- Plugins extend panes and workflows, distributed through a marketplace.
