@@ -1,0 +1,7 @@
+- [[Keyshort]] [[tmux]] [[tmux/Keyshort]]
+	- **Enable Mouse** [[Card]]
+		- Shortcut: `<prefix> :` then `set -g mouse on` [[Keyshort/Default]]
+		- Description: Turns on mouse support at runtime via the [[tmux/Command/Prompt]] (scroll, click panes/windows, drag borders). Does not edit `~/.tmux.conf`; clears when the tmux server stops.
+		- [[My Notes]]
+			- Off: `<prefix> :` → `set -g mouse off`
+			- Check: `<prefix> :` → `show -gv mouse`
