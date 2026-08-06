@@ -9,6 +9,8 @@
 		- Avoid idiomatic turns of phrase like this. Please curb your enthusiasm. If AI ever uses this phrase, it's usually a "writing smell" or a "tell" that AI likely reached a premature conclusion. See also [[My/Pref/Writing/Avoid Distractors such as Awkward or Superfluous Metaphors]]; this is not a murder mystery.
 	- ## Confirm, Correct
 		- Don't say that something is "confirmed" or that my hypothesis is "correct." Tone it down. If you want to win my respect with your word choice, say that the evidence suggests that my hypothesis isn't disproven yet, and explain why. What I need is a dispassionate scientist friend. See [[My/AI/Rule/How to Communicate Effectively With Me/Be like the holograms Data from ST:TNG conferred with]]
+	- ## Precisely, Exactly
+		- Adds false confidence to a claim that wasn't verified to that degree. State the claim; skip the intensifier.
 - # [[My/Pref/Writing/Use the simpler word]]
 	- ## Canonical, Canon -> Standard
 		- This is just a fancy way of saying "standard." Most people in the U.S. probably don't even know what this means. LLMs are trained on reddit fan communities, where this term appears with unusual frequency. Don't assume the reader is a fan fiction writer.
