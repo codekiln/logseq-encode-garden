@@ -14,8 +14,8 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[AI/Coding/Tool/Report/25/Skills Comparis
 		- **OpenCode has a highly programmable plugin API**, including hooks and transformations of agents, commands, skills, and tools. Its newer API is beta and resembles an application extension API more than a declarative Claude-style plugin bundle.
 		- **Rulesync has become a provider-neutral intermediate representation for individual agent configuration components**, including skills, hooks, subagents, commands, MCP, and rules. It still does **not** define a provider-neutral plugin manifest, package lifecycle, marketplace catalog, or universal installation format.
 		- **No genuinely provider-neutral, lossless plugin standard exists.** The portable layer is currently a collection of narrower standards—Agent Skills, MCP, and instruction files—combined with host-specific manifests and build-time adapters.
-		- The most consequential interoperability development is not Rulesync but **explicit Claude-plugin compatibility in other hosts**. GitHub Copilot CLI reads Claude-compatible plugin and marketplace locations and documents installation from Anthropic’s Claude Code marketplace. Junie CLI accepts both its native marketplace format and `.claude-plugin/marketplace.json`. Codex recognizes the legacy Claude marketplace location and exports Claude-compatible hook environment variables, although it does not document full Claude manifest compatibility.
-		- Your November 2025 comparison was useful as a historical snapshot, but its conclusions about Codex, Cursor, Copilot, and the uniqueness of Claude Skills are now materially obsolete. Your separate marketplace research also identified important structural precedents, but some of its assertions—such as canonical `skill.yaml` or `skill.json` files, broadly enforced compatibility bounds, and uniform semantic-version handling—should not be treated as verified characteristics of the Claude ecosystem. Current Agent Skills use `SKILL.md`, while marketplace and manifest semantics vary by host.
+		- The most consequential interoperability development is not Rulesync but **explicit Claude-plugin compatibility in other hosts**. GitHub Copilot CLI reads Claude-compatible plugin and marketplace locations and documents installation from Anthropic’s Claude Code marketplace. Junie CLI accepts both its native marketplace format and `.claude-plugin/marketplace.json`. Codex recognizes the legacy Claude marketplace location and exports Claude-compatible hook environment variables, although it does not document full Claude manifest compatibility. [^1]
+		- Your November 2025 comparison was useful as a historical snapshot, but its conclusions about Codex, Cursor, Copilot, and the uniqueness of Claude Skills are now materially obsolete. Your separate marketplace research also identified important structural precedents, but some of its assertions—such as canonical `skill.yaml` or `skill.json` files, broadly enforced compatibility bounds, and uniform semantic-version handling—should not be treated as verified characteristics of the Claude ecosystem. Current Agent Skills use `SKILL.md`, while marketplace and manifest semantics vary by host. [^2]
 	- ## Review method and evaluation model
 		- The review prioritized first-party documentation, source repositories maintained by the tool vendor, and official specifications. A system qualified as a plugin-like implementation when it supported at least one of the following:
 		- 1. An installable package containing multiple Agent Skills.
@@ -24,7 +24,7 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[AI/Coding/Tool/Report/25/Skills Comparis
 		- 4. A marketplace or package-manager lifecycle for discovering, installing, upgrading, disabling, or removing the unit.
 		- The comparison distinguishes several concepts that are often conflated:
 		- **Agent Skill**
-		- A progressively loaded folder centered on `SKILL.md`, optionally containing scripts, references, and assets. The open Agent Skills specification defines metadata-first discovery, loading the full instructions on activation, and reading resources only as needed.
+		- A progressively loaded folder centered on `SKILL.md`, optionally containing scripts, references, and assets. The open Agent Skills specification defines metadata-first discovery, loading the full instructions on activation, and reading resources only as needed. [^2]
 		- **Plugin or extension package**
 		- An installation and distribution boundary containing one or more skills and potentially other component types. A package requires identity, dependency or source information, component discovery, and usually enablement or update behavior.
 		- **Hook**
@@ -53,7 +53,7 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[AI/Coding/Tool/Report/25/Skills Comparis
 				- Subagents: Yes
 				- MCP or tools: MCP, LSP, monitors, executables
 				- Distribution and lifecycle: Local loading, private or public marketplaces, versioned installs
-				- Assessment: **Full reference implementation**
+				- Assessment: **Full reference implementation** [^4]
 			- Tool and surface: **OpenAI Codex**
 				- Package model: `.codex-plugin/plugin.json`
 				- Multiple skills: Yes
@@ -61,7 +61,7 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[AI/Coding/Tool/Report/25/Skills Comparis
 				- Subagents: Not documented as a plugin component
 				- MCP or tools: MCP and registered app connections
 				- Distribution and lifecycle: Local, repository, Git, npm, private marketplace, public universal directory
-				- Assessment: **Near-full; no packaged subagents or commands documented**
+				- Assessment: **Near-full; no packaged subagents or commands documented** [^5]
 			- Tool and surface: **Cursor IDE**
 				- Package model: `.cursor-plugin/plugin.json`
 				- Multiple skills: Yes
@@ -69,7 +69,7 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[AI/Coding/Tool/Report/25/Skills Comparis
 				- Subagents: Yes
 				- MCP or tools: MCP
 				- Distribution and lifecycle: Local plugins, multi-plugin repositories, public and team distribution
-				- Assessment: **Full in the IDE**
+				- Assessment: **Full in the IDE** [^6]
 			- Tool and surface: **Cursor CLI**
 				- Package model: Individual Cursor components are supported, but `.cursor-plugin` bundle parity is not clearly guaranteed in official plugin documentation
 				- Multiple skills: Yes
@@ -77,7 +77,7 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[AI/Coding/Tool/Report/25/Skills Comparis
 				- Subagents: Yes
 				- MCP or tools: MCP
 				- Distribution and lifecycle: No authoritative documentation establishing full IDE-plugin installation parity
-				- Assessment: **Partial or underdocumented as a plugin host**
+				- Assessment: **Partial or underdocumented as a plugin host** [^6]
 			- Tool and surface: **Pi**
 				- Package model: npm, Git, or local package with `package.json` `pi` manifest
 				- Multiple skills: Yes
@@ -85,7 +85,7 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[AI/Coding/Tool/Report/25/Skills Comparis
 				- Subagents: Through extension code rather than native definitions
 				- MCP or tools: Custom tools through extensions; no built-in MCP
 				- Distribution and lifecycle: `pi install`, update, remove, project/user scopes, npm/Git sources, gallery metadata
-				- Assessment: **Strong programmable package system**
+				- Assessment: **Strong programmable package system** [^8]
 			- Tool and surface: **OpenCode**
 				- Package model: Local or npm JavaScript/TypeScript plugin
 				- Multiple skills: Can register or transform skills
@@ -93,7 +93,7 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[AI/Coding/Tool/Report/25/Skills Comparis
 				- Subagents: Can register or transform agents
 				- MCP or tools: Custom tools and runtime integrations
 				- Distribution and lifecycle: Local/npm loading; V2 API remains beta
-				- Assessment: **Highly programmable, not a stable declarative bundle standard**
+				- Assessment: **Highly programmable, not a stable declarative bundle standard** [^9]
 			- Tool and surface: **GitHub Copilot CLI**
 				- Package model: `plugin.json`, including Claude-compatible manifest locations
 				- Multiple skills: Yes
@@ -101,7 +101,7 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[AI/Coding/Tool/Report/25/Skills Comparis
 				- Subagents: Yes
 				- MCP or tools: MCP and LSP
 				- Distribution and lifecycle: Marketplace, repository, local path; Claude marketplaces supported
-				- Assessment: **Full, with the strongest documented Claude compatibility**
+				- Assessment: **Full, with the strongest documented Claude compatibility** [^1]
 			- Tool and surface: **Gemini CLI**
 				- Package model: `gemini-extension.json` and conventional component directories
 				- Multiple skills: Yes
@@ -109,7 +109,7 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[AI/Coding/Tool/Report/25/Skills Comparis
 				- Subagents: Preview
 				- MCP or tools: MCP
 				- Distribution and lifecycle: Installable extensions with management commands
-				- Assessment: **Full or near-full; subagents are preview**
+				- Assessment: **Full or near-full; subagents are preview** [^11]
 			- Tool and surface: **Junie CLI**
 				- Package model: Native Junie extension or Claude-compatible marketplace entry
 				- Multiple skills: Yes
@@ -117,8 +117,8 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[AI/Coding/Tool/Report/25/Skills Comparis
 				- Subagents: Yes
 				- MCP or tools: MCP
 				- Distribution and lifecycle: Git, local, or direct marketplace URL; project/user scope; Claude marketplace support
-				- Assessment: **Near-full and unusually interoperable at marketplace level**
-		- This matrix exposes a major change from 2025: **the relevant dividing line is no longer “Claude has skills and everyone else has only prompts or MCP.”** Agent Skills have become a shared substrate, while competition has moved upward into package composition, lifecycle hooks, subagent configuration, distribution, trust, and marketplace compatibility. The Agent Skills specification itself now formalizes the progressive-disclosure behavior that the 2025 report treated as largely Claude-specific.
+				- Assessment: **Near-full and unusually interoperable at marketplace level** [^12]
+		- This matrix exposes a major change from 2025: **the relevant dividing line is no longer “Claude has skills and everyone else has only prompts or MCP.”** Agent Skills have become a shared substrate, while competition has moved upward into package composition, lifecycle hooks, subagent configuration, distribution, trust, and marketplace compatibility. The Agent Skills specification itself now formalizes the progressive-disclosure behavior that the 2025 report treated as largely Claude-specific. [^2]
 	- ## Findings for the priority tools
 		- ### Codex
 			- Codex has undergone the largest categorical change since the November 2025 review. The current plugin structure requires `.codex-plugin/plugin.json` and can include:
@@ -135,11 +135,11 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[AI/Coding/Tool/Report/25/Skills Comparis
 			  ├── .app.json
 			  └── assets/
 			  ~~~
-			- The manifest can point to multiple skills, MCP server definitions, registered MCP connections, and lifecycle hooks. Hook files can also be auto-discovered at `hooks/hooks.json`. Installed hooks are not trusted automatically: Codex requires users to review the current hook definition before non-managed plugin hooks run.
-			- Codex marketplaces support local directories, Git sources and subdirectories, pinned refs or SHAs, and npm packages. Local or private catalogs use `.agents/plugins/marketplace.json`; the legacy `.claude-plugin/marketplace.json` location is also recognized. The runtime supplies both Codex-native `PLUGIN_ROOT` and `PLUGIN_DATA` variables and Claude-compatible `CLAUDE_PLUGIN_ROOT` and `CLAUDE_PLUGIN_DATA` variables to plugin hook commands.
+			- The manifest can point to multiple skills, MCP server definitions, registered MCP connections, and lifecycle hooks. Hook files can also be auto-discovered at `hooks/hooks.json`. Installed hooks are not trusted automatically: Codex requires users to review the current hook definition before non-managed plugin hooks run. [^5]
+			- Codex marketplaces support local directories, Git sources and subdirectories, pinned refs or SHAs, and npm packages. Local or private catalogs use `.agents/plugins/marketplace.json`; the legacy `.claude-plugin/marketplace.json` location is also recognized. The runtime supplies both Codex-native `PLUGIN_ROOT` and `PLUGIN_DATA` variables and Claude-compatible `CLAUDE_PLUGIN_ROOT` and `CLAUDE_PLUGIN_DATA` variables to plugin hook commands. [^5]
 			- Your more recent Codex note correctly identified this new architecture and the legacy marketplace compatibility. Two refinements are now necessary:
-			- First, OpenAI’s public plugin directory is described as a **universal directory shared by ChatGPT and Codex**. This is not the old ChatGPT plugin protocol that you intended to exclude; it is the same newer package model being consumed by Codex. For this review, only its Codex execution and packaging characteristics are relevant.
-			- Second, Codex is not yet a complete Claude Code equivalent. The documented manifest fields cover `skills`, `mcpServers`, `apps`, and `hooks`, but not `agents`, `subagents`, or `commands`. The published directory structure likewise omits `agents/` and `commands/`. The reasonable conclusion is therefore not that Codex cannot run subagents in general, but that **plugin-shipped subagent definitions are not part of the documented Codex plugin contract** as of the cutoff.
+			- First, OpenAI’s public plugin directory is described as a **universal directory shared by ChatGPT and Codex**. This is not the old ChatGPT plugin protocol that you intended to exclude; it is the same newer package model being consumed by Codex. For this review, only its Codex execution and packaging characteristics are relevant. [^5]
+			- Second, Codex is not yet a complete Claude Code equivalent. The documented manifest fields cover `skills`, `mcpServers`, `apps`, and `hooks`, but not `agents`, `subagents`, or `commands`. The published directory structure likewise omits `agents/` and `commands/`. The reasonable conclusion is therefore not that Codex cannot run subagents in general, but that **plugin-shipped subagent definitions are not part of the documented Codex plugin contract** as of the cutoff. [^5]
 			- This yields a clear verdict:
 			- > Codex now supports genuine multi-skill plugins with hooks and MCP, but it does not yet document Claude-style “complete agent teams in a plugin.”
 			- Codex’s Claude compatibility is also selective. Recognition of the `.claude-plugin/marketplace.json` catalog location and Claude hook environment variables does not establish that an arbitrary `.claude-plugin/plugin.json`, with Claude agents and commands, is a lossless drop-in Codex plugin. A compatibility adapter or parallel `.codex-plugin/plugin.json` remains the safer design.
@@ -152,9 +152,9 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[AI/Coding/Tool/Report/25/Skills Comparis
 			- Hooks and hook scripts.
 			- MCP servers.
 			- Assets and plugin variables.
-			- Component paths can be declared explicitly or auto-discovered from conventional directories. The hook taxonomy is extensive and includes events around sessions, tool calls, shell execution, MCP execution, file reads and edits, prompts, compaction, subagent start and stop, and agent responses.
-			- Cursor also supports repositories containing several plugins through `.cursor-plugin/marketplace.json`. That is a first-class multi-plugin catalog, not merely a collection of copied rules.
-			- The significant qualification is **surface parity**. Cursor’s official plugin reference says that these distributable bundles “work in the Cursor IDE.” It does not make the equivalent blanket claim for cursor-cli. Cursor separately documents that subagents can operate in the editor, CLI, and Cloud Agents, but support for a component does not prove that installing a `.cursor-plugin` package activates every packaged component in the CLI.
+			- Component paths can be declared explicitly or auto-discovered from conventional directories. The hook taxonomy is extensive and includes events around sessions, tool calls, shell execution, MCP execution, file reads and edits, prompts, compaction, subagent start and stop, and agent responses. [^6]
+			- Cursor also supports repositories containing several plugins through `.cursor-plugin/marketplace.json`. That is a first-class multi-plugin catalog, not merely a collection of copied rules. [^6]
+			- The significant qualification is **surface parity**. Cursor’s official plugin reference says that these distributable bundles “work in the Cursor IDE.” It does not make the equivalent blanket claim for cursor-cli. Cursor separately documents that subagents can operate in the editor, CLI, and Cloud Agents, but support for a component does not prove that installing a `.cursor-plugin` package activates every packaged component in the CLI. [^6]
 			- For cursor-cli, the evidence supports the following narrower conclusions:
 			- Table
 				- Capability: Agent Skills
@@ -170,7 +170,7 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[AI/Coding/Tool/Report/25/Skills Comparis
 				- Capability: Drop-in Claude marketplace installation
 					- Cursor CLI status: Not documented
 			- Your existing Cursor note reached the right operational conclusion: a private Claude plugin should be treated as source material, with skills, hooks, and MCP reused individually where compatible, or repackaged under Cursor’s plugin format. Running Claude Code inside Cursor preserves Claude’s marketplace lifecycle but does not make the installed plugin a Cursor Agent plugin.
-			- Cursor does provide useful third-party compatibility below the package layer. It can discover Agent Skills in several shared or Claude-compatible locations, and its third-party-hooks option maps a substantial subset of Claude Code hook configurations into Cursor events. However, some Claude events and tool matcher semantics are unsupported, so this is a translation layer rather than full plugin compatibility.
+			- Cursor does provide useful third-party compatibility below the package layer. It can discover Agent Skills in several shared or Claude-compatible locations, and its third-party-hooks option maps a substantial subset of Claude Code hook configurations into Cursor events. However, some Claude events and tool matcher semantics are unsupported, so this is a translation layer rather than full plugin compatibility. [^19]
 			- For a bundle intended to work in both Cursor IDE and cursor-cli, the prudent policy is therefore:
 			- 1. Keep skills in standard `SKILL.md` form.
 			- 2. Test agents, hooks, and MCP independently in the CLI.
@@ -183,20 +183,20 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[AI/Coding/Tool/Report/25/Skills Comparis
 			- Prompt templates.
 			- Themes.
 			- Runtime dependencies.
-			- A `package.json` can declare these resources under the `pi` key, or Pi can discover conventional `extensions/`, `skills/`, `prompts/`, and `themes/` directories. Packages can be installed globally or per project, updated, filtered by resource type, enabled or disabled, and pinned to npm versions or Git refs. Missing project packages can be installed automatically after a project is trusted.
-			- Pi implements the open Agent Skills format and discovers shared `.agents/skills/` locations. It can also be configured to load skills directly from Claude Code and Codex skill directories. Skill metadata is discovered at startup, while full instructions and referenced files are loaded only when needed.
-			- Pi extensions are the functional equivalent of a general plugin API. They can subscribe to lifecycle events, add custom tools and commands, alter UI behavior, maintain state, and orchestrate arbitrary processes. This means a single Pi package can technically provide “hooks” and subagent-like behavior, but those facilities are implemented in executable extension code rather than represented by portable declarative `hooks.json` and `agents/*.md` components.
+			- A `package.json` can declare these resources under the `pi` key, or Pi can discover conventional `extensions/`, `skills/`, `prompts/`, and `themes/` directories. Packages can be installed globally or per project, updated, filtered by resource type, enabled or disabled, and pinned to npm versions or Git refs. Missing project packages can be installed automatically after a project is trusted. [^8]
+			- Pi implements the open Agent Skills format and discovers shared `.agents/skills/` locations. It can also be configured to load skills directly from Claude Code and Codex skill directories. Skill metadata is discovered at startup, while full instructions and referenced files are loaded only when needed. [^21]
+			- Pi extensions are the functional equivalent of a general plugin API. They can subscribe to lifecycle events, add custom tools and commands, alter UI behavior, maintain state, and orchestrate arbitrary processes. This means a single Pi package can technically provide “hooks” and subagent-like behavior, but those facilities are implemented in executable extension code rather than represented by portable declarative `hooks.json` and `agents/*.md` components. [^22]
 			- This distinction matters for your intended use:
 			- **As a package manager**, Pi is highly capable.
 			- **As a declarative cross-agent plugin target**, it is weaker than Claude, Cursor, Copilot CLI, or Gemini.
 			- **As a programmable host for advanced orchestration**, it may be stronger, because an extension has broad control rather than being limited to a fixed schema.
-			- **As a security boundary**, it is permissive: Pi explicitly warns that extensions execute arbitrary code with full system access and that skills may direct the model to run executables.
+			- **As a security boundary**, it is permissive: Pi explicitly warns that extensions execute arbitrary code with full system access and that skills may direct the model to run executables. [^8]
 			- Pi therefore belongs in a provider-neutral build system as a special target: standard skills can be copied unchanged, while hooks, subagents, MCP bridges, and orchestration would be emitted as generated TypeScript extension code or provided by a reusable runtime adapter.
 		- ### OpenCode
 			- OpenCode currently has two overlapping extension models.
-			- Its stable documentation describes local or npm JavaScript and TypeScript plugins that subscribe to events such as tool execution, file editing, session changes, permissions, and installation updates. Plugins can modify tool arguments, execute commands, expose tools, interact with the OpenCode client, and run shell operations.
-			- Its newer V2 plugin API exposes structured transformations over agents, commands, integrations, references, skills, tools, and model catalogs. A plugin can turn an agent into a subagent, add commands or typed tools, and intercept runtime operations. Package plugins are published through ordinary JavaScript package metadata, but the V2 API is explicitly beta and consumers are advised to publish compatibility updates when contracts change.
-			- OpenCode also independently supports progressively loaded `SKILL.md` skills and per-agent skill permissions.
+			- Its stable documentation describes local or npm JavaScript and TypeScript plugins that subscribe to events such as tool execution, file editing, session changes, permissions, and installation updates. Plugins can modify tool arguments, execute commands, expose tools, interact with the OpenCode client, and run shell operations. [^9]
+			- Its newer V2 plugin API exposes structured transformations over agents, commands, integrations, references, skills, tools, and model catalogs. A plugin can turn an agent into a subagent, add commands or typed tools, and intercept runtime operations. Package plugins are published through ordinary JavaScript package metadata, but the V2 API is explicitly beta and consumers are advised to publish compatibility updates when contracts change. [^24]
+			- OpenCode also independently supports progressively loaded `SKILL.md` skills and per-agent skill permissions. [^25]
 			- The result is an inversion of the Codex situation:
 			- Codex has a stable declarative package shape but fewer component types.
 			- OpenCode can programmatically create or transform almost every relevant component, but lacks a comparably mature declarative plugin manifest and marketplace lifecycle.
@@ -204,14 +204,14 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[AI/Coding/Tool/Report/25/Skills Comparis
 	- ## Interoperability and provider-neutral abstractions
 		- ### Rulesync’s actual position
 			- Your intuition that Rulesync does not offer a provider-neutral plugin definition remains correct, but it needs an important qualification.
-			- Rulesync now supports a broad canonical component model. Its target matrix includes generation or import for rules, MCP configuration, commands, subagents, skills, hooks, permissions, and checks across tools including Claude Code, Codex CLI, Copilot, Cursor, OpenCode, Pi, Goose, Cline, Kilo Code, and others.
+			- Rulesync now supports a broad canonical component model. Its target matrix includes generation or import for rules, MCP configuration, commands, subagents, skills, hooks, permissions, and checks across tools including Claude Code, Codex CLI, Copilot, Cursor, OpenCode, Pi, Goose, Cline, Kilo Code, and others. [^26]
 			- Rulesync also has explicit **plugin-packaging targets**, but only for:
 			- `claudecode-plugin`
 			- `antigravity-plugin`
-			- For a Claude target, it can generate the plugin’s MCP configuration, commands, subagents, skills, and hooks into an existing plugin root. It does not create or modify the plugin manifest, marketplace catalog, scripts, assets, or other package metadata. The root must already exist, and `.claude-plugin/plugin.json` remains separately authored.
+			- For a Claude target, it can generate the plugin’s MCP configuration, commands, subagents, skills, and hooks into an existing plugin root. It does not create or modify the plugin manifest, marketplace catalog, scripts, assets, or other package metadata. The root must already exist, and `.claude-plugin/plugin.json` remains separately authored. [^27]
 			- That makes the precise verdict:
 			- > Rulesync is now a provider-neutral authoring and transpilation layer for many **components**, but it is not a provider-neutral **plugin packaging system**.
-			- This distinction also explains an apparent contradiction in Rulesync’s support table. Rulesync can target standalone Codex subagent configuration, while the Codex plugin manifest does not document plugin-bundled subagents. “Codex supports subagents” and “Codex plugins do not package subagents” can both be true because standalone host configuration and installable plugin composition are separate surfaces.
+			- This distinction also explains an apparent contradiction in Rulesync’s support table. Rulesync can target standalone Codex subagent configuration, while the Codex plugin manifest does not document plugin-bundled subagents. “Codex supports subagents” and “Codex plugins do not package subagents” can both be true because standalone host configuration and installable plugin composition are separate surfaces. [^26]
 		- ### Agent Skills as the common substrate
 			- Agent Skills are the most successful provider-neutral layer. The specification defines:
 			- ~~~text
@@ -221,8 +221,8 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[AI/Coding/Tool/Report/25/Skills Comparis
 			  ├── references/
 			  └── assets/
 			  ~~~
-			- The only required file is `SKILL.md`, with `name` and `description` metadata. The progressive-disclosure model is standardized: metadata is exposed during discovery, full instructions are loaded when selected, and supporting resources are read or executed only when required.
-			- This format is natively recognized or deliberately accommodated by Claude Code, Cursor, Codex, Pi, OpenCode, Gemini CLI, Copilot, and Junie. GitHub has also introduced `gh skill`, in public preview, to search, preview, install, update, validate, and publish skills while targeting different agent hosts and installation scopes.
+			- The only required file is `SKILL.md`, with `name` and `description` metadata. The progressive-disclosure model is standardized: metadata is exposed during discovery, full instructions are loaded when selected, and supporting resources are read or executed only when required. [^2]
+			- This format is natively recognized or deliberately accommodated by Claude Code, Cursor, Codex, Pi, OpenCode, Gemini CLI, Copilot, and Junie. GitHub has also introduced `gh skill`, in public preview, to search, preview, install, update, validate, and publish skills while targeting different agent hosts and installation scopes. [^29]
 			- `gh skill` is valuable infrastructure, but it distributes **skills**, not complete plugin bundles. It does not normalize:
 			- Hook event schemas.
 			- Subagent definitions.
@@ -235,11 +235,11 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[AI/Coding/Tool/Report/25/Skills Comparis
 			- Agent Skills should therefore be understood as the portable payload inside a plugin, not as a portable plugin format.
 		- ### Claude compatibility as an emerging de facto interchange layer
 			- Several vendors are converging on Claude-compatible paths and formats:
-			- Copilot CLI checks `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json`, and GitHub explicitly documents adding Anthropic’s Claude Code marketplace.
-			- Junie accepts native `.junie-extension/marketplace.json` or Claude `.claude-plugin/marketplace.json` catalogs.
-			- Codex recognizes the legacy Claude marketplace location and provides Claude-compatible environment variables to hook scripts.
-			- Cursor can ingest Claude-compatible skill locations and translate a subset of Claude hooks, although it does not install Claude marketplaces as Cursor marketplaces.
-			- Pi can directly include Claude and Codex skill directories.
+			- Copilot CLI checks `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json`, and GitHub explicitly documents adding Anthropic’s Claude Code marketplace. [^30]
+			- Junie accepts native `.junie-extension/marketplace.json` or Claude `.claude-plugin/marketplace.json` catalogs. [^12]
+			- Codex recognizes the legacy Claude marketplace location and provides Claude-compatible environment variables to hook scripts. [^5]
+			- Cursor can ingest Claude-compatible skill locations and translate a subset of Claude hooks, although it does not install Claude marketplaces as Cursor marketplaces. [^19]
+			- Pi can directly include Claude and Codex skill directories. [^21]
 			- This is significant but should not be mistaken for a standard. Compatibility exists at different levels:
 			- Table
 				- Host: Copilot CLI
@@ -275,13 +275,13 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[AI/Coding/Tool/Report/25/Skills Comparis
 			- The likely direction is that Claude’s directory conventions become a **de facto source format**, while hosts continue to interpret only the component types they support. This is closer to browser compatibility with a shared subset than to a formally specified universal package.
 		- ### Why a universal plugin format remains difficult
 			- The remaining incompatibilities are semantic rather than merely syntactic.
-			- **Hooks differ in event ontology.** Claude uses events such as `PreToolUse` and `PostToolUse`; Cursor exposes `preToolUse`, `postToolUse`, file-specific, MCP-specific, Tab, and workspace events; Gemini has its own lifecycle; Pi and OpenCode expose programmatic events. A name mapping cannot always preserve execution timing, input schemas, blocking behavior, or output semantics.
-			- **Subagent definitions differ in capability.** Claude plugin agents can declare model, effort, turn limits, tools, skills, memory, background behavior, and worktree isolation, while Cursor’s current plugin reference documents a much smaller portable frontmatter surface. Gemini subagents remain preview, and Pi requires programmatic implementation.
-			- **Trust models differ.** Codex requires review of plugin hooks; Pi extensions receive full system access; OpenCode plugins execute application code; Claude and Cursor provide their own permission and enterprise-control mechanisms. A universal manifest cannot safely claim identical permissions across these environments.
+			- **Hooks differ in event ontology.** Claude uses events such as `PreToolUse` and `PostToolUse`; Cursor exposes `preToolUse`, `postToolUse`, file-specific, MCP-specific, Tab, and workspace events; Gemini has its own lifecycle; Pi and OpenCode expose programmatic events. A name mapping cannot always preserve execution timing, input schemas, blocking behavior, or output semantics. [^32]
+			- **Subagent definitions differ in capability.** Claude plugin agents can declare model, effort, turn limits, tools, skills, memory, background behavior, and worktree isolation, while Cursor’s current plugin reference documents a much smaller portable frontmatter surface. Gemini subagents remain preview, and Pi requires programmatic implementation. [^33]
+			- **Trust models differ.** Codex requires review of plugin hooks; Pi extensions receive full system access; OpenCode plugins execute application code; Claude and Cursor provide their own permission and enterprise-control mechanisms. A universal manifest cannot safely claim identical permissions across these environments. [^5]
 			- **Distribution models differ.** Claude, Cursor, Codex, Copilot CLI, Gemini, Junie, Pi, and OpenCode use different combinations of marketplace JSON, Git repositories, npm packages, local directories, caches, enablement files, and version resolution.
 			- Consequently, the realistic abstraction is **source-to-source compilation with explicit loss reporting**, not one package interpreted identically by every host.
 	- ## Conclusions and recommended architecture
-		- The November 2025 landscape has changed from a near-monopoly to a rapidly converging ecosystem. Claude Code is no longer unique in offering installable multi-component agent extensions. It remains the strongest reference because it combines skills, agents, hooks, MCP, LSP, monitors, executable paths, private marketplaces, public distribution, and a mature component reference in one system.
+		- The November 2025 landscape has changed from a near-monopoly to a rapidly converging ecosystem. Claude Code is no longer unique in offering installable multi-component agent extensions. It remains the strongest reference because it combines skills, agents, hooks, MCP, LSP, monitors, executable paths, private marketplaces, public distribution, and a mature component reference in one system. [^4]
 		- For your primary tools, the practical ranking is:
 		- Table
 			- Requirement: Complete declarative bundle with skills, hooks, and subagents
@@ -370,7 +370,7 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[AI/Coding/Tool/Report/25/Skills Comparis
 		- `package.json` with a `pi` resource manifest and generated Pi extensions.
 		- An OpenCode npm plugin that registers canonical agents, commands, skills, and hooks.
 		- A machine-readable compatibility report identifying omitted or degraded behavior.
-		- Rulesync can already provide much of the component conversion layer, especially for rules, skills, agents, commands, hooks, MCP, and permissions. It cannot currently own the complete build because it does not emit Codex, Cursor, Pi, or OpenCode plugin packages, and even its Claude packaging target leaves manifests, catalogs, scripts, and assets outside its control.
+		- Rulesync can already provide much of the component conversion layer, especially for rules, skills, agents, commands, hooks, MCP, and permissions. It cannot currently own the complete build because it does not emit Codex, Cursor, Pi, or OpenCode plugin packages, and even its Claude packaging target leaves manifests, catalogs, scripts, and assets outside its control. [^27]
 		- The most sustainable near-term strategy is therefore:
 		- 1. **Use Agent Skills as the immutable portable core.**
 		- 2. **Use MCP as the portable external-tool boundary.**
@@ -382,3 +382,24 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[AI/Coding/Tool/Report/25/Skills Comparis
 		- The final answer to the provider-neutral question is consequently two-part:
 		- > **A provider-neutral definition for skills and many individual configuration components now exists in practice, and Rulesync is a credible implementation of that layer. A provider-neutral definition for an installable, versioned, secure, multi-component agent plugin does not yet exist.**
 		- The closest available architecture is not “write one plugin and run it everywhere,” but **author one canonical agent suite and compile it into several native plugins, preserving standard `SKILL.md` directories wherever possible and surfacing semantic losses explicitly**.
+	- ## Footnotes
+		- [^1]: https://docs.github.com/en/copilot/concepts/agents/about-plugins?utm_source=chatgpt.com
+		- [^2]: https://agentskills.io/specification?utm_source=chatgpt.com
+		- [^4]: https://code.claude.com/docs/en/plugins?utm_source=chatgpt.com
+		- [^5]: https://developers.openai.com/codex/plugins/build
+		- [^6]: https://cursor.com/docs/reference/plugins.md
+		- [^8]: https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/docs/packages.md
+		- [^9]: https://opencode.ai/docs/da/plugins/
+		- [^11]: https://github.com/google-gemini/gemini-cli/blob/main/docs/extensions/reference.md?utm_source=chatgpt.com
+		- [^12]: https://junie.jetbrains.com/docs/junie-cli-extensions.html?utm_source=chatgpt.com
+		- [^19]: https://cursor.com/docs/skills.md
+		- [^21]: https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/docs/skills.md
+		- [^22]: https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/docs/extensions.md
+		- [^24]: https://opencode.ai/v2/docs/build/plugins
+		- [^25]: https://opencode.ai/docs/skills
+		- [^26]: https://rulesync.dyoshikawa.com/reference/supported-tools.html
+		- [^27]: https://rulesync.dyoshikawa.com/guide/plugin-packaging.html
+		- [^29]: https://docs.github.com/en/enterprise-cloud%40latest/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills?utm_source=chatgpt.com
+		- [^30]: https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-finding-installing?utm_source=chatgpt.com
+		- [^32]: https://code.claude.com/docs/en/hooks?utm_source=chatgpt.com
+		- [^33]: https://code.claude.com/docs/en/plugins-reference?utm_source=chatgpt.com
