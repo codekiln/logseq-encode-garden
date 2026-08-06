@@ -1,7 +1,7 @@
 # Import Workflow
 
-This workflow replaces the deprecated `logseq-import-chatgpt-deep-research`
-command.
+Use this workflow when importing ChatGPT Deep Research exports into the Logseq
+garden.
 
 ## Inputs
 

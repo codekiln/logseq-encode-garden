@@ -5,7 +5,7 @@ description: >-
   optional Markdown export. Use when the user gives a Deep Research PDF or asks
   to import/file a Deep Research report with preserved URL footnotes, source
   assets, Logseq-Flavored Markdown, existing-page links, and today's journal
-  summary. Do not use the deprecated command; this skill is the entrypoint.
+  summary. This skill is the entrypoint for that import workflow.
 metadata:
   short-description: Import ChatGPT Deep Research PDFs with Logseq footnotes
 ---
