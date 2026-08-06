@@ -1,0 +1,22 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+see-also:: [[Claude/Code/Plugin/Marketplace]]
+- # I have some private [[Claude/Code/Plugin]]s in a [[Claude/Code/Plugin/Marketplace]] that I'd like to run in [[CursorAI]]. What are my options?
+	- ## [[AI Answer]]
+		- [[Answer/Official]] from [Plugins | Cursor Docs](https://cursor.com/docs/plugins.md), [Agent Skills | Cursor Docs](https://cursor.com/docs/skills.md), [Third Party Hooks | Cursor Docs](https://cursor.com/docs/reference/third-party-hooks.md), and [MCP | Cursor Docs](https://cursor.com/docs/mcp.md)
+			- **Short answer:** [[CursorAI]] does **not** install [[Claude/Code/Plugin/Marketplace]] plugins as drop-in bundles. Treat the marketplace as **source material**, then pick a path by what you need: reuse compatible pieces in place, repackage as a Cursor plugin (local or team marketplace), or keep running Claude Code *inside* Cursor for the full Claude plugin lifecycle.
+			- **1. Reuse pieces without a Cursor plugin (lowest effort)**
+				- **Skills:** Cursor discovers Agent Skills from Claude paths too — project `.claude/skills/` and user `~/.claude/skills/` (plus `.cursor/skills/`, `.agents/skills/`, and Codex equivalents). Copy or symlink each plugin's `skills/<name>/SKILL.md` tree into one of those roots; invoke with `/skill-name` or let Agent pick them up.
+				- **Hooks:** Enable **Settings → Rules, Skills, Subagents → Include third-party Plugins, Skills, and other configs**. Cursor then loads hooks from `.claude/settings.json`, `.claude/settings.local.json`, and `~/.claude/settings.json`, mapping Claude events (`PreToolUse` → `preToolUse`, etc.). Gaps: `Notification` and `PermissionRequest` are unsupported; tool matchers for `Glob` / `WebFetch` / `WebSearch` are not mapped; some Cursor-only hook features need `.cursor/hooks.json`.
+				- **MCP:** Same protocol, different config path — put servers in `.cursor/mcp.json` or `~/.cursor/mcp.json` (or install via Customize / team marketplace). Claude plugin `.mcp.json` is not auto-imported.
+			- **2. Repackage as a Cursor plugin (best for a private bundle you want to install as one unit)**
+				- Cursor plugins use `.cursor-plugin/plugin.json` (not `.claude-plugin/`) and can ship rules, skills, agents, commands, hooks, and MCP together.
+				- **Local/private-to-you:** put the plugin under `~/.cursor/plugins/local/<name>` (symlink the repo for iteration), then reload the window.
+				- **Private-to-a-team:** on Teams/Enterprise, import a GitHub repo as a [team marketplace](https://cursor.com/docs/plugins.md#team-marketplaces) from **Dashboard → Plugins** (Claude's marketplace.json / HTTP marketplace URLs are a different system).
+				- Public Cursor Marketplace listing requires open source + Cursor review — not the path for private plugins.
+			- **3. Run Claude Code inside Cursor (full Claude marketplace lifecycle, not Cursor Agent)**
+				- Install Anthropic's Claude Code extension in Cursor and/or run the standalone `claude` CLI in Cursor's terminal. Plugin marketplaces, `/plugin install`, and `~/.claude/plugins/cache` stay on Claude Code's system; Cursor Agent still won't "see" those marketplace installs as Cursor plugins unless you also use options 1–2 for the pieces you care about in Agent.
+			- **Practical chooser**
+				- Mostly `SKILL.md` workflows → option 1 (skills dirs).
+				- Hooks already in `.claude/settings.json` → option 1 (third-party hooks toggle).
+				- Need one installable private package for a team in Cursor Agent → option 2.
+				- Need Claude's marketplace UX / cache / slash-plugin tooling as-is → option 3.
