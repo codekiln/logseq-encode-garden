@@ -7,6 +7,8 @@ description: >-
   tiers, access, and specs. Covers OpenAI/Anthropic/Google/DeepSeek/xAI model
   link formats and model-code aliases. Do not use for general entity creation
   (logseq-entity) or non-model pages.
+metadata:
+  short-description: Reference or document AI models with namespaced links
 ---
 # Logseq AI model pages
 

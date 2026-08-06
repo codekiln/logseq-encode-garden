@@ -6,6 +6,8 @@ description: >-
   conventional commit messages (type: description, imperative mood). Use when
   the user asks to commit, stage, or write a commit message in this repo. Do not
   use for branch/PR review workflows.
+metadata:
+  short-description: Targeted git add + conventional commit messages for this repo
 ---
 # Git conventions
 

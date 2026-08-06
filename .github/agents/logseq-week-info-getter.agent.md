@@ -1,8 +1,6 @@
 ---
 name: logseq-week-info-getter
 description: Get the logseq week days for specified or current week
-tools:
-  - agent/runSubagent
 ---
 # Get the logseq days for this week
 

@@ -8,6 +8,8 @@ description: >-
   footnotes, debugging why a ref/inline-code renders wrong, deciding a page
   name, or checking whether a page exists before creating a file. Baseline LFM
   rules live in logseq-core.
+metadata:
+  short-description: 'Advanced LFM details (footnotes, naming, logical vs disk pages)'
 ---
 # Logseq-Flavored Markdown (advanced)
 

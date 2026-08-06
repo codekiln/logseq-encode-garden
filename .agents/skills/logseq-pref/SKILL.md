@@ -6,6 +6,8 @@ description: >-
   Use when aligning new titles with [[Logseq/Pref/Page/Name]], refreshing prefs
   in-graph, or routing alongside logseq-entity for naming—not for per-entity
   definitions (those stay on [[Logseq/Entity/<Type>]]).
+metadata:
+  short-description: Load Logseq/Pref hub for encode naming prefs before graph edits
 ---
 # Logseq Pref
 

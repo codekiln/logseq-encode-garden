@@ -8,6 +8,8 @@ description: >-
   pages/*.md or journals/*.md, when the user asks for column alignment, or after
   editing comparison tables. Do not use to convert wide tables to bullets (skill
   logseq-convert-md-to-lfm) or for non-Logseq markdown.
+metadata:
+  short-description: Align LFM tables with padded columns and wikilinks
 ---
 # Logseq table formatter
 

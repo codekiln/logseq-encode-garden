@@ -7,6 +7,8 @@ description: >-
   deciding whether an id:: can be removed, or diagnosing refs that won't render.
   Baseline safety (never backtick a live ref/link; keep id:: with its block) is
   in logseq-core; this skill has the full move/copy/reindex procedures.
+metadata:
+  short-description: Move/copy/ref Logseq block IDs and ((uuid)) refs safely
 ---
 # Logseq block IDs
 

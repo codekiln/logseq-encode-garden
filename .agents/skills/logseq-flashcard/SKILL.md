@@ -9,6 +9,8 @@ description: >-
   work uses [[Card]] and [[Logseq/Entity/Card]]; legacy Keyshort audits may
   still encounter #card / [[card]]. Do not use for non-Logseq decks (e.g.
   repeater-only formats).
+metadata:
+  short-description: Create and audit Logseq Card flashcards in the encode garden
 ---
 # Logseq flashcard
 

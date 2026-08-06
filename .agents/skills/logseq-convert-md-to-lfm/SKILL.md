@@ -8,6 +8,8 @@ description: >-
   Use when the user pastes non-LFM markdown to import, asks to "convert to LFM",
   or to clean up an AI-generated dump. For table column alignment use
   logseq-table-formatter; for baseline LFM rules see logseq-core / logseq-lfm.
+metadata:
+  short-description: Convert standard Markdown into Logseq-Flavored Markdown
 ---
 # Convert Markdown → LFM
 

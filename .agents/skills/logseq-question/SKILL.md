@@ -7,6 +7,8 @@ description: >-
   asks to file, record, or capture a scoped question page. Do not use for non-Q
   pages, general notes, or entity types other than question—use skill
   logseq-entity and the relevant [[Logseq/Entity/<Type>]] page instead.
+metadata:
+  short-description: 'File a garden question under /Q/, journal it, and answer it'
 ---
 # Logseq question
 

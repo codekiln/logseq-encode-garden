@@ -8,6 +8,8 @@ description: >-
   discussion. For person hubs use the logseq-person command and logseq-entity
   skill. Do not use for blog posts/articles (logseq-import-blog) or non-forum
   content.
+metadata:
+  short-description: Import forum threads into structured Logseq pages
 ---
 # Logseq forum post import
 
