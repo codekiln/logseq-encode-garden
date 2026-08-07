@@ -2,4 +2,37 @@ alias:: [[TUI]], [[UI/Terminal-based]]
 tags:: [[Term]]
 
 - # TUI - a Terminal User Interface
-	-
+	- A full-screen, cursor-addressed, keyboard-driven interface drawn in text inside a terminal. The distinction from a [[CLI/Tool]] is statefulness: a CLI prints and exits, a TUI holds the screen and waits.
+	- ## Frameworks
+		- [[Ratatui]] — [[Rust]] library, community fork of tui-rs (2023). Most of the Rust entries below sit on it.
+		- [[Charm]] — the [[Go]] equivalent: Bubble Tea for structure, Lip Gloss for styling, [[Glamour]] for Markdown rendering, and [[gum]] to reach the same ideas from shell scripts without writing Go.
+		- [[Curses]] — the ncurses lineage the whole category descends from.
+	- ## By what they wrap
+		- ### git, containers, tasks
+			- [[Lazygit]] — [[Person/Jesse Duffield]]
+			- [[Lazydocker]] — same author, same spirit, for containers and images
+			- [[mani]] — many [[git/repo]]s at once from a declarative `mani.yaml`
+			- [[BeansTasks]] — git-backed issue tracker aimed at AI agents
+		- ### files and shell
+			- [[yazi]] — [[Terminal/File/Manager]] built on async I/O
+			- [[atuin]] — shell history in SQLite, with encrypted sync across machines
+		- ### reading and messaging
+			- [[Neomd]] — email: [[Neovim]] to compose, Markdown to read, senders screened once
+			- [[eilmeldung]] — RSS, on the news-flash library
+			- [[HN/TUI]] — Hacker News
+			- [[bitchat/tui]] — peer-to-peer chat over Bluetooth LE, off-grid
+			- [[basalt]] — [[Obsidian]] vaults
+		- ### music and audio
+			- [[Spotify/Tool/TUI]] — comparison of [[spotify-player]], [[ncspot]], and [[spotify-tui]]
+			- [[Person/sihooleebd/GitHub/orbit]] — local MP3 player
+			- [[Person/joshjetson/GitHub/phosphor]] — DAW with both TUI and GUI front ends
+		- ### everything else
+			- [[apisnip]] — walk the structure of an `openapi.json` from the terminal
+			- [[Game/Video/Rebels in the Sky]] — space pirates playing basketball, on [[Ratatui]]
+	- ## Implementation language
+		- [[Rust]] — [[apisnip]], [[atuin]], [[basalt]], [[bitchat/tui]], [[eilmeldung]], [[Ratatui]], [[spotify-player]], [[yazi]], [[Person/joshjetson/GitHub/phosphor]], [[Person/sihooleebd/GitHub/orbit]]
+		- [[Go]] — [[Lazygit]], [[Lazydocker]], [[mani]], [[Neomd]]
+	- ## Finding more
+		- [[Terminal/Trove]] — aggregator for TUIs and CLI tools; many of the pages above arrived through it.
+	- ## Open questions
+		- [[TUI/Q/Can you use agentic engineering tools to test TUI or Curses applications]]
