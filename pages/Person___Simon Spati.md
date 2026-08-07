@@ -4,6 +4,11 @@ logseq-entity:: [[Logseq/Entity/Person]]
 - # [Simon Späti](https://www.ssp.sh/)
 	- ## About
 		- Data engineer, technical writer, and lifelong learner
+		- GitHub: [sspaeti](https://github.com/sspaeti) personally, [ssp-data](https://github.com/ssp-data) for projects
+	- ## Projects
+		- [[Neomd]] — his own [[TUI]] email client, [[Neovim]] for composing and a [HEY](https://www.hey.com/how-it-works/)-style screener so unknown senders are classified once instead of arriving repeatedly
+	- ## Writing
+		- [[Person/Simon Spati/Brain/Distract-Free Typewriter]] — survey of writerDecks and ePaper writing machines
 	- ## Knowledge Management
 		- **Second Brain methodology** - Uses [[Book/Building a Second Brain]] principles by [[Person/Tiago Forte/PARA]]
 			- **Public knowledge repository** - Maintains curated Second Brain at [ssp.sh/brain](https://www.ssp.sh/brain/)
