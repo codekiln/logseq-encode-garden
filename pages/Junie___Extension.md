@@ -1,0 +1,4 @@
+- # [Junie CLI extensions](https://junie.jetbrains.com/docs/junie-cli-extensions.html)
+	- [[Junie]]'s installable bundle. The documented components are agent skills, MCP servers, [[Junie/Subagent]]s, custom slash commands, and guidelines. Hooks are not among them.
+	- Installed from Git, a local path, or a direct marketplace URL, at project or user scope.
+	- Unusually interoperable at the catalog layer: Junie reads its native `.junie-extension/marketplace.json` or the Claude format at `.claude-plugin/marketplace.json`, so any Claude-compatible marketplace can be connected alongside Junie's own. See [[Claude/Code/Plugin/Marketplace]].

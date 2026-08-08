@@ -1,0 +1,5 @@
+- # [Plugins – Cursor Docs](https://cursor.com/docs/reference/plugins)
+	- [[CursorAI]]'s installable bundle, declared in `.cursor-plugin/plugin.json`. The reference lists the packaged component types as skills, MCP servers, rules, agents, commands, hooks, and variables — see [[CursorAI/Hook]] and [[CursorAI/Subagent]]. Component paths can be declared explicitly or auto-discovered.
+	- `.cursor-plugin/marketplace.json` makes a repository a first-class multi-plugin catalog, not just a pile of copied rules.
+	- The qualification is surface parity. The reference says these bundles "work in the Cursor IDE" and makes no equivalent claim for [[CursorAI/CLI]]. Treat `.cursor-plugin/plugin.json` as the IDE distribution contract until CLI parity is documented.
+	- Cursor ingests Claude-compatible skill locations and translates a subset of Claude hooks, but it does not install a [[Claude/Code/Plugin/Marketplace]] as a Cursor marketplace.

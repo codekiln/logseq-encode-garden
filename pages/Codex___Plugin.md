@@ -1,5 +1,8 @@
 # [Build plugins – Codex](https://developers.openai.com/codex/plugins/build)
 	- Author-facing guide; for installing and using plugins in Codex, see [Plugins](https://developers.openai.com/codex/plugins).
+	- [Build plugins | ChatGPT Learn](https://learn.chatgpt.com/docs/build-plugins)
+		- > A plugin is an installable package that can include skills, an MCP server, or both. An MCP server can also return optional UI.
+		- > ChatGPT and Codex share one universal plugin directory. Publish a public plugin once to make the same listing discoverable from supported surfaces in both products. During development, use a local marketplace to test the package before submitting it to the universal directory.
 	- Prefer a local [[Codex/Skill]] while iterating on one repo or one personal workflow; build a plugin to share across teams, bundle app integrations or MCP config, package lifecycle hooks, or publish a stable package.
 	- ## Scaffold with `@plugin-creator`
 		- Built-in skill scaffolds `.codex-plugin/plugin.json` and can generate a local marketplace entry for testing.

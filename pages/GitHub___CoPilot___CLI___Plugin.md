@@ -1,0 +1,5 @@
+- # [About plugins – GitHub Copilot](https://docs.github.com/en/copilot/concepts/agents/about-plugins)
+	- [[GitHub/CoPilot/CLI]]'s installable bundle. The documented component types are custom agents as `*.agent.md` files, skills in subdirectories, hooks in `hooks.json`, MCP server configuration, and LSP server configuration — see [[GitHub/CoPilot/CLI/Hook]] and [[GitHub/CoPilot/CLI/Subagent]].
+	- A `plugin.json` sits at the plugin root and a `marketplace.json` defines a marketplace. Installation from a marketplace, a repository, or a local path is covered in [Finding and installing plugins](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-finding-installing).
+	- That same page adds Anthropic's catalog by repository reference — its worked example is the `claude-code-plugins` marketplace hosted at `github.com/anthropics/claude-code`. See [[Claude/Code/Plugin/Marketplace]].
+	- Copilot also documents `.agents/skills` and `~/.agents/skills` as valid skill locations, which is the strongest evidence that path is a real interoperability target rather than a spec aspiration. See [[Agent/Skills/Dir/Compatibility]].

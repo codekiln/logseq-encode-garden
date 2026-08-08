@@ -1,0 +1,4 @@
+- # [Extensions reference – Gemini CLI](https://github.com/google-gemini/gemini-cli/blob/main/docs/extensions/reference.md)
+	- [[GeminiCLI]]'s installable bundle, declared in `gemini-extension.json` with `name`, `version`, `description`, `mcpServers`, `contextFileName`, `excludeTools`, `migratedTo`, `plan`, `settings`, and `themes`.
+	- Other components come from conventional directories rather than manifest fields: [[GeminiCLI/Hook]]s from `hooks/hooks.json`, [[GeminiCLI/Subagent]]s from `.md` files in `agents/`.
+	- Subagents are marked a preview feature, which is what keeps this short of a full multi-component package.
