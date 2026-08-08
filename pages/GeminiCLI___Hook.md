@@ -1,0 +1,5 @@
+- # [Hooks reference – Gemini CLI](https://github.com/google-gemini/gemini-cli/blob/main/docs/hooks/reference.md)
+	- [[GeminiCLI]]'s implementation of [[AI/Agent/Hook]]: scripts run at points in the agentic loop, synchronously — the CLI waits for every matching hook before continuing. Communication is JSON over stdin and stdout, and a stray `print` before the JSON breaks parsing.
+	- Events: `BeforeTool`, `AfterTool`, `BeforeAgent`, `AfterAgent`, `BeforeModel`, `BeforeToolSelection`, `AfterModel`, `SessionStart`, `SessionEnd`, `Notification`, `PreCompress`.
+	- That naming is the clearest evidence that hook events are not standardized. Gemini's `BeforeTool` is [[Claude/Code/Hook]]'s `PreToolUse` and [[CursorAI/Hook]]'s `preToolUse`, and `PreCompress` is what the others call compaction — three hosts, three vocabularies for the same moment.
+	- Configured in `settings.json` under a `hooks` object, one array of definitions per event. A [[GeminiCLI/Extension]] ships them as `hooks/hooks.json`. Conceptual overview: [Gemini CLI hooks](https://github.com/google-gemini/gemini-cli/blob/main/docs/hooks/index.md).

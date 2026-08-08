@@ -1,0 +1,5 @@
+- # [Hooks – Cursor Docs](https://cursor.com/docs/hooks)
+	- [[CursorAI]]'s implementation of [[AI/Agent/Hook]]: spawned processes that talk JSON over stdio in both directions, running before or after stages of the agent loop to observe, block, or modify behavior.
+	- The taxonomy is the widest of any host surveyed and splits three ways. Agent hooks: `sessionStart`, `sessionEnd`, `preToolUse`, `postToolUse`, `postToolUseFailure`, `subagentStart`, `subagentStop`, `beforeShellExecution`, `afterShellExecution`, `beforeMCPExecution`, `afterMCPExecution`, `beforeReadFile`, `afterFileEdit`, `beforeSubmitPrompt`, `preCompact`, `stop`, `afterAgentResponse`, `afterAgentThought`. Tab hooks: `beforeTabFileRead`, `afterTabFileEdit`. App lifecycle: `workspaceOpen`.
+	- Names are camelCase where [[Claude/Code/Hook]] uses PascalCase, and the events do not line up one to one. Cursor's third-party-hooks option maps a subset of Claude hook configurations onto Cursor events — a translation layer, not compatibility.
+	- Hooks are also a packaged component of a [[CursorAI/Plugin]], per the [plugins reference](https://cursor.com/docs/reference/plugins).

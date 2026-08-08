@@ -1,0 +1,8 @@
+- # [Hooks – Claude Code](https://code.claude.com/docs/en/hooks)
+	- [[Claude/Code]]'s implementation of [[AI/Agent/Hook]]: commands the host runs at named lifecycle events, configured under the `hooks` key of a settings file — `~/.claude/settings.json`, `.claude/settings.json`, `.claude/settings.local.json`, managed policy settings, a plugin's `hooks/hooks.json`, or skill and agent frontmatter.
+	- Event names are PascalCase and the documented set runs past thirty, from `SessionStart` and `UserPromptSubmit` through `PreToolUse`, `PostToolUse`, `SubagentStart`, `SubagentStop`, `PreCompact`, and `SessionEnd`.
+	- A `PreToolUse` hook can block the call it wraps, either by exiting with code 2 or by returning `permissionDecision: "deny"` with a reason.
+	- Plugin hooks receive `CLAUDE_PLUGIN_ROOT` and `CLAUDE_PLUGIN_DATA`. [[Codex/Hook]] passes the same two variable names as a legacy alias, which is the narrow sense in which Codex is "Claude-compatible" on hooks.
+	- ## Events with their own pages
+		- [[Claude/Code/Hook/SessionStart]]
+		- [[Claude/Code/Hook/PreCompact]]

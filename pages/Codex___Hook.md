@@ -1,0 +1,5 @@
+- # [Hooks – Codex](https://developers.openai.com/codex/hooks)
+	- [[Codex]]'s implementation of [[AI/Agent/Hook]]. Discovered from `~/.codex/hooks.json`, `~/.codex/config.toml`, `<repo>/.codex/hooks.json`, `<repo>/.codex/config.toml`, and a plugin's bundled `hooks/hooks.json`.
+	- Events: `SessionStart`, `SessionEnd`, `SubagentStart`, `SubagentStop`, `PreToolUse`, `PermissionRequest`, `PostToolUse`, `UserPromptSubmit`, `Stop`, `PreCompact`, `PostCompact`. The PascalCase naming tracks [[Claude/Code/Hook]] closely, which is unusual — most hosts invent their own.
+	- Trust is explicit. A non-managed command hook cannot run until you review and trust the exact definition; trust is tracked by hash, so an edited hook needs re-review. `/hooks` inspects the state. Managed hooks arrive from system, MDM, cloud, or `requirements.toml` sources and cannot be disabled.
+	- [Build plugins](https://developers.openai.com/codex/plugins/build) documents the packaged case: a [[Codex/Plugin]] declares hooks in its manifest or ships `hooks/hooks.json`, and the runtime passes hook commands both `PLUGIN_ROOT`/`PLUGIN_DATA` and legacy `CLAUDE_PLUGIN_ROOT`/`CLAUDE_PLUGIN_DATA`.

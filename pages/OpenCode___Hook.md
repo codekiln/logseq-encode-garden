@@ -1,0 +1,4 @@
+- # [Plugins – OpenCode](https://opencode.ai/docs/plugins/)
+	- [[OpenCode]] has no declarative hook component. A plugin is a JavaScript or TypeScript module exporting plugin functions; each receives a context object and returns a hooks object, subscribing to events in code.
+	- Plugins load from `.opencode/plugins/` or `~/.config/opencode/plugins/` automatically at startup, or as npm packages named in the config file.
+	- The [V2 plugin API](https://opencode.ai/v2/docs/build/plugins) generalizes this into runtime hooks — `ctx.tool.hook("execute.before")` and `"execute.after"`, `ctx.session.hook("context")`, `ctx.session.hook("http.request")` and `"http.response"`, `ctx.aisdk.hook("sdk")` and `"language"` — plus transforms over agents, commands, skills, and tools. It is explicitly beta: "Entrypoints, hooks, draft shapes, and configuration may change before the stable release."

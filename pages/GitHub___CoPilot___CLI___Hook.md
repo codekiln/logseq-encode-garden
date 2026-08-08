@@ -1,0 +1,5 @@
+- # [Using hooks with GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/use-hooks)
+	- [[GitHub/CoPilot/CLI]]'s implementation of [[AI/Agent/Hook]]: shell commands run at points during agent execution.
+	- Definitions are JSON files at `.github/hooks/*.json`, which apply to any Copilot agent used in that repository, or `~/.copilot/hooks/*.json` for personal hooks that follow you across projects. Events include `sessionStart` and `sessionEnd`; the full event list, configuration format, and input payloads are in the [hooks reference](https://docs.github.com/en/copilot/reference/hooks-reference).
+	- The same hook system spans Copilot CLI and the Copilot cloud agent — see [About hooks for GitHub Copilot](https://docs.github.com/en/copilot/concepts/agents/hooks).
+	- Hooks are also a packaged component of a [[GitHub/CoPilot/CLI/Plugin]], declared in `hooks.json`.
