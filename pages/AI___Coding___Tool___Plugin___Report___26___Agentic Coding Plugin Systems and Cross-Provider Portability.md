@@ -3,6 +3,7 @@ date-created:: [[2026-08-06 Thu]]
 source-pdf:: [Agentic Coding Plugin Systems and Cross-Provider Portability.pdf](../assets/AI/Coding/Tool/Plugin/Report/26/AI__Coding__Tool__Plugin__Report__26__Agentic_Coding_Plugin_Systems_and_Cross_Provider_Portability.pdf)
 source-md:: [Agentic Coding Plugin Systems and Cross-Provider Portability.md](../assets/AI/Coding/Tool/Plugin/Report/26/AI__Coding__Tool__Plugin__Report__26__Agentic_Coding_Plugin_Systems_and_Cross_Provider_Portability.md)
 see-also:: [[AI/Coding/Tool/Plugin]], [[Claude/Code/Plugin/Marketplace/Report/25/11/Precedents]], [[Codex/Plugin]], [[rulesync]], [[Agent/Skills]], [[PiAI/Extension]]
+
 - # Agentic Coding Plugin Systems and Cross-Provider Portability
 	- ## Scope, date, and executive findings
 		- This review examines **installable extension packages for coding agents**: packages that can bundle multiple reusable skills and, ideally, hooks, subagents, commands, MCP integrations, scripts, or other resources. It excludes the former ChatGPT plugin ecosystem and treats MCP servers alone as integrations rather than complete agent-plugin systems.
@@ -22,14 +23,15 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[Claude/Code/Plugin/Marketplace/Report/25
 		- 3. A code extension that can register several such capabilities as one installed unit.
 		- 4. A marketplace or package-manager lifecycle for discovering, installing, upgrading, disabling, or removing the unit.
 		- The comparison distinguishes several concepts that are often conflated:
-		- **Agent Skill**
-		- A progressively loaded folder centered on `SKILL.md`, optionally containing scripts, references, and assets. The open Agent Skills specification defines metadata-first discovery, loading the full instructions on activation, and reading resources only as needed. [^2]
-		- **Plugin or extension package**
-		- An installation and distribution boundary containing one or more skills and potentially other component types. A package requires identity, dependency or source information, component discovery, and usually enablement or update behavior.
-		- **Hook**
-		- A deterministic event handler triggered around tool execution, session events, file changes, prompting, compaction, subagent execution, or other host lifecycle points. Hook schemas and event taxonomies are not standardized across hosts.
-		- **Subagent**
-		- A specialized agent definition with its own prompt, tools, model selection, context, or execution policy. Although several tools use Markdown with YAML frontmatter, their fields and orchestration semantics differ.
+		- [[Agent/Skills]]
+		  id:: 6a75c31d-e853-48b0-954d-c0a229cdb74d
+			- A progressively loaded folder centered on `SKILL.md`, optionally containing scripts, references, and assets. The open Agent Skills specification defines metadata-first discovery, loading the full instructions on activation, and reading resources only as needed. [^2]
+		- [[AI/Coding/Tool/Plugin]]
+			- An installation and distribution boundary containing one or more skills and potentially other component types. A package requires identity, dependency or source information, component discovery, and usually enablement or update behavior.
+		- [[AI/Agent/Hook]]
+			- A deterministic event handler triggered around tool execution, session events, file changes, prompting, compaction, subagent execution, or other host lifecycle points. Hook schemas and event taxonomies are not standardized across hosts.
+		- [[AI/Agent/Subagent]]
+			- A specialized agent definition with its own prompt, tools, model selection, context, or execution policy. Although several tools use Markdown with YAML frontmatter, their fields and orchestration semantics differ.
 		- **Provider neutrality**
 		- This can refer to three increasingly demanding levels:
 		- Table
@@ -45,7 +47,7 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[Claude/Code/Plugin/Marketplace/Report/25
 		- The ratings below use **full** for a documented, installable multi-component package; **near-full** where a major component is missing or preview-only; **programmable** where code can construct the equivalent but there is no declarative package model; and **component-only** where portable pieces exist without a unified installable bundle.
 	- ## Comparative landscape
 		- Table
-			- Tool and surface: **Claude Code**
+			- ### [[Claude/Code]]
 				- Package model: `.claude-plugin/plugin.json` plus component directories
 				- Multiple skills: Yes
 				- Hooks: Yes
@@ -53,7 +55,7 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[Claude/Code/Plugin/Marketplace/Report/25
 				- MCP or tools: MCP, LSP, monitors, executables
 				- Distribution and lifecycle: Local loading, private or public marketplaces, versioned installs
 				- Assessment: **Full reference implementation** [^4]
-			- Tool and surface: **OpenAI Codex**
+			- ### [[Codex]]
 				- Package model: `.codex-plugin/plugin.json`
 				- Multiple skills: Yes
 				- Hooks: Yes
@@ -61,7 +63,7 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[Claude/Code/Plugin/Marketplace/Report/25
 				- MCP or tools: MCP and registered app connections
 				- Distribution and lifecycle: Local, repository, Git, npm, private marketplace, public universal directory
 				- Assessment: **Near-full; no packaged subagents or commands documented** [^5]
-			- Tool and surface: **Cursor IDE**
+			- ### [[CursorAI]] IDE
 				- Package model: `.cursor-plugin/plugin.json`
 				- Multiple skills: Yes
 				- Hooks: Yes
@@ -69,7 +71,7 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[Claude/Code/Plugin/Marketplace/Report/25
 				- MCP or tools: MCP
 				- Distribution and lifecycle: Local plugins, multi-plugin repositories, public and team distribution
 				- Assessment: **Full in the IDE** [^6]
-			- Tool and surface: **Cursor CLI**
+			- ### [[CursorAI/CLI]]
 				- Package model: Individual Cursor components are supported, but `.cursor-plugin` bundle parity is not clearly guaranteed in official plugin documentation
 				- Multiple skills: Yes
 				- Hooks: Components exist; package behavior unclear
@@ -77,7 +79,7 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[Claude/Code/Plugin/Marketplace/Report/25
 				- MCP or tools: MCP
 				- Distribution and lifecycle: No authoritative documentation establishing full IDE-plugin installation parity
 				- Assessment: **Partial or underdocumented as a plugin host** [^6]
-			- Tool and surface: **Pi**
+			- ### [[PiAI]]
 				- Package model: npm, Git, or local package with `package.json` `pi` manifest
 				- Multiple skills: Yes
 				- Hooks: Through executable extensions
@@ -85,7 +87,7 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[Claude/Code/Plugin/Marketplace/Report/25
 				- MCP or tools: Custom tools through extensions; no built-in MCP
 				- Distribution and lifecycle: `pi install`, update, remove, project/user scopes, npm/Git sources, gallery metadata
 				- Assessment: **Strong programmable package system** [^8]
-			- Tool and surface: **OpenCode**
+			- ### [[OpenCode]]
 				- Package model: Local or npm JavaScript/TypeScript plugin
 				- Multiple skills: Can register or transform skills
 				- Hooks: Yes, in code
@@ -93,7 +95,7 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[Claude/Code/Plugin/Marketplace/Report/25
 				- MCP or tools: Custom tools and runtime integrations
 				- Distribution and lifecycle: Local/npm loading; V2 API remains beta
 				- Assessment: **Highly programmable, not a stable declarative bundle standard** [^9]
-			- Tool and surface: **GitHub Copilot CLI**
+			- ### [[GitHub/CoPilot/CLI]]
 				- Package model: `plugin.json`, including Claude-compatible manifest locations
 				- Multiple skills: Yes
 				- Hooks: Yes
@@ -101,7 +103,7 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[Claude/Code/Plugin/Marketplace/Report/25
 				- MCP or tools: MCP and LSP
 				- Distribution and lifecycle: Marketplace, repository, local path; Claude marketplaces supported
 				- Assessment: **Full, with the strongest documented Claude compatibility** [^1]
-			- Tool and surface: **Gemini CLI**
+			- ### [[GeminiCLI]]
 				- Package model: `gemini-extension.json` and conventional component directories
 				- Multiple skills: Yes
 				- Hooks: Yes
@@ -109,7 +111,7 @@ see-also:: [[AI/Coding/Tool/Plugin]], [[Claude/Code/Plugin/Marketplace/Report/25
 				- MCP or tools: MCP
 				- Distribution and lifecycle: Installable extensions with management commands
 				- Assessment: **Full or near-full; subagents are preview** [^11]
-			- Tool and surface: **Junie CLI**
+			- ### [[Junie]] CLI
 				- Package model: Native Junie extension or Claude-compatible marketplace entry
 				- Multiple skills: Yes
 				- Hooks: Not listed as a packaged extension component
