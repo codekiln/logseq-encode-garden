@@ -1,0 +1,5 @@
+- # [Subagents – Codex](https://developers.openai.com/codex/subagents)
+	- [[Codex]]'s implementation of [[AI/Agent/Subagent]]. Custom agents are standalone TOML files in `~/.codex/agents/` for personal scope or `.codex/agents/` for project scope.
+	- Required keys are `name`, `description`, and `developer_instructions`. A file may also carry `config.toml` keys including `model`, `model_reasoning_effort`, `sandbox_mode`, `mcp_servers`, and `skills.config`.
+	- Subagent activity surfaces in the [[ChatGPT/App/Desktop]], [[Codex/CLI]], and the IDE extension, and [[Codex/Hook]] exposes `SubagentStart` and `SubagentStop`.
+	- Standalone configuration and plugin packaging are separate surfaces. [Build plugins](https://developers.openai.com/codex/plugins/build) documents `skills`, `mcpServers`, `apps`, and `hooks` in the manifest and no `agents` — so a [[Codex/Plugin]] cannot ship one of these, even though the host runs them. "Does tool X support subagents" is the wrong question.

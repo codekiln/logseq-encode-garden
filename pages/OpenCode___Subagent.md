@@ -1,0 +1,5 @@
+- # [Agents – OpenCode](https://opencode.ai/docs/agents/)
+	- [[OpenCode]]'s implementation of [[AI/Agent/Subagent]]: an agent becomes one by setting `"mode": "subagent"`, which makes it invocable by a primary agent rather than started directly.
+	- Definitions are Markdown files in `.opencode/agents/` or `~/.config/opencode/agents/`, or entries in `opencode.json`. The filename is the identifier — `review.md` defines the `review` agent.
+	- An [[OpenCode/Plugin]] can also register or transform agents at runtime through the beta [V2 API](https://opencode.ai/v2/docs/build/plugins) `agent.transform`, which supports `list`, `get`, `default`, `update`, and `remove`.
+	- This inverts the [[Codex/Subagent]] situation: OpenCode can construct almost every component type programmatically but has no mature declarative package manifest, while Codex has the stable package shape and fewer packaged component types.

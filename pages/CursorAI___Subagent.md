@@ -1,0 +1,5 @@
+- # [Subagents – Cursor Docs](https://cursor.com/docs/subagents)
+	- [[CursorAI]]'s implementation of [[AI/Agent/Subagent]]: specialized agents with their own context, for task-specific work. Three ship built in — `explore` for codebase search, `bash` for shell commands, and `browser` for browser automation over MCP.
+	- Custom definitions are Markdown files in an `agents/` directory and can be packaged in a [[CursorAI/Plugin]], per the [plugins reference](https://cursor.com/docs/reference/plugins).
+	- The declarable frontmatter surface is much smaller than [[Claude/Code/Subagent]]'s, so a Claude agent definition loses fields on the way across.
+	- Support for a component is not the same as plugin parity: the plugins reference says these bundles work in the Cursor IDE and makes no equivalent claim for [[CursorAI/CLI]]. Test agents in the CLI independently of an IDE install.

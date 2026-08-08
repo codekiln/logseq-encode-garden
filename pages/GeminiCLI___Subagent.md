@@ -1,0 +1,4 @@
+- # [Subagents – Gemini CLI](https://github.com/google-gemini/gemini-cli/blob/main/docs/core/subagents.md)
+	- [[GeminiCLI]]'s implementation of [[AI/Agent/Subagent]]: specialized agents inside the main session, each with its own system prompt, a restricted or specialized tool set, and an independent context window.
+	- Shipped in a [[GeminiCLI/Extension]] as `.md` agent definition files in an `agents/` directory, per the [extensions reference](https://github.com/google-gemini/gemini-cli/blob/main/docs/extensions/reference.md).
+	- Preview as of mid-2026 — the extensions reference states that sub-agents are "a preview feature currently under active development," which is the one gap keeping a Gemini extension short of a complete multi-component bundle.

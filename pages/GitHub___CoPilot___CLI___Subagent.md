@@ -1,0 +1,4 @@
+- # [Creating and using custom agents for GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/create-custom-agents-for-cli)
+	- [[GitHub/CoPilot/CLI]]'s implementation of [[AI/Agent/Subagent]]: specialized assistants defined in Markdown.
+	- Packaged as `*.agent.md` files inside a [[GitHub/CoPilot/CLI/Plugin]], per [About plugins](https://docs.github.com/en/copilot/concepts/agents/about-plugins).
+	- Copilot CLI is one of the few hosts that packages skills, hooks, custom agents, MCP, and LSP in one bundle.

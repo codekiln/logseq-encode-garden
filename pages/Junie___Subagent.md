@@ -1,0 +1,3 @@
+- # [Junie CLI extensions](https://junie.jetbrains.com/docs/junie-cli-extensions.html)
+	- [[Junie]]'s implementation of [[AI/Agent/Subagent]], carried as a component of a [[Junie/Extension]] alongside agent skills, MCP servers, custom slash commands, and guidelines.
+	- Junie packages subagents but does not list hooks as an extension component — the inverse of [[Codex]], whose plugins package [[Codex/Hook]]s but cannot ship a [[Codex/Subagent]].

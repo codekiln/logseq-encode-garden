@@ -1,0 +1,4 @@
+- # [Extensions – pi-mono](https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/docs/extensions.md)
+	- [[PiAI]] has no native [[AI/Agent/Subagent]] definition and no `agents/*.md` format. Subagent-like behavior is orchestrated from a [[PiAI/Extension]] in TypeScript or JavaScript, using the agent-flow events `before_agent_start`, `agent_start`, `agent_end`, and `agent_settled`.
+	- The [packages reference](https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/docs/packages.md) lists exactly four bundleable resource types — extensions, skills, prompt templates, and themes. Agent definitions are not among them.
+	- Same trade as [[PiAI/Hook]]: an extension has broad control rather than a fixed schema, and nothing declarative for a cross-host build to transpile.
