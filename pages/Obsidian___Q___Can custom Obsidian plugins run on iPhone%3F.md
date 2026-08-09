@@ -1,0 +1,8 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+- # Can custom [[Obsidian]] plugins run on iPhone?
+	- ## [[AI Answer]]
+		- [[Answer/Official]] from [Mobile development](https://docs.obsidian.md/Plugins/Getting%20started/Mobile%20development), [Manifest](https://docs.obsidian.md/Reference/Manifest), and the [Obsidian sample plugin](https://github.com/obsidianmd/obsidian-sample-plugin):
+			- **Short answer:** Yes. Custom plugins can run in Obsidian for iPhone. Obsidian's developer documentation covers mobile emulation, inspecting the app's webview on an iOS device, and detecting iOS with `Platform.isIosApp`. A plugin declares mobile compatibility with `"isDesktopOnly": false` in `manifest.json`.
+			- **The development workflow is usually desktop-based.** Write and compile the TypeScript on a Mac or PC, then put the built `main.js`, `manifest.json`, and optional `styles.css` in `VaultFolder/.obsidian/plugins/<plugin-id>/`. Copy or sync that compiled plugin folder to the iPhone, restart Obsidian, and enable it under **Settings → Community plugins**.
+			- **Mobile compatibility is the important constraint.** Node.js and Electron APIs are unavailable on iOS, so code or dependencies that use modules such as `fs`, `path`, or `electron` can crash. Prefer Obsidian's cross-platform APIs, use `Platform` for platform-specific branches, and test the plugin on the phone.
+			- **A practical development loop:** start with the official sample plugin, keep `isDesktopOnly` set to `false`, test first with desktop mobile emulation, then inspect the actual iPhone from Safari's Web Inspector on a Mac. Obsidian documents inspection for iOS 16.4 or later.
