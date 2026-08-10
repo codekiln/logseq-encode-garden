@@ -1,0 +1,10 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+
+- # Is there any equivalent functionality in [[Claude/Code]]'s CLI to [[Claude/Desktop/Code]]'s ability to group related chat histories together?
+	- ## [[AI Answer]]
+		- [[Answer/Official]] from [Manage Claude Code sessions](https://code.claude.com/docs/en/sessions.md) and [Agent view](https://code.claude.com/docs/en/agent-view.md):
+		- **Short answer:** Nothing in the CLI matches Desktop's Code-tab sidebar (explicit repo/branch/worktree badges) directly, but the CLI has two mechanisms that get most of the way there: automatic **directory-scoped grouping** of session history, and an **agent view** (`claude agents`) that groups sessions by state or by directory.
+		- **Directory-scoped grouping (implicit):** the CLI stores each session transcript under `~/.claude/projects/<project>/<session-id>.jsonl`, keyed by working-directory path. Every session run from a given repo therefore already sits together on disk — an implicit grouping by project rather than an explicit tag or folder.
+		- **Session picker:** `/resume` (or `claude --resume`) opens a picker scoped to the current directory by default. From there: `Ctrl+W` expands to all worktrees, `Ctrl+A` expands to all projects on the machine, `Ctrl+B` filters by git branch, and text search matches names/summaries/PR URLs. Sessions can also be given a name (`claude -n <name>` or `/rename`) so related ones are easier to pick out.
+		- **Agent view (closest analogue):** `claude agents` opens a richer view that groups sessions either by **state** (Pinned, Ready for review, Needs input, Working, Completed — toggle with `Ctrl+S`) or by **directory**. Sessions can be pinned (`Ctrl+T`) to keep related ones at the top, filtered by agent name/state/PR number, and reordered within a group.
+		- **What's still missing:** no free-form tagging, no cross-repo logical grouping (grouping stays either state-based or directory-based, never topic-based), and no visual per-session metadata badges (repo/branch/worktree/env) like Desktop's Code tab shows in its sidebar.
