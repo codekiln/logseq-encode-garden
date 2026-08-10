@@ -1,0 +1,23 @@
+- [[Keyshort]] [[LazyVim]] [[LazyVim/Keyshort]]
+	- **Open Lazygit** [[Card]]
+		- Shortcut: `<leader>gg`
+		- Description: Opens [[Lazygit]] in a floating window rooted at the git root. `<leader>gG` opens it at the current working directory instead. The mapping only exists when the `lazygit` binary is on `PATH`.
+	- **Git Status Picker** [[Card]]
+		- Shortcut: `<leader>gs`
+		- Description: Picker over changed files, with a diff preview per file.
+	- **History of the Current File** [[Card]]
+		- Shortcut: `<leader>gf`
+		- Description: Commit log filtered to the file in the current buffer — the "how did this line get here" view.
+	- **Git Log** [[Card]]
+		- Shortcut: `<leader>gl`
+		- Description: Commit log for the repository. `<leader>gL` scopes it to the current working directory.
+	- **Blame the Current Line** [[Card]]
+		- Shortcut: `<leader>gb`
+		- Description: Shows the commit that last touched the cursor line, openable to the full diff.
+	- **Open or Copy the Remote URL** [[Card]]
+		- Shortcut: `<leader>gB` open, `<leader>gY` copy
+		- Description: Builds the forge URL for the current file and line range and either opens it in the browser or puts it on the clipboard. Works from visual mode to pin a line range.
+	- [[My Note]]
+		- These are pickers over git data; the interactive staging and committing workflow lives in [[Lazygit]] behind `<leader>gg`.
+		- Hunk-level staging inside the buffer comes from [[nvim/Plugin/gitsigns.nvim]] on the `<leader>gh` group, not from these keys.
+		- A general LazyVim cheat sheet may list `<leader>gc` for commit search and `<leader>ge` for a Neotree git explorer; neither exists here — those belong to the fzf-lua and neo-tree extras (see [[LazyVim/Keyshort/Explorer]]).

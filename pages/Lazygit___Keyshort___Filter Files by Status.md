@@ -1,0 +1,7 @@
+- [[Keyshort]] [[Lazygit]] [[Lazygit/Keyshort]]
+	- **Filter Files by Status** [[Card]]
+		- Shortcut: `<ctrl+b>`
+		- Description: Narrows the Files panel to one status group — staged, unstaged, or tracked — so a long working tree can be worked through one category at a time.
+	- [[My Note]]
+		- Worth checking when the Files panel looks wrong: a filter left on from earlier hides whole groups, and is a more likely explanation than lazygit failing to see a file.
+		- Distinct from `/`, which filters the current panel by a search string rather than by status.

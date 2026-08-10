@@ -1,0 +1,16 @@
+- [[Keyshort]] [[vim]] [[vim/Keyshort]]
+	- **Set a Mark** [[Card]]
+		- Shortcut: `m` followed by a letter, e.g. `ma`
+		- Description: Drops a named mark at the cursor. Lowercase letters are local to the buffer; uppercase letters are global and carry a file with them, so `mA` jumps back across files.
+	- **Jump to a Mark** [[Card]]
+		- Shortcut: `` `a `` exact position, `'a` start of line
+		- Description: Backtick returns to the exact line *and column* of mark `a`; the apostrophe returns to the first non-blank character of that line.
+	- **Jump Back to Where I Just Was** [[Card]]
+		- Shortcut: `''` or ` `` `
+		- Description: Returns to the position before the last jump, using the automatic `'` mark. The one mark worth knowing even without setting any by hand.
+	- **Delete Marks** [[Card]]
+		- Shortcut: `:delmarks a-z`
+		- Description: Clears marks by name or range — `:delmarks ax` removes just `a` and `x`, `:delmarks!` clears all lowercase marks for the buffer while leaving `A-Z` and `0-9` intact.
+	- [[My Note]]
+		- Marks are only worth setting if they can be found again; `<leader>sm` in [[LazyVim]] opens a picker over every set mark with its file and line, which removes the need to remember letters (see [[LazyVim/Keyshort/Search]]).
+		- Distinct from the jump list, which records where I have *been* automatically rather than where I chose to bookmark — see [[vim/Keyshort/Jump/Back and Forward]].

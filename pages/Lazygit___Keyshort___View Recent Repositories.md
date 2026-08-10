@@ -1,1 +1,7 @@
-- `Ctrl+r`
+- [[Keyshort]] [[Lazygit]] [[Lazygit/Keyshort]]
+	- **Switch to a Recent Repository** [[Card]]
+		- Shortcut: `<ctrl+r>`
+		- Description: Opens a list of recently visited repositories and rebinds the running lazygit session to the one chosen — no quitting, `cd`, and relaunching.
+	- [[My Note]]
+		- The cross-repo counterpart to `[` / `]`, which cycle tabs *within* one repository.
+		- Launched from [[LazyVim]] with `<leader>gg`, lazygit starts at the editor's git root, so this is the way out to a different repo without leaving the session — see [[LazyVim/Keyshort/Git]].

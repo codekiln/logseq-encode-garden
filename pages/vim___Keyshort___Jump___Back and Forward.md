@@ -1,0 +1,12 @@
+- [[Keyshort]] [[vim]] [[vim/Keyshort]] [[vim/Keyshort/Jump]]
+	- **Jump Back and Forward Through the Jump List** [[Card]]
+		- Shortcut: `<C-o>` back, `<C-i>` forward
+		- Description: Steps through [[vim/jump/list]], the record of every position jumped away from — across files, not just within a buffer. The browser back/forward button of Vim.
+		- The [[Mnemonic]]: `O` for **o**lder, `I` for the opposite (and `<C-i>` is the same byte as `<Tab>`, which is why `<Tab>` sometimes appears to jump forward).
+	- **Inspect the Jump List** [[Card]]
+		- Shortcut: `:ju`
+		- Description: Prints the jump list with position `0` as the most recent entry.
+	- [[My Note]]
+		- This is what makes `gd` safe to press freely: jump to a definition, read it, `<C-o>` back to where the question started (see [[LazyVim/Keyshort/LSP/Navigation]]).
+		- Only *jumps* are recorded — searches, `G`, `gg`, marks, and tag jumps. Plain `j` / `k` movement is not, so the list stays coarse enough to be useful.
+		- The same two keys navigate help tags, which is the context they are documented in on [[vim/Keyshort/Help/Tag/Browse Back and Forward]]. `<leader>sj` in [[LazyVim]] opens a picker over the list.

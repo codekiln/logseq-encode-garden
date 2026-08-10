@@ -1,0 +1,11 @@
+- [[Keyshort]] [[vim]] [[vim/Keyshort]] [[vim/Keyshort/Scroll]]
+	- **Scroll a Full Page** [[Card]]
+		- Shortcut: `<C-f>` forward, `<C-b>` backward
+		- Description: Moves the view a whole screen at a time. The [[Mnemonic]] is **f**orward and **b**ackward.
+	- **Scroll a Half Page** [[Card]]
+		- Shortcut: `<C-d>` down, `<C-u>` up
+		- Description: Moves the view half a screen, keeping the cursor's relative position so context is never entirely lost. The [[Mnemonic]] is **d**own and **u**p.
+	- [[My Note]]
+		- Half-page is the one to default to: a full page leaves no overlap between the old and new view, so `<C-d>` / `<C-u>` keep orientation while `<C-f>` / `<C-b>` cover ground faster.
+		- In my [[LazyVim]] config `<C-f>` and `<C-b>` are taken over by [[nvim/Plugin/snacks.nvim]]'s smooth scroll, which animates the same movement rather than changing it.
+		- Easy to confuse with `<C-o>` / `<C-i>`, which move through the jump list rather than the buffer — see [[vim/Keyshort/Jump/Back and Forward]].

@@ -1,0 +1,15 @@
+- [[Keyshort]] [[LazyVim]] [[LazyVim/Keyshort]]
+	- **List Open Buffers** [[Card]]
+		- Shortcut: `<leader>fb`
+		- Description: Opens the [[nvim/Plugin/snacks.nvim]] picker over open buffers. `<leader>,` is the same thing on a shorter chord; `<leader>fB` widens it to all buffers including unlisted ones.
+	- **Next and Previous Buffer** [[Card]]
+		- Shortcut: `<S-l>` next, `<S-h>` previous
+		- Description: Steps through the buffer list. Plain `H` and `L`, which normally jump to the top and bottom of the screen, are rebound to this.
+	- **Next and Previous Buffer (bracket form)** [[Card]]
+		- Shortcut: `]b` next, `[b` previous
+		- Description: Same movement as `<S-l>` / `<S-h>`, in the `[`/`]` bracket-pair family shared with `]d`, `]q`, `]t`.
+	- **Close Current Buffer** [[Card]]
+		- Shortcut: `<leader>bd`
+		- Description: Deletes the buffer but keeps the window layout. `<leader>bD` deletes the buffer *and* its window; `<leader>bo` closes every other buffer.
+	- [[My Note]]
+		- Buffer order and the tab-like strip at the top come from [[nvim/Plugin/bufferline.nvim]]; `[B` / `]B` reorder buffers rather than navigate them.

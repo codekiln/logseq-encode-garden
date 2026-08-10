@@ -1,0 +1,10 @@
+- [[Keyshort]] [[Lazygit]] [[Lazygit/Keyshort]]
+	- **Stash All Changes** [[Card]]
+		- Shortcut: `s`
+		- Description: Stashes everything in the working tree from the Files panel.
+	- **View Stash Options** [[Card]]
+		- Shortcut: `S`
+		- Description: Opens the menu of stash variations — stash all, stash staged only, stash unstaged only, include untracked. The one to use when only part of the work should be set aside.
+	- [[My Note]]
+		- "Stash staged changes" is the useful inverse of the usual workflow: stage the part that is *not* ready, stash it, and keep working on a clean tree.
+		- The Stash panel is `5` in the panel numbering; entries are applied with `<space>` and dropped with `d`.

@@ -1,0 +1,10 @@
+- [[Keyshort]] [[LazyVim]] [[LazyVim/Keyshort]]
+	- **Toggle the Floating Terminal** [[Card]]
+		- Shortcut: `<C-/>`
+		- Description: Opens a floating terminal at the project root, and focuses back out of it from inside — the same key works in normal and terminal mode. `<C-_>` is bound identically for terminals that send that byte instead.
+	- **Open a Terminal at the Working Directory** [[Card]]
+		- Shortcut: `<leader>fT`
+		- Description: Floating terminal rooted at the current working directory. `<leader>ft` uses the project root instead, matching `<C-/>`.
+	- [[My Note]]
+		- [[Ghostty]] and some other terminals send `<C-_>` rather than `<C-/>`; both are mapped, so the key works either way.
+		- This is a [[nvim/Plugin/snacks.nvim]] terminal, so it reuses one persistent shell per root rather than spawning a new one each time.

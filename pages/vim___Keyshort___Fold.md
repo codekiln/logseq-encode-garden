@@ -1,0 +1,17 @@
+- [[Keyshort]] [[vim]] [[vim/Keyshort]]
+	- **Toggle the Fold Under the Cursor** [[Card]]
+		- Shortcut: `za`
+		- Description: Opens the fold if closed, closes it if open. `zA` does the same recursively, so nested folds follow the outer one.
+	- **Open or Close One Fold** [[Card]]
+		- Shortcut: `zo` open, `zc` close
+		- Description: Explicit single-direction versions of `za`. `zO` and `zC` apply recursively to every fold nested under the cursor.
+	- **Open or Close Every Fold in the Buffer** [[Card]]
+		- Shortcut: `zR` open all, `zM` close all
+		- Description: Sets fold level to maximum or zero for the whole buffer. `zM` is the fast way to get an outline of a long file; `zR` restores it.
+	- **Toggle Folding Itself On and Off** [[Card]]
+		- Shortcut: `zi`
+		- Description: Flips the `foldenable` option. Distinct from `zR` — `zR` opens folds while leaving folding active, `zi` suspends folding entirely and remembers which folds were closed when it is switched back on.
+	- [[My Note]]
+		- In my [[LazyVim]] config folding is `foldmethod=indent` with `foldlevel=99`, so files open fully expanded and folds follow indentation rather than syntax. That makes `zM` immediately useful on [[Logseq]] pages and [[Python]], where indentation already carries the structure.
+		- No [[nvim-ufo]] is installed, so `zR` and `zM` are the built-in commands rather than ufo's remapped versions, and there is no virtual text showing folded line counts.
+		- Background on fold methods and treesitter-based folding: [[nvim/Q/How can I quickly collapse and expand a block in nvim?]]

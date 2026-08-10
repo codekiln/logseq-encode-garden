@@ -1,0 +1,10 @@
+- [[Keyshort]] [[vim]] [[vim/Keyshort]]
+	- **Join the Next Line onto This One** [[Card]]
+		- Shortcut: `J`
+		- Description: Pulls the following line up, collapsing the leading whitespace and inserting a single space at the seam. Takes a count — `3J` joins three lines — and works over a visual selection.
+	- **Join Without Inserting a Space** [[Card]]
+		- Shortcut: `gJ`
+		- Description: Same join, but keeps the text exactly as it is: no space inserted and leading whitespace preserved. The one to use when the line break is inside a string or a path.
+	- [[My Note]]
+		- The everyday use is unwrapping a hard-wrapped paragraph; `gqip` re-wraps it afterwards to `textwidth`.
+		- Not to be confused with `<S-l>`, which is a buffer jump in my [[LazyVim]] config — see [[LazyVim/Keyshort/Buffer]].

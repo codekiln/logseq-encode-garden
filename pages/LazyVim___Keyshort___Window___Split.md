@@ -1,0 +1,16 @@
+- [[Keyshort]] [[LazyVim]] [[LazyVim/Keyshort]] [[LazyVim/Keyshort/Window]]
+	- **Split Window Right (vertical)** [[Card]]
+		- Shortcut: `<leader>|`
+		- Description: LazyVim's alias for `<C-w>v`. The `|` glyph mirrors the resulting vertical divider.
+	- **Split Window Below (horizontal)** [[Card]]
+		- Shortcut: `<leader>-`
+		- Description: LazyVim's alias for `<C-w>s`. The `-` glyph mirrors the resulting horizontal divider.
+	- **Move Focus Between Splits** [[Card]]
+		- Shortcut: `<C-h>` `<C-j>` `<C-k>` `<C-l>`
+		- Description: Jumps focus left/down/up/right without the `<C-w>` prefix. The vanilla `<C-w>h/j/k/l` still works and is what these remap to.
+	- **Close Current Split** [[Card]]
+		- Shortcut: `<leader>wd`
+		- Description: Closes the focused window, leaving the buffer loaded. Vanilla `<C-w>c` is the equivalent.
+	- [[My Note]]
+		- Holding `<C-w>` opens which-key's **Window Hydra Mode**, which keeps the window submenu live so a run of resizes and splits needs the prefix only once.
+		- Resizing is on `<C-Up>` / `<C-Down>` / `<C-Left>` / `<C-Right>`.

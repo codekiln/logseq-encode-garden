@@ -1,1 +1,10 @@
-- `c`
+- [[Keyshort]] [[Lazygit]] [[Lazygit/Keyshort]]
+	- **Commit Staged Changes** [[Card]]
+		- Shortcut: `c`
+		- Description: Opens an inline message input for the staged changes. `C` opens the commit message in `$EDITOR` instead, which is what a multi-line body needs.
+	- **Reword the Last Commit** [[Card]]
+		- Shortcut: `r` in the Commits panel
+		- Description: Edits the message of the selected commit inline; `R` opens it in `$EDITOR`. Works on any unpushed commit, not only `HEAD`.
+	- [[My Note]]
+		- Nothing is committed that was not staged first — see [[Lazygit/Keyshort/Stage]].
+		- Longer walkthrough of the reword path: [[Lazygit/Q/In lazygit, what's the right keyshort or set of keystrokes to edit the commit message of the most recent commit that's not pushed?]]

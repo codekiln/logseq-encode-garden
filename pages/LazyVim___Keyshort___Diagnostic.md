@@ -1,0 +1,17 @@
+- [[Keyshort]] [[LazyVim]] [[LazyVim/Keyshort]]
+	- **Next and Previous Diagnostic** [[Card]]
+		- Shortcut: `]d` next, `[d` previous
+		- Description: Jumps to the next or previous diagnostic in the buffer and opens its float. `]e` / `[e` restrict the jump to errors, `]w` / `[w` to warnings.
+	- **Show Diagnostics for the Current Line** [[Card]]
+		- Shortcut: `<leader>cd`
+		- Description: Opens a floating window with the full text of every diagnostic on the cursor line — the readable version of a message truncated inline.
+	- **Picker over Buffer Diagnostics** [[Card]]
+		- Shortcut: `<leader>sD`
+		- Description: Lists diagnostics for the current buffer only.
+	- **Picker over All Diagnostics** [[Card]]
+		- Shortcut: `<leader>sd`
+		- Description: Lists diagnostics across every attached buffer.
+	- [[My Note]]
+		- Case is the opposite of what a general LazyVim cheat sheet suggests: here lowercase `<leader>sd` is the *wide* list and uppercase `<leader>sD` is the *buffer* list.
+		- Diagnostics start **disabled** — `config/autocmds.lua` calls `vim.diagnostic.enable(false)` on `VeryLazy`. None of these keys show anything until `<leader>ud` turns diagnostics on for the session (see [[LazyVim/Keyshort/UI/Toggle]]).
+		- `<leader>xx` and `<leader>xX` open the same information as a persistent [[nvim/Plugin/trouble.nvim]] list rather than a picker.

@@ -1,0 +1,18 @@
+- [[Keyshort]] [[vim]] [[vim/Keyshort]]
+	- **Shift Text Left or Right** [[Card]]
+		- Shortcut: `>` right, `<` left
+		- Description: Shifts the visual selection by one `shiftwidth`. In normal mode they need a motion, so `>>` and `<<` shift the current line.
+	- **Keep the Selection After Shifting** [[Card]]
+		- Shortcut: `>` then `>` again in visual mode
+		- Description: [[LazyVim]] remaps visual `<` and `>` to `<gv` and `>gv`, so the selection survives the shift and the key can be repeated without reselecting. Vanilla Vim drops the selection after one shift.
+	- **Re-indent to the Language's Rules** [[Card]]
+		- Shortcut: `=` with a motion
+		- Description: Applies the filetype's indent rules to the motion's range, fixing structure without reformatting content. Different from `<leader>cf`, which runs a real formatter.
+	- **Re-indent the Current Paragraph** [[Card]]
+		- Shortcut: `=ip`
+		- Description: `=` over the `ip` "inner paragraph" text object — the block of non-blank lines around the cursor.
+	- **Re-indent the Entire File** [[Card]]
+		- Shortcut: `gg=G`
+		- Description: Jumps to the first line, then re-indents from there to the last. Reads as three ordinary commands composed: `gg` move, `=` operator, `G` motion.
+	- [[My Note]]
+		- `=` uses `equalprg` or the filetype indent plugin, so on a file with no indent support it falls back to `lisp`-style indenting and can do more harm than good. Reach for [[LazyVim/Keyshort/Code Action]] `<leader>cf` when a real formatter is configured.

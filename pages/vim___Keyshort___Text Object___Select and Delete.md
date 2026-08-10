@@ -1,0 +1,20 @@
+- [[Keyshort]] [[vim]] [[vim/Keyshort]] [[vim/Keyshort/Text Object]]
+	- **Select the Word Under the Cursor** [[Card]]
+		- Shortcut: `viw`
+		- Description: Visually selects the whole word regardless of where in it the cursor sits. `vaw` takes the trailing whitespace too, which is what to use when deleting a word from a list.
+	- **Select Inside Quotes** [[Card]]
+		- Shortcut: `vi"`
+		- Description: Selects the contents of the quoted string without the quotes; `va"` includes them. Works for `'` and `` ` `` the same way.
+	- **Select Inside Brackets** [[Card]]
+		- Shortcut: `vi{` braces, `vi(` parens, `vi[` square
+		- Description: Selects everything the delimiters enclose, across multiple lines. The `a` form (`va[`) includes the delimiters themselves.
+	- **Select the Current Paragraph** [[Card]]
+		- Shortcut: `vip` inside, `vap` around
+		- Description: Selects the block of non-blank lines around the cursor. `ip` stops at the blank line, `ap` swallows it.
+	- **Delete Around the Paragraph** [[Card]]
+		- Shortcut: `dap`
+		- Description: The same `ap` object under the `d` operator instead of `v` — deletes the paragraph and its trailing blank line in one stroke.
+	- [[My Note]]
+		- The grammar is the point: `<operator><a|i><object>`. Any operator (`d` delete, `c` change, `y` yank, `=` re-indent, `v` select) composes with any object, so these are five examples of one rule rather than five shortcuts.
+		- [[nvim/Plugin/mini.ai]] extends the built-in objects with `n` and `l` variants — `din(` deletes inside the *next* parens, `dil(` the *last* — so the cursor no longer has to be inside the object to operate on it.
+		- `s` and `S` are taken by [[nvim/Plugin/flash.nvim]] in my config, so the vanilla `s` substitute-character command is not available; `cl` does the same thing.

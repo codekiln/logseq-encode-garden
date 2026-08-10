@@ -1,0 +1,13 @@
+- [[Keyshort]] [[LazyVim]] [[LazyVim/Keyshort]]
+	- **Code Action** [[Card]]
+		- Shortcut: `<leader>ca`
+		- Description: Opens the [[LSP]] code-action menu for the cursor position or visual selection — quick fixes, import insertion, and refactors offered by the attached server. `<leader>cA` asks for source-wide actions instead.
+	- **Format Buffer** [[Card]]
+		- Shortcut: `<leader>cf`
+		- Description: Formats the buffer, or the visual selection in visual mode, through [[nvim/Plugin/conform.nvim]]. `<leader>uf` and `<leader>uF` toggle format-on-save globally and per buffer.
+	- **Document Symbols** [[Card]]
+		- Shortcut: `<leader>cs`
+		- Description: Opens the symbol outline for the current file in [[nvim/Plugin/trouble.nvim]] — functions, classes, and headings, navigable as a tree. `<leader>cS` shows references and definitions in the same panel.
+	- [[My Note]]
+		- Renaming lives with the navigation keys on [[LazyVim/Keyshort/LSP/Navigation]] rather than here, because `<leader>cr` is reached from the same cursor position as `gd` and `gr`.
+		- These are buffer-local and appear only once a language server attaches, so they are absent in a scratch buffer.

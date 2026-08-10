@@ -11,12 +11,21 @@
 	- **Go to References** [[Card]]
 		- Shortcut: `gr`
 		- Description: Lists references to the symbol under the cursor.
+	- **Go to Type Definition** [[Card]]
+		- Shortcut: `gy`
+		- Description: Jumps to the definition of the symbol's *type* rather than the symbol itself — on a variable, that means the class or interface it is an instance of. LazyVim's description spells the [[Mnemonic]] out as "Goto T[y]pe Definition".
 	- **Hover Documentation** [[Card]]
 		- Shortcut: `K`
 		- Description: Shows hover documentation for the symbol under the cursor.
+	- **Step Between References in the Buffer** [[Card]]
+		- Shortcut: `]]` next, `[[` previous
+		- Description: Cycles through the other occurrences of the symbol under the cursor, in place, without opening a picker. Backed by `Snacks.words` over the LSP's document highlights, so it needs a server advertising `documentHighlight`.
 	- **Rename Symbol** [[Card]]
 		- Shortcut: `<leader>cr`
 		- Description: Renames the symbol under the cursor across the project.
+	- **Inspect Attached Language Servers** [[Card]]
+		- Shortcut: `<leader>cl`
+		- Description: Opens a picker over LSP configuration and attached clients. `:LspInfo` still works and is now an alias for `:checkhealth vim.lsp`.
 	- [[My Note]]
 		- These keymaps are [[LSP]]-dependent — `gd` only resolves when a language server is attached. If `gd` does nothing:
 			- 1. Check attached clients with `:LspInfo`.
@@ -24,4 +33,5 @@
 			- 3. Open Neovim from the project root (`nvim .`) so the LSP starts — a single file outside a project may not attach one.
 			- 4. Verify the symbol actually has a definition the LSP can resolve.
 			- 5. Deeper diagnosis: `:checkhealth vim.lsp`.
-		- For fuzzy navigation instead of jumping directly, LazyVim also offers Telescope/Snacks pickers — `gr` for references and `<leader>ss` / `<leader>s*` for workspace symbol search (varies by LazyVim version).
+		- For an outline instead of a jump, `<leader>cs` opens document symbols in [[nvim/Plugin/trouble.nvim]] — see [[LazyVim/Keyshort/Code Action]]. `<leader>ss` belongs to the Telescope and fzf-lua extras and is not mapped here.
+		- `<C-o>` returns from any of these jumps — see [[vim/Keyshort/Jump/Back and Forward]].

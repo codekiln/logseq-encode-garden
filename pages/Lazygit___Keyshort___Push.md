@@ -1,0 +1,6 @@
+- [[Keyshort]] [[Lazygit]] [[Lazygit/Keyshort]]
+	- **Push the Current Branch** [[Card]]
+		- Shortcut: `P`
+		- Description: Pushes the current branch to its upstream. With no upstream configured, lazygit prompts to set one rather than failing. Uppercase against lowercase `p` for pull — see [[Lazygit/Keyshort/Pull]].
+	- [[My Note]]
+		- When the remote has moved on, the push is refused and lazygit offers a force-push; that prompt is the moment to stop and check whether the divergence is a rebase of my own commits or someone else's work.

@@ -1,0 +1,14 @@
+- [[Keyshort]] [[vim]] [[vim/Keyshort]]
+	- **Go to the First or Last Line** [[Card]]
+		- Shortcut: `gg` first, `G` last
+		- Description: Jumps to the top or bottom of the buffer. Both are recorded in the jump list, so `<C-o>` returns.
+	- **Go to an Absolute Line Number** [[Card]]
+		- Shortcut: `10gg` or `:10`
+		- Description: `G` and `gg` take a count as an absolute line number, so `10gg` and `10G` both land on line 10. `:10` does the same through the command line.
+	- **Move a Relative Number of Lines** [[Card]]
+		- Shortcut: `10j` down, `10k` up
+		- Description: Moves by a count of lines relative to the cursor. Pairs with `relativenumber`, which prints exactly the count to type in the gutter.
+	- [[My Note]]
+		- A wrinkle specific to my config: [[LazyVim]] remaps `j` and `k` to `gj` and `gk` **only when no count is given**. With `wrap` on, a bare `j` therefore moves by *display* line while `10j` moves 10 *real* lines. That is the behaviour worth wanting, but it means the gutter count and a bare `j` are measuring different things on a wrapped paragraph.
+		- `<leader>uL` toggles `relativenumber` when the counts are more distracting than useful — see [[LazyVim/Keyshort/UI/Toggle]].
+		- Display-line movement on its own: [[vim/Keyshort/Move by Display Line]].

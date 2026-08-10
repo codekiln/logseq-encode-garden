@@ -1,0 +1,7 @@
+- [[Keyshort]] [[Lazygit]] [[Lazygit/Keyshort]]
+	- **Ignore or Exclude the Selected File** [[Card]]
+		- Shortcut: `i`
+		- Description: Opens a menu offering two destinations for the untracked file under the cursor — add it to `.gitignore`, which is committed and shared, or to `.git/info/exclude`, which is local to this clone only.
+	- [[My Note]]
+		- The distinction is the whole value of the key: `.gitignore` is a statement about the project, `.git/info/exclude` is a statement about my machine. Editor droppings and personal scratch files belong in the latter.
+		- Files already ignored stop appearing in the Files panel entirely, which is the usual explanation for "lazygit is not showing my dotfile" — see [[Lazygit/Q/How do I get lazygit to show files and folders that begin with a dot or period, aka hidden files and folders?]].
