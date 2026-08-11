@@ -14,3 +14,5 @@ see-also:: [[tmux]], [[Zellij]], [[Terminal/Multiplexer]]
 		- Agent state detection is the premise: panes are labeled by whether the agent inside is blocked, working, or done, which is the piece a general-purpose multiplexer leaves to the human to infer.
 		- A socket API lets agents drive the multiplexer themselves — spawning panes, reading output, and waiting on each other — rather than only being driven by a human at the prefix key.
 		- Plugins extend panes and workflows, distributed through a marketplace.
+	- ## Adoption
+		- [[Person/Chris Power]] switched over after about 10 years on [[tmux]], won over by the agent-state pane and by being able to SSH into a remote box and leave an agent running unattended — [[Person/Chris Power/YouTube/26/08/herdr]].
