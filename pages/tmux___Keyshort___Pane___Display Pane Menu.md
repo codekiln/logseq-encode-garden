@@ -1,0 +1,31 @@
+- [[Keyshort]] [[tmux]] [[tmux/Keyshort]] [[tmux/Keyshort/Pane]]
+	- **Display Pane Menu** [[Card]]
+		- Shortcut: `<prefix> >` [[Keyshort/Default]]
+		- Description: Opens a popup menu of actions for the current [[tmux/Pane]] (stock tmux binding, not from [[oh-my-tmux]]). `Escape` or `q` closes it without acting; the rest of this page's cards are its keyboard-reachable items.
+		- [[My Notes]]
+			- Mouse-only items not covered as separate cards: Search/Type/Copy word or hyperlink under the pointer, Copy Line. `<`/`>` (Go To Top/Bottom) only appear while the pane is in copy/view mode.
+	- **Pane Menu: Horizontal Split** [[Card]]
+		- Shortcut: `<prefix> >` then `h`
+		- Description: Splits the pane horizontally (new pane to the right). Same effect as the direct default shortcut `<prefix> %`.
+	- **Pane Menu: Vertical Split** [[Card]]
+		- Shortcut: `<prefix> >` then `v`
+		- Description: Splits the pane vertically (new pane below). Same effect as the direct default shortcut `<prefix> "`.
+	- **Pane Menu: Swap Up** [[Card]]
+		- Shortcut: `<prefix> >` then `u`
+		- Description: Swaps the current pane with the one before it (`swap-pane -U`). No direct default prefix shortcut exists for this.
+	- **Pane Menu: Swap Down** [[Card]]
+		- Shortcut: `<prefix> >` then `d`
+		- Description: Swaps the current pane with the one after it (`swap-pane -D`). No direct default prefix shortcut exists for this.
+	- **Pane Menu: Kill Pane** [[Card]]
+		- Shortcut: `<prefix> >` then `X`
+		- Description: Kills the current pane (`kill-pane`). Same effect as the direct default shortcut `<prefix> x` (which also asks for confirmation).
+	- **Pane Menu: Respawn Pane** [[Card]]
+		- Shortcut: `<prefix> >` then `R`
+		- Description: Restarts the pane's process in place (`respawn-pane -k`), even if it's still running. No direct default prefix shortcut exists for this.
+	- **Pane Menu: Mark or Unmark Pane** [[Card]]
+		- Shortcut: `<prefix> >` then `m`
+		- Description: Toggles the "marked" flag on the pane (`select-pane -m`), used as a source/target for commands like Swap Marked or `join-pane`. Same effect as the direct default shortcut `<prefix> m`.
+	- **Pane Menu: Paste Buffer** [[Card]]
+		- Shortcut: `<prefix> >` then `p`
+		- Description: Pastes the most recent paste buffer into the pane (`paste-buffer`); only listed when a buffer exists. Same effect as the direct default shortcut `<prefix> ]`.
+	- See [[tmux/Keyshort/Pane/Zoom Pane]] for `<prefix> >` then `z` (Zoom/Unzoom), already its own card.

@@ -1,0 +1,7 @@
+- [[Keyshort]] [[tmux]] [[tmux/Keyshort]] [[tmux/Keyshort/Pane]]
+	- **Show Pane Titles** [[Card]]
+		- Shortcut: `<prefix> :` then `set -g pane-border-status top` [[Keyshort/Default]]
+		- Description: Turns on the [[tmux/Pane]] border and shows each pane's `#{pane_title}` in it. Set a pane's title with `select-pane -T "name"`; clears when the tmux server stops.
+		- [[My Notes]]
+			- See [[tmux/Pane/Q/How can I display the names of the panes in tmux?]] for the full answer, including a rebind-to-rename snippet.
+			- Off: `<prefix> :` → `set -g pane-border-status off`
