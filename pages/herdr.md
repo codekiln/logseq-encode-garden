@@ -16,3 +16,6 @@ see-also:: [[tmux]], [[Zellij]], [[Terminal/Multiplexer]]
 		- Plugins extend panes and workflows, distributed through a marketplace.
 	- ## Adoption
 		- [[Person/Chris Power]] switched over after about 10 years on [[tmux]], won over by the agent-state pane and by being able to SSH into a remote box and leave an agent running unattended — [[Person/Chris Power/YouTube/26/08/herdr]].
+		- Installed from [[My/Dotfiles]] since [[2026/08/11]] as a global [[mise]] tool, alongside [[tmux]] rather than replacing it, to try the agent-state pane in daily use.
+			- Config lives at `~/.config/herdr/config.toml` and holds two settings. `onboarding = false` stops herdr's first-run write from editing a [[chezmoi]]-managed file; `[update] version_check = false` leaves the version to [[mise]], which herdr already defers to. Its defaults supply the rest — the `ctrl+b` prefix and [[Catppuccin/Mocha]].
+			- Detection manifests stay on: they refresh the screen-pattern rules behind the blocked/working/idle labels, which decay as agent interfaces change.
