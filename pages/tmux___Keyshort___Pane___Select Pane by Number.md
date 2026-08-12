@@ -1,0 +1,6 @@
+- [[Keyshort]] [[tmux]] [[tmux/Keyshort]] [[tmux/Keyshort/Pane]]
+	- **Select Pane by Number** [[Card]]
+		- Shortcut: `<prefix> q` then the pane's digit [[Keyshort/Default]]
+		- Description: Overlays each [[tmux/Pane]]'s number (`display-panes`) and jumps straight to whichever digit you press, before the overlay times out (default `display-panes-time` `1000` ms).
+		- [[My Notes]]
+			- See [[tmux/Pane/Q/How can I go to a pane by number quickly with a keyshort in tmux?]] for the full answer.
