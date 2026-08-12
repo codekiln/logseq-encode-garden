@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Question]]
-see-also:: [[Claude/Code/Q/Is there any equivalent functionality in Claude Code's CLI to Claude Desktop's Code tab ability to group related chat histories together?]]
+see-also:: [[Claude/Code/Q/Is there any equivalent functionality in Claude Code's CLI to Claude Desktop's Code tab ability to group related chat histories together?]], [[Claude/Code/Ref/Session Storage]]
 
 - # If I rename a [[Claude/Code]] CLI session with `/rename`, can I resume it in [[Claude/Desktop/Code]]?
 	- ## [[AI Answer]]
