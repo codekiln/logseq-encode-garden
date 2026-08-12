@@ -1,0 +1,56 @@
+tags:: [[Diataxis/Tutorial]]
+see-also:: [[nvim/Plugin/which-key.nvim]], [[nvim/Plugin/which-key.nvim/Hydra Mode]], [[LazyVim]], [[LazyVim/Keyshort/Window/Split]]
+
+- # Tutorial: Navigate My Which-Key Menus
+	- ## Summary
+		- [[nvim/Plugin/which-key.nvim]] shows a popup of available keybindings as you type a prefix. My dotfiles don't override which-key at all — every group below is stock [[LazyVim]]. This tutorial walks the actual groups in my setup so reading the popup becomes a habit instead of a guess.
+	- ## Before You Start
+		- nvim running my [[LazyVim]] config (chezmoi-managed `~/.config/nvim`).
+		- Leader is `<Space>`; localleader is also `<Space>` — my own override, since LazyVim otherwise leaves it at vim's default of `\`. See [[vim/Q/What is the difference between the leader key and the local leader key?]] for why these are two separate settings.
+		  id:: 6a7b262a-85eb-40e0-af01-b5391058fe3b
+	- ## Learning Goals
+		- Open the leader-key popup and a buffer-scoped popup.
+		- Drill into the two groups that list live state instead of a fixed menu: buffers and windows.
+		- Trigger Window Hydra Mode directly, without going through the leader.
+		- Recognize how which-key surfaces a keymap that isn't in any group, like my own `yp`.
+	- ## Steps
+		- ### 1. Open the buffer-keymap popup
+			- Press `<Space>?`.
+			- Notice: this lists only keymaps active in the *current* buffer, not the whole leader tree — the fastest way to check what a filetype added.
+		- ### 2. Read the top-level leader menu
+			- Press `<Space>` and pause without pressing anything else.
+			- A compact popup appears, anchored toward the bottom-right of the screen, listing single-letter groups: `<tab>` tabs, `c` code, `d` debug, `f` file/find, `g` git, `q` quit/session, `s` search, `u` ui, `x` diagnostics/quickfix, plus `b` buffer and `w` windows.
+			- Notice: which-key infers this list from my actual keymaps — it isn't a fixed menu to memorize.
+		- ### 3. Drill into a plain group
+			- From the `<Space>` popup, press `g` for git, then `h` for the nested `hunks` group.
+			- Notice: nesting is just a deeper prefix — `<leader>g` → `<leader>gh` → an action — each level opens its own popup.
+		- ### 4. Drill into the buffer group
+			- Press `<Space>b`.
+			- Notice: this list is generated live from my actually-open buffers, not hand-written.
+		- ### 5. Drill into the windows group
+			- Press `<Space>w`.
+			- Notice: this group is a proxy for `<C-w>` — every entry is really a `<C-w>` command, generated live from my current window layout.
+		- ### 6. Trigger Window Hydra Mode directly
+			- Press `<C-w><Space>` (control-w, then space) instead of going through the leader.
+			- Notice: the popup stays open across repeated presses — try a couple of the resize or focus keys — instead of closing after one keystroke. This is [[nvim/Plugin/which-key.nvim/Hydra Mode]]; see [[LazyVim/Keyshort/Window/Split]] for the window commands it exposes. Press `<Esc>` to leave it.
+		- ### 7. Check the non-leader groups
+			- Press `g` alone (not after leader) and pause: the `goto` group, with `gs` nesting further into `surround`.
+			- Press `[` or `]` alone and pause: `prev`/`next` groups.
+			- Press `z` alone and pause: the `fold` group.
+		- ### 8. Find my own keymap in the popup
+			- Press `y` alone and pause.
+			- Look for `yp` (yank current buffer path) in the list — it has a description but sits outside any named group.
+			- Notice: which-key doesn't need a group registration to show a keymap — any `vim.keymap.set(..., { desc = "..." })` is enough on its own. Named groups only exist to label a *prefix* that multiple keys share.
+	- ## Verification
+		- `<Space>?` opens a popup scoped to the current buffer only.
+		- `<Space>` alone (paused) opens a small, corner-anchored popup rather than a full-width list.
+		- `<Space>b` and `<Space>w` reflect my actual open buffers and window layout, not a static list.
+		- `<C-w><Space>` keeps its popup open across several keystrokes until `<Esc>`.
+		- `y` alone (paused) surfaces `yp` even though it isn't in any group.
+	- ## What You've Learned
+		- The three ways I open which-key: the leader tree, the buffer-scoped popup (`<Space>?`), and the `<C-w>` Hydra Mode shortcut.
+		- That my which-key setup is stock [[LazyVim]] — the only thing of mine in it is the ungrouped `yp` keymap.
+		- The difference between a static group (`g`, `gh`, `z`, `[`, `]`) and an expand group that lists live state (`b`, `w`).
+	- ## Next Steps
+		- Add a new keymap with a `desc` in `config/keymaps.lua` and confirm it shows up under the right prefix without touching which-key.
+		- If a new keymap needs its own group *label* rather than just a description, that's a `spec` entry in a which-key plugin override — the `<leader>b`/`<leader>w` entries in LazyVim's stock spec are the pattern to copy.

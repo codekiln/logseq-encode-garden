@@ -1,0 +1,3 @@
+# [Hydra Mode](https://github.com/folke/which-key.nvim#-hydra-mode)
+	- A [[nvim/Plugin/which-key.nvim]] mode where a group's key popup stays open across repeated presses instead of closing after one keystroke. The group's prefix (e.g. `<C-w>` for window commands) is needed only once to enter the mode; further keys in that group keep working until you step outside it (e.g. `<Esc>`).
+	- Useful for prefixes where several related keys get pressed in a row, like a run of window resizes and splits — see [[LazyVim/Keyshort/Window/Split]].

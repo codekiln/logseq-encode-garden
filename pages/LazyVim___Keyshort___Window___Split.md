@@ -11,6 +11,8 @@
 	- **Close Current Split** [[Card]]
 		- Shortcut: `<leader>wd`
 		- Description: Closes the focused window, leaving the buffer loaded. Vanilla `<C-w>c` is the equivalent.
+	- **Resize Split** [[Card]]
+		- Shortcut: `<C-Up>` `<C-Down>` `<C-Left>` `<C-Right>`
+		- Description: Grows/shrinks the focused window by arrow direction. Vanilla equivalents: `<C-w>+` / `<C-w>-` / `<C-w><` / `<C-w>>`.
 	- [[My Note]]
-		- Holding `<C-w>` opens which-key's **Window Hydra Mode**, which keeps the window submenu live so a run of resizes and splits needs the prefix only once.
-		- Resizing is on `<C-Up>` / `<C-Down>` / `<C-Left>` / `<C-Right>`.
+		- Holding `<C-w>` opens [[nvim/Plugin/which-key.nvim/Hydra Mode]], which keeps the window submenu live so a run of resizes and splits needs the prefix only once.
