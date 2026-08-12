@@ -1,4 +1,3 @@
-alias:: [[nvim/Distro/LazyVim]]
 logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Folke Lemaitre]]
 
