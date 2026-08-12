@@ -1,0 +1,2 @@
+- # [Terminal](https://github.com/folke/snacks.nvim/blob/main/docs/terminal.md)
+	- Terminal-window module of [[nvim/Plugin/snacks.nvim]] — opens as a bottom split when no command is given, or a floating window when one is.

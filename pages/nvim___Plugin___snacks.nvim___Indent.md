@@ -1,0 +1,2 @@
+- # [Indent](https://github.com/folke/snacks.nvim/blob/main/docs/indent.md)
+	- Indent-guide module of [[nvim/Plugin/snacks.nvim]] — visualizes indent guides and scope from Treesitter or plain indentation, similar to indent-blankline.nvim or mini.indentscope.

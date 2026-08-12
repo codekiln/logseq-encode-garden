@@ -1,0 +1,2 @@
+- # [Notifier](https://github.com/folke/snacks.nvim/blob/main/docs/notifier.md)
+	- Notification-popup module of [[nvim/Plugin/snacks.nvim]], with a history view of past notifications; a drop-in alternative to `nvim-notify`.

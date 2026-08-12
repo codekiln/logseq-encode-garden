@@ -1,0 +1,2 @@
+- # [Dashboard](https://github.com/folke/snacks.nvim/blob/main/docs/dashboard.md)
+	- Start-screen module of [[nvim/Plugin/snacks.nvim]] — declarative, multi-pane layout with built-in sections for a header, keymaps, recent projects/files, session restore, and [[lazy.nvim]] startup time.

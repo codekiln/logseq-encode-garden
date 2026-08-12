@@ -1,0 +1,2 @@
+- # [Git Browse](https://github.com/folke/snacks.nvim/blob/main/docs/gitbrowse.md)
+	- Module of [[nvim/Plugin/snacks.nvim]] that opens the active file's repository (e.g. GitHub) in the browser.

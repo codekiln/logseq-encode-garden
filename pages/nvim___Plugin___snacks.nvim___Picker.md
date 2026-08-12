@@ -1,0 +1,3 @@
+- # [Picker](https://github.com/folke/snacks.nvim/blob/main/docs/picker.md)
+	- Fuzzy-finder module of [[nvim/Plugin/snacks.nvim]] — over 40 built-in sources (files, buffers, grep, LSP, git, and more), with a fast matcher that supports [fzf](https://junegunn.github.io/fzf/search-syntax/) search syntax.
+	- Stands in for [[Telescope]] or fzf-lua; [[LazyVim/Keyshort/Search]] documents the keymaps that use it here.

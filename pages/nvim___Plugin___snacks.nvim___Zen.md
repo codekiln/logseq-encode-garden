@@ -1,0 +1,2 @@
+- # [Zen](https://github.com/folke/snacks.nvim/blob/main/docs/zen.md)
+	- Distraction-free coding module of [[nvim/Plugin/snacks.nvim]] — hides UI elements and dims out-of-scope code using the plugin's own toggle and dim utilities. Similar to zen-mode.nvim, also by [[Person/Folke Lemaitre]].

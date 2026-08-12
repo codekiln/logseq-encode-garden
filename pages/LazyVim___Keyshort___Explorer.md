@@ -4,8 +4,7 @@
 		- Description: Opens the [[nvim/Plugin/snacks.nvim]] explorer sidebar rooted at the detected project root.
 	- **Open the File Explorer at the Working Directory** [[Card]]
 		- Shortcut: `<leader>E`
-		- Description: Same explorer, rooted at the current working directory rather than the project root — the one to reach for when the root detection lands somewhere unhelpful.
+		- Description: opens the [[nvim/Plugin/snacks.nvim]] explorer, rooted at the current working directory rather than the project root
 	- [[My Note]]
-		- The explorer here is snacks, not neo-tree: no neo-tree plugin is installed, so `:Neotree` and any cheat-sheet key written against it (`<leader>ge` for a git explorer, for instance) does nothing. `<leader>fe` and `<leader>fE` are aliases of these two keys.
+		- `<leader>fe` and `<leader>fE` are aliases of these two keys.
 		- The snacks explorer is a picker in a sidebar, so the picker's own search and filter keys work inside it.
-		- For file *management* rather than browsing, [[yazi]] remains the tool of choice outside the editor.

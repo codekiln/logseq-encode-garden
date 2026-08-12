@@ -1,0 +1,2 @@
+- # [Scratch](https://github.com/folke/snacks.nvim/blob/main/docs/scratch.md)
+	- Scratch-buffer module of [[nvim/Plugin/snacks.nvim]] for throwaway code or notes, scoped by working directory and git branch. Lua buffers can be run inline, with output and errors shown as diagnostics.

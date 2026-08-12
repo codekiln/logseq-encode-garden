@@ -1,0 +1,2 @@
+- # [Explorer](https://github.com/folke/snacks.nvim/blob/main/docs/explorer.md)
+	- File-explorer module of [[nvim/Plugin/snacks.nvim]] — a preset [[nvim/Plugin/snacks.nvim/Picker]] view, not a separate tree widget. Can replace netrw so opening a directory shows the explorer directly.
