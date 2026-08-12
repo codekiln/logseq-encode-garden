@@ -26,3 +26,4 @@
 		- [[Person/Cory Doctorow]]
 		- [[Person/Cory Doctorow/Book/25/Enshittification]]
 		- [[Interop]]
+		- [[Website/Worse on Purpose]] — a parallel decline in physical goods, driven by private-equity/conglomerate consolidation rather than platform lock-in.
