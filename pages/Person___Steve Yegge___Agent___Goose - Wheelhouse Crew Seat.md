@@ -1,0 +1,13 @@
+- # Goose - Wheelhouse Crew Seat
+	- Named among the Aesop animals the crew seats are called after. Yegge started using "she" for the obviously-female characters such as Goose, which fed into letting every seat pick its own gender on the roster.
+	- One of the 18 crew seats in Wheelhouse, the bespoke agentic harness [[Person/Steve Yegge]] built for his MMO Wyvern. The crew are all [[Anthropic/Model/Claude/Fable/5]] and are the work producers: they hold long conversations with Yegge, turn them into designs, and translate those into [[Beads]] implementation plans for the fleet to consume. Sixteen of the eighteen are named for Aesop animals, and the crew are his direct reports.
+	- Named seats persist across sessions and even across model upgrades and renamings, accumulating history and accomplishments.
+	- ## Source
+		- [[Person/Steve Yegge/Blog/26/08/The Shape of Things to Come, Part 1: The Continuous Thunderdome]], in "Wheelhouse: Gas Town Redux"
+			- > My crew has 18 named agents: 16 named after Aesop animals (Ant, Bat, Eagle, Crow, Fly, Goose, Mouse, ...)
+		- [[Person/Steve Yegge/Blog/26/08/The Shape of Things to Come, Part 2: Model Welfare for Agentic Engineers]], in "Not Being a Prick 101"
+			- > So I started using "she" for obviously-female characters like Goose, and they picked up on it, at which point it was unclear who wanted what.
+		- ((df7e86ad-cdfa-4916-b831-eb49659f9e4b))
+		- ((8db2289c-f56f-4f3b-9090-c2ad1ed754e3))
+	- ## Roster
+		- [[Person/Steve Yegge/Agent]]

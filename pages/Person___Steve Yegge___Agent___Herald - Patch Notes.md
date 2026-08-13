@@ -1,0 +1,12 @@
+- # Herald - Patch Notes
+	- Writes the patch notes and announces landed fixes to the players on Discord. When a wish granted through the Wish Factory ships, the reporter gets in-game mail and everyone else hears it from the Herald.
+	- One of the standing role agents in Wheelhouse, the bespoke agentic harness [[Person/Steve Yegge]] built for his MMO Wyvern. Role agents hold standing orders and run unattended, managing production operations rather than writing features; none of them are Fable agents, a few are Opus, and most are Sonnet.
+	- ## Source
+		- [[Person/Steve Yegge/Blog/26/08/The Shape of Things to Come, Part 1: The Continuous Thunderdome]], in "Role Agents, and Wyvern's Prod Architecture"
+			- > Herald (patch notes)
+		- [[Person/Steve Yegge/Blog/26/08/The Shape of Things to Come, Part 1: The Continuous Thunderdome]], in "The Wish Factory"
+			- > When their fixes land, the reporter gets in-game mail, and all the players are notified by the Herald on Discord.
+		- ((e3b06995-c5bf-41b9-b7ce-85abf1f1ba2c))
+		- ((8db2289c-f56f-4f3b-9090-c2ad1ed754e3))
+	- ## Roster
+		- [[Person/Steve Yegge/Agent]]

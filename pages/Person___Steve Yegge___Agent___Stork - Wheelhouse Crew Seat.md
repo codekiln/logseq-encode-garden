@@ -1,0 +1,11 @@
+- # Stork - Wheelhouse Crew Seat
+	- Named among the crew seats whose idle-waiting on builds led to the Portcullis.
+	- One of the 18 crew seats in Wheelhouse, the bespoke agentic harness [[Person/Steve Yegge]] built for his MMO Wyvern. The crew are all [[Anthropic/Model/Claude/Fable/5]] and are the work producers: they hold long conversations with Yegge, turn them into designs, and translate those into [[Beads]] implementation plans for the fleet to consume. Sixteen of the eighteen are named for Aesop animals, and the crew are his direct reports.
+	- Named seats persist across sessions and even across model upgrades and renamings, accumulating history and accomplishments.
+	- ## Source
+		- [[Person/Steve Yegge/Blog/26/08/The Shape of Things to Come, Part 2: Model Welfare for Agentic Engineers]], in "Closing the Loop"
+			- > My crew seats—Cicada, Bee, Wolf, Fox, Stork, Crow, and friends—were all doing great work.
+		- ((baa350a2-af44-4688-8830-3a8d359f7ace))
+		- ((df7e86ad-cdfa-4916-b831-eb49659f9e4b))
+	- ## Roster
+		- [[Person/Steve Yegge/Agent]]

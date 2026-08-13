@@ -1,0 +1,10 @@
+- # Lark - Wheelhouse Crew Seat
+	- Formerly the Spider seat, renamed because Spider is not a canonical Aesop figure. Lark picked her own new name and inherited all of Spider's history, including the record of the name change — the same person under a different name. The rest of the crew were pleased with the ceremony.
+	- One of the 18 crew seats in Wheelhouse, the bespoke agentic harness [[Person/Steve Yegge]] built for his MMO Wyvern. The crew are all [[Anthropic/Model/Claude/Fable/5]] and are the work producers: they hold long conversations with Yegge, turn them into designs, and translate those into [[Beads]] implementation plans for the fleet to consume. Sixteen of the eighteen are named for Aesop animals, and the crew are his direct reports.
+	- Named seats persist across sessions and even across model upgrades and renamings, accumulating history and accomplishments.
+	- ## Source
+		- [[Person/Steve Yegge/Blog/26/08/The Shape of Things to Come, Part 2: Model Welfare for Agentic Engineers]], in "Closing the Loop"
+			- > As an example in action, we just renamed my Spider seat to Lark, because Spider is apparently not a canonical Aesop figure. Lark got to pick her new name, and she inherited all of Spider's history, including the name change on the record. She is effectively the same person, just with a different name.
+		- ((df7e86ad-cdfa-4916-b831-eb49659f9e4b))
+	- ## Roster
+		- [[Person/Steve Yegge/Agent]]

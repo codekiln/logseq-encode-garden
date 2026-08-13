@@ -1,0 +1,9 @@
+- # Drawbridge - Deploy-Red Monitor
+	- Watches deploys and raises the alarm when one goes red.
+	- One of the standing role agents in Wheelhouse, the bespoke agentic harness [[Person/Steve Yegge]] built for his MMO Wyvern. Role agents hold standing orders and run unattended, managing production operations rather than writing features; none of them are Fable agents, a few are Opus, and most are Sonnet.
+	- ## Source
+		- [[Person/Steve Yegge/Blog/26/08/The Shape of Things to Come, Part 1: The Continuous Thunderdome]], in "Role Agents, and Wyvern's Prod Architecture"
+			- > Drawbridge (deploy-red monitor)
+		- ((8db2289c-f56f-4f3b-9090-c2ad1ed754e3))
+	- ## Roster
+		- [[Person/Steve Yegge/Agent]]

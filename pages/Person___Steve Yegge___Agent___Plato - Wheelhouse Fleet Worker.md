@@ -1,0 +1,11 @@
+- # Plato - Wheelhouse Fleet Worker
+	- Named among the authors the fleet workers are called after.
+	- One of the fleet workers in Wheelhouse, the bespoke agentic harness [[Person/Steve Yegge]] built for his MMO Wyvern. The fleet are all Opus 5 and are the work consumers, non-ephemeral successors to [[Gastown]]'s polecats. Each holds its own repo clone, is managed by the Marshal, and never deals with Yegge directly; every implementation bead runs Fable design, Opus implementation, Fable review.
+	- Named seats persist across sessions and even across model upgrades and renamings, accumulating history and accomplishments.
+	- ## Source
+		- [[Person/Steve Yegge/Blog/26/08/The Shape of Things to Come, Part 1: The Continuous Thunderdome]], in "Wheelhouse: Gas Town Redux"
+			- > The fleet are named for authors (Homer, Plato, Austen, Twain, etc.), and also have their own repo clones, but I never interact with them myself. They are fully managed by the Marshal.
+		- ((c27b3140-4ade-4e72-b156-b959a0f75a4a))
+		- ((8db2289c-f56f-4f3b-9090-c2ad1ed754e3))
+	- ## Roster
+		- [[Person/Steve Yegge/Agent]]

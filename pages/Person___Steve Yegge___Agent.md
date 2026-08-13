@@ -1,0 +1,69 @@
+- # Steve Yegge's Agents
+	- The named agents [[Person/Steve Yegge]] runs in Wheelhouse, the closed-source, bespoke harness he built for his MMO Wyvern, as described in his two-part essay The Shape of Things to Come. Wheelhouse is the harness, not an agent; so are [[Beads]], [[Gastown]], and the wiring below.
+	- ## The three tiers
+		- ((8db2289c-f56f-4f3b-9090-c2ad1ed754e3))
+		- Crew — [[Anthropic/Model/Claude/Fable/5]] work producers, 18 seats, his direct reports. They hold the long conversations, produce designs, and translate them into [[Beads]] implementation plans.
+		- Fleet — Opus 5 work consumers, non-ephemeral successors to [[Gastown]]'s polecats, each with its own repo clone, all managed by the Marshal. Every implementation bead runs Fable design, Opus implementation, Fable review.
+		- Role agents — standing, unattended agents with named roles, running production operations. New since the [[Gastown]] days. None are Fable; a few are Opus, most are Sonnet.
+		- ### In his words
+			- > There are three categories of coding agents in Wheelhouse: crew agents, fleet workers, and role agents with standing orders. The role agents are for managing production operations. They are new since the Gas Town days.
+			- > For production, I have the Gargoyle (SRE), Drawbridge (deploy-red monitor), Warden (player abuse monitor), Scryer (intake agent for Discord, Slack, game logs), Sheriff (chief of staff for the Mac Mini fleet), and Envoy (lets Claude talk to my volunteer admin team via in-game email).
+			- > On the mini, I have the Sage (claude-tag in-game for admins), Wanderer (QA agent), Trivia Master (Thursday nights), Herald (patch notes), Limner (hall-of-fame images), Reeve (Forge manager), the Forge (another fleet of workers for doing prod fixes), and the experimental new Builder Familiar, who sits on your desktop and helps you make maps.
+	- ## Role agents
+		- ### Production
+			- [[Person/Steve Yegge/Agent/Gargoyle - SRE]]
+			- [[Person/Steve Yegge/Agent/Drawbridge - Deploy-Red Monitor]]
+			- [[Person/Steve Yegge/Agent/Warden - Player Abuse Monitor]]
+			- [[Person/Steve Yegge/Agent/Scryer - Intake Agent]]
+			- [[Person/Steve Yegge/Agent/Sheriff - Chief of Staff]]
+			- [[Person/Steve Yegge/Agent/Envoy - Admin Liaison]]
+		- ### On the Mac Mini
+			- [[Person/Steve Yegge/Agent/Sage - In-Game Wish Intake]]
+			- [[Person/Steve Yegge/Agent/Wanderer - QA Agent]]
+			- [[Person/Steve Yegge/Agent/Trivia Master - Thursday Night Trivia]]
+			- [[Person/Steve Yegge/Agent/Herald - Patch Notes]]
+			- [[Person/Steve Yegge/Agent/Limner - Hall-of-Fame Images]]
+			- [[Person/Steve Yegge/Agent/Reeve - Forge Manager]]
+			- [[Person/Steve Yegge/Agent/Builder Familiar - Desktop Map Helper]]
+	- ## Crew seats
+		- ### Administrative roles
+			- [[Person/Steve Yegge/Agent/Marshal - Fleet Manager]]
+			- [[Person/Steve Yegge/Agent/Seneschal - Concierge]]
+		- ### Named for Aesop animals
+			- [[Person/Steve Yegge/Agent/Ant - Wheelhouse Crew Seat]]
+			- [[Person/Steve Yegge/Agent/Bat - Wheelhouse Crew Seat]]
+			- [[Person/Steve Yegge/Agent/Bee - Wheelhouse Crew Seat]]
+			- [[Person/Steve Yegge/Agent/Cicada - Wheelhouse Crew Seat]]
+			- [[Person/Steve Yegge/Agent/Crow - Wheelhouse Crew Seat]]
+			- [[Person/Steve Yegge/Agent/Eagle - Wheelhouse Crew Seat]]
+			- [[Person/Steve Yegge/Agent/Fly - Wheelhouse Crew Seat]]
+			- [[Person/Steve Yegge/Agent/Fox - Wheelhouse Crew Seat]]
+			- [[Person/Steve Yegge/Agent/Goose - Wheelhouse Crew Seat]]
+			- [[Person/Steve Yegge/Agent/Hare - Wheelhouse Crew Seat]]
+			- [[Person/Steve Yegge/Agent/Lark - Wheelhouse Crew Seat]]
+			- [[Person/Steve Yegge/Agent/Lion - Wheelhouse Crew Seat]]
+			- [[Person/Steve Yegge/Agent/Mouse - Wheelhouse Crew Seat]]
+			- [[Person/Steve Yegge/Agent/Stork - Wheelhouse Crew Seat]]
+			- [[Person/Steve Yegge/Agent/Tortoise - Wheelhouse Crew Seat]]
+			- [[Person/Steve Yegge/Agent/Wolf - Wheelhouse Crew Seat]]
+	- ## Fleet workers
+		- Named for authors; the essay names four of them.
+		- [[Person/Steve Yegge/Agent/Austen - Wheelhouse Fleet Worker]]
+		- [[Person/Steve Yegge/Agent/Homer - Wheelhouse Fleet Worker]]
+		- [[Person/Steve Yegge/Agent/Plato - Wheelhouse Fleet Worker]]
+		- [[Person/Steve Yegge/Agent/Twain - Wheelhouse Fleet Worker]]
+		- A parallel fallback fleet of five Sol 5.6 workers runs on Codex, named for sun gods, for when the Max accounts run dry. The essay does not name them.
+	- ## Seats and sessions
+		- ((df7e86ad-cdfa-4916-b831-eb49659f9e4b))
+		- A seat outlives the model that fills it, so these pages track seats rather than sessions. Renaming does not break the identity either: Lark carries all of Spider's history.
+	- ## Not agents
+		- Wheelhouse itself — the harness. So is [[Gastown]], its predecessor, and [[Beads]], the issue tracker and knowledge graph underneath both.
+		- The Portcullis — the system that accepts finished work and closes it out, freeing crew seats from idle-waiting on builds. Yegge lists its land queue among the crons, and elsewhere calls it an institution rather than an officer.
+			- ((baa350a2-af44-4688-8830-3a8d359f7ace))
+		- The Castellan — his service dashboard and war room.
+		- Laurels — the recognition system that harvests spontaneous player praise, triages it, and injects it at agent startup, deliberately carrying no priority and no attached work so it cannot be farmed.
+		- The Forge — not one agent but another fleet of workers doing production fixes, managed by [[Person/Steve Yegge/Agent/Reeve - Forge Manager]].
+		- The reapers, roombas, durability flush, and sheriff patrol — launchd and systemd units. The rule is that crons watch and models act.
+	- ## Source
+		- [[Person/Steve Yegge/Blog/26/08/The Shape of Things to Come, Part 1: The Continuous Thunderdome]]
+		- [[Person/Steve Yegge/Blog/26/08/The Shape of Things to Come, Part 2: Model Welfare for Agentic Engineers]]

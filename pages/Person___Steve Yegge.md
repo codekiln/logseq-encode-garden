@@ -12,6 +12,7 @@ logseq-entity:: [[Logseq/Entity/Person]]
 		- [[Beads]] - A memory upgrade for your coding agent
 		- [[Gastown]] - Multi-agent workspace manager
 		- [[Person/Steve Yegge/Blog/Welcome to Gas Town]]
+		- [[Person/Steve Yegge/Agent]] - the named crew, fleet, and role agents he runs in Wheelhouse
 	- ## Writing
 		- The Shape of Things to Come, a two-part essay on where agentic harnesses are heading
 			- [[Person/Steve Yegge/Blog/26/08/The Shape of Things to Come, Part 1: The Continuous Thunderdome]]

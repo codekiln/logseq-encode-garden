@@ -1,0 +1,11 @@
+- # Seneschal - Concierge
+	- Yegge's concierge, and the successor to [[Gastown]]'s Mayor. The one seat designated as his remote-control session: he talks to the Seneschal from his phone and the Seneschal talks to everyone else. While he is away it may dispatch work to the crew; while he is home the crew are his to direct. It runs on his personal Claude account, which nothing else touches, so it is always available.
+	- One of the 18 crew seats in Wheelhouse, the bespoke agentic harness [[Person/Steve Yegge]] built for his MMO Wyvern. The crew are all [[Anthropic/Model/Claude/Fable/5]] and are the work producers: they hold long conversations with Yegge, turn them into designs, and translate those into [[Beads]] implementation plans for the fleet to consume. Sixteen of the eighteen are named for Aesop animals, and the crew are his direct reports.
+	- Named seats persist across sessions and even across model upgrades and renamings, accumulating history and accomplishments.
+	- ## Source
+		- [[Person/Steve Yegge/Blog/26/08/The Shape of Things to Come, Part 1: The Continuous Thunderdome]], in "Wheelhouse: Gas Town Redux"
+			- > My crew has 18 named agents: 16 named after Aesop animals (Ant, Bat, Eagle, Crow, Fly, Goose, Mouse, ...), and 2 special administrative roles: The Marshal and the Seneschal. In brief, the Seneschal is my concierge (the new Mayor), and the Marshal runs the fleet (the new Witness).
+			- > I designated the Seneschal as my single remote control session. I talk to the Seneschal on the phone, who in turn talks to everyone else.
+		- ((8db2289c-f56f-4f3b-9090-c2ad1ed754e3))
+	- ## Roster
+		- [[Person/Steve Yegge/Agent]]

@@ -1,0 +1,13 @@
+- # Crow - Wheelhouse Crew Seat
+	- Named among the Aesop animals the crew seats are called after, and again among the seats whose idle-waiting on builds led to the Portcullis.
+	- One of the 18 crew seats in Wheelhouse, the bespoke agentic harness [[Person/Steve Yegge]] built for his MMO Wyvern. The crew are all [[Anthropic/Model/Claude/Fable/5]] and are the work producers: they hold long conversations with Yegge, turn them into designs, and translate those into [[Beads]] implementation plans for the fleet to consume. Sixteen of the eighteen are named for Aesop animals, and the crew are his direct reports.
+	- Named seats persist across sessions and even across model upgrades and renamings, accumulating history and accomplishments.
+	- ## Source
+		- [[Person/Steve Yegge/Blog/26/08/The Shape of Things to Come, Part 1: The Continuous Thunderdome]], in "Wheelhouse: Gas Town Redux"
+			- > My crew has 18 named agents: 16 named after Aesop animals (Ant, Bat, Eagle, Crow, Fly, Goose, Mouse, ...)
+		- [[Person/Steve Yegge/Blog/26/08/The Shape of Things to Come, Part 2: Model Welfare for Agentic Engineers]], in "Closing the Loop"
+			- > My crew seats—Cicada, Bee, Wolf, Fox, Stork, Crow, and friends—were all doing great work.
+		- ((df7e86ad-cdfa-4916-b831-eb49659f9e4b))
+		- ((baa350a2-af44-4688-8830-3a8d359f7ace))
+	- ## Roster
+		- [[Person/Steve Yegge/Agent]]
