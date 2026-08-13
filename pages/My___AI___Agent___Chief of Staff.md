@@ -26,6 +26,9 @@ github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/M
 		- ### A page competing with an alias
 			- Six titles exist both as another page's `alias::` value and as their own near-empty file. `pages/Digital Garden.md` is empty while [[Knowledge/Garden]] lists `[[Digital Garden]]` among its aliases; `pages/AST.md` holds three bytes while [[Programming/Abstract/Syntax/Tree]] claims `[[AST]]`.
 			- Both pages load, and neither one mentions the other.
+		- ### A deep link from another repo that lands nowhere
+			- [[My/Dotfiles]] annotates each tool it installs with a `logseq://graph/logseq-encode-garden?page=<Page>` link to the page where that tool is being learned, per [[My/Dotfiles/openspec/specs/garden-entity-links]]. 101 of those links point into this graph and four of them arrive at no page: `tmux/Keyshort/Pane/Resize` falls one word short of [[tmux/Keyshort/Pane/Resize Pane]], and `My/AI/Rule/` ends on a bare slash.
+			- Renaming or moving a page breaks these from the far side, and this graph says nothing about it. After a rename, search the dotfiles repo for the old title.
 		- ### Graph edits that reach no change log
 			- [[Logseq/Journal]] closes each day with [[Filed]] and [[Updated]]. A page written and committed without those lines leaves the day's record short, and the graph reads the same either way.
 			- Compare the day's journal against what actually changed on disk.
