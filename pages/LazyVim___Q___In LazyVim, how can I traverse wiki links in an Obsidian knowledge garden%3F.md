@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Question]]
-see-also:: [[LazyVim/Keyshort/LSP/Navigation]]
+see-also:: [[LazyVim/Keyshort/LSP/Navigation]], [[LazyVim/Q/In LazyVim, how can I open a Markdown link with a keyboard shortcut?]]
 - # In [[LazyVim]], how can I traverse wiki links in an [[Obsidian]] knowledge garden?
 	- ## [[AI Answer]]
 		- **Short answer:** the current dotfiles already enable [[LazyVim/plugins/extras/lang/markdown]], which configures the Marksman language server. Open the garden from its root with `nvim .`, place the cursor inside a wiki link, and press `gd`. Use `<C-o>` to return to the previous location and `<C-i>` to move forward again. Press `gr` on a link to list references to its destination.
