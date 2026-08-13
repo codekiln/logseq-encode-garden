@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]]
-see-also:: [[Claude/Code/Q/What is the new TUI mode in Claude Code about?]]
+see-also:: [[Claude/Code/Q/What is the new TUI mode in Claude Code about?]], [[herdr/Explanation/Copy Mode on the Alternate Screen]]
 
 - # Why can't I scroll up in [[tmux]] copy mode when [[Claude/Code]] is in [[TUI]] mode? [[card]]
   card-last-interval:: 4.28
