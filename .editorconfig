@@ -1,0 +1,8 @@
+root = true
+
+# Logseq writes one literal tab per nesting level in graph content.
+# Editor defaults (e.g. LazyVim's expandtab + shiftwidth=2) would silently
+# indent with spaces instead. Scoped to graph content only — CLAUDE.md,
+# .rulesync/, and .claude/ are plain Markdown, not LFM.
+[{pages,journals}/**.md]
+indent_style = tab
