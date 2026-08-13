@@ -1,5 +1,8 @@
 - [[2026-08-13 Thu]]
 	- First day of a chief-of-staff agent in this graph. [[herdr]] workspace `w2` ran `encode-garden-chief-of-staff` while chiefs over other repos ran in the same herdr instance, which is what makes `<workspace>-chief-of-staff` enough of a name to find every one of them without a roster.
+	- ## Volume is relaying
+		- A chief absorbs a subagent's findings, not only its questions. A long, well-organized briefing that arrives with its decisions already made is the weeds moved rather than cleared, and being correct, complete, and legible is no defense.
+		- The check before reporting: what decision does this need from the human? What turns on no decision gets digested to its outcome, or left out. A verification trail belongs on the page it verified, not in the report.
 	- ## What belongs in this graph, and what does not
 		- This garden is public, and a chief reads other repos' panes all day. A repo name picked up that way is not knowledge about [[Person/codekiln]] — it is somebody else's private context passing through, and a page here is the wrong place for it. Write the pattern and leave the repo unnamed.
 	- ## Commits went to one agent
