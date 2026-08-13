@@ -5,7 +5,7 @@ date-created:: [[2026-08-13 Thu]]
 	- Instead of creating a worktree per task, keep a small set of **named, long-lived agents**, each owning one persistent worktree. The worktree becomes an inbox: send it a task, it works, it parks. Prompted by daily use of [[herdr]].
 	- ## What [[herdr]] already supplies
 		- Agents are addressable by a chosen name rather than only a pane ID — `herdr agent start|prompt|wait|rename <name>`.
-		- Worktrees are first-class: `herdr worktree create|open|list|remove`, and worktree workspaces pack under their parent in the sidebar.
+		- Worktrees are first-class: `herdr worktree create|open|list|remove`, and worktree workspaces pack under their parent in the sidebar. That packing is per-repository and not settable, so an agent whose worktrees span several repos gets one group per repo rather than one under itself — [[herdr/Explanation/Where a Workspace Appears in the Sidebar]].
 		- A name is unique only among *live* agents, and clears when that agent exits, is released, or is replaced. The durable identity is therefore the worktree workspace; the name is a label re-applied on `agent start`.
 	- ## Why the worktree, not the branch, is the unit
 		- A branch can be checked out in at most one worktree at a time — a per-branch lock, not a per-worktree pin. A standing worktree can cycle through branches indefinitely. Mechanics on [[git/worktree]].
