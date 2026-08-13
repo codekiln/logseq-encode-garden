@@ -3,47 +3,59 @@ logseq-entity:: [[Logseq/Entity/Concept]]
 see-also:: [[herdr/Explanation/Copy Mode on the Alternate Screen]], [[herdr/Explanation/Doubled History After a Pane Resize]], [[herdr/Explanation/Where Input Box Text Comes From]]
 
 - # Editing scrollback edits a copy
-	- Behaviour read from the [herdrdev/herdr](https://github.com/herdrdev/herdr) source at [952729ee preserve logical lines in scrollback editor](https://github.com/herdrdev/herdr/commit/952729ee) — `herdr 0.8.0`, `preview-2026-08-04-d78e3d3b5126-90-g952729ee`. That commit is itself the most recent change to this feature. Every reference below is read from source; nothing here is measured against a running session.
-	- ## Overview
-		- `prefix+e` takes a **point-in-time copy** of the focused pane's retained scrollback, writes it to a temp file, and opens `$EDITOR` on that file in a second pane. The source pane is never entered, never paused, and never written back to.
-		- The copy starts aging the moment it is written. Output the pane produces while the editor is open goes to the pane's own scrollback and never reaches the file, because the file is written before the editor starts and is never re-read.
-		- When the editor exits the file is deleted. Saving in the editor writes to a file that is about to be removed. It is a reading tool with an editor's interface, and the interface is the whole source of the confusion.
-	- ## What is captured
-		- ### The focused pane, at the instant of the keypress
-			- The path resolves the active workspace, then that workspace's focused pane, then that pane's terminal runtime (`src/app/input/navigate.rs:961-981`). Any of those missing raises an "edit scrollback failed" toast instead (`:944-958`).
-			- The read is `recent_unwrapped_text_snapshot(usize::MAX)`, which takes one lock on the pane's terminal core and serializes what it finds (`src/pane/terminal.rs:1989-1995`). It is a single synchronous call inside the key handler.
-			- Because the source is always *the focused pane*, pressing the binding again while the editor overlay has focus captures the editor's own screen rather than the pane underneath. That follows from the two reads above; it is not a special case in the code.
-		- ### Everything the pane still retains, which is not everything it printed
-			- `usize::MAX` asks for every row, so the file holds the pane's whole retained scrollback rather than a recent window.
-			- Retention is bounded by `advanced.scrollback_limit_bytes`, default 10,000,000 bytes, where `0` disables scrollback outright (`src/config/model.rs:941-947`). Rows evicted under that limit were gone before the keypress.
-			- Panes on the alternate screen retain nothing at all, so their file holds only the visible rows — the same zero-scrollback property behind [[herdr/Explanation/Copy Mode on the Alternate Screen]].
-		- ### Soft wraps are rejoined; the program's own line breaks are not
-			- The read spans the whole row range in one call rather than row by row (`src/pane/terminal.rs:2645-2657`), so a logical line that the terminal soft-wrapped across several rows arrives as one line. The test feeds `ABCDEFGHIJ\r\nKLMNO` to a five-column pane and asserts the file contains `ABCDEFGHIJ\nKLMNO` (`src/app/input/navigate.rs:3663-3712`).
-			- A program that wraps its *own* output emits real line breaks, and those are indistinguishable from any other newline by the time the terminal has them. They survive into the file at whatever width the program chose — the same asymmetry that produces [[herdr/Explanation/Doubled History After a Pane Resize]]. Unwrapping fixes the terminal's wrapping, not the program's.
-		- ### The filename is the only record of when
-			- `herdr-scrollback-{pid}-{nanos}-{attempt}.txt` in the system temp directory, created with `create_new` and mode `0600` on Unix, retrying up to sixteen times on collision (`src/app/input/navigate.rs:1967-2008`).
-			- Nothing else timestamps the copy. Two files from the same pane are told apart only by their nanosecond, and neither says which pane it came from beyond the process id shared by all of them.
-	- ## The editor runs in a pane, not a modal
-		- `spawn_overlay_argv_command` splits horizontally from the focused pane and then sets the tab's `zoomed` flag (`src/app/input/navigate.rs:1094-1155`). It looks full-screen because a zoomed tab renders only its focused pane, but it is a real second pane in the same tab, and the tab's pane count changes while it is open.
-		- The previous focus target, the previously focused pane, and the tab's previous zoom state are all captured before the split and stored on the overlay (`:1104`, `:1114-1116`, `:1156-1165`).
-		- On success the pane raises an "opened scrollback" toast naming the source pane (`:1004-1012`). It is a `Finished` toast, so it clears itself after five seconds (`src/app/api.rs:741-747`).
-	- ## Leaving the editor
-		- The overlay closes on the editor process exiting. herdr handles that as an ordinary pane death, and `restore_overlay_after_exit` deletes every tracked temp file, then restores the previous zoom state and focus (`src/app/api.rs:478-500`). Test: `pane_overlay_command_opens_and_closes_after_exit` (`src/app/input/navigate.rs:3574`).
-		- On macOS and Linux the editor is not spawned directly. The argv is a `/bin/sh -c` wrapper that runs the editor, captures its status, runs `rm -f` on the file, and exits with that status (`src/platform/macos.rs:46-52`, `src/platform/linux.rs:104-110`). The file is therefore deleted twice over — once by the shell, once by herdr.
-		- On Windows the argv is the editor plus the path with no wrapper (`src/platform/windows.rs:737-770`), so herdr's own cleanup is the only cleanup.
-		- Nothing reads the file back in either case. There is no code path from the temp file to the pane.
-	- ## Where the delay is
-		- **There is none.** Nothing in this feature waits. The keypress calls straight through to the snapshot, the snapshot is one lock and one serialization, the file write is synchronous, and the pane spawn follows immediately (`src/app/input/navigate.rs:106-111`, `:961-1015`). There is no debounce on repeated invocations and no scheduled work anywhere in the path.
-		- The only timer within reach is the toast's five-second dismissal, and `ui.toast.delay_seconds` — the sole `delay` setting in the config — governs toast popups generally, not this feature.
-		- What can feel like a wait is the snapshot itself: it holds a lock on the pane's terminal core while serializing up to the whole retained scrollback. That scales with how much the pane is holding. It is a cost, not a delay, and shortening it means retaining less.
+	- Behaviour read from the [herdrdev/herdr](https://github.com/herdrdev/herdr) source at [952729ee preserve logical lines in scrollback editor](https://github.com/herdrdev/herdr/commit/952729ee) — `herdr 0.8.0`, `preview-2026-08-04-d78e3d3b5126-90-g952729ee`. That commit is the most recent change to this feature. File paths and line numbers point into that source. Nothing here was measured against a running session.
+	- ## Getting out
+		- Quit the editor the way that editor quits. The pane comes back by itself.
+		- In Vim or Neovim, press `Esc`, then type `:q` and Enter. If it reports unsaved changes, type `:q!` and Enter instead.
+		- `:q!` is safe here. The file is a copy, and herdr deletes it as soon as the editor exits. Discarding the changes loses nothing.
+		- The pane you started from kept running the whole time. Nothing was waiting on you, and focus returns to that pane on its own.
+		- The editor is whatever `EDITOR` names, so another setup may quit some other way. The section on which editor runs covers that.
+	- ## What the key does
+		- `prefix+e` copies the focused pane's stored history into a temp file, then opens `$EDITOR` on that file in a second pane. The key name is `keys.edit_scrollback`, listed with its default in [herdr's config reference](https://herdr.dev/docs/config-reference/).
+		- herdr takes the copy once, at the moment of the keypress, and never updates it. While the editor is open the pane goes on printing into its own history, and the file stays as written.
+		- Whatever you save in the editor stays in the copy. The pane keeps the history it had.
+	- ## What it is good for
+		- Reading a long pane history in an editor you already know. Copy mode offers literal search with `/` and `?`, described in [herdr's keyboard reference](https://herdr.dev/docs/keyboard/). An editor adds regular expressions, folding, marks, and split windows over the same text.
+		- Getting text out of a pane that is awkward to select with the mouse. Once the history is a file, the editor's own copy and clipboard behaviour applies to all of it.
+		- Reading everything the pane still holds in one go. The keypress asks for every retained row. `herdr pane read --source recent-unwrapped` reads the same way but returns 80 rows unless you pass `--lines`, per [herdr's CLI reference](https://herdr.dev/docs/cli-reference/).
+		- Working from the keyboard alone. The key acts on the focused pane, so there is no pane id to look up and no shell to run a command in.
+		- ### Where it stops being useful
+			- The bytes match what `herdr pane read --source recent-unwrapped` gives you. The gain is the editor, so a script is better served by the command.
+			- A pane on the alternate screen keeps no history, so the file holds only the rows on screen. Copy mode is blocked on those panes for the same reason — [[herdr/Explanation/Copy Mode on the Alternate Screen]].
+			- Changing the pane needs a different tool. This one reads.
+	- ## What is copied
+		- ### The focused pane, at the moment of the keypress
+			- herdr resolves the active workspace, then its focused pane, then that pane's terminal (`src/app/input/navigate.rs:961-981`). If any of those is missing, a toast reads "edit scrollback failed" (`:944-958`).
+			- Reading the history takes one lock on the pane's terminal and writes out what it finds (`src/pane/terminal.rs:1989-1995`).
+			- The source is always the focused pane. Pressing the key again while the editor has focus copies the editor's own screen.
+		- ### Every row the pane still holds
+			- The read asks for all rows, so the file holds the pane's whole stored history rather than a recent window.
+			- How much a pane holds is set by `advanced.scrollback_limit_bytes`, whose default the config reference gives as 10,000,000. Rows dropped under that limit were already gone before the keypress.
+		- ### Soft-wrapped lines are rejoined
+			- The read covers the whole row range in one call (`src/pane/terminal.rs:2645-2657`), so a long line the terminal wrapped across several rows arrives as one line. A test feeds `ABCDEFGHIJ\r\nKLMNO` to a five-column pane and expects the file to hold `ABCDEFGHIJ\nKLMNO` (`src/app/input/navigate.rs:3663-3712`).
+			- A program that wraps its own output sends real line breaks. Those look like any other newline by the time the terminal has them, so they stay broken in the file at the width the program chose. The same behaviour shows up as [[herdr/Explanation/Doubled History After a Pane Resize]].
+		- ### The filename carries the time
+			- `herdr-scrollback-{pid}-{nanos}-{attempt}.txt`, in the system temp directory, created fresh with mode `0600` on Unix and retried up to sixteen times if the name is taken (`src/app/input/navigate.rs:1967-2008`).
+			- The nanosecond in the name is the only record of when the copy was taken.
+	- ## The editor runs in a pane
+		- herdr splits a new pane horizontally from the focused one, then zooms the tab (`src/app/input/navigate.rs:1094-1155`). A zoomed tab draws only its focused pane, which is why the editor fills the screen. The tab holds one more pane while it is open.
+		- Before the split, herdr records where focus was and whether the tab was already zoomed (`:1104`, `:1114-1116`, `:1156-1165`). Those go back to their earlier values afterwards.
+		- A toast reads "opened scrollback" and names the source pane (`:1004-1012`). It clears itself after five seconds (`src/app/api.rs:741-747`).
+	- ## What happens when the editor exits
+		- herdr treats the exit as an ordinary pane closing. It deletes the temp file, restores the earlier zoom state, and returns focus (`src/app/api.rs:478-500`). Test: `pane_overlay_command_opens_and_closes_after_exit` (`src/app/input/navigate.rs:3574`).
+		- On macOS and Linux the editor runs inside a small `/bin/sh` wrapper. The wrapper runs the editor, keeps its exit status, deletes the file, and exits with that status (`src/platform/macos.rs:46-52`, `src/platform/linux.rs:104-110`). So the file is deleted twice, once by the shell and once by herdr.
+		- On Windows herdr runs the editor directly with the path as its argument (`src/platform/windows.rs:737-770`), and herdr's own cleanup is the only one.
+		- Either way, the file is gone once the editor exits, and herdr has no code path that reads it back into the pane.
+	- ## Is there a delay?
+		- No. Every step runs in the key handler, one after another: resolve the pane, copy the history, write the file, spawn the pane (`src/app/input/navigate.rs:106-111`, `:961-1015`). Repeated presses each do the same work with no waiting period in between.
+		- The only setting named `delay` in the whole config is `ui.toast.delay_seconds`, which controls toast popups generally.
+		- A slow `prefix+e` is the copy itself. It holds a lock on the pane's terminal while writing out however much history the pane holds, so a pane holding a lot takes longer. The setting that changes it is `advanced.scrollback_limit_bytes`.
 	- ## Which editor runs
-		- macOS and Linux: `${EDITOR:-vi}`, evaluated by `/bin/sh`, so a multi-word `EDITOR` works as written.
+		- macOS and Linux: `${EDITOR:-vi}`, run through `/bin/sh`, so a multi-word `EDITOR` works as written.
 		- Windows: `VISUAL`, then `EDITOR`, then `notepad.exe`.
-		- Anywhere else: an `Unsupported` error (`src/platform/fallback.rs:138-143`), surfaced as the "edit scrollback failed" toast.
+		- Other platforms return an unsupported error (`src/platform/fallback.rs:138-143`), which surfaces as the "edit scrollback failed" toast.
 	- ## Misconceptions
-		- **"Saving in the editor changes the pane."** Nothing reads the file back. On Unix the wrapper deletes it as the editor exits, so the saved bytes are gone within the same keystroke.
-		- **"The file keeps up with the pane."** It is written once, before the editor starts. Everything the pane prints afterwards is missing from it, and there is no indication in the file that anything is missing.
-		- **"It captures what the pane has printed."** It captures what the pane still *retains*. Anything evicted under `advanced.scrollback_limit_bytes` is already gone, and an alternate-screen pane retains nothing.
-		- **"The editor is a modal overlay."** It is a horizontal split in the same tab, zoomed. The tab has one more pane while it is open.
-		- **"Wrapped lines come out wrapped."** Soft wraps are rejoined as of this build. Lines the *program* wrapped itself are real newlines and stay broken.
-		- **"There is an edit-scrollback delay to tune."** No wait exists in the path to tune. A slow `prefix+e` is a large scrollback being serialized, and the setting that changes it is `advanced.scrollback_limit_bytes`.
+		- **"Saving in the editor changes the pane."** Nothing reads the file back. On macOS and Linux the wrapper deletes it as the editor exits.
+		- **"The file keeps up with the pane."** herdr writes it once, before the editor starts, and the file says nothing about what came after.
+		- **"It copies what the pane has printed."** It copies what the pane still holds. Older rows fall out under `advanced.scrollback_limit_bytes`, and an alternate-screen pane holds nothing.
+		- **"Wrapped lines come out wrapped."** Lines the terminal wrapped are rejoined. Lines the program wrapped itself stay broken.
