@@ -12,6 +12,10 @@ logseq-entity:: [[Logseq/Entity/Person]]
 		- [[Beads]] - A memory upgrade for your coding agent
 		- [[Gastown]] - Multi-agent workspace manager
 		- [[Person/Steve Yegge/Blog/Welcome to Gas Town]]
+	- ## Writing
+		- The Shape of Things to Come, a two-part essay on where agentic harnesses are heading
+			- [[Person/Steve Yegge/Blog/26/08/The Shape of Things to Come, Part 1: The Continuous Thunderdome]]
+			- [[Person/Steve Yegge/Blog/26/08/The Shape of Things to Come, Part 2: Model Welfare for Agentic Engineers]]
 	- ## Work
 		- Writing thousands of lines of code per day using AI coding tools
 		- Daily spend of `$300`–`$500` across 3–5 Claude Code and Sourcegraph AMP sessions
