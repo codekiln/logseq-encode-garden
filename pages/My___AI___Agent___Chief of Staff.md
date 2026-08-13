@@ -38,6 +38,11 @@ github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/M
 			- Compare the day's journal against what actually changed on disk.
 		- ### An instruction edited in its generated form
 			- `.claude/`, `.cursor/`, `.github/`, and `.codex/` hold [[rulesync]] output — 99 tracked files under `.claude/` alone. The sources live in `.rulesync/`, and `rulesync generate` runs with `delete: true`, so an edit made downstream is replaced on the next generate without a word.
+		- ### A check that reports a break where none exists
+			- The instrument fails the same way the graph does. Nothing turns red when a check is wrong, and a false break is the louder kind of wrong: it arrives as a concrete list with file paths attached, which is what earns a repair trip. The confidence comes from the tool's precision rather than from evidence.
+			- The wasted trip is not the real cost. A check that cries wolf gets switched off, and the break it was built to catch then arrives unobserved.
+			- Two instruments have produced confident wrong answers here. File modification time reported `.rulesync/` sources stale against the copies they generate, when the bodies matched exactly and the ordering was only checkout write order. A line-based pattern reported deep links dead when every target resolved, because it stopped at whitespace and read a truncated path as a target, and because it saw one URL's first fragment while the rest of the path sat on the next line.
+			- Both produced well-formed output, so nothing in the result signalled a fragment rather than a finding. Before reporting a break, work out what the check can see, and open the source it drew from.
 	- ## Subagents this graph starts
 		- **scribe** — standing for the day. Owns `journals/YYYY_MM_DD.md` and every commit. The other agents hand it finished files, and it writes the change log and commits them.
 		- **page-writer** — one work item. Writes or rewrites pages, resolves its own links, and hands the file paths to the scribe.
