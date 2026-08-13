@@ -11,3 +11,8 @@
 	- DO NOT
 		- store worktrees as siblings of the project folder
 		- put the branch-type prefix (`feature/`, `fix/`, `docs/`) in the worktree directory name
+	- two species, named differently
+		- **ephemeral** — created for one branch and removed once it lands; directory named after the branch, per the DO rules above
+		- **standing** — kept alive across many branches as an agent inbox; directory named after the agent (`<proj-root>/worktrees/reviewer`), since no single branch describes it
+			- branch identity lives in the branch name alone; the directory name stays fixed for the life of the agent
+			- rests detached at `origin/main` between tasks — [[AI/Coding/Idea/26/08/Standing agent inboxes on long-lived worktrees]]
