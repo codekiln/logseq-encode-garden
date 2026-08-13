@@ -1,0 +1,22 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+see-also:: [[Terminal/Multiplexer/Idea]]
+
+- # Can [[herdr]] show the current session name, and how do I switch sessions?
+	- ## [[AI Answer]]
+		- Checked against herdr `0.8.0` (the installed build) and the `herdrdev/herdr` source at `preview-2026-08-04-…-78-g06ca0baa`.
+		- **Short answer:** No on the name — nothing in 0.8.0 renders the session anywhere, and the `ui.window_title` template that has since landed on main has no `{session}` token. Switching is CLI-only: detach, then `herdr session attach <name>`. herdr's own advice is to reach for workspaces instead, which are the real analogue to [[tmux]] sessions.
+		- ### Showing the session name
+			- **No UI surface carries it.** The navigator, sidebar, tab bar, and status line all render workspace / tab / pane / agent. The sidebar row tokens are `state_icon`, `state_text`, `workspace`, `tab`, `pane`, `agent`, `terminal_title`, `terminal_title_stripped`, and custom `$name` values reported through `herdr pane report-metadata` — there is no session token among them.
+			- **`ui.window_title` exists but has no session token.** It writes the outer terminal's title (OSC 0), which is what window managers show in title, tab, and group bars. It defaults to `"{hostname}: {workspace}"`, accepts `{hostname}`, `{workspace}`, `{tab}`, `{pane}`, and `{terminal_title}`, and takes `""` to leave the outer title alone. It renders on the server, so `{hostname}` names the host the panes run on even when attaching from a remote client.
+			- **And it is not in 0.8.0 yet.** `herdr config check` against a 0.8.0 binary answers `unknown config key ui.window_title; ignoring key`, and the same for `ui.tab_bar_right`. Both are absent from the 0.8.0 *and* the current preview docs snapshots — they are on main, headed for a later release. 0.8.0 does not write the outer terminal title at all; `src/terminal_effects.rs` does not exist at the `v0.8.0` tag.
+			- **Workarounds that work today on 0.8.0:**
+				- Name the workspace after the session. `workspace` is the one identifier every surface already shows, and it is what `{workspace}` will resolve to once `ui.window_title` ships.
+				- Derive the session in the shell prompt from `$HERDR_SOCKET_PATH`, which every pane gets: the default session is `~/.config/herdr/herdr.sock`, a named one is `~/.config/herdr/sessions/<name>/herdr.sock`. `$HERDR_SESSION` is only *inherited* from the server process — present for named sessions, unset on the default — while `HERDR_ENV`, `HERDR_SOCKET_PATH`, `HERDR_WORKSPACE_ID`, `HERDR_TAB_ID`, and `HERDR_PANE_ID` are injected deliberately.
+				- Set the outer terminal title yourself before launching, from a wrapper that emits OSC 2 alongside `herdr session attach <name>`. Nothing in 0.8.0 will overwrite it.
+			- **Once it ships:** `ui.tab_bar_right` takes a `command` entry that runs on an interval with the herdr environment inherited, so `${HERDR_SESSION:-default}` in the right edge of the tab bar becomes the direct answer — no `{session}` token needed.
+		- ### Switching sessions
+			- **The whole surface is the CLI:** `herdr session list [--json]`, `herdr session attach <name>`, `herdr session stop <name>`, `herdr session delete <name>`. Launch-time equivalents are `herdr --session <name>` and the `HERDR_SESSION` environment variable. Use `default` as the name when you need to address the default session explicitly.
+			- **`herdr session attach <name>` is not an in-place switch.** It runs the same code path as `--session <name>` — it sets the session name and then launches or attaches a client. Moving between sessions means detaching with `prefix+q` and running the attach command from the shell.
+			- **There is no keybinding for it.** `prefix+g` is labelled "session navigator" in the keybind help, but it navigates workspaces, tabs, and panes inside the current session. Nothing corresponds to tmux's `prefix+s` session tree or `switch-client`.
+			- **Sessions are heavier than tmux sessions by design.** Each is a separate server with its own socket, config directory, and persisted runtime state. The docs are explicit: "Use workspaces first. Use named sessions when you need completely separate panes, sockets, and persisted runtime state."
+			- **Workspaces are the affordance to use.** `prefix+shift+n` new, `prefix+shift+w` rename, `prefix+shift+d` close, `prefix+g` navigator, `prefix+b` sidebar toggle — plus clicking them in the sidebar, which rolls up agent state per workspace. That is where the switching ergonomics went.
