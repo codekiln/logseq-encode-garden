@@ -1,16 +1,22 @@
-# Resume note — encode-garden chief of staff, 2026-08-13
+# Resume note — Hayward, the encode-garden chief-of-staff seat, 2026-08-13
 
 Written for a successor with none of this context.
 
 ## Resume this session
 
 ```
-claude --resume encode-garden-chief-of-staff
+claude --resume encode-garden-hayward
 ```
 
-herdr workspace `w2` (label `encode-garden`). Two tabs were live at wrap-up:
-`chief-of-staff` and `scribe` (`encode-garden-scribe`, resumable by the same
-`--resume` form under its own name).
+The seat is named **Hayward**; `pages/My___AI___Agent___Chief of Staff.md`
+explains what the name means and why it belongs to the seat rather than to a
+session. It answered to `encode-garden-chief-of-staff` for most of 2026-08-13
+and was renamed late in the day, so anything written earlier — transcripts,
+other agents' notes, commit messages — may still address it by the old name.
+
+herdr workspace `w2` (label `encode-garden`). Two tabs live: `hayward` and
+`scribe` (`encode-garden-scribe`, resumable by the same `--resume` form under
+its own name).
 
 ## Read these first
 
