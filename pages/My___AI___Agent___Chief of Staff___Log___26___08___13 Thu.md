@@ -6,6 +6,11 @@
 		- Three agents and the human were writing into the single checkout at `~/ghq/github.com/codekiln/logseq-encode-garden`. `encode-garden-scribe` took the journal and the commits, and the agents writing pages handed files over rather than running `git add` themselves. One stager gives one commit per finished thing instead of a sweep that bundles somebody else's half-written page.
 	- ## Agent status alone is not permission to prompt
 		- `herdr agent get encode-garden-scribe` reported `done` while that pane's input box still held a line the human had typed and not sent. Prompting on the status would have appended to his sentence. `herdr agent read <name> --source visible` is the part that shows the unsent text.
+	- ## Unsent text is not consent
+		- A pane holding a typed but unsent line is the human mid-sentence, and that cuts both ways: it is not a prompt to write into, and it is not an instruction to act on.
+		- A line nobody has pressed enter on is one its writer is still free to rewrite or drop. Reading it says an outcome would probably be welcome — which is evidence, not authorization.
+		- Authority comes from a sent message, or from a chief's own delegated authority over the work. Where neither covers the case, the size of the decision settles it: small and reversible work proceeds, while anything that sets a graph convention or is expensive to undo waits for the keystroke. An entity type with dozens of instances is the second kind.
+		- The line is cheapest to hold on trivial work, which is exactly why it gets held there. The habit is what survives to the decision that matters.
 	- ## A closed pane is not lost work
 		- Two panes in this workspace were closed before the cleanup started, and what those sessions concluded turned out to be already filed as pages. The check ran against the sessions' own transcripts rather than the panes: `~/.claude/projects/<project>/<session-id>.jsonl` holds one JSON object per line, and its `customTitle` field names what the session was about. 86 of those transcripts exist for this graph.
 		- So harvest a session while its pane is still open, and read the transcript when one closes first.
