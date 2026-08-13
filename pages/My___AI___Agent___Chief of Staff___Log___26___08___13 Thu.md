@@ -1,5 +1,7 @@
 - [[2026-08-13 Thu]]
-	- First day of a chief-of-staff agent in this graph. [[herdr]] workspace `w2` ran `encode-garden-chief-of-staff` while `dotfiles-chief-of-staff` and `myer-knowledge-chief-of-staff` ran in the same herdr instance, which is what makes `<workspace>-chief-of-staff` enough of a name to find all three.
+	- First day of a chief-of-staff agent in this graph. [[herdr]] workspace `w2` ran `encode-garden-chief-of-staff` while chiefs over other repos ran in the same herdr instance, which is what makes `<workspace>-chief-of-staff` enough of a name to find every one of them without a roster.
+	- ## What belongs in this graph, and what does not
+		- This garden is public, and a chief reads other repos' panes all day. A repo name picked up that way is not knowledge about [[Person/codekiln]] — it is somebody else's private context passing through, and a page here is the wrong place for it. Write the pattern and leave the repo unnamed.
 	- ## Commits went to one agent
 		- Three agents and the human were writing into the single checkout at `~/ghq/github.com/codekiln/logseq-encode-garden`. `encode-garden-scribe` took the journal and the commits, and the agents writing pages handed files over rather than running `git add` themselves. One stager gives one commit per finished thing instead of a sweep that bundles somebody else's half-written page.
 	- ## Agent status alone is not permission to prompt
