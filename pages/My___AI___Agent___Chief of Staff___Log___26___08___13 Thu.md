@@ -6,6 +6,10 @@
 		- Three agents and the human were writing into the single checkout at `~/ghq/github.com/codekiln/logseq-encode-garden`. `encode-garden-scribe` took the journal and the commits, and the agents writing pages handed files over rather than running `git add` themselves. One stager gives one commit per finished thing instead of a sweep that bundles somebody else's half-written page.
 	- ## Agent status alone is not permission to prompt
 		- `herdr agent get encode-garden-scribe` reported `done` while that pane's input box still held a line the human had typed and not sent. Prompting on the status would have appended to his sentence. `herdr agent read <name> --source visible` is the part that shows the unsent text.
+	- ## A working pane hides its unsent text
+		- The input box renders only while a pane's agent is idle or done. While the agent works, the box displays empty whether or not a typed line is sitting in it. Measured across six panes at one moment: every working agent showed an empty box, every idle or done agent showed its pending text, and one pane held the same text before and after a working interval with nothing typed in between.
+		- So the check has an order. Confirm the agent is idle, then read the box. Read it while the agent works and the answer is a false empty — precisely the reading that would license typing into a half-finished sentence.
+		- The check also cannot be handed to the pane's own occupant. An agent looking at its own box is working by definition, so it sees empty every time and learns nothing from it. Only an outside observer can see the pending text, which puts the check on whoever is about to prompt.
 	- ## Unsent text is not consent
 		- A pane holding a typed but unsent line is the human mid-sentence, and that cuts both ways: it is not a prompt to write into, and it is not an instruction to act on.
 		- A line nobody has pressed enter on is one its writer is still free to rewrite or drop. Reading it says an outcome would probably be welcome — which is evidence, not authorization.
