@@ -1,6 +1,6 @@
 tags:: [[herdr]], [[Diataxis/Explanation]]
 logseq-entity:: [[Logseq/Entity/Concept]]
-see-also:: [[Claude/Code/Q/Why can't I scroll up in tmux copy mode when Claude Code is in TUI mode?]], [[herdr/Explanation/Doubled History After a Pane Resize]], [[tmux/Mode/Copy]]
+see-also:: [[Claude/Code/Q/Why can't I scroll up in tmux copy mode when Claude Code is in TUI mode?]], [[herdr/Explanation/Doubled History After a Pane Resize]], [[herdr/Explanation/Where Input Box Text Comes From]], [[tmux/Mode/Copy]]
 
 - # Copy mode on the alternate screen
 	- Line references read the [herdrdev/herdr](https://github.com/herdrdev/herdr) source at [952729ee preserve logical lines in scrollback editor](https://github.com/herdrdev/herdr/commit/952729ee) — `herdr 0.8.0`, `preview-2026-08-04-d78e3d3b5126-90-g952729ee`. Pane figures measured with [[Claude/Code]] 2.1.228.
