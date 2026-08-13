@@ -1,0 +1,9 @@
+- [[2026-08-13 Thu]]
+	- First day of a chief-of-staff agent in this graph. [[herdr]] workspace `w2` ran `encode-garden-chief-of-staff` while `dotfiles-chief-of-staff` and `myer-knowledge-chief-of-staff` ran in the same herdr instance, which is what makes `<workspace>-chief-of-staff` enough of a name to find all three.
+	- ## Commits went to one agent
+		- Three agents and the human were writing into the single checkout at `~/ghq/github.com/codekiln/logseq-encode-garden`. `encode-garden-scribe` took the journal and the commits, and the agents writing pages handed files over rather than running `git add` themselves. One stager gives one commit per finished thing instead of a sweep that bundles somebody else's half-written page.
+	- ## Agent status alone is not permission to prompt
+		- `herdr agent get encode-garden-scribe` reported `done` while that pane's input box still held a line the human had typed and not sent. Prompting on the status would have appended to his sentence. `herdr agent read <name> --source visible` is the part that shows the unsent text.
+	- ## Looking for what produces no error
+		- The graph has no failing build to point at, so the search went to what exists in it that nothing reports: 622 page files under 80 bytes, and six titles that live both as another page's `alias::` value and as their own near-empty file. `pages/Digital Garden.md` at zero bytes and `pages/AST.md` at three are two of the six.
+		- Aliases and namespaces are why a link can read correctly and still miss — 1,224 of 4,685 pages carry an `alias::` line. `[[AST]]` arrives at [[Programming/Abstract/Syntax/Tree]] through its alias, while a plain `[[Abstract Syntax Tree]]` arrives at a new empty page.

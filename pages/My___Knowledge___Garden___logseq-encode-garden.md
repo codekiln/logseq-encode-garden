@@ -1,4 +1,4 @@
-see-also:: [[My/AI/Agent/Ask My Agent Anything About Me]]
+see-also:: [[My/AI/Agent/Ask My Agent Anything About Me]], [[My/AI/Agent/Chief of Staff]]
 
 - # logseq-encode-garden - My public coding / technology (and some music) knowedge garden
 	- If you are looking at this page you are probably already in the middle of the garden.

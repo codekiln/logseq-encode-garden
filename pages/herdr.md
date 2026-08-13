@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Can Celik]]
 date-created:: [[2026/03/27]]
-see-also:: [[tmux]], [[Zellij]], [[Terminal/Multiplexer]]
+see-also:: [[tmux]], [[Zellij]], [[Terminal/Multiplexer]], [[My/AI/Agent/Chief of Staff]]
 
 - # [herdr](https://herdr.dev)
 	- Terminal-native agent multiplexer: surfaces the state of every coding agent at a glance — blocked, working, done — as real terminal panes rather than a wrapped interpretation of them. Self-described as "the runtime your coding agents live on."
