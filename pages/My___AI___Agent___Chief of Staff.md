@@ -60,4 +60,4 @@ github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/M
 		- An escalation carries a recommendation with it.
 	- ## Log
 		- What a day as chief here taught, one page per day at `My/AI/Agent/Chief of Staff/Log/YY/MM/DD Ddd`. The next entry is a new page at that path under its own date.
-			- [[My/AI/Agent/Chief of Staff/Log/26/08/13 Thu]]
+		- {{namespace My/AI/Agent/Chief of Staff/Log}}
