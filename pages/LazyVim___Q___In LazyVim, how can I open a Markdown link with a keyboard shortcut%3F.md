@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Question]]
-see-also:: [[LazyVim/Q/In LazyVim, how can I traverse wiki links in an Obsidian knowledge garden?]], [[LazyVim/plugins/extras/lang/markdown]]
+see-also:: [[LazyVim/Q/In LazyVim, how can I traverse wiki links in an Obsidian knowledge garden?]], [[LazyVim/plugins/extras/lang/markdown]], [[LazyVim/Tutorial/Browse a Markdown Knowledge Garden]]
 
 - # In [[LazyVim]], how can I open a [[Markdown]] link with a keyboard shortcut?
 	- ## [[AI Answer]]
