@@ -17,10 +17,10 @@ see-also:: [[herdr/Explanation/Copy Mode on the Alternate Screen]], [[herdr/Expl
 	- ## What it is good for
 		- Reading a long pane history in an editor you already know. Copy mode offers literal search with `/` and `?`, described in [herdr's keyboard reference](https://herdr.dev/docs/keyboard/). An editor adds regular expressions, folding, marks, and split windows over the same text.
 		- Getting text out of a pane that is awkward to select with the mouse. Once the history is a file, the editor's own copy and clipboard behaviour applies to all of it.
-		- Reading everything the pane still holds in one go. The keypress asks for every retained row. `herdr pane read --source recent-unwrapped` reads the same way but returns 80 rows unless you pass `--lines`, per [herdr's CLI reference](https://herdr.dev/docs/cli-reference/).
+		- Reading everything the pane still holds in one go. The keypress asks for every retained row. `herdr pane read --source recent-unwrapped` runs the same read, described in [herdr's CLI reference](https://herdr.dev/docs/cli-reference/), but returns 80 rows by default and caps `--lines` at 1000 (`src/app/api_helpers.rs:120-129`). For a history longer than that, the keypress is the way to see all of it at once.
 		- Working from the keyboard alone. The key acts on the focused pane, so there is no pane id to look up and no shell to run a command in.
 		- ### Where it stops being useful
-			- The bytes match what `herdr pane read --source recent-unwrapped` gives you. The gain is the editor, so a script is better served by the command.
+			- Up to 1000 rows, both routes call the same function and return the same bytes (`src/app/api_helpers.rs:120-129`). The gain is the editor, so a script is better served by the command.
 			- A pane on the alternate screen keeps no history, so the file holds only the rows on screen. Copy mode is blocked on those panes for the same reason — [[herdr/Explanation/Copy Mode on the Alternate Screen]].
 			- Changing the pane needs a different tool. This one reads.
 	- ## What is copied
