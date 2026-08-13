@@ -3,7 +3,7 @@ logseq-entity:: [[Logseq/Entity/Concept]]
 see-also:: [[Claude/Code/Q/Why can't I scroll up in tmux copy mode when Claude Code is in TUI mode?]], [[herdr/Explanation/Doubled History After a Pane Resize]], [[tmux/Mode/Copy]]
 
 - # Copy mode on the alternate screen
-	- Line references read the [herdrdev/herdr](https://github.com/herdrdev/herdr) source at commit `952729ee` — `herdr 0.8.0`, `preview-2026-08-04-d78e3d3b5126-90-g952729ee`. Pane figures measured with [[Claude/Code]] 2.1.228.
+	- Line references read the [herdrdev/herdr](https://github.com/herdrdev/herdr) source at [952729ee preserve logical lines in scrollback editor](https://github.com/herdrdev/herdr/commit/952729ee) — `herdr 0.8.0`, `preview-2026-08-04-d78e3d3b5126-90-g952729ee`. Pane figures measured with [[Claude/Code]] 2.1.228.
 	- ## Overview
 		- `prefix+[` enters copy mode. In some panes running [[Claude/Code]], Ctrl-U (half page up) and `k` (line up) leave the viewport pinned at the top of the visible screen, with no bell and no message. In other Claude Code panes the same keys page through history normally. The mouse wheel scrolls in both, which makes copy mode look broken.
 		- The panes that stay pinned are on the terminal's **alternate screen**, and the alternate screen is built with zero scrollback. Copy mode is a viewport over the pane's scrollback, so in those panes it has nothing above the visible rows to reach.
