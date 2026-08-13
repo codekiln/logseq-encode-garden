@@ -1,0 +1,10 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+tags:: [[Question]]
+see-also:: [[Obsidian/Q/Does obsidian allow a list of links to other obsidian pages in the YAML markdown frontmatter?]]
+
+- # Are there any [[Obsidian]] plugins which provide better support for Markdown front matter YAML?
+	- ## [[AI Answer]]
+		- **Short answer:** Yes. [Nested Properties](https://community.obsidian.md/plugins/nested-properties) is the closest fit for a vault that stores nested YAML in frontmatter. It renders nested objects and arrays as a collapsible tree in Obsidian's Properties editor, supports adding and editing fields at any level, and records property types by dotted path. Its documentation includes an array-of-objects example, where fields such as `versions.version` and `versions.released` retain their types across every list item.
+		- **Use Nested Properties when the data already exists as YAML.** It works in the Properties panel over the vault's existing YAML and adds dotted-path search such as `[book.author: Ursula K. Le Guin]`. The plugin is available through Community Plugins, supports desktop and mobile, and currently requires Obsidian 1.13.4 or later. [[Answer/Official]] from [Nested Properties](https://community.obsidian.md/plugins/nested-properties).
+		- **Use [Metadata Menu](https://github.com/mdelobelle/metadatamenu) when repeated objects need a form and a field schema.** Its `Object` and `Object List` field types represent a collection and a list of collections, and field settings can be defined globally or through a FileClass. That gives a more structured editing workflow than raw YAML. The maintainer says they have limited time for the project, so try it with a small representative vault before making it central to a workflow. [[Answer/Official]] from [Metadata Menu](https://github.com/mdelobelle/metadatamenu).
+		- Obsidian's YAML parser can store nested structures; the weak point is the core Properties UI. For the rendering problem described here, start with Nested Properties. Choose Metadata Menu if the requirement grows into typed forms, constrained values, and reusable record shapes.

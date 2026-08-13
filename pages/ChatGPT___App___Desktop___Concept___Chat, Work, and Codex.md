@@ -1,6 +1,7 @@
 tags:: [[Diataxis/Concept]]
 logseq-entity:: [[Logseq/Entity/Concept]]
-- # Chat, Work, and Codex in the ChatGPT app
+
+- # Chat, Work, and [[Codex]] in the ChatGPT app
 	- ## Overview
 		- As of August 2026, OpenAI presents [[ChatGPT/Chat]], [[ChatGPT/Work]], and [[Codex]] within one [[ChatGPT/App/Desktop]]. Its [official overview](https://learn.chatgpt.com/) describes Chat for conversation, Work for finished general-purpose deliverables, and Codex for software development.
 		- The name **ChatGPT** refers to two levels: the overall application and the general-purpose side of the application. This double use is the main source of confusion.
