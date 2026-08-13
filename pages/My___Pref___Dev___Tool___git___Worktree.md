@@ -1,5 +1,5 @@
 - My preferences related to [[git/worktree]]s
-	- the `hbso-ai` `git-tools` `git-worktrees` skill is the source of truth for naming and placement; this page follows it
+	- the `git-tools` `git-worktrees` skill is the source of truth for naming and placement; this page follows it
 	- DO
 		- store worktrees **inside** the project folder, in a [[gitignore]]d `<proj-root>/worktrees/` directory
 		- name each worktree after its branch, replacing `/` with `-` and dropping the branch-type prefix
