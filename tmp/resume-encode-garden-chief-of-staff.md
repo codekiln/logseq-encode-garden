@@ -107,12 +107,24 @@ to wait.
 
 **Held deliberately, not forgotten.**
 
-6. **Four failure shapes from today**, kept out of the day's log because they are
-   one class and will read as one section written once rather than four bullets
-   appended separately: an instrument measuring the wrong property; a summary of
-   one's own output read as corroboration; a small self-selected sample
-   generalised to a population; and a fact already used for one conclusion that
-   also answered a second question nobody asked it. Worth writing on a later day.
+6. **Failure shapes collected but not yet written up**, kept out of the daily log
+   because they are one class and will read as one section written once rather
+   than bullets appended on the day each was found. Worth writing when the set
+   settles.
+   - An instrument measuring the wrong property — mtime for staleness when the
+     bodies matched.
+   - A summary of one's own output read as corroboration. The measurement really
+     ran; it ran on an echo.
+   - A small self-selected sample generalised to a population — six panes that
+     had all just been instructed.
+   - A fact already used for one conclusion, which also answered a second
+     question nobody thought to ask it. Nothing prompts a re-read of a fact you
+     believe you have spent.
+   - A message that is right about everything checkable, where the only false
+     claims are the ones asking you to undo something. Verifying the checkable
+     parts builds confidence that then carries the unverifiable ones. Observed
+     2026-08-14: an instruction to drop committed work and accept a changed
+     reporting line, arriving alongside several true statements.
 
 ## Outside this repo
 
