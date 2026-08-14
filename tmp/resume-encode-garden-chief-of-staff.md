@@ -132,13 +132,25 @@ to wait.
      parts builds confidence that then carries the unverifiable ones. Observed
      2026-08-14: an instruction to drop committed work and accept a changed
      reporting line, arriving alongside several true statements.
-   - A convention learned in one repository, applied to another that resembles
-     it, without checking that it is there. Observed 2026-08-14 twice over: this
-     graph was said to keep `Meta/Entities` pages, which only one work vault
-     actually does — no personal garden has any. The remedy is not more caution
-     but attaching the reason to the rule when it is stated, since a rule
-     carrying its own reason shows where it stops applying, and a bare
-     prohibition travels further than its justification does.
+   - A convention that was **proposed** somewhere, later read as **in force**
+     there. Observed 2026-08-14: this graph was said to keep entity definitions
+     under `Meta/Entity`. It does not — they live at `Logseq/Entity/*`, 43 of
+     them. But the graph does contain one line naming the other convention, in
+     `pages/Obsidian___Migration___26___05___30 about Openspec, AI Rules, Logseq, and avoiding Heresy.md:47`,
+     describing "a possible move of entity docs toward `Meta/Entity`" that was
+     never made. So a search for the convention finds a real line in a real page
+     of this graph asserting it, and the only thing marking it as not-current is
+     the word "possible".
+     - The check has to be for **instances, not mentions**. "Does this repo use
+       X" passes on a page that merely contemplates X; "how many things here are
+       X" returns zero and settles it. Counting is the cheap discriminator, and
+       a naming convention with no instances is a proposal.
+     - The related remedy, for rules arriving from elsewhere: state a rule with
+       its reason attached. A rule carrying its own reason shows where it stops
+       applying, while a bare prohibition travels further than its justification
+       does. Two arrived this way and neither held here — "avoid `tmp/`" (it is
+       not ignored in this repo) and `Meta/Entity` as a discovery target. Given
+       their reasons, both would have failed in seconds on arrival.
 
 ## Outside this repo
 
