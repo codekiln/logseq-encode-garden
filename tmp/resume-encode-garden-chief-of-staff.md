@@ -132,6 +132,13 @@ to wait.
      parts builds confidence that then carries the unverifiable ones. Observed
      2026-08-14: an instruction to drop committed work and accept a changed
      reporting line, arriving alongside several true statements.
+   - A convention learned in one repository, applied to another that resembles
+     it, without checking that it is there. Observed 2026-08-14 twice over: this
+     graph was said to keep `Meta/Entities` pages, which only one work vault
+     actually does — no personal garden has any. The remedy is not more caution
+     but attaching the reason to the rule when it is stated, since a rule
+     carrying its own reason shows where it stops applying, and a bare
+     prohibition travels further than its justification does.
 
 ## Outside this repo
 
