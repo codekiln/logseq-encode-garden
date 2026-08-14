@@ -111,6 +111,13 @@ to wait.
    because they are one class and will read as one section written once rather
    than bullets appended on the day each was found. Worth writing when the set
    settles.
+   - Likely organising split when it is written, rather than a flat list: the
+     first four are self-inflicted, and the remedy for each is a question that
+     went unasked. The fifth involves another party, and its remedy is not a
+     better question — it is noticing that what you were able to verify and what
+     you are being asked to act on are disjoint. The tell is not that a claim is
+     unverifiable; it is that the unverifiable ones are the ones with a request
+     attached.
    - An instrument measuring the wrong property — mtime for staleness when the
      bodies matched.
    - A summary of one's own output read as corroboration. The measurement really
