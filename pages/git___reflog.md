@@ -2,4 +2,27 @@
 	- **What is reflog good for?** [[Card]]
 		- `git reflog` shows where `HEAD` and branch refs have pointed locally, even when a commit is no longer visible in normal branch history.
 		- This makes it a recovery tool for commits lost after operations like [[git/rebase]], [[git/reset]], or branch deletion.
-		- In this session, it was the way to rediscover commit `84f0092` after it disappeared from the ordinary [[Lazygit]] commits view.
+	- ## What it actually is
+		- A ref is a name holding one object id — `HEAD`, `refs/heads/main`, `refs/stash`. The reflog is the log of every id a ref has held in this local repository, one file per ref under `.git/logs/`: `.git/logs/HEAD`, `.git/logs/refs/heads/main`.
+		- Each ref update appends one line — old id, new id, who made the update, when, and the command that did it.
+			- ~~~
+			  70ca2494…  7e10d824…  codekiln <…>  1786777435 -0400  commit: word salad
+			  ~~~
+		- Branch history and the reflog answer different questions. Walking `main` backward follows parent links between commits and tells you which commits led to this one. Walking `main`'s reflog tells you where the name `main` sat over time, in the order you put it there.
+		- Because it records ref updates, it records the ones a commit graph has no place for: checkouts, resets that abandon commits, each step of a rebase, `branch -f`, and the `clone` that started the repository.
+	- ## Reading it
+		- `git reflog` alone reads `HEAD`'s log. It is short for `git reflog show HEAD`, which is itself `git log -g --abbrev-commit --pretty=oneline`.
+		- `git reflog show main` reads one branch's log. `git reflog list` names every ref that has one.
+		- `HEAD@{2}` is where `HEAD` sat two updates ago; `main@{one.week.ago}` is where `main` pointed a week ago. That is a separate axis from `HEAD~2`, which walks two parents back through commit history. The two agree only when the last two updates happened to be ordinary commits.
+		- `stash@{0}` is the same syntax, because [[git/stash]] is a ref with a reflog — the stash list is that reflog.
+	- ## Why it makes lost commits recoverable
+		- A commit dropped by a reset, a rebase, or a branch deletion is still in the object store; what it lost was a name leading to it. Unreachable objects are what `git gc` eventually deletes.
+		- Reflog entries count toward reachability, so a dropped commit stays alive and addressable while its entry survives. Recovery is then an ordinary ref update: `git reset --hard HEAD@{1}` to step back, or `git switch -c recovered <sha>` to give a rediscovered commit a name again.
+	- ## Local, and it expires
+		- Reflogs stay on the machine that wrote them. No transport pushes, fetches, or clones them, so a fresh clone starts with a single entry describing the clone, and a colleague's reflog is invisible to you.
+		- `core.logAllRefUpdates` controls whether they are written at all — true in a repository with a working tree, and off by default in a bare one, which is why a server-side clone has no safety net.
+		- `git gc` prunes them: reachable entries at `gc.reflogExpire` (90 days), unreachable ones at `gc.reflogExpireUnreachable` (30 days). Recovery works within that window.
+	- ## In this graph
+		- Why an undo feature can be built out of it: [[git/reflog/Q/Why does it make sense for lazygit to use the reflog for undo and redo?]] and [[Lazygit/Keyshort/Undo and Redo]].
+	- [[My Note]]
+		- AI added this entry when helping me rediscover commit `84f0092` in lazygit after it disappeared from the ordinary [[Lazygit]] commits view.
