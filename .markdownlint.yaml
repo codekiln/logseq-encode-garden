@@ -1,0 +1,27 @@
+# markdownlint config for a Logseq graph. Logseq owns the markdown in this repo and writes
+# it in a shape several default rules were not written for. Each rule below is disabled
+# because it reports Logseq's own format as an error — not because the warning is unwelcome.
+#
+# This file has to live here rather than in ~/. markdownlint-cli2 bounds config discovery at
+# the working directory it is invoked from and never searches above it, so a home-directory
+# config is never read when linting a repo.
+
+# Logseq indents nested blocks with tabs, one per level. MD010 flags every indented line in
+# the graph, and its --fix prepends spaces to those tabs, leaving mixed indentation.
+MD010: false
+
+# Same indentation, different complaint: MD007 expects a fixed number of spaces per list
+# level and reads one tab as one space.
+MD007: false
+
+# Logseq writes the block under a heading with no blank line between them.
+MD022: false
+
+# A page's title comes from its filename, so pages open with a bullet rather than an H1.
+MD041: false
+
+# Logseq and Obsidian don't constrain line length; prose flows to the viewport width.
+MD013: false
+
+# Logseq does not write a trailing newline at the end of a page.
+MD047: false
