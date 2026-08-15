@@ -25,3 +25,7 @@ MD013: false
 
 # Logseq does not write a trailing newline at the end of a page.
 MD047: false
+
+# Trailing whitespace is not meaningful in these notes, and Logseq leaves it behind on
+# blocks it has edited.
+MD009: false
