@@ -5,6 +5,11 @@
 	- **Open the File Explorer at the Working Directory** [[Card]]
 		- Shortcut: `<leader>E`
 		- Description: opens the [[nvim/Plugin/snacks.nvim]] explorer, rooted at the current working directory rather than the project root
+	- **Close the File Explorer** [[Card]]
+		- Shortcut: `q`
+		- Description: Cancels the [[nvim/Plugin/snacks.nvim]] explorer picker and closes the sidebar. The explorer opens focused on its list window, where both `q` and `<Esc>` are bound to cancel. From the input box, `<Esc>` first leaves insert mode, so it takes a second press to close.
 	- [[My Note]]
 		- `<leader>fe` and `<leader>fE` are aliases of these two keys.
 		- The snacks explorer is a picker in a sidebar, so the picker's own search and filter keys work inside it.
+		- `<leader>e` does not toggle. Pressing it again while the sidebar is open reopens and refocuses it rather than closing it.
+		- `<C-c>` does not cancel here. The explorer rebinds it to `tcd`, which changes the tab's working directory to the selected entry.
