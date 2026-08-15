@@ -15,6 +15,12 @@
 		- Shortcut: `<leader>uC`
 		- Description: Opens the [[nvim/Plugin/snacks.nvim]] picker over installed colorschemes, previewing each as it is highlighted. My default is [[Catppuccin]] mocha.
 	- **Toggle Dimming** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-08-16T04:00:00.000Z
+	  card-last-reviewed:: 2026-08-15T08:48:11.004Z
+	  card-last-score:: 1
 		- Shortcut: `<leader>uD`
 		- Description: Dims everything outside the current scope, focusing the block under the cursor.
 	- [[My Note]]

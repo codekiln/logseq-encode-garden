@@ -3,8 +3,15 @@
 		- Shortcut: `>` right, `<` left
 		- Description: Shifts the visual selection by one `shiftwidth`. In normal mode they need a motion, so `>>` and `<<` shift the current line.
 	- **Keep the Selection After Shifting** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-08-16T04:00:00.000Z
+	  card-last-reviewed:: 2026-08-15T11:50:52.084Z
+	  card-last-score:: 1
 		- Shortcut: `>` then `>` again in visual mode
 		- Description: [[LazyVim]] remaps visual `<` and `>` to `<gv` and `>gv`, so the selection survives the shift and the key can be repeated without reselecting. Vanilla Vim drops the selection after one shift.
+		  id:: 6a7a206c-1fb6-4793-a38f-7cb5abd874dc
 	- **Re-indent to the Language's Rules** [[Card]]
 		- Shortcut: `=` with a motion
 		- Description: Applies the filetype's indent rules to the motion's range, fixing structure without reformatting content. Different from `<leader>cf`, which runs a real formatter.
