@@ -28,6 +28,28 @@ logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Term]]
 			- > Your sketch is ambiguous on one hinge, and it's the same illegal-state knot from before wearing new clothes.
 		- Double negatives and so many useless turns of phrase
 			- > That's why example 1 (wrap/linebreak) felt like a non-example to you — an unfamiliar reader doesn't obviously know what linebreak does, so spelling it out is earning its place under the real preference, even though the spec's current wording would tell an agent to omit it.
+		- Numbering, musing and referencing abstruse things
+			- > The two requirements, in their place
+			- > A documented check must state what result would falsify it.
+			  Three tests relied on here inside two days come out the same
+			  whether or not the claim holds, and each looked like a
+			  measurement.
+			- > And a self-correction is held higher than what it replaces,
+			  because it arrives wearing the authority of a lesson learned.
+			  Nothing gates the write-down step — that's Seneschal's
+			  observation and it's the sharper one. The gate has to be the
+			  person writing: a correction is a new claim needing its own
+			  falsifiable check, not just more conviction than the thing it
+			  displaces.
+			- > Five things now wait on you and nothing else: the four from
+			  this morning plus
+			  `conform-team-title-guidance-to-resource-page-naming`, which
+			  validates clean. The only other open `garden-health` item —
+			  guarding the `Pages` deploy — has a real trade-off in it
+			  (`cancel-in-progress`: true would cancel in-flight deploys,
+			  which is why GitHub's own starter sets it false), so it's a
+			  recommendation for you rather than a PR I should just bring.
+			-
 	- ## Buzzword / Jargon [[Examples]]
 		- Fluent, grammatical language with near-zero falsifiable content; optimized for sounding reasonable rather than saying something.
 		- > "Organizations should leverage holistic synergy through adaptive transformational frameworks that maximize strategic innovation across scalable paradigms."
