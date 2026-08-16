@@ -1,0 +1,27 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+- # Keyboard Shortcut
+	- In this garden, **Keyshort** pages model a keyboard shortcut: a key, key combination, or key sequence that invokes an action in a particular tool or environment.
+	- ## What counts as a Keyshort
+		- An action-specific page under a tool or environment namespace, usually shaped as `Scope/Keyshort/Action` or `Scope/Keyshort/Subscope/Action`.
+		- Alternative bindings for the same action may share one page. Closely related actions may share a page when they are reviewed together as a group.
+	- ## Boundaries
+		- Individual physical or logical keys are [[Logseq/Entity/Key]] instances.
+		- A command entered as text is a [[Logseq/Entity/CLI/Command]] instance; a Keyshort may invoke that command.
+		- `Scope/Keyshort` and subscope pages organize shortcuts. Action leaves are the Keyshort instances.
+	- ## Naming and links
+		- The page name starts with the tool or environment scope, followed by `Keyshort` and a concise action phrase: `Scope/Keyshort/Action`.
+		- An optional subscope sits between `Keyshort` and the action: `Scope/Keyshort/Subscope/Action`.
+		- The same chord in different scopes represents different Keyshorts because its action and context may differ.
+	- ## Finding and deduplicating
+		- Match the scope and action first, then compare the bindings and descriptions.
+		- Multiple bindings for one action belong on the same page. The same binding for different actions remains separate.
+	- ## Frontmatter
+		- Keyshort pages use the `logseq-entity::` property with [[Logseq/Entity/Keyshort]].
+		- A reviewable Keyshort page also includes [[Logseq/Entity/Card]] after the Keyshort type in `logseq-entity::`.
+	- ## Page shape
+		- The page carries [[Keyshort]] and enough scope links for the relevant `{{cards}}` queries to find it, either on the review prompt or on a parent block.
+		- A review prompt is marked with [[Card]]. Its child blocks hold the binding and the explanation, so review shows the action before revealing the keys.
+		- Alternative bindings for one action appear as sibling answer blocks beneath the same prompt.
+	- ## Relationship to other types
+		- A Keyshort is composed from one or more [[Logseq/Entity/Key]] instances.
+		- A Keyshort page may also be a [[Logseq/Entity/Card]] when it participates in Logseq review.

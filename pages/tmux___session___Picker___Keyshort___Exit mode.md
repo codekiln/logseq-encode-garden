@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Key/Short]], [[Logseq/Entity/Card]]
+logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]
 - ### Exit [[tmux/session/Picker]] mode [[Keyshort]] [[Card]]
 	- `q` - [[Key/Q]]
 	- `Escape` - [[Key/Escape]]

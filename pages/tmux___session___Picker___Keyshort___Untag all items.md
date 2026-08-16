@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Key/Short]], [[Logseq/Entity/Card]]
+logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]
 - ### Untag all items in [[tmux/session/Picker]] [[Keyshort]] [[Card]]
 	- `T` - [[Key/Shift]] + [[Key/T]]
 	- *clear every tag in the picker*

@@ -10,7 +10,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- ### Good Fit
 			- modifier keys (Meta, Control, Shift, Command/Super), special keys (Escape, Return, Tab, Backspace), function keys (F1–F12).
 		- ### Not Key Entity
-			- key combos or shortcuts (those are [[Keyshort]] entities); sequences of multiple keys (e.g. Emacs `C-x C-f`).
+			- Key combinations, shortcuts, and sequences of multiple keys are modeled by [[Logseq/Entity/Keyshort]].
 	- ## Naming and links
 		- Use the most general, cross-platform name as the page name: `[[Key/Meta]]`, `[[Key/Control]]`, `[[Key/Shift]]`.
 		- Platform-specific or notation-specific alternate names belong in `alias::` on the instance page (e.g. `[[Key/Alt]]`, `[[Key/Option]]`, `[[Key/Meta (M-)]]`).
@@ -28,5 +28,5 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- One sentence directly under H1: what the key is and its primary use.
 		- `## Larger Context` — optional; historical origin, OS-specific mapping, terminal emulator notes. Omit when not needed.
 	- ## Relationship to other types
-		- [[Keyshort]] pages reference Key instances inline to express key combinations (e.g. `[[Key/Meta]] 1`).
+		- [[Logseq/Entity/Keyshort]] pages reference Key instances inline to express key combinations (e.g. `[[Key/Meta]] 1`).
 		- A Key page is not itself a shortcut; it models the key component only.

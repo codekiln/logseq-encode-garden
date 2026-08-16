@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Key/Short]], [[Logseq/Entity/Card]]
+logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]
 - ### Page down in [[tmux/session/Picker]] [[Keyshort]] [[Card]]
 	- `NPage` - [[Key/Page Down]]
 	- `C-f` - [[Key/Control]] + [[Key/F]]

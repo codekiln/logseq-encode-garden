@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Key/Short]], [[Logseq/Entity/Card]]
+logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]
 - ### Page up in [[tmux/session/Picker]] [[Keyshort]] [[Card]]
 	- `PPage` - [[Key/Page Up]]
 	- `C-b` - [[Key/Control]] + [[Key/B]]

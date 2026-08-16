@@ -26,6 +26,7 @@ metadata:
 
 - Rules: `logseq-core` (LFM + naming; advanced detail: skill `logseq-lfm`), `logseq-link-hygiene`, journal-updates (link new pages under `[[Filed]]`, edits under `[[Updated]]`, default link-only).
 - For new card work, use `[[Card]]` as the Logseq review marker and `logseq-entity:: [[Logseq/Entity/Card]]` for first-class card pages. Treat `#card` and `[[card]]` as legacy forms to preserve or migrate intentionally.
+- Keyshort pages use `[[Logseq/Entity/Keyshort]]` as their primary entity type. Reviewable Keyshort pages add `[[Logseq/Entity/Card]]` as the secondary type.
 - Avoid `Question :: Answer` and “Flashcard Questions” sections on Keyshort pages.
 
 ## Reference index

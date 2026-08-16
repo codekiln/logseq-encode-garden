@@ -4,7 +4,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- In this garden, **Card** pages model flashcards reviewed in Logseq's spaced-repetition system.
 	- ## Examples in this garden
 		- [[mise/Architecture/Card/Jobs to be Done]] is a card factored out from [[mise/Architecture]] and embedded back into the source page.
-		- Keyshort pages such as `Scope/Keyshort/Action` may be card entities as well as [[Logseq/Entity/CLI/Command]] entities.
+		- [[Logseq/Entity/Keyshort]] pages such as `Scope/Keyshort/Action` may also be Card entities when they contain review prompts.
 	- ## How to detect Cards 
 		- Strong signals: the page title may contain a `/Card/` namespace segment and the page must contains a Logseq review card block marked with `[[Card]]`.
         - Usually a page that's a Card entity will have just one `[[Card]]` logseq link, but that isn't necessarily true; it's possible for a page that models a Card to also contain several related flashcards. 

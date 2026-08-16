@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Key/Short]], [[Logseq/Entity/Card]]
+logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]
 - ### Expand an item in [[tmux/session/Picker]] [[Keyshort]] [[Card]]
 	- `Right` - [[Key/Arrow/Right]]
 	- `l` - [[Key/L]]

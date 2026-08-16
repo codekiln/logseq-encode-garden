@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Key/Short]], [[Logseq/Entity/Card]]
+logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]
 - ### Collapse an item in [[tmux/session/Picker]] [[Keyshort]] [[Card]]
 	- `Left` - [[Key/Arrow/Left]]
 	- `h` - [[Key/H]]

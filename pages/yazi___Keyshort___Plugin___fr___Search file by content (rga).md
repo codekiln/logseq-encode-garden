@@ -1,4 +1,4 @@
-entity:: [[Logseq/Entity/Card]], [[Logseq/Entity/Key/Short]]
+logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]
 
 - ## [[yazi]] [[Keyshort/User]] to search file by content including PDFs, office documents and compressed archives with [[yazi/Plugin/fr.yazi]] [[card]]
   card-last-score:: 5

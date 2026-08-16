@@ -27,9 +27,9 @@ This command creates or updates Logseq Keyshort pages using the `<Scope>/Keyshor
   - Always include `[[Keyshort]]` and `[[<Scope>]]` in the parent block.
 - **Flashcards**:
   - Use `[[Card]]` blocks for new shortcut cards.
-  - The Keyshort page itself is the card entity. Do not create a companion `/Card/` page or any separate page for the card.
+  - The reviewable Keyshort page is also a Card entity. Do not create a companion `/Card/` page or any separate page for the card.
   - Avoid `Question :: Answer` blocks and any "Flashcard Questions" section.
-- **Frontmatter**: standard attributes only; no new keys unless specified.
+- **Frontmatter**: `logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]` for the Keyshort and its review card.
 
 ## Workflow
 
@@ -61,6 +61,7 @@ This command creates or updates Logseq Keyshort pages using the `<Scope>/Keyshor
 #### Example (single card)
 
 ~~~markdown
+logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]
 - [[Keyshort]] [[VSCode]] [[VSCode/Keyshort]] [[VSCode/Keyshort/Git]]
 	- **Open the Source Control Panel** [[Card]]
 		- Shortcut: `Ctrl+Shift+G`
@@ -70,6 +71,7 @@ This command creates or updates Logseq Keyshort pages using the `<Scope>/Keyshor
 #### Example (grouped cards)
 
 ~~~markdown
+logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]
 - [[Keyshort]] [[tmux]] [[tmux/Keyshort]] [[tmux/Keyshort/Pane]]
 	- **Move Pane Up** [[Card]]
 		- Shortcut: `<keys>`
