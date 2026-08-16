@@ -1,0 +1,1 @@
+- tmux's numeric order. Sessions follow their internal session IDs, which usually resembles creation order; windows and panes follow the numbers shown in tmux. This is the default and the most familiar order when window numbers are meaningful.

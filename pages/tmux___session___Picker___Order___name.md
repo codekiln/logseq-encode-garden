@@ -1,0 +1,1 @@
+- Alphabetical by session name, window name, and pane title. This is useful when names are easier to remember than numbers.

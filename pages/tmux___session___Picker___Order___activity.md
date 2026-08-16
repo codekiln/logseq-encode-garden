@@ -1,0 +1,1 @@
+- Most recently active sessions and windows first. Panes within a window go from least recently selected to most recently selected; press `r` to put the most recently selected pane first.

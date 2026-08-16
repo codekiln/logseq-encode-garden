@@ -1,0 +1,1 @@
+- The visual stacking order of panes, mainly useful for floating panes in tmux 3.7 and later. The frontmost floating pane comes first, followed by the other floating panes and then regular panes. Sessions and windows are alphabetical because they do not have a z-index.

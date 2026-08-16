@@ -1,0 +1,10 @@
+- # [[tmux/Command/choose-tree]] picker order
+	- [[tmux/Mode/Tree]] applies the selected order separately at each level: sessions among sessions, each session's windows among windows, and each window's panes among panes.
+	- {{embed [[tmux/session/Picker/Order/index]]}}
+	- {{embed [[tmux/session/Picker/Order/name]]}}
+	- {{embed [[tmux/session/Picker/Order/activity]]}}
+	- {{embed [[tmux/session/Picker/Order/z]]}}
+	- Press `O` in tree mode to cycle through `index` → `name` → `activity` → `z`.
+	- Press `r` to reverse the current order.
+	- `choose-tree -O <order>` sets the initial order.
+	- Sources: [tmux `choose-tree` manual](https://man.openbsd.org/tmux#choose-tree), [tmux tree-order implementation](https://github.com/tmux/tmux/blob/master/window-tree.c), and [tmux sort implementation](https://github.com/tmux/tmux/blob/master/sort.c).
