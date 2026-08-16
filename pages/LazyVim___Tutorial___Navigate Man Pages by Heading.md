@@ -1,0 +1,40 @@
+tags:: [[Diataxis/Tutorial]]
+see-also:: [[man/Q/Can I browse man pages by heading, including in nvim or LazyVim?]]
+- # Tutorial: Navigate [[man/page]]s by Heading in [[LazyVim]]
+	- ## What You'll Create
+		- We will open `tmux(1)` inside [[nvim]], turn its structure into a navigable outline, jump among headings, and follow references to other manual pages.
+	- ## Prerequisites
+		- [[LazyVim]] with its current [[nvim/Plugin/snacks.nvim/Picker]] configuration.
+		- The `man` and `tmux` commands installed. Running `man tmux` in a shell should display the manual page.
+	- ## Learning Goals
+		- Open an installed manual page from LazyVim's picker.
+		- Browse a man page by heading with Neovim's `gO` outline.
+		- Follow references between manual pages and return to the previous page.
+	- ## Steps
+		- ### 1. Open the Man Pages picker
+			- In Normal mode, press `<leader>sM` — usually Space, `s`, then uppercase `M`. This is [[LazyVim/Keyshort/Open the Man Pages Picker]].
+			- Type `tmux` into the picker.
+			- Select `tmux(1)` and press Enter.
+			- You will see the formatted `TMUX(1)` manual in a Neovim buffer. Notice that ordinary motions, search, marks, and jump-list commands work here.
+		- ### 2. Open the heading outline
+			- Press `gO` ([[Key/G]] + [[Key/Shift]] + [[Key/O]]) This is [[nvim/Keyshort/Outline/Show the Buffer Outline]].
+			- A location-list window titled **Table of contents** opens. For `tmux(1)`, it includes top-level headings such as `NAME`, `SYNOPSIS`, `DESCRIPTION`, `COMMANDS`, and `OPTIONS`, plus many indented commands and options.
+			- Move with `j` and `k`, select `COMMANDS`, and press Enter. The man-page window jumps to that heading.
+		- ### 3. Search and revisit the outline
+			- Press `gO` again to bring the existing outline back into focus.
+			- Type `/new-session` and press Enter to find that command in the outline, then press Enter again to jump to its documentation.
+			- Run `:lclose` when you want to close the outline and keep the man page open. If focus is in the man page, `gO` reopens the same outline.
+		- ### 4. Follow a reference to another man page
+			- Move the cursor onto a reference ending in a manual section, such as `printf(3)` or `pty(4)`.
+			- Press `K` or `Ctrl-]` to open the referenced manual page.
+			- Press `Ctrl-T` to return to `tmux(1)`. This uses Neovim's tag stack, so the return works like following a help tag.
+		- ### 5. Open a known page directly
+			- Run `:Man tmux` when you already know the page name and want to skip the picker.
+			- A section number disambiguates pages with the same name: `:Man 1 printf` opens section 1, while `:Man 3 printf` opens the C library function.
+			- From a shell, `nvim +'Man tmux'` opens the same Neovim man-page buffer directly.
+		- ### 6. Close the manual
+			- Press `q` in the man-page buffer to close it when another editor window remains. Run `:q` to exit Neovim when the manual is the only window.
+	- ## What You've Learned
+		- `<leader>sM` searches the installed manual-page index; it chooses which page to open.
+		- `gO` turns the current man page into a navigable location-list outline; it handles the headings inside that page.
+		- `K` or `Ctrl-]` follows a manual-page reference, and `Ctrl-T` returns through the tag stack.
