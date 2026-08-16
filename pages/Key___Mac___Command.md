@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Key]]
-alias:: [[Key/Mac/Command (⌘)]], [[Key/Command]], [[Key/Control]]
+alias:: [[Key/Mac/Command (⌘)]], [[Key/Command]]
 
 - # Command (⌘)
 	- macOS-exclusive modifier key; the primary action key for most Mac keyboard shortcuts, equivalent to `Ctrl` on Windows and Linux.

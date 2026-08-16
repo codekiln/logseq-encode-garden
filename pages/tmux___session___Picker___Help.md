@@ -1,0 +1,42 @@
+- # Tmux Session Picker Help
+	- The shortcuts displayed by `C-h` in the [[tmux/session/Picker]]. Uppercase letters include [[Key/Shift]].
+	- ## Go To
+		- {{embed [[tmux/session/Picker/Keyshort/Go to top]]}}
+		- {{embed [[tmux/session/Picker/Keyshort/Go to bottom]]}}
+		- {{embed [[tmux/session/Picker/Keyshort/Page up]]}}
+		- {{embed [[tmux/session/Picker/Keyshort/Page down]]}}
+		- {{embed [[tmux/session/Picker/Keyshort/Jump to starting pane]]}}
+	- ## Expand and Collapse
+		- {{embed [[tmux/session/Picker/Keyshort/Collapse item]]}}
+		- {{embed [[tmux/session/Picker/Keyshort/Expand item]]}}
+		- {{embed [[tmux/session/Picker/Keyshort/Collapse all items]]}}
+		- {{embed [[tmux/session/Picker/Keyshort/Expand all items]]}}
+	- ## Tag Items
+		- {{embed [[tmux/session/Picker/Keyshort/Toggle item tag]]}}
+		- {{embed [[tmux/session/Picker/Keyshort/Untag all items]]}}
+		- {{embed [[tmux/session/Picker/Keyshort/Tag all items]]}}
+	- ## Search and Filter
+		- {{embed [[tmux/session/Picker/Keyshort/Search forward]]}}
+		- {{embed [[tmux/session/Picker/Keyshort/Repeat search forward]]}}
+		- {{embed [[tmux/session/Picker/Keyshort/Repeat search backward]]}}
+		- {{embed [[tmux/session/Picker/Keyshort/Filter items by format]]}}
+	- ## Sort and Preview
+		- {{embed [[tmux/session/Picker/Keyshort/Change sort order]]}}
+		- {{embed [[tmux/session/Picker/Keyshort/Reverse sort order]]}}
+		- {{embed [[tmux/session/Picker/Keyshort/Toggle preview]]}}
+		- {{embed [[tmux/session/Picker/Keyshort/Scroll previews left]]}}
+		- {{embed [[tmux/session/Picker/Keyshort/Scroll previews right]]}}
+	- ## Choose or Reorder
+		- {{embed [[tmux/session/Picker/Keyshort/Choose selected item]]}}
+		- {{embed [[tmux/session/Picker/Keyshort/Swap current and previous window]]}}
+		- {{embed [[tmux/session/Picker/Keyshort/Swap current and next window]]}}
+	- ## Kill Items
+		- {{embed [[tmux/session/Picker/Keyshort/Kill selected item]]}}
+		- {{embed [[tmux/session/Picker/Keyshort/Kill tagged items]]}}
+	- ## Mark a Pane
+		- {{embed [[tmux/session/Picker/Keyshort/Set marked pane]]}}
+		- {{embed [[tmux/session/Picker/Keyshort/Clear marked pane]]}}
+	- ## Run a Command
+		- {{embed [[tmux/session/Picker/Keyshort/Run a command for each tagged item]]}}
+	- ## Exit
+		- {{embed [[tmux/session/Picker/Keyshort/Exit mode]]}}
