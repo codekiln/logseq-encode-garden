@@ -3,7 +3,7 @@ via:: [[2026-04-03 Fri]]
 
 - # Using the [[GitHub/CLI]] (`gh`), is there a quick way to list repositories with globs for user and repo name?
 	- ## My Notes
-		- This might be a place where [[gh/dash]] shines ... need to check that out.
+		- This might be a place where [[GitHub/CLI/Extension/gh-dash]] shines ... need to check that out.
 	- ## Answer
 		- [[AI/Response]]
 			- [[gh/repo/list]]
