@@ -1,6 +1,7 @@
 # How can I put a thick border around the focused pane in [[tmux]]?
 	- It's difficult to figure out which pane has focus.
 	- ## Answer
+		- ## use
 		- Use the `pane-border-lines` option set to `heavy`:
 			- ~~~
 			  set -g pane-border-lines heavy

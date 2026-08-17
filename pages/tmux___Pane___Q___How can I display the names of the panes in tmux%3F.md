@@ -1,9 +1,12 @@
-logseq-entity:: [[Logseq/Entity/Question]]
+logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]]
 
-- # How can I display the names of the [[tmux/Pane]]s in tmux?
+- # How can I display the names of the [[tmux/Pane]]s in tmux? [[card]]
+	- ## [[My Answer]]
+		- {{embed [[tmux/Option/pane-border-status]]}}
 	- ## [[AI Answer]]
 		- Short answer: panes don't have a persistent name field the way windows do (`rename-window`); what you set is the pane's **title**, and you make titles visible for every pane by turning on the pane border.
 		- Turn on borders with titles for the current session:
+			- [[tmux/Option/pane-border-status]]
 			- ~~~sh
 			  tmux set -g pane-border-status top
 			  ~~~
@@ -17,4 +20,4 @@ logseq-entity:: [[Logseq/Entity/Question]]
 			- ~~~sh
 			  bind-key C-r command-prompt -I "#{pane_title}" "select-pane -T '%%'"
 			  ~~~
-		- [[Answer/Official]] from [tmux pane-border-format / pane-border-status (man page)](https://man7.org/linux/man-pages/man1/tmux.1.html)
+		-

@@ -1,3 +1,4 @@
 alias:: [[tmux new]]
 
-- creates a new tmux session
+- # [tmux new-session](https://man.openbsd.org/tmux#new-session)
+	- [[tmux/Command/new-session/-t]]
