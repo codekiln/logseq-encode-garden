@@ -56,6 +56,16 @@ github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/M
 		- **harvester** — reads a session that is finishing and files its conclusion as a page before the pane closes.
 		- The agent name is `<workspace-label>-<tab-label>` inside 32 characters. This workspace's label is `encode-garden`, which leaves 18 characters for a tab label naming the work item.
 		- A brief that stops at the page leaves the journal and the commit behind, so a brief written here names the scribe as the agent that commits.
+	- ## The tmux session
+		- The seat holds a [[tmux]] session named `ls-encode-garden`. Window `0` is `hayward`, and the standing scribe keeps a window beside it.
+		- One window per logical job, named for the work rather than for the agent doing it. The window list is the docket, and `tmux list-windows` reads it back.
+		- A job window closes when its item is done by the standard above — links resolving, the day's journal carrying the change, the files committed. A window left open past that reports work in flight that is not.
+		- The scribe's window is standing rather than a job, and lasts the day.
+		- This replaces one chief per [[herdr]] workspace. The seat, the docket, and the record are indifferent to which multiplexer holds them; what changes is the naming budget, since a tmux window name is not bounded the way a 32-character agent name was.
+	- ## The day's heads-up display
+		- The [[Filed]] / [[Updated]] change log in `journals/YYYY_MM_DD.md` doubles as the day's status board. Written as each item lands rather than swept up at dusk, it answers what the day has accomplished at any hour rather than only after it ends.
+		- Above it sit the topic-led blocks, which carry the substance of the day's inquiries — the answer itself, not a note that an answer happened.
+		- It stays a curated snapshot per [[Logseq/Journal]]: link-only lines, one section per page, grouped once a section runs long. Window names, job status, and which agent did what are operational and stay off the page.
 	- ## Commits
 		- Several agents and the human write into the one checkout, so one agent owns staging for the day and everyone else hands over finished files. A `git add` from a second agent stages whatever a third one left half-written.
 		- Stage named paths. `git add -A` here picks up other agents' work in progress along with the intended change.
