@@ -1,18 +1,31 @@
-# Resume note — encode-garden scribe, 2026-08-13
+# Resume note — the encode-garden scribe seat
 
-Written for a successor with none of this context.
+Last refreshed 2026-08-18. Written for a successor with none of this context.
+Sections below are dated where a day added something; the undated ones still
+hold.
 
-## Resume this session
+## Read these first
 
-```
-claude --resume encode-garden-scribe
-```
+The rules that outlast a day are not in this file. This file is the handoff and
+most of it is wrong within a week; the pages are the memory.
 
-herdr workspace `w2` (label `encode-garden`), tab `scribe`. The chief-of-staff
-seat in this workspace is **Hayward** (`encode-garden-hayward`), renamed from
-`encode-garden-chief-of-staff` at wrap-up. Its own note is
-`tmp/resume-encode-garden-chief-of-staff.md` — read that one first for the
-docket and the open items.
+- `pages/My___AI___Agent___Chief of Staff___Scribe.md` — this seat's own
+  declaration: what the space is for, and why it differs from this note.
+- `pages/My___AI___Agent___Chief of Staff___Scribe___Log___26___08___18 Tue.md`
+  and later entries under that namespace — **read the whole of the most recent
+  one.** Thirteen sections as of 2026-08-18, and every rule this seat operates
+  by that is not in the declaration is in there.
+- `pages/My___AI___Agent___Chief of Staff.md` — the chief-of-staff declaration.
+  It governs the docket, what "done" means, and what gets escalated.
+- `CLAUDE.md`, `.claude/rules/logseq-core.md`, and the graph page
+  `[[Logseq/Journal]]` before touching a journal. They govern.
+- `tmp/resume-encode-garden-chief-of-staff.md` — the chief's handoff, for the
+  docket and the open items awaiting codekiln.
+
+The chief-of-staff seat is **Hayward**, in window `0`. It respawns; the seat
+persists and the occupant does not, so anything settled with one occupant and
+not written down is gone at the next. That happened on 2026-08-18 and cost a
+gap report that was in flight when the session ended.
 
 ## The job
 
@@ -221,6 +234,20 @@ absence is the same error as the confidently-wrong checks further up.
 
 ## Open with codekiln
 
+Hayward's note carries eleven items of its own, each with a recommendation. Do
+not duplicate them here; read that file. These are the ones this seat raised.
+
+- **Whether the two rules recorded on 2026-08-18 belong in the graph rather than
+  in agents' notes.** Both are written in this note and in the log, which
+  protects this seat and nobody else. That codekiln takes they/them, and that the
+  journal's narrative is theirs to write and not an agent's, would govern every
+  agent in the repo if they sat on `[[Logseq/Journal]]` and on a
+  `[[Person/codekiln]]` page. The graph already has the machinery for the second
+  — `pages/Gender___Pronoun___Neutral.md` exists and
+  `pages/Person___Devine Lu Linvega.md` records a pronoun under an identity
+  block — but `pages/Person___codekiln.md` does not exist despite the link being
+  referenced throughout. **Do not create it.** That is codekiln's own identity in
+  a public graph and theirs to write.
 - Whether `tmux send-keys '<text>' Enter` in one call reliably drops the Enter,
   or whether that was a race from messaging a just-launched pane. It stranded a
   message twice today. Use the cross-session channel and the question is moot.
@@ -233,6 +260,17 @@ absence is the same error as the confidently-wrong checks further up.
   the running server, clearing globals another project's layout script set with
   `set -g`. Hayward holds this one; a live tmux server is not the scribe's to
   touch.
+
+## Nothing is in flight
+
+This note was refreshed as the last act before the occupant cleared, with the
+working tree clean of anything this seat owned and `main` level with
+`origin/main`. Nothing was being held in context. If a later occupant leaves
+something mid-flight, say so here rather than trusting that it will be obvious.
+
+`tmp/resume-encode-garden-chief-of-staff.md` may be dirty and is Hayward's; it
+folds its own note into an end-of-day refresh and does not want it committed
+piecemeal. Leave it.
 
 ## Reading the current state
 
