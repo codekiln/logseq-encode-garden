@@ -55,8 +55,8 @@ Follow `[[Logseq/Journal]]`, not intuition. The parts that catch people:
 - Grouping labels once a section runs long. 2026-08-13 used `agent supervision`,
   `herdr`, `nvim`, `yegge` under Filed and `garden`, `git worktrees`, `herdr`,
   `nvim`, `yegge` under Updated — labels alphabetical, items semantic within.
-  **`agent supervision` is the scribe's word, not his.** The page says labels are
-  chosen with him, so it is still open for renaming.
+  **`agent supervision` is the scribe's word, not codekiln's.** The page says labels are
+  chosen with them, so it is still open for renaming.
 
 ## Verify what you are handed
 
@@ -155,16 +155,29 @@ are pushed and stay as they are.
 If a brief tells you to match surrounding history, check the written convention
 before believing it. Practice and convention had diverged here for four days.
 
-## Topic blocks: write them, do not stub them
+## The journal is the change log, and nothing else
 
-The worked example in `journals/2026_06_27.md` is in codekiln's own first
-person. You are not codekiln — do not invent their experience. Write the block
-impersonally and completely instead.
+Do not write topic-led narrative blocks. Three were written on 2026-08-18 and
+codekiln deleted all three, leaving the grouped change log by itself. The
+substance belongs on the page; the journal records that the page exists.
 
-Do not leave a placeholder for them to fill. The change log is meant to answer
-what the day found at any hour, and a stub answers nothing; a real block can be
-rewritten into their voice, an empty one cannot without redoing the work.
-Whether these should be first person at all is with codekiln as of today.
+This retires the voice question that ran all day — whether such a block should
+be in codekiln's first person or impersonal. The answer was neither. A day's entry is
+complete with no prose in it, and a scribe filling that space is putting into
+the graph something nobody asked for. Write one only if they ask for one.
+
+The worked example at `journals/2026_06_27.md` is still first person and still
+theirs. It is not a template for you.
+
+## Grouping: labels are codekiln's, terse, and page-wide
+
+`agents`, `gdrive`, `tmux` — lowercase, abbreviated, named for the subject
+rather than the kind of work. `gdrive`, not `google drive`. `agents`, not the
+`agent supervision` a scribe chose on 08/13, which is still open for renaming.
+
+Grouping is a decision about the day, not about a section's length. `[[Updated]]`
+took a label for a single item. So once any section groups, every section
+groups, and "does this section have enough items" is not the question.
 
 ## Windows do not close themselves
 
@@ -184,13 +197,14 @@ absence is the same error as the confidently-wrong checks further up.
 
 ## Open with codekiln
 
-- Whether journal topic blocks should be first person, per above.
 - Whether `tmux send-keys '<text>' Enter` in one call reliably drops the Enter,
   or whether that was a race from messaging a just-launched pane. It stranded a
   message twice today. Use the cross-session channel and the question is moot.
-- Whether `[[Filed]]` takes `google drive` and `tmux` as labels once it runs
-  past a handful. Labels are chosen with them, not by the scribe — the
-  `agent supervision` label from 08/13 is still open because a scribe picked it.
+- Whether a journal's first line should carry the leading `- ` that
+  `logseq-core` requires. 234 of 446 journals lack it, including the one codekiln
+  saved by hand on 08/18. A save that eats a bullet looks identical to a person
+  choosing one, so do not read that save as an endorsement and do not mass-fix
+  the others.
 - Whether to run `tmux set -gu status-right` and the same for `status-left` on
   the running server, clearing globals another project's layout script set with
   `set -g`. Hayward holds this one; a live tmux server is not the scribe's to
