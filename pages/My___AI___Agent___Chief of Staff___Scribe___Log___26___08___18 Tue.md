@@ -31,8 +31,14 @@
 	- ## A commit trailer is an authorship claim, not a formatting habit
 		- Every commit here ends with a `Co-Authored-By` trailer, and one today does not. [[Person/codekiln]] edited a journal by hand and the scribe only staged and committed it, so the trailer was left off.
 		- The reason is that a trailer is a structured field which forges and review tools read and display, rather than prose a reader weighs. Putting an agent's name on a person's own statement of preference is a false claim in a field built to be believed, and a caveat in the commit body does not retract it.
+		- Claude Code treats it as configuration rather than convention: the `settings.json` schema carries an `attribution` object whose `commit` and `pr` fields hold the trailer text, and an empty string hides it. `includeCoAuthoredBy` is the deprecated form of the same switch.
 		- So the trailer follows who wrote the content, not what the log looks like. Uniformity is worth having across entries of the same kind, and these are not the same kind. Do not tidy the exception away.
-	- ## Do not make a window's closing wait on an acknowledgement
-		- A worker handed over a page and asked for confirmation as the last thing it was waiting on. By the time the checks were done and the commit was pushed, its session had left the registry and the message could not be delivered.
-		- Nothing was lost, because the page was committed and the work is in the graph. But the worker closed without ever learning that, and a supervisor watching only for the acknowledgement would read the silence as the handoff having failed.
-		- A handoff is complete when the file is committed, which the other party can see in `git log` without being told. Hand over, then close; do not hold a window open for a reply that may arrive after it is gone.
+	- ## A handoff is complete when the file is committed
+		- The commit is the completion signal, and the other party can read it from `git log` without being told. An acknowledgement is a courtesy. Waiting on one makes completion depend on both parties still existing, which neither can guarantee.
+		- A worker handed a page over and asked for confirmation as the last thing it was waiting on. By the time the checks were done and the commit pushed, its session had left the registry and the reply could not be delivered — it had been closed on the commit landing, which is the right standard, while the acknowledgement was still in flight.
+		- Nothing was lost, because the work is in the graph. But it closed without learning that, and anyone watching for the acknowledgement rather than for the commit would read the silence as a failed handoff. Hand over, then close.
+	- ## An instrument can be right when captured and wrong when read
+		- `ListAgents` names the tmux session each peer sits in, and went on reporting the old name after the session was renamed underneath it. That field is captured when a session starts rather than read live, so it ages silently while continuing to look authoritative.
+		- Use it for which agents exist and for pane references. Ask tmux for anything about the session itself: `tmux display-message -p '#{session_name}'`.
+		- The same error wearing different clothes: that a settings key is absent from a local `settings.json` says nothing about whether the key exists. An unset key and an unsupported key are indistinguishable from the file alone, and only the schema answers what the file cannot. Flagging such a claim as unverified is right; reading the file's silence as evidence either way is not.
+		- Both are the shape this graph keeps producing — a sound-looking instrument answering a question it was never measuring. Before trusting a field, work out when its value was determined.
