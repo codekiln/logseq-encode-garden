@@ -166,17 +166,43 @@ what the day found at any hour, and a stub answers nothing; a real block can be
 rewritten into their voice, an empty one cannot without redoing the work.
 Whether these should be first person at all is with codekiln as of today.
 
+## Windows do not close themselves
+
+The seat closes a job window by hand once its item is done — committed, in the
+journal, links resolving. Nothing closes on its own; a worker's session ending
+leaves the window sitting there with a dead shell.
+
+So the window list is not evidence about work. A window still open may hold a
+finished item nobody has closed yet, or a dead shell. A window gone was closed
+by someone. Read `git status`, the day's journal and `git log` for what is
+actually done — `tmux list-windows` shows the docket, not the state of anything
+on it.
+
+I had this backwards once: a window disappeared, I reported that it had closed
+itself, and the seat had closed it by hand. Inferring a mechanism from an
+absence is the same error as the confidently-wrong checks further up.
+
 ## Open with codekiln
 
 - Whether journal topic blocks should be first person, per above.
 - Whether `tmux send-keys '<text>' Enter` in one call reliably drops the Enter,
   or whether that was a race from messaging a just-launched pane. It stranded a
   message twice today. Use the cross-session channel and the question is moot.
+- Whether `[[Filed]]` takes `google drive` and `tmux` as labels once it runs
+  past a handful. Labels are chosen with them, not by the scribe — the
+  `agent supervision` label from 08/13 is still open because a scribe picked it.
+- Whether to run `tmux set -gu status-right` and the same for `status-left` on
+  the running server, clearing globals another project's layout script set with
+  `set -g`. Hayward holds this one; a live tmux server is not the scribe's to
+  touch.
 
-## State
+## Reading the current state
 
-Journal `journals/2026_08_18.md` current: one topic block, `[[Filed]]` carrying
-the Google Drive question page, `[[Updated]]` carrying the declaration page.
-Working tree clean apart from `pages/Google___Drive___AI.md`, which belongs to
-the worker in window `3:gdrive-ai` and is not yours to commit. Level with
-`origin/main`.
+A snapshot here goes stale within the hour, so determine state rather than
+trusting a note about it:
+
+- `git status --porcelain` — anything dirty that nobody handed you is not yours
+  to commit. Ask Hayward in window `0:hayward` whose it is.
+- `git rev-list --left-right --count origin/main...main` — expect two zeros.
+- `journals/YYYY_MM_DD.md` — the day's topic blocks and change log.
+- `git log --oneline` — what has landed, and in what style.
