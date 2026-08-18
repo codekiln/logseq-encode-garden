@@ -1,6 +1,8 @@
 logseq-entity:: [[Logseq/Entity/Question]]
 
 - # Does Google Drive render relative [[Markdown]] links and image embeds?
+	- ## [[My Answer]]
+		- No. Gdrive sucks
 	- ## [[AI Answer]]
 		- [[Answer/Official]] from [Use Markdown in Google Docs, Slides, & Drawings](https://support.google.com/docs/answer/12014036), [Import and export Markdown in Google Docs](https://workspaceupdates.googleblog.com/2024/07/import-and-export-markdown-in-google-docs.html), [Compose with Markdown in Google Docs on web](https://workspaceupdates.googleblog.com/2022/03/compose-with-markdown-in-google-docs-on.html), and [Google Drive API export formats](https://developers.google.com/workspace/drive/api/guides/ref-export-formats)
 		- **Short answer:** No. `![image](./path-to-image.jpg)` does not render on any Google Drive surface, and `[text](./other-note.md)` never becomes a working link to the sibling file. A relative path needs a base directory to resolve against, and no Drive surface supplies one — Drive's viewer never interprets the Markdown at all, and Google Docs converts an imported file into a standalone document with no memory of the folder it came from.
