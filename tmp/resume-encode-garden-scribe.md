@@ -111,8 +111,72 @@ cannot tell a deliberate edit from a mangling save. Do not weight it as intent.
 The `/rate-limit-options` dialog takes `Esc`. Never choose "ask your admin for
 more usage" — that files a request against codekiln's account.
 
-## State at wrap-up
+## State at wrap-up (2026-08-13)
 
 Working tree clean, `main` level with `origin/main`. The 2026-08-13 journal is
 grouped and current; its change log was audited against every page added that
 day and is complete. No journal exists yet for 2026-08-14.
+
+# 2026-08-18 — Tuesday
+
+The seat now holds a tmux session, `ls-encode-garden`: window `0:hayward`,
+`1:scribe`, one window per job. `tmux list-windows` reads the docket back.
+Everything above still holds — read "herdr tab" as "tmux window."
+
+## Prefer a standing rule to paying attention
+
+Two corrections today arrived after the thing they were meant to prevent. One
+told me to use gitmoji, and reached me after the plain-prefix commit was pushed.
+One told me not to commit another worker's half-written page, and reached me
+after that commit had landed.
+
+The half-written page stayed out anyway, and not because anyone was watching.
+Staging named paths kept it out; the post-stage `git status` is what surfaced it
+as unclaimed and made me look. The rule held with nobody awake. The warning
+needed someone watching at the right minute and being quick enough, and twice
+today that did not happen.
+
+So when the choice is between a standing rule and vigilance, take the rule. The
+staging discipline in "Committing" above is not bureaucracy — it is the only
+part of this job that works while you are mid-turn and cannot see the tree.
+
+Corollary: verify by reading the result, not the command you typed. Confirm a
+commit with `git diff-tree --no-commit-id --name-only -r HEAD`, not by trusting
+the `git add` you believe you ran.
+
+## gitmoji is back
+
+Commits from 2026-08-15 onward dropped the gitmoji, twenty in a row, with
+nothing recording a decision. It was practice drifting, not a changed
+convention: [[My/Pref/Dev/Tool/SCM/Commit Message Style Preferences]] item 2 and
+the declaration page both still say gitmoji. Resumed at a48a4fed. The plain ones
+are pushed and stay as they are.
+
+If a brief tells you to match surrounding history, check the written convention
+before believing it. Practice and convention had diverged here for four days.
+
+## Topic blocks: write them, do not stub them
+
+The worked example in `journals/2026_06_27.md` is in codekiln's own first
+person. You are not codekiln — do not invent their experience. Write the block
+impersonally and completely instead.
+
+Do not leave a placeholder for them to fill. The change log is meant to answer
+what the day found at any hour, and a stub answers nothing; a real block can be
+rewritten into their voice, an empty one cannot without redoing the work.
+Whether these should be first person at all is with codekiln as of today.
+
+## Open with codekiln
+
+- Whether journal topic blocks should be first person, per above.
+- Whether `tmux send-keys '<text>' Enter` in one call reliably drops the Enter,
+  or whether that was a race from messaging a just-launched pane. It stranded a
+  message twice today. Use the cross-session channel and the question is moot.
+
+## State
+
+Journal `journals/2026_08_18.md` current: one topic block, `[[Filed]]` carrying
+the Google Drive question page, `[[Updated]]` carrying the declaration page.
+Working tree clean apart from `pages/Google___Drive___AI.md`, which belongs to
+the worker in window `3:gdrive-ai` and is not yours to commit. Level with
+`origin/main`.
