@@ -28,3 +28,11 @@
 	- ## Grouping labels are terse, and grouping is page-wide
 		- The labels chosen were `agents`, `gdrive` and `tmux`: lowercase, abbreviated, and named for the subject rather than for the kind of work done to it. `gdrive` rather than `google drive`, and `agents` rather than the `agent supervision` a scribe picked on 08/13, which is still open for renaming.
 		- Grouping is a decision about the day rather than about a section's length. [[Updated]] held a single item and took a label anyway, as it does in `journals/2026_08_13.md`. Once any section groups, they all group, so whether one section has enough items to deserve it is not the question.
+	- ## A commit trailer is an authorship claim, not a formatting habit
+		- Every commit here ends with a `Co-Authored-By` trailer, and one today does not. [[Person/codekiln]] edited a journal by hand and the scribe only staged and committed it, so the trailer was left off.
+		- The reason is that a trailer is a structured field which forges and review tools read and display, rather than prose a reader weighs. Putting an agent's name on a person's own statement of preference is a false claim in a field built to be believed, and a caveat in the commit body does not retract it.
+		- So the trailer follows who wrote the content, not what the log looks like. Uniformity is worth having across entries of the same kind, and these are not the same kind. Do not tidy the exception away.
+	- ## Do not make a window's closing wait on an acknowledgement
+		- A worker handed over a page and asked for confirmation as the last thing it was waiting on. By the time the checks were done and the commit was pushed, its session had left the registry and the message could not be delivered.
+		- Nothing was lost, because the page was committed and the work is in the graph. But the worker closed without ever learning that, and a supervisor watching only for the acknowledgement would read the silence as the handoff having failed.
+		- A handoff is complete when the file is committed, which the other party can see in `git log` without being told. Hand over, then close; do not hold a window open for a reply that may arrive after it is gone.

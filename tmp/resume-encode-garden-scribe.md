@@ -119,9 +119,20 @@ day and is complete. No journal exists yet for 2026-08-14.
 
 # 2026-08-18 — Tuesday
 
-The seat now holds a tmux session, `ls-encode-garden`: window `0:hayward`,
-`1:scribe`, one window per job. `tmux list-windows` reads the docket back.
-Everything above still holds — read "herdr tab" as "tmux window."
+The seat now holds a tmux session: window `0:hayward`, `1:scribe`, one window
+per job. `tmux list-windows` reads the docket back. Everything above still
+holds — read "herdr tab" as "tmux window."
+
+Do not hard-code the session name. It was `ls-encode-garden` in the morning and
+`hayward-ls-encode-garden` by the afternoon, renamed under the seat with the
+window IDs unchanged. `[[My/AI/Agent/Chief of Staff]]` still names the old one;
+that page is codekiln's to correct, not yours. Read the live name with
+`tmux display-message -p '#{session_name}'`.
+
+`ListAgents` is not a second source for it. Its tmux field kept reporting the
+old session name for a session started before the rename, so it appears to be
+captured once at session start. Use it for who exists and for pane references;
+ask tmux for anything about the session itself.
 
 ## Prefer a standing rule to paying attention
 
