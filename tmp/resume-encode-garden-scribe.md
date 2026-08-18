@@ -180,6 +180,19 @@ the graph something nobody asked for. Write one only if they ask for one.
 The worked example at `journals/2026_06_27.md` is still first person and still
 theirs. It is not a template for you.
 
+**The positive half, which the rule loses when stated alone: codekiln does write
+the narrative.** They added a block above `[[Filed]]` on 2026-08-18, hours after
+deleting three that an agent had written. So prose above the change log is
+theirs, and finding it there is not evidence that anything went wrong. An agent
+neither writes a narrative block nor removes one.
+
+**codekiln takes they/them.** Their gender is undisclosed; it is not an open
+question. This was settled in conversation and written nowhere, which is how it
+survived a day of use — a chief-of-staff occupant produced "him" across several
+briefs, this note inherited two instances from the week before, and the graph is
+public. A name is not evidence and a wrong guess is worse than the neutral
+default. Fix it where you find it, including in prose you did not write.
+
 ## Grouping: labels are codekiln's, terse, and page-wide
 
 `agents`, `gdrive`, `tmux` — lowercase, abbreviated, named for the subject

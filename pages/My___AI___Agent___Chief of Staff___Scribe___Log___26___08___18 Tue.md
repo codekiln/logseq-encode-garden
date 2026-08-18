@@ -35,6 +35,14 @@
 	- ## The journal carries the change log, not agent narrative
 		- The three topic blocks written into today's journal were removed, leaving the grouped change log by itself. The question open all day had been whether such a block should be in [[Person/codekiln]]'s voice or an impersonal one, and the answer was neither: the substance belongs on the page, and the journal records that the page exists.
 		- A day's entry is therefore complete with no prose in it. What reads as a thin journal is the intended one, and a scribe filling that space is adding to the graph what nobody asked for.
+	- ## The journal's narrative is codekiln's to write, and theirs alone
+		- The rule that an agent writes no narrative into a journal has a positive half that is easy to lose: [[Person/codekiln]] does write it. They added a top-level block on the public and private halves of a knowledge garden above that day's `[[Filed]]`, hours after deleting three that an agent had written.
+		- Stated only negatively, the rule reads as though narrative does not belong in a journal at all, and the next agent to open the file sees prose the record says should not be there. The obvious repair is to delete it, and it would be done in good faith and reported as tidying.
+		- So both halves together: an agent neither writes a narrative block nor removes one. Prose above the change log is the human's, and its presence is not evidence that anything went wrong.
+	- ## codekiln takes they/them
+		- Their gender is undisclosed and they/them is the default. It is not a question awaiting an answer.
+		- This was settled in conversation and written nowhere, which is how it nearly escaped. A chief-of-staff occupant used "him" across several briefs in one day, the scribe copied it into a handoff note before catching it, and two more instances sat inherited in that note from a previous week. The graph is public, so the failure mode is a real person misgendered on a page anyone can read.
+		- A wrong guess is worse than the neutral default, and a name is not evidence. Where a document already carries the error, fix it rather than leaving it because someone else wrote it.
 	- ## Grouping labels are terse, and grouping is page-wide
 		- The labels chosen were `agents`, `gdrive` and `tmux`: lowercase, abbreviated, and named for the subject rather than for the kind of work done to it. `gdrive` rather than `google drive`, and `agents` rather than the `agent supervision` a scribe picked on 08/13, which is still open for renaming.
 		- Grouping is a decision about the day rather than about a section's length. [[Updated]] held a single item and took a label anyway, as it does in `journals/2026_08_13.md`. Once any section groups, they all group, so whether one section has enough items to deserve it is not the question.
