@@ -9,10 +9,16 @@
 		- Confirming a commit means reading what the commit contains — `git diff-tree --no-commit-id --name-only -r HEAD` — rather than trusting the `git add` one believes one ran. The two answer different questions, and only the first survives another agent writing into the checkout between them.
 		- The same applies to a page's own claims. Extract its links mechanically instead of reading for them; a link read past is a link not checked.
 		- Where a version is asserted, ask the machine rather than the page. A page claiming [[tmux/v/3.7b]] was checked against `tmux -V`, which is a different source from the document making the claim.
-	- ## A reference count answers a different question than it appears to
+	- ## A count answers a different question than it appears to
 		- Two links on a page arriving today carried exactly one prior reference each, which is the count that separates an established page from one the arriving page is about to invent.
 		- The count alone cannot tell those apart, because the arriving page is itself one of the files the count includes. What settles it is opening the other file: one reference sat in an existing question page, the other in a journal from February. Both predate the page claiming them, so neither was manufactured.
-		- A count is a starting point that names which links deserve a look. The evidence is the file the count pointed at.
+		- It happened twice in the day, which makes it a pattern rather than an incident. The second time, a count of `Person/Steve Yegge/Agent` page files came to 36 against another agent's 35. Splitting the count found 35 files under `Agent/` plus one parent-level `Agent.md`, so the other number was right and mine had counted the parent as an instance. Reporting the disagreement would have sent someone to correct a correct figure.
+		- The discriminator was the same both times: ask what exactly the count ranges over, and whether the thing being counted is inside its own population.
+		- This is the costly shape here, more than a wrong measurement — a correct measurement of a slightly different question, arriving well-formed with a number attached. A number carries conviction that a sentence does not.
+	- ## A rule you exempt your own writing from has a hole nothing reports
+		- Both resume notes in this repository state that no bare identifier belongs anywhere, and that a commit SHA takes a subject slug and a link. Both notes then carried a bare SHA.
+		- The rule was neither forgotten nor disputed. It had been applied to commit messages and to graph pages, where it was learned, and not to the notes that state it. The writing closest to a rule is the writing least often checked against it.
+		- Nothing reports this, because the rule lives in prose and prose does not run. Grep your own output for whatever you have told others not to do, and start with the document that states the convention.
 	- ## An absence is not a mechanism
 		- A job window vanished from the session between one check and the next, and the inference drawn was that windows close themselves when their work is done. They do not. The seat closes them by hand, and that act is what marks an item finished.
 		- Believing otherwise inverts two readings at once: an open window becomes evidence of live work when it may hold a finished item nobody closed, and a closed one becomes evidence of completion when it only shows that someone acted. Neither holds.
