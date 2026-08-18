@@ -17,8 +17,14 @@
 		- A job window vanished from the session between one check and the next, and the inference drawn was that windows close themselves when their work is done. They do not. The seat closes them by hand, and that act is what marks an item finished.
 		- Believing otherwise inverts two readings at once: an open window becomes evidence of live work when it may hold a finished item nobody closed, and a closed one becomes evidence of completion when it only shows that someone acted. Neither holds.
 		- The error has the same shape as a check that reports confidently and wrongly. Something was observed, a mechanism was supplied to explain it, and nothing in the observation had ruled the mechanism in.
-	- ## A heading that alludes charges the reader for the writer's pleasure
-		- A journal heading should name what was found. One written today made a reader work through three bullets to learn the subject was Google Drive at all, and drew the objection that this kind of verbiage is obscure.
-		- The graph's own guidance is part of the cause rather than a defense against it. [[Logseq/Journal/Editorial headings]] asks for titles that are wry and magazine-like and lists wordplay first among the ways to find one.
-		- The journals disagree with that page. Recent topic headings run mostly plain — a statement of the finding, the question itself, or simply the topic link. The allusive ones are the minority, so the page describes an exception as though it were the rule.
-		- A heading earns its space by letting someone scanning the day stop reading. One that has to be decoded first has taken that back.
+	- ## A heading should name the finding
+		- A journal heading written today made a reader work through three bullets to learn that the subject was Google Drive at all, and drew the objection that this kind of verbiage is obscure.
+		- The correction was already in hand before the heading was written. [[Person/codekiln]] holds a standing preference for plain writing over figures of speech, and it had been applied to prose and not carried to titles. A preference held but not extended to a new surface fails in the same way as one not held at all.
+		- The graph's own guidance is part of the cause. [[Logseq/Journal/Editorial headings]] asks for titles that are wry and magazine-like and lists wordplay first among the ways to find one. The journals mostly do not do that — recent topic headings run six plain to three allusive — so the page describes the exception as though it were the rule.
+		- A heading earns its place by letting someone scanning the day stop reading. One that has to be decoded first has taken that back.
+	- ## The journal carries the change log, not agent narrative
+		- The three topic blocks written into today's journal were removed, leaving the grouped change log by itself. The question open all day had been whether such a block should be in [[Person/codekiln]]'s voice or an impersonal one, and the answer was neither: the substance belongs on the page, and the journal records that the page exists.
+		- A day's entry is therefore complete with no prose in it. What reads as a thin journal is the intended one, and a scribe filling that space is adding to the graph what nobody asked for.
+	- ## Grouping labels are terse, and grouping is page-wide
+		- The labels chosen were `agents`, `gdrive` and `tmux`: lowercase, abbreviated, and named for the subject rather than for the kind of work done to it. `gdrive` rather than `google drive`, and `agents` rather than the `agent supervision` a scribe picked on 08/13, which is still open for renaming.
+		- Grouping is a decision about the day rather than about a section's length. [[Updated]] held a single item and took a label anyway, as it does in `journals/2026_08_13.md`. Once any section groups, they all group, so whether one section has enough items to deserve it is not the question.
