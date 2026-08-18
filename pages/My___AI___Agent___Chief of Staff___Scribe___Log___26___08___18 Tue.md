@@ -1,0 +1,24 @@
+- [[2026-08-18 Tue]]
+	- First day of this space, and the first with the seat held in a [[tmux]] session rather than a [[herdr]] workspace.
+	- ## A standing rule outlasts a warning
+		- Two corrections arrived after the commit each was meant to prevent. One named the commit convention; one named a file that was not the scribe's to commit. Neither was late through inattention — the channel carrying them delivered late, and the sender saw a success either way.
+		- The file stayed out of that commit regardless. Staging named paths cannot pick up a path nobody named, and the `git status` run after staging showed it sitting unclaimed, which is what prompted the check. The rule ran while the warning was still in flight.
+		- So where a rule and a watchful supervisor would both serve, the rule is the one that holds while the scribe is mid-turn and cannot see the tree. A warning is a second line of defense, not the first, because it depends on someone looking at the right minute.
+		- The same reasoning governs a note about state. A handoff section asserting what the tree held was wrong within the hour of being written; one naming the command that answers the question does not go stale. Write the instrument, not the reading.
+	- ## Verify by reading the result, not the instruction
+		- Confirming a commit means reading what the commit contains — `git diff-tree --no-commit-id --name-only -r HEAD` — rather than trusting the `git add` one believes one ran. The two answer different questions, and only the first survives another agent writing into the checkout between them.
+		- The same applies to a page's own claims. Extract its links mechanically instead of reading for them; a link read past is a link not checked.
+		- Where a version is asserted, ask the machine rather than the page. A page claiming [[tmux/v/3.7b]] was checked against `tmux -V`, which is a different source from the document making the claim.
+	- ## A reference count answers a different question than it appears to
+		- Two links on a page arriving today carried exactly one prior reference each, which is the count that separates an established page from one the arriving page is about to invent.
+		- The count alone cannot tell those apart, because the arriving page is itself one of the files the count includes. What settles it is opening the other file: one reference sat in an existing question page, the other in a journal from February. Both predate the page claiming them, so neither was manufactured.
+		- A count is a starting point that names which links deserve a look. The evidence is the file the count pointed at.
+	- ## An absence is not a mechanism
+		- A job window vanished from the session between one check and the next, and the inference drawn was that windows close themselves when their work is done. They do not. The seat closes them by hand, and that act is what marks an item finished.
+		- Believing otherwise inverts two readings at once: an open window becomes evidence of live work when it may hold a finished item nobody closed, and a closed one becomes evidence of completion when it only shows that someone acted. Neither holds.
+		- The error has the same shape as a check that reports confidently and wrongly. Something was observed, a mechanism was supplied to explain it, and nothing in the observation had ruled the mechanism in.
+	- ## A heading that alludes charges the reader for the writer's pleasure
+		- A journal heading should name what was found. One written today made a reader work through three bullets to learn the subject was Google Drive at all, and drew the objection that this kind of verbiage is obscure.
+		- The graph's own guidance is part of the cause rather than a defense against it. [[Logseq/Journal/Editorial headings]] asks for titles that are wry and magazine-like and lists wordplay first among the ways to find one.
+		- The journals disagree with that page. Recent topic headings run mostly plain — a statement of the finding, the question itself, or simply the topic link. The allusive ones are the minority, so the page describes an exception as though it were the rule.
+		- A heading earns its space by letting someone scanning the day stop reading. One that has to be decoded first has taken that back.
