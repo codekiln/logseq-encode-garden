@@ -24,7 +24,10 @@ one window per job.
 
 **Do not hard-code the session name.** It was `ls-encode-garden` and became
 `hayward-ls-encode-garden` mid-day on 2026-08-18, under a `<seat>-<repo>` sweep
-that also renamed peer sessions. Read the live name from `tmux list-sessions`.
+that also renamed peer sessions. Read the live name with
+`tmux display-message -p '#{session_name}'`, which names the session the running
+pane is in. `tmux list-sessions` lists every session on the server, including
+other seats' — it answers a different question.
 
 `ListAgents` is not a second source for it. Its tmux field still reported the old
 name after the rename — it is captured at session start, not read live. Reliable
