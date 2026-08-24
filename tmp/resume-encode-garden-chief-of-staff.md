@@ -28,8 +28,28 @@ level rather than on window `0`. The fleet-wide shape is on the graph page
 `hayward-ls-encode-garden` mid-day on 2026-08-18 under a `<seat>-<repo>` sweep,
 became `<seat>-<date>` on 2026-08-24, and gained a repo suffix the same afternoon:
 **`hayward-2026-08-24-LEG`**. `LEG` is logseq-encode-garden, `MK` the work
-knowledge vault, `GL` the langserve repo, `.F` dotfiles — the suffix exists so the
-`C-b w` tree says which repository a seat is in. Four schemes in seven days, two of
+knowledge vault, `GL` the langserve repo, `DF` dotfiles — the suffix exists so the
+`C-b w` tree says which repository a seat is in.
+
+**The dotfiles suffix is `DF`, not `.F`.** `.F` was published first, from codekiln's
+own example, and is wrong: a dot in a session name makes tmux read everything after
+it as a pane specification, so every *bare* session target fails. Verified here on
+an isolated socket (`tmux -L dottest`, never the default one — `kill-server` on the
+default socket would take every seat's session down):
+
+```
+tmux -L dottest new-session -d -s 'hay-.F'
+tmux -L dottest has-session  -t '=hay-.F'   # can't find pane: F   exit 1
+tmux -L dottest list-windows -t '=hay-.F'   # can't find pane: F
+tmux -L dottest new-window   -t '=hay-.F'   # can't specify pane here
+tmux -L dottest has-session  -t '=hay-.F:'  # exit 0 — trailing colon disambiguates
+tmux -L dottest list-panes   -t '=hay-.F:0' # exit 0 — explicit window also works
+tmux -L dottest has-session  -t '=hay-DF'   # exit 0 — control, clean
+```
+
+`has-session` exiting 1 is the worst of it: a script cannot even test whether the
+session exists, and the failure reads as a missing session rather than a bad name.
+A convention that works only if you remember a trailing colon is a trap. Four schemes in seven days, two of
 them on one day. The claude session name is untouched by these renames, so peer
 addressing is unaffected. Read the live name with
 `tmux display-message -p '#{session_name}'`, which names the session the running
@@ -213,3 +233,12 @@ a count: what was tried, when, and what the failure looked like — a successor
 cannot otherwise tell a standing limitation from a transient refusal, and has no
 reason to retest it. `[[My/AI/Agent/Fleet/Browser]]` carries the worked shape.
 
+**A test can confirm a claim on the only inputs that could not falsify it.** The
+`.F` suffix was tested with targets that named a window explicitly — `session:0` —
+which is precisely the one case where a trailing dot is harmless, so the test passed
+on every input it was given and the claim went out. The falsifier was already
+stated; it just was not run. This is the same failure as reading an ahead-behind
+count without fetching, and as recording a capability absent after four denials:
+evidence that was one command away, not evidence that was unavailable. When a rule
+holds on every sample tried, find the sample that would break it before writing it
+down.
