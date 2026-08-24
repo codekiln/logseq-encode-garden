@@ -1,135 +1,188 @@
 # Resume note — Hayward, the encode-garden chief-of-staff seat
 
-Rewritten 2026-08-24 at the noon wrap, third context window of the day. Written for a successor with none of this context. State and ownership only — the day's lessons live on the log page, which is the split the scribe declaration asks for. Do not refresh this note's timestamp in place; rewrite it, because the `wake-successor` guard exists to catch stale prose wearing a new date.
+Rewritten 2026-08-24 14:08 EDT, fourth context window of the day, at codekiln's afternoon stand-down. Written for a successor with none of this context. State and ownership only — the day's lessons live on the log page, which is the split the scribe declaration asks for. Do not refresh this note's timestamp in place; rewrite it, because the `wake-successor` guard exists to catch stale prose wearing a new date. Every timestamp here is EDT.
 
 ## Read these first
 
 - `pages/My___AI___Agent___Chief of Staff.md` — this repository's declaration of what a chief of staff is *here*: the docket, what "done" means, the commit policy and why, what gets settled versus escalated. **It governs.** Read it before operating.
-- `pages/My___AI___Agent___Chief of Staff___Log___26___08___13 Thu.md` and `...___Log___26___08___24 Mon.md` — what days in the seat actually taught. **The 24th's page is where this note's durable lessons went**, including the three added at the noon wrap. Read it before operating.
+- `pages/My___AI___Agent___Chief of Staff___Log___26___08___24 Mon.md` — what the day taught, now twelve sections. The last five were added by this context and are the ones a successor is most likely to need. Also `...___Log___26___08___13 Thu.md`.
 - `pages/My___AI___Agent___Chief of Staff___Scribe.md` — the scribe's declaration and its own date-namespaced log. Several settled rules live there rather than here.
+- `pages/My___AI___Agent___Chief of Staff___LEG Todos Heads Up Display.md` — what is waiting on codekiln, in priority order. Swept at 14:00 EDT by this context.
 - `CLAUDE.md`, `.claude/rules/logseq-core.md`, and the graph page `[[Logseq/Journal]]` before touching a journal. They govern — with one exception recorded under open items, where `[[Logseq/Journal]]` still teaches a practice codekiln deleted.
 
-## Where the seat runs
+## THE NEXT ACTION — three book pages, researched and unwritten
 
-A tmux session of its own, one window per job, the awake seat at index 0. The scheme is `<agent>-<REPO>-YYYY-MM-DD-<day>-HHMM`, and the tmux session name and the `claude` session name are meant to be the same string. The fleet-wide shape is on `[[My/AI/Agent/Fleet]]`, which is where the scheme is decided.
+codekiln asked, through the dotfiles seat at 13:5x EDT, for three books imported as Book entities framed as relevant to improving AI agents' writing. **Nothing was written.** The research is complete and the judgement calls are resolved below; the stand-down came before any page was created, and rushing them was explicitly declined rather than forgotten. **Reeve has follow-on work gated behind this import and stays gated**, so nothing downstream breaks — but this is the first thing to finish.
 
-**Do not hard-code the session name.** Five forms in one week, three of them on 2026-08-24 alone. `LEG` is logseq-encode-garden, `MK` the work knowledge vault, `GL` the langserve repo, `DF` dotfiles — the repository code exists so the `C-b w` tree says which repository a seat is in. Read the live name with `tmux display-message -p '#{session_name}'`, which names the session the running pane is in. `tmux list-sessions` lists every session on the server, including other seats' — a different question.
+The three, with the sources codekiln supplied:
 
-**The dotfiles suffix is `DF`, not `.F`.** A dot anywhere in a session name makes tmux read the rest as a window/pane specification, so every *bare* target fails — `has-session` included, which is the guard a script would use to detect it. The worked evidence is `[[tmux/Q/Why does a session name containing a dot break every bare -t target?]]`, with a dot-free control and two dot positions. The first version of that finding was tested only against `session:0` targets — the one target shape a stray dot leaves alone — so it passed on every input it was given and went out backwards. Re-run a probe before republishing a claim you inherited.
+- **Clear and Simple as the Truth: Writing Classic Prose** — Francis-Noël Thomas and Mark Turner, Princeton University Press, 1994; the Project MUSE copy is the 2017 Princeton Legacy Library reissue. <https://muse.jhu.edu/book/51053> and <https://www.amazon.com/Clear-Simple-Truth-Writing-Princeton-dp-0691654743/dp/0691654743/>
+- **The Elements of Style** — Strunk, with E. B. White's revisions. <https://en.wikipedia.org/wiki/The_Elements_of_Style>
+- **The Art of Raising a Puppy** — the Monks of New Skete. <https://www.goodreads.com/en/book/show/32218.The_Art_of_Raising_a_Puppy> and <https://janicegreenwood.com/2020/09/book-review-the-art-of-raising-a-puppy-by-the-monks-of-new-skete/>
 
-A rename leaves window and pane ids alone, verified on an isolated socket. The old name stops resolving the instant the rename lands, so name-addressed targets break immediately rather than drifting. A `claude` session's own name cannot be changed while it runs, so after a tmux rename the two disagree until the next `wake-successor` respawn derives the new one from the tmux name.
+None of the three exists in the graph; checked by `git ls-files` over `pages/Book___*` and `pages/Person___*___Book___*`.
 
-**`ListAgents` is not a second source for any of this.** Its tmux field is captured at session start and silently ages — it reported the old name after a rename, and at the noon wrap it still listed the Grok Bot worker under a session stamp two renames stale. Reliable for who exists and for pane references; unreliable for anything about the session itself. `tmux list-windows` is the live answer.
+### The path form is settled by evidence — use flat `Book/<title>`
 
-## The Heads Up Display pane — re-establish it after every respawn
+`pages/Logseq___Entity___Book.md` says books usually live at `Person/<name>/Book/YY/<short title>`, and may live at `Book/YY/<short title>` when there are five or more sub-pages or **more than one author**. All three books have more than one author, which points at `Book/YY/`.
 
-The seat keeps `pages/My___AI___Agent___Chief of Staff___LEG Todos Heads Up Display.md` open in an nvim pane to the right of the chat pane, both panes titled `Hayward chat` and `Hayward HUD`. codekiln has asked for this twice.
+**Do not use `Book/YY/`. It has zero instances in this graph.** Measured: `git ls-files | grep -E 'pages/Book___[0-9]{2}___'` returns nothing. What actually exists is 33 flat `Book/<title>` pages and 20 `Person/<name>/Book/YY/<title>` pages. Multi-author books here take the **flat** form — `Book/Understanding by Design` (two authors), `Book/ML with PyTorch and Scikit-Learn` (three). The `logseq-book` skill also defaults to `[[Book/Title]]`. Creating the first-ever `Book/YY/` page would be setting a convention, which the declaration sends up rather than settles.
 
-**After a `wake-successor` hand-off the split is certainly gone**, not merely possibly gone: the successor is told to kill the predecessor's window, and that window holds both panes. This was confirmed at 11:55 — the HUD died with window `@26`. Re-split as the first thing you do, before reporting in.
+**This dissolves the year question.** On a flat page the year is not in the path; it goes in `date-created:: [[YYYY]]`, and the graph's precedent is the **original** publication year rather than a reissue — `Book/Understanding by Design` carries `date-created:: [[1998]]` though its expanded second edition is 2005. So: **1994** for Clear and Simple as the Truth, not 2017. **1991** for The Art of Raising a Puppy, not the later revision.
 
-```sh
-S=$(tmux display-message -p '#{session_name}')
-tmux split-window -h -p 45 -t "$TMUX_PANE" -c "$PWD" \
-  'nvim "pages/My___AI___Agent___Chief of Staff___LEG Todos Heads Up Display.md"'
-tmux select-pane -t "$TMUX_PANE" -T 'Hayward chat'
-tmux select-pane -t "$S:0.1" -T 'Hayward HUD'
+### The template to copy
+
+`pages/Book___Tao Te Ching.md` is the cleanest instance carrying the entity marker. Its whole shape:
+
+```
+logseq-entity:: [[Logseq/Entity/Book]]
+created-by:: [[Person/Lao Tzu]]
+- # Tao Te Ching
+	- ## About
+		- ...
+	- ## Links
+		- [Wikipedia](https://en.wikipedia.org/wiki/Tao_Te_Ching)
+		- [[Person/Lao Tzu]]
 ```
 
-Count the panes first rather than splitting blind — splitting a window that already has two gives three. If a right pane exists and runs nvim, retitle it and `:edit` the page into it. And verify nvim actually came up: the pane reports `mise` for a moment while the wrapper launches, so a check taken too early reads as failure and a report taken too early reads as success.
+Note **no `tags::`**. Book pages here do not tag `[[Book]]`; the entity marker does that work, and `tags::` where it appears is topical. Do not add `tags::` — `logseq-core` forbids touching it and there is no need. `created-by::` takes comma-separated links: `created-by:: [[Person/Grant Wiggins]], [[Person/Jay McTighe]]`.
 
-The page is not a journal and not a record of how the seat works. It answers two questions for codekiln at a glance: what in this repository is waiting on them, and what state the repository is in. The **Last swept** line is a promise — a sweep that leaves it unchanged did not happen. Items earn a place only if their answer changes something; anything the seat can settle, it settles and records under *Decided here, not asked*.
+**Author pages must exist, and the precedent is thin ones written alongside the book.** `pages/Person___Grant Wiggins.md` and `pages/Person___Jay McTighe.md` were created with `Book/Understanding by Design` and are four lines each: `logseq-entity:: [[Logseq/Entity/Person]]`, an H1, a one-line `## About` naming the book, and `## Links`. None of Francis-Noël Thomas, Mark Turner, William Strunk Jr. or E. B. White has a page — checked. Mark Turner is absent entirely, including any conceptual-blending page. Write four thin Person pages, or the book pages create stubs, which the settled rule forbids.
+
+### The collective-author question is resolved — it is not the gap it looked like
+
+The brief flagged the Monks of New Skete as a gap because `created-by::` wants `[[Person/Full Name]]`. **There is precedent for non-Person authors**: `created-by::` values across the graph already include `[[37Signals]]`, `[[Canonical]]`, `[[Google]]`, `[[Gitlab]]`, `[[LangChain]]`, `[[IEEE/Committee/LTSC]]`. **And there is an `Organization` entity type** — `pages/Logseq___Entity___Organization.md` exists (there is no `Org` type; do not invent one). So the Monks take an Organization entity, not a Person, and no convention needs changing. Read the Organization definition before naming the page; `[[37Signals]]` has no page file, so check how that type actually names its instances rather than copying a bare link.
+
+### The two calls genuinely left open
+
+- **The Elements of Style year.** First published 1918 by Strunk; E. B. White's revision is 1959, and that is the edition everyone means. The original-year precedent points at 1918, but `created-by::` will list White, who had nothing to do with 1918. Current thinking: `date-created:: [[1918]]` with the About paragraph making the 1959 revision prominent, because the graph's precedent is about the work's first publication. Not confident. Reasonable to choose 1959 and say why on the page.
+- **One page or two for The Elements of Style.** Current thinking: one page. The graph keeps one page per book and this is one work with a revision history; two pages fragment it. codekiln's call if they care.
+
+### The relevance framing, verified rather than assumed
+
+The brief's central claim checks out and it is the valuable part of this import. Classic style as Thomas and Turner describe it — prose as a window onto a truth the writer has seen, writer and reader as equals, no ornament, the writer doing the work so the reader need not — is **nearly verbatim what the garden's own writing rules already say**, which makes the book plausibly their source. Read against the pages rather than taken on trust:
+
+- `pages/My___AI___Rule___How to Communicate Effectively With Me___Never make the reader resolve a reference.md` says "Resolving a pointer is work a reader has to do and a writer could have done once." That is classic style's division of labour, stated as a rule.
+- `pages/My___Pref___Writing___Use Plain language.md` assumes a reader "intelligent but may not share your domain expertise" and ends "Cut the reader's mental effort."
+- `Don't be an Attention Vampire; Lower the Drama`, `Avoid Distractors such as Awkward or Superfluous Metaphors`, `Do not coin phrases unless asked` and `I am allergic to word salad` are all the anti-ornament axis.
+
+**One honest divergence to state rather than smooth over:** `Use Plain language` prescribes readability targets (Flesch 60–80, grade 6–8), and Thomas and Turner explicitly separate **classic** style from **plain** style — plain style assumes a communal truth and distrusts individual distinction, classic style presumes a writer who has personally seen something. So the garden's plain-language page sits closer to plain style than to classic. The page is itself ambivalent, since it says "never a readability formula" and then tables formula targets. Worth a line; do not assert the book underwrites the metrics.
+
+**The Elements of Style page should carry the friction, and both pages should point at each other.** Thomas and Turner's book is framed as supplying what prescription lists lack — a stance — and Elements of Style is the best-known such list. That disagreement is more useful to codekiln's stated purpose than either book alone, because it is the difference between handing an agent a rule list and handing it a stance. **Do not fabricate a quotation of the critique**; state it as a difference in kind, which is defensible, and leave it there.
+
+**The Art of Raising a Puppy: codekiln did not say why it belongs, and an inferred reason must be recorded as inferred.** The dotfiles seat offered this reading as its own and explicitly not codekiln's: raising an agent is developmental rather than configurational, so the transferable parts are consistency of handling, correction timed to the act, forming a disposition rather than issuing commands, and the uncomfortable one — that the handler's own behaviour shapes the animal. **Mark it on the page as inferred and revisable, in one line, and do not dress it as codekiln's rationale.** That mislabelling is the failure the fleet made repeatedly today.
+
+Two constraints on the prose: **this repository is public** and the whole day went on getting employer context out of it, so no employer terms in the relevance sections — the AI-writing framing needs none. And **`tmp/` here is tracked and published**, so this note and anything else drafted under it is a publication candidate.
+
+## Two measured facts about the identity guard that would cost an afternoon to rediscover
+
+The dotfiles seat is filing both into an `openspec/specs/identity-commit-guard` scenario and **that had not happened as of 14:08 EDT**. Until it does, this note is the only record.
+
+**An in-file exemption written with a colon before its reason is silently ignored.** `<!-- secretlint-disable-line: reason -->` does nothing — measured, the annotated line still fires. `<!-- secretlint-disable-line -- reason -->` works. **The separator must be ` -- `.** The colon form is what a person writes by instinct, reads exactly like a decision someone made, and looks correct in a diff.
+
+**An exemption on a file's last line is ignored when the file has no trailing newline.** Isolated to one byte, content otherwise identical. **491 of 800 sampled pages in this graph have no trailing newline**, so most pages are in the failing state and any page whose flagged line is its last line gets a dead annotation. One of the eight applied today was exactly that — `pages/Person___Iavor Bojinov.md`, a two-line page — fixed by adding the trailing newline, which is within the graph's existing variation (309 of 800 already have one) rather than a new convention.
+
+**The rule that follows: annotate, then re-scan the file. Never annotate and move on.** Both failures produce an annotation that is present, correctly spelled, well-reasoned, on the right line, and dead — and the property that makes an annotation good (visible in the file, visible in a diff) is exactly what makes a dead one invisible in review.
+
+## The guard itself, now running
+
+`lefthook.yml` declares a `pre-commit` `identity-guard` running `mise run secrets:scan {staged_files}`. **It had never executed once**: `lefthook install` was never run in this clone, so `.git/hooks` held only stock samples, with an mtime twelve days older than the commit that added the guard. Installed at ~13:15 EDT and passing on every commit since. `lefthook uninstall` removes it; it is local and untracked and nothing in the repo depends on it.
+
+**A committed hook config with no install is the default state of every fresh clone**, because `.git/hooks` is not tracked. This is shipped behaviour, not a slip in this checkout — check any other clone the same way, with `ls .git/hooks`, not by reading the config.
+
+Tuning, so it does not get switched off: `.secretlintignore` names six pages whose value *is* copied machine output, and eight lines stating a third party's public affiliation carry inline exemptions with reasons. Of the original 60 findings only about 10 were real; installing on the raw count would have blocked this seat's own handoff commit over a home path. **Whole-repo scan is now clean — 0 findings, verified 13:5x EDT.** The scanner is `mise run secrets:scan` (no args scans the repo, ~3 minutes, buffers output to the end).
 
 ## Standing arrangement
 
-The **scribe** owns `journals/YYYY_MM_DD.md` and **every commit**. Other agents write pages and hand over paths; nobody else runs `git add`. Several agents and the human share one checkout, which is the whole reason staging is monopolised.
+The **scribe** owns `journals/YYYY_MM_DD.md` and **every commit**. Other agents write pages and hand over paths; nobody else runs `git add`. **On 2026-08-24 no scribe ran**, and the seat's brief made the seat responsible for the journal and the commits. That is the exception, not a change. **Never `git add -A`.**
 
-**On 2026-08-24 no scribe ran for this graph**, and the seat's brief made the seat responsible for the journal and the commits. That is the exception, not a change to the arrangement. The checkout was still shared: a peer seat committed `docs(tmux):` work into it twice during the day and edited today's journal between one read and the next. Staging named paths is what kept them apart — the rule held with nobody awake to enforce it, which is the point of it. **Never `git add -A`.**
+**Staging named paths protects against other files, not against a second writer in the same file.** This is a correction to a rule the log page had recorded as settled. Commit `72e3b4aa` staged one named journal path and carried away two edits codekiln made to that same file in the interval — a sentence in their own voice and a bullet restoration — under this seat's message and co-author trailer, which then claimed authorship of a human's prose. **The check is `git diff --cached` before committing**, not `git status` before editing. Ran it before every commit afterwards and it caught codekiln's live work three times. `72e3b4aa` was left alone deliberately: rewriting a pushed public branch over a trailer costs more than the drift, which is the precedent already on record here.
 
-Agent-to-agent traffic goes over the **cross-session message channel**, not `tmux send-keys`. A lone `send-keys` call delivers the text and strands it unsent in the recipient's input box when they are mid-turn. The command succeeds either way, so nothing reports the failure, and it looks identical to an agent ignoring you.
+Agent-to-agent traffic goes over the **cross-session message channel**, not `tmux send-keys`. **Read the recipient's name fresh from `ListAgents` at the moment of sending** — a send to `seneschal-DF-2026-08-24-mon-1258` was rejected because that seat had rolled to `...-1348` mid-conversation.
 
-**A handoff is complete when the file is committed**, readable from `git log` without being told. An acknowledgement is a courtesy; waiting on one makes completion depend on both parties still existing.
+**A handoff is complete when the file is committed**, readable from `git log` without being told.
 
-**Job windows are closed by the seat, by hand.** Nothing self-closes. A window list is the docket; a window left open past its commit reports work in flight that is not. The Grok Bot window was closed this way at the wrap, verified against `tmux list-windows -a` so the check covered the whole server rather than one session.
+**Job windows are closed by the seat, by hand.** Nothing self-closes.
 
 ## Standing rules from codekiln — they bind the successor too
 
 All are in the graph as well, because a rule that lives only in a handoff note dies with the note.
 
-**Announce a permission request before codekiln is asked for it.** A macOS dialog or login prompt must never be the first they hear of it. A dialog names none of what they need, so send four facts up: who is asking, what permission, what it serves, and what happens if they decline. Where a wall is foreseeable, send them *before* hitting it; where a dialog fires unforeseen, send them the moment it fires. The fleet's pending-request list is the top section of the dotfiles seat's display at `agent-records/seneschal-heads-up-display.md` in the dotfiles repository; this seat feeds that rather than keeping its own.
+**Announce a permission request before codekiln is asked for it.** A macOS dialog or login prompt must never be the first they hear of it. Send four facts up: who is asking, what permission, what it serves, and what happens if they decline. The fleet's pending-request list is the top section of the dotfiles seat's display at `agent-records/seneschal-heads-up-display.md` in the dotfiles repository; this seat feeds that rather than keeping its own.
 
-**Prefer the answer that needs no grant, and never take a standing grant to serve one narrow lookup.** A grant of System Events control to the terminal application is given to every process that ever runs inside it — which on this machine is every seat in the fleet, for as long as it lasts. A seat also does not request a grant on another seat's behalf.
+**Prefer the answer that needs no grant, and never take a standing grant to serve one narrow lookup.** A seat also does not request a grant on another seat's behalf.
 
-**Never make codekiln resolve a reference.** Repeat the thing being named instead of pointing at it. This covers *the latter*, *the former*, *as above*, *that approach*, and any pronoun whose antecedent sits more than a sentence away. A count is the worst form, because it looks like information while withholding every fact. Filed as `pages/My___Pref___Writing___Never make the reader resolve a reference.md`. This is one correction given three times in a day, after "concision is not shorthand" and "don't be indirect, be specific and explicit, with links and paths".
+**Never make codekiln resolve a reference.** Repeat the thing being named instead of pointing at it. Covers *the latter*, *the former*, *as above*, *that approach*, and any pronoun whose antecedent sits more than a sentence away. A count is the worst form. The rule page moved today — it is now `pages/My___AI___Rule___How to Communicate Effectively With Me___Never make the reader resolve a reference.md`, renamed by codekiln out of `My/Pref/Writing/`.
 
-**Do not hard-wrap prose in a Markdown file.** One line per paragraph; the viewer wraps it, and hard-wrapping makes the viewer re-wrap already-wrapped lines into a ragged pattern. Filed as `pages/My___Pref___Writing___Do not hard-wrap prose in Markdown.md`, which adds the reason nobody mentioned: a hard wrap makes a diff lie, since editing one word re-flows every line after it.
+**Do not hard-wrap prose in a Markdown file.** One line per paragraph. Filed as `pages/My___Pref___Writing___Do not hard-wrap prose in Markdown.md`.
 
-**Claude in Chrome by default; Playwright only for a harness that is not Claude** — Cursor or Codex. Stated twice on 2026-08-24 and filed on `[[My/AI/Agent/Fleet/Browser]]`. It is deliberately narrower than the Chrome-first line that page already carried, and the narrowing is the point: Playwright's trigger is the *harness* doing the work, not a seat's judgement that Chrome was unavailable — and that judgement is what failed twice the same day, once as four classifier refusals recorded as a missing capability and once as a route's constraint reported as a blocked source. A seat running under Claude has no Playwright case to argue. A browser nobody is driving is a stale worker like any other; one left running since 09:16 was closed at the wrap.
+**Claude in Chrome by default; Playwright only for a harness that is not Claude** — Cursor or Codex. Filed on `[[My/AI/Agent/Fleet/Browser]]`. A seat running under Claude has no Playwright case to argue.
 
-## A fleet instruction can arrive addressed to the wrong seat
+**Write home paths as `~`, not as an absolute path.** Applied to this note today; it is also what keeps the identity guard quiet on seat notes without ignoring them.
 
-On 2026-08-24 a message from the dotfiles seat opened "Seneschal, new context window" and told this seat that the window invariant obliged it to create a Heads Up Display "in your own repository, since you are the seat with no Heads Up Display of your own yet". This seat had had one since earlier the same day, and the same peer had praised it an hour before. Acting on it would have created a second, competing display. The rest of that message was correct and was for this seat.
+## Where the seat runs
 
-So the failure mode is a mixed message rather than a wrong one, and the salutation is the tell rather than the content. Check whether an instruction describes a state this seat is actually in before acting on it, and say which parts did not apply rather than silently dropping them.
+A tmux session of its own, one window per job, the awake seat at index 0. Scheme `<agent>-<REPO>-YYYY-MM-DD-<day>-HHMM`. **Do not hard-code the session name** — five forms in one week. `LEG` is this garden, `MK` the work knowledge vault, `GL` the langserve repo, `DF` dotfiles.
 
-## Where the bed-down scripts are, and what wake-successor does
+**Read your own pane's identity with `-t "$TMUX_PANE"`, always.** `tmux display-message -p '#{session_name}'` without `-t` resolves against the **attached client's active pane**, not the calling pane. This nearly cost this context its own window: the bare form reported the predecessor's window id, index and pane count while correctly reporting the session name, which made a correct instruction to kill window `@59` look like an instruction to kill itself. The session name survives the bare form because both windows share a session; nothing else does. **`tmux display-message -p -t "$TMUX_PANE" '#{window_id}'` is the reading.**
 
-`bed-down`, `ctx-check`, `wake-successor`, `viewer`, and now `unwrap-md`. **None of them is in this repository** — verified four times on 2026-08-24, most recently at 12:14 by `find` over the whole working tree. Copies live at `tmp/fleet-2026-08-24/bin/` in the dotfiles repository and at the same path in the work knowledge vault. A seat here has no local copy to compare against and reaches across to the dotfiles copy at `~/ghq/github.com/codekiln/dotfiles/tmp/fleet-2026-08-24/bin/`.
+**The dotfiles suffix is `DF`, not `.F`.** A dot anywhere in a session name makes tmux read the rest as a window/pane spec, so every *bare* target fails, `has-session` included. Evidence: `[[tmux/Q/Why does a session name containing a dot break every bare -t target?]]`.
 
-Three separate claims about the location have reached this seat and all three were wrong in some part: dotfiles only, the knowledge-garden repository, and "a copy in each repository, use the one your pane is in" — which cannot be followed here. `tmp/` is gitignored in both repositories that carry the scripts and the scripts are untracked in both, so every copy exists on this machine alone and a fresh clone gets none of them. **This garden is the exception that makes the pattern easy to misread: its own `tmp/` is tracked and published.** Anything written here is a publication candidate.
+**`ListAgents` is not a second source for tmux state.** Its tmux field is captured at session start and silently ages. Reliable for who exists; `tmux list-windows` is the live answer.
 
-**Do not trust a claim that `wake-successor` preserves the repository code — read the script.** A stale copy succeeds and silently drops the code, reporting a clean hand-off either way. Read at 12:14: it takes the stem from the **tmux** session name rather than the claude one, and strips the trailing stamp in the order HHMM, then lower-case weekday, then date, so an upper-case code cannot be eaten by the weekday pattern. Run against `hayward-LEG-2026-08-24-mon-1155` the stem comes out `hayward-LEG` — verified by running the function directly, not by reading it. It also refuses on a dot in the resulting name, refuses if another session already holds it, and refuses if the handoff is missing or more than 900 seconds old.
+## The Heads Up Display pane — re-establish it after every respawn
 
-A note on that guard, because a peer's warning about it did not survive checking: at the wrap the peer said their copy "changed again since you last looked", but the file's mtime was 11:19 — earlier than the predecessor's 11:48 read. The script had not changed. The claim was worth checking and cheap to check; `stat -f %m` answered it. Plan around the 900-second guard by **writing this note immediately before running the script**, so the mtime is honest. `touch` would satisfy the check and defeat its purpose.
+The seat keeps the display open in an nvim pane right of the chat pane, both titled `Hayward chat` and `Hayward HUD`. codekiln has asked for this twice. **After a `wake-successor` hand-off the split is certainly gone**, because the successor kills the predecessor's window and that window holds both panes.
 
-## NOTHING IS IN FLIGHT
+```sh
+tmux split-window -h -p 45 -t "$TMUX_PANE" -c "$PWD" \
+  'nvim "pages/My___AI___Agent___Chief of Staff___LEG Todos Heads Up Display.md"'
+tmux select-pane -t "$TMUX_PANE" -T 'Hayward chat'
+```
 
-The Grok Bot worker landed, its output is committed and pushed, and its window is closed and verified gone. **This seat has no worker running, no uncommitted work, and no open job window.** The session is one window at index 0 with two panes, chat and HUD.
+Then title the other pane by finding it with `tmux list-panes -t "$(tmux display-message -p -t "$TMUX_PANE" '#{window_id}')"` and excluding `$TMUX_PANE`. Count panes first rather than splitting blind. Verify nvim actually came up — the pane reports `mise` briefly while the wrapper launches.
 
-The task it completed, for context if the page comes up: codekiln had an email from Dov saying "Grok Bot" was included in their Cursor Teams plan, and wanted one Diátaxis explanation page. The page is `[[CursorAI/Explanation/Grok Bot on a Teams seat]]`. **The answer is that a Teams seat includes it at no extra charge on Standard as well as Premium, no admin action needed**, sourced to Cursor's pricing page and its Grok Bot plans-and-billing doc read 2026-08-24, corroborated by xAI's note of 2026-08-21. What can still cost money is usage rather than access: included usage resets weekly and overflow draws on the account's shared on-demand spend, so with on-demand off, exhausting the allowance stops the work instead of billing for it. Four things the sources do not state are marked unknown on the page with who would know.
+**Do not reload the HUD with `:edit!` via `send-keys`.** Tried today and it opened a git-plugin overlay showing a staged-changes panel, which read alarmingly like something had been staged (nothing had). **Kill the pane and re-split instead** — deterministic, and it takes one command more.
 
-**The brief's central hypothesis was wrong, and this is worth carrying.** It expected "Grok Bot" to be a voice-input mis-transcription of Cursor's Bugbot. Grok Bot is real under the name as heard — xAI's agent application, documented at cursor.com/help/grok-bot/ — and it is neither Bugbot nor the Grok models. If anyone reopens this, the mis-transcription theory is settled and closed.
+## Where the bed-down scripts are
 
-## Open items — all awaiting codekiln, none actionable unasked
+`bed-down`, `ctx-check`, `wake-successor`, `viewer`, `unwrap-md`. **None is in this repository.** Copies live at `tmp/fleet-2026-08-24/bin/` in the dotfiles repository and at the same path in the work knowledge vault; a seat here reaches across to `~/ghq/github.com/codekiln/dotfiles/tmp/fleet-2026-08-24/bin/`. `tmp/` is gitignored in both of those and the scripts are untracked, so every copy exists on this machine alone. **This garden is the exception that makes the pattern easy to misread: its own `tmp/` is tracked and published.**
 
-The Heads Up Display carries the five that need them most, in priority order, and is the better read for what to raise first. The full list:
+**Do not trust a claim that `wake-successor` preserves the repository code — read the script.** As read at 12:14 EDT it takes the stem from the **tmux** session name and strips the trailing stamp in the order HHMM, weekday, date, so an upper-case code survives. It refuses on a dot in the resulting name, refuses if another session holds the name, and refuses if the handoff is missing or more than 900 seconds old. Plan around that guard by **writing this note immediately before running the script**; `touch` would satisfy the check and defeat its purpose.
 
-1. **Two repair sweeps, best run as one pass** since the page sets overlap. `docs.claude.com` is now entirely a redirect host and splits two ways: Claude Code slugs go to `code.claude.com/docs/en/<slug>`, everything else to `platform.claude.com/docs/en/<path>`. 14 pages, 16 occurrences, 15 unique URLs; a naive host replacement breaks the three that went to `platform`. Separately, `claude config <sub>` appears in 5 pages and **no longer exists** in the CLI — worse than a redirect, which still works.
-2. **Two repairs to `[[Logseq/Journal/Section/Friction]]`**: it instructs filing under **garddiff**, a mechanism with no journal appearance since 2026-05-12; and `[[Logseq/Journal]]` calls it a *recurring* section when it has appeared twice ever, last five months ago.
-3. **The Filed/Updated line form.** Five variants across the graph, no page states which. Recommendation: `- # [[Filed]]` — the plurality, and the only common form satisfying `logseq-core`'s bullet rule. **Nobody should touch the 234-of-446 journals whose first line lacks a bullet** until codekiln says what caused it; a save that eats a bullet is indistinguishable from a person choosing one.
-4. **Whether the send-keys failure earns a `.rulesync/` rule.** It has happened twice by agents, which was the bar. Argument against: almost no agent here messages another, so the rule costs every reader to serve two. **New evidence, and it does not count toward that bar:** text was found stranded unsent in the Grok Bot worker's input box at the wrap. The dotfiles seat confirmed it used no `send-keys` all day, so a person typed it — a human-typed instance, not a third agent one. The predecessor context cannot be ruled out by anything still readable, but its own brief made the seat responsible for the journal, so telling a worker to write one would have contradicted the instruction it had just issued.
-5. **Which page owns the settings precedence list** — `[[Claude/Code/Settings]]` and `[[Claude/Code/Settings/Override]]` now both carry it, both correct, and they will drift.
+## State at 14:08 EDT
+
+**Tree clean, `origin/main` and `main` in sync at `7901524a`.** In a shared checkout that reading describes a moment, not a state that holds — codekiln committed twice into it this afternoon (`ab502829`, `6ed65f37`) and was editing live three times. The reading is `git fetch origin && git rev-list --left-right --count origin/main...main`.
+
+This context took the seat at 12:18 EDT and made **eight commits, all pushed**: `16ffd0dc` browser profile table, `1e856dca` ARM footnotes, `b42222c3` seat notes and `archive.ph`, `ce17e32c` the `.secretlintignore`, `72e3b4aa` journal line, `5f09f389` the eight inline exemptions, `7c4ac039` display sweep, `7901524a` log page.
+
+**No worker running, no job window open, no unsent composer text** — the composer was checked and is empty, and the session is one window at index 0 with two panes. **No pending permission or authentication request**, and nothing queued for the dotfiles seat's pending-request section.
+
+**Nothing is in flight.** The book import is the next action and it is unstarted, not half-done.
+
+## Open items — awaiting codekiln
+
+The display carries these in priority order and is the better read. The one that moved to the top today:
+
+1. **Whether this repository's history gets scrubbed.** One question: are an internal wiki tenant and a private AI-workspace project id sensitive on their own? Employer context is out of every page at `HEAD` but history still holds it, including a page deleted from the graph but live in history carrying an internal wiki URL with a page id. If yes, a rewrite plus a GitHub support purge is the only thing that reaches it — and it changes every commit hash, which this graph cites in its own prose, while clones and forks keep the old objects. If no, what is done is enough. **Nothing rewritten, nothing force-pushed.**
+2. **Two graph pages still teach a journal practice codekiln deleted** — `[[Logseq/Journal]]` and `[[Logseq/Journal/Editorial headings]]`. An agent following them reproduces the error and this seat did.
+3. **The `Filed`/`Updated` line form.** Recommendation `- # [[Filed]]`. **The 234-of-446 bullet question is now answered:** an editor save was seen eating the bullet — today's journal went from `- # [[Filed]]` to `# [[Filed]]` in the working tree during codekiln's own session and landed that way in their commit before they restored it. A tool eats it; it is not a person choosing. Which tool is still open, and the 234 are still untouched.
+4. Whether the `send-keys` failure earns a `.rulesync/` rule. Still two agent instances; today's stranded text was human-typed.
+5. **Which page owns the settings precedence list** — `[[Claude/Code/Settings]]` and `[[Claude/Code/Settings/Override]]` both carry it and will drift.
 6. **Aliases**, suggested and unwritten since aliases are human-curated: `[[Google/Workspace/AI]]` (recommended), a relative-path phrasing for the Google Drive Markdown question, `[[Claude/Google Drive]]` (would skip).
-7. **A dead hook.** `.rulesync/hooks.json` declares a `PostToolUse` formatter pointing at `.rulesync/hooks/format.sh`, which does not exist, and `hooks` is not in `rulesync.jsonc`'s `features`, so it would not generate anyway. Inert since [f18285e2 a bunch of rulesync skill updates](https://github.com/codekiln/logseq-encode-garden/commit/f18285e2).
-8. **Whether a current tools page is worth having.** The stale tools table was dropped from the settings page; a current list would be useful, but as its own page rather than smuggled back in.
-9. **`Logseq/Entity/Agent`** — still held from 2026-08-13. Creating the type sets a convention and 35 `Person/Steve Yegge/Agent/*` pages would become its instances.
-10. **`[[Logseq/Journal]]` and `[[Logseq/Journal/Editorial headings]]` contradict a settled decision.** Both instruct topic-led narrative blocks with wry, allusive titles. codekiln deleted exactly those on 2026-08-18 and has written none since; 08-16, 08-18 and 08-19 are change log only. **An agent following the graph pages will reproduce the error, and this seat did on 2026-08-24** — five such blocks went into that day's journal and were removed before the day closed. Recommendation: delete `[[Logseq/Journal/Editorial headings]]`, which exists only to teach the practice, and cut the narrative instruction from `[[Logseq/Journal]]`. **Not acted on** — a convention page is codekiln's to change. The declaration was a third page teaching it and was brought into line instead, since that much was already on record.
+7. **A dead hook.** `.rulesync/hooks.json` declares a `PostToolUse` formatter pointing at `.rulesync/hooks/format.sh`, which does not exist, and `hooks` is not in `rulesync.jsonc`'s `features`.
+8. Whether a current tools page is worth having.
+9. **`Logseq/Entity/Agent`** — held since 2026-08-13.
 
 ## Settled — do not relitigate
 
-- **The journal carries the change log and no agent-written narrative.** codekiln deleted all three topic-led blocks from the 2026-08-18 journal themselves. Do not write them. Prose above the change log is codekiln's own and is neither written nor removed.
-- **Grouping labels are terse and subject-named**, chosen by codekiln: `agents`, `gdrive`, `tmux`, `claude code`. Spaces, not hyphens — spaces are attested, hyphens are not. Grouping is a page-wide decision, not a per-section count: a section with one item still gets its label. One-off subject labels are within convention; the graph already carries `enshittification`, `nuclear safety`, `file browsin`. Two were added at the wrap — `cursor` for the Grok Bot page under Filed, `paywalls` for archive.ph under Updated.
-- **Headings name the finding; they do not allude to it.** codekiln's objection was that allusive titles are obscure. Expect it to apply to page prose too, not only titles.
-- **Commit messages carry a gitmoji** — `📝 docs:` for page and journal work, per `[[My/Pref/Dev/Tool/SCM/Commit Message Style Preferences]]`.
-- **The `Co-Authored-By` trailer follows whoever wrote the content.** A structured field that forges read and display, not a courtesy, so it stays off commits carrying codekiln's own words. `attribution.commit` in `settings.json` configures it. Do not tidy the exception into consistency. **One commit this context is inconsistent with this and was left alone deliberately:** `082078e3`, the archive.ph update, went out without the trailer though the prose was the seat's. Rewriting a shared branch over a trailer is worse than the drift, and the record is honest as it stands. Do not force-push to fix it.
-- **A new page's links are checked before it is committed.** Resolve every `[[link]]` to either a file or an existing reference elsewhere in the graph; a link with neither is a stub being created. Two names were kept as plain prose at the wrap for exactly this reason — Boston Globe, which has no page and no other reference, and xAI, which the worker left unlinked.
-- **A space is not a namespace.** `[[Web Archiving]]` is `pages/Web Archiving.md`, not `pages/Web___Archiving.md`; triple underscores are only for `/`. A wrong guess here returns a false negative that looks like a missing page.
-
-## What produces no error here
-
-The graph has no build and no test suite, so the work left undone is the work nothing complains about. The declaration's *What produces no error in a graph* section is the standing list, and the day's lessons are on the 08-24 log page. Two that stay here because they are about instruments rather than the graph:
-
-**An instrument can be right when captured and wrong when read.** `ListAgents`' session field, correct at capture and silently aging. Work out *when* a field's value was determined before trusting it.
-
-**A file's silence is evidence of nothing.** An unset key and an unsupported key are indistinguishable from a `settings.json` alone. Likewise a truncated fetch and a genuine omission: the right report is "could not confirm from the rendered page," not "the doc omits these."
-
-## State at the end of this context
-
-Read at [847c0b15 summarize the morning, and file the browser rule as a harness rule](https://github.com/codekiln/logseq-encode-garden/commit/847c0b15), pushed; `origin/main` and `main` agree and the tree is clean. Any count here is stale the moment anyone commits — the reading is `git fetch origin && git rev-list --left-right --count origin/main...main`, and without the fetch it hides the behind half. In a shared checkout that reading describes a moment, not a state that holds.
-
-This context took the seat at 11:55, re-split the HUD that had died with the predecessor's window, and made four commits, all pushed: the Grok Bot page and its journal line; the archive.ph verified section; the display sweep; and the morning summary with the browser rule. It also answered a peer's read-only search of this graph for a note on getting past Medium's login wall — `pages/archive.ph.md` exists, is the only such note, and was ten months old and never revisited until codekiln's own tested Globe result was added to it.
-
-Three lessons went onto the 08-24 log page rather than into this note: that a brief's hedge can be wrong in the direction of caution, that a stranded input box does not say who typed it, and what the morning produced.
-
-This seat has **no pending permission or authentication request.** Nothing this day needed a grant, hit an SSO wall, or raised a dialog, and nothing is queued for the dotfiles seat's pending-request section. That is stated rather than left out, because an empty answer and an unanswered question look the same from outside.
-
-The last act of this context was to write this note and hand off at codekiln's noon authorization. Nothing is in flight.
+- **The journal carries the change log and no agent-written narrative.** Prose above it is codekiln's own and is neither written nor removed.
+- **Grouping labels are terse and subject-named**, spaces not hyphens. `github actions` was added today under Updated.
+- **Headings name the finding; they do not allude to it.**
+- **Commit messages carry a gitmoji** — `📝 docs:` for page and journal work, `🔧 chore:` for repo configuration.
+- **The `Co-Authored-By` trailer follows whoever wrote the content.** Off commits carrying codekiln's own words. Two commits are inconsistent with this and were left alone deliberately: `082678e3` and `72e3b4aa`. Do not force-push to fix either.
+- **A new page's links are checked before it is committed.** Resolve every `[[link]]` to a file or an existing reference; a link with neither is a stub being created.
+- **A space is not a namespace.** Triple underscores are only for `/`.
+- **Redact where it costs nothing; rewrite where the content is load-bearing.** The ARM footnotes cited public sources but linked private conversations no reader could open, so naming the original lost nothing. The browser profile table was rewritten rather than removed because it is load-bearing for an instruction in use.
+- **Do not ignore a whole page to quiet a guard when the flagged fact is public and about someone else.** Silencing the page is the same mistake as a guard that cries wolf, reached from the other side. Inline exemptions with reasons instead.
+- **Annotation-only edits are not journaled.** Eight inline exemptions added no content; six page links under Updated would bury the day's real changes. Git is the audit log, the journal is the curated snapshot.
