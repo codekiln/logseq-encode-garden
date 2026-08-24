@@ -73,7 +73,7 @@ So the failure mode is a mixed message rather than a wrong one, and the salutati
 
 ## Where the bed-down scripts are, and what wake-successor does
 
-`bed-down`, `ctx-check`, `wake-successor`, `viewer`, and now `unwrap-md`. **None of them is in this repository** — verified four times on 2026-08-24, most recently at 12:14 by `find` over the whole working tree. Copies live at `tmp/fleet-2026-08-24/bin/` in the dotfiles repository and at the same path in the work knowledge vault. A seat here has no local copy to compare against and reaches across to the dotfiles copy at `/Users/pnore/ghq/github.com/codekiln/dotfiles/tmp/fleet-2026-08-24/bin/`.
+`bed-down`, `ctx-check`, `wake-successor`, `viewer`, and now `unwrap-md`. **None of them is in this repository** — verified four times on 2026-08-24, most recently at 12:14 by `find` over the whole working tree. Copies live at `tmp/fleet-2026-08-24/bin/` in the dotfiles repository and at the same path in the work knowledge vault. A seat here has no local copy to compare against and reaches across to the dotfiles copy at `~/ghq/github.com/codekiln/dotfiles/tmp/fleet-2026-08-24/bin/`.
 
 Three separate claims about the location have reached this seat and all three were wrong in some part: dotfiles only, the knowledge-garden repository, and "a copy in each repository, use the one your pane is in" — which cannot be followed here. `tmp/` is gitignored in both repositories that carry the scripts and the scripts are untracked in both, so every copy exists on this machine alone and a fresh clone gets none of them. **This garden is the exception that makes the pattern easy to misread: its own `tmp/` is tracked and published.** Anything written here is a publication candidate.
 

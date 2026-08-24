@@ -20,7 +20,7 @@ tags:: [[Tool]], [[Web Service]]
 		- Creating permanent references to web pages
 	- ## Verified
 		- Works on a paid newspaper subscription, not only on [[Medium]]'s login wall. [[Person/codekiln]] opened a paywalled Boston Globe article through it on [[2026-08-24 Mon]] and reported that it actually worked: [the Harvard Art Museums and AI piece of 2026-08-19](https://archive.ph/rQQLB). Tested directly rather than inferred, and dated here because nothing above this line carries a date — the page was written on [[2025-10-05 Sun]] and had not been revisited since.
-		- This does not replace institutional library access, which is a different route with different durability. A snapshot service helps only where a snapshot exists for the one URL being asked for, whereas library access does not depend on that and reaches every article in a publication rather than the ones somebody happened to archive. Both are worth having; Harvard institutional access to the Boston Globe is being looked into separately.
+		- This does not replace institutional library access, which is a different route with different durability. A snapshot service helps only where a snapshot exists for the one URL being asked for, whereas library access does not depend on that and reaches every article in a publication rather than the ones somebody happened to archive. Both are worth having; Institutional access to the Boston Globe is being looked into separately.
 	- ## Example
 		- [Deconstructing Serena's MCP-Powered Semantic Code Understanding Architecture | by Souradip Pal | Jul, 2025 | Medium](https://archive.ph/d5cf6)
 	- ## Related

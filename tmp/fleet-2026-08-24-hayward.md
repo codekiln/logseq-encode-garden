@@ -1,6 +1,6 @@
 # Hayward — report, 2026-08-24
 
-Seat: chief of staff, `logseq-encode-garden`. tmux session `hayward-2026-08-24`. Nothing was sent to Myer.
+Seat: chief of staff, `logseq-encode-garden`. tmux session `hayward-2026-08-24`. Nothing was sent to codekiln.
 
 ## 1. The six held commits — pushed
 
@@ -71,7 +71,7 @@ Added with it: an absence is a dated claim like any other. A seat recorded `--ch
 - Union on the journal conflict rather than picking a side.
 - New pages under `My/AI/Agent/Fleet` as a sibling of `My/AI/Agent/Chief of Staff`, since the hierarchy belongs to the fleet rather than to any one seat.
 - Raw email addresses left out of the browser page. This repo is public, neither address appears anywhere else in it, and the profile *directory* name is the whole handle an agent needs — the addresses would have been a new publication for no operational gain.
-- No browser work taken. There was none to do here, and taking some to test an invocation would have contended for `Default` against Myer's own open window.
+- No browser work taken. There was none to do here, and taking some to test an invocation would have contended for `Default` against codekiln's own open window.
 - Every wikilink resolved against the live graph before linking. The only unresolved targets in what I wrote are established logical pages already used across the graph (`[[Zsh]]` 20 refs, `[[Bash]]` 11, `[[Person/codekiln]]` 22, date pages); no new stub was created. `[[Chrome]]` was caught and de-linked before commit — it had no page and no other user in the graph, so it would have been one.
 
 ## 5. Second context window — graph work the day's findings had earned
