@@ -1,6 +1,6 @@
 # Resume note — Hayward, the encode-garden chief-of-staff seat
 
-Last refreshed 2026-08-24. Written for a successor with none of this context.
+Last refreshed 2026-08-24, second context window of the day. Written for a successor with none of this context.
 
 ## Read these first
 
@@ -8,8 +8,11 @@ Last refreshed 2026-08-24. Written for a successor with none of this context.
   what a chief of staff is *here*: the docket, what "done" means, which subagent
   shapes this repo uses, the commit policy and why, and what gets settled versus
   escalated. **It governs.** Read it before operating.
-- `pages/My___AI___Agent___Chief of Staff___Log___26___08___13 Thu.md` and the
-  later log pages under that namespace — what days in the seat actually taught.
+- `pages/My___AI___Agent___Chief of Staff___Log___26___08___13 Thu.md` and
+  `...___Log___26___08___24 Mon.md` — what days in the seat actually taught. **The
+  24th's entry is where this note's durable lessons went.** Read it before
+  operating; this note now carries only state and ownership, which is the split the
+  scribe declaration asks for.
 - `pages/My___AI___Agent___Chief of Staff___Scribe.md` — the scribe's declaration
   and its own memory space, with a date-namespaced log beneath it. Read the
   scribe's recent log entries; several of today's settled rules live there rather
@@ -19,10 +22,11 @@ Last refreshed 2026-08-24. Written for a successor with none of this context.
 
 ## Where the seat runs
 
-A tmux session of its own, one window per job. As of 2026-08-24 the session is
-named `<seat>-<date>` — `hayward-2026-08-24` — so the seat name sits at session
-level rather than on window `0`. The fleet-wide shape is on the graph page
-`[[My/AI/Agent/Fleet]]`; the seat's own declaration carries it too.
+A tmux session of its own, one window per job. Since 2026-08-24 the scheme is
+`<seat>-<date>-<repo>`, so the seat name sits at session level rather than on
+window `0`. The fleet-wide shape is on the graph page `[[My/AI/Agent/Fleet]]`,
+which is where the scheme is decided; the declaration names the pattern and the
+suffix for this repo rather than quoting a literal.
 
 **Do not hard-code the session name.** It was `ls-encode-garden`, became
 `hayward-ls-encode-garden` mid-day on 2026-08-18 under a `<seat>-<repo>` sweep,
@@ -32,29 +36,19 @@ knowledge vault, `GL` the langserve repo, `DF` dotfiles — the suffix exists so
 `C-b w` tree says which repository a seat is in.
 
 **The dotfiles suffix is `DF`, not `.F`.** `.F` was published first, from codekiln's
-own example, and is wrong: a dot in a session name makes tmux read everything after
-it as a pane specification, so every *bare* session target fails. Verified here on
-an isolated socket (`tmux -L dottest`, never the default one — `kill-server` on the
-default socket would take every seat's session down):
+own example, and is wrong: a dot anywhere in a session name makes tmux read the rest
+as a window/pane specification, so every *bare* target fails — `has-session` included,
+which is the guard a script would use to detect it. The worked evidence is now a graph
+page rather than a paragraph here: `[[tmux/Q/Why does a session name containing a dot
+break every bare -t target?]]`, with the dot-free control and two dot positions on it.
+Four schemes in seven days, two of them on one day, so do not hard-code the name and do
+not trust a quoted one. Read the live name with `tmux display-message -p
+'#{session_name}'`, which names the session the running pane is in. `tmux list-sessions`
+lists every session on the server, including other seats' — a different question.
 
-```
-tmux -L dottest new-session -d -s 'hay-.F'
-tmux -L dottest has-session  -t '=hay-.F'   # can't find pane: F   exit 1
-tmux -L dottest list-windows -t '=hay-.F'   # can't find pane: F
-tmux -L dottest new-window   -t '=hay-.F'   # can't specify pane here
-tmux -L dottest has-session  -t '=hay-.F:'  # exit 0 — trailing colon disambiguates
-tmux -L dottest list-panes   -t '=hay-.F:0' # exit 0 — explicit window also works
-tmux -L dottest has-session  -t '=hay-DF'   # exit 0 — control, clean
-```
-
-`has-session` exiting 1 is the worst of it: a script cannot even test whether the
-session exists, and the failure reads as a missing session rather than a bad name.
-A convention that works only if you remember a trailing colon is a trap. Four schemes in seven days, two of
-them on one day. The claude session name is untouched by these renames, so peer
-addressing is unaffected. Read the live name with
-`tmux display-message -p '#{session_name}'`, which names the session the running
-pane is in. `tmux list-sessions` lists every session on the server, including
-other seats' — it answers a different question.
+The first version of that finding was tested only against `session:0` targets, which is
+the one target shape a stray dot leaves alone, so it passed on every input it was given
+and went out backwards. Re-run a probe before republishing a claim you inherited.
 
 `ListAgents` is not a second source for it. Its tmux field still reported the old
 name after the rename — it is captured at session start, not read live. Reliable
@@ -81,9 +75,9 @@ If a right pane already exists and runs nvim, retitle it and `:edit` the page in
 it rather than splitting again — splitting blind gives three panes.
 
 The page is not a journal and not a record of how the seat works. It answers two
-questions for codekiln at a glance: what in this repository is waiting on him, and
+questions for codekiln at a glance: what in this repository is waiting on them, and
 what state the repository is in. The **Last swept** line is a promise — a sweep
-that leaves it unchanged did not happen. Items earn a place only if his answer
+that leaves it unchanged did not happen. Items earn a place only if their answer
 changes something; anything the seat can settle, it settles and records under
 *Decided here, not asked*.
 
@@ -96,7 +90,9 @@ the human share one checkout, which is the whole reason staging is monopolised.
 **On 2026-08-24 no scribe ran for this graph**, and the seat's brief made the
 seat responsible for the journal and the commits. That is the exception, not a
 change to the arrangement. The checkout was still shared: a peer seat working the
-dotfiles tmux spec committed `aef93c23` into it mid-task, and the seat's own next
+dotfiles tmux spec committed [aef93c23 status-left-length 40 now lives in the
+config](https://github.com/codekiln/logseq-encode-garden/commit/aef93c23) into it
+mid-task, and the seat's own next
 commit landed on top of theirs. Staging named paths is what kept the two apart —
 the rule held with nobody awake to enforce it, which is the point of it.
 
@@ -124,7 +120,10 @@ that is not.
   blocks into that day's journal, following the graph page `[[Logseq/Journal]]`,
   which still instructs them. Caught by reading this note and removed before the
   day closed. The graph page and `[[Logseq/Journal/Editorial headings]]` both
-  still teach the deleted practice; see open items.
+  still teach the deleted practice; see open items. The declaration was a third
+  such page and was brought into line on 2026-08-24 — it now carries both halves
+  of the rule, including that prose above the change log is codekiln's own and is
+  neither written nor removed.
 - **Grouping labels are terse and subject-named**, chosen by codekiln: `agents`,
   `gdrive`, `tmux`, `claude code`. Spaces, not hyphens — spaces are attested in
   this graph, hyphens are not. Grouping is a page-wide decision, not a
@@ -194,12 +193,22 @@ that is not.
     actually do. **Not acted on** — a convention page is codekiln's to change, and
     `[[Logseq/Journal/Editorial headings]]` exists only to teach the practice, so
     the fix is a deletion rather than an edit.
+    The declaration was a third page teaching it and is no longer: that part was a
+    decision already on record, so it was brought into line rather than asked
+    about. What is left waiting is only the two pages that state the convention.
 
 ## What produces no error here
 
 The graph has no build and no test suite, so the work left undone is the work
 nothing complains about. The declaration page's *What produces no error in a
-graph* section is the standing list. Today added two more:
+graph* section is the standing list, and the day's own lessons are on
+`pages/My___AI___Agent___Chief of Staff___Log___26___08___24 Mon.md` rather than
+here — a test that passes only on non-falsifying inputs, an absence as a dated
+claim, a governing page that is out of date and still governs, a convention claim
+that stops being true across a repository boundary, a name too volatile to quote,
+and the rule that held with nobody awake to enforce it.
+
+Two that stay here because they are about instruments rather than about the graph:
 
 **An instrument can be right when captured and wrong when read.** `ListAgents`'
 session field, correct at capture and silently aging. Work out *when* a field's
@@ -207,38 +216,21 @@ value was determined before trusting it.
 
 **A file's silence is evidence of nothing.** An unset key and an unsupported key
 are indistinguishable from a `settings.json` alone. Likewise a truncated fetch
-and a genuine omission: two fetches of a published table came back truncated on
-2026-08-18, and the right report was "could not confirm from the rendered page,"
-not "the doc omits these."
+and a genuine omission: the right report is "could not confirm from the rendered
+page," not "the doc omits these."
 
-**A standing mechanism beats a watching supervisor.** Twice today a correction of
-mine arrived after the thing it was meant to prevent. What actually kept a
-half-finished page out of a commit was the scribe's rule to stage named paths —
-a rule that holds without anyone being awake.
+## State at the end of this context
 
-**A governing page can be out of date, and it still reads as governing.** The
-graph page said write editorial narrative; the human's own edits said the
-opposite, and the edits were four months newer than nothing — the page carried no
-date at all. When a page and an observed human action disagree, the action wins,
-and the disagreement is worth filing rather than silently obeying one side. Both
-were checked here by reading the last four journals rather than by reasoning about
-which source ought to govern.
+Read at [82507cb7 correct the fleet page and the declaration](https://github.com/codekiln/logseq-encode-garden/commit/82507cb7), then pushed; `origin/main` and `main` agree and the tree is
+clean. Any count here is stale the moment anyone commits — the reading is
+`git fetch origin && git rev-list --left-right --count origin/main...main`.
 
-**A capability recorded as absent decays, and bedding down is a retry.** On
-2026-08-24 a peer seat met four classifier denials on `claude --chrome`, recorded
-the capability as unavailable, and after bedding down ran the identical command
-successfully on the first try. The fleet had meanwhile reported a *source* as
-blocked when only one *route* to it was. Write an absence the way you would write
-a count: what was tried, when, and what the failure looked like — a successor
-cannot otherwise tell a standing limitation from a transient refusal, and has no
-reason to retest it. `[[My/AI/Agent/Fleet/Browser]]` carries the worked shape.
+This context wrote the dot-in-session-name Q page, corrected `[[My/AI/Agent/Fleet]]`
+on the session scheme and on `tmp/`, brought the declaration in line with the
+settled journal rule, added the day's log page, and swept the Heads Up Display.
+Three commits, pushed. A peer seat committed `docs(tmux):` work into this same
+checkout twice during the day and edited today's journal between one read and the
+next; both survived because staging named paths.
 
-**A test can confirm a claim on the only inputs that could not falsify it.** The
-`.F` suffix was tested with targets that named a window explicitly — `session:0` —
-which is precisely the one case where a trailing dot is harmless, so the test passed
-on every input it was given and the claim went out. The falsifier was already
-stated; it just was not run. This is the same failure as reading an ahead-behind
-count without fetching, and as recording a capability absent after four denials:
-evidence that was one command away, not evidence that was unavailable. When a rule
-holds on every sample tried, find the sample that would break it before writing it
-down.
+The HUD pane was already up when this context woke — it survived the respawn on
+this occasion, so check before splitting rather than assuming either way.

@@ -146,8 +146,62 @@ looked like.
   was created. `[[Chrome]]` was caught and de-linked before commit — it had no page and no
   other user in the graph, so it would have been one.
 
-## 5. Next
+## 5. Second context window — graph work the day's findings had earned
 
-- `backup/hayward-pre-rebase-2026-08-24` dropped after confirming every commit on it is
-  reachable from `origin/main`.
+The day's findings were sitting in `tmp/` notes rather than in the graph. Three went in,
+and one of them was wrong on the way.
+
+**The dot-in-a-session-name finding was re-run before publishing, and needed to be.** The
+`.F`-versus-`DF` claim had been tested only against targets naming a window explicitly,
+`session:0` — the single target shape a stray dot leaves alone — so it passed on every
+input it was given. Re-run on an isolated socket with a dot-free control and two dot
+positions, the mechanism is broader than the note said: a dot *anywhere* in the name is
+read as a separator, `has-session` fails the same as the rest, and the message moves with
+the dot (`hay-.F` reports a missing pane, `hay-D.F` a missing window named `hay-D`), so
+two instances of one fault do not look alike. Filed as
+`[[tmux/Q/Why does a session name containing a dot break every bare -t target?]]` with the
+table on it, and pointed at from `[[tmux/session/Name]]` and `[[My/AI/Agent/Fleet]]`.
+
+**Two claims on `[[My/AI/Agent/Fleet]]` were corrected.** The session scheme now carries
+the repository suffix and the no-dot constraint. The `tmp/` line now asks the reader to
+run `git check-ignore` per checkout instead of asserting an answer that is false here —
+section 3b's finding, which had reached the report and the display but not the page that
+states the convention.
+
+**The declaration was a third page teaching the deleted journal practice.** Section 3d
+named `[[Logseq/Journal]]` and `[[Logseq/Journal/Editorial headings]]`; the seat's own
+declaration instructed it in two places as well, which is the page the next occupant reads
+first. That the journal carries the change log and no agent narrative was settled on
+08-18 and recorded, so the declaration was brought into line rather than escalated — with
+both halves, including that prose above the change log is codekiln's own and is neither
+written nor removed. The two pages that *state* the convention are untouched and remain
+the open item.
+
+Also filed: the chief-of-staff log page for the day, which is where the durable lessons
+moved to. The resume note had been carrying them, and the scribe declaration is explicit
+that the note holds state while the log space holds what outlasts it.
+
+Swept the Heads Up Display. Its own state line had quoted an ahead-count that the commit
+writing it invalidated, which is the graph's recurring error in miniature; it now names
+the command rather than a reading.
+
+Three commits, pushed. `9e8d0aae..def9594a`.
+
+## 6. Decisions taken alone, this context
+
+- Corrected the declaration rather than escalating it, on the grounds that the underlying
+  decision was already on record and only the convention pages are codekiln's to change.
+- Left the 24 slash-form date links on pages written today alone. `[[Logseq/Date]]` calls
+  `[[YYYY/MM/DD]]` acceptable and merely not preferred for new writes, so rewriting
+  committed ones is churn. New writing uses the journal form, `[[YYYY-MM-DD Ddd]]`, which
+  is the form that actually reaches the day's journal.
+- Left the peer seat's `tmux/Option/pane-border-*` pages alone despite their carrying the
+  same date form. They are that seat's work in a shared checkout.
+- Fixed two faults in the resume note itself: it misgendered codekiln twice, and it
+  carried a bare SHA against the rule it states two sections earlier.
+
+## 7. Next
+
+- `backup/hayward-pre-rebase-2026-08-24` is gone; nothing references it.
 - The tmux config line above, if and when someone takes it through OpenSpec in dotfiles.
+- Waiting on codekiln: the two convention pages, and the nine other items on the display.
