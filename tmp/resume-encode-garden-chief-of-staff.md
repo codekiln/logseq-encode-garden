@@ -112,6 +112,68 @@ handshake on 2026-08-18 and its acknowledgement was refused.
 list is the docket; a window left open past its commit reports work in flight
 that is not.
 
+## Standing rules arriving 2026-08-24 — they bind the successor too
+
+These came from codekiln through the dotfiles seat late in the day. All three are
+in the graph as well, because a rule that lives only in a handoff note dies with
+the note.
+
+**Announce a permission request before codekiln is asked for it.** A macOS dialog
+or a login prompt must never be the first they hear of it. A dialog on screen
+names none of what they need, so send four facts up: who is asking, what
+permission, what it serves, and what happens if they decline. Where a wall is
+foreseeable — an SSO login, an expired credential, a push wanting a credential
+this seat does not hold — send them *before* hitting it; where a dialog fires
+unforeseen, send them the moment it fires. The standard is not that every dialog
+is predicted, only that nothing stays quiet once it has happened. The fleet's
+pending-request list is the top section of the dotfiles seat's display, at
+`agent-records/seneschal-heads-up-display.md` in the dotfiles repository; this
+seat feeds that section rather than keeping its own.
+
+*What prompted it:* a seat ran an AppleScript command that raised a macOS dialog
+asking the terminal application for control of System Events. codekiln saw the
+dialog, could not tell which agent had asked, and had to have another agent trace
+the operating-system process to find out.
+
+**Prefer the answer that needs no grant, and never take a standing grant to serve
+one narrow lookup.** The query that prompted the dialog above was harmless in
+itself — a read-only list of process names, to learn whether one application was
+running. The grant is what was not harmless: control of System Events given to
+the terminal application is given to every process that ever runs inside it,
+which on this machine is every seat in the fleet, for as long as the grant lasts.
+A seat also does not request a grant on another seat's behalf.
+
+**Never make codekiln resolve a reference.** Repeat the thing being named instead
+of pointing at it with a short reference; they cannot resolve a pointer the way a
+model can. This covers *the latter*, *the former*, *as above*, *that approach*,
+*the first item*, and any pronoun whose antecedent sits more than a sentence away.
+A count is the worst form, because it looks like information while withholding
+every fact — the phrase "two mechanisms named separately" was quoted back as
+undecodable, since the number says how many and nothing about what either
+mechanism is. Filed as
+`pages/My___Pref___Writing___Never make the reader resolve a reference.md`.
+This is the third form of one correction given three times in a day, after
+"concision is not shorthand" and "don't be indirect, be specific and explicit,
+with links and paths", so treat it as a standing preference rather than a note
+about one sentence.
+
+## Where the bed-down scripts are — checked, not relayed
+
+`bed-down`, `ctx-check`, `wake-successor` and `viewer`. Four scripts, and **none
+of them is in this repository.** Two byte-identical copies exist, at
+`tmp/fleet-2026-08-24/bin/` in the dotfiles repository and at the same path in the
+work knowledge vault; `cmp` reports all four identical across the two. A seat here
+looking locally finds nothing and has to reach across to the dotfiles copy.
+
+Both claims reaching this seat about the location were wrong. One said dotfiles
+only, one said the knowledge-garden repository, and the correction offered — a
+copy in each repository, use the one your pane is in — does not work here, because
+this repository has no copy to use. `tmp/` is gitignored in both repositories that
+do carry the scripts and the scripts are untracked in both, so every copy exists
+on this machine alone and a fresh clone gets none of them. This garden is the
+exception that makes the whole pattern easy to misread: its own `tmp/` is tracked
+and published.
+
 ## Settled on 2026-08-18 — do not relitigate
 
 - **The journal carries the change log and no agent-written narrative.** codekiln
@@ -234,3 +296,16 @@ next; both survived because staging named paths.
 
 The HUD pane was already up when this context woke — it survived the respawn on
 this occasion, so check before splitting rather than assuming either way.
+
+Three standing rules arrived from codekiln through the dotfiles seat after that
+work was pushed, and are recorded in their own section above and in the graph:
+announce a permission request before codekiln is asked for it, prefer the answer
+that needs no grant, and never make codekiln resolve a reference. The first two
+went on `[[My/AI/Agent/Fleet]]` under what the fleet expects of a seat; the third
+is a new page under `[[My/Pref/Writing]]`, which is the namespace the graph
+already keeps such preferences in.
+
+This seat has **no pending permission or authentication request**. Nothing this
+day needed a grant, hit an SSO wall, or raised a dialog, and nothing is queued for
+the dotfiles seat's pending-request section. That is stated rather than left out,
+because an empty answer and an unanswered question look the same from outside.

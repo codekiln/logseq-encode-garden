@@ -30,6 +30,7 @@ see-also:: [[My/AI/Agent/Fleet]], [[Chroma/Paper/25/07/Context Rot - Increasing 
 		- Write it for someone with none of the author's context, because that is exactly who reads it.
 		- A day's report doc and a handoff doc are different documents with different readers. The report says what happened; the handoff says what to do next.
 	- ## Where the scripts live
-		- As of [[2026/08/24]] both sit in `bin/` beside the day's fleet conventions, under the `tmp/` tree of [[My/Dotfiles]]. **That is a staging location, not a home** — `tmp/` is gitignored, so nothing there survives on its own.
+		- Four of them, not two: `bed-down`, `ctx-check`, `wake-successor` and `viewer`. As of [[2026-08-24 Mon]] they sit in `bin/` beside the day's fleet conventions, under the `tmp/` tree, and there are **two byte-identical copies** — one in [[My/Dotfiles]] and one in the work knowledge vault. Use the copy in whichever repository the pane is working in, and note that **this garden holds neither**: a seat here that looks locally finds nothing and has to reach across.
+			- **That is a staging location, not a home.** `tmp/` is gitignored in both repositories that carry the scripts, and the scripts are untracked in both, so every copy exists on this machine only and a fresh clone gets none of them. This garden is the exception that makes the pattern easy to misread — its own `tmp/` is tracked and published.
 		- Where they land permanently is a [[My/Dotfiles]] question and goes through [[My/Pref/Dev/AI/OpenSpec]]; it is not settled here. Recording the path as though it were the answer is how a garden page rots.
 		- `bed-down` reads a file's age with `stat -f %m`, which is the BSD form — it wants the GNU spelling to run on Linux.
