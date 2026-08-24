@@ -51,7 +51,7 @@ tags:: [[CMMC]], [[Security/CUI space]]
 					- from physical access to electronic access
 				- the way we go about this, we're all engineers
 				- we try to do the amount that has the most impact
-				- we are in fortunate position, because we can collaborate with HUIT and HBS IT
+				- we are in fortunate position, because we can collaborate with HUIT and HBS IT <!-- secretlint-disable-line -- verbatim public panel transcript, not first-person -->
 				- so the most impact is infrastructure
 				- prioritize system integrity
 				- network integrity

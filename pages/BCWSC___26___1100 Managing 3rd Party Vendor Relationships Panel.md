@@ -5,7 +5,7 @@ tags:: [[Vendor/Management]]
 	- Panelists
 		- [[Person/Adam Scaramella]]
 			- [[Uni/Harvard]]
-			- works at [[Org/HU/HBS]]
+			- works at [[Org/HU/HBS]] <!-- secretlint-disable-line -- a speaker's public affiliation, not first-person -->
 				- 26 years there
 		- [[Person/Mike Gioia]]
 			- (Babson)
