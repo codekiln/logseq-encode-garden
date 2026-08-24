@@ -50,8 +50,10 @@ server**. On the next `kill-server` or reboot the cap silently returns to `10` a
 session names start being cut again. This is the same origin already documented for
 `status-left` and `status-right` on this server.
 
-*Open item, not mine to close:* making it survive needs one line in the tmux config, which
-is a dotfiles change and goes through OpenSpec. Recorded on the page; not acted on.
+*Closed the same day, not by me.* The seat working `tmux-status-left-spec` added
+`set -g status-left-length 40` to the chezmoi source for the tmux config and updated the
+page (`aef93c23`), with an isolated-socket probe and a `-f /dev/null` negative control. The
+finding stands as measured at 09:18; the page now records the fix rather than the gap.
 
 **An ahead-behind count is not a fact about the remote.** Covered above and filed as a Q
 page. The mechanism worth carrying: the count answers the question it was built for, and a
@@ -70,6 +72,17 @@ assumes. Anything written to `tmp/` in this garden is a candidate for publicatio
 should be treated as such. This report was scanned for credential-shaped strings before
 being committed.
 
+## 3c. This working copy is shared, and "clean" is a snapshot
+
+While I was committing the browser page, another seat committed `aef93c23` into **this same
+checkout** — my commit's parent turned out to be theirs rather than mine. Nothing broke,
+because I stage named paths; a `git add -A` at that moment would have swept up whatever
+they had in flight.
+
+So the three facts I reported — default branch, in sync, tree clean — were true when read
+and can be falsified by a peer seconds later. They describe a moment, not a state that
+holds. The same is true of any such report from a seat sharing a checkout.
+
 ## 4. Decisions taken alone
 
 - Merge rather than rebase: this repo's history already carries `Merge branch 'main'`
@@ -77,10 +90,16 @@ being committed.
 - Union on the journal conflict rather than picking a side.
 - New pages under `My/AI/Agent/Fleet` as a sibling of `My/AI/Agent/Chief of Staff`, since
   the hierarchy belongs to the fleet rather than to any one seat.
+- Raw email addresses left out of the browser page. This repo is public, neither address
+  appears anywhere else in it, and the profile *directory* name is the whole handle an agent
+  needs — the addresses would have been a new publication for no operational gain.
+- No browser work taken. There was none to do here, and taking some to test an invocation
+  would have contended for `Default` against Myer's own open window.
 - Every wikilink resolved against the live graph before linking. The only unresolved
   targets in what I wrote are established logical pages already used across the graph
   (`[[Zsh]]` 20 refs, `[[Bash]]` 11, `[[Person/codekiln]]` 22, date pages); no new stub
-  was created.
+  was created. `[[Chrome]]` was caught and de-linked before commit — it had no page and no
+  other user in the graph, so it would have been one.
 
 ## 5. Next
 
