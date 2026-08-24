@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Software/Project]]
 created-by:: [[Person/Can Celik]]
 date-created:: [[2026/03/27]]
-see-also:: [[tmux]], [[Zellij]], [[Terminal/Multiplexer]], [[My/AI/Agent/Chief of Staff]]
+see-also:: [[tmux]], [[Zellij]], [[Terminal/Multiplexer]], [[My/AI/Agent/Chief of Staff]], [[My/AI/Agent/Fleet]]
 
 - # [herdr](https://herdr.dev)
 	- Terminal-native agent multiplexer: surfaces the state of every coding agent at a glance — blocked, working, done — as real terminal panes rather than a wrapped interpretation of them. Self-described as "the runtime your coding agents live on."
@@ -19,3 +19,8 @@ see-also:: [[tmux]], [[Zellij]], [[Terminal/Multiplexer]], [[My/AI/Agent/Chief o
 		- Installed from [[My/Dotfiles]] since [[2026/08/11]] as a global [[mise]] tool, alongside [[tmux]] rather than replacing it, to try the agent-state pane in daily use.
 			- Config lives at `~/.config/herdr/config.toml` and holds two settings. `onboarding = false` stops herdr's first-run write from editing a [[chezmoi]]-managed file; `[update] version_check = false` leaves the version to [[mise]], which herdr already defers to. Its defaults supply the rest — the `ctrl+b` prefix and [[Catppuccin/Mocha]].
 			- Detection manifests stay on: they refresh the screen-pattern rules behind the blocked/working/idle labels, which decay as agent interfaces change.
+	- ## Retired here on [[2026/08/24]]
+		- The server was stopped that morning and its ~24 orphaned sessions killed. [[My/AI/Agent/Fleet]] runs on [[tmux]] now, and the standing instruction is not to start the herdr server or use `herdr` commands.
+		- The reason was hierarchy rather than any fault in the agent-state pane. A herdr workspace holds panes, and the agent name carried the whole address in 32 characters, so `<workspace-label>-<tab-label>` had to encode the repository and the work item together. [[tmux]] names five nested levels separately — session, window, pane, `claude` session, branch and worktree — and `C-b w` walks all of them in one picker.
+		- What went with it is the blocked/working/done label read off the pane border, which [[tmux]] has no equivalent for. The fleet reads a session's state from its own transcript instead — see [[My/AI/Agent/Fleet/Bed Down]] on `ctx-check`.
+		- Orphaned sessions were the practical cost of the run: nothing reaped a workspace whose agents had finished, so they accumulated until the server was stopped by hand.

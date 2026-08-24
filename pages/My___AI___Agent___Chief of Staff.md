@@ -1,5 +1,5 @@
 tags:: [[Diataxis/How To]]
-see-also:: [[My/Knowledge/Garden/logseq-encode-garden]], [[herdr]], [[Logseq/Journal]]
+see-also:: [[My/Knowledge/Garden/logseq-encode-garden]], [[My/AI/Agent/Fleet]], [[herdr]], [[Logseq/Journal]]
 github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/My___AI___Agent___Chief%20of%20Staff.md
 
 - # Chief of Staff
@@ -57,11 +57,14 @@ github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/M
 		- The agent name is `<workspace-label>-<tab-label>` inside 32 characters. This workspace's label is `encode-garden`, which leaves 18 characters for a tab label naming the work item.
 		- A brief that stops at the page leaves the journal and the commit behind, so a brief written here names the scribe as the agent that commits.
 	- ## The tmux session
-		- The seat holds a [[tmux]] session named `ls-encode-garden`. Window `0` is `hayward`, and the standing scribe keeps a window beside it.
+		- The seat holds a [[tmux]] session of its own. Since [[2026/08/24]] it is named for the seat and the day — `hayward-2026-08-24` — rather than for the repository, per [[My/AI/Agent/Fleet]]. The standing scribe keeps a window beside the seat's own.
+			- The seat name moved up a level in the process. It named window `0` of a session called `ls-encode-garden`; it now names the session, and the date says which day's run. Both are visible in [[tmux/Status Line]] wherever [[tmux/Option/status-left-length]] is wide enough to draw them.
 		- One window per logical job, named for the work rather than for the agent doing it. The window list is the docket, and `tmux list-windows` reads it back.
 		- A job window closes when its item is done by the standard above — links resolving, the day's journal carrying the change, the files committed. A window left open past that reports work in flight that is not.
 		- The scribe's window is standing rather than a job, and lasts the day.
 		- This replaces one chief per [[herdr]] workspace. The seat, the docket, and the record are indifferent to which multiplexer holds them; what changes is the naming budget, since a tmux window name is not bounded the way a 32-character agent name was.
+		- [[herdr]] is retired as of [[2026/08/24]], so this is no longer one of two options in use. What the seat gained is depth: five named levels down to the branch and worktree, read back with `C-b w` — [[My/AI/Agent/Fleet]].
+		- A day's work is several context windows rather than one, ended deliberately at 200k tokens — [[My/AI/Agent/Fleet/Bed Down]]. The seat and its record survive that; a session does not.
 	- ## The day's heads-up display
 		- The [[Filed]] / [[Updated]] change log in `journals/YYYY_MM_DD.md` doubles as the day's status board. Written as each item lands rather than swept up at dusk, it answers what the day has accomplished at any hour rather than only after it ends.
 		- Above it sit the topic-led blocks, which carry the substance of the day's inquiries — the answer itself, not a note that an answer happened.
