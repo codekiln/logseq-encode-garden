@@ -24,7 +24,9 @@ github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/M
 		- Opinions and principles that outlast one task belong here in the garden, under [[My/Pref]] or [[My/AI/Rule]], where the agents in every repo can read them. Routing them here is part of the docket.
 	- ## Done here
 		- A work item is done when its links resolve against real pages and aliases, the day's journal carries the change, and the files are committed and pushed.
-		- Keeping `journals/YYYY_MM_DD.md` current is part of the job: the topic-led blocks up top and the [[Filed]] / [[Updated]] change log at the end, per [[Logseq/Journal]].
+		- Keeping `journals/YYYY_MM_DD.md` current is part of the job, and what the seat writes there is the [[Filed]] / [[Updated]] change log — nothing else.
+			- **The narrative above the change log is [[Person/codekiln]]'s, and the seat neither writes it nor removes it.** Both halves matter: three agent-written narrative blocks were deleted from the [[2026-08-18 Tue]] journal by hand, and a top-level block in codekiln's own voice was added above that day's [[Filed]] hours later. Prose there is not evidence that anything went wrong.
+			- [[Logseq/Journal]] still instructs those blocks, and [[Logseq/Journal/Editorial headings]] exists to teach writing them. Following either reproduces the deletion — it has happened twice. Changing a convention page is codekiln's call, so the contradiction is carried on the seat's Heads Up Display rather than settled here.
 		- Work goes straight to `main`. The repo carries `main` plus the `gh-pages` branch the published site is built from, so a work item finishes without a feature branch or a review to wait on.
 		- A graph has no build and no test suite, so the work left undone is the work nothing complains about. These are the conditions worth checking before calling a work item finished.
 	- ## What produces no error in a graph
@@ -57,7 +59,7 @@ github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/M
 		- The agent name is `<workspace-label>-<tab-label>` inside 32 characters. This workspace's label is `encode-garden`, which leaves 18 characters for a tab label naming the work item.
 		- A brief that stops at the page leaves the journal and the commit behind, so a brief written here names the scribe as the agent that commits.
 	- ## The tmux session
-		- The seat holds a [[tmux]] session of its own. Since [[2026/08/24]] it is named for the seat and the day — `hayward-2026-08-24` — rather than for the repository, per [[My/AI/Agent/Fleet]]. The standing scribe keeps a window beside the seat's own.
+		- The seat holds a [[tmux]] session of its own, named by the fleet's scheme rather than by anything this graph decides: `<seat>-<date>-<repo>`, where the seat is Hayward and the repository suffix for this graph is `LEG`. [[My/AI/Agent/Fleet]] holds the scheme and the constraints on it. Quoting the current name here would date the page — the scheme changed four times in the week of [[2026-08-24 Mon]] — so read the live one with `tmux display-message -p '#{session_name}'`. The standing scribe keeps a window beside the seat's own.
 			- The seat name moved up a level in the process. It named window `0` of a session called `ls-encode-garden`; it now names the session, and the date says which day's run. Both are visible in [[tmux/Status Line]] wherever [[tmux/Option/status-left-length]] is wide enough to draw them.
 		- One window per logical job, named for the work rather than for the agent doing it. The window list is the docket, and `tmux list-windows` reads it back.
 		- A job window closes when its item is done by the standard above — links resolving, the day's journal carrying the change, the files committed. A window left open past that reports work in flight that is not.
@@ -67,7 +69,7 @@ github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/M
 		- A day's work is several context windows rather than one, ended deliberately at 200k tokens — [[My/AI/Agent/Fleet/Bed Down]]. The seat and its record survive that; a session does not.
 	- ## The day's heads-up display
 		- The [[Filed]] / [[Updated]] change log in `journals/YYYY_MM_DD.md` doubles as the day's status board. Written as each item lands rather than swept up at dusk, it answers what the day has accomplished at any hour rather than only after it ends.
-		- Above it sit the topic-led blocks, which carry the substance of the day's inquiries — the answer itself, not a note that an answer happened.
+		- The substance of a day's inquiry goes on the page the inquiry produced, and the change log records that the page exists. A day's entry is complete with no prose in it, and a thin journal is the intended one.
 		- It stays a curated snapshot per [[Logseq/Journal]]: link-only lines, one section per page, grouped once a section runs long. Window names, job status, and which agent did what are operational and stay off the page.
 	- ## Commits
 		- Several agents and the human write into the one checkout, so one agent owns staging for the day and everyone else hands over finished files. A `git add` from a second agent stages whatever a third one left half-written.
