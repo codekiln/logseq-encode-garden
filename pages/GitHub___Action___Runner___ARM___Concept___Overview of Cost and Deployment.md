@@ -76,10 +76,11 @@ tags:: [[Writing/Co-Written with AI]], [[o3]]
 	- **Deploy a parallel Fargate-ARM environment** for comparative runtime analysis.
 	- **Develop and submit a comprehensive business proposal** based on pilot results.
 - ## Footnotes
-	- [^1]: [GitHub Blog, "Arm64 on GitHub Actions—Powering Faster, More Efficient Build Systems," Jan 2025](https://chatgpt.com/g/g-p-6863f2c41b50819186b76ca12252ec51-hbso-proj-service-template/c/687e8d5a-4308-8330-ab0b-868938f9c5fd?model=gpt-4o#user-content-fnref-1)
-	- [^2]: [GitHub Changelog, "Linux Arm64 Hosted Runners Now Generally Available," Sept 2024; internal Arcjet benchmark cited therein](https://chatgpt.com/g/g-p-6863f2c41b50819186b76ca12252ec51-hbso-proj-service-template/c/687e8d5a-4308-8330-ab0b-868938f9c5fd?model=gpt-4o#user-content-fnref-2)
-	- [^3]: [AWS Documentation, "AWS Graviton Processor Pricing and Performance," accessed Jul 2025](https://chatgpt.com/g/g-p-6863f2c41b50819186b76ca12252ec51-hbso-proj-service-template/c/687e8d5a-4308-8330-ab0b-868938f9c5fd?model=gpt-4o#user-content-fnref-3)
-	- [^4]: [S. Zhao, "Cost Optimization Gone Wrong: Lessons from Using ARM Runners in GitHub Actions," Dev.to, Jun 2024](https://chatgpt.com/g/g-p-6863f2c41b50819186b76ca12252ec51-hbso-proj-service-template/c/687e8d5a-4308-8330-ab0b-868938f9c5fd?model=gpt-4o#user-content-fnref-4)
-	- [^5]: [GitHub Docs, "About Billing for GitHub Actions," minute multiplier table, accessed Jul 2025](https://chatgpt.com/g/g-p-6863f2c41b50819186b76ca12252ec51-hbso-proj-service-template/c/687e8d5a-4308-8330-ab0b-868938f9c5fd?model=gpt-4o#user-content-fnref-5)
-	- [^6]: [Stack Overflow thread, "Docker Buildx—Building Multi‑Platform Images Much Slower than Single Platform," Jan 2023, and community benchmarks](https://chatgpt.com/g/g-p-6863f2c41b50819186b76ca12252ec51-hbso-proj-service-template/c/687e8d5a-4308-8330-ab0b-868938f9c5fd?model=gpt-4o#user-content-fnref-6)
-	- [^7]: [Docker Buildx Issue #2810, "QEMU Build 8× Slower than Native," Nov 2024](https://chatgpt.com/g/g-p-6863f2c41b50819186b76ca12252ec51-hbso-proj-service-template/c/687e8d5a-4308-8330-ab0b-868938f9c5fd?model=gpt-4o#user-content-fnref-7)
+	- These sources were consulted through a private conversation that is not publicly reachable, so each footnote names the original rather than linking it.
+	- [^1]: GitHub Blog, "Arm64 on GitHub Actions—Powering Faster, More Efficient Build Systems," Jan 2025.
+	- [^2]: GitHub Changelog, "Linux Arm64 Hosted Runners Now Generally Available," Sept 2024; internal Arcjet benchmark cited therein.
+	- [^3]: AWS Documentation, "AWS Graviton Processor Pricing and Performance," accessed Jul 2025.
+	- [^4]: S. Zhao, "Cost Optimization Gone Wrong: Lessons from Using ARM Runners in GitHub Actions," Dev.to, Jun 2024.
+	- [^5]: GitHub Docs, "About Billing for GitHub Actions," minute multiplier table, accessed Jul 2025.
+	- [^6]: Stack Overflow thread, "Docker Buildx—Building Multi‑Platform Images Much Slower than Single Platform," Jan 2023, and community benchmarks.
+	- [^7]: Docker Buildx Issue #2810, "QEMU Build 8× Slower than Native," Nov 2024.
