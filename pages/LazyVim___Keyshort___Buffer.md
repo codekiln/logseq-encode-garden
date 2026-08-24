@@ -2,6 +2,9 @@
 	- **List Open Buffers** [[Card]]
 		- Shortcut: `<leader>fb`
 		- Description: Opens the [[nvim/Plugin/snacks.nvim]] picker over open buffers. `<leader>,` is the same thing on a shorter chord; `<leader>fB` widens it to all buffers including unlisted ones.
+	- **Jump to a Buffer by Letter** [[Card]]
+		- Shortcut: `<leader>bj`
+		- Description: Labels every entry in the [[nvim/Plugin/bufferline.nvim]] strip with a letter and jumps to whichever one is typed. Constant effort however far away the buffer is, where `<S-h>` and `<S-l>` cost one press per buffer crossed.
 	- **Next and Previous Buffer** [[Card]]
 		- Shortcut: `<S-l>` next, `<S-h>` previous
 		- Description: Steps through the buffer list. `S-` is [[Key/Shift]], so these are plain `H` and `L` — which normally jump to the top and bottom of the screen — rebound to buffer navigation.
@@ -13,3 +16,4 @@
 		- Description: Deletes the buffer but keeps the window layout. `<leader>bD` deletes the buffer *and* its window; `<leader>bo` closes every other buffer.
 	- [[My Note]]
 		- Buffer order and the tab-like strip at the top come from [[nvim/Plugin/bufferline.nvim]]; `[B` / `]B` reorder buffers rather than navigate them.
+		- Those chips look like tabs and are not: they render *buffers*, so `gt` and `gT` do nothing to them. Those keys move between tabpages, a separate container holding its own window layout — [[vim/Q/What is a tabpage in vim?]].
