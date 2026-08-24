@@ -18,6 +18,8 @@ logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Term]]
 			- "the co-existence case" and "the absolute fallback"
 				- > A test that pins this — the co-existence case resolving to the absolute
 				    fallback.
+			- each keystroke is a decision that can be "genuinely" belong to me?
+				- >  One decision is genuinely yours, and it isn't a keystroke.
 		- [[Person/Tamay Besiroglu/Post/26/06/One interesting pattern with Fable 5 is that it will]]
 			- > "The morning's slim-scan fix cured the scan hang"
 			- > "this is a latent-drift API-shape wrinkle", etc.
