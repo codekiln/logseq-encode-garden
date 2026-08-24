@@ -12,7 +12,7 @@ see-also:: [[My/AI/Agent/Fleet]], [[My/AI/Agent/Chief of Staff]]
 			  | `Profile 3` | `HU extension g.harvard` | a third Harvard-adjacent one   |
 		- `Default` is the `last_used` profile and the one holding the live sessions.
 		- Its label is `Person 1` — Chrome's placeholder for a profile that was never renamed. The profile carrying the identity that matters is the one whose label says least about it, while the two labelled for Harvard accounts are the two to leave alone.
-	- ## An isolated profile turns a locked door into an empty room
+	- ## An unauthenticated profile renders a blocked page as empty
 		- A fresh or isolated browser profile carries none of the signed-in sessions. An SSO-gated page opened in one does not report a refusal — it renders as though the content is not there.
 		- The failure therefore arrives as **emptiness rather than as an error**: no exception, no status code worth noticing, no prompt. An agent reading that result concludes the search found nothing, and reports silence.
 		- This is the shape [[My/AI/Agent/Chief of Staff]] records under a check that reports a break where none exists. Well-formed output carries no signal that it is a fragment, and a confident empty result earns no second look.

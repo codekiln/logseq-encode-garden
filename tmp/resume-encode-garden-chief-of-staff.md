@@ -1,6 +1,6 @@
 # Resume note — Hayward, the encode-garden chief-of-staff seat
 
-Last refreshed 2026-08-18. Written for a successor with none of this context.
+Last refreshed 2026-08-24. Written for a successor with none of this context.
 
 ## Read these first
 
@@ -19,12 +19,14 @@ Last refreshed 2026-08-18. Written for a successor with none of this context.
 
 ## Where the seat runs
 
-A tmux session, window `0` is `hayward`, with the standing scribe beside it and
-one window per job.
+A tmux session of its own, one window per job. As of 2026-08-24 the session is
+named `<seat>-<date>` — `hayward-2026-08-24` — so the seat name sits at session
+level rather than on window `0`. The fleet-wide shape is on the graph page
+`[[My/AI/Agent/Fleet]]`; the seat's own declaration carries it too.
 
-**Do not hard-code the session name.** It was `ls-encode-garden` and became
-`hayward-ls-encode-garden` mid-day on 2026-08-18, under a `<seat>-<repo>` sweep
-that also renamed peer sessions. Read the live name with
+**Do not hard-code the session name.** It was `ls-encode-garden`, became
+`hayward-ls-encode-garden` mid-day on 2026-08-18 under a `<seat>-<repo>` sweep,
+and is `<seat>-<date>` now. Three schemes in seven days. Read the live name with
 `tmux display-message -p '#{session_name}'`, which names the session the running
 pane is in. `tmux list-sessions` lists every session on the server, including
 other seats' — it answers a different question.
@@ -39,6 +41,13 @@ itself.
 The **scribe** owns `journals/YYYY_MM_DD.md` and **every commit**. Other agents
 write pages and hand over paths; nobody else runs `git add`. Several agents and
 the human share one checkout, which is the whole reason staging is monopolised.
+
+**On 2026-08-24 no scribe ran for this graph**, and the seat's brief made the
+seat responsible for the journal and the commits. That is the exception, not a
+change to the arrangement. The checkout was still shared: a peer seat working the
+dotfiles tmux spec committed `aef93c23` into it mid-task, and the seat's own next
+commit landed on top of theirs. Staging named paths is what kept the two apart —
+the rule held with nobody awake to enforce it, which is the point of it.
 
 Agent-to-agent traffic goes over the **cross-session message channel**, not
 `tmux send-keys`. A lone `send-keys '<text>' Enter` call delivers the text and
@@ -60,7 +69,11 @@ that is not.
 
 - **The journal carries the change log and no agent-written narrative.** codekiln
   deleted all three topic-led blocks from that day's journal themselves. Do not
-  write them.
+  write them. **This was violated on 2026-08-24** — the seat wrote five editorial
+  blocks into that day's journal, following the graph page `[[Logseq/Journal]]`,
+  which still instructs them. Caught by reading this note and removed before the
+  day closed. The graph page and `[[Logseq/Journal/Editorial headings]]` both
+  still teach the deleted practice; see open items.
 - **Grouping labels are terse and subject-named**, chosen by codekiln: `agents`,
   `gdrive`, `tmux`, `claude code`. Spaces, not hyphens — spaces are attested in
   this graph, hyphens are not. Grouping is a page-wide decision, not a
@@ -87,9 +100,10 @@ that is not.
    URLs. A naive host replacement breaks the three that went to `platform`.
    Separately, `claude config <sub>` appears in 5 pages and **no longer exists**
    in the CLI — worse than a redirect, which still works.
-2. **The declaration page names the wrong tmux session** since the rename.
-   Recommendation: describe the naming pattern rather than the literal name, so
-   it survives the next one.
+2. ~~The declaration page names the wrong tmux session.~~ **Closed 2026-08-24.**
+   The declaration now describes the `<seat>-<date>` pattern and says the seat
+   name moved up from window `0`, rather than naming a literal that has now
+   changed three times in a week.
 3. **Two repairs to `[[Logseq/Journal/Section/Friction]]`**: it instructs filing
    under **garddiff**, a mechanism with no journal appearance since 2026-05-12;
    and `[[Logseq/Journal]]` calls it a *recurring* section when it has appeared
@@ -120,6 +134,16 @@ that is not.
     sets a convention and 35 `Person/Steve Yegge/Agent/*` pages would become its
     instances.
 
+11. **`[[Logseq/Journal]]` and `[[Logseq/Journal/Editorial headings]]` contradict a
+    settled decision.** Both instruct topic-led narrative blocks with wry,
+    allusive, magazine-style titles. codekiln deleted exactly those on 2026-08-18
+    and has written none since; 2026-08-16, 08-18 and 08-19 are change log only.
+    An agent following the graph pages will reproduce the error, and this seat did
+    on 2026-08-24. Recommendation: the pages should record what the journals
+    actually do. **Not acted on** — a convention page is codekiln's to change, and
+    `[[Logseq/Journal/Editorial headings]]` exists only to teach the practice, so
+    the fix is a deletion rather than an edit.
+
 ## What produces no error here
 
 The graph has no build and no test suite, so the work left undone is the work
@@ -140,3 +164,11 @@ not "the doc omits these."
 mine arrived after the thing it was meant to prevent. What actually kept a
 half-finished page out of a commit was the scribe's rule to stage named paths —
 a rule that holds without anyone being awake.
+
+**A governing page can be out of date, and it still reads as governing.** The
+graph page said write editorial narrative; the human's own edits said the
+opposite, and the edits were four months newer than nothing — the page carried no
+date at all. When a page and an observed human action disagree, the action wins,
+and the disagreement is worth filing rather than silently obeying one side. Both
+were checked here by reading the last four journals rather than by reasoning about
+which source ought to govern.

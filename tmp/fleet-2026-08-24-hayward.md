@@ -83,6 +83,28 @@ So the three facts I reported — default branch, in sync, tree clean — were t
 and can be falsified by a peer seconds later. They describe a moment, not a state that
 holds. The same is true of any such report from a seat sharing a checkout.
 
+## 3d. One thing I got wrong, caught before close
+
+I wrote five topic-led narrative blocks into today's journal with editorial
+headings — "Depth Over Detection", "Ahead of What, Exactly", and so on — following
+`[[Logseq/Journal]]` and `[[Logseq/Journal/Editorial headings]]`, which instruct
+exactly that.
+
+The seat's own resume note records that codekiln deleted all three such blocks from
+the 2026-08-18 journal himself, and that headings should name the finding rather
+than allude to it. Checked against the journals: 08-16, 08-18 and 08-19 are change
+log only. The one journal carrying an editorial heading is 08-17 — this seat's own,
+from last week.
+
+Today's journal is now change log only, grouped under `agents` / `git` / `tmux` and
+`agents` / `herdr` / `tmux`, matching 08-18. One page heading was reworded from a
+metaphor to the finding it names.
+
+The underlying problem is filed as open item 11 in the resume note: the two graph
+pages still teach the deleted practice, so the next agent reading them reproduces
+this. Fixing them is a convention change and codekiln's call, so it is recorded and
+not acted on.
+
 ## 4. Decisions taken alone
 
 - Merge rather than rebase: this repo's history already carries `Merge branch 'main'`
