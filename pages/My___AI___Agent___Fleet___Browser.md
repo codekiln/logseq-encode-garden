@@ -18,12 +18,12 @@ see-also:: [[My/AI/Agent/Fleet]], [[My/AI/Agent/Fleet/Bed Down]], [[My/AI/Agent/
 		- A Chrome profile directory opens in **one process at a time**. [[Person/codekiln]]'s own browser holds `Default`, and no `--remote-debugging-port` is open on it, so this route does need him to quit or relaunch.
 		- **That is a fact about the route, not about the source.** On [[2026/08/24]] two seats measured this constraint and reported the *source* as blocked on him. It was the route. The correction cost a request for his attention that had to be withdrawn.
 		- Profile directories and profile labels are different things, and the labels do not identify these profiles. Read from `~/Library/Application Support/Google/Chrome/Local State`, checked [[2026/08/24]]:
-			- | Directory   | Label                     | Identity                       |
-			  |-------------|---------------------------|--------------------------------|
-			  | `Default`   | `Person 1`                | the HBS account — **use this** |
-			  | `Profile 9` | a `g.harvard.edu` address | a separate Harvard account     |
-			  | `Profile 3` | `HU extension g.harvard`  | a third Harvard-adjacent one   |
-		- `Default` is the `last_used` profile and the one holding the live sessions. Its label is `Person 1` — Chrome's placeholder for a profile that was never renamed. The profile carrying the identity that matters is the one whose label says least about it, while the two labelled for Harvard accounts are the two to leave alone.
+			- | Directory   | Label                 | Use                              |
+			  |-------------|-----------------------|----------------------------------|
+			  | `Default`   | `Person 1`            | the live sessions — **use this** |
+			  | `Profile 9` | names another account | leave alone                      |
+			  | `Profile 3` | names another account | leave alone                      |
+		- `Default` is the `last_used` profile and the one holding the live sessions. Its label is `Person 1` — Chrome's placeholder for a profile that was never renamed. The profile that matters is therefore the one whose label says least about it; the other two carry labels naming separate accounts, and those are the two to leave alone.
 	- ## An unauthenticated profile renders a blocked page as empty
 		- A fresh or isolated browser profile carries none of the signed-in sessions. An SSO-gated page opened in one does not report a refusal — it renders as though the content is not there.
 		- The failure therefore arrives as **emptiness rather than as an error**: no exception, no status code worth noticing, no prompt. An agent reading that result concludes the search found nothing, and reports silence.
