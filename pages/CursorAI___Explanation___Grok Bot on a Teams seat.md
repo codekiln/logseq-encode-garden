@@ -1,0 +1,52 @@
+tags:: [[CursorAI]], [[Diataxis/Explanation]]
+logseq-entity:: [[Logseq/Entity/Concept]]
+see-also:: [[CursorAI/Usage-Based Pricing]], [[CursorAI/Docs/Account/Teams/Members/Usage Controls]], [[CursorAI/v/1/0]]
+- # Grok Bot on a Teams seat
+	- Read on 2026-08-24 from [cursor.com/pricing](https://cursor.com/pricing), Cursor's [Grok Bot plans and billing](https://cursor.com/help/grok-bot/plans) and [Grok Bot getting started](https://cursor.com/help/grok-bot/getting-started) docs, xAI's [Grok Bot is now included with more plans](https://x.ai/news/grok-bot-more-plans) of 2026-08-21, and Cursor's [Updates to Bugbot for Teams and Individuals](https://cursor.com/blog/may-2026-bugbot-changes) of 2026-05-11. Cursor's pricing page and plan docs are both live surfaces that have changed twice since the launch, so each claim below carries the date it was read.
+	- ## Overview
+		- Grok Bot is xAI's agent product: a bot you keep around, which gets its own cloud computer, signs in to the tools you already use, and carries multi-step work through — on a schedule if you want — while nobody is watching it. It is sold both through xAI's SuperGrok subscriptions and through Cursor's plans.
+		- A Cursor Teams seat includes access at no additional charge, on the Standard seat as well as the Premium seat, and no administrator has to switch it on for a member. Cursor's own plans-and-billing doc answers the question of whether it costs extra with a flat "No".
+		- What can still cost money is usage rather than access. Included Grok Bot usage resets weekly, and work past that weekly allowance continues against the account's shared on-demand spend, where that is enabled.
+	- ## What Grok Bot is
+		- ### An xAI product distributed through Cursor's plans
+			- Grok Bot launched in beta on 2026-08-11 as a joint xAI and Cursor release, shipped as desktop and mobile applications rather than as a feature inside the editor. At launch, access was confined to SuperGrok Heavy, Cursor Ultra, and the Cursor Teams Premium seat. xAI's note of 2026-08-21 widened it to SuperGrok Plus, Cursor Pro+, Cursor Ultra, SuperGrok Heavy, and Cursor Teams on both the Standard and Premium seat.
+			- Two routes lead to the same product. One is a Cursor plan that includes Grok Bot. The other is an individual SuperGrok Plus or SuperGrok Heavy subscription linked to the Cursor account, which Cursor's docs describe as "a usage grant, not a Cursor plan" — the Cursor plan already in place stays in place. Only individual SuperGrok accounts can be linked this way; SuperGrok Team and SuperGrok Enterprise cannot.
+		- ### The four moving parts
+			- **Agents** are the persistent unit, and the reason the product is not just a chat window. An agent keeps its context and keeps working in the background, so one can be kept standing for a project or a client instead of being briefed again from nothing each session.
+			- **A cloud computer** gives each agent a real browser, file system, and terminal that outlive the app being closed. Where a service has no plugin, the agent works that service through the browser on its own machine, the way a person would.
+			- **Plugins** are the authorized connections to services. The sign-in happens in the person's own browser against the provider, and Cursor's docs state that the agent does not see the password.
+			- **Routines** are the schedule. A recurring job starts at its fixed time with nobody present to start it.
+		- ### What Grok Bot is not
+			- Grok Bot is not Bugbot. Bugbot is Cursor's own pull-request reviewer, which leaves comments on GitHub pull requests with a "Fix in Cursor" button that reopens the editor on a pre-filled prompt; Cursor's v1.0 changelog introduces it on [[CursorAI/v/1/0]] under the spelling `BugBot`, while Cursor's pricing page now writes it `Bugbot`. The two products also bill differently, which is the practical reason not to run them together in one's head: Bugbot on a Teams plan draws on on-demand spend, having moved off a $40-per-seat-per-month subscription at each customer's first renewal after 2026-06-08.
+			- Grok Bot is also not the Grok models. Grok 4.5 and Grok 4.6 are models in Cursor's model pool, metered as tokens — Cursor's Grok 4.6 announcement of 2026-08-12 prices standard on-demand use at $2 per million input tokens and $6 per million output tokens. Grok Bot is an application that shares their name. A plan can include the Grok models without that implying anything about Grok Bot, and it can include Grok Bot without that settling how the models are metered.
+	- ## What a Teams seat covers
+		- Cursor's plans-and-billing doc, read 2026-08-24, sets access out by plan:
+			- | Plan                               | Grok Bot access | What the doc says                                                    |
+			  | ---------------------------------- | --------------- | -------------------------------------------------------------------- |
+			  | Cursor Teams, Standard and Premium | included        | "Every member has access. No Premium seat or admin request required" |
+			  | Cursor Ultra                       | included        | "Access is included", with the highest weekly usage of any plan      |
+			  | Cursor Pro+                        | included        | generous weekly usage, below Ultra                                   |
+			  | Cursor Pro                         | not included    | "Grok Bot is not included"                                           |
+			  | Cursor Enterprise                  | by arrangement  | "Consult your account executive to enable Grok Bot access"           |
+		- ### The answer to the billing question
+			- Cursor's plans-and-billing doc puts the cost question and answers it directly: "No. Access is included with Cursor Pro+, Cursor Ultra, or a Cursor Teams seat, or through an individual SuperGrok Plus or SuperGrok Heavy account link."
+			- Cursor's pricing page corroborates that from the billing side rather than the documentation side, carrying "Access to Grok Bot" as a feature line on Teams Standard, listed at $40 per user per month on 2026-08-24, and on Teams Premium.
+			- That agreement is what makes the answer usable. A launch post saying a thing is included for teams is a marketing sentence, and marketing sentences and pricing pages have disagreed before; the pricing page is the surface the invoice follows. On 2026-08-24 the pricing page, the plans doc, and xAI's own 2026-08-21 note all say the same thing about a Teams seat.
+		- ### Where money can still appear
+			- Access being included is not the same as usage being unmetered, and the distinction is where a surprise would come from. Cursor's doc: "Paid Grok Bot access includes usage that resets weekly. When your weekly included usage runs out, extra Grok Bot usage can continue on your account's shared on-demand spend if on-demand is enabled."
+			- So the lever that governs whether Grok Bot can generate a bill is the same lever that governs the rest of the account's overflow — see [[CursorAI/Usage-Based Pricing]] for the mechanism and [[CursorAI/Docs/Account/Teams/Members/Usage Controls]] for where a team turns it on and sets a spend limit. With on-demand spend off, running out of the weekly allowance stops the work rather than charging for it.
+			- The word "shared" is the part worth holding on to on a team plan: Grok Bot overflow, and Bugbot runs at roughly $1.00 to $1.50 each, come out of the same on-demand pool.
+		- ### What the sources do not state
+			- The size of the weekly included allowance is not given anywhere on the pricing page or the plans doc — not in dollars, tokens, or number of runs. The plans doc ranks Ultra above Pro+ and says Teams "follows the Teams plan allowance", but never quantifies any of them.
+			- Whether a team administrator can disable Grok Bot for members is not addressed. The doc establishes only the opposite direction: no admin request is needed for a member to get access. Whether team-wide privacy mode covers a bot that browses the open web from its own cloud machine is likewise not addressed.
+			- Whether any trial exists for plans that do not include Grok Bot is unsettled. Coverage published around 2026-08-21 describes a limited-usage free trial for everyone else, but neither Cursor's pricing page nor its plans doc mentions one, and the plans doc says plainly of Cursor Pro that "Grok Bot is not included".
+			- For any of these, the sources that would answer are the ones that carry the billing relationship: the pricing page as of the date it is read, the Grok Bot plans-and-billing doc, Cursor support for a Teams account, and an account executive for Enterprise.
+	- ## How it might be used
+		- The shape of the product suggests the work it fits: jobs that take many steps, run against tools rather than against a codebase, and do not need a person watching each step. That is a different shape from an editor agent, which is why it ships as its own application.
+			- A standing agent per project or per client, holding the context of that work rather than being re-briefed, and organized into its own section alongside the others.
+			- Recurring work put on a routine — a report pulled and assembled at a fixed hour, a queue swept on a schedule — where the value is that it happens without anyone remembering to start it.
+			- Work against services that expose no API and have no plugin, reached through the browser on the agent's cloud computer the way a person would reach them.
+			- Handing off a long job and closing the app, including from mobile, since the cloud computer keeps running after the client disconnects.
+		- The constraint that should shape any of this is that the agent holds live logins on a cloud machine it controls. What it is connected to is what it can reach, without a person approving each action, so the choice of which tools to sign it in to is the real decision — more so than the choice of what to ask it.
+	- ## Where secondary accounts disagree
+		- Write-ups published in the days after the 2026-08-11 beta still describe Grok Bot as gated behind Cursor Ultra or a Cursor Teams Premium seat. That was accurate for launch week and stopped being accurate on 2026-08-21, when xAI's note added SuperGrok Plus, Cursor Pro+, and Cursor Teams Standard. Ten days was enough to make confident, well-written coverage wrong about who has to pay, which is why the plan question resolves against Cursor's pricing page and plans doc rather than against an account of them.
