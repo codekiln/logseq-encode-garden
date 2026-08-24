@@ -1,0 +1,24 @@
+see-also:: [[My/AI/Agent/Chief of Staff]], [[My/AI/Agent/Fleet]], [[Logseq/Journal]]
+
+- # LEG Todos Heads Up Display
+	- What in [[My/Knowledge/Garden/logseq-encode-garden]] is waiting on [[Person/codekiln]], and what state the repository is in. **Ordering is the priority** — re-order it to name what happens next.
+	- **Last swept: [[2026/08/24]] by Hayward.** If that is not today's date, nothing here has been re-checked since — read the page as a snapshot rather than as status. The sweeping seat moves this line; a sweep that left it alone did not happen.
+	- Scope is this garden only. The HBSO role and genai-services have their own Heads Up Displays in the work vault, under `Areas/Chief of Staff/` and `Areas/GenAI Services/GS Director/`; nothing is duplicated here.
+	- Items are here because **an answer from you changes what happens**. Anything this seat could settle itself is settled and recorded below rather than asked.
+	- ## Waiting on you
+		- TODO **Two graph pages teach a journal practice you deleted.** [[Logseq/Journal]] instructs topic-led narrative blocks, and [[Logseq/Journal/Editorial headings]] exists only to teach writing them wry and allusive. You deleted all three such blocks from the 2026-08-18 journal yourself and have written none since — 08-16, 08-18 and 08-19 are change log only. **This is not theoretical: this seat followed those pages on 2026-08-24 and put five of them in today's journal**, then removed them. The next agent reading those pages does the same. Recommendation: delete [[Logseq/Journal/Editorial headings]] and cut the narrative instruction from [[Logseq/Journal]]. A convention page is yours to change, which is why it is here rather than done.
+		- TODO **Say what the [[Filed]] / [[Updated]] line form is.** Five variants exist across the graph and no page states which is correct. Recommendation: `- # [[Filed]]` — the plurality, and the only common form satisfying the bullet rule in `logseq-core`. Separately and more importantly: **234 of 446 journals have a first line with no bullet**, and nobody should touch them until you say what caused it. A save that eats a bullet and a person choosing one look identical from here.
+		- TODO **Whether to create a `Logseq/Entity/Agent` type.** Held since 2026-08-13. Creating the type sets a convention, and 35 `Person/Steve Yegge/Agent/*` pages become its instances the moment it exists.
+		- TODO **Which page owns the settings precedence list.** [[Claude/Code/Settings]] and [[Claude/Code/Settings/Override]] both carry it, both are correct, and they will drift apart.
+		- TODO **Three aliases, suggested and unwritten**, since aliases are human-curated here: `Google/Workspace/AI` (recommended), a relative-path phrasing for the Google Drive Markdown question, and `Claude/Google Drive` (would skip).
+	- ## Repository state
+		- **In sync and clean.** `main` is the default branch and is checked out; `origin/main` matches it; the working tree is empty. At `45717dfd`.
+		- **The six commits held since 2026-08-17 are pushed.** They needed a merge first — `origin` had moved thirty commits ahead while the local ref sat still.
+		- 12 commits today. The day's pages are [[My/AI/Agent/Fleet]] and its two children, a tmux question, and a git question; the change log is in today's journal.
+		- **This checkout is shared.** A peer seat committed into it mid-task today. Any "clean" reading here describes a moment, not a state that holds.
+		- **`tmp/` in this repository is tracked and published**, unlike the other gardens the fleet works in. Working notes written there are public.
+	- ## Decided here, not asked
+		- Pushed the six held commits, merging rather than rebasing, and resolved the journal conflict as a union rather than picking a side.
+		- Left the browser profile's account addresses off [[My/AI/Agent/Fleet/Browser]]. The repository is public and the profile directory name is the whole handle an agent needs.
+		- Removed today's journal narrative rather than leaving it pending your review, on the strength of your own 2026-08-18 deletion.
+		- Did not touch [[Logseq/Journal]] or [[Logseq/Journal/Editorial headings]], because changing a convention page is not this seat's call. That is the first item above.

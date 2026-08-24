@@ -26,7 +26,12 @@ level rather than on window `0`. The fleet-wide shape is on the graph page
 
 **Do not hard-code the session name.** It was `ls-encode-garden`, became
 `hayward-ls-encode-garden` mid-day on 2026-08-18 under a `<seat>-<repo>` sweep,
-and is `<seat>-<date>` now. Three schemes in seven days. Read the live name with
+became `<seat>-<date>` on 2026-08-24, and gained a repo suffix the same afternoon:
+**`hayward-2026-08-24-LEG`**. `LEG` is logseq-encode-garden, `MK` the work
+knowledge vault, `GL` the langserve repo, `.F` dotfiles — the suffix exists so the
+`C-b w` tree says which repository a seat is in. Four schemes in seven days, two of
+them on one day. The claude session name is untouched by these renames, so peer
+addressing is unaffected. Read the live name with
 `tmux display-message -p '#{session_name}'`, which names the session the running
 pane is in. `tmux list-sessions` lists every session on the server, including
 other seats' — it answers a different question.
@@ -35,6 +40,32 @@ other seats' — it answers a different question.
 name after the rename — it is captured at session start, not read live. Reliable
 for who exists and for pane references; unreliable for anything about the session
 itself.
+
+## The Heads Up Display pane — re-establish it after every respawn
+
+The seat keeps `pages/My___AI___Agent___Chief of Staff___LEG Todos Heads Up Display.md`
+open in an nvim pane to the right of the chat pane, both panes titled `Hayward chat`
+and `Hayward HUD`. codekiln has asked for this twice, because **a respawned pane
+inherits no split** — `bed-down` replaces the pane, and the layout does not come
+back with it. Treat it as a waking-up step and do it before reporting in:
+
+```sh
+S=$(tmux display-message -p '#{session_name}')
+tmux split-window -h -p 45 -t "$TMUX_PANE" -c "$PWD" \
+  'nvim "pages/My___AI___Agent___Chief of Staff___LEG Todos Heads Up Display.md"'
+tmux select-pane -t "$TMUX_PANE" -T 'Hayward chat'
+tmux select-pane -t "$S:0.1" -T 'Hayward HUD'
+```
+
+If a right pane already exists and runs nvim, retitle it and `:edit` the page into
+it rather than splitting again — splitting blind gives three panes.
+
+The page is not a journal and not a record of how the seat works. It answers two
+questions for codekiln at a glance: what in this repository is waiting on him, and
+what state the repository is in. The **Last swept** line is a promise — a sweep
+that leaves it unchanged did not happen. Items earn a place only if his answer
+changes something; anything the seat can settle, it settles and records under
+*Decided here, not asked*.
 
 ## Standing arrangement
 
