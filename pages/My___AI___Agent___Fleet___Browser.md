@@ -3,6 +3,8 @@ see-also:: [[My/AI/Agent/Fleet]], [[My/AI/Agent/Fleet/Bed Down]], [[My/AI/Agent/
 
 - # Fleet — Browser
 	- Browser-shaped work has two routes, and they fail for different reasons. **Claude in Chrome is the first route.** Playwright is what is left when it is genuinely unavailable.
+	- **Stated by [[Person/codekiln]] twice on [[2026-08-24 Mon]]: [[Claude]] in Chrome by default, and [[Playwright]] only for a harness that is not Claude — [[CursorAI]] or [[Codex]].** That is narrower than the line above it, and the difference is the part to keep. It makes the reason to reach for Playwright the *harness* doing the work, rather than a seat's judgement that Chrome was unavailable — and that judgement is exactly what went wrong twice the same day, once as four classifier refusals recorded as a missing capability and once as a route's constraint reported as a blocked source. A seat running under Claude has no Playwright case to argue.
+	- A Playwright browser left running from 09:16 was closed at the noon wrap by the seat that found it. A browser nobody is driving is a stale worker like any other.
 	- ## Claude in Chrome, first
 		- The worked shape:
 			- ~~~sh
