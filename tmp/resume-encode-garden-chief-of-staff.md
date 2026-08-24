@@ -37,6 +37,8 @@ tmux select-pane -t "$S:0.1" -T 'Hayward HUD'
 
 If a right pane already exists and runs nvim, retitle it and `:edit` the page into it rather than splitting again — splitting blind gives three panes.
 
+**After a `wake-successor` hand-off the split is certainly gone**, not merely possibly gone. The successor is told to kill the predecessor's window, and that window holds both panes — the chat pane and the HUD pane with it. Re-split as the first thing you do, before reporting in.
+
 The page is not a journal and not a record of how the seat works. It answers two questions for codekiln at a glance: what in this repository is waiting on them, and what state the repository is in. The **Last swept** line is a promise — a sweep that leaves it unchanged did not happen. Items earn a place only if their answer changes something; anything the seat can settle, it settles and records under *Decided here, not asked*.
 
 ## Standing arrangement
@@ -65,17 +67,34 @@ These came from codekiln through the dotfiles seat late in the day. All three ar
 
 **Do not hard-wrap prose in a Markdown file.** One line per paragraph; the viewer wraps it, and hard-wrapping means the viewer re-wraps already-wrapped lines into a ragged full-line-then-remainder pattern that is harder to read, not tidier. Obsidian and LazyVim both wrap on their own. This arrived 2026-08-24 and applies to these notes as much as to graph pages — both notes in `tmp/` were hard-wrapped at 78 columns and have been unwrapped, content unchanged. Filed as `pages/My___Pref___Writing___Do not hard-wrap prose in Markdown.md`, which adds the reason nobody mentioned: a hard wrap makes a diff lie, since editing one word re-flows every line after it and the change arrives as a rewritten paragraph.
 
+## IN FLIGHT — a worker is running and its work is not committed
+
+**A worker named `hayward grok-bot 2026-08-24-mon` is running in window `grok-bot` of this session.** It was spawned at 11:52 and was alive and reading its brief when checked. Its brief is `tmp/brief-grok-bot-explanation.md`, committed, and it explicitly does not commit its own work — so **collecting its output is the successor's job**, and nobody else is going to do it.
+
+The task: codekiln has an email from Dov saying "Grok Bot" is included in their Cursor Teams plan, and wants one Diátaxis explanation page answering what it is, whether it needs extra billing on top of that plan, and how it might be used.
+
+What the successor has to do when it reports:
+
+- Take the file paths it hands over, check the links resolve, put the page under `[[Filed]]` in today's journal, stage those named paths only, and commit. Then **close the `grok-bot` window by hand** — nothing self-closes, and a window left open reports work in flight that is not.
+- **Expect it to come back with a question rather than a page, and treat that as success.** The brief tells it to stop rather than guess on two things: the product's real name, and the billing answer. "Grok Bot" is likely a voice-input mis-transcription — the graph already documents Cursor's `BugBot` from the v1.0 changelog of 4 June 2025 — but xAI's `Grok` is also real, has no page and no namespace anywhere in this graph, and creating one is a convention call rather than a writing task.
+- If it needs Dov's email, it escalates to the dotfiles seat rather than anyone reading codekiln's mail. **The email's contents must not be pasted into this repository** — `tmp/` here is tracked and published.
+- The billing claim is the one with money attached. Sourced and dated, or marked unknown with who would know. An unsourced inclusion claim inferred from a marketing sentence is the failure that costs codekiln money.
+
 ## A fleet instruction can arrive addressed to the wrong seat
 
 On 2026-08-24 a message from the dotfiles seat opened "Seneschal, new context window" and told this seat that "the window invariant obliges you to create" a Heads Up Display "in your own repository, since you are the seat with no Heads Up Display of your own yet". This seat has had one since earlier the same day, at `pages/My___AI___Agent___Chief of Staff___LEG Todos Heads Up Display.md`, and the same peer had praised it an hour before and asked for no changes to it. Acting on that instruction would have created a second, competing display.
 
 The rest of the same message was correct and was for this seat: the push request, the session rename, and the no-hard-wrap rule. So the failure mode is not a wrong message but a mixed one, and the salutation is the tell rather than the content. Check whether an instruction describes a state this seat is actually in before acting on it, and say which parts did not apply rather than silently dropping them.
 
-## Where the bed-down scripts are — checked, not relayed
+## Where the bed-down scripts are, and what wake-successor actually does
 
-`bed-down`, `ctx-check`, `wake-successor` and `viewer`. Four scripts, and **none of them is in this repository.** Two byte-identical copies exist, at `tmp/fleet-2026-08-24/bin/` in the dotfiles repository and at the same path in the work knowledge vault; `cmp` reports all four identical across the two. A seat here looking locally finds nothing and has to reach across to the dotfiles copy.
+`bed-down`, `ctx-check`, `wake-successor` and `viewer`. Four scripts, and **none of them is in this repository** — checked three times today, most recently at 11:47, by `find` over the whole working tree with untracked files included. Two byte-identical copies exist, at `tmp/fleet-2026-08-24/bin/` in the dotfiles repository and at the same path in the work knowledge vault; `cmp` reports all four identical across the two, synced 11:19. A seat here has no local copy to compare against and reaches across to the dotfiles copy.
 
-Both claims reaching this seat about the location were wrong. One said dotfiles only, one said the knowledge-garden repository, and the correction offered — a copy in each repository, use the one your pane is in — does not work here, because this repository has no copy to use. `tmp/` is gitignored in both repositories that do carry the scripts and the scripts are untracked in both, so every copy exists on this machine alone and a fresh clone gets none of them. This garden is the exception that makes the whole pattern easy to misread: its own `tmp/` is tracked and published.
+Three separate claims about the location have reached this seat and all three were wrong in some part: dotfiles only, the knowledge-garden repository, and "a copy in each repository, use the one your pane is in" — which cannot be followed here, because this repository has no copy. `tmp/` is gitignored in both repositories that do carry the scripts and the scripts are untracked in both, so every copy exists on this machine alone and a fresh clone gets none of them. This garden is the exception that makes the pattern easy to misread: its own `tmp/` is tracked and published.
+
+**Do not trust a claim that `wake-successor` preserves the repository code — read the script.** The failure mode is that a stale copy succeeds and silently drops the code, reporting a clean hand-off either way. Read at 11:48, the dotfiles copy does preserve it: it takes the stem from the **tmux** session name rather than the claude one, and strips the trailing stamp in the order HHMM, then lower-case weekday, then date, so an upper-case code cannot be eaten by the weekday pattern. Run against `hayward-LEG-2026-08-24-mon-1030` the stem comes out `hayward-LEG`, verified by running the function directly rather than by reading it. The script also refuses on a dot in the resulting name, refuses if another session already holds it, and refuses if the handoff is missing or more than 900 seconds old.
+
+That last guard is the one to plan around: **touch this note immediately before running the script**, or it exits 5 and nothing happens.
 
 ## Settled on 2026-08-18 — do not relitigate
 
@@ -121,5 +140,7 @@ The HUD pane was already up when this context woke — it survived the respawn o
 Three standing rules arrived from codekiln through the dotfiles seat after that work was pushed, and are recorded in their own section above and in the graph: announce a permission request before codekiln is asked for it, prefer the answer that needs no grant, and never make codekiln resolve a reference. The first two went on `[[My/AI/Agent/Fleet]]` under what the fleet expects of a seat; the third is a new page under `[[My/Pref/Writing]]`, which is the namespace the graph already keeps such preferences in.
 
 Late additions after that push: the tmux session was renamed to the fleet's fifth scheme of the week, the two notes in `tmp/` were unwrapped, and two pages went in — the no-hard-wrap preference and the corrected session-scheme section on `[[My/AI/Agent/Fleet]]`, which now records what a rename does and does not preserve.
+
+The last act of this context was to spawn the Grok Bot worker and hand off. Everything this context wrote is committed and pushed; the only uncommitted work in the repository is the worker's, and it has not produced any yet.
 
 This seat has **no pending permission or authentication request**. Nothing this day needed a grant, hit an SSO wall, or raised a dialog, and nothing is queued for the dotfiles seat's pending-request section. That is stated rather than left out, because an empty answer and an unanswered question look the same from outside.
