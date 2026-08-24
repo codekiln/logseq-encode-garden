@@ -94,7 +94,7 @@ Three separate claims about the location have reached this seat and all three we
 
 **Do not trust a claim that `wake-successor` preserves the repository code — read the script.** The failure mode is that a stale copy succeeds and silently drops the code, reporting a clean hand-off either way. Read at 11:48, the dotfiles copy does preserve it: it takes the stem from the **tmux** session name rather than the claude one, and strips the trailing stamp in the order HHMM, then lower-case weekday, then date, so an upper-case code cannot be eaten by the weekday pattern. Run against `hayward-LEG-2026-08-24-mon-1030` the stem comes out `hayward-LEG`, verified by running the function directly rather than by reading it. The script also refuses on a dot in the resulting name, refuses if another session already holds it, and refuses if the handoff is missing or more than 900 seconds old.
 
-That last guard is the one to plan around: **touch this note immediately before running the script**, or it exits 5 and nothing happens.
+That last guard is the one to plan around, and the way to plan around it is to **finish writing this note immediately before running the script**, so that the mtime is honest. `touch` would satisfy the check and defeat its purpose: the guard exists because a stale handoff produces a successor that cannot work, and a fresh timestamp on stale prose is exactly the state it is trying to catch.
 
 ## Settled on 2026-08-18 — do not relitigate
 
