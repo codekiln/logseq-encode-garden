@@ -105,6 +105,29 @@ pages still teach the deleted practice, so the next agent reading them reproduce
 this. Fixing them is a convention change and codekiln's call, so it is recorded and
 not acted on.
 
+## 3e. The browser page, corrected the same day
+
+The page first said no invocation was verified. That was true when written and
+wrong within the hour: `claude --chrome -n '<name>' --permission-mode auto
+'<brief-pointer>'` reaches an SSO-gated source with no login handshake, no
+debugging port, and without disturbing the running browser — demonstrated against a
+protected Splunk index.
+
+The page now leads with that as the **first** route and demotes Playwright to the
+fallback. The one-process-per-profile-directory constraint stays, relabelled as a
+fact about the Playwright route rather than about the source; two seats had
+reported a source blocked when only that route was.
+
+Which profile `claude --chrome` attaches to is recorded as **unsettled**. A session
+that answers proves a session works, not which profile it holds, and the page
+asserts neither way.
+
+Added with it: an absence is a dated claim like any other. A seat recorded
+`--chrome` unavailable after four classifier denials; the identical command worked
+first try after bedding down. So bedding down is itself a retry, and an absence
+should be written the way a count is — what was tried, when, and what the failure
+looked like.
+
 ## 4. Decisions taken alone
 
 - Merge rather than rebase: this repo's history already carries `Merge branch 'main'`

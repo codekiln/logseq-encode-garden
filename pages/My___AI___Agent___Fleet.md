@@ -28,7 +28,7 @@ see-also:: [[My/AI/Agent/Chief of Staff]], [[tmux]], [[herdr]], [[Terminal/Multi
 		- **The brief goes by path, never interpolated into the command.** Content inlined into a double-quoted shell string has its backticked terms executed and silently replaced, which deletes exactly the measurements a brief exists to carry.
 	- ## What the fleet expects of a seat
 		- Bed down at 200k tokens rather than letting a session balloon — [[My/AI/Agent/Fleet/Bed Down]].
-		- Browser work runs in the human's own Chrome profile, one task at a time across the fleet — [[My/AI/Agent/Fleet/Browser]].
+		- Browser-shaped work takes `claude --chrome` first and Playwright only when that is unavailable, one browser task at a time across the fleet — [[My/AI/Agent/Fleet/Browser]].
 		- Absorb rather than relay. A question answerable by reading something is not an escalation; it reaches the human only when a person outside the fleet is waiting on it, or when it needs authority only the human has.
 		- Durable opinions go in the garden, not hardcoded into a repository, which is why this page is here and not in [[My/Dotfiles]].
 		- Deliverables go on tracked paths. `tmp/` is gitignored, and a secret scan that skips ignored paths is bypassed entirely by `git add -f` on a `tmp/` file.

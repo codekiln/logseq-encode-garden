@@ -172,3 +172,13 @@ date at all. When a page and an observed human action disagree, the action wins,
 and the disagreement is worth filing rather than silently obeying one side. Both
 were checked here by reading the last four journals rather than by reasoning about
 which source ought to govern.
+
+**A capability recorded as absent decays, and bedding down is a retry.** On
+2026-08-24 a peer seat met four classifier denials on `claude --chrome`, recorded
+the capability as unavailable, and after bedding down ran the identical command
+successfully on the first try. The fleet had meanwhile reported a *source* as
+blocked when only one *route* to it was. Write an absence the way you would write
+a count: what was tried, when, and what the failure looked like — a successor
+cannot otherwise tell a standing limitation from a transient refusal, and has no
+reason to retest it. `[[My/AI/Agent/Fleet/Browser]]` carries the worked shape.
+
