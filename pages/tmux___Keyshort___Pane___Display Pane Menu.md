@@ -8,6 +8,12 @@
 		- Shortcut: `<prefix> >` then `h`
 		- Description: Splits the pane horizontally (new pane to the right). Same effect as the direct default shortcut `<prefix> %`.
 	- **Pane Menu: Vertical Split** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-08-26T04:00:00.000Z
+	  card-last-reviewed:: 2026-08-25T23:04:32.554Z
+	  card-last-score:: 1
 		- Shortcut: `<prefix> >` then `v`
 		- Description: Splits the pane vertically (new pane below). Same effect as the direct default shortcut `<prefix> "`.
 	- **Pane Menu: Swap Up** [[Card]]
