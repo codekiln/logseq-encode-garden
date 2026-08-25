@@ -1,8 +1,9 @@
+current-as-of:: 2026-08-25T08:32:25-04:00
 see-also:: [[My/AI/Agent/Chief of Staff]], [[My/AI/Agent/Fleet]], [[Logseq/Journal]]
 
 - # LEG Todos Heads Up Display
 	- What in [[My/Knowledge/Garden/logseq-encode-garden]] is waiting on [[Person/codekiln]], and what state the repository is in. **Ordering is the priority** — re-order it to name what happens next.
-	- **Last swept: [[2026-08-25 Tue]] by Hayward, first context window of the day.** If that is not today's date, nothing here has been re-checked since — read the page as a snapshot rather than as status. The sweeping seat moves this line; a sweep that left it alone did not happen.
+	- **Last swept: [[2026-08-25 Tue]] by Hayward, first context window of the day.** **`current-as-of::` in the frontmatter is the authoritative time** — it carries the minute and the offset, and this bullet carries what a stamp cannot: which seat swept, from which context window, and how to read the page when the stamp is old. If the stamp is not from today, nothing here has been re-checked since; read the page as a snapshot rather than as status. The date above is a link into that day's journal, for getting from this page to what the day actually did. The sweeping seat moves both; a sweep that left them alone did not happen.
 	- Scope is this garden only. The work role and genai-services have their own Heads Up Displays in the work vault, under `Areas/Chief of Staff/` and `Areas/GenAI Services/GS Director/`; nothing is duplicated here.
 	- Items are here because **an answer from you changes what happens**. Anything this seat could settle itself is settled and recorded below rather than asked.
 	- ## Waiting on you
