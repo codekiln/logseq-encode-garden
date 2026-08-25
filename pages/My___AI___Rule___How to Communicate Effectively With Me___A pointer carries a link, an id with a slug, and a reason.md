@@ -1,15 +1,16 @@
 see-also:: [[My/AI/Rule/How to Communicate Effectively With Me/Never make the reader resolve a reference]], [[My/Pref/Writing/Be specific and explicit]]
 
-- I hold about four to six things at once, and I do not scan back through a long document to find one of them again. A bare id asks me to do both. Everything written for me is read under that limit, so a reference has to carry its meaning with it. See [[My/Principle/Simplify/Avoid Cognitive Load]].
-- A pointer carries three things:
+- I hold max four to six things in my head at once, and I do not scan back through a long document to find one of them again. See [[My/Principle/Simplify/Avoid Cognitive Load]].
+- A "pointer" is a reerence to some external reference. It should be accompanied by the context I need to jog my memory (as a human):
 	- 1. A hyperlink I can follow, and preferably click.
-	- 2. The id with a slug beside it saying what it is about.
-	- 3. Why it is here — what I get from following it.
-- Every reference is fragile until it carries all three. One that carries fewer is unfinished writing.
-- An AI resolves an id across a million tokens for free, so a reference that costs nothing to leave bare reads as economical to the writer and lands on me as work. [[My/AI/Rule/How to Communicate Effectively With Me/Never make the reader resolve a reference]] covers pointers inside a document — a pronoun, *the latter*, *as above*. This page covers pointers that lead out of one, to a ticket, an issue, a commit or a file.
+	- 2. The id with a slug beside it saying what it is about. This id and slug should be a clickable hyperlink if possible. 
+	- 3. Why it is here - a concise sentence or two reminding me about what it is and why it needs my attention. 
+- Every reference is fragile until it carries assistive context. 
+- An AI resolves an id across a million tokens for free, so a reference that costs nothing to leave bare reads as economical to the writer and lands on me as work. [[My/AI/Rule/How to Communicate Effectively With Me/Never make the reader resolve a reference]] covers pointers inside a document — a pronoun, *the latter*, *as above*. This page covers other pointers, whether they lead out of a document or are within a document: to a ticket, an issue, a commit or a file, or anything else that counts as a reference.
 - # Whether a link is followable depends on where I am reading
+	- In general, when communicating with me, AI agents should use markdown documents with traditional markdown links that nvim can follow. Assume I'm reading in LazyVim/nvim by default. 
+	- My [[nvim]] carries no wikilink resolver, so `gf` on `[[Page/Name]]` opens nothing. A plain `https://` address does work there: [[nvim/Keyshort/Open/Open URL or Filepath Under Cursor]] hands it to the browser with `gx`, and [[Ghostty]] opens it on ⌘-click.
 	- In [[Logseq]], `[[Page/Name]]` is clickable, and a `((uuid))` block reference displays the referenced block's text inline, so the reminder arrives without my going anywhere.
-	- In an editor pane the same link is inert. My [[nvim]] carries no wikilink resolver, so `gf` on `[[Page/Name]]` opens nothing. A plain `https://` address does work there: [[nvim/Keyshort/Open/Open URL or Filepath Under Cursor]] hands it to the browser with `gx`, and [[Ghostty]] opens it on ⌘-click.
 	- So writing that stays in the graph can lean on a wikilink, and writing that reaches me in a pane, a chat reply or another repository needs a real URL or a real path. [[My/Pref/Dev/AI/OpenSpec]] already applies this to citations that travel: GitHub links to `main`, with the logical page name as the link text.
 - # An id that is the subject of the sentence stays verbatim
 	- A digest, a version string, a UUID, a key type, quoted terminal output — these are the thing under discussion, and a slug and a link would be wrong on them. Rewriting quoted output would also make the transcript false.
