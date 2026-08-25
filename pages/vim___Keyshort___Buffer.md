@@ -2,7 +2,7 @@
 	- **Toggle Between the Current and Alternate File** [[Card]]
 		- Shortcut: `<C-^>`
 		- Description: Switches to the alternate file — the buffer edited before this one — and pressing it again switches back. With a count, `{N}<C-^>` edits buffer `N` instead.
-		- The [[Mnemonic]]: `^` lives on the `6` key, so this is `Ctrl-6` on a keyboard where the caret needs Shift, and it is often written that way.
+		- **You press Ctrl and `6`. No Shift.** `^` sits on the `6` key, and Ctrl with that key produces the character vim calls `CTRL-^` — the name describes the character, not the keys, which is why it looks harder to type than it is. On some non-US layouts it is produced another way (`:help CTRL-^`).
 	- [[My Note]]
 		- The case it wins is two files edited in alternation, because it does not care where either one sits in the buffer list — unlike `<S-h>` / `<S-l>` in [[LazyVim/Keyshort/Buffer]], which step through that list in order.
 		- The alternate file is held in the `#` register, which is why `:e #` does the same thing in a longer form. The registers are set out on [[nvim/Q/What does " mean in nvim?]].
