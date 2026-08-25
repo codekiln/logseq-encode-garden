@@ -1,6 +1,6 @@
 # Resume note — Hayward, the encode-garden chief-of-staff seat
 
-Rewritten 2026-08-24 14:08 EDT, fourth context window of the day, at codekiln's afternoon stand-down. Written for a successor with none of this context. State and ownership only — the day's lessons live on the log page, which is the split the scribe declaration asks for. Do not refresh this note's timestamp in place; rewrite it, because the `wake-successor` guard exists to catch stale prose wearing a new date. Every timestamp here is EDT.
+Rewritten 2026-08-25 07:08 EDT. Written by the fourth context window of Monday 2026-08-24, which took the seat at 12:18 EDT, worked until 16:58 EDT past the stand-down it had prepared for, and is handing off on Tuesday morning at 379k tokens. The Monday afternoon sections below were rewritten at 14:08 EDT and the work after that is under its own heading. Written for a successor with none of this context. State and ownership only — the day's lessons live on the log page, which is the split the scribe declaration asks for. Do not refresh this note's timestamp in place; rewrite it, because the `wake-successor` guard exists to catch stale prose wearing a new date. Every timestamp here is EDT.
 
 ## Read these first
 
@@ -59,6 +59,8 @@ The brief flagged the Monks of New Skete as a gap because `created-by::` wants `
 - **One page or two for The Elements of Style.** Current thinking: one page. The graph keeps one page per book and this is one work with a revision history; two pages fragment it. codekiln's call if they care.
 
 ### The relevance framing, verified rather than assumed
+
+**Both books are already cited in the garden, in the rule that rests on them most directly.** `pages/My___AI___Rule___How to Communicate Effectively With Me___Talk to me like a friend, not in vague aphorisms.md` names Strunk and White *and* Thomas and Turner, and carries the same Amazon link that appeared in the three-book brief. It asks whether either book would allow a phrase before uttering it. So the brief's guess — that this book may be the source of codekiln's writing rules — has direct evidence behind it rather than resemblance, and **the book pages should link back to that rule page.** This was found while checking the seat's own register, not while researching the books, and it is the strongest single thing from Monday.
 
 The brief's central claim checks out and it is the valuable part of this import. Classic style as Thomas and Turner describe it — prose as a window onto a truth the writer has seen, writer and reader as equals, no ornament, the writer doing the work so the reader need not — is **nearly verbatim what the garden's own writing rules already say**, which makes the book plausibly their source. Read against the pages rather than taken on trust:
 
@@ -150,9 +152,35 @@ Then title the other pane by finding it with `tmux list-panes -t "$(tmux display
 
 **Do not trust a claim that `wake-successor` preserves the repository code — read the script.** As read at 12:14 EDT it takes the stem from the **tmux** session name and strips the trailing stamp in the order HHMM, weekday, date, so an upper-case code survives. It refuses on a dot in the resulting name, refuses if another session holds the name, and refuses if the handoff is missing or more than 900 seconds old. Plan around that guard by **writing this note immediately before running the script**; `touch` would satisfy the check and defeat its purpose.
 
-## State at 14:08 EDT
+## Monday after 14:10 — the keyshort cards, and one commit deliberately held
 
-**Tree clean, `origin/main` and `main` in sync at `7901524a`.** In a shared checkout that reading describes a moment, not a state that holds — codekiln committed twice into it this afternoon (`ab502829`, `6ed65f37`) and was editing live three times. The reading is `git fetch origin && git rev-list --left-right --count origin/main...main`.
+**`e6ac3123` is committed and NOT pushed, on purpose. Do not push it without codekiln saying so.** It is four keyboard-shortcut card pages: `pages/nvim___Keyshort___Open___Open URL or Filepath Under Cursor.md` (`gx`, at the nvim level because it is a core default rather than a LazyVim binding), `pages/vim___Keyshort___Buffer.md` (new group hub carrying `<C-^>`), `pages/vim___Keyshort___Argument List.md` (`:next` / `:prev` / `:first` / `:last`, `:args`, `:argdo`), and an update to `pages/LazyVim___Keyshort___Buffer.md` adding a Pick Buffer card at `<leader>bj` plus one clause on why `gt` / `gT` do not walk the bufferline strip.
+
+The task came from codekiln through a george worker, whose words were to write the files **but not push, so codekiln could look before it went anywhere.** Later the same evening the dotfiles seat relayed a general "all gardens commit and push as the day closes." Those two point at the same object, because `e6ac3123` is the only unpushed commit in the repository. **The specific hold with a stated reason was kept over the general housekeeping instruction**, and that is still the right reading until codekiln speaks. Publishing to a public repository is not undone easily.
+
+On Tuesday morning the dotfiles seat reported text `push it` sitting in this seat's composer and argued it was machine-suggested rather than typed, so the hold stood. **That conclusion is right but the evidence did not reproduce:** measured at 07:07 EDT Tuesday, this seat's composer is empty and its pane contains no SGR-2 (faint) sequence at all — the only occurrence of the words `push it` in the pane is inside the quoted text of that seat's own message. So the hold stands for the simpler reason that **nobody has ever instructed a push.** The probe is `tmux capture-pane -p -e -t '<pane-id>' | cat -v` and then look for `^[[2m`; address panes by id, since `-t '=session-name'` does not resolve for `capture-pane` or `send-keys`.
+
+Two corrections were made to the gap analysis that came with that task, and both are the kind worth repeating. A proposed `gt` / `gT` card would have **duplicated** rather than filled a gap: `pages/vim___Q___What is a tabpage in vim%3F.md` already carries `[[card]]` on its H1 with live review state and already gives `gt`, `gT` and `{N}gt`. And a key binding the other seat could not confirm was resolved from the mapping dump — `nvim --headless -c 'redir => g:o | silent nmap | redir END | call writefile(split(g:o,"\n"), "<path>")' -c 'qa!'`, remembering that which-key descriptions sit on the line *after* the mapping they belong to.
+
+**Not done and left for codekiln:** the journal lines for those four pages, because codekiln was editing `journals/2026_08_24.md` live in Logseq and editing a file Logseq holds open risks losing their work. The lines to add, with labels already attested in this graph's journals, are `nvim` and `vim` groups under `[[Filed]]` for the three new pages and a `lazyvim` group under `[[Updated]]` for the LazyVim page.
+
+**Two loose ends that are codekiln's calls, not the seat's:** `[[nvim/Plugin/bufferline.nvim]]` has no page file although `nvim/Plugin/snacks.nvim` and `nvim/Plugin/which-key.nvim` both do, and it now has two references pointing at nothing. And the on-disk encoding of a double quote in page titles is inconsistent — two files use `%22`, three use a literal `"`, while `?` is `%3F` in all five. Both forms resolve because Logseq matches on title, so it is cosmetic.
+
+## Check codekiln's writing rules BEFORE writing, not after
+
+This seat wrote an end-of-day reflection, was warned by a peer about register, checked the rules afterwards, and found its own draft broke several. Reading them first would have cost nothing.
+
+`pages/My___AI___Rule___How to Communicate Effectively With Me___Words and Phrases to Avoid.md` is the list. The words that caught this seat: **drift** (banned outright unless it is snow), **exactly** and **precisely** (intensifiers that add unearned confidence), **load-bearing**, **durable**, **gate** as a metaphor, **moves** for things that do not move, **comprehensive**, **absolutely**, **canonical**, and saying a hypothesis is **confirmed** or **correct** rather than not yet disproven.
+
+Beyond the word list, three rule pages object to the *shape* of AI prose: `Talk to me like a friend, not in vague aphorisms` (its example of what to avoid is an inverted saying of the form "X is genuinely yours, and it isn't Y" — this seat wrote many of those), `Do not coin phrases unless asked`, and `I am allergic to word salad`. A reflection built out of "the switched-off guard is the cost, not the wasted trip" constructions is the failure all three describe.
+
+**The rule page that objects to aphorisms is also the one that cites both of the books being imported**, which is how that finding turned up. Register-checking and the book task are the same reading.
+
+Monday's reflection went to the Reeve seat rather than being written directly, because Reeve is sole writer on the work vault's journal for 2026-08-24 — three seats appending to one journal page had already produced an add/add conflict that morning. A replacement version in plain register was sent after the first one; if only one appears in that vault, the plain one is the intended text.
+
+## State at 2026-08-25 07:08 EDT
+
+**One commit unpushed and deliberately held: `e6ac3123`.** `origin/main` is otherwise level with `main`, and nothing is behind. The working tree holds two files that are **codekiln's own uncommitted edits** — `journals/2026_08_24.md` and `pages/Word___Salad.md`, last committed by them at 13:54 Monday and modified since. **They are not the seat's to commit.** In a shared checkout that reading describes a moment, not a state that holds — codekiln committed twice into it this afternoon (`ab502829`, `6ed65f37`) and was editing live three times. The reading is `git fetch origin && git rev-list --left-right --count origin/main...main`.
 
 This context took the seat at 12:18 EDT and made **eight commits, all pushed**: `16ffd0dc` browser profile table, `1e856dca` ARM footnotes, `b42222c3` seat notes and `archive.ph`, `ce17e32c` the `.secretlintignore`, `72e3b4aa` journal line, `5f09f389` the eight inline exemptions, `7c4ac039` display sweep, `7901524a` log page.
 
