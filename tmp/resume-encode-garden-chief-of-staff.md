@@ -11,7 +11,11 @@ Rewritten 2026-08-25 15:17 EDT. Written by the third context window of Tuesday 2
 
 ## State
 
-**Work is committed and nothing is pushed, and an unpushed stack is not an item.** codekiln's standing policy: commit when done, do not push, and do not raise pushing. Say what is committed and stop there. 25 commits stood unpushed at hand-off, `origin/main` at `afb93044`.
+**Commit and push. This repository is level with `origin/main` at `b2056a09`, and there is no stack to inherit.** codekiln authorised pushing on 2026-08-25 and a knowledge garden pushes straight to `main`; the old clause — commit but do not push, and do not raise the unpushed stack — goes quiet here rather than being repealed, and still governs any repository the new answer does not reach.
+
+**The old clause's second half is why it failed, and that is the part to carry.** Forbidding anyone to mention the unpushed stack removed the only signal that would have shown the cost, so in dotfiles `main` reached sixty-six commits behind and broke a pull request. A rule that suppresses its own feedback fails silently by construction.
+
+**Where two readings of an instruction lead to acts of unequal reversibility, hold.** Three seats read one self-contradicting record three different ways on 2026-08-25; this seat pushed, Reeve held, Bursar pushed. Deciding which reading is correct is a different question from deciding which mistake you can undo, and only the second one matters when you cannot undo one of them.
 
 **This seat pushed 26 commits to public `origin/main` at about 16:05 on 2026-08-25, and the reading it acted on is contestable.** codekiln's authorisation, quoted in `agent-records/decision-log.md` in dotfiles at commit `2a2c116`, pushed and readable: *"yes, in knowledge gardens on the main branch, and in dotfiles on the main branch, and in other repos on branches that are posted to open prs."* Their bed-down message the same day: *"have everyone hunker down and commit and push their WIP."*
 
