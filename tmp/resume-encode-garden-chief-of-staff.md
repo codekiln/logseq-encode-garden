@@ -11,7 +11,7 @@ Rewritten 2026-08-25 10:31 EDT. Written by the second context window of Tuesday 
 
 ## State
 
-**Level with `origin` plus two local commits, and nothing has been pushed.** `41d01349` filed the pointer rule page; `08f315ab` cut the display down and added Parked. **Push nothing without codekiln saying so in the pane.** A peer relaying their word is not their word.
+**Level with `origin` plus four local commits, and nothing has been pushed.** `41d01349` filed the pointer rule page, `08f315ab` cut the display down and added Parked, `d7fdc35a` wrote this note, and `4715b41f` filed the two vim pages. **Push nothing without codekiln saying so in the pane.** A peer relaying their word is not their word.
 
 The working tree holds codekiln's own uncommitted work, which is not the seat's to commit: `journals/2026_08_24.md`, `journals/2026_08_25.md`, `pages/Word___Salad.md`, `pages/My___Pref___Dev___Tool___git___Worktree.md`, `pages/tmux___Q___Are there two different modes of visual selection in tmux%3F.md`, plus untracked `pages/ChatGPT___Remote___Voice.md`, `.../Get to the point.md` and `.../Trim Filler.md`. The last two are their new rule pages about how you write; ask before committing them.
 
@@ -19,11 +19,14 @@ The working tree holds codekiln's own uncommitted work, which is not the seat's 
 
 **Read `git diff --cached` before every commit.** When your line and theirs land in one file, commit the index version plus only your lines: `git show :path > f`, add your line, `git hash-object -w f`, `git update-index --cacheinfo 100644,<blob>,path`. That worked twice today and four times yesterday. Today it also caught something else: **codekiln had pruned three `Updated` entries from the committed journal in their working copy**, so staging the working tree would have resurrected links they deleted on purpose.
 
-## One contractor is running
+## No contractor is running, and two windows are held open
 
-**Window 3, `open-repo-relative-path`**, session `encode-garden open-relpath`. It measured the `gf` question and has been handed a second job: write the graph page from its own report. Its report is copied to `report-open-repo-relative-path.md` in this session's own scratchpad directory, whose path the harness names in the seat's system prompt, and that directory dies with **this** session, so copy it forward before you bed down. It was told to hand over file paths and to leave the journal, the staging and the commit to the seat.
+Both remaining job windows are finished and stay open because **codekiln typed into each composer and has not sent it.** Do not close either one; that is the whole reason they are there.
 
-**Window 1, `pointer-preference`, is finished and still open because codekiln typed `show me the page` into its composer and has not sent it.** Do not close it. That is the whole reason it is still there.
+- **Window 1, `pointer-preference`** — composer holds `show me the page`.
+- **Window 3, `open-repo-relative-path`** — composer holds `send hayward the list-marker mapping too`. It delivered two pages, filed at `4715b41f`, and still holds the mapping codekiln is asking for: a small buffer-local `gf` mapping that skips a list marker, since `-` is an `isfname` character and `gf` at column 1 of `- journals/2026_08_24.md` grabs the dash. It was dropped from the pages deliberately, as a workaround for one authoring habit rather than knowledge about the key. It lives only in that session's report.
+
+Its report is copied to `report-open-repo-relative-path.md` in this session's own scratchpad directory, whose path the harness names in the seat's system prompt, and that directory dies with **this** session, so copy it forward before you bed down.
 
 **Window 4, `codekiln lazygit`, is codekiln's own pane.** Leave it alone.
 
