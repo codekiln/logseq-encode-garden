@@ -21,6 +21,7 @@ see-also:: [[My/AI/Agent/Chief of Staff/LEG Todos Heads Up Display]], [[My/AI/Ag
 			  cd ~/ghq/github.com/codekiln/logseq-encode-garden && git fetch origin && git rev-list --left-right --count origin/main...main && git status --short
 			  ~~~
 		- **The identity guard runs on every commit and a whole-repo scan finds nothing.** It had never run before [[2026-08-24 Mon]], because `lefthook install` was never run in this clone.
+			- **Two published files sat outside that whole-repo scan until [[2026-08-25 Tue]].** `secretlint` has respected the `.gitignore` cascade by default since v13, and `.gitignore:36` is `**/CLAUDE.md`, so `pages/CLAUDE.md` and `journals/CLAUDE.md` — both tracked, both public — were handed to the guard and skipped in silence, which reads identically to a clean pass. The shared `secrets:scan` task now passes `--no-gitignore` when it is given explicit paths, and both files scan clean under it. Find this class with `git ls-files -i -c --exclude-standard`, which lists what is tracked and matched by an ignore rule at once.
 		- **`tmp/` is tracked and published here**, unlike the other gardens the fleet works in, so working notes written there are public.
 	- ## Closed items, with their reasoning
 		- ### The push hold, released
