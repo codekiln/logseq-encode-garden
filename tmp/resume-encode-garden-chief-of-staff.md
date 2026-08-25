@@ -21,12 +21,11 @@ The working tree holds codekiln's own uncommitted work, which is not the seat's 
 
 ## No contractor is running, and two windows are held open
 
-Both remaining job windows have delivered and stay open because **codekiln is typing into both composers.** Their unsent lines change from minute to minute — two were replaced within a few minutes of being read — so do not quote a line and act on it later, and do not close either window on the strength of the job being finished. Read the composer immediately before any kill, as its own step, and hold if anything is there.
+**codekiln closes their own contractor panes when the job is done.** They closed `open-repo-relative-path` themselves. What a seat owes is reading the composer immediately before any kill of its own, as a separate step, and holding if anything is sitting there unsent — their unsent lines change from minute to minute, two of them within a few minutes of being read, so never quote a line and act on it later.
 
-codekiln's standing policy says a contractor's window closes when its job is done. Their own live keystrokes in a pane outrank that, because a finished job is the seat's view and an unsent line is theirs.
-
-- **Window 1, `pointer-preference`** — delivered the pointer rule page, committed at `41d01349`.
-- **Window 3, `open-repo-relative-path`** — delivered two vim pages and the list-marker mapping, committed at `4715b41f` and `bf725515`. It still holds measurements that are on no page: submodules, Windows, a garden that is not a git repository, and whether `gf` reaches a path inside a `[[wikilink]]` or a `[label](dest)` are all untested rather than answered.
+- **Window 1, `pointer-preference`** — delivered the pointer rule page, committed at `41d01349`. Still open.
+- **Window 2, `lazyvim-terminal`**, session `encode-garden lazyvim-term` — hired this morning on codekiln's ask for a tutorial on the LazyVim terminal: opening it, moving focus between it and the editor, hiding and revealing, closing, running more than one, maximizing its window, and when an nvim terminal earns its place against a tmux pane. It commits its own work under the standing hiring policy and reports when the commit lands.
+- **Window 3, `open-repo-relative-path`** — closed by codekiln. Delivered two vim pages and the list-marker mapping at `4715b41f` and `bf725515`. Measurements that reached no page: submodules, Windows, a garden that is not a git repository, and whether `gf` reaches a path inside a `[[wikilink]]` or a `[label](dest)` are untested rather than answered.
 
 Its report is copied to `report-open-repo-relative-path.md` in this session's own scratchpad directory, whose path the harness names in the seat's system prompt, and that directory dies with **this** session, so copy it forward before you bed down.
 
