@@ -65,7 +65,7 @@ github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/M
 		- A job window closes when its item is done by the standard above — links resolving, the day's journal carrying the change, the files committed. A window left open past that reports work in flight that is not.
 		- The scribe's window is standing rather than a job, and lasts the day.
 		- This replaces one chief per [[herdr]] workspace. The seat, the docket, and the record are indifferent to which multiplexer holds them; what changes is the naming budget, since a tmux window name is not bounded the way a 32-character agent name was.
-		- [[herdr]] is retired as of [[2026/08/24]], so this is no longer one of two options in use. What the seat gained is depth: five named levels down to the branch and worktree, read back with `C-b w` — [[My/AI/Agent/Fleet]].
+		- [[herdr]] stopped being the primary multiplexer on [[2026/08/24]], so this is no longer one of two options in use, and it is not retired. What the seat gained is depth: five named levels down to the branch and worktree, read back with `C-b w` — [[My/AI/Agent/Fleet]].
 		- A day's work is several context windows rather than one, ended deliberately at 200k tokens — [[My/AI/Agent/Fleet/Bed Down]]. The seat and its record survive that; a session does not.
 	- ## The day's heads-up display
 		- The [[Filed]] / [[Updated]] change log in `journals/YYYY_MM_DD.md` doubles as the day's status board. Written as each item lands rather than swept up at dusk, it answers what the day has accomplished at any hour rather than only after it ends.

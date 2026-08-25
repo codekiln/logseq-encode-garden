@@ -3,7 +3,7 @@ see-also:: [[My/AI/Agent/Chief of Staff]], [[tmux]], [[herdr]], [[Terminal/Multi
 
 - # Fleet
 	- The set of AI agent seats [[Person/codekiln]] runs at once, and the harness that holds them. A seat is a standing role — a chief over one repository, a director over a group of them — and it outlives whichever session is sitting in it, the way [[My/AI/Agent/Chief of Staff]] describes for Hayward.
-	- Since [[2026/08/24]] the harness is [[tmux]]. [[herdr]] is retired: its server was stopped that morning and its ~24 orphaned sessions killed.
+	- Since [[2026/08/24]] the harness is [[tmux]]. [[herdr]] is no longer the primary multiplexer here — its server was stopped that morning and its ~24 orphaned sessions killed — and it is not retired.
 	- ## What tmux gives that herdr did not
 		- What [[herdr]] offered was agent-state detection on the pane border — blocked, working, done — read off screen patterns. What it could not offer was depth. A workspace held panes, and the agent name carried the whole address in 32 characters, so `<workspace-label>-<tab-label>` had to encode both the repo and the work item inside that budget.
 		- [[tmux]] gives five nested levels instead of two, each one named separately and none of them competing for the same 32 characters. The hierarchy *is* the address, so no single name has to carry it.
