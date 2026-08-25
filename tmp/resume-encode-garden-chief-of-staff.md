@@ -24,7 +24,7 @@ The working tree holds codekiln's own uncommitted work, which is not the seat's 
 **codekiln closes their own contractor panes when the job is done.** They closed `open-repo-relative-path` themselves. What a seat owes is reading the composer immediately before any kill of its own, as a separate step, and holding if anything is sitting there unsent — their unsent lines change from minute to minute, two of them within a few minutes of being read, so never quote a line and act on it later.
 
 - **Window 1, `pointer-preference`** — delivered the pointer rule page, committed at `41d01349`. Still open.
-- **Window 2, `lazyvim-terminal`**, session `encode-garden lazyvim-term` — hired this morning on codekiln's ask for a tutorial on the LazyVim terminal: opening it, moving focus between it and the editor, hiding and revealing, closing, running more than one, maximizing its window, and when an nvim terminal earns its place against a tmux pane. It commits its own work under the standing hiring policy and reports when the commit lands.
+- **Window 2, `lazyvim-terminal`**, session `encode-garden lazyvim-term` — hired this morning on codekiln's ask for a tutorial on the LazyVim terminal: opening it, moving focus between it and the editor, hiding and revealing, closing, running more than one, maximizing its window, and when an nvim terminal earns its place against a tmux pane. It commits its own work under the standing hiring policy and reports when the commit lands. **It was still working when this seat bedded down, so take delivery by reading its pane, then close the window as a separate step.** Its brief is in this session's scratchpad and dies with it; the job is on the display's own record and in the two quotes above.
 - **Window 3, `open-repo-relative-path`** — closed by codekiln. Delivered two vim pages and the list-marker mapping at `4715b41f` and `bf725515`. Measurements that reached no page: submodules, Windows, a garden that is not a git repository, and whether `gf` reaches a path inside a `[[wikilink]]` or a `[label](dest)` are untested rather than answered.
 
 Its report is copied to `report-open-repo-relative-path.md` in this session's own scratchpad directory, whose path the harness names in the seat's system prompt, and that directory dies with **this** session, so copy it forward before you bed down.
@@ -56,6 +56,22 @@ Its report is copied to `report-open-repo-relative-path.md` in this session's ow
 - **`.cursor/` and `.codex/` are untracked here** though `rulesync.jsonc` lists both as targets. Tracked generated output is 99 files under `.claude/`, 99 under `.github/` and 95 under `.agents/`.
 - **`cat -A` does not exist on this machine.** Use `sed 's/\t/<TAB>/g'` to see indentation.
 - **A grep-based check of your own edit lies twice over**: it strips a line that merely contains your search string, and it adds a trailing newline the target does not have. Compare byte-for-byte in python instead, by removing exactly the lines you inserted and testing equality.
+
+## Two standards set after the note was first written
+
+**A journal's change-log labels are alphabetized, under [[Filed]] and under [[Updated]] alike.** codekiln, late this morning: *"please be sure all my logseq journal pages have their headings alphabetized below the top"*, and immediately after, when a 235-journal sweep was being scoped: *"no need for retroactive changes, just today and going forwards"*. Items inside a label keep semantic order, and the narrative above the change log is theirs and stays in whatever order they wrote it. Stated as its own rule on `pages/Logseq___Journal.md` and relayed to the Bursar seat, since codekiln said it governs their other garden too.
+
+The rule already existed on that page and was still broken three times in one morning, because it sat inside a subsection about *when to group a long section* where it read as advice about grouping rather than a rule about order. **A rule an agent needs while adding one line has to sit where adding one line will hit it.** That is the transferable part.
+
+**Sort by reordering blocks, then assert the multiset of lines is unchanged.** A diff of a reorder already looks like a pile of additions and deletions, so a reorder that drops a line hides inside its own diff. `Counter(before.split('\n')) == Counter(after.split('\n'))` is the whole check.
+
+## The identity guard skipped two published files until today
+
+`secretlint` has respected the `.gitignore` cascade by default since v13, and `.gitignore:36` here is `**/CLAUDE.md`. `pages/CLAUDE.md` and `journals/CLAUDE.md` are both tracked and both public, so the pre-commit guard was handed them and skipped them in silence — which on screen is a clean pass. The shared `secrets:scan` task now passes `--no-gitignore` for explicit paths, and under it both files scan clean, measured before anything was written down.
+
+**`git ls-files -i -c --exclude-standard` lists what is tracked and matched by an ignore rule at once**, which is the intersection that decides the hazard; `git check-ignore` and `git ls-files` each answer only half. An ignore rule on a tracked file states an intention the index has already overruled, and every tool that skips ignored paths is wrong in exactly that place. On `.../Detail` at `f961c6d5`.
+
+**A whole-repo `secrets:scan` still uses the cascade by design, so it still skips those two files.** The commit route is covered; a whole-repo audit read as covering everything is not.
 
 ## Where things are
 
