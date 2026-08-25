@@ -11,7 +11,7 @@ Rewritten 2026-08-25 10:31 EDT. Written by the second context window of Tuesday 
 
 ## State
 
-**Level with `origin` plus four local commits, and nothing has been pushed.** `41d01349` filed the pointer rule page, `08f315ab` cut the display down and added Parked, `d7fdc35a` wrote this note, and `4715b41f` filed the two vim pages. **Push nothing without codekiln saying so in the pane.** A peer relaying their word is not their word.
+**Work is committed and nothing is pushed, and an unpushed stack is not an item.** codekiln's standing policy: commit when done, do not push, and do not raise pushing. Say what is committed and stop there.
 
 The working tree holds codekiln's own uncommitted work, which is not the seat's to commit: `journals/2026_08_24.md`, `journals/2026_08_25.md`, `pages/Word___Salad.md`, `pages/My___Pref___Dev___Tool___git___Worktree.md`, `pages/tmux___Q___Are there two different modes of visual selection in tmux%3F.md`, plus untracked `pages/ChatGPT___Remote___Voice.md`, `.../Get to the point.md` and `.../Trim Filler.md`. The last two are their new rule pages about how you write; ask before committing them.
 
@@ -21,10 +21,12 @@ The working tree holds codekiln's own uncommitted work, which is not the seat's 
 
 ## No contractor is running, and two windows are held open
 
-Both remaining job windows are finished and stay open because **codekiln typed into each composer and has not sent it.** Do not close either one; that is the whole reason they are there.
+Both remaining job windows have delivered and stay open because **codekiln is typing into both composers.** Their unsent lines change from minute to minute — two were replaced within a few minutes of being read — so do not quote a line and act on it later, and do not close either window on the strength of the job being finished. Read the composer immediately before any kill, as its own step, and hold if anything is there.
 
-- **Window 1, `pointer-preference`** — composer holds `show me the page`.
-- **Window 3, `open-repo-relative-path`** — composer holds `send hayward the list-marker mapping too`. It delivered two pages, filed at `4715b41f`, and still holds the mapping codekiln is asking for: a small buffer-local `gf` mapping that skips a list marker, since `-` is an `isfname` character and `gf` at column 1 of `- journals/2026_08_24.md` grabs the dash. It was dropped from the pages deliberately, as a workaround for one authoring habit rather than knowledge about the key. It lives only in that session's report.
+codekiln's standing policy says a contractor's window closes when its job is done. Their own live keystrokes in a pane outrank that, because a finished job is the seat's view and an unsent line is theirs.
+
+- **Window 1, `pointer-preference`** — delivered the pointer rule page, committed at `41d01349`.
+- **Window 3, `open-repo-relative-path`** — delivered two vim pages and the list-marker mapping, committed at `4715b41f` and `bf725515`. It still holds measurements that are on no page: submodules, Windows, a garden that is not a git repository, and whether `gf` reaches a path inside a `[[wikilink]]` or a `[label](dest)` are all untested rather than answered.
 
 Its report is copied to `report-open-repo-relative-path.md` in this session's own scratchpad directory, whose path the harness names in the seat's system prompt, and that directory dies with **this** session, so copy it forward before you bed down.
 
