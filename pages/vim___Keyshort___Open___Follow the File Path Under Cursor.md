@@ -23,6 +23,7 @@ see-also:: [[vim/Q/In (neo-)vim or LazyVim, how can I open a file whose path a M
 	- **Where it stops**
 		- A space ends the name early. `isfname` holds no space, so `pages/A Page With Spaces.md` is read as `pages/A` and the search fails. Selecting the whole path and pressing `gf` in visual mode opens it, since the visual form ignores `isfname` and takes the selection whole.
 		- The list marker counts as part of a filename. `-` is an `isfname` character, so `gf` with the cursor on the `-` of a bullet reads that dash as the name. From the space after it onward, the whole path is in reach.
+		- A buffer-local mapping that steps past the marker puts the key back in reach from column 1 — [[vim/Q/In (neo-)vim or LazyVim, how can I open a file whose path a Markdown document gives from the repo root?]] carries it.
 	- [[My Note]]
 		- A path written from the repository root — the shape a garden page uses for `journals/2026_08_24.md` — resolves under `gf` only while the editor's working directory is that root. [[vim/Q/In (neo-)vim or LazyVim, how can I open a file whose path a Markdown document gives from the repo root?]] has the setting that frees it from the working directory.
 		- For a link written as [[Markdown]] rather than as a bare path, [[LazyVim/Q/In LazyVim, how can I open a Markdown link with a keyboard shortcut?]] compares `gf` against `gx` and `gd` on the same target.

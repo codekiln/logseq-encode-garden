@@ -37,6 +37,27 @@ see-also:: [[vim/Keyshort/Open/Follow the File Path Under Cursor]], [[LazyVim/Q/
 			- A space in the path ends the name early, so many of this graph's own filenames stay out of reach of a plain `gf`. Selecting the path and pressing `gf` in visual mode opens them. [[vim/Keyshort/Open/Follow the File Path Under Cursor]] has that variant and the rest of the set.
 			- A file of the same name beside the page being read wins, and the one at the repository root becomes unreachable by `gf`. Appending the root to `path` instead of setting `includeexpr` behaves the same way, since `.` comes first in `path`.
 			- The cursor may not rest on a bullet's `-`, which counts as a filename character.
+			- A buffer-local mapping steps the cursor past a leading list marker before handing off to the stock key, which puts `gf` back in reach from column 1 of a bulleted line. It stands on its own: `includeexpr` decides what a name resolves against, this decides where the cursor is, and either one works without the other.
+				- ~~~lua
+				  vim.api.nvim_create_autocmd("FileType", {
+				    pattern = "markdown",
+				    callback = function(ev)
+				      for _, key in ipairs({ "gf", "gF" }) do
+				        vim.keymap.set("n", key, function()
+				          local line = vim.api.nvim_get_current_line()
+				          local col = vim.api.nvim_win_get_cursor(0)[2]
+				          local s = line:sub(col + 1):match("^%s*[-*+]%s+()")
+				          if s then
+				            vim.api.nvim_win_set_cursor(0, { vim.fn.line("."), col + s - 1 })
+				          end
+				          vim.cmd("normal! " .. key)
+				        end, { buffer = ev.buf, desc = "Follow file under cursor (list-marker tolerant)" })
+				      end
+				    end,
+				  })
+				  ~~~
+				- The claim is `gf` and `gF` in normal mode on a [[Markdown]] buffer. Visual `gf` keeps its stock behaviour, and a cursor already sitting mid-path falls through untouched.
+				- On a path that fails to open, the cursor stays where the marker skip left it, a column or two along from where the stock key would have left it.
 		- ### The keys are the same in [[vim]]
 			- `gf`, `<C-w>f`, `<C-w>gf` and `gF` are stock, so nothing about the answer changes between the two editors. The setup differs in two places: [[vim]] needs `filetype plugin on` before a `FileType` autocommand fires, and `vim.fs.root` is a [[nvim]] function.
 			- ~~~vim
