@@ -2,18 +2,39 @@ see-also:: [[My/AI/Agent/Chief of Staff/LEG Todos Heads Up Display]], [[My/AI/Ag
 
 - # LEG Display Detail
 	- Why each item on [[My/AI/Agent/Chief of Staff/LEG Todos Heads Up Display]] reads the way it does, and what the seat settled without asking. The display carries one line and an entry point per item; the reasoning is here so a line stays cheap to remove.
-	- ## Behind the open items
-		- ### The unpushed stack
-			- The hold covers `e6ac3123` alone. A general instruction that all gardens commit and push as the day closes reached this seat on the evening of [[2026-08-24 Mon]] and was declined, because a specific hold with a stated reason outranks housekeeping and publishing to a public repository is not easily undone. Nothing has been pushed since.
-			- A peer seat reported the words `push it` sitting in this seat's composer and read it as machine-suggested rather than typed. That conclusion was right and its evidence did not reproduce: measured on the morning of [[2026-08-25 Tue]], the composer was empty and the pane held no faint-text sequence. The hold stands for the simpler reason that nobody has instructed a push.
-			- `pages/vim___Keyshort___Argument List.md` rides along inside `e6ac3123` and is removed again by a later commit, so pushing the stack as it stands publishes a page [[Person/codekiln]] rejected and then deletes it. Dropping it from `e6ac3123` has to happen before any push and costs that commit's hash, which other seats cite.
-		- ### The history question
+	- ## Behind the open item
+		- ### The rename to manager
+			- The title was settled on [[2026-08-24 Mon]]: the dotfiles seat is the chief of staff and every other repository's seat is a manager. What waits is the rename of the pages, because this seat's own charter tells a successor arriving with no context to reach it by the path `My/AI/Agent/Chief of Staff` and by that title, and three files in [[My/Dotfiles]] name it from outside this repository. A rename that lands here and nowhere else leaves a cold successor unable to find the page that tells it what it is.
+			- Two `{{namespace ...}}` queries take the path as a string argument rather than as a link — the Log query on [[My/AI/Agent/Chief of Staff]] and the Scribe/Log query on [[My/AI/Agent/Chief of Staff/Scribe]]. Logseq's rename rewrites links and leaves both of those aimed at a namespace that stopped existing, and the page still renders, with an empty query where the day's log used to be.
+			- Measured on the morning of [[2026-08-25 Tue]]: eight page files carry the name, with the scribe's namespace nested under it; 30 links in 12 pages, 10 in four journals and 3 in the published `tmp/` handoff notes; and nothing under `.rulesync/`, `.claude/`, `.github/` or `.agents/`, so no `rulesync generate` is involved. [[Person/Steve Yegge/Agent/Sheriff - Chief of Staff]] is that roster's own page and stays.
+	- ## Decided without asking, reversible if wrong
+		- **The wiki URL in commit `a81448b8` stays in this repository's history.** [[Person/codekiln]] read it as not critical and the page carrying it is already deleted from the graph, so no rewrite happens and every hash this graph cites in its own prose keeps resolving.
+		- **[[Logseq/Journal]] and [[Logseq/Journal/Editorial headings]] now say you write the narrative and an agent writes only the [[Filed]] and [[Updated]] log.** They previously instructed the blocks you delete by hand, and an agent following them reproduced the deletion twice. [[Logseq/Journal]] also now states the line form as `- # [[Filed]]`, with the bullet.
+		- **[[Logseq/Entity/Agent]] exists**, covering both shapes already in the graph: your own roles under `My/AI/Agent/<Role>`, and another person's roster under `Person/<Name>/Agent/<Name> - <Role>`, which is what the 35 pages under [[Person/Steve Yegge/Agent]] are. Creating the type reclassifies nothing on its own, since a page joins a type only by carrying `logseq-entity::`.
+		- **[[tmux/Keyshort/Copy Mode]] keeps that name.** It reads as a group name where `Mode/Copy` reads as a path, and it created no new namespace segment.
+		- **The settings precedence question was wrong rather than open.** [[Claude/Code/Settings/Override]] is the page whose subject is precedence and it owns the detail; [[Claude/Code/Settings]] carries one summary line and already points at it. Nothing needed changing.
+		- **The 235 journals whose first line lost its bullet stay as they are.** An editor save eats it, so rewriting them reintroduces the same state on the next save. Fixing the editor is the only thing that would hold.
+		- **`Google/Workspace/AI` is the alias worth adding** and it is not written, because `.claude/rules/logseq-core.md` says aliases are yours to curate and an agent suggests them in conversation rather than on a page.
+	- ## Repository state
+		- **Level with `origin` and clean of Hayward's work.** Whatever `git status` shows is yours; Hayward stages only its own lines, even inside a file you are editing.
+			- ~~~sh
+			  cd ~/ghq/github.com/codekiln/logseq-encode-garden && git fetch origin && git rev-list --left-right --count origin/main...main && git status --short
+			  ~~~
+		- **The identity guard runs on every commit and a whole-repo scan finds nothing.** It had never run before [[2026-08-24 Mon]], because `lefthook install` was never run in this clone.
+		- **`tmp/` is tracked and published here**, unlike the other gardens the fleet works in, so working notes written there are public.
+	- ## Closed items, with their reasoning
+		- ### The push hold, released
+			- [[Person/codekiln]] released the hold in the seat's pane on the morning of [[2026-08-25 Tue]] and the stack went out, sixteen commits in all.
+			- The hold covers `e6ac3123` alone. A general instruction that all gardens commit and push as the day closes reached this seat on the evening of [[2026-08-24 Mon]] and was declined, because a specific hold with a stated reason outranks housekeeping and publishing to a public repository is not easily undone. The hold then held through the night and into the next morning.
+			- A peer seat reported the words `push it` sitting in this seat's composer and read it as machine-suggested rather than typed. That conclusion was right and its evidence did not reproduce: measured on the morning of [[2026-08-25 Tue]], the composer was empty and the pane held no faint-text sequence. The hold held for the simpler reason that nobody had instructed a push.
+			- `pages/vim___Keyshort___Argument List.md` went out inside `e6ac3123` and a later commit in the same push deletes it again, so the page sits in the history and not at `HEAD`. Dropping it from that commit beforehand would have cost the hash other seats cite, which is why it was left to ride.
+		- ### The history question, closed
+			- [[Person/codekiln]] read the wiki URL as not critical, so the history stands as it is and every commit hash this graph cites in its own prose keeps resolving.
 			- Employer context reached this public repository and is out of every page at `HEAD`. Four pages carried it, and the worst was not the one that raised the question: [[GitHub/Action/Runner/ARM/Concept/Overview of Cost and Deployment]] held seven footnote links into a private AI workspace, and had since 2025-07-22.
 			- A rewrite changes every commit hash, and this graph cites its own hashes in prose, so it would break its own references. Existing clones and forks keep the old objects regardless.
 		- ### The journal convention pages
 			- Three agent-written narrative blocks were deleted by hand from the [[2026-08-18 Tue]] journal, and a top-level block in [[Person/codekiln]]'s own voice was added above that day's [[Filed]] hours later. Prose in a journal is not evidence that anything went wrong; the seat writes only the change log and neither writes nor removes the narrative.
 			- [[My/AI/Agent/Chief of Staff]] was a third page teaching the deleted practice and no longer is. That much was already a decision on record, so it was brought into line rather than asked about. The two remaining pages state the convention itself, which is not the seat's to change.
-	- ## Closed items, with their reasoning
 		- ### The three-book import
 			- The books are at the flat `Book/<title>` path rather than the `Book/YY/<short title>` the entity definition points multi-author books at. That dated form has no instance in this graph — 33 flat book pages and 19 under a person, none dated — and the multi-author books already here, [[Book/Understanding by Design]] and [[Book/ML with PyTorch and Scikit-Learn]], are both flat. Creating the first dated one would have set a convention.
 			- On a flat page the year sits in `date-created::`, and the graph's habit there is the original publication year: [[Book/Understanding by Design]] carries [[1998]] though its expanded edition is 2005. So [[Book/The Elements of Style]] carries [[1918]], Strunk's own printing, with the 1959 revision by [[Person/E. B. White]] made prominent in the prose instead. One page rather than two, because the graph keeps one page per book and this is one work with a revision history.
