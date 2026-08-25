@@ -14,7 +14,7 @@ see-also:: [[My/AI/Agent/Chief of Staff]], [[tmux]], [[herdr]], [[Terminal/Multi
 			- A rename leaves window and pane ids alone — `@0`, `%0` and the `window.pane` indices are unchanged across one — so anything addressed by id keeps working. **The old session name stops resolving the instant the rename lands**, with `has-session` returning `can't find session`, so it is only name-addressed targets that break, and they break immediately rather than drifting. That is the argument for reading the name live instead of caching it.
 			- A `claude` session's own name cannot be changed while it runs, so after a seat's tmux session is renamed the two names disagree until the next [[My/AI/Agent/Fleet/Bed Down]] respawn, which derives the new one from the tmux name.
 			- **No dots in a session name.** A `-t` target is parsed as `session:window.pane`, so a dot anywhere in the name is read as a separator and every bare target fails against a window or pane that does not exist — `has-session` included, which is what a script would use to check. `DF` rather than `.F` for the dotfiles code for this reason: [[tmux/Q/Why does a session name containing a dot break every bare -t target?]].
-		- **[[tmux/Window]] — one worker task.** Named for the task, never for the agent doing it. The window list is the seat's docket, and `tmux list-windows` reads it back. A window closes when its item is done; a window left open reports work in flight that is not.
+		- **[[tmux/Window]] — one contractor's job.** Named for the job, never for the agent doing it. The window list is the seat's docket, and `tmux list-windows` reads it back. A window closes when its item is done; a window left open reports work in flight that is not.
 		- **[[tmux/Pane]] — chat left, viewer right.** The right pane is `nvim` on the document being edited, or `gh dash` on a review queue. Created at 45% width:
 			- ~~~sh
 			  tmux split-window -h -p 45 -t '=<session>:<window>' 'nvim <file>'
@@ -22,8 +22,10 @@ see-also:: [[My/AI/Agent/Chief of Staff]], [[tmux]], [[herdr]], [[Terminal/Multi
 			- Quote every `-t` argument. A bare `=word` is a zsh expansion, not a tmux exact-match target — see [[tmux/Q/Why does a tmux -t =session target fail in zsh?]].
 		- **The named `claude` session — one context window.** `claude -n '<name>'` records the name in the session's own transcript, which is how a session is addressed for messaging and how its context size is read without spending model tokens. See [[My/AI/Agent/Fleet/Bed Down]].
 		- **The branch and [[git/worktree]] — where the work lands.** The bottom level is what makes two windows able to edit the same repository at once. `git stash` is the exception that ignores the boundary: the stash is repo-global across every worktree, so it is never used in a shared checkout.
-	- ## Spawning a worker
-		- One worker is one window in the spawning seat's own session, and it reads its brief from a file:
+	- ## Hiring a contractor
+		- A **contractor** is a session engaged against one job that can be finished. It takes a window of its own, is named after the job rather than after itself, and is gone when the job is done. A **seat** is the other thing: a standing office, named after the office rather than the work, which survives its occupants by handing off from one context window to the next. Hayward, Reeve and George are seats; the session that wrote four keyboard-shortcut pages one afternoon was a contractor. Calling both of them workers implied a seat was only a long-running contractor, which is backwards.
+		- Two things follow from the word rather than from any rule added on top of it. **If you cannot say what finishing looks like, the work is not a contractor's job** — it belongs to a seat. And **you do not close out a contractor without taking delivery**, which is why the pane gets read before the window is killed.
+		- One contractor is one window in the hiring seat's own session, and it reads its brief from a file:
 			- ~~~sh
 			  tmux new-window -d -t '=<your-session>' -n '<task-name>' \
 			    "claude -n '<prefix> <task-name>' --permission-mode auto \
