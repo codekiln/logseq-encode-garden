@@ -31,6 +31,10 @@ see-also:: [[My/AI/Agent/Chief of Staff]], [[tmux]], [[herdr]], [[Terminal/Multi
 			    "claude -n '<prefix> <task-name>' --permission-mode auto \
 			     'Read <brief-path> in full right now, before anything else. It is your brief. Then carry it out.'"
 			  ~~~
+		- **What a contractor is hired under is settled and does not need asking.** [[Person/codekiln]] on [[2026-08-25 Tue]]: *"assume that if I ask any knowledge garden agent manager to hire a contractor, it should use claude permission mode auto, use the claude model most appropriate for the task, it should commit work when done but not push (and not bug me about pushing), and close the worker."*
+			- `--permission-mode auto` is already in the command above. The model is the hiring seat's call, matched to the job rather than defaulted upward.
+			- **A commit is where the work stops.** The contractor's output is committed and the push waits for [[Person/codekiln]] to say so in their own pane. An unpushed stack is not an item: it earns no display line, no question and no paragraph in a report. Say what is committed and stop.
+			- **The window closes when the job is done.** A window left open reports work in flight that is not. What holds a window open is [[Person/codekiln]]'s own unsent keystrokes in its composer, which is why a pane is read before it is killed, as a separate step.
 		- **The brief goes by path, never interpolated into the command.** Content inlined into a double-quoted shell string has its backticked terms executed and silently replaced, which deletes exactly the measurements a brief exists to carry.
 	- ## What the fleet expects of a seat
 		- Bed down at 200k tokens rather than letting a session balloon — [[My/AI/Agent/Fleet/Bed Down]].

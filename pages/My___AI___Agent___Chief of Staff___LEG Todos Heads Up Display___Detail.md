@@ -16,7 +16,7 @@ see-also:: [[My/AI/Agent/Chief of Staff/LEG Todos Heads Up Display]], [[My/AI/Ag
 		- **The 235 journals whose first line lost its bullet stay as they are.** An editor save eats it, so rewriting them reintroduces the same state on the next save. Fixing the editor is the only thing that would hold.
 		- **`Google/Workspace/AI` is the alias worth adding** and it is not written, because `.claude/rules/logseq-core.md` says aliases are yours to curate and an agent suggests them in conversation rather than on a page.
 	- ## Repository state
-		- **Level with `origin` and clean of Hayward's work.** Whatever `git status` shows is yours; Hayward stages only its own lines, even inside a file you are editing.
+		- **Whatever `git status` shows is yours.** Hayward stages only its own lines, even inside a file you are editing, and it commits its work without pushing it.
 			- ~~~sh
 			  cd ~/ghq/github.com/codekiln/logseq-encode-garden && git fetch origin && git rev-list --left-right --count origin/main...main && git status --short
 			  ~~~
