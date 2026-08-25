@@ -1,12 +1,13 @@
 alias:: [[Logseq Journal]]
 
 - # Logseq Journal
-	- How a day reads in this garden: the topic-led narrative up top, the recurring sections, and the end-of-day change log. The conventions live here in one place; subpages carry section-specific detail. Parallels [[Logseq/Entity]].
+	- How a day reads in this garden: [[Person/codekiln]]'s own writing up top, the recurring sections, and the end-of-day change log. **An agent writes the change log and nothing else here** — the blocks above it are [[Person/codekiln]]'s, neither written nor removed by an agent. The conventions live here in one place; subpages carry section-specific detail. Parallels [[Logseq/Entity]].
 	- ## Change log — [[Filed]] and [[Updated]]
 		- Each day ends with a record of what changed in the graph, as two top-level blocks:
 			- **[[Filed]]** — pages that first appeared today.
 			- **[[Updated]]** — pages that already existed and were edited today.
 		- [[Filed]] and [[Updated]] are sibling top-level blocks — no parent wrapper and no intro line above them.
+		- **The line form is `- # [[Filed]]`**, with the bullet, which is the plurality across the graph and the only common form satisfying the bullet rule in `.claude/rules/logseq-core.md`. Where a journal's first line has lost its bullet, an editor save ate it rather than a person choosing.
 		- A page appears under only one section per day. A page that was both created and edited today stays under [[Filed]] only.
 		- Lines are link-only: `- [[Some/Page]]`. No `Created …` / `Updated …` boilerplate and no inline action text; add at most one short child sentence when it genuinely helps a reader.
 		- This is a curated snapshot of the day's adventures — a [[Now/Page]] glimpse, not a full audit of every git change. Skip trivial stubs and noise.
@@ -15,7 +16,7 @@ alias:: [[Logseq Journal]]
 			- Choose labels with the human; they should jog memory and name the day's real clusters of discovery, not generic bins.
 			- Sort labels alphabetically; items within a group keep semantic order.
 	- ## Narrative and section titles
-		- Above the change log, a day carries topic-led blocks with editorial-style titles — voice, examples, and anti-patterns on [[Logseq/Journal/Editorial headings]].
+		- Above the change log, a day may carry topic-led blocks with editorial-style titles, and **[[Person/codekiln]] writes those.** [[Logseq/Journal/Editorial headings]] describes how they are titled, for their use rather than an agent's. Three agent-written narrative blocks were deleted by hand from the [[2026-08-18 Tue]] journal, and an agent following that page reproduced the deletion again on [[2026-08-24 Mon]].
 		- Recurring section: [[Logseq/Journal/Section/Friction]].
 	- ## Worked example
 		- `journals/2026_06_27.md` — a topic-led narrative block up top, then [[Filed]] and [[Updated]] as top-level blocks with grouped, link-only lists.

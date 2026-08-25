@@ -1,0 +1,21 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Agent
+	- In this garden, **Agent** pages model an AI agent tracked as a first-class page: a standing role that outlives whichever session occupies it, or a named agent on somebody else's published roster.
+	- ## Two shapes exist, and the namespace says which
+		- **[[Person/codekiln]]'s own agents** live under `My/AI/Agent/<Role>`, named for the role rather than for a model or a session. [[My/AI/Agent/Chief of Staff]] and [[My/AI/Agent/Ask My Agent Anything About Me]] are the instances. A role's daily record nests underneath it by date, following [[Logseq/Best Practice/Utilize Date Namespacing Under Entity Name]].
+		- **Another person's roster** lives under `Person/<Name>/Agent/<Agent Name> - <Role>`, because the roster belongs to them rather than to this garden. The 35 pages under [[Person/Steve Yegge/Agent]] are that shape, with the agent's own name first and the role after a dash.
+	- ## Seat and contractor
+		- A **seat** is a standing office named after the office. It survives its occupants, handing off from one context window to the next, and it is what an Agent page usually models — [[My/AI/Agent/Fleet]] carries the naming scheme and what the fleet expects of one.
+		- A **contractor** is engaged against a single job that can be finished, is named after the job, and is gone at the end of it. A contractor does not get a page; the work it finished does.
+	- ## Frontmatter
+		- Mark an instance with `logseq-entity:: [[Logseq/Entity/Agent]]` so this type page collects backlinks to every agent.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- H1 with the agent's name or role.
+		- What the agent is responsible for, what counts as its work being done, and which calls it settles rather than sending up. [[My/AI/Agent/Chief of Staff]] is the worked example and is longer than most instances need to be.
+	- ## Finding and deduplicating
+		- Check in this order: the exact page name; the role name under `My/AI/Agent/`; the agent's own name under any `Person/<Name>/Agent/`; then `logseq-entity::` backlinks here.
+		- **A name is not how an agent is identified.** An agent can rename itself and go on doing the same work, a name can be reassigned to a different session, and an agent with no pane carries no multiplexer name at all. Take the role from the agent's own report or from the declaration kept in the repository it works in.
+	- ## Relationship to other types
+		- An agent runs on a model, and the model is not part of the agent's identity — the same seat outlives a model change. Models are filed under their provider's namespace rather than as an entity type of their own.

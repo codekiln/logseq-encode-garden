@@ -1,5 +1,6 @@
 - # Journal — Editorial headings
 	- Parent: [[Logseq/Journal]].
+	- **[[Person/codekiln]] writes these headings. An agent writes the [[Filed]] and [[Updated]] change log and nothing above it**, so this page describes a human's titling practice rather than instructing an agent. An agent reading it as an instruction has twice put narrative blocks in a journal that were then deleted by hand.
 	- ## Goal
 		- Section titles should feel **curated**: wry, juxtaposed, a little magazine-like — in the spirit of Harper's, the Economist, the New Yorker. The outline should suggest tensions (tool vs platform, freedom vs friction) without explaining the joke in prose.
 	- ## Grouping
