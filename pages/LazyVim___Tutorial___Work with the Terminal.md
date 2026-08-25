@@ -1,0 +1,63 @@
+tags:: [[Diataxis/Tutorial]]
+see-also:: [[LazyVim/Keyshort/Terminal]], [[nvim/Plugin/snacks.nvim/Terminal]], [[nvim/Explanation/When to Use a Terminal in nvim and When to Use a tmux Pane]]
+- # Tutorial: Work with the Terminal in [[LazyVim]]
+	- ## What You'll Create
+		- We will open a shell inside [[LazyVim]], move between it and the file above it, hide it and bring it back with its output intact, close it for good, run two shells at once, and give one of them the whole editor area.
+	- ## Prerequisites
+		- [[LazyVim]] with [[nvim/Plugin/snacks.nvim]] on its default settings, which is where this terminal comes from.
+		- A [[git]] repository to open, so the terminal has a project root to start in.
+		- Leader is `<Space>` — see [[LazyVim/Q/What is the default leader key?]].
+	- ## Learning Goals
+		- Open a shell without leaving the editor.
+		- Move focus between that shell and the file above it.
+		- Tell hiding a terminal apart from closing it.
+		- Keep several shells at once and return to a chosen one.
+		- Give one shell the whole editor area and give it back.
+	- ## Steps
+		- ### 1. Open a terminal
+			- Open a file in a repository, then press `<C-/>`.
+			- A shell opens in a split across the bottom of the editor, already in Terminal mode, so what you type goes to the shell. Its winbar reads `1: ` followed by the shell's title.
+			- Run `pwd`. The directory is the repository root, whatever directory `nvim` was started from.
+			- Notice: [[Ghostty]] and some other terminals send `<C-_>` where others send `<C-/>`. Both keys are bound, so either opens it.
+		- ### 2. Move focus up to the file and back down
+			- From the shell, press `<C-k>`. Focus moves to the editor window above, in Normal mode, and the terminal stays visible.
+			- Press `<C-/>` from the editor. Focus moves back into the shell.
+			- Notice: `<C-k>` works straight from Terminal mode, with no mode change first. `<C-h>`, `<C-j>` and `<C-l>` cross between windows the same way.
+		- ### 3. Hide the terminal and bring it back
+			- With focus in the shell, run `echo hello`.
+			- Press `<C-/>`. The split disappears and focus returns to the editor.
+			- Press `<C-/>` again. The shell comes back with `hello` still on screen, and it is the same shell still running.
+			- Notice: pressed inside the terminal, `<C-/>` hides it. Pressed from the editor, it reveals the terminal, or focuses it when it is already on screen.
+		- ### 4. Read the output as a buffer
+			- Press `<Esc>` twice in quick succession, within about a fifth of a second. The mode indicator changes to Normal, and the shell's output becomes a buffer you can move around in.
+			- Type `/hello` and press `<CR>`. The search finds the line from step 3.
+			- Press `i` to type in the shell again, run `ls`, then double-press `<Esc>`. Put the cursor on one of the filenames and press `gf`. The terminal hides and that file opens in the editor.
+			- Press `<C-/>` to come back, double-press `<Esc>`, then press `q`. From Normal mode, `q` hides the terminal.
+		- ### 5. Close the terminal
+			- Press `<C-/>`, then type `exit` and press `<CR>`.
+			- The split closes and the buffer is gone.
+			- Press `<C-/>` again. A new shell starts on an empty screen, and `hello` from step 3 is gone with the old one.
+			- Notice: when the shell exits with a failing status, the window stays open and a message reads `Terminal exited with code N`, so the output is still there to read.
+		- ### 6. Run a second terminal
+			- From the editor in Normal mode, type `2` and then press `<C-/>`.
+			- A second shell opens beside the first, its winbar reading `2: `. The count in front of the key names which terminal you want.
+			- Press `<C-h>` and `<C-l>` to move between the two, and `<C-k>` to go up to the file.
+			- From the editor, `1<C-/>` lands on the first shell and `2<C-/>` on the second. A count works in front of `<leader>ft` too.
+		- ### 7. Give one terminal the whole editor area
+			- Focus a terminal, double-press `<Esc>` for Normal mode, then press `<leader>wm`.
+			- The shell fills the editor area and the winbar gains a `zoom` marker. Press `i` to type in it again.
+			- Double-press `<Esc>` and press `<leader>wm` again to put the split layout back.
+			- Notice: this fills the area [[nvim]] itself occupies. The [[tmux]] pane running [[nvim]] keeps its own size, and `<prefix> z` is the key that changes that — see [[tmux/Keyshort/Pane/Zoom Pane]].
+		- ### 8. Start a terminal in the working directory
+			- Press `<leader>fT`. This shell starts in [[nvim]]'s working directory.
+			- Started from a subdirectory, that is a second shell beside the project-root one, and both winbars read `1: ` — the number counts terminals within one directory.
+			- Press `<leader>ft` for the project-root shell, the one `<C-/>` reaches. Pressed while that shell is on screen, `<leader>ft` hides it.
+	- ## What You've Learned
+		- `<C-/>` opens the project-root shell, reveals it, focuses it, and hides it from inside.
+		- `<C-h>`, `<C-j>`, `<C-k>` and `<C-l>` cross between the shell and the editor windows straight from Terminal mode.
+		- Hiding keeps the shell and everything it printed; `exit` ends both, and the next `<C-/>` starts a fresh shell.
+		- A count in front of `<C-/>` picks the terminal, so `2<C-/>` is the second one.
+		- Double-pressing `<Esc>` turns the output into an ordinary buffer, where `/`, motions and `gf` work.
+		- `<leader>wm` gives the focused window the whole editor area and gives it back.
+	- ## Next Steps
+		- [[nvim/Explanation/When to Use a Terminal in nvim and When to Use a tmux Pane]] weighs this shell against a [[tmux]] pane for work that runs longer than a command.

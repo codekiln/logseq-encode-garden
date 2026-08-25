@@ -1,0 +1,23 @@
+tags:: [[Diataxis/Concept]]
+see-also:: [[LazyVim/Tutorial/Work with the Terminal]], [[nvim/Plugin/snacks.nvim/Terminal]], [[tmux/Pane]]
+- # When to Use a Terminal in [[nvim]] and When to Use a [[tmux]] Pane
+	- ## Overview
+		- Both put a shell beside the file being edited. Two differences settle which one fits a given command: how long the shell lives, and what the editor can do with the text the shell printed.
+	- ## How long the shell lives
+		- Quitting [[nvim]] ends every process running in its terminals. A `sleep` left running in one is gone the moment `:qa` returns.
+		- A [[tmux]] session outlives the client attached to it. `<prefix> d` detaches and leaves the processes running, and `tmux attach` picks them back up — see [[tmux/Keyshort/Detach Current Session]].
+		- A dev server, a log tail, a long build, or anything that should still be running after [[nvim]] is restarted for a config change therefore wants a [[tmux/Pane]].
+	- ## What the editor can do with the output
+		- An [[nvim]] terminal's scrollback is a buffer. Double-pressing `<Esc>` puts it in Normal mode, where `/` searches it, ordinary motions move through it, and `gf` on a printed path opens that file in the editor.
+		- A [[tmux]] pane's scrollback belongs to tmux. [[tmux/Mode/Copy]] searches it and yanks from it into a tmux buffer, and getting that text into a file is a paste.
+		- A command whose output you are about to act on — a failing test's file and line, a path out of `git status`, a URL from a build log — costs less in the editor's terminal, because the path you want to open is already under the cursor.
+	- ## What a tmux pane offers on top
+		- It is addressable from outside. `tmux send-keys` types into it and `tmux capture-pane` reads its screen, so another program can drive and watch a shell while you watch it too.
+		- It keeps its place, its size and its history across everything that happens to the editor.
+		- It can move between windows and sessions, and a second attached client sees the same pane.
+	- ## Both at once
+		- Running [[nvim]] inside a [[tmux]] pane nests one shell arrangement inside another. While [[nvim]] has focus, `<C-h>`, `<C-j>`, `<C-k>` and `<C-l>` move between [[nvim]]'s windows, and tmux pane keys still start with `<prefix>`, so the two sets stay out of each other's way.
+		- Filling the screen happens at two levels. `<leader>wm` gives one [[nvim]] window the whole area [[nvim]] occupies; `<prefix> z` gives the pane the whole tmux window — see [[tmux/Keyshort/Pane/Zoom Pane]].
+	- ## Choosing
+		- Reach for the [[nvim]] terminal for a command that finishes and whose output you want to read, search, or open a file from: a test run, `git status`, a formatter, a one-off script.
+		- Reach for a [[tmux/Pane]] for a process that keeps running, that you want to watch while doing something else, or that has to outlive the editor.
