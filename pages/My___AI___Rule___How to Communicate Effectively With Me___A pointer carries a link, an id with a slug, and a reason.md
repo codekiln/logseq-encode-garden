@@ -1,0 +1,30 @@
+see-also:: [[My/AI/Rule/How to Communicate Effectively With Me/Never make the reader resolve a reference]], [[My/Pref/Writing/Be specific and explicit]]
+
+- I hold about four to six things at once, and I do not scan back through a long document to find one of them again. A bare id asks me to do both. Everything written for me is read under that limit, so a reference has to carry its meaning with it. See [[My/Principle/Simplify/Avoid Cognitive Load]].
+- A pointer carries three things:
+	- 1. A hyperlink I can follow, and preferably click.
+	- 2. The id with a slug beside it saying what it is about.
+	- 3. Why it is here — what I get from following it.
+- Every reference is fragile until it carries all three. One that carries fewer is unfinished writing.
+- An AI resolves an id across a million tokens for free, so a reference that costs nothing to leave bare reads as economical to the writer and lands on me as work. [[My/AI/Rule/How to Communicate Effectively With Me/Never make the reader resolve a reference]] covers pointers inside a document — a pronoun, *the latter*, *as above*. This page covers pointers that lead out of one, to a ticket, an issue, a commit or a file.
+- # Whether a link is followable depends on where I am reading
+	- In [[Logseq]], `[[Page/Name]]` is clickable, and a `((uuid))` block reference displays the referenced block's text inline, so the reminder arrives without my going anywhere.
+	- In an editor pane the same link is inert. My [[nvim]] carries no wikilink resolver, so `gf` on `[[Page/Name]]` opens nothing. A plain `https://` address does work there: [[nvim/Keyshort/Open/Open URL or Filepath Under Cursor]] hands it to the browser with `gx`, and [[Ghostty]] opens it on ⌘-click.
+	- So writing that stays in the graph can lean on a wikilink, and writing that reaches me in a pane, a chat reply or another repository needs a real URL or a real path. [[My/Pref/Dev/AI/OpenSpec]] already applies this to citations that travel: GitHub links to `main`, with the logical page name as the link text.
+- # An id that is the subject of the sentence stays verbatim
+	- A digest, a version string, a UUID, a key type, quoted terminal output — these are the thing under discussion, and a slug and a link would be wrong on them. Rewriting quoted output would also make the transcript false.
+	- The test is what the id is doing in the sentence. If I am meant to go somewhere and look at something, it is a pointer and it takes all three parts. If I am meant to look at the id itself, leave it alone.
+- # Examples
+	- ## A commit
+		- Weak, and real: [[git/reflog]] says `rediscover commit 84f0092 in lazygit`. Seven hex characters, no subject, no link. Months later I cannot tell what that commit did without running `git show`.
+		- Good, and real: [[herdr/Explanation/Copy Mode on the Alternate Screen]] cites its source as `[952729ee preserve logical lines in scrollback editor](https://github.com/herdrdev/herdr/commit/952729ee)`, in a sentence saying the line numbers below were read at that commit. Link, id, subject, reason.
+	- ## A [[GitHub/Issue]]
+		- Weak: `#413`. A bare `#` is ambiguous across the trackers I use, and the number says nothing about the request.
+		- Good: `[Custom Claude Code command YAML frontmatter · Issue #413 · dyoshikawa/rulesync](https://github.com/dyoshikawa/rulesync/issues/413)`, with a clause saying what it would change for me. Inside the graph the same shape is already the page-naming practice — [[rulesync/GitHub/Issue/25/10/Custom Claude Code Command Yaml Frontmatter i413]] puts the slug first and the id last.
+	- ## A [[JIRA]] ticket
+		- Weak: `AB-1234`.
+		- Good: `[AB-1234 Rank the sprint board by drag and drop](https://<jira-host>/browse/AB-1234)`, followed by why it is being cited here. [[My/Pref/Dev/Tool/SCM/Commit Message Style Preferences]] asks for the id and the title together on a commit's last line; a commit message is one of the few places where two of the three parts is all the medium allows.
+	- ## A file
+		- Weak: "the commit conventions doc," or a bare `commit-conventions.md`.
+		- Good, in a pane: `.rulesync/skills/git-conventions/references/commit-conventions.md:29`, plus what sits on line 29 — a reference to a page under its pre-rename name, which no longer resolves.
+		- Good, for pasting anywhere: the form [[git/Alias/md-url]] and [[yazi/Keyshort/Copy GitHub markdown link]] produce, `[dotfiles/openspec/specs](https://github.com/codekiln/dotfiles/tree/main/openspec/specs)`. The link text carries the repository and the path from its root, so the reference still says where it came from after being pasted somewhere else.
