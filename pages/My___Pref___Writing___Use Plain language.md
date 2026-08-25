@@ -2,11 +2,13 @@ see-also:: [[My/Principle/Dispel Ambiguity]]
 
 - # Plain language
 	- ## What to assume about the reader
+	  collapsed:: true
 		- They are intelligent but may not share your domain expertise.
 		- They should understand the message on the first read.
 		- Simplicity never comes at the cost of being correct.
 		- Introduce a technical term only when it buys precision, and explain it the first time you use it.
 	- ## Tips
+	  collapsed:: true
 		- Optimize for great communication with plain language, never a readability formula (see [[arXiv/Article/25/08/Evaluating the Evaluators: Are readability metrics good measures of readability?]]).
 		- | Metric | Target | Why |
 		  | ---- | ---- | ---- |
@@ -18,6 +20,7 @@ see-also:: [[My/Principle/Dispel Ambiguity]]
 		  | Acronyms | **Spell out once** | Assume the reader may not know them. |
 		  | Vocabulary | **Prefer common words** | Choose "use" over "utilize", "help" over "facilitate", etc. |
 	- ## How to write
+	  collapsed:: true
 		- Put the main point first.
 		- Prefer common words or phrases over specialized ones; see [[My/Pref/Writing/Use the simpler word]].
 		- If two words together feel rare enough that a reader wonders whether you coined them on the spot, revise the phrase.
@@ -26,5 +29,6 @@ see-also:: [[My/Principle/Dispel Ambiguity]]
 		- Order the information the way the reader needs it, not the way you discovered it.
 		- Cut the reader's mental effort.
 	- ## Why this matters
+	  collapsed:: true
 		- The common AI failure is writing as if every reader already owns decades of specialized vocabulary. Don't require background the reader may not have.
 		- Writing "down" to people is not the aim. Removing needless jargon and assumed context is.

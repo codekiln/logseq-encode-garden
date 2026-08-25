@@ -3,15 +3,16 @@ tags:: [[Question]]
 see-also:: [[tmux/Q/Is there a way to do rectangular selection when using oh-my-tmux and tmux with vim visual selection mode?]]
 
 - # Are there two different modes of visual selection in [[tmux]]?
-  - ## [[My Answer]]
-    - 1 - `SPACE` - starts selection 
-    - 2 - `v` toggles between visual and rectangular selection
-    - 3 - `V` selects lines
-    - 4 - `o` - go to the other end of the selection
-    - 5 - `ESCAPE` - drop selection but stay in copy mode
+	- ## [[My Answer]]
+		- 1 - `SPACE` - starts selection
+		- 2 - `v` toggles between visual and rectangular selection
+		- 3 - `V` selects lines
+		- 4 - `o` - go to the other end of the selection
+		- 5 - `ESCAPE` - drop selection but stay in copy mode
 	- ## [[AI Answer]]
 		- **Short answer:** Yes. Stock tmux `copy-mode-vi` has two selection shapes you toggle between: **character-wise** (normal, started with `Space`) and **rectangle/block** (toggled with `v`). There is no "word-based" mode — word motions (`w`, `b`, `e`) just move the cursor within either shape.
 		- ### Stock `copy-mode-vi` selection bindings (no config, no [[oh-my-tmux]])
+		  id:: 6a3e6b7c-2a6c-44f7-ab66-22aaa7b8f4c4
 			- | Key | Command | Effect |
 			  |-----|---------|--------|
 			  | `Space` | `begin-selection` | Start character-wise (linear) selection |

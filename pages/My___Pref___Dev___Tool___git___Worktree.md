@@ -4,8 +4,9 @@
 		- store worktrees **inside** the project folder, in a [[gitignore]]d `<proj-root>/worktrees/` directory
 		- name each worktree after its branch, replacing `/` with `-` and dropping the branch-type prefix
 			- [[Example/Good]]
+				- *note*: branch names here are not binding, they should follow repo conventions. the important thing is that there is a correspondence between worktrees and branches for short-lived tasks.
 				- branch `codekiln/130-add-auth` -> `<proj-root>/worktrees/codekiln-130-add-auth`
-				- branch `feature/PD-1234-add-auth` -> `<proj-root>/worktrees/AB-1234-add-auth`
+				- branch `AB-1234-add-auth` -> `<proj-root>/worktrees/AB-1234-add-auth`
 				- branch `docs/add-directory-grounding` -> `<proj-root>/worktrees/docs-add-directory-grounding`
 		- in [[Claude Desktop]], whose Worktree location setting stores worktrees inside the project, use its `<proj-root>/.claude/worktrees/` directory instead — also [[gitignore]]d
 	- DO NOT

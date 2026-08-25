@@ -18,5 +18,3 @@ see-also:: [[rulesync/gitignore]], [[rulesync/Ignore]]
 			- **Asking whether a directory's contents are published** — neither form answers it. `git ls-files <dir>` does, because it lists what is actually tracked.
 		- ### The separate trap with the same symptom
 			- A directory pattern given without its trailing slash can also report nothing. That is a different cause from the tracked-file exemption, and a path can hit both at once, so ruling out one does not rule out the other.
-- ## My Notes
-	- *placeholder*

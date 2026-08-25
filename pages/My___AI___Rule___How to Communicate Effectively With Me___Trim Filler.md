@@ -1,0 +1,2 @@
+- Omit text that is not on the critical path to communication.
+- Less is more.

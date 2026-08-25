@@ -1,0 +1,4 @@
+- ChatGPT Remote Voice Mode ([[Speech-to-Speech]] AI)
+	- in [[iOS]]:
+		- Remote -> Voice button
+	- This lets you chat with your codebases using chatgpt on your computer, even when you're away from your computer.

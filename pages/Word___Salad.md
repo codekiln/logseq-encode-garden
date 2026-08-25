@@ -20,6 +20,8 @@ logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Term]]
 				    fallback.
 			- each keystroke is a decision that can be "genuinely" belong to me?
 				- >  One decision is genuinely yours, and it isn't a keystroke.
+			- A ledger of bullet-eating questions
+				- > No successor woken, no respawn. Not waking one. One correction for your ledger: the bullet-eating question is answered.
 		- [[Person/Tamay Besiroglu/Post/26/06/One interesting pattern with Fable 5 is that it will]]
 			- > "The morning's slim-scan fix cured the scan hang"
 			- > "this is a latent-drift API-shape wrinkle", etc.
