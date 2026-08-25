@@ -25,3 +25,6 @@ see-also:: [[My/AI/Agent/Chief of Staff]], [[My/AI/Agent/Fleet]], [[Logseq/Journ
 		- **`tmp/` is tracked and published here**, unlike the other gardens the fleet works in, so working notes written there are public.
 	- ## Why an item is not here
 		- Hayward decides anything reversible and records it on [[My/AI/Agent/Chief of Staff/LEG Todos Heads Up Display/Detail]] rather than asking. What reaches this display is work that is public, irreversible, or sets a convention across the graph.
+		- ~~~sh
+		  nvim ~/ghq/github.com/codekiln/logseq-encode-garden/'pages/My___AI___Agent___Chief of Staff___LEG Todos Heads Up Display___Detail.md'
+		  ~~~
