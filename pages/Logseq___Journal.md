@@ -14,7 +14,7 @@ alias:: [[Logseq Journal]]
 		- ### Grouping
 			- When a section runs past a handful of links, cluster them under plain-text labels — bare words or short phrases (`tuis`, `entities`, `git tasks`), not `[[wikilinks]]`.
 			- Choose labels with the human; they should jog memory and name the day's real clusters of discovery, not generic bins.
-			- Sort labels alphabetically; items within a group keep semantic order.
+			- **Labels are alphabetized, under [[Filed]] and under [[Updated]] alike.** Items inside a label keep semantic order. The narrative above the change log is ordered however [[Person/codekiln]] wrote it and is left alone. This holds for [[2026-08-25 Tue]] onward; a journal already written stays as it is.
 	- ## Narrative and section titles
 		- Above the change log, a day may carry topic-led blocks with editorial-style titles, and **[[Person/codekiln]] writes those.** [[Logseq/Journal/Editorial headings]] describes how they are titled, for their use rather than an agent's. Three agent-written narrative blocks were deleted by hand from the [[2026-08-18 Tue]] journal, and an agent following that page reproduced the deletion again on [[2026-08-24 Mon]].
 		- Recurring section: [[Logseq/Journal/Section/Friction]].
