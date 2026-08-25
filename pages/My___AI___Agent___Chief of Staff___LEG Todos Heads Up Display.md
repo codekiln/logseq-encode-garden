@@ -1,20 +1,19 @@
-current-as-of:: 2026-08-25T15:11:54-04:00
+current-as-of:: 2026-08-25T15:32:18-04:00 ET
 see-also:: [[My/AI/Agent/Chief of Staff]], [[My/AI/Agent/Fleet]], [[Logseq/Journal]]
 
 - # LEG Todos Heads Up Display
-	- What in [[My/Knowledge/Garden/logseq-encode-garden]] needs [[Person/codekiln]] rather than Hayward.
-	- **`current-as-of::` above is the governing time.** Last swept by Hayward, third context window of [[2026-08-25 Tue]], which took the seat after the machine restarted at 14:08 and ended every session running at the time.
+	- Swept 2026-08-25 15:32 ET by Hayward in tmux session `hayward-LEG-2026-08-25-tue-1510`. The `current-as-of::` property above is authoritative.
 	- ## Waiting on you
-		- TODO **The rename of this seat's pages from `Chief of Staff` to manager is measured and waits on your word, because it moves the page a cold successor is told to open by path.** Eight page files carry the name, and the scribe's own namespace sits underneath it. Thirty links in 12 pages, ten in four journals and three in the published `tmp/` handoff notes point at the old path, and two `{{namespace ...}}` queries pass that path as a string argument, which a Logseq rename leaves aimed at a namespace that stopped existing. Three files in [[My/Dotfiles]] name it too. Hayward recommends renaming, hand-fixing both `{{namespace ...}}` lines in the same commit, and leaving [[Person/Steve Yegge/Agent/Sheriff - Chief of Staff]] alone.
+		- TODO **Rename this seat's pages from `Chief of Staff` to manager, or say to leave them.** Held by tmux session `hayward-LEG-2026-08-25-tue-1510`, checked at source 2026-08-25. Eight of this seat's page files carry the name, with the scribe's namespace nested under it; 27 links across 12 pages, 11 links across four journals and 3 published `tmp/` notes point at the old path; 4 files in [[My/Dotfiles]] name it from outside this repository; and two `{{namespace ...}}` queries pass the path as a string argument that a Logseq rename leaves aimed at a namespace that stopped existing. Nothing under `.rulesync/`, `.claude/`, `.github/` or `.agents/` carries it, so no `rulesync generate` is involved. Hayward recommends renaming, hand-fixing both `{{namespace ...}}` lines in the same commit, and leaving [[Person/Steve Yegge/Agent/Sheriff - Chief of Staff]] alone.
 			- ~~~sh
-			  cd ~/ghq/github.com/codekiln/logseq-encode-garden && ls pages/*'Chief of Staff'* && grep -rn '{{namespace My/AI/Agent/Chief of Staff' pages
+			  cd ~/ghq/github.com/codekiln/logseq-encode-garden && ls pages/*'Chief of Staff'* && git grep -n -F '{{namespace My/AI/Agent/Chief of Staff' -- pages
 			  ~~~
-	- ## The rest of Hayward's record
-		- Findings Hayward went looking for, waiting on a decision, are on [[My/AI/Agent/Chief of Staff/LEG Todos Heads Up Display/Parked]].
+	- ## Hayward's own record
+		- [[My/AI/Agent/Chief of Staff/LEG Todos Heads Up Display/Parked]] — found by Hayward, waiting on a decision, in Hayward's estimated order of your priority.
 			- ~~~sh
 			  nvim ~/ghq/github.com/codekiln/logseq-encode-garden/'pages/My___AI___Agent___Chief of Staff___LEG Todos Heads Up Display___Parked.md'
 			  ~~~
-		- Calls Hayward settled alone, with the reasoning and the repository's state, are on [[My/AI/Agent/Chief of Staff/LEG Todos Heads Up Display/Detail]].
+		- [[My/AI/Agent/Chief of Staff/LEG Todos Heads Up Display/Detail]] — calls Hayward settled alone, with the reasoning and this repository's state.
 			- ~~~sh
 			  nvim ~/ghq/github.com/codekiln/logseq-encode-garden/'pages/My___AI___Agent___Chief of Staff___LEG Todos Heads Up Display___Detail.md'
 			  ~~~
