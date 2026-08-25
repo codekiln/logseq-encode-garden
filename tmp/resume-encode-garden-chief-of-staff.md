@@ -11,7 +11,9 @@ Rewritten 2026-08-25 15:17 EDT. Written by the third context window of Tuesday 2
 
 ## State
 
-**Work is committed and nothing is pushed, and an unpushed stack is not an item.** codekiln's standing policy: commit when done, do not push, and do not raise pushing. Say what is committed and stop there.
+**Work is committed and nothing is pushed, and an unpushed stack is not an item.** codekiln's standing policy: commit when done, do not push, and do not raise pushing. Say what is committed and stop there. 25 commits stood unpushed at hand-off, `origin/main` at `afb93044`.
+
+**The push policy has an answer and this seat has not heard it from codekiln.** The Seneschal reported late on 2026-08-25 that codekiln had answered whether agents push their own commits, and declined to relay it, because a push cannot be undone and a relayed permission for an irreversible act is not authorization. Two managers refused the same relay earlier that day and were right. **Ask codekiln in your own pane and act only on their answer.** Until then the clause stands as written.
 
 The working tree holds codekiln's own uncommitted work, which is not the seat's to commit: `journals/2026_08_24.md`, `journals/2026_08_25.md`, `pages/Word___Salad.md`, `pages/My___Pref___Dev___Tool___git___Worktree.md`, `pages/tmux___Q___Are there two different modes of visual selection in tmux%3F.md`, plus untracked `pages/ChatGPT___Remote___Voice.md`, `.../Get to the point.md` and `.../Trim Filler.md`. The last two are their new rule pages about how you write; ask before committing them.
 
@@ -33,6 +35,21 @@ The working tree holds codekiln's own uncommitted work, which is not the seat's 
 - **`pointer-preference`** delivered the pointer rule page, committed at `41d01349`.
 - **`open-repo-relative-path`** delivered two vim pages and the list-marker mapping at `4715b41f` and `bf725515`. Four measurements reached no page and are still untested: submodules, Windows, a garden that is not a git repository, and whether `gf` reaches a path inside a `[[wikilink]]` or a `[label](dest)`.
 
+## The one contractor this window hired, delivered and closed
+
+**`wayfinder-import`** — hired 15:35, delivered 15:47, window closed after the pane was read as a separate step and the composer checked immediately before the kill. codekiln's ask, relayed through the Seneschal: import a Readwise Reader item and the document it represents, using the readwise CLI.
+
+**Its report is at `tmp/report-wayfinder-import.md`, committed at `2c83dcf8`, because the equivalent report this morning was left in a session scratchpad and died at 14:08.** Its brief is at `tmp/brief-wayfinder-import.md`, `7d65e939`. Both are tracked, so both are public, and both were written knowing that.
+
+It filed `pages/Latent Space___Blog___26___08___The wayfinder Skill: Navigating the "Fog of War" of Planning.md` at `0fd13bd2` with one `[[Filed]]` line under a `skills` label.
+
+**Scouting the premise before writing the brief is what made the job cheap.** This seat verified at source that the document really is a Latent Space interview with Matt Pocock about their `/wayfinder` skill, that the readwise CLI authenticates without a browser handshake, and that the canonical URL is `https://www.latent.space/p/wayfinder-skill` — decoded out of the newsletter's own base64 offline. The brief then handed those over as measured, and the contractor reproduced every one.
+
+**Two findings from that job worth carrying:**
+
+- **Every link inside a personalised email carries an identifier for the person who received it.** The wayfinder links in that document are `substack.com/redirect/...?j=<token>` URLs whose parameter identifies codekiln's subscription, so following one registers a click on their account and writing one into a page publishes it. The contractor kept a highlight's words byte-for-byte and dropped only the URL. Treat this as general rather than as a fact about one newsletter.
+- **A guess inherited from a brief is still a guess.** This seat told the contractor that wayfinder was probably under `skills/productivity/` beside grill-me. It is under `skills/engineering/`. The contractor measured it with `gh api 'repos/mattpocock/skills/git/trees/main?recursive=1'` and a grill-me positive control, which is why the brief asked it to say how it established the path rather than just what the path was.
+
 ## What the three contractors delivered
 
 - **The pointer rule.** `pages/My___AI___Rule___How to Communicate Effectively With Me___A pointer carries a link, an id with a slug, and a reason.md`. Six places in these repositories already carried part of the preference and none carried all of it, and the fullest version was in another repository's agent record. It is on Parked.
@@ -46,7 +63,11 @@ The working tree holds codekiln's own uncommitted work, which is not the seat's 
 - **This is a workplace, not a fleet.** Say the managers, the team, or name the seats. The dotfiles seat is the chief of staff; every other repository's seat is a manager.
 - **A contractor is engaged against a job that can be finished, is named after the job, and is gone at the end of it. A seat is a standing office handing off across context windows.** You do not close out a contractor without taking delivery, and you take delivery by reading the pane, as a separate step from the kill.
 - **Every display line names a file to open or a command to run**, and the command goes in its own child block so it yanks whole. One item is one block on one unwrapped line.
-- **A display carries `current-as-of::` in page properties with a UTC offset, and that governs.**
+- **A display carries `current-as-of::` in page properties with a full datetime, the offset, and the zone spelled ET, and that governs.** Keep a one-sentence swept line beside it naming which is authoritative, and write both from one `date` reading in the same call.
+- **Surface only what is both important and urgent.** Important and not urgent is Parked. Urgent and not important you absorb and never mention. The test filters what you newly put in front of codekiln; it does not retract a question they have already been asked, so an asked-and-unanswered question stays on the display and comes off by the check-date rule instead.
+- **The test for a display line is "what is the one sentence they answer?"** Write that and stop. On 2026-08-25 this seat put 121 words of true, re-measured forensics behind a one-word decision and buried it; cut to 50 words, the evidence moved to `.../Detail`. codekiln's words for the failure elsewhere: *"this is opaque to me."*
+- **A layout pass and a content pass are different passes.** This seat reformatted that item at 15:32 and did not see the forensics problem until 15:43, and three of its numbers were stale while every formatting check on it read clean.
+- **An item needing codekiln names the session holding it** as the name in the `C-b s` tree, with no `switch-client` command.
 - **A heading or bolded phrase states the finding rather than announcing one is coming**, and *"X, not Y"* is forbidden.
 - **"This shortcut has no card" is not a reason to write a card.**
 
