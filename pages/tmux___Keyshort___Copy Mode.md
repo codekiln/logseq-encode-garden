@@ -1,0 +1,19 @@
+logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]
+- [[Keyshort]] [[tmux]] [[tmux/Keyshort]]
+	- **Start a Selection** [[Card]]
+		- Shortcut: `Space` [[Keyshort/Default]]
+		- Description: Runs `begin-selection`, which starts a character-wise selection at the cursor. Until it is pressed there is no selection to work on — moving the cursor in [[tmux/Mode/Copy]] beforehand only moves the cursor.
+	- **Toggle Rectangle Selection** [[Card]]
+		- Shortcut: `v`, and `C-v` does the same [[Keyshort/Default]]
+		- Description: Runs `rectangle-toggle`, which switches the selection already in progress between following the wrapped text and holding a rectangular block. Both keys are bound to it, so either one works.
+		- The key toggles the shape of a selection rather than starting one, which is where [[vim]] habits mislead: in vim `v` enters visual mode, while the key that starts a selection here is `Space`.
+	- **Select Whole Lines** [[Card]]
+		- Shortcut: `V` [[Keyshort/Default]]
+		- Description: Runs `select-line`, which takes the whole line the cursor sits on and extends a line at a time as the cursor moves.
+	- **Move the Cursor to the Other End of the Selection** [[Card]]
+		- Shortcut: `o` [[Keyshort/Default]]
+		- Description: Runs `other-end`, which puts the cursor on the end of the selection it is not already on, so the end that was anchored becomes the end that grows. It adjusts a selection that started in the wrong place without dropping it and beginning again.
+	- **Drop the Selection Without Leaving Copy Mode** [[Card]]
+		- Shortcut: `Escape`, and `C-[` does the same [[Keyshort/Default]]
+		- Description: Runs `clear-selection`, which removes the highlight and leaves [[tmux/Mode/Copy]] active at the same scroll position. A terminal sends the same character for `C-[` as for `Escape`, so one key press carries two names in the key table.
+	- These five keys are stock `copy-mode-vi` bindings, present with no configuration file at all. They come from the `copy-mode-vi` key table, which [[tmux/Option/mode-keys]] selects; `tmux list-keys -T copy-mode-vi` prints what a running server has bound.
