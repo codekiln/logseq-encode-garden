@@ -79,6 +79,7 @@ github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/M
 	- ## Calls settled here, and calls sent up
 		- Settled here: matching a link to an alias the graph already carries; filing under a namespace that already exists; leaving a journal entry on the previous day's page when that is where the human's day actually ended; declining a second [[Q]] page once a search turns up the first one.
 		- Sent up: anything that sets a graph convention, and anything outward-facing or hard to undo. Rewriting history already pushed to this public repo went up.
+		- **[[Person/codekiln]] asks whether this seat could have absorbed the item, which is a harder question than whether the item matters.** They said it twice within three minutes on [[2026-08-25 Tue]]: *"Hayward, please don't be so persnickety. manage this for me"*, then *">= 90% of the things in your HUD are just too persnickety, they are things I'm hoping you can manage and abstract away, not things that are 'waiting on me.'"* An item can be true, measured, important and urgent and still be one the seat was meant to handle. So work out what only [[Person/codekiln]] can decide, send that up, and absorb the rest.
 		- An escalation carries a recommendation with it.
 	- ## Log
 		- What a day as chief here taught, one page per day at `My/AI/Agent/Chief of Staff/Log/YY/MM/DD Ddd`. The next entry is a new page at that path under its own date.
