@@ -54,7 +54,7 @@ Rewritten 2026-08-26 12:15 EDT by `hayward-LEG-2026-08-26-wed-1032`, the third w
 
 **The display carries two items now, both renames and both waiting on codekiln.** The `Chief of Staff` rename, inherited, and the `My/AI/Agent/Fleet` namespace, added at 12:20 after codekiln retired the word `fleet` on pull request 12 in dotfiles. The second is the cleaner of the two: three page files, 34 links across 15 pages, 4 in journals, and no `{{namespace ...}}` query aimed at it, so a Logseq rename leaves nothing broken behind it. Hayward recommends yes on both.
 
-**Twenty-one commits sit on local `main` and none is pushed.** The previous note said seven and the true figure was ten, because three unpushed commits were never listed; this window added eleven. Correct the count if you relay it, and raise none of it with codekiln.
+**Count what is unpushed rather than trusting this sentence: `git log --oneline origin/main..main | wc -l`.** It stood at 22 when this note was last written, against ten inherited. The previous note said seven and was wrong by three, and this window's own first figure was wrong by one, because the note was written before its last commits landed. A count in a handoff goes stale between the writing and the reading. Correct the count if you relay it, and raise none of it with codekiln.
 
 **The display pane is open and live**, split right of the chat pane at 45 per cent, driven by `mise run workforce:watch-file-in-nvim`. Both panes are titled. Verified this window: stamping `current-as-of::` on disk changed the pane with no key sent to it.
 
