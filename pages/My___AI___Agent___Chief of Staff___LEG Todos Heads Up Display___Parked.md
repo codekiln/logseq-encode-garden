@@ -1,4 +1,4 @@
-current-as-of:: 2026-08-26T12:09:50-04:00 ET
+current-as-of:: 2026-08-26T12:10:48-04:00 ET
 see-also:: [[My/AI/Agent/Chief of Staff/LEG Todos Heads Up Display]], [[My/AI/Agent/Chief of Staff/LEG Todos Heads Up Display/Detail]], [[My/AI/Agent/Chief of Staff]]
 
 - # LEG Parked
@@ -13,11 +13,6 @@ see-also:: [[My/AI/Agent/Chief of Staff/LEG Todos Heads Up Display]], [[My/AI/Ag
 		- Fifteen unique addresses across fourteen pages redirect rather than break, and they split two ways: Claude Code slugs land on `code.claude.com/docs/en/<slug>` and everything else on `platform.claude.com/docs/en/<path>`, so a single host substitution would send three of them to the wrong place. Measured 2026-08-26 by following three of them with `curl -L`, each returning 200. The `claude config` half of this is the part that is genuinely broken and it is on the display.
 			- ~~~sh
 			  cd ~/ghq/github.com/codekiln/logseq-encode-garden && git grep -o -h -P 'https://docs\.claude\.com[^\s\)\]`"]*' -- pages journals .rulesync | sort -u
-			  ~~~
-	- ## Whether the send-keys failure earns a `.rulesync/` rule
-		- It has happened twice, which was the bar set for writing it down, and no file under `.rulesync/` mentions `send-keys` today. The argument against writing it: almost no agent in this graph messages another, so the rule would cost every reader of the rule set to serve two. Hayward would skip it and leave the finding on the tmux question pages where someone hitting the problem will search. Measured at source 2026-08-26.
-			- ~~~sh
-			  cd ~/ghq/github.com/codekiln/logseq-encode-garden && git grep -l -F 'send-keys' -- .rulesync ; git grep -l -F 'send-keys' -- pages
 			  ~~~
 	- ## Two aliases are worth adding and one is not, and all three are yours to write
 		- `.claude/rules/logseq-core.md` treats aliases as human-curated, so these stay suggestions. [[Google/Workspace/AI]] is the one Hayward recommends. A relative-path phrasing for the Google Drive Markdown question would help it surface. `Claude/Google Drive` would be skipped, because the pages it would gather already sit under names people search. Neither `pages/Google___Workspace___AI.md` nor `pages/Claude___Google Drive.md` exists on disk today.
