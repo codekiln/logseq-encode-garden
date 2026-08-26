@@ -24,6 +24,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- After the links, keep the page lean: a few descriptive child bullets. State the implementation language on its own short bullet (for example, "Written in [[Python]].") rather than folding it into prose.
 		- When the project is hosted on GitHub, include the [[GitHub/Star]] count when available: record the count with a dated source-check day on the repository line (or on its own bullet when the repository is the H1).
 			- One-line check: `gh repo view OWNER/REPO --json stargazerCount --jq .stargazerCount`
+			- Read a repository's other details the same way rather than spawning an agent or fetching its web page: `gh repo view OWNER/REPO --json name,description,homepageUrl,primaryLanguage,stargazerCount,repositoryTopics`. It is faster and stays in the terminal.
 	- ## Creator (person or company) handling
 		- If the creator is clear and is an individual, create or use a `Person/...` page and point `created-by::` there. If the creator is clearly an organization tracked in the garden, create or use a company entity page and point `created-by::` there.
 		- If it is not clear who the creator is, do not guess—ask the human (e.g. create the software page without creator metadata, create the entity page first, or skip until the identity is clarified).
