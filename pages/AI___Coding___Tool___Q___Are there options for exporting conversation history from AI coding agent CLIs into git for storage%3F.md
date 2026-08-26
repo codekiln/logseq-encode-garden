@@ -3,19 +3,44 @@ see-also:: [[Claude/Code/How To/Export Conversation to File]], [[Claude/Code/Ref
 
 - # Are there options for exporting conversation history from [[AI/Coding/Tool]] CLIs ([[Claude/Code]], [[Codex/CLI]], [[CursorAI/CLI]], [[GitHub/CoPilot/CLI]]) into git for storage?
 	- ## [[AI Answer]]
-		- **Short answer:** Yes — but none of the four ships a first-party "commit this chat to the repo" command. Each already stores sessions on disk (and some can emit Markdown into the working tree); from there you either commit those exports by hand or use a community syncer that writes readable transcripts under the git root.
-		- ### Per-CLI built-ins (export a file, then `git add`)
-			- **[[Claude/Code]]** — [[Answer/Official]] from [Manage sessions](https://code.claude.com/docs/en/sessions): `/export` copies the current conversation or writes a plain-text file (`/export notes.md`). Raw JSONL lives under `~/.claude/projects/<cwd-slug>/<session-id>.jsonl` (see [[Claude/Code/Ref/Session Storage]]); that format is internal and can change between releases, so prefer `/export` or a converter for anything you intend to keep in git.
-			- **[[GitHub/CoPilot/CLI]]** — [[Answer/Official]] from [Using GitHub Copilot CLI session data](https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/chronicle): `/share file [PATH]` (alias `/export`) writes Markdown into the cwd by default as `copilot-session-SESSIONID.md`; `/share html` writes interactive HTML; `/share gist` and `/share` push shareable GitHub artifacts. Programmatic runs can pass `--share='./file.md'`. Copilot also syncs session data to the GitHub account by default — that is cloud history, not a git tree.
-			- **[[Codex/CLI]]** — no first-party "export readable transcript" command for the interactive TUI. Sessions persist as rollout JSONL under `~/.codex/sessions/` (dated folders). Non-interactive `codex exec --json` can be redirected to a file; `-o` / `--output-last-message` writes only the final assistant message. Community Markdown exporters read the local JSONL (e.g. [jinghan23/codex-export](https://github.com/jinghan23/codex-export)). Upstream ask: [openai/codex#13267](https://github.com/openai/codex/issues/13267).
-			- **[[CursorAI/CLI]]** — no documented interactive `export` / `save` / `transcript` subcommand. Headless `agent -p` / `--print` streams to stdout (redirect or `tee`); `--output-format` (`text` / `json` / `stream-json`) only applies with `--print`. Interactive history is for `ls` / `resume` / `--continue`, not a git-oriented dump. Desktop chat has separate copy/export UX and community extractors of local SQLite / agent-transcript stores — see [[CursorAI/CLI/Q/Does Cursor CLI have some kind of way to export the text of a session to a file?]] and [[CursorAI/Q/How can I export a conversation to a file in the Cursor desktop app?]].
-		- ### Cross-tool options aimed at git storage
-			- **[convx](https://github.com/pascalwhoop/convx)** ([PyPI `convx-ai`](https://pypi.org/project/convx-ai/)) — run `uvx --from convx-ai convx sync` inside a repo; scans Claude / Codex / Cursor / Gemini session stores and writes Markdown + hidden JSON under `.ai/history/<user>/<source>/` for commit. Idempotent; supports `backup` into a dedicated history repo.
-			- **[chat-timeline](https://github.com/fredfts/chat-timeline)** — exports Cursor / Claude Code / Codex chats into a `timeline/` tree and can install a pre-commit hook that refreshes the timeline on commit.
-			- **[session-report](https://www.npmjs.com/package/session-report)** — multi-provider export (Claude Code, Codex, Cursor, Gemini, OpenCode, Copilot CLI) to Markdown / JSON / DOCX; you choose an output dir and commit it yourself. Reads paths such as `~/.claude/projects/**/*.jsonl`, `~/.codex/sessions/**/rollout-*.jsonl`, `~/.cursor/projects/*/agent-transcripts/**/*.jsonl`, `~/.copilot/session-state/**/*.jsonl`.
-			- **Vendor-local git of the raw store** — e.g. putting `~/.claude/projects` under its own git repo (noted in [[Claude/Code/How To/Export Conversation to File]]). Diffable, but binary-hostile JSONL, secrets risk, and path coupling make this a weaker default than Markdown under the project.
-		- ### Practical pattern
-			- 1. Prefer a **Markdown (or JSONL) file in the project tree** over committing home-directory session DBs.
-			- 2. Use the CLI's own export when it exists (`/export`, `/share file`); otherwise sync with convx / session-report / a per-vendor converter.
-			- 3. Gitignore or redact aggressively — transcripts often contain secrets, PII, and proprietary code context.
-			- 4. Treat community parsers as best-effort: session on-disk formats are undocumented and change between releases.
+		- **Short answer:** Three community tools cover the cross-tool gap (none of the four CLIs has a first-party "commit chats to this repo" command). **[convx](https://github.com/pascalwhoop/convx)** is the best default for *git storage* of per-session transcripts; **[chat-timeline](https://github.com/fredfts/chat-timeline)** if you want a commit-coupled project narrative; **[session-report](https://www.npmjs.com/package/session-report)** if you need Copilot CLI coverage or one-shot document export / clipboard paste across tools.
+		- ### Comparison
+			- **[convx](https://github.com/pascalwhoop/convx)** — archive-in-repo ([PyPI `convx-ai`](https://pypi.org/project/convx-ai/))
+				- **Primary job:** sync sessions into a git tree
+				- **Git:** writes under `.ai/history/`; optional pre-commit hook (`convx hooks install`); `backup` to a separate history repo
+				- **Providers:** Claude, Codex, Cursor, Gemini — **not** Copilot CLI
+				- **Output:** per-session Markdown + hidden JSON under `.ai/history/<user>/<source>/`
+				- **Re-sync:** idempotent via fingerprint index in `.convx/index.json`
+				- **Redaction:** on by default; sanitize keywords in `.convx/config.toml`
+				- **Install:** `uvx --from convx-ai convx sync` (Python ≥3.11)
+				- **Extra:** `explore` TUI, `stats`, skip marker `CONVX_NO_SYNC`
+				- **Maturity:** PyPI 0.2.7; ~37★
+			- **[chat-timeline](https://github.com/fredfts/chat-timeline)** — narrative alongside commits
+				- **Primary job:** build a git-tracked project timeline
+				- **Git:** `timeline init` creates `timeline/`, manages `.gitignore`, installs a pre-commit hook
+				- **Providers:** Claude, Cursor, Codex — no Gemini, no Copilot CLI
+				- **Output:** compact `timeline/timeline.md` (LLM-oriented) + `contents/` + full `sessions/` exports
+				- **Re-sync:** incremental rebuild (`-t`); pre-commit auto
+				- **Redaction:** managed gitignore of cache; no advertised secret redactor
+				- **Install:** `pipx install chat-timeline` (stdlib runtime)
+				- **Extra:** interactive TUI selector for which chats to include
+				- **Maturity:** v0.2.0; 0★ — youngest / least starred of the three
+			- **[session-report](https://www.npmjs.com/package/session-report)** — widest export, weakest git story ([GitHub](https://github.com/Adyasha8105/session-report))
+				- **Primary job:** export / copy sessions as documents
+				- **Git:** none — write files then `git add` yourself
+				- **Providers:** Claude, Codex, Cursor, Gemini, OpenCode, and **[[GitHub/CoPilot/CLI]]** (`~/.copilot/session-state/**/*.jsonl`) — only tool of the three with Copilot
+				- **Output:** combined or split MD / JSON / DOCX under `./session-reports`
+				- **Re-sync:** re-export on demand (no sync index)
+				- **Redaction:** none advertised
+				- **Install:** `npm i -g session-report` (Node ≥20)
+				- **Extra:** `scan` / `list` / `copy` for pasting context into another agent mid-rate-limit
+				- **Maturity:** npm 1.0.11; ~5 weekly downloads
+		- ### Pick by goal
+			- **Keep transcripts in this project's git history, periodically:** convx.
+			- **Auto-refresh a project timeline on every commit:** chat-timeline.
+			- **Include Copilot CLI, or export/share without a sync workflow:** session-report.
+			- **All four CLIs named in the question:** no single tool covers Claude + Codex + Cursor + Copilot; closest is session-report (has Copilot) plus convx or chat-timeline for the other three's git-shaped sync.
+		- ### Caveats (all three)
+			- They parse **undocumented** on-disk formats that vendors change between releases — treat as best-effort.
+			- Transcripts can hold secrets and proprietary context even after redaction; prefer a private history remote or heavy ignore/redact before push.
+			- Vendor one-offs (`/export`, `/share file`, headless `--print`) remain useful for a single session; they are not cross-tool syncers. Per-CLI detail: [[Claude/Code/How To/Export Conversation to File]], [[CursorAI/CLI/Q/Does Cursor CLI have some kind of way to export the text of a session to a file?]], [[OpenAI/Codex/CLI/Q/Is there a way to export a transcript of a conversation to a file?]].
