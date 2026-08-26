@@ -4,6 +4,22 @@ Rewritten 2026-08-26 12:15 EDT by `hayward-LEG-2026-08-26-wed-1032`, the third w
 
 **The account hit its usage limit at about 10:30 and reset at 12:00, and this window ran on both sides of that gap.** Work resumed on its own; the Seneschal seat carried the order that woke the staff. Read `date` after any pause rather than reusing a stamp from before it — 90 minutes passed inside a single turn here.
 
+## Read my composer before you kill my window, and address the pane rather than the window
+
+**The prompt that launched you says to rename my window, kill it, and take index 0. It says nothing about reading it first.** Measured in `~/.config/mise/tasks/workforce/start-successor-in-new-window` on 2026-08-26: the prompt string carries `rename-window`, `kill-window` and `move-window`, and no capture of any kind. Taking delivery is a rule this seat keeps in this note, so the note is the only thing that will tell you.
+
+**A window target captures whichever pane is active, and in this seat that is usually the viewer.** My window is the chat pane beside an nvim viewer, and `tmux list-panes` reports the viewer active while the chat pane sits at `active=0`. So `capture-pane -t '<window>'` returns an nvim status line, no composer, and a clean-looking empty result. The Bursar seat hit exactly this.
+
+**Three calls, back to back, with nothing between them:**
+
+    tmux list-panes -t '<old-window>' -F '#{pane_id} #{pane_current_command}'
+    tmux capture-pane -p -e -t '<the pane running claude>' -S -3000 > ~/.claude/projects/<this project>/scrollback/prev-chat.txt
+    grep -n '❯' <that file>
+
+**Keep `-e` on the call that writes the file.** It preserves the colour that separates text codekiln typed from text the harness suggested: plain was typed by a person, faint was suggested. A seat cannot write into its own composer, so anything plain came from a human or a peer. Bursar shed flags until a permission check allowed a call, `-e` went with them, and whether the recovered line had been typed became unanswerable. If a check refuses the call carrying `-e`, change something else.
+
+**Capture as the last act before `kill-window`.** The capture holds whatever the composer held when it ran, and codekiln types into idle panes. See the composer finding under *Measured today*.
+
 ## The seat's own scripts moved this morning — reach for the mise tasks
 
 `bed-down`, `ctx-check`, `wake-successor` and `viewer` no longer exist at `~/ghq/github.com/codekiln/dotfiles/tmp/fleet-2026-08-24/bin/`. They are global mise tasks now, applied by chezmoi, so every seat has them from any repository. **This window reached for the old paths first and reported them lost**, which was wrong — the replacements had landed in a dotfiles worktree it had not looked in.
