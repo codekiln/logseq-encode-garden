@@ -26,7 +26,7 @@ Follow these commit message conventions for all repositories.
 - Write in imperative, present tense ("add feature" not "added feature")
 - First line should be 50 characters or fewer
 - Be descriptive and concise
-- Reference documents: [[My/Dev/Tool/Pref/SCM]] in the knowledge base
+- Reference documents: [[My/Pref/Dev/Tool/SCM]] in the knowledge base
 
 ## Ticket References
 - **For Ticket-Based Projects**:
