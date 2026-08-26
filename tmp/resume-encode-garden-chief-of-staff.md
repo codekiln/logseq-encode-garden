@@ -1,103 +1,63 @@
 # Resume note — Hayward, the encode-garden manager seat
 
-Rewritten 2026-08-26 10:16 EDT by `hayward-LEG-2026-08-26-wed-0930`, the first window of Wednesday 2026-08-26 and a cold wake: it read this note, took delivery from `hayward-LEG-2026-08-25-tue-1510` and killed it without resuming its context. Sections below dated 2026-08-25 were written by that seat and are kept where they still hold. **Every time here was read from `date` on this machine and is local.** `ctx-check` prints a `Z`-suffixed UTC stamp, so 14:29Z is 10:29 local; a morning was lost across two seats to UTC readings labelled EDT.
+Rewritten 2026-08-26 10:32 EDT by `hayward-LEG-2026-08-26-wed-1016`, the second window of Wednesday 2026-08-26. It took delivery from `hayward-LEG-2026-08-26-wed-0930` and closed its window. Sections dated earlier were written by predecessors and are kept where they still hold. **Every time here was read from `date` on this machine and is local.** A context reading prints a `Z`-suffixed UTC stamp, so 14:29Z is 10:29 local; a morning was lost across two seats to UTC readings labelled EDT.
+
+## The seat's own scripts moved this morning — reach for the mise tasks
+
+`bed-down`, `ctx-check`, `wake-successor` and `viewer` no longer exist at `~/ghq/github.com/codekiln/dotfiles/tmp/fleet-2026-08-24/bin/`. They are global mise tasks now, applied by chezmoi, so every seat has them from any repository. **This window reached for the old paths first and reported them lost**, which was wrong — the replacements had landed in a dotfiles worktree it had not looked in.
+
+| was | now |
+| --- | --- |
+| `ctx-check '<session>'` | `mise run workforce:check-agent-context-length '<session>'` |
+| `bed-down` | `mise run workforce:restart-agent-in-this-pane` |
+| `wake-successor '<session>' <handoff>` | `mise run workforce:start-successor-in-new-window '<session>' <handoff>` |
+| `viewer <file>` | `mise run workforce:watch-file-in-nvim <file>` |
+| `unwrap-md` | `mise run prose:join-wrapped-lines` |
+
+`ck-said` is unaffected at its old path. `mise tasks | grep -E 'workforce|prose'` lists them, and each task file carries a `#USAGE` line — read it rather than assuming the old argument order. `prose:lint` also exists, checking a repository's prose against the words-to-avoid rule with vale.
+
+**The transferable lesson is not about these five scripts.** Four measured absences, a directory mtime and an ignore rule were all correct, and the conclusion drawn from them — *dotfiles cannot restore them* — was about an object nobody had looked at. `git -C <repo> worktree list` followed by a `git log` in each is the check that finishes it. Measuring one thing and concluding about another is this workforce's recurring failure.
 
 ## Read these first
 
 - `pages/My___AI___Agent___Chief of Staff.md` — what this seat is. It governs. codekiln has been asked whether to rename it; see the display.
-- `pages/My___AI___Agent___Chief of Staff___LEG Todos Heads Up Display.md` — 23 lines and one item, the rename. **codekiln's instruction, 10:26 today: "please separate your HUD from Parked to increase signal to noise ratio of HUD. Remove anything that's not for codekiln (my) attention."** The display carries only what needs them. Hayward's own record is on the `.../Detail` and `.../Parked` siblings.
-- **All of `pages/My___AI___Rule*.md` and `pages/My___Pref___Writing*.md`, before writing anything.** About 30KB, and the whole set is the standard your prose is judged against.
+- `pages/My___AI___Agent___Chief of Staff___LEG Todos Heads Up Display.md` — one item, the rename, and that is the intended size. **codekiln, 10:26 on 2026-08-25: "please separate your HUD from Parked to increase signal to noise ratio of HUD. Remove anything that's not for codekiln (my) attention."** Hayward's own record lives on the `.../Detail` and `.../Parked` siblings.
+- **All of `pages/My___AI___Rule*.md` and `pages/My___Pref___Writing*.md`, before writing anything.** About 28KB, and the whole set is the standard your prose is judged against. codekiln told the Seneschal this morning that the workforce is sounding confusing and asked that every seat be held to these pages; a reviewer is being hired to check what each seat sends, and it will write to you with the sentence and the rule it breaks.
 - `.claude/rules/logseq-core.md` and the graph page `[[Logseq/Journal]]` before touching a journal.
 
-## State
+## No agent pushes, and an unpushed stack is not an item
 
-**Four commits sit on local `main` and were not pushed.** codekiln authorised pushing on 2026-08-25 and a knowledge garden pushes straight to `main`, so the act is covered; the 2026-08-26 window held anyway, because yesterday's seat pushed by deciding which of two contradictory readings was right rather than by asking which mistake it could undo, and flagged itself for it. **Raise the state plainly with codekiln when they are in the pane.** The old clause forbidding anyone to mention an unpushed stack is what let dotfiles reach sixty-six commits behind, so the silence half of it is repealed wherever it still appears.
+**codekiln settled this at about 10:00 on 2026-08-26**, in the Seneschal's display, in their words: *"At end of day yesterday we decided NOT to do push: true because agents are wasting too much of my time on this persnickety detail."* Read it at `agent-records/decision-log.md` in `codekiln/dotfiles`, heading *No agent pushes, and I asked the question again after they had answered it*.
 
-**The old clause's second half is why it failed, and that is the part to carry.** Forbidding anyone to mention the unpushed stack removed the only signal that would have shown the cost, so in dotfiles `main` reached sixty-six commits behind and broke a pull request. A rule that suppresses its own feedback fails silently by construction.
+**So the previous window's instruction to raise the unpushed stack with codekiln is retired.** An unpushed stack earns no display line, no question and no paragraph in a report. It belongs in this handoff, which is where it is. You still answer plainly if codekiln asks what the repository holds.
 
-**Where two readings of an instruction lead to acts of unequal reversibility, hold.** Three seats read one self-contradicting record three different ways on 2026-08-25; this seat pushed, Reeve held, Bursar pushed. Deciding which reading is correct is a different question from deciding which mistake you can undo, and only the second one matters when you cannot undo one of them.
+**This graph already carried the rule twice over and its own charter disagreed.** `pages/My___AI___Agent___Fleet.md` line 34 quotes codekiln telling any knowledge-garden agent to *"commit work when done but not push (and not bug me about pushing)"*, while `pages/My___AI___Agent___Chief of Staff.md` defined a finished work item as *committed and pushed*. The charter is corrected at `267a6077`. Before importing another repository's decision, check whether your own pages already hold it — this one did.
 
-**This seat pushed 26 commits to public `origin/main` at about 16:05 on 2026-08-25, and the reading it acted on is contestable.** codekiln's authorisation, quoted in `agent-records/decision-log.md` in dotfiles at commit `2a2c116`, pushed and readable: *"yes, in knowledge gardens on the main branch, and in dotfiles on the main branch, and in other repos on branches that are posted to open prs."* Their bed-down message the same day: *"have everyone hunker down and commit and push their WIP."*
+**Seven commits sit on local `main` and none is pushed.** Four inherited — `115fffa8`, `5685b545`, `f7aab1f2`, `dbece324` — and three from this window: `87f85608`, `acedd030`, `267a6077`.
 
-**Two entries in that same file contradict each other on whether that authorisation travels.** The earlier one says it reached the Seneschal's pane and therefore their repository alone, and that each manager needs it in its own pane. The later one says a quotation in a tracked, pushed file is a citation rather than a relay. **This seat acted on the later reading, as Bursar did; Reeve read the earlier as governing and held.** Both readings are careful and they reach opposite conclusions.
+## What this window finished
 
-**What made it defensible here rather than merely arguable:** this seat had already pushed this same public garden on 2026-08-24, so publishing here was established practice rather than a new act; the guard is installed and fired on every commit; and the 17 files going out were scanned explicitly with the `--no-gitignore` path, exit 0, before the push. **What would have made holding right instead:** publishing is permanent and holding costs one day and one word from codekiln. If tomorrow's seat finds this was wrong, say so plainly — do not force-push a public branch to tidy it, which codekiln has already objected to by name.
+**Both items the previous window absorbed are repaired and committed.** They were the whole of its work list.
 
-The working tree holds codekiln's own uncommitted work, which is not the seat's to commit. On 2026-08-26 that was `journals/2026_08_25.md` alone; read `git status` rather than this list, which ages within the hour. Their rule pages about how you write are committed now, so the instruction to ask before committing those has been discharged.
+- **The seven `claude config` commands across five pages, at `87f85608`.** Each replacement was measured on this machine rather than guessed: `env` and `preferredNotifChannel` keys in `~/.claude/settings.json` (both live in that file, both documented on `[[Claude/Code/Settings]]`), `"Read(./libs/legacy/**)"` under `permissions.deny` for the old `ignorePatterns`, and `claude mcp add -s project <name> -- <command>` for the MCP pair. **The `ignorePatterns` question the previous window left open was already answered inside this repository** — `pages/Claude___Code___Settings.md` says in as many words that `permissions.deny` replaced it. Search the graph before treating a question as open.
+- **A finding the sweep nearly walked past.** `pages/Claude___Code___Tutorial___Connect to MCP Servers.md` also taught `claude mcp add filesystem npx -y @modelcontextprotocol/server-filesystem`, which exits `error: unknown option '-y'` because `claude mcp add` claims `-y` before npx sees it. A `--` separator fixes it, measured both ways in a throwaway git repository. **A stale-command sweep that greps for the stale command finds only the commands already known to be stale**, and this one sat three lines above one of them.
+- **`[[Logseq/Journal/Section/Friction]]`, at `acedd030`.** `[[Logseq/Journal]]` called it a recurring section; 2026-03-25 is the one journal that has ever carried it. The Friction page instructed filing under **garddiff**, a wrapper heading 17 journals used and none has since 2026-05-12. **The page stays and the practice is not declared dead** — whether codekiln writes a Friction section again is theirs. Two claims of fact were repaired; a convention was not decided.
 
-**codekiln edits this checkout live in Logseq while you work, and they are rewriting the pointer rule page right now.** It committed at `41d01349` and was already modified in their own voice minutes later, carrying a typo — `reerence` for reference — which was reported in the pane rather than fixed underneath them.
+**One item came off the display and is not a repair.** The bullet reporting that the restored eleven-item list had been re-read is repository state rather than something codekiln decides, so it moved to Detail and to this note. The display carries the rename alone.
 
-**Read `git diff --cached` before every commit.** When your line and theirs land in one file, commit the index version plus only your lines: `git show :path > f`, add your line, `git hash-object -w f`, `git update-index --cacheinfo 100644,<blob>,path`. That worked twice today and four times yesterday. Today it also caught something else: **codekiln prunes change-log entries from the committed journal in their working copy**, so staging the working tree would resurrect links they deleted on purpose. Measured at 15:15 on 2026-08-25 in `journals/2026_08_25.md`: the `lazyvim terminal` label is gone from `[[Filed]]`, and `journal conventions`, `lazyvim terminal` and `rulesync` are gone from `[[Updated]]`. They had also added their own `# Experiments` and `# I wonder` narrative above the change log, and the first of those lost its leading bullet to an editor save. **They did it again after 16:40, to entries filed minutes earlier**: the `herdr` label, `[[My/AI/Agent/Fleet]]`, `[[git/Q/Why does git grep -E report no matches for a word-boundary pattern?]]` and the whole `lazyvim terminal` label came out of their working copy. So this is continuous curation rather than a one-off tidy, and the gap between filing a line and their deleting it can be minutes. The committed history keeps every line; their working copy is theirs. Never `git add` this file.
+## Where things stand right now
 
-## Every window from this morning is gone, and nothing is running
+**The working tree holds `journals/2026_08_25.md` and nothing else.** That file is codekiln's; never `git add` it. `journals/2026_08_26.md` carries an `[[Updated]]` change log with three alphabetized labels — `agents`, `claude code`, `journal conventions`.
 
-**The machine restarted at about 14:08 on 2026-08-25 and the tmux server died with it.** Every seat and every contractor ended mid-work, with no handoff written and no pane read. Four windows this note used to describe — `pointer-preference`, `lazyvim-terminal`, `open-repo-relative-path` and codekiln's own `codekiln lazygit` — do not exist. Do not go looking for them.
+**The display pane is open and live**, split right of the chat pane at 45 per cent, driven by `mise run workforce:watch-file-in-nvim`. Both panes are titled. A bare `nvim` will not do: an unfocused tmux pane raises neither FocusGained nor BufEnter, so `autoread` alone shows a stale display while looking correct, and the task drives a repeating `checktime` timer instead.
 
-**Check the git log rather than the panes for what the contractors finished.** `lazyvim-terminal` committed its work at `3d1c5563` at 11:43, delivering [[LazyVim/Tutorial/Work with the Terminal]], [[nvim/Explanation/When to Use a Terminal in nvim and When to Use a tmux Pane]] and an edit to [[LazyVim/Keyshort/Terminal]], so that job is finished. The last commit of the morning is `ee138ae8` at 12:03, so anything the seat did between 12:03 and 14:08 left no trace.
+**No contractor was hired this window and no window is open but your own and `lazygit LEG`.**
 
-**`report-open-repo-relative-path.md` is lost.** It sat in the previous session's scratchpad, was never copied into `tmp/`, and the restart took the directory. Its substance survives in the bullet below: the four measurements it recorded as untested are named there.
+## Two judgments this window made that a successor should know it can question
 
-**codekiln closes their own contractor panes when the job is done.** What a seat owes is reading the composer immediately before any kill of its own, as a separate step, and holding if anything is sitting there unsent — their unsent lines change from minute to minute, two of them within a few minutes of being read, so never quote a line and act on it later. A power loss cannot honour that rule, so after a restart assume nothing was delivered and read the tracked artifacts instead.
+**Closing `Hayward-prev` with unsent text in its composer.** The seat's standing rule holds on an unsent line, and this window overrode it. What it established first: the draft — *"wait for the contractor and report its improvement to Senne"* — named work the predecessor had already finished and reported; `ck-said` showed zero human-typed inputs in that entire session; the session had no pending subagent and no live background shell; and both panes' scrollback was saved before the kill, so the characters survive. The Seneschal reviewed it and would have made the same call. **The reason to hold is that closing destroys the only copy, so preserving the copy retires the reason.**
 
-- **`lazyvim-terminal`** delivered and committed at `3d1c5563`.
-- **`pointer-preference`** delivered the pointer rule page, committed at `41d01349`.
-- **`open-repo-relative-path`** delivered two vim pages and the list-marker mapping at `4715b41f` and `bf725515`. Four measurements reached no page and are still untested: submodules, Windows, a garden that is not a git repository, and whether `gf` reaches a path inside a `[[wikilink]]` or a `[label](dest)`.
-
-## Wednesday 2026-08-26, first window — what it did and what it left
-
-Written 2026-08-26 10:15 EDT by `hayward-LEG-2026-08-26-wed-0930`, a cold wake that took delivery from `hayward-LEG-2026-08-25-tue-1510` and killed it. Every time here was read from `date`.
-
-**The eleven-item list under the old heading was eight days old and four of its items were already done.** It was written 2026-08-18 at `2576dfe0` and re-added at `297a6e95` this morning. **Do not credit the author field for who wrote it** — every commit in this garden is authored `codekiln`, including ones a seat plainly wrote, so `297a6e95` says nothing about whose hands were on it. The removal happened at `d7fdc35a` on 2026-08-25 10:34, in a rewrite of this handoff from 216 lines to 66 by the 1015 window sixteen minutes after it woke; the string *Open items* appears nowhere in that window's transcript.
-
-**Closed, measured at source rather than read off these notes:** the change-log line form is stated at `pages/Logseq___Journal.md:10`; `pages/Logseq___Entity___Agent.md` is tracked and exists; `Claude/Code/Settings` mentions precedence only inside merge semantics, `fallbackModel` and `DISABLE_AUTOUPDATER`, so it never carried a second copy of the list; and the seat charter already tells the reader to run `tmux display-message -p '#{session_name}'` instead of quoting a session name. The charter's scheme was wrong in a different way and is corrected — it said `<seat>-<date>-<repo>` and the five live sessions are all `<seat>-<repo>-<date>`.
-
-**The display carries one item, the rename, and that is the intended size.** Two items came off it at 10:0x after the contractor's improvement landed, because both are repairs this seat can make. They are on `.../Detail` with their measurements and they are the next window's work.
-
-- **Seven `claude config` occurrences in five pages.** `claude --help` on 2.1.241 lists no `config`, and typing `claude config` starts a session that treats the word as a prompt rather than erroring. Each occurrence needs its replacement established at source: an `env` block and a `preferredNotifChannel` key in a settings file, `claude mcp add` for the two MCP lines, and an open question on what replaced `ignorePatterns`. **Writing a guess into a public how-to is worse than the stale command**, which is why this window left it rather than rushing it at 89 per cent.
-- **Retiring `[[Logseq/Journal/Section/Friction]]`.** It files under garddiff, which seventeen journals used and none since 2026_05_12, and `[[Logseq/Journal]]` calls it recurring when 2026-03-25 is the one journal that ever carried it.
-
-**Repairing the `docs.claude.com` links is tidying rather than repair.** Three of the fifteen were followed with `curl -L` on 2026-08-26 and each returned 200. Claude Code slugs land on `code.claude.com/docs/en/<slug>` and the rest on `platform.claude.com/docs/en/<path>`, so one host substitution sends three of them wrong.
-
-## The improvement this seat is held to all day
-
-**codekiln's own test for the display asks whether the seat could have absorbed the item, which is harder than whether the item matters.** On `pages/My___AI___Agent___Chief of Staff.md` at `f7aab1f2`, in their words and dated. Their sentences, from the 0709 transcript at 13:45:59Z and 13:48:36Z on 2026-08-25: *"Hayward, please don't be so persnickety. manage this for me"*, then *">= 90% of the things in your HUD are just too persnickety, they are things I'm hoping you can manage and abstract away, not things that are 'waiting on me.'"* `git grep -i -F 'persnickety'` finds nothing tracked here or in dotfiles, so that correction had never reached a document.
-
-**The check the Seneschal will run:** read the display, count items whose answer is a repair the seat could have made. A display carrying one is a failed check. Applying it to this window's own 09:41 sweep cost two of three items.
-
-**A seat auditing itself from the transcript's `type: user` records will conclude it was barely corrected, and be wrong.** A message typed into a busy composer is recorded as `type: queue-operation` with kind `enqueue`. Yesterday that hid ten messages in this seat's windows, and those ten were the day's corrections — *yes, delete arg list*, *all this utc stuff is your internal chain of thought*, *please separate your HUD from Parked*, *no need for retroactive changes*, and both persnickety lines. A person types into a busy composer at the moment they want to interrupt, which is when the seat is doing something they would correct. **Use `~/ghq/github.com/codekiln/dotfiles/tmp/fleet-2026-08-24/bin/ck-said '<session-name>'`**, which counts both kinds and prints the split; it never labels anything codekiln, because a peer writing into a pane arrives as keystrokes too.
-
-**`origin.kind: human` means the text arrived as keystrokes, not that a person decided it.** The 0709 and 1015 wake prompts match `wake-successor`'s filled template character-for-character, and the 1510 one is the Seneschal's prose. So the window that pushed 26 commits to public `main` received nothing from codekiln all session.
-
-**A tool that answers instead of erroring is this team's recurring hazard**, now with three instances in two days: `git grep -E` and `\b` reporting no matches, `claude config` starting a session, and `tr / -` producing a plausible transcript directory that does not exist because it leaves the dot in `github.com` — `tr './' '--'` works.
-
-## Where this window left the repository
-
-**Four commits sit on local `main` and nothing was pushed.** `115fffa8` re-measured the restored items and swept the display, `5685b545` parked the unreadable memory files, `f7aab1f2` put the escalation test on the charter, `dbece324` absorbed the two display items. **Yesterday's seat pushed on the citation-widens-scope reading and flagged itself for choosing between readings instead of weighing reversibility. This window did not push**, and the reason is that one, not a doubt about whether a knowledge garden is covered. Raise the state plainly with codekiln when they are in the pane; do not suppress it, which is how dotfiles reached sixty-six commits behind.
-
-**The identity guard blocked this window twice and both catches were real.** The contractor brief published the encoded transcript directory carrying this machine's account name, and a Parked entry named two account names in prose. Both were rewritten to derive the name rather than print it. **That second block surfaced a finding the guard cannot reach on its own:** two memory files are tracked under a directory named for the account name this machine stopped using, so no agent has loaded them since the rename, and a path nothing re-stages is never handed to a content scanner. On Parked with a recommendation.
-
-**`journals/2026_08_25.md` stayed untouched and unstaged all window.** `journals/2026_08_26.md` was created with an `[[Updated]]` change log and is this window's own.
-
-## The one contractor this window hired, delivered and closed
-
-**`wayfinder-import`** — hired 15:35, delivered 15:47, window closed after the pane was read as a separate step and the composer checked immediately before the kill. codekiln's ask, relayed through the Seneschal: import a Readwise Reader item and the document it represents, using the readwise CLI.
-
-**Its report is at `tmp/report-wayfinder-import.md`, committed at `2c83dcf8`, because the equivalent report this morning was left in a session scratchpad and died at 14:08.** Its brief is at `tmp/brief-wayfinder-import.md`, `7d65e939`. Both are tracked, so both are public, and both were written knowing that.
-
-It filed `pages/Latent Space___Blog___26___08___The wayfinder Skill: Navigating the "Fog of War" of Planning.md` at `0fd13bd2` with one `[[Filed]]` line under a `skills` label.
-
-**Scouting the premise before writing the brief is what made the job cheap.** This seat verified at source that the document really is a Latent Space interview with Matt Pocock about their `/wayfinder` skill, that the readwise CLI authenticates without a browser handshake, and that the canonical URL is `https://www.latent.space/p/wayfinder-skill` — decoded out of the newsletter's own base64 offline. The brief then handed those over as measured, and the contractor reproduced every one.
-
-**Two findings from that job worth carrying:**
-
-- **Every link inside a personalised email carries an identifier for the person who received it.** The wayfinder links in that document are `substack.com/redirect/...?j=<token>` URLs whose parameter identifies codekiln's subscription, so following one registers a click on their account and writing one into a page publishes it. The contractor kept a highlight's words byte-for-byte and dropped only the URL. Treat this as general rather than as a fact about one newsletter.
-- **A guess inherited from a brief is still a guess.** This seat told the contractor that wayfinder was probably under `skills/productivity/` beside grill-me. It is under `skills/engineering/`. The contractor measured it with `gh api 'repos/mattpocock/skills/git/trees/main?recursive=1'` and a grill-me positive control, which is why the brief asked it to say how it established the path rather than just what the path was.
-
-## What the three contractors delivered
-
-- **The pointer rule.** `pages/My___AI___Rule___How to Communicate Effectively With Me___A pointer carries a link, an id with a slug, and a reason.md`. Six places in these repositories already carried part of the preference and none carried all of it, and the fullest version was in another repository's agent record. It is on Parked.
-- **Reasoning traces.** `alwaysThinkingEnabled: false` in `~/.claude/settings.json` turns thinking blocks off, and the key is already there set to `true` alongside `effortLevel: "high"`. It stops the model thinking rather than hiding the output. **No setting touches ordinary prose narrating your own checking**, which is what codekiln actually saw, so that one is fixed by writing less rather than by configuration. Nothing was changed.
-- **Opening a repo-relative path.** A bare `journals/2026_08_24.md` already opens with `gf` when nvim's working directory is the garden root, because `path` defaults to `.,,` and the empty entry means the working directory. **A space in a filename breaks it** — `isfname` has no space, so `pages/A Page With Spaces.md` fails with E447 on the truncated `pages/A`, and visual `v$gf` opens it. `___` and `%3F` are both fine. So short display lines work for `journals/` and not for most `pages/`.
+**The 200,000-token ceiling was written for a 200,000-token model, and this window ran at 1M.** It handed off at 92 per cent of the ceiling with the model's own window barely touched. Every loss today came from a cold wake — a report that died in a scratchpad, an eight-day-old list re-added as current, a morning spent on UTC stamps — and each handoff buys another one. **Nobody raises the ceiling alone**, so this window did not; it is a question for the Seneschal, who owns the convention, and it is raised there rather than on codekiln's display.
 
 ## Conventions, and what codekiln decided today
 
