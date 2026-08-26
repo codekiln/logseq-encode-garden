@@ -31,7 +31,7 @@ title:: Claude/Code/Tutorial/Connect to MCP Servers
 			  The server stays running and communicates over stdio. Package info: [server-filesystem on npm](https://www.npmjs.com/package/@modelcontextprotocol/server-filesystem).
 			- In a second terminal, register it with Claude Code:  
 			  ~~~bash
-			  claude mcp add filesystem npx -y @modelcontextprotocol/server-filesystem \
+			  claude mcp add filesystem -- npx -y @modelcontextprotocol/server-filesystem \
 			   ~/Desktop ~/Downloads
 			  ~~~
 			- Confirm connection:  
@@ -65,11 +65,13 @@ title:: Claude/Code/Tutorial/Connect to MCP Servers
 			  > Search for the latest MCP spec release notes and summarise them.
 			- Claude will ask for permission, invoke the tool, and stream results.
 		- ### 6. Share configuration (optional)
-			- Scope the servers to the current project so teammates get them in git:  
+			- Re-add each server at project scope so teammates get them in git. `-s project` writes `.mcp.json` in the repository root:  
 			  ~~~bash
-			  claude config add mcp.project filesystem
-			  claude config add mcp.project web-browse
-			  git add .claude/config.json
+			  claude mcp add -s project filesystem -- npx -y @modelcontextprotocol/server-filesystem \
+			   ~/Desktop ~/Downloads
+			  claude mcp add -s project web-browse --transport sse \
+			   "https://actors-mcp-server.apify.actor/sse?token=${APIFY_TOKEN}&actors=apify/rag-web-browser"
+			  git add .mcp.json
 			  git commit -m "Add MCP servers"
 			  ~~~
 	- ## Verification

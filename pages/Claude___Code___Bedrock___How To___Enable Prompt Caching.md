@@ -19,9 +19,13 @@ title:: Claude/Code/Bedrock/How To/Enable Prompt Caching
 			  ~~~bash
 			  unset DISABLE_PROMPT_CACHING
 			  ~~~
-			- (Alternative) Persist in global Claude Code config:
-			  ~~~bash
-			  claude config set --global env '{"CLAUDE_CODE_USE_BEDROCK":"true"}'
+			- (Alternative) Persist it for every session under the `env` key in `~/.claude/settings.json` — [[Claude/Code/Settings]]:
+			  ~~~json
+			  {
+			    "env": {
+			      "CLAUDE_CODE_USE_BEDROCK": "true"
+			    }
+			  }
 			  ~~~
 		- ### 2. Verify prompt caching via AWS CLI
 			- Create a `payload.json`:

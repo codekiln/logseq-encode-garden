@@ -56,8 +56,17 @@ title:: Claude/Code/How To/Bootstrap Claude Code with Mise + UV-Powered Okta Rol
 		  ~~~bash
 		  aws sts get-caller-identity --profile bedrock
 		  aws bedrock list-foundation-models --region us-east-1 | grep claude
-		  claude config add ignorePatterns "libs/legacy/**"
 		  /cost
+		  ~~~
+		- Keep a large or irrelevant directory out of reach with a `Read(...)` rule under `permissions.deny` in `.claude/settings.json` — [[Claude/Code/Settings]]:
+		  ~~~json
+		  {
+		    "permissions": {
+		      "deny": [
+		        "Read(./libs/legacy/**)"
+		      ]
+		    }
+		  }
 		  ~~~
 	- ## Troubleshooting
 		- **403 "Model access denied"** → enable *Claude 3* in the Bedrock console for `us-east-1`.

@@ -27,11 +27,14 @@ title:: Claude/Code/How To/Get Started with AWS Bedrock
 			  export ANTHROPIC_SMALL_FAST_MODEL=us.anthropic.claude-3-5-haiku-20241022-v1:0
 			  ~~~
 			- These variables switch the provider and model IDs for the session ([Anthropic Claude Code Bedrock Docs](https://docs.anthropic.com/en/docs/claude-code/bedrock-vertex?utm_source=chatgpt.com)).
-			- Persist once if you prefer:
-				- ~~~
-				  claude config set --global env \
-				  '{"CLAUDE_CODE_USE_BEDROCK":"true", \
-				  "ANTHROPIC_MODEL":"us.anthropic.claude-3-7-sonnet-20250219-v1:0"}'
+			- Persist them for every session under the `env` key in `~/.claude/settings.json` — [[Claude/Code/Settings]]:
+				- ~~~json
+				  {
+				    "env": {
+				      "CLAUDE_CODE_USE_BEDROCK": "true",
+				      "ANTHROPIC_MODEL": "us.anthropic.claude-3-7-sonnet-20250219-v1:0"
+				    }
+				  }
 				  ~~~
 		- ### 5. Launch Claude Code in your project
 			- ~~~
@@ -41,11 +44,16 @@ title:: Claude/Code/How To/Get Started with AWS Bedrock
 			  /status   # confirms “provider: Bedrock”
 			  ~~~
 		- ### 6. Optional hygiene
-			- ~~~
-			  # Ignore large or irrelevant libraries
-			  claude config add ignorePatterns "libs/legacy/**"
-			  # View token spend
-			  /cost
-			  ~~~
+			- Keep a large or irrelevant library out of reach with a `Read(...)` rule under `permissions.deny` in `.claude/settings.json` — [[Claude/Code/Settings]]:
+				- ~~~json
+				  {
+				    "permissions": {
+				      "deny": [
+				        "Read(./libs/legacy/**)"
+				      ]
+				    }
+				  }
+				  ~~~
+			- View token spend with `/cost` inside a session.
 	- ## Result
 		- Claude Code now runs against AWS Bedrock using STS credentials issued by `aws_okta_keyman`; every request is SigV4-signed and billed to your enterprise account.

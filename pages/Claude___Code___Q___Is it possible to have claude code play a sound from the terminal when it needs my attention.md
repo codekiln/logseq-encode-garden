@@ -6,9 +6,11 @@ tags:: [[Claude/Code]], [[Q]], [[Terminal]], [[Notification]]
 		- Options include built-in terminal bell support and customizable hooks for OS-level notifications
 	- ## Built-in Terminal Bell
 		- Claude Code has built-in support for terminal bell notifications
-		- Configure using:
-			- ~~~
-			  claude config set --global preferredNotifChannel terminal_bell
+		- Set the `preferredNotifChannel` key in `~/.claude/settings.json` — [[Claude/Code/Settings]] lists the channels it accepts:
+			- ~~~json
+			  {
+			    "preferredNotifChannel": "terminal_bell"
+			  }
 			  ~~~
 		- This uses the ASCII BEL character (`\a`) to trigger terminal bell sounds
 		- To test if terminal bell is working:
