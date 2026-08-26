@@ -17,6 +17,6 @@ alias:: [[Logseq Journal]]
 			- **Labels are alphabetized, under [[Filed]] and under [[Updated]] alike.** Items inside a label keep semantic order. The narrative above the change log is ordered however [[Person/codekiln]] wrote it and is left alone. This holds for [[2026-08-25 Tue]] onward; a journal already written stays as it is.
 	- ## Narrative and section titles
 		- Above the change log, a day may carry topic-led blocks with editorial-style titles, and **[[Person/codekiln]] writes those.** [[Logseq/Journal/Editorial headings]] describes how they are titled, for their use rather than an agent's. Three agent-written narrative blocks were deleted by hand from the [[2026-08-18 Tue]] journal, and an agent following that page reproduced the deletion again on [[2026-08-24 Mon]].
-		- Recurring section: [[Logseq/Journal/Section/Friction]].
+		- [[Logseq/Journal/Section/Friction]] describes a section [[Person/codekiln]] wrote once, on [[2026-03-25 Wed]], and no journal has carried since. Write it when they ask for it rather than expecting it in a day.
 	- ## Worked example
 		- `journals/2026_06_27.md` — a topic-led narrative block up top, then [[Filed]] and [[Updated]] as top-level blocks with grouped, link-only lists.
