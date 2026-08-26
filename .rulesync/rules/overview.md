@@ -20,7 +20,8 @@ This repository is a personal Logseq knowledge graph (not a software project): p
 
 ## Canonical sources (hard rule for agents)
 - Edit **only** files under `.rulesync/` (rules, skills, commands, subagents, config, and `rulesync.jsonc`). Never hand-edit the generated outputs under `.claude/`, `.cursor/`, `.github/`, `.codex/` — treat them as read-only compiled output.
-- If a tool's copy looks wrong, fix the matching `.rulesync/` source and run `rulesync generate` (or `npx rulesync generate`) from the repo root. Commit both the source change and the tracked generated files.
+- If a tool's copy looks wrong, fix the matching `.rulesync/` source and run `rulesync generate` from the repo root, using the `rulesync` that mise provides. Commit both the source change and the tracked generated files.
+  - `npx rulesync` resolves to a separately cached copy several major versions behind the mise-provided one (8.15.0 against 16.17.0, measured 2026-08-26), so the two generate different output.
 
 ## Editing the graph
 - Every page/journal edit follows the always-on `logseq-core` rule (protected `tags::`, LFM basics, naming, no-agent-taint, journal updates, block-ref safety).
