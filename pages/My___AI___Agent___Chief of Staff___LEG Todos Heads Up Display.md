@@ -1,10 +1,10 @@
-current-as-of:: 2026-08-26T10:23:09-04:00 ET
+current-as-of:: 2026-08-26T12:02:12-04:00 ET
 see-also:: [[My/AI/Agent/Chief of Staff]], [[My/AI/Agent/Fleet]], [[Logseq/Journal]]
 
 - # LEG Todos Heads Up Display
-	- Swept 2026-08-26 10:23 ET by Hayward in tmux session `hayward-LEG-2026-08-26-wed-1016`. The `current-as-of::` property above is authoritative.
+	- Swept 2026-08-26 12:02 ET by Hayward in tmux session `hayward-LEG-2026-08-26-wed-1032`. The `current-as-of::` property above is authoritative.
 	- ## Waiting on you
-		- TODO **Rename this seat's pages from `Chief of Staff` to manager?** Hayward recommends yes. Held by tmux session `hayward-LEG-2026-08-26-wed-1016`, scope checked at source 2026-08-25 and unchanged at 2026-08-26. A Logseq rename rewrites the links and leaves the `{{namespace My/AI/Agent/Chief of Staff/Log}}` query on [[My/AI/Agent/Chief of Staff]] and the `{{namespace My/AI/Agent/Chief of Staff/Scribe/Log}}` query on [[My/AI/Agent/Chief of Staff/Scribe]] aimed at a namespace that stopped existing, both still rendering with an empty result. The scope across the page files, the pages, the journals and [[My/Dotfiles]] is on [[My/AI/Agent/Chief of Staff/LEG Todos Heads Up Display/Detail]].
+		- TODO **Rename this seat's pages from `Chief of Staff` to manager?** Hayward recommends yes. Held by tmux session `hayward-LEG-2026-08-26-wed-1032`, scope checked at source 2026-08-25 and unchanged at 2026-08-26. A Logseq rename rewrites the links and leaves the `{{namespace My/AI/Agent/Chief of Staff/Log}}` query on [[My/AI/Agent/Chief of Staff]] and the `{{namespace My/AI/Agent/Chief of Staff/Scribe/Log}}` query on [[My/AI/Agent/Chief of Staff/Scribe]] aimed at a namespace that stopped existing, both still rendering with an empty result. The scope across the page files, the pages, the journals and [[My/Dotfiles]] is on [[My/AI/Agent/Chief of Staff/LEG Todos Heads Up Display/Detail]].
 			- ~~~sh
 			  cd ~/ghq/github.com/codekiln/logseq-encode-garden && ls pages/*'Chief of Staff'* && git grep -n -F '{{namespace My/AI/Agent/Chief of Staff' -- pages
 			  ~~~
