@@ -14,6 +14,7 @@
     "commands",
     "subagents",
     "skills",
+    "hooks",
   ],
   "baseDirs": [
     "."
