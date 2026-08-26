@@ -1,3 +1,46 @@
+# Notes for whoever works on this graph next
+
+**Written 2026-08-26 for a reader who has never seen this file before, including a person or an AI tool other than Claude Code.** The rest of the file below was written by a series of Claude Code sessions for each other and uses their own in-house words. This opening section does not.
+
+This repository is a [Logseq](https://logseq.com) personal knowledge graph. Pages are Markdown files in `pages/`, daily entries are in `journals/`, and a page whose name contains `/` is stored with three underscores — `[[My/AI/Agent/Fleet]]` is the file `pages/My___AI___Agent___Fleet.md`.
+
+## Two questions are waiting on codekiln, and nobody is watching for the answers now
+
+Both are page renames. Both are recommended yes. Neither has been started.
+
+**1. Rename the pages named `Chief of Staff`.** On 2026-08-24 codekiln settled that only the agent working in their `dotfiles` repository is called a chief of staff, and the equivalent in every other repository is called a manager. The pages in this graph still use the old title. Measured 2026-08-25: eight page files, about 30 links across 12 pages, 10 links across four journals, three files in the `codekiln/dotfiles` repository, and nothing under `.rulesync/`, `.claude/`, `.github/` or `.agents/`.
+
+- **The one thing that breaks quietly.** Two `{{namespace ...}}` blocks pass the path as plain text rather than as a link — one on `pages/My___AI___Agent___Chief of Staff.md` and one on `pages/My___AI___Agent___Chief of Staff___Scribe.md`. Logseq's rename updates links and leaves these two pointing at a name that no longer exists. They keep rendering, with an empty result and no error. Fix them by hand after any rename.
+- Check the current scope: `ls pages/*'Chief of Staff'* && git grep -n -F '{{namespace My/AI/Agent/Chief of Staff' -- pages`
+
+**2. Rename the `My/AI/Agent/Fleet` pages to use the word `Workforce`.** On 2026-08-26 codekiln wrote *"`fleet` is a deprecated term. Use `workforce`. `fleet` implies transportation vehicles"*, reviewing [Propose one tracked home for the seat scripts and the per-machine roster · Pull Request #12 · codekiln/dotfiles](https://github.com/codekiln/dotfiles/pull/12). In the same review they asked for `computer` in place of `machine`. Measured 2026-08-26: three page files, 34 links across 15 pages, four links across journals, and no `{{namespace ...}}` block pointing at this one — so this rename leaves nothing silently broken behind it.
+
+- Check the current scope: `ls pages/My___AI___Agent___Fleet*.md && git grep -c -F '[[My/AI/Agent/Fleet' -- pages journals`
+- Leave the word `fleet` alone where it is part of a real file path, inside a quotation, or in a dated entry recording what someone wrote on an earlier day. Neither retired word is checked by any linter here, so a deliberate `grep` is the only way to find them.
+
+## Three things about this repository that produce no error when you get them wrong
+
+**Never edit files under `.claude/`, `.cursor/`, `.github/` or `.agents/`.** They are generated from the sources in `.rulesync/` by [rulesync](https://github.com/dyoshikawa/rulesync), which deletes and rewrites them. Edit the matching file under `.rulesync/` and run `rulesync generate`. Use the `rulesync` that [mise](https://mise.jdx.dev) provides: `npx rulesync` resolves to a separate cached copy that was 8.15.0 against mise's 16.17.0 on 2026-08-26.
+
+**`CLAUDE.md`, `AGENTS.md` and `.github/copilot-instructions.md` are generated and are excluded by `.gitignore`.** A fresh clone has none of them until someone runs `rulesync generate`. A correction has to be made in `.rulesync/rules/` to reach anyone.
+
+**Never `git add` a file you did not change.** Several people and tools write into this one working copy. As of this writing `journals/2026_08_25.md` is modified and it is codekiln's own edit.
+
+## The state of the repository as of 2026-08-26
+
+Count what is unpushed with `git log --oneline origin/main..main | wc -l`. **Do not push.** codekiln asked on 2026-08-26 that agents stop raising it: *"we decided NOT to do push: true because agents are wasting too much of my time on this persnickety detail."* Commit finished work and leave it on the local `main` branch.
+
+Two pages hold the detailed record behind the two questions above, and they are worth reading before acting on either:
+
+- `pages/My___AI___Agent___Chief of Staff___LEG Todos Heads Up Display___Detail.md` — the reasoning behind decisions already made, and what has been measured about this repository.
+- `pages/My___AI___Agent___Chief of Staff___LEG Todos Heads Up Display___Parked.md` — seven findings that need a decision from codekiln rather than more investigation.
+
+## A short glossary for the sections below
+
+The rest of this file was written by Claude Code sessions for their successors. **A seat** is a role held by a series of sessions, each handing to the next; this one is called Hayward. **The display** is the file `pages/My___AI___Agent___Chief of Staff___LEG Todos Heads Up Display.md`, which lists what needs codekiln. **Bed down** means ending a session deliberately. **Taking delivery** means reading a session's terminal pane before closing it, so nothing typed there is lost.
+
+---
+
 # Resume note — Hayward, the encode-garden manager seat
 
 Rewritten 2026-08-26 12:15 EDT by `hayward-LEG-2026-08-26-wed-1032`, the third window of Wednesday 2026-08-26. It took delivery from `hayward-LEG-2026-08-26-wed-1016` and closed its window. Sections dated earlier were written by predecessors and are kept where they still hold. **Every time here was read from `date` on this computer and is local.** A context reading prints a `Z`-suffixed UTC stamp, so 16:10Z is 12:10 local; a morning was lost across two seats to UTC readings labelled EDT.
