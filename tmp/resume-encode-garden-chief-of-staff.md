@@ -43,6 +43,56 @@ The working tree holds codekiln's own uncommitted work, which is not the seat's 
 - **`pointer-preference`** delivered the pointer rule page, committed at `41d01349`.
 - **`open-repo-relative-path`** delivered two vim pages and the list-marker mapping at `4715b41f` and `bf725515`. Four measurements reached no page and are still untested: submodules, Windows, a garden that is not a git repository, and whether `gf` reaches a path inside a `[[wikilink]]` or a `[label](dest)`.
 
+## Open items — all awaiting codekiln, none actionable unasked
+
+1. **Two repair sweeps, best run as one pass** since the page sets overlap.
+   `docs.claude.com` is now entirely a redirect host and splits two ways: Claude
+   Code slugs go to `code.claude.com/docs/en/<slug>`, everything else to
+   `platform.claude.com/docs/en/<path>`. 14 pages, 16 occurrences, 15 unique
+   URLs. A naive host replacement breaks the three that went to `platform`.
+   Separately, `claude config <sub>` appears in 5 pages and **no longer exists**
+   in the CLI — worse than a redirect, which still works.
+2. **The declaration page names the wrong tmux session** since the rename.
+   Recommendation: describe the naming pattern rather than the literal name, so
+   it survives the next one.
+3. **Two repairs to `[[Logseq/Journal/Section/Friction]]`**: it instructs filing
+   under **garddiff**, a mechanism with no journal appearance since 2026-05-12;
+   and `[[Logseq/Journal]]` calls it a *recurring* section when it has appeared
+   twice ever, last five months ago.
+4. **The Filed/Updated line form.** Five variants across the graph, no page
+   states which. Recommendation: `- # [[Filed]]` — the plurality, and the only
+   common form satisfying `logseq-core`'s bullet rule. **Nobody should touch the
+   234-of-446 journals whose first line lacks a bullet** until codekiln says what
+   caused it; a save that eats a bullet is indistinguishable from a person
+   choosing one.
+5. **Whether the send-keys failure earns a `.rulesync/` rule.** It has now
+   happened twice, which was the bar. Argument against: almost no agent here
+   messages another, so the rule costs every reader to serve two.
+6. **Which page owns the settings precedence list** — `[[Claude/Code/Settings]]`
+   and `[[Claude/Code/Settings/Override]]` now both carry it, both correct, and
+   they will drift.
+7. **Aliases**, suggested and unwritten since aliases are human-curated:
+   `[[Google/Workspace/AI]]` (recommended), a relative-path phrasing for the
+   Google Drive Markdown question, `[[Claude/Google Drive]]` (would skip).
+8. **A dead hook.** `.rulesync/hooks.json` declares a `PostToolUse` formatter
+   pointing at `.rulesync/hooks/format.sh`, which does not exist, and `hooks` is
+   not in `rulesync.jsonc`'s `features`, so it would not generate anyway. Inert
+   since [f18285e2 a bunch of rulesync skill updates](https://github.com/codekiln/logseq-encode-garden/commit/f18285e2).
+9. **Whether a current tools page is worth having.** The stale tools table was
+   dropped from the settings page; a current list would be useful, but as its own
+   page rather than smuggled back in.
+10. **The scope of the no-bare-identifiers rule**, before any check is built for
+    it. Six real SHAs sit in prose across five pages, confirmed with
+    `git cat-file -t`. But a `[0-9a-f]{7,40}` gate is wrong about two matches in
+    five — binary literals, an inode, a byte count, `ed25519`, model identifiers,
+    an ISBN. And some of those pages transcribe terminal output, where rewriting a
+    SHA as a slug and link would falsify the transcript. A prose reference plainly
+    wants the link; quoted output plainly does not; nothing states which. Settle
+    that first. The five pages are untouched.
+11. **`Logseq/Entity/Agent`** — still held from 2026-08-13. Creating the type
+    sets a convention and 35 `Person/Steve Yegge/Agent/*` pages would become its
+    instances.
+
 ## The one contractor this window hired, delivered and closed
 
 **`wayfinder-import`** — hired 15:35, delivered 15:47, window closed after the pane was read as a separate step and the composer checked immediately before the kill. codekiln's ask, relayed through the Seneschal: import a Readwise Reader item and the document it represents, using the readwise CLI.
