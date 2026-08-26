@@ -1,17 +1,17 @@
 # Resume note — Hayward, the encode-garden manager seat
 
-Rewritten 2026-08-25 15:17 EDT. Written by the third context window of Tuesday 2026-08-25, which took the seat at 15:10 after the machine restarted at about 14:08 and killed every session then running. The second window wrote most of what follows and stamped it 10:31, though its last edit landed at 12:03; where a section says otherwise this header governs. Written for a successor with none of this context. **Every time here was read from `date` on this machine and is local.** `ctx-check` prints a `Z`-suffixed UTC stamp, so 14:29Z is 10:29 local; a morning was lost across two seats to UTC readings labelled EDT.
+Rewritten 2026-08-26 10:16 EDT by `hayward-LEG-2026-08-26-wed-0930`, the first window of Wednesday 2026-08-26 and a cold wake: it read this note, took delivery from `hayward-LEG-2026-08-25-tue-1510` and killed it without resuming its context. Sections below dated 2026-08-25 were written by that seat and are kept where they still hold. **Every time here was read from `date` on this machine and is local.** `ctx-check` prints a `Z`-suffixed UTC stamp, so 14:29Z is 10:29 local; a morning was lost across two seats to UTC readings labelled EDT.
 
 ## Read these first
 
 - `pages/My___AI___Agent___Chief of Staff.md` — what this seat is. It governs. codekiln has been asked whether to rename it; see the display.
-- `pages/My___AI___Agent___Chief of Staff___LEG Todos Heads Up Display.md` — now 20 lines and one item. **codekiln's instruction, 10:26 today: "please separate your HUD from Parked to increase signal to noise ratio of HUD. Remove anything that's not for codekiln (my) attention."** The display carries only what needs them. Hayward's own record is on the `.../Detail` and `.../Parked` siblings.
+- `pages/My___AI___Agent___Chief of Staff___LEG Todos Heads Up Display.md` — 23 lines and one item, the rename. **codekiln's instruction, 10:26 today: "please separate your HUD from Parked to increase signal to noise ratio of HUD. Remove anything that's not for codekiln (my) attention."** The display carries only what needs them. Hayward's own record is on the `.../Detail` and `.../Parked` siblings.
 - **All of `pages/My___AI___Rule*.md` and `pages/My___Pref___Writing*.md`, before writing anything.** About 30KB, and the whole set is the standard your prose is judged against.
 - `.claude/rules/logseq-core.md` and the graph page `[[Logseq/Journal]]` before touching a journal.
 
 ## State
 
-**Commit and push. This repository is level with `origin/main` at `b2056a09`, and there is no stack to inherit.** codekiln authorised pushing on 2026-08-25 and a knowledge garden pushes straight to `main`; the old clause — commit but do not push, and do not raise the unpushed stack — goes quiet here rather than being repealed, and still governs any repository the new answer does not reach.
+**Four commits sit on local `main` and were not pushed.** codekiln authorised pushing on 2026-08-25 and a knowledge garden pushes straight to `main`, so the act is covered; the 2026-08-26 window held anyway, because yesterday's seat pushed by deciding which of two contradictory readings was right rather than by asking which mistake it could undo, and flagged itself for it. **Raise the state plainly with codekiln when they are in the pane.** The old clause forbidding anyone to mention an unpushed stack is what let dotfiles reach sixty-six commits behind, so the silence half of it is repealed wherever it still appears.
 
 **The old clause's second half is why it failed, and that is the part to carry.** Forbidding anyone to mention the unpushed stack removed the only signal that would have shown the cost, so in dotfiles `main` reached sixty-six commits behind and broke a pull request. A rule that suppresses its own feedback fails silently by construction.
 
@@ -23,7 +23,7 @@ Rewritten 2026-08-25 15:17 EDT. Written by the third context window of Tuesday 2
 
 **What made it defensible here rather than merely arguable:** this seat had already pushed this same public garden on 2026-08-24, so publishing here was established practice rather than a new act; the guard is installed and fired on every commit; and the 17 files going out were scanned explicitly with the `--no-gitignore` path, exit 0, before the push. **What would have made holding right instead:** publishing is permanent and holding costs one day and one word from codekiln. If tomorrow's seat finds this was wrong, say so plainly — do not force-push a public branch to tidy it, which codekiln has already objected to by name.
 
-The working tree holds codekiln's own uncommitted work, which is not the seat's to commit: `journals/2026_08_24.md`, `journals/2026_08_25.md`, `pages/Word___Salad.md`, `pages/My___Pref___Dev___Tool___git___Worktree.md`, `pages/tmux___Q___Are there two different modes of visual selection in tmux%3F.md`, plus untracked `pages/ChatGPT___Remote___Voice.md`, `pages/My___AI___Rule___How to Communicate Effectively With Me___Get to the point.md` and `pages/My___AI___Rule___How to Communicate Effectively With Me___Trim Filler.md`. The last two are their new rule pages about how you write; ask before committing them.
+The working tree holds codekiln's own uncommitted work, which is not the seat's to commit. On 2026-08-26 that was `journals/2026_08_25.md` alone; read `git status` rather than this list, which ages within the hour. Their rule pages about how you write are committed now, so the instruction to ask before committing those has been discharged.
 
 **codekiln edits this checkout live in Logseq while you work, and they are rewriting the pointer rule page right now.** It committed at `41d01349` and was already modified in their own voice minutes later, carrying a typo — `reerence` for reference — which was reported in the pane rather than fixed underneath them.
 
@@ -43,55 +43,40 @@ The working tree holds codekiln's own uncommitted work, which is not the seat's 
 - **`pointer-preference`** delivered the pointer rule page, committed at `41d01349`.
 - **`open-repo-relative-path`** delivered two vim pages and the list-marker mapping at `4715b41f` and `bf725515`. Four measurements reached no page and are still untested: submodules, Windows, a garden that is not a git repository, and whether `gf` reaches a path inside a `[[wikilink]]` or a `[label](dest)`.
 
-## Open items — all awaiting codekiln, none actionable unasked
+## Wednesday 2026-08-26, first window — what it did and what it left
 
-1. **Two repair sweeps, best run as one pass** since the page sets overlap.
-   `docs.claude.com` is now entirely a redirect host and splits two ways: Claude
-   Code slugs go to `code.claude.com/docs/en/<slug>`, everything else to
-   `platform.claude.com/docs/en/<path>`. 14 pages, 16 occurrences, 15 unique
-   URLs. A naive host replacement breaks the three that went to `platform`.
-   Separately, `claude config <sub>` appears in 5 pages and **no longer exists**
-   in the CLI — worse than a redirect, which still works.
-2. **The declaration page names the wrong tmux session** since the rename.
-   Recommendation: describe the naming pattern rather than the literal name, so
-   it survives the next one.
-3. **Two repairs to `[[Logseq/Journal/Section/Friction]]`**: it instructs filing
-   under **garddiff**, a mechanism with no journal appearance since 2026-05-12;
-   and `[[Logseq/Journal]]` calls it a *recurring* section when it has appeared
-   twice ever, last five months ago.
-4. **The Filed/Updated line form.** Five variants across the graph, no page
-   states which. Recommendation: `- # [[Filed]]` — the plurality, and the only
-   common form satisfying `logseq-core`'s bullet rule. **Nobody should touch the
-   234-of-446 journals whose first line lacks a bullet** until codekiln says what
-   caused it; a save that eats a bullet is indistinguishable from a person
-   choosing one.
-5. **Whether the send-keys failure earns a `.rulesync/` rule.** It has now
-   happened twice, which was the bar. Argument against: almost no agent here
-   messages another, so the rule costs every reader to serve two.
-6. **Which page owns the settings precedence list** — `[[Claude/Code/Settings]]`
-   and `[[Claude/Code/Settings/Override]]` now both carry it, both correct, and
-   they will drift.
-7. **Aliases**, suggested and unwritten since aliases are human-curated:
-   `[[Google/Workspace/AI]]` (recommended), a relative-path phrasing for the
-   Google Drive Markdown question, `[[Claude/Google Drive]]` (would skip).
-8. **A dead hook.** `.rulesync/hooks.json` declares a `PostToolUse` formatter
-   pointing at `.rulesync/hooks/format.sh`, which does not exist, and `hooks` is
-   not in `rulesync.jsonc`'s `features`, so it would not generate anyway. Inert
-   since [f18285e2 a bunch of rulesync skill updates](https://github.com/codekiln/logseq-encode-garden/commit/f18285e2).
-9. **Whether a current tools page is worth having.** The stale tools table was
-   dropped from the settings page; a current list would be useful, but as its own
-   page rather than smuggled back in.
-10. **The scope of the no-bare-identifiers rule**, before any check is built for
-    it. Six real SHAs sit in prose across five pages, confirmed with
-    `git cat-file -t`. But a `[0-9a-f]{7,40}` gate is wrong about two matches in
-    five — binary literals, an inode, a byte count, `ed25519`, model identifiers,
-    an ISBN. And some of those pages transcribe terminal output, where rewriting a
-    SHA as a slug and link would falsify the transcript. A prose reference plainly
-    wants the link; quoted output plainly does not; nothing states which. Settle
-    that first. The five pages are untouched.
-11. **`Logseq/Entity/Agent`** — still held from 2026-08-13. Creating the type
-    sets a convention and 35 `Person/Steve Yegge/Agent/*` pages would become its
-    instances.
+Written 2026-08-26 10:15 EDT by `hayward-LEG-2026-08-26-wed-0930`, a cold wake that took delivery from `hayward-LEG-2026-08-25-tue-1510` and killed it. Every time here was read from `date`.
+
+**The eleven-item list under the old heading was eight days old and four of its items were already done.** It was written 2026-08-18 at `2576dfe0` and re-added at `297a6e95` this morning. **Do not credit the author field for who wrote it** — every commit in this garden is authored `codekiln`, including ones a seat plainly wrote, so `297a6e95` says nothing about whose hands were on it. The removal happened at `d7fdc35a` on 2026-08-25 10:34, in a rewrite of this handoff from 216 lines to 66 by the 1015 window sixteen minutes after it woke; the string *Open items* appears nowhere in that window's transcript.
+
+**Closed, measured at source rather than read off these notes:** the change-log line form is stated at `pages/Logseq___Journal.md:10`; `pages/Logseq___Entity___Agent.md` is tracked and exists; `Claude/Code/Settings` mentions precedence only inside merge semantics, `fallbackModel` and `DISABLE_AUTOUPDATER`, so it never carried a second copy of the list; and the seat charter already tells the reader to run `tmux display-message -p '#{session_name}'` instead of quoting a session name. The charter's scheme was wrong in a different way and is corrected — it said `<seat>-<date>-<repo>` and the five live sessions are all `<seat>-<repo>-<date>`.
+
+**The display carries one item, the rename, and that is the intended size.** Two items came off it at 10:0x after the contractor's improvement landed, because both are repairs this seat can make. They are on `.../Detail` with their measurements and they are the next window's work.
+
+- **Seven `claude config` occurrences in five pages.** `claude --help` on 2.1.241 lists no `config`, and typing `claude config` starts a session that treats the word as a prompt rather than erroring. Each occurrence needs its replacement established at source: an `env` block and a `preferredNotifChannel` key in a settings file, `claude mcp add` for the two MCP lines, and an open question on what replaced `ignorePatterns`. **Writing a guess into a public how-to is worse than the stale command**, which is why this window left it rather than rushing it at 89 per cent.
+- **Retiring `[[Logseq/Journal/Section/Friction]]`.** It files under garddiff, which seventeen journals used and none since 2026_05_12, and `[[Logseq/Journal]]` calls it recurring when 2026-03-25 is the one journal that ever carried it.
+
+**Repairing the `docs.claude.com` links is tidying rather than repair.** Three of the fifteen were followed with `curl -L` on 2026-08-26 and each returned 200. Claude Code slugs land on `code.claude.com/docs/en/<slug>` and the rest on `platform.claude.com/docs/en/<path>`, so one host substitution sends three of them wrong.
+
+## The improvement this seat is held to all day
+
+**codekiln's own test for the display asks whether the seat could have absorbed the item, which is harder than whether the item matters.** On `pages/My___AI___Agent___Chief of Staff.md` at `f7aab1f2`, in their words and dated. Their sentences, from the 0709 transcript at 13:45:59Z and 13:48:36Z on 2026-08-25: *"Hayward, please don't be so persnickety. manage this for me"*, then *">= 90% of the things in your HUD are just too persnickety, they are things I'm hoping you can manage and abstract away, not things that are 'waiting on me.'"* `git grep -i -F 'persnickety'` finds nothing tracked here or in dotfiles, so that correction had never reached a document.
+
+**The check the Seneschal will run:** read the display, count items whose answer is a repair the seat could have made. A display carrying one is a failed check. Applying it to this window's own 09:41 sweep cost two of three items.
+
+**A seat auditing itself from the transcript's `type: user` records will conclude it was barely corrected, and be wrong.** A message typed into a busy composer is recorded as `type: queue-operation` with kind `enqueue`. Yesterday that hid ten messages in this seat's windows, and those ten were the day's corrections — *yes, delete arg list*, *all this utc stuff is your internal chain of thought*, *please separate your HUD from Parked*, *no need for retroactive changes*, and both persnickety lines. A person types into a busy composer at the moment they want to interrupt, which is when the seat is doing something they would correct. **Use `~/ghq/github.com/codekiln/dotfiles/tmp/fleet-2026-08-24/bin/ck-said '<session-name>'`**, which counts both kinds and prints the split; it never labels anything codekiln, because a peer writing into a pane arrives as keystrokes too.
+
+**`origin.kind: human` means the text arrived as keystrokes, not that a person decided it.** The 0709 and 1015 wake prompts match `wake-successor`'s filled template character-for-character, and the 1510 one is the Seneschal's prose. So the window that pushed 26 commits to public `main` received nothing from codekiln all session.
+
+**A tool that answers instead of erroring is this team's recurring hazard**, now with three instances in two days: `git grep -E` and `\b` reporting no matches, `claude config` starting a session, and `tr / -` producing a plausible transcript directory that does not exist because it leaves the dot in `github.com` — `tr './' '--'` works.
+
+## Where this window left the repository
+
+**Four commits sit on local `main` and nothing was pushed.** `115fffa8` re-measured the restored items and swept the display, `5685b545` parked the unreadable memory files, `f7aab1f2` put the escalation test on the charter, `dbece324` absorbed the two display items. **Yesterday's seat pushed on the citation-widens-scope reading and flagged itself for choosing between readings instead of weighing reversibility. This window did not push**, and the reason is that one, not a doubt about whether a knowledge garden is covered. Raise the state plainly with codekiln when they are in the pane; do not suppress it, which is how dotfiles reached sixty-six commits behind.
+
+**The identity guard blocked this window twice and both catches were real.** The contractor brief published the encoded transcript directory carrying this machine's account name, and a Parked entry named two account names in prose. Both were rewritten to derive the name rather than print it. **That second block surfaced a finding the guard cannot reach on its own:** two memory files are tracked under a directory named for the account name this machine stopped using, so no agent has loaded them since the rename, and a path nothing re-stages is never handed to a content scanner. On Parked with a recommendation.
+
+**`journals/2026_08_25.md` stayed untouched and unstaged all window.** `journals/2026_08_26.md` was created with an `[[Updated]]` change log and is this window's own.
 
 ## The one contractor this window hired, delivered and closed
 
