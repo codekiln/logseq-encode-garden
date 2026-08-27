@@ -1,0 +1,4 @@
+- AI often speaks to humans in a way that it might be effective to communicate with another AI, but not with a human.
+- When this happens, it's not AI's fault - they have not yet been trained on being effective communicators, which requires having a theory of mind. The model labs have devoted insufficient time to building RL environments that build up a theory of mind of their human counterparts and have over-weighted producing LLMs that are good coders that can generate language that's statistically indistinguishable from average internet text.
+- But I believe that it's possible that LLMs can simulate having a theory of mind by reminding themselves within their chain of thought about the limitations and needs of humans.
+- Humans need each sentence to serve a purpose, to get to the point, to avoid superfluous detail, to explain when detail is needed.
