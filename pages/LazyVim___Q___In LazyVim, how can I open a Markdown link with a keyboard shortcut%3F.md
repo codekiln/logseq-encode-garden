@@ -2,6 +2,17 @@ logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[LazyVim/Q/In LazyVim, how can I traverse wiki links in an Obsidian knowledge garden?]], [[LazyVim/plugins/extras/lang/markdown]], [[LazyVim/Tutorial/Browse a Markdown Knowledge Garden]]
 
 - # In [[LazyVim]], how can I open a [[Markdown]] link with a keyboard shortcut?
+	- ## [[My Answer]]
+		- ### What's a LazyVim [[Keyshort]] that uses the system to follow a url under the cursor? [[card]]
+			- `gx` uses the system to resolve a url
+		- ### What's a LazyVim [[Keyshort]] that follows a relative markdown link 1.) in a split, 2.) in a new tab? [[card]]
+			- `gf` follows a relative markdown link - go follow
+				- `<C-w>f` opens it in a split - window follow
+				- `<C-w>gf` in a new tab - window go follow 
+		- ### 1. What's a LazyVim [[Keyshort]] that follows a relative markdown link with the LSP, and 2. how do you go back 2. and forth after following it, and 4. how do you get a list of references to the destination? [[card]]
+			- `gd`
+			- `<C-o>` returns from the jump and `<C-i>` moves forward again
+			- `gr` lists references to the destination.
 	- ## [[AI Answer]]
 		- **Short answer:** there are two keys, and the target decides which one. `gx` hands the target to the operating system — the right key for an `http` URL, which lands in the default browser. `gd` follows the link *inside* the editor and is the better key for a link to another file in the same repository: it fires from anywhere on the link, resolves a target with no extension, and jumps to the exact heading when the link carries a `#anchor`.
 		- | Link target              | `gx`                       | `gf`                        | `gd`                            |
