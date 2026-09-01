@@ -14,7 +14,7 @@ tags:: [[GitHub/CLI/Extension]], [[CLI/Tool]], [[Go]], [[Charm]]
 	- ## Configuration
 		- Reads `$XDG_CONFIG_HOME/gh-dash/config.yml`, and **writes its own full defaults there on first run** if the file is missing.
 			- That matters when judging the tool: a 116-line real-world config sounds configuration-heavy, but ~90 of those lines are byte-identical to what gh-dash generated for itself. A long config file is not evidence of a configuration-heavy tool when the tool prints its own defaults into it.
-			- The dotfiles therefore track **no** gh-dash config; the generated file stays local.
+			- The dotfiles track that generated file as gh-dash wrote it, at [dotfiles/chezmoi/dot_config/gh-dash/config.yml](https://github.com/codekiln/dotfiles/blob/main/chezmoi/dot_config/gh-dash/config.yml), following [[My/Pref/Dev/Management/Configuration/Track What the Tool Writes]]. gh-dash writes the file only when it is missing, so a deployed config leaves it with nothing to write. Copied at v4.25.2 — copy it again on an upgrade that changes the defaults.
 		- Settings worth reaching for later, none of them needed yet
 			- `repoPaths` — maps repo names onto the local checkout tree, so keybindings can act on a working copy
 			- `prsLimit` — default 20 per section

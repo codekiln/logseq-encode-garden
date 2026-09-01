@@ -106,3 +106,8 @@ repomix-*.xml
 
 # Compiled helper binaries for mise file tasks (machine-specific)
 .cache/
+
+# Worktrees live inside the project per My/Pref/Dev/Tool/git/Worktree, which rules
+# out siblings of the project folder; ignored so the main checkout does not see its
+# own linked worktrees as untracked files.
+worktrees/

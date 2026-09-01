@@ -30,6 +30,10 @@
 "../pages/CLAUDE.md",
 "../tools/CLAUDE.md",
 "../.ai-coding/CLAUDE.md",
+;; A linked git worktree holds a second copy of pages/ and journals/ under the graph
+;; root; without this every page in it would be indexed a second time.
+"../worktrees",
+"worktrees",
 ]
 
  ;; Define the default journal page template.
