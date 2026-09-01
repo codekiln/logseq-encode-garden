@@ -5,5 +5,5 @@ see-also:: [[My/Pref/Writing/Be specific and explicit]]
 - It covers any pronoun whose antecedent sits more than a sentence away, and the whole family of standing-in phrases: *the latter*, *the former*, *as above*, *that approach*, *the first item*.
 - **A count is the worst of them**, because it looks like information while withholding every fact. For example, this AI-generated phrase:
 	- > two mechanisms named separately
-	- The number says how many there are and nothing whatever about what either mechanism is. Name both mechanisms.
+	- > The number says how many there are and nothing whatever about what either mechanism is. Name both mechanisms.
 - Concision is not the same thing as shorthand. Cutting a word that carries meaning is not economy, and [[My/Pref/Writing/Use the simpler word]] asks for a plainer word rather than a smaller reference to a word already spent.

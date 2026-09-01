@@ -1,0 +1,26 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+- # Using [[GitHub/CLI/Extension/gh-dash]], is there a quick way I can easily see an issue if I know the issue id?
+	- ## [[AI Answer]]
+		- **Short answer:** No dedicated “go to issue *N*” command in dash, and GitHub **search syntax has no official issue-number qualifier**. Exact lookup is the Issues API / [[GitHub/CLI/gh/issue/view]]. Inside dash, `/` + the bare number (or `#N`) is a workable text-search hack when the number is distinctive and the section is repo-scoped.
+		- ### Exact lookup (not search)
+			- GraphQL: `repository(owner:, name:) { issue(number: N) { … } }` — real by-number fetch.
+			- REST: `GET /repos/{owner}/{repo}/issues/{issue_number}`.
+			- CLI (same path):
+				- `gh issue view 123`
+				- `gh issue view 123 --web`
+			- [[Answer/Official]] from [`gh issue view`](https://cli.github.com/manual/gh_issue_view) and [REST — Get an issue](https://docs.github.com/en/rest/issues/issues#get-an-issue).
+		- ### What dash actually queries
+			- Issue sections call GraphQL `search(type: ISSUE, query: …)`, not `repository.issue(number:)`. The filter string is wrapped as `is:issue archived:false <your filter> sort:updated` (`internal/data/issueapi.go` in [dlvhdr/gh-dash](https://github.com/dlvhdr/gh-dash)).
+			- So `/` is always **Search API text + qualifiers**, never a direct id fetch. Local clone: `$(ghq root)/github.com/dlvhdr/gh-dash`.
+		- ### Does search syntax look up by id?
+			- Documented issue/PR search qualifiers do **not** include `number:` / `id:` for the issue’s own number. [[Answer/Official]] from [Searching issues and pull requests](https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests).
+			- Empirically, `number:677` is **not** “issue 677” — it can hit titles that merely mention `#677`.
+			- Typing `677` or `#677` in a `repo:owner/name`-scoped query often surfaces that issue (sometimes alone) because Search indexes the number / `#N` references as text. Short numbers (`5`, `42`) produce many false positives and can rank the wrong row first.
+		- ### Inside [[GitHub/CLI/Extension/gh-dash]] when you know *N*
+			- Prefer launching from the target repo (smart filtering prepends `repo:`).
+			- `s` → Issues view if needed → `/` → put `N` or `#N` in the search bar (keep `repo:`) → Enter.
+			- Treat the hit as ranked text search, not a guaranteed singleton; then sidebar preview, `o` (browser), `y` (copy number). [[Answer/Official]] from [Searching](https://gh-dash.dev/configuration/searching/), [Global](https://gh-dash.dev/getting-started/keybindings/global/), [Selected Item](https://gh-dash.dev/getting-started/keybindings/selected-item/).
+		- ### Practical habit
+			- Need certainty → `gh issue view <number>` (or `--web`).
+			- Already in dash and the number is distinctive → `/` + `N` under smart-filtered `repo:`.
+			- Triage queues → sections + normal search qualifiers (`assignee:`, `label:`, …).

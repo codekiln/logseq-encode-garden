@@ -1,7 +1,7 @@
 # My Configuration Management Preferences
 	- [[Dependency/Management]] is a subset of configuration management: declaring a dependency is one kind of configuration.
 	- ## What gets tracked
-		- [[My/Pref/Dev/Management/Configuration/Track What the Tool Writes]]
+		- [[My/Dotfiles/Technique/Track Default Configs]]
 	- ## Comment style
 		- {{embed [[My/Pref/Dev/Management/Configuration/Comment Style]]}}
 	- ## Dependencies

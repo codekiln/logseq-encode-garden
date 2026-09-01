@@ -1,0 +1,1 @@
+- Do not inject line breaks to achieve a set line length in markdown. Assume that Obsidian / Logseq / nvim will wrap the lines. Each line should be a paragraph.

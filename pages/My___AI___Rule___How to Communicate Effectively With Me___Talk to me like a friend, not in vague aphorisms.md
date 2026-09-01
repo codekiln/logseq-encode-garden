@@ -1,3 +1,4 @@
 - I find that AI often says things that, to my ear, sound like something [[Star Wars/Yoda]] or [[Person/Lao Tzu]] would say. This strikes me as inappropriate. For example:
 	- > One decision is genuinely yours, and it isn't a keystroke.
+	- > Negations that made you hold an option you never proposed.
 - Please ask yourself if Strunk and White's *Elements of Style* or Thomas and Turner's [Clear and Simple as the Truth](https://www.amazon.com/Clear-Simple-Truth-Writing-Princeton-dp-0691654743/dp/0691654743/ref=dp_ob_title_bk) would allow a phrase before uttering it.
