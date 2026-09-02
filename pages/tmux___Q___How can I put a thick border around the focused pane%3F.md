@@ -1,6 +1,20 @@
 # How can I put a thick border around the focused pane in [[tmux]]?
 	- It's difficult to figure out which pane has focus.
-	- ## Answer
+	- ## [[My Answer]]
+		- ```
+		  # make pane borders use double lines
+		  tmux set-option -g pane-border-lines double
+		  
+		  # make pane borders have arrows and numbers
+		  tmux set-option -g pane-border-indicators both
+		  
+		  # make the pane borders yellow and bold
+		  tmux set-option -g pane-active-border-style fg=colour226,bold
+		  ```
+		- ### [[My Notes]]
+			- Add to `~/.tmux.conf` and reload with `tmux source-file ~/.tmux.conf`
+			- Or test live with `prefix + :` then type the set command
+	- ## [[AI Answer]]
 		- ## use
 		- Use the `pane-border-lines` option set to `heavy`:
 			- ~~~
@@ -115,8 +129,5 @@
 			- For dense layouts (lots of panes, codespaces, tmux nested in browser): start with **Tier 2 + Tier 5 combo** (dim inactive + bright border + label).
 			- Borders alone just don't carry enough signal.
 			- That combo makes the active pane visually dominant without being garish.
-	- ## My Notes
-		- Add to `~/.tmux.conf` and reload with `tmux source-file ~/.tmux.conf`
-		- Or test live with `prefix + :` then type the set command
 	- ## Related
 		- [[tmux/setw]]
