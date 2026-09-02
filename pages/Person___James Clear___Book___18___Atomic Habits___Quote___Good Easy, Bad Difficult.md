@@ -1,4 +1,4 @@
-# Make It Easy, Make It Difficult
+# Make The Right Things Easy, Make The Wrong Things Difficult
 	- Quotes from [[Person/James Clear/Book/18/Atomic Habits]] by [[Person/James Clear]]: reduce the friction on the behavior you want, add friction to the one you don't — the [[My/Principle/Make the Right Thing Easy and the Wrong Thing Hard]] idea.
 		- > Much of the battle of building better habits comes down to finding ways to reduce the friction associated with our good habits and increase the friction associated with our bad ones. [[Quote]] from [[Person/James Clear/Book/18/Atomic Habits]]
 		  id:: c0fd949c-a504-4f2b-b755-bdf6224e174f
