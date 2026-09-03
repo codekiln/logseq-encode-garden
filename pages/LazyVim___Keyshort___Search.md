@@ -5,6 +5,7 @@
 	- **Grep the Project Root** [[Card]]
 		- Shortcut: `<leader>/`
 		- Description: Live grep across the root directory, backed by [[ripgrep]]. `<leader>sg` is the same picker on a mnemonic chord; `<leader>sG` greps the current working directory.
+		- [[LazyVim/Tutorial/Search for a Phrase Across Files]] walks through phrase matching, literal punctuation, both directory scopes, and hidden or ignored files.
 	- **Search the Word Under the Cursor** [[Card]]
 		- Shortcut: `<leader>sw`
 		- Description: Greps the root for the word under the cursor, or the visual selection in visual mode. `<leader>sW` scopes it to the working directory.
