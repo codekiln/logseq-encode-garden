@@ -1,0 +1,3 @@
+- `ghq root`
+	- Show repositories' root
+		- prints the filepath to the folder that `ghq` treats as its root
