@@ -3,6 +3,12 @@
 		- Shortcut: `<space>`
 		- Description: Toggles staged status for the file under the cursor in the Files panel. One key for both directions — pressing it on a staged file unstages it.
 	- **Stage or Unstage Everything** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-04T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-03T10:34:51.419Z
+	  card-last-score:: 1
 		- Shortcut: `a`
 		- Description: Toggles staged/unstaged for every file in the working tree at once.
 	- **Stage Individual Lines or Hunks** [[Card]]

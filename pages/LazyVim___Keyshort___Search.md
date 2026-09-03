@@ -7,8 +7,19 @@
 		- Description: Live grep across the root directory, backed by [[ripgrep]]. `<leader>sg` is the same picker on a mnemonic chord; `<leader>sG` greps the current working directory.
 		- [[LazyVim/Tutorial/Search for a Phrase Across Files]] walks through phrase matching, literal punctuation, both directory scopes, and hidden or ignored files.
 	- **Search the Word Under the Cursor** [[Card]]
-		- Shortcut: `<leader>sw`
-		- Description: Greps the root for the word under the cursor, or the visual selection in visual mode. `<leader>sW` scopes it to the working directory.
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-04T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-03T10:39:36.853Z
+	  card-last-score:: 1
+		- Shortcut - for the **word** under the **cursor** or the **visual selection**, grep for the word
+			- `<leader>sw` - grep is scoped to files from the git root
+				- [[Mnemonic]]
+					- ==s==earch ==w==ord - sw
+			- `<leader>sW` - grep scoped to files in the current working directory
+				- [[Mnemonic]]
+					- ==s==earch word ==W==orking directory - `sW`
 	- **Search and Replace Across Files** [[Card]]
 		- Shortcut: `<leader>sr`
 		- Description: Opens [[nvim/Plugin/grug-far.nvim]], a buffer-based find-and-replace over the project with a live preview of every hit before anything is written.
