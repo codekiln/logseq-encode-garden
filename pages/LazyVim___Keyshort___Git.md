@@ -1,22 +1,71 @@
+logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]
 - [[Keyshort]] [[LazyVim]] [[LazyVim/Keyshort]]
 	- **Open Lazygit** [[Card]]
-		- Shortcut: `<leader>gg`
-		- Description: Opens [[Lazygit]] in a floating window rooted at the git root. `<leader>gG` opens it at the current working directory instead. The mapping only exists when the `lazygit` binary is on `PATH`.
+		- Description:
+			- Open **[[Lazygit]]** in a floating window rooted at the **git root**. The uppercase variant opens it at the **current working directory**. The mappings are available when the `lazygit` binary is on `PATH`.
+		- Shortcut:
+			- `<leader>gg` — git root
+				- [[Mnemonic]]
+					- git GUI
+					- ==g==it ==g==UI
+					- `<leader>gg`
+			- `<leader>gG` — current working directory
+				- [[Mnemonic]]
+					- git GUI, current working directory variant
+					- ==g==it ==G==UI — uppercase for the current working directory
+					- `<leader>gG`
 	- **Git Status Picker** [[Card]]
+		- Description:
+			- Pick from **changed files**, with a **diff preview** for each file.
 		- Shortcut: `<leader>gs`
-		- Description: Picker over changed files, with a diff preview per file.
+			- [[Mnemonic]]
+				- git status
+				- ==g==it ==s==tatus
+				- `<leader>gs`
 	- **History of the Current File** [[Card]]
+		- Description:
+			- Open the git commit log filtered to the **file** in the current buffer — the "how did this line get here" view.
 		- Shortcut: `<leader>gf`
-		- Description: Commit log filtered to the file in the current buffer — the "how did this line get here" view.
+			- [[Mnemonic]]
+				- git file
+				- ==g==it ==f==ile
+				- `<leader>gf`
 	- **Git Log** [[Card]]
-		- Shortcut: `<leader>gl`
-		- Description: Commit log for the repository. `<leader>gL` scopes it to the current working directory.
+		- Description:
+			- Open the **commit log** for the repository. The uppercase variant scopes the log to the **current working directory**.
+		- Shortcut:
+			- `<leader>gl` — repository
+				- [[Mnemonic]]
+					- git log
+					- ==g==it ==l==og
+					- `<leader>gl`
+			- `<leader>gL` — current working directory
+				- [[Mnemonic]]
+					- git log, current working directory variant
+					- ==g==it ==L==og — uppercase for the current working directory
+					- `<leader>gL`
 	- **Blame the Current Line** [[Card]]
+		- Description:
+			- Show the **commit that last touched the current line**, with an option to open the **full diff**.
 		- Shortcut: `<leader>gb`
-		- Description: Shows the commit that last touched the cursor line, openable to the full diff.
+			- [[Mnemonic]]
+				- git blame
+				- ==g==it ==b==lame
+				- `<leader>gb`
 	- **Open or Copy the Remote URL** [[Card]]
-		- Shortcut: `<leader>gB` open, `<leader>gY` copy
-		- Description: Builds the forge URL for the current file and line range and either opens it in the browser or puts it on the clipboard. Works from visual mode to pin a line range.
+		- Description:
+			- Build the **remote forge URL** for the current file and line range, then **open it in the browser** or **copy it to the clipboard**. Visual mode pins the selected line range.
+		- Shortcut:
+			- `<leader>gB` — open in the browser
+				- [[Mnemonic]]
+					- git browse
+					- ==g==it ==B==rowse
+					- `<leader>gB`
+			- `<leader>gY` — copy to the clipboard
+				- [[Mnemonic]]
+					- git yank
+					- ==g==it ==Y==ank
+					- `<leader>gY`
 	- [[My Note]]
 		- These are pickers over git data; the interactive staging and committing workflow lives in [[Lazygit]] behind `<leader>gg`.
 		- Hunk-level staging inside the buffer comes from [[nvim/Plugin/gitsigns.nvim]] on the `<leader>gh` group, not from these keys.
