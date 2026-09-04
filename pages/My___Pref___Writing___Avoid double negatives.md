@@ -2,3 +2,6 @@
 - For example, check out this AI-generated [[Word/Salad]]:
 	- > That's why example 1 (wrap/linebreak) felt like a non-example to you — an unfamiliar reader doesn't obviously know what linebreak does, so spelling it out is earning its place under the real preference, even though the spec's current wording would tell an agent to omit it.
 - This sentence has multiple issues, but "non-example" and "an unfamiliar reader doesn't obviously know" don't help the reader understand anything here.
+- In particular, try to avoid descriptions like the following, which toggle the boolean status multiple times. Here, "negative" comes in many flavors - "ignore" files, "zero" targets, "non-zero," "cannot tell," "no-verify:"
+	- > so a commit whose only staged file is that ignore file leaves zero targets and secretlint exits non-zero with "Not found target files". A hook cannot tell that apart from a real finding, so the first person to edit an ignore file reads a block as a detection and reaches for `--no-verify`. Nothing to scan is a pass; every other failure stands.
+	- This is needlessly difficult for a human understand. Instead, here, a small story motivating the code might be easier for a human to grok.
