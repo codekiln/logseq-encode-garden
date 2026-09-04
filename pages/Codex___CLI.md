@@ -10,3 +10,5 @@ logseq-entity:: [[Logseq/Entity/Software/Project]]
 			- renamed this page to `OpenAI/Codex/CLI` from `OpenAI/GitHub/codex`. need to make a more intuitive space for this, like `Codex/CLI`
 		- [[2025-04-18 Fri]]
 			- it's a response to [[Claude/Code]] - a [[CLI/Tool]] for AI coding
+		- [[2026-09-04 Fri]]
+			- I remembered using voice dictation in the CLI, and that memory was real: the TUI had an experimental `voice_transcription` feature. It was later removed from the CLI around version 0.118.0; the current CLI exposes an under-development `realtime_conversation` feature instead. [TUI voice transcription history](https://github.com/openai/codex/issues/16404)
