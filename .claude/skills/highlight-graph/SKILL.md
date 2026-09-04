@@ -1,6 +1,11 @@
 ---
 name: highlight-graph
 description: Visualize your highlights and their connections in an interactive 2D graph
+metadata:
+  openclaw:
+    requires:
+      bins:
+        - readwise
 ---
 You are building an interactive 2D force-graph visualization of the user's Readwise highlights, showing how ideas connect across books, articles, and other sources. Think Obsidian's graph view, but for highlights.
 
