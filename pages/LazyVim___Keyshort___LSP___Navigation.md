@@ -1,19 +1,55 @@
 - [[Keyshort]] [[LazyVim]] [[LazyVim/Keyshort]] [[LazyVim/Keyshort/LSP]]
 	- **Go to Definition** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-07T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-06T10:51:56.887Z
+	  card-last-score:: 1
 		- Shortcut: `gd`
+			- [[Mnemonic]]
+				- **go** to **definition**
+				- ===g==o to ===d===efinition
 		- Description: Jumps to where the symbol under the cursor is defined. Provided by the attached [[LSP]] (e.g. [[Pyright]]/[[basedpyright]] for [[Python]]).
 	- **Go to Declaration** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-07T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-06T10:56:24.147Z
+	  card-last-score:: 1
 		- Shortcut: `gD`
 		- Description: Jumps to the symbol's declaration.
+		- [[Mnemonic]]
+			- **Go** to **Declaration**
+			- ==g==o to ==D==eclaration
+			- different from go to definition (lowercase `d`) because declaration is the implementation, the current context, just like how many of the LazyVim keyshorts use shift to be the modifier for "current directory" rather than "repository." The declaration, that is, the implementation, is "local," while the definition or interface is "global."
 	- **Go to Implementation** [[Card]]
 		- Shortcut: `gI`
 		- Description: Jumps to the symbol's implementation.
 	- **Go to References** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-07T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-06T10:57:39.942Z
+	  card-last-score:: 1
 		- Shortcut: `gr`
+			- **go** to **references**
+			- ==g==o to ==r==eferences
 		- Description: Lists references to the symbol under the cursor.
 	- **Go to Type Definition** [[Card]]
+	  id:: 6a97e367-f650-4e5f-89c8-a036a9b0eae0
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-07T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-06T10:30:04.389Z
+	  card-last-score:: 1
 		- Shortcut: `gy`
 		- Description: Jumps to the definition of the symbol's *type* rather than the symbol itself — on a variable, that means the class or interface it is an instance of. LazyVim's description spells the [[Mnemonic]] out as "Goto T[y]pe Definition".
+		- [[My Note]]
+			- I remember that one is for going to the type Declaration, and one is for going to the type Definition. I think Declaration is for the interface, and Definition is for the implementation. I think it's either `gd` or `gD`. Whoops, I guess I was wrong. It's `gy`.
 	- **Hover Documentation** [[Card]]
 		- Shortcut: `K`
 		- Description: Shows hover documentation for the symbol under the cursor.

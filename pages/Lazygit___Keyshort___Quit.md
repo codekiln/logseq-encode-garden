@@ -1,5 +1,11 @@
 - [[Keyshort]] [[Lazygit]] [[Lazygit/Keyshort]]
 	- **Quit Lazygit** [[Card]]
+	  card-last-interval:: 5.62
+	  card-repeats:: 1
+	  card-ease-factor:: 2.6
+	  card-next-schedule:: 2026-09-11T23:53:00.932Z
+	  card-last-reviewed:: 2026-09-06T09:53:00.933Z
+	  card-last-score:: 5
 		- Shortcut: `q`
 		- Description: Closes lazygit from any panel. `<esc>` backs out of a popup or menu one level instead of quitting.
 	- **Suspend to the Shell** [[Card]]

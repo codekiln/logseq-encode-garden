@@ -1,0 +1,10 @@
+- ## [[2026/09/06 Sun]] Study Notes
+	- Logseq Flashcard Review for lazyvim
+	- remembered how to search for a file in the snacks explorer and then open it up: 
+		- `<leader> e` to open explorer
+		- `/` to flip to the search dialog
+		- search for the file
+		- use `<C-j>` to go down and `<C-k>` to go up
+		- use `ENTER` to select file
+	- While working on ((6a97e367-de2b-44fb-8fbc-26f0f92a0f66)), I tried adding a note, and the text disappeared; I couldn't edit it. 
+		- TODO go back to ((6a97e367-de2b-44fb-8fbc-26f0f92a0f66)) and ensure the formatting is correct. 

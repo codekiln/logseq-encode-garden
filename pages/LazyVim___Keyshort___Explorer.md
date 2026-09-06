@@ -1,8 +1,20 @@
 - [[Keyshort]] [[LazyVim]] [[LazyVim/Keyshort]]
 	- **Open the File Explorer at the Project Root** [[Card]]
+	  card-last-interval:: 3.94
+	  card-repeats:: 1
+	  card-ease-factor:: 2.36
+	  card-next-schedule:: 2026-09-10T08:16:05.102Z
+	  card-last-reviewed:: 2026-09-06T10:16:05.103Z
+	  card-last-score:: 3
 		- Shortcut: `<leader>e`
 		- Description: Opens the [[nvim/Plugin/snacks.nvim]] explorer sidebar rooted at the detected project root.
 	- **Open the File Explorer at the Working Directory** [[Card]]
+	  card-last-interval:: 3.94
+	  card-repeats:: 1
+	  card-ease-factor:: 2.36
+	  card-next-schedule:: 2026-09-10T08:57:56.021Z
+	  card-last-reviewed:: 2026-09-06T10:57:56.021Z
+	  card-last-score:: 3
 		- Shortcut: `<leader>E`
 		- Description: opens the [[nvim/Plugin/snacks.nvim]] explorer, rooted at the current working directory rather than the project root
 	- **Close the File Explorer** [[Card]]

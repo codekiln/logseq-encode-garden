@@ -1,4 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]
+
 - [[Keyshort]] [[LazyVim]] [[LazyVim/Keyshort]]
 	- **Open Lazygit** [[Card]]
 		- Description:
@@ -23,6 +24,12 @@ logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]
 				- ==g==it ==s==tatus
 				- `<leader>gs`
 	- **History of the Current File** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-07T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-06T09:53:46.027Z
+	  card-last-score:: 1
 		- Description:
 			- Open the git commit log filtered to the **file** in the current buffer — the "how did this line get here" view.
 		- Shortcut: `<leader>gf`
@@ -30,7 +37,13 @@ logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]
 				- git file
 				- ==g==it ==f==ile
 				- `<leader>gf`
-	- **Git Log** [[Card]]
+	- How to 1.) Git Log for the repository, and 2.) open the [[git/log]] for the current directory? [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-07T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-06T09:57:16.272Z
+	  card-last-score:: 1
 		- Description:
 			- Open the **commit log** for the repository. The uppercase variant scopes the log to the **current working directory**.
 		- Shortcut:
@@ -43,6 +56,8 @@ logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]
 				- [[Mnemonic]]
 					- git log, current working directory variant
 					- ==g==it ==L==og — uppercase for the current working directory
+						- [[LazyVim/Keyshort/Git/Q/Is <leader>gL's current working directory the internal :pwd, or the directory LazyVim was started in?]]
+						  id:: 6a9d387e-e656-49ac-aa99-b1a61ba23b30
 					- `<leader>gL`
 	- **Blame the Current Line** [[Card]]
 		- Description:
@@ -52,9 +67,15 @@ logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]
 				- git blame
 				- ==g==it ==b==lame
 				- `<leader>gb`
-	- **Open or Copy the Remote URL** [[Card]]
+	- **1. Open in browser or 2. Copy the Remote URL to the Forge (GitLab, GitHub, etc) for the current file and line range** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-07T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-06T10:46:17.979Z
+	  card-last-score:: 1
 		- Description:
-			- Build the **remote forge URL** for the current file and line range, then **open it in the browser** or **copy it to the clipboard**. Visual mode pins the selected line range.
+			- Build the **remote forge URL** aka GitHub or GitLab for the **current file and line range**, then **open it in the browser** or **copy it to the clipboard**. Visual mode pins the selected line range.
 		- Shortcut:
 			- `<leader>gB` — open in the browser
 				- [[Mnemonic]]
@@ -66,6 +87,9 @@ logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]
 					- git yank
 					- ==g==it ==Y==ank
 					- `<leader>gY`
+		- [[My Notes]]
+			- Very useful! unfortunately, `<leader>gB` opens markdown files with a link like https://github.com/codekiln/logseq-encode-garden/blob/main/pages/LazyVim___Keyshort___Git.md#L6-L6, which doesn't activate the "code" mode needed to highlight the range. It would need to be something like https://github.com/codekiln/logseq-encode-garden/blob/main/pages/LazyVim___Keyshort___Git.md?plain=1#L6-L7 to work "correctly.
+				- TODO consider filing an issue in my dotfiles to fix this for me - all md file visual selections should link to the version that's going to highlight correctly.
 	- [[My Note]]
 		- These are pickers over git data; the interactive staging and committing workflow lives in [[Lazygit]] behind `<leader>gg`.
 		- Hunk-level staging inside the buffer comes from [[nvim/Plugin/gitsigns.nvim]] on the `<leader>gh` group, not from these keys.

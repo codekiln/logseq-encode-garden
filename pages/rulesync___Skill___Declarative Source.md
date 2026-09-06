@@ -1,8 +1,8 @@
 # [Declarative Skill Sources | Rulesync](https://rulesync.dyoshikawa.com/guide/declarative-sources.html)
-	- Rulesync can fetch skills from external repositories using the [[rulesync/install]] command. Instead of manually running `fetch` for each skill source, declare them in your `rulesync.jsonc` and run `rulesync install` to resolve and fetch them. Then [[rulesync/generate]] picks them up as local curated skills. Typical workflow: `rulesync install && rulesync generate`.
+	- Rulesync can fetch skills from external repositories using the [[rulesync/install]] command. Instead of manually running `fetch` for each skill source, declare them in your `rulesync.jsonc` and run `rulesync install` to resolve and fetch them. Then [[rulesync/generate]] picks them up as local curated skills. Typical workflow: `rulesync install && rulesync generate`.
 	- This lets you import sources from another repository
 	- ## Configuration
-		- Add a `sources` array to your `rulesync.jsonc`:
+		- Add a `sources` array to your `rulesync.jsonc`:
 			- ```json
 			  {
 			    "$schema": "https://github.com/dyoshikawa/rulesync/releases/latest/download/config-schema.json",
@@ -32,5 +32,32 @@
 			  }
 			  ```
 	- ## [How it works](https://rulesync.dyoshikawa.com/guide/declarative-sources.html#how-it-works)
-		- The `skills/` directory (or the path specified in the source URL) is listed from the remote repository.
+		- The `skills/` directory (or the path specified in the source URL) is listed from the remote repository.
+	- ## [[rulesync/add]]
+		- To add one source without editing `rulesync.jsonc` by hand, run `rulesync add <source>`. It preserves existing comments, appends the source entry, installs it, and updates the appropriate lockfile.
+			- ```bash
+			  rulesync add anthropics/skills --skills skill-creator
+			  
+			  # Add one rule without selecting any skills
+			  rulesync add acme/ai-standards --rules testing-guidelines
+			  ```
+	- ## Authentication for private repositories
+		- The same `source`/`add` syntax works against a private GitHub repo's `skills/` or `rulesync/skills` directory — the GitHub transport just needs credentials.
+		- It uses the `GITHUB_TOKEN` or `GH_TOKEN` environment variable:
+			- ```bash
+			  export GITHUB_TOKEN=$(gh auth token)
+			  rulesync install
+			  ```
+		- Or pass a token explicitly: `rulesync install --token ghp_xxxx`.
+		- Git transport (`transport: "git"`, e.g. SSH remotes) relies on local git credential configuration instead.
+	- ## Using local git auth (e.g. Git Credential Manager) instead of `GITHUB_TOKEN`
+		- The plain `owner/repo` shorthand always uses the default `"github"` transport, which reads only `GITHUB_TOKEN`/`GH_TOKEN` — it never consults local git credentials.
+		- To fetch a private repo's skills via local git auth (SSH keys or an HTTPS credential helper like Git Credential Manager) instead, set the transport to `git` and give a full URL rather than the `owner/repo` shorthand:
+			- ```jsonc
+			  { "source": "https://github.com/owner/private-repo", "transport": "git", "ref": "main", "path": "rulesync/skills" }
+			  ```
+		- No `rulesync.jsonc` hand-editing is required — `rulesync add` exposes this as flags directly:
+			- ```bash
+			  rulesync add https://github.com/owner/private-repo --transport git --ref main --path rulesync/skills --skills skill-creator
+			  ```
 	-

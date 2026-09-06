@@ -3,6 +3,12 @@
 		- Shortcut: `<C-/>`
 		- Description: Opens a terminal in a split across the bottom of the editor, rooted at the project root, and focuses back out of it from inside — the same key works in normal and terminal mode. `<C-_>` is bound identically for terminals that send that byte instead.
 	- **Open a Terminal at the Working Directory** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-07T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-06T11:10:40.962Z
+	  card-last-score:: 1
 		- Shortcut: `<leader>fT`
 		- Description: A terminal in the same bottom split, rooted at nvim's current working directory. `<leader>ft` uses the project root instead, matching `<C-/>`.
 	- [[My Note]]

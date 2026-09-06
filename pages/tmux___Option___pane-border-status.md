@@ -3,6 +3,8 @@ see-also:: [[tmux/Option/pane-border-format]], [[tmux/Pane/Border]], [[My/AI/Age
 
 - ### [`pane-border-status`](https://man.openbsd.org/tmux#pane-border-status)
 	- A [[tmux]] window option that controls whether pane-border status lines are shown and where they appear. The default is `off`.
+	- ## [[My Notes]]
+		- This is part of [[My/Pref/Dev/Tool/tmux/Basic Prefs]]
 	- It is the option a pane **title** depends on. Titles are set with `select-pane -T` and stored on the pane whatever this option says, but a border status line is the only place [[tmux]] draws them — so at the default `off` the titles are all still set and none of them can be read. Nothing errors and no value is unset, so nothing reports it.
 	- Each pane gives up one row of its height to the line. Measured [[2026/08/24]] on [[tmux/v/3.7b]] with a 50-row client: two side-by-side panes are 49 rows tall at `top` and 50 rows tall at `off`.
 	- ## Values
@@ -19,7 +21,7 @@ see-also:: [[tmux/Option/pane-border-format]], [[tmux/Pane/Border]], [[My/AI/Age
 		- `set -g` and `setw -g` are equivalent here, despite this being a window option: [[tmux]] resolves an option's scope from its name rather than from the flag. Measured [[2026/08/24]] on [[tmux/v/3.7b]], a config containing either spelling leaves the option reporting `top` under both `show-options -gv` and `show-options -gwv`.
 		- Or at runtime with [[tmux/Command/set-option/g]]:
 			- ~~~sh
-			  tmux set-option -g pane-border-status top
+			    tmux set-option -g pane-border-status top
 			  ~~~
 		- Set it for the current window only:
 			- ~~~sh
