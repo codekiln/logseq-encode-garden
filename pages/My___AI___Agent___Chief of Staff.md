@@ -1,5 +1,4 @@
 tags:: [[Diataxis/How To]]
-see-also:: [[My/Knowledge/Garden/logseq-encode-garden]], [[My/AI/Agent/Fleet]], [[herdr]], [[Logseq/Journal]]
 github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/My___AI___Agent___Chief%20of%20Staff.md
 
 - # Chief of Staff

@@ -1,1 +1,1 @@
-- Name for things related to my interaction with [[AI Coding]] tools.
+- This namespace is for my AI agents, rules, skills, etc.
