@@ -1,10 +1,11 @@
 alias:: [[Obsidian/Bases]], [[Obsidian/Plugin/Bases]]
 logseq-entity:: [[Logseq/Entity/Concept]]
-see-also:: [[Obsidian/Feature/Task_Lists]]
+see-also:: [[Obsidian/Explanation/What a Base Is]], [[Obsidian/Feature/Task_Lists]]
 date-created:: [[2025/05/21]]
 
 - # [Bases](https://obsidian.md/help/bases)
 	- Core [[Obsidian]] plugin that turns a set of notes into a database view. Each row is a file; each column is a frontmatter property, a built-in file property, or a formula. [Obsidian 1.9.0](https://obsidian.md/changelog/2025-05-21-desktop-v1.9.0/) shipped it as "a new core plugin that lets you turn any set of notes into a powerful database."
+	- [[Obsidian/Explanation/What a Base Is]] explains a base from the beginning — what it gathers, why a row has to be a file, and how it compares with Dataview and Tasks.
 	- Being core matters for a vault that has to stay readable elsewhere: there is no community plugin to install, keep updated, or lose when the vault is opened by something other than Obsidian.
 	- ## Where a base lives
 		- A `.base` file, which Obsidian opens in its own view editor.

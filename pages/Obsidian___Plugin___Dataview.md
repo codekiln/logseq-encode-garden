@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Software/Plugin]]
-see-also:: [[App/Obsidian/Markdown]]
+see-also:: [[App/Obsidian/Markdown]], [[Obsidian/Explanation/What a Base Is]]
 date-created:: [[2021/05/03]]
 
 - # [obsidian-dataview](https://github.com/blacksmithgu/obsidian-dataview)
@@ -23,7 +23,7 @@ date-created:: [[2021/05/03]]
 		  ```
 		  ~~~
 	- ## Where it stops
-		- Every query is evaluated by the plugin's own engine inside Obsidian. A static site generator reading the same files sees a code block and nothing else — [[QuartzMD/Q/Which Obsidian technique for rich todos renders on a QuartzMD site?]] works through what that costs and what recovers it.
+		- Every query is evaluated by the plugin's own engine inside Obsidian. A static site generator reading the same files sees a code block and nothing else — [[QuartzMD/Q/Which Obsidian technique for rich todos renders on a QuartzMD site?]] works through what that costs and what recovers it, and [[Obsidian/Explanation/What a Base Is]] explains why [[Obsidian/Feature/Bases]] keeps its fields somewhere a site build can reach them.
 		- [[Obsidian/Plugin/obsidian-tasks]] reads and writes Dataview's bracketed fields as an alternative to its own emoji, so the two conventions can share one vault.
 	- ## Sources
 		- [Dataview — Adding metadata](https://blacksmithgu.github.io/obsidian-dataview/annotation/add-metadata/)

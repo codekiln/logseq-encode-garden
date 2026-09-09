@@ -1,4 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Software/Plugin]]
+see-also:: [[Obsidian/Explanation/What a Base Is]]
 date-created:: [[2021/03/19]]
 
 - # [obsidian-tasks](https://github.com/obsidian-tasks-group/obsidian-tasks)
@@ -29,4 +30,4 @@ date-created:: [[2021/03/19]]
 	- ## On a [[QuartzMD]] site
 		- Fields on the line are ordinary characters, so both formats reach the site intact: the emoji format shows the emoji and the date, and the Dataview format shows the bracketed key and value. Neither becomes a badge or a chip without a stylesheet or a transformer written for it.
 		- A fenced `tasks` query block is not executed. Quartz renders it as a code block showing the query text.
-		- [[QuartzMD/Q/Which Obsidian technique for rich todos renders on a QuartzMD site?]] compares this against [[Obsidian/Feature/Bases]], which Quartz does render.
+		- [[QuartzMD/Q/Which Obsidian technique for rich todos renders on a QuartzMD site?]] compares this against [[Obsidian/Feature/Bases]], which Quartz does render. [[Obsidian/Explanation/What a Base Is]] explains what a base gathers and why frontmatter properties reach a site build while a plugin's own index stays in Obsidian.

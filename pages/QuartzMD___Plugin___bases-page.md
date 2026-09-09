@@ -1,10 +1,11 @@
 logseq-entity:: [[Logseq/Entity/Software/Plugin]]
-see-also:: [[Obsidian/Feature/Bases]]
+see-also:: [[Obsidian/Feature/Bases]], [[Obsidian/Explanation/What a Base Is]]
 date-created:: [[2026/07/24]]
 
 - # [@quartz-community/bases-page](https://github.com/quartz-community/bases-page)
 	- [[QuartzMD]] v5 plugin that renders [[Obsidian/Feature/Bases]] as HTML at build time, so a database view authored in Obsidian appears on the published site.
 	- **Stars:** 4 · **License:** MIT · version 0.2.0
+	- Why a build tool outside Obsidian can render a base at all: [[Obsidian/Explanation/What a Base Is]].
 	- Installed with `npx quartz plugin add github:quartz-community/bases-page` and switched on in `quartz.config.yaml`.
 	- ## What it reads
 		- A `.base` file becomes a page of its own.

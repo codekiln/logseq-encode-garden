@@ -1,10 +1,11 @@
 logseq-entity:: [[Logseq/Entity/Question]]
-see-also:: [[Obsidian/Feature/Bases]]
+see-also:: [[Obsidian/Feature/Bases]], [[Obsidian/Explanation/What a Base Is]]
 tags:: [[Question]]
 
 - # Which [[Obsidian]] technique for rich todos renders on a [[QuartzMD]] site?
 	- ## [[AI Answer]]
 		- **Short answer:** put the fields in frontmatter and let [[Obsidian/Feature/Bases]] draw the view. Bases is core to Obsidian, its `.base` files and `base` code blocks are plain YAML, and [[QuartzMD/Plugin/bases-page]] renders them into HTML when the site builds. Everything else that makes a todo rich lives inside a plugin's own query engine, which never runs on a static site.
+		- If you are meeting Bases here for the first time, [[Obsidian/Explanation/What a Base Is]] explains what a base gathers and why a row has to be a file.
 		- ### Why the constraint bites
 			- Quartz renders the Markdown that is on disk. Obsidian community plugins do not execute at build time, so a plugin whose value is a live query surface contributes nothing to the published page ([Quartz — Obsidian compatibility](https://quartz.jzhao.xyz/features/Obsidian-compatibility)).
 			- What a plugin *writes into the file* does reach the site. That split — stored text travels, computed views do not — decides every candidate below.
