@@ -1,3 +1,4 @@
+alias:: [[My/AI/Rule/No contrast frames]]
 see-also:: [[My/AI/Rule/Prune useless commandments]], [[My/AI/Rule/No Recipe in the Cake]], [[My/Pref/Writing/Avoid double negatives]]
 
 - # State it in the positive
@@ -12,5 +13,16 @@ see-also:: [[My/AI/Rule/Prune useless commandments]], [[My/AI/Rule/No Recipe in 
 		- [[Example]]
 			- "A full rewrite, not a patch" needs a patch to have genuinely been under consideration (necessary) and the reader to gain something from knowing it was ruled out (information) — two of three. If only one holds, just say "a full rewrite."
 			- A plan whose declined-options section is longer than its actual steps hasn't said what it's building yet.
+	- ## Contrast frames
+		- Don't frame a claim as a binary correction of something the reader never asserted. The common shapes are:
+			- *"It's not X, it's Y"* / *"This isn't X — it's Y"*
+			- *"X rather than Y"* / *"X instead of Y"* when Y is only there as a foil for X
+		- Both make the reader hold a discarded foil to receive one fact. State Y (or X) in the positive and stop.
+		- [[Example]]
+			- Avoid: "It's not a config bug — it's a race in the watcher."
+			- Prefer: "There's a race in the watcher."
+			- Avoid: "Use a soft link rather than copying the file."
+			- Prefer: "Use a soft link." (Add "copying would drift" only if that foil passes the negation test above.)
+		- Ordinary comparison stays allowed when both sides are live options the reader is choosing between, and the contrast itself is the point.
 	- ## Plans specifically
 		- Don't add a "won't do" section to a plan unless [[My/AI/Rule/Prune useless commandments]] still leaves something that qualifies under the test above. Default to describing only what will happen.

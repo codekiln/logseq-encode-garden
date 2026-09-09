@@ -10,3 +10,4 @@ alias:: [[Username/omerxx]]
 	- ## Web
 		- ![GitHub profile avatar](https://github.com/omerxx.png)
 		- {{embed [[Person/Omer Hamerman/GitHub]]}}
+		- {{embed [[Person/Omer Hamerman/YouTube]]}}

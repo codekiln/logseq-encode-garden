@@ -1,0 +1,2 @@
+- [Ctrl Alt Tech - YouTube](https://www.youtube.com/@CtrlAltTechWithKiran)
+	- [[Person/Ctrl Alt Tech/YouTube/25/08/Mastering LazyVim 2025 From Zero to Productive]]

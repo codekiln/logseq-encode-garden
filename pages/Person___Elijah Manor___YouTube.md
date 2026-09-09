@@ -1,0 +1,2 @@
+- [Elijah Manor - YouTube](https://www.youtube.com/@elijahmanor)
+	- [[Person/Elijah Manor/YouTube/23/02/Zero to IDE with LazyVim]]
