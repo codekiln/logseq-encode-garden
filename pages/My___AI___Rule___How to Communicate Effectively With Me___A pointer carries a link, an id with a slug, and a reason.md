@@ -30,3 +30,7 @@ see-also:: [[My/AI/Rule/How to Communicate Effectively With Me/Never make the re
 		- In a pane: `.rulesync/skills/git-conventions/references/commit-conventions.md:29`, plus what sits on line 29 — a reference to a page under its pre-rename name, which no longer resolves. If it is already open in nvim, give me `tmux switch-client -t '=<session>:<window>.<pane>'` for that pane.
 		- On the web: `[commit-conventions.md:29](https://github.com/codekiln/logseq-encode-garden/blob/main/.rulesync/skills/git-conventions/references/commit-conventions.md#L29)`, so the line number is clickable rather than something I have to go count.
 		- Pasted anywhere: the form [[git/Alias/md-url]] and [[yazi/Keyshort/Copy GitHub markdown link]] produce, `[dotfiles/openspec/specs](https://github.com/codekiln/dotfiles/tree/main/openspec/specs)`. The link text carries the repository and the path from its root, so the reference still says where it came from.
+	- ## An [[OpenSpec]] task
+		- If possible, the task number and a brief slug that lets me know what it's about should be used, along with a link to the file in the VCS that stores it. For example, `[<name-of-openspec-change> Task 4.2 Improve the Task Name](https://github.com/<path>)`.
+	- ## An Obsidian Heading
+		- Link directly to the heading I most need to see, at the appropriate level of granularity.
