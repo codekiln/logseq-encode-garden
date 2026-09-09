@@ -1,0 +1,49 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+see-also:: [[Obsidian/Feature/Bases]]
+tags:: [[Question]]
+
+- # Which [[Obsidian]] technique for rich todos renders on a [[QuartzMD]] site?
+	- ## [[AI Answer]]
+		- **Short answer:** put the fields in frontmatter and let [[Obsidian/Feature/Bases]] draw the view. Bases is core to Obsidian, its `.base` files and `base` code blocks are plain YAML, and [[QuartzMD/Plugin/bases-page]] renders them into HTML when the site builds. Everything else that makes a todo rich lives inside a plugin's own query engine, which never runs on a static site.
+		- ### Why the constraint bites
+			- Quartz renders the Markdown that is on disk. Obsidian community plugins do not execute at build time, so a plugin whose value is a live query surface contributes nothing to the published page ([Quartz — Obsidian compatibility](https://quartz.jzhao.xyz/features/Obsidian-compatibility)).
+			- What a plugin *writes into the file* does reach the site. That split — stored text travels, computed views do not — decides every candidate below.
+		- ### [[Obsidian/Feature/Bases]]
+			- **Adds:** priority, due date, status and tags as typed frontmatter properties, with filters, formulas, sorting, grouping, column summaries, and a kanban layout over them. Core plugin since [Obsidian 1.9.0](https://obsidian.md/changelog/2025-05-21-desktop-v1.9.0/).
+			- **Raw Markdown:** ordinary YAML frontmatter on each todo page, plus a `.base` file or a fenced `base` block holding the view definition.
+			- **On the site without help:** the view renders. [[QuartzMD/Plugin/bases-page]] materializes table, list, cards, gallery and board layouts server-side, and swaps a fenced `base` block for the rendered view in place.
+			- **What still needs writing:** Obsidian saves its kanban layout as `type: kanban`, and bases-page 0.2.0 registers that layout as `board`, so a kanban view reaches the site as the words `Unknown view type: kanban`. A `customViews` entry in `quartz.ts` registering `kanban`, or an upstream alias, fixes it.
+			- **In `nvim`:** frontmatter and base YAML are both plain text and both editable by hand.
+			- **The cost:** a row is a file. A todo gets properties only by being a page of its own, so a checkbox buried in a paragraph stays outside the system.
+		- ### [[Obsidian/Plugin/obsidian-tasks]]
+			- **Adds:** fields on the task line itself — due, scheduled, start, done, priority, recurrence, dependencies — plus vault-wide `tasks` queries and custom checkbox statuses.
+			- **Raw Markdown:** `- [ ] Complete project report 📅 2026-09-16 ⏫`, or the same fields as bracketed [[Obsidian/Plugin/Dataview]] inline fields.
+			- **On the site without help:** the checkbox renders, and the fields render as the literal emoji and dates that were typed. Readable, and unstyled. A fenced `tasks` query renders as a code block showing the query.
+			- **What still needs writing:** a stylesheet to turn the emoji into badges, and a Quartz transformer to parse the fields if the site wants to sort or filter on them. Nothing upstream does either.
+			- **In `nvim`:** the line reads fine; the emoji are just characters.
+			- **The strength no other candidate has:** a todo stays one line inside the page it belongs to.
+		- ### [[Obsidian/Plugin/Dataview]]
+			- **Adds:** `[due:: 2026-09-16]` inline fields anywhere in a note, and `TASK` queries that gather checkboxes across the vault.
+			- **On the site without help:** the inline fields show as visible bracketed text, keys and all. A `dataview` block renders as a code block; Quartz has never executed Dataview ([Quartz issue #102](https://github.com/jackyzha0/quartz/issues/102)).
+			- **What still needs writing:** a transformer to strip or restyle the brackets, and something else entirely to answer the queries. [Quartz Syncer](https://github.com/saberzero1/quartz-syncer) is the existing answer — an Obsidian plugin that compiles Dataview output to static HTML before publishing — which moves the build into Obsidian.
+			- **In `nvim`:** the brackets are visible clutter on every line.
+		- ### Kanban plugins and [[Obsidian/Plugin/Obsidian Todoseq]]
+			- Covered on [[Obsidian/Q/Does Obsidian have the ability to handle kanban-style TODO DOING DONE todos?]]. The short of it for a published site: [[obsidian-kanban]] board files degrade to headings and bullets and are looking for maintainers, Task List Kanban and Kanban Block produce no board at all, and TODOseq's keyword lines publish as plain list text. Bases now covers the same ground from core.
+		- ### Plain frontmatter and tags, no plugin
+			- **Adds:** the properties themselves, with Obsidian's own typed property editor and its tag index.
+			- **On the site without help:** Quartz's `note-properties` plugin renders the frontmatter as a properties panel on the page, and its tag pages list every note carrying a tag.
+			- **What is missing:** any view that gathers todos together. This is the same storage Bases reads, without the view — which is why Bases is the recommendation rather than a competitor to it.
+		- ### The recommendation
+			- Model a todo that deserves tracking as a page with `status`, `priority`, `due` and `tags` in frontmatter, and gather them with a base. Both halves are core Obsidian, both are plain text in `nvim`, and Quartz already renders both.
+			- Keep `- [ ]` lines for the checklist inside a page, where the point is reading the page rather than querying across pages. If those lines need dates and priorities too, [[Obsidian/Plugin/obsidian-tasks]] emoji fields cost nothing on the site and can be styled later.
+			- Registering a `kanban` view type for [[QuartzMD/Plugin/bases-page]] is the one piece of work this choice asks for.
+		- ### Sources
+			- [Bases — Obsidian Help](https://obsidian.md/help/bases)
+			- [Bases views](https://obsidian.md/help/bases/views)
+			- [quartz-community/bases-page](https://github.com/quartz-community/bases-page)
+			- [Quartz — ObsidianFlavoredMarkdown (`enableCheckbox`)](https://quartz.jzhao.xyz/plugins/ObsidianFlavoredMarkdown)
+			- [Quartz — Obsidian compatibility](https://quartz.jzhao.xyz/features/Obsidian-compatibility)
+			- [Tasks Emoji Format](https://publish.obsidian.md/tasks/Reference/Task+Formats/Tasks+Emoji+Format)
+			- [Tasks Dataview Format](https://publish.obsidian.md/tasks/Reference/Task+Formats/Dataview+Format)
+			- [Dataview — Adding metadata](https://blacksmithgu.github.io/obsidian-dataview/annotation/add-metadata/)
+			- [Quartz Syncer](https://github.com/saberzero1/quartz-syncer)

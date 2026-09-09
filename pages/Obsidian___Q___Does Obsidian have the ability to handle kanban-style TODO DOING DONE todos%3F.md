@@ -11,6 +11,7 @@ tags:: [[Question]]
 			- [[Obsidian/Plugin/Task List Kanban]]
 			- [[Obsidian/Plugin/Kanban Block]]
 	- ## [[AI Answer]]
+		- [[Obsidian/Feature/Bases]] changed this after the answer below was written: it is a core plugin, and since Obsidian 1.14 it draws a kanban of cards in columns grouped by a frontmatter property. It groups *files*, so the answer below still stands for boards made of checkbox lines. [[QuartzMD/Q/Which Obsidian technique for rich todos renders on a QuartzMD site?]] weighs the two for a published garden.
 		- **Short answer:** **Not in core.** Obsidian’s built-in checklists are only **todo** (`- [ ]`) and **done** (`- [x]`). There is no native kanban board and no native `TODO` / `DOING` / `DONE` keyword markers like [[Logseq]]. You get that workflow with **community plugins**—pick either **Logseq-style keywords** or **kanban columns**, or combine plugins.
 		- ### Logseq-style `TODO` / `DOING` / `DONE` (keyword markers)
 			- Use the community plugin [[Obsidian/Plugin/Obsidian Todoseq]]: it scans the vault for lines with state keywords (`TODO`, `DOING`, `DONE`, `LATER`, `NOW`, `WAIT`, etc.), shows them in a unified task list, and documents **Logseq compatibility** (same syntax, priorities, `SCHEDULED:` / `DEADLINE:` patterns on markdown-based Logseq exports).
