@@ -29,7 +29,8 @@ readwise-link:: https://read.readwise.io/read/01m207ez76jh7f9fb9z5q1wq6a
 		- > You may see it compile and install a bunch of treesitter grammars; if you see a message to “Show More” use `G` (i.e. `Shift+g`) to skip to the end.
 		- > You can access this UI from the dashboard simply by pressing the `l` key, which is labelled in the dashboard as `Lazy`. The label should probably be `Lazy Plugin Manager` to make it a bit clearer, but now you know what `Lazy` means so you won’t forget.
 		- > Typically, the only Lazy.nvim keybinding I use is `S`, for `Sync`. This is equivalent to running install, clean, and update in a single action. It guarantees that the versions of plugins that are actually installed are exactly consistent with the ones specified in the LazyVim configuration.
-		- > you can find my own dot files on GitHub in the [dusty-phillips/dotfiles](https://github.com/dusty-phillips/dotfiles) repository.
+		- id:: 6aa19602-3f9f-42cf-a7f9-1b41a8fd0aaf
+		  > you can find my own dot files on GitHub in the [dusty-phillips/dotfiles](https://github.com/dusty-phillips/dotfiles) repository.
 	- ## Links
 		- [Book home](https://lazyvim-ambitious-devs.phillips.codes/)
 		- [Chapter 1](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-1/)
