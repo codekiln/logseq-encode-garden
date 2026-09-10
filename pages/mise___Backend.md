@@ -20,4 +20,5 @@
 				- [[cargo]]
 		- ### Other
 			- [[Examples]]
+				- [[packslip]] - [[mise/Backend/packslip]]
 				- [[vfox]] - [[mise/Backend/vfox]]

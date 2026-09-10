@@ -8,6 +8,7 @@ logseq-entity:: [[Logseq/Entity/Person]]
 - ## [[My Notes]]
 	- author of [[mise]] mise-en-place, [[oclif]] and [[heroku/CLI]]
 	- also maintains [[fnox]] (secrets CLI; docs at https://fnox.jdx.dev/) alongside [[mise]]
+	- author of [[packslip]] — signed release manifest format (https://packslip.dev/); [[mise/Backend/packslip]] is mise's preferred Tier 1 install path for tools that publish those manifests
 	- founder of [[en.dev]] (endevco GitHub org)
 	- Invented **[[mise]]**’s default **[[aqua]]** registry pipeline for OSS installs ([[Person/Jeff Dickey/Blog/26/03/02/Top 10 Features in Mise You're Not Using]] §6); upstream **aqua** CLI: [aquaproj/aqua](https://github.com/aquaproj/aqua).
 - ## Blog posts
