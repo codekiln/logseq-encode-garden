@@ -1,0 +1,36 @@
+see-also:: [[My/Pref/Writing/Be specific and explicit]], [[My/Pref/Writing/Use Plain language]], [[My/AI/Rule/How to Communicate Effectively With Me/Do not coin phrases unless asked]], [[My/AI/Rule/How to Communicate Effectively With Me/I am allergic to word salad]]
+
+- # A subject that can do its verb
+	- Give every sentence a subject that could really do what the verb says. When the thing named cannot do it, name the person or the program that does.
+	- The test is a picture. If I cannot see the subject doing the verb, the sentence needs a different subject.
+	- This holds in every document I read, an [[OpenSpec]] proposal and a heading included (see [[My/AI/Rule/How to Communicate Effectively With Me/Use Headings to Serve a Purpose]]).
+	- ## Why this matters
+		- Reading generated design documents on [[2026-09-10 Thu]], I said:
+			- > I can't stand writing like this. The subjects of the sentences are not entities. a "release" doesn't do "building" and a "ticket" doesn't do "touching" or "saying."
+			- > "A ticket whose own files run nothing" is one of the worst starts to a sentence I've ever read. My eyes are bleeding.
+			- > terrible, terrible writing. goes on the wall of shame ... I'm already lost.
+		- When the subject cannot act, I have to work out who acted, and the writer already knew. That is the same work [[My/AI/Rule/How to Communicate Effectively With Me/Never make the reader resolve a reference]] asks the writer to do once so I never do it.
+		- An impossible subject also hides the actor. Let a "release" do the building and nobody has to say whether a person, a pipeline, or a scheduled job built anything, so I cannot check the sentence against the world.
+	- ## What can act
+		- A person: a developer, a tester, a reviewer, me.
+		- A team: DevOps, QA.
+		- A program or a command: a pipeline, a skill, `/release`, a script.
+		- A file, when code in it really runs while something serves a request.
+		- A place that really holds something: a field on a ticket, a page in this garden.
+	- ## What cannot act
+		- A release, a ticket, a change, an addendum, a declaration. These are records of work and names for work. They do not build, touch, say, decide, or ask, and a sentence that says they do is missing its actor.
+	- ## A coined noun used as a name is the same fault
+		- > You keep using "The triage" as though it were a proper noun like the title of a movie. The reader has no idea what you are talking about with The Triage. Just say what you mean, don't invent bigrams to stand in the way.
+		- > there is no "triage" and it's not doing any "asking"
+		- A phrase invented inside the document picks up capital letters and then a verb. Now it is both a thing I have never heard of and an actor that cannot act. See [[My/AI/Rule/How to Communicate Effectively With Me/Do not coin phrases unless asked]].
+	- ## Examples
+		- > A release builds and deploys the whole service.
+			- → A pipeline builds an image of the whole service, and DevOps deploys it.
+		- > The files a ticket touched say what that ticket changed in the build.
+			- → Read a developer's commits to see which files they changed.
+		- > A ticket that changed no file that runs while serving a request says so in its QA field.
+			- → When a developer changed no file that runs while serving a request, nobody has an area to test.
+		- > The triage asks what the release deploys.
+			- → This skill asks whether DevOps deploys a build that includes the developer's work.
+		- > for a ticket that ships nothing
+			- → for a ticket with no areas for QA to test. "Shipping nothing" is weird and unnecessary.
