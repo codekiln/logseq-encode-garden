@@ -1,0 +1,8 @@
+- [[2026-09-10]] LazyVim Notes
+- ((6a97e367-a510-42f6-b0c6-e40ccc1e9e01)) 
+  - DONE add a link to Snacks.words as a logseq plugin entity. 
+  - DONE make sure documentHighlight is a logseq keywolrd link in this.
+  - DONE create a page or a file for testing this, then inside of the card, add a set of commands that can be used to open nvim to that page and test it. 
+- ((6aa28180-52bf-4be1-92bf-33f0febb701e))
+  - DONE answer my question about diagnostics and `leader<sd>`
+

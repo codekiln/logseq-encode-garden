@@ -35,6 +35,12 @@
 		- Shortcut: `]b` next, `[b` previous
 		- Description: Same movement as `<S-l>` / `<S-h>`, in the `[`/`]` bracket-pair family shared with `]d`, `]q`, `]t`.
 	- **Close Current Buffer** [[Card]]
+	  card-last-interval:: 3.94
+	  card-repeats:: 1
+	  card-ease-factor:: 2.36
+	  card-next-schedule:: 2026-09-14T08:59:10.994Z
+	  card-last-reviewed:: 2026-09-10T10:59:10.995Z
+	  card-last-score:: 3
 		- Shortcut: `<leader>bd`
 		- Description: Deletes the buffer but keeps the window layout. `<leader>bD` deletes the buffer *and* its window; `<leader>bo` closes every other buffer.
 	- [[My Note]]

@@ -1,0 +1,3 @@
+- # [Words](https://github.com/folke/snacks.nvim/blob/main/docs/words.md)
+	- LSP-reference module of [[nvim/Plugin/snacks.nvim]] — auto-highlights every occurrence of the symbol under the cursor and lets `]]` / `[[` cycle between them in place, without opening a picker.
+	- Relies on the attached language server advertising the `documentHighlight` LSP capability; when no server attaches, or the attached server doesn't advertise it, there is nothing to cycle through.

@@ -54,8 +54,28 @@
 		- Shortcut: `K`
 		- Description: Shows hover documentation for the symbol under the cursor.
 	- **Step Between References in the Buffer** [[Card]]
+	  id:: 6a97e367-a510-42f6-b0c6-e40ccc1e9e01
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-11T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-10T10:07:37.748Z
+	  card-last-score:: 1
 		- Shortcut: `]]` next, `[[` previous
-		- Description: Cycles through the other occurrences of the symbol under the cursor, in place, without opening a picker. Backed by `Snacks.words` over the LSP's document highlights, so it needs a server advertising `documentHighlight`.
+		- Description: Cycles through the other occurrences of the symbol under the cursor, in place, without opening a picker. Backed by [[nvim/Plugin/snacks.nvim/Words]] over the LSP's document highlights, so it needs a server advertising [[documentHighlight]].
+		- [[nvim/Plugin/snacks.nvim/Words]] Test Setup
+			- ~~~bash
+			  cd /tmp && mkdir -p snacks-words-test && cd snacks-words-test
+			  cat > sample.py <<'EOF'
+			  def greet(name):
+			      return f"hello {name}"
+
+			  greet("world")
+			  greet("logseq")
+			  EOF
+			  nvim sample.py
+			  ~~~
+			- Inside `nvim`, put the cursor on `greet` and confirm the other two occurrences highlight automatically, then press `]]` / `[[` to cycle between them. Run `:LspInfo` first if nothing highlights — [[pyright]] or [[basedpyright]] must be attached for `documentHighlight` to work.
 	- **Rename Symbol** [[Card]]
 		- Shortcut: `<leader>cr`
 		- Description: Renames the symbol under the cursor across the project.

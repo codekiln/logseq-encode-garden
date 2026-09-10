@@ -59,8 +59,16 @@
 		- Shortcut: `<leader>sc`
 		- Description: Picker over previously run Ex commands. `<leader>s/` does the same for search history.
 	- **View All Marks** [[Card]]
+	  id:: 6a97e367-6046-4cca-a13c-5058e3d0761e
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-11T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-10T10:58:45.812Z
+	  card-last-score:: 1
 		- Shortcut: `<leader>sm`
-		- Description: Picker listing every set mark with its file and line, so marks stay usable without memorising which letter went where.
+		- Description: Picker listing every set mark with its file and line
+		- [[vim/Q/What exactly are vim marks, and what are they good for?]]
 	- **Search TODO and FIXME Comments** [[Card]]
 		- Shortcut: `<leader>st`
 		- Description: Picker over comment keywords found by [[nvim/Plugin/todo-comments.nvim]]. `<leader>sT` narrows to `TODO,FIX,FIXME`; `]t` / `[t` step between them in the buffer.
