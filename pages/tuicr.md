@@ -4,7 +4,7 @@ date-created:: [[2026/01/08]]
 see-also:: [[UI/Text-based]], [[Lazygit]], [[GitHub/CLI/Extension/gh-dash]], [[PiAI]]
 
 - # [tuicr](https://tuicr.dev/)
-	- Code review [[TUI]] with [[vim]] keybindings: scroll a GitHub-style continuous diff, leave line/range/file/review comments, then push a real review to GitHub, GitLab, Gitea, Bitbucket, Azure DevOps, or Gerrit — or export structured Markdown to the clipboard / stdout for an agent.
+	- Code review TUI with [[vim]] keybindings: scroll a GitHub-style continuous diff, leave line/range/file/review comments, then push a real review to GitHub, GitLab, Gitea, Bitbucket, Azure DevOps, or Gerrit — or export structured Markdown to the clipboard / stdout for an agent.
 	- Pronounced "tweaker."
 	- [agavra/tuicr](https://github.com/agavra/tuicr) — [[GitHub/Star]]: 3,088 (checked 2026-09-10). MIT.
 	- Written in [[Rust]].

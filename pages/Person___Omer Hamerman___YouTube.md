@@ -1,3 +1,4 @@
 - [DevOps Toolbox - YouTube](https://www.youtube.com/@devopstoolbox)
 	- Channel for [[Person/Omer Hamerman]] ([@devopstoolbox](https://www.youtube.com/@devopstoolbox) / [dotb.sh](https://dotb.sh/))
 	- [[Person/Omer Hamerman/YouTube/25/02/LazyVim From Scratch To BEAST MODE]]
+	- [[Person/Omer Hamerman/YouTube/26/07/The Holy Grail of Code Review TUIs]]

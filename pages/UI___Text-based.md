@@ -10,6 +10,7 @@ tags:: [[Term]]
 	- ## By what they wrap
 		- ### git, containers, tasks
 			- [[Lazygit]] — [[Person/Jesse Duffield]]
+			- [[tuicr]] — [[Person/Almog Gavra]]; code-review TUI that can push comments to GitHub/GitLab
 			- [[Lazydocker]] — same author, same spirit, for containers and images
 			- [[mani]] — many [[git/repo]]s at once from a declarative `mani.yaml`
 			- [[BeansTasks]] — git-backed issue tracker aimed at AI agents
@@ -30,7 +31,7 @@ tags:: [[Term]]
 			- [[apisnip]] — walk the structure of an `openapi.json` from the terminal
 			- [[Game/Video/Rebels in the Sky]] — space pirates playing basketball, on [[Ratatui]]
 	- ## Implementation language
-		- [[Rust]] — [[apisnip]], [[atuin]], [[basalt]], [[bitchat/tui]], [[eilmeldung]], [[Ratatui]], [[spotify-player]], [[yazi]], [[Person/joshjetson/GitHub/phosphor]], [[Person/sihooleebd/GitHub/orbit]]
+		- [[Rust]] — [[apisnip]], [[atuin]], [[basalt]], [[bitchat/tui]], [[eilmeldung]], [[Ratatui]], [[spotify-player]], [[tuicr]], [[yazi]], [[Person/joshjetson/GitHub/phosphor]], [[Person/sihooleebd/GitHub/orbit]]
 		- [[Go]] — [[Lazygit]], [[Lazydocker]], [[mani]], [[Neomd]]
 	- ## Finding more
 		- [[Terminal/Trove]] — aggregator for TUIs and CLI tools; many of the pages above arrived through it.

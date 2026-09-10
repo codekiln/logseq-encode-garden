@@ -1,0 +1,68 @@
+created-by:: [[Person/Omer Hamerman]]
+date-created:: [[2026/07/28]]
+readwise-link:: https://read.readwise.io/read/01m25dyqe1zk4hs4yq903vjkr4
+
+- # [The Holy Grail of Code Review TUIs - YouTube](https://www.youtube.com/watch?v=6cqVzgVQJfE)
+	- Speaker: [[Person/Omer Hamerman]] (channel credit in Readwise: **DevOps Toolbox**)
+	- Channel: [DevOps Toolbox](https://www.youtube.com/@devopstoolbox) · ~16 mins · published [[2026/07/28]]
+	- Topic: [[tuicr]] — terminal code review that can push real GitHub/GitLab comments; compared with hunk; agent skill via [[PiAI]]; pairs with [[GitHub/CLI/Extension/gh-dash]]
+	- ## Summary
+		- Walks [[tuicr]] (pronounced "tweaker"; ASR often writes "tweaker"/"tweeker") from install through local diffs, inline comments, marking hunks reviewed, submitting a review with `gh`, wiring a [[GitHub/CLI/Extension/gh-dash]] custom action, and trying the agent skill with [[PiAI]]. Closes by keeping tuicr in the daily stack and recommending gh-dash for the non-diff GitHub life cycle.
+	- ## Highlights
+		- > a real GitHub and GitLab review comments. Since every AI coded project now arrives with six file changes, four todos, and hidden helper function, I wanted a review tool that doesn't just make the diff pretty. I needed inline comments, range comments, review state, agent friendly export, and then I want to see those comments show up on a real PR. In this video, we'll install it, review local changes, make an agent readable review, open an actual GitHub PR from the terminal, and see if submitting comments from a TUI is as good as it sounds. Spoiler alert,
+		- > Well, well, well. Code review in your terminal. I was just raving about hunk few weeks ago. Beautiful TUI, cool features, but for whatever reason, it's focused around diffs. In the comments left on code, you can't share them or push them to GitHub. tuicr, which I know they want me to call it tweaker. I don't know if I can at this point, is mostly built around being able to review and collaborate on code changes. You add a suggestion or an issue or a bunch of other options and move on.
+		- > closing in on a thousand stars. It's definitely in its early days and as such will lead to many people to assume and comment its vibe coded slop. Rest assured, not only this project is already sponsored by large names, the dev behind it is a Cornell graduate with 10 years under his belt of serving as a staff engineer at LinkedIn and a Confluent all the way to now doing his own thing. Yes, it's written in Rust and yes, I told you it's pronounced tweaker.
+			- Creator: [[Person/Almog Gavra]]
+	- ## [[Video]]
+		- {{video https://www.youtube.com/watch?v=6cqVzgVQJfE}}
+			- ### {{youtube-timestamp 0}} The review gap
+				- Opens on a Mitchell tweet thread about "vibe coding" quality metrics, then the pitch: review a PR from the terminal, leave inline comments like GitHub, and push them back without opening a browser.
+				- That was the missing piece versus **hunk**, a diff TUI that stops short of team-visible review comments.
+			- ### {{youtube-timestamp 41}} Introducing [[tuicr]]
+				- "When I saw tuicr, pronounced tweaker, I got curious."
+				- Checklist it hits: single binary, [[vim]] motions, works with [[git]] / [[jj-vcs]] / [[mercurial]], and can submit real GitHub and GitLab review comments.
+				- Needs more than a pretty diff: inline and range comments, review state, agent-friendly export, and comments that land on a real PR.
+			- ### {{youtube-timestamp 106}} Features vs hunk
+				- hunk stays diff-centric; comments do not push to GitHub.
+				- tuicr is built around collaborative review: suggestion / issue / note / praise comment types, GitHub-style diffs, themes, clipboard Markdown export, and an agent skill.
+				- Comparison table on the site calls out the missing "push to GitHub" on hunk.
+			- ### {{youtube-timestamp 187}} Creator and stack
+				- Early days (~1k stars at filming); sponsored; not dismissed as vibe-coded slop.
+				- [[Person/Almog Gavra]]: Cornell, staff engineer at LinkedIn and Confluent, now doing his own thing.
+				- Written in [[Rust]]. Pronounced **tweaker**.
+			- ### {{youtube-timestamp 220}} Install and local review
+				- Install via curl script from [tuicr.dev](https://tuicr.dev/); opens a commit selector in a version-controlled project.
+				- Diff viewer with strong syntax/change highlighting; `?` for help.
+				- `tuicr tui` matches running the binary; `tuicr -w` reviews uncommitted local changes.
+				- `c` adds a comment (default note); green marks for new changes.
+			- ### {{youtube-timestamp 280}} Reviewed state and remote PRs
+				- Knows platform PRs — pick a change, `r` folds/marks reviewed, reopen hunks to revisit.
+				- (Mid-roll Keeper DB sponsor segment skipped in notes.)
+			- ### {{youtube-timestamp 360}} Comment types and submit
+				- Bottom menu suggests motions; Tab / Shift-Tab cycle comment type (note, suggestion, issue, praise); Shift-`c` for a file-level note.
+				- Ctrl-`s` or `:w` saves the review session (Vim-style command mode throughout).
+				- `tuicr review list` returns JSON aimed at agents, not humans.
+				- Pull Requests tab loads remote PRs; Tab toggles a focus panel (file tree + comment box); `y` yanks a Markdown review dump.
+				- `:submit` pushes the review via [[GitHub/CLI]] (`gh`); GitLab needs `glab`.
+			- ### {{youtube-timestamp 520}} End-to-end with Worktrunk, [[PiAI]], and [[GitHub/CLI/Extension/gh-dash]]
+				- Worktrunk for a fresh worktree; [[PiAI]] fixes a bug; submit pushes comments onto the GitHub PR.
+				- For non-review GitHub life cycle (issues, notifications), he leans on [[GitHub/CLI/Extension/gh-dash]].
+				- Custom gh-dash action: run `tuicr` against a PR number (Shift-`c` from gh-dash help) instead of opening a GUI editor.
+			- ### {{youtube-timestamp 620}} Agent skill
+				- Skill workflow uses the CLI to add/read comments on **active** sessions and can open a review pane in [[tmux]] or [[Zellij]].
+				- Prefer the packaged `pi-tuicr` install over burning tokens to reinvent it.
+				- Inline agent comments beat a generic AI summary — "game changer."
+				- Caveat: without an active session the skill reviewed locally only; docs say the TUI is for humans and the CLI is for agents on existing sessions. He then asks [[PiAI]] to create, review, and open a session from scratch.
+			- ### {{youtube-timestamp 764}} Diff layout and visual marks
+				- Prefers side-by-side (`:diff`) over stacked when space allows; Tab for file tree / statuses.
+				- Visual block mark for multi-line notes (e.g. a whole function), Vim-style.
+			- ### {{youtube-timestamp 825}} [[OpenCode]] as second reviewer
+				- Still runs [[OpenCode]] (free "Pickle" model) as a GitHub Action approver alongside [[PiAI]].
+				- Eyes emoji while reviewing, then approval notes — merges after.
+			- ### {{youtube-timestamp 866}} Config
+				- `~/.config/tuicr/config.toml` (or under dotfiles): mouse, theme, diff view, leader key, allowed comment types.
+				- `tuicrignore`-style exclude file for paths to leave out of review diffs.
+				- Asking the agent to "review my review" mid-session did not work as hoped — maybe needs submit first.
+			- ### {{youtube-timestamp 926}} Wrap-up
+				- tuicr stays in the stack: pulls remote PRs, submits reviews, removes excuses for skipping review in the terminal.
+				- "Sorry, hunk" — and pair with [[GitHub/CLI/Extension/gh-dash]] for the rest of GitHub project life cycle.
