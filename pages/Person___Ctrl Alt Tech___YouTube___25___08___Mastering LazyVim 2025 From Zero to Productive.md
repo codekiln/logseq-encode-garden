@@ -5,11 +5,11 @@ readwise-link:: https://read.readwise.io/read/01m1wbvmfekmhsf78faa576t29
 - # [Mastering LazyVim 2025: From Zero to Productive - YouTube](https://www.youtube.com/watch?v=B2Og3oDEp4s)
 	- Speaker: [[Person/Ctrl Alt Tech]] (creator goes by **Kiran**; channel [@CtrlAltTechWithKiran](https://www.youtube.com/@CtrlAltTechWithKiran))
 	- Channel: [Ctrl Alt Tech](https://www.youtube.com/@CtrlAltTechWithKiran) · ~18 mins · published [[2025/08/18]]
-	- Topic: [[LazyVim]] 2025 tour — init/lazy.lua, statusline breadcrumbs, windows vs buffers, which-key vs Neovim defaults (Backspace), Hardtime.nvim
+	- Topic: [[LazyVim]] 2025 tour — init/lazy.lua, statusline breadcrumbs, windows vs buffers, which-key vs Neovim defaults (Backspace), [[nvim/Plugin/hardtime.nvim]]
 	- ## Video
 		- {{video https://www.youtube.com/watch?v=B2Og3oDEp4s}}
 	- ## Summary
-		- Orientation for a productive LazyVim setup: leave `lazy.lua` alone, read the statusline breadcrumbs, use which-key (`Space`) and Backspace for stock Neovim maps, and install Hardtime to break bad motion habits.
+		- Orientation for a productive LazyVim setup: leave `lazy.lua` alone, read the statusline breadcrumbs, use which-key (`Space`) and Backspace for stock Neovim maps, and install [[nvim/Plugin/hardtime.nvim]] to break bad motion habits.
 	- ## Highlights
 		- > Init Lua is your
 		  

@@ -10,5 +10,7 @@ see-also:: [[UI/Text-based]], [[Lazygit]], [[GitHub/CLI/Extension/gh-dash]], [[P
 	- Written in [[Rust]].
 	- Works with [[git]], [[jj-vcs]], and [[mercurial]]; reviews uncommitted changes, commit ranges, or remote PRs/MRs.
 	- Ships an agent skill so tools like [[PiAI]] can discover active review sessions, read human comments, and add agent-authored inline comments rather than a free-floating summary.
+	- wishlist
+		- [[tuicr/Wishlist]]
 	- ## Coverage
 		- [[Person/Omer Hamerman/YouTube/26/07/The Holy Grail of Code Review TUIs]] — DevOps Toolbox walkthrough of local review, GitHub submit, [[GitHub/CLI/Extension/gh-dash]] integration, and the [[PiAI]] skill.

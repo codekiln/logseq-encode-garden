@@ -1,0 +1,32 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Wishlist
+	- In this garden, **Wishlist** pages model a shortlist of features wanted for one particular tool or technology — candidates for a future upstream issue, PR, or config workaround.
+	- ## Examples in this garden
+		- [[tuicr/Wishlist]], [[GitHub/CLI/Extension/gh-dash/Wishlist]]
+	- ## When we treat something as a Wishlist entity
+		- Strong signals: one page per technology under that technology's namespace ending in `/Wishlist`; the body is a curated shortlist of desired features, not a full product roadmap or issue tracker mirror.
+		- Not a Wishlist: a single feature request filed only as a [[Logseq/Entity/Question]]; a general notes page; a [[Logseq/Entity/Collection]] specialization (wishlist items are desires, not instances of another entity type — though an item may link a related Question).
+	- ## Naming and links
+		- **Link shape:** `[[Scope/Wishlist]]` where `Scope` is the tool or technology page (e.g. [[tuicr/Wishlist]], [[GitHub/CLI/Extension/gh-dash/Wishlist]]).
+		- **File shape:** `pages/Scope___Wishlist.md` with triple underscores between namespace parts.
+		- One Wishlist page per technology. Do not invent a second wishlist under the same scope; add features as H2 sections on the existing page.
+	- ## Finding and deduplicating
+		- Exact path `Scope/Wishlist` first.
+		- Grep for `Wishlist` under the technology's namespace prefix.
+		- Classify as **existing** when that scope already has a Wishlist; **new** when the scope has none; **similar** when a differently named wants/ideas page covers the same tool.
+	- ## Frontmatter
+		- On **new** Wishlist pages, include `logseq-entity:: [[Logseq/Entity/Wishlist]]`.
+		- Optional `see-also::` only for surprising adjacent garden pages (not the parent technology the title already encodes).
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- **H1** — `Wishlist` (the namespace already names the technology).
+		- First child — one short sentence: upstream feature ideas for `[[Scope]]`, optionally naming the upstream repo.
+		- **One H2 per wanted feature** — concise feature name as the heading.
+			- Prefer a child link to a related [[Logseq/Entity/Question]] when the gap was researched as a Q.
+			- **Wanted:** what the feature should do.
+			- **Today:** what exists instead (or that nothing does).
+		- Keep the list short — a shortlist, not an exhaustive backlog. Drop or archive items once shipped upstream or deliberately declined.
+	- ## Relationship to other types
+		- **Question:** a Wishlist item often points at a `Scope/Q/…` page that recorded the research; the Wishlist is the standing shortlist, the Question is the answered (or open) inquiry.
+		- **Software Project / Plugin / CLI tool pages:** the technology hub may link its Wishlist under a small `wishlist` child; the Wishlist remains a separate entity page.

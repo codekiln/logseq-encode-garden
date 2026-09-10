@@ -28,7 +28,8 @@
 	  collapsed:: true
 		- I've noticed that AI likes to use technical programmer jargon when there's a plain-english equivalent term when it's talking about setting up a project, we might have some things the AI has to do one time that first time.
 - # [[My/Pref/Writing/Be specific and explicit]]
-	-
+	- ## `Block`
+		- does this mean a block of text, or a block on a process? It's better to just reference the thing directly.
 - # [[My/Pref/Writing/Avoid Distractors such as Awkward or Superfluous Metaphors]]
 	- ## Load-Bearing -> A more important part
 	  collapsed:: true

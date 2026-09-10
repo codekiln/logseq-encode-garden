@@ -1,12 +1,28 @@
 logseq-entity:: [[Logseq/Entity/Question]]
 
-- # What exactly are vim marks, and what are they good for?
+- # What exactly are [[vim/Mark]]s, and what are they good for?
 	- ## [[AI Answer]]
 		- Short answer: a **mark** is a name bound to a specific line and column in a specific file, set once and revisited on demand — a manual bookmark, as opposed to the automatic jump list that records everywhere you've *been*.
 		- **Kinds of marks:**
 			- Lowercase `a`–`z` — buffer-local; only resolve within the buffer where they were set.
 			- Uppercase `A`–`Z` — global (file marks); jumping to one switches buffers/files if needed, since the mark carries its file with it.
 			- `0`–`9` — automatically maintained: where the cursor was on the last few `:wq` exits across sessions.
-			- Special automatic marks: `` ` ``` `` (position before the last jump), `` `. `` (last change), `` `^ `` (last insert), `` `[ `` / `` `] `` (start/end of last changed or yanked text).
+			- Special automatic marks: backtick / `''` (position before the last jump), `.` (last change), `^` (last insert), `[` / `]` (start/end of last changed or yanked text).
 		- **What they're good for:** returning to a precise spot — the top of a function, a config block, the far end of a long diff — without scrolling or re-searching, and (with uppercase marks) jumping straight back across files during a multi-file edit or refactor.
+		- **In memory or on disk?** Both. While [[nvim]] is running, marks live in the editor's in-memory state. On exit (and on `:wshada` / `:rshada`), [[nvim]] writes and reloads them via the [[nvim/ShaDa File]] — Vim's equivalent is the [[vim/viminfo File]]. [[Answer/Official]] from [Neovim usr_21 — Remembering information; ShaDa](https://neovim.io/doc/user/usr_21.html) and [mark-motions](https://neovim.io/doc/user/motion.html#mark-motions):
+			- Lowercase `a`–`z` — remembered **per file** for the most recent files, capped by the `'N` part of `'shada` (e.g. `'1000` keeps marks for 1000 files). Lost sooner if the buffer leaves the buffer list before anything is written out.
+			- Uppercase `A`–`Z` and numbered `0`–`9` — **global / file marks**; the `f` flag in `'shada` controls whether they are stored (`f1` or omitted = store; `f0` = do not). Numbered marks are the exit-position history (`'0` = last quit location).
+			- Special automatic marks (last-jump, last-change, last-insert, last yank/change bounds) are session machinery, not the hand-curated bookmarks people usually mean by "my marks."
+			- Default on-disk path and merge behavior live on [[nvim/ShaDa File]]. Sessions (`:mksession`) do **not** replace ShaDa for marks — they are complementary.
+		- **Can an [[AI/Agent]]s set marks and point attention there?** Yes, if it can talk to a **running** [[nvim]] instance (msgpack-RPC / `--listen` socket, `nvr`, or an MCP that wraps those). The editor API exposes `nvim_buf_set_mark` / `nvim_get_mark` and cursor jumps (`nvim_win_set_cursor`, or Ex/`normal` equivalents like `` `A `` / `'A`). Concrete pattern:
+			- 1. Agent opens or targets the buffer, sets named marks at the spots that matter (`mA`, `mB`, … or the Lua/API equivalent).
+			- 2. Agent jumps the cursor (or tells you to press `'A` / use `<leader>sm`) so attention lands on mark `A`, then `B`, and so on.
+			- Community MCP bridges such as [nvim-mcp](https://github.com/paulburgess1357/nvim-mcp) and [buddy.nvim](https://github.com/arismoko/buddy.nvim) already expose marks, navigation, and Ex commands to agents over that socket.
+			- Limits: only 26+26 letter slots, no labels beyond the letter, and no built-in "why this mark" metadata — so for guided tours, a **quickfix/loclist**, diagnostics, or signs/extmarks often beat raw marks; marks shine when the human already knows the letter language and wants durable bookmarks the agent can share.
+		- **Closest IDE analogues:** yes — the nearest [[JetBrains]] feature is **Bookmarks**, especially **mnemonic** bookmarks (letter/digit identifiers you jump to on demand). [[Answer/Official]] from [IntelliJ IDEA — Bookmarks](https://www.jetbrains.com/help/idea/bookmarks.html). Mapping is close but not 1:1:
+			- JetBrains **mnemonic** bookmarks (`A`–`Z`, `0`–`9`) ≈ vim **uppercase** file marks `A`–`Z` (and the *idea* of named jump targets). Both are intentional, cross-file, and meant for "park here / return later."
+			- JetBrains **anonymous** bookmarks (unlimited, no letter, gutter icon + Bookmarks tool window) have **no** stock vim twin — vim's letter slots are fixed; anonymous "pin this line" UX is closer to signs/extmarks or a bookmarks plugin.
+			- Vim lowercase `a`–`z` are **buffer-local**; JetBrains line bookmarks are normally project-scoped and listed in one tool window.
+			- Vim numbered `0`–`9` are **automatic exit-position history**, not user mnemonic bookmarks the way JetBrains digits are — easy false friend.
+		- **[[VSCode]] equivalent:** nothing built-in (Microsoft has left this to extensions). The de facto match for JetBrains-style anonymous / labeled line bookmarks is Alessandro Fragnani's [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks) (`alefragnani.Bookmarks`) — toggle, labeled bookmarks, next/previous, sidebar list, gutter icons. For JetBrains-like **numbered mnemonic** jump keys (`0`–`9`), people usually add [Numbered Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.numbered-bookmarks) or an "Idea Bookmarks"-style extension on top. Same story in [[CursorAI]] (VS Code fork): install the extension; there is no native bookmarks feature.
 		- Set with `m{letter}`; jump with `` `{letter} `` for the exact position or `'{letter}` for the first non-blank of that line; clear with `:delmarks`. See [[vim/Keyshort/Mark]] for the shortcut reference, and [[LazyVim/Keyshort/Search]] for `<leader>sm`, the picker that lists every set mark with its file and line.

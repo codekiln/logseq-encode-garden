@@ -1,0 +1,1 @@
+- tuicr/Diff View/Toggle line wrap

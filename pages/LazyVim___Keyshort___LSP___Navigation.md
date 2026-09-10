@@ -62,14 +62,14 @@
 	  card-last-reviewed:: 2026-09-10T10:07:37.748Z
 	  card-last-score:: 1
 		- Shortcut: `]]` next, `[[` previous
-		- Description: Cycles through the other occurrences of the symbol under the cursor, in place, without opening a picker. Backed by [[nvim/Plugin/snacks.nvim/Words]] over the LSP's document highlights, so it needs a server advertising [[documentHighlight]].
+		- Description: Cycles through the other occurrences of the symbol under the cursor, in place, without opening a picker. Backed by [[nvim/Plugin/snacks.nvim/Words]] over the LSP's document highlights, so it needs a server advertising [[nvim/LSP/documentHighlight]].
 		- [[nvim/Plugin/snacks.nvim/Words]] Test Setup
 			- ~~~bash
 			  cd /tmp && mkdir -p snacks-words-test && cd snacks-words-test
 			  cat > sample.py <<'EOF'
 			  def greet(name):
 			      return f"hello {name}"
-
+			  
 			  greet("world")
 			  greet("logseq")
 			  EOF
