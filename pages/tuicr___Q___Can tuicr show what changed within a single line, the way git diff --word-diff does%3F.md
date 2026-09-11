@@ -1,0 +1,12 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+see-also:: [[tuicr/Wishlist]]
+
+- # Can [[tuicr]] show what changed within a single line, the way [[git]] `git diff --word-diff` does?
+	- ## [[AI Answer]]
+		- **Short answer:** no. As of `v0.25.0`, tuicr renders line-level diffs only — a reworded line shows as one whole removed line and one whole added line, with nothing marking which words inside it moved.
+		- **The diff never carries intra-line information.** tuicr shells out to git for the patch, with `git diff --no-ext-diff --raw -z --patch --binary` plus the revision arguments, and parses the unified hunks that come back ([`src/vcs/git/raw.rs`](https://github.com/agavra/tuicr/blob/main/src/vcs/git/raw.rs)). A unified patch has no word-level data in it, so the renderer has none to draw.
+		- **There is no diff library to do it in-process either.** The dependency list carries no text-diffing crate — no `similar`, `imara-diff`, `dissimilar` or `diffy` in `Cargo.toml` or `Cargo.lock`. What highlighting exists comes from `syntect` (syntax colors) and from `/` search matches, neither of which knows anything about the diff.
+		- **The display options stop short of it.** The settings that change how a diff reads are `diff_view` (`unified` or `side-by-side`, toggled in-app with `:diff`), `ignore_whitespace`, `wrap` (`:set wrap!`) and `search_highlight` ([CONFIG.md](https://github.com/agavra/tuicr/blob/main/docs/CONFIG.md)). No key in [KEYBINDINGS.md](https://github.com/agavra/tuicr/blob/main/docs/KEYBINDINGS.md) toggles a word or character diff.
+		- **What to do instead, from the shell beside the review:** `git diff --word-diff=color <old>..<new>` shows the changed words in place, and `--word-diff=plain` prints them as `[-removed-]{+added+}` markers that survive a pipe. `git diff --color-words` is the same idea with tighter output.
+		- **Why this bites hardest on prose.** A Markdown file written under [[My/AI/Rule/Markdown/Single Line Paragraphs]] puts a whole paragraph on one physical line, so every edited paragraph becomes a pair of very long lines that soft-wrap across most of the pane. Side-by-side plus `:set wrap` helps a little; a word diff is the thing that actually helps, and it has to come from git.
+		- Read from the local clone `github.com/agavra/tuicr` at `v0.25.0-19-g2e8475c`, checking `Cargo.toml`, `Cargo.lock`, `src/vcs/git/raw.rs`, `src/ui/` and the `docs/` pages named above.
