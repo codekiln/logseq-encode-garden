@@ -318,7 +318,7 @@
  ;;  :charge-range    600}   ; Default value: 600
 
  ;; Favorites to list on the left sidebar
- :favorites ["gh-dash" "github/cli/extension/gh-dash" "tuicr" "tmux/Q/How can I put a thick border around the focused pane?" "LazyVim" "logseq/flashcard/review/favorite" "obsidian" "codex" "chezmoi" "devcontainer" "mise" "rg" "vim" "nvim" "zoxide" "yazi" "tmux" "Lazygit"]
+ :favorites ["fd" "gh-dash" "github/cli/extension/gh-dash" "tuicr" "tmux/Q/How can I put a thick border around the focused pane?" "LazyVim" "logseq/flashcard/review/favorite" "obsidian" "codex" "chezmoi" "devcontainer" "mise" "rg" "vim" "nvim" "zoxide" "yazi" "tmux" "Lazygit"]
 
  ;; Set flashcards interval.
  ;; Expected value:

@@ -1,0 +1,2 @@
+- ed was an editor. it's still underneath [[vim]]
+- ed is also an abbreviation for education.
