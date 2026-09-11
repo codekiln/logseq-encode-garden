@@ -1,9 +1,12 @@
 tags:: [[PKM/Tool]]
 tags:: [[Codeberg/Repo]]
 
-- [SebastianRzk/Looksyk: A markdown centric, fast and local personal knowledge platform - Codeberg.org](https://codeberg.org/sebastianrzk/looksyk)
+- # [SebastianRzk/Looksyk: A markdown centric, fast and local personal knowledge platform - Codeberg.org](https://codeberg.org/SebastianRzk/Looksyk)
 	- web: [Looksyk - A simple personal knowledge platform](https://sebastianrzk.codeberg.page/looksyk/)
 	- [[My Notes]]
+		- [[2026-09-11 Fri]]
+			- Came here after thinking about [[Logseq/NeoVim/LSP]] idea with [cgpt here](https://chatgpt.com/c/6aa29982-ab9c-83ea-a12c-6afa5a093f51?no_universal_links=1); I thought it was hosted on [[Forgejo]], and it is in a certain way (codeberg is powered by it)
+			-
 		- [[2026-06-30 Tue]]
 			- I like how there's a whole [Made in Europe](https://sebastianrzk.codeberg.page/looksyk/europe/) page that bakes in a philosophy of self-reliance w.r.t. where it's developed.
 			- [Looksyk - Idea and technical concept](https://sebastianrzk.codeberg.page/looksyk/idea_and_technical_concept/)

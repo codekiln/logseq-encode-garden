@@ -1,0 +1,2 @@
+- idea https://chatgpt.com/c/6aa29982-ab9c-83ea-a12c-6afa5a093f51
+-
