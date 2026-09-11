@@ -1,0 +1,34 @@
+tags:: [[Diataxis/How To]]
+see-also:: [[tuicr]], [[tuicr/Wishlist]]
+
+- # How To Review a PR in [[tuicr]]
+	- ## Overview
+		- This guide walks through reviewing a GitHub, GitLab, Gitea, Bitbucket, Azure DevOps, or Gerrit pull/merge request in [[tuicr]] from open to submit, including how to read the built-in review-progress fraction while you work.
+		- For: anyone who already has `tuicr` installed and wants a repeatable review loop rather than a keybinding lookup (`docs/KEYBINDINGS.md` is the full reference).
+	- ## Prerequisites
+		- `tuicr` installed and on `PATH` ([tuicr.dev](https://tuicr.dev/)).
+		- Auth configured for the forge hosting the PR (GitHub/GitLab/Gitea/Bitbucket/Azure DevOps/Gerrit).
+		- A PR number or URL, or a local branch/commit range to review.
+	- ## Steps
+		- ### 1. Open the PR in tuicr
+			- Launch `tuicr` against the PR, e.g. `tuicr pr 123` (or the equivalent flag for your forge — see the per-forge docs such as `docs/GITLAB.md`, `docs/GITEA.md`).
+			- From [[gh-dash]], open the selected PR directly in `tuicr` ([[gh-dash/Keyshort/Open selected PR in tuicr]]); from a working tree in [[LazyVim]], use [[LazyVim/Keyshort/Git/Open tuicr review (working tree)]].
+		- ### 2. Get oriented
+			- Use `{` / `}` to jump between files and `[` / `]` to jump between hunks.
+			- Press `?` for the in-app keybinding reference at any time.
+		- ### 3. Hide already-reviewed files to focus the diff
+			- Run `:set noreviewed` (or the bare `:reviewed`) to hide files already marked `r` — this narrows the file tree, diff pane, `{`/`}`/`[`/`]` navigation, and `+/-` header counts to only what's left.
+			- The file tree title keeps a `reviewed/total` fraction (e.g. `Files · 2/12 · 12 of 58`) even while hiding, so you always know true progress — it deliberately does not shrink to `0/n` just because visible rows are filtered.
+		- ### 4. Burn down the remaining files
+			- With reviewed files hidden, press `r` on the file you're currently reading: it marks that file reviewed **and** jumps you to the next unreviewed file, wrapping at the end — repeat `r` to burn down the rest of the diff one file at a time.
+			- Use `R` instead of `r` when you only want to mark the current **hunk** reviewed rather than the whole file (see [[tuicr/Q/In tuicr, how can I mark a hunk as read, rather than a whole file?]]) — hunk-level marks don't count toward the file-hiding/burn-down loop.
+		- ### 5. Leave comments as you go
+			- `c` adds a line comment (or a file comment off-diff); `C` adds a file comment; `v`/`V` enters visual mode for range comments; `<leader>c` adds a review-level comment.
+			- `dd` deletes the comment at the cursor.
+		- ### 6. Submit the review
+			- Once the `reviewed/total` fraction reads complete (or you've reviewed everything you intend to), submit the review to push it back to the forge as a real PR/MR review.
+			- Alternatively, export the review as structured Markdown to the clipboard or stdout for an agent to consume.
+	- ## Troubleshooting
+		- **Progress fraction looks stuck at `0/n`:** confirm files are marked at the file level with `r`, not just at the hunk level with `R` — only file-level marks count toward the `reviewed/total` fraction and the hide/burn-down behavior.
+		- **`r` isn't jumping to the next file:** the burn-down jump only triggers while `:set noreviewed` is active; with reviewed files shown, `r` just toggles the current file.
+		- **Looking for an actual percentage:** tuicr doesn't expose a `%` progress figure — the `reviewed/total` fraction in the tree title is the closest built-in indicator (see [[tuicr/Q/Is there a percent burn-down of my review progress in tuicr?]]).

@@ -12,5 +12,7 @@ see-also:: [[UI/Text-based]], [[Lazygit]], [[gh-dash]], [[PiAI]]
 	- Ships an agent skill so tools like [[PiAI]] can discover active review sessions, read human comments, and add agent-authored inline comments rather than a free-floating summary.
 	- wishlist
 		- [[tuicr/Wishlist]]
+	- how to
+		- [[tuicr/How To/Review a PR]]
 	- ## Coverage
 		- [[Person/Omer Hamerman/YouTube/26/07/The Holy Grail of Code Review TUIs]] — DevOps Toolbox walkthrough of local review, GitHub submit, [[gh-dash]] integration, and the [[PiAI]] skill.
