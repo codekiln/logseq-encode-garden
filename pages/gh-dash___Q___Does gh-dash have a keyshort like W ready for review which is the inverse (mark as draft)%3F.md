@@ -1,6 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Question]]
-see-also:: [[GitHub/CLI/Extension/gh-dash/Wishlist]]
-- # Does [[GitHub/CLI/Extension/gh-dash]] have a [[Keyshort]] like `W` ready for review which is the inverse (mark as draft)?
+see-also:: [[gh-dash/Wishlist]]
+
+- # Does [[gh-dash]] have a [[Keyshort]] like `W` ready for review which is the inverse (mark as draft)?
 	- ## [[AI Answer]]
 		- **Short answer:** No. There is a built-in `W` / `builtin: ready` that runs `gh pr ready`, but no inverse key or builtin that converts a PR back to draft.
 		- ### What exists

@@ -1,5 +1,7 @@
-# [dlvhdr/gh-dash: A beautiful CLI dashboard for GitHub](https://github.com/dlvhdr/gh-dash)
+alias:: [[GitHub/CLI/Extension/gh-dash]]
 tags:: [[GitHub/CLI/Extension]], [[CLI/Tool]], [[Go]], [[Charm]]
+
+- # [dlvhdr/gh-dash: A beautiful CLI dashboard for GitHub](https://github.com/dlvhdr/gh-dash)
 - [[GitHub/CLI]] extension written in [[Go]] on [[Charm]]'s Bubble Tea, showing pull requests, issues and notifications as filterable sections in the terminal. Each section is a GitHub search filter.
 	- ## Features
 		- 📋 Sections — pull requests and issues grouped by search filter, one tab per section
@@ -11,7 +13,7 @@ tags:: [[GitHub/CLI/Extension]], [[CLI/Tool]], [[Go]], [[Charm]]
 		- Pull request triage in the terminal instead of a browser tab per PR. The default screen is *My Pull Requests*, *Needs My Review* and *Involved*, which is the triage it was adopted for.
 		- Declared in the dotfiles at `chezmoi/dot_config/gh/extensions.txt` — see [[GitHub/CLI/Extension]]
 	- wishlist
-		- [[GitHub/CLI/Extension/gh-dash/Wishlist]]
+		- [[gh-dash/Wishlist]]
 	- ## Configuration
 		- Reads `$XDG_CONFIG_HOME/gh-dash/config.yml`, and **writes its own full defaults there on first run** if the file is missing.
 			- That matters when judging the tool: a 116-line real-world config sounds configuration-heavy, but ~90 of those lines are byte-identical to what gh-dash generated for itself. A long config file is not evidence of a configuration-heavy tool when the tool prints its own defaults into it.

@@ -3,12 +3,12 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 - # Wishlist
 	- In this garden, **Wishlist** pages model a shortlist of features wanted for one particular tool or technology — candidates for a future upstream issue, PR, or config workaround.
 	- ## Examples in this garden
-		- [[tuicr/Wishlist]], [[GitHub/CLI/Extension/gh-dash/Wishlist]]
+		- [[tuicr/Wishlist]], [[gh-dash/Wishlist]]
 	- ## When we treat something as a Wishlist entity
 		- Strong signals: one page per technology under that technology's namespace ending in `/Wishlist`; the body is a curated shortlist of desired features, not a full product roadmap or issue tracker mirror.
 		- Not a Wishlist: a single feature request filed only as a [[Logseq/Entity/Question]]; a general notes page; a [[Logseq/Entity/Collection]] specialization (wishlist items are desires, not instances of another entity type — though an item may link a related Question).
 	- ## Naming and links
-		- **Link shape:** `[[Scope/Wishlist]]` where `Scope` is the tool or technology page (e.g. [[tuicr/Wishlist]], [[GitHub/CLI/Extension/gh-dash/Wishlist]]).
+		- **Link shape:** `[[Scope/Wishlist]]` where `Scope` is the tool or technology page (e.g. [[tuicr/Wishlist]], [[gh-dash/Wishlist]]).
 		- **File shape:** `pages/Scope___Wishlist.md` with triple underscores between namespace parts.
 		- One Wishlist page per technology. Do not invent a second wishlist under the same scope; add features as H2 sections on the existing page.
 	- ## Finding and deduplicating

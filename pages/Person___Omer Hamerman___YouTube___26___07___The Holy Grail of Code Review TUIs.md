@@ -5,9 +5,9 @@ readwise-link:: https://read.readwise.io/read/01m25dyqe1zk4hs4yq903vjkr4
 - # [The Holy Grail of Code Review TUIs - YouTube](https://www.youtube.com/watch?v=6cqVzgVQJfE)
 	- Speaker: [[Person/Omer Hamerman]] (channel credit in Readwise: **DevOps Toolbox**)
 	- Channel: [DevOps Toolbox](https://www.youtube.com/@devopstoolbox) · ~16 mins · published [[2026/07/28]]
-	- Topic: [[tuicr]] — terminal code review that can push real GitHub/GitLab comments; compared with hunk; agent skill via [[PiAI]]; pairs with [[GitHub/CLI/Extension/gh-dash]]
+	- Topic: [[tuicr]] — terminal code review that can push real GitHub/GitLab comments; compared with hunk; agent skill via [[PiAI]]; pairs with [[gh-dash]]
 	- ## Summary
-		- Walks [[tuicr]] (pronounced "tweaker"; ASR often writes "tweaker"/"tweeker") from install through local diffs, inline comments, marking hunks reviewed, submitting a review with `gh`, wiring a [[GitHub/CLI/Extension/gh-dash]] custom action, and trying the agent skill with [[PiAI]]. Closes by keeping tuicr in the daily stack and recommending gh-dash for the non-diff GitHub life cycle.
+		- Walks [[tuicr]] (pronounced "tweaker"; ASR often writes "tweaker"/"tweeker") from install through local diffs, inline comments, marking hunks reviewed, submitting a review with `gh`, wiring a [[gh-dash]] custom action, and trying the agent skill with [[PiAI]]. Closes by keeping tuicr in the daily stack and recommending gh-dash for the non-diff GitHub life cycle.
 	- ## Highlights
 		- > a real GitHub and GitLab review comments. Since every AI coded project now arrives with six file changes, four todos, and hidden helper function, I wanted a review tool that doesn't just make the diff pretty. I needed inline comments, range comments, review state, agent friendly export, and then I want to see those comments show up on a real PR. In this video, we'll install it, review local changes, make an agent readable review, open an actual GitHub PR from the terminal, and see if submitting comments from a TUI is as good as it sounds. Spoiler alert,
 		- > Well, well, well. Code review in your terminal. I was just raving about hunk few weeks ago. Beautiful TUI, cool features, but for whatever reason, it's focused around diffs. In the comments left on code, you can't share them or push them to GitHub. tuicr, which I know they want me to call it tweaker. I don't know if I can at this point, is mostly built around being able to review and collaborate on code changes. You add a suggestion or an issue or a bunch of other options and move on.
@@ -44,9 +44,9 @@ readwise-link:: https://read.readwise.io/read/01m25dyqe1zk4hs4yq903vjkr4
 				- `tuicr review list` returns JSON aimed at agents, not humans.
 				- Pull Requests tab loads remote PRs; Tab toggles a focus panel (file tree + comment box); `y` yanks a Markdown review dump.
 				- `:submit` pushes the review via [[GitHub/CLI]] (`gh`); GitLab needs `glab`.
-			- ### {{youtube-timestamp 520}} End-to-end with Worktrunk, [[PiAI]], and [[GitHub/CLI/Extension/gh-dash]]
+			- ### {{youtube-timestamp 520}} End-to-end with Worktrunk, [[PiAI]], and [[gh-dash]]
 				- Worktrunk for a fresh worktree; [[PiAI]] fixes a bug; submit pushes comments onto the GitHub PR.
-				- For non-review GitHub life cycle (issues, notifications), he leans on [[GitHub/CLI/Extension/gh-dash]].
+				- For non-review GitHub life cycle (issues, notifications), he leans on [[gh-dash]].
 				- Custom gh-dash action: run `tuicr` against a PR number (Shift-`c` from gh-dash help) instead of opening a GUI editor.
 			- ### {{youtube-timestamp 620}} Agent skill
 				- Skill workflow uses the CLI to add/read comments on **active** sessions and can open a review pane in [[tmux]] or [[Zellij]].
@@ -65,4 +65,4 @@ readwise-link:: https://read.readwise.io/read/01m25dyqe1zk4hs4yq903vjkr4
 				- Asking the agent to "review my review" mid-session did not work as hoped — maybe needs submit first.
 			- ### {{youtube-timestamp 926}} Wrap-up
 				- tuicr stays in the stack: pulls remote PRs, submits reviews, removes excuses for skipping review in the terminal.
-				- "Sorry, hunk" — and pair with [[GitHub/CLI/Extension/gh-dash]] for the rest of GitHub project life cycle.
+				- "Sorry, hunk" — and pair with [[gh-dash]] for the rest of GitHub project life cycle.

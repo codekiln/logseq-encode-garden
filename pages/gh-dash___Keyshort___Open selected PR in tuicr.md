@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]
-see-also:: [[GitHub/CLI/Extension/gh-dash]], [[tuicr]]
+see-also:: [[gh-dash]], [[tuicr]]
 
-- [[Keyshort]] [[GitHub/CLI/Extension/gh-dash]]
+- [[Keyshort]] [[gh-dash]]
 	- **Open the Selected Pull Request in tuicr** [[Card]]
 		- Shortcut: `T`
 		- Description:

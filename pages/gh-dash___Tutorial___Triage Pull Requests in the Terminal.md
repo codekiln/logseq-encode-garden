@@ -1,6 +1,7 @@
-tags:: [[GitHub/CLI/Extension/gh-dash]], [[Diataxis/Tutorial]]
+tags:: [[gh-dash]], [[Diataxis/Tutorial]]
 see-also:: [[GitHub/CLI/Extension]], [[GitHub/CLI]], [[GitHub/PR]]
-- # Tutorial: Triage Pull Requests in the Terminal with [[GitHub/CLI/Extension/gh-dash]]
+
+- # Tutorial: Triage Pull Requests in the Terminal with [[gh-dash]]
 	- ## What You'll Create
 		- We will open a pull-request dashboard for one repository, move through its three section tabs, narrow and widen the search behind a section, learn the review keys from the built-in help, and read a PR diff — all without leaving the terminal.
 	- ## Prerequisites

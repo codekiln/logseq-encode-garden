@@ -1,5 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Question]]
-- # In [[GitHub/CLI/Extension/gh-dash]], what does the toggle bookmark option do?
+
+- # In [[gh-dash]], what does the toggle bookmark option do?
 	- ## [[AI Answer]]
 		- **Short answer:** `Toggle Bookmark` (key `b`) is a **Notifications-view-only** feature — it is not on the PR page. It flags/unflags a notification so it persists across "mark all as read" and unread filters, letting you keep a notification visible until you deliberately deal with it.
 		- ### Where it lives

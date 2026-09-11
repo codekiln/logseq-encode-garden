@@ -1,5 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Question]]
-- # Using [[GitHub/CLI/Extension/gh-dash]], is there a quick way I can easily see an issue if I know the issue id?
+
+- # Using [[gh-dash]], is there a quick way I can easily see an issue if I know the issue id?
 	- ## [[AI Answer]]
 		- **Short answer:** No dedicated “go to issue *N*” command in dash, and GitHub **search syntax has no official issue-number qualifier**. Exact lookup is the Issues API / [[GitHub/CLI/gh/issue/view]]. Inside dash, `/` + the bare number (or `#N`) is a workable text-search hack when the number is distinctive and the section is repo-scoped.
 		- ### Exact lookup (not search)
@@ -16,7 +17,7 @@ logseq-entity:: [[Logseq/Entity/Question]]
 			- Documented issue/PR search qualifiers do **not** include `number:` / `id:` for the issue’s own number. [[Answer/Official]] from [Searching issues and pull requests](https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests).
 			- Empirically, `number:677` is **not** “issue 677” — it can hit titles that merely mention `#677`.
 			- Typing `677` or `#677` in a `repo:owner/name`-scoped query often surfaces that issue (sometimes alone) because Search indexes the number / `#N` references as text. Short numbers (`5`, `42`) produce many false positives and can rank the wrong row first.
-		- ### Inside [[GitHub/CLI/Extension/gh-dash]] when you know *N*
+		- ### Inside [[gh-dash]] when you know *N*
 			- Prefer launching from the target repo (smart filtering prepends `repo:`).
 			- `s` → Issues view if needed → `/` → put `N` or `#N` in the search bar (keep `repo:`) → Enter.
 			- Treat the hit as ranked text search, not a guaranteed singleton; then sidebar preview, `o` (browser), `y` (copy number). [[Answer/Official]] from [Searching](https://gh-dash.dev/configuration/searching/), [Global](https://gh-dash.dev/getting-started/keybindings/global/), [Selected Item](https://gh-dash.dev/getting-started/keybindings/selected-item/).

@@ -1,5 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Question]]
-- # How do I do the equivalent of Merge without waiting for requirements to be met (bypass rules) or use `--admin` in [[GitHub/CLI/Extension/gh-dash]]?
+
+- # How do I do the equivalent of Merge without waiting for requirements to be met (bypass rules) or use `--admin` in [[gh-dash]]?
 	- ## [[AI Answer]]
 		- **Short answer:** The built-in `m` merge (`builtin: merge`) shells out to plain `gh pr merge` — it has no admin/bypass option. Override `m` (or bind another key) with a custom PR command that passes `--admin`, using the same template vars the official examples use.
 		- ### Config override
