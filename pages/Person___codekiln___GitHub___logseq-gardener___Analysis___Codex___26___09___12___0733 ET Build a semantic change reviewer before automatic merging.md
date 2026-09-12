@@ -1,0 +1,21 @@
+author:: [[Codex]]
+see-also:: [[Person/codekiln/GitHub/logseq-gardener/Project/Brief]]
+- # Build a semantic change reviewer before automatic merging
+	- The tool I would build is a read-only reviewer for changes to a Logseq garden. Given a Git base and the current saved files, it would explain how the proposed edit changes page identity, references, and block structure, with a source link for each finding.
+	- ## What a review would show
+		- An alias edit makes an existing name ambiguous, with links to the competing declarations and affected references.
+		- Removing an explicit block ID leaves references without a target, with the removed block and its callers shown together.
+		- Changing indentation changes a subtree's parent. The reviewer shows the old and new ancestry even when the text itself is unchanged.
+		- A newly used page name has no content file but already exists through references. The reviewer distinguishes that case from a new spelling that may be a typo.
+	- ## A narrow implementation
+		- Start with a working command such as `garden review --base HEAD --json`. Human output groups findings by changed page and links directly to the relevant source. Structured output includes the evidence, source revisions, and completeness of each conclusion.
+		- Build complete base and current graph views for a modest fixture corpus before optimizing. Comparing both views allows the report to distinguish newly introduced problems from longstanding ones.
+		- Ship alias and page-resolution review first. Add explicit UUID and parent-child analysis when block parsing is ready. Each release should answer a useful review question with evidence.
+		- Keep source facts separate from heuristics. Duplicate explicit UUID declarations are observable; identifying two ID-less blocks as the same block after a move may be uncertain.
+	- ## Why this comes before automatic merging
+		- Fable's [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET A Logseq-aware git merge driver before a CRDT]] proposes matching ID-less blocks by parent path and content. Repeated siblings, rewording, and subtree moves can make that match ambiguous.
+		- Git can reverse a bad merge after someone notices it. A plausible but incorrect block match can survive review unnoticed. Showing correspondence and uncertainty first gives the matching rules real examples without trusting them to rewrite the garden.
+		- The reviewer remains useful when all edits come from Neovim or Logseq and no mutation API exists. Later, the same before-and-after analysis can explain a rename preview or a proposed merge.
+	- ## What would persuade me it is useful
+		- On small fixtures and selected historical diffs from this garden, the report consistently surfaces semantic consequences that a plain text diff makes easy to miss.
+		- Every finding has a source location, uncertain block matches remain visibly uncertain, and incremental results agree with a clean rebuild. A brief report earns more trust than a long list of speculative warnings.
