@@ -11,7 +11,7 @@ see-also:: [[Person/codekiln/GitHub/logseq-gardener/Analysis/Codex/26/09/12/0733
 		  NoMatch    { suggestions: [ <page> ] }
 		  Incomplete { scope still indexing }
 		  ~~~
-		- A fuzzy suggestion lives only inside NoMatch, so punctuation normalization can never silently resolve a misspelling to a different page. Every alias claimant stays in the evidence list, so a name that two pages both declare as an alias comes back Ambiguous with both of them.
+		- A fuzzy suggestion lives only inside NoMatch, so punctuation normalization can never silently resolve a misspelling to a different page. When two pages declare the same `alias::`, the resolver lists both of them in the evidence and answers Ambiguous.
 	- ## Give the shell the same answer as an exit code
 		- Agents in this repository call the link checker from shell conditions, so `garden page exists <name>` prints nothing and exits with a code that names the result, while `garden page resolve <name> --json` prints the evidence. Both run the same function.
 		- ~~~text
