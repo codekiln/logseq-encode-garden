@@ -4,6 +4,7 @@
 	- ## Project Goals
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Goals]]
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Brief]]
+		- [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Codex]] - a single proposal for fast command-line and Neovim access, faithful editing, static publishing, and concurrent work.
 	- ## Analysis
 		- ### [[2026-09-12 Sat]] 0658 and responses
 			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET Measure the corpus before designing the cache]] - the local gardens are far smaller than the Brief's million lines, so time a cold parse before building cache machinery.
@@ -15,3 +16,10 @@
 			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET A Logseq-aware git merge driver before a CRDT]] - the concurrency that exists is a merge problem; a merge driver solves it and settles block identity first.
 			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET One tool carries four names and two of them collide]] - `garden` is garden.io's binary and `logseq-gardener` is an existing Nx repository; pick one tested name.
 			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET Smaller fixes to the Brief and Goals pages]] - XDG cache path, git-style graph discovery, fixtures that already exist, the overlapping pages, and wording.
+		- ### [[2026-09-12 Sat]] 0733 ET Codex
+			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Codex/26/09/12/0733 ET Resolve pages through evidence from the whole graph]] - page existence, file existence, and unambiguous resolution need separate answers; the current link checker already demonstrates the gap.
+			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Codex/26/09/12/0733 ET Keep editor buffers and worktrees separate in the shared cache]] - unsaved text and separate checkouts need distinct graph views even when they reuse parsed content.
+			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Codex/26/09/12/0733 ET Test graph meaning and preserve the original source text]] - matching a syntax parser leaves graph construction untested; minimal future edits also require source preservation.
+			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Codex/26/09/12/0733 ET Benchmark repeated commands and edits to widely linked pages]] - measure repeated CLI calls and how soon links elsewhere in the garden reflect an edited page.
+			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Codex/26/09/12/0733 ET Specify which Logseq features the publisher supports]] - specify how the exporter handles links, embeds, and queries, and which published pages need rebuilding after an edit.
+			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Codex/26/09/12/0733 ET Build a command that shows what an edit affects]] - a person or coding agent runs `garden impact` to find links and block relationships affected by saved edits before committing.
