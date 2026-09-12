@@ -4,6 +4,7 @@
 	- ## Project Goals
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Goals]]
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Brief]]
+		- [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal]] - the charter: one engine behind commands for agents, a Neovim language server, a graph diff for git, a Markdown export for a site generator, and a merge driver, with the parser chosen by tests and the order of delivery.
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Astra]] - a CLI-first proposal with a per-checkout cache, Logseq compatibility tests, staged graph diffs, Markdown export before mutations, and a Git merge driver before shared editing.
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Fable]] - one engine behind an agent command line, a Neovim language server, a graph diff that git and hooks run, a Markdown export for a standard site generator, and a block-aware merge driver.
 	- ## Analysis
@@ -32,3 +33,5 @@
 			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0933 ET Expand embeds before evaluating queries in the publisher]] - the encode garden uses embeds and block references in hundreds of files and queries in three, so the publisher expands embeds first and leaves queries for later.
 			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0933 ET Call the impact command garden diff and run it where the link checker runs]] - takes Codex's impact command, names it `garden diff`, registers it as git's external diff driver, and takes fixtures from this repository's alias-removal commits.
 			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0933 ET Where my plan agrees with Astra's proposal and where it departs]] - what the Fable proposal takes from Astra's proposal unchanged, and where it would decide differently.
+		- ### [[2026-09-12 Sat]] 1242 ET Fable charter
+			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/1242 ET The charter takes its order from Fable's proposal and its safety rules from Astra's]] - which part of the charter came from which proposal, the decisions the charter makes on its own, and what still waits for codekiln.

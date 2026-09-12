@@ -1,0 +1,45 @@
+author:: [[Anthropic/Model/Claude/Fable/5.1]]
+see-also:: [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal]], [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Astra]], [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Fable]], [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0933 ET Where my plan agrees with Astra's proposal and where it departs]]
+
+- # The charter takes its order from Fable's proposal and its safety rules from Astra's
+	- [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal]] is one page a person can read in a sitting. This page says where each part of it came from, so that any part can be checked against its source or reversed on its own.
+	- ## Shared by both proposals and taken as written
+		- One engine with thin clients: commands, a language server, a graph diff, a Markdown export, and a merge driver.
+		- One SQLite index per checkout under the XDG cache directory, with Markdown as the only saved knowledge.
+		- Typed page resolution with `Resolved`, `Ambiguous`, `NoMatch`, and `Incomplete`, and an exit code for each.
+		- Git-style graph discovery, an explicit `--graph <path>`, and `logseq/config.edn` read before any page is named.
+		- A language server over standard input and output that overlays unsaved buffers on the saved graph.
+		- `garden diff` with this repository's alias-removal commit as its first fixture.
+		- Markdown export rendered by QuartzMD, with embeds expanded before queries are evaluated.
+		- A git merge driver before any shared editing session.
+	- ## Taken from Fable's proposal
+		- The order of delivery: the commands agents run come first, Neovim second, the graph diff third, the export before any editing command, and the merge driver last. [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET Ship the agent CLI first and let the LSP inherit the index]] gives the reason the commands lead.
+		- Tine's static export trial in the first week, beside the parser tests, per [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET Publish by exporting plain Markdown to a standard site generator]].
+		- The named tool for each parser test: lsdoc's differential check, Logseq's graph-parser under nbb-logseq at the pinned desktop version, and a byte-identical round trip through tine-check, per [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0933 ET Use Logseq's own graph-parser as the oracle and require a byte-identical round trip]].
+		- The sum types for page, block id, and lookup result, written out so a reader can see what a caller receives.
+		- Registration of `garden diff` as git's external diff driver, kept as a later step.
+		- The two operations codekiln found slow in Looksyk and in Tine as benchmark rows, once each is named.
+		- The tool's name as a decision that waits for codekiln, per [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET One tool carries four names and two of them collide]].
+	- ## Taken from Astra's proposal
+		- The `--staged` form of `garden diff`, so a pre-commit hook checks the tree that will be committed and an unstaged fix cannot hide a defect.
+		- Uncertain block matches kept as uncertain in the diff report and turned into explicit conflicts in the merge driver, with the list of conflict cases: both sides changed one block, conflicting UUIDs, an uncertain id-less match, delete against edit, and a block put under different parents or in a different order. A conflict marker may widen to a parent or the whole file.
+		- The publisher's build report of unsupported constructs, and the rule that an unsupported query looks different from a query with no results. [[Person/codekiln/GitHub/logseq-gardener/Analysis/Codex/26/09/12/0733 ET Specify which Logseq features the publisher supports]] asked for this.
+		- Publication selection applied to embedded text, backlinks, copied assets, search entries, and diagnostics, tested on a mixed-visibility fixture.
+		- Editing commands that show a patch, record the source revision, refuse to write when the file changed since, and write a plan to a log file before a multi-file rename so an interrupted run can finish or undo.
+		- Cache entries that record a content hash, the naming configuration, and the parser version, with content verification when size and modification time cannot tell a file changed. Untracked files and deletions count as changes.
+		- Complete index updates written in transactions, so concurrent commands read one coherent view. [[Person/codekiln/GitHub/logseq-gardener/Analysis/Codex/26/09/12/0733 ET Keep editor buffers and worktrees separate in the shared cache]] is where the separate views began.
+		- Background parsing that pauses between small batches so a keystroke never waits on a large parse.
+		- A separate lifetime for a shared session's coordination history and for the disposable parsing cache.
+		- The observation that git hands a diff driver one file pair at a time, which is why the whole-graph command comes before the driver registration.
+	- ## Decisions the charter makes on its own
+		- Each stage opens with what a person sees happen, and the acceptance tests are stated in those terms, because codekiln reads the charter and the proposals were written for other agents to argue with.
+		- lsdoc and tine-core are copied into the repository and adapted there, as codekiln's note on [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Fable]] asks.
+		- The [[Person/codekiln/GitHub/logseq-gardener/Project/Goals]] page's CRDT front end becomes the last stage, entered when a merge the driver cannot settle shows up in practice. Both proposals argued for this order; the charter states it as the plan.
+		- The Brief's progressive-completeness levels appear as the `Incomplete` lookup result and the order in which background parsing picks files.
+		- The Brief's lazy activation heuristic appears as git-style discovery: walk up from the working directory to the nearest `logseq/config.edn`.
+		- The Brief's illustrative command list becomes the six commands in the charter, each with `--json`, `--batch`, and an exit code.
+	- ## What still waits for codekiln
+		- The name of the tool, before anyone installs a binary.
+		- The language, once the parser tests have run and the decision record is written.
+		- The latency budgets, once the benchmark rows have numbers from the encode garden.
+		- Whether the old `logseq-gardener` repository is archived, renamed, or given one sentence of history on the hub page.
