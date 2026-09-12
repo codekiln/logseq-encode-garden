@@ -4,7 +4,7 @@
 	- ## Project Goals
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Goals]]
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Brief]]
-		- [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Codex]] - a single proposal for fast command-line and Neovim access, faithful editing, static publishing, and concurrent work.
+		- [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Codex]] - a CLI-first proposal with a per-checkout cache, Logseq compatibility tests, staged graph diffs, Markdown export before mutations, and a Git merge driver before shared editing.
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Fable]] - one engine behind an agent command line, a Neovim language server, a graph diff that git and hooks run, a Markdown export for a standard site generator, and a block-aware merge driver.
 	- ## Analysis
 		- ### [[2026-09-12 Sat]] 0658 and responses
