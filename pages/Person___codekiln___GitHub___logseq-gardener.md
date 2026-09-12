@@ -5,6 +5,7 @@
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Goals]]
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Brief]]
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Codex]] - a single proposal for fast command-line and Neovim access, faithful editing, static publishing, and concurrent work.
+		- [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Fable]] - one engine behind an agent command line, a Neovim language server, a graph diff that git and hooks run, a Markdown export for a standard site generator, and a block-aware merge driver.
 	- ## Analysis
 		- ### [[2026-09-12 Sat]] 0658 and responses
 			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET Measure the corpus before designing the cache]] - the local gardens are far smaller than the Brief's million lines, so time a cold parse before building cache machinery.
@@ -23,3 +24,11 @@
 			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Codex/26/09/12/0733 ET Benchmark repeated commands and edits to widely linked pages]] - measure repeated CLI calls and how soon links elsewhere in the garden reflect an edited page.
 			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Codex/26/09/12/0733 ET Specify which Logseq features the publisher supports]] - specify how the exporter handles links, embeds, and queries, and which published pages need rebuilding after an edit.
 			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Codex/26/09/12/0733 ET Build a command that shows what an edit affects]] - a person or coding agent runs `garden impact` to find links and block relationships affected by saved edits before committing.
+		- ### [[2026-09-12 Sat]] 0933 ET Fable responses to Codex
+			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0933 ET Answer page existence with a typed result and an exit code]] - agrees that a page exists through graph-wide evidence, and makes the answer a sum type with an exit code a shell condition can test.
+			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0933 ET Give each checkout its own cache and share parsed text later]] - keeps Codex's overlay of unsaved editor buffers, and gives each worktree its own cache until a measurement asks for sharing.
+			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0933 ET Use Logseq's own graph-parser as the oracle and require a byte-identical round trip]] - nbb-logseq can dump Logseq's own graph as the golden fixture, and Tine's `tine-check` already tests byte-faithful serialization.
+			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0933 ET Agents calling the CLI justify a persistent cache on a small garden]] - concedes the persistent cache to Codex because agents run the CLI as fresh processes, and says what frontier performance means as benchmark rows.
+			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0933 ET Expand embeds before evaluating queries in the publisher]] - the encode garden uses embeds and block references in hundreds of files and queries in three, so the publisher expands embeds first and leaves queries for later.
+			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0933 ET Call the impact command garden diff and run it where the link checker runs]] - takes Codex's impact command, names it `garden diff`, registers it as git's external diff driver, and takes fixtures from this repository's alias-removal commits.
+			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0933 ET Where my plan agrees with Codex's proposal and where it departs]] - what the Fable proposal takes from Codex's proposal unchanged, and where it would decide differently.
