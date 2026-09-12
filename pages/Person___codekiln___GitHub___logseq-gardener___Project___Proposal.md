@@ -30,7 +30,11 @@ see-also:: [[Person/codekiln/GitHub/logseq-gardener/Project/Brief]], [[Person/co
 		  ~~~
 		- The graph test runs Logseq's own code under [[Logseq/npm/@logseq/nbb-logseq]] at the desktop version pinned in codekiln's Brewfile, normalizes generated ids before comparing, and reports duplicate explicit UUIDs as conflicts.
 		- If the tests pass, a developer writes the core in [[Rust]] on copies of [lsdoc](https://github.com/martinkoutecky/lsdoc), one person's Rust port of Logseq's Markdown parser, and [tine-core](https://github.com/martinkoutecky/tine), the parse-and-serialize crate behind the Tine outliner, both kept in this repository and changed here. If the syntax test fails on constructs these gardens use, the core is [[OCaml]] on [mldoc](https://github.com/logseq/mldoc), the parser Logseq itself runs. Either way the graph layer is a port of Logseq's `extract` code, and the person who ran the tests records the choice, the dependency revisions, the licenses, the mismatches, and the timings on an [[Architecture/Decision/Record]] page under this project.
-		- The fixtures stay after the choice. After an alias is removed, the naming configuration changes, a referenced block is placed under a different parent, or the last link to a fileless page disappears, an incremental update must produce the same graph as a clean rebuild.
+		- These fixtures stay in the test suite after codekiln picks the language. An incremental update must produce the same graph as a clean rebuild after each of these edits:
+			- a person removes an alias
+			- a person changes `:file/name-format` in `logseq/config.edn`
+			- a person moves a referenced block under a different parent
+			- a person deletes the last link to a page that has no file
 	- ## Ship the commands that agents in this repository run
 		- The first release is the set of commands that answer the questions agents grep for today, each with `--json`, with `--batch` reading names from standard input, and with exit codes a shell condition can test.
 		- ~~~text
@@ -66,7 +70,15 @@ see-also:: [[Person/codekiln/GitHub/logseq-gardener/Project/Brief]], [[Person/co
 		- Each command shows its patch as a dry run together with a `garden diff` between the file as it is and the file with the patch applied, so a person or an agent sees the graph consequences before agreeing to the write. The command records the source revision the patch was prepared against, refuses to write when the file has changed since, and writes atomically. A stale preview never overwrites newer work.
 		- Before a rename edits any of the files it touches, `garden` writes the list of planned edits to a log file. A run interrupted halfway reads that log when it starts again and either finishes the rename or puts the files back, and it reports which happened.
 	- ## Merge branches block by block
-		- Concurrent edits in codekiln's repositories arrive as branches, per [[My/AI/Rule/Dev Workflow with Git and Tmux]], so the first concurrency feature is a git merge driver registered in `.gitattributes` for garden files. Git hands the driver base, ours, and theirs. The driver parses each into a block tree with the matcher `garden diff` uses, merges edits to confidently matched independent blocks, and leaves a conflict marker for a person when both sides changed one block, when ids conflict or a match is uncertain, when one side deleted what the other edited, or when the two sides put a block under different parents or in a different order. The marker widens to the parent or the whole file when a smaller region would hide the structural conflict. A whole-graph check after the merge verifies that a UUID moved between pages is still unique.
+		- Concurrent edits in codekiln's repositories arrive as branches, per [[My/AI/Rule/Dev Workflow with Git and Tmux]], so the first concurrency feature is a git merge driver registered in `.gitattributes` for garden files.
+		- Git hands the driver three versions of the file. The driver parses base, ours and theirs into block trees, using the same matcher `garden diff` uses.
+		- When it matched a block confidently and only one side changed it, the driver merges that edit.
+		- Otherwise it leaves a conflict marker for a person to settle. The cases are:
+			- both sides changed the same block
+			- two blocks claim the same `id::`, or the match was a guess
+			- one side deleted a block the other edited
+			- the two sides put a block under different parents, or in a different order
+		- The marker widens to the parent or the whole file when a smaller region would hide the structural conflict. A whole-graph check after the merge verifies that a UUID moved between pages is still unique.
 		- A shared editing session, in which clients exchange operations on explicit block ids, is the experiment after that, opened when a merge the driver cannot settle shows up in practice. A [[CRDT]] experiment must cover text edits, moving a block, deletion, sibling order, disconnection, and outside editors. Markdown stays the saved form, and the session's coordination history has a lifetime of its own, separate from the disposable parsing cache.
 	- ## Measure on the encode garden from the first week
 		- The benchmark corpus is the test corpus plus larger synthetic gardens, this repository's alias-removal commits, and the mixed-visibility graph for publication filtering.
