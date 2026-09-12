@@ -1,12 +1,15 @@
-# `logseq-gardener`
+- # `logseq-gardener`
 	- ## About
-		- `logseq-gardener` or `garden` (at the [[CLI]]) is an alpha prototype to enable humans of [[AI Agents]] to tend to [[Knowledge Gardens]] that are in maintained in the style of [[Logseq/OG]], outside of the [[Logseq]] [[GUI]].
-	- ## Project Goals
+		- `logseq-gardener` is a proposed command-line tool, called `lsg`, for people and coding agents to manage [[Logseq/OG]] knowledge gardens from the terminal and Neovim.
+	- ## Project proposal
+		- [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal]] — purpose, use cases, technical design, and starting tasks for `lsg`.
+	- ## Earlier drafts
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Goals]]
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Brief]]
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Astra]] - a CLI-first proposal with a per-checkout cache, Logseq compatibility tests, staged graph diffs, Markdown export before mutations, and a Git merge driver before shared editing.
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Fable]] - one engine behind an agent command line, a Neovim language server, a graph diff that git and hooks run, a Markdown export for a standard site generator, and a block-aware merge driver.
 	- ## Analysis
+		- [Earlier proposal comparison](../assets/logseq-gardener-fable51-vs-astra6-proposals-differences.png)
 		- ### [[2026-09-12 Sat]] 0658 and responses
 			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET Measure the corpus before designing the cache]] - the local gardens are far smaller than the Brief's million lines, so time a cold parse before building cache machinery.
 				- [[My Notes]]
