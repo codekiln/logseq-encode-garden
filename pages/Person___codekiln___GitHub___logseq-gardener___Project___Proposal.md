@@ -10,17 +10,17 @@ see-also:: [[Person/codekiln/GitHub/logseq-gardener/Project/Brief]], [[Person/co
 		- A coding agent asks `garden page exists "Logseq/Publish"` and branches on the exit code, the way it branches on `test -f` today.
 		- `git commit` runs `garden diff --staged` from the pre-commit hook, and the hook reports that a journal's link to `Workshop` now points at a different page because the commit removed `Workshop` from the aliases of `Studio`.
 		- A reviewer opens a pull request and reads which links, block parents, and `id::` references the branch changes across the whole graph, beside the text diff.
-		- A visitor to the published encode garden opens one page and downloads one HTML page.
+		- A visitor to the published encode garden opens one page and the browser fetches that page. The site Logseq publishes today sends the whole garden before the first page appears.
 		- A person renames a page and sees the patch across every affected file before anything is written. When another agent changed one of those files after the preview, `garden` reports the conflict and prepares a new preview.
 		- Two branches that edited different blocks of the same page merge cleanly. Two branches that edited the same block leave a conflict marker inside that block.
-	- ## Rules the engine keeps in every stage
+	- ## Make the engine safe on a real garden from day one
 		- Markdown and `logseq/config.edn` are the saved knowledge. The cache lives outside the garden under `$XDG_CACHE_HOME/<tool>/<hash of the checkout's real path>/`, with `~/.cache` when that variable is unset, per [[XDG]]. Deleting the cache costs one cold parse.
 		- One installed executable does everything. Each command runs as its own process. Neovim starts `garden lsp` over standard input and output and owns its lifetime. Nothing keeps running after Neovim and the commands exit.
 		- Every core function receives the graph as an explicit argument. A command finds the graph by walking up from the working directory to the nearest `logseq/config.edn`, and an explicit `--graph <path>` wins. Each garden has its own cache, and a query answers from one garden.
 		- The engine reads [[Logseq/config.edn]] before it names any page, because `:file/name-format` and `:journal/page-title-format` decide how a filename and a page name map onto each other.
 		- Every answer carries its state as a type, following [[My/Principle/Make Illegal States Unrepresentable]]. A page is `FileBacked(path, name)` or `ReferenceOnly(name)`, each with the evidence for it. A block id is `Explicit(uuid)` or `Positional(page, path from root)`. A lookup returns `Resolved`, `Ambiguous(candidates)`, `NoMatch(suggestions)`, or `Incomplete(scope)` while the index is still warming, so a caller cannot read a guess as an answer.
 		- Every page and block keeps its source file, its byte range, and the original text of the file. An edit later changes only the bytes it means to change, and syntax the parser did not recognize survives untouched.
-		- Reading never writes. Until the editing stage arrives, no core function can modify a garden file, so the engine runs against the real gardens from the first day.
+		- Every command in these stages only reads. The functions that change a file arrive with the editing stage, so until then codekiln can point the engine at the real gardens and get every file back byte for byte.
 	- ## Pick the parser and the language from tests on real gardens
 		- Whoever picks the parser also picks the language the core is written in, the license the tool ships under, and how much code they reuse instead of write. That is why these tests run before anyone writes other code. Each test runs on the encode garden, on the public `logseq/docs` graph, and on Logseq's own small test graphs.
 		- ~~~text
