@@ -21,7 +21,7 @@ see-also:: [[Person/codekiln/GitHub/logseq-gardener/Analysis/Codex/26/09/12/0733
 		  3  Incomplete
 		  ~~~
 		- `--batch` reads names from standard input and prints one JSON line per name, which is what the link-hygiene skill needs when it checks every wikilink in a draft.
-	- ## Configuration decides identity, so the resolver reads it first
+	- ## Read `logseq/config.edn` before naming any page
 		- This garden's `logseq/config.edn` sets `:file/name-format :triple-lowbar` and `:journal/page-title-format "yyyy-MM-dd EEE"`. The name format turns `Person___codekiln.md` into `Person/codekiln`, and the title format turns `journals/2026_09_12.md` into `2026-09-12 Sat`. Change either setting and the same files name different pages, so the resolver loads the configuration before it names anything, and the cache key includes it.
 	- ## What this replaces in the repository
 		- The link checker in `.rulesync/skills/logseq-link-hygiene/scripts/resolve-wikilinks.cljs` builds its index from files and reports a reference-only page as unresolved. Once `garden page resolve --batch` exists, that skill calls it and drops its own index. Whether a new spelling deserves a warning stays a rule of this garden, written on its rule pages: the resolver reports what exists, and the skill decides what to say about it.
