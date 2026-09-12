@@ -25,7 +25,7 @@ see-also:: [[Person/codekiln/GitHub/logseq-gardener/Project/Goals]], [[Person/co
 		skills           PRs     Hugo, Zola branches
 	  ~~~
 	- ## Decide the parser with three tests in the first week
-		- The parser sets the language, the license, and how much of the core already exists, so this spike runs before any other code. Each test runs on the encode garden with a tool already installed here or with one `cargo` command.
+		- Whichever parser I pick decides the language, the license, and how much of the engine I get for free, so I would run these three tests before writing any other code. Each test runs on the encode garden with a tool already installed here or with one `cargo` command.
 		- ~~~text
 		  Syntax:      lsdoc's differential test against mldoc   -> zero unclassified mismatches
 		  Graph:       Logseq's graph-parser under nbb-logseq    -> same pages, aliases, parents, refs, UUIDs
