@@ -10,7 +10,7 @@ see-also:: [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Codex]], [[
 		- The publisher's feature-support report, and its rule that an unsupported query looks different from an empty one.
 		- Editing commands that keep untouched bytes, check the source revision before writing, and record enough to finish or undo a multi-file rename.
 		- A persistent index that short-lived commands reuse, which [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0933 ET Agents calling the CLI justify a persistent cache on a small garden]] now agrees with.
-	- ## Different calls
+	- ## Where I would decide differently
 		- ### Publishing comes earlier
 			- Codex sequences publishing after `garden impact` and the editing commands. I would run Tine's static export against the encode garden in the first week, because the published site's problem is concrete today and the trial costs an hour, and then schedule `garden export` after the reference graph and before mutations.
 		- ### Concurrency starts in git
