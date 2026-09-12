@@ -4,6 +4,7 @@
 	- ## Project Goals
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Goals]]
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Brief]]
+		- [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Codex]] - a single proposal for fast command-line and Neovim access, faithful editing, static publishing, and concurrent work.
 	- ## Analysis
 		- ### [[2026-09-12 Sat]] 0658 and responses
 			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET Measure the corpus before designing the cache]] - the local gardens are far smaller than the Brief's million lines, so time a cold parse before building cache machinery.
