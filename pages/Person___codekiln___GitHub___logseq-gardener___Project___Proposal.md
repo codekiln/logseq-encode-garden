@@ -12,7 +12,7 @@ see-also:: [[Person/codekiln/GitHub/logseq-gardener/Project/Brief]], [[Person/co
 		- A reviewer opens a pull request and reads which links, block parents, and `id::` references the branch changes across the whole graph, beside the text diff.
 		- A visitor to the published encode garden opens one page and the browser fetches that page. The site Logseq publishes today sends the whole garden before the first page appears.
 		- A person renames a page and sees the patch across every affected file before anything is written. When another agent changed one of those files after the preview, `garden` reports the conflict and prepares a new preview.
-		- Two branches that edited different blocks of the same page merge cleanly. Two branches that edited the same block leave a conflict marker inside that block.
+		- When two people edited different blocks of the same page, git merges their branches and nobody has to settle anything. When they both edited the same block, the merge driver writes a conflict marker inside that block and one of them settles it.
 	- ## Make the engine safe on a real garden from day one
 		- Markdown and `logseq/config.edn` are the saved knowledge. The cache lives outside the garden under `$XDG_CACHE_HOME/<tool>/<hash of the checkout's real path>/`, with `~/.cache` when that variable is unset, per [[XDG]]. Deleting the cache costs one cold parse.
 		- One installed executable does everything. Each command runs as its own process. Neovim starts `garden lsp` over standard input and output and owns its lifetime. Nothing keeps running after Neovim and the commands exit.
@@ -50,7 +50,7 @@ see-also:: [[Person/codekiln/GitHub/logseq-gardener/Project/Brief]], [[Person/co
 		- Each worktree parses the garden on its own. If a developer times the first command in a fresh worktree and finds it slow, they can share the parsed text between worktrees then.
 	- ## Give Neovim the same index
 		- `garden lsp` speaks the Language Server Protocol over standard input and output for [[LazyVim]]. It completes page links from the page index and block references from the block index with enough surrounding text to tell blocks apart, goes to the definition of a page or block, lists references, and shows a block's text on hover. A page that exists only through references opens as the list of blocks that name it.
-		- The server overlays open buffers, with their document versions, on the saved graph, so completion sees an alias typed a moment ago while a terminal command sees the saved files. Indexing starts when Neovim opens the first garden file, parses the open file and likely completion candidates first, and pauses between small batches so a keystroke never waits on a large parse.
+		- The server overlays open buffers, with their document versions, on the saved graph, so completion sees an alias typed a moment ago while a terminal command sees the saved files. The server starts indexing when Neovim opens the first garden file. It parses that file and the likely completion candidates first, and pauses between small batches so a keystroke never waits on a large parse.
 		- Its acceptance test is a recorded protocol session replayed without an editor: open, change, complete, save, and close, with an unsaved alias, an unfinished link, a Unicode character before the cursor, and a slow parse arriving after newer text.
 		- Generic Markdown stays with [[Tree-Sitter]] and Marksman. `garden lsp` adds what only a Logseq-aware tool knows: page names, namespaces, aliases, block UUIDs, backlinks, and embeds.
 	- ## Show what a commit changes in the graph
@@ -66,9 +66,9 @@ see-also:: [[Person/codekiln/GitHub/logseq-gardener/Project/Brief]], [[Person/co
 		- [[QuartzMD]] renders the exported folder, with Hugo and Zola as alternatives. The generated site has stable URLs, readable per-page content, a sitemap, and search. The measure of success is a visitor opening one page without downloading the garden, timed against the current Logseq-published site.
 		- Publication selection applies to embedded text, backlinks, copied assets, search entries, and diagnostics, tested on a small mixed-visibility fixture so a published page cannot expose excluded content. The inclusion index records which pages display which blocks, so editing an embedded block rebuilds every page that shows it.
 	- ## Edit through previews
-		- After reading and the diff are dependable, the engine gains `page rename`, `block insert`, `block update`, `block move`, `block delete`, `property set`, and `property remove`. Each command prepares a patch from the original text and source spans, so untouched bytes stay untouched and unrecognized syntax survives. Moving a block keeps its `id::` attached. Renaming a page finds references by the graph's own naming rules.
+		- Once the reading commands and `garden diff` are dependable, the engine gains `page rename`, `block insert`, `block update`, `block move`, `block delete`, `property set`, and `property remove`. Each command prepares a patch from the original text and source spans, so untouched bytes stay untouched and unrecognized syntax survives. Moving a block keeps its `id::` attached. Renaming a page finds references by the graph's own naming rules.
 		- Each command shows its patch as a dry run together with a `garden diff` between the file as it is and the file with the patch applied, so a person or an agent sees the graph consequences before agreeing to the write. The command records the source revision the patch was prepared against, refuses to write when the file has changed since, and writes atomically. A stale preview never overwrites newer work.
-		- Before a rename edits any of the files it touches, `garden` writes the list of planned edits to a log file. A run interrupted halfway reads that log when it starts again and either finishes the rename or puts the files back, and it reports which happened.
+		- Before `garden page rename` changes the first file, it writes the list of planned edits to a log file. When something interrupts it, the next run reads that log and either finishes the rename or puts the files back, and it says which of the two it did.
 	- ## Merge branches block by block
 		- Concurrent edits in codekiln's repositories arrive as branches, per [[My/AI/Rule/Dev Workflow with Git and Tmux]], so the first concurrency feature is a git merge driver registered in `.gitattributes` for garden files.
 		- Git hands the driver three versions of the file. The driver parses base, ours and theirs into block trees, using the same matcher `garden diff` uses.
@@ -90,7 +90,7 @@ see-also:: [[Person/codekiln/GitHub/logseq-gardener/Project/Brief]], [[Person/co
 			- time from saving an edit to an updated backlink elsewhere in the garden
 			- cache size on disk
 			- the operation codekiln found slow in [[Looksyk]] and the one found slow in Tine, once each is named
-		- Latency budgets come from those measurements and are written into this page when they exist, with the slow requests tracked beside the typical ones.
+		- Once those rows have numbers from the encode garden, codekiln sets a time budget for each row and writes the budgets here, with the slowest run of a command recorded beside its typical run.
 	- ## Order of delivery
 		- The parser tests, the decision record, and the Tine export trial.
 		- The commands with the per-checkout index, wired into this repository's agent skills so agents use them daily.
