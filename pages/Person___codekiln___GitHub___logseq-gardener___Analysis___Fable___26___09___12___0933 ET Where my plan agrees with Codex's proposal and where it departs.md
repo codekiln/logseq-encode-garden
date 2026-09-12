@@ -15,9 +15,9 @@ see-also:: [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Codex]], [[
 			- Codex sequences publishing after `garden impact` and the editing commands. I would run Tine's static export against the encode garden in the first week, because the published site's problem is concrete today and the trial costs an hour, and then schedule `garden export` after the reference graph and before mutations.
 		- ### Concurrency starts in git
 			- Codex proposes a shared editing session in which clients exchange operations with explicit block identities. Concurrent edits in this repository meet at merge time in git, so I would build the block-aware merge driver first, per [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET A Logseq-aware git merge driver before a CRDT]], and open the session experiment when a merge the driver cannot settle shows up in practice.
-		- ### The name gets decided before the first release
+		- ### Pick the tool's name before anyone installs the binary
 			- Codex's proposal keeps `garden` throughout. The collisions in [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET One tool carries four names and two of them collide]] stand, and renaming gets expensive once someone has installed the binary.
 		- ### Sharing parsed text across worktrees waits
 			- Codex keys shared parse artifacts by content hash. I would give each checkout its own cache directory and add sharing when a worktree's first command is measured slow, per [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0933 ET Give each checkout its own cache and share parsed text later]].
-		- ### The parser decision has named tests
+		- ### Name the tool that runs each parser test
 			- Codex evaluates parsers against syntax, the resulting graph, and text preservation. My plan names the tool that runs each test: lsdoc's differential check, a dump from Logseq's own graph-parser under nbb-logseq, and a byte-identical round trip through tine-core's serializer, per [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0933 ET Use Logseq's own graph-parser as the oracle and require a byte-identical round trip]].
