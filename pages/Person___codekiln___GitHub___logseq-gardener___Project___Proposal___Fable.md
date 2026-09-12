@@ -25,10 +25,10 @@ see-also:: [[Person/codekiln/GitHub/logseq-gardener/Project/Goals]], [[Person/co
 		skills           PRs     Hugo, Zola branches
 	  ~~~
 	- ## Decide the parser with three tests in the first week
-		- Whichever parser I pick decides the language, the license, and how much of the engine I get for free, so I would run these three tests before writing any other code. Each test runs on the encode garden with a tool already installed here or with one `cargo` command.
+		- Whichever parser I pick decides the language, the license, and how much of the engine I get for free, so I would run these three tests before writing any other code. Each test runs on the encode garden and on the public `logseq/docs` graph, with a tool already installed here or with one `cargo` command.
 		- ~~~text
 		  Syntax:      lsdoc's differential test against mldoc   -> zero unclassified mismatches
-		  Graph:       Logseq's graph-parser under nbb-logseq    -> same pages, aliases, parents, refs, UUIDs
+		  Graph:       Logseq's graph-parser at tag 0.10.15      -> same pages, aliases, parents, refs, UUIDs
 		  Round trip:  parse then serialize every file           -> identical bytes (tine-check)
 		  ~~~
 		- When all three pass, garden-core is built in Rust on lsdoc and tine-core, and I would open a conversation with Tine's maintainer about a CLI and an LSP sharing tine-core. When the graph test fails, the missing parts of Logseq's `extract` code get ported and the fixture stays. When the syntax test fails on constructs this garden uses, the core is built on mldoc in OCaml, and the graph layer is a port either way. The outcome is recorded as an architectural decision record page under this project. [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET Pick the parser first and let the language follow]] and [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0933 ET Use Logseq's own graph-parser as the oracle and require a byte-identical round trip]] hold the evidence.
@@ -70,7 +70,7 @@ see-also:: [[Person/codekiln/GitHub/logseq-gardener/Project/Goals]], [[Person/co
 	- ## Merge concurrent edits in git before building a shared session
 		- Concurrent edits in this repository arrive as branches, per [[My/AI/Rule/Dev Workflow with Git and Tmux]], so the first concurrency feature is a merge driver registered in `.gitattributes` for garden files. Git hands it base, ours, and theirs. The driver parses all three into block trees with the same matcher the diff uses, merges block by block, and leaves a textual conflict marker only inside a block both sides changed. A CRDT-backed session is the experiment after that, opened when a merge the driver cannot settle shows up in practice. [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET A Logseq-aware git merge driver before a CRDT]] has the argument.
 	- ## Measure on the encode garden from the first week
-		- The benchmark corpus is the encode garden plus small fixtures: Logseq's graph-parser test graphs, the file-graph importer's known issue classes, this repository's alias-removal commits, and a small mixed-visibility graph for publication filtering.
+		- The benchmark corpus is the encode garden and the public `logseq/docs` graph, plus small fixtures: Logseq's graph-parser test graphs, the file-graph importer's known issue classes, this repository's alias-removal commits, and a small mixed-visibility graph for publication filtering.
 		- The benchmark rows:
 			- cold parse time and peak memory
 			- warm command time in a fresh process
