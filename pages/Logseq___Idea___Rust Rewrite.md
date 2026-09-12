@@ -1,5 +1,8 @@
 # Rewriting Logseq in Rust
-	- possible name: Sextant
+	- possible names:
+		- [[Person/codekiln/GitHub/logseq-gardener]]
+		- [[Person/codekiln/GitHub/logseeker]] project name, `lgskr` for short at the CLI
+		- Sextant
 	- prior art
 		- Rust implementations and related [[PKM/Tool]]s
 			- [[Looksyk]] - rust-based logseq

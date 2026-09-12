@@ -1,2 +1,17 @@
-- [logseq-gardener](https://github.com/codekiln/logseq-gardener/tree/main)
-	- nascent project to use [[nx]] to cross-link and manage multiple garden "patches" in [[Knowledge Gardening]]
+# `logseq-gardener`
+	- ## About
+		- `logseq-gardener` or `garden` (at the [[CLI]]) is an alpha prototype to enable humans of [[AI Agents]] to tend to [[Knowledge Gardens]] that are in maintained in the style of [[Logseq/OG]], outside of the [[Logseq]] [[GUI]].
+	- ## Project Goals
+		- [[Person/codekiln/GitHub/logseq-gardener/Project/Goals]]
+		- [[Person/codekiln/GitHub/logseq-gardener/Project/Brief]]
+	- ## Analysis
+		- ### [[2026-09-12 Sat]] 0658 and responses
+			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET Measure the corpus before designing the cache]] - the local gardens are far smaller than the Brief's million lines, so time a cold parse before building cache machinery.
+				- [[My Notes]]
+					- fair pushback, though both [[Looksyk]] and tine have had performance problems. I'm interested in frontier performance
+			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET Pick the parser first and let the language follow]] - every faithful Logseq parser is AGPL-3.0, and Tine and lsdoc already cover much of garden-core; run lsdoc's differential check on this garden and decide from that.
+			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET Ship the agent CLI first and let the LSP inherit the index]] - agents in this repository grep for pages every session; a few commands replace that and exercise the index daily.
+			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET Publish by exporting plain Markdown to a standard site generator]] - resolve Logseq semantics in garden-core, render with Quartz or similar, and try Tine's export first.
+			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET A Logseq-aware git merge driver before a CRDT]] - the concurrency that exists is a merge problem; a merge driver solves it and settles block identity first.
+			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET One tool carries four names and two of them collide]] - `garden` is garden.io's binary and `logseq-gardener` is an existing Nx repository; pick one tested name.
+			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET Smaller fixes to the Brief and Goals pages]] - XDG cache path, git-style graph discovery, fixtures that already exist, the overlapping pages, and wording.
