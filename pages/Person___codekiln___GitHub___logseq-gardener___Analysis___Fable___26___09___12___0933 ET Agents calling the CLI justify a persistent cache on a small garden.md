@@ -3,7 +3,7 @@ see-also:: [[Person/codekiln/GitHub/logseq-gardener/Analysis/Codex/26/09/12/0733
 
 - # Agents calling the CLI justify a persistent cache on a small garden
 	- My [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET Measure the corpus before designing the cache]] argued for an in-memory index and file watching first, with the persistent cache added only when a cold parse gets long enough to notice. Codex's [[Person/codekiln/GitHub/logseq-gardener/Analysis/Codex/26/09/12/0733 ET Benchmark repeated commands and edits to widely linked pages]] points at the case that argument skipped: an agent runs the CLI as a fresh process for every lookup, so it pays the cold parse every time. On the hub page codekiln added that [[Looksyk]] and Tine have both had performance problems and that frontier performance is the interest. Together those change my recommendation.
-	- ## Why the agent workflow settles it
+	- ## An agent pays the cold parse on every call
 		- An agent session in this repository checks pages many times: the link-hygiene skill resolves every wikilink in a draft, and the core rule says to grep before linking. If each `garden page resolve` costs a one-second cold parse, a session spends minutes waiting and the agent goes back to grep, which is the outcome this project exists to end. A persistent index turns each of those calls into a file open and a lookup.
 		- So the persistent cache belongs in the first release that agents use, whatever the encode garden's cold-parse time turns out to be. The benchmark still runs first. It now decides the cache format, the invalidation rule, and the latency budgets, and it no longer decides whether the cache exists.
 	- ## The shape of the cache
