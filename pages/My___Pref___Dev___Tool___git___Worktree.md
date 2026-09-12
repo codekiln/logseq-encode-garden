@@ -1,19 +1,20 @@
 - My preferences related to [[git/worktree]]s
-	- the `git-tools` `git-worktrees` skill is the source of truth for naming and placement; this page follows it
 	- DO
-		- store worktrees **inside** the project folder, in a [[gitignore]]d `<proj-root>/worktrees/` directory
+		- store worktrees **inside** the project folder, in a [[gitignore]]d `<proj-root>/.worktrees/` directory
+			- *why the dot prefix*: [[Logseq]] only skips directories that start with `.` on its own; a plain `worktrees/` directory still gets scanned and its files treated as graph pages/assets even when it's [[gitignore]]d, so the directory itself must be dot-prefixed. Also, it makes it easier to find in yazi as the `.` folders appear at the top.
+			- *why one shared location*: keeping every tool's worktrees under the same `<proj-root>/.worktrees/` path, rather than letting each tool pick its own default (e.g. `.claude/worktrees/`), preserves my ability to switch between tools without hunting for scattered worktree directories
 		- name each worktree after its branch, replacing `/` with `-` and dropping the branch-type prefix
 			- [[Example/Good]]
 				- *note*: branch names here are not binding, they should follow repo conventions. the important thing is that there is a correspondence between worktrees and branches for short-lived tasks.
-				- branch `codekiln/130-add-auth` -> `<proj-root>/worktrees/codekiln-130-add-auth`
-				- branch `AB-1234-add-auth` -> `<proj-root>/worktrees/AB-1234-add-auth`
-				- branch `docs/add-directory-grounding` -> `<proj-root>/worktrees/docs-add-directory-grounding`
-		- in [[Claude Desktop]], whose Worktree location setting stores worktrees inside the project, use its `<proj-root>/.claude/worktrees/` directory instead — also [[gitignore]]d
+				- branch `codekiln/130-add-auth` -> `<proj-root>/.worktrees/codekiln-130-add-auth`
+				- branch `AB-1234-add-auth` -> `<proj-root>/.worktrees/AB-1234-add-auth`
+				- branch `docs/add-directory-grounding` -> `<proj-root>/.worktrees/docs-add-directory-grounding`
+		- in [[Claude Desktop]], whose Worktree location setting stores worktrees inside the project but isn't configurable to `.worktrees/`, use its fixed `<proj-root>/.claude/worktrees/` directory instead — the one accepted exception to the shared-location principle above, since the path is dictated by the tool; still [[gitignore]]d
 	- DO NOT
 		- store worktrees as siblings of the project folder
 		- put the branch-type prefix (`feature/`, `fix/`, `docs/`) in the worktree directory name
 	- two species, named differently
 		- **ephemeral** — created for one branch and removed once it lands; directory named after the branch, per the DO rules above
-		- **standing** — kept alive across many branches as an agent inbox; directory named after the agent (`<proj-root>/worktrees/reviewer`), since no single branch describes it
+		- **standing** — kept alive across many branches as an agent inbox; directory named after the agent (`<proj-root>/.worktrees/reviewer`), since no single branch describes it
 			- branch identity lives in the branch name alone; the directory name stays fixed for the life of the agent
 			- rests detached at `origin/main` between tasks — [[AI/Coding/Idea/26/08/Standing agent inboxes on long-lived worktrees]]
