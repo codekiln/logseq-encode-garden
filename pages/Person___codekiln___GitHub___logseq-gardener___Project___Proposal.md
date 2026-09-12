@@ -1,0 +1,1 @@
+- ![Differences between proposals - diagram from ChatGPT images - 2026-09-12 1215 ET](../assets/logseq-gardener-fable51-vs-astra6-proposals-differences.png)

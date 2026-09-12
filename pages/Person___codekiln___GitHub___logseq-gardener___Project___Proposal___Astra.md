@@ -1,5 +1,6 @@
-author:: [[Codex]]
+author:: [[OpenAI/Model/GPT/6/Astra]]
 see-also:: [[Person/codekiln/GitHub/logseq-gardener/Project/Goals]], [[Person/codekiln/GitHub/logseq-gardener/Project/Brief]], [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Fable]]
+
 - # A fast way to write, maintain, and publish a Logseq garden
 	- I would build logseq-gardener so that a person can write in Neovim, work with coding agents, and publish a garden while keeping the existing Logseq Markdown files. A shared local engine would understand the pages, blocks, and links. The command line would be its first client, followed by Neovim, graph comparison, a Markdown exporter, editing commands, and a Git merge driver.
 	- The editor should show link completion immediately while a person types. An agent should find the right note without repeatedly searching the whole repository. Editing commands should preserve surrounding text. Visitors should read published pages without downloading the garden.

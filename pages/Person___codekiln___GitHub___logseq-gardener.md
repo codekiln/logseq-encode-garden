@@ -4,7 +4,7 @@
 	- ## Project Goals
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Goals]]
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Brief]]
-		- [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Codex]] - a CLI-first proposal with a per-checkout cache, Logseq compatibility tests, staged graph diffs, Markdown export before mutations, and a Git merge driver before shared editing.
+		- [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Astra]] - a CLI-first proposal with a per-checkout cache, Logseq compatibility tests, staged graph diffs, Markdown export before mutations, and a Git merge driver before shared editing.
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Fable]] - one engine behind an agent command line, a Neovim language server, a graph diff that git and hooks run, a Markdown export for a standard site generator, and a block-aware merge driver.
 	- ## Analysis
 		- ### [[2026-09-12 Sat]] 0658 and responses
@@ -31,4 +31,4 @@
 			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0933 ET Agents calling the CLI justify a persistent cache on a small garden]] - concedes the persistent cache to Codex because agents run the CLI as fresh processes, and says what frontier performance means as benchmark rows.
 			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0933 ET Expand embeds before evaluating queries in the publisher]] - the encode garden uses embeds and block references in hundreds of files and queries in three, so the publisher expands embeds first and leaves queries for later.
 			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0933 ET Call the impact command garden diff and run it where the link checker runs]] - takes Codex's impact command, names it `garden diff`, registers it as git's external diff driver, and takes fixtures from this repository's alias-removal commits.
-			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0933 ET Where my plan agrees with Codex's proposal and where it departs]] - what the Fable proposal takes from Codex's proposal unchanged, and where it would decide differently.
+			- [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0933 ET Where my plan agrees with Astra's proposal and where it departs]] - what the Fable proposal takes from Astra's proposal unchanged, and where it would decide differently.

@@ -1,28 +1,28 @@
 author:: [[Anthropic/Model/Claude/Fable/5.1]]
-see-also:: [[Person/codekiln/GitHub/logseq-gardener/Project/Goals]], [[Person/codekiln/GitHub/logseq-gardener/Project/Brief]], [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Codex]]
+see-also:: [[Person/codekiln/GitHub/logseq-gardener/Project/Goals]], [[Person/codekiln/GitHub/logseq-gardener/Project/Brief]], [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Astra]]
 
 - # One Logseq engine that agents, Neovim, git, and a website all call
 	- I would build logseq-gardener as one library that reads a Logseq file graph the way Logseq does, and a set of thin clients that all call it: a command line that agents in this repository use in place of grep from the first week, a language server that gives Neovim completion and navigation from the same index, a graph diff that lefthook runs before each commit and that a reviewer reads on a pull request, an exporter that hands plain Markdown to a standard site generator, and a git merge driver that merges concurrent edits block by block. Examples use the Brief's working alias `garden`; the name is an open decision, per [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET One tool carries four names and two of them collide]].
 	- ~~~text
 	  pages/  journals/  assets/  logseq/config.edn
-						  |
-						  v
-				 +------------------+
-				 |   garden-core    |   parse (lsdoc or mldoc)
-				 |                  |   graph model with source spans
-				 |                  |   original text of every file
-				 |                  |   persistent index per checkout
-				 +--------+---------+
-						  |
-		  +--------+------+-------+-----------+
-		  |        |      |       |           |
-		  v        v      v       v           v
-		garden   garden  garden  garden      git
-		page /   lsp     diff    export      merge
-		block                                driver
-		  |        |      |       |           |
-		agents,  Neovim  hooks,  Quartz,    concurrent
-		skills           PRs     Hugo, Zola branches
+	  			  |
+	  			  v
+	  	 +------------------+
+	  	 |   garden-core    |   parse (lsdoc or mldoc)
+	  	 |                  |   graph model with source spans
+	  	 |                  |   original text of every file
+	  	 |                  |   persistent index per checkout
+	  	 +--------+---------+
+	  			  |
+	   +--------+------+-------+-----------+
+	   |        |      |       |           |
+	   v        v      v       v           v
+	  garden   garden  garden  garden      git
+	  page /   lsp     diff    export      merge
+	  block                                driver
+	   |        |      |       |           |
+	  agents,  Neovim  hooks,  Quartz,    concurrent
+	  skills           PRs     Hugo, Zola branches
 	  ~~~
 	- ## Decide the parser with three tests in the first week
 		- Whichever parser I pick decides the language, the license, and how much of the engine I get for free, so I would run these three tests before writing any other code. Each test runs on the encode garden and on the public `logseq/docs` graph, with a tool already installed here or with one `cargo` command.
@@ -39,7 +39,7 @@ see-also:: [[Person/codekiln/GitHub/logseq-gardener/Project/Goals]], [[Person/co
 		- Page identity, block identity, and resolve results are sum types, so no code path treats a positional block as stable, reads an ambiguous name as a match, or answers from a warming index as if it were complete. Graph scope is a required argument of every core function. Every node keeps its source file and byte span, and the engine keeps the original text of every file, which is what later edits and the round-trip test depend on.
 		- ~~~text
 		  Page      = FileBacked(path, name) | ReferenceOnly(name)
-					  with evidence: file title, title property, alias of <page>, referenced from <file:line>, namespace parent of <page>
+		  	  with evidence: file title, title property, alias of <page>, referenced from <file:line>, namespace parent of <page>
 		  BlockId   = Explicit(uuid) | Positional(page, path from root)
 		  Resolve   = Resolved | Ambiguous(candidates) | NoMatch(suggestions) | Incomplete(scope)
 		  ~~~
