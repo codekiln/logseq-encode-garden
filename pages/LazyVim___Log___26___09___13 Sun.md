@@ -1,0 +1,5 @@
+- [[2026-09-13 Sun]] LazyVim Study
+	- [[2026-09-12 Sat]] I chatted with [[ChatGPT]] about [[LazyVim/Learning/Game]]s
+		- [[YouTube/ThePrimeTimeagen]]
+			- [[Person/Michael B Paulson]]
+			- [[Person/Michael B Paulson/GitHub/vim-be-good]]
