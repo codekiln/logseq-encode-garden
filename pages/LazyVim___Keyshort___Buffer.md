@@ -19,9 +19,21 @@
 					- this one is a big counterintuitive for me, since shift usually narrows the scope, rather than widens it (e.g. to current directory rather than root directory), but here, I think the way to remember it is that the shift key is the "alternate" that's expected to be not as frequently used and there are definitely fewer use cases for needing [[vim/Buffer/Unlisted]]
 		- Description: Opens the [[nvim/Plugin/snacks.nvim]] picker over open buffers. `<leader>,` is the same thing on a shorter chord; `<leader>fB` widens it to all buffers including unlisted ones.
 	- **Jump to a Buffer by Letter** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-14T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-13T22:37:08.560Z
+	  card-last-score:: 1
 		- Shortcut: `<leader>bj`
 		- Description: Labels every entry in the [[nvim/Plugin/bufferline.nvim]] strip with a letter and jumps to whichever one is typed. Constant effort however far away the buffer is, where `<S-h>` and `<S-l>` cost one press per buffer crossed.
 	- **Next and Previous Buffer** [[Card]]
+	  card-last-interval:: 5.62
+	  card-repeats:: 1
+	  card-ease-factor:: 2.6
+	  card-next-schedule:: 2026-09-19T12:35:53.314Z
+	  card-last-reviewed:: 2026-09-13T22:35:53.315Z
+	  card-last-score:: 5
 		- Shortcut: `<S-l>` next, `<S-h>` previous
 		- Description: Steps through the buffer list. `S-` is [[Key/Shift]], so these are plain `H` and `L` — which normally jump to the top and bottom of the screen — rebound to buffer navigation.
 	- **Next and Previous Buffer (bracket form)** [[Card]]

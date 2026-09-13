@@ -3,6 +3,12 @@
 		- Shortcut: `<leader>ud`
 		- Description: Turns [[LSP]] diagnostics on or off for the session. My config disables diagnostics globally on `VeryLazy`, so this is the switch that turns them on when I actually want them.
 	- **Toggle Word Wrap** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-14T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-13T22:33:04.281Z
+	  card-last-score:: 1
 		- Shortcut: `<leader>uw`
 		- Description: Toggles `wrap`. My `options.lua` sets `wrap` and `linebreak` on by default, so this turns wrapping *off*.
 	- **Toggle Line Numbers** [[Card]]

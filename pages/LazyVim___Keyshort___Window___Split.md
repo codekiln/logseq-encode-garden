@@ -38,6 +38,12 @@
 			  id:: 6a9d3f38-19d6-4ac5-92a2-946764075772
 				- [[Hypothesis]] I suppose it probably means that I can list my nvim buffers and easily get back to it. I remember there's a set of keyboard shortcuts for navigating buffers in a stack, but I don't remember what they are.
 	- **Resize Split** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-14T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-13T22:38:22.526Z
+	  card-last-score:: 1
 		- Shortcut: `<C-Up>` `<C-Down>` `<C-Left>` `<C-Right>`
 		- Description: Grows/shrinks the focused window by arrow direction. Vanilla equivalents: `<C-w>+` / `<C-w>-` / `<C-w><` / `<C-w>>`.
 	- [[My Note]]

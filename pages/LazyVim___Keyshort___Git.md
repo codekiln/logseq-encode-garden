@@ -2,6 +2,12 @@ logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]
 
 - [[Keyshort]] [[LazyVim]] [[LazyVim/Keyshort]]
 	- **Open Lazygit** [[Card]]
+	  card-last-interval:: 5.62
+	  card-repeats:: 1
+	  card-ease-factor:: 2.6
+	  card-next-schedule:: 2026-09-19T12:33:23.474Z
+	  card-last-reviewed:: 2026-09-13T22:33:23.474Z
+	  card-last-score:: 5
 		- Description:
 			- Open **[[Lazygit]]** in a floating window rooted at the **git root**. The uppercase variant opens it at the **current working directory**. The mappings are available when the `lazygit` binary is on `PATH`.
 		- Shortcut:
@@ -16,6 +22,12 @@ logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]
 					- ==g==it ==G==UI — uppercase for the current working directory
 					- `<leader>gG`
 	- **Git Status Picker** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-14T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-13T22:33:50.561Z
+	  card-last-score:: 1
 		- Description:
 			- Pick from **changed files**, with a **diff preview** for each file.
 		- Shortcut: `<leader>gs`

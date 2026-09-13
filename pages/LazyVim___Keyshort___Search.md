@@ -38,6 +38,12 @@
 		- Shortcut: `<leader>sr`
 		- Description: Opens [[nvim/Plugin/grug-far.nvim]], a buffer-based find-and-replace over the project with a live preview of every hit before anything is written.
 	- **Find a Config File** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-14T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-13T22:34:20.772Z
+	  card-last-score:: 1
 		- Shortcut: `<leader>fc`
 		- Description: File picker rooted at the Neovim config directory — the fast way into `lua/config/keymaps.lua` or `lua/plugins/extras.lua`.
 	- **Search All Keymaps** [[Card]]
@@ -56,6 +62,12 @@
 			- wow, this is powerful, wish I new this earlier.
 			- TODO make a tutorial on how to use this. I see it opens up [[nvim/Plugin/snacks.nvim]] with `Keymaps` at the top.
 	- **Search Command History** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-14T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-13T22:38:17.160Z
+	  card-last-score:: 1
 		- Shortcut: `<leader>sc`
 		- Description: Picker over previously run Ex commands. `<leader>s/` does the same for search history.
 	- **View All Marks** [[Card]]

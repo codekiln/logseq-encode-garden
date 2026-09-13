@@ -1,5 +1,11 @@
 - [[Keyshort]] [[LazyVim]] [[LazyVim/Keyshort]]
 	- **Next and Previous Diagnostic** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-14T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-13T22:35:35.016Z
+	  card-last-score:: 1
 		- Shortcut: `]d` next, `[d` previous
 		- Description: Jumps to the next or previous diagnostic in the buffer and opens its float. `]e` / `[e` restrict the jump to errors, `]w` / `[w` to warnings.
 	- **Show Diagnostics for the Current Line** [[Card]]

@@ -25,6 +25,12 @@
 			- ==g==o to ==D==eclaration
 			- different from go to definition (lowercase `d`) because declaration is the implementation, the current context, just like how many of the LazyVim keyshorts use shift to be the modifier for "current directory" rather than "repository." The declaration, that is, the implementation, is "local," while the definition or interface is "global."
 	- **Go to Implementation** [[Card]]
+	  card-last-interval:: 5.62
+	  card-repeats:: 1
+	  card-ease-factor:: 2.6
+	  card-next-schedule:: 2026-09-19T12:37:33.838Z
+	  card-last-reviewed:: 2026-09-13T22:37:33.840Z
+	  card-last-score:: 5
 		- Shortcut: `gI`
 		- Description: Jumps to the symbol's implementation.
 	- **Go to References** [[Card]]
@@ -51,6 +57,12 @@
 		- [[My Note]]
 			- I remember that one is for going to the type Declaration, and one is for going to the type Definition. I think Declaration is for the interface, and Definition is for the implementation. I think it's either `gd` or `gD`. Whoops, I guess I was wrong. It's `gy`.
 	- **Hover Documentation** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-14T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-13T22:37:17.392Z
+	  card-last-score:: 1
 		- Shortcut: `K`
 		- Description: Shows hover documentation for the symbol under the cursor.
 	- **Step Between References in the Buffer** [[Card]]
@@ -77,6 +89,12 @@
 			  ~~~
 			- Inside `nvim`, put the cursor on `greet` and confirm the other two occurrences highlight automatically, then press `]]` / `[[` to cycle between them. Run `:LspInfo` first if nothing highlights — [[pyright]] or [[basedpyright]] must be attached for `documentHighlight` to work.
 	- **Rename Symbol** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-14T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-13T22:34:45.921Z
+	  card-last-score:: 1
 		- Shortcut: `<leader>cr`
 		- Description: Renames the symbol under the cursor across the project.
 	- **Inspect Attached Language Servers** [[Card]]

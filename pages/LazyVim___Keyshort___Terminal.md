@@ -1,5 +1,11 @@
 - [[Keyshort]] [[LazyVim]] [[LazyVim/Keyshort]]
 	- **Open or Hide the Terminal Split** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-14T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-13T22:31:56.753Z
+	  card-last-score:: 1
 		- Shortcut: `<C-/>`
 		- Description: Opens a terminal in a split across the bottom of the editor, rooted at the project root, and focuses back out of it from inside — the same key works in normal and terminal mode. `<C-_>` is bound identically for terminals that send that byte instead.
 	- **Open a Terminal at the Working Directory** [[Card]]
