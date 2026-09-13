@@ -1,6 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Question]]
 
-- # When using the [[Logseq]] GUI, is there a [[Keyshort]] that will, given I'm in page `Grandparent/Parent/Child`, take me to `Grandparent/Parent`?
+- # When using the [[Logseq/OG]] GUI, is there a [[Keyshort]] that will, given I'm in page `Grandparent/Parent/Child`, take me to `Grandparent/Parent`?
 	- ## [[AI Answer]]
 		- **Short answer:** No. Logseq ships no dedicated keyboard shortcut that jumps from a namespaced page to its immediate parent namespace page.
 		- Checked `modules/shortcut/config.cljs` in the Logseq source: the `:go/*` shortcut group only defines `go/backward` (`⌘[`), `go/forward` (`⌘]`), `go/journals`, `go/home`, `go/all-pages`, `go/graph-view`, `go/next-journal`, `go/prev-journal`, etc. — there is no `go/parent` or namespace-aware entry.
