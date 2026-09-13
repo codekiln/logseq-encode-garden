@@ -3,3 +3,4 @@
 		- [[YouTube/ThePrimeTimeagen]]
 			- [[Person/Michael B Paulson]]
 			- [[Person/Michael B Paulson/GitHub/vim-be-good]]
+	- [[LV4AD/Ch/04 Opening Files]]
