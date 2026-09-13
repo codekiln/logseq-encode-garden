@@ -27,6 +27,9 @@
 	- ## {Bootstrap, Initialize, Provision} -> Setting it up
 	  collapsed:: true
 		- I've noticed that AI likes to use technical programmer jargon when there's a plain-english equivalent term when it's talking about setting up a project, we might have some things the AI has to do one time that first time.
+	- ## Byte
+	  collapsed:: true
+		- Before June 2026, I read the word "Byte" about once per year. After June 2026 I read it about 20 times a day and I've developed an allergy to this word that, for some reason, LLMs have become enamored with overusing. They love to talk about how many bytes a file has, where to "keep" bytes, making byte-for-byte comparisons, etc. 95% of the time it is flagrantly unnecessary and should be omitted, and 4% of the time should just be re-worded to emphasize what we are trying to accomplish and de-emphasize the technical details. <= 1% of the time we might have the extremely rare case that we are talking about bit shifting arithmetic in a performant algorithm, and then it's okay only if we're working on a critical task like optimizing the redis engine for performance, other than that it's likely premature optimization. See also [[My/AI/Rule/How to Communicate Effectively With Me/Avoid Excessive Detail and Superfluous References]].
 - # [[My/Pref/Writing/Be specific and explicit]]
 	- ## `Block`
 		- does this mean a block of text, or a block on a process? It's better to just reference the thing directly.
