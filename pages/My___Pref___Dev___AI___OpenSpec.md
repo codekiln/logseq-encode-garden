@@ -1,7 +1,7 @@
 # My Dev AI OpenSpec Preferences
 	- see [[OpenSpec]] for what the tool is; this page covers how I want changes authored
 	- ## Self-review drafts against my writing and AI rules before asking me to review
-		- AI drafting an OpenSpec change usually doesn't apply [[My/AI/Rule]] or [[My/Pref/Writing]] (and their subpages!) on its own
+		- AI drafting an OpenSpec change must apply [[My/AI/Rule]] or [[My/Pref/Writing]] (and their subpages!) when drafting.
 		- add an explicit review phase after drafting proposal/design/tasks: check the draft against those rules, revise, and only then hand it to me for review
 		- goal: OpenSpec documents should read as well-written on first read, not need a request for a rewrite pass from me
 	- ## Format design questions as numbered Resolved/Open sections
