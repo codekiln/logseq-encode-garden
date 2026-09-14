@@ -14,5 +14,9 @@ see-also:: [[UI/Text-based]], [[Lazygit]], [[gh-dash]], [[PiAI]]
 		- [[tuicr/Wishlist]]
 	- how to
 		- [[tuicr/How To/Review a PR]]
+	- config
+		- [[tuicr/Config]]
+	- agent skill
+		- [[tuicr/Agent/Skill]]
 	- ## Coverage
 		- [[Person/Omer Hamerman/YouTube/26/07/The Holy Grail of Code Review TUIs]] — DevOps Toolbox walkthrough of local review, GitHub submit, [[gh-dash]] integration, and the [[PiAI]] skill.

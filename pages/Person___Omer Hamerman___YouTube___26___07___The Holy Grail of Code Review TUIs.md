@@ -14,6 +14,7 @@ readwise-link:: https://read.readwise.io/read/01m25dyqe1zk4hs4yq903vjkr4
 		- > closing in on a thousand stars. It's definitely in its early days and as such will lead to many people to assume and comment its vibe coded slop. Rest assured, not only this project is already sponsored by large names, the dev behind it is a Cornell graduate with 10 years under his belt of serving as a staff engineer at LinkedIn and a Confluent all the way to now doing his own thing. Yes, it's written in Rust and yes, I told you it's pronounced tweaker.
 			- Creator: [[Person/Almog Gavra]]
 	- ## [[Video]]
+		- Raw transcript: [[Person/Omer Hamerman/YouTube/26/07/The Holy Grail of Code Review TUIs/Video]]
 		- {{video https://www.youtube.com/watch?v=6cqVzgVQJfE}}
 			- ### {{youtube-timestamp 0}} The review gap
 				- Opens on a Mitchell tweet thread about "vibe coding" quality metrics, then the pitch: review a PR from the terminal, leave inline comments like GitHub, and push them back without opening a browser.
@@ -23,8 +24,8 @@ readwise-link:: https://read.readwise.io/read/01m25dyqe1zk4hs4yq903vjkr4
 				- Checklist it hits: single binary, [[vim]] motions, works with [[git]] / [[jj-vcs]] / [[mercurial]], and can submit real GitHub and GitLab review comments.
 				- Needs more than a pretty diff: inline and range comments, review state, agent-friendly export, and comments that land on a real PR.
 			- ### {{youtube-timestamp 106}} Features vs hunk
-				- hunk stays diff-centric; comments do not push to GitHub.
-				- tuicr is built around collaborative review: suggestion / issue / note / praise comment types, GitHub-style diffs, themes, clipboard Markdown export, and an agent skill.
+				- hunk stays diff-centric — it does support vim-style motions out of the box, "maybe not as specific as tuicr," but comments never push to GitHub.
+				- tuicr is built around collaborative review: suggestion / issue / note / praise [[tuicr/Comment/Type]], GitHub-style diffs, themes, clipboard Markdown export, and an agent skill.
 				- Comparison table on the site calls out the missing "push to GitHub" on hunk.
 			- ### {{youtube-timestamp 187}} Creator and stack
 				- Early days (~1k stars at filming); sponsored; not dismissed as vibe-coded slop.
@@ -38,18 +39,22 @@ readwise-link:: https://read.readwise.io/read/01m25dyqe1zk4hs4yq903vjkr4
 			- ### {{youtube-timestamp 280}} Reviewed state and remote PRs
 				- Knows platform PRs — pick a change, `r` folds/marks reviewed, reopen hunks to revisit.
 				- (Mid-roll Keeper DB sponsor segment skipped in notes.)
-			- ### {{youtube-timestamp 360}} Comment types and submit
-				- Bottom menu suggests motions; Tab / Shift-Tab cycle comment type (note, suggestion, issue, praise); Shift-`c` for a file-level note.
+			- ### {{youtube-timestamp 400}} Comment types and submit
+			  id:: 6aa57707-e737-4321-9b40-aaac81aaba45
+				- Bottom menu suggests motions; Tab / Shift-Tab cycle [[tuicr/Comment/Type]] (note, suggestion, issue, praise); Shift-`c` for a file-level note.
+					- These can be configured via [[tuicr/Config/comment_types]] under [[tuicr/Config]].
 				- Ctrl-`s` or `:w` saves the review session (Vim-style command mode throughout).
 				- `tuicr review list` returns JSON aimed at agents, not humans.
 				- Pull Requests tab loads remote PRs; Tab toggles a focus panel (file tree + comment box); `y` yanks a Markdown review dump.
 				- `:submit` pushes the review via [[GitHub/CLI]] (`gh`); GitLab needs `glab`.
+				- Caveat noticed after a real submit: a file-level comment didn't land on the GitHub PR quite as expected — possibly a tuicr-internal-only comment kind rather than one the GitHub review API can attach at the file level.
 			- ### {{youtube-timestamp 520}} End-to-end with Worktrunk, [[PiAI]], and [[gh-dash]]
 				- Worktrunk for a fresh worktree; [[PiAI]] fixes a bug; submit pushes comments onto the GitHub PR.
 				- For non-review GitHub life cycle (issues, notifications), he leans on [[gh-dash]].
 				- Custom gh-dash action: run `tuicr` against a PR number (Shift-`c` from gh-dash help) instead of opening a GUI editor.
 			- ### {{youtube-timestamp 620}} Agent skill
-				- Skill workflow uses the CLI to add/read comments on **active** sessions and can open a review pane in [[tmux]] or [[Zellij]].
+			  id:: 6aa57707-6afe-46ec-bf96-766804d117dc
+				- [[tuicr/Agent/Skill]] uses the CLI to add/read comments on **active** sessions and can open a review pane in [[tmux]] or [[Zellij]].
 				- Prefer the packaged `pi-tuicr` install over burning tokens to reinvent it.
 				- Inline agent comments beat a generic AI summary — "game changer."
 				- Caveat: without an active session the skill reviewed locally only; docs say the TUI is for humans and the CLI is for agents on existing sessions. He then asks [[PiAI]] to create, review, and open a session from scratch.
@@ -60,8 +65,9 @@ readwise-link:: https://read.readwise.io/read/01m25dyqe1zk4hs4yq903vjkr4
 				- Still runs [[OpenCode]] (free "Pickle" model) as a GitHub Action approver alongside [[PiAI]].
 				- Eyes emoji while reviewing, then approval notes — merges after.
 			- ### {{youtube-timestamp 866}} Config
-				- `~/.config/tuicr/config.toml` (or under dotfiles): mouse, theme, diff view, leader key, allowed comment types.
-				- `tuicrignore`-style exclude file for paths to leave out of review diffs.
+				- [[tuicr/Config]] at `~/.config/tuicr/config.toml` (or under dotfiles): mouse, theme, diff view, leader key, [[tuicr/Config/comment_types]].
+				- Demo config example narrows the type set down to `issues` only, with its own color and definition — showing `comment_types` fully replaces rather than extends the defaults.
+				- The upstream config docs list every option, including themes and the comment-type table, alongside the `tuicrignore`-style exclude file for paths to leave out of review diffs.
 				- Asking the agent to "review my review" mid-session did not work as hoped — maybe needs submit first.
 			- ### {{youtube-timestamp 926}} Wrap-up
 				- tuicr stays in the stack: pulls remote PRs, submits reviews, removes excuses for skipping review in the terminal.
