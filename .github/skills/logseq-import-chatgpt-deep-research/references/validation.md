@@ -28,6 +28,18 @@ Run these checks before committing an imported Deep Research report.
   ```
 - `git diff --check` passes for changed files.
 
+## Repo Hygiene Checks
+
+- No PDF/Markdown source export was copied into `assets/` as part of this
+  import:
+  ```bash
+  git status --short assets/
+  ```
+- No `source-pdf::`/`source-md::` frontmatter was added:
+  ```bash
+  rg -n '^source-(pdf|md)::' pages/<report>.md
+  ```
+
 ## Link Checks
 
 - Run link hygiene on the report and journal:

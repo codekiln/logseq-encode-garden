@@ -1,11 +1,13 @@
 ---
 name: logseq-import-chatgpt-deep-research
 description: >-
-  Import a ChatGPT Deep Research report into the Logseq garden from its PDF and
-  optional Markdown export. Use when the user gives a Deep Research PDF or asks
-  to import/file a Deep Research report with preserved URL footnotes, source
-  assets, Logseq-Flavored Markdown, existing-page links, and today's journal
-  summary. This skill is the entrypoint for that import workflow.
+  Convert a ChatGPT Deep Research report into a Logseq-Flavored Markdown page,
+  from its PDF and optional Markdown export. Use when the user gives a Deep
+  Research PDF or asks to import/file a Deep Research report with preserved
+  URL footnotes, Logseq-Flavored Markdown, existing-page links, and today's
+  journal summary. This skill converts the report into a page; it does not
+  archive the original PDF/Markdown export as a binary asset in the repo.
+  This skill is the entrypoint for that import workflow.
 targets: ["*"]
 codexcli:
   short-description: Import ChatGPT Deep Research PDFs with Logseq footnotes
@@ -24,10 +26,17 @@ citations**; the Markdown export is only a structure/text convenience.
    - Run `python3 .rulesync/skills/logseq-import-chatgpt-deep-research/scripts/restore_deep_research_footnotes.py --pdf <report.pdf> --markdown <report.md> --output /tmp/report-with-footnotes.md`.
    - If the script fails, stop and fix the citation extraction issue before importing.
 3. Convert the footnoted Markdown to LFM with skill **logseq-convert-md-to-lfm**.
-4. Link copied assets with skill **logseq-asset-linker**.
-5. Resolve only intentional wikilinks with skill **logseq-link-hygiene**.
-6. Add a concise `[[Filed]]` journal entry for today's date.
-7. Run the checks in [references/validation.md](./references/validation.md).
+4. Resolve only intentional wikilinks with skill **logseq-link-hygiene**.
+5. Add a concise `[[Filed]]` journal entry for today's date.
+6. Run the checks in [references/validation.md](./references/validation.md).
+
+## No Binary Assets
+
+This skill converts a Deep Research report into a Logseq page. It does **not**
+copy the original PDF or Markdown export into `assets/`, and it does not add
+`source-pdf::`/`source-md::` frontmatter pointing at a copied binary. Read the
+source files from wherever the user provided them (e.g. `~/Downloads`, `/tmp`)
+and leave them there.
 
 ## Hard Guardrail
 

@@ -13,6 +13,10 @@ If the Markdown export is missing, extract text from the PDF with `pdftotext`
 and expect more manual cleanup. If the PDF is missing, do not claim citations
 are preserved.
 
+This skill converts a report into a Logseq page; it does not archive the
+original PDF/Markdown export in the repo. Work with the source files from
+wherever the user provided them and never copy them into `assets/`.
+
 ## Steps
 
 1. **Choose the target page**
@@ -20,11 +24,14 @@ are preserved.
    - On disk, convert `/` to `___`.
    - Check for an existing page before creating one.
 
-2. **Copy source assets**
-   - Copy the PDF into `assets/` under a namespace-shaped folder matching the
-     target page.
-   - Copy the original Markdown export into the same folder when provided.
-   - Add `source-pdf::` and `source-md::` frontmatter links to the page.
+2. **Do not commit the source files**
+   - The point of this skill is to convert the report into a Logseq page, not
+     to archive the original PDF/Markdown export as a binary asset in the
+     repo. Read the PDF/Markdown from wherever the user provided them (e.g.
+     `~/Downloads`, `/tmp`); do not copy them into `assets/`.
+   - Do not add `source-pdf::`/`source-md::` frontmatter pointing at a copied
+     asset. If provenance is worth recording, use a plain-text note (original
+     filename, ChatGPT conversation URL if given) instead of a binary link.
 
 3. **Restore citations from the PDF**
    - Run the helper script:
@@ -64,6 +71,7 @@ are preserved.
    - Report the number of unique URL footnotes.
    - Mention any stripped local file citations and how they were represented.
    - Mention validation results.
+   - Confirm no PDF/Markdown source file was copied into the repo.
 
 ## Failure Modes
 
