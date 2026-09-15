@@ -98,6 +98,12 @@
 		- Shortcut: `<leader>cr`
 		- Description: Renames the symbol under the cursor across the project.
 	- **Inspect Attached Language Servers** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-16T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-15T06:19:23.728Z
+	  card-last-score:: 1
 		- Shortcut: `<leader>cl`
 		- Description: Opens a picker over LSP configuration and attached clients. `:LspInfo` still works and is now an alias for `:checkhealth vim.lsp`.
 	- [[My Note]]

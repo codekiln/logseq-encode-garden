@@ -4,11 +4,24 @@ see-also:: [[LazyVim/Q/In LazyVim, how can I traverse wiki links in an Obsidian 
 - # In [[LazyVim]], how can I open a [[Markdown]] link with a keyboard shortcut?
 	- ## [[My Answer]]
 		- ### What's a LazyVim [[Keyshort]] that uses the system to follow a url under the cursor? [[card]]
+		  card-last-interval:: 3.94
+		  card-repeats:: 1
+		  card-ease-factor:: 2.36
+		  card-next-schedule:: 2026-09-19T04:25:35.244Z
+		  card-last-reviewed:: 2026-09-15T06:25:35.245Z
+		  card-last-score:: 3
 			- `gx` uses the system to resolve a url
-		- ### What's a LazyVim [[Keyshort]] that follows a relative markdown link 1.) in a split, 2.) in a new tab? [[card]]
+			- Mnemonic: go to external program
+		- ### What's a LazyVim [[Keyshort]] that follows a relative markdown link 1.) in current file 2.) in a split, 3.) in a new tab? [[card]]
+		  card-last-interval:: -1
+		  card-repeats:: 1
+		  card-ease-factor:: 2.5
+		  card-next-schedule:: 2026-09-16T04:00:00.000Z
+		  card-last-reviewed:: 2026-09-15T06:22:01.067Z
+		  card-last-score:: 1
 			- `gf` follows a relative markdown link - go follow
 				- `<C-w>f` opens it in a split - window follow
-				- `<C-w>gf` in a new tab - window go follow 
+				- `<C-w>gf` in a new tab - window go follow
 		- ### 1. What's a LazyVim [[Keyshort]] that follows a relative markdown link with the LSP, and 2. how do you go back 2. and forth after following it, and 4. how do you get a list of references to the destination? [[card]]
 			- `gd`
 			- `<C-o>` returns from the jump and `<C-i>` moves forward again

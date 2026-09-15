@@ -11,6 +11,12 @@
 		- Shortcut: `<leader>ff`
 		-
 	- **Grep the Project Root** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-16T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-15T06:16:57.940Z
+	  card-last-score:: 1
 		- Shortcut: `<leader>/`
 		- Description: Live grep across the root directory, backed by [[ripgrep]]. `<leader>sg` is the same picker on a mnemonic chord; `<leader>sG` greps the current working directory.
 		- [[LazyVim/Tutorial/Search for a Phrase Across Files]] walks through phrase matching, literal punctuation, both directory scopes, and hidden or ignored files.
@@ -82,8 +88,16 @@
 		- Description: Picker listing every set mark with its file and line
 		- [[vim/Q/What exactly are vim marks, and what are they good for?]]
 	- **Search TODO and FIXME Comments** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-16T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-15T06:25:13.699Z
+	  card-last-score:: 1
 		- Shortcut: `<leader>st`
 		- Description: Picker over comment keywords found by [[nvim/Plugin/todo-comments.nvim]]. `<leader>sT` narrows to `TODO,FIX,FIXME`; `]t` / `[t` step between them in the buffer.
+		- TODO reword card multipart question
+		- TODO what’s the diff between st and sT?
 	- [[My Note]]
 		- Every picker here is [[nvim/Plugin/snacks.nvim]]'s, not [[Telescope]] or fzf-lua — no editor extra is enabled, so LazyVim falls back to its built-in snacks picker. Cheat sheets written against the Telescope or fzf-lua extras list `<leader>ss` for symbol search; that mapping does not exist here (see [[LazyVim/Keyshort/Code Action]] for `<leader>cs`).
 		- `<leader>sR` resumes the last picker with its query intact.

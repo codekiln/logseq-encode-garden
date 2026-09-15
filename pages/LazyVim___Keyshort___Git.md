@@ -72,6 +72,12 @@ logseq-entity:: [[Logseq/Entity/Keyshort]], [[Logseq/Entity/Card]]
 						  id:: 6a9d387e-e656-49ac-aa99-b1a61ba23b30
 					- `<leader>gL`
 	- **Blame the Current Line** [[Card]]
+	  card-last-interval:: 3.94
+	  card-repeats:: 1
+	  card-ease-factor:: 2.36
+	  card-next-schedule:: 2026-09-19T04:19:42.559Z
+	  card-last-reviewed:: 2026-09-15T06:19:42.560Z
+	  card-last-score:: 3
 		- Description:
 			- Show the **commit that last touched the current line**, with an option to open the **full diff**.
 		- Shortcut: `<leader>gb`

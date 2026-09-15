@@ -1,5 +1,11 @@
 - [[Keyshort]] [[LazyVim]] [[LazyVim/Keyshort]]
 	- **Code Action** [[Card]]
+	  card-last-interval:: 5.62
+	  card-repeats:: 1
+	  card-ease-factor:: 2.6
+	  card-next-schedule:: 2026-09-20T20:17:05.324Z
+	  card-last-reviewed:: 2026-09-15T06:17:05.324Z
+	  card-last-score:: 5
 		- Shortcut: `<leader>ca`
 		- Description: Opens the [[LSP]] code-action menu for the cursor position or visual selection — quick fixes, import insertion, and refactors offered by the attached server. `<leader>cA` asks for source-wide actions instead.
 	- **Format Buffer** [[Card]]

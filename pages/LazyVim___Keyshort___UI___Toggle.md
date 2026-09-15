@@ -1,7 +1,14 @@
 - [[Keyshort]] [[LazyVim]] [[LazyVim/Keyshort]] [[LazyVim/Keyshort/UI]]
 	- **Toggle Diagnostics** [[Card]]
+	  card-last-interval:: -1
+	  card-repeats:: 1
+	  card-ease-factor:: 2.5
+	  card-next-schedule:: 2026-09-16T04:00:00.000Z
+	  card-last-reviewed:: 2026-09-15T06:15:51.070Z
+	  card-last-score:: 1
 		- Shortcut: `<leader>ud`
 		- Description: Turns [[LSP]] diagnostics on or off for the session. My config disables diagnostics globally on `VeryLazy`, so this is the switch that turns them on when I actually want them.
+		- TODO what is ‘leader u‘ for?
 	- **Toggle Word Wrap** [[Card]]
 	  card-last-interval:: -1
 	  card-repeats:: 1
