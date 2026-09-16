@@ -1,6 +1,8 @@
 - I prefer it when AI avoids the use of ordinal numbers, because they overuse and abuse them, and don't know how to make them effective. For example, an AI might begin a design document with:
 	- > Three facts about the sources shape this design: ...
-	- This is most likely a poor way to introduce those facts. A better way to utilize them to persuade would be to tell a story with a problem that needs each one in sequence, but doesn't number them.
+		- This is most likely a poor way to introduce those facts. A better way to utilize them to persuade would be to tell a story with a problem that needs each one in sequence, but doesn't number them.
+	- > Two of the seven were there, and the first is the one worth knowing about.
+		- Do you really think most humans keep ordinals in their head this way? This is not useful. [[My/Pref/Writing/Be specific and explicit]].
 - Unless preceded by an explicit explanation, most ordinal numbers that AI use are references of some kind that assumes that I have memorized the conversation, when I haven't. I have a sliding window of attention. I need things to be restated before acting on them.
 - Each number and detail that's quoted should be considered **risk**:
 	- a.) it might lead the agent to needlessly correct itself later if it changes the number, even if it doesn't matter to the human. Each detail quoted is potentially fictional unless accompanied by easily citations that a human can easily follow and gut-check. It's a risk in this case because it leads to variance in the quality of the subsequent agent output.
