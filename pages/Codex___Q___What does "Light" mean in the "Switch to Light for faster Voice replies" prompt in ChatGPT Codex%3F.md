@@ -1,0 +1,7 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+- # What does "Light" mean in the "Switch to Light for faster Voice replies" prompt in [[Codex]]?
+	- ## [[AI Answer]]
+		- **Short answer:** It is a faster, lower-effort model tier offered as an alternative to the reasoning-effort level otherwise selected (e.g. Medium), meant to reduce response latency specifically for voice conversations.
+		- The prompt appears in the ChatGPT desktop app's Codex tab composer, above the model picker (e.g. `GPT-5.6 Luna Medium`), and offers a one-tap `Use Light` action alongside `Got it`.
+		- Codex voice replies run through the same text model and reasoning-effort selection used for regular chat, unlike the consumer ChatGPT app's Voice mode, which historically used separate Instant/Medium/High voice-intelligence tiers (since deprecated in favor of GPT-Live models). Because Codex reuses its chat model/effort setting for voice, a heavier reasoning-effort tier can make spoken replies noticeably slower; switching the effort to a lighter tier trades some reasoning depth for quicker turnaround.
+		- No OpenAI help-center or developer-docs page was found that documents this "Light" tier by name as of this research pass; the mechanism above is inferred from the in-app prompt and from documented Codex/ChatGPT model and voice-intelligence conventions. If precision matters, confirm directly in the app's model picker (tapping the model name should list available reasoning-effort tiers, e.g. Light/Medium/High).
