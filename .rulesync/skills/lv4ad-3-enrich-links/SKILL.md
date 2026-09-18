@@ -54,6 +54,8 @@ Structure and wording from `lv4ad-2-format-chapter` do not change.
 ## Guardrails
 
 - Never link a page to itself.
+- Preserve `readwise-link::`, `prev::`, and `next::` frontmatter unchanged (spine
+  nav is **lv4ad-4-chapter-nav**).
 - Never modify the protected `tags::` frontmatter on any page you touch,
   including new stubs.
 - If uncertain whether a mention deserves a link (too generic, too one-off),

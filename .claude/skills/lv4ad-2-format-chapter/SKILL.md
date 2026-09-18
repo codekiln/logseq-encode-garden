@@ -43,9 +43,9 @@ pass, not a rewrite.
    `logseq-block-ids`), keep it attached to that exact bullet through the
    restructuring; grep the graph for `((that-uuid))` before you would ever
    consider dropping one.
-6. Leave `readwise-link::` frontmatter and the title bullet untouched.
-   Do not add wikilinks to other entities in this pass — that's
-   `lv4ad-3-enrich-links`.
+6. Leave `readwise-link::`, `prev::`, `next::` frontmatter and the title bullet
+   untouched. Do not add wikilinks to other entities in this pass — that's
+   `lv4ad-3-enrich-links`. Spine nav is **lv4ad-4-chapter-nav**.
 
 ## Reference
 

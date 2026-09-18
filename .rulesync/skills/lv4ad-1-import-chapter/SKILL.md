@@ -8,7 +8,8 @@ description: >-
   the [[LV4AD/Ch/<NN Title>]] page with readwise-link:: frontmatter, a title
   bullet linking the book site's chapter, and raw un-formatted highlight/note
   bullets; links it from the [[LV4AD]] book hub. Formatting the highlights into
-  house style is a separate step (lv4ad-2-format-chapter); do not do that here.
+  house style is a separate step (lv4ad-2-format-chapter); spine prev/next nav
+  is lv4ad-4-chapter-nav; do not do those here.
 targets: ["*"]
 codexcli:
   short-description: Scaffold an LV4AD chapter page from Readwise highlights
@@ -18,7 +19,7 @@ codexcli:
 
 Scaffold-only step. Pull one chapter's highlights from Readwise and lay them
 out as a new page; leave formatting/linking to the follow-on skills
-**lv4ad-2-format-chapter** and **lv4ad-3-enrich-links**.
+**lv4ad-2-format-chapter**, **lv4ad-3-enrich-links**, and **lv4ad-4-chapter-nav**.
 
 ## Steps
 
