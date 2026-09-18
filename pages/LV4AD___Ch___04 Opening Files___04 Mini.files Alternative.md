@@ -1,0 +1,6 @@
+- [4.4. The Mini.files Alternative](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-4/#_the_mini_files_alternative)
+	- [[nvim/Plugin/mini.files]] — Miller-column file browser; disabled until enabled as a Lazy Extra
+	- {{embed [[LV4AD/Ch/04 Opening Files/04 Mini.files Alternative/Open Mini.files Keyshorts]]}}
+	- {{embed [[LV4AD/Ch/04 Opening Files/04 Mini.files Alternative/Mini.files Miller Column Navigation]]}}
+	- {{embed [[LV4AD/Ch/04 Opening Files/04 Mini.files Alternative/Mini.files Text Editor Keyshorts]]}}
+	- {{embed [[LV4AD/Ch/04 Opening Files/04 Mini.files Alternative/Apply Mini.files Filesystem Changes]]}}

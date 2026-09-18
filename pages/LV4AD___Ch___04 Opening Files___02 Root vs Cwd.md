@@ -1,2 +1,5 @@
-### [4.2. The Difference Between “Root” and “Cwd”](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-4/#_the_difference_between_root_and_cwd)
-	-
+- [4.2. The Difference Between "Root" and "Cwd"](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-4/#_the_difference_between_root_and_cwd)
+	- [[LazyVim/Picker/File]] root vs cwd — [[LSP]] may detect nested roots (e.g. Cypress `tsconfig.json`)
+	- {{embed [[LV4AD/Ch/04 Opening Files/02 Root vs Cwd/Find Files Cwd Mode Keyshort]]}}
+	- {{embed [[LV4AD/Ch/04 Opening Files/02 Root vs Cwd/Local Change Directory Command]]}}
+	- {{embed [[LV4AD/Ch/04 Opening Files/02 Root vs Cwd/Print Working Directory Command]]}}

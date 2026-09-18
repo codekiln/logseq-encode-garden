@@ -1,0 +1,6 @@
+- [4.3. The Snacks Explorer Plugin](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-4/#_the_snacks_explorer_plugin)
+	- [[nvim/Plugin/snacks.nvim/Explorer]] — sidebar file tree; author prefers [[nvim/Plugin/mini.files]] for filesystem work
+	- {{embed [[LV4AD/Ch/04 Opening Files/03 Snacks Explorer/Open Snacks Explorer Keyshorts]]}}
+	- {{embed [[LV4AD/Ch/04 Opening Files/03 Snacks Explorer/Root vs Cwd Lowercase Uppercase Pattern]]}}
+	- {{embed [[LV4AD/Ch/04 Opening Files/03 Snacks Explorer/Explorer File Delete and Add]]}}
+	- {{embed [[LV4AD/Ch/04 Opening Files/03 Snacks Explorer/Explorer Help Keyshort]]}}

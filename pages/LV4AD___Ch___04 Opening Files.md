@@ -32,19 +32,24 @@ next:: [[LV4AD/Ch/05 Plugin Basics]]
 			- [[My Note]] *Not for me! out of the box this doesn't work for me. `:pwd` does nothing as far as I can tell.*
 		- > Simply press `Space` twice (i.e. `Space Space`) to pop up the "Files In Current Project" picker. As I mentioned, this is the easiest keybinding to type on your entire keyboard. The Space bar on most keyboards is big, and you're hitting it with your strongest digit: the thumb. As usual, just one `Space` will pop up the Space mode menu, and you can see that a second `Space` will present you with "Find Files (Root Dir)".
 			- {{embed [[LV4AD/Ch/04 Opening Files/01 Introducing File Pickers/Activate File Picker Keyshorts]]}}
-	- ## [4.2. The Difference Between "Root" and "Cwd"](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-4/#_the_difference_between_root_and_cwd)
+	- ## [4.2. The Difference Between "Root" and "Cwd"](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-4/#_the_difference_between_root_and_cwd) (My Notes: [[LV4AD/Ch/04 Opening Files/02 Root vs Cwd]])
 		- #### [4.2.1. Current Working Directory](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-4/#_current_working_directory)
 			- > If you are unsure what directory you are in, you can use the `:pwd` (short for "print working directory") command to have it pop up in a little notification window. `cd` and `pwd` are the same commands used by [[Bash]], [[zsh]], and many other shells for changing and printing the working directory, so they may already be familiar to you.
 				- [[My Note]] *:psd doesn't do anything for me; not sure why*
+				- {{embed [[LV4AD/Ch/04 Opening Files/02 Root vs Cwd/Print Working Directory Command]]}}
 			- > have *different* working directories for different windows. The command to change just the current window's directory is `:lcd`, short for "local change directory". This can be a powerful way to work on multiple projects at the same time (for example, if you are a full stack developer working on backend and frontend projects).
+				- {{embed [[LV4AD/Ch/04 Opening Files/02 Root vs Cwd/Local Change Directory Command]]}}
 		- #### [4.2.2. Root Directory](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-4/#_root_directory)
 			- > The root directory is not a [[vim]] concept, but is instead a Language Server Protocol ([[LSP]]) concept. LSPs are the reason that VS Code became so popular so quickly; the idea was that the editor could call out to an external service running on your computer to find out useful things about the codebase. The [[LSP]] powers a lot of useful stuff such as go to definition and references, highlighting errors in your code, and showing documentation for a variable or class. It can even help with formatting and syntax highlighting.
 			- > However, it can sometimes be confusing, especially if you are working in a monorepo or if you have root directories in places you don't expect. For example, I have a fairly normal Svelte project that has a `package.json` file in it. This project uses Cypress for testing, and the Cypress folder contains a `tsconfig.json` file that causes the Typescript language server to interpret that as a separate root. So if I am working on one of the cypress test files and press `<Space><Space>`, the root directory is considered the Cypress folder and I can only open other Cypress tests. But often the thing I *wanted* to do was open a source file in the main folder to see why a test is failing. In this case, I have to press `<Escape>` to exit the picker, then `<Space>fF` to open the picker in current working directory mode instead.
 				- [[My Note]] *So if the find file dialog isn't showing the files I need, then I likely need to use space fF to get it to work from the root directory explicitly*
-	- ## [4.3. The Snacks Explorer Plugin](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-4/#_the_snacks_explorer_plugin) - [[nvim/Plugin/snacks.nvim/Explorer]]
+				- {{embed [[LV4AD/Ch/04 Opening Files/02 Root vs Cwd/Find Files Cwd Mode Keyshort]]}}
+	- ## [4.3. The Snacks Explorer Plugin](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-4/#_the_snacks_explorer_plugin) (My Notes: [[LV4AD/Ch/04 Opening Files/03 Snacks Explorer]]) - [[nvim/Plugin/snacks.nvim/Explorer]]
 		- > I want to be upfront and honest here: I don't personally use the [[nvim/Plugin/snacks.nvim/Explorer]]. I find that the file pickers we just discussed are the fastest way to open files, and when I need to manipulate the filesystem, I prefer to use [[nvim/Plugin/mini.files]], which we will discuss later in this chapter. The primary reason I prefer [[nvim/Plugin/mini.files]] is that it uses the same keybindings as [[vim]] Normal mode instead of having a custom "explorer mode" that I have to memorize. Modes are great, but having more of them than necessary is not!
 		- > Let's start by opening an explorer using the `<Space>-e` keybinding, where the mnemonic is "**e** for Explore". If you pop up the Space mode menu, you'll see that, as with the picker, there are two ways to open the explorer: `<Space>-e` for `Explore Snacks (root directory)` and `<Space>-E` for `Explore Snacks (cwd)`.
+			- {{embed [[LV4AD/Ch/04 Opening Files/03 Snacks Explorer/Open Snacks Explorer Keyshorts]]}}
 		- > "Root directory" and "cwd" have the same meanings we discussed in the previous section, and you will notice the consistent relationship between lowercase and uppercase letters: `<Space>ff` and `<Space>e` both open the root directory, and `<Space>fF` and `<Space>E` both open the current working directory.
+			- {{embed [[LV4AD/Ch/04 Opening Files/03 Snacks Explorer/Root vs Cwd Lowercase Uppercase Pattern]]}}
 		- > You can also select multiple files to manipulate using `Tab`, similar to the picker window (In fact, the explorer is just a fancy picker window in disguise).
 		- > Speaking of keyboard navigation, yes, `j` and `k` to move up and down can be super slow if there are a lot of files to navigate. All of the commands that we discussed in [[LV4AD/Ch/03 Getting Around]] can be used to move faster. For example, `10j` will move the cursor 10 lines down with just three keystrokes compared to pressing `j` 10 times, and `Control-d` or `Control-u` can be used to scroll the tree down or up.
 		- > Use `i` to enter Insert mode while the explorer is focused to search for a specific file. Since this is a picker under the hood,`Alt-s` can be used to Seek to any line in the picker view. You can also use the normal mode `s` command to seek to text in any window, including the explorer.
@@ -55,6 +60,7 @@ next:: [[LV4AD/Ch/05 Plugin Basics]]
 		  > ![](https://lazyvim-ambitious-devs.phillips.codes/images/book/chapter-4/explorer-delete-dark.png)
 		  >
 		  > explorer delete dark
+			- {{embed [[LV4AD/Ch/04 Opening Files/03 Snacks Explorer/Explorer File Delete and Add]]}}
 		- > To add a file or folder/directory, use the `a` key and enter a new name. Use a trailing slash (`/`) to indicate a folder.
 			- [[My Note]] *Much like the way [[yazi]] does it*
 		- > To copy or move a file, you can use the explorer's pseudo-clipboard. I say "pseudo-" because you can't use this to copy a file to be pasted in e.g. MacOS Finder or Windows Explorer; only to other places in the explorer.
@@ -63,7 +69,8 @@ next:: [[LV4AD/Ch/05 Plugin Basics]]
 			- [[My Note]] *I expected y to yank and p to paste, even though I have not used these commands in the explorer. But using m for move is new to me.*
 		- > There is a *ton* of other cool stuff that the explorer can do. Use the `?` (mnemonic "ask question for help") key while the explorer window is focused to get an overview.
 			- [[My Note]] *I wasn't aware that the explorer view had contextual help available with the ? Key*
-	- ## [4.4. The Mini.files Alternative](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-4/#_the_mini_files_alternative) - [[nvim/Plugin/mini.files]]
+			- {{embed [[LV4AD/Ch/04 Opening Files/03 Snacks Explorer/Explorer Help Keyshort]]}}
+	- ## [4.4. The Mini.files Alternative](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-4/#_the_mini_files_alternative) (My Notes: [[LV4AD/Ch/04 Opening Files/04 Mini.files Alternative]]) - [[nvim/Plugin/mini.files]]
 		- > That said, I'm clearly not alone in these opinions, because [[LazyVim]] optionally provides a different file management experience with a plugin called [[nvim/Plugin/mini.files]]. It is disabled by default.
 		- > Mini.files is part of a suite of fairly random [[nvim]] packages known as mini.nvim. These plugins are independent from each other and provide a lot of common features that in many cases ought to ship with [[nvim]]. Occasionally, the mini.nvim plugins are inferior to other plugins that they clone, but many are best in class. Mini.files is not the only mini.nvim plugin that ships with [[LazyVim]], and we'll touch on others later.
 		- > In order to use [[nvim/Plugin/mini.files]], you have to enable it as a Lazy Extra. We'll go into this in more detail in the next chapter, but for now, these steps should be sufficient:
@@ -80,6 +87,7 @@ next:: [[LV4AD/Ch/05 Plugin Basics]]
 		  >
 		  > Once installed, you can show the [[nvim/Plugin/mini.files]] view using `<Space>fm` and `<Space>fM`. By default, these are *not* quite the same as the `cwd/root` structure we've seen in the picker and explorer.
 			- [[My Note]] *It's a bit difficult for me to imagine the interface here, reading this away from my computer, but it sounds like there is a way to install lazyvim packages inside of lazyvim without editing the configuration file directly?*
+			- {{embed [[LV4AD/Ch/04 Opening Files/04 Mini.files Alternative/Open Mini.files Keyshorts]]}}
 		- #### [4.4.1. Using Mini.files](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-4/#_using_mini_files) [[nvim/Plugin/mini.files]]
 			- > The default [[nvim/Plugin/mini.files]] configuration doesn't have an open in root option. I like having the ability to open the directory of the currently open file, but I don't like *losing* the ability to open the root of the current project. I show how to address this when we discuss customizing plugins in [[LV4AD/Ch/05 Plugin Basics]].
 			- > Instead of a sidebar, the [[nvim/Plugin/mini.files]] menu shows up as columns of windows (known as Miller columns) side-by-side. For example, here's what happens when I open mini.files to the current working directory of this book:
@@ -91,11 +99,14 @@ next:: [[LV4AD/Ch/05 Plugin Basics]]
 			- > Similarly, pressing `h` will move "out" of the current folder. If the cursor is in the left-most column, moving left will open a new left-most column, so you can navigate right up to the root of your file-system if you need to.
 			- > To open a file in the currently active [[nvim]] window, press `l` on that file again. The behaviour here may be a bit surprising; the file will open *under* the [[nvim/Plugin/mini.files]] view, but it won't hide the file menu. This allows you to open multiple files before closing the navigator, which can be done with the `q` key.
 				- [[My Note]] *Weird that the l key is used to open the file*
+				- {{embed [[LV4AD/Ch/04 Opening Files/04 Mini.files Alternative/Mini.files Miller Column Navigation]]}}
 			- > The beautiful thing about [[nvim/Plugin/mini.files]] compared to the explorer is that the little windows act like normal editors, and all the navigation features you have become used to are available. For example creating a file or folder is done with the `o` command, which is the same command to open a new line in a normal editor.
 			- > •   To rename a file or folder, navigate to the line that has it, and enter Insert mode to change or add text.
 			- > •   Deleting a file or folder uses the command `dd` which is the keybinding to delete an entire line of text in normal [[nvim]] windows.
 			- > •   Copy a file or folder with `yy`, the command to copy ("**y**ank") a line of text.
 			- > •   Put/paste a deleted or yanked file with `p`.
 				- [[My Note]] *It's kind of a neat conceit that editing the file system can be like editing a text file in vim*
+				- {{embed [[LV4AD/Ch/04 Opening Files/04 Mini.files Alternative/Mini.files Text Editor Keyshorts]]}}
 			- ##### [Saving Filesystem Changes](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-4/#_saving_filesystem_changes)
 				- > Any modification that you make using these keybindings will not actually be saved on the filesystem until you type the `=` key, which is a (rare) [[nvim/Plugin/mini.files]] specific keybinding. I think of it as meaning "make the filesystem **equal** to what I've typed". This will pop up a little window telling you what actions mini.files wants to take on your behalf, such as deleting, moving, renaming, or copying files. You can confirm or decline the changes with a `y` or `n` (**y**es or **n**o, of course).
+					- {{embed [[LV4AD/Ch/04 Opening Files/04 Mini.files Alternative/Apply Mini.files Filesystem Changes]]}}
