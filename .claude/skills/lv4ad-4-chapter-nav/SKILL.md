@@ -6,8 +6,10 @@ description: >-
   LV4AD chapter, backfilling spine navigation on existing chapters, or after
   reordering the [[LV4AD]] hub list. Updates neighbor chapters too. Does not
   touch highlight bodies (lv4ad-2-format-chapter) or entity wikilinks
-  (lv4ad-3-enrich-links). Subpages such as [[LV4AD/Ch/04 Opening Files/01 …]] do
-  not get prev/next.
+  (lv4ad-3-enrich-links) or keyshort card pages (lv4ad-5-factor-keyshort-cards).
+  Subpages such as [[LV4AD/Ch/04 Opening Files/01 …]] and factored card pages
+  under a section (e.g. …/01 …/Fastest Way to Close LazyVim) do not get
+  prev/next.
 ---
 # LV4AD 4: Chapter spine navigation
 
