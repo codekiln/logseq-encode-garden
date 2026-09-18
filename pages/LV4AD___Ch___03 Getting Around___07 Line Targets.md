@@ -1,0 +1,4 @@
+- [3.8 Line Targets](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-3/#_line_targets)
+	- `^` / `0` / `$` / `g_` — line start, column zero, end, last non-blank
+	- {{embed [[LV4AD/Ch/03 Getting Around/07 Line Targets/Line Start Keyshorts]]}}
+	- {{embed [[LV4AD/Ch/03 Getting Around/07 Line Targets/Line End Keyshorts]]}}

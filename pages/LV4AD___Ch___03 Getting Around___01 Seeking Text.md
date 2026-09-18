@@ -1,0 +1,4 @@
+- [3.1 Seeking Text](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-3/#_seeking_text)
+	- [[nvim/Plugin/flash.nvim]] Seek mode — contiguous characters, then the green label key to jump
+	- {{embed [[LV4AD/Ch/03 Getting Around/01 Seeking Text/Invoke Flash Seek Mode]]}}
+	- {{embed [[LV4AD/Ch/03 Getting Around/01 Seeking Text/End of Line Instead of Seek]]}}

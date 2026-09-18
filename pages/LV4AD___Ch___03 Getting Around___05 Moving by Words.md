@@ -1,0 +1,4 @@
+- [3.6 Moving by Words](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-3/#_moving_by_words)
+	- "Web" word motions — see [[vim/Keyshort/Move by Word]]
+	- {{embed [[LV4AD/Ch/03 Getting Around/05 Moving by Words/Web Words Forward]]}}
+	- {{embed [[LV4AD/Ch/03 Getting Around/05 Moving by Words/Web Words Backward]]}}

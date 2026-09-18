@@ -1,0 +1,3 @@
+- [3.10 Jump History](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-3/#_jump_history)
+	- Jump list navigation — see [[vim/Keyshort/Jump/Back and Forward]]
+	- {{embed [[LV4AD/Ch/03 Getting Around/08 Jump History/Jump List Back and Forward]]}}

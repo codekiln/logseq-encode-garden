@@ -1,0 +1,4 @@
+- [3.4 Counting](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-3/#_counting)
+	- Count prefix before a motion — e.g. `15k`, `5l`
+	- {{embed [[LV4AD/Ch/03 Getting Around/03 Counting/Count Prefix Movement]]}}
+	- {{embed [[LV4AD/Ch/03 Getting Around/03 Counting/Find LazyVim Config File]]}}

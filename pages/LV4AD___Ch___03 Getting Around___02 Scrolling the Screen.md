@@ -1,0 +1,7 @@
+- [3.2 Scrolling the Screen](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-3/#_scrolling_the_screen)
+	- Half- and full-page scroll — see [[vim/Keyshort/Scroll/Page and Half Page]]
+	- [3.2.1 Z Mode](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-3/#_z_mode) — `zt` / `zb` / `zz` reposition the cursor line on screen
+	- {{embed [[LV4AD/Ch/03 Getting Around/02 Scrolling the Screen/Half Page Scroll Keyshorts]]}}
+	- {{embed [[LV4AD/Ch/03 Getting Around/02 Scrolling the Screen/Full Page Scroll Keyshorts]]}}
+	- {{embed [[LV4AD/Ch/03 Getting Around/02 Scrolling the Screen/Single Line Scroll Keyshorts]]}}
+	- {{embed [[LV4AD/Ch/03 Getting Around/02 Scrolling the Screen/Z Mode Line Position Keyshorts]]}}

@@ -1,0 +1,4 @@
+- [3.7 Moving by Words, Only BIGGER](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-3/#_moving_by_words_only_bigger)
+	- Shifted `WEB` motions use whitespace-delimited words instead of punctuation
+	- {{embed [[LV4AD/Ch/03 Getting Around/06 Moving by Words Only BIGGER/W vs w Word Boundaries]]}}
+	- {{embed [[LV4AD/Ch/03 Getting Around/06 Moving by Words Only BIGGER/BIG Word Backward and End]]}}

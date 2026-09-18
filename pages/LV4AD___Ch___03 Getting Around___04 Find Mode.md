@@ -1,0 +1,5 @@
+- [3.5 Find Mode](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-3/#_find_mode)
+	- `f` / `F` find on the current line; `t` / `T` for operator-friendly "To" targets
+	- {{embed [[LV4AD/Ch/03 Getting Around/04 Find Mode/Find Forward and Backward]]}}
+	- {{embed [[LV4AD/Ch/03 Getting Around/04 Find Mode/Find Mode With Count]]}}
+	- {{embed [[LV4AD/Ch/03 Getting Around/04 Find Mode/To Mode for Operations]]}}
