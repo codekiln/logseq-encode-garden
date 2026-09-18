@@ -76,6 +76,34 @@ LV4AD section subpage as source page and dual-embed placement.
    (group e.g. `lv4ad keyshort cards`); touched section and chapter pages under
    `[[Updated]]`.
 
+## Multi-answer cards
+
+When a card tests **two distinct answers** (two keyshorts, two scopes, or a
+keyshort plus a command name), frame the prompt and answers with matching
+**1.** / **2.** numbering:
+
+- **Prompt** — use `### 1. …, and 2. …? [[card]]` (or `1. …, 2. …, and 3. …`
+  for three parts). Do not ask "what two keyshorts…" without numbering the parts.
+- **Answers** — one child bullet per part, each prefixed `1.` / `2.` (or
+  `3.`), and each stating what that part does **differently** (scope, target,
+  or command name) — not a single line listing both keys.
+
+<CORRECT_✅>
+- ### 1. What [[Keyshort]] opens [[nvim/Plugin/mini.files]] at the directory of the current file, and 2. what [[Keyshort]] opens it at the current working directory? [[card]]
+	- 1. `<leader>fm` — opens at the directory containing the file in the active buffer
+	- 2. `<leader>fM` — opens at Neovim's current working directory (cwd)
+</CORRECT_✅>
+
+<CORRECT_✅>
+- ### 1. What are two [[Keyshort]]s for activating the [[LazyVim/Picker/File]], 2. what is the command called? [[card]]
+	- 1. `<leader> Space` (aka `Space Space`) or `<leader>ff` — both open the same picker
+	- 2. `Find Files (Root Directory)`
+</CORRECT_✅>
+
+Apply when **drafting** new inline cards on a section page. The "do not
+rewrite" guardrail below still applies when **moving** an existing card block
+verbatim during factor-out — unless the user asks to fix prompt shape.
+
 ## Worked example
 
 See [references/worked-example.md](./references/worked-example.md) (Chapter 4,

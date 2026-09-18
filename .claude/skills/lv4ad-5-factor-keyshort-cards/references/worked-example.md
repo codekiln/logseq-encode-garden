@@ -59,3 +59,16 @@ Provenance: highlight that teaches `Space q q` gets the embed as a child:
 | Fastest Way to Close LazyVim | `Space q q` / close Neovim |
 | Activate File Picker Keyshorts | `Space Space`, `<Space>ff`, Find Files (Root Directory) |
 | File Picker Smart Case | smart case / case insensitive picker search |
+
+## Multi-answer card (section 4.4)
+
+When two answers differ by scope or role, number both the prompt and answer
+bullets. Example: `[[LV4AD/Ch/04 Opening Files/04 Mini.files Alternative/Open Mini.files Keyshorts]]`
+
+```
+- ### 1. What [[Keyshort]] opens [[nvim/Plugin/mini.files]] at the directory of the current file, and 2. what [[Keyshort]] opens it at the current working directory? [[card]]
+	- 1. `<leader>fm` — opens at the directory containing the file in the active buffer
+	- 2. `<leader>fM` — opens at Neovim's current working directory (cwd); not the same root/cwd split as picker/explorer until customized ([[LV4AD/Ch/05 Plugin Basics]])
+```
+
+Same pattern for picker/explorer pairs: `[[LV4AD/Ch/04 Opening Files/01 Introducing File Pickers/Activate File Picker Keyshorts]]` (two keyshorts + command name).
