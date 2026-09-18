@@ -1,0 +1,2 @@
+- # [libuv](https://libuv.org/)
+	- Cross-platform async I/O library; [[nvim]] exposes it as `vim.uv` for cwd, filesystem, and related calls.

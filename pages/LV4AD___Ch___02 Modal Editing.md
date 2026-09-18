@@ -1,4 +1,6 @@
 readwise-link:: https://read.readwise.io/read/01m21kgh70j94h35vnjppfg9x9
+prev:: [[LV4AD/Ch/01 Intro and Install]]
+next:: [[LV4AD/Ch/03 Getting Around]]
 
 - # [Chapter 2: What is Modal Editing, Anyway? - LazyVim for Ambitious Developers](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-2/)
 	- ## [2.1. Introduction to Modal Editing](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-2/#_introduction_to_modal_editing) [[Modal/Editing]]

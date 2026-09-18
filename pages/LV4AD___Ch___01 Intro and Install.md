@@ -1,4 +1,5 @@
 readwise-link:: https://read.readwise.io/read/01m207ez76jh7f9fb9z5q1wq6a
+next:: [[LV4AD/Ch/02 Modal Editing]]
 
 - # [Chapter 1: Introduction and Installation - LazyVim for Ambitious Developers](https://lazyvim-ambitious-devs.phillips.codes/course/chapter-1/)
 	- ## 1.1 Why Vim
