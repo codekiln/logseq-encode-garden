@@ -1,0 +1,21 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Repo
+	- In this garden, **Repo** pages model a **source repository** — typically a Git hosting page such as GitHub — as the primary subject. The focus is the repository artifact (ownership, URL, role in the ecosystem), not necessarily shipping a standalone software product.
+	- ## Relationship to [[Logseq/Entity/Software/Project]]
+		- **Software Project** — applications, libraries, CLIs, and other software products whose main job is to be run, imported, or depended on.
+		- **Repo** — the SCM home when the repository itself is the thing worth indexing (curated lists, dotfiles, templates, meta-repos). A page may still mention implementation language or stars; the type signals *repository-as-curation* or *repository-as-artifact* rather than *product*.
+		- When both fit, prefer the more specific subtype (for example [[Logseq/Entity/Repo/Awesome]] for awesome-list repos) over the generic Repo marker alone.
+	- ## How to name instance pages
+		- Default path when a maintainer is known: `Person/<Full Name>/GitHub/<repo-name>` (see [[Logseq/Entity/Person]] → SCM projects).
+		- Root-level or other namespaces are fine when the garden already treats the repo as a first-class name (same spirit as [[Logseq/Entity/Software/Project]] placement rules).
+	- ## Frontmatter
+		- `logseq-entity:: [[Logseq/Entity/Repo]]` or a more specific `Logseq/Entity/Repo/<Subtype>` link.
+		- `created-by::` — maintainer [[Logseq/Entity/Person]] (or company) when clear.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- H1: Markdown link to the canonical repository URL (see external-entity conventions on [[Logseq/Frontmatter]]).
+		- When hosted on GitHub, include [[GitHub/Star]] with a dated check.
+		- Lean bullets: what the repo is for, notable relationships to other entities.
+	- ## Subtypes
+		- [[Logseq/Entity/Repo/Awesome]] — curated awesome-list repositories.
