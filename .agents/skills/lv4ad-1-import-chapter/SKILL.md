@@ -26,15 +26,17 @@ out as a new page; leave formatting/linking to the follow-on skills
    page (`pages/LV4AD.md`). It is the entity page for the whole book
    (`logseq-entity:: [[Logseq/Entity/Book]]`, `created-by:: [[Person/Dusty Phillips]]`).
    Do not invent a different hub name.
-2. **Fetch the chapter's highlights.** Use skill `readwise-cli`. If the user
-   gave a Readwise document/book id, use it directly; otherwise search:
-   `readwise readwise-search-highlights --vector-search-term "<chapter topic>"`
-   or `readwise reader-search-documents --query "LazyVim for Ambitious Developers"`.
-   Then pull the raw data:
-   `readwise readwise-list-highlights --book-id <id> --page-size 200`
-   (or `reader-get-document-highlights --document-id <id>` if it's a Reader doc).
+2. **Fetch the chapter's highlights.** Use skill `readwise-cli`. Resolve the
+   Reader document id from the chapter's `readwise-link::` permalink
+   (`…/read/<id>`) or search:
+   `readwise reader-search-documents --query "LazyVim for Ambitious Developers chapter <N>"`.
+   Pull highlights:
+   `readwise reader-get-document-highlights --document-id <id> --json`
    Capture the Readwise **permalink** for this chapter — it becomes
    `readwise-link::`.
+   - See [references/readwise-highlight-notes.md](./references/readwise-highlight-notes.md)
+     for how user notes, Readwise AI answers, and stray book text share one
+     `notes` field.
 3. **Resolve the canonical chapter URL** on the free book site
    (`https://lazyvim-ambitious-devs.phillips.codes/course/chapter-<N>/`) via
    `web_fetch` so the title bullet links to the real source, not Readwise.
@@ -43,10 +45,16 @@ out as a new page; leave formatting/linking to the follow-on skills
    - Frontmatter: `readwise-link:: <readwise permalink>`
    - `- # [Chapter <N>: <Title> - LazyVim for Ambitious Developers](<chapter url>)`
    - One bullet per highlight, in reading order, **flat** (no heading nesting
-     yet): `- > <exact highlight text>`, with the user's Readwise note (if any)
-     as a plain child bullet directly under it — do not add `[[My Note]]` or
-     italics yet, and do not invent or paraphrase notes/highlights not present
-     in the export.
+     yet): `- > <exact content field>`.
+   - When a highlight's `notes` field is non-null, add **plain child bullets**
+     directly under that highlight:
+     - Split `notes` on `\n---\n` into segments (trim each); one child bullet
+       per segment, in order.
+     - Preserve segment text verbatim — do not add `[[My Note]]`,
+       `[[AI Notes]]`, or italics yet.
+     - Do not invent or paraphrase notes/highlights not present in the export.
+   - The user may add more notes later in Logseq; those are preserved by
+     re-import only if they also exist in Readwise.
 5. **Link it from the hub**: add a bullet under `[[LV4AD]]`'s body pointing to
    the new chapter page (mirror the existing single-line style already used
    there for other chapters).
@@ -57,8 +65,9 @@ out as a new page; leave formatting/linking to the follow-on skills
 ## Guardrails
 
 - This skill only scaffolds; it must not reorder highlights under headings,
-  add `[[My Note]]`, italicize notes, or add entity wikilinks — that's
-  `lv4ad-2-format-chapter` and `lv4ad-3-enrich-links`.
+  label notes (`[[My Note]]` / `[[AI Notes]]`), italicize notes, classify AI
+  vs user prose, or add entity wikilinks — that's `lv4ad-2-format-chapter` and
+  `lv4ad-3-enrich-links`.
 - Never fabricate highlights, notes, or URLs. If the chapter URL can't be
   confirmed, leave the title bullet linking to the book home
   (`https://lazyvim-ambitious-devs.phillips.codes/`) instead of guessing an anchor.

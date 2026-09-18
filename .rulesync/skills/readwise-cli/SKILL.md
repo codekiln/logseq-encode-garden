@@ -79,8 +79,8 @@ Locations: `new` (inbox), `later`, `shortlist`, `archive`, `feed`. When the user
 # Get full document content as Markdown
 readwise reader-get-document-details --document-id <id>
 
-# Get all highlights on a document
-readwise reader-get-document-highlights --document-id <id>
+# Get all highlights on a document (JSON: id, content, tags, notes per highlight)
+readwise reader-get-document-highlights --document-id <id> --json
 
 # Highlight a passage (html-content must match the document's HTML exactly)
 # Get the HTML first via reader-list-documents with --response-fields html_content
@@ -191,6 +191,24 @@ readwise readwise-get-daily-review
 ```
 
 Returns highlights selected by the spaced repetition algorithm plus a URL for interactive review.
+
+## Reader highlight notes
+
+Each highlight from `reader-get-document-highlights` has a single `notes`
+string (or `null`). There is no separate AI field — user notes, Readwise's
+built-in AI answers, and occasionally stray book text all share this field.
+
+When a highlight has both a user note and an AI answer, Readwise concatenates
+them with a `\n---\n` divider (user first, AI second). Downstream import
+skills (e.g. `lv4ad-1-import-chapter`) split on that divider into separate
+plain child bullets; formatting skills then label each segment `[[My Note]]`
+or `[[AI Notes]]`.
+
+```bash
+# Inspect notes shape for one chapter/document
+readwise reader-get-document-highlights --document-id <id> --json \
+  | jq '.[] | select(.notes != null) | {content: .content[0:60], notes: .notes[0:120]}'
+```
 
 ## Example Workflows
 

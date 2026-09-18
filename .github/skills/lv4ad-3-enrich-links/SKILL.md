@@ -6,8 +6,8 @@ description: >-
   commands, people, GitHub repos, concepts like RSI — following
   logseq-link-hygiene. Use when the user asks to link up, enrich, or connect an
   [[LV4AD/Ch/...]] page after it's already been formatted into blockquote + [[My
-  Note]] shape. Only adds links to existing or clearly-warranted stub pages;
-  never rewrites highlight/note text or heading structure.
+  Note]] / [[AI Notes]] shape. Only adds links to existing or clearly-warranted
+  stub pages; never rewrites highlight/note text or heading structure.
 ---
 # LV4AD 3: Enrich with entity links
 
@@ -19,9 +19,9 @@ Structure and wording from `lv4ad-2-format-chapter` do not change.
 
 1. **Scan the page** for backticked commands/tools, proper nouns, and concepts
    worth linking: CLI tools (`ed`, `sed`, `ex`, `lazygit`, `ripgrep`, `fd`),
-   plugins/projects (`lazy.nvim`), people (the author, tool creators), health/
-   ergonomics concepts (RSI), and other book-specific terms (e.g. `vim/:/Tutor`
-   for the `:Tutor` command).
+   plugins/projects (`lazy.nvim`, `nvim/Plugin/…`), people (the author, tool
+   creators), Vim modes (`Vim/Mode/…`), health/ergonomics concepts (RSI), and
+   other book-specific terms (e.g. `vim/:/Tutor` for the `:Tutor` command).
 2. **Check before linking or creating**, per `logseq-link-hygiene`: grep
    `pages/` and `journals/` for the term first.
    - If a page already exists (even as a logical page referenced elsewhere,
@@ -36,14 +36,25 @@ Structure and wording from `lv4ad-2-format-chapter` do not change.
      repository mentioned in a highlight, e.g. `dusty-phillips/dotfiles`
      becomes `[[Person/Dusty Phillips/GitHub/dotfiles]]` if that person hub
      already exists — check first rather than assuming.
+   - For **neovim plugins**, prefer the garden's `[[nvim/Plugin/<name>]]`
+     namespace when those stubs already exist.
 3. **Link inline, in place** — turn existing backticked/plain mentions into
    `[[Wikilink]]`s (or `` `code` `` + `[[Link]]` combos when the source used
    code formatting for a tool name) without altering the surrounding
    quote/note text otherwise.
-4. **Don't touch** `[[My Note]]` bullets' own leading link or the heading
-   links back to the book site — only add links for *newly recognized*
-   entities inside the prose.
-5. **Record any new stub pages** in today's `[[Filed]]` journal entry per
+4. **Section heading suffixes.** When a section's primary subject is a single
+   plugin or tool, append ` - [[Entity]]` after the heading link text:
+   `- ## [5.3 Disabling Built-in Plugin](<url>) - [[nvim/Plugin/bufferline.nvim]]`.
+   Only when the section is clearly *about* that entity — don't decorate every
+   heading.
+5. **`###` headings inside notes.** When a `[[My Note]]` block reconstructs
+   missing sub-sections, the `###` title should be the primary entity wikilink
+   (e.g. `### [[nvim/Plugin/mini.files]]`), not a plain-text plugin name.
+6. **Don't touch** the leading `[[My Note]]` / `[[AI Notes]]` label on a note
+   bullet, or the book-site heading links — only add links for *newly
+   recognized* entities inside the prose (including nested children under
+   notes).
+7. **Record any new stub pages** in today's `[[Filed]]` journal entry per
    `[[Logseq/Journal]]`, alongside (or merged into) the chapter's existing
    journal entry from `lv4ad-1-import-chapter`.
 
