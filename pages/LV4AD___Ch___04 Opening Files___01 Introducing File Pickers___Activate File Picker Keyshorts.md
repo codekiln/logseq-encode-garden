@@ -7,6 +7,5 @@ logseq-entity:: [[Logseq/Entity/Card]], [[Logseq/Entity/Keyshort]]
   card-next-schedule:: 2026-09-19T04:13:43.552Z
   card-last-reviewed:: 2026-09-15T06:13:43.553Z
   card-last-score:: 3
-	- 1. Keyshort 1: `<leader> Space` aka `Space` twice aka `Space Space`, 
-	  Keyshort 2: `<leader>ff`, which opens the same thing. `<leader>f` is the "file/find" menu.
+	- 1. `<leader> Space` (aka `Space Space`) or `<leader>ff` — both open the same picker; `<leader>f` is the "file/find" menu
 	- 2. `Find Files (Root Directory)`
