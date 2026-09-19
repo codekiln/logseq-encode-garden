@@ -1,4 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Question]]
+
 - # What does "Light" mean in the "Switch to Light for faster Voice replies" prompt in [[Codex]]?
 	- ## [[AI Answer]]
 		- **Short answer:** It is a faster, lower-effort model tier offered as an alternative to the reasoning-effort level otherwise selected (e.g. Medium), meant to reduce response latency specifically for voice conversations.

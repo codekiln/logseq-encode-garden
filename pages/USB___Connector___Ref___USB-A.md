@@ -1,7 +1,6 @@
 tags:: [[Diataxis/Reference]], [[USB]], [[USB/Connector]]
 
 - alias:: [[USB Type-A]], [[Standard USB]]
-
 - # USB-A Connector Reference
 	- ## Visual Reference
 		- ![USB Type-A male plug](https://upload.wikimedia.org/wikipedia/commons/2/27/USB_Male_Plug_Type_A.jpg)
@@ -12,27 +11,27 @@ tags:: [[Diataxis/Reference]], [[USB]], [[USB/Connector]]
 		- Rectangular shape with non-reversible design (must be inserted in correct orientation)
 		- Primarily used on host devices (computers, hubs, chargers) and some peripherals
 	- ## Physical Specifications
-		- **Dimensions**: 
+		- **Dimensions**:
 			- Width: 12.0 mm
 			- Height: 4.5 mm
 			- Length: Variable (depends on plug design)
-		- **Pin Count**: 
+		- **Pin Count**:
 			- 4 pins (USB 1.0, 1.1, 2.0)
 			- 9 pins (USB 3.0 and later)
 		- **Orientation**: Non-reversible (must be inserted in correct orientation)
 		- **Gender**: Male connector (plugs into host/receptacle)
-		- **Color Coding**: 
+		- **Color Coding**:
 			- Black or white interior: USB 2.0
 			- Blue interior: USB 3.0 and later
 	- ## Technical Specifications
 		- **USB Versions Supported**: USB 1.0, 1.1, 2.0, 3.0, 3.1, 3.2
-		- **Data Transfer Rates**: 
+		- **Data Transfer Rates**:
 			- USB 1.0/1.1: 1.5 Mbps (Low-Speed) / 12 Mbps (Full-Speed)
 			- USB 2.0: 480 Mbps (High-Speed)
 			- USB 3.0 (3.1 Gen 1, 3.2 Gen 1): 5 Gbps (SuperSpeed)
 			- USB 3.1 Gen 2 (3.2 Gen 2): 10 Gbps (SuperSpeed+)
 			- USB 3.2 Gen 2x2: 20 Gbps (requires USB-C on other end)
-		- **Power Delivery**: 
+		- **Power Delivery**:
 			- USB 1.0/1.1/2.0: Up to 2.5W (5V @ 500mA)
 			- USB 3.0 and later: Up to 4.5W (5V @ 900mA)
 	- ## Pin Configuration
@@ -49,12 +48,12 @@ tags:: [[Diataxis/Reference]], [[USB]], [[USB/Connector]]
 			- Pin 8: StdA_SSTX- (SuperSpeed transmit negative)
 			- Pin 9: StdA_SSTX+ (SuperSpeed transmit positive)
 	- ## Compatibility
-		- **Compatible Connectors**: 
+		- **Compatible Connectors**:
 			- [[USB/Connector/Ref/USB-B]] (standard pairing)
 			- [[USB/Connector/Ref/USB-B Mini]] (via cable)
 			- [[USB/Connector/Ref/USB-B Micro]] (via cable)
 			- [[USB/Connector/Ref/USB-C]] (via adapter or cable)
-		- **Backward Compatibility**: 
+		- **Backward Compatibility**:
 			- USB 3.0+ connectors are backward compatible with USB 2.0 devices
 			- USB 2.0 devices will operate at USB 2.0 speeds when connected to USB 3.0+ ports
 	- ## Common Use Cases
@@ -93,5 +92,3 @@ tags:: [[Diataxis/Reference]], [[USB]], [[USB/Connector]]
 		- [[USB/Connector/Ref/USB-B]]
 		- [[USB/Connector/Ref/USB-C]]
 		- [[USB/Connector/Ref/USB-B Micro]]
-		- [[USB/How To/Identify Connector Type]] (when created)
-		- [[USB/How To/Choose Correct Cable]] (when created)
