@@ -1,9 +1,25 @@
 ---
-targets:
-  - '*'
-description: Import an "Energy" section from Treatise on Writing Acousmatic Music on Fixed Media into Logseq
-argument-hint: URL to the energy page xhtml (e.g., https://sites.inagrm.com/avdg/activities/percussion-resonance.xhtml)
+name: logseq-ToWAMoFM-energy
+description: >-
+  Manual invoke only. Import one "Energy" section of the Treatise on Writing
+  Acousmatic Music on Fixed Media (ToWAMoFM) from its source xhtml URL into the
+  ToWAMoFM namespace: translate the French to plain English, extract bracketed
+  terms into graph pages, create composer person pages, and wire sound-example
+  embeds and prev/next nav. Use ONLY when the user explicitly names this skill
+  or asks to import a ToWAMoFM energy page and supplies the URL. Never load it
+  on your own initiative, and never for other books, treatises, or web imports.
+targets: ["*"]
+codexcli:
+  short-description: Manual only - import a ToWAMoFM Energy section from its xhtml URL
 ---
+
+> **Manual invoke only.** Do not run this unless the user explicitly asked for a
+> ToWAMoFM energy import. It fetches a remote page, creates many graph pages, and
+> rewrites navigation across a namespace, so it must never fire speculatively.
+>
+> It needs one argument: the URL to the energy page xhtml, for example
+> `https://sites.inagrm.com/avdg/activities/percussion-resonance.xhtml`.
+> If the user has not supplied a URL, ask for it before doing anything.
 
 # Import ToWAMoFM Energy
 
@@ -45,7 +61,7 @@ This command imports an "Energy" section from the Treatise on Writing Acousmatic
 
 ### Step 4: Extract Keywords and Create Links
 
-**CRITICAL: Follow Logseq Flavored Markdown (LFM) rules strictly. See the logseq-core rule (advanced detail: skill logseq-lfm) for complete guidelines.**
+**CRITICAL: Follow Logseq Flavored Markdown (LFM) rules strictly. See the logseq-flavored-markdown rule for complete guidelines.**
 
 1. **Identify key musical concepts and terms** from the content
 
@@ -64,7 +80,7 @@ This command imports an "Energy" section from the Treatise on Writing Acousmatic
    - **If the term already exists:**
      - Use the existing page reference exactly as it appears in the knowledge garden
      - Do NOT create a new page
-     - Use the page name (the actual filename) when referencing
+     - Use the canonical page name (the actual filename) when referencing
    - **If the term does NOT exist:**
      - Create a new page at `pages/ToWAMoFM___{Term}.md` (which corresponds to `[[ToWAMoFM/{Term}]]`)
      - Add frontmatter with alias: `alias:: [[{Term}]]`
@@ -88,7 +104,7 @@ This command imports an "Energy" section from the Treatise on Writing Acousmatic
    - Terms found in angle brackets in the original French text
 
 6. **Create person references for composers mentioned:**
-   - Follow `[[Logseq/Entity/Person]]` and the **logseq-person** command (router) / skill **logseq-entity** for person hub creation
+   - Follow `[[Logseq/Entity/person]]` and the **logseq-person** router for person hub creation
    - Search first to avoid duplicates
    - Use `[[Person/{Composer Name}]]` format
 
@@ -119,7 +135,7 @@ For each sound example:
 
 2. Create person page if needed:
    - Check if `pages/Person___{Composer Name}.md` exists
-   - If not, create a basic person hub following **`[[Logseq/Entity/Person]]`** (see **logseq-person** command / router)
+   - If not, create a basic person hub following **`[[Logseq/Entity/person]]`** (see **logseq-person** command / router)
 
 3. Create sound example embed page:
    - File: `pages/Person___{Composer Name}___{Piece Title}.md`
@@ -142,7 +158,7 @@ For each sound example:
 ### Step 7: Formatting Guidelines
 
 1. **Follow Logseq Flavored Markdown (LFM) rules strictly:**
-   - **CRITICAL: Refer to the logseq-core rule (advanced detail: skill logseq-lfm) for complete guidelines**
+   - **CRITICAL: Refer to the logseq-flavored-markdown rule for complete guidelines**
    - All content must be in bullet points (`-`)
    - Use TAB indentation (not spaces) for nesting
    - No blank lines between content blocks
@@ -178,7 +194,7 @@ For each sound example:
 
 **Output:**
 - Creates `pages/ToWAMoFM___01___01 Energy___01 Percussion-Resonance.md`
-- Creates person hubs for all composers — following `[[Logseq/Entity/Person]]` / **logseq-person** command (router) / skill **logseq-entity**
+- Creates person hubs for all composers — following `[[Logseq/Entity/person]]` / **logseq-person** router
 - Creates embed pages for each sound example
 - Updates journal with entry
 
@@ -186,6 +202,6 @@ For each sound example:
 
 - The command assumes pages are numbered sequentially (01, 02, 03, etc.)
 - Sound example MP3 URLs are found by monitoring network requests when the page loads
-- Person hubs follow `[[Logseq/Entity/Person]]` conventions
+- Person hubs follow `[[Logseq/Entity/person]]` conventions
 - All content is translated from French to accessible English
 - The language is simplified for teenaged musical experimenters, not academic researchers (make it simple and unpretentious)

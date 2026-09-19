@@ -1,0 +1,36 @@
+alias:: [[Podcasts]], [[Podcast/Episode]]
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Podcast
+	- In this garden, **Podcast** pages model individual podcast episodes captured as first-class listening notes, plus the show hub pages that collect them.
+	- ## What counts as a Podcast entity
+		- An **episode** page: one specific episode of a show, usually with a title, a host, an air date, and often a canonical URL.
+		- A **show** page: the hub for a recurring podcast, collecting its episodes and carrying the show's alternate names.
+		- Not Podcast entities: the host's person hub, a guest's person hub, a [[Logseq/Entity/Quote]] pulled from an episode, or a [[Logseq/Entity/Concept]] page that synthesizes ideas an episode discussed.
+	- ## Naming and links
+		- Episode pages live under the host's person namespace, dated: `Person/<Host>/Pod/<YY>/<MM> <Episode Title>`.
+			- On disk that is `pages/Person___<Host>___Pod___<YY>___<MM> <Episode Title>.md`.
+			- `<YY>` is the two-digit year and `<MM>` the two-digit month of the episode's air date.
+		- Show hub pages are `Person/<Host>/Podcast`, with `alias::` covering the show's real title and any short form likely to be searched, for example `alias:: [[Podcast/<Show Name>]], [[<Host>/Pod <Show Name>]]`.
+		- **Existing pages vary.** Both `Pod` and `Podcast` appear as the namespace segment in pages filed before this type existed, and most episodes have no show hub at all. Prefer `Pod` for new episode pages. Do not rename or retag existing pages to match; leave them as filed unless the author asks for a migration.
+	- ## Finding and deduplicating
+		- Search in order: the episode URL; the exact episode title; distinctive title words under `Person/*/Pod*`; then host plus a distinctive phrase. Classify as existing, similar, new, or blocked.
+		- One page per episode. A show hub is created only when there is more than a single episode, or when the author asks for one.
+	- ## Creator relationship
+		- Set **`created-by::`** to the host's person page, which is the page the episode namespace already sits under.
+		- Guests are linked from the body, not from `created-by::`. A guest worth tracking gets their own person page per [[Logseq/Entity/person]].
+	- ## Frontmatter
+		- Mark new instances with **`logseq-entity:: [[Logseq/Entity/Podcast]]`** so this type page collects backlinks to every Podcast entity.
+		- Set **`created-by::`** to the host.
+		- Set **`date-created::`** to the air date when known.
+		- **Never add, remove, or edit a `tags::` line on an existing page.** Older episode pages carry assorted `tags::` values; those are the author's and stay as they are.
+	- ## Page shape
+		- Logseq Flavored Markdown.
+		- The first body block is the H1 heading with the episode title linked to the episode when a URL is known: `- # [Episode Title](https://example.com/episode)`. Without a URL, use a plain `- # Episode Title`.
+		- Recommended body sections are **Notes**, **Highlights**, and **Transcript**, kept only when there is something to put in them.
+		- Prefer synthesis over pasting a full transcript unless the author asks for the full text.
+	- ## Journal
+		- Record a newly filed episode in the day's journal under `[[Filed]]`, per the journal conventions. The date is the day the page was filed, which is not necessarily the air date.
+	- ## Examples in this garden
+		- [[Person/Cal Newport/Pod/25/10/How to Reinvent a Life]]
+		- [[Person/Gergely Orosz/Podcast/25/10/Beyond Vibe Coding with Addy Osmani]]
