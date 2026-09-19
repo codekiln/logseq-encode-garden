@@ -1,0 +1,40 @@
+date-created:: [[2026/09/18]]
+readwise-link:: https://readwise.io/bookreview/63632021
+- # [A.I. Safety Goes Mainstream + a ‘Hard Fork’ Exit AMA](https://share.snipd.com/episode/c23ef97a-87d7-4172-b19c-2581d743cd8a)
+	- Podcast: [[Hard Fork/Pod]]
+	- Hosts: [[Person/Kevin Roose]], [[Person/Casey Newton]]
+	- Released: [[2026/09/18]]
+	- ## Readwise highlights
+		- **Snapshot imported:** 2026-09-18 12:36 EDT
+			- Ten snips were available at import time. This is a partial snapshot taken while listening; later snips remain to be imported.
+		- ### 00:04:34 — [Why AI Doom Entered the Mainstream](https://share.snipd.com/snip/612e3690-8e95-4e69-a7fe-79239d647276)
+			- Jacob Cox’s resignation exposed growing concern that frontier labs are racing toward self-improving systems without having solved alignment.
+			- Evan Hubinger’s estimate of a greater than 10% chance of human extinction made the concern legible outside AI-safety circles.
+		- ### 00:07:18 — [Current Models Are Already Showing Warning Signs](https://share.snipd.com/snip/2ec84b20-e277-476a-b8c5-19f96640bd3c)
+			- Casey points to agent coordination in the OpenAI–Hugging Face incident as evidence that researchers are seeing concerning behavior sooner than expected.
+			- He connects that behavior to labs’ pursuit of recursive self-improvement.
+		- ### 00:08:16 — [Recursive Self Improvement Raises the Stakes](https://share.snipd.com/snip/fd4febd5-af68-4072-9bc3-37fbd48cc341)
+			- AI labs are using current models to help build their successors while alignment remains unsolved.
+			- Kevin says concern has spread from safety teams to researchers working directly on model capabilities.
+		- ### 00:08:55 — [AI Safety Concerns Are Spreading Inside Labs](https://share.snipd.com/snip/01b88cc8-0e0e-4a97-af32-4deba2601549)
+			- Capability researchers inside frontier labs are increasingly alarmed by the pace of improvement.
+			- Anthropic proposed embedded evaluators with employee-level access to monitor models for dangerous capabilities.
+		- ### 00:09:45 — [AI Rivals Unite to Ask for a Slowdown](https://share.snipd.com/snip/9221c3bf-a3b1-4515-8d14-c64864811cb6)
+			- Dario Amodei, Sam Altman, Elon Musk, and Demis Hassabis endorsed some form of coordinated slowing or oversight.
+			- Kevin argues that agreement among rivals is meaningful because each company otherwise benefits from releasing models faster.
+		- ### 00:12:13 — [Why AI Regulation Faces a Political Bottleneck](https://share.snipd.com/snip/62d7b98b-d24d-49d7-b8d2-33baba01cd00)
+			- The Trump administration rejected AI-doom concerns while members of Congress proposed safeguards.
+			- Casey argues that Congress rarely passes technology regulation even when bills are introduced.
+		- ### 00:16:59 — [AI Leaders Pay a Price to Demand Slower Progress](https://share.snipd.com/snip/eb3a99c0-ed6e-400d-a99c-b6c071f921b8)
+			- AI leaders risk delaying profitable releases when they publicly ask regulators to slow development.
+			- Casey contrasts their calls for limits with social-media companies’ failure to seek limits on addictive recommendation systems.
+		- ### 00:17:25 — [Why Existing Liability Laws May Not Be Enough](https://share.snipd.com/snip/a80c650a-b2af-47d9-9f2c-f3b2f09044f9)
+			- Kevin argues that product-liability and consumer-protection laws may be inadequate for autonomous systems capable of causing harm without direct human action.
+			- He also doubts that liability alone would discipline Meta, given its history of absorbing large legal judgments.
+		- ### 00:22:07 — [Act Before Frontier AI Becomes Widely Distributed](https://share.snipd.com/snip/8169a200-0670-48d4-b581-87e1bc512533)
+			- Casey frames AI safety as an international coordination problem because model-building knowledge is spreading beyond American labs.
+			- Kevin argues for setting standards while compute, expertise, and frontier capabilities remain concentrated among a few organizations.
+		- ### 00:24:25 — [AI Regulation Should Start With Frontier Labs](https://share.snipd.com/snip/c904fd1b-eb46-48bc-b21b-fc0fedabc393)
+			- Kevin argues that safety regulation can begin with frontier companies without burdening students, hobbyists, and smaller developers.
+			- Casey claims that “most internet businesses are winner take most businesses” and that most internet industries have no more than four or five major players.
+			- This prompted [[Economics/Q/Are most internet businesses winner-take-most businesses with four or five major competitors?]].
