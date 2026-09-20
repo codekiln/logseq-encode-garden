@@ -13,7 +13,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Finding and deduplicating
 		- Search the character name, aliases used in the work, and the work's series path. One page per character per work-family unless the garden treats two appearances as distinct people.
 	- ## Frontmatter
-		- `logseq-entity:: [[Logseq/Entity/Person/Character]]`.
+		- Set `logseq-entity:: [[Logseq/Entity/Person/Character]]`.
 		- `created-by::` — the work's creator when that person hub exists.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
@@ -23,3 +23,4 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- [[Person/J. R. R. Tolkien/Book/Series/The Lord of the Rings/Character/Aragorn]]
 		- [[Person/Joanne Rowling/Book/Series/Harry Potter/Character/Harry Potter]]
 		- [[Person/Philip Pullman/Book/Series/His Dark Materials/Character/Lyra Belacqua]]
+		- [[Person/Philip Pullman/Book/Series/His Dark Materials/Character/Pantalaimon]]
