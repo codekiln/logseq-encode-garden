@@ -1,1 +1,1 @@
-alias:: [[Story]], [[Stories]]
+- see-also: [[Story]]
