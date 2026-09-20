@@ -1,0 +1,22 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # File Format
+	- In this garden, **File Format** pages model named file formats — the encoding and container conventions a kind of file follows — tracked for their structure, the standards they implement, the software and operating systems that read and write them, and how they have evolved over time.
+	- ## Examples in this garden
+		- [[ePub]] — e-book packaging format built on ZIP and XHTML.
+	- ## When we treat something as a file format entity
+		- Strong signals: the page's subject is a named format identified by a file extension or media type (e.g. `.epub`, `.pdf`, `.docx`); readers look it up by the format name, not by one specific document or application.
+		- Not this type: a specific document saved in the format; the application that reads or writes it (model that as [[Logseq/Entity/Software/Project]]).
+	- ## Relationship to other entity types
+		- [[Logseq/Entity/Standard]] — a file format's specification may itself be a standard entity when the garden wants a page anchored on the normative document. File Format is the page whose job is describing the format's structure and ecosystem; the two may be the same page.
+		- [[Logseq/Entity/Software/Project]] — applications and libraries that implement the format stay separate entities, linked from the format page.
+	- ## Naming
+		- Use the format's common short name as the page title, in its conventionally established casing (e.g. [[ePub]], PDF, docx).
+	- ## Finding and deduplicating
+		- Search the format name and its file extension. Classify as: existing, similar, new, or blocked.
+	- ## Frontmatter
+		- Set `logseq-entity:: [[Logseq/Entity/File/Format]]` to mark a page as a file format instance.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- H1 links to the format's official specification or homepage when one exists.
+		- Cover, as sections warrant: the format's basic structure — down to its directory or byte layout when the format is a container — the standard(s) it represents, the operating systems and software that support it, and how the format has evolved over time.

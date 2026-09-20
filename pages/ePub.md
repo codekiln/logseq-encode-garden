@@ -1,0 +1,23 @@
+logseq-entity:: [[Logseq/Entity/File/Format]]
+
+- # [ePub](https://www.w3.org/TR/epub-33/)
+	- ## Basic structure
+		- An EPUB file is a ZIP archive with the `.epub` extension, containing a fixed internal directory layout rather than an arbitrary set of files.
+		- `mimetype` — the first entry in the archive, stored uncompressed, containing exactly the ASCII string `application/epub+zip`.
+		- `META-INF/container.xml` — points a reading system at the location of the package document inside the archive.
+		- the package document (e.g. `EPUB/package.opf`) — an XML file with three parts: `metadata` (title, author, identifier, in Dublin Core), `manifest` (every file in the archive, with an id and media type), and `spine` (the linear reading order, referencing manifest items).
+		- content documents — XHTML files, one per chapter or section, referenced from the spine.
+		- a navigation document (`nav.xhtml`) — an XHTML file with a `nav` element that serves as the table of contents; EPUB 2 used a separate `toc.ncx` file for the same purpose.
+		- supporting resources — CSS stylesheets, images, and embedded fonts, stored alongside the content documents.
+	- ## Standards
+		- EPUB is a [[W3C]] Recommendation. It was originally developed by the International Digital Publishing Forum (IDPF), which merged into the W3C in 2017; the W3C has published the specification since EPUB 3.2.
+		- The package document builds on the Open Packaging Format (OPF) and Dublin Core metadata; content documents are XHTML.
+	- ## Operating systems and software
+		- Native or first-party support: Apple Books (macOS, iOS), Google Play Books (Android, web).
+		- Cross-platform readers and converters: calibre, Adobe Digital Editions.
+		- E-ink devices: Kobo readers support EPUB natively; Amazon Kindle devices do not read EPUB directly and require conversion.
+	- ## Evolution over time
+		- EPUB 2 (2007) — the OPF/OCF-based container with an NCX-based table of contents.
+		- EPUB 3.0 (2011) — added XHTML5 content documents, embedded fonts, and Media Overlays (synchronized audio).
+		- EPUB 3.2 (2019) — first version published directly by the W3C after the IDPF merger.
+		- EPUB 3.3 (2023) — current W3C Recommendation, consolidating the EPUB 3 family of specifications.
