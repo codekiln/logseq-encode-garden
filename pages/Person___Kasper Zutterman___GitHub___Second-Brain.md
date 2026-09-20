@@ -1,0 +1,707 @@
+logseq-entity:: [[Logseq/Entity/Repo/Awesome]]
+created-by:: [[Person/Kasper Zutterman]]
+date-created:: [[2020-06-01 Mon]]
+
+- # [Second-Brain](https://github.com/KasperZutterman/Second-Brain)
+	- [[GitHub/Star]] count: 1842 (checked [[2026-09-20 Sun]])
+	- Curated list of public Zettelkastens, second brains, and digital gardens, maintained by [[Person/Kasper Zutterman]].
+	- Headings below are the gardeners named in the list, each with a TODO to file them as a [[Knowledge Gardener]].
+	- ## Gardeners
+		- ### Aaron Parecki
+			- Garden: [https://aaronparecki.com/](https://aaronparecki.com/)
+			- Twitter: [https://twitter.com/aaronpk](https://twitter.com/aaronpk)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Aaron Pham
+			- Garden: [https://aarnphm.xyz/](https://aarnphm.xyz/)
+			- Twitter: [https://twitter.com/aarnphm](https://twitter.com/aarnphm)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Aengus McMillin
+			- Garden: [https://aengusmcmillin.com/brain](https://aengusmcmillin.com/brain)
+			- Twitter: [http://twitter.com/aengusmcmillin](http://twitter.com/aengusmcmillin)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Alan Pestronk
+			- Garden: [https://neuromuscular.wustl.edu/alfindex.htm](https://neuromuscular.wustl.edu/alfindex.htm)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Alex Bilson
+			- Garden: [https://alexbilson.dev/](https://alexbilson.dev/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Alma Nocturna
+			- Garden: [https://gvpv12.github.io/](https://gvpv12.github.io/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Anand Sharma
+			- Garden: [http://aprilzero.com/](http://aprilzero.com/)
+			- Twitter: [https://twitter.com/aprilzero](https://twitter.com/aprilzero)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Andres Estrella
+			- Garden: [https://andresestrella.vercel.app/](https://andresestrella.vercel.app/)
+			- Twitter: [https://twitter.com/andrestrellaa](https://twitter.com/andrestrellaa)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Andrew Tang
+			- Garden: [https://tangdrew.com/notes](https://tangdrew.com/notes)
+			- Twitter: [https://twitter.com/tangdrew/media](https://twitter.com/tangdrew/media)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Andy Byers
+			- Garden: [https://notes.ajb.app/](https://notes.ajb.app/)
+			- Twitter: [https://twitter.com/AndyByers21](https://twitter.com/AndyByers21)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Andy Matuschak
+			- Garden: [https://notes.andymatuschak.org/](https://notes.andymatuschak.org/)
+			- Twitter: [https://twitter.com/andy_matuschak](https://twitter.com/andy_matuschak)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Anne-Laure Le Cunff
+			- Garden: [https://www.mentalnodes.com/](https://www.mentalnodes.com/)
+			- Twitter: [https://twitter.com/anthilemoon](https://twitter.com/anthilemoon)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Anshul Khare
+			- Garden: [https://anshulkhare.in/](https://anshulkhare.in/)
+			- Twitter: [https://twitter.com/_anshulkhare](https://twitter.com/_anshulkhare)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Anthony Agbay
+			- Garden: [https://walkintheforest.com/](https://walkintheforest.com/)
+			- Twitter: [https://twitter.com/anthony_agbay](https://twitter.com/anthony_agbay)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Anthony Amar
+			- Garden: [https://garden.anthonyamar.fr/](https://garden.anthonyamar.fr/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Anton Emelyanov
+			- Garden: [https://wiki.ainzzorl.lol/](https://wiki.ainzzorl.lol/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Aquiles Carattino
+			- Garden: [https://notes.aquiles.me](https://notes.aquiles.me)
+			- Twitter: [https://twitter.com/aquicarattino](https://twitter.com/aquicarattino)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Aravind Balla
+			- Garden: [https://notes.aravindballa.com/](https://notes.aravindballa.com/)
+			- Twitter: [https://twitter.com/aravindballa](https://twitter.com/aravindballa)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Arne Bahlo
+			- Garden: [https://notes.arne.me](https://notes.arne.me)
+			- Twitter: [https://twitter.com/arnebahlo](https://twitter.com/arnebahlo)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Azer Koçulu
+			- Garden: [https://github.com/azer/notebook](https://github.com/azer/notebook)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Azlen Elza
+			- Garden: [https://notes.azlen.me/g3tibyfv/](https://notes.azlen.me/g3tibyfv/)
+			- Twitter: [https://twitter.com/azlenelza](https://twitter.com/azlenelza)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Ben Robertson
+			- Garden: [https://ben.robertson.is/notes](https://ben.robertson.is/notes)
+			- Twitter: [https://twitter.com/benrobertsonio](https://twitter.com/benrobertsonio)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Benjamin Lannon
+			- Garden: [https://lannonbr.com/garden](https://lannonbr.com/garden)
+			- Twitter: [https://twitter.com/lannonbr](https://twitter.com/lannonbr)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Bennett Hardwick
+			- Garden: [https://bennetthardwick.com/wiki/](https://bennetthardwick.com/wiki/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Bhavani Ravi
+			- Garden: [https://www.bhavaniravi.com/](https://www.bhavaniravi.com/)
+			- Twitter: [https://x.com/bhavaniravi_](https://x.com/bhavaniravi_)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Bhupesh Varshney
+			- Garden: [https://bhupesh.gitbook.io/notes/](https://bhupesh.gitbook.io/notes/)
+			- Twitter: [https://twitter.com/bhupeshimself](https://twitter.com/bhupeshimself)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Bill Seitz
+			- Garden: [http://webseitz.fluxent.com/wiki/](http://webseitz.fluxent.com/wiki/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Binny V A
+			- Garden: [https://notes.binnyva.com/](https://notes.binnyva.com/)
+			- Twitter: [https://twitter.com/binnyva](https://twitter.com/binnyva)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Brendan Schlagel
+			- Garden: [http://brendanschlagel.com/canon/](http://brendanschlagel.com/canon/)
+			- Twitter: [https://twitter.com/schlagetown](https://twitter.com/schlagetown)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Bruno Henriques
+			- Garden: [https://bphenriques.github.io/knowledge-base/](https://bphenriques.github.io/knowledge-base/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Bryan Jenks
+			- Garden: [https://publish.obsidian.md/bryan-jenks/INDEX](https://publish.obsidian.md/bryan-jenks/INDEX)
+			- Twitter: [https://twitter.com/tallguyjenks](https://twitter.com/tallguyjenks)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Buster Benson
+			- Garden: [https://busterbenson.com/piles/](https://busterbenson.com/piles/)
+			- Twitter: [https://twitter.com/buster](https://twitter.com/buster)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Calvin Bui
+			- Garden: [https://calvin.readthedocs.io/en/latest/](https://calvin.readthedocs.io/en/latest/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Ceasar Bautista
+			- Garden: [http://memex.cc/](http://memex.cc/)
+			- Twitter: [https://twitter.com/Ceasar_Bautista](https://twitter.com/Ceasar_Bautista)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Charlie Trochlil
+			- Garden: [https://garden.charlietrochlil.com/](https://garden.charlietrochlil.com/)
+			- Twitter: [https://twitter.com/rhymeswithvocal](https://twitter.com/rhymeswithvocal)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Chase McCoy
+			- Garden: [https://chasem.co/notes/](https://chasem.co/notes/)
+			- Twitter: [https://twitter.com/chase_mccoy](https://twitter.com/chase_mccoy)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Chinarut Ruangchotvit
+			- Garden: [http://autobiography.chinarut.com](http://autobiography.chinarut.com)
+			- Twitter: [https://twitter.com/chinarut](https://twitter.com/chinarut)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### [[Person/Chris Aldrich]]
+			- Garden: [https://tw.boffosocko.com/](https://tw.boffosocko.com/)
+			- Twitter: [https://twitter.com/ChrisAldrich](https://twitter.com/ChrisAldrich)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Chris Biscardi
+			- Garden: [https://www.christopherbiscardi.com/garden](https://www.christopherbiscardi.com/garden)
+			- Twitter: [https://twitter.com/chrisbiscardi](https://twitter.com/chrisbiscardi)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Clinton Boys
+			- Garden: [https://www.mtsolitary.com/](https://www.mtsolitary.com/)
+			- Twitter: [https://twitter.com/psephologue](https://twitter.com/psephologue)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Cosma Shalizi
+			- Garden: [http://bactra.org/notebooks/](http://bactra.org/notebooks/)
+			- Twitter: [https://twitter.com/cshalizi](https://twitter.com/cshalizi)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### D.S. Chapman
+			- Garden: [https://www.dschapman.com/notes](https://www.dschapman.com/notes)
+			- Twitter: [https://twitter.com/ds_chapman](https://twitter.com/ds_chapman)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Daniel Mathiot
+			- Garden: [https://notes.danielmathiot.tech](https://notes.danielmathiot.tech)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Danny Yee
+			- Garden: [http://danny.oz.au/](http://danny.oz.au/)
+			- Twitter: [https://twitter.com/DannyYee](https://twitter.com/DannyYee)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Dave Gifford
+			- Garden: [https://giffmex.org/Welcome.html](https://giffmex.org/Welcome.html)
+			- Twitter: [https://twitter.com/giffmex](https://twitter.com/giffmex)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Declan Chidlow
+			- Garden: [https://vale.rocks](https://vale.rocks)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Derek Sivers
+			- Garden: [https://sivers.org/book](https://sivers.org/book)
+			- Twitter: [https://twitter.com/sivers](https://twitter.com/sivers)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### [[Person/Devine Lu Linvega]]
+			- Garden: [https://wiki.xxiivv.com](https://wiki.xxiivv.com)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### DongDong Chen
+			- Garden: [https://garden.oldwinter.top/](https://garden.oldwinter.top/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### E. Ferreira
+			- Garden: [https://github.com/slowernews/notebook](https://github.com/slowernews/notebook)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Edwin Wenink
+			- Garden: [https://www.edwinwenink.xyz/zettelkasten/](https://www.edwinwenink.xyz/zettelkasten/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Elias Granja
+			- Garden: [https://wiki.anarchist.work/](https://wiki.anarchist.work/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Fabien Benetou
+			- Garden: [https://fabien.benetou.fr/](https://fabien.benetou.fr/)
+			- Twitter: [https://twitter.com/utopiah](https://twitter.com/utopiah)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Foreverliketh.is
+			- Garden: [https://foreverliketh.is/](https://foreverliketh.is/)
+			- Twitter: [https://indieweb.social/@accordionpolar](https://indieweb.social/@accordionpolar)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Fran Salerno
+			- Garden: [https://frandsalerno.github.io/](https://frandsalerno.github.io/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Gadzhi Kharkharov
+			- Garden: [https://kkga.me/tags/note](https://kkga.me/tags/note)
+			- Twitter: [https://twitter.com/kkga_](https://twitter.com/kkga_)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Gavin Gamboa
+			- Garden: [https://gavart.ist](https://gavart.ist)
+			- Twitter: [https://twitter.com/gavcloud](https://twitter.com/gavcloud)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Gordon Brander
+			- Garden: [http://gordonbrander.com/pattern/](http://gordonbrander.com/pattern/)
+			- Twitter: [https://twitter.com/gordonbrander](https://twitter.com/gordonbrander)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Greaby
+			- Garden: [https://greaby.github.io/galaxie-gd/](https://greaby.github.io/galaxie-gd/)
+			- Twitter: [https://twitter.com/greaby_](https://twitter.com/greaby_)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Guilherme Carreiro
+			- Garden: [https://karreiro.com/wiki/](https://karreiro.com/wiki/)
+			- Twitter: [https://twitter.com/karreiro_](https://twitter.com/karreiro_)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Guía Carmona
+			- Garden: [https://roamresearch.com/#/app/digitaljungle/page/3-pt2rrKj](https://roamresearch.com/#/app/digitaljungle/page/3-pt2rrKj)
+			- Twitter: [https://twitter.com/guiacarmona1](https://twitter.com/guiacarmona1)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### [[Person/Gwern Branwen]]
+			- Garden: [https://www.gwern.net/](https://www.gwern.net/)
+			- Twitter: [https://twitter.com/gwern](https://twitter.com/gwern)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Hamel Husain
+			- Garden: [https://notes.hamel.dev/](https://notes.hamel.dev/)
+			- Twitter: [https://twitter.com/HamelHusain](https://twitter.com/HamelHusain)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Harish Chandra Thuwal
+			- Garden: [https://github.com/hthuwal/notes](https://github.com/hthuwal/notes)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Henrique Dias
+			- Garden: [https://hacdias.com/notes](https://hacdias.com/notes)
+			- Twitter: [https://twitter.com/hacdias](https://twitter.com/hacdias)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Hiran Venugopalan
+			- Garden: [https://hiran.in/notes](https://hiran.in/notes)
+			- Twitter: [https://twitter.com/hfactor](https://twitter.com/hfactor)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Hrishikesh Bhaskaran
+			- Garden: [https://wiki.stultus.in](https://wiki.stultus.in)
+			- Twitter: [https://twitter.com/_stultus](https://twitter.com/_stultus)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Ian Jones
+			- Garden: [https://garden.ianjones.us/](https://garden.ianjones.us/)
+			- Twitter: [https://twitter.com/_jonesian](https://twitter.com/_jonesian)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### [[Person/Jacky Zhao]]
+			- Garden: [https://jzhao.xyz/](https://jzhao.xyz/)
+			- Twitter: [https://twitter.com/_jzhao](https://twitter.com/_jzhao)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Jacob Chvatal
+			- Garden: [https://wiki.jacob.chvatal.com/](https://wiki.jacob.chvatal.com/)
+			- Twitter: [https://twitter.com/jakechvatal](https://twitter.com/jakechvatal)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### James Kolean
+			- Garden: [https://jameskolean.tech/](https://jameskolean.tech/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### James Long
+			- Garden: [https://jlongster.com/](https://jlongster.com/)
+			- Twitter: [https://twitter.com/jlongster](https://twitter.com/jlongster)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Jamis Charles
+			- Garden: [https://jamischarles.com/](https://jamischarles.com/)
+			- Twitter: [https://twitter.com/jamischarles](https://twitter.com/jamischarles)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Jani Eväkallio
+			- Garden: [https://jevakallio.github.io/notes/](https://jevakallio.github.io/notes/)
+			- Twitter: [https://twitter.com/jevakallio](https://twitter.com/jevakallio)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Jeremy Keith
+			- Garden: [https://adactio.com/](https://adactio.com/)
+			- Twitter: [https://twitter.com/adactio](https://twitter.com/adactio)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Jeremy Nixon
+			- Garden: [https://jeremynixon.github.io/](https://jeremynixon.github.io/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Jerry Michalski
+			- Garden: [https://www.jerrysbrain.com/](https://www.jerrysbrain.com/)
+			- Twitter: [https://twitter.com/jerrymichalski](https://twitter.com/jerrymichalski)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Jestem Króliczkiem
+			- Garden: [https://beepb00p.xyz/exobrain/](https://beepb00p.xyz/exobrain/)
+			- Twitter: [https://twitter.com/karlicoss](https://twitter.com/karlicoss)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Jethro Kuan
+			- Garden: [https://braindump.jethro.dev/](https://braindump.jethro.dev/)
+			- Twitter: [https://twitter.com/jethroksy](https://twitter.com/jethroksy)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Jimmy Briggs
+			- Garden: [https://publish.obsidian.md/kaas-published](https://publish.obsidian.md/kaas-published)
+			- Twitter: [https://twitter.com/jimbrig2011](https://twitter.com/jimbrig2011)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Joel Chan
+			- Garden: [https://joelchan.roam.garden/](https://joelchan.roam.garden/)
+			- Twitter: [https://twitter.com/JoelChan86](https://twitter.com/JoelChan86)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### [[Person/Joel Hooks]]
+			- Garden: [https://joelhooks.com/](https://joelhooks.com/)
+			- Twitter: [https://twitter.com/jhooks](https://twitter.com/jhooks)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Johackim
+			- Garden: [https://johackim.com/](https://johackim.com/)
+			- Twitter: [https://twitter.com/_johackim](https://twitter.com/_johackim)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### John Otander
+			- Garden: [https://johno.com/notes/](https://johno.com/notes/)
+			- Twitter: [https://twitter.com/4lpine](https://twitter.com/4lpine)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### John Walker
+			- Garden: [http://fourmilab.ch/](http://fourmilab.ch/)
+			- Twitter: [https://twitter.com/fourmilab](https://twitter.com/fourmilab)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Jon Sterling
+			- Garden: [https://www.jonmsterling.com/](https://www.jonmsterling.com/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Joschua
+			- Garden: [https://joschuasgarden.com/](https://joschuasgarden.com/)
+			- Twitter: [https://twitter.com/selfire1](https://twitter.com/selfire1)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Josh Buchea
+			- Garden: [https://joshbuchea.com/notes](https://joshbuchea.com/notes)
+			- Twitter: [https://twitter.com/joshbuchea/](https://twitter.com/joshbuchea/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Kahlil Corazo
+			- Garden: [https://scrapbox.io/kahlil/](https://scrapbox.io/kahlil/)
+			- Twitter: [https://twitter.com/kcorazo](https://twitter.com/kcorazo)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Kevin Cunningham
+			- Garden: [https://garden.kevincunningham.co.uk](https://garden.kevincunningham.co.uk)
+			- Twitter: [https://www.twitter.com/dolearning](https://www.twitter.com/dolearning)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Kirill Gorbachyonok
+			- Garden: [https://github.com/japanese-goblinn/knowledge-base](https://github.com/japanese-goblinn/knowledge-base)
+			- Twitter: [https://twitter.com/japanese_goblin](https://twitter.com/japanese_goblin)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Lauro Silva
+			- Garden: [https://laurosilva.com/welcome-to-my-digital-garden/](https://laurosilva.com/welcome-to-my-digital-garden/)
+			- Twitter: [https://twitter.com/laurosilvacom](https://twitter.com/laurosilvacom)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Leon Bambrick
+			- Garden: [https://wiki.secretgeek.net/](https://wiki.secretgeek.net/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Luciano Strika
+			- Garden: [https://strikingloo.github.io/wiki/](https://strikingloo.github.io/wiki/)
+			- Twitter: [https://twitter.com/strikingloo](https://twitter.com/strikingloo)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### [[Person/Lyz]]
+			- Garden: [https://lyz-code.github.io/blue-book/](https://lyz-code.github.io/blue-book/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### M0wer
+			- Garden: [https://m0wer.github.io/memento/](https://m0wer.github.io/memento/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### [[Person/Maggie Appleton]]
+			- Garden: [https://maggieappleton.com/garden](https://maggieappleton.com/garden)
+			- Twitter: [https://twitter.com/Mappletons](https://twitter.com/Mappletons)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Magnus Aasrud
+			- Garden: [https://www.kmaasrud.com/brain/](https://www.kmaasrud.com/brain/)
+			- Twitter: [https://twitter.com/kmaasrud](https://twitter.com/kmaasrud)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Marcus Hughes
+			- Garden: [https://arbor.jmbhughes.com](https://arbor.jmbhughes.com)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Markus
+			- Garden: [https://re1.dev/wiki/](https://re1.dev/wiki/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Mathieu Dutour
+			- Garden: [https://mathieudutour.github.io/gatsby-digital-garden/](https://mathieudutour.github.io/gatsby-digital-garden/)
+			- Twitter: [https://twitter.com/mathieudutour](https://twitter.com/mathieudutour)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Matt
+			- Garden: [https://matt.roam.garden/](https://matt.roam.garden/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Max Antonucci
+			- Garden: [https://max-antonucci.gitbook.io/study-notebook/](https://max-antonucci.gitbook.io/study-notebook/)
+			- Twitter: [https://twitter.com/Maxwell_Dev](https://twitter.com/Maxwell_Dev)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Max Holzheu
+			- Garden: [https://digitalgarden.maxholzheu.com/](https://digitalgarden.maxholzheu.com/)
+			- Twitter: [https://twitter.com/maxholzheu](https://twitter.com/maxholzheu)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Max Stoiber
+			- Garden: [https://notes.mxstbr.com/](https://notes.mxstbr.com/)
+			- Twitter: [https://twitter.com/mxstbr](https://twitter.com/mxstbr)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Maxime Vaillancourt
+			- Garden: [https://maximevaillancourt.com/notes](https://maximevaillancourt.com/notes)
+			- Twitter: [https://twitter.com/vaillancourtmax](https://twitter.com/vaillancourtmax)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Michael E. Karpeles
+			- Garden: [https://mek.fyi/](https://mek.fyi/)
+			- Twitter: [https://twitter.com/mekarpeles](https://twitter.com/mekarpeles)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Mike Tannenbaum
+			- Garden: [https://tannenbaum.netlify.app/](https://tannenbaum.netlify.app/)
+			- Twitter: [https://twitter.com/theroyaltbomb](https://twitter.com/theroyaltbomb)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Milkii Brewster
+			- Garden: [https://wiki.thingsandstuff.org/Main_Page](https://wiki.thingsandstuff.org/Main_Page)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Mitch Wagner
+			- Garden: [http://mitchwagner.com/](http://mitchwagner.com/)
+			- Twitter: [https://twitter.com/mitchwagner](https://twitter.com/mitchwagner)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Nadia Eghbal
+			- Garden: [https://nadiaeghbal.com/notes/](https://nadiaeghbal.com/notes/)
+			- Twitter: [https://twitter.com/nayafia](https://twitter.com/nayafia)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Nagarjun Palavalli
+			- Garden: [https://nagarjun.co/pensees](https://nagarjun.co/pensees)
+			- Twitter: [https://twitter.com/palavalli](https://twitter.com/palavalli)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Neil Mather
+			- Garden: [https://commonplace.doubleloop.net/](https://commonplace.doubleloop.net/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Nick Trombley
+			- Garden: [https://barnsworthburning.net/](https://barnsworthburning.net/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### [[Person/Nikita Voloboev]]
+			- Garden: [https://wiki.nikitavoloboev.xyz/](https://wiki.nikitavoloboev.xyz/)
+			- Twitter: [https://twitter.com/nikitavoloboev](https://twitter.com/nikitavoloboev)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Noah Trenaman
+			- Garden: [https://blog.noahtren.com/note/3acea2e1/](https://blog.noahtren.com/note/3acea2e1/)
+			- Twitter: [https://twitter.com/noahtren](https://twitter.com/noahtren)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Oliver Newth
+			- Garden: [https://garden.n3wth.com](https://garden.n3wth.com)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Ollie Francis
+			- Garden: [https://www.notion.so/818782f2ff0f44ccbc5941e3fd4d0cd0?v=3badd8762a2f424189dc13c6f4f11539](https://www.notion.so/818782f2ff0f44ccbc5941e3fd4d0cd0?v=3badd8762a2f424189dc13c6f4f11539)
+			- Twitter: [https://twitter.com/ollie_francis](https://twitter.com/ollie_francis)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Oshyan Greene
+			- Garden: [https://garden.oshyan.com/](https://garden.oshyan.com/)
+			- Twitter: [https://twitter.com/ogreenius](https://twitter.com/ogreenius)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Paolo Gutierrez Gabriel
+			- Garden: [https://paologabriel.com](https://paologabriel.com)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Paul Batchelor
+			- Garden: [https://pbat.ch/wiki/](https://pbat.ch/wiki/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Paul Bricman
+			- Garden: [https://paulbricman.com/secondbrain/](https://paulbricman.com/secondbrain/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Paul Copplestone
+			- Garden: [https://paul.copplest.one/knowledge/](https://paul.copplest.one/knowledge/)
+			- Twitter: [https://twitter.com/kiwicopple](https://twitter.com/kiwicopple)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Paul Scanlon
+			- Garden: [https://paulie.dev/posts/](https://paulie.dev/posts/)
+			- Twitter: [https://twitter.com/PaulieScanlon](https://twitter.com/PaulieScanlon)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Pepe García
+			- Garden: [https://braindump.pepegar.com/](https://braindump.pepegar.com/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Phil Jones
+			- Garden: [http://thoughtstorms.info/view/HelloWorld](http://thoughtstorms.info/view/HelloWorld)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Piero Scaruffi
+			- Garden: [https://www.scaruffi.com/index.html](https://www.scaruffi.com/index.html)
+			- Twitter: [http://twitter.com/pscaruffi](http://twitter.com/pscaruffi)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Piotr Gaczkowski
+			- Garden: [https://garden.doomhammer.info](https://garden.doomhammer.info)
+			- Twitter: [https://twitter.com/DoomHammerNG](https://twitter.com/DoomHammerNG)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Piotr Wozniak
+			- Garden: [https://supermemo.guru/wiki/Piotr_Wozniak](https://supermemo.guru/wiki/Piotr_Wozniak)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Prasanth Karri
+			- Garden: [https://prasanthkarri.com/](https://prasanthkarri.com/)
+			- Twitter: [https://twitter.com/thisizkp](https://twitter.com/thisizkp)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Priyansh Sangule
+			- Garden: [https://abstractxan.xyz/site/home.html](https://abstractxan.xyz/site/home.html)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### purarue
+			- Garden: [https://purarue.xyz/x/](https://purarue.xyz/x/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Rahul Rajeev
+			- Garden: [https://garden.rahulrajeev.net](https://garden.rahulrajeev.net)
+			- Twitter: [https://twitter.com/rahulrajeeev](https://twitter.com/rahulrajeeev)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Raphael Sprenger
+			- Garden: [https://garden.raphaelsprenger.de/](https://garden.raphaelsprenger.de/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Rasul Kireev
+			- Garden: [https://rasulkireev.com/digital-garden/](https://rasulkireev.com/digital-garden/)
+			- Twitter: [https://twitter.com/rasulkireev](https://twitter.com/rasulkireev)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Richard Haines
+			- Garden: [https://richardhaines.dev/blog/](https://richardhaines.dev/blog/)
+			- Twitter: [https://twitter.com/studio_hungry](https://twitter.com/studio_hungry)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Rob Haisfield
+			- Garden: [https://roamresearch.com/#/app/Rob-Haisfield-Thinking-in-Public/page/XtzimCS2z](https://roamresearch.com/#/app/Rob-Haisfield-Thinking-in-Public/page/XtzimCS2z)
+			- Twitter: [https://twitter.com/RobertHaisfield](https://twitter.com/RobertHaisfield)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Rob Lanphier
+			- Garden: [https://myndmess.miraheze.org/wiki/User:RobLa](https://myndmess.miraheze.org/wiki/User:RobLa)
+			- Twitter: [https://twitter.com/robla](https://twitter.com/robla)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Roman Rey
+			- Garden: [https://roamresearch.com/#/app/digitaljungle/page/3-pt2rrKj](https://roamresearch.com/#/app/digitaljungle/page/3-pt2rrKj)
+			- Twitter: [https://twitter.com/derrey](https://twitter.com/derrey)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Rosano
+			- Garden: [https://rosano.hmm.garden](https://rosano.hmm.garden)
+			- Twitter: [https://twitter.com/rosano](https://twitter.com/rosano)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Rosie Campbell
+			- Garden: [https://notes.rosiecampbell.me/](https://notes.rosiecampbell.me/)
+			- Twitter: [https://twitter.com/RosieCampbell](https://twitter.com/RosieCampbell)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Rui Vieira
+			- Garden: [https://ruivieira.dev](https://ruivieira.dev)
+			- Twitter: [https://twitter.com/ruimvieira](https://twitter.com/ruimvieira)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Ryan Dawidjan
+			- Garden: [https://www.notion.so/ryan-dawidjan-414196ebb5204aa89f5af7ead579cae4](https://www.notion.so/ryan-dawidjan-414196ebb5204aa89f5af7ead579cae4)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Ryan Warner
+			- Garden: [https://ryan.warner.codes/notes](https://ryan.warner.codes/notes)
+			- Twitter: [https://twitter.com/RyanWarnerCodes](https://twitter.com/RyanWarnerCodes)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Salman Ansari
+			- Garden: [https://notes.salman.io/](https://notes.salman.io/)
+			- Twitter: [https://twitter.com/daretorant](https://twitter.com/daretorant)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Sam Marshall
+			- Garden: [https://notes.sjm.codes/](https://notes.sjm.codes/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Santhosh Thottingal
+			- Garden: [https://docs.thottingal.in/](https://docs.thottingal.in/)
+			- Twitter: [https://twitter.com/santhoshtr/](https://twitter.com/santhoshtr/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Santi Younger
+			- Garden: [https://notes.santiyounger.com/](https://notes.santiyounger.com/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Sanyam Kapoor
+			- Garden: [https://www.sanyamkapoor.com/kb](https://www.sanyamkapoor.com/kb)
+			- Twitter: [https://twitter.com/activatedgeek](https://twitter.com/activatedgeek)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Sarah Hibner
+			- Garden: [http://meet-me-in.space/](http://meet-me-in.space/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Serge Kazakov
+			- Garden: [https://kazaimazai.com/](https://kazaimazai.com/)
+			- Twitter: [https://x.com/kazaimazai](https://x.com/kazaimazai)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Scott Spence
+			- Garden: [https://scottspence.com/garden](https://scottspence.com/garden)
+			- Twitter: [https://twitter.com/spences10](https://twitter.com/spences10)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Shadab Zafar
+			- Garden: [https://github.com/dufferzafar/notes](https://github.com/dufferzafar/notes)
+			- Twitter: [https://twitter.com/dufferzafar](https://twitter.com/dufferzafar)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### [[Person/Shawn @swyx Wang]]
+			- Garden: [https://www.swyx.io/writing](https://www.swyx.io/writing)
+			- Twitter: [https://twitter.com/swyx](https://twitter.com/swyx)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Shreyas Minocha
+			- Garden: [https://wiki.shreyasminocha.me](https://wiki.shreyasminocha.me)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### [[Person/Simon Spati]]
+			- Garden: [https://brain.sspaeti.com](https://brain.sspaeti.com)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Soren Bjornstad
+			- Garden: [https://zettelkasten.sorenbjornstad.com/](https://zettelkasten.sorenbjornstad.com/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Sridhar Ratnakumar
+			- Garden: [https://www.srid.ca/](https://www.srid.ca/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Steve Dondley
+			- Garden: [https://steve.dondley.com/notes/](https://steve.dondley.com/notes/)
+			- Twitter: [https://twitter.com/steve_dondley](https://twitter.com/steve_dondley)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Stian Håklev
+			- Garden: [https://roamresearch.com/#/app/stian-research/page/3T1ePQfcr](https://roamresearch.com/#/app/stian-research/page/3T1ePQfcr)
+			- Twitter: [https://twitter.com/houshuang](https://twitter.com/houshuang)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Szymon Kaliski
+			- Garden: [https://szymonkaliski.com/notes/](https://szymonkaliski.com/notes/)
+			- Twitter: [https://twitter.com/szymon_k](https://twitter.com/szymon_k)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Thilo Maier
+			- Garden: [https://coding.maier.dev/notes](https://coding.maier.dev/notes)
+			- Twitter: [https://twitter.com/454de6e](https://twitter.com/454de6e)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Todd Grotenhuis
+			- Garden: [https://blog.grotenhuis.info/digital-garden/](https://blog.grotenhuis.info/digital-garden/)
+			- Twitter: [https://twitter.com/toddgrotenhuis](https://twitter.com/toddgrotenhuis)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Tom Critchlow
+			- Garden: [https://tomcritchlow.com/wiki/](https://tomcritchlow.com/wiki/)
+			- Twitter: [https://twitter.com/tomcritchlow](https://twitter.com/tomcritchlow)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Tommi Boom
+			- Garden: [https://tommi.space/jam](https://tommi.space/jam)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Ton Zĳlstra
+			- Garden: [https://www.zylstra.org/blog/wiki-frontpage/](https://www.zylstra.org/blog/wiki-frontpage/)
+			- Twitter: [https://twitter.com/ton_zylstra](https://twitter.com/ton_zylstra)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Tymon Zaniewski
+			- Garden: [http://garden.tymon-zaniewski.xyz](http://garden.tymon-zaniewski.xyz)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Visakan Veerasamy
+			- Garden: [https://roamresearch.com/#/app/visakanv-public/page/45EU_k-rI](https://roamresearch.com/#/app/visakanv-public/page/45EU_k-rI)
+			- Twitter: [https://twitter.com/visakanv](https://twitter.com/visakanv)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Vladyslav Sitalo
+			- Garden: [https://vlad.roam.garden/](https://vlad.roam.garden/)
+			- Twitter: [https://twitter.com/VladyslavSitalo](https://twitter.com/VladyslavSitalo)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Vít Baisa
+			- Garden: [https://vit.baisa.cz](https://vit.baisa.cz)
+			- Twitter: [https://twitter.com/vitbaisa](https://twitter.com/vitbaisa)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Walter Teng
+			- Garden: [https://walterteng.com/garden/](https://walterteng.com/garden/)
+			- Twitter: [https://twitter.com/davzoku](https://twitter.com/davzoku)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Wayan Jimmy
+			- Garden: [https://notebook.wayanjimmy.xyz/](https://notebook.wayanjimmy.xyz/)
+			- Twitter: [https://twitter.com/wayanjimmy](https://twitter.com/wayanjimmy)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Waylon Walker
+			- Garden: [https://waylonwalker.com/notes](https://waylonwalker.com/notes)
+			- Twitter: [https://twitter.com/_waylonwalker](https://twitter.com/_waylonwalker)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Wess Daniels
+			- Garden: [https://nurselog.online/](https://nurselog.online/)
+			- Twitter: [https://twitter.com/cwdaniels](https://twitter.com/cwdaniels)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Whoibrar
+			- Garden: [https://notes.whoibrar.com](https://notes.whoibrar.com)
+			- Twitter: [https://twitter.com/whoibrar](https://twitter.com/whoibrar)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Will Bamberg
+			- Garden: [https://www.willbamberg.com/garden/](https://www.willbamberg.com/garden/)
+			- Twitter: [https://twitter.com/willbamberg](https://twitter.com/willbamberg)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Winnie Lim
+			- Garden: [https://winnielim.org/journal/](https://winnielim.org/journal/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Xinyang YU
+			- Garden: [https://notes.yxy.ninja](https://notes.yxy.ninja)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### YaoXing Liu
+			- Garden: [https://charlesliuyx.github.io/](https://charlesliuyx.github.io/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Yenly Ma
+			- Garden: [https://til.yenly.wtf/](https://til.yenly.wtf/)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Yunus Emre
+			- Garden: [https://docs.yemreak.com/](https://docs.yemreak.com/)
+			- Twitter: [https://x.com/yemreak_](https://x.com/yemreak_)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Yusuf Parak
+			- Garden: [https://ycp.so/](https://ycp.so/)
+			- Twitter: [https://twitter.com/ycpso](https://twitter.com/ycpso)
+			- TODO import as a [[Knowledge Gardener]]
+		- ### Unsigned or collective gardens
+			- #### okmij.org
+				- Garden: [http://okmij.org/ftp/](http://okmij.org/ftp/)
+				- TODO import as a [[Knowledge Gardener]] if a person can be identified
+			- #### anagora.org
+				- Garden: [https://anagora.org/](https://anagora.org/)
+				- Twitter: [https://twitter.com/flancian](https://twitter.com/flancian)
+				- TODO import as a [[Knowledge Gardener]] if a person can be identified
+			- #### emsenn.net
+				- Garden: [https://emsenn.net/](https://emsenn.net/)
+				- TODO import as a [[Knowledge Gardener]] if a person can be identified
+			- #### lateral.wiki
+				- Garden: [https://lateral.wiki/](https://lateral.wiki/)
+				- TODO import as a [[Knowledge Gardener]] if a person can be identified
+			- #### sphygm.us
+				- Garden: [https://sphygm.us/](https://sphygm.us/)
+				- TODO import as a [[Knowledge Gardener]] if a person can be identified
+			- #### webring.xxiivv.com
+				- Garden: [https://webring.xxiivv.com/](https://webring.xxiivv.com/)
+				- TODO import as a [[Knowledge Gardener]] if a person can be identified
+	- ## Related lists
+		- [[Person/Lyz/GitHub/best-of-digital-gardens]]
+		- [Maggie Appleton's digital-gardeners](https://github.com/MaggieAppleton/digital-gardeners)
+		- [Nikita Voloboev's similar wikis](https://wiki.nikitavoloboev.xyz/other/wiki-workflow#similar-wikis-i-liked)
+		- [Richard Litt's meta-knowledge](https://github.com/RichardLitt/meta-knowledge)
