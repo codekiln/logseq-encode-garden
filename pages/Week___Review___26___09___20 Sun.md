@@ -1,0 +1,11 @@
+# Week Review [[2026-09-20 Sun]]
+	- ## About [[Knowledge Gardening]]
+		- ### Compared with [[Journaling]]
+			- When I was younger, at any one time I had only a single journal. Entries were sequential. Over time, the volumes of handwritten pages became the way I picture the passage of time. When I look upon my old journals, each volume appears as an epoch, a geological strata in the development of my life. The journals became [[Horcrux]] into which I pasted concert tickets, pressed leaves,
+			- , a geological strata representing a period of. I didn't scrapbook as much as people in my family circle did, but I did sketch and paste physical artifacts into my journals.
+			- #### How are Journaling and Knowledge Gardening similar?
+				- They bring a focused attention to the act of collecting and organizing one's thoughts and experiences.
+				- They are both a form of *sense-making* that is anchored in writing.
+				- When reading a journal or a knowledge garden, if you squint, they both seem to tell [[Stories]]. Journals are more sequential, though, and [[Knowledge Gardens]] only tell stories in the sense that
+			- #### How are Journaling and Knowledge Gardening different?
+				- Journaling is organized in a deliberately linear [[Chron/ological/Order]] order, while knowledge gardening is organized so that clusters of information that are related appear adjacent in a way that suits the type of information being stored, more like a [[Graph/Database]]. It's more about answering, *what goes where* than it is about *what happened*?

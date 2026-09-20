@@ -1,1 +1,1 @@
-alias:: Journals
+alias:: [[Journals]], [[Journaling]]
