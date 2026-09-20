@@ -1,0 +1,25 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Character
+	- In this garden, **Character** pages model a fictional person from a book, film, or other work — not a [[Logseq/Entity/Person]] hub.
+	- ## What counts as a Character
+		- A named figure whose identity is the character in a work of art, not the actor, author, or historical person who may share a name.
+		- Not this type: real-person hubs; the work itself; a term coined inside a work ([[Horcrux]]).
+	- ## Naming so neighbors sort together
+		- Nest the character under the creator and the work, so the page sits next to both when paths are sorted [[Lexicographically]].
+		- When the work is a series: `Person/<Creator>/<Type>/Series/<Series Name>/Character/<Name>`.
+		- When the work is a standalone member of its type: `Person/<Creator>/<Type>/<rest>/Character/<Name>`.
+		- Example: [[Person/J. R. R. Tolkien/Book/Series/The Lord of the Rings/Character/Aragorn]] sits with [[Person/J. R. R. Tolkien]] and [[Person/J. R. R. Tolkien/Book/Series/The Lord of the Rings]].
+	- ## Finding and deduplicating
+		- Search the character name, aliases used in the work, and the work's series path. One page per character per work-family unless the garden treats two appearances as distinct people.
+	- ## Frontmatter
+		- `logseq-entity:: [[Logseq/Entity/Person/Character]]`.
+		- `created-by::` — the work's creator when that person hub exists.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- H1 linked to a stable external page for the character (Wikipedia or equivalent).
+		- Lean **About** and **Appears in** bullets that link the work and creator.
+	- ## Examples in this garden
+		- [[Person/J. R. R. Tolkien/Book/Series/The Lord of the Rings/Character/Aragorn]]
+		- [[Person/Joanne Rowling/Book/Series/Harry Potter/Character/Harry Potter]]
+		- [[Person/Philip Pullman/Book/Series/His Dark Materials/Character/Lyra Belacqua]]

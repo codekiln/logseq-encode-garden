@@ -13,6 +13,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- **Ordered or unordered** — each specialization states which (a series is ordered; a pack is unordered).
 	- ## Specializations in this garden
 		- [[Logseq/Entity/Software/Plugin/Collection]] — curated collections of plugins for a host (LazyVim extras, VS Code Extension Packs, …).
+		- Ordered sequences of another entity type are [[Logseq/Entity/Series]], not a Collection specialization.
 	- ## When to create a new specialization
 		- Lazily. Create `X/Collection` only when there is a real instance to file under it — the pattern earns generality from use, not speculation. Candidates that may earn pages later: `Book/Collection` (a series/anthology), `Article/Collection` (a special issue), a playlist, a card deck.
 	- ## Frontmatter

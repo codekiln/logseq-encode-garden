@@ -5,8 +5,9 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- In this garden, **Article** pages model published web articles, blog posts, essays, and similar authored pieces imported as first-class reading notes.
 	- ## What counts as an Article entity
 		- A page whose primary identity is a specific authored article-like work, usually with a stable source URL, title, byline, and publication date.
-		- Article entities may live under the author, publisher, site, or existing source namespace that best matches the garden, such as `Person/<Name>/Blog/YY/MM/DD/<Title>`, `<Publication>/Article/YY/MM/<Title>`, or another established nearby pattern.
-		- Namespace labels such as `Blog`, `Article`, and `Essay` organize the page; `logseq-entity:: [[Logseq/Entity/Article]]` identifies the entity type.
+		- Article entities may live under the author, publisher, site, or existing source namespace that best matches the garden, such as `Person/<Name>/Blog/<YY>/<MM>/<slug>`, `<Publication>/Article/YY/MM/<Title>`, or another established nearby pattern.
+		- Blog posts filed as first-class reading notes use the more specific type [[Logseq/Entity/Article/Blog]].
+		- Namespace labels such as `Blog`, `Article`, and `Essay` organize the page; `logseq-entity:: [[Logseq/Entity/Article]]` identifies the generic type.
 		- Not Article entities: author hub pages, publication hub pages, software/project pages mentioned by an article, books, standards, or concept pages that synthesize ideas across sources.
 	- ## Naming and links
 		- Prefer the source title as the final page segment, with year/month/day segments when the surrounding namespace uses date-based import structure.
@@ -20,7 +21,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Prefer a person page for an individual byline, a company page for corporate authorship, and an organization page for institutional authorship.
 		- If the creator page already exists, link to the new Article entity from that creator page under the most fitting existing writing/source section.
 	- ## Frontmatter
-		- Mark instances with **`logseq-entity:: [[Logseq/Entity/Article]]`** so this type page collects backlinks to every Article entity.
+		- Mark generic instances with **`logseq-entity:: [[Logseq/Entity/Article]]`**. Blog posts use **`logseq-entity:: [[Logseq/Entity/Article/Blog]]`** instead.
 		- Set **`created-by::`** when the creator is known.
 		- Set **`date-created::`** to the publication date when known.
 		- Optional: **`readwise-link:: <URL>`** when a Readwise Reader URL is available.

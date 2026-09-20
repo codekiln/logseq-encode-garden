@@ -1,0 +1,36 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Series
+	- In this garden, **Series** pages model an ordered sequence of another entity type — a named run of works that should cluster together, and appear in intended order, when paths are sorted [[Lexicographically]].
+	- ## Combined with another entity
+		- Series is not a standalone kind of work. A page that belongs to a sequence declares both types, primary entity first: `logseq-entity:: [[Logseq/Entity/Book]], [[Logseq/Entity/Series]]`.
+		- The hub that names the sequence may declare Series alone, or Series plus the member type when the sequence is also treated as one work.
+		- Any entity type that has ordered installments can combine with Series: books, podcast episodes, talks, courses, essay runs, software version lines, and others.
+	- ## Naming — `Series` after the member type
+		- By default the `Series` segment sits **after the member type and before the instance**: `…/<Type>/Series/<Series Name>/…`.
+		- Members then share that prefix, so they cluster under the series on disk.
+		- A hub page lives at `…/<Type>/Series/<Series Name>`.
+	- ## Optional ordinal
+		- An ordinal is **optional**. Its job is memorization and identification, not a required catalog number.
+		- When the published sequence uses ordinals that terminate in *n* digits, every member of that series is zero-padded to *n* digits so lexicographic sort matches intended order.
+		- Two accepted member shapes, chosen for consistency within one series:
+			- `…/<Type>/Series/<Series Name>/<padded ordinal>/<type-specific rest>`
+			- `…/<Type>/Series/<Series Name>/<type-specific rest>/<padded ordinal> - <Title>`
+		- Type-specific rest follows the member type. For books that is often `<YY>/<Title>`. For podcast episodes that is often `<YY>/<MM> <Episode Title>`.
+	- ## When not to invent an ordinal
+		- Do not assign a podcast (or similar feed) an episode number unless the published title or feed itself uses that number, such that searching the show name plus that number reaches the episode in ordinary web results.
+		- Do not pad to a width the series does not use. A seven-member series uses `1` through `7`, not `01` through `07`, until a tenth member appears.
+	- ## Distinct from [[Logseq/Entity/Collection]]
+		- Collection is a curated set of members of one type; it may be unordered. Series is an ordered sequence combined with another entity via multiple membership.
+	- ## Finding and deduplicating
+		- Search the series title, the hub path, and distinctive member titles under `*/Series/<Series Name>`. One hub per sequence; one page per member.
+	- ## Frontmatter
+		- Members: primary type first, then Series.
+		- Hubs: `logseq-entity:: [[Logseq/Entity/Series]]`, plus the member type when the hub is also that kind of work.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Examples
+		- Book members: [[Person/Philip Pullman/Book/Series/His Dark Materials/1/95/The Golden Compass]], [[Person/Joanne Rowling/Book/Series/Harry Potter/1/97/Harry Potter and the Philosopher's Stone]].
+		- Book-shaped hub that is also one work in three volumes: [[Person/J. R. R. Tolkien/Book/Series/The Lord of the Rings]].
+		- Podcast-shaped path, only when the feed numbers episodes: `Person/<Host>/Pod/Series/<Show>/<padded ordinal>/<YY>/<MM> <Episode Title>`.
+		- Talk-shaped path for a numbered lecture run: `Person/<Speaker>/Talk/Series/<Series Name>/<padded ordinal>/<YY>/<Title>`.
+		- Essay-shaped path for a numbered blog run: `Person/<Name>/Blog/Series/<Series Name>/<padded ordinal>/<YY>/<MM>/<slug>`.

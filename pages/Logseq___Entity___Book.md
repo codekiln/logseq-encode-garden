@@ -1,7 +1,8 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
 
 - # Book
-	- **Book** pages are published works. They are usually tracked under `Person/<name>/Book/YY/<short title>`. They may be at `Book/YY/<short title>` if there are five or more sub-pages to the namespace or if the book has more than one author.
+		- **Book** pages are published works. They are usually tracked under `Person/<name>/Book/YY/<short title>`. They may be at `Book/YY/<short title>` if there are five or more sub-pages to the namespace or if the book has more than one author.
+		- A book that is also a member of a sequence is both a Book and a [[Logseq/Entity/Series]] instance. Its path then interposes `Series/<Series Name>` after `Book`, per that type page.
 	- ## Frontmatter on book pages
 		- Standard [[Logseq/Frontmatter]] rules
 			- Mark instances with **`logseq-entity:: [[Logseq/Entity/Book]]`** so this type page collects backlinks to every book entity.

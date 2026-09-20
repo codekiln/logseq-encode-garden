@@ -1,0 +1,22 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Knowledge Gardener
+	- In this garden, **Knowledge Gardener** pages model a real person who keeps a public digital garden, applied alongside [[Logseq/Entity/Person]] on the same hub page.
+	- ## What counts as a Knowledge Gardener
+		- A [[Logseq/Entity/Person]] hub for someone whose public notes, wiki, Zettelkasten, or second brain is worth finding again from this garden.
+		- Not this type: a garden or repo page (`Person/<Name>/Garden`, `Person/<Name>/GitHub/…`); a one-off article about gardens; an AI agent that only tends notes.
+	- ## Applied alongside Person
+		- The hub remains `Person/<Full Name>` and still satisfies [[Logseq/Entity/Person]].
+		- Frontmatter lists both types, Person first: `logseq-entity:: [[Logseq/Entity/Person]], [[Logseq/Entity/Person/Knowledge Gardener]]`.
+	- ## What the hub should make easy to find
+		- **Garden** — a child page or outbound link to the public garden, commonly `Person/<Name>/Garden`.
+		- **Interest areas** — a short list of topics the garden actually covers, in the gardener's own terms when those are known.
+		- Optional: the publishing stack (for example [[Obsidian]], [[QuartzMD]], [[Logseq]]) when it is part of how the garden is found.
+	- ## Finding and deduplicating
+		- Same identity rules as [[Logseq/Entity/Person]]. Do not split a gardener onto a second hub.
+		- Search also by garden URL and by distinctive garden title.
+	- ## Page shape
+		- Same lean Person hub, plus a garden pointer and interest areas. Precedent: [[Person/Maggie Appleton]], [[Person/Mischa van den Burg]], [[Person/Nikita Voloboev]], [[Person/Simon Spati]], [[Person/Devine Lu Linvega]], [[Person/Nicole van der Hoeven]], [[Person/John Mavrick]], [[Person/Lyz]].
+	- ## Examples in this garden
+		- [[Person/Chris Aldrich]]
+		- [[Person/Maggie Appleton]]

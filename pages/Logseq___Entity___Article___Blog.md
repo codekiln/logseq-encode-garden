@@ -1,0 +1,26 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Blog
+	- In this garden, **Blog** pages model a single post on a person's blog, as a more specific [[Logseq/Entity/Article]].
+	- ## What counts as a Blog entity
+		- A dated post on an author's own site or habitual blogging venue, filed under that author.
+		- Not Blog entities: magazine or newspaper articles better filed as [[Logseq/Entity/Article]]; author hubs; the blog index itself.
+	- ## Naming and links
+		- Preferred path: `Person/<Name>/Blog/<YY>/<MM>/<slug>`.
+		- `<YY>` and `<MM>` are the two-digit publication year and month. `<slug>` is the source URL slug when it is stable; otherwise a short title-case leaf.
+		- Existing pages sometimes include a day segment (`…/Blog/<YY>/<MM>/<DD>/…`). Leave those as filed unless a migration is asked for.
+		- Use the author namespace already present in the garden when it exists.
+	- ## Finding and deduplicating
+		- Search in order: exact source URL; exact title; slug under `Person/*/Blog`; byline plus distinctive phrase. Classify as existing, similar, new, or blocked.
+		- One page per post.
+	- ## Frontmatter
+		- Mark instances with **`logseq-entity:: [[Logseq/Entity/Article/Blog]]`**.
+		- Set **`created-by::`** to the author's person page.
+		- Set **`date-created::`** to the publication date when known, per [[Logseq/Date]].
+		- Optional: **`readwise-link:: <URL>`** when a Readwise Reader URL is available.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- Same as [[Logseq/Entity/Article]]: H1 title linked to the original post; **Summary**, **Notes**, **Highlights**, and **Links** as the source warrants.
+	- ## Examples in this garden
+		- [[Person/Chris Aldrich/Blog/22/06/reframing-and-simplifying-the-idea-of-how-to-keep-a-zettelkasten]]
+		- [[Person/Jeff Dickey/Blog/18/10/09/12 Factor CLI Apps]] (older path that includes a day segment)

@@ -25,3 +25,6 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
 		- LFM; first content block is typically `- # …` with the person’s name; lean sections (About, Online presence, Projects) and links to child pages as needed.
+	- ## Related types
+		- [[Logseq/Entity/Person/Knowledge Gardener]] — applied alongside this type when the person keeps a public digital garden.
+		- [[Logseq/Entity/Person/Character]] — fictional characters, not real-person hubs.

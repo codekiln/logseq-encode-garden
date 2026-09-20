@@ -9,6 +9,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Not Podcast entities: the host's person hub, a guest's person hub, a [[Logseq/Entity/Quote]] pulled from an episode, or a [[Logseq/Entity/Concept]] page that synthesizes ideas an episode discussed.
 	- ## Naming and links
 		- Episode pages live under the host's person namespace, dated: `Person/<Host>/Pod/<YY>/<MM> <Episode Title>`.
+		- An episode that is also a member of a named sequence is both a Podcast and a [[Logseq/Entity/Series]] instance. Its path then interposes `Series/<Series Name>` after `Pod`, per that type page.
 			- On disk that is `pages/Person___<Host>___Pod___<YY>___<MM> <Episode Title>.md`.
 			- `<YY>` is the two-digit year and `<MM>` the two-digit month of the episode's air date.
 		- Show hub pages are `Person/<Host>/Podcast`, with `alias::` covering the show's real title and any short form likely to be searched, for example `alias:: [[Podcast/<Show Name>]], [[<Host>/Pod <Show Name>]]`.
