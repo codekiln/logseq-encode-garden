@@ -18,6 +18,6 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## How to name instance pages
 		- Use the host's own term and mirror its module/package path where one exists. E.g. the LazyVim extras mirror their Lua module path: `LazyVim/plugins/extras/lang/<lang>`.
 	- ## Frontmatter
-		- `logseq-entity:: [[Logseq/Entity/Software/Plugin/Collection]]`. Additive — list comma-separated with any other entities the page models, primary first (see [[Logseq/Entity]]).
+		- Set `logseq-entity:: [[Logseq/Entity/Software/Plugin/Collection]]`. Additive — list comma-separated with any other entities the page models, primary first (see [[Logseq/Entity]]).
 	- ## Page shape
 		- H1: a link to the collection's upstream doc/homepage. Lean bullets: the host, what it bundles (its component plugins + tooling), and where to find them.

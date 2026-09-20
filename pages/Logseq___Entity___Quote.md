@@ -13,8 +13,8 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 			- Said by a person with no more specific source page (a tweet, an offhand remark): `Person/<Name>/Quote/<Summary>`.
 		- `<Summary>` is a short Title Case paraphrase of the quote's idea, not the quote text itself.
 	- ## Frontmatter
-		- `created-by:: [[Person/Full Name]]` for whoever said or wrote the quote.
-		- `logseq-entity:: [[Logseq/Entity/Quote]]`.
+		- Set `created-by:: [[Person/Full Name]]` for whoever said or wrote the quote.
+		- Set `logseq-entity:: [[Logseq/Entity/Quote]]`.
 	- ## Page shape
 		- Frontmatter, then a single blockquote bullet with the quote text — no heading.
 	- ## Popping a quote out and embedding it back

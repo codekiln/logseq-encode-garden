@@ -1,0 +1,42 @@
+see-also:: [[Logseq/Entity/Time/Year]]
+
+- # Year Backfill Todos
+	- Pages whose `date-created::` already resolves to a specific year, decade, or century but do not yet carry `logseq-created-time-year::`, per the precedent recorded on [[Logseq/Entity/Time/Year]].
+	- This is a first pass over pages whose `date-created::` value is already year-only (or the older grouped form) — not yet a full sweep of every page carrying a day- or month-precision date.
+	- ## 1600s
+		- TODO add `logseq-created-time-year:: [[16/4/9]]` to [[Art/Work/The Sudarium of Saint Veronica]] — engraved 1649; also this type's running example, so backfilling it first keeps the example real.
+	- ## 1700s
+		- TODO add `logseq-created-time-year:: [[17/9/7]]` to [[Person/Johann Goethe/Poem/The Sorcerer's Apprentice]] — published 1797.
+	- ## 1910s
+		- TODO add `logseq-created-time-year:: [[19/1/8]]` to [[Book/The Elements of Style]] — published 1918.
+	- ## 1920s
+		- TODO add `logseq-created-time-year:: [[19/2/2]]` to [[Book/Ulysses]] — published 1922.
+	- ## 1930s
+		- TODO add `logseq-created-time-year:: [[19/3/3]]` to [[Person/Hermann Broch/Essay/33/Notes on the Problem of Kitsch]] — published 1933.
+		- TODO add `logseq-created-time-year:: [[19/3/5]]` to [[Person/Martin Heidegger/Essay/35/The Origin of the Work of Art]] — published 1935.
+		- TODO add `logseq-created-time-year:: [[19/3/5]]` to [[Person/Walter Benjamin/Essay/35/The Work of Art in the Age of Mechanical Reproduction]] — published 1935.
+	- ## 1950s
+		- TODO add `logseq-created-time-year:: [[19/5/4]]` to [[Person/J. R. R. Tolkien/Book/Series/The Lord of the Rings]] — the trilogy hub; first volume published 1954.
+		- TODO add `logseq-created-time-year:: [[19/5/4]]` to [[Person/J. R. R. Tolkien/Book/Series/The Lord of the Rings/1/54/The Fellowship of the Ring]] — published 1954.
+		- TODO add `logseq-created-time-year:: [[19/5/4]]` to [[Person/J. R. R. Tolkien/Book/Series/The Lord of the Rings/2/54/The Two Towers]] — published 1954.
+		- TODO add `logseq-created-time-year:: [[19/5/5]]` to [[Person/J. R. R. Tolkien/Book/Series/The Lord of the Rings/3/55/The Return of the King]] — published 1955.
+	- ## 1960s
+		- TODO add `logseq-created-time-year:: [[19/6/3]]` to [[Person/Jacques Derrida/Essay/63/Cogito and the History of Madness]] — published 1963.
+		- TODO add `logseq-created-time-year:: [[19/6/5]]` to [[Book/The Source]] — published 1965.
+	- ## 1970s
+		- TODO add `logseq-created-time-year:: [[19/7/5]]` to [[Person/Buckminster Fuller/Book/75/Synergetics]] — published 1975.
+		- TODO add `logseq-created-time-year:: [[19/7/9]]` to [[Person/Douglas Hofstadter/Book/79/Gödel, Escher, Bach]] — published 1979.
+	- ## 1980s
+		- TODO add `logseq-created-time-year:: [[19/8/9]]` to [[Book/The Cuckoo's Egg]] — published 1989.
+	- ## 1990s
+		- TODO add `logseq-created-time-year:: [[19/9/1]]` to [[Book/The Art of Raising a Puppy]] — published 1991.
+		- TODO add `logseq-created-time-year:: [[19/9/4]]` to [[Book/Clear and Simple as the Truth]] — published 1994.
+		- TODO add `logseq-created-time-year:: [[19/9/5]]` to [[Person/Philip Pullman/Book/Series/His Dark Materials/Concept/Daemon]] — concept page nested under the series; mirrors the series' 1995 start.
+		- TODO add `logseq-created-time-year:: [[19/9/5]]` to [[Person/Philip Pullman/Book/Series/His Dark Materials]] — the trilogy hub; first volume published 1995.
+		- TODO add `logseq-created-time-year:: [[19/9/5]]` to [[Person/Philip Pullman/Book/Series/His Dark Materials/1/95/The Golden Compass]] — published 1995.
+		- TODO add `logseq-created-time-year:: [[19/9/7]]` to [[Person/Joanne Rowling/Book/Series/Harry Potter]] — the series hub; first volume published 1997.
+		- TODO add `logseq-created-time-year:: [[19/9/7]]` to [[Person/Joanne Rowling/Book/Series/Harry Potter/1/97/Harry Potter and the Philosopher's Stone]] — published 1997.
+		- TODO add `logseq-created-time-year:: [[19/9/7]]` to [[Person/Philip Pullman/Book/Series/His Dark Materials/2/97/The Subtle Knife]] — published 1997.
+		- TODO add `logseq-created-time-year:: [[19/9/8]]` to [[Person/Joanne Rowling/Book/Series/Harry Potter/2/98/Harry Potter and the Chamber of Secrets]] — published 1998.
+		- TODO add `logseq-created-time-year:: [[19/9/8]]` to [[Book/Understanding by Design]] — published 1998.
+		- TODO add `logseq-created-time-year:: [[19/9/9]]` to [[Person/Joanne Rowling/Book/Series/Harry Potter/3/99/Harry Potter and the Prisoner of Azkaban]] — published 1999.

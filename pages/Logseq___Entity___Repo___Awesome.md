@@ -12,8 +12,9 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Strong signals: repo name or README follows the awesome-list convention; primary value is link curation and pruning, not shipping a library or app; community treats it as the canonical index for a topic.
 		- Not this type: a normal library or app repo (use [[Logseq/Entity/Software/Project]]); a host-specific plugin bundle (use [[Logseq/Entity/Software/Plugin/Collection]]).
 	- ## Frontmatter
-		- `logseq-entity:: [[Logseq/Entity/Repo/Awesome]]`.
+		- Set `logseq-entity:: [[Logseq/Entity/Repo/Awesome]]`.
 		- `created-by::` — list maintainer when known.
 		- `date-created::` — repository creation date on the host, not the import date.
+		- Optional: `logseq-created-time-year::` linking to the matching [[Logseq/Entity/Time/Year]] instance.
 	- ## Page shape
 		- Same as [[Logseq/Entity/Repo]]: linked H1 to the repo, [[GitHub/Star]] when available, short bullets on topic and why the list matters in this graph.

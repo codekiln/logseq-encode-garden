@@ -17,6 +17,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Mark instances with **`logseq-entity:: [[Logseq/Entity/Article/Blog]]`**.
 		- Set **`created-by::`** to the author's person page.
 		- Set **`date-created::`** to the publication date when known, per [[Logseq/Date]].
+		- Optional: **`logseq-created-time-year::`** linking to the matching [[Logseq/Entity/Time/Year]] instance; see that page for how it differs from `date-created::`.
 		- Optional: **`readwise-link:: <URL>`** when a Readwise Reader URL is available.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape

@@ -10,7 +10,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## How to name instance pages
 		- Name the collection for its curating theme, nesting under an existing hub where one fits, e.g. [[Design/Good/Web]]. The reserved trailing `/Collection` marker is not required on instance names when the theme already reads as a collection; see [[Logseq/Entity/Collection]].
 	- ## Frontmatter
-		- `logseq-entity:: [[Logseq/Entity/Website/Collection]]`. Additive — list comma-separated with any other entities, primary first (see [[Logseq/Entity]]).
+		- Set `logseq-entity:: [[Logseq/Entity/Website/Collection]]`. Additive — list comma-separated with any other entities, primary first (see [[Logseq/Entity]]).
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
 		- Lean: a line on what the collection curates and by what criterion, then a member list where each [[Logseq/Entity/Website]] gets a one-line note on why it belongs.

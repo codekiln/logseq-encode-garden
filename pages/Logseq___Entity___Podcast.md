@@ -24,6 +24,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Mark new instances with **`logseq-entity:: [[Logseq/Entity/Podcast]]`** so this type page collects backlinks to every Podcast entity.
 		- Set **`created-by::`** to the host.
 		- Set **`date-created::`** to the air date when known.
+		- Optional: **`logseq-created-time-year::`** linking to the matching [[Logseq/Entity/Time/Year]] instance; see that page for how it differs from `date-created::`.
 		- **Never add, remove, or edit a `tags::` line on an existing page.** Older episode pages carry assorted `tags::` values; those are the author's and stay as they are.
 	- ## Page shape
 		- Logseq Flavored Markdown.

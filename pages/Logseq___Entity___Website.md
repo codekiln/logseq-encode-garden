@@ -15,9 +15,10 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Finding and deduplicating
 		- Check in this order: `Website/<Name>`, `Creator/Website/<Name>`, aliases, the maker's namespace, and body mentions of the URL. Classify as: existing, similar, new, or blocked.
 	- ## Frontmatter
-		- `logseq-entity:: [[Logseq/Entity/Website]]` marks a page as a website instance. Additive — list comma-separated with any other entities, primary first (see [[Logseq/Entity]]).
+		- Set `logseq-entity:: [[Logseq/Entity/Website]]` to mark a page as a website instance. Additive — list comma-separated with any other entities, primary first (see [[Logseq/Entity]]).
 		- `created-by::` — link to the studio, company, or person that made the site, when tracked in the garden.
 		- `date-created::` — when the site launched or was published, not when the page was added.
+		- Optional: `logseq-created-time-year::` linking to the matching [[Logseq/Entity/Time/Year]] instance.
 		- `via::` records how the site was discovered (e.g. [[Awwwards]]); `see-also::` links genuinely related pages such as the collection it belongs to.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape

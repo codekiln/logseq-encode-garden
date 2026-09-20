@@ -6,4 +6,5 @@
 	- {{embed [[Logseq/Frontmatter/see-also]]}}
 	- {{embed [[Logseq/Frontmatter/via]]}}
 	- {{embed [[Logseq/Frontmatter/date-created]]}}
+	- {{embed [[Logseq/Frontmatter/logseq-created-time-year]]}}
 	- {{embed [[Logseq/Frontmatter/github-link]]}}

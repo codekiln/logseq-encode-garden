@@ -1,0 +1,34 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Year
+	- In this garden, **Year** pages model a period of calendar time named by digits: a single year, or — when the garden wants to attach content to the whole span — its decade or century.
+	- ## Granularities
+		- **Year** — one calendar year; the primary sense of this type.
+		- **Decade** — the ten years sharing every digit but the last.
+		- **Century** — the hundred years sharing every digit but the last two.
+		- Not this type: a specific day or month (those stay plain date wikilinks per [[Logseq/Date]]), or a named historical era without a numeral (e.g. "the Renaissance") — model that as [[Logseq/Entity/Concept]] instead.
+	- ## Naming — digit groups, most significant first
+		- A year's canonical page splits its four digits into groups, most significant first: `<century>/<decade digit>/<year digit>`, e.g. [[19/5/9]] for 1959.
+		- Its decade page drops the last segment: [[19/5]] for the 1950s. Its century page drops the last two: [[19]] for 1900-1999.
+		- This is the same grouping [[Logseq/Date]] already uses for older dates (e.g. [[17/4/9]] for 1749); this entity extends it to every year, so all three granularities cluster together and sort in true chronological order regardless of era.
+	- ## Alias — the plain numeral
+		- Every instance takes the plain numeral as its `alias::`: `1959` for the year, `1950s` for the decade, `1900-1999` for the century.
+		- [[Logseq/Date]] governs which literal text to type inline for a date value (e.g. prefer typing `[[1959]]` for a post-1900 year); the alias resolves that text to the same canonical page either way.
+	- ## Finding and deduplicating
+		- Derive the digit-group path from the numeral and check whether that page already exists before creating it.
+		- A decade or century page is created only when something wants to attach to that whole span — a year does not require its decade or century parent to exist first.
+	- ## Frontmatter
+		- Set `logseq-entity:: [[Logseq/Entity/Time/Year]]` on year, decade, and century pages alike.
+		- `alias::` carries the plain numeral, per above.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- Frontmatter alone (`logseq-entity::` and `alias::`) is a complete instance.
+		- Body content is optional and, when present, covers what makes that particular year, decade, or century notable.
+	- ## Relationship to [[Logseq/Date]]
+		- [[Logseq/Date]] governs how date values appear as wikilink text. This entity models the pages that text can point to, including the decade and century granularities Logseq/Date does not itself define a wikilink form for.
+	- ## `logseq-created-time-year::` — the cross-entity creation-year link
+		- Any entity in the garden that has a known creation year — a book, a movie, a podcast episode, an essay, a musical composition, a work of art, and so on — may carry `logseq-created-time-year::` pointing at the year, decade, or century instance that matches what is actually known.
+		- This is separate from that entity's own `date-created::`, which may hold a more precise value (or, on older pages, may already be this same grouped link). Setting both is normal; `logseq-created-time-year::` is what makes the creation year a queryable, backlinked relationship regardless of which entity type carries it.
+		- Full property definition: [[Logseq/Frontmatter/logseq-created-time-year]]. Pages that still need this link backfilled are tracked at [[Logseq/Entity/Time/Year/Todos]].
+	- ## Examples in this garden
+		- [[16]] (1600s), [[16/4]] (1640s), [[16/4/9]] (1649) — the year referenced from [[Art/Work/The Sudarium of Saint Veronica]]'s `date-created::`.

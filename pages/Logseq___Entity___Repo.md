@@ -10,7 +10,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Default path when a maintainer is known: `Person/<Full Name>/GitHub/<repo-name>` (see [[Logseq/Entity/Person]] → SCM projects).
 		- Root-level or other namespaces are fine when the garden already treats the repo as a first-class name (same spirit as [[Logseq/Entity/Software/Project]] placement rules).
 	- ## Frontmatter
-		- `logseq-entity:: [[Logseq/Entity/Repo]]` or a more specific `Logseq/Entity/Repo/<Subtype>` link.
+		- Set `logseq-entity:: [[Logseq/Entity/Repo]]`, or a more specific `Logseq/Entity/Repo/<Subtype>` link.
 		- `created-by::` — maintainer [[Logseq/Entity/Person]] (or company) when clear.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape

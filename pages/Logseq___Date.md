@@ -9,7 +9,7 @@
 		- **Day (slash form, acceptable)** — `[[YYYY/MM/DD]]`, e.g. `[[2024/02/02]]`. Used historically and still common, but does not link to the journal page; prefer the dash-with-weekday form for new writes.
 		- **Month** — `[[YYYY/MM]]`, e.g. `[[2026/05]]`.
 		- **Year** — `[[YYYY]]`, e.g. `[[1979]]`.
-		- **Older Dates Grouped by Century and Decade** - [[17/40/9]] for 1749 or [[18/30/2]] for 1832. Useful for older dates so as to cluster them together by decade. Maybe eventually decades or centuries will be named or have themes for mnemonic purposes.
+		- **Older Dates Grouped by Century and Decade** - [[17/4/9]] for 1749 or [[18/3/2]] for 1832. Useful for older dates so as to cluster them together by decade. Maybe eventually decades or centuries will be named or have themes for mnemonic purposes. See [[Logseq/Entity/Time/Year]] for the full entity that models this grouping.
 	- ## Rules
 		- Most of the time, more precision is preferred if factually confirmed, but not always.
 			- For the dates that correspond to when a durable work like a [[Logseq/Entity/Book]] was published, it's probably better use use a longer time horizon representation like `[[YYYY]]`. There's a reason copyright pages don't list "Jan 29, 1946, 3:36 PM Trieste"

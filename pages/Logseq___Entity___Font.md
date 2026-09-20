@@ -15,8 +15,8 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Finding and deduplicating
 		- Check in this order: `Creator/Font/<Name>` page, `Font/<Name>` fallback, aliases, font-family string matches in terminal or editor config pages. Classify as: existing, similar, new, or blocked.
 	- ## Frontmatter
-		- `logseq-entity:: [[Logseq/Entity/Font]]` marks a page as a font instance.
-		- `is-nerd-font:: true` — include when the font is patched with Nerd Font icon glyphs; see also [[Font/Nerd Font]].
+		- Set `logseq-entity:: [[Logseq/Entity/Font]]` to mark a page as a font instance.
+		- Set `is-nerd-font:: true` when the font is patched with Nerd Font icon glyphs; see also [[Font/Nerd Font]].
 		- `created-by::` — optional; link to the person or company page when the creator is tracked in the garden.
 		- `see-also::` — link to [[Font/Nerd Font]] for nerd font variants; related font or terminal pages.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].

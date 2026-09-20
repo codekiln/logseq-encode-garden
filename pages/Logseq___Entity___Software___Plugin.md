@@ -20,7 +20,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Check in this order: exact `<Host>/Plugin/<Name>` or `<Host>/Extension/<Name>` page, aliases, page-body mentions of the same repo URL or marketplace ID. Classify as: existing, similar, new, or blocked.
 	- ## Frontmatter
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
-		- `logseq-entity:: [[Logseq/Entity/Software/Plugin]]` marks a page as an instance of this type (use this exact link regardless of whether the host calls it a plugin or extension).
+		- Set `logseq-entity:: [[Logseq/Entity/Software/Plugin]]` to mark a page as an instance of this type (use this exact link regardless of whether the host calls it a plugin or extension).
 		- `created-by::` — optional; link to a person or company page when the creator entity is clear and in the graph.
 		- `see-also::` — optional; sibling plugins or the host app page when the tie is strong.
 	- ## Page shape

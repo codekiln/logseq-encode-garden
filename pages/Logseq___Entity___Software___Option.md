@@ -9,7 +9,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Instances use the owning software's namespace in the shape `{software}/Option/{option-name}`.
 		- The owning software and exact option name together identify an instance.
 	- ## Frontmatter and page shape
-		- `logseq-entity:: [[Logseq/Entity/Software/Option]]` marks an instance.
+		- Set `logseq-entity:: [[Logseq/Entity/Software/Option]]` to mark an instance.
 		- The page describes the option's behavior, scope, accepted values, and commands or configuration syntax for setting and inspecting it.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Examples in this garden
