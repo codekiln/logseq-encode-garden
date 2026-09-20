@@ -11,5 +11,7 @@ date-created:: [[1995]]
 		- [[Person/Philip Pullman/Book/Series/His Dark Materials/3/00/The Amber Spyglass]]
 	- ## Characters
 		- [[Person/Philip Pullman/Book/Series/His Dark Materials/Character/Lyra Belacqua]]
+	- ## Concepts
+		- [[Person/Philip Pullman/Book/Series/His Dark Materials/Concept/Pantalaimon]]
 	- ## Links
 		- [Wikipedia](https://en.wikipedia.org/wiki/His_Dark_Materials)
