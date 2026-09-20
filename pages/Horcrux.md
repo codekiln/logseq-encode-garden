@@ -11,3 +11,4 @@ alias:: [[Horcruxes]]
 		- I personally use the term Horcrux to refer to a thing that has an order of magnitude more significance to one person than to most other people because that person has done something to make that object a projection to them of their own identity. This is an uncommon interpretation of the word *Horcrux*.
 		- For example, while the symbol of The Cross is highly related to Jesus Christ, I wouldn't call the cross a *Horcrux*. Christ didn't crucify himself to put his essence into the cross for immortality.
 		- In another example, I wouldn't call an [Olmec figurine](https://en.wikipedia.org/wiki/Olmec_figurine) a *Horcrux*. In the way I think about Horcruxes, they are related to the identity of a particular individual. They are like [[Person/Philip Pullman/Book/Series/His Dark Materials/Concept/Pantalaimon]].
+		-
