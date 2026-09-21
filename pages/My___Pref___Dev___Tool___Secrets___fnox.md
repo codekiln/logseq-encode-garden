@@ -1,0 +1,5 @@
+- I prefer to use [[fnox]] from [[Person/Jeff Dickey]], creator of [[mise]] for connecting my [[git/repo]] to my [[Secret/Manager]].
+	- In settings that require a hardened setup, I prefer to store secrets in [[AWS/Secrets Manager]], locked down with [[AWS/IAM]], then reference them with [[fnox]].  My preferences related to that in [[My/Pref/Dev/Tool/Secrets/AWS Secrets Manager]].
+	- In settings where the stakes are lower and/or the product is nascent, I tolerate the use of [[1Password]] for secrets storage. This has a big drawback: there are very few plans of 1Password that provide access to only certain secrets at a time.
+		- For example, 1Password enterprise does enable admins to create service users, but your enterprise may or may not have worked out the operational complexity of that process to the point where those service users are a practical option for your team, given the need to do regular [[Secret/Rotation]].
+		- As a result, in practice, using 1Password means using the 1Password CLI, whose level of access is the Vault, a big surface are and a violation of the [[Law/Demeter]]

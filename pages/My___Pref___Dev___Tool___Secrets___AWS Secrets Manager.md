@@ -1,0 +1,5 @@
+- When using [[AWS/Secrets Manager]], a single secrets manager secret can either store one secret or a [[json]] blob which contains multiple secrets.
+	- ## Honoring [[My/Principle/Simplify]]
+		- It might be easier at the beginning of an application's history to have a single [[AWS/Secrets Manager/Secret/KeyValue]] for a specific environment tier of an application, for example, `dev`, `stage`, and `prod`. That way you might have three [[AWS/Secrets Manager/Secret]]s for each application, each with 5-10 secrets stored in their json. Then the [[AWS/IAM]] roles can be set up per environment. This is less complex than having many atomic [[AWS/Secrets Manager/Secret/SecretString]]
+	- ## Honoring [[My/Principle/Make the Right Thing Easy and the Wrong Thing Hard]]
+		- Keep in mind that it should be as easy as possible to do [[Secret/Rotation]], preferably on an automatic basis.
