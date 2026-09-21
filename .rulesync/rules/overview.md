@@ -46,6 +46,7 @@ This repository is a personal Logseq knowledge graph (not a software project): p
 - Questions (`/Q/` pages) → **logseq-question**
 - Weekly page setup → **logseq-update-week** command
 - Journal formatting (change log + editorial titles) → load **[[Logseq/Journal]]** (graph page)
+- Working today's journal requests under a Ghost Gardener heading → **ghost-gardener**
 - Git staging/commits → **git-conventions**; end-of-session checkout → **landing-the-plane**
 - Rulesync usage / authoring skills → **rulesync**, **rulesync-create-skill**
 - Visitor onboarding / act as codekiln's agent and answer a visitor's questions about codekiln from the garden → **ask-my-agent-anything-about-me**
