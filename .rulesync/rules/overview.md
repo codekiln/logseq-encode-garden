@@ -44,7 +44,9 @@ This repository is a personal Logseq knowledge graph (not a software project): p
 - Flashcards / Keyshort cards → **logseq-flashcard**
 - Favorite-driven flashcard decks (generated from :favorites, kept in sync) → **logseq-flashcard-favorite**
 - Questions (`/Q/` pages) → **logseq-question**
-- Weekly page setup → **logseq-update-week** command
+- Weekly page setup (week, todos and day pages) → **logseq-update-week**
+- Today I Learned items on the day page → **logseq-til**
+- GitHub / GitLab repo links off the `Person/<Name>/<SCM>/<Project>` form → **logseq-normalize-scm-project-links**
 - Journal formatting (change log + editorial titles) → load **[[Logseq/Journal]]** (graph page)
 - Working today's journal requests under a Ghost Gardener heading → **ghost-gardener**
 - Git staging/commits → **git-conventions**; end-of-session checkout → **landing-the-plane**
