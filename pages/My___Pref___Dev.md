@@ -5,6 +5,8 @@
 		- {{embed [[My/Pref/Dev/mise]]}}
 	- ## Use Preferred Dev Tools
 		- {{embed [[My/Pref/Dev/Tool]]}}
+	- ## Use Best Practices for Secrets Management
+		- {{embed [[My/Pref/Dev/Tool/Secrets/fnox]]}}
 	- ## Dotfiles
 		-
 -
