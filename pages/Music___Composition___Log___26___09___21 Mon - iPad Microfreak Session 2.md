@@ -1,0 +1,17 @@
+# Making Music [[2026-09-21 Mon]]
+	- One of my key [[Goals]] / [[Challenge]]s for this fall is to perform at least once on [[Synth]] in public twice.
+	- [[2026-09-19 Sat]] I did figure out how to connect my [[iPad]] to my [[Microfreak]] via my [[Zoom H5]], but I didn't really make that much music with it. Last night I was able to mess around with this some more before bed. When I got home, I immediately set up my desk so it would be ready for making music.
+	- ## [[What went well?]]
+		- I actually did get [[Music/al/Activation]]. I had probably 10-15 good zones where I was "into it" and feeling like there was some extract of musical tincture or essence that I wanted to share.
+	- ## [[Where did I notice friction?]] [[Where did I notice resistance?]]
+		- ### Reliance on Batteries
+			- The weird thing is that it depends upon powering the [[Zoom H5]] with two [[Battery/AA]] for powering the audio interface. I use [[Battery/Rechargeable]], and I've had issues in the past with the Zoom running out of batteries, so that always leaves me feeling like I don't have quite as much confidence in the setup. I think I just need more experience with this, though, to push past my reservations. It actually worked fine for an hour. I did notice that the Zoom's battery gauge was down to a single bar at the end.
+		- ### Difficult to easily record full session audio and MIDI
+			- In [[Zoom H5/Mode/Audio Interface/iPad]] mode, there's no way to record to [[Zoom H5/SD Card]]. According to AI, subsequent models have made this possible, though I haven't figured out whether this is possible. I suppose it's possible that there's a firmware update for my model that could make this possible.
+			- There is a [[Zoom H5/Port/Line Out]] in addition to [[Zoom H5/Port/Headphone]], so in theory, I could have line out going to the [[Macbook/Port/Headphone]] or [[iPhone/Port/Lightning]] with an [[Lightning Headphones Adapter]] and record that way. But one of the tactics or principles I'm experimenting with is to decrease the number of cables and devices needed for a session, so that the friction for performance is decreased.
+			- I haven't decided yet whether the inability to record full session audio is a bug or a feature.
+			- #### Feature - not recording leans into West Coast synth aesthetic
+				- Part of me thinks that having recording excluded from setup lowers the stakes, which decreases the friction. I could lean into the [[Synth/Aesthetic/Coast/West]] and assume that each session starts from scratch. For decades, I practiced the piano without any recording equipment, and that resulted in an excellent relationship to music. That's not to disparage the opportunities of recording to oneself and listening to it later; it's a great technique for improving one's objectivity and getting some distance. But it might the case that being less precious with capturing my music in storage might lead to more of a perennial "beginner's mind." Time is a river; I should be in the river.
+			- #### Bug - recording and publishing regularly builds an artistic siphon
+				- Consistency is an important quality in a maker and an artist. I want to be in the habit of putting work out there. I want to create a stable siphon that pulls art experiences out of me and shares them with a community that exists in a space of mutual co-discovery.
+				- At this point in time, I would prefer to have my sessions recorded and then published, if only so I can more easily keep track of how consistent I've been in my artistic practice.
