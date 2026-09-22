@@ -34,11 +34,10 @@ codexcli:
 ## Reference index
 
 - [references/card-entity-and-factor-out.md](./references/card-entity-and-factor-out.md) — first-class `/Card/` entity pages, `[[Logseq/Entity/Card]]`, `[[Card]]` marker, and page embed replacement.
-- [references/keyshort-audit-and-update.md](./references/keyshort-audit-and-update.md) — discover Keyshort files, check ancestry, fix missing review markers, report (replaces ad-hoc runs of `logseq-manage-shortcut-flashcards`).
+- [references/keyshort-audit-and-update.md](./references/keyshort-audit-and-update.md) — discover Keyshort files, check ancestry, fix missing review markers, report.
 - [references/create-flashcard-page.md](./references/create-flashcard-page.md) — legacy general card page creation (vim-style nested Keyshort, dedup, SRS lines, journal).
 - [references/cards-macro-and-query-language.md](./references/cards-macro-and-query-language.md) — `{{cards}}` vs `{{query}}`, simple-query operators, page vs block filter rules, advanced-query relationship, official doc links.
 
 ## Related commands
 
 - `logseq-create-shortcut` — create/update Keyshort pages with review cards.
-- `logseq-manage-shortcut-flashcards` — legacy command name; behavior lives in this skill’s Keyshort reference.

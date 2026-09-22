@@ -106,4 +106,4 @@ Use the prefix that matches the type: `rule:` for rules, `command:` for commands
 - skill: `logseq-flashcard` – Flashcard creation and Keyshort maintenance (includes this command’s shape)
 - rule: `logseq-core` – File naming and link conventions (detail: skill `logseq-lfm`)
 - rule: `logseq-core` – LFM formatting rules (advanced detail: skill `logseq-lfm`)
-- command: `logseq-manage-shortcut-flashcards` – Audit and maintain Keyshort pages
+- skill: `logseq-flashcard` – Audit and maintain Keyshort pages (`references/keyshort-audit-and-update.md`)
