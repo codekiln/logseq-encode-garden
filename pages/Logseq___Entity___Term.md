@@ -22,6 +22,8 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Page shape
 		- Use Logseq Flavored Markdown.
 		- Keep the body **lean**: H1 + a few bullets, or a single short definition block. Link out to **concept** pages when the idea deserves a full explanation.
+	- ## Combined with add-on types
+		- Term stays first in `logseq-entity::`, and an add-on type follows it: [[Logseq/Entity/Term/Acronym]] when the page name is an acronym, [[Logseq/Entity/Field of Study]] when the term names a discipline.
 	- ## Legacy and migration
 		- Do **not** bulk-add **`logseq-entity::`** to every legacy term-tagged page unless the author requests a backfill pass.
 		- New term-like pages should declare **`logseq-entity::`** to **this** page alongside established tag patterns when those patterns apply.

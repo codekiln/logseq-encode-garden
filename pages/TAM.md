@@ -1,5 +1,5 @@
 alias:: [[Total Addressable Market]]
-logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Abbreviation]]
+logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Term/Acronym]]
 
 - # Total Addressable Market (TAM)
 	- ## Overview

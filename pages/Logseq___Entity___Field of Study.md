@@ -1,0 +1,21 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Field of Study
+	- In this garden, **Field of Study** pages model a domain of human expertise: a discipline with its own practitioners, body of knowledge, vocabulary and methods.
+	- ## Examples in this garden
+		- [[Password/Manage/ment]] — a term that is also a field
+		- [[cybernetics]] — a concept that is also a field
+	- ## What counts as a Field of Study
+		- A domain people study, practice, teach and publish in: cybernetics, password management, digital forensics, marketing. The test is whether someone can be an expert in it.
+		- A single technique or tool inside a field, a term that names a thing rather than a discipline, and an organization or standard that a field produces each take their own type.
+	- ## Naming
+		- Nothing in the page name marks the type. The page sits wherever its topic puts it, at the root like [[cybernetics]] or inside a namespace like [[Password/Manage/ment]], and the type shows only in `logseq-entity::`.
+	- ## Standalone or combined
+		- Field of Study stands on its own or joins another type. When combined, the type that shapes the page comes first and Field of Study follows: `logseq-entity:: [[Logseq/Entity/Term]], [[Logseq/Entity/Field of Study]]` on a glossary-sized page, `logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Field of Study]]` on a full explanation.
+	- ## Frontmatter
+		- `logseq-entity:: [[Logseq/Entity/Field of Study]]`, alone or after the primary type.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- The primary type sets the shape. A page that declares Field of Study alone reads like a [[Logseq/Entity/Concept]]: what the field studies, where it came from, its key ideas, and its neighboring fields.
+	- ## Finding and deduplicating
+		- Search the field's name and its common alternates (the *-ics*, *-ology* and "X management" forms), and pages that describe a discipline without declaring the type. One page per field.

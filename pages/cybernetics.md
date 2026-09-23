@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Concept]]
+logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Field of Study]]
 
 - # Cybernetics
 	- ## Overview

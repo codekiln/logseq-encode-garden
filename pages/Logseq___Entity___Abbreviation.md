@@ -13,6 +13,7 @@ see-also:: [[Logseq/Entity/Term]]
 		- Not an abbreviation entity: pages where the full phrase is the primary title (use [[Logseq/Entity/Term]] directly).
 	- ## Relationship to Term
 		- Abbreviation is a specialization of [[Logseq/Entity/Term]]. Pages that are abbreviation entities should also declare [[Logseq/Entity/Term]] as a secondary entity type.
+		- [[Logseq/Entity/Term/Acronym]] is the add-on type for a term or concept page whose name is an acronym, declared after the primary type.
 	- ## Frontmatter
 		- Set **`logseq-entity::`** to list this entity-type page (primary) then [[Logseq/Entity/Term]] (secondary): `logseq-entity:: [[Logseq/Entity/Abbreviation]], [[Logseq/Entity/Term]]`.
 		- Use **`alias::`** for the expanded full phrase when it is a useful lookup surface.
