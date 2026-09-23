@@ -1,0 +1,42 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+alias:: [[AI Model Page]], [[Model Page]]
+
+- # AI Model
+	- In this garden, **AI Model** pages model one released version of a machine learning model — [[Anthropic/Model/Claude/Sonnet/4.5]], [[OpenAI/Model/GPT/4/1]] — named under the provider that ships it.
+	- ## What counts as an instance
+		- A **specific version** of a model, with its own release, its own model code, and its own benchmarks.
+		- Not an instance: a **family**. [[Anthropic/Model/Claude]] and `GPT-4` name lineages, not releases; they are hub pages that list versions rather than document one. Always document the version.
+		- Not an instance: a **kind** of model. [[AI/Model/Reasoning]], [[AI/Model/World]], [[AI/Model/Open Weight]] and their siblings under `AI/Model/` classify models; they are [[Logseq/Entity/Term]] or [[Logseq/Entity/Concept]] pages that instances link to.
+		- Not an instance: a product built on a model. A chat app, an agent or an IDE is its own entity; it links to the model it runs on.
+	- ## Naming and links
+		- Pages live under the **provider's** namespace, with the version expressed as further `/` segments: `[[OpenAI/Model/GPT/4/1]]` for GPT-4.1, `[[Anthropic/Model/Claude/3.5/Sonnet]]` for Claude 3.5 Sonnet.
+		- Provider namespaces already in use: `[[OpenAI/Model/…]]`, `[[Anthropic/Model/…]]`, `[[Google/AI/Model/…]]`, `[[DeepSeek/Model/…]]`, `[[xAI/Model/…]]`. A new provider takes the same shape.
+		- Where the version segments fall varies by how the provider names its own releases — Anthropic has moved the tier before and after the number across generations. Follow the sibling pages of that provider rather than imposing one order.
+		- **Always link the full namespace path.** Bare display text — *Gemini 2.5 Pro*, *Sonnet 4.5* — does not resolve and leaves the model out of the graph.
+		- Page names stay singular, per [[Logseq/Pref/Page/Name]].
+	- ## Frontmatter
+		- **`alias::`** — the **model code**, the string an API call actually carries: `alias:: [[claude-sonnet-4-5]]`, `alias:: [[gemini-2.5-pro-preview-05-06]]`. Prefer the code over a prettified display name; the code is what a reader arrives with.
+		- **`tags::`** — `[[AI/Model]]` on a page you are creating. Never rewrite `tags::` on a page you did not create.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+		- **Legacy instances** wrap their frontmatter in `---` fences. That is the older export shape; new pages use bare `key:: value` lines at the top of the file, per [[Logseq/Flavored Markdown]]. Do not migrate old pages unasked.
+	- ## Page shape
+		- A **stub**, when the model is only being referenced:
+			- `- # Model Name`, then `- *Stub page - detailed documentation pending*`. Add it to the provider's model list page if one exists.
+		- A **full page**, when the model is the subject:
+			- `- # [Model Name](official-documentation-url)` — the H1 always carries the official link.
+				- `## Key Features` — capabilities, context window, knowledge cutoff, and the release status: **stable**, **preview** or **experimental**.
+				- `## Performance Highlights` — benchmark results with figures, linked to the benchmark's own page where one exists.
+				- `## Model Tiers` — the variants and how they differ, when the release has more than one.
+				- `## Access Details` — API availability, pricing, rate limits, usage restrictions. Preview and experimental releases especially need their limits written down.
+				- `## Technical Specifications` — architecture, training data, input and output formats, special capabilities, and the model version code.
+				- `## References` — official documentation, papers, benchmark sources.
+	- ## Writing an instance
+		- Research before writing: the official model card and documentation, the release announcement, benchmark results, the pricing page, the API reference.
+		- Give figures, not adjectives. *SWE-bench Verified: 77.2%* is a fact a reader can use; *better at coding* is not.
+		- Link sibling and predecessor models so a generation reads as a sequence.
+		- Facts here decay. Revisit a page when benchmarks land, when pricing or availability changes, when a variant ships, or when a release moves from preview to stable.
+	- ## Relationship to other types
+		- **[[Logseq/Entity/Term]]** / **[[Logseq/Entity/Concept]]** — the `AI/Model/<Kind>` pages that classify models, and the concepts a model page cites.
+		- **[[Logseq/Entity/Person]]** — researchers and founders link to the models they shipped, not the reverse.
+	- ## Examples in this garden
+		- [[Anthropic/Model/Claude/Sonnet/4.5]], [[OpenAI/Model/GPT/4/1]], [[Anthropic/Model/Claude/Fable/5.1]]

@@ -32,7 +32,7 @@ This repository is a personal Logseq knowledge graph (not a software project): p
 - Convert pasted/standard Markdown to LFM → **logseq-convert-md-to-lfm**
 - Tables in LFM → **logseq-table-formatter**
 - Diataxis how-to / tutorial / reference / concept pages → load **[[Diataxis]]** (graph page) and the matching **[[Logseq/Entity/Diataxis/*]]** type page
-- AI model mentions and model pages → **logseq-ai-model**
+- AI model mentions and model pages → load **[[Logseq/Entity/AI/Model]]** (graph page)
 - Asset / image / PDF links → **logseq-asset-linker**
 - ChatGPT Deep Research PDF imports → **logseq-import-chatgpt-deep-research**
 - YouTube transcript notes → **logseq-youtube-notes**
