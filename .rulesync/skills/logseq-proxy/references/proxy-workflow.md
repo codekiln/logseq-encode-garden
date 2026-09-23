@@ -1,20 +1,6 @@
 # Proxy workflow (sync)
 
-## Skill-owned properties
-
-These keys are **owned** by **logseq-proxy**. Set or update them on every successful sync:
-
-- `logseq-url::` — full canonical URL, e.g. `logseq-url:: logseq://graph/logseq-encode-garden?page=rulesync`
-- `logseq-proxy-last-sync-date::` — a plain ISO date **Logseq link** for the sync day, e.g. `logseq-proxy-last-sync-date:: [[2026-09-19]]` (`yyyy-MM-dd`, no weekday).
-
-Optional later (not required in v1): `logseq-proxy-source-graph::` — only add if you want redundant filtering without parsing the URL.
-
-**Do not** treat any other `*::` lines as owned by this skill.
-
-## tags:: invariant
-
-- **Re-sync** (destination file already exists): **never** add, remove, or edit `tags::`.
-- **First-time** copy: copying the source file wholesale may include its `tags::`; that is acceptable. If the user wants no tags from the source, they should say so explicitly.
+Read **[[Logseq/Entity/Proxy/Page]]** first — the frontmatter keys, the `tags::` invariant, the name-collision rule, and the page-name mapping are defined there, not here. This file is the sequence.
 
 ## Property block heuristic
 
@@ -30,78 +16,63 @@ Stop at the first line that does **not** match (e.g. blank line, `- # Heading`, 
 
 - Confirm cwd is the **destination** Logseq graph root (`pages/`, `logseq/` present).
 - Read `.rulesync/config/logseq-proxy.md` and locate `graph_name` → `ghq-address` and/or `root`.
-- Resolve `root` per `references/graph-registry.md` (run `ghq list --full-path --exact <ghq-address>` when `ghq-address` is set; stop and ask before cloning if it isn't cloned locally).
+- Resolve `root` per `graph-registry.md` (run `ghq list --full-path --exact <ghq-address>` when `ghq-address` is set; stop and ask before cloning if it isn't cloned locally).
 
 ### 1. Parse URL
 
 From user input or command argument, extract:
 
 - `graph_name` from `logseq://graph/<graph_name>`
-- `page` from query `page=<value>` (URL-decode)
+- `page` from query `page=<value>`
 
-Reject if `page` is missing.
+Reject if `page` is missing. Trim both values. Decode percent-encoding (`%2F` inside `page=` is a namespace `/`). Other query parameters — block id, anchor, day — are out of scope: ignore them or warn. Journals are out of scope too; `page=` targets `pages/` only.
 
 ### 2. Resolve source file
 
-Map `page` → `pages/<___>.md` under the resolved `root`. Read the file. If missing, stop with a clear error and optional fuzzy filename suggestions.
+Map `page` → `pages/<page_with___>.md` under the resolved `root`, and read it. If it is missing, stop with a clear error and optional fuzzy filename suggestions from `<root>/pages/*.md`.
 
-### 3. Compute destination path
+### 3. Compute destination path and check for a collision
 
-Mirror the source page name exactly — see `references/url-and-path-mapping.md`:
+The destination mirrors the source name exactly: `pages/<page_with___>.md` in this garden.
 
-`pages/<page_with___>.md`
+- Destination doesn't exist → **create** (Case A, step 5).
+- Destination exists **with** `logseq-url::` in its property block → **re-sync** (Case B, step 5).
+- Destination exists **without** `logseq-url::` → **stop and ask** before writing anything.
 
-### 4. Check for a name collision
+### 4. Build the proxy properties
 
-- Destination file doesn't exist → **create** (Case A, step 7).
-- Destination file exists **and** has `logseq-url::` in its property block → **re-sync** of the same proxy (Case B, step 7).
-- Destination file exists **without** `logseq-url::` → **stop** and ask the user how to proceed before writing anything; do not overwrite or merge.
+- `logseq-url::` — the URL as provided, normalized to consistent `?page=` encoding.
+- `logseq-proxy-last-sync-date::` — today as `[[yyyy-MM-dd]]`, no weekday.
 
-### 5. Build canonical `logseq-url`
-
-Use the same string the user provided, normalized (consistent `?page=` encoding). Example:
-
-`logseq-url:: logseq://graph/logseq-encode-garden?page=rulesync`
-
-### 6. Sync date
-
-Set `logseq-proxy-last-sync-date::` to today as a plain ISO date wiki link: `[[yyyy-MM-dd]]`, e.g. `[[2026-09-19]]`.
-
-### 7. Merge or create
+### 5. Merge or create
 
 **Case A — destination does not exist**
 
 - Start from **full source** text.
-- Ensure skill-owned properties are present with correct values (add or replace those keys only in the property block).
+- Add or replace the two proxy property lines in the property block.
 - Write to the destination path.
 
-**Case B — destination exists (confirmed proxy per step 4)**
+**Case B — destination exists (confirmed proxy per step 3)**
 
-- Parse **destination** into `dest_props` (property lines) + `dest_body` (rest of file).
-- Parse **source** into `source_props` + `source_body` (same heuristic).
-- **Body** for the new file = **`source_body`** (preserve LFM from source).
-- **Properties** for the new file:
-  - Start from **destination** property lines **excluding** any line whose key is skill-owned (`logseq-url`, `logseq-proxy-last-sync-date`).
-  - Append or replace skill-owned lines with the new values.
-  - **Never change** `tags::` lines from the destination (keep them exactly as they were, including multiple `tags::` if present).
-- Do **not** copy `tags::` from source onto destination on re-sync (that would overwrite behavior—destination tags win).
+- Parse **destination** into `dest_props` + `dest_body`, and **source** into `source_props` + `source_body`, using the heuristic above.
+- **Body** for the new file = **`source_body`**.
+- **Properties** for the new file: start from `dest_props` minus the two proxy keys, then append them with the new values. Every other destination property — including every `tags::` line — carries over untouched, and no `tags::` comes from the source.
+- **Edge case:** if the destination has no property block but has `tags::` only inside bullets, keep the whole destination structure and prepend a small property block with the two proxy lines, matching the style of other pages in `pages/`.
 
-**Case B — edge case:** If the destination has **no** property block but has `tags::` only inside bullets, keep the whole destination structure and **prepend** a small property block with only the two skill lines before the first line, **or** add the two lines as Logseq properties in the form this garden uses—prefer matching the style of other pages in `pages/`.
-
-### 8. Assets
+### 6. Assets
 
 Copy any asset the source page references via a relative `../assets/...` link (images, PDFs, etc.):
 
-- For each `../assets/<relpath>` found in `source_body` (or `source_props`), copy `<root>/assets/<relpath>` to `<destination-graph-root>/assets/<relpath>`, creating parent directories as needed.
+- For each `../assets/<relpath>` found in the source, copy `<root>/assets/<relpath>` to `<destination-graph-root>/assets/<relpath>`, creating parent directories as needed.
 - Overwrite the destination asset if it already exists — a re-sync refreshes assets the same way it refreshes the body.
 - If the source reference is missing on disk under `<root>/assets/`, warn in the report rather than failing the whole sync.
 
-### 9. Report
+### 7. Report
 
 Summarize:
 
 - Source: resolved `root` (note whether via `ghq-address` or explicit `root`) + relative path
 - Destination: relative path under destination repo
-- Canonical `logseq-url::` and `logseq-proxy-last-sync-date::` written
+- The `logseq-url::` and `logseq-proxy-last-sync-date::` written
 - Whether this was create vs re-sync
 - Assets copied, or none found
