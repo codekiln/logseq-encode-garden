@@ -1,5 +1,15 @@
-- I believe that each incremental degree of privacy a system supports incurs a proportional expense or cost that the people who use that system.
-- Each system is positioned on a continuum between, or, even more likely, on a discrete distribution between More [[Priv/ate]] and More [[Public]].
-	- As with [[Security]], the Privacy of a system tends to be highly inversely correlated with [[Convenience]]. The more Secure and Private a system is, the less Convenient it tends to be.
-		- Convenience in this sense is often soft euphemism for [[Usability]].
-			- While it's possible to maximize the usability of a [[Password]] [[Password/Manage/ment]] password manager, the privacy constraints of the domain of password management naturally work against its usability.
+# Each incremental degree of privacy a system supports incurs an expense
+	- Each system is positioned on a continuum between, or, even more likely, on a discrete distribution between More [[Priv/ate]] and More [[Public]].
+		- As with [[Security]], the Privacy of a system tends to be highly inversely correlated with [[Convenience]]. The more Secure and Private a system is, the less Convenient it tends to be.
+			- Convenience in this sense is often soft euphemism for [[Usability]].
+				- While it's possible to maximize the usability of a [[Password]] [[Password/Manage/ment]] password manager, the privacy constraints of the domain of password management naturally work against its usability.
+		- [[Example]]
+			- [[Knowledge Gardening]]
+				- if you keep track of the musical artists that you follow in the same [[git]] [[Repo]] place that you keep your financial information, then you can't share the musical artists that you follow easily.
+				- knowledge systems should be tiered by data classification agreement levels, and each knowledge item should be stored in a level that is as public as it can be without incurring unacceptable adverse consequences.
+				- Here, musical artists should instead be tracked in a system that is more [[Public]], and financial information should be kept in a system that is more [[Private]].
+	- ## The more [[Public]] a system is, the better it is able to support a [[Graph]] of relationships between its entities
+		- The more [[Private]] a system is, the more granular and atomized its access and visibility tends to be. This constraints it ability to be [[Related]] to other entities in a [[Knowledge/Graph]].
+			- [[Example]]
+				- You likely don't want to give your accountant all your private health information.
+					- But if you track both musical and visual artists in public, you can easily model and find relationships and collaborations between them.
