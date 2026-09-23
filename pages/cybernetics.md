@@ -1,0 +1,34 @@
+logseq-entity:: [[Logseq/Entity/Concept]]
+
+- # Cybernetics
+	- ## Overview
+		- Cybernetics is the study of circular causation: systems that act, sense the result, and adjust the next action by the gap between what they wanted and what they got. A thermostat, a helmsman, a body holding its temperature, and a company steering by its numbers are doing the same thing, and cybernetics is the discipline that treats them as one subject.
+		- The word comes from the Greek *kybernētēs*, the steersman of a ship. Steering is the founding picture: the rudder is set by comparing the heading the pilot wants with the heading the ship has, again and again, against wind and current that never stop pushing.
+	- ## History of the term
+		- ### Plato's steersman
+			- In the *Republic* and the *Alcibiades*, Plato uses *kybernētikē*, the steersman's art, as a picture for governing people. The steersman stands for someone who holds a course by continuous correction ([Cybernetics, Wikipedia](https://en.wikipedia.org/wiki/Cybernetics#Etymology)).
+		- ### Ampère, 1834
+			- The French physicist André-Marie Ampère used *cybernétique* for the science of government in his classification of human knowledge. The word named the art of governing a state and went unused for a century.
+		- ### Maxwell's governor, 1868
+			- James Clerk Maxwell's paper "On Governors" made a feedback mechanism, the centrifugal governor that holds a steam engine at a set speed, into a subject of mathematics. *Governor* itself descends from *kybernētēs* through the Latin *gubernator*, and Wiener later named this paper as one reason for choosing the word.
+		- ### Wiener, 1943 to 1948
+			- The founding papers appeared in 1943. Rosenblueth, Wiener and Bigelow's "Behavior, Purpose and Teleology" argued that purposeful behavior in animals and machines is the same thing: action corrected by feedback toward a goal. McCulloch and Pitts's "A Logical Calculus of the Ideas Immanent in Nervous Activity" showed that networks of idealized neurons can compute logic.
+			- Norbert Wiener coined *cybernetics* with a research group that included Arturo Rosenblueth in the summer of 1947, and his 1948 book [*Cybernetics: Or Control and Communication in the Animal and the Machine*](https://en.wikipedia.org/wiki/Cybernetics:_Or_Control_and_Communication_in_the_Animal_and_the_Machine) put the word in print. He wrote that every existing term leaned too far toward one field, and that the ship's steering engine was among the oldest and best-developed feedback mechanisms.
+		- ### The Macy Conferences, 1946 to 1953
+			- The Josiah Macy, Jr. Foundation funded a run of meetings chaired by Warren McCulloch. Ross Ashby, Gregory Bateson, Heinz von Foerster, Margaret Mead, [[Person/John von Neumann]] and Wiener were among the participants, and mathematicians, neurophysiologists, anthropologists and engineers worked out a shared vocabulary of [[Feedback]], information and circular causality ([Macy conferences, Wikipedia](https://en.wikipedia.org/wiki/Macy_conferences)). In Britain the Ratio Club did similar work over dinner from 1949 to 1958.
+		- ### A technical discipline, 1950s
+			- Ross Ashby's [*An Introduction to Cybernetics*](http://pespmc1.vub.ac.be/books/IntroCyb.pdf) (1956) gave the field its textbook and its Law of Requisite Variety: a regulator can hold a system steady only if it has at least as many responses as the disturbances it faces. Qian Xuesen's *Engineering Cybernetics* (1954) made the field a foundation for automation.
+			- In the Soviet Union the word went from a condemned "reactionary pseudoscience" in the early 1950s to the official umbrella for computing and control by the 1960s. Slava Gerovitch tells that story in [*From Newspeak to Cyberspeak*](https://mitpress.mit.edu/9780262572255/from-newspeak-to-cyberspeak/) (MIT Press, 2002).
+		- ### Fragmentation and the second wave, 1960s onward
+			- The technical threads left for disciplines of their own. Artificial intelligence founded itself at the Dartmouth workshop in 1956 and took the funding; control theory, computer science and information theory each became a department. Neural networks, a cybernetic topic from the start, were sidelined for decades.
+			- What kept the name turned toward biology, society and the observer. Heinz von Foerster's Biological Computer Laboratory at the University of Illinois (1958 to the mid-1970s) incubated [second-order cybernetics](https://en.wikipedia.org/wiki/Second-order_cybernetics), the cybernetics of observing systems, which puts the scientist inside the loop being described. Maturana and Varela's autopoiesis, Bateson's double bind and its use in family therapy, Stafford Beer's management cybernetics and Viable System Model, and Gordon Pask's conversation theory belong to this wave. Beer's [Project Cybersyn](https://en.wikipedia.org/wiki/Project_Cybersyn) in Chile (1971 to 1973) tried to steer a national economy on these principles.
+		- ### The prefix outlives the field
+			- By the 1980s few departments carried the name, but the prefix escaped. William Gibson's *cyberspace*, from the story "Burning Chrome" (1982) and the novel *Neuromancer* (1984), handed *cyber-* to a generation, and the prefix now marks security, crime and culture that have nothing to do with feedback loops. The ideas themselves live on under other names: control theory, systems thinking, [[AI/Reinforcement Learning]], homeostasis.
+	- ## Key ideas
+		- **[[Feedback]]** — a system's output returns as its input. Negative feedback pulls toward a goal, as in a thermostat; positive feedback runs away, as with a microphone held to its own speaker.
+		- **Circular causality** — cause and effect form a loop, so asking which came first is the wrong question.
+		- **Requisite variety** — Ashby: only variety can absorb variety. A regulator needs at least as many responses as the world has disturbances.
+		- **The observer in the loop** — second-order cybernetics: a description of a system is made by someone who belongs to a larger system that includes the describing.
+	- ## In this garden
+		- [[shadow of something that does not yet exist]] describes the tight loop between a maker, a tool and its outputs, where each output changes what the maker is aiming at.
+		- [[AI/Concept/Explore/vs/Exploit]] is a regulator's problem: a learner steering its own knowledge between taking in what is new and consolidating what it has.
