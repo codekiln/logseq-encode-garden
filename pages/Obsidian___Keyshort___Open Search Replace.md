@@ -10,3 +10,4 @@
 		- Description: Opens the search and replace panel.
 		- [[My Note]] I keep mistakenly thinking that this is `Cmd+Shift f`.
 			- [[Mnemonic]] - it take the whole thumb to do `Cmd+Opt f`, which is like squashing words (sort of like find and replace)
+			- [[2026-09-23 Wed]] it's not working for me ... this keyboard shortcut is not doing anything.
