@@ -1,4 +1,4 @@
-tags:: [[1Password]], [[Password Management]], [[Diataxis/How To]]
+tags:: [[1Password]], [[Password/Manage/ment]], [[Diataxis/How To]]
 
 - # How To Add Password Expiration to an Item in 1Password
 	- ## Overview
@@ -35,4 +35,3 @@ tags:: [[1Password]], [[Password Management]], [[Diataxis/How To]]
 	- ## Related
 		- [[1Password]]
 		- [[Diataxis/How To]]
-

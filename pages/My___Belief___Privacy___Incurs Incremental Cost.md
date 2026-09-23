@@ -1,0 +1,5 @@
+- I believe that each incremental degree of privacy a system supports incurs a proportional expense or cost that the people who use that system.
+- Each system is positioned on a continuum between, or, even more likely, on a discrete distribution between More [[Priv/ate]] and More [[Public]].
+	- As with [[Security]], the Privacy of a system tends to be highly inversely correlated with [[Convenience]]. The more Secure and Private a system is, the less Convenient it tends to be.
+		- Convenience in this sense is often soft euphemism for [[Usability]].
+			- While it's possible to maximize the usability of a [[Password]] [[Password/Manage/ment]] password manager, the privacy constraints of the domain of password management naturally work against its usability.

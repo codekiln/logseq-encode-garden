@@ -1,6 +1,6 @@
 alias:: [[Risk vs Reward Trade-Off]]
 logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Trade-Off]]
-see-also:: [[Risk/Profile]], [[My/Principle/Balance/Risk vs Reward/wrt Privacy]]
+see-also:: [[Risk/Profile]], [[My/Principle/Balance/Risk vs Reward/wrt Privacy - Make Things As Public As They Can Be]]
 
 - # Risk vs Reward
 	- ## Summary
@@ -18,4 +18,4 @@ see-also:: [[Risk/Profile]], [[My/Principle/Balance/Risk vs Reward/wrt Privacy]]
 		- Separate the risk that is paid for from the risk that is not. Exposure that could be avoided or spread out adds variance with no added reward.
 	- ## In this garden
 		- [[Risk/Profile]] describes the shape of the risk a tool, dependency or decision carries.
-		- [[My/Principle/Balance/Risk vs Reward/wrt Privacy]] applies the trade-off to what to share in public.
+		- [[My/Principle/Balance/Risk vs Reward/wrt Privacy - Make Things As Public As They Can Be]] applies the trade-off to what to share in public.

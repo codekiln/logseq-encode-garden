@@ -20,6 +20,6 @@
 			- ...another modified settings
 		- You could take a look about its shape here: [https://gist.github.com/loia5tqd001/7f68a682472a018bcc75ecadeeab447b](https://gist.github.com/loia5tqd001/7f68a682472a018bcc75ecadeeab447b)
 			- [[My Notes]]
-				- looks like it's not so great for #Privacy if public, hopefully one can use a private gist
+				- looks like it's not so great for #Priv/acy if public, hopefully one can use a private gist
 		- About syncing from Linux to MacOs, I don't know exactly what's happening under the hood, give a look at [a comment here](https://github.com/shanalikhan/code-settings-sync/issues/194#issuecomment-276562844) maybe you'll know.
 		- As you use the Settings Sync, you'll notice that you can have [multiple gists](https://gist.github.com/loia5tqd001), so you can have multiple versions of settings on the cloud. Maybe you'd want some gist for Windows, some for Linux/macOS or any strategy that you could think of.
