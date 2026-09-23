@@ -1,0 +1,22 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Trade-Off Component
+	- In this garden, **Trade-Off Component** pages model one choice inside a [[Logseq/Entity/Trade-Off]], explained in the context of that tension.
+	- ## Examples in this garden
+		- [[AI/Concept/Explore/vs/Exploit/Explore]], [[AI/Concept/Explore/vs/Exploit/Exploit]]
+		- [[Risk/vs/Reward/Risk]], [[Risk/vs/Reward/Reward]]
+	- ## What counts as a Component
+		- One of the choices a trade-off page weighs. The page says what leaning toward this choice gains, what it gives up, and what leaning too far looks like.
+		- The component stays scoped to its trade-off. The thing itself may have a standalone page in the garden, such as [[Exploit]], and may be a component of other trade-offs as well; each component page explains the choice inside one tension only.
+	- ## Naming
+		- One segment under the trade-off page, repeating the choice's name from the path: `X/vs/Y/X` and `X/vs/Y/Y`; with more choices, `X/vs/Y/vs/Z/Z`.
+	- ## Frontmatter
+		- `logseq-entity:: [[Logseq/Entity/Trade-Off/Component]]`.
+		- `see-also::` — the standalone page for the thing itself first, when the garden has one, then other pages that explain this choice.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- The page renders inside its trade-off's `## The Trade-Off` section through a page embed, under an H3 that already names it, so the body starts with the choice itself and skips the H1.
+		- Lean bullets: what choosing this means inside the tension; what it gains; what it costs; what too much of it looks like.
+	- ## Relationship to other types
+		- [[Logseq/Entity/Trade-Off]] — the page that weighs this choice against the others and embeds this page.
+		- [[Logseq/Entity/Term]] and [[Logseq/Entity/Concept]] — where the thing itself is defined or explained in general, linked from `see-also::`.

@@ -1,0 +1,36 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Trade-Off
+	- In this garden, **Trade-Off** pages model a tension among several choices, where taking more of one means taking less of another, explained one choice at a time.
+	- ## Examples in this garden
+		- [[AI/Concept/Explore/vs/Exploit]]
+		- [[Risk/vs/Reward]]
+	- ## What counts as a Trade-Off
+		- Two or more choices that pull against each other, so that deciding means choosing how far to lean toward each. The page explains what each choice gains, what it gives up, and how the balance gets struck.
+		- The number of choices is open. Two is the common case, three or four read fine, and the shape holds to about ten. Past that the page is a catalog of options, and [[Logseq/Entity/Collection]] fits better.
+		- Not a Trade-Off: a pair of look-alike ideas told apart, such as [[Knowledge/Concept/Knowledge Base vs Knowledge Garden]]; a feature comparison of tools; a [[Logseq/Entity/Question]].
+	- ## Combined with Concept
+		- A Trade-Off is understanding-oriented writing, so every instance also declares [[Logseq/Entity/Concept]], Concept first: `logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Trade-Off]]`.
+	- ## Naming — `vs` between the choices
+		- The path joins the choices with a `vs` segment: `X/vs/Y`, and with more choices `X/vs/Y/vs/Z`. Order the choices the way the tension is spoken: Explore before Exploit, Risk before Reward.
+		- Place the page in the topic namespace where the tension is discussed when the garden has one, as with `AI/Concept/Explore/vs/Exploit`. A tension with no home topic sits at the root, as with `Risk/vs/Reward`.
+		- `alias::` carries the spoken form with the type as a suffix: `X vs Y Trade-Off`.
+	- ## Page shape
+		- **Frontmatter** — `alias::` as above; `logseq-entity::` with Concept first, then this page; `see-also::` for related pages the body does not mention.
+		- **H1** — the choices joined with `vs`, each linked to its standalone page when the garden has one: `- # [[Explore]] vs [[Exploit]]`.
+		- **`## Summary`** — what is being traded and why the choices pull against each other, in a paragraph or two.
+		- **`## The Trade-Off`** — one H3 per choice. The heading links the choice's [[Logseq/Entity/Trade-Off/Component]] page, and that page is embedded beneath it, as on [[AI/Concept/Explore/vs/Exploit]]:
+			- ~~~
+			  - ## The Trade-Off
+			  	- ### [[AI/Concept/Explore/vs/Exploit/Explore]]
+			  		- {{embed [[AI/Concept/Explore/vs/Exploit/Explore]]}}
+			  	- ### [[AI/Concept/Explore/vs/Exploit/Exploit]]
+			  		- {{embed [[AI/Concept/Explore/vs/Exploit/Exploit]]}}
+			  ~~~
+		- Further H2 sections as the topic warrants, drawing on the [[Logseq/Entity/Concept]] shape: how the balance is struck in practice, where the tension came from, examples.
+	- ## Relationship to other types
+		- [[Logseq/Entity/Trade-Off/Component]] — one page per choice, filed under the trade-off page and embedded into it.
+		- [[Logseq/Entity/Concept]] — the primary type of every Trade-Off page.
+		- [[Logseq/Entity/Term]] — a choice often has its own standalone page, such as [[Explore]] or [[Exploit]]. That page defines the thing in general; the component page explains it inside this one tension and points back with `see-also::`.
+	- ## Finding and deduplicating
+		- Search each choice's name, the `vs` path in either order, and existing [[Logseq/Entity/Concept]] pages with `vs` in the title. One page per tension. A Concept page that already explains the tension takes this type in addition, with its body reshaped to match.

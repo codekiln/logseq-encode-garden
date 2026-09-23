@@ -21,5 +21,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Use Logseq Flavored Markdown (bullets, headings as bullets, tab nesting, no blank lines between bullets).
 		- Recommended sections (Diataxis explanation style): **Overview**, **Context**, **Key Principles**, **Mechanism**, **Examples**, **Misconceptions**. Adapt headings to the topic; not every section must be long.
 		- First heading after frontmatter: H1 matching the page’s primary topic.
+	- ## Combined with Trade-Off
+		- A concept that weighs choices against each other also declares [[Logseq/Entity/Trade-Off]], Concept first: `logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Trade-Off]]`. That page carries the page shape for the combination.
 	- ## Relationship to Diataxis
 		- Diataxis framing in the graph: [[Diataxis/Explanation]] (aliases [[Diataxis/Concept]]). This type page is the **operational** template; those pages are the **vocabulary** of the framework.
