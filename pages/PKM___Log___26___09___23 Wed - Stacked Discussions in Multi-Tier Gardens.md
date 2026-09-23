@@ -1,0 +1,3 @@
+- [[2026-09-23 Wed]]
+	- Yesterday, I wrote a bit at [[Music/Composition/Log/26/09/21 Mon - iPad Microfreak Session 2]]. A bit earlier, I wrote in a similar namespace in [[Person/codekiln/GitHub/logseq-garden]], a private Logseq garden of mine that "descends" from this one (meaning that it inherits all the skills and entities, and proxies some of the pages) at `Music/Making/Log/26/09/19 Sat`. This morning I wanted to unify these namespaces.
+	- I was thinking about
