@@ -25,4 +25,4 @@ tags:: [[Diataxis/Reference]], [[RCA]], [[RCA/Connector]]
 	- ## Related References
 		- [[RCA/Connector/Ref/RCA Male]]
 		- [[RCA/Connector/Ref/RCA Female]]
-		- [[Audio/Connector]]
+		- [[Audio/Connector/Ref/Index]]
