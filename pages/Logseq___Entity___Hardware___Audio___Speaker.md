@@ -1,0 +1,22 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Audio Speaker
+	- In this garden, **Audio Speaker** pages model one speaker model: the drivers, the power behind them, the range they reproduce, and the connectors they accept.
+	- ## What counts as an instance
+		- A named model from a named maker: a studio monitor, a PA speaker, a portable speaker, a subwoofer, or a stereo pair sold as one system.
+		- Not this type: headphones and earbuds, an amplifier carrying no drivers of its own, or a bare driver sold as a component.
+	- ## Naming
+		- `Maker/Model`, following the creator-namespace rule on [[Logseq/Pref/Page/Name]]: [[IK Multimedia/iLoud Micro Monitors]].
+	- ## Frontmatter
+		- `logseq-entity:: [[Logseq/Entity/Hardware/Audio/Speaker]]`. A speaker that was bought adds [[Logseq/Entity/Purchase]] after it and takes that type's properties too.
+		- `vendor-url::` — the maker's page for the model.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- H1 is the model name as the maker writes it; the product page is already in `vendor-url::`.
+		- **Drivers and Amplification** — what each way covers and the power behind it.
+		- **Frequency Response** — each range with the level it was measured at. Makers quote several, and the figures disagree without it.
+		- **Connectors** — one link per [[Logseq/Entity/Hardware/Connector/Audio]] instance the speaker accepts.
+		- **Dimensions** — size and weight as the maker states them.
+		- Figures come from the maker's own specification page.
+	- ## Examples in this garden
+		- [[IK Multimedia/iLoud Micro Monitors]].
