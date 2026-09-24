@@ -21,35 +21,33 @@ claudecode:
 
 # Logseq proxy
 
-Cross-garden **page proxy**: copy `pages/*.md` from a **registered** on-disk graph into the **same-named** page in this garden, record provenance in **skill-managed** properties, and answer **listing** questions via search.
+Copy `pages/*.md` from a **registered** on-disk graph into the **same-named** page in this garden, and answer **listing** questions about what is proxied.
 
-A proxy mirrors the source page's exact name and namespace: a source page
-`[[My/Page/Here]]` becomes `[[My/Page/Here]]` in the destination garden too —
-same `___`-encoded filename, no added prefix or namespace. This is what lets
-a whole namespace proxy cleanly: every page keeps its identity across
-gardens. The proxy is identified **only** by its skill-managed properties;
-its location never identifies it as a proxy.
+**`[[Logseq/Entity/Proxy/Page]]` is the format authority.** It defines what a proxy page is, the `logseq://` URL, destination naming and the `___` filename mapping, the two skill-owned properties, the `tags::` and merge rules, the collision outcomes, asset handling, and the ripgrep recipes for listing. Read it before every sync or listing question and follow it end to end. This skill adds the repo-side mechanics the graph does not cover: the registry, path resolution, and reporting.
 
 ## Invariants
 
-- **Never add, remove, or edit** a `tags::` line on an **existing** destination page (re-sync). On first create, preserve the source file’s `tags::` as copied unless the user forbids it.
-- **Skill-owned properties** (set or update on every successful sync): `logseq-url::`, `logseq-proxy-last-sync-date::`. Do not rename their keys.
-- The **`logseq://` URL** is a **portable intent string** for agents; do not assume the OS or Logseq app will resolve it. Resolution uses **`.rulesync/config/logseq-proxy.md`** only, via `ghq-address` (preferred) or an explicit `root` (v1).
-- **Name collision**: if the destination page already exists but has no `logseq-url::`, it is a real, unrelated page — stop and ask before touching it. Never silently overwrite a non-proxy page.
+- **Never add, remove, or edit** a `tags::` line on an **existing** destination page (re-sync).
+- **Skill-owned properties** — set or update `logseq-url::` and `logseq-proxy-last-sync-date::` on every successful sync; keep their key spellings.
+- The **`logseq://` URL** is a portable intent string for agents; do not hand it to the OS or the Logseq app. Resolution uses **`.rulesync/config/logseq-proxy.md`** only.
+- **Name collision** — a destination page that exists without `logseq-url::` is a real, unrelated page. Stop and ask before touching it.
 
 ## Procedure
 
-1. Open and follow **[references/proxy-workflow.md](./references/proxy-workflow.md)** end-to-end for sync.
-2. For **registry format** and GitHub futures, see **[references/graph-registry.md](./references/graph-registry.md)**.
-3. For **URL parsing** and `page=` → filename, see **[references/url-and-path-mapping.md](./references/url-and-path-mapping.md)**.
-4. For **list / list-graphs** and ripgrep recipes, see **[references/listing-and-queries.md](./references/listing-and-queries.md)**.
+1. Confirm cwd is the **destination** graph root (`pages/`, `logseq/` present).
+2. Load **`[[Logseq/Entity/Proxy/Page]]`** and **`[[Logseq/Entity]]`**.
+3. Parse the URL for `graph_name` and `page=` (URL-decode; reject if `page=` is missing).
+4. Resolve `graph_name` to an on-disk `root` per **[references/graph-registry.md](./references/graph-registry.md)**.
+5. Read the source file at `<root>/pages/<mapped filename>.md`. If it is missing, stop and report, with fuzzy filename suggestions when you have them.
+6. Compute the destination path, check for a collision, and merge or create — all per the type page.
+7. Copy referenced assets per the type page. A source asset missing on disk is a warning in the report, not a failed sync.
+8. Record the change in `journals/YYYY_MM_DD.md` per **`[[Logseq/Journal]]`** (**`[[Filed]]`** for a new proxy, **`[[Updated]]`** for a re-sync).
+9. Report per the section below.
 
-## Progressive disclosure
+## Report
 
-- **This file** — scope, invariants, and pointers.
-- **`references/proxy-workflow.md`** — numbered sync and merge steps, reporting.
-- **Other `references/*.md`** — depth on demand.
-
-## Entrypoints
-
-- Slash command: **`/logseq-proxy`** → `.rulesync/commands/logseq-proxy.md` (thin wrapper around this skill).
+- Source: resolved `root` (noting whether it came from `ghq-address` or an explicit `root`) plus the relative path.
+- Destination: the relative path under this repo.
+- The `logseq-url::` and `logseq-proxy-last-sync-date::` values written.
+- Create vs re-sync.
+- Assets copied, or none found.
