@@ -12,14 +12,18 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- **Link shape:** `[[Topic/Q/Question text]]` or `[[Topic/SubTopic/Q/Question text]]` as needed.
 		- **File shape:** `pages/Topic___Q___Question text.md` with triple underscores between namespace parts; encode `?` as `%3F` in the filename when present.
 		- Use forward slashes in journal and body links; never triple underscores inside Logseq links.
+		- **The question text** keeps its full form in the page title, punctuation included.
+		- **The topic namespace** is the domain or tool the question is about — `Claude Code`, `git`, `LangSmith`, `EdTech/Idea/LearnMark`. A question that arrives without one takes the namespace its wording points at: "compaction text in Claude Code" files under `Claude Code`. An ambiguous topic is a **blocked** candidate and waits for a human to name it.
 	- ## Finding and deduplicating
 		- Treat every new question as a question-entity candidate.
 		- Practical search order for this type:
 			- 1. Exact expected page title / filepath under the topic namespace.
-			- 2. Grep normalized question text and key phrases across `pages/**___Q___*.md`.
+			- 2. Grep normalized question text and key phrases across `pages/**___Q___*.md`. Normalization is for the search alone: drop trailing punctuation and reduce the question to its key phrases.
 			- 3. Namespace-restricted globs (e.g. topic prefix + `___Q___`).
 			- 4. H1 and first blocks on candidate pages; allow for minor rephrasing.
 		- Classify each candidate as: **existing**, **similar** (needs human judgment), **new**, or **blocked** (missing config or ambiguous topic).
+			- **existing** — the garden already holds the question. It gains an answer, not a second page.
+			- **similar** — present the candidates and let a human decide before a near-duplicate lands.
 	- ## Frontmatter
 		- On **new** question pages, include `logseq-entity:: [[Logseq/Entity/Question]]` so this type page indexes instances.
 		- **Card-backed questions:** when the H1 carries `[[card]]` and the page is a first-class review target, add a second entity marker: `logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]]` (see [[Logseq/Entity/Card]]). Card-backed questions use the compact page shape — see **Card-backed page shape** under Page shape below.
@@ -41,6 +45,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 				- Lead with **Short answer:** when useful.
 				- Cite **external** docs with markdown links in the answer body.
 				- Bold for labels; backticks for commands. Do not wrap `` `commands` `` in `**…**` (see [[Logseq/Flavored Markdown]]).
+				- A question research has not settled says so here, naming what is still missing.
 		- **Do not** add `## Related` solely to list internal wikilinks; use **`see-also::`** instead.
 		- ### Card-backed page shape
 			- When `logseq-entity::` includes [[Logseq/Entity/Card]] and the H1 ends with `[[card]]`, omit the `## Answer` section header and attribution block. The answer sits directly as a child bullet of the H1, as short as a card prompt requires:
