@@ -6,5 +6,5 @@ date-created:: [[2019]]
 	- [[GitHub/Star]]: 398 (checked 2026-07-12).
 	- Sample and MIDI device manager with a GTK GUI and a [CLI](https://dagargo.github.io/elektroid/cli/).
 	- Written in [[C]].
-	- [Issue #123](https://github.com/dagargo/elektroid/issues/123) implements support for the [[Arturia/MicroFreak]].
+	- [Issue #123](https://github.com/dagargo/elektroid/issues/123) implements support for the [[Microfreak]].
 	- via
