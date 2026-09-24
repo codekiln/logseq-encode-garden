@@ -1,8 +1,8 @@
-tags:: [[Diataxis/Reference]], [[Audio]], [[Audio/Connector]]
+tags:: [[Diataxis/Reference]]
+logseq-entity:: [[Logseq/Entity/Hardware/Connector/Audio]]
+alias:: [[3.5mm Mono Jack]]
 
-- alias:: [[3.5mm Mono Jack]], [[TS Connector]]
-
-- # 3.5mm TS Connector Reference
+- # 3.5mm TS Audio Connector
 	- ## Visual Reference
 		- ![TS connector schematic showing tip and sleeve](https://upload.wikimedia.org/wikipedia/commons/6/6d/TS_connector_abbreviated.svg)
 		- Image: public domain (CC0), via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:TS_connector_abbreviated.svg)
@@ -23,8 +23,4 @@ tags:: [[Diataxis/Reference]], [[Audio]], [[Audio/Connector]]
 		- Some patch/pedal cables where only a single unbalanced signal is needed
 		- Effects pedal power/trigger connections on compact gear
 	- ## Compatibility
-		- Physically fits into [[Audio/Connector/Ref/3.5mm TRS]] and [[Audio/Connector/Ref/3.5mm TRRS]] jacks, but the extra ring(s) on those jacks are left unconnected — a TS plug in a TRS/TRRS jack typically only drives the left channel or grounds the unused rings, depending on the device's normalling
-	- ## Related References
-		- [[Audio/Connector/Ref/Index]]
-		- [[Audio/Connector/Ref/3.5mm TRS]]
-		- [[Audio/Connector/Ref/3.5mm TRRS]]
+		- Physically fits into [[Audio/Connector/Phone/TRS/3.5mm]] and [[Audio/Connector/Phone/TRRS/3.5mm]] jacks, but the extra ring(s) on those jacks are left unconnected — a TS plug in a TRS/TRRS jack typically only drives the left channel or grounds the unused rings, depending on the device's normalling

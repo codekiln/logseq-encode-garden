@@ -1,7 +1,6 @@
 tags:: [[Diataxis/Reference]], [[RCA]], [[RCA/Connector]]
 
 - alias:: [[RCA Plug]], [[Phono Plug]]
-
 - # RCA Male Connector Reference
 	- ## Visual Reference
 		- ![RCA male plugs for composite video and stereo audio](https://upload.wikimedia.org/wikipedia/commons/9/91/Composite-cables.jpg)
@@ -24,7 +23,7 @@ tags:: [[Diataxis/Reference]], [[RCA]], [[RCA/Connector]]
 		- **Orange**: digital coax audio (S/PDIF)
 	- ## Compatibility
 		- **Mates with**: [[RCA/Connector/Ref/RCA Female]]
-		- Adapters exist to [[Audio/Connector/Ref/3.5mm TRS]] for stereo audio (common on portable devices)
+		- Adapters exist to [[Audio/Connector/Phone/TRS/3.5mm]] for stereo audio (common on portable devices)
 	- ## Common Use Cases
 		- Composite and component video cables
 		- Analog stereo audio cables (turntables, amplifiers, TVs, mixers)
@@ -41,4 +40,4 @@ tags:: [[Diataxis/Reference]], [[RCA]], [[RCA/Connector]]
 	- ## Related References
 		- [[RCA/Connector/Ref/Index]]
 		- [[RCA/Connector/Ref/RCA Female]]
-		- [[Audio/Connector/Ref/3.5mm TRS]]
+		- [[Audio/Connector/Phone/TRS/3.5mm]]

@@ -1,8 +1,8 @@
-tags:: [[Diataxis/Reference]], [[Audio]], [[Audio/Connector]]
+tags:: [[Diataxis/Reference]]
+logseq-entity:: [[Logseq/Entity/Hardware/Connector/Audio]]
+alias:: [[3.5mm Stereo Audio Jack]], [[1/8 inch Stereo Audio Jack]]
 
-- alias:: [[3.5mm Stereo Jack]], [[TRS Connector]], [[Aux Cable]]
-
-- # 3.5mm TRS Connector Reference
+- # 3.5mm / `1/8"` Mini Phono TRS Connector
 	- ## Visual Reference
 		- ![TRS connector schematic showing tip, ring, and sleeve](https://upload.wikimedia.org/wikipedia/commons/6/66/TRS_connector_abbreviated.svg)
 		- Image: public domain (CC0), via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:TRS_connector_abbreviated.svg)
@@ -24,11 +24,6 @@ tags:: [[Diataxis/Reference]], [[Audio]], [[Audio/Connector]]
 		- Aux/line-in cables between phones, media players, and speakers or car stereos
 		- Line-level audio breakout on cameras and recorders
 	- ## Compatibility
-		- Physically fits into [[Audio/Connector/Ref/3.5mm TRRS]] jacks; the extra ring on the TRRS jack (mic/ground) is simply left unused
-		- A [[Audio/Connector/Ref/3.5mm TS]] plug fits into a TRS jack but only drives one channel
+		- Physically fits into [[Audio/Connector/Phone/TRRS/3.5mm]] jacks; the extra ring on the TRRS jack (mic/ground) is simply left unused
+		- A [[Audio/Connector/Phone/TS/3.5mm]] plug fits into a TRS jack but only drives one channel
 		- Adapters exist to/from [[RCA/Connector/Ref/RCA Male]] pairs for stereo line audio
-	- ## Related References
-		- [[Audio/Connector/Ref/Index]]
-		- [[Audio/Connector/Ref/3.5mm TS]]
-		- [[Audio/Connector/Ref/3.5mm TRRS]]
-		- [[RCA/Connector/Ref/Index]]
