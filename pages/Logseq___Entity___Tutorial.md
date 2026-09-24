@@ -1,0 +1,43 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Tutorial
+	- In this garden, **Tutorial** pages model learning-oriented walkthroughs that carry a reader through a practical sequence and leave them able to do something they could not do before.
+	- ## Examples in this garden
+		- [[tmux/Tutorial/Use tmux on Mac]]
+		- [[Readwise/CLI/Tutorial/Install and Log In]]
+		- [[LazyVim/Tutorial/Work with the Terminal]]
+	- ## When we treat something as a tutorial entity
+		- Strong signals: the page is written for someone acquiring a skill; it moves through concrete steps that each produce a visible result; every step is one the author has run and knows works.
+		- A tutorial takes responsibility for the reader's success. The reader follows along and arrives somewhere, having learned by doing.
+		- A page that solves a stated problem for someone who already knows what they want is a [[Logseq/Entity/How To]] instance. A page that describes a system for lookup is a [[Logseq/Entity/Reference]] instance. A page that explains why something works is a [[Logseq/Entity/Concept]] instance.
+	- ## Naming and links
+		- **Link shape:** `[[Topic/Tutorial/Learning Goal]]` or `[[Topic/SubTopic/Tutorial/Learning Goal]]`.
+		- **File shape:** `pages/Topic___Tutorial___Learning Goal.md`, triple underscores between namespace segments.
+		- The trailing segment names what the reader will be able to do, as in [[Claude/Code/Tutorial/Fork a btw side question into a background subagent]].
+	- ## Finding and deduplicating
+		- Search before creating: the expected title under the topic namespace, then `pages/**___Tutorial___*.md` for the skill being taught, then the topic's other pages in case the walkthrough already lives inside one.
+		- Classify as: **existing**, **similar** (needs human judgment), **new**, or **blocked** (ambiguous topic).
+		- A topic with several tutorials that overlap heavily is usually one tutorial and a set of how-tos.
+	- ## Frontmatter
+		- On instances, set **`logseq-entity::`** [[Logseq/Entity/Tutorial]] so backlinks list the garden's tutorials.
+		- New tutorial pages carry [[Diataxis/Tutorial]] in `tags::` alongside the topic's own tags.
+		- **`see-also::`** carries the adjacent reading, strongest tie first.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- **H1** — `Tutorial: <Learning Goal>`.
+		- **Sections**, in order, omitting what the topic does not need:
+			- **What You'll Create** — the end result in a sentence or two.
+			- **Prerequisites** — tools, versions, and setup the reader needs in hand.
+			- **Learning Goals** — the skills the reader walks away with.
+			- **Steps** — each an H3 achievement with concrete instructions, the result to expect, and what to notice.
+			- **What You've Learned** — the recap and where to practise next.
+		- Adjacent pages go in **`see-also::`** rather than a `## Related` list of internal links.
+	- ## Voice and quality bar
+		- First person plural for the shared work: "We will create…". Present tense, active voice.
+		- Set expectations out loud: "You will see…", "Notice that…".
+		- Concrete over abstract — specific commands, specific values, specific output.
+		- Explanation stays thin; the reasoning lives on a [[Logseq/Entity/Concept]] page and gets a link.
+		- Early and frequent visible results, so the reader knows the path is working.
+		- The steps have been run start to finish before the page is published.
+	- ## Relationship to Diataxis
+		- [[Diataxis/Tutorial]] is the framework vocabulary in the graph: content that guides **learning** and serves the **acquisition of skill**. This page is the operational shape those pages take here.

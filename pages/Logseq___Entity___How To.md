@@ -1,0 +1,44 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # How To
+	- In this garden, **How To** pages model goal-oriented directions that carry a competent reader through one specific problem to one concrete result.
+	- ## Examples in this garden
+		- [[rulesync/How To/Write Skills With Progressive Disclosure]]
+		- [[Logseq/How To/Collapse Linked References By Default]]
+		- [[JIRA/How To/Create a Rankable Board]]
+	- ## When we treat something as a how-to entity
+		- Strong signals: the page addresses a real problem the reader already knows they have; it assumes competence; it is a sequence of executable steps toward a named result.
+		- The scope is one task. "How to reset your password" is a how-to; "How to use accounts" is a topic that wants several.
+		- A page written for someone acquiring a skill is a [[Logseq/Entity/Tutorial]] instance. A page that describes a system for lookup is a [[Logseq/Entity/Reference]] instance. A page that explains why something works is a [[Logseq/Entity/Concept]] instance.
+	- ## Naming and links
+		- **Link shape:** `[[Topic/How To/Task]]` or `[[Topic/SubTopic/How To/Task]]`.
+		- **File shape:** `pages/Topic___How To___Task.md`, triple underscores between namespace segments.
+		- The trailing segment states plainly what the guide accomplishes, led by a verb: [[1Password/How To/Add Password Expiration]], [[MCP/Doc/How To/Set up with mise and Claude Code with Langgraph llms.txt]].
+	- ## Finding and deduplicating
+		- Search before creating: the expected title under the topic namespace, then `pages/**___How To___*.md` for the task and its synonyms, then the topic's own pages in case the steps already sit inside one.
+		- Classify as: **existing**, **similar** (needs human judgment), **new**, or **blocked** (ambiguous topic).
+		- A guide that has grown past one task splits into several focused guides.
+	- ## Frontmatter
+		- On instances, set **`logseq-entity::`** [[Logseq/Entity/How To]] so backlinks list the garden's guides.
+		- New how-to pages carry [[Diataxis/How To]] in `tags::` alongside the topic's own tags.
+		- **`see-also::`** carries the adjacent reading, strongest tie first.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- **H1** — `How To <Task>`.
+		- **Sections**, in order, omitting what the task does not need:
+			- **Overview** — what the guide accomplishes, who it is for, and when they reach for it.
+			- **Prerequisites** — tools, permissions, versions, and knowledge the reader needs in hand.
+			- **Steps** — each an H3 in a logical sequence, one action where possible, with the variations written as conditionals.
+			- **Troubleshooting** — the problems the reader is likely to hit, each with its fix, in a "if you see X, do Y" shape.
+		- Adjacent pages go in **`see-also::`** rather than a `## Related` list of internal links.
+		- Research still in progress sits under a `### Research` heading with the uncertain parts flagged, until it resolves.
+	- ## Voice and quality bar
+		- Steps open with an action verb: Install, Configure, Create, Export.
+		- Present tense, active voice, sentences trimmed to the action.
+		- Conditional imperatives for the branches: "If you want X, do Y".
+		- Background and reasoning go to a [[Logseq/Entity/Concept]] page and get a link; the guide stays on the path.
+		- Usable beats exhaustive — the common route first, the exotic cases only where they bite.
+		- The author has followed the steps as written before the page is published.
+	- ## Relationship to Diataxis
+		- [[Diataxis/How To]] is the framework vocabulary in the graph: content that informs **action** and serves the **application of skill**. This page is the operational shape those pages take here.
+		- [[Diataxis/How To/Create a How To]] walks the authoring pass step by step.

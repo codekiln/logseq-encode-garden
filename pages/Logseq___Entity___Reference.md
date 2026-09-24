@@ -1,0 +1,45 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Reference
+	- In this garden, **Reference** pages model information-oriented technical descriptions that a reader consults mid-task and trusts without argument.
+	- ## Examples in this garden
+		- [[Claude/Code/Ref/Session Storage]]
+		- [[USB/Connector/Ref/USB-C]]
+		- [[FastAPI/Docs/Ref/Background Tasks]]
+	- ## When we treat something as a reference entity
+		- Strong signals: the page states what something is, what its parts are, and what values they take; its organization follows the thing it describes rather than any reader's journey; a reader arrives, looks one fact up, and leaves.
+		- Reference is led by the structure of the product. Its shape is a map of the territory.
+		- A page that guides a reader through a task is a [[Logseq/Entity/How To]] instance. A page written for someone acquiring a skill is a [[Logseq/Entity/Tutorial]] instance. A page that argues or explains is a [[Logseq/Entity/Concept]] instance.
+		- A single term or acronym with a short definition is a [[Logseq/Entity/Term]] instance.
+	- ## Naming and links
+		- **Link shape:** `[[Topic/Ref/Subject]]` or `[[Topic/SubTopic/Ref/Subject]]`, using the `Ref` segment.
+		- **File shape:** `pages/Topic___Ref___Subject.md`, triple underscores between namespace segments.
+		- The trailing segment names the subject being described: [[DevContainer/Ref/Variable/containerWorkspaceFolder]], [[RCA/Connector/Ref/RCA Male]].
+		- A family of reference pages may carry an index sibling, as [[USB/Connector/Ref/Index]] does.
+	- ## Finding and deduplicating
+		- Search before creating: the expected title under the topic namespace, then `pages/**___Ref___*.md` for the subject and its alternate names, then the topic's own pages in case the table already sits inside one.
+		- Classify as: **existing**, **similar** (needs human judgment), **new**, or **blocked** (ambiguous topic).
+		- Sibling reference pages in the same family follow one format, so a new page copies the shape its siblings already use.
+	- ## Frontmatter
+		- On instances, set **`logseq-entity::`** [[Logseq/Entity/Reference]] so backlinks list the garden's reference pages.
+		- New reference pages carry [[Diataxis/Reference]] in `tags::` alongside the topic's own tags.
+		- **`see-also::`** carries the adjacent reading, strongest tie first.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- **H1** — the subject, as `<Subject> Reference` or the subject's own name.
+		- **Sections**, in order, omitting what the subject does not need:
+			- **Overview** — what the page covers and where its boundaries fall, stated factually.
+			- **Structure** — how the page is organized and what conventions it uses, when the subject is large enough to need it.
+			- **Core Components** — each part as an H3 with its description, specifications, parameters, and a usage example.
+			- **Technical Details** — specifications, constraints, versions, dependencies.
+		- Adjacent pages go in **`see-also::`** rather than a `## Related` list of internal links.
+	- ## Voice and quality bar
+		- **Describe and only describe** — accuracy, precision, completeness, clarity. Facts carry no opinion, speculation, or sales voice.
+		- **Austere** — the page is consulted, not read from end to end.
+		- **Authoritative** — statements land without hedging, so a reader can stand on them.
+		- **Consistent** — standard patterns, so a reader who knows one page can navigate the next.
+		- **Structured after the product** — the page's arrangement mirrors the thing's own arrangement.
+		- Examples illustrate; instruction and argument go to a [[Logseq/Entity/How To]] or [[Logseq/Entity/Concept]] page and get a link.
+		- A reference page tracks the thing it describes: when the thing changes, the page changes with it.
+	- ## Relationship to Diataxis
+		- [[Diataxis/Reference]] is the framework vocabulary in the graph: content that informs **cognition** and serves **theoretical knowledge**. This page is the operational shape those pages take here.
