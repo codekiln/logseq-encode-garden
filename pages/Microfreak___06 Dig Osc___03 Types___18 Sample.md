@@ -1,6 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Microfreak/06 Dig Osc/03 Types]]
 prev:: [[Microfreak/06 Dig Osc/03 Types/17 WaveUser]]
+next:: [[Microfreak/06 Dig Osc/03 Types/19 Scan Grains]]
 - # 06.03.18 Sample
 	- Sample Oscillator Model
 		- ![01 Sample Oscillator Model](../assets/Microfreak___06-Dig-Osc___03-Types___18-Sample___01-Sample-Oscillator-Model.png)

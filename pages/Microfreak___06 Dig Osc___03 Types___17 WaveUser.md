@@ -1,6 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Microfreak/06 Dig Osc/03 Types]]
-prev:: [[Microfreak/06 Dig Osc/03 Types/01 BasicWaves]]
+prev:: [[Microfreak/06 Dig Osc/03 Types/16 HARM]]
 next:: [[Microfreak/06 Dig Osc/03 Types/18 Sample]]
 - # 06.03.17 User Wavetable Oscillator (WaveUser)
 	- User Wavetable Oscillator Model
