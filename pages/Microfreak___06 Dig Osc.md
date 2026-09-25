@@ -14,5 +14,6 @@ next:: [[Microfreak/07 Filter]]
 	- > [[Note/Info]] The explanation of the parameters below is intended for advanced users. The best way to understand what the parameters do is to tweak the knobs and use your ears to experience the sonic results. The knowledge you gain in this way is usually more valuable than understanding the mathematical function of a parameter.
 	- {{embed [[Microfreak/06 Dig Osc/01 as Soundgen]]}}
 	- {{embed [[Microfreak/06 Dig Osc/02 Param Controls]]}}
+	- {{embed [[Microfreak/06 Dig Osc/03 Types]]}}
 	-
 	-
