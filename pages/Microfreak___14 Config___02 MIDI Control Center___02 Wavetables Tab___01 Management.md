@@ -1,5 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 4]]
 up:: [[Microfreak/14 Config/02 MIDI Control Center/02 Wavetables Tab]]
+next:: [[Microfreak/14 Config/02 MIDI Control Center/02 Wavetables Tab/02 Dragging]]
 - # 14.2.2.1 Wavetable Management
 	- The buttons above the computer and MicroFreak panes move and manage wavetables.
 	- Wavetable management buttons
@@ -20,4 +21,14 @@ up:: [[Microfreak/14 Config/02 MIDI Control Center/02 Wavetables Tab]]
 		- With more than eight source cycles, MicroFreak distributes them evenly across the wavetable and crossfades between them.
 		- With fewer than eight source cycles, it spreads them across the slots so the Wave knob can reach every cycle.
 	- An audio file can therefore become a usable wavetable without manually preparing each cycle.
-	- **Export** saves a selected wavetable as MFW or a selected bank as MFWB.
+	- **Export** saves a selected wavetable as MFW or a selected bank as MFWB. Choose a location in the system save dialog.
+	- Export choices
+		- ![04 Export choices](../assets/Microfreak___14-Config___02-MIDI-Control-Center___02-Wavetables-Tab___01-Management___04-Export.png)
+	- **Delete** removes a selected wavetable after confirmation and replaces it with an init wavetable that morphs between simple waveforms.
+	- Delete confirmation
+		- ![05 Delete confirmation](../assets/Microfreak___14-Config___02-MIDI-Control-Center___02-Wavetables-Tab___01-Management___05-Delete.png)
+	- **Send to MicroFreak** transfers the bank assembled in the computer pane to the MicroFreak for the User Wavetable oscillator.
+	- > [[Note/Warning]] This overwrites every wavetable in the MicroFreak. Do not turn its knobs while the transfer progress bar is visible.
+	- Wavetable transfer progress
+		- ![06 Wavetable transfer progress](../assets/Microfreak___14-Config___02-MIDI-Control-Center___02-Wavetables-Tab___01-Management___06-Transfer.png)
+	- **Recall to Computer** copies the MicroFreak's current wavetables into a new bank in the computer pane. The bank initially has a date-and-time name, which you can change in the Bank Name field.
