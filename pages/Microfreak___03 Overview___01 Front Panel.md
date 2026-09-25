@@ -4,3 +4,4 @@ up:: [[Microfreak/03 Overview]]
 	- The MicroFreak's front panel is compact.
 	- {{embed [[Microfreak/03 Overview/01 Front Panel/01 Top Row]]}}
 	- {{embed [[Microfreak/03 Overview/01 Front Panel/02 Middle Row]]}}
+	- {{embed [[Microfreak/03 Overview/01 Front Panel/03 Bottom Row]]}}
