@@ -12,34 +12,30 @@ metadata:
 ---
 # Logseq question
 
-Use this skill when the user wants to **capture a single answerable question** in the knowledge graph using the **`/Q/`** namespace pattern, **log it in today’s journal**, and **research an answer** using the page shape on **`[[Logseq/Entity/Question]]`**.
+Capture a single answerable question in the graph under the **`/Q/`** namespace, log it in today's journal, and research an answer.
 
-## Relationship to logseq-entity
+## Read this first
 
-A **question** is one **entity type** in this garden. Shared rules apply:
+**[[Logseq/Entity/Question]]** (`pages/Logseq___Entity___Question.md`) is the sole authority for question pages: the `/Q/` naming and `___Q___` file mapping, dedup search order, frontmatter, section order and the `[[AI Answer]]` shape, how to pick a topic namespace, how to answer, and how legacy pages differ. Read it before filing anything; this skill does not restate it.
 
-* **Entity definition:** `[[Logseq/Entity/Question]]` (`pages/Logseq___Entity___question.md`).
-* **Registry and shared fallback:** `[[Logseq/Entity]]`, then `.rulesync/config/logseq-entity.md` only when graph pages are missing or insufficient (that file is short graph-first fallback text, not per-type sections).
-* **Search, dedup, and “existing / similar / new / blocked”:** skill **logseq-entity** — read [references/configuration-contract.md](../logseq-entity/references/configuration-contract.md) and [references/entity-search-and-dedup.md](../logseq-entity/references/entity-search-and-dedup.md) when executing dedup (Step 2 of the workflow).
+A question is one **entity type**, so the shared machinery is the **logseq-entity** skill's, not this one's:
 
-This skill adds **question-specific** filing steps: namespace/`___Q___` naming, journal bullet, and the research pass. Do not duplicate the entity-type definition; **`[[Logseq/Entity/Question]]`** is the sole format authority.
-
-For **non-question** entity work (other types per `[[Logseq/Entity]]`, registry edits, etc.), skill **logseq-entity** owns **Filed** / **Updated** closeout on today’s journal. Follow that skill’s **Graph edits and today’s journal** section and [references/entity-session-journal.md](../logseq-entity/references/entity-session-journal.md)—journal discipline is **not** exclusive to this question skill.
+- **Dedup mechanics** and the *existing / similar / new / blocked* outcomes → [entity-search-and-dedup.md](../logseq-entity/references/entity-search-and-dedup.md)
+- **Config resolution order** when graph pages are missing → [configuration-contract.md](../logseq-entity/references/configuration-contract.md)
+- **`[[Filed]]` / `[[Updated]]` closeout** on today's journal → [entity-session-journal.md](../logseq-entity/references/entity-session-journal.md) and [[Logseq/Journal]]
 
 ## Procedure
 
-1. Load type configuration (Step 0): `[[Logseq/Entity]]`, `[[Logseq/Entity/Question]]`, then `.rulesync/config/logseq-entity.md` if needed.
-2. Open and follow **[references/question-workflow.md](./references/question-workflow.md)** from top to bottom (variables → conventions → Steps 1–5 → report).
+1. Read `[[Logseq/Entity]]`, then `[[Logseq/Entity/Question]]`. Fall back to `.rulesync/config/logseq-entity.md` only if a graph page is missing.
+2. Settle the question text and its topic namespace per the type page's **Creating an instance**.
+3. Dedup with the logseq-entity references above plus the type page's **Finding and deduplicating**. An **existing** match stops the run — say so and journal it rather than filing a second page; **similar** or **blocked** stops for human judgment.
+4. Create the page in the shape the type page gives, and record it under `[[Filed]]`.
+5. Research and write the answer per the type page's **Answering an instance**. Pages edited along the way go under `[[Updated]]`; never list one page under both the same day.
+6. Report the page link, its journal placement, and the answer — or say plainly that the question is still open.
 
 ## Progressive disclosure
 
-* **This file** — when to use the skill and how it relates to **logseq-entity** / **`[[Logseq/Entity/Question]]`**.
-* **[references/question-workflow.md](./references/question-workflow.md)** — full variables, conventions, numbered steps, reporting, and related rules/commands.
-* Answer body LFM (formatting only, not section names): rule **logseq-core** → _Bold and inline code (monospace)_ (advanced detail: skill **logseq-lfm**).
-
-## Reference guide
-
-* Full workflow: [references/question-workflow.md](./references/question-workflow.md)
-* Entity dedup: [references/entity-search-and-dedup.md](../logseq-entity/references/entity-search-and-dedup.md)
-* Entity config contract: [references/configuration-contract.md](../logseq-entity/references/configuration-contract.md)
-* Entity sessions and Filed/Updated: [references/entity-session-journal.md](../logseq-entity/references/entity-session-journal.md)
+- **[[Logseq/Entity/Question]]** — what a question page is: naming, dedup, frontmatter, shape, answering.
+- **This file** — when to reach for it, and the order of the pass.
+- **skill logseq-entity** — dedup, config contract, journal closeout shared by every entity type.
+- Answer body LFM: rule **logseq-core** → *Bold and inline code (monospace)* (advanced detail: skill **logseq-lfm**).

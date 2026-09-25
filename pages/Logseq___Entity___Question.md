@@ -51,6 +51,15 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 				  ~~~
 			- Use `==highlight==` to mark mnemonic cues in the answer (e.g. `==N==ext Window`).
 			- Wikilink key terms in both the question and the answer to existing entity pages.
+	- ## Creating an instance
+		- **Choose the topic namespace first.** It is the domain or tool the question is about — `Claude Code`, `git`, `LangSmith`, `EdTech/Idea/LearnMark`. Infer it from the question when the human did not name one; ask rather than guess when nothing plausible presents itself.
+		- Keep the question's full wording, punctuation included, as the page title. Normalize trailing `?` for searching only.
+		- The filing is recorded in today's journal like any other graph edit — a new page under `[[Filed]]`, an edited one under `[[Updated]]`, per [[Logseq/Journal]].
+	- ## Answering an instance
+		- Filing and answering are one pass: once the page and its journal line exist, research the answer rather than leaving a bare question.
+		- Draw on whatever is at hand — the garden's own pages first, then official documentation, then web search. Prefer a source that can be cited over recollection.
+		- Write the answer into `## [[AI Answer]]` per **Page shape** above, marking it `[[Answer/Official]]` when it comes from official docs.
+		- When the answer cannot be settled, say so on the page and tell the human what is missing. An honestly open question is worth more than a confident wrong one.
 	- ## Relationship to other types
 		- **Card:** `[[card]]` on the H1 plus `[[Logseq/Entity/Card]]` in frontmatter when the question page itself is reviewable; distinct from factoring a prompt into a `/Card/` namespace page under [[Logseq/Entity/Card]].
 		- **CLI commands / flags:** questions *about* commands link to [[Logseq/Entity/CLI/Command]] and [[Logseq/Entity/CLI/Flag]] instances; they are not substitutes for command reference stubs.
