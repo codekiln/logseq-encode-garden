@@ -4,6 +4,7 @@ prev:: [[Microfreak/20 Appendix C - Cheat Sheet]]
 next:: [[Microfreak/22 Declaration of Conformity]]
 - # 21. Appendix D: CC# Values
 	- {{embed [[Microfreak/21 Appendix D - CC Values/01 What are CC Values]]}}
+	- The default CC numbers are:
 	- ## Parameters and their CC numbers
 		- Spice
 			- CC number: 2
