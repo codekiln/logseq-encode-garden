@@ -3,7 +3,7 @@ up:: [[Microfreak]]
 prev:: [[Microfreak/07 Filter]]
 
 - # 08 The LFO
-	- An LFO (short for low-frequency oscillator) produces waveforms below the range of hearing. These waveforms can modulate other parts of the MicroFreak, such as:
+	- An LFO (short for low-frequency oscillator) produces waveforms at sub-audio frequencies. These waveforms can modulate other parts of the MicroFreak, such as:
 		- The oscillator pitch
 		- The filter cutoff frequency
 		- The filter emphasis
