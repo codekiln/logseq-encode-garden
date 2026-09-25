@@ -1,0 +1,69 @@
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]]
+up:: [[Microfreak]]
+prev:: [[Microfreak/19 Appendix B Vocoder]]
+next:: [[Microfreak/21 Appendix D - CC Values]]
+- # 20 Appendix C: Cheat Sheet
+	- ## Preset
+		- Shift + Preset Encoder
+			- Quickly select the “A”, “a”, “0”, or “.” character range.
+		- Long press Save
+			- Quick save.
+		- Press the Preset Encoder three times
+			- Reset the current preset to its Init state.
+	- ## Oscillator
+		- Shift + Wave encoder
+			- Change values at the opposite speed (slow or fast) of the Osc Knob Speed setting in Utility > Browsing.
+		- Shift + Timbre encoder
+			- Change values at the opposite speed (slow or fast) of the Osc Knob Speed setting in Utility > Browsing.
+		- Shift + Shape encoder
+			- Change values at the opposite speed (slow or fast) of the Osc Knob Speed setting in Utility > Browsing.
+		- Shift + Type when Sample, Scan Grains, Cloud Grains, or Hit Grains is selected
+			- Browse and select samples.
+	- ## Matrix
+		- Hold the Matrix Encoder for 0.5 seconds
+			- Reset the modulation amount.
+		- Assign1 + any knob
+			- Create a routing between the Assign1 column and the selected knob.
+		- Assign2 + any knob
+			- Create a routing between the Assign2 column and the selected knob.
+		- Assign3 + any knob
+			- Create a routing between the Assign3 column and the selected knob.
+		- AssignX + a matrix point
+			- Create a routing between the AssignX column and the selected matrix point.
+		- Long press Shift + Matrix encoder
+			- Reset all modulation.
+	- ## Sequencer and arpeggiator mode
+		- Shift + Arp | Seq
+			- Toggle between arpeggiator and sequencer.
+	- ## Arpeggiator
+		- Shift + a note on the keyboard
+			- Transpose the arpeggio. In Arp Hold mode, the transpose lasts until a new arpeggio is played.
+		- Shift + Up | A
+			- Transfer the current arpeggio to sequencer A.
+		- Shift + Order | B
+			- Transfer the current arpeggio to sequencer B.
+	- ## Sequencer
+		- With Record off:
+			- Up | A + Hold, held for 1 second
+				- Clear sequence A.
+			- Order | B + Hold, held for 1 second
+				- Clear sequence B.
+			- Oct | Mod + Hold
+				- Erase the current modulation track.
+			- Hold Oct | Mod and press Hold
+				- Erase the next modulation track. Press Hold repeatedly to clear all modulation tracks.
+			- Shift + Key
+				- Transpose the sequence.
+			- Shift + A/B
+				- Reload pattern A or B as previously saved in memory.
+		- With Step Record mode active:
+			- Shift + Rate encoder
+				- Change the sequence length.
+	- ## Swing
+		- Shift + Swing
+			- Set the swing rate.
+	- ## Cycling Envelope
+		- Shift + Rise
+			- Set the Cycling Envelope attack shape.
+		- Shift + Fall
+			- Set the Cycling Envelope decay shape.
