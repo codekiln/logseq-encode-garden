@@ -1,6 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]]
 up:: [[Microfreak]]
-
+prev:: [[Microfreak/17 Ext Gear]]
+next:: [[Microfreak/19 Appendix B Vocoder]]
 - # 18 Appendix A: Speech Oscillator: Internal and External Control
 	- The Speech Oscillator generates six sound categories. Choose a category with the Wave encoder, then a word in that category with the Shape encoder. Adjust the selected word's timbre with the Time encoder.
 	- A DAW or MIDI controller can select categories and shapes: send CC 10 with a value for a category, CC 13 with a value for a word or shape, and CC 12 to control the selected word's timbre.
