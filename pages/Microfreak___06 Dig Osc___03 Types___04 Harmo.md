@@ -1,6 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Microfreak/06 Dig Osc/03 Types]]
 prev:: [[Microfreak/06 Dig Osc/03 Types/03 Wavetable]]
+next:: [[Microfreak/06 Dig Osc/03 Types/05 KarplusStr]]
 - # 06.03.04 Harmonic OSC (Harmo)
 	- Harmonic Oscillator Model
 		- ![01 Harmonic Oscillator Model](../assets/Microfreak___06-Dig-Osc___03-Types___04-Harmo___01-Harmonic-Oscillator-Model.png)

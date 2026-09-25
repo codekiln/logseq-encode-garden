@@ -1,6 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Microfreak/06 Dig Osc/03 Types]]
 prev:: [[Microfreak/06 Dig Osc/03 Types/11 Speech]]
+next:: [[Microfreak/06 Dig Osc/03 Types/13 Noise]]
 - # 06.03.12 Modal Resonator (Modal)
 	- Modal Resonator Oscillator Model
 		- ![01 Modal Resonator Oscillator Model](../assets/Microfreak___06-Dig-Osc___03-Types___12-Modal___01-Modal-Resonator-Oscillator-Model.png)

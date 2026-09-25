@@ -1,6 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]]
 up:: [[Microfreak]]
 prev:: [[Microfreak/07 Filter]]
+next:: [[Microfreak/09 Envelope Gen]]
 
 - # 08 The LFO
 	- An LFO (short for low-frequency oscillator) produces waveforms at sub-audio frequencies. These waveforms can modulate other parts of the MicroFreak, such as:

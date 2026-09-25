@@ -1,5 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]]
 up:: [[Microfreak]]
+prev:: [[Microfreak/03 Overview]]
 next:: [[Microfreak/05 Connections]]
 - # 04 The MicroFreak Presets
 	- Arturia invites you to create your own presets. Making sounds yourself helps you learn how to shape sounds toward what you want to hear.

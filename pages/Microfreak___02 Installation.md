@@ -1,6 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]]
 up:: [[Microfreak]]
 prev:: [[Microfreak/01 Welcome and Introduction]]
+next:: [[Microfreak/03 Overview]]
 
 - # 02 Installation
 	- {{embed [[Microfreak/02 Installation/01 Usage Precautions]]}}
