@@ -1,6 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]]
 up:: [[Microfreak]]
 prev:: [[Microfreak/11 Icon Strip]]
+next:: [[Microfreak/13 Sequencer]]
 - # 12 The Arpeggiator
 	- An arpeggiator breaks a chord into individual notes and plays them one by one.
 	- Press **Arp | Seq** to activate the Arpeggiator; the button lights white in Arpeggio mode. Press it again to turn the Arpeggiator off.

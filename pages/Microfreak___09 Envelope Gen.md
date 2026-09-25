@@ -1,6 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]]
 up:: [[Microfreak]]
 prev:: [[Microfreak/08 LFO]]
+next:: [[Microfreak/10 Keyboard]]
 - # 09 The Envelope Generator
 	- The Envelope Generator is one of the MicroFreak's basic building blocks. It shapes a sound's overall loudness or timbre and can send modulation to any Matrix destination, including destinations you create.
 	- The Envelope Generator

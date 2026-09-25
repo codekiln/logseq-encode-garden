@@ -1,6 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]]
 up:: [[Microfreak]]
 prev:: [[Microfreak/09 Envelope Gen]]
+next:: [[Microfreak/11 Icon Strip]]
 - # 10 The Keyboard Section
 	- One of the first capacitive keyboards appeared on the EMS Synthi AKS. In 1972, Don Buchla introduced the Buchla Easel, whose touch-sensitive keys did not move and could produce accurate pressure and voltage-controlled portamento. The capacitive keyboard became a hallmark of the Easel, though few people could afford one. Decades later, the Arturia MicroFreak brought the capacitive keyboard back.
 	- The MicroFreak has 25 capacitive keys. Hundreds of copper-colored dots on the surface register touch as either aftertouch or velocity, according to the Utility setting at Preset → Press.

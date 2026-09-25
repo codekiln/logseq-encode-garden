@@ -1,6 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]]
 up:: [[Microfreak]]
 prev:: [[Microfreak/10 Keyboard]]
+next:: [[Microfreak/12 Arpeggiator]]
 - # 11 Using the Icon Strip
 	- Just above the keyboard, the Icon Strip has function icons and a touch strip.
 	- The Icon Strip

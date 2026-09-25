@@ -1,6 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]]
 up:: [[Microfreak]]
-prev:: [[Microfreak/14 MicroFreak Configuration]]
+prev:: [[Microfreak/14 Config]]
 next:: [[Microfreak/16 Paraphonic Chord Mode]]
 - # 15 Using Scales
 	- Scales can shape the emotion of a melody. Adding chord notes from the melody's scale strengthens its character: major notes may sound forceful and happy, while minor notes may sound sad. Responses to major and minor scales vary across musical cultures.

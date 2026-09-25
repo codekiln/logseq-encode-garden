@@ -1,6 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Microfreak/06 Dig Osc/03 Types]]
 prev:: [[Microfreak/06 Dig Osc/03 Types/09 Formant]]
+next:: [[Microfreak/06 Dig Osc/03 Types/11 Speech]]
 - # 06.03.10 Chords (Chords)
 	- Chords Oscillator Model
 		- ![01 Chords Oscillator Model](../assets/Microfreak___06-Dig-Osc___03-Types___10-Chords___01-Chords-Oscillator-Model.png)

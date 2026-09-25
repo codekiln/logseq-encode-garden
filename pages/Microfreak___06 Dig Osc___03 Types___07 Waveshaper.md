@@ -1,6 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Microfreak/06 Dig Osc/03 Types]]
 prev:: [[Microfreak/06 Dig Osc/03 Types/06 VAnalog]]
+next:: [[Microfreak/06 Dig Osc/03 Types/08 Two Op.FM]]
 - # 06.03.07 Waveshaping Oscillator (Waveshaper)
 	- Waveshaper Oscillator Model
 		- ![01 Waveshaper Oscillator Model](../assets/Microfreak___06-Dig-Osc___03-Types___07-Waveshaper___01-Waveshaper-Oscillator-Model.png)

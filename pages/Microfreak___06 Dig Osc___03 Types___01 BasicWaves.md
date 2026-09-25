@@ -1,5 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Microfreak/06 Dig Osc/03 Types]]
+next:: [[Microfreak/06 Dig Osc/03 Types/02 SuperWave]]
 - # 06.03.01 Basic Waves Oscillator (BasicWaves)
 	- Classic Waveforms Oscillator Model
 		- ![01 Classic Waveforms Oscillator Model](../assets/Microfreak___06-Dig-Osc___03-Types___01-BasicWaves___01-Classic-Waveforms-Oscillator-Model.png)
