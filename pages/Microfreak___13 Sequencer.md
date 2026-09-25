@@ -1,5 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]]
 up:: [[Microfreak]]
+prev:: [[Microfreak/12 Arpeggiator]]
+next:: [[Microfreak/14 Config]]
 - # 13. The Sequencer
 	- The MicroFreak sequencer records and plays up to four notes at once in paraphonic mode. It captures pitch, velocity, and note duration, along with movements of up to four controls in modulation tracks.
 	- It holds two patterns, A and B, which you can alternate during playback. Set their shared length from 4 to 64 steps in Utility > Preset > Seq Length. The same length applies to both patterns and their modulation tracks.
