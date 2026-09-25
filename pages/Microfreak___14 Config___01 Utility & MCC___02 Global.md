@@ -1,0 +1,46 @@
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
+up:: [[Microfreak/14 Config/01 Utility & MCC]]
+prev:: [[Microfreak/14 Config/01 Utility & MCC/01 Preset]]
+- # 14.1.2 Global
+	- Global settings are available in both Utility and MIDI Control Center (MCC), except Reset Setting, which is available only in Utility.
+	- ## MIDI
+		- **Input Chan**: All, 1–16, or None; MIDI receive channel.
+		- **Output Chan**: 1–16; MIDI transmit channel.
+		- **Output Dest**: None, USB, MIDI, or Both; where MIDI data is transmitted.
+		- **Local**: Off or On; enables local editing with the knobs. Default: On.
+		- **Arp/Seq MIDI Out**: Off or On; sends arpeggiator and sequencer data over MIDI.
+		- **Thru**: Off or On; echoes MIDI In data to MIDI Out when On.
+		- **Knob Send CCs**: Off or On; sends knob control-change data to external instruments.
+		- **Merge**: USB+KBD, MIDI+KBD, or BOTH+KBD; chooses how keyboard data is merged into the MIDI stream.
+	- ## Sync
+		- **Source**: Internal, USB, MIDI, Clock, or Auto; chooses the tempo source.
+		- **Clock**: One Step, 2 PPQ, 24 PPQ, or 48 PPQ; sets the clock standard.
+		- **Global Tempo**: Off or On; when On, preset tempos are ignored and the most recently set tempo persists.
+	- ## CV/Gate
+		- **Pitch Format**: 1 V/oct, Hz/V, or 1.2 V/oct; sets pitch CV output format.
+		- **Gate Format**: S-Trig, V-Trig 5 V, or V-Trig 12 V; sets gate output format.
+		- **Pressure Range**: 1–10 V; sets the Press output voltage range.
+		- **0 V Reference**: C−1 to G8; sets the note that outputs zero volts in 1 V/oct or 1.2 V/oct format.
+		- **1 V Reference**: C−1 to G8; sets the note that outputs one volt in Hz/V format.
+	- ## Controls
+		- **Knob Catch**: Jump, Hook, or Scaled; determines how a physical knob position meets its digital value.
+		- **Click to Load**: Off or On; when On, loading a selected preset requires a click.
+		- **Osc Knob Speed**: Slow or Fast; sets the response of the Wave, Timbre, and Shape knobs.
+		- **KBD Sensitivity**: 10–100%; sets keyboard response for Pressure and Velocity.
+		- **Aftertouch Curve**: Linear, Logarithmic, or Exponential.
+		- **Velocity Curve**: Linear, Logarithmic, or Exponential.
+		- **Relative Bend**: Off or On; when On, bending starts from where you touch the bend strip.
+	- ## Global Scale
+		- **Scale**: Off, Major, Minor, Harmonic Minor, Dorian, Mixolydian, Blues, or Pentatonic.
+		- **Root Note**: C, C♯, D, D♯, E, F, F♯, G, G♯, A, A♯, or B.
+	- ## Master Tuning
+		- **Cent Offset**: −50 to +50 cents from global tuning.
+		- **A Reference**: 427.47–453.89 Hz; sets the frequency of A. The western tuning standard is 440 Hz.
+	- ## Mic Setting
+		- **Mic Gain**: −12 dB to 59 dB, or Auto Gain; sets microphone gain for the vocoder.
+		- **Noise Gate**: Off or −30 to −90 dB; sets the signal threshold.
+		- **Mic Detection**: Off or On; when On, active sensing detects whether a microphone is present.
+	- ## Misc
+		- **Mem Protect**: Off permits overwriting all presets; Factory Only protects factory presets; On protects all presets.
+		- **Oct LED Blink**: Off or On; sets whether active Octave Shift buttons glow steadily or blink.
+		- **Reset Setting**: Cancel or Yes; restores factory settings, erases Utility changes, and erases presets. Available in Utility only.

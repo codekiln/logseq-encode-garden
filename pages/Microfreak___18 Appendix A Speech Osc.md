@@ -1,0 +1,91 @@
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]]
+up:: [[Microfreak]]
+prev:: [[Microfreak/17 Ext Gear]]
+next:: [[Microfreak/19 Appendix B Vocoder]]
+- # 18 Appendix A: Speech Oscillator: Internal and External Control
+	- The Speech Oscillator generates six sound categories. Choose a category with the Wave encoder, then a word in that category with the Shape encoder. Adjust the selected word's timbre with the Time encoder.
+	- A DAW or MIDI controller can select categories and shapes: send CC 10 with a value for a category, CC 13 with a value for a word or shape, and CC 12 to control the selected word's timbre.
+	- ## Wave categories
+		- **Vowels, range of formants** — Wave 0.0–42.4; CC 10 values 0–53
+		- **Colours** — Wave 42.5; CC 10 value 54
+		- **Numbers** — Wave 54.6; CC 10 value 70
+		- **Letters and phonetics** — Wave 66.9; CC 10 value 85
+		- **Phonetic** — Wave 78.8; CC 10 value 101
+		- **Synth terms** — Wave 90.9; CC 10 value 116
+	- ## Timbre formants
+		- **Low formant** — Timbre 0.0; CC 12 value 0
+		- **Mid formant, good clarity** — Timbre 50.0; CC 12 value 64
+		- **High formant** — Timbre 100.0; CC 12 value 127
+	- ## Shape values
+		- ### Vowels
+			- a..e..i..o..u..y — Shape 0.0–100.0; CC 13 values 0–127
+		- ### Colours
+			- red — Shape 0.0; CC 13 value 0
+			- orange — Shape 15.0; CC 13 value 19
+			- yellow — Shape 29.0; CC 13 value 37
+			- green — Shape 43.0; CC 13 value 54
+			- blue — Shape 58.0; CC 13 value 73
+			- indigo — Shape 72.0; CC 13 value 91
+			- violet — Shape 86.0; CC 13 value 109
+		- ### Numbers
+			- zero — Shape 0.0; CC 13 value 0
+			- one — Shape 10.0; CC 13 value 13
+			- two — Shape 19.0; CC 13 value 25
+			- three — Shape 28.0; CC 13 value 36
+			- four — Shape 37.0; CC 13 value 47
+			- five — Shape 46.0; CC 13 value 59
+			- six — Shape 55.0; CC 13 value 70
+			- seven — Shape 64.0; CC 13 value 82
+			- eight — Shape 73.0; CC 13 value 93
+			- nine — Shape 82.0; CC 13 value 105
+			- ten — Shape 91.0; CC 13 value 116
+		- ### Letters and phonetics
+			- a alpha — Shape 0.0; CC 13 value 0
+			- b bravo — Shape 4.0; CC 13 value 5
+			- c charlie — Shape 8.0; CC 13 value 10
+			- d delta — Shape 12.0; CC 13 value 15
+			- e echo — Shape 16.0; CC 13 value 20
+			- f foxtrot — Shape 20.0; CC 13 value 25
+			- g golf — Shape 24.0; CC 13 value 30
+			- h hotel — Shape 27.0; CC 13 value 35
+			- i india — Shape 31.0; CC 13 value 40
+			- j juliet — Shape 35.0; CC 13 value 44
+			- k kilo — Shape 39.0; CC 13 value 49
+			- l lima — Shape 43.0; CC 13 value 54
+			- m mike — Shape 47.0; CC 13 value 59
+			- n november — Shape 50.0; CC 13 value 64
+			- o oscar — Shape 54.0; CC 13 value 69
+			- p papa — Shape 58.0; CC 13 value 74
+			- q quebec — Shape 62.0; CC 13 value 79
+			- r romeo — Shape 66.0; CC 13 value 84
+			- s sierra — Shape 70.0; CC 13 value 88
+			- t tango — Shape 74.0; CC 13 value 93
+			- u uniform — Shape 77.0; CC 13 value 98
+			- v victor — Shape 81.0; CC 13 value 103
+			- w whisky — Shape 85.0; CC 13 value 108
+			- x xray — Shape 89.0; CC 13 value 113
+			- y yankee — Shape 93.0; CC 13 value 118
+			- z zulu — Shape 97.0; CC 13 value 123
+		- ### Synth terms
+			- analog — Shape 0.0; CC 13 value 0
+			- circuit — Shape 5.0; CC 13 value 6
+			- clock — Shape 10.0; CC 13 value 12
+			- control — Shape 14.0; CC 13 value 18
+			- digital — Shape 19.0; CC 13 value 24
+			- electronic — Shape 23.0; CC 13 value 29
+			- filter — Shape 28.0; CC 13 value 35
+			- frequency — Shape 32.0; CC 13 value 41
+			- generator — Shape 37.0; CC 13 value 47
+			- instrument — Shape 41.0; CC 13 value 52
+			- knob — Shape 46.0; CC 13 value 58
+			- machine — Shape 50.0; CC 13 value 64
+			- modular — Shape 55.0; CC 13 value 70
+			- modulator — Shape 60.0; CC 13 value 76
+			- operator — Shape 64.0; CC 13 value 81
+			- oscillator — Shape 69.0; CC 13 value 87
+			- patch — Shape 73.0; CC 13 value 93
+			- sequencer — Shape 78.0; CC 13 value 99
+			- synthesizer — Shape 82.0; CC 13 value 104
+			- vca — Shape 87.0; CC 13 value 110
+			- voltage — Shape 91.0; CC 13 value 116
+			- waveform — Shape 96.0; CC 13 value 122
