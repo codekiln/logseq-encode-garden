@@ -10,6 +10,6 @@ prev:: [[Microfreak/14 Config/02 MIDI Control Center/02 Wavetables Tab]]
 	- Sample information area
 		- ![02 Sample information area](../assets/Microfreak___14-Config___02-MIDI-Control-Center___03-Samples-Tab___02-Info.png)
 	- > [[Note/Info]] Bank and sample names can be at most 21 characters long.
-	- {embed [[Microfreak/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management]]}
-	- {embed [[Microfreak/14 Config/02 MIDI Control Center/03 Samples Tab/02 Dragging]]}
-	- {embed [[Microfreak/14 Config/02 MIDI Control Center/03 Samples Tab/03 Deleting]]}
+	- {{embed [[Microfreak/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management]]}}
+	- {{embed [[Microfreak/14 Config/02 MIDI Control Center/03 Samples Tab/02 Dragging]]}}
+	- {{embed [[Microfreak/14 Config/02 MIDI Control Center/03 Samples Tab/03 Deleting]]}}
