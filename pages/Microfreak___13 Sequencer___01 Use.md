@@ -1,5 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Microfreak/13 Sequencer]]
+next:: [[Microfreak/13 Sequencer/02 Mod Tracks]]
 - # 13.1. Using the Sequencer
 	- The icon strip changes function with Arp | Seq. In arpeggiator mode, its icons control Hold, Order, Random, and Pattern. After Shift + Seq activates the sequencer, they control Tie/Rest, pattern A, pattern B, Record/Stop, and Play/Stop.
 	- The Sequencer Controls

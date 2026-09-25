@@ -8,3 +8,4 @@ prev:: [[Microfreak/13 Sequencer/01 Use/02 Keyboard]]
 	- {{embed [[Microfreak/13 Sequencer/01 Use/03 Record/02 Edit]]}}
 	- {{embed [[Microfreak/13 Sequencer/01 Use/03 Record/03 Real Time]]}}
 	- {{embed [[Microfreak/13 Sequencer/01 Use/03 Record/04 Copy]]}}
+	- {{embed [[Microfreak/13 Sequencer/01 Use/03 Record/05 Arp]]}}

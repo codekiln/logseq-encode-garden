@@ -12,3 +12,5 @@ next:: [[Microfreak/14 Config]]
 		- ![02 The Shift Button](../assets/Microfreak___13-Sequencer___02-The-Shift-Button.png)
 	- Record one step at a time to adjust each step's notes, velocity, and modulation, or record in real time. When routed through the modulation matrix, sequence steps can also provide pitch and velocity as modulation sources.
 	- {{embed [[Microfreak/13 Sequencer/01 Use]]}}
+	- {{embed [[Microfreak/13 Sequencer/02 Mod Tracks]]}}
+	- {{embed [[Microfreak/13 Sequencer/03 Fun]]}}
