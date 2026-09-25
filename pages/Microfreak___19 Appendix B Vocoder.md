@@ -9,3 +9,6 @@ next:: [[Microfreak/20 Appendix C - Cheat Sheet]]
 	- {{embed [[Microfreak/19 Appendix B Vocoder/04 Headset Mic]]}}
 	- {{embed [[Microfreak/19 Appendix B Vocoder/05 Vocoder Preset]]}}
 	- {{embed [[Microfreak/19 Appendix B Vocoder/06 Play & Sing]]}}
+	- {{embed [[Microfreak/19 Appendix B Vocoder/07 Config]]}}
+	- {{embed [[Microfreak/19 Appendix B Vocoder/08 Global Settings]]}}
+	- {{embed [[Microfreak/19 Appendix B Vocoder/09 Package]]}}
