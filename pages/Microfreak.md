@@ -1,25 +1,3 @@
 vendor-link:: [MicroFreak - Experimental Hybrid Synth | Arturia](https://www.arturia.com/products/hardware-synths/microfreak/overview)
+
 - # [[Arturia]] Microfreak synth
-	- {{embed [[Microfreak/01 Welcome and Introduction]]}}
-	- {{embed [[Microfreak/02 Installation]]}}
-	- {{embed [[Microfreak/03 Overview]]}}
-	- {{embed [[Microfreak/04 Presets]]}}
-	- {{embed [[Microfreak/05 Connections]]}}
-	- {{embed [[Microfreak/06 Dig Osc]]}}
-	- {{embed [[Microfreak/07 Filter]]}}
-	- {{embed [[Microfreak/08 LFO]]}}
-	- {{embed [[Microfreak/09 Envelope Gen]]}}
-	- {{embed [[Microfreak/10 Keyboard]]}}
-	- {{embed [[Microfreak/11 Icon Strip]]}}
-	- {{embed [[Microfreak/12 Arpeggiator]]}}
-	- {{embed [[Microfreak/13 Sequencer]]}}
-	- {{embed [[Microfreak/14 Config]]}}
-	- {{embed [[Microfreak/15 Using Scales]]}}
-	- {{embed [[Microfreak/16 Paraphonic Chord Mode]]}}
-	- {{embed [[Microfreak/17 Ext Gear]]}}
-	- {{embed [[Microfreak/18 Appendix A Speech Osc]]}}
-	- {{embed [[Microfreak/19 Appendix B Vocoder]]}}
-	- {{embed [[Microfreak/20 Appendix C - Cheat Sheet]]}}
-	- {{embed [[Microfreak/21 Appendix D - CC Values]]}}
-	- {{embed [[Microfreak/22 Declaration of Conformity]]}}
-	- {{embed [[Microfreak/23 Software License Agreement]]}}
