@@ -1,6 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Microfreak/06 Dig Osc]]
 prev:: [[Microfreak/06 Dig Osc/01 as Soundgen]]
+next:: [[Microfreak/06 Dig Osc/03 Types]]
 - # 06.02 The Parameter Controls
 	- The parameter controls bring the Digital Oscillator to life in different ways.
 	- **Type** selects an oscillator model, each with its own character. Type can also be modulated: changing models rapidly with the LFO creates abrupt changes in timbre. The Envelopes, keyboard pressure, Sequencer, and Arpeggiator can modulate Type too.
