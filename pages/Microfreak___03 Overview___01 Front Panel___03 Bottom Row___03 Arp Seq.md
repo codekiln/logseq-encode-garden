@@ -3,7 +3,7 @@ up:: [[Microfreak/03 Overview/01 Front Panel/03 Bottom Row]]
 prev:: [[Microfreak/03 Overview/01 Front Panel/03 Bottom Row/02 Shift]]
 next:: [[Microfreak/03 Overview/01 Front Panel/03 Bottom Row/04 LFO]]
 - # 03.01.03.03 ARP/Seq (Arpeggiator/Sequencer)
-	- The Arpeggiator plays notes derived from the held keys. The Arpeggiator and Sequencer share several controls.
+	- The Arpeggiator plays notes derived from the held keys. [[Microfreak/12 Arpeggiator]] and [[Microfreak/13 Sequencer]] share several controls.
 	- The Arpeggiator and the Sequencers
 		- ![01 The Arpeggiator and the Sequencers](../assets/Microfreak___03-Overview___01-Front-Panel___03-Bottom-Row___03-Arp-Seq___01-The-Arpeggiator-and-the-Sequencers.png)
 	- **Arp | Seq** switches between the Arpeggiator and Sequencer. **Oct | Mod** sets the Arpeggiator range or selects one of four Sequencer modulation tracks.
