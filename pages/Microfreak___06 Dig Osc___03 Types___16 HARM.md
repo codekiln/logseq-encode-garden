@@ -1,6 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Microfreak/06 Dig Osc/03 Types]]
 prev:: [[Microfreak/06 Dig Osc/03 Types/15 SAWX]]
+next:: [[Microfreak/06 Dig Osc/03 Types/17 WaveUser]]
 - # 06.03.16 HARM Oscillator (Harm)
 	- HARM Oscillator Model
 		- ![01 HARM Oscillator Model](../assets/Microfreak___06-Dig-Osc___03-Types___16-HARM___01-HARM-Oscillator-Model.png)
