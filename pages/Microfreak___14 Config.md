@@ -9,3 +9,4 @@ next:: [[Microfreak/15 Using Scales]]
 	- Access to the configuration setting in Utility
 		- ![01 Access to the configuration setting in Utility](../assets/Microfreak___14-Config___01-Utility.png)
 	- {{embed [[Microfreak/14 Config/01 Utility & MCC]]}}
+	- {{embed [[Microfreak/14 Config/02 MIDI Control Center]]}}
