@@ -1,10 +1,9 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]]
 up:: [[Microfreak]]
+prev:: [[Microfreak/20 Appendix C - Cheat Sheet]]
+next:: [[Microfreak/22 Declaration of Conformity]]
 - # 21. Appendix D: CC# Values
-	- ## 21.1 What are CC# values?
-		- MIDI messages include note-on, gate, note-off, and velocity data. Note number and velocity values range from 0–127.
-		- Control Change (CC) messages are separate from note-related messages. They let a MIDI-compatible device control parameters on another device.
-		- Turning a MicroFreak knob transmits its CC message; sending that CC value to the MicroFreak changes the parameter as if the knob had been turned.
+	- {{embed [[Microfreak/21 Appendix D - CC Values/01 What are CC Values]]}}
 	- ## Parameters and their CC numbers
 		- Spice
 			- CC number: 2
