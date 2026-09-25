@@ -11,7 +11,7 @@ next:: [[Microfreak/11 Icon Strip/02 Sequencer and Arpeggiator]]
 	- > [[Note/Info]] Hold does not work with external MIDI. To hold external MIDI notes, send the MicroFreak a Sustain message.
 	- In Sequencer mode, the Hold Icon has alternate functions.
 	- The alternative functions of the Hold Icon
-		- ![01 The Hold Icon](../assets/Microfreak___11-Icon-Strip___01-Key-Hold-Button___01-The-Hold-Icon.png)
+		- ![02 The alternative functions of the Hold Icon](../assets/Microfreak___11-Icon-Strip___01-Key-Hold-Button___02-The-alternative-functions-of-the-Hold-Icon.png)
 	- In Step-record mode, Hold adds a tie or silence.
 	- In Real-time recording mode, Hold clears the content as the sequence records.
 	- With Seq Mod, Hold clears sequence modulation; with A or B, it clears the selected sequence.
