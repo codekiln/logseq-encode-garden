@@ -1,5 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]]
 up:: [[Microfreak]]
+prev:: [[Microfreak/16 Paraphonic Chord Mode]]
+next:: [[Microfreak/18 Appendix A Speech Osc]]
 - # 17 Connecting external gear
 	- The MicroFreak connects to a range of vintage and modern equipment through the ports on its rear panel.
 	- MicroFreak Rear Panel
