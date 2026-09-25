@@ -7,4 +7,4 @@ next:: [[Microfreak/06 Dig Osc/03 Types/22 Vocoder]]
 	- **Start:** The Wave knob sets the grain start position.
 	- **Density:** The Timbre knob sets how often a grain is generated.
 	- **Shape:** The Shape knob sets grain size and envelope.
-	- Sample browsing and parameter adjustment work like the Sample oscillator model.
+	- Sample browsing and parameter adjustment work like the [[Microfreak/06 Dig Osc/03 Types/18 Sample|Sample oscillator model]].
