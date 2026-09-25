@@ -1,7 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Microfreak/16 Paraphonic Chord Mode]]
-prev:: [[Microfreak/16 Paraphonic Chord Mode/02 Adjusting the Default Unison Settings]]
-
+prev:: [[Microfreak/16 Paraphonic Chord Mode/02 Unison Defaults]]
 - # 16.3. Unison Spread as a modulation target
 	- Assign modulation to Unison spread in the Matrix by holding an Assign button and pressing the Paraphonic button.
 	- To modulate oscillator spread with the Cycling Envelope:

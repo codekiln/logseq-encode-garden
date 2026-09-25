@@ -1,6 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]]
 up:: [[Microfreak]]
-
+prev:: [[Microfreak/15 Using Scales]]
+next:: [[Microfreak/17 Ext Gear]]
 - # 16. Paraphonic Chord Mode
 	- Paraphonic Chord Mode lets you transpose a chord through the current scale.
 	- ## Initiate Paraphonic Chord Mode
@@ -12,5 +13,5 @@ up:: [[Microfreak]]
 	- Paraphonic Chord Mode can turn scale-quantized chords into fast, intricate arpeggios.
 	- Press the Paraphonic button again to end Paraphonic Chord Mode.
 	- {{embed [[Microfreak/16 Paraphonic Chord Mode/01 Unison]]}}
-	- {{embed [[Microfreak/16 Paraphonic Chord Mode/02 Adjusting the Default Unison Settings]]}}
-	- {{embed [[Microfreak/16 Paraphonic Chord Mode/03 Unison Spread as a Modulation Target]]}}
+	- {{embed [[Microfreak/16 Paraphonic Chord Mode/02 Unison Defaults]]}}
+	- {{embed [[Microfreak/16 Paraphonic Chord Mode/03 Spread Modulation]]}}
