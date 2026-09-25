@@ -1,0 +1,20 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+- # Book Section
+	- In this garden, **Book Section** pages model one headed part of a book or manual as a navigable Logseq page.
+	- ## What counts
+		- A section has a distinct heading in the source and enough content to read or navigate independently. A caption, callout, paragraph, or table row stays inside its section rather than becoming a section page.
+		- [[Logseq/Entity/Book/Section/Level 1]], [[Logseq/Entity/Book/Section/Level 2]], [[Logseq/Entity/Book/Section/Level 3]], and [[Logseq/Entity/Book/Section/Level 4]] specify the depth. The instance declares its most specific level in `logseq-entity::`; the level page points here for the shared shape.
+	- ## Identity and names
+		- A section is identified by its source work and its place in the heading tree. Search the intended path, aliases, and existing section content before creating a page; a changed heading or shortened title does not make a second section.
+		- Nest each section under its parent page. Prefix each segment with a two-digit sibling order from the source, followed by a short, recognizable heading. Shorten long heading words where the meaning stays clear. The full source heading belongs in the page's H1, with its source number where useful.
+		- Number siblings in source order, including unnumbered headings that qualify as sections. Keep the number local to the parent: `06 Dig Osc/02 Param Controls`, then `02 Param Controls/01 Knob Speed`.
+	- ## Page shape
+		- Use the level-specific `logseq-entity::` marker. `up::` links to the parent page; `prev::` and `next::` link to adjacent siblings when those pages exist. The first and last sibling need only the available direction. See [[Logseq/Frontmatter]] for shared frontmatter conventions.
+		- Begin with one bullet-wrapped H1. Put the section's own content under it in source order. Embed each imported child page once at the point where its heading occurs. The child page holds the text; the parent does not repeat it.
+		- Turn the source's paragraphs, bullets, callouts, figures, and tables into readable nested blocks. Preserve the information needed to use the material, not the PDF's line wrapping or table grid. Use `> [[Note/Info]]` or `> [[Note/Warning]]` for corresponding callouts.
+		- Place a figure under its caption block. Name an extracted image from the owning page path, then a two-digit image order and short caption, as in `Microfreak___06-Dig-Osc___01-as-Soundgen___01-The-Digital-Oscillator.png`. Keep the full PDF outside the graph.
+		- Replace page-number references with a link to the corresponding section when it exists and its identity is clear. Otherwise, name the destination in prose without a speculative link. Do not preserve a bare PDF page number as navigation.
+	- ## Source check
+		- Compare the extracted text and images against the source pages: heading order, callout scope, figure/caption pairing, and cross-references can be lost in PDF extraction. The imported page should read naturally in Logseq and nvim.
+	- ## Example
+		- [[Microfreak/06 Dig Osc/02 Param Controls]] and its child [[Microfreak/06 Dig Osc/02 Param Controls/01 Knob Speed]] show a callout and nested section.
