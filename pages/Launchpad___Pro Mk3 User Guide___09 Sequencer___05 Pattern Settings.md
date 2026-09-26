@@ -1,6 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Launchpad/Pro Mk3 User Guide/09 Sequencer]]
 prev:: [[Launchpad/Pro Mk3 User Guide/09 Sequencer/04 Scenes]]
+next:: [[Launchpad/Pro Mk3 User Guide/09 Sequencer/06 Velocity]]
 - # 9.5 Pattern Settings
 	- Pattern Settings changes how steps play in the current Pattern. The top half of the Play Area becomes playback settings while this view is selected.
 	- Pattern Settings view

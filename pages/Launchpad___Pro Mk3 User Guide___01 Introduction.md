@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]]
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]], [[Logseq/Entity/Series]]
 up:: [[Launchpad/Pro Mk3 User Guide]]
 next:: [[Launchpad/Pro Mk3 User Guide/02 Getting Up and Running]]
 - # 1. Introduction

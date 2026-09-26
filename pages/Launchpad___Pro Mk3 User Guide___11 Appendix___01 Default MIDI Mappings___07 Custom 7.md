@@ -5,4 +5,4 @@ next:: [[Launchpad/Pro Mk3 User Guide/11 Appendix/01 Default MIDI Mappings/08 Cu
 - # A.1.7 Custom 7
 	- The 8 × 8 grid sends momentary notes in the drum-style map.
 	- A.1.7 — Custom 7 default mapping
-		- ![Custom 7 MIDI map](../assets/Launchpad___11-Appendix___01-Default-MIDI-Mappings___07-Custom-7___01-Mapping.png)
+		- ![Custom 7 MIDI map](../assets/Launchpad___Pro-Mk3-User-Guide___11-Appendix___01-Default-MIDI-Mappings___07-Custom-7___01-Mapping.png)

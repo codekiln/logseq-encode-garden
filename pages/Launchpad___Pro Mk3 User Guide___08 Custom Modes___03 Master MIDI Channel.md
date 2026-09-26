@@ -6,4 +6,4 @@ next:: [[Launchpad/Pro Mk3 User Guide/08 Custom Modes/04 Set Up a Custom Mode]]
 	- Hold Shift and press Custom. The bottom two rows show MIDI channels 1–16 for the selected mode. Each Custom Mode has its own Master Channel.
 	- Select a mode with Track Select, then press its desired channel pad. The active mode and its channel glow green; channels stored for inactive modes show dim red.
 	- 8.3.A — Selecting a Custom Mode Master Channel
-		- ![Custom Mode MIDI channel selector](../assets/Launchpad___08-Custom-Modes___03-Master-MIDI-Channel___01-Channel-Selector.png)
+		- ![Custom Mode MIDI channel selector](../assets/Launchpad___Pro-Mk3-User-Guide___08-Custom-Modes___03-Master-MIDI-Channel___01-Channel-Selector.png)
