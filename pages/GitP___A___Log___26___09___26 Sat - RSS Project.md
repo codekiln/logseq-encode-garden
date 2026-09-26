@@ -9,32 +9,17 @@
 		- 14:02
 			- [[GitP/A/Log/26/09/26 Sat - RSS Project/Q/What Backblaze Options would work with Logseq?]]
 	- ## Plan
-		- DONE [Manage the shared Backblaze rclone remote for publishing · Issue #125 · codekiln/dotfiles](https://github.com/codekiln/dotfiles/issues/125)
+		- TODO Publish `GitP.26.09.25` as the first RSS episode.
+			- TODO Give the uploaded MP3 a stable Cloudflare media URL and verify HEAD and byte-range requests.
+			- TODO Create an editable public episode page and `episode.yml` from [[Music/Composition/Log/26/09/25 Fri]]; include a stable GUID, recording and publication dates, description, media URL, enclosure type and length, and page link.
+			- TODO Generate RSS from episode records, publish it on GitHub Pages, and validate its self-link, artwork, and enclosure.
+			- TODO Subscribe to the feed by URL and check playback in a podcast app.
+		- TODO Add staged-file secret and identity scanning and a CI scan to Gitpa before publishing the feed.
+		- TODO [Rename the shared Backblaze rclone remote · dotfiles issue #131](https://github.com/codekiln/dotfiles/issues/131), then update the garden upload task's default remote.
+		- TODO Automate bringing selected garden notes into public episode pages after the first manual publication works.
+		- DONE [Set up the shared Backblaze rclone remote and 1Password publishing access · dotfiles issue #125](https://github.com/codekiln/dotfiles/issues/125)
 		  id:: 6ab7f21f-4627-4e47-a60c-7a9e76e8acbf
-			- DONE [Inspect the existing log: remote and preserve its settings while moving nonsecret rclone configuration into chezmoi](https://github.com/codekiln/dotfiles/issues/126)
-			- DONE [Mount the logseq-encode-garden publishing 1Password Environment outside the repos and add a shared mise wrapper that reads it once and maps B2_APPLICATION_KEY_ID and B2_APPLICATION_KEY to the rclone remote's account and key options](https://github.com/codekiln/dotfiles/issues/127)
-			- DONE [Verify rclone access through the Environment, then remove the stored account and key fields from the existing rclone.conf](https://github.com/codekiln/dotfiles/issues/128)
-		- TODO [Name the shared Backblaze rclone remote before Gitpa uses it](https://github.com/codekiln/dotfiles/issues/131)
-		- DONE [Prepare and upload Gitpa media from the garden · Issue #126 · codekiln/logseq-encode-garden](https://github.com/codekiln/logseq-encode-garden/issues/126)
-			- DONE Create a 1Password publishing key scoped to `logseq-encode-garden/gitpa/episodes/` and verify rclone access.
-			- DONE [Upload the September 25 MP3 and verify its public URL, length, and range response](https://f005.backblazeb2.com/file/logseq-encode-garden/gitpa/episodes/2026-09-25/GitP.26.09.25.mp3)
-		- TODO file GitHub issue `Prepare Gitpa for repeatable podcast publishing`
-			- TODO file sub-issue `Add tasks for checking episode metadata and publishing an episode`
-			- TODO file sub-issue `Add staged-file secret and identity scanning plus a CI scan`
-		- TODO file GitHub issue `Serve podcast media from Backblaze B2 through Cloudflare`
-			- TODO file sub-issue `Set up a stable Cloudflare media address for Gitpa objects in the shared B2 bucket`
-			- TODO file sub-issue `Verify the Cloudflare MP3 address, including HEAD and range requests`
-		- TODO file GitHub issue `Build the WAV-to-public-MP3 episode workflow`
-			- TODO file sub-issue `Define episode notes and publication metadata in Logseq Encode Garden`
-			- TODO file sub-issue `Prepare Gitpa episode.yml from garden metadata with stable ID, dates, media URL, enclosure details, and page link`
-		- TODO file GitHub issue `Publish episode pages and generate the podcast RSS feed`
-			- TODO file sub-issue `Create an editable public Logseq episode page from a template`
-			- TODO file sub-issue `Generate RSS from episode.yml records while preserving existing GUIDs and separate recording and publication dates`
-			- TODO file sub-issue `Publish and validate the feed on GitHub Pages with the served self-link, media URLs, and show artwork`
-		- TODO file GitHub issue `Publish and test one backlog episode end to end`
-			- TODO file sub-issue `Run one exported WAV through media upload, episode.yml, public page, and RSS publication`
-			- TODO file sub-issue `Subscribe to the feed by URL and check episode playback in a podcast app`
-		- TODO file GitHub issue `Automate bringing selected Logseq Encode Garden notes into public episode pages`
+		- DONE [Prepare and upload Gitpa media from the garden · garden issue #126](https://github.com/codekiln/logseq-encode-garden/issues/126); [GitP.26.09.25.mp3](https://f005.backblazeb2.com/file/logseq-encode-garden/gitpa/episodes/2026-09-25/GitP.26.09.25.mp3) passed public URL, length, and range checks.
 	- ## Design questions
 	  id:: 6ab7ddaa-9863-4c47-8881-86f31e422d1f
 		- For [issue #131](https://github.com/codekiln/dotfiles/issues/131), should the [[rclone/remote]] name describe the reusable Backblaze B2 connection shared by garden projects (for example, `garden-b2:`), or the existing bucket or publishing workflow? In `remote:bucket/path`, the remote name is the part before `:`. What name and scope do you want?
