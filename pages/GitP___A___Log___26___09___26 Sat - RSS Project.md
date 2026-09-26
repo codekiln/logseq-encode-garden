@@ -1,0 +1,38 @@
+- [[2026-09-26 Sat]]
+	- ## [[My Notes]] 09:58
+		- I'd like to finally get some external hosting going for [[Person/codekiln/GitHub/gitpa]].
+		- I have a [[Backblaze]] account that I set up a while back, and I'd like to get a CDN going off of that for the episodes and other assets that are referenced in the published.
+		- I'm considering experimenting with something like [[dvc]] as a possible replacement for [[git/lfs]] for managing assets like [[Microfreak/04 Presets]], smaller audio fragments, images, etc. Basically, podcast rich media.
+			- In the end, I decided to not add dvc at this time, as it will get in the way of getting a publishing pipeline going.
+		- I started a voice chat with [[OpenAI/Model/GPT/6/Sol]] and described what I wanted.
+	- ## Plan
+		- DOING [Manage the shared Backblaze rclone remote for publishing · Issue #125 · codekiln/dotfiles](https://github.com/codekiln/dotfiles/issues/125)
+		  id:: 6ab7f21f-4627-4e47-a60c-7a9e76e8acbf
+			- TODO [Inspect the existing log: remote and preserve its settings while moving nonsecret rclone configuration into chezmoi](https://github.com/codekiln/dotfiles/issues/126)
+			- TODO [Mount the logseq-encode-garden publishing 1Password Environment outside the repos and add a shared mise wrapper that reads it once and maps B2_APPLICATION_KEY_ID and B2_APPLICATION_KEY to the rclone remote's account and key options](https://github.com/codekiln/dotfiles/issues/127)
+			- TODO [Verify rclone access through the Environment, then remove the stored account and key fields from the existing rclone.conf](https://github.com/codekiln/dotfiles/issues/128)
+		- TODO file GitHub issue `Use the existing Backblaze B2 bucket for Gitpa media`
+			- TODO file sub-issue `Check the existing bucket and application key permissions for podcast uploads`
+			- TODO file sub-issue `Choose a podcast-specific object prefix in the shared bucket and verify scoped read/write access with rclone`
+		- TODO file GitHub issue `Prepare Gitpa for repeatable podcast publishing`
+			- TODO file sub-issue `Add mise tasks for preparing, checking, uploading, and publishing an episode`
+			- TODO file sub-issue `Call the shared Environment-backed rclone wrapper from Gitpa's upload task; use copyto for individual episode files and avoid bucket-wide sync`
+			- TODO file sub-issue `Add staged-file secret and identity scanning plus a CI scan`
+		- TODO file GitHub issue `Serve podcast media from Backblaze B2 through Cloudflare`
+			- TODO file sub-issue `Set up a stable Cloudflare media address for Gitpa objects in the shared B2 bucket`
+			- TODO file sub-issue `Choose episode object paths and verify public MP3 delivery, including HEAD and range requests`
+		- TODO file GitHub issue `Build the WAV-to-public-MP3 episode workflow`
+			- TODO file sub-issue `Define episode notes and publication metadata in Logseq Encode Garden`
+			- TODO file sub-issue `Prepare Gitpa episode.yml from garden metadata with stable ID, dates, media URL, enclosure details, and page link`
+			- TODO file sub-issue `Prepare and check an MP3 from an exported WAV outside Git`
+			- TODO file sub-issue `Upload the MP3 with rclone copyto and verify its Cloudflare URL before recording it in episode.yml`
+		- TODO file GitHub issue `Publish episode pages and generate the podcast RSS feed`
+			- TODO file sub-issue `Create an editable public Logseq episode page from a template`
+			- TODO file sub-issue `Generate RSS from episode.yml records while preserving existing GUIDs and separate recording and publication dates`
+			- TODO file sub-issue `Publish and validate the feed on GitHub Pages with the served self-link, media URLs, and show artwork`
+		- TODO file GitHub issue `Publish and test one backlog episode end to end`
+			- TODO file sub-issue `Run one exported WAV through media upload, episode.yml, public page, and RSS publication`
+			- TODO file sub-issue `Subscribe to the feed by URL and check episode playback in a podcast app`
+		- TODO file GitHub issue `Automate bringing selected Logseq Encode Garden notes into public episode pages`
+	- ## Design questions
+		-

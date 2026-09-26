@@ -7,3 +7,4 @@ alias:: [[1P/Dev]]
 		- Access secrets stored in 1Password
 		- Automate administrative tasks
 		- Integrate with third-party tools - [[1Password/Dev/Integrations]]
+		- [[1Password/Environment]] — project [[EnvVar]]s, local `.env` mounts, and [[1Password/Environment/MCP]]

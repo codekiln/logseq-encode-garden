@@ -1,0 +1,5 @@
+- # [1Password Environments MCP Server](https://www.1password.dev/environments/mcp-server)
+	- Local [[MCP/Server]] that ships with the 1Password desktop app. MCP clients such as [[Claude/Code]], [[Codex]], and [[CursorAI]] can create, list, and rename [[1Password/Environment]]s and mount local `.env` files — without ever receiving secret values.
+	- The server sees Environment and variable *names* only. Approval prompts appear in 1Password the first time a client uses a tool against a given Environment; approval lasts until 1Password locks.
+	- Requires the desktop app, an existing Environment, and an MCP client that supports stdio. Remote-only clients are not supported. The launch command is `1password-mcp`.
+	- [[1Password/GitHub/1password-codex-plugin]] is the Codex-side plugin that registers this server.
