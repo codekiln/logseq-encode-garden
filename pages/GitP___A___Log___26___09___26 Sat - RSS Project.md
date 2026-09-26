@@ -16,6 +16,7 @@
 			- TODO Subscribe to the feed by URL and check playback in a podcast app.
 		- TODO Add staged-file secret and identity scanning and a CI scan to Gitpa before publishing the feed.
 		- TODO [Rename the shared Backblaze rclone remote · dotfiles issue #131](https://github.com/codekiln/dotfiles/issues/131), then update the garden upload task's default remote.
+		- TODO Define a remote-file entity for garden media pages: derive the initial MP3 filename from the page name, link the upload instructions, record public or private visibility, and retain the published object key and URL when a page is renamed.
 		- TODO Automate bringing selected garden notes into public episode pages after the first manual publication works.
 		- DONE [Set up the shared Backblaze rclone remote and 1Password publishing access · dotfiles issue #125](https://github.com/codekiln/dotfiles/issues/125)
 		  id:: 6ab7f21f-4627-4e47-a60c-7a9e76e8acbf
