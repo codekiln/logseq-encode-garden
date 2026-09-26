@@ -5,4 +5,4 @@ next:: [[Launchpad/Pro Mk3 User Guide/11 Appendix/01 Default MIDI Mappings/05 Cu
 - # A.1.4 Custom 4
 	- The 8 × 8 grid sends momentary notes in a chromatic keyboard layout.
 	- A.1.4 — Custom 4 default mapping
-		- ![Custom 4 MIDI map](../assets/Launchpad___11-Appendix___01-Default-MIDI-Mappings___04-Custom-4___01-Mapping.png)
+		- ![Custom 4 MIDI map](../assets/Launchpad___Pro-Mk3-User-Guide___11-Appendix___01-Default-MIDI-Mappings___04-Custom-4___01-Mapping.png)

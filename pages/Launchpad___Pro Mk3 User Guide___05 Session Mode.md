@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]]
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]], [[Logseq/Entity/Series]]
 up:: [[Launchpad/Pro Mk3 User Guide]]
 prev:: [[Launchpad/Pro Mk3 User Guide/04 Launchpad Pro Interface]]
 next:: [[Launchpad/Pro Mk3 User Guide/06 Note Mode]]

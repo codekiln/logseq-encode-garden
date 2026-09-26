@@ -5,4 +5,4 @@ next:: [[Launchpad/Pro Mk3 User Guide/11 Appendix/01 Default MIDI Mappings/06 Cu
 - # A.1.5 Custom 5
 	- The 8 × 8 grid sends Program Changes 0–63.
 	- A.1.5 — Custom 5 default mapping
-		- ![Custom 5 MIDI map](../assets/Launchpad___11-Appendix___01-Default-MIDI-Mappings___05-Custom-5___01-Mapping.png)
+		- ![Custom 5 MIDI map](../assets/Launchpad___Pro-Mk3-User-Guide___11-Appendix___01-Default-MIDI-Mappings___05-Custom-5___01-Mapping.png)

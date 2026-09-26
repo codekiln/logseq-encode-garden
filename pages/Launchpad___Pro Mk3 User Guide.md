@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Book]]
+logseq-entity:: [[Logseq/Entity/Book]], [[Logseq/Entity/Series]]
 - # Launchpad Pro User Guide
 	- User guide for the [[Launchpad]], the Novation Launchpad Pro Mk3 grid controller.
 	- ## Chapters
