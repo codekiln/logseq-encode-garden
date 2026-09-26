@@ -108,8 +108,8 @@ icon:: 🎯
 					- TODO consider plugins and research from [Visual Studio Code is designed to fracture : r/vscode](https://www.reddit.com/r/vscode/comments/x221sl/visual_studio_code_is_designed_to_fracture/)
 			- #Defer
 				- TODO take notes on [[VSCode/Docs/Editor/Testing]]
-				- TODO take notes on [Python profile template](https://code.visualstudio.com/docs/editor/profiles#_python-profile-template) [[VSCode/Docs/Editor/Profiles/Python Profile Template]] - Create a new [[VSCode/Docs/Editor/Profile/Python]]  [profile](https://code.visualstudio.com/docs/editor/profiles) with a curated set of extensions, settings, and snippets
-				- TODO take notes on [[VSCode/Docs/Python/Debugging]] [Debugging](https://code.visualstudio.com/docs/python/debugging) - Learn to debug Python both locally and remotely.
+				- TODO take notes on [Python profile template](https://code.visualstudio.com/docs/editor/profiles#_python-profile-template) [[VSCode/Docs/Editor/Profiles/Python Profile Template]] - Create a new [[VSCode/Docs/Editor/Profile/Python]]  [profile](https://code.visualstudio.com/docs/editor/profiles) with a curated set of extensions, settings, and snippets
+				- TODO take notes on [[VSCode/Docs/Python/Debugging]] [Debugging](https://code.visualstudio.com/docs/python/debugging) - Learn to debug Python both locally and remotely.
 					- TODO How do I create a [[VSCode/launch.json]] [[VSCode/Debugger/Configuration]] so that when it asks me for arguments, I can supply more than one and they will be supplied as more than one argument? #Q
 					  id:: 676fd6c9-baa1-4402-ba53-1ca4a0dd8aaa
 					- TODO is there any way to create a [[VSCode/launch.json]] [[VSCode/Debugger/Configuration]]
@@ -324,7 +324,7 @@ icon:: 🎯
 			- 10:35 - created milestone and filled out scope
 			- 11:02 - ((2ca9c3c8-0810-4adc-ab6e-2a45fba87e46))
 			  id:: 676c263c-2b13-40b2-8626-d83b0ac63c04
-				- I'm just going to use [[GitP/acolyte]] since I already have that up
+				- I'm just going to use [[Person/codekiln/GitHub/gitpa/acolyte]] since I already have that up
 				- ((676a7d98-cc9a-40e8-a3ac-206723c03760))
 				- 13:09 filed [[VSCode/Language/Python/How To/Use Poetry with Pyenv and VS Code]]
 				- 13:11 filed [[VSCode/Language/Python/How To/Fix Stuck at Discovering Python Interpreters]]

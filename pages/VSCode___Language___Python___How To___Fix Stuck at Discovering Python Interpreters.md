@@ -34,7 +34,7 @@
 			    415  code --uninstall-extension vue.volar
 			    416  code --list-extensions --show-versions\n
 			  ```
-		- ### Destroy [[Pyenv/virtualenv]] associated with the project I was working on; [[GitP/acolyte]]
+		- ### Destroy [[Pyenv/virtualenv]] associated with the project I was working on; [[Person/codekiln/GitHub/gitpa/acolyte]]
 			- I removed `.python-version` files and also removed the pyenv virtualenv
 			- ```
 			    424  pyenv virtualenv-delete gitp-acolyte
@@ -115,7 +115,7 @@
 										  ```
 				- These configurations are stored in a toml file; [see Configuration | Poetry](https://python-poetry.org/docs/main/configuration/)
 					- > This file can typically be found in one of the following directories:
-					    * macOS: `~/Library/Application Support/pypoetry`
+					    * macOS: `~/Library/Application Support/pypoetry`
 				- I read many articles and forum posts about using poetry with pyenv, and they all seemed to give contradictory advice. But the thing that ended up working for me was removing the customizations to the config that I did by removing this dir. In particular, I removed these customizations because
 					- ```
 					  (gitp-acolyte)  Me@Home  ~/dev/gitpa/gitp-acolyte  ↱ cc/04-host-n-dist/03-ai-ep-yml  history | grep "pypoetry"     
@@ -136,7 +136,7 @@
 					  -rw-r--r--@   1 Me  staff     5 Dec 25 12:29 VERSION
 					  drwxr-xr-x@   7 Me  staff   224 Dec 25 12:29 venv
 					  ```
-		- ### Recreate the [[GitP/acolyte]] [[Pyenv/virtualenv]] and specify the pyenv global version to be 3.13.1
+		- ### Recreate the [[Person/codekiln/GitHub/gitpa/acolyte]] [[Pyenv/virtualenv]] and specify the pyenv global version to be 3.13.1
 			- ```
 			    449  pyenv virtualenv 3.13.1 gitp-acolyte
 			    452  pyenv local gitp-acolyte
@@ -187,7 +187,7 @@
 			    495  poetry env info --path
 			    496  poetry env info --executable | pbcopy
 			  ```
-		- ### Reinitialize [[PyPoetry]] inside [[GitP/acolyte]]
+		- ### Reinitialize [[PyPoetry]] inside [[Person/codekiln/GitHub/gitpa/acolyte]]
 			- 494  poetry install
 		- ### Start VS Code and reinstall [[VSCode/Extension/Python]]; associate it with the pyenv virtualenv that poetry install installed to
 			- 495  poetry env info --path
