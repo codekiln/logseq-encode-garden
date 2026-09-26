@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/Forum/Post]]
 - [Cursorrules, Rules for AI, or Project Rules : r/cursor](https://www.reddit.com/r/cursor/comments/1icmmb0/cursorrules_rules_for_ai_or_project_rules/)
 	- [[Reddit/User/MacroMeez]]
 		- [[CursorAI/Rules for AI]]

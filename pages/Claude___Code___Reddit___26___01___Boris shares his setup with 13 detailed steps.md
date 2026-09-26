@@ -1,4 +1,7 @@
+logseq-entity:: [[Logseq/Entity/Forum/Post]]
 created-by:: [[Person/Boris Cherny]]
+date-created:: [[2026/01]]
+logseq-created-time-year:: [[20/2/6]]
 
 - [Claude Code creator Boris shares his setup with 13 detailed steps,full details below : r/ClaudeAI](https://www.reddit.com/r/ClaudeAI/comments/1q2c0ne/claude_code_creator_boris_shares_his_setup_with/)
 	- I'm Boris and I created **Claude Code.** Lots of people have asked how I use Claude Code, so I wanted to show off my setup a bit.

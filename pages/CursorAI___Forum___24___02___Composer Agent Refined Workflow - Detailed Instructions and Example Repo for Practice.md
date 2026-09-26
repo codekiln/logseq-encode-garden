@@ -1,4 +1,7 @@
+logseq-entity:: [[Logseq/Entity/Forum/Post]]
 created-by:: [[Person/Brian Madison]]
+date-created:: [[2024/02]]
+logseq-created-time-year:: [[20/2/4]]
 
 - [Composer Agent Refined Workflow - Detailed Instructions and Example Repo for Practice - How To - Cursor - Community Forum](https://forum.cursor.com/t/composer-agent-refined-workflow-detailed-instructions-and-example-repo-for-practice/47180)
 	- #Observations

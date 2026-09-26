@@ -1,4 +1,7 @@
+logseq-entity:: [[Logseq/Entity/Forum/Post]]
 created-by:: [[Person/codekiln]]
+date-created:: [[2025/09]]
+logseq-created-time-year:: [[20/2/5]]
 
 - # [Trace added to dataset from prompt playground lacks a reference output - Product Help / LangSmith - LangChain Forum](https://forum.langchain.com/t/trace-added-to-dataset-from-prompt-playground-lacks-a-reference-output/1439)
 	- When I try to add a trace from the prompt playground to a dataset, the Reference Output is not filled in with the output from the prompt playground. Furthermore, when I go to try to manually add a reference output, hitting submit does not save the output. The dataset does not have a schema, so it’s not a validation error that’s preventing it from being saved as far as I know.

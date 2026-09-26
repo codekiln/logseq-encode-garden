@@ -1,3 +1,6 @@
+logseq-entity:: [[Logseq/Entity/Forum/Post]]
+date-created:: [[2025/02]]
+logseq-created-time-year:: [[20/2/5]]
 # [The MDC editor is whack. Please revert it or just generate a template - Discussion - Cursor - Community Forum](https://forum.cursor.com/t/the-mdc-editor-is-whack-please-revert-it-or-just-generate-a-template/50906/5)
 	- ## [[My Notes]]
 	  id:: 67d5601b-fdd9-442a-a917-4006bd302321

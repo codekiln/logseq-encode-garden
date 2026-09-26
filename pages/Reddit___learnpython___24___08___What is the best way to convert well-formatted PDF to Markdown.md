@@ -1,4 +1,6 @@
+logseq-entity:: [[Logseq/Entity/Forum/Post]]
 date-created:: [[2024/08]]
+logseq-created-time-year:: [[20/2/4]]
 
 - # [What is the best way to convert a well-formatted PDF to Markdown or plain text? : r/learnpython](https://www.reddit.com/r/learnpython/comments/1ej02wh/what_is_the_best_way_to_convert_a_wellformatted/)
 	- [[Original Poster]]

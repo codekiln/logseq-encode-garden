@@ -1,3 +1,6 @@
+logseq-entity:: [[Logseq/Entity/Forum/Post]]
+date-created:: [[2024/05]]
+logseq-created-time-year:: [[20/2/4]]
 # [How to configure a site to be completely ignored? | 1Password Community](https://www.1password.community/discussions/1password/how-to-configure-a-site-to-be-completely-ignored/105266)
 	- ## [[My Notes]]
 		- Can it be true that the only way to do this reliably is to disable "Offer to fill and save passwords" globally?
@@ -9,7 +12,7 @@
 			- Select "1Password - Password Manager", then choose "Hide on this page".
 		- You could also turn off the new Autosave feature in the 1Password extension; this applies to all websites:
 			- Right-click the 1Password icon in your browser's toolbar and select "Settings".
-			- In the **Autofill & save** section, turn off the "Save logins automatically" option.
+			- In the **Autofill & save** section, turn off the "Save logins automatically" option.
 		- > [[Original Poster]]: When I go to the special site, 1P is quiet, as expected, but when I click into the username field I, 1P still provides suggestions, which is irritating. (Some of them are even wrong.)
 		- If the subdomain is different between the Login item and the specific website, I suggest using the "**Never fill on this exact domain**" Autofill behaviour rule on those Login items so they don't appear as suggestions.
 			- DONE What is the **Never fill on this exact domain** Autofill behavior rule on login items? #Question **ANS: see [[1Password/Doc/Autofill Behavior]]**

@@ -1,4 +1,3 @@
 logseq-entity:: [[Logseq/Entity/Forum]]
 
-- # https://www.reddit.com/r/macapps/
-	-
+- # [r/macapps](https://www.reddit.com/r/macapps/)

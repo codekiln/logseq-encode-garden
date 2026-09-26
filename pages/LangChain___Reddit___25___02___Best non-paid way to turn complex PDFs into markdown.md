@@ -1,3 +1,6 @@
+logseq-entity:: [[Logseq/Entity/Forum/Post]]
+date-created:: [[2025/02]]
+logseq-created-time-year:: [[20/2/5]]
 # [Best (non-paid) way to turn complex PDFs into markdown : r/LangChain](https://www.reddit.com/r/LangChain/comments/1ilnftx/best_nonpaid_way_to_turn_complex_pdfs_into/)
 	- [[Original Poster]] - *[[LlamaParse/Premium]] works great for them but it is too expensive*
 		- I've tried LlamaParse and the premium mode works perfectly for what I need it for. It is too expensive for the number of documents I need to process though.

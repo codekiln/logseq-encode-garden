@@ -1,5 +1,7 @@
+logseq-entity:: [[Logseq/Entity/Forum/Post]]
 created-by:: [[Arturia/Forum/User/freakoid]]
 date-created:: [[2024-05-04 Sat]]
+logseq-created-time-year:: [[20/2/4]]
 
 - # [Arturia MIDI Control Center alternative for MicroFreak on Linux - Freak/MicroFreak - Arturia Forum](https://forum.arturia.com/t/arturia-midi-control-center-alternative-for-microfreak-on-linux/3863/2)
 	- ## [[Original Poster]]

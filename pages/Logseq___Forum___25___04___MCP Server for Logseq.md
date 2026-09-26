@@ -1,6 +1,8 @@
+logseq-entity:: [[Logseq/Entity/Forum/Post]]
 tags:: [[Logseq]], [[MCP/Server]], [[Feedback]]
 date-created:: [[2025/04/25]]
 created-by:: [[Logseq/Forum/User/gww]]
+logseq-created-time-year:: [[20/2/5]]
 
 - # [MCP Server for LogSeq - Feedback - Logseq](https://discuss.logseq.com/t/mcp-server-for-logseq/32004)
 	- ## #[[Original Poster]]

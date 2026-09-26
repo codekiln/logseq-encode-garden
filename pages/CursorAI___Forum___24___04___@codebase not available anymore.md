@@ -1,4 +1,6 @@
+logseq-entity:: [[Logseq/Entity/Forum/Post]]
 date-created:: [[2025-04-02 Wed]]
+logseq-created-time-year:: [[20/2/5]]
 
 - # [@codebase not available anymore? - Bug Reports - Cursor - Community Forum](https://forum.cursor.com/t/codebase-not-available-anymore/74265?utm_source=chatgpt.com)
 	- [[Original Poster]]

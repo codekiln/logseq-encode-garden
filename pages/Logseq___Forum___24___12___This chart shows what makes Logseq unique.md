@@ -1,4 +1,7 @@
+logseq-entity:: [[Logseq/Entity/Forum/Post]]
 created-by:: [[Logseq/Forum/User/Luhmann]]
+date-created:: [[2024/12]]
+logseq-created-time-year:: [[20/2/4]]
 
 - # This chart shows what makes Logseq unique
 	- Source: https://discuss.logseq.com/t/this-chart-shows-what-makes-logseq-unique/30547/9

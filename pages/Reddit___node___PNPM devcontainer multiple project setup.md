@@ -1,1 +1,2 @@
+logseq-entity:: [[Logseq/Entity/Forum/Post]]
 - [PNPM devcontainer multiple project setup : r/node](https://www.reddit.com/r/node/comments/17saryk/pnpm_devcontainer_multiple_project_setup/)

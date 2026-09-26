@@ -1,5 +1,7 @@
+logseq-entity:: [[Logseq/Entity/Forum/Post]]
 date-created:: [[2024/02]]
 created-by:: [[Person/John Nathaniel Marquez]]
+logseq-created-time-year:: [[20/2/4]]
 
 - # TODO [Rules for ultra context, memories, lessons, scratchpad with plan and act modes - Showcase - Cursor - Community Forum](https://forum.cursor.com/t/rules-for-ultra-context-memories-lessons-scratchpad-with-plan-and-act-modes/48792/21)
 	- cool ideas for a metaprompt for [[CursorAI/Agent]]
