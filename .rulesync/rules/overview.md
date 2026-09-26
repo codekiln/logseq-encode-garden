@@ -37,7 +37,7 @@ This repository is a personal Logseq knowledge graph (not a software project): p
 - ChatGPT Deep Research PDF imports → **logseq-import-chatgpt-deep-research**
 - YouTube transcript notes → **logseq-youtube-notes**
 - Slide decks → **logseq-slides**
-- Forum post import → **logseq-forum-post**
+- Forum hubs and forum posts → load **[[Logseq/Entity/Forum]]** and **[[Logseq/Entity/Forum/Post]]** (via **logseq-entity**)
 - Block IDs / `((uuid))` refs → **logseq-block-ids**
 - Entities (dedup, create/update, type pages, journal record) → **logseq-entity**; person hubs → **logseq-person** command; garden naming prefs → **logseq-pref**
 - Wikilink resolution / stub prevention → **logseq-link-hygiene**
