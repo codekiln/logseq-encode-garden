@@ -6,11 +6,11 @@
 			- In the end, I decided to not add dvc at this time, as it will get in the way of getting a publishing pipeline going.
 		- I started a voice chat with [[OpenAI/Model/GPT/6/Sol]] and described what I wanted.
 	- ## Plan
-		- DOING [Manage the shared Backblaze rclone remote for publishing · Issue #125 · codekiln/dotfiles](https://github.com/codekiln/dotfiles/issues/125)
+		- DONE [Manage the shared Backblaze rclone remote for publishing · Issue #125 · codekiln/dotfiles](https://github.com/codekiln/dotfiles/issues/125)
 		  id:: 6ab7f21f-4627-4e47-a60c-7a9e76e8acbf
-			- TODO [Inspect the existing log: remote and preserve its settings while moving nonsecret rclone configuration into chezmoi](https://github.com/codekiln/dotfiles/issues/126)
-			- TODO [Mount the logseq-encode-garden publishing 1Password Environment outside the repos and add a shared mise wrapper that reads it once and maps B2_APPLICATION_KEY_ID and B2_APPLICATION_KEY to the rclone remote's account and key options](https://github.com/codekiln/dotfiles/issues/127)
-			- TODO [Verify rclone access through the Environment, then remove the stored account and key fields from the existing rclone.conf](https://github.com/codekiln/dotfiles/issues/128)
+			- DONE [Inspect the existing log: remote and preserve its settings while moving nonsecret rclone configuration into chezmoi](https://github.com/codekiln/dotfiles/issues/126)
+			- DONE [Mount the logseq-encode-garden publishing 1Password Environment outside the repos and add a shared mise wrapper that reads it once and maps B2_APPLICATION_KEY_ID and B2_APPLICATION_KEY to the rclone remote's account and key options](https://github.com/codekiln/dotfiles/issues/127)
+			- DONE [Verify rclone access through the Environment, then remove the stored account and key fields from the existing rclone.conf](https://github.com/codekiln/dotfiles/issues/128)
 		- TODO file GitHub issue `Use the existing Backblaze B2 bucket for Gitpa media`
 			- TODO file sub-issue `Check the existing bucket and application key permissions for podcast uploads`
 			- TODO file sub-issue `Choose a podcast-specific object prefix in the shared bucket and verify scoped read/write access with rclone`
