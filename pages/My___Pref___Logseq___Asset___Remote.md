@@ -1,0 +1,1 @@
+- For scalability of my logseq repos, my preference is to store binary files in a remote store at `<project-root>/assets/.remote`. Currently I'm using [[Backblaze/B2]].

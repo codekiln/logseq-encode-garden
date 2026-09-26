@@ -1,0 +1,6 @@
+- https://doc.dvc.org/user-guide#git-lfs-large-file-storage
+	- DVC does not require special servers like Git-LFS demands. Any cloud storage like S3, Google Cloud Storage, or even an SSH server can be used as a [remote storage](https://doc.dvc.org/user-guide/data-management/remote-storage). No additional databases, servers, or infrastructure are required.
+	- DVC does not add any hooks to the Git repo by default (although they are [available](https://doc.dvc.org/command-reference/install)).
+	- id:: 6ab80c75-5151-43eb-995c-9945b82de418
+	- Git-LFS was not made with data science in mind, so it doesn't provide related features (e.g. [ML pipelines](https://doc.dvc.org/user-guide/pipelines), [metrics](https://doc.dvc.org/command-reference/metrics), etc.).
+	- GitHub (common Git hosting service) has a limit of 2 GB per repository.
