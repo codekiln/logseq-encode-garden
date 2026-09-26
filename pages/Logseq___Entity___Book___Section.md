@@ -1,4 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
+
 - # Book Section
 	- In this garden, **Book Section** pages model one headed part of a book or manual as a navigable Logseq page.
 	- ## What counts
@@ -11,6 +12,13 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Page shape
 		- Use the level-specific `logseq-entity::` marker. `up::` links to the parent page; `prev::` and `next::` link to adjacent siblings when those pages exist. The first and last sibling need only the available direction. See [[Logseq/Frontmatter]] for shared frontmatter conventions.
 		- Begin with one bullet-wrapped H1. Put the section's own content under it in source order. Embed each imported child page once at the point where its heading occurs. The child page holds the text; the parent does not repeat it.
+		- ### Only embed L1 -> L2 -> L3
+			- The Logseq user interface becomes messy-looking and sluggish when more than two levels of pages are embedded and are visible on a single page. It's okay if page MyPage has `{{embed [[MyPage/MySubPage]]}}`, and if `MySubPage` has `{{embed [[MyPage/MySubPage/MySubSubPage]]}}`, in it. It could be okay if there's only a single embed goes deeper and it's a very small page. But if the nesting goes deeper than that, it's usually a poor experience for the page viewer. As a convention, we permit embeds of L2 in L1 and L3 in L2, and use typical logseq wikilinks to L4.
+			- [[Example/Good]]
+				- A top-level [[Logseq/Entity/Book]] entity or a parent page of a Level 1 page has links to [[Logseq/Entity/Book/Section/Level 1]] sections, not embeds.
+				- [[Logseq/Entity/Book/Section/Level 1]] has an embed of [[Logseq/Entity/Book/Section/Level 2]], and [[Logseq/Entity/Book/Section/Level 2]] has an embed of [[Logseq/Entity/Book/Section/Level 3]]. Beneath that, it uses links to [[Logseq/Entity/Book/Section/Level 4]].
+		- ### Use Block References deeper than Level 4
+			- If a page has a section like 1.2.3.4.5, then 5 should be a heading on the level 4 page. If another page references 1.2.3.4.5, then a [[Logseq/Block/Id]]
 		- A newly available child appears in its parent's embed list, and adjacent sibling pages link in both directions through `prev::` and `next::` once both exist.
 		- Turn the source's paragraphs, bullets, callouts, figures, and tables into readable nested blocks. Preserve the information needed to use the material, not the PDF's line wrapping or table grid. Use `> [[Note/Info]]` or `> [[Note/Warning]]` for corresponding callouts.
 		- Place a figure under its caption block. Name an extracted image from the owning page path, then a two-digit image order and short caption, as in `Microfreak___06-Dig-Osc___01-as-Soundgen___01-The-Digital-Oscillator.png`. Keep the full PDF outside the graph.
