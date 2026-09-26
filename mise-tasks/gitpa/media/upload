@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+#MISE description="Upload one podcast MP3 to the public Backblaze bucket"
+set -euo pipefail
+
+usage() {
+  echo "usage: mise run gitpa:media:upload -- [--dry-run] SOURCE.mp3 OBJECT_KEY" >&2
+  echo "OBJECT_KEY must start with gitpa/episodes/" >&2
+  exit 2
+}
+
+dry_run=false
+if [[ "${1:-}" == "--dry-run" ]]; then
+  dry_run=true
+  shift
+fi
+[[ $# -eq 2 ]] || usage
+
+source_file=$1
+object_key=$2
+[[ -f "$source_file" ]] || { echo "error: MP3 not found: $source_file" >&2; exit 2; }
+[[ "$source_file" == *.mp3 ]] || { echo "error: source must be an MP3" >&2; exit 2; }
+[[ "$object_key" == gitpa/episodes/*.mp3 ]] || usage
+[[ "$object_key" != *'..'* && "$object_key" != *$'\n'* ]] || usage
+[[ "$object_key" =~ ^gitpa/episodes/[A-Za-z0-9._/-]+\.mp3$ ]] || usage
+
+remote=${RCLONE_PUBLISHING_REMOTE:-log}
+destination="${remote}:logseq-encode-garden/${object_key}"
+media_base_url=${GITPA_MEDIA_BASE_URL:-https://f005.backblazeb2.com/file/logseq-encode-garden}
+media_url="${media_base_url%/}/${object_key}"
+echo "Source: $source_file"
+echo "Destination: $destination"
+echo "Media URL: $media_url"
+echo "SHA-256: $(shasum -a 256 "$source_file" | awk '{print $1}')"
+
+if [[ "$dry_run" == true ]]; then
+  exit 0
+fi
+
+env_file="${XDG_DATA_HOME:-$HOME/.local/share}/1password/environments/logseq-encode-publishing.env"
+[[ -e "$env_file" ]] || {
+  echo "error: mount the logseq-encode-publishing 1Password Environment at $env_file" >&2
+  exit 2
+}
+
+# The global wrapper reads the 1Password mount once and injects credentials
+# only into the selected rclone process. Never fall back to its old admin mount.
+mise run rclone:with-publishing-environment -- \
+  --remote "$remote" --env-file "$env_file" -- \
+  copyto "$source_file" "$destination" --immutable --checksum
+
+echo "Uploaded: $destination"
+curl --fail --silent --show-error --head "$media_url" >/dev/null
+echo "Public URL verified: $media_url"

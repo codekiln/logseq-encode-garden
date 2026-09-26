@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#MISE description="Prepare a podcast MP3 from an exported WAV"
+set -euo pipefail
+
+if [[ $# -ne 2 || "$1" != *.wav || "$2" != *.mp3 ]]; then
+  echo "usage: mise run gitpa:media:prepare -- SOURCE.wav OUTPUT.mp3" >&2
+  exit 2
+fi
+
+source_file=$1
+output_file=$2
+[[ -f "$source_file" ]] || { echo "error: WAV not found: $source_file" >&2; exit 2; }
+[[ ! -e "$output_file" ]] || { echo "error: output already exists: $output_file" >&2; exit 2; }
+
+mkdir -p "$(dirname "$output_file")"
+ffmpeg -hide_banner -nostdin -loglevel error -i "$source_file" \
+  -map 0:a:0 -vn -af volume=-1dB -codec:a libmp3lame -b:a 192k \
+  -ar 44100 -ac 2 "$output_file"
+
+ffprobe -v error -show_entries format=duration,size,bit_rate \
+  -of default=noprint_wrappers=1 "$output_file"
+echo "Prepared: $output_file"
