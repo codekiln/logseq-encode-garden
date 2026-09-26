@@ -11,9 +11,6 @@
 			- DONE [Inspect the existing log: remote and preserve its settings while moving nonsecret rclone configuration into chezmoi](https://github.com/codekiln/dotfiles/issues/126)
 			- DONE [Mount the logseq-encode-garden publishing 1Password Environment outside the repos and add a shared mise wrapper that reads it once and maps B2_APPLICATION_KEY_ID and B2_APPLICATION_KEY to the rclone remote's account and key options](https://github.com/codekiln/dotfiles/issues/127)
 			- DONE [Verify rclone access through the Environment, then remove the stored account and key fields from the existing rclone.conf](https://github.com/codekiln/dotfiles/issues/128)
-			- `log:` is the existing named rclone connection to B2, not a bucket; `log:<bucket>/<path>` selects an object. The name predates this publishing work and does not describe the shared connection well.
-			- [PR #129](https://github.com/codekiln/dotfiles/pull/129) added the nonsecret chezmoi config and 1Password-backed mise wrapper. [PR #130](https://github.com/codekiln/dotfiles/pull/130) synced and archived the OpenSpec change. The Environment is mounted, the stored `account` and `key` fields are gone, and the read-only B2 access check passed before and after migration.
-			- Follow-up: [#131](https://github.com/codekiln/dotfiles/issues/131) will choose a descriptive remote name before Gitpa publishing tasks depend on `log:`.
 		- TODO [Name the shared Backblaze rclone remote before Gitpa uses it](https://github.com/codekiln/dotfiles/issues/131)
 		- TODO file GitHub issue `Use the existing Backblaze B2 bucket for Gitpa media`
 			- TODO file sub-issue `Check the existing bucket and application key permissions for podcast uploads`
