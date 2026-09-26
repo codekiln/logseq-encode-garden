@@ -36,4 +36,5 @@
 			- TODO file sub-issue `Subscribe to the feed by URL and check episode playback in a podcast app`
 		- TODO file GitHub issue `Automate bringing selected Logseq Encode Garden notes into public episode pages`
 	- ## Design questions
-		-
+	  id:: 6ab7ddaa-9863-4c47-8881-86f31e422d1f
+		- For [issue #131](https://github.com/codekiln/dotfiles/issues/131), should the [[rclone/remote]] name describe the reusable Backblaze B2 connection shared by garden projects (for example, `garden-b2:`), or the existing bucket or publishing workflow? In `remote:bucket/path`, the remote name is the part before `:`. What name and scope do you want?
