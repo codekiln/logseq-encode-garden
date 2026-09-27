@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/002 Punisher]]
 next:: [[Microfreak/Preset/004 Ether]]
 - # Trance
-	- Saved [[Microfreak]] preset in slot 3.
+	- Saved [[Microfreak]] preset in slot 003.

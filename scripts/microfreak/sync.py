@@ -157,6 +157,10 @@ def plan(garden, inventory):
                 raise ValueError(f'Preset rename destination already exists: {target}')
             renames[path.stem.replace('___', '/')] = target.stem.replace('___', '/')
             del desired[path]
+        stock = f'\t- Saved [[Microfreak]] preset in slot {int(number)}.'
+        text = ''.join((f'\t- Saved [[Microfreak]] preset in slot {int(number):03d}.\n'
+                        if line.rstrip('\n') == stock else line)
+                       for line in text.splitlines(keepends=True))
         desired[target] = update(text, {'preset-number': f'{int(number):03d}'})
         current[key] = target
     active = {}

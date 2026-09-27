@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/037 Chunk]]
 next:: [[Microfreak/Preset/039 Nostromo]]
 - # Classist
-	- Saved [[Microfreak]] preset in slot 38.
+	- Saved [[Microfreak]] preset in slot 038.

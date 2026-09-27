@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/046 XnastX]]
 next:: [[Microfreak/Preset/048 VintageEdge]]
 - # White Calx
-	- Saved [[Microfreak]] preset in slot 47.
+	- Saved [[Microfreak]] preset in slot 047.

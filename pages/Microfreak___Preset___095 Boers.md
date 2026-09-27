@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/094 Gloudal]]
 next:: [[Microfreak/Preset/096 Trapeurz]]
 - # Boers
-	- Saved [[Microfreak]] preset in slot 95.
+	- Saved [[Microfreak]] preset in slot 095.

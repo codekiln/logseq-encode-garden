@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/003 Trance]]
 next:: [[Microfreak/Preset/005 MotivSeq]]
 - # Ether
-	- Saved [[Microfreak]] preset in slot 4.
+	- Saved [[Microfreak]] preset in slot 004.

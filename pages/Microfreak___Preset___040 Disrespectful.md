@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/039 Nostromo]]
 next:: [[Microfreak/Preset/041 Madtraker]]
 - # Disrespectful
-	- Saved [[Microfreak]] preset in slot 40.
+	- Saved [[Microfreak]] preset in slot 040.

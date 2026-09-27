@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/089 Kleo]]
 next:: [[Microfreak/Preset/091 Cathil]]
 - # Guisky
-	- Saved [[Microfreak]] preset in slot 90.
+	- Saved [[Microfreak]] preset in slot 090.

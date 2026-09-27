@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/080 Traditon]]
 next:: [[Microfreak/Preset/082 Over Me]]
 - # Gaming
-	- Saved [[Microfreak]] preset in slot 81.
+	- Saved [[Microfreak]] preset in slot 081.

@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/045 Lottreux]]
 next:: [[Microfreak/Preset/047 White Calx]]
 - # XnastX
-	- Saved [[Microfreak]] preset in slot 46.
+	- Saved [[Microfreak]] preset in slot 046.

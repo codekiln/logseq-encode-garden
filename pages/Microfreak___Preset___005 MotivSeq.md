@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/004 Ether]]
 next:: [[Microfreak/Preset/006 Aft-WavPad]]
 - # MotivSeq
-	- Saved [[Microfreak]] preset in slot 5.
+	- Saved [[Microfreak]] preset in slot 005.

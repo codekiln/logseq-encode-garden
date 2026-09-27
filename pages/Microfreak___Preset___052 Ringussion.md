@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/051 Solitude]]
 next:: [[Microfreak/Preset/053 Crystal]]
 - # Ringussion
-	- Saved [[Microfreak]] preset in slot 52.
+	- Saved [[Microfreak]] preset in slot 052.

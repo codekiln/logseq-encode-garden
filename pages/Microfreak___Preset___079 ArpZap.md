@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/078 A Juno Vibe]]
 next:: [[Microfreak/Preset/080 Traditon]]
 - # ArpZap
-	- Saved [[Microfreak]] preset in slot 79.
+	- Saved [[Microfreak]] preset in slot 079.

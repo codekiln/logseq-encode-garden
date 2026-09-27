@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/059 Suby Rainbow]]
 next:: [[Microfreak/Preset/061 AftrBlush]]
 - # Unstable Solo
-	- Saved [[Microfreak]] preset in slot 60.
+	- Saved [[Microfreak]] preset in slot 060.

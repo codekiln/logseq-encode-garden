@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/021 Short Strings]]
 next:: [[Microfreak/Preset/023 AliGoop]]
 - # BouncKeyPara
-	- Saved [[Microfreak]] preset in slot 22.
+	- Saved [[Microfreak]] preset in slot 022.

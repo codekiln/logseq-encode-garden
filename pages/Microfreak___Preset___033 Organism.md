@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/032 Chord Bass]]
 next:: [[Microfreak/Preset/034 Corrosion]]
 - # Organism
-	- Saved [[Microfreak]] preset in slot 33.
+	- Saved [[Microfreak]] preset in slot 033.

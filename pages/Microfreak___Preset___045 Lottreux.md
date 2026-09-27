@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/044 FM-it]]
 next:: [[Microfreak/Preset/046 XnastX]]
 - # Lottreux
-	- Saved [[Microfreak]] preset in slot 45.
+	- Saved [[Microfreak]] preset in slot 045.

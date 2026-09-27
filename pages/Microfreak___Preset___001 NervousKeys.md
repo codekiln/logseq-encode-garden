@@ -7,4 +7,4 @@ preset-on-device:: true
 preset-origin:: unknown
 next:: [[Microfreak/Preset/002 Punisher]]
 - # NervousKeys
-	- Saved [[Microfreak]] preset in slot 1.
+	- Saved [[Microfreak]] preset in slot 001.

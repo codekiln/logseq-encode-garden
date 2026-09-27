@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/097 SH Stutter]]
 next:: [[Microfreak/Preset/099 Tout Doux]]
 - # Lo-FiOrgan
-	- Saved [[Microfreak]] preset in slot 98.
+	- Saved [[Microfreak]] preset in slot 098.

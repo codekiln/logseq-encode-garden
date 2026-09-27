@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/030 HarmonicTuneUp]]
 next:: [[Microfreak/Preset/032 Chord Bass]]
 - # Ixos
-	- Saved [[Microfreak]] preset in slot 31.
+	- Saved [[Microfreak]] preset in slot 031.

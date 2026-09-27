@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/091 Cathil]]
 next:: [[Microfreak/Preset/093 Blind]]
 - # Smooth Pd
-	- Saved [[Microfreak]] preset in slot 92.
+	- Saved [[Microfreak]] preset in slot 092.

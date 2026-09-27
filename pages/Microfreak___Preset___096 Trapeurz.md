@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/095 Boers]]
 next:: [[Microfreak/Preset/097 SH Stutter]]
 - # Trapeurz
-	- Saved [[Microfreak]] preset in slot 96.
+	- Saved [[Microfreak]] preset in slot 096.

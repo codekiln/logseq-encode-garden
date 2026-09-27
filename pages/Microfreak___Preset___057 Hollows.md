@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/056 PowerStab]]
 next:: [[Microfreak/Preset/058 Junk.J]]
 - # Hollows
-	- Saved [[Microfreak]] preset in slot 57.
+	- Saved [[Microfreak]] preset in slot 057.

@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/015 PolyBells]]
 next:: [[Microfreak/Preset/017 Tubular]]
 - # Voidom
-	- Saved [[Microfreak]] preset in slot 16.
+	- Saved [[Microfreak]] preset in slot 016.

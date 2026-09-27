@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/012 Darkstream]]
 next:: [[Microfreak/Preset/014 Bontempis]]
 - # Pikdown
-	- Saved [[Microfreak]] preset in slot 13.
+	- Saved [[Microfreak]] preset in slot 013.

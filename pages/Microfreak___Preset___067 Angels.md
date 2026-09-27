@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/066 Vanarx]]
 next:: [[Microfreak/Preset/068 Canadian Bass]]
 - # Angels
-	- Saved [[Microfreak]] preset in slot 67.
+	- Saved [[Microfreak]] preset in slot 067.

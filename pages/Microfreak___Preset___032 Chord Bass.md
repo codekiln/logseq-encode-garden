@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/031 Ixos]]
 next:: [[Microfreak/Preset/033 Organism]]
 - # Chord Bass
-	- Saved [[Microfreak]] preset in slot 32.
+	- Saved [[Microfreak]] preset in slot 032.

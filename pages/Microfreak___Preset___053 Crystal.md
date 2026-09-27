@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/052 Ringussion]]
 next:: [[Microfreak/Preset/054 Michtack]]
 - # Crystal
-	- Saved [[Microfreak]] preset in slot 53.
+	- Saved [[Microfreak]] preset in slot 053.

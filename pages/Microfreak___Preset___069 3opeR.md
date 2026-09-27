@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/068 Canadian Bass]]
 next:: [[Microfreak/Preset/070 Cliched Things]]
 - # 3opeR
-	- Saved [[Microfreak]] preset in slot 69.
+	- Saved [[Microfreak]] preset in slot 069.

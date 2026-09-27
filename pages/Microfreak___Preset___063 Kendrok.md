@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/062 Mood Strings]]
 next:: [[Microfreak/Preset/064 Mood]]
 - # Kendrok
-	- Saved [[Microfreak]] preset in slot 63.
+	- Saved [[Microfreak]] preset in slot 063.

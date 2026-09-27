@@ -121,8 +121,8 @@ class SyncTest(unittest.TestCase):
             sync.apply(garden, sync.plan(garden, data))
             padded = garden / 'pages/Microfreak___Preset___001 Preset 1.md'
             legacy = garden / 'pages/Microfreak___Preset___1 Preset 1.md'
-            text = padded.read_text().replace('preset-number:: 001', 'preset-number:: 1')
-            text = 'tags:: [[Mine]]\n' + text + '- Sound note\n\t  id:: keep-this-id\n'
+            text = padded.read_text().replace('preset-number:: 001', 'preset-number:: 1').replace('slot 001.', 'slot 1.')
+            text = 'tags:: [[Mine]]\n' + text + '- Sound note\n\t  id:: keep-this-id\n- My sound in slot 1.\n'
             padded.unlink()
             legacy.write_text(text)
             note = garden / 'pages/Performance.md'
@@ -131,8 +131,10 @@ class SyncTest(unittest.TestCase):
             journal.write_text('- [[Microfreak/Preset/1 Preset 1]]\n')
             sync.apply(garden, sync.plan(garden, data))
             self.assertFalse(legacy.exists())
+            self.assertIn('Saved [[Microfreak]] preset in slot 001.', padded.read_text())
             self.assertIn('- Sound note\n\t  id:: keep-this-id\n', padded.read_text())
             self.assertTrue(padded.read_text().startswith('tags:: [[Mine]]\n'))
+            self.assertIn('- My sound in slot 1.\n', padded.read_text())
             self.assertEqual(note.read_text(), '- [[Microfreak/Preset/001 Preset 1]]\n- ((keep-this-id))\n')
             self.assertIn('[[Microfreak/Preset/001 Preset 1]]', journal.read_text())
             props = sync.properties(padded.read_text())

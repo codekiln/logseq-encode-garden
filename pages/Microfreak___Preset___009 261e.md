@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/008 Invitation]]
 next:: [[Microfreak/Preset/010 Raverz]]
 - # 261e
-	- Saved [[Microfreak]] preset in slot 9.
+	- Saved [[Microfreak]] preset in slot 009.

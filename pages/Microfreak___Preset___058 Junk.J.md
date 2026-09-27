@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/057 Hollows]]
 next:: [[Microfreak/Preset/059 Suby Rainbow]]
 - # Junk.J
-	- Saved [[Microfreak]] preset in slot 58.
+	- Saved [[Microfreak]] preset in slot 058.

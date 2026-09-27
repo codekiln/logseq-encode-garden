@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/048 VintageEdge]]
 next:: [[Microfreak/Preset/050 Death]]
 - # Sci Organ
-	- Saved [[Microfreak]] preset in slot 49.
+	- Saved [[Microfreak]] preset in slot 049.

@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/058 Junk.J]]
 next:: [[Microfreak/Preset/060 Unstable Solo]]
 - # Suby Rainbow
-	- Saved [[Microfreak]] preset in slot 59.
+	- Saved [[Microfreak]] preset in slot 059.

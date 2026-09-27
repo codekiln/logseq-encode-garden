@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/038 Classist]]
 next:: [[Microfreak/Preset/040 Disrespectful]]
 - # Nostromo
-	- Saved [[Microfreak]] preset in slot 39.
+	- Saved [[Microfreak]] preset in slot 039.

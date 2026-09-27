@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/098 Lo-FiOrgan]]
 next:: [[Microfreak/Preset/100 Tinnendo]]
 - # Tout Doux
-	- Saved [[Microfreak]] preset in slot 99.
+	- Saved [[Microfreak]] preset in slot 099.

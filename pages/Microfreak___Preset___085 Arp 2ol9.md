@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/084 Press So]]
 next:: [[Microfreak/Preset/086 Whimsy]]
 - # Arp 2ol9
-	- Saved [[Microfreak]] preset in slot 85.
+	- Saved [[Microfreak]] preset in slot 085.

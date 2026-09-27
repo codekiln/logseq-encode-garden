@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/060 Unstable Solo]]
 next:: [[Microfreak/Preset/062 Mood Strings]]
 - # AftrBlush
-	- Saved [[Microfreak]] preset in slot 61.
+	- Saved [[Microfreak]] preset in slot 061.

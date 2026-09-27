@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/096 Trapeurz]]
 next:: [[Microfreak/Preset/098 Lo-FiOrgan]]
 - # SH Stutter
-	- Saved [[Microfreak]] preset in slot 97.
+	- Saved [[Microfreak]] preset in slot 097.

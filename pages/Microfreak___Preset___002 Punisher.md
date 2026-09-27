@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/001 NervousKeys]]
 next:: [[Microfreak/Preset/003 Trance]]
 - # Punisher
-	- Saved [[Microfreak]] preset in slot 2.
+	- Saved [[Microfreak]] preset in slot 002.

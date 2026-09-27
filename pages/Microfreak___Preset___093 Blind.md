@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/092 Smooth Pd]]
 next:: [[Microfreak/Preset/094 Gloudal]]
 - # Blind
-	- Saved [[Microfreak]] preset in slot 93.
+	- Saved [[Microfreak]] preset in slot 093.

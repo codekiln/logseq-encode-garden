@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/069 3opeR]]
 next:: [[Microfreak/Preset/071 Sweep SQ]]
 - # Cliched Things
-	- Saved [[Microfreak]] preset in slot 70.
+	- Saved [[Microfreak]] preset in slot 070.

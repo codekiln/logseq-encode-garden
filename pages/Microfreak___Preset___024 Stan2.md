@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/023 AliGoop]]
 next:: [[Microfreak/Preset/025 808 St8 M8]]
 - # Stan2
-	- Saved [[Microfreak]] preset in slot 24.
+	- Saved [[Microfreak]] preset in slot 024.

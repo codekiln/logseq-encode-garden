@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/028 Daft]]
 next:: [[Microfreak/Preset/030 HarmonicTuneUp]]
 - # Number Station
-	- Saved [[Microfreak]] preset in slot 29.
+	- Saved [[Microfreak]] preset in slot 029.

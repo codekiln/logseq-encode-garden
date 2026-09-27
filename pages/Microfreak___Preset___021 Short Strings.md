@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/020 Arp-fi]]
 next:: [[Microfreak/Preset/022 BouncKeyPara]]
 - # Short Strings
-	- Saved [[Microfreak]] preset in slot 21.
+	- Saved [[Microfreak]] preset in slot 021.

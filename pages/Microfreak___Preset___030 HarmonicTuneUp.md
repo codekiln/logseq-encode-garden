@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/029 Number Station]]
 next:: [[Microfreak/Preset/031 Ixos]]
 - # HarmonicTuneUp
-	- Saved [[Microfreak]] preset in slot 30.
+	- Saved [[Microfreak]] preset in slot 030.

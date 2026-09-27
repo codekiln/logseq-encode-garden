@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/085 Arp 2ol9]]
 next:: [[Microfreak/Preset/087 ATSpookBass]]
 - # Whimsy
-	- Saved [[Microfreak]] preset in slot 86.
+	- Saved [[Microfreak]] preset in slot 086.

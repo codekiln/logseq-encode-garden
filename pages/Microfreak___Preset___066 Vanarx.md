@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/065 Cafe Chord]]
 next:: [[Microfreak/Preset/067 Angels]]
 - # Vanarx
-	- Saved [[Microfreak]] preset in slot 66.
+	- Saved [[Microfreak]] preset in slot 066.

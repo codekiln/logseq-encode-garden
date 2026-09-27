@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/047 White Calx]]
 next:: [[Microfreak/Preset/049 Sci Organ]]
 - # VintageEdge
-	- Saved [[Microfreak]] preset in slot 48.
+	- Saved [[Microfreak]] preset in slot 048.

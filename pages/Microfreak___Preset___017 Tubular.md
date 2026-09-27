@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/016 Voidom]]
 next:: [[Microfreak/Preset/018 Chip]]
 - # Tubular
-	- Saved [[Microfreak]] preset in slot 17.
+	- Saved [[Microfreak]] preset in slot 017.

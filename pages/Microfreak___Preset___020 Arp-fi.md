@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/019 BrightBinary]]
 next:: [[Microfreak/Preset/021 Short Strings]]
 - # Arp-fi
-	- Saved [[Microfreak]] preset in slot 20.
+	- Saved [[Microfreak]] preset in slot 020.

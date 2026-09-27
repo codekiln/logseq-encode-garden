@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/009 261e]]
 next:: [[Microfreak/Preset/011 Club V]]
 - # Raverz
-	- Saved [[Microfreak]] preset in slot 10.
+	- Saved [[Microfreak]] preset in slot 010.

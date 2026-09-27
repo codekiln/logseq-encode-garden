@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/049 Sci Organ]]
 next:: [[Microfreak/Preset/051 Solitude]]
 - # Death
-	- Saved [[Microfreak]] preset in slot 50.
+	- Saved [[Microfreak]] preset in slot 050.

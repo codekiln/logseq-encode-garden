@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/055 Analordic]]
 next:: [[Microfreak/Preset/057 Hollows]]
 - # PowerStab
-	- Saved [[Microfreak]] preset in slot 56.
+	- Saved [[Microfreak]] preset in slot 056.

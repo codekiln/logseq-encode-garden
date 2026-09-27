@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/013 Pikdown]]
 next:: [[Microfreak/Preset/015 PolyBells]]
 - # Bontempis
-	- Saved [[Microfreak]] preset in slot 14.
+	- Saved [[Microfreak]] preset in slot 014.

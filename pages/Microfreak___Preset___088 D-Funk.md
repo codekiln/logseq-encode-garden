@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/087 ATSpookBass]]
 next:: [[Microfreak/Preset/089 Kleo]]
 - # D-Funk
-	- Saved [[Microfreak]] preset in slot 88.
+	- Saved [[Microfreak]] preset in slot 088.

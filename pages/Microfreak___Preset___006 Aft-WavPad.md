@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/005 MotivSeq]]
 next:: [[Microfreak/Preset/007 Brd But Arp]]
 - # Aft-WavPad
-	- Saved [[Microfreak]] preset in slot 6.
+	- Saved [[Microfreak]] preset in slot 006.

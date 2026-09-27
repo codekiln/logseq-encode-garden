@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/050 Death]]
 next:: [[Microfreak/Preset/052 Ringussion]]
 - # Solitude
-	- Saved [[Microfreak]] preset in slot 51.
+	- Saved [[Microfreak]] preset in slot 051.

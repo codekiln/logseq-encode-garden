@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/034 Corrosion]]
 next:: [[Microfreak/Preset/036 Rollie Lov]]
 - # FM Seq
-	- Saved [[Microfreak]] preset in slot 35.
+	- Saved [[Microfreak]] preset in slot 035.

@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/033 Organism]]
 next:: [[Microfreak/Preset/035 FM Seq]]
 - # Corrosion
-	- Saved [[Microfreak]] preset in slot 34.
+	- Saved [[Microfreak]] preset in slot 034.

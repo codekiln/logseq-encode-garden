@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/042 Hoss]]
 next:: [[Microfreak/Preset/044 FM-it]]
 - # IDm5
-	- Saved [[Microfreak]] preset in slot 43.
+	- Saved [[Microfreak]] preset in slot 043.

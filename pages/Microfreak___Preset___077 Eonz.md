@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/076 AutoCHILL]]
 next:: [[Microfreak/Preset/078 A Juno Vibe]]
 - # Eonz
-	- Saved [[Microfreak]] preset in slot 77.
+	- Saved [[Microfreak]] preset in slot 077.

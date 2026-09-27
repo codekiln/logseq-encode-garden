@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/071 Sweep SQ]]
 next:: [[Microfreak/Preset/073 S.H Ld]]
 - # Buzzsaw
-	- Saved [[Microfreak]] preset in slot 72.
+	- Saved [[Microfreak]] preset in slot 072.

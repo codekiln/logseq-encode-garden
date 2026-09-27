@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/073 S.H Ld]]
 next:: [[Microfreak/Preset/075 Saying Goodbye]]
 - # Sneaker
-	- Saved [[Microfreak]] preset in slot 74.
+	- Saved [[Microfreak]] preset in slot 074.

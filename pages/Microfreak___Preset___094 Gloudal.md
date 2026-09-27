@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/093 Blind]]
 next:: [[Microfreak/Preset/095 Boers]]
 - # Gloudal
-	- Saved [[Microfreak]] preset in slot 94.
+	- Saved [[Microfreak]] preset in slot 094.

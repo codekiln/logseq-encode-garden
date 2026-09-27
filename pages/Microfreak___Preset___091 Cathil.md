@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/090 Guisky]]
 next:: [[Microfreak/Preset/092 Smooth Pd]]
 - # Cathil
-	- Saved [[Microfreak]] preset in slot 91.
+	- Saved [[Microfreak]] preset in slot 091.

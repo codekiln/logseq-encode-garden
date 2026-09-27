@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/083 Leeds Strings]]
 next:: [[Microfreak/Preset/085 Arp 2ol9]]
 - # Press So
-	- Saved [[Microfreak]] preset in slot 84.
+	- Saved [[Microfreak]] preset in slot 084.

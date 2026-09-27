@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/011 Club V]]
 next:: [[Microfreak/Preset/013 Pikdown]]
 - # Darkstream
-	- Saved [[Microfreak]] preset in slot 12.
+	- Saved [[Microfreak]] preset in slot 012.

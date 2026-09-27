@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/017 Tubular]]
 next:: [[Microfreak/Preset/019 BrightBinary]]
 - # Chip
-	- Saved [[Microfreak]] preset in slot 18.
+	- Saved [[Microfreak]] preset in slot 018.

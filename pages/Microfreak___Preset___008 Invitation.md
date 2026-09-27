@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/007 Brd But Arp]]
 next:: [[Microfreak/Preset/009 261e]]
 - # Invitation
-	- Saved [[Microfreak]] preset in slot 8.
+	- Saved [[Microfreak]] preset in slot 008.

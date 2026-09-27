@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/043 IDm5]]
 next:: [[Microfreak/Preset/045 Lottreux]]
 - # FM-it
-	- Saved [[Microfreak]] preset in slot 44.
+	- Saved [[Microfreak]] preset in slot 044.

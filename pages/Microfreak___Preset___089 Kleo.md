@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/088 D-Funk]]
 next:: [[Microfreak/Preset/090 Guisky]]
 - # Kleo
-	- Saved [[Microfreak]] preset in slot 89.
+	- Saved [[Microfreak]] preset in slot 089.

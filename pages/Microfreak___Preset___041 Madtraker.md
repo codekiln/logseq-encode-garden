@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/040 Disrespectful]]
 next:: [[Microfreak/Preset/042 Hoss]]
 - # Madtraker
-	- Saved [[Microfreak]] preset in slot 41.
+	- Saved [[Microfreak]] preset in slot 041.

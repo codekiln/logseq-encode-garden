@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/026 L9n1]]
 next:: [[Microfreak/Preset/028 Daft]]
 - # Nost
-	- Saved [[Microfreak]] preset in slot 27.
+	- Saved [[Microfreak]] preset in slot 027.

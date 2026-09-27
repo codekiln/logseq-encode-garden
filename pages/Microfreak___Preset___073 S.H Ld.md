@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/072 Buzzsaw]]
 next:: [[Microfreak/Preset/074 Sneaker]]
 - # S.H Ld
-	- Saved [[Microfreak]] preset in slot 73.
+	- Saved [[Microfreak]] preset in slot 073.

@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/035 FM Seq]]
 next:: [[Microfreak/Preset/037 Chunk]]
 - # Rollie Lov
-	- Saved [[Microfreak]] preset in slot 36.
+	- Saved [[Microfreak]] preset in slot 036.

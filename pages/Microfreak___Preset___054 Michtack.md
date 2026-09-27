@@ -8,4 +8,4 @@ preset-origin:: unknown
 prev:: [[Microfreak/Preset/053 Crystal]]
 next:: [[Microfreak/Preset/055 Analordic]]
 - # Michtack
-	- Saved [[Microfreak]] preset in slot 54.
+	- Saved [[Microfreak]] preset in slot 054.
