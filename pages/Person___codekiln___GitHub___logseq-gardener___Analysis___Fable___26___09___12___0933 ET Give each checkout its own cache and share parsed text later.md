@@ -1,4 +1,4 @@
-author:: [[Anthropic/Model/Claude/Fable/5.1]]
+author:: [[Anthropic/Model/Claude/5/1/Fable]]
 see-also:: [[Person/codekiln/GitHub/logseq-gardener/Analysis/Codex/26/09/12/0733 ET Keep editor buffers and worktrees separate in the shared cache]], [[My/Pref/Dev/Tool/git/Worktree]], [[My/Principle/Simplify/Minimize Surface Area]]
 
 - # Give each checkout its own cache and share parsed text later

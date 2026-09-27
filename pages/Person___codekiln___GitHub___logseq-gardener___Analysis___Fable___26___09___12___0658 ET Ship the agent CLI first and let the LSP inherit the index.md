@@ -1,4 +1,4 @@
-author:: [[Anthropic/Model/Claude/Fable/5.1]]
+author:: [[Anthropic/Model/Claude/5/1/Fable]]
 see-also:: [[My/Principle/CLI/Centricity]], [[Logseq/NeoVim/LSP]]
 
 - # Ship the agent CLI first and let the LSP inherit the index

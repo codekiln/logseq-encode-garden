@@ -1,0 +1,24 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # AI Model API Documentation
+	- In this garden, **AI Model API Documentation** pages model the official API docs page for one [[Logseq/Entity/AI/Model]] — the first-party source for that release's reasoning, speed, context, output limits, and price.
+	- ## What counts as an instance
+		- One official documentation URL for one model version. Anthropic's model overview and OpenAI's `/api/docs/models/<id>` page are the usual sources.
+		- Not an instance: a third-party benchmark or analysis page, which is a [[Logseq/Entity/AI/Model/Doc/Analysis]]; a family hub; a product that happens to run the model.
+	- ## Naming and links
+		- Live under the model as `…/Doc/API`. Example: [[OpenAI/Model/GPT/6/Astra/Doc/API]] for [[OpenAI/Model/GPT/6/Astra]].
+		- One page per model version. Do not share a Doc/API page across releases.
+	- ## Finding and deduplicating
+		- Search the official docs URL, then `<model>/Doc/API`, then the model code. Classify as: existing, similar, new, or blocked.
+	- ## Frontmatter
+		- Mark instances with **`logseq-entity:: [[Logseq/Entity/AI/Model/Doc/API]]`**.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- The first body block is an H1 whose text links to the official docs URL.
+		- Optional child bullets may record the facts that page is the source of: model id, context window, max output, input and output price, cache price, reasoning or effort controls, speed notes, knowledge cutoff.
+		- Each official URL appears once.
+	- ## Relationship to other types
+		- [[Logseq/Entity/AI/Model]] — the parent model embeds this page at the top of its body.
+		- [[Logseq/Entity/AI/Model/Doc/Analysis]] — third-party metrics for the same model.
+	- ## Examples in this garden
+		- [[Anthropic/Model/Claude/5/5/Opus/Doc/API]]

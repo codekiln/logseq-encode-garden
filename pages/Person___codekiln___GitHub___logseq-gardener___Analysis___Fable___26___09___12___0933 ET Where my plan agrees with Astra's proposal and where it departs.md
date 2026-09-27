@@ -1,4 +1,4 @@
-author:: [[Anthropic/Model/Claude/Fable/5.1]]
+author:: [[Anthropic/Model/Claude/5/1/Fable]]
 see-also:: [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Astra]], [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal/Fable]]
 
 - # Where my plan agrees with Astra's proposal and where it departs

@@ -1,42 +1,53 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
-alias:: [[AI Model Page]], [[Model Page]]
 
 - # AI Model
-	- In this garden, **AI Model** pages model one released version of a machine learning model — [[Anthropic/Model/Claude/Sonnet/4.5]], [[OpenAI/Model/GPT/4/1]] — named under the provider that ships it.
+	- In this garden, **AI Model** pages represent one released version of a machine learning model — [[Anthropic/Model/Claude/5/5/Opus]], [[OpenAI/Model/GPT/6/Sol]] — named under the provider that ships it.
 	- ## What counts as an instance
 		- A **specific version** of a model, with its own release, its own model code, and its own benchmarks.
 		- Not an instance: a **family**. [[Anthropic/Model/Claude]] and `GPT-4` name lineages, not releases; they are hub pages that list versions rather than document one. Always document the version.
 		- Not an instance: a **kind** of model. [[AI/Model/Reasoning]], [[AI/Model/World]], [[AI/Model/Open Weight]] and their siblings under `AI/Model/` classify models; they are [[Logseq/Entity/Term]] or [[Logseq/Entity/Concept]] pages that instances link to.
 		- Not an instance: a product built on a model. A chat app, an agent or an IDE is its own entity; it links to the model it runs on.
+		- Not an instance: the official docs page or a third-party metrics card. Those are [[Logseq/Entity/AI/Model/Doc/API]] and [[Logseq/Entity/AI/Model/Doc/Analysis]], nested under the model.
 	- ## Naming and links
-		- Pages live under the **provider's** namespace, with the version expressed as further `/` segments: `[[OpenAI/Model/GPT/4/1]]` for GPT-4.1, `[[Anthropic/Model/Claude/3.5/Sonnet]]` for Claude 3.5 Sonnet.
-		- Provider namespaces already in use: `[[OpenAI/Model/…]]`, `[[Anthropic/Model/…]]`, `[[Google/AI/Model/…]]`, `[[DeepSeek/Model/…]]`, `[[xAI/Model/…]]`. A new provider takes the same shape.
-		- Where the version segments fall varies by how the provider names its own releases — Anthropic has moved the tier before and after the number across generations. Follow the sibling pages of that provider rather than imposing one order.
-		- **Always link the full namespace path.** Bare display text — *Gemini 2.5 Pro*, *Sonnet 4.5* — does not resolve and leaves the model out of the graph.
+		- Pages live under the **provider's** namespace. The provider should be an instance of [[Logseq/Entity/Company]] or [[Logseq/Entity/Organization]]. Version numbers that contain a decimal split the same way [[Logseq/Entity/Time/Year]] splits a year: most significant digit group first, then the next. Claude Opus 5.5 is [[Anthropic/Model/Claude/5/5/Opus]], not `Claude/Opus/5.5` and not `Claude/5.5/Opus`. Claude Fable 5.1 is [[Anthropic/Model/Claude/5/1/Fable]]. GPT-4.1 is [[OpenAI/Model/GPT/4/1]].
+		- A version with no decimal keeps one number segment: [[OpenAI/Model/GPT/6/Sol]], [[OpenAI/Model/GPT/6/Astra]].
+		- The last segment is the tier or given name when the release has one — Opus, Fable, Sol, Astra, Sonnet. A name that is only a number needs no extra leaf.
+		- Provider namespaces already in use: `OpenAI/Model/…`, `Anthropic/Model/…`, `Google/AI/Model/…`, `DeepSeek/Model/…`, `xAI/Model/…`. A new provider takes the same shape.
+		- Older pages may still use a dotted leaf (`Claude/Fable/5.1`, `Claude/Sonnet/4.5`) or put the tier before the number. New pages follow the split. Leave a legacy path as filed unless a rename is asked for; add `alias::` on the new page only when the old path has no file of its own.
+		- **Always link the full namespace path.** Bare display text — *Gemini 2.5 Pro*, *Opus 5.5* — does not resolve and leaves the model out of the graph.
 		- Page names stay singular, per [[Logseq/Pref/Page/Name]].
 	- ## Frontmatter
-		- **`alias::`** — the **model code**, the string an API call actually carries: `alias:: [[claude-sonnet-4-5]]`, `alias:: [[gemini-2.5-pro-preview-05-06]]`. Prefer the code over a prettified display name; the code is what a reader arrives with.
-		- **`tags::`** — `[[AI/Model]]` on a page you are creating. Never rewrite `tags::` on a page you did not create.
-		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
-		- **Legacy instances** wrap their frontmatter in `---` fences. That is the older export shape; new pages use bare `key:: value` lines at the top of the file, per [[Logseq/Flavored Markdown]]. Do not migrate old pages unasked.
+		- It should have standard entity attribution in [[Logseq/Entity/Frontmatter]].
+		- **`alias::`** — the **model code**, the string an API call actually carries: `alias:: [[claude-opus-5-5]]`, `alias:: [[gpt-6-sol]]`. Prefer the official code from the official model vendor over a prettified display name. Do not create more than one alias.
+		- **`tags::`** — `[[AI/Model]]` on a page you are creating.
+		- **`date-created::`** — the model's public release date when known, per [[Logseq/Date]].
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]]. `---` fences around page-level attributes are illegal in Logseq; unwrap them.
 	- ## Page shape
-		- A **stub**, when the model is only being referenced:
-			- `- # Model Name`, then `- *Stub page - detailed documentation pending*`. Add it to the provider's model list page if one exists.
-		- A **full page**, when the model is the subject:
-			- `- # [Model Name](official-documentation-url)` — the H1 always carries the official link.
-				- `## Key Features` — capabilities, context window, knowledge cutoff, and the release status: **stable**, **preview** or **experimental**.
-				- `## Performance Highlights` — benchmark results with figures, linked to the benchmark's own page where one exists.
-				- `## Model Tiers` — the variants and how they differ, when the release has more than one.
-				- `## Access Details` — API availability, pricing, rate limits, usage restrictions. Preview and experimental releases especially need their limits written down.
-				- `## Technical Specifications` — architecture, training data, input and output formats, special capabilities, and the model version code.
-				- `## References` — official documentation, papers, benchmark sources.
+		- After the H1, embed the model's docs namespace — at minimum the [[Logseq/Entity/AI/Model/Doc/API]] page, and any [[Logseq/Entity/AI/Model/Doc/Analysis]] pages worth seeing on the model itself. That is a [[Logseq/Page/Embed]]:
+			- `{{embed [[Provider/Model/…/Doc/API]]}}`
+			- `{{embed [[Provider/Model/…/Doc/Artificial Analysis/Intelligence]]}}`
+		- A **thin** page is an H1 plus those embeds. [[Anthropic/Model/Claude/5/5/Opus]] is the current example. Official facts live on the Doc/API page; third-party scores live on the analysis page. Do not repeat the same URL on the model H1.
+		- A **stub**, when the model is only being referenced and the official URL is not yet in hand: `- # Model Name`, then `- *Stub page - detailed documentation pending*`. Prefer a thin page with Doc/API once the official URL is known.
+		- A **full** page may still add house sections under the embeds when the model is the subject of longer notes:
+			- `## Key Features` — capabilities, context window, knowledge cutoff, and the release status: **stable**, **preview** or **experimental**.
+			- `## Performance Highlights` — benchmark results with figures, linked to the benchmark's own page where one exists.
+			- `## Model Tiers` — the variants and how they differ, when the release has more than one.
+			- `## Access Details` — API availability, pricing, rate limits, usage restrictions.
+			- `## Technical Specifications` — architecture, training data, input and output formats, special capabilities, and the model version code.
+			- `## References` — papers and sources that are not the Doc/API or Doc/Analysis URLs already embedded.
 	- ## Writing an instance
-		- Research before writing: the official model card and documentation, the release announcement, benchmark results, the pricing page, the API reference.
-		- Give figures, not adjectives. *SWE-bench Verified: 77.2%* is a fact a reader can use; *better at coding* is not.
+		- Deduplicate first: model code, official docs URL, provider path, and any [[Logseq/Entity/AI/Leaderboard]] row that already names it.
+		- Create the model page at the split path. Create `<model>/Doc/API` with an H1 link to the official docs. Create `<model>/Doc/<Source>/…` when a third-party card exists. Embed those pages under the model H1.
+		- Research from those two sources, not from a separate import checklist: the official docs for price, context, reasoning, and speed; [[ArtificialAnalysis]] (or another analysis page) for independent scores.
+		- Give figures, not adjectives. *Intelligence Index: 58* is a fact a reader can use; *better at coding* is not.
 		- Link sibling and predecessor models so a generation reads as a sequence.
+		- When a [[Logseq/Entity/AI/Leaderboard]] is being refreshed and this model is missing from the garden, a thin page plus Doc/API is enough. A later pass can fill house sections.
 		- Facts here decay. Revisit a page when benchmarks land, when pricing or availability changes, when a variant ships, or when a release moves from preview to stable.
 	- ## Relationship to other types
+		- **[[Logseq/Entity/AI/Model/Doc/API]]** — official documentation, nested at `<model>/Doc/API` and embedded at the top of the model page.
+		- **[[Logseq/Entity/AI/Model/Doc/Analysis]]** — third-party metrics for the same release.
+		- **[[Logseq/Entity/AI/Leaderboard]]** — ranked lists that point at model pages.
 		- **[[Logseq/Entity/Term]]** / **[[Logseq/Entity/Concept]]** — the `AI/Model/<Kind>` pages that classify models, and the concepts a model page cites.
 		- **[[Logseq/Entity/Person]]** — researchers and founders link to the models they shipped, not the reverse.
 	- ## Examples in this garden
-		- [[Anthropic/Model/Claude/Sonnet/4.5]], [[OpenAI/Model/GPT/4/1]], [[Anthropic/Model/Claude/Fable/5.1]]
+		- [[Anthropic/Model/Claude/5/5/Opus]], [[OpenAI/Model/GPT/6/Astra]], [[OpenAI/Model/GPT/4/1]]

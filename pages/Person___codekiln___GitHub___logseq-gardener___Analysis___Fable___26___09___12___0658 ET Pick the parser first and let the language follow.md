@@ -1,4 +1,4 @@
-author:: [[Anthropic/Model/Claude/Fable/5.1]]
+author:: [[Anthropic/Model/Claude/5/1/Fable]]
 see-also:: [[Logseq/Idea/Rust Rewrite]], [[My/Pref/Dev/Tool/Prefer Well-Maintained Projects]], [[My/Pref/Dev/Tool/PL]]
 
 - # Pick the parser first and let the language follow

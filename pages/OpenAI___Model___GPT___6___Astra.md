@@ -1,4 +1,7 @@
 alias:: [[gpt-6-astra]]
 tags:: [[AI/Model]]
+logseq-entity:: [[Logseq/Entity/AI/Model]]
 
-- # [GPT-6 Astra](https://developers.openai.com/api/docs/models/gpt-6-astra)
+- # GPT-6 Astra
+	- {{embed [[OpenAI/Model/GPT/6/Astra/Doc/API]]}}
+	- {{embed [[OpenAI/Model/GPT/6/Astra/Doc/Artificial Analysis/Intelligence]]}}
