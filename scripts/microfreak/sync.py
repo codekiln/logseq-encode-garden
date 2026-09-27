@@ -166,9 +166,25 @@ def plan(garden, inventory):
 
 def journal_text(old, changes):
     # The namespace hub keeps repeated bulk inventories out of the curated journal.
-    if not changes or '[[Microfreak/Preset]]' in old:
+    if not changes:
         return old
     lines = old.splitlines()
+    entries = {'Filed': [], 'Updated': []}
+    section = None
+    for i, line in enumerate(lines):
+        if line and not line.startswith(('\t', ' ')):
+            section = next((name for name in entries
+                            if line == f'- # [[{name}]]'), None)
+        elif section and line.strip() == '- [[Microfreak/Preset]]':
+            entries[section].append(i)
+    # A page filed today stays Filed even after subsequent metadata updates.
+    existing = entries['Filed'] or entries['Updated']
+    if existing:
+        keep = existing[0]
+        duplicates = set(entries['Filed'] + entries['Updated']) - {keep}
+        if not duplicates:
+            return old
+        return '\n'.join(line for i, line in enumerate(lines) if i not in duplicates) + '\n'
     heading = '- # [[Updated]]'
     if heading not in lines:
         lines.append(heading)

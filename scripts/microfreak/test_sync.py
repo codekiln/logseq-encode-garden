@@ -64,6 +64,21 @@ class SyncTest(unittest.TestCase):
         self.assertEqual(sync.journal_text(updated, changes), updated)
         self.assertEqual(sync.journal_text(old, []), old)
 
+    def test_journal_filed_hub_stays_filed_and_narrative_is_not_entry(self):
+        changes = [(Path('x'), None, 'new')]
+        narrative = '- I played [[Microfreak/Preset]] today.\n'
+        filed = '- # [[Filed]]\n\t- Music\n\t\t- [[Microfreak/Preset]]\n'
+        updated = '- # [[Updated]]\n\t- Other\n\t\t- [[Elsewhere]]\n'
+        old = narrative + filed + updated
+        self.assertEqual(sync.journal_text(old, changes), old)
+        # Narrative links remain untouched, but do not suppress the change-log link.
+        result = sync.journal_text(narrative + updated, changes)
+        self.assertTrue(result.startswith(narrative + updated))
+        self.assertTrue(result.endswith('\t- [[Microfreak/Preset]]\n'))
+        self.assertEqual(sync.journal_text(result, changes), result)
+        duplicate = old + '\t- [[Microfreak/Preset]]\n'
+        self.assertEqual(sync.journal_text(duplicate, changes), old)
+
     def test_unmanaged_collision_fails_before_writes(self):
         with tempfile.TemporaryDirectory() as tmp:
             garden = Path(tmp)
