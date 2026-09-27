@@ -9,6 +9,3 @@ logseq-entity:: [[Logseq/Entity/Concept]]
 	- ## Real estate and inflation
 		- A rise in home sale prices is an asset-price change, not by itself consumer-price inflation. Housing services and rents are included in consumer price measures, so a persistent rise in rents can contribute to measured inflation.
 		- [The Federal Reserve's inflation overview](https://www.federalreserve.gov/faqs/economy_14419.htm) defines inflation as a general increase in the overall price level, rather than a change in one product or asset.
-	- ## Current San Francisco example
-		- In September 2026, the Associated Press reported that high-income AI workers were buying Bay Area homes and that OpenAI and Anthropic had filed preliminary IPO paperwork in June without deciding when to list. The report describes a plausible demand channel and buyer expectations; it does not establish that prospective IPO proceeds caused a measured rise in home prices or rents.
-		- [AI-fueled luxury home rush grips the San Francisco Bay Area despite high rates · AP](https://apnews.com/article/ai-real-estate-openai-anthropic-ipo-8a9e958c4a82f12bc7b6c752e1a2e5f7)
