@@ -1,0 +1,11 @@
+logseq-entity:: [[Logseq/Entity/Concept]]
+- # Real Estate
+	- ## Overview
+		- Real estate is land and the buildings or other permanent improvements attached to it. The term also refers to the business and markets involved in owning, developing, renting, and selling that property.
+		- Housing is one part of real estate. Home sale prices, rents, construction costs, and commercial property values are related measures, but they do not move in lockstep.
+	- ## Local markets and wealth
+		- A local housing market responds to the number and type of homes available, the number and resources of buyers and renters, financing costs, and expectations about future demand.
+		- A sudden increase in liquid wealth among buyers can intensify competition for scarce homes. That mechanism is plausible in a constrained market, but evidence of higher prices alone does not identify which source of demand caused them.
+	- ## Real estate and inflation
+		- A rise in home sale prices is an asset-price change, not by itself consumer-price inflation. Housing services and rents are included in consumer price measures, so a persistent rise in rents can contribute to measured inflation.
+		- [The Federal Reserve's inflation overview](https://www.federalreserve.gov/faqs/economy_14419.htm) defines inflation as a general increase in the overall price level, rather than a change in one product or asset.
