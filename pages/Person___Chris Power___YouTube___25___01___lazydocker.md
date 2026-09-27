@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 - [This one tool forever changed how I use Docker - YouTube](https://www.youtube.com/watch?v=IUAk1pjXDWM)
 	- [[My Notes]] this is how I found out about [[Lazydocker]]
 		-

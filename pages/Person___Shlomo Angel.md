@@ -1,0 +1,3 @@
+logseq-entity:: [[Logseq/Entity/Person]]
+- # Shlomo Angel
+	- Urban planning scholar and contributor to [[Person/Christopher Alexander/Book/77/A Pattern Language]].

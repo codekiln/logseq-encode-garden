@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 created-by:: [[Person/Josean Martinez]]
 tags:: [[nvim]], [[Lazygit]], [[YouTube]]
 

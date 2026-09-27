@@ -1,0 +1,14 @@
+logseq-entity:: [[Logseq/Entity/Concept]]
+- # Periodic Table of Elements
+	- ## Overview
+		- The periodic table is a visual model that organizes chemical elements so their relationships and recurring properties can be seen at a glance. Its layout turns a list into a map: position encodes atomic number and recurring patterns in chemical behavior.
+	- ## History
+		- Earlier chemists proposed ways to classify elements. In 1869, Dmitri Mendeleev published a table that grouped elements by recurring properties and atomic weight. He left gaps where the pattern suggested undiscovered elements and predicted some of their properties.
+		- In 1913, Henry Moseley's measurements connected element order to atomic number. Ordering by atomic number resolved cases where atomic weight alone put neighboring elements in the wrong order.
+	- ## How the representation works
+		- Each cell represents one element and commonly shows its atomic number, symbol, name, and atomic mass.
+		- Rows, called periods, follow increasing atomic number. Columns, called groups, collect elements with related chemical behavior.
+		- The shape makes periodic patterns visible and allows position to convey information about an element's structure and likely behavior.
+	- ## Sources
+		- [Royal Society of Chemistry — Development of the periodic table](https://periodic-table.rsc.org/about)
+		- [NIST — Henry Moseley and the Periodic Table of the Elements](https://www.nist.gov/news-events/news/2024/02/henry-moseley-and-periodic-table-elements)

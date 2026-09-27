@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 tags:: [[Person/Brian Madison/GitHub/cursor-custom-agents-rules-generator]], [[YouTube]]
 created-by:: [[Brian Madison]]
 

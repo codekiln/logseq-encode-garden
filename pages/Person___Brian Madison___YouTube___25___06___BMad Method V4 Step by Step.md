@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 # [BMad Method V4: Complete Step-by-Step Install, Upgrade and Execution - YouTube](https://www.youtube.com/watch?v=l9iqJIRZzkA)
 	- ## [[Video]]
 		- {{video https://www.youtube.com/watch?v=l9iqJIRZzkA}}

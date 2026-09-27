@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 tags:: [[FabricAI]]
 
 - # TODO Intro to [[FabricAI]]

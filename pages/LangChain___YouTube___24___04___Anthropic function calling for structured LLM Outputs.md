@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 tags:: [[YouTube]], [[Py/Lib/langchain-anthropic]], [[LangChain/anthropic]]
 
 - # [Anthropic function calling for structured LLM outputs - YouTube](https://www.youtube.com/watch?v=cVEJaWgiudU)

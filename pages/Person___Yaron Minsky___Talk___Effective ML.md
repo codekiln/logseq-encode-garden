@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 # [Effective ML - Yaron Minsky](https://www.youtube.com/watch?v=-J8YyfrSwTk) - [[Person/Yaron Minsky]] [[Jane Street]]
 	- {{video https://www.youtube.com/watch?v=-J8YyfrSwTk}}
 		- ### {{youtube-timestamp 1081}} three properties of great software engineers

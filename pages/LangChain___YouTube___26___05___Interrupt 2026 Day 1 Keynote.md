@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 date-created:: [[2026/05/06]]
 
 - # [Interrupt 2026: Day 1 Keynote - YouTube](https://www.youtube.com/watch?v=Y0JaVN02Ngc)

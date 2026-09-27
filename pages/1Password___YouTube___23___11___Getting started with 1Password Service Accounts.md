@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 # [Getting Started with 1Password Service Accounts - YouTube](https://www.youtube.com/watch?v=E3HKeG9P8HA)
 	- runtime: 1min 25sec
 	- ## Video

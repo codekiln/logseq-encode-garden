@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 tags:: [[YouTube]], [[MCP]], [[CursorAI]]
 alias:: [[David Ondrej - Build Anything with MCP Agents]]
 

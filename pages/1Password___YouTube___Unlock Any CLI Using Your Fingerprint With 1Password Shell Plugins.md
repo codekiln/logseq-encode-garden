@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 # [Unlock Any CLI Using Your Fingerprint With 1Password Shell Plugins - YouTube](https://www.youtube.com/watch?v=7aT4K1AMfGI)
 	- [[My Notes]]
 	  id:: 67cff02e-60b9-40c9-b694-8f21613bf364

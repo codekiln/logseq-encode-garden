@@ -1,0 +1,12 @@
+logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Diataxis/Explanation]]
+- # Database Schema
+	- ## Overview
+		- A **database schema** describes the organization and rules of data in a database. In a relational database it defines tables, columns, data types, keys, relationships, and constraints. It is the database-specific form of a [[Schema]].
+	- ## Levels of description
+		- A **conceptual model** names the things a domain cares about and how they relate, without choosing tables or storage structures.
+		- A **logical schema** expresses those things in a data model, such as relational tables and foreign keys. A **physical design** chooses indexes, partitions, and other storage structures that affect performance.
+	- ## Schema in use
+		- A database uses schema constraints to reject invalid writes. Applications use the schema to form queries and interpret results. Some systems enforce a declared schema when data is written; others allow flexible records and apply shape expectations when data is read.
+		- [[DDL]] expresses schema definitions and changes in [[SQL]]. A schema migration carries those changes into an existing database and may also transform stored data.
+	- ## Related idea
+		- [[Database/System/Theory]] studies how schemas interact with queries, transactions, storage, and recovery. A schema describes the structure of the data; the records are instances of that structure.

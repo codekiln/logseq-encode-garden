@@ -1,2 +1,3 @@
-- [AIEWF 2025 Complete Playlist - YouTube](https://www.youtube.com/playlist?list=PLcfpQ4tk2k0W3ORTR-Cr4Ppw6UrN8kfMh)
+logseq-entity:: [[Logseq/Entity/YouTube/Playlist]], [[Logseq/Entity/Series]]
+- # [AIEWF 2025 Complete Playlist - YouTube](https://www.youtube.com/playlist?list=PLcfpQ4tk2k0W3ORTR-Cr4Ppw6UrN8kfMh)
 	-

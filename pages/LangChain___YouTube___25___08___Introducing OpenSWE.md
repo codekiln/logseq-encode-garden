@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 date-created:: [[2025/08]]
 
 - # [Introducing Open SWE: An Open-Source Asynchronous Coding Agent - YouTube](https://www.youtube.com/watch?v=TaYVvXbOs8c)

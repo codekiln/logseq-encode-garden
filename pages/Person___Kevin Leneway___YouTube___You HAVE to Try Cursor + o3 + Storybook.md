@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 tags:: [[Storybook]], [[OpenAI/Model/o3]], [[CursorAI]]
 date-created:: [[2025/02]]
 

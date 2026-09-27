@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 # Learn Live [[Ableton/Linked-Track Editing]] - [YouTube](https://www.youtube.com/watch?v=UuRDpqBsmD0)
 	- ## #Video
 		- {{video https://www.youtube.com/watch?v=UuRDpqBsmD0}}

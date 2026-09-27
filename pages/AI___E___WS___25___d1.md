@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 tags:: [[MCP]]
 alias:: [[AI Engineer World Summit 2025 Day 1 Keynotes and MCP Track YouTube]]
 date-created:: [[2025-06-04 Wed]]

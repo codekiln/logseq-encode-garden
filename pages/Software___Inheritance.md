@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Concept]]
+- # Software inheritance
+	- ## Overview
+		- Inheritance lets one software object or class acquire behavior from another and specialize it. The relationship may be declared between classes or built from a chain of prototype objects. [[Software/Inheritance/Class-Based]] and [[Software/Inheritance/Prototype-Based]] explain those mechanisms.
+		- Inheritance is also a design claim: the specialized thing should make sense wherever the general thing is expected. [[Software/Inheritance/Is-A]] names that claim; [[Software/Subtyping]] examines when the substitution is actually valid.
+	- ## Mechanism
+		- In [[Software/Inheritance/Class-Based]], a subclass inherits accessible members of a superclass and may add or override behavior. In [[Software/Inheritance/Prototype-Based]], an object delegates property lookup to another object along a prototype chain.
+		- Implementation inheritance reuses code. Interface inheritance or subtyping establishes what operations clients may rely on. Sharing code alone does not prove the stronger substitutability claim.
+	- ## Design boundary
+		- Inheritance couples a specialization to the behavior and assumptions of its parent. A deep hierarchy can make a change in one class affect distant descendants.
+		- [[Software/Composition]] assembles behavior from collaborators through a [[Software/Inheritance/Has-A]] relationship. It can reuse behavior without claiming that the containing object is a subtype of any collaborator.
+	- ## Sources
+		- [Inheritance in Java](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html) describes subclass members and overriding; [MDN's inheritance and prototype chain guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) describes delegation through objects.

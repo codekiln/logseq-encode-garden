@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 tags:: [[PromptQL]]
 
 - # TODO [Watch PromptQL in Action - YouTube](https://www.youtube.com/watch?v=nGcf09iVQbk)
