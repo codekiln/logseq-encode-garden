@@ -5,5 +5,7 @@ preset-category:: Template
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/205 Exotic Perc]]
+next:: [[Microfreak/Preset/207 Bells 2]]
 - # Bells 1
 	- Saved [[Microfreak]] preset in slot 206.

@@ -33,8 +33,8 @@ class SyncTest(unittest.TestCase):
             changes = sync.plan(garden, data)
             sync.apply(garden, changes)
             self.assertEqual(sync.plan(garden, data), [])
-            path = garden / 'pages/Microfreak___Preset___1 Preset 1.md'
-            self.assertIn('- # Preset 1\n\t- Saved [[Microfreak]] preset in slot 1.', path.read_text())
+            path = garden / 'pages/Microfreak___Preset___001 Preset 1.md'
+            self.assertIn('- # Preset 1\n\t- Saved [[Microfreak]] preset in slot 001.', path.read_text())
             text = path.read_text().replace('preset-origin:: unknown', 'preset-origin:: custom')
             text = 'tags:: [[Mine]]\n' + text + '- My performance notes\n\tid:: 123\n'
             path.write_text(text)
@@ -49,7 +49,7 @@ class SyncTest(unittest.TestCase):
             self.assertEqual(sync.plan(garden, data), [])
             data['presets'][0]['initialized'] = True
             sync.apply(garden, sync.plan(garden, data))
-            renamed = garden / 'pages/Microfreak___Preset___1 Renamed.md'
+            renamed = garden / 'pages/Microfreak___Preset___001 Renamed.md'
             self.assertIn('preset-on-device:: false', renamed.read_text())
             self.assertEqual(sync.plan(garden, data), [])
             journal = next((garden / 'journals').glob('*.md')).read_text()
@@ -105,11 +105,68 @@ class SyncTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             garden = Path(tmp)
             (garden / 'pages').mkdir()
-            path = garden / 'pages/Microfreak___Preset___1 Preset 1.md'
+            path = garden / 'pages/Microfreak___Preset___001 Preset 1.md'
             path.write_text('- Existing notes\n')
             with self.assertRaises(ValueError):
                 sync.plan(garden, inventory())
             self.assertEqual(path.read_text(), '- Existing notes\n')
+
+    def test_legacy_migration_rewrites_links_and_preserves_blocks(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            garden = Path(tmp)
+            (garden / 'pages').mkdir()
+            data = inventory()
+            for preset in data['presets']:
+                preset['initialized'] = preset['number'] not in (1, 9, 100)
+            sync.apply(garden, sync.plan(garden, data))
+            padded = garden / 'pages/Microfreak___Preset___001 Preset 1.md'
+            legacy = garden / 'pages/Microfreak___Preset___1 Preset 1.md'
+            text = padded.read_text().replace('preset-number:: 001', 'preset-number:: 1')
+            text = 'tags:: [[Mine]]\n' + text + '- Sound note\n\t  id:: keep-this-id\n'
+            padded.unlink()
+            legacy.write_text(text)
+            note = garden / 'pages/Performance.md'
+            note.write_text('- [[Microfreak/Preset/1 Preset 1]]\n- ((keep-this-id))\n')
+            journal = next((garden / 'journals').glob('*.md'))
+            journal.write_text('- [[Microfreak/Preset/1 Preset 1]]\n')
+            sync.apply(garden, sync.plan(garden, data))
+            self.assertFalse(legacy.exists())
+            self.assertIn('- Sound note\n\t  id:: keep-this-id\n', padded.read_text())
+            self.assertTrue(padded.read_text().startswith('tags:: [[Mine]]\n'))
+            self.assertEqual(note.read_text(), '- [[Microfreak/Preset/001 Preset 1]]\n- ((keep-this-id))\n')
+            self.assertIn('[[Microfreak/Preset/001 Preset 1]]', journal.read_text())
+            props = sync.properties(padded.read_text())
+            self.assertNotIn('prev', props)
+            self.assertEqual(props['next'], '[[Microfreak/Preset/009 Preset 9]]')
+            last = garden / 'pages/Microfreak___Preset___100 Preset 100.md'
+            self.assertEqual(sync.properties(last.read_text())['prev'], '[[Microfreak/Preset/009 Preset 9]]')
+            self.assertNotIn('next', sync.properties(last.read_text()))
+            data['presets'][8]['initialized'] = True
+            sync.apply(garden, sync.plan(garden, data))
+            self.assertEqual(sync.properties(padded.read_text())['next'], '[[Microfreak/Preset/100 Preset 100]]')
+            retired = sync.properties((garden / 'pages/Microfreak___Preset___009 Preset 9.md').read_text())
+            self.assertNotIn('prev', retired)
+            self.assertNotIn('next', retired)
+            self.assertEqual(sync.plan(garden, data), [])
+
+    def test_migration_collision_and_concurrent_edit_fail_before_writes(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            garden = Path(tmp)
+            (garden / 'pages').mkdir()
+            data = inventory()
+            sync.apply(garden, sync.plan(garden, data))
+            padded = garden / 'pages/Microfreak___Preset___001 Preset 1.md'
+            legacy = garden / 'pages/Microfreak___Preset___1 Preset 1.md'
+            legacy.write_text(padded.read_text())
+            with self.assertRaises(ValueError):
+                sync.plan(garden, data)
+            padded.unlink()
+            changes = sync.plan(garden, data)
+            legacy.write_text(legacy.read_text() + '- New note\n')
+            with self.assertRaises(ValueError):
+                sync.apply(garden, changes)
+            self.assertFalse(padded.exists())
+            self.assertTrue(legacy.read_text().endswith('- New note\n'))
 
     def test_response_slot_and_sequence_validation(self):
         header = [3, 12, 0, 16, 0, 0, 0, 0, 12, 1, 2, 51] + list(b'Imit') + [0] * 19

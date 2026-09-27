@@ -5,5 +5,7 @@ preset-category:: Pad
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/150 Stab One]]
+next:: [[Microfreak/Preset/152 B3]]
 - # The Unstable
 	- Saved [[Microfreak]] preset in slot 151.

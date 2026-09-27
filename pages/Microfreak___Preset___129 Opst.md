@@ -5,5 +5,7 @@ preset-category:: Percussion
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/128 KickBass]]
+next:: [[Microfreak/Preset/130 Sprt Brth]]
 - # Opst
 	- Saved [[Microfreak]] preset in slot 129.

@@ -5,5 +5,7 @@ preset-category:: Template
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/185 Strings 1]]
+next:: [[Microfreak/Preset/187 KarpluStrings]]
 - # Strings 2
 	- Saved [[Microfreak]] preset in slot 186.

@@ -5,5 +5,7 @@ preset-category:: Sequence
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/100 Tinnendo]]
+next:: [[Microfreak/Preset/102 Braine Storm]]
 - # Etna 01
 	- Saved [[Microfreak]] preset in slot 101.

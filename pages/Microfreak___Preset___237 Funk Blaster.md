@@ -5,5 +5,7 @@ preset-category:: Bass
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/236 Fastrun]]
+next:: [[Microfreak/Preset/238 Deep Sea Call]]
 - # Funk Blaster
 	- Saved [[Microfreak]] preset in slot 237.

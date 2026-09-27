@@ -5,5 +5,7 @@ preset-category:: Percussion
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/139 Long FM Bass]]
+next:: [[Microfreak/Preset/141 Digital Sea]]
 - # Hats maker
 	- Saved [[Microfreak]] preset in slot 140.

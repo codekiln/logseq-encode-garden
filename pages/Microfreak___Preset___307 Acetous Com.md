@@ -5,5 +5,7 @@ preset-category:: Vocoder
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/306 Low Battery]]
+next:: [[Microfreak/Preset/308 Gated Com]]
 - # Acetous Com
 	- Saved [[Microfreak]] preset in slot 307.

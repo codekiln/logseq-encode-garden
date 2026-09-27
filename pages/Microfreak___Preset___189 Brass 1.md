@@ -5,5 +5,7 @@ preset-category:: Template
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/188 Karpad]]
+next:: [[Microfreak/Preset/190 Brass 2]]
 - # Brass 1
 	- Saved [[Microfreak]] preset in slot 189.

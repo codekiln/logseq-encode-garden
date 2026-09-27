@@ -115,7 +115,11 @@ def update(text, values):
         boundary += 1
     for key, value in values.items():
         indices = [i for i in range(boundary) if lines[i].startswith(key + ':: ')]
-        if indices:
+        if value is None:
+            if indices:
+                lines.pop(indices[0])
+                boundary -= 1
+        elif indices:
             lines[indices[0]] = f'{key}:: {value}'
         else:
             lines.insert(boundary, f'{key}:: {value}')
@@ -128,40 +132,75 @@ def plan(garden, inventory):
     pages = garden / 'pages'
     if not pages.is_dir():
         raise ValueError('Garden must contain a pages directory')
-    changes = []
-    current = {}
+    original = {path: path.read_text() for folder in ('pages', 'journals')
+                for path in (garden / folder).glob('*.md')}
+    desired = dict(original)
+    current, renames = {}, {}
     for path in pages.glob('Microfreak___Preset___*.md'):
-        text = path.read_text()
+        text = original[path]
         props = properties(text)
-        if props.get('logseq-entity') == ENTITY:
-            key = (props.get('preset-number'), props.get('preset-name'))
-            if key in current:
-                raise ValueError(f'Duplicate preset identity: {key}')
-            current[key] = (path, text)
-    active = set()
+        if props.get('logseq-entity') != ENTITY:
+            continue
+        number = props.get('preset-number', '')
+        if not number.isdigit() or not 1 <= int(number) <= 512:
+            raise ValueError(f'Invalid preset number: {path}')
+        key = (int(number), props.get('preset-name'))
+        if key in current:
+            raise ValueError(f'Duplicate preset identity: {key}')
+        # Pad the original title's slot, preserving its historical identity.
+        match = re.fullmatch(r'Microfreak___Preset___([0-9]+) (.+)', path.stem)
+        if not match or not 1 <= int(match[1]) <= 512:
+            raise ValueError(f'Unsupported preset page title: {path}')
+        target = path.with_name(f'Microfreak___Preset___{int(match[1]):03d} {match[2]}.md')
+        if target != path:
+            if target in original or target in desired and target not in original:
+                raise ValueError(f'Preset rename destination already exists: {target}')
+            renames[path.stem.replace('___', '/')] = target.stem.replace('___', '/')
+            del desired[path]
+        desired[target] = update(text, {'preset-number': f'{int(number):03d}'})
+        current[key] = target
+    active = {}
     for p in sorted(inventory['presets'], key=lambda p: p['number']):
         if p['initialized']:
             continue
-        key = (str(p['number']), p['name'])
-        active.add(key)
-        title = f"Microfreak/Preset/{p['number']} {p['name']}"
-        path, old = current.get(key, (pages / (title.replace('/', '___') + '.md'), None))
-        if old is None and path.exists():
+        key = (p['number'], p['name'])
+        title = f"Microfreak/Preset/{p['number']:03d} {p['name']}"
+        path = current.get(key, pages / (title.replace('/', '___') + '.md'))
+        if key not in current and path in desired:
             raise ValueError(f'Unmanaged page already exists: {path}; reconcile its metadata before applying')
-        values = {'logseq-entity': ENTITY, 'preset-number': str(p['number']),
+        # An unmanaged legacy page must not be silently duplicated either.
+        legacy = pages / f"Microfreak___Preset___{p['number']} {p['name']}.md"
+        if key not in current and legacy in original:
+            raise ValueError(f'Unmanaged page already exists: {legacy}; reconcile its metadata before applying')
+        old = desired.get(path)
+        values = {'logseq-entity': ENTITY, 'preset-number': f"{p['number']:03d}",
                   'preset-name': p['name'], 'preset-category': p['category'],
-                  'preset-initialized': str(p['initialized']).lower(), 'preset-on-device': 'true'}
+                  'preset-initialized': 'false', 'preset-on-device': 'true'}
         if old is None:
             values['preset-origin'] = 'unknown'
-        new = update(old if old is not None else f"- # {p['name']}\n\t- Saved [[Microfreak]] preset in slot {p['number']}.\n", values)
-        if new != old:
-            changes.append((path, old, new))
-    for key, (path, old) in current.items():
+        desired[path] = update(old if old is not None else f"- # {p['name']}\n\t- Saved [[Microfreak]] preset in slot {p['number']:03d}.\n", values)
+        active[key] = path
+    sequence = list(active.values())
+    for i, path in enumerate(sequence):
+        desired[path] = update(desired[path], {
+            'prev': f"[[{sequence[i - 1].stem.replace('___', '/')}]]" if i else None,
+            'next': f"[[{sequence[i + 1].stem.replace('___', '/')}]]" if i + 1 < len(sequence) else None})
+    for key, path in current.items():
         if key not in active:
-            new = update(old, {'preset-on-device': 'false'})
-            if new != old:
-                changes.append((path, old, new))
-    return changes
+            desired[path] = update(desired[path], {'preset-on-device': 'false', 'prev': None, 'next': None})
+    if renames:
+        link = re.compile(r'\[\[([^\[\]]+)\]\]')
+        for path, text in desired.items():
+            lines = []
+            for line in text.splitlines(keepends=True):
+                replaced = link.sub(lambda m: '[[' + renames.get(m[1], m[1]) + ']]', line)
+                if line.startswith('tags::') and replaced != line:
+                    raise ValueError(f'Protected tags reference a renamed preset: {path}')
+                lines.append(replaced)
+            desired[path] = ''.join(lines)
+    return [(path, original.get(path), desired.get(path))
+            for path in sorted(original.keys() | desired.keys())
+            if original.get(path) != desired.get(path)]
 
 
 def journal_text(old, changes):
@@ -219,9 +258,13 @@ def apply(garden, changes):
         return
     journal = garden / 'journals' / (dt.date.today().strftime('%Y_%m_%d') + '.md')
     old_journal = journal.read_text() if journal.exists() else ''
-    new_journal = journal_text(old_journal, changes)
+    planned_journal = next((new for path, _, new in changes if path == journal), old_journal)
+    new_journal = journal_text(planned_journal, changes)
     for path, _, new in changes:
-        path.write_text(new)
+        if new is None:
+            path.unlink()
+        else:
+            path.write_text(new)
     journal.parent.mkdir(exist_ok=True)
     journal.write_text(new_journal)
 
@@ -239,8 +282,8 @@ def main():
         if args.save_inventory:
             args.save_inventory.write_text(json.dumps(inventory, indent=2) + '\n')
         changes = plan(args.garden.resolve(), inventory)
-        for path, old, _ in changes:
-            print(('CREATE ' if old is None else 'UPDATE ') + path.name)
+        for path, old, new in changes:
+            print(('DELETE ' if new is None else 'CREATE ' if old is None else 'UPDATE ') + path.name)
         if args.apply:
             apply(args.garden.resolve(), changes)
         print(f'{len(changes)} page changes' + (' applied' if args.apply else ' proposed; use --apply to write'))

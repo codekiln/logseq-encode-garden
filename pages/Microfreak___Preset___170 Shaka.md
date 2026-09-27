@@ -5,5 +5,7 @@ preset-category:: Percussion
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/169 Pats]]
+next:: [[Microfreak/Preset/171 Prof]]
 - # Shaka
 	- Saved [[Microfreak]] preset in slot 170.
