@@ -1,4 +1,6 @@
-# [[2026-09-27 Sun]] - [[GitHub/codekiln/logseq-encode-garden]]
+prev:: [[Week/Review/26/09/20 Sun]]
+
+- # [[2026-09-27 Sun]] - [[GitHub/codekiln/logseq-encode-garden]]
 	- 09:40
 		- ## Introit and Benediction
 		  collapsed:: true
