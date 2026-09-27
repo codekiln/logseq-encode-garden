@@ -1,8 +1,4 @@
 logseq-entity:: [[Logseq/Entity/Person]]
----
-alias: 
----
-
 # Person/Drew Gregory
 
 - Software Engineer at [[FormalCo]]

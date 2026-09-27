@@ -1,6 +1,4 @@
----
 date-created:: [[2026/04/07]]
----
 - # [3 constraints before I build anything](https://jordanlord.co.uk/blog/3-constraints/)
 	- Author: **[[Person/Jordan Lord]]**
 	- Published: 2026-04-07 (on [jordanlord.co.uk](https://jordanlord.co.uk/blog/3-constraints/))

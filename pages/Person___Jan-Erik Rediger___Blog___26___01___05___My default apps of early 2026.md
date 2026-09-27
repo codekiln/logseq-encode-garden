@@ -1,7 +1,4 @@
----
 date-created:: [[2026/01/05]]
----
-
 - # [My default apps of early 2026](https://fnordig.de/2026/01/05/my-default-apps-of-early-2026/)
 	- Author: **[[Person/Jan-Erik Rediger]]**
 	- Source: [fnordig.de](https://fnordig.de/)

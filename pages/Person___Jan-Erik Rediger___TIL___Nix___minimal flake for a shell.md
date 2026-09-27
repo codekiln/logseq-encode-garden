@@ -1,5 +1,3 @@
----
----
 - # [A minimal flake for a shell](https://fnordig.de/til/nix/minimal-flake.html) — [[TIL]]
 	- Author: **[[Person/Jan-Erik Rediger]]**
 	- Source: [fnordig.de TIL](https://fnordig.de/til/nix/minimal-flake.html)
