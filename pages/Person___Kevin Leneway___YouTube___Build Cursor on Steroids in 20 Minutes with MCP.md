@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 # LATER [Build Cursor on Steroids in 20 Minutes with MCP - YouTube](https://www.youtube.com/watch?v=MAicJ6KKccU)
 :LOGBOOK:
 CLOCK: [2025-02-16 Sun 03:05:45]--[2025-02-16 Sun 04:35:08] =>  01:29:23

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 date-created:: [[2026/02/02]]
 - # [Beyond Instructions: How Beads Lets AI Agents Build Like Engineers - YouTube](https://www.youtube.com/watch?v=s96O9oWI_tI)
 	- Host: Joe Reis

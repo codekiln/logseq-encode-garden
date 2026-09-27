@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 created-by:: [[Person/Jesse Duffield]]
 tags:: [[Lazygit]], [[Tutorial]], [[YouTube]]
 

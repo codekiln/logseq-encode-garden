@@ -1,0 +1,12 @@
+logseq-entity:: [[Logseq/Entity/Concept]]
+- # Liskov Substitution Principle
+	- ## Overview
+		- The Liskov Substitution Principle describes behavioral subtyping: code that works with a supertype should continue to work when given an instance of a valid subtype.
+	- ## Context
+		- Barbara Liskov and Jeannette Wing formalized this principle as a condition on subtype relationships. It concerns the behavior promised by a type, not merely shared fields or method names.
+	- ## Consequences
+		- A subtype must preserve the expectations clients can rely on from the supertype, including valid inputs, results, and state changes.
+		- A type hierarchy that violates those expectations can make substitution unsafe even when the language accepts the inheritance relationship.
+	- ## Related ideas
+		- [[Software/Subtyping]]
+		- [[Software/Inheritance/Is-A]]

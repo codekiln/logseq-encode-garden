@@ -1,0 +1,14 @@
+logseq-entity:: [[Logseq/Entity/Concept]]
+- # Class-based inheritance
+	- ## Overview
+		- Class-based inheritance defines a new class in relation to an existing class. The subclass receives accessible members of its superclass, may add members, and may override inherited methods. Instances of the subclass use the resulting behavior.
+	- ## Mechanism
+		- A class declaration establishes the parent relationship. Method lookup follows language-specific rules when a subclass overrides a method; the superclass may still supply shared implementation.
+		- In Java, a class has one direct superclass and may implement several interfaces. Python permits multiple base classes and resolves method lookup through a defined method-resolution order. These are different answers to the same question: where does inherited behavior come from?
+	- ## Design consequence
+		- A subclass that only borrows implementation may fail the [[Software/Inheritance/Is-A]] test. Clients need the behavioral promises of [[Software/Subtyping]], not merely inherited method names.
+		- A stable hierarchy can centralize common behavior. When variations are independent or change frequently, [[Software/Composition]] can keep those choices separate.
+	- ## Example
+		- `MountainBike` may extend `Bicycle` to reuse riding behavior and add a suspension setting, provided every operation promised for a `Bicycle` still behaves sensibly on a `MountainBike`.
+	- ## Sources
+		- [Java's inheritance tutorial](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html) and [Python's class tutorial](https://docs.python.org/3/tutorial/classes.html) document the respective class mechanisms.

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 created-by:: [[Person/Chris Kelly]]
 created-date:: [[2025/06]]
 

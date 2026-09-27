@@ -1,0 +1,15 @@
+logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Diataxis/Explanation]]
+- # Database Systems Theory
+	- ## Overview
+		- Database systems theory studies how a [[Data/Base]] represents information, answers queries, and keeps data usable when many operations occur or a machine fails. The data model describes what can be stored; the query model describes what can be asked; the storage engine determines how those operations run.
+	- ## Core questions
+		- **Modeling** — A [[Database/Schema]] names the structures and constraints that data must satisfy. The logical model describes the data independently of indexes and file layout.
+		- **Querying** — A query describes the desired result. Indexes and query plans determine how the system finds that result efficiently.
+		- **Transactions** — Concurrency control keeps simultaneous operations from producing invalid outcomes; recovery restores a consistent state after failure. Durability, isolation, and consistency guarantees depend on the system's design.
+		- **Distribution** — Replication and partitioning spread data across machines, introducing choices about coordination, availability, and when replicas see changes.
+	- ## Data models and workloads
+		- **Relational databases** organize data as relations with keys and constraints; [[SQLite]] and [[Dolt]] are examples. [[SQL]] includes [[DDL]] for defining structures and statements for querying and changing rows.
+		- **[[Graph/Database]]** represents relationships as edges, making connected paths central to the model.
+		- **[[Data/Base/Vector]]** indexes embeddings for similarity search; vector search can also be an extension of another database.
+		- **Document and key-value databases** organize records around documents or keys. [[ArangoDB]] combines these models with a graph model; schemas and query capabilities vary by product.
+		- **Analytical databases** favor scans and aggregation across large datasets; [[OLAP]] describes this style of work, while transactional systems favor short reads and writes.

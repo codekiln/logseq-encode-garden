@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 # [Aider (Upgraded) : This Coding Agent just got BETTER with Architect Mode, Gemini-002 Support & More! - YouTube](https://www.youtube.com/watch?v=OPXslklVBZc)
 	- ## [[Video]]
 		- {{video https://www.youtube.com/watch?v=OPXslklVBZc}}

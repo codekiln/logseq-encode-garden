@@ -1,2 +1,3 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 - [Nix explained from the ground up - YouTube](https://www.youtube.com/watch?v=5D3nUU1OVx8)
 	- watched the first 6 min of 24

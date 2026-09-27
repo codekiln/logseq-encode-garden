@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 # [Getting Started with Rclone and Backblaze B2 - YouTube](https://www.youtube.com/watch?v=r1ruNWy3B00&t=2s)
 	- ## [[My Notes]]
 		- great overview of the rclone backblaze integration. In particular:

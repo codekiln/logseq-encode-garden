@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 # [The Case for Claude Code - YouTube](https://www.youtube.com/watch?v=aHTXccrfXC8)
 	- ## #Video
 		- {{video https://www.youtube.com/watch?v=aHTXccrfXC8}}
@@ -26,4 +27,4 @@
 			- ### {{youtube-timestamp 1340}} Multi-tasking with Claude Code
 				- 
 			- ### {{youtube-timestamp 1558}} Agentic coding patterns
-				- 
+				-

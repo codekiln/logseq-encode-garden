@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 # [Introducing Claude Code - YouTube](https://www.youtube.com/watch?v=AJpK3YTTKZ4) - [[Claude/Code]]
 - runtime: 3min 54sec
 	- ## my #notes

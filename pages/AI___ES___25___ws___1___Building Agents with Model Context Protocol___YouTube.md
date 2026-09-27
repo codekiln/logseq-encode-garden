@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 # [Building Agents with Model Context Protocol - Full Workshop with Mahesh Murag of Anthropic - YouTube](https://www.youtube.com/watch?v=kQmXtrmQ5Zg&t=235s)
 	- ## [[My Notes]]
 		- See detailed notes in [[AI/ES/25/ws/1/Building Agents with Model Context Protocol]]

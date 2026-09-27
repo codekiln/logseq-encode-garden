@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 created-by:: [[Person/Ray Amjad]]
 date-created:: [[2026/09/18]]
 readwise-link:: https://read.readwise.io/read/01m31q0vrbvfaz5nc5nqwtt2ch

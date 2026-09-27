@@ -1,0 +1,11 @@
+logseq-entity:: [[Logseq/Entity/Concept]]
+- # Software composition
+	- ## Overview
+		- Composition builds an object or system from collaborating parts. A part supplies a capability; the containing object coordinates the parts and presents the behavior its clients need. This is commonly a [[Software/Inheritance/Has-A]] relationship.
+		- Composition can reuse an implementation while leaving the containing object's type independent of the component's type. An object can therefore satisfy an interface through delegation without inheriting from the component's class.
+	- ## Related design choice
+		- [[Software/Composition/vs/Inheritance]] weighs composition against inheritance when choosing where behavior and variation should live.
+	- ## Example
+		- A `Report` can have a `Formatter` collaborator. Choosing a different formatter changes presentation while leaving `Report`'s responsibilities and type intact.
+	- ## Source
+		- [Effective Go's embedding discussion](https://go.dev/doc/effective_go#embedding) distinguishes borrowing implementation through an embedded type from subclassing.

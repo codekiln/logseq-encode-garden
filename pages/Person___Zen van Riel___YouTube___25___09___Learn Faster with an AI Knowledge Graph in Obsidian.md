@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 date-created:: [[2025/09/28]]
 created-by:: [[Person/Zen van Riel]]
 

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 created-by:: [[Person/Barry Zhang]]
 runtime:: 00:15:08
 

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 created-by:: [[Person/Madeleine Bloom]]
 
 - # [Ableton Live Quick Tips: Fastest Way to Set Start & End Markers in Clips - YouTube](https://www.youtube.com/watch?v=gfXceaeTouo)

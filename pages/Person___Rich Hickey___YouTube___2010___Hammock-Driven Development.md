@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 created-by:: [[Person/Rich Hickey]]
 created-date:: [[2010]]
 
@@ -8,8 +9,8 @@ created-date:: [[2010]]
 		- **Video:** [https://www.youtube.com/watch?v=f84n5oFoZBc](https://www.youtube.com/watch?v=f84n5oFoZBc)
 	- ## My notes
 		- I deeply respect Rich Hickey and agree wholeheartedly with everything he says in this talk. I do have open questions, though, about whether mentally framing everything as a problem to be solved is the context that will always lead to developing the best application
-		- Related: I've recently learned about the [[Learning/Gap Effect]] from [[Person/Andrew Huberman]] - [https://www.youtube.com/watch?v=0zQaNicTyCM](https://www.youtube.com/watch?v=0zQaNicTyCM)
-		- great comment about the importance of articulating trade-offs 18min8sec into his 2010 talk [Hammock Driven Development](https://youtu.be/f84n5oFoZBc?t=1088).
+		- Related: I've recently learned about the [[Learning/Gap Effect]] from [[Person/Andrew Huberman]] - [https://www.youtube.com/watch?v=0zQaNicTyCM](https://www.youtube.com/watch?v=0zQaNicTyCM)
+		- great comment about the importance of articulating trade-offs 18min8sec into his 2010 talk [Hammock Driven Development](https://youtu.be/f84n5oFoZBc?t=1088).
 			- > You have to look at at least two solutions to your problems, and you have to figure out what's good and bad about those things, before you can say, "I've made a trade-off." And when you've done that, you might want to write that down somewhere! #Quote from [[Person/Rich Hickey]]
 				- I referenced this in a [[MR/Comment]] [here](https://github.com/bmadcode/BMAD-METHOD/pull/337#issuecomment-3102300130)
 	- ## Others' notes

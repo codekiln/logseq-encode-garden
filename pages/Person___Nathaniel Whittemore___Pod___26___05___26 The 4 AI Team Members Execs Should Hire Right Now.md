@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 date-created:: [[2026/05/26]]
 tags:: [[Podcast/Episode]]
 

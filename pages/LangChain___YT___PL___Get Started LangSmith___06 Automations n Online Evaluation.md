@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 # DONE [Getting Started with LangSmith (6/7): Automations & Online Evaluation - YouTube](https://www.youtube.com/watch?v=xj2R3lBgihs)
 	- notes
 		- Contains examples of chaining automation rules with online evaluation

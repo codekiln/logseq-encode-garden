@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 created-by:: [[Person/Jeff Huber]]
 
 - # [Context Engineering for Engineers - YouTube](https://www.youtube.com/watch?v=3jN77Aw7Utk&list=PL5q_lef6zVkb2j0SjbqFWLUdTTvkEnfaL&index=4)

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 # [Using Claude Code for web to build a tool to copy-paste share terminal sessions - YouTube](https://www.youtube.com/watch?v=GQvMLLrFPVI)
 	- ## [[My Notes]]
 		- See also [[Person/Simon Willison/Blog/25/10/Video - Building Copy Paste Tool]]

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 # [The EXTREMELY helpful guide to merge conflicts - YouTube](https://www.youtube.com/watch?v=HosPml1qkrg)
 	- ## [[My Notes]]
 		- Helpful in conceptualizing why it's called a "three way merge" and also demonstrates that the [[VSCode/View/Changes]] panel for [[git/merge/conflict/resolution]] actually doesn't (by default) show the "base commit" that turns it into a "three-way" merge.

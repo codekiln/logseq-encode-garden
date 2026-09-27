@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 readwise-link:: https://readwise.io/bookreview/62463240
 
 - [I'm ditching tmux for herdr! - YouTube](https://www.youtube.com/watch?v=yQDARWdrPeY)
