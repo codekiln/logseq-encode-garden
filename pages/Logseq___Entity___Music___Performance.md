@@ -1,0 +1,17 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+- # Music Performance
+	- In this garden, **Music Performance** pages model a particular event or session in which a musical work is performed.
+	- ## What counts
+		- A performance is an occurrence, not the abstract work and not a recording of the occurrence.
+		- A live rendition at a concert or awards show is a performance. An improvised studio or home session may also be modeled as a performance when it has a distinct identity worth revisiting.
+		- An audio or video capture of the event is a separate [[Logseq/Entity/Music/Recording]] when the recording itself needs a page.
+	- ## Naming and placement
+		- Place a performance under its principal performer as `Person/<Performer>/Music/Performance/<Date or Event>/<Work>`.
+		- Use the event date or a stable event name to distinguish repeated performances of the same work.
+		- A session of several works may use one event page with an ordered set of `work::` links.
+	- ## Relationships
+		- Use `work::` for the performed work, `performer::` for performers, and `recording::` for a recording page that documents the event.
+		- Link an event or venue when its page exists. A performance's `date-created::` is the date of the event when known.
+	- ## Instance shape
+		- Start each performance page with `logseq-entity:: [[Logseq/Entity/Music/Performance]]` and one H1 naming the performance.
+		- Add the event date, `work::`, performers, and a source link when available.
