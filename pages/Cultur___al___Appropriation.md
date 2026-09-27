@@ -1,0 +1,23 @@
+logseq-entity:: [[Logseq/Entity/Concept]]
+alias:: [[Cultural Appropriation]]
+- # Cultural Appropriation
+	- ## Overview
+		- Cultural appropriation is the use of cultural forms, knowledge, symbols, or practices by people outside the community that created or sustains them. The term does not by itself settle whether a particular use is harmful or unjust.
+		- Richard A. Rogers distinguishes exchange, dominance, exploitation, and transculturation as different kinds of appropriation. The distinctions help keep ordinary cultural influence separate from uses shaped by unequal power, coercion, or profit.
+	- ## History of the term
+		- The history of the English phrase is recent; cultural borrowing and conflict over cultural control long predate the phrase.
+		- The phrase appeared in Arthur E. Christy's 1945 book *The Asian Legacy and American Life*, where it referred broadly to Asian influences on European and American culture. That early usage was not yet the same as the present critical sense.
+		- During the 1970s and 1980s, scholarship on colonialism, cultural domination, and postcolonial relations developed a more critical use of the term. Kenneth Coutts-Smith's 1976 discussion of cultural colonialism is part of this intellectual background; later work made appropriation a framework for examining who controls, represents, and profits from cultural expression.
+		- In the 1990s and after, debate expanded across art, music, fashion, museums, law, and Indigenous cultural property. Scholars have stressed that disputes are shaped by specific histories of dispossession and by conflicts over consent, attribution, access, and control.
+	- ## Questions for a particular case
+		- What is being borrowed, and what meaning does it have in its source community?
+		- Who can authorize or contest the use, and are affected people represented or credited?
+		- Who receives money, visibility, or other benefits, and who bears the costs?
+		- Does the use carry forward a history of exclusion, stereotyping, or dispossession, or does it create meaningful exchange on terms shared by the people involved?
+	- ## Example for further thought
+		- Madonna's 1990 song and performance of Vogue, and Jennie Livingston's documentary [[Movie/90/Paris Is Burning]], brought ballroom culture and voguing to a much wider audience. They also prompted discussion about representation, attribution, visibility, and who benefited from the culture's movement into mainstream media. Those questions require attention to the accounts of ballroom participants and the distinct context of each work.
+	- ## Sources
+		- Richard A. Rogers, [From Cultural Exchange to Transculturation: A Review and Reconceptualization of Cultural Appropriation](https://onlinelibrary.wiley.com/doi/10.1111/j.1468-2885.2006.00277.x), *Communication Theory* (2006).
+		- [Cultural Appropriation](https://sites.tufts.edu/rcdkeywords/cultural-appropriation/), *Keywords in Race, Colonialism, and Diaspora Studies*, Tufts University.
+		- Angela R. Riley and Kristen A. Carpenter, [Owning Red: A Theory of Indian (Cultural) Appropriation](https://scholar.law.colorado.edu/faculty-articles/4/), *Texas Law Review* (2016).
+		- [When Can We Speak of Cultural Appropriation?](https://www.degruyterbrill.com/document/doi/10.1515/fmst-2025-0009/html), *Film and Media Studies* (2025), on the phrase's earlier use and later critical meaning.

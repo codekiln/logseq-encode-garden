@@ -1,0 +1,18 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+- # Movie
+	- In this garden, **Movie** pages model individual motion-picture works, including documentaries and narrative films.
+	- ## What counts as a Movie
+		- A released feature film or short film with an identifiable title and release year.
+		- Not this type: a screening event, television series, episode, screenplay, or a page about the general medium of film.
+	- ## Naming and identity
+		- Use `Movie/YY/<Title>` for a movie, with the four-digit release year when it is known. Preserve the work's official title capitalization.
+		- One page represents one film. Distinguish different works with the same title by year or another clear identity detail.
+	- ## Frontmatter
+		- Mark each instance with `logseq-entity:: [[Logseq/Entity/Movie]]`.
+		- Record the known release date with `date-created::`, following [[Logseq/Date]] for the date's precision and link form.
+		- Use `created-by::` for a filmmaker only when that person has a matching Person hub in the garden.
+		- Shared page-level attributes follow [[Logseq/Frontmatter]].
+	- ## Page shape
+		- Begin with an H1 linking the film title to a reliable official or archival page. Add a concise description, director, release year, and useful context or preservation notes when supported by sources.
+	- ## Finding and deduplicating
+		- Search the title, alternate capitalization, director, and release year. Treat remakes and other distinct works as separate movies.
