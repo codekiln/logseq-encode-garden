@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Concept]]
+- # Wireframe
+	- A wireframe is a simplified visual plan for an interface. It shows page or screen structure, content hierarchy, and the placement of important controls so people can reason about how the experience is organized.
+	- ## Purpose
+		- Wireframes make competing layouts quick to compare and help a team discuss information order, navigation, and user tasks before visual styling takes center stage.
+		- They can be sketches on paper or digital diagrams. Their level of detail depends on the question being explored; a wireframe may also show a sequence of screens or key interaction states.
+	- ## Relationship to other artifacts
+		- A wireframe emphasizes structure and hierarchy. A [[Mock/Up]] emphasizes visual treatment such as typography, color, imagery, and spacing.
+		- A prototype lets people try some of the proposed behavior. A wireframe can remain static or be connected into a simple flow for early testing.
+		- These artifacts are often revisited as people learn more about the user, the product, and its technical constraints.
+	- ## References
+		- [Wireframes](https://digital.gov/guides/research-collaboration/designing/wireframing) — Digital.gov
+		- [How to wireframe](https://www.figma.com/blog/how-to-wireframe/) — Figma
