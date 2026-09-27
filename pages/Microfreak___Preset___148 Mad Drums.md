@@ -5,5 +5,7 @@ preset-category:: Percussion
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/147 Drum Grit Seq]]
+next:: [[Microfreak/Preset/149 Colt]]
 - # Mad Drums
 	- Saved [[Microfreak]] preset in slot 148.

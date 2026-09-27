@@ -5,5 +5,7 @@ preset-category:: Keys
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/101 Etna 01]]
+next:: [[Microfreak/Preset/103 Padel]]
 - # Braine Storm
 	- Saved [[Microfreak]] preset in slot 102.

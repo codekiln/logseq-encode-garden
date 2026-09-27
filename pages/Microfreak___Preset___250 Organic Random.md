@@ -5,5 +5,7 @@ preset-category:: SFX
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/249 RisoLFO]]
+next:: [[Microfreak/Preset/251 Trinity]]
 - # Organic Random
 	- Saved [[Microfreak]] preset in slot 250.

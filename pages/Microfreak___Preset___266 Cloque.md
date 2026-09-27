@@ -5,5 +5,7 @@ preset-category:: Pad
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/265 Bliss]]
+next:: [[Microfreak/Preset/267 Tracteur]]
 - # Cloque
 	- Saved [[Microfreak]] preset in slot 266.

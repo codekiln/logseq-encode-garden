@@ -5,5 +5,7 @@ preset-category:: Pad
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/272 Maison]]
+next:: [[Microfreak/Preset/274 Sardine]]
 - # Good
 	- Saved [[Microfreak]] preset in slot 273.

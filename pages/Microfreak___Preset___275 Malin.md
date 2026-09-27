@@ -5,5 +5,7 @@ preset-category:: Keys
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/274 Sardine]]
+next:: [[Microfreak/Preset/276 Dandi]]
 - # Malin
 	- Saved [[Microfreak]] preset in slot 275.

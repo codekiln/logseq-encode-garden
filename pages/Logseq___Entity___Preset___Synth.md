@@ -10,3 +10,4 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Instance shape
 		- Mark a page with `logseq-entity:: [[Logseq/Entity/Preset/Synth]]` or a narrower instrument type such as [[Logseq/Entity/Preset/Synth/Microfreak]]. See [[Logseq/Frontmatter]] for shared page properties.
 		- Give the page one H1 with the preset name, describe how the sound plays or is used, and link relevant music logs when known. Leave unheard or unverified details unstated.
+		- Numbered preset collections use `prev::` and `next::` links to the adjacent populated slots, following [[Logseq/Frontmatter/prev]] and [[Logseq/Frontmatter/next]]. The first and last preset carry only the available direction; pages no longer on the device have neither direction.

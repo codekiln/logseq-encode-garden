@@ -5,5 +5,7 @@ preset-category:: Bass
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/138 Metallic Talk]]
+next:: [[Microfreak/Preset/140 Hats maker]]
 - # Long FM Bass
 	- Saved [[Microfreak]] preset in slot 139.

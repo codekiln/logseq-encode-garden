@@ -5,5 +5,7 @@ preset-category:: Bass
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/110 F-Back]]
+next:: [[Microfreak/Preset/112 Anlg]]
 - # AcidFrog
 	- Saved [[Microfreak]] preset in slot 111.

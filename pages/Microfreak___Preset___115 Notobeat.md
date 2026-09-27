@@ -5,5 +5,7 @@ preset-category:: Sequence
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/114 Fate In Freaks]]
+next:: [[Microfreak/Preset/116 Analog Chaser]]
 - # Notobeat
 	- Saved [[Microfreak]] preset in slot 115.

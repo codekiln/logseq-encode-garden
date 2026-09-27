@@ -5,5 +5,7 @@ preset-category:: Keys
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/299 I Saw It B4]]
+next:: [[Microfreak/Preset/301 Perculiar Bass]]
 - # MfCheese
 	- Saved [[Microfreak]] preset in slot 300.

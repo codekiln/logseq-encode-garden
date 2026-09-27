@@ -5,5 +5,7 @@ preset-category:: Bass
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/214 Gaia]]
+next:: [[Microfreak/Preset/216 Rubber Band]]
 - # Subby
 	- Saved [[Microfreak]] preset in slot 215.

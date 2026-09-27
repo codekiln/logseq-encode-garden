@@ -5,5 +5,7 @@ preset-category:: Percussion
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/296 Kick It]]
+next:: [[Microfreak/Preset/298 King Snap]]
 - # Shiny Hat
 	- Saved [[Microfreak]] preset in slot 297.

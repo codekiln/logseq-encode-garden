@@ -5,5 +5,7 @@ preset-category:: Percussion
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/217 Rectify]]
+next:: [[Microfreak/Preset/219 Dusty Bass]]
 - # Metal Sequence
 	- Saved [[Microfreak]] preset in slot 218.

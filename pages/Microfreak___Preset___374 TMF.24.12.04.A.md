@@ -5,5 +5,7 @@ preset-category:: Sequence
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/373 TMF.24.11.25.C]]
+next:: [[Microfreak/Preset/375 TMF.24.12.04.B]]
 - # TMF.24.12.04.A
 	- Saved [[Microfreak]] preset in slot 374.

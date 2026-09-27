@@ -5,5 +5,7 @@ preset-category:: Organ
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/380 Cnit]]
+next:: [[Microfreak/Preset/382 Anit]]
 - # Dnit
 	- Saved [[Microfreak]] preset in slot 381.

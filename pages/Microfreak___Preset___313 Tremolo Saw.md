@@ -5,5 +5,7 @@ preset-category:: Vocoder
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/312 Shy Timbre]]
+next:: [[Microfreak/Preset/314 Gliding Vox]]
 - # Tremolo Saw
 	- Saved [[Microfreak]] preset in slot 313.

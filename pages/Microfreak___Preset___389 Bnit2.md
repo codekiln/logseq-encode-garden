@@ -5,5 +5,7 @@ preset-category:: Sequence
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/388 Anit1]]
+next:: [[Microfreak/Preset/390 Cnit2]]
 - # Bnit2
 	- Saved [[Microfreak]] preset in slot 389.

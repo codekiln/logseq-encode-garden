@@ -5,5 +5,7 @@ preset-category:: Template
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/202 Acid Bass 2]]
+next:: [[Microfreak/Preset/204 Simple Sub]]
 - # Acid Bass 1
 	- Saved [[Microfreak]] preset in slot 203.

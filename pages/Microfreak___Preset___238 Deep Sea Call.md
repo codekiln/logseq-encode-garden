@@ -5,5 +5,7 @@ preset-category:: Keys
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/237 Funk Blaster]]
+next:: [[Microfreak/Preset/239 70s Dracula]]
 - # Deep Sea Call
 	- Saved [[Microfreak]] preset in slot 238.

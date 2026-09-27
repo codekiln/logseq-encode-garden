@@ -5,5 +5,7 @@ preset-category:: Percussion
 preset-initialized:: false
 preset-on-device:: true
 preset-origin:: unknown
+prev:: [[Microfreak/Preset/119 NoiseBusters]]
+next:: [[Microfreak/Preset/121 Fat Moves]]
 - # Jobs 4 Rhythm
 	- Saved [[Microfreak]] preset in slot 120.
