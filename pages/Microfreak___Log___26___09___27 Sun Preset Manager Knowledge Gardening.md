@@ -7,8 +7,9 @@
 		- My microfreak on, plugged in, connected through USB, and MIDI Control Center ('/Applications/Arturia/MIDI Control Center.app') is open to it.
 	- ## TODO Follow-up project for preset formatting
 	  id:: 6ab9943c-b242-4d91-95e7-0deb5609e1d7
-		- TODO update [[Logseq/Entity/Preset/Synth]] and its entities
-			- TODO ensure frontmatter of these pages references `prev` and `next` logseq frontmatter attributes [[Logseq/Frontmatter/prev]] and [[Logseq/Frontmatter/next]] as described in [[Logseq/Entity/Series]], [[Logseq/Entity/Book/Section]], etc. then add those attributes to each preset.
+		- DONE update [[Logseq/Entity/Preset/Synth]] and its entities
+			- DONE ensure frontmatter of these pages references `prev` and `next` logseq frontmatter attributes [[Logseq/Frontmatter/prev]] and [[Logseq/Frontmatter/next]] as described in [[Logseq/Entity/Series]], [[Logseq/Entity/Book/Section]], etc. then add those attributes to each preset.
 		- TODO update [[Logseq/Entity/Preset/Synth/Microfreak]] and its entities
-			- the preset category should link to one of the subnamespaces of [[Microfreak/06 Dig Osc/03 Types]]
-			- TODO update the preset names and numbers so that they are three digit zero padded in the case of microfreak, so that [[Lexicographic/Order]] preserves preset order
+			- DONE keep the reported preset category and link the verified oscillator type separately to a page under [[Microfreak/06 Dig Osc/03 Types]]
+			- TODO decode oscillator type from full preset data and populate verified links on the preset pages
+			- DONE update the preset names and numbers so that they are three digit zero padded in the case of microfreak, so that [[Lexicographic/Order]] preserves preset order
