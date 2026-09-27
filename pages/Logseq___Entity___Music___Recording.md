@@ -1,0 +1,19 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+- # Music Recording
+	- In this garden, **Music Recording** pages model fixed audio or audiovisual recordings and album releases that preserve or publish musical material.
+	- ## What counts
+		- A recording is a captured rendition or a published collection of captured tracks. It has an identity apart from the musical work and any live performance it may document.
+		- A studio track, a live album, and a video recording of a performance can each be recorded entities. An album page represents the release and its track order; a single-track page represents one captured rendition.
+		- A recording of a cover is a new recording linked to the covered work. The cover does not create a new page for the underlying song.
+	- ## Naming and placement
+		- Place a recording under its primary performing artist's namespace as `Person/<Artist>/Music/Recording/<Title>`.
+		- Use the published album, single, track, or video title as the H1. Add a year or release context to distinguish recordings with the same title.
+		- For an album, list known tracks as ordered `track::` links in the body. A track link targets its musical work page when that work is represented in the garden.
+	- ## Relationships
+		- Use `work::` for a single-work recording and `performance::` when the recording documents a known performance event.
+		- Album pages use ordered `track::` links. A work page may point back to an album with `appears-on::`.
+		- Use `cover-of::` to identify a recording as a cover of an existing work.
+	- ## Instance shape
+		- Start each recording page with `logseq-entity:: [[Logseq/Entity/Music/Recording]]` and one H1 containing its published title.
+		- Add `performer::`, `date-created::`, and links to the represented work, performance, or release when those details are known.
+		- Keep track links in the album's listening order; do not create work pages solely to complete an otherwise unknown track list.
