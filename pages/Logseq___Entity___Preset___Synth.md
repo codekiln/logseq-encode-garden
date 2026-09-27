@@ -1,0 +1,12 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+- # Synth Preset
+	- In this garden, **Synth Preset** pages model saved sound settings for a synthesizer that can be recalled for a composition or performance.
+	- ## Identity
+		- A preset is a saved sound, including its synthesis settings and any sequences or per-preset settings the instrument stores. A numbered device slot is a location for a preset, not its identity: a sound can move between slots, and a slot can later hold a different sound.
+		- A page keeps the name by which a sound was first documented, so links from music logs continue to identify the sound those logs used. A renamed or replaced sound may need a new page when its continuity cannot be established.
+	- ## Provenance and files
+		- `preset-origin::` records `factory`, `custom`, or `unknown`. A slot number alone cannot establish origin; an edited factory sound can become custom without moving slots.
+		- A downloadable preset file may be linked with `preset-file::` when one exists. `preset-file-sha256::` records the digest of that exact file, if known. A page without a file can still document and link a sound.
+	- ## Instance shape
+		- Mark a page with `logseq-entity:: [[Logseq/Entity/Preset/Synth]]` or a narrower instrument type such as [[Logseq/Entity/Preset/Synth/Microfreak]]. See [[Logseq/Frontmatter]] for shared page properties.
+		- Give the page one H1 with the preset name, describe how the sound plays or is used, and link relevant music logs when known. Leave unheard or unverified details unstated.
