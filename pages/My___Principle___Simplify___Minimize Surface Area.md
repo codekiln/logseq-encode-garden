@@ -1,8 +1,8 @@
-see-also:: [[My/Principle/Simplify/Fewer and Deeper]], [[Unix/Philosophy]], [[My/Principle/Simplify/Avoid Cognitive Load]]
+see-also:: [[My/Principle/Simplify/Fewer and Deeper]], [[Unix/Philosophy]], [[My/Principle/Simplify/Avoid Cognitive Load]], [[My/Principle/Simplify/Don't Repeat Yourself DRY]]
 
 - # what it means
 	- [[API]]s, [[CLI]]s and any [[Dependency]] chain is better when it have **fewer responsibilities**
-	- prefer a narrow, well-defined contract over a broad, multi-purpose one
+	- prefer a narrow, well-defined contract over a broad, multi-purpose one.
 	- ## [[Examples]]
 		- ### [[CLI]] design
 			- a tool that does one thing and accepts only the flags it needs is easier to compose with other tools

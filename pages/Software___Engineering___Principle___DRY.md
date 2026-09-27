@@ -1,5 +1,6 @@
 alias:: [[DRY]]
 tags:: [[Software/Engineering]], [[Principle]], [[Programming]]
+see-also:: [[My/Principle/Simplify/Don't Repeat Yourself DRY]]
 
 - # Don't Repeat Yourself (DRY)
 	- ## Definition

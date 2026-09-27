@@ -1,0 +1,35 @@
+logseq-entity:: [[Logseq/Entity/Diataxis/Explanation]]
+alias:: [[The Entities System in Knowledge Gardening]]
+
+- # [[The Entities System]] - Conceptual Overview and Vision
+	- ## [[My Notes]]
+		- [[My/Entity/System]] is an approach to [[Knowledge Gardens]] where a distinct, identified part of the garden defines the kinds of entities in that garden. While it was originally adopted within [[Logseq]] using [[Logseq/Namespace]]s, it has also been adopted in [[Obsidian]] using folders. The disucssion here uses examples from Logseq, but the principles of the Entities System are intended to be independent of the technology used for knowledge gardening. The basic idea is that you have your entity definitions in one place, separated from the rest of the pages that "take on" one or more entity definitions so as to signify the "is-a" relationship.
+		- ### Comparisons
+			- #### Design Patterns
+				- The Entities System is a form of a collection or curation of [[Design/Pattern]]s, just applied to [[Knowledge Gardening]].
+					- The evolution of a knowledge garden and its kinds of entities are alive in the sense that [[Person/Christopher Alexander/Book/77/A Pattern Language]] describes a system of [[Design/Pattern]]s. Quoting that book:
+						- > […] each pattern represents our current best guess as to what arrangement of the physical environment will work to solve the problem presented. The empirical questions center on the problem—does it occur and is it felt in the way we describe it?—and the solution—does the arrangement we propose solve the problem? And the asterisks represent our degree of faith in these hypotheses. But of course, no matter what the asterisks say, the patterns are still hypotheses, all 253 of them—and are, therefore, all tentative, all free to evolve under the impact of new experience and observation.
+					- The principle is the same in [[Knowledge Gardening]]; we could just as well say
+						- > […] each pattern represents our current best guess as to what arrangement of the ~~physical environment~~ ==[[Knowledge Garden]]== will work to solve the problem presented. The empirical questions center on the problem—does it occur and is it felt in the way we describe it?—and the solution—does the arrangement we propose solve the problem? And the asterisks represent our degree of faith in these hypotheses. But of course, no matter what the asterisks say, the patterns are still hypotheses, all 253 of them—and are, therefore, all tentative, all free to evolve under the impact of new experience and observation.
+			- #### Entity Relationship Diagrams
+				- The Entities System is Similar to [[Diagram/Entity Relationship]] for a particular domain of inquiry or field of study. An Entity Relationship Diagram or ERD is a tool, a perspective for how to think about a system. It's key to keep in mind that it's a perspective, and as such, it's incomplete. Just as [[Person/Christopher Alexander]] talks about how each [[Design/Pattern]] is a hypothesis, the entities in a knowledge garden are first or second order approximations of the [[Latent Space]] in human [[Conscious/ness]]. They must always be considered to be lossy representations.
+			- #### [[Database/Schema]]s
+				- The Entities System is influenced by the concept of [[DDL]] in [[Database/System/Theory]]. One can think of the entity definitions as comparable to the [[Schema]] for the database: the  code which declares the tables and the types of the columns in a database.
+					- In alignment with [[My/Principle/Declarative over Imperative]], I would prefer for the Entities System to converge on [[Declarative]] definitions rather than [[Imperative]] ones. It may take some time to achieve on that goal, so I ask for your help and patience in this asymptotic effort. What would this mean? It would mean that each page is less a set of instructions of how to do things, and more a description of what the page is, leaving the "how" to an externally intelligent entity such as a human or an [[AI/Agent]] to bring its creativity to bare on how to meet the spirit of the definition.
+				- By consistently describing how the system represents  kinds of external entities, the system should over time converge on [[My/Principle/Simplify/Create Uniform Interfaces]], an organically consistent set of relationship principles.
+			- #### [[Periodic Table of the Elements]]
+				- Just as humans discvoered that there are atoms of discrete types in world, and those types determine the behavior of their
+	- ### Gardens Are Built from Curated Sets of Entity Definitions
+		- An organization or an individual may have many topic-focused [[Knowledge Gardens]]. Also, different people may have knowledge gardens that are primarily concerned with different topic areas.
+		- [[Examples]]
+			- A knowledge gardener for an **electronic music producer**  may have pages with entity types like Hardware, Software, Instrument, Recording, Artist, Album, Piece of Music, Music Fragment, etc.
+			- A **coffeehouse** with a knowledge garden may have pages with entity types like Bean, Supplier, Technique, Roast, Tasting Note, Cupping Session
+			- A knowledge garden shared by the **teachers of a school system** may have pages that model entities like Syllabus, Learning Objective, Prerequisite, Assessment, Activity, Assignment, Exam, etc.
+		- Ideally, copying an entity definition from one garden to another should be enough to describe how to model that entity in that new garden. In some cases, entity definitions may be related; for example, [[Logseq/Entity/YouTube]] and [[Logseq/Entity/YouTube/Playlist]] should likely travel together to ensure that two gardens have consistently rich representations of the same types of entities.
+	- ### Hierarchies of Entity Definitions
+		- As the example of YouTube and a YouTube playlist implies, entity definitions can be hierarchically related. Usually, this is done in the spirit of [[My/Principle/Simplify/Don't Repeat Yourself DRY]], where the concept of [[Software/Inheritance]] might come to be used in the entity definitions.
+		- #### [[Example]] - Book Sections
+			- [[Logseq/Entity/Book/Section]] defines what shape of how a section of a book is modeled in this knowledge garden. Then any specific differences from or additions to that are described in particular levels, such as [[Logseq/Entity/Book/Section/Level 1]] or [[Logseq/Entity/Book/Section/Level 2]].
+		- In other cases, knowledge garden affordances used for communicating nested [[Hierarchy]] such as [[Logseq/Namespaces]] or [[Obsidian/Folder/Note]]s can be used to ensure that entities that are related to each other stay "close" in proximity in the [[OS/File/System]]. For example, [[Logseq/Entity/YouTube/Playlist]] relates to
+	- In that sense, the entity definition is
+-

@@ -1,7 +1,8 @@
 logseq-entity:: [[Logseq/Entity/Concept]]
 tags:: [[Diataxis/Concept]]
-alias:: [[Game/Video/Dev/Entity Component System]], [[Entity Component System]]
+alias:: [[Game/Video/Dev/Entity Component System]]
 see-also:: [[miniplex]], [[Programming/Language/Concept/Object-Oriented]]
+
 - # Entity Component System
 	- ## Overview
 		- ECS models a simulation as **entities** (identities), **components** (data attached to those identities), and **systems** (logic that runs over entities matching a component shape).
