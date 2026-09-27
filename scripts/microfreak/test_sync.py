@@ -34,6 +34,7 @@ class SyncTest(unittest.TestCase):
             sync.apply(garden, changes)
             self.assertEqual(sync.plan(garden, data), [])
             path = garden / 'pages/Microfreak___Preset___1 Preset 1.md'
+            self.assertIn('- # Preset 1\n\t- Saved [[Microfreak]] preset in slot 1.', path.read_text())
             text = path.read_text().replace('preset-origin:: unknown', 'preset-origin:: custom')
             text = 'tags:: [[Mine]]\n' + text + '- My performance notes\n\tid:: 123\n'
             path.write_text(text)
@@ -52,7 +53,16 @@ class SyncTest(unittest.TestCase):
             self.assertIn('preset-on-device:: false', renamed.read_text())
             self.assertEqual(sync.plan(garden, data), [])
             journal = next((garden / 'journals').glob('*.md')).read_text()
-            self.assertEqual(journal.count('[[Microfreak/Preset/1 Preset 1]]'), 1)
+            self.assertEqual(journal.count('[[Microfreak/Preset]]'), 1)
+
+    def test_journal_preserves_narrative_and_is_idempotent(self):
+        old = '- My own note\n- # [[Filed]]\n\t- [[Other]]\n- # [[Updated]]\n\t- Zoo\n\t\t- [[Animal]]\n'
+        changes = [(Path('x'), None, 'new')]
+        updated = sync.journal_text(old, changes)
+        self.assertTrue(updated.startswith(old))
+        self.assertEqual(updated.count('[[Microfreak/Preset]]'), 1)
+        self.assertEqual(sync.journal_text(updated, changes), updated)
+        self.assertEqual(sync.journal_text(old, []), old)
 
     def test_unmanaged_collision_fails_before_writes(self):
         with tempfile.TemporaryDirectory() as tmp:

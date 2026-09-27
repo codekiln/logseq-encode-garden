@@ -16,7 +16,7 @@ mise run microfreak:sync --save-inventory /tmp/microfreak-inventory.json
 mise run microfreak:sync --inventory /tmp/microfreak-inventory.json --apply
 ```
 
-`--garden /absolute/path/to/worktree` chooses a different checkout. Offline inventories describe the device at capture time; read the live device again to refresh the garden. The command defaults to preview. `--apply` updates the pages and today's journal; review the Git diff and commit through the usual PR workflow. Run the command again whenever saved presets change. A repeated unchanged capture produces no page changes.
+`--garden /absolute/path/to/worktree` chooses a different checkout. Offline inventories describe the device at capture time; read the live device again to refresh the garden. The command defaults to preview. `--apply` updates the pages and records the preset hub in today's journal; review the Git diff and commit through the usual PR workflow. Run the command again whenever saved presets change. A repeated unchanged capture produces no page changes.
 
 The command reads every saved preset header before planning changes. It aborts an incomplete or malformed inventory. Pages use `Microfreak/Preset/<slot> <name>` titles. It updates the number, name, category, initialized flag, and on-device flag, retaining prose, tags, and manually assigned origin. A name change creates a new page and marks the old page absent. Existing unmanaged pages and duplicate identities cause an error so notes can be reconciled before import.
 

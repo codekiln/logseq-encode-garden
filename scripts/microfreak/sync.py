@@ -153,7 +153,7 @@ def plan(garden, inventory):
                   'preset-initialized': str(p['initialized']).lower(), 'preset-on-device': 'true'}
         if old is None:
             values['preset-origin'] = 'unknown'
-        new = update(old if old is not None else '- [[Microfreak]]\n', values)
+        new = update(old if old is not None else f"- # {p['name']}\n\t- Saved [[Microfreak]] preset in slot {p['number']}.\n", values)
         if new != old:
             changes.append((path, old, new))
     for key, (path, old) in current.items():
@@ -165,23 +165,18 @@ def plan(garden, inventory):
 
 
 def journal_text(old, changes):
+    # The namespace hub keeps repeated bulk inventories out of the curated journal.
+    if not changes or '[[Microfreak/Preset]]' in old:
+        return old
     lines = old.splitlines()
-    for section, is_new in [('Filed', True), ('Updated', False)]:
-        links = []
-        for path, before, _ in changes:
-            link = '[[' + path.stem.replace('___', '/') + ']]'
-            if (before is None) == is_new and not any(link in line for line in lines):
-                links.append('\t- ' + link)
-        if not links:
-            continue
-        heading = f'- # [[{section}]]'
-        if heading not in lines:
-            lines.append(heading)
-        start = lines.index(heading) + 1
-        end = start
-        while end < len(lines) and (lines[end].startswith(('\t', ' ')) or not lines[end]):
-            end += 1
-        lines[end:end] = ['\t- Microfreak presets'] + ['\t' + link for link in links]
+    heading = '- # [[Updated]]'
+    if heading not in lines:
+        lines.append(heading)
+    start = lines.index(heading) + 1
+    end = start
+    while end < len(lines) and (lines[end].startswith(('\t', ' ')) or not lines[end]):
+        end += 1
+    lines.insert(end, '\t- [[Microfreak/Preset]]')
     return '\n'.join(lines) + '\n'
 
 
