@@ -1,4 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Person]]
+date-created:: [[18/6/7]]
+logseq-created-time-year:: [[18/6/7]]
 - # [Frank Lloyd Wright](https://franklloydwright.org/frank-lloyd-wright/)
 	- **Role:** American architect, designer, artist, and educator.
 	- **About:** Wright was born in Richland Center, Wisconsin, in 1867 and worked as an architect for more than seven decades. His designs include Fallingwater and the Solomon R. Guggenheim Museum. He and Olgivanna Lloyd Wright founded the Taliesin Fellowship, an architectural apprenticeship program at Taliesin.
