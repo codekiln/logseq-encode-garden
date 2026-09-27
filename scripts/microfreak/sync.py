@@ -192,7 +192,20 @@ def journal_text(old, changes):
     end = start
     while end < len(lines) and (lines[end].startswith(('\t', ' ')) or not lines[end]):
         end += 1
-    lines.insert(end, '\t- [[Microfreak/Preset]]')
+    labels = [(i, line[3:]) for i, line in enumerate(lines[start:end], start)
+              if line.startswith('\t- ') and not line[3:].startswith('[[')]
+    if labels:
+        matching = next((i for i, label in labels if label.casefold() == 'presets'), None)
+        if matching is not None:
+            position = matching + 1
+            while position < end and lines[position].startswith('\t\t'):
+                position += 1
+            lines.insert(position, '\t\t- [[Microfreak/Preset]]')
+        else:
+            position = next((i for i, label in labels if label.casefold() > 'presets'), end)
+            lines[position:position] = ['\t- presets', '\t\t- [[Microfreak/Preset]]']
+    else:
+        lines.insert(end, '\t- [[Microfreak/Preset]]')
     return '\n'.join(lines) + '\n'
 
 

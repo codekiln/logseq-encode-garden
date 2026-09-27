@@ -59,7 +59,7 @@ class SyncTest(unittest.TestCase):
         old = '- My own note\n- # [[Filed]]\n\t- [[Other]]\n- # [[Updated]]\n\t- Zoo\n\t\t- [[Animal]]\n'
         changes = [(Path('x'), None, 'new')]
         updated = sync.journal_text(old, changes)
-        self.assertTrue(updated.startswith(old))
+        self.assertTrue(updated.startswith('- My own note\n- # [[Filed]]\n\t- [[Other]]\n'))
         self.assertEqual(updated.count('[[Microfreak/Preset]]'), 1)
         self.assertEqual(sync.journal_text(updated, changes), updated)
         self.assertEqual(sync.journal_text(old, []), old)
@@ -74,10 +74,22 @@ class SyncTest(unittest.TestCase):
         # Narrative links remain untouched, but do not suppress the change-log link.
         result = sync.journal_text(narrative + updated, changes)
         self.assertTrue(result.startswith(narrative + updated))
-        self.assertTrue(result.endswith('\t- [[Microfreak/Preset]]\n'))
+        self.assertTrue(result.endswith('\t- presets\n\t\t- [[Microfreak/Preset]]\n'))
         self.assertEqual(sync.journal_text(result, changes), result)
         duplicate = old + '\t- [[Microfreak/Preset]]\n'
         self.assertEqual(sync.journal_text(duplicate, changes), old)
+
+    def test_journal_inserts_presets_label_in_alphabetic_order(self):
+        changes = [(Path('x'), None, 'new')]
+        before = '- Narrative\n- # [[Updated]]\n\t- animals\n\t\t- [[Cat]]\n'
+        after = '\t- travel\n\t\t- [[Train]]\n'
+        expected = before + '\t- presets\n\t\t- [[Microfreak/Preset]]\n' + after
+        self.assertEqual(sync.journal_text(before + after, changes), expected)
+        grouped = before + '\t- presets\n\t\t- [[Other Synth]]\n' + after
+        expected_grouped = before + '\t- presets\n\t\t- [[Other Synth]]\n\t\t- [[Microfreak/Preset]]\n' + after
+        self.assertEqual(sync.journal_text(grouped, changes), expected_grouped)
+        short = '- # [[Updated]]\n\t- [[Cat]]\n'
+        self.assertEqual(sync.journal_text(short, changes), short + '\t- [[Microfreak/Preset]]\n')
 
     def test_unmanaged_collision_fails_before_writes(self):
         with tempfile.TemporaryDirectory() as tmp:
