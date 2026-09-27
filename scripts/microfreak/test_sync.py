@@ -91,6 +91,16 @@ class SyncTest(unittest.TestCase):
         short = '- # [[Updated]]\n\t- [[Cat]]\n'
         self.assertEqual(sync.journal_text(short, changes), short + '\t- [[Microfreak/Preset]]\n')
 
+    def test_journal_preserves_collapsed_label_property(self):
+        changes = [(Path('x'), None, 'new')]
+        before = '- # [[Updated]]\n\t- presets\n\t  collapsed:: true\n\t\t- [[Other Synth]]\n'
+        after = '\t- travel\n\t\t- [[Train]]\n'
+        expected = before + '\t\t- [[Microfreak/Preset]]\n' + after
+        self.assertEqual(sync.journal_text(before + after, changes), expected)
+        empty_label = '- # [[Updated]]\n\t- presets\n\t  collapsed:: true\n'
+        self.assertEqual(sync.journal_text(empty_label + after, changes),
+                         empty_label + '\t\t- [[Microfreak/Preset]]\n' + after)
+
     def test_unmanaged_collision_fails_before_writes(self):
         with tempfile.TemporaryDirectory() as tmp:
             garden = Path(tmp)

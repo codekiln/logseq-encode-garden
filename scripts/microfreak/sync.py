@@ -198,7 +198,8 @@ def journal_text(old, changes):
         matching = next((i for i, label in labels if label.casefold() == 'presets'), None)
         if matching is not None:
             position = matching + 1
-            while position < end and lines[position].startswith('\t\t'):
+            while position < end and (lines[position].startswith('\t\t')
+                                      or lines[position].startswith('\t  ')):
                 position += 1
             lines.insert(position, '\t\t- [[Microfreak/Preset]]')
         else:
