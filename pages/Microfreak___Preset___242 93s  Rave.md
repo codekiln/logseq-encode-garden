@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 242
-preset-name:: 93s  Rave
-preset-category:: Bass
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 242
+preset-synth-microfreak-name:: 93s  Rave
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Bass]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/241 Numnum Yoy]]
 next:: [[Microfreak/Preset/243 Noisy]]
-- # 93s  Rave
-	- Saved [[Microfreak]] preset in slot 242.
+- # Notes

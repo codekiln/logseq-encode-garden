@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 250
-preset-name:: Organic Random
-preset-category:: SFX
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 250
+preset-synth-microfreak-name:: Organic Random
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/SFX]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/249 RisoLFO]]
 next:: [[Microfreak/Preset/251 Trinity]]
-- # Organic Random
-	- Saved [[Microfreak]] preset in slot 250.
+- # Notes

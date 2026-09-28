@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 295
-preset-name:: Tactile Techno
-preset-category:: Lead
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 295
+preset-synth-microfreak-name:: Tactile Techno
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Lead]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/294 Synchronizer]]
 next:: [[Microfreak/Preset/296 Kick It]]
-- # Tactile Techno
-	- Saved [[Microfreak]] preset in slot 295.
+- # Notes

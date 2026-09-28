@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 076
-preset-name:: AutoCHILL
-preset-category:: Pad
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 076
+preset-synth-microfreak-name:: AutoCHILL
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Pad]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/075 Saying Goodbye]]
 next:: [[Microfreak/Preset/077 Eonz]]
-- # AutoCHILL
-	- Saved [[Microfreak]] preset in slot 076.
+- # Notes

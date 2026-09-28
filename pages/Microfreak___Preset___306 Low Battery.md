@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 306
-preset-name:: Low Battery
-preset-category:: Vocoder
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 306
+preset-synth-microfreak-name:: Low Battery
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Vocoder]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/305 Vibrato Treble]]
 next:: [[Microfreak/Preset/307 Acetous Com]]
-- # Low Battery
-	- Saved [[Microfreak]] preset in slot 306.
+- # Notes

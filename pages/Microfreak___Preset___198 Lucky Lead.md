@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 198
-preset-name:: Lucky Lead
-preset-category:: Template
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 198
+preset-synth-microfreak-name:: Lucky Lead
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Template]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/197 Fusion Lead]]
 next:: [[Microfreak/Preset/199 FM Bass]]
-- # Lucky Lead
-	- Saved [[Microfreak]] preset in slot 198.
+- # Notes

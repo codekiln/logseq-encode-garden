@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 190
-preset-name:: Brass 2
-preset-category:: Template
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 190
+preset-synth-microfreak-name:: Brass 2
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Template]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/189 Brass 1]]
 next:: [[Microfreak/Preset/191 Soft Brass]]
-- # Brass 2
-	- Saved [[Microfreak]] preset in slot 190.
+- # Notes

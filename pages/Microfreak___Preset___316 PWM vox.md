@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 316
-preset-name:: PWM vox
-preset-category:: Vocoder
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 316
+preset-synth-microfreak-name:: PWM vox
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Vocoder]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/315 Crying]]
 next:: [[Microfreak/Preset/317 Low Square Bot]]
-- # PWM vox
-	- Saved [[Microfreak]] preset in slot 316.
+- # Notes

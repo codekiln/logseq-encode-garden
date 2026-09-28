@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 303
-preset-name:: 2020 Behind
-preset-category:: SFX
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 303
+preset-synth-microfreak-name:: 2020 Behind
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/SFX]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/302 No Rush]]
 next:: [[Microfreak/Preset/304 Saw Vox]]
-- # 2020 Behind
-	- Saved [[Microfreak]] preset in slot 303.
+- # Notes

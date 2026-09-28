@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 299
-preset-name:: I Saw It B4
-preset-category:: Keys
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 299
+preset-synth-microfreak-name:: I Saw It B4
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Keys]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/298 King Snap]]
 next:: [[Microfreak/Preset/300 MfCheese]]
-- # I Saw It B4
-	- Saved [[Microfreak]] preset in slot 299.
+- # Notes

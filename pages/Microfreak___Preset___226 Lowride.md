@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 226
-preset-name:: Lowride
-preset-category:: Bass
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 226
+preset-synth-microfreak-name:: Lowride
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Bass]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/225 Neutrino A]]
 next:: [[Microfreak/Preset/227 Midnight Pad]]
-- # Lowride
-	- Saved [[Microfreak]] preset in slot 226.
+- # Notes

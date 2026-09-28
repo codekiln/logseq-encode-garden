@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 362
-preset-name:: TMF.24.11.18.C
-preset-category:: SFX
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 362
+preset-synth-microfreak-name:: TMF.24.11.18.C
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/SFX]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/361 TMF.24.11.18.B]]
 next:: [[Microfreak/Preset/363 TMF.24.11.20.A]]
-- # TMF.24.11.18.C
-	- Saved [[Microfreak]] preset in slot 362.
+- # Notes
