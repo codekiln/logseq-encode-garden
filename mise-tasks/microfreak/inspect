@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#MISE description="Inspect named raw parameters in a saved MicroFreak export"
+#USAGE arg "<file>" help="Saved .mbp, .mfprojz, or .bin file"
+#USAGE flag "--slot <number>" help="Computer-project slot for .mfprojz"
+set -euo pipefail
+task_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [[ -n "${usage_file:-}" ]]; then
+  args=("$usage_file")
+  [[ -n "${usage_slot:-}" ]] && args+=(--slot "$usage_slot")
+  exec python3 "$task_dir/lib/parameters.py" "${args[@]}"
+fi
+exec python3 "$task_dir/lib/parameters.py" "$@"
