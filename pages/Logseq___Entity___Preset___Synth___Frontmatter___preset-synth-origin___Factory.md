@@ -1,0 +1,3 @@
+- # Factory
+	- A sound verified against an identified factory release or export.
+	- Value of [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin]].

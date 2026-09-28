@@ -1,0 +1,2 @@
+- # Keys
+	- Value of [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category]]; saved-header category code `2`.

@@ -1,0 +1,3 @@
+- # Custom
+	- A sound established as user-created or modified from another sound.
+	- Value of [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin]].
