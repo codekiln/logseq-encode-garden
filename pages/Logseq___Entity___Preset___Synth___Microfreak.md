@@ -1,16 +1,21 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
+
 - # MicroFreak Synth Preset
 	- In this garden, **MicroFreak Synth Preset** pages model individual saved sounds on the [[Microfreak]], including their device metadata and musical use.
 	- ## Placement and identity
 		- Place each page under `Microfreak/Preset/<slot> <name>`, using a three-digit, zero-padded slot and the name observed when the page is created. The number makes the page easy to find on the instrument and keeps the pages in slot order when sorted by title; the name helps identify it in autocomplete. [[Microfreak/Preset/397 Imit]] is an example.
 		- Keep existing page titles stable when device metadata changes, so links in older music logs continue to resolve. If a slot holds a differently named sound and continuity is unknown, preserve the old page as history and create a page for the newly observed sound.
 		- A repeated name or slot is not enough to deduplicate. Compare slot, name, category, and a binary digest when available; ask for judgment when those signals conflict.
-	- ## Device metadata
-		- Mark instances with `logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]`.
-		- `preset-number::` is the current device slot, or the last observed slot when the sound is no longer on the device; `preset-name::` is the name reported by the MicroFreak; `preset-category::` is its reported category; `preset-initialized::` records the device's initialization flag; `preset-on-device::` records whether the preset was found in the latest successful inventory.
-		- `preset-oscillator-type::` links to the matching model page under [[Microfreak/06 Dig Osc/03 Types]] when the sound's oscillator engine has been verified. Leave the property absent while the engine is unknown. Preset categories such as Keys and Bass describe the sound's use; they do not identify its oscillator engine.
-		- These properties describe the last verified device state. A metadata scan cannot detect a same-name change to a preset's sound. A binary digest can distinguish those versions when binary export is available.
-		- `preset-origin::` follows [[Logseq/Entity/Preset/Synth]]: use `unknown` until factory or custom provenance is established independently of the slot.
+	- ## [[Logseq/Frontmatter]]
+		- In addition to the standard attribution of [[Logseq/Frontmatter/logseq-entity]], the following metadata are uniquely present:
+			- `preset-number::` is the current device slot, or the last observed slot when the sound is no longer on the device;
+			- `preset-name::` is the name reported by the MicroFreak;
+			- `preset-category::` is its reported category;
+			- `preset-initialized::` records the device's initialization flag;
+			- `preset-on-device::` records whether the preset was found in the latest successful inventory.
+			- `preset-oscillator-type::` links to the matching model page under [[Microfreak/06 Dig Osc/03 Types]] when the sound's oscillator engine has been verified. Leave the property absent while the engine is unknown. Preset categories such as Keys and Bass describe the sound's use; they do not identify its oscillator engine.
+			- These properties describe the last verified device state. A metadata scan cannot detect a same-name change to a preset's sound. A binary digest can distinguish those versions when binary export is available.
+			- `preset-origin::` follows [[Logseq/Entity/Preset/Synth]]: use `unknown` until factory or custom provenance is established independently of the slot.
 	- ## Musical notes
 		- Describe the sound, how its controls respond, and which compositions or performances use it when those details are known. [[Microfreak/04 Presets]] describes the saved sound and per-preset settings; it does not supply the particular values for every preset.
 		- Preset pages can be linked directly from music composition logs. The device metadata remains useful even before a sound description or downloadable file is available.
