@@ -17,6 +17,7 @@ import zipfile
 PAYLOAD_SIZE = 4672
 HEADER_SIZE = 35
 MAX_RECORD_SIZE = 100_000
+MAX_SINGLE_PRESET_ZIP_SIZE = 1_000_000
 # The guide names these controls; it does not define their serialized scales.
 CONTROL_LABELS = {'VCO.Type': 'Oscillator Type', 'VCF.Cutoff': 'Filter Cutoff',
                   'VCF.Reso': 'Filter Resonance'}
@@ -169,7 +170,26 @@ def load_preset(path, slot=None):
     """Load one record in memory; never extract a zip to disk."""
     suffix = path.suffix.lower()
     metadata = {}
-    if suffix == '.mfprojz':
+    if suffix == '.mfpz':
+        if slot is not None:
+            raise ValueError('--slot applies only to .mfprojz project archives')
+        if path.stat().st_size > MAX_SINGLE_PRESET_ZIP_SIZE:
+            raise ValueError('Preset ZIP exceeds size limit')
+        with zipfile.ZipFile(path) as archive:
+            members = archive.infolist()
+            if len(members) != 1 or members[0].is_dir():
+                raise ValueError('Preset ZIP must contain exactly one record')
+            entry = members[0]
+            if entry.file_size > MAX_RECORD_SIZE:
+                raise ValueError('Preset archive record exceeds size limit')
+            with archive.open(entry) as record:
+                content = record.read(MAX_RECORD_SIZE + 1)
+            if len(content) > MAX_RECORD_SIZE:
+                raise ValueError('Preset archive record exceeds size limit')
+            metadata['archive_member'] = entry.filename
+        payload, envelope = parse_mbp(content)
+        metadata.update(envelope)
+    elif suffix == '.mfprojz':
         if slot is None or not 1 <= slot <= 512:
             raise ValueError('A project archive requires --slot from 1 to 512')
         with zipfile.ZipFile(path) as archive:
@@ -186,7 +206,10 @@ def load_preset(path, slot=None):
             entry = candidates[0]
             if entry.file_size > MAX_RECORD_SIZE:
                 raise ValueError('Preset archive record exceeds size limit')
-            content = archive.read(entry)
+            with archive.open(entry) as record:
+                content = record.read(MAX_RECORD_SIZE + 1)
+            if len(content) > MAX_RECORD_SIZE:
+                raise ValueError('Preset archive record exceeds size limit')
             metadata['archive_member'] = entry.filename
             metadata['project_slot'] = slot
         payload, envelope = parse_mbp(content)
@@ -208,7 +231,7 @@ def load_preset(path, slot=None):
             else:
                 raise ValueError('Binary preset must be 4672 payload bytes or 35 header + 4672 payload bytes')
         else:
-            raise ValueError('Supported inputs: .mbp, .mfprojz, or .bin')
+            raise ValueError('Supported inputs: .mbp, .mfpz, .mfprojz, or .bin')
     metadata['record_sha256'] = hashlib.sha256(content).hexdigest()
     metadata['payload_sha256'] = hashlib.sha256(payload).hexdigest()
     return payload, metadata
@@ -230,7 +253,7 @@ def inspect(path, slot=None):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('file', type=Path, help='Saved .mbp, .mfprojz, or .bin file')
+    parser.add_argument('file', type=Path, help='Saved .mbp, .mfpz, .mfprojz, or .bin file')
     parser.add_argument('--slot', type=int, help='Computer-project slot for .mfprojz')
     args = parser.parse_args(argv)
     try:
