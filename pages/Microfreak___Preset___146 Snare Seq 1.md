@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 146
-preset-name:: Snare Seq 1
-preset-category:: Sequence
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 146
+preset-synth-microfreak-name:: Snare Seq 1
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Sequence]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/145 Hihat B]]
 next:: [[Microfreak/Preset/147 Drum Grit Seq]]
-- # Snare Seq 1
-	- Saved [[Microfreak]] preset in slot 146.
+- # Notes

@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 214
-preset-name:: Gaia
-preset-category:: Pad
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 214
+preset-synth-microfreak-name:: Gaia
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Pad]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/213 Hypno Chaos]]
 next:: [[Microfreak/Preset/215 Subby]]
-- # Gaia
-	- Saved [[Microfreak]] preset in slot 214.
+- # Notes

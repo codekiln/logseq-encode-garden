@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 225
-preset-name:: Neutrino A
-preset-category:: Sequence
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 225
+preset-synth-microfreak-name:: Neutrino A
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Sequence]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/224 Talk About D]]
 next:: [[Microfreak/Preset/226 Lowride]]
-- # Neutrino A
-	- Saved [[Microfreak]] preset in slot 225.
+- # Notes

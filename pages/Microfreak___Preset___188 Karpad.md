@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 188
-preset-name:: Karpad
-preset-category:: Template
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 188
+preset-synth-microfreak-name:: Karpad
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Template]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/187 KarpluStrings]]
 next:: [[Microfreak/Preset/189 Brass 1]]
-- # Karpad
-	- Saved [[Microfreak]] preset in slot 188.
+- # Notes

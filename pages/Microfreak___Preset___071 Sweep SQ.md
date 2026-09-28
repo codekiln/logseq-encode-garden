@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 071
-preset-name:: Sweep SQ
-preset-category:: Sequence
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 071
+preset-synth-microfreak-name:: Sweep SQ
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Sequence]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/070 Cliched Things]]
 next:: [[Microfreak/Preset/072 Buzzsaw]]
-- # Sweep SQ
-	- Saved [[Microfreak]] preset in slot 071.
+- # Notes

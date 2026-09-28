@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 075
-preset-name:: Saying Goodbye
-preset-category:: Pad
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 075
+preset-synth-microfreak-name:: Saying Goodbye
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Pad]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/074 Sneaker]]
 next:: [[Microfreak/Preset/076 AutoCHILL]]
-- # Saying Goodbye
-	- Saved [[Microfreak]] preset in slot 075.
+- # Notes

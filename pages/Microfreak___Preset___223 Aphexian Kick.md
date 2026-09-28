@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 223
-preset-name:: Aphexian Kick
-preset-category:: Percussion
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 223
+preset-synth-microfreak-name:: Aphexian Kick
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Percussion]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/222 Systemshock]]
 next:: [[Microfreak/Preset/224 Talk About D]]
-- # Aphexian Kick
-	- Saved [[Microfreak]] preset in slot 223.
+- # Notes

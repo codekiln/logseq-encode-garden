@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 309
-preset-name:: Low Noisy Vox
-preset-category:: Vocoder
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 309
+preset-synth-microfreak-name:: Low Noisy Vox
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Vocoder]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/308 Gated Com]]
 next:: [[Microfreak/Preset/310 Arp Sing]]
-- # Low Noisy Vox
-	- Saved [[Microfreak]] preset in slot 309.
+- # Notes

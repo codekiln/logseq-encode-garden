@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 200
-preset-name:: Saw Bass
-preset-category:: Template
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 200
+preset-synth-microfreak-name:: Saw Bass
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Template]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/199 FM Bass]]
 next:: [[Microfreak/Preset/201 Square Bass]]
-- # Saw Bass
-	- Saved [[Microfreak]] preset in slot 200.
+- # Notes

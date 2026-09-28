@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 313
-preset-name:: Tremolo Saw
-preset-category:: Vocoder
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 313
+preset-synth-microfreak-name:: Tremolo Saw
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Vocoder]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/312 Shy Timbre]]
 next:: [[Microfreak/Preset/314 Gliding Vox]]
-- # Tremolo Saw
-	- Saved [[Microfreak]] preset in slot 313.
+- # Notes

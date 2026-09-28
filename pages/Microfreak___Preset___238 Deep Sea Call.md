@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 238
-preset-name:: Deep Sea Call
-preset-category:: Keys
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 238
+preset-synth-microfreak-name:: Deep Sea Call
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Keys]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/237 Funk Blaster]]
 next:: [[Microfreak/Preset/239 70s Dracula]]
-- # Deep Sea Call
-	- Saved [[Microfreak]] preset in slot 238.
+- # Notes

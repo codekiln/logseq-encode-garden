@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 395
-preset-name:: 26.06.25
-preset-category:: Sequence
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 395
+preset-synth-microfreak-name:: 26.06.25
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Sequence]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/394 Jing A]]
 next:: [[Microfreak/Preset/396 Anit]]
-- # 26.06.25
-	- Saved [[Microfreak]] preset in slot 395.
+- # Notes

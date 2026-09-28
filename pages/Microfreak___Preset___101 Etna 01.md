@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 101
-preset-name:: Etna 01
-preset-category:: Sequence
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 101
+preset-synth-microfreak-name:: Etna 01
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Sequence]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/100 Tinnendo]]
 next:: [[Microfreak/Preset/102 Braine Storm]]
-- # Etna 01
-	- Saved [[Microfreak]] preset in slot 101.
+- # Notes

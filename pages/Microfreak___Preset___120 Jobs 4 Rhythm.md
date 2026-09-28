@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 120
-preset-name:: Jobs 4 Rhythm
-preset-category:: Percussion
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 120
+preset-synth-microfreak-name:: Jobs 4 Rhythm
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Percussion]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/119 NoiseBusters]]
 next:: [[Microfreak/Preset/121 Fat Moves]]
-- # Jobs 4 Rhythm
-	- Saved [[Microfreak]] preset in slot 120.
+- # Notes

@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 176
-preset-name:: Sayan 2
-preset-category:: SFX
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 176
+preset-synth-microfreak-name:: Sayan 2
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/SFX]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/175 Wuuut]]
 next:: [[Microfreak/Preset/177 Square Poly]]
-- # Sayan 2
-	- Saved [[Microfreak]] preset in slot 176.
+- # Notes

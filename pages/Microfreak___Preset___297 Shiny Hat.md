@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 297
-preset-name:: Shiny Hat
-preset-category:: Percussion
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 297
+preset-synth-microfreak-name:: Shiny Hat
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Percussion]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/296 Kick It]]
 next:: [[Microfreak/Preset/298 King Snap]]
-- # Shiny Hat
-	- Saved [[Microfreak]] preset in slot 297.
+- # Notes

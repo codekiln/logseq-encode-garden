@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 260
-preset-name:: 8bitfi
-preset-category:: Lead
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 260
+preset-synth-microfreak-name:: 8bitfi
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Lead]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/259 Infini Pad]]
 next:: [[Microfreak/Preset/261 Eurgon Lead]]
-- # 8bitfi
-	- Saved [[Microfreak]] preset in slot 260.
+- # Notes
