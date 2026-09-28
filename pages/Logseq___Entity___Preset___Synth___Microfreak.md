@@ -1,29 +1,25 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
-
 - # MicroFreak Synth Preset
-	- In this garden, **MicroFreak Synth Preset** pages model individual saved sounds on the [[Microfreak]], including their device metadata and musical use.
+	- In this garden, **MicroFreak Synth Preset** pages model individual saved sounds on the [[Microfreak]], following [[Logseq/Entity/Preset/Synth]].
 	- ## Placement and identity
-		- Place each page under `Microfreak/Preset/<slot> <name>`, using a three-digit, zero-padded slot and the name observed when the page is created. The number makes the page easy to find on the instrument and keeps the pages in slot order when sorted by title; the name helps identify it in autocomplete. [[Microfreak/Preset/397 Imit]] is an example.
-		- Keep existing page titles stable when device metadata changes, so links in older music logs continue to resolve. If a slot holds a differently named sound and continuity is unknown, preserve the old page as history and create a page for the newly observed sound.
-		- A repeated name or slot is not enough to deduplicate. Compare slot, name, category, and a binary digest when available; ask for judgment when those signals conflict.
-	- ## [[Logseq/Frontmatter]]
-		- In addition to the standard attribution of [[Logseq/Frontmatter/logseq-entity]], the following metadata are uniquely present:
-			- `preset-number::` is the current device slot, or the last observed slot when the sound is no longer on the device;
-			- `preset-name::` is the name reported by the MicroFreak;
-			- `preset-category::` is its reported category;
-			- `preset-initialized::` records the device's initialization flag;
-			- `preset-on-device::` records whether the preset was found in the latest successful inventory.
-			- `preset-oscillator-type::` links to the matching model page under [[Microfreak/06 Dig Osc/03 Types]] when the sound's oscillator engine has been verified. Leave the property absent while the engine is unknown. Preset categories such as Keys and Bass describe the sound's use; they do not identify its oscillator engine.
-			- These properties describe the last verified device state. A metadata scan cannot detect a same-name change to a preset's sound. A binary digest can distinguish those versions when binary export is available.
-			- `preset-origin::` follows [[Logseq/Entity/Preset/Synth]]: use `unknown` until factory or custom provenance is established independently of the slot.
-	- ## Musical notes
-		- Describe the sound, how its controls respond, and which compositions or performances use it when those details are known. [[Microfreak/04 Presets]] describes the saved sound and per-preset settings; it does not supply the particular values for every preset.
-		- Preset pages can be linked directly from music composition logs. The device metadata remains useful even before a sound description or downloadable file is available.
+		- Pages use `Microfreak/Preset/<slot> <name>`, with a three-digit slot and the name observed at creation. The filename remains stable so existing music-log links resolve. A newly observed name at an occupied slot needs a new page when continuity is unknown.
+		- [[Microfreak/Preset/396 Anit]] and [[Microfreak/Preset/397 Imit]] illustrate the frontmatter and notes format. Repeated names or slot numbers alone cannot establish that two observations are the same saved sound.
+	- ## Frontmatter dictionary
+		- [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-number]]
+		- [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-name]]
+		- [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category]]
+		- [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-initialized]]
+		- [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-on-device]]
+		- [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-oscillator-type]]
+		- Shared provenance and export properties are defined by [[Logseq/Entity/Preset/Synth]]. Unknown origin uses [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]].
+	- ## What the sources can capture
+		- The saved-header inventory reads slot, name, category and initialization status. It cannot detect a same-name edit to oscillator, filter, envelope, modulation or sequence settings. The [Elektroid header decoder](https://github.com/dagargo/elektroid/blob/6f3d50e2588f0236afb3510e1c55bbb292446aa2/src/connectors/microfreak.c#L232-L274) supplies the protocol evidence.
+		- [Elektroid’s preset download and serialization](https://github.com/dagargo/elektroid/blob/6f3d50e2588f0236afb3510e1c55bbb292446aa2/src/connectors/microfreak.c#L286-L443) retain the preset payload for export: up to 146 blocks of 32 bytes. That connector transfers opaque parameter data; it does not expose a named parameter dictionary for those bytes. An export can preserve more than the current readable properties, but a complete parameter-level digital twin requires a verified decoder.
+		- [[Microfreak/UG/17 Ext Gear/09 MIDI CC Control]] and [[Microfreak/UG/21 Appendix D - CC Values]] describe MIDI control changes. A stream of knob movements is incomplete evidence of a saved sound: parameters that never change remain unobserved. [[Microfreak/UG/04 Presets/05 Digital Control]] explains why panel positions may differ from recalled values.
+		- [[Microfreak/UG/06 Dig Osc/03 Types]] defines oscillator models. [[Microfreak/UG/04 Presets/03 Preset Config]] defines per-preset settings, including voice behavior, scale and sequencer options. These guides describe meanings and ranges; values for a particular saved sound need a read or observation of that sound.
+		- Samples and user wavetables have separate export workflows in [[Microfreak/UG/14 Config/02 MIDI Control Center/03 Samples Tab/01 Management]] and [[Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/01 Management]]. A preset export alone does not establish that those resources are preserved. Global settings such as tuning and tempo behavior also affect playback; see [[Microfreak/UG/14 Config/02 MIDI Control Center/01 Device Tab]].
 	- ## Sync
-		- A device inventory updates the reported metadata while preserving hand-written sound descriptions, `preset-origin::`, and a verified `preset-oscillator-type::` link. The saved-header scan does not report the oscillator engine. A successful full inventory can mark missing pages with `preset-on-device:: false`; a failed or partial scan cannot establish absence.
-		- Binary export and Backblaze B2 delivery are separate from metadata inventory. Add `preset-file::` and `preset-file-sha256::` only after the file has been exported and its destination verified.
-		- From a garden worktree, run `mise run microfreak:sync` to preview the connected MicroFreak's saved preset metadata, then `mise run microfreak:sync --apply` to update pages and today's journal. Review the Git diff before committing.
-		- Install `uv` on PATH; the task loads pinned `python-rtmidi==1.5.8`. Connect the MicroFreak over USB. Close MIDI Control Center and retry if reads time out. `--port 'Arturia MicroFreak'` selects an exact MIDI endpoint; `--garden /absolute/path/to/worktree` selects the target garden.
-		- `--save-inventory /tmp/microfreak-inventory.json` saves a full inventory; `--inventory /tmp/microfreak-inventory.json` previews that saved inventory without contacting the device. A saved inventory describes capture time; read the live device again to refresh it.
-		- A full successful scan omits initialized slots and marks formerly populated pages absent. Repeating an unchanged scan produces no page changes. An incomplete scan writes no pages. Existing unmanaged pages cause an error so their metadata can be reconciled before import.
-		- The task sends saved-header read requests. The [sync implementation and usage](https://github.com/codekiln/logseq-encode-garden/tree/main/scripts/microfreak) describe the protocol source and regression checks.
+		- [The MicroFreak sync task](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/sync) previews the connected device with `mise run microfreak:sync`; `--apply` updates its saved metadata. The [sync implementation on GitHub](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/lib/sync.py) is also available as a [local file](../mise-tasks/microfreak/lib/sync.py).
+		- `--save-inventory /tmp/microfreak-inventory.json` stores a full inventory; `--inventory /tmp/microfreak-inventory.json` previews that capture. `--garden /absolute/path/to/worktree` selects the destination and `--port 'Arturia MicroFreak'` selects an exact endpoint.
+		- A complete successful inventory updates reported fields, omits initialized slots and marks missing sounds absent. Partial reads write nothing. Handwritten notes, established origin, verified oscillator type and export references survive metadata refreshes. A saved inventory describes its capture time; a new device read is needed to establish current state.
+		- Header sync performs no binary export. File and digest properties are populated only after an export and its destination have been verified.
