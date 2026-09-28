@@ -12,4 +12,5 @@
 		- TODO update [[Logseq/Entity/Preset/Synth/Microfreak]] and its entities
 			- DONE keep the reported preset category and link the verified oscillator type separately to a page under [[Microfreak/06 Dig Osc/03 Types]]
 			- TODO decode oscillator type from full preset data and populate verified links on the preset pages
+			  id:: 6ab9989b-cbca-4ba2-806a-aba73a59c522
 			- DONE update the preset names and numbers so that they are three digit zero padded in the case of microfreak, so that [[Lexicographic/Order]] preserves preset order

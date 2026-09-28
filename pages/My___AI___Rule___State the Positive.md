@@ -1,4 +1,3 @@
-alias:: [[My/AI/Rule/No contrast frames]]
 see-also:: [[My/AI/Rule/Prune useless commandments]], [[My/AI/Rule/No Recipe in the Cake]], [[My/Pref/Writing/Avoid double negatives]]
 
 - # State it in the positive
