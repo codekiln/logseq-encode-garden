@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Read saved MicroFreak preset headers and reconcile Logseq metadata.
 
-Wire layout reference: dagargo/elektroid src/connectors/microfreak.c.
+Wire layout and category mapping:
+https://github.com/dagargo/elektroid/blob/6f3d50e2588f0236afb3510e1c55bbb292446aa2/src/connectors/microfreak.c
 Only the preset-header request (0x19, mode 0) is sent to the instrument.
 """
 import argparse
@@ -13,9 +14,25 @@ import time
 from pathlib import Path
 
 PREFIX = [0xF0, 0, 0x20, 0x6B, 7, 1]
+# IDs match elektroid's microfreak_get_category_name at the source URL above.
 CATEGORIES = ['Bass', 'Brass', 'Keys', 'Lead', 'Organ', 'Pad', 'Percussion',
               'Sequence', 'SFX', 'Strings', 'Template', 'Vocoder']
 ENTITY = '[[Logseq/Entity/Preset/Synth/Microfreak]]'
+MICROFREAK_PROPERTY = 'preset-synth-microfreak-'
+SHARED_PROPERTY = 'preset-synth-'
+CATEGORY_PAGE = 'Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category'
+ORIGIN_PAGE = 'Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin'
+LEGACY_PROPERTIES = {
+    'preset-number': MICROFREAK_PROPERTY + 'number',
+    'preset-name': MICROFREAK_PROPERTY + 'name',
+    'preset-category': MICROFREAK_PROPERTY + 'category',
+    'preset-initialized': MICROFREAK_PROPERTY + 'initialized',
+    'preset-on-device': MICROFREAK_PROPERTY + 'on-device',
+    'preset-origin': SHARED_PROPERTY + 'origin',
+    'preset-file': SHARED_PROPERTY + 'file',
+    'preset-file-sha256': SHARED_PROPERTY + 'file-sha256',
+    'preset-oscillator-type': MICROFREAK_PROPERTY + 'oscillator-type',
+}
 ALPHABET = re.compile(r'[ A-Za-z0-9._-]{1,14}\Z')
 
 
@@ -108,6 +125,44 @@ def properties(text):
     return props
 
 
+def migrate_properties(text):
+    """Rename owned metadata without touching tags or the handwritten body."""
+    props = properties(text)
+    for old, new in LEGACY_PROPERTIES.items():
+        if old not in props:
+            continue
+        if new in props and props[new] != props[old]:
+            raise ValueError(f'Conflicting preset properties: {old}, {new}')
+        if new in props:
+            text = update(text, {old: None})
+        else:
+            text = re.sub(rf'^{re.escape(old)}:: ', new + ':: ', text, count=1, flags=re.M)
+    return text
+
+
+def category_link(category):
+    return f'[[{CATEGORY_PAGE}/{category}]]'
+
+
+def origin_link(origin):
+    if origin.startswith('[[') and origin.endswith(']]'):
+        return origin
+    if origin.casefold() not in {'unknown', 'factory', 'custom'}:
+        raise ValueError(f'Unsupported preset origin: {origin}')
+    return f'[[{ORIGIN_PAGE}/{origin.title()}]]'
+
+
+def strip_stock_body(text, name, number):
+    """Remove only script-generated repetition, retaining all user-authored blocks."""
+    stock = f'- # {name}\n\t- Saved [[Microfreak]] preset in slot {number:03d}.\n'
+    legacy = f'- # {name}\n\t- Saved [[Microfreak]] preset in slot {number}.\n'
+    if stock in text:
+        return text.replace(stock, '- # Notes\n', 1)
+    if legacy in text:
+        return text.replace(legacy, '- # Notes\n', 1)
+    return text
+
+
 def update(text, values):
     lines = text.splitlines()
     boundary = 0
@@ -141,10 +196,11 @@ def plan(garden, inventory):
         props = properties(text)
         if props.get('logseq-entity') != ENTITY:
             continue
-        number = props.get('preset-number', '')
+        number = props.get(MICROFREAK_PROPERTY + 'number', props.get('preset-number', ''))
         if not number.isdigit() or not 1 <= int(number) <= 512:
             raise ValueError(f'Invalid preset number: {path}')
-        key = (int(number), props.get('preset-name'))
+        name = props.get(MICROFREAK_PROPERTY + 'name', props.get('preset-name'))
+        key = (int(number), name)
         if key in current:
             raise ValueError(f'Duplicate preset identity: {key}')
         # Pad the original title's slot, preserving its historical identity.
@@ -157,11 +213,17 @@ def plan(garden, inventory):
                 raise ValueError(f'Preset rename destination already exists: {target}')
             renames[path.stem.replace('___', '/')] = target.stem.replace('___', '/')
             del desired[path]
-        stock = f'\t- Saved [[Microfreak]] preset in slot {int(number)}.'
-        text = ''.join((f'\t- Saved [[Microfreak]] preset in slot {int(number):03d}.\n'
-                        if line.rstrip('\n') == stock else line)
-                       for line in text.splitlines(keepends=True))
-        desired[target] = update(text, {'preset-number': f'{int(number):03d}'})
+        text = migrate_properties(text)
+        text = strip_stock_body(text, name, int(number))
+        migrated = properties(text)
+        values = {MICROFREAK_PROPERTY + 'number': f'{int(number):03d}'}
+        if SHARED_PROPERTY + 'origin' in migrated:
+            values[SHARED_PROPERTY + 'origin'] = origin_link(migrated[SHARED_PROPERTY + 'origin'])
+        if MICROFREAK_PROPERTY + 'category' in migrated:
+            category = migrated[MICROFREAK_PROPERTY + 'category']
+            if category in CATEGORIES:
+                values[MICROFREAK_PROPERTY + 'category'] = category_link(category)
+        desired[target] = update(text, values)
         current[key] = target
     active = {}
     for p in sorted(inventory['presets'], key=lambda p: p['number']):
@@ -177,12 +239,15 @@ def plan(garden, inventory):
         if key not in current and legacy in original:
             raise ValueError(f'Unmanaged page already exists: {legacy}; reconcile its metadata before applying')
         old = desired.get(path)
-        values = {'logseq-entity': ENTITY, 'preset-number': f"{p['number']:03d}",
-                  'preset-name': p['name'], 'preset-category': p['category'],
-                  'preset-initialized': 'false', 'preset-on-device': 'true'}
+        values = {'logseq-entity': ENTITY,
+                  MICROFREAK_PROPERTY + 'number': f"{p['number']:03d}",
+                  MICROFREAK_PROPERTY + 'name': p['name'],
+                  MICROFREAK_PROPERTY + 'category': category_link(p['category']),
+                  MICROFREAK_PROPERTY + 'initialized': 'false',
+                  MICROFREAK_PROPERTY + 'on-device': 'true'}
         if old is None:
-            values['preset-origin'] = 'unknown'
-        desired[path] = update(old if old is not None else f"- # {p['name']}\n\t- Saved [[Microfreak]] preset in slot {p['number']:03d}.\n", values)
+            values[SHARED_PROPERTY + 'origin'] = origin_link('unknown')
+        desired[path] = update(old if old is not None else '- # Notes\n', values)
         active[key] = path
     sequence = list(active.values())
     for i, path in enumerate(sequence):
@@ -191,7 +256,8 @@ def plan(garden, inventory):
             'next': f"[[{sequence[i + 1].stem.replace('___', '/')}]]" if i + 1 < len(sequence) else None})
     for key, path in current.items():
         if key not in active:
-            desired[path] = update(desired[path], {'preset-on-device': 'false', 'prev': None, 'next': None})
+            desired[path] = update(desired[path], {MICROFREAK_PROPERTY + 'on-device': 'false',
+                                                   'prev': None, 'next': None})
     if renames:
         link = re.compile(r'\[\[([^\[\]]+)\]\]')
         for path, text in desired.items():
@@ -275,7 +341,7 @@ def apply(garden, changes):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--garden', type=Path, default=Path(__file__).resolve().parents[2])
+    parser.add_argument('--garden', type=Path, default=Path(__file__).resolve().parents[3])
     parser.add_argument('--port', help='Exact CoreMIDI input/output port name')
     parser.add_argument('--inventory', type=Path, help='Read a previously captured complete JSON inventory')
     parser.add_argument('--save-inventory', type=Path, help='Save the complete device inventory as JSON')

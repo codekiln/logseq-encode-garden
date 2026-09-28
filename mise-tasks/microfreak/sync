@@ -13,4 +13,4 @@ args=()
 [[ -n "${usage_save_inventory:-}" ]] && args+=(--save-inventory "$usage_save_inventory")
 [[ -n "${usage_garden:-}" ]] && args+=(--garden "$usage_garden")
 [[ -n "${usage_port:-}" ]] && args+=(--port "$usage_port")
-exec uv run --no-project --with python-rtmidi==1.5.8 python "$root/scripts/microfreak/sync.py" "${args[@]}" "$@"
+exec uv run --no-project --with python-rtmidi==1.5.8 python "$root/mise-tasks/microfreak/lib/sync.py" "${args[@]}" "$@"
