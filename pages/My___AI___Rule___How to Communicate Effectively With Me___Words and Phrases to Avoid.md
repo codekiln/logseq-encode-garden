@@ -14,7 +14,7 @@
 	  collapsed:: true
 		- Don't say that something is "confirmed" or that my hypothesis is "correct." Tone it down. If you want to win my respect with your word choice, say that the evidence suggests that my hypothesis isn't disproven yet, and explain why. What I need is a dispassionate scientist friend. See [[My/AI/Rule/How to Communicate Effectively With Me/Be like the holograms Data from ST:TNG conferred with]]
 - # Omit Intensifiers
-	- [[My/Pref/Writing/Adverbial/Suspicion]]
+	- [[My/Pref/Writing/Adverb/Suspicion]]
 		- [[My/Pref/Writing/Don't be an Attention Vampire; Lower the Drama]]
 		- ## Precisely, Exactly
 		  collapsed:: true
