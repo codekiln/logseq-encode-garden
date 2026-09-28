@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#MISE description="Compare named raw parameters in two saved MicroFreak exports"
+#USAGE arg "<file_a>" help="Earlier .mbp, .mfpz, .mfprojz, or .bin file"
+#USAGE arg "<file_b>" help="Later .mbp, .mfpz, .mfprojz, or .bin file"
+#USAGE flag "--slot-a <number>" help="Project slot in file A"
+#USAGE flag "--slot-b <number>" help="Project slot in file B"
+set -euo pipefail
+task_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [[ -n "${usage_file_a:-}" && -n "${usage_file_b:-}" ]]; then
+  args=("$usage_file_a" "$usage_file_b")
+  [[ -n "${usage_slot_a:-}" ]] && args+=(--slot-a "$usage_slot_a")
+  [[ -n "${usage_slot_b:-}" ]] && args+=(--slot-b "$usage_slot_b")
+  exec python3 "$task_dir/lib/compare.py" "${args[@]}"
+fi
+exec python3 "$task_dir/lib/compare.py" "$@"
