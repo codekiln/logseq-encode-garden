@@ -15,6 +15,21 @@ def inventory():
 
 
 class SyncTest(unittest.TestCase):
+    def test_property_migration_preserves_unread_parameters_and_rejects_conflicts(self):
+        old = ('tags:: [[Mine]]\n'
+               'preset-file:: [[Asset/Preset]]\n'
+               'preset-file-sha256:: abc123\n'
+               'preset-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/01 Basic Waves]]\n'
+               '- # Notes\n\t- Handwritten note\n')
+        result = sync.migrate_properties(old)
+        self.assertTrue(result.startswith('tags:: [[Mine]]\n'))
+        self.assertIn('preset-synth-file:: [[Asset/Preset]]\n', result)
+        self.assertIn('preset-synth-file-sha256:: abc123\n', result)
+        self.assertIn('preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/01 Basic Waves]]\n', result)
+        self.assertTrue(result.endswith('- # Notes\n\t- Handwritten note\n'))
+        with self.assertRaises(ValueError):
+            sync.migrate_properties('preset-name:: Old\npreset-synth-microfreak-name:: New\n- # Notes\n')
+
     def test_reject_partial_duplicate_and_invalid_inventory(self):
         for mutate in [lambda d: d['presets'].pop(),
                        lambda d: d['presets'].__setitem__(0, d['presets'][1]),
@@ -34,23 +49,25 @@ class SyncTest(unittest.TestCase):
             sync.apply(garden, changes)
             self.assertEqual(sync.plan(garden, data), [])
             path = garden / 'pages/Microfreak___Preset___001 Preset 1.md'
-            self.assertIn('- # Preset 1\n\t- Saved [[Microfreak]] preset in slot 001.', path.read_text())
-            text = path.read_text().replace('preset-origin:: unknown', 'preset-origin:: custom')
+            self.assertIn('- # Notes\n', path.read_text())
+            self.assertIn('preset-synth-microfreak-name:: Preset 1', path.read_text())
+            self.assertIn(sync.category_link('Keys'), path.read_text())
+            text = path.read_text().replace(sync.origin_link('unknown'), sync.origin_link('custom'))
             text = 'tags:: [[Mine]]\n' + text + '- My performance notes\n\tid:: 123\n'
             path.write_text(text)
             data['presets'][0]['category'] = 'Bass'
             sync.apply(garden, sync.plan(garden, data))
             self.assertIn('tags:: [[Mine]]\n', path.read_text())
-            self.assertIn('preset-origin:: custom', path.read_text())
+            self.assertIn(f'preset-synth-origin:: {sync.origin_link("custom")}', path.read_text())
             self.assertIn('- My performance notes\n\tid:: 123\n', path.read_text())
             data['presets'][0]['name'] = 'Renamed'
             sync.apply(garden, sync.plan(garden, data))
-            self.assertIn('preset-on-device:: false', path.read_text())
+            self.assertIn('preset-synth-microfreak-on-device:: false', path.read_text())
             self.assertEqual(sync.plan(garden, data), [])
             data['presets'][0]['initialized'] = True
             sync.apply(garden, sync.plan(garden, data))
             renamed = garden / 'pages/Microfreak___Preset___001 Renamed.md'
-            self.assertIn('preset-on-device:: false', renamed.read_text())
+            self.assertIn('preset-synth-microfreak-on-device:: false', renamed.read_text())
             self.assertEqual(sync.plan(garden, data), [])
             journal = next((garden / 'journals').glob('*.md')).read_text()
             self.assertEqual(journal.count('[[Microfreak/Preset]]'), 1)
@@ -121,7 +138,15 @@ class SyncTest(unittest.TestCase):
             sync.apply(garden, sync.plan(garden, data))
             padded = garden / 'pages/Microfreak___Preset___001 Preset 1.md'
             legacy = garden / 'pages/Microfreak___Preset___1 Preset 1.md'
-            text = padded.read_text().replace('preset-number:: 001', 'preset-number:: 1').replace('slot 001.', 'slot 1.')
+            text = padded.read_text().replace('preset-synth-microfreak-number:: 001', 'preset-number:: 1')
+            text = text.replace('preset-synth-microfreak-name::', 'preset-name::')
+            text = text.replace(f'preset-synth-microfreak-category:: {sync.category_link("Keys")}',
+                                'preset-category:: Keys')
+            text = text.replace('preset-synth-microfreak-initialized::', 'preset-initialized::')
+            text = text.replace('preset-synth-microfreak-on-device::', 'preset-on-device::')
+            text = text.replace(f'preset-synth-origin:: {sync.origin_link("unknown")}',
+                                'preset-origin:: unknown')
+            text = text.replace('- # Notes\n', '- # Preset 1\n\t- Saved [[Microfreak]] preset in slot 1.\n')
             text = 'tags:: [[Mine]]\n' + text + '- Sound note\n\t  id:: keep-this-id\n- My sound in slot 1.\n'
             padded.unlink()
             legacy.write_text(text)
@@ -131,7 +156,9 @@ class SyncTest(unittest.TestCase):
             journal.write_text('- [[Microfreak/Preset/1 Preset 1]]\n')
             sync.apply(garden, sync.plan(garden, data))
             self.assertFalse(legacy.exists())
-            self.assertIn('Saved [[Microfreak]] preset in slot 001.', padded.read_text())
+            self.assertIn('- # Notes\n', padded.read_text())
+            self.assertIn('preset-synth-microfreak-number:: 001', padded.read_text())
+            self.assertIn(f'preset-synth-origin:: {sync.origin_link("unknown")}', padded.read_text())
             self.assertIn('- Sound note\n\t  id:: keep-this-id\n', padded.read_text())
             self.assertTrue(padded.read_text().startswith('tags:: [[Mine]]\n'))
             self.assertIn('- My sound in slot 1.\n', padded.read_text())
