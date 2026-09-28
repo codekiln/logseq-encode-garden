@@ -120,6 +120,37 @@ class ParameterTest(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'exactly one'):
                 parameters.inspect(project, 1)
 
+    def test_single_preset_zip(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            zipped = root / 'Test Tone.mfpz'
+            with zipfile.ZipFile(zipped, 'w', compression=zipfile.ZIP_DEFLATED) as archive:
+                archive.writestr('0_Test Tone', mbp())
+            before = zipped.read_bytes()
+            result = parameters.inspect(zipped)
+            self.assertEqual(result['status'], 'raw_parameters')
+            self.assertEqual(result['metadata']['archive_member'], '0_Test Tone')
+            self.assertEqual(result['metadata']['payload_sha256'], hashlib.sha256(fixture()).hexdigest())
+            self.assertEqual(result['fields'][0]['name'], 'VCF.Cutoff')
+            self.assertEqual(zipped.read_bytes(), before)
+            with self.assertRaisesRegex(ValueError, '--slot'):
+                parameters.inspect(zipped, 1)
+
+    def test_single_preset_zip_rejects_missing_ambiguous_and_oversized_records(self):
+        with tempfile.TemporaryDirectory() as directory:
+            zipped = Path(directory) / 'bad.mfpz'
+            for members in ([], [('preset', mbp()), ('other', mbp())],
+                            [('directory/', b'')], [('preset', b'x' * (parameters.MAX_RECORD_SIZE + 1))]):
+                with self.subTest(members=[name for name, _ in members]):
+                    with zipfile.ZipFile(zipped, 'w', compression=zipfile.ZIP_DEFLATED) as archive:
+                        for name, content in members:
+                            archive.writestr(name, content)
+                    with self.assertRaises(ValueError):
+                        parameters.inspect(zipped)
+            zipped.write_bytes(b'not a zip')
+            with self.assertRaises(zipfile.BadZipFile):
+                parameters.inspect(zipped)
+
     def test_cli_reports_unsupported_and_invalid_inputs(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / 'unknown.bin'

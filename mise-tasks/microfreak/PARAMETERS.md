@@ -6,9 +6,10 @@
 mise run microfreak:inspect /private/tmp/preset/slot-001.bin
 mise run microfreak:inspect '/private/path/project.mfprojz' --slot 1
 mise run microfreak:inspect '/private/path/preset.mbp'
+mise run microfreak:inspect '/private/path/preset.mfpz'
 ```
 
-The binary input accepts the downloader's 35-byte saved header plus 4672-byte payload, or a standalone 4672-byte payload. A project archive selects one `.mbp` whose leading slot number and final bank/slot suffix match `--slot`; ambiguous banks are rejected. Project slot numbers describe the computer project, whose contents can differ from the current device. ZIP members are read in memory, with a size limit, and never extracted.
+The binary input accepts the downloader's 35-byte saved header plus 4672-byte payload, or a standalone 4672-byte payload. A `.mfpz` preset export contains one text archive record in a ZIP; the inspector accepts its member name as exported and reports it in metadata. A project archive selects one `.mbp` whose leading slot number and final bank/slot suffix match `--slot`; ambiguous banks are rejected. Project slot numbers describe the computer project, whose contents can differ from the current device. ZIP members are read in memory, with a size limit, and never extracted.
 
 Successful reports have `status: raw_parameters`, record/payload SHA-256 digests, and named fields. Each field retains its exact three-byte `raw_hex`, first-byte `descriptor`, and the remaining two bytes interpreted as both signed and unsigned little-endian integers. These integer interpretations preserve the bytes; they do not establish the instrument's displayed value. Reports explicitly mark descriptor semantics and display conversions as `unverified`.
 
