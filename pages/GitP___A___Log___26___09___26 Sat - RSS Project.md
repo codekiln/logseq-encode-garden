@@ -3,7 +3,7 @@
 		- 09:58
 			- I'd like to finally get some external hosting going for [[Person/codekiln/GitHub/gitpa]].
 			- I have a [[Backblaze]] account that I set up a while back, and I'd like to get a CDN going off of that for the episodes and other assets that are referenced in the published.
-			- I'm considering experimenting with something like [[dvc]] as a possible replacement for [[git/lfs]] for managing assets like [[Microfreak/04 Presets]], smaller audio fragments, images, etc. Basically, podcast rich media.
+			- I'm considering experimenting with something like [[dvc]] as a possible replacement for [[git/lfs]] for managing assets like [[Microfreak/UG/04 Presets]], smaller audio fragments, images, etc. Basically, podcast rich media.
 				- In the end, I decided to not add dvc at this time, as it will get in the way of getting a publishing pipeline going.
 			- I started a voice chat with [[OpenAI/Model/GPT/6/Sol]] and described what I wanted.
 		- 14:02
