@@ -6,5 +6,7 @@ logseq-entity:: [[Logseq/Entity/Person]]
 		- Known for work on minds, formal systems, analogy, and creativity; Pulitzer Prize for General Nonfiction (1980).
 	- ## Works (selected)
 		- [[Person/Douglas Hofstadter/Book/79/Gödel, Escher, Bach]]
+	- ## YouTube
+		- [[Person/Douglas Hofstadter/YouTube/Analogy as the core of cognition]]
 	- ## Links
 		- [Wikipedia](https://en.wikipedia.org/wiki/Douglas_Hofstadter)
