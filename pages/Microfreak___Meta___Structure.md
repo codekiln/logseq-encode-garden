@@ -2,9 +2,9 @@
 	- I'd like to try something relatively new. I have  `~/Downloads/microfreak_Manual_5_0_1_EN.pdf`, which is the latest version of the documentation for the arturia microfreak. I'd like to have this determine the structure of the Microfreak namespace in logseq that you should fill out.
 	- I don't want the PDF to be imported into logseq assets. That just adds binary weight to the whole repo. Instead, AI should pull the text and images out into the logseq pages, mirroring the heading structure in logseq namespaces and following my preferences below.
 	- So, for example, take a look at these pages, which I manually converted to match my needs.
-		- [[Microfreak/06 Dig Osc]]
-		- [[Microfreak/06 Dig Osc/01 as Soundgen]]
-		- [[Microfreak/06 Digital Oscillator/03 Types/01 BasicWaves]]
+		- [[Microfreak/UG/06 Dig Osc]]
+		- [[Microfreak/UG/06 Dig Osc/01 as Soundgen]]
+		- [[Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves]]
 	- ## my preferences
 		- ### high level conversion principles
 		  collapsed:: true
@@ -35,24 +35,24 @@
 						- > The LFO in the MicroFreak can generate signals in the range from 0.1Hz to 100Hz. Please refer to the `LFO chapter [p.57]` for details.
 						- Where `LFO chapter [p57]` in the PDF to chapter 8 in the PDF.
 					- I replaced the last sentence with
-						- > Please refer to [[Microfreak/08 LFO]] for details.
+						- > Please refer to [[Microfreak/UG/08 LFO]] for details.
 						- So that the sentence is truly translated to Logseq properly.
 		- ### place referenced images in logseq assets according to my sequential preferences for the filename and place the image underneath the caption
 		  collapsed:: true
 			- [[Example]]
 				- {{embed ((6ab65191-5104-46a1-8f9a-0deb5920fed4))}}
-					- Here, the original had this image with the caption `The Digital Oscillator` below it in the PDF. I created the image `../assets/Microfreak___06-Dig-Osc___01-as-Soundgen___01-The-Digital-Oscillator.png` and referenced it with `![01 The Digital Oscillator](../assets/Microfreak___06-Dig-Osc___01-as-Soundgen___01-The-Digital-Oscillator.png)` so it would appear correctly in logseq and the caption would become the alt text of the image. I also moved the image underneath its caption in logseq.
+					- Here, the original had this image with the caption `The Digital Oscillator` below it in the PDF. I created the image `../assets/Microfreak___UG___06-Dig-Osc___01-as-Soundgen___01-The-Digital-Oscillator.png` and referenced it with `![01 The Digital Oscillator](../assets/Microfreak___UG___06-Dig-Osc___01-as-Soundgen___01-The-Digital-Oscillator.png)` so it would appear correctly in logseq and the caption would become the alt text of the image. I also moved the image underneath its caption in logseq.
 					- I also numbered the image within the section, so that as long as the image filepath is derived from the logseq page that the image was used in, if I look at the assets directory, all of the images in the PDF would be sorted in order of their appearance in the text, when sorted in [[Lexicographic/Order]].
 		- ### intelligently translate tables to nested logseq markdown while preserving communicative purpose and respecting the need for concision
 		  collapsed:: true
 			- so that it can be opened in [[nvim]] easier. Clean up tables when converting them to logseq format by translating their communicative value into logseq hierarchy of nodes. That is, intelligently omit column names where they don't add communicative value; many times the actual purpose of the table is to convey information that should be hierarchical anyway. There's not a hard and fast rule here; just try to make it seem natural in logseq.
 			- [[Examples]]
-				- from [[Microfreak/18 Appendix A Speech Osc]], labeled page 125, pdf page 130
+				- from [[Microfreak/UG/18 Appendix A Speech Osc]], labeled page 125, pdf page 130
 					- ## Wave categories, Waves and CC 10 + values
 						- ### vowels, range of formants
 							- wave: 0,0 - 42,4
 							- CC 10: 0 - 53
-				- from [[Microfreak/19 Appendix B Vocoder/07 Config]], labeled page 133 in the PDF (pdf page number 138)
+				- from [[Microfreak/UG/19 Appendix B Vocoder/07 Config]], labeled page 133 in the PDF (pdf page number 138)
 					- Below an overview of the Utility settings that are specific for the Vocoder.
 					- ## Mic Settings
 						- ### Mic Gain
@@ -61,7 +61,7 @@
 							- Off, -30dB to -90 dB (default -70 dB)
 						- ### Mic Detection
 							- Off, On (default)
-				- from [[Microfreak/20 Appendix C - Cheat Sheet]] labeled p139, pdf p144
+				- from [[Microfreak/UG/20 Appendix C - Cheat Sheet]] labeled p139, pdf p144
 					- ## Preset
 						- ### Shift + Preset Encoder
 							- Quick select of “A”, “a”, "0 and “.” character ranges
@@ -70,7 +70,7 @@
 							- Encoder changes values at opposite speed (slow or
 							  fast) of its setting in Utility > Browsing > Osc Knob
 							  Speed
-				- from [[Microfreak/21 Appendix D - CC Values]], labeled page 141, pdf page 146
+				- from [[Microfreak/UG/21 Appendix D - CC Values]], labeled page 141, pdf page 146
 					- ## Parameters and their CC numbers
 						- Spice - 2
 						- Glide - 5
@@ -80,7 +80,7 @@
 		  collapsed:: true
 			- model the bullet, don't put the bullet as text, e.g. don't use • as it's redundant
 			- [[Example]]
-				- from [[Microfreak/19 Appendix B Vocoder/07 Config/01 Preset Settings]] labeled page 133 (pdf page 138)
+				- from [[Microfreak/UG/19 Appendix B Vocoder/07 Config/01 Preset Settings]] labeled page 133 (pdf page 138)
 					- Two menu items are preset related:
 						- Vocoder Hiss mode
 						- Vocoder Hiss Volume
