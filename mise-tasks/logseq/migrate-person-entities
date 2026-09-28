@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+#MISE description="Migrate person pages to the Logseq person entity convention"
+#USAGE flag "--dry-run" help="Report changes without writing pages"
 """
 One-off migration for person entity conventions:
 1. Strip [[People/...]] targets from alias:: frontmatter on all pages/Person___*.md
@@ -8,11 +10,12 @@ Never modifies tags:: lines. Idempotent for logseq-entity::.
 """
 from __future__ import annotations
 
+import os
 import re
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 PAGES = ROOT / "pages"
 PERSON_FM_LINE = re.compile(r"^[^\n]+::")
 BRACKET_LINKS = re.compile(r"\[\[([^\]]+)\]\]")
@@ -99,7 +102,7 @@ def process_file(path: Path, dry_run: bool) -> tuple[bool, bool]:
 
 
 def main() -> int:
-    dry_run = "--dry-run" in sys.argv
+    dry_run = "--dry-run" in sys.argv or os.environ.get("usage_dry_run") == "true"
     paths = sorted(PAGES.glob("Person___*.md"))
     a_count = e_count = 0
     for p in paths:
