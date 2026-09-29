@@ -17,3 +17,7 @@
 			- suggesting fixes
 			- creating evals and [[LangSmith/Dataset]]s
 			- monitoring for regressions
+		- use case: North Point's go-to-market agent
+			- like the go-to-market agent mentioned in the [[LangSmith/26/09/29 Tue - Deep Agents]] security and auth section
+			- a very basic agent: input → model call → tools → output
+			- the workshop looks at its [[LangSmith/Trace]]s, analyzes them, and fixes it
