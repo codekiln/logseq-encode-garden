@@ -88,7 +88,7 @@ date-created:: [[2026-09-29 Tue]]
 				- maintain security posture
 				- keep up with standards
 					- when a new protocol endpoint like [[A2A]] or [[MCP]] comes out, the agent should be able to use it right away, without engineering time spent rebuilding it
-			- [LangSmith Deployment](https://docs.langchain.com/langsmith/deployment) is built for scale and proven in production
+			- [[LangSmith/Deployment]] ([docs](https://docs.langchain.com/langsmith/deployment)) is built for scale and proven in production
 				- 30+ endpoints for agents
 				- integrations that are tricky to build yourself, like [[A2A]] and [[MCP]]; once in place, they give interoperability and make agents more useful
 				- purpose-built task queues handle messages from users to the agent securely, reliably and at scale
