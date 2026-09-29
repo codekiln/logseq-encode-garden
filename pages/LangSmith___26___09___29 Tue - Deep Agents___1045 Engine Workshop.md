@@ -12,3 +12,8 @@
 				- all input is natural language, and even one input has infinite possible outputs
 				- that non-determinism takes a lot of testing and iterating, which is where [[LangSmith/Engine]] fits in
 			- customers getting agents into production quickly and iterating on them: [[Censys]], Rippling, Clay, Harvey
+		- hands-on today: [[LangSmith/Engine]] on a use case
+			- finding issues
+			- suggesting fixes
+			- creating evals and [[LangSmith/Dataset]]s
+			- monitoring for regressions
