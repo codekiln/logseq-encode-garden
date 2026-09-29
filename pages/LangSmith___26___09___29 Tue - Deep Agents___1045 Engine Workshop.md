@@ -77,3 +77,10 @@
 				- Engine ranks traces by feedback: for each feedback key, it pulls the low-scoring traces, and it screens traces with any feedback score first ([How Engine selects traces](https://docs.langchain.com/langsmith/engine#how-engine-selects-traces))
 					- so a pedagogy rubric as an online evaluator or an annotation queue score steers Engine toward the weakest teaching conversations
 				- traces alone don't show whether a learner learned; log outcome signals (quiz results, completion, instructor ratings) as feedback on the run through the SDK so Engine can see them
+		- hands-on setup
+			- 1. at [smith.langchain.com](https://smith.langchain.com), create a brand-new organization
+				- an existing organization or account won't work; this is the most common error
+			- 2. copy the new organization's ID
+			- 3. go to `workshop.langchain.com`, enter the workshop code, the new organization's ID, and an API key from that organization
+			- 4. the workshop fills the new organization with traces
+			- 5. turn on [[LangSmith/Engine]] for that tracing project; the analysis takes a while
