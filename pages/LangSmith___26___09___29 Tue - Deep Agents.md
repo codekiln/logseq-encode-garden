@@ -126,6 +126,12 @@ date-created:: [[2026-09-29 Tue]]
 				- [Agent Server: MCP endpoint](https://docs.langchain.com/langsmith/server-mcp) at `/mcp`, over the Streamable HTTP transport
 				- each deployed agent appears as an MCP tool, named and described from `langgraph.json`, with the agent's input schema
 				- custom auth middleware can give a user access to user-scoped tools
+		- ## Context Hub
+			- a secure place for agents to store all of the context for their users, and for humans to edit that context reliably
+			- exposes skills, memories and prompts to the agent over SDK or API, and to users
+			- non-technical subject matter experts can use their expertise to build prompts and skills, so the agent performs as well as they say it should
+			- per the docs, an agent repo holds `AGENTS.md` and config and links to separate skill repos, each versioned and reusable across agents ([Context Hub concepts](https://docs.langchain.com/langsmith/context-engineering-concepts))
+				- [[LangSmith/Deep Agents]] can mount an agent repo as its filesystem with `ContextHubBackend`, with linked skills under `/skills/`
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
