@@ -122,3 +122,12 @@
 				- a dataset is a list of examples to run through the agent
 				- examples here: "send a lead an email asking about their availability", "send an email to schedule a deep dive"
 				- the dataset holds the common requests the agent should handle
+				- the suggested examples come with what the agent outputs today (wrong) and what the output should be: a reference output, the ground truth
+				- in the Datasets & Experiments tab, the dataset's examples show each input and its reference output
+				- assertions
+					- the reference outputs [[LangSmith/Engine]] created are called assertions: statements of what should be true for that input, describing the proper behavior
+					- per the docs, assertions are short free-form claims about what a correct answer should or shouldn't include, saved on a dataset example; reviewers can also write them on run items in a single-run [[LangSmith/Annotation/Queue]], and Engine proposes them for recurring issues ([Use assertions](https://docs.langchain.com/langsmith/assertions))
+				- an experiment runs the dataset's inputs through the live agent and compares its actual outputs to the reference outputs
+				- the demo has two experiments
+					- baseline: run before merging the fix; same inputs and reference outputs, plus the agent's actual outputs, and it fails every assertion because it still emails disqualified prospects
+					- a second experiment, run after the fix
