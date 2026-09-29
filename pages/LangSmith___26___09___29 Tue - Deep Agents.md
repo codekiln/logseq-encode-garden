@@ -141,6 +141,9 @@ date-created:: [[2026-09-29 Tue]]
 			- snapshots: checkpoint the sandbox at any time, and use container images for pre-built filesystems
 		- ## 10:27 [[Censys]] engineering spotlight
 			- Rob hands off to [[Person/Asaaf Moldavsky]], Senior Staff AI Engineer, and [[Person/Hamza Khan]], AI/ML Engineer
+			- intros
+				- [[Person/Asaaf Moldavsky]]: on the Applied AI team; leads all agentic and AI development at Censys
+				- [[Person/Hamza Khan]]: AI engineer on the exposure management team
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
