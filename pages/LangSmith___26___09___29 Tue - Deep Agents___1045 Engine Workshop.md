@@ -1,4 +1,7 @@
 - # 1045 [[LangSmith/Engine]] Workshop
 	- 10:45 workshop at [[LangSmith/26/09/29 Tue - Deep Agents]]
+	- Presenter: [[Person/Michael Dik]]
+	- TAs: [[Person/Robert Xu]], [[Person/Daniel Shea]], [[Person/Avi Kumar]]
 	- ## [[My Notes]]
-		- 10:45
+		- 10:45 three quick slides, then hands-on
+			- plan: the ADLC (agent development lifecycle), [[LangSmith/Engine]], and how Engine fits in the ADLC

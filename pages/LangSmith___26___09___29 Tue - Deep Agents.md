@@ -141,7 +141,7 @@ date-created:: [[2026-09-29 Tue]]
 			- auth proxy: secrets aren't stored in the sandbox; credentials are injected after the request leaves for the external service
 			- snapshots: checkpoint the sandbox at any time, and use container images for pre-built filesystems
 		- ## 10:27 [[Censys]] engineering spotlight
-			- Rob hands off to [[Person/Asaaf Moldavsky]], Senior Staff AI Engineer, and [[Person/Hamza Khan]], AI/ML Engineer
+			- Rob ([[Person/Robert Xu]]) hands off to [[Person/Asaaf Moldavsky]], Senior Staff AI Engineer, and [[Person/Hamza Khan]], AI/ML Engineer
 			- intros
 				- [[Person/Asaaf Moldavsky]]: on the Applied AI team; leads all agentic and AI development at Censys
 				- [[Person/Hamza Khan]]: AI engineer on the exposure management team
