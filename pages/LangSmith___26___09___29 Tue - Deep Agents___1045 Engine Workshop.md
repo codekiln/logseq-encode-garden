@@ -91,3 +91,9 @@
 			- set up the LangSmith organization with the setup guide: [langch.in/engine-setup](https://langch.in/engine-setup), which opens the [Engine Workshop Guide](https://docs.google.com/document/d/1G013nTuItdN4Hdb2XTBcpuWEzw_NvPT4W_hIJ5LmWbU/edit?tab=t.0#heading=h.b9e17a8of020) Google Doc
 			- fork the codebase on GitHub: [langchain-samples/gtm-agent-engine-workshop](https://github.com/langchain-samples/gtm-agent-engine-workshop)
 			- point [[LangSmith/Engine]] at the tracing project and let it review and cluster the traces
+			- what I did
+				- copied [langchain-samples/gtm-agent-engine-workshop](https://github.com/langchain-samples/gtm-agent-engine-workshop) into [codekiln/gtm-agent-engine-workshop](https://github.com/codekiln/gtm-agent-engine-workshop)
+				- created a new LangSmith login and a new organization
+				- at `workshop.langchain.com`, entered the org ID and the live-demo workshop code
+					- that filled the tracing project with traces, presumably through the LangSmith SDK, and gave the org Enterprise-level access
+				- in the Engine tab, connected [codekiln/gtm-agent-engine-workshop](https://github.com/codekiln/gtm-agent-engine-workshop) as the GitHub repository
