@@ -97,6 +97,15 @@
 				- at `workshop.langchain.com`, entered the org ID and the live-demo workshop code
 					- that filled the tracing project with traces, presumably through the LangSmith SDK, and gave the org Enterprise-level access
 				- in the Engine tab, connected [codekiln/gtm-agent-engine-workshop](https://github.com/codekiln/gtm-agent-engine-workshop) as the GitHub repository
+				- my Engine overview for the tracing project
+					- status Active, `v2`, Standard analysis level
+					- 20 traces inspected, 3 issues opened, 0 completed; all 3 high severity
+						- Prospect tools return billing PII — PII Leak
+						- CRM tech-stack update never persists — Code Defect
+						- Disqualified prospects emailed without a qualification check — Code Defect
+					- the demo's fourth issue, skipping the mandated get-current-rep call, didn't appear in mine
+					- spend so far: 6 LCU = $9, month to date, no monthly limit set
+					- a panel offers a waitlist for "Experiments and red teaming": Engine tests each fix against your evals and red-teams your agent for failure modes
 		- issues [[LangSmith/Engine]] found in the demo
 			- four issues
 				- a tool returns PII
