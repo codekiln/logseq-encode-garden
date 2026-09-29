@@ -159,6 +159,11 @@ date-created:: [[2026-09-29 Tue]]
 					- building an "agentic mesh" as their ecosystem
 					- their first assistant, built about a year and a half ago, grew more complex, so they broke it into smaller subagents
 					- a deep agent on top manages the agents in the mesh
+					- Hamza: capability-driven design
+						- the assistant became so capable that they needed a mesh of domain experts
+						- a user's request goes to the matching domain expert, which answers and hands the result back (the transcript's word for these experts sounded like "senses")
+						- domain experts are easier to test, evaluate and observe
+			- Rob: did it start as a mesh, or as a single agent? how did you end up with the mesh?
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
