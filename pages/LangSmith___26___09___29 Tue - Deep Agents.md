@@ -5,6 +5,7 @@ date-created:: [[2026-09-29 Tue]]
 	- ## Schedule
 		- 10:00
 		- 10:27 [[Censys]] engineering spotlight
+		- 10:45 [[LangSmith/26/09/29 Tue - Deep Agents/1045 Engine Workshop]]
 	- ## [[My Notes]]
 		- 10:00 ReAct loop
 			- Agent = model + [[AI/Agent/Harness]]

@@ -1,0 +1,4 @@
+- # 1045 [[LangSmith/Engine]] Workshop
+	- 10:45 workshop at [[LangSmith/26/09/29 Tue - Deep Agents]]
+	- ## [[My Notes]]
+		- 10:45
