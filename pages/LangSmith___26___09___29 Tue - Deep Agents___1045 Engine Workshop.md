@@ -188,3 +188,12 @@
 				- holistic: the whole task; for Engine, from identifying an issue all the way to the fix
 				- sub-optimization: one step, such as a single tool call; set the eval to run only on that tool call and grade it
 			- turn evals on for experiments, and hill climb on their scores
+		- skills in Context Hub
+			- [[AI/Agent/Skill]]s are something to iterate on, prompt and version control; [[LangSmith]] has a place for them (Context Hub)
+			- [[LangSmith/Engine]] reads skills either way: hard-coded in the repo, or stored in the platform
+				- Michael finds them easier to manage in the platform, where they're versioned
+			- example: a PR summary skill that tells a coding agent how to write a PR for the organization
+				- the coding agent reads the skill dynamically from the platform
+				- a person can edit it, and Engine can edit it too (not shown today)
+				- save a version, then promote it to prod or staging
+			- run evals on the agent with the new skill version, or analyze every trace that pulls in the skill; an eval can target just that skill
