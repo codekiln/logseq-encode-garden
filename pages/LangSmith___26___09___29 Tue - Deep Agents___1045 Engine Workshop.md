@@ -173,3 +173,18 @@
 			- the ADLC loop: generate traces → Engine clusters failures into issues → Build the fix as a PR → Test it against a dataset → Deploy → Monitor production for regressions
 			- an issue page has Open PR, Watch, Done, Incorrectly Flagged and Copy as prompt; Evidence lists the traces; "Engine proposed N examples" offers dataset examples with assertions; Proposed Fix describes the code change
 			- the repo's `.github/workflows/eval.yml` runs `eval.py` on `main` and on the PR branch and comments the results on the PR; it skips unless the repo has `LANGSMITH_API_KEY`, `OPENAI_API_KEY` and `DATASET_NAME` secrets
+		- creating evals
+			- anything added to the Engine settings gets analyzed by [[LangSmith/Engine]]
+			- evals measure the agent: whether it's doing what you want
+			- [[LangSmith/Evaluator]] types: [[AI/Eval/LLM as Judge]], code evaluators, composite
+				- LLM as judge is the most popular: it passes the input, output or any other trace data to an LLM to score
+				- many come out of the box, and new ones can be created in natural language
+			- example: PII leakage
+				- a prompt defines PII, editable to match your own definition
+				- set it to run on every model input, since PII should never reach a model
+				- use it for retroactive analysis, or as a guardrail, which adds latency requirements
+			- domain-specific evals: put context and examples into the prompt; an LLM judge can evaluate anything you can describe
+			- scope
+				- holistic: the whole task; for Engine, from identifying an issue all the way to the fix
+				- sub-optimization: one step, such as a single tool call; set the eval to run only on that tool call and grade it
+			- turn evals on for experiments, and hill climb on their scores
