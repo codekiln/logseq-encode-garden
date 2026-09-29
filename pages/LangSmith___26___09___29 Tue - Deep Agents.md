@@ -225,6 +225,16 @@ date-created:: [[2026-09-29 Tue]]
 				- both are measured over time and improved
 				- hard part of the bottom-up approach: it produces many evaluators, and deciding which to cut is difficult
 					- hoping [[LangSmith/Engine]] can help
+				- Rob: building an agent, he inverted one of his evaluators, scoring good results as bad and bad as good; [[LangSmith/Engine]] told him the evaluator was wrong
+			- Rob: advice for the audience building agents? if you could start over, how would you build it?
+				- Hamza: build simple and small first; don't dive into complex architectures
+					- if the simple version does the job, that's great
+					- expand the architecture only when you really need the capability
+					- Censys started with one assistant: an [[MCP]] server, tool calls, working fine; the agentic mesh came only once it grew
+					- with [[LangSmith/Deep Agents]] too, the use case comes first, then the architecture
+						- they need a deep agent because investigations run for hours or days before reaching an answer
+						- "do we actually need a deep agent?" was a running conversation with Asaaf, until they found they did
+					- AI is moving so fast that you don't have to chase each new thing; the use case matters more than the technology
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
