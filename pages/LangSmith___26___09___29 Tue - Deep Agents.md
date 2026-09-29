@@ -170,6 +170,17 @@ date-created:: [[2026-09-29 Tue]]
 				- they use [[LangSmith]] to see inside it
 					- engineers debug whether a failure came from the planner or a bad tool call
 					- non-technical people can experiment with the prompts to see what's going on
+			- Rob: what challenges came with the complexity, and how did you manage them before [[LangSmith]]?
+				- Asaaf: about a year and a half ago, everyone started from a chatbot experience
+					- a simple [[langgraph]] graph, or sometimes a home-grown solution; for Censys it was LangGraph from the start
+					- a simple tree of a few nodes, then more capabilities added on
+				- started with a supervisor model: give the model a bunch of tools
+					- slower, since nothing runs in parallel and the model takes time to think
+					- more expensive
+					- [[LangSmith/Trace]]s and statistics are how they saw that
+				- when Asaaf joined, they switched to a planner-executor architecture
+					- LangSmith showed the performance change with every change they made
+					- the proof of concept cut about two thirds of the execution time
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
