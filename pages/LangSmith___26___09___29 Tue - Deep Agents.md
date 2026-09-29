@@ -66,10 +66,16 @@ date-created:: [[2026-09-29 Tue]]
 					- the most recent 10% of tokens stay as they are
 					- the full original conversation is written to the filesystem so the agent can search it later
 					- a `compact_conversation` tool lets the agent compact on demand, for example between tasks
-			- [[LangSmith/Managed Deep Agents]]
+			- [Managed Deep Agents](https://docs.langchain.com/langsmith/managed-deep-agents-overview)
 				- hosted runtime in [[LangSmith]] for creating, running and operating deep agents; CLI-first, in private preview as of the docs
 				- provisions threads, runs, a store and a checkpointer
 			- provider agnostic: the model can come from any provider
+			- why open source and highly customizable
+				- LangChain's roots are as an open source agent framework
+				- it leaves room for the work that makes an agent different from other agents
+				- Deep Agents takes on the harness engineering that LangChain saw as best practice for agent performance
+				- context management and specifying the skills, tools and prompts are left to the builder
+					- those, and the harness engineering, are what make an agent perform well in its domain
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
