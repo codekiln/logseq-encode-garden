@@ -208,6 +208,16 @@ date-created:: [[2026-09-29 Tue]]
 				- they run a double-blind labeling experiment
 					- the aim is an intersection where labelers don't diverge; otherwise labels can be biased
 					- [[LangSmith/Annotation/Queue/Q/How do I run a double-blind labeling experiment with annotation queues?]]
+			- Rob: teams in the field split between two kinds of evals
+				- how cheap a model can you use and still be effective?
+				- hill climbing: use the most expensive model and see how far into new tasks it gets
+				- do you focus on one, or both?
+				- Hamza: example from report generation
+					- reports are ready-to-share summaries for users: which risks affected them, how to fix them, and what to fix right away
+					- question: generate the report in one shot, or generate the sections in parallel?
+					- instead of arguing opinions about best model versus cost, they used one-shot as the baseline and ran both as experiments, then decided from the results
+					- [[LangSmith]] isn't only for spotting a planner mistake or a bad tool call; the team uses it to plan what to build next
+						- an experiment is the result of evaluating one version of the app on a dataset: outputs, evaluator scores and traces for every example ([Evaluation concepts](https://docs.langchain.com/langsmith/evaluation-concepts)); two experiments on the same dataset can be compared side by side ([Compare experiment results](https://docs.langchain.com/langsmith/compare-experiment-results))
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
