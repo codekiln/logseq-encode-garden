@@ -21,3 +21,11 @@
 			- like the go-to-market agent mentioned in the [[LangSmith/26/09/29 Tue - Deep Agents]] security and auth section
 			- a very basic agent: input → model call → tools → output
 			- the workshop looks at its [[LangSmith/Trace]]s, analyzes them, and fixes it
+		- tour of [[LangSmith]]
+			- an agent's traces go to a tracing project
+			- other areas: [[LangSmith/Engine]]; monitoring, maybe at the end with Q&A; datasets, experiments and evals, which measure whether the agent is improving and doing what's wanted
+			- the go-to-market agent is built on [[LangSmith/Deep Agents]]: a model, some tools, and the agent loop
+		- threads, traces and runs
+			- [[LangSmith/Thread]]: the whole multi-turn conversation, every back and forth in one session
+			- [[LangSmith/Trace]]: one back and forth; one query in, one response out
+			- run: the most atomic unit of observability, such as a tool call, a model call or a workflow step
