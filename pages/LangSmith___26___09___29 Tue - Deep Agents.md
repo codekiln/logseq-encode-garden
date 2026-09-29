@@ -104,6 +104,13 @@ date-created:: [[2026-09-29 Tue]]
 					- the queue is what makes runs durable: any run can be retried, replayed or resumed from the point of interruption ([Core capabilities](https://docs.langchain.com/langsmith/core-capabilities))
 				- SDKs for chat, streaming and [[AI/Workflow/Human in the Loop]]
 				- all of this frees teams to focus on what makes their agent different
+			- human approval ([[AI/Workflow/Human in the Loop]])
+				- more important as models get more capable, see more internal data, and take on sensitive tasks like bank withdrawals or financial handling
+				- a human watches over what the agent does, from a security posture
+				- the human can approve, edit or reject sensitive actions
+				- interrupts are checkpointed for durability, so they can wait as long as the human needs to review
+				- one of the hardest parts of building production agents, and one of the last that teams take on
+					- teams spend a lot of time stuck here: security and auth
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
