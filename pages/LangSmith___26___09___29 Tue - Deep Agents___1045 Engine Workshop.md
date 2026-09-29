@@ -148,3 +148,16 @@
 					- the loop: baseline the agent, form a hypothesis about what to improve, implement it, test against the baseline to confirm it works and doesn't regress
 					- regressions are hard to fix in every agent; good evals and good experiments are what catch them
 					- go deeper by opening the baseline's trace next to the fix's trace to compare the exact path each version took; a different path may be better or worse, judged against robust datasets, experiments and evals
+		- flag a trace for [[LangSmith/Engine]]
+			- from a trace, flag it and describe the issue in natural language, for example "there's latency on this step; why is that happening?"
+			- that starts an ad hoc Engine run, which analyzes the trace and surfaces its analysis
+		- Q&A: what does Engine cost?
+			- Engine runs on LangChain Compute Units (LCUs), since it calls LangChain's models on the back end
+			- 6 LCU for this project reflects a small sample of only 20 traces; more as you scale
+			- cost depends on the subscription plan, and, per Michael, on whether you bring your own model
+			- per [Engine docs: Understand LCU costs](https://docs.langchain.com/langsmith/engine#understand-lcu-costs)
+				- an LCU combines compute, storage, memory and LLM spend, and costs $1.50
+				- usage scales with traces analyzed, the number and complexity of Engine's LLM calls, and the size of the connected repo
+				- first-time initialization on a project: typically 30–40 LCUs; each recurring scan: typically 10–15 LCUs, whether or not it finds new issues
+				- Engine uses LangChain-managed inference only; bringing your own provider key isn't supported, which doesn't match the Q&A answer
+				- the analysis level (Reduced, Standard, Expanded) sets how many traces Engine analyzes, and so how many LCUs it uses; spend limits can be set
