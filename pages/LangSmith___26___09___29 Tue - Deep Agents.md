@@ -187,6 +187,14 @@ date-created:: [[2026-09-29 Tue]]
 				- as complexity grew, the assistant became the agentic mesh of smaller domain experts
 				- they still use [[LangSmith]] and [[LangChain]] in every domain expert to measure performance and decide whether it can go beyond proof of concept
 					- cost: about half a dollar per run now; released to a million people, would it bankrupt the budget?
+			- Rob: advanced teams go through many architecture changes as models and harnesses improve, and testing tells them whether a change is an improvement
+				- how do you test, and what metrics do you look at besides cost?
+				- Hamza: cost is one
+					- every week they review conversations by hand, thread by thread
+						- threads longer than 12 or 13 turns get a manual look; they don't want something labeling them without a person looking
+					- now working on closing the loop quickly once a thread is labeled with an issue
+						- fix it as soon as possible, so it doesn't sit in an epic for two or three weeks
+					- actively looking into [[LangSmith/Engine]] for that
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
