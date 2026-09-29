@@ -144,6 +144,21 @@ date-created:: [[2026-09-29 Tue]]
 			- intros
 				- [[Person/Asaaf Moldavsky]]: on the Applied AI team; leads all agentic and AI development at Censys
 				- [[Person/Hamza Khan]]: AI engineer on the exposure management team
+			- how Censys uses generative AI
+				- like a typical security company, two fronts
+					- investigative and proactive: get ahead of the question "am I affected?"
+					- reactive: act on "am I affected?" when something happens, like a new CVE or something in the news
+				- each front has different agents and architectures; both use [[LangSmith/Deep Agents]]
+				- investigative side
+					- agents run for hours, sometimes days, before they converge on a conclusion
+					- underneath is a set of [[AI/Agent/Subagent]]s
+						- some are tuned models
+						- some are smaller domain experts, also deep agents
+						- some are deterministic or semi-deterministic
+				- exposure management side, where Asaaf and Hamza started
+					- building an "agentic mesh" as their ecosystem
+					- their first assistant, built about a year and a half ago, grew more complex, so they broke it into smaller subagents
+					- a deep agent on top manages the agents in the mesh
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
