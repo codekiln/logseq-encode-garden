@@ -218,6 +218,13 @@ date-created:: [[2026-09-29 Tue]]
 					- instead of arguing opinions about best model versus cost, they used one-shot as the baseline and ran both as experiments, then decided from the results
 					- [[LangSmith]] isn't only for spotting a planner mistake or a bad tool call; the team uses it to plan what to build next
 						- an experiment is the result of evaluating one version of the app on a dataset: outputs, evaluator scores and traces for every example ([Evaluation concepts](https://docs.langchain.com/langsmith/evaluation-concepts)); two experiments on the same dataset can be compared side by side ([Compare experiment results](https://docs.langchain.com/langsmith/compare-experiment-results))
+			- Rob: how have the results been?
+				- Asaaf: top-down, the four KPIs mentioned earlier (cost, verbosity, comprehension, understanding) are what the business cares about; the goal is to improve on them over time
+				- bottom-up, from the machine learning side: "there's always drift"
+					- people change how they ask things, models change, prompts change; detecting that matters
+				- both are measured over time and improved
+				- hard part of the bottom-up approach: it produces many evaluators, and deciding which to cut is difficult
+					- hoping [[LangSmith/Engine]] can help
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
