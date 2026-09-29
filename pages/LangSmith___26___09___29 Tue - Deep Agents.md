@@ -111,6 +111,14 @@ date-created:: [[2026-09-29 Tue]]
 				- interrupts are checkpointed for durability, so they can wait as long as the human needs to review
 				- one of the hardest parts of building production agents, and one of the last that teams take on
 					- teams spend a lot of time stuck here: security and auth
+		- ## Security and auth
+			- example: an agent deployed as a [[Slack]] app, like LangChain's internal go-to-market agent
+				- usable one-on-one in a direct message, or in a group chat with a team
+				- auth behavior and memory management differ by where the agent is invoked
+					- in a DM, the agent stores one person's information in a separate backend, apart from everyone else's; it knows and can access only that person's information
+					- in a group chat, shared memories are stored in a separate location, and the agent behaves differently
+				- the [[LangSmith/Deep Agents]] `StoreBackend` scopes storage per user, per assistant or per thread ([Backends: Namespace factories](https://docs.langchain.com/oss/python/deepagents/backends))
+			- security and auth are built into [Managed Deep Agents](https://docs.langchain.com/langsmith/managed-deep-agents-overview), to make deployment and auth for users as easy as possible
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
