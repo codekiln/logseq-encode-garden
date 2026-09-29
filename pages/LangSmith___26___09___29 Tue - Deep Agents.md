@@ -235,6 +235,15 @@ date-created:: [[2026-09-29 Tue]]
 						- they need a deep agent because investigations run for hours or days before reaching an answer
 						- "do we actually need a deep agent?" was a running conversation with Asaaf, until they found they did
 					- AI is moving so fast that you don't have to chase each new thing; the use case matters more than the technology
+				- Asaaf
+					- start with a metric or KPI in mind, even a vague number; a North Star matters
+					- start from [[LangChain]] and [[langgraph]] and don't reinvent the wheel
+						- it lets you move faster from the start; switching to something else later is fine
+					- think in tiers: [Managed Deep Agents](https://docs.langchain.com/langsmith/managed-deep-agents-overview) can be expensive, but it gets you started quickly
+					- most important: discard a solution that doesn't work, quickly
+						- don't spend weekends in notebooks trying to perfect something that won't get better
+					- try the latest LangSmith offerings (LangGraph, LangChain, [[LangSmith/Deep Agents]]) as experiments
+						- if one works and needs to be faster or cheaper, there are ways to get there from that point
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
