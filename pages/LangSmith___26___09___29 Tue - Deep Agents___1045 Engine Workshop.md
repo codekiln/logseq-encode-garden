@@ -41,3 +41,17 @@
 				- this input: email a lead to set up a technical deep dive
 				- the trace shows the high-level input, the final output, and the full trajectory in between
 				- trajectory: tool calls such as a current-rep tool, an OpenAI model call, then another tool
+		- Trajectory view
+			- instead of the whole trace, shows just the path the agent took
+			- trajectory is a new primitive in [[LangSmith]]: the path an agent took to solve a problem
+			- more useful for diagnosing an agent than seeing every step; every step is still there when needed
+			- per the docs
+				- a trajectory is a flat, ordered list of the human, AI and tool messages in a [[LangSmith/Thread]], each appearing once in the order it first appeared, with the nesting of runs removed ([Observability concepts: Trajectories](https://docs.langchain.com/langsmith/observability-concepts#trajectories))
+				- the side panel has three views ([View traces](https://docs.langchain.com/langsmith/view-traces))
+					- Trajectory (`T`): the conversation as inputs, outputs, reasoning, tool calls and subagent activity; for finding where to look
+					- Turns: one card per turn with its inputs and outputs
+					- Details (`D`): one run's inputs, outputs, timing, token counts, errors and metadata; for debugging
+				- each turn renders as one block with the model's response, the tool calls it made and their results, plus token usage, cost and model name
+				- thinking appears as collapsed Thought blocks; subagents appear inline and open into a nested view of their own messages; parallel tool calls collapse into one grouped row
+				- the Trajectory view can download the whole thread as a Markdown file with human and AI turns, tool calls and tool results
+				- needs runs instrumented with `thread_id` metadata
