@@ -119,6 +119,13 @@ date-created:: [[2026-09-29 Tue]]
 					- in a group chat, shared memories are stored in a separate location, and the agent behaves differently
 				- the [[LangSmith/Deep Agents]] `StoreBackend` scopes storage per user, per assistant or per thread ([Backends: Namespace factories](https://docs.langchain.com/oss/python/deepagents/backends))
 			- security and auth are built into [Managed Deep Agents](https://docs.langchain.com/langsmith/managed-deep-agents-overview), to make deployment and auth for users as easy as possible
+		- ## Agent interoperability
+			- matters once several agents run in production: task management and delegation between them
+			- agents exposed over [[MCP]] become interchangeable, and existing systems like [[Claude]] or [[Codex]] can use them
+			- [[LangSmith/Deployment]] gives each deployment an MCP endpoint so agents can work together
+				- [Agent Server: MCP endpoint](https://docs.langchain.com/langsmith/server-mcp) at `/mcp`, over the Streamable HTTP transport
+				- each deployed agent appears as an MCP tool, named and described from `langgraph.json`, with the agent's input schema
+				- custom auth middleware can give a user access to user-scoped tools
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
