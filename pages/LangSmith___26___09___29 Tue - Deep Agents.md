@@ -75,7 +75,7 @@ date-created:: [[2026-09-29 Tue]]
 				- it leaves room for the work that makes an agent different from other agents
 				- Deep Agents takes on the harness engineering that LangChain saw as best practice for agent performance
 				- context management and specifying the skills, tools and prompts are left to the builder
-					- those, and the harness engineering, are what make an agent perform well in its domain
+					- those make an agent perform well in its domain; the harness engineering doesn't
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
