@@ -138,3 +138,4 @@
 					- the change under test can be a code fix like this one, a system prompt, a skills file or a tool description
 					- the loop: baseline the agent, form a hypothesis about what to improve, implement it, test against the baseline to confirm it works and doesn't regress
 					- regressions are hard to fix in every agent; good evals and good experiments are what catch them
+					- go deeper by opening the baseline's trace next to the fix's trace to compare the exact path each version took; a different path may be better or worse, judged against robust datasets, experiments and evals
