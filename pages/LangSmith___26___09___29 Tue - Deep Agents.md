@@ -181,6 +181,12 @@ date-created:: [[2026-09-29 Tue]]
 				- when Asaaf joined, they switched to a planner-executor architecture
 					- LangSmith showed the performance change with every change they made
 					- the proof of concept cut about two thirds of the execution time
+				- next came investigations and long-horizon tasks, so they looked at [[LangSmith/Deep Agents]]
+					- Deep Agents had just come out, and Censys was thinking of building its own
+					- Lance told them LangChain already had one, so they tried it early; it works very well for them
+				- as complexity grew, the assistant became the agentic mesh of smaller domain experts
+				- they still use [[LangSmith]] and [[LangChain]] in every domain expert to measure performance and decide whether it can go beyond proof of concept
+					- cost: about half a dollar per run now; released to a million people, would it bankrupt the budget?
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
