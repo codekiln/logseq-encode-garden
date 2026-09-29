@@ -195,6 +195,14 @@ date-created:: [[2026-09-29 Tue]]
 					- now working on closing the loop quickly once a thread is labeled with an issue
 						- fix it as soon as possible, so it doesn't sit in an epic for two or three weeks
 					- actively looking into [[LangSmith/Engine]] for that
+				- Asaaf, from a machine learning background
+					- one source of truth for pulling traces, then training classifiers or measuring things on them, is very important
+					- the engineering side uses [[LangSmith/Engine]]; the machine learning side measures: is this model working for us, and what happens if we change it?
+						- "the typical Google move": a model is announced as deprecated a week ahead, so you have to switch, and you have to know whether the new model works for you
+					- [[LangSmith]] helps by pulling the traces and running [[LangSmith/Evaluator]]s
+					- top-down evaluation: look for particular metrics, such as cost, verbosity, comprehension and understanding
+					- bottom-up evaluation: sample a batch of conversations, have humans label them, then a process creates LangSmith evaluators that capture that signal automatically
+						- this catches a new signal as behavior changes, and then they strengthen it
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
