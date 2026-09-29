@@ -36,3 +36,8 @@
 			- many customers say the first time they understood what their agent does was seeing a trace
 			- without observability there's no way to see which tools and models the agent calls, in what order, inside a non-deterministic loop
 			- [[LangSmith/Deep Agents]] steps show up in the trace, including its built-in middleware: filesystem middleware and subagent middleware
+			- example trace
+				- the agent emails leads and customers and sets up calls
+				- this input: email a lead to set up a technical deep dive
+				- the trace shows the high-level input, the final output, and the full trajectory in between
+				- trajectory: tool calls such as a current-rep tool, an OpenAI model call, then another tool
