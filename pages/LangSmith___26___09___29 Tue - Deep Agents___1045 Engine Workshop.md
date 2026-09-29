@@ -29,3 +29,10 @@
 			- [[LangSmith/Thread]]: the whole multi-turn conversation, every back and forth in one session
 			- [[LangSmith/Trace]]: one back and forth; one query in, one response out
 			- run: the most atomic unit of observability, such as a tool call, a model call or a workflow step
+		- the demo project: 20 traces, 907 runs
+			- even 20 interactions are a lot of steps to read through
+			- a real production agent has thousands to hundreds of thousands of traces coming in
+		- reading a trace
+			- many customers say the first time they understood what their agent does was seeing a trace
+			- without observability there's no way to see which tools and models the agent calls, in what order, inside a non-deterministic loop
+			- [[LangSmith/Deep Agents]] steps show up in the trace, including its built-in middleware: filesystem middleware and subagent middleware
