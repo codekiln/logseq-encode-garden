@@ -4,6 +4,7 @@ date-created:: [[2026-09-29 Tue]]
 	- [[2026-09-29 Tue]] event on [[LangSmith]] and [[LangSmith/Deep Agents]]
 	- ## Schedule
 		- 10:00
+		- 10:27 [[Censys]] engineering spotlight
 	- ## [[My Notes]]
 		- 10:00 ReAct loop
 			- Agent = model + [[AI/Agent/Harness]]
@@ -138,6 +139,8 @@ date-created:: [[2026-09-29 Tue]]
 				- sandboxes give agents code execution that is reliable and secure
 			- auth proxy: secrets aren't stored in the sandbox; credentials are injected after the request leaves for the external service
 			- snapshots: checkpoint the sandbox at any time, and use container images for pre-built filesystems
+		- ## 10:27 [[Censys]] engineering spotlight
+			- Rob hands off to [[Person/Asaaf Moldavsky]], Senior Staff AI Engineer, and [[Person/Hamza Khan]], AI/ML Engineer
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
