@@ -203,6 +203,8 @@ date-created:: [[2026-09-29 Tue]]
 					- top-down evaluation: look for particular metrics, such as cost, verbosity, comprehension and understanding
 					- bottom-up evaluation: sample a batch of conversations, have humans label them, then a process creates LangSmith evaluators that capture that signal automatically
 						- this catches a new signal as behavior changes, and then they strengthen it
+			- Rob: the signal is captured with annotations and turned into an evaluator ([[LangSmith/Annotation/Queue]])
+				- the non-technical SMEs mentioned earlier: is it usually someone non-technical doing the annotations, or a developer?
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
