@@ -130,4 +130,11 @@
 				- an experiment runs the dataset's inputs through the live agent and compares its actual outputs to the reference outputs
 				- the demo has two experiments
 					- baseline: run before merging the fix; same inputs and reference outputs, plus the agent's actual outputs, and it fails every assertion because it still emails disqualified prospects
-					- a second experiment, run after the fix
+					- a second experiment, run after merging the fix PR
+						- same inputs and reference outputs; now the actual output is correct and the assertions pass, confirming the fix worked
+				- comparing experiments
+					- with a baseline and a fix, hill climb by comparing the two, an A/B test between versions of the agent
+					- check the side effects too: did the fix raise latency or token use?
+					- the change under test can be a code fix like this one, a system prompt, a skills file or a tool description
+					- the loop: baseline the agent, form a hypothesis about what to improve, implement it, test against the baseline to confirm it works and doesn't regress
+					- regressions are hard to fix in every agent; good evals and good experiments are what catch them
