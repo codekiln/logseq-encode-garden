@@ -1,0 +1,85 @@
+date-created:: [[2026-09-29 Tue]]
+
+- # Deep Agents
+	- [[2026-09-29 Tue]] event on [[LangSmith]] and [[LangSmith/Deep Agents]]
+	- ## Schedule
+		- 10:00
+	- ## [[My Notes]]
+		- 10:00 ReAct loop
+			- Agent = model + [[AI/Agent/Harness]]
+				- if it isn't the model, it's part of the harness
+				- the harness is everything around the model that lets it act in the world, run actions and read data
+				- includes [[AI/Agent/Skill]]s, memory, [[System Prompt]]s, and [[Context Engineering]] tactics that keep an agent working over long, complex tasks
+			- the harness's job: get the model the right context at the right time for the task
+				- much easier said than done
+			- agents in production usually fail for one of two reasons
+				- the model isn't good enough for the task
+				- the model didn't have the right piece of information
+			- models have gotten very good, so failures are now mostly the model not seeing the right context
+				- that is the harness's problem, not the model's or the frontier lab's
+			- why you need a harness
+				- work in an environment where the model can take actions
+					- introduces the model to the real world so it can explore, take actions and accomplish goals
+				- manage growing context over long runs
+					- there is a physical limit to how much information the model can take for a task ([[AI/Context/Window]])
+					- longer, more complex runs build up more context over time
+					- the hardest job: send only the good parts of that context forward, step by step
+				- connect your data
+					- models aren't trained on your internal company data (hopefully)
+					- the harness connects that data through connections, tools and skills
+				- parallelize tasks
+					- not everything has to run in a sequential chain
+					- some work should run separately or asynchronously ([[AI/Agent/Subagent]])
+				- connect with the human in the loop ([[AI/Workflow/Human in the Loop]])
+					- a model loose in the real world shouldn't access any information or call any tool unsupervised
+					- a human should always stay in the loop for some important decisions
+				- improve over time
+					- when a user corrects the agent or something fails, the agent shouldn't make that mistake twice
+					- [[LangSmith/Engine]] fixes agents automatically
+					- some of this context engineering and management can also happen in the harness itself
+		- ## What is [[LangSmith/Deep Agents]]
+			- ships with context management tools: [[AI/Agent/Skill]]s, memory, summarization and context offloading
+			- context offloading happens under the hood for long tool results
+				- a web search returns lots of information, and very little of it is useful
+				- in the background, Deep Agents moves that result out of the model's [[AI/Context/Window]] and into the filesystem
+				- per the docs, the threshold is 20,000 tokens; the model keeps the file path and the first 10 lines, and can re-read or grep the file later ([[LangSmith/Deep Agents]] → Virtual filesystem)
+			- delegation solves context bloat
+				- [[AI/Agent/Subagent]]s and planning isolate context into separate pieces of the harness, so less of it flows into the main agent
+				- the main agent kicks off subagents; each one does its research, uses up its own context window, and reports back to the parent with a clean summary
+				- Deep Agents is open source, so the delegation pattern can be customized for the use case
+				- tournament-style delegation, seen in production recently
+					- like March Madness brackets: 32 teams compete two at a time
+					- two subagents work on the same task, a judge picks the winner, and rounds continue until one agent wins
+				- the docs list more patterns under [Dynamic subagents](https://docs.langchain.com/oss/python/deepagents/dynamic-subagents): classify and act, fan-out and synthesize, adversarial verification, generate and filter, tournament, and loop until done
+					- tournament use cases per the docs: optimizing for subjective criteria, choosing a style, choosing between competing implementations
+			- steering: [[AI/Workflow/Human in the Loop]]
+			- read/write filesystem ([[LangSmith/Deep Agents]] → Virtual filesystem)
+				- frontier labs train models to work with a filesystem
+				- LangChain found that agents perform well when given a filesystem
+				- the execution environment gives agents a place to persist memories and notes
+			- summarization graph
+				- context size climbs over the run, then drops sharply at each summarization, like a sawtooth
+				- looks like a heap graph for the Java garbage collector
+				- possibly about incremental compaction
+				- per the docs, summarization triggers at 85% of the model's `max_input_tokens` once nothing is left to offload
+					- an LLM writes a structured summary (session intent, artifacts created, next steps) that replaces the older history
+					- the most recent 10% of tokens stay as they are
+					- the full original conversation is written to the filesystem so the agent can search it later
+					- a `compact_conversation` tool lets the agent compact on demand, for example between tasks
+			- [[LangSmith/Managed Deep Agents]]
+				- hosted runtime in [[LangSmith]] for creating, running and operating deep agents; CLI-first, in private preview as of the docs
+				- provisions threads, runs, a store and a checkpointer
+			- provider agnostic: the model can come from any provider
+		- ## Questions
+			- Can the parent agent search or grep the full transcripts of its subagents?
+				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
+					- the parent receives only the subagent's last non-empty AI message, as one `ToolMessage`; the subagent's message history stays out of the parent's state
+					- the rest of the subagent's state merges back into the parent, so files a subagent writes to the shared filesystem are visible to the parent afterward
+					- to make a transcript greppable, have the subagent write its findings or notes to files; the docs recommend "Subagents can write results to files; the main agent reads what it needs"
+					- the full subagent run is visible in [[LangSmith]] tracing, which can filter by subagent
+			- How does checkpointing work?
+				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [Deep Agents docs](https://docs.langchain.com/oss/python/deepagents/human-in-the-loop)
+					- `create_deep_agent` takes a [[langgraph]] `checkpointer`, such as `InMemorySaver`, which saves the agent's state per thread after each step
+					- human-in-the-loop interrupts require a checkpointer, for the main agent and for subagents, so a paused run can resume with the human's decision
+					- LangSmith deployments and Managed Deep Agents provision the checkpointer
+					- async subagent task IDs live in their own state channel, so the supervisor keeps track of them after summarization compacts its history
