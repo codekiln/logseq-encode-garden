@@ -111,3 +111,14 @@
 					- in the code: [gtm_agent/gtm_agent.py:152](https://github.com/codekiln/gtm-agent-engine-workshop/blob/9f86435/gtm_agent/gtm_agent.py#L152) returns `failed` only when `prospect.get("email")` is empty, and otherwise sends; nothing checks qualification or score
 				- the data shows the prospects aren't qualified, and the agent emails them anyway
 				- the issue lists the five traces it appeared in; opening one shows the email going to an unqualified prospect
+			- proposed fix
+				- each issue shows every trace it appears in, plus a proposed fix as a diff against the repo's `gtm_agent.py`
+				- "View PR": [[LangSmith/Engine]] can open a pull request with the same change; here it blocks emails to disqualified prospects
+			- testing the fix
+				- Engine V2, not shown today, would test the fix automatically: deploy it, run it and test it
+				- today it's more manual; verify fixes by hand
+				- Engine suggests adding example inputs to a [[LangSmith/Dataset]]
+			- datasets, evals and experiments
+				- a dataset is a list of examples to run through the agent
+				- examples here: "send a lead an email asking about their availability", "send an email to schedule a deep dive"
+				- the dataset holds the common requests the agent should handle
