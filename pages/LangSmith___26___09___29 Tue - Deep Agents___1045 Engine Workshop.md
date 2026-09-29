@@ -161,3 +161,15 @@
 				- first-time initialization on a project: typically 30–40 LCUs; each recurring scan: typically 10–15 LCUs, whether or not it finds new issues
 				- Engine uses LangChain-managed inference only; bringing your own provider key isn't supported, which doesn't match the Q&A answer
 				- the analysis level (Reduced, Standard, Expanded) sets how many traces Engine analyzes, and so how many LCUs it uses; spend limits can be set
+		- Engine settings
+			- the agent overview document says what the agent is supposed to do, or at least what it's doing, based on the traces
+				- if the summary is wrong, the agent is probably being used in unexpected ways
+				- it works like a memory file for [[LangSmith/Engine]]; it adjusts over time and can be edited to give Engine a better description
+			- spend limits
+			- analysis level: Standard or Expanded
+			- filters: point Engine at a specific workflow step, such as one model call or tool call, to optimize that step instead of the whole flow
+			- an issue tracker integration, to push issues out (the transcript said "GR"; the docs list Linear — [Engine docs: Connect to Linear](https://docs.langchain.com/langsmith/engine#connect-to-linear))
+		- how the pieces fit, from the workshop repo's README ([codekiln/gtm-agent-engine-workshop](https://github.com/codekiln/gtm-agent-engine-workshop))
+			- the ADLC loop: generate traces → Engine clusters failures into issues → Build the fix as a PR → Test it against a dataset → Deploy → Monitor production for regressions
+			- an issue page has Open PR, Watch, Done, Incorrectly Flagged and Copy as prompt; Evidence lists the traces; "Engine proposed N examples" offers dataset examples with assertions; Proposed Fix describes the code change
+			- the repo's `.github/workflows/eval.yml` runs `eval.py` on `main` and on the PR branch and comments the results on the PR; it skips unless the repo has `LANGSMITH_API_KEY`, `OPENAI_API_KEY` and `DATASET_NAME` secrets
