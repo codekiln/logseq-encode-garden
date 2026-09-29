@@ -80,7 +80,9 @@
 		- hands-on setup
 			- 1. at [smith.langchain.com](https://smith.langchain.com), create a brand-new organization
 				- an existing organization or account won't work; this is the most common error
+				- in LangSmith, open Settings → Organizations to create it; TAs are on hand to help
 			- 2. copy the new organization's ID
+				- then create an API key under Settings → API Keys
 			- 3. go to `workshop.langchain.com`, enter the workshop code, the new organization's ID, and an API key from that organization
 			- 4. the workshop fills the new organization with traces
 			- 5. turn on [[LangSmith/Engine]] for that tracing project; the analysis takes a while
