@@ -55,3 +55,25 @@
 				- thinking appears as collapsed Thought blocks; subagents appear inline and open into a nested view of their own messages; parallel tool calls collapse into one grouped row
 				- the Trajectory view can download the whole thread as a Markdown file with human and AI turns, tool calls and tool results
 				- needs runs instrumented with `thread_id` metadata
+			- `AnthropicPromptCachingMiddleware` wraps `ChatOpenAI` in the trace — weird!
+				- [[LangSmith/Deep Agents]] always registers `AnthropicPromptCachingMiddleware` and `BedrockPromptCachingMiddleware` with `unsupported_model_behavior="ignore"`, so each one does nothing on a model it doesn't support; on `ChatOpenAI` it passes the call straight through, but still shows up as a run ([Customization: default stack](https://docs.langchain.com/oss/python/deepagents/customization), [source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/_prompt_caching.py))
+		- feedback scores
+			- the trace has a rating feedback score, which comes automatically from a trace suggestion
+			- the agent's steps are visible, but whether one is an error is unclear unless you're the go-to-market expert, and that expert probably isn't an agent engineer; that's where [[LangSmith/Engine]] comes in
+		- setting up [[LangSmith/Engine]]
+			- start from a tracing project with traces in it
+			- connect Engine to the agent's code repository, and optionally to Context Hub
+				- Context Hub is a core LangSmith feature for storing agent primitives like skill files and `AGENTS.md`; Engine can fix and improve those as well as source code
+			- "what matters most to you?": say what to prioritize, such as latency for a customer service agent, or cost if cost-sensitive
+			- per [Engine docs](https://docs.langchain.com/langsmith/engine)
+				- preference categories include Cost & Tokens, Latency and Tool Call Failures; "+ Add something specific" describes a custom concern
+				- Engine treats preferences as authoritative and folds them into the agent overview document; changes apply on the next scan
+				- analysis level: Reduced, Standard (default) or Expanded; higher levels analyze more traces and cost more
+				- "Focus on specific traces" narrows analysis by run name or metadata, up to two conditions
+				- before surfacing issues, Engine writes an agent overview document (purpose, architecture, key metrics) to review and edit; it's context for all later analysis
+				- first analysis can take up to 20 minutes
+			- could Engine focus on pedagogical efficacy?
+				- add it as a custom concern with "+ Add something specific", and describe the learning goals in the agent overview document
+				- Engine ranks traces by feedback: for each feedback key, it pulls the low-scoring traces, and it screens traces with any feedback score first ([How Engine selects traces](https://docs.langchain.com/langsmith/engine#how-engine-selects-traces))
+					- so a pedagogy rubric as an online evaluator or an annotation queue score steers Engine toward the weakest teaching conversations
+				- traces alone don't show whether a learner learned; log outcome signals (quiz results, completion, instructor ratings) as feedback on the run through the SDK so Engine can see them
