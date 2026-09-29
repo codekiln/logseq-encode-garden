@@ -108,5 +108,6 @@
 			- issue detail: emails sent to disqualified prospects
 				- found from both the repo and the traces
 				- the high-level description: the `send_prospect_email` tool only checks that a prospect has an email address, so it sends to prospects it shouldn't
+					- in the code: [gtm_agent/gtm_agent.py:152](https://github.com/codekiln/gtm-agent-engine-workshop/blob/9f86435/gtm_agent/gtm_agent.py#L152) returns `failed` only when `prospect.get("email")` is empty, and otherwise sends; nothing checks qualification or score
 				- the data shows the prospects aren't qualified, and the agent emails them anyway
 				- the issue lists the five traces it appeared in; opening one shows the email going to an unqualified prospect
