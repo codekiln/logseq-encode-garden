@@ -9,3 +9,47 @@
 .cp__header a.button[href$="#/graph"] {
   display: none !important;
 }
+
+/* Code blocks in slideshows: readable colors, smaller font, no height cap. */
+.reveal .CodeMirror,
+.reveal pre code {
+  font-size: 0.55em !important;
+  line-height: 1.4 !important;
+  height: auto !important;
+  max-height: none !important;
+  background: #f6f8fa !important;
+  color: #1f2328 !important;
+}
+.reveal .CodeMirror-scroll {
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+.reveal .CodeMirror .cm-variable,
+.reveal .CodeMirror .cm-def,
+.reveal .CodeMirror .cm-property,
+.reveal .CodeMirror .cm-operator,
+.reveal .CodeMirror .cm-punctuation,
+.reveal .CodeMirror .cm-bracket {
+  color: #1f2328 !important;
+}
+.reveal .CodeMirror .cm-comment {
+  color: #59636e !important;
+}
+/* Dark mode: light text on a dark panel. */
+html[data-theme="dark"] .reveal .CodeMirror,
+html[data-theme="dark"] .reveal pre code {
+  background: #161b22 !important;
+  color: #e6edf3 !important;
+}
+html[data-theme="dark"] .reveal .CodeMirror .cm-variable,
+html[data-theme="dark"] .reveal .CodeMirror .cm-def,
+html[data-theme="dark"] .reveal .CodeMirror .cm-property,
+html[data-theme="dark"] .reveal .CodeMirror .cm-operator,
+html[data-theme="dark"] .reveal .CodeMirror .cm-punctuation,
+html[data-theme="dark"] .reveal .CodeMirror .cm-bracket {
+  color: #e6edf3 !important;
+}
+html[data-theme="dark"] .reveal .CodeMirror .cm-comment {
+  color: #9198a1 !important;
+}
