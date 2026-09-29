@@ -197,3 +197,4 @@
 				- a person can edit it, and Engine can edit it too (not shown today)
 				- save a version, then promote it to prod or staging
 			- run evals on the agent with the new skill version, or analyze every trace that pulls in the skill; an eval can target just that skill
+		- close: Michael points to free resources for training and getting enabled on the platform, and thanks the room
