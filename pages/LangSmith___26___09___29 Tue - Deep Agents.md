@@ -132,6 +132,12 @@ date-created:: [[2026-09-29 Tue]]
 			- non-technical subject matter experts can use their expertise to build prompts and skills, so the agent performs as well as they say it should
 			- per the docs, an agent repo holds `AGENTS.md` and config and links to separate skill repos, each versioned and reusable across agents ([Context Hub concepts](https://docs.langchain.com/langsmith/context-engineering-concepts))
 				- [[LangSmith/Deep Agents]] can mount an agent repo as its filesystem with `ContextHubBackend`, with linked skills under `/skills/`
+		- ## Sandboxes ([[LangSmith/Sandbox]])
+			- agents perform better when they can execute code in a sandbox
+			- code execution shouldn't happen on the same server the agent is deployed on
+				- sandboxes give agents code execution that is reliable and secure
+			- auth proxy: secrets aren't stored in the sandbox; credentials are injected after the request leaves for the external service
+			- snapshots: checkpoint the sandbox at any time, and use container images for pre-built filesystems
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
