@@ -244,6 +244,8 @@ date-created:: [[2026-09-29 Tue]]
 						- don't spend weekends in notebooks trying to perfect something that won't get better
 					- try the latest LangSmith offerings (LangGraph, LangChain, [[LangSmith/Deep Agents]]) as experiments
 						- if one works and needs to be faster or cheaper, there are ways to get there from that point
+					- he started with notebooks; walking away from what isn't working is something they keep doing — what a takeaway
+				- Rob: startups like Manus give the same advice: keep things lean and bring in new things only when you need them, so you can move fast while the space evolves this quickly
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
