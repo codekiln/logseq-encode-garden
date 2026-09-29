@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 366
-preset-name:: TMF.24.11.21.B
-preset-category:: Sequence
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 366
+preset-synth-microfreak-name:: TMF.24.11.21.B
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Sequence]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/365 TMF.24.11.21.A]]
 next:: [[Microfreak/Preset/367 TMF.24.11.23.A]]
-- # TMF.24.11.21.B
-	- Saved [[Microfreak]] preset in slot 366.
+- # Notes

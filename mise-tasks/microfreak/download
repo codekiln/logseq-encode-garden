@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#MISE description="Download one full MicroFreak preset as raw bytes"
+#USAGE flag "--slot <number>" help="Preset slot from 1 to 512"
+#USAGE flag "--output-dir <path>" help="Directory for the raw patch and manifest"
+#USAGE flag "--port <name>" help="Exact MIDI port name"
+set -euo pipefail
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+exec uv run --no-project --with python-rtmidi==1.5.8 python "$root/mise-tasks/microfreak/lib/download.py" "$@"

@@ -11,12 +11,13 @@ alias:: [[Proxy Page]], [[Logseq Proxy Page]]
 	- ## Naming and links
 		- A proxy mirrors the source page's **exact** logical name and namespace. Source page `[[My/Page/Here]]` becomes `[[My/Page/Here]]` here — same `___`-encoded filename, no added prefix, no dedicated namespace. This is what lets a whole namespace proxy cleanly: every page keeps its identity across gardens.
 		- The `page=` value maps to a filename the same way every other page does: `/` becomes `___`, per [[Logseq/Pref/Page/Name]] and the `logseq-get-page-file` command. `page=Logseq/Entity/Podcast` → `pages/Logseq___Entity___Podcast.md`.
-		- **Legacy shape:** a few early proxies were filed under `Logseq/Proxy/<graph_name>/<source name>`, for example [[Logseq/Proxy/logseq-garden/Person/Thomas Parr/Book/2022/Active Inference]]. Leave them where they are; do not file new ones that way.
+		- **Legacy shape:** a few early proxies were filed under `Logseq/Proxy/<graph_name>/<source name>`, for example [[Person/Thomas Parr/Book/2022/Active Inference]]. Leave them where they are; do not file new ones that way.
 	- ## Frontmatter
 		- **`logseq-url::`** — required; the full canonical source URL, `logseq://graph/<graph_name>?page=<Page Name>`, for example `logseq-url:: logseq://graph/logseq-garden?page=rulesync`. This property is what makes the page a proxy.
 		- **`logseq-proxy-last-sync-date::`** — required; the day the body was last mirrored, as a plain ISO date link per [[Logseq/Date]]: `logseq-proxy-last-sync-date:: [[2026-09-19]]`.
 		- Both keys are owned by the sync process. Do not rename them, and do not treat any other `*::` line on the page as belonging to the proxy.
 		- `<graph_name>` must already have a row in the registry at `.rulesync/config/logseq-proxy.md`. A URL naming a graph with no row does not resolve — stop and ask for a row rather than guessing a path.
+			- TODO this MUST NOT be in rulesync; move this out of here. It should likely be in the garden
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
 		- No shape of its own. The body is the source page's body, so the source's shape — and the shape of whatever entity the page is primarily — governs.
@@ -38,4 +39,4 @@ alias:: [[Proxy Page]], [[Logseq Proxy Page]]
 		- The mechanics — registry resolution, URL parsing, the create-versus-merge cases, asset copying — live in the `logseq-proxy` skill, which reads this page for everything about what a proxy *is*.
 	- ## Examples in this garden
 		- [[Book/ML with PyTorch and Scikit-Learn]]
-		- [[Logseq/Proxy/logseq-garden/Person/Thomas Parr/Book/2022/Active Inference]] (legacy name shape)
+		- [[Person/Thomas Parr/Book/2022/Active Inference]] (legacy name shape)

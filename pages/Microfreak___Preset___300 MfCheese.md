@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 300
-preset-name:: MfCheese
-preset-category:: Keys
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 300
+preset-synth-microfreak-name:: MfCheese
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Keys]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/299 I Saw It B4]]
 next:: [[Microfreak/Preset/301 Perculiar Bass]]
-- # MfCheese
-	- Saved [[Microfreak]] preset in slot 300.
+- # Notes

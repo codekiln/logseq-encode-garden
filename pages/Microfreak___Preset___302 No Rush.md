@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 302
-preset-name:: No Rush
-preset-category:: Lead
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 302
+preset-synth-microfreak-name:: No Rush
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Lead]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/301 Perculiar Bass]]
 next:: [[Microfreak/Preset/303 2020 Behind]]
-- # No Rush
-	- Saved [[Microfreak]] preset in slot 302.
+- # Notes

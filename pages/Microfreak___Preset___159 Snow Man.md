@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 159
-preset-name:: Snow Man
-preset-category:: Lead
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 159
+preset-synth-microfreak-name:: Snow Man
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Lead]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/158 Grimy Beat]]
 next:: [[Microfreak/Preset/160 Incoming Ship]]
-- # Snow Man
-	- Saved [[Microfreak]] preset in slot 159.
+- # Notes

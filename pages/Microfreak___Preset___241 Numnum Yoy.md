@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 241
-preset-name:: Numnum Yoy
-preset-category:: Bass
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 241
+preset-synth-microfreak-name:: Numnum Yoy
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Bass]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/240 Move U Head]]
 next:: [[Microfreak/Preset/242 93s  Rave]]
-- # Numnum Yoy
-	- Saved [[Microfreak]] preset in slot 241.
+- # Notes

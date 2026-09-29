@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 117
-preset-name:: Minor Pad
-preset-category:: Pad
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 117
+preset-synth-microfreak-name:: Minor Pad
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Pad]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/116 Analog Chaser]]
 next:: [[Microfreak/Preset/118 Fight]]
-- # Minor Pad
-	- Saved [[Microfreak]] preset in slot 117.
+- # Notes

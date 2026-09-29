@@ -1,11 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Preset/Synth/Microfreak]]
-preset-number:: 083
-preset-name:: Leeds Strings
-preset-category:: Strings
-preset-initialized:: false
-preset-on-device:: true
-preset-origin:: unknown
+preset-synth-microfreak-number:: 083
+preset-synth-microfreak-name:: Leeds Strings
+preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Strings]]
+preset-synth-microfreak-initialized:: false
+preset-synth-microfreak-on-device:: true
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/082 Over Me]]
 next:: [[Microfreak/Preset/084 Press So]]
-- # Leeds Strings
-	- Saved [[Microfreak]] preset in slot 083.
+- # Notes
