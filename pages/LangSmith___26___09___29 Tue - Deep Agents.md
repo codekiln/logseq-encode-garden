@@ -76,6 +76,18 @@ date-created:: [[2026-09-29 Tue]]
 				- Deep Agents takes on the harness engineering that LangChain saw as best practice for agent performance
 				- context management and specifying the skills, tools and prompts are left to the builder
 					- those make an agent perform well in its domain; the harness engineering doesn't
+		- ## Production is hard
+			- even a capable harness with everything built in isn't enough
+			- a fully built agent and harness can work well in a demo, then hit many edge cases on a server facing real users
+				- those edge cases block teams from getting agents from laptop to cloud
+			- what a production agent needs
+				- run for long periods and recover from failures
+					- Robert's point about a run failing at step 97: it shouldn't have to redo all 97 steps
+				- [[AI/Workflow/Human in the Loop]] approval for high-security tasks
+				- support bursty traffic
+				- maintain security posture
+				- keep up with standards
+					- when a new protocol endpoint like [[A2A]] or [[MCP]] comes out, the agent should be able to use it right away, without engineering time spent rebuilding it
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
