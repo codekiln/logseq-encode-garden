@@ -164,6 +164,12 @@ date-created:: [[2026-09-29 Tue]]
 						- a user's request goes to the matching domain expert, which answers and hands the result back (the transcript's word for these experts sounded like "senses")
 						- domain experts are easier to test, evaluate and observe
 			- Rob: did it start as a mesh, or as a single agent? how did you end up with the mesh?
+				- Hamza: it started as one assistant
+					- ask it questions and it comes up with an answer; they also generate reports and are working on dashboards
+					- it got so complex that they had to divide it
+				- they use [[LangSmith]] to see inside it
+					- engineers debug whether a failure came from the planner or a bad tool call
+					- non-technical people can experiment with the prompts to see what's going on
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
