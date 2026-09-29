@@ -86,3 +86,7 @@
 			- 3. go to `workshop.langchain.com`, enter the workshop code, the new organization's ID, and an API key from that organization
 			- 4. the workshop fills the new organization with traces
 			- 5. turn on [[LangSmith/Engine]] for that tracing project; the analysis takes a while
+		- hands-on practice slide
+			- set up the LangSmith organization with the setup guide: [langch.in/engine-setup](https://langch.in/engine-setup), a Google Doc
+			- fork the codebase on GitHub: [langchain-samples/gtm-agent-engine-workshop](https://github.com/langchain-samples/gtm-agent-engine-workshop)
+			- point [[LangSmith/Engine]] at the tracing project and let it review and cluster the traces
