@@ -97,3 +97,16 @@
 				- at `workshop.langchain.com`, entered the org ID and the live-demo workshop code
 					- that filled the tracing project with traces, presumably through the LangSmith SDK, and gave the org Enterprise-level access
 				- in the Engine tab, connected [codekiln/gtm-agent-engine-workshop](https://github.com/codekiln/gtm-agent-engine-workshop) as the GitHub repository
+		- issues [[LangSmith/Engine]] found in the demo
+			- four issues
+				- a tool returns PII
+				- emails get sent to disqualified prospects
+				- a tech stack update (the transcript said "in their persist"; possibly the update isn't persisted)
+				- the agent skips the mandated get-current-rep call that should come first
+			- each issue has a severity (low to high), a category such as code defect or PII, and a count of the traces it was found in
+			- Engine runs on a schedule, and can also be kicked off ad hoc
+			- issue detail: emails sent to disqualified prospects
+				- found from both the repo and the traces
+				- the high-level description: the `send_prospect_email` tool only checks that a prospect has an email address, so it sends to prospects it shouldn't
+				- the data shows the prospects aren't qualified, and the agent emails them anyway
+				- the issue lists the five traces it appeared in; opening one shows the email going to an unqualified prospect
