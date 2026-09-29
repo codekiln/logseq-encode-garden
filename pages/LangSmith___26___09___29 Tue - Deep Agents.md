@@ -88,6 +88,22 @@ date-created:: [[2026-09-29 Tue]]
 				- maintain security posture
 				- keep up with standards
 					- when a new protocol endpoint like [[A2A]] or [[MCP]] comes out, the agent should be able to use it right away, without engineering time spent rebuilding it
+			- [LangSmith Deployment](https://docs.langchain.com/langsmith/deployment) is built for scale and proven in production
+				- 30+ endpoints for agents
+				- integrations that are tricky to build yourself, like [[A2A]] and [[MCP]]; once in place, they give interoperability and make agents more useful
+				- purpose-built task queues handle messages from users to the agent securely, reliably and at scale
+					- [Agent Server: Task queue](https://docs.langchain.com/langsmith/agent-server#task-queue)
+						- the API server enqueues each new run; a queue worker picks it up, takes a lease on it, runs the graph and writes checkpoints
+						- at most one run executes per thread at a time
+						- PostgreSQL holds run data and the queue state with exactly-once semantics; Redis carries only signaling, cancellation and streaming pub/sub
+						- each worker runs up to 10 runs at once by default (`N_JOBS_PER_WORKER`)
+					- [Agent Server: Runtime architecture](https://docs.langchain.com/langsmith/agent-server#runtime-architecture) has three modes
+						- single host: the API server runs the queue itself; the self-hosted default, for development and low traffic
+						- split API and queue: queue workers on separate hosts; API servers scale on request volume, workers on pending run count
+						- distributed runtime: orchestration and execution in separate processes, for high concurrency
+					- the queue is what makes runs durable: any run can be retried, replayed or resumed from the point of interruption ([Core capabilities](https://docs.langchain.com/langsmith/core-capabilities))
+				- SDKs for chat, streaming and [[AI/Workflow/Human in the Loop]]
+				- all of this frees teams to focus on what makes their agent different
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
