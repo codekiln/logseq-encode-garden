@@ -205,6 +205,9 @@ date-created:: [[2026-09-29 Tue]]
 						- this catches a new signal as behavior changes, and then they strengthen it
 			- Rob: the signal is captured with annotations and turned into an evaluator ([[LangSmith/Annotation/Queue]])
 				- the non-technical SMEs mentioned earlier: is it usually someone non-technical doing the annotations, or a developer?
+				- they run a double-blind labeling experiment
+					- the aim is an intersection where labelers don't diverge; otherwise labels can be biased
+					- [[LangSmith/Annotation/Queue/Q/How do I run a double-blind labeling experiment with annotation queues?]]
 		- ## Questions
 			- Can the parent agent search or grep the full transcripts of its subagents?
 				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
