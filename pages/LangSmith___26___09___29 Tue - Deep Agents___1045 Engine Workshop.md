@@ -1,6 +1,7 @@
 - # 1045 [[LangSmith/Engine]] Workshop
 	- 10:45 workshop at [[LangSmith/26/09/29 Tue - Deep Agents]]
 	- Presenter: [[Person/Michael Dik]]
+	- Guide: [Engine Workshop Guide](https://docs.google.com/document/d/1G013nTuItdN4Hdb2XTBcpuWEzw_NvPT4W_hIJ5LmWbU/edit?tab=t.0#heading=h.b9e17a8of020)
 	- TAs: [[Person/Robert Xu]], [[Person/Daniel Shea]], [[Person/Avi Kumar]]
 	- ## [[My Notes]]
 		- 10:45 three quick slides, then hands-on
@@ -87,6 +88,6 @@
 			- 4. the workshop fills the new organization with traces
 			- 5. turn on [[LangSmith/Engine]] for that tracing project; the analysis takes a while
 		- hands-on practice slide
-			- set up the LangSmith organization with the setup guide: [langch.in/engine-setup](https://langch.in/engine-setup), a Google Doc
+			- set up the LangSmith organization with the setup guide: [langch.in/engine-setup](https://langch.in/engine-setup), which opens the [Engine Workshop Guide](https://docs.google.com/document/d/1G013nTuItdN4Hdb2XTBcpuWEzw_NvPT4W_hIJ5LmWbU/edit?tab=t.0#heading=h.b9e17a8of020) Google Doc
 			- fork the codebase on GitHub: [langchain-samples/gtm-agent-engine-workshop](https://github.com/langchain-samples/gtm-agent-engine-workshop)
 			- point [[LangSmith/Engine]] at the tracing project and let it review and cluster the traces
