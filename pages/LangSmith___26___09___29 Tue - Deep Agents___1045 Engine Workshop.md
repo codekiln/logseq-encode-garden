@@ -5,3 +5,10 @@
 	- ## [[My Notes]]
 		- 10:45 three quick slides, then hands-on
 			- plan: the ADLC (agent development lifecycle), [[LangSmith/Engine]], and how Engine fits in the ADLC
+		- prototype vs production
+			- building a prototype is very easy: a coding agent and a prompt get something that looks like a start
+			- getting that prototype into production is very hard
+				- agents are unreliable
+				- all input is natural language, and even one input has infinite possible outputs
+				- that non-determinism takes a lot of testing and iterating, which is where [[LangSmith/Engine]] fits in
+			- customers getting agents into production quickly and iterating on them: [[Censys]], Rippling, Clay, Harvey
