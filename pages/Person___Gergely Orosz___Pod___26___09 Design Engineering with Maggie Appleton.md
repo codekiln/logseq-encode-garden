@@ -337,8 +337,7 @@ date-created:: 2026-09-23
 							- {{youtube-timestamp 835}} Takes time to do this kind of hard, reduce it to its best, most elegant form.
 							- {{youtube-timestamp 839}} This is so interesting because what you've described of, we have a new product
 				- {{youtube-timestamp 802}}
-					- [[Person/Maggie Appleton]]
-						- > I think the hard bit of product [[Design]] is ... designing a coherent system that takes all this complexity that could exist, especially in something like [[Dev/Tool]]s, and reducing it to the simplest possible form you can, which is ... very easy to say [and] *extremely* hard to do every time ([Readwise](https://read.readwise.io/read/01m3f9k8gx282xbh2e0y5k3han))
+					- {{embed [[Person/Maggie Appleton/Quote/Design Reduces Complexity to Simplest Form]]}}
 				- {{youtube-timestamp 900}}
 					- [[Person/Gergely Orosz]]
 						- > Yeah. Yeah. Yeah. That's [[Design]]. This is ...

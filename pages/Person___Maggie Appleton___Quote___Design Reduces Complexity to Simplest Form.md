@@ -1,0 +1,3 @@
+logseq-entity:: [[Logseq/Entity/Quote]]
+
+- > I think the hard bit of product [[Design]] is ... designing a coherent system that takes all this complexity that could exist, especially in something like [[Dev/Tool]]s, and reducing it to the simplest possible form you can, which is ... very easy to say [and] *extremely* hard to do every time ([Readwise](https://read.readwise.io/read/01m3f9k8gx282xbh2e0y5k3han))
