@@ -1,0 +1,1 @@
+- As of [[2026-09-27 Sun]] I've been leaning towards using [[My/Pref/Dev/Tool/Secrets/1Password/Environment]]s locally

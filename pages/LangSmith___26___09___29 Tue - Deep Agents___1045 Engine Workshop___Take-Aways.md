@@ -118,7 +118,7 @@
 	  * Deep Agents middleware wraps every model call
 	  * Anthropic caching middleware wraps an OpenAI model — a no-op
 	  * This broken trace is rated 1.00
-	- ![Trace details with middleware stack](../assets/LangSmith/26/09/29_Tue_-_Deep_Agents/1045_Engine_Workshop/Take-Aways/trace-details-middleware-stack.jpg){:height 455, :width 1000}
+	- ![Trace details with middleware stack](../assets/LangSmith/26/09/29_Tue_-_Deep_Agents/1045_Engine_Workshop/Take-Aways/trace-details-middleware-stack.jpg){:height 351, :width 753}
 	- ## Trajectory view
 	  * "Terraform has been successfully added"
 	  * …then scored down for "missing Terraform"

@@ -1,6 +1,7 @@
 date-created:: [[2026-09-29 Tue]]
 
 - # Deep Agents
+  collapsed:: true
 	- [[2026-09-29 Tue]] event on [[LangSmith]] and [[LangSmith/Deep Agents]]
 	- ## Schedule
 		- 10:00
