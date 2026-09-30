@@ -1,0 +1,42 @@
+alias:: [[Satisfice]]
+logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Term/Portmanteau]]
+
+- # Satisfice and Satisficing
+	- **Satisfice** means to accept the first option that meets a minimum standard instead of searching for the best one. It is a portmanteau of *satisfy* and *suffice*, coined by [[Person/Herbert A. Simon]] in 1956.[^1] [^2]
+	- ## Etymology
+		- Source words: *satisfy*, for meeting a need, and *suffice*, for being enough.[^2]
+		- "Satisfice" was already in use in the 1500s as a northern variant of *satisfy*, with the earliest documented use in 1561. Simon gave the old spelling a new meaning.[^2] [^3]
+	- ## History
+		- ### Before the word
+			- Simon's book *Administrative Behavior* (1947) was his first major book, on administrative decision making.[^4]
+			- In "A Behavioral Model of Rational Choice" (1955) he described choosing among alternatives by a two-valued payoff, satisfactory or unsatisfactory, with the boundary at an "aspiration level." His example was a house seller who regards $15,000 as acceptable, anything over it as satisfactory and anything under it as unsatisfactory.[^5]
+		- ### The 1956 coinage
+			- "Rational Choice and the Structure of the Environment" appeared in *Psychological Review* 63(2) in March 1956.[^1] [^6]
+			- Simon argued that "organisms adapt well enough to 'satisfice'; they do not, in general, 'optimize.'"[^6]
+			- He described a choice mechanism that pursues "a 'satisficing' path, a path that will permit satisfaction at some specified level of all of its needs."[^6]
+			- He thanked [[Person/Allen Newell]] for "numerous enlightening conversations on the subject of this paper."[^6]
+		- ### Bounded rationality
+			- Satisficing became the standard example of bounded rationality: decision makers have limited information and limited capacity to compute, so a rule that stops at "good enough" is a rational response, not a failure.[^1] [^7]
+			- Simon's 1978 Nobel Memorial Prize in Economic Sciences was awarded "for his pioneering research into the decision-making process within economic organizations."[^8]
+		- ### Artificial intelligence
+			- Simon came to believe that a theory of decision making needed a theory of human problem solving, studied through computer programs. In 1955 he, [[Person/Allen Newell]] and J. Clifford Shaw created Logic Theorist, which used heuristic rules to prove theorems, and Simon and Newell shared the 1975 Turing Award.[^9] [^10]
+		- ### Maximizers and satisficers
+			- In 2002 [[Person/Barry Schwartz]] and co-authors published "Maximizing versus satisficing: happiness is a matter of choice" in the *Journal of Personality and Social Psychology*.[^11]
+			- The paper reported a Maximization Scale that measures the desire to maximize. Maximizing correlated negatively with happiness, optimism, self-esteem and life satisfaction, and positively with depression, perfectionism and regret.[^11]
+			- Schwartz carried the distinction into *The Paradox of Choice: Why More Is Less* (2004), where too many options make choosing harder and outcomes feel worse.[^12]
+		- ### Fast and frugal heuristics
+			- [[Person/Gerd Gigerenzer]], Peter M. Todd and the ABC Research Group presented simple decision rules as a psychologically realistic account of bounded rationality in *Simple Heuristics That Make Us Smart* (1999).[^13]
+	- ## Footnotes
+		- [^1]: https://pubmed.ncbi.nlm.nih.gov/13310708/
+		- [^2]: https://wordsmith.org/words/satisfice.html
+		- [^3]: https://www.oed.com/dictionary/satisficing_n
+		- [^4]: https://www.informs.org/Explore/History-of-O.R.-Excellence/Biographical-Profiles/Simon-Herbert-A
+		- [^5]: https://cooperative-individualism.org/simon-herbert_a-behavioral-model-of-rational-choice-1955-feb.pdf
+		- [^6]: https://pages.ucsd.edu/~mckenzie/Simon1956PsychReview.pdf
+		- [^7]: https://philpapers.org/rec/SIMRCA
+		- [^8]: https://www.nobelprize.org/prizes/economic-sciences/1978/simon/facts/
+		- [^9]: https://www.informs.org/Explore/History-of-O.R.-Excellence/Biographical-Profiles/Simon-Herbert-A
+		- [^10]: https://history.computer.org/pioneers/newell.html
+		- [^11]: https://works.swarthmore.edu/fac-psychology/101/
+		- [^12]: https://www.behavioraleconomics.com/resources/books/the-paradox-of-choice-why-more-is-less-barry-schwartz/
+		- [^13]: https://books.google.com/books/about/Simple_Heuristics_that_Make_Us_Smart.html?id=9RNF8TUmRywC
