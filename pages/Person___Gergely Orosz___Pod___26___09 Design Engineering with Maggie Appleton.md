@@ -45,27 +45,128 @@ date-created:: 2026-09-23
 					- Snipd: https://share.snipd.com/snip/c1efab21-7a78-43f0-87ce-acf29773692f
 					- Maggie Appleton moved from cultural anthropology and illustration into front-end engineering through freelance web work and Egghead.
 					- Illustrating React concepts forced her to understand JavaScript, components, and effects, gradually becoming her practical engineering education.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 219}} Yeah. I came in because it was where the money was, I guess. Not really.
+							- {{youtube-timestamp 223}} But in the sense that in university, I studied cultural anthropology, which is my one true love. I adore cultural anthropology. I totally fell in love with it in university.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 232}} What is anthropology? It's okay.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 234}} It's the study of human beings, which sounds impossibly broad. And how could that be a discipline? But it does it in a particular way where you go and you live with people intensely in this thing called participant observation.
+							- {{youtube-timestamp 244}} Usually it was done, kind of when the field was born, of different cultures. Of course, it was anthropologists from the West primarily going to places like Papua New Guinea or Australia and living among kind of traditional peoples and then realizing how different their cultures were, not just like, oh, they eat different food, they have different houses, but they have completely different understandings of what color is. They don't have completely different understandings of time.
+							- {{youtube-timestamp 267}} It was kind of alongside the birth of psychology, like understanding how flexible is the human mind about constructing understandings of the world.
+							- {{youtube-timestamp 274}} And anthropology is really one of these eye-opening subjects when you get into it, because you can kind of get into medical anthropology or the anthropology of sex and gender. And you just find out how extremely adaptable and fluid human beings are.
+							- {{youtube-timestamp 285}} And I loved it because I grew up as an expat kid overseas. So I think I was exposed early to lots of different cultures. And so it felt very natural to me to realize, oh, the way people do things at home, quote unquote home would be London for me, but I left at age six, is completely different to the way they do it elsewhere.
+							- {{youtube-timestamp 301}} And there's no fixed way for humans to kind of construct a society or live life. And the bounds of what we think is possible is much wider than we originally assume, which is what I loved about it. So I studied it, but of course, senior year, kind of go, right, what jobs are there available in cultural anthropology?
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 317}} I guess living with natives isn't all that many.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 320}} It's not very lucrative. So the options were like, go get a PhD and become a professor. Or the military hires lots of anthropologists to come up with torture techniques for people in different countries. So when presented with these options by our professors, we were like, okay, okay, we'll go think about that.
+							- {{youtube-timestamp 337}} And I had always loved design growing up. So I was a kid of the 90s. I grew up on Neopets with HTML and CSS and MySpace. And I learned HTML and CSS probably around 12 or 13 and knew how to do it.
+							- {{youtube-timestamp 349}} But in the way we're like, there wasn't that much complexity to it in whatever this was, 1999.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 354}} Did you have a MySpace? I did.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 354}} Oh, yeah.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 357}} And you customized it with all the
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 358}} Yeah, oh, crazy animations and the little sparkle trail at the end of your cursor. I think mine was quite goth at the time. But I learned a lot.
+							- {{youtube-timestamp 366}} But of course, at the time, the web was so new. It wasn't like people thought this was a career or you didn't really think of it that way.
+							- {{youtube-timestamp 372}} But I came out of university with this degree that wasn't necessarily employable. And I just started doing freelance web design work because that was how I knew how to make money.
+							- {{youtube-timestamp 380}} Throughout school, I was doing IT tech work for the university and just naturally went into this because it was like, well, I need to pay rent somehow. And I gravitated towards illustration originally because I love drawing. So I was originally an illustrator for the first couple of years.
+							- {{youtube-timestamp 393}} And the way that I went more into the tech side, because you can kind of be an illustrator that's like, editorial or you could go into branding or all kinds of types. But I started working for a startup. I guess I wouldn't call it a startup. It was more like a design dev shop in Prague that was making UI UX apps for SF startups at the time.
+							- {{youtube-timestamp 412}} They were doing work for Tinder and Uber, in the early days, in their beginnings. So it was there I got exposed to UI UX design. And I was making the illustrations for these apps and doing logos and branding.
+							- {{youtube-timestamp 422}} But that was my first exposure to, oh, there are people who design buttons and sidebars. And that's kind of interesting. I didn't end up going into that for a while, but that was my first introduction to what is product design in tech as a field.
+							- {{youtube-timestamp 436}} And eventually I joined this company called Egghead, which does developer education. So they taught JavaScript. Sure, you've seen them around.
+							- {{youtube-timestamp 442}} And I was their illustrator for four years. And then I became an art director and art directed other people's illustrations for them. And that was really where I learned JavaScript, React. I think my real front end engineering education was doing illustrations for them.
+							- {{youtube-timestamp 456}} But in doing the illustrations, I had to understand the material I was illustrating, which turned out to be React components and useEffect and JavaScript functions.
 				- #### {{youtube-timestamp 234}} Anthropology Reveals How Flexible Human Understanding Is
 					- Snipd: https://share.snipd.com/snip/1dca2694-0e08-48ba-b51d-8c01e68edfcf
 					- Anthropology studies how people construct radically different understandings of the world through immersive participant observation.
 					- Maggie highlights cultures with different concepts of color and time, showing how adaptable human cognition can be.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 214}} How did you get into tech? And you came from a very different background, right?
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 219}} Yeah. I came in because it was where the money was, I guess. Not really.
+							- {{youtube-timestamp 223}} But in the sense that in university, I studied cultural anthropology, which is my one true love. I adore cultural anthropology. I totally fell in love with it in university.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 232}} What is anthropology? It's okay.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 234}} It's the study of human beings, which sounds impossibly broad. And how could that be a discipline? But it does it in a particular way where you go and you live with people intensely in this thing called participant observation.
+							- {{youtube-timestamp 244}} Usually it was done, kind of when the field was born, of different cultures. Of course, it was anthropologists from the West primarily going to places like Papua New Guinea or Australia and living among kind of traditional peoples and then realizing how different their cultures were, not just like, oh, they eat different food, they have different houses, but they have completely different understandings of what color is. They don't have completely different understandings of time.
+							- {{youtube-timestamp 267}} It was kind of alongside the birth of psychology, like understanding how flexible is the human mind about constructing understandings of the world.
 				- #### {{youtube-timestamp 274}} Anthropology Reveals Human Adaptability
 					- Snipd: https://share.snipd.com/snip/1ac28e40-15c3-4341-a3c7-c1062ba97690
 					- [[Anth/ro/polog/y]] shows that humans construct radically different understandings of society, time, color, and gender across cultures.
 					- Maggie’s expat childhood made this flexibility intuitive: there is no fixed way to live or organize society.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 274}} And anthropology is really one of these eye-opening subjects when you get into it, because you can kind of get into medical anthropology or the anthropology of sex and gender. And you just find out how extremely adaptable and fluid human beings are.
+							- {{youtube-timestamp 285}} And I loved it because I grew up as an expat kid overseas. So I think I was exposed early to lots of different cultures. And so it felt very natural to me to realize, oh, the way people do things at home, quote unquote home would be London for me, but I left at age six, is completely different to the way they do it elsewhere.
+							- {{youtube-timestamp 301}} And there's no fixed way for humans to kind of construct a society or live life. And the bounds of what we think is possible is much wider than we originally assume, which is what I loved about it. So I studied it, but of course, senior year, kind of go, right, what jobs are there available in cultural anthropology?
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 317}} I guess living with natives isn't all that many.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 320}} It's not very lucrative. So the options were like, go get a PhD and become a professor. Or the military hires lots of anthropologists to come up with torture techniques for people in different countries. So when presented with these options by our professors, we were like, okay, okay, we'll go think about that.
+							- {{youtube-timestamp 337}} And I had always loved design growing up. So I was
 				- #### {{youtube-timestamp 436}} Egghead Turned Illustration Into Engineering Education
 					- Snipd: https://share.snipd.com/snip/3b9565ac-67bd-427b-8c48-8cf6bf3b1c4b
 					- Maggie joined Egghead as an illustrator and eventually became an art director for developer education content.
 					- Understanding the [[React]] components behind her illustrations became her real front-end engineering education.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 372}} But I came out of university with this degree that wasn't necessarily employable. And I just started doing freelance web design work because that was how I knew how to make money.
+							- {{youtube-timestamp 380}} Throughout school, I was doing IT tech work for the university and just naturally went into this because it was like, well, I need to pay rent somehow. And I gravitated towards illustration originally because I love drawing. So I was originally an illustrator for the first couple of years.
+							- {{youtube-timestamp 393}} And the way that I went more into the tech side, because you can kind of be an illustrator that's like, editorial or you could go into branding or all kinds of types. But I started working for a startup. I guess I wouldn't call it a startup. It was more like a design dev shop in Prague that was making UI UX apps for SF startups at the time.
+							- {{youtube-timestamp 412}} They were doing work for Tinder and Uber, in the early days, in their beginnings. So it was there I got exposed to UI UX design. And I was making the illustrations for these apps and doing logos and branding.
+							- {{youtube-timestamp 422}} But that was my first exposure to, oh, there are people who design buttons and sidebars. And that's kind of interesting. I didn't end up going into that for a while, but that was my first introduction to what is product design in tech as a field.
+							- {{youtube-timestamp 436}} And eventually I joined this company called Egghead, which does developer education. So they taught JavaScript. Sure, you've seen them around.
 				- #### {{youtube-timestamp 515}} Language Models Transform Scientific Literature Reviews
 				  id:: 6abcdf35-2ea3-4ab2-b81f-1fefe96fa54e
 					- Snipd: https://share.snipd.com/snip/40e40b7f-efd1-4fc3-84a1-ec6db33d057d
 					- Elicit uses language models to accelerate the scientific literature review process.
 					- Models replace academics’ manual work of reading thousands of papers and extracting data into spreadsheets.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 436}} And eventually I joined this company called Egghead, which does developer education. So they taught JavaScript. Sure, you've seen them around.
+							- {{youtube-timestamp 442}} And I was their illustrator for four years. And then I became an art director and art directed other people's illustrations for them. And that was really where I learned JavaScript, React. I think my real front end engineering education was doing illustrations for them.
+							- {{youtube-timestamp 456}} But in doing the illustrations, I had to understand the material I was illustrating, which turned out to be React components and useEffect and JavaScript functions.
+							- {{youtube-timestamp 466}} And in a weird way, I just ended up moving more into front-end engineering and visual design because it just felt like a natural move.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 473}} You worked at Elicit as well, right? Yeah. Was that before Egghead?
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 473}} After.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 477}} That was after. Yeah. So you were at Egghead as their learned design there. And then Elicit was an AI startup, right?
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 485}} Yeah. Early. Pretty early. Well, okay.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 487}} Pretty early, yeah.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 489}} The founders there were really kind of incredible people. And one of them had been studying language models for 10 years. He had seen the writing on the wall way before anyone else. But kind of out of MIT, PhD, machine learning stuff. And kind of had this realization of language models are going to revolutionize science. He was really big on how could this speed up the scientific process.
+							- {{youtube-timestamp 510}} So Elicit originally was, and it still is actually, they've expanded, but at its core, it is using language models to speed up the scientific literature review process.
 				- #### {{youtube-timestamp 566}} Shipping Weekly Made Product Design Click
 					- Snipd: https://share.snipd.com/snip/9e5c26ad-0414-4f59-8032-084cddb168a8
 					- At Elicit, Maggie learned product design end to end by shipping a feature every week and measuring real user behavior.
 					- The loop was simple and relentless: design, build, ship, measure, repeated for over a year.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 528}} So I joined them, I think it was late 2021, early 2022.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 532}} And you were the only designer, there's no product manager, you were the founding designer. Yeah.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 537}} Yeah. And there were six of us in the beginning when I joined, maybe seven, I might've been the seventh. I forget. A very small team. And it stayed small most of the time I was there.
+							- {{youtube-timestamp 545}} And yeah, I was the only designer the whole time. And then we had a PM at some point who left and then we didn't get another one. So it's no PM for quite a while.
+							- {{youtube-timestamp 552}} And it was a really wonderful experience because it was a classic early startup. But it was like we were family. We would stay together for weeks at a time during retreats. The founders had really strong conviction and they're really smart people and I trusted them so much. So it was sort of get on board with the vision kind of deal.
+							- {{youtube-timestamp 566}} And it was there I really learned product design end to end, I'd say, in the terms of we had lots of users because we had a free prototype that was very, very popular. So you had all this data you could collect about what people were searching for and clicking on and what worked and what didn't and A/B tests. And we just went really fast. We shipped a feature every week for a year. So it was like design, build, ship it, measure
 				- Transcript
 				  collapsed:: true
 					- [[Person/Gergely Orosz]]
@@ -125,30 +226,116 @@ date-created:: 2026-09-23
 					- Snipd: https://share.snipd.com/snip/f841f164-823b-4b44-b4ec-ebd97e72128c
 					- Maggie Appleton sees design as engineering’s problem-solving process, from defining and scoping problems to researching solutions.
 					- Designers prototype and validate options with users while weighing trade-offs; the materials differ, not the underlying process.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 612}} So you got into design, I guess, kind of more self-taught, figuring out there's a need for this. You worked at Egghead where you learned to design or explain developer concept, educational concept for developers. You worked at an AI startup as a designer.
+							- {{youtube-timestamp 626}} What does a designer do? It's kind of a simple answer. Now that you've actually done several roles, and I get a sense that, of course, there's going to be, it depends, but at startups that you've worked with, how would you describe?
+							- {{youtube-timestamp 643}} And, of course, many of us developers have worked with designers. Some have not at all.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 648}} I kind of describe it. It's not that different to engineering. It's problem solving. But the materials are different is the way I would describe it.
+							- {{youtube-timestamp 655}} It's like you go through the same process of defining what your problem is. Are you sure this is the correct problem? Have you defined it well and scoped it well?
+							- {{youtube-timestamp 664}} Researching possible solutions, doing wide exploration, what are all the ways we could solve this? What are the trade-offs of them?
 				- #### {{youtube-timestamp 648}} Design Is Problem Solving With Different Materials
 					- Snipd: https://share.snipd.com/snip/f6b9cee0-78cb-4650-8c3f-c52ba9fc2d13
 					- Maggie Appleton describes design as engineering’s problem-solving process applied to space, color, motion, prominence, and language.
 					- Product designers also shape a product’s nouns and verbs, from sneakers and carts to AWS concepts.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 618}} You worked at Egghead where you learned to design or explain developer concept, educational concept for developers. You worked at an AI startup as a designer.
+							- {{youtube-timestamp 626}} What does a designer do? It's kind of a simple answer. Now that you've actually done several roles, and I get a sense that, of course, there's going to be, it depends, but at startups that you've worked with, how would you describe?
+							- {{youtube-timestamp 643}} And, of course, many of us developers have worked with designers. Some have not at all.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 648}} I kind of describe it. It's not that different to engineering. It's problem solving. But the materials are different is the way I would describe it.
+							- {{youtube-timestamp 655}} It's like you go through the same process of defining what your problem is. Are you sure this is the correct problem? Have you defined it well and scoped it well?
+							- {{youtube-timestamp 664}} Researching possible solutions, doing wide exploration, what are all the ways we could solve this? What are the trade-offs of them?
+							- {{youtube-timestamp 669}} Prototyping solutions, validating those are the right solutions. Do they work for users? Do they make sense? I don't think it's that different to engineering in the sense that I do some of both in my job, but it's just the material is different.
+							- {{youtube-timestamp 681}} Instead of working with code, although nowadays with developers, you're working in higher level kind of architecture, data flow, you're not necessarily writing the syntax, but at the time, what syntax are you going to use to write this problem?
+							- {{youtube-timestamp 692}} And with design, the materials are like space, size, weight, color, things you'd see in an interface in terms of the visuals, motion, prominence. Is this big enough? Are these the right words for the user to understand what this button's going to do? Like everything from copywriting to visual graphic design.
+							- {{youtube-timestamp 708}} But with product design, you're also dealing with what we would call nouns and verbs of a product. So it's easy when your product is like a sneaker store.
 				- #### {{youtube-timestamp 648}} Design Is Software Engineering With Different Materials
 					- Snipd: https://share.snipd.com/snip/f9aac378-07c1-46c6-a4ed-aa6bfc039ba6
 					- Product design resembles engineering because both define problems, explore solutions, prototype, validate, and manage trade-offs.
 					- Designers manipulate space, language, motion, and prominence while also defining a product’s nouns and verbs.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 648}} I kind of describe it. It's not that different to engineering. It's problem solving. But the materials are different is the way I would describe it.
+							- {{youtube-timestamp 655}} It's like you go through the same process of defining what your problem is. Are you sure this is the correct problem? Have you defined it well and scoped it well?
+							- {{youtube-timestamp 664}} Researching possible solutions, doing wide exploration, what are all the ways we could solve this? What are the trade-offs of them?
+							- {{youtube-timestamp 669}} Prototyping solutions, validating those are the right solutions. Do they work for users? Do they make sense? I don't think it's that different to engineering in the sense that I do some of both in my job, but it's just the material is different.
+							- {{youtube-timestamp 681}} Instead of working with code, although nowadays with developers, you're working in higher level kind of architecture, data flow, you're not necessarily writing the syntax, but at the time, what syntax are you going to use to write this problem?
+							- {{youtube-timestamp 692}} And with design, the materials are like space, size, weight, color, things you'd see in an interface in terms of the visuals, motion, prominence. Is this big enough? Are these the right words for the user to understand what this button's going to do? Like everything from copywriting to visual graphic design.
+							- {{youtube-timestamp 708}} But with product design, you're also dealing with what we would call nouns and verbs of a product. So it's easy when your product is like a sneaker store.
+							- {{youtube-timestamp 715}} It's like the nouns are like sneaker, cart, money. If you're designing AWS, the nouns get extremely difficult.
+							- {{youtube-timestamp 722}} And I've primarily worked in what I'd call power user tools, like scientists, developers, where the nouns are extremely hard because they get very abstract. It's sort of like what's the right container for a set of data? What's the right container or noun to point you to, oh, this is your whatever set of data, or this set of data connects to that set of data, or here's a function that transforms data into another set.
+							- {{youtube-timestamp 745}} You need a noun and verbs to give to users so they can understand how to manipulate whatever you're trying to get them to do. It's really difficult in dev tools sometimes because there's so much malleability in a way there isn't with stuff.
+							- {{youtube-timestamp 757}} What is malleability? Like ability, like it could take many different forms and shapes versus if you're designing things for the real world. I have friends who work for government design. There's restrictions there where it's like you're trying to get someone to fill out a form. It can be a hard design challenge but it's not complex in the same way.
+							- {{youtube-timestamp 775}} Versus at the moment, right, I'm of course trying to design agentic tools.
+							- {{youtube-timestamp 778}} And it's like what are the nouns of agents? We don't know. There's chat sessions, we have these things called plans, there's something called an MCP, their skills.
+							- {{youtube-timestamp 786}} Could we make new primitives that connect a bunch of sessions all the way to a PR that becomes a new noun that contains it? There's all kinds of boundaries you could draw that would make the user think about your experience differently.
+							- {{youtube-timestamp 797}} And then you have to define what verbs can they take on which nouns, right? Can you short edit, rename, delete? This is classic CRUD stuff you have to figure out. But I don't know. Can you fork an agent session? What are the implications of that?
+							- {{youtube-timestamp 810}} I think the hard bit of product design is designing a coherent system that takes all this complexity that could exist, especially in something like DevTools, and reducing it to the simplest possible form you can, which is very easy to say, extremely hard to do every time, to a really canonical set of nouns that the user can go, okay, I can point at that. I understand what that's going to do.
+							- {{youtube-timestamp 832}} When I click a button
 				- #### {{youtube-timestamp 673}} Designing Nouns For Abstract Developer Tools
 					- Snipd: https://share.snipd.com/snip/07b53cb3-cd12-433e-b997-6459ebec07db
 					- Product design combines engineering’s problem-solving process with different materials such as space, color, motion, and language.
 					- In developer tools, designers must invent understandable nouns and verbs for abstract, highly malleable data relationships.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 664}} Researching possible solutions, doing wide exploration, what are all the ways we could solve this? What are the trade-offs of them?
+							- {{youtube-timestamp 669}} Prototyping solutions, validating those are the right solutions. Do they work for users? Do they make sense? I don't think it's that different to engineering in the sense that I do some of both in my job, but it's just the material is different.
+							- {{youtube-timestamp 681}} Instead of working with code, although nowadays with developers, you're working in higher level kind of architecture, data flow, you're not necessarily writing the syntax, but at the time, what syntax are you going to use to write this problem?
+							- {{youtube-timestamp 692}} And with design, the materials are like space, size, weight, color, things you'd see in an interface in terms of the visuals, motion, prominence. Is this big enough? Are these the right words for the user to understand what this button's going to do? Like everything from copywriting to visual graphic design.
+							- {{youtube-timestamp 708}} But with product design, you're also dealing with what we would call nouns and verbs of a product. So it's easy when your product is like a sneaker store.
+							- {{youtube-timestamp 715}} It's like the nouns are like sneaker, cart, money. If you're designing AWS, the nouns get extremely difficult.
+							- {{youtube-timestamp 722}} And I've primarily worked in what I'd call power user tools, like scientists, developers, where the nouns are extremely hard because they get very abstract. It's sort of like what's the right container for a set of data? What's the right container or noun to point you to, oh, this is your whatever set of data, or this set of data connects to that set of data, or here's a function that transforms data into another set you
 				- #### {{youtube-timestamp 708}} Designing Nouns For Abstract Developer Tools
 					- Snipd: https://share.snipd.com/snip/6e39892f-9104-4d3d-82a7-fa7f589ea6d1
 					- Product design defines the nouns and verbs users manipulate, not just an interface’s visual details.
 					- In developer tools, abstract data containers and transformations make those boundaries especially difficult to name.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 692}} And with design, the materials are like space, size, weight, color, things you'd see in an interface in terms of the visuals, motion, prominence. Is this big enough? Are these the right words for the user to understand what this button's going to do? Like everything from copywriting to visual graphic design.
+							- {{youtube-timestamp 708}} But with product design, you're also dealing with what we would call nouns and verbs of a product. So it's easy when your product is like a sneaker store.
+							- {{youtube-timestamp 715}} It's like the nouns are like sneaker, cart, money. If you're designing AWS, the nouns get extremely difficult.
+							- {{youtube-timestamp 722}} And I've primarily worked in what I'd call power user tools, like scientists, developers, where the nouns are extremely hard because they get very abstract. It's sort of like what's the right container for a set of data? What's the right container or noun to point you to, oh, this is your whatever set of data, or this set of data connects to that set of data, or here's a function that transforms data into another set.
+							- {{youtube-timestamp 745}} You need a noun and verbs to give to users so they can understand how to manipulate whatever you're trying to get them to do. It's really difficult in dev tools sometimes because there's so much malleability in a way there isn't with stuff.
+							- {{youtube-timestamp 757}} What is malleability? Like ability, like it could take many different forms and shapes versus if you're designing things for the real world. I have friends who work for government design. There's restrictions there where it's like you're trying to get someone to fill out a form. It can be a hard design challenge but it's not complex in the same way.
+							- {{youtube-timestamp 775}} Versus at the moment, right, I'm of course trying to design agentic tools
 				- #### {{youtube-timestamp 779}} Designing Agent Tools Means Choosing Their Nouns
 					- Snipd: https://share.snipd.com/snip/f89237b4-7576-456c-bf90-516c859d1e5e
 					- Product design reduces complex systems into canonical nouns and clear verbs users can understand and manipulate.
 					- Agentic tools expose the challenge: sessions, plans, MCPs, and skills could be grouped into entirely new primitives.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 745}} need a noun and verbs to give to users so they can understand how to manipulate whatever you're trying to get them to do. It's really difficult in dev tools sometimes because there's so much malleability in a way there isn't with stuff.
+							- {{youtube-timestamp 757}} What is malleability? Like ability, like it could take many different forms and shapes versus if you're designing things for the real world. I have friends who work for government design. There's restrictions there where it's like you're trying to get someone to fill out a form. It can be a hard design challenge but it's not complex in the same way.
+							- {{youtube-timestamp 775}} Versus at the moment, right, I'm of course trying to design agentic tools.
+							- {{youtube-timestamp 778}} And it's like what are the nouns of agents? We don't know. There's chat sessions, we have these things called plans, there's something called an MCP, their skills.
+							- {{youtube-timestamp 786}} Could we make new primitives that connect a bunch of sessions all the way to a PR that becomes a new noun that contains it? There's all kinds of boundaries you could draw that would make the user think about your experience differently.
+							- {{youtube-timestamp 797}} And then you have to define what verbs can they take on which nouns, right? Can you short edit, rename, delete? This is classic CRUD stuff you have to figure out. But I don't know. Can you fork an agent session? What are the implications of that?
+							- {{youtube-timestamp 810}} I think the hard bit of product design is designing a coherent system that takes all this complexity that could exist, especially in something like DevTools, and reducing it to the simplest possible form you can, which is very easy to say, extremely hard to do every time, to a really canonical set of nouns that the user can go, okay, I can point at that. I understand what that's going to do.
 				- #### {{youtube-timestamp 779}} Designing Canonical Nouns For Complex DevTools
 					- Snipd: https://share.snipd.com/snip/b09a8f02-5d82-4a3e-b825-051550926c5e
 					- Product design reduces enormous [[Dev/Tool]] complexity into a coherent system of canonical nouns and verbs users can understand.
 					- Agent sessions, plans, MCPs, and skills reveal how different boundaries can reshape the user’s mental model.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 758}} is malleability? Like ability, like it could take many different forms and shapes versus if you're designing things for the real world. I have friends who work for government design. There's restrictions there where it's like you're trying to get someone to fill out a form. It can be a hard design challenge but it's not complex in the same way.
+							- {{youtube-timestamp 775}} Versus at the moment, right, I'm of course trying to design agentic tools.
+							- {{youtube-timestamp 778}} And it's like what are the nouns of agents? We don't know. There's chat sessions, we have these things called plans, there's something called an MCP, their skills.
+							- {{youtube-timestamp 786}} Could we make new primitives that connect a bunch of sessions all the way to a PR that becomes a new noun that contains it? There's all kinds of boundaries you could draw that would make the user think about your experience differently.
+							- {{youtube-timestamp 797}} And then you have to define what verbs can they take on which nouns, right? Can you short edit, rename, delete? This is classic CRUD stuff you have to figure out. But I don't know. Can you fork an agent session? What are the implications of that?
+							- {{youtube-timestamp 810}} I think the hard bit of product design is designing a coherent system that takes all this complexity that could exist, especially in something like DevTools, and reducing it to the simplest possible form you can, which is very easy to say, extremely hard to do every time, to a really canonical set of nouns that the user can go, okay, I can point at that. I understand what that's going to do.
+							- {{youtube-timestamp 832}} When I click a button, I don't get surprised at the outcome.
+							- {{youtube-timestamp 835}} Takes time to do this kind of hard, reduce it to its best, most elegant form.
+							- {{youtube-timestamp 839}} This is so interesting because what you've described of, we have a new product
 				- {{youtube-timestamp 802}}
 					- [[Person/Maggie Appleton]]
 						- > I think the hard bit of product [[Design]] is ... designing a coherent system that takes all this complexity that could exist, especially in something like [[Dev/Tool]]s, and reducing it to the simplest possible form you can, which is ... very easy to say [and] *extremely* hard to do every time ([Readwise](https://read.readwise.io/read/01m3f9k8gx282xbh2e0y5k3han))
@@ -163,10 +350,31 @@ date-created:: 2026-09-23
 					- Snipd: https://share.snipd.com/snip/80470f7a-9e05-46bb-a921-533b8fd37237
 					- Product design in tech is fundamentally software design, requiring the same systems-thinking skill as engineering.
 					- Designers reduce complex tools to canonical nouns and predictable actions users can understand.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 810}} I think the hard bit of product design is designing a coherent system that takes all this complexity that could exist, especially in something like DevTools, and reducing it to the simplest possible form you can, which is very easy to say, extremely hard to do every time, to a really canonical set of nouns that the user can go, okay, I can point at that. I understand what that's going to do.
+							- {{youtube-timestamp 832}} When I click a button, I don't get surprised at the outcome.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 835}} Takes time to do this kind of hard, reduce it to its best, most elegant form.
+							- {{youtube-timestamp 839}} This is so interesting because what you've described of, we have a new product that has not existed before, like a dev tool in a digital space, which lives in our head or inside of a computer, with things that we just invented, may that be an MCP or an agentic skill, and then thinking of how we find the right word so people can use it and it makes sense. And I just see that you're kind of drawing up a map in your head, which is not all that different to when you're building a new system as a software engineer.
+							- {{youtube-timestamp 868}} I remember talking with Kent Beck, who talked about how, with Ward Cunningham, they came up with some of the basics of that. Might have been domain-driven design or it might have been some related concepts. But they had a thesaurus in front of them trying to search for the right words on how to.
+							- {{youtube-timestamp 890}} Oh, it was the design patterns. Design patterns later came out of it. They were trying to put a name on these constructs and these things and how, which feels like a very
 				- #### {{youtube-timestamp 910}} Product Design Is Software Design
 					- Snipd: https://share.snipd.com/snip/d04f9157-15a0-4d96-a4db-dc2a2465ce34
 					- Product design in technology is software design, requiring engineers to simplify complex systems into clear nouns and predictable actions.
 					- Designers must understand databases, APIs, data flow, colors, motion, and visual form—not just surface aesthetics.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 829}} I understand what that's going to do. When I click a button, I don't get surprised at the outcome.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 835}} takes time to do this kind of hard, reduce it to its best most elegant form. This is so interesting because what you've described of we have a new product that has not existed before, like a dev tool in a digital space which lives in our head or inside of a computer, with things that we just invented, may that be an MCP or an agentic skill.
+							- {{youtube-timestamp 855}} And then thinking of how we find the right word so people can use it and it makes sense, and you're kind of, I just see that you're kind of drawing up a map in your head, which is not all that different to when you're building a new system as a software engineer. And I remember talking with Kent Beck, who talked about how, with Ward Cunningham, they came up with some of the basics of that. Might have been domain driven design or it might have been some related concepts.
+							- {{youtube-timestamp 884}} But they had a thesaurus in front of them trying to search for the right words on how to. Oh, it was the design patterns. Design patterns later came out of it. They were trying to put a name on these constructs and these things and how, which feels like a very similar thing to what you're describing. Yeah, yeah, yeah, that's design. This is
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 903}} where I kind of get into, sure, there's types of design. You could be like, there's interior design, there's brand design, there's product design. But product design, when we talk about it in tech, is actually software design, and software design is engineering. It's actually the same skill.
+							- {{youtube-timestamp 916}} You might be working with slightly different materials, in the sense of one of you cares more about the colors and the size and the shadows and the shape of things and the motion design.
 				- {{youtube-timestamp 936}}
 				  id:: 6abcdf35-315e-4572-89ec-bd30894c1271
 					- [[Person/Gergely Orosz]]
@@ -181,14 +389,36 @@ date-created:: 2026-09-23
 					- Snipd: https://share.snipd.com/snip/cf6bcd1c-deaa-46d0-babb-6271e95e9a52
 					- Design engineering means designers actively understand and engage with how the product works.
 					- This matters most for developer tools and AI, where backend capabilities and data shape determine the interface.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 936}} Is interesting because designers I worked with years back at places like Uber and at Skype, they had their design tools, which was Sketch, later Figma. They typically work with the product folks, they did explorations or UX prototypes, they often sat in on user testing, but in the end they had a design, they had visuals, they had animations, that was their thing. And they handed this over to us engineers together with the PRD or here's the product, here's how it's going to look, and then we built it.
+							- {{youtube-timestamp 967}} And we would build the UI, let's say on mobile, and we would then go maybe sit with them or show them, and they would say, oh, this motion doesn't feel good. But my view of the designer is, well, it was very visual. And for example those designers, maybe they didn't need to, but they didn't need to get involved in how they basically were so, and how the flows. They were very much aware of the flows of the user journey.
+							- {{youtube-timestamp 991}} Yeah. So is that type of design, how would you characterize as being different? Or is it just that their domain is a little bit different? It's more of the business level, the more kind of mobile, these were mobile and web and some of those.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1009}} Is obviously biased by my experience, which is much more design engineering stuff, because when I hear design engineer, that's kind of a catchphrase now. And what does that mean? But I think of it as a designer who really engages in the engineering and understands how the product works. And it's required. It's not required in all domains. Again, if you're doing government forms, I don't think you need to understand the database.
 				- #### {{youtube-timestamp 1016}} Design Engineering Means Understanding the Backend
 					- Snipd: https://share.snipd.com/snip/ac7ca01e-f12d-4019-b7da-b285b93485bc
 					- Design engineering combines visual design with understanding how databases, APIs, and data shape the product.
 					- This matters especially when designing for developers or AI, where backend possibilities determine the experience.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 993}} How would you characterize as being different? Or is it just that their domain is a little bit different? It's more of the business level, the more kind of mobile, these were mobile and web and some of those.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1009}} Is obviously biased by my experience, which is much more design engineering stuff, because when I hear design engineer, that's kind of a catchphrase now. And what does that mean? But I think of it as a designer who really engages in the engineering and understands how the product works. And it's required. It's not required in all domains. Again, if you're doing government forms, I don't think you need to understand the database.
+							- {{youtube-timestamp 1028}} But if you're designing for developers or you're designing in a brand new field like AI, where so much of how the product works is determined by what is possible on the backend and the shape of the data, then you do need to engage with it a lot. But if you're working on an app where actually a designer is probably better served by advocating for the user, I think that's a kind of more traditional philosophy of product design. Is that you represent the user and you represent trying to get the best experience possible for the user, and that means user interviews, caring about flows, like does this button feel big enough, does it have the right
 				- #### {{youtube-timestamp 1016}} Design Engineers Straddle Product And Code
 					- Snipd: https://share.snipd.com/snip/ab65e715-b89c-4564-b132-3f14133f761f
 					- Design engineers understand both visual design and how a product works technically, especially when backend constraints shape the experience.
 					- Traditional designers may focus on users and flows, while others specialize in visuals, animation, or engineering.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1015}} And what does that mean? But I think of it as a designer who really engages in the engineering and understands how the product works. And it's required. It's not required in all domains. Again, if you're doing government forms, I don't think you need to understand the database.
+							- {{youtube-timestamp 1028}} But if you're designing for developers or you're designing in a brand new field like AI, where so much of how the product works is determined by what is possible on the backend and the shape of the data, then you do need to engage with it a lot. But if you're working on an app where actually a designer is probably better served by advocating for the user, I think that's a kind of more traditional philosophy of product design. Is that you represent the user and you represent trying to get the best experience possible for the user, and that means user interviews, caring about flows, like does this button feel big enough, does it have the right words.
+							- {{youtube-timestamp 1061}} And then they can spend much more energy there if they don't have to care about the technical backend, like maybe it's actually irrelevant when really what you need to care about is, does this flow make sense to people? So that's not necessarily a different kind of designer, but if you kind of think of the whole stack, right, but expand it all the way out, not just backend and frontend, but the interface and users and then the product in the context of a business and a product in the context of an economy.
+							- {{youtube-timestamp 1084}} There are people who lean way more on this side, and I'm a bit more the straddling of the product design and the engineering, but you can have valid designers all along this. And some people, again, just visuals or just animation, there's lots of niches. I just like a bit more of the half engineering, half design slice of it.
 				- {{youtube-timestamp 1016}}
 					- [[Person/Maggie Appleton]]
 						- > ... if you're doing government forms, I don't think you need to understand the database. But if you're designing for developers, or you're designing in a brand new field like [[AI]], where so much of how the product works is determined by what is possible on the back end and the shape of the data, then you *do* need to engage with it a lot.
@@ -235,6 +465,13 @@ date-created:: 2026-09-23
 					- Snipd: https://share.snipd.com/snip/98725f92-bf51-4dcc-9a45-d5c5b5e26735
 					- Maggie Appleton experiments with every agentic harness at GitHub Next and currently prefers Codex for its thoughtfully designed desktop app.
 					- She still begins brainstorming with paper and pen, then uses Figma before handing ideas to an agent.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1102}} To help understand a bit more of what you do, can you talk about the tools that you use? As engineers, we're kind of used to, our tools used to be the IDE and the code editor and, you know, some of the hardcore people like Vim and some of those things. And these days, of course, it's changing a bit more, but those are the tools that we use. What are your tools? It changes all the time. To some degree some things stay constant
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1122}} like you're used to doing similar tasks. But of course at the moment I'm trying to try everything, because part of my job is trying to figure out what GitHub should do next. That's what our team does. That's actually the name, right? GitHub Next. GitHub Next, hey? It was well-named.
+							- {{youtube-timestamp 1136}} So a lot of the time we are just, of course I'm trying out Codex and Claude and dogfooding stuff internally at GitHub. I've tried Conductor. Name any agentic harness, like OpenCode, Pi, I try them all. I do love Codex at the moment. I do think OpenAI is onto some really good stuff, at least their design of their desktop app is beautiful.
 				- {{youtube-timestamp 1135}}
 					- [[Person/Maggie Appleton]]
 						- > ... [dog]fooding stuff internally at [[GitHub]]. I've tried Conductor, Amp. I mean, name any agentic harness, like [[OpenCode]], ... Pi. I try them all.
@@ -248,30 +485,149 @@ date-created:: 2026-09-23
 					- Snipd: https://share.snipd.com/snip/8ca52e84-d37e-42d2-bdfc-eda6d279fdbe
 					- Begin design with physical sketches before handing implementation to agents, because early ideas are visual and difficult to express linguistically.
 					- Once the shape and verification criteria are clear, let agents implement and review the resulting pull request.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1102}} To help understand a bit more of what you do, can you talk about the tools that you use? As engineers, we're kind of used to, our tools used to be the IDE and the code editor and, you know, some of the hardcore people like Vim and some of those things. And these days, of course, it's changing a bit more, but those are the tools that we use. What are your tools? It changes all the time. To some degree some things stay constant
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1122}} like you're used to doing similar tasks. But of course at the moment I'm trying to try everything, because part of my job is trying to figure out what GitHub should do next. That's what our team does. That's actually the name, right? GitHub Next. GitHub Next, hey? It was well-named.
+							- {{youtube-timestamp 1136}} So a lot of the time we are just, of course I'm trying out Codex and Claude and dogfooding stuff internally at GitHub. I've tried Conductor. Name any agentic harness, like OpenCode, Pi, I try them all. I do love Codex at the moment. I do think OpenAI is onto some really good stuff, at least their design of their desktop app is beautiful. They've really thought it through. So I think they're doing some really good stuff. I'd still use paper and pen for initial brainstorming.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1164}} You have your notebooks here.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1165}} Yeah, I brought some along because notebooks aren't dead. I don't think they're going to be dead forever. And I still use Figma because I know how to use it and I can do some brainstorming in it before I pass it off to an agent. But to be honest, there's a point where once you figured out what you need to build, which is actually all the work, once you hand it off to an agent, it's not that implementation is solved, but we've reached a point where implementation is good enough that if I spec it out really well and I list out how the agent should verify for me that it actually did the work, I can hand it to an agent and just be like, right, let me know when you've got a PR up.
+							- {{youtube-timestamp 1201}} I don't really look at code that much anymore. I do look at PR code when I'm reviewing it, but skim, skim, skim, okay, that looks sensible. Merge.
 				- #### {{youtube-timestamp 1303}} Agent Planning Becomes Decision Fatigue
 					- Snipd: https://share.snipd.com/snip/9358cf4f-796d-48b2-b19f-87447814a8b3
 					- Agent planning overwhelms users by turning implementation into long interrogations of A, B, or C choices.
 					- After roughly 20 questions, people tire and their brains start shutting down.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1239}} of the what should we build. I include in this lots of prototyping, and I kind of have the privilege of being on a team where we don't have to build production quality software. We are mostly trying to prototype and validate ideas, so we have a lower quality bar than someone shipping to proper github.com, that's a very high quality bar. Yeah, which makes sense. I
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1256}} mean that's kind of, you get the directional things right, and then once it's great you might build it, or you might decide to build it. Yeah, yeah, but I definitely
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1265}} I mean, we can hopefully show these later. I do a lot of sketching. Even just interface design, a lot of what you're doing is just drawing boxes and then being like, there's this slide over from the front, from the bottom. Like if I click this button.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1278}} So this is like you kind of drawing up how an interface you think could look like. So I see a mix of UIs and we'll put these on onto the screen. But UIs, description of what they do. Can you just talk to one of these or one that's interesting or memorable? Yeah.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1297}} Yeah. So this is a new, I should explain the context. I'm prototyping at the moment something where my theory is one of the bottlenecks with agents is planning is a really bad experience at the moment. At the moment you have a long chat with an agent, sometimes even in a CLI, which is a pretty primitive interface. And then the agent grills you by asking you a set of choice A, B or C questions.
+							- {{youtube-timestamp 1319}} And it does this 100 times over if you're using Matt Pocock's grill me skill or whatever you like.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1325}} He was just on a podcast.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1327}} Yeah. And by question 20, you're quite tired and your brain starts shutting down.
 				- #### {{youtube-timestamp 1303}} Agents Overload Humans With Endless Decisions
 					- Snipd: https://share.snipd.com/snip/a0d79b7d-548b-437a-930f-ef036bad3c46
 					- Agent planning overwhelms people by forcing them through dozens of rapid A-or-B choices without enough information.
 					- After 20 questions, users get tired and start accepting the recommended option automatically.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1275}} From the bottom. Like if I click this button.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1278}} So this is like you kind of drawing up how an interface you think could look like. So I see a mix of UIs and we'll put these on onto the screen. But UIs, description of what they do. Can you just talk to one of these or one that's interesting or memorable? Yeah.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1297}} Yeah. So this is a new, I should explain the context. I'm prototyping at the moment something where my theory is one of the bottlenecks with agents is planning is a really bad experience at the moment. At the moment you have a long chat with an agent, sometimes even in a CLI, which is a pretty primitive interface. And then the agent grills you by asking you a set of choice A, B or C questions.
+							- {{youtube-timestamp 1319}} And it does this 100 times over if you're using Matt Pocock's grill me skill or whatever you like.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1325}} He was just on a podcast.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1327}} Yeah. And by question 20, you're quite tired and your brain starts shutting down.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1331}} That was my experience. I went through and I got 36 questions and I was kind of, they were good, but I was starting to get annoyed around, yeah, 20 or 25. I'm like, and I had no idea when it would stop. Right.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1342}} It's endless. And like the human brain, you get tired. You can't make this many decisions in this short of time. And also you don't have enough information about most of those decisions, because it's given you a question and three options. And it's told you number A is recommended, then you just start being like, yep, A, A, enter, A, I agree with you.
+							- {{youtube-timestamp 1359}} So this is not an ideal experience. This gets into agents love to output reams
 				- #### {{youtube-timestamp 1314}} Agents Need Better Interfaces For Human Decisions
 					- Snipd: https://share.snipd.com/snip/68355fce-5dde-4ead-97df-1a0a6cc3b036
 					- Agents produce endless text and rapid-fire choices, overwhelming humans before they can make informed decisions.
 					- Maggie is prototyping GUI-based, multiplayer planning where each decision gets more space than a CLI exchange.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1314}} And then the agent grills you by asking you a set of choice A, B or C questions. And it does this 100 times over if you're using Matt Pocock's grill me skill or whatever you like.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1325}} He was just on a podcast.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1327}} Yeah. And by question 20, you're quite tired and your brain starts shutting down.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1331}} That was my experience. I went through and I got 36 questions and I was kind of, they were good, but I was starting to get annoyed around, yeah, 20 or 25. I'm like, and I had no idea when it would stop. Right.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1342}} It's endless. And like the human brain, you get tired. You can't make this many decisions in this short of time. And also you don't have enough information about most of those decisions, because it's given you a question and three options. And it's told you number A is recommended, then you just start being like, yep, A, A, enter, A, I agree with you.
+							- {{youtube-timestamp 1359}} So this is not an ideal experience. This gets into agents love to output reams and reams of text, and that's an ideal output for agents, but it is not an ideal input for humans. So we have a mismatch with what do humans need to be able to digest large amounts of information and truly understand it and be able to make informed decisions? That is not the interface for this.
+							- {{youtube-timestamp 1378}} So I'm trying to explore how would we make an interface that got us to do better planning and better decision making, but in a way that was easier for us to comprehend. So this is what I'm prototyping at the moment. And part of this is, OK, it's going to be multiplayer because, of course, everything should be with your team planning together.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1394}} So several people can do it together.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1397}} Exactly. But also just how do you make it so that you have more space for each decision?
 				- #### {{youtube-timestamp 1342}} Agents Need Visual Interfaces For Better Decisions
 					- Snipd: https://share.snipd.com/snip/2bdc4c02-7e92-4434-ae65-0547c027c7a9
 					- Agent planning overwhelms humans with endless A-or-B questions and dense text, causing decision fatigue and shallow agreement.
 					- Maggie’s prototype gives each decision its own card and uses diagrams when choices need visual context.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1342}} It's endless. And like the human brain, you get tired. You can't make this many decisions in this short of time. And also you don't have enough information about most of those decisions, because it's given you a question and three options. And it's told you number A is recommended, then you just start being like, yep, A, A, enter, A, I agree with you.
+							- {{youtube-timestamp 1359}} So this is not an ideal experience. This gets into agents love to output reams and reams of text, and that's an ideal output for agents, but it is not an ideal input for humans. So we have a mismatch with what do humans need to be able to digest large amounts of information and truly understand it and be able to make informed decisions? That is not the interface for this.
+							- {{youtube-timestamp 1378}} So I'm trying to explore how would we make an interface that got us to do better planning and better decision making, but in a way that was easier for us to comprehend. So this is what I'm prototyping at the moment. And part of this is, OK, it's going to be multiplayer because, of course, everything should be with your team planning together.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1394}} So several people can do it together.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1397}} Exactly. But also just how do you make it so that you have more space for each decision? So I'm trying to prototype, okay, so first of all, this has to definitely happen in a GUI, not in a CLI.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1408}} So these are just like rough ideas of how you can have more space.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1411}} Exactly. So I'm thinking of it as each decision maybe has its own little mini document or card, and depending on the decision, some of them maybe you can just have three multiple choices, that's fine, it's maybe a simple decision, right, A, B or C. But sometimes it'll ask me things like, do you think the border should be like
 				- #### {{youtube-timestamp 1355}} Agents Need Visual Interfaces For Better Decisions
 					- Snipd: https://share.snipd.com/snip/73af2223-774d-4c4b-9086-7990f499bda6
 					- Agent planning overwhelms humans with endless text and rapid A/B/C questions, producing shallow agreement instead of informed decisions.
 					- Maggie’s prototype gives each decision a mini-document with diagrams, prototypes, or embedded HTML tailored to the question.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1353}} And it's told you number A is recommended, then you just start being like, yep, A, A, enter, A, I agree with you. So this is not an ideal experience. This gets into agents love to output reams and reams of text, and that's an ideal output for agents, but it is not an ideal input for humans.
+							- {{youtube-timestamp 1368}} So we have a mismatch with what do humans need to be able to digest large amounts of information and truly understand it and be able to make informed decisions? That is not the interface for this. So I'm trying to explore how would we make an interface that got us to do better planning and better decision making, but in a way that was easier for us to comprehend.
+							- {{youtube-timestamp 1386}} So this is what I'm prototyping at the moment. And part of this is, OK, it's going to be multiplayer because, of course, everything should be with your team planning together.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1394}} So several people can do it together.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1397}} Exactly. But also just how do you make it so that you have more space for each decision? So I'm trying to prototype, okay, so first of all, this has to definitely happen in a GUI, not in a CLI.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1408}} So these are just like rough ideas of how you can have more space.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1411}} Exactly. So I'm thinking of it as each decision maybe has its own little mini document or card, and depending on the decision, some of them maybe you can just have three multiple choices, that's fine, it's maybe a simple decision, right, A, B or C. But sometimes it'll ask me things like, do you think the border should be gray 10, 12 or 15, and I'm like, well, show me, show me, this is a visual question. Yeah. Or sometimes it's like, how do you want the architecture to be structured, and I'm like, well, show me an architecture diagram. Show me a data flow diagram.
 				- #### {{youtube-timestamp 1362}} Agents Need Better Decision Interfaces
 					- Snipd: https://share.snipd.com/snip/ed3feb3b-1891-4af0-ba33-e8c84c67601f
 					- Agent outputs favor long text, but humans need visual, digestible interfaces for making complex decisions.
 					- Maggie’s prototype gives each decision its own document, diagram, or embedded prototype, with named owners and an auditable rationale.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1297}} Yeah. So this is a new, I should explain the context. I'm prototyping at the moment something where my theory is one of the bottlenecks with agents is planning is a really bad experience at the moment. At the moment you have a long chat with an agent, sometimes even in a CLI, which is a pretty primitive interface. And then the agent grills you by asking you a set of choice A, B or C questions.
+							- {{youtube-timestamp 1319}} And it does this 100 times over if you're using Matt Pocock's grill me skill or whatever you like.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1325}} He was just on a podcast.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1327}} Yeah. And by question 20, you're quite tired and your brain starts shutting down.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1331}} That was my experience. I went through and I got 36 questions and I was kind of, they were good, but I was starting to get annoyed around, yeah, 20 or 25. I'm like, and I had no idea when it would stop. Right.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1342}} It's endless. And like the human brain, you get tired. You can't make this many decisions in this short of time. And also you don't have enough information about most of those decisions, because it's given you a question and three options. And it's told you number A is recommended, then you just start being like, yep, A, A, enter, A, I agree with you.
+							- {{youtube-timestamp 1359}} So this is not an ideal experience. This gets into agents love to output reams and reams of text, and that's an ideal output for agents, but it is not an ideal input for humans. So we have a mismatch with what do humans need to be able to digest large amounts of information and truly understand it and be able to make informed decisions? That is not the interface for this.
+							- {{youtube-timestamp 1378}} So I'm trying to explore how would we make an interface that got us to do better planning and better decision making, but in a way that was easier for us to comprehend. So this is what I'm prototyping at the moment. And part of this is, OK, it's going to be multiplayer because, of course, everything should be with your team planning together.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1394}} So several people can do it together.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1397}} Exactly. But also just how do you make it so that you have more space for each decision? So I'm trying to prototype, okay, so first of all, this has to definitely happen in a GUI, not in a CLI.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1408}} So these are just like rough ideas of how you can have more space.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1411}} Exactly. So I'm thinking of it as each decision maybe has its own little mini document or card, and depending on the decision, some of them maybe you can just have three multiple choices, that's fine, it's maybe a simple decision, right, A, B or C. But sometimes it'll ask me things like, do you think the border should be gray 10, 12 or 15, and I'm like, well, show me, show me, this is a visual question. Yeah. Or sometimes it's like, how do you want the architecture to be structured, and I'm like, well, show me an architecture diagram. Show me a data flow diagram. Show me a state machine.
+							- {{youtube-timestamp 1443}} I'm trying to prototype decisions that have come with diagrams and prototypes and HTML embedded in them, so that depending on what question is being asked, it shows me the correct interface to make that decision. So what I'm prototyping here is, okay, you've got a plan that's a big document. You've maybe got these little decision docs embedded within them that you can expand to see more of.
+							- {{youtube-timestamp 1460}} And then looking at, I think each decision should have a human assigned to it who made that decision, so that you have an audit trail later. Not necessarily to hunt people down, but to be like, okay, why did we make this decision about the backend? Well, let's go see. Okay, Luke made that decision like six ago. Let's go open up his decision card and be like, what information did he have available in order to make this decision? Hopefully this becomes useful later.
+							- {{youtube-timestamp 1480}} But here I'm just sketching what are the possible shapes this take? Is this a stack of cards that expands on the screen? Is this all one big linear thing? Are we swiping through stuff like it's Tinder? What interfaces are going to be useful for this? So a lot of the sketching is just trying to figure out possible shapes of things.
 				- Transcript
 				  collapsed:: true
 					- [[Person/Gergely Orosz]]
@@ -330,30 +686,125 @@ date-created:: 2026-09-23
 					- Snipd: https://share.snipd.com/snip/b9ab85c5-78fc-4045-aa1f-4022c2be02d2
 					- Sketching on paper helps Maggie think through interface ideas faster than describing them to an AI agent.
 					- A quick pen sketch of cards or an accordion externalizes an idea before implementation.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1531}} Yeah, and I can show the whole thing with notebooks and thinking on paper. I think all designers do this, but coming from illustration, the reason I do this is because I started in a world where you have to draw everything to figure out what you're going to do. So when I was an illustrator, I had tons of these notebooks where you're figuring out, what's the composition? What's the physical shape of things? How are you working out the shape of the grass in a scene? And so I think I started problem solving on paper very early on in my career, figuring out compositions and layouts.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1563}} Was this in college?
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1564}} When was this? I think I was working for Egghead when I was doing this.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1568}} And you drew all of these? Yeah.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1569}} Yeah. I trained with, I was in LA for a while, which is a terrible place to live. But I trained with people who are concept artists on films. And they have a really beautiful way of working that's very technical. It's very much constructing things from 3D shapes and drawing in space. Yeah, because these are really 3D. Yeah, yeah.
+							- {{youtube-timestamp 1588}} And they kind of just teach you how to do landscapes and layouts. I loved their way of teaching. And it's very, again, it's very technical. It's very much engineering. You have to understand, with robotics, different types of joints you could put together a robot in, so that you could actually draw a robot that was believable. There was a lot of understanding reality in order to believably draw a reality.
+							- {{youtube-timestamp 1607}} So I think doing this set me up, when I moved into UI design, to do a lot of this kind of sketching, because it just comes naturally. Yeah, I mean, these are a little bit easier to
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1607}} sketch as
 				- #### {{youtube-timestamp 1536}} Technical Drawing Makes Reality Believable
 					- Snipd: https://share.snipd.com/snip/14c3849e-1da4-4335-91c2-d144b3a8063b
 					- Maggie Appleton’s illustration training taught her to solve compositions, layouts, and interfaces by sketching on paper.
 					- Concept artists constructed scenes from 3D shapes and robotics-like joints, grounding believable drawings in technical reality.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1513}} It's like this little device with a screen and a very small microchip that has Wi-Fi and Bluetooth, and so I was designing this little character who tells me the weather, and I'm trying to hook it up to my agent so it can be like, you have this much capacity left before your reset limit happens. So this is just all kinds of things, it's a mix of some serious stuff and some fun stuff. Yeah, yeah. And I can show the whole thing with notebooks and thinking on paper.
+							- {{youtube-timestamp 1535}} I think all designers do this, but coming from illustration, the reason I do this is because I started in a world where you have to draw everything to figure out what you're going to do. So when I was an illustrator, I had tons of these notebooks where you're figuring out, what's the composition? What's the physical shape of things? How are you working out the shape of the grass in a scene? And so I think I started problem solving on paper very early on in my career, figuring out compositions and layouts.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1563}} Was this in college?
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1564}} When was this? I think I was working for Egghead when I was doing this.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1568}} And you drew all of these? Yeah.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1569}} Yeah. I trained with, I was in LA for a while, which is a terrible place to live. But I trained with people who are concept artists on films. And they have a really beautiful way of working that's very technical. It's very much constructing things from 3D shapes and drawing in space. Yeah, because these are really 3D. Yeah, yeah.
+							- {{youtube-timestamp 1588}} And they kind of just teach you how to do landscapes and layouts. I loved their way of teaching. And it's very, again, it's very technical. It's very much engineering.
 				- #### {{youtube-timestamp 1536}} Use Paper For Visual Thinking
 					- Snipd: https://share.snipd.com/snip/b3c76e3f-de37-4647-9405-6c9661de1741
 					- Use notebooks or whiteboards to externalize ideas before translating them into prompts or code.
 					- Physical tools provide fast, persistent, low-effort feedback for spatial concepts that agents still handle poorly.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1535}} I think all designers do this, but coming from illustration, the reason I do this is because I started in a world where you have to draw everything to figure out what you're going to do. So when I was an illustrator, I had tons of these notebooks where you're figuring out, what's the composition? What's the physical shape of things? How are you working out the shape of the grass in a scene? And so I think I started problem solving on paper very early on in my career, figuring out compositions and layouts.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1563}} Was this in college?
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1564}} When was this? I think I was working for Egghead when I was doing this.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1568}} And you drew all of these? Yeah.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1569}} Yeah. I trained with, I was in LA for a while, which is a terrible place to live. But I trained with people who are concept artists on films. And they have a really beautiful way of working that's very technical. It's very much constructing things from 3D shapes and drawing in space. Yeah, because these are really 3D. Yeah. And they kind of just teach you how to do landscapes and layouts.
+							- {{youtube-timestamp 1591}} I loved their way of teaching. And it's very, again, it's very technical. It's very much engineering. You have to understand, with robotics, different types of joints, so you could put together a robot so that you could actually draw a robot that was believable. There was a lot of understanding reality in order to believably draw a reality.
+							- {{youtube-timestamp 1607}} So I think doing this set me up, when I moved into UI design, to do a lot of this kind of sketching, because it just comes naturally. Yeah, I mean, these are a little bit easier to sketch as well in terms of the user interfaces. Yeah. But then I think it helps you think on paper. All of this is just sort of, you have an idea in your head, and sure, I could go into Claude Code and be like, hey Claude, here's an idea I have, it's a stack of cards and it's an accordion.
+							- {{youtube-timestamp 1633}} But it's much faster to just get a pen or pencil on the desk next to me and draw that with my hands. It's way fewer effort. So I feel like people online keep being like, oh, everyone's just going to prompt everything to create. But you need something that is quick feedback and very loose in the early stages to figure out the shape of something before you can put into words what you want an agent to do. And also it's visual. It's not text.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1659}} Is it not a bit more satisfying doing it with your hand? So much better. Yeah.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1662}} And then you can look at it. It doesn't go away on your screen. It can sit on your desk and the next day you can be like, oh, yes, I remember I was trying to figure out what shape this feature should be. Or you can draw data diagrams, whatever you want. It doesn't have to be visual, but it's just a way of externalizing thoughts.
+							- {{youtube-timestamp 1680}} They're not linguistic. I think this is a key thing, again: agents only accept text as inputs. Okay, they can read images. I do take photos and put them in. But they're not as good at images. They're very bad at spatial reasoning. They're very bad at visual design. I mean, trying to get them to do design, they just make mistakes, where they just don't put spacing around things, and things are the wrong size, and they make text overlap. They can't see, right?
+							- {{youtube-timestamp 1704}} Trying to explain a visual idea in text to an agent is really challenging and doesn't work very well, so I find I still end up doing a lot of my design without agents up front, because all it is is thinking through the visual pieces of it. And then when I'm like, okay, I know this is the shape of the thing I want, then I can tell an agent to do it.
+							- {{youtube-timestamp 1722}} But I find it hard to involve it earlier, in a way that I think some people on Twitter are claiming they do, but I'm skeptical.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1729}} But this is interesting because even in software design, I'm talking about architecture design, some of, I guess, most productive sessions I've observed have been in person around the whiteboard. Yeah. Where people again, we're talking about components, databases, networking, connections, retry logics, whatever, you know, these things you could describe, or you could put it in a computer. But when you put it on a board, when someone puts it on there and then someone else takes it, they're forced to take their ideas into 2D space, because we don't do 3D. I know you can draw cool 3D, but we can also just box scenarios. Someone does that and the other people understand and they go in and they add their own thing or they circle or they add new components.
+							- {{youtube-timestamp 1773}} And even in digital space, I think Miro was a good example. They became so popular because they figured out a way to do collaborative whiteboarding, for, you know, you don't have to be in the same room, but they give you somewhat similar tools. So I wonder if this whole thing of getting your ideas either to a physical medium, which I think for us engineers, the whiteboard, for you is the notebook.
 				- #### {{youtube-timestamp 1633}} Sketch Before Asking AI To Design
 					- Snipd: https://share.snipd.com/snip/94914b5d-f48a-4ec0-b5dc-5a5276014d10
 					- Maggie Appleton sketches visual ideas before involving agents because current models struggle with spatial reasoning, spacing, sizing, and visual design.
 					- Once she knows the shape, she can clearly instruct an agent; earlier prompting often fails to capture nonlinguistic ideas.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1633}} But it's much faster to just get a pen or pencil on the desk next to me and draw that with my hands. It's way fewer effort. So I feel like people online keep being like, oh, everyone's just going to prompt everything to create. But you need something that is quick feedback and very loose in the early stages to figure out the shape of something before you can put into words what you want an agent to do. And also it's visual. It's not text.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1659}} Is it not a bit more satisfying doing it with your hand? So much better. Yeah.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1662}} And then you can look at it. It doesn't go away on your screen. It can sit on your desk and the next day you can be like, oh, yes, I remember I was trying to figure out what shape this feature should be. Or you can draw data diagrams, whatever you want. It doesn't have to be visual, but it's just a way of externalizing thoughts.
+							- {{youtube-timestamp 1680}} They're not linguistic. I think this is a key thing, again: agents only accept text as inputs. Okay, they can read images. I do take photos and put them in. But they're not as good at images. They're very bad at spatial reasoning. They're very bad at visual design. I mean, trying to get them to do design, they just make mistakes, where they just don't put spacing around things, and things are the wrong size, and they make text overlap. They can't see, right?
+							- {{youtube-timestamp 1704}} Trying to explain a visual idea in text to an agent is really challenging and doesn't work very well, so I find I still end up doing a lot of my design without agents up front, because all it is is thinking through the visual pieces of it. And then when I'm like, okay, I know this is the shape of the thing I want, then I can tell an agent to do it.
 				- #### {{youtube-timestamp 1647}} Sketching Externalizes Ideas Before Language
 					- Snipd: https://share.snipd.com/snip/69f8f615-dc91-4bd4-bc82-ccccdcfb763c
 					- Maggie Appleton argues that loose sketches provide rapid feedback for discovering an interface’s shape before describing it to an AI agent.
 					- Paper preserves ideas on the desk, while agents primarily accept linguistic input and struggle with spatial reasoning.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1591}} I loved their way of teaching. And it's very, again, it's very technical. It's very much engineering. You have to understand, with robotics, different types of joints, so you could put together a robot so that you could actually draw a robot that was believable. There was a lot of understanding reality in order to believably draw a reality.
+							- {{youtube-timestamp 1607}} So I think doing this set me up, when I moved into UI design, to do a lot of this kind of sketching, because it just comes naturally. Yeah, I mean, these are a little bit easier to sketch as well in terms of the user interfaces. Yeah. But then I think it helps you think on paper. All of this is just sort of, you have an idea in your head, and sure, I could go into Claude Code and be like, hey Claude, here's an idea I have, it's a stack of cards and it's an accordion.
+							- {{youtube-timestamp 1633}} But it's much faster to just get a pen or pencil on the desk next to me and draw that with my hands. It's way fewer effort. So I feel like people online keep being like, oh, everyone's just going to prompt everything to create. But you need something that is quick feedback and very loose in the early stages to figure out the shape of something before you can put into words what you want an agent to do. And also it's visual. It's not text.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1659}} Is it not a bit more satisfying doing it with your hand? So much better. Yeah.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1662}} And then you can look at it. It doesn't go away on your screen. It can sit on your desk and the next day you can be like, oh, yes, I remember I was trying to figure out what shape this feature should be. Or you can draw data diagrams, whatever you want. It doesn't have to be visual, but it's just a way of externalizing thoughts.
 				- #### {{youtube-timestamp 1806}} Humanity Still Lacks Interfaces For AI Collaboration
 					- Snipd: https://share.snipd.com/snip/a7b976ba-8fc9-4bfb-aed3-b2d57be8fbdd
 					- AI interfaces remain primitive because software design itself is only about 60 years old.
 					- Humans bring texture, light, and materials; agents bring models and skills, making translation between them difficult.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1787}} So I wonder if this whole thing of getting your ideas either to a physical medium, which I think for us engineers, the whiteboard, for you is the notebook. Maybe it just helps, maybe rethink or solidify, or also it does have a forcing function about the verbs, the shapes that you
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1805}} Yeah, yeah, yeah. Interesting. And this gets into the interfaces we have to agents right now are so primitive. I think we know this, right? We're all a couple years into this entire thing, which is wild. Maybe five years. I forget when GPT-4 came out. Was it three or four years ago?
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1805}} ChatGPT came out three years ago. It was November, December. November 2022.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1826}} Yeah, yeah, yeah. This is when I was at Elicit. And then because we were debating doing a chat interface and then they did it. And we were like, oh, they stole our idea. Not that Elicit is necessarily competing with them. But that is no time at all. And it's kind of wild we've made it as far as we have.
+							- {{youtube-timestamp 1842}} But it's also like I always say software design is an extremely young field. What are we, 60 years into it at most? So even that, we haven't figured out a lot of things about how to design the best interfaces for people and machines to communicate with each other, and agents barely at all, I feel like. There's this world that agents live in, there's weights and models and skills and MCPs, and then you have your human side that is physicality and texture and light and materials and all these things agents don't understand. Trying to find artifacts that allow us to meet in the middle and create stuff together is the really hard challenge, because you've got two totally different types of beings.
 				- #### {{youtube-timestamp 1856}} Agents Need Human Artifacts To Bridge Two Intelligences
 					- Snipd: https://share.snipd.com/snip/640dc92d-db22-42fe-841a-0167204113a0
 					- Agents and humans think and act differently, making shared artifacts essential for collaboration.
 					- Maggie imagines agents understanding her notebook’s space, light, shapes, and lines, but says that future remains distant.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1842}} But it's also like I always say software design is an extremely young field. What are we, 60 years into it at most? So even that, we haven't figured out a lot of things about how to design the best interfaces for people and machines to communicate with each other, and agents barely at all, I feel like. There's this world that agents live in, there's weights and models and skills and MCPs, and then you have your human side that is physicality and texture and light and materials and all these things agents don't understand. Trying to find artifacts that allow us to meet in the middle and create stuff together is the really hard challenge, because you've got two totally different types of beings.
+							- {{youtube-timestamp 1877}} Not that agents are conscious beings. I'm not in that camp. But they're a type of intelligence that wants to think and act in a certain way that is not the way humans want to think and act. And it's hard to translate between the two. I just find myself very frustrated that they can't sort of, you know, be looking over my shoulder, looking at my notebook, and be understanding what I'm drawing and helping me move my ideas along. This is the eventual dream, is they understand space and light and shape and lines and, you know, but I think we're quite a ways away from that.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1907}} So one thing, we've talked about your notebooks and digital tools, but one thing that you've posted about recently is woodworking. You said, "I'm at the stage of my software design journey," well, no, "I'm at the stage of software design where you start taking woodworking courses." Can you tell me a little bit about that experience? Well, the little
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 1925}} Bit of the joke is, I just feel like at some point every engineer, you have a choice of things you can get into because you feel like
 				- Transcript
 				  collapsed:: true
 					- [[Person/Maggie Appleton]]
@@ -422,26 +873,73 @@ date-created:: 2026-09-23
 					- Snipd: https://share.snipd.com/snip/3a9170e5-5773-4cbf-a0fc-b43193a96511
 					- Maggie distinguishes design engineering from polished micro-interactions and hover effects.
 					- Agents can create those animations without code, while design engineering requires deeper engineering involvement.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 1988}} One thing that you've been talking about is the concept of design engineers. A few years ago you posted, I'll quote you, "I'm having a strong 'should I become a full-blown design engineer' day. I'm not even sure what it means, but I just want to touch a lot of code and solve tangible problems on screens and make beautiful animated stuff." Yeah. And then you went over and you tried to collect names of people who you knew who you felt were kind of doing this design engineering. That was a few years ago. Yeah. What have you figured out about design engineers? If they exist, what they do, what places they work in?
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 2027}} Yeah, I think they do exist. I think Twitter might have a different definition. Or I think there's a lot of people where, not that I should call it X, sorry, X, Twitter, X, all the same, on X, I feel like a lot of people who get called design engineers or who present themselves as design engineers actually are very good micro-interaction designers, like, here's a cool hover effect on a button, and here's a cool loading transition state. And those things are definitely cool. I don't consider that design engineering, because you could achieve most of those things by just telling an agent to do those without looking at a single piece of code.
+							- {{youtube-timestamp 2061}} To me that's just very advanced, sophisticated motion design and visual design, and
 				- #### {{youtube-timestamp 2074}} Design Engineers Bridge Design And Code
 					- Snipd: https://share.snipd.com/snip/3f33dd75-1d31-4139-a203-10c71f5e986d
 					- Design engineers combine visual design with deep technical understanding and hands-on implementation.
 					- Maggie shapes interfaces around backend data and model capabilities while engineers handle complex logic instead of CSS.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 2065}} motion design and visual design, and that's cool, but I don't consider that design engineering, because I don't think that's a full job for you to do that as a career.
+							- {{youtube-timestamp 2074}} But design engineering now, the people who I think of as good design engineers do the kind of thing I was talking about before, where you step much more into the engineering side of work. So you're still a designer, you're still caring about product nouns and verbs and the visual design, but then you really work with engineers closely and/or are directly involved in implementing and writing code yourself. And you fully understand, or, you know, not fully, you don't have to be full stack, but you have a deep understanding of the technical architecture of the product you're building. You really are like, okay, given the shape of the back-end
+							- {{youtube-timestamp 2109}} data, what is possible in the interface? That sort of design work, you know, given what models are capable of and what kind of custom skills we're building into this product, how do I explain to users what the capabilities of this product are? Truly digging into the technicals and not living in the world of just user interviews and the market and what color is the sidebar, but caring much more and working much more closely with the engineers. And almost always, I feel like implementing a lot of it yourself.
+							- {{youtube-timestamp 2137}} I've always done my own front-end work just because it's easier. And then the engineers I work with are usually thrilled because they hate CSS. And then they get to go work on the more interesting, difficult stuff, I'd say. It's like the syncing or the back of the front-end work, you know, the more logic stuff, they really get to engage in that, and they don't have to worry about, is this the right border radius on
 				- #### {{youtube-timestamp 2075}} Design Engineers Bridge Product Design And Code
 					- Snipd: https://share.snipd.com/snip/939dc29c-0f08-43b0-99d9-5b1110704194
 					- Design engineers combine visual product thinking with hands-on implementation and a deep understanding of technical architecture.
 					- They use backend data and model capabilities to shape what interfaces can actually communicate.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 2023}} If they exist, what they do, what places they work in?
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 2027}} Yeah, I think they do exist. I think Twitter might have a different definition. Or I think there's a lot of people where, not that I should call it X, sorry, X, Twitter, X, all the same, on X, I feel like a lot of people who get called design engineers or who present themselves as design engineers actually are very good micro-interaction designers, like, here's a cool hover effect on a button, and here's a cool loading transition state. And those things are definitely cool. I don't consider that design engineering, because you could achieve most of those things by just telling an agent to do those without looking at a single piece of code.
+							- {{youtube-timestamp 2061}} To me that's just very advanced, sophisticated motion design and visual design, and that's cool, but I don't consider that design engineering, because I don't think that's a full job for you to do that as a career.
+							- {{youtube-timestamp 2074}} But design engineering now, the people who I think of as good design engineers do the kind of thing I was talking about before, where you step much more into the engineering side of work. So you're still a designer, you're still caring about product nouns and verbs and the visual design, but then you really work with engineers closely and/or are directly involved in implementing and writing code yourself. And you fully understand, or, you know, not fully, you don't have to be full stack, but you have a deep understanding of the technical architecture of the product you're building. You really are like, okay, given the shape of the back-end
 				- #### {{youtube-timestamp 2080}} Design Engineers Work Inside The Architecture
 					- Snipd: https://share.snipd.com/snip/fd7ede60-666e-4c5e-9409-ee5a84496b9a
 					- Design engineering means understanding technical architecture deeply enough to shape feasible interfaces, not merely adding polished animations.
 					- Design engineers often implement front-end work themselves, while engineers focus on synchronization, data flow, and backend logic.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 2027}} Yeah, I think they do exist. I think Twitter might have a different definition. Or I think there's a lot of people where, not that I should call it X, sorry, X, Twitter, X, all the same, on X, I feel like a lot of people who get called design engineers or who present themselves as design engineers actually are very good micro-interaction designers, like, here's a cool hover effect on a button, and here's a cool loading transition state. And those things are definitely cool. I don't consider that design engineering, because you could achieve most of those things by just telling an agent to do those without looking at a single piece of code.
+							- {{youtube-timestamp 2061}} To me that's just very advanced, sophisticated motion design and visual design, and that's cool, but I don't consider that design engineering, because I don't think that's a full job for you to do that as a career.
+							- {{youtube-timestamp 2074}} But design engineering now, the people who I think of as good design engineers do the kind of thing I was talking about before, where you step much more into the engineering side of work. So you're still a designer, you're still caring about product nouns and verbs and the visual design, but then you really work with engineers closely and/or are directly involved in implementing and writing code yourself. And you fully understand, or, you know, not fully, you don't have to be full stack, but you have a deep understanding of the technical architecture of the product you're building. You really are like, okay, given the shape of the back-end data, what is possible in the interface?
+							- {{youtube-timestamp 2111}} That sort of design work, you know, given what models are capable of and what kind of custom skills we're building into this product, how do I explain to users what the capabilities of this product are? Truly digging into the technicals and not living in the world of just user interviews and the market and what color is the sidebar, but caring much more and working much more closely with the engineers. And almost always, I feel like implementing a lot of it yourself.
+							- {{youtube-timestamp 2137}} I've always done my own front-end work just because it's easier. And then the engineers I work with are usually thrilled because they hate CSS. And then they get to go work on the more interesting, difficult stuff, I'd say. It's like the syncing or the back of the front-end work, you know, the more logic stuff, they really get to engage in that, and they don't have to worry about, is this the right border radius on something? I very rarely think they care, and I do care, so it's always worked out well.
 				- #### {{youtube-timestamp 2247}} Design Tools Must Reflect Engineering Constraints
 					- Snipd: https://share.snipd.com/snip/73811697-e55b-4e62-a017-4e1a481c958e
 					- Pixel mock-ups hide the web’s real materials, from performance limits to data loading and race conditions.
 					- Agents could coach designers through unfamiliar error states and help them build state machines.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 2243}} Yeah. I think this gets into, I don't want to blame the designers, because I think it's a failure of tools, because the design tools that everyone used to use, Sketch and Figma, these pixel mock-ups, they have no relationship to the constraints of the medium, which is whatever you're building for, iOS or desktop or the web. You have to understand the materials you're building with in any design role. A table designer would not be oblivious to how oak performs in certain contexts, right? Or how pine dents in a certain way. And in the same way, I think if you're designing for the web and you don't understand performance, or how your app is fetching data, and what's the loading time, and what if there's race conditions? I think if you're oblivious to that, you'll end up with bad design solutions and then with really bad relationships.
+							- {{youtube-timestamp 2287}} Yeah. So I'm hoping agents actually help solve this, right? Because really, then designers using agents can step more into the engineering side and also use agents as a coach and a learning tool and say, okay, the engineers come back and told me that we have this error state I've never heard of in my life. Explain to me why that error state would occur, you know, and help me build a state machine, right? There's all these new tools available, but those old frictions, I have to assume, were just tool-based things.
 				- #### {{youtube-timestamp 2259}} Design Against Real Technical Constraints
 					- Snipd: https://share.snipd.com/snip/e57b5288-0086-46b8-b270-19f5416088a1
 					- Designers should understand their medium’s constraints, including performance, loading, race conditions, and data flow.
 					- Maggie uses live prototypes with sliders and color pickers to tune uncertain values directly in the browser.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 2243}} Yeah. I think this gets into, I don't want to blame the designers, because I think it's a failure of tools, because the design tools that everyone used to use, Sketch and Figma, these pixel mock-ups, they have no relationship to the constraints of the medium, which is whatever you're building for, iOS or desktop or the web. You have to understand the materials you're building with in any design role. A table designer would not be oblivious to how oak performs in certain contexts, right? Or how pine dents in a certain way. And in the same way, I think if you're designing for the web and you don't understand performance, or how your app is fetching data, and what's the loading time, and what if there's race conditions? I think if you're oblivious to that, you'll end up with bad design solutions and then with really bad relationships.
+							- {{youtube-timestamp 2287}} Yeah. So I'm hoping agents actually help solve this, right? Because really, then designers using agents can step more into the engineering side and also use agents as a coach and a learning tool and say, okay, the engineers come back and told me that we have this error state I've never heard of in my life. Explain to me why that error state would occur, you know, and help me build a state machine, right? There's all these new tools available, but those old frictions, I have to assume, were just tool-based things.
+							- {{youtube-timestamp 2312}} And I would say designers that are maybe stuck in the past, who don't want to let go of, oh, I make pixel mock-ups, I don't know if anyone's there anymore. But if they still are, I mean, you're just, yeah, I can't imagine that relationship going well in the future.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 2329}} And then you mentioned Figma. Figma was such a popular tool for a while. That was the interface between engineers and designers. How do you use Figma today? Or how have you used it in the past?
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 2339}} I think I've always used it, not to get to high-fidelity mockups at all. I think to get the rough shape of things past a notebook. It's like a notebook, you can be like, okay, the shape of it is like this, but it's such a rough sketch. And Figma is useful, I find, for being like, okay, exactly what color is the right amount of contrast, to draw attention to this element on the page, or exactly what size does this text need to be to flow well. But then I would never take it to high fidelity, because of course everything always looks different. I mean, I primarily designed for the web. Everything looks different in the browser, right? It depends on the font rendering and all this stuff and responsiveness and then exactly your breakpoints, so
+							- {{youtube-timestamp 2374}} I would always take it into browsers pretty early on. You get medium fidelity in Figma, the shape of it, and then you take it into a prototype and then you can really tweak and refine.
+							- {{youtube-timestamp 2384}} And of course with agents now, it's just, I point an agent at my Figma mock-up and I'm like, just get all of that in there, and then make what's called a jig, which is where you get little sliders and variables attached to a little, a jig. A jig comes from woodworking. Or you make a little device that helps you do one specific job. So with design, when you're working on a live prototype, you say, okay, here are the variables I'm not sure about. I'm not sure about my headline size. I'm not sure about these colors. Give me sliders and color pickers and all these things, or the animation curve I'm not sure about. And then I'll tweak it live. And then when I have the values just right in the live version, then we'll commit those to be the actual values, much faster.
 				- Transcript
 				  collapsed:: true
 					- [[Person/Gergely Orosz]]
@@ -499,10 +997,30 @@ date-created:: 2026-09-23
 					- Snipd: https://share.snipd.com/snip/18a44ef1-022b-4eed-b1ac-2ae4ff06d350
 					- Maggie uses Figma for rough structure, contrast, and typography—not high-fidelity mockups disconnected from browser realities.
 					- She moves quickly into prototypes because font rendering, responsiveness, and breakpoints change how designs actually work.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 2335}} How do you use Figma today? Or how have you used it in the past?
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 2339}} I think I've always used it, not to get to high-fidelity mockups at all. I think to get the rough shape of things past a notebook. It's like a notebook, you can be like, okay, the shape of it is like this, but it's such a rough sketch. And Figma is useful, I find, for being like, okay, exactly what color is the right amount of contrast, to draw attention to this element on the page, or exactly what size does this text need to be to flow well. But then I would never take it to high fidelity, because of course everything always looks different. I mean, I primarily designed for the web. Everything looks different in the browser, right? It depends on the font rendering and all this stuff and responsiveness and then exactly your breakpoints, so
 				- #### {{youtube-timestamp 2384}} Build Your Own Figma With Live Prototypes
 					- Snipd: https://share.snipd.com/snip/e263cad1-5a71-4987-8cfa-5b940807517d
 					- Maggie uses Figma for rough structure, then moves into browsers to refine real rendering and responsiveness.
 					- Agents can turn mockups into adjustable prototypes with sliders for headlines, colors, and animation curves.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 2374}} I would always take it into browsers pretty early on. You get medium fidelity in Figma, the shape of it, and then you take it into a prototype and then you can really tweak and refine.
+							- {{youtube-timestamp 2384}} And of course with agents now, it's just, I point an agent at my Figma mock-up and I'm like, just get all of that in there, and then make what's called a jig, which is where you get little sliders and variables attached to a little, a jig. A jig comes from woodworking. Or you make a little device that helps you do one specific job. So with design, when you're working on a live prototype, you say, okay, here are the variables I'm not sure about. I'm not sure about my headline size. I'm not sure about these colors. Give me sliders and color pickers and all these things, or the animation curve I'm not sure about. And then I'll tweak it live. And then when I have the values just right in the live version, then we'll commit those to be the actual values, much faster.
+							- {{youtube-timestamp 2427}} It's like build your own Figma as needed.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 2429}} And inside of GitHub, how do designers work? How do yourself and other designers work? Because it's a bigger organization, you're building a tool for developers with a bunch of different parts.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 2437}} I mean, I don't spend that much time with the GitHub design org proper. I know some people in there.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 2443}} Because you're Next.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 2444}} So the GitHub Next team is a little bit isolated. We still have good relationships with the rest of the org, but a little bit by design. Supposed to be kind of the R&D team out on the side, doing weird stuff and then trying to convince the rest of the org that we're right and they should pay attention and do our thing, which is a whole different politics thing. So I like
 				- Transcript
 				  collapsed:: true
 					- [[Person/Gergely Orosz]]
@@ -553,10 +1071,26 @@ date-created:: 2026-09-23
 					- Snipd: https://share.snipd.com/snip/aabf6bbe-39da-4d42-b197-e8c5509fe295
 					- AI makes it feasible to build sophisticated, high-fidelity prototypes quickly instead of relying on crude Figma mockups.
 					- Previously, ugly prototypes distracted users and felt insincere when key screens were only faked.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 2711}} And then with LLMs, since they came out, how has your design process changed? You've already mentioned how it's now a lot easier. You can, for example, if you have an interface design, you can ask Claude or Codex or any other agent to implement it. But what has changed, between the notebook, between your mock-ups, between the prototype that gets there, what parts are easier and maybe what parts are trickier?
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 2736}} It's definitely all faster. And it definitely all feels a bit easier. I will say, I definitely remember not suffering through making elaborate prototypes in Figma, because that was going to be faster than building more complex things in the web. And then trying to show them to users with these click-through prototypes, where obviously everything is faked. So I remember that on the user thing. And then sometimes you have to have these weird things that click here.
+							- {{youtube-timestamp 2762}} And then yeah, so you're in these user interviews and the user's trying to click something that you haven't hooked up to a fake new screen, and the whole thing just feels a bit insincere. And then even when you did make prototypes, you couldn't spend any time making them look nice. So then sometimes the users would get a bit distracted or confused by the fact it looked terrible. But yeah, we only had a few days and then we've got to move on to the next prototype and
 				- #### {{youtube-timestamp 2980}} Live Prototypes Finally Make Software Design Direct
 					- Snipd: https://share.snipd.com/snip/ed3d673a-18ed-4e4b-a0ab-5b35171cf4ab
 					- Maggie Appleton connects AI prototyping to Bret Victor’s vision of instantly tweaking an artifact and seeing the effect directly.
 					- Unlike traditional code-build-preview cycles, sliders make every animation variable immediately manipulable.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 2945}} Exactly. I can be like, make me a slider for controlling the animation variables on constellation experiment. So we'll let that work. But it's really simple.
+							- {{youtube-timestamp 2958}} If you tell it make me controls or make me a slider for whatever it is you're trying to do, you just think about, okay, what are the ways I need to tweak this to make it work? It's pretty good about just making them. I have a skill, so it knows how to make them so that they look decent, right? And based on your preferences, what you figured out works.
+							- {{youtube-timestamp 2975}} Yeah. But then it's great, it just hooks it up and then you can just play with it. It's a whole different way to design. It's very Bret Victor, the live programming stuff.
+							- {{youtube-timestamp 2988}} Bret Victor is an engineer, also a designer. He's off doing some crazy stuff now. He did a set of talks between, I don't know, it was like 2010, 2013. One of them is "Stop Drawing Dead Fish", and it's about how programming is not a very live medium.
+							- {{youtube-timestamp 3002}} You code in the editor, you do your whole build, and then you look at it in the browser or wherever it is, and these two things feel very disconnected. You're tweaking variables in code and then you have to go see the effect, and it's not a direct connection.
+							- {{youtube-timestamp 3015}} And so his whole thing was, you need to have instant direct feedback at all times to be able to look at the artifact you're making and directly tweak it. And it's like this kind of stuff come to life. Now we finally can do it.
 				- Transcript
 				  collapsed:: true
 					- [[Person/Gergely Orosz]]
@@ -602,6 +1136,18 @@ date-created:: 2026-09-23
 					- Snipd: https://share.snipd.com/snip/4ef9433d-a3db-443b-9099-131081f8a18e
 					- Generating twenty AI designs can validate simple concepts, but new product primitives require human research, judgment, and contextual taste.
 					- Models overapply generic principles, such as labeling every control, producing interfaces that are technically explainable but visually worse.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 3095}} Think in cases where you don't have a designer to hand and you're trying to validate a product or prove a hypothesis, but you need an interface for it. It's great to just use a model to be like, sure, make me 20 high fidelity designs. I might look at those designs and be like, wow. It all depends on taste too, right?
+							- {{youtube-timestamp 3110}} I might look at them and think, okay, well, these look obviously generated by AI to me. And I don't know that they're going to do the job that they need to do. Again, it depends on the context. If it's something simple, needs a button and a sidebar, fine.
+							- {{youtube-timestamp 3123}} But if we have some new primitive we're trying to make, figure out the shape of, that's when you really need a designer to come in. And really, it's just someone who's assigned to think through the problem properly, put in the brain work and be like, okay, do the experiments, show them to users, figure out what people actually understand and don't. And that's really the labor a designer should come in and do.
+							- {{youtube-timestamp 3144}} But I think it's completely fine for developers without access to one to use models as much as they can. But when models do designs for me, I, of course, look at them and think, that is terrible quality, that is awful. Even to the extent of, I think they've been prompted with what we would call universal design principles, but they don't understand nuance and context, and then I think they stick to them too strictly. So I find the agents want to put a label on everything in the interface.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 3144}} Label meaning?
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 3173}} Like a small bit of text. There might be a little button that's to close the sidebar. And we would usually use an icon button for that, because most people are trained that this little button near the sidebar means it'll close it. And they'll experiment with it and they'll click it and they'll figure out that is correctly what it does.
+							- {{youtube-timestamp 3188}} But the agent will write "close sidebar" or "close modal" in the top right hand of the modal. And you're like, there's now a lot of text on this page. They'll just put four lines of instructional text over a button, and just things where you're like, I understand in the model's mind, it's thinking, oh, this is how we make the interface explainable to the human, you know.
 				- Transcript
 				  collapsed:: true
 					- [[Person/Gergely Orosz]]
@@ -624,6 +1170,15 @@ date-created:: 2026-09-23
 					- Snipd: https://share.snipd.com/snip/af04a306-55e7-4299-8904-9dcdd9ee3cc1
 					- Illicit repeatedly tested novel AI interfaces, but scientists kept asking for a table.
 					- Returning to spreadsheets minimized cognitive load because users already knew the workflow.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 3242}} Like what formats do we have to show users data? It's dashboards and sidebars and documents. There's a lot of things that haven't changed. We actually had a good story about this from Elicit, where the app was helping scientists extract data from papers.
+							- {{youtube-timestamp 3256}} And they were very used to doing this in Excel spreadsheets. They'd get a big Excel spreadsheet, put the papers in, one on each row, and then they'd extract each piece of data into the cells, right? Pretty standard process. But of course, in the beginning of Elicit, we were like, oh, that's so old school. There must be some much better interface for the data extracted from papers.
+							- {{youtube-timestamp 3275}} So we tried all this crazy stuff. There were infinite canvases with cards spread everywhere. There was one that's a bunch of cards that are all linearly stacked. We were like, maybe it's more like Notion with these composable documents with rich interfaces.
+							- {{youtube-timestamp 3288}} We tried all this stuff. And every user interview I did, users were just like, this is very confusing. Can I just have a table? Every time. And so after a couple months of this, like, oh, what's the new UI of AI? We were like, oh, it's a table.
+							- {{youtube-timestamp 3302}} Well, at least in our use case, it turned out the interface people were using was the best because it was the most familiar to them. And it caused the least amount of cognitive load for them to use the tool. So we were right back to tables. That's fine, it was good to go on that journey.
+							- {{youtube-timestamp 3318}} But sometimes we have this notion that the UI of AI will be so wildly different from our current imaginings, and sometimes it's really not at all. You can do more powerful things, I think there's lots of leverage, but I expect it to all be built with documents and
 				- Transcript
 				  collapsed:: true
 					- [[Person/Gergely Orosz]]
@@ -669,6 +1224,18 @@ date-created:: 2026-09-23
 					- Snipd: https://share.snipd.com/snip/8b0b3af7-6c44-4063-a9da-e7e1a6e9ecf8
 					- Models can perform brilliantly on one task and fail unpredictably on another, creating an inflated sense of their overall competence.
 					- Unlike human experts, models may repeatably change performance with prompting, context, randomness, or model updates.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 3512}} Okay, so I think this is similar to Ethan Mollick, who has this phrase, the jagged frontier. It's pretty much that, but I came up with capabilities gaslighting before I read his work. But so that people are familiar with the concept, it's that models are really, really good at some things and really bad at others. And it's really hard to predict when you give it a certain task which of those it's going to fall into.
+							- {{youtube-timestamp 3534}} And then capabilities gaslighting was the feeling I got early on from using them, where they convince you they're so capable because they'll really impress you on one task, and then you try them on something else and they fail. And you kind of feel like, I feel like you kind of gaslit me, imagining that you're this extremely intelligent agent or model, and then you fall on your face.
+							- {{youtube-timestamp 3551}} And then sometimes I feel like they fail but I haven't totally noticed how badly they failed, because I still have this belief that, oh, but you're a frontier model, Opus could never really get this wrong. It totally does all the time. So it's such an inconsistent experience. And it's so different to working with a human.
+							- {{youtube-timestamp 3567}} If you find a human who you feel is really an expert in a topic and you work with them, it's very unusual for them to be inconsistent in their performance, right? It's very rare for them to suddenly forget all of their expert knowledge on a topic. And if they did, you would be very, are you having a mental breakdown? This is very weird behavior.
+							- {{youtube-timestamp 3586}} But this is how models behave every day. One day they will actually perform really well on a task and they could fail at that same task the next day, because you prompted differently or they had different contexts available or random, whatever it is, stochastic outputs, they just didn't do as well. So I think it's hard to work with them because you never quite know what you're going to get.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 3607}} Yeah, I guess we just need to keep this in mind, right? Because this is ongoing. Of course, we always say and we have to see that the models improve, but you want to be skeptical.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 3615}} Yeah. Of course, there's some baseline with frontier models. They're not going to perform below a certain bit. But of course, the models are changing all the time. And people complain about this, that you upgrade to a new model and it changes what it's good at.
 				- Transcript
 				  collapsed:: true
 					- [[Person/Maggie Appleton]]
@@ -687,14 +1254,48 @@ date-created:: 2026-09-23
 					- Snipd: https://share.snipd.com/snip/2d1bf87e-a808-46fb-9af6-af38d5d23797
 					- Individual agents accelerate developers, but software still requires teams to align on product decisions, interfaces, and technical approach.
 					- Current coding agents run in private local sessions, creating a gap for real-time multiplayer planning and collaboration.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 3635}} You did a talk titled "One Developer, Two Dozen Agents, Zero Alignment: Why We Need Collaborative Engineering". Can you talk about just this observation, one developer, two dozen agents, zero alignment?
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 3643}} Yeah, so this is a problem that the GitHub Next team has been focused on trying to find various ways to solve, I think for well over a year now. It's this acknowledgement that we are now working with these agents locally on machines and it speeds up each individual person. Like us alone with the agent, we can go really fast. The software is always built on a team, right?
+							- {{youtube-timestamp 3663}} You're always trying to align with the product managers and the designers and the other engineers, on what decisions you're all making. And we don't actually have good tools in place to do that. It's sort of like we have Slack. People might have something like Linear or GitHub issues where they're doing issues.
+							- {{youtube-timestamp 3677}} But there's tons of pre-planning work before you write an issue. Because usually when you write an issue, you're ready to hand it off to an agent. But before that point, you have to have agreed upon your approach. And should we build this feature? Is this feature the right shape? Does it have the right interface? Do we have some sort of database migration we have to do?
+							- {{youtube-timestamp 3692}} There's all this upfront work. And not many good tools to do that work in, is how we felt, especially not ones with agents involved in them. So the biggest gap seems to be, we have agentic coding tools, but none of them are real-time multiplayer. All your sessions are private and shared to you, often locally on your machine. So you couldn't possibly share it with someone.
+							- {{youtube-timestamp 3710}} This is starting to change now. We have seen some products come out that are trying to do live multiplayer agent work, like Buzz from Jack Dorsey. And Ace, the prototype that we made at GitHub Next, was in this direction. It was shared compute, shared sandboxes in a Slack-like interface. So you're coding and talking at the same time.
 				- #### {{youtube-timestamp 3677}} Align Teams Before Agents Implement
 					- Snipd: https://share.snipd.com/snip/c2c625df-6534-43af-9fa8-39e5eca6ac79
 					- Align teams before implementation because agents accelerate coding while leaving product, architecture, and interface disagreements unresolved.
 					- Record decisions, context, ownership, specifications, and verification criteria before handing work to agents.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 3643}} Yeah, so this is a problem that the GitHub Next team has been focused on trying to find various ways to solve, I think for well over a year now. It's this acknowledgement that we are now working with these agents locally on machines and it speeds up each individual person. Like us alone with the agent, we can go really fast. The software is always built on a team, right?
+							- {{youtube-timestamp 3663}} You're always trying to align with the product managers and the designers and the other engineers, on what decisions you're all making. And we don't actually have good tools in place to do that. It's sort of like we have Slack. People might have something like Linear or GitHub issues where they're doing issues.
+							- {{youtube-timestamp 3677}} But there's tons of pre-planning work before you write an issue. Because usually when you write an issue, you're ready to hand it off to an agent. But before that point, you have to have agreed upon your approach. And should we build this feature? Is this feature the right shape? Does it have the right interface? Do we have some sort of database migration we have to do?
+							- {{youtube-timestamp 3692}} There's all this upfront work. And not many good tools to do that work in, is how we felt, especially not ones with agents involved in them. So the biggest gap seems to be, we have agentic coding tools, but none of them are real-time multiplayer. All your sessions are private and shared to you, often locally on your machine. So you couldn't possibly share it with someone.
+							- {{youtube-timestamp 3710}} This is starting to change now. We have seen some products come out that are trying to do live multiplayer agent work, like Buzz from Jack Dorsey. And Ace, the prototype that we made at GitHub Next, was in this direction. It was shared compute, shared sandboxes in a Slack-like interface. So you're coding and talking at the same time.
+							- {{youtube-timestamp 3727}} So people, I think, are beginning to realize this is the next big thing we need to push on to improve in our agentic coding tools. But it's still totally unsolved. Even once you have a Slack interface and there's an agent in there, you still need tools to agree on things. This is where I'm pushing on, maybe decisions need to become a sort of first class primitive.
+							- {{youtube-timestamp 3747}} When an agent presents a decision to a human, you first need to have the decision be large enough on screen to give you the information about it. But then also you probably need someone else in your team to come help you make that decision, or at least give input on it. And then someone has to be responsible for having made that decision.
+							- {{youtube-timestamp 3763}} You need a record of, here are the things we decided, here's the context we're going to feed to the agent. There's some moment where we've written a clear set of issues or specs that we're going to hand off to be implemented. And then some verification check on the other side. But you all need to be so aligned up to the point of implementation, because in the old world, implementation took so long you could adjust along the way.
+							- {{youtube-timestamp 3783}} But now because there's a sort of hard handover point to an agent, you need to all be aligned up front in a way that we're not at the moment. Even our team, we feel this all the time.
 				- #### {{youtube-timestamp 3817}} Ace Turned Slack Into a Multiplayer Coding Workspace
 					- Snipd: https://share.snipd.com/snip/442e4b68-dd1b-4c1a-811d-4b94f5f117e8
 					- GitHub Next built Ace as a shared workspace combining Slack, cloud sandboxes, micro VMs, coding, and pull-request reviews.
 					- The prototype proved too ambitious for a three- or four-person team, so GitHub shipped its sandboxes separately.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 3797}} You mentioned GitHub Next and the prototyping that you're doing. Can you talk a little bit about the types of projects you've built, that you've experimented with, some learnings that you've
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 3807}} had, maybe give us a direction of things you're now excited about exploring?
+							- {{youtube-timestamp 3812}} Yeah, yeah. So I joined the team a little less than a year ago, but most of the time we were working on this prototype, Ace, which is Slack plus cloud compute, sandboxes and micro VMs and a bunch of other stuff in there. You can open PRs and review your code and that kind of stuff. So it was an all-in multiplayer workspace, and it was a prototype, but it turned out to be extremely ambitious for our small team.
+							- {{youtube-timestamp 3838}} We had three or four people working on it at a time. And we wanted at some point to take it to a real product, but it just turned out that was not feasible with the number of people we had. But we're trying to take bits of it and ship it to the rest of GitHub. Sandboxes have now gone out to be part of the GitHub Desktop app.
+							- {{youtube-timestamp 3854}} That's being used in other ways. And I think it's also made leadership take the multiplayer thing more seriously and try and find other ways we might ship that to the product.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 3862}} And this is a really promising direction. We already have a deep dive out by the time this podcast is out about Ramp, who have built just this inside, and they made it collaborative. It's forced collaborative, you cannot make anything private. Oh yeah, we did. They have multiple interfaces.
+							- {{youtube-timestamp 3878}} They have it running, it's called Inspect, and it runs in Slack. There's a Chrome plugin as well, there's a web interface. And they did find that in the Slack channels with product managers, designers, they can talk, the agent Inspect gets all this input. And then
 				- Transcript
 				  collapsed:: true
 					- [[Person/Gergely Orosz]]
@@ -735,14 +1336,63 @@ date-created:: 2026-09-23
 					- Snipd: https://share.snipd.com/snip/209f25c8-fda8-4c71-9df4-3b7c867336a4
 					- As AI takes over small decisions, developers may spend less time in code and risk losing the hands-on feel of craft.
 					- Gergely illustrates the tension with a trivial slider decision that still might matter.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 4040}} A question I wanted to ask you is, it's coming from a developer angle. It's what happens, in your experience, observations, when we start to give more and more decisions to the agent. And I'm going to quote a developer, Jorge Manrubia, who wrote an article called "Oh My Craft". He wrote, "The need to intervene on the small stuff is decaying quickly as models improve. And when models are capable enough to handle those details themselves, spending too much time on these details starts to feel like a poor use of human attention."
+							- {{youtube-timestamp 4071}} And he writes about how he's not opening it. He rarely opens his code editor anymore. It's been months since he wrote a single line himself. But the thing is, he used to live inside and see all the details, and there is a sense that craft has to do with being there with the details.
+							- {{youtube-timestamp 4088}} And of course you're coming from a design perspective, but what have you observed of your own craft changing, decaying, or what you're seeing? Do you think there's a danger, as there's this temptation? We talked about just, good, good, good, make this decision. We just did this with the slider, which didn't matter.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 4109}} Yeah, but it can matter. But it can matter.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 4112}} Or does it matter?
 				- #### {{youtube-timestamp 4192}} Human Style Becomes More Valuable After Automation
 					- Snipd: https://share.snipd.com/snip/d3bff7fc-49f2-461d-8f8e-8427610e1d7f
 					- Automation may remove implementation details without removing the human need for taste, style, and satisfying creative involvement.
 					- AI-generated interfaces risk converging on recognizable aesthetics, making human variation a signal of care and originality.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 4109}} Yeah, but it can matter. But it can matter.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 4112}} Or does it matter?
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 4113}} It's hard because I would say I'm not a true engineer in the sense of, I don't necessarily care about clean code that much.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 4121}} But you care about great design.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 4122}} But I do care about design. But the thing is, they definitely can't do design to my standards yet. Or I have to still be really involved to get the design to look and feel the way I would make it. So I'm annoyed almost that I'm always in there being like, no, that is a terrible transition. Here's how we should do it, you know, like this.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 4140}} So you're into details. You're not letting go of those details.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 4143}} Yeah, because I wish I could. I've written— Do you? Design. Well, I don't know.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 4148}} I want to push you on this.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 4150}} Yeah. I keep thinking this. I keep trying to write design skills that tell the agents exactly my design preferences, which won't be universal. I have preferences about how much padding I like between a border and an element, right? And that's not everyone's preference and it's not right for every product. But for me, there are set rules: is this much padding, is this kind of border, border shadow, it's pretty standard.
+							- {{youtube-timestamp 4171}} And I've tried to write these rules, but then they don't universally apply them properly and it doesn't work. And so I always end up in there changing specific values that you would think by this point in time would have been automated away, the way that we all talk about that agents are taking over software. You would think this would be so trivial for them to implement, a certain kind of, whatever it is, opacity level on a border.
+							- {{youtube-timestamp 4190}} So I kind of think, if I woke up tomorrow and the skill just worked, or the agents just had enough context and they designed exactly to my specs, I wonder if I would be like, oh, all the fun bit is gone. Is it satisfying to have a gorgeous interface appear in front of me, but I didn't do anything to make it? I'm not sure.
+							- {{youtube-timestamp 4210}} I also think about this with interior design stuff. Have you been on Pinterest anytime in the last two years? I'm familiar with it. And my wife is, and when
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 4221}} We're decorating a new house, I remember collecting these things. Yeah, we work with an interior designer and my wife collected a lot of things, but I was also there, and you have these kind of, we're kind of thinking like this but not quite. But when you mix this, trying to explain, we didn't have the tools beyond just taking screenshots.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 4221}} So yes, yes, yeah, familiar, and open print, just right. Yes. It's a lot of it is AI now if you get on there. Oh really, there's gorgeous rooms if you search for certain things. But you look and you can start to see, oh, that's for sure AI, that's for sure AI. Which is definitely problematic when they're images of a physical space, because then you go, well, the light might not be accurate, or this is all just fake.
+							- {{youtube-timestamp 4260}} And they look beautiful, but you kind of think, well, someone didn't make that room and that's not a real room that exists. So it's almost irrelevant to my interior design. And I kind of wonder if it's like this with interfaces, where it is all objectively gorgeous because it's been trained. It's very much like everything that was on the web that we've clicked thumbs up on.
+							- {{youtube-timestamp 4279}} But with interfaces, if they all become extremely slick, like, you take what's popular right now, the Linear and the Vercel aesthetic, right? Very minimalist, very clean, very white, a little bit of rounded corners. If all the agents can implement that, no problem, just dead on, people will start to design in different ways, because that will become a tell that you've just used an agent to do the design. And if you want to look like you're going to stand out, you need to have some human do something new and different.
+							- {{youtube-timestamp 4302}} I think it gets into design, although it has universal basics, like is the text big enough to read, do you have enough space around things. A lot of it is fashion. It's in fashion right now to look a little bit like Linear. It's not in fashion to look a bit like MySpace, but it was a while ago. And there'll be, in 10 years in the future, if you look like Linear, you're very out of date. You look like some old crafty piece of software and there'll be some new aesthetic that comes up.
+							- {{youtube-timestamp 4327}} So it's like the models can't necessarily understand that design is within a cultural context, and that cultural context is always changing and it signals different things to people. And if people read it as, oh, they didn't care about this site because it's just the bland basic code. Claude has a specific design language, it's very noticeable, right? Cream background, slightly red text, this eyebrow text on things.
+							- {{youtube-timestamp 4348}} You look at it and you're like, yeah, Claude generated that, no human was involved in this, I don't know if I'm going to bother looking at it. So it gets into this, the aesthetic style you pick communicates to the person viewing the product or page, and things that clearly were made by agents.
 				- #### {{youtube-timestamp 4274}} AI Aesthetics Will Become Easy To Spot
 					- Snipd: https://share.snipd.com/snip/94b295a1-2202-4404-9065-3250190af1eb
 					- As agents converge on polished Linear-style interfaces, distinctive human design will become necessary to stand out.
 					- Design signals cultural context: today’s rounded minimalism may look as dated as MySpace in ten years.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 4275}} It's very much like everything that was on the web that we've clicked thumbs up on. But with interfaces, if they all become extremely slick, like, you take what's popular right now, the Linear and the Vercel aesthetic, right? Very minimalist, very clean, very white, a little bit of rounded corners. If all the agents can implement that, no problem, just dead on, people will start to design in different ways, because that will become a tell that you've just used an agent to do the design.
+							- {{youtube-timestamp 4296}} And if you want to look like you're going to stand out, you need to have some human do something new and different. I think it gets into design, although it has universal basics, like is the text big enough to read, do you have enough space around things. A lot of it is fashion. It's in fashion right now to look a little bit like Linear. It's not in fashion to look a bit like MySpace, but it was a while ago.
+							- {{youtube-timestamp 4318}} And there'll be, in 10 years in the future, if you look like Linear, you're very out of date. You look like some old crafty piece of software and there'll be some new aesthetic that comes up. So it's like the models can't necessarily understand that design is within a cultural context, and that cultural context is always changing and it signals different things to people.
+							- {{youtube-timestamp 4335}} And if people read it as, oh, they didn't care about this site because it's just the bland basic code. Claude has a specific design language, it's very noticeable, right? Cream background, slightly red text, this eyebrow text on things. You look at it and you're like, yeah, Claude generated that, no human was involved in this, I don't know if I'm going to bother looking at it. So it gets into this, the aesthetic style you pick communicates to the person
 				- Transcript
 				  collapsed:: true
 					- [[Person/Gergely Orosz]]
@@ -800,10 +1450,26 @@ date-created:: 2026-09-23
 					- Snipd: https://share.snipd.com/snip/3ac614e6-dff9-4789-b6bf-6801384a7660
 					- Maggie Appleton uses digital gardens to publish unfinished writing while clearly signaling its development stage.
 					- Seedling, budding, and evergreen labels let her work publicly without perfectionism, including essays updated paragraph by paragraph.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 4457}} of original writing and human writing. You've talked about the concept of the digital garden. What is a digital garden? It's a blog but with some extra rules attached, so it's a blog where
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 4466}} every piece you put up does not have to be finished, as long as you clearly signal to the audience it's not. So it's a blog that you grow over time. So you can put a piece up that's half done and then update it later. You just have an update of that date.
+							- {{youtube-timestamp 4480}} And I usually communicate it with three different stages my posts go through. So I have seedlings, budding, and evergreen, very in the gardening metaphor. So I can put up something that is a half finished thought and mark it as a seedling, and then come back to it later and finish it up or fix it. Writing in this way has allowed me to publish much more than I ever would have otherwise.
+							- {{youtube-timestamp 4500}} I have perfectionistic tendencies. This was very much a counter to that, where of course I want some of my stuff to be my best work, my most polished, but it's completely unrealistic. I would never put anything up if that were the case. So working in this way really freed me.
+							- {{youtube-timestamp 4516}} I started my garden in 2020, I think. So it's not been that long, but I've written a fair amount, more than most people have blog posts on their website, because some of them are frankly three paragraphs long. Or some of them, I have big, long essays that have taken me a long time to write, but halfway through the essay you will hit something that says draft in progress, and everything below that point is pretty rough.
+							- {{youtube-timestamp 4539}} One of these I started three years ago. Every time I have some free time I go back to it, finish one more paragraph, move the little draft notification down. It allows me to work in public, which I also think helps people get to see behind the garage door a little bit, because often the notes below the draft point are bullet points or, oh, I should say something about X in here. I'll just put it on the website as long as it's marked appropriately.
 				- #### {{youtube-timestamp 4462}} Digital Gardens Defeat Perfectionism
 					- Snipd: https://share.snipd.com/snip/566f514f-aeef-45ea-9346-68c4fa932274
 					- Digital gardens let writers publish unfinished thoughts while clearly signaling their status and improving them over time.
 					- Maggie’s seedling, budding, and evergreen stages helped her publish far more than polished essays alone would allow.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 4462}} A blog but with some extra rules attached, so it's a blog where every piece you put up does not have to be finished, as long as you clearly signal to the audience it's not. So it's a blog that you grow over time. So you can put a piece up that's half done and then update it later. You just have an update of that date.
+							- {{youtube-timestamp 4480}} And I usually communicate it with three different stages my posts go through. So I have seedlings, budding, and evergreen, very in the gardening metaphor. So I can put up something that is a half finished thought and mark it as a seedling, and then come back to it later and finish it up or fix it. Writing in this way has allowed me to publish much more than I ever would have otherwise.
+							- {{youtube-timestamp 4500}} I have perfectionistic tendencies. This was very much a counter to that, where of course I want some of my stuff to be my best work, my most polished, but it's completely unrealistic. I would never put anything up if that were the case. So working in this way really freed me. I started my garden in 2020, I think.
 				- Transcript
 				  collapsed:: true
 					- [[Person/Gergely Orosz]]
@@ -845,6 +1511,25 @@ date-created:: 2026-09-23
 					- Snipd: https://share.snipd.com/snip/ecd19647-97d4-4b98-800f-7936ae535c4c
 					- Use agents as patient tutors to learn typography, interface principles, backend concepts, and usability methods.
 					- Engineers can expand their product judgment by studying users’ cultural context, work environments, and moments of need.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 4871}} Yeah, I think it's in the same way that I'm advocating that designers shouldn't be afraid to get involved in engineering now, vice versa, right? In the same way that a designer can sit down with Codex or Claude or Copilot and be like, hey, explain the back end to me, not the details, the shape of it. I think in the same way a developer can sit down with an agent and be like, okay, I need to design a sidebar. What are the principles of good sidebars?
+							- {{youtube-timestamp 4896}} Okay, I have my blog. Teach me about typography. You now have a very patient tutor who's just going to sit there and be like, okay, this is where you would vary line height. Here's exactly how many characters you should fit on a line. They can just teach you. And as long as you're willing to learn and you want to expand into the design skills.
+							- {{youtube-timestamp 4912}} I think before it was very hard to learn these things. You had to be on a design team, especially product design stuff where it's like, how do you interview users? How do you do a usability test? Not generally available information really, except for some books. But now you sit down with an agent, you're like, hey, here's the data I got. Give me some ideas for possible interfaces that would represent it. Well, they're decent at that conceptual stuff, even if they don't always get the interface right.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 4937}} Going back to your anthropology roots, what are things that us engineers, people building software, could take inspiration or learn from anthropology, like methods, approaches, things that have really served you well?
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 4950}} Yeah. I feel like I look at everything a little bit through the lens of anthropology, or I try to. It's like a pair of glasses you can put on, in the same way you can be like, I'm going to look at this like an engineer. But if I look at things like an anthropologist, you think about what are the unspoken cultural rules going on in this interaction or this context or this problem.
+							- {{youtube-timestamp 4969}} And especially in the context of engineering, sure, maybe you're building a database, but you're building it for users in a cultural context, right? They have assumptions about how they decide something is trustworthy. They have assumptions about how they decide that something is worth their time, or how a flow should go. And it's all culturally contained. It depends also on how international your audience is and who you're designing for.
+							- {{youtube-timestamp 4996}} But there are cultures where time flows from right to left, or from up to down, but we assume in the West time flows left to right. But that's not universal everywhere. I think just reading a little bit of cultural anthropology and understanding how varied people's worldviews can be. Some cultures see, not see different colors, but categorize colors differently in a way that makes them see them differently.
+							- {{youtube-timestamp 5019}} They might see blue and green as actually one unified color. And if you're designing an interface, not that that necessarily directly applies, but I think it's understanding there's a broad range of ways humans can interpret something. And if you're building tools for humans, there might be some way you could teach them to see the world differently through the thing you're building as well, change
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 5038}} their perspective on how they interpret reality. And then in anthropology, you said that one thing they would do, the traditional anthropologists would live with natives and be embedded in them. Is that something that maybe now that AI is making code a bit easier? As engineers, I think it's pretty clear that an engineer becomes more valuable the more they take on the other parts of the business, the more empathy, the understanding.
+							- {{youtube-timestamp 5064}} Could it be just an idea when you have the opportunity to just embed yourself with customers, become a customer yourself? This used to be the thing, right? Amazon had their customer obsession, which also starts with understanding the customer. But I guess this might be very natural as someone who's an anthropologist, which is, go and try to be one of them, whoever you're building with.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 5084}} There is a good point that engineers are about to have more free time in a certain way. I know there's an infinite number of engineering problems to solve. And then it's maybe we solve them better by having that extra time. But a big part of this is, yeah, you could expand into more of the design side, and past the interface is really the user research side.
+							- {{youtube-timestamp 5104}} And that is, go fully understand the domain you're designing or building for. What real world context are people using it in? When are they pulling out your app? In a factory? Are they in a tube? I don't know. A little bit of understanding context of use is a big thing that user researchers do. And then understanding the moment when someone reaches for your product versus reaching for a different product. When do they decide you're the right solution?
 				- Transcript
 				  collapsed:: true
 					- [[Person/Gergely Orosz]]
@@ -878,6 +1563,20 @@ date-created:: 2026-09-23
 					- Snipd: https://share.snipd.com/snip/6a7100a0-015c-4e30-bbef-eea4d494bcb9
 					- Maggie recommends *Addiction by Design*, an anthropological study of gambling-machine addicts and the designers who keep them playing.
 					- Casinos remove clocks and windows so gamblers lose their sense of time, prompting reflection on phones and Instagram.
+					- Transcript
+					  collapsed:: true
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 5104}} And that is, go fully understand the domain you're designing or building for. What real world context are people using it in? When are they pulling out your app? In a factory? Are they in a tube? I don't know. A little bit of understanding context of use is a big thing that user researchers do. And then understanding the moment when someone reaches for your product versus reaching for a different product. When do they decide you're the right solution?
+							- {{youtube-timestamp 5127}} That definitely gets into the user research side, but that's a great thing for engineers to expand into if that appeals.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 5133}} And as closing, what books would you recommend, ones that you enjoyed reading and why?
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 5137}} One of my favorites that I give to most people is called Addiction by Design. So it's about people addicted to gambling machines in Las Vegas, but it's an anthropologist doing it. And she talks about both living among these people and their experiences, but also the machine designers. How do you design a machine that is so addictive that someone sits at it for 12 hours straight? It's a really fascinating thing.
+							- {{youtube-timestamp 5160}} And how are gambling casinos designed to have no windows? So there's no time around you as you sit at this machine. It's by Natasha Dow Schüll. And I read it in university and I love it. It's a total mix of cultural anthropology, participant observation, and also machine design and engineering, and how do you design addictive systems, which of course you read it and then you think about phones and Instagram and you reflect a little bit on what are these systems we're building for people.
+						- [[Person/Gergely Orosz]]
+							- {{youtube-timestamp 5191}} Maggie, thanks so much. This was very interesting.
+						- [[Person/Maggie Appleton]]
+							- {{youtube-timestamp 5193}} Yeah, thanks for having me. Really fun.
 				- Transcript
 				  collapsed:: true
 					- [[Person/Maggie Appleton]]
