@@ -1,0 +1,23 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Portmanteau
+	- In this garden, **Portmanteau** pages model terms formed by blending the sounds and meanings of two or more source words into one.
+	- ## Examples in this garden
+		- [[Satis/fice]] — satisfy + suffice
+	- ## An add-on to a term page
+		- Portmanteau is declared after the type that shapes the page, on a page that is already a term: [[Logseq/Entity/Term]] for a glossary entry, or [[Logseq/Entity/Concept]] when the blend gets a full explanation, as [[Satis/fice]] does.
+		- Declaration, deduplication, page shape and frontmatter follow the primary type. This page covers only what a portmanteau adds.
+	- ## What counts as a Portmanteau
+		- The word is a blend: parts of two or more source words are fused, and the result carries the meaning of both. "Smog" (smoke + fog) is a blend. A compound such as "bookshelf" keeps both words whole and is not one.
+		- The name comes from Lewis Carroll, whose Humpty Dumpty explains blended words such as "slithy" to Alice as "two meanings packed up into one word" in *Through the Looking-Glass* (1871).
+		- A clipped word such as [[Keyshort]] is an [[Logseq/Entity/Abbreviation]], and a word built from initials is an [[Logseq/Entity/Term/Acronym]].
+	- ## What the page records
+		- **Source words** — each word the blend draws on, with the meaning each contributes.
+		- **Formation** — which parts survive in the blend, for example the start of one word and the end of another.
+		- **Coiner and date** — who first used the blend and when, linked to the coiner's [[Logseq/Entity/Person]] page, with the source cited in a footnote.
+		- **Earlier senses** — any older meaning of the same spelling, when one exists.
+	- ## Frontmatter
+		- `logseq-entity::` — the primary type first, then this page: `logseq-entity:: [[Logseq/Entity/Term]], [[Logseq/Entity/Term/Portmanteau]]`, or `logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Term/Portmanteau]]`.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Finding and deduplicating
+		- Search the blend as a page name, each source word as a title or alias, and any spelling variants of the blend.
