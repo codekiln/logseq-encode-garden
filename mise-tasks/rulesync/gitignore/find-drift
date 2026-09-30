@@ -1,0 +1,65 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+#MISE description="Find .gitignore entries that rulesync would add but this repo's .gitignore lacks"
+
+#USAGE flag "--fail" help="Exit 1 when there is at least one entry worth adding (for a scheduled check)"
+
+# Why this is a report and not a fix: `rulesync gitignore` rewrites its whole block,
+# and this repo hand-edits .gitignore to keep generated skills tracked (.agents/skills)
+# and to track .mcp.json. Committing its output would undo those edits. So this runs
+# it on a throwaway copy and lists what it would add, leaving the merge to a person.
+
+cd "${MISE_PROJECT_ROOT:-$PWD}"
+
+if command -v rulesync >/dev/null 2>&1; then RULESYNC=(rulesync); else RULESYNC=(npx --yes rulesync); fi
+
+scratch="$(mktemp -d)"
+trap 'rm -rf "$scratch"' EXIT
+
+cp rulesync.jsonc .gitignore "$scratch/"
+(cd "$scratch" && "${RULESYNC[@]}" gitignore --silent)
+
+# Patterns the regenerated file has and the real one lacks.
+patterns() { grep -v -e '^[[:space:]]*#' -e '^[[:space:]]*$' "$1" | sort -u; }
+comm -13 <(patterns .gitignore) <(patterns "$scratch/.gitignore") > "$scratch/added"
+
+# Sort each new pattern into one of three piles.
+#  covered: an existing entry already ignores a path this pattern names (a parent
+#           directory entry such as **/.cursor/ covers **/.cursor/skills/).
+#  skip:    it would ignore a file git already tracks, which is an intentional
+#           omission (for example .agents/skills/ or .mcp.json).
+#  add:     everything else.
+add=()
+skip=()
+covered=()
+while IFS= read -r pattern; do
+  [ -n "$pattern" ] || continue
+  # A sample path the pattern would match: drop the leading **/, turn * into x,
+  # and put a file under a directory pattern.
+  sample="${pattern#\!}"; sample="${sample#\*\*/}"; sample="${sample//\*/x}"
+  case "$sample" in */) sample="${sample}x";; esac
+  printf '%s\n' "$pattern" > "$scratch/one"
+  if [ "${pattern#\!}" = "$pattern" ] && git check-ignore -q --no-index -- "$sample"; then
+    covered+=("$pattern")
+  elif [ -n "$(git ls-files -c -i --exclude-from="$scratch/one" | head -n 1)" ]; then
+    skip+=("$pattern")
+  else
+    add+=("$pattern")
+  fi
+done < "$scratch/added"
+
+echo "Would be added by rulesync, worth adding to .gitignore (${#add[@]}):"
+if [ "${#add[@]}" -gt 0 ]; then printf '  %s\n' "${add[@]}"; else echo "  none"; fi
+
+echo
+echo "Already ignored by another entry (${#covered[@]}):"
+if [ "${#covered[@]}" -gt 0 ]; then printf '  %s\n' "${covered[@]}"; else echo "  none"; fi
+
+echo
+echo "Would be added but skipped because they would ignore tracked files (${#skip[@]}):"
+if [ "${#skip[@]}" -gt 0 ]; then printf '  %s\n' "${skip[@]}"; else echo "  none"; fi
+
+if [ "${FAIL:-}" = "true" ] || [ "${usage_fail:-}" = "true" ]; then
+  [ "${#add[@]}" -eq 0 ] || exit 1
+fi
