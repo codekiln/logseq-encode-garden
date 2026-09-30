@@ -61,7 +61,6 @@ repomix-*.xml
 **/.opencode/memories/
 **/.opencode/commands/
 **/opencode.json
-**/.mcp.json
 **/.cursor/mcp.json
 **/.cline/mcp.json
 **/.roo/mcp.json

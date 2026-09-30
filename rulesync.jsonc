@@ -10,7 +10,7 @@
   "features": [
     "rules",
     "ignore",
-    // "mcp",
+    "mcp",
     "commands",
     "subagents",
     "skills",
