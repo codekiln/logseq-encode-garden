@@ -6,7 +6,7 @@ date-created:: [[2026-09-29 Tue]]
 		- 10:00
 		- 10:27 [[Censys]] engineering spotlight
 		- 10:45 [[LangSmith/26/09/29 Tue - Deep Agents/1045 Engine Workshop]]
-	- ## [[My Notes]]
+	- ## [[AI Notes]]
 		- 10:00 ReAct loop
 			- Agent = model + [[AI/Agent/Harness]]
 				- if it isn't the model, it's part of the harness
