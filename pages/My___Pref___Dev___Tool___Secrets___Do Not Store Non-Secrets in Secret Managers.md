@@ -1,0 +1,4 @@
+- Secrets are things that must be kept secret.
+- They are not things that are necessary to interpret the program.
+- Where possible, store non-secret configuration values outside of a [[Secrets Manager]].
+- [[mise/JTBD/2 - Environment Manager]] is my preferred way to configure environment variables that are not secret.
