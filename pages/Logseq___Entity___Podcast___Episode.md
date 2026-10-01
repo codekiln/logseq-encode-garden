@@ -1,4 +1,3 @@
-alias:: [[Podcasts]], [[Podcast/Episode]]
 logseq-entity:: [[Logseq/Entity/Definition]]
 
 - # Podcast
