@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Podcast]]
+logseq-entity:: [[Logseq/Entity/Podcast/Episode]]
 created-by:: [[Person/codek]]
 
 - # Ghost in the Patch

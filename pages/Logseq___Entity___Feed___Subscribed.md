@@ -4,7 +4,7 @@ alias:: [[Subscribed Feed]]
 - # Feed Subscribed
 	- In this garden, **Feed Subscribed** marks a page whose subject publishes an [[RSS]] or Atom feed that belongs in my [[RSS/Reader]]. The marker carries the intent and the feed address; the reader holds the actual subscription.
 	- ## What counts as an instance
-		- A page for a blog, site, newsletter, [[Logseq/Entity/Podcast]], release channel, or [[Logseq/Entity/Repo]] that emits a feed worth following.
+		- A page for a blog, site, newsletter, [[Logseq/Entity/Podcast/Episode]], release channel, or [[Logseq/Entity/Repo]] that emits a feed worth following.
 		- The marker is **additive**. It rides on whatever entity the page already is, listed after the primary one: `logseq-entity:: [[Logseq/Entity/Website]], [[Logseq/Entity/Feed/Subscribed]]`.
 		- Not an instance: a single post — that is [[Logseq/Entity/Article]] or [[Logseq/Entity/Article/Blog]]. A feed read once and abandoned; drop the marker rather than recording a lapsed intent.
 	- ## Naming and links
@@ -23,7 +23,7 @@ alias:: [[Subscribed Feed]]
 	- ## Relationship to other entity types
 		- **[[Logseq/Entity/Website]]** — the usual primary type for a site whose feed is followed.
 		- **[[Logseq/Entity/Article/Blog]]** — the individual posts that arrive through the feed; those pages are not instances of this type, their parent hub is.
-		- **[[Logseq/Entity/Podcast]]** — a podcast's feed takes this marker the same way a blog's does.
+		- **[[Logseq/Entity/Podcast/Episode]]** — a podcast's feed takes this marker the same way a blog's does.
 		- **[[Logseq/Entity/Person]]** — a person hub is not the instance; the blog or site page beneath it is.
 	- ## Examples in this garden
 		- [[Person/Przemysław Szypowicz/Blog]]

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Podcast]], [[Logseq/Entity/YouTube]] 
+logseq-entity:: [[Logseq/Entity/Podcast/Episode]], [[Logseq/Entity/YouTube]] 
 created-by:: [[Person/Gergely Orosz]]
 date-created:: 2026-09-23
 

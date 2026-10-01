@@ -69,7 +69,7 @@ prev:: [[Week/Review/26/09/20 Sun]]
 			  collapsed:: true
 				- todos
 				  collapsed:: true
-					- DONE import a [[Logseq/Entity/Podcast]] entity of this. Use [[Readwise]] to pull in the multiple sources (both [[Snipd]] from the podcast, as well as [[YouTube]]).
+					- DONE import a [[Logseq/Entity/Podcast/Episode]] entity of this. Use [[Readwise]] to pull in the multiple sources (both [[Snipd]] from the podcast, as well as [[YouTube]]).
 				- I don't think I knew this before, but it totally makes sense that Maggie Appleton studied [[Anth/ro/polog/y/Cultural]] as an undergrad. In her talk on [[Barefoot Developer]]s she mentioned the "Barefoot Doctors" of china that traveled from community to community.
 				- ### [[Person/Gergely Orosz]] asked her to explain what, in her mind, [[Design]] was.
 					- He prefixed this question be explaining his contact with designers at [[Uber]], who would create [[Wireframe]]s and [[Mock/Ups]], mostly visual resources. They would work in [[Figma]] or another visual system, and hand those assets with [[PRD]]s to the engineers to build. He acknowledged that he had an incomplete perspective of what design was, and she had worked in design at many firms, so that's why he asked her to define it.
