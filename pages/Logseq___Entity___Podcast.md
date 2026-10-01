@@ -7,7 +7,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Not a Podcast: a single episode, which is a [[Logseq/Entity/Podcast/Episode]]; the host's or a guest's [[Logseq/Entity/Person]] hub; the network or company that publishes several shows.
 	- ## Episodes
 		- A show has episodes. Each episode is its own [[Logseq/Entity/Podcast/Episode]] page and belongs to one show.
-		- A page is either a show or an episode. The two markers never appear on the same page.
+		- A show's page carries [[Logseq/Entity/Podcast]], and each episode's page carries [[Logseq/Entity/Podcast/Episode]].
 		- Episode pages file beneath the show page's namespace, so Logseq's namespace listing on the show page lists the episodes the garden holds.
 	- ## Naming and links
 		- The show page is the `Pod` namespace its episodes file under:

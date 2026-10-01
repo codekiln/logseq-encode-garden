@@ -6,7 +6,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- One specific episode of a show, usually with a title, a host, an air date, and often a URL of its own.
 		- Not Podcast Episodes: the show itself, which is a [[Logseq/Entity/Podcast]]; the host's person hub; a guest's person hub; a [[Logseq/Entity/Quote]] pulled from an episode; a [[Logseq/Entity/Concept]] page that synthesizes ideas an episode discussed.
 	- ## Relationship to the show
-		- An episode is part of one show. It belongs to the show; it is not a kind of show, so a page carries the Episode marker or the Podcast marker and never both.
+		- An episode is part of one show. Its page carries the Episode marker, and the show's page carries the Podcast marker.
 		- The episode page files under its show's namespace, and its `created-by::` names the show's host.
 	- ## Naming and links
 		- Episode pages live under the show's `Pod` namespace, dated: `Person/<Host>/Pod/<YY>/<MM> <Episode Title>`, or `<Show>/Pod/<YY>/<MM> <Episode Title>` for a show filed under its own name. [[Logseq/Entity/Podcast]] places the show page.
@@ -34,7 +34,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Combined with YouTube
 		- An episode published as a YouTube video is also a [[Logseq/Entity/YouTube]] instance, Episode first: `logseq-entity:: [[Logseq/Entity/Podcast/Episode]], [[Logseq/Entity/YouTube]]`. The page keeps the episode path under its show. The YouTube video ID becomes a deduplication key alongside the episode URL.
 		- **Sources** — a `## Sources` section links the episode page, the YouTube recording, and the [[Snipd]] episode when one exists.
-		- **One clock** — video time in seconds is the clock for every timed block, written `{{youtube-timestamp <seconds>}}`. Times from an audio app such as Snipd are mapped onto video time. The audio and video versions can differ by an intro or an ad break, so a mapped time is checked against the transcript line it should land on.
+		- **Timestamps** — every timestamp is a video time in seconds, written `{{youtube-timestamp <seconds>}}`. Times from an audio app such as Snipd are converted to video time. The audio and video versions can differ by an intro or an ad break, so check each converted time against the transcript line it should land on.
 		- **Chapters** — a `## Video` section holds the `{{video <watch URL>}}` block. Each YouTube chapter is an H3 beneath it: `### {{youtube-timestamp <seconds>}} <Chapter Title>`.
 		- **Snips** — a Snipd snip is an H4 under the chapter that contains it, with a `Snipd:` URL line, a short summary, and a `Transcript` child set to `collapsed:: true`. The transcript groups lines under a speaker's person page, each line starting with its own timestamp.
 		- **Highlights** — a [[Readwise]] highlight made while watching is a bare `{{youtube-timestamp <seconds>}}` block placed in time order next to the snips. Speaker children hold the quoted text as `>` quotes, ending with a link back to the highlight in Readwise.
