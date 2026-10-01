@@ -12,8 +12,8 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Episode pages live under the show's `Pod` namespace, dated: `Person/<Host>/Pod/<YY>/<MM> <Episode Title>`, or `<Show>/Pod/<YY>/<MM> <Episode Title>` for a show filed under its own name. [[Logseq/Entity/Podcast]] says where the show page goes.
 			- On disk that is `pages/Person___<Host>___Pod___<YY>___<MM> <Episode Title>.md`.
 			- `<YY>` is the two-digit year and `<MM>` the two-digit month of the episode's air date.
-		- An episode that is also a member of a named sequence is both a Podcast Episode and a [[Logseq/Entity/Series]] instance. Its path then interposes `Series/<Series Name>` after `Pod`, per that type page.
-		- Pages filed before this type existed use either `Pod` or `Podcast` as the namespace segment, and some put a `/` after the month instead of a space. New episode pages use `Pod` and the space. Leave existing pages as filed unless the author asks for a migration.
+		- An episode that is also part of a named sequence is both a Podcast Episode and a [[Logseq/Entity/Series]] instance. Its path then adds `Series/<Series Name>` after `Pod`, as [[Logseq/Entity/Series]] describes.
+		- Pages filed before this definition existed use either `Pod` or `Podcast` as the namespace segment, and some put a `/` after the month instead of a space. New episode pages use `Pod` and the space. Leave existing pages as filed unless the author asks for a migration.
 	- ## Finding and deduplicating
 		- Search in order: the episode URL; the YouTube video ID when there is a recording; the exact episode title; distinctive title words under `Person/*/Pod*` and `*/Pod*`; then host plus a distinctive phrase. Classify as existing, similar, new, or blocked.
 		- One page per episode.
@@ -21,7 +21,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Set **`created-by::`** to the host's person page, which is the page the episode namespace already sits under.
 		- Guests are linked from the body; `created-by::` names only the host. A guest the author wants to follow gets their own person page per [[Logseq/Entity/Person]].
 	- ## Frontmatter
-		- Mark instances with **`logseq-entity:: [[Logseq/Entity/Podcast/Episode]]`** so this type page collects backlinks to every episode.
+		- Mark instances with **`logseq-entity:: [[Logseq/Entity/Podcast/Episode]]`** so this definition page collects backlinks to every episode.
 		- Set **`created-by::`** to the host.
 		- Set **`date-created::`** to the air date when known.
 		- Optional: **`logseq-created-time-year::`** linking to the matching [[Logseq/Entity/Time/Year]] instance; see that page for how it differs from `date-created::`.

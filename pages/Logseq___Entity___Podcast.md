@@ -28,7 +28,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- A line or two under the H1 names the hosts and what the show covers.
 		- Optional `## Links` for the feed, the show's YouTube channel, and its [[Snipd]] page.
 		- Episode notes stay on the episode pages. The show page holds what is true of every episode: the hosts, the subject, the publishing schedule, where to listen.
-	- ## Relationship to other types
-		- [[Logseq/Entity/Podcast/Episode]] — one episode of the show. The episode type defines episode naming and page shape, including episodes that are also YouTube videos.
+	- ## Relationship to other entities
+		- [[Logseq/Entity/Podcast/Episode]] — one episode of the show. The Podcast Episode definition page covers episode naming and page shape, including episodes that are also YouTube videos.
 		- [[Logseq/Entity/Person]] — the hosts. A host's person hub links to the show page.
-		- [[Logseq/Entity/Series]] — governs paths when the feed numbers its episodes.
+		- [[Logseq/Entity/Series]] — says how to name the page of an episode that belongs to a named sequence within the show.

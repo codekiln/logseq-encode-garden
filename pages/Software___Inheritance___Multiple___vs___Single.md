@@ -13,9 +13,9 @@ see-also:: [[Software/Composition/vs/Inheritance]], [[Software/Inheritance/Is-A]
 			- {{embed [[Software/Inheritance/Multiple/vs/Single/Single]]}}
 	- ## How the balance is struck
 		- Keep one main lineage and let extra parents add capabilities that do not overlap with it. Mixins and traits follow this pattern.
-		- When parents can overlap, state the resolution order and keep it predictable. Python computes a method resolution order with the C3 linearization, so the order in which bases are listed decides which parent wins.
+		- When parents can overlap, state the resolution order and keep it predictable. Python computes a method resolution order with the C3 linearization and looks up each member in that order, so among a class's direct parents the one listed first wins.
 		- When the extra parent is something the class uses rather than something it is, [[Software/Composition]] fits better; [[Software/Composition/vs/Inheritance]] weighs that choice.
 	- ## In this garden
-		- [[Logseq/Entity]] lets one page declare several entity types, primary first, and the page satisfies the shape rules of each. That is multiple inheritance of page-shape rules, with the listed order as the resolution order. [[Logseq/Entity/Hierarchy/Discussion]] holds dated analyses of which types one page may carry together and where the rules for a combination of types go.
+		- [[Logseq/Entity]] lets one page declare several entities, primary first, and the page satisfies the shape rules of each. That is multiple inheritance of page-shape rules, with the listed order as the resolution order. [[Logseq/Entity/Hierarchy/Discussion]] holds dated analyses of which entities one page may carry together and where the rules for a combination of entities go.
 	- ## Sources
 		- [Multiple Inheritance of State, Implementation, and Type](https://docs.oracle.com/javase/tutorial/java/IandI/multipleinheritance.html) in the Java Tutorials covers interfaces, default methods, and conflict rules.
