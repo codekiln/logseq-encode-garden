@@ -27,6 +27,7 @@ alias:: [[The Entities System in Knowledge Gardening]]
 			- A knowledge garden shared by the **teachers of a school system** may have pages that model entities like Syllabus, Learning Objective, Prerequisite, Assessment, Activity, Assignment, Exam, etc.
 		- Ideally, copying an entity definition from one garden to another should be enough to describe how to model that entity in that new garden. In some cases, entity definitions may be related; for example, [[Logseq/Entity/YouTube]] and [[Logseq/Entity/YouTube/Playlist]] should likely travel together to ensure that two gardens have consistently rich representations of the same types of entities.
 	- ### Hierarchies of Entity Definitions
+		- [[Logseq/Entity/Hierarchy/Discussion]] continues this topic with dated analyses.
 		- As the example of YouTube and a YouTube playlist implies, entity definitions can be hierarchically related. Usually, this is done in the spirit of [[My/Principle/Simplify/Don't Repeat Yourself DRY]], where the concept of [[Software/Inheritance]] might come to be used in the entity definitions.
 		- #### [[Example]] - Book Sections
 			- [[Logseq/Entity/Book/Section]] defines what shape of how a section of a book is modeled in this knowledge garden. Then any specific differences from or additions to that are described in particular levels, such as [[Logseq/Entity/Book/Section/Level 1]] or [[Logseq/Entity/Book/Section/Level 2]].
