@@ -15,6 +15,6 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Lead with a bullet-wrapped H1 that links to the video's watch URL. Name the publisher or speaker when known; keep any synopsis and notes beneath the heading.
 		- A `{{video ...}}` block is useful when inline playback or timestamped notes are part of the page. Notes with clickable `{{youtube-timestamp ...}}` headings nest beneath that video block.
 	- ## Combined with Podcast Episode
-		- A video that is also a podcast episode lists [[Logseq/Entity/Podcast/Episode]] first. That page holds the shape for the combination: video seconds for every timestamp, chapters as headings, snips, highlights, and frames for what only the video shows.
+		- When a video is also a podcast episode, its page lists [[Logseq/Entity/Podcast/Episode]] first in `logseq-entity::`. That page holds the shape for the combination: video seconds for every timestamp, chapters as headings, snips, highlights, and frames for what only the video shows.
 	- ## Related type
 		- A YouTube playlist is a separate entity modeled by [[Logseq/Entity/YouTube/Playlist]]. A video's playlist membership does not change its video identity.

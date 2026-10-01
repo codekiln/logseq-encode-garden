@@ -9,17 +9,17 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- An episode is part of one show. Its page carries the Episode marker, and the show's page carries the Podcast marker.
 		- The episode page files under its show's namespace, and its `created-by::` names the show's host.
 	- ## Naming and links
-		- Episode pages live under the show's `Pod` namespace, dated: `Person/<Host>/Pod/<YY>/<MM> <Episode Title>`, or `<Show>/Pod/<YY>/<MM> <Episode Title>` for a show filed under its own name. [[Logseq/Entity/Podcast]] places the show page.
+		- Episode pages live under the show's `Pod` namespace, dated: `Person/<Host>/Pod/<YY>/<MM> <Episode Title>`, or `<Show>/Pod/<YY>/<MM> <Episode Title>` for a show filed under its own name. [[Logseq/Entity/Podcast]] says where the show page goes.
 			- On disk that is `pages/Person___<Host>___Pod___<YY>___<MM> <Episode Title>.md`.
 			- `<YY>` is the two-digit year and `<MM>` the two-digit month of the episode's air date.
 		- An episode that is also a member of a named sequence is both a Podcast Episode and a [[Logseq/Entity/Series]] instance. Its path then interposes `Series/<Series Name>` after `Pod`, per that type page.
-		- **Existing pages vary.** Both `Pod` and `Podcast` appear as the namespace segment in pages filed before this type existed, and some put a `/` after the month instead of a space. Prefer `Pod` and the space for new episode pages. Leave existing pages as filed unless the author asks for a migration.
+		- Pages filed before this type existed use either `Pod` or `Podcast` as the namespace segment, and some put a `/` after the month instead of a space. New episode pages use `Pod` and the space. Leave existing pages as filed unless the author asks for a migration.
 	- ## Finding and deduplicating
 		- Search in order: the episode URL; the YouTube video ID when there is a recording; the exact episode title; distinctive title words under `Person/*/Pod*` and `*/Pod*`; then host plus a distinctive phrase. Classify as existing, similar, new, or blocked.
 		- One page per episode.
 	- ## Creator relationship
 		- Set **`created-by::`** to the host's person page, which is the page the episode namespace already sits under.
-		- Guests are linked from the body, not from `created-by::`. A guest worth tracking gets their own person page per [[Logseq/Entity/Person]].
+		- Guests are linked from the body; `created-by::` names only the host. A guest the author wants to follow gets their own person page per [[Logseq/Entity/Person]].
 	- ## Frontmatter
 		- Mark instances with **`logseq-entity:: [[Logseq/Entity/Podcast/Episode]]`** so this type page collects backlinks to every episode.
 		- Set **`created-by::`** to the host.

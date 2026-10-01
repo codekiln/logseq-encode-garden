@@ -6,7 +6,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- A show with its own title and feed, such as [[Hard Fork/Pod]] or [[Person/Nathaniel Whittemore/Pod]]. The show is what someone subscribes to; an episode is what someone listens to.
 		- Not a Podcast: a single episode, which is a [[Logseq/Entity/Podcast/Episode]]; the host's or a guest's [[Logseq/Entity/Person]] hub; the network or company that publishes several shows.
 	- ## Episodes
-		- A show has episodes. Each episode is its own [[Logseq/Entity/Podcast/Episode]] page and belongs to one show.
+		- Each episode gets its own [[Logseq/Entity/Podcast/Episode]] page and belongs to one show.
 		- A show's page carries [[Logseq/Entity/Podcast]], and each episode's page carries [[Logseq/Entity/Podcast/Episode]].
 		- Episode pages file beneath the show page's namespace, so Logseq's namespace listing on the show page lists the episodes the garden holds.
 	- ## Naming and links
