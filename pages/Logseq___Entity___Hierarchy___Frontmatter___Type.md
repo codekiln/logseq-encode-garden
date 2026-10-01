@@ -2,7 +2,7 @@ logseq-entity:: [[Logseq/Entity/Frontmatter/Definition]]
 alias:: [[logseq-entity-hierarchy-type]]
 
 - # `logseq-entity-hierarchy-type::` — how a child entity relates to its parent
-	- Set on a child [[Logseq/Entity/Definition]] page, one whose name nests under a parent definition page, such as [[Logseq/Entity/Article/Blog]] under [[Logseq/Entity/Article]]. The value says whether the child entity is a kind of its parent or a part of it, for example `logseq-entity-hierarchy-type:: [[Logseq/Entity/Hierarchy/Frontmatter/Type/extends]]`.
+	- This property says whether a child entity is a kind of its parent or a part of it, and it goes on the child's definition page, the one whose name nests under the parent's. Every blog post is an article, so the [[Logseq/Entity/Article/Blog]] definition page, which nests under [[Logseq/Entity/Article]], would carry `logseq-entity-hierarchy-type:: [[Logseq/Entity/Hierarchy/Frontmatter/Type/extends]]`.
 	- ## Permitted values
 		- [[Logseq/Entity/Hierarchy/Frontmatter/Type/extends]]
 		- [[Logseq/Entity/Hierarchy/Frontmatter/Type/part-of]]
