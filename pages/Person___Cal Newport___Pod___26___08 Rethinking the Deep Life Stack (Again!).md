@@ -103,7 +103,7 @@ logseq-created-time-year:: [[20/2/6]]
 					- ![Deep Life Stack v1.0](../assets/Person/Cal_Newport/Pod/26/08/Person__Cal_Newport__Pod__26__08_Rethinking_the_Deep_Life_Stack__Again____0360_Deep_Life_Stack_v1.jpg)
 						- Whiteboard: four blue boxes stacked vertically. Top to bottom: **Plan**, **Calm**, **Values**, **Discipline**.
 						- Four layers are drawn and named. The spoken intro at {{youtube-timestamp 236}} calls it "a collection of five layers".
-						- How the board was built: at 4:00 only "Discipline" is written. By 4:30 all four boxes are up and "Plan" is circled in yellow. At about 5:30 a yellow tick marks "Values".
+						- How the board was built: at {{youtube-timestamp 240}} only "Discipline" is written. By {{youtube-timestamp 270}} all four boxes are up and "Plan" is circled in yellow. At about {{youtube-timestamp 330}} a yellow tick marks "Values".
 				- #### {{youtube-timestamp 378}} The Deep Life Stack Became Too Complicated
 					- Snipd: https://share.snipd.com/snip/82fb9529-2d2c-42da-926c-8f44162df610
 					- Stack 2.0 became too complicated by separating capability from transformation and adding concepts such as craft, service, transformation, and legacy.
@@ -141,7 +141,7 @@ logseq-created-time-year:: [[20/2/6]]
 						- Two columns of four blue boxes, with no titles and no arrows between them.
 						- Left column, top to bottom: **Simplification**, **Craft**, **Control**, **Discipline**.
 						- Right column, top to bottom: **Legacy**, **Transformation**, **Service**, **Values**. "Transformation" runs past the right edge of its box.
-						- The left stack is worked through first, then the right. This board stays up until about 12:00 while Cal lists what was wrong with v2.0.
+						- The left stack is worked through first, then the right. This board stays up until about {{youtube-timestamp 720}} while Cal lists what was wrong with v2.0.
 				- #### {{youtube-timestamp 965}} The Deep Life Map Replaces Rigid Life Stacks
 					- Snipd: https://share.snipd.com/snip/f429b9a2-79be-4e46-9598-cbf217ee35e0
 					- Cal replaced the stack with a map containing capability, values, and vision territories that people navigate in different orders.
@@ -181,7 +181,7 @@ logseq-created-time-year:: [[20/2/6]]
 					- ![Deep Life Map](../assets/Person/Cal_Newport/Pod/26/08/Person__Cal_Newport__Pod__26__08_Rethinking_the_Deep_Life_Stack__Again____1140_Deep_Life_Map.jpg)
 						- Three green hand-drawn regions with grey labels: **Vision** at the top, **Capability** at lower left, **Values** at lower right. The webcam inset hides the right edge of Values.
 						- Red dotted arrows run from Capability to Vision and from Values to Vision, with the arrowheads at Vision. No arrow joins Capability and Values.
-						- How the board was built: at 17:30 the three words are written with no outlines. By 18:30 the regions are outlined. The arrows are in place by 19:00.
+						- How the board was built: at {{youtube-timestamp 1050}} the three words are written with no outlines. By {{youtube-timestamp 1110}} the regions are outlined. The arrows are in place by {{youtube-timestamp 1140}}.
 				- #### {{youtube-timestamp 1167}} The Deep Life Requires A Flexible Map
 					- Snipd: https://share.snipd.com/snip/8fd9edc3-af18-4efd-af1a-576e5ab58740
 					- Cal Newport’s deep life map links capability, values, and vision, with people moving among them as circumstances and ambitions change.
@@ -244,7 +244,7 @@ logseq-created-time-year:: [[20/2/6]]
 							- {{youtube-timestamp 1826}} I wrote a whole book that said, don't just follow your passion's bad idea. So what should you be aiming for? What is a lifestyle? What goes into that? Why is that better than just making like one-off changes? Why are you going to end up happier that way? How do you actually describe it? How do you make a plan?
 				- {{youtube-timestamp 1920}}
 					- ![Deep Life Map shown again](../assets/Person/Cal_Newport/Pod/26/08/Person__Cal_Newport__Pod__26__08_Rethinking_the_Deep_Life_Stack__Again____1920_Deep_Life_Map_shown_again.jpg)
-						- The map from 19:00, scaled down so all of Values is visible: Vision at the top, Capability at lower left, Values at lower right, arrows from Capability and from Values into Vision. The thin red vertical line at the right is the edge of the board.
+						- The map from {{youtube-timestamp 1140}}, scaled down so all of Values is visible: Vision at the top, Capability at lower left, Values at lower right, arrows from Capability and from Values into Vision. The thin red vertical line at the right is the edge of the board.
 				- #### {{youtube-timestamp 1951}} Cal Newport’s Model For A Thinking Book
 					- Snipd: https://share.snipd.com/snip/4ccfd533-5b49-4488-aaa9-8a2a71e335b3
 					- Cal Newport wants to connect a philosophical case for cognitive fitness with practical ways to strengthen thinking.
