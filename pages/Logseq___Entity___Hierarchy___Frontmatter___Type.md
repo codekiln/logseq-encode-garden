@@ -7,5 +7,5 @@ alias:: [[logseq-entity-hierarchy-type]]
 		- [[Logseq/Entity/Hierarchy/Frontmatter/Type/extends]]
 		- [[Logseq/Entity/Hierarchy/Frontmatter/Type/part-of]]
 	- ## Notes
-		- A child segment that is only a namespace, because the parent has no definition page, takes no value. [[Logseq/Entity/AI/Model]] is one.
+		- Leave the property off a definition page whose parent has no definition page. [[Logseq/Entity/AI/Model]] carries none, because `Logseq/Entity/AI` is only a namespace.
 		- [[Logseq/Entity/Hierarchy/Discussion]] holds the dated discussion of how child and parent entities relate, including which markers one page may carry together.
