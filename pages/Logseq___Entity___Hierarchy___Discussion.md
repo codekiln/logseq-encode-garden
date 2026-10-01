@@ -5,4 +5,4 @@ see-also:: [[Logseq/Entity/Definition/Discussion]], [[Software/Inheritance/Multi
 	- ## Entries
 		- ### [[2026-10-01 Thu]] 0611 ET Opus
 			- [[Logseq/Entity/Hierarchy/Discussion/Analysis/Opus/26/10/01/0611 ET Mark each page with the most specific entity in each lineage]] - separates is-a children from part-of children, proposes *lineage* for entity ancestry, and notes that the [[Logseq/Entity/Person/Musician]], [[Logseq/Entity/Person/Knowledge Gardener]] and [[Logseq/Entity/Book/User Guide]] definition pages say to mark each instance with the parent entity too.
-				- codekiln's review of this entry proposed the `logseq-entity-hierarchy-type::` property, described on [[Logseq/Entity/Hierarchy/Frontmatter/Type]], in place of the `extends::` and `part-of::` properties the entry first suggested.
+				- While reviewing this entry, codekiln proposed the `logseq-entity-hierarchy-type::` property, which [[Logseq/Entity/Hierarchy/Frontmatter/Type]] describes.
