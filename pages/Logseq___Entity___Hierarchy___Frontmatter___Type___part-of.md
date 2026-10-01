@@ -1,0 +1,3 @@
+- # part-of
+	- The child entity is a different thing that belongs to an instance of its parent. An episode belongs to a show, so [[Logseq/Entity/Podcast/Episode]] is part of [[Logseq/Entity/Podcast]], and one page is never both a show and one of its episodes. An instance page usually files under the page it belongs to, as an episode files under its show's `Pod` namespace.
+	- Permitted value of [[Logseq/Entity/Hierarchy/Frontmatter/Type]].
