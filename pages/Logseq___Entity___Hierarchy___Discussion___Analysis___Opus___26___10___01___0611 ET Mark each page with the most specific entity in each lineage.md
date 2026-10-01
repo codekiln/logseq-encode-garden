@@ -12,9 +12,9 @@ see-also:: [[Logseq/Entity/Definition/Discussion]], [[Software/Inheritance/Multi
 		- Only the text of a child definition page says whether the child is a kind of its parent or a part of it. codekiln proposed a frontmatter property that would make this explicit and queryable: `logseq-entity-hierarchy-type::`, described on [[Logseq/Entity/Hierarchy/Frontmatter/Type]]. The Blog definition page would set it to [[Logseq/Entity/Hierarchy/Frontmatter/Type/extends]], and the Episode definition page to [[Logseq/Entity/Hierarchy/Frontmatter/Type/part-of]].
 	- ## A name for entity ancestry
 		- Candidates: *lineage*, *ancestry*, *entity family*, *branch*, and *[[Clade]]*, the biologist's word for an ancestor together with all its descendants.
-		- I recommend **lineage**: the chain from an entity up through its is-a parents to the topmost defined entity. It is an ordinary word, it reads well in a rule ("two entities in one lineage"), and it leaves out part-of children by definition, since an episode does not descend from a show. *Clade* is more exact, and few readers know it.
+		- I recommend **lineage**: an entity and its chain of is-a parents up to the topmost defined entity, so a musician's lineage is Musician, then Person. It is an ordinary word, it reads well in a rule ("two entities in one lineage"), and it leaves out part-of children, since an episode does not descend from a show. *Clade* names the group in the other direction: Person together with every entity that descends from it, Musician and Knowledge Gardener included.
 	- ## Sibling entities may share a page; an entity and its own ancestor may not
-		- Taken literally, "more than one entity with the same entity ancestry" also forbids a person who is both a musician and a knowledge gardener, since [[Logseq/Entity/Person/Musician]] and [[Logseq/Entity/Person/Knowledge Gardener]] share the Person lineage. Neither entity implies the other, so marking both carries information.
+		- Taken literally, "more than one entity with the same entity ancestry" also forbids a person who is both a musician and a knowledge gardener, since [[Logseq/Entity/Person/Musician]] and [[Logseq/Entity/Person/Knowledge Gardener]] both descend from Person. Neither entity implies the other, so marking both carries information.
 		- The redundancy is between an entity and its own ancestor: Musician already implies Person. The rule I would write is that **each page carries the most specific entity it has in each lineage**, so a page marked Musician leaves out Person.
 	- ## Musician, Knowledge Gardener and User Guide instances list the parent entity too
 		- [[Logseq/Entity/Person/Knowledge Gardener]] and [[Logseq/Entity/Person/Musician]] each say "Frontmatter lists both types, Person first". [[Logseq/Entity/Book/User Guide]] marks a guide with both User Guide and Book, child first.
@@ -24,7 +24,7 @@ see-also:: [[Logseq/Entity/Definition/Discussion]], [[Software/Inheritance/Multi
 			- rewriting the Musician, Knowledge Gardener and User Guide definition pages to mark the child alone;
 			- changing `logseq-entity::` on the eight instance pages;
 			- adding the lineage rule to [[Logseq/Entity]], together with the statement that an instance of a child entity is an instance of every ancestor;
-			- listing all people with a query over every entity in the Person lineage, because backlinks alone would miss the musicians.
+			- listing all people with a query over Person and every entity that descends from it, because backlinks alone would miss the musicians.
 		- None of that is done yet.
 	- ## The Podcast Episode page holds the rules for an episode that is also a YouTube video
 		- [[Logseq/Entity]] says combination rules live on the primary entity's definition page. Two definition pages already depart from that rule. [[Logseq/Entity/Concept]] is the primary entity of every trade-off page, yet [[Logseq/Entity/Trade-Off]] holds the combined shape, and Concept's page says so. [[Logseq/Entity/Series]] holds its own combination rules whatever entity comes first. In practice the rule sits on the page whose shape the combination changes most.

@@ -10,7 +10,7 @@ logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Term]]
 		- A group that leaves out some descendants of its common ancestor is *paraphyletic*. The traditional class Reptilia is the usual example: it holds the last common ancestor of reptiles and its descendants, except the birds.[^3]
 		- Clades are the basic unit of cladistics, the approach to taxonomy that most fields of biology now use.[^1]
 	- ## In this garden
-		- [[Logseq/Entity/Hierarchy/Discussion/Analysis/Opus/26/10/01/0611 ET Mark each page with the most specific entity in each lineage]] weighs *clade* as a word for an entity together with every entity that descends from it, and recommends *lineage* instead.
+		- [[Logseq/Entity/Hierarchy/Discussion/Analysis/Opus/26/10/01/0611 ET Mark each page with the most specific entity in each lineage]] weighs *clade* and *lineage* as names for entity ancestry, and recommends *lineage*: an entity and its chain of is-a parents.
 	- [^1]: https://en.wikipedia.org/wiki/Clade
 	- [^2]: https://en.wiktionary.org/wiki/clade
 	- [^3]: https://en.wikipedia.org/wiki/Paraphyly
