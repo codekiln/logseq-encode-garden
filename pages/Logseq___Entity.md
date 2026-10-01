@@ -1,14 +1,17 @@
 alias:: [[Logseq Entities]]
 
 - # Logseq Entity
-	- This page is the general conceptual model for entities in this knowledge garden: what an entity is, how a page is marked as one, and how entity definition pages are named. The entity types themselves are defined on their own child pages.
+	- This page is the general conceptual model for entities in this knowledge garden: what an entity is, how a page is marked as one, and how entity definition pages are named. The entity definitions are child pages of this page.
 	- ## Terms
 		- **Entity** — a single thing that has its own page in the garden: one person, one software project, one book, etc. A page models one or more entities. When it models more than one, it must satisfy the shape requirements of each.
-		- **Entity definition** — the documentation page for a category of entities that share the same modeling rules. Each entity definition page describes how to recognize, name, and create instances of that kind; individual pages that meet those rules are its instances. Entity definition pages are themselves an entity type, modeled by [[Logseq/Entity/Definition]].
-	- ## Finding the entity types
-		- Each entity type has its own definition page under the `Logseq/Entity/` namespace — one page per type. The set of those pages is the list of entity types the garden models; there is no separate catalog to maintain on this page.
-		- Every entity definition page carries `logseq-entity:: [[Logseq/Entity/Definition]]`, so the list of entity types is the backlinks of [[Logseq/Entity/Definition]] — queryable rather than hand-maintained.
-		- The first line under an entity definition page's heading is its short description, so the type pages together read as a self-describing index.
+		- **Entity definition** — the documentation page for a category of entities that share the same modeling rules. Each entity definition page describes how to recognize, name, and create instances of that kind; individual pages that meet those rules are its instances. Each entity definition page is itself an entity, modeled by [[Logseq/Entity/Definition]].
+	- ## Entity and type
+		- codekiln's preference: definitions and discussions of the entity system say *entity* or *entity definition*. *Type* appears only in an explicit comparison with type systems, as on [[Software/Inheritance/Multiple/vs/Single]]. Where one entity descends from another, say "two entities in one lineage".
+		- The entity system is inspired by type systems and is kept apart from them. When codekiln first described it in type-system terms, AI agents used *type* loosely and then held pages to it like a type checker, asking "are you sure?" whenever a page differed from its definition in any detail. Gardening works the other way: the garden stays eventually consistent with an evolving mental model, and the entity system adds value without getting in the way.
+	- ## Finding the entity definitions
+		- Each kind of entity has its own definition page under the `Logseq/Entity/` namespace — one page per kind. The set of those pages is the list of entity definitions the garden models; there is no separate catalog to maintain on this page.
+		- Every entity definition page carries `logseq-entity:: [[Logseq/Entity/Definition]]`, so the list of entity definitions is the backlinks of [[Logseq/Entity/Definition]] — queryable rather than hand-maintained.
+		- The first line under an entity definition page's heading is its short description, so the definition pages together read as a self-describing index.
 	- ## How we mark a page as an entity
 		- In frontmatter, add `logseq-entity::` with a link to the entity definition page for each entity the page models.
 		- When a page models a single entity, use one link: `logseq-entity:: [[Logseq/Entity/Person]]`.
@@ -18,7 +21,7 @@ alias:: [[Logseq Entities]]
 		- A page that declares two or more entities in `logseq-entity::` is an instance of each. Its content must satisfy the shape requirements of all declared entity definitions.
 		- The primary entity comes first in `logseq-entity::`. Ordering for a combination, and any combination-specific page shape, is documented on the primary entity's definition page.
 	- ## Naming entity definition pages
-		- All entity definition pages under `Logseq/Entity/` use **Title Case** nouns. Multi-word types use **nested namespace segments**, for example [[Logseq/Entity/Software/Project]].
+		- All entity definition pages under `Logseq/Entity/` use **Title Case** nouns. Multi-word names use **nested namespace segments**, for example [[Logseq/Entity/Software/Project]].
 		- Exception: tools and executables that are conventionally lowercase (e.g. `tmux`, `git`) may stay lowercase *on their own topic pages*, but entity definition pages are modeling nouns and use Title Case, for example [[Logseq/Entity/Person]].
 		- Do **not** use kebab-case segments (e.g. `software-project`, `color-theme`) for entity definition page names.
 		- Plural or contextual reference forms belong in `alias::` on the entity definition page; instance naming follows [[Logseq/Frontmatter/alias]].
