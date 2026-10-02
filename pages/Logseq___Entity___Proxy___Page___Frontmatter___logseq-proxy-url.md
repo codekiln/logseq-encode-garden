@@ -1,4 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Frontmatter/Definition]]
+alias:: [[logseq-proxy-url]]
 
 - # `logseq-proxy-url::` — the page a proxy mirrors
 	- The source page of a [[Logseq/Entity/Proxy/Page]], given as that page's [[logseq-url]]: `logseq://graph/<graph_name>?page=<Page Name>`. On an instance: `logseq-proxy-url:: logseq://graph/logseq-garden?page=rulesync`.

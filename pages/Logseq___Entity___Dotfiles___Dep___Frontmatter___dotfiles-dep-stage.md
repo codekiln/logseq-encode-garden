@@ -1,4 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Frontmatter/Definition]]
+alias:: [[dotfiles-dep-stage]]
 
 - # `dotfiles-dep-stage::` — intake stage of a dotfiles dependency
 	- The stage of a [[Logseq/Entity/Dotfiles/Dep]] as it moves from first idea to selection. On an instance, set it to one of the permitted value pages below, for example `dotfiles-dep-stage:: [[Logseq/Entity/Dotfiles/Dep/Frontmatter/dotfiles-dep-stage/4 - Vetting]]`.
