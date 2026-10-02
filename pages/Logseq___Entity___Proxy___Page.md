@@ -13,8 +13,8 @@ alias:: [[Proxy Page]], [[Logseq Proxy Page]]
 		- The `page=` value maps to a filename the same way every other page does: `/` becomes `___`, per [[Logseq/Pref/Page/Name]] and the `logseq-get-page-file` command. `page=Logseq/Entity/Podcast` → `pages/Logseq___Entity___Podcast.md`.
 		- **Legacy shape:** a few early proxies were filed under `Logseq/Proxy/<graph_name>/<source name>`, for example [[Person/Thomas Parr/Book/2022/Active Inference]]. Leave them where they are; do not file new ones that way.
 	- ## Frontmatter
-		- **`logseq-proxy-url::`** — required; the source page's [[logseq-url]] in canonical form, `logseq://graph/<graph_name>?page=<Page Name>`, for example `logseq-proxy-url:: logseq://graph/logseq-garden?page=rulesync`. This property is what makes the page a proxy.
-		- **`logseq-proxy-last-sync-date::`** — required; the day the body was last mirrored, as a plain ISO date link per [[Logseq/Date]]: `logseq-proxy-last-sync-date:: [[2026-09-19]]`.
+		- [[Logseq/Entity/Proxy/Page/Frontmatter/logseq-proxy-url]] — required; the source page's [[logseq-url]]. This property is what makes the page a proxy.
+		- [[Logseq/Entity/Proxy/Page/Frontmatter/logseq-proxy-last-sync-date]] — required; the day the body was last mirrored.
 		- Both keys are owned by the sync process. Do not rename them, and do not treat any other `*::` line on the page as belonging to the proxy.
 		- `<graph_name>` must already have a row in the registry at `.rulesync/config/logseq-proxy.md`. A URL naming a graph with no row does not resolve — stop and ask for a row rather than guessing a path.
 			- TODO this MUST NOT be in rulesync; move this out of here. It should likely be in the garden
