@@ -16,8 +16,6 @@ alias:: [[Proxy Page]], [[Logseq Proxy Page]]
 		- [[Logseq/Entity/Proxy/Page/Frontmatter/logseq-proxy-url]] — required; the source page's [[logseq-url]]. This property is what makes the page a proxy.
 		- [[Logseq/Entity/Proxy/Page/Frontmatter/logseq-proxy-last-sync-date]] — required; the day the body was last mirrored.
 		- Both keys are owned by the sync process. Do not rename them, and do not treat any other `*::` line on the page as belonging to the proxy.
-		- `<graph_name>` must already have a row in the registry at `.rulesync/config/logseq-proxy.md`. A URL naming a graph with no row does not resolve — stop and ask for a row rather than guessing a path.
-			- TODO this MUST NOT be in rulesync; move this out of here. It should likely be in the garden
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
 		- No shape of its own. The body is the source page's body, so the source's shape — and the shape of whatever entity the page is primarily — governs.
@@ -25,7 +23,7 @@ alias:: [[Proxy Page]], [[Logseq Proxy Page]]
 		- **`tags::` on an existing page is never touched.** On re-sync the destination's `tags::` win outright and the source's are discarded. On first create, the source's `tags::` come across with the copy unless the user says otherwise.
 		- **Destination properties survive a re-sync.** Only `logseq-proxy-url::` and `logseq-proxy-last-sync-date::` are rewritten; every other property line already on the page stays. The **body**, by contrast, is replaced wholesale by the source's.
 		- **A name collision is never resolved silently.** If the destination page exists and has no `logseq-proxy-url::`, it is a real page that happens to share the name — stop and ask before writing anything.
-		- **The `logseq://` URL is a portable intent string for agents**, not something to hand to the OS. Logseq may register the scheme, but resolution here goes through the registry and the local disk.
+		- **The `logseq://` URL is a portable intent string for agents**, not something to hand to the OS. Logseq may register the scheme, but resolution here goes through **Source graphs** below and the local disk.
 	- ## Finding and deduplicating
 		- Proxies scatter across `pages/` wherever their mirrored names fall, so there is no namespace to narrow a search to. Always search repo-wide from the garden root.
 		- **Every proxy:** `rg -n 'logseq-proxy-url::' pages/ --glob '*.md'`
@@ -35,8 +33,19 @@ alias:: [[Proxy Page]], [[Logseq Proxy Page]]
 	- ## Relationship to other entity types
 		- **Any entity type** can be proxied; this marker never replaces the primary one, it accompanies it.
 		- **[[Logseq/Entity/Definition]]** — entity definition pages proxy like anything else, which is how two gardens can share one set of modeling rules.
+	- ## Source graphs
+		- A `<graph_name>` in a [[logseq-url]] resolves only when it is listed here. Each entry gives the graph's `ghq` address, or an absolute path for a graph `ghq` does not manage.
+			- `logseq-garden` — `github.com/codekiln/logseq-garden`, the personal day-to-day garden.
+		- `ghq list --full-path --exact <address>` gives the graph's root at sync time. One path is the root; no path means the repo is not cloned here, and cloning waits for the human; several paths wait for the human to pick one.
+		- A root holds `pages/` and `logseq/`.
+		- A URL naming an unlisted graph waits for the human to add an entry.
 	- ## Syncing an instance
-		- The mechanics — registry resolution, URL parsing, the create-versus-merge cases, asset copying — live in the `logseq-proxy` skill, which reads this page for everything about what a proxy *is*.
+		- **Source file:** `pages/<page>.md` under the source graph's root, with `page=` decoded (`%2F` is `/`) and each `/` written as `___`.
+		- **First copy:** the whole source file, with the two proxy keys set in its property block.
+		- **Re-sync:** the source's body under the destination's property block, with the two proxy keys rewritten, per **Invariants** above.
+		- **Property block:** the run of `key:: value` lines from the top of the file, ending at the first line of any other kind — a blank line, a `- # Heading`, or plain text. A destination with no property block gains one above its first line, holding the two proxy keys.
+		- **Assets:** every `../assets/<path>` the source body links to is copied to the same `assets/<path>` here, replacing what is there. A missing source asset is reported and the sync goes on.
+		- **Report:** the source path, the destination path, the two key values written, whether it was a first copy or a re-sync, and the assets copied.
 	- ## Examples in this garden
 		- [[Book/ML with PyTorch and Scikit-Learn]]
 		- [[Person/Thomas Parr/Book/2022/Active Inference]] (legacy name shape)
