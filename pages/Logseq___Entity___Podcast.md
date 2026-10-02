@@ -1,0 +1,34 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Podcast
+	- In this garden, **Podcast** pages model a recurring show: a feed of episodes published under one title by one or more hosts.
+	- ## What counts as a Podcast
+		- A show with its own title and feed, such as [[Hard Fork/Pod]] or [[Person/Nathaniel Whittemore/Pod]]. The show is what someone subscribes to; an episode is what someone listens to.
+		- Not a Podcast: a single episode, which is a [[Logseq/Entity/Podcast/Episode]]; the host's or a guest's [[Logseq/Entity/Person]] hub; the network or company that publishes several shows.
+	- ## Episodes
+		- Each episode gets its own [[Logseq/Entity/Podcast/Episode]] page and belongs to one show.
+		- A show's page carries [[Logseq/Entity/Podcast]], and each episode's page carries [[Logseq/Entity/Podcast/Episode]].
+		- Episode pages file beneath the show page's namespace, so Logseq's namespace listing on the show page lists the episodes the garden holds.
+	- ## Naming and links
+		- The show page is the `Pod` namespace its episodes file under:
+			- `Person/<Host>/Pod` for a show led by a host who has a person page, as with [[Person/Nathaniel Whittemore/Pod]].
+			- `<Show>/Pod` for a show known by its own name or with several hosts, as with [[Hard Fork/Pod]] and [[Latent Space/Pod]].
+		- `alias::` carries the show's published title, its `Podcast/<Show Name>` form, and any short form likely to be searched.
+		- Some show pages and episodes were filed with a `Podcast` segment, as with [[People I (Mostly) Admire/Podcast]]. Prefer `Pod` for new pages and leave existing ones as filed unless a migration is asked for.
+	- ## Finding and deduplicating
+		- Search in order: the show's home or feed URL; the show title and its aliases; `*/Pod` and `*/Podcast` pages; the host's person namespace. Classify as existing, similar, new, or blocked.
+		- One page per show. A show page is created when the garden holds more than one of its episodes, or when the author asks for one.
+	- ## Frontmatter
+		- Mark instances with **`logseq-entity:: [[Logseq/Entity/Podcast]]`**.
+		- Set **`created-by::`** to the host's person page, or to each host's page when the show has several.
+		- Optional: **`date-created::`** for the date the show launched, when known.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- The first body block is an H1 linking the show's home page: `- # [Show Title](https://example.com/show)`.
+		- A line or two under the H1 names the hosts and what the show covers.
+		- Optional `## Links` for the feed, the show's YouTube channel, and its [[Snipd]] page.
+		- Episode notes stay on the episode pages. The show page holds what is true of every episode: the hosts, the subject, the publishing schedule, where to listen.
+	- ## Relationship to other entities
+		- [[Logseq/Entity/Podcast/Episode]] — one episode of the show. The Podcast Episode definition page covers episode naming and page shape, including episodes that are also YouTube videos.
+		- [[Logseq/Entity/Person]] — the hosts. A host's person hub links to the show page.
+		- [[Logseq/Entity/Series]] — says how to name the page of an episode that belongs to a named sequence within the show.

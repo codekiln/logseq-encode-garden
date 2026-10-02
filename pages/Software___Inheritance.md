@@ -5,6 +5,7 @@ logseq-entity:: [[Logseq/Entity/Concept]]
 		- Inheritance is also a design claim: the specialized thing should make sense wherever the general thing is expected. [[Software/Inheritance/Is-A]] names that claim; [[Software/Subtyping]] examines when the substitution is actually valid.
 	- ## Mechanism
 		- In [[Software/Inheritance/Class-Based]], a subclass inherits accessible members of a superclass and may add or override behavior. In [[Software/Inheritance/Prototype-Based]], an object delegates property lookup to another object along a prototype chain.
+		- A class with more than one parent uses [[Software/Inheritance/Multiple]]; [[Software/Inheritance/Multiple/vs/Single]] weighs it against single inheritance.
 		- Implementation inheritance reuses code. Interface inheritance or subtyping establishes what operations clients may rely on. Sharing code alone does not prove the stronger substitutability claim.
 	- ## Design boundary
 		- Inheritance couples a specialization to the behavior and assumptions of its parent. A deep hierarchy can make a change in one class affect distant descendants.
