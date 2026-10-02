@@ -27,6 +27,10 @@ This repository is a personal Logseq knowledge graph (not a software project): p
 - Every page/journal edit follows the always-on `logseq-core` rule (protected `tags::`, LFM basics, naming, no-agent-taint, journal updates, block-ref safety).
 - Absence of a `.md` file ≠ absence of a page: a `[[Namespace/Page]]` referenced anywhere exists logically. `grep` before concluding a page is missing; linking is complete without creating a file.
 
+## Git workflow in this repo
+- Small, point-in-time changes (a journal entry, a typo, a page edit): commit to `main` and sync with origin. No branch, no PR.
+- Larger changes and concurrent work: use a worktree and a PR, per the global rule `My/AI/Rule/Dev Workflow with Git and Tmux`.
+
 ## Skills index (task → skill; bodies load on demand)
 - LFM details (footnotes, naming rationale, file↔link table, logical-vs-disk) → **logseq-lfm**
 - Convert pasted/standard Markdown to LFM → **logseq-convert-md-to-lfm**

@@ -2,7 +2,6 @@
 	- [[tmux/session]] names should describe an area of responsibility - either a full repository or an area of responsibility within a particular repository.
 	- There should be at most one [[AI/Agent]] per [[tmux/Window]], and the first pane in the group should be for the agent. The [[tmux/Window]] name should convey what the agent is for.
 	- The first [[tmux/Window]] should be a primary [[AI/Agent/Manager]] which "wakes up" and "puts to sleep" other agents, by which I mean that an appropriately named [[tmux/Window]] is created with an [[AI/Coding/Tool]] initiated with an appropriately named [[AI/Coding/Session]] that matches the name in the [[tmux/Pane]].
-- Small, point-in-time changes (a journal entry, a typo, a page edit) go straight to `main`: commit, then sync with origin. No branch, no PR.
-- Larger changes, and any work that runs alongside other agents, use a worktree and a PR:
-	- Work in a [[git worktree]] according to [[My/Pref/Dev/Tool/git/Worktree]], following [[My/AI/Rule/How to Communicate Effectively With Me/A pointer carries a link, an id with a slug, and a reason]] so that the ticket that agent is working on is in the worktree and branch name.
-	- When finished, submit a PR and open it in the browser when ready. I will leave comments, and the agent should update the PR. After merge, the agent should ensure the root of the repository is sync'd up with origin/main.
+- AI agents should work in a [[git worktree]] according to [[My/Pref/Dev/Tool/git/Worktree]], following [[My/AI/Rule/How to Communicate Effectively With Me/A pointer carries a link, an id with a slug, and a reason]] so that the ticket that agent is working on is in the worktree and branch name.
+- When finished, the agent should submit a PR and open it in the browser when ready. I will leave comments, and it should update the PR. After merge, the agent should ensure the root of the repository is sync'd up with origin/main.
+-
