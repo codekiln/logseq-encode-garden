@@ -5,6 +5,7 @@ tags:: [[Book]]
 published:: [[2022]]
 isbn:: 9780262045353
 logseq-proxy-url:: logseq://graph/logseq-garden?page=Person/Thomas Parr/Book/2022/Active Inference
+logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-garden/blob/main/pages/Person___Thomas%20Parr___Book___2022___Active%20Inference.md
 logseq-proxy-last-sync-date:: [[2026-09-14]]
 
 - # [Active Inference: The Free Energy Principle in Mind, Brain, and Behavior](https://direct.mit.edu/books/oa-monograph/5299/Active-InferenceThe-Free-Energy-Principle-in-Mind)
