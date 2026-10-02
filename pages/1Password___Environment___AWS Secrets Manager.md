@@ -29,6 +29,6 @@ see-also:: [[1Password/Environment]]
 		- Size: a 64 KB limit applies. A large Environment can be split into several, each with its own integration and its own target secret.
 		- Common failures the page lists: missing role permissions, a failed role assumption (SAML provider or trust policy wrong), a SAML subject that doesn't match the trust policy, a target name already used in AWS, an invalid KMS key, and an exceeded Secrets Manager quota.
 	- ## Misconceptions
-		- It does not keep AWS as a source of truth. Editing the secret in AWS is overwritten the next time the Environment is saved.
+		- It does not keep AWS as a source of truth. Edits made in AWS are never copied back to 1Password. The page doesn't say what a later sync does to them, so treat them as unsafe.
 		- Deleting the integration is how you stop syncing. The page doesn't say whether the AWS secret is removed when you do.
 		- It is not part of the local `.env` mount feature, so the ten-mount limit per device does not apply to it.
