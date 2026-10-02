@@ -20,6 +20,8 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 			- 3. Namespace-restricted globs (e.g. topic prefix + `___Q___`).
 			- 4. H1 and first blocks on candidate pages; allow for minor rephrasing.
 		- Classify each candidate as: **existing**, **similar** (needs human judgment), **new**, or **blocked** (missing config or ambiguous topic).
+			- **existing** — the garden already holds the question. It gains an answer, not a second page.
+			- **similar** — present the candidates and let a human decide before a near-duplicate lands.
 	- ## Frontmatter
 		- On **new** question pages, include `logseq-entity:: [[Logseq/Entity/Question]]` so this type page indexes instances.
 		- **Card-backed questions:** when the H1 carries `[[card]]` and the page is a first-class review target, add a second entity marker: `logseq-entity:: [[Logseq/Entity/Question]], [[Logseq/Entity/Card]]` (see [[Logseq/Entity/Card]]). Card-backed questions use the compact page shape — see **Card-backed page shape** under Page shape below.

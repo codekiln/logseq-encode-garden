@@ -1,4 +1,5 @@
-logseq-url:: logseq://graph/docs?page=The%20basics%20of%20block%20references
+logseq-proxy-url:: logseq://graph/docs?page=The%20basics%20of%20block%20references
+logseq-proxy-codeforge-url:: https://github.com/logseq/docs/blob/master/pages/The%20basics%20of%20block%20references.md
 
 - ## What are block references?
 	- Because everything is a block in Logseq, our notes become extremely versatile. Not only can we link to pages, we can also link to blocks and even show their contents directly when linking to them. How? Using block references.

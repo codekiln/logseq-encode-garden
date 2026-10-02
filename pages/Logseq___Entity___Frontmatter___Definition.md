@@ -13,6 +13,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Value pages are permitted values, not definitions and not entities: they carry no `logseq-entity::`. An ordered vocabulary uses a leading number so the sequence sorts in order, for example `1 - Incubating`.
 	- ## Frontmatter
 		- On instances, set `logseq-entity:: [[Logseq/Entity/Frontmatter/Definition]]` so this type page collects a backlink to every custom frontmatter property in the garden.
+		- On instances, set `alias:: [[<key>]]` to the literal key the page defines, as `alias:: [[logseq-entity-hierarchy-type]]` on [[Logseq/Entity/Hierarchy/Frontmatter/Type]]. Clicking a key in `<key>:: <value>` opens the page `[[<key>]]`, and the alias makes that page the definition.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape (body)
 		- Logseq Flavored Markdown. Suggested sections: the property's **meaning**, its **permitted values** (link the value pages, in order), any **rules** between values, and the **owning type**.

@@ -38,6 +38,7 @@ This repository is a personal Logseq knowledge graph (not a software project): p
 - Diataxis how-to / tutorial / reference / concept pages → load **[[Diataxis]]** (graph page) and the matching **[[Logseq/Entity/Diataxis/*]]** type page
 - AI model mentions and model pages → load **[[Logseq/Entity/AI/Model]]** (graph page)
 - Asset / image / PDF links → **logseq-asset-linker**
+- Proxy pages / `logseq://` URLs → load **[[Logseq/Entity/Proxy/Page]]** (graph page)
 - ChatGPT Deep Research PDF imports → **logseq-import-chatgpt-deep-research**
 - YouTube transcript notes → **logseq-youtube-notes**
 - Slide decks → **logseq-slides**

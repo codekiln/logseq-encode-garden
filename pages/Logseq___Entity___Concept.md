@@ -8,7 +8,9 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## When we treat something as a concept entity
 		- Strong signals: the page’s purpose is **understanding**—what something is, why it matters, how it relates to neighboring ideas—not primarily a how-to, tutorial walkthrough, or lookup reference.
 		- Good fit: programming paradigms, frameworks of thought, architectural patterns explained in prose.
-		- Not a concept entity: short glossary stubs better modeled as **term** entities; step procedures (how-to); bare link lists; **question** entities (use [[Logseq/Entity/Question]] and `/Q/` naming).
+	- ## Naming and links
+		- **Link shape:** `[[Topic/Concept/Idea]]` or `[[Topic/Explanation/Idea]]` when the topic has enough pages to want the segment, as on [[Programming/Language/Concept/Object-Oriented]] and [[herdr/Explanation/Where Input Box Text Comes From]].
+		- A concept that is the topic takes the topic's own name, as [[cybernetics]] does.
 	- ## Finding and deduplicating
 		- Search for an existing page before creating a new concept entity.
 		- Search order hints: exact title, alternate titles from frontmatter, normalized topic phrases, sibling pages in the same topic area.
@@ -28,3 +30,4 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- [[Logseq/Entity/Field of Study]] — a concept that is also a discipline, as on [[cybernetics]].
 	- ## Relationship to Diataxis
 		- Diataxis framing in the graph: [[Diataxis/Explanation]] (aliases [[Diataxis/Concept]]). This type page is the **operational** template; those pages are the **vocabulary** of the framework.
+		- [[Logseq/Entity/Diataxis/Explanation]] carries the quadrant's tag and writing guidance for concept pages.
