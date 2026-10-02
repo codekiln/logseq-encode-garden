@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 created-by:: [[Person/Theo Browne]]
 date-created:: [[2026/07/08]]
 

@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 tags:: [[humanlayer/GitHub/12-factor-agents]], [[AI/Engineer/World's Fair/25/YouTube]] 
 created-by:: [[Person/Dex Horthy]]
 

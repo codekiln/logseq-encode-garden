@@ -1,5 +1,7 @@
+logseq-entity:: [[Logseq/Entity/Forum/Post]]
 tags:: [[Apple]], [[Forum]]
 date-created:: [[2022/12/12]]
+logseq-created-time-year:: [[20/2/2]]
 
 - # [App Groups: macOS vs iOS: Working Towards Harmony | Apple Developer Forums](https://developer.apple.com/forums/thread/721701)
 	- ## [[My Notes]]

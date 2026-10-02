@@ -1,0 +1,3 @@
+- # MicroFreak Presets
+	- Saved sounds on the [[Microfreak]] can be documented as [[Logseq/Entity/Preset/Synth/Microfreak]] pages and linked from music logs.
+	- [[Microfreak/Preset/397 Imit]]

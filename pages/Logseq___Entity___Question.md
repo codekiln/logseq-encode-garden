@@ -12,13 +12,11 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- **Link shape:** `[[Topic/Q/Question text]]` or `[[Topic/SubTopic/Q/Question text]]` as needed.
 		- **File shape:** `pages/Topic___Q___Question text.md` with triple underscores between namespace parts; encode `?` as `%3F` in the filename when present.
 		- Use forward slashes in journal and body links; never triple underscores inside Logseq links.
-		- **The question text** keeps its full form in the page title, punctuation included.
-		- **The topic namespace** is the domain or tool the question is about — `Claude Code`, `git`, `LangSmith`, `EdTech/Idea/LearnMark`. A question that arrives without one takes the namespace its wording points at: "compaction text in Claude Code" files under `Claude Code`. An ambiguous topic is a **blocked** candidate and waits for a human to name it.
 	- ## Finding and deduplicating
 		- Treat every new question as a question-entity candidate.
 		- Practical search order for this type:
 			- 1. Exact expected page title / filepath under the topic namespace.
-			- 2. Grep normalized question text and key phrases across `pages/**___Q___*.md`. Normalization is for the search alone: drop trailing punctuation and reduce the question to its key phrases.
+			- 2. Grep normalized question text and key phrases across `pages/**___Q___*.md`.
 			- 3. Namespace-restricted globs (e.g. topic prefix + `___Q___`).
 			- 4. H1 and first blocks on candidate pages; allow for minor rephrasing.
 		- Classify each candidate as: **existing**, **similar** (needs human judgment), **new**, or **blocked** (missing config or ambiguous topic).
@@ -45,7 +43,6 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 				- Lead with **Short answer:** when useful.
 				- Cite **external** docs with markdown links in the answer body.
 				- Bold for labels; backticks for commands. Do not wrap `` `commands` `` in `**…**` (see [[Logseq/Flavored Markdown]]).
-				- A question research has not settled says so here, naming what is still missing.
 		- **Do not** add `## Related` solely to list internal wikilinks; use **`see-also::`** instead.
 		- ### Card-backed page shape
 			- When `logseq-entity::` includes [[Logseq/Entity/Card]] and the H1 ends with `[[card]]`, omit the `## Answer` section header and attribution block. The answer sits directly as a child bullet of the H1, as short as a card prompt requires:
@@ -56,6 +53,15 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 				  ~~~
 			- Use `==highlight==` to mark mnemonic cues in the answer (e.g. `==N==ext Window`).
 			- Wikilink key terms in both the question and the answer to existing entity pages.
+	- ## Creating an instance
+		- **Choose the topic namespace first.** It is the domain or tool the question is about — `Claude Code`, `git`, `LangSmith`, `EdTech/Idea/LearnMark`. Infer it from the question when the human did not name one; ask rather than guess when nothing plausible presents itself.
+		- Keep the question's full wording, punctuation included, as the page title. Normalize trailing `?` for searching only.
+		- The filing is recorded in today's journal like any other graph edit — a new page under `[[Filed]]`, an edited one under `[[Updated]]`, per [[Logseq/Journal]].
+	- ## Answering an instance
+		- Filing and answering are one pass: once the page and its journal line exist, research the answer rather than leaving a bare question.
+		- Draw on whatever is at hand — the garden's own pages first, then official documentation, then web search. Prefer a source that can be cited over recollection.
+		- Write the answer into `## [[AI Answer]]` per **Page shape** above, marking it `[[Answer/Official]]` when it comes from official docs.
+		- When the answer cannot be settled, say so on the page and tell the human what is missing. An honestly open question is worth more than a confident wrong one.
 	- ## Relationship to other types
 		- **Card:** `[[card]]` on the H1 plus `[[Logseq/Entity/Card]]` in frontmatter when the question page itself is reviewable; distinct from factoring a prompt into a `/Card/` namespace page under [[Logseq/Entity/Card]].
 		- **CLI commands / flags:** questions *about* commands link to [[Logseq/Entity/CLI/Command]] and [[Logseq/Entity/CLI/Flag]] instances; they are not substitutes for command reference stubs.

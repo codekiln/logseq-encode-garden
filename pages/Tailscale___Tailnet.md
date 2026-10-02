@@ -1,0 +1,26 @@
+logseq-entity:: [[Logseq/Entity/Concept]]
+
+- # Tailnet
+	- ## Overview
+		- A **tailnet** is one private network created by [[Tailscale]]: the set of users, devices and services that can reach each other as if they shared a local network, wherever they physically are. It is not reachable from the public internet. [^1]
+		- A tailnet is created when the first device logs in. Each device that joins gets a private IP address in the CGNAT range, and its traffic to other devices is carried over [[Wireguard]] tunnels. [^1]
+	- ## Context
+		- A tailnet replaces the usual pattern of opening a port on a server and defending it. A private server can stay closed to the internet and still be reachable from a phone or laptop that is on the same tailnet.
+		- Membership is the boundary. Devices join by signing in through a user account, or through a tag for service machines, and an access control policy in the admin console decides which users and devices can connect to which. Devices can also be shared individually with people outside the tailnet. [^1]
+	- ## Key Principles
+		- **Names.** With MagicDNS on, each device is registered under its machine name, and the tailnet has a name of the form `tailnet-name.ts.net`. A device called `monitoring` in a tailnet called `yak-bebop` is `monitoring.yak-bebop.ts.net`. Devices in the same tailnet can use the short name; shared devices need the full name. [^2]
+		- **Private by default, public by choice.** Services on a tailnet are visible only to its members until the owner turns on Tailscale Funnel, which publishes one service to the public internet. [^3]
+	- ## Mechanism
+		- Each device generates its own key pair and sends only the public key to Tailscale's coordination server, which hands it to the devices allowed to talk to it. The private key never leaves the device. The coordination server sets up connections but does not carry the traffic. [^4]
+		- Devices connect directly to each other where they can, using NAT traversal, and fall back to relay servers (DERP) when a network blocks direct connections. Relays forward packets that are already encrypted and cannot read them. [^4]
+	- ## Examples
+		- Reaching a home or cloud server over SSH by machine name with no public SSH port, as in [[Blog/mgranda/Claude Code On-The-Go]].
+		- Viewing a web app running on a private machine from another device on the tailnet, as explored in [[Tailscale/Q/Can I use a tailnet to view a website running on a private server as a way to make personal software?]].
+	- ## Misconceptions
+		- A tailnet is not the same as a Tailscale account or a single device's Tailscale IP. It is the whole network those belong to.
+		- Being on a tailnet does not mean every member can reach every device. Access control rules still apply. [^1]
+	- ## Footnotes
+		- [^1]: https://tailscale.com/kb/1136/tailnet
+		- [^2]: https://tailscale.com/kb/1081/magicdns
+		- [^3]: https://tailscale.com/kb/1223/funnel
+		- [^4]: https://tailscale.com/blog/how-tailscale-works

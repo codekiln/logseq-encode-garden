@@ -1,0 +1,22 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+
+- # What is PR mode in [[tuicr]]?
+	- Context: I ran `tuicr -r main..HEAD --stdout`, left comments, typed `:submit`, and got ":submit only applies in PR mode".
+	- ## [[AI Answer]]
+		- **Short answer:** PR mode is tuicr reviewing a forge pull request (GitHub PR, GitLab MR, etc.) opened with `tuicr pr <target>`. A local `-r main..HEAD` review is not a PR, so `:submit` refuses.
+		- **What it is.** In the source the TUI holds a `DiffSource`; `:submit` runs only when it is `DiffSource::PullRequest`, otherwise it sets the warning `:submit only applies in PR mode` (`src/app/submit.rs`, in `start_submit_with` and `start_submit_action_picker`). Help text: `tuicr pr` is "Review a GitHub pull request or GitLab merge request" with alias `mr` (`tuicr --help`).
+		- **How to enter it.**
+			- `tuicr pr <TARGET>` where `<TARGET>` is `<number>`, `<owner/repo#N>`, or a PR URL (`tuicr pr --help`).
+			- `tuicr pr 125` for GitHub, Gitea, Bitbucket, Azure DevOps, or a Gerrit change; `tuicr mr 125` for GitLab; `tuicr tui pr 125` is the explicit-TUI form (`README.md`, Quick start).
+			- `--repo-url <URL>` or `--remote <NAME>` pick the forge repo when the checkout's remote is ambiguous. GitHub needs `gh` authenticated (`README.md`, "To GitHub").
+		- **What `:submit` does there.** It opens a picker for Comment, Approve, Request changes, or Draft. Inline comments land on their lines as a real PR review, and review-level comments become the review summary (`README.md`, "To GitHub"). Draft sends no `event` field, so GitHub keeps it as a pending review (`SubmitEvent::Draft` in `src/forge/submit.rs`). It also refuses when the PR is closed or otherwise read-only (`pr.is_read_only()` in `src/app/submit.rs`).
+		- **How local-mode comments persist.**
+			- Each comment is autosaved to a JSON session under the platform data dir, `tuicr/reviews/` (on this Mac, `~/Library/Application Support/tuicr`), indexed by a manifest (`src/persistence/storage.rs`).
+			- A local session is keyed by repo, branch, base commit, diff source, and commit range (`slug_for_session`, `build_local_slug`). A PR session is keyed by `pr_session_key` instead, and `load_latest_session_for_context` returns `None` for `PullRequest` (`src/persistence/storage.rs`, `src/model/review.rs`).
+			- Inspect with `tuicr review list --repo .` and `tuicr review comments --session <slug>` (`docs/REVIEW_CLI.md`).
+		- **Can local comments be carried to a PR?** I found no import or conversion in the source. The two session kinds are keyed differently and nothing copies between them. The workaround is to read the local session with `tuicr review comments --session <slug>` and re-add the comments to the PR session with `tuicr review add --session gh:<owner>/<repo>/pr/<N> --target-file ... --line ... --side new "text"` (`docs/REVIEW_CLI.md`, "Add Comments"). I have not run this; the PR session must exist first, so open the PR once with `tuicr pr`.
+		- **Exporting from local mode.**
+			- `y` or `:clip` (alias `:export`) copies structured markdown to the clipboard (`COMMAND_SPECS` in `src/handler.rs`; `README.md`, "To your coding agent").
+			- `--stdout` prints the export to stdout when the TUI exits, with the TUI drawn on `/dev/tty`, so `tuicr -r main..HEAD --stdout > review.md` works (`docs/CLI.md`).
+		- **Fix for the original attempt:** push the branch, open a PR, then run `tuicr pr <number>` and `:submit` there. Related: [[tuicr/How To/Review a PR]].
+		- Source: local clone `github.com/agavra/tuicr` at commit `4a9bda2`, plus `tuicr --help` and `tuicr pr --help` from the installed 0.27.0.

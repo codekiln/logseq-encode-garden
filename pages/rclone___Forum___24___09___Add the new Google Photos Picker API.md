@@ -1,3 +1,6 @@
+logseq-entity:: [[Logseq/Entity/Forum/Post]]
+date-created:: [[2024/09]]
+logseq-created-time-year:: [[20/2/4]]
 # [Add the new Google Photos Picker API to rclone - Feature - rclone forum](https://forum.rclone.org/t/add-the-new-google-photos-picker-api-to-rclone/47938/6)
 	- [[My Notes]]
 		- announces a change to the google photos API that would probably make [[rclone/gphotosdl]] stop working if it is not modified by [[2025/03]].

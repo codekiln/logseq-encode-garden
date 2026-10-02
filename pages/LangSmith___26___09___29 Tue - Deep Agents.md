@@ -1,0 +1,264 @@
+date-created:: [[2026-09-29 Tue]]
+
+- # Deep Agents
+  collapsed:: true
+	- [[2026-09-29 Tue]] event on [[LangSmith]] and [[LangSmith/Deep Agents]]
+	- ## Schedule
+		- 10:00
+		- 10:27 [[Censys]] engineering spotlight
+		- 10:45 [[LangSmith/26/09/29 Tue - Deep Agents/1045 Engine Workshop]]
+	- ## [[AI Notes]]
+		- 10:00 ReAct loop
+			- Agent = model + [[AI/Agent/Harness]]
+				- if it isn't the model, it's part of the harness
+				- the harness is everything around the model that lets it act in the world, run actions and read data
+				- includes [[AI/Agent/Skill]]s, memory, [[System Prompt]]s, and [[Context Engineering]] tactics that keep an agent working over long, complex tasks
+			- the harness's job: get the model the right context at the right time for the task
+				- much easier said than done
+			- agents in production usually fail for one of two reasons
+				- the model isn't good enough for the task
+				- the model didn't have the right piece of information
+			- models have gotten very good, so failures are now mostly the model not seeing the right context
+				- that is the harness's problem, not the model's or the frontier lab's
+			- why you need a harness
+				- work in an environment where the model can take actions
+					- introduces the model to the real world so it can explore, take actions and accomplish goals
+				- manage growing context over long runs
+					- there is a physical limit to how much information the model can take for a task ([[AI/Context/Window]])
+					- longer, more complex runs build up more context over time
+					- the hardest job: send only the good parts of that context forward, step by step
+				- connect your data
+					- models aren't trained on your internal company data (hopefully)
+					- the harness connects that data through connections, tools and skills
+				- parallelize tasks
+					- not everything has to run in a sequential chain
+					- some work should run separately or asynchronously ([[AI/Agent/Subagent]])
+				- connect with the human in the loop ([[AI/Workflow/Human in the Loop]])
+					- a model loose in the real world shouldn't access any information or call any tool unsupervised
+					- a human should always stay in the loop for some important decisions
+				- improve over time
+					- when a user corrects the agent or something fails, the agent shouldn't make that mistake twice
+					- [[LangSmith/Engine]] fixes agents automatically
+					- some of this context engineering and management can also happen in the harness itself
+		- ## What is [[LangSmith/Deep Agents]]
+			- ships with context management tools: [[AI/Agent/Skill]]s, memory, summarization and context offloading
+			- context offloading happens under the hood for long tool results
+				- a web search returns lots of information, and very little of it is useful
+				- in the background, Deep Agents moves that result out of the model's [[AI/Context/Window]] and into the filesystem
+				- per the docs, the threshold is 20,000 tokens; the model keeps the file path and the first 10 lines, and can re-read or grep the file later ([[LangSmith/Deep Agents]] → Virtual filesystem)
+			- delegation solves context bloat
+				- [[AI/Agent/Subagent]]s and planning isolate context into separate pieces of the harness, so less of it flows into the main agent
+				- the main agent kicks off subagents; each one does its research, uses up its own context window, and reports back to the parent with a clean summary
+				- Deep Agents is open source, so the delegation pattern can be customized for the use case
+				- tournament-style delegation, seen in production recently
+					- like March Madness brackets: 32 teams compete two at a time
+					- two subagents work on the same task, a judge picks the winner, and rounds continue until one agent wins
+				- the docs list more patterns under [Dynamic subagents](https://docs.langchain.com/oss/python/deepagents/dynamic-subagents): classify and act, fan-out and synthesize, adversarial verification, generate and filter, tournament, and loop until done
+					- tournament use cases per the docs: optimizing for subjective criteria, choosing a style, choosing between competing implementations
+			- steering: [[AI/Workflow/Human in the Loop]]
+			- read/write filesystem ([[LangSmith/Deep Agents]] → Virtual filesystem)
+				- frontier labs train models to work with a filesystem
+				- LangChain found that agents perform well when given a filesystem
+				- the execution environment gives agents a place to persist memories and notes
+			- summarization graph
+				- context size climbs over the run, then drops sharply at each summarization, like a sawtooth
+				- looks like a heap graph for the Java garbage collector
+				- possibly about incremental compaction
+				- per the docs, summarization triggers at 85% of the model's `max_input_tokens` once nothing is left to offload
+					- an LLM writes a structured summary (session intent, artifacts created, next steps) that replaces the older history
+					- the most recent 10% of tokens stay as they are
+					- the full original conversation is written to the filesystem so the agent can search it later
+					- a `compact_conversation` tool lets the agent compact on demand, for example between tasks
+			- [Managed Deep Agents](https://docs.langchain.com/langsmith/managed-deep-agents-overview)
+				- hosted runtime in [[LangSmith]] for creating, running and operating deep agents; CLI-first, in private preview as of the docs
+				- provisions threads, runs, a store and a checkpointer
+			- provider agnostic: the model can come from any provider
+			- why open source and highly customizable
+				- LangChain's roots are as an open source agent framework
+				- it leaves room for the work that makes an agent different from other agents
+				- Deep Agents takes on the harness engineering that LangChain saw as best practice for agent performance
+				- context management and specifying the skills, tools and prompts are left to the builder
+					- those make an agent perform well in its domain; the harness engineering doesn't
+		- ## Production is hard
+			- even a capable harness with everything built in isn't enough
+			- a fully built agent and harness can work well in a demo, then hit many edge cases on a server facing real users
+				- those edge cases block teams from getting agents from laptop to cloud
+			- what a production agent needs
+				- run for long periods and recover from failures
+					- Robert's point about a run failing at step 97: it shouldn't have to redo all 97 steps
+				- [[AI/Workflow/Human in the Loop]] approval for high-security tasks
+				- support bursty traffic
+				- maintain security posture
+				- keep up with standards
+					- when a new protocol endpoint like [[A2A]] or [[MCP]] comes out, the agent should be able to use it right away, without engineering time spent rebuilding it
+			- [[LangSmith/Deployment]] ([docs](https://docs.langchain.com/langsmith/deployment)) is built for scale and proven in production
+				- 30+ endpoints for agents
+				- integrations that are tricky to build yourself, like [[A2A]] and [[MCP]]; once in place, they give interoperability and make agents more useful
+				- purpose-built task queues handle messages from users to the agent securely, reliably and at scale
+					- [Agent Server: Task queue](https://docs.langchain.com/langsmith/agent-server#task-queue)
+						- the API server enqueues each new run; a queue worker picks it up, takes a lease on it, runs the graph and writes checkpoints
+						- at most one run executes per thread at a time
+						- PostgreSQL holds run data and the queue state with exactly-once semantics; Redis carries only signaling, cancellation and streaming pub/sub
+						- each worker runs up to 10 runs at once by default (`N_JOBS_PER_WORKER`)
+					- [Agent Server: Runtime architecture](https://docs.langchain.com/langsmith/agent-server#runtime-architecture) has three modes
+						- single host: the API server runs the queue itself; the self-hosted default, for development and low traffic
+						- split API and queue: queue workers on separate hosts; API servers scale on request volume, workers on pending run count
+						- distributed runtime: orchestration and execution in separate processes, for high concurrency
+					- the queue is what makes runs durable: any run can be retried, replayed or resumed from the point of interruption ([Core capabilities](https://docs.langchain.com/langsmith/core-capabilities))
+				- SDKs for chat, streaming and [[AI/Workflow/Human in the Loop]]
+				- all of this frees teams to focus on what makes their agent different
+			- human approval ([[AI/Workflow/Human in the Loop]])
+				- more important as models get more capable, see more internal data, and take on sensitive tasks like bank withdrawals or financial handling
+				- a human watches over what the agent does, from a security posture
+				- the human can approve, edit or reject sensitive actions
+				- interrupts are checkpointed for durability, so they can wait as long as the human needs to review
+				- one of the hardest parts of building production agents, and one of the last that teams take on
+					- teams spend a lot of time stuck here: security and auth
+		- ## Security and auth
+			- example: an agent deployed as a [[Slack]] app, like LangChain's internal go-to-market agent
+				- usable one-on-one in a direct message, or in a group chat with a team
+				- auth behavior and memory management differ by where the agent is invoked
+					- in a DM, the agent stores one person's information in a separate backend, apart from everyone else's; it knows and can access only that person's information
+					- in a group chat, shared memories are stored in a separate location, and the agent behaves differently
+				- the [[LangSmith/Deep Agents]] `StoreBackend` scopes storage per user, per assistant or per thread ([Backends: Namespace factories](https://docs.langchain.com/oss/python/deepagents/backends))
+			- security and auth are built into [Managed Deep Agents](https://docs.langchain.com/langsmith/managed-deep-agents-overview), to make deployment and auth for users as easy as possible
+		- ## Agent interoperability
+			- matters once several agents run in production: task management and delegation between them
+			- agents exposed over [[MCP]] become interchangeable, and existing systems like [[Claude]] or [[Codex]] can use them
+			- [[LangSmith/Deployment]] gives each deployment an MCP endpoint so agents can work together
+				- [Agent Server: MCP endpoint](https://docs.langchain.com/langsmith/server-mcp) at `/mcp`, over the Streamable HTTP transport
+				- each deployed agent appears as an MCP tool, named and described from `langgraph.json`, with the agent's input schema
+				- custom auth middleware can give a user access to user-scoped tools
+		- ## Context Hub
+			- a secure place for agents to store all of the context for their users, and for humans to edit that context reliably
+			- exposes skills, memories and prompts to the agent over SDK or API, and to users
+			- non-technical subject matter experts can use their expertise to build prompts and skills, so the agent performs as well as they say it should
+			- per the docs, an agent repo holds `AGENTS.md` and config and links to separate skill repos, each versioned and reusable across agents ([Context Hub concepts](https://docs.langchain.com/langsmith/context-engineering-concepts))
+				- [[LangSmith/Deep Agents]] can mount an agent repo as its filesystem with `ContextHubBackend`, with linked skills under `/skills/`
+		- ## Sandboxes ([[LangSmith/Sandbox]])
+			- agents perform better when they can execute code in a sandbox
+			- code execution shouldn't happen on the same server the agent is deployed on
+				- sandboxes give agents code execution that is reliable and secure
+			- auth proxy: secrets aren't stored in the sandbox; credentials are injected after the request leaves for the external service
+			- snapshots: checkpoint the sandbox at any time, and use container images for pre-built filesystems
+		- ## 10:27 [[Censys]] engineering spotlight
+			- Rob ([[Person/Robert Xu]]) hands off to [[Person/Asaaf Moldavsky]], Senior Staff AI Engineer, and [[Person/Hamza Khan]], AI/ML Engineer
+			- intros
+				- [[Person/Asaaf Moldavsky]]: on the Applied AI team; leads all agentic and AI development at Censys
+				- [[Person/Hamza Khan]]: AI engineer on the exposure management team
+			- how Censys uses generative AI
+				- like a typical security company, two fronts
+					- investigative and proactive: get ahead of the question "am I affected?"
+					- reactive: act on "am I affected?" when something happens, like a new CVE or something in the news
+				- each front has different agents and architectures; both use [[LangSmith/Deep Agents]]
+				- investigative side
+					- agents run for hours, sometimes days, before they converge on a conclusion
+					- underneath is a set of [[AI/Agent/Subagent]]s
+						- some are tuned models
+						- some are smaller domain experts, also deep agents
+						- some are deterministic or semi-deterministic
+				- exposure management side, where Asaaf and Hamza started
+					- building an "agentic mesh" as their ecosystem
+					- their first assistant, built about a year and a half ago, grew more complex, so they broke it into smaller subagents
+					- a deep agent on top manages the agents in the mesh
+					- Hamza: capability-driven design
+						- the assistant became so capable that they needed a mesh of domain experts
+						- a user's request goes to the matching domain expert, which answers and hands the result back (the transcript's word for these experts sounded like "senses")
+						- domain experts are easier to test, evaluate and observe
+			- Rob: did it start as a mesh, or as a single agent? how did you end up with the mesh?
+				- Hamza: it started as one assistant
+					- ask it questions and it comes up with an answer; they also generate reports and are working on dashboards
+					- it got so complex that they had to divide it
+				- they use [[LangSmith]] to see inside it
+					- engineers debug whether a failure came from the planner or a bad tool call
+					- non-technical people can experiment with the prompts to see what's going on
+			- Rob: what challenges came with the complexity, and how did you manage them before [[LangSmith]]?
+				- Asaaf: about a year and a half ago, everyone started from a chatbot experience
+					- a simple [[langgraph]] graph, or sometimes a home-grown solution; for Censys it was LangGraph from the start
+					- a simple tree of a few nodes, then more capabilities added on
+				- started with a supervisor model: give the model a bunch of tools
+					- slower, since nothing runs in parallel and the model takes time to think
+					- more expensive
+					- [[LangSmith/Trace]]s and statistics are how they saw that
+				- when Asaaf joined, they switched to a planner-executor architecture
+					- LangSmith showed the performance change with every change they made
+					- the proof of concept cut about two thirds of the execution time
+				- next came investigations and long-horizon tasks, so they looked at [[LangSmith/Deep Agents]]
+					- Deep Agents had just come out, and Censys was thinking of building its own
+					- [[Person/Lance Martin]] told them LangChain already had one, so they tried it early; it works very well for them
+				- as complexity grew, the assistant became the agentic mesh of smaller domain experts
+				- they still use [[LangSmith]] and [[LangChain]] in every domain expert to measure performance and decide whether it can go beyond proof of concept
+					- cost: about half a dollar per run now; released to a million people, would it bankrupt the budget?
+			- Rob: advanced teams go through many architecture changes as models and harnesses improve, and testing tells them whether a change is an improvement
+				- how do you test, and what metrics do you look at besides cost?
+				- Hamza: cost is one
+					- every week they review conversations by hand, thread by thread
+						- threads longer than 12 or 13 turns get a manual look; they don't want something labeling them without a person looking
+					- now working on closing the loop quickly once a thread is labeled with an issue
+						- fix it as soon as possible, so it doesn't sit in an epic for two or three weeks
+					- actively looking into [[LangSmith/Engine]] for that
+				- Asaaf, from a machine learning background
+					- one source of truth for pulling traces, then training classifiers or measuring things on them, is very important
+					- the engineering side uses [[LangSmith/Engine]]; the machine learning side measures: is this model working for us, and what happens if we change it?
+						- "the typical Google move": a model is announced as deprecated a week ahead, so you have to switch, and you have to know whether the new model works for you
+					- [[LangSmith]] helps by pulling the traces and running [[LangSmith/Evaluator]]s
+					- top-down evaluation: look for particular metrics, such as cost, verbosity, comprehension and understanding
+					- bottom-up evaluation: sample a batch of conversations, have humans label them, then a process creates LangSmith evaluators that capture that signal automatically
+						- this catches a new signal as behavior changes, and then they strengthen it
+			- Rob: the signal is captured with annotations and turned into an evaluator ([[LangSmith/Annotation/Queue]])
+				- the non-technical SMEs mentioned earlier: is it usually someone non-technical doing the annotations, or a developer?
+				- they run a double-blind labeling experiment
+					- the aim is an intersection where labelers don't diverge; otherwise labels can be biased
+					- [[LangSmith/Annotation/Queue/Q/How do I run a double-blind labeling experiment with annotation queues?]]
+			- Rob: teams in the field split between two kinds of evals
+				- how cheap a model can you use and still be effective?
+				- hill climbing: use the most expensive model and see how far into new tasks it gets
+				- do you focus on one, or both?
+				- Hamza: example from report generation
+					- reports are ready-to-share summaries for users: which risks affected them, how to fix them, and what to fix right away
+					- question: generate the report in one shot, or generate the sections in parallel?
+					- instead of arguing opinions about best model versus cost, they used one-shot as the baseline and ran both as experiments, then decided from the results
+					- [[LangSmith]] isn't only for spotting a planner mistake or a bad tool call; the team uses it to plan what to build next
+						- an experiment is the result of evaluating one version of the app on a dataset: outputs, evaluator scores and traces for every example ([Evaluation concepts](https://docs.langchain.com/langsmith/evaluation-concepts)); two experiments on the same dataset can be compared side by side ([Compare experiment results](https://docs.langchain.com/langsmith/compare-experiment-results))
+			- Rob: how have the results been?
+				- Asaaf: top-down, the four KPIs mentioned earlier (cost, verbosity, comprehension, understanding) are what the business cares about; the goal is to improve on them over time
+				- bottom-up, from the machine learning side: "there's always drift"
+					- people change how they ask things, models change, prompts change; detecting that matters
+				- both are measured over time and improved
+				- hard part of the bottom-up approach: it produces many evaluators, and deciding which to cut is difficult
+					- hoping [[LangSmith/Engine]] can help
+				- Rob: building an agent, he inverted one of his evaluators, scoring good results as bad and bad as good; [[LangSmith/Engine]] told him the evaluator was wrong
+			- Rob: advice for the audience building agents? if you could start over, how would you build it?
+				- Hamza: build simple and small first; don't dive into complex architectures
+					- if the simple version does the job, that's great
+					- expand the architecture only when you really need the capability
+					- Censys started with one assistant: an [[MCP]] server, tool calls, working fine; the agentic mesh came only once it grew
+					- with [[LangSmith/Deep Agents]] too, the use case comes first, then the architecture
+						- they need a deep agent because investigations run for hours or days before reaching an answer
+						- "do we actually need a deep agent?" was a running conversation with Asaaf, until they found they did
+					- AI is moving so fast that you don't have to chase each new thing; the use case matters more than the technology
+				- Asaaf
+					- start with a metric or KPI in mind, even a vague number; a North Star matters
+					- start from [[LangChain]] and [[langgraph]] and don't reinvent the wheel
+						- it lets you move faster from the start; switching to something else later is fine
+					- think in tiers: [Managed Deep Agents](https://docs.langchain.com/langsmith/managed-deep-agents-overview) can be expensive, but it gets you started quickly
+					- most important: discard a solution that doesn't work, quickly
+						- don't spend weekends in notebooks trying to perfect something that won't get better
+					- try the latest LangSmith offerings (LangGraph, LangChain, [[LangSmith/Deep Agents]]) as experiments
+						- if one works and needs to be faster or cheaper, there are ways to get there from that point
+					- he started with notebooks; walking away from what isn't working is something they keep doing — what a takeaway
+				- Rob: startups like Manus give the same advice: keep things lean and bring in new things only when you need them, so you can move fast while the space evolves this quickly
+			- Rob closes the spotlight and thanks Hamza and Asaaf
+		- ## Questions
+			- Can the parent agent search or grep the full transcripts of its subagents?
+				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [deepagents source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/subagents.py) at commit 28e86888, [[2026-09-29 Tue]]
+					- the parent receives only the subagent's last non-empty AI message, as one `ToolMessage`; the subagent's message history stays out of the parent's state
+					- the rest of the subagent's state merges back into the parent, so files a subagent writes to the shared filesystem are visible to the parent afterward
+					- to make a transcript greppable, have the subagent write its findings or notes to files; the docs recommend "Subagents can write results to files; the main agent reads what it needs"
+					- the full subagent run is visible in [[LangSmith]] tracing, which can filter by subagent
+			- How does checkpointing work?
+				- researched by [[Anthropic/Model/Claude/5/5/Opus]] in the [Deep Agents docs](https://docs.langchain.com/oss/python/deepagents/human-in-the-loop)
+					- `create_deep_agent` takes a [[langgraph]] `checkpointer`, such as `InMemorySaver`, which saves the agent's state per thread after each step
+					- human-in-the-loop interrupts require a checkpointer, for the main agent and for subagents, so a paused run can resume with the human's decision
+					- LangSmith deployments and Managed Deep Agents provision the checkpointer
+					- async subagent task IDs live in their own state channel, so the supervisor keeps track of them after summarization compacts its history

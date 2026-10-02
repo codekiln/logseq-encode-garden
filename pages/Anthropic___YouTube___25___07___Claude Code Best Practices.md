@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 created-by:: [[Person/Cal Rueb]]
 
 - # [Claude Code best practices - YouTube](https://www.youtube.com/watch?v=gv0WHhKelSE) - [[Claude/Code]]

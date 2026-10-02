@@ -1,0 +1,11 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+- # Book User Guide
+	- In this garden, **Book User Guide** pages model published instructions for using a particular item.
+	- ## Identity and names
+		- Place the guide at `<Item>/UG`, where `<Item>` is the page for the product or tool. One guide belongs to one item; search that namespace before creating another.
+		- The guide page uses `logseq-entity:: [[Logseq/Entity/Book/User Guide]], [[Logseq/Entity/Book]]`. It follows the shared book shape on [[Logseq/Entity/Book]].
+	- ## Sections
+		- Place guide sections beneath `<Item>/UG` as [[Logseq/Entity/Book/Section]] instances. Their level, order, navigation, and page shape follow the level-specific section definitions.
+		- The guide root links to its Level 1 sections in reading order; section content stays on the section pages.
+	- ## Example
+		- [[Microfreak/UG]] contains the [[Microfreak/UG/06 Dig Osc]] section.

@@ -1,4 +1,4 @@
-author:: [[Anthropic/Model/Claude/Fable/5.1]]
+author:: [[Anthropic/Model/Claude/5/1/Fable]]
 see-also:: [[Person/codekiln/GitHub/logseq-gardener/Analysis/Codex/26/09/12/0733 ET Test graph meaning and preserve the original source text]], [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET Pick the parser first and let the language follow]]
 
 - # Use Logseq's own graph-parser as the oracle and require a byte-identical round trip

@@ -1,4 +1,6 @@
-# Week Review [[2026-09-20 Sun]]
+next:: [[Week/Review/26/09/27 Sun]]
+
+- # Week Review [[2026-09-20 Sun]]
 	- ## About [[Knowledge Gardening]]
 		- ### Compared with [[Journaling]]
 			- When I was younger, at any one time I had only a single journal. Entries were sequential. Over time, the volumes of handwritten pages became the way I picture the passage of time. When I look upon my old journals, each volume appears as an epoch, a geological strata in the development of my life. The journals became [[Horcrux]] into which I pasted concert tickets, pressed leaves,

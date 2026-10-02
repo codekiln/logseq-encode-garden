@@ -1,0 +1,2 @@
+- # rclone remote
+	- an rclone remote is a representation of a remote storage backend.

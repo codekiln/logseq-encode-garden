@@ -6,7 +6,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- **Year** — one calendar year; the primary sense of this type.
 		- **Decade** — the ten years sharing every digit but the last.
 		- **Century** — the hundred years sharing every digit but the last two.
-		- Not this type: a specific day or month (those stay plain date wikilinks per [[Logseq/Date]]), or a named historical era without a numeral (e.g. "the Renaissance") — model that as [[Logseq/Entity/Concept]] instead.
+		- Not this type: a specific day, which is a [[Logseq/Entity/Time/Date]] instance, or a month, which stays a plain date wikilink per [[Logseq/Date]], or a named historical era without a numeral (e.g. "the Renaissance") — model that as [[Logseq/Entity/Concept]] instead.
 	- ## Naming — digit groups, most significant first
 		- A year's canonical page splits its four digits into groups, most significant first: `<century>/<decade digit>/<year digit>`, e.g. [[19/5/9]] for 1959.
 		- Its decade page drops the last segment: [[19/5]] for the 1950s. Its century page drops the last two: [[19]] for 1900-1999.

@@ -1,0 +1,37 @@
+alias:: [[Design Engineering]]
+logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Field of Study]]
+
+- # Design Engineering
+	- ## Overview
+		- Design engineering is the practice of deciding how software should look, move and feel and then building it, in one person or one tight loop. It sits between [[Design/er]] work and [[Engineer/ing]] work, and its practitioners are [[Design/Engineer]]s.
+		- The field rests on one claim: the medium has constraints, and design decisions made without knowing them produce artifacts that have to be redrawn or rebuilt. Pixel mock-ups hide the web's real materials, such as performance limits, data loading and race conditions. A design engineer designs with those materials in hand.
+	- ## Context
+		- ### What it is not
+			- Polish alone. [[Person/Maggie Appleton]] separates design engineering from micro-interactions and hover effects, which tools and agents can now produce without much code. Her test is whether the person understands the technical architecture well enough to shape what the interface can do ([[Person/Gergely Orosz/Pod/26/09 Design Engineering with Maggie Appleton]]).
+			- Front-end development as usual. Chris Coyier's 2019 essay "The Great Divide" described front-end developers splitting into a JavaScript-centered group and a group centered on HTML, [[CSS]] and design[^1]. Brad Frost's "front-of-the-front-end" named the second group[^2], and design engineering is one of the names that grew around the same gap.
+			- Traditional design handoff. A designer produces visuals, prototypes and specifications and engineers build them. A design engineer collapses that handoff.
+		- ### Skills
+			- Running a design process: exploring how something should work, look and feel.
+			- Implementing it: live code, [[Prototype]]s at several levels of fidelity, and design systems.
+			- Understanding the product behind the interface: data, APIs and model capabilities, where they limit or enable the interface.
+	- ## History
+		- ### 2019 to 2020
+			- In January 2019 Chris Coyier described the divide in front-end work[^1]. David Luhr's survey of the term finds the earliest resources on design engineering in Natalya Shelburne's fall 2019 Beyond Tellerrand talk "CSS at the intersection"[^3]. On the Shop Talk Show in October 2020 she said she came up with the term with Aarron Walter at Design Exchange in Sydney, according to Luhr[^3].
+			- In 2020 Natalya Shelburne, Adekunle Oduye, Kim Williams and Eddie Lou wrote the Design Engineer Handbook for Design Better. Luhr names Eddie Lou's design engineering team at Indeed as one of the earliest he found at a company[^3].
+		- ### 2021 to 2022
+			- In February 2021 Brad Frost wrote about front-of-the-front-end and back-of-the-front-end development[^2]. Trys Mudford published a run of posts on design engineering that month, and Jeremy Keith answered them and later hosted a Clearleft podcast episode on the subject[^3].
+			- In May 2022 Jim Nielsen published "The Case for Design Engineers", arguing from the many artifacts that responsive design asks designers to produce[^4].
+		- ### 2023 onward
+			- Luhr reports job listings titled Design Engineer appearing in 2023 and rising sharply in early 2024[^3]. Maggie Appleton's collection of design engineers, made to work out what the role is, lists people such as Rauno Freiberg, Paco Coursey, Amelia Wattenberger, Bret Victor and Emil Kowalski[^5]. Her 2026 conversation with Gergely Orosz covers the role alongside coding agents ([[Person/Gergely Orosz/Pod/26/09 Design Engineering with Maggie Appleton]]).
+	- ## Key sources
+		- Maggie Appleton's definition: a person at the intersection of design and engineering who works to bridge the gap between them, knows how to run a design process, and can implement the result[^5].
+		- Trys Mudford, quoted by Luhr: the name "Design Engineer" is "entirely focused on the handshake between those two other roles"[^3].
+	- ## Misconceptions
+		- The title has no settled meaning. Appleton lists it beside interface designer, interaction designer, UX engineer, UI engineer and front-of-the-front-end engineer, and notes that these differ from company to company[^5].
+		- Not every domain needs it. Appleton says a government forms project may not require a designer who understands the database ([[Person/Gergely Orosz/Pod/26/09 Design Engineering with Maggie Appleton]]).
+	- ## Footnotes
+		- [^1]: https://css-tricks.com/the-great-divide/
+		- [^2]: https://bradfrost.com/blog/post/front-of-the-front-end-and-back-of-the-front-end-web-development/
+		- [^3]: https://luhr.co/blog/2024/02/26/the-origins-of-design-engineering/
+		- [^4]: https://blog.jim-nielsen.com/2022/the-case-for-design-engineers/
+		- [^5]: https://maggieappleton.com/design-engineers

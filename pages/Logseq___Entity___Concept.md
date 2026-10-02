@@ -8,10 +8,10 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## When we treat something as a concept entity
 		- Strong signals: the page’s purpose is **understanding**—what something is, why it matters, how it relates to neighboring ideas—not primarily a how-to, tutorial walkthrough, or lookup reference.
 		- Good fit: programming paradigms, frameworks of thought, architectural patterns explained in prose.
-		- Not a concept entity: short glossary stubs better modeled as [[Logseq/Entity/Term]] instances; task steps ([[Logseq/Entity/How To]]); guided walkthroughs ([[Logseq/Entity/Tutorial]]); lookup descriptions ([[Logseq/Entity/Reference]]); bare link lists; **question** entities (use [[Logseq/Entity/Question]] and `/Q/` naming).
+		- Not a concept entity: short glossary stubs better modeled as [[Logseq/Entity/Term]] instances; task steps ([[Logseq/Entity/Diataxis/How To]]); guided walkthroughs ([[Logseq/Entity/Diataxis/Tutorial]]); lookup descriptions ([[Logseq/Entity/Diataxis/Reference]]); bare link lists; **question** entities (use [[Logseq/Entity/Question]] and `/Q/` naming).
 	- ## Naming and links
 		- **Link shape:** `[[Topic/Concept/Idea]]` or `[[Topic/Explanation/Idea]]` when the topic has enough pages to want the segment, as on [[Programming/Language/Concept/Object-Oriented]] and [[herdr/Explanation/Where Input Box Text Comes From]].
-		- A concept that is the topic takes the topic's own name, as [[Gleam]] and [[cybernetics]] do.
+		- A concept that is the topic takes the topic's own name, as [[cybernetics]] does.
 		- **File shape:** triple underscores between namespace segments, e.g. `pages/Topic___Concept___Idea.md`.
 	- ## Finding and deduplicating
 		- Search for an existing page before creating a new concept entity.
@@ -19,19 +19,17 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Classify as: **existing**, **similar** (needs human judgment), **new**, or **blocked**.
 	- ## Frontmatter
 		- On instances, set **`logseq-entity::`** to a link to **this** entity-type page so backlinks list all concept entities.
-		- New concept pages carry [[Diataxis/Concept]] in `tags::` alongside the topic's own tags; [[Diataxis/Explanation]] names the same cluster through its alias.
-		- **`see-also::`** carries the adjacent reading, strongest tie first.
+		- Concept-specific tags may mirror the established Diataxis concept cluster when the page is new and that convention applies.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape (body)
 		- Use Logseq Flavored Markdown (bullets, headings as bullets, tab nesting, no blank lines between bullets).
 		- Recommended sections (Diataxis explanation style): **Overview**, **Context**, **Key Principles**, **Mechanism**, **Examples**, **Misconceptions**. Adapt headings to the topic; not every section must be long.
 		- First heading after frontmatter: H1 matching the page’s primary topic.
-		- Adjacent pages go in **`see-also::`** rather than a `## Related` list of internal links.
 	- ## Combined with other types
 		- Concept stays first in `logseq-entity::`, and the other type follows it.
 		- [[Logseq/Entity/Trade-Off]] — a concept that weighs choices against each other: `logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Trade-Off]]`. That page carries the page shape for the combination.
 		- [[Logseq/Entity/Term/Acronym]] — a concept whose page name is an acronym, as on [[TAM]].
 		- [[Logseq/Entity/Field of Study]] — a concept that is also a discipline, as on [[cybernetics]].
 	- ## Relationship to Diataxis
-		- Diataxis framing in the graph: [[Diataxis/Explanation]] (aliases [[Diataxis/Concept]]) — content that explains **why** and serves **understanding**. This type page is the **operational** template; those pages are the **vocabulary** of the framework.
-		- The other three quadrants have their own type pages: [[Logseq/Entity/Tutorial]], [[Logseq/Entity/How To]], and [[Logseq/Entity/Reference]].
+		- Diataxis framing in the graph: [[Diataxis/Explanation]] (aliases [[Diataxis/Concept]]). This type page is the **operational** template; those pages are the **vocabulary** of the framework.
+		- [[Logseq/Entity/Diataxis/Explanation]] carries the quadrant's tag and writing guidance for concept pages.

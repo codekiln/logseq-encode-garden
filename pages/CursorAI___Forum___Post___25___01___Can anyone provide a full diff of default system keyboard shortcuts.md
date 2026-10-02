@@ -1,4 +1,7 @@
+logseq-entity:: [[Logseq/Entity/Forum/Post]]
 created-by:: [[Person/codekiln]]
+date-created:: [[2025/01]]
+logseq-created-time-year:: [[20/2/5]]
 
 - # [Can anyone provide a full diff of default system keyboard shortcuts in VSCode vs in Cursor in Mac/Win etc? - Discussion - Cursor - Community Forum](https://forum.cursor.com/t/can-anyone-provide-a-full-diff-of-default-system-keyboard-shortcuts-in-vscode-vs-in-cursor-in-mac-win-etc/45333)
 	- A colleague of mine showed me one way to do this:

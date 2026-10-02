@@ -1,0 +1,20 @@
+logseq-entity:: [[Logseq/Entity/Concept]]
+- # Design Pattern
+	- A design pattern names a recurring problem in a particular context and describes an adaptable arrangement that has addressed it. Its value lies in explaining the forces behind a choice and the consequences of making it, so another designer can judge whether the arrangement fits a new situation.
+	- ## From buildings to other designed things
+		- [[Person/Christopher Alexander]] and his collaborators developed patterns for towns, buildings, and construction in [[Person/Christopher Alexander/Book/77/A Pattern Language]]. [[Person/Christopher Alexander/Book/79/The Timeless Way of Building]] develops the broader idea of making places through a connected language of patterns. Their [pattern language overview](https://www.patternlanguage.com/aims/intro.html) describes a language as a network whose patterns call upon one another.
+		- A pattern is a proposal grounded in experience, not a guarantee. The garden's [[Logseq/Entity/Definition/Discussion]] draws on Alexander's description of the patterns in *A Pattern Language* as hypotheses that remain open to observation and revision.
+	- ## How to read a pattern
+		- **Context and problem:** In what situation does the difficulty recur, and for whom?
+		- **Forces:** Which needs or constraints pull the design in different directions?
+		- **Arrangement:** What relationship among parts has worked, and what must be adapted locally?
+		- **Consequences:** What does the arrangement improve, cost, or make harder? What evidence would show that it works here?
+		- Patterns can connect across scales. A choice about a room sits within choices about a building and a neighborhood; a service interaction sits within a larger journey. A pattern language makes those relationships visible instead of treating each solution as an isolated trick.
+	- ## Examples across disciplines
+		- **Architecture:** Alexander's [Light on Two Sides of Every Room](https://www.patternlanguage.com/apl/apl159/apl159.htm) responds to the discomfort and glare of rooms lit from one side by arranging rooms and windows for light from more than one direction. The source also discusses adaptations when a second exterior wall is impossible.
+		- **Public service design:** The [GOV.UK address pattern](https://design-system.service.gov.uk/patterns/addresses/) pairs postcode lookup with manual entry, because international addresses and some UK addresses cannot be found by lookup. The recurring problem is helping people provide an address without excluding those cases.
+		- **Teaching:** The [Active Student pattern](https://csis.pace.edu/~bergin/patterns/ActiveLearningV24.html) addresses passive learning by giving students work to do during learning, such as a short exercise that reveals what they understand. The pattern belongs to a larger collection of teaching patterns.
+		- **Software:** [[Book/94/Design Patterns]] catalogs recurring object-oriented design problems and arrangements. It is one influential application of the pattern idea, within the wider practice of design; the [software design pattern overview](https://en.wikipedia.org/wiki/Software_design_pattern) gives additional context.
+		- **Knowledge gardening:** The garden's [[Logseq/Entity/Definition/Discussion]] compares entity definitions with a collection of patterns: each definition proposes a repeatable way to model a kind of thing and can change with experience.
+	- ## Judgment
+		- Reuse the reasoning, not just the visible form. A named solution becomes useful when its context and tradeoffs match the present work; repeated use alone does not establish that it belongs everywhere.

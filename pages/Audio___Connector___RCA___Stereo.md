@@ -1,0 +1,26 @@
+logseq-entity:: [[Logseq/Entity/Hardware/Connector/Audio]]
+
+- # RCA Stereo Pair
+	- Two [[Audio/Connector/RCA]] connectors wired as one unbalanced analog stereo line, one per channel.
+	- Line level throughout — the usual link from a turntable preamp, CD player or mixer into an amplifier or a powered monitor.
+	- ## Physical Specifications
+		- **Connectors**: 2, one per channel
+		- **Contacts each**: 2 (center pin, outer shell)
+		- **Plug center pin**: 1/8 in (3.175 mm) diameter
+		- **Plug outer shell**: 1/3 in (8.47 mm) diameter
+		- **Orientation**: no keying
+	- ## Pin Configuration
+		- **Center pin**: that channel's signal
+		- **Outer shell**: ground and shield
+	- ## Color Coding
+		- Red is the right channel in every convention. The left channel is white, black or grey depending on the maker.
+	- ## Common Use Cases
+		- Turntable, CD player and tape deck outputs into an amplifier or receiver
+		- Line input on powered studio monitors, such as [[IK Multimedia/iLoud Micro Monitors]]
+		- Mixer main outs into a recorder
+	- ## Compatibility
+		- Breakout cables carry an [[Audio/Connector/Phone/TRS/3.5mm]] plug on one end and the RCA pair on the other, tip to left and ring to right.
+		- The signal pin meets the jack before the shells ground, so connecting a live pair hums or buzzes when the two devices share no ground. The same happens when a plug works its way half out.
+	- ## Related References
+		- [[RCA/Connector/Ref/RCA Male]]
+		- [[RCA/Connector/Ref/RCA Female]]

@@ -1,5 +1,7 @@
+logseq-entity:: [[Logseq/Entity/Forum/Post]]
 created-by:: [[Person/codekiln]]
 date-created:: [[2025-04-11 Fri]]
+logseq-created-time-year:: [[20/2/5]]
 
 - # [How can I increase the indexing depth for @docs? - Discussion - Cursor - Community Forum](https://forum.cursor.com/t/how-can-i-increase-the-indexing-depth-for-docs/77949)
 	- ## #[[Original Poster]]

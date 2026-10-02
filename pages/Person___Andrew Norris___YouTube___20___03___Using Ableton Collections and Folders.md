@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 # Using [[Ableton Collections]] & Folders to [Organise Your Entire Library - YouTube](https://www.youtube.com/watch?v=6bFhECd1Y5A)
 	- ## About
 		- All of this still applies to Live 11 & 12. However, in Live 12 you now have the inclusion of Filters / Tags to help organise your library. If you prefer to organise your library using tags and filters, then Live 12's new features may be a better option for you. If you prefer to organise everything through folders on your hard drive, then the method in the video might be better for you. My advice if you're not sure: try a little bit of both and see what you feel most comfortable with. :)

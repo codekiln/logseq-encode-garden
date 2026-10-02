@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 tags:: [[AI Coding]], [[Context Engineering]], [[AI Agents]], [[YouTube]], [[YC/Conference/Context Eng/25]] 
 created-by:: [[Person/Dex Horthy]]
 

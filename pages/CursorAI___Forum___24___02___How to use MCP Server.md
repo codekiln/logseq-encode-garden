@@ -1,3 +1,6 @@
+logseq-entity:: [[Logseq/Entity/Forum/Post]]
+date-created:: [[2024/02]]
+logseq-created-time-year:: [[20/2/4]]
 - [How to use MCP Server? - How To - Cursor - Community Forum](https://forum.cursor.com/t/how-to-use-mcp-server/50064/13)
 	- I just found this it has a cursor command generator [[smithery.ai]]
 	- [[CursorAI/Forum/User/mehmet-py]]

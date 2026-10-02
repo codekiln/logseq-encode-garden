@@ -1,0 +1,29 @@
+logseq-entity:: [[Logseq/Entity/Concept]]
+
+- # [Environments](https://www.1password.dev/environments)
+	- ## Overview
+		- 1Password Environments hold a project's [[EnvVar]]s as a first-class object, separate from ordinary vault items. Each Environment is a named set of key-value pairs that can be shared, mounted, and read without writing plaintext secrets to disk.
+	- ## Context
+		- Earlier garden notes treat this as an open idea — [[1Password/Idea/Populate EnvVars]] — and as a CLI-era how-to that substitutes `op` references into [[EnvVar/.env]] files: [[1Password/Dev/How To/Replace .env secrets with op refs]]. Environments is the product-shaped answer: import an existing `.env` file (or add variables by hand), then consume them through mounts, [[1Password/Dev/CLI]], [[1Password/Dev/SDK]], or [[1Password/Environment/MCP]].
+		- The feature lives in the 1Password desktop app (Mac, Windows, Linux), not iOS or Android, and an Owner or Administrator must turn the Environments policy on.
+	- ## Key Principles
+		- **Separate from vault items** — Environment variables are scoped to a project or stage, not mixed into the rest of a vault.
+		- **Values are returned as stored** — 1Password does not rewrite what is saved. Quote spaces and escape special characters the way a `.env` file would.
+		- **Hidden by default** — values are masked in CLI and SDK output unless a variable is marked "show value by default."
+		- **Share per Environment** — on a team or business account, access is granted per Environment, not for all Environments at once.
+	- ## Mechanism
+		- Create and edit Environments under Developer → View Environments in the desktop app.
+		- Consume them by:
+			- mounting a local `.env` file that does not write credentials to disk
+			- an agent hook that validates that mount in supported IDEs and agents
+			- programmatic reads via [[1Password/Dev/CLI]] or [[1Password/Dev/SDK]]
+			- syncing to AWS Secrets Manager
+			- [[1Password/Environment/MCP]] for agent clients
+		- Turning the Environments policy off hides existing Environments; it does not delete them.
+	- ## Examples
+		- One Environment per project, or per stage (dev / staging / prod), imported from an existing `.env`.
+		- [[1Password/GitHub/1password-codex-plugin]] wires [[Codex]] to [[1Password/Environment/MCP]] so Codex can list Environments and mount `.env` files without receiving secret values.
+	- ## Misconceptions
+		- **A mounted `.env` is a plaintext file on disk** — the mount makes variables available on demand; credentials are not written to disk.
+		- **Importing a leaked `.env` remediates the leak** — moving secrets into 1Password secures them going forward; it does not undo prior exposure in git history or agent memory. Rotate those values.
+		- **Deleting an Environment is reversible** — deleted Environments cannot be restored, and associated integrations stop working.

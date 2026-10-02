@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 date-created:: [[2022/07]]
 
 - # [1Password Developer Tools Walkthrough - YouTube](https://www.youtube.com/watch?v=z67zoIN8sCA)

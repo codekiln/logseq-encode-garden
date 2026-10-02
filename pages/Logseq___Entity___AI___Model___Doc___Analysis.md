@@ -1,0 +1,25 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # AI Model Analysis
+	- In this garden, **AI Model Analysis** pages model an external webpage of statistics, metrics, and analysis for one [[Logseq/Entity/AI/Model]] from one third-party source — a model card on [[ArtificialAnalysis]], not the vendor's own docs.
+	- ## What counts as an instance
+		- One source's page about one model version. The usual example is an [[ArtificialAnalysis]] model URL such as [Claude Opus 5.5](https://artificialanalysis.ai/models/claude-opus-5-5).
+		- Not an instance: the official API docs, which are a [[Logseq/Entity/AI/Model/Doc/API]]; a multi-model ranking, which is a [[Logseq/Entity/AI/Leaderboard]].
+	- ## Naming and links
+		- Live under the model as `…/Doc/<Source>` when that source has one page for the model, or `…/Doc/<Source>/<Dimension>` when the garden files one board from that source on its own page.
+		- Example: [[Anthropic/Model/Claude/5/5/Opus/Doc/Artificial Analysis/Intelligence]].
+	- ## Finding and deduplicating
+		- Search the source URL, then the path under the model, then the model code plus the source name. Classify as: existing, similar, new, or blocked.
+		- One page per source (or source-and-dimension) per model version.
+	- ## Frontmatter
+		- Mark instances with **`logseq-entity:: [[Logseq/Entity/AI/Model/Doc/Analysis]]`**.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- The first body block is an H1 whose text links to the source page, using that page's own title when it is stable.
+		- Optional child bullets may summarize the headline findings: Intelligence Index, speed, cost per task, context, price.
+	- ## Relationship to other types
+		- [[Logseq/Entity/AI/Model]] — the parent model may embed this page under its H1.
+		- [[Logseq/Entity/AI/Model/Doc/API]] — official numbers for the same model.
+		- [[Logseq/Entity/AI/Leaderboard]] — the ranked list a finding was taken from.
+	- ## Examples in this garden
+		- [[Anthropic/Model/Claude/5/5/Opus/Doc/Artificial Analysis/Intelligence]]

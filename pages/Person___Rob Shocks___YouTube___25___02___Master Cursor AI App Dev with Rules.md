@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 date-created:: [[2025-02-06 Thu]]
 created-by:: [[Person/Rob Shocks]]
 tags:: [[CursorAI/Project Rule]]

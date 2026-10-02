@@ -1,0 +1,200 @@
+- # 1045 [[LangSmith/Engine]] Workshop
+	- 10:45 workshop at [[LangSmith/26/09/29 Tue - Deep Agents]]
+	- Presenter: [[Person/Michael Dik]]
+	- Guide: [Engine Workshop Guide](https://docs.google.com/document/d/1G013nTuItdN4Hdb2XTBcpuWEzw_NvPT4W_hIJ5LmWbU/edit?tab=t.0#heading=h.b9e17a8of020)
+	- TAs: [[Person/Robert Xu]], [[Person/Daniel Shea]], [[Person/Avi Kumar]]
+	- ## [[My Notes]]
+		- 10:45 three quick slides, then hands-on
+			- plan: the ADLC (agent development lifecycle), [[LangSmith/Engine]], and how Engine fits in the ADLC
+		- prototype vs production
+			- building a prototype is very easy: a coding agent and a prompt get something that looks like a start
+			- getting that prototype into production is very hard
+				- agents are unreliable
+				- all input is natural language, and even one input has infinite possible outputs
+				- that non-determinism takes a lot of testing and iterating, which is where [[LangSmith/Engine]] fits in
+			- customers getting agents into production quickly and iterating on them: [[Censys]], Rippling, Clay, Harvey
+		- hands-on today: [[LangSmith/Engine]] on a use case
+			- finding issues
+			- suggesting fixes
+			- creating evals and [[LangSmith/Dataset]]s
+			- monitoring for regressions
+		- use case: North Point's go-to-market agent
+			- like the go-to-market agent mentioned in the [[LangSmith/26/09/29 Tue - Deep Agents]] security and auth section
+			- a very basic agent: input → model call → tools → output
+			- the workshop looks at its [[LangSmith/Trace]]s, analyzes them, and fixes it
+		- tour of [[LangSmith]]
+			- an agent's traces go to a tracing project
+			- other areas: [[LangSmith/Engine]]; monitoring, maybe at the end with Q&A; datasets, experiments and evals, which measure whether the agent is improving and doing what's wanted
+			- the go-to-market agent is built on [[LangSmith/Deep Agents]]: a model, some tools, and the agent loop
+		- threads, traces and runs
+			- [[LangSmith/Thread]]: the whole multi-turn conversation, every back and forth in one session
+			- [[LangSmith/Trace]]: one back and forth; one query in, one response out
+			- run: the most atomic unit of observability, such as a tool call, a model call or a workflow step
+		- the demo project: 20 traces, 907 runs
+			- even 20 interactions are a lot of steps to read through
+			- a real production agent has thousands to hundreds of thousands of traces coming in
+		- reading a trace
+			- many customers say the first time they understood what their agent does was seeing a trace
+			- without observability there's no way to see which tools and models the agent calls, in what order, inside a non-deterministic loop
+			- [[LangSmith/Deep Agents]] steps show up in the trace, including its built-in middleware: filesystem middleware and subagent middleware
+			- example trace
+				- the agent emails leads and customers and sets up calls
+				- this input: email a lead to set up a technical deep dive
+				- the trace shows the high-level input, the final output, and the full trajectory in between
+				- trajectory: tool calls such as a current-rep tool, an OpenAI model call, then another tool
+		- Trajectory view
+			- instead of the whole trace, shows just the path the agent took
+			- trajectory is a new primitive in [[LangSmith]]: the path an agent took to solve a problem
+			- more useful for diagnosing an agent than seeing every step; every step is still there when needed
+			- per the docs
+				- a trajectory is a flat, ordered list of the human, AI and tool messages in a [[LangSmith/Thread]], each appearing once in the order it first appeared, with the nesting of runs removed ([Observability concepts: Trajectories](https://docs.langchain.com/langsmith/observability-concepts#trajectories))
+				- the side panel has three views ([View traces](https://docs.langchain.com/langsmith/view-traces))
+					- Trajectory (`T`): the conversation as inputs, outputs, reasoning, tool calls and subagent activity; for finding where to look
+					- Turns: one card per turn with its inputs and outputs
+					- Details (`D`): one run's inputs, outputs, timing, token counts, errors and metadata; for debugging
+				- each turn renders as one block with the model's response, the tool calls it made and their results, plus token usage, cost and model name
+				- thinking appears as collapsed Thought blocks; subagents appear inline and open into a nested view of their own messages; parallel tool calls collapse into one grouped row
+				- the Trajectory view can download the whole thread as a Markdown file with human and AI turns, tool calls and tool results
+				- needs runs instrumented with `thread_id` metadata
+			- `AnthropicPromptCachingMiddleware` wraps `ChatOpenAI` in the trace — weird!
+				- [[LangSmith/Deep Agents]] always registers `AnthropicPromptCachingMiddleware` and `BedrockPromptCachingMiddleware` with `unsupported_model_behavior="ignore"`, so each one does nothing on a model it doesn't support; on `ChatOpenAI` it passes the call straight through, but still shows up as a run ([Customization: default stack](https://docs.langchain.com/oss/python/deepagents/customization), [source](https://github.com/langchain-ai/deepagents/blob/28e86888/libs/deepagents/deepagents/middleware/_prompt_caching.py))
+		- feedback scores
+			- the trace has a rating feedback score, which comes automatically from a trace suggestion
+			- the agent's steps are visible, but whether one is an error is unclear unless you're the go-to-market expert, and that expert probably isn't an agent engineer; that's where [[LangSmith/Engine]] comes in
+		- setting up [[LangSmith/Engine]]
+			- start from a tracing project with traces in it
+			- connect Engine to the agent's code repository, and optionally to Context Hub
+				- Context Hub is a core LangSmith feature for storing agent primitives like skill files and `AGENTS.md`; Engine can fix and improve those as well as source code
+			- "what matters most to you?": say what to prioritize, such as latency for a customer service agent, or cost if cost-sensitive
+			- per [Engine docs](https://docs.langchain.com/langsmith/engine)
+				- preference categories include Cost & Tokens, Latency and Tool Call Failures; "+ Add something specific" describes a custom concern
+				- Engine treats preferences as authoritative and folds them into the agent overview document; changes apply on the next scan
+				- analysis level: Reduced, Standard (default) or Expanded; higher levels analyze more traces and cost more
+				- "Focus on specific traces" narrows analysis by run name or metadata, up to two conditions
+				- before surfacing issues, Engine writes an agent overview document (purpose, architecture, key metrics) to review and edit; it's context for all later analysis
+				- first analysis can take up to 20 minutes
+			- could Engine focus on pedagogical efficacy?
+				- add it as a custom concern with "+ Add something specific", and describe the learning goals in the agent overview document
+				- Engine ranks traces by feedback: for each feedback key, it pulls the low-scoring traces, and it screens traces with any feedback score first ([How Engine selects traces](https://docs.langchain.com/langsmith/engine#how-engine-selects-traces))
+					- so a pedagogy rubric as an online evaluator or an annotation queue score steers Engine toward the weakest teaching conversations
+				- traces alone don't show whether a learner learned; log outcome signals (quiz results, completion, instructor ratings) as feedback on the run through the SDK so Engine can see them
+		- hands-on setup
+			- 1. at [smith.langchain.com](https://smith.langchain.com), create a brand-new organization
+				- an existing organization or account won't work; this is the most common error
+				- in LangSmith, open Settings → Organizations to create it; TAs are on hand to help
+			- 2. copy the new organization's ID
+				- then create an API key under Settings → API Keys
+			- 3. go to `workshop.langchain.com`, enter the workshop code, the new organization's ID, and an API key from that organization
+			- 4. the workshop fills the new organization with traces
+			- 5. turn on [[LangSmith/Engine]] for that tracing project; the analysis takes a while
+		- hands-on practice slide
+			- set up the LangSmith organization with the setup guide: [langch.in/engine-setup](https://langch.in/engine-setup), which opens the [Engine Workshop Guide](https://docs.google.com/document/d/1G013nTuItdN4Hdb2XTBcpuWEzw_NvPT4W_hIJ5LmWbU/edit?tab=t.0#heading=h.b9e17a8of020) Google Doc
+			- fork the codebase on GitHub: [langchain-samples/gtm-agent-engine-workshop](https://github.com/langchain-samples/gtm-agent-engine-workshop)
+			- point [[LangSmith/Engine]] at the tracing project and let it review and cluster the traces
+			- what I did
+				- copied [langchain-samples/gtm-agent-engine-workshop](https://github.com/langchain-samples/gtm-agent-engine-workshop) into [codekiln/gtm-agent-engine-workshop](https://github.com/codekiln/gtm-agent-engine-workshop)
+				- created a new LangSmith login and a new organization
+				- at `workshop.langchain.com`, entered the org ID and the live-demo workshop code
+					- that filled the tracing project with traces, presumably through the LangSmith SDK, and gave the org Enterprise-level access
+				- in the Engine tab, connected [codekiln/gtm-agent-engine-workshop](https://github.com/codekiln/gtm-agent-engine-workshop) as the GitHub repository
+				- my Engine overview for the tracing project
+					- status Active, `v2`, Standard analysis level
+					- 20 traces inspected, 3 issues opened, 0 completed; all 3 high severity
+						- Prospect tools return billing PII — PII Leak
+						- CRM tech-stack update never persist… (title cut off on screen) — Code Defect
+						- Disqualified prospects emailed witho… (title cut off on screen) — Code Defect
+					- the demo's fourth issue, skipping the mandated get-current-rep call, didn't appear in mine
+					- spend so far: 6 LCU = $9, month to date, no monthly limit set
+					- a panel offers a waitlist for "Experiments and red teaming": Engine tests each fix against your evals and red-teams your agent for failure modes
+		- issues [[LangSmith/Engine]] found in the demo
+			- four issues
+				- a tool returns PII
+				- emails get sent to disqualified prospects
+				- a tech stack update (the transcript said "in their persist"; possibly the update isn't persisted)
+				- the agent skips the mandated get-current-rep call that should come first
+			- each issue has a severity (low to high), a category such as code defect or PII, and a count of the traces it was found in
+			- Engine runs on a schedule, and can also be kicked off ad hoc
+			- issue detail: emails sent to disqualified prospects
+				- found from both the repo and the traces
+				- the high-level description: the `send_prospect_email` tool only checks that a prospect has an email address, so it sends to prospects it shouldn't
+					- in the code: [gtm_agent/gtm_agent.py:152](https://github.com/codekiln/gtm-agent-engine-workshop/blob/9f86435/gtm_agent/gtm_agent.py#L152) returns `failed` only when `prospect.get("email")` is empty, and otherwise sends; nothing checks qualification or score
+				- the data shows the prospects aren't qualified, and the agent emails them anyway
+				- the issue lists the five traces it appeared in; opening one shows the email going to an unqualified prospect
+			- proposed fix
+				- each issue shows every trace it appears in, plus a proposed fix as a diff against the repo's `gtm_agent.py`
+				- "View PR": [[LangSmith/Engine]] can open a pull request with the same change; here it blocks emails to disqualified prospects
+			- testing the fix
+				- Engine V2, not shown today, would test the fix automatically: deploy it, run it and test it
+				- today it's more manual; verify fixes by hand
+				- Engine suggests adding example inputs to a [[LangSmith/Dataset]]
+			- datasets, evals and experiments
+				- a dataset is a list of examples to run through the agent
+				- examples here: "send a lead an email asking about their availability", "send an email to schedule a deep dive"
+				- the dataset holds the common requests the agent should handle
+				- the suggested examples come with what the agent outputs today (wrong) and what the output should be: a reference output, the ground truth
+				- in the Datasets & Experiments tab, the dataset's examples show each input and its reference output
+				- assertions
+					- the reference outputs [[LangSmith/Engine]] created are called assertions: statements of what should be true for that input, describing the proper behavior
+					- per the docs, assertions are short free-form claims about what a correct answer should or shouldn't include, saved on a dataset example; reviewers can also write them on run items in a single-run [[LangSmith/Annotation/Queue]], and Engine proposes them for recurring issues ([Use assertions](https://docs.langchain.com/langsmith/assertions))
+				- an experiment runs the dataset's inputs through the live agent and compares its actual outputs to the reference outputs
+				- the demo has two experiments
+					- baseline: run before merging the fix; same inputs and reference outputs, plus the agent's actual outputs, and it fails every assertion because it still emails disqualified prospects
+					- a second experiment, run after merging the fix PR
+						- same inputs and reference outputs; now the actual output is correct and the assertions pass, confirming the fix worked
+				- comparing experiments
+					- with a baseline and a fix, hill climb by comparing the two, an A/B test between versions of the agent
+					- check the side effects too: did the fix raise latency or token use?
+					- the change under test can be a code fix like this one, a system prompt, a skills file or a tool description
+					- the loop: baseline the agent, form a hypothesis about what to improve, implement it, test against the baseline to confirm it works and doesn't regress
+					- regressions are hard to fix in every agent; good evals and good experiments are what catch them
+					- go deeper by opening the baseline's trace next to the fix's trace to compare the exact path each version took; a different path may be better or worse, judged against robust datasets, experiments and evals
+		- flag a trace for [[LangSmith/Engine]]
+			- from a trace, flag it and describe the issue in natural language, for example "there's latency on this step; why is that happening?"
+			- that starts an ad hoc Engine run, which analyzes the trace and surfaces its analysis
+		- Q&A: what does Engine cost?
+			- Engine runs on LangChain Compute Units (LCUs), since it calls LangChain's models on the back end
+			- 6 LCU for this project reflects a small sample of only 20 traces; more as you scale
+			- cost depends on the subscription plan, and, per Michael, on whether you bring your own model
+			- per [Engine docs: Understand LCU costs](https://docs.langchain.com/langsmith/engine#understand-lcu-costs)
+				- an LCU combines compute, storage, memory and LLM spend, and costs $1.50
+				- usage scales with traces analyzed, the number and complexity of Engine's LLM calls, and the size of the connected repo
+				- first-time initialization on a project: typically 30–40 LCUs; each recurring scan: typically 10–15 LCUs, whether or not it finds new issues
+				- Engine uses LangChain-managed inference only; bringing your own provider key isn't supported, which doesn't match the Q&A answer
+				- the analysis level (Reduced, Standard, Expanded) sets how many traces Engine analyzes, and so how many LCUs it uses; spend limits can be set
+		- Engine settings
+			- the agent overview document says what the agent is supposed to do, or at least what it's doing, based on the traces
+				- if the summary is wrong, the agent is probably being used in unexpected ways
+				- it works like a memory file for [[LangSmith/Engine]]; it adjusts over time and can be edited to give Engine a better description
+			- spend limits
+			- analysis level: Standard or Expanded
+			- filters: point Engine at a specific workflow step, such as one model call or tool call, to optimize that step instead of the whole flow
+			- an issue tracker integration, to push issues out (the transcript said "GR"; the docs list Linear — [Engine docs: Connect to Linear](https://docs.langchain.com/langsmith/engine#connect-to-linear))
+		- how the pieces fit, from the workshop repo's README ([codekiln/gtm-agent-engine-workshop](https://github.com/codekiln/gtm-agent-engine-workshop))
+			- the ADLC loop: generate traces → Engine clusters failures into issues → Build the fix as a PR → Test it against a dataset → Deploy → Monitor production for regressions
+			- an issue page has Open PR, Watch, Done, Incorrectly Flagged and Copy as prompt; Evidence lists the traces; "Engine proposed N examples" offers dataset examples with assertions; Proposed Fix describes the code change
+			- the repo's `.github/workflows/eval.yml` runs `eval.py` on `main` and on the PR branch and comments the results on the PR; it skips unless the repo has `LANGSMITH_API_KEY`, `OPENAI_API_KEY` and `DATASET_NAME` secrets
+		- creating evals
+			- anything added to the Engine settings gets analyzed by [[LangSmith/Engine]]
+			- evals measure the agent: whether it's doing what you want
+			- [[LangSmith/Evaluator]] types: [[AI/Eval/LLM as Judge]], code evaluators, composite
+				- LLM as judge is the most popular: it passes the input, output or any other trace data to an LLM to score
+				- many come out of the box, and new ones can be created in natural language
+			- example: PII leakage
+				- a prompt defines PII, editable to match your own definition
+				- set it to run on every model input, since PII should never reach a model
+				- use it for retroactive analysis, or as a guardrail, which adds latency requirements
+			- domain-specific evals: put context and examples into the prompt; an LLM judge can evaluate anything you can describe
+			- scope
+				- holistic: the whole task; for Engine, from identifying an issue all the way to the fix
+				- sub-optimization: one step, such as a single tool call; set the eval to run only on that tool call and grade it
+			- turn evals on for experiments, and hill climb on their scores
+		- skills in Context Hub
+			- [[AI/Agent/Skill]]s are something to iterate on, prompt and version control; [[LangSmith]] has a place for them (Context Hub)
+			- [[LangSmith/Engine]] reads skills either way: hard-coded in the repo, or stored in the platform
+				- Michael finds them easier to manage in the platform, where they're versioned
+			- example: a PR summary skill that tells a coding agent how to write a PR for the organization
+				- the coding agent reads the skill dynamically from the platform
+				- a person can edit it, and Engine can edit it too (not shown today)
+				- save a version, then promote it to prod or staging
+			- run evals on the agent with the new skill version, or analyze every trace that pulls in the skill; an eval can target just that skill
+		- close: Michael points to free resources for training and getting enabled on the platform, and thanks the room

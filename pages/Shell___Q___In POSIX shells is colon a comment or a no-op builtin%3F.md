@@ -1,8 +1,6 @@
----
 logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Shell/Builtin/type]]
 via:: [[2026-05-01 Fri]]
----
 - # In POSIX shells, is `:` a comment or a no-op builtin?
 	- ## Answer
 		- [[AI/Response]]

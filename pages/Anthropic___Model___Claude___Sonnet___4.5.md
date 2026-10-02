@@ -1,8 +1,5 @@
----
 alias:: [[claude-sonnet-4-5]]
 tags:: [[AI/Model]]
----
-
 - # [Claude Sonnet 4.5](https://www.anthropic.com/news/claude-sonnet-4-5)
 	- ## Key Features
 		- Released on September 29, 2025

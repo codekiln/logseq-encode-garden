@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 created-by:: [[Person/Ctrl Alt Tech]]
 date-created:: [[2025/08/18]]
 readwise-link:: https://read.readwise.io/read/01m1wbvmfekmhsf78faa576t29

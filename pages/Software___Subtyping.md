@@ -1,0 +1,12 @@
+logseq-entity:: [[Logseq/Entity/Concept]]
+- # Software subtyping
+	- ## Overview
+		- Type `S` is a subtype of type `T` when values of `S` can be used where `T` is expected, subject to the language's type rules. The useful design question is stronger: will clients that rely on `T`'s behavior still work correctly with an `S`?
+	- ## Type relationships
+		- A language may derive subtyping from class inheritance, interface implementation, or the structure of a type. These mechanisms do not require the subtype to inherit implementation from the supertype.
+		- Conversely, [[Software/Inheritance]] can reuse implementation without preserving the parent's full contract. A subtype relationship in the type checker is therefore not by itself a proof of behavioral substitutability.
+	- ## Behavioral substitutability
+		- The subtype must uphold the supertype's useful promises: do not demand stronger preconditions from callers, weaken promised results, or violate invariants clients are entitled to rely on. This is the concern developed by Barbara Liskov and Jeannette Wing in [A Behavioral Notion of Subtyping](https://www.cs.cmu.edu/~wing/publications/LiskovWing94.pdf).
+		- For example, if a mutable `Rectangle` promises that width and height can change independently, making `Square` its subtype can break that promise even if the code compiles. The issue is the observable contract, not the geometric statement that every square is a rectangle.
+	- ## Related ideas
+		- [[Software/Inheritance/Is-A]] is the informal modeling claim. [[Software/Composition]] can implement a shared interface while reusing separate collaborator objects instead of a superclass.

@@ -1,7 +1,11 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
+see-also:: [[Logseq/Entity/Definition/Discussion]]
 
 - # Entity Definition
-	- In this garden, **Entity Definition** pages model the categories of entity the garden tracks — each describes how to recognize, name, deduplicate, and shape instances of one kind of entity.
+	- Each Entity Definition page describes a type of real-world entity that may be tracked in a page [[Knowledge Garden]] page. Entity here means something roughly analagous
+	- ## [[Logseq/Entity/Definition/Discussion]]
+	- ,  uniquely modeled in each garden are.
+	- the garden tracks — each describes how to recognize, name, deduplicate, and shape instances of one kind of entity.
 	- ## Examples in this garden
 		- [[Logseq/Entity/Person]], [[Logseq/Entity/Software/Project]], [[Logseq/Entity/Book]], and the other pages under the `Logseq/Entity/` namespace.
 	- ## What counts as an Entity Definition

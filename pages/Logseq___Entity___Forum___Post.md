@@ -1,0 +1,51 @@
+alias:: [[Forum/post]]
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Forum Post
+	- In this garden, **Forum Post** pages model a single thread or post in a forum — one URL, one conversation.
+	- ## What counts as a Forum Post
+		- A page whose primary identity is one thread or post on a [[Logseq/Entity/Forum]]: a Cursor forum topic, a Reddit submission, a Discourse thread, a phpBB post, a vendor-board question.
+		- Not a Forum Post: the forum hub itself; a forum user page; a concept, how-to, or issue page that only cites a post in passing.
+	- ## Naming and links
+		- Preferred path: `<parent namespace>/YY/MM/<slug>`.
+		- `<parent namespace>` is the forum page when it exists — [[Claude/Reddit]] for an r/ClaudeAI thread, [[CursorAI/Forum]] for a Cursor topic. When no forum page is modeled, use the nearest existing subject or host namespace the same way [[Logseq/Entity/Forum]] places hubs.
+		- `<YY>` and `<MM>` are the two-digit publication year and month. `<slug>` is the source URL slug when it is stable; otherwise a short title-case leaf.
+		- Existing pages sometimes insert an extra `Post` segment (`CursorAI/Forum/Post/YY/MM/…`) or omit the month. Leave those as filed unless a rename is asked for.
+	- ## Finding and deduplicating
+		- Search in this order: the source URL; the exact title; the slug under the parent forum; distinctive title words plus venue. Classify as existing, similar, new, or blocked.
+		- One page per thread.
+	- ## Authors
+		- Site-specific user namespaces first: [[CursorAI/Forum/User]] children, [[Reddit/User]] children, `StackOverflow/User/Username`, or `ForumName/User/Username` on other boards.
+		- A [[Logseq/Entity/Person]] hub is for a confirmed identity — someone known across platforms, a significant contributor, or a person already in the garden. One-off commenters stay as forum users.
+		- Name the original poster, respondents, and mentioned users with those same forms.
+	- ## Frontmatter
+		- Mark instances with **`logseq-entity:: [[Logseq/Entity/Forum/Post]]`**.
+		- Set **`date-created::`** to the publication date when known, per [[Logseq/Date]]. Day precision uses the journal title form, e.g. `[[2025-04-11 Fri]]`.
+		- Set **`logseq-created-time-year::`** to the matching [[Logseq/Entity/Time/Year]] instance when the year is known.
+		- Set **`created-by::`** to the person hub or site-specific user page for the original poster.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- The first body block is an H1 whose text links to the original post and names the venue: `- # [Post Title - Venue](https://example.com/post)`.
+			- Cursor: include the category (`Discussion`, `Feature Requests`, `Bug Report`).
+			- Reddit: include the subreddit (`r/ClaudeAI`).
+			- Stack Overflow: include the question id.
+			- Other boards: include the forum or category name that makes the link identifiable.
+		- New imports stay lightweight: the title link, a short original-post gist when useful, and [[My Notes]] when there are notes.
+		- A fuller capture of the thread uses these sections, omitting empties:
+			- `## [[Original Poster]]` — the author, then their points as children.
+			- `## [[Response]]` — each respondent as a child, their text nested under them.
+			- `## [[Related/Post]]` — other threads, as markdown links or garden pages.
+			- `## [[My Notes]]`.
+		- Quoted source text uses `>` under the speaker. Code uses a `~~~` fence with a language tag when known, nested inside the bullet per [[Logseq/Flavored Markdown]]. Images that carry meaning stay as markdown image links in the speaker's block.
+	- ## Per-venue extras
+		- Cursor: product or editor version when the thread turns on it.
+		- Reddit: upvote count when it is large enough to be part of why the thread was filed.
+		- Stack Overflow: answer scores when they matter to the note.
+	- ## Related types
+		- [[Logseq/Entity/Forum]] — the venue the post lives in.
+		- [[Logseq/Entity/Person]] — only when the author is a confirmed identity.
+	- ## Examples in this garden
+		- [[Claude/Reddit/26/07/MCP is useless, just use a CLI. Right]] — preferred `<forum>/YY/MM/<slug>` shape
+		- [[Claude/Reddit/26/09/I am done with this shit]]
+		- [[CursorAI/Forum/25/04/How can I increase the indexing depth for @docs]]
+		- [[Reddit/cursor/25/02/Hidden Gem - Open search results in Composer]]

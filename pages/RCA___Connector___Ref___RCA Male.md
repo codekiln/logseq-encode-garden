@@ -1,7 +1,6 @@
 tags:: [[Diataxis/Reference]], [[RCA]], [[RCA/Connector]]
 
 - alias:: [[RCA Plug]], [[Phono Plug]]
-
 - # RCA Male Connector Reference
 	- ## Visual Reference
 		- ![RCA male plugs for composite video and stereo audio](https://upload.wikimedia.org/wikipedia/commons/9/91/Composite-cables.jpg)

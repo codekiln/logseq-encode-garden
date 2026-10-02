@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#MISE description="Preview or apply MicroFreak preset metadata to the garden"
+#USAGE flag "--apply" help="Write preset pages and today's journal"
+#USAGE flag "--inventory <file>" help="Use a saved complete JSON inventory"
+#USAGE flag "--save-inventory <file>" help="Save the device inventory as JSON"
+#USAGE flag "--garden <path>" help="Garden checkout to update"
+#USAGE flag "--port <name>" help="Exact MIDI port name"
+set -euo pipefail
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+args=()
+[[ "${usage_apply:-false}" == true ]] && args+=(--apply)
+[[ -n "${usage_inventory:-}" ]] && args+=(--inventory "$usage_inventory")
+[[ -n "${usage_save_inventory:-}" ]] && args+=(--save-inventory "$usage_save_inventory")
+[[ -n "${usage_garden:-}" ]] && args+=(--garden "$usage_garden")
+[[ -n "${usage_port:-}" ]] && args+=(--port "$usage_port")
+# Bash 3.2 treats an empty array as unset under `set -u`.
+exec uv run --no-project --with python-rtmidi==1.5.8 python "$root/mise-tasks/microfreak/lib/sync.py" ${args[@]+"${args[@]}"} "$@"

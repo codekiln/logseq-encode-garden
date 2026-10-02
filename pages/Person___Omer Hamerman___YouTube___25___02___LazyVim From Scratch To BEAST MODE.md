@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 created-by:: [[Person/Omer Hamerman]]
 date-created:: [[2025/02/07]]
 readwise-link:: https://read.readwise.io/read/01m02k97g130p60760ahj32qbz

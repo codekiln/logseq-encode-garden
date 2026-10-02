@@ -1,9 +1,9 @@
 ---
 name: logseq-proxy
 description: >-
-  Proxy a page from another Logseq garden in the corresponding page location of
-  the active garden, driven by logseq://graph/<name>?page=<Page> URLs and a
-  local graph registry. Sets skill-managed page properties (logseq-url::,
+  Proxy a page from another Logseq garden into the corresponding page location
+  of the active garden, driven by logseq://graph/<name>?page=<Page> URLs and a
+  local graph registry. Sets the proxy's page properties (logseq-url::,
   logseq-proxy-last-sync-date::). Use when the user proxies or syncs a remote
   graph page, pastes a logseq:// URL, asks what pages are proxied or from which
   graphs, or invokes /logseq-proxy. Do not use for entity filing, flashcards, or
@@ -21,33 +21,22 @@ claudecode:
 
 # Logseq proxy
 
-Copy `pages/*.md` from a **registered** on-disk graph into the **same-named** page in this garden, and answer **listing** questions about what is proxied.
+Cross-garden **page proxy**: copy `pages/*.md` from a **registered** on-disk graph into the **same-named** page in this garden, and answer **listing** questions via search.
 
-**`[[Logseq/Entity/Proxy/Page]]` is the format authority.** It defines what a proxy page is, the `logseq://` URL, destination naming and the `___` filename mapping, the two skill-owned properties, the `tags::` and merge rules, the collision outcomes, asset handling, and the ripgrep recipes for listing. Read it before every sync or listing question and follow it end to end. This skill adds the repo-side mechanics the graph does not cover: the registry, path resolution, and reporting.
+## Read this first
 
-## Invariants
+**[[Logseq/Entity/Proxy/Page]]** (`pages/Logseq___Entity___Proxy___Page.md`) is the place of record for what a proxy page *is*: how one is recognized and named, its `logseq-url::` and `logseq-proxy-last-sync-date::` frontmatter, the `tags::` and name-collision invariants, and the ripgrep recipes that answer *what is proxied* and *from which gardens*. Read it before any sync or listing; this skill does not restate it.
 
-- **Never add, remove, or edit** a `tags::` line on an **existing** destination page (re-sync).
-- **Skill-owned properties** — set or update `logseq-url::` and `logseq-proxy-last-sync-date::` on every successful sync; keep their key spellings.
-- The **`logseq://` URL** is a portable intent string for agents; do not hand it to the OS or the Logseq app. Resolution uses **`.rulesync/config/logseq-proxy.md`** only.
-- **Name collision** — a destination page that exists without `logseq-url::` is a real, unrelated page. Stop and ask before touching it.
+What stays here is the **mechanics** — resolving a graph name to a path on disk, parsing the URL, and the create-versus-merge steps.
 
 ## Procedure
 
-1. Confirm cwd is the **destination** graph root (`pages/`, `logseq/` present).
-2. Load **`[[Logseq/Entity/Proxy/Page]]`** and **`[[Logseq/Entity]]`**.
-3. Parse the URL for `graph_name` and `page=` (URL-decode; reject if `page=` is missing).
-4. Resolve `graph_name` to an on-disk `root` per **[references/graph-registry.md](./references/graph-registry.md)**.
-5. Read the source file at `<root>/pages/<mapped filename>.md`. If it is missing, stop and report, with fuzzy filename suggestions when you have them.
-6. Compute the destination path, check for a collision, and merge or create — all per the type page.
-7. Copy referenced assets per the type page. A source asset missing on disk is a warning in the report, not a failed sync.
-8. Record the change in `journals/YYYY_MM_DD.md` per **`[[Logseq/Journal]]`** (**`[[Filed]]`** for a new proxy, **`[[Updated]]`** for a re-sync).
-9. Report per the section below.
+1. Open and follow **[references/proxy-workflow.md](./references/proxy-workflow.md)** end-to-end for sync.
+2. For **registry format** and GitHub futures, see **[references/graph-registry.md](./references/graph-registry.md)**.
 
-## Report
+## Progressive disclosure
 
-- Source: resolved `root` (noting whether it came from `ghq-address` or an explicit `root`) plus the relative path.
-- Destination: the relative path under this repo.
-- The `logseq-url::` and `logseq-proxy-last-sync-date::` values written.
-- Create vs re-sync.
-- Assets copied, or none found.
+- **[[Logseq/Entity/Proxy/Page]]** — what a proxy is: naming, frontmatter, invariants, how to find them.
+- **This file** — scope and pointers.
+- **`references/proxy-workflow.md`** — numbered sync and merge steps, reporting.
+- **`references/graph-registry.md`** — the registry at `.rulesync/config/logseq-proxy.md`.

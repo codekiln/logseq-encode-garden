@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Concept]]
+- # Cognitive dissonance
+	- Cognitive dissonance is psychological tension associated with a perceived conflict among a person's beliefs, attitudes, actions, or other cognitions. In Leon Festinger's theory, the tension can motivate a person to change a belief or action, add a justification that makes the elements fit together, or reduce the importance of the conflict.
+	- ## History
+		- Leon Festinger's *A Theory of Cognitive Dissonance* (1957) set out a framework for relations among cognitions: they can be consonant, dissonant, or irrelevant. The theory connects the discomfort of dissonance with pressure to reduce it; the strength of that pressure depends in part on how important the conflicting cognitions are.
+		- Festinger and James M. Carlsmith tested a forced-compliance prediction in a 1959 study. After participants did a tedious task, some were paid to tell the next participant it had been enjoyable. Participants given a small payment later rated the task more positively than those given a larger payment. The authors interpreted the smaller reward as providing less external justification for the statement, leaving greater pressure to resolve the inconsistency.
+	- ## How to use the idea
+		- The theory helps explain why people may revise a belief, reinterpret evidence, or change behavior when their own commitments and actions feel at odds. The response depends on the situation; inconsistency alone does not predict one uniform reaction.
+		- Cognitive dissonance names a proposed psychological process, not a synonym for disagreement, hypocrisy, or being mistaken. A conflict between two people does not establish that either person is experiencing dissonance.
+		- In learning and teaching, the idea can help describe tension between a person's commitments about education and what they observe in practice. It does not by itself settle what a good response to that tension should be.
+	- ## References
+		- [A Theory of Cognitive Dissonance](https://doi.org/10.1515/9781503620766) — Leon Festinger, 1957
+		- [Cognitive Consequences of Forced Compliance](https://doi.org/10.1037/h0041593) — Leon Festinger and James M. Carlsmith, 1959

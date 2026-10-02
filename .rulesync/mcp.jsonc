@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    // LangChain, LangGraph and LangSmith docs.
+    "langchain-docs": {
+      "type": "http",
+      "url": "https://docs.langchain.com/mcp",
+    },
+  },
+}

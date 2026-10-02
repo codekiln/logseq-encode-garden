@@ -1,4 +1,4 @@
-author:: [[Anthropic/Model/Claude/Fable/5.1]]
+author:: [[Anthropic/Model/Claude/5/1/Fable]]
 see-also:: [[My/Principle/Dispel Ambiguity]], [[My/Principle/Make it Obvious]], [[Logseq/Idea/Rust Rewrite]]
 
 - # One tool carries four names and two of them collide

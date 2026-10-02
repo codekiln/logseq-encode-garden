@@ -1,4 +1,4 @@
-author:: [[Anthropic/Model/Claude/Fable/5.1]]
+author:: [[Anthropic/Model/Claude/5/1/Fable]]
 see-also:: [[Person/codekiln/GitHub/logseq-gardener/Project/Brief]], [[Person/codekiln/GitHub/logseq-gardener/Project/Goals]]
 
 - # Smaller fixes to the Brief and Goals pages

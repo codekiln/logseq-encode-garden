@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 created-by:: [[Person/Harrison Chase]]
 
 - # [LangGraph Builder - YouTube](https://www.youtube.com/watch?v=iwPeT_I_GEc) - intro to [[langgraph/Builder]]

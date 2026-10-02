@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 date-created:: [[2025/04]]
 created-by:: [[Person/Brian Madison]]
 

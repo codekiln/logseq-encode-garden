@@ -1,0 +1,12 @@
+logseq-entity:: [[Logseq/Entity/Concept]]
+- # Prototype-based inheritance
+	- ## Overview
+		- Prototype-based inheritance gives an object a link to another object, its prototype. When a property is absent on the object, lookup continues through that prototype and, if needed, through the rest of the chain.
+	- ## Mechanism
+		- In JavaScript, each ordinary object has an internal prototype link, inspectable with `Object.getPrototypeOf()`. An object's own property takes precedence over a property of the same name on its prototype. If lookup reaches `null` without a match, the property is absent.
+		- JavaScript `class` and `extends` provide class-like syntax, but method sharing still uses prototype chains. The syntax does not turn JavaScript into the class model described by [[Software/Inheritance/Class-Based]].
+	- ## Design consequence
+		- Delegation permits objects to share and specialize behavior without declaring a fixed class hierarchy. Changes to a shared prototype can affect objects that delegate to it, so shared mutable behavior requires care.
+		- A prototype link expresses how lookup works. Whether one object is safe to use in place of another is a separate [[Software/Subtyping]] question.
+	- ## Source
+		- [MDN's inheritance and prototype chain guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) describes JavaScript's lookup and `class` syntax.

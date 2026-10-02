@@ -1,0 +1,23 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Audio Connector
+	- In this garden, **Audio Connector** pages model one physical connector that carries an audio signal: the mated plug and jack, the contacts it exposes, and what each contact carries.
+	- ## Granularities
+		- **Connector** — one connector at one size, the page specs and pinouts attach to, e.g. [[Audio/Connector/Phone/TRS/3.5mm]].
+		- **Family** — a group sharing a shape or a contact layout, e.g. [[Audio/Connector/Phone]] and [[Audio/Connector/Phone/TRS]]. A family page compares its members and leaves the specs to them.
+		- Not this type: a cable assembly, a digital transport such as USB or HDMI, or the port list of a piece of gear. A device names the connector its ports take and links to that page.
+	- ## Naming
+		- Paths run from shape to detail: `Audio/Connector/<Family>/<Contact layout>/<Size>`. A family with one layout drops that segment, as in `Audio/Connector/RCA/Stereo`.
+		- The size segment carries its unit and no space: `3.5mm`. Contact layouts keep the trade abbreviation in capitals: `TS`, `TRS`, `TRRS`.
+		- Shop and catalog names — "3.5mm Headset Jack", "1/8 inch Stereo Audio Jack" — belong in `alias::` per [[Logseq/Frontmatter/alias]].
+	- ## Finding and deduplicating
+		- Search the size and the layout abbreviation together before creating a page. One connector is sold under several names, so an existing page's `alias::` often already holds the name at hand.
+	- ## Frontmatter
+		- `logseq-entity:: [[Logseq/Entity/Hardware/Connector/Audio]]` marks connector and family pages alike.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- A connector page runs: **Visual Reference**, an image with its credit line; **Overview**, what the abbreviation stands for and what the connector is for; **Physical Specifications**, diameter, contact count and insulating rings; **Pin Configuration**, what each contact carries; **Common Use Cases**; and **Compatibility**, which connectors physically mate with it and what happens to the spare contacts.
+		- A family page carries a comparison table of its members and the traits they share.
+	- ## Examples in this garden
+		- Connectors: [[Audio/Connector/Phone/TS/3.5mm]], [[Audio/Connector/Phone/TRS/3.5mm]], [[Audio/Connector/Phone/TRRS/3.5mm]].
+		- Families: [[Audio/Connector/Phone]], [[Audio/Connector/Phone/TRS]].

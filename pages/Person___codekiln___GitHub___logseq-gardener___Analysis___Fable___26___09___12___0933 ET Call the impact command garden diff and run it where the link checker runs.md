@@ -1,4 +1,4 @@
-author:: [[Anthropic/Model/Claude/Fable/5.1]]
+author:: [[Anthropic/Model/Claude/5/1/Fable]]
 see-also:: [[Person/codekiln/GitHub/logseq-gardener/Analysis/Codex/26/09/12/0733 ET Build a command that shows what an edit affects]], [[Person/codekiln/GitHub/logseq-gardener/Analysis/Fable/26/09/12/0658 ET A Logseq-aware git merge driver before a CRDT]], [[My/Principle/Simplify/Prefer Standards and Defaults]]
 
 - # Call the impact command garden diff and run it where the link checker runs

@@ -2,7 +2,7 @@ tags:: [[Idea]], [[Rust]]
 date-created:: [[2026-07-12 Sun]]
 
 - # freakio — a Rust CLI preset manager for the Arturia MicroFreak
-	- A narrow, single-device [[Rust]] CLI for managing [[Arturia/MicroFreak]] presets, samples, and wavetables over MIDI, cross-platform (macOS, Linux, Windows), using [[Elektroid]] as a protocol and architecture reference.
+	- A narrow, single-device [[Rust]] CLI for managing [[Microfreak]] presets, samples, and wavetables over MIDI, cross-platform (macOS, Linux, Windows), using [[Elektroid]] as a protocol and architecture reference.
 	- Working name: `freakio`. Checked 2026-07-12: no crate on crates.io (exact or fuzzy match) and no matching GitHub repo.
 	- ## Why Elektroid is the right reference
 		- [[Elektroid]] already ships mature MicroFreak support (since v3.1): preset, sample, and wavetable transfer, with the reverse-engineering acknowledged as legitimate by an Arturia staff member — see [[Arturia/Forum/24/05/MIDI Control Center alternative for MicroFreak on Linux]].

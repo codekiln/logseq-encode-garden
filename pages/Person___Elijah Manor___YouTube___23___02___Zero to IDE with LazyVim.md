@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 created-by:: [[Person/Elijah Manor]]
 date-created:: [[2023/02/01]]
 readwise-link:: https://read.readwise.io/read/01m1wbtjz5d24ekb5xxc44d701

@@ -1,0 +1,3 @@
+- # Unknown
+	- The sound’s provenance has not been established.
+	- Value of [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin]].

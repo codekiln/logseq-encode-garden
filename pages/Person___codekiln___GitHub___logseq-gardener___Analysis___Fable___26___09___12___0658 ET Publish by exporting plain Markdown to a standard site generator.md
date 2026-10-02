@@ -1,4 +1,4 @@
-author:: [[Anthropic/Model/Claude/Fable/5.1]]
+author:: [[Anthropic/Model/Claude/5/1/Fable]]
 see-also:: [[Logseq/Publish/Workaround for Storage]], [[QuartzMD]], [[My/Principle/Simplify/Prefer Standards and Defaults]]
 
 - # Publish by exporting plain Markdown to a standard site generator

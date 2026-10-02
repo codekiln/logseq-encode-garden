@@ -1,6 +1,4 @@
----
 alias:: [[Plugin Manager]]
----
 - # Plugin Manager
 	- ## Overview
 		- A **plugin manager** (or extension/package manager) installs, updates, and optionally configures add-ons for a host application or runtime. Related: [[Package/Manager]] for language and system package managers.

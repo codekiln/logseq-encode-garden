@@ -1,10 +1,12 @@
+logseq-entity:: [[Logseq/Entity/Forum/Post]]
 created-by:: [[Arturia/Forum/User/freakoid]]
 date-created:: [[2024-05-04 Sat]]
+logseq-created-time-year:: [[20/2/4]]
 
 - # [Arturia MIDI Control Center alternative for MicroFreak on Linux - Freak/MicroFreak - Arturia Forum](https://forum.arturia.com/t/arturia-midi-control-center-alternative-for-microfreak-on-linux/3863/2)
 	- ## [[Original Poster]]
 		- [[Arturia/Forum/User/freakoid]]
-			- Announces that [[Elektroid]], a FLOSS Elektron Transfer alternative for Linux, now supports the [[Arturia/MicroFreak]] for presets, samples, and wavetables — equivalent to what MIDI Control Center offers.
+			- Announces that [[Elektroid]], a FLOSS Elektron Transfer alternative for Linux, now supports the [[Microfreak]] for presets, samples, and wavetables — equivalent to what MIDI Control Center offers.
 			- Notes occasional issues with lengthy samples but otherwise stable operation; invites bug reports and feature requests via GitHub. Mentions existing MicroBrute support as prior art.
 	- ## [[Response]]
 		- [[Arturia/Forum/User/Tim.Arturia]]

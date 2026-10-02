@@ -1,4 +1,4 @@
-author:: [[Anthropic/Model/Claude/Fable/5.1]]
+author:: [[Anthropic/Model/Claude/5/1/Fable]]
 see-also:: [[CRDT]], [[My/Pref/Dev/Tool/git/Worktree]], [[My/AI/Rule/Dev Workflow with Git and Tmux]]
 
 - # A Logseq-aware git merge driver before a CRDT

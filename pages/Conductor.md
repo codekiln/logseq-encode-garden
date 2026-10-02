@@ -1,0 +1,34 @@
+logseq-entity:: [[Logseq/Entity/Company]], [[Logseq/Entity/Software/Project]]
+alias:: [[Melty Labs]]
+
+- # [Conductor](https://www.conductor.build/)
+	- Runs a team of coding agents in parallel, each in its own workspace with its own branch, files, terminal and diff, through to review, pull request and merge.[^1]
+	- Made by Melty Labs, the company named in the site footer.[^2]
+	- Runs the first-party [[Claude/Code]], [[Codex]], Cursor and [[OpenCode]] agents.[^1] Available for [[macOS]], with iOS marked "soon" and an API.[^2]
+	- Conductor Cloud runs each agent in an isolated sandbox with repositories and dependencies pre-installed.[^2]
+	- The site reports [[SOC 2]] Type II and "100k+ builders."[^2]
+	- ## Can I use a Claude or ChatGPT subscription with Conductor?
+		- Yes for both, as of 2026-09-30. Conductor's home page says "Bring your own subscriptions and keys," and its pricing page says local and cloud workspaces accept subscriptions, API keys, or both.[^2][^3]
+		- ### Claude plan
+			- Conductor runs native [[Claude/Code]] through the Claude Agent SDK, so Anthropic's plan for changing Agent SDK billing applied to it.[^4]
+			- Anthropic's plan, announced May 13, would have taken Agent SDK usage out of plan limits starting June 15 and replaced it with a monthly credit of $20 (Pro) to $200 (Max 20x).[^5]
+			- On June 15 Anthropic paused that plan. Its help page says the Agent SDK, `claude -p` and third-party apps still draw from the subscription's usage limits, and that Anthropic will share an update before anything takes effect.[^5]
+			- Conductor's post of the same day tells users no action is required.[^4] The pause has no end date, so the arrangement can change.
+		- ### ChatGPT plan
+			- Since Conductor 0.89.0 (2026-09-29), Settings → Agents → Codex → Continue with ChatGPT runs [[Codex]] on a ChatGPT plan with no API key and no `codex login`.[^6][^7]
+			- New accounts can pick "Continue with ChatGPT" at sign-up. An existing Codex setup is left as is.[^6]
+			- The post describes the change as a partnership with [[OpenAI]].[^6]
+		- ### Conductor's own plans
+			- Free ($0) covers local workspaces on a Mac with your own subscriptions and keys. Pro ($50/mo) adds Conductor Cloud, multiplayer, the API and the mobile app. Teams is $60/mo/user. Enterprise is custom.[^3]
+	- ## Blog
+		- [[Conductor/Blog/26/06/Claude subscription update for Conductor]]
+		- [[Conductor/Blog/26/09/Sign in with ChatGPT]]
+	- ## Links
+		- [Docs](https://docs.conductor.build) · [Pricing](https://www.conductor.build/pricing) · [Changelog](https://www.conductor.build/changelog)
+	- [^1]: https://docs.conductor.build
+	- [^2]: https://www.conductor.build/
+	- [^3]: https://www.conductor.build/pricing
+	- [^4]: https://www.conductor.build/blog/claude-subscription-update
+	- [^5]: https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan
+	- [^6]: https://www.conductor.build/blog/sign-in-with-chatgpt
+	- [^7]: https://www.conductor.build/

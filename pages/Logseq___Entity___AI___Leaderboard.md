@@ -1,0 +1,30 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # AI Leaderboard
+	- In this garden, **AI Leaderboard** pages model a current ranked list of [[Logseq/Entity/AI/Model]] pages along one dimension — Intelligence, Speed, Cost per Task — taken from a named public board such as [[ArtificialAnalysis]].
+	- ## What counts as an instance
+		- One dimension from one source, kept up to date so an agent can refresh the board and file any new top models without being handed each name.
+		- Not an instance: a single model's metrics page, which is a [[Logseq/Entity/AI/Model/Doc/Analysis]]; official vendor docs, which are a [[Logseq/Entity/AI/Model/Doc/API]].
+	- ## Naming and links
+		- Nest under the source: [[ArtificialAnalysis/Leaderboard/Intelligence]], [[ArtificialAnalysis/Leaderboard/Speed]], [[ArtificialAnalysis/Leaderboard/Cost per Task]].
+		- The H1 links to the source's evaluation or leaderboard URL for that dimension.
+	- ## Finding and deduplicating
+		- Search the source URL, then `Source/Leaderboard/<Dimension>`. One page per source-and-dimension.
+	- ## How a refresh works
+		- Read the live board. Rewrite the list in **descending desirability** — highest Intelligence or Speed first, lowest Cost per Task first.
+		- Set the heading's "as of" date to the check day.
+		- Every row is a garden model page plus its score. A model already in the garden is linked at its canonical path. A top-row model that is missing is created as a [[Logseq/Entity/AI/Model]] (stub is enough) with its [[Logseq/Entity/AI/Model/Doc/API]] when the official URL is known.
+		- Variants of the same release (max, xhigh, high) collapse to the garden's one model page. The row names the variant the score belongs to in a child line.
+		- Models the garden already tracks appear even when they are not in the source's top handful, as long as a score for that dimension is known.
+	- ## Frontmatter
+		- Mark instances with **`logseq-entity:: [[Logseq/Entity/AI/Leaderboard]]`**.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- Headings, not tables or charts. The H1 is the dimension and the source link, plus `as of [[YYYY-MM-DD Day]]`.
+		- Each rank is an H2: `## [[Provider/Model/…]] - <score>`. A child line holds the source's display name when it differs from the garden page.
+		- Scores run from most desirable to least.
+	- ## Relationship to other types
+		- [[Logseq/Entity/AI/Model]] — each row.
+		- [[Logseq/Entity/AI/Model/Doc/Analysis]] — the per-model source card behind a score.
+	- ## Examples in this garden
+		- [[ArtificialAnalysis/Leaderboard/Intelligence]]

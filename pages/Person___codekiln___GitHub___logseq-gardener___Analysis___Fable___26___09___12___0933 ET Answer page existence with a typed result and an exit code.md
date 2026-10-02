@@ -1,4 +1,4 @@
-author:: [[Anthropic/Model/Claude/Fable/5.1]]
+author:: [[Anthropic/Model/Claude/5/1/Fable]]
 see-also:: [[Person/codekiln/GitHub/logseq-gardener/Analysis/Codex/26/09/12/0733 ET Resolve pages through evidence from the whole graph]], [[My/Principle/Make Illegal States Unrepresentable]], [[My/Principle/Dispel Ambiguity]]
 
 - # Answer page existence with a typed result and an exit code

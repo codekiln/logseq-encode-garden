@@ -1,0 +1,49 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Podcast Episode
+	- In this garden, **Podcast Episode** pages model one episode of a [[Logseq/Entity/Podcast]], captured as first-class listening notes.
+	- ## What counts as a Podcast Episode
+		- One specific episode of a show, usually with a title, a host, an air date, and often a URL of its own.
+		- Not Podcast Episodes: the show itself, which is a [[Logseq/Entity/Podcast]]; the host's person hub; a guest's person hub; a [[Logseq/Entity/Quote]] pulled from an episode; a [[Logseq/Entity/Concept]] page that synthesizes ideas an episode discussed.
+	- ## Relationship to the show
+		- An episode is part of one show. Its page carries the Episode marker, and the show's page carries the Podcast marker.
+		- The episode page files under its show's namespace, and its `created-by::` names the show's host.
+	- ## Naming and links
+		- Episode pages live under the show's `Pod` namespace, dated: `Person/<Host>/Pod/<YY>/<MM> <Episode Title>`, or `<Show>/Pod/<YY>/<MM> <Episode Title>` for a show filed under its own name. [[Logseq/Entity/Podcast]] says where the show page goes.
+			- On disk that is `pages/Person___<Host>___Pod___<YY>___<MM> <Episode Title>.md`.
+			- `<YY>` is the two-digit year and `<MM>` the two-digit month of the episode's air date.
+		- An episode that is also part of a named sequence is both a Podcast Episode and a [[Logseq/Entity/Series]] instance. Its path then adds `Series/<Series Name>` after `Pod`, as [[Logseq/Entity/Series]] describes.
+		- Pages filed before this definition existed use either `Pod` or `Podcast` as the namespace segment, and some put a `/` after the month instead of a space. New episode pages use `Pod` and the space. Leave existing pages as filed unless the author asks for a migration.
+	- ## Finding and deduplicating
+		- Search in order: the episode URL; the YouTube video ID when there is a recording; the exact episode title; distinctive title words under `Person/*/Pod*` and `*/Pod*`; then host plus a distinctive phrase. Classify as existing, similar, new, or blocked.
+		- One page per episode.
+	- ## Creator relationship
+		- Set **`created-by::`** to the host's person page, which is the page the episode namespace already sits under.
+		- Guests are linked from the body; `created-by::` names only the host. A guest the author wants to follow gets their own person page per [[Logseq/Entity/Person]].
+	- ## Frontmatter
+		- Mark instances with **`logseq-entity:: [[Logseq/Entity/Podcast/Episode]]`** so this definition page collects backlinks to every episode.
+		- Set **`created-by::`** to the host.
+		- Set **`date-created::`** to the air date when known.
+		- Optional: **`logseq-created-time-year::`** linking to the matching [[Logseq/Entity/Time/Year]] instance; see that page for how it differs from `date-created::`.
+		- **Never add, remove, or edit a `tags::` line on an existing page.** Older episode pages carry assorted `tags::` values; those are the author's and stay as they are.
+	- ## Page shape
+		- Logseq Flavored Markdown.
+		- The first body block is the H1 heading with the episode title linked to the episode when a URL is known: `- # [Episode Title](https://example.com/episode)`. Without a URL, use a plain `- # Episode Title`.
+		- Recommended body sections are **Notes**, **Highlights**, and **Transcript**, kept only when there is something to put in them.
+		- Prefer synthesis over pasting a full transcript unless the author asks for the full text.
+	- ## Combined with YouTube
+		- An episode published as a YouTube video is also a [[Logseq/Entity/YouTube]] instance, Episode first: `logseq-entity:: [[Logseq/Entity/Podcast/Episode]], [[Logseq/Entity/YouTube]]`. The page keeps the episode path under its show. The YouTube video ID becomes a deduplication key alongside the episode URL.
+		- **Sources** — a `## Sources` section links the episode page, the YouTube recording, and the [[Snipd]] episode when one exists.
+		- **Timestamps** — every timestamp is a video time in seconds, written `{{youtube-timestamp <seconds>}}`. Times from an audio app such as Snipd are converted to video time. The audio and video versions can differ by an intro or an ad break, so check each converted time against the transcript line it should land on.
+		- **Chapters** — a `## Video` section holds the `{{video <watch URL>}}` block. Each YouTube chapter is an H3 beneath it: `### {{youtube-timestamp <seconds>}} <Chapter Title>`.
+		- **Snips** — a Snipd snip is an H4 under the chapter that contains it, with a `Snipd:` URL line, a short summary, and a `Transcript` child set to `collapsed:: true`. The transcript groups lines under a speaker's person page, each line starting with its own timestamp.
+		- **Highlights** — a [[Readwise]] highlight made while watching is a bare `{{youtube-timestamp <seconds>}}` block placed in time order next to the snips. Speaker children hold the quoted text as `>` quotes, ending with a link back to the highlight in Readwise.
+		- **Expansion** — chapters that hold the author's highlights stay expanded. Chapters without highlights are `collapsed:: true`.
+		- **What only the video shows** — slides, diagrams, code, and screens that the audio does not describe are captured as frames. A frame is saved in `assets/`, named from the page path with the video second and a short caption, and embedded under the timestamp block where it appears. A child bullet under the image transcribes its text or describes the diagram, so the page reads in full without the video.
+		- Example: [[Person/Gergely Orosz/Pod/26/09 Design Engineering with Maggie Appleton]].
+	- ## Journal
+		- Record a newly filed episode in the day's journal under `[[Filed]]`, per the journal conventions. The date is the day the page was filed, which is not necessarily the air date.
+	- ## Examples in this garden
+		- [[Person/Cal Newport/Pod/25/10/How to Reinvent a Life]]
+		- [[Person/Gergely Orosz/Podcast/25/10/Beyond Vibe Coding with Addy Osmani]]
+		- [[Person/Gergely Orosz/Pod/26/09 Design Engineering with Maggie Appleton]] — also a YouTube video

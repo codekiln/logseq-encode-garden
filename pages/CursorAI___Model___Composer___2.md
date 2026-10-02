@@ -1,7 +1,5 @@
----
 alias:: [[cursor-composer-2]]
 tags:: [[AI/Model]]
----
 - # [Composer 2 (Cursor)](https://cursor.com/docs/models/cursor-composer-2)
   - ## Key Features
     - Cursor's own **agentic** coding model (continued pretraining plus reinforcement learning on long-horizon coding tasks)

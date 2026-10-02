@@ -1,0 +1,32 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Forum
+	- In this garden, **Forum** pages model a discussion venue: a subreddit, a product community board, a phpBB-style bulletin board, or a proprietary vendor forum.
+	- ## What counts as a Forum
+		- A specific venue with its own URL and identity — r/ClaudeAI, the Cursor community forum, lines, Ableton's board, a 1990s php bulletin board.
+		- Not a Forum: a single thread or post, which is a [[Logseq/Entity/Forum/Post]]; a forum user namespace such as [[CursorAI/Forum/User]] or [[Reddit/User]]; the product or company the venue is about or belongs to, which is the parent.
+	- ## Naming and links
+		- When the venue is owned by an entity already in the garden, nest the forum under that owner: [[CursorAI/Forum]] for Cursor's community board, `Ableton/Forum` for Ableton's board.
+		- When the venue is a subreddit (or similar) about an entity already in the garden, nest it under that subject: [[Claude/Reddit]] for r/ClaudeAI.
+		- When no owning or subject entity is modeled, nest under the host: [[Reddit/macapps]] for r/macapps.
+		- Prefer `Owner/Forum` for a dedicated product board and `Owner/Reddit` (or `Reddit/<subreddit>`) for a subreddit.
+	- ## Finding and deduplicating
+		- Search in this order: the venue URL, the subreddit or board name, `Owner/Forum`, `Owner/Reddit`, and `Reddit/<subreddit>`. Classify as existing, similar, new, or blocked.
+		- One page per venue.
+	- ## Frontmatter
+		- Mark instances with **`logseq-entity:: [[Logseq/Entity/Forum]]`**.
+		- Optional: **`created-by::`** when the owner that runs the board is tracked and actually created it (a vendor forum, not a fan subreddit).
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- The first body block is an H1 whose text links to the venue's home URL: `- # [r/ClaudeAI](https://www.reddit.com/r/ClaudeAI/)`.
+		- Keep the page lean: what the venue is and who hosts it.
+	- ## Users
+		- Unresolved usernames live under the forum or the host — [[CursorAI/Forum/User]], [[Reddit/User]], `Logseq/Forum/User/Username` — and are not Forum entities. A confirmed identity becomes a [[Logseq/Entity/Person]].
+	- ## Related types
+		- [[Logseq/Entity/Forum/Post]] — a single thread or post in a forum.
+	- ## Examples in this garden
+		- [[Claude/Reddit]] — r/ClaudeAI, nested under the subject entity.
+		- [[Reddit/macapps]] — r/macapps, nested under the host.
+		- [[CursorAI/Forum]] — Cursor's own community board.
+		- [[llllllll/Forum]] — lines.
+		- [[OpenAI/Forum]]

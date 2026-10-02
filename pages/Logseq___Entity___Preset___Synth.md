@@ -1,0 +1,19 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+- # Synth Preset
+	- In this garden, **Synth Preset** pages model saved synthesizer sounds and the evidence needed to describe or restore them.
+	- ## Identity and notes
+		- A saved sound includes the settings and sequences stored by its instrument. A device slot is its current location. Stable page titles preserve links from composition and performance logs when metadata changes.
+		- The name appears once in the filename and once in its instrument-specific name property. The body starts with `- # Notes` and holds listening observations, performance notes and links to music logs. Empty notes remain a heading without generated descriptions.
+		- Sync owns documented device metadata in frontmatter and preserves handwritten body content. Sound descriptions require listening or verified parameters; a category and name cannot establish a signal chain.
+	- ## Frontmatter
+		- An instance’s `logseq-entity::` links to its data definition, using the narrowest known type such as [[Logseq/Entity/Preset/Synth/Microfreak]]. Shared properties follow [[Logseq/Frontmatter]].
+		- Keys start with the owning type’s lowercase, hyphen-separated path: `Preset/Synth` gives `preset-synth-`; `Preset/Synth/Microfreak` gives `preset-synth-microfreak-`. Each property is documented under its owner’s `Frontmatter/<literal-key>` page as a [[Logseq/Entity/Frontmatter/Definition]].
+		- Each property definition has the literal key as an alias, connecting the clickable property name to its namespaced dictionary. [Logseq Properties](https://docs.logseq.com/#/page/Properties) describes property pages; [Logseq aliases](https://docs.logseq.com/#/page/term%2Falias) describes alias references. Existing standalone pages with the same key need reconciliation before adding an alias.
+		- Categorical values are explicit links to the definition’s child value pages; numeric and Boolean values retain their scalar types. A linked instrument model can supply an existing categorical vocabulary.
+		- [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin]]
+		- [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-file]]
+		- [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-file-sha256]]
+		- Numbered collections use [[Logseq/Frontmatter/prev]] and [[Logseq/Frontmatter/next]] for adjacent populated slots. A page absent from the device has neither navigation property.
+	- ## Preserving a sound
+		- Human-readable properties describe verified parameters. Exact exports preserve data that may still lack a decoded dictionary. A complete reconstruction also needs referenced samples or wavetables, applicable global settings and the firmware context.
+		- New parameter definitions state the source encoding, units, range, enum values and conversion, including raw values when a display conversion loses precision. Unknown parameters remain absent. A file digest identifies the exported bytes; it does not establish that every parameter has been decoded.

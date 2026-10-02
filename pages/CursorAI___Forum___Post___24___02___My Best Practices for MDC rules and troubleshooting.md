@@ -1,5 +1,8 @@
+logseq-entity:: [[Logseq/Entity/Forum/Post]]
 tags:: [[LangSmith Annotation Queues]]
 date-completed:: [[2025-02-19 Wed]]
+date-created:: [[2024/02]]
+logseq-created-time-year:: [[20/2/4]]
 
 - https://academy.langchain.com/courses/take/intro-to-langsmith/lessons/60631062-lesson-2-annotation-queues
 - ## [[LangSmith Annotation Queues]] overview

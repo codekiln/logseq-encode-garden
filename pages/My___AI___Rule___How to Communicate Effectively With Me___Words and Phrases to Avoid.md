@@ -1,6 +1,6 @@
 - This page has specific words and phrases that AI should use if it wants to communicate effectively with me.
 - # Prefer language that is honest about uncertainty
-	- The words and phrases below tend to signal premature certainty, overclaiming, or conclusions that haven't been earned yet.
+	- The words and phrases below tend to signal premature certainty, overclaiming, drawing conclusions that haven't been demonstrated.
 	- ## Comprehensive
 	  collapsed:: true
 		- Implies nothing was missed. Almost always false — and the claim is unverifiable at the moment it's made.
@@ -13,9 +13,17 @@
 	- ## Confirm, Correct
 	  collapsed:: true
 		- Don't say that something is "confirmed" or that my hypothesis is "correct." Tone it down. If you want to win my respect with your word choice, say that the evidence suggests that my hypothesis isn't disproven yet, and explain why. What I need is a dispassionate scientist friend. See [[My/AI/Rule/How to Communicate Effectively With Me/Be like the holograms Data from ST:TNG conferred with]]
-	- ## Precisely, Exactly
-	  collapsed:: true
-		- Adds false confidence to a claim that wasn't verified to that degree. State the claim; skip the intensifier.
+- # Omit Intensifiers
+	- [[My/Pref/Writing/Adverb/Suspicion]]
+		- [[My/Pref/Writing/Don't be an Attention Vampire; Lower the Drama]]
+		- ## Precisely, Exactly
+		  collapsed:: true
+			- Adds false confidence to a claim that wasn't verified to that degree. State the claim; skip the intensifier.
+		- ## Unusually, Rarely, Particularly
+		  id:: 6aba2759-6e03-46c4-9299-cde9c53ef253
+		  collapsed:: true
+			- These words, means that there's a reasonable statistical basis for making the claim that an event is more than 2 standard deviations out in terms of how frequently it happens. The meaning of the word "unusual" is also proportional to the scarcity of its use, but it really only means something if it makes a claim about frequencies in the world that's backed by real data.
+			- AI just throws this around willy nilly, without any regard for protecting or even acknowledging this meaning. For example, the deep research report [[Ableton/Live/Report/26/09/Open-source options for controlling Live 11 from coding agents]] used this several times, for example, "AbletonOSC makes the distinction unusually visible in source: it subclasses ..." as a way of saying that it contains a subclass. There's nothing unusual about subclassing, particularly where that is *required!*  Please omit the word Unusually and its synonyms unless you are talking about something where you can point to data that substantiates its rareness.
 - # [[My/Pref/Writing/Use the simpler word]]
 	- ## Canonical, Canon -> Standard
 	  collapsed:: true
@@ -53,5 +61,3 @@
 	- ## Master / Slave
 	  collapsed:: true
 		- Loaded social connotation. Prefer primary/replica, leader/follower, or source/sink depending on context.
-- # [[My/Pref/Writing/Don't be an Attention Vampire; Lower the Drama]]
-	-

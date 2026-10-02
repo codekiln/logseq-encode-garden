@@ -33,6 +33,7 @@ Today's journal is the work queue. [[Person/codekiln]] writes requests there dur
 | The request asks for | Load |
 |---|---|
 | An entity page, entity type, or dedup question | `logseq-entity` |
+| A forum hub or forum post | `logseq-entity` (load [[Logseq/Entity/Forum]] / [[Logseq/Entity/Forum/Post]]) |
 | A `/Q/` question page | `logseq-question` |
 | A term page | `logseq-term` command |
 | A person hub | `logseq-person` command |

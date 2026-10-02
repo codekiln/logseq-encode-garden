@@ -1,5 +1,6 @@
 # Logseq Frontmatter
 	- This page defines shared page-level frontmatter conventions for the knowledge garden.
+	- Page-level attributes are bare `key:: value` lines at the top of the file, before any bullet. `---` fences around them are illegal in Logseq; if they appear, unwrap them.
 	- {{embed [[Logseq/Frontmatter/tags]]}}
 	- {{embed [[Logseq/Frontmatter/logseq-entity]]}}
 	- {{embed [[Logseq/Frontmatter/alias]]}}

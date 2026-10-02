@@ -1,0 +1,26 @@
+- [[2026-09-26 Sat]]
+	- ## [[My Notes]]
+		- 09:58
+			- I'd like to finally get some external hosting going for [[Person/codekiln/GitHub/gitpa]].
+			- I have a [[Backblaze]] account that I set up a while back, and I'd like to get a CDN going off of that for the episodes and other assets that are referenced in the published.
+			- I'm considering experimenting with something like [[dvc]] as a possible replacement for [[git/lfs]] for managing assets like [[Microfreak/UG/04 Presets]], smaller audio fragments, images, etc. Basically, podcast rich media.
+				- In the end, I decided to not add dvc at this time, as it will get in the way of getting a publishing pipeline going.
+			- I started a voice chat with [[OpenAI/Model/GPT/6/Sol]] and described what I wanted.
+		- 14:02
+			- [[GitP/A/Log/26/09/26 Sat - RSS Project/Q/What Backblaze Options would work with Logseq?]]
+	- ## Plan
+		- TODO Publish `GitP.26.09.25` as the first RSS episode.
+			- TODO Give the uploaded MP3 a stable Cloudflare media URL and verify HEAD and byte-range requests.
+			- TODO Create an editable public episode page and `episode.yml` from [[Music/Composition/Log/26/09/25 Fri]]; include a stable GUID, recording and publication dates, description, media URL, enclosure type and length, and page link.
+			- TODO Generate RSS from episode records, publish it on GitHub Pages, and validate its self-link, artwork, and enclosure.
+			- TODO Subscribe to the feed by URL and check playback in a podcast app.
+		- TODO Add staged-file secret and identity scanning and a CI scan to Gitpa before publishing the feed.
+		- TODO [Rename the shared Backblaze rclone remote · dotfiles issue #131](https://github.com/codekiln/dotfiles/issues/131), then update the garden upload task's default remote.
+		- TODO Define a remote-file entity for garden media pages: derive the initial MP3 filename from the page name, link the upload instructions, record public or private visibility, and retain the published object key and URL when a page is renamed.
+		- TODO Automate bringing selected garden notes into public episode pages after the first manual publication works.
+		- DONE [Set up the shared Backblaze rclone remote and 1Password publishing access · dotfiles issue #125](https://github.com/codekiln/dotfiles/issues/125)
+		  id:: 6ab7f21f-4627-4e47-a60c-7a9e76e8acbf
+		- DONE [Prepare and upload Gitpa media from the garden · garden issue #126](https://github.com/codekiln/logseq-encode-garden/issues/126); [GitP.26.09.25.mp3](https://f005.backblazeb2.com/file/logseq-encode-garden/gitpa/episodes/2026-09-25/GitP.26.09.25.mp3) passed public URL, length, and range checks.
+	- ## Design questions
+	  id:: 6ab7ddaa-9863-4c47-8881-86f31e422d1f
+		- For [issue #131](https://github.com/codekiln/dotfiles/issues/131), should the [[rclone/remote]] name describe the reusable Backblaze B2 connection shared by garden projects (for example, `garden-b2:`), or the existing bucket or publishing workflow? In `remote:bucket/path`, the remote name is the part before `:`. What name and scope do you want?

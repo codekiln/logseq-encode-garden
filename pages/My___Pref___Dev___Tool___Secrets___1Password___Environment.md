@@ -1,0 +1,1 @@
+- Using [[1Password/Environment]] with [[1Password/Environment/MCP]], the [[.env]] file is mounted in

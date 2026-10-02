@@ -1,3 +1,6 @@
+logseq-entity:: [[Logseq/Entity/Forum/Post]]
+date-created:: [[2024/02]]
+logseq-created-time-year:: [[20/2/4]]
 # [Dotfiles | Personal Development Environment : r/devops](https://www.reddit.com/r/devops/comments/1aixfei/dotfiles_personal_development_environment/)
 	- [[My Notes]]
 	  id:: 67ed0c2b-3f12-46d5-be8d-b48f4665a767

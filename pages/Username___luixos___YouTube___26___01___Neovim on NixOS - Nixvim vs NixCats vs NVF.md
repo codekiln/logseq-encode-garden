@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 # [Neovim on NixOS: Nixvim vs NixCats vs NVF - YouTube](https://www.youtube.com/watch?v=VTIGSxpzlIM)
 	- ## [[AI Notes]]
 		- ### Core Idea of the Video

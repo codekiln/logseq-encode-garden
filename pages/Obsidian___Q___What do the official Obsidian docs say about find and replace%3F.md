@@ -1,0 +1,22 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+see-also:: [[Obsidian/Keyshort/Open Search Replace]]
+- # What do the official [[Obsidian]] docs say about find and replace?
+	- ## [[AI Answer]]
+		- [[Answer/Official]] from [Obsidian Help](https://help.obsidian.md/), read at [obsidianmd/obsidian-help c86dd8fe](https://github.com/obsidianmd/obsidian-help/commit/c86dd8fe) (2026-05-29).
+		- **Short answer:** the prose documentation never covers find and replace. Every official statement about it lives in the release notes, and those confirm `⌘ ⌥ F` as the macOS default — so the shortcut recorded on [[Obsidian/Keyshort/Open Search Replace]] is the right one.
+		- ### What the prose docs cover
+			- [Search](https://help.obsidian.md/plugins/search) is the vault-wide core plugin on `⌘ ⇧ F`. It is read-only: operators, regex, properties, sort order, embedding results — no replace anywhere on the page.
+			- [Editing shortcuts](https://help.obsidian.md/editing-shortcuts) lists only the shortcuts the OS and the editor framework provide. No find, no replace.
+			- [Hotkeys](https://help.obsidian.md/hotkeys) explains how to view, set, and remove bindings, and does not list defaults.
+		- ### What the release notes say
+			- [v0.6.0](https://help.obsidian.md/Release+notes) — "You can now search AND replace, `Ctrl+H` by default."
+			- **v0.10.1** — "Search and replace now has a new default hotkey on macOS `Cmd+Option+F` to avoid clashing with the native hotkey for hide window." This is the origin of `⌘ ⌥ F`, and the reason it is not `⌘ H`.
+			- **v0.13.18** — in-document search gained **Search All** (`Alt+Enter`) and **Replace All** (`⌘ ⌥ Enter`).
+			- **v0.13.27** — fixed `⌘ G` in document search.
+			- **v0.13.30** — fixed search and replace commands not working when search is already open.
+			- **v1.8.2** — the "Search current file" bar began showing the total number of results.
+		- ### When the shortcut does nothing
+			- The commands are named **Search current file** and **Search & replace in current file**. Open the command palette and run the replace one by name; if it works from the palette, the binding is the problem rather than the feature.
+			- Replace acts on an editor. In Reading view there is nothing to replace into.
+			- In **Settings → Hotkeys**, filter for `replace` and confirm nothing else has taken `⌘ ⌥ F`. A community plugin claiming the same combination wins silently.
+			- macOS itself, or another running app, can swallow `⌘ ⌥ F` before Obsidian sees the keystroke.

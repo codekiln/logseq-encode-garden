@@ -1,0 +1,28 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+- # Musical Work
+	- In this garden, **Musical Work** pages model identifiable compositions, songs, and separately named movements or other parts of a larger composition.
+	- ## What counts
+		- A musical work is an abstract composition or song, independent of any one performance, recording, or release.
+		- A movement may have its own page when it is useful to track or discuss it separately. It remains related to its larger work through `part-of::`.
+		- An album is a release or collection of recordings, not a musical work. Model an album under [[Logseq/Entity/Music/Recording]] and connect its tracks to their works.
+		- An arrangement with a distinct identity may have its own work page, with `based-on::` linking to the source work.
+	- ## Naming and placement
+		- Place a work under its primary creator's namespace as `Person/<Creator>/Music/Work/<Title>`.
+		- For a movement, continue below its parent work with a two-digit position and the movement's title, such as `.../01 Grave - Allegro di molto e con brio`.
+		- Use the creator who gives the work its clearest home in the garden; list other creators in `creator::` when their pages exist.
+		- Use the work's familiar title as the H1. Keep punctuation and diacritics from the established title.
+	- ## Relationships
+		- Use `part-of::` on a movement or section page to link to its parent work.
+		- Use `appears-on::` on a work page to link to a known album recording or release. The album page lists works in track order with `track::` links.
+		- Use `based-on::` for an adaptation or arrangement and `cover-of::` on a cover recording to link the covered work.
+		- A work page may link to performances and recordings, but those entities do not replace the work page.
+	- ## Examples
+		- `Person/Madonna/Music/Work/Vogue` is the song; `Person/Madonna/Music/Recording/I'm Breathless` is its album, whose ordered track list links to [[Person/Madonna/Music/Work/Vogue]].
+		- `Person/Ludwig van Beethoven/Music/Work/Piano Sonata No. 8 in C Minor Op. 13 Pathétique/01 Grave - Allegro di molto e con brio` is the first movement, nested beneath the sonata.
+		- `Person/John Cage/Music/Work/4'33"` is a complete work with no movement pages required.
+		- `Person/Wolfgang Amadeus Mozart/Music/Work/Piano Concerto No. 23 in A Major K. 488/02 Adagio` and `.../03 Allegro assai` are sibling movements under one concerto.
+		- `Person/Stevie Nicks/Music/Work/Landslide` is the song. A Smashing Pumpkins recording of it is filed under that performer and links to the Stevie Nicks work with `cover-of::`.
+	- ## Instance shape
+		- Start each work page with `logseq-entity:: [[Logseq/Entity/Music/Work]]` and one H1 containing the work's familiar title.
+		- Add `creator::` links when the creator pages exist, and `date-created::` when a reliable composition or publication date is known.
+		- Add only relationships that are known and useful; leave unknown movement lists and release associations unstated.

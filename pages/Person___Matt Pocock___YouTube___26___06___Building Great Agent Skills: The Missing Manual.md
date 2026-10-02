@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 date-created:: [[2026/06/29]]
 
 - # [Building Great Agent Skills: The Missing Manual - YouTube](https://www.youtube.com/watch?v=UNzCG3lw6O0)

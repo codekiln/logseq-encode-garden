@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 tags:: [[langgraph/Assistant]]
 
 - # [LangGraph Assistants: Building Configurable AI Agents - YouTube](https://www.youtube.com/watch?v=fMsQX6pwXkE)

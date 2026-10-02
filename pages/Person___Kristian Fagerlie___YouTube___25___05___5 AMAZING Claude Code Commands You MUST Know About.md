@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/YouTube]]
 created-by:: [[Person/Kristian Fagerlie]]
 
 - # [5 AMAZING Claude Code Commands You MUST Know About - YouTube](https://www.youtube.com/watch?v=eM_Tg8_BGx4)
