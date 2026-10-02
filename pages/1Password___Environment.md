@@ -27,3 +27,19 @@ logseq-entity:: [[Logseq/Entity/Concept]]
 		- **A mounted `.env` is a plaintext file on disk** — the mount makes variables available on demand; credentials are not written to disk.
 		- **Importing a leaked `.env` remediates the leak** — moving secrets into 1Password secures them going forward; it does not undo prior exposure in git history or agent memory. Rotate those values.
 		- **Deleting an Environment is reversible** — deleted Environments cannot be restored, and associated integrations stop working.
+	- ## Experiments
+		- ### 2026-10-02: more than one mount, and deleting a mount's folder
+			- Observations from one run at about 12:20 ET on macOS, with the 1Password desktop app, 1Password CLI 2.39.0 and the [[1Password/Environment/MCP]] server (`1password-mcp`). They are not documented behaviour, except where a link says so. Nothing was read from the mounted file.
+			- One Environment can have more than one mount.
+				- The server's `create_local_env_file` added a second local `.env` mount of a test Environment, in a scratch folder, beside an existing mount.
+				- `list_local_env_files` listed both as enabled, and the desktop app showed both under Connected to.
+				- The new file was a named pipe (`prw-------`).
+			- Deleting a mount's folder does not remove the mount.
+				- After `rm -rf` of the scratch folder, `list_local_env_files` still listed the mount as enabled a minute later, and the desktop app still showed it.
+				- 1Password did not recreate the file in the 30 seconds watched.
+				- Removing a git worktree deletes its folder the same way, so it would leave its mount registered. That mount probably still counts toward the [limit of ten enabled local `.env` files per device](https://www.1password.dev/environments/local-env-file); this was not checked.
+			- No program was found that removes a mount.
+				- The installed MCP binary names only its eight tools, and none removes a mount.
+				- The CLI reference lists one `op environment` subcommand, `read` ([reference](https://www.1password.dev/cli/reference/management-commands/environment/)), and `op` 2.39.0 has no `environment` command.
+				- The ⋮ menu on the mount in the desktop app is the only way found.
+			- For coding agents that mount one `.env` per git worktree, each finished worktree leaves a mount to remove by hand, inside a limit of ten per device.
