@@ -16,3 +16,5 @@ logseq-entity:: [[Logseq/Entity/Person]]
 		- [[OReilly/Event/25/09/AI Codecon/1355 Designing for AI Agents MCP Jessica Kerr]]
 	- [[Person/Jessica Kerr/YouTube]] on [[OpenTelemetry]]
 		- [What Is OpenTelemetry? Explained by Jessica Kerr | Honeycomb](https://www.honeycomb.io/resources/training-videos/what-is-opentelemetry-explained-by-jessica-kerr)
+	- Hosts [[Machines of Code and Grace/Pod]] with [[Person/Avdi Grimm]]
+	- Guest on [[Person/Kent Beck/Pod/26/06 A Learning System Made of Learning Parts]]
