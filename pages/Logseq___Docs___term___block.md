@@ -1,4 +1,4 @@
-logseq-url:: logseq://graph/docs?page=term%2Fblock
+logseq-proxy-url:: logseq://graph/docs?page=term%2Fblock
 
 - description:
 	- the smallest unit of content in Logseq that you can link to

@@ -36,12 +36,12 @@ Map `page` → `pages/<page_with___>.md` under the resolved `root`, and read it.
 The destination mirrors the source name exactly: `pages/<page_with___>.md` in this garden.
 
 - Destination doesn't exist → **create** (Case A, step 5).
-- Destination exists **with** `logseq-url::` in its property block → **re-sync** (Case B, step 5).
-- Destination exists **without** `logseq-url::` → **stop and ask** before writing anything.
+- Destination exists **with** `logseq-proxy-url::` in its property block → **re-sync** (Case B, step 5).
+- Destination exists **without** `logseq-proxy-url::` → **stop and ask** before writing anything.
 
 ### 4. Build the proxy properties
 
-- `logseq-url::` — the URL as provided, normalized to consistent `?page=` encoding.
+- `logseq-proxy-url::` — the URL as provided, normalized to consistent `?page=` encoding.
 - `logseq-proxy-last-sync-date::` — today as `[[yyyy-MM-dd]]`, no weekday.
 
 ### 5. Merge or create
@@ -73,6 +73,6 @@ Summarize:
 
 - Source: resolved `root` (note whether via `ghq-address` or explicit `root`) + relative path
 - Destination: relative path under destination repo
-- The `logseq-url::` and `logseq-proxy-last-sync-date::` written
+- The `logseq-proxy-url::` and `logseq-proxy-last-sync-date::` written
 - Whether this was create vs re-sync
 - Assets copied, or none found
