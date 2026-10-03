@@ -1,0 +1,35 @@
+- # Episode patch workflow
+	- [[GitP]] episode pages record the MicroFreak presets created during recording. Each recorded patch keeps its saved slot, downloadable preset file and connection to the episode's audio, then receives a convention-based or creative name after recording.
+	- Protocol evidence and current script capabilities: [[Microfreak/CLI/Preset metadata over USB]].
+	- ## Record and capture
+		- Save the patch on the instrument, then record its slot on the episode page in the order the patches were created. Downloads capture the saved preset; an unsaved front-panel edit may differ from the downloaded patch.
+		- Capture the saved name, category, slot, session order, full patch backup and sound-data fingerprint. Link an audio excerpt or a recording timestamp when available.
+		- Keep an episode patch identifier independent of slot and device name. The same slot can later hold a different sound, and a renamed patch should retain its episode notes and audio references.
+		- Downloading should be part of capture. Retain the original export when making later renamed exports so the episode's original sound remains recoverable.
+	- ## Download formats
+		- [Existing microfreak:download task](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/download) downloads one populated slot through the Python/RtMidi library and saves a raw .bin backup plus a JSON manifest with metadata and checksums.
+		- [Elektroid preset implementation](https://github.com/dagargo/elektroid/blob/7806ecafda5fbed214e0e0c4f48a92ead52bdc73/src/connectors/microfreak.c#L672-L731) exposes .mfpz export, matching the existing GitP preset files. Integration into episode capture and an MCC import test remain pending.
+		- A raw backup supports preservation and comparison. Restore from that raw format needs implementing and testing; an existing download task alone does not establish a working restore path.
+		- Preset files preserve the patch settings. Referenced user samples and wavetables need separate consideration when building a portable episode archive.
+	- ## Rename after recording
+		- Generate device names from episode date and recorded patch order, using the proposed form `GitP.YY.MM.DD.A`. The example `GitP.24.11.23.A` fits the device's 14-character limit; full-year dates can be used in export filenames.
+		- Preview slot, current name and proposed name together. Compare the device's current sound data with the captured patch before applying changes.
+		- Rename over USB, read back the result, verify unchanged sound data and download the renamed patch under its GitP filename.
+		- Update the episode's links and the existing preset notes without losing their history. A moved or overwritten slot needs reconciliation before renaming.
+	- ## Next steps
+		- TODO Validate downloading a saved test patch over USB with microfreak:download, including complete data and manifest output.
+		- TODO Choose where episode patch exports belong and how episode pages link to them; consider the existing GitP episode folders and rich-media storage plans.
+		- TODO Define an episode patch entry with stable identity, slot, order, names, backup link, sound fingerprint and optional audio timestamp or excerpt.
+		- TODO Add a mise episode-capture task that downloads explicitly selected slots and adds their records to the episode page without duplicating earlier captures.
+		- TODO Integrate .mfpz export and verify an exported patch opens in MIDI Control Center; test restoration into a backed-up test slot.
+		- TODO Implement a rename preview using episode date and patch order. Define naming for multiple sessions on the same date and suffixes beyond A–Z.
+		- TODO Implement a single-slot USB rename with backup, bounded waits, acknowledgment validation and readback; verify name persistence and unchanged sound data on the instrument.
+		- TODO Extend verified renaming to an episode batch, stopping on mismatched patch identity or an uncertain write and recording which changes completed.
+		- TODO Preserve preset notes and episode links through rename reconciliation; the current garden sync identifies presets by slot and name.
+		- TODO Determine which sample and wavetable dependencies must accompany episode patch exports for restoration on another device.
+	- ## Audio-based creative names
+		- TODO Associate a representative audio excerpt with each episode patch and record the excerpt's source and timestamp.
+		- TODO Evaluate an audio-capable model for candidate names using those excerpts and episode context.
+		- TODO Decide how creative names coexist with the GitP convention within the device name limit. Keep full creative titles and episode provenance in garden metadata.
+		- TODO Add candidate selection before USB renaming and retain the selected name and audio association on the episode page.
+		- Audio naming remains a later experiment. Its inputs describe a performance and recording, including effects, as well as the underlying patch.

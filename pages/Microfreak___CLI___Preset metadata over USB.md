@@ -27,6 +27,7 @@
 		- For bulk changes, use an explicit slot-to-change manifest and verify each completed slot. A failed transfer should report the uncertain slot and stop further writes; it should not blindly repeat a write.
 		- Reconcile garden metadata after successful device verification. The existing sync script identifies presets by slot and name, so a rename can retire the old page and create a new page; preserving notes through a device rename needs an explicit migration path.
 	- ## Podcast workflow
+		- Workflow and implementation TODOs: [[Microfreak/CLI/Episode patch workflow]].
 		- [[GitP]] episodes need a record of the saved MicroFreak slots created during recording, followed by renaming after the episode. Episode-linked capture and batch rename are the immediate prototype scope; general preset CRUD can follow as needed.
 		- During recording, list each saved slot on the episode page, with its session order and an optional audio clip or recording timestamp. A capture task should attach the current name, a full preset backup and a fingerprint of the sound data, excluding mutable name/category metadata.
 		- A slot number identifies a storage location whose contents can change. Before renaming after the episode, compare the saved sound fingerprint against the connected device. A mismatch requires identifying the original patch or choosing a restoration target before a write.
