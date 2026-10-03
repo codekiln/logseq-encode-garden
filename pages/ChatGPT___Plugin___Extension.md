@@ -1,0 +1,48 @@
+tags:: [[Diataxis/Concept]]
+logseq-entity:: [[Logseq/Entity/Concept]]
+see-also:: [[OpenAI/DevDay]], [[Codex/Plugin]], [[Model Context Protocol]]
+
+- # ChatGPT Plugin Extension
+	- ## Overview
+		- A **plugin extension** is a piece of a ChatGPT plugin that puts the plugin's own interface inside ChatGPT: a sidebar entry, a panel beside the conversation, or a viewer for a file type. OpenAI announced them at [[OpenAI/DevDay]] on 2026-09-29.
+		- OpenAI's pitch is that a developer can build "entire applications that feel native to ChatGPT": an editor, a dashboard, or a workspace that sits next to the chat and that an agent can also operate. Announced examples: a meetings app, Figma design editing with team comments, and Adobe Photoshop features.
+		- "Native" here means native to ChatGPT's interface. It does not mean a macOS or iOS app. The extension is served from the developer's servers and displayed inside ChatGPT.
+	- ## The terms
+		- **Plugin** — the installable package. Per OpenAI's docs it is made of skills, MCP servers, and optional UI. ChatGPT and Codex share one plugin directory, so one listing shows up in both. See [[Codex/Plugin]].
+		- **App** — the name for the same kind of thing from October 2025 until a July 2026 rename. One secondary source dates the rename to 2026-07-09, when the App Directory became the Plugin Directory and existing apps were packaged as plugins; OpenAI's own pages do not state this date.
+		- **Plugin extension** — an add-on to a plugin that attaches to a ChatGPT surface. A plugin with no extension still works as before; OpenAI's docs say existing plugin functionality is unaffected.
+		- **MCP** — the protocol underneath. A plugin's tools come from an [[Model Context Protocol]] server; the extension's UI is a resource that server serves.
+		- **Skill** — reusable instructions packaged in the plugin, like a [[Codex/Skill]].
+		- **Extension** and **plugin extension** appear to be used interchangeably in coverage of the announcement. The docs page title is "Plugin extensions."
+	- ## Extension points
+		- The docs list nine: sidebar apps, conversation panels, file viewers, plugin settings, deep links, composer mentions, display modes, model-app context, and rich forms.
+		- Sidebar app — opens fullscreen from ChatGPT's sidebar.
+		- Conversation panel — opens beside a conversation.
+		- File viewer — opens a file in the plugin's own interface, with reading, live updates, and saving changes.
+		- Composer mentions work only in the ChatGPT desktop app. Web extensions are coming to Free and Go plans.
+	- ## Mechanism
+		- Built with TypeScript or Python SDKs and declarative metadata.
+		- The developer registers each extension as `_meta` on an MCP App tool, naming a resource URI and an entry point type.
+		- Server side: the MCP server. Client side: the UI resource that ChatGPT renders.
+		- Distribution: submit to the plugin directory; ChatGPT can also recommend a plugin during a conversation. See [OpenAI's docs](https://developers.openai.com/plugins/build/extensions).
+	- ## Sam Altman
+		- [[Person/Sam Altman]] tweeted that there is "much more potential energy in Sign In With ChatGPT/Plugin Extensions than we realize."
+		- On the Every podcast *AI & I* with [[Person/Dan Shipper]] (episode dated 2026-09-30, "How Sam Altman Uses Dots to Take Back His Time"), the discussion near the 20-minute mark covers ChatGPT-native apps and plugin extensions. Altman is excited about the ideas OpenAI has not thought of, and he floats shipping a plugin extension himself. [Transcript](https://every.to/podcast/transcript-how-sam-altman-uses-dots-to-take-back-his-time)
+		- Shipper's own summary: developers can now build software for both you and your agent, inside ChatGPT. He calls it the third or fourth attempt OpenAI has made at an app store. [Every Vibe Check](https://every.to/vibe-check/vibe-check-openai-devday-2026)
+	- ## Sign in with ChatGPT
+		- Announced alongside extensions. It is OAuth for ChatGPT accounts in third-party products, with 16 launch partners including Devin, Notion, and Vercel.
+		- It runs the other direction from an extension: an extension brings a developer's app into ChatGPT; Sign in with ChatGPT lets a user bring their ChatGPT subscription into a developer's app. In the podcast, Shipper describes this as letting app developers stop rationing AI use, and Altman's framing is "it's your subscription."
+	- ## History
+		- 2023-03 — first ChatGPT plugins beta, built on manifest files and OpenAPI. Closed in 2024 (plugin store 2024-03-19, existing plugin conversations ended 2024-04-09).
+		- 2023-11 — GPTs and the GPT Store at the first DevDay.
+		- 2024-11 — Anthropic releases MCP.
+		- 2025-03 — OpenAI adopts MCP.
+		- 2025-10 — Apps SDK at DevDay, with apps such as Spotify and Zillow inside ChatGPT.
+		- 2026-09 — plugin extensions.
+	- ## Misconceptions
+		- It is not a browser extension. For Chrome extensions and [[ChatGPT/Atlas]], see [[ChatGPT/Atlas/Bug/No way to run extensions on chatgpt.com]].
+		- It is not a separate download. The plugin installs from the directory and runs inside ChatGPT.
+		- A plugin does not need an extension. Skills plus an MCP server make a plugin; the extension is the optional UI layer.
+	- ## Open questions
+		- Shipper had not seen discovery working during the preview, and could not build one before publishing his review.
+		- The sources found do not describe revenue sharing or pricing for developers.

@@ -1,0 +1,58 @@
+- # OpenAI DevDay
+	- [[OpenAI]]'s annual developer conference in San Francisco. Each year has its own entry below, newest first.
+	- ## 2026
+		- 2026-09-29, Fort Mason, San Francisco, about 2,500 developers.
+		- Sources: [Announcements thread (OpenAI Developer Community)](https://community.openai.com/t/devday-2026-announcements-and-developer-resources/1402006), [official recap](https://openai.com/index/devday-2026-recap/), [keynote](https://www.youtube.com/watch?v=Fls_onRviPM), [Every Vibe Check](https://every.to/vibe-check/vibe-check-openai-devday-2026), [Learnetto list](https://learnetto.com/openai-devday-2026-announcements). Coverage counts the announcements anywhere from 20-plus to 29.
+		- ### Models and API
+			- **GPT-6.1 Sol** — better at coding and computer use; standard tokens cost one-fifth of Astra's. See [[OpenAI/Model/GPT/6/Sol]] and [[OpenAI/Model/GPT/6/Astra]].
+			- **Ultrafast mode** — paid speed tier, up to 8x faster token generation in Codex and 6x in the API. Available now for Astra; Sol is coming soon.
+			- **Agents API** — public beta with hosted execution, memory, tools, and multi-agent support.
+			- **Computer use in the Agents API** — agents operate software through its interface.
+			- **Decisions API** — [[OpenAI/Model/GPT/6/Luna]] classifies inputs, routes requests, or picks from predefined options. Limited preview.
+			- **Private Intelligence** — zero data retention with Private Safety Processing; a Private Inference preview is planned for fall 2026.
+			- **Bedrock Managed Agents, powered by OpenAI** — Agents API capabilities on AWS. Only the Learnetto list carries this item.
+			- **Speed gains** — time to first token down 45% and tool calls and workflows 30% faster, per the Developer Community thread.
+		- ### Plugins
+			- **Plugin extensions** — sidebar entries, interactive panels, and file viewers, with Figma and Adobe examples. See [[ChatGPT/Plugin/Extension]].
+			- **Plugin discovery and creation** — recommendations inside conversations, and the Plugin Creator.
+			- **Plugin submission** — review tracking, clearer feedback, simpler updates to existing plugins.
+			- **Sites with plugins** — websites can use plugins with each user's own data and permissions.
+			- **MCP Events** — events from connected apps trigger automations. See [[Model Context Protocol]].
+			- **Sign in with ChatGPT** — OAuth with ChatGPT accounts in third-party products; usage under a subscription for 16 launch partners.
+			- **OpenAI Marketplace** — enterprise customers apply existing OpenAI commitments to partner products; Baseten is included. Learnetto reports 32 initial partners.
+			- **Website annotations** — a Browser Annotation API for sites. Only the Learnetto list carries this item.
+		- ### Codex
+			- **Codex Cloud** — tasks keep running with the laptop closed, reachable from other devices. See [[Codex/Cloud]].
+			- **Codex CLI update** — two-way voice, an `/agents` view, prompt editing changes, session resumption, worktree workflows. See [[Codex/CLI]].
+			- **Code review** — summaries, diffs, and change questions in ChatGPT; automatic cloud reviews on a schedule for GitHub and GitLab.
+			- **Codex Security Cloud** — vulnerability scanning with investigation, deduplication, and fix preparation; scheduled scans.
+		- ### Agents and collaboration
+			- **Dots** — persistent agents with connected apps and their own cloud computer. Beta for Pro, Business, and Enterprise on web, mobile, and desktop; not in the EEA, Switzerland, or the UK. [[Person/Sam Altman]] described how he uses them on the Every podcast *AI & I* with [[Person/Dan Shipper]].
+			- **Specialist Dots** — enterprise preview of agents with assigned organizational roles.
+			- **ChatGPT Space** — shared workspace for a team and its agents, with files and project context.
+			- **Pages** — collaborative documents with charts and interactive tools.
+			- **Collaborative Slides** — rolling out within weeks; export to PowerPoint or Google Slides is coming.
+			- **Teams and Team Tasks** — share work and assign recurring or event-triggered tasks.
+			- **@ChatGPT in Slack and Microsoft Teams** — mention ChatGPT with connected tools.
+			- **Meetings plugin** — notes and action items saved to Space. Beta on macOS for Pro and Business.
+			- **Shareable profiles** — one page collecting a person's Sites and plugins.
+			- **Work across devices** — start a ChatGPT Work task on desktop and continue on web or mobile. See [[ChatGPT/Work]]. Only the Learnetto list carries this item.
+			- **Workspace connections** — admins connect company app accounts for shared access. Only the Learnetto list carries this item.
+			- **Agent security** — admin policies for agent tools, approvals, web access, and sandboxing. Only the Learnetto list carries this item.
+		- ### Plans
+			- **Pro 500** — 25x the Plus usage allowance, with Ultrafast access.
+			- **Pro 200** — reopened; new subscriptions have different allowances than grandfathered plans.
+	- ## 2025
+		- 2025-10-06, Fort Mason, San Francisco; the third DevDay.
+		- Apps SDK, which lets third-party apps such as Spotify and Zillow run inside ChatGPT on MCP.
+		- AgentKit and ChatKit for building and embedding agents and chat.
+		- GPT-5 Pro and Sora 2 in the API, and new realtime voice models.
+		- Source: [IntuitionLabs summary](https://intuitionlabs.ai/articles/openai-devday-2025-announcements)
+	- ## 2024
+		- 2024-10-01, San Francisco.
+		- Realtime API public beta, vision fine-tuning, prompt caching, and model distillation.
+		- Source: [VentureBeat](https://venturebeat.com/ai/openai-devday-2024-4-major-updates-that-will-make-ai-more-accessible-and-affordable)
+	- ## 2023
+		- 2023-11-06, San Francisco; the first DevDay.
+		- GPT-4 Turbo with a 128K context window and lower prices than GPT-4, custom GPTs, a GPT Store, and built-in conversation threads in the Assistants API.
+		- Source: [Every, What I Saw at OpenAI's Developer Day](https://every.to/chain-of-thought/what-i-saw-at-openai-s-developer-day)
