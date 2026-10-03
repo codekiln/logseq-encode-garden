@@ -1,6 +1,6 @@
 - # Preset metadata over USB
 	- Direct preset renaming is feasible through MIDI SysEx over USB. Elektroid implements the write sequence; the garden already has Python/RtMidi readers and full-preset backup support.
-	- Investigation date: [[2026-10-03 Sat]]. Source inspection establishes feasibility; hardware writes remain untested in this investigation.
+	- Investigation date: [[2026-10-03 Sat]]. Source inspection establishes write feasibility; [[Microfreak/CLI/Validation/26-10-03 slot 397]] records successful hardware reads. Hardware writes remain untested.
 	- ## Existing implementation
 		- [Elektroid MicroFreak connector](https://github.com/dagargo/elektroid/blob/7806ecafda5fbed214e0e0c4f48a92ead52bdc73/src/connectors/microfreak.c) provides preset listing, renaming, downloading and uploading. Its preset operation tables do not implement deletion.
 		- [Garden preset inventory and reconciliation](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/lib/sync.py) reads saved names, categories and initialized status using python-rtmidi. Its writes update garden pages; it does not write presets to the instrument.

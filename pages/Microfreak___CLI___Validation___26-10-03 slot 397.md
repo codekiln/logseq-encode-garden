@@ -1,0 +1,22 @@
+- # USB download validation — slot 397
+	- On [[2026-10-03 Sat]], the connected MicroFreak returned saved preset [[Microfreak/Preset/397 Imit]], named Imit, category Keys, with populated sound data.
+	- MIDI Control Center was open during both read-only transfers. Both completed, with matching headers and sound data and no detected protocol interference. This demonstrates coexistence for these downloads; simultaneous MCC transfers remain untested.
+	- The patch was used in a recent [[GitP]] episode. The episode association is unspecified; the capture retains the existing name.
+	- ## Captured files
+		- Captured patch files and reports are stored locally under `assets/Microfreak-2026-10-03-slot-397-Imit/`; the public repository contains the validation notes.
+		- Original raw patch and capture manifest preserve the saved header and complete sound data.
+		- Repeat-read manifest records a second device download whose complete raw content matched the original capture.
+		- Imit preset export (.mfpz) was generated locally from the raw capture using [Elektroid's serialized object format](https://github.com/dagargo/elektroid/blob/7806ecafda5fbed214e0e0c4f48a92ead52bdc73/src/connectors/microfreak_sample.c#L32-L107) and a ZIP member named 0_preset. It was not downloaded through an installed Elektroid executable.
+		- Validation report records the repeated-download comparison and the export's matching sound data. The existing garden parser reopened the export, recovered the name/category and parsed the parameter layout successfully.
+		- Parameter inspection provides named raw parameter values. Display-scale conversions and sound interpretation are outside this validation.
+	- ## Observations
+		- The existing microfreak:download task can capture this populated saved slot directly over USB. It checks response sequence, operation and length for the header and every sound-data packet.
+		- No preset write, rename, program change, restoration or memory-protection change was performed. The experiment read the saved preset rather than the current unsaved edit buffer.
+		- The matching repeat read supports using the captured sound-data fingerprint to detect later changes before renaming. The manifests retain the complete fingerprints rather than relying on the slot name.
+		- Parser round-trip validation establishes that the generated export preserves the captured sound data. Acceptance in MCC and successful device restoration are still untested.
+	- ## Next validation
+		- TODO Import the generated .mfpz into an MCC computer bank and verify its displayed metadata, without sending it to the device.
+		- TODO Choose a backed-up test slot for a restore test and compare the restored sound data with the original capture.
+		- TODO Build the reusable episode-capture mise task around the proven download path and validated export format.
+		- TODO Preview a convention-based rename when an episode date and patch order are available, then test the USB write on a backed-up slot.
+		- [[Microfreak/CLI/Episode patch workflow]] tracks the broader implementation plan; [[Microfreak/CLI/Preset metadata over USB]] records protocol research.

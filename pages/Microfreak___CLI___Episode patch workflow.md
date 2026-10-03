@@ -7,6 +7,7 @@
 		- Keep an episode patch identifier independent of slot and device name. The same slot can later hold a different sound, and a renamed patch should retain its episode notes and audio references.
 		- Downloading should be part of capture. Retain the original export when making later renamed exports so the episode's original sound remains recoverable.
 	- ## Download formats
+		- Live validation: [[Microfreak/CLI/Validation/26-10-03 slot 397]] records matching downloads and a parser-validated .mfpz export of Imit. MCC import and restoration remain pending.
 		- [Existing microfreak:download task](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/download) downloads one populated slot through the Python/RtMidi library and saves a raw .bin backup plus a JSON manifest with metadata and checksums.
 		- [Elektroid preset implementation](https://github.com/dagargo/elektroid/blob/7806ecafda5fbed214e0e0c4f48a92ead52bdc73/src/connectors/microfreak.c#L672-L731) exposes .mfpz export, matching the existing GitP preset files. Integration into episode capture and an MCC import test remain pending.
 		- A raw backup supports preservation and comparison. Restore from that raw format needs implementing and testing; an existing download task alone does not establish a working restore path.
@@ -17,7 +18,7 @@
 		- Rename over USB, read back the result, verify unchanged sound data and download the renamed patch under its GitP filename.
 		- Update the episode's links and the existing preset notes without losing their history. A moved or overwritten slot needs reconciliation before renaming.
 	- ## Next steps
-		- TODO Validate downloading a saved test patch over USB with microfreak:download, including complete data and manifest output.
+		- DONE Validate downloading a saved test patch over USB with microfreak:download, including complete data and manifest output. See [[Microfreak/CLI/Validation/26-10-03 slot 397]].
 		- TODO Choose where episode patch exports belong and how episode pages link to them; consider the existing GitP episode folders and rich-media storage plans.
 		- TODO Define an episode patch entry with stable identity, slot, order, names, backup link, sound fingerprint and optional audio timestamp or excerpt.
 		- TODO Add a mise episode-capture task that downloads explicitly selected slots and adds their records to the episode page without duplicating earlier captures.
