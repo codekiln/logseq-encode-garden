@@ -1,10 +1,10 @@
 tags:: [[Diataxis/Concept]]
 logseq-entity:: [[Logseq/Entity/Concept]]
-see-also:: [[OpenAI/DevDay]], [[Codex/Plugin]], [[Model Context Protocol]]
+see-also:: [[OpenAI/Dev/Day/26]], [[Codex/Plugin]], [[Model Context Protocol]]
 
 - # ChatGPT Plugin Extension
 	- ## Overview
-		- A **plugin extension** is a piece of a ChatGPT plugin that puts the plugin's own interface inside ChatGPT: a sidebar entry, a panel beside the conversation, or a viewer for a file type. OpenAI announced them at [[OpenAI/DevDay]] on 2026-09-29.
+		- A **plugin extension** is a piece of a ChatGPT plugin that puts the plugin's own interface inside ChatGPT: a sidebar entry, a panel beside the conversation, or a viewer for a file type. OpenAI announced them at [[OpenAI/Dev/Day/26]] on 2026-09-29.
 		- OpenAI's pitch is that a developer can build "entire applications that feel native to ChatGPT": an editor, a dashboard, or a workspace that sits next to the chat and that an agent can also operate. Announced examples: a meetings app, Figma design editing with team comments, and Adobe Photoshop features.
 		- "Native" here means native to ChatGPT's interface. It does not mean a macOS or iOS app. The extension is served from the developer's servers and displayed inside ChatGPT.
 	- ## The terms
