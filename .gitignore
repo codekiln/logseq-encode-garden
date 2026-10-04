@@ -117,4 +117,6 @@ worktrees/
 
 # Encrypted local credentials and selectively fetched garden assets
 /fnox.local.toml
-/assets/.remote/
+/assets/.remote/**
+!/assets/.remote/**/
+!/assets/.remote/**/*.dvc
