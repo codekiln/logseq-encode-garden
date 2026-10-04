@@ -37,6 +37,7 @@
 		- The fresh clone contained metadata and omitted the audio. Pulling the September 24 metadata restored only that MP3; a full pull restored the other test asset. Git tracked the `.dvc` files and ignored the working files throughout.
 		- The trial used the garden's cached credentials and a unique B2 prefix under `dvc/layout-trials/`. All trial objects were removed afterward. The original prepared recording and existing public MP3 were left in place.
 	- ## Asset tasks
+		- [PR #179 · Page-named DVC asset tasks](https://github.com/codekiln/logseq-encode-garden/pull/179) adds the reusable task interfaces and tracked conversion stage.
 		- [[Asset/mise/Task/add]] copies and tracks a local file. [[Asset/mise/Task/fetch]] restores one asset; [[Asset/mise/Task/push]] backs it up. [[Asset/mise/Task/status]] checks its local state.
 		- [[Asset/mise/Task/convert]] records WAV-to-MP3 preparation in `dvc.yaml` and `dvc.lock`. The WAV and MP3 use separate page-derived filenames under `assets/.remote/`. Changing the WAV makes the stage stale; running the conversion task rebuilds the MP3.
 	- ## Put the layout to work
