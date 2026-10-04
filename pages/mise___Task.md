@@ -1,3 +1,4 @@
-# Mise Tasks
-	- see [[mise/tasks]] for the CLI comand
+- # Mise Tasks
+	- see [[mise/tasks]] for the CLI command
 	- see [[mise/Task/Argument]] for the completion behavior and how you can pass args to mise tasks
+	- [[Logseq/Entity/Mise/Task]] defines how named jobs are documented in this garden.

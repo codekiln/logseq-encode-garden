@@ -21,4 +21,4 @@
 		  ~~~
 	- ## Ownership
 		- Garden release preparation owns `recorded_on`, `audio_url`, `audio_length`, `audio_type`, the object key, and checksum evidence. The session note supplies a proposed title and description.
-		- Gitpa editorial review owns `published`, `published_at`, `guid`, `page`, `page_url`, and the final title and description.
+		- Gitpa episode review owns `published`, `published_at`, `guid`, `page`, `page_url`, and the final title and description.
