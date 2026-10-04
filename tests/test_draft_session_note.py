@@ -75,10 +75,15 @@ class DraftSessionNoteTests(unittest.TestCase):
             project, garden, note = self.fixture(Path(temporary))
             original = (project / "GitP.26.09.24.mp3").read_bytes()
             with patch("scripts.draft_session_note.duration_seconds", return_value=180):
-                output = draft(project, garden, note)
-            record = json.loads(output.with_name("handoff.json").read_text())
+                output, handoff = draft(project, garden, note)
+            record = json.loads(handoff.read_text())
             self.assertEqual(record, {"recorded_on": "2026-09-24", "episode_title": "GitP.26.09.24", "description": "A synth session."})
             self.assertIn("MP3 SHA-256", output.read_text())
+            self.assertEqual(output.parent, garden / "pages")
+            self.assertFalse(list((garden / "assets").rglob("*.md")))
+            self.assertTrue(all(line.lstrip("\t").startswith("- ") for line in output.read_text().splitlines()))
+            self.assertIn("\t- ## Evidence\n\t\t- Source note: [[Music/Composition/Log/26/09/24 Thu]]", output.read_text())
+            self.assertEqual(find_note(garden, date(2026, 9, 24), None), note)
             self.assertEqual((project / "GitP.26.09.24.mp3").read_bytes(), original)
             self.assertFalse((garden / "pages" / "Ceremony___2026___09___24.md").exists())
 
@@ -86,26 +91,49 @@ class DraftSessionNoteTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             project, garden, note = self.fixture(Path(temporary))
             with patch("scripts.draft_session_note.duration_seconds", return_value=180), patch("scripts.draft_session_note.verify_public_audio") as verify:
-                output = draft(project, garden, note, audio_url="https://example.com/audio.mp3")
-            record = json.loads(output.with_name("handoff.json").read_text())
+                output, handoff = draft(project, garden, note, audio_url="https://example.com/audio.mp3")
+            record = json.loads(handoff.read_text())
             self.assertEqual(record["audio_url"], "https://example.com/audio.mp3")
             self.assertEqual(record["audio_length"], 14)
             self.assertEqual(record["audio_type"], "audio/mpeg")
             verify.assert_called_once()
 
     def test_existing_evidence_and_handoff_are_preserved_before_inspection(self):
-        for existing in ("session-note.md", "handoff.json"):
+        for existing in ("Production Evidence.md", "handoff.json"):
             with self.subTest(existing=existing), tempfile.TemporaryDirectory() as temporary:
                 project, garden, note = self.fixture(Path(temporary))
                 output = garden / "assets" / "GitP" / "Session" / "2026" / "09" / "24"
                 output.mkdir(parents=True)
-                (output / existing).write_text("Human edits")
+                destination = garden / "pages" / "GitP___Session___26___09___24 Thu___Production Evidence.md" if existing == "Production Evidence.md" else output / existing
+                original = "tags:: [[Protected]]\n- Human edits\n"
+                destination.write_text(original)
                 with patch("scripts.draft_session_note.duration_seconds") as inspect:
                     with self.assertRaisesRegex(ValueError, "Output already exists"):
                         draft(project, garden, note)
                     inspect.assert_not_called()
-                self.assertEqual((output / existing).read_text(), "Human edits")
-                self.assertEqual(len(list(output.iterdir())), 1)
+                self.assertEqual(destination.read_text(), original)
+                self.assertEqual(len(list(output.iterdir())), 0 if existing == "Production Evidence.md" else 1)
+
+    def test_comparison_outputs_require_fresh_page_and_handoff_paths(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            project, garden, note = self.fixture(Path(temporary))
+            with patch("scripts.draft_session_note.duration_seconds", return_value=180):
+                original_page, original_handoff = draft(project, garden, note)
+                original_page.write_text("tags:: [[Protected]]\n- Human edits\n")
+                comparison = garden / "pages" / "GitP___Session___26___09___24 Thu___Production Evidence Comparison.md"
+                page, handoff = draft(project, garden, note, evidence_page=comparison, output_dir=garden / "assets" / "comparison")
+            self.assertEqual(page, comparison)
+            self.assertEqual(handoff, garden / "assets" / "comparison" / "handoff.json")
+            self.assertEqual(original_page.read_text(), "tags:: [[Protected]]\n- Human edits\n")
+            self.assertTrue(original_handoff.is_file())
+            self.assertEqual(find_note(garden, date(2026, 9, 24), None), note)
+
+    def test_evidence_cannot_be_written_under_assets(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            project, garden, note = self.fixture(Path(temporary))
+            with self.assertRaisesRegex(ValueError, "garden pages directory"):
+                draft(project, garden, note, evidence_page=garden / "assets" / "note.md")
+            self.assertFalse((garden / "assets").exists())
 
     def test_invalid_upload_leaves_no_partial_outputs(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -121,9 +149,9 @@ class DraftSessionNoteTests(unittest.TestCase):
             transcript = Path(temporary) / "speech.json"
             transcript.write_text(json.dumps({"segments": [{"text": "Thank you."}] * 25}))
             with patch("scripts.draft_session_note.duration_seconds", return_value=180):
-                output = draft(project, garden, note, transcript)
+                output, handoff = draft(project, garden, note, transcript)
             self.assertIn("Speech recognition: rejected", output.read_text())
-            self.assertEqual(json.loads(output.with_name("handoff.json").read_text())["description"], "A synth session.")
+            self.assertEqual(json.loads(handoff.read_text())["description"], "A synth session.")
 
     def test_permanent_url_validation_happens_before_network(self):
         with tempfile.TemporaryDirectory() as temporary:

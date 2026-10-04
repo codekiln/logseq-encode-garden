@@ -1,0 +1,21 @@
+- # Production Evidence
+	- Episode: GitP.26.09.24
+	- [Episode handoff](../assets/GitP/Session/2026/09/24/handoff.json)
+	- Session: [[GitP/Session/26/09/24 Thu]]
+	- Proposed description: A MicroFreak and Launchpad session.
+	- ## Evidence
+		- Source note: [[Making/Music/Log/26/09/24 Thu - GitP Reboot with Novation Launchpad]].
+		- Prepared MP3: `GitP.26.09.24.mp3`, 12.6 minutes.
+		- MP3 SHA-256: `599f7e0c070f59b3914316ffec0a4226989dc4d96b01eb333800ea16c1372cdd`.
+		- Ableton tracks: commentary (audio), microfreak (audio), Mixed Output all (audio), Microfreak Midi all (MIDI).
+		- Session note: On the Microfreak, started with Two Op.FM on initialized patch.
+		- Session note: I was using the Session Mode the whole time in Session, with three audio tracks.
+		- Release audio: [GitP.26.09.24.mp3](https://f005.backblazeb2.com/file/logseq-encode-garden/gitpa/episodes/2026-09-24/GitP.26.09.24.mp3); length and opening range match the prepared MP3.
+		- [Recording-day journal](https://github.com/codekiln/logseq-encode-garden/blob/main/journals/2026_09_24.md) links the session note and nearby work.
+		- [MicroFreak manual: Two Op.FM](https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___06%20Dig%20Osc___03%20Types___08%20Two%20Op.FM.md) is linked from the session note.
+		- Separate commentary recording: `commentary 0010 [2026-09-24 190403].aif`, 12.6 minutes.
+		- [Earlier commentary transcription assessment · Gitpa PR #9](https://github.com/codekiln/gitpa/pull/9): repeated phrases suggested speech-recognition hallucination; recognized speech was excluded from episode copy.
+	- ## Source limits
+		- Patch exports: 0; MIDI exports: 0. Ableton track names alone do not establish preset changes.
+		- Ableton MIDI clips have no program-change values that identify presets.
+		- The proposed description needs a listening check.

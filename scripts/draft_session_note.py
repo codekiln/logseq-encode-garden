@@ -35,7 +35,9 @@ def find_note(garden: Path, day: date, explicit: Path | None) -> Path:
     marker = f"{day:%y}___{day:%m}___{day:%d}"
     matches = [
         path for path in sorted(garden.glob(f"pages/*{marker}*.md"))
-        if re.search(r"\bGitP\b|\bGitpa\b", path.read_text(encoding="utf-8"), re.IGNORECASE)
+        if "___Production Evidence" not in path.stem
+        and not path.read_text(encoding="utf-8").startswith("- # Production Evidence\n")
+        and re.search(r"\bGitP\b|\bGitpa\b", path.read_text(encoding="utf-8"), re.IGNORECASE)
     ]
     if len(matches) != 1:
         raise ValueError(f"Expected one GitP garden note for {day}; found {len(matches)}. Pass --note.")
@@ -187,17 +189,40 @@ def file_checksum(path: Path, algorithm: str = "sha256") -> str:
     return digest.hexdigest()
 
 
+def logseq_evidence(lines: list[str]) -> str:
+    """Nest evidence sections beneath the page heading in Logseq Markdown."""
+    rendered = []
+    section = False
+    for line in lines:
+        if not line.strip():
+            continue
+        if line.startswith("# "):
+            rendered.append("- " + line)
+        elif line.startswith("## "):
+            rendered.append("\t- " + line)
+            section = True
+        else:
+            text = line.removeprefix("- ")
+            rendered.append(("\t\t" if section else "\t") + "- " + text)
+    return "\n".join(rendered) + "\n"
+
+
 def draft(project: Path, garden: Path, note: Path, transcript: Path | None = None,
           transcribe: bool = False, model: str = "mlx-community/whisper-large-v3-turbo",
           *, mp3: Path | None = None, output_dir: Path | None = None,
-          audio_url: str | None = None) -> Path:
+          audio_url: str | None = None, evidence_page: Path | None = None) -> tuple[Path, Path]:
     day = project_date(project)
+    if note.resolve().parent != (garden / "pages").resolve():
+        raise ValueError("Source note must be a page in this garden")
+    note_page = note.stem.replace("___", "/")
     output_dir = output_dir or garden / "assets" / "GitP" / "Session" / f"{day:%Y/%m/%d}"
-    output = output_dir / "session-note.md"
+    output = evidence_page or garden / "pages" / f"GitP___Session___{day:%y}___{day:%m}___{day:%d %a}___Production Evidence.md"
+    if output.resolve().parent != (garden / "pages").resolve() or output.suffix != ".md":
+        raise ValueError("Evidence page must be a Markdown file directly under the garden pages directory")
     handoff = output_dir / "handoff.json"
     for path in (output, handoff):
         if path.exists():
-            raise ValueError(f"Output already exists; choose a new --output-dir to preserve edits: {path}")
+            raise ValueError(f"Output already exists; choose fresh --evidence-page and --output-dir paths to preserve edits: {path}")
     mp3 = mp3 or project / f"GitP.{day:%y.%m.%d}.mp3"
     if not mp3.is_file():
         raise FileNotFoundError(f"Prepare the MP3 before drafting: {mp3}")
@@ -215,13 +240,13 @@ def draft(project: Path, garden: Path, note: Path, transcript: Path | None = Non
     if audio_url:
         verify_public_audio(audio_url, mp3)
         record.update(audio_url=audio_url, audio_length=mp3.stat().st_size, audio_type="audio/mpeg")
-    note_url = "https://github.com/codekiln/logseq-encode-garden/blob/main/pages/" + quote(note.name)
     journal = garden / "journals" / f"{day:%Y_%m_%d}.md"
     journal_url = "https://github.com/codekiln/logseq-encode-garden/blob/main/journals/" + quote(journal.name)
     lines = [
-        f"# GitP.{day:%y.%m.%d}", "", f"Proposed description: {description}", "",
+        f"# Production Evidence", "", f"Episode: GitP.{day:%y.%m.%d}",
+        f"Proposed description: {description}", "",
         "## Evidence",
-        f"- [Garden session note]({note_url}) describes the recording session.",
+        f"- Source note: [[{note_page}]].",
         f"- Prepared MP3: `{mp3.name}`, {duration / 60:.1f} minutes.",
         f"- MP3 SHA-256: `{file_checksum(mp3)}`.",
         f"- Ableton tracks: {', '.join(tracks) if tracks else 'none named'}.",
@@ -252,20 +277,24 @@ def draft(project: Path, garden: Path, note: Path, transcript: Path | None = Non
         "- Ableton MIDI clips " + ("contain program-change values; inspect the active clips before naming presets." if has_program_changes else "have no program-change values that identify presets."),
         "- The proposed description needs a listening check.", "",
     ]
+    if handoff.resolve().is_relative_to(garden.resolve()):
+        link = "../" + quote(handoff.resolve().relative_to(garden.resolve()).as_posix())
+        lines.insert(3, f"[Episode handoff]({link})")
     output_dir.mkdir(parents=True, exist_ok=True)
+    output.parent.mkdir(parents=True, exist_ok=True)
     # Exclusive creation protects edits even if another process creates an output
     # after the preflight. Remove only this invocation's handoff if note creation fails.
     with handoff.open("x", encoding="utf-8") as target:
         target.write(json.dumps(record, indent=2, ensure_ascii=False) + "\n")
     try:
         with output.open("x", encoding="utf-8") as target:
-            target.write("\n".join(lines))
+            target.write(logseq_evidence(lines))
     except Exception:
         handoff.unlink()
         raise
     print(f"Production evidence: {output}")
     print(f"Public handoff: {handoff}")
-    return output
+    return output, handoff
 
 
 def main() -> None:
@@ -274,7 +303,8 @@ def main() -> None:
     parser.add_argument("--garden", type=Path, default=ROOT, help="Garden checkout; defaults to this script's repository")
     parser.add_argument("--note", type=Path, help="Garden session page when date lookup is ambiguous")
     parser.add_argument("--mp3", type=Path, help="Prepared MP3 when stored outside the project directory")
-    parser.add_argument("--output-dir", type=Path, help="Fresh evidence directory; defaults to assets/GitP/Session/YYYY/MM/DD")
+    parser.add_argument("--output-dir", type=Path, help="Fresh JSON handoff directory; defaults to assets/GitP/Session/YYYY/MM/DD")
+    parser.add_argument("--evidence-page", type=Path, help="Fresh production evidence page directly under garden pages/")
     parser.add_argument("--audio-url", help="Existing public MP3 URL to verify and attach to the handoff")
     speech = parser.add_mutually_exclusive_group()
     speech.add_argument("--transcript", type=Path, help="Whisper-style JSON transcript to assess")
@@ -286,7 +316,7 @@ def main() -> None:
         garden = args.garden.resolve()
         note = find_note(garden, project_date(project), args.note)
         draft(project, garden, note, args.transcript, args.transcribe, args.model,
-              mp3=args.mp3, output_dir=args.output_dir, audio_url=args.audio_url)
+              mp3=args.mp3, output_dir=args.output_dir, audio_url=args.audio_url, evidence_page=args.evidence_page)
     except (ValueError, OSError, subprocess.CalledProcessError) as error:
         parser.exit(1, f"error: {error}\n")
 
