@@ -1,4 +1,4 @@
-- # B2 access while working away from the Mac
+# B2 access while working away from the Mac
 	- Use [[fnox/Golden Path]] on the Mac where Codex and Claude already run. Keep each garden's Backblaze application keys in [[1Password]], and let fnox read an encrypted local copy during asset work. Creating or refreshing that copy requires 1Password authentication; using it can work while the Mac is unattended.
 	- ## How it works
 		- In each garden, `fnox.toml` names the 1Password item containing that garden's B2 credentials. Git tracks these references so every agent uses the same configuration.
@@ -37,5 +37,7 @@
 		- DONE Set up [the garden vault references](https://github.com/codekiln/logseq-encode-garden/blob/main/fnox.toml) and the encrypted local cache on the Mac. B2 authorization identifies `logseq-encode-garden` as the key’s allowed bucket; the key has access throughout that bucket.
 		- DONE Read credentials from fresh processes with the 1Password CLI blocked and the fnox daemon disabled. The reads used the age-encrypted cache and required no vault authentication.
 		- DONE Upload, list, download, compare, replace, and delete a disposable file through the B2 API. The test used a unique name under `gitpa/tests/`; all versions created by the test were deleted.
-		- TODO Apply [the tested fnox configuration](https://github.com/codekiln/logseq-encode-garden/blob/main/fnox.toml) to the [private knowledge garden](https://github.com/codekiln/logseq-garden) once its private recording bucket and application key exist. Supply that garden’s vault references so rough recordings remain in private storage.
+		- DOING Apply [the tested fnox configuration](https://github.com/codekiln/logseq-encode-garden/blob/main/fnox.toml) to the [private knowledge garden](https://github.com/codekiln/logseq-garden) once its private recording bucket and application key exist. Supply that garden’s vault references so rough recordings remain in private storage.
+			- DOING create a mise file task in the private knowledge garden which will use the Backblaze Administration logseq environment to create the appropriate keys and store them in 1password without exposing them to you or anyone using the op cli. Make it easy for me. Remember you have access to onepassword environments mcp as well as op cli. I already mounted `~/ghq/github.com/codekiln/logseq-garden/.env` with backblaze admin there.
+			  id:: 6ac29dea-d7c5-4079-9cd0-ec0c7f6c699e
 		- The Mac trial used the supplied vault references and a native age key file. DVC transfer and restore are the next trial in [[GitP/A/Log/26/10/04 Sun/Dvc for Knowledge Gardens/Plan]].
