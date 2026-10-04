@@ -5,7 +5,7 @@ task-name:: gitpa:episode:test
 source-link:: https://github.com/codekiln/logseq-encode-garden/blob/codex/gitp-house-split/mise-tasks/gitpa/episode/test
 see-also:: [[GitP/mise/Task/episode/draft]]
 - # Test Episode Preparation
-	- Checks episode metadata extraction, media verification, evidence-page layout, argument handling, and preservation of existing outputs before changing the preparation task.
+	- Checks episode metadata extraction, media verification, asset-page layout, argument handling, and preservation of existing outputs before changing the preparation task.
 	- ## Invocation
 		- Runs from the `logseq-encode-garden` checkout:
 			- ~~~sh

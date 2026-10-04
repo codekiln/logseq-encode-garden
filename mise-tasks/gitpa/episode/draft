@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
-#MISE description="Prepare a GitP release handoff and Logseq production evidence"
-#MISE tools={python="3.13.16", "conda:ffmpeg"="9.0.2", uv="0.12.22"}
+#MISE description="Prepare podcast metadata JSON and a GitP session assets page"
+#MISE tools={python="3.13.16", "conda:ffmpeg"="9.0.2"}
 #USAGE arg "<project>" help="Ableton project directory containing a prepared MP3"
 #USAGE flag "--garden <garden>" help="Garden checkout (defaults to this task's repository)"
 #USAGE flag "--note <note>" help="Source garden page when session discovery is ambiguous"
 #USAGE flag "--mp3 <mp3>" help="Prepared MP3 outside the project directory"
 #USAGE flag "--output-dir <output_dir>" help="Fresh JSON handoff directory"
-#USAGE flag "--evidence-page <evidence_page>" help="Fresh production evidence page under garden pages/"
+#USAGE flag "--assets-page <assets_page>" help="Fresh session assets page under garden pages/"
 #USAGE flag "--audio-url <audio_url>" help="Existing permanent public MP3 URL to verify"
 #USAGE flag "--transcript <transcript>" help="Existing Whisper JSON transcript to assess"
 #USAGE flag "--transcribe" help="Run local MLX Whisper on matching commentary (macOS Apple Silicon)"
 #USAGE flag "--model <model>" help="Local model directory or MLX Whisper model" default="mlx-community/whisper-large-v3-turbo"
-"""Prepare garden production evidence and a public episode handoff from an Ableton session."""
+"""Prepare garden session assets and a public episode handoff from an Ableton session."""
 
 from __future__ import annotations
 
@@ -51,8 +51,8 @@ def find_note(garden: Path, day: date, explicit: Path | None) -> Path:
     marker = f"{day:%y}___{day:%m}___{day:%d}"
     matches = [
         path for path in sorted(garden.glob(f"pages/*{marker}*.md"))
-        if "___Production Evidence" not in path.stem
-        and not path.read_text(encoding="utf-8").startswith("- # Production Evidence\n")
+        if not any(label in path.stem for label in ("___Session Assets", "___Production Evidence"))
+        and not path.read_text(encoding="utf-8").startswith(("- # Session Assets\n", "- # Production Evidence\n"))
         and re.search(r"\bGitP\b|\bGitpa\b", path.read_text(encoding="utf-8"), re.IGNORECASE)
     ]
     if len(matches) != 1:
@@ -161,12 +161,9 @@ def transcribe_stem(stem: Path, model: str) -> tuple[bool, str]:
             check=True,
         )
         subprocess.run(
-            ["uv", "run", "--no-project", "--python", sys.executable,
-             "--with", "mlx-whisper==0.4.3", "mlx_whisper",
-             str(normalized), "--model", model, "--language", "en",
-             "--condition-on-previous-text", "False", "--verbose", "False",
-             "--output-format", "json", "--output-name", "commentary", "--output-dir", str(temporary_path)],
-            check=True, capture_output=True, text=True,
+            ["mise", "run", "gitpa:episode:transcribe", "--", str(normalized),
+             "--model", model, "--output-dir", str(temporary_path)],
+            check=True, cwd=ROOT,
         )
         return transcript_quality(temporary_path / "commentary.json")
 
@@ -207,8 +204,18 @@ def file_checksum(path: Path, algorithm: str = "sha256") -> str:
     return digest.hexdigest()
 
 
-def logseq_evidence(lines: list[str]) -> str:
-    """Nest evidence sections beneath the page heading in Logseq Markdown."""
+def session_assets(project: Path) -> list[tuple[str, str]]:
+    """List available file types and project-relative paths for inspection."""
+    categories = {".als": "Ableton set", ".wav": "WAV audio", ".aif": "AIFF audio",
+                  ".aiff": "AIFF audio", ".mp3": "MP3 audio", ".mid": "MIDI file",
+                  ".midi": "MIDI file", ".mfpz": "MicroFreak patch"}
+    return [(categories[path.suffix.lower()], path.relative_to(project).as_posix())
+            for path in sorted(project.rglob("*"))
+            if path.is_file() and path.suffix.lower() in categories]
+
+
+def logseq_page(lines: list[str]) -> str:
+    """Nest session sections beneath the page heading in Logseq Markdown."""
     rendered = []
     section = False
     for line in lines:
@@ -228,19 +235,19 @@ def logseq_evidence(lines: list[str]) -> str:
 def draft(project: Path, garden: Path, note: Path, transcript: Path | None = None,
           transcribe: bool = False, model: str = "mlx-community/whisper-large-v3-turbo",
           *, mp3: Path | None = None, output_dir: Path | None = None,
-          audio_url: str | None = None, evidence_page: Path | None = None) -> tuple[Path, Path]:
+          audio_url: str | None = None, assets_page: Path | None = None) -> tuple[Path, Path]:
     day = project_date(project)
     if note.resolve().parent != (garden / "pages").resolve():
         raise ValueError("Source note must be a page in this garden")
     note_page = note.stem.replace("___", "/")
     output_dir = output_dir or garden / "assets" / "GitP" / "Session" / f"{day:%Y/%m/%d}"
-    output = evidence_page or garden / "pages" / f"GitP___Session___{day:%y}___{day:%m}___{day:%d %a}___Production Evidence.md"
+    output = assets_page or garden / "pages" / f"GitP___Session___{day:%y}___{day:%m}___{day:%d %a}___Session Assets.md"
     if output.resolve().parent != (garden / "pages").resolve() or output.suffix != ".md":
-        raise ValueError("Evidence page must be a Markdown file directly under the garden pages directory")
+        raise ValueError("Session assets page must be a Markdown file directly under the garden pages directory")
     handoff = output_dir / "handoff.json"
     for path in (output, handoff):
         if path.exists():
-            raise ValueError(f"Output already exists; choose fresh --evidence-page and --output-dir paths to preserve edits: {path}")
+            raise ValueError(f"Output already exists; choose fresh --assets-page and --output-dir paths to preserve edits: {path}")
     mp3 = mp3 or project / f"GitP.{day:%y.%m.%d}.mp3"
     if not mp3.is_file():
         raise FileNotFoundError(f"Prepare the MP3 before drafting: {mp3}")
@@ -251,8 +258,6 @@ def draft(project: Path, garden: Path, note: Path, transcript: Path | None = Non
         raise ValueError(f"No usable description facts in {note}; add a description to the session note")
     tracks, has_program_changes = ableton_tracks(project)
     stem = commentary_stem(project, duration)
-    patch_exports = sorted(project.rglob("*.mfpz"))
-    midi_exports = sorted(list(project.rglob("*.mid")) + list(project.rglob("*.midi")))
     record = {"recorded_on": day.isoformat(), "episode_title": f"GitP.{day:%y.%m.%d}",
               "description": description}
     if audio_url:
@@ -261,9 +266,9 @@ def draft(project: Path, garden: Path, note: Path, transcript: Path | None = Non
     journal = garden / "journals" / f"{day:%Y_%m_%d}.md"
     journal_url = "https://github.com/codekiln/logseq-encode-garden/blob/main/journals/" + quote(journal.name)
     lines = [
-        f"# Production Evidence", "", f"Episode: GitP.{day:%y.%m.%d}",
+        f"# Session Assets", "", f"Episode: GitP.{day:%y.%m.%d}",
         f"Proposed description: {description}", "",
-        "## Evidence",
+        "## Recordings and notes",
         f"- Source note: [[{note_page}]].",
         f"- Prepared MP3: `{mp3.name}`, {duration / 60:.1f} minutes.",
         f"- MP3 SHA-256: `{file_checksum(mp3)}`.",
@@ -281,7 +286,7 @@ def draft(project: Path, garden: Path, note: Path, transcript: Path | None = Non
             manual_url = "https://github.com/codekiln/logseq-encode-garden/blob/main/pages/" + quote(manual.name)
             lines.append(f"- [MicroFreak manual: {readable_links('[[' + reference + ']]')}]({manual_url}) is linked from the session note.")
     if stem:
-        lines.append(f"- Separate commentary recording: `{stem[0].name}`, {stem[1] / 60:.1f} minutes.")
+        lines.append(f"- Commentary candidate (filename and duration): `{stem[0].name}`, {stem[1] / 60:.1f} minutes.")
     if transcript or transcribe:
         if transcribe and stem:
             valid, reason = transcribe_stem(stem[0], model)
@@ -290,8 +295,12 @@ def draft(project: Path, garden: Path, note: Path, transcript: Path | None = Non
         else:
             valid, reason = False, "No commentary stem matches the exported episode."
         lines.append(f"- Speech recognition: {'review required' if valid else 'rejected'} — {reason}")
-    lines += ["", "## Source limits",
-        f"- Patch exports: {len(patch_exports)}; MIDI exports: {len(midi_exports)}. Ableton track names alone do not establish preset changes.",
+    lines += ["", "## Available files"]
+    for category, relative_path in session_assets(project):
+        display_path = relative_path.replace("`", "\\`").replace("\n", " ").replace("\r", " ")
+        lines.append(f"- {category}: `{display_path}`.")
+    lines += ["", "## Review notes",
+        "- Ableton track names alone do not establish preset changes.",
         "- Ableton MIDI clips " + ("contain program-change values; inspect the active clips before naming presets." if has_program_changes else "have no program-change values that identify presets."),
         "- The proposed description needs a listening check.", "",
     ]
@@ -306,11 +315,11 @@ def draft(project: Path, garden: Path, note: Path, transcript: Path | None = Non
         target.write(json.dumps(record, indent=2, ensure_ascii=False) + "\n")
     try:
         with output.open("x", encoding="utf-8") as target:
-            target.write(logseq_evidence(lines))
+            target.write(logseq_page(lines))
     except Exception:
         handoff.unlink()
         raise
-    print(f"Production evidence: {output}")
+    print(f"Session assets: {output}")
     print(f"Public handoff: {handoff}")
     return output, handoff
 
@@ -320,7 +329,7 @@ def task_arguments() -> list[str]:
     if "usage_project" not in os.environ:
         return sys.argv[1:]
     args = [os.environ["usage_project"]]
-    for name in ("garden", "note", "mp3", "output_dir", "evidence_page", "audio_url", "transcript", "model"):
+    for name in ("garden", "note", "mp3", "output_dir", "assets_page", "audio_url", "transcript", "model"):
         value = os.environ.get("usage_" + name)
         if value:
             args.extend(["--" + name.replace("_", "-"), value])
@@ -336,7 +345,7 @@ def main() -> None:
     parser.add_argument("--note", type=Path, help="Garden session page when date lookup is ambiguous")
     parser.add_argument("--mp3", type=Path, help="Prepared MP3 when stored outside the project directory")
     parser.add_argument("--output-dir", type=Path, help="Fresh JSON handoff directory; defaults to assets/GitP/Session/YYYY/MM/DD")
-    parser.add_argument("--evidence-page", type=Path, help="Fresh production evidence page directly under garden pages/")
+    parser.add_argument("--assets-page", type=Path, help="Fresh session assets page directly under garden pages/")
     parser.add_argument("--audio-url", help="Existing public MP3 URL to verify and attach to the handoff")
     speech = parser.add_mutually_exclusive_group()
     speech.add_argument("--transcript", type=Path, help="Whisper-style JSON transcript to assess")
@@ -348,7 +357,7 @@ def main() -> None:
         garden = args.garden.resolve()
         note = find_note(garden, project_date(project), args.note)
         draft(project, garden, note, args.transcript, args.transcribe, args.model,
-              mp3=args.mp3, output_dir=args.output_dir, audio_url=args.audio_url, evidence_page=args.evidence_page)
+              mp3=args.mp3, output_dir=args.output_dir, audio_url=args.audio_url, assets_page=args.assets_page)
     except (ValueError, OSError, subprocess.CalledProcessError) as error:
         parser.exit(1, f"error: {error}\n")
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#MISE description="Test GitP release handoff preparation and evidence pages"
+#MISE description="Test GitP release handoff preparation and session asset pages"
 #MISE tools={python="3.13.16"}
 #USAGE flag "-v --verbose" help="Show individual test names"
 import json
@@ -35,11 +35,12 @@ from gitp_episode_draft import (
     verify_public_audio,
     task_arguments,
     transcribe_stem,
+    session_assets,
 )
 
 
 class DraftSessionNoteTests(unittest.TestCase):
-    def test_logseq_manual_link_is_evidence_without_episode_specific_rules(self):
+    def test_logseq_manual_link_retains_source_observations(self):
         with tempfile.TemporaryDirectory() as temporary:
             note = Path(temporary) / "session.md"
             note.write_text(
@@ -70,13 +71,22 @@ class DraftSessionNoteTests(unittest.TestCase):
             self.assertEqual(find_note(Path(temporary), date(2026, 9, 25), None), note)
             self.assertEqual(explicit_description(note), "A synth session.")
 
+    def test_source_discovery_excludes_prior_generated_page_titles(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            project, garden, note = self.fixture(Path(temporary))
+            legacy = garden / "pages" / "GitP___Session___26___09___24 Thu___Production Evidence.md"
+            legacy.write_text("- # Production Evidence\n\t- Episode: GitP.26.09.24\n")
+            current = garden / "pages" / "GitP___Session___26___09___24 Thu___Session Assets.md"
+            current.write_text("- # Session Assets\n\t- Episode: GitP.26.09.24\n")
+            self.assertEqual(find_note(garden, date(2026, 9, 24), None), note)
+
     def test_mise_usage_environment_reaches_task_arguments(self):
-        values = {"usage_project": "/recordings/Project", "usage_evidence_page": "pages/Evidence.md",
+        values = {"usage_project": "/recordings/Project", "usage_assets_page": "pages/Assets.md",
                   "usage_output_dir": "assets/comparison", "usage_audio_url": "https://example.com/audio.mp3",
                   "usage_transcribe": "true", "usage_model": "mlx-community/whisper-large-v3-turbo"}
         with patch.dict(os.environ, values, clear=True):
             self.assertEqual(task_arguments(), ["/recordings/Project", "--output-dir", "assets/comparison",
-                "--evidence-page", "pages/Evidence.md", "--audio-url", "https://example.com/audio.mp3",
+                "--assets-page", "pages/Assets.md", "--audio-url", "https://example.com/audio.mp3",
                 "--model", "mlx-community/whisper-large-v3-turbo", "--transcribe"])
 
     def test_optional_transcription_platform_guard(self):
@@ -85,12 +95,53 @@ class DraftSessionNoteTests(unittest.TestCase):
                 transcribe_stem(Path("commentary.aif"), "model")
             command.assert_not_called()
 
-    def test_optional_transcription_resolves_pinned_package_with_managed_python(self):
+    def test_optional_transcription_invokes_its_mise_dependency_task(self):
         with patch("gitp_episode_draft.platform.system", return_value="Darwin"), patch("gitp_episode_draft.platform.machine", return_value="arm64"), patch("gitp_episode_draft.subprocess.run") as command, patch("gitp_episode_draft.transcript_quality", return_value=(False, "Repeated phrases")):
             self.assertEqual(transcribe_stem(Path("commentary.aif"), "model"), (False, "Repeated phrases"))
         arguments = command.call_args_list[1].args[0]
-        self.assertEqual(arguments[:7], ["uv", "run", "--no-project", "--python", sys.executable, "--with", "mlx-whisper==0.4.3"])
+        self.assertEqual(arguments[:4], ["mise", "run", "gitpa:episode:transcribe", "--"])
+        self.assertNotIn("--with", arguments)
+        self.assertEqual(command.call_args_list[1].kwargs["cwd"], MODULE.ROOT)
         self.assertNotIn("--offline", arguments)
+
+    def test_optional_task_declares_whisper_and_preserves_existing_output(self):
+        task = TASK.with_name("transcribe")
+        self.assertIn('"pypi:mlx-whisper"="0.4.3"', task.read_text())
+        self.assertNotIn('pypi:mlx-whisper', TASK.read_text())
+        loader = SourceFileLoader("gitp_episode_transcribe", str(task))
+        spec = spec_from_loader(loader.name, loader)
+        module = module_from_spec(spec)
+        loader.exec_module(module)
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            audio = root / "audio.wav"
+            audio.write_bytes(b"selected recording")
+            output = root / "commentary.json"
+            output.write_text("Reviewed recognition")
+            with patch.object(module.platform, "system", return_value="Darwin"), patch.object(module.platform, "machine", return_value="arm64"), patch.object(module.subprocess, "run") as run:
+                with self.assertRaisesRegex(ValueError, "already exists"):
+                    module.transcribe(audio, root, "model")
+                run.assert_not_called()
+                self.assertEqual(output.read_text(), "Reviewed recognition")
+
+    def test_optional_task_runs_declared_whisper_executable_and_json_flags(self):
+        loader = SourceFileLoader("gitp_episode_transcribe", str(TASK.with_name("transcribe")))
+        module = module_from_spec(spec_from_loader(loader.name, loader))
+        loader.exec_module(module)
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            audio = root / "audio.wav"
+            audio.write_bytes(b"selected recording")
+            def recognize(arguments, **kwargs):
+                (root / "commentary.json").write_text('{"segments": []}')
+            with patch.object(module.platform, "system", return_value="Darwin"), patch.object(module.platform, "machine", return_value="arm64"), patch.object(module.subprocess, "run", side_effect=recognize) as run:
+                result = module.transcribe(audio, root, "model")
+            arguments = run.call_args.args[0]
+            self.assertEqual(arguments[:2], ["mlx_whisper", str(audio)])
+            self.assertEqual(arguments[arguments.index("--output-name") + 1], "commentary")
+            self.assertEqual(arguments[arguments.index("--output-format") + 1], "json")
+            self.assertEqual(result, root / "commentary.json")
+            self.assertEqual(audio.read_bytes(), b"selected recording")
 
     def fixture(self, root):
         project = root / "GitP26.09.24 Project"
@@ -103,6 +154,35 @@ class DraftSessionNoteTests(unittest.TestCase):
         note = garden / "pages" / "Music___Composition___Log___26___09___24 Thu.md"
         note.write_text("- Podcast title: GitP.26.09.24\n\t- Description: A synth session.\n")
         return project, garden, note
+
+    def test_asset_inventory_lists_relative_candidates_without_changing_sources(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            project, garden, note = self.fixture(Path(temporary))
+            candidates = {"Samples/Recorded/mystery.wav": b"wav", "Samples/Recorded/part.aif": b"aif",
+                          "Samples/Recorded/other.aiff": b"aiff", "patches/program.mfpz": b"patch",
+                          "clips/sequence.mid": b"midi", "clips/other.midi": b"midi", "ignore.asd": b"analysis"}
+            for relative, content in candidates.items():
+                target = project / relative
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes(content)
+            before = {path.relative_to(project).as_posix(): path.read_bytes() for path in project.rglob("*") if path.is_file()}
+            inventory = dict((name, category) for category, name in session_assets(project))
+            self.assertEqual(inventory["Samples/Recorded/mystery.wav"], "WAV audio")
+            self.assertEqual(inventory["Samples/Recorded/part.aif"], "AIFF audio")
+            self.assertEqual(inventory["Samples/Recorded/other.aiff"], "AIFF audio")
+            self.assertEqual(inventory["patches/program.mfpz"], "MicroFreak patch")
+            self.assertEqual(inventory["clips/sequence.mid"], "MIDI file")
+            self.assertEqual(inventory["clips/other.midi"], "MIDI file")
+            self.assertEqual(inventory["Session.als"], "Ableton set")
+            self.assertNotIn("ignore.asd", inventory)
+            with patch("gitp_episode_draft.duration_seconds", return_value=180):
+                output, handoff = draft(project, garden, note)
+            text = output.read_text()
+            self.assertTrue(text.startswith("- # Session Assets\n"))
+            self.assertIn("\t- ## Available files\n", text)
+            self.assertIn("\t\t- WAV audio: `Samples/Recorded/mystery.wav`.", text)
+            self.assertNotIn(str(project), text)
+            self.assertEqual(before, {path.relative_to(project).as_posix(): path.read_bytes() for path in project.rglob("*") if path.is_file()})
 
     def test_ableton_track_names_and_program_changes(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -122,7 +202,7 @@ class DraftSessionNoteTests(unittest.TestCase):
             self.assertEqual(output.parent, garden / "pages")
             self.assertFalse(list((garden / "assets").rglob("*.md")))
             self.assertTrue(all(line.lstrip("\t").startswith("- ") for line in output.read_text().splitlines()))
-            self.assertIn("\t- ## Evidence\n\t\t- Source note: [[Music/Composition/Log/26/09/24 Thu]]", output.read_text())
+            self.assertIn("\t- ## Recordings and notes\n\t\t- Source note: [[Music/Composition/Log/26/09/24 Thu]]", output.read_text())
             self.assertEqual(find_note(garden, date(2026, 9, 24), None), note)
             self.assertEqual((project / "GitP.26.09.24.mp3").read_bytes(), original)
             self.assertFalse((garden / "pages" / "Ceremony___2026___09___24.md").exists())
@@ -138,13 +218,13 @@ class DraftSessionNoteTests(unittest.TestCase):
             self.assertEqual(record["audio_type"], "audio/mpeg")
             verify.assert_called_once()
 
-    def test_existing_evidence_and_handoff_are_preserved_before_inspection(self):
-        for existing in ("Production Evidence.md", "handoff.json"):
+    def test_existing_assets_and_handoff_are_preserved_before_inspection(self):
+        for existing in ("Session Assets.md", "handoff.json"):
             with self.subTest(existing=existing), tempfile.TemporaryDirectory() as temporary:
                 project, garden, note = self.fixture(Path(temporary))
                 output = garden / "assets" / "GitP" / "Session" / "2026" / "09" / "24"
                 output.mkdir(parents=True)
-                destination = garden / "pages" / "GitP___Session___26___09___24 Thu___Production Evidence.md" if existing == "Production Evidence.md" else output / existing
+                destination = garden / "pages" / "GitP___Session___26___09___24 Thu___Session Assets.md" if existing == "Session Assets.md" else output / existing
                 original = "tags:: [[Protected]]\n- Human edits\n"
                 destination.write_text(original)
                 with patch("gitp_episode_draft.duration_seconds") as inspect:
@@ -152,7 +232,7 @@ class DraftSessionNoteTests(unittest.TestCase):
                         draft(project, garden, note)
                     inspect.assert_not_called()
                 self.assertEqual(destination.read_text(), original)
-                self.assertEqual(len(list(output.iterdir())), 0 if existing == "Production Evidence.md" else 1)
+                self.assertEqual(len(list(output.iterdir())), 0 if existing == "Session Assets.md" else 1)
 
     def test_comparison_outputs_require_fresh_page_and_handoff_paths(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -160,19 +240,19 @@ class DraftSessionNoteTests(unittest.TestCase):
             with patch("gitp_episode_draft.duration_seconds", return_value=180):
                 original_page, original_handoff = draft(project, garden, note)
                 original_page.write_text("tags:: [[Protected]]\n- Human edits\n")
-                comparison = garden / "pages" / "GitP___Session___26___09___24 Thu___Production Evidence Comparison.md"
-                page, handoff = draft(project, garden, note, evidence_page=comparison, output_dir=garden / "assets" / "comparison")
+                comparison = garden / "pages" / "GitP___Session___26___09___24 Thu___Session Assets Comparison.md"
+                page, handoff = draft(project, garden, note, assets_page=comparison, output_dir=garden / "assets" / "comparison")
             self.assertEqual(page, comparison)
             self.assertEqual(handoff, garden / "assets" / "comparison" / "handoff.json")
             self.assertEqual(original_page.read_text(), "tags:: [[Protected]]\n- Human edits\n")
             self.assertTrue(original_handoff.is_file())
             self.assertEqual(find_note(garden, date(2026, 9, 24), None), note)
 
-    def test_evidence_cannot_be_written_under_assets(self):
+    def test_assets_cannot_be_written_under_assets(self):
         with tempfile.TemporaryDirectory() as temporary:
             project, garden, note = self.fixture(Path(temporary))
             with self.assertRaisesRegex(ValueError, "garden pages directory"):
-                draft(project, garden, note, evidence_page=garden / "assets" / "note.md")
+                draft(project, garden, note, assets_page=garden / "assets" / "note.md")
             self.assertFalse((garden / "assets").exists())
 
     def test_invalid_upload_leaves_no_partial_outputs(self):
@@ -183,7 +263,7 @@ class DraftSessionNoteTests(unittest.TestCase):
                     draft(project, garden, note, audio_url="https://example.com/audio.mp3")
             self.assertFalse((garden / "assets").exists())
 
-    def test_transcript_findings_stay_in_evidence_and_not_public_copy(self):
+    def test_transcript_findings_stay_in_assets_and_not_public_copy(self):
         with tempfile.TemporaryDirectory() as temporary:
             project, garden, note = self.fixture(Path(temporary))
             transcript = Path(temporary) / "speech.json"

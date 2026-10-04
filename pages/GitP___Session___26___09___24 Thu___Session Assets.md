@@ -1,0 +1,56 @@
+- # Session Assets
+	- Episode: GitP.26.09.24
+	- [Podcast metadata JSON](../assets/GitP/Session/2026/09/24/handoff.json)
+	- Session: [[GitP/Session/26/09/24 Thu]]
+	- Proposed description: A MicroFreak and Launchpad session.
+	- ## Recordings and notes
+		- Source note: [[Making/Music/Log/26/09/24 Thu - GitP Reboot with Novation Launchpad]].
+		- Prepared MP3: `GitP.26.09.24.mp3`, 12.6 minutes.
+		- MP3 SHA-256: `599f7e0c070f59b3914316ffec0a4226989dc4d96b01eb333800ea16c1372cdd`.
+		- Ableton tracks: commentary (audio), microfreak (audio), Mixed Output all (audio), Microfreak Midi all (MIDI).
+		- Session note: On the Microfreak, started with Two Op.FM on initialized patch.
+		- Session note: I was using the Session Mode the whole time in Session, with three audio tracks.
+		- Release audio: [GitP.26.09.24.mp3](https://f005.backblazeb2.com/file/logseq-encode-garden/gitpa/episodes/2026-09-24/GitP.26.09.24.mp3); length and opening range match the prepared MP3.
+		- [Recording-day journal](https://github.com/codekiln/logseq-encode-garden/blob/main/journals/2026_09_24.md) links the session note and nearby work.
+		- [MicroFreak manual: Two Op.FM](https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___06%20Dig%20Osc___03%20Types___08%20Two%20Op.FM.md) is linked from the session note.
+		- Commentary candidate (filename and duration match): `commentary 0010 [2026-09-24 190403].aif`, 12.6 minutes.
+		- [Earlier commentary transcription assessment · Gitpa PR #9](https://github.com/codekiln/gitpa/pull/9): repeated phrases suggested speech-recognition hallucination; recognized speech was excluded from episode copy.
+	- ## Available files
+		- Ableton set: `Backup/GitP26.09.24 Project [2026-09-24 190244].als`.
+		- Ableton set: `Backup/GitP26.09.24 Project [2026-09-24 191657].als`.
+		- Ableton set: `Backup/GitP26.09.24 Project [2026-09-25 181235].als`.
+		- MP3 audio: `GitP.26.09.24.mp3`.
+		- Ableton set: `GitP26.09.24 Project.als`.
+		- WAV audio: `GitP26.09.24 Project.wav`.
+		- AIFF audio: `Samples/Recorded/commentary 0004 [2026-09-24 190213].aif`.
+		- AIFF audio: `Samples/Recorded/commentary 0004 [2026-09-24 190313].aif`.
+		- AIFF audio: `Samples/Recorded/commentary 0005 [2026-09-24 190319].aif`.
+		- AIFF audio: `Samples/Recorded/commentary 0006 [2026-09-24 190322].aif`.
+		- AIFF audio: `Samples/Recorded/commentary 0007 [2026-09-24 190331].aif`.
+		- AIFF audio: `Samples/Recorded/commentary 0008 [2026-09-24 190332].aif`.
+		- AIFF audio: `Samples/Recorded/commentary 0009 [2026-09-24 190357].aif`.
+		- AIFF audio: `Samples/Recorded/commentary 0010 [2026-09-24 190403].aif`.
+		- AIFF audio: `Samples/Recorded/intermediate out 0001 [2026-09-24 190234].aif`.
+		- AIFF audio: `Samples/Recorded/intermediate out 0001 [2026-09-24 190313].aif`.
+		- AIFF audio: `Samples/Recorded/intermediate out 0002 [2026-09-24 190319].aif`.
+		- AIFF audio: `Samples/Recorded/intermediate out 0003 [2026-09-24 190322].aif`.
+		- AIFF audio: `Samples/Recorded/intermediate out 0004 [2026-09-24 190331].aif`.
+		- AIFF audio: `Samples/Recorded/intermediate out 0005 [2026-09-24 190332].aif`.
+		- AIFF audio: `Samples/Recorded/intermediate out 0006 [2026-09-24 190357].aif`.
+		- AIFF audio: `Samples/Recorded/intermediate out 0007 [2026-09-24 190403].aif`.
+		- AIFF audio: `Samples/Recorded/microfreak 0001 [2026-09-24 184029].aif`.
+		- AIFF audio: `Samples/Recorded/microfreak 0001 [2026-09-24 190559].aif`.
+		- AIFF audio: `Samples/Recorded/microfreak 0001 [2026-09-24 190901].aif`.
+		- AIFF audio: `Samples/Recorded/microfreak 0002 [2026-09-24 185643].aif`.
+		- AIFF audio: `Samples/Recorded/microfreak 0002 [2026-09-24 190313].aif`.
+		- AIFF audio: `Samples/Recorded/microfreak 0002 [2026-09-24 191156].aif`.
+		- AIFF audio: `Samples/Recorded/microfreak 0003 [2026-09-24 190319].aif`.
+		- AIFF audio: `Samples/Recorded/microfreak 0004 [2026-09-24 190322].aif`.
+		- AIFF audio: `Samples/Recorded/microfreak 0005 [2026-09-24 190331].aif`.
+		- AIFF audio: `Samples/Recorded/microfreak 0006 [2026-09-24 190332].aif`.
+		- AIFF audio: `Samples/Recorded/microfreak 0007 [2026-09-24 190357].aif`.
+		- AIFF audio: `Samples/Recorded/microfreak 0009 [2026-09-24 191304].aif`.
+	- ## Review notes
+		- Patch exports: 0; MIDI exports: 0. Ableton track names alone do not establish preset changes.
+		- Ableton MIDI clips have no program-change values that identify presets.
+		- The proposed description needs a listening check.
