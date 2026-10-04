@@ -15,6 +15,7 @@ prev:: [[GItP/A/Log/26/10/03 Sat]]
 				- It's very important that whatever situation we come up with be applicable to all my logseq-based knowledge gardens.
 				- perhaps using [[fnox/Daemon]] with [[fnox/How To/Set Up a Project with age and SSH Keys]] could be a practical use case for this, although I'm leaning towards the [[fnox/Golden Path]] with a caching setup for the ssh integration with [[fnox]].
 				- DONE [[Ghost Gardener]] please create [[GitP/A/Log/26/10/04 Sun/Fnox/Plan]] you can use fnox in ghq locally and update it, too
+			- [Private garden storage PR #1 · unattended private B2 access](https://github.com/codekiln/logseq-garden/pull/1) supplies the setup task and verified encrypted cache.
 		- ## DOING [[Ghost Gardener]] please prototype [[dvc]] as a possible replacement for [[git/lfs]] for larger assets in my various [[Knowledge Garden]]s, including as the primary storage mechanism for larger files in [[My/Knowledge/Garden/logseq-encode-garden]] and in powering [[GitP]]
 			- Following up on [[GitP/A/Log/26/09/26 Sat - RSS Project]]
 				- I'm leaning towards using [[dvc]], partly in order to get some familiarity with that technology, and also partly in order to ensure that we have a standard method of taking checksums of files and storing them in git, so as to ensure what's what, what's backed up, etc. Also, I sense that there's going to be some benefit here in the long term in terms of data transformation pipelines related to the podcast (for example, `.wav` -> `.mp3` or video equivalents).
@@ -23,6 +24,7 @@ prev:: [[GItP/A/Log/26/10/03 Sat]]
 				- Any one computer that has cloned the garden may or may not have the full representation of the bucket, but it should be possible to proxy that remote bucket locally so the filepaths can be inspected and worked on locally.
 				- In particular, I'm interested in eventually migrating recording assets currently in `~/Documents/ableton/GitP` into some b2 bucket, though probably not `logseq-encode-garden`, as they are too rough draft. I'd prefer to keep the very rough draft assets "in" `logseq-garden`'s bucket (uncreated).
 				- DONE create [[GitP/A/Log/26/10/04 Sun/Dvc for Knowledge Gardens/Plan]]
+			- [Garden PR #179 · page-named DVC asset commands and WAV-to-MP3 stages](https://github.com/codekiln/logseq-encode-garden/pull/179) includes verified restore, push, status, and conversion checks.
 		- ## DONE [[Ghost Gardener]] - please come up with a [[Backblaze/B2]] entity description and a convention for how logseq assets should be related to the pages they were uploaded for
 			- ((6ac28323-0685-4a79-94f7-f6e91774ec3f)) contains this:
 				- > The [September 24 podcast MP3](https://f005.backblazeb2.com/file/logseq-encode-garden/gitpa/episodes/2026-09-24/GitP.26.09.24.mp3) is published at `gitpa/episodes/2026-09-24/GitP.26.09.24.mp3`. Listeners and RSS use that stable URL.
@@ -41,3 +43,4 @@ prev:: [[GItP/A/Log/26/10/03 Sat]]
 				- you could open prs in both repos which would make it so the two published episodes are represented in a uniform way in logseq-encode-garden and then sync'd with logseq proxy entity definitions to the other garden, updating the logseq queries appropriately so that they still show up on the "home page" for ghost in the patch alpha.
 			- Eventually, we should completely rewrite [[Person/codekiln/GitHub/gitpa]] so it just is a podcast website static site and RSS that uses the info in logseq-encode-garden as its data source. I've been wanting to make progress on [[Person/codekiln/GitHub/logseq-gardener]] as a possible source for a static site builder; maybe that's a good idea. But that's too far out.
 			- What do you think? What's the most economical, best way to make this less abhorrant to my [[DRY]] sensibilities ==today==? Take action and submit prs.
+			- [Garden PR #178 · canonical sessions and B2 asset pages](https://github.com/codekiln/logseq-encode-garden/pull/178) and [Gitpa publication PR #12 · publish four sessions from proxies](https://github.com/codekiln/gitpa/pull/12) are ready. Merge the garden PR first.
