@@ -33,7 +33,7 @@ prev:: [[GItP/A/Log/26/10/03 Sat]]
 				- DONE [[Ghost Gardener]] read https://github.com/codekiln/logseq-encode-garden/pull/177/changes#r4178643489 and update the whole pr
 				  id:: 6ac28ed6-2433-471b-9245-b267a02ef107
 					- [PR #177 · simplified asset pages and flat filenames](https://github.com/codekiln/logseq-encode-garden/pull/177) updates the garden convention and recording link; [Gitpa PR #10 · episode audio player](https://github.com/codekiln/gitpa/pull/10) embeds the matching MP3.
-		- ## TODO follow [[My/Principle/Simplify/Don't Repeat Yourself DRY]] and [[My/AI/Rule/Prune useless commandments]] with respect to every episode related to [[GitP]] that's distributed across [[Person/codekiln/GitHub/gitpa]] and [[Person/codekiln/GitHub/logseq-encode-garden]]
+		- ## DOING follow [[My/Principle/Simplify/Don't Repeat Yourself DRY]] and [[My/AI/Rule/Prune useless commandments]] with respect to every episode related to [[GitP]] that's distributed across [[Person/codekiln/GitHub/gitpa]] and [[Person/codekiln/GitHub/logseq-encode-garden]]
 		  id:: 6ac29556-b91a-4f33-a506-02d66df6f3b9
 			- Right now there are tons of pieces of information that are not needed and/or duplicated in multiple places.
 			- I want to radically simplify this process. Again, I have no listeners, all options are on the table. It matters more that we get it right than that we have backwards compatibility.
