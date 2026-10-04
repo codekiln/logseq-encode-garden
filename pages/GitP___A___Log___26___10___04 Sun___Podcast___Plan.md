@@ -1,10 +1,11 @@
 - # Podcast action plan
 	- Maintain each episode as a garden session with linked asset pages, mirror it into Gitpa, and publish through a Gitpa PR. [[GitP/How To/Draft an Episode from Session Assets]] describes the recording and listening steps; [[GitP/How To/Prepare Podcast Metadata]] describes preparation and sync.
 	- ## September 24 publication
-		- DONE Prepare [GitP.26.09.24 publication PR #11](https://github.com/codekiln/gitpa/pull/11), including the MP3 and RSS release identity.
-		- TODO Listen to [GitP.26.09.24 — episode MP3, about 13 minutes](https://f005.backblazeb2.com/file/logseq-encode-garden/GitP___A___Session___26___09___24-Thu___Asset___Synth___Full.mp3) and merge [publication PR #11](https://github.com/codekiln/gitpa/pull/11) for a go decision.
+		- DONE Prepare [GitP.26.09.24 publication PR #12](https://github.com/codekiln/gitpa/pull/12), including the MP3 and RSS release identity.
+		- TODO Listen to [GitP.26.09.24 — episode MP3, about 13 minutes](https://f005.backblazeb2.com/file/logseq-encode-garden/GitP___A___Session___26___09___24-Thu___Asset___Synth___Full.mp3) and merge [publication PR #12](https://github.com/codekiln/gitpa/pull/12) for a go decision.
 	- ## One source for episode information
-		- DOING Consolidate the four existing website episodes into garden session pages with matching Gitpa proxies. Replace JSON/YAML handoffs with [[GitP/mise/Task/episode/sync]] and build RSS from the proxies.
+		- DONE Prepare [garden source PR #178](https://github.com/codekiln/logseq-encode-garden/pull/178) and [Gitpa publication PR #12](https://github.com/codekiln/gitpa/pull/12): four session pages, matching asset proxies, and RSS from the pages.
+		- TODO Merge the garden source PR first, then the Gitpa publication PR after the September 24 listening decision.
 	- ## Unattended assets on the Mac
 		- DONE Configure the encrypted local B2 credential cache in [[GitP/A/Log/26/10/04 Sun/Fnox/Plan]].
 		- TODO Connect [media upload](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/gitpa/media/upload) to the [Fnox assets profile](https://github.com/codekiln/logseq-encode-garden/blob/main/fnox.toml), using the page-derived filenames in [[Logseq/Entity/Asset/B2]].
