@@ -1,0 +1,25 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+- # Asset
+	- In this garden, **Asset** pages model individual files attached to a garden page, such as a recording, preset, image, or PDF.
+	- ## Ownership and identity
+		- Each uploaded file has one asset page beneath the page it belongs to: `<Owner>/Asset/<Purpose>/<format>`. A purpose may have several namespace segments; the format is the lowercase file extension without a dot.
+		- The owning page links the asset page with a reason to open it. The asset page's `up::` links back to the owner and its body contains the file's listening, viewing, or download link.
+		- Different formats have separate asset pages. A WAV and its MP3 are two assets; the MP3 links the WAV as its source when that source has a page.
+		- An asset reused elsewhere keeps its original page. Other pages link to it rather than creating another copy or another identity.
+	- ## One name across storage locations
+		- The asset page determines the file path. Keep the page's namespace segments as directories, remove the final format segment, and append that format as the extension of the preceding segment.
+		- For an asset page named `GitP/A/Session/26/09/24 Thu/Asset/Synth/Full/mp3`, the relative file path is `GitP/A/Session/26/09/24 Thu/Asset/Synth/Full.mp3`.
+		- A Git-tracked local file lives at `assets/<relative file path>`. A remotely stored file's optional working copy lives at `assets/.remote/<relative file path>`.
+		- Namespace spelling and spaces remain intact. Markdown links and remote URLs percent-encode spaces and other URL characters; encoding does not change the stored filename.
+		- Page names that cannot be represented as filesystem paths need a valid name before a new upload. Replacing punctuation with underscores would lose the correspondence between page and file.
+	- ## Asset page contents
+		- Frontmatter carries `logseq-entity:: [[Logseq/Entity/Asset]]` and `up:: [[<Owner>]]`. A B2 asset follows [[Logseq/Entity/Asset/B2]] as well.
+		- The first body block is a descriptive H1. Its first child is a labeled file link or image embed, followed by a short explanation of the file's purpose.
+		- Record the inspected format, byte length, and SHA-256. Audio also records duration when measured. These describe the file, independently of whether a working copy exists on this computer.
+		- A local link names the path derived above. A remote asset's main link points to its stable remote location; the local working copy is optional.
+	- ## Existing assets
+		- MicroFreak and Launchpad manual images already encode the owning page and image caption in flat filenames using triple underscores and hyphens. Those links and files retain their existing names.
+		- The shared principle is visible ownership: the file's name identifies its place in the garden. New uploads use the directory mapping above and receive an asset page. Existing assets acquire pages when they are worked on, without breaking their URLs.
+	- ## Principles
+		- [[My/Principle/Simplify/Create Uniform Interfaces]]: recordings, presets, images, and PDFs share one ownership and path convention.
+		- [[My/Principle/Make Illegal States Unrepresentable/Discussion]]: local paths and upload destinations derive from the asset page rather than being independently named.
