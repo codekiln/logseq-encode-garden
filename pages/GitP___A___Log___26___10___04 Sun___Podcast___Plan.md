@@ -8,9 +8,10 @@
 		- TODO Merge the garden source PR first, then the Gitpa publication PR after the September 24 listening decision.
 	- ## Unattended assets on the Mac
 		- DONE Configure the encrypted local B2 credential cache in [[GitP/A/Log/26/10/04 Sun/Fnox/Plan]].
-		- TODO Connect [media upload](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/gitpa/media/upload) to the [Fnox assets profile](https://github.com/codekiln/logseq-encode-garden/blob/main/fnox.toml), using the page-derived filenames in [[Logseq/Entity/Asset/B2]].
+		- DONE Prepare [cached media upload PR #180](https://github.com/codekiln/logseq-encode-garden/pull/180), using page-derived filenames and verified Fnox cache access without Touch ID.
 	- ## Collect source recordings
 		- DONE Verify DVC restore using the September 24 MP3 in [[GitP/A/Log/26/10/04 Sun/Dvc for Knowledge Gardens/Plan]].
-		- TODO Implement the asset commands and WAV conversion in [DVC plan: put the layout to work](https://github.com/codekiln/logseq-encode-garden/blob/main/pages/GitP___A___Log___26___10___04%20Sun___Dvc%20for%20Knowledge%20Gardens___Plan.md#put-the-layout-to-work), then collect and restore an Ableton project in the private garden.
+		- DONE Prepare [DVC asset tasks PR #179](https://github.com/codekiln/logseq-encode-garden/pull/179), including add, fetch, push, status, and tracked WAV-to-MP3 conversion.
+		- DOING Collect and restore the September 24 Ableton project in the private garden, using [private storage PR #1](https://github.com/codekiln/logseq-garden/pull/1).
 	- ## Later episode preparation
 		- TODO Automate MicroFreak capture and renaming, then MIDI enrichment, following [[GitP/How To/Draft an Episode from Session Assets]].

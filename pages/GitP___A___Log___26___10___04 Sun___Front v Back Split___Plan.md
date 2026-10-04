@@ -8,4 +8,4 @@
 	- ## Remaining work
 		- TODO Connect [media upload](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/gitpa/media/upload) to the [Fnox assets profile](https://github.com/codekiln/logseq-encode-garden/blob/main/fnox.toml) for unattended uploads on the Mac.
 		- TODO Implement the asset commands in [[GitP/A/Log/26/10/04 Sun/Dvc for Knowledge Gardens/Plan]] before collecting private Ableton sessions.
-		- TODO Move the [historical release downloads](https://github.com/codekiln/gitpa/tree/main/gitp-garden/assets/Ceremony) to garden-owned remote assets after verifying their replacements.
+		- DONE Move the historical release recordings, artwork, presets, and MIDI to garden-owned B2 assets, linked from [[GitP/A/Session/24/11/19-Tue]] and [[GitP/A/Session/24/12/04-Wed]].
