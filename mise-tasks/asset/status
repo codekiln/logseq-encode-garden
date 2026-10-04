@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#MISE description="Inspect local asset and DVC state"
+#MISE tools={uv="0.12.22", python="3.13.16", ffmpeg="9.0"}
+#USAGE arg "<page>"
+set -euo pipefail
+root=$(git -C "$(dirname "$0")" rev-parse --show-toplevel)
+if [[ -n "${usage_page:-}" ]]; then
+  set -- "$usage_page"
+fi
+exec uv run --project "$root/mise-tasks/asset" python "$root/mise-tasks/asset/lib/assets.py" "status" "$@"
