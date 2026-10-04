@@ -114,3 +114,7 @@ worktrees/
 # Claude Desktop's Worktree location setting is fixed to this path (not configurable
 # to .worktrees/), so it is ignored separately per the same preference page.
 .claude/worktrees/
+
+# Encrypted local credentials and selectively fetched garden assets
+/fnox.local.toml
+/assets/.remote/

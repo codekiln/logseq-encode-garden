@@ -60,7 +60,7 @@
 		- The source note supports this description. Commentary transcription remains excluded because its repeated phrases were unreliable.
 	- ## Audio selection
 		- The prepared `GitP.26.09.24.mp3` is available as an episode candidate. Technical file and public-URL checks pass; listening assessment remains pending.
-		- TODO Listen for useful sections, trims, and intelligible commentary before deciding whether to use the full prepared recording.
+		- TODO Listen to [GitP.26.09.24 — prepared MP3](https://f005.backblazeb2.com/file/logseq-encode-garden/gitpa/episodes/2026-09-24/GitP.26.09.24.mp3) for useful sections, trims, and intelligible commentary before deciding whether to use the full recording. Record the recommendations under Audio selection on this page.
 	- ## Publication
 		- On [[2026-10-04 Sun]], the public MP3 passed media type, length, opening-range, and Backblaze checksum checks against the prepared local file.
 		- Re-importing the garden JSON preserved the existing [Gitpa episode draft](https://github.com/codekiln/gitpa/blob/main/gitp-garden/pages/Ceremony___2026___09___24.md) and its description. The feed check and importer/feed tests pass.

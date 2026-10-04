@@ -13,15 +13,7 @@
 		- Follow [[fnox/Golden Path]] to create an age key file and a global provider named `sync-age` in `~/.config/fnox/config.toml`. Use file-based decryption for the asset cache so commands can run while nobody is at the keyboard.
 		- Protect the private key file with permissions that allow only the Mac account running the agents to read it. That account can recover the cached B2 credentials, so give the agents B2 keys limited to the garden assets they need.
 		- Store each garden's B2 application key ID and application key in a 1Password vault item. Fnox's 1Password provider reads vault items through the `op` CLI; an existing 1Password Environment mount needs corresponding vault-item references for this setup.
-		- In each garden, define an `assets` profile with those references and make missing credentials an error. This example uses the credential names DVC expects; replace the vault, item, and field names with the names in 1Password:
-			- ~~~toml
-			  [providers.asset-vault]
-			  type = "1password"
-			  vault = "<vault-name>"
-			  [profiles.assets.secrets]
-			  AWS_ACCESS_KEY_ID = { provider = "asset-vault", value = "<garden-item>/key-id", if_missing = "error" }
-			  AWS_SECRET_ACCESS_KEY = { provider = "asset-vault", value = "<garden-item>/application-key", if_missing = "error" }
-			  ~~~
+		- [The garden fnox configuration](https://github.com/codekiln/logseq-encode-garden/blob/main/fnox.toml) defines an `assets` profile using the supplied B2 key ID and application-key references. Secret values remain in 1Password; missing credentials stop the command.
 		- Add `fnox.local.toml` and `assets/.remote/` to `.gitignore`. Keep the bucket name and storage endpoint as ordinary project settings.
 		- From that garden's checkout, authenticate to 1Password and create the cache:
 			- ~~~sh
@@ -42,8 +34,8 @@
 			  ~~~
 		- Fnox keeps using the cached value until the cache is refreshed. Revoking the old application key in Backblaze ends its storage access. [Fnox's refresh guide](https://fnox.jdx.dev/guide/sync.html#refreshing-the-cache) describes rereading the vault values.
 	- ## Try it on one garden
-		- TODO Use a B2 test key restricted to a scratch area in the public garden's bucket. Set up its vault references and local cache on the Mac.
-		- TODO Start a fresh agent process without an authenticated 1Password session and with the fnox daemon disabled. Check that it can read the local cache without prompting for Touch ID. Repeat after restarting the process.
-		- TODO Through the asset client, upload a disposable file, list it, download it, replace it, and delete it. Compare the downloaded file with the original and verify that the key cannot access another garden's assets.
-		- TODO Repeat the setup for the private garden with a private bucket for rough recordings. Use the same task interface and different B2 credentials.
-		- The earlier disposable test showed that fnox could decrypt an encrypted cache with the original credential source unavailable. It used a temporary SSH key. The proposed age key file, real 1Password references, and B2 access still need this trial on the Mac.
+		- DONE Set up [the garden vault references](https://github.com/codekiln/logseq-encode-garden/blob/main/fnox.toml) and the encrypted local cache on the Mac. B2 authorization identifies `logseq-encode-garden` as the key’s allowed bucket; the key has access throughout that bucket.
+		- DONE Read credentials from fresh processes with the 1Password CLI blocked and the fnox daemon disabled. The reads used the age-encrypted cache and required no vault authentication.
+		- DONE Upload, list, download, compare, replace, and delete a disposable file through the B2 API. The test used a unique name under `gitpa/tests/`; all versions created by the test were deleted.
+		- TODO Apply [the tested fnox configuration](https://github.com/codekiln/logseq-encode-garden/blob/main/fnox.toml) to the [private knowledge garden](https://github.com/codekiln/logseq-garden) once its private recording bucket and application key exist. Supply that garden’s vault references so rough recordings remain in private storage.
+		- The Mac trial used the supplied vault references and a native age key file. DVC transfer and restore are the next trial in [[GitP/A/Log/26/10/04 Sun/Dvc for Knowledge Gardens/Plan]].

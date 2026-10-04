@@ -1,0 +1,8 @@
+# B2 credentials for this garden; secret values remain in 1Password.
+[providers.asset-vault]
+type = "1password"
+vault = "codekiln"
+
+[profiles.assets.secrets]
+AWS_ACCESS_KEY_ID = { provider = "asset-vault", value = "op://codekiln/backblaze-b2-logseq-encode-garden-publish-key/keyID", if_missing = "error" }
+AWS_SECRET_ACCESS_KEY = { provider = "asset-vault", value = "op://codekiln/backblaze-b2-logseq-encode-garden-publish-key/password", if_missing = "error" }
