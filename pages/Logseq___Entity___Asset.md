@@ -1,25 +1,19 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
 - # Asset
-	- In this garden, **Asset** pages model individual files attached to a garden page, such as a recording, preset, image, or PDF.
-	- ## Ownership and identity
-		- Each uploaded file has one asset page beneath the page it belongs to: `<Owner>/Asset/<Purpose>/<format>`. A purpose may have several namespace segments; the format is the lowercase file extension without a dot.
-		- The owning page links the asset page with a reason to open it. The asset page's `up::` links back to the owner and its body contains the file's listening, viewing, or download link.
-		- Different formats have separate asset pages. A WAV and its MP3 are two assets; the MP3 links the WAV as its source when that source has a page.
-		- An asset reused elsewhere keeps its original page. Other pages link to it rather than creating another copy or another identity.
-	- ## One name across storage locations
-		- The asset page determines the file path. Keep the page's namespace segments as directories, remove the final format segment, and append that format as the extension of the preceding segment.
-		- For an asset page named `GitP/A/Session/26/09/24 Thu/Asset/Synth/Full/mp3`, the relative file path is `GitP/A/Session/26/09/24 Thu/Asset/Synth/Full.mp3`.
-		- A Git-tracked local file lives at `assets/<relative file path>`. A remotely stored file's optional working copy lives at `assets/.remote/<relative file path>`.
-		- Namespace spelling and spaces remain intact. Markdown links and remote URLs percent-encode spaces and other URL characters; encoding does not change the stored filename.
-		- Page names that cannot be represented as filesystem paths need a valid name before a new upload. Replacing punctuation with underscores would lose the correspondence between page and file.
-	- ## Asset page contents
-		- Frontmatter carries `logseq-entity:: [[Logseq/Entity/Asset]]` and `up:: [[<Owner>]]`. A B2 asset follows [[Logseq/Entity/Asset/B2]] as well.
-		- The first body block is a descriptive H1. Its first child is a labeled file link or image embed, followed by a short explanation of the file's purpose.
-		- Record the inspected format, byte length, and SHA-256. Audio also records duration when measured. These describe the file, independently of whether a working copy exists on this computer.
-		- A local link names the path derived above. A remote asset's main link points to its stable remote location; the local working copy is optional.
-	- ## Existing assets
-		- MicroFreak and Launchpad manual images already encode the owning page and image caption in flat filenames using triple underscores and hyphens. Those links and files retain their existing names.
-		- The shared principle is visible ownership: the file's name identifies its place in the garden. New uploads use the directory mapping above and receive an asset page. Existing assets acquire pages when they are worked on, without breaking their URLs.
-	- ## Principles
-		- [[My/Principle/Simplify/Create Uniform Interfaces]]: recordings, presets, images, and PDFs share one ownership and path convention.
-		- [[My/Principle/Make Illegal States Unrepresentable/Discussion]]: local paths and upload destinations derive from the asset page rather than being independently named.
+	- In this garden, **Asset** pages represent individual files: recordings, presets, images, PDFs, and other attachments.
+	- ## Page and filename
+		- An asset page lives beneath its owner at `<Owner>/Asset/<Purpose>/<format>`. The purpose describes the file; the final segment is its lowercase extension.
+		- The filename comes from that page name: replace namespace separators with `___`, replace spaces within segments with hyphens, and turn the final format segment into the file extension.
+		- `GitP/A/Session/26/09/24-Thu/Asset/Synth/Full/mp3` corresponds to `GitP___A___Session___26___09___24-Thu___Asset___Synth___Full.mp3`.
+		- All namespace segments remain in the filename, including `A` and `Session`. Each filename identifies one asset page; conflicting normalized names need distinct purposes before storing files.
+		- MicroFreak and Launchpad manual images use the same flat namespace spelling and hyphenated words. Their image captions identify the individual illustrations beneath the owning section.
+	- ## Frontmatter and body
+		- `logseq-entity:: [[Logseq/Entity/Asset]]` identifies a local asset. A B2 asset uses [[Logseq/Entity/Asset/B2]].
+		- `up::` links the owning page. That page links the asset page with a reason to listen, view, or download.
+		- [[Logseq/Entity/Asset/Frontmatter/duration-seconds]] records measured audio or video duration when useful. Other file metadata stays with the tools that maintain it: DVC tracks content identity, and podcast feed metadata supplies the enclosure's byte length and media type.
+		- The body contains a descriptive heading and the file itself: `![descriptive label](file location)` embeds an image, audio recording, or video; `[descriptive label](file location)` links a downloadable preset or document.
+		- Technical facts belong in documented frontmatter when the asset needs them. The page contains only information about the represented file.
+	- ## Shared convention
+		- [[My/Principle/Simplify/Create Uniform Interfaces]]: every attachment uses the same relationship between owner, asset page, and filename.
+		- [[My/Principle/Simplify/Don't Repeat Yourself DRY]]: the page supplies the filename; the file link supplies its location.
+		- [[My/Principle/Make Illegal States Unrepresentable/Discussion]]: upload and local-copy destinations derive from that filename rather than being independently named.

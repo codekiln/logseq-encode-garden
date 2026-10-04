@@ -1,16 +1,16 @@
-- # Session Assets
+# Session Assets
 	- Episode: GitP.26.09.24
 	- [Podcast metadata JSON](../assets/GitP/Session/2026/09/24/handoff.json)
-	- Session: [[GitP/Session/26/09/24 Thu]]
+	- Session: [[GitP/A/Session/26/09/24-Thu]]
+	- [[GitP/A/Session/26/09/24-Thu/Asset/Synth/Full/mp3]] — listen to the episode recording.
 	- Proposed description: A MicroFreak and Launchpad session.
 	- ## Recordings and notes
 		- Source note: [[Making/Music/Log/26/09/24 Thu - GitP Reboot with Novation Launchpad]].
 		- Prepared MP3: `GitP.26.09.24.mp3`, 12.6 minutes.
-		- MP3 SHA-256: `599f7e0c070f59b3914316ffec0a4226989dc4d96b01eb333800ea16c1372cdd`.
 		- Ableton tracks: commentary (audio), microfreak (audio), Mixed Output all (audio), Microfreak Midi all (MIDI).
 		- Session note: On the Microfreak, started with Two Op.FM on initialized patch.
 		- Session note: I was using the Session Mode the whole time in Session, with three audio tracks.
-		- Release audio: [GitP.26.09.24.mp3](https://f005.backblazeb2.com/file/logseq-encode-garden/gitpa/episodes/2026-09-24/GitP.26.09.24.mp3); length and opening range match the prepared MP3.
+		- Release audio: [GitP.26.09.24.mp3](https://f005.backblazeb2.com/file/logseq-encode-garden/GitP___A___Session___26___09___24-Thu___Asset___Synth___Full.mp3); length and opening range match the prepared MP3.
 		- [Recording-day journal](https://github.com/codekiln/logseq-encode-garden/blob/main/journals/2026_09_24.md) links the session note and nearby work.
 		- [MicroFreak manual: Two Op.FM](https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___06%20Dig%20Osc___03%20Types___08%20Two%20Op.FM.md) is linked from the session note.
 		- Commentary file (filename and duration match): `commentary 0010 [2026-09-24 190403].aif`, 12.6 minutes.
@@ -60,7 +60,7 @@
 		- The source note supports this description. Commentary transcription remains excluded because its repeated phrases were unreliable.
 	- ## Episode approval
 		- The prepared `GitP.26.09.24.mp3` is the episode recording. Technical file and public-URL checks pass; publication approval remains pending.
-		- TODO Listen to [GitP.26.09.24 — prepared MP3](https://f005.backblazeb2.com/file/logseq-encode-garden/gitpa/episodes/2026-09-24/GitP.26.09.24.mp3) and give this recording a go or a no-go for publication.
+		- TODO Listen to [GitP.26.09.24 — prepared MP3](https://f005.backblazeb2.com/file/logseq-encode-garden/GitP___A___Session___26___09___24-Thu___Asset___Synth___Full.mp3) and give this recording a go or a no-go for publication.
 	- ## Publication
 		- On [[2026-10-04 Sun]], the public MP3 passed media type, length, opening-range, and Backblaze checksum checks against the prepared local file.
 		- Re-importing the garden JSON preserved the existing [Gitpa episode draft](https://github.com/codekiln/gitpa/blob/main/gitp-garden/pages/Ceremony___2026___09___24.md) and its description. The feed check and importer/feed tests pass.

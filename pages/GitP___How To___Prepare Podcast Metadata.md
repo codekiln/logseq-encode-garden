@@ -20,7 +20,7 @@ see-also:: [[GitP/House/Back]], [[GitP/House/Front]], [[GitP/mise/Task/episode/d
 				- ~~~sh
 				  mise run gitpa:episode:draft -- '/path/to/GitP26.09.24 Project'
 				  ~~~
-			- The task creates `GitP/Session/26/09/24 Thu/Session Assets` as an LFM page and `assets/GitP/Session/2026/09/24/handoff.json`.
+			- The task creates `GitP/A/Session/26/09/24-Thu/Session Assets` as an LFM page and `assets/GitP/Session/2026/09/24/handoff.json`.
 			- If several source notes match the date, pass `--note pages/<source-page>.md`. An explicit `Description:` bullet supplies the proposed description; otherwise the device heading supplies a short proposal.
 			- The JSON contains `recorded_on`, `episode_title`, and `description`. Track names, observations, and source links stay on the session asset page for review.
 		- ### 2. Attach a public MP3 if available
@@ -28,7 +28,7 @@ see-also:: [[GitP/House/Back]], [[GitP/House/Front]], [[GitP/mise/Task/episode/d
 			- The task checks media type, length, and the opening audio range against the prepared MP3, plus the Backblaze SHA-1 when supplied. Successful verification adds `audio_url`, `audio_length`, and `audio_type` to the JSON. The session asset page records the local SHA-256.
 			- If speech recognition is useful, pass `--transcript /path/to/whisper.json` to assess existing output. On Apple Silicon macOS, `--transcribe` invokes [[GitP/mise/Task/episode/transcribe]] to run local MLX Whisper on a matching commentary stem; `--model` selects the model. Check recognized speech against the recording before using it in public copy.
 		- ### 3. Review and import the JSON
-			- Check the session assets against the source log and prepared MP3 metadata. [[GitP/Session/26/09/24 Thu/Session Assets]] and [its JSON export](../assets/GitP/Session/2026/09/24/handoff.json) provide an example.
+			- Check the session assets against the source log and prepared MP3 metadata. [[GitP/A/Session/26/09/24-Thu/Session Assets]] and [its JSON export](../assets/GitP/Session/2026/09/24/handoff.json) provide an example.
 			- From the Gitpa checkout, import the JSON:
 				- ~~~sh
 				  mise run episode:import -- /path/to/garden/assets/GitP/Session/2026/09/24/handoff.json

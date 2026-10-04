@@ -1,25 +1,13 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
 - # Backblaze B2 Asset
-	- In this garden, **Backblaze B2 Asset** pages model files uploaded to a garden's Backblaze B2 bucket, using the ownership and naming rules of [[Logseq/Entity/Asset]].
-	- ## Page and storage mapping
-		- Each garden has its own configured bucket. Within that bucket, new named uploads use `.remote/<relative file path>`, where the relative path derives from the asset page.
-		- The optional working copy uses the same object key under the garden's `assets/` directory. Removing a working copy does not remove the remote object or its garden page.
-		- Example asset page name: `GitP/A/Session/26/09/24 Thu/Asset/Synth/Full/mp3`.
-			- Page file: `pages/GitP___A___Session___26___09___24 Thu___Asset___Synth___Full___mp3.md`.
-			- B2 bucket: `logseq-encode-garden`.
-			- Object key: `.remote/GitP/A/Session/26/09/24 Thu/Asset/Synth/Full.mp3`.
-			- Optional local copy: `assets/.remote/GitP/A/Session/26/09/24 Thu/Asset/Synth/Full.mp3`.
-			- Public URL shape: `https://f005.backblazeb2.com/file/logseq-encode-garden/.remote/GitP/A/Session/26/09/24%20Thu/Asset/Synth/Full.mp3`. This is the proposed destination for a new upload, not an existing downloadable file.
-	- ## Page contents
-		- Frontmatter carries `logseq-entity:: [[Logseq/Entity/Asset/B2]], [[Logseq/Entity/Asset]]`, `up:: [[<Owner>]]`, and `b2-bucket:: <bucket name>`.
-		- The main body link points to the verified uploaded object. The page records byte length, format, and SHA-256 from that file, plus duration for audio.
-		- New object keys derive from the page name; they do not require a separately maintained key property. An existing upload with a different key records that key explicitly in the body alongside its working URL.
-		- Private assets record their bucket and key without presenting an unauthenticated download URL as usable. A public garden links a private asset only when its identity and metadata are suitable for publication.
-	- ## Stable URLs and revisions
-		- A page and its download URL identify a particular file. A changed recording or preset receives a distinct revision in the asset purpose and a new object key, so an old episode link continues to identify the original bytes.
-		- Renaming a garden page does not silently move or delete a published object. Any storage migration keeps the previous public URL available for existing links and podcast feeds.
-		- The existing September 24 MP3 remains at [GitP.26.09.24 — episode recording](https://f005.backblazeb2.com/file/logseq-encode-garden/gitpa/episodes/2026-09-24/GitP.26.09.24.mp3). Its `gitpa/episodes/2026-09-24/GitP.26.09.24.mp3` key is an existing-path exception, not a second convention for new uploads.
-	- ## Relationship to DVC
-		- A named B2 object serves a readable download URL. DVC's `dvc/files/md5/…` objects serve restoration by content hash. They have different purposes even when they contain the same bytes.
-		- When DVC tracks a working copy, its metadata sits beside that file: `assets/.remote/<relative file path>.dvc`. Git stores the metadata and ignores the binary; DVC restores the binary beside its metadata.
-		- DVC's configured `dvc/` object prefix and local `.dvc/cache/` are separate from the named `.remote/` uploads. A DVC push does not publish a named download URL, and a named B2 upload does not create DVC metadata.
+	- In this garden, **Backblaze B2 Asset** pages represent files stored in Backblaze B2, following [[Logseq/Entity/Asset]] for ownership, filenames, and page contents.
+	- ## Storage location
+		- The file is uploaded at the root of the garden's B2 bucket, using its page-derived filename. Its optional local copy uses `assets/.remote/<filename>`.
+		- The audio asset `GitP/A/Session/26/09/24-Thu/Asset/Synth/Full/mp3` uses `assets/.remote/GitP___A___Session___26___09___24-Thu___Asset___Synth___Full.mp3` locally.
+		- Its B2 location is [September 24 episode MP3](https://f005.backblazeb2.com/file/logseq-encode-garden/GitP___A___Session___26___09___24-Thu___Asset___Synth___Full.mp3). The bucket and filename are already present in this URL.
+	- ## Frontmatter and body
+		- `logseq-entity:: [[Logseq/Entity/Asset/B2]]` identifies the file as a B2 asset. Shared asset frontmatter and the embedded media or download link follow [[Logseq/Entity/Asset]].
+		- The body uses the usable remote URL. Bucket names, filenames, and URLs are not repeated as separate properties.
+	- ## Upload and publication
+		- Uploading an MP3 makes it available at a URL. The podcast episode is published when the Gitpa publication PR is merged and CI updates the website and RSS feed.
+		- DVC maintains checksums and restoration metadata separately. A DVC push backs up a tracked file; a B2 upload supplies the named URL used by the asset page and podcast feed.
