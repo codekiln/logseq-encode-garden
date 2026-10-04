@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#MISE description="Test garden episode preparation and media verification"
+set -euo pipefail
+cd "${MISE_PROJECT_ROOT}"
+exec python3 -m unittest discover -s tests -p 'test_draft_session_note.py'

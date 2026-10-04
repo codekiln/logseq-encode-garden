@@ -1,0 +1,295 @@
+"""Prepare garden production evidence and a public episode handoff from an Ableton session."""
+
+from __future__ import annotations
+
+import argparse
+from collections import Counter
+from datetime import date
+import gzip
+import json
+import hashlib
+from pathlib import Path
+import re
+import subprocess
+import tempfile
+from urllib.parse import quote, urlparse
+from urllib.request import Request, urlopen
+import xml.etree.ElementTree as ET
+
+
+ROOT = Path(__file__).resolve().parents[1]
+DATE_IN_NAME = re.compile(r"(?<!\d)(\d{2})[._-](\d{2})[._-](\d{2})(?!\d)")
+
+
+def project_date(project: Path) -> date:
+    match = DATE_IN_NAME.search(project.name)
+    if not match:
+        raise ValueError(f"Cannot find YY.MM.DD in project name: {project.name}")
+    year, month, day = map(int, match.groups())
+    return date(2000 + year, month, day)
+
+
+def find_note(garden: Path, day: date, explicit: Path | None) -> Path:
+    if explicit:
+        return explicit.resolve()
+    marker = f"{day:%y}___{day:%m}___{day:%d}"
+    matches = [
+        path for path in sorted(garden.glob(f"pages/*{marker}*.md"))
+        if re.search(r"\bGitP\b|\bGitpa\b", path.read_text(encoding="utf-8"), re.IGNORECASE)
+    ]
+    if len(matches) != 1:
+        raise ValueError(f"Expected one GitP garden note for {day}; found {len(matches)}. Pass --note.")
+    return matches[0]
+
+
+def readable_links(text: str) -> str:
+    return re.sub(
+        r"\[\[([^\]]+)\]\]",
+        lambda match: re.sub(r"^\d+\s+", "", match.group(1).split("/")[-1]),
+        text,
+    )
+
+
+def note_facts(note: Path) -> tuple[str, list[str], list[str]]:
+    text = note.read_text(encoding="utf-8")
+    heading = re.search(r"^- # .*? with ([^\n]+)", text, re.MULTILINE | re.IGNORECASE)
+    devices = heading.group(1).strip() if heading else ""
+    observations = []
+    for line in text.splitlines():
+        match = re.match(r"^\s*-\s+(.+)$", line)
+        if not match:
+            continue
+        content = readable_links(match.group(1)).strip()
+        if content and not content.startswith("#") and not re.match(r"(?:Podcast title|Description|Audio):", content, re.IGNORECASE):
+            observations.append(content)
+    manual_refs = list(dict.fromkeys(re.findall(r"\[\[(Microfreak/UG/[^\]]+)\]\]", text, re.IGNORECASE)))
+    return devices, observations, manual_refs
+
+
+def explicit_description(note: Path) -> str:
+    match = re.search(r"^\s*-\s*Description:\s*(.+)$", note.read_text(encoding="utf-8"), re.MULTILINE)
+    return match.group(1).strip() if match else ""
+
+
+def description_from_note(devices: str) -> str:
+    devices = re.sub(r"\bMicrofreak\b", "MicroFreak", devices, flags=re.IGNORECASE)
+    if devices:
+        return f"A {devices} session."
+    return ""
+
+
+def ableton_tracks(project: Path) -> tuple[list[str], bool]:
+    sets = sorted(project.glob("*.als"))
+    if len(sets) != 1:
+        raise ValueError(f"Expected one Ableton set in {project}; found {len(sets)}")
+    with gzip.open(sets[0], "rb") as source:
+        root = ET.parse(source).getroot()
+    tracks: list[str] = []
+    for track in root.findall(".//Tracks/*"):
+        if track.tag not in {"AudioTrack", "MidiTrack"}:
+            continue
+        name = track.find("./Name/EffectiveName")
+        if name is not None and name.get("Value"):
+            label = f"{name.get('Value')} ({'MIDI' if track.tag == 'MidiTrack' else 'audio'})"
+            if label not in tracks:
+                tracks.append(label)
+    program_changes = [
+        node.get("Value") for node in root.findall(".//Tracks/MidiTrack//ProgramChange")
+        if node.get("Value") not in {None, "-1"}
+    ]
+    return tracks, bool(program_changes)
+
+
+def duration_seconds(audio: Path) -> float:
+    result = subprocess.run(
+        ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1", str(audio)],
+        check=True, capture_output=True, text=True,
+    )
+    return float(result.stdout.strip())
+
+
+def commentary_stem(project: Path, export_duration: float) -> tuple[Path, float] | None:
+    candidates = sorted((project / "Samples" / "Recorded").glob("commentary *.aif"))
+    if not candidates:
+        return None
+    ranked = sorted(((path, duration_seconds(path)) for path in candidates), key=lambda item: item[1], reverse=True)
+    path, duration = ranked[0]
+    return (path, duration) if abs(duration - export_duration) <= 10 else None
+
+
+def transcript_quality(path: Path) -> tuple[bool, str]:
+    data = json.loads(path.read_text(encoding="utf-8"))
+    segments = [" ".join(segment.get("text", "").lower().split()) for segment in data.get("segments", [])]
+    segments = [segment for segment in segments if segment]
+    if len(segments) < 3:
+        return False, "Too little recognized speech to support a description."
+    common = Counter(segments)
+    if len(segments) >= 10 and (common.most_common(1)[0][1] / len(segments) >= 0.25 or len(common) / len(segments) < 0.5):
+        return False, "Repeated phrases suggest speech-recognition hallucination."
+    return True, "Transcript needs a listening check before its claims are used."
+
+
+def transcribe_stem(stem: Path, model: str) -> tuple[bool, str]:
+    """Run speech recognition locally and discard its raw output after assessment."""
+    with tempfile.TemporaryDirectory(prefix="gitpa-transcript-") as temporary:
+        temporary_path = Path(temporary)
+        normalized = temporary_path / "commentary.wav"
+        subprocess.run(
+            ["ffmpeg", "-hide_banner", "-nostdin", "-loglevel", "error", "-i", str(stem),
+             "-af", "highpass=f=100,lowpass=f=5000,loudnorm=I=-18:TP=-1.5:LRA=11",
+             "-ac", "1", "-ar", "16000", "-c:a", "pcm_s16le", str(normalized)],
+            check=True,
+        )
+        subprocess.run(
+            ["uv", "run", "--no-project", "--offline", "--with", "mlx-whisper==0.4.3",
+             "--with", "torch==2.14.0", "--with", "mlx==0.32.2", "--with", "numba==0.67.0", "mlx_whisper",
+             str(normalized), "--model", model, "--language", "en",
+             "--condition-on-previous-text", "False", "--verbose", "False",
+             "--output-format", "json", "--output-name", "commentary", "--output-dir", str(temporary_path)],
+            check=True, capture_output=True, text=True,
+        )
+        return transcript_quality(temporary_path / "commentary.json")
+
+
+def verify_public_audio(url: str, mp3: Path) -> None:
+    """Check enclosure metadata and range playback against the prepared file."""
+    parsed = urlparse(url)
+    if (parsed.scheme != "https" or not parsed.netloc or parsed.username or parsed.password
+            or parsed.query or parsed.fragment):
+        raise ValueError("Audio URL must be permanent public HTTPS without credentials or query parameters")
+    expected_size = mp3.stat().st_size
+    if expected_size < 1:
+        raise ValueError("Prepared MP3 is empty")
+    with urlopen(Request(url, method="HEAD"), timeout=10) as response:
+        if response.status != 200:
+            raise ValueError("Public audio HEAD did not return HTTP 200")
+        if response.headers.get("Content-Type", "").split(";", 1)[0] != "audio/mpeg":
+            raise ValueError("Public audio has unexpected content type")
+        if int(response.headers.get("Content-Length", "0")) != expected_size:
+            raise ValueError("Public audio length differs from prepared MP3")
+        remote_sha1 = response.headers.get("x-bz-content-sha1")
+        if remote_sha1 and remote_sha1 != "none" and remote_sha1 != file_checksum(mp3, "sha1"):
+            raise ValueError("Public Backblaze object checksum differs from prepared MP3")
+    end = min(expected_size, 1024) - 1
+    with urlopen(Request(url, headers={"Range": f"bytes=0-{end}"}), timeout=10) as response:
+        if response.status != 206 or response.headers.get("Content-Range") != f"bytes 0-{end}/{expected_size}":
+            raise ValueError("Public audio does not support the expected byte range")
+        with mp3.open("rb") as local:
+            if response.read(end + 2) != local.read(end + 1):
+                raise ValueError("Public audio opening range differs from prepared MP3")
+
+
+def file_checksum(path: Path, algorithm: str = "sha256") -> str:
+    digest = hashlib.new(algorithm)
+    with path.open("rb") as source:
+        for chunk in iter(lambda: source.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def draft(project: Path, garden: Path, note: Path, transcript: Path | None = None,
+          transcribe: bool = False, model: str = "mlx-community/whisper-large-v3-turbo",
+          *, mp3: Path | None = None, output_dir: Path | None = None,
+          audio_url: str | None = None) -> Path:
+    day = project_date(project)
+    output_dir = output_dir or garden / "assets" / "GitP" / "Session" / f"{day:%Y/%m/%d}"
+    output = output_dir / "session-note.md"
+    handoff = output_dir / "handoff.json"
+    for path in (output, handoff):
+        if path.exists():
+            raise ValueError(f"Output already exists; choose a new --output-dir to preserve edits: {path}")
+    mp3 = mp3 or project / f"GitP.{day:%y.%m.%d}.mp3"
+    if not mp3.is_file():
+        raise FileNotFoundError(f"Prepare the MP3 before drafting: {mp3}")
+    duration = duration_seconds(mp3)
+    devices, observations, manual_refs = note_facts(note)
+    description = explicit_description(note) or description_from_note(devices)
+    if not description:
+        raise ValueError(f"No usable description facts in {note}; add a description to the session note")
+    tracks, has_program_changes = ableton_tracks(project)
+    stem = commentary_stem(project, duration)
+    patch_exports = sorted(project.rglob("*.mfpz"))
+    midi_exports = sorted(list(project.rglob("*.mid")) + list(project.rglob("*.midi")))
+    record = {"recorded_on": day.isoformat(), "episode_title": f"GitP.{day:%y.%m.%d}",
+              "description": description}
+    if audio_url:
+        verify_public_audio(audio_url, mp3)
+        record.update(audio_url=audio_url, audio_length=mp3.stat().st_size, audio_type="audio/mpeg")
+    note_url = "https://github.com/codekiln/logseq-encode-garden/blob/main/pages/" + quote(note.name)
+    journal = garden / "journals" / f"{day:%Y_%m_%d}.md"
+    journal_url = "https://github.com/codekiln/logseq-encode-garden/blob/main/journals/" + quote(journal.name)
+    lines = [
+        f"# GitP.{day:%y.%m.%d}", "", f"Proposed description: {description}", "",
+        "## Evidence",
+        f"- [Garden session note]({note_url}) describes the recording session.",
+        f"- Prepared MP3: `{mp3.name}`, {duration / 60:.1f} minutes.",
+        f"- MP3 SHA-256: `{file_checksum(mp3)}`.",
+        f"- Ableton tracks: {', '.join(tracks) if tracks else 'none named'}.",
+    ]
+    for observation in observations:
+        lines.append(f"- Session note: {observation}")
+    if audio_url:
+        lines.append(f"- Release audio: [{mp3.name}]({audio_url}); length and opening range match the prepared MP3.")
+    if journal.is_file():
+        lines.append(f"- [Recording-day journal]({journal_url}) links the session note and nearby work.")
+    for reference in manual_refs:
+        manual = garden / "pages" / (reference.replace("/", "___") + ".md")
+        if manual.is_file():
+            manual_url = "https://github.com/codekiln/logseq-encode-garden/blob/main/pages/" + quote(manual.name)
+            lines.append(f"- [MicroFreak manual: {readable_links('[[' + reference + ']]')}]({manual_url}) is linked from the session note.")
+    if stem:
+        lines.append(f"- Separate commentary recording: `{stem[0].name}`, {stem[1] / 60:.1f} minutes.")
+    if transcript or transcribe:
+        if transcribe and stem:
+            valid, reason = transcribe_stem(stem[0], model)
+        elif transcript:
+            valid, reason = transcript_quality(transcript)
+        else:
+            valid, reason = False, "No commentary stem matches the exported episode."
+        lines.append(f"- Speech recognition: {'review required' if valid else 'rejected'} — {reason}")
+    lines += ["", "## Source limits",
+        f"- Patch exports: {len(patch_exports)}; MIDI exports: {len(midi_exports)}. Ableton track names alone do not establish preset changes.",
+        "- Ableton MIDI clips " + ("contain program-change values; inspect the active clips before naming presets." if has_program_changes else "have no program-change values that identify presets."),
+        "- The proposed description needs a listening check.", "",
+    ]
+    output_dir.mkdir(parents=True, exist_ok=True)
+    # Exclusive creation protects edits even if another process creates an output
+    # after the preflight. Remove only this invocation's handoff if note creation fails.
+    with handoff.open("x", encoding="utf-8") as target:
+        target.write(json.dumps(record, indent=2, ensure_ascii=False) + "\n")
+    try:
+        with output.open("x", encoding="utf-8") as target:
+            target.write("\n".join(lines))
+    except Exception:
+        handoff.unlink()
+        raise
+    print(f"Production evidence: {output}")
+    print(f"Public handoff: {handoff}")
+    return output
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("project", type=Path, help="Ableton project directory")
+    parser.add_argument("--garden", type=Path, default=ROOT, help="Garden checkout; defaults to this script's repository")
+    parser.add_argument("--note", type=Path, help="Garden session page when date lookup is ambiguous")
+    parser.add_argument("--mp3", type=Path, help="Prepared MP3 when stored outside the project directory")
+    parser.add_argument("--output-dir", type=Path, help="Fresh evidence directory; defaults to assets/GitP/Session/YYYY/MM/DD")
+    parser.add_argument("--audio-url", help="Existing public MP3 URL to verify and attach to the handoff")
+    speech = parser.add_mutually_exclusive_group()
+    speech.add_argument("--transcript", type=Path, help="Whisper-style JSON transcript to assess")
+    speech.add_argument("--transcribe", action="store_true", help="Transcribe the matching commentary stem locally with MLX Whisper")
+    parser.add_argument("--model", default="mlx-community/whisper-large-v3-turbo", help="Local model directory or MLX Whisper model name")
+    args = parser.parse_args()
+    try:
+        project = args.project.resolve()
+        garden = args.garden.resolve()
+        note = find_note(garden, project_date(project), args.note)
+        draft(project, garden, note, args.transcript, args.transcribe, args.model,
+              mp3=args.mp3, output_dir=args.output_dir, audio_url=args.audio_url)
+    except (ValueError, OSError, subprocess.CalledProcessError) as error:
+        parser.exit(1, f"error: {error}\n")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#MISE description="Prepare garden session evidence and an episode JSON handoff"
+set -euo pipefail
+exec python3 "${MISE_PROJECT_ROOT}/scripts/draft_session_note.py" "$@"
