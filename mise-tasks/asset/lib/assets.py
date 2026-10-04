@@ -8,13 +8,14 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import tomllib
 
 ROOT = Path(__file__).resolve().parents[3]
 
 
 def filename(page):
     segments = page.split("/")
-    if len(segments) < 3 or "Asset" not in segments[:-1]:
+    if len(segments) < 4 or "Asset" not in segments[1:-2]:
         raise ValueError("use an asset page name ending in its format")
     if any(not p or p in (".", "..") or "___" in p or re.search(r'[<>:"\\|?*\x00-\x1f\x7f]', p) for p in segments):
         raise ValueError("invalid asset page segment")
@@ -30,12 +31,20 @@ def asset(page):
 def dvc(*args, remote=False):
     command = [sys.executable, "-m", "dvc", *map(str, args)]
     cwd = ROOT
+    environment = os.environ.copy()
     if remote:
         common = subprocess.check_output(["git", "rev-parse", "--path-format=absolute", "--git-common-dir"], cwd=ROOT, text=True).strip()
         cache_root = Path(common).parent
+        cache_file = cache_root / "fnox.local.toml"
+        if not cache_file.is_file():
+            raise ValueError("asset credentials need an encrypted fnox cache in the main checkout")
+        cached = tomllib.loads(cache_file.read_text()).get("profiles", {}).get("assets", {}).get("secrets", {})
+        if not all(cached.get(key, {}).get("sync", {}).get("provider") and cached.get(key, {}).get("sync", {}).get("value") for key in ("AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY")):
+            raise ValueError("encrypted fnox cache is missing asset credentials; refresh it while signed in")
+        environment = {key: value for key, value in environment.items() if not key.startswith("AWS_")}
         command = ["fnox", "--profile", "assets", "--no-defaults", "--no-daemon", "--non-interactive", "exec", "--", sys.executable, str(Path(__file__).resolve()), "_dvc", str(ROOT), *map(str, args)]
         cwd = cache_root
-    subprocess.run(command, cwd=cwd, check=True)
+    subprocess.run(command, cwd=cwd, env=environment, check=True)
 
 
 def prepare(source, output):
