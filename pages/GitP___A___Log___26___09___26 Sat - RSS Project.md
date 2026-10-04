@@ -9,14 +9,14 @@
 		- 14:02
 			- [[GitP/A/Log/26/09/26 Sat - RSS Project/Q/What Backblaze Options would work with Logseq?]]
 	- ## Plan
-		- TODO Publish `GitP.26.09.25` as the first RSS episode.
+		- DONE Publish [[GitP/A/Session/26/09/25-Fri]] as the first RSS episode.
 			- TODO Give the uploaded MP3 a stable Cloudflare media URL and verify HEAD and byte-range requests.
-			- TODO Create an editable public episode page and `episode.yml` from [[Music/Composition/Log/26/09/25 Fri]]; include a stable GUID, recording and publication dates, description, media URL, enclosure type and length, and page link.
-			- TODO Generate RSS from episode records, publish it on GitHub Pages, and validate its self-link, artwork, and enclosure.
+			- DONE Create the public episode from [[Music/Composition/Log/26/09/25 Fri]], with its recording and RSS release identity.
+			- DONE Generate RSS, publish it on GitHub Pages, and validate its self-link, artwork, and enclosure.
 			- TODO Subscribe to the feed by URL and check playback in a podcast app.
 		- TODO Add staged-file secret and identity scanning and a CI scan to Gitpa before publishing the feed.
 		- TODO [Rename the shared Backblaze rclone remote · dotfiles issue #131](https://github.com/codekiln/dotfiles/issues/131), then update the garden upload task's default remote.
-		- TODO Define a remote-file entity for garden media pages: derive the initial MP3 filename from the page name, link the upload instructions, record public or private visibility, and retain the published object key and URL when a page is renamed.
+		- DONE Define [[Logseq/Entity/Asset]] and [[Logseq/Entity/Asset/B2]] for garden media and page-derived upload filenames.
 		- TODO Automate bringing selected garden notes into public episode pages after the first manual publication works.
 		- DONE [Set up the shared Backblaze rclone remote and 1Password publishing access · dotfiles issue #125](https://github.com/codekiln/dotfiles/issues/125)
 		  id:: 6ab7f21f-4627-4e47-a60c-7a9e76e8acbf
