@@ -50,6 +50,18 @@ class MediaUploadTests(unittest.TestCase):
                      'contentLength': self.source.stat().st_size,
                      'contentSha1': hashlib.sha1(self.source.read_bytes()).hexdigest(), 'contentType': 'image/gif'}
 
+    def test_additive_asset_entity_markers_are_accepted(self):
+        self.page_path.write_text('tags:: [[Existing]]\nlogseq-entity:: [[Logseq/Entity/Asset/B2]], [[Logseq/Entity/Other]]\n- # Diagram\n')
+        self.assertEqual(asset_name(self.root, self.page), (self.filename, 'gif'))
+
+    def test_body_entity_marker_does_not_establish_asset_type(self):
+        for body in ('- # Diagram\nlogseq-entity:: [[Logseq/Entity/Asset/B2]]\n',
+                     '\nlogseq-entity:: [[Logseq/Entity/Asset/B2]]\n'):
+            with self.subTest(body=body):
+                self.page_path.write_text('tags:: [[Existing]]\nlogseq-entity:: [[Logseq/Entity/Other]]\n' + body)
+                with self.assertRaises(ValueError):
+                    asset_name(self.root, self.page)
+
     def test_idempotent_existing_object_keeps_page_and_uploads_unchanged(self):
         client = FakeB2(self.info)
         original = self.page_path.read_bytes()

@@ -55,7 +55,14 @@ def asset_name(garden: Path, page: str) -> tuple[str, str]:
     path = garden / 'pages' / (page.replace('/', '___') + '.md')
     if not path.is_file() or path.resolve().parent != (garden / 'pages').resolve():
         raise ValueError('Asset page must exist directly in this garden pages directory')
-    if not re.search(r'^logseq-entity::\s*\[\[Logseq/Entity/Asset/B2\]\]\s*$', path.read_text(), re.M):
+    entity_types = set()
+    for line in path.read_text().splitlines():
+        property_line = re.fullmatch(r'([^\s:]+)::[ \t]*(.*)', line)
+        if not property_line:
+            break
+        if property_line.group(1) == 'logseq-entity':
+            entity_types.update(re.findall(r'\[\[([^]\n]+)\]\]', property_line.group(2)))
+    if 'Logseq/Entity/Asset/B2' not in entity_types:
         raise ValueError('Target page must be a Logseq/Entity/Asset/B2 instance')
     return '___'.join(parts[:-1]) + '.' + parts[-1], parts[-1]
 
