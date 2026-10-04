@@ -17,7 +17,7 @@ Produce copy-pasteable asset links relative to a page in `pages/`.
 - Relative links into `assets/` are formed from a typical page location (`logseq/pages/somepage.md`), so they start `../assets/...`.
 - Image link: `![name](../assets/path)`. File link: `[name](../assets/path)`. Folder link: `[name](../assets/folder)`.
 - Use `file:/absolute/path` only when the user explicitly wants a direct file link.
-- For namespaced assets, convert `/` → `__` (double underscore) in the **filename**, and sanitize non-alphanumeric chars to `_`.
+- Read `[[Logseq/Entity/Asset]]` for page ownership and filename mapping; for B2 uploads also read `[[Logseq/Entity/Asset/B2]]`. Derive a flat filename from the full asset page namespace: `/` becomes `___` and the final format segment becomes the extension. Keep spelling inside segments unchanged, and validate names using the entity definition so the mapping is reversible. Local remote copies use `assets/.remote/<filename>`; B2 uploads use the filename at the bucket root. Do not invent another path layout.
 - Always return the result as a code snippet for easy copying.
 
-Read [references/asset-link-construction.md](./references/asset-link-construction.md) for the full use cases, examples, and the `file:///` handling rules.
+Read [references/asset-link-construction.md](./references/asset-link-construction.md) for link construction and `file:///` handling. The graph entity definition governs filenames; this reference covers link syntax.

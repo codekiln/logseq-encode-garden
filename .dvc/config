@@ -1,0 +1,5 @@
+[core]
+    remote = garden
+['remote "garden"']
+    url = s3://logseq-encode-garden/dvc/
+    endpointurl = https://s3.us-east-005.backblazeb2.com

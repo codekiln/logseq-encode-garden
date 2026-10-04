@@ -1,0 +1,25 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+- # Asset
+	- In this garden, **Asset** pages represent individual files: recordings, presets, images, PDFs, and other attachments.
+	- ## Page and filename
+		- An asset page lives beneath its owner at `<Owner>/Asset/<Purpose>/<format>`. The purpose describes the file; the final segment is its lowercase extension.
+		- Replace namespace separators with Logseq's `___` separator, then turn the final format segment into the file extension. Keep the spelling inside each segment unchanged.
+		- Examples
+			- Diagram: `Course/Asset/Diagram/Overview/png` corresponds to `Course___Asset___Diagram___Overview.png`.
+			- Recording: `Course/Asset/Audio/First-Lesson/mp3` corresponds to `Course___Asset___Audio___First-Lesson.mp3`.
+			- Document: `Project/Asset/Reference/Setup/pdf` corresponds to `Project___Asset___Reference___Setup.pdf`.
+		- Reverse the mapping by turning the extension back into the final segment and replacing `___` with `/`. For example, `Project___Asset___Reference___Setup.pdf` identifies `Project/Asset/Reference/Setup/pdf`.
+	- ## Valid names
+		- Namespace separators become `___`; an asset filename contains no `/` or directory structure.
+		- `___` is reserved for namespace boundaries and cannot occur inside a page segment. Empty segments, control characters, and filesystem-reserved punctuation (`<`, `>`, `:`, `"`, `\`, `|`, `?`, `*`) are invalid. The format segment contains lowercase letters or digits.
+		- A page name that violates these rules needs a valid name before the asset is stored. Silent punctuation replacement would make the filename ambiguous.
+		- Hyphens keep new multiword asset purposes readable. Spaces already present in an owner's namespace stay intact; a URL percent-encodes them. Replacing spaces with hyphens would prevent exact recovery of the page name.
+	- ## Frontmatter and body
+		- `logseq-entity:: [[Logseq/Entity/Asset]]` identifies a local asset. A B2 asset uses [[Logseq/Entity/Asset/B2]]. Ownership follows the namespace before `/Asset/`.
+		- [[Logseq/Entity/Asset/Frontmatter/duration-seconds]] records measured audio or video duration when useful. DVC tracks content identity; podcast feed metadata supplies enclosure size and media type.
+		- The body contains a descriptive heading and the file itself: `![descriptive label](file location)` embeds an image, audio recording, or video; `[descriptive label](file location)` links a downloadable preset or document.
+		- Other technical facts belong in documented frontmatter when the asset needs them. The page contains only information about the represented file.
+	- ## Principles
+		- [[My/Principle/Simplify/Create Uniform Interfaces]]: every attachment uses the same relationship between its page and filename.
+		- [[My/Principle/Simplify/Don't Repeat Yourself DRY]]: the namespace supplies ownership, the page supplies the filename, and the file link supplies its location.
+		- [[My/Principle/Make Illegal States Unrepresentable/Discussion]]: valid asset names exclude problematic filename characters and reserve `___` for namespace boundaries, so each filename maps back to one page.
