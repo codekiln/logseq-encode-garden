@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "slot": 397,
+  "name": "Imit",
+  "category": "Keys",
+  "device": "Arturia MicroFreak",
+  "captured_at": "2026-10-03T21:03:02.422858+00:00",
+  "raw_file": "slot-397.bin",
+  "raw_bytes": 4707,
+  "raw_sha256": "25c2d705de39f14c45651bfdeeba19a1abfd689d3a8a69ffb73b9a0d31e17788",
+  "header_bytes": 35,
+  "header_sha256": "adc61f881c52a050be55ea1db58b289c1c84b764dc1cecc6a0afd07d212f0e09",
+  "data_bytes": 4672,
+  "data_sha256": "cd9ab794827393dca1275e5d00b5bbed3688d53de94c5f877bb9f378fee7bb85",
+  "protocol_source": "https://github.com/dagargo/elektroid/blob/6f3d50e2588f0236afb3510e1c55bbb292446aa2/src/connectors/microfreak.c#L322-L444"
+}

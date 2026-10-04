@@ -1,0 +1,13 @@
+{
+  "slot": 397,
+  "name": "Imit",
+  "category": "Keys",
+  "repeat_download_identical": true,
+  "archive_payload_matches_capture": true,
+  "inspection_status": "raw_parameters",
+  "data_sha256": "cd9ab794827393dca1275e5d00b5bbed3688d53de94c5f877bb9f378fee7bb85",
+  "archive_sha256": "a3830ec4acb88f5c74e33459a661dd543bbbe1791ed98552ac2898f0026e8e83",
+  "archive_format_source": "https://github.com/dagargo/elektroid/blob/7806ecafda5fbed214e0e0c4f48a92ead52bdc73/src/connectors/microfreak_sample.c#L32-L107",
+  "mcc_import_tested": false,
+  "device_writes_performed": false
+}

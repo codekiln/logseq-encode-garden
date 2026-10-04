@@ -1,0 +1,25 @@
+prev:: [[GItP/A/Log/26/10/03 Sat]]
+
+- # [[2026-10-04 Sun]]
+	- [[My Notes]]
+		- ## TODO Follow up on Front of House vs Back of House
+			- This morning, I'm following up on ((6ac22467-795d-4c72-abc7-43cb23d7a46f))
+				- After reading through [Draft September 24 episode from garden and Ableton evidence by codekiln · Pull Request #9 · codekiln/gitpa](https://github.com/codekiln/gitpa/pull/9), I realized that I am setting both myself and my agents up for confusion by not articulating a clear design boundary between the purpose of [[Person/codekiln/GitHub/gitpa]] and the parts of [[Person/codekiln/GitHub/logseq-encode-garden]] that are for items related to the podcast.
+				- Going forwards, I plan for all [[GitP/House/Back]] to occur in [[Person/codekiln/GitHub/logseq-encode-garden]], and [[GitP/House/Front]] to be in [[Person/codekiln/GitHub/gitpa]].
+				- I articulated the vision for this split in [[Ghost in the Patch - Front vs Back House Responsibilities]].
+				- TODO [[Ghost Gardener]] please take a look at all assets related to [[GitP]] and make a plan in [[GitP/A/Log/26/10/04 Sun/Front v Back Split/Plan]] for how to transform these responsibilities and get started.
+		- ## TODO ensure that remote agents can manage podcast assets while I'm remote coding, and prep usage of [[dvc]]
+			- Following up on [[GitP/A/Log/26/09/26 Sat - RSS Project]]
+				- After yesterday, I realized that [[1Password/Environment]]s have a major downside for my workflow: they effectively make it impossible for me to use [[AI/Agent/Remote]] coding, as in order to publish or manage assets that are published to [[Backblaze/B2]], they require me to use my [[Touch ID]] directly on the [[Macbook]]. As a result, I think that I want to take an approach using [[fnox]]; the main question is, which one, as there are several possible approaches I could take.
+				- Specifically, within the `logseq-encode-garden`, I'd like my remote coding agents to be able to CRUD assets for that garden, and to make local proxies in `assets/.remote`.
+				- It's very important that whatever situation we come up with be applicable to all my logseq-based knowledge gardens.
+				- perhaps using [[fnox/Daemon]] with [[fnox/How To/Set Up a Project with age and SSH Keys]] could be a practical use case for this, although I'm leaning towards the [[fnox/Golden Path]] with a caching setup for the ssh integration with [[fnox]].
+				- TODO [[Ghost Gardener]] please create [[GitP/A/Log/26/10/04 Sun/Fnox/Plan]] you can use fnox in ghq locally and update it, too
+		- ## TODO prototype [[dvc]] as a possible replacement for [[git/lfs]] for larger assets in my various [[Knowledge Garden]]s, including as the primary storage mechanism for larger files in [[My/Knowledge/Garden/logseq-encode-garden]] and in powering [[GitP]]
+			- Following up on [[GitP/A/Log/26/09/26 Sat - RSS Project]]
+				- I'm leaning towards using [[dvc]], partly in order to get some familiarity with that technology, and also partly in order to ensure that we have a standard method of taking checksums of files and storing them in git, so as to ensure what's what, what's backed up, etc. Also, I sense that there's going to be some benefit here in the long term in terms of data transformation pipelines related to the podcast (for example, `.wav` -> `.mp3` or video equivalents).
+				- I'm picturing that `assets/.remote` would be a proxy area for the remote b2 storage, which actually had selected assets (gitignored). It would be a way to bring items down from and push items up to the bucket namespace associated with each garden.
+				- In the garden, I'd likely end up preferring the remote URL version of binary assets, as it will be more portable over time.
+				- Any one computer that has cloned the garden may or may not have the full representation of the bucket, but it should be possible to proxy that remote bucket locally so the filepaths can be inspected and worked on locally.
+				- In particular, I'm interested in eventually migrating recording assets currently in `~/Documents/ableton/GitP` into some b2 bucket, though probably not `logseq-encode-garden`, as they are too rough draft. I'd prefer to keep the very rough draft assets "in" `logseq-garden`'s bucket (uncreated).
+				- TODO create [[GitP/A/Log/26/10/04 Sun/Dvc for Knowledge Gardens/Plan]]

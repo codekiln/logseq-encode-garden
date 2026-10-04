@@ -1,0 +1,913 @@
+{
+  "schema": 1,
+  "source": "397-Imit.mfpz",
+  "metadata": {
+    "archive_member": "0_preset",
+    "format_version": "174",
+    "name": "Imit",
+    "category_code": 2,
+    "initialized": false,
+    "opaque_attributes": "000000000000000000",
+    "opaque_header_value": 51,
+    "record_sha256": "b88e51c35d02b7a3c6e4027345512c498f243e6a3f45fc079cd53be1e73c0416",
+    "payload_sha256": "cd9ab794827393dca1275e5d00b5bbed3688d53de94c5f877bb9f378fee7bb85"
+  },
+  "value_context": "saved_base_setting",
+  "display_conversions": "unverified",
+  "descriptor_semantics": "unverified",
+  "status": "raw_parameters",
+  "parameter_end_offset": 1188,
+  "unpacked_size": 4088,
+  "uninterpreted_tail_size": 2900,
+  "fields": [
+    {
+      "name": "VCO.Type",
+      "unpacked_value_offset": 10,
+      "raw_hex": "16b968",
+      "descriptor": 22,
+      "value_le_unsigned": 26809,
+      "value_le_signed": 26809,
+      "control_label": "Oscillator Type"
+    },
+    {
+      "name": "VCO.Param1",
+      "unpacked_value_offset": 21,
+      "raw_hex": "0fe338",
+      "descriptor": 15,
+      "value_le_unsigned": 14563,
+      "value_le_signed": 14563,
+      "candidate_control_label": "Oscillator Wave",
+      "control_mapping": "unverified"
+    },
+    {
+      "name": "VCO.Param2",
+      "unpacked_value_offset": 32,
+      "raw_hex": "ee0064",
+      "descriptor": 238,
+      "value_le_unsigned": 25600,
+      "value_le_signed": 25600,
+      "candidate_control_label": "Oscillator Timbre",
+      "control_mapping": "unverified"
+    },
+    {
+      "name": "VCO.Param3",
+      "unpacked_value_offset": 43,
+      "raw_hex": "ee806d",
+      "descriptor": 238,
+      "value_le_unsigned": 28032,
+      "value_le_signed": 28032,
+      "candidate_control_label": "Oscillator Shape",
+      "control_mapping": "unverified"
+    },
+    {
+      "name": "VCO.BendRng",
+      "unpacked_value_offset": 55,
+      "raw_hex": "180040",
+      "descriptor": 24,
+      "value_le_unsigned": 16384,
+      "value_le_signed": 16384
+    },
+    {
+      "name": "VCO.SmpIdx",
+      "unpacked_value_offset": 66,
+      "raw_hex": "e60000",
+      "descriptor": 230,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "VCF.Type",
+      "unpacked_value_offset": 80,
+      "raw_hex": "020040",
+      "descriptor": 2,
+      "value_le_unsigned": 16384,
+      "value_le_signed": 16384
+    },
+    {
+      "name": "VCF.Cutoff",
+      "unpacked_value_offset": 91,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0,
+      "control_label": "Filter Cutoff"
+    },
+    {
+      "name": "VCF.Reso",
+      "unpacked_value_offset": 100,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0,
+      "control_label": "Filter Resonance"
+    },
+    {
+      "name": "EG1.Mode",
+      "unpacked_value_offset": 114,
+      "raw_hex": "020040",
+      "descriptor": 2,
+      "value_le_unsigned": 16384,
+      "value_le_signed": 16384
+    },
+    {
+      "name": "EG1.RiseLvl",
+      "unpacked_value_offset": 126,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "EG1.RiseSlp",
+      "unpacked_value_offset": 138,
+      "raw_hex": "00ff3f",
+      "descriptor": 0,
+      "value_le_unsigned": 16383,
+      "value_le_signed": 16383
+    },
+    {
+      "name": "EG1.FallLvl",
+      "unpacked_value_offset": 150,
+      "raw_hex": "00da14",
+      "descriptor": 0,
+      "value_le_unsigned": 5338,
+      "value_le_signed": 5338
+    },
+    {
+      "name": "EG1.Hold",
+      "unpacked_value_offset": 159,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "EG1.FallSlp",
+      "unpacked_value_offset": 171,
+      "raw_hex": "00ff3f",
+      "descriptor": 0,
+      "value_le_unsigned": 16383,
+      "value_le_signed": 16383
+    },
+    {
+      "name": "EG1.Amount",
+      "unpacked_value_offset": 182,
+      "raw_hex": "00d65b",
+      "descriptor": 0,
+      "value_le_unsigned": 23510,
+      "value_le_signed": 23510
+    },
+    {
+      "name": "Kbd.Glide",
+      "unpacked_value_offset": 197,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Kbd.Octave",
+      "unpacked_value_offset": 208,
+      "raw_hex": "06aa2a",
+      "descriptor": 6,
+      "value_le_unsigned": 10922,
+      "value_le_signed": 10922
+    },
+    {
+      "name": "Kbd.Veloc",
+      "unpacked_value_offset": 218,
+      "raw_hex": "010000",
+      "descriptor": 1,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Kbd.Hold",
+      "unpacked_value_offset": 227,
+      "raw_hex": "010000",
+      "descriptor": 1,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Kbd.GlMode",
+      "unpacked_value_offset": 238,
+      "raw_hex": "020000",
+      "descriptor": 2,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Kbd.PresAmp",
+      "unpacked_value_offset": 250,
+      "raw_hex": "0a0000",
+      "descriptor": 10,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Kbd.Scale",
+      "unpacked_value_offset": 260,
+      "raw_hex": "080000",
+      "descriptor": 8,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Kbd.Root",
+      "unpacked_value_offset": 269,
+      "raw_hex": "0b0000",
+      "descriptor": 11,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Arp.Enable",
+      "unpacked_value_offset": 285,
+      "raw_hex": "010000",
+      "descriptor": 1,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Arp.Range",
+      "unpacked_value_offset": 295,
+      "raw_hex": "030000",
+      "descriptor": 3,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Arp.Div",
+      "unpacked_value_offset": 303,
+      "raw_hex": "0a9959",
+      "descriptor": 10,
+      "value_le_unsigned": 22937,
+      "value_le_signed": 22937
+    },
+    {
+      "name": "Arp.Rate",
+      "unpacked_value_offset": 312,
+      "raw_hex": "00bc34",
+      "descriptor": 0,
+      "value_le_unsigned": 13500,
+      "value_le_signed": 13500
+    },
+    {
+      "name": "Arp.Swing",
+      "unpacked_value_offset": 322,
+      "raw_hex": "190000",
+      "descriptor": 25,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Arp.Sync",
+      "unpacked_value_offset": 331,
+      "raw_hex": "010000",
+      "descriptor": 1,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Arp.Spice",
+      "unpacked_value_offset": 341,
+      "raw_hex": "ee0000",
+      "descriptor": 238,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Arp.Dice",
+      "unpacked_value_offset": 350,
+      "raw_hex": "ee0000",
+      "descriptor": 238,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Arp.Dir",
+      "unpacked_value_offset": 358,
+      "raw_hex": "030000",
+      "descriptor": 3,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Arp.SeqOn",
+      "unpacked_value_offset": 368,
+      "raw_hex": "010000",
+      "descriptor": 1,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "LFO.Shape",
+      "unpacked_value_offset": 383,
+      "raw_hex": "059919",
+      "descriptor": 5,
+      "value_le_unsigned": 6553,
+      "value_le_signed": 6553
+    },
+    {
+      "name": "LFO.Div",
+      "unpacked_value_offset": 391,
+      "raw_hex": "0c5515",
+      "descriptor": 12,
+      "value_le_unsigned": 5461,
+      "value_le_signed": 5461
+    },
+    {
+      "name": "LFO.Rate",
+      "unpacked_value_offset": 400,
+      "raw_hex": "000013",
+      "descriptor": 0,
+      "value_le_unsigned": 4864,
+      "value_le_signed": 4864
+    },
+    {
+      "name": "LFO.Sync",
+      "unpacked_value_offset": 409,
+      "raw_hex": "01ff7f",
+      "descriptor": 1,
+      "value_le_unsigned": 32767,
+      "value_le_signed": 32767
+    },
+    {
+      "name": "LFO.Retrig",
+      "unpacked_value_offset": 420,
+      "raw_hex": "020000",
+      "descriptor": 2,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "EG2.Mode",
+      "unpacked_value_offset": 434,
+      "raw_hex": "01ff7f",
+      "descriptor": 1,
+      "value_le_unsigned": 32767,
+      "value_le_signed": 32767
+    },
+    {
+      "name": "EG2.Attack",
+      "unpacked_value_offset": 445,
+      "raw_hex": "00ef0b",
+      "descriptor": 0,
+      "value_le_unsigned": 3055,
+      "value_le_signed": 3055
+    },
+    {
+      "name": "EG2.DecRel",
+      "unpacked_value_offset": 456,
+      "raw_hex": "00d63f",
+      "descriptor": 0,
+      "value_le_unsigned": 16342,
+      "value_le_signed": 16342
+    },
+    {
+      "name": "EG2.Sustain",
+      "unpacked_value_offset": 468,
+      "raw_hex": "00d727",
+      "descriptor": 0,
+      "value_le_unsigned": 10199,
+      "value_le_signed": 10199
+    },
+    {
+      "name": "EG2.Legato",
+      "unpacked_value_offset": 479,
+      "raw_hex": "010000",
+      "descriptor": 1,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "EG2.Snap",
+      "unpacked_value_offset": 488,
+      "raw_hex": "010100",
+      "descriptor": 1,
+      "value_le_unsigned": 1,
+      "value_le_signed": 1
+    },
+    {
+      "name": "Gen.Parafon",
+      "unpacked_value_offset": 505,
+      "raw_hex": "01ff7f",
+      "descriptor": 1,
+      "value_le_unsigned": 32767,
+      "value_le_signed": 32767
+    },
+    {
+      "name": "Gen.PolyCnt",
+      "unpacked_value_offset": 517,
+      "raw_hex": "01fd7f",
+      "descriptor": 1,
+      "value_le_unsigned": 32765,
+      "value_le_signed": 32765
+    },
+    {
+      "name": "Gen.PrstVol",
+      "unpacked_value_offset": 529,
+      "raw_hex": "180040",
+      "descriptor": 24,
+      "value_le_unsigned": 16384,
+      "value_le_signed": 16384
+    },
+    {
+      "name": "Gen.Volume",
+      "unpacked_value_offset": 540,
+      "raw_hex": "e6fe7f",
+      "descriptor": 230,
+      "value_le_unsigned": 32766,
+      "value_le_signed": 32766
+    },
+    {
+      "name": "Gen.UniSprd",
+      "unpacked_value_offset": 552,
+      "raw_hex": "e9c107",
+      "descriptor": 233,
+      "value_le_unsigned": 1985,
+      "value_le_signed": 1985
+    },
+    {
+      "name": "Gen.UniCnt",
+      "unpacked_value_offset": 563,
+      "raw_hex": "02ff7f",
+      "descriptor": 2,
+      "value_le_unsigned": 32767,
+      "value_le_signed": 32767
+    },
+    {
+      "name": "Gen.Chord",
+      "unpacked_value_offset": 573,
+      "raw_hex": "030000",
+      "descriptor": 3,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Gen.ChOffs1",
+      "unpacked_value_offset": 585,
+      "raw_hex": "f70040",
+      "descriptor": 247,
+      "value_le_unsigned": 16384,
+      "value_le_signed": 16384
+    },
+    {
+      "name": "Gen.ChOffs2",
+      "unpacked_value_offset": 597,
+      "raw_hex": "f70040",
+      "descriptor": 247,
+      "value_le_unsigned": 16384,
+      "value_le_signed": 16384
+    },
+    {
+      "name": "Gen.ChOffs3",
+      "unpacked_value_offset": 609,
+      "raw_hex": "f70040",
+      "descriptor": 247,
+      "value_le_unsigned": 16384,
+      "value_le_signed": 16384
+    },
+    {
+      "name": "Gen.SmpHash",
+      "unpacked_value_offset": 621,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Sys.PrsetID",
+      "unpacked_value_offset": 638,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Sys.PrsetBt",
+      "unpacked_value_offset": 650,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Sys.Save",
+      "unpacked_value_offset": 659,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Sys.Utility",
+      "unpacked_value_offset": 671,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Mat.MatEnc",
+      "unpacked_value_offset": 687,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Mat.MatBtn",
+      "unpacked_value_offset": 698,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Mat.Assign1",
+      "unpacked_value_offset": 710,
+      "raw_hex": "000102",
+      "descriptor": 0,
+      "value_le_unsigned": 513,
+      "value_le_signed": 513
+    },
+    {
+      "name": "Mat.Assign2",
+      "unpacked_value_offset": 722,
+      "raw_hex": "000602",
+      "descriptor": 0,
+      "value_le_unsigned": 518,
+      "value_le_signed": 518
+    },
+    {
+      "name": "Mat.Assign3",
+      "unpacked_value_offset": 734,
+      "raw_hex": "00010d",
+      "descriptor": 0,
+      "value_le_unsigned": 3329,
+      "value_le_signed": 3329
+    },
+    {
+      "name": "Mat.KyMdSrc",
+      "unpacked_value_offset": 746,
+      "raw_hex": "010000",
+      "descriptor": 1,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co1.EG1",
+      "unpacked_value_offset": 759,
+      "raw_hex": "008000",
+      "descriptor": 0,
+      "value_le_unsigned": 128,
+      "value_le_signed": 128
+    },
+    {
+      "name": "Co1.EG2",
+      "unpacked_value_offset": 767,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co1.LFO",
+      "unpacked_value_offset": 775,
+      "raw_hex": "004001",
+      "descriptor": 0,
+      "value_le_unsigned": 320,
+      "value_le_signed": 320
+    },
+    {
+      "name": "Co1.Xpr",
+      "unpacked_value_offset": 783,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co1.Key",
+      "unpacked_value_offset": 791,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co2.EG1",
+      "unpacked_value_offset": 804,
+      "raw_hex": "0020f1",
+      "descriptor": 0,
+      "value_le_unsigned": 61728,
+      "value_le_signed": -3808
+    },
+    {
+      "name": "Co2.EG2",
+      "unpacked_value_offset": 812,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co2.LFO",
+      "unpacked_value_offset": 820,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co2.Xpr",
+      "unpacked_value_offset": 828,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co2.Key",
+      "unpacked_value_offset": 836,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co3.EG1",
+      "unpacked_value_offset": 849,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co3.EG2",
+      "unpacked_value_offset": 857,
+      "raw_hex": "002012",
+      "descriptor": 0,
+      "value_le_unsigned": 4640,
+      "value_le_signed": 4640
+    },
+    {
+      "name": "Co3.LFO",
+      "unpacked_value_offset": 865,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co3.Xpr",
+      "unpacked_value_offset": 873,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co3.Key",
+      "unpacked_value_offset": 881,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co4.EG1",
+      "unpacked_value_offset": 894,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co4.EG2",
+      "unpacked_value_offset": 902,
+      "raw_hex": "00b52b",
+      "descriptor": 0,
+      "value_le_unsigned": 11189,
+      "value_le_signed": 11189
+    },
+    {
+      "name": "Co4.LFO",
+      "unpacked_value_offset": 910,
+      "raw_hex": "008017",
+      "descriptor": 0,
+      "value_le_unsigned": 6016,
+      "value_le_signed": 6016
+    },
+    {
+      "name": "Co4.Xpr",
+      "unpacked_value_offset": 918,
+      "raw_hex": "00800e",
+      "descriptor": 0,
+      "value_le_unsigned": 3712,
+      "value_le_signed": 3712
+    },
+    {
+      "name": "Co4.Key",
+      "unpacked_value_offset": 926,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co5.EG1",
+      "unpacked_value_offset": 939,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co5.EG2",
+      "unpacked_value_offset": 947,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co5.LFO",
+      "unpacked_value_offset": 955,
+      "raw_hex": "00c018",
+      "descriptor": 0,
+      "value_le_unsigned": 6336,
+      "value_le_signed": 6336
+    },
+    {
+      "name": "Co5.Xpr",
+      "unpacked_value_offset": 963,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co5.Key",
+      "unpacked_value_offset": 971,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co6.EG1",
+      "unpacked_value_offset": 984,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co6.EG2",
+      "unpacked_value_offset": 992,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co6.LFO",
+      "unpacked_value_offset": 1000,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co6.Xpr",
+      "unpacked_value_offset": 1008,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co6.Key",
+      "unpacked_value_offset": 1016,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co7.EG1",
+      "unpacked_value_offset": 1029,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co7.EG2",
+      "unpacked_value_offset": 1037,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co7.LFO",
+      "unpacked_value_offset": 1045,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co7.Xpr",
+      "unpacked_value_offset": 1053,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Co7.Key",
+      "unpacked_value_offset": 1061,
+      "raw_hex": "000000",
+      "descriptor": 0,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Seq.Length",
+      "unpacked_value_offset": 1082,
+      "raw_hex": "3c9919",
+      "descriptor": 60,
+      "value_le_unsigned": 6553,
+      "value_le_signed": 6553
+    },
+    {
+      "name": "Seq.XiceRst",
+      "unpacked_value_offset": 1094,
+      "raw_hex": "010000",
+      "descriptor": 1,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Seq.GateLen",
+      "unpacked_value_offset": 1106,
+      "raw_hex": "500040",
+      "descriptor": 80,
+      "value_le_unsigned": 16384,
+      "value_le_signed": 16384
+    },
+    {
+      "name": "Seq.Smooth1",
+      "unpacked_value_offset": 1118,
+      "raw_hex": "010000",
+      "descriptor": 1,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Seq.Smooth2",
+      "unpacked_value_offset": 1130,
+      "raw_hex": "010000",
+      "descriptor": 1,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Seq.Smooth3",
+      "unpacked_value_offset": 1142,
+      "raw_hex": "010000",
+      "descriptor": 1,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Seq.Smooth4",
+      "unpacked_value_offset": 1154,
+      "raw_hex": "010000",
+      "descriptor": 1,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Voc.HissMod",
+      "unpacked_value_offset": 1171,
+      "raw_hex": "020000",
+      "descriptor": 2,
+      "value_le_unsigned": 0,
+      "value_le_signed": 0
+    },
+    {
+      "name": "Voc.HissVol",
+      "unpacked_value_offset": 1183,
+      "raw_hex": "14ff7f",
+      "descriptor": 20,
+      "value_le_unsigned": 32767,
+      "value_le_signed": 32767
+    }
+  ]
+}
