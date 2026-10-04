@@ -1,0 +1,5 @@
+- When a problem appears, address it with four stages.
+- {{embed [[My/Principle/Problem/Solving/1 - Identify and Triage]]}}
+- {{embed [[My/Principle/Problem/Solving/2 - Most Effective Immediate Unblocks]]}}
+- {{embed [[My/Principle/Problem/Solving/3 - Incremental and Iterative Improvement]]}}
+- {{embed [[My/Principle/Problem/Solving/4 - Work Towards Fundamental Change]]}}

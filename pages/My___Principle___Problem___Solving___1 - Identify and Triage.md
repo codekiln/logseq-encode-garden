@@ -1,0 +1,12 @@
+- Establish a central spot for observations, a zone of situation information (ZoSI). Then record and answer triage questions, like
+	- Why do we care?
+	- Who is impacted?
+	- What
+		- are the issues?
+		- are the symptoms?
+		- are the observations?
+		- are the moving parts?
+		- are the risks?
+		- parts about this can wait until later?
+		- is the urgency and importance?
+	- How can we best schedule or sequence actions?

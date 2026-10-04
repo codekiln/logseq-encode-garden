@@ -1,0 +1,1 @@
+- While communicating with the impacted users, take the top three most effective immediate steps that can address the issue and mitigate risks. Don't be hasty. Slow is smooth, smooth is fast.

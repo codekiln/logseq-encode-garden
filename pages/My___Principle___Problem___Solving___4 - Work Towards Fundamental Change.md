@@ -1,0 +1,1 @@
+- Throughout the steps above, keep collecting ideas about how larger structures contributed to the issue, and what more fundamental changes or adjustments to the system could prevent or remediate this issue going forwards.
