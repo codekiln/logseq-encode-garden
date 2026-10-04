@@ -1,5 +1,238 @@
-#!/usr/bin/env bash
-#MISE description="Test garden episode preparation and media verification"
-set -euo pipefail
-cd "${MISE_PROJECT_ROOT}"
-exec python3 -m unittest discover -s tests -p 'test_draft_session_note.py'
+#!/usr/bin/env python3
+#MISE description="Test GitP release handoff preparation and evidence pages"
+#MISE tools={python="3.13.16"}
+#USAGE flag "-v --verbose" help="Show individual test names"
+import json
+import hashlib
+import os
+from datetime import date
+import gzip
+from pathlib import Path
+import tempfile
+import unittest
+from unittest.mock import patch
+
+from importlib.machinery import SourceFileLoader
+from importlib.util import module_from_spec, spec_from_loader
+import sys
+
+TASK = Path(__file__).resolve().with_name("draft")
+LOADER = SourceFileLoader("gitp_episode_draft", str(TASK))
+SPEC = spec_from_loader(LOADER.name, LOADER)
+MODULE = module_from_spec(SPEC)
+sys.modules[LOADER.name] = MODULE
+LOADER.exec_module(MODULE)
+
+from gitp_episode_draft import (
+    description_from_note,
+    explicit_description,
+    find_note,
+    note_facts,
+    transcript_quality,
+    draft,
+    project_date,
+    ableton_tracks,
+    verify_public_audio,
+    task_arguments,
+    transcribe_stem,
+)
+
+
+class DraftSessionNoteTests(unittest.TestCase):
+    def test_logseq_manual_link_is_evidence_without_episode_specific_rules(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            note = Path(temporary) / "session.md"
+            note.write_text(
+                "- # [[GitP/Session/26/09/24 Thu]] with Microfreak and Launchpad\n"
+                "\t- On the [[Microfreak]], started with [[Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM]] on initialized patch.\n",
+                encoding="utf-8",
+            )
+            devices, observations, references = note_facts(note)
+            self.assertEqual(description_from_note(devices), "A MicroFreak and Launchpad session.")
+            self.assertEqual(observations, ["On the Microfreak, started with Two Op.FM on initialized patch."])
+            self.assertEqual(references, ["Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM"])
+
+    def test_repeated_asr_output_is_rejected(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            transcript = Path(temporary) / "transcript.json"
+            transcript.write_text(
+                json.dumps({"segments": [{"text": "Thank you."}] * 25 + [{"text": "This is weird."}]}),
+                encoding="utf-8",
+            )
+            self.assertFalse(transcript_quality(transcript)[0])
+
+    def test_note_discovery_uses_contents_when_filename_lacks_gitpa(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            pages = Path(temporary) / "pages"
+            pages.mkdir()
+            note = pages / "Music___Composition___Log___26___09___25 Fri.md"
+            note.write_text("- Podcast title: GitP.26.09.25\n\t- Description: A synth session.\n", encoding="utf-8")
+            self.assertEqual(find_note(Path(temporary), date(2026, 9, 25), None), note)
+            self.assertEqual(explicit_description(note), "A synth session.")
+
+    def test_mise_usage_environment_reaches_task_arguments(self):
+        values = {"usage_project": "/recordings/Project", "usage_evidence_page": "pages/Evidence.md",
+                  "usage_output_dir": "assets/comparison", "usage_audio_url": "https://example.com/audio.mp3",
+                  "usage_transcribe": "true", "usage_model": "mlx-community/whisper-large-v3-turbo"}
+        with patch.dict(os.environ, values, clear=True):
+            self.assertEqual(task_arguments(), ["/recordings/Project", "--output-dir", "assets/comparison",
+                "--evidence-page", "pages/Evidence.md", "--audio-url", "https://example.com/audio.mp3",
+                "--model", "mlx-community/whisper-large-v3-turbo", "--transcribe"])
+
+    def test_optional_transcription_platform_guard(self):
+        with patch("gitp_episode_draft.platform.system", return_value="Linux"), patch("gitp_episode_draft.subprocess.run") as command:
+            with self.assertRaisesRegex(ValueError, "macOS Apple Silicon"):
+                transcribe_stem(Path("commentary.aif"), "model")
+            command.assert_not_called()
+
+    def test_optional_transcription_resolves_pinned_package_with_managed_python(self):
+        with patch("gitp_episode_draft.platform.system", return_value="Darwin"), patch("gitp_episode_draft.platform.machine", return_value="arm64"), patch("gitp_episode_draft.subprocess.run") as command, patch("gitp_episode_draft.transcript_quality", return_value=(False, "Repeated phrases")):
+            self.assertEqual(transcribe_stem(Path("commentary.aif"), "model"), (False, "Repeated phrases"))
+        arguments = command.call_args_list[1].args[0]
+        self.assertEqual(arguments[:7], ["uv", "run", "--no-project", "--python", sys.executable, "--with", "mlx-whisper==0.4.3"])
+        self.assertNotIn("--offline", arguments)
+
+    def fixture(self, root):
+        project = root / "GitP26.09.24 Project"
+        project.mkdir()
+        (project / "GitP.26.09.24.mp3").write_bytes(b"prepared audio")
+        with gzip.open(project / "Session.als", "wb") as target:
+            target.write(b'<Ableton><LiveSet><Tracks><AudioTrack><Name><EffectiveName Value="Commentary"/></Name></AudioTrack><MidiTrack><Name><EffectiveName Value="MicroFreak"/></Name><ProgramChange Value="-1"/></MidiTrack></Tracks></LiveSet></Ableton>')
+        garden = root / "garden"
+        (garden / "pages").mkdir(parents=True)
+        note = garden / "pages" / "Music___Composition___Log___26___09___24 Thu.md"
+        note.write_text("- Podcast title: GitP.26.09.24\n\t- Description: A synth session.\n")
+        return project, garden, note
+
+    def test_ableton_track_names_and_program_changes(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            project, _, _ = self.fixture(Path(temporary))
+            self.assertEqual(project_date(project), date(2026, 9, 24))
+            self.assertEqual(ableton_tracks(project), (["Commentary (audio)", "MicroFreak (MIDI)"], False))
+
+    def test_handoff_is_production_metadata_without_publication_identity(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            project, garden, note = self.fixture(Path(temporary))
+            original = (project / "GitP.26.09.24.mp3").read_bytes()
+            with patch("gitp_episode_draft.duration_seconds", return_value=180):
+                output, handoff = draft(project, garden, note)
+            record = json.loads(handoff.read_text())
+            self.assertEqual(record, {"recorded_on": "2026-09-24", "episode_title": "GitP.26.09.24", "description": "A synth session."})
+            self.assertIn("MP3 SHA-256", output.read_text())
+            self.assertEqual(output.parent, garden / "pages")
+            self.assertFalse(list((garden / "assets").rglob("*.md")))
+            self.assertTrue(all(line.lstrip("\t").startswith("- ") for line in output.read_text().splitlines()))
+            self.assertIn("\t- ## Evidence\n\t\t- Source note: [[Music/Composition/Log/26/09/24 Thu]]", output.read_text())
+            self.assertEqual(find_note(garden, date(2026, 9, 24), None), note)
+            self.assertEqual((project / "GitP.26.09.24.mp3").read_bytes(), original)
+            self.assertFalse((garden / "pages" / "Ceremony___2026___09___24.md").exists())
+
+    def test_verified_media_attaches_only_public_enclosure_fields(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            project, garden, note = self.fixture(Path(temporary))
+            with patch("gitp_episode_draft.duration_seconds", return_value=180), patch("gitp_episode_draft.verify_public_audio") as verify:
+                output, handoff = draft(project, garden, note, audio_url="https://example.com/audio.mp3")
+            record = json.loads(handoff.read_text())
+            self.assertEqual(record["audio_url"], "https://example.com/audio.mp3")
+            self.assertEqual(record["audio_length"], 14)
+            self.assertEqual(record["audio_type"], "audio/mpeg")
+            verify.assert_called_once()
+
+    def test_existing_evidence_and_handoff_are_preserved_before_inspection(self):
+        for existing in ("Production Evidence.md", "handoff.json"):
+            with self.subTest(existing=existing), tempfile.TemporaryDirectory() as temporary:
+                project, garden, note = self.fixture(Path(temporary))
+                output = garden / "assets" / "GitP" / "Session" / "2026" / "09" / "24"
+                output.mkdir(parents=True)
+                destination = garden / "pages" / "GitP___Session___26___09___24 Thu___Production Evidence.md" if existing == "Production Evidence.md" else output / existing
+                original = "tags:: [[Protected]]\n- Human edits\n"
+                destination.write_text(original)
+                with patch("gitp_episode_draft.duration_seconds") as inspect:
+                    with self.assertRaisesRegex(ValueError, "Output already exists"):
+                        draft(project, garden, note)
+                    inspect.assert_not_called()
+                self.assertEqual(destination.read_text(), original)
+                self.assertEqual(len(list(output.iterdir())), 0 if existing == "Production Evidence.md" else 1)
+
+    def test_comparison_outputs_require_fresh_page_and_handoff_paths(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            project, garden, note = self.fixture(Path(temporary))
+            with patch("gitp_episode_draft.duration_seconds", return_value=180):
+                original_page, original_handoff = draft(project, garden, note)
+                original_page.write_text("tags:: [[Protected]]\n- Human edits\n")
+                comparison = garden / "pages" / "GitP___Session___26___09___24 Thu___Production Evidence Comparison.md"
+                page, handoff = draft(project, garden, note, evidence_page=comparison, output_dir=garden / "assets" / "comparison")
+            self.assertEqual(page, comparison)
+            self.assertEqual(handoff, garden / "assets" / "comparison" / "handoff.json")
+            self.assertEqual(original_page.read_text(), "tags:: [[Protected]]\n- Human edits\n")
+            self.assertTrue(original_handoff.is_file())
+            self.assertEqual(find_note(garden, date(2026, 9, 24), None), note)
+
+    def test_evidence_cannot_be_written_under_assets(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            project, garden, note = self.fixture(Path(temporary))
+            with self.assertRaisesRegex(ValueError, "garden pages directory"):
+                draft(project, garden, note, evidence_page=garden / "assets" / "note.md")
+            self.assertFalse((garden / "assets").exists())
+
+    def test_invalid_upload_leaves_no_partial_outputs(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            project, garden, note = self.fixture(Path(temporary))
+            with patch("gitp_episode_draft.duration_seconds", return_value=180), patch("gitp_episode_draft.verify_public_audio", side_effect=ValueError("length differs")):
+                with self.assertRaisesRegex(ValueError, "length differs"):
+                    draft(project, garden, note, audio_url="https://example.com/audio.mp3")
+            self.assertFalse((garden / "assets").exists())
+
+    def test_transcript_findings_stay_in_evidence_and_not_public_copy(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            project, garden, note = self.fixture(Path(temporary))
+            transcript = Path(temporary) / "speech.json"
+            transcript.write_text(json.dumps({"segments": [{"text": "Thank you."}] * 25}))
+            with patch("gitp_episode_draft.duration_seconds", return_value=180):
+                output, handoff = draft(project, garden, note, transcript)
+            self.assertIn("Speech recognition: rejected", output.read_text())
+            self.assertEqual(json.loads(handoff.read_text())["description"], "A synth session.")
+
+    def test_permanent_url_validation_happens_before_network(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            mp3 = Path(temporary) / "audio.mp3"
+            mp3.write_bytes(b"abc")
+            for url in ("http://example.com/audio.mp3", "https://example.com/audio.mp3?token=x", ("https://" + "fixture-user" + ":" + "fixture-pass" + "@example.com/audio.mp3"), "https://example.com/audio.mp3#fragment"):
+                with self.subTest(url=url), patch("gitp_episode_draft.urlopen") as network:
+                    with self.assertRaisesRegex(ValueError, "permanent public HTTPS"):
+                        verify_public_audio(url, mp3)
+                    network.assert_not_called()
+
+    def test_public_length_range_and_audio_content_checks(self):
+        from unittest.mock import MagicMock
+        with tempfile.TemporaryDirectory() as temporary:
+            mp3 = Path(temporary) / "audio.mp3"
+            mp3.write_bytes(b"abc")
+            def response(status, headers, body=b""):
+                result = MagicMock()
+                result.__enter__.return_value = result
+                result.status = status
+                result.headers = headers
+                result.read.return_value = body
+                return result
+            head = response(200, {"Content-Type": "audio/mpeg", "Content-Length": "3"})
+            ranged = response(206, {"Content-Range": "bytes 0-2/3"}, b"abc")
+            with patch("gitp_episode_draft.urlopen", side_effect=[head, ranged]):
+                verify_public_audio("https://example.com/audio.mp3", mp3)
+            for bad_range in (response(200, {}, b"abc"), response(206, {"Content-Range": "bytes 0-2/3"}, b"xyz")):
+                with patch("gitp_episode_draft.urlopen", side_effect=[head, bad_range]):
+                    with self.assertRaises(ValueError):
+                        verify_public_audio("https://example.com/audio.mp3", mp3)
+            head.headers["x-bz-content-sha1"] = hashlib.sha1(b"wrong content").hexdigest()
+            with patch("gitp_episode_draft.urlopen", return_value=head):
+                with self.assertRaisesRegex(ValueError, "checksum differs"):
+                    verify_public_audio("https://example.com/audio.mp3", mp3)
+            del head.headers["x-bz-content-sha1"]
+            head.headers["Content-Length"] = "4"
+            with patch("gitp_episode_draft.urlopen", return_value=head):
+                with self.assertRaisesRegex(ValueError, "length differs"):
+                    verify_public_audio("https://example.com/audio.mp3", mp3)
+
+
+if __name__ == "__main__":
+    unittest.main(argv=[sys.argv[0]], verbosity=2 if os.environ.get("usage_verbose") == "true" or "--verbose" in sys.argv else 1)
