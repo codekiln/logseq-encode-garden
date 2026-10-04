@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Diataxis/How To]]
-see-also:: [[GitP/House/Back]], [[GitP/House/Front]]
+see-also:: [[GitP/House/Back]], [[GitP/House/Front]], [[GitP/mise/Task/episode/draft]]
 - # Prepare an Episode Handoff
 	- ## Overview
 		- Prepare a session for editorial review by collecting the garden note, Ableton track names, MP3 checksum, and optional transcription assessment on a production evidence page. Export selected episode fields as JSON for the podcast website to import.
@@ -10,7 +10,7 @@ see-also:: [[GitP/House/Back]], [[GitP/House/Front]]
 		- The project contains one `.als` set. The default MP3 name is `GitP.YY.MM.DD.mp3` in the project directory; `--mp3` selects another file.
 	- ## Steps
 		- ### 1. Prepare the evidence and handoff
-			- Run the file task on the session directory:
+			- Run [[GitP/mise/Task/episode/draft]] on the session directory:
 				- ~~~sh
 				  mise run gitpa:episode:draft -- '/path/to/GitP26.09.24 Project'
 				  ~~~
