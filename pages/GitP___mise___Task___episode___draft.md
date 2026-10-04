@@ -2,7 +2,7 @@ logseq-entity:: [[Logseq/Entity/Mise/Task]]
 task-owner:: [[Person/codekiln/GitHub/logseq-encode-garden]]
 task-config-root:: .
 task-name:: gitpa:episode:draft
-source-link:: https://github.com/codekiln/logseq-encode-garden/blob/codex/gitp-house-split/mise-tasks/gitpa/episode/draft
+source-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/gitpa/episode/draft
 see-also:: [[GitP/How To/Prepare Podcast Metadata]], [[GitP/House/Back]]
 - # Prepare Session Assets and Podcast Metadata
 	- After audio selection and MP3 preparation, collects the source note, Ableton track names, MP3 checksum, and optional transcription assessment for an episode review. Exports proposed episode copy and optional verified enclosure metadata for the Gitpa importer.
@@ -30,7 +30,7 @@ see-also:: [[GitP/How To/Prepare Podcast Metadata]], [[GitP/House/Back]]
 		- Existing output: retain the edited page and JSON export, then select fresh output paths for a comparison.
 		- Media mismatch: compare the uploaded object with the prepared MP3 before producing another JSON export.
 	- ## Source and help
-		- [Preparation file task](https://github.com/codekiln/logseq-encode-garden/blob/codex/gitp-house-split/mise-tasks/gitpa/episode/draft)
+		- [Preparation file task](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/gitpa/episode/draft)
 		- ~~~sh
 		  mise run gitpa:episode:draft --help
 		  ~~~

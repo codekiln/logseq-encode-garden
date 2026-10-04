@@ -2,7 +2,7 @@ logseq-entity:: [[Logseq/Entity/Mise/Task]]
 task-owner:: [[Person/codekiln/GitHub/logseq-encode-garden]]
 task-config-root:: .
 task-name:: gitpa:episode:test
-source-link:: https://github.com/codekiln/logseq-encode-garden/blob/codex/gitp-house-split/mise-tasks/gitpa/episode/test
+source-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/gitpa/episode/test
 see-also:: [[GitP/mise/Task/episode/draft]]
 - # Test Episode Preparation
 	- Checks episode metadata extraction, media verification, asset-page layout, argument handling, and preservation of existing outputs before changing the preparation task.
@@ -19,7 +19,7 @@ see-also:: [[GitP/mise/Task/episode/draft]]
 	- ## Failure and recovery
 		- A failing assertion identifies the behavior that changed. Compare that behavior with [[GitP/mise/Task/episode/draft]] before updating the implementation or its test expectations.
 	- ## Source and help
-		- [Preparation test file task](https://github.com/codekiln/logseq-encode-garden/blob/codex/gitp-house-split/mise-tasks/gitpa/episode/test)
+		- [Preparation test file task](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/gitpa/episode/test)
 		- ~~~sh
 		  mise run gitpa:episode:test --help
 		  ~~~

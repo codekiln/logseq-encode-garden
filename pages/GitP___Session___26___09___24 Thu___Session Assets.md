@@ -54,3 +54,14 @@
 		- Patch exports: 0; MIDI exports: 0. Ableton track names alone do not establish preset changes.
 		- Ableton MIDI clips have no program-change values that identify presets.
 		- The proposed description needs a listening check.
+	- ## Episode draft
+		- Proposed title: GitP.26.09.24.
+		- Proposed description: A MicroFreak and Launchpad session beginning with two-operator FM on an initialized patch.
+		- The source note supports this description. Commentary transcription remains excluded because its repeated phrases were unreliable.
+	- ## Audio selection
+		- The prepared `GitP.26.09.24.mp3` is available as an episode candidate. Technical file and public-URL checks pass; listening assessment remains pending.
+		- TODO Listen for useful sections, trims, and intelligible commentary before deciding whether to use the full prepared recording.
+	- ## Publication
+		- On [[2026-10-04 Sun]], the public MP3 passed media type, length, opening-range, and Backblaze checksum checks against the prepared local file.
+		- Re-importing the garden JSON preserved the existing [Gitpa episode draft](https://github.com/codekiln/gitpa/blob/main/gitp-garden/pages/Ceremony___2026___09___24.md) and its description. The feed check and importer/feed tests pass.
+		- The episode remains unpublished pending listening and copy review.

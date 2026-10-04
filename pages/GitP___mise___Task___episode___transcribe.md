@@ -2,7 +2,7 @@ logseq-entity:: [[Logseq/Entity/Mise/Task]]
 task-owner:: [[Person/codekiln/GitHub/logseq-encode-garden]]
 task-config-root:: .
 task-name:: gitpa:episode:transcribe
-source-link:: https://github.com/codekiln/logseq-encode-garden/blob/codex/gitp-house-split/mise-tasks/gitpa/episode/transcribe
+source-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/gitpa/episode/transcribe
 see-also:: [[GitP/mise/Task/episode/draft]], [[GitP/How To/Draft an Episode from Session Assets]]
 - # Transcribe a Session Recording
 	- Produces a candidate transcript for checking against the recording. Recognition output needs listening review before it supplies public episode copy.

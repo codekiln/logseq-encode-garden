@@ -1,0 +1,23 @@
+- # Podcast action plan
+	- Finish the September 24 episode, make asset commands work while the Mac is unattended, then try DVC on a disposable recording. Use the same recording-to-podcast workflow for later sessions: gather assets, assess recordings, draft copy, prepare selected audio, and publish the reviewed episode.
+	- ## Finish September 24
+		- DOING Complete [[GitP/Session/26/09/24 Thu/Session Assets]] and the [September 24 episode draft](https://github.com/codekiln/gitpa/blob/main/gitp-garden/pages/Ceremony___2026___09___24.md).
+			- DONE Check the public MP3 against the prepared local file. Its media type, size, opening audio range, and Backblaze checksum match.
+			- DONE Import the garden's JSON metadata into Gitpa. The existing description and draft page remain intact. The feed check and importer/feed tests pass.
+			- TODO Listen to the prepared MP3 and assess whether the full recording belongs in the episode. Note useful sections, needed trims, and any commentary to include or omit on the session asset page.
+			- TODO Check the proposed description against the recording. The session note supports the MicroFreak, Launchpad, and opening two-operator FM description; later sounds and preset changes still need listening or other source material.
+			- TODO Publish the reviewed draft: assign its permanent GUID and publication time, make its page public, add it to the episode listing, rebuild RSS, and check the deployed page and audio. Keep the September 25 episode's existing identity and links.
+	- ## Make unattended asset work practical
+		- TODO Follow [[GitP/A/Log/26/10/04 Sun/Fnox/Plan]] on the Mac running Codex and Claude. Keep B2 keys in 1Password and create a gitignored cache encrypted with a file-based age key.
+			- Start with a key restricted to a disposable test area. Verify access from a fresh process while 1Password is signed out and the fnox daemon is disabled.
+			- Use garden-owned mise tasks for inventory, fetch, upload, and deletion. The tasks supply credentials through fnox and keep original recordings in place. Existing media preparation and upload tasks are the starting point.
+			- Repeat the same command interface in each garden, with that garden's bucket settings and B2 key. Give rough recordings a private bucket.
+	- ## Try DVC before moving recordings
+		- TODO Follow [[GitP/A/Log/26/10/04 Sun/Dvc for Knowledge Gardens/Plan]] with synthetic audio and the test B2 access.
+			- Track a WAV and its MP3 conversion, upload them, and restore them into a fresh checkout. Compare the restored files with the originals and verify that a selected pull retrieves only the requested asset.
+			- Keep working copies in `assets/.remote/` and DVC metadata in Git. Keep public episode audio at stable, readable URLs.
+			- After the restore trial succeeds, try a collected Ableton project in the private garden's storage and open the restored set before migrating more sessions.
+	- ## Repeat for later sessions
+		- TODO Use [[GitP/How To/Draft an Episode from Session Assets]] for raw recordings, including sessions with no prepared MP3. Keep the inventory, listening recommendations, proposed copy, and audio preparation plan together on a session asset page.
+		- TODO Use [[GitP/How To/Prepare Podcast Metadata]] after choosing and preparing the audio. Import the selected fields into Gitpa, where the public page and publication record are maintained.
+		- TODO Replace the older `gitp-acolyte` recording-moving functions as the garden tasks cover their uses. Inventory historical downloads and verify their replacements before updating working public links.
