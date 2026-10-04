@@ -1,24 +1,29 @@
 logseq-entity:: [[Logseq/Entity/Diataxis/How To]]
 see-also:: [[GitP/House/Back]], [[GitP/How To/Prepare Podcast Metadata]]
 - # Draft an Episode from Session Assets
-	- ## Overview
-		- Record a session first. Later, use AI to gather related recordings and notes, assess candidates for the podcast, and draft episode material. A release MP3 is an output of this work, not a prerequisite for starting it.
-		- The `gitp-asset-gathering` skill guides this workflow. Scripts provide file inventories and technical checks; listening and episode review determine what belongs in the episode.
-	- ## Consistent session pages
-		- Use one `GitP/Session/YY/MM/DD Day/Session Assets` page per session for the file inventory, source notes, candidate assessments, proposed title and description, audio preparation plan, and publication status. This page can begin before any audio is selected.
-		- The JSON is a derived export for Gitpa, not another place to maintain session notes. Human edits and listening assessments stay on the session page.
-	- ## Steps
-		- ### 1. Gather the session assets
-			- Give the recording date and project location to the AI assistant and invoke `gitp-asset-gathering`.
-			- Collect the Ableton set, audio recordings and stems, MIDI or patch exports, and related garden notes. Record relative file paths and source links on a session's `Session Assets` page.
-			- Keep original recordings in place. Note missing material and possible matches without treating a filename as proof of recording content.
-		- ### 2. Assess candidates for the episode
-			- Listen to candidate recordings and commentary. Assess musical interest, sound quality, usable length, speech intelligibility, and overlap between stems and mixed output.
-			- Record a recommendation to include, edit, or omit each candidate, with reasons and time ranges where available. Material that has not been heard remains unassessed.
-			- Check transcription against the audio. Repetition and plausible sounding text can still be recognition errors; omit unsupported claims from public copy.
-		- ### 3. Draft episode material
-			- Draft a title, description, and show notes from the recordings and session notes. Link factual claims to their sources and keep uncertain observations separate from public copy.
-			- Propose audio selection, ordering, trims, and any necessary mix or export work. Review the draft and prepare the chosen audio as a release MP3.
-		- ### 4. Prepare podcast metadata
-			- Follow [[GitP/How To/Prepare Podcast Metadata]] to create JSON metadata and check the prepared audio. Use fresh output paths if an edited session asset page already exists.
-			- Import the JSON into Gitpa, review the episode page and feed, and publish when the episode is ready.
+	- This guide is for the person recording a GitP episode. It describes what to give the AI assistant and what the assistant prepares before publication.
+	- ## Record and leave a note
+		- Record the episode in Ableton under `~/Documents/ableton/GitP/<project folder>` and export one WAV into that folder.
+		- Create a `Making/Music/Log` entry with a link to the project and exported WAV, plus a few notes about the session.
+		- Ask the AI assistant to prepare the episode from that log entry. The exported WAV is the episode recording.
+	- ## What the AI prepares
+		- ### Episode page and audio
+			- The AI creates a GitP episode page using [[Logseq/Entity/Podcast/Episode]], linking the music-making log and its project, recording, and other source pointers.
+			- The AI converts the exported WAV to an MP3, uploads it to Backblaze B2 at a stable, readable URL, and verifies that the uploaded file matches the prepared MP3.
+		- ### MicroFreak presets
+			- The AI identifies the saved MicroFreak presets used in the episode, connects to the instrument, backs them up, renames them for the episode, and downloads the renamed presets.
+			- The AI uploads the presets to B2 and adds download links to the episode page. If the available notes and MIDI cannot identify the saved slots, the AI asks for that specific missing information before changing device presets.
+		- ### Session details
+			- The AI reads the captured MIDI, the music-making log, and the MicroFreak and Launchpad manuals to explain what happened in the session.
+			- It correlates recorded MIDI CC messages with the MicroFreak manual and reads the downloaded presets for oscillator type, preset category, and other supported details. The episode page links the sources for those details.
+			- The AI distinguishes recorded changes from the settings in a saved preset. It leaves unknown details out of the episode description.
+		- ### Publication PR
+			- The AI fills in the episode's MP3 and preset links in this garden, then prepares a Gitpa PR containing the episode page and podcast metadata needed for publication.
+			- The PR includes a direct link to the one episode MP3, its episode title, and a short description so the recording is easy to find and approve.
+	- ## Listen and publish
+		- Listen to the episode MP3 once and give it a go or a no-go.
+		- For a go, merge the Gitpa PR. Gitpa's CI publishes the episode after the merge.
+		- For a no-go, tell the AI to hold the episode. Any changes to the recording follow that decision.
+	- ## AI execution references
+		- The `gitp-asset-gathering` skill describes the assistant's responsibilities. [[GitP/How To/Prepare Podcast Metadata]] covers the existing metadata commands.
+		- The metadata export and Gitpa importer are available. Automatic preset capture, renaming, and MIDI enrichment still need implementation; they are part of the intended workflow above.

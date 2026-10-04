@@ -13,7 +13,7 @@
 		- Release audio: [GitP.26.09.24.mp3](https://f005.backblazeb2.com/file/logseq-encode-garden/gitpa/episodes/2026-09-24/GitP.26.09.24.mp3); length and opening range match the prepared MP3.
 		- [Recording-day journal](https://github.com/codekiln/logseq-encode-garden/blob/main/journals/2026_09_24.md) links the session note and nearby work.
 		- [MicroFreak manual: Two Op.FM](https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___06%20Dig%20Osc___03%20Types___08%20Two%20Op.FM.md) is linked from the session note.
-		- Commentary candidate (filename and duration match): `commentary 0010 [2026-09-24 190403].aif`, 12.6 minutes.
+		- Commentary file (filename and duration match): `commentary 0010 [2026-09-24 190403].aif`, 12.6 minutes.
 		- [Earlier commentary transcription assessment · Gitpa PR #9](https://github.com/codekiln/gitpa/pull/9): repeated phrases suggested speech-recognition hallucination; recognized speech was excluded from episode copy.
 	- ## Available files
 		- Ableton set: `Backup/GitP26.09.24 Project [2026-09-24 190244].als`.
@@ -53,15 +53,15 @@
 	- ## Review notes
 		- Patch exports: 0; MIDI exports: 0. Ableton track names alone do not establish preset changes.
 		- Ableton MIDI clips have no program-change values that identify presets.
-		- The proposed description needs a listening check.
+		- The proposed description is supported by the source note.
 	- ## Episode draft
 		- Proposed title: GitP.26.09.24.
 		- Proposed description: A MicroFreak and Launchpad session beginning with two-operator FM on an initialized patch.
 		- The source note supports this description. Commentary transcription remains excluded because its repeated phrases were unreliable.
-	- ## Audio selection
-		- The prepared `GitP.26.09.24.mp3` is available as an episode candidate. Technical file and public-URL checks pass; listening assessment remains pending.
-		- TODO Listen to [GitP.26.09.24 — prepared MP3](https://f005.backblazeb2.com/file/logseq-encode-garden/gitpa/episodes/2026-09-24/GitP.26.09.24.mp3) for useful sections, trims, and intelligible commentary before deciding whether to use the full recording. Record the recommendations under Audio selection on this page.
+	- ## Episode approval
+		- The prepared `GitP.26.09.24.mp3` is the episode recording. Technical file and public-URL checks pass; publication approval remains pending.
+		- TODO Listen to [GitP.26.09.24 — prepared MP3](https://f005.backblazeb2.com/file/logseq-encode-garden/gitpa/episodes/2026-09-24/GitP.26.09.24.mp3) and give this recording a go or a no-go for publication.
 	- ## Publication
 		- On [[2026-10-04 Sun]], the public MP3 passed media type, length, opening-range, and Backblaze checksum checks against the prepared local file.
 		- Re-importing the garden JSON preserved the existing [Gitpa episode draft](https://github.com/codekiln/gitpa/blob/main/gitp-garden/pages/Ceremony___2026___09___24.md) and its description. The feed check and importer/feed tests pass.
-		- The episode remains unpublished pending listening and copy review.
+		- The episode remains unpublished. Publication requires a Gitpa PR for the human to merge after listening to the episode MP3.

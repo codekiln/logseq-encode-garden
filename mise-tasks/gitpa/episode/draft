@@ -286,7 +286,7 @@ def draft(project: Path, garden: Path, note: Path, transcript: Path | None = Non
             manual_url = "https://github.com/codekiln/logseq-encode-garden/blob/main/pages/" + quote(manual.name)
             lines.append(f"- [MicroFreak manual: {readable_links('[[' + reference + ']]')}]({manual_url}) is linked from the session note.")
     if stem:
-        lines.append(f"- Commentary candidate (filename and duration): `{stem[0].name}`, {stem[1] / 60:.1f} minutes.")
+        lines.append(f"- Commentary file (filename and duration): `{stem[0].name}`, {stem[1] / 60:.1f} minutes.")
     if transcript or transcribe:
         if transcribe and stem:
             valid, reason = transcribe_stem(stem[0], model)
@@ -302,7 +302,7 @@ def draft(project: Path, garden: Path, note: Path, transcript: Path | None = Non
     lines += ["", "## Review notes",
         "- Ableton track names alone do not establish preset changes.",
         "- Ableton MIDI clips " + ("contain program-change values; inspect the active clips before naming presets." if has_program_changes else "have no program-change values that identify presets."),
-        "- The proposed description needs a listening check.", "",
+        "- The proposed description comes from the source note; the AI checks it before preparing the publication PR.", "",
     ]
     if handoff.resolve().is_relative_to(garden.resolve()):
         link = "../" + quote(handoff.resolve().relative_to(garden.resolve()).as_posix())

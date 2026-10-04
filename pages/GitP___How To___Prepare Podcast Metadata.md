@@ -1,13 +1,14 @@
 logseq-entity:: [[Logseq/Entity/Diataxis/How To]]
 see-also:: [[GitP/House/Back]], [[GitP/House/Front]], [[GitP/mise/Task/episode/draft]]
 - # Prepare Podcast Metadata
+	- This is a technical reference for the AI assistant preparing a GitP episode. The recording and publication steps for the human are in [[GitP/How To/Draft an Episode from Session Assets]].
 	- ## Overview
-		- After gathering session assets and selecting the episode audio, collect the garden note, Ableton track names, MP3 checksum, and optional transcription assessment on a session assets page. Export selected episode fields as JSON for the podcast website to import.
+		- After converting the exported episode WAV to MP3, collect the garden note, Ableton track names, MP3 checksum, on a session assets page. Export selected episode fields as JSON for the podcast website to import.
 		- The JSON supplies a proposed title and description. A public MP3 URL adds verified enclosure metadata. Gitpa keeps the final copy, episode page, GUID, publication time, and publication decision.
 		- Start with [[GitP/How To/Draft an Episode from Session Assets]] when only raw recordings and notes are available.
 	- ## When the export helps
 		- For the September 24 recording, the session note supplies the recording date and description; the prepared MP3 supplies the file size. The JSON lets Gitpa import those fields without retyping them.
-		- If a recording has no release MP3 yet, gather and assess its assets first. A JSON export is not needed to keep notes or draft copy in the garden.
+		- If a recording has no release MP3 yet, convert the exported WAV first. A JSON export is not needed to keep notes or draft copy in the garden.
 		- A permanent uploaded MP3 URL can be checked against the local file before adding its URL, byte length, and media type to the podcast feed.
 	- ## Prerequisites
 		- An Ableton project directory whose name contains the recording date as `YY.MM.DD`, a prepared MP3, and a session note in this garden's `pages/` directory.
@@ -27,12 +28,12 @@ see-also:: [[GitP/House/Back]], [[GitP/House/Front]], [[GitP/mise/Task/episode/d
 			- The task checks media type, length, and the opening audio range against the prepared MP3, plus the Backblaze SHA-1 when supplied. Successful verification adds `audio_url`, `audio_length`, and `audio_type` to the JSON. The session asset page records the local SHA-256.
 			- If speech recognition is useful, pass `--transcript /path/to/whisper.json` to assess existing output. On Apple Silicon macOS, `--transcribe` invokes [[GitP/mise/Task/episode/transcribe]] to run local MLX Whisper on a matching commentary stem; `--model` selects the model. Check recognized speech against the recording before using it in public copy.
 		- ### 3. Review and import the JSON
-			- Read the session assets and listen to the recording. [[GitP/Session/26/09/24 Thu/Session Assets]] and [its JSON export](../assets/GitP/Session/2026/09/24/handoff.json) provide an example.
+			- Check the session assets against the source log and prepared MP3 metadata. [[GitP/Session/26/09/24 Thu/Session Assets]] and [its JSON export](../assets/GitP/Session/2026/09/24/handoff.json) provide an example.
 			- From the Gitpa checkout, import the JSON:
 				- ~~~sh
 				  mise run episode:import -- /path/to/garden/assets/GitP/Session/2026/09/24/handoff.json
 				  ~~~
-			- The importer creates an unpublished draft, preserves existing episode copy and publication identity, and rejects conflicting media metadata. Review the public page and feed before publication.
+			- The importer creates an unpublished draft, preserves existing episode copy and publication identity, and rejects conflicting media metadata. Prepare and check the publication changes in a Gitpa PR. The human listens to the linked episode MP3 and merges that PR to publish.
 	- ## Troubleshooting
 		- An existing session asset page or JSON export stops preparation before inspection. For a new comparison, choose fresh destinations for both outputs:
 			- ~~~sh
