@@ -6,6 +6,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- A page whose job is to define one custom property belonging to a single entity type: what the property means, which values are permitted, and how an instance uses it.
 		- Not an instance: a shared convention on [[Logseq/Frontmatter]] (those apply to every page, not one type); a [[Logseq/Entity/Definition]] page (that defines an entity type, not a property); an individual permitted value.
 	- ## Naming and namespace
+		- Ownership follows the namespace: `Logseq/Entity/<Type>/Frontmatter/<key>` belongs to `Logseq/Entity/<Type>`. A separate ownership property or body section would repeat that relationship.
 		- A Frontmatter Definition lives under its owning type at `Logseq/Entity/<Type>/Frontmatter/<key>`, where `<key>` is the literal frontmatter key it defines, in kebab-case to match the `::` property (for example `dotfiles-dep-stage`).
 		- The `/Frontmatter/` segment is the boundary: above it is the entity definition; at and below it are that type's frontmatter schema and values.
 	- ## Permitted values
@@ -16,7 +17,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- On instances, set `alias:: [[<key>]]` to the literal key the page defines, as `alias:: [[logseq-entity-hierarchy-type]]` on [[Logseq/Entity/Hierarchy/Frontmatter/Type]]. Clicking a key in `<key>:: <value>` opens the page `[[<key>]]`, and the alias makes that page the definition.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape (body)
-		- Logseq Flavored Markdown. Suggested sections: the property's **meaning**, its **permitted values** (link the value pages, in order), any **rules** between values, and the **owning type**.
+		- Logseq Flavored Markdown. Suggested sections: the property's **meaning**, its **permitted values** (link the value pages, in order), any **rules** between values, and ownership when the namespace does not already identify it.
 	- ## Relationships to other types
 		- [[Logseq/Entity/Definition]] — defines entity *types*; a Frontmatter Definition defines one *property* a type adds. A type page links its Frontmatter Definitions from its own `## Frontmatter` section.
 		- [[Schema]] — a Frontmatter Definition is a schema: a declared shape a property's value must satisfy to count as valid.
