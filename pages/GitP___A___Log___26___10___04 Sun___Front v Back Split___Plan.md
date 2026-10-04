@@ -1,4 +1,4 @@
-- # Front and Back of House
+# Front and Back of House
 	- [[GitP/House/Back]] owns session evidence, recording preparation, episode metadata assembly, and media uploads in [[Person/codekiln/GitHub/logseq-encode-garden]]. Raw sessions remain in `~/Documents/ableton/GitP`, with their future storage covered by [[GitP/A/Log/26/10/04 Sun/Dvc for Knowledge Gardens/Plan]].
 	- [[GitP/House/Front]] owns the public episode selection, final copy, artwork, web pages, RSS, and site deployment in [[Person/codekiln/GitHub/gitpa]].
 	- The handoff is an explicit episode record with permanent public media URLs. Front of House reviews the record, adds its publication decision, and builds the public page and feed.
@@ -17,7 +17,7 @@
 		- Preserve each already published GUID, publication timestamp, page URL, and enclosure URL through the migration. Front of House keeps its editable publication record; garden release metadata owns the uploaded object's identity and verification.
 		- [[GitP/A/Log/26/10/04 Sun/Front v Back Split/Plan/Sep25 Handoff]] provides a working example using the current September 25 publication fields and verified public media headers.
 	- Next actions are in [[GitP/A/Log/26/10/04 Sun/Podcast/Plan]], starting with the September 24 draft and the Mac credential-cache trial.
-	- ## Migration
+	- ## Migration - [[Ghost Gardener]] please
 		- DONE Split the September 24 draft in PR #9: place the extraction script, source-note output, and optional transcription in the garden; leave the curated page and draft publication record in Gitpa. Keep the episode unpublished until the prepared MP3 and description have been reviewed.
 			- [Gather session assets and prepare podcast drafts · Garden PR #176](https://github.com/codekiln/logseq-encode-garden/pull/176) is merged. It adds the gathering skill, garden preparation tasks, September 24 session assets, and JSON export.
 			- [Import garden handoffs and draft September 24 · Gitpa PR #9](https://github.com/codekiln/gitpa/pull/9) keeps the public draft and imports selected fields while preserving editorial copy and episode identity.

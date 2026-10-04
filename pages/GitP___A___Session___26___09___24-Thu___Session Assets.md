@@ -1,4 +1,5 @@
 # Session Assets
+	- TODO this page was created without human oversight and does NOT represent human preferences about a useful page structure for GitP. Either remove or adapt. --codekiln
 	- Episode: GitP.26.09.24
 	- [Podcast metadata JSON](../assets/GitP/Session/2026/09/24/handoff.json)
 	- Session: [[GitP/A/Session/26/09/24-Thu]]

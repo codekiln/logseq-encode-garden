@@ -1,5 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Diataxis/How To]]
-see-also:: [[GitP/House/Back]], [[GitP/House/Front]], [[GitP/mise/Task/episode/draft]]
+see-also:: [[GitP/mise/Task/episode/draft]]
+
 - # Prepare Podcast Metadata
 	- This is a technical reference for the AI assistant preparing a GitP episode. The recording and publication steps for the human are in [[GitP/How To/Draft an Episode from Session Assets]].
 	- ## Overview
