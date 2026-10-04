@@ -2,7 +2,7 @@ tags:: [[Diataxis/Concept]]
 logseq-entity:: [[Logseq/Entity/Concept]]
 see-also:: [[fnox/How To/Use Apple Secure Enclave Touch ID]]
 
-- # [[fnox]] golden path
+- # [[fnox]] [golden path](https://fnox.jdx.dev/guide/what-is-fnox#the-golden-path)
 	- ## Overview
 		- The **golden path** is the workflow [[fnox]] recommends for a team that already keeps secrets in a remote vault such as [[1Password]]: the vault stays the single source of truth, and each person reads from a personal encrypted cache on their own machine.
 		- Upstream describes it in [What is fnox?](https://fnox.jdx.dev/guide/what-is-fnox#the-golden-path) and walks through it in [Connect a vault and cache locally](https://fnox.jdx.dev/guide/golden-path.html). Both were read from a local clone of [jdx/fnox](https://github.com/jdx/fnox) at commit `03e9aee` (2026-10-01).
