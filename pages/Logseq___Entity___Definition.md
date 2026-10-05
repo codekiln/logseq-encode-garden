@@ -1,6 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
 see-also:: [[Logseq/Entity/Definition/Discussion]]
-
 - # Entity Definition
 	- Each Entity Definition page describes a type of real-world entity that may be tracked in a page [[Knowledge Garden]] page. Entity here means something roughly analagous
 	- ## [[Logseq/Entity/Definition/Discussion]]
@@ -24,5 +23,10 @@ see-also:: [[Logseq/Entity/Definition/Discussion]]
 			- relationships to other types
 			- examples
 		- Keep shared conventions on [[Logseq/Frontmatter]] and [[Logseq/Pref]] rather than repeating them on each type page.
+	- ## Companion tasks
+		- `entity-tasks::` declares the [[Logseq/Entity/Mise/Task]] reference pages needed to work with instances of this entity. The property is a comma-separated list of wikilinks in the definition's frontmatter; an absent property declares no companion tasks.
+		- [[Logseq/Entity/Proxy/Page/mise/Task/sync]] follows an instance's `logseq-entity::` links, imports its entity definitions, and follows each definition's `entity-tasks::` links. Task references declare their executable files and required task dependencies through the companion-file contract on [[Logseq/Entity/Mise/Task]].
+		- Shared entity definitions and task dependencies are visited once per sync. Cyclic relationships are allowed and terminate after their pages have been visited.
+		- A referenced entity definition with no source file is reported as a logical page. A declared companion task or task dependency requires a source reference page and its mapped implementation files; missing task content stops application.
 	- ## Relationship to [[Logseq/Entity]]
 		- [[Logseq/Entity]] is the general conceptual model — what an entity is and how any page is marked as one. This page is the entity type whose instances are the definition pages themselves, so the garden's set of entity types is queryable through its backlinks rather than kept as a hand-maintained list.

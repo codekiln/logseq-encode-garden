@@ -1,6 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
 alias:: [[Proxy Page]], [[Logseq Proxy Page]]
-
+entity-tasks:: [[Logseq/Entity/Proxy/Page/mise/Task/sync]]
 - # Proxy Page
 	- In this garden, **Proxy Page** marks a page whose body is mirrored from a page in another [[Logseq/Garden]], so one garden can read a page that lives in another without that page being moved or duplicated by hand. See [[Logseq/Idea/Proxy]] for the motivation.
 	- ## What counts as an instance
@@ -45,6 +45,13 @@ alias:: [[Proxy Page]], [[Logseq Proxy Page]]
 		- **Property block:** the run of `key:: value` lines from the top of the file, ending at the first line of any other kind — a blank line, a `- # Heading`, or plain text. A destination with no property block gains one above its first line, holding the proxy keys.
 		- **Assets:** every `../assets/<path>` the source body links to is copied to the same `assets/<path>` here, replacing what is there. A missing source asset is reported and the sync goes on.
 		- **Report:** the source path, the destination path, the proxy key values written, whether it was a first copy or a re-sync, and the assets copied.
+	- ## Executable sync
+		- [[Logseq/Entity/Proxy/Page/mise/Task/sync]] previews the page, entity definitions, companion task references, implementation files, and assets imported by a sync. `--apply` applies the previewed changes.
+		- An instance's `logseq-entity::` links lead to its source entity definitions. Each definition's `entity-tasks::` declares companion task references, whose file mappings and task dependencies follow [[Logseq/Entity/Mise/Task]]. The sync visits shared and cyclic dependencies once.
+		- `.logseq-proxy/manifest.json` in the destination graph records source repository and graph root, logical page identity, source-to-destination file mappings, ownership, and last imported content hashes.
+		- Re-sync refreshes source changes where imported implementation files still match their recorded hashes. Local implementation edits, unowned destination files, and competing source claims produce conflicts before application.
+		- Destination page properties survive re-sync under the existing frontmatter rules; source page bodies refresh. Files removed from upstream task mappings are reported as cleanup candidates and retained locally.
+		- A preview reports logical entity definitions without files separately from missing declared tasks or implementation files. Missing source assets remain warnings; missing task requirements stop application.
 	- ## Examples in this garden
 		- [[Book/ML with PyTorch and Scikit-Learn]]
 		- [[Person/Thomas Parr/Book/2022/Active Inference]] (legacy name shape)
