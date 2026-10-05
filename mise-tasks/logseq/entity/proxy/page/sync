@@ -1,0 +1,71 @@
+#!/usr/bin/env python3
+#MISE description="Preview or apply Logseq page proxies and their companion tasks"
+#MISE tools={python="3.13.16"}
+#USAGE flag "--source <graph>" help="Source graph root (inferred for existing proxies)"
+#USAGE flag "--destination <graph>" required=#true help="Destination graph root"
+#USAGE flag "--page <name>" help="Exact logical page name"
+#USAGE flag "--codeforge-url <url>" help="Source page URL on a code forge"
+#USAGE flag "--apply" help="Apply the previewed import"
+#USAGE flag "--recover" help="Roll back an interrupted import, then exit"
+"""Task reference: [[Logseq/Entity/Proxy/Page/mise/Task/sync]]."""
+import argparse
+import os
+from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent / 'lib'))
+from core import SyncError, apply_plan, build_page_plan, recover_transaction
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--source', type=Path)
+    parser.add_argument('--destination', type=Path, required=True)
+    parser.add_argument('--page')
+    parser.add_argument('--codeforge-url')
+    parser.add_argument('--apply', action='store_true')
+    parser.add_argument('--recover', action='store_true')
+    args = list(sys.argv[1:])
+    # Mise usage supplies parsed options through environment variables.
+    if not args and 'usage_destination' in os.environ:
+        for name in ('source', 'destination', 'page', 'codeforge_url'):
+            if os.environ.get('usage_' + name):
+                args.extend(['--' + name.replace('_', '-'), os.environ['usage_' + name]])
+        for name in ('apply', 'recover'):
+            if os.environ.get('usage_' + name) == 'true':
+                args.append('--' + name)
+    options = parser.parse_args(args)
+    try:
+        if options.recover:
+            recover_transaction(options.destination)
+            print('Interrupted import rolled back; run a fresh preview.')
+            return 0
+        if not options.page:
+            parser.error('--page is required unless --recover is used')
+        plan = build_page_plan(options.source, options.destination, options.page, options.codeforge_url)
+        try:
+            import companions
+        except ModuleNotFoundError as error:
+            if error.name != 'companions':
+                raise
+        else:
+            companions.extend_plan(plan)
+        print('\n'.join(plan.details))
+        for warning in plan.warnings:
+            print('Warning: ' + warning)
+        for relative, data in sorted(plan.writes.items()):
+            status = 'unchanged' if plan.expected[relative] == data else 'write'
+            print(f'{status}: {relative}')
+        if options.apply:
+            apply_plan(plan)
+            print('Applied.')
+        else:
+            print('Preview only. Use --apply to write these changes.')
+    except (ValueError, OSError) as error:
+        print(f'Cannot sync: {error}', file=sys.stderr)
+        return 1
+    return 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())
