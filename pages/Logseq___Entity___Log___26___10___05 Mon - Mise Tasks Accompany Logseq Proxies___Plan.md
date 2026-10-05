@@ -10,7 +10,7 @@
 		- Runtime tools belong in the file task's mise metadata. Shared packages and other configuration requirements are declared dependencies.
 		- The proxy sync task is invoked with `mise run logseq:entity:proxy:page:sync`. Its executable lives at `mise-tasks/logseq/entity/proxy/page/sync`.
 		- The task reference links the executable, and the executable links the maintained task reference.
-		- Proposed task reference name: `Logseq/Entity/Proxy/Page/mise/Task/sync`, following the existing task-page naming convention. Settle this name before implementation; `Logseq/Entity/Proxy/Page/Sync` is the alternative in the original log.
+		- Task reference name: `Logseq/Entity/Proxy/Page/mise/Task/sync`, following the existing task-page naming convention.
 	- ## Implementation sequence
 		- TODO Define the companion-task contract on [[Logseq/Entity/Definition]], [[Logseq/Entity/Mise/Task]], and [[Logseq/Entity/Proxy/Page]].
 			- Describe task relationships, file mapping, dependency requirements, and update ownership. Document proxy sync as a task instance.
