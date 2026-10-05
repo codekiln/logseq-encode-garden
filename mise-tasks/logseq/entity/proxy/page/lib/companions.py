@@ -1,0 +1,273 @@
+"""Import explicitly declared file tasks with conservative update ownership."""
+from __future__ import annotations
+
+import hashlib
+import json
+from pathlib import Path, PurePosixPath
+import re
+import stat
+import subprocess
+from urllib.parse import urlsplit
+import tomllib
+
+import core
+
+MANIFEST = '.logseq-proxy/manifest.json'
+
+
+def refs(value):
+    return re.findall(r'\[\[([^\]]+)\]\]', value or '')
+
+
+def repository(graph):
+    for parent in (graph, *graph.parents):
+        if (parent / '.git').exists():
+            return parent
+    return graph
+
+
+def repository_identity(repo):
+    result = subprocess.run(['git', '-C', str(repo), 'remote', 'get-url', 'origin'], capture_output=True, text=True)
+    if result.returncode == 0:
+        remote = result.stdout.strip()
+        if '://' in remote:
+            parsed = urlsplit(remote)
+            address = (parsed.hostname or '') + '/' + parsed.path.lstrip('/')
+        elif ':' in remote and not remote.startswith('/'):
+            host, path = remote.split(':', 1)
+            address = host.split('@')[-1] + '/' + path
+        else:
+            address = remote
+        return address.removesuffix('.git').rstrip('/')
+    return str(repo.resolve())
+
+
+def relative(value, label):
+    path = PurePosixPath(value)
+    if not value or path == PurePosixPath('.') or path.is_absolute() or '..' in path.parts or '\\' in value or path.as_posix() != value:
+        raise ValueError(f'{label}: expected a normalized repository-relative path: {value}')
+    return path
+
+
+def safe_file(root, value, label):
+    path = relative(value, label)
+    current = root
+    for part in path.parts:
+        current = current / part
+        if current.is_symlink():
+            raise ValueError(f'{label}: symlink is unsupported: {value}')
+    return current
+
+
+def digest(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def compatible_config(root):
+    for filename in ('mise.toml', '.mise.toml'):
+        config = root / filename
+        if config.exists():
+            parsed = tomllib.loads(config.read_text())
+            includes = parsed.get('task_config', {}).get('includes')
+            if includes is not None and not any(str(value).rstrip('/') in ('mise-tasks', './mise-tasks') for value in includes):
+                raise ValueError(f'{config}: task_config.includes must include mise-tasks to discover imported tasks')
+            return
+
+
+def load_manifest(data, label):
+    try:
+        manifest = json.loads(data)
+        if not isinstance(manifest, dict) or manifest.get('version') != 1 or not isinstance(manifest.get('files'), dict):
+            raise ValueError('unsupported schema')
+        for section in ('files', 'imports', 'pages', 'tasks', 'declarations'):
+            if not isinstance(manifest.get(section, {}), dict):
+                raise ValueError(f'{section} must be an object')
+        for record in manifest.get('files', {}).values():
+            if not isinstance(record, dict) or not isinstance(record.get('source'), list) or len(record['source']) != 3 or not all(isinstance(item, str) for item in record['source']) or not isinstance(record.get('mode'), int) or not isinstance(record.get('sha256'), str):
+                raise ValueError('invalid file ownership record')
+        for record in manifest.get('tasks', {}).values():
+            if not isinstance(record, dict) or not isinstance(record.get('mapping'), dict) or not all(isinstance(key, str) and isinstance(value, str) for key, value in record['mapping'].items()):
+                raise ValueError('invalid task mapping')
+        for record in manifest.get('declarations', {}).values():
+            if not isinstance(record, dict) or not all(isinstance(key, str) and isinstance(value, str) for key, value in record.items()):
+                raise ValueError('invalid companion declaration')
+        for record in manifest.get('imports', {}).values():
+            if not isinstance(record, dict) or not isinstance(record.get('files'), list) or not all(isinstance(item, str) for item in record['files']):
+                raise ValueError('invalid import record')
+        return manifest
+    except (ValueError, AttributeError) as exc:
+        raise ValueError(f'{label}: invalid import manifest: {exc}') from exc
+
+
+def source_manifest(plan):
+    path = safe_file(plan.source_root, MANIFEST, 'source manifest')
+    if not path.exists():
+        return {}
+    data = path.read_bytes()
+    plan.source_expected[path] = data
+    return load_manifest(data, path)
+
+
+def declarations(props):
+    return {key: value for key, value in props.items()
+            if key in ('logseq-entity', 'entity-tasks', 'source-link') or key.startswith('task-')}
+
+
+def source_properties(plan, page, file):
+    props, _ = core.parse_properties(file.read_text())
+    if props.get('logseq-proxy-url'):
+        latest = source_manifest(plan).get('declarations', {}).get(page)
+        if latest is not None:
+            for key in list(props):
+                if key in ('logseq-entity', 'entity-tasks', 'source-link') or key.startswith('task-'):
+                    del props[key]
+            props.update(latest)
+    return props
+
+
+def task_spec(plan, page, props):
+    required = ('task-owner', 'task-config-root', 'task-name', 'source-link', 'task-entrypoint', 'task-files')
+    for key in required:
+        if not props.get(key):
+            raise ValueError(f'{page}: missing {key}')
+    repo = repository(plan.source_root)
+    scope = props['task-config-root']
+    if scope != '.':
+        relative(scope, f'{page} task-config-root')
+    entry = relative(props['task-entrypoint'], f'{page} task-entrypoint')
+    prefix = PurePosixPath(scope) / 'mise-tasks' if scope != '.' else PurePosixPath('mise-tasks')
+    name = props['task-name']
+    name_path = PurePosixPath(*name.split(':'))
+    if not name or any(not part or part in ('.', '..') for part in name.split(':')):
+        raise ValueError(f'{page}: invalid task-name {name}')
+    expected_entry = prefix / name_path
+    if entry != expected_entry:
+        raise ValueError(f'{page}: task-entrypoint must be {expected_entry} for task-name {name}')
+    try:
+        mapping = json.loads(props['task-files'])
+    except json.JSONDecodeError as exc:
+        raise ValueError(f'{page}: task-files must be a JSON object') from exc
+    if not isinstance(mapping, dict) or not mapping or not all(isinstance(k, str) and isinstance(v, str) for k, v in mapping.items()):
+        raise ValueError(f'{page}: task-files must map source paths to destination paths')
+    if mapping.get(str(entry)) != str(PurePosixPath('mise-tasks') / name_path):
+        raise ValueError(f'{page}: task-files must map the entrypoint to mise-tasks/{name_path}')
+    imported = source_manifest(plan).get('tasks', {}).get(page, {})
+    compatible_config(plan.source_root if imported else repo / scope)
+    identity = [repository_identity(repo), plan.source_root.relative_to(repo).as_posix(), props['task-owner'], scope, name]
+    files = []
+    for source, destination in mapping.items():
+        dest = relative(destination, f'{page} destination')
+        if dest.parts[0] != 'mise-tasks' or len(dest.parts) < 2:
+            raise ValueError(f'{page}: task destinations must be implementation files under mise-tasks: {destination}')
+        if any(part in ('.git', '.logseq-proxy') for part in dest.parts):
+            raise ValueError(f'{page}: reserved destination {destination}')
+        actual_source = imported.get('mapping', {}).get(source, source)
+        if imported and relative(actual_source, f'{page} imported source').parts[0] != 'mise-tasks':
+            raise ValueError(f'{page}: imported source must be under mise-tasks')
+        actual_root = plan.source_root if imported else repo
+        if any(part in ('.git', '.logseq-proxy') for part in relative(actual_source, f'{page} source').parts):
+            raise ValueError(f'{page}: reserved implementation source {actual_source}')
+        file = safe_file(actual_root, actual_source, f'{page} source')
+        safe_file(plan.destination_root, destination, f'{page} destination')
+        if not file.is_file():
+            raise ValueError(f'{page}: missing implementation file {source}')
+        mode = stat.S_IMODE(file.stat().st_mode)
+        if source == str(entry) and not mode & 0o111:
+            raise ValueError(f'{page}: entrypoint is not executable: {source}')
+        data = file.read_bytes()
+        plan.source_expected[file] = data
+        plan.source_modes[file] = mode
+        source_relative = file.relative_to(repo).as_posix()
+        files.append((source_relative, destination, data, mode))
+    return identity, files
+
+
+def extend_plan(plan):
+    """Extend the page plan without writing to either garden."""
+    compatible_config(plan.destination_root)
+    manifest_path = safe_file(plan.destination_root, MANIFEST, 'manifest')
+    if manifest_path.exists():
+        manifest = load_manifest(manifest_path.read_bytes(), manifest_path)
+    else:
+        manifest = {'version': 1, 'files': {}, 'imports': {}}
+    records = manifest['files']
+    queue = list(plan.pages)
+    visited = set()
+    claims = {}
+    required_tasks = set()
+    contents = {}
+    while queue:
+        page = queue.pop()
+        if page in visited:
+            continue
+        visited.add(page)
+        file = core.resolve_page(plan.source_root, page)
+        if file is None or not file.is_file():
+            plan.warnings.append(f'Entity definition {page} has no source file; no companion declaration can be read')
+            continue
+        props = source_properties(plan, page, file)
+        manifest.setdefault('declarations', {})[page] = declarations(props)
+        for entity in refs(props.get('logseq-entity')):
+            entity_file = core.resolve_page(plan.source_root, entity)
+            if entity_file is None or not entity_file.is_file():
+                plan.warnings.append(f'Entity definition {entity} has no source file; no companion declaration can be read')
+                continue
+            core.add_page(plan, entity)
+            queue.append(entity)
+        task_refs = refs(props.get('entity-tasks')) + refs(props.get('task-dependencies'))
+        for task in task_refs:
+            task_file = core.resolve_page(plan.source_root, task)
+            if task_file is None or not task_file.is_file():
+                raise ValueError(f'{page}: missing required task reference {task}')
+            task_props = source_properties(plan, task, task_file)
+            task_spec(plan, task, task_props)
+            required_tasks.add(task)
+            core.add_page(plan, task)
+            queue.append(task)
+        if page not in required_tasks and not props.get('task-files'):
+            if props.get('task-entrypoint'):
+                raise ValueError(f'{page}: missing task-files')
+            continue
+        identity, files = task_spec(plan, page, props)
+        manifest.setdefault('tasks', {})[page] = {'identity': identity, 'mapping': json.loads(props['task-files'])}
+        for source, destination, data, mode in files:
+            source_identity = [identity[0], identity[1], source]
+            claim = {'source': source_identity, 'sha256': digest(data), 'mode': mode}
+            if destination in claims and claims[destination]['source'] != source_identity:
+                raise ValueError(f'Competing source files claim {destination}')
+            claims[destination] = claim
+            contents[destination] = data
+    repo = repository(plan.source_root)
+    page_records = manifest.setdefault('pages', {})
+    for page in plan.pages:
+        identity = [repository_identity(repo), plan.source_root.relative_to(repo).as_posix(), page]
+        previous = page_records.get(page)
+        if previous and previous != identity:
+            raise ValueError(f'{page}: page already imported from a different source graph')
+        page_records[page] = identity
+    for destination, claim in claims.items():
+        path = safe_file(plan.destination_root, destination, 'task destination')
+        previous = records.get(destination)
+        if previous and previous.get('source') != claim['source']:
+            raise ValueError(f'{destination}: already claimed by a different source')
+        if path.exists():
+            if not path.is_file():
+                raise ValueError(f'{destination}: destination is not a regular file')
+            if not previous:
+                raise ValueError(f'{destination}: existing implementation is unowned; move it aside before importing')
+            if digest(path.read_bytes()) != previous.get('sha256') or stat.S_IMODE(path.stat().st_mode) != previous.get('mode'):
+                raise ValueError(f'{destination}: imported implementation was edited locally')
+        elif previous:
+            raise ValueError(f'{destination}: imported implementation was deleted locally')
+        core.add_write(plan, destination, contents[destination], mode=claim['mode'])
+        records[destination] = claim
+    repo = repository(plan.source_root)
+    import_key = repository_identity(repo) + '::' + plan.source_root.relative_to(repo).as_posix() + '::' + plan.page
+    imports = manifest.setdefault('imports', {})
+    previous_files = imports.get(import_key, {}).get('files', [])
+    for destination in previous_files:
+        if destination not in claims:
+            plan.warnings.append(f'{destination}: removed upstream; cleanup candidate retained locally')
+    imports[import_key] = {'source_graph': str(plan.source_root.resolve()), 'page': plan.page, 'files': sorted(set(previous_files) | set(claims))}
+    if plan.pages or claims or manifest_path.exists():
+        core.add_write(plan, MANIFEST, (json.dumps(manifest, indent=2, sort_keys=True) + '\n').encode(), mode=0o644)

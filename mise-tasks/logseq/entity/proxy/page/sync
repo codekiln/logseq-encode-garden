@@ -48,6 +48,7 @@ def main():
         except ModuleNotFoundError as error:
             if error.name != 'companions':
                 raise
+            raise SyncError('Missing companion importer lib/companions.py; restore the task implementation before syncing') from error
         else:
             companions.extend_plan(plan)
         print('\n'.join(plan.details))
