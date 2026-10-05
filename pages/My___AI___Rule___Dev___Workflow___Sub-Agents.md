@@ -1,0 +1,1 @@
+- in this workflow, a more powerful agent should create worker agents for the components of the problem. if using [[My/AI/Rule/Dev/Workflow/Issue/GitHub]] with sub-issues, try to have a worker agent per sub-issue.

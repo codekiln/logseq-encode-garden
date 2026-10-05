@@ -1,0 +1,3 @@
+- AI agents should work in a [[git worktree]] according to [[My/Pref/Dev/Tool/git/Worktree]], following [[My/AI/Rule/How to Communicate Effectively With Me/A pointer carries a link, an id with a slug, and a reason]] so that the ticket that agent is working on is in the worktree and branch name.
+- Ticket here could be [[JIRA]] id and slug, [[GitHub/Issue]], or other issue tracker issue and slug.
+- When finished, the agent should submit a PR and open it in the browser when ready unless I say to use [[tuicr]], in which case they should open it in a well-named tmux window with the pr diff open. I will leave comments, and it should update the PR. After merge, the agent should ensure the root of the repository is sync'd up with origin/main and clean up.
