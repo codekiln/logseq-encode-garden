@@ -20,6 +20,11 @@ see-also:: [[GitP/House/Back]], [[GitP/How To/Prepare Podcast Metadata]]
 		- ### Publication PR
 			- The AI fills in the episode's MP3 and preset links in this garden, then mirrors those pages into Gitpa and prepares a publication PR.
 			- The PR includes a direct link to the one episode MP3, its episode title, and a short description so the recording is easy to find and approve.
+	- ## Check public media
+		- Open the asset page’s URL without signing in. An MP3 should return `audio/mpeg`; artwork should return its image format, such as `image/gif`.
+		- Request a small MP3 range with `curl --range 0-1023 --dump-header - --output /dev/null <recording-url>`. A seekable recording returns `206` with a `Content-Range` header.
+		- In Gitpa’s preview, play and seek the recording, load the artwork, and follow preset and MIDI download links.
+		- If the download host fails DNS resolution, compare its DNS answer through another resolver before changing the asset URL. A DNS failure alone says nothing about bucket access.
 	- ## Listen and publish
 		- Listen to the episode MP3 once and give it a go or a no-go.
 		- For a go, merge the Gitpa PR. Gitpa's CI publishes the episode after the merge.
