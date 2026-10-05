@@ -197,6 +197,24 @@ class PageSyncTests(unittest.TestCase):
         (registry / f'logseq_local_{encoded}.transit').touch()
         self.assertEqual(resolve_source(self.destination, self.page, registry), self.source)
 
+    def test_inferred_source_url_omits_remote_credentials(self):
+        repo = self.root / 'authenticated-repo'
+        repo.mkdir()
+        source = self.graph('authenticated-repo/source')
+        page = source / 'pages/Example.md'
+        page.write_text('- Example\n')
+        subprocess.run(['git', 'init', '-q', str(repo)], check=True)
+        subprocess.run(['git', '-C', str(repo), 'remote', 'add', 'origin',
+                        'https://fixture-user:fixture-password@example.test/owner/repo.git'], check=True)
+        plan = build_page_plan(source, self.destination, 'Example')
+        output = plan.writes['pages/Example.md'].decode()
+        self.assertIn('https://example.test/owner/repo/blob/main/source/pages/Example.md', output)
+        self.assertNotIn('fixture-user', output)
+        self.assertNotIn('fixture-password', output)
+        with self.assertRaisesRegex(SyncError, 'omit embedded credentials'):
+            build_page_plan(source, self.destination, 'Example',
+                            'https://fixture-user:fixture-password@example.test/owner/repo/blob/main/source/pages/Example.md')
+
     def test_codeforge_inference_nested_graph_encoded_filename(self):
         repo = self.root / 'repo'
         repo.mkdir()

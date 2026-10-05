@@ -142,9 +142,12 @@ def infer_codeforge(root: Path, source: Path) -> str | None:
     elif remote.startswith('ssh://'):
         p = urlparse(remote)
         remote = 'https://' + (p.hostname or '') + p.path
-    remote = remote.removesuffix('.git').rstrip('/')
-    if not remote.startswith('https://'):
+    parsed_remote = urlparse(remote)
+    if parsed_remote.scheme != 'https' or not parsed_remote.netloc:
         return None
+    remote = parsed_remote._replace(
+        netloc=parsed_remote.netloc.rsplit('@', 1)[-1], query='', fragment=''
+    ).geturl().removesuffix('.git').rstrip('/')
     branch = run_local('git', 'symbolic-ref', '--short', 'refs/remotes/origin/HEAD', cwd=root).removeprefix('origin/') or 'main'
     relative = source.relative_to(Path(repo))
     marker = '/-/blob/' if 'gitlab' in urlparse(remote).netloc else '/blob/'
@@ -153,6 +156,8 @@ def infer_codeforge(root: Path, source: Path) -> str | None:
 
 def validate_codeforge(url: str, root: Path, source: Path) -> None:
     parsed = urlparse(url)
+    if parsed.username is not None or parsed.password is not None:
+        raise SyncError('Code forge URLs must omit embedded credentials')
     parts = parsed.path.split('/')
     if parsed.scheme != 'https' or not parsed.netloc or 'blob' not in parts or unquote(parts[-1]) != source.name or parts[-2:-1] != ['pages']:
         raise SyncError(f'Code forge URL names a different source file: {url}')
