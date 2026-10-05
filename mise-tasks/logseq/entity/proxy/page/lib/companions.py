@@ -135,14 +135,10 @@ def task_spec(plan, page, props):
     if scope != '.':
         relative(scope, f'{page} task-config-root')
     entry = relative(props['task-entrypoint'], f'{page} task-entrypoint')
-    prefix = PurePosixPath(scope) / 'mise-tasks' if scope != '.' else PurePosixPath('mise-tasks')
     name = props['task-name']
     name_path = PurePosixPath(*name.split(':'))
-    if not name or any(not part or part in ('.', '..') for part in name.split(':')):
+    if not name or '/' in name or '\\' in name or any(not part or part in ('.', '..') for part in name.split(':')):
         raise ValueError(f'{page}: invalid task-name {name}')
-    expected_entry = prefix / name_path
-    if entry != expected_entry:
-        raise ValueError(f'{page}: task-entrypoint must be {expected_entry} for task-name {name}')
     try:
         mapping = json.loads(props['task-files'])
     except json.JSONDecodeError as exc:
@@ -152,7 +148,6 @@ def task_spec(plan, page, props):
     if mapping.get(str(entry)) != str(PurePosixPath('mise-tasks') / name_path):
         raise ValueError(f'{page}: task-files must map the entrypoint to mise-tasks/{name_path}')
     imported = source_manifest(plan).get('tasks', {}).get(page, {})
-    compatible_config(plan.source_root if imported else repo / scope)
     identity = [repository_identity(repo), plan.source_root.relative_to(repo).as_posix(), props['task-owner'], scope, name]
     files = []
     for source, destination in mapping.items():

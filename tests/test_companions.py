@@ -163,7 +163,7 @@ class CompanionTests(unittest.TestCase):
             self.plan()
         (self.b / 'mise.toml').unlink()
         self.page('Task', self.task().replace('task-name:: demo', 'task-name:: other'))
-        with self.assertRaisesRegex(ValueError, 'task-entrypoint'):
+        with self.assertRaisesRegex(ValueError, 'map the entrypoint'):
             self.plan()
 
     def test_missing_task_contract_and_logical_entity(self):
@@ -261,9 +261,7 @@ class CompanionTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn('Updated from source', (self.b / 'pages/Thing.md').read_text())
 
-    @unittest.skipUnless(shutil.which('mise'), 'mise executable unavailable')
-    def test_mise_discovers_and_runs_imported_fixture(self):
-        self.apply()
+    def assert_mise_demo(self):
         global_config = self.b / 'empty-global.toml'
         global_config.write_text('')
         environment = dict(os.environ, MISE_GLOBAL_CONFIG_FILE=str(global_config), MISE_CONFIG_DIR=str(self.b / '.test-config'), MISE_CACHE_DIR=str(self.b / '.test-cache'), MISE_STATE_DIR=str(self.b / '.test-state'), MISE_DATA_DIR=str(self.b / '.test-data'))
@@ -273,6 +271,26 @@ class CompanionTests(unittest.TestCase):
         result = subprocess.run(['mise', 'run', 'demo'], cwd=self.b, env=environment, capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn('companion-ok', result.stdout)
+
+    @unittest.skipUnless(shutil.which('mise'), 'mise executable unavailable')
+    def test_mise_discovers_and_runs_imported_fixture(self):
+        self.apply()
+        self.assert_mise_demo()
+
+    @unittest.skipUnless(shutil.which('mise'), 'mise executable unavailable')
+    def test_custom_source_task_directory_import(self):
+        entry = '.mise/tasks/group/_default'
+        self.source(entry, '#!/bin/sh\necho companion-ok\n', 0o755)
+        (self.repo / 'mise.toml').write_text('[task_config]\nincludes = [".mise/tasks"]\n')
+        self.page('Task', self.task({entry: 'mise-tasks/demo'}).replace('task-entrypoint:: mise-tasks/demo', 'task-entrypoint:: ' + entry))
+        self.apply()
+        self.assert_mise_demo()
+
+    def test_task_name_rejects_path_separators(self):
+        for name in ('demo/child', 'demo\\child', 'demo::child'):
+            self.page('Task', self.task().replace('task-name:: demo', 'task-name:: ' + name))
+            with self.assertRaisesRegex(ValueError, 'invalid task-name'):
+                self.plan()
 
     def test_competing_source_claim_same_content(self):
         self.source('mise-tasks/lib/other', 'original\n')
