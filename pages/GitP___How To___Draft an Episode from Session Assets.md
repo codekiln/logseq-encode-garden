@@ -21,6 +21,7 @@ see-also:: [[GitP/House/Back]], [[GitP/How To/Prepare Podcast Metadata]]
 			- The AI fills in the episode's MP3 and preset links in this garden, then mirrors those pages into Gitpa and prepares a publication PR.
 			- The PR includes a direct link to the one episode MP3, its episode title, and a short description so the recording is easy to find and approve.
 	- ## Check public media
+		- GitP uses the public S3 download endpoint `https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/<page-derived filename>`. [Backblaze supports bucket names in the URL path](https://www.backblaze.com/docs/en/cloud-storage-call-the-s3-compatible-api).
 		- Open the asset page’s URL without signing in. An MP3 should return `audio/mpeg`; artwork should return its image format, such as `image/gif`.
 		- Request a small MP3 range with `curl --range 0-1023 --dump-header - --output /dev/null <recording-url>`. A seekable recording returns `206` with a `Content-Range` header.
 		- In Gitpa’s preview, play and seek the recording, load the artwork, and follow preset and MIDI download links.
