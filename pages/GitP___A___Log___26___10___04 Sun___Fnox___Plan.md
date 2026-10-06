@@ -21,6 +21,7 @@
 			  ~~~
 		- The `assets` profile selects the garden's asset credentials. `--no-defaults` leaves unrelated top-level fnox secrets out of the command. The same Mac-wide age key can decrypt separate caches in each garden.
 	- ## Run asset commands
+		- [[GitP/mise/Task/media/upload]] uploads prepared files under their existing B2 asset page names through the cached `assets` profile. `--verify-only` verifies stored content without uploading; matching objects can be checked repeatedly while the Mac is unattended.
 		- Once the DVC remote and cache are configured, an agent can fetch or upload tracked assets:
 			- ~~~sh
 			  fnox --profile assets --no-defaults exec -- dvc pull
