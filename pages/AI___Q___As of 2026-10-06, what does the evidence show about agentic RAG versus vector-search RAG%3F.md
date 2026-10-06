@@ -1,6 +1,333 @@
 logseq-entity:: [[Logseq/Entity/Question]]
-
 - # As of 2026-10-06, what does the evidence show about agentic RAG versus vector-search RAG?
 	- ## [[AI Answer]]
 		- [ChatGPT Deep Research query](https://chatgpt.com/c/6ac5079f-e8c0-83ea-86d1-6b4c2b5295db)
-		- Research report pending.
+		- **Short answer:** “Agentic RAG outperforms vector RAG” is not a valid general conclusion as of October 6, 2026. For live repository-scale coding work, iterative filesystem exploration is often a better default than one-shot vector-similarity retrieval. Hybrid, index-backed agentic retrieval becomes increasingly necessary as semantic ambiguity, corpus scale, cross-source reasoning, latency constraints, or enterprise access control dominate.
+		- **Evidence cutoff: October 6, 2026**
+		- ### Executive conclusion
+			- The defensible conclusion is **not** that “agentic RAG outperforms vector RAG” in general. The evidence supports a narrower and more useful claim:
+			- > **Agentic, tool-driven retrieval is a strong architecture for live, mutable, structurally navigable working sets—especially source repositories—while indexed lexical/dense/hybrid retrieval remains superior or necessary as corpora become large, static, cross-tenant, semantically diffuse, or subject to tight latency/cost constraints. The strongest general architecture in 2026 is usually agentic orchestration over multiple retrieval tools, not “grep instead of embeddings.”**
+			- Three results drive that conclusion.
+			- First, there is now **controlled coding-specific evidence** that repository-exploring agents beat simple one-shot retrieval baselines by large margins. The June 5, 2026 **SWE-Explore** benchmark contains 848 software issues from 203 repositories in 10 languages and evaluates whether a retrieval/exploration system locates the regions that successful coding agents actually needed. Its agentic explorers form a clearly stronger tier than BM25, TF-IDF, and a lightweight dense-RAG baseline. In a downstream controlled experiment where the same [[OpenAI/Model/GPT/5/4]] Mini-SWE-Agent receives five selected regions, issue resolution was **12.7% with BM25, 26.0% with TF-IDF, 23.3% with the dense Potion retriever, 48.0% from [[Claude/Code]]'s retrieved context, 50.3% from [[Codex]]'s, and 59.3% from CoSIL's**, versus 59.7% with oracle regions. [^1]
+			- That is the best public evidence I found for the proposition underlying the [[Claude/Code]] anecdotes. But it has an important limitation: **SWE-Explore does not compare those agents against a state-of-the-art, code-specialized dense+lexical+reranker pipeline.** Its dense baseline is deliberately lightweight. The benchmark therefore supports “iterative repository exploration beats simple one-shot retrieval on these coding tasks,” not “grep has defeated modern semantic retrieval.” SWE-Explore itself also finds that most agents still have surprisingly low line-level recall, and its ground truth is derived from successful agent trajectories rather than an exhaustive set of all valid evidence. [^1]
+			- Second, there is equally important **controlled evidence against extrapolating the coding result to large knowledge bases**. The July 30, 2026 preprint **BM25 Wins at Scale** evaluates BM25, dense retrieval, graph approaches, and a no-index File-System Agent over 28 nested corpus sizes from roughly 1,000 to 512,000 documents. The File-System Agent wins at small scale, scoring **77.4% versus BM25's 74.7%** at 1,144 documents. But BM25 overtakes it around the roughly 10-million-token regime and finishes at **50.5% versus 30.7%** at 511,959 documents. At the benchmark's “bedrock” scale the filesystem approach consumes about **226,000 query tokens versus 5,800 for BM25—roughly 39× as many**. The paper also finds rising tool-budget exhaustion as the corpus grows. [^3]
+			- That study is only one 2026 preprint, with one fictional-enterprise benchmark and a particular model/tool budget, so its crossover point should not be universalized. But it demonstrates a fundamental scaling issue: **recursive exploration is a search strategy, not an index**. Once the namespace becomes sufficiently large, letting an LLM discover candidates by repeated traversal becomes an expensive way to approximate global candidate ranking. [^3]
+			- Third, the literature strongly supports **agency over retrieval** without supporting the false binary “agent or RAG.” IRCoT at ACL 2023, FLARE at EMNLP 2023, Self-RAG at ICLR 2024, Adaptive-RAG at NAACL 2024, HybGRAG at ACL 2025, and Microsoft's 2026 AgenticRAG results all show that deciding *when, what, and how often to retrieve*, reformulating queries, switching retrieval modes, and reasoning between retrieval steps can outperform a single fixed retrieve-then-generate pass. But most of these systems still use search engines, dense retrievers, structured stores, or combinations of them underneath the agent. [^4]
+			- The resulting evidence hierarchy is:
+			- **One-shot vector top-k is not a universally strong retrieval baseline.** Query decomposition, lexical+dense fusion, reranking, contextual chunks, and iterative retrieval often improve it substantially.
+				- Evidence strength: **High**
+			- **For live source repositories, iterative filesystem/repository exploration can substantially outperform simple lexical and dense retrieval baselines.**
+				- Evidence strength: **Moderate-to-high**, now supported by controlled 2026 coding benchmarks
+			- **Direct filesystem exploration is inherently fresher than an asynchronously maintained vector index of the same working tree.**
+				- Evidence strength: **High as a systems property**; magnitude of downstream benefit is workload-dependent
+			- **Direct filesystem exploration universally beats a good code-specific hybrid retriever.**
+				- Evidence strength: **Not established**
+			- **Agentic orchestration helps difficult multi-hop/compositional retrieval.**
+				- Evidence strength: **High**, including peer-reviewed controlled evidence
+			- **That improvement requires abandoning vector retrieval.**
+				- Evidence strength: **False / unsupported**
+			- **Raw filesystem search remains efficient as the knowledge base becomes very large.**
+				- Evidence strength: **Contradicted by the strongest 2026 scaling study I found**
+			- **Hybrid agent + lexical/dense/structured tools is the safest general default for heterogeneous enterprise knowledge.**
+				- Evidence strength: **Strong engineering inference from multiple studies**, not a single universal benchmark theorem
+			- The most important practical implication is therefore architectural: **for coding agents, start filesystem-first and add semantic retrieval when demonstrated useful; for large knowledge systems, start index-first and add agentic planning and drill-down.**
+		- ### Definitions and comparison
+			- For this report, **conventional vector RAG** means exactly the architecture in the question: a corpus is ingested offline, divided into chunks, each chunk is embedded and placed in a vector index, a query is embedded at runtime, the top-*k* nearest chunks are selected, and those chunks are injected into the model's context. Variants that add metadata filtering or a reranker remain recognizably conventional RAG if retrieval is still essentially a predetermined single pass.
+			- **Direct agentic retrieval**, in the coding/filesystem sense, is different. The LLM operates inside a harness with constrained observational tools: directory listing or Glob, exact/pattern search such as Grep or ripgrep, file reads, perhaps symbol/AST/call-reference queries, and repeated tool cycles. It can infer a filename from one file, follow an import into another, grep a newly discovered identifier, inspect surrounding definitions, notice that evidence is missing, reformulate, and stop when it judges the context sufficient.
+			- In prose, the architectures look like this:
+			- **Conventional vector RAG:** source snapshot → chunking → embedding → vector index → query embedding → top-*k* similarity → optional reranking → context → model.
+			- **Direct filesystem agent:** task → model chooses Glob/list/grep → inspects matches → reads selected files → discovers identifiers/imports/paths → searches again → checks sufficiency → context/action.
+			- **Hybrid agentic RAG:** task → planner/router → choose among BM25, dense search, graph/SQL search, filesystem search, metadata filters or APIs → inspect evidence → rewrite/decompose → retrieve again if necessary → rerank/summarize → answer/action.
+			- That third design is crucial. Harrison Chase's 2024 TWIML discussion explicitly presented agentic RAG as making retrieval itself a tool whose invocation is controlled by the agent, rather than as eliminating retrieval infrastructure. I verified the episode and its stated focus on RAG and agentic architectures, although the searchable source available to me did not expose the exact [[Readwise]] sentence about calling the retriever “twice or three times.” [^5] Peer-reviewed work such as IRCoT and Adaptive-RAG independently validates the underlying design idea. [^4]
+			- #### System-level comparison
+				- **Semantic recall**
+					- Conventional one-shot vector RAG: Often strong when the query and relevant text are semantically aligned and the embedding is domain-appropriate; code-specific dense models outperform generic embeddings in CodeRAG-Bench. [^7]
+					- Direct filesystem / repository agent: Weak when no lexical/structural clue leads to the target; strong when names, paths, imports, tests, callers, configs, errors, or nearby code expose a trail. SWE-Explore shows strong repository-task performance. [^1]
+					- Hybrid agentic retrieval: Usually the broadest candidate coverage because semantic, lexical and structural modes can compensate for one another; HybGRAG and Microsoft's AgenticRAG provide controlled examples. [^9]
+				- **Precision**
+					- Conventional one-shot vector RAG: Top-*k* similarity can return conceptually related but answer-irrelevant chunks; reranking and contextualization materially help. [^10]
+					- Direct filesystem / repository agent: Can become very precise after the agent discovers an identifier or path, but broad grep can produce huge/noisy hit sets.
+					- Hybrid agentic retrieval: Highest potential because the agent can narrow, rerank and inspect, at the cost of more machinery and model calls. [^11]
+				- **Multi-hop/compositional retrieval**
+					- Conventional one-shot vector RAG: Weak in the strict one-shot form because later search terms may only become known after reading earlier evidence. BRIGHT was specifically created around reasoning-intensive retrieval. [^12]
+					- Direct filesystem / repository agent: Natural fit for “find A → learn B → search B → inspect C.”
+					- Hybrid agentic retrieval: Strongest general form: the same process can cross vector, lexical, relational and external sources. IRCoT reported retrieval gains up to 21 points and downstream QA gains up to 15 points from interleaving reasoning and retrieval. [^4]
+				- **Freshness**
+					- Conventional one-shot vector RAG: Bounded by ingestion/re-index latency; edits, creates, deletes and ACL changes can be stale until synchronized. Azure's current search documentation explicitly discusses permission synchronization and refresh. [^14]
+					- Direct filesystem / repository agent: Reads current filesystem state at query time, so a newly written function is immediately searchable if visible to the agent.
+					- Hybrid agentic retrieval: Can use live filesystem/API tools for volatile sources and indexes for stable/global search.
+				- **Chunk-boundary sensitivity**
+					- Conventional one-shot vector RAG: Intrinsic to naïve independently embedded chunks, although contextual/late chunking substantially mitigates it. [^15]
+					- Direct filesystem / repository agent: No fixed semantic chunk boundary is required; agent can widen from matching line to function, file, neighbor, import or dependency.
+					- Hybrid agentic retrieval: Can use small retrieval units for ranking, then expand to parent files/sections or live reads.
+				- **Latency**
+					- Conventional one-shot vector RAG: Usually predictable: one retrieval plus generation.
+					- Direct filesystem / repository agent: Multiple serial LLM/tool turns can be slow.
+					- Hybrid agentic retrieval: Adaptive: potentially fast for simple cases, expensive for difficult cases.
+				- **Token cost**
+					- Conventional one-shot vector RAG: Usually low and bounded by top-*k*.
+					- Direct filesystem / repository agent: Can be very high; the 2026 scaling study observed 39–60× BM25 query-token use at some scales. [^3]
+					- Hybrid agentic retrieval: More than one-shot retrieval but can avoid indiscriminately reading the corpus; Microsoft's 2026 AgenticRAG used 2.6× single-shot tokens on BRIGHT and 7.8× on FinanceBench. [^11]
+				- **Index/build cost**
+					- Conventional one-shot vector RAG: Requires embedding, storage, update pipelines and sometimes expensive re-embedding.
+					- Direct filesystem / repository agent: Essentially no semantic-index build.
+					- Hybrid agentic retrieval: Pays index costs where indexes are valuable, but need not index every volatile local working tree.
+				- **Permissions**
+					- Conventional one-shot vector RAG: Requires ACLs to be represented and synchronized into or alongside the index; mature enterprise search systems can do this well. [^14]
+					- Direct filesystem / repository agent: Can inherit OS/container visibility directly, reducing duplicate authorization state, but an overly privileged agent inherits an overly large blast radius. [^17]
+					- Hybrid agentic retrieval: Can retain enterprise query-time security trimming while putting the agent behind a user-scoped identity.
+				- **Observability**
+					- Conventional one-shot vector RAG: Easy to log query, scores, top-*k*, reranking and index version.
+					- Direct filesystem / repository agent: Richer but noisier: must log every query, read, branch and stopping decision.
+					- Hybrid agentic retrieval: Best diagnostic potential if traces include routing and evidence provenance; more components to instrument.
+				- **Reproducibility**
+					- Conventional one-shot vector RAG: High if corpus/index/model versions are pinned.
+					- Direct filesystem / repository agent: Lower unless repository commit, working-tree state, model, harness and stochastic trajectory are all captured.
+					- Hybrid agentic retrieval: Intermediate; replay requires retriever and agent traces.
+				- **Typical failure**
+					- Conventional one-shot vector RAG: Relevant evidence never enters top-*k*; wrong chunk boundary; stale index; embedding mismatch.
+					- Direct filesystem / repository agent: Agent chooses bad search terms, misses an unrelated synonym, follows wrong branch, stops early, burns tool budget, or reads too broadly.
+					- Hybrid agentic retrieval: Bad routing or critic decisions; repeated retrieval loops; complexity masks errors. AgenticRAGTracer shows premature stopping and distorted reasoning chains remain serious problems. [^18]
+				- An important semantic point follows: **a CLI is not literally a superior form of vector RAG.** It is a highly capable *retrieval environment*. Calling it “the ultimate RAG tool” is a useful practitioner metaphor only if “RAG” is broadened to mean “generation augmented by externally retrieved information.” It should not be confused with a controlled claim about information-retrieval performance.
+		- ### Controlled evidence
+			- The public empirical record has changed materially during 2025–2026. Before the new repository-exploration benchmarks, the “grep beats RAG for coding” thesis was mostly product-team testimony. As of October 2026 it has partial benchmark support—but the nuances matter.
+			- I use four evidence levels here: **peer-reviewed controlled**; **controlled preprint/benchmark**; **vendor technical experiment**; and **practitioner testimony/opinion**.
+			- **SWE-Explore, June 5, 2026**
+				- Comparison and result: 848 issues, 203 repos, 10 languages. Agentic explorers substantially beat BM25, TF-IDF and lightweight dense Potion retrieval. With a fixed downstream processor and five regions, resolution was BM25 12.7%, TF-IDF 26.0%, Potion 23.3%, [[Claude/Code]] 48.0%, [[Codex]] 50.3%, CoSIL 59.3%, oracle 59.7%. [^1]
+				- What it actually establishes: **Strong direct evidence that iterative repository exploration is much better than simple one-shot retrieval baselines for this coding-localization setting.** It does *not* benchmark a frontier code embedding + BM25 + reranker system. Agent model choice also materially changes results. [^1]
+				- Evidence quality: **Controlled 2026 preprint; strongest direct evidence**
+			- **BM25 Wins at Scale, July 30, 2026**
+				- Comparison and result: 500 questions over nested enterprise corpora up to 511,959 docs / 600.8M tokens. File agent leads at small scale but BM25 passes it around ~10M corpus tokens and leads 50.5% to 30.7% at full scale; file-agent query tokens are orders of magnitude higher. [^3]
+				- What it actually establishes: Direct filesystem exploration has a real **scaling frontier**. Global inverted indexes become better candidate-generation mechanisms once the namespace becomes large.
+				- Evidence quality: **Controlled 2026 preprint; major counterexample to generalization**
+			- **AWS “Keyword search is all you need,” manuscript 2025 / arXiv 2026**
+				- Comparison and result: Claude 3 Sonnet agent uses metadata plus repeated `rga`/`pdfgrep`/shell search against files; vector baseline uses Titan Text Embeddings V2, 300-token chunks, 20% overlap, OpenSearch, top-5. Across several datasets, the agent achieved about 94.5% of RAG faithfulness, 88.1% context recall and 91.5% answer correctness—not an overall win. [^20]
+				- What it actually establishes: A title suggesting “no vector DB required” should **not** be read as “keyword agent beats vector RAG.” It mostly demonstrated comparable performance with simpler infrastructure; documented limitations include large documents, ambiguous queries and contextual nuance. [^20]
+				- Evidence quality: **Controlled preprint; particularly useful negative evidence**
+			- **Microsoft AgenticRAG, May 7, 2026**
+				- Comparison and result: Agent repeatedly uses `search`, `find`, `open`, summarization over an existing enterprise-search backend. BRIGHT R@1: [[Anthropic/Model/Claude/Sonnet/4.5]] agent 49.6% vs best tested embedding 27.8%. FinanceBench: 91–92% vs traditional RAG 24.24%, keyword-shell agent 32.71%, oracle evidence 94%. [^11]
+				- What it actually establishes: Very strong evidence for **agentic orchestration and drill-down**, especially reasoning-intensive retrieval. But this is a **hybrid/index-backed system**, not evidence that raw filesystem search should replace enterprise search.
+				- Evidence quality: **Controlled Microsoft preprint/technical research**
+			- **BRIGHT, 2024–2025**
+				- Comparison and result: 1,384 reasoning-intensive retrieval queries. Leading ordinary retrievers perform dramatically below conventional retrieval benchmarks; adding LLM reasoning/query augmentation improves retrieval substantially, but large gaps remain. [^12]
+				- What it actually establishes: Semantic similarity between the literal user question and the evidence is often insufficient for reasoning-intensive relevance. The retrieval query itself may need to be *derived*.
+				- Evidence quality: **Benchmark research**
+			- **IRCoT, ACL 2023**
+				- Comparison and result: Interleaving chain-of-thought and retrieval improved retrieval by up to 21 points and downstream QA by up to 15 points across multi-hop datasets. [^4]
+				- What it actually establishes: Strong evidence that **retrieve once before reasoning** is suboptimal for multi-hop QA. It supports iterative retrieval, not raw filesystem search specifically.
+				- Evidence quality: **Peer-reviewed controlled**
+			- **FLARE, EMNLP 2023**
+				- Comparison and result: Actively decides during generation when more retrieval is necessary and performs competitively or better on four long-form knowledge-intensive tasks. [^24]
+				- What it actually establishes: Retrieval timing can be adaptive rather than fixed.
+				- Evidence quality: **Peer-reviewed controlled**
+			- **Self-RAG, ICLR 2024**
+				- Comparison and result: Learns whether to retrieve and uses reflection signals to critique retrieved evidence and generations. [^25]
+				- What it actually establishes: Again, agency improves the RAG control loop **without implying that the retriever should disappear**.
+				- Evidence quality: **Peer-reviewed controlled**
+			- **Adaptive-RAG, NAACL 2024**
+				- Comparison and result: Routes questions by complexity among no retrieval, single-step and iterative retrieval, improving the quality/efficiency tradeoff across datasets. [^26]
+				- What it actually establishes: Not every query should pay an agentic-retrieval tax. **Routing by query class is empirically justified.**
+				- Evidence quality: **Peer-reviewed controlled**
+			- **HybGRAG, ACL 2025**
+				- Comparison and result: Uses an agentic critic/retriever-bank architecture combining textual and relational evidence; on STaRK hybrid QA, reports a 51% average relative Hit@1 improvement over baselines. [^9]
+				- What it actually establishes: Structured relations and text are complementary; agentic refinement can exploit both.
+				- Evidence quality: **Peer-reviewed controlled**
+			- **AgenticRAGTracer, Findings of ACL 2026**
+				- Comparison and result: 1,305 human-verified multi-hop examples; even GPT-5 reached only 22.6% exact match on the hardest category, with premature stopping, distorted chains and overextension among identified failures. [^18]
+				- What it actually establishes: “The agent can search again” is not equivalent to “the agent will search correctly or know when to stop.”
+				- Evidence quality: **Peer-reviewed diagnostic benchmark**
+			- **CodeRAG-Bench, 2025**
+				- Comparison and result: ~9,000 tasks / ~25M retrieval documents. Code-trained dense retrievers outperform generic dense models; relevant retrieved context materially improves generation. On SWE-bench, best retrieve-then-rerank setup with GPT-4o improves about 21 points over no retrieval but remains ~9 points behind gold context. [^7]
+				- What it actually establishes: Direct contradiction of “RAG doesn't work for code” as a general proposition. **Good retrieval helps coding a lot; bad retrieval is the problem.**
+				- Evidence quality: **Controlled benchmark preprint**
+			- **CORE-Bench, August 2026**
+				- Comparison and result: >180K code-retrieval queries spanning snippet understanding through issue-to-edit and broader repository context. Standard embedding retrieval degrades substantially as tasks become repository-level; PR-derived domain fine-tuning improves results but does not close the gap. [^29]
+				- What it actually establishes: Embedding systems that look strong on conventional code-search benchmarks do not automatically transfer to agentic repository-context retrieval.
+				- Evidence quality: **Large 2026 preprint benchmark**
+			- **Agent Retrieval Bench, July 2026**
+				- Comparison and result: 427 samples across 25 repositories, with “what does the agent need next?” tasks rather than only semantic similarity. Reports complementary structural and semantic signals. [^30]
+				- What it actually establishes: The retrieval target for an agent is often *operational context*, not merely the text closest in embedding space.
+				- Evidence quality: **2026 benchmark preprint**
+			- **Q2D-Web, Sept. 8, 2026**
+				- Comparison and result: ~190M-document corpus and ~70K agent-generated search queries in 10 languages, comparing 13 lexical/dense/late-interaction retrievers. Relative rankings vary by language, domain and query type. [^31]
+				- What it actually establishes: At web scale, “agentic retrieval” still depends on a high-quality **first-stage search engine**; queries written by agents also form a distinct retrieval distribution.
+				- Evidence quality: **Very large 2026 retrieval benchmark preprint**
+			- Two controlled results are especially useful because they form a matched pair. **SWE-Explore says exploration dominates simple indexes in repository coding. BM25 Wins at Scale says that a no-index explorer stops dominating as corpus size becomes large.** Together, they argue for an architectural boundary, not a universal winner. [^1]
+			- There is another instructive progression on FinanceBench. In the AWS experiment, iterative shell/keyword search reached **32.71% versus 24.24% for conventional vector RAG**. Microsoft's 2026 AgenticRAG—which gives the agent a substantially stronger indexed-search-and-navigation substrate—reached **92%**, close to a 94% oracle-evidence condition. The enormous difference between “agent + grep” and “agent + good enterprise retrieval” is a warning against attributing all gains to agency alone. [^11]
+		- ### Practitioner claims and verification
+			- The Anthropic anecdotes are valuable because they are reports from people who actually built and operated a major coding agent. They are **not**, by themselves, benchmark evidence. Some of the most useful statements are unusually candid about that distinction.
+			- **Boris Cherny, Latent Space / [[Claude/Code]]**
+				- Verification and evidentiary status: I could not recover the searchable original Latent Space transcript containing the exact [[Readwise]] wording **“This was just vibes. So internal vibes. There's some internal benchmarks also, but mostly vibes. It just felt better.”** I therefore would not present that exact line as independently transcript-verified here. However, the same underlying account is independently and directly present in the later Pragmatic Engineer transcript, below. The [[Readwise]] “vibes” qualification should be taken seriously: at the time of that statement, it explicitly disclaimed a published controlled benchmark.
+			- **Boris Cherny, The Pragmatic Engineer, 2026**
+				- Verification and evidentiary status: **Verified.** Cherny says: **“It turned out that agentic search just outperformed everything. And when I say agentic search, it's a fancy word for glob and grep.”** Immediately before this, he describes permission problems with an index and says they tried recursive indexing and other approaches. [^34] This is strong practitioner testimony about [[Claude/Code]]'s internal architecture, but the transcript supplies no controlled public benchmark. SWE-Explore, published later in 2026, gives the general thesis independent support. [^1]
+			- **Cat Wu, AI & I / Every, 2026**
+				- Verification and evidentiary status: **Verified.** Wu says: **“So actually initially we did use vector embeddings. They’re just really tricky to maintain because you have to continuously re-index the code and they might get out of date and you have local changes. So those need to make it in.”** She then says Anthropic could reach **“the same accuracy level with agentic search”** with a cleaner deployment story, and explicitly notes that semantic search can still be added to [[Claude/Code]] as an [[Model Context Protocol]] tool. [^36] This is particularly important because it favors a **hybrid-capable architecture**, not an ideological rejection of embeddings.
+			- **Pash / Cline, Latent Space, July 2025**
+				- Verification and evidentiary status: **Verified.** The transcript says: **“we tried rag and it doesn't really work very well, especially for code,”** criticizes chopping repositories into small pieces and retrieving chunks from vector space, and says Cline prefers aggressively reading files and agentically following repository structure. [^37] The controlled literature only partly supports the claim. CORE-Bench and SWE-Explore support the criticism of generic chunk retrieval for repository tasks, but CodeRAG-Bench shows that well-retrieved code context can materially improve code generation. [^29] So “naïve RAG is often poor for repository agents” is defensible; “RAG does not work for coding” is not.
+			- [[Claude/Code]] Masterclass: “CLI in my opinion is the ultimate rag tool.”
+				- Verification and evidentiary status: The phrase is best classified as a **conceptual opinion**. A CLI gives an agent a live, compositional interface to files and search tools, but there is no coherent retrieval metric under which “CLI” itself can be proven universally superior to a retriever.
+			- **Jed Borovik / Google Labs Jules, Nov. 2025**
+				- Verification and evidentiary status: The original Latent Space/YouTube listing verifies the discussion topic “RAG vs Attention” and describes Jules as moving away from embeddings-only RAG toward model-directed search. [^39] The [[Readwise]] point about arbitrary chunk boundaries is technically supported by later chunking research, but the strongest conclusion is the one attributed to the conversation itself: **embedding search can be a tool rather than the only mechanism**. Late Chunking and Anthropic's contextual retrieval demonstrate that boundary problems can also be mitigated rather than requiring embeddings to be abandoned. [^15]
+			- **Harrison Chase, TWIML, Aug. 19, 2024**
+				- Verification and evidentiary status: The episode and its treatment of agentic systems and evolving RAG are verified. [^5] I could not independently expose the exact quoted sentence from the searchable transcript, so I would cite the conceptual claim rather than assert exact-word verification. IRCoT, Self-RAG and Adaptive-RAG independently provide controlled evidence for the same idea: retrieval can remain a tool while the agent controls its use. [^4]
+			- **AI Engineer World's Fair 2025, “40% improvement”**
+				- Verification and evidentiary status: I could identify the source much more precisely. The Day 1 program places **Asha Sharma of Microsoft**, “Spark to System: Building the Open Agentic Web,” at 00:35:46. [^41] A contemporary recap records her Foundry slide as **“agentic RAG (+40% accuracy on hard queries)”**. [^42] I found **no public dataset definition, sample count, baseline implementation, metric definition, confidence interval, or associated paper** for that 40% figure. It is therefore a **Microsoft vendor conference claim, not public controlled evidence**. It should not be cited as proof that agentic RAG improves complex queries by 40% generally.
+			- **“Rise and Fall of the Vector DB Category,” 2025**
+				- Verification and evidentiary status: Verified at the episode-summary level. The discussion's thesis is that the *vector-database category* may be converging into broader search infrastructure, not that retrieval augmentation is obsolete; it explicitly treats hybrid search and retrieval as continuing needs. [^43] That view is strongly consistent with Q2D-Web, BM25-at-scale and Microsoft AgenticRAG. [^31]
+			- **“AI Coding Factory”: retrieval still matters for cost**
+				- Verification and evidentiary status: I found no controlled result tied specifically to this excerpt. The proposition itself is strongly supported elsewhere: direct filesystem exploration becomes dramatically more token-expensive with scale in the 2026 scaling study, while long-context studies find that full-context approaches can be more accurate when affordable but generally cost more. [^3]
+			- **Guido van Rossum / TypeAgent Structured RAG, 2025**
+				- Verification and evidentiary status: The underlying Microsoft project is verified. TypeAgent extracts entities, topics, relationships and key terms into inverted/relational structures rather than embedding raw turns alone. Its documentation reports a demo in which, with a 3K-token answer budget, Structured RAG recalled **63/63 books** mentioned across 25 podcasts versus **15/63 for classic RAG**; classic RAG reportedly reached 31/63 even with 128K context. [^46] This is an impressive project demo, but **not an independent broad benchmark**. I did not find support for treating a generic “~60% recall on diverse documents” number from the [[Readwise]] excerpt as an established result. Structured RAG is also **pre-indexed structured retrieval**, not direct filesystem exploration.
+			- **Peter Steinberger: “Don’t waste your time on stuff like RAG...”**
+				- Verification and evidentiary status: Properly treated as **practitioner opinion**. It should carry essentially no weight in a comparative evidence claim without a defined workload, baseline and metric.
+			- This reclassification changes the story substantially. The best Anthropic evidence is no longer *only* “vibes,” because 2026 independent benchmarks now show an agentic-exploration advantage on coding localization. But there is still **no public Anthropic ablation showing [[Claude/Code]]'s Glob/Grep architecture against an equivalently tuned state-of-the-art code-specific hybrid index while holding model, tool budget, token budget and downstream coding policy constant**. That is the experiment needed to validate the strongest version of the [[Claude/Code]] claim.
+		- ### Retrieval design findings
+			- #### Chunking and embedding boundaries
+				- The critique that independently embedding arbitrary chunks can destroy context is real. **Late Chunking** (v3, July 7, 2025) embeds the longer document first and pools chunk representations afterward, so a chunk's representation contains information from surrounding context; the authors report consistent improvements across tested retrieval tasks. [^15] Anthropic's September 2024 **Contextual Retrieval** similarly prepends document-specific contextual information to chunks before both embedding and BM25 indexing. Across its internal multi-domain test suite, Anthropic reports reducing top-20 retrieval failure from **5.7% to 2.9%**, and to **1.9% with reranking**—49% and 67% relative reductions, respectively. This is a vendor experiment rather than peer-reviewed evidence, but it demonstrates that “chunk boundaries are bad” does not logically imply “therefore use no index.” [^10]
+				- CodeRAG-Bench likewise finds chunking consequential and reports that chunks in roughly the **200–800-token** range are often effective in its code retrieval conditions. More importantly, it finds large differences between generic and code-trained embeddings: Jina's code-specialized model exceeds generic embedding baselines by multiple nDCG points, and retrieval-then-rerank substantially improves downstream SWE-bench performance. [^7]
+				- The appropriate 2026 conclusion is therefore: **fixed independent chunks are a known weakness of naïve vector RAG; modern indexed retrieval has several ways to reduce that weakness.** Filesystem agents avoid committing to an ingestion-time chunk boundary, which is genuinely attractive for code, but pay for that flexibility at query time.
+			- #### Lexical search is not a primitive baseline to dismiss
+				- The current evidence is unusually favorable to lexical retrieval. In code, exact identifiers, filenames, error strings, import paths, configuration keys and API symbols contain high-information lexical signals that embeddings may blur. SWE-Explore's agents exploit precisely this property through iterative repository search. [^1]
+				- At large enterprise scale, BM25's advantage becomes even clearer in the 2026 scaling study: its global inverted index can cheaply rank the entire corpus while the file agent has to *discover* promising neighborhoods through repeated interaction. [^3]
+				- But “BM25 beats dense” is no more universal than “agent beats RAG.” CodeRAG-Bench finds strong code-specific dense retrievers frequently outperforming BM25 on semantic code retrieval. [^7] Q2D-Web's September 2026 comparison across 13 retrieval systems and ~70,000 agent-generated queries finds rankings changing by query type, language and domain, again arguing against a universal first-stage retriever. [^31]
+				- The engineering implication is straightforward: **exact/lexical search and semantic search solve partially different failure modes.** Retrieval stacks should fuse them when the corpus is large enough to justify indexing.
+			- #### Long context changes the optimum but does not eliminate retrieval
+				- The 2024 EMNLP Industry study **Retrieval Augmented Generation or Long-Context LLMs?** found that, when the entire relevant long context fits and compute cost is not the main constraint, frontier long-context models can outperform conventional RAG on average; RAG remains substantially cheaper. Its SELF-ROUTE system uses the model to choose between them, preserving much of the accuracy while lowering compute. [^49]
+				- A 2025 follow-up study likewise reports long context frequently outperforming simple chunk-RAG after filtering questions that a model can answer from parametric memory, although summarization-oriented retrieval closes much of the gap and RAG retains advantages on some conversational/general-query settings. [^50]
+				- At EMNLP 2025, **Stronger Baselines for RAG with Long-Context LMs** further complicated the literature: a simple retrieval baseline that preserves the original document order could match or outperform more elaborate systems such as RAPTOR and ReadAgent at matched token budgets on several long-document QA benchmarks. [^51]
+				- So Pash's “context heavy” instinct is reasonable for a small or narrowly relevant working set. It is not a scalable rule to read an entire monorepo. **Long context is a destination for selected evidence, not a replacement for evidence selection.**
+			- #### Multi-hop retrieval is where agency has its clearest research case
+				- Suppose the question is “Which service instantiated the object whose identifier appeared in this failure, and which configuration changed its timeout last week?” A one-shot embedding of the entire question must somehow rank all three evidence pieces before it has learned the intermediate identifier. An iterative system can retrieve the failure, discover the identifier, search for the constructor, discover the configuration key, and then locate the change.
+				- This is exactly the class of problem on which IRCoT showed large benefits from interleaving retrieval and reasoning in 2023. [^4] BRIGHT later formalized reasoning-intensive retrieval, where the evidence can be relevant because of a logical derivation rather than because it resembles the question lexically or semantically. [^12] Microsoft's 2026 AgenticRAG results then demonstrated this pattern at larger scale with repeated `search`/`find`/`open` operations. [^11]
+				- Yet AgenticRAGTracer's 2026 failure analysis is equally important: agents can invent or distort the intermediate chain, chase spurious branches, or stop too soon. [^18] **Multi-hop ability is an argument for iterative orchestration; it is not an argument for unbounded autonomy.**
+			- #### Reranking, structure and graphs are complementary alternatives to brute-force exploration
+				- Reranking often fixes a different problem from retrieval itself: a cheap first stage maximizes candidate recall, then a more expensive cross-encoder or LLM assesses query-specific relevance. Anthropic's 2024 experiment reported its lowest retrieval-failure rate when contextual dense and BM25 candidates were reranked. [^10] CodeRAG-Bench's downstream results independently support retrieval-then-rerank for code. [^7]
+				- [[AI/RAG/Graph]] addresses yet another retrieval class. Microsoft's April 2024 [[AI/RAG/Graph]] work focuses explicitly on **global questions over an entire corpus**—for example, identifying major themes—where retrieving the handful of chunks most similar to the wording of the query is structurally inadequate. It creates an entity graph and community summaries and reports better comprehensiveness and diversity than conventional RAG on global sensemaking questions over approximately million-token corpora. [^53]
+				- ACL 2025's HybGRAG demonstrates that graph structure and textual retrieval can also be combined adaptively rather than chosen as rivals. [^9] The downside is preprocessing: the 2026 BM25 scaling study found LLM-heavy graph-index construction dramatically more expensive than sparse/dense indexing as corpus size grew. [^3]
+				- Microsoft TypeAgent's Structured RAG fits the same broader pattern. It converts documents/conversations into entities, topics, relations and inverted-index terms so that queries can express scope and logical constraints. Its 63-versus-15 book-recall demo is evidence that explicit structure can be extraordinarily effective for the right query class, but it is neither independent validation nor evidence for direct filesystem search. [^46]
+				- The common principle across reranking, [[AI/RAG/Graph]], Structured RAG and filesystem agents is therefore **not “vectors are obsolete.”** It is that *a single cosine-similarity score is too weak a universal definition of relevance*.
+		- ### Workload decision framework
+			- The architecture should follow the topology, volatility and scale of the knowledge—not a generic “RAG versus agents” preference.
+			- **Source code in an active repository**
+				- Recommended default as of Oct. 6, 2026: **Filesystem-first agent:** Glob/path search + ripgrep + targeted reads + language-aware symbols/references where available.
+				- Why: Live edits matter; exact identifiers and repository structure are unusually informative; SWE-Explore provides strong controlled support for agentic exploration. [^1]
+				- When to add/change: Add code-specific dense search as an optional tool for vague conceptual queries, huge monorepos, cross-repository discovery or “find code that does something like X.” CodeRAG-Bench shows good dense code retrieval adds real value. [^7]
+			- **Rapidly changing repositories / local worktrees**
+				- Recommended default as of Oct. 6, 2026: **Direct live search is especially attractive.**
+				- Why: No ingestion lag; new functions, uncommitted edits and deletions are immediately visible. Anthropic's Wu specifically identified local-change/re-index problems in their earlier vector architecture. [^36]
+				- When to add/change: Maintain a shared index only for stable historical/global knowledge and treat live filesystem state as authoritative for the current checkout.
+			- **Small private document set that fits comfortably in context**
+				- Recommended default as of Oct. 6, 2026: **Long context or targeted direct reads**, possibly with prompt caching, before building elaborate retrieval.
+				- Why: Long-context research finds strong accuracy where the relevant corpus genuinely fits, and retrieval infrastructure may be unnecessary overhead. [^49]
+				- When to add/change: Add an index once scale, latency, concurrency or selective access makes repeated full-context use expensive.
+			- **Large static document corpus**
+				- Recommended default as of Oct. 6, 2026: **Indexed lexical+dense hybrid → reranker → selected context.**
+				- Why: Global indexing has much better scaling properties than recursive filesystem exploration; semantic and lexical signals are complementary. [^3]
+				- When to add/change: Add an agent on top for decomposition, multi-hop questions and drill-down rather than replacing the index.
+			- **Enterprise multi-tenant knowledge**
+				- Recommended default as of Oct. 6, 2026: **Permission-aware enterprise search / hybrid RAG with agentic orchestration.**
+				- Why: At scale, global retrieval is needed, and document-level authorization must be enforced independently of model judgment. Azure AI Search, for example, supports document-level ACL/security trimming at query time. [^14]
+				- When to add/change: Direct filesystem tools can be excellent *inside a per-user/per-task sandbox or scoped mount*, but should not replace a mature enterprise authorization layer merely to avoid indexing complexity.
+			- **Cross-source, compositional enterprise QA**
+				- Recommended default as of Oct. 6, 2026: **Agent + several retrievers/tools.**
+				- Why: The strongest 2026 AgenticRAG results come from planning, repeated search and navigation over an enterprise retrieval substrate, not raw recursive reading. [^11]
+				- When to add/change: Route trivial lookups to a cheaper single-pass path; Adaptive-RAG supports avoiding agentic overhead on easy questions. [^26]
+			- **Global corpus sensemaking / relationship questions**
+				- Recommended default as of Oct. 6, 2026: **Graph/structured + text retrieval**, often with agentic routing.
+				- Why: Vector similarity is a poor operator for “summarize the main themes across everything” or relational joins; [[AI/RAG/Graph]]/HybGRAG target these cases directly. [^57]
+				- When to add/change: Do not pay graph-index construction cost for ordinary local factual lookup unless evaluation shows a benefit.
+			- **Long-tail, semantically phrased knowledge search**
+				- Recommended default as of Oct. 6, 2026: **Dense + lexical hybrid first stage.**
+				- Why: Users may not know filenames, identifiers or exact terminology; semantic representations remain valuable, while Q2D-Web shows no single retrieval method wins all query classes. [^31]
+				- When to add/change: Give an agent the ability to rewrite/decompose and switch retrieval modes on low-confidence or multi-hop cases.
+			- #### A practical architecture for coding agents
+				- For an ordinary software repository, my default would be:
+				- **Live repository as source of truth → cheap deterministic exploration first → semantic retrieval only when useful → targeted long-context reads → deterministic verification.**
+				- Concretely, the retrieval agent should first see a compact repository map and current working-tree state. It can use filename/path search, ripgrep, `git diff`, references/symbols and targeted file reads. Reads should automatically expand around syntactic units rather than arbitrary token windows where possible. A semantic code-search tool can sit beside these tools—not underneath every query—as an escape hatch for conceptual discovery. For very large monorepos, add a global BM25/code-dense index so the agent does not have to traverse an enormous namespace from scratch.
+				- This architecture explains why [[Claude/Code]]'s historical decision can be sensible without implying that vector retrieval is obsolete. It optimizes the **local interactive working set**, where freshness and code structure are dominant, while preserving indexed retrieval for the cases where it has comparative advantage. The Cat Wu interview explicitly says semantic search can still be exposed to [[Claude/Code]] as an [[Model Context Protocol]] tool. [^36]
+			- #### A practical architecture for enterprise knowledge
+				- Invert the order:
+				- **Permission-aware source ingestion → lexical+dense candidate generation → metadata/ACL filters → reranker → agentic planner → selective open/read/structured-query tools → evidence sufficiency check → answer with provenance.**
+				- The agent should not scan half a million enterprise files trying to discover where to look. The search tier should cheaply collapse that space first. Microsoft's 2026 AgenticRAG is close to this architecture: the agent gets search, find and open capabilities and decides how to iterate, while reusing enterprise search infrastructure. [^11]
+				- A useful routing rule is:
+				- > **Use indexes to choose neighborhoods; use agents to navigate within and between neighborhoods.**
+				- That formulation fits the apparently conflicting 2026 evidence better than either “RAG is dead” or “agents are just RAG with extra steps.”
+		- ### Evaluation, security, and freshness
+			- A credible comparison must evaluate the **whole retrieval system under matched constraints**, not compare a frontier agent with an intentionally primitive vector baseline.
+			- #### Evaluation protocol
+				- For coding, the evaluation set should include at least one **retrieval-localization benchmark** and one **end-to-end engineering benchmark**. SWE-Explore is useful because it measures file/region/line coverage, ranking and context efficiency and then validates selected context with a fixed patch agent. CORE-Bench broadens retrieval difficulty from conventional snippets to issue-to-edit and wider repository context. Agent Retrieval Bench emphasizes what context an agent needs next. CodeRAG-Bench supplies dense/BM25/reranking baselines, and SWE-bench or an equivalent issue-resolution suite supplies the task-level outcome. [^1]
+				- For document and multi-hop work, the suite should mix **simple lookup with hard compositional retrieval**. BRIGHT is appropriate for reasoning-intensive search; IRCoT's HotpotQA/2Wiki/MuSiQue/IIRC-style tasks test multi-hop behavior; FinanceBench exercises evidence spread across financial documents and tables; a large enterprise-scale corpus such as the 2026 scaling benchmark is necessary to expose behavior that small demos miss. [^12]
+				- Every experiment should include at least these baselines: **no retrieval; oracle evidence; BM25; domain-appropriate dense retrieval; lexical+dense fusion; retrieval plus reranking; long-context/full-document when feasible; direct filesystem agent; and hybrid agentic retrieval**. The same generation model, answer prompt, permissions, total evidence-token budget and downstream processor should be held constant wherever the comparison permits. For agent runs, also equalize or explicitly report maximum tool calls, wall-clock timeout and total model-token budget. SWE-Explore's finding that changing the LLM in the same explorer materially changes performance shows why this control is essential. [^1]
+				- Retrieval metrics should include **Recall@K, Precision@K, MRR/nDCG, file hit rate, region/line recall where appropriate, context efficiency, irrelevant-context ratio and evidence completeness**. A system that finds one relevant chunk but misses three necessary ones should not receive the same retrieval score as a complete retrieval. SWE-Explore finds context efficiency and recall metrics highly correlated with downstream coding success, reinforcing the need to measure both signal and noise. [^1]
+				- Task-level metrics should then test whether retrieval mattered: issue-resolution/pass rate for coding; exact match/F1 or domain-correctness for QA; requirement coverage for analytical tasks; and explicit abstention correctness for unanswerable cases. Retrieval quality and final-answer quality should never be collapsed into a single score, because an LLM can answer from prior knowledge despite failed retrieval—or fail despite receiving perfect evidence. CodeRAG-Bench's oracle-context gap makes this separation visible. [^7]
+				- Faithfulness should be evaluated **claim by claim against retrieved evidence**, with citation correctness and evidence completeness measured separately. LLM judges are useful at scale but should themselves be validated against human labels; Microsoft's enterprise study, for example, reports judge checks, while broader evaluation practice increasingly treats a judge as a classifier whose accuracy must be established rather than assumed. [^3]
+				- Cost reporting should include **input/output/reasoning tokens, number of LLM calls, number and type of retrieval calls, index-build tokens/CPU/GPU, index storage, update cost, p50/p95 latency and wall-clock task time**. Reporting only answer accuracy systematically favors agents because their extra inference is invisible. The 39× filesystem-agent token differential in the 2026 scaling experiment is exactly the kind of result an accuracy-only leaderboard would hide. [^3]
+				- Finally, because agent trajectories are stochastic, report **multiple runs, confidence intervals and failure distributions**, not only the best trajectory. Pin the model snapshot, repository commit, index version, embedding version, chunker, retrieval parameters and reranker. Preserve complete tool traces. Otherwise an “agentic search” result is difficult to reproduce even when the final answer is reproducible.
+			- #### Freshness tests
+				- Freshness should be an explicit benchmark axis rather than a qualitative feature claim.
+				- A useful test creates an index at time *T₀*, then after *T₀* performs controlled mutations: add a new function answering an existing query; rename a symbol and delete its predecessor; modify a configuration value; move a file; change a document's ACL; and introduce an uncommitted working-tree change. Query immediately, after normal incremental-index intervals, and after full synchronization.
+				- Measure **fresh-evidence recall, stale-evidence incidence, time-to-visibility, time-to-revocation and wrong-answer rate caused specifically by stale retrieval**. This would directly quantify the index-drift problem Cherny and Wu describe rather than treating it as self-evidently decisive. Wu's re-indexing observation is verified practitioner evidence; Azure's 2026 search documentation also confirms that indexed ACL/content state has source-specific synchronization semantics. [^36]
+				- For coding, the authoritative comparison should include the **dirty working tree**, because that is where direct filesystem retrieval has its strongest structural advantage.
+			- #### Security and permissions
+				- The practitioner statement that agentic search has “no security downsides” should be interpreted narrowly. It can **avoid one particular security problem**: maintaining a second indexed copy of data and a second representation of its ACL state. It does **not** make the agent itself security-free.
+				- Modern enterprise indexes can perform document-level security trimming. Azure AI Search's October 2026 documentation supports identity/group filters and several forms of document-level ACL enforcement; importantly, it also notes that indexed permissions must be synchronized from the source. [^14] Thus vector/index retrieval has a real synchronization burden, but “index = insecure” is too broad.
+				- Conversely, a filesystem agent that runs as the user naturally sees whatever its process/container identity can read—but that means a compromised or confused agent can potentially inspect everything available to that identity. Anthropic's October 20, 2025 [[Claude/Code]] security description uses filesystem and network sandboxing precisely to limit that blast radius, and notes prompt injection as a relevant risk. [^17] Anthropic's May 25, 2026 containment retrospective goes further: it describes user approval fatigue and argues that growing agent capability must be matched by environment-level containment rather than relying solely on model behavior or repeated approvals. [^64]
+				- OWASP's current agent-security guidance likewise recommends **least privilege, authorization outside the model, isolation between users/sessions, sandboxed execution, parameter validation, restricted tool access, network controls and adversarial testing**, and explicitly warns against letting the model itself make authorization decisions. [^65]
+				- For a filesystem-grounded retrieval agent, the minimum security design should therefore be:
+				- **retrieval identity scoped to the requesting user/task; read-only by default; filesystem root allowlist; symlink/path-escape protection; explicit secret exclusions; network egress deny-by-default during pure retrieval; separate capabilities for read versus write/execute; tool arguments validated outside the LLM; and complete audit logs of files searched/read.** These controls follow directly from the threat models described by Anthropic and OWASP. [^17]
+				- Security evaluation should include cross-tenant canaries, permission-revocation tests, symlink/path traversal, hidden files, credential directories, malicious repository instructions embedded in READMEs/code comments, poisoned [[Model Context Protocol]]/tool descriptions, sensitive-data exfiltration attempts and an agent asked indirectly to exceed its authorized repository scope. Current OWASP coding-agent guidance specifically treats [[Model Context Protocol]] servers, tool descriptions, unrestricted filesystem access and network access as agent attack surfaces. [^66]
+				- This yields an important reversal of a common talking point:
+				- > **Direct filesystem retrieval may simplify authorization-state freshness, but it increases the importance of runtime containment. Indexed RAG may duplicate authorization metadata, but mature indexes can enforce highly scalable query-time security trimming.**
+				- Neither architecture wins “security” in the abstract.
+		- ### What the evidence does not establish
+			- The evidence **does not establish that embeddings are obsolete for coding**. CodeRAG-Bench shows the opposite: code-specialized dense retrievers can outperform generic embeddings and BM25, and better retrieved code materially improves downstream coding. [^7] What 2026 repository benchmarks establish is that *ordinary semantic chunk retrieval is not enough for many whole-repository tasks*.
+			- It **does not establish that Glob and Grep are intrinsically better than vectors**. Glob and Grep in [[Claude/Code]] are embedded in a powerful loop: the model reasons about repository structure, generates multiple searches, reads context around hits, follows newly discovered names, and decides what to inspect next. Comparing that entire inference-time search process against a single top-*k* vector query attributes the benefit of planning, extra compute, multiple observations and structural priors to the lexical primitive. SWE-Explore is a valid systems comparison, but not an isolated algorithmic comparison of grep versus embeddings. [^1]
+			- It **does not establish that Anthropic's internal RAG-versus-agentic decision was proven by a published benchmark**. Cherny's public explanation is practitioner testimony, and the [[Readwise]] excerpt itself says the decision was “mostly vibes.” The independently verifiable Pragmatic Engineer account confirms the architectural choice and the perceived performance/security/freshness reasons, but gives no experimental design or scores. [^34] Cat Wu's later statement that agentic search reached “the same accuracy level” is likewise not accompanied by a public benchmark. [^36]
+			- It **does not establish a universal 40% gain from agentic RAG**. The AI Engineer World's Fair figure can be traced to Asha Sharma's Microsoft keynote and a slide/recap describing “+40% accuracy on hard queries,” but no publicly specified benchmark, sample size, exact metric or reproducible baseline was located. [^41] That number should remain a vendor-reported conference result, not a literature-level effect size.
+			- It **does not establish that “agentic” retrieval always improves multi-hop questions**. Controlled research shows that it *can*, but AgenticRAGTracer demonstrates that planning and stopping introduce their own error classes and that difficult multi-hop retrieval remains far from solved even with frontier models. [^18]
+			- It **does not establish that large context makes retrieval unnecessary**. Long-context models can win when the full relevant corpus fits and cost is acceptable, but indexed or selective retrieval remains cheaper, and large repositories/corpora quickly exceed reasonable evidence budgets. [^49] Nor does it establish the reverse: retrieval is not automatically superior when a small, stable corpus can simply be supplied intact.
+			- It **does not establish that structured or graph retrieval universally improves RAG**. Microsoft's [[AI/RAG/Graph]] result concerns a particular class of global sensemaking questions; TypeAgent's eye-catching 63-versus-15 recall result is a product-team demo over a specific memory query; and the 2026 scaling study exposes substantial graph-index construction costs. [^57] Graphs are a strong *operator for relational/global queries*, not a generic replacement for search.
+			- It **does not establish that direct filesystem search has “no security downsides.”** What it can do is eliminate index drift and a duplicated ACL-bearing data structure. The agent's live filesystem authority, tool execution and network access create a different—and potentially larger—runtime attack surface, which is why Anthropic itself has invested in sandboxing, containment and permission classifiers. [^17]
+			- Most importantly, no public study I found through October 6, 2026 performs the clean experiment many practitioners actually want:
+			- > Take the same frontier coding model and same coding harness, give one condition only live Glob/Grep/read tools, a second a frontier code-specific dense index, a third BM25, a fourth lexical+dense+reranker, and a fifth all tools together; hold total inference budget and repository snapshot constant; evaluate retrieval, SWE-bench-style task success, wall-clock latency, token cost and stale-working-tree robustness across repositories of increasing size.
+			- SWE-Explore comes closest on the exploration side; CodeRAG-Bench and CORE-Bench come closest on the indexed-retrieval side. Their combination strongly motivates the experiment but does not substitute for it. [^1]
+			- The largest open research questions are therefore **where the corpus-size crossover lies for real codebases; how much of the observed agent advantage comes from search iteration versus model intelligence; whether a strong code-specific hybrid retriever closes the SWE-Explore gap; how to calibrate retrieval stopping; how retrieval should incorporate dirty working-tree state without re-indexing; whether agents can learn to choose lexical, dense, structural and graph tools reliably; and how to measure the security benefit of source-authoritative ACLs against the added attack surface of tool-using agents.**
+			- **Strongest primary-source bibliography.** For the central coding question, the highest-value 2026 sources are **SWE-Explore: Benchmarking How Coding Agents Explore Repositories** [^1]; **BM25 Wins at Scale: A Scaling Study of Retrieval-Augmented Generation Paradigms** [^3]; **AgenticRAG: Agentic Retrieval for Enterprise Knowledge Bases** [^11]; **CodeRAG-Bench: Can Retrieval Augment Code Generation?** [^7]; **CORE-Bench** [^29]; **Q2D-Web** [^31]; and **AgenticRAGTracer** [^18]. For the broader retrieval architecture question, the most important peer-reviewed foundations are **IRCoT** (ACL 2023) [^4], **FLARE** (EMNLP 2023) [^24], **Self-RAG** (ICLR 2024) [^25], **Adaptive-RAG** (NAACL 2024) [^26], [[AI/RAG/Graph]] (Microsoft, 2024) [^57], and **HybGRAG** (ACL 2025) [^9]. For chunking and modern indexed retrieval, **Late Chunking** [^15] and Anthropic's **Contextual Retrieval** experiments [^10] are especially relevant, with the latter appropriately treated as a vendor technical report rather than independent peer-reviewed evidence.
+			- The final judgment, therefore, is precise: **“agentic RAG outperforms vector RAG” is not a valid general conclusion as of October 6, 2026. “For live repository-scale coding work, iterative filesystem exploration is often a better default than one-shot vector-similarity retrieval, while hybrid/index-backed agentic retrieval becomes increasingly attractive—and eventually necessary—as semantic ambiguity, corpus scale, cross-source reasoning, latency constraints, or enterprise access control dominate” is well supported by the current evidence.**
+		- ### Footnotes
+			- [^1]: https://arxiv.org/html/2606.07297
+			- [^3]: https://arxiv.org/html/2607.26497v2
+			- [^4]: https://aclanthology.org/2023.acl-long.557/
+			- [^5]: https://www.iheart.com/podcast/263-this-week-in-machin-29825981/episode/the-building-blocks-of-agentic-systems-207168588/
+			- [^7]: https://arxiv.org/html/2406.14497
+			- [^9]: https://aclanthology.org/2025.acl-long.43/
+			- [^10]: https://www.anthropic.com/news/contextual-retrieval?_bhlid=1ca3fc7f157b3f32cbf2779b9cd999a8bd923b63
+			- [^11]: https://arxiv.org/html/2605.05538v1
+			- [^12]: https://arxiv.org/pdf/2407.12883v2
+			- [^14]: https://learn.microsoft.com/en-us/azure/search/search-document-level-access-overview
+			- [^15]: https://arxiv.org/html/2409.04701v3
+			- [^17]: https://www.anthropic.com/engineering/claude-code-sandboxing
+			- [^18]: https://aclanthology.org/2026.findings-acl.66/
+			- [^20]: https://arxiv.org/html/2602.23368
+			- [^24]: https://aclanthology.org/2023.emnlp-main.495/
+			- [^25]: https://openreview.net/forum?id=hSyW5go0v8
+			- [^26]: https://aclanthology.org/2024.naacl-long.389/
+			- [^29]: https://arxiv.org/html/2606.11864v3
+			- [^30]: https://arxiv.org/html/2607.24882v1
+			- [^31]: https://arxiv.org/html/2609.08887
+			- [^34]: https://www.becurious.to/shows/the-pragmatic-engineer/episodes/building-claude-code-with-boris-cherny-substack/transcript
+			- [^36]: https://every.to/podcast/transcript-how-to-use-claude-code-like-the-people-who-built-it
+			- [^37]: https://podscripts.co/podcasts/latent-space-the-ai-engineer-podcast/cline-the-open-source-coding-agent-that-doesnt-cut-costs
+			- [^39]: https://www.youtube.com/watch?v=emWgP_fr04k
+			- [^41]: https://www.youtube.com/watch?v=z4zXicOAF28
+			- [^42]: https://www.blackhatworld.com/seo/ai-engineer-worlds-fair-2025-recap.1721546/
+			- [^43]: https://podwise.ai/episodes/3795745
+			- [^46]: https://microsoft.github.io/TypeAgent/content/architecture/memory/
+			- [^49]: https://aclanthology.org/anthology-files/anthology-files/anthology-files/pdf/emnlp/2024.emnlp-industry.66.pdf
+			- [^50]: https://arxiv.org/html/2501.01880
+			- [^51]: https://aclanthology.org/2025.emnlp-main.1656/
+			- [^53]: https://www.microsoft.com/en-us/research/publication/from-local-to-global-a-graph-rag-approach-to-query-focused-summarization/?lang=zh-cn
+			- [^57]: https://www.microsoft.com/en-us/research/publication/from-local-to-global-a-graph-rag-approach-to-query-focused-summarization/
+			- [^64]: https://www.anthropic.com/engineering/how-we-contain-claude
+			- [^65]: https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html
+			- [^66]: https://cheatsheetseries.owasp.org/cheatsheets/Secure_Coding_with_AI_Cheat_Sheet.html
