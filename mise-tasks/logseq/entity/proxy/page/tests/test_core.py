@@ -36,7 +36,7 @@ class PageSyncTests(unittest.TestCase):
     def plan(self):
         return build_page_plan(self.source, self.destination, self.page)
 
-    def test_preview_first_copy_and_resync_preserve_exact_properties(self):
+    def test_preview_first_copy_and_resync_take_source_properties(self):
         plan = self.plan()
         target = resolve_page(self.destination, self.page)
         self.assertFalse(target.exists())
@@ -51,13 +51,60 @@ class PageSyncTests(unittest.TestCase):
         self.source_page.write_text('tags:: [[Changed]]\nnew-key:: source only\n- fresh\n')
         apply_plan(self.plan())
         text = target.read_bytes().decode()
-        self.assertTrue(text.startswith(original.split('logseq-proxy-url')[0]))
-        self.assertNotIn('new-key::', text)
+        self.assertTrue(text.startswith('tags:: [[Local]]\r\nlogseq-entity:: [[Logseq/Entity/Proxy/Page]]\nnew-key:: source only\n'))
+        self.assertNotIn('owner::', text)
         self.assertIn('- fresh\n', text)
         second = self.plan()
         before = target.stat().st_mtime_ns
         apply_plan(second)
         self.assertEqual(target.stat().st_mtime_ns, before)
+
+    def test_resync_keeps_properties_definitions_give_the_destination(self):
+        (self.source / 'pages/Logseq___Entity___Book.md').write_text(
+            'entity-proxy-destination-properties:: podcast-guid, podcast-published-at\n- # Book\n')
+        (self.source / 'pages/Logseq___Entity___Proxy___Page.md').write_text(
+            'entity-proxy-destination-properties:: public\n- # Proxy Page\n')
+        self.source_page.write_text('tags:: [[Original]]\nlogseq-entity:: [[Logseq/Entity/Book]]\n'
+                                    'kept:: same\nchanged:: old\ndropped:: soon\n- body\n')
+        apply_plan(self.plan())
+        target = resolve_page(self.destination, self.page)
+        target.write_text('public:: true\npodcast-guid:: stable\nlocal:: note\n' + target.read_text())
+        self.source_page.write_text('tags:: [[Changed]]\nlogseq-entity:: [[Logseq/Entity/Book]]\n'
+                                    'kept:: same\nchanged:: new\nadded:: later\npodcast-guid:: source\n'
+                                    'podcast-published-at:: source\n- body\n')
+        plan = self.plan()
+        props, body = parse_properties(plan.writes['pages/Book___A%3F B.md'].decode())
+        self.assertEqual(props['public'], 'true')
+        self.assertEqual(props['podcast-guid'], 'stable')
+        self.assertNotIn('podcast-published-at', props)
+        self.assertEqual(props['tags'], '[[Original]]')
+        self.assertEqual(props['logseq-entity'], '[[Logseq/Entity/Book]], [[Logseq/Entity/Proxy/Page]]')
+        self.assertEqual((props['kept'], props['changed'], props['added']), ('same', 'new', 'later'))
+        self.assertNotIn('dropped', props)
+        self.assertNotIn('local', props)
+        self.assertEqual(body, '- body\n')
+        for change in ('updated changed', 'added added', 'removed dropped', 'removed local'):
+            self.assertIn(f'  property {change}', plan.details)
+        self.assertNotIn('  property updated kept', plan.details)
+        apply_plan(plan)
+        before = target.read_bytes()
+        apply_plan(self.plan())
+        self.assertEqual(target.read_bytes(), before)
+
+    def test_follow_embeds_syncs_embedded_pages_recursively(self):
+        (self.source / 'assets').mkdir()
+        (self.source / 'assets/take.mp3').write_bytes(b'audio')
+        self.source_page.write_text('- # Session\n\t- {{embed [[Session/Asset]]}}\n\t- {{embed [[Absent]]}}\n')
+        (self.source / 'pages/Session___Asset.md').write_text(
+            '- [Take](../assets/take.mp3)\n- {{embed [[Book/A? B]]}}\n')
+        self.assertNotIn('pages/Session___Asset.md', self.plan().writes)
+        plan = build_page_plan(self.source, self.destination, self.page, follow_embeds=True)
+        self.assertIn('pages/Session___Asset.md', plan.writes)
+        self.assertEqual(plan.writes['assets/take.mp3'], b'audio')
+        self.assertIn('Missing embedded page: Absent', plan.warnings)
+        apply_plan(plan)
+        props, _ = parse_properties((self.destination / 'pages/Session___Asset.md').read_text())
+        self.assertEqual(props['logseq-proxy-url'], graph_url(self.source, 'Session/Asset'))
 
     def test_page_collision_and_wrong_proxy_source_have_no_writes(self):
         target = resolve_page(self.destination, self.page)

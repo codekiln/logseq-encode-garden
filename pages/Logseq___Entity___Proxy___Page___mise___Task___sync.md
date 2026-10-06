@@ -18,14 +18,19 @@ see-also:: [[Logseq/Entity/Proxy/Page]], [[Logseq/Entity/Definition]]
 			  mise run logseq:entity:proxy:page:sync --source /path/to/logseq-encode-garden --destination /path/to/other-garden --page 'Logseq/Entity/Proxy/Page' --apply
 			  ~~~
 		- `--page` is the source page's logical name, with slash namespaces. On re-sync, `--source` can be omitted when the destination page's proxy metadata resolves to a local source graph.
+		- `--follow-embeds` also syncs every page the page embeds with the `embed` macro, and the pages those embed, in the same batch. A podcast session and its embedded recording, artwork and preset pages sync together this way:
+			- ~~~sh
+			  mise run logseq:entity:proxy:page:sync --source /path/to/logseq-encode-garden --destination /path/to/other-garden --page 'GitP/A/Session/26/09/24-Thu' --follow-embeds --apply
+			  ~~~
 	- ## Inputs and outputs
 		- Reads the source page and the entity definitions named by `logseq-entity::`. Definitions declare companion tasks with `entity-tasks::`; task references declare implementation paths and required task dependencies through [[Logseq/Entity/Mise/Task]].
-		- Copies pages under their source logical names, adds [[Logseq/Entity/Proxy/Page]] membership, and sets source URL, available code forge URL, and sync date. Existing destination page properties, including `tags::`, survive re-sync; source bodies replace destination bodies.
+		- Copies pages under their source logical names, adds [[Logseq/Entity/Proxy/Page]] membership, and sets source URL, available code forge URL, and sync date. Source bodies replace destination bodies.
+		- On re-sync, page properties follow the source: new ones are added, changed ones updated, and ones the source dropped are removed. `tags::`, the proxy keys, and the properties named by an entity definition's `entity-proxy-destination-properties::` keep their destination values. [[Logseq/Entity/Proxy/Page]] states the rule; the preview lists each property added, updated or removed.
 		- Copies linked `../assets/` files and explicitly mapped task files. Source implementation paths start at the repository root, even when the source graph occupies a subdirectory; destination paths start at the destination graph root.
 		- Records imported ownership, source paths, destination paths, and last imported hashes in `.logseq-proxy/manifest.json`. A repeat run previews only the changes still needed.
-		- The manifest keeps current source task declarations and path mappings for onward imports from a proxy garden. These declarations track upstream task changes while existing destination frontmatter remains intact.
+		- The manifest keeps current source task declarations and path mappings for onward imports from a proxy garden.
 	- ## Side effects
-		- Preview reads local files and reports planned changes, conflicts, missing assets, and upstream removal candidates. `--apply` creates or refreshes the previewed imports and manifest after validation.
+		- Preview reads local files and reports planned changes, property changes, conflicts, missing assets and embedded pages, and upstream removal candidates. `--apply` creates or refreshes the previewed imports and manifest after validation.
 		- An existing page without proxy metadata is a name collision. A task file with local edits, an unowned file at the target path, or competing source ownership stops application. Destination edits remain available for review.
 		- Files removed from upstream task mappings remain in the destination and appear as cleanup candidates. Missing linked source assets are warnings; missing declared task requirements stop application.
 		- Application stages writes and retains recovery information or restores previous files if a write fails.

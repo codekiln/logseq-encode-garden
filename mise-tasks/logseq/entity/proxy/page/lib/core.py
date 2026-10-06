@@ -16,6 +16,10 @@ from urllib.parse import parse_qs, quote, unquote, urlparse
 from zoneinfo import ZoneInfo
 
 PROXY_KEYS = ('logseq-proxy-url', 'logseq-proxy-codeforge-url', 'logseq-proxy-last-sync-date')
+PROXY_ENTITY = 'Logseq/Entity/Proxy/Page'
+# An entity definition lists the properties a proxy's destination garden owns.
+DESTINATION_PROPERTIES = 'entity-proxy-destination-properties'
+EMBED = re.compile(r'\{\{embed\s+\[\[([^\]]+)\]\]\s*\}\}')
 TRANSACTION = '.logseq-proxy-transaction'
 PROPERTY = re.compile(r'^([^\s:]+):: (.*?)(?:\r?\n)?$')
 
@@ -39,6 +43,7 @@ class Plan:
     expected_modes: dict[str, int | None] = field(default_factory=dict)
     source_expected: dict[Path, bytes] = field(default_factory=dict)
     source_modes: dict[Path, int] = field(default_factory=dict)
+    follow_embeds: bool = False
 
 
 def safe_path(root: Path, relative: str) -> Path:
@@ -90,6 +95,60 @@ def parse_properties(text: str) -> tuple[dict[str, str], str]:
             raise SyncError(f'Duplicate property: {key}')
         props[key] = value
     return props, body
+
+
+def property_key(line: str) -> str:
+    return PROPERTY.match(line).group(1)
+
+
+def with_proxy_membership(lines: list[str]) -> list[str]:
+    """Add the Proxy Page entity to logseq-entity, creating the property if needed."""
+    marker = f'[[{PROXY_ENTITY}]]'
+    if not any(property_key(line) == 'logseq-entity' for line in lines):
+        return [f'logseq-entity:: {marker}\n'] + lines
+    return [line.rstrip('\r\n') + f', {marker}\n'
+            if property_key(line) == 'logseq-entity' and marker not in line else line
+            for line in lines]
+
+
+def destination_owned(plan: Plan, source_props: dict[str, str]) -> set[str]:
+    """Properties a re-sync keeps from the destination: tags plus each definition's declared keys."""
+    keys = {'tags'}
+    entities = set(re.findall(r'\[\[([^\]]+)\]\]', source_props.get('logseq-entity', ''))) | {PROXY_ENTITY}
+    for entity in sorted(entities):
+        definition = resolve_page(plan.source_root, entity)
+        if not definition.is_file():
+            continue
+        data = definition.read_bytes()
+        plan.source_expected[definition] = data
+        props, _ = parse_properties(data.decode('utf-8'))
+        keys.update(key.strip() for key in props.get(DESTINATION_PROPERTIES, '').split(',') if key.strip())
+    return keys
+
+
+def merge_properties(destination: list[str], source: list[str], owned: set[str]) -> tuple[list[str], list[str]]:
+    """Take source properties on re-sync, keeping destination-owned lines and the destination's order."""
+    incoming = {property_key(line): line for line in source if property_key(line) not in PROXY_KEYS}
+    merged, changes, seen = [], [], set()
+    for line in destination:
+        key = property_key(line)
+        if key in PROXY_KEYS:
+            continue
+        seen.add(key)
+        if key in owned:
+            merged.append(line)
+        elif key not in incoming:
+            changes.append(f'removed {key}')
+        elif incoming[key].rstrip('\r\n') == line.rstrip('\r\n'):
+            merged.append(line)
+        else:
+            merged.append(incoming[key])
+            changes.append(f'updated {key}')
+    for key, line in incoming.items():
+        if key not in seen and key not in owned:
+            merged.append(line)
+            changes.append(f'added {key}')
+    return merged, changes
 
 
 def page_filename(page: str) -> str:
@@ -268,14 +327,11 @@ def add_page(plan: Plan, page: str) -> None:
             raise SyncError(f'Proxy source conflict: {target}')
         if props.get('logseq-proxy-codeforge-url'):
             validate_codeforge(props['logseq-proxy-codeforge-url'], plan.source_root, source)
-        lines, _ = property_lines(old_text)
+        old_lines, _ = property_lines(old_text)
+        lines, changes = merge_properties(old_lines, with_proxy_membership(source_lines), destination_owned(plan, source_props))
     else:
-        lines = source_lines
-        if 'logseq-entity' in source_props:
-            lines = [line.rstrip('\r\n') + ', [[Logseq/Entity/Proxy/Page]]\n' if PROPERTY.match(line).group(1) == 'logseq-entity' and '[[Logseq/Entity/Proxy/Page]]' not in source_props['logseq-entity'] else line for line in lines]
-        else:
-            lines = ['logseq-entity:: [[Logseq/Entity/Proxy/Page]]\n'] + lines
-    retained = [line for line in lines if PROPERTY.match(line).group(1) not in PROXY_KEYS]
+        lines, changes = with_proxy_membership(source_lines), []
+    retained = [line for line in lines if property_key(line) not in PROXY_KEYS]
     # A final property without a newline still needs to remain a separate property.
     retained = [line if line.endswith('\n') else line + '\n' for line in retained]
     metadata = {'logseq-proxy-url': graph_url(plan.source_root, page)}
@@ -289,6 +345,7 @@ def add_page(plan: Plan, page: str) -> None:
     plan.pages.add(page)
     plan.details.append(f'{"Create" if first else "Re-sync"} {source} -> {target}')
     plan.details.extend(f'  {key}:: {value}' for key, value in metadata.items())
+    plan.details.extend(f'  property {change}' for change in changes)
     # Capture Markdown link targets, allowing <...> around paths with literal spaces.
     assets = re.findall(r'\]\(\s*(?:<([^>]+)>|([^\s)]+))', body)
     for a, b in assets:
@@ -305,14 +362,21 @@ def add_page(plan: Plan, page: str) -> None:
         plan.source_expected[asset] = asset_data
         add_write(plan, relative, asset_data)
         plan.details.append(f'Asset {asset} -> {plan.destination_root / relative}')
+    if plan.follow_embeds:
+        for embedded in EMBED.findall(body):
+            if resolve_page(plan.source_root, embedded).exists():
+                add_page(plan, embedded)
+            else:
+                plan.warnings.append(f'Missing embedded page: {embedded}')
 
 
-def build_page_plan(source: Path | None, destination: Path, page: str, codeforge_url: str | None = None) -> Plan:
+def build_page_plan(source: Path | None, destination: Path, page: str, codeforge_url: str | None = None,
+                    follow_embeds: bool = False) -> Plan:
     destination = validate_graph(destination)
     source = validate_graph(source if source is not None else resolve_source(destination, page))
     if source == destination:
         raise SyncError('Source and destination must be different graphs')
-    plan = Plan(source, destination, page, codeforge_url=codeforge_url)
+    plan = Plan(source, destination, page, codeforge_url=codeforge_url, follow_embeds=follow_embeds)
     add_page(plan, page)
     return plan
 
