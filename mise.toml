@@ -24,3 +24,6 @@ node = "lts"
 # legitimately low-traffic package, so exempt just it — this keeps the gate (and the
 # OSV malicious-package check) active for everything else. See [[readwise-cli]].
 AUBE_ALLOWED_UNPOPULAR_PACKAGES = "@readwise/cli"
+
+[task_config]
+excludes = ["mise-tasks/asset/pyproject.toml", "mise-tasks/asset/lib", "mise-tasks/asset/tests", "mise-tasks/asset/.venv"]
