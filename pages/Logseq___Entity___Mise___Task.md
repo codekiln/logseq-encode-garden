@@ -17,6 +17,17 @@ see-also:: [[mise/Task]], [[Logseq/Entity/CLI/Command]], [[Logseq/Entity/Diataxi
 		- `task-name::` records the exact local task name, preserving colons and spelling.
 		- `source-link::` links the executable file or TOML definition. A review branch or commit link identifies an implementation under review; the repository's default branch identifies the maintained task after it lands.
 		- Shared page attributes follow [[Logseq/Frontmatter]].
+	- ## Companion-file contract
+		- A portable file task declares `task-entrypoint::`, `task-files::`, and any `task-dependencies::` in its reference page's frontmatter. These properties let [[Logseq/Entity/Proxy/Page/mise/Task/sync]] bring the task's implementation into another garden.
+		- `task-entrypoint::` is the executable file's path relative to the source repository root, using forward slashes.
+		- `task-files::` is a single-line JSON object mapping each source repository-relative path to its destination graph-relative path. The object lists the entrypoint and every helper, package file, or isolated configuration file needed at runtime. Destination values remain under `mise-tasks/`. Each path is explicit; wildcards have no meaning.
+		- The entrypoint maps to `mise-tasks/<task-name with colons replaced by slashes>`. For example, `task-name:: logseq:entity:proxy:page:sync` maps to `mise-tasks/logseq/entity/proxy/page/sync`. The imported entrypoint retains its executable mode.
+		- Paths are relative, remain inside their respective roots, and identify regular files. Parent traversal and absolute paths are invalid. A source graph nested inside a repository still uses repository-relative source keys; destination values start at the destination graph root.
+		- `task-config-root::` retains the source task's configuration identity. Runtime tools are declared in the file task's mise metadata. A shared runtime configuration or package is transferable when its required files are explicitly mapped under `mise-tasks/`. Runtime file lookup is relative to the imported entrypoint or its helpers, so the task works after relocation. The destination garden supplies its root mise configuration.
+		- `task-dependencies::` is an optional comma-separated list of wikilinks to required Mise Task reference pages. Each dependency supplies its own file mapping, and dependencies are followed recursively with a visited set. A missing task page, invalid declaration, or missing mapped file stops application before writes.
+		- The imported task reference retains `task-owner::`, `task-config-root::`, `task-name::`, and `source-link::` from its source identity. Proxy metadata and the destination manifest record where the imported copy came from.
+		- Destination paths shared by tasks must describe the same source file. Conflicting sources claiming one destination path stop application. Previously imported implementation files update when their destination content still matches the last import; a local edit stops application and appears in the preview.
+		- Files removed from the source mapping are reported as cleanup candidates. Re-sync keeps those destination files for review.
 	- ## Reference content
 		- A single H1 names the job in plain language. Its first child states what the task accomplishes and when it is useful.
 		- **Invocation** gives the working directory or repository, the exact command, and one realistic example. Monorepo tasks show their project-qualified invocation.

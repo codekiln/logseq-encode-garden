@@ -1,33 +1,33 @@
 - # Mise Tasks Accompany Logseq Proxies
 	- Proxying an entity instance brings along the entity definitions and executable tasks needed to use it in the destination garden. Running sync again updates those pages and task files from the same source.
 	- ## Existing definitions
-		- [[Logseq/Entity/Proxy/Page]] defines source discovery, page copying, frontmatter preservation, collision handling, and asset copying. A documented executable sync task is the next addition.
-		- [[Logseq/Entity/Mise/Task]] defines task identity, ownership, invocation, dependencies, and source links. [[GitP/mise/Task/episode/draft]] is an existing instance.
+		- [[Logseq/Entity/Proxy/Page]] defines source discovery, page copying, frontmatter preservation, collision handling, and asset copying. [[Logseq/Entity/Proxy/Page/mise/Task/sync]] supplies the executable sync task.
+		- [[Logseq/Entity/Mise/Task]] defines task identity, ownership, invocation, dependencies, and source links. [[GitP/mise/Task/episode/sync]] is an existing instance.
 	- ## Companion-task model
 		- Extend [[Logseq/Entity/Mise/Task]] with the file-task requirements needed for proxying. Task instances use the established singular `logseq-entity::` property.
-		- An entity definition declares its companion task pages through a proposed `entity-tasks::` property.
+		- An entity definition declares its companion task pages through the `entity-tasks::` property.
 		- A task reference retains its owner, config root, exact task name, and source link, and declares its entry-point path and required helper files. Paths are relative to the source repository, with explicit destination paths when the source graph occupies a subdirectory.
 		- Runtime tools belong in the file task's mise metadata. Shared packages and other configuration requirements are declared dependencies.
 		- The proxy sync task is invoked with `mise run logseq:entity:proxy:page:sync`. Its executable lives at `mise-tasks/logseq/entity/proxy/page/sync`.
 		- The task reference links the executable, and the executable links the maintained task reference.
 		- Task reference name: `Logseq/Entity/Proxy/Page/mise/Task/sync`, following the existing task-page naming convention.
 	- ## Implementation sequence
-		- TODO Define the companion-task contract on [[Logseq/Entity/Definition]], [[Logseq/Entity/Mise/Task]], and [[Logseq/Entity/Proxy/Page]].
+		- DONE Define the companion-task contract on [[Logseq/Entity/Definition]], [[Logseq/Entity/Mise/Task]], and [[Logseq/Entity/Proxy/Page]].
 			- Describe task relationships, file mapping, dependency requirements, and update ownership. Document proxy sync as a task instance.
-		- TODO Implement page sync as an executable [[mise/Task/File]] with usage-defined arguments, a preview, and explicit application.
+		- DONE Implement page sync as an executable [[mise/Task/File]] with usage-defined arguments, a preview, and explicit application.
 			- Support first copy and re-sync using the existing proxy rules, including assets and retained destination properties.
 			- Resolve existing proxies from their source metadata. Accept an explicit source for initial creation.
-		- TODO Bring along entity definitions and declared tasks.
+		- DONE Bring along entity definitions and declared tasks.
 			- Read the source instance's `logseq-entity::` to discover its entity definitions and their declared tasks.
 			- Include task references, declared implementation files, and explicitly required task dependencies.
 			- Traverse recursively with a visited set so shared dependencies and the sync task's own definition terminate cleanly.
 			- Report missing implementations separately from logical pages that have no file.
-		- TODO Make updates repeatable.
+		- DONE Make updates repeatable.
 			- Keep a destination manifest recording source repository, graph root, page identity, file mapping, and last imported file content hashes.
 			- Refresh implementation files whose destination content still matches the previous import. Report locally edited files and files claimed by conflicting sources before application.
 			- Report files removed upstream as cleanup candidates.
 			- Preview the complete affected set before writing. Stage writes and use rollback or a recoverable failure record if application is interrupted.
-		- TODO Verify across temporary gardens.
+		- DONE Verify across temporary gardens.
 			- Exercise initial import, source changes followed by re-sync, unchanged repeat runs, preserved tags and destination properties, entity and task dependency cycles, shared helpers, missing assets, task collisions, local script edits, and nested source graph roots.
 			- Check that mise discovers the imported executable and that its help and a harmless fixture invocation work in the destination.
 	- ## Completion example
@@ -35,6 +35,12 @@
 		- Syncing the instance into Garden B copies the relevant pages and implementation files. Mise discovers the task in Garden B.
 		- After the source page and helper change, another sync updates the imports. A locally edited helper produces an actionable conflict report while preserving the local edit.
 	- ## Work organization
-		- TODO Create a parent GitHub issue for the complete behavior, with dependent sub-issues for the documentation contract, page sync, and companion-task import and updates.
+		- DONE [Proxy pages with their entity definitions and mise tasks · Issue #182](https://github.com/codekiln/logseq-encode-garden/issues/182) coordinates the implementation.
+			- [Companion-task contract · PR #186](https://github.com/codekiln/logseq-encode-garden/pull/186) defines the page and file declarations.
+			- [Previewable page sync · PR #187](https://github.com/codekiln/logseq-encode-garden/pull/187) implements source discovery, page and asset imports, and recovery.
+			- [Companion-task imports · PR #188](https://github.com/codekiln/logseq-encode-garden/pull/188) implements dependency traversal and repeat updates.
 		- Each sub-issue gets its own worker, issue-named worktree, and PR. Implementation follows the dependency order; review the companion-task model before building the importer.
 		- The final PR demonstrates the complete cross-garden example.
+	- ## Verification
+		- The page-sync and companion-import suites pass. Temporary gardens cover source changes, preserved properties, dependency cycles, local edits, interrupted writes, nested graph roots, source relocation, custom file-task directories, and chained imports.
+		- A copy of [[Logseq/Entity/Proxy/Page]] brings its entity definitions, sync executable, and runtime helpers into another garden. The copied task runs through mise and re-syncs the destination.
