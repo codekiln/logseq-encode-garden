@@ -11,3 +11,4 @@ created-by:: [[Atlassian]]
 		- `bash <(curl -fsSL https://teamwork-graph.atlassian.com/cli/install)` on macOS and Linux; `TWG_VERSION` pins a release and `--install-dir` overrides the default `~/.local/bin`.
 		- macOS `.pkg`, and PowerShell or MSI installers on Windows.
 		- Raw binaries are published at `https://teamwork-graph.atlassian.com/cli/twg-<os>-<arch>-v<version>`, with a `SHA256SUMS-v<version>` file per release.
+	- Agent skills ship in the binary and in a public repo: [[TWG/Agent/Skill]].
