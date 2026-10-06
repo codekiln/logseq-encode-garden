@@ -5,6 +5,7 @@
 #USAGE flag "--destination <graph>" required=#true help="Destination graph root"
 #USAGE flag "--page <name>" help="Exact logical page name"
 #USAGE flag "--codeforge-url <url>" help="Source page URL on a code forge"
+#USAGE flag "--follow-embeds" help="Also sync pages the page embeds, recursively"
 #USAGE flag "--apply" help="Apply the previewed import"
 #USAGE flag "--recover" help="Roll back an interrupted import, then exit"
 """Task reference: [[Logseq/Entity/Proxy/Page/mise/Task/sync]]."""
@@ -23,6 +24,7 @@ def main():
     parser.add_argument('--destination', type=Path, required=True)
     parser.add_argument('--page')
     parser.add_argument('--codeforge-url')
+    parser.add_argument('--follow-embeds', action='store_true')
     parser.add_argument('--apply', action='store_true')
     parser.add_argument('--recover', action='store_true')
     args = list(sys.argv[1:])
@@ -31,9 +33,9 @@ def main():
         for name in ('source', 'destination', 'page', 'codeforge_url'):
             if os.environ.get('usage_' + name):
                 args.extend(['--' + name.replace('_', '-'), os.environ['usage_' + name]])
-        for name in ('apply', 'recover'):
+        for name in ('follow_embeds', 'apply', 'recover'):
             if os.environ.get('usage_' + name) == 'true':
-                args.append('--' + name)
+                args.append('--' + name.replace('_', '-'))
     options = parser.parse_args(args)
     try:
         if options.recover:
@@ -42,7 +44,8 @@ def main():
             return 0
         if not options.page:
             parser.error('--page is required unless --recover is used')
-        plan = build_page_plan(options.source, options.destination, options.page, options.codeforge_url)
+        plan = build_page_plan(options.source, options.destination, options.page, options.codeforge_url,
+                               options.follow_embeds)
         try:
             import companions
         except ModuleNotFoundError as error:
