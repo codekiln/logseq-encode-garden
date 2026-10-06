@@ -229,6 +229,20 @@ class PageSyncTests(unittest.TestCase):
         text = resolve_page(self.destination, self.page).read_text()
         self.assertIn('/blob/main/sub/source/pages/Book___A%253F%20B.md', text)
 
+    def test_manifest_records_repository_relative_graph(self):
+        import companions
+        repo = self.root / 'checkout'
+        repo.mkdir()
+        nested = self.graph('checkout/sub/source')
+        (nested / 'pages/Example.md').write_text('- Example\n')
+        subprocess.run(['git', 'init', '-q', str(repo)], check=True)
+        subprocess.run(['git', '-C', str(repo), 'remote', 'add', 'origin', 'git@github.com:owner/repo.git'], check=True)
+        plan = build_page_plan(nested, self.destination, 'Example')
+        companions.extend_plan(plan)
+        manifest = plan.writes['.logseq-proxy/manifest.json'].decode()
+        self.assertNotIn(str(self.root), manifest)
+        record = json.loads(manifest)['imports']['github.com/owner/repo::sub/source::Example']
+        self.assertEqual(record['source_graph'], 'sub/source')
 
 if __name__ == '__main__':
     unittest.main()
