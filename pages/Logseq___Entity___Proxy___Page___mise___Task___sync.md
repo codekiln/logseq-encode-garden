@@ -23,6 +23,7 @@ see-also:: [[Logseq/Entity/Proxy/Page]], [[Logseq/Entity/Definition]]
 		- Copies pages under their source logical names, adds [[Logseq/Entity/Proxy/Page]] membership, and sets source URL, available code forge URL, and sync date. Existing destination page properties, including `tags::`, survive re-sync; source bodies replace destination bodies.
 		- Copies linked `../assets/` files and explicitly mapped task files. Source implementation paths start at the repository root, even when the source graph occupies a subdirectory; destination paths start at the destination graph root.
 		- Records imported ownership, source paths, destination paths, and last imported hashes in `.logseq-proxy/manifest.json`. A repeat run previews only the changes still needed.
+		- The manifest keeps current source task declarations and path mappings for onward imports from a proxy garden. These declarations track upstream task changes while existing destination frontmatter remains intact.
 	- ## Side effects
 		- Preview reads local files and reports planned changes, conflicts, missing assets, and upstream removal candidates. `--apply` creates or refreshes the previewed imports and manifest after validation.
 		- An existing page without proxy metadata is a name collision. A task file with local edits, an unowned file at the target path, or competing source ownership stops application. Destination edits remain available for review.
@@ -37,6 +38,7 @@ see-also:: [[Logseq/Entity/Proxy/Page]], [[Logseq/Entity/Definition]]
 		- Page collision: compare the source and destination pages and choose which page belongs in the destination before syncing again.
 		- Missing task declaration or implementation: repair the source task reference or restore the named file, then preview again.
 		- Local implementation edit: review the destination file against its source and retain or reconcile the edit before syncing again.
+		- Interrupted application: run `mise run logseq:entity:proxy:page:sync --destination /path/to/other-garden --recover` to restore the previous files, then run a fresh preview.
 		- Conflicting ownership: reconcile the source mappings so each destination implementation path has one source owner.
 	- ## Source and help
 		- [Sync file task](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/logseq/entity/proxy/page/sync), [page sync implementation](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/logseq/entity/proxy/page/lib/core.py), and [companion import implementation](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/logseq/entity/proxy/page/lib/companions.py).
