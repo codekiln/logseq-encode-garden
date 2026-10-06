@@ -1,0 +1,254 @@
+tags:: [[ChatGPT/Deep Research]]
+date-created:: [[2026-10-06 Tue]]
+see-also:: [[AI/Voice/to/Text]], [[API/Key/Bring Your Own]], [[Brew]], [[Claude/Code]], [[Codex/CLI]], [[Ghostty]], [[iTerm2]], [[Mac/App/WisprFlow]], [[nvim]], [[tmux]], [[vim]], [[Warp]], [[WezTerm]]
+- # Open-source BYOK voice dictation for macOS
+	- ## Bottom line
+		- As of **October 6, 2026**, I found **two projects that I would treat as genuinely strong matches for both of your use cases**, followed by several narrower or substantially less mature options:
+		- ### Best fit: TypeWhisper
+			- Use case A, terminals: **Strong**
+			- Use case B, arbitrary apps: **Strong**
+			- Hard BYOK transcription: **Yes**
+			- Custom endpoint: **Yes, arbitrary OpenAI-compatible STT**
+			- Overall: **Test first**
+		- ### Runner-up: OpenWhispr
+			- Use case A, terminals: **Strong**
+			- Use case B, arbitrary apps: **Strong**
+			- Hard BYOK transcription: **Yes**
+			- Custom endpoint: Yes, but self-hosted auth has an important limitation
+			- Overall: **Excellent**
+		- ### Third: WhisperKey (`yung-sun-xxi`)
+			- Use case A, terminals: Uncertain
+			- Use case B, arbitrary apps: Strong
+			- Hard BYOK transcription: Yes
+			- Custom endpoint: No; OpenAI/Groq only
+			- Overall: Good simple option
+		- ### Fourth: Whispering / Epicenter
+			- Use case A, terminals: Plausible, unverified
+			- Use case B, arbitrary apps: Strong
+			- Hard BYOK transcription: Yes, in direct-provider mode
+			- Custom endpoint: Yes
+			- Overall: Qualifies, but more moving parts
+		- ### Experimental: VerbaLite
+			- Use case A, terminals: Plausible, unverified
+			- Use case B, arbitrary apps: Strong
+			- Hard BYOK transcription: Yes
+			- Custom endpoint: Yes
+			- Overall: Excellent minimalist codebase, immature distribution
+		- ### Experimental: EchoType
+			- Use case A, terminals: Plausible, unverified
+			- Use case B, arbitrary apps: Strong
+			- Hard BYOK transcription: Yes
+			- Custom endpoint: Yes
+			- Overall: Good architecture, very young
+		- ### Experimental: VoiceFlow for macOS
+			- Use case A, terminals: Plausible, unverified
+			- Use case B, arbitrary apps: Strong
+			- Hard BYOK transcription: Yes
+			- Custom endpoint: Yes, very flexible
+			- Overall: Technically excellent fit, far too young to lead
+		- **My practical recommendation is TypeWhisper 1.7.0, using its OpenAI Compatible transcription add-on in batch mode, with all submit/Enter behavior disabled.** It is the strongest intersection of your requirements because it is free/GPLv3, has no account requirement, stores API keys in macOS Keychain, supports arbitrary OpenAI-compatible speech endpoints with configurable server URL and optional API key, and—most importantly for your terminal use case—the current insertion code explicitly special-cases **Apple Terminal, [[iTerm2]], [[Ghostty]], [[WezTerm]], and [[Warp]]** for synthetic paste rather than trusting Accessibility text insertion. [^1]
+		- That terminal evidence is unusually strong. TypeWhisper had a real Terminal/[[vim]]/[[Claude/Code]] insertion complaint in April 2026; the maintainer acknowledged terminal apps were a rough edge at that point. The current code has since acquired terminal-specific insertion logic, and the 1.6.1 release validation explicitly includes terminal insertion as a smoke test. This is much better evidence than a generic promise that an app “types anywhere.” [^2]
+		- **OpenWhispr is the best alternative**, especially if you use a standard supported provider such as OpenAI rather than a custom authenticated organizational endpoint. It has the more mature cross-platform product/release story, explicit macOS terminal documentation, direct BYOK provider routing, separate Apple Silicon and Intel builds, and excellent documentation of its data flows. Its main disadvantage for your exact requirements is that its generic **Self-Hosted** transcription panel deliberately does **not** attach an `Authorization: Bearer` key; an authenticated organizational endpoint may therefore need a localhost shim. [^3]
+		- One application should be enough. I would **not start with separate terminal and desktop dictation apps**: TypeWhisper now has enough terminal-aware insertion machinery to justify testing it across both classes before accepting the complexity, hotkey collisions, permission duplication, and larger network/privacy surface of two applications. [^4]
+	- ## What actually passes the hard filter
+		- The key distinction in this research is between **BYOK transcription** and the much weaker pattern of **local/vendor transcription followed by BYOK text cleanup**.
+		- For this report, a project passes only when the speech path can be:
+			- `microphone → local application → endpoint/provider chosen by you → transcript`
+		- without an application-vendor transcription proxy in the middle. A later optional LLM call that cleans up the transcript is irrelevant to whether the transcription itself is BYOK.
+		- ### Candidate matrix
+			- #### TypeWhisper
+				- License / cost: GPLv3; core dictation free, including internal professional use. Paid license is for Premium sync/correction learning, non-GPL terms and support—not required for this workflow. [^1]
+				- macOS / Apple Silicon: macOS 14+; Apple Silicon recommended, Intel supported. Stable DMG and [[Brew]] cask. [^6]
+				- Actual transcription path: Local engines or cloud engines you configure. Its OpenAI Compatible add-on is explicitly usable as an **STT engine**, with server URL, optional API key, model selection, batch/realtime transport and OpenAI-compatible audio endpoints. [^7]
+				- Keys / login / telemetry: API keys in macOS Keychain; no account required; project says no telemetry and cloud providers are contacted only after being configured and selected. [^8]
+				- Insertion and pre-submit editability: AX insertion where verifiably successful; synthetic clipboard paste fallback; current code prefers synthetic paste for Terminal/[[iTerm2]]/[[Ghostty]]/[[WezTerm]]/[[Warp]]. Plain dictation leaves inserted text editable. 1.7 also has optional spoken-submit behavior, which you should disable. [^4]
+				- Maintenance: Very active: stable 1.7.0 released October 3, 2026; 1.8 daily builds already followed. [^10]
+			- #### OpenWhispr
+				- License / cost: MIT; Free plan does not expire, and BYOK usage itself is unlimited on every plan. [^11]
+				- macOS / Apple Silicon: macOS 12+; separate Apple Silicon and Intel DMGs. [^12]
+				- Actual transcription path: BYOK audio goes **straight to the provider whose key you entered**, not through OpenWhispr. Supported BYOK providers include OpenAI, Groq, xAI, Mistral, Tinfoil, OpenRouter, Corti, Deepgram and AssemblyAI. Local transcription is also available. [^13]
+				- Keys / login / telemetry: BYOK credentials use OS credential storage/Keychain; usage analytics off by default. OpenWhispr Cloud is a separate vendor-hosted mode and must not be confused with BYOK. [^14]
+				- Insertion and pre-submit editability: Automatically pastes at cursor; on macOS uses the same Cmd+V mechanism for normal apps and terminals. It does not inherently press Return in ordinary dictation, so the command remains editable. [^15]
+				- Maintenance: Very active; v1.10.2 is current stable, released September 14, 2026, with continuing repository activity. [^3]
+			- #### WhisperKey (`yung-sun-xxi`)
+				- License / cost: MIT; free; signed/notarized DMG. [^17]
+				- macOS / Apple Silicon: macOS 14+. The README does not give as explicit an architecture matrix as TypeWhisper/OpenWhispr. [^17]
+				- Actual transcription path: **Direct BYOK STT** to OpenAI or Groq; OpenAI supports `whisper-1` and `gpt-4o-mini-transcribe`; Groq supports Whisper-family models. No vendor transcription backend. [^17]
+				- Keys / login / telemetry: Keys stored in macOS Keychain; no application-vendor transcription account. [^17]
+				- Insertion and pre-submit editability: Right Option/Command/Shift hotkey; clipboard plus optional Cmd+V auto-paste. Auto-paste is gated on recognized AX text roles, which is good for safety but creates uncertainty in terminal emulators. [^18]
+				- Maintenance: Owner-driven project, 82 commits; latest release v1.1.2 on May 27, 2026. [^17]
+			- #### Whispering / Epicenter
+				- License / cost: Current Epicenter application code is AGPL-3.0; the project remains free/open source. [^19]
+				- macOS / Apple Silicon: Desktop build is Tauri through Epicenter; current release machinery produces macOS artifacts, including arm64, with Intel build checks in the project pipeline. [^20]
+				- Actual transcription path: Can use **direct provider connections**, an Epicenter hosted gateway, or a self-hosted endpoint. Only the direct/self-hosted configurations satisfy your hard requirement. An OpenAI-compatible custom endpoint was added in the 7.x line. [^21]
+				- Keys / login / telemetry: Settings/provider keys are local in the direct configuration; account/auth is optional rather than required. Current architecture also has optional hosted/sync capabilities, so this has more privacy surface to configure than TypeWhisper. [^22]
+				- Insertion and pre-submit editability: System-global shortcuts on desktop and native active-cursor delivery with clipboard fallback. An “Enter after transcription” option exists in the 7.x line and should be disabled for terminal review. [^21]
+				- Maintenance: Current monorepo is active, but Whispering has undergone a significant migration into Epicenter; the packaging/product boundary is less simple than the two leaders. [^24]
+			- #### VerbaLite
+				- License / cost: MIT, free. [^25]
+				- macOS / Apple Silicon: macOS 13+; source build supports `ARCH=universal`. Ad-hoc signed rather than polished notarized distribution. [^25]
+				- Actual transcription path: **Direct STT to Groq or any OpenAI-compatible Whisper endpoint**. Optional LLM cleanup is a separate second pass and is off by default. [^25]
+				- Keys / login / telemetry: API key in Keychain; no accounts, no vendor backend, no telemetry. [^25]
+				- Insertion and pre-submit editability: Modifier hold-to-talk → WAV → configured endpoint → clipboard → synthetic Cmd+V. No submit step. [^25]
+				- Maintenance: 2026 small project; straightforward `make` build, but much less battle-tested than the leaders. [^25]
+			- #### EchoType
+				- License / cost: MIT, free. [^26]
+				- macOS / Apple Silicon: macOS 14+; current release artifact is Apple-Silicon `arm64`; v0.1.0 is unsigned/ad-hoc signed and not notarized. [^26]
+				- Actual transcription path: **OpenAI-compatible STT is the primary transcription engine**, with configurable base URL/model/language/prompt/response format. Optional cleanup is a separate OpenAI-compatible chat request. [^26]
+				- Keys / login / telemetry: Explicitly no accounts, telemetry, sync, vendor billing or EchoType cloud storage. I did **not** find equally explicit primary-source documentation of Keychain storage, so I would audit its secret-storage code before using an organizational key. [^26]
+				- Insertion and pre-submit editability: Hold Option+Space and release; completed text is automatically pasted, with clipboard restoration. [^26]
+				- Maintenance: v0.1.0 released July 19, 2026; only a one-star-scale project at the source snapshot. [^26]
+			- #### VoiceFlow for macOS
+				- License / cost: MIT, free. [^27]
+				- macOS / Apple Silicon: macOS 14+, Xcode 16+/XcodeGen build path. Packaged-release maturity is poor. [^27]
+				- Actual transcription path: Perhaps the cleanest small-project BYOK design: arbitrary OpenAI-compatible `/v1/audio/transcriptions` or custom full URL, model, language, custom headers and timeout. Apple Speech is disabled rather than used as a hidden fallback. [^27]
+				- Keys / login / telemetry: Keychain API-key storage; no vendor backend; no analytics; audio is documented as going only to the configured endpoint. [^27]
+				- Insertion and pre-submit editability: Ctrl+Option+D, toggle or hold-to-talk; clipboard + synthetic Cmd+V with clipboard restoration. [^27]
+				- Maintenance: Only three commits at the October research snapshot and no clearly visible GitHub Release despite README release language. Technically compelling, operationally experimental. [^27]
+		- Two points are particularly important.
+		- First, **OpenWhispr's own cloud service is not BYOK**. Its documentation makes the distinction unusually clear: Local sends audio nowhere; Self-Hosted sends it to your server; BYOK sends it directly to the third-party provider; OpenWhispr Cloud sends it through OpenWhispr's infrastructure. Therefore, an OpenWhispr recommendation only satisfies your requirement when configured for BYOK or Self-Hosted—not merely because the app happens to accept API keys elsewhere. [^28]
+		- Second, **TypeWhisper's OpenAI Compatible integration is genuinely an STT provider**, not just an LLM cleanup plug-in. Its official add-on documentation specifically exposes speech-to-text through a configured server and requires that the server implement an OpenAI-compatible audio endpoint for transcription. [^7]
+	- ## Strong matches in depth
+		- **TypeWhisper is the best match for your particular combination of arbitrary endpoint control and terminal use.** The current stable release is 1.7.0, requires macOS 14+, supports both Apple Silicon and Intel, and is available as an official DMG or via `brew install --cask typewhisper/tap/typewhisper`. Core dictation, workflows, add-ons, history, snippets and APIs remain in the free GPLv3 edition; neither a subscription nor a license purchase is necessary for the workflow you described. [^10]
+		- Its provider architecture is especially well aligned with an organizational BYOK requirement. Under **Settings → Integrations → OpenAI Compatible**, you can create a profile with a server URL, optional API key, model and transport; model IDs can be discovered from `/v1/models` or manually specified. The server can be remote or local, but to serve as STT it must implement an OpenAI-compatible audio-transcription endpoint. That means an approved OpenAI endpoint, an internal gateway that emulates OpenAI's API, or a self-hosted service can all be first-class transcription destinations without TypeWhisper proxying the audio. [^7]
+		- The security characteristics are also unusually straightforward. TypeWhisper's security policy explicitly says API keys live in the **macOS Keychain**, its local HTTP API binds to `127.0.0.1` and is disabled by default, and exported diagnostics exclude API keys, audio payloads and transcription history. Its current product documentation states that there is no account requirement and no telemetry, and that cloud speech providers are used only after you add and select them. [^8]
+		- For insertion, TypeWhisper attempts accessibility-based text insertion where it can verify that the target's text state actually changed, while maintaining a clipboard/paste fallback and carefully restoring the previous clipboard. More importantly, current source explicitly places `com.apple.Terminal`, `com.googlecode.iterm2`, `com.mitchellh.ghostty`, [[WezTerm]] and [[Warp]] in the set for which **synthetic paste is preferred**. This is direct source-level evidence for the applications you care about, rather than an assumption based on generic Accessibility support. [^4]
+		- There is a useful historical caveat. On April 17, 2026, a user reported that TypeWhisper successfully recorded/transcribed but inserted nothing in Terminal, [[vim]] or [[Claude/Code]]; the maintainer acknowledged that terminal-style apps were then a rough edge. Later release validation specifically added terminal insertion to its app-aware insertion checks, and the current source now contains the explicit terminal bundle list above. I therefore regard the old report as evidence of a problem the project subsequently worked on, not as grounds to reject the present release—but it makes a real [[Ghostty]]/[[iTerm2]]/[[tmux]] acceptance test mandatory. [^2]
+		- TypeWhisper 1.7 additionally introduced **spoken submit** and related workflow capabilities. Those are useful generally but conflict with your hard requirement that terminal text remain reviewable. Use a plain dictation configuration and leave any submit/Enter action off. [^6]
+		- **OpenWhispr is the stronger choice if polished packaging, documentation and project breadth matter more than generic authenticated endpoint flexibility.** It is MIT licensed, has separate Apple Silicon and Intel macOS 12+ DMGs, uses Globe/Fn as the default Mac dictation hotkey, and has a free plan that explicitly permits unlimited BYOK transcription. Current stable v1.10.2 dates to September 14, 2026. [^11]
+		- Its hard-BYOK credentials are solid. OpenWhispr documentation says that BYOK audio travels straight from your Mac to the provider configured with your key and is not proxied or seen by OpenWhispr. BYOK providers include OpenAI, Groq, xAI, Mistral, Tinfoil, OpenRouter, Corti, Deepgram and AssemblyAI. API keys on macOS use the OS Keychain via Electron's secure-storage machinery. Usage analytics and cloud backup can both remain off, and the normal BYOK path does not require the OpenWhispr Cloud transcription service. [^13]
+		- For terminals, OpenWhispr has an official compatibility page that explicitly says macOS does not need special Ctrl+V/Ctrl+Shift+V differentiation because **Cmd+V works in Terminal, [[iTerm2]] and normal applications**, so it uses the same paste keystroke. Automatic pasting requires Accessibility permission, and you can simultaneously keep the transcript on the clipboard as a fallback. [^15]
+		- Its significant custom-endpoint limitation is easy to miss: the **Self-Hosted** transcription mode sends multipart audio to `{Server URL}/audio/transcriptions`, expects an OpenAI-shaped JSON response, but deliberately does **not** expose or send `Authorization: Bearer <key>` from the Self-Hosted panel. The project even ships an example localhost shim whose instructions say to keep the upstream vendor API key in the shim's environment. Thus, OpenWhispr works extremely well with its built-in BYOK providers and unauthenticated/private self-hosted endpoints, but **TypeWhisper is cleaner for a generic organizational OpenAI-compatible endpoint that requires bearer authentication**. [^34]
+		- OpenWhispr also has a couple of insertion issues worth putting into your acceptance test. A macOS clipboard race could occasionally paste previously copied text rather than the transcript; issue #1740, opened August 19, 2026, is now closed. A separate report documented auto-paste trouble with custom/non-QWERTY keyboard layouts because synthetic Cmd+V could resolve incorrectly. [^35]
+		- **WhisperKey is the strongest smaller, simpler alternative.** It is MIT licensed, native macOS, has a signed/notarized DMG, uses configurable Right Option/Right Command/Right Shift triggers, stores OpenAI/Groq keys in Keychain, and sends transcription directly to the selected provider. Its latest release is v1.1.2 from May 27, 2026. [^17]
+		- For desktop applications that expose ordinary Accessibility text fields, its behavior is nicely conservative: after transcription it checks the focused AX element; `AXTextField`, `AXTextArea` and `AXComboBox` can receive a synthetic Cmd+V, while secure fields, an inaccessible focus target, or an AX-query failure leave the text on the clipboard instead. Slack is explicitly included in the feature's acceptance criteria. That design makes it appealing for your general-macOS use case, but it is precisely why I rank it below the leaders for terminals: a terminal emulator's focused accessibility object may not look like a conventional text field, leading to clipboard-only behavior. There is no corresponding primary-source claim of [[Ghostty]]/[[iTerm2]]/[[tmux]] support. [^18]
+	- ## Terminal behavior and review-before-submit
+		- For use case A, there are really two independent questions:
+			- 1. **Can the app reliably get text into the terminal's pseudo-terminal input path?**
+			- 2. **Does it refrain from sending Return/Enter afterward?**
+		- The first is where TypeWhisper currently has the strongest evidence. Its source deliberately prefers the clipboard/synthetic-paste path for **Terminal, [[iTerm2]], [[Ghostty]], [[WezTerm]] and [[Warp]]**. Its clipboard logic also has terminal-specific restore delays, which shows that terminals are treated as a distinct insertion class rather than accidentally working through a generic text-field path. [^4]
+		- OpenWhispr is a close second: its official docs explicitly cover Terminal and [[iTerm2]] on macOS and explain that Cmd+V is the common paste operation. [[Ghostty]] is named in OpenWhispr's Linux recognition matrix, not in its Mac list; on macOS the docs rely on the universal Cmd+V behavior instead. [^15]
+		- **[[tmux]] is different from [[Ghostty]] or [[iTerm2]].** [[tmux]] is not the focused macOS application; the enclosing terminal emulator is. Therefore an app that correctly pastes into the terminal should hand text to the pty, after which [[tmux]] receives the keystream normally. That makes TypeWhisper's explicit [[Ghostty]]/[[iTerm2]] support strongly suggestive of [[tmux]] compatibility, but this is an inference from the insertion architecture—not a primary-source [[tmux]] certification. I found no qualifying project with equally explicit primary-source evidence naming [[tmux]] on macOS. [^4]
+		- For your review-before-submission requirement, **batch/final-result insertion is preferable to streaming transcription**. TypeWhisper's OpenAI Compatible add-on offers both batch and realtime transports; configure **batch** for terminal work. That gives you one completed transcript in the shell input buffer rather than partial words arriving while you are still speaking. [^7]
+		- Likewise, avoid TypeWhisper's optional spoken-submit functionality. In the configuration I recommend, dictation stops after inserting the transcription; you inspect/edit the shell line and physically submit it yourself. [^6]
+		- OpenWhispr's ordinary dictation behavior similarly finishes by pasting the transcript at your cursor. Its documented paste behavior does not imply a Return/Enter after the transcript. You can also enable **Keep transcription in clipboard** as a safety net if an insertion is dropped or lands in the wrong place. [^38]
+		- The smaller qualifying projects are less convincing for terminal use. VerbaLite and EchoType both use the fundamentally compatible mechanism—write transcript to pasteboard, synthesize Cmd+V, restore clipboard—but I found no issue/release/test evidence specifically validating [[Ghostty]], [[iTerm2]] or [[tmux]]. [^25] WhisperKey's AX-role gate may intentionally decline to auto-paste in some terminals. [^18] Whispering/Epicenter advertises system-global shortcuts plus native active-cursor delivery with clipboard fallback, but its present documentation likewise does not certify your specific terminal stack. [^21]
+		- One additional terminal concern is **shell safety**. None of these applications can make arbitrary dictated command text intrinsically safe. Your strongest control is exactly what you requested: final-result paste without automatic Return, followed by visual review. That is why I would reject any configuration involving “spoken submit,” “Enter after transcription,” an agent action that executes commands, or realtime text plus an automatic submit trigger, even when the same application otherwise qualifies. TypeWhisper and Whispering both expose optional submit features, so they need deliberate configuration. [^6]
+	- ## Qualified experimental options
+		- **VerbaLite is the most attractive minimalist alternative.** The entire intended architecture is easy to audit: hold a modifier, record 16-kHz mono WAV, send it directly to a Groq/default or arbitrary OpenAI-compatible Whisper endpoint, optionally perform an LLM cleanup pass, put the result on the clipboard, and synthesize Cmd+V. The key lives in Keychain, cleanup is off by default, and the project states that there is no telemetry or developer-owned server. It can be built with `make`, including a universal architecture build. [^25]
+		- That also makes VerbaLite a useful control implementation for your security testing: unlike feature-rich apps, it has very little networking surface to inspect. I would not lead with it because distribution is ad-hoc signed, terminal-specific regression evidence is absent, and the project is much younger than TypeWhisper/OpenWhispr. [^25]
+		- **EchoType** is conceptually similar but slightly more configurable. Its STT configuration includes an OpenAI-compatible base URL, model, language, transcription prompt and response format; cleanup uses a separate compatible chat call, so there is no ambiguity about whether BYOK is only post-processing. It explicitly disclaims accounts, telemetry, synchronization, billing and EchoType cloud storage. [^26]
+		- Its limitations are maturity and packaging: v0.1.0, released July 19, 2026, is an Apple-Silicon ZIP that is unsigned/ad-hoc signed and not notarized. More importantly for an enterprise BYOK deployment, the primary README material I found does not spell out the secret-storage mechanism as clearly as TypeWhisper, OpenWhispr, WhisperKey or VerbaLite do. I would therefore inspect that code before placing an organizational credential in it. [^26]
+		- **VoiceFlow for macOS** deserves mention because its design almost looks written against your requirements. Its HTTP transcription provider accepts an arbitrary compatible base URL/path or complete URL, model, language, custom headers and timeout; API keys use Keychain; it has no vendor backend or analytics; Apple Speech is deliberately hidden/disabled rather than silently used as a fallback; and nothing transcribes until a provider is configured. Its global hotkey supports toggle and hold-to-talk and insertion is clipboard plus synthetic Cmd+V. [^27]
+		- The reason it is not a recommendation is simply project risk: the repository snapshot had only three commits and no clearly visible published release despite README language referring to release archives. The Xcode/XcodeGen source-build path is straightforward enough to satisfy your formal install-path condition, but I would treat it as auditable prototype-quality software until it has substantially more usage and regression history. [^27]
+		- **Whispering/Epicenter** sits somewhere between the mature and experimental groups. Its actual capabilities are strong: the desktop build has system-global shortcuts, on-device GGUF transcription, direct cloud-provider connections, self-hosted endpoints and native active-cursor delivery. Its self-hosted connection object supports a base URL and optional API key, and the project documents that audio aimed at your self-hosted server does not traverse Epicenter's cloud. [^21]
+		- What gives me pause is architectural churn. Whispering moved from its former repository into the larger Epicenter monorepo, with Epicenter now owning the Tauri runtime. Direct provider mode satisfies your BYOK rule, but the product can also use Epicenter's hosted gateway and optional auth/sync functionality. That creates more configuration states in which “Whispering is using BYOK” is not enough—you must verify that the **direct** connection mode is selected. [^24]
+	- ## Near-misses and exclusions
+		- Several seemingly relevant projects fail specifically because **their API-key support is not BYOK transcription**, or because another hard requirement fails.
+		- Looped Whisper / `loopedautomation/whisper`
+			- This is the clearest example of the distinction you asked me to police. Speech recognition itself is local WhisperKit. The OpenAI-compatible provider is for the optional AI rewrite/cleanup stage. Therefore it has BYOK **text processing**, not BYOK transcription, and is excluded from the primary list. [^44]
+		- Local Whisper (`gabrimatic/local-whisper`)
+			- Impressive and actively maintained, with global macOS dictation and local MLX/Apple/WhisperKit engines, but its design explicitly avoids hosted speech APIs. Localhost/private-LAN engines do not turn it into a cloud-BYOK transcription client of the kind required here. [^45]
+		- LocalWhisper (`t2o2/local-whisper`)
+			- MIT, menu-bar/global hotkey and Apple-Silicon optimized, but it is intentionally 100% offline WhisperKit. It therefore fails only your primary BYOK-transcription filter, not the rest of the dictation requirements. [^46]
+		- OpenSuperWhisper
+			- MIT, active, global shortcuts and Apple-Silicon macOS support, but its advertised engines are downloaded local Whisper/Parakeet models. It is a legitimate local alternative, not a qualifying BYOK cloud-transcription application. [^47]
+		- WhisperKey (`BSPLAZA/WhisperKey`)
+			- Name collision with the qualifying `yung-sun-xxi/WhisperKey`; the BSPLAZA project is local whisper.cpp rather than BYOK cloud transcription. [^48]
+		- Superwhisper
+			- The official plan documentation says free users get local Whisper dictation, while **Bring your own API keys is a Pro feature**. It therefore fails both the open-source requirement and, for BYOK, your no-purchase requirement. [^49]
+		- MacWhisper
+			- Has a free tier and system-wide dictation, and its commercial feature set includes BYOK/custom OpenAI-compatible integrations, but there is no qualifying public open-source application repository; its official page presents it as a proprietary Free/Pro product. It therefore fails your OSS requirement irrespective of technical capability. [^50]
+		- [[Mac/App/WisprFlow]]
+			- Vendor-hosted commercial product rather than an open-source BYOK desktop application. Its current plans are service/account based; it does not satisfy the public-repository/direct-BYOK constraints. [^51]
+		- GPT Transcribe (`cyroz1/gpt-transcribe`)
+			- Technically interesting: global hotkey, native macOS app, direct OpenAI API transcription, Keychain-first API-key lookup, complete-result or streaming insertion, and active releases. However, I did not find a verifiable explicit open-source license in the repository material inspected. A public source tree without an applicable OSS license does not satisfy your license requirement, so I would not approve it yet. [^52]
+		- The Superwhisper case is particularly useful as a guardrail: **“free dictation” and “supports your own API key” do not imply “free BYOK dictation.”** Its own pricing documentation places BYOK keys on Pro, while the free path is local transcription. [^49]
+		- Likewise, local-only projects should not be viewed negatively—they may actually be the strongest privacy solution—but under your stated filter they are alternatives rather than matches. The primary requirement is specifically the ability to direct audio to **your chosen transcription endpoint/provider**, not merely the ability to avoid the developer's service. [^45]
+	- ## Recommended configuration and privacy validation
+		- I would start with **one app: TypeWhisper 1.7.0**, and only move to OpenWhispr if TypeWhisper fails your actual terminal acceptance tests.
+		- The first configuration I would test is:
+			- ~~~text
+			  Install:
+			    brew install --cask typewhisper/tap/typewhisper
+			  TypeWhisper:
+			    Settings
+			      → Integrations
+			        → OpenAI Compatible
+			          → Configure
+			  Provider profile:
+			    Server URL: <your approved OpenAI-compatible endpoint ending in /v1>
+			    API Key:    <your organizational/provider key>
+			    Model:      <approved transcription model>
+			    Transport:  Batch
+			  ~~~
+		- The [[Brew]] path, macOS 14 requirement and Apple Silicon/Intel support are official. The OpenAI Compatible integration supports server URL, optional API key, models and transport, and is expressly usable as the speech-to-text engine when the server exposes an OpenAI-compatible audio endpoint. Keys are stored in macOS Keychain. [^6]
+		- For ordinary OpenAI, the equivalent server URL is:
+			- ~~~text
+			  https://api.openai.com/v1
+			  ~~~
+		- For an internal gateway, substitute its approved `/v1` base URL and its transcription model ID. Do **not** configure a separate LLM/workflow at first. Establish raw STT first; then any optional cleanup can be assessed as an independent data flow. [^7]
+		- For the terminal profile, use a normal final-result dictation rather than streaming. Leave **spoken submit**, Enter-after-dictation behavior, workflow commands, or any equivalent submit action disabled. Configure whatever global hold/toggle hotkey is least likely to collide with your shell/terminal shortcuts. TypeWhisper's current insertion service will prefer synthetic paste in [[Ghostty]], [[iTerm2]] and Apple Terminal automatically. [^4]
+		- Then run this acceptance matrix:
+			- [[Ghostty]] → ordinary shell prompt
+				- Dictate `echo alpha bravo`. Entire string appears; **nothing executes** until you press Return.
+			- [[Ghostty]] → [[tmux]] → shell prompt
+				- Same behavior; confirm [[tmux]] does not eat, duplicate or truncate the paste.
+			- [[iTerm2]] → [[tmux]] → shell
+				- Same test, including a long multi-sentence prompt.
+			- [[vim]]/[[nvim]] inside terminal
+				- In insert mode, transcript lands exactly once and clipboard restoration does not corrupt it.
+			- [[Claude/Code]] / [[Codex/CLI]] / other terminal agent
+				- Transcript stays in the agent's editable prompt; no automatic submit.
+			- Slack/browser/editor
+				- Transcript appears once in the focused field, remains editable, and does not alter application focus.
+		- The explicit [[Ghostty]]/[[iTerm2]]/Terminal code paths justify those first three tests; [[tmux]] itself remains an inference and therefore deserves its own explicit acceptance case. [^4]
+		- For privacy/BYOK validation, I would use this **fail-closed checklist**:
+			- **Start from a minimal provider configuration.** Only the approved OpenAI-compatible transcription profile should be enabled for dictation. Do not configure an LLM cleanup workflow yet. TypeWhisper documents cloud use as opt-in by provider selection, so this creates the simplest auditable network graph. [^57]
+			- **Confirm the credential resides in Keychain**, not a plaintext preferences file or shell history. TypeWhisper's security boundary explicitly specifies macOS Keychain for API keys. [^8]
+			- **Observe outbound connections during a unique test dictation** with a host-aware firewall/network monitor. Apart from update-related traffic you deliberately permit, the transcription request should go only to the approved endpoint. There should be no TypeWhisper-operated transcription host in the audio path; its cloud providers are selected directly by the user. [^57]
+			- **Make the approved transcription endpoint temporarily unreachable and dictate again.** The correct privacy failure mode is an error/no transcript—not silent transcription through another cloud provider. This is the most useful practical test for an undisclosed fallback.
+			- **Only after raw STT passes should you enable cleanup.** Repeat the network test and treat the cleanup model as a separate approved destination for **text**, not audio. This prevents a post-processing BYOK configuration from being mistaken for proof of the speech path.
+			- **Test clipboard preservation and no-submit behavior under load**, especially in [[Ghostty]]/[[tmux]]: copy a recognizable secret-free sentinel string first, dictate repeatedly, and verify neither stale clipboard text nor Return is injected. TypeWhisper's current insertion implementation specifically contains paste verification and clipboard-restoration logic for this class of failure. [^4]
+		- If TypeWhisper fails the terminal tests, the next configuration I would try is **OpenWhispr 1.10.2 with a named BYOK provider such as OpenAI**, not OpenWhispr Cloud. In OpenWhispr, choose the BYOK engine for the **Dictation** speech-to-text tab, keep **Automatic pasting** on, turn **Keep transcription in clipboard** on as a recovery path, and leave Usage Analytics and Cloud Backup off. Its documented BYOK path sends audio directly to the provider, while its official terminal guide confirms standard Cmd+V insertion on macOS. [^60]
+		- I would **not** make OpenWhispr's generic Self-Hosted mode the first choice for an authenticated organizational endpoint: because that panel does not add bearer authorization, it may require a small localhost shim holding the upstream credential. TypeWhisper's OpenAI Compatible profile natively exposes an optional API key alongside the server URL, so it is the materially cleaner fit for that scenario. [^34]
+		- **Final recommendation:** use **TypeWhisper 1.7.0 for both terminal-wide and general macOS dictation**, configured against your approved OpenAI-compatible STT endpoint in **batch/final transcription mode**, with no cleanup model and no submit feature during initial validation. Its current source-level [[Ghostty]]/[[iTerm2]]/Terminal handling moves it ahead of OpenWhispr for your exact use case. Keep **OpenWhispr 1.10.2** as the fallback if you prefer its more mature product surface or TypeWhisper exposes a regression in your particular [[Ghostty]]/[[tmux]] stack. [^10]
+	- ## Footnotes
+		- [^1]: https://www.typewhisper.com/en/pricing/
+		- [^2]: https://github.com/TypeWhisper/typewhisper-mac/discussions/335
+		- [^3]: https://github.com/OpenWhispr/openwhispr/releases
+		- [^4]: https://github.com/TypeWhisper/typewhisper-mac/blob/main/TypeWhisper/Services/TextInsertionService.swift
+		- [^6]: https://www.typewhisper.com/en/docs/mac/installation/
+		- [^7]: https://www.typewhisper.com/en/addons/openai-compatible/macos/
+		- [^8]: https://github.com/TypeWhisper/typewhisper-mac/blob/main/SECURITY.md
+		- [^10]: https://github.com/TypeWhisper/typewhisper-mac/releases
+		- [^11]: https://github.com/OpenWhispr/openwhispr/blob/main/README.md
+		- [^12]: https://docs.openwhispr.com/platform/macos
+		- [^13]: https://docs.openwhispr.com/
+		- [^14]: https://docs.openwhispr.com/platform/where-your-files-live
+		- [^15]: https://docs.openwhispr.com/platform/editors-and-terminals
+		- [^17]: https://github.com/yung-sun-xxi/WhisperKey/
+		- [^18]: https://github.com/yung-sun-xxi/WhisperKey/issues/7
+		- [^19]: https://github.com/EpicenterHQ/epicenter/security
+		- [^20]: https://github.com/EpicenterHQ/epicenter/blob/main/.github/workflows/release.whispering.yml
+		- [^21]: https://github.com/EpicenterHQ/epicenter/blob/main/apps/whispering/README.md
+		- [^22]: https://github.com/EpicenterHQ/epicenter/blob/main/docs/adr/0079-whispering-authenticates-with-an-oauth-bearer-on-every-surface.md
+		- [^24]: https://github.com/braden-w/whispering/blob/main/README.md
+		- [^25]: https://github.com/karpovantonme/verbalite
+		- [^26]: https://github.com/amanydv2112/echotype
+		- [^27]: https://github.com/phbst/voiceflow-mac
+		- [^28]: https://docs.openwhispr.com/help/privacy/where-your-data-goes
+		- [^34]: https://github.com/OpenWhispr/openwhispr/blob/main/examples/custom-asr-shim/README.md
+		- [^35]: https://github.com/openwhispr/openwhispr/issues/1740
+		- [^38]: https://docs.openwhispr.com/help/dictation/auto-paste-and-clipboard
+		- [^44]: https://github.com/loopedautomation/whisper
+		- [^45]: https://github.com/gabrimatic/local-whisper
+		- [^46]: https://github.com/t2o2/local-whisper
+		- [^47]: https://github.com/Starmel/OpenSuperWhisper
+		- [^48]: https://github.com/BSPLAZA/WhisperKey
+		- [^49]: https://superwhisper.com/docs/billing/plans
+		- [^50]: https://www.macwhisper.com/
+		- [^51]: https://wisprflow.ai/pricing
+		- [^52]: https://github.com/cyroz1/gpt-transcribe/blob/main/README.md
+		- [^57]: https://www.typewhisper.com/en/
+		- [^60]: https://docs.openwhispr.com/help/customise/settings-reference
