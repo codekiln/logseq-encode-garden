@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
 
 - # Podcast Episode
-	- In this garden, **Podcast Episode** pages model one episode of a [[Logseq/Entity/Podcast]], captured as first-class listening notes.
+	- In this garden, **Podcast Episode** pages model one episode of a [[Logseq/Entity/Podcast]], captured as listening notes or a recording prepared for publication.
 	- ## What counts as a Podcast Episode
 		- One specific episode of a show, usually with a title, a host, an air date, and often a URL of its own.
 		- Not Podcast Episodes: the show itself, which is a [[Logseq/Entity/Podcast]]; the host's person hub; a guest's person hub; a [[Logseq/Entity/Quote]] pulled from an episode; a [[Logseq/Entity/Concept]] page that synthesizes ideas an episode discussed.
@@ -12,8 +12,9 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Episode pages live under the show's `Pod` namespace, dated: `Person/<Host>/Pod/<YY>/<MM> <Episode Title>`, or `<Show>/Pod/<YY>/<MM> <Episode Title>` for a show filed under its own name. [[Logseq/Entity/Podcast]] says where the show page goes.
 			- On disk that is `pages/Person___<Host>___Pod___<YY>___<MM> <Episode Title>.md`.
 			- `<YY>` is the two-digit year and `<MM>` the two-digit month of the episode's air date.
+		- A producer-owned episode recorded in a music session may use that session's dated path: `<Show>/A/Session/<YY>/<MM>/<DD-Day>`. The session page holds the episode description, recording, and notes. For example, [[GitP/A/Session/26/09/24-Thu]].
 		- An episode that is also part of a named sequence is both a Podcast Episode and a [[Logseq/Entity/Series]] instance. Its path then adds `Series/<Series Name>` after `Pod`, as [[Logseq/Entity/Series]] describes.
-		- Pages filed before this definition existed use either `Pod` or `Podcast` as the namespace segment, and some put a `/` after the month instead of a space. New episode pages use `Pod` and the space. Leave existing pages as filed unless the author asks for a migration.
+		- Pages filed before this definition existed use either `Pod` or `Podcast` as the namespace segment, and some put a `/` after the month instead of a space. New listening-note pages use `Pod` and the space. Leave existing pages as filed unless the author asks for a migration.
 	- ## Finding and deduplicating
 		- Search in order: the episode URL; the YouTube video ID when there is a recording; the exact episode title; distinctive title words under `Person/*/Pod*` and `*/Pod*`; then host plus a distinctive phrase. Classify as existing, similar, new, or blocked.
 		- One page per episode.
@@ -23,12 +24,14 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Frontmatter
 		- Mark instances with **`logseq-entity:: [[Logseq/Entity/Podcast/Episode]]`** so this definition page collects backlinks to every episode.
 		- Set **`created-by::`** to the host.
-		- Set **`date-created::`** to the air date when known.
+		- Set **`date-created::`** to the air date for listening notes, or the recording date for a producer-owned session.
+		- The publishing garden records feed identity with [[Logseq/Entity/Podcast/Episode/Frontmatter/podcast-guid]] and publication time with [[Logseq/Entity/Podcast/Episode/Frontmatter/podcast-published-at]].
 		- Optional: **`logseq-created-time-year::`** linking to the matching [[Logseq/Entity/Time/Year]] instance; see that page for how it differs from `date-created::`.
 		- **Never add, remove, or edit a `tags::` line on an existing page.** Older episode pages carry assorted `tags::` values; those are the author's and stay as they are.
 	- ## Page shape
 		- Logseq Flavored Markdown.
 		- The first body block is the H1 heading with the episode title linked to the episode when a URL is known: `- # [Episode Title](https://example.com/episode)`. Without a URL, use a plain `- # Episode Title`.
+		- A producer-owned session starts with a short episode description beneath the H1, followed by an embed of its recording's [[Logseq/Entity/Asset]] page. Notes and downloadable presets follow when available.
 		- Recommended body sections are **Notes**, **Highlights**, and **Transcript**, kept only when there is something to put in them.
 		- Prefer synthesis over pasting a full transcript unless the author asks for the full text.
 	- ## Combined with YouTube

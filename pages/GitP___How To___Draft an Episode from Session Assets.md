@@ -8,7 +8,7 @@ see-also:: [[GitP/House/Back]], [[GitP/How To/Prepare Podcast Metadata]]
 		- Ask the AI assistant to prepare the episode from that log entry. The exported WAV is the episode recording.
 	- ## What the AI prepares
 		- ### Episode page and audio
-			- The AI creates a GitP episode page using [[Logseq/Entity/Podcast/Episode]], linking the music-making log and its project, recording, and other source pointers.
+			- The AI creates the session episode page using [[Logseq/Entity/Podcast/Episode]], linking the music-making log and its project, recording, and other source pointers.
 			- The AI converts the exported WAV to an MP3, uploads it to Backblaze B2 at a stable, readable URL, and verifies that the uploaded file matches the prepared MP3.
 		- ### MicroFreak presets
 			- The AI identifies the saved MicroFreak presets used in the episode, connects to the instrument, backs them up, renames them for the episode, and downloads the renamed presets.
@@ -18,12 +18,18 @@ see-also:: [[GitP/House/Back]], [[GitP/How To/Prepare Podcast Metadata]]
 			- It correlates recorded MIDI CC messages with the MicroFreak manual and reads the downloaded presets for oscillator type, preset category, and other supported details. The episode page links the sources for those details.
 			- The AI distinguishes recorded changes from the settings in a saved preset. It leaves unknown details out of the episode description.
 		- ### Publication PR
-			- The AI fills in the episode's MP3 and preset links in this garden, then prepares a Gitpa PR containing the episode page and podcast metadata needed for publication.
+			- The AI fills in the episode's MP3 and preset links in this garden, then mirrors those pages into Gitpa and prepares a publication PR.
 			- The PR includes a direct link to the one episode MP3, its episode title, and a short description so the recording is easy to find and approve.
+	- ## Check public media
+		- GitP uses the public S3 download endpoint `https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/<page-derived filename>`. [Backblaze supports bucket names in the URL path](https://www.backblaze.com/docs/en/cloud-storage-call-the-s3-compatible-api).
+		- Open the asset page’s URL without signing in. An MP3 should return `audio/mpeg`; artwork should return its image format, such as `image/gif`.
+		- Request a small MP3 range with `curl --range 0-1023 --dump-header - --output /dev/null <recording-url>`. A seekable recording returns `206` with a `Content-Range` header.
+		- In Gitpa’s preview, play and seek the recording, load the artwork, and follow preset and MIDI download links.
+		- If the download host fails DNS resolution, compare its DNS answer through another resolver before changing the asset URL. A DNS failure alone says nothing about bucket access.
 	- ## Listen and publish
 		- Listen to the episode MP3 once and give it a go or a no-go.
 		- For a go, merge the Gitpa PR. Gitpa's CI publishes the episode after the merge.
 		- For a no-go, tell the AI to hold the episode. Any changes to the recording follow that decision.
 	- ## AI execution references
 		- The `gitp-asset-gathering` skill describes the assistant's responsibilities. [[GitP/How To/Prepare Podcast Metadata]] covers the existing metadata commands.
-		- The metadata export and Gitpa importer are available. Automatic preset capture, renaming, and MIDI enrichment still need implementation; they are part of the intended workflow above.
+		- Session-page sync and RSS generation are available. Automatic preset capture, renaming, and MIDI enrichment still need implementation; they are part of the intended workflow above.

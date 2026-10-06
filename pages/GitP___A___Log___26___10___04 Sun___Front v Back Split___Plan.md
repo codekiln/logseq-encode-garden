@@ -1,34 +1,11 @@
-# Front and Back of House
-	- [[GitP/House/Back]] owns session evidence, recording preparation, episode metadata assembly, and media uploads in [[Person/codekiln/GitHub/logseq-encode-garden]]. Raw sessions remain in `~/Documents/ableton/GitP`, with their future storage covered by [[GitP/A/Log/26/10/04 Sun/Dvc for Knowledge Gardens/Plan]].
-	- [[GitP/House/Front]] owns the public episode selection, final copy, artwork, web pages, RSS, and site deployment in [[Person/codekiln/GitHub/gitpa]].
-	- The handoff is an explicit episode record with permanent public media URLs. Front of House reviews the record, adds its publication decision, and builds the public page and feed.
-	- ## Inventory
-		- Garden session notes: [[Making/Music/Log/26/09/24 Thu - GitP Reboot with Novation Launchpad]] and [[Music/Composition/Log/26/09/25 Fri]] contain recording evidence and descriptions. MicroFreak and Launchpad manuals, screenshots, patch inspections, and musical experiments belong with the production notes.
-		- Garden media tasks: [prepare](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/gitpa/media/prepare) converts an exported WAV to MP3; [upload](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/gitpa/media/upload) writes an immutable object under `logseq-encode-garden/gitpa/episodes/`. These already implement Back of House responsibilities.
-		- Ableton recording tree: project sets, backups, recorded WAV and AIF audio, analysis files, MicroFreak patches, and exported MP3s are production sources. The `exports/` directory holds the September 25 prepared MP3 and preview. Rough session material belongs in the private garden's future bucket; selected public releases use the public garden's bucket.
-		- Gitpa `gitp-garden/`: public ceremony pages, episode records, logo, animated artwork, older MP3 releases, MIDI, and downloadable MicroFreak patches. Public pages and branding stay in Gitpa. Release audio, MIDI, and patches gain garden-owned remote objects, with Gitpa retaining public links.
-		- Gitpa [build_rss.py](https://github.com/codekiln/gitpa/blob/main/scripts/build_rss.py), `rss.xml`, Logseq styles/configuration, and the Pages workflow serve the audience and stay in Gitpa.
-		- Gitpa [gitp-acolyte](https://github.com/codekiln/gitpa/tree/main/gitp-acolyte) mixes source-file selection, AI metadata extraction, episode record creation, and page rendering. Source inspection and metadata extraction move to the garden; page rendering becomes a consumer of the handoff.
-		- [Import garden metadata and draft September 24 · Gitpa PR #9](https://github.com/codekiln/gitpa/pull/9) is merged. It supplies the importer and unpublished public draft; session assets and optional transcription are maintained in the garden.
-	- ## Handoff
-		- Back of House supplies recording date, proposed title and description, source-note link, selected asset names, permanent object keys and public URLs, media type, enclosure length, checksum, and any useful listening or transcription caveats.
-		- Front of House chooses the public copy and artwork, assigns the permanent GUID and publication timestamp, selects the public page name, and sets `published: true` after review.
-		- Store production provenance beside the garden record. Transfer only the selected public fields and assets into Gitpa. Page proxies should select named pages and fields; copying a whole production namespace requires a separate editorial decision.
-		- Preserve each already published GUID, publication timestamp, page URL, and enclosure URL through the migration. Front of House keeps its editable publication record; garden release metadata owns the uploaded object's identity and verification.
-		- [[GitP/A/Log/26/10/04 Sun/Front v Back Split/Plan/Sep25 Handoff]] provides a working example using the current September 25 publication fields and verified public media headers.
-	- Next actions are in [[GitP/A/Log/26/10/04 Sun/Podcast/Plan]], starting with the September 24 draft and the Mac credential-cache trial.
-	- ## Migration - [[Ghost Gardener]] please
-		- DONE Split the September 24 draft in PR #9: place the extraction script, source-note output, and optional transcription in the garden; leave the curated page and draft publication record in Gitpa. Keep the episode unpublished until the prepared MP3 and description have been reviewed.
-			- [Gather session assets and prepare podcast drafts · Garden PR #176](https://github.com/codekiln/logseq-encode-garden/pull/176) is merged. It adds the gathering skill, garden preparation tasks, September 24 session assets, and JSON export.
-			- [Import garden handoffs and draft September 24 · Gitpa PR #9](https://github.com/codekiln/gitpa/pull/9) keeps the public draft and imports selected fields while preserving editorial copy and episode identity.
-		- DONE Add a garden task that exports selected public episode fields to a handoff record. Add a Gitpa import task that validates the record and renders a draft page without changing an existing GUID or publication date.
-			- The September 24 handoff passed public-media verification and imported without changing the existing edited record or page. The paired PRs include producer, importer, and RSS tests.
-		- DOING Use September 24 as the dry run: gather session assets in the garden, prepare the release, verify its URL and range playback, import into Gitpa, review the description, and run `rss:check` and `rss:test` before publication.
-		- TODO Separate `gitp-acolyte` production functions from presentation functions, carrying over the applicable tests. Replace file relocation in [pub_rec_files.py](https://github.com/codekiln/gitpa/blob/main/gitp-acolyte/gitp_acolyte/ceremonial/spells/recording/files/pub_rec_files.py) with source-preserving release preparation: its current `Path.replace` calls move the original recordings.
-		- TODO Inventory older ceremony downloads with checksums and their existing published URLs. Copy selected MP3, MIDI, and patch releases to permanent remote objects, verify the copies, and then update public page links. Preserve working historical links during the transition.
-		- TODO Connect [[GitP/A/Log/26/10/04 Sun/Fnox/Plan]] and [[GitP/A/Log/26/10/04 Sun/Dvc for Knowledge Gardens/Plan]] to the garden production tasks. Gitpa site and RSS builds consume public URLs without bucket-write credentials or access to local recordings.
-	- ## Acceptance
-		- A Gitpa checkout can build the public site and RSS using its curated records and public asset URLs.
-		- A garden checkout can create and verify a release from available production assets, recording source provenance and checksums.
-		- Re-importing a handoff preserves Front of House editorial changes and permanent episode identity, with conflicts reported for review.
-		- The September 25 episode remains playable throughout the change, and the September 24 draft remains editable before publication.
+- # Front and Back of House
+	- [[GitP/House/Back]] prepares recordings, uploads media, and maintains session episodes in [[Person/codekiln/GitHub/logseq-encode-garden]]. Raw recordings stay under `~/Documents/ableton/GitP`.
+	- [[GitP/House/Front]] serves those episodes through [[Person/codekiln/GitHub/gitpa]]'s website and RSS, with its branding and deployment.
+	- ## One source for episode content
+		- Garden session pages hold the title, description, source notes, and asset-page embeds. Gitpa mirrors the session and embedded assets as [[Logseq/Entity/Proxy/Page]] instances with identical names.
+		- Edit episode content in the garden, then run [[GitP/mise/Task/episode/sync]] in Gitpa. Resync replaces the body and preserves Gitpa's publication properties.
+		- Gitpa's `public::` controls visibility. RSS release identity and publication time belong to its proxy. [[GitP/How To/Prepare Podcast Metadata]] describes publication preparation.
+	- ## Remaining work
+		- TODO Connect [media upload](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/gitpa/media/upload) to the [Fnox assets profile](https://github.com/codekiln/logseq-encode-garden/blob/main/fnox.toml) for unattended uploads on the Mac.
+		- TODO Implement the asset commands in [[GitP/A/Log/26/10/04 Sun/Dvc for Knowledge Gardens/Plan]] before collecting private Ableton sessions.
+		- DONE Move the historical release recordings, artwork, presets, and MIDI to garden-owned B2 assets, linked from [[GitP/A/Session/24/11/19-Tue]] and [[GitP/A/Session/24/12/04-Wed]].

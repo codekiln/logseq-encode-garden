@@ -2,7 +2,7 @@
 	- Proxying an entity instance brings along the entity definitions and executable tasks needed to use it in the destination garden. Running sync again updates those pages and task files from the same source.
 	- ## Existing definitions
 		- [[Logseq/Entity/Proxy/Page]] defines source discovery, page copying, frontmatter preservation, collision handling, and asset copying. [[Logseq/Entity/Proxy/Page/mise/Task/sync]] supplies the executable sync task.
-		- [[Logseq/Entity/Mise/Task]] defines task identity, ownership, invocation, dependencies, and source links. [[GitP/mise/Task/episode/draft]] is an existing instance.
+		- [[Logseq/Entity/Mise/Task]] defines task identity, ownership, invocation, dependencies, and source links. [[GitP/mise/Task/episode/sync]] is an existing instance.
 	- ## Companion-task model
 		- Extend [[Logseq/Entity/Mise/Task]] with the file-task requirements needed for proxying. Task instances use the established singular `logseq-entity::` property.
 		- An entity definition declares its companion task pages through the `entity-tasks::` property.

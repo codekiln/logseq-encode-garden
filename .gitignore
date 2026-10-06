@@ -120,3 +120,5 @@ worktrees/
 /assets/.remote/**
 !/assets/.remote/**/
 !/assets/.remote/**/*.dvc
+
+.worktree/

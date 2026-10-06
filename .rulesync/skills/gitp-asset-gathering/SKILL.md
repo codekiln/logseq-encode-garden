@@ -2,73 +2,58 @@
 name: gitp-asset-gathering
 description: >-
   Prepare a GitP episode from an exported WAV and a Making/Music/Log entry:
-  create the garden episode, capture MicroFreak presets, enrich notes from MIDI
-  and manuals, upload MP3 and presets to B2, and prepare a Gitpa publication PR.
-  The human listens to one episode recording and merges the PR to publish.
+  create the garden session episode, capture MicroFreak presets, enrich notes
+  from MIDI and manuals, upload media, and prepare a Gitpa publication PR.
+  The human listens to one recording and merges the PR to publish.
 targets: ["*"]
 ---
 
 # Prepare a GitP episode
 
 Read `pages/GitP___How To___Draft an Episode from Session Assets.md` for the
-human workflow and `pages/GitP___How To___Prepare Podcast Metadata.md` for the
-metadata commands. Start from the supplied Making/Music/Log entry and follow its
-project and WAV pointers. Search existing notes before asking for a missing path.
+human workflow and `pages/GitP___How To___Prepare Podcast Metadata.md` for
+publication preparation. Start with the supplied music-making log and follow its
+project and exported WAV links. Search existing notes before asking for a path.
 
-## Create the episode and prepare audio
+## Prepare the session and recording
 
-Read the Podcast/Episode entity definition and search for an existing episode.
-Create or update the GitP episode under the show's namespace, linking the source
-log entry and its pointers. Preserve human notes and publication identity. Do not
-invent an air date for an unpublished episode. Record graph edits in today's journal.
-Keep any technical file inventory on the session assets page and link it from the
-episode; the episode page holds the description and listening/download links.
+Read the Podcast/Episode and Asset entity definitions. Create or update the
+session episode under `GitP/A/Session/YY/MM/DD-Day`, linking its source log.
+The episode has one H1 title, a first-child description, and an embedded MP3
+asset page. Keep the recording URL on that asset page. Record graph edits in
+today's journal.
 
-Use the exported WAV as the one episode recording. Convert it to MP3 without
-changing the source WAV. Do not select among stems, assemble commentary, or ask
-the human for time ranges, trims, or editorial assessments. Upload the MP3 to B2
-under a stable episode path using the garden's configured credentials; never print
-secrets. Verify uploaded bytes and media metadata against the local MP3.
+Convert the exported WAV to MP3 without changing the source WAV. Upload it to
+B2 using the garden's configured credentials and page-derived asset filename.
+Verify uploaded bytes and media metadata against the local MP3.
 
-## Capture saved presets
+## Capture presets and describe the session
 
-Read the MicroFreak preset entity rules and existing device workflow documentation
-before device writes. Identify the saved slots used in this episode from the log,
-MIDI, and any existing captures. A current slot's contents alone cannot establish
-what was used in an older session. If the association cannot be established, ask
-only for the missing slot identification and continue independent episode work.
+Read the MicroFreak preset entity rules and device workflow. Identify saved slots
+from the source log, captured MIDI, and existing captures. Ask for missing slot
+identification when the available evidence cannot establish which presets were
+used; continue the recording and page preparation.
 
-Back up each identified preset before renaming. Use the documented episode naming
-convention and device name limits. Protect any unsaved active sound, verify that
-the slot still holds the captured sound, rename it, download it, and verify that
-only intended metadata changed. Upload the exports to B2 and add labeled download
-links to the episode page. Never rename unrelated presets or claim that an
-unimplemented device command has run.
+Back up each identified preset before renaming. Protect any unsaved active sound,
+verify the slot still matches the backup, apply the episode naming convention,
+download it, and verify that only intended metadata changed. Upload the exports
+and add labeled download links to the session page.
 
-## Describe the session
+Correlate captured MIDI CC numbers, values, and times with the MicroFreak manual.
+Use preset metadata for oscillator type, category, and supported settings, and
+read the Launchpad manual where relevant. Link useful explanations to their
+sources. Distinguish recorded events from saved preset settings.
 
-Read the captured MIDI data, source log, and relevant MicroFreak and Launchpad
-manual sections. Correlate MIDI CC numbers, values, and times with the documented
-controls. Read preset metadata for oscillator type, category, and other supported
-settings. Link each useful explanation to its source. Distinguish session events
-from saved preset settings; omit unsupported historical claims. Audio filenames,
-track names, and a preset's current name do not establish recording content.
-Commentary transcription is not required for this workflow.
+## Prepare publication
 
-## Prepare the Gitpa publication PR
+Follow the metadata how-to to sync the session and embedded assets into Gitpa as
+exact-name Logseq proxies. Keep episode text in the source garden and publication
+identity on the Gitpa proxy. Prepare a worktree PR with the public page and feed
+changes, run the relevant sync and RSS checks, commit, and push.
 
-Use `mise run gitpa:episode:draft -- <project>` for the available metadata checks
-and JSON export, then the Gitpa importer. Read the task documentation first. If
-an edited session asset page already exists, use fresh output paths and transfer
-checked facts without replacing human edits. Review proposed copy yourself.
+The PR includes the episode title, a direct MP3 link, and the reason to listen:
+decide whether to publish this recording. Leave the publication PR for the human
+to merge after one listen and a go decision. CI publishes after the merge.
 
-Prepare the Gitpa episode page, media links, publication metadata, and feed changes
-in a worktree. Run the relevant importer and feed checks, commit, push, and open a
-PR. Include the episode title, a direct MP3 link, and the reason to listen: decide
-whether to publish this recording. The human's remaining work is one listen and a
-go/no-go decision. Leave the publication PR for the human to merge; CI publishes
-after that merge. Do not substitute an AI listening assessment for this decision.
-
-Some parts of this workflow still need automation, particularly device capture,
-rename, and MIDI enrichment. Report a concrete missing capability if it blocks
-completion; do not turn it into an extra human review checklist.
+Automatic preset capture, renaming, and MIDI enrichment still need implementation.
+Report the concrete missing capability if it prevents preparing the episode.
