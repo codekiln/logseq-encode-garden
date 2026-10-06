@@ -19,7 +19,10 @@ prev:: [[GitP/A/Log/26/10/05 Mon - simplify gitpa garden proxies]]
 			- [[My Notes]]
 				- Yes.
 				- In time, I think the entities system may consider having a [[SemVer]] versioning system, and perhaps there may even be a [[Changelog]] and something akin to a [[Database/Schema/Migration]] system tied to that versioning system so downstream gardens can do the right thing - though I'm picturing that some of the changes will be deterministic updates, and others may require AI's help to adapt the new entity's changes to the local context (I'm anticipating that may be necessary in the future, but it's not something I want to design around right now).
+			- [codekiln/logseq-encode-garden#194 re-sync proxy properties from the source](https://github.com/codekiln/logseq-encode-garden/pull/194): the source owns properties on re-sync; the destination keeps `tags::`, the proxy keys and keys an entity definition lists in `entity-proxy-destination-properties::`. Any other destination-only property is removed, and the preview lists it first.
 		- DONE Should gitpa retire its own `episode:sync` now that [[Logseq/Entity/Proxy/Page/mise/Task/sync]] produces the same page bodies?
 			- `episode:sync` follows embeds and syncs a session with its assets in one batch. The garden task syncs one page at a time.
 			- [[My Notes]]
 				- Yes, see [[My/Principle/Simplify/Don't Repeat Yourself DRY]]
+			- [codekiln/logseq-encode-garden#194 follow embeds in proxy sync](https://github.com/codekiln/logseq-encode-garden/pull/194): `--follow-embeds` syncs a session with its embedded asset pages in one batch.
+			- [codekiln/gitpa#15 retire episode:sync](https://github.com/codekiln/gitpa/pull/15): deletes `episode:sync` and re-vendors the garden task; it targets the branch of gitpa#12 and merges after garden#194.
