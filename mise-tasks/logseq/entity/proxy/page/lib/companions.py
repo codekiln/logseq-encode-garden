@@ -263,6 +263,7 @@ def extend_plan(plan):
     for destination in previous_files:
         if destination not in claims:
             plan.warnings.append(f'{destination}: removed upstream; cleanup candidate retained locally')
-    imports[import_key] = {'source_graph': str(plan.source_root.resolve()), 'page': plan.page, 'files': sorted(set(previous_files) | set(claims))}
+    # The graph path is repository-relative so the manifest stays the same across checkouts.
+    imports[import_key] = {'source_graph': plan.source_root.relative_to(repo).as_posix(), 'page': plan.page, 'files': sorted(set(previous_files) | set(claims))}
     if plan.pages or claims or manifest_path.exists():
         core.add_write(plan, MANIFEST, (json.dumps(manifest, indent=2, sort_keys=True) + '\n').encode(), mode=0o644)
