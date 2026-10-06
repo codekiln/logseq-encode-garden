@@ -1,6 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
 alias:: [[Proxy Page]], [[Logseq Proxy Page]]
 entity-tasks:: [[Logseq/Entity/Proxy/Page/mise/Task/sync]]
+entity-proxy-destination-properties:: public
 - # Proxy Page
 	- In this garden, **Proxy Page** marks a page whose body is mirrored from a page in another [[Logseq/Garden]], so one garden can read a page that lives in another without that page being moved or duplicated by hand. See [[Logseq/Idea/Proxy]] for the motivation.
 	- ## What counts as an instance
@@ -22,7 +23,9 @@ entity-tasks:: [[Logseq/Entity/Proxy/Page/mise/Task/sync]]
 		- No shape of its own. The body is the source page's body, so the source's shape — and the shape of whatever entity the page is primarily — governs.
 	- ## Invariants
 		- **`tags::` on an existing page is never touched.** On re-sync the destination's `tags::` win outright and the source's are discarded. On first create, the source's `tags::` come across with the copy unless the user says otherwise.
-		- **Destination properties survive a re-sync.** Only the proxy keys are rewritten; every other property line already on the page stays. The **body**, by contrast, is replaced wholesale by the source's.
+		- **The source owns the properties, except those the destination owns.** A re-sync adds properties the source gained since the last sync, updates those whose value changed, and removes those the source no longer has. The **body** is replaced wholesale by the source's.
+		- **The destination owns** `tags::`, the proxy keys, and every property an entity definition names in `entity-proxy-destination-properties::`. The definitions consulted are the ones in the source page's `logseq-entity::`, plus this one, which names `public::`: whether a page is published is the destination garden's decision. A re-sync keeps the destination's value of an owned property and never takes the source's, including when the destination has none.
+		- **A property only the destination has goes on re-sync** unless the destination owns it. A garden that wants to keep a local property declares it on the entity definition. The preview names every property it adds, updates or removes.
 		- **A name collision is never resolved silently.** If the destination page exists and has no `logseq-proxy-url::`, it is a real page that happens to share the name — stop and ask before writing anything.
 	- ## Finding and deduplicating
 		- Proxies scatter across `pages/` wherever their mirrored names fall, so there is no namespace to narrow a search to. Always search repo-wide from the garden root.
@@ -41,17 +44,18 @@ entity-tasks:: [[Logseq/Entity/Proxy/Page/mise/Task/sync]]
 	- ## Syncing an instance
 		- **Source file:** the file the code forge URL names, or else `pages/<page>.md` under the graph root, with `page=` decoded (`%2F` is `/`) and each `/` written as `___`.
 		- **First copy:** the whole source file, with the proxy keys set in its property block.
-		- **Re-sync:** the source's body under the destination's property block, with the proxy keys rewritten, per **Invariants** above.
+		- **Re-sync:** the source's body under a property block merged per **Invariants** above. Properties already on the destination keep their order; properties new from the source follow them, and the proxy keys come last.
 		- **Property block:** the run of `key:: value` lines from the top of the file, ending at the first line of any other kind — a blank line, a `- # Heading`, or plain text. A destination with no property block gains one above its first line, holding the proxy keys.
 		- **Assets:** every `../assets/<path>` the source body links to is copied to the same `assets/<path>` here, replacing what is there. A missing source asset is reported and the sync goes on.
-		- **Report:** the source path, the destination path, the proxy key values written, whether it was a first copy or a re-sync, and the assets copied.
+		- **Embeds:** with `--follow-embeds`, each page embedded with the `embed` macro is synced as a proxy too, recursively, so a page and the pages it embeds sync in one batch. A missing embedded page is reported and the sync goes on.
+		- **Report:** the source path, the destination path, the proxy key values written, whether it was a first copy or a re-sync, the properties added, updated or removed, and the assets copied.
 	- ## Executable sync
 		- [[Logseq/Entity/Proxy/Page/mise/Task/sync]] previews the page, entity definitions, companion task references, implementation files, and assets imported by a sync. `--apply` applies the previewed changes.
 		- An instance's `logseq-entity::` links lead to its source entity definitions. Each definition's `entity-tasks::` declares companion task references, whose file mappings and task dependencies follow [[Logseq/Entity/Mise/Task]]. The sync visits shared and cyclic dependencies once.
 		- `.logseq-proxy/manifest.json` in the destination graph records source repository and graph root, logical page identity, source-to-destination file mappings, ownership, and last imported content hashes.
-		- The manifest retains the latest source companion declarations. When a proxy becomes the source for another garden, task discovery uses those declarations and resolves imported implementation paths through the source manifest. Destination page properties remain preserved during re-sync.
+		- The manifest retains the latest source companion declarations. When a proxy becomes the source for another garden, task discovery uses those declarations and resolves imported implementation paths through the source manifest.
 		- Re-sync refreshes source changes where imported implementation files still match their recorded hashes. Local implementation edits, unowned destination files, and competing source claims produce conflicts before application.
-		- Destination page properties survive re-sync under the existing frontmatter rules; source page bodies refresh. Files removed from upstream task mappings are reported as cleanup candidates and retained locally.
+		- Page properties and bodies refresh from the source per **Invariants** above. Files removed from upstream task mappings are reported as cleanup candidates and retained locally.
 		- A preview reports logical entity definitions without files separately from missing declared tasks or implementation files. Missing source assets remain warnings; missing task requirements stop application.
 	- ## Examples in this garden
 		- [[Book/ML with PyTorch and Scikit-Learn]]

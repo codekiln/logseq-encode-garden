@@ -1,4 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
+entity-proxy-destination-properties:: podcast-guid, podcast-published-at
 
 - # Podcast Episode
 	- In this garden, **Podcast Episode** pages model one episode of a [[Logseq/Entity/Podcast]], captured as listening notes or a recording prepared for publication.
@@ -25,7 +26,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Mark instances with **`logseq-entity:: [[Logseq/Entity/Podcast/Episode]]`** so this definition page collects backlinks to every episode.
 		- Set **`created-by::`** to the host.
 		- Set **`date-created::`** to the air date for listening notes, or the recording date for a producer-owned session.
-		- The publishing garden records feed identity with [[Logseq/Entity/Podcast/Episode/Frontmatter/podcast-guid]] and publication time with [[Logseq/Entity/Podcast/Episode/Frontmatter/podcast-published-at]].
+		- The publishing garden records feed identity with [[Logseq/Entity/Podcast/Episode/Frontmatter/podcast-guid]] and publication time with [[Logseq/Entity/Podcast/Episode/Frontmatter/podcast-published-at]]. When the episode page there is a [[Logseq/Entity/Proxy/Page]], re-syncing it keeps both.
 		- Optional: **`logseq-created-time-year::`** linking to the matching [[Logseq/Entity/Time/Year]] instance; see that page for how it differs from `date-created::`.
 		- **Never add, remove, or edit a `tags::` line on an existing page.** Older episode pages carry assorted `tags::` values; those are the author's and stay as they are.
 	- ## Page shape

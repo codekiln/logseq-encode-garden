@@ -28,5 +28,8 @@ see-also:: [[Logseq/Entity/Definition/Discussion]]
 		- [[Logseq/Entity/Proxy/Page/mise/Task/sync]] follows an instance's `logseq-entity::` links, imports its entity definitions, and follows each definition's `entity-tasks::` links. Task references declare their executable files and required task dependencies through the companion-file contract on [[Logseq/Entity/Mise/Task]].
 		- Shared entity definitions and task dependencies are visited once per sync. Cyclic relationships are allowed and terminate after their pages have been visited.
 		- A referenced entity definition with no source file is reported as a logical page. A declared companion task or task dependency requires a source reference page and its mapped implementation files; missing task content stops application.
+	- ## Properties a proxy's destination owns
+		- `entity-proxy-destination-properties::` names, as a comma-separated list of property keys, the properties on an instance that belong to the garden holding a [[Logseq/Entity/Proxy/Page]] of it rather than to the source page. Re-syncing that proxy keeps the destination's values for them. An absent property names none.
+		- For example, [[Logseq/Entity/Podcast/Episode]] names `podcast-guid` and `podcast-published-at`, which the publishing garden records.
 	- ## Relationship to [[Logseq/Entity]]
 		- [[Logseq/Entity]] is the general conceptual model — what an entity is and how any page is marked as one. This page is the entity type whose instances are the definition pages themselves, so the garden's set of entity types is queryable through its backlinks rather than kept as a hand-maintained list.
