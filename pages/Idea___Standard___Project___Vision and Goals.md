@@ -1,0 +1,24 @@
+see-also:: [[Idea/Standard/Project/Management/Schema]]
+
+- # Project Vision and Goals
+	- [[OpenSpec]] makes a change the unit of work, which suits brownfield projects: no one has to specify the whole system first. But a long run of changes, each sensible on its own, can carry a project away from what it was for, because nothing in the repository says what it was for. Today I supply that context from this garden, so an agent working only in the repository doesn't have it.
+	- What if a project had a standard place for its why: its vision, goals, [[Principles]], and constraints, which change proposals and issues could cite?
+	- ## Layers
+		- Why: vision, goals, principles, constraints.
+		- What changes: change proposals and requirements, as in [[OpenSpec]].
+		- What work: issues, priority, dependencies, as in [[Idea/Standard/Project/Management/Schema]].
+		- Where the work is stored: the binding to [[GitHub/Issue]], [[JIRA]], [[Beads]], or another tracker.
+		- A change proposal would name the goals and principles it serves, and a work item would name the change it implements, so the reason for a piece of work can be traced back without searching old conversations.
+	- ## Vision
+		- What problem the project solves, who it is for, what it leaves out, and what success looks like.
+	- ## Principles and constraints
+		- Principles pile up: some apply everywhere, others only to security, data, or UI work. A single `principles.md` grows long, and most of it is irrelevant to any one change.
+		- Splitting principles by area behind a short index gives [[Progressive Disclosure]]: an agent changing authentication reads the vision, the security principles, the auth constraints, and the relevant [[ADR]]s, and skips the rest.
+		- Each principle could carry tags or an `applies-when` condition, so a tool can pick the relevant ones for a change.
+		- A small manifest at the repository root would point to each piece, so a project can keep its own folder layout.
+	- ## Prior art
+		- [[GitHub/SpecKit]] has a constitution that holds a project's principles above its specs and plans. It doesn't cover the problem, the audience, or what success looks like.
+		- [arc42](https://arc42.org/overview) is an architecture documentation template that keeps goals, constraints, context, quality requirements, and decisions in separate sections.
+	- ## Open questions
+		- What is the smallest set of concepts that lets a person and an agent agree on why a project exists and which rules govern a change?
+		- Choosing a profile for a new project should feel like choosing the MIT license or adopting [[Conventional Commits]]. What would the default profile contain?
