@@ -1,0 +1,24 @@
+prev:: [[GitP/A/Log/26/10/05 Mon - simplify gitpa garden proxies]]
+
+- # [[2026-10-06 Tue]]
+	- [[AI Notes]] by [[Anthropic/Model/Claude/5/5/Opus]]
+		- ## Merged
+			- [codekiln/logseq-encode-garden#178 garden session pages as GitP episode sources](https://github.com/codekiln/logseq-encode-garden/pull/178): the four session pages and their asset pages are on main, with asset URLs on the public S3 endpoint. The `episode/draft`, `episode/test` and `episode/transcribe` task pages are gone.
+			- [codekiln/logseq-encode-garden#179 page-named DVC asset tasks](https://github.com/codekiln/logseq-encode-garden/pull/179) and [codekiln/logseq-encode-garden#180 cached Fnox B2 uploads](https://github.com/codekiln/logseq-encode-garden/pull/180): the asset tasks GitP sessions use for recordings.
+			- [codekiln/logseq-encode-garden#190 proxy companion tasks](https://github.com/codekiln/logseq-encode-garden/pull/190): proxying a page now brings its entity definitions and [[Logseq/Entity/Proxy/Page/mise/Task/sync]] along. See [[Logseq/Entity/Log/26/10/05 Mon - Mise Tasks Accompany Logseq Proxies]].
+			- [codekiln/logseq-encode-garden#192 relative graph path in proxy manifest](https://github.com/codekiln/logseq-encode-garden/pull/192): the sync task had written an absolute home-directory path into gitpa's `.logseq-proxy/manifest.json`, which gitpa's secretlint rule rejects.
+		- ## Ready to merge
+			- [codekiln/gitpa#12 publish four GitP sessions from garden proxies](https://github.com/codekiln/gitpa/pull/12): every review thread is answered and resolved. Merging it publishes to listeners.
+				- The session page shows a heading, description, audio player, GIF and preset download links. The property block is hidden on the published site and still editable in the desktop app.
+				- All 14 media URLs point at the public `logseq-encode-garden` bucket and answer anonymous range requests.
+				- The homepage query had two faults: an invalid binding, and Logseq rewriting `(pull ?b [*])` to a fixed attribute list without `:block/name`. The query now pulls `?p`, and `mise run site:query:check` applies the same rewrite as Logseq 0.10.6, so it fails on the old query. The homepage lists 4 episodes, newest first.
+				- All 21 pages gitpa proxies exist in this garden. Re-syncing them with `logseq:entity:proxy:page:sync` changed no page body, and a second run wrote nothing.
+	- ## Questions
+		- TODO Should a property added to a source page after the first copy reach the proxy on re-sync?
+			- The sync keeps the destination's property lines, so later source properties never arrive. `entity-tasks::` on [[Logseq/Entity/Proxy/Page]] was missing from gitpa for this reason and was added by hand.
+			- [[My Notes]]
+				-
+		- TODO Should gitpa retire its own `episode:sync` now that [[Logseq/Entity/Proxy/Page/mise/Task/sync]] produces the same page bodies?
+			- `episode:sync` follows embeds and syncs a session with its assets in one batch. The garden task syncs one page at a time.
+			- [[My Notes]]
+				-
