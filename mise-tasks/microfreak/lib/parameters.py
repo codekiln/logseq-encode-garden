@@ -237,7 +237,7 @@ def load_preset(path, slot=None):
     return payload, metadata
 
 
-def inspect(path, slot=None):
+def inspect(path, slot=None, interpret_fw5=False):
     payload, metadata = load_preset(path, slot)
     result = {'schema': 1, 'source': str(path), 'metadata': metadata,
               'value_context': 'saved_base_setting',
@@ -246,18 +246,35 @@ def inspect(path, slot=None):
     if metadata.get('initialized'):
         return dict(result, status='initialized', fields=[])
     try:
-        return dict(result, status='raw_parameters', **parse_parameters(payload))
+        result = dict(result, status='raw_parameters', **parse_parameters(payload))
     except UnsupportedLayout as exc:
         return dict(result, status='unsupported_layout', error=str(exc))
+    if interpret_fw5:
+        import semantics
+        result['interpretations'] = {
+            'firmware_assumption': '5',
+            'firmware_detected_from_export': False,
+            'evidence_sources': {
+                'freakout_fw5_saved_type_formula': 'https://github.com/kmorrill/freakout/blob/main/docs/microfreak-firmware-notes.md',
+                'freakout_fw5_engine_order': 'https://github.com/kmorrill/freakout/blob/main/docs/microfreak-firmware-notes.md',
+                'freakout_structured_scaling': 'https://github.com/kmorrill/freakout/blob/main/src/minifreak_patch/microfreak_structured.py',
+                'arturia_guide_control_order': 'https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Microfreak___UG___06%20Dig%20Osc___03%20Types.md',
+                'saved_field_raw_value': 'https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/lib/parameters.py',
+            },
+            **semantics.interpret_fields(result['fields']),
+        }
+    return result
 
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('file', type=Path, help='Saved .mbp, .mfpz, .mfprojz, or .bin file')
     parser.add_argument('--slot', type=int, help='Computer-project slot for .mfprojz')
+    parser.add_argument('--interpret-fw5', action='store_true',
+                        help='Add evidence-linked interpretations assuming firmware 5; no display-unit conversions')
     args = parser.parse_args(argv)
     try:
-        result = inspect(args.file, args.slot)
+        result = inspect(args.file, args.slot, args.interpret_fw5)
     except (OSError, ValueError, zipfile.BadZipFile, RuntimeError) as exc:
         print(json.dumps({'status': 'invalid_input', 'error': str(exc)}))
         return 2
