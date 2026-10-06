@@ -1,0 +1,51 @@
+tags:: [[Diataxis/How To]], [[LangSmith/Deployment]]
+logseq-entity:: [[Logseq/Entity/Diataxis/How To]]
+see-also:: [[GitHub/App]], [[LangSmith/Deployment/langgraph.json]]
+
+- # How To Set Up Preview Builds in LangSmith Deployment
+	- ## Overview
+		- A preview build creates a temporary **preview deployment** for a pull request, so you can test Agent Server changes in isolation before merging into the branch your parent deployment runs.
+		- The first revision of a preview deployment is the latest commit on the PR's source branch. Each new commit to that branch creates a new revision.
+		- Status: public beta. Available only on LangSmith Cloud, and only for deployments created through the GitHub integration.
+		- Source: [Preview builds](https://docs.langchain.com/langsmith/preview-builds) in the LangSmith docs.
+	- ## Prerequisites
+		- A LangSmith Cloud deployment created through the GitHub integration.
+		- Permission to change **Deployment Settings** and to reinstall the LangSmith GitHub App on the repo's GitHub account or org.
+	- ## Steps
+		- ### 1. Open Deployment Settings
+			- In **Deployments**, select the parent deployment.
+			- Click the gear icon (**Deployment Settings**) at the top right.
+			- Scroll to **Preview Builds**.
+		- ### 2. Reinstall the GitHub App if prompted
+			- If the section shows "Preview builds need updated GitHub App permissions", click **Reinstall GitHub App** and accept the new permissions.
+			- The banner I saw listed missing permissions: `checks`, `issues`, `pull_requests`.
+			- The docs page does not mention this step. I saw it in the UI on 2026-10-05.
+		- ### 3. Enable preview builds
+			- Check **Enable preview builds**.
+		- ### 4. Choose a trigger mode
+			- If every PR should get a preview, choose **Every PR**. Any PR against the deployment branch triggers a build.
+			- If you want to opt in per PR, choose **Label only**. Only PRs carrying the configured label trigger a build.
+		- ### 5. Set the preview limits
+			- **Idle TTL**: how long a preview can sit inactive after its latest revision before LangSmith deletes it.
+			- **Max concurrent previews**: the cap on simultaneous previews for the parent deployment.
+		- ### 6. Set the preview base branch (UI only)
+			- The UI has a **Preview base branch** field. It defaults to the deployment source branch when blank.
+			- The docs page does not describe this field. PRs against this branch are what I assume trigger previews, which matches "any pull request against the deployment branch".
+		- ### 7. Save
+			- Click **Save**.
+		- ### 8. Open a pull request
+			- Open a PR against the base branch. Add the label first if you chose **Label only**.
+			- A preview deployment appears under the parent deployment. On Deployments, the environment list gains a **Preview** entry when previews exist (see the agent environments docs).
+	- ## Secrets
+		- A preview inherits the parent deployment's secrets at creation. Override them on the preview deployment if needed.
+		- Later changes to the parent's secrets do not reach existing previews.
+		- The UI warns that previews inherit secrets and recommends enabling preview builds on a staging-tier deployment, with branch protection and CODEOWNERS to control who can trigger previews.
+			- Anyone who can open a PR that triggers a build gets a deployment holding your secrets. Treat PR access as secret access.
+	- ## Cleanup
+		- LangSmith deletes a preview when its idle TTL expires. You can delete one manually at any time.
+		- Deleting the parent deployment deletes all its previews.
+	- ## Troubleshooting
+		- If no preview appears for a PR, check the trigger mode (label missing?), the **Max concurrent previews** cap, and that the GitHub App has the `checks`, `issues` and `pull_requests` permissions.
+	- ## Open questions
+		- What the exact label name is in **Label only** mode, and whether it is configurable. The docs say "the configured label" but show no field for it.
+		- How preview builds interact with the [[LangSmith/Deployment/langgraph.json]] config on the PR branch. Not covered in the docs.
