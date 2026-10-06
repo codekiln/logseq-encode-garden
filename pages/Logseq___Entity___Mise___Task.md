@@ -8,7 +8,7 @@ see-also:: [[mise/Task]], [[Logseq/Entity/CLI/Command]], [[Logseq/Entity/Diataxi
 		- Built-in mise subcommands such as `mise run` are [[Logseq/Entity/CLI/Command]] instances. Jobs invoked through them are Mise Task instances.
 	- ## Naming and links
 		- Task reference pages belong to the topic served by the job: `Topic/mise/Task/<task-name-with-colons-as-slashes>`. A namespace prefix already expressed by the topic can be omitted from the page name while remaining in `task-name::`.
-		- For example, `episode:sync` lives at [[GitP/mise/Task/episode/sync]]. Repository ownership remains explicit in frontmatter.
+		- For example, `logseq:entity:proxy:page:sync` lives at [[Logseq/Entity/Proxy/Page/mise/Task/sync]]: the topic already expresses `logseq:entity:proxy:page`. Repository ownership remains explicit in frontmatter.
 		- If the topic contains distinct implementations of the same task name, add a repository or config-scope segment before the task path. Displayed invocation text retains the exact runnable name.
 	- ## Frontmatter
 		- `logseq-entity::` marks the page as a Mise Task instance.
