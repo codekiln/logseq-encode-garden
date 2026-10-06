@@ -14,11 +14,12 @@ prev:: [[GitP/A/Log/26/10/05 Mon - simplify gitpa garden proxies]]
 				- The homepage query had two faults: an invalid binding, and Logseq rewriting `(pull ?b [*])` to a fixed attribute list without `:block/name`. The query now pulls `?p`, and `mise run site:query:check` applies the same rewrite as Logseq 0.10.6, so it fails on the old query. The homepage lists 4 episodes, newest first.
 				- All 21 pages gitpa proxies exist in this garden. Re-syncing them with `logseq:entity:proxy:page:sync` changed no page body, and a second run wrote nothing.
 	- ## Questions
-		- TODO Should a property added to a source page after the first copy reach the proxy on re-sync?
+		- DONE Should a property added to a source page after the first copy reach the proxy on re-sync?
 			- The sync keeps the destination's property lines, so later source properties never arrive. `entity-tasks::` on [[Logseq/Entity/Proxy/Page]] was missing from gitpa for this reason and was added by hand.
 			- [[My Notes]]
-				-
-		- TODO Should gitpa retire its own `episode:sync` now that [[Logseq/Entity/Proxy/Page/mise/Task/sync]] produces the same page bodies?
+				- Yes.
+				- In time, I think the entities system may consider having a [[SemVer]] versioning system, and perhaps there may even be a [[Changelog]] and something akin to a [[Database/Schema/Migration]] system tied to that versioning system so downstream gardens can do the right thing - though I'm picturing that some of the changes will be deterministic updates, and others may require AI's help to adapt the new entity's changes to the local context (I'm anticipating that may be necessary in the future, but it's not something I want to design around right now).
+		- DONE Should gitpa retire its own `episode:sync` now that [[Logseq/Entity/Proxy/Page/mise/Task/sync]] produces the same page bodies?
 			- `episode:sync` follows embeds and syncs a session with its assets in one batch. The garden task syncs one page at a time.
 			- [[My Notes]]
-				-
+				- Yes, see [[My/Principle/Simplify/Don't Repeat Yourself DRY]]
