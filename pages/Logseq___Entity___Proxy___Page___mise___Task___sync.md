@@ -22,6 +22,15 @@ see-also:: [[Logseq/Entity/Proxy/Page]], [[Logseq/Entity/Definition]]
 			- ~~~sh
 			  mise run logseq:entity:proxy:page:sync --source /path/to/logseq-encode-garden --destination /path/to/other-garden --page 'GitP/A/Session/26/09/24-Thu' --follow-embeds --apply
 			  ~~~
+	- ## Source and destination worktrees
+		- Select each worktree explicitly while its dependent source changes are under review:
+			- ~~~sh
+			  python3 /path/to/source-worktree/mise-tasks/logseq/entity/proxy/page/sync --source /path/to/source-worktree --destination /path/to/destination-worktree/garden --page 'Logseq/Entity/Proxy/Page' --apply
+			  ~~~
+		- Invoking the source checkout's script imports the current sync implementation along with the entity definition. The destination can then run its imported task for other pages from the same source worktree.
+		- The source worktree supplies content while the primary checkout supplies the logical graph name. Code forge URLs point to the selected source branch, or to the commit for a detached worktree. The portable manifest keeps the same source ownership across branches and checkouts.
+		- Commit the manifest with the imported pages and task files. Push the source branch and link the source PR as a dependency of the destination PR. After the source PR merges, re-sync with the primary checkout selected as `--source` to update the source URLs to the default branch.
+		- Omitting `--source` resolves the registered primary checkout. An unmerged source branch therefore requires an explicit source worktree path on each sync.
 	- ## Inputs and outputs
 		- Reads the source page and the entity definitions named by `logseq-entity::`. Definitions declare companion tasks with `entity-tasks::`; task references declare implementation paths and required task dependencies through [[Logseq/Entity/Mise/Task]].
 		- Copies pages under their source logical names, adds [[Logseq/Entity/Proxy/Page]] membership, and sets source URL, available code forge URL, and sync date. Source bodies replace destination bodies.

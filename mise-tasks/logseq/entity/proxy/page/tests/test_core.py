@@ -291,5 +291,112 @@ class PageSyncTests(unittest.TestCase):
         record = json.loads(manifest)['imports']['github.com/owner/repo::sub/source::Example']
         self.assertEqual(record['source_graph'], 'sub/source')
 
+class WorktreeSyncTests(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.root = Path(self.temp.name).resolve()
+
+    def tearDown(self):
+        self.temp.cleanup()
+
+    def git(self, root, *args):
+        return subprocess.check_output(['git', '-C', str(root), *args], text=True, stderr=subprocess.DEVNULL).strip()
+
+    def repo(self, name, graph_path):
+        repo = self.root / name
+        repo.mkdir()
+        self.git(repo, 'init', '-q', '-b', 'main')
+        self.git(repo, 'config', 'user.name', 'Test')
+        self.git(repo, 'config', 'user.email', 'test@example.test')
+        self.git(repo, 'remote', 'add', 'origin', f'git@github.com:owner/{name}.git')
+        graph = repo / graph_path
+        (graph / 'pages').mkdir(parents=True)
+        (graph / 'logseq').mkdir()
+        (graph / 'logseq/config.edn').write_text('{}')
+        (graph / 'pages/.keep').touch()
+        return repo, graph
+
+    def commit(self, repo):
+        self.git(repo, 'add', '.')
+        self.git(repo, 'commit', '-qm', 'fixture')
+
+    def sync(self, source, destination):
+        import companions
+        plan = build_page_plan(source, destination, 'Example')
+        companions.extend_plan(plan)
+        apply_plan(plan)
+        return plan
+
+    def test_source_and_destination_worktrees_and_relocated_clones(self):
+        for scope in ('.', 'sub/source'):
+            with self.subTest(scope=scope):
+                name = 'source-root' if scope == '.' else 'source-nested'
+                repo, source = self.repo(name, scope)
+                (repo / 'mise-tasks').mkdir()
+                implementation = repo / 'mise-tasks/example'
+                implementation.write_text('#!/bin/sh\necho main\n')
+                implementation.chmod(0o755)
+                (source / 'pages/Example.md').write_text(
+                    'task-owner:: [[Owner]]\ntask-config-root:: .\ntask-name:: example\n'
+                    'task-entrypoint:: mise-tasks/example\n'
+                    'task-files:: {"mise-tasks/example":"mise-tasks/example"}\n'
+                    f'source-link:: https://github.com/owner/{name}/blob/main/mise-tasks/example\n'
+                    '- main\n')
+                self.commit(repo)
+                dest_repo, destination = self.repo('destination-' + name, 'garden')
+                self.commit(dest_repo)
+                source_worktree = self.root / ('189-' + name)
+                destination_worktree = self.root / ('destination-worktree-' + name)
+                self.git(repo, 'worktree', 'add', '-qb', 'codex/189-proxy', str(source_worktree))
+                self.git(dest_repo, 'worktree', 'add', '-qb', 'codex/dependent', str(destination_worktree))
+                worktree_graph = source_worktree / scope
+                target_graph = destination_worktree / 'garden'
+                self.sync(source, target_graph)
+                expected_url = graph_url(source, 'Example')
+                (worktree_graph / 'pages/Example.md').write_text(
+                    (worktree_graph / 'pages/Example.md').read_text().replace('- main', '- branch'))
+                (source_worktree / 'mise-tasks/example').write_text('#!/bin/sh\necho branch\n')
+                plan = self.sync(worktree_graph, target_graph)
+                props, body = parse_properties((target_graph / 'pages/Example.md').read_text())
+                self.assertEqual(props['logseq-proxy-url'], expected_url)
+                self.assertIn('/blob/codex%2F189-proxy/', props['logseq-proxy-codeforge-url'])
+                self.assertEqual(body, '- branch\n')
+                self.assertIn('echo branch', (target_graph / 'mise-tasks/example').read_text())
+                manifest = plan.writes['.logseq-proxy/manifest.json']
+                self.assertNotIn(str(self.root).encode(), manifest)
+                repeat = self.sync(worktree_graph, target_graph)
+                self.assertTrue(all(data == repeat.expected[path] for path, data in repeat.writes.items()))
+                # A normal re-sync after merge uses the registered graph identity again.
+                manifest = self.sync(source, target_graph).writes['.logseq-proxy/manifest.json']
+                self.commit(destination_worktree)
+                relocation = self.root / ('relocated-' + name)
+                relocation.mkdir()
+                relocated_repo = relocation / name
+                self.git(relocation, 'clone', '-q', str(repo), str(relocated_repo))
+                self.git(relocated_repo, 'remote', 'set-url', 'origin', f'git@github.com:owner/{name}.git')
+                relocated_destination = relocation / 'destination/garden'
+                self.git(relocation, 'clone', '-q', '-b', 'codex/dependent', str(dest_repo), str(relocated_destination.parent))
+                relocated = self.sync(relocated_repo / scope, relocated_destination)
+                self.assertEqual(relocated.writes['.logseq-proxy/manifest.json'], manifest)
+                # Same graph folder name in another repository still cannot claim the page.
+                self.git(relocated_repo, 'remote', 'set-url', 'origin', 'git@github.com:other/repo.git')
+                before = (relocated_destination / 'pages/Example.md').read_bytes()
+                with self.assertRaisesRegex(SyncError, 'ownership conflict'):
+                    self.sync(relocated_repo / scope, relocated_destination)
+                self.assertEqual((relocated_destination / 'pages/Example.md').read_bytes(), before)
+
+    def test_detached_source_worktree_url_names_commit(self):
+        repo, source = self.repo('detached-source', '.')
+        (source / 'pages/Example.md').write_text('- main\n')
+        self.commit(repo)
+        worktree = self.root / 'detached-worktree'
+        self.git(repo, 'worktree', 'add', '-q', '--detach', str(worktree))
+        _, destination = self.repo('detached-destination', 'garden')
+        plan = build_page_plan(worktree, destination, 'Example')
+        props, _ = parse_properties(plan.writes['pages/Example.md'].decode())
+        self.assertEqual(props['logseq-proxy-url'], graph_url(source, 'Example'))
+        self.assertIn('/blob/' + self.git(repo, 'rev-parse', 'HEAD') + '/', props['logseq-proxy-codeforge-url'])
+
+
 if __name__ == '__main__':
     unittest.main()

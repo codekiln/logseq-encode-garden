@@ -173,7 +173,7 @@ def resolve_page(root: Path, page: str) -> Path:
 
 
 def graph_url(root: Path, page: str) -> str:
-    return f'logseq://graph/{quote(root.name, safe="")}?page={quote(page, safe="")}'
+    return f'logseq://graph/{quote(graph_name(root), safe="")}?page={quote(page, safe="")}'
 
 
 def proxy_identity(url: str) -> tuple[str, str]:
@@ -189,6 +189,19 @@ def run_local(*args: str, cwd: Path | None = None) -> str:
         return subprocess.check_output(args, cwd=cwd, text=True, stderr=subprocess.DEVNULL).strip()
     except (OSError, subprocess.CalledProcessError):
         return ''
+
+
+def primary_checkout(root: Path) -> Path | None:
+    worktrees = run_local('git', 'worktree', 'list', '--porcelain', cwd=root)
+    first = worktrees.splitlines()[0] if worktrees else ''
+    return Path(first.removeprefix('worktree ')) if first.startswith('worktree ') else None
+
+
+def graph_name(root: Path) -> str:
+    """Use the primary checkout's graph name while reading a linked worktree."""
+    repo = run_local('git', 'rev-parse', '--show-toplevel', cwd=root)
+    primary = primary_checkout(root) if repo else None
+    return (primary / root.relative_to(Path(repo))).name if primary else root.name
 
 
 def infer_codeforge(root: Path, source: Path) -> str | None:
@@ -208,6 +221,9 @@ def infer_codeforge(root: Path, source: Path) -> str | None:
         netloc=parsed_remote.netloc.rsplit('@', 1)[-1], query='', fragment=''
     ).geturl().removesuffix('.git').rstrip('/')
     branch = run_local('git', 'symbolic-ref', '--short', 'refs/remotes/origin/HEAD', cwd=root).removeprefix('origin/') or 'main'
+    primary = primary_checkout(root)
+    if primary is not None and Path(repo) != primary:
+        branch = run_local('git', 'symbolic-ref', '--short', 'HEAD', cwd=root) or run_local('git', 'rev-parse', 'HEAD', cwd=root) or branch
     relative = source.relative_to(Path(repo))
     marker = '/-/blob/' if 'gitlab' in urlparse(remote).netloc else '/blob/'
     return remote + marker + quote(branch, safe='') + '/' + quote(relative.as_posix(), safe='/')
@@ -323,7 +339,7 @@ def add_page(plan: Plan, page: str) -> None:
         props, _ = parse_properties(old_text)
         if 'logseq-proxy-url' not in props:
             raise SyncError(f'Page collision: {target} is not a proxy')
-        if proxy_identity(props['logseq-proxy-url']) != (plan.source_root.name, page):
+        if proxy_identity(props['logseq-proxy-url']) != (graph_name(plan.source_root), page):
             raise SyncError(f'Proxy source conflict: {target}')
         if props.get('logseq-proxy-codeforge-url'):
             validate_codeforge(props['logseq-proxy-codeforge-url'], plan.source_root, source)
