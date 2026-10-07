@@ -15,7 +15,7 @@
 </style>
 </head>
 <body>
-<header class="masthead"><div class="shell"><div class="brand">Logseq / Proxy Page</div><div class="version">Implementation: <a href="https://github.com/codekiln/logseq-encode-garden/commit/7d73320c58bad0a822577b6e84eb923ffaa76f6b">garden main · October 7, 2026</a></div></div></header>
+<header class="masthead"><div class="shell"><div class="brand">Logseq / Proxy Page</div><div class="version">Implementation: <a href="https://github.com/codekiln/logseq-encode-garden/commit/fe2773352f88fc9c9fc58e29db4a645c210372c4">garden main · October 7, 2026</a></div></div></header>
 <div class="shell layout">
 <aside><nav aria-label="Guide sections"><a href="#relationship">File relationships</a><a href="#flow">Add &amp; update</a><a href="#gardens">Multiple gardens</a><a href="#manifest">The manifest</a><a href="#git">What goes in Git</a><a href="#agents">Parallel agents</a><a href="#inspect">Inspect a proxy</a><a href="#sources">Source &amp; commands</a></nav></aside>
 <main>
@@ -24,7 +24,7 @@
 <h1>How Logseq proxies work</h1>
 <p class="lead">A proxy keeps a source page’s name and content in another garden. The page discloses its source. Sync brings along the definitions and tools needed to use it.</p>
 <div class="verdict"><p>The useful promise: <strong>edit the source, preview the import, then refresh the destination.</strong> Each destination can keep its own publication settings while sharing the source’s content.</p></div>
-<p class="caption">The guide describes the merged implementation at the commit above. <a href="https://github.com/codekiln/logseq-encode-garden/pull/199">PR #199 — preserve proxy identity across worktrees</a> is a separate, pending fix, explained under <a href="#agents">parallel agents</a>.</p>
+<p class="caption">The guide describes the merged implementation at the commit above. <a href="https://github.com/codekiln/logseq-encode-garden/pull/199">PR #199 — preserve proxy identity across worktrees</a> is merged and included here, explained under <a href="#agents">parallel agents</a>.</p>
 </div>
 <section id="relationship">
 <h2>The page-to-page relationship stays visible</h2>
@@ -37,7 +37,7 @@ logseq-proxy-codeforge-url:: https://github.com/codekiln/logseq-encode-garden/bl
 logseq-proxy-last-sync-date:: [[2026-10-07]]</code></pre>
 <p class="caption">Example after a refresh from main. The Logseq URL opens the source graph; the forge URL identifies its repository and source file; the date records the sync day. The membership <code>[[Logseq/Entity/Proxy/Page]]</code> is added beside the page’s existing entity types.</p>
 <p>Copying allows Logseq to query and display the content locally. The destination can be committed, cloned, published, and read while the source garden is closed. Sync runs when invoked; it does not continuously watch either garden.</p>
-<p class="source">Code: <a data-source="core.py#L302-L382">page creation, frontmatter, assets, and embeds</a>.</p>
+<p class="source">Code: <a data-source="core.py#L320-L398">page creation, frontmatter, assets, and embeds</a>.</p>
 </section>
 <section id="flow">
 <h2>From a source edit to a reviewed import</h2>
@@ -72,7 +72,7 @@ mise run logseq:entity:proxy:page:sync \
   --destination /path/to/gitpa/gitp-garden \
   --page 'GitP/A/Session/24/12/04-Wed'</code></pre>
 <div class="notice"><p><strong>Edit shared content at its source.</strong> Proxy page bodies and copied assets are replaced on refresh. Keep local publication values in destination-owned properties. The script edit protection does not extend to every copied file.</p></div>
-<p class="source">Code: <a data-source="core.py#L119-L158">destination-owned properties</a>, <a data-source="core.py#L239-L291">source discovery</a>, <a data-source="companions.py#L178-L269">companion traversal and ownership</a>, <a data-source="core.py#L437-L492">application and rollback</a>.</p>
+<p class="source">Code: <a data-source="core.py#L119-L158">destination-owned properties</a>, <a data-source="core.py#L252-L307">source discovery</a>, <a data-source="companions.py#L178-L269">companion traversal and ownership</a>, <a data-source="core.py#L453-L508">application and rollback</a>.</p>
 </section>
 <section id="gardens">
 <h2>Different sources can share one destination</h2>
@@ -87,6 +87,7 @@ mise run logseq:entity:proxy:page:sync \
 <section id="manifest">
 <h2>Why a manifest exists</h2>
 <p>The page already says what it proxies. The extra information needed for safe script updates is <em>what was imported last time</em>. Today’s source and destination files alone cannot distinguish an upstream change from an edit made locally after import.</p>
+<p>The same ownership records could be expressed as attributes on task reference pages. A separate JSON file groups the file mappings, modes, and historical hashes without adding operational properties to every visible page. That is a storage choice; the safety comes from retaining and checking the import baseline.</p>
 <div class="grid"><div class="card"><div class="label">Last import</div><h3>Remember the baseline</h3><p>The source script was version A. Sync copied A into the destination and recorded A’s hash and file mode in the manifest.</p></div><div class="card"><div class="label">Next import</div><h3>Compare before replacing</h3><p>If the destination still matches A, sync can replace it with upstream version B. If the destination is locally edited version C, sync stops for review.</p></div></div>
 <div class="table-wrap"><table><thead><tr><th>Manifest section</th><th>Information retained</th><th>Role in the algorithm</th></tr></thead><tbody>
 <tr><td><code>files</code></td><td>Source tuple, last imported hash, file mode</td><td>Protects imported implementation files from local edits and competing source ownership.</td></tr>
@@ -117,7 +118,7 @@ mise run logseq:entity:proxy:page:sync \
   --destination /path/to/destination-garden --recover
 
 # Review again after recovery; then run a fresh preview.</code></pre>
-<p class="source">Code: <a data-source="core.py#L397-L492">recovery and temporary transaction directory</a>. Ignore rules: <a href="https://github.com/codekiln/logseq-encode-garden/blob/7d73320c58bad0a822577b6e84eb923ffaa76f6b/.gitignore">garden .gitignore</a> and <a href="https://github.com/codekiln/gitpa/blob/84dde22f0624946d3fb30a3f0ee48f144102e911/.gitignore">Gitpa PR #12 .gitignore</a>.</p>
+<p class="source">Code: <a data-source="core.py#L397-L508">recovery and temporary transaction directory</a>. Ignore rules: <a href="https://github.com/codekiln/logseq-encode-garden/blob/fe2773352f88fc9c9fc58e29db4a645c210372c4/.gitignore">garden .gitignore</a> and <a href="https://github.com/codekiln/gitpa/blob/84dde22f0624946d3fb30a3f0ee48f144102e911/.gitignore">Gitpa PR #12 .gitignore</a>.</p>
 </section>
 <section id="agents">
 <h2>Parallel work needs an integration plan</h2>
@@ -126,9 +127,9 @@ mise run logseq:entity:proxy:page:sync \
 <div class="notice"><p><strong>The current design does not guarantee conflict-free merges.</strong> Sorting manifest keys makes output consistent, but adjacent insertions can still conflict in Git. A clean textual merge also needs semantic review: a manifest and its scripts must describe the same imported versions.</p></div>
 <div class="flow-panel"><div class="flow-step"><strong>Assign</strong><p>Give agents distinct source pages or namespaces. Make shared entity-definition changes in a coordinated change so each consumer imports the same definitions.</p></div><div class="flow-step"><strong>Integrate</strong><p>Bring source changes together, then refresh the destination against that combined source. Prefer one agent to perform the final destination sync, especially when the imported tools or definitions overlap.</p></div><div class="flow-step"><strong>Recompute</strong><p>If branches already contain independent imports, resolve source/page decisions and build a consistent destination from the common pre-import destination state. Reapply the required imports sequentially. Review the resulting files and manifest together rather than guessing conflicting hashes.</p></div><div class="flow-step"><strong>Review</strong><p>Run a fresh preview and check both the page diff and imported script ownership. A same-day repeat with identical inputs should be unchanged. Commit and merge the reviewed set.</p></div></div>
 <details><summary>Why recompute from a consistent baseline?</summary><p>The sync checks that existing imported scripts match their manifest hashes before it updates them. Combining a manifest from one branch with a script from another can fail that check. Reapplying imports from a common, consistent baseline lets the task produce matching ownership records. This is an integration workflow, not a built-in Git conflict resolver.</p></details>
-<details open><summary>The source-worktree identity fix is still pending</summary><p>On the merged main version described here, a source graph’s Logseq identity uses the source folder’s basename. Choosing an issue-named worktree can therefore change that identity and conflict with a proxy imported from the registered checkout. Automatically inferred forge links also use the remote’s default branch rather than the chosen worktree branch.</p><p><a href="https://github.com/codekiln/logseq-encode-garden/pull/199">PR #199 — preserve proxy identity across worktrees</a> derives the graph name from the primary checkout and uses the selected worktree branch or detached commit in forge links. Gitpa PR #12 already carries that pending implementation. The repository-relative manifest fix is on main. Until the identity fix lands, use the registered source checkout for ordinary refreshes.</p></details>
+<details open><summary>Source worktrees retain the registered graph identity</summary><p>Sync can read files from a selected source worktree while deriving the graph name from the primary checkout at the same repository-relative graph path. An issue-named worktree therefore keeps the registered graph's Logseq identity.</p><p><a href="https://github.com/codekiln/logseq-encode-garden/pull/199">PR #199 — preserve proxy identity across worktrees</a> is merged. Forge links identify the chosen worktree branch, or its commit when detached; normal imports from the primary checkout use the remote default branch. After upstream changes merge, refresh from the registered source checkout to update source links. Ownership identities use the repository and graph path, so changing a branch does not create a new ownership claim.</p></details>
 <div class="explorer"><label for="scenario">Try a sync situation</label><select id="scenario"><option value="independent">Import different pages from different gardens</option><option value="upstream">Update a script whose local copy is unchanged</option><option value="local-script">Update a script edited in the destination</option><option value="local-body">Refresh a proxy body edited in the destination</option><option value="collision">Import the same page name from another garden</option><option value="stale">Another sync applies after a plan is built</option><option value="branches">Merge independent imports from agent worktrees</option></select><div id="scenario-result" class="result" aria-live="polite"></div><p class="caption">A simplified illustration of the documented checks. This control does not read or modify a graph.</p></div>
-<p class="source">Code: <a data-source="core.py#L437-L459">locking and file preconditions</a> and <a data-source="companions.py#L230-L269">ownership records and sorted JSON</a>.</p>
+<p class="source">Code: <a data-source="core.py#L453-L475">locking and file preconditions</a> and <a data-source="companions.py#L230-L269">ownership records and sorted JSON</a>.</p>
 </section>
 <section id="inspect">
 <h2>See what a proxy discloses</h2>
@@ -147,12 +148,12 @@ sed -n '1,12p' pages/GitP___A___Session___24___12___04-Wed.md</code></pre>
 # Choose another local port or keep browser selection manual
 mise run logseq:entity:proxy:page:docs:serve --port 8768 --no-open</code></pre>
 <p>The docs task serves this directory on <code>127.0.0.1</code> and opens the default browser unless <code>--no-open</code> is supplied. Stop it with Ctrl-C. This HTML also works when opened directly from disk.</p>
-<div class="details-grid"><div class="card"><h3>Executable implementation</h3><p><a href="https://github.com/codekiln/logseq-encode-garden/blob/7d73320c58bad0a822577b6e84eb923ffaa76f6b/mise-tasks/logseq/entity/proxy/page/sync">sync entrypoint</a><br><a data-source="core.py">page planning and transaction logic</a><br><a data-source="companions.py">companion tasks and manifest logic</a></p></div><div class="card"><h3>Garden definitions</h3><p><a href="https://github.com/codekiln/logseq-encode-garden/blob/7d73320c58bad0a822577b6e84eb923ffaa76f6b/pages/Logseq___Entity___Proxy___Page.md">Proxy Page</a><br><a href="https://github.com/codekiln/logseq-encode-garden/blob/7d73320c58bad0a822577b6e84eb923ffaa76f6b/pages/Logseq___Entity___Proxy___Page___mise___Task___sync.md">Proxy sync task contract</a><br><a href="https://github.com/codekiln/logseq-encode-garden/blob/7d73320c58bad0a822577b6e84eb923ffaa76f6b/pages/Logseq___Entity___Mise___Task.md">Mise task mapping contract</a></p></div></div>
+<div class="details-grid"><div class="card"><h3>Executable implementation</h3><p><a href="https://github.com/codekiln/logseq-encode-garden/blob/fe2773352f88fc9c9fc58e29db4a645c210372c4/mise-tasks/logseq/entity/proxy/page/sync">sync entrypoint</a><br><a data-source="core.py">page planning and transaction logic</a><br><a data-source="companions.py">companion tasks and manifest logic</a></p></div><div class="card"><h3>Garden definitions</h3><p><a href="https://github.com/codekiln/logseq-encode-garden/blob/fe2773352f88fc9c9fc58e29db4a645c210372c4/pages/Logseq___Entity___Proxy___Page.md">Proxy Page</a><br><a href="https://github.com/codekiln/logseq-encode-garden/blob/fe2773352f88fc9c9fc58e29db4a645c210372c4/pages/Logseq___Entity___Proxy___Page___mise___Task___sync.md">Proxy sync task contract</a><br><a href="https://github.com/codekiln/logseq-encode-garden/blob/fe2773352f88fc9c9fc58e29db4a645c210372c4/pages/Logseq___Entity___Mise___Task.md">Mise task mapping contract</a></p></div></div>
 </section>
 <footer class="footer">The strongest case for proxies is shared source content with local publication control and reviewed updates. Script ownership history supports that case. Declaration duplication, overwritten local bodies, and shared-manifest Git conflicts remain design tradeoffs to review.</footer>
 </main></div>
 <script>
-const base='https://github.com/codekiln/logseq-encode-garden/blob/7d73320c58bad0a822577b6e84eb923ffaa76f6b/mise-tasks/logseq/entity/proxy/page/lib/';
+const base='https://github.com/codekiln/logseq-encode-garden/blob/fe2773352f88fc9c9fc58e29db4a645c210372c4/mise-tasks/logseq/entity/proxy/page/lib/';
 document.querySelectorAll('[data-source]').forEach(a=>a.href=base+a.dataset.source);
 const tabs=[...document.querySelectorAll('[role="tab"]')];
 function activate(tab){tabs.forEach(t=>{const selected=t===tab;t.setAttribute('aria-selected',String(selected));t.tabIndex=selected?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!selected;});}
