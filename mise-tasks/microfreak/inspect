@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 #MISE description="Inspect named raw parameters in a saved MicroFreak export"
-#USAGE arg "<file>" help="Saved .mbp, .mfprojz, or .bin file"
+#USAGE arg "<file>" help="Saved .mbp, .mfpz, .mfprojz, or .bin file"
 #USAGE flag "--slot <number>" help="Computer-project slot for .mfprojz"
+#USAGE flag "--interpret-fw5" help="Add interpretations assuming firmware 5, with source evidence"
 set -euo pipefail
 task_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 if [[ -n "${usage_file:-}" ]]; then
   args=("$usage_file")
   [[ -n "${usage_slot:-}" ]] && args+=(--slot "$usage_slot")
+  [[ "${usage_interpret_fw5:-false}" == "true" ]] && args+=(--interpret-fw5)
   exec python3 "$task_dir/lib/parameters.py" "${args[@]}"
 fi
 exec python3 "$task_dir/lib/parameters.py" "$@"
