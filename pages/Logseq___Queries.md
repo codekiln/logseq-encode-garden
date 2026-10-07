@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/Proxy/Page]]
 logseq-proxy-url:: logseq://graph/docs?page=Queries
 logseq-proxy-codeforge-url:: https://github.com/logseq/docs/blob/master/pages/Queries.md
 

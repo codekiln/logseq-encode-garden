@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/Proxy/Page]]
 logseq-proxy-url:: logseq://graph/docs?page=The%20basics%20of%20block%20references
 logseq-proxy-codeforge-url:: https://github.com/logseq/docs/blob/master/pages/The%20basics%20of%20block%20references.md
 

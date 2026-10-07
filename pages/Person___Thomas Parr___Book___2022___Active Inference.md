@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Book]]
+logseq-entity:: [[Logseq/Entity/Book]], [[Logseq/Entity/Proxy/Page]]
 alias:: [[Book/Active Inference]], [[Active Inference: The Free Energy Principle in Mind, Brain, and Behavior]]
 created-by:: [[Person/Thomas Parr]], [[Person/Giovanni Pezzulo]], [[Person/Karl Friston]]
 tags:: [[Book]]

@@ -1,6 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
 alias:: [[Proxy Page]], [[Logseq Proxy Page]]
-entity-tasks:: [[Logseq/Entity/Proxy/Page/mise/Task/sync]]
+entity-tasks:: [[Logseq/Entity/Proxy/Page/mise/Task/sync]], [[Logseq/Entity/Proxy/Page/mise/Task/docs/serve]]
 entity-proxy-destination-properties:: public
 - # Proxy Page
 	- In this garden, **Proxy Page** marks a page whose body is mirrored from a page in another [[Logseq/Garden]], so one garden can read a page that lives in another without that page being moved or duplicated by hand. See [[Logseq/Idea/Proxy]] for the motivation.
@@ -49,6 +49,11 @@ entity-proxy-destination-properties:: public
 		- **Assets:** every `../assets/<path>` the source body links to is copied to the same `assets/<path>` here, replacing what is there. A missing source asset is reported and the sync goes on.
 		- **Embeds:** with `--follow-embeds`, each page embedded with the `embed` macro is synced as a proxy too, recursively, so a page and the pages it embeds sync in one batch. A missing embedded page is reported and the sync goes on.
 		- **Report:** the source path, the destination path, the proxy key values written, whether it was a first copy or a re-sync, the properties added, updated or removed, and the assets copied.
+	- ## Documentation
+		- [[Logseq/Entity/Proxy/Page/mise/Task/docs/serve]] opens the illustrated guide to adding and updating proxies, multiple source gardens, manifest ownership, Git tracking, and parallel imports.
+		- ~~~sh
+		  mise run logseq:entity:proxy:page:docs:serve
+		  ~~~
 	- ## Executable sync
 		- [[Logseq/Entity/Proxy/Page/mise/Task/sync]] previews the page, entity definitions, companion task references, implementation files, and assets imported by a sync. `--apply` applies the previewed changes.
 		- An instance's `logseq-entity::` links lead to its source entity definitions. Each definition's `entity-tasks::` declares companion task references, whose file mappings and task dependencies follow [[Logseq/Entity/Mise/Task]]. The sync visits shared and cyclic dependencies once.

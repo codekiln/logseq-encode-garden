@@ -8,7 +8,11 @@
 #USAGE flag "--follow-embeds" help="Also sync pages the page embeds, recursively"
 #USAGE flag "--apply" help="Apply the previewed import"
 #USAGE flag "--recover" help="Roll back an interrupted import, then exit"
-"""Task reference: [[Logseq/Entity/Proxy/Page/mise/Task/sync]]."""
+"""Task reference: [[Logseq/Entity/Proxy/Page/mise/Task/sync]].
+
+Illustrated guide: mise run logseq:entity:proxy:page:docs:serve
+Source: docs/index.html beside this entrypoint.
+"""
 import argparse
 import os
 from pathlib import Path

@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+#MISE description="Open the illustrated Logseq proxy algorithm guide"
+#MISE tools={python="3.13.16"}
+#USAGE flag "--port <port>" default="8768" help="Local HTTP port"
+#USAGE flag "--no-open" help="Serve without launching the default browser"
+"""Serve the adjacent proxy guide on localhost; stop with Ctrl-C."""
+import argparse
+from functools import partial
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+import os
+from pathlib import Path
+import sys
+import webbrowser
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--port', type=int, default=8768)
+    parser.add_argument('--no-open', action='store_true')
+    args = sys.argv[1:]
+    if not args and 'usage_port' in os.environ:
+        args = ['--port', os.environ['usage_port']]
+        if os.environ.get('usage_no_open') == 'true':
+            args.append('--no-open')
+    options = parser.parse_args(args)
+    if not 0 <= options.port <= 65535:
+        parser.error('--port must be between 0 and 65535 (0 selects an available port)')
+    directory = Path(__file__).resolve().parent
+    handler = partial(SimpleHTTPRequestHandler, directory=str(directory))
+    try:
+        with ThreadingHTTPServer(('127.0.0.1', options.port), handler) as server:
+            url = f'http://127.0.0.1:{server.server_port}/'
+            print(f'Logseq proxy guide: {url}\nStop with Ctrl-C.', flush=True)
+            if not options.no_open:
+                webbrowser.open(url)
+            try:
+                server.serve_forever()
+            except KeyboardInterrupt:
+                pass
+    except OSError as error:
+        print(f'Cannot serve guide: {error}', file=sys.stderr)
+        return 1
+    return 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

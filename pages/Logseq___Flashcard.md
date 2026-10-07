@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/Proxy/Page]]
 logseq-proxy-url:: logseq://graph/logseq-docs?page=Flashcards
 logseq-proxy-codeforge-url:: https://github.com/logseq/docs/blob/master/pages/Flashcards.md
 alias:: [[Logseq Flashcards]]
