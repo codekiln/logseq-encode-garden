@@ -17,9 +17,9 @@ project and exported WAV links. Search existing notes before asking for a path.
 
 Read the Podcast/Episode and Asset entity definitions. Create or update the
 session episode under `GitP/A/Session/YY/MM/DD-Day`, linking its source log.
-The episode has one H1 title, a first-child description, and an embedded MP3
-asset page. Keep the recording URL on that asset page. Record graph edits in
-today's journal.
+The episode has one H1 title, a first-child description, and a direct MP3 media
+embed: `![Episode recording](https://…mp3)`. Keep the recording's asset page for
+file metadata and its download URL. Record graph edits in today's journal.
 
 Convert the exported WAV to MP3 without changing the source WAV. Upload it to
 B2 using the garden's configured credentials and page-derived asset filename.
@@ -44,8 +44,8 @@ sources. Distinguish recorded events from saved preset settings.
 
 ## Prepare publication
 
-Follow the metadata how-to to sync the session and embedded assets into Gitpa as
-exact-name Logseq proxies. Keep episode text in the source garden and publication
+Follow the metadata how-to to sync the session into Gitpa as an exact-name Logseq proxy.
+Sync asset pages separately when their metadata is needed in Gitpa. Keep episode text in the source garden and publication
 identity on the Gitpa proxy. Prepare a worktree PR with the public page and feed
 changes, run the relevant sync and RSS checks, commit, and push.
 

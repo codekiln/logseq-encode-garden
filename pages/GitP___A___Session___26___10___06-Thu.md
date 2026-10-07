@@ -3,7 +3,7 @@ created-by:: [[Person/codekiln]]
 date-created:: [[2026-10-06 Tue]]
 - # GitP.26.10.06 — Chords, Formants, and Sequencers
 	- A MicroFreak improvisation starting from an initialized patch: chord oscillators, cycling-envelope and LFO modulation, and a turn toward formant sounds. Shimmering textures give way to a gruff emergence, a ballpark organ, and a trippy denouement, with the Launchpad sequencer and MicroFreak arpeggiator along the way.
-	- {{embed [[GitP/A/Session/26/10/06-Thu/Asset/Synth/Full/mp3]]}}
+	- ![GitP.26.10.06 — episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___06-Thu___Asset___Synth___Full.mp3)
 	- ## Chapters
 		- 02:11.388 — pull back on cutofff
 		- 07:44.587 — shimmering glittering
