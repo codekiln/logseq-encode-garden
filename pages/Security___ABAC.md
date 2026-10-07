@@ -1,51 +1,19 @@
 alias:: [[Attribute-Based Access Control]]
+logseq-entity:: [[Logseq/Entity/Concept]]
+see-also:: [[Security/RBAC]]
 - # Attribute-Based Access Control (ABAC)
-	- ABAC is an authorization model that evaluates attributes (rather than roles) to determine access.
-	- Unlike [[Security/RBAC]] (Role-Based Access Control), which grants permissions based on predefined roles, ABAC makes decisions based on attributes of:
-		- **Subject** - the user or entity requesting access (e.g., department, clearance level, job title)
-		- **Resource** - the object being accessed (e.g., classification, owner, creation date)
-		- **Action** - the operation being performed (e.g., read, write, delete, approve)
-		- **Environment** - contextual factors (e.g., time of day, location, device type)
-- ## How ABAC Works
-	- Access decisions are made by evaluating policies against attributes at runtime
-	- A policy engine evaluates requests against defined rules
-	- Example policy: "Allow access if user.department == resource.department AND user.clearance >= resource.sensitivity AND environment.time is within business_hours"
-- ## Key Components
-	- **Policy Enforcement Point (PEP)** - intercepts access requests and enforces decisions
-	- **Policy Decision Point (PDP)** - evaluates policies and returns allow/deny decisions
-	- **Policy Information Point (PIP)** - provides attribute values from external sources
-	- **Policy Administration Point (PAP)** - manages and stores policies
-- ## Advantages
-	- **Fine-grained control** - can express complex access rules that RBAC cannot
-	- **Dynamic** - decisions made at runtime based on current attribute values
-	- **Scalable** - adding new resources doesn't require creating new roles
-	- **Context-aware** - can incorporate environmental factors like time, location, risk level
-	- **Reduced role explosion** - avoids the proliferation of roles in large organizations
-- ## Disadvantages
-	- **Complexity** - more difficult to implement and audit than RBAC
-	- **Performance** - policy evaluation at runtime can add latency
-	- **Debugging** - harder to understand why access was granted or denied
-	- **Policy management** - requires careful design to avoid conflicts
-- ## Use Cases
-	- Healthcare systems requiring access based on patient-provider relationships
-	- Financial systems with time-based and amount-based restrictions
-	- Multi-tenant [[SaaS]] applications with complex sharing rules
-	- Government systems with classification levels and need-to-know requirements
-	- [[AWS/IAM]] policies use ABAC principles with resource tags and conditions
-- ## ABAC vs RBAC
-	- | Aspect | RBAC | ABAC |
-	  |--------|------|------|
-	  | Basis | Roles assigned to users | Attributes of users, resources, environment |
-	  | Flexibility | Limited to predefined roles | Highly flexible, dynamic |
-	  | Scalability | Role explosion in complex systems | Scales well with attributes |
-	  | Implementation | Simpler to implement | More complex |
-	  | Auditability | Easy to audit role assignments | Harder to trace decisions |
-- ## Standards and Implementations
-	- **XACML** (eXtensible Access Control Markup Language) - OASIS standard for ABAC policies
-	- **AWS IAM** - uses ABAC through resource tags and policy conditions
-	- **Azure ABAC** - attribute-based conditions for role assignments
-	- **Google Cloud IAM Conditions** - supports attribute-based conditions
-- ## Related
-	- [[Security/RBAC]]
-	- [[AWS/IAM]]
-	- [[Zero Trust]]
+	- ## Overview
+		- Authorization decides whether a subject may perform an action on a resource. Role-Based Access Control (RBAC) assigns permissions to named roles, then assigns users or services to those roles. Attribute-Based Access Control (ABAC) evaluates policy conditions over attributes of the subject, resource, action, and sometimes the surrounding environment.
+		- RBAC answers, “Which permissions come with this role?” ABAC answers, “Do the facts about this request satisfy the policy?”
+	- ## Example
+		- A role might let a clinician read patient records. That rule applies to every record covered by the role.
+		- An attribute policy can narrow access to records for patients assigned to that clinician, or allow access only when the record's sensitivity is within the clinician's clearance.
+		- The same distinction applies outside healthcare: a project-reader role gives broad project access, while an attribute rule can restrict it to projects tagged for the reader's team or environment.
+	- ## How they fit together
+		- RBAC groups permissions around stable job functions, which makes common access patterns easier to assign and review.
+		- ABAC expresses conditions that vary across resources or requests without creating a separate role for every combination. Policies can inspect attributes such as department, resource owner, classification, or request location.
+		- Systems often combine them: roles provide a broad permission set, and attribute policies refine the decision. The exact combination rules depend on the system. For example, [LangSmith ABAC](https://docs.langchain.com/langsmith/abac) considers both role permissions and attribute policies; a matching deny takes precedence, and an allow policy can grant access even without the corresponding RBAC permission.
+	- ## Choosing a model
+		- RBAC is a good fit when access follows a manageable set of job functions and permissions are mostly stable. Its main pressure is role growth when every team, resource class, or exception gets a distinct role.
+		- ABAC is useful when access depends on changing relationships or resource-specific facts. It reduces the need for narrowly specialized roles, but shifts the work to defining trustworthy attributes, writing policies, and explaining each decision.
+		- ABAC is not automatically safer or simpler. Missing, stale, or inconsistent attributes can produce incorrect decisions, and policies can be difficult to reason about without clear evaluation and audit tools.
