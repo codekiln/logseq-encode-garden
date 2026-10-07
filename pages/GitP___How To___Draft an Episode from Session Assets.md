@@ -17,6 +17,10 @@ see-also:: [[GitP/House/Back]], [[GitP/How To/Prepare Podcast Metadata]]
 			- The AI reads the captured MIDI, the music-making log, and the MicroFreak and Launchpad manuals to explain what happened in the session.
 			- It correlates recorded MIDI CC messages with the MicroFreak manual and reads the downloaded presets for oscillator type, preset category, and other supported details. The episode page links the sources for those details.
 			- The AI distinguishes recorded changes from the settings in a saved preset. It leaves unknown details out of the episode description.
+		- ### MIDI download
+			- Export the full session as a standard MIDI file containing its notes and controller changes, with the tempo aligned to the recording.
+			- Upload the MIDI and add a direct download link to the episode so listeners can import it into a DAW.
+			- MIDI analysis in episode notes describes how controls vary between chapters.
 		- ### Publication PR
 			- The AI fills in the episode's MP3 and preset links in this garden, then mirrors those pages into Gitpa and prepares a publication PR.
 			- The PR includes a direct link to the one episode MP3, its episode title, and a short description so the recording is easy to find and approve.

@@ -32,7 +32,7 @@ entity-proxy-destination-properties:: podcast-guid, podcast-published-at
 	- ## Page shape
 		- Logseq Flavored Markdown.
 		- The first body block is the H1 heading with the episode title linked to the episode when a URL is known: `- # [Episode Title](https://example.com/episode)`. Without a URL, use a plain `- # Episode Title`.
-		- A producer-owned session opens with an optional short description, artwork when available, and a directly playable MP3 recording. Artwork and audio use Markdown media embeds with the asset URLs: `![Episode artwork](https://example.com/artwork.gif)` and `![Episode recording](https://example.com/recording.mp3)`.
+		- A producer-owned session opens with an optional short description, artwork when available, and a directly playable MP3 recording. The recording’s [[Logseq/Entity/Asset]] page holds its file metadata. Artwork and audio use Markdown media embeds with the asset URLs: `![Episode artwork](https://example.com/artwork.gif)` and `![Episode recording](https://example.com/recording.mp3)`.
 		- Downloadable MicroFreak patches use labeled Markdown links to the files, such as `[Download MicroFreak preset A](https://example.com/preset-A.mfpz)`, so listeners can download them from the episode page. Episode media and download details use the direct URLs rather than asset page embeds or asset wikilinks.
 		- Session notes follow the media and downloads. Technical notes may be collapsed so the recording and patches remain immediately visible.
 		- In the Gitpa publishing garden, the visible episode properties are `logseq-entity` and `date-created`.
