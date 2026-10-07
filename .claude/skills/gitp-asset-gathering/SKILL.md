@@ -38,14 +38,21 @@ download it, and verify that only intended metadata changed. Upload the exports
 and add labeled download links to the session page.
 
 Correlate captured MIDI CC numbers, values, and times with the MicroFreak manual.
-Use preset metadata for oscillator type, category, and supported settings, and
-read the Launchpad manual where relevant. Link useful explanations to their
-sources. Distinguish recorded events from saved preset settings.
+Use MIDI analysis in listener notes when it explains how chapters differ, naming
+the controls exercised during each passage. A session-wide parameter inventory
+is not useful listener context. Use preset metadata for oscillator type, category,
+and supported settings, and read the Launchpad manual where relevant. Link useful
+explanations to their sources. Distinguish recorded events from saved preset settings.
+
+Export the full session as a standard MIDI file for DAW import, preserving notes
+and controller changes and checking its tempo and alignment with the recording.
+Upload it as an Asset/B2 page and add a direct download link to the episode.
 
 ## Prepare publication
 
 Follow the metadata how-to to sync the session into Gitpa as an exact-name Logseq proxy.
-Sync asset pages separately when their metadata is needed in Gitpa. Keep episode text in the source garden and publication
+Sync the episode’s audio and MIDI asset pages separately into Gitpa so the
+publication checkout includes their metadata. Keep episode text in the source garden and publication
 identity on the Gitpa proxy. Prepare a worktree PR with the public page and feed
 changes, run the relevant sync and RSS checks, commit, and push.
 
