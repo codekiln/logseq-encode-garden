@@ -3,7 +3,7 @@ task-owner:: [[Person/codekiln/GitHub/logseq-encode-garden]]
 task-config-root:: .
 task-name:: logseq:entity:proxy:page:sync
 task-entrypoint:: mise-tasks/logseq/entity/proxy/page/sync
-task-files:: {"mise-tasks/logseq/entity/proxy/page/sync":"mise-tasks/logseq/entity/proxy/page/sync","mise-tasks/logseq/entity/proxy/page/lib/core.py":"mise-tasks/logseq/entity/proxy/page/lib/core.py","mise-tasks/logseq/entity/proxy/page/lib/task_imports.py":"mise-tasks/logseq/entity/proxy/page/lib/task_imports.py"}
+task-files:: {"mise-tasks/logseq/entity/proxy/page/sync":"mise-tasks/logseq/entity/proxy/page/sync","mise-tasks/logseq/entity/proxy/page/lib/core.py":"mise-tasks/logseq/entity/proxy/page/lib/core.py","mise-tasks/logseq/entity/proxy/page/lib/task_imports.py":"mise-tasks/logseq/entity/proxy/page/lib/task_imports.py","mise-tasks/logseq/entity/proxy/page/lib/records.py":"mise-tasks/logseq/entity/proxy/page/lib/records.py"}
 task-dependencies:: [[Logseq/Entity/Proxy/Page/mise/Task/docs/serve]]
 source-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/logseq/entity/proxy/page/sync
 see-also:: [[Logseq/Entity/Proxy/Page]], [[Logseq/Entity/Definition]]

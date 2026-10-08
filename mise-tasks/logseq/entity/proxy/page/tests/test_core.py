@@ -10,6 +10,7 @@ from unittest.mock import patch
 
 LIB = Path(__file__).resolve().parents[1] / 'lib'
 sys.path.insert(0, str(LIB))
+import records
 from core import (SyncError, add_write, apply_plan, build_page_plan, graph_url,
                   parse_properties, recover_transaction, resolve_page, resolve_source)
 
@@ -286,7 +287,7 @@ class PageSyncTests(unittest.TestCase):
         subprocess.run(['git', '-C', str(repo), 'remote', 'add', 'origin', 'git@github.com:owner/repo.git'], check=True)
         plan = build_page_plan(nested, self.destination, 'Example')
         task_imports.extend_plan(plan)
-        manifest = plan.writes['.logseq-proxy/manifest.json'].decode()
+        manifest = plan.writes[records.page_record_path('Example')].decode()
         self.assertNotIn(str(self.root), manifest)
         record = json.loads(manifest)['imports']['github.com/owner/repo::sub/source::Example']
         self.assertEqual(record['source_graph'], 'sub/source')
@@ -362,12 +363,13 @@ class WorktreeSyncTests(unittest.TestCase):
                 self.assertIn('/blob/codex%2F189-proxy/', props['logseq-proxy-codeforge-url'])
                 self.assertEqual(body, '- branch\n')
                 self.assertIn('echo branch', (target_graph / 'mise-tasks/example').read_text())
-                manifest = plan.writes['.logseq-proxy/manifest.json']
+                manifest = records.encoded(records.load_store(target_graph))
                 self.assertNotIn(str(self.root).encode(), manifest)
                 repeat = self.sync(worktree_graph, target_graph)
                 self.assertTrue(all(data == repeat.expected[path] for path, data in repeat.writes.items()))
                 # A normal re-sync after merge uses the registered graph identity again.
-                manifest = self.sync(source, target_graph).writes['.logseq-proxy/manifest.json']
+                self.sync(source, target_graph)
+                manifest = records.load_store(target_graph)
                 self.commit(destination_worktree)
                 relocation = self.root / ('relocated-' + name)
                 relocation.mkdir()
@@ -377,7 +379,7 @@ class WorktreeSyncTests(unittest.TestCase):
                 relocated_destination = relocation / 'destination/garden'
                 self.git(relocation, 'clone', '-q', '-b', 'codex/dependent', str(dest_repo), str(relocated_destination.parent))
                 relocated = self.sync(relocated_repo / scope, relocated_destination)
-                self.assertEqual(relocated.writes['.logseq-proxy/manifest.json'], manifest)
+                self.assertEqual(records.load_store(relocated_destination), manifest)
                 # Same graph folder name in another repository still cannot claim the page.
                 self.git(relocated_repo, 'remote', 'set-url', 'origin', 'git@github.com:other/repo.git')
                 before = (relocated_destination / 'pages/Example.md').read_bytes()
@@ -412,8 +414,10 @@ class TaskImporterTests(unittest.TestCase):
         (task_dir / 'lib').mkdir(parents=True)
         mapping = {str(source_files / 'sync'): str(source_files / 'sync'),
                    str(source_files / 'lib/core.py'): str(source_files / 'lib/core.py'),
+                   str(source_files / 'lib/records.py'): str(source_files / 'lib/records.py'),
                    str(source_files / 'lib/companions.py'): str(source_files / 'lib/companions.py')}
         shutil.copyfile(LIB / 'core.py', task_dir / 'lib/core.py')
+        shutil.copyfile(LIB / 'records.py', task_dir / 'lib/records.py')
         shutil.copyfile(LIB / 'task_imports.py', task_dir / 'lib/companions.py')
         entrypoint = (LIB.parent / 'sync').read_text()
         (task_dir / 'sync').write_text(entrypoint.replace('task_imports', 'companions'))

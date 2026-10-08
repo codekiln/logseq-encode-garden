@@ -7,6 +7,10 @@
 #USAGE flag "--codeforge-url <url>" help="Source page URL on a code forge"
 #USAGE flag "--follow-embeds" help="Also sync pages the page embeds, recursively"
 #USAGE flag "--apply" help="Apply the previewed import"
+#USAGE flag "--migrate-records" help="Split the legacy manifest into independent records"
+#USAGE flag "--remove" help="Remove the selected owned proxy and its page record"
+#USAGE flag "--rename-to <name>" help="Rename selected proxy to an existing source page"
+#USAGE flag "--refresh-provenance" help="Refresh code forge links for unchanged source content"
 #USAGE flag "--recover" help="Roll back an interrupted import, then exit"
 """Task reference: [[Logseq/Entity/Proxy/Page/mise/Task/sync]].
 
@@ -31,13 +35,17 @@ def main():
     parser.add_argument('--follow-embeds', action='store_true')
     parser.add_argument('--apply', action='store_true')
     parser.add_argument('--recover', action='store_true')
+    parser.add_argument('--migrate-records', action='store_true')
+    parser.add_argument('--remove', action='store_true')
+    parser.add_argument('--rename-to')
+    parser.add_argument('--refresh-provenance', action='store_true')
     args = list(sys.argv[1:])
     # Mise usage supplies parsed options through environment variables.
     if not args and 'usage_destination' in os.environ:
-        for name in ('source', 'destination', 'page', 'codeforge_url'):
+        for name in ('source', 'destination', 'page', 'codeforge_url', 'rename_to'):
             if os.environ.get('usage_' + name):
                 args.extend(['--' + name.replace('_', '-'), os.environ['usage_' + name]])
-        for name in ('follow_embeds', 'apply', 'recover'):
+        for name in ('follow_embeds', 'apply', 'recover', 'migrate_records', 'remove', 'refresh_provenance'):
             if os.environ.get('usage_' + name) == 'true':
                 args.append('--' + name.replace('_', '-'))
     options = parser.parse_args(args)
@@ -46,24 +54,35 @@ def main():
             recover_transaction(options.destination)
             print('Interrupted import rolled back; run a fresh preview.')
             return 0
-        if not options.page:
-            parser.error('--page is required unless --recover is used')
-        plan = build_page_plan(options.source, options.destination, options.page, options.codeforge_url,
-                               options.follow_embeds)
-        try:
-            import task_imports
-        except ModuleNotFoundError as error:
-            if error.name != 'task_imports':
-                raise
-            raise SyncError('Missing task importer lib/task_imports.py; restore the task implementation before syncing') from error
+        import records
+        import task_imports
+        if options.remove and options.rename_to:
+            parser.error('--remove and --rename-to are mutually exclusive')
+        if options.migrate_records and not options.page:
+            plan = records.migration_plan(options.destination)
+        elif options.remove:
+            if not options.page:
+                parser.error('--remove requires --page')
+            plan = records.removal_plan(options.destination, options.page)
+        elif options.rename_to:
+            if not options.page:
+                parser.error('--rename-to requires --page')
+            plan = records.rename_plan(options.source, options.destination, options.page,
+                                       options.rename_to, refresh_provenance=options.refresh_provenance)
         else:
-            task_imports.extend_plan(plan)
+            if not options.page:
+                parser.error('--page is required unless --recover or --migrate-records is used')
+            plan = build_page_plan(options.source, options.destination, options.page, options.codeforge_url,
+                                   options.follow_embeds, options.refresh_provenance)
+            task_imports.extend_plan(plan, migrate=options.migrate_records)
         print('\n'.join(plan.details))
         for warning in plan.warnings:
             print('Warning: ' + warning)
         for relative, data in sorted(plan.writes.items()):
             status = 'unchanged' if plan.expected[relative] == data else 'write'
             print(f'{status}: {relative}')
+        for relative in sorted(plan.deletes):
+            print(f'delete: {relative}')
         if options.apply:
             apply_plan(plan)
             print('Applied.')

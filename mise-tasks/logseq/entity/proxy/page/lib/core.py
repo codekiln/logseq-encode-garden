@@ -41,9 +41,14 @@ class Plan:
     pages: set[str] = field(default_factory=set)
     codeforge_url: str | None = None
     expected_modes: dict[str, int | None] = field(default_factory=dict)
-    source_expected: dict[Path, bytes] = field(default_factory=dict)
+    source_expected: dict[Path, bytes | None] = field(default_factory=dict)
     source_modes: dict[Path, int] = field(default_factory=dict)
     follow_embeds: bool = False
+    refresh_provenance: bool = False
+    deletes: set[str] = field(default_factory=set)
+    record_store: dict | None = None
+    source_record_store: dict | None = None
+    inventory_expected: dict[Path, tuple[str, ...] | None] = field(default_factory=dict)
 
 
 def safe_path(root: Path, relative: str) -> Path:
@@ -57,10 +62,12 @@ def safe_path(root: Path, relative: str) -> Path:
             raise SyncError(f'Symlink path: {parent}')
     result = root.joinpath(*part.parts)
     current = root
-    for component in part.parts:
+    for index, component in enumerate(part.parts):
         current = current / component
         if current.is_symlink():
             raise SyncError(f'Symlink path: {current}')
+        if index < len(part.parts) - 1 and current.exists() and not current.is_dir():
+            raise SyncError(f'Expected directory: {current}')
     if result.exists() and not result.is_file():
         raise SyncError(f'Expected a regular file: {result}')
     return result
@@ -306,13 +313,24 @@ def resolve_source(destination: Path, page: str, registry: Path | None = None) -
     return validate_graph(matches[0])
 
 
-def add_write(plan: Plan, relative: str, data: bytes, mode: int | None = None) -> None:
+def watch_destination(plan: Plan, relative: str) -> None:
     target = safe_path(plan.destination_root, relative)
-    if relative in plan.writes and plan.writes[relative] != data:
-        raise SyncError(f'Conflicting planned writes: {relative}')
     if relative not in plan.expected:
         plan.expected[relative] = target.read_bytes() if target.exists() else None
         plan.expected_modes[relative] = target.stat().st_mode & 0o777 if target.exists() else None
+
+
+def add_delete(plan: Plan, relative: str) -> None:
+    if relative in plan.writes:
+        raise SyncError(f'Conflicting planned write and delete: {relative}')
+    watch_destination(plan, relative)
+    plan.deletes.add(relative)
+
+
+def add_write(plan: Plan, relative: str, data: bytes, mode: int | None = None) -> None:
+    if relative in plan.deletes or (relative in plan.writes and plan.writes[relative] != data):
+        raise SyncError(f'Conflicting planned writes: {relative}')
+    watch_destination(plan, relative)
     plan.writes[relative] = data
     plan.modes[relative] = mode if mode is not None else (plan.expected_modes[relative] or 0o644)
 
@@ -343,7 +361,7 @@ def add_page(plan: Plan, page: str) -> None:
             raise SyncError(f'Proxy source conflict: {target}')
         if props.get('logseq-proxy-codeforge-url'):
             validate_codeforge(props['logseq-proxy-codeforge-url'], plan.source_root, source)
-        old_lines, _ = property_lines(old_text)
+        old_lines, old_body = property_lines(old_text)
         lines, changes = merge_properties(old_lines, with_proxy_membership(source_lines), destination_owned(plan, source_props))
     else:
         lines, changes = with_proxy_membership(source_lines), []
@@ -355,6 +373,17 @@ def add_page(plan: Plan, page: str) -> None:
     if forge:
         metadata['logseq-proxy-codeforge-url'] = forge
     metadata['logseq-proxy-last-sync-date'] = '[[' + datetime.now(ZoneInfo('America/New_York')).date().isoformat() + ']]'
+    if not first:
+        old_semantic = ''.join(line for line in old_lines if property_key(line) not in PROXY_KEYS) + old_body
+        semantic = ''.join(retained) + body
+        if semantic == old_semantic:
+            # Provenance refresh changes links; the date still describes the last content sync.
+            if props.get('logseq-proxy-last-sync-date'):
+                metadata['logseq-proxy-last-sync-date'] = props['logseq-proxy-last-sync-date']
+            if not plan.refresh_provenance and not (plan.codeforge_url and page == plan.page):
+                metadata = {key: props[key] for key in PROXY_KEYS if key in props}
+                metadata.setdefault('logseq-proxy-last-sync-date', '[[' + datetime.now(ZoneInfo('America/New_York')).date().isoformat() + ']]')
+
     data = ''.join(retained) + ''.join(f'{key}:: {value}\n' for key, value in metadata.items()) + body
     relative = str(target.relative_to(plan.destination_root))
     add_write(plan, relative, data.encode())
@@ -387,12 +416,13 @@ def add_page(plan: Plan, page: str) -> None:
 
 
 def build_page_plan(source: Path | None, destination: Path, page: str, codeforge_url: str | None = None,
-                    follow_embeds: bool = False) -> Plan:
+                    follow_embeds: bool = False, refresh_provenance: bool = False) -> Plan:
     destination = validate_graph(destination)
     source = validate_graph(source if source is not None else resolve_source(destination, page))
     if source == destination:
         raise SyncError('Source and destination must be different graphs')
-    plan = Plan(source, destination, page, codeforge_url=codeforge_url, follow_embeds=follow_embeds)
+    plan = Plan(source, destination, page, codeforge_url=codeforge_url, follow_embeds=follow_embeds,
+                refresh_provenance=refresh_provenance)
     add_page(plan, page)
     return plan
 
@@ -457,11 +487,23 @@ def apply_plan(plan: Plan) -> None:
         fcntl.flock(lock_fd, fcntl.LOCK_EX)
         if (root / TRANSACTION).exists():
             raise SyncError('Interrupted import exists; run --destination <graph> --recover, then preview again')
+        for folder, expected in plan.inventory_expected.items():
+            safe_path(folder.parent, folder.name + '/.inventory-validation')
+            actual = tuple(sorted(p.name for p in folder.glob('*.json'))) if folder.exists() else None
+            if actual != expected:
+                raise SyncError(f'Proxy record inventory changed since preview: {folder}')
         for source, expected in plan.source_expected.items():
             safe_path(source.parent, source.name)
-            if not source.exists() or source.read_bytes() != expected or (source in plan.source_modes and source.stat().st_mode & 0o777 != plan.source_modes[source]):
+            actual = source.read_bytes() if source.exists() else None
+            if actual != expected or (source in plan.source_modes and (not source.exists() or source.stat().st_mode & 0o777 != plan.source_modes[source])):
                 raise SyncError(f'Source changed since preview: {source}')
         changes = {}
+        for relative, expected in plan.expected.items():
+            target = safe_path(root, relative)
+            actual = target.read_bytes() if target.exists() else None
+            mode = target.stat().st_mode & 0o777 if target.exists() else None
+            if actual != expected or mode != plan.expected_modes[relative]:
+                raise SyncError(f'Destination changed since preview: {relative}')
         for relative, data in plan.writes.items():
             target = safe_path(root, relative)
             actual = target.read_bytes() if target.exists() else None
@@ -470,10 +512,15 @@ def apply_plan(plan: Plan) -> None:
                 raise SyncError(f'Destination changed since preview: {relative}')
             if actual != data or mode != plan.modes[relative]:
                 changes[relative] = data
+        for relative in plan.deletes:
+            if plan.expected[relative] is not None:
+                changes[relative] = None
         if not changes:
             return
         directories = set()
         for relative in changes:
+            if changes[relative] is None:
+                continue
             parent = (root / relative).parent
             while parent != root and not parent.exists():
                 directories.add(str(parent.relative_to(root)))
@@ -491,6 +538,9 @@ def apply_plan(plan: Plan) -> None:
                 os.fsync(handle.fileno())
             staged = []
             for index, (relative, data) in enumerate(changes.items()):
+                if data is None:
+                    staged.append((None, safe_path(root, relative)))
+                    continue
                 stage = txn / str(index)
                 with stage.open('wb') as handle:
                     handle.write(data)
@@ -500,8 +550,11 @@ def apply_plan(plan: Plan) -> None:
                 staged.append((stage, safe_path(root, relative)))
             for stage, target in staged:
                 safe_path(root, str(target.relative_to(root)))
-                target.parent.mkdir(parents=True, exist_ok=True)
-                os.replace(stage, target)
+                if stage is None:
+                    target.unlink()
+                else:
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    os.replace(stage, target)
         except BaseException:
             _recover(root)
             raise
