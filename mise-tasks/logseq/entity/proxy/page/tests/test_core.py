@@ -277,7 +277,7 @@ class PageSyncTests(unittest.TestCase):
         self.assertIn('/blob/main/sub/source/pages/Book___A%253F%20B.md', text)
 
     def test_manifest_records_repository_relative_graph(self):
-        import companions
+        import task_imports
         repo = self.root / 'checkout'
         repo.mkdir()
         nested = self.graph('checkout/sub/source')
@@ -285,7 +285,7 @@ class PageSyncTests(unittest.TestCase):
         subprocess.run(['git', 'init', '-q', str(repo)], check=True)
         subprocess.run(['git', '-C', str(repo), 'remote', 'add', 'origin', 'git@github.com:owner/repo.git'], check=True)
         plan = build_page_plan(nested, self.destination, 'Example')
-        companions.extend_plan(plan)
+        task_imports.extend_plan(plan)
         manifest = plan.writes['.logseq-proxy/manifest.json'].decode()
         self.assertNotIn(str(self.root), manifest)
         record = json.loads(manifest)['imports']['github.com/owner/repo::sub/source::Example']
@@ -321,9 +321,9 @@ class WorktreeSyncTests(unittest.TestCase):
         self.git(repo, 'commit', '-qm', 'fixture')
 
     def sync(self, source, destination):
-        import companions
+        import task_imports
         plan = build_page_plan(source, destination, 'Example')
-        companions.extend_plan(plan)
+        task_imports.extend_plan(plan)
         apply_plan(plan)
         return plan
 
@@ -396,6 +396,72 @@ class WorktreeSyncTests(unittest.TestCase):
         props, _ = parse_properties(plan.writes['pages/Example.md'].decode())
         self.assertEqual(props['logseq-proxy-url'], graph_url(source, 'Example'))
         self.assertIn('/blob/' + self.git(repo, 'rev-parse', 'HEAD') + '/', props['logseq-proxy-codeforge-url'])
+
+
+class TaskImporterTests(unittest.TestCase):
+    setUp = PageSyncTests.setUp
+    tearDown = PageSyncTests.tearDown
+    graph = PageSyncTests.graph
+    plan = PageSyncTests.plan
+
+    def test_imported_sync_runs_after_helper_rename_and_retains_cleanup_candidate(self):
+        import task_imports
+        import shutil
+        source_files = Path('mise-tasks/logseq/entity/proxy/page')
+        task_dir = self.source / source_files
+        (task_dir / 'lib').mkdir(parents=True)
+        mapping = {str(source_files / 'sync'): str(source_files / 'sync'),
+                   str(source_files / 'lib/core.py'): str(source_files / 'lib/core.py'),
+                   str(source_files / 'lib/companions.py'): str(source_files / 'lib/companions.py')}
+        shutil.copyfile(LIB / 'core.py', task_dir / 'lib/core.py')
+        shutil.copyfile(LIB / 'task_imports.py', task_dir / 'lib/companions.py')
+        entrypoint = (LIB.parent / 'sync').read_text()
+        (task_dir / 'sync').write_text(entrypoint.replace('task_imports', 'companions'))
+        (task_dir / 'sync').chmod(0o755)
+        self.source_page.write_text('logseq-entity:: [[Example/Definition]]\n- body\n')
+        (self.source / 'pages/Example___Definition.md').write_text('entity-tasks:: [[Example/mise/Task/sync]]\n- Definition\n')
+        reference = self.source / 'pages/Example___mise___Task___sync.md'
+        declaration = ('task-owner:: [[Owner]]\ntask-config-root:: .\n'
+                       'task-name:: logseq:entity:proxy:page:sync\n'
+                       f'task-entrypoint:: {source_files}/sync\n'
+                       f'task-files:: {json.dumps(mapping)}\n'
+                       'source-link:: https://example.test/owner/repo/blob/main/sync\n- Sync\n')
+        reference.write_text(declaration)
+        first = self.plan()
+        task_imports.extend_plan(first)
+        apply_plan(first)
+        (task_dir / 'lib/companions.py').rename(task_dir / 'lib/task_imports.py')
+        (task_dir / 'sync').write_text(entrypoint)
+        reference.write_text(declaration.replace('companions.py', 'task_imports.py'))
+        refreshed = self.plan()
+        task_imports.extend_plan(refreshed)
+        self.assertTrue(any('companions.py: removed upstream; cleanup candidate' in item for item in refreshed.warnings))
+        apply_plan(refreshed)
+        self.assertTrue((self.destination / source_files / 'lib/companions.py').is_file())
+        self.assertTrue((self.destination / source_files / 'lib/task_imports.py').is_file())
+        result = subprocess.run([sys.executable, str(self.destination / source_files / 'sync'),
+                                 '--source', str(self.source), '--destination', str(self.destination),
+                                 '--page', self.page], text=True, capture_output=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn('unchanged: ' + str(source_files / 'lib/task_imports.py'), result.stdout)
+        repeat = self.plan()
+        task_imports.extend_plan(repeat)
+        self.assertTrue(all(data == repeat.expected[path] for path, data in repeat.writes.items()))
+
+    def test_destination_task_discovery_config_matches_documented_variants(self):
+        import task_imports
+        config = self.destination / 'mise.toml'
+        for text in ('', '[task_config]\nincludes = ["mise-tasks"]\n',
+                     '[task_config]\nincludes = ["./mise-tasks/"]\n'):
+            with self.subTest(text=text):
+                config.write_text(text)
+                task_imports.compatible_config(self.destination)
+        config.write_text('[task_config]\nincludes = ["elsewhere"]\n')
+        with self.assertRaisesRegex(ValueError, 'must include mise-tasks'):
+            task_imports.compatible_config(self.destination)
+        config.write_text('malformed = [')
+        with self.assertRaises(ValueError):
+            task_imports.compatible_config(self.destination)
 
 
 if __name__ == '__main__':

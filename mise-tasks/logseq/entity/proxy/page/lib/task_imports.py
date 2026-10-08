@@ -1,4 +1,13 @@
-"""Import explicitly declared file tasks with conservative update ownership."""
+"""Plan imports of entity definitions, task references, and executable task files.
+
+Follow logseq-entity, entity-tasks, and task-dependencies links from the pages
+already selected for sync. Read each task reference's task-files mapping to
+locate the entrypoint and helpers, and add their copies to the page-sync plan.
+Before replacing imported task files, check the destination manifest's source
+ownership, last-imported content hashes, and file modes. Update the manifest
+in the same plan so later syncs can distinguish upstream changes from local
+edits. core.apply_plan writes the completed plan as one recoverable update.
+"""
 from __future__ import annotations
 
 import hashlib
@@ -64,6 +73,14 @@ def digest(data):
 
 
 def compatible_config(root):
+    """Check that the destination Mise config can discover imported file tasks.
+
+    Read mise.toml or .mise.toml at the graph root. When task_config.includes
+    is set, require mise-tasks (with an optional ./ prefix or trailing slash).
+    An absent includes setting uses Mise's default file-task discovery.
+    Reject an explicit list that excludes mise-tasks before planning writes;
+    malformed TOML also stops the import.
+    """
     for filename in ('mise.toml', '.mise.toml'):
         config = root / filename
         if config.exists():
