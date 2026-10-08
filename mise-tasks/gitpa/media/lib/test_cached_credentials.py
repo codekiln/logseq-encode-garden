@@ -16,7 +16,7 @@ class CachedCredentialTests(unittest.TestCase):
                     (root / 'fnox.local.toml').write_text(content)
                 with patch('cached_credentials.subprocess.run', return_value=git_result) as run:
                     with self.assertRaises(ValueError):
-                        run_cached(['python3', 'asset-command.py'], root / '.worktree' / 'feature')
+                        run_cached(['python3', 'asset-command.py'], root / '.worktrees' / 'feature')
                     self.assertEqual(run.call_count, 1)
 
     def test_worktree_uses_registered_cache_without_inherited_aws_credentials(self):
@@ -28,7 +28,7 @@ class CachedCredentialTests(unittest.TestCase):
             git_result = Mock(stdout=str(root / '.git') + '\n')
             with patch.dict('os.environ', {'AWS_SECRET_ACCESS_KEY': 'inherited-test-value'}), patch(
                     'cached_credentials.subprocess.run', side_effect=[git_result, Mock(returncode=0)]) as run:
-                self.assertEqual(run_cached(['python3', 'asset-command.py'], root / '.worktree' / 'feature'), 0)
+                self.assertEqual(run_cached(['python3', 'asset-command.py'], root / '.worktrees' / 'feature'), 0)
                 invocation = run.call_args
                 self.assertEqual(invocation.kwargs['cwd'], root.resolve())
                 self.assertNotIn('AWS_SECRET_ACCESS_KEY', invocation.kwargs['env'])

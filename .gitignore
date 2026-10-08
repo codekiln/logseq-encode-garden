@@ -109,7 +109,6 @@ repomix-*.xml
 # Worktrees live inside the project per My/Pref/Dev/Tool/git/Worktree, which rules
 # out siblings of the project folder; ignored so the main checkout does not see its
 # own linked worktrees as untracked files.
-worktrees/
 .worktrees/
 # Claude Desktop's Worktree location setting is fixed to this path (not configurable
 # to .worktrees/), so it is ignored separately per the same preference page.
@@ -120,5 +119,3 @@ worktrees/
 /assets/.remote/**
 !/assets/.remote/**/
 !/assets/.remote/**/*.dvc
-
-.worktree/

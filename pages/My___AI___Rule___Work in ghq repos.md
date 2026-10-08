@@ -6,5 +6,5 @@
 - 5. Compare real paths and continue when all of these conditions hold:
 	- The registered copy is inside `ghq root` ([[ghq/root]]).
 	- The current checkout and the registered copy have the same Git common directory.
-	- The current repository root is either the registered copy or a linked worktree under its `worktrees/` or `.claude/worktrees/` directory, following [[My/Pref/Dev/Tool/git/Worktree]].
+	- The current repository root is either the registered copy or a linked worktree under its `.worktrees/` or `.claude/worktrees/` directory, following [[My/Pref/Dev/Tool/git/Worktree]].
 - You don't need to tell me about your thought process as you verify you are working in the right directory.
