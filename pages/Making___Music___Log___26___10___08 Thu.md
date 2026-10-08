@@ -1,11 +1,11 @@
 - [[2026-10-07 Wed]]
 	- # [[Ghost Gardener]] requests
-		- ## TODO agent 1 - import last night's [[GitP/A/Session/26/10/07 Wed]]
+		- ## TODO agent 1 - import last night's [[GitP/A/Session/26/10/07 Wed]] - This is likely an [[claude-opus-5-5]] agent task.
 			- TODO fill in the session page above; I'll put my notes in there
 			- TODO upload assets for the episode to b2 and fill them in in the session page above
 				- `~/Documents/ableton/GitP/GitP26.10.07 Project/GitP26.10.07.mp3`
 				- `~/Documents/ableton/GitP/GitP26.10.07 Project/GitP26.10.07.mid`
 			- TODO look in the ableton live file to find the sections of the recording in terms of minutes and seconds, in accordance with how [[GitP/A/Session/26/10/06-Tue]] works with its chapters
 		- ## TODO agent 2 - handle refactor from incorrectly named `GitP/A/Session/26/10/06-Thu` to `GitP/A/Session/26/10/06-Tue` [[GitP/A/Session/26/10/06-Tue]]
-			- TODO I noticed that [[GitP/A/Session/26/10/06-Tue]] had Thu at the end. make a plan for how to ensure this rename is handled correctly in the [[Person/codekiln/GitHub/gitpa]] proxy; keeping in mind that all the backblaze assets will need to be renamed as well. [[GitP/A/Session/26/10/06-Tue/Asset/Synth/Full/mp3]] logseq page has been renamed but it will need to have its backblaze asset renamed as well.
+			- TODO I noticed that [[GitP/A/Session/26/10/06-Tue]] had Thu at the end. make a plan for how to ensure this rename is handled correctly in the [[Person/codekiln/GitHub/gitpa]] proxy; keeping in mind that all the backblaze assets will need to be renamed as well. [[GitP/A/Session/26/10/06-Tue/Asset/Synth/Full/mp3]] logseq page has been renamed but it will need to have its backblaze asset renamed as well. This is likely an [[claude-opus-5-5]] agent task.
 	-
