@@ -27,7 +27,9 @@ OPENER = build_opener(NoRedirect)
 
 def endpoint(url: str) -> str:
     parsed = urlparse(url)
-    if (parsed.scheme != 'https' or not parsed.hostname or not parsed.hostname.endswith('.backblazeb2.com')
+    # Upload URLs come from pod-*.backblaze.com hosts; API and downloads use *.backblazeb2.com.
+    if (parsed.scheme != 'https' or not parsed.hostname
+            or not parsed.hostname.endswith(('.backblazeb2.com', '.backblaze.com'))
             or parsed.username or parsed.password or parsed.query or parsed.fragment):
         raise ValueError('Unexpected B2 service endpoint')
     return url.rstrip('/')

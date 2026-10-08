@@ -6,7 +6,7 @@ import unittest
 from unittest.mock import patch
 import zipfile
 
-from b2_upload import B2, asset_name, check_metadata, media_type, transfer
+from b2_upload import B2, asset_name, check_metadata, endpoint, media_type, transfer
 
 
 class Response(io.BytesIO):
@@ -144,6 +144,16 @@ class MediaUploadTests(unittest.TestCase):
             with self.subTest(response=response), patch('b2_upload.OPENER.open', return_value=response):
                 with self.assertRaises(ValueError):
                     client.verify_download('https://f005.backblazeb2.com/file/garden/file.gif', len(body), checksum, 'image/gif', False)
+
+    def test_endpoint_accepts_b2_api_download_and_upload_hosts(self):
+        for url in ['https://api005.backblazeb2.com', 'https://f005.backblazeb2.com/file/garden/a.mp3',
+                    'https://pod-050-1046-09.backblaze.com/b2api/v4/b2_upload_file/bucket/token']:
+            with self.subTest(url=url):
+                self.assertEqual(endpoint(url), url)
+        for url in ['http://api005.backblazeb2.com', 'https://example.com', 'https://evilbackblaze.com',
+                    'https://user:pw@pod-1.backblaze.com', 'https://pod-1.backblaze.com/x?y=1']:
+            with self.subTest(url=url), self.assertRaises(ValueError):
+                endpoint(url)
 
 
 if __name__ == '__main__':
