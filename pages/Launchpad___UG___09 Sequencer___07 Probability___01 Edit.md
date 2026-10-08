@@ -8,4 +8,4 @@ next:: [[Launchpad/UG/09 Sequencer/07 Probability/02 Print]]
 	- Every note on a step shares one probability setting, but each note is evaluated independently. At 50%, a two-note step may play both notes, one note, or neither.
 	- Assigned or recorded notes default to 100%. Clearing a step, Pattern, or Project also resets its probability to 100%.
 	- Probability view
-		- ![01 Probability view](../assets/Launchpad___UG___09-Sequencer___07-Probability___01-Edit___01-Probability-View.png)
+		- ![01 Probability view](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Launchpad___UG___09%20Sequencer___07%20Probability___01%20Edit___Asset___01-Probability-view.png)

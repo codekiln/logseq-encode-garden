@@ -11,7 +11,7 @@ next:: [[Microfreak/UG/17 Ext Gear/11 MIDI CC Values]]
 	- Select the first entry, 0; it changes to a dash. Turn the MicroFreak's Cyclic Envelope Rise knob. The first field displays 5, the Rise parameter's CC#.
 	- Repeat for Fall, Hold, and Amount. Their CC# values appear in the connection fields.
 	- VCV Rack MIDI-CC patch
-		- ![01 VCV Rack MIDI-CC patch](../assets/Microfreak___UG___17-Ext-Gear___10-Tutorial-MIDI-CC___01-VCV-Rack-MIDI-CC-Patch.png)
+		- ![01 VCV Rack MIDI-CC patch](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___17%20Ext%20Gear___10%20Tutorial%20MIDI%20CC___Asset___01-VCV-Rack-MIDI-CC-patch.png)
 	- Connect the patch points to the ADSR CV inputs:
 		- First patch point to Attack
 		- Second patch point to Decay

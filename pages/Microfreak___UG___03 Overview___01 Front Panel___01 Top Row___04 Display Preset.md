@@ -7,4 +7,4 @@ next:: [[Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/05 Save]]
 	- Firmware 5.0.0 increased capacity from 384 to 512 slots. A bank of 64 new presets can be loaded from the MIDI Control Center. Empty presets default to the name “Init” and category “Bass.”
 	- > [[Note/Info]] Factory presets are protected against overwrite by default. Change this in `Utility > Misc > Mem Protect`.
 	- The Preset manager
-		- ![01 The Preset manager](../assets/Microfreak___UG___03-Overview___01-Front-Panel___01-Top-Row___04-Display-Preset___01-The-Preset-manager.png)
+		- ![01 The Preset manager](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___03%20Overview___01%20Front%20Panel___01%20Top%20Row___04%20Display%20Preset___Asset___01-The-Preset-manager.png)

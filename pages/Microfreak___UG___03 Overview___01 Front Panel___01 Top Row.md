@@ -3,7 +3,7 @@ up:: [[Microfreak/UG/03 Overview/01 Front Panel]]
 next:: [[Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row]]
 - # 03.01.01 Top Row
 	- Top Row
-		- ![01 Top Row](../assets/Microfreak___UG___03-Overview___01-Front-Panel___01-Top-Row___01-Top-Row.png)
+		- ![01 Top Row](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___03%20Overview___01%20Front%20Panel___01%20Top%20Row___Asset___01-Top-Row.png)
 	- {{embed [[Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/01 Matrix]]}}
 	- {{embed [[Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/02 Paraphonic]]}}
 	- {{embed [[Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/03 Panel Select]]}}

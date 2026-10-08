@@ -9,4 +9,4 @@ next:: [[Microfreak/UG/04 Presets/02 Save Presets]]
 	- Press the Preset encoder quickly three times to reset the current sound to its initial empty state. This also clears an existing preset's sound.
 	- > [[Note/Info]] The reset does not change the stored preset unless you save afterward.
 	- The Preset encoder
-		- ![01 Preset Encoder](../assets/Microfreak___UG___04-Presets___01-Load-Presets___01-Preset-Encoder.png)
+		- ![01 Preset Encoder](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___04%20Presets___01%20Load%20Presets___Asset___01-Preset-Encoder.png)

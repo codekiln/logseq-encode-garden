@@ -14,5 +14,5 @@ next:: [[Microfreak/UG/12 Arpeggiator/04 Making it Swing]]
 		- 1/32 note and 1/32 note triplet
 	- A 1/4 division corresponds to a standard metronome tick.
 	- The Arpeggiator and the Rate knob
-		- ![01 The Arpeggiator and the Rate Knob](../assets/Microfreak___UG___12-Arpeggiator___03-Arpeggio-Rate___01-The-Arpeggiator-and-the-Rate-Knob.png)
+		- ![01 The Arpeggiator and the Rate Knob](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___12%20Arpeggiator___03%20Arpeggio%20Rate___Asset___01-The-Arpeggiator-and-the-Rate-Knob.png)
 	- {{embed [[Microfreak/UG/12 Arpeggiator/03 Arpeggio Rate/01 Using Sync]]}}

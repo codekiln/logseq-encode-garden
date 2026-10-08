@@ -5,7 +5,7 @@ next:: [[Microfreak/UG/18 Appendix A Speech Osc]]
 - # 17 Connecting external gear
 	- The MicroFreak connects to a range of vintage and modern equipment through the ports on its rear panel.
 	- MicroFreak Rear Panel
-		- ![01 MicroFreak Rear Panel](../assets/Microfreak___UG___17-Ext-Gear___01-MicroFreak-Rear-Panel.png)
+		- ![01 MicroFreak Rear Panel](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___17%20Ext%20Gear___Asset___01-MicroFreak-Rear-Panel.png)
 	- Below are examples of possible setups:
 	- {{embed [[Microfreak/UG/17 Ext Gear/01 Computer Connection]]}}
 	- {{embed [[Microfreak/UG/17 Ext Gear/02 CV Gate]]}}

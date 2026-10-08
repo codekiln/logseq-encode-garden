@@ -21,7 +21,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 			- If a page has a section like 1.2.3.4.5, then 5 should be a heading on the level 4 page. If another page references 1.2.3.4.5, then a [[Logseq/Block/Id]]
 		- A newly available child appears in its parent's embed list, and adjacent sibling pages link in both directions through `prev::` and `next::` once both exist.
 		- Turn the source's paragraphs, bullets, callouts, figures, and tables into readable nested blocks. Preserve the information needed to use the material, not the PDF's line wrapping or table grid. Use `> [[Note/Info]]` or `> [[Note/Warning]]` for corresponding callouts.
-		- Place a figure under its caption block. Name an extracted image from the owning page path, then a two-digit image order and short caption, as in `Microfreak___UG___06-Dig-Osc___01-as-Soundgen___01-The-Digital-Oscillator.png`. Keep the full PDF outside the graph.
+		- Place a figure under its caption block. Represent the image with a [[Logseq/Entity/Asset/B2]] page beneath its owning section; [[Logseq/Entity/Asset]] defines its page-derived filename. Embed the verified remote URL with the caption as alt text. Keep the full PDF outside the graph.
 		- Replace page-number references with a link to the corresponding section when it exists and its identity is clear. Otherwise, name the destination in prose without a speculative link. Do not preserve a bare PDF page number as navigation.
 	- ## Source check
 		- Compare the extracted text and images against the source pages: heading order, callout scope, figure/caption pairing, and cross-references can be lost in PDF extraction. The imported page should read naturally in Logseq and nvim.

@@ -4,7 +4,7 @@ prev:: [[Microfreak/UG/11 Icon Strip/03 Touch Strip/01 Spice and Dice]]
 - # 11.3.2 Bend
 	- Pitch bending raises or lowers a note. Press the Bend icon to enable bending.
 	- The Bend Strip
-		- ![01 The Bend Strip](../assets/Microfreak___UG___11-Icon-Strip___03-Touch-Strip___02-Bend___01-The-Bend-Strip.png)
+		- ![01 The Bend Strip](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___11%20Icon%20Strip___03%20Touch%20Strip___02%20Bend___Asset___01-The-Bend-Strip.png)
 	- The center is neutral. Moving left lowers the pitch; moving right raises it. Touching another point jumps directly to that pitch.
 	- In standard mode, pitch follows the strip's absolute position. In relative mode, finger movement is added to or subtracted from the current pitch, regardless of where the finger first touches. Enable relative mode at Utility > Misc > Relative bend.
 	- > [[Note/Info]] Six W-shaped marks on the strip help guide accurate bends.

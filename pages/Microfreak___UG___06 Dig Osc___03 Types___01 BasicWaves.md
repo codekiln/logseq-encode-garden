@@ -3,7 +3,7 @@ up:: [[Microfreak/UG/06 Dig Osc/03 Types]]
 next:: [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]]
 - # 06.03.01 Basic Waves Oscillator (BasicWaves)
 	- Classic Waveforms Oscillator Model
-		- ![01 Classic Waveforms Oscillator Model](../assets/Microfreak___UG___06-Dig-Osc___03-Types___01-BasicWaves___01-Classic-Waveforms-Oscillator-Model.png)
+		- ![01 Classic Waveforms Oscillator Model](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___06%20Dig%20Osc___03%20Types___01%20BasicWaves___Asset___01-Classic-Waveforms-Oscillator-Model.png)
 	- **Description:** Every sound consists of a series of harmonics. The first harmonic is the fundamental, which determines the pitch you hear. The second harmonic is twice as high in pitch, the third is three times as high, and so on. On a guitar, touching the exact middle of a string produces the second harmonic; dividing the string into three parts produces the third harmonic.
 	- The second and higher harmonics determine a sound's timbre. The second, fourth, sixth, and eighth harmonics are even; the third, fifth, seventh, and ninth are odd. Odd harmonics can add a more dissonant timbre.
 	- Triangle and square waves contain only odd harmonics; a sawtooth contains odd and even harmonics. A sawtooth can emulate bowed strings: the bow catches the string periodically, then slips to its next position, creating a sawtooth-like wave.

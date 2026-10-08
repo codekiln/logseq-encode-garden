@@ -10,8 +10,8 @@ prev:: [[Microfreak/UG/02 Installation/06 Connecting to the World]]
 	- ### Install the firmware
 		- Connect the MicroFreak over USB and power it on, then open MIDI Control Center.
 		- Select **MicroFreak** from the **DEVICE** menu in the upper-left corner. The menu displays the current firmware revision:
-			- ![01 MIDI Control Center device and firmware revision](../assets/Microfreak___UG___02-Installation___07-Latest-Firmware___01-MIDI-Control-Center-Device-and-Firmware-Revision.png)
+			- ![01 MIDI Control Center device and firmware revision](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___02%20Installation___07%20Latest%20Firmware___Asset___01-MIDI-Control-Center-device-and-firmware-revision.png)
 		- Click **Firmware Revision** to open the dialog showing the current version:
-			- ![02 Firmware revision dialog](../assets/Microfreak___UG___02-Installation___07-Latest-Firmware___02-Firmware-Revision-Dialog.png)
+			- ![02 Firmware revision dialog](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___02%20Installation___07%20Latest%20Firmware___Asset___02-Firmware-revision-dialog.png)
 		- Click **Upgrade**, then use the operating system file dialog to select the downloaded firmware file.
 	- > [[Note/Warning]] While the firmware update is in progress, do not turn the MicroFreak's knobs, power it off, or disconnect its USB cable.

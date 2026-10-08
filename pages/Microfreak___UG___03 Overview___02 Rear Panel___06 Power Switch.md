@@ -5,5 +5,5 @@ next:: [[Microfreak/UG/03 Overview/02 Rear Panel/07 Power Connector]]
 - # 03.02.06 Power switch
 	- The recessed switch turns the MicroFreak off without unplugging USB. When both USB and DC power are connected, DC power takes priority; connecting DC power resets the MicroFreak.
 	- The On-Off switch
-		- ![01 The On-Off switch](../assets/Microfreak___UG___03-Overview___02-Rear-Panel___06-Power-Switch___01-The-On-Off-switch.png)
+		- ![01 The On-Off switch](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___03%20Overview___02%20Rear%20Panel___06%20Power%20Switch___Asset___01-The-On-Off-switch.png)
 	- > [[Note/Info]] The MicroFreak can run from a phone or tablet power bank.

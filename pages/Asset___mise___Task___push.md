@@ -13,7 +13,7 @@ source-link:: https://github.com/codekiln/logseq-encode-garden/blob/codex/dvc-as
 		- [[Logseq/Entity/Asset]] defines page-derived filenames and valid names.
 	- ## Files and access
 		- Uploads checksum-addressed content beneath `dvc/`. Public page URLs use a separate named B2 upload.
-		- Mise supplies Python, uv and FFmpeg; the asset package pins DVC and its S3 client. The Git checkout supplies `.dvc/config` and the `assets` fnox profile. Linked worktrees use the main checkout’s encrypted fnox cache.
+		- Mise supplies Python and uv; the asset package pins DVC and its S3 client. The Git checkout supplies `.dvc/config` and the `assets` fnox profile. Linked worktrees use the main checkout’s encrypted fnox cache.
 		- Commit adjacent `.dvc` metadata for added assets and `dvc.yaml` plus `dvc.lock` for conversions. Working recordings stay ignored under `assets/.remote/`.
 	- ## Recovery and help
 		- A missing input needs adding or fetching before conversion. An invalid asset name needs correction according to [[Logseq/Entity/Asset]]. Storage authentication needs refreshing the garden’s fnox cache.

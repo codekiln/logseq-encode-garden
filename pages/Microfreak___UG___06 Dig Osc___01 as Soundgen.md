@@ -10,7 +10,7 @@ next:: [[Microfreak/UG/06 Dig Osc/02 Param Controls]]
 	  > [[Note/Info]] Modulation is not limited to this range; some audio oscillator models in the MicroFreak use a second oscillator to modulate their own frequency.
 	- The Digital Oscillator
 	  id:: 6ab65191-5104-46a1-8f9a-0deb5920fed4
-		- ![01 The Digital Oscillator](../assets/Microfreak___UG___06-Dig-Osc___01-as-Soundgen___01-The-Digital-Oscillator.png)
+		- ![01 The Digital Oscillator](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___06%20Dig%20Osc___01%20as%20Soundgen___Asset___01-The-Digital-Oscillator.png)
 		  id:: 6ab64aec-3885-46ac-a3b4-a469d669b27e
 	- The Digital Oscillator can play notes in the range from C-2 to G8. Although the MicroFreak keyboard spans only two octaves, you can shift the range it plays up and down.
 	- **Freaky idea**: Applying a (very) small dose of randomness to the pitch of the digital oscillator will make someone who listens to your track sit up and pay attention.

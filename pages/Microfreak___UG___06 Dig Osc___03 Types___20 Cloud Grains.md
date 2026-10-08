@@ -4,7 +4,7 @@ prev:: [[Microfreak/UG/06 Dig Osc/03 Types/19 Scan Grains]]
 next:: [[Microfreak/UG/06 Dig Osc/03 Types/21 Hit Grains]]
 - # 06.03.20 Cloud grains
 	- Cloud grains oscillator model
-		- ![01 Cloud grains oscillator model](../assets/Microfreak___UG___06-Dig-Osc___03-Types___20-Cloud-Grains___01-Cloud-Grains-Oscillator-Model.png)
+		- ![01 Cloud grains oscillator model](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___06%20Dig%20Osc___03%20Types___20%20Cloud%20Grains___Asset___01-Cloud-grains-oscillator-model.png)
 	- The Cloud grains oscillator plays a loaded sample with control over its start point and grain generation.
 	- **Starts:** The Wave knob sets the grain start position.
 	- **Density:** The Timbre knob sets how often a grain is generated.

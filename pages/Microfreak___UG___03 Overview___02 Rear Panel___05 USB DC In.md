@@ -5,5 +5,5 @@ next:: [[Microfreak/UG/03 Overview/02 Rear Panel/06 Power Switch]]
 - # 03.02.05 USB/DC IN
 	- The USB connector supplies power and exchanges data with a computer. A 5 V, 500 mA USB phone charger can also power the MicroFreak without a computer.
 	- The USB connector
-		- ![01 The USB connector](../assets/Microfreak___UG___03-Overview___02-Rear-Panel___05-USB-DC-In___01-The-USB-connector.png)
+		- ![01 The USB connector](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___03%20Overview___02%20Rear%20Panel___05%20USB%20DC%20In___Asset___01-The-USB-connector.png)
 	- USB connects the MicroFreak to Arturia MIDI Control Center for settings, firmware updates, and preset management.

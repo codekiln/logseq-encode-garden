@@ -7,7 +7,7 @@ next:: [[Microfreak/UG/05 Connections/03 Freaky Ideas]]
 	- A classic synthesizer sends an oscillator through a filter and then an amplifier. The Matrix lets you override those fixed connections and route triggers, gates, LFO waves, and envelopes to the Digital Oscillator and Filter.
 	- The Matrix is the main switchboard for creating, changing, and mixing modulation connections. It has a switchboard and an encoder for selecting connections and setting their modulation amount.
 	- The Matrix and its encoder
-		- ![01 The Matrix and its encoder](../assets/Microfreak___UG___05-Connections___02-Matrix-and-Encoder___01-The-Matrix-and-its-Encoder.png)
+		- ![01 The Matrix and its encoder](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___05%20Connections___02%20Matrix%20and%20Encoder___Asset___01-The-Matrix-and-its-encoder.png)
 	- Turn the encoder to choose a source–destination point, then press it to create or edit the connection. It scrolls forward or backward and wraps at the end of the Matrix.
 	- The Matrix shows each connection's state:
 		- **LED off:** no connection is active, or its amount is zero.

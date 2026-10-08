@@ -16,6 +16,7 @@ see-also:: [[Logseq/Entity/Asset/B2]], [[GitP/A/Log/26/10/04 Sun/Fnox/Plan]]
 		- The local file extension must match the page's final format segment. The page must exist directly under `pages/` and declare [[Logseq/Entity/Asset/B2]]. Filename mapping follows [[Logseq/Entity/Asset]]; the bucket object uses that filename at its root.
 		- MP3, WAV, FLAC, Ogg and video formats are checked with ffprobe. Images, PDFs and MIDI have format-signature checks; MicroFreak `.mfpz` files have ZIP integrity checks. Other extensions use their registered MIME type or `application/octet-stream` and full-file checksum verification.
 		- Success establishes matching B2 SHA-1, length and MIME metadata plus a matching SHA-256 from a complete download. The task prints the verified URL. Public buckets are downloaded without authentication; private objects require garden B2 authentication to use the URL.
+		- Public objects use the S3 endpoint returned by B2 authorization. Private objects use the authenticated Native download endpoint; an account without S3 discovery retains its Native URL.
 	- ## Side effects
 		- Creates a named B2 object when absent. Conflicting content, hidden versions or media metadata stop the task. Matching existing objects are downloaded and verified without creating another version.
 		- Asset pages and their tags remain unchanged. Add the verified URL to the asset page after a successful run. Website and podcast publication remain separate steps.
