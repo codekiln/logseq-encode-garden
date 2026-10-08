@@ -159,6 +159,74 @@ class RecordsTests(unittest.TestCase):
         self.assertEqual(target.read_bytes(), before)
         self.assertTrue((self.destination / records.page_record_path('A')).exists())
 
+    def test_remove_rejects_live_block_references_and_stale_reference_inventory(self):
+        block_id = '12345678-1234-1234-1234-123456789abc'
+        core.resolve_page(self.source, 'A').write_text('- body\n\tid:: ' + block_id + '\n')
+        self.sync('A')
+        ref = core.resolve_page(self.destination, 'Ref')
+        ref.write_text('- ((' + block_id + '))\n')
+        with self.assertRaisesRegex(core.SyncError, 'block ID referenced'):
+            records.removal_plan(self.destination, 'A')
+        ref.write_text('- no reference\n')
+        plan = records.removal_plan(self.destination, 'A')
+        ref.write_text('- ((' + block_id + '))\n')
+        with self.assertRaisesRegex(core.SyncError, 'Destination changed'):
+            core.apply_plan(plan)
+        ref.unlink()
+        plan = records.removal_plan(self.destination, 'A')
+        ref.write_text('- ((' + block_id + '))\n')
+        with self.assertRaisesRegex(core.SyncError, 'inventory changed'):
+            core.apply_plan(plan)
+
+    def test_task_forwarding_legacy_and_records_reject_local_output_edits(self):
+        source_file = self.source / 'scripts/original'
+        source_file.parent.mkdir()
+        source_file.write_text('#!/bin/sh\necho stable\n')
+        source_file.chmod(0o755)
+        core.resolve_page(self.source, 'A').write_text('entity-tasks:: [[Example/Task]]\n- A\n')
+        core.resolve_page(self.source, 'Example/Task').write_text(
+            'task-owner:: [[Owner]]\ntask-config-root:: .\ntask-name:: example\n'
+            'task-entrypoint:: scripts/original\n'
+            'task-files:: {"scripts/original":"mise-tasks/example"}\n'
+            'source-link:: https://example.test/source\n- Task\n')
+        self.sync('A')
+        for legacy in (False, True):
+            if legacy:
+                self.legacy()
+            onward = self.graph('onward-' + str(legacy))
+            plan = core.build_page_plan(self.destination, onward, 'A')
+            task_imports.extend_plan(plan)
+            core.apply_plan(plan)
+            self.assertEqual((onward / 'mise-tasks/example').read_bytes(), source_file.read_bytes())
+            final = self.graph('final-' + str(legacy))
+            next_plan = core.build_page_plan(onward, final, 'A')
+            task_imports.extend_plan(next_plan)
+            core.apply_plan(next_plan)
+            self.assertEqual((final / 'mise-tasks/example').read_bytes(), source_file.read_bytes())
+        forwarded = self.destination / 'mise-tasks/example'
+        forwarded.write_text('#!/bin/sh\necho local edit\n')
+        with self.assertRaisesRegex(ValueError, 'forwarded implementation was edited locally'):
+            task_imports.extend_plan(core.build_page_plan(self.destination, onward, 'A'))
+
+    def test_cli_usage_environment_migration_and_remove_booleans(self):
+        import os
+        self.sync('A')
+        self.legacy()
+        entry = Path(__file__).resolve().parents[1] / 'sync'
+        env = {key: value for key, value in os.environ.items() if not key.startswith('usage_')}
+        env.update(usage_destination=str(self.destination), usage_migrate_records='true', usage_apply='false')
+        result = subprocess.run([sys.executable, str(entry)], env=env, capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertTrue((self.destination / records.LEGACY).exists())
+        env['usage_apply'] = 'true'
+        result = subprocess.run([sys.executable, str(entry)], env=env, capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertFalse((self.destination / records.LEGACY).exists())
+        env.update(usage_migrate_records='false', usage_remove='true', usage_page='A')
+        result = subprocess.run([sys.executable, str(entry)], env=env, capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertFalse(core.resolve_page(self.destination, 'A').exists())
+
     def git(self, *args):
         return subprocess.run(['git', '-C', str(self.destination), *args], check=True, capture_output=True, text=True).stdout
 

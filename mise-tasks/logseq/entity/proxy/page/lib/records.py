@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from pathlib import Path
 from urllib.parse import quote
 
@@ -77,9 +78,13 @@ def validate_aggregate(store, label):
         if not _identity(identity):
             raise core.SyncError(f'{label}: invalid page ownership for {page}')
     for page, record in store.get('tasks', {}).items():
-        if (not isinstance(record, dict) or not isinstance(record.get('mapping'), dict)
+        if (not isinstance(record, dict) or not isinstance(record.get('identity'), list)
+                or len(record['identity']) != 5 or not all(isinstance(x, str) for x in record['identity'])
+                or not isinstance(record.get('mapping'), dict)
                 or not all(isinstance(k, str) and isinstance(v, str) for k, v in record['mapping'].items())):
             raise core.SyncError(f'{label}: invalid task mapping for {page}')
+        if page not in store.get('pages', {}) or record['identity'][:2] != store['pages'][page][:2]:
+            raise core.SyncError(f'{label}: task/page ownership disagreement for {page}')
     for page, record in store.get('declarations', {}).items():
         if not isinstance(record, dict) or not all(isinstance(k, str) and isinstance(v, str) for k, v in record.items()):
             raise core.SyncError(f'{label}: invalid declarations for {page}')
@@ -239,7 +244,22 @@ def removal_plan(destination, page):
     store = load_store(root, destination_plan=plan)
     if store['_legacy']:
         raise core.SyncError('Run --migrate-records before removing a proxy')
-    path, _ = _owned_proxy(plan, store, page)
+    path, data = _owned_proxy(plan, store, page)
+    ids = set(re.findall(r'(?m)^\s*(?:-\s+)?id::\s+([0-9a-fA-F-]{36})\s*$', data.decode()))
+    if ids:
+        for directory in ('pages', 'journals'):
+            folder = root / directory
+            core.safe_path(root, directory + '/.validation')
+            plan.inventory_expected[folder] = tuple(sorted(p.name for p in folder.glob('*.md'))) if folder.exists() else None
+            plan.inventory_patterns[folder] = '*.md'
+            for candidate in folder.glob('*.md'):
+                if candidate == path:
+                    continue
+                relative = str(candidate.relative_to(root))
+                core.watch_destination(plan, relative)
+                text = candidate.read_text()
+                if any('((' + block_id + '))' in text for block_id in ids):
+                    raise core.SyncError(f'{page}: block ID referenced by {relative}; retain the block before removing')
     core.add_delete(plan, str(path.relative_to(root)))
     _forget_page(plan, store, page)
     plan.details.append(f'Remove proxy {page} and its page record')

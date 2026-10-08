@@ -168,6 +168,11 @@ def task_spec(plan, page, props):
         if source == str(entry) and not mode & 0o111:
             raise ValueError(f'{page}: entrypoint is not executable: {source}')
         data = file.read_bytes()
+        if imported:
+            claim = source_manifest(plan).get('files', {}).get(actual_source)
+            if (not claim or claim['source'][:2] != imported['identity'][:2]
+                    or digest(data) != claim.get('sha256') or mode != claim.get('mode')):
+                raise ValueError(f'{page}: forwarded implementation was edited locally or lacks ownership: {actual_source}')
         plan.source_expected[file] = data
         plan.source_modes[file] = mode
         source_relative = file.relative_to(repo).as_posix()

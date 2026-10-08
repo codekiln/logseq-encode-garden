@@ -49,6 +49,7 @@ class Plan:
     record_store: dict | None = None
     source_record_store: dict | None = None
     inventory_expected: dict[Path, tuple[str, ...] | None] = field(default_factory=dict)
+    inventory_patterns: dict[Path, str] = field(default_factory=dict)
 
 
 def safe_path(root: Path, relative: str) -> Path:
@@ -489,7 +490,7 @@ def apply_plan(plan: Plan) -> None:
             raise SyncError('Interrupted import exists; run --destination <graph> --recover, then preview again')
         for folder, expected in plan.inventory_expected.items():
             safe_path(folder.parent, folder.name + '/.inventory-validation')
-            actual = tuple(sorted(p.name for p in folder.glob('*.json'))) if folder.exists() else None
+            actual = tuple(sorted(p.name for p in folder.glob(plan.inventory_patterns.get(folder, '*.json')))) if folder.exists() else None
             if actual != expected:
                 raise SyncError(f'Proxy record inventory changed since preview: {folder}')
         for source, expected in plan.source_expected.items():
