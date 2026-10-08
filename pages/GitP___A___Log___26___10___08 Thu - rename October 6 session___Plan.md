@@ -51,7 +51,8 @@ see-also:: [[GitP/A/Session/26/10/06-Tue]], [[Person/codekiln/GitHub/gitpa]], [[
 		- Add a short "Rename a source page" section to [[Logseq/Entity/Proxy/Page]] once this has been done once: rename the source, sync the new name, carry the destination-owned properties, remove the old proxy and its manifest keys.
 		- A rename option on [[Logseq/Entity/Proxy/Page/mise/Task/sync]] (for example `--rename-from <old page>`) would do the property carry-over and manifest cleanup in one previewed transaction. The task is vendored from this garden, so the change starts here and reaches gitpa by re-syncing [[Logseq/Entity/Proxy/Page]].
 	- ## Questions
-		- TODO Should the old episode link `#/page/GitP%2FA%2FSession%2F26%2F10%2F06-Thu` keep working on the website?
+		- DONE Should the old episode link `#/page/GitP%2FA%2FSession%2F26%2F10%2F06-Thu` keep working on the website?
 			- An `alias:: GitP/A/Session/26/10/06-Thu` on the garden session page would sync to gitpa and may let Logseq's exported site resolve the old address; the preview artifact can show whether it does. The cost is that the misnamed page name stays in both graphs' search.
+			- No, decided by [[Person/codekiln]] on [[2026-10-08 Thu]].
 		- DONE How long should the old B2 objects stay up after the new feed deploys before they are hidden?
 			- Seven days, decided by [[Person/codekiln]] on [[2026-10-08 Thu]].
