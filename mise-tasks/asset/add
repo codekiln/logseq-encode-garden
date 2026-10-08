@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #MISE description="Track a page-named local asset"
-#MISE tools={uv="0.12.22", python="3.13.16", ffmpeg="9.0"}
+#MISE tools={uv="0.12.22", python="3.13.16"}
 #USAGE arg "<source>"
 #USAGE arg "<page>"
 set -euo pipefail

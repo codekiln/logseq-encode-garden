@@ -4,11 +4,11 @@ next:: [[Microfreak/UG/13 Sequencer/02 Mod Tracks]]
 - # 13.1. Using the Sequencer
 	- The icon strip changes function with Arp | Seq. In arpeggiator mode, its icons control Hold, Order, Random, and Pattern. After Shift + Seq activates the sequencer, they control Tie/Rest, pattern A, pattern B, Record/Stop, and Play/Stop.
 	- The Sequencer Controls
-		- ![01 The Sequencer Controls](../assets/Microfreak___UG___13-Sequencer___01-Use___01-The-Sequencer-Controls.png)
+		- ![01 The Sequencer Controls](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___13%20Sequencer___01%20Use___Asset___01-The-Sequencer-Controls.png)
 	- The Sequencer Controls: Stop and Start
-		- ![02 The Sequencer Controls Stop and Start](../assets/Microfreak___UG___13-Sequencer___01-Use___02-The-Sequencer-Controls-Stop-and-Start.png)
+		- ![02 The Sequencer Controls Stop and Start](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___13%20Sequencer___01%20Use___Asset___02-The-Sequencer-Controls-Stop-and-Start.png)
 	- The Tie/Rest Icon
-		- ![03 The Tie Rest Icon](../assets/Microfreak___UG___13-Sequencer___01-Use___03-The-Tie-Rest-Icon.png)
+		- ![03 The Tie Rest Icon](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___13%20Sequencer___01%20Use___Asset___03-The-Tie-Rest-Icon.png)
 	- **Tie/Rest:** During step recording, extend a note across steps or enter silence.
 	- **A and B:** Select the pattern.
 	- **Record (O):** Start step recording while playback is stopped. During playback, press Record to start real-time recording.

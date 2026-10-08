@@ -71,6 +71,33 @@ class MediaUploadTests(unittest.TestCase):
         self.assertTrue(client.verified)
         self.assertEqual(self.page_path.read_bytes(), original)
 
+    def test_public_object_uses_discovered_s3_endpoint_and_verifies_download(self):
+        client = FakeB2(self.info)
+        client.s3 = 'https://s3.us-east-005.backblazeb2.com'
+        url = transfer(self.source, self.root, self.page, client=client)
+        self.assertEqual(url, client.s3 + '/garden/Course%20with%20Spaces___Asset___Diagram___Overview.gif')
+        self.assertTrue(client.verified)
+        self.assertEqual(client.uploads, 0)
+
+    def test_discovered_s3_endpoint_rejects_untrusted_hosts(self):
+        auth = {'authorizationToken': 'synthetic-token', 'accountId': 'synthetic-account',
+                'apiInfo': {'storageApi': {'apiUrl': 'https://api005.backblazeb2.com',
+                            'downloadUrl': 'https://f005.backblazeb2.com',
+                            's3ApiUrl': 'https://untrusted.example', 'allowed': {}}}}
+        with patch.dict('os.environ', {'AWS_ACCESS_KEY_ID': 'synthetic-key-id',
+                                      'AWS_SECRET_ACCESS_KEY': 'synthetic-key'}), patch.object(
+                B2, 'request', return_value=auth):
+            with self.assertRaises(ValueError):
+                B2()
+
+    def test_private_object_keeps_authenticated_native_download_endpoint(self):
+        client = FakeB2(self.info)
+        client.s3 = 'https://s3.us-east-005.backblazeb2.com'
+        client.bucket = lambda *args: {'bucketName': 'garden', 'bucketType': 'allPrivate'}
+        url = transfer(self.source, self.root, self.page, client=client)
+        self.assertTrue(url.startswith(client.download + '/file/garden/'))
+        self.assertTrue(client.verified)
+
     def test_conflicting_or_hidden_destination_is_never_uploaded(self):
         for change in [{'contentSha1': 'different'}, {'contentType': 'text/plain'}, {'action': 'hide'}]:
             with self.subTest(change=change):

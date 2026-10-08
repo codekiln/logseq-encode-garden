@@ -6,10 +6,10 @@ prev:: [[Microfreak/UG/19 Appendix B Vocoder/08 Global Settings/03 Set Gain/02 M
 	- Approximate output levels: microphones -60 to -40 dBU; guitar -20 dBU; phones and tablets -7.78 dBU; Eurorack +13 dBU.
 	- Use a headphone/microphone splitter that connects the source to the mic contact of the MicroFreak’s 3.5 mm TRRS jack.
 	- Headphone/Microphone Splitter
-		- ![01 Headphone Microphone Splitter](../assets/Microfreak___UG___19-Appendix-B-Vocoder___08-Global-Settings___03-Set-Gain___03-External-Sources___01-Headphone-Microphone-Splitter.png)
+		- ![01 Headphone Microphone Splitter](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___19%20Appendix%20B%20Vocoder___08%20Global%20Settings___03%20Set%20Gain___03%20External%20Sources___Asset___01-Headphone-Microphone-Splitter.png)
 	- > [[Note/Info]] The input uses CTIA/AHJ wiring: tip = left audio, ring 1 = right audio, ring 2 = ground, sleeve = microphone.
 	- CTIA/AHJ connector
-		- ![02 CTIA AHJ Connector](../assets/Microfreak___UG___19-Appendix-B-Vocoder___08-Global-Settings___03-Set-Gain___03-External-Sources___02-CTIA-AHJ-Connector.png)
+		- ![02 CTIA AHJ Connector](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___19%20Appendix%20B%20Vocoder___08%20Global%20Settings___03%20Set%20Gain___03%20External%20Sources___Asset___02-CTIA-AHJ-Connector.png)
 	- > [[Note/Warning]] Do not connect a Eurorack module directly to the splitter. Its signal can overload or damage the MicroFreak. Use a mixer headphone or line-level output instead.
 	- ## Connect the device
 		- Turn off the MicroFreak and gently remove the gooseneck microphone.

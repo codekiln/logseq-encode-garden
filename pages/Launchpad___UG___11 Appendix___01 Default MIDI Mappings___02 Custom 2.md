@@ -6,4 +6,4 @@ next:: [[Launchpad/UG/11 Appendix/01 Default MIDI Mappings/03 Custom 3]]
 - # A.1.2 Custom 2
 	- Eight horizontal bipolar faders send CC 15–22.
 	- A.1.2 — Custom 2 default mapping
-		- ![Custom 2 MIDI map](../assets/Launchpad___UG___11-Appendix___01-Default-MIDI-Mappings___02-Custom-2___01-Mapping.png)
+		- ![Custom 2 MIDI map](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Launchpad___UG___11%20Appendix___01%20Default%20MIDI%20Mappings___02%20Custom%202___Asset___Custom-2-MIDI-map.png)

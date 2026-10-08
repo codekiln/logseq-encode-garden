@@ -9,4 +9,4 @@ next:: [[Microfreak/UG/04 Presets/05 Digital Control]]
 	- For example, after loading a preset with a slow attack, turn the Attack knob to make it snappier. The knob's position becomes part of the current preset.
 	- Panel works once after each preset load. After it applies the knob positions, it has no further effect until another preset is loaded.
 	- The Panel button
-		- ![01 Panel Button](../assets/Microfreak___UG___04-Presets___04-Panel___01-Panel-Button.png)
+		- ![01 Panel Button](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___04%20Presets___04%20Panel___Asset___01-Panel-Button.png)

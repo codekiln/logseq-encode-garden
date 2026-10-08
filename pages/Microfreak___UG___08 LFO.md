@@ -11,7 +11,7 @@ next:: [[Microfreak/UG/09 Envelope Gen]]
 		- The stages of an envelope
 	- A familiar use for LFO modulation is a filter sweep: the LFO waveform moves the cutoff point of a low-pass filter over time.
 	- The MicroFreak LFO
-		- ![01 The MicroFreak LFO](../assets/Microfreak___UG___08-LFO___01-The-MicroFreak-LFO.png)
+		- ![01 The MicroFreak LFO](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___08%20LFO___Asset___01-The-MicroFreak-LFO.png)
 	- Try the triangle and rising sawtooth waves to hear how the sweep changes shape. The rectangle wave cycles between low and high states, making it useful for toggling an oscillator between two pitches. Depending on the Matrix modulation amount, the pitch can jump by two or four scale steps, or by a full octave.
 	- {{embed [[Microfreak/UG/08 LFO/01 LFO Shape]]}}
 	- {{embed [[Microfreak/UG/08 LFO/02 LFO Rate]]}}

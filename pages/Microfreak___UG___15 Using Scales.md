@@ -8,12 +8,12 @@ next:: [[Microfreak/UG/16 Paraphonic Chord Mode]]
 	- C major, also called C Ionian, uses the white piano keys: C, D, E, F, G, A, B. The gaps between selected notes are whole tones or semitones. From C to D is a whole tone; from E to F is a semitone.
 	- C major follows the interval pattern tone, tone, semitone, tone, tone, tone, semitone.
 	- C Major Intervals
-		- ![01 C Major Intervals](../assets/Microfreak___UG___15-Using-Scales___01-C-Major-Intervals.png)
+		- ![01 C Major Intervals](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___15%20Using%20Scales___Asset___01-C-Major-Intervals.png)
 	- Starting on D and playing only white keys gives the pattern tone, semitone, tone, tone, semitone, tone, tone. Applying that pattern from C produces a Dorian scale.
 	- C Major Scale, Root D
-		- ![02 C Major Scale, Root D](../assets/Microfreak___UG___15-Using-Scales___02-C-Major-Scale-Root-D.png)
+		- ![02 C Major Scale, Root D](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___15%20Using%20Scales___Asset___02-C-Major-Scale%2C-Root-D.png)
 	- C Dorian Scale
-		- ![03 C Dorian Scale](../assets/Microfreak___UG___15-Using-Scales___03-C-Dorian-Scale.png)
+		- ![03 C Dorian Scale](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___15%20Using%20Scales___Asset___03-C-Dorian-Scale.png)
 	- Starting a C major scale on its fifth step gives a Mixolydian scale. Building scales by starting on different steps creates the church modes, now widely used in western music.
 	- {{embed [[Microfreak/UG/15 Using Scales/01 Scale Settings]]}}
 	- {{embed [[Microfreak/UG/15 Using Scales/02 The Scale Root]]}}

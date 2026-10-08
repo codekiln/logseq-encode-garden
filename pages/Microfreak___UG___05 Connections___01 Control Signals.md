@@ -4,7 +4,7 @@ next:: [[Microfreak/UG/05 Connections/02 Matrix and Encoder]]
 - # 05.1 Control Signals
 	- The Matrix connects control signals from the MicroFreak's modules. These signals move more slowly than audio and are suited to controlling sound.
 	- The MicroFreak Matrix
-		- ![01 The MicroFreak Matrix](../assets/Microfreak___UG___05-Connections___01-Control-Signals___01-The-MicroFreak-Matrix.png)
+		- ![01 The MicroFreak Matrix](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___05%20Connections___01%20Control%20Signals___Asset___01-The-MicroFreak-Matrix.png)
 	- Control signals usually move between 0 and 100 Hz. They can modulate the Digital Oscillator, Analog Filter, and other destinations. The Matrix encoder sets their amount from -100% to +100%.
 	- The MicroFreak's modules generate control signals in different ways.
 		- The LFO makes slow, regular waves. Routed to oscillator pitch, it makes the pitch rise and fall; it can reach 100 Hz.

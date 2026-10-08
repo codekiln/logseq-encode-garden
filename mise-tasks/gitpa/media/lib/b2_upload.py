@@ -119,6 +119,7 @@ class B2:
         storage = auth['apiInfo']['storageApi']
         self.api = endpoint(storage['apiUrl'])
         self.download = endpoint(storage['downloadUrl'])
+        self.s3 = endpoint(storage['s3ApiUrl']) if storage.get('s3ApiUrl') else None
         self.allowed = storage['allowed']
 
     def request(self, url, *, headers=None, data=None):
@@ -206,7 +207,11 @@ def transfer(source: Path, garden: Path, page: str, requested_bucket=None, verif
         check_metadata(info, filename, size, sha1, mime)
     if hashes(source) != (size, sha1, sha256):
         raise ValueError('Source changed during transfer')
-    url = client.download + '/file/' + quote(bucket['bucketName'], safe='') + '/' + quote(filename, safe='')
+    # Public objects use the S3 endpoint supplied by authenticated B2 discovery.
+    if bucket['bucketType'] == 'allPublic' and getattr(client, 's3', None):
+        url = client.s3 + '/' + quote(bucket['bucketName'], safe='') + '/' + quote(filename, safe='')
+    else:
+        url = client.download + '/file/' + quote(bucket['bucketName'], safe='') + '/' + quote(filename, safe='')
     client.verify_download(url, size, sha256, mime, bucket['bucketType'] != 'allPublic')
     print('Verified existing object' if current else 'Uploaded and verified object')
     if bucket['bucketType'] != 'allPublic':

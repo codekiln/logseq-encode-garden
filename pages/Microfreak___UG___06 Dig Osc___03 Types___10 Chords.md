@@ -4,7 +4,7 @@ prev:: [[Microfreak/UG/06 Dig Osc/03 Types/09 Formant]]
 next:: [[Microfreak/UG/06 Dig Osc/03 Types/11 Speech]]
 - # 06.03.10 Chords (Chords)
 	- Chords Oscillator Model
-		- ![01 Chords Oscillator Model](../assets/Microfreak___UG___06-Dig-Osc___03-Types___10-Chords___01-Chords-Oscillator-Model.png)
+		- ![01 Chords Oscillator Model](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___06%20Dig%20Osc___03%20Types___10%20Chords___Asset___01-Chords-Oscillator-Model.png)
 	- **Description:** Chords mode turns the digital oscillator into four voices that can play and modulate chords.
 	- The first note of a chord is its root. The third determines whether the chord is minor, three half-steps above the root, or major, four half-steps above it. Adding voices further shapes the minor or major feel.
 	- A major chord may sound forceful and happy, while a minor chord may sound sad to listeners raised with Western music. Responses to major and minor scales differ across cultures.

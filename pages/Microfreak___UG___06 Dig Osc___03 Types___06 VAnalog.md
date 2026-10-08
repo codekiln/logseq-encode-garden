@@ -4,7 +4,7 @@ prev:: [[Microfreak/UG/06 Dig Osc/03 Types/05 KarplusStr]]
 next:: [[Microfreak/UG/06 Dig Osc/03 Types/07 Waveshaper]]
 - # 06.03.06 Virtual Analog (V.Analog)
 	- Virtual Analog Model
-		- ![01 Virtual Analog Model](../assets/Microfreak___UG___06-Dig-Osc___03-Types___06-VAnalog___01-Virtual-Analog-Model.png)
+		- ![01 Virtual Analog Model](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___06%20Dig%20Osc___03%20Types___06%20VAnalog___Asset___01-Virtual-Analog-Model.png)
 	- **Description:** Emulates the classic triangle, sawtooth, and square synthesis waveforms.
 	- **Detune:** Sets the detuning between the two waves.
 	- **Shape:** Morphs a variable square wave from a narrow pulse through a full square wave to hard-sync formants.

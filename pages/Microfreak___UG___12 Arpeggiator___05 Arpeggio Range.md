@@ -9,7 +9,7 @@ next:: [[Microfreak/UG/12 Arpeggiator/06 Transfer to Seq]]
 		- **3** adds them two octaves above.
 		- **4** adds them three octaves above.
 	- The Arpeggiator and range
-		- ![01 The Arpeggiator and Range](../assets/Microfreak___UG___12-Arpeggiator___05-Arpeggio-Range___01-The-Arpeggiator-and-Range.png)
+		- ![01 The Arpeggiator and Range](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___12%20Arpeggiator___05%20Arpeggio%20Range___Asset___01-The-Arpeggiator-and-Range.png)
 	- While an arpeggio plays, pressing **Octave Up** or **Octave Down** keeps the pitches already in the arpeggio and adds newly played notes in the new octave.
 	- To transpose a held arpeggio, activate Hold, press **Shift**, and play a key to set the transposition. The display shows the amount.
 	- In Scale mode, notes outside the selected scale are forced into it. Different notes can collapse to the same pitch, creating repeated-note or ratcheting effects. Keep **Utility > Preset > Scale** open while adjusting the scale and transposition.

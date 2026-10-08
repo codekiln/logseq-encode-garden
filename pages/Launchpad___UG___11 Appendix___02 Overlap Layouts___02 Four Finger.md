@@ -6,4 +6,4 @@ next:: [[Launchpad/UG/11 Appendix/02 Overlap Layouts/03 Sequential]]
 - # A.2.2 Overlap – Four Finger
 	- Four-finger overlap repeats notes across rows with a shorter horizontal reach.
 	- A.2.2 — Four Finger overlap in Chromatic and Scale Modes
-		- ![Four Finger overlap layouts](../assets/Launchpad___UG___11-Appendix___02-Overlap-Layouts___02-Four-Finger___01-Layout.png)
+		- ![Four Finger overlap layouts](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Launchpad___UG___11%20Appendix___02%20Overlap%20Layouts___02%20Four%20Finger___Asset___Four-Finger-overlap-layouts.png)

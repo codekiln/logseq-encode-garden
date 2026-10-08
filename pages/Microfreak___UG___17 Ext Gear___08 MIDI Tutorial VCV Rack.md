@@ -9,5 +9,5 @@ next:: [[Microfreak/UG/17 Ext Gear/09 MIDI CC Control]]
 	- In the MIDI-CV module, change the input from computer keyboard to Core MIDI, then select Arturia MicroFreak as the device. The module can now receive pitch and velocity from the MicroFreak.
 	- In the Audio-8 module, select the computer's audio output.
 	- VCV Rack MIDI-CV patch
-		- ![01 VCV Rack MIDI-CV patch](../assets/Microfreak___UG___17-Ext-Gear___08-MIDI-Tutorial-VCV-Rack___01-VCV-Rack-MIDI-CV-Patch.png)
+		- ![01 VCV Rack MIDI-CV patch](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___17%20Ext%20Gear___08%20MIDI%20Tutorial%20VCV%20Rack___Asset___01-VCV-Rack-MIDI-CV-patch.png)
 	- Press a MicroFreak key to hear VCV Rack. The keyboard, arpeggiator, and sequencer can now control VCV Rack oscillators and envelope generators.

@@ -9,4 +9,4 @@ prev:: [[Launchpad/UG/10 Setup/07 Live and Programmer Mode]]
 	- Set a different Device ID on each Launchpad Pro when using several with Live. Each unit then has an independent Session View outline.
 	- MSD Mode controls whether the device appears as a mass storage drive. It is on by default; the bright pad means enabled and the dim pad means disabled. The LAUNCHPAD drive contains a link to the Easy Start Tool.
 	- 10.8.A — Bootloader menu
-		- ![Bootloader controls](../assets/Launchpad___UG___10-Setup___08-Bootloader-Menu___01-Bootloader-Menu.png)
+		- ![Bootloader controls](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Launchpad___UG___10%20Setup___08%20Bootloader%20Menu___Asset___Bootloader-controls.png)

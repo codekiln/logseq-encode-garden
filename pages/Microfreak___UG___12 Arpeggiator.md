@@ -12,9 +12,9 @@ next:: [[Microfreak/UG/13 Sequencer]]
 		- **Random** plays the notes in a random order.
 		- **Pattern** generates a semi-random pattern from legato key presses.
 	- The Arpeggiator
-		- ![01 The Arpeggiator](../assets/Microfreak___UG___12-Arpeggiator___01-The-Arpeggiator.png)
+		- ![01 The Arpeggiator](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___12%20Arpeggiator___Asset___01-The-Arpeggiator.png)
 	- Arpeggiator pattern icons
-		- ![02 Arpeggiator Pattern Icons](../assets/Microfreak___UG___12-Arpeggiator___02-Arpeggiator-Pattern-Icons.png)
+		- ![02 Arpeggiator Pattern Icons](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___12%20Arpeggiator___Asset___02-Arpeggiator-Pattern-Icons.png)
 	- {{embed [[Microfreak/UG/12 Arpeggiator/01 Using Patterns]]}}
 	- {{embed [[Microfreak/UG/12 Arpeggiator/02 Gates and Triggers]]}}
 	- {{embed [[Microfreak/UG/12 Arpeggiator/03 Arpeggio Rate]]}}

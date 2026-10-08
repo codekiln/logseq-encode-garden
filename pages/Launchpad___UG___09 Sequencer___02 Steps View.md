@@ -7,7 +7,7 @@ next:: [[Launchpad/UG/09 Sequencer/03 Patterns View]]
 	- The top half of the grid shows a pattern’s 32 steps. Press Play to start the white playhead at the beginning; press Play again to stop it.
 	- The bottom half is the Play Area, where pads play notes.
 	- Steps View layout
-		- ![01 Steps View layout](../assets/Launchpad___UG___09-Sequencer___02-Steps-View___01-Steps-View-Layout.png)
+		- ![01 Steps View layout](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Launchpad___UG___09%20Sequencer___02%20Steps%20View___Asset___01-Steps-View-layout.png)
 	- {{embed [[Launchpad/UG/09 Sequencer/02 Steps View/01 Play Area]]}}
 	- {{embed [[Launchpad/UG/09 Sequencer/02 Steps View/02 Assign Notes]]}}
 	- {{embed [[Launchpad/UG/09 Sequencer/02 Steps View/03 Clear Steps]]}}

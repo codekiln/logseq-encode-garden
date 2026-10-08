@@ -4,17 +4,17 @@ next:: [[Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/02 Dra
 - # 14.2.2.1 Wavetable Management
 	- The buttons above the computer and MicroFreak panes move and manage wavetables.
 	- Wavetable management buttons
-		- ![01 Wavetable management buttons](../assets/Microfreak___UG___14-Config___02-MIDI-Control-Center___02-Wavetables-Tab___01-Management___01-Buttons.png)
+		- ![01 Wavetable management buttons](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___14%20Config___02%20MIDI%20Control%20Center___02%20Wavetables%20Tab___01%20Management___Asset___01-Wavetable-management-buttons.png)
 	- **New Bank** creates an empty bank on the computer and prompts for its name. Drag a wavetable over the new bank's name to add it; banks can combine wavetables from other banks.
 	- New Bank name prompt
-		- ![02 New Bank name prompt](../assets/Microfreak___UG___14-Config___02-MIDI-Control-Center___02-Wavetables-Tab___01-Management___02-New-Bank.png)
+		- ![02 New Bank name prompt](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___14%20Config___02%20MIDI%20Control%20Center___02%20Wavetables%20Tab___01%20Management___Asset___02-New-Bank-name-prompt.png)
 	- **Del Bank** deletes a bank after confirmation. Factory banks cannot be deleted.
 	- **Import** opens three choices:
 		- **Replace Wavetable (.mfw)** replaces the selected wavetable with a MicroFreak Wavetable file.
 		- **Replace Wavetable (.wav/.aiff)** replaces it with a WAV or AIFF audio file.
 		- **Import New Bank** imports an MFWB bank into the computer pane.
 	- Import choices
-		- ![03 Import choices](../assets/Microfreak___UG___14-Config___02-MIDI-Control-Center___02-Wavetables-Tab___01-Management___03-Import.png)
+		- ![03 Import choices](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___14%20Config___02%20MIDI%20Control%20Center___02%20Wavetables%20Tab___01%20Management___Asset___03-Import-choices.png)
 	- When importing WAV or AIFF audio, MicroFreak converts it into an MFW wavetable of 32 cycles, each 2,048 samples long:
 		- Each group of 2,048 source samples counts as a cycle.
 		- The source's first and last cycles become cycles 1 and 32.
@@ -23,12 +23,12 @@ next:: [[Microfreak/UG/14 Config/02 MIDI Control Center/02 Wavetables Tab/02 Dra
 	- An audio file can therefore become a usable wavetable without manually preparing each cycle.
 	- **Export** saves a selected wavetable as MFW or a selected bank as MFWB. Choose a location in the system save dialog.
 	- Export choices
-		- ![04 Export choices](../assets/Microfreak___UG___14-Config___02-MIDI-Control-Center___02-Wavetables-Tab___01-Management___04-Export.png)
+		- ![04 Export choices](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___14%20Config___02%20MIDI%20Control%20Center___02%20Wavetables%20Tab___01%20Management___Asset___04-Export-choices.png)
 	- **Delete** removes a selected wavetable after confirmation and replaces it with an init wavetable that morphs between simple waveforms.
 	- Delete confirmation
-		- ![05 Delete confirmation](../assets/Microfreak___UG___14-Config___02-MIDI-Control-Center___02-Wavetables-Tab___01-Management___05-Delete.png)
+		- ![05 Delete confirmation](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___14%20Config___02%20MIDI%20Control%20Center___02%20Wavetables%20Tab___01%20Management___Asset___05-Delete-confirmation.png)
 	- **Send to MicroFreak** transfers the bank assembled in the computer pane to the MicroFreak for the User Wavetable oscillator.
 	- > [[Note/Warning]] This overwrites every wavetable in the MicroFreak. Do not turn its knobs while the transfer progress bar is visible.
 	- Wavetable transfer progress
-		- ![06 Wavetable transfer progress](../assets/Microfreak___UG___14-Config___02-MIDI-Control-Center___02-Wavetables-Tab___01-Management___06-Transfer.png)
+		- ![06 Wavetable transfer progress](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___14%20Config___02%20MIDI%20Control%20Center___02%20Wavetables%20Tab___01%20Management___Asset___06-Wavetable-transfer-progress.png)
 	- **Recall to Computer** copies the MicroFreak's current wavetables into a new bank in the computer pane. The bank initially has a date-and-time name, which you can change in the Bank Name field.

@@ -23,7 +23,7 @@ prev:: [[Microfreak/UG/05 Connections/02 Matrix and Encoder/01 Sources and Desti
 		- **Matrix Modulation Amount:** modulation amount of a Matrix point.
 	- Starting with MicroFreak firmware 5.0.0, Sample can be assigned by opening the Sample select menu, pressing one of the three Assign buttons, and turning the Type knob.
 	- Sample assigned as a Matrix destination
-		- ![01 Sample assigned as a Matrix destination](../assets/Microfreak___UG___05-Connections___02-Matrix-and-Encoder___02-Assigning-Destinations___01-Sample-Assigned-as-a-Matrix-Destination.png)
+		- ![01 Sample assigned as a Matrix destination](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___05%20Connections___02%20Matrix%20and%20Encoder___02%20Assigning%20Destinations___Asset___01-Sample-assigned-as-a-Matrix-destination.png)
 	- A Matrix connection's modulation amount can itself be modulated. To vary vibrato depth with the Cycling Envelope:
 		- Route the LFO to oscillator Pitch.
 		- Select CycEnv→Assign1 in the Matrix and hold Assign1.
