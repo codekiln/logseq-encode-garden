@@ -63,11 +63,15 @@ entity-proxy-destination-properties:: public
 	- ## Executable sync
 		- [[Logseq/Entity/Proxy/Page/mise/Task/sync]] previews the page, entity definitions, companion task references, implementation files, and assets imported by a sync. `--apply` applies the previewed changes.
 		- An instance's `logseq-entity::` links lead to its source entity definitions. Each definition's `entity-tasks::` declares companion task references, whose file mappings and task dependencies follow [[Logseq/Entity/Mise/Task]]. The sync visits shared and cyclic dependencies once.
-		- `.logseq-proxy/manifest.json` in the destination graph records source repository and graph root, logical page identity, source-to-destination file mappings, ownership, and last imported content hashes.
-		- The manifest retains the latest source companion declarations. When a proxy becomes the source for another garden, task discovery uses those declarations and resolves imported implementation paths through the source manifest.
 		- Re-sync refreshes source changes where imported implementation files still match their recorded hashes. Local implementation edits, unowned destination files, and competing source claims produce conflicts before application.
 		- Page properties and bodies refresh from the source per **Invariants** above. Files removed from upstream task mappings are reported as cleanup candidates and retained locally.
 		- A preview reports logical entity definitions without files separately from missing declared tasks or implementation files. Missing source assets remain warnings; missing task requirements stop application.
+	- ## Import manifest
+		- `.logseq-proxy/manifest.json` in the destination graph records source repository and graph path, logical page identity, source-to-destination file mappings, ownership, and last imported content hashes and modes. It accompanies the imported pages and task files in version control.
+		- `files` records implementation ownership and the last import's hash and mode; `pages` records source identity for each logical page. `tasks` retains each task's identity and file mapping; `imports` records the implementation paths associated with each requested page.
+		- `declarations` retains the latest source entity and task properties. When a proxy becomes the source for another garden, task discovery uses those saved declarations and resolves imported implementation paths through the source manifest.
+		- A re-sync compares each imported implementation file with its recorded hash and mode before replacing it. Deleting the manifest loses that baseline; existing task files then appear unowned and require reconciliation before importing again.
+		- [The illustrated manifest explanation](../mise-tasks/logseq/entity/proxy/page/docs/index.html#manifest) describes the sections, declaration precedence, and update checks. [[Logseq/Entity/Mise/Task]] specifies the `source-link::` and `task-files::` declarations from which task imports are planned.
 	- ## Examples in this garden
 		- [[Book/ML with PyTorch and Scikit-Learn]]
 		- [[Person/Thomas Parr/Book/2022/Active Inference]] (legacy name shape)
