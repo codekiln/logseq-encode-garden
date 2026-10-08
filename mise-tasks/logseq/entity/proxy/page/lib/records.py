@@ -9,7 +9,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from urllib.parse import quote
 
 import core
@@ -26,7 +26,8 @@ def empty_store():
 
 def bounded_name(stem):
     if len((stem + '.json').encode()) > 255:
-        stem = stem[:120] + '--' + hashlib.sha256(stem.encode()).hexdigest()
+        prefix = stem.encode()[:180].decode('utf-8', errors='ignore')
+        stem = prefix + '--' + hashlib.sha256(stem.encode()).hexdigest()
     return stem + '.json'
 
 
@@ -38,7 +39,9 @@ def page_record_path(page):
 
 
 def file_record_path(relative):
-    core.safe_path(Path('/'), relative)
+    if (not isinstance(relative, str) or not relative or '\\' in relative
+            or PurePosixPath(relative).is_absolute() or any(p in ('', '.', '..') for p in relative.split('/'))):
+        raise core.SyncError(f'Invalid implementation record path: {relative}')
     return FILES + '/' + bounded_name(quote(relative, safe=' _-.,()[]'))
 
 

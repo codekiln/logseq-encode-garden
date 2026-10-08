@@ -45,8 +45,8 @@ entity-proxy-destination-properties:: public
 		- `--source` may name a linked source worktree, and `--destination` may name a graph inside a linked destination worktree. Content and companion implementations are read from the selected source checkout.
 		- The Logseq graph name comes from the primary checkout at the same repository-relative graph path. A graph at the repository root keeps the registered checkout's name; a nested graph keeps its folder name. A linked worktree therefore shares its source graph's logical identity.
 		- Source ownership combines the repository address, repository-relative graph path, and logical page or implementation path. Branch names and local checkout paths are excluded from ownership, so imports can refresh from a source worktree and later from the merged primary checkout.
-		- A source worktree's code forge URLs name its branch, or its commit when detached. Push the source branch before opening a dependent destination PR so its source links are followable. After the source PR merges, re-sync from the primary checkout to refresh the links to the default branch.
-		- Keep the destination's `.logseq-proxy/manifest.json` and imported task files together in its PR. Record the source PR dependency, source and destination branches, and worktree paths in the issue discussion. A relocated clone resolves the same ownership through its repository address and graph path.
+		- A source worktree's code forge URLs name its branch, or its commit when detached. Push the source branch before opening a dependent destination PR so its source links are followable. After the source PR merges, re-sync from the primary checkout with `--refresh-provenance` to refresh the links to the default branch.
+		- Keep the destination's `.logseq-proxy/pages/` and `.logseq-proxy/files/` records and imported task files together in its PR. Record the source PR dependency, source and destination branches, and worktree paths in the issue discussion. A relocated clone resolves the same ownership through its repository address and graph path.
 	- ## Syncing an instance
 		- **Source file:** the file the code forge URL names, or else `pages/<page>.md` under the graph root, with `page=` decoded (`%2F` is `/`) and each `/` written as `___`.
 		- **First copy:** the whole source file, with the proxy keys set in its property block.
@@ -56,7 +56,7 @@ entity-proxy-destination-properties:: public
 		- **Embeds:** with `--follow-embeds`, each page embedded with the `embed` macro is synced as a proxy too, recursively, so a page and the pages it embeds sync in one batch. A missing embedded page is reported and the sync goes on.
 		- **Report:** the source path, the destination path, the proxy key values written, whether it was a first copy or a re-sync, the properties added, updated or removed, and the assets copied.
 	- ## Documentation
-		- [[Logseq/Entity/Proxy/Page/mise/Task/docs/serve]] opens the illustrated guide to adding and updating proxies, multiple source gardens, manifest ownership, Git tracking, and parallel imports.
+		- [[Logseq/Entity/Proxy/Page/mise/Task/docs/serve]] opens the illustrated guide to adding and updating proxies, multiple source gardens, record ownership, Git tracking, and parallel imports.
 		- ~~~sh
 		  mise run logseq:entity:proxy:page:docs:serve
 		  ~~~
@@ -66,12 +66,13 @@ entity-proxy-destination-properties:: public
 		- Re-sync refreshes source changes where imported implementation files still match their recorded hashes. Local implementation edits, unowned destination files, and competing source claims produce conflicts before application.
 		- Page properties and bodies refresh from the source per **Invariants** above. Files removed from upstream task mappings are reported as cleanup candidates and retained locally.
 		- A preview reports logical entity definitions without files separately from missing declared tasks or implementation files. Missing source assets remain warnings; missing task requirements stop application.
-	- ## Import manifest
-		- `.logseq-proxy/manifest.json` in the destination graph records source repository and graph path, logical page identity, source-to-destination file mappings, ownership, and last imported content hashes and modes. It accompanies the imported pages and task files in version control.
-		- `files` records implementation ownership and the last import's hash and mode; `pages` records source identity for each logical page. `tasks` retains each task's identity and file mapping; `imports` records the implementation paths associated with each requested page.
-		- `declarations` retains the latest source entity and task properties. When a proxy becomes the source for another garden, task discovery uses those saved declarations and resolves imported implementation paths through the source manifest.
-		- A re-sync compares each imported implementation file with its recorded hash and mode before replacing it. Deleting the manifest loses that baseline; existing task files then appear unowned and require reconciliation before importing again.
-		- [The illustrated manifest explanation](../mise-tasks/logseq/entity/proxy/page/docs/index.html#manifest) describes the sections, declaration precedence, and update checks. [[Logseq/Entity/Mise/Task]] specifies the `source-link::` and `task-files::` declarations from which task imports are planned.
-	- ## Examples in this garden
-		- [[Book/ML with PyTorch and Scikit-Learn]]
-		- [[Person/Thomas Parr/Book/2022/Active Inference]] (legacy name shape)
+	- ## Import records
+		- `.logseq-proxy/pages/<encoded-page>.json` records each logical page's source identity, declarations, task mapping, requested implementation references, and body baseline. `.logseq-proxy/files/<encoded-path>.json` records each imported implementation output's owner, content hash, and mode. Commit the records with the imported pages and task files.
+		- The importer derives its aggregate ownership lookup in memory. There is no committed global index. Imports of different pages change different records; shared definitions and implementation outputs change only when their content or ownership changes.
+		- Saved declarations retain the latest source entity and task properties. When a proxy becomes the source for another garden, task discovery uses those declarations and resolves imported implementation paths through its records.
+		- A re-sync compares each imported implementation file with its recorded hash and mode before replacing it. Removing its ownership record loses that baseline; existing task files then appear unowned.
+		- An unchanged source preserves the existing sync date and source links, including across days and source branches. `--refresh-provenance` updates code forge links after a source branch merges without changing the last content-sync date.
+		- `--migrate-records` previews the atomic conversion of a legacy `.logseq-proxy/manifest.json`; `--apply` writes the independent records and removes the legacy file. Repeating migration does nothing. Legacy manifests remain readable when a source proxy forwards content onward.
+		- `--page Old --rename-to New` requires the new logical page in the source graph. It moves the proxy and its record, retaining destination-owned properties and existing block IDs. It does not rewrite references elsewhere in the destination graph.
+		- `--page Name --remove` removes the owned proxy and its page record. Both removal and rename reject a locally edited proxy body. Associated assets and implementation outputs remain available for separate cleanup, including shared helpers.
+		- [The illustrated record explanation](../mise-tasks/logseq/entity/proxy/page/docs/index.html#records) compares storage layouts and describes migration. [[Logseq/Entity/Mise/Task]] specifies the `source-link::` and `task-files::` declarations from which task imports are planned.

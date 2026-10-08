@@ -47,6 +47,16 @@ class RecordsTests(unittest.TestCase):
         path.write_bytes(records.encoded(value))
         return path
 
+    def test_record_paths_encode_names_and_bound_unicode_bytes(self):
+        self.assertIn('A%3F', records.page_record_path('Book/A?'))
+        self.assertIn('mise-tasks%2Fexample', records.file_record_path('mise-tasks/example'))
+        self.assertLessEqual(len(Path(records.page_record_path('界' * 200)).name.encode()), 255)
+        with self.assertRaisesRegex(core.SyncError, 'Ambiguous'):
+            records.page_record_path('Literal___name')
+        for path in ('../outside', '/absolute', 'a//b', 'a/./b'):
+            with self.assertRaises(core.SyncError):
+                records.file_record_path(path)
+
     def test_atomic_legacy_migration_and_repeat_does_not_acknowledge_local_body(self):
         self.sync('A')
         old_record = (self.destination / records.page_record_path('A')).read_bytes()
@@ -248,6 +258,20 @@ class RecordsTests(unittest.TestCase):
             self.git('checkout', '--detach', first)
             self.git('merge', '--no-edit', second)
             self.assertEqual(set(records.load_store(self.destination)['pages']), {'A', 'B', 'Common'})
+            self.assertEqual(self.git('status', '--porcelain'), '')
+        updated_baseline = self.git('rev-parse', 'HEAD').strip()
+        for branch, page in (('refresh-a', 'A'), ('refresh-b', 'B')):
+            self.git('checkout', '-b', branch, updated_baseline)
+            core.resolve_page(self.source, page).write_text('tags:: [[Original]]\n- changed ' + page + '\n')
+            self.sync('Common')
+            self.sync(page)
+            self.git('add', '.')
+            self.git('commit', '-m', 'refresh ' + page)
+        for first, second in (('refresh-a', 'refresh-b'), ('refresh-b', 'refresh-a')):
+            self.git('checkout', '--detach', first)
+            self.git('merge', '--no-edit', second)
+            for page in ('A', 'B'):
+                self.assertIn('- changed ' + page, core.resolve_page(self.destination, page).read_text())
             self.assertEqual(self.git('status', '--porcelain'), '')
 
 
