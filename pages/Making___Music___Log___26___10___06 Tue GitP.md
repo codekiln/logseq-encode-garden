@@ -1,2 +1,2 @@
 - [[2026-10-06 Tue]]
-	- [[GitP/A/Session/26/10/06-Thu]]
+	- [[GitP/A/Session/26/10/06-Tue]]

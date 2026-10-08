@@ -1,7 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Question]]
 
-- # Can I record two tracks in [[Ableton/Arrangement View]] while I play other clips in Session View?
+- # Can I record two tracks in [[Ableton/Arrangement View]] while I play and record
+	- other clips in Session View?
 	- Recording a [[Microfreak]] on a MIDI track and an audio track into the Arrangement, while launching and recording other [[Ableton/Clip]]s in Session View.
+	- ## [[My Answer]]
+		- No. This isn't possible. One can play session clips while arrangement view is playing, but not record into them while recording into arrangement view.
 	- ## [[AI Answer]]
 		- **Short answer:** yes. Arm the two Microfreak tracks, press Arrangement Record, and keep playing Session clips on other tracks. One caveat: a single track records in one place at a time.
 		- **Why:**
