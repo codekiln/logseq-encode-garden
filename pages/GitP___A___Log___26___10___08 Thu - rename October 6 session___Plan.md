@@ -6,12 +6,12 @@ see-also:: [[GitP/A/Session/26/10/06-Tue]], [[Person/codekiln/GitHub/gitpa]], [[
 		- B2 holds two public objects under the old name, both answering anonymous requests with `200`:
 			- [GitP___A___Session___26___10___06-Thu___Asset___Synth___Full.mp3](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___06-Thu___Asset___Synth___Full.mp3), the episode recording.
 			- [GitP___A___Session___26___10___06-Thu___Asset___MIDI___Full.mid](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___06-Thu___Asset___MIDI___Full.mid), the full-session MIDI download.
-			- Nothing exists yet under the `06-Tue` names.
+			- On [[2026-10-08 Thu]] both were copied to the `06-Tue` names with the same size, media type and ETag.
 		- The garden links those objects from four places: the session page (recording embed and MIDI download), the MP3 asset page, and the MIDI asset page.
 		- Gitpa `main` carries three proxy pages under `GitP/A/Session/26/10/06-Thu`, their entries in [gitp-garden/.logseq-proxy/manifest.json](https://github.com/codekiln/gitpa/blob/main/gitp-garden/.logseq-proxy/manifest.json) (the `declarations`, `imports` and `pages` sections), and the episode's feed item.
 		- The episode is live. [codekiln/gitpa#22 restore approved October 6 episode](https://github.com/codekiln/gitpa/pull/22) merged on [[2026-10-08 Thu]], and the [deployed feed](https://codekiln.github.io/gitpa/rss.xml) carries the item with `guid` `gitpa20261006`, an episode link to `#/page/GitP%2FA%2FSession%2F26%2F10%2F06-Thu`, and an enclosure at the old MP3 URL. See [rss.xml lines 24–33](https://github.com/codekiln/gitpa/blob/main/rss.xml#L24-L33).
 		- The prepared exports in `~/Documents/ableton/GitP/GitP26.10.06 Project/` have MD5 sums equal to the ETags of both live objects, so they are the same files.
-	- ## Copy the media to the new names
+	- ## DONE Copy the media to the new names
 		- Upload each local export under its renamed asset page with [[GitP/mise/Task/media/upload]], from a garden checkout:
 			- ~~~sh
 			  mise run gitpa:media:upload -- "$HOME/Documents/ableton/GitP/GitP26.10.06 Project/GitP___A___Session___26___10___06-Thu___Asset___Synth___Full.mp3" 'GitP/A/Session/26/10/06-Tue/Asset/Synth/Full/mp3'
@@ -20,7 +20,7 @@ see-also:: [[GitP/A/Session/26/10/06-Tue]], [[Person/codekiln/GitHub/gitpa]], [[
 		- The task derives the object name from the page, so these create `GitP___A___Session___26___10___06-Tue___Asset___Synth___Full.mp3` and `GitP___A___Session___26___10___06-Tue___Asset___MIDI___Full.mid`. It checks SHA-1, length and media type on B2, then downloads the object and compares SHA-256 with the local file.
 		- Check each new URL anonymously at the public S3 endpoint the other pages use: `curl -sI https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/<new name>` should return `200`, the same `Content-Length` and `Content-Type` as the old object, and the same ETag.
 		- The old objects stay in place. The live feed keeps working through every step below.
-	- ## Point the garden at the new objects
+	- ## DONE Point the garden at the new objects
 		- In a garden PR, replace `06-Thu` with `06-Tue` in the four B2 URLs on [[GitP/A/Session/26/10/06-Tue]], [[GitP/A/Session/26/10/06-Tue/Asset/Synth/Full/mp3]] and [[GitP/A/Session/26/10/06-Tue/Asset/MIDI/Full/mid]]. After that, `grep -rn "06-Thu" pages journals` should match only log text.
 		- Merge it before the gitpa PR. Gitpa proxies record `logseq-proxy-codeforge-url::` links to garden `main`, so the renamed pages need to be on `main` when gitpa syncs them.
 	- ## Rename the proxies and update the feed in gitpa
