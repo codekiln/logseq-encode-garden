@@ -20,8 +20,9 @@ from urllib.parse import urlsplit
 import tomllib
 
 import core
+import records as record_store
 
-MANIFEST = '.logseq-proxy/manifest.json'
+MANIFEST = record_store.LEGACY
 
 
 def refs(value):
@@ -92,37 +93,17 @@ def compatible_config(root):
 
 
 def load_manifest(data, label):
+    """Validate a legacy aggregate for compatibility with older callers."""
     try:
-        manifest = json.loads(data)
-        if not isinstance(manifest, dict) or manifest.get('version') != 1 or not isinstance(manifest.get('files'), dict):
-            raise ValueError('unsupported schema')
-        for section in ('files', 'imports', 'pages', 'tasks', 'declarations'):
-            if not isinstance(manifest.get(section, {}), dict):
-                raise ValueError(f'{section} must be an object')
-        for record in manifest.get('files', {}).values():
-            if not isinstance(record, dict) or not isinstance(record.get('source'), list) or len(record['source']) != 3 or not all(isinstance(item, str) for item in record['source']) or not isinstance(record.get('mode'), int) or not isinstance(record.get('sha256'), str):
-                raise ValueError('invalid file ownership record')
-        for record in manifest.get('tasks', {}).values():
-            if not isinstance(record, dict) or not isinstance(record.get('mapping'), dict) or not all(isinstance(key, str) and isinstance(value, str) for key, value in record['mapping'].items()):
-                raise ValueError('invalid task mapping')
-        for record in manifest.get('declarations', {}).values():
-            if not isinstance(record, dict) or not all(isinstance(key, str) and isinstance(value, str) for key, value in record.items()):
-                raise ValueError('invalid companion declaration')
-        for record in manifest.get('imports', {}).values():
-            if not isinstance(record, dict) or not isinstance(record.get('files'), list) or not all(isinstance(item, str) for item in record['files']):
-                raise ValueError('invalid import record')
-        return manifest
+        return record_store.validate_aggregate(json.loads(data), label)
     except (ValueError, AttributeError) as exc:
         raise ValueError(f'{label}: invalid import manifest: {exc}') from exc
 
 
 def source_manifest(plan):
-    path = safe_file(plan.source_root, MANIFEST, 'source manifest')
-    if not path.exists():
-        return {}
-    data = path.read_bytes()
-    plan.source_expected[path] = data
-    return load_manifest(data, path)
+    if plan.source_record_store is None:
+        plan.source_record_store = record_store.load_store(plan.source_root, source_plan=plan)
+    return plan.source_record_store
 
 
 def declarations(props):
@@ -187,6 +168,11 @@ def task_spec(plan, page, props):
         if source == str(entry) and not mode & 0o111:
             raise ValueError(f'{page}: entrypoint is not executable: {source}')
         data = file.read_bytes()
+        if imported:
+            claim = source_manifest(plan).get('files', {}).get(actual_source)
+            if (not claim or claim['source'][:2] != imported['identity'][:2]
+                    or digest(data) != claim.get('sha256') or mode != claim.get('mode')):
+                raise ValueError(f'{page}: forwarded implementation was edited locally or lacks ownership: {actual_source}')
         plan.source_expected[file] = data
         plan.source_modes[file] = mode
         source_relative = file.relative_to(repo).as_posix()
@@ -194,14 +180,14 @@ def task_spec(plan, page, props):
     return identity, files
 
 
-def extend_plan(plan):
+def extend_plan(plan, *, migrate=False):
     """Extend the page plan without writing to either garden."""
     compatible_config(plan.destination_root)
-    manifest_path = safe_file(plan.destination_root, MANIFEST, 'manifest')
-    if manifest_path.exists():
-        manifest = load_manifest(manifest_path.read_bytes(), manifest_path)
-    else:
-        manifest = {'version': 1, 'files': {}, 'imports': {}}
+    if plan.record_store is None:
+        plan.record_store = record_store.load_store(plan.destination_root, destination_plan=plan)
+    manifest = plan.record_store
+    if manifest.get('_legacy') and not migrate:
+        raise core.SyncError('Legacy proxy manifest requires --migrate-records before applying new syncs')
     records = manifest['files']
     queue = list(plan.pages)
     visited = set()
@@ -282,5 +268,4 @@ def extend_plan(plan):
             plan.warnings.append(f'{destination}: removed upstream; cleanup candidate retained locally')
     # The graph path is repository-relative so the manifest stays the same across checkouts.
     imports[import_key] = {'source_graph': plan.source_root.relative_to(repo).as_posix(), 'page': plan.page, 'files': sorted(set(previous_files) | set(claims))}
-    if plan.pages or claims or manifest_path.exists():
-        core.add_write(plan, MANIFEST, (json.dumps(manifest, indent=2, sort_keys=True) + '\n').encode(), mode=0o644)
+    record_store.save_plan(plan, manifest, migrate=migrate)
