@@ -45,7 +45,7 @@ see-also:: [[GitP/A/Session/26/10/06-Tue]], [[Person/codekiln/GitHub/gitpa]], [[
 		- Merging deploys the site and feed. Afterwards, fetch `https://codekiln.github.io/gitpa/rss.xml` and check the item's new enclosure URL.
 	- ## Retire the old objects
 		- The feed is the only thing outside the two repositories known to hold the old MP3 URL. Apps that already downloaded the episode keep their copy; apps that refresh the feed pick up the new enclosure under the same GUID.
-		- After the new feed has been live for a waiting period, check that neither repository nor the live feed contains `06-Thu`, then hide both old objects in B2. Hiding makes the name return `404` and keeps the stored version, so un-hiding restores it. Delete the hidden versions later if storage matters.
+		- After the new feed has been live for seven days, check that neither repository nor the live feed contains `06-Thu`, then hide both old objects in B2. Hiding makes the name return `404` and keeps the stored version, so un-hiding restores it. Delete the hidden versions later if storage matters.
 		- The garden's B2 tooling only uploads and verifies. Hiding happens in the Backblaze web console or with `rclone`/`aws` using the garden's Fnox `assets` credentials.
 	- ## Follow-ups
 		- Add a short "Rename a source page" section to [[Logseq/Entity/Proxy/Page]] once this has been done once: rename the source, sync the new name, carry the destination-owned properties, remove the old proxy and its manifest keys.
@@ -53,4 +53,5 @@ see-also:: [[GitP/A/Session/26/10/06-Tue]], [[Person/codekiln/GitHub/gitpa]], [[
 	- ## Questions
 		- TODO Should the old episode link `#/page/GitP%2FA%2FSession%2F26%2F10%2F06-Thu` keep working on the website?
 			- An `alias:: GitP/A/Session/26/10/06-Thu` on the garden session page would sync to gitpa and may let Logseq's exported site resolve the old address; the preview artifact can show whether it does. The cost is that the misnamed page name stays in both graphs' search.
-		- TODO How long should the old B2 objects stay up after the new feed deploys before they are hidden?
+		- DONE How long should the old B2 objects stay up after the new feed deploys before they are hidden?
+			- Seven days, decided by [[Person/codekiln]] on [[2026-10-08 Thu]].
