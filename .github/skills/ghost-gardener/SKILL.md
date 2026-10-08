@@ -50,7 +50,7 @@ A request naming a page that does not exist yet: check with `grep -r "Namespace/
 
 A request may ask for a worker, a worktree and a pull request. Carry it through to an open PR.
 
-- **In this garden**, the worktree goes under `.worktree`, following [[My/Pref/Dev/Tool/git/Worktree]].
+- **In this garden**, the worktree goes under `.worktrees`, following [[My/Pref/Dev/Tool/git/Worktree]].
 - **In another repository** — dotfiles, herdr, rulesync, anything else — resolve it with `ghq list --full-path --exact <host/owner/repo>` and verify the checkout per [[My/AI/Rule/Work in ghq repos]] before writing anything. Ask before cloning a repository that is not already local.
 - Branch and worktree names carry the ticket or the request they serve, per [[My/AI/Rule/Dev Workflow with Git and Tmux]].
 - When the PR is open, put its link into the request block in place of any `TBD link to pr` placeholder, shaped by [[My/AI/Rule/How to Communicate Effectively With Me/A pointer carries a link, an id with a slug, and a reason]], then mark the request `DONE`.
