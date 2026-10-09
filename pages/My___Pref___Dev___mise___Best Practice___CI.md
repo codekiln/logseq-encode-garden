@@ -1,0 +1,1 @@
+- Follow [Continuous integration | mise-en-place](https://mise.jdx.dev/continuous-integration.html#continuous-integration)

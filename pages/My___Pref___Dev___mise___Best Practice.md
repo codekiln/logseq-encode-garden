@@ -1,0 +1,2 @@
+- Always use [[mise]] [[Best Practices]] and follow mise's preferences.
+- Use the mise repo (which I usually keep in [[ghq]] locally; feel free to update it!) and the mise docs at https://mise.jdx.dev/ to figure out what those are. Sometimes they change. For example, if mise marks a feature as legacy, such as [asdf plugins (legacy) | mise-en-place](https://mise.jdx.dev/asdf-legacy-plugins.html#asdf-legacy-plugins), then try to not use that feature. If mise starts preferring a new technique or technology, follow them.

@@ -7,6 +7,7 @@
 			- Where [[EnvVars]] need to be configured in the environment, use mise to do that declaratively.
 		- ## [[mise/JTBD/3 - Task Runner]]
 			- Prefer to use [[mise/Task]]s as the task orchestration system and task runner and "structure" around [[Scripting]].
+			- In CI, prefer to use [[My/Pref/Dev/mise/Best Practice/CI]] for task execution
 			- {{embed [[My/Pref/Dev/mise/Tasks]]}}
 				- [[Why]]?
 					- {{embed [[My/Pref/Dev/mise/Tasks/Discussion]]}}
