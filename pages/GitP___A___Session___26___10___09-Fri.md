@@ -13,7 +13,7 @@ date-created:: [[2026-10-09 Fri]]
 		  id:: 6ac9f818-c073-44fd-9655-e74c4b03b59c
 		- 00:49 — Now I want to change the sequence length before I begin. I think it's in the [[Microfreak/UG/14 Config/01 Utility & MCC/01 Preset]]. Sequencer, sequence length, I'm going to do five. I'm on sequence A, per [[Microfreak/UG/13 Sequencer/01 Use/01 Select & Play]].
 		- 02:01 — Alright, let's record that.
-		- 02:52 — All right, I'm going to save that. And I hit save. It says hold equals quick save, per [[Microfreak/UG/04 Presets/02 Save Presets]]. So I'm going to just hold. Okay, that's preset 398. That's sequence.
+		- 02:52 — All right, I'm going to save that. And I hit save. It says hold equals quick save, per [[Microfreak/UG/04 Presets/02 Save Presets]]. So I'm going to just hold. Okay, that's [[Microfreak/Preset/398]]. That's sequence.
 		- 03:48 — I want it to be a little bit slower. Right now I'm using the rate sync with the time division of one quarter, per [[Microfreak/UG/12 Arpeggiator/03 Arpeggio Rate]].
 		- 04:15 — Yeah, it is out of sync. Is it? Let me just make sure that the MIDI is receiving the clock. MicroFreak. We're going to turn on Track and Sync for the [unclear] MicroFreak. But it is not syncing up.
 		- 05:48 — See, that's one of the cool things about MicroFreak, is that you can just play a note and patch in.
@@ -35,13 +35,16 @@ date-created:: [[2026-10-09 Fri]]
 		- 19:25 — Let's see if I can use the Novation [[Launchpad/UG/05 Session Mode/04 Track Controls/06 Send]] faders to turn the reverb down on the recorded one. Maybe turn it up on the second channel.
 		- 19:41 — All right, I'm gonna adjust the shape. So then I go in and assign shape to the first parameter and then go to pressure, assign… See [[Microfreak/UG/05 Connections/02 Matrix and Encoder/02 Assigning Destinations]]. And I can just…
 		- 21:19 — The finger is not touching much of the capacitive sensors, but if I maximize it… See [[Microfreak/UG/10 Keyboard/02 Keyboard Responsiveness/01 Using Responsiveness]].
-		- 22:19 — I'm gonna go to preset 399. Quick save. I'm loving that. Quick save. I didn't know about that before.
+		- 22:19 — I'm gonna go to [[Microfreak/Preset/399]]. Quick save. I'm loving that. Quick save. I didn't know about that before.
 		- 22:39 — Let's modify the timbre with envelope, using [[Microfreak/UG/05 Connections/02 Matrix and Encoder]].
 		- 22:49 — Alright, now I want to do something a little bit different. I'm gonna go into preset scale in [[Microfreak/UG/14 Config/01 Utility & MCC/01 Preset]]. [unclear: "Catatonic"]
 		- 28:11 — It's a little fuzzy.
 		- 29:11 — Somehow my recording is not making it through. Or it's like being rendered as mono in my ear. Did I adjust the pan somehow? No. This keeps happening; it might be the delay, I suppose. Let me try and check the sounds.
 		- 30:28 — I'm on the Mixolydian scale preset; see [[Microfreak/UG/15 Using Scales/01 Scale Settings]].
 		- 30:59 — That's all I have time for.
+	- ## Downloads
+		- [MicroFreak preset 398 Init](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___09-Fri___Asset___Preset___398.mfpz)
+		- [MicroFreak preset 399 Init](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___09-Fri___Asset___Preset___399.mfpz)
 	- ## Recording
 		- [[Making/Music/Log/26/10/09 Fri]]
 		- Recorded October 9, 2026, in Ableton Live. The 31:04 episode recording is [[GitP/A/Session/26/10/09-Fri/Asset/Synth/Full/mp3]].

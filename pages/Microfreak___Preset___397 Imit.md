@@ -6,6 +6,7 @@ preset-synth-microfreak-initialized:: false
 preset-synth-microfreak-on-device:: true
 preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
 prev:: [[Microfreak/Preset/396 Anit]]
+next:: [[Microfreak/Preset/398 Init]]
 - # Notes
 	- Used in a recent [[GitP]] episode; the episode association is unspecified.
 	- Saved patch download and export: [[Microfreak/CLI/Validation/26-10-03 slot 397]].
