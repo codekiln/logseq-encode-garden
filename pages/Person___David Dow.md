@@ -1,5 +1,5 @@
 tags:: [[Person]], [[Composer]], [[Performer]]
-logseq-entity:: [[Logseq/Entity/Person]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition]], [[Logseq/Entity/Person/Maker/Music/Performance]]
 - # David Dow
 	- ## Bio
 		- Composer and performer working with EEG and interactive systems

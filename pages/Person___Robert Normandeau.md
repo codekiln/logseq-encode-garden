@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Person]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition]]
 - # Robert Normandeau
 	- ## Bio
 		- Canadian composer (born 1955) specializing in electroacoustic and acousmatic music

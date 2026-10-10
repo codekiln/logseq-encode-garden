@@ -1,7 +1,8 @@
-logseq-entity:: [[Logseq/Entity/Person]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Tech]], [[Logseq/Entity/Person/Maker/Music]]
 
 - # Leo Bernard
-	- Musician and developer who makes [[Ableton/Live]] tools under the name leolabs. Co-founder of Festify.
+	- ## About
+		- Musician and developer who makes [[Ableton/Live]] tools under the name leolabs. Co-founder of Festify.
 	- ## Online presence
 		- [leolabs.org](https://leolabs.org/)
 		- [GitHub: leolabs](https://github.com/leolabs)

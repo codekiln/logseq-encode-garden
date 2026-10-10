@@ -1,5 +1,5 @@
 tags:: [[Person]], [[Composer]], [[Performer]]
-logseq-entity:: [[Logseq/Entity/Person]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition]], [[Logseq/Entity/Person/Maker/Music/Performance]]
 - # Michael Frengel
 	- ## Bio
 		- Composer, performer and researcher at Northeastern University

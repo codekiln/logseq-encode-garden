@@ -1,6 +1,8 @@
 tags:: [[Person]], [[ICMC]], [[Computer Music]], [[Csound]], [[Berklee]]
-logseq-entity:: [[Logseq/Entity/Person]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition]], [[Logseq/Entity/Person/Maker/Music/Tech]]
 - # Richard Boulanger
+  - ## About
+    - Composer of computer music and developer of Csound-based apps.
   - ## Title
     - Professor of Electronic Production and Design (EPD) at Berklee College of Music
   - ## Bio
