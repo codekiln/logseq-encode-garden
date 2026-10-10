@@ -8,7 +8,7 @@ scale-semitones-above-tonic:: 0 2 4 7 9
 		- European art music took it up as a marker of the exotic or the rural. [[Person/Claude Debussy]] heard the Javanese gamelan at the [[18/8/9]] Exposition Universelle in Paris, and "Pagodes" (*Estampes*, [[1903]]) is built on pentatonic collections. Javanese slendro tuning divides the octave into five near-equal steps, so the Western pentatonic is only an approximation of what he heard.
 	- ## Use
 		- Folk melodies such as "Auld Lang Syne" and "Amazing Grace" are pentatonic.
-		- Music education uses it for improvisation because it contains no semitones and no tritone. The Orff Schulwerk and [[Person/Zoltán Kodály]]'s method start children on it.
+		- Music education uses it for improvisation because it contains no semitones and no tritone. The Orff Schulwerk and [Kodály]([[Person/Zoltán Kodály]]) methods start children on it.
 		- Country, gospel and rock guitar use the major pentatonic for major-key soloing. Its five modes include [[Music/Scale/Pentatonic/Minor]].
 	- ## Quirks
 		- It is a stack of four perfect fifths (C G D A E).
