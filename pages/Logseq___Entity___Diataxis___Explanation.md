@@ -25,4 +25,4 @@ alias:: [[Explanation Page]], [[Diataxis Explanation Page]], [[Diataxis Concept 
 	- ## Relationship to other types
 		- The four Diataxis types are mutually exclusive in intent even when a topic needs all four; pick by what the reader needs, not by what is easiest to write.
 		- **[[Diataxis/Explanation]]** — the framework concept page this type implements.
-		- **[[Logseq/Entity/Discussion]]** — a Discussion page that weighs alternatives also carries this entity, after Discussion in its `logseq-entity::` line. It takes its name, placement, shape and frontmatter from the Discussion definition, and codekiln sets its `tags::` by hand.
+		- **[[Logseq/Entity/Discussion]]** — a Discussion page that weighs alternatives also carries this entity, after Discussion in its `logseq-entity::` line. It takes its name, placement, shape and frontmatter from the Discussion definition, so an agent writing one leaves out the `[[Diataxis/Concept]]` tag that new Explanation pages otherwise carry.

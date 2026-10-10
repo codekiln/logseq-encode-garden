@@ -6,7 +6,7 @@ see-also:: [[Music/Scale]], [[Logseq/Entity/Music/Scale/Frontmatter/scale-semito
 	- ## The family noun comes first
 		- Variants nest under the noun they qualify: [[Music/Scale/Minor/Natural]], [[Music/Scale/Minor/Harmonic]], [[Music/Scale/Minor/Melodic]] and [[Music/Scale/Minor/Hungarian]] sit together under `Music/Scale/Minor`, and the two pentatonic scales under `Music/Scale/Pentatonic`. The namespace view of a family then lists every variant of it, and the variants sort next to each other.
 		- Music theorists treat natural, harmonic and melodic minor as one family: [[Music/Scale/Minor/Natural]] describes them as teaching forms of a single minor mode from the common-practice period, and the `Minor` segment in their paths keeps them together.
-		- The alternative was a flat leaf in English word order, `Music/Scale/Natural Minor`. It matches how device menus print the names, and it splits the minor family across the alphabet: Harmonic Minor, Melodic Minor and Natural Minor sort under H, M and N.
+		- The alternative was to name each page in English word order directly under `Music/Scale`, as `Music/Scale/Natural Minor`. It matches how device menus print the names, and it splits the minor family across the alphabet: Harmonic Minor, Melodic Minor and Natural Minor sort under H, M and N.
 	- ## The nesting follows the scale's name
 		- A scale whose common name qualifies another scale's name nests under that scale, wherever its pitches come from. [[Music/Scale/Dorian/Ukrainian]] is the fourth mode of [[Music/Scale/Minor/Harmonic]] and sits under Dorian, and [[Music/Scale/Dorian/Bebop]] sits under Dorian as well.
 		- A reader looks a scale up by the name a manual or a teacher gives it, so the page path follows that name.

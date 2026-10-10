@@ -33,7 +33,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- [[Logseq/Entity/Hierarchy/Discussion]] is the worked example: its entry for [[2026-10-01 Thu]] links [[Logseq/Entity/Hierarchy/Discussion/Analysis/Opus/26/10/01/0611 ET Mark each page with the most specific entity in each lineage]], and a nested bullet records the property codekiln proposed while reviewing it.
 	- ## Combined with [[Logseq/Entity/Diataxis/Explanation]]
 		- A Discussion page whose sections give reasons, history and the alternatives weighed is also a Diataxis Explanation, and lists Discussion first: `logseq-entity:: [[Logseq/Entity/Discussion]], [[Logseq/Entity/Diataxis/Explanation]]`.
-		- The Discussion definition sets the page's name, placement, shape and frontmatter. An agent writing a Discussion page leaves out `tags::`, including the `[[Diataxis/Concept]]` tag the Explanation definition asks for: codekiln sets `tags::` by hand on every page in the garden, as the always-on [logseq-core rule](https://github.com/codekiln/logseq-encode-garden/blob/main/.rulesync/rules/logseq-core.md) states.
+		- The Discussion definition sets the page's name, placement, shape and frontmatter. An agent writing a Discussion page leaves out `tags::`, including the `[[Diataxis/Concept]]` tag the Explanation definition asks for, because the always-on [logseq-core rule](https://github.com/codekiln/logseq-encode-garden/blob/main/.rulesync/rules/logseq-core.md) bars agents from adding, changing or removing `tags::` on any page.
 		- A Discussion page made only of entries carries Discussion alone.
 	- ## Examples in this garden
 		- [[Logseq/Entity/Definition/Discussion]], [[Logseq/Entity/Music/Scale/Discussion]] — combined with Explanation.
