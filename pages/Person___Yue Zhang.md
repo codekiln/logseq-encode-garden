@@ -1,3 +1,4 @@
+tags:: [[Person]], [[Composer]]
 logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition]]
 # Yue Zhang
 	- #Bio
