@@ -1,4 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
+alias:: [[Logseq/Entity/Person/Musician]]
+
 - # Musician
 	- In this garden, **Musician** pages model real people whose work includes making, performing, or producing music.
 	- ## What counts as a Musician

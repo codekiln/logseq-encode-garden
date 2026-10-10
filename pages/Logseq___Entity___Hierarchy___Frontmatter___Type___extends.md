@@ -1,3 +1,3 @@
-- # extends
-	- The child entity is a kind of its parent: every instance of the child is also an instance of the parent, and the child definition page states only how its instances differ from the parent's. [[Logseq/Entity/Person/Musician]] extends [[Logseq/Entity/Person]], and [[Logseq/Entity/Article/Blog]] extends [[Logseq/Entity/Article]].
+# extends
+	- The child entity is a kind of its parent: every instance of the child is also an instance of the parent, and the child definition page states only how its instances differ from the parent's. [[Logseq/Entity/Person/Music/ian]] extends [[Logseq/Entity/Person]], and [[Logseq/Entity/Article/Blog]] extends [[Logseq/Entity/Article]].
 	- Permitted value of [[Logseq/Entity/Hierarchy/Frontmatter/Type]].

@@ -7,7 +7,7 @@ prev:: [[Week/Review/26/09/20 Sun]]
 			- I've got my favorite [[Cinnamon Roll]] and my [[Coffee]] at my favorite seat at my favorite coffee shop for doing a weekly review. It's hopping in here. The same week review page open in each garden. I've got my [[Campfire Audio/Solaris]] earbuds in, and I'm listening to a playlist I just found out about on spotify that was created by the person behind Oneohtrix Point Never. I'm dedicated to not navigating from these pages. It's a concentration zone!
 			  collapsed:: true
 				- DONE import [[Logseq/Entity/Person]] entity for the person behind this musical artist Oneohtrix Point Never. I think it's ___ Lopatin.
-					- DONE define [[Logseq/Entity/Person/Musician]] for when a person is a musician.
+					- DONE define [[Logseq/Entity/Person/Music/ian]] for when a person is a musician.
 		- ## Garden Layers
 		  collapsed:: true
 			- Lately, I've been thinking about how I might make a system for a page in Logseq to function as a palimpsest.

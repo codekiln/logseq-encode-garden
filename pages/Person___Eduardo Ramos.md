@@ -1,5 +1,6 @@
-logseq-entity:: [[Logseq/Entity/Person]], [[Logseq/Entity/Person/Musician]]
+logseq-entity:: [[Logseq/Entity/Person]], [[Logseq/Entity/Person/Music/ian]]
 alias:: [[Pandit Pam Pam]]
+
 - # [Eduardo Ramos](https://panditpampam.bandcamp.com/)
 	- ## About
 		- São Paulo electronic producer who releases music as Pandit Pam Pam. His Bandcamp tags place the work in ambient, experimental, dub and post-club electronica.
