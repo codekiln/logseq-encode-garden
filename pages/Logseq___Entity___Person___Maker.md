@@ -10,8 +10,8 @@ see-also:: [[Logseq/Entity/Person/Maker/Discussion]]
 			- [[Logseq/Entity/Person/Maker/Music/Performance]] — Performer
 				- [[Logseq/Entity/Person/Maker/Music/Performance/Conducting]] — Conductor
 			- [[Logseq/Entity/Person/Maker/Music/Production]] — Music Producer
-			- [[Logseq/Entity/Person/Maker/Music/Theory]] — Music Theorist
-			- [[Logseq/Entity/Person/Maker/Music/Tech]] — Music Technologist
+		- [[Logseq/Entity/Person/Maker/Music/Theory]] — Music Theorist, a maker of theory whose field is music
+		- [[Logseq/Entity/Person/Maker/Music/Tech]] — Music Technologist, a maker of technology whose field is music
 		- [[Logseq/Entity/Person/Maker/Art]] — Artist
 			- [[Logseq/Entity/Person/Maker/Art/Sound]] — Sound Artist
 		- Each child page says what counts as its instance, the cases near its boundary, and any frontmatter of its own. Everything else is on this page.
