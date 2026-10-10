@@ -9,7 +9,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Naming and placement
 		- Place a work under its primary creator's namespace as `Person/<Creator>/Music/Work/<Title>`.
 		- For a movement, continue below its parent work with a two-digit position and the movement's title, such as `.../01 Grave - Allegro di molto e con brio`.
-		- Use the creator who gives the work its clearest home in the garden; list other creators in `creator::` when their pages exist.
+		- Use the creator who gives the work its clearest home in the garden; list every creator whose page exists in `created-by::`.
 		- Use the work's familiar title as the H1. Keep punctuation and diacritics from the established title.
 	- ## Relationships
 		- Use `part-of::` on a movement or section page to link to its parent work.
@@ -24,5 +24,5 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- `Person/Stevie Nicks/Music/Work/Landslide` is the song. A Smashing Pumpkins recording of it is filed under that performer and links to the Stevie Nicks work with `cover-of::`.
 	- ## Instance shape
 		- Start each work page with `logseq-entity:: [[Logseq/Entity/Music/Work]]` and one H1 containing the work's familiar title.
-		- Add `creator::` links when the creator pages exist, and `date-created::` when a reliable composition or publication date is known.
+		- Add `created-by::` links when the creator pages exist, and `date-created::` when a reliable composition or publication date is known.
 		- Add only relationships that are known and useful; leave unknown movement lists and release associations unstated.
