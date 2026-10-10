@@ -21,11 +21,11 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## SCM projects under a person
 		- Repos under a person use `Person/<Name>/GitHub/<Project>` when the maintainer is clear and the person hub exists or should exist. Those project pages are [[Logseq/Entity/Software/Project]] entities, not person entities.
 	- ## Frontmatter on person hub pages
-		- Mark the hub in frontmatter with `logseq-entity::` plus the standard link to the person entity type page (same marker pattern as other entity instances in this garden).
+		- Mark the hub with `logseq-entity:: [[Logseq/Entity/Person]]`, or with its maker entities alone when [[Logseq/Entity/Person/Maker]] applies.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
 		- LFM; first content block is typically `- # …` with the person’s name; lean sections (About, Online presence, Projects) and links to child pages as needed.
 	- ## Related types
 		- [[Logseq/Entity/Person/Knowledge Gardener]] — applied alongside this type when the person keeps a public digital garden.
-		- [[Logseq/Entity/Person/Maker]] — a person who makes music or art, with child entities such as [[Logseq/Entity/Person/Maker/Music/Composition]] and [[Logseq/Entity/Person/Maker/Art/Sound]]. A hub marked with a maker entity leaves this entity out of `logseq-entity::`.
+		- [[Logseq/Entity/Person/Maker]] — a person who makes music or art, such as a Composer or a Sound Artist. A maker's hub lists only its maker entities in `logseq-entity::`, so this page's linked references leave makers out. The hierarchy on [[Person]] lists every `Person/<Name>` hub, makers included.
 		- [[Logseq/Entity/Person/Character]] — fictional characters, not real-person hubs.
