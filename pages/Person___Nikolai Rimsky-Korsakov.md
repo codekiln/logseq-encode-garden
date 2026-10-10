@@ -4,4 +4,4 @@ logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition]], [[Logseq/Entit
 	- ## About
 		- Russian composer and teacher of composition, harmony and orchestration ([[18/4/4]]–[[1908]]).
 		- Wrote the *Practical Manual of Harmony* ([[18/8/5]]) and *Principles of Orchestration*.
-		- Counted harmonic major, the major scale with a lowered sixth, among the four scales at the basis of harmony.
+		- Taught that harmony rests on natural major, natural minor, harmonic minor and harmonic major, the major scale with a lowered sixth.
