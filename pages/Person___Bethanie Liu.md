@@ -1,6 +1,6 @@
 tags:: [[Person]], [[Composer]], [[Performer]]
-logseq-entity:: [[Logseq/Entity/Person]]
-- # [[Person/Bethanie Liu]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition]]
+- # Bethanie Liu
 	- ## Bio
 		- Electro-acoustic composer at Stanford's CCRMA
 	- ## Works

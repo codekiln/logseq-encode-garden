@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Person]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Tech]], [[Logseq/Entity/Person/Maker/Music]]
 via:: [tui-wave: a terminal audio editor : r/tui](https://www.reddit.com/r/tui/comments/1ujq3qc/tuiwave_a_terminal_audio_editor/?utm_source=chatgpt.com)
 
 - # Amos Troitski

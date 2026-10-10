@@ -7,6 +7,6 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Boundary cases
 		- A sound artist who also writes concert pieces, or fixed-media works presented as compositions, adds [[Logseq/Entity/Person/Maker/Music/Composition]]: [[Person/Wei Yang]]. One who releases tracks as an electronic producer adds [[Logseq/Entity/Person/Maker/Music/Production]].
 		- A sound artist who performs their work live carries Sound Artist and [[Logseq/Entity/Person/Maker/Music/Performance]]: [[Person/Huichun Yang]].
-		- A sound artist who also makes music in an unknown role carries Sound Artist and [[Logseq/Entity/Person/Maker/Music]]: [[Person/Ranger Liu]].
+		- A sound artist who also makes music in an unknown role carries Sound Artist and [[Logseq/Entity/Person/Maker/Music]]: [[Person/Ranger Liu]], [[Person/Tom Whiston]].
 	- ## Examples in this garden
 		- [[Person/George Rhoads]], [[Person/Courtney Brown]]

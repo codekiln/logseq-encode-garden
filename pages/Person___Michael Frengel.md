@@ -1,6 +1,6 @@
 tags:: [[Person]], [[Composer]], [[Performer]]
-logseq-entity:: [[Logseq/Entity/Person]]
-- # [[Person/Michael Frengel]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition]], [[Logseq/Entity/Person/Maker/Music/Performance]]
+- # Michael Frengel
 	- ## Bio
 		- Composer, performer and researcher at Northeastern University
 		- Electro-acoustic works appear on SEAMUS, EMF and Centaur

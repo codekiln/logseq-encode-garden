@@ -1,6 +1,6 @@
-logseq-entity:: [[Logseq/Entity/Person]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Art/Sound]], [[Logseq/Entity/Person/Maker/Music/Performance]]
 - #Pic
 	- ![](https://icmc2025.sites.northeastern.edu/files/2025/06/398-1-221x300.jpg)
 - #Bio
-	- **Huichun Yang** is a Providence-based Taiwanese sound artist, improviser, and computer music programmer. Inspired by the physicality of balloons, her performance explores breath as sonic material, speaking with her history and surroundings. She works with pressure and tension that disturb the boundaries of bodies, making balloon noise with latex, breath, and mouth shape to create different resonances—an untranslatable voice, detached from context but visceral and tactile in vibration. She is interested in spatial audio environment that disturb the hierarchy of the listening from linear to parallel.
+	- **Huichun Yang** is a Providence-based Taiwanese sound artist, improviser, and computer music programmer. Inspired by the physicality of balloons, her performance explores breath as sonic material, speaking with her history and surroundings. She works with pressure and tension that disturb the boundaries of bodies, making balloon noise with latex, breath, and mouth shape to create different resonances—an untranslatable voice, detached from context but visceral and tactile in vibration. She is interested in spatial audio environment that disturb the hierarchy of the listening from linear to parallel.
 	- Huichun has performed at the Residual Noise (2025, Providence), SOUND/IMAGE Festival (2024, London), among other events. She has led [[Live Coding]] workshops at [[School/RISD]] Digital Media and [[Uni/New York/ITP]].
