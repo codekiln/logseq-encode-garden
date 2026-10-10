@@ -1,6 +1,6 @@
 tags:: [[Person]], [[Composer]]
 logseq-entity:: [[Logseq/Entity/Person]]
-- # [[Person/Barry Moon]]
+- # Barry Moon
 	- ## Bio
 		- Composer specializing in electroacoustic music
 	- ## Works

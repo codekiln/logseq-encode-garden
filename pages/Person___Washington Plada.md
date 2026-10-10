@@ -1,6 +1,6 @@
 tags:: [[Person]], [[Composer]], [[Sound Artist]]
 logseq-entity:: [[Logseq/Entity/Person]]
-- # [[Person/Washington Plada]]
+- # Washington Plada
 	- ## Bio
 		- Mexican sound-artist
 		- MSc Sonology, Royal Conservatoire The Hague
