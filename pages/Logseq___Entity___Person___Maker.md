@@ -2,7 +2,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 see-also:: [[Logseq/Entity/Person/Maker/Discussion]]
 
 - # Maker
-	- In this garden, **Maker** pages model a real person who makes music or art, with one child entity for each kind of thing a person makes. The rules on this page apply to every child.
+	- In this garden, the **Maker** entities model a real person by what they make: music, music theory, music technology or art. Each kind of thing a person makes has its own child entity, and the rules on this page apply to every child.
 	- ## Child entities
 		- [[Logseq/Entity/Person/Maker/Music]] — Musician
 			- [[Logseq/Entity/Person/Maker/Music/Composition]] — Composer
@@ -23,7 +23,7 @@ see-also:: [[Logseq/Entity/Person/Maker/Discussion]]
 	- ## Marking
 		- A page carries only the most specific maker entities that fit, and may carry several from any field. Every maker entity is a kind of person, so the page leaves [[Logseq/Entity/Person]] out of `logseq-entity::`. A page marked Songwriter leaves out Composer and Musician.
 		- [[Logseq/Entity/Person/Knowledge Gardener]] still asks for Person first. A maker who keeps a public garden lists the maker entities, then Knowledge Gardener, and leaves Person out, until codekiln decides whether Knowledge Gardener follows [[Logseq/Entity/Hierarchy/Discussion/Analysis/Opus/26/10/01/0611 ET Mark each page with the most specific entity in each lineage]].
-		- Maker itself marks no page: every maker makes music or art, and carries a child entity for it.
+		- Maker itself marks no page: every maker carries the child entity for what they make.
 		- The entity for what the person is best known for making comes first.
 		- [[Person/Madonna]] writes songs and performs them:
 			- `logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition/Song]], [[Logseq/Entity/Person/Maker/Music/Performance]]`

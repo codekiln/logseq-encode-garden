@@ -27,5 +27,5 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- LFM; first content block is typically `- # …` with the person’s name; lean sections (About, Online presence, Projects) and links to child pages as needed.
 	- ## Related types
 		- [[Logseq/Entity/Person/Knowledge Gardener]] — applied alongside this type when the person keeps a public digital garden.
-		- [[Logseq/Entity/Person/Maker]] — a person who makes music or art, such as a Composer or a Sound Artist. A maker's hub lists only its maker entities in `logseq-entity::`, so this page's linked references leave makers out. The hierarchy on [[Person]] lists every `Person/<Name>` hub, makers included.
+		- [[Logseq/Entity/Person/Maker]] — a person who makes music, music theory, music technology or art, such as a Composer or a Sound Artist. A maker's hub lists only its maker entities in `logseq-entity::`, so this page's linked references leave makers out. The hierarchy on [[Person]] lists every `Person/<Name>` hub, makers included.
 		- [[Logseq/Entity/Person/Character]] — fictional characters, not real-person hubs.
