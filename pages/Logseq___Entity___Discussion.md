@@ -1,0 +1,40 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Discussion
+	- In this garden, **Discussion** pages model the reasoning behind one subject page: the principles that shaped it, the alternatives weighed and the history of decisions about it. The subject page keeps only what is true of the subject.
+	- ## What counts as an instance
+		- A page at `<Subject>/Discussion` whose content is the reasoning behind `<Subject>`: why the subject is shaped the way it is, what else was considered, and what was decided when.
+		- The subject can be any page: an entity definition such as [[Logseq/Entity/Music/Scale]], a principle such as [[My/Principle/Simplify/Prefer Standards and Defaults]], or a preference such as [[My/Pref/Dev/mise/Tasks]]. The subject page may exist only as a logical page, as `Logseq/Entity/Hierarchy` does.
+		- Not an instance: a page about a conversation held somewhere else. A GitHub Discussions thread or a community forum thread is a [[Logseq/Entity/Forum/Post]], even when its path contains `Discussion`, as [[mise/GitHub/Discussion/24/01/Vaults and Secrets Management]] does.
+		- Not an instance: a dated analysis nested under a Discussion page. It is an entry of that Discussion, described below.
+	- ## Naming and placement
+		- One Discussion page per subject, at `<Subject>/Discussion`: [[Logseq/Entity/Definition/Discussion]] discusses [[Logseq/Entity/Definition]].
+		- The subject page links its Discussion in `see-also::`.
+	- ## Frontmatter
+		- `logseq-entity:: [[Logseq/Entity/Discussion]]`.
+		- `see-also::` for related Discussion pages and the pages the reasoning draws on.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- **H1** — the subject page's H1 followed by *Discussion*: `- # Music Scale Discussion` for [[Logseq/Entity/Music/Scale]], whose H1 is *Music Scale*. When the subject has no page file, the H1 names the subject in Title Case without the `Logseq/` prefix, as `- # Entity Hierarchy Discussion` does for `Logseq/Entity/Hierarchy`. [[Logseq/Entity/Definition/Discussion]] keeps the H1 codekiln wrote for it.
+		- **First line** — one sentence directly under the H1 naming the questions the page covers.
+		- **Sections** — one `##` heading per decision or question, stating the choice or the question in plain words. Under each: the choice, the reasons for it, and the alternatives weighed with what each would cost. Optional sections: `## History` for decisions in date order, each with its date as a journal date link such as [[2026-10-10 Sat]]; `## Open questions` for decisions not yet made.
+		- **Years** — every year, decade or century in the text links to its [[Logseq/Entity/Time/Year]] page, named by digit groups: the year 1547 is [[15/4/7]] and the twentieth century is [[19]], written in a sentence as `[twentieth century]([[19]])`.
+		- **Entries** — a `## Entries` section when the Discussion has dated analyses, described below.
+		- A Discussion page may hold only its first line and its `## Entries` section, as [[Logseq/Entity/Hierarchy/Discussion]] does.
+	- ## Dated analyses and entries
+		- An analysis is one author's written reasoning about the subject at one time, usually an AI model's. Each analysis has its own page, nested under the Discussion it belongs to:
+			- `<Subject>/Discussion/Analysis/<Model>/YY/MM/DD/HHMM ET <slug>`
+			- `<Model>` is the last segment of the author's [[Logseq/Entity/AI/Model]] page: `Opus` for [[Anthropic/Model/Claude/5/5/Opus]], `Fable` for [[Anthropic/Model/Claude/5/1/Fable]].
+			- `YY/MM/DD` is the two-digit year, month and day the analysis was written, and `HHMM ET` the 24-hour Eastern time.
+			- `<slug>` states the analysis's main claim as a short sentence: `Mark each page with the most specific entity in each lineage`.
+		- The analysis page carries `author::` linking the author's AI Model page, and may carry `see-also::`. Its H1 repeats the slug, and its body has one `##` heading per decision or question, as a Discussion page does.
+		- The Discussion page lists each analysis under `## Entries`, oldest first, under one `###` heading for each day, time and model, such as `### [[2026-10-01 Thu]] 0611 ET Opus`. Under that heading, one bullet per analysis gives the link to the analysis page, a hyphen, and one sentence summarizing the analysis.
+		- codekiln's response to an entry nests under that entry's bullet.
+		- [[Logseq/Entity/Hierarchy/Discussion]] is the worked example: its entry for [[2026-10-01 Thu]] links [[Logseq/Entity/Hierarchy/Discussion/Analysis/Opus/26/10/01/0611 ET Mark each page with the most specific entity in each lineage]], and a nested bullet records the property codekiln proposed while reviewing it.
+	- ## Combined with [[Logseq/Entity/Diataxis/Explanation]]
+		- A Discussion page whose sections give reasons, history and the alternatives weighed is also a Diataxis Explanation, and lists Discussion first: `logseq-entity:: [[Logseq/Entity/Discussion]], [[Logseq/Entity/Diataxis/Explanation]]`.
+		- The Discussion definition sets the page's name, placement, shape and frontmatter. An agent writing a Discussion page leaves out `tags::`, including the `[[Diataxis/Concept]]` tag the Explanation definition asks for, because the always-on [logseq-core rule](https://github.com/codekiln/logseq-encode-garden/blob/main/.rulesync/rules/logseq-core.md) bars agents from adding, changing or removing `tags::` on any page.
+		- A Discussion page made only of entries carries Discussion alone.
+	- ## Examples in this garden
+		- [[Logseq/Entity/Definition/Discussion]], [[Logseq/Entity/Music/Scale/Discussion]] — combined with Explanation.
+		- [[Logseq/Entity/Hierarchy/Discussion]] — entries only.

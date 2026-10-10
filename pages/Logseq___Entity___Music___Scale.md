@@ -1,11 +1,12 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
+see-also:: [[Logseq/Entity/Music/Scale/Discussion]]
 
 - # Music Scale
 	- In this garden, **Music Scale** pages model a named collection of pitches ordered from a tonic — a scale, a mode, or a parent scale such as a Hindustani thaat — described apart from any key or instrument.
 	- ## What counts
 		- A named pitch collection with a tonic: the major scale, the church modes, the minor variants, pentatonic and hexatonic collections, symmetrical scales, and scales from other traditions under the names Western menus give them.
 		- A scale page has no fixed tonic pitch. C major is the major scale on C; a piece or key in C major links to [[Music/Scale/Major]].
-		- A raga carries characteristic phrases, ascent and descent rules, emphasized notes and a time of day on top of its pitches. A raga page links to the scale page of its parent thaat.
+		- A raga has a page of its own, which links to the scale page of its parent thaat.
 		- Chords, tuning systems and a device's scale menu have pages of their own. A device's user guide links each menu entry to its scale page.
 	- ## Naming and placement
 		- A scale lives at `Music/Scale/<Name>`, under [[Music/Scale]]. Family nouns come first and qualifiers nest beneath them: [[Music/Scale/Minor/Natural]], [[Music/Scale/Minor/Harmonic]], [[Music/Scale/Pentatonic/Major]].

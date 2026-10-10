@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Diataxis/Explanation]]
+logseq-entity:: [[Logseq/Entity/Discussion]], [[Logseq/Entity/Diataxis/Explanation]]
 alias:: [[The Entities System in Knowledge Gardening]]
 
 - # [[The Entities System]] - Conceptual Overview and Vision
@@ -17,7 +17,7 @@ alias:: [[The Entities System in Knowledge Gardening]]
 				- The Entities System is influenced by the concept of [[DDL]] in [[Database/System/Theory]]. One can think of the entity definitions as comparable to the [[Schema]] for the database: the  code which declares the tables and the types of the columns in a database.
 					- In alignment with [[My/Principle/Declarative over Imperative]], I would prefer for the Entities System to converge on [[Declarative]] definitions rather than [[Imperative]] ones. It may take some time to achieve on that goal, so I ask for your help and patience in this asymptotic effort. What would this mean? It would mean that each page is less a set of instructions of how to do things, and more a description of what the page is, leaving the "how" to an externally intelligent entity such as a human or an [[AI/Agent]] to bring its creativity to bare on how to meet the spirit of the definition.
 				- By consistently describing how the system represents  kinds of external entities, the system should over time converge on [[My/Principle/Simplify/Create Uniform Interfaces]], an organically consistent set of relationship principles.
-			- #### [[Periodic Table of the Elements]]
+			- #### [[Periodic Table of Elements]]
 				- Just as humans discvoered that there are atoms of discrete types in world, and those types determine the behavior of their
 	- ### Gardens Are Built from Curated Sets of Entity Definitions
 		- An organization or an individual may have many topic-focused [[Knowledge Gardens]]. Also, different people may have knowledge gardens that are primarily concerned with different topic areas.
