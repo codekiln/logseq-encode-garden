@@ -4,7 +4,7 @@ scale-semitones-above-tonic:: 0 1 4 6 7 9 11
 - # Marwa Thaat
 	- Spelled Marva on the Launchpad. In sargam: S r G M' P D N. On C: C D♭ E F♯ G A B. Steps in semitones: 1 3 2 1 2 2 1.
 	- ## History
-		- V. N. Bhatkhande classified Hindustani ragas under ten parent scales, or thaats, in the early twentieth century, and named each after a prominent raga. Marwa is one of the ten.
+		- V. N. Bhatkhande classified Hindustani ragas under ten parent scales, or thaats, in the early [twentieth century]([[19]]), and named each after a prominent raga. Marwa is one of the ten.
 		- A thaat is a classification. Ragas live inside it, each with its own phrases, ascent and descent, emphasized notes and performance time; a thaat itself is never performed.
 		- The Carnatic system's equivalent parent scale is Gamanashrama, melakarta 53.
 	- ## Use

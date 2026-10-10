@@ -4,8 +4,8 @@ scale-semitones-above-tonic:: 0 2 3 7 8
 - # Hirajoshi Scale
 	- From hirajōshi, "even tuning", a standard tuning of the Japanese koto. On C, in the form most Western references give: C D E♭ G A♭. Steps in semitones: 2 1 4 1 4.
 	- ## History
-		- Hirajōshi is a tuning for the thirteen strings of the koto, credited to Yatsuhashi Kengyō in the seventeenth century. It became the standard tuning for solo koto music of the Edo period, including his *Rokudan no shirabe*.
-		- Western scale catalogues and guitar method books lifted the tuning's pitches out as a five-note scale in the twentieth century. Japanese theory treats the same pitches as the miyako-bushi or in scale.
+		- Hirajōshi is a tuning for the thirteen strings of the koto, credited to Yatsuhashi Kengyō in the [seventeenth century]([[16]]). It became the standard tuning for solo koto music of the Edo period, including his *Rokudan no shirabe*.
+		- Western scale catalogues and guitar method books lifted the tuning's pitches out as a five-note scale in the [twentieth century]([[19]]). Japanese theory treats the same pitches as the miyako-bushi or in scale.
 	- ## Use
 		- In Western rock, metal and film music, the scale stands in for Japan.
 	- ## Quirks

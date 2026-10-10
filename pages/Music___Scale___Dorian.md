@@ -4,11 +4,11 @@ scale-semitones-above-tonic:: 0 2 3 5 7 9 10
 - # Dorian Mode
 	- Also called the protus authentic mode or Mode 1. On C: C D E♭ F G A B♭. Steps in semitones: 2 1 2 2 2 1 2. The second mode of [[Music/Scale/Major]].
 	- ## History
-		- The name is Greek but the scale is not. The ancient Greek Dorian octave species ran from E to E in modern terms, the collection now called Phrygian. Carolingian theorists, most visibly the anonymous *Alia musica* around 900, attached the Greek names to the church modes in a different order.
+		- The name is Greek but the scale is not. The ancient Greek Dorian octave species ran from E to E in modern terms, the collection now called Phrygian. Carolingian theorists, most visibly the anonymous *Alia musica* around [[9/0/0]], attached the Greek names to the church modes in a different order.
 		- In plainchant and Renaissance polyphony, the D mode was defined by its final, its range and its reciting tone A. B♭ was common, so much Dorian music sounds Aeolian to modern ears.
 		- Baroque composers often wrote D minor with no key signature, a habit inherited from Dorian notation. Bach's Toccata and Fugue in D minor BWV 538 is called "Dorian" for that reason alone: its notation has no flat, and its music is in D minor.
 	- ## Use
-		- Modal jazz made Dorian a vamp scale. Miles Davis's "So What" (*Kind of Blue*, 1959) sits on D Dorian with a bridge in E♭ Dorian, and John Coltrane's "Impressions" uses the same form.
+		- Modal jazz made Dorian a vamp scale. Miles Davis's "So What" (*Kind of Blue*, [[1959]]) sits on D Dorian with a bridge in E♭ Dorian, and John Coltrane's "Impressions" uses the same form.
 		- The i–IV vamp, a minor tonic with a major subdominant, is Dorian's signature in rock and Latin music, as in Tito Puente's "Oye Como Va" and Santana's cover of it.
 		- English and Celtic folk melodies, among them "Scarborough Fair", are often Dorian.
 		- In jazz chord-scale theory it is the default scale for a minor seventh chord functioning as ii.

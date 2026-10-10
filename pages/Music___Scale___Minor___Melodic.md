@@ -6,7 +6,7 @@ scale-semitones-above-tonic:: 0 2 3 5 7 9 11
 	- ## History
 		- The classical form records voice leading. Raising both sixth and seventh on the way up avoids the augmented second of [[Music/Scale/Minor/Harmonic]] while keeping the leading tone. Lowering both on the way down lets the line fall toward the dominant.
 		- Baroque lines follow the harmony more than the direction. Over a dominant chord, Bach's descending lines keep the raised sixth and seventh.
-		- Twentieth-century jazz theory uses the ascending form in both directions and treats each of its modes as a chord-scale. George Russell's *Lydian Chromatic Concept of Tonal Organization* (1953) brought Lydian-based thinking into that theory.
+		- [Twentieth-century]([[19]]) jazz theory uses the ascending form in both directions and treats each of its modes as a chord-scale. George Russell's *Lydian Chromatic Concept of Tonal Organization* ([[1953]]) brought Lydian-based thinking into that theory.
 	- ## Use
 		- Its modes cover much of jazz harmony beyond the diatonic system:
 			- Mode 1, melodic minor on its own tonic, fits a minor-major seventh chord.

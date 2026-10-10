@@ -4,7 +4,7 @@ scale-semitones-above-tonic:: 0 2 3 5 7 8 10
 - # Natural Minor Scale
 	- Also called Aeolian and pure minor. On C: C D E♭ F G A♭ B♭. Steps in semitones: 2 1 2 2 1 2 2. The sixth mode of [[Music/Scale/Major]].
 	- ## History
-		- Glarean named the mode on A Aeolian in the *Dodecachordon* (1547). Before that, a D-final piece with a B♭ sounded the same collection while still counting as Dorian.
+		- Glarean named the mode on A Aeolian in the *Dodecachordon* ([[15/4/7]]). Before that, a D-final piece with a B♭ sounded the same collection while still counting as Dorian.
 		- Common-practice minor was never this collection alone. Cadences raised the seventh, first through musica ficta and later in notation, and melodic lines raised or lowered the sixth as voice leading required. Natural, [[Music/Scale/Minor/Harmonic]] and [[Music/Scale/Minor/Melodic]] are later pedagogical slices of one flexible minor mode.
 	- ## Use
 		- Aeolian folk song keeps the minor dominant (v) and cadences without a leading tone.
