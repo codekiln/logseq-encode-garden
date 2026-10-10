@@ -10,7 +10,7 @@ see-also:: [[Music/Scale]], [[Logseq/Entity/Music/Scale/Frontmatter/scale-semito
 	- ## The nesting follows the scale's name
 		- A scale whose common name qualifies another scale's name nests under that scale, wherever its pitches come from. [[Music/Scale/Dorian/Ukrainian]] is the fourth mode of [[Music/Scale/Minor/Harmonic]] and sits under Dorian, and [[Music/Scale/Dorian/Bebop]] sits under Dorian as well.
 		- A reader looks a scale up by the name a manual or a teacher gives it, so the page path follows that name.
-		- Derivation makes a poor basis for the path, because one scale often derives from several parents. Ukrainian Dorian is Dorian with a raised fourth and also a mode of harmonic minor. Each derivation goes in the first line under the H1 and in links from the page body, where a scale can name all of its parents.
+		- Derivation makes a poor basis for the path, because one scale often derives from several parents. Ukrainian Dorian is Dorian with a raised fourth and also a mode of harmonic minor. A scale page names every scale it derives from, in the first line under the H1 and in links from its body.
 	- ## Scale pages carry no fixed tonic
 		- One page holds the scale on every tonic. C major is the major scale on C, and a piece or a key in C major links to [[Music/Scale/Major]].
 		- A page per tonic would repeat the same history, use and quirks twelve times. What differs between tonics is only the starting pitch, and `scale-semitones-above-tonic::` records the pitches relative to whichever tonic is chosen.
