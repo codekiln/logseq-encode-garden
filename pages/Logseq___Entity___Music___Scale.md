@@ -1,0 +1,29 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Music Scale
+	- In this garden, **Music Scale** pages model a named collection of pitches ordered from a tonic — a scale, a mode, or a parent scale such as a Hindustani thaat — described apart from any key or instrument.
+	- ## What counts
+		- A named pitch collection with a tonic: the major scale, the church modes, the minor variants, pentatonic and hexatonic collections, symmetrical scales, and scales from other traditions under the names Western menus give them.
+		- A scale page has no fixed tonic pitch. C major is the major scale on C; a piece or key in C major links to [[Music/Scale/Major]].
+		- A raga carries characteristic phrases, ascent and descent rules, emphasized notes and a time of day on top of its pitches. A raga page links to the scale page of its parent thaat.
+		- Chords, tuning systems and a device's scale menu have pages of their own. A device's user guide links each menu entry to its scale page.
+	- ## Naming and placement
+		- A scale lives at `Music/Scale/<Name>`, under [[Music/Scale]]. Family nouns come first and qualifiers nest beneath them: [[Music/Scale/Minor/Natural]], [[Music/Scale/Minor/Harmonic]], [[Music/Scale/Pentatonic/Major]].
+		- A scale whose common name qualifies another scale's name nests under that scale. The nesting follows the name even when the scale derives from elsewhere: [[Music/Scale/Dorian/Ukrainian]] is the fourth mode of harmonic minor.
+		- The leaf carries the most common English-language name. The first line under the H1 gives the scale's other names: mode names, names from other traditions, and spellings found in device manuals.
+		- A transliterated name uses the standard spelling in the leaf. [[Music/Scale/Marwa]] mentions Marva, the Launchpad's spelling.
+	- ## Finding and deduplicating
+		- One collection often carries several names. Aeolian and natural minor share one page.
+		- Compare `scale-semitones-above-tonic::` values before creating a page. A rotation of an existing scale is a different mode and gets its own page.
+		- Sources disagree on the pitches behind some names, such as Hirajoshi, Bebop Dorian and Blues. One page holds the name and describes the variants.
+	- ## Frontmatter
+		- `logseq-entity:: [[Logseq/Entity/Music/Scale]]`
+		- [[Logseq/Entity/Music/Scale/Frontmatter/scale-semitones-above-tonic]] records the pitches as semitones above the tonic.
+		- Other conventions follow [[Logseq/Frontmatter]].
+	- ## Page shape
+		- One H1 with the scale's common name, followed by a line giving its other names, its spelling on C and its steps in semitones.
+		- Sections `## History`, `## Use` and `## Quirks`. Pages assume formal training in composition and theory: they skip definitions of intervals and modes and spend the space on origins, repertoire and structural properties.
+		- When a device manual spells a scale differently from its standard form, the scale page notes the difference under Quirks and links the manual page.
+		- A mode page links the scale it rotates; a variant links the scale it alters.
+	- ## Examples
+		- [[Music/Scale/Major]], [[Music/Scale/Dorian]], [[Music/Scale/Whole Tone]], [[Music/Scale/Todi]].
