@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Person/Maker/Art/Sound]], [[Logseq/Entity/Person/Maker/Music/Composition]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Art/Sound]], [[Logseq/Entity/Person/Maker/Music]]
 - ## About
 	- Artist and astrophysicist who makes data-based sonic and sculptural compositions.
 - #Website [Ranger Liu - About](https://ryurongliu.com/about)
