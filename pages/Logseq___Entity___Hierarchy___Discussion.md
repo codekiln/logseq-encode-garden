@@ -1,3 +1,4 @@
+logseq-entity:: [[Logseq/Entity/Discussion]]
 see-also:: [[Logseq/Entity/Definition/Discussion]], [[Software/Inheritance/Multiple/vs/Single]]
 
 - # Entity Hierarchy Discussion
