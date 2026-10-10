@@ -1,0 +1,39 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+see-also:: [[Logseq/Entity/Person/Maker/Discussion]]
+
+- # Maker
+	- In this garden, the **Maker** entities model a real person by what they make: music, music theory, music technology or art. Each kind of thing a person makes has its own child entity, and the rules on this page apply to every child.
+	- ## Child entities
+		- [[Logseq/Entity/Person/Maker/Music]] — Musician
+			- [[Logseq/Entity/Person/Maker/Music/Composition]] — Composer
+				- [[Logseq/Entity/Person/Maker/Music/Composition/Song]] — Songwriter
+			- [[Logseq/Entity/Person/Maker/Music/Performance]] — Performer
+				- [[Logseq/Entity/Person/Maker/Music/Performance/Conducting]] — Conductor
+			- [[Logseq/Entity/Person/Maker/Music/Production]] — Music Producer
+		- [[Logseq/Entity/Person/Maker/Music/Theory]] — Music Theorist, a maker of theory whose field is music
+		- [[Logseq/Entity/Person/Maker/Music/Tech]] — Music Technologist, a maker of technology whose field is music
+		- [[Logseq/Entity/Person/Maker/Art]] — Artist
+			- [[Logseq/Entity/Person/Maker/Art/Sound]] — Sound Artist
+		- Each child page says what counts as its instance, the cases near its boundary, and any frontmatter of its own. Everything else is on this page.
+	- ## What counts as an instance
+		- A [[Logseq/Entity/Person]] hub for someone whose making, in a field a child entity covers, is a significant part of their public identity and of what the garden records about them.
+		- Making means producing the work: composing, performing, producing, writing theory, building instruments or software, making art. A person who shares, curates, teaches, broadcasts or writes about other people's work, and makes none of their own, stays a Person.
+		- Writing, architecture, design and software outside music are fields the family does not cover yet. A person who makes things only in those fields stays a Person.
+		- Not an instance: a band or ensemble, a work, a recording, or a fictional [[Logseq/Entity/Person/Character]].
+	- ## Marking
+		- A page carries only the most specific maker entities that fit, and may carry several from any field. Every maker entity is a kind of person, so the page leaves [[Logseq/Entity/Person]] out of `logseq-entity::`. A page marked Songwriter leaves out Composer and Musician.
+		- [[Logseq/Entity/Person/Knowledge Gardener]] still asks for Person first. A maker who keeps a public garden lists the maker entities, then Knowledge Gardener, and leaves Person out, until codekiln decides whether Knowledge Gardener follows [[Logseq/Entity/Hierarchy/Discussion/Analysis/Opus/26/10/01/0611 ET Mark each page with the most specific entity in each lineage]].
+		- No page lists Maker itself in `logseq-entity::`. Each maker's hub lists the child entity for what they make.
+		- The entity for what the person is best known for making comes first.
+		- [[Person/Madonna]] writes songs and performs them:
+			- `logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition/Song]], [[Logseq/Entity/Person/Maker/Music/Performance]]`
+		- Jean-Philippe Rameau composed operas and wrote the theory of functional harmony:
+			- `logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition]], [[Logseq/Entity/Person/Maker/Music/Theory]]`
+		- A person known to make music in an unknown role carries [[Logseq/Entity/Person/Maker/Music]]. A person known to make art in an unknown form carries [[Logseq/Entity/Person/Maker/Art]].
+		- Music Theorist and Music Technologist name makers of theory and technology, who are Musicians only when the page also carries Musician or one of its kinds. [[Logseq/Entity/Person/Maker/Music]] shows the marking for a technologist who also makes music in an unknown role.
+	- ## Works
+		- A page for something a maker made points back to the maker's hub with `created-by::`, as software project and book pages in the garden already do. The maker's linked references then list their works, so the hub needs no hand-kept list of them.
+		- A work with several makers lists the hub of each maker that has one in `created-by::`, comma-separated.
+	- ## Hub shape
+		- The lean hub from [[Logseq/Entity/Person]], with one line near the top saying what the person makes. [[Person/John Adams]] reads "American composer and conductor." under `## About`. A new hub puts the line under `## About`. On an older hub, a line under `## Bio`, `#Bio` or `#Bio/Short` serves. Whoever marks a hub that has no such line, such as [[Person/Stephen Marotto]], adds `## About` with the line.
+		- Naming, aliases and deduplication follow [[Logseq/Entity/Person]].

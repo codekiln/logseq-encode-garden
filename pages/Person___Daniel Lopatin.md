@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Person]], [[Logseq/Entity/Person/Music/ian]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Production]], [[Logseq/Entity/Person/Maker/Music/Composition]]
 alias:: [[Oneohtrix Point Never]], [[OPN]]
 
 - # [Daniel Lopatin](https://pointnever.com/)
