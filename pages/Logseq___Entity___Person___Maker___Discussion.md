@@ -3,8 +3,8 @@ see-also:: [[Logseq/Entity/Hierarchy/Discussion]], [[My/Principle/Simplify/Don't
 
 - # Maker Discussion
 	- Why each segment under [[Logseq/Entity/Person/Maker]] names what the person makes, why Songwriter and Conductor nest under Composer and Performer, why the shared rules sit on Maker, and what the family replaced.
-	- ## Each segment names what the person makes
-		- `Maker/Music/Theory` reads as a maker, in music, of theory. Heinrich Glarean is known for his theory, including his naming of the Ionian and Aeolian modes, and the path calls him a maker of theory without calling him a musician. [[Logseq/Entity/Person/Maker/Music/Tech]] works the same way for a person who builds a synthesis method or a music programming language.
+	- ## Each entity name under Maker says what the person makes
+		- `Maker/Music/Theory` names a maker of theory whose field is music. Heinrich Glarean is known for his theory, including his naming of the Ionian and Aeolian modes, so his hub carries Music Theorist alone, without Musician. [[Logseq/Entity/Person/Maker/Music/Tech]] works the same way for a person who builds a synthesis method or a music programming language.
 		- Theory and Tech nest under Music because music is their field, so the music entities stay together in one namespace. They are kinds of Maker. Composer, Performer and Music Producer are kinds of Musician.
 		- A person who builds music software and also makes music carries both entities, as `logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Tech]], [[Logseq/Entity/Person/Maker/Music]]` does for a technologist whose role in music is unknown. Neither entity implies the other, so the page lists two lineages.
 		- The alternative was to make Theory and Tech kinds of Musician. That would mark Glarean as a musician, and would leave no way to mark a technologist who makes no music.
@@ -21,4 +21,4 @@ see-also:: [[Logseq/Entity/Hierarchy/Discussion]], [[My/Principle/Simplify/Don't
 		- `Person/Music` also names a field without saying what the person does in it. `Maker` says that every entity in the family is about making something, and the segments under it say what is made.
 	- ## History
 		- [[2026-09-27 Sun]] — `Logseq/Entity/Person/Musician` added, for people whose work includes making, performing or producing music. Each hub that carried it listed [[Logseq/Entity/Person]] as well.
-		- [[2026-10-10 Sat]] — Musician renamed `Logseq/Entity/Person/Music/ian`, then renamed [[Logseq/Entity/Person/Maker/Music]] and rewritten as the parent of the music maker entities, with [[Logseq/Entity/Person/Maker]] and its children added the same day. Both old names stay as aliases of the Musician page.
+		- [[2026-10-10 Sat]] — codekiln renamed Musician to `Logseq/Entity/Person/Music/ian` in the morning, and later that day to [[Logseq/Entity/Person/Maker/Music]], rewriting it as the parent of the music maker entities and adding [[Logseq/Entity/Person/Maker]] and its children. Both old names stay as aliases of the Musician page.
