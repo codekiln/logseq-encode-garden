@@ -4,4 +4,4 @@ logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition]], [[Logseq/Entit
 	- ## About
 		- Hungarian composer, ethnomusicologist and music teacher ([[18/8/2]]–[[1967]]).
 		- Collected Hungarian folk songs from [[1905]], and later with [[Person/Béla Bartók]].
-		- The Kodály method of music education follows the principles he set out.
+		- With Jenő Ádám, wrote and published books for teaching music in Hungary's schools. The Kodály method of music education grew from the principles he set out.
