@@ -7,6 +7,40 @@ date-created:: [[2026-10-09 Fri]]
 	- ![GitP.26.10.09 — episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___09-Fri___Asset___Synth___Full.mp3)
 	- ## Session Notes
 		-
+	- ## Commentary
+		- Machine transcription of the commentary from the episode MP3; [unclear] marks words that could not be made out.
+		- 00:00 — Alright, I'm starting off on Noise Engineering Bass. I'm gonna set the sequencer. I already set a slow tempo with the tap on the Novation Launchpad.
+		- 00:49 — Now I want to change the sequence length before I begin. I think it's in the utility preset. Sequencer, sequence length, I'm going to do five. I'm on sequence A.
+		- 02:01 — Alright, let's record that.
+		- 02:52 — All right, I'm going to save that. And I hit save. It says hold equals quick save. So I'm going to just hold. Okay, that's preset 398. That's sequence.
+		- 03:48 — I want it to be a little bit slower. Right now I'm using the rate sync with the time division of one quarter.
+		- 04:15 — Yeah, it is out of sync. Is it? Let me just make sure that the MIDI is receiving the clock. MicroFreak. We're going to turn on Track and Sync for the [unclear] MicroFreak. But it is not syncing up.
+		- 05:48 — See, that's one of the cool things about MicroFreak, is that you can just play a note and patch in.
+		- 06:17 — Now I'm going to turn the Spice up.
+		- 06:36 — Now if I go to utility, global, sync, I have source and clock. Well, the clock says 24 PPQ, whatever that is. For source, I have auto, MIDI, USB, int. Alright, I'm going to use USB. Now let's see if that syncs up.
+		- 07:47 — And here in the preset menu. Yeah, it's a little unclear to me what the back button is. Whoa, I just hit the panel button? Sound changed. What does the panel button do? Oh, I think the panel button adjusts it to the real-time position of the knobs. So if I reload the preset, it's now kind of relative again. Interesting.
+		- 08:47 — It's still faster than I want. I want it real chill. Now let's see if I can re-tap it. You know what? I don't actually have any MIDI routing that is going to the MicroFreak. Yeah, that is not quite working.
+		- 09:40 — Well, I can artificially turn the rate down. Or I can unsync it. Well, now I'm on external USB. Interesting. Okay, it says 119.3 BPM. But I can see that I'm on 60.35 BPM in Ableton. Let me make it exactly 60 in Ableton.
+		- 10:14 — I know I'm exactly 60, but if I try to adjust the rate, I'm actually not adjusting the tempo. If I'm not in sync… I put on sync, I can adjust the subdivision. So now let's go into utility, global, sync, source, auto.
+		- 10:44 — Okay, now I'm going to click off rate and go to tempo. Now it says the rate is 122. I can make it exactly 120. That should in theory be the same tempo; it might not be in sync.
+		- 11:14 — Now I wanted to be able to transpose. So if I shift and then click on a key, it transposes it down. If I click on a B♭ beneath C, it's going to transpose it down a whole step. And if I press the key, it just starts playing that key.
+		- 12:15 — Let's turn some portamento.
+		- 12:45 — I'm going to try recording just that little bit.
+		- 14:45 — Cool. All right, so there I have clip… I have session three. I have recorded a MicroFreak audio clip and MIDI clip in tracks one and two, and then I've armed tracks three and four, which are… I've been marbling audio, MIDI, audio, MIDI, audio, MIDI, so I have three layers of audio and MIDI tracks that I can loop. So there I wasn't recording the tracks in the second group of three, but I was playing the first group of three and kind of improvising over it. That's kind of cool.
+		- 16:31 — So now I have the pattern playing out of sync with itself.
+		- 17:17 — All right, I'm turning up the timbre, which is full. Let's turn the volume down on that chorded sample.
+		- 18:14 — Messing with the Dice.
+		- 18:46 — I like to get a little bit of pressure into here. Should it adjust? This is the noise.
+		- 19:25 — Let's see if I can use the Novation to turn the reverb down on the recorded one. Maybe turn it up on the second channel.
+		- 19:41 — All right, I'm gonna adjust the shape. So then I go in and assign shape to the first parameter and then go to pressure, assign… And I can just…
+		- 21:19 — The finger is not touching much of the capacitive sensors, but if I maximize it…
+		- 22:19 — I'm gonna go to preset 399. Quick save. I'm loving that. Quick save. I didn't know about that before.
+		- 22:39 — Let's modify the timbre with envelope.
+		- 22:49 — Alright, now I want to do something a little bit different. I'm gonna go into preset scale. [unclear: "Catatonic"]
+		- 28:11 — It's a little fuzzy.
+		- 29:11 — Somehow my recording is not making it through. Or it's like being rendered as mono in my ear. Did I adjust the pan somehow? No. This keeps happening; it might be the delay, I suppose. Let me try and check the sounds.
+		- 30:28 — I'm on the Mixolydian scale preset.
+		- 30:59 — That's all I have time for.
 	- ## Recording
 		- [[Making/Music/Log/26/10/09 Fri]]
 		- Recorded October 9, 2026, in Ableton Live. The 31:04 episode recording is [[GitP/A/Session/26/10/09-Fri/Asset/Synth/Full/mp3]].
