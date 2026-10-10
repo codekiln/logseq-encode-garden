@@ -9,6 +9,6 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- A teacher whose published textbook or teaching method sets out how music is organized counts. A teacher who has published no theory, method or textbook carries only the entities for what else they make, or stays a [[Logseq/Entity/Person]].
 		- A music historian, critic or ethnomusicologist writes about music, and carries only the entities for what else they make. Collecting folk songs in the field is research of this kind: a composer who collected folk songs carries Composer and leaves out Music Theorist.
 		- A researcher who invents a synthesis method or builds music software carries [[Logseq/Entity/Person/Maker/Music/Tech]].
-		- A composer who devises a scale or tuning for their own music, without writing it up as theory, carries Composer only: Yatsuhashi Kengyō and the hirajōshi koto tuning, Claude Debussy and whole-tone harmony. Naming or classifying scales in writing is theory, as Heinrich Glarean's naming of the Ionian and Aeolian modes is.
+		- For scales, Music Theorist is for a person who names or classifies them in writing, as Heinrich Glarean named the Ionian and Aeolian modes. A composer who builds their music on a scale or tuning carries the entities for their music: Yatsuhashi Kengyō, who is credited with the hirajōshi koto tuning and played the koto, carries Composer and Performer, and Claude Debussy, who built pieces on the whole-tone scale, carries Composer.
 	- ## Works
 		- A treatise or textbook has a book page with `created-by::` linking the theorist's hub.
