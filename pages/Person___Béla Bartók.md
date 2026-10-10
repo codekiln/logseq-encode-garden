@@ -4,4 +4,4 @@ logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition]], [[Logseq/Entit
 	- ## About
 		- Hungarian composer, pianist and ethnomusicologist ([[18/8/1]]–[[1945]]).
 		- Collected and studied Hungarian folk music with [[Person/Zoltán Kodály]]. The two found that old Hungarian folk melodies were based on pentatonic scales.
-		- Ernő Lendvai analyses his works as built in part on the acoustic scale.
+		- The music analyst Ernő Lendvai describes his works as built partly on the acoustic scale.
