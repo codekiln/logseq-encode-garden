@@ -4,7 +4,7 @@ scale-semitones-above-tonic:: 0 2 3 4 5 7 9 10
 - # Bebop Dorian Scale
 	- Also called the bebop minor scale. On C, in the form most reference lists give: C D E♭ E F G A B♭. Steps in semitones: 2 1 1 1 2 2 1 2. [[Music/Scale/Dorian]] with an added chromatic passing tone.
 	- ## History
-		- The bebop scales are a teaching abstraction of the eighth-note lines of Charlie Parker, Dizzy Gillespie and their contemporaries. David Baker's method books from the [[1980s]] popularized the family: bebop dominant, bebop major and bebop minor.
+		- The bebop scales are a teaching abstraction of the eighth-note lines of [[Person/Charlie Parker]], [[Person/Dizzy Gillespie]] and their contemporaries. [[Person/David Baker]]'s method books from the [[1980s]] popularized the family: bebop dominant, bebop major and bebop minor.
 		- The names came decades after the music. They describe a habit of chromatic passing tones that pedagogy later fixed into eight-note collections.
 	- ## Use
 		- An eight-note scale run in eighth notes from a chord tone on the beat puts chord tones on every downbeat.

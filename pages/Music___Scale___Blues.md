@@ -5,7 +5,7 @@ scale-semitones-above-tonic:: 0 3 5 6 7 10
 	- Also called the minor blues or hexatonic blues scale. On C, in its standard textbook form: C E♭ F G♭ G B♭. Steps in semitones: 3 2 1 1 3 2. [[Music/Scale/Pentatonic/Minor]] with an added ♭5.
 	- ## History
 		- The blues came out of African American vocal music in the Deep South around [[1900]]. Its "blue notes" are inflected regions around the third, fifth and seventh that a singer or guitarist bends into, and they fall between equal-tempered pitches.
-		- W. C. Handy's published blues, among them "The Memphis Blues" ([[1912]]) and "St. Louis Blues" ([[1914]]), had to fit those inflections onto a piano. Notation and keyboards turned the blue notes into fixed lowered pitches.
+		- [[Person/W. C. Handy]]'s published blues, among them "The Memphis Blues" ([[1912]]) and "St. Louis Blues" ([[1914]]), had to fit those inflections onto a piano. Notation and keyboards turned the blue notes into fixed lowered pitches.
 		- The six-note blues scale is a later pedagogical summary of that practice, popularized by mid-[twentieth-century]([[19]]) jazz method books.
 	- ## Use
 		- Blues harmony is a sequence of dominant seventh chords (I7, IV7, V7). The melody's ♭3 against the chord's major third is the idiom's central dissonance, and players often slide from ♭3 to 3.

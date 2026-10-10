@@ -13,4 +13,4 @@ scale-semitones-above-tonic:: 0 2 3 5 7 8 11
 		- Its fourth mode is [[Music/Scale/Dorian/Ukrainian]].
 	- ## Quirks
 		- The collection contains a fully diminished seventh chord (B D F A♭) and an augmented triad (E♭ G B). Those two symmetrical chords give it more harmonic ambiguity than the diatonic modes.
-		- The MicroFreak manual lists its "Harmonic Minor" setting as C D E F G A♭ B. With E natural, that collection is harmonic major, Rimsky-Korsakov's name for a major scale with a lowered sixth. The manual page is [[Microfreak/UG/15 Using Scales/01 Scale Settings]]; which collection the firmware plays is not documented there.
+		- The MicroFreak manual lists its "Harmonic Minor" setting as C D E F G A♭ B. With E natural, that collection is harmonic major, [[Person/Nikolai Rimsky-Korsakov]]'s name for a major scale with a lowered sixth. The manual page is [[Microfreak/UG/15 Using Scales/01 Scale Settings]]; which collection the firmware plays is not documented there.
