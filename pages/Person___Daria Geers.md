@@ -1,5 +1,5 @@
 tags:: [[Person]], [[Composer]], [[Performer]], [[Flutist]]
-logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Performance]], [[Logseq/Entity/Person/Maker/Art]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Performance]]
 - # Daria Geers
 	- ## Bio
 		- Flutist and video artist exploring game-art aesthetics
