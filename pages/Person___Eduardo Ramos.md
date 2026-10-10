@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Person]], [[Logseq/Entity/Person/Maker/Music]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Production]]
 alias:: [[Pandit Pam Pam]]
 
 - # [Eduardo Ramos](https://panditpampam.bandcamp.com/)

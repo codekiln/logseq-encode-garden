@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Person]], [[Logseq/Entity/Person/Maker/Music]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Tech]], [[Logseq/Entity/Person/Maker/Music/Composition]]
 
 - # John Chowning
 	- ## About
