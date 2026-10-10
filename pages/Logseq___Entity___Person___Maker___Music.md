@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
-alias:: [[Logseq/Entity/Person/Musician]]
+alias:: [[Logseq/Entity/Person/Music/ian]], [[Logseq/Entity/Person/Musician]]
 
 - # Musician
 	- In this garden, **Musician** pages model real people whose work includes making, performing, or producing music.
@@ -8,7 +8,7 @@ alias:: [[Logseq/Entity/Person/Musician]]
 		- Not this type: a band, musical work, album, recording, or fictional character.
 	- ## Applied alongside Person
 		- The hub remains `Person/<Full Name>` and satisfies [[Logseq/Entity/Person]].
-		- Frontmatter lists both types, Person first: `logseq-entity:: [[Logseq/Entity/Person]], [[Logseq/Entity/Person/Musician]]`.
+		- Frontmatter lists both types, Person first: `logseq-entity:: [[Logseq/Entity/Person]], [[Logseq/Entity/Person/Maker/Music]]`.
 	- ## Naming and identity
 		- Name the hub for the person's established full name. Use `alias::` for a stage name or other established alternate name when it clearly identifies the same person.
 		- Keep a group's page separate from the pages of its members when the group has its own identity.
