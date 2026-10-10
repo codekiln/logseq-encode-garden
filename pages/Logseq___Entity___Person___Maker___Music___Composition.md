@@ -5,7 +5,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## What counts as an instance
 		- A person whose composed works are a significant part of their public identity, in any tradition: concert music, jazz, film and game music, acousmatic, electroacoustic and computer music.
 		- A fixed-media or tape piece is a composed work, so its maker is a Composer: [[Person/Pierre Henry]], [[Person/Eliane Radigue]].
-		- A person who writes songs carries [[Logseq/Entity/Person/Maker/Music/Composition/Song]] in place of Composer.
+		- A person known mainly for songs in the popular, folk, blues or rock traditions carries [[Logseq/Entity/Person/Maker/Music/Composition/Song]] and leaves Composer out, since a Songwriter is a kind of Composer. Franz Schubert, who wrote art songs, and Tito Puente, who wrote tunes for his band, carry Composer.
 	- ## Boundary cases
 		- An improviser whose music exists only in performance carries [[Logseq/Entity/Person/Maker/Music/Performance]]. An improviser who also writes pieces carries Composer as well.
 		- An electronic producer who releases tracks carries [[Logseq/Entity/Person/Maker/Music/Production]], and adds Composer for works presented as compositions, such as concert pieces or film scores: [[Person/Daniel Lopatin]].

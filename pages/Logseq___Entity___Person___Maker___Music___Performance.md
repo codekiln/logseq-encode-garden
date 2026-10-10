@@ -9,7 +9,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Boundary cases
 		- A person who leads an ensemble from the podium carries [[Logseq/Entity/Person/Maker/Music/Performance/Conducting]] in place of Performer.
 		- A live coder performs by writing code in front of an audience, and carries Performer: [[Person/Atsushi Tadokoro]]. A live coder who also builds the language or software that live coders perform with adds [[Logseq/Entity/Person/Maker/Music/Tech]].
-		- A performer who writes the pieces they play adds [[Logseq/Entity/Person/Maker/Music/Composition]]; one who writes songs adds [[Logseq/Entity/Person/Maker/Music/Composition/Song]].
+		- A performer who writes the pieces they play adds [[Logseq/Entity/Person/Maker/Music/Composition]]. One known mainly for songs in the popular, folk, blues or rock traditions adds [[Logseq/Entity/Person/Maker/Music/Composition/Song]], as [[Person/Adrianne Lenker]] does.
 		- A sound artist whose work is performed live, such as a breath or object performance in a gallery, carries [[Logseq/Entity/Person/Maker/Art/Sound]] and Performer.
 	- ## Works
 		- A performance page links its performers with `performer::`, as [[Logseq/Entity/Music/Performance]] and [[Logseq/Entity/Music/Recording]] describe, and those links list the performances in the performer's linked references.
