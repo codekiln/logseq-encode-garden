@@ -6,7 +6,7 @@ alias:: [[Logseq/Entity/Person/Music/ian]], [[Logseq/Entity/Person/Musician]]
 	- ## What counts as an instance
 		- A person who makes music in any role, when making music is a significant part of their public identity and of what the garden records about them.
 		- A page carries this entity itself only when the person's role in music is unknown: `logseq-entity:: [[Logseq/Entity/Person/Maker/Music]]`. When the role is known, the page carries the child entity for it.
-		- A music teacher, critic, historian, broadcaster, curator or label owner who makes no music stays a [[Logseq/Entity/Person]].
+		- A music teacher, critic, historian, broadcaster, curator or label owner who makes no music leaves Musician out. One who published theory, a theory textbook or a teaching method carries [[Logseq/Entity/Person/Maker/Music/Theory]], as Guido of Arezzo does for his solmization syllables. Everyone else in this list stays a [[Logseq/Entity/Person]].
 	- ## Child entities
 		- Kinds of Musician; a page marked with one of them leaves Musician out:
 			- [[Logseq/Entity/Person/Maker/Music/Composition]] — Composer, with [[Logseq/Entity/Person/Maker/Music/Composition/Song]] beneath it

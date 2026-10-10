@@ -23,7 +23,7 @@ see-also:: [[Logseq/Entity/Person/Maker/Discussion]]
 	- ## Marking
 		- A page carries only the most specific maker entities that fit, and may carry several from any field. Every maker entity is a kind of person, so the page leaves [[Logseq/Entity/Person]] out of `logseq-entity::`. A page marked Songwriter leaves out Composer and Musician.
 		- [[Logseq/Entity/Person/Knowledge Gardener]] still asks for Person first. A maker who keeps a public garden lists the maker entities, then Knowledge Gardener, and leaves Person out, until codekiln decides whether Knowledge Gardener follows [[Logseq/Entity/Hierarchy/Discussion/Analysis/Opus/26/10/01/0611 ET Mark each page with the most specific entity in each lineage]].
-		- Maker itself marks no page: every maker carries the child entity for what they make.
+		- No page lists Maker itself in `logseq-entity::`. Each maker's hub lists the child entity for what they make.
 		- The entity for what the person is best known for making comes first.
 		- [[Person/Madonna]] writes songs and performs them:
 			- `logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition/Song]], [[Logseq/Entity/Person/Maker/Music/Performance]]`
@@ -35,5 +35,5 @@ see-also:: [[Logseq/Entity/Person/Maker/Discussion]]
 		- A page for something a maker made points back to the maker's hub with `created-by::`, as software project and book pages in the garden already do. The maker's linked references then list their works, so the hub needs no hand-kept list of them.
 		- A work with several makers lists the hub of each maker that has one in `created-by::`, comma-separated.
 	- ## Hub shape
-		- The lean hub from [[Logseq/Entity/Person]], with one line near the top saying what the person makes. [[Person/John Adams]] reads "American composer and conductor." under `## About`. A new hub puts the line under `## About`; on an older hub, a line under another heading such as `## Bio` serves.
+		- The lean hub from [[Logseq/Entity/Person]], with one line near the top saying what the person makes. [[Person/John Adams]] reads "American composer and conductor." under `## About`. A new hub puts the line under `## About`. On an older hub, a line under `## Bio`, `#Bio` or `#Bio/Short` serves. Whoever marks a hub that has no such line, such as [[Person/Stephen Marotto]], adds `## About` with the line.
 		- Naming, aliases and deduplication follow [[Logseq/Entity/Person]].

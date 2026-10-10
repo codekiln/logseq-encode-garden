@@ -7,7 +7,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Instrument builders count, from acoustic instruments to synthesizers.
 		- A Music Technologist is a maker of technology. A person who also makes music carries the kind of Musician that names their role as well, or [[Logseq/Entity/Person/Maker/Music]] when the role is unknown.
 	- ## Boundary cases
-		- A person who programs patches or builds systems for their own pieces carries the entity for their role in music only: [[Person/Huichun Yang]], [[Person/Wei Yang]]. Music Technologist is for technology other musicians use: a language, a synthesis method, or a plugin, device or instrument other people play, such as [[Person/Tobias Hunke]]'s Max for Live devices.
+		- A person who programs patches or builds systems only for their own pieces leaves Music Technologist out: [[Person/Huichun Yang]] carries Sound Artist and Performer, and [[Person/Wei Yang]] carries Sound Artist and Composer. Music Technologist is for technology other musicians use: a language, a synthesis method, or a plugin, device or instrument other people play, such as [[Person/Tobias Hunke]]'s Max for Live devices.
 		- A live coder who also builds the language or software live coders perform with carries [[Logseq/Entity/Person/Maker/Music/Performance]] and Music Technologist.
 		- A researcher who publishes about music technology without building it carries only the entities for what else they make, or stays a [[Logseq/Entity/Person]].
 	- ## Works
