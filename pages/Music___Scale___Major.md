@@ -5,9 +5,9 @@ scale-semitones-above-tonic:: 0 2 4 5 7 9 11
 	- Also called Ionian and natural major. On C: C D E F G A B. Steps in semitones: 2 2 1 2 2 2 1.
 	- ## History
 		- Medieval theory recognized eight modes on the finals D, E, F and G, defined by final, range and reciting tone. A mode on C circulated in practice, often as a Lydian with B♭, but had no name in the system.
-		- Heinrich Glarean's *Dodecachordon* ([[15/4/7]]) expanded the system to twelve modes and named the C mode Ionian, alongside Aeolian on A. Zarlino later renumbered the modes to start on C, which put Ionian first.
-		- Over the [seventeenth century]([[16]]) Ionian and Aeolian absorbed the other modes into major-minor tonality. Rameau's *Traité de l'harmonie* ([[17/2/2]]) grounded the major triad in the resonance of a vibrating body and gave major its theoretical priority.
-		- The solmization syllables ut re mi fa sol la come from Guido of Arezzo's hexachord, taken from the hymn *Ut queant laxis* in the [eleventh century]([[10]]). The seventh syllable, si (later ti), was added much later.
+		- [[Person/Heinrich Glarean]]'s *Dodecachordon* ([[15/4/7]]) expanded the system to twelve modes and named the C mode Ionian, alongside Aeolian on A. Zarlino later renumbered the modes to start on C, which put Ionian first.
+		- Over the [seventeenth century]([[16]]) Ionian and Aeolian absorbed the other modes into major-minor tonality. [[Person/Jean-Philippe Rameau]]'s *Traité de l'harmonie* ([[17/2/2]]) grounded the major triad in the resonance of a vibrating body and gave major its theoretical priority.
+		- The solmization syllables ut re mi fa sol la come from [[Person/Guido of Arezzo]]'s hexachord, taken from the hymn *Ut queant laxis* in the [eleventh century]([[10]]). The seventh syllable, si (later ti), was added much later.
 	- ## Use
 		- The reference collection for common-practice tonality, Western pedagogy and most popular music. Every other diatonic mode is described as an alteration of it.
 		- Its association with brightness or happiness is learned. The MicroFreak manual's chapter on scales says as much in [[Microfreak/UG/15 Using Scales]].

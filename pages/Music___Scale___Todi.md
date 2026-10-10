@@ -4,7 +4,7 @@ scale-semitones-above-tonic:: 0 1 3 6 7 8 11
 - # Todi Thaat
 	- In sargam: S r g M' P d N. On C: C D♭ E♭ F♯ G A♭ B. Steps in semitones: 1 2 3 1 1 3 1.
 	- ## History
-		- One of V. N. Bhatkhande's ten Hindustani thaats, named for raga Todi. See [[Music/Scale/Marwa]] for how a thaat relates to the ragas inside it.
+		- One of [[Person/Vishnu Narayan Bhatkhande]]'s ten Hindustani thaats, named for raga Todi. See [[Music/Scale/Marwa]] for how a thaat relates to the ragas inside it.
 		- The principal raga is Miyan ki Todi. Its name ties it to Miyan Tansen, the singer at Akbar's court in the [sixteenth century]([[15]]).
 		- The Carnatic equivalent parent scale is Shubhapantuvarali, melakarta 45.
 	- ## Use
