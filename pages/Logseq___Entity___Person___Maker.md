@@ -22,6 +22,7 @@ see-also:: [[Logseq/Entity/Person/Maker/Discussion]]
 		- Not an instance: a band or ensemble, a work, a recording, or a fictional [[Logseq/Entity/Person/Character]].
 	- ## Marking
 		- A page carries only the most specific maker entities that fit, and may carry several from any field. Every maker entity is a kind of person, so the page leaves [[Logseq/Entity/Person]] out of `logseq-entity::`. A page marked Songwriter leaves out Composer and Musician.
+		- [[Logseq/Entity/Person/Knowledge Gardener]] still asks for Person first. A maker who keeps a public garden lists the maker entities, then Knowledge Gardener, and leaves Person out, until codekiln decides whether Knowledge Gardener follows [[Logseq/Entity/Hierarchy/Discussion/Analysis/Opus/26/10/01/0611 ET Mark each page with the most specific entity in each lineage]].
 		- Maker itself marks no page: every maker makes music or art, and carries a child entity for it.
 		- The entity for what the person is best known for making comes first.
 		- [[Person/Madonna]] writes songs and performs them:
