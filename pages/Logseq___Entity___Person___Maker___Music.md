@@ -2,19 +2,20 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 alias:: [[Logseq/Entity/Person/Music/ian]], [[Logseq/Entity/Person/Musician]]
 
 - # Musician
-	- In this garden, **Musician** pages model real people whose work includes making, performing, or producing music.
-	- ## What counts as a Musician
-		- A real person whose musical work is a significant part of their public identity, including composers, performers, songwriters, producers, and electronic musicians.
-		- Not this type: a band, musical work, album, recording, or fictional character.
-	- ## Applied alongside Person
-		- The hub remains `Person/<Full Name>` and satisfies [[Logseq/Entity/Person]].
-		- Frontmatter lists both types, Person first: `logseq-entity:: [[Logseq/Entity/Person]], [[Logseq/Entity/Person/Maker/Music]]`.
+	- In this garden, **Musician** pages model a real person who makes music: who composes it, performs it or produces it. Marking, works and hub shape follow [[Logseq/Entity/Person/Maker]].
+	- ## What counts as an instance
+		- A person who makes music in any role, when making music is a significant part of their public identity and of what the garden records about them.
+		- A page carries this entity itself only when the person's role in music is unknown: `logseq-entity:: [[Logseq/Entity/Person/Maker/Music]]`. When the role is known, the page carries the child entity for it.
+		- A music teacher, critic, historian, broadcaster, curator or label owner who makes no music stays a [[Logseq/Entity/Person]].
+	- ## Child entities
+		- Kinds of Musician; a page marked with one of them leaves Musician out:
+			- [[Logseq/Entity/Person/Maker/Music/Composition]] — Composer, with [[Logseq/Entity/Person/Maker/Music/Composition/Song]] beneath it
+			- [[Logseq/Entity/Person/Maker/Music/Performance]] — Performer, with [[Logseq/Entity/Person/Maker/Music/Performance/Conducting]] beneath it
+			- [[Logseq/Entity/Person/Maker/Music/Production]] — Music Producer
+		- Makers whose field is music and who make something other than music:
+			- [[Logseq/Entity/Person/Maker/Music/Theory]] — Music Theorist
+			- [[Logseq/Entity/Person/Maker/Music/Tech]] — Music Technologist
+		- A Music Theorist or Music Technologist is a Musician only when the page also carries Musician or one of its kinds. A technologist who also makes music in an unknown role carries both: `logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Tech]], [[Logseq/Entity/Person/Maker/Music]]`.
 	- ## Naming and identity
-		- Name the hub for the person's established full name. Use `alias::` for a stage name or other established alternate name when it clearly identifies the same person.
-		- Keep a group's page separate from the pages of its members when the group has its own identity.
-	- ## Page shape
-		- Use the lean Person hub shape from [[Logseq/Entity/Person]]. Add a short description of the person's musical work and links to relevant works or projects when they exist in the garden.
-	- ## Finding and deduplicating
-		- Search the person's full name, stage name, and other established names before creating a hub. One page models one person, even when that person performs under several names.
-	- ## Shared conventions
-		- Shared page-level attributes follow [[Logseq/Frontmatter]].
+		- A stage name or project name the person releases music under goes in `alias::` on the hub, as [[Person/Daniel Lopatin]] carries Oneohtrix Point Never.
+		- A band or ensemble with its own identity has a page separate from its members' hubs.

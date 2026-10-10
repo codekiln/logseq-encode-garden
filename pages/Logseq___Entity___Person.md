@@ -5,7 +5,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Namespace vs entity type
 		- A **hierarchical title** under `Person/` does **not** imply every child page is a person entity. Example: [[Person/Someone/GitHub/dotfiles]] is usually a [[Logseq/Entity/Software/Project]] instance (or another type), nested for organization and SCM style—not a second “person” instance. Choose `logseq-entity::` from **content and role**, not from the `Person___` filename prefix alone.
 	- ## What counts as a person entity (instance)
-		- **Person hub pages only**: disk file `Person___<Name>.md` where `<Name>` contains **no** `___` (Logseq title is exactly `Person/<Name>` — two path segments). Examples: `Person___Drew DeVault.md`, `Person___Jan-Erik Rediger.md`.
+		- **Person hub pages only**: disk file `Person___<Name>.md` where `<Name>` contains **no** `___` (Logseq title is `Person/<Name>` — two path segments). Examples: `Person___Drew DeVault.md`, `Person___Jan-Erik Rediger.md`.
 		- **Not** person entities: deeper paths such as `Person___Foo___GitHub___bar.md`, `Person___Foo___Blog___...`, or other child pages—model those with the appropriate type, often [[Logseq/Entity/Software/Project]] for GitHub project pages.
 	- ## When to create a person page
 		- Strong signals: individual is a maintainer, author, speaker, or public figure likely to be linked repeatedly; confirmed identity; useful to attach bios, handles, and project subpages.
@@ -27,4 +27,5 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- LFM; first content block is typically `- # …` with the person’s name; lean sections (About, Online presence, Projects) and links to child pages as needed.
 	- ## Related types
 		- [[Logseq/Entity/Person/Knowledge Gardener]] — applied alongside this type when the person keeps a public digital garden.
+		- [[Logseq/Entity/Person/Maker]] — a person who makes music or art, with child entities such as [[Logseq/Entity/Person/Maker/Music/Composition]] and [[Logseq/Entity/Person/Maker/Art/Sound]]. A hub marked with a maker entity leaves this entity out of `logseq-entity::`.
 		- [[Logseq/Entity/Person/Character]] — fictional characters, not real-person hubs.
