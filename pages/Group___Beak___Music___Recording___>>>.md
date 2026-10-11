@@ -17,7 +17,7 @@ logseq-created-time-year:: [[20/1/8]]
 		- 05 - Allé Sauvage
 			- [[My Notes]]
 				- skidastic [[Music/Bariolage]] or arpeggiation gestures of texture
-				- parts of this remind me of the prelude in c sharp minor by rachmaninoff, that `8 - 7 - 0` tone degree gesture
+				- parts of this remind me of the [[Person/Sergei Rachmaninoff/Music/Work/Morceaux de fantaisie Op. 3/02 Prelude in C-sharp Minor]]; that `8 - 7 - 0` tone degree gesture
 		- 06 - Teisco
 			- [[My Notes]]
 				- There's something about this that's upside down from the `8 - 7 - 0` at the end of 05 - Allé Sauvage.
