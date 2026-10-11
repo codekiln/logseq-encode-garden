@@ -1,0 +1,4 @@
+- Today, an AI left a comment in one of my repos:
+	- > A run started by hand builds the tag it was given, not the branch it was started from, so a fix to this workflow on another branch can rebuild a release that already exists.
+- This is an example of what I will henceforth call a "grammar knot:" one must read to the end of the sentence and decipher its meaning, and expend undue cognitive energy to determine if there is a conceptual problem. When I read it, I get the sense that something here is wrong, as though a family portrait had someone with six fingers or three limbs.
+- [[My/Pref/Writing/Win the Reader's Trust/Persuade with Simple Narrative]]

@@ -1,0 +1,1 @@
+- Introducing complexity is a great way to do violence to a reader's trust that the writer cares for the reader's understanding.

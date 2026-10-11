@@ -1,0 +1,2 @@
+- when a writer loses a reader's trust, that reader starts to regard their words with suspicion, putting them in the category of an unreliable narrator.
+- I prefer writing that attempts to address the reader with simple integrity.
