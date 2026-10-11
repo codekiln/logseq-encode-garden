@@ -1,9 +1,11 @@
 logseq-entity:: [[Logseq/Entity/Music/Recording]]
 performer:: [[Person/Hans P. Kjorstad]]
+record-label:: [[Label/Phantom Limb]]
 date-created:: 2026
+logseq-created-time-year:: [[20/2/6]]
 
 - # Inn
-	- [[Person/Hans P. Kjorstad]]'s solo debut on Phantom Limb (PHNTM067), released 18 September 2026. Nine tracks, 37 min 23 sec. Fiddle, microtonal synthesis and looping.
+	- [[Person/Hans P. Kjorstad]]'s solo debut on [[Label/Phantom Limb]] (PHNTM067), released 18 September 2026. Nine tracks, 37 min 23 sec. Fiddle, microtonal synthesis and looping.
 	- ## [[My Notes]]
 		- Funky circles. Not hoops, [[Tessellation]]s of transforming cycles.
 	- ## Tracks

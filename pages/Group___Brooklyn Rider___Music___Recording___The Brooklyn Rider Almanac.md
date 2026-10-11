@@ -1,8 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Music/Recording]]
 performer:: [[Group/Brooklyn Rider]]
+record-label:: [[Label/Mercury KX]]
 date-created:: 2014
+logseq-created-time-year:: [[20/1/4]]
 - # The Brooklyn Rider Almanac
-	- [[Group/Brooklyn Rider]]'s tenth-anniversary album on Mercury Classics. The quartet commissioned short works from musicians outside classical music, each inspired by an artist or work from another field. Thirteen tracks, 1 hr 18 min.
+	- [[Group/Brooklyn Rider]]'s tenth-anniversary album on Mercury Classics, now [[Label/Mercury KX]]. The quartet commissioned short works from musicians outside classical music, each inspired by an artist or work from another field. Thirteen tracks, 1 hr 18 min.
 	- ## Tracks
 		- 01 - Necessary Henry! — [[Person/Rubin Kodheli]]
 		- 02 - Maintenance Music — [[Person/Dana Lyn]]
