@@ -1,0 +1,4 @@
+- [[2026-10-11 Sun]]
+	- yesterday I discovered some new artists from some friends.
+	- In particular [[Person/sproglo]] recommended
+		- [[Person/Hans P. Kjorstad/Music/Recording/Inn]]

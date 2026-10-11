@@ -1,0 +1,8 @@
+- # Brooklyn Rider
+	- String quartet that commissions and plays new work across classical, jazz, rock and folk. Its 2014 lineup:
+		- #Violin [[Person/Johnny Gandelsman]]
+		- #Violin [[Person/Colin Jacobsen]]
+		- #Viola [[Person/Nicholas Cords]]
+		- #Cello [[Person/Eric Jacobsen]]
+	- Albums: [[Group/Brooklyn Rider/Music/Recording/The Brooklyn Rider Almanac]] (2014)
+	- Source: [Wikipedia](https://en.wikipedia.org/wiki/Brooklyn_Rider)
