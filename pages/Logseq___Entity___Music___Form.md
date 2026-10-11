@@ -1,10 +1,11 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
+see-also:: [[Logseq/Entity/Music/Form/Discussion]]
 
 - # Musical Form
 	- In this garden, **Musical Form** pages model a named kind of composition that works across composers share, such as the prelude, the nocturne or the fugue, and the structural forms such as ternary or sonata form.
 	- ## What counts
 		- A named kind of piece or structure that more than one composer has written in. The page describes the form itself, apart from any one work.
-		- A named kind of piece and the structure of the same name get separate pages: the sonata and sonata form are two pages.
+		- A named kind of piece and the structure of the same name get sibling pages, `Music/Form/Sonata` and `Music/Form/Sonata Form`.
 		- A work's title alone does not make a form: the *Morceaux de fantaisie* are not fantasias.
 	- ## Naming and placement
 		- A form lives at `Music/Form/<Name>`, under [[Music/Form]], using its common English name in the singular, as [[Music/Form/Prelude]].
