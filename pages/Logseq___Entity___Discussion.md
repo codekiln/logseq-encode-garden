@@ -11,8 +11,8 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- One Discussion page per subject, at `<Subject>/Discussion`: [[Logseq/Entity/Definition/Discussion]] discusses [[Logseq/Entity/Definition]].
 		- The subject page links its Discussion in `see-also::`.
 	- ## Frontmatter
-		- `logseq-entity:: [[Logseq/Entity/Discussion]]`.
-		- `see-also::` for related Discussion pages and the pages the reasoning draws on.
+		- [[Logseq/Frontmatter/logseq-entity]] should include the [[Logseq/Entity/Discussion]], as per [[Logseq/Entity]] standards.
+		- [[Logseq/Frontmatter/see-also]] may be relevant.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
 		- **H1** — the subject page's H1 followed by *Discussion*: `- # Music Scale Discussion` for [[Logseq/Entity/Music/Scale]], whose H1 is *Music Scale*. When the subject has no page file, the H1 names the subject in Title Case without the `Logseq/` prefix, as `- # Entity Hierarchy Discussion` does for `Logseq/Entity/Hierarchy`. [[Logseq/Entity/Definition/Discussion]] keeps the H1 codekiln wrote for it.

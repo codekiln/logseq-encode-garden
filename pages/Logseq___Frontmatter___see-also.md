@@ -1,8 +1,8 @@
-- # `see-also::` for relevant, related, non-obvious pages not mentioned in the body
-	- The purpose of `see-also::` is to aid discovery of genuinely related pages that do not appear in the body of the page.
+# `see-also::` for relevant, related, non-obvious pages not mentioned in the body
+	- The purpose of `see-also::` is to aid discovery of distant, directly pages in the garden with a compelling discovery case, and which does not appear in the body of the page. It should be used very sparingly and rarely, including no more than 2-3 items, and it should almost never include pages that are immediate parent, child or siblings in the namespace hierarchy.
 	- ## Standards
 		- Order links strongest-tie first.
-		- Only add a link if it is truly related — not merely adjacent in namespace or topic space.
+		- Only add a link if it is truly related and surprising — not merely adjacent in namespace or topic space.
 		- If a page has a `## Related` section, it should contain only external hyperlinks. Related Logseq pages belong in `see-also::` frontmatter, not in a body section.
 	- ## Avoid obvious or tautological links
 		- Do not list parent namespace pages that only restate context already encoded in the page title.
