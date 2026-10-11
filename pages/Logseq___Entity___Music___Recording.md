@@ -8,12 +8,12 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Naming and placement
 		- Place a recording under its primary performing artist's namespace as `Person/<Artist>/Music/Recording/<Title>`.
 		- Use the published album, single, track, or video title as the H1. Add a year or release context to distinguish recordings with the same title.
-		- For an album, list known tracks as ordered `track::` links in the body. A track link targets its musical work page when that work is represented in the garden.
+		- For an album, list known tracks as bullets under a Tracks heading, in listening order. Each track begins with its two-digit, zero-padded position and a hyphen, as `01 - Dis`; the padding is two digits even on an album of nine tracks or fewer. A track links to its musical work page when that work is represented in the garden, and is plain text otherwise. Tracks are never page properties.
 	- ## Relationships
 		- Use `work::` for a single-work recording and `performance::` when the recording documents a known performance event.
-		- Album pages use ordered `track::` links. A work page may point back to an album with `appears-on::`.
+		- Album pages list tracks as numbered bullets. A work page may point back to an album with `appears-on::`.
 		- Use `cover-of::` to identify a recording as a cover of an existing work.
 	- ## Instance shape
 		- Start each recording page with `logseq-entity:: [[Logseq/Entity/Music/Recording]]` and one H1 containing its published title.
 		- Add `performer::`, `date-created::`, and links to the represented work, performance, or release when those details are known.
-		- Keep track links in the album's listening order; do not create work pages solely to complete an otherwise unknown track list.
+		- Keep tracks in the album's listening order; do not create work pages solely to complete an otherwise unknown track list.

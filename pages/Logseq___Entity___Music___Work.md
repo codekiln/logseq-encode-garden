@@ -13,7 +13,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Use the work's familiar title as the H1. Keep punctuation and diacritics from the established title.
 	- ## Relationships
 		- Use `part-of::` on a movement or section page to link to its parent work.
-		- Use `appears-on::` on a work page to link to a known album recording or release. The album page lists works in track order with `track::` links.
+		- Use `appears-on::` on a work page to link to a known album recording or release. The album page lists its tracks in order as bullets, linking each work.
 		- Use `based-on::` for an adaptation or arrangement and `cover-of::` on a cover recording to link the covered work.
 		- A work page may link to performances and recordings, but those entities do not replace the work page.
 	- ## Examples
