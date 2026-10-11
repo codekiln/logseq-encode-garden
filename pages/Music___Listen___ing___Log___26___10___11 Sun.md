@@ -4,3 +4,6 @@
 		- [[Person/Hans P. Kjorstad/Music/Recording/Inn]]
 			- I'm digging the logo of [[Label/Phantom Limb]]. I learned today that this is an "Asterism," meaning something that looks like a constellation that's not an official constellation. No idea if it actually pattern matches to the sky anywhere. Maybe that's part of the pun of "phantom limb..."
 		- [[Group/Beak/Music/Recording/>>>]]
+			- Very chill. Listened to this twice today.
+		- [[Group/Brooklyn Rider/Music/Recording/The Brooklyn Rider Almanac]]
+			-
