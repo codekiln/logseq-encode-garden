@@ -1,4 +1,6 @@
-- [[2026-10-11 Sun]]
+- [[2026-10-11 Sun]] [[My Notes]]
 	- yesterday I discovered some new artists from some friends.
-	- In particular [[Person/sproglo]] recommended
+	- In particular [[Person/sproglo]] played for me, and today I relistened to these with [[Campfire Audio/Solaris]]
 		- [[Person/Hans P. Kjorstad/Music/Recording/Inn]]
+			- I'm digging the logo of [[Label/Phantom Limb]]
+		- [[Group/Beak/Music/Recording/>>>]]
