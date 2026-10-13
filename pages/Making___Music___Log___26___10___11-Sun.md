@@ -1,3 +1,5 @@
+next:: [[Making/Music/Log/26/10/12 Mon]]
+
 - [[2026-10-11 Sun]] [[GitP/A/Session/26/10/11-Sun]]
 	- preset 401 and 402
 	- I think I started on [[Microfreak/UG/06 Dig Osc/03 Types/04 Harmo]].
