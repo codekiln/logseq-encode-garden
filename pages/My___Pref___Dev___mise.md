@@ -3,6 +3,8 @@
 		- ## [[mise/JTBD/1 - Dev Tool Installer]]
 			- For each of the dev tools that I depend upon locally, use mise to manage that version where possible.
 			- see [[My/Pref/Dev/Tool]] for details.
+			- declare CLI dependencies in a project's [[mise/Config/mise.toml]] rather than in a language package manifest such as `package.json`; the manifest keeps only the libraries the code imports.
+			- a project declares a tool that my global mise config also provides at its major version only (`node = "24"`), unless the project has a specific technical reason to pin further, which a comment on that entry names.
 		- ## [[mise/JTBD/2 - Environment Manager]]
 			- Where [[EnvVars]] need to be configured in the environment, use mise to do that declaratively.
 		- ## [[mise/JTBD/3 - Task Runner]]
