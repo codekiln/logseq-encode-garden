@@ -3,7 +3,7 @@
 	- ## Targets
 		- generate for `agentsskills`, `claudecode`, and `codexcli`
 			- `agentsskills` covers most non-Claude tools via the AgentSkills standard
-			- `claudecode` is separate — Claude Code does not consume AgentSkills
+			- `claudecode` generates Claude-specific outputs where needed; direct `AGENTS.md` loading is covered in [[My/Pref/Dev/AI/Config/Management/Use AGENTS.md Without Symlinks]]
 			- `codexcli` is included solely because `agentsskills` does not generate `AGENTS.md`
 	- ## Features
 		- enable only `rules` and `skills`
@@ -16,6 +16,11 @@
 	- ## Rule Philosophy
 		- keep `.rulesync/rules/` minimal: a single root rule that defers to skills for behavior
 		- rationale: rules add to every-request context; skills load on demand
-	- ## Vendored skills (experimental)
-		- trying a technique: copy a third party's skills into `.rulesync/skills/` and regenerate, rather than the vendor's own installer or `rulesync import`
-		- not yet a preference — one case so far, the [[readwise-cli]] skills, where the decision and its rationale live
+	- ## Instruction files and Windows
+		- Follow [[My/Pref/Dev/AI/Config/Management/Use AGENTS.md Without Symlinks]]: prefer the neutral instruction file and generate additional client files when needed, without a mandatory symlink setup.
+	- ## Declarative skill sources
+		- Prefer [[rulesync/Skill/Declarative Source]] for shared external skills: declare sources in `rulesync.jsonc`, run `mise x -- rulesync install`, then `mise x -- rulesync generate`.
+		- The dotfiles global configuration already uses this installation path rather than a separate installer per client.
+	- ## Regeneration hooks
+		- The dotfiles use Lefthook `post-checkout` and `post-merge` hooks to install declared sources and regenerate configuration. The repository's mise enter hook installs Lefthook hooks.
+		- Hooks must be installed in each clone; merely committing a hook configuration does not activate it for everyone. Keep generated files checked in where clients need them before generation can run.

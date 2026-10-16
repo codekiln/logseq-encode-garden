@@ -1,6 +1,7 @@
 # My Dev Tool Preferences -  [[AI/Coding/Config]] Management - use [[rulesync]]
 	- I use Rulesync to manage AI coding tool configurations across my projects.
 	-
+	- For the project instruction-file choice and Windows portability, see [[My/Pref/Dev/AI/Config/Management/Use AGENTS.md Without Symlinks]].
 	- This allows me to maintain consistent rules and settings across different AI tools while keeping everything in version control.
 	- ## only use [[rulesync]] to manage AI coding tool configurations
 		- ### do not directly edit any individual agentic coding tool config (`.cursor`, `.claude`, etc) instead, update rulesync
@@ -12,11 +13,11 @@
 		- ### Category Organization with Prefixes
 			- for ex. (`logseq-*`, `javascript-*`, `python-*`, etc.)
 		- ### For now, commit generated [[AI/Coding/Config]]s
-			- In the future, we may consider [[git/hooks]] to run [[rulesync/generate]] on check-out, but that's more complicated in cloud-based workflows, so for now I prefer to keep everything in version control
+			- [[git/hooks]] can keep outputs current after checkout and merge. My dotfiles already use this; see [[My/Pref/Dev/AI/Config/Management/Rulesync]]. Keeping generated files in version control also makes them available where those hooks do not run.
 	- ## Workflow
 		- 1. **Setup**: Create `rulesync.jsonc` with project targets and features
 		  2. **Rules**: Create minimal rule files in `.rulesync/rules/` with category prefixes
-		  3. **Generate**: Run `npx rulesync generate` to create tool configurations
+		  3. **Generate**: Run `mise x -- rulesync generate` to create tool configurations
 		  4. **Commit**: Commit both `.rulesync/` directory and generated files
 	- ## `rulesync.jsonc` Configuration File
 		- ```jsonc
@@ -70,15 +71,15 @@
 	- ## rulesync Commands
 		- ```bash
 		  # Initialize rulesync
-		  npx rulesync init
+		  mise x -- rulesync init
 		  
 		  # Import from existing tools
-		  npx rulesync import --targets claudecode --features rules,mcp,commands,subagents
+		  mise x -- rulesync import --targets claudecode --features rules,mcp,commands,subagents
 		  
 		  # Generate using rulesync.jsonc
-		  npx rulesync generate
+		  mise x -- rulesync generate
 		  
 		  # Generate with overrides
-		  npx rulesync generate --targets cursor,claudecode --features rules,mcp
+		  mise x -- rulesync generate --targets cursor,claudecode --features rules,mcp
 		  ```
 -
