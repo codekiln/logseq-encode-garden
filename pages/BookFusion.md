@@ -1,0 +1,11 @@
+logseq-entity:: [[Logseq/Entity/Software/Project]]
+via:: [[Readwise]]
+- # [BookFusion](https://www.bookfusion.com/)
+	- An ebook reading app and library for books you upload, including EPUBs and PDFs. Reading position, bookmarks, highlights, and notes sync across its iOS, Android, and web apps.
+	- I found BookFusion on [Readwise's integration list](https://docs.readwise.io/readwise/docs/all-integrations). [Readwise recommends it for highlighting EPUBs and PDFs](https://docs.readwise.io/readwise/docs/importing-highlights/other-sources) and importing those annotations to Readwise.
+	- ## Compared with [[Readwise/Reader]]
+		- **Reading files:** Both apps accept EPUBs and PDFs. Reader has an EPUB reading layout, a reflowed text view for PDFs, PDF image snapshots, and annotated PDF downloads. [Reader file uploads](https://docs.readwise.io/reader/docs/faqs/adding-new-content) · [Reader PDFs](https://docs.readwise.io/reader/docs/faqs/pdfs) · [Reader long-form reading](https://docs.readwise.io/reader/guides/workflows/longform-reading).
+		- **Book library:** BookFusion emphasizes shelves, book metadata, and a collection that syncs across devices. Its [Calibre plugin](https://support.bookfusion.com/hc/en-us/articles/360018852052-Installing-Using-the-BookFusion-Plugin-for-Calibre) can send a whole library or selected books to BookFusion. Reader organizes saved material with an inbox, reading queue, archive, tags, and filtered views; it also handles articles, RSS, newsletters, and other media. Reader adds text-to-speech and Ghostreader tools. [Reader library organization](https://docs.readwise.io/reader/docs/organizing-content) · [Reader features](https://docs.readwise.io/reader/docs).
+		- **Highlights in Readwise:** Reader highlights sync to Readwise automatically. BookFusion highlights and notes sync among BookFusion devices, but [exporting them to Readwise](https://docs.readwise.io/readwise/docs/importing-highlights/other-sources) requires opening the book in BookFusion's web app and exporting again after new annotations.
+	- ## Open question
+		- If [[Readwise/Reader]] already handles EPUBs and PDFs, would BookFusion's bookshelves, Calibre integration, or reading experience improve my own book workflow enough to justify keeping a separate reading app and manually exporting highlights?
