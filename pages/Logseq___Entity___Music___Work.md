@@ -7,7 +7,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- An album is a release or collection of recordings, not a musical work. Model an album under [[Logseq/Entity/Music/Recording]] and connect its tracks to their works.
 		- An arrangement with a distinct identity may have its own work page, with `based-on::` linking to the source work.
 	- ## Naming and placement
-		- Place a work under its primary creator's namespace as `Person/<Creator>/Music/Work/<Title>`.
+		- Place a work under its primary credited [[Logseq/Entity/Identity]] as `<Identity>/Music/Work/<Title>` when [[Logseq/Frontmatter/created-by-identities]] is present. Without a separate credited identity, use `Person/<Creator>/Music/Work/<Title>`. A recording artist credit alone does not establish authorship of the underlying composition.
 		- For a movement, continue below its parent work with a two-digit position and the movement's title, such as `.../01 Grave - Allegro di molto e con brio`.
 		- Use the creator who gives the work its clearest home in the garden; list every creator whose page exists in `created-by::`.
 		- Use the work's familiar title as the H1. Keep punctuation and diacritics from the established title.
@@ -29,5 +29,6 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Add `created-by::` links when the creator pages exist, and `date-created::` when a reliable composition or publication date is known.
 		- Add only relationships that are known and useful; leave unknown movement lists and release associations unstated.
 	- ## Frontmatter
+		- [[Logseq/Frontmatter/created-by-identities]]
 		- [[Logseq/Entity/Music/Work/Frontmatter/music-form]]
 		- Other conventions follow [[Logseq/Frontmatter]].

@@ -17,5 +17,5 @@ alias:: [[Logseq/Entity/Person/Music/ian]], [[Logseq/Entity/Person/Musician]]
 			- [[Logseq/Entity/Person/Maker/Music/Tech]] — Music Technologist
 		- A Music Theorist or Music Technologist is a Musician only when the page also carries Musician or one of its kinds. A technologist who also makes music in an unknown role carries both: `logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Tech]], [[Logseq/Entity/Person/Maker/Music]]`.
 	- ## Naming and identity
-		- A stage name or project name the person releases music under goes in `alias::` on the hub, as [[Person/Daniel Lopatin]] carries Oneohtrix Point Never.
-		- A band or ensemble with its own identity has a page separate from its members' hubs.
+		- A stage or project name with its own release identity has a separate [[Logseq/Entity/Identity/Music]] page linked to the person through [[Logseq/Entity/Identity/Frontmatter/identity-of]]. The published name is the identity page title, so it appears directly in autocomplete.
+		- A band with its own identity follows [[Logseq/Entity/Identity/Music/Band]] and has a page separate from its members' hubs. Existing solo aliases and group pages remain valid until deliberately separated or renamed.

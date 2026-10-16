@@ -1,4 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Music/Recording]]
+created-by-identities:: [[Dorian Concept]]
 performer:: [[Person/Oliver Thomas Johnson]]
 created-by:: [[Person/Oliver Thomas Johnson]]
 record-label:: [[Label/Play Instinct]]

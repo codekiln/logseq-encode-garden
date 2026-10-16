@@ -9,6 +9,6 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- A DJ who plays sets carries [[Logseq/Entity/Person/Maker/Music/Performance]], and adds Music Producer when they release tracks of their own.
 		- A person who builds the plugins, devices or software that producers use carries [[Logseq/Entity/Person/Maker/Music/Tech]].
 	- ## Works
-		- A release has a [[Logseq/Entity/Music/Recording]] page under the producer's hub.
+		- A release follows [[Logseq/Entity/Music/Recording]]: it lives under the credited [[Logseq/Entity/Identity/Music]] when represented separately, or under the producer's hub otherwise.
 	- ## Examples in this garden
 		- [[Person/Eduardo Ramos]], [[Person/Daniel Lopatin]]

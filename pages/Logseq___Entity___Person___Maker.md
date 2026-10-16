@@ -32,7 +32,7 @@ see-also:: [[Logseq/Entity/Person/Maker/Discussion]]
 		- A person known to make music in an unknown role carries [[Logseq/Entity/Person/Maker/Music]]. A person known to make art in an unknown form carries [[Logseq/Entity/Person/Maker/Art]].
 		- Music Theorist and Music Technologist name makers of theory and technology, who are Musicians only when the page also carries Musician or one of its kinds. [[Logseq/Entity/Person/Maker/Music]] shows the marking for a technologist who also makes music in an unknown role.
 	- ## Works
-		- A page for something a maker made points back to the maker's hub with `created-by::`, as software project and book pages in the garden already do. The maker's linked references then list their works, so the hub needs no hand-kept list of them.
+		- A page for something a maker made points back to the maker's hub with `created-by::`, as software project and book pages in the garden already do. A published stage or project identity is represented separately by [[Logseq/Entity/Identity]]; [[Logseq/Frontmatter/created-by-identities]] records that identity's credit on the creation. The maker's linked references then list their works, so the hub needs no hand-kept list of them.
 		- A work with several makers lists the hub of each maker that has one in `created-by::`, comma-separated.
 	- ## Hub shape
 		- The lean hub from [[Logseq/Entity/Person]], with one line near the top saying what the person makes. [[Person/John Adams]] reads "American composer and conductor." under `## About`. A new hub puts the line under `## About`. On an older hub, a line under `## Bio`, `#Bio` or `#Bio/Short` serves. Whoever marks a hub that has no such line, such as [[Person/Stephen Marotto]], adds `## About` with the line.

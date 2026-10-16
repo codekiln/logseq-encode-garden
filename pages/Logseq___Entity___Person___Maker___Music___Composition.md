@@ -12,6 +12,6 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- A person who makes sound installations or sound sculptures carries [[Logseq/Entity/Person/Maker/Art/Sound]], and adds Composer when they also write pieces for concert or release: [[Person/Wei Yang]].
 		- A composer who also writes music theory adds [[Logseq/Entity/Person/Maker/Music/Theory]]; one who also leads ensembles from the podium adds [[Logseq/Entity/Person/Maker/Music/Performance/Conducting]], as [[Person/John Adams]] does.
 	- ## Works
-		- A composed work has a [[Logseq/Entity/Music/Work]] page under `Person/<Composer>/Music/Work/<Title>`, with `created-by::` linking the composer's hub.
+		- A composed work follows [[Logseq/Entity/Music/Work]] for placement under its credited identity or the composer's hub, with `created-by::` linking the known composer and [[Logseq/Frontmatter/created-by-identities]] preserving a separate published identity when applicable.
 	- ## Examples in this garden
 		- [[Person/Steve Reich]], [[Person/John Adams]], [[Person/Iannis Xenakis]]

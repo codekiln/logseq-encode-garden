@@ -1,0 +1,27 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+- # Identity
+	- In this garden, **Identity** pages model a public name under which a person or collective publishes, performs or makes work.
+	- ## What counts
+		- A stage name, pen name, named artistic project or collective with a recognizable body of work. The identity has a page separate from the biographical people behind it.
+		- A person's ordinary biographical name alone does not require a second page. A spelling variant or abbreviation that names the same identity can remain an alias.
+		- A shared credit does not by itself establish a new collective identity. A collaboration can credit several existing identities.
+	- ## Naming and marking
+		- Use the published name as a short page title, such as [[Bibio]]. Entity classification belongs in frontmatter, rather than in an `Identity/` prefix on every instance.
+		- Add a disambiguating namespace only when the published name collides with another page.
+		- Mark an instance with its most specific identity entity; a Band instance leaves Identity and Music Identity out of `logseq-entity::`.
+		- A person can have several identities, and a collective identity can have several people behind it. Identity pages carry identity entities; biographical pages carry person or maker entities.
+	- ## Relationships
+		- [[Logseq/Entity/Identity/Frontmatter/identity-of]] links an identity to known people behind it. Unknown people are left unstated.
+		- [[Logseq/Frontmatter/created-by-identities]] links a work or release to its credited identities. A link to an identity does not imply that every associated person contributed to every work.
+		- A work's `created-by::` links the known people who made that particular work. Identity membership alone is insufficient evidence for a personal credit.
+	- ## Finding and deduplicating
+		- Search published names, existing titles, aliases, official URLs and person-page mentions before creating an identity.
+		- When the identity exists only as an alias on a person page, retain the biographical page and separate the identity from that alias before creating its page. Other aliases and the person's biographical information remain with the person.
+		- Older pages under `Group/` can already represent collective identities. Their existing titles remain valid until deliberately renamed.
+	- ## Instance shape
+		- One linked H1 with the published name and official URL when known, a short description, and verified links to the people behind the identity.
+		- The shared attribution property is linked above; domain-specific placement of works and recordings is defined by the corresponding identity child and work entity.
+	- ## Child entities
+		- [[Logseq/Entity/Identity/Music]]
+	- ## Frontmatter
+		- [[Logseq/Entity/Identity/Frontmatter/identity-of]]

@@ -1,4 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Music/Recording]]
+created-by-identities:: [[Bibio]]
 performer:: [[Person/Stephen Wilkinson]]
 created-by:: [[Person/Stephen Wilkinson]]
 record-label:: [[Label/Warp Records]]
