@@ -3,7 +3,8 @@ see-also:: [[Codex/Plugin]], [[Claude/Code/Plugin/Skills-Directory Plugin]]
 - # How To Develop and Share a Team Plugin for ChatGPT and Claude
 	- ## Overview
 		- Turn a recurring team workflow into a plugin, test it in ChatGPT, and share it with teammates. If the team also uses Claude, keep the reusable skills in one repository and package them for both hosts.
-		- Product behavior and documentation checked October 15, 2026.
+		- For local development, edit one source tree and load its skills directly. Marketplace and account installations are separate release tests; they can run copies of the package.
+		- Product behavior and documentation checked October 16, 2026.
 	- ## Prerequisites
 		- A representative input, an example of the desired output, and the reference material the workflow needs.
 		- Plugin Creator and permission to use plugins in the intended ChatGPT workspace. Sharing and publishing to the workspace directory have separate permissions. [ChatGPT plugin authoring](https://learn.chatgpt.com/docs/build-plugins).
@@ -17,9 +18,10 @@ see-also:: [[Codex/Plugin]], [[Claude/Code/Plugin/Skills-Directory Plugin]]
 			- Start a new chat, select the plugin with `@`, and run a familiar example plus an example with missing information. Check both Chat and Work if teammates use both.
 			- Open the plugin's sharing settings and choose the intended people or groups. Include a sample prompt and the maintainer's name. Recipients install the plugin unless an administrator has installed it for them. Each person also needs access to required apps. [Testing and team sharing](https://learn.chatgpt.com/docs/build-plugins#share-the-plugin-with-your-team).
 		- ### 3. Keep a source package when developing in a repo
-			- Ask Plugin Creator for the source files as well as the account plugin. For a portable OpenAI package, use this layout:
+			- Ask Plugin Creator for the source files as well as the account plugin. Make `plugins/team-review/` the source directory in the repository and edit that directory throughout development. An uploaded account plugin does not stay linked to the checkout.
+			- For a portable OpenAI package, use this layout:
 				- ~~~text
-				  team-review/
+				  plugins/team-review/
 				    plugin.json
 				    skills/team-design-review/SKILL.md
 				    skills/team-design-review/references/checklist.md
@@ -45,10 +47,33 @@ see-also:: [[Codex/Plugin]], [[Claude/Code/Plugin/Skills-Directory Plugin]]
 				  }
 				  ~~~
 			- Keep the `skills/` tree shared and synchronize the identity and version in both manifests. Use provider-neutral instructions for the shared workflow. Convert reusable Claude commands and agent procedures into skills; keep host-specific features separate. [OpenAI's Claude plugin conversion guide](https://developers.openai.com/plugins/guides/submit-claude-plugin).
-			- Test the Claude package with `claude --plugin-dir ./team-review`. For automatic Claude project discovery, place the package under `.claude/skills/team-review/` and trust the project. See [[Claude/Code/Plugin/Skills-Directory Plugin]].
+			- From the repo root, load the source directory for a Claude Code development session:
+				- ~~~bash
+				  claude --plugin-dir ./plugins/team-review
+				  ~~~
+			- This loads the directory as `team-review@inline`. Run `/reload-plugins` after edits, then invoke `/team-review:team-design-review`. Pass the directory itself to use the working files; a ZIP is a packaged build. [Claude development without a marketplace](https://code.claude.com/docs/en/plugins/create#develop-without-a-marketplace).
+			- If automatic discovery is preferable, keep the source package itself at `.claude/skills/team-review/`, including `.claude-plugin/plugin.json` and its `skills/` directory. Launch Claude Code from the repo root and accept project trust. It loads as `team-review@skills-dir`; `/reload-plugins` reloads changes. Update the Codex symlink and marketplace paths below to this source location. Keep a single editable package, rather than copying it between both locations. See [[Claude/Code/Plugin/Skills-Directory Plugin]] and the [Claude loading reference](https://code.claude.com/docs/en/plugins/loading#plugins-shared-through-a-repository).
 			- Test tools independently in both products. MCP provides a shared protocol, while connection settings, authentication, hooks, and app interfaces have host-specific behavior. A shared skill does not make those features interchangeable.
-		- ### 5. Expose the package through the repo
-			- Store the package at `plugins/team-review/`. Add `.agents/plugins/marketplace.json` at the repo root:
+		- ### 5. Load the live skill in local Codex
+			- Expose each shared skill directory under the repo's `.agents/skills/`. Codex follows symlinked skill folders, so edits to the package's `SKILL.md`, references, and scripts remain edits to the files used by the discovered skill. This loads a plain skill; it does not activate the package's MCP configuration or hooks. [Codex local skill discovery](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills).
+			- From the repo root, create this link if the destination does not already exist:
+				- ~~~bash
+				  mkdir -p .agents/skills
+				  ln -s ../../plugins/team-review/skills/team-design-review .agents/skills/team-design-review
+				  realpath .agents/skills/team-design-review/SKILL.md
+				  ~~~
+			- The resolved path should end in `plugins/team-review/skills/team-design-review/SKILL.md` inside the current checkout. Relative symlink targets are resolved from `.agents/skills/`. If the package lives under `.claude/skills/team-review/`, use `../../.claude/skills/team-review/skills/team-design-review` as the target instead. Inspect any existing destination before changing it.
+			- Disable the installed `team-review@team-plugins` plugin while testing the direct skill. In a trusted repo's `.codex/config.toml`, use:
+				- ~~~toml
+				  [plugins."team-review@team-plugins"]
+				  enabled = false
+				  ~~~
+			- Also deselect account or workspace copies for the test chat where permitted. Repo configuration controls local-marketplace entries; it does not override workspace-managed installation state. Start a fresh local Codex chat in the checkout and explicitly select `team-design-review` from the skill picker. Restart Codex if discovery has not caught up.
+			- Verify both the selected source path and behavior: temporarily add an instruction to the source skill to include `LOCAL-DEVELOPMENT-CHECK` in its review, run a representative review, and inspect which `SKILL.md` was loaded. The resolved file should be in the checkout, outside `~/.codex/plugins/cache/`. Remove the test instruction after verification. Reading a file on demand alone does not demonstrate that the host selected it as the skill.
+			- In Claude, inspect the loaded plugin's origin in `/plugin` or `claude --plugin-dir ./plugins/team-review plugin list`, reload, and run the same temporary behavior check. Expect `@inline` for the directory flag or `@skills-dir` for automatic discovery. [Claude component verification](https://code.claude.com/docs/en/plugins/create#verify-your-plugin).
+			- For MCP tools and hooks, verify their process and script paths separately. Rebuild compiled helpers and restart the relevant process after edits. A live `SKILL.md` does not establish that a running server has reloaded its code. Direct Codex skill discovery and these filesystem checks apply to supported local sessions; a web or cloud account installation does not read the checkout automatically.
+		- ### 6. Expose the package through the repo
+			- A **local-marketplace plugin** is a plugin listed in a catalog read by a local client. The catalog can be one JSON file containing one entry. It makes the package discoverable; installation supplies the runtime copy. Add `.agents/plugins/marketplace.json` at the repo root:
 				- ~~~json
 				  {
 				    "name": "team-plugins",
@@ -74,7 +99,8 @@ see-also:: [[Codex/Plugin]], [[Claude/Code/Plugin/Skills-Directory Plugin]]
 				  [plugins."team-review@team-plugins"]
 				  enabled = true
 				  ~~~
-			- Supported local Codex clients can install or refresh configured plugins during marketplace refresh. Restart the desktop app and verify the plugin in a new chat. Repository discovery, cached installation, and enabled state are separate. [Repo plugin settings](https://developers.openai.com/plugins/build/plugins#enable-or-disable-a-plugin-for-a-repo).
+			- Use `enabled = true` for the packaged-plugin test after disabling direct skill discovery for that test. Supported local Codex clients can install or refresh configured plugins during marketplace refresh. Restart the desktop app and verify the plugin in a new chat. [Repo plugin settings](https://developers.openai.com/plugins/build/plugins#enable-or-disable-a-plugin-for-a-repo).
+			- Local marketplace installation loads `~/.codex/plugins/cache/team-plugins/team-review/local/`. A local `source.path` and `enabled = true` do not turn that copy into a live link. Edit the source package, refresh or reinstall it, and test the installed result separately. See [[Codex/Plugin/Q/Does registering a local plugin copy it into a home-directory cache?]] and [How local marketplaces work](https://developers.openai.com/plugins/build/plugins#how-local-marketplaces-work).
 			- For Claude teammates, add a catalog at the repository root's `.claude-plugin/marketplace.json` pointing at the same package:
 				- ~~~json
 				  {
@@ -86,10 +112,10 @@ see-also:: [[Codex/Plugin]], [[Claude/Code/Plugin/Skills-Directory Plugin]]
 				  }
 				  ~~~
 			- Teammates add the repository through `/plugin marketplace add <owner>/<repo>` in Claude Code, then run `/plugin install team-review@team-plugins`. Replace `<owner>/<repo>` with the team's actual GitHub repository. [Claude marketplace setup](https://code.claude.com/docs/en/plugin-marketplaces).
-		- ### 6. Distribute updates to the workspace
+		- ### 7. Distribute updates to the workspace
 			- For GitHub-managed distribution, have a workspace administrator open **Admin → Plugins → Add → Import marketplace**, enter the repository URL, and select a branch or revision. Review the imported plugins and configure installation policy for the intended roles. Use **Sync now** to test an update; new marketplaces also sync daily. [Workspace plugin management](https://learn.chatgpt.com/docs/enterprise/plugin-management).
 			- This workspace import supports Codex catalogs, Claude catalogs, and standalone Claude plugins. Imported packages declaring MCP servers are currently desktop-only, including packages whose server uses HTTPS. For web use, verify the supported app-connection route before sharing.
 	- ## Troubleshooting
 		- **Source edit does not appear:** edit the marketplace source, bump the package version, reinstall or refresh through the supported client flow, and start a new chat. The runtime uses a cached installation. See [[Codex/Plugin/Q/Does registering a local plugin copy it into a home-directory cache?]].
-		- **Fast skill iteration:** expose the shared skill directory through `.agents/skills/` while editing. Codex supports symlinked skill folders. Test the packaged plugin separately before release, and avoid loading both copies during the same verification session. [Local skill discovery](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills).
+		- **Duplicate skill entries:** disable the installed copy while testing the source skill. For a packaged release test, temporarily move only the discovery symlink outside `.agents/skills/`, leaving its source directory in place, then start a fresh chat. Restore the link to resume local development.
 		- **Teammate sees the listing but cannot use it:** check installation, workspace role policy, and the required app connection separately.
