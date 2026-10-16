@@ -1,0 +1,11 @@
+- # GitP.26.10.12 Export Log
+	- ## First pass · [[2026-10-15 Thu]]
+		- Local project: `~/Documents/ableton/GitP/26.10.12 Project/`; local MP3: `GitP26.10.12.mp3` in that folder.
+		- Opened `26.10.12 Project/26.10.12.als` in Ableton Live. Copied the paired Session clips `mf ALL 2` and `mf MIDI ALL 2` into Arrangement View, aligned at bar 1. Both span 352 beats at 80.74 BPM.
+		- Live's Audio preferences showed `No Device` for the output, and its audio engine was off. A render through Live could not be verified with sound. The available computer-use controls could open Audio preferences but could not operate Live's device selector.
+		- Encoded `Samples/Recorded/mf ALL 0002 [2026-10-12 051039].aif` directly as a stereo, 44.1 kHz, 320 kbps MP3. Applied 13 dB of gain; the resulting peak measured about −1.9 dB. Uploaded and verified [[GitP/A/Session/26/10/12-Mon/Asset/Synth/Full/mp3]] in B2.
+		- This MP3 contains the recorded audio without Live's track or master processing. It retains about 32 seconds of leading quiet at the −45 dB detection threshold. No repetition or passage selection was done.
+	- ## Material to review
+		- The project folder also has `mf ALL 0003 [2026-10-12 052645].aif` (about 70 seconds) and `mf ALL 0004 [2026-10-12 064645].aif` (about 19 seconds). They do not appear as clips in the current `mf ALL` Session track; decide whether they belong in this episode.
+		- Choose an audio output device in Live and verify a render through the effects chain. Review the recording for repeated passages, then trim the leading quiet and any unwanted long gaps while keeping its MIDI aligned.
+		- Treat the uploaded MP3 as a first-pass export until an edited render is reviewed.

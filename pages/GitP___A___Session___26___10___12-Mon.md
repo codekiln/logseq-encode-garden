@@ -8,3 +8,5 @@ date-created:: [[2026-10-12 Mon]]
 		- [[Making/Music/Log/26/10/12 Mon]] describes time with [[Microfreak/Preset/219 Dusty Bass]], [[Microfreak/Preset/286 Driftsynchros]], and [[Microfreak/Preset/247 Laity]], plus routing the [[Microfreak]] through [[Ableton/Live]] to the [[Launchpad/UG/09 Sequencer]]. The log does not assign presets to passages in this recording.
 	- ## Recording
 		- [[GitP/A/Session/26/10/12-Mon/Asset/Synth/Full/mp3]] · 4:22.
+	- ## Production
+		- [[GitP/A/Session/26/10/12-Mon/Export Log]]
