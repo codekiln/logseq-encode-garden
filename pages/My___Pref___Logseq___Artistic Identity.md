@@ -1,9 +1,0 @@
-- # Artistic Identity
-	- The garden should represent both the real people who make art and the artistic identities under which they publish it.
-	- Stage names, pen names, solo projects, bands and named collaborations should be discoverable by their published names through page autocomplete.
-	- Attribution should preserve the artistic identity credited on a work or recording, alongside links to the real people behind that identity.
-	- A person may publish under several artistic identities. An artistic identity may involve one person or several collaborators.
-	- Bibio and Dorian Concept are examples: the published artist names matter alongside the biographical pages for [[Person/Stephen Wilkinson]] and [[Person/Oliver Thomas Johnson]].
-	- ## Existing convention
-		- [[Logseq/Entity/Person/Maker/Music]] currently represents a solo stage or project name as an alias on a person hub, as [[Person/Daniel Lopatin]] does for Oneohtrix Point Never. Bands and ensembles have separate pages.
-		- Aliases resolve alternate names to one page; they do not separately represent the artistic identity credited on a release.
