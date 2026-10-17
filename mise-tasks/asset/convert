@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #MISE description="Rebuild an MP3 when its WAV changes"
-#MISE tools={uv="0.12.22", python="3.13.16", ffmpeg="9.0"}
+#MISE tools={uv="0.12.22", python="3.13.16", "conda:ffmpeg"="9.0.2"}
 #USAGE arg "<wav_page>"
 #USAGE arg "<mp3_page>"
 set -euo pipefail
