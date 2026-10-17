@@ -1,0 +1,2 @@
+- # Lobsters Users
+	- Sub-pages of this namespace represent Lobsters usernames that have not yet been traced to a [[Person]] page.
