@@ -1,4 +1,5 @@
-logseq-entity:: [[Logseq/Entity/Podcast/Episode]]
+logseq-entity:: [[Logseq/Entity/Podcast/Episode/GitP/A]], [[Logseq/Entity/Podcast/Episode]]
+public:: false
 created-by:: [[Person/codekiln]]
 date-created:: [[2026-10-18 Sun]]
 - # Auster without a computer

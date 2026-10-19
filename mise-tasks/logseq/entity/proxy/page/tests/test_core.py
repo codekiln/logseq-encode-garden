@@ -107,6 +107,41 @@ class PageSyncTests(unittest.TestCase):
         props, _ = parse_properties((self.destination / 'pages/Session___Asset.md').read_text())
         self.assertEqual(props['logseq-proxy-url'], graph_url(self.source, 'Session/Asset'))
 
+    def gitpa_definitions(self):
+        (self.source / 'pages/Logseq___Entity___Proxy___Page.md').write_text(
+            'entity-proxy-destination-properties:: public\n- # Proxy Page\n')
+        (self.source / 'pages/Logseq___Entity___Podcast___Episode.md').write_text(
+            'entity-proxy-destination-properties:: podcast-guid, podcast-published-at\n- # Episode\n')
+        (self.source / 'pages/Logseq___Entity___Podcast___Episode___GitP___A.md').write_text(
+            'entity-proxy-source-properties:: public\n- # GitP Alpha Episode\n')
+
+    def test_gitpa_source_controls_publication_and_preserves_release_identity(self):
+        self.gitpa_definitions()
+        membership = ('logseq-entity:: [[Logseq/Entity/Podcast/Episode/GitP/A]], '
+                      '[[Logseq/Entity/Podcast/Episode]]\n')
+        self.source_page.write_text('public:: false\ntags:: [[Source]]\n' + membership + '- body\n')
+        apply_plan(self.plan())
+        target = resolve_page(self.destination, self.page)
+        text = target.read_text().replace('public:: false', 'public:: true').replace('[[Source]]', '[[Local]]')
+        target.write_text('podcast-guid:: stable\npodcast-published-at:: 2026-10-01T00:00:00Z\n' + text)
+        for value in ('false', 'true', None):
+            public = f'public:: {value}\n' if value is not None else ''
+            self.source_page.write_text(public + 'tags:: [[Changed]]\n' + membership + '- body\n')
+            apply_plan(self.plan())
+            props, _ = parse_properties(target.read_text())
+            self.assertEqual(props.get('public'), value)
+            self.assertEqual(props['tags'], '[[Local]]')
+            self.assertEqual(props['podcast-guid'], 'stable')
+            self.assertEqual(props['podcast-published-at'], '2026-10-01T00:00:00Z')
+
+    def test_source_ownership_cannot_override_tags_or_proxy_metadata(self):
+        for key in ('tags', 'logseq-proxy-url', 'logseq-proxy-codeforge-url', 'logseq-proxy-last-sync-date'):
+            with self.subTest(key=key):
+                (self.source / 'pages/Logseq___Entity___Book.md').write_text(
+                    f'entity-proxy-source-properties:: {key}\n- # Book\n')
+                with self.assertRaisesRegex(SyncError, 'protected properties'):
+                    self.plan()
+
     def test_page_collision_and_wrong_proxy_source_have_no_writes(self):
         target = resolve_page(self.destination, self.page)
         target.write_text('tags:: [[Local]]\n- original\n')

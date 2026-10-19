@@ -108,7 +108,7 @@ def source_manifest(plan):
 
 def declarations(props):
     return {key: value for key, value in props.items()
-            if key in ('logseq-entity', 'entity-tasks', 'source-link') or key.startswith('task-')}
+            if key in ('logseq-entity', 'entity-tasks', 'source-link', core.DESTINATION_PROPERTIES, core.SOURCE_PROPERTIES) or key.startswith('task-')}
 
 
 def source_properties(plan, page, file):
@@ -117,7 +117,7 @@ def source_properties(plan, page, file):
         latest = source_manifest(plan).get('declarations', {}).get(page)
         if latest is not None:
             for key in list(props):
-                if key in ('logseq-entity', 'entity-tasks', 'source-link') or key.startswith('task-'):
+                if key in ('logseq-entity', 'entity-tasks', 'source-link', core.DESTINATION_PROPERTIES, core.SOURCE_PROPERTIES) or key.startswith('task-'):
                     del props[key]
             props.update(latest)
     return props
