@@ -19,6 +19,7 @@ PROXY_KEYS = ('logseq-proxy-url', 'logseq-proxy-codeforge-url', 'logseq-proxy-la
 PROXY_ENTITY = 'Logseq/Entity/Proxy/Page'
 # An entity definition lists the properties a proxy's destination garden owns.
 DESTINATION_PROPERTIES = 'entity-proxy-destination-properties'
+SOURCE_PROPERTIES = 'entity-proxy-source-properties'
 EMBED = re.compile(r'\{\{embed\s+\[\[([^\]]+)\]\]\s*\}\}')
 TRANSACTION = '.logseq-proxy-transaction'
 PROPERTY = re.compile(r'^([^\s:]+):: (.*?)(?:\r?\n)?$')
@@ -120,8 +121,9 @@ def with_proxy_membership(lines: list[str]) -> list[str]:
 
 
 def destination_owned(plan: Plan, source_props: dict[str, str]) -> set[str]:
-    """Properties a re-sync keeps from the destination: tags plus each definition's declared keys."""
+    """Keep destination declarations unless an entity explicitly assigns the key to the source."""
     keys = {'tags'}
+    source_keys = set()
     entities = set(re.findall(r'\[\[([^\]]+)\]\]', source_props.get('logseq-entity', ''))) | {PROXY_ENTITY}
     for entity in sorted(entities):
         definition = resolve_page(plan.source_root, entity)
@@ -131,7 +133,11 @@ def destination_owned(plan: Plan, source_props: dict[str, str]) -> set[str]:
         plan.source_expected[definition] = data
         props, _ = parse_properties(data.decode('utf-8'))
         keys.update(key.strip() for key in props.get(DESTINATION_PROPERTIES, '').split(',') if key.strip())
-    return keys
+        source_keys.update(key.strip() for key in props.get(SOURCE_PROPERTIES, '').split(',') if key.strip())
+    protected = source_keys & {'tags', *PROXY_KEYS}
+    if protected:
+        raise SyncError('Source ownership cannot override protected properties: ' + ', '.join(sorted(protected)))
+    return keys - source_keys
 
 
 def merge_properties(destination: list[str], source: list[str], owned: set[str]) -> tuple[list[str], list[str]]:
@@ -351,6 +357,7 @@ def add_page(plan: Plan, page: str) -> None:
     if plan.codeforge_url and page == plan.page:
         validate_codeforge(plan.codeforge_url, plan.source_root, source)
     first = not target.exists()
+    owned = destination_owned(plan, source_props)
     if first:
         target = safe_path(plan.destination_root, 'pages/' + source.name)
     if not first:
@@ -363,7 +370,7 @@ def add_page(plan: Plan, page: str) -> None:
         if props.get('logseq-proxy-codeforge-url'):
             validate_codeforge(props['logseq-proxy-codeforge-url'], plan.source_root, source)
         old_lines, old_body = property_lines(old_text)
-        lines, changes = merge_properties(old_lines, with_proxy_membership(source_lines), destination_owned(plan, source_props))
+        lines, changes = merge_properties(old_lines, with_proxy_membership(source_lines), owned)
     else:
         lines, changes = with_proxy_membership(source_lines), []
     retained = [line for line in lines if property_key(line) not in PROXY_KEYS]

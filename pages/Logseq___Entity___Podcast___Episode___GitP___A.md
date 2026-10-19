@@ -1,4 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
+entity-proxy-source-properties:: public
 - # Ghost in the Patch Alpha Episode
 	- In this garden, **Ghost in the Patch Alpha Episode** pages model recordings prepared as episodes of [[GitP/A]].
 	- The shared episode conventions come from [[Logseq/Entity/Podcast/Episode]]; this definition adds the session page and media preparation process.
@@ -15,6 +16,10 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Commentary or transcript excerpts, when present, sit beneath their chapter in a child block with `collapsed:: true`. Timestamped excerpts preserve the speaker's meaning; summaries remain separate from quotations.
 		- Relevant existing guide sections and preset pages link beneath the chapter they explain. Confirm exact page names and aliases before adding links. Technical claims come from the recording, captured data, saved presets, or the linked documentation; unknown settings stay out.
 		- MIDI analysis, when available, explains changes within chapters. Saved preset settings and recorded controller events describe different evidence and remain distinguishable.
+	- ## Publication selection
+		- [[Logseq/Entity/Podcast/Episode/GitP/A/Frontmatter/public]] on the source episode in logseq-encode-garden controls whether the episode is selected for the downstream RSS feed and website.
+		- Set `public:: false` for a draft or withdrawal and `public:: true` for publication. Missing values leave the episode unpublished after sync. Re-sync copies the source value even when the destination proxy previously had another value.
+		- The changed selection reaches the feed and website after sync and the next publishing build and deployment.
 	- ## Prepare and preserve media
 		- Each source or derived file has its own page beneath the session at `GitP/A/Session/YY/MM/DD-Day/Asset/<Purpose>/<format>`, following [[Logseq/Entity/Asset]]. The purpose names the recording or version; the final segment is the lowercase file extension.
 		- The page-derived filename replaces namespace separators with `___` and the final format segment with the extension. A local working copy lives at `assets/.remote/<filename>`.
@@ -26,14 +31,14 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- A multitrack session needs a separate mix and export before single-WAV conversion. Mixing, commentary balance, and session-specific edits require their own preparation; the conversion task supplies no general multitrack mixing workflow.
 		- Preserve the original recording. Commit the adjacent `.dvc` metadata and any conversion `dvc.yaml` and `dvc.lock`; working media stays ignored under `assets/.remote/`.
 		- Public files use [[Logseq/Entity/Asset/B2]]. Create the asset page before uploading, then run [[GitP/mise/Task/media/upload]] with `mise run gitpa:media:upload -- <prepared-file> <asset-page>`.
-		- Add the returned verified URL to the asset page and the episode's media or download link. The task verifies the named B2 object's bytes and media metadata. DVC backup and named public upload are separate operations.
+		- Add the returned verified URL to the asset page and the episode's media or download link. The upload task checks that the public download matches the prepared file and has the expected media type. DVC backup and named public upload are separate operations.
 		- Check public playback and seeking, artwork, and each supplied download using [[GitP/How To/Draft an Episode from Session Assets]].
 	- ## Optional session material
 		- Existing preset captures can supply download links and documented settings. New device capture and renaming follow the instrument's existing workflow, including backup and protection of unsaved sounds.
 		- Available MIDI can be exported for download after checking tempo and alignment against the episode recording. Automatic preset capture, preset renaming, and MIDI enrichment remain unfinished automation; the existing upload task accepts prepared files.
 	- ## Publication
-		- [[GitP/How To/Prepare Podcast Metadata]] describes publication preparation in [[Person/codekiln/GitHub/gitpa]]. Episode text stays in this source garden; Gitpa holds an exact-name proxy.
+		- [[GitP/How To/Prepare Podcast Metadata]] describes publication preparation in [[Person/codekiln/GitHub/gitpa]]. Episode text and publication selection stay in this source garden; the publishing garden in that repository holds an exact-name proxy.
 		- Preview [[Logseq/Entity/Proxy/Page/mise/Task/sync]] with explicit source and destination garden paths and the episode's logical page name; `--apply` writes the reviewed import. Sync the audio and other relevant asset pages separately, since direct media URLs do not make them embedded-page dependencies.
-		- Gitpa owns `public::`, `podcast-guid::`, and `podcast-published-at::`. The generic Episode definition declares ownership of feed identity and publication time so re-sync preserves them.
+		- The source episode owns `public::`. Its destination proxy in the codekiln/gitpa repository stores `podcast-guid::` and `podcast-published-at::`; the generic Episode definition preserves those release values on re-sync.
 		- Run `mise run rss:build`, `mise run rss:check`, and `mise run rss:test` from Gitpa. Check the preview's recording playback, seeking, and downloads.
 		- The publication PR gives the episode title, description, and direct MP3 link. The human listens once and decides whether to publish; merging the Gitpa PR lets CI publish the episode.
