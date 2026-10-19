@@ -1,6 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Podcast/Episode]]
 created-by:: [[Person/codekiln]]
 date-created:: [[2026-10-18 Sun]]
+
 - # Auster without a computer
 	- A Ghost in the Patch session exploring [[Microfreak/Preset/174 Auster]] with the Launchpad Pro sequencer: touch articulation, two-way MIDI, clock sync, scale modes and layered patterns.
 	- ![Episode recording — synth-forward mix](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3)
