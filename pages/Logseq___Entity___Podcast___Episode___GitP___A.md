@@ -1,0 +1,39 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+- # Ghost in the Patch Alpha Episode
+	- In this garden, **Ghost in the Patch Alpha Episode** pages model recordings prepared as episodes of [[GitP/A]].
+	- The shared episode conventions come from [[Logseq/Entity/Podcast/Episode]]; this definition adds the session page and media preparation process.
+	- ## Identity and sources
+		- One episode lives at `GitP/A/Session/YY/MM/DD-Day`, using the recording date. Search that session path, the source recording filename, the music-making log, and distinctive title words before creating a page; an existing logical reference also counts as a page.
+		- Start with the available recording and session notes. Follow existing source pointers to the project, music-making log, transcript, MIDI, and preset captures when present. A recording may come from a standalone instrument session or a DAW.
+		- Missing optional material leaves the corresponding section absent. A project file, commentary, MIDI export, preset capture, or artwork is not a prerequisite for an episode.
+	- ## Episode page
+		- Instances carry `logseq-entity::` links to this definition and [[Logseq/Entity/Podcast/Episode]], keeping the generic Episode membership explicit. Creator and recording-date properties follow the generic definition.
+		- One H1 gives the episode title. Its first child is a short listener-facing description, followed by a direct MP3 media embed. Artwork appears when available; downloadable presets and MIDI use labeled direct file links.
+		- The episode embeds the verified public media URLs directly. Separate asset pages hold file metadata; asset page embeds do not replace the playable episode recording.
+		- A `## Chapters` section organizes the recording in time order. Each chapter is an H3 with a plain elapsed timestamp and descriptive title, such as `### 00:00 Opening performance` or `### 01:05:00 Closing passage`.
+		- Each chapter has a brief account of what the listener hears. Times are measured against the prepared episode recording, including any edits or offsets.
+		- Commentary or transcript excerpts, when present, sit beneath their chapter in a child block with `collapsed:: true`. Timestamped excerpts preserve the speaker's meaning; summaries remain separate from quotations.
+		- Relevant existing guide sections and preset pages link beneath the chapter they explain. Confirm exact page names and aliases before adding links. Technical claims come from the recording, captured data, saved presets, or the linked documentation; unknown settings stay out.
+		- MIDI analysis, when available, explains changes within chapters. Saved preset settings and recorded controller events describe different evidence and remain distinguishable.
+	- ## Prepare and preserve media
+		- Each source or derived file has its own page beneath the session at `GitP/A/Session/YY/MM/DD-Day/Asset/<Purpose>/<format>`, following [[Logseq/Entity/Asset]]. The purpose names the recording or version; the final segment is the lowercase file extension.
+		- The page-derived filename replaces namespace separators with `___` and the final format segment with the extension. A local working copy lives at `assets/.remote/<filename>`.
+		- Run the asset tasks from the source garden checkout, passing logical page names without wikilink brackets. Their reference pages hold access requirements and recovery details.
+			- [[Asset/mise/Task/add]] — `mise run asset:add -- <source-file> <asset-page>` copies and DVC-tracks an original or separately prepared file.
+			- [[Asset/mise/Task/fetch]] — `mise run asset:fetch -- <asset-page>` restores a tracked file needed for preparation.
+			- [[Asset/mise/Task/convert]] — `mise run asset:convert -- <wav-page> <mp3-page>` registers a reproducible single-WAV-to-MP3 conversion.
+			- [[Asset/mise/Task/push]] — `mise run asset:push -- <asset-page>` backs up each tracked source and prepared output.
+		- A multitrack session needs a separate mix and export before single-WAV conversion. Mixing, commentary balance, and session-specific edits require their own preparation; the conversion task supplies no general multitrack mixing workflow.
+		- Preserve the original recording. Commit the adjacent `.dvc` metadata and any conversion `dvc.yaml` and `dvc.lock`; working media stays ignored under `assets/.remote/`.
+		- Public files use [[Logseq/Entity/Asset/B2]]. Create the asset page before uploading, then run [[GitP/mise/Task/media/upload]] with `mise run gitpa:media:upload -- <prepared-file> <asset-page>`.
+		- Add the returned verified URL to the asset page and the episode's media or download link. The task verifies the named B2 object's bytes and media metadata. DVC backup and named public upload are separate operations.
+		- Check public playback and seeking, artwork, and each supplied download using [[GitP/How To/Draft an Episode from Session Assets]].
+	- ## Optional session material
+		- Existing preset captures can supply download links and documented settings. New device capture and renaming follow the instrument's existing workflow, including backup and protection of unsaved sounds.
+		- Available MIDI can be exported for download after checking tempo and alignment against the episode recording. Automatic preset capture, preset renaming, and MIDI enrichment remain unfinished automation; the existing upload task accepts prepared files.
+	- ## Publication
+		- [[GitP/How To/Prepare Podcast Metadata]] describes publication preparation in [[Person/codekiln/GitHub/gitpa]]. Episode text stays in this source garden; Gitpa holds an exact-name proxy.
+		- Preview [[Logseq/Entity/Proxy/Page/mise/Task/sync]] with explicit source and destination garden paths and the episode's logical page name; `--apply` writes the reviewed import. Sync the audio and other relevant asset pages separately, since direct media URLs do not make them embedded-page dependencies.
+		- Gitpa owns `public::`, `podcast-guid::`, and `podcast-published-at::`. The generic Episode definition declares ownership of feed identity and publication time so re-sync preserves them.
+		- Run `mise run rss:build`, `mise run rss:check`, and `mise run rss:test` from Gitpa. Check the preview's recording playback, seeking, and downloads.
+		- The publication PR gives the episode title, description, and direct MP3 link. The human listens once and decides whether to publish; merging the Gitpa PR lets CI publish the episode.
