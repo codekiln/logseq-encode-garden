@@ -31,7 +31,7 @@ entity-proxy-source-properties:: public
 		- A multitrack session needs a separate mix and export before single-WAV conversion. Mixing, commentary balance, and session-specific edits require their own preparation; the conversion task supplies no general multitrack mixing workflow.
 		- Preserve the original recording. Commit the adjacent `.dvc` metadata and any conversion `dvc.yaml` and `dvc.lock`; working media stays ignored under `assets/.remote/`.
 		- Public files use [[Logseq/Entity/Asset/B2]]. Create the asset page before uploading, then run [[GitP/mise/Task/media/upload]] with `mise run gitpa:media:upload -- <prepared-file> <asset-page>`.
-		- Add the returned verified URL to the asset page and the episode's media or download link. The task verifies the named B2 object's bytes and media metadata. DVC backup and named public upload are separate operations.
+		- Add the returned verified URL to the asset page and the episode's media or download link. The upload task checks that the public download matches the prepared file and has the expected media type. DVC backup and named public upload are separate operations.
 		- Check public playback and seeking, artwork, and each supplied download using [[GitP/How To/Draft an Episode from Session Assets]].
 	- ## Optional session material
 		- Existing preset captures can supply download links and documented settings. New device capture and renaming follow the instrument's existing workflow, including backup and protection of unsaved sounds.

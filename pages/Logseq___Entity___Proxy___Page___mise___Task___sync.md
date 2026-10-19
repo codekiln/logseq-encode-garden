@@ -29,7 +29,7 @@ see-also:: [[Logseq/Entity/Proxy/Page]], [[Logseq/Entity/Definition]]
 			  python3 /path/to/source-worktree/mise-tasks/logseq/entity/proxy/page/sync --source /path/to/source-worktree --destination /path/to/destination-worktree/garden --page 'Logseq/Entity/Proxy/Page' --apply
 			  ~~~
 		- Invoking the source checkout's script imports the current sync implementation along with the entity definition. The destination can then run its imported task for other pages from the same source worktree.
-		- The source worktree supplies content while the primary checkout supplies the logical graph name. Code forge URLs point to the selected source branch, or to the commit for a detached worktree. The portable records keeps the same source ownership across branches and checkouts.
+		- The source worktree supplies content while the primary checkout supplies the logical graph name. Code forge URLs point to the selected source branch, or to the commit for a detached worktree. Sync preserves source ownership across branches and checkouts.
 		- Commit the records with the imported pages and task files. Push the source branch and link the source PR as a dependency of the destination PR. After the source PR merges, re-sync with the primary checkout selected as `--source` with `--refresh-provenance` to update the source URLs to the default branch.
 		- Omitting `--source` resolves the registered primary checkout. An unmerged source branch therefore requires an explicit source worktree path on each sync.
 	- ## Inputs and outputs
