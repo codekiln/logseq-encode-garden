@@ -1,4 +1,4 @@
-- # Use AGENTS.md Without Symlinks
+# Use AGENTS.md Without Symlinks
 	- I prefer `AGENTS.md` as the neutral project instruction file. Use it alone where the selected clients read it; add a client-specific file only when it is needed.
 	- When several client files must stay synchronized, use [[rulesync]] to generate ordinary files from one maintained source rather than linking `AGENTS.md` and `CLAUDE.md` with a symlink. This follows [[My/Pref/Dev/AI/Config/Management]].
 	- ## Why ordinary files
