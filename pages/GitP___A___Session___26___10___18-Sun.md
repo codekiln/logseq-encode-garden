@@ -10,7 +10,7 @@ date-created:: [[2026-10-18 Sun]]
 	- ## Preset
 		- [[Microfreak/Preset/174 Auster]] — Keys. The session also briefly uses an initialized BasicWaves patch to compare timbre modulation.
 	- ## Chapters
-		- ### [00:00](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=0) Meet Auster: modulation, envelopes and touch
+		- ### 00:00 Meet Auster: modulation, envelopes and touch
 			- Exploring preset 174: BasicWaves, the cycling envelope, filter amount, LFO and touch modulation.
 			- [[Microfreak/Preset/174 Auster]] · [[Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves]] · [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope]] · [[Microfreak/UG/09 Envelope Gen/04 Filter Amount]]
 			- Transcript
@@ -38,7 +38,7 @@ date-created:: [[2026-10-18 Sun]]
 				- 00:11:28 — So that means that if I go look at the modulation amount, it's at 68.3, so that means it's increasing the amount of time for the decay and the release, the more skin is on the key. Yeah. And then if I use just a little tip of my finger, it just decays. Hey, that's kind of effective. I like that. It's so weird. I can't believe I've never done this before because I have to use a completely different technique than I've ever used on another keyboard.
 				- 00:12:16 — It's like my fingers have to stretch out and become flat and then they have to get all curvy and crabby.
 				- 00:12:51 — Okay, that's all the modulation in 174 Auster keys. So,
-		- ### [12:58](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=778) Launchpad sequencing, tempo and the arpeggiator
+		- ### 12:58 Launchpad sequencing, tempo and the arpeggiator
 			- A first standalone sequence leads into tempo controls, MIDI sync and the way incoming notes interact with the MicroFreak arpeggiator.
 			- [[Launchpad/UG/09 Sequencer/10 Tempo and Swing/01 Edit]] · [[Microfreak/UG/17 Ext Gear/03 Clock Sources and Destinations]] · [[Microfreak/UG/12 Arpeggiator/03 Arpeggio Rate/01 Using Sync]]
 			- Transcript
@@ -62,7 +62,7 @@ date-created:: [[2026-10-18 Sun]]
 				- 00:24:20 — The, um... Maybe I'll turn the arp... Oh, interesting. Okay, if I have this ARP sequencer button on the MicroFreak, then if I press on the keyboard of the Novation, I have to wait for the next quantized available time in order to play. That is fascinating. I guess it kind of makes sense. because if it's like all right yeah okay so I'm like holding down two notes on the
 				- 00:25:06 — Novation and it's doing the arpeggiation thing okay that kind of makes sense Alright, so we've got a little bit of exploration here. So what does that mean for how we use this system? I can just turn... What if I... I mean, if I wanted to make use of the sequencer... Let me turn the sequencer back up to maybe a sixteenth like we had before.
 				- 00:25:51 — And then I'm going to hit play. Oh, yeah, we don't have any same recording. So...
-		- ### [25:59](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=1559) Velocity and probability on a shared step
+		- ### 25:59 Velocity and probability on a shared step
 			- Editing velocities on a shared step, followed by experiments with probability.
 			- [[Launchpad/UG/09 Sequencer/06 Velocity/01 Step Velocity]] · [[Launchpad/UG/09 Sequencer/07 Probability]]
 			- Transcript
@@ -72,7 +72,7 @@ date-created:: [[2026-10-18 Sun]]
 				- 00:27:28 — Yeah, I just don't, I need to look this up in the manual. So on this note, I have two different notes. On this one step of the sequencer, I have two different notes. And I'm on the velocity tab of the sequencer. And I am able to see that I can adjust it down to a velocity level of three, but then it's a velocity level of three for both of them. I think it might be just one velocity step for all notes in a single sequencer step. I guess that would make sense from a simplicity standpoint.
 				- 00:28:15 — It would be a lot harder to adjust both of them. But I could have sworn that there's a way to individually adjust the probability of each note or something in the probability view. Let me see if I can figure that out. So on the same note, I have two notes that are showing up. They both are red. If I hit one, it goes off. If I hit another, it again, it comes back on, which is the same as taking it off and putting it back on. So then it ends up with the default velocity. But if I go back to probability,
 				- 00:29:06 — well, there I turned the probability down, but you're not hearing it at all because I think effectively, once it gets passed through the event detector in the MicroFreak for the sequencer, it ends up kind of neutralizing any misfire. If one of the notes doesn't fire for a 16th note, it still has to quantize that and figure out if one or both was held down during a given set of time. It's a little complex to think about and not that useful. So let's go back to steps and hit play again.
-		- ### [30:12](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=1812) Return MIDI: recording MicroFreak articulation
+		- ### 30:12 Return MIDI: recording MicroFreak articulation
 			- A second MIDI cable completes the return path. Recording touch articulation into the Launchpad sequencer, then experimenting with patterns and cycling-envelope changes.
 			- [[Launchpad/UG/09 Sequencer/02 Steps View/06 Record]] · [[Launchpad/UG/09 Sequencer/06 Velocity/02 Live Record]] · [[Microfreak/UG/17 Ext Gear/05 Local Control]]
 			- Transcript
@@ -89,7 +89,7 @@ date-created:: [[2026-10-18 Sun]]
 				- 00:34:43 — over to the second go back to the steps
 				- 00:36:43 — Oh, interesting. If I'm in patterns mode and I press the button beneath the first sequencer track in the Novation, it actually activates the steps button for that sequence. I'm adjusting the cycling envelope.
 				- 00:37:43 — which is adjusting the wave. I don't know if I'm remembering correctly. Yeah, it's minus 100, so I want to keep that up. But we could bring it down. Let's see what it does. All right, now I'm going to try changing the mode. much
-		- ### [39:23](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=2363) Pattern rates, mutation and note length
+		- ### 39:23 Pattern rates, mutation and note length
 			- Exploring a slower pattern, probability, mutation and gate length.
 			- [[Launchpad/UG/09 Sequencer/05 Pattern Settings/01 Sync Rate]] · [[Launchpad/UG/09 Sequencer/08 Mutation]] · [[Launchpad/UG/09 Sequencer/02 Steps View/07 Gate Length]]
 			- Transcript
@@ -100,7 +100,7 @@ date-created:: [[2026-10-18 Sun]]
 				- 00:41:17 — I don't know what's going on with the interface here. I'm seeing several red... I'm on the steps view. But the pattern is very short now. I think I might have accidentally decreased the pattern sequence length.
 				- 00:42:03 — I'm kind of forgetting how to indicate the length of how long I hold down a note inside the sequencer. Oh, there we go. I just have to hit a second note.
 				- 00:45:51 — I don't know.
-		- ### [46:21](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=2781) Local control and scale-constrained MIDI return
+		- ### 46:21 Local control and scale-constrained MIDI return
 			- Investigating doubled notes with Local Off, then playing through the Launchpad’s selected scale.
 			- [[Microfreak/UG/17 Ext Gear/05 Local Control]] · [[Launchpad/UG/09 Sequencer/13 Settings/04 Select Scale]]
 			- Transcript
@@ -109,7 +109,7 @@ date-created:: [[2026-10-18 Sun]]
 				- 00:46:51 — I can't actually tell if it's chromatic. So the notes that match the scale sound fine. The notes that don't match the scale on the Novation get transposed and executed twice. Okay, that's interesting. So now what if I turn local control off? If I go into utility, global, MIDI. Local, off.
 				- 00:47:38 — Okay, this could get really confusing if I leave this on, but... it works! So it sends MIDI into the Novation and then the Novation transposes it to this internal scale and then it sends it back to the MicroFreak and plays it. So I'm playing a chromatic scale now. And then if I change the sequencer mode... Heyyyy! I think we figured it out. So that means that if I want to do bi-directional MIDI, I can, but I probably should turn local
 				- 00:48:32 — control off. Now, does that mean that I'm no longer getting my modulation? No, I'm still getting my pressure. And if I'm not missing, it seems like the pressure is getting transferred into velocity. That's what I think is happening. Okay, nice.
-		- ### [49:20](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=2960) Separate musical ideas on a shared MIDI channel
+		- ### 49:20 Separate musical ideas on a shared MIDI channel
 			- A second Launchpad track is routed to the MicroFreak channel for a separate idea, followed by further playing and questions about parameter control.
 			- [[Launchpad/UG/09 Sequencer/13 Settings/05 MIDI Channel]] · [[Launchpad/UG/09 Sequencer/05 Pattern Settings]]
 			- Transcript
@@ -124,7 +124,7 @@ date-created:: [[2026-10-18 Sun]]
 				- 00:58:27 — Maybe? I'm not hearing it.
 				- 00:58:51 — Okay, I am hearing it. There's just so much going on, it's a little hard to notice. Oh wait, now I have...
 				- 00:59:14 — Huh.
-		- ### [01:00:57](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=3657) Clock-source troubleshooting, LFO sync and swing
+		- ### 01:00:57 Clock-source troubleshooting, LFO sync and swing
 			- Revisiting clock sources and tempo control, then trying synced LFO modulation and swing.
 			- [[Microfreak/UG/17 Ext Gear/03 Clock Sources and Destinations]] · [[Microfreak/UG/08 LFO]] · [[Launchpad/UG/09 Sequencer/10 Tempo and Swing/01 Edit]]
 			- Transcript
@@ -135,7 +135,7 @@ date-created:: [[2026-10-18 Sun]]
 				- 01:05:22 — You can hear the swing is up a little bit. Let me turn that down.
 				- 01:05:52 — I reactivated the first track. Okay.
 				- 01:06:44 — That's enough of that.
-		- ### [01:06:50](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=4010) Recap, chromatic mode and the utility menu
+		- ### 01:06:50 Recap, chromatic mode and the utility menu
 			- A recap of the MIDI setup leads into diatonic versus chromatic playing, utility-menu navigation and another clock-source experiment.
 			- [[Microfreak/UG/14 Config/01 Utility & MCC]] · [[Launchpad/UG/09 Sequencer/13 Settings/03 Root and Scale]] · [[Microfreak/UG/17 Ext Gear/05 Local Control]]
 			- Transcript
@@ -151,7 +151,7 @@ date-created:: [[2026-10-18 Sun]]
 				- 01:13:07 — Let me try that. If I go to utility global sync source MIDI, now I can adjust it. Okay. So there's something about the MIDI protocol that when I change the MicroFreak utility global sync source, If I change it from auto to MIDI, then I can use the Novation Sequencer Device Tempo in the shift, you know, shift device tempo to adjust the sequencer tempo.
 				- 01:13:58 — So let's hear that now. I'm on track one. Let me actually turn off track two.
 				- 01:14:12 — Okay, now what did I want to try? I wanted to try... I wanted to try...
-		- ### [01:14:34](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=4474) Chain patterns with different rates; play outside the scale
+		- ### 01:14:34 Chain patterns with different rates; play outside the scale
 			- Comparing rates across chained patterns, then exploring chromatic notes over a scale-based sequence.
 			- [[Launchpad/UG/09 Sequencer/03 Patterns View/01 Chain]] · [[Launchpad/UG/09 Sequencer/05 Pattern Settings/01 Sync Rate]] · [[Launchpad/UG/09 Sequencer/13 Settings/04 Select Scale]]
 			- Transcript
@@ -169,7 +169,7 @@ date-created:: [[2026-10-18 Sun]]
 				- 01:18:29 — Now if I play some out of scale degree notes...
 				- 01:19:15 — Okay.
 				- 01:19:41 — Hey, that's pretty cool. So that means that I can mess with modes when I want to and depart from modes when I want to. That's pretty powerful.
-		- ### [01:19:57](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=4797) Slow pulses and layered tracks
+		- ### 01:19:57 Slow pulses and layered tracks
 			- Tracks three and four become a new experiment in slow pulses, different pattern lengths and routing multiple tracks to one synth.
 			- [[Launchpad/UG/09 Sequencer/05 Pattern Settings/03 Start End]] · [[Launchpad/UG/09 Sequencer/13 Settings/05 MIDI Channel]] · [[Launchpad/UG/09 Sequencer/10 Tempo and Swing/01 Edit]]
 			- Transcript
@@ -187,7 +187,7 @@ date-created:: [[2026-10-18 Sun]]
 				- 01:27:42 — Okay, so now I've got track three doing this slow burn pattern. If I go to patterns track 4, I'm going to try recording something on the Novation first and then we'll experiment. very like so now I'm having that same kind of problem where now that though so
 				- 01:28:34 — I don't have our the arpeggiation on it is taking its tempo from the Novation and now if I press if I am activating track 4 and I start pressing I have to wait until...
 				- 01:28:58 — Actually, I'm not convinced that this is outputting. Hang on. Let me do shift sequencer output channel one.
-		- ### [01:29:16](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=5356) Long decay and the closing performance
+		- ### 01:29:16 Long decay and the closing performance
 			- Long-decay notes lead into an extended closing performance.
 			- [[Microfreak/UG/09 Envelope Gen/03 Envelope Stages/02 Decay Release]] · [[Launchpad/UG/09 Sequencer/05 Pattern Settings]]
 			- Transcript
