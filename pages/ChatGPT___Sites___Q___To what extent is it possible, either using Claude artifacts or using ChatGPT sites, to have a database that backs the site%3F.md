@@ -1,0 +1,21 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+- # To what extent is it possible, either using Claude artifacts or using ChatGPT sites, to have a database that backs the site?
+	- ## [[AI Answer]]
+		- **Yes.** A visitor can submit a comment, the app can save it in shared persistent storage, and a later visitor can load the saved comment. Both products document the storage needed for this behavior; the comment form and read/write logic still need to be built.
+		- **Claude Artifacts**
+			- [[Answer/Official]] from [Anthropic: Store data in an artifact](https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them).
+			- Shared storage exposes the same saved data to everyone using the artifact. Personal storage keeps each person's data private. A shared comment feed uses shared storage.
+			- Storage is available on Pro, Max, Team, and Enterprise on web and desktop, with a text-only limit of 20 MB per artifact. JSON can represent comment records within text storage.
+			- New artifacts can save before publication. Legacy artifacts require publication, and unpublishing a legacy artifact deletes its stored data.
+			- Anthropic documents persistent storage, but does not establish SQL queries, relational constraints, transactions, or concurrent-write guarantees in this help article. Treat those capabilities as unverified.
+		- **ChatGPT Sites**
+			- [[Answer/Official]] from [OpenAI: Data and connections](https://learn.chatgpt.com/docs/sites/data-and-connections).
+			- Sites supports D1, a relational database for durable structured data, and R2 for uploaded files. A comments table can hold the page, author, text, and submission time.
+			- Public sites can offer optional Sign in with ChatGPT while allowing signed-out visitors to browse. Server-side code controls who can post, edit, or delete comments.
+			- The [Sites overview](https://learn.chatgpt.com/docs/sites) lists a 10 GB D1 limit per site. Sites is in public beta on Plus, Pro, Business, Enterprise, and Edu, with plan-specific usage limits.
+		- **Applying this to comments** — implementation guidance inferred from the documented storage capabilities.
+			- The submit action saves a comment to shared storage. Opening or refreshing the page reads the saved comments. Instant updates in an already-open browser need an additional refresh mechanism.
+			- Store each comment independently so simultaneous submissions do not replace an entire shared comment list. Test simultaneous submissions, persistence after reload, and visibility from another account or browser.
+			- Decide whether posting requires sign-in, who can delete comments, and how moderation works. Shared visibility alone does not define those permissions.
+			- Sites is the stronger fit for a public comment site with accounts and structured records. Claude shared storage can support a small collaborative comment feed within the artifact experience.
+		- **Example Sites prompt:** Build a public site with a comment section on each article. Store comments in D1 so visitors share the same comments across browsers and visits. Let anyone read; require Sign in with ChatGPT to post. Add author deletion, administrator moderation, and server-side permission checks.
