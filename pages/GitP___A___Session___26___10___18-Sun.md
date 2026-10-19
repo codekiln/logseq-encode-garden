@@ -1,0 +1,53 @@
+logseq-entity:: [[Logseq/Entity/Podcast/Episode]]
+created-by:: [[Person/codekiln]]
+date-created:: [[2026-10-18 Sun]]
+- # Auster without a computer
+	- A Ghost in the Patch session exploring [[Microfreak/Preset/174 Auster]] with the Launchpad Pro sequencer: touch articulation, two-way MIDI, clock sync, scale modes and layered patterns.
+	- ![Episode recording — synth-forward mix](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3)
+	- ## Recording
+		- [[GitP/A/Session/26/10/18-Sun/Asset/Audio/Synth-Forward/mp3]] · 1:38:11.
+		- [Download the synth-forward MP3](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3)
+	- ## Preset
+		- [[Microfreak/Preset/174 Auster]] — Keys. The session also briefly uses an initialized BasicWaves patch to compare timbre modulation.
+	- ## Chapters
+		- ### [00:00](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=0) Meet Auster: modulation, envelopes and touch
+			- Exploring preset 174: BasicWaves, the cycling envelope, filter amount, LFO and touch modulation.
+			- [[Microfreak/Preset/174 Auster]] · [[Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves]] · [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope]] · [[Microfreak/UG/09 Envelope Gen/04 Filter Amount]]
+		- ### [12:58](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=778) Launchpad sequencing, tempo and the arpeggiator
+			- A first standalone sequence leads into tempo controls, MIDI sync and the way incoming notes interact with the MicroFreak arpeggiator.
+			- [[Launchpad/UG/09 Sequencer/10 Tempo and Swing/01 Edit]] · [[Microfreak/UG/17 Ext Gear/03 Clock Sources and Destinations]] · [[Microfreak/UG/12 Arpeggiator/03 Arpeggio Rate/01 Using Sync]]
+		- ### [25:59](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=1559) Velocity and probability on a shared step
+			- Editing velocities on a shared step, followed by experiments with probability.
+			- [[Launchpad/UG/09 Sequencer/06 Velocity/01 Step Velocity]] · [[Launchpad/UG/09 Sequencer/07 Probability]]
+		- ### [30:12](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=1812) Return MIDI: recording MicroFreak articulation
+			- A second MIDI cable completes the return path. Recording touch articulation into the Launchpad sequencer, then experimenting with patterns and cycling-envelope changes.
+			- [[Launchpad/UG/09 Sequencer/02 Steps View/06 Record]] · [[Launchpad/UG/09 Sequencer/06 Velocity/02 Live Record]] · [[Microfreak/UG/17 Ext Gear/05 Local Control]]
+		- ### [39:23](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=2363) Pattern rates, mutation and note length
+			- Exploring a slower pattern, probability, mutation and gate length.
+			- [[Launchpad/UG/09 Sequencer/05 Pattern Settings/01 Sync Rate]] · [[Launchpad/UG/09 Sequencer/08 Mutation]] · [[Launchpad/UG/09 Sequencer/02 Steps View/07 Gate Length]]
+		- ### [46:21](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=2781) Local control and scale-constrained MIDI return
+			- Investigating doubled notes with Local Off, then playing through the Launchpad’s selected scale.
+			- [[Microfreak/UG/17 Ext Gear/05 Local Control]] · [[Launchpad/UG/09 Sequencer/13 Settings/04 Select Scale]]
+		- ### [49:20](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=2960) Separate musical ideas on a shared MIDI channel
+			- A second Launchpad track is routed to the MicroFreak channel for a separate idea, followed by further playing and questions about parameter control.
+			- [[Launchpad/UG/09 Sequencer/13 Settings/05 MIDI Channel]] · [[Launchpad/UG/09 Sequencer/05 Pattern Settings]]
+		- ### [01:00:57](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=3657) Clock-source troubleshooting, LFO sync and swing
+			- Revisiting clock sources and tempo control, then trying synced LFO modulation and swing.
+			- [[Microfreak/UG/17 Ext Gear/03 Clock Sources and Destinations]] · [[Microfreak/UG/08 LFO]] · [[Launchpad/UG/09 Sequencer/10 Tempo and Swing/01 Edit]]
+		- ### [01:06:50](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=4010) Recap, chromatic mode and the utility menu
+			- A recap of the MIDI setup leads into diatonic versus chromatic playing, utility-menu navigation and another clock-source experiment.
+			- [[Microfreak/UG/14 Config/01 Utility & MCC]] · [[Launchpad/UG/09 Sequencer/13 Settings/03 Root and Scale]] · [[Microfreak/UG/17 Ext Gear/05 Local Control]]
+		- ### [01:14:34](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=4474) Chain patterns with different rates; play outside the scale
+			- Comparing rates across chained patterns, then exploring chromatic notes over a scale-based sequence.
+			- [[Launchpad/UG/09 Sequencer/03 Patterns View/01 Chain]] · [[Launchpad/UG/09 Sequencer/05 Pattern Settings/01 Sync Rate]] · [[Launchpad/UG/09 Sequencer/13 Settings/04 Select Scale]]
+		- ### [01:19:57](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=4797) Slow pulses and layered tracks
+			- Tracks three and four become a new experiment in slow pulses, different pattern lengths and routing multiple tracks to one synth.
+			- [[Launchpad/UG/09 Sequencer/05 Pattern Settings/03 Start End]] · [[Launchpad/UG/09 Sequencer/13 Settings/05 MIDI Channel]] · [[Launchpad/UG/09 Sequencer/10 Tempo and Swing/01 Edit]]
+		- ### [01:29:16](http://127.0.0.1:8768/audio/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3#t=5356) Long decay and the closing performance
+			- Long-decay notes lead into an extended closing performance.
+			- [[Microfreak/UG/09 Envelope Gen/03 Envelope Stages/02 Decay Release]] · [[Launchpad/UG/09 Sequencer/05 Pattern Settings]]
+	- ## Notes
+		- Manual velocity edits in [[Launchpad/UG/09 Sequencer/06 Velocity/01 Step Velocity]] set every note on the selected step to the same velocity. [[Launchpad/UG/09 Sequencer/06 Velocity/02 Live Record]] can preserve notes with different velocities on the same step.
+		- [[Microfreak/UG/17 Ext Gear/05 Local Control]] describes Local Off as a way to prevent double triggering when an external sequencer returns keyboard notes to the synth.
+	- ## Transcript
+		- [Timestamped commentary transcript](http://127.0.0.1:8768/transcript.md)
