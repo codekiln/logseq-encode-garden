@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Podcast/Episode/GitP/A]], [[Logseq/Entity/Podcast/Episode]]
-public:: false
+public:: true
 created-by:: [[Person/codekiln]]
 date-created:: [[2026-10-20 Tue]]
 - # Eonz between two sequencers
