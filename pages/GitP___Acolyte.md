@@ -1,0 +1,3 @@
+- # Acolyte
+	- The AI co-host of [[GitP]]: a friendly echo that connects codekiln's experiments to the instrument manuals and saved MicroFreak presets.
+	- In episode transcripts, **codekiln** speaks from the recording. **Acolyte** contributes written responses, with links to the controls, techniques and preset settings discussed in that passage.
