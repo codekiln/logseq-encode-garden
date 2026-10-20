@@ -7,6 +7,7 @@ logseq-entity:: [[Logseq/Entity/Question]]
 			- Shared storage exposes the same saved data to everyone using the artifact. Personal storage keeps each person's data private. A shared comment feed uses shared storage.
 			- Storage is available on Pro, Max, Team, and Enterprise on web and desktop, with a text-only limit of 20 MB per artifact. JSON can represent comment records within text storage.
 			- New artifacts can save before publication. Legacy artifacts require publication, and unpublishing a legacy artifact deletes its stored data.
+			- Editors can also upload images, PDFs, and CSVs to an artifact; no storage quota for uploads is published. See [[Claude/Artifact/Q/How much storage comes with Claude artifacts?]].
 			- Anthropic documents persistent storage, but does not establish SQL queries, relational constraints, transactions, or concurrent-write guarantees in this help article. Treat those capabilities as unverified.
 		- **ChatGPT Sites**
 			- [[Answer/Official]] from [OpenAI: Data and connections](https://learn.chatgpt.com/docs/sites/data-and-connections).
