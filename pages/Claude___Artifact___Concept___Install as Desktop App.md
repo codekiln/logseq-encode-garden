@@ -1,0 +1,37 @@
+logseq-entity:: [[Logseq/Entity/Concept]]
+date-created:: 2026-10-21
+
+- # Claude/Artifact/Concept/Install as Desktop App
+	- A published Claude artifact can be installed as its own app on your computer. It gets a dedicated window, an icon in your app launcher, and no browser tab or address bar.
+	- The artifact is a web page at a claude.ai URL, so the feature comes from the browser's [[PWA]] install, not from a Claude-specific installer.
+	- ## What you see
+		- On the artifact page, the title menu (the name with a chevron, top left) lists **Export**, **Copy as Markdown**, **Install artifact**, and **Rename**.
+		- **Install artifact** opens Chrome's "Install app" dialog: "Access this site in a dedicated window on your computer". It shows the artifact name followed by "Claude artifact" and the domain claude.ai.
+		- Next goes to a second dialog showing the icon moving into a **Chrome Apps** folder. Install finishes it.
+		- A confirmation offers **Show in Finder** and **Open tab in app**.
+	- ## What you get
+		- A standalone window for one artifact, separate from your browser tabs and from the Claude app.
+		- A launcher icon: Start menu on Windows, Launchpad and Spotlight on macOS, as listed by [web.dev](https://web.dev/learn/pwa/installation).
+		- Entries in the OS app switcher and app search, with the option to pin to the taskbar on Windows.
+	- ## Windows
+		- Windows works. Chrome and Edge both install PWAs on Windows, macOS, Linux, and Chromebooks, per [web.dev](https://web.dev/learn/pwa/installation).
+		- In Chrome: **More** (three dots) → **Cast, save, and share** → **Install page as app**, or the install icon at the right end of the address bar. See [Google's Chrome Help](https://support.google.com/chrome/answer/9658361).
+		- In Edge: the **App available** icon in the address bar, then **Install**. The app lands in the Start menu and taskbar, and appears under Windows **Apps & features**. See [Microsoft's Edge PWA guide](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/ux).
+		- Edge on Windows can also start the app when you sign in (`edge://apps` → More options → **Auto-start on device login**).
+		- The browser-level install is documented for Edge. Whether claude.ai shows the **Install artifact** menu item in Edge is undocumented.
+		- Edge has one documented gap: PWAs do not survive logoff in FSLogix virtual-desktop profiles.
+	- ## Browser limits
+		- Safari on macOS does not support installability ([web.dev](https://web.dev/learn/pwa/installation)). Use Chrome or Edge.
+		- Firefox on desktop is not covered by those sources.
+		- An app cannot be installed twice in the same browser.
+	- ## Managing the app
+		- Chrome: open `chrome://apps` to see installed apps, create shortcuts, or set launch at sign-in. To remove one, open it and choose **More** → **Uninstall**.
+		- Edge: `edge://apps`, or Windows **Add or remove programs**.
+	- ## Official documentation status
+		- [[Answer/Official]] for the browser mechanism: the Chrome, Edge, and web.dev pages linked above.
+		- No Anthropic Help Center article describes **Install artifact**. The article [What are artifacts and how do I use them?](https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them) covers viewing, editing, sharing, and exporting, and says nothing on installing.
+		- The dialogs in the screenshots are Chrome's own PWA install flow with Claude's name and icon filled in.
+	- ## Related
+		- [[Claude/Desktop]]
+		- [[Claude/Desktop/Capability/AI-powered artifacts]]
+		- [[Claude/Artifact/Q/How much storage comes with Claude artifacts?]]
