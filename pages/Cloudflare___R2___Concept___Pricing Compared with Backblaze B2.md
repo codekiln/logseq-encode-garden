@@ -1,0 +1,22 @@
+- # Cloudflare R2 Pricing Compared with Backblaze B2
+	- [[Cloudflare/R2]] and [[Backblaze/B2]] are both S3-compatible object storage services. Their pricing differs mainly in storage rates, request charges, and how internet downloads are billed.
+	- ## Storage
+		- Cloudflare R2 Standard storage is `$0.015` per GB-month, with the first 10 GB-month free each month.
+		- Backblaze B2 pay-as-you-go storage starts at `$6.95` per TB-month, with the first 10 GB free. At the published rates, B2 storage costs less per GB than R2.
+		- The difference grows with the amount stored: before free usage, 1 TB-month is about `$15` on R2 and `$6.95` on B2. Actual billing depends on each provider's units and account usage.
+	- ## Requests
+		- R2 includes 1 million Class A operations and 10 million Class B operations monthly. Above those allowances, Standard operations are billed at `$4.50` per million Class A requests and `$0.36` per million Class B requests. Deletes are free.
+		- B2 lists Class A, B, and C transactions as free for pay-as-you-go accounts. The first 2,500 Class D calls per day are free; additional Class D calls cost `$0.004` per 10,000. Check the transaction-pricing page for which calls fall into each class.
+		- For workloads with many reads, writes, or listings, estimate request counts as well as stored capacity. The request mix can change which service costs less.
+	- ## Downloads
+		- R2 does not charge for data egress to the internet, including downloads through its Workers API, S3 API, or `r2.dev` domain.
+		- B2 includes free downloads up to 3 times the account's average monthly stored data. Downloads above that allowance cost `$0.01` per GB.
+		- B2 also offers unlimited free egress through supported CDN and compute partners, including Cloudflare. Serving B2 through Cloudflare can therefore avoid B2 egress charges, subject to the partner's terms and any costs charged by the other services involved.
+	- ## Which tends to cost less?
+		- B2 is attractive when storage volume dominates the bill, especially when downloads stay within the 3× allowance or use a supported partner.
+		- R2 is attractive when direct internet downloads are substantial or unpredictable and a zero-egress-charge model makes the bill easier to forecast. R2 request charges still apply above its free allowances.
+		- For small libraries within either provider's 10 GB free storage allowance, other usage and workflow fit may matter more than storage price.
+	- ## Sources checked 2026-10-21
+		- [Cloudflare R2 pricing](https://developers.cloudflare.com/r2/pricing/)
+		- [Backblaze B2 Cloud Storage pricing](https://www.backblaze.com/cloud-storage/pricing)
+		- [Backblaze B2 transaction pricing](https://www.backblaze.com/cloud-storage/transaction-pricing)
