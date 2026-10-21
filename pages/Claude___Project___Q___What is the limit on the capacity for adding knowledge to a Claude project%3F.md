@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Question]]
-see-also:: [[Claude/Project/Explanation/How the GitHub integration feeds project knowledge]]
+see-also:: [[Claude/Project/Explanation/How the GitHub integration feeds project knowledge]], [[Claude/Project/RAG]]
 
 - # What is the limit on the capacity for adding knowledge to a Claude project?
 	- Prompted by adding two folders from GitHub to a project in Claude Enterprise and seeing 62% of capacity used.
