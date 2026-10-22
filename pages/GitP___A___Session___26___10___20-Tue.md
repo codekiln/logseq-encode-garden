@@ -7,7 +7,7 @@ date-created:: [[2026-10-20 Tue]]
 	- ![Eonz between two sequencers — full recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward.mp3)
 	- ## Recording
 		- 1:31:50 · [Download the synth-forward MP3](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward.mp3)
-		- Chapter waveforms show synth above commentary; each chapter player combines both.
+		- Select a chapter timestamp to play from that point in the full recording.
 	- ## Voices
 		- **codekiln** is transcribed from the recording. **[[GitP/Acolyte]]** contributes written AI co-host responses; these appear as “written” in the dialogue and are not spoken in the audio.
 		- Commentary is an automatic transcription draft. Timestamps follow the full recording.
@@ -16,8 +16,6 @@ date-created:: [[2026-10-20 Tue]]
 		- Eonz digital twin: a September 28 user-bank export using [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]]. [Download the MCC preset export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Preset___Eonz-Archived-2026-09-28.mbp)
 	- ## Chapters
 		- ### 00:00 Four tracks, one MIDI channel
-			- ![00:00–05:40 · synth above commentary](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward___0000-0540.png)
-				- ![Four tracks, one MIDI channel — mixed chapter audio](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward___0000-0540.mp3)
 			- Setting all four Launchpad tracks to MIDI channel 1, with different pattern lengths in mind.
 			- [[Launchpad/UG/09 Sequencer/13 Settings/05 MIDI Channel]] · [[Launchpad/UG/09 Sequencer/05 Pattern Settings/03 Start End]]
 			- Dialogue
@@ -33,8 +31,6 @@ date-created:: [[2026-10-20 Tue]]
 				- **codekiln** · 00:05:31 — So I'm going to make all of them on channel 1.
 				- **codekiln** · 00:05:39 — Then I go to track 1.
 		- ### 05:40 Eonz, scale correction and clock
-			- ![05:40–14:42 · synth above commentary](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward___0540-1442.png)
-				- ![Eonz, scale correction and clock — mixed chapter audio](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward___0540-1442.mp3)
 			- Moving from Saying Goodbye to Eonz, listening to preset octave changes and scale correction, then investigating who controls the clock.
 			- [[Microfreak/Preset/075 Saying Goodbye]] · [[Microfreak/Preset/077 Eonz]] · [[Microfreak/UG/10 Keyboard/04 Octave Buttons]] · [[Launchpad/UG/10 Setup/05 MIDI Settings]]
 			- Dialogue
@@ -54,8 +50,6 @@ date-created:: [[2026-10-20 Tue]]
 				- **codekiln** · 00:13:28 — Yeah, I think there's a total bug here. Oh, hey, if I hit sequencer, then it turns out. Oh, that is interesting. So there's something in the novation where in the device tempo screen, I wasn't able to exit the sequencer mode. Let's try playing here. And now I'm on the arpeggiator.
 				- **codekiln** · 00:14:08 — I'm trying the arpeggiator, but boy is it not doing anything let me try hitting play on the sequencer on the novation nothing okay so i have i'm going to turn the repitiator off so this this is like thoroughly confusing to me
 		- ### 14:42 TRS adapters and input modes
-			- ![14:42–24:18 · synth above commentary](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward___1442-2418.png)
-				- ![TRS adapters and input modes — mixed chapter audio](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward___1442-2418.mp3)
 			- Swapping the TRS MIDI adapters, checking clock divisions and comparing Launchpad Note and Sequencer modes.
 			- [[Microfreak/UG/03 Overview/02 Rear Panel/04 MIDI]] · [[Launchpad/UG/02 Getting Up and Running/05 Standalone]] · [[Launchpad/UG/09 Sequencer/05 Pattern Settings/01 Sync Rate]]
 			- Dialogue
@@ -76,8 +70,6 @@ date-created:: [[2026-10-20 Tue]]
 				- **codekiln** · 00:23:17 — Let me see if that's right. So let me go shift note. It appears that I have it marked on the first channel. Yeah, what? That seems wild to me. That the micro free keyboard wouldn't output to the novation in note mode.
 				- **codekiln** · 00:23:57 — What about chord mode? Yeah, nothing. So on the novation, I have it. But on the microfreak, nothing. But if I go over to the sequencer.
 		- ### 24:18 Can Launchpad capture the MicroFreak sequence?
-			- ![24:18–35:50 · synth above commentary](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward___2418-3550.png)
-				- ![Can Launchpad capture the MicroFreak sequence? — mixed chapter audio](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward___2418-3550.mp3)
 			- Trying to record the MicroFreak sequence into the Launchpad, then combining a low Launchpad pulse with the internal sequence. The capture question remains open.
 			- [[Microfreak/UG/14 Config/02 MIDI Control Center/01 Device Tab]] · [[Launchpad/UG/09 Sequencer/02 Steps View/06 Record]] · [[Microfreak/UG/11 Icon Strip/03 Touch Strip/01 Spice and Dice]]
 			- Dialogue
@@ -100,8 +92,6 @@ date-created:: [[2026-10-20 Tue]]
 				- **codekiln** · 00:35:33 — Another interesting thing, spice doesn't work. So the sequence is playing, but spice doesn't work.
 				- **[[GitP/Acolyte]]** · written — Spice and Dice reshape the MicroFreak's own arpeggio or sequence gates. They need an active internal pattern, and Dice stays silent until Spice is added. If the notes you're hearing come straight from the Launchpad, that gives you a useful distinction to test. [[Microfreak/UG/11 Icon Strip/03 Touch Strip/01 Spice and Dice]]
 		- ### 35:50 Markers, Spice, Dice and doubling
-			- ![35:50–45:01 · synth above commentary](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward___3550-4501.png)
-				- ![Markers, Spice, Dice and doubling — mixed chapter audio](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward___3550-4501.mp3)
 			- A recorder marker introduces a new take. A seven-step Launchpad pattern meets a 32-step MicroFreak sequence, with experiments in Spice, Dice, step recording and Local Off.
 			- [[Microfreak/Preset/077 Eonz]] · [[Microfreak/UG/13 Sequencer/01 Use/03 Record/01 Step Time]] · [[Microfreak/UG/17 Ext Gear/05 Local Control]]
 			- Dialogue
@@ -132,8 +122,6 @@ date-created:: [[2026-10-20 Tue]]
 				- **codekiln** · 00:44:44 — If I that is so funky.
 				- **codekiln** · 00:44:55 — So that time it happened when I hit the play button on the sequencer. Alright, luckily I can get out of it by
 		- ### 45:01 Finding a clock setup that plays
-			- ![45:01–54:21 · synth above commentary](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward___4501-5421.png)
-				- ![Finding a clock setup that plays — mixed chapter audio](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward___4501-5421.mp3)
 			- Working through stopped playback and sync settings until both sequencers play again, then comparing the arpeggiator with the internal sequence.
 			- [[Microfreak/UG/17 Ext Gear/03 Clock Sources and Destinations]] · [[Launchpad/UG/10 Setup/05 MIDI Settings]] · [[Microfreak/UG/13 Sequencer/01 Use]]
 			- Dialogue
@@ -150,8 +138,6 @@ date-created:: [[2026-10-20 Tue]]
 				- **codekiln** · 00:53:14 — But if I press play again on the sequencer of the Novation launchpad, everything stops, but the sequencer is still eliminated blue. However, it doesn't seem like it's playing. Let me see if I can hit play now. Okay, I can. Now I have play eliminated on the MicroFreak sequencer. Let me hit unplay. Okay, well that seems to be pretty logical.
 				- **codekiln** · 00:53:51 — So I can kind of like mix two sequences together. I wish I understood what caused it to panic before. Was it because I was just not having auto for utility global sync source or utility global yeah I think that's the only auto that I was
 		- ### 54:21 A shared filter and four voices
-			- ![54:21–01:00:23 · synth above commentary](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward___5421-6023.png)
-				- ![A shared filter and four voices — mixed chapter audio](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward___5421-6023.mp3)
 			- Listening to the shared analog filter, envelope pulses and the four-voice paraphonic limit, with another look at MIDI input and output channels.
 			- [[Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/02 Paraphonic]] · [[Microfreak/UG/09 Envelope Gen/05 Amp Mod Button]]
 			- Dialogue
@@ -163,8 +149,6 @@ date-created:: [[2026-10-20 Tue]]
 				- **codekiln** · 00:58:34 — I'm going to go.
 				- **codekiln** · 00:59:34 — You know in the utility menu, global, MIDI, input channel, see I can separately adjust the input and output channel on the MicroFreak. so that actually does mean I could potentially record into different tracks although you know I think the record is just like limited to whatever one is active I don't think if you record you're recording into all tracks at once alright I think we've explored
 		- ### 01:00:23 Recording Launchpad notes into MicroFreak
-			- ![01:00:23–01:08:33 · synth above commentary](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward___6023-6833.png)
-				- ![Recording Launchpad notes into MicroFreak — mixed chapter audio](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward___6023-6833.mp3)
 			- Recording incoming Launchpad notes into the MicroFreak, muting the source to listen back, and distinguishing step recording from real-time recording.
 			- [[Microfreak/UG/13 Sequencer/01 Use/03 Record/01 Step Time]] · [[Microfreak/UG/13 Sequencer/01 Use/03 Record/03 Real Time]]
 			- Dialogue
@@ -182,8 +166,6 @@ date-created:: [[2026-10-20 Tue]]
 				- **[[GitP/Acolyte]]** · written — That fits the step-recording rule: a new note replaces the current step, and releasing it advances the recorder. It explains why those steps became C rather than keeping their earlier pitches underneath. [[Microfreak/UG/13 Sequencer/01 Use/03 Record/01 Step Time]]
 				- **codekiln** · 01:07:03 — So now I need, I have this second pattern here. I'm going to turn off recording mode on the micro fake and then go to the second pattern of the first track on the launchpad. Hit play.
 		- ### 01:08:33 Ties, overdubs and a return to scales
-			- ![01:08:33–01:15:59 · synth above commentary](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward___6833-7559.png)
-				- ![Ties, overdubs and a return to scales — mixed chapter audio](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward___6833-7559.mp3)
 			- Filling pattern B with ties and testing real-time MIDI recording, then returning to the question of which notes pass through the Launchpad scale.
 			- [[Microfreak/UG/13 Sequencer/01 Use/03 Record/03 Real Time]] · [[Microfreak/UG/14 Config/02 MIDI Control Center/01 Device Tab]]
 			- Dialogue
@@ -204,8 +186,6 @@ date-created:: [[2026-10-20 Tue]]
 				- **codekiln** · 01:15:08 — Wait, is that working?
 				- **codekiln** · 01:15:30 — All right, what I'm doing, I'm holding down a C major seventh triad. And I'm in the sequencer settings. And I have the first scale activated, which I think is natural minor, if I'm not mistaken.
 		- ### 01:15:59 Arpeggios follow the Launchpad scale
-			- ![01:15:59–01:18:36 · synth above commentary](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward___7559-7836.png)
-				- ![Arpeggios follow the Launchpad scale — mixed chapter audio](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward___7559-7836.mp3)
 			- Comparing played notes, arpeggios and stored sequences while changing the Launchpad scale and root note.
 			- [[Launchpad/UG/09 Sequencer/13 Settings/03 Root and Scale]] · [[Launchpad/UG/09 Sequencer/13 Settings/04 Select Scale]]
 			- Dialogue
@@ -220,8 +200,6 @@ date-created:: [[2026-10-20 Tue]]
 				- **codekiln** · 01:18:28 — I think it's interesting how many of these presets that aren't sequences actually do have sequences recorded in them in the factory presets.
 				- **[[GitP/Acolyte]]** · written — A lead or pad can carry a sequence too. Each MicroFreak preset has pattern A and pattern B available, so the sound category doesn't tell you whether those patterns are empty. Listening to them adds another way to explore a factory sound. [[Microfreak/UG/13 Sequencer/01 Use/01 Select & Play]]
 		- ### 01:18:36 Eonz coda
-			- ![01:18:36–01:31:50 · synth above commentary](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward___7836-9150.png)
-				- ![Eonz coda — mixed chapter audio](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward___7836-9150.mp3)
 			- An extended instrumental closing passage with Eonz.
 			- [[Microfreak/Preset/077 Eonz]] · [[Microfreak/UG/13 Sequencer/01 Use/01 Select & Play]]
 			- Dialogue
