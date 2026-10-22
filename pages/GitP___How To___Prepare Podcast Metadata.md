@@ -6,6 +6,7 @@ see-also:: [[Logseq/Entity/Proxy/Page/mise/Task/sync]], [[GitP/How To/Draft an E
 	- ## Prepare the session
 		- Create or update the recording's episode page under `GitP/A/Session/YY/MM/DD-Day`. Set `logseq-entity:: [[Logseq/Entity/Podcast/Episode/GitP/A]], [[Logseq/Entity/Podcast/Episode]]` in its frontmatter. Link the music-making log and add the supported session details, preset downloads, and recording asset.
 		- Give the page one H1 episode title and a short description as its first child. Embed the MP3 beneath it with `![Episode recording](https://…mp3)`. [[GitP/A/Session/26/10/06-Tue]] is an example.
+		- Write chapter headings as plain timestamps and titles, such as `- ### 14:42 Adapters and input modes`. Keep one full recording on the episode; the published player turns timestamps into seek controls. Separate chapter recordings and waveform embeds are unnecessary.
 		- Follow [[Logseq/Entity/Asset]] for the recording's asset page. The asset page holds file metadata and the audio link; the episode also embeds the MP3 URL directly.
 	- ## Mirror into Gitpa
 		- Run [[Logseq/Entity/Proxy/Page/mise/Task/sync]] from the Gitpa checkout with this garden's checkout path, `--destination gitp-garden`, the session page name, and `--apply`. It copies the session as a [[Logseq/Entity/Proxy/Page]] instance. Sync the episode’s audio and MIDI asset pages separately by their exact page names so Gitpa includes their file metadata.
