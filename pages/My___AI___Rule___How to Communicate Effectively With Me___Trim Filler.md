@@ -1,2 +1,2 @@
 - Omit text that is not on the critical path to communication.
-- Cut repetition and irrelevant detail. Preserve the words that identify the people responsible, describe what happens, and explain the conditions and consequences. Use enough words for the reader to understand the meaning on the first reading.
+- Less is more.

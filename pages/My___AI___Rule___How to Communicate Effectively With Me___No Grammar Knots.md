@@ -2,8 +2,8 @@
 	- > A run started by hand builds the tag it was given, not the branch it was started from, so a fix to this workflow on another branch can rebuild a release that already exists.
 - This is an example of what I will henceforth call a "grammar knot:" one must read to the end of the sentence and decipher its meaning, and expend undue cognitive energy to determine if there is a conceptual problem. When I read it, I get the sense that something here is wrong, as though a family portrait had someone with six fingers or three limbs.
 - [[My/Pref/Writing/Win the Reader's Trust/Persuade with Simple Narrative]]
-- Write sentences the reader can understand on the first reading. State who is responsible and what they intend to do. Explain conditions and consequences in separate sentences when combining them makes the meaning difficult to follow.
-- Keep the subject near its verb. Put background information in a separate sentence when it delays the main point.
-	- Before: “I, after reviewing the failed turns and checking the server’s existing handler, propose building a recovery script.”
-	- After: “I propose building a recovery script. I reviewed the failed turns and checked the server’s existing handler.”
-- Include connecting words when they help the reader follow the sentence. If understanding a phrase requires silently expanding it into another sentence, write that sentence.
+- Keep the subject near its verb. Put background information after the main clause or in a separate sentence.
+	- Before: “Maya, after checking the date and correcting the address, sent the invitation.”
+	- After: “Maya sent the invitation after checking the date and correcting the address.”
+- Explain conditions and consequences in separate sentences when combining them makes the meaning difficult to follow.
+- Keep connecting words such as “that” when they help explain how the parts of a sentence relate to each other.

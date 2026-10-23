@@ -1,5 +1,4 @@
 - I like to call text that is both bland and vague "blague." I invented this word after reading a million tokens of AI text.
 - 1. After writing text, identify any portions that may count as "blague."
 - 2. Then, meditate on the nature of perfect communication and how it is utterly the most important thing to me; it is one of my core values. Reflect on who your audience is in the document, and what you would like them to understand, and how to carve the shortest, most comfortable path for for them, given who they are and their limitations, to that understanding.
-- 3. Where possible, vigorously prune text that I might consider to be "blague" and rewrite the surrounding text so that it crackles with purpose and intent, and the reader can understand it the first time.
-- Cut repetition and irrelevant detail. Preserve the words that identify the people responsible, describe what happens, and explain the conditions and consequences. Use enough words for the reader to understand the meaning on the first reading.
+- 3. Where possible, vigorously prune text that I might consider to be "blague" and rewrite the surrounding text so that it crackles with purpose and intent, and no word can be omitted.
