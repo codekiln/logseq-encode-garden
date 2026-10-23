@@ -1,0 +1,41 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+see-also:: [[Obsidian/Q/How can an Obsidian vault declare the community plugins it depends on and install them by script?]], [[Obsidian/Q/Can a custom Obsidian plugin live in the same repository as its vault and be installed locally on desktop and iPhone?]], [[Obsidian/Plugin/Folder Notes]], [[Obsidian/Plugin/Easy Copy]]
+
+- # Should a team vault in git commit its community plugins' code, or only the list of plugins?
+	- Prompted by `git status` in a work team's knowledge garden on 2026-10-23: Obsidian had updated easy-copy, folder-notes and obsidian-git, so their tracked `manifest.json` files showed as modified and their `main.js`, `styles.css` and `data.json` showed as untracked.
+	- My work gardens follow two rules.
+		- The older gardens ignore `plugins/*/main.js`, `plugins/*/styles.css` and `plugins/*/data.json` and commit `manifest.json`. One of them records why in an OpenSpec spec for a multi-device `.gitignore`, from a 2026-05-27 change about plugin binaries.
+		- The garden template and the gardens made from it commit `manifest.json` and ignore only `workspace.json`, so the plugin code is neither tracked nor ignored.
+	- The people opening these gardens include hackathon attendees using Obsidian for the first time.
+	- ## [[AI Answer]]
+		- **Short answer:** For a team vault that newcomers clone, commit each plugin's whole folder (`manifest.json`, `main.js`, `styles.css`) and decide `data.json` plugin by plugin. Committing only `manifest.json` records versions but installs nothing, so a fresh clone opens with plugins turned on that cannot load.
+		- ### What Obsidian does with a fresh clone
+			- Obsidian does not download a plugin that `community-plugins.json` lists but `.obsidian/plugins/<id>/` lacks. Users in [A single button click to reinstall all community plugins after cloning](https://forum.obsidian.md/t/a-single-button-click-to-reinstall-all-community-plugins-after-cloning-pulling-git-repository-that-ignores-plugins/100826) report that none of the plugins are installed after a clone. The thread runs from May 2025 to Aug 2026 and has no reply from Obsidian staff.
+			- The older gardens' design says `main.js` and `styles.css` are files "that Obsidian re-downloads when plugins are installed". That holds only when someone installs the plugin by hand; nothing re-downloads them on clone.
+			- When a vault arrives with plugin code present, Obsidian asks once whether to trust the author and turn on community plugins, or open the vault in restricted mode. See [Plugin security](https://obsidian.md/help/plugin-security). Restricted mode leaves the files on disk and ignores them.
+			- Obsidian Sync handles this by syncing the installed plugins themselves, behind the "Active community plugin list" and "Installed community plugin list" options in [Sync settings](https://obsidian.md/help/sync/settings). Sync copies plugin code between devices; it does not keep just a list and fetch the code.
+		- ### What the public guidance says
+			- [Obsidian Git's Tips and Tricks](https://publish.obsidian.md/git-doc/Tips-and-Tricks) gives three `.gitignore` choices: all of `.obsidian/`, only `.obsidian/plugins` (to keep plugin settings that may hold secrets out of git), or only `workspace.json`. It does not split `main.js` from `manifest.json`.
+			- In [What should I gitignore for my vault's GitHub repository?](https://forum.obsidian.md/t/what-should-i-gitignore-for-my-vaults-github-repository/101077) (May 2025), the replies track plugin folders by default and ignore specific noisy or oversized files such as `workspace.json` and large index files.
+			- I found no source that recommends the manifest-only rule. It appears to come from treating `main.js` as build output, which it is for the plugin's author but not for the vault, where it is the installed program.
+		- ### The three rules compared
+			- **Commit whole plugin folders.**
+				- A clone works on desktop and iPhone after one trust prompt, with no install step to document.
+				- Everyone runs the same plugin versions, and an update shows up as a diff someone reviews before it reaches the team.
+				- Costs: about 1.2 MB for the three plugins these gardens use, a large diff on each update, and one person's update reaches everyone on their next pull.
+			- **Commit `manifest.json` only (the older gardens' rule).**
+				- Keeps plugin code out of the repo.
+				- A clone opens with plugins listed as on but not installed. Each person must install them from the Community plugins browser, run `obsidian plugin:install` (Obsidian 1.12.7+, desktop, after turning on the CLI in Settings), or run a script against the plugin registry.
+				- The committed manifest records the version of whoever last updated, not the version anyone has installed. The 2026-10-23 diff was exactly this: three manifests changed by Obsidian's updater, with nothing that would install those versions anywhere else.
+			- **Ignore `.obsidian/plugins` and ship a bootstrap script.**
+				- Same newcomer cost as manifest-only, but with no misleading version record. Approach 4 in [[Obsidian/Q/How can an Obsidian vault declare the community plugins it depends on and install them by script?]] is such a script, and it can pin versions.
+				- [Community Install Manager](https://github.com/skilletron/obsidian-automatic-installation-of-plugins), now in the community plugin directory, installs plugins and settings from two JSON files, but it must itself be installed first.
+		- ### `data.json` is plugin settings, so decide per plugin
+			- The older gardens' design ignores all `data.json` as "runtime state" while also saying "plugin configuration should be shared". `data.json` is that configuration.
+			- folder-notes' `data.json` holds `storageLocation: insideFolder` and `folderNoteName: {{folder_name}}`, which implement the garden's folder-note naming rule. Commit it.
+			- obsidian-git's `data.json` holds per-person choices such as auto-commit intervals, and some git plugins keep tokens there. Ignore it, along with `obsidian_askpass.sh`.
+			- A `.gitignore` that ignores `plugins/*/data.json` and adds `!plugins/folder-notes/data.json` expresses this.
+		- ### Watch for with whole-folder commits
+			- The older gardens dropped plugin code after obsidian-git's auto-backup committed its own bundle (commit `d979078`). With whole-folder commits that is the intended result, but auto-backup will also commit someone's plugin update without review. Turn off auto-commit in shared gardens, or review `.obsidian/plugins` diffs on pull requests.
+			- Committing plugin code means committing third-party JavaScript that runs with full access to each person's machine. The trust prompt is the same either way; committing it adds a pinned, reviewable version.
+		- **Unverified:** I did not open a fresh clone of a manifest-only garden to confirm the exact message Obsidian shows for an enabled plugin with no `main.js`, and I did not test the `!plugins/folder-notes/data.json` exception against the template's other ignore rules.
