@@ -11,8 +11,10 @@ see-also:: [[GitP/House/Back]], [[GitP/How To/Prepare Podcast Metadata]]
 			- The AI creates the session episode page using [[Logseq/Entity/Podcast/Episode]], linking the music-making log and its project, recording, and other source pointers.
 			- The AI converts the exported WAV to an MP3, uploads it to Backblaze B2 at a stable, readable URL, and verifies that the uploaded file matches the prepared MP3.
 		- ### MicroFreak presets
-			- The AI identifies the saved MicroFreak presets used in the episode, connects to the instrument, backs them up, renames them for the episode, and downloads the renamed presets.
-			- The AI uploads the presets to B2 and adds download links to the episode page. If the available notes and MIDI cannot identify the saved slots, the AI asks for that specific missing information before changing device presets.
+			- Every saved preset referenced by the session gets detailed notes upstream, including presets already filed in the garden and sounds used briefly. Header metadata or an empty Notes section is a starting point.
+			- The notes explain the saved export and its provenance, oscillator controls, filter, envelopes, LFO, modulation matrix, and performance context. Supported units and cited sources accompany the settings; unknown conversions and session-time changes remain explicit.
+			- Existing archived exports can establish the saved baseline without changing the instrument. A factory match does not establish that the session used those exact settings. An unidentified initialized patch stays a plain description rather than an invented saved preset.
+			- When a new capture is needed and authorized, protect unsaved sounds and back up the slot before any rename. Upload prepared exports and add their download links. Missing slot identification leaves the instrument unchanged.
 		- ### Session details
 			- The AI reads the captured MIDI, the music-making log, and the MicroFreak and Launchpad manuals to explain what happened in the session.
 			- It correlates recorded MIDI CC messages with the MicroFreak manual and reads the downloaded presets for oscillator type, preset category, and other supported details. The episode page links the sources for those details.
@@ -22,7 +24,8 @@ see-also:: [[GitP/House/Back]], [[GitP/How To/Prepare Podcast Metadata]]
 			- Upload the MIDI and add a direct download link to the episode so listeners can import it into a DAW.
 			- MIDI analysis in episode notes describes how controls vary between chapters.
 		- ### Publication PR
-			- The AI fills in the episode's MP3 and preset links in this garden, then mirrors those pages into Gitpa and prepares a publication PR.
+			- Run `mise run gitpa:preset:audit --episode 'GitP/A/Session/YY/MM/DD-Day' --check` from this garden to find missing preset research before publication. The check reports recorded evidence and coverage; the notes still need review for accuracy. `--all` reports historical gaps without blocking site deployment.
+			- The AI fills in the episode's MP3 and preset links in this garden, then mirrors the episode, every referenced preset and relevant asset pages into Gitpa and prepares a publication PR.
 			- The PR includes a direct link to the one episode MP3, its episode title, and a short description so the recording is easy to find and approve.
 	- ## Check public media
 		- GitP uses the public S3 download endpoint `https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/<page-derived filename>`. [Backblaze supports bucket names in the URL path](https://www.backblaze.com/docs/en/cloud-storage-call-the-s3-compatible-api).
