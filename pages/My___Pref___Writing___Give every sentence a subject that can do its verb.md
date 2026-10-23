@@ -11,7 +11,7 @@ see-also:: [[My/Pref/Writing/Be specific and explicit]], [[My/Pref/Writing/Use P
 			- > "A ticket whose own files run nothing" is one of the worst starts to a sentence I've ever read. My eyes are bleeding.
 			- > terrible, terrible writing. goes on the wall of shame ... I'm already lost.
 		- When the subject cannot act, I have to work out who acted, and the writer already knew. That is the same work [[My/AI/Rule/How to Communicate Effectively With Me/Never make the reader resolve a reference]] asks the writer to do once so I never do it.
-		- An impossible subject also hides the actor. Let a "release" do the building and nobody has to say whether a person, a pipeline, or a scheduled job built anything, so I cannot check the sentence against the world.
+		- When a sentence describes an automatic build, say that the build happens automatically. When a sentence describes a deployment performed by people, name the people responsible.
 	- ## Name the people responsible
 		- A person: a developer, a tester, a reviewer, me.
 		- A group of people: the support team, the developers, the reviewers.
