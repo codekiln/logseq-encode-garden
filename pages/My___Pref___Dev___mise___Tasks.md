@@ -1,5 +1,6 @@
 - strongly prefer [[mise/Task/File]] over [[mise/Task/TOML]]
 	- put tasks in `(~/.config/mise/)tasks/<namespace>/<subnamespace>/<executable_name>`, almost never inline TOML `[tasks."..."]` entries in [[mise/Config/mise.toml]], unless they are one-liners.
+	- don't make a `scripts/` folder. When a task needs a real program, write the task file itself in that language, such as a [[Python]] task with a `#!/usr/bin/env -S uv run --script` shebang and inline script metadata, rather than a shell task that calls a script kept elsewhere.
 - be sure to use [[usageCLI]] syntax for defining autocompletion parameters
 	- Always annotate file tasks with `#MISE description="..."` and `#USAGE` directives (flags, args) for autocompletion via usageCLI. See [mise docs: file tasks](https://mise.jdx.dev/tasks/file-tasks.html) and [mise docs: task arguments](https://mise.jdx.dev/tasks/task-arguments.html).
 	- install the `usage` CLI globally so it is available on `PATH` — `mise use -g usage`. It is not required to *run* tasks, but completions of `#USAGE`-annotated tasks only work when `usage` is installed. See [mise docs: autocompletion](https://mise.jdx.dev/installing-mise.html#autocompletion).

@@ -7,6 +7,8 @@ see-also:: [[Obsidian/Q/How can an Obsidian vault declare the community plugins 
 		- The older gardens ignore `plugins/*/main.js`, `plugins/*/styles.css` and `plugins/*/data.json` and commit `manifest.json`. One of them records why in an OpenSpec spec for a multi-device `.gitignore`, from a 2026-05-27 change about plugin binaries.
 		- The garden template and the gardens made from it commit `manifest.json` and ignore only `workspace.json`, so the plugin code is neither tracked nor ignored.
 	- The people opening these gardens include hackathon attendees using Obsidian for the first time.
+	- ## Decision
+		- Commit only the list of plugins and install the code with a mise file task, because plugin version bumps are frequent and not worth tracking. See [[My/Pref/Dev/Tool/Obsidian/Plugins in Git]].
 	- ## [[AI Answer]]
 		- **Short answer:** For a team vault that newcomers clone, commit each plugin's whole folder (`manifest.json`, `main.js`, `styles.css`) and decide `data.json` plugin by plugin. Committing only `manifest.json` records versions but installs nothing, so a fresh clone opens with plugins turned on that cannot load.
 		- ### What Obsidian does with a fresh clone
