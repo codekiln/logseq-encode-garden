@@ -2,3 +2,8 @@
 	- > A run started by hand builds the tag it was given, not the branch it was started from, so a fix to this workflow on another branch can rebuild a release that already exists.
 - This is an example of what I will henceforth call a "grammar knot:" one must read to the end of the sentence and decipher its meaning, and expend undue cognitive energy to determine if there is a conceptual problem. When I read it, I get the sense that something here is wrong, as though a family portrait had someone with six fingers or three limbs.
 - [[My/Pref/Writing/Win the Reader's Trust/Persuade with Simple Narrative]]
+- Keep the subject near its verb. Put background information after the main clause or in a separate sentence.
+	- Before: “Maya, after checking the date and correcting the address, sent the invitation.”
+	- After: “Maya sent the invitation after checking the date and correcting the address.”
+- Explain conditions and consequences in separate sentences when combining them makes the meaning difficult to follow.
+- Keep connecting words such as “that” when they help explain how the parts of a sentence relate to each other.
