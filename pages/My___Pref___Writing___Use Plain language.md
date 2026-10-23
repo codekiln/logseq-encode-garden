@@ -12,7 +12,7 @@ see-also:: [[My/Principle/Dispel Ambiguity]]
 		- Put the main point first.
 		- Prefer common words or phrases over specialized ones; see [[My/Pref/Writing/Use the simpler word]].
 		- If two words together feel rare enough that a reader wonders whether you coined them on the spot, revise the phrase.
-		- Use active voice when naming the people responsible. Use passive voice when it helps explain automated behavior; see [[My/Pref/Writing/Give every sentence a subject that can do its verb]].
+		- Use active voice. Name the person, group of people, program, or command that performs the action; see [[My/Pref/Writing/Give every sentence a subject that can do its verb]].
 		- Spell out an acronym before you abbreviate it.
 		- Order the information the way the reader needs it, not the way you discovered it.
 		- Cut repetition and irrelevant detail. Preserve the words that identify the people responsible, describe what happens, and explain the conditions and consequences. Use enough words for the reader to understand the meaning on the first reading.

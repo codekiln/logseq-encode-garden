@@ -11,21 +11,21 @@ see-also:: [[My/Pref/Writing/Be specific and explicit]], [[My/Pref/Writing/Use P
 			- > "A ticket whose own files run nothing" is one of the worst starts to a sentence I've ever read. My eyes are bleeding.
 			- > terrible, terrible writing. goes on the wall of shame ... I'm already lost.
 		- When the subject cannot act, I have to work out who acted, and the writer already knew. That is the same work [[My/AI/Rule/How to Communicate Effectively With Me/Never make the reader resolve a reference]] asks the writer to do once so I never do it.
-		- When a sentence describes an automatic build, say that the build happens automatically. When a sentence describes a deployment performed by people, name the people responsible.
+		- For automated work, name the program or command that performs the operation. For work performed by people, name the people responsible.
 	- ## Name the people responsible
 		- A person: a developer, a tester, a reviewer, me.
 		- A group of people: the support team, the developers, the reviewers.
 		- Files, directories, tickets, proposals, and system components cannot intend, propose, decide, or approve. Name the people who do.
 	- ## Describe automated behavior
-		- Explain what happens automatically without treating system components as people responsible for the work. Passive voice is appropriate here.
-		- “The finder decides which channels need recovery” → “Channels that meet these conditions are included in the recovery list.” State the actual conditions in the surrounding text.
+		- Name the program or command and the operation it performs: “The build script builds an image.” Use a verb that describes the actual operation.
+		- “The finder decides which channels need recovery” → “The recovery script lists channels that meet these conditions.” State the actual conditions in the surrounding text.
 	- ## A coined noun used as a name is the same fault
 		- > You keep using "The triage" as though it were a proper noun like the title of a movie. The reader has no idea what you are talking about with The Triage. Just say what you mean, don't invent bigrams to stand in the way.
 		- > there is no "triage" and it's not doing any "asking"
 		- A phrase invented inside the document picks up capital letters and then a verb. Now it is both a thing I have never heard of and an actor that cannot act. See [[My/AI/Rule/How to Communicate Effectively With Me/Do not coin phrases unless asked]].
 	- ## Examples
 		- > A release builds and deploys the whole service.
-			- → An image of the whole service is built automatically. The DevOps team deploys it.
+			- → The build script builds an image of the whole service. The DevOps team deploys the image.
 		- > The files a ticket touched say what that ticket changed in the build.
 			- → Read a developer's commits to see which files they changed.
 		- > A ticket that changed no file that runs while serving a request says so in its QA field.
