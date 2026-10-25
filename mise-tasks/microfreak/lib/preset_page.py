@@ -150,7 +150,7 @@ NAMES = {'Kbd.Glide': 'Glide', 'Kbd.Octave': 'Octave', 'VCF.Type': 'Filter type'
          'LFO.Div': 'LFO sync division code', 'Gen.Parafon': 'Paraphonic', 'Arp.Enable': 'Arp',
          'Arp.SeqOn': 'Seq', 'Arp.Rate': 'Arp/Seq rate', 'VCO.Type': 'Oscillator type'}
 # More differences than this means the preset was not made from that factory sound.
-NEAREST_LIMIT = 20
+NEAREST_LIMIT = 12
 TOLERANCE = 0.0005
 
 
@@ -350,7 +350,9 @@ def customized(interp, base, address, linked=True):
     lines = []
     for name in CUSTOMIZED:
         a, b = mine.get(name), theirs.get(name)
-        if not differs(a, b):
+        if not differs(a, b) or 'raw_only' in (a and a['kind'], b and b['kind']):
+            continue
+        if name.startswith('VCO.Param') and model != base_model:
             continue
         if name.startswith('VCO.Param'):
             position = int(name[-1])
@@ -431,7 +433,11 @@ def customized_section(interp, factory, address, garden, linked=True):
     if count > NEAREST_LIMIT:
         return [f'No factory preset is close. The nearest factory payload, {shown} ({source}), '
                 f'differs in {count} controls.']
-    lines = [f'Compared with the nearest factory payload, {shown} ({source}); {count} controls differ.']
+    if count == 0:
+        return [f'Every control listed on this page matches the nearest factory payload, {shown} ({source}); '
+                'the saved payload differs only in settings these sections do not show.']
+    differ = '1 control differs' if count == 1 else f'{count} controls differ'
+    lines = [f'Compared with the nearest factory payload, {shown} ({source}); {differ}.']
     return lines + customized(interp, base, address, linked)
 
 
@@ -573,7 +579,8 @@ def run_slot(args, slot, address, factory):
             return dict(plan, skip='second read missing or different')
         title = page.stem.replace('___', '/')
         asset_page, filename, url = asset_names(title, args.date)
-        handwritten = len(body) > 1 or (body and body[0] != '- # Notes')
+        stub = {'- # Notes', f'- # {meta["name"]}', '-', ''}
+        handwritten = any(line not in stub for line in body)
         origin = 'Factory' if is_factory else 'Custom'
         frontmatter_set(new_front, PREFIX + 'origin', ORIGIN.format(origin))
         model = interp['oscillator']['model'] if interp['oscillator'] else None
@@ -586,6 +593,9 @@ def run_slot(args, slot, address, factory):
         asset = (asset_page, asset_text(meta['name'], slot, url, meta['raw_sha256'], args.date), filename, binary)
         if handwritten:
             plan['action'] = 'frontmatter'
+            if not is_factory and not any(t == 'Customized controls' for t, _, _ in section_spans(body)):
+                new_body = body + render([('Customized controls', customized_section(interp, factory, address, args.garden))])
+                plan['action'] = 'frontmatter and customized controls'
         else:
             if is_factory:
                 matches = ', '.join(sorted({e[0] for s, e in factory.items() if s == info['payload_sha256']}))
