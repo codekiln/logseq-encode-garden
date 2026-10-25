@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#MISE description="Write decoded settings, linked to the panel controls, onto preset pages from saved device reads"
+#USAGE flag "--reads <dir>" help="First pass of microfreak:download reads"
+#USAGE flag "--reads2 <dir>" help="Second pass; a slot is backed up only when both reads match"
+#USAGE flag "--live-map <file>" help="Freakout's microfreak_live_map.py, for Assign destinations"
+#USAGE flag "--slots <range>" help="Slot range, e.g. 1-400"
+#USAGE flag "--date <yyyy-mm-dd>" help="Read date for new backups (default today)"
+#USAGE flag "--backup" help="Also add file, digest and provenance to pages without a device-read file"
+#USAGE flag "--upload-dir <dir>" help="Copy new backup files here for upload"
+#USAGE flag "--apply" help="Write pages; without it, only print the plan"
+set -euo pipefail
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+args=(--garden "$root")
+[[ -n "${usage_reads:-}" ]] && args+=(--reads "$usage_reads")
+[[ -n "${usage_reads2:-}" ]] && args+=(--reads2 "$usage_reads2")
+[[ -n "${usage_live_map:-}" ]] && args+=(--live-map "$usage_live_map")
+[[ -n "${usage_slots:-}" ]] && args+=(--slots "$usage_slots")
+[[ -n "${usage_date:-}" ]] && args+=(--date "$usage_date")
+[[ "${usage_backup:-false}" == true ]] && args+=(--backup)
+[[ -n "${usage_upload_dir:-}" ]] && args+=(--upload-dir "$usage_upload_dir")
+[[ "${usage_apply:-false}" == true ]] && args+=(--apply)
+exec python3 "$root/mise-tasks/microfreak/lib/preset_page.py" "${args[@]}"
