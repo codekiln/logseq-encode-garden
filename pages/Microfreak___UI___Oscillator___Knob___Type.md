@@ -1,0 +1,34 @@
+logseq-entity:: [[Logseq/Entity/UI/Control]]
+up:: [[Microfreak/UI/Oscillator]]
+
+- # Type knob
+	- Selects the oscillator model. Type can be modulated by the LFO, the envelopes, keyboard pressure, the sequencer and the arpeggiator.
+	- **Behavior** — selector.
+	- ## Settings
+		- [[Microfreak/UI/Oscillator/Knob/Type/BasicWaves]]
+		- [[Microfreak/UI/Oscillator/Knob/Type/SuperWave]]
+		- [[Microfreak/UI/Oscillator/Knob/Type/Wavetable]]
+		- [[Microfreak/UI/Oscillator/Knob/Type/Harmo]]
+		- [[Microfreak/UI/Oscillator/Knob/Type/KarplusStr]]
+		- [[Microfreak/UI/Oscillator/Knob/Type/VAnalog]]
+		- [[Microfreak/UI/Oscillator/Knob/Type/Waveshaper]]
+		- [[Microfreak/UI/Oscillator/Knob/Type/Two Op.FM]]
+		- [[Microfreak/UI/Oscillator/Knob/Type/Formant]]
+		- [[Microfreak/UI/Oscillator/Knob/Type/Chords]]
+		- [[Microfreak/UI/Oscillator/Knob/Type/Speech]]
+		- [[Microfreak/UI/Oscillator/Knob/Type/Modal]]
+		- [[Microfreak/UI/Oscillator/Knob/Type/Noise]]
+		- [[Microfreak/UI/Oscillator/Knob/Type/BASS]]
+		- [[Microfreak/UI/Oscillator/Knob/Type/SAWX]]
+		- [[Microfreak/UI/Oscillator/Knob/Type/HARM]]
+		- [[Microfreak/UI/Oscillator/Knob/Type/WaveUser]]
+		- [[Microfreak/UI/Oscillator/Knob/Type/Sample]]
+		- [[Microfreak/UI/Oscillator/Knob/Type/Scan Grains]]
+		- [[Microfreak/UI/Oscillator/Knob/Type/Cloud Grains]]
+		- [[Microfreak/UI/Oscillator/Knob/Type/Hit Grains]]
+		- [[Microfreak/UI/Oscillator/Knob/Type/Vocoder]]
+	- ## Remote control
+		- MIDI CC 9, per [[Microfreak/UG/21 Appendix D - CC Values]].
+	- ## Source
+		- [[Microfreak/UG/06 Dig Osc/01 as Soundgen]]
+		- [[Microfreak/UG/06 Dig Osc/02 Param Controls]]
