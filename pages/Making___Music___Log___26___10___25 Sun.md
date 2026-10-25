@@ -72,7 +72,11 @@ prev:: [[Making/Music/Log/26/10/24-Sat]]
 				- discrete rotary encoders
 				- faders
 				- etc
-	- ## [[My Notes]]
-		- ### listening through [[GitP/A/Session/26/10/24-Sat]]
+			- DOING drawing from [[Microfreak/UG/03 Overview/01 Front Panel]],  
+			  id:: 6addc861-d67d-4a8d-857c-2567919824ed
+			   create [[Microfreak/UI/Front/Row/Top/01 Matrix/Button/Assn/1]], [[Microfreak/UI/Front/Row/Top/01 Matrix/Knob]], [[Microfreak/UI/Front/Row/Top/02 Paraphonic Button]], [[Microfreak/UI/Front/Row/Top/02 Paraphonic Button/Hold]], [[Microfreak/UI/Front/Row/Top/02 Paraphonic Button/Hold/Shift]] [[Microfreak/UI/Front/Row/Top/03 Panel Button]], [[Microfreak/UI/Front/Row/Top/04 OLED]], [[Microfreak/UI/Front/Row/Top/05 Preset Knob]], [[Microfreak/UI/Front/Row/Top/04 OLED]], [[Microfreak/UI/Front/Row/Top/06 Save Button/Hold]], etc and other sections of the UI, so every button and knob is appropriately modeled in the garden
 			-
+	- ## [[My Notes]]
+		- listened through [[GitP/A/Session/26/10/24-Sat]]
 		-
+-
