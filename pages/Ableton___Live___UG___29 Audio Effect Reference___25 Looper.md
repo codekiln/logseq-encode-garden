@@ -1,0 +1,46 @@
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
+up:: [[Ableton/Live/UG/29 Audio Effect Reference]]
+prev:: [[Ableton/Live/UG/29 Audio Effect Reference/24 Limiter]]
+next:: [[Ableton/Live/UG/29 Audio Effect Reference/26 Multiband Dynamics]]
+- # [29.25 Looper](https://www.ableton.com/en/live-manual/12/live-audio-effect-reference/#looper)
+	- ![The Looper Effect](https://ableton-production.imgix.net/live-manual/12/LooperL12.png?auto=&w=320)
+	- Looper is modeled on hardware looping pedals: record audio and overdub endlessly in sync with the Set. With the Set stopped, it can detect the tempo of what was played and set Live's tempo, or fit a recording to a chosen number of bars. Audio can be dragged in as a bed for overdubs, or out as a new clip.
+	- The large display turns red while recording, then shows position and loop length in bars and beats.
+	- Transport buttons:
+		- **Record** — records until another button is pressed, replacing what was there
+		- **Overdub** — adds layers the length of the first recording
+		- **Play** — plays the buffer without recording
+		- **Stop** — stops
+		- With Live playing, Looper behaves like a clip and follows launch **Quantization**. With Live stopped, buttons act immediately.
+	- **Clear** — erases the buffer. In Overdub with Live playing, tempo and length are kept; otherwise they reset.
+	- **Undo** — removes everything overdubbed since Overdub was last turned on, keeping earlier passes; it then becomes **Redo**.
+	- The large **Multi-Purpose Transport Button** below them:
+		- empty buffer — click to record
+		- recording, overdubbing or stopped — click to play
+		- playing — click to overdub; clicks then switch between overdub and play
+		- double-click stops; hold for two seconds in play to Undo/Redo; hold for two seconds while stopped to clear
+		- ![Diagram of Looper’s Multi-Purpose Transport Button Behavior](https://ableton-production.imgix.net/live-manual/12/LooperPedalStates.png?auto=&w=320)
+		- It is built for a MIDI footswitch: map it in MIDI Map Mode — [[Ableton/Live/UG/34 MIDI and Key Remote/02 The Mapping Browser/01 Assigning MIDI Remote Control]].
+	- **Tempo Control**:
+		- **None** — Looper keeps its own tempo
+		- **Follow song tempo** — playback speed follows Live's tempo
+		- **Set & Follow song tempo** — Live's tempo is set from the recording, then Looper follows later tempo changes
+	- **Record Length**:
+		- Live playing — "x bars" records until another button is pressed; a fixed length records that long, then switches to Play or Overdub (button next to the chooser)
+		- Live stopped — "x bars" guesses the tempo when Overdub, Play or Stop is pressed, possibly at double or half speed; a fixed length sets the tempo so the recording fits
+	- **Song Control**:
+		- **None** — Looper does not touch Live's transport
+		- **Start Song** — Play or Overdub starts Live; Stop does not stop it
+		- **Start & Stop Song** — Looper starts and stops Live
+		- Starting Live from Looper also lines up apps connected through Link.
+	- **×2** doubles the buffer, copying what is there — record one-bar ideas, then layer two-bar ones. **÷2** halves it, keeping the half that is playing.
+	- **Drag me!** — drag the buffer to the browser or a track as a new clip (Warp Mode Re-Pitch), or drag an audio file in to replace the buffer.
+	- **Speed** — playback speed and pitch; the arrow buttons jump an octave up or down. They follow Quantization.
+	- **Reverse** — plays the existing material backward; overdubs made while reversed play forward, and swap when Reverse is turned off. Follows Quantization.
+	- **Feedback** — how much of the loop survives each overdub pass: 100% never fades, 50% halves each pass. Changes apply from the next pass; no effect in Play.
+	- **Input -> Output** monitoring:
+		- **Always** — input always heard; usual on a single track
+		- **Never** — input never heard; usual on a return track fed by sends
+		- **Rec/OVR** — input heard only while recording or overdubbing; for several tracks each with its own Looper and footswitch
+		- **Rec/OVR/Stop** — input heard except in Play, like Beat Repeat's Insert mode — [[Ableton/Live/UG/29 Audio Effect Reference/05 Beat Repeat]]
+	- {{embed [[Ableton/Live/UG/29 Audio Effect Reference/25 Looper/01 Feedback Routing]]}}
