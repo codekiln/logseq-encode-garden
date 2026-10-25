@@ -1,0 +1,20 @@
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]]
+up:: [[Ableton/Live/UG]]
+prev:: [[Ableton/Live/UG/30 MIDI Effect Reference]]
+next:: [[Ableton/Live/UG/32 Max for Live]]
+
+- # [31. Live Instrument Reference](https://www.ableton.com/en/live-manual/12/live-instrument-reference/)
+	- A reference entry for each built-in instrument, such as Analog, Drift, Operator, Sampler, Simpler and Wavetable.
+	- [[Ableton/Live/UG/31 Instrument Reference/01 Analog]]
+	- [[Ableton/Live/UG/31 Instrument Reference/02 Collision]]
+	- [[Ableton/Live/UG/31 Instrument Reference/03 Drift]]
+	- [[Ableton/Live/UG/31 Instrument Reference/04 Drum Sampler]]
+	- [[Ableton/Live/UG/31 Instrument Reference/05 Electric]]
+	- [[Ableton/Live/UG/31 Instrument Reference/06 External Instrument]]
+	- [[Ableton/Live/UG/31 Instrument Reference/07 Impulse]]
+	- [[Ableton/Live/UG/31 Instrument Reference/08 Meld]]
+	- [[Ableton/Live/UG/31 Instrument Reference/09 Operator]]
+	- [[Ableton/Live/UG/31 Instrument Reference/10 Sampler]]
+	- [[Ableton/Live/UG/31 Instrument Reference/11 Simpler]]
+	- [[Ableton/Live/UG/31 Instrument Reference/12 Tension]]
+	- [[Ableton/Live/UG/31 Instrument Reference/13 Wavetable]]

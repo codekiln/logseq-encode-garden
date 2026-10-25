@@ -8,3 +8,4 @@
 - [[Ableton/Manual/29/02/01 Assigning MIDI Remote Control]]
 	- ((674b5339-1370-4924-8772-3dcf60a4b1f7))
 -
+- Live 12 manual: [[Ableton/Live/UG]]
