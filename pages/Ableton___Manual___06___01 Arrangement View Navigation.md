@@ -58,3 +58,4 @@
 						- This is the `➔╌` button in top of Arrangement View in the Transport
 						- Activate with `Cmd+Shift+F` #Keyshort
 						- This is useful to turn off when trying to zero in on a particular sound. Pressing `Space` will replay from the last start position of the playhead.
+- Live 12 manual: [[Ableton/Live/UG/06 Arrangement View/02 Navigation and Zooming]]
