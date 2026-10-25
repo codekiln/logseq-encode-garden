@@ -1,0 +1,14 @@
+- # Arrangement
+	- [[Launchpad]] Custom Mode **1** for controlling Arrangement Record in [[Ableton/Live]].
+	- ## Pad
+		- Position: top-left pad of the main grid (row 1, column 1).
+		- Message: MIDI CC **119**, channel **16**.
+		- Behaviour: **Toggle**; on value **127**, off value **0**.
+		- Pad colour: red; on colour: green.
+		- [Arrangement Record Custom Mode in Novation Components](https://components.novationmusic.com/launchpad-pro-mk3/custom-modes/780760).
+	- ## Live mapping
+		- Enable Remote for the Launchpad MIDI input in Live's MIDI preferences.
+		- Enter MIDI mapping mode with `Cmd+M`, select the Arrangement Record circle beside Stop, then press the top-left pad in Custom Mode 1.
+		- Leave MIDI mapping mode with `Cmd+M`.
+		- Save the mapping in the `GitP.Usb.Novation and micFreak` template and set it as the default Live Set.
+		- Return to Session mode to launch clips after enabling Arrangement Record.

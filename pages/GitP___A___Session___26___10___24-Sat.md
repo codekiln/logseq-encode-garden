@@ -3,6 +3,7 @@ logseq-entity:: [[Logseq/Entity/Podcast/Episode/GitP/A]], [[Logseq/Entity/Podcas
 public:: true
 created-by:: [[Person/codekiln]]
 date-created:: [[2026-10-24 Sat]]
+
 - # The Unstable over USB
 	- A Ghost in the Patch session recorded at the library with MicroFreak preset 151 The Unstable, a slow Launchpad sequence and USB-only MIDI: Ableton Live sends the clock, Launchpad pad pressure drives the pad, and nothing needed a MIDI panic.
 	- ![Episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___Audio___Full.mp3)
@@ -29,11 +30,15 @@ date-created:: [[2026-10-24 Sat]]
 			- A short remark from the end of the session opens the episode: the first use of a Launchpad custom mode to arm Arrangement Record.
 			- [[Launchpad/Custom/Mode/1 Arrangement]]
 			- Transcript
-			  collapsed:: true
-				- **codekiln** · 00:00:02 — All right, that was cool. Hey, by the way, this is also the first time when I used my Novation custom mode to be able to enable the recording. Unfortunately I think it's inverted from what I want. I think it's a bright green when I'm recording and then if I…
+				- **codekiln** · 00:00:02 — All right, that was cool. Hey, by the way, this is also the first time when I used my [[Launchpad/UG/08 Custom Modes]] to be able to enable the recording. Unfortunately I think it's inverted from what I want. I think it's a bright green when I'm recording and then if I…
+			- [[My Notes]]
+				- This part was actually from the end of the recording session. At the end, I stopped the recording, then used the custom mode MIDI toggle button mapped to the [[Ableton/Live/Mode/Arrangement]] record button
+					- TODO [[Ghost Gardener]] please create a namespace hierarchy under [[Ableton/Live/Mode/Arrangement]] which will map out all the parts of arrangement mode and give all the buttons and settings dedicated pages that autocomplete in Logseq
 		- ### 00:22 The Unstable over a slow sequence
 			- Launchpad sequencer track 1, set to its slowest rate, plays The Unstable. The Wave and Shape knobs sweep between triangle and saw and between narrow pulse and square, resonance rises a little at 01:27, and cycling envelope amount goes up to about 95 at 01:36. From 02:00, cycling envelope rise, fall and hold change.
 			- [[Launchpad/UG/09 Sequencer/05 Pattern Settings/01 Sync Rate]] · [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope]] · [[Microfreak/Preset/151 The Unstable]]
+			- #### [[My Notes]]
+				- While it wasn't intentional, I like how it immediately jumps to this moody section. My modifications
 		- ### 03:00 Oscillator type and the main envelope
 			- Oscillator type (CC 9) changes several times between 03:04 and 03:21 and ends where it started. At 04:14, sustain (CC 29) comes down from near maximum while attack (CC 105) and decay (CC 106) change, so the swelling pad gets shorter.
 			- [[Microfreak/UG/06 Dig Osc/03 Types]] · [[Microfreak/UG/09 Envelope Gen/03 Envelope Stages]]
