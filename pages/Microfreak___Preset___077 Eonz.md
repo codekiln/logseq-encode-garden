@@ -10,6 +10,7 @@ next:: [[Microfreak/Preset/078 A Juno Vibe]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]]
 preset-synth-file:: [Eonz — September 28 MCC export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Preset___Eonz-Archived-2026-09-28.mbp)
 preset-synth-file-sha256:: 919e785b1427854c339994cdaf9d1bf51404801d6905d5ce5edfe1de81c67b61
+preset-synth-microfreak-parameter-payload-sha256:: 6aa8faf909f7ae64fbe6e2336e3444982f25128c83353d6f09f3e4ea053de8ad
 - # Notes
 	- SuperWave lead with expression-controlled waveform selection and note length.
 	- ## Saved export and provenance
