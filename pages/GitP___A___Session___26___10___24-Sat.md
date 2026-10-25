@@ -21,7 +21,7 @@ date-created:: [[2026-10-24 Sat]]
 		- [Download the slot 151 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___Preset___The-Unstable-Live-2026-10-24.bin)
 	- ## MIDI
 		- [Download the session MIDI](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___MIDI___Session.mid) · [[GitP/A/Session/26/10/24-Sat/Asset/MIDI/Session/mid]]
-		- Times below follow the recording. Control names come from [[Microfreak/UG/21 Appendix D - CC Values]]. With V.Analog, the panel's Wave knob (CC 10) sets Detune, the Timbre knob (CC 12) sets Shape, and the Shape knob (CC 13) sets Wave. [[Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog]]
+		- Times below follow the recording. Control names come from [[Microfreak/UG/21 Appendix D - CC Values]]. With [V.Analog]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog]]), the panel's [Wave knob]([[Microfreak/UI/Oscillator/Knob/Wave]]) (CC 10) sets [Detune]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Detune]]), the [Timbre knob]([[Microfreak/UI/Oscillator/Knob/Timbre]]) (CC 12) sets [Shape]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Shape]]), and the [Shape knob]([[Microfreak/UI/Oscillator/Knob/Shape]]) (CC 13) sets [Wave]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Wave]]). [[Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog]]
 		  id:: 6add3dae-8dc8-4156-a5ea-23f7290d9173
 	- ## Voices
 		- **codekiln** is transcribed from the commentary microphone. Only codekiln's commentary is transcribed. Most of the recording is music without commentary.

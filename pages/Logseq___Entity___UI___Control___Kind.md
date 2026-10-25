@@ -1,0 +1,27 @@
+- # UI Control Kind
+	- A proposal for describing how a [[Logseq/Entity/UI/Control]] changes its value, apart from the protocol that carries it. Not yet a preference.
+	- ## Two separate questions
+		- **Form** — what the control is physically or on screen: knob, button, pad, fader, field. The `<Kind>` segment of a control's page name records the form, in the product's own word.
+		- **Behavior** — what happens to the value when the control is operated. The same form can behave in different ways: a Launchpad pad can be a toggle, a momentary button or a trigger, as in [[Launchpad/Custom/Mode/1 Arrangement]].
+		- MIDI is one way to carry a control's value to another device. A behavior describes the control itself; a MIDI CC number or a MIDI mapping goes under the control's **Remote control** block.
+	- ## Proposed behaviors
+		- ### Buttons
+			- **Momentary** — on while held, off when released.
+			- **Trigger** — fires one event when pressed and keeps no state, such as [[Ableton/Live/UI/Arrangement View/Button/Set Locator]].
+			- **Toggle** — alternates between two states on each press, such as [[Ableton/Live/UI/Control Bar/Button/Arrangement Record]].
+			- **Multi-state toggle** — steps through three or more states in a fixed cycle on each press.
+		- ### Continuous controls
+			- **Unipolar** — a value from zero up to a maximum, such as 0–127 or 0–100%.
+			- **Bipolar** — a value centered on zero that runs from a negative minimum to a positive maximum, such as Length on [[Microfreak/UI/Oscillator/Knob/Type/Sample/Length]], from -100 to 100.
+			- **Relative (endless)** — sends increments and decrements with no fixed end; the device keeps the value.
+		- ### Stepped controls
+			- **Selector** — moves through a fixed list of named positions, such as [[Microfreak/UI/Oscillator/Knob/Type]].
+			- **Numeric field** — holds a number typed in or dragged, such as [[Ableton/Live/UI/Control Bar/Field/Arrangement Position]].
+		- ### Combined controls
+			- **Encoder with push** — a rotary control whose press acts as a separate button.
+			- **Pressure** — adds a continuous value to a pad or key while held, such as aftertouch.
+			- **Position on a surface** — a fader, slider or touch strip whose value follows a position along a line, or an XY pad that gives two values at once.
+	- ## Open questions
+		- Whether each behavior gets its own page under this one, so a control page can link to it.
+		- Whether a control page records its behavior in a property such as `ui-control-behavior::` or in a body line.
+		- How to model a control whose behavior depends on a mode, such as a knob that is bipolar in one oscillator model and unipolar in another.
