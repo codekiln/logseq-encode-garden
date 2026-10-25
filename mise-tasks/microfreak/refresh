@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#MISE description="Read every MicroFreak slot (read-only) and list presets that differ from the garden's pages"
+#USAGE flag "--slots <range>" help="Slot range, default 1-512"
+#USAGE flag "--save-dir <dir>" help="Keep reads of changed and new slots here, for microfreak:pages"
+#USAGE flag "--json" help="Print one JSON object"
+#USAGE flag "--port <name>" help="Exact MIDI port name"
+set -euo pipefail
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+args=(--garden "$root")
+[[ -n "${usage_slots:-}" ]] && args+=(--slots "$usage_slots")
+[[ -n "${usage_save_dir:-}" ]] && args+=(--save-dir "$usage_save_dir")
+[[ "${usage_json:-false}" == true ]] && args+=(--json)
+[[ -n "${usage_port:-}" ]] && args+=(--port "$usage_port")
+exec uv run --no-project --with python-rtmidi==1.5.8 python "$root/mise-tasks/microfreak/lib/refresh.py" "${args[@]}"
