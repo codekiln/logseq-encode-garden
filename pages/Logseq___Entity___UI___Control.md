@@ -1,0 +1,27 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # UI Control
+	- In this garden, **UI Control** pages model one thing a person operates on a product's interface — a knob, button, pad, fader, switch, field or slider — so any control can be linked by name.
+	- ## What counts
+		- A control the product labels or its documentation names: [[Microfreak/UI/Oscillator/Knob/Timbre]], [[Ableton/Live/UI/Control Bar/Button/Arrangement Record]].
+		- On hardware, a physical control; in software, an on-screen control, including draggable markers such as a loop brace or a locator.
+		- A menu command with no control on screen belongs under the item's menu pages, such as [[Ableton/Menu/Options/Follow]], and a keyboard shortcut is a [[Logseq/Entity/Keyshort]]. A control page links to both when they exist.
+		- A control corresponds to an [[UX/Design/Atomic/L1 - Atom]].
+	- ## Identity and names
+		- Place a control at `<Item>/UI/<Area>/<Kind>/<Name>`, under the [[Logseq/Entity/UI/Area]] that holds it.
+		- `<Kind>` is the noun the product's documentation uses for that control, singular and in Title Case: `Knob`, `Button`, `Switch`, `Toggle`, `Field`, `Slider`, `Pad`, `Fader`, `Marker`.
+		- `<Name>` is the label printed on the panel or used in the manual.
+		- A control that selects among named modes has one page per mode beneath it, and a parameter that only exists in one mode has its page beneath that mode: [[Logseq/Entity/UI/Control/Setting]].
+	- ## Page shape
+		- Frontmatter: `logseq-entity:: [[Logseq/Entity/UI/Control]]` and `up::` to its area. See [[Logseq/Frontmatter]] for shared conventions.
+		- One bullet-wrapped H1 with the control's name and kind, then one sentence on what it does.
+		- Optional blocks, in this order, when they apply:
+			- **Behavior** — how the control changes its value, from [[Logseq/Entity/UI/Control/Kind]].
+			- **Values** — its range or its positions.
+			- **Settings** — links to its mode and parameter pages.
+			- **Remote control** — how another device reaches it, such as a MIDI CC number or a MIDI mapping.
+			- **Source** — the user guide or manual section that describes it.
+	- ## Examples
+		- MicroFreak: [[Microfreak/UI/Oscillator/Knob/Type]], [[Microfreak/UI/Oscillator/Knob/Timbre]]
+		- Ableton Live: [[Ableton/Live/UI/Control Bar/Button/Arrangement Record]], [[Ableton/Live/UI/Arrangement View/Button/Set Locator]]
+		- Launchpad: a pad at `Launchpad/UI/<Area>/Pad/<Name>`; [[Launchpad/Custom/Mode/1 Arrangement]] describes one pad set up as a toggle.
