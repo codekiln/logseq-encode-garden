@@ -12,7 +12,7 @@ prev:: [[Ableton/Live/UG/31 Instrument Reference/09 Operator/09 Finally]]
 	- ## 31.9.10.2 Modulation Targets
 		- For MIDI routings, the LFO's Dest. B and the pitch envelope's Dest. B: Off; OSC Volume A–D; OSC Crossfade A/C and B/D; OSC Feedback (only unmodulated oscillators); OSC Fixed Frequency; FM Drive (level of all modulators); Filter Frequency; Filter Q (Legacy); Filter Res; Filter Morph; Filter Drive (not with Morph); Filter Envelope Amount; Shaper Drive; LFO Rate; LFO Amount; Pitch Envelope Amount; Volume; Panorama; Tone; Time.
 	- ## 31.9.10.3 Pitch Shell and Display
-		- **Pitch Envelope On** — off saves CPU. **Pitch Env** — ±100%; 100% follows the envelope's levels exactly, negative inverts.
+		- **Pitch Envelope On** — off saves CPU. **Pitch Env** — ±100%; 100% follows the envelope's levels, negative inverts.
 		- **Spread**, **Transpose** (affects playing notes), **Glide (G)** and **Glide Time**; legato glides don't retrigger envelopes.
 		- **Destination A–D** and **LFO** switches with **Amount A**; **Destination B** with **Amount B**.
 	- ## 31.9.10.4 Filter Shell and Display

@@ -8,6 +8,6 @@ next:: [[Ableton/Live/UG/31 Instrument Reference/01 Analog/03 Noise Generator]]
 	- **F1/F2** — balance between Filter 1 and Filter 2; centered sends equally.
 	- **Shape** — sine, sawtooth, rectangular or white noise. Rectangular enables **Pulse Width** (100% is a square with odd harmonics only; low values sound thin), which an LFO can modulate.
 	- **Octave**, **Semi**, **Detune** — tuning; Detune moves in cents, up to 300 cents either way.
-	- **Pitch Mod** — LFO amount, and **Key**: how far pitch follows the keyboard. 100% is equal temperament, 0% ignores note pitch. C3 always plays the same frequency, so oscillators with different Key values drift apart away from C3.
+	- **Pitch Mod** — LFO amount, and **Key**: how far pitch follows the keyboard. 100% is equal temperament, 0% ignores note pitch. C3 always plays the same frequency, so oscillators with different Key values move further out of tune with each other the farther you play from C3.
 	- **Pitch Env** — **Initial** pitch and the **Time** to glide to the final pitch.
 	- **Sub/Sync** — Sub adds an oscillator an octave down (square for saw or rectangle, sine for sine, off for noise) at a set **Level**. Sync restarts the waveform from a hidden oscillator whose rate rises with **Ratio**; 0% has no effect. Mapping Ratio to a mod wheel is a suggested use.
