@@ -2,7 +2,7 @@
 #MISE description="Write decoded settings, linked to the panel controls, onto preset pages from saved device reads"
 #USAGE flag "--reads <dir>" help="First pass of microfreak:download reads"
 #USAGE flag "--reads2 <dir>" help="Second pass; a slot is backed up only when both reads match"
-#USAGE flag "--live-map <file>" help="Freakout's microfreak_live_map.py, for Assign destinations"
+#USAGE flag "--live-map <file>" help="Another copy of Freakout's microfreak_live_map.py (default: the vendored one)"
 #USAGE flag "--slots <range>" help="Slot range, e.g. 1-400"
 #USAGE flag "--date <yyyy-mm-dd>" help="Read date for new backups (default today)"
 #USAGE flag "--backup" help="Also add file, digest and provenance to pages without a device-read file"

@@ -16,8 +16,8 @@ envelope and LFO settings far from neutral, so the comparison uses factory
 payloads only, and factory presets get no such section.
 
 Matrix Assign destinations resolve through Freakout's hardware-correlated
-live-word map, passed with ``--live-map``:
-https://github.com/kmorrill/freakout/blob/main/src/minifreak_patch/microfreak_live_map.py
+live-word map, vendored as ``freakout_live_map.py`` (MIT; see FREAKOUT_LICENSE).
+``--live-map`` points at another copy.
 """
 import argparse
 import datetime as dt
@@ -43,16 +43,16 @@ FRONT = UI + '/Front/Row'
 # Every front-panel page this generator links, by panel area. Renaming a row
 # or an area on the panel pages means changing this table only.
 PANEL = {
-    'matrix': FRONT + '/Top/01 Matrix',
-    'paraphonic': FRONT + '/Top/02 Paraphonic Button',
-    'glide': FRONT + '/Middle/01 Glide Knob',
-    'filter': FRONT + '/Middle/03 Analog Filter',
-    'cycling': FRONT + '/Middle/04 Cycling Envelope',
-    'octave': FRONT + '/Bottom/01 Octave',
-    'arp': FRONT + '/Bottom/03 Arp Seq',
-    'lfo': FRONT + '/Bottom/04 LFO',
-    'envelope': FRONT + '/Bottom/05 Envelope',
-    'keyboard': FRONT + '/Bottom/06 Keyboard',
+    'matrix': FRONT + '/01 Top/01 Matrix',
+    'paraphonic': FRONT + '/01 Top/02 Paraphonic Button',
+    'glide': FRONT + '/02 Main/01 Glide Knob',
+    'filter': FRONT + '/02 Main/03 Analog Filter',
+    'cycling': FRONT + '/02 Main/04 Cycling Envelope',
+    'octave': FRONT + '/03 Bottom/01 Octave',
+    'arp': FRONT + '/03 Bottom/03 Arp Seq',
+    'lfo': FRONT + '/03 Bottom/04 LFO',
+    'envelope': FRONT + '/03 Bottom/05 Envelope',
+    'keyboard': FRONT + '/05 Keys',
 }
 FILTER = PANEL['filter']
 CYCLING = PANEL['cycling']
@@ -533,7 +533,8 @@ def main(argv=None):
     parser.add_argument('--garden', type=Path, required=True)
     parser.add_argument('--reads', type=Path, required=True, help='First pass of microfreak:download reads')
     parser.add_argument('--reads2', type=Path, help='Second pass; required to back up a slot')
-    parser.add_argument('--live-map', type=Path, required=True, help="Freakout's microfreak_live_map.py")
+    parser.add_argument('--live-map', type=Path, default=Path(__file__).with_name('freakout_live_map.py'),
+                        help="Freakout's microfreak_live_map.py (default: the vendored copy)")
     parser.add_argument('--slots', required=True, help='Slot range, e.g. 1-400')
     parser.add_argument('--date', default=dt.date.today().isoformat(), help='Read date for new backups')
     parser.add_argument('--backup', action='store_true',

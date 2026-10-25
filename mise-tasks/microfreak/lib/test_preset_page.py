@@ -44,10 +44,10 @@ class DescribeTest(unittest.TestCase):
     def test_controls_link_to_panel_pages(self):
         text = '\n'.join(p.render(p.describe(interp(), ADDRESS)))
         self.assertIn('[Detune]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave/Detune]]): 0.433.', text)
-        self.assertIn('[Low-pass]([[Microfreak/UI/Front/Row/Middle/03 Analog Filter/Button/Type/LPF]])', text)
-        self.assertIn('[Sample-and-Hold]([[Microfreak/UI/Front/Row/Bottom/04 LFO/Button/Shape/Random Stepped]])', text)
-        self.assertIn('[Assign 1]([[Microfreak/UI/Front/Row/Top/01 Matrix/Button/Assn/1]]) → '
-                      '[LFO Rate]([[Microfreak/UI/Front/Row/Bottom/04 LFO/Knob/Rate]])', text)
+        self.assertIn('[Low-pass]([[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Button/Type/LPF]])', text)
+        self.assertIn('[Sample-and-Hold]([[Microfreak/UI/Front/Row/03 Bottom/04 LFO/Button/Shape/Random Stepped]])', text)
+        self.assertIn('[Assign 1]([[Microfreak/UI/Front/Row/01 Top/01 Matrix/Button/Assn/1]]) → '
+                      '[LFO Rate]([[Microfreak/UI/Front/Row/03 Bottom/04 LFO/Knob/Rate]])', text)
 
     def test_parameter_page_names(self):
         self.assertEqual(p.param_page('Chords', 2, 'Inv/Transp'),
@@ -64,8 +64,8 @@ class CustomizedTest(unittest.TestCase):
         lines = p.customized(interp(**{'VCF.Cutoff': 0.5, 'EG2.Mode': 1, 'VCF.Reso': 0.7642}),
                              interp(), ADDRESS)
         self.assertEqual(lines, [
-            '[Cutoff]([[Microfreak/UI/Front/Row/Middle/03 Analog Filter/Knob/Cutoff]]): 0.500 (factory 0.732).',
-            '[Amp Mod]([[Microfreak/UI/Front/Row/Bottom/05 Envelope/Button/Amp Mod]]): on (factory off).',
+            '[Cutoff]([[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Cutoff]]): 0.500 (factory 0.732).',
+            '[Amp Mod]([[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Button/Amp Mod]]): on (factory off).',
         ])
 
     def test_matrix_and_assign_changes(self):
@@ -79,6 +79,13 @@ class CustomizedTest(unittest.TestCase):
                    'near': ('Factory2.0', 2, 'b.mbp', 'Near', interp())}
         count, sha, entry = p.nearest(mine, factory, ADDRESS)
         self.assertEqual((count, sha), (1, 'near'))
+
+
+class LiveMapTest(unittest.TestCase):
+    def test_vendored_map_resolves_assign_addresses(self):
+        address = p.load_live_map(Path(p.__file__).with_name('freakout_live_map.py'))
+        self.assertEqual(address[0x0000], 'VCO.Type')
+        self.assertIn('LFO.Rate', address.values())
 
 
 class PageTest(unittest.TestCase):
