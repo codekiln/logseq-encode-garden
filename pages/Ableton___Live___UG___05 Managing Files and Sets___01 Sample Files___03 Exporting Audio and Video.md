@@ -1,0 +1,32 @@
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
+up:: [[Ableton/Live/UG/05 Managing Files and Sets/01 Sample Files]]
+prev:: [[Ableton/Live/UG/05 Managing Files and Sets/01 Sample Files/02 Analysis Files (.asd)]]
+- # [5.1.3 Exporting Audio and Video](https://www.ableton.com/en/live-manual/12/managing-files-and-sets/#exporting-audio-and-video)
+	- File → Export Audio/Video, or `Cmd+Shift+R` (Mac) / `Ctrl+Shift+R` (Win), renders the Set's audio, and video too when the Set has video clips.
+	- ## 5.1.3.1 Selection Options
+		- Rendered Track chooses what to render, always post-fader:
+			- Main: the Main output, the same signal you hear.
+			- All Individual Tracks: one file per track, including groups, returns and Main, all the same length for easy alignment. MIDI tracks with no instrument or audio effects are skipped; a MIDI track with audio effects but no instrument exports silence.
+			- Selected Tracks Only: the same, for tracks selected before opening the dialog.
+			- A single named track.
+		- Render Start and Render Length default to the whole Set. An Arrangement time selection made beforehand sets them.
+		- The render captures what was playing: if Session clips are playing over the Arrangement, only each track's active clip is rendered.
+	- ## 5.1.3.2 Rendering Options
+		- Include Return and Main Effects: adds the returns a track uses and the Main track's effects when rendering individual tracks, for stems.
+		- Render as Loop: renders in two passes so an effect tail that runs past the end wraps into the start, making a seamless loop of the same length.
+		- Convert to Mono, and Normalize, which raises the gain so the highest peak reaches full scale.
+		- Create Analysis File: writes an `.asd` alongside the render.
+		- Sample Rate: rates at or above the Set's rate render directly; lower rates render at the Set's rate and are then downsampled with the SoX Resampler library.
+	- ## 5.1.3.3 Encoding Options
+		- Encode PCM (on by default) writes a lossless WAV, AIFF or FLAC file at 16, 24 or 32 bits.
+		- Below 32 bits, choose dithering: No Dither, Rectangular, Triangular (the default), or POW-r 1, 2 or 3. Dither only once. Render at 32 bits if the file will be processed further, and use POW-r only on the final render, never for files headed to mastering.
+		- Encode MP3 writes a 320 kbps CBR MP3, alone or with the PCM file. MP3 export adds a little silence at the start, which can throw off alignment in another DAW.
+		- With both encoders off, Export is grayed out.
+	- ## 5.1.3.4 Video Rendering Options
+		- Create Video writes a video file next to the audio. It needs video clips in the Arrangement and a PCM audio file.
+		- Video Encoder lists the encoders installed on the computer; Edit opens the encoder's settings when it has any.
+		- Audio renders first, then video, possibly in several passes. Resolution matches the source unless the encoder settings change it. See [[Ableton/Live/UG/28 Video]].
+	- ## 5.1.3.5 Real-Time Rendering
+		- Rendering is offline unless the signal passes through an External Audio Effect or External Instrument routed to hardware; then the Main output and the tracks using it render in real time.
+		- A 10-second countdown lets external gear fall silent first. Change the seconds, Restart, or Skip.
+		- Auto-Restart on drop-outs re-renders automatically if Live detects glitches. Restart starts over; Cancel stops and deletes the partial file. The dialog counts attempts; closing other CPU-heavy programs helps.
