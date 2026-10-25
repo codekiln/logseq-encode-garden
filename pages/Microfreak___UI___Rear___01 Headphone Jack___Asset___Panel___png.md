@@ -1,0 +1,4 @@
+logseq-entity:: [[Logseq/Entity/Asset/B2]]
+- # Headphone jack on the panel
+	- ![Headphone jack](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Rear___01%20Headphone%20Jack___Asset___Panel.png)
+	- Cropped from [[Microfreak/UG/03 Overview/02 Rear Panel/Asset/01-Rear-Panel-Overview/png]].
