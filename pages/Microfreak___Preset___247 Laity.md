@@ -4,11 +4,13 @@ preset-synth-microfreak-name:: Laity
 preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Lead]]
 preset-synth-microfreak-initialized:: false
 preset-synth-microfreak-on-device:: true
-preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Factory]]
 prev:: [[Microfreak/Preset/246 Queity]]
 next:: [[Microfreak/Preset/248 GrowLing]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/15 SAWX]]
-preset-synth-file-sha256:: ca28de15bbb4a3e33817d4fe70bfc3585fd6f0bd169cd91bb3d7449a4422811d
+preset-synth-file-sha256:: 54d120443e087a90427a218a3e1d26a2086fe7201bcc40513f3867206c48dd1c
+preset-synth-microfreak-parameter-payload-sha256:: d64a0b804a0770991bf625e7a377a73548bcb7b20b58d5f04e6b6a32f7134bb7
+preset-synth-file:: [Laity — October 25 slot 247 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___247%20Laity___Asset___Device-Read-2026-10-25.bin)
 - # Notes
 	- SawX lead with envelope-shaped saw modulation, chorus and expression-controlled filter resonance.
 	- ## Saved export and provenance

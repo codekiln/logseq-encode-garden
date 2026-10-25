@@ -4,11 +4,13 @@ preset-synth-microfreak-name:: Auster
 preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Keys]]
 preset-synth-microfreak-initialized:: false
 preset-synth-microfreak-on-device:: true
-preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Factory]]
 prev:: [[Microfreak/Preset/173 AfterBurner]]
 next:: [[Microfreak/Preset/175 Wuuut]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves]]
-preset-synth-file-sha256:: 3bc40c2d5b229e611915d05af60ff65dcdbe093a286065dafb4e2d03879c46cd
+preset-synth-file-sha256:: e150f13d266d153817d03bc98dfec563a64bab802aea5fe9b1ff59be74fbb330
+preset-synth-microfreak-parameter-payload-sha256:: ae816c3cd2ef6f316860f9c89b3bed703ba0a145b1ef74ce8837b2db4e061aa4
+preset-synth-file:: [Auster — October 25 slot 174 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___174%20Auster___Asset___Device-Read-2026-10-25.bin)
 - # Notes
 	- BasicWaves keys with moving waveform shape and expression-controlled sub level and decay.
 	- ## Saved export and provenance
