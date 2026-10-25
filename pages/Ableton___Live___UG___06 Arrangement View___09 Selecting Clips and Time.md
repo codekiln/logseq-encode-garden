@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/06 Arrangement View]]
 prev:: [[Ableton/Live/UG/06 Arrangement View/08 Audio Clip Fades and Crossfades]]
 next:: [[Ableton/Live/UG/06 Arrangement View/10 Using the Editing Grid]]
-
 - # [6.9 Selecting Clips and Time](https://www.ableton.com/en/live-manual/12/arrangement-view/#selecting-clips-and-time)
 	- Editing works by selecting, then running a command such as Cut, Copy, Paste or Duplicate. See [[Ableton/Arrangement View/Time Selection]] and [[Ableton/Selection]].
 	- Click a clip to select it. Click the background to place the insert marker, then move it with the arrow keys; `Option` (Mac) / `Ctrl` (Win) with left or right snaps it to locators and clip edges. Drag to select a timespan.

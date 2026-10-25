@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/06 Arrangement View]]
 prev:: [[Ableton/Live/UG/06 Arrangement View/07 Moving and Resizing Clips]]
 next:: [[Ableton/Live/UG/06 Arrangement View/09 Selecting Clips and Time]]
-
 - # [6.8 Audio Clip Fades and Crossfades](https://www.ableton.com/en/live-manual/12/arrangement-view/#audio-clip-fades-and-crossfades)
 	- Audio clips have fades at their start and end; neighbouring clips on a track can crossfade.
 	- Hover over a clip, in a tall enough track, to see the fade handles as small squares at its edges. In Automation Mode, hold `F` over an automation lane to show them.

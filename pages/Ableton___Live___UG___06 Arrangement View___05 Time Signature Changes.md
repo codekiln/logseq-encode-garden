@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/06 Arrangement View]]
 prev:: [[Ableton/Live/UG/06 Arrangement View/04 Launching the Arrangement with Locators]]
 next:: [[Ableton/Live/UG/06 Arrangement View/06 The Arrangement Loop]]
-
 - # [6.5 Time Signature Changes](https://www.ableton.com/en/live-manual/12/arrangement-view/#time-signature-changes)
 	- [[Ableton/Live/UI/Arrangement View/Marker/Time Signature Marker]]s change the meter anywhere. Insert one at the insert marker with Create → Insert Time Signature Change or the scrub area's context menu.
 	- Numerators of one or two digits over 1, 2, 4, 8 or 16 work, separated by a slash, comma, period or spaces.

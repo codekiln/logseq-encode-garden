@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Ableton/Live/UG/10 Editing MIDI/05 Editing MIDI Notes]]
 prev:: [[Ableton/Live/UG/10 Editing MIDI/05 Editing MIDI Notes/07 Deactivating Notes]]
 next:: [[Ableton/Live/UG/10 Editing MIDI/05 Editing MIDI Notes/09 Pitch and Time Utilities]]
-
 - # [10.5.8 Note Operations](https://www.ableton.com/en/live-manual/12/editing-midi/#note-operations)
 	- Split and Chop divide notes into parts; Join merges notes of the same pitch.
 	- ## 10.5.8.1 Split

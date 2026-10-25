@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Ableton/Live/UG/11 MIDI Tools/02 Transformation Tools]]
 prev:: [[Ableton/Live/UG/11 MIDI Tools/02 Transformation Tools/04 Glissando]]
 next:: [[Ableton/Live/UG/11 MIDI Tools/02 Transformation Tools/06 Ornament]]
-
 - # [11.2.5 LFO](https://www.ableton.com/en/live-manual/12/midi-tools/#lfo)
 	- An MPE tool that writes a low-frequency oscillator into pitch bend, slide or pressure, chosen with Target.
 	- Envelope Attack and Decay shape the amplitude across the oscillation and trade off against each other. Shape Type is Sine, Square, Triangle or Random (with Reseed), and Shape adjusts it.

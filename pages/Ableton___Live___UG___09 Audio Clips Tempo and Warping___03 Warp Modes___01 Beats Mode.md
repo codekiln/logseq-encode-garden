@@ -1,7 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Ableton/Live/UG/09 Audio Clips Tempo and Warping/03 Warp Modes]]
 next:: [[Ableton/Live/UG/09 Audio Clips Tempo and Warping/03 Warp Modes/02 Tones Mode]]
-
 - # [9.3.1 Beats Mode](https://www.ableton.com/en/live-manual/12/audio-clips-tempo-and-warping/#beats-mode)
 	- For material with a strong rhythm, such as drum loops and most dance music; it keeps transients intact.
 	- Preserve: Transients for percussive material, or a grid division to keep fixed beat divisions. Large divisions with transposition give rhythmic artifacts.

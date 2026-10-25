@@ -1,12 +1,11 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Ableton/Live/UG/05 Managing Files and Sets/01 Sample Files]]
 prev:: [[Ableton/Live/UG/05 Managing Files and Sets/01 Sample Files/02 Analysis Files (.asd)]]
-
 - # [5.1.3 Exporting Audio and Video](https://www.ableton.com/en/live-manual/12/managing-files-and-sets/#exporting-audio-and-video)
 	- File → Export Audio/Video, or `Cmd+Shift+R` (Mac) / `Ctrl+Shift+R` (Win), renders the Set's audio, and video too when the Set has video clips.
 	- ## 5.1.3.1 Selection Options
 		- Rendered Track chooses what to render, always post-fader:
-			- Main: the Main output, which sounds exactly like what you hear.
+			- Main: the Main output, the same signal you hear.
 			- All Individual Tracks: one file per track, including groups, returns and Main, all the same length for easy alignment. MIDI tracks with no instrument or audio effects are skipped; a MIDI track with audio effects but no instrument exports silence.
 			- Selected Tracks Only: the same, for tracks selected before opening the dialog.
 			- A single named track.

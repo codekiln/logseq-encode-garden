@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/04 Browser]]
 prev:: [[Ableton/Live/UG/04 Browser/05 Collections]]
 next:: [[Ableton/Live/UG/04 Browser/07 Places]]
-
 - # [4.6 Library](https://www.ableton.com/en/live-manual/12/working-with-the-browser/#library)
 	- Library labels group content by type, searchable and filterable:
 		- All: every item, devices first, then files.

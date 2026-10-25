@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/10 Editing MIDI]]
 prev:: [[Ableton/Live/UG/10 Editing MIDI/04 Adding MIDI Notes]]
 next:: [[Ableton/Live/UG/10 Editing MIDI/06 Folding and Scales]]
-
 - # [10.5 Editing MIDI Notes](https://www.ableton.com/en/live-manual/12/editing-midi/#editing-midi-notes)
 	- Like Arrangement editing, note editing is selection-based: select, then run a command such as Cut, Copy, Paste or Duplicate.
 	- {{embed [[Ableton/Live/UG/10 Editing MIDI/05 Editing MIDI Notes/01 Non-Destructive Editing]]}}

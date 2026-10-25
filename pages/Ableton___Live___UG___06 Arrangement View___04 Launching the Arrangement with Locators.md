@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/06 Arrangement View]]
 prev:: [[Ableton/Live/UG/06 Arrangement View/03 Transport and Playback]]
 next:: [[Ableton/Live/UG/06 Arrangement View/05 Time Signature Changes]]
-
 - # [6.4 Launching the Arrangement with Locators](https://www.ableton.com/en/live-manual/12/arrangement-view/#launching-the-arrangement-with-locators)
 	- Live 11 notes, including suggested key mappings for locators: [[Ableton/Manual/06/03]].
 	- Locators in the scrub area ([[Ableton/Live/UI/Arrangement View/Scrub Area/Marker/Locator]]) are launch points in the Arrangement.

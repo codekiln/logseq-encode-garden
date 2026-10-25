@@ -1,7 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Ableton/Live/UG/08 Clip View/01 Clip View Layout]]
 next:: [[Ableton/Live/UG/08 Clip View/01 Clip View Layout/02 Clip Panels]]
-
 - # [8.1.1 Clip Title Bar](https://www.ableton.com/en/live-manual/12/clip-view/#clip-title-bar)
 	- Holds the Clip Activator toggle, the clip's name and color, and, for audio clips, the Save Default Clip button.
 	- ## 8.1.1.1 Clip Activator Toggle

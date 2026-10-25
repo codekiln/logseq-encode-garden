@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Ableton/Live/UG/09 Audio Clips Tempo and Warping/02 Warping]]
 prev:: [[Ableton/Live/UG/09 Audio Clips Tempo and Warping/02 Warping/02 Importing Samples]]
 next:: [[Ableton/Live/UG/09 Audio Clips Tempo and Warping/02 Warping/04 Warping Short Samples]]
-
 - # [9.2.3 Warp Markers](https://www.ableton.com/en/live-manual/12/audio-clips-tempo-and-warping/#warp-markers)
 	- An [[Ableton/Warp/Marker]] pins a point in the sample, such as a transient, to a place on the timeline, to map the audio's timing or change its rhythm. Import adds some; add as many as you need.
 	- Double-click the upper half of the Sample Editor to add one, or press `Cmd+I` (Mac) / `Ctrl+I` (Win) to add one at the insert marker. Move markers with the arrow keys or by dragging.

@@ -1,7 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Ableton/Live/UG/02 First Steps/02 Learning About Live]]
 next:: [[Ableton/Live/UG/02 First Steps/02 Learning About Live/02 Info View]]
-
 - # [2.2.1 Learn View](https://www.ableton.com/en/live-manual/12/first-steps/#learn-view)
 	- The Learn View holds learning modules made of lessons. Each lesson has a video walkthrough, a short text on its key concepts, and links to related lessons.
 	- New modules arrive without a Live update. The view needs an internet connection; press Reload after reconnecting.

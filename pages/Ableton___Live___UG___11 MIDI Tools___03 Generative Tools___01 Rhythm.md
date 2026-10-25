@@ -1,7 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Ableton/Live/UG/11 MIDI Tools/03 Generative Tools]]
 next:: [[Ableton/Live/UG/11 MIDI Tools/03 Generative Tools/02 Seed]]
-
 - # [11.3.1 Rhythm](https://www.ableton.com/en/live-manual/12/midi-tools/#rhythm)
 	- Generates a repeating rhythm on one pitch or drum pad, chosen with Pitch or by `Option`-clicking (Mac) / `Alt`-clicking (Win) the piano ruler.
 	- Steps (up to 16), Pattern (the arrangement of hits; choices depend on Steps and Density), and Density (how many notes).

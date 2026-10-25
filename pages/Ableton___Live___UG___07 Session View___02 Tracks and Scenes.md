@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/07 Session View]]
 prev:: [[Ableton/Live/UG/07 Session View/01 Session View Clips]]
 next:: [[Ableton/Live/UG/07 Session View/03 The Track Status Fields]]
-
 - # [7.2 Tracks and Scenes](https://www.ableton.com/en/live-manual/12/session-view/#tracks-and-scenes)
 	- A track plays one clip at a time, so put alternatives in the same column: song parts, variations of a drum loop.
 	- Drag the edges of a track's title bar to resize it, narrow enough to show only launch buttons and key controls; `Option` (Mac) / `Alt` (Win) resizes all tracks. `0` on a selected track header deactivates the track.

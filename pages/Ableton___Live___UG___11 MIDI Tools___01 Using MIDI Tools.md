@@ -1,7 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/11 MIDI Tools]]
 next:: [[Ableton/Live/UG/11 MIDI Tools/02 Transformation Tools]]
-
 - # [11.1 Using MIDI Tools](https://www.ableton.com/en/live-manual/12/midi-tools/#using-midi-tools)
 	- MIDI Tools live in the Clip View's Transform and Generate panels. Transformations need selected notes and replace them; MPE tools are transformations that add or change note expression, visible in the MPE Editor. Generators need no input and create notes.
 	- Native tools are built in and fixed; Max for Live tools can be edited, built, or installed from other makers, and show under the browser's MIDI Tools filter group or the MIDI Tool tag.

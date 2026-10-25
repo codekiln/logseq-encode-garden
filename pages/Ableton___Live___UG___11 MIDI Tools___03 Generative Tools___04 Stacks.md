@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Ableton/Live/UG/11 MIDI Tools/03 Generative Tools]]
 prev:: [[Ableton/Live/UG/11 MIDI Tools/03 Generative Tools/03 Shape]]
 next:: [[Ableton/Live/UG/11 MIDI Tools/03 Generative Tools/05 Euclidean]]
-
 - # [11.3.4 Stacks](https://www.ableton.com/en/live-manual/12/midi-tools/#stacks)
 	- Adds chords or progressions within the scale, filling the time selection or loop.
 	- Choose a chord by dragging on the Chord Selector Pad or with `Cmd` (Mac) / `Ctrl` (Win) and up or down; diagrams follow the Tonnetz, and the Status Bar names the chord.

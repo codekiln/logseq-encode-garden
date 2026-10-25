@@ -1,7 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/07 Session View]]
 next:: [[Ableton/Live/UG/07 Session View/02 Tracks and Scenes]]
-
 - # [7.1 Session View Clips](https://www.ableton.com/en/live-manual/12/session-view/#session-view-clips)
 	- ![The Controls for a Session View Clip](https://ableton-production.imgix.net/live-manual/12/SessionClipControls.png?auto=&w=320)
 	- Click a clip's triangular launch button to start it, or select the clip by its name and press `Enter`; arrow keys move to neighbouring clips. A square Clip Stop button in a slot or in the Track Status field below the grid stops the track.

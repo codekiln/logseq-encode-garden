@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/03 Live Concepts]]
 prev:: [[Ableton/Live/UG/03 Live Concepts/13 Scale Awareness]]
 next:: [[Ableton/Live/UG/03 Live Concepts/15 Presets and Racks]]
-
 - # [3.14 The Mixer](https://www.ableton.com/en/live-manual/12/live-concepts/#the-mixer)
 	- A clip's signal passes through the track's device chain from left to right and then into the mixer, which Session and Arrangement share.
 	- Device-to-device connections are always stereo; inputs and outputs can be set to mono in the Audio Settings.

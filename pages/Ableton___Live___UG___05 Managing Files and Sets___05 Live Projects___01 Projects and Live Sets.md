@@ -1,7 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Ableton/Live/UG/05 Managing Files and Sets/05 Live Projects]]
 next:: [[Ableton/Live/UG/05 Managing Files and Sets/05 Live Projects/02 Projects and Presets]]
-
 - # [5.5.1 Projects and Live Sets](https://www.ableton.com/en/live-manual/12/managing-files-and-sets/#projects-and-live-sets)
 	- Saving a Set under a new name or location creates a new Project folder unless you save into an existing Project. The manual's example: saving "Tango" to the Desktop creates "Tango Project" with Tango.als and Samples/Recorded.
 	- Saving a new version with Save As into the same folder keeps both Sets in one Project sharing its samples. An unrelated new Set saved elsewhere gets its own Project.

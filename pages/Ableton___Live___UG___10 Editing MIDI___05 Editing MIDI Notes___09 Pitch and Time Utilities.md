@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Ableton/Live/UG/10 Editing MIDI/05 Editing MIDI Notes]]
 prev:: [[Ableton/Live/UG/10 Editing MIDI/05 Editing MIDI Notes/08 Note Operations]]
 next:: [[Ableton/Live/UG/10 Editing MIDI/05 Editing MIDI Notes/10 MIDI Tools]]
-
 - # [10.5.9 Pitch and Time Utilities](https://www.ableton.com/en/live-manual/12/editing-midi/#pitch-and-time-utilities)
 	- Utilities for selected notes or a time range; with nothing selected, buttons act on the whole clip. Summarized in [[Ableton/Live/UG/08 Clip View/05 Pitch and Time Utilities Panel]].
 	- ## 10.5.9.1 Transpose

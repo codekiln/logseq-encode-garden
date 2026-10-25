@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/06 Arrangement View]]
 prev:: [[Ableton/Live/UG/06 Arrangement View/05 Time Signature Changes]]
 next:: [[Ableton/Live/UG/06 Arrangement View/07 Moving and Resizing Clips]]
-
 - # [6.6 The Arrangement Loop](https://www.ableton.com/en/live-manual/12/arrangement-view/#the-arrangement-loop)
 	- [[Ableton/Live/UI/Control Bar/Toggle/Arrangement Loop]] repeats part of the Arrangement. With nothing selected, the [[Ableton/Live/UI/Arrangement View/Marker/Loop Brace]] spans the whole Arrangement.
 	- [[Ableton/Live/UI/Control Bar/Field/Loop Start]] and [[Ableton/Live/UI/Control Bar/Field/Loop Length]] set it numerically.

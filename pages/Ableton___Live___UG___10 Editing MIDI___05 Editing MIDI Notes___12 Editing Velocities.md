@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Ableton/Live/UG/10 Editing MIDI/05 Editing MIDI Notes]]
 prev:: [[Ableton/Live/UG/10 Editing MIDI/05 Editing MIDI Notes/11 Quantizing Notes]]
 next:: [[Ableton/Live/UG/10 Editing MIDI/05 Editing MIDI Notes/13 Editing Probabilities]]
-
 - # [10.5.12 Editing Velocities](https://www.ableton.com/en/live-manual/12/editing-midi/#editing-velocities)
 	- Velocity, roughly a note's loudness, shows as color saturation: paler notes are softer. Edit it in the Velocity Editor by dragging a note's marker; the value shows in the lane header, and hovering a note highlights its marker.
 	- `Shift`-click to select several markers. Drag a group to the top or bottom to make them equal, then set the value.

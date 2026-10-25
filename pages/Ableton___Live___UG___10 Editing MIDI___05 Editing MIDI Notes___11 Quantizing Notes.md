@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Ableton/Live/UG/10 Editing MIDI/05 Editing MIDI Notes]]
 prev:: [[Ableton/Live/UG/10 Editing MIDI/05 Editing MIDI Notes/10 MIDI Tools]]
 next:: [[Ableton/Live/UG/10 Editing MIDI/05 Editing MIDI Notes/12 Editing Velocities]]
-
 - # [10.5.11 Quantizing Notes](https://www.ableton.com/en/live-manual/12/editing-midi/#quantizing-notes)
 	- Four ways to quantize:
 		- While recording.

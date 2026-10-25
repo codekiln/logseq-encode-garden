@@ -1,7 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/06 Arrangement View]]
 next:: [[Ableton/Live/UG/06 Arrangement View/02 Navigation and Zooming]]
-
 - # [6.1 Layout](https://www.ableton.com/en/live-manual/12/arrangement-view/#layout)
 	- Garden pages for the view and its controls: [[Ableton/Live/UI/Arrangement View]].
 	- ![The Upper Area of the Arrangement View](https://ableton-production.imgix.net/live-manual/12/ArrangementViewTop.png?auto=&w=320)

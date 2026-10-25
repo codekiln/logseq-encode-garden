@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Ableton/Live/UG/04 Browser/07 Places]]
 prev:: [[Ableton/Live/UG/04 Browser/07 Places/02 Pack Info]]
 next:: [[Ableton/Live/UG/04 Browser/07 Places/04 Using Ableton Cloud]]
-
 - # [4.7.3 Splice](https://www.ableton.com/en/live-manual/12/working-with-the-browser/#splice)
 	- Splice is a royalty-free sample library reachable from the Splice label. Its Home page has navigation arrows, a search bar, a Search with Sound drop area and category buttons.
 	- Browsing and previewing work without an account, but adding samples, saving to your Splice library and Search with Sound require logging in. An internet connection is required.

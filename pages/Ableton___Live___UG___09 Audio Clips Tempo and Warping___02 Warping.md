@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/09 Audio Clips Tempo and Warping]]
 prev:: [[Ableton/Live/UG/09 Audio Clips Tempo and Warping/01 Tempo]]
 next:: [[Ableton/Live/UG/09 Audio Clips Tempo and Warping/03 Warp Modes]]
-
 - # [9.2 Warping](https://www.ableton.com/en/live-manual/12/audio-clips-tempo-and-warping/#warping)
 	- Warping plays any sample in sync with the chosen tempo, for beat matching, rhythmic experiments and sound design. Its controls are in the Clip View's Audio Utilities panel.
 	- With Warp off, the sample plays at its own tempo, right for one-shots, textures, effects and speech. Turn it on for loops and whole songs.

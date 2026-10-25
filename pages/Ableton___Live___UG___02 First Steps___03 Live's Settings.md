@@ -1,7 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/02 First Steps]]
 prev:: [[Ableton/Live/UG/02 First Steps/02 Learning About Live]]
-
 - # [2.3 Live’s Settings](https://www.ableton.com/en/live-manual/12/first-steps/#lives-settings)
 	- The Settings window customizes Live. Open it from the Live menu (Mac) or the Options menu (Win), or with `Cmd+,` (Mac) / `Ctrl+,` (Win). See [[Ableton/Setting]].
 	- Settings are spread across the tabs below.

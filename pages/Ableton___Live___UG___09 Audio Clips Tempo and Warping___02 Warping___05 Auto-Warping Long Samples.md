@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Ableton/Live/UG/09 Audio Clips Tempo and Warping/02 Warping]]
 prev:: [[Ableton/Live/UG/09 Audio Clips Tempo and Warping/02 Warping/04 Warping Short Samples]]
 next:: [[Ableton/Live/UG/09 Audio Clips Tempo and Warping/02 Warping/06 Manipulating Grooves]]
-
 - # [9.2.5 Auto-Warping Long Samples](https://www.ableton.com/en/live-manual/12/audio-clips-tempo-and-warping/#auto-warping-long-samples)
 	- These cases assume Auto-Warp Long Samples is on, the default.
 	- ## 9.2.5.1 Adjusting Auto-Warp Results

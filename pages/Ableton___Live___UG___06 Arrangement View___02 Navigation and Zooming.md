@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/06 Arrangement View]]
 prev:: [[Ableton/Live/UG/06 Arrangement View/01 Layout]]
 next:: [[Ableton/Live/UG/06 Arrangement View/03 Transport and Playback]]
-
 - # [6.2 Navigation and Zooming](https://www.ableton.com/en/live-manual/12/arrangement-view/#navigation-and-zooming)
 	- Live 11 notes with flashcards: [[Ableton/Manual/06/01 Arrangement View Navigation]].
 	- `+` and `-`, or `Cmd`-scroll (Mac) / `Ctrl`-scroll (Win), zoom progressively around the selection ([[Ableton/Menu/View/Zoom/In or Out]]). `Cmd+Option`-drag (Mac) / `Ctrl+Alt`-drag (Win) pans.

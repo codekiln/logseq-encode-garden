@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/05 Managing Files and Sets]]
 prev:: [[Ableton/Live/UG/05 Managing Files and Sets/02 MIDI Files]]
 next:: [[Ableton/Live/UG/05 Managing Files and Sets/04 Live Sets]]
-
 - # [5.3 Live Clips](https://www.ableton.com/en/live-manual/12/managing-files-and-sets/#live-clips)
 	- A Live Clip ([[Ableton/File/.alc]]) saves one audio or MIDI clip for reuse. Audio Live Clips only reference their samples, so they stay small.
 	- Drag a clip into the Current Project or a user folder in Places to save it; Collect Files on Export decides whether the sample is copied. Name it and press `Enter`.

@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Ableton/Live/UG/10 Editing MIDI/05 Editing MIDI Notes]]
 prev:: [[Ableton/Live/UG/10 Editing MIDI/05 Editing MIDI Notes/02 Selecting Notes and Timespan]]
 next:: [[Ableton/Live/UG/10 Editing MIDI/05 Editing MIDI Notes/04 Moving Notes]]
-
 - # [10.5.3 Find and Select Notes](https://www.ableton.com/en/live-manual/12/editing-midi/#find-and-select-notes)
 	- The Find and Select Notes toggle shows note filters that select matching notes, to edit all notes of one pitch or length at once. Filters can be combined, and each has an Invert toggle and a Select button to reapply it.
 	- The eight filters:

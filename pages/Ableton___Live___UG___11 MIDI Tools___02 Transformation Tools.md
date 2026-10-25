@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/11 MIDI Tools]]
 prev:: [[Ableton/Live/UG/11 MIDI Tools/01 Using MIDI Tools]]
 next:: [[Ableton/Live/UG/11 MIDI Tools/03 Generative Tools]]
-
 - # [11.2 Transformation Tools](https://www.ableton.com/en/live-manual/12/midi-tools/#transformation-tools)
 	- The transformations included with Live.
 	- {{embed [[Ableton/Live/UG/11 MIDI Tools/02 Transformation Tools/01 Arpeggiate]]}}

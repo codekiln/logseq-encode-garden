@@ -1,7 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/03 Live Concepts]]
 next:: [[Ableton/Live/UG/03 Live Concepts/02 The Status Bar]]
-
 - # [3.1 The Control Bar](https://www.ableton.com/en/live-manual/12/live-concepts/#the-control-bar)
 	- The strip across the top of the window: transport and tempo, scale and MIDI settings, CPU monitoring, and the switch between Session and Arrangement View. See [[Ableton/Live/UI/Control Bar]].
 	- ![The Control Bar](https://ableton-production.imgix.net/live-manual/12/ControlBarL12.png?auto=&w=320)

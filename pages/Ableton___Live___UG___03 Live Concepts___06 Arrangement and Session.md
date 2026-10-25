@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/03 Live Concepts]]
 prev:: [[Ableton/Live/UG/03 Live Concepts/05 Live Sets]]
 next:: [[Ableton/Live/UG/03 Live Concepts/07 Tracks]]
-
 - # [3.6 Arrangement and Session](https://www.ableton.com/en/live-manual/12/live-concepts/#arrangement-and-session)
 	- Clips are Live's building blocks: a melody, a drum pattern, a bassline, or a whole song.
 	- The Arrangement lays clips out on a linear timeline; the Session is a launching base where each clip has its own play button and can start at any time in any order. See [[Ableton/Live/Mode/Arrangement]] and [[Ableton/Live/Mode/Session]].

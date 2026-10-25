@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Ableton/Live/UG/04 Browser/07 Places]]
 prev:: [[Ableton/Live/UG/04 Browser/07 Places/05 Transferring Files from Push 3 in Standalone Mode]]
 next:: [[Ableton/Live/UG/04 Browser/07 Places/07 Current Project]]
-
 - # [4.7.6 User Library](https://www.ableton.com/en/live-manual/12/working-with-the-browser/#user-library)
 	- The User Library stores your presets, defaults, Live Clips, templates and more, in its own location so it can be backed up or shared.
 	- Default location: `Macintosh HD/Users/<username>/Music/Ableton/User Library` (Mac) or `\Users\<username>\Documents\Ableton\User Library` (Win). Change it with "Location of User Library" in Library Settings.

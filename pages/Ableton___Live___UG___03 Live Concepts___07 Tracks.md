@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/03 Live Concepts]]
 prev:: [[Ableton/Live/UG/03 Live Concepts/06 Arrangement and Session]]
 next:: [[Ableton/Live/UG/03 Live Concepts/08 Audio and MIDI]]
-
 - # [3.7 Tracks](https://www.ableton.com/en/live-manual/12/live-concepts/#tracks)
 	- Tracks hold clips and manage signal flow: recording, synthesis, effects and mixing.
 	- Session and Arrangement share one set of tracks, shown as columns in the Session and as stacked rows in the Arrangement.

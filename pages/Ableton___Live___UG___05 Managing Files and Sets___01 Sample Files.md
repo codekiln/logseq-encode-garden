@@ -1,7 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/05 Managing Files and Sets]]
 next:: [[Ableton/Live/UG/05 Managing Files and Sets/02 MIDI Files]]
-
 - # [5.1 Sample Files](https://www.ableton.com/en/live-manual/12/managing-files-and-sets/#sample-files)
 	- A sample is an audio file. Live reads mono and stereo WAV, AIFF, AIFF-C, FLAC and OGG Vorbis, and imports MP3, plus M4A on Mac.
 	- Uncompressed files of any length, sample rate or bit depth load without conversion; compressed files are decoded on import.

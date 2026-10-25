@@ -1,7 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Ableton/Live/UG/10 Editing MIDI/05 Editing MIDI Notes]]
 prev:: [[Ableton/Live/UG/10 Editing MIDI/05 Editing MIDI Notes/12 Editing Velocities]]
-
 - # [10.5.13 Editing Probabilities](https://www.ableton.com/en/live-manual/12/editing-midi/#editing-probabilities)
 	- Probability is the chance a note plays on each pass. The Chance Editor lane is hidden by default; show it from the Lane Selector menu.
 	- Drag a note's marker between 0 and 100%; the value shows in the lane and Status Bar, as a range when selected notes differ. Or type a value and press `Enter`; up and down change it by 10%, with `Shift` for fine steps.

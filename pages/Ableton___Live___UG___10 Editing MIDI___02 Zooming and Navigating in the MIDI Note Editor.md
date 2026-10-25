@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/10 Editing MIDI]]
 prev:: [[Ableton/Live/UG/10 Editing MIDI/01 The MIDI Note Editor Layout]]
 next:: [[Ableton/Live/UG/10 Editing MIDI/03 Creating a MIDI Clip]]
-
 - # [10.2 Zooming and Navigating in the MIDI Note Editor](https://www.ableton.com/en/live-manual/12/editing-midi/#zooming-and-navigating-in-the-midi-note-editor)
 	- Drag the time ruler vertically to zoom and sideways to scroll; `Cmd`-scroll (Mac) / `Ctrl`-scroll (Win) also zooms time.
 	- Scroll the note ruler to change octaves; drag it sideways to zoom key tracks. `Option`-scroll (Mac) / `Alt`-scroll (Win) also zooms key tracks.

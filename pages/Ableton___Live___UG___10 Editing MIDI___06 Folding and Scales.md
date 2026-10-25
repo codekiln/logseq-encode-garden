@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/10 Editing MIDI]]
 prev:: [[Ableton/Live/UG/10 Editing MIDI/05 Editing MIDI Notes]]
 next:: [[Ableton/Live/UG/10 Editing MIDI/07 Editing MIDI Clips]]
-
 - # [10.6 Folding and Scales](https://www.ableton.com/en/live-manual/12/editing-midi/#folding-and-scales)
 	- Folding hides key tracks, for every MIDI clip in the Set.
 	- Fold to Notes, with the Fold button, `F`, or the View menu, hides key tracks without notes, useful for drum kits that use a few keys spread over the keyboard. On a Drum Rack track with it off, pads that hold devices are shown.

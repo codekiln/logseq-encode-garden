@@ -1,7 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/10 Editing MIDI]]
 prev:: [[Ableton/Live/UG/10 Editing MIDI/07 Editing MIDI Clips]]
-
 - # [10.8 Multi-Clip Editing](https://www.ableton.com/en/live-manual/12/editing-midi/#multi-clip-editing)
 	- With several MIDI clips selected, the editor shows their notes together, to compare and edit material across tracks and scenes, or successive variations in one track.
 		- Edit notes from all of them at once, or one at a time with Focus Mode.

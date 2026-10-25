@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Ableton/Live/UG/09 Audio Clips Tempo and Warping/02 Warping]]
 prev:: [[Ableton/Live/UG/09 Audio Clips Tempo and Warping/02 Warping/03 Warp Markers]]
 next:: [[Ableton/Live/UG/09 Audio Clips Tempo and Warping/02 Warping/05 Auto-Warping Long Samples]]
-
 - # [9.2.4 Warping Short Samples](https://www.ableton.com/en/live-manual/12/audio-clips-tempo-and-warping/#warping-short-samples)
 	- These cases assume Loop/Warp Short Samples warps new samples, the default.
 	- ## 9.2.4.1 Even-Length Loops

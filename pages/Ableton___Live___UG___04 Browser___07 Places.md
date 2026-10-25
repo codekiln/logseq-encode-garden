@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
 up:: [[Ableton/Live/UG/04 Browser]]
 prev:: [[Ableton/Live/UG/04 Browser/06 Library]]
 next:: [[Ableton/Live/UG/04 Browser/08 Navigating in the Browser]]
-
 - # [4.7 Places](https://www.ableton.com/en/live-manual/12/working-with-the-browser/#places)
 	- Places holds Packs, the User Library, the Current Project and folders you add. Library Settings can also show Splice, Cloud and Push.
 		- Packs: the Core Library, installed Packs, and Pack updates and downloads.

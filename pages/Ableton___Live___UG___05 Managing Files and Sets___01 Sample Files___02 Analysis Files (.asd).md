@@ -2,7 +2,6 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
 up:: [[Ableton/Live/UG/05 Managing Files and Sets/01 Sample Files]]
 prev:: [[Ableton/Live/UG/05 Managing Files and Sets/01 Sample Files/01 The Decoding Cache]]
 next:: [[Ableton/Live/UG/05 Managing Files and Sets/01 Sample Files/03 Exporting Audio and Video]]
-
 - # [5.1.2 Analysis Files (.asd)](https://www.ableton.com/en/live-manual/12/managing-files-and-sets/#analysis-files-asd)
 	- An analysis file ([[Ableton/File/.asd]]) sits next to its sample with the same name. It improves warping quality, detects the tempo of long samples, and speeds up waveform drawing. Long samples stay grayed out and unplayable until analysis finishes.
 	- `.asd` files don't show in the browser; a checkmark on a sample's icon means one exists.
