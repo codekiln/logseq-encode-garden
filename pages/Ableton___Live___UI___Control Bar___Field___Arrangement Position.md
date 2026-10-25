@@ -7,5 +7,5 @@ up:: [[Ableton/Live/UI/Control Bar]]
 	- **Behavior** — numeric field.
 	- ## Source
 		- [[Ableton/Live/UG/06 Arrangement View]]
-		- [6.3 Transport and Playback](https://www.ableton.com/en/live-manual/12/arrangement-view/#transport-and-playback)
-		- [19.6 Recording with Count-in](https://www.ableton.com/en/live-manual/12/recording-new-clips/#recording-with-count-in)
+		- [[Ableton/Live/UG/06 Arrangement View/03 Transport and Playback]] · [6.3 Transport and Playback](https://www.ableton.com/en/live-manual/12/arrangement-view/#transport-and-playback)
+		- [[Ableton/Live/UG/19 Recording New Clips/06 Recording with Count-in]] · [19.6 Recording with Count-in](https://www.ableton.com/en/live-manual/12/recording-new-clips/#recording-with-count-in)

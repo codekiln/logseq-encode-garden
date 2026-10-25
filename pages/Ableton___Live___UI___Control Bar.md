@@ -25,4 +25,4 @@ up:: [[Ableton/Live/UI]]
 		- ### View Selector
 			- [[Ableton/Live/UI/Control Bar/Toggle/View Selector]]
 	- ## Source
-		- [3.1 The Control Bar](https://www.ableton.com/en/live-manual/12/live-concepts/#the-control-bar)
+		- [[Ableton/Live/UG/03 Live Concepts/01 The Control Bar]] · [3.1 The Control Bar](https://www.ableton.com/en/live-manual/12/live-concepts/#the-control-bar)

@@ -8,4 +8,4 @@ up:: [[Ableton/Live/UI/Arrangement View]]
 	- **Remote control** — MIDI or key mapping. [[Ableton/Manual/06/03 Launching the Arrangement with Locators]] keeps a suggested key for it.
 	- ## Source
 		- [[Ableton/Live/UG/06 Arrangement View]]
-		- [6.4 Launching the Arrangement with Locators](https://www.ableton.com/en/live-manual/12/arrangement-view/#launching-the-arrangement-with-locators)
+		- [[Ableton/Live/UG/06 Arrangement View/04 Launching the Arrangement with Locators]] · [6.4 Launching the Arrangement with Locators](https://www.ableton.com/en/live-manual/12/arrangement-view/#launching-the-arrangement-with-locators)

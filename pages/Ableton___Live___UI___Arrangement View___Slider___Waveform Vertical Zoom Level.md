@@ -6,4 +6,4 @@ up:: [[Ableton/Live/UI/Arrangement View]]
 	- **Behavior** — continuous.
 	- ## Source
 		- [[Ableton/Live/UG/06 Arrangement View]]
-		- [6.1 Layout](https://www.ableton.com/en/live-manual/12/arrangement-view/#layout)
+		- [[Ableton/Live/UG/06 Arrangement View/01 Layout]] · [6.1 Layout](https://www.ableton.com/en/live-manual/12/arrangement-view/#layout)

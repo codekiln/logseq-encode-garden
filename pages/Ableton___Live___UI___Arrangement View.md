@@ -28,5 +28,5 @@ see-also:: [[Ableton/Arrangement View]], [[Ableton/Manual/06]]
 		- [[Ableton/Live/UI/Control Bar]] — transport, Arrangement Record, loop and punch, Follow and position.
 	- ## Source
 		- [[Ableton/Live/UG/06 Arrangement View]]
-		- [6.1 Layout](https://www.ableton.com/en/live-manual/12/arrangement-view/#layout)
-		- [6.2 Navigation and Zooming](https://www.ableton.com/en/live-manual/12/arrangement-view/#navigation-and-zooming)
+		- [[Ableton/Live/UG/06 Arrangement View/01 Layout]] · [6.1 Layout](https://www.ableton.com/en/live-manual/12/arrangement-view/#layout)
+		- [[Ableton/Live/UG/06 Arrangement View/02 Navigation and Zooming]] · [6.2 Navigation and Zooming](https://www.ableton.com/en/live-manual/12/arrangement-view/#navigation-and-zooming)

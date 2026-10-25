@@ -5,4 +5,4 @@ up:: [[Ableton/Live/UI/Arrangement View]]
 	- Shows time in minutes-seconds-milliseconds; drag in it to scroll left or right.
 	- ## Source
 		- [[Ableton/Live/UG/06 Arrangement View]]
-		- [6.1 Layout](https://www.ableton.com/en/live-manual/12/arrangement-view/#layout)
+		- [[Ableton/Live/UG/06 Arrangement View/01 Layout]] · [6.1 Layout](https://www.ableton.com/en/live-manual/12/arrangement-view/#layout)
