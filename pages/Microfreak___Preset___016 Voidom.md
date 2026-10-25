@@ -4,11 +4,13 @@ preset-synth-microfreak-name:: Voidom
 preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/SFX]]
 preset-synth-microfreak-initialized:: false
 preset-synth-microfreak-on-device:: true
-preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Factory]]
 prev:: [[Microfreak/Preset/015 PolyBells]]
 next:: [[Microfreak/Preset/017 Tubular]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/11 Speech]]
-preset-synth-file-sha256:: 8632965655c64049ba3d899a3bb7c69d517af4a116691d4ebce5f4dd70645c25
+preset-synth-file-sha256:: ef9b2913965642d96dcea1761a09b26a5b216ee675a8df9204aaf5122ddf98ae
+preset-synth-microfreak-parameter-payload-sha256:: 20c1d565dc198f0c3c9ee12981f2a7982aa56ace5c01f4c6489f282a7ec3d1c9
+preset-synth-file:: [Voidom — October 25 slot 16 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___016%20Voidom___Asset___Device-Read-2026-10-25.bin)
 - # Notes
 	- Speech patch with stepped formants and word selection, plus strong expression control of filter brightness.
 	- ## Saved export and provenance

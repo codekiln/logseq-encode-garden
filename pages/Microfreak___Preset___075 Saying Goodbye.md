@@ -4,11 +4,13 @@ preset-synth-microfreak-name:: Saying Goodbye
 preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Pad]]
 preset-synth-microfreak-initialized:: false
 preset-synth-microfreak-on-device:: true
-preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Factory]]
 prev:: [[Microfreak/Preset/074 Sneaker]]
 next:: [[Microfreak/Preset/076 AutoCHILL]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM]]
-preset-synth-file-sha256:: 06e3f584f13f1e50c9508dfcbb4315975e06cfc6a54a7ce3ded6ce717a2473eb
+preset-synth-file-sha256:: a988878aa3a5f964e3c59fa4373d309f1c633a077c2b2fc50f0aed59c3e9daa5
+preset-synth-microfreak-parameter-payload-sha256:: 5f345b37fbe2642c85b95b2f56a559d4e022dfc0dccf9b91720175d76101a3ab
+preset-synth-file:: [Saying Goodbye — October 25 slot 75 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___075%20Saying%20Goodbye___Asset___Device-Read-2026-10-25.bin)
 - # Notes
 	- Two-operator FM pad with a looping envelope moving cutoff and feedback; expression reduces FM intensity.
 	- ## Saved export and provenance
