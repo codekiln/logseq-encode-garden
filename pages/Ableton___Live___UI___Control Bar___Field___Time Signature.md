@@ -6,4 +6,4 @@ up:: [[Ableton/Live/UI/Control Bar]]
 	- **Behavior** — numeric field.
 	- ## Source
 		- [[Ableton/Live/UG/06 Arrangement View]]
-		- [6.5 Time Signature Changes](https://www.ableton.com/en/live-manual/12/arrangement-view/#time-signature-changes)
+		- [[Ableton/Live/UG/06 Arrangement View/05 Time Signature Changes]] · [6.5 Time Signature Changes](https://www.ableton.com/en/live-manual/12/arrangement-view/#time-signature-changes)

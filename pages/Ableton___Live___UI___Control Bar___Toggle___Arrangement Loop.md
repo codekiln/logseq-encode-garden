@@ -6,4 +6,4 @@ up:: [[Ableton/Live/UI/Control Bar]]
 	- **Behavior** — toggle.
 	- ## Source
 		- [[Ableton/Live/UG/06 Arrangement View]]
-		- [6.6 The Arrangement Loop](https://www.ableton.com/en/live-manual/12/arrangement-view/#the-arrangement-loop)
+		- [[Ableton/Live/UG/06 Arrangement View/06 The Arrangement Loop]] · [6.6 The Arrangement Loop](https://www.ableton.com/en/live-manual/12/arrangement-view/#the-arrangement-loop)

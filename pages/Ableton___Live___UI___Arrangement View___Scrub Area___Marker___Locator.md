@@ -7,4 +7,4 @@ up:: [[Ableton/Live/UI/Arrangement View/Scrub Area]]
 	- Its context menu offers Loop to Next Locator and Set Song Start Time Here.
 	- ## Source
 		- [[Ableton/Live/UG/06 Arrangement View]]
-		- [6.4 Launching the Arrangement with Locators](https://www.ableton.com/en/live-manual/12/arrangement-view/#launching-the-arrangement-with-locators)
+		- [[Ableton/Live/UG/06 Arrangement View/04 Launching the Arrangement with Locators]] · [6.4 Launching the Arrangement with Locators](https://www.ableton.com/en/live-manual/12/arrangement-view/#launching-the-arrangement-with-locators)

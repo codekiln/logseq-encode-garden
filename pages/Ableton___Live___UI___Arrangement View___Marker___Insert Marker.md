@@ -6,4 +6,4 @@ up:: [[Ableton/Live/UI/Arrangement View]]
 	- Moves with the [[Ableton/Live/UI/Control Bar/Field/Arrangement Position]].
 	- ## Source
 		- [[Ableton/Live/UG/06 Arrangement View]]
-		- [6.3 Transport and Playback](https://www.ableton.com/en/live-manual/12/arrangement-view/#transport-and-playback)
+		- [[Ableton/Live/UG/06 Arrangement View/03 Transport and Playback]] · [6.3 Transport and Playback](https://www.ableton.com/en/live-manual/12/arrangement-view/#transport-and-playback)

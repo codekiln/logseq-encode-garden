@@ -8,5 +8,5 @@ up:: [[Ableton/Live/UI/Control Bar]]
 	- **Behavior** — toggle.
 	- **Remote control** — MIDI or key mapping. [[Launchpad/Custom/Mode/1 Arrangement]] maps a Launchpad pad to it.
 	- ## Source
-		- [19.3.1 Recording Into the Arrangement](https://www.ableton.com/en/live-manual/12/recording-new-clips/#recording-into-the-arrangement)
-		- [7.5 Recording Sessions into the Arrangement](https://www.ableton.com/en/live-manual/12/session-view/#recording-sessions-into-the-arrangement)
+		- [[Ableton/Live/UG/19 Recording New Clips/03 Recording/01 Recording Into the Arrangement]] · [19.3.1 Recording Into the Arrangement](https://www.ableton.com/en/live-manual/12/recording-new-clips/#recording-into-the-arrangement)
+		- [[Ableton/Live/UG/07 Session View/05 Recording Sessions into the Arrangement]] · [7.5 Recording Sessions into the Arrangement](https://www.ableton.com/en/live-manual/12/session-view/#recording-sessions-into-the-arrangement)
