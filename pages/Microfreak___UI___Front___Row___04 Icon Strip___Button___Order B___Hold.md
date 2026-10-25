@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control/Setting]]
-up:: [[Microfreak/UI/Front/Row/Bottom/07 Icon Strip/Button/Order B]]
+up:: [[Microfreak/UI/Front/Row/04 Icon Strip/Button/Order B]]
 
 - # Hold the Order | B button
 	- Holding the button and pressing Hold for one second erases pattern B.

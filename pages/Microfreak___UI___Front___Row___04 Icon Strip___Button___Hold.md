@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Bottom/07 Icon Strip]]
+up:: [[Microfreak/UI/Front/Row/04 Icon Strip]]
 
 - # Hold button
 	- Keeps held keys sounding after the fingers lift; while recording a sequence it enters a tie or a rest.

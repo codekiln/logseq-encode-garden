@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Bottom/03 Arp Seq]]
+up:: [[Microfreak/UI/Front/Row/03 Bottom/03 Arp Seq]]
 
 - # Arp | Seq Rate knob
 	- Sets the tempo of the Arpeggiator and Sequencer; during step recording it steps through the sequence.
@@ -7,8 +7,8 @@ up:: [[Microfreak/UI/Front/Row/Bottom/03 Arp Seq]]
 	- ## Behavior
 		- Endless encoder with a push switch; the Sync LED shows when it follows the clock.
 	- ## Gestures
-		- [[Microfreak/UI/Front/Row/Bottom/03 Arp Seq/Knob/Rate/Press]]
-		- [[Microfreak/UI/Front/Row/Bottom/03 Arp Seq/Knob/Rate/Shift]]
+		- [[Microfreak/UI/Front/Row/03 Bottom/03 Arp Seq/Knob/Rate/Press]]
+		- [[Microfreak/UI/Front/Row/03 Bottom/03 Arp Seq/Knob/Rate/Shift]]
 	- ## Remote control
 		- MIDI CC 91 with Sync off and CC 92 with Sync on, per [[Microfreak/UG/21 Appendix D - CC Values]].
 	- ## Source

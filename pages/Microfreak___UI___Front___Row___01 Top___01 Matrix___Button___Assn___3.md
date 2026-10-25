@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Top/01 Matrix]]
+up:: [[Microfreak/UI/Front/Row/01 Top/01 Matrix]]
 
 - # Assign 3 button
 	- Picks the destination for column Assign 3 of the Matrix.
@@ -7,7 +7,7 @@ up:: [[Microfreak/UI/Front/Row/Top/01 Matrix]]
 	- ## Behavior
 		- Momentary: it acts while held, together with another control.
 	- ## Gestures
-		- [[Microfreak/UI/Front/Row/Top/01 Matrix/Button/Assn/3/Hold]]
+		- [[Microfreak/UI/Front/Row/01 Top/01 Matrix/Button/Assn/3/Hold]]
 	- ## Source
 		- [[Microfreak/UG/05 Connections/02 Matrix and Encoder/02 Assigning Destinations]]
 		- [[Microfreak/UG/03 Overview/01 Front Panel/01 Top Row/01 Matrix]]

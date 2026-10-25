@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Middle/03 Analog Filter]]
+up:: [[Microfreak/UI/Front/Row/02 Main/03 Analog Filter]]
 
 - # Cutoff knob
 	- Sets the frequency where the filter starts to act.

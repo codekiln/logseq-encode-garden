@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Top]]
+up:: [[Microfreak/UI/Front/Row/01 Top]]
 
 - # Panel button
 	- Applies the current position of every knob to the loaded preset.

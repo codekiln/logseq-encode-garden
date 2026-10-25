@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Bottom/05 Envelope]]
+up:: [[Microfreak/UI/Front/Row/03 Bottom/05 Envelope]]
 
 - # Filter Amt knob
 	- Sets how much the envelope changes the filter cutoff.

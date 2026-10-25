@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Middle]]
+up:: [[Microfreak/UI/Front/Row/02 Main]]
 
 - # Glide knob
 	- Sets how long the pitch takes to slide from one note to the next; fully left there is no slide.

@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/UI/Control/Setting]]
-up:: [[Microfreak/UI/Front/Row/Bottom/04 LFO/Button/Shape]]
-prev:: [[Microfreak/UI/Front/Row/Bottom/04 LFO/Button/Shape/Triangle]]
-next:: [[Microfreak/UI/Front/Row/Bottom/04 LFO/Button/Shape/Square]]
+up:: [[Microfreak/UI/Front/Row/03 Bottom/04 LFO/Button/Shape]]
+prev:: [[Microfreak/UI/Front/Row/03 Bottom/04 LFO/Button/Shape/Triangle]]
+next:: [[Microfreak/UI/Front/Row/03 Bottom/04 LFO/Button/Shape/Square]]
 
 - # Rising sawtooth
 	- Rises in a straight line, then drops at once.

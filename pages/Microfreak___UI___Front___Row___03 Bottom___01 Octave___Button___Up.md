@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Bottom/01 Octave]]
+up:: [[Microfreak/UI/Front/Row/03 Bottom/01 Octave]]
 
 - # Octave Up button
 	- Shifts the keyboard one octave up, as far as three octaves.

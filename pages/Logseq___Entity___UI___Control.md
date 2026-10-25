@@ -11,7 +11,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Place a control at `<Item>/UI/<Area>/<Kind>/<Name>`, under the [[Logseq/Entity/UI/Area]] that holds it.
 		- `<Kind>` is the noun the product's documentation uses for that control, singular and in Title Case: `Knob`, `Button`, `Switch`, `Toggle`, `Field`, `Slider`, `Menu`, `Pad`, `Fader`, `Marker`, `Jack`, `Strip`.
 		- `<Name>` is the label printed on the panel or used in the manual.
-		- On a panel mapped by position, a numbered single control carries its kind in its own name, `<Row>/<NN> <Name> <Kind>`, as in [[Microfreak/UI/Front/Row/Top/02 Paraphonic Button]]. A control in a numbered group keeps `<Group>/<Kind>/<Name>`, and when the group has only one control of that kind the name is left off: [[Microfreak/UI/Front/Row/Top/01 Matrix/Knob]].
+		- On a panel mapped by position, a numbered single control carries its kind in its own name, `<Row>/<NN> <Name> <Kind>`, as in [[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button]]. A control in a numbered group keeps `<Group>/<Kind>/<Name>`, and when the group has only one control of that kind the name is left off: [[Microfreak/UI/Front/Row/01 Top/01 Matrix/Knob]].
 		- A control that selects among named modes has one page per mode beneath it, and a parameter that only exists in one mode has its page beneath that mode: [[Logseq/Entity/UI/Control/Setting]].
 	- ## Page shape
 		- Frontmatter: `logseq-entity:: [[Logseq/Entity/UI/Control]]` and `up::` to its area. See [[Logseq/Frontmatter]] for shared conventions.

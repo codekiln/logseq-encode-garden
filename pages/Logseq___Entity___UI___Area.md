@@ -12,8 +12,8 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- A [[Logseq/Entity/UI/Control]] corresponds to an [[UX/Design/Atomic/L1 - Atom]]. A preset or a saved Live Set, which fills the interface with real values, corresponds to an [[UX/Design/Atomic/L5 - Page]] and is modeled by its own entity.
 	- ## Identity and names
 		- Place an area at `<Item>/UI/<Area>`, nesting a smaller area under the area that holds it: `<Item>/UI/<Area>/<Sub-area>`.
-		- A hardware panel can also be mapped by position. Each side of the device is an area, `<Item>/UI/Front` or `<Item>/UI/Rear`; a side laid out in rows has one area per row at `<Item>/UI/Front/Row/<Top|Middle|Bottom>`.
-		- Inside a row, or on a side without rows, each item takes a two-digit number counting left to right: `01 Matrix`, `02 Paraphonic Button`. A numbered group of controls is an area, such as [[Microfreak/UI/Front/Row/Top/01 Matrix]]; a numbered single control is a [[Logseq/Entity/UI/Control]].
+		- A hardware panel can also be mapped by position. Each side of the device is an area, `<Item>/UI/Front` or `<Item>/UI/Rear`; a side laid out in rows has one area per row at `<Item>/UI/Front/Row/<NN Row>`, numbered top to bottom, such as [[Microfreak/UI/Front/Row/02 Main]].
+		- Inside a row, or on a side without rows, each item takes a two-digit number counting left to right: `01 Matrix`, `02 Paraphonic Button`. A numbered group of controls is an area, such as [[Microfreak/UI/Front/Row/01 Top/01 Matrix]]; a numbered single control is a [[Logseq/Entity/UI/Control]].
 		- Use the name printed on the panel or used in the manual, in Title Case: `Oscillator`, `Control Bar`, `Arrangement View`, `Scrub Area`.
 		- Search `<Item>/UI` and the item's older pages before creating an area. When the garden already has a page for the same region under another name, link it from the area page, and list the older name in `alias::` when it has no page file of its own.
 	- ## Page shape
@@ -23,6 +23,6 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- A `## Source` section links the user guide or manual section that describes the area.
 	- ## Examples
 		- [[Microfreak/UI]] → [[Microfreak/UI/Oscillator]]
-		- [[Microfreak/UI/Front]] → [[Microfreak/UI/Front/Row/Top]] → [[Microfreak/UI/Front/Row/Top/01 Matrix]]
+		- [[Microfreak/UI/Front]] → [[Microfreak/UI/Front/Row/01 Top]] → [[Microfreak/UI/Front/Row/01 Top/01 Matrix]]
 		- [[Ableton/Live/UI]] → [[Ableton/Live/UI/Arrangement View]] and [[Ableton/Live/UI/Control Bar]]
 		- A Launchpad page would follow the same shape at `Launchpad/UI/<Area>`, for example its grid of pads.

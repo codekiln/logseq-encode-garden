@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Bottom/03 Arp Seq]]
+up:: [[Microfreak/UI/Front/Row/03 Bottom/03 Arp Seq]]
 
 - # Oct | Mod button
 	- Sets the Arpeggiator range, or picks one of the four Sequencer modulation tracks; LEDs 1 to 4 show the choice.
@@ -7,7 +7,7 @@ up:: [[Microfreak/UI/Front/Row/Bottom/03 Arp Seq]]
 	- ## Values
 		- 1 to 4 octaves for the Arpeggiator; modulation tracks 1 to 4 for the Sequencer.
 	- ## Gestures
-		- [[Microfreak/UI/Front/Row/Bottom/03 Arp Seq/Button/Oct Mod/Hold]]
+		- [[Microfreak/UI/Front/Row/03 Bottom/03 Arp Seq/Button/Oct Mod/Hold]]
 	- ## Source
 		- [[Microfreak/UG/12 Arpeggiator/05 Arpeggio Range]]
 		- [[Microfreak/UG/13 Sequencer/02 Mod Tracks]]

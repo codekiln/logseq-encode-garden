@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Bottom/07 Icon Strip]]
+up:: [[Microfreak/UI/Front/Row/04 Icon Strip]]
 
 - # Touch strip
 	- A touch strip that sets Spice, Dice or Bend, whichever icon is selected.

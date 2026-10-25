@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Bottom/07 Icon Strip]]
+up:: [[Microfreak/UI/Front/Row/04 Icon Strip]]
 
 - # Bend button
 	- Selects Bend for the touch strip, which then bends the pitch.

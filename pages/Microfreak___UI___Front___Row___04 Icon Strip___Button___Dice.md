@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Bottom/07 Icon Strip]]
+up:: [[Microfreak/UI/Front/Row/04 Icon Strip]]
 
 - # Dice button
 	- Selects Dice for the touch strip; each touch makes a new random variation of the gates in a running arpeggio or sequence.

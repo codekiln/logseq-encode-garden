@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Top]]
+up:: [[Microfreak/UI/Front/Row/01 Top]]
 
 - # Master knob
 	- Sets the output level of the line and headphone outputs.

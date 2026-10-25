@@ -1,6 +1,6 @@
 logseq-entity:: [[Logseq/Entity/UI/Control/Setting]]
-up:: [[Microfreak/UI/Front/Row/Bottom/04 LFO/Button/Shape]]
-next:: [[Microfreak/UI/Front/Row/Bottom/04 LFO/Button/Shape/Triangle]]
+up:: [[Microfreak/UI/Front/Row/03 Bottom/04 LFO/Button/Shape]]
+next:: [[Microfreak/UI/Front/Row/03 Bottom/04 LFO/Button/Shape/Triangle]]
 
 - # Sine
 	- Rises and falls smoothly.

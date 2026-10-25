@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control/Setting]]
-up:: [[Microfreak/UI/Front/Row/Bottom/06 Keyboard]]
+up:: [[Microfreak/UI/Front/Row/05 Keys]]
 
 - # Shift and a key
 	- Holding Shift and playing a key transposes a held arpeggio or the playing sequence.

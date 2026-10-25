@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control/Setting]]
-up:: [[Microfreak/UI/Front/Row/Bottom/03 Arp Seq/Button/Arp Seq]]
+up:: [[Microfreak/UI/Front/Row/03 Bottom/03 Arp Seq/Button/Arp Seq]]
 
 - # Shift and the Arp | Seq button
 	- Holding Shift and pressing the button switches between the Arpeggiator and the Sequencer.

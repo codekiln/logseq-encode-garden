@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Middle/04 Cycling Envelope]]
+up:: [[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope]]
 
 - # Hold / Sustain knob
 	- Sets the hold time in Run and Loop modes and the sustain level in Env mode.

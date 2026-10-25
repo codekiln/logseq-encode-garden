@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Middle/02 Digital Oscillator]]
+up:: [[Microfreak/UI/Front/Row/02 Main/02 Digital Oscillator]]
 
 - # Wave knob
 	- Sets the Wave parameter of the selected oscillator model.
@@ -7,7 +7,7 @@ up:: [[Microfreak/UI/Front/Row/Middle/02 Digital Oscillator]]
 	- ## Same control
 		- [[Microfreak/UI/Oscillator/Knob/Wave]]
 	- ## Gestures
-		- [[Microfreak/UI/Front/Row/Middle/02 Digital Oscillator/Knob/Wave/Shift]]
+		- [[Microfreak/UI/Front/Row/02 Main/02 Digital Oscillator/Knob/Wave/Shift]]
 	- ## Remote control
 		- MIDI CC 10, per [[Microfreak/UG/21 Appendix D - CC Values]].
 	- ## Source

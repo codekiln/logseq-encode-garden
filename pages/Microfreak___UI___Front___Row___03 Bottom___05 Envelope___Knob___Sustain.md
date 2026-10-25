@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Bottom/05 Envelope]]
+up:: [[Microfreak/UI/Front/Row/03 Bottom/05 Envelope]]
 
 - # Sustain knob
 	- Sets the level the envelope holds while the key stays down.

@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/UI/Control/Setting]]
-up:: [[Microfreak/UI/Front/Row/Bottom/04 LFO/Button/Shape]]
-prev:: [[Microfreak/UI/Front/Row/Bottom/04 LFO/Button/Shape/Rising Sawtooth]]
-next:: [[Microfreak/UI/Front/Row/Bottom/04 LFO/Button/Shape/Random Stepped]]
+up:: [[Microfreak/UI/Front/Row/03 Bottom/04 LFO/Button/Shape]]
+prev:: [[Microfreak/UI/Front/Row/03 Bottom/04 LFO/Button/Shape/Rising Sawtooth]]
+next:: [[Microfreak/UI/Front/Row/03 Bottom/04 LFO/Button/Shape/Random Stepped]]
 
 - # Square
 	- Jumps between its lowest and highest values.

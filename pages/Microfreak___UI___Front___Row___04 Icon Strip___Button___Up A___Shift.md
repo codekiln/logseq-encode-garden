@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control/Setting]]
-up:: [[Microfreak/UI/Front/Row/Bottom/07 Icon Strip/Button/Up A]]
+up:: [[Microfreak/UI/Front/Row/04 Icon Strip/Button/Up A]]
 
 - # Shift and the Up | A button
 	- In the Arpeggiator, copies the current arpeggio to pattern A; in the Sequencer, reloads pattern A as last saved.

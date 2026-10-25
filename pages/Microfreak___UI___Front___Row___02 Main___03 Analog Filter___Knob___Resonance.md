@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Middle/03 Analog Filter]]
+up:: [[Microfreak/UI/Front/Row/02 Main/03 Analog Filter]]
 
 - # Resonance knob
 	- Boosts the frequencies around the cutoff.

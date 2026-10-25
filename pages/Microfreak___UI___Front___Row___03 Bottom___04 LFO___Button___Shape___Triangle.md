@@ -1,7 +1,7 @@
 logseq-entity:: [[Logseq/Entity/UI/Control/Setting]]
-up:: [[Microfreak/UI/Front/Row/Bottom/04 LFO/Button/Shape]]
-prev:: [[Microfreak/UI/Front/Row/Bottom/04 LFO/Button/Shape/Sine]]
-next:: [[Microfreak/UI/Front/Row/Bottom/04 LFO/Button/Shape/Rising Sawtooth]]
+up:: [[Microfreak/UI/Front/Row/03 Bottom/04 LFO/Button/Shape]]
+prev:: [[Microfreak/UI/Front/Row/03 Bottom/04 LFO/Button/Shape/Sine]]
+next:: [[Microfreak/UI/Front/Row/03 Bottom/04 LFO/Button/Shape/Rising Sawtooth]]
 
 - # Triangle
 	- Rises and falls in straight lines.

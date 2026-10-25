@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control/Setting]]
-up:: [[Microfreak/UI/Front/Row/Top/01 Matrix/Knob]]
+up:: [[Microfreak/UI/Front/Row/01 Top/01 Matrix/Knob]]
 
 - # Shift and the Matrix knob
 	- Holding Shift and pressing the knob clears every Matrix routing.

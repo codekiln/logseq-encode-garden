@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control/Setting]]
-up:: [[Microfreak/UI/Front/Row/Top/06 Save Button]]
+up:: [[Microfreak/UI/Front/Row/01 Top/06 Save Button]]
 
 - # Hold the Save button
 	- Holding Save stores the current sound in its own slot without going through the save menu.

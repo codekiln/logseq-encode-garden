@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Bottom]]
+up:: [[Microfreak/UI/Front/Row/03 Bottom]]
 
 - # Shift button
 	- Gives other controls their second function, printed in blue on the panel.

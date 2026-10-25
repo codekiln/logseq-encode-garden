@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control/Setting]]
-up:: [[Microfreak/UI/Front/Row/Bottom/03 Arp Seq/Knob/Rate]]
+up:: [[Microfreak/UI/Front/Row/03 Bottom/03 Arp Seq/Knob/Rate]]
 
 - # Press the Arp | Seq Rate knob
 	- Turns Sync on or off; with Sync on, Rate picks a division of the clock.

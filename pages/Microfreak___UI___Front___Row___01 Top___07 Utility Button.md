@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Top]]
+up:: [[Microfreak/UI/Front/Row/01 Top]]
 
 - # Utility button
 	- Opens the Utility menus for preset and global settings.

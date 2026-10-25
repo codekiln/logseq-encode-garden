@@ -9,6 +9,6 @@ up:: [[Microfreak/UI]]
 		- [[Microfreak/UI/Oscillator/Knob/Timbre]]
 		- [[Microfreak/UI/Oscillator/Knob/Shape]]
 	- ## Panel position
-		- [[Microfreak/UI/Front/Row/Middle/02 Digital Oscillator]]
+		- [[Microfreak/UI/Front/Row/02 Main/02 Digital Oscillator]]
 	- ## Source
 		- [[Microfreak/UG/06 Dig Osc]]

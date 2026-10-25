@@ -1,6 +1,6 @@
 logseq-entity:: [[Logseq/Entity/UI/Control/Setting]]
-up:: [[Microfreak/UI/Front/Row/Bottom/04 LFO/Button/Shape]]
-prev:: [[Microfreak/UI/Front/Row/Bottom/04 LFO/Button/Shape/Random Stepped]]
+up:: [[Microfreak/UI/Front/Row/03 Bottom/04 LFO/Button/Shape]]
+prev:: [[Microfreak/UI/Front/Row/03 Bottom/04 LFO/Button/Shape/Random Stepped]]
 
 - # Random gliding
 	- Slides from one random value to the next.

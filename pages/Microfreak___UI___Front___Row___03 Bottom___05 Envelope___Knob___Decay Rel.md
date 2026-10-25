@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Bottom/05 Envelope]]
+up:: [[Microfreak/UI/Front/Row/03 Bottom/05 Envelope]]
 
 - # Decay / Rel knob
 	- Sets how long the envelope takes to fall to the sustain level, and to zero after the key is released.

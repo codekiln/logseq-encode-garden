@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control/Setting]]
-up:: [[Microfreak/UI/Front/Row/Middle/02 Digital Oscillator/Knob/Shape]]
+up:: [[Microfreak/UI/Front/Row/02 Main/02 Digital Oscillator/Knob/Shape]]
 
 - # Shift and the Shape knob
 	- Holding Shift turns Shape at the opposite speed, slow or fast, from the Osc Knob Speed setting.

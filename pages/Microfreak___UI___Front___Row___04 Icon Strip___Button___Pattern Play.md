@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Bottom/07 Icon Strip]]
+up:: [[Microfreak/UI/Front/Row/04 Icon Strip]]
 
 - # Pattern | Play button
 	- In the Arpeggiator, builds a semi-random pattern from keys played legato; in the Sequencer, starts and stops playback.

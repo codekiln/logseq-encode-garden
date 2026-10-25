@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control/Setting]]
-up:: [[Microfreak/UI/Front/Row/Top/01 Matrix/Button/Assn/2]]
+up:: [[Microfreak/UI/Front/Row/01 Top/01 Matrix/Button/Assn/2]]
 
 - # Hold Assign 2
 	- Hold Assign 2 and turn a knob to make that knob the destination of the Assign 2 column.

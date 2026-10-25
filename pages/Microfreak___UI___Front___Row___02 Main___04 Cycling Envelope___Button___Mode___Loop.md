@@ -1,6 +1,6 @@
 logseq-entity:: [[Logseq/Entity/UI/Control/Setting]]
-up:: [[Microfreak/UI/Front/Row/Middle/04 Cycling Envelope/Button/Mode]]
-prev:: [[Microfreak/UI/Front/Row/Middle/04 Cycling Envelope/Button/Mode/Run]]
+up:: [[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Button/Mode]]
+prev:: [[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Button/Mode/Run]]
 
 - # Loop mode
 	- The envelope repeats and restarts on each keyboard, arpeggiator or sequencer trigger.

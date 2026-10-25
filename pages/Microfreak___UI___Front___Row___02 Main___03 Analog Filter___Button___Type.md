@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Middle/03 Analog Filter]]
+up:: [[Microfreak/UI/Front/Row/02 Main/03 Analog Filter]]
 
 - # Filter Type button
 	- Steps through the three filter types; an LED beside the button shows which one is active.
@@ -7,9 +7,9 @@ up:: [[Microfreak/UI/Front/Row/Middle/03 Analog Filter]]
 	- ## Behavior
 		- Steps through LPF, BPF and HPF on each press.
 	- ## Settings
-		- [[Microfreak/UI/Front/Row/Middle/03 Analog Filter/Button/Type/LPF]]
-		- [[Microfreak/UI/Front/Row/Middle/03 Analog Filter/Button/Type/BPF]]
-		- [[Microfreak/UI/Front/Row/Middle/03 Analog Filter/Button/Type/HPF]]
+		- [[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Button/Type/LPF]]
+		- [[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Button/Type/BPF]]
+		- [[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Button/Type/HPF]]
 	- ## Source
 		- [[Microfreak/UG/03 Overview/01 Front Panel/02 Middle Row/03 Analog Filter]]
 		- [[Microfreak/UG/07 Filter/01 Modifying Sound]]

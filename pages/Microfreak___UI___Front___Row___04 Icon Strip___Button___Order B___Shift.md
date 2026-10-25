@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control/Setting]]
-up:: [[Microfreak/UI/Front/Row/Bottom/07 Icon Strip/Button/Order B]]
+up:: [[Microfreak/UI/Front/Row/04 Icon Strip/Button/Order B]]
 
 - # Shift and the Order | B button
 	- In the Arpeggiator, copies the current arpeggio to pattern B; in the Sequencer, reloads pattern B as last saved.

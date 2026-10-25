@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Top]]
+up:: [[Microfreak/UI/Front/Row/01 Top]]
 
 - # OLED display
 	- Shows the preset name and category, the value of the control being moved, and the Utility menus.

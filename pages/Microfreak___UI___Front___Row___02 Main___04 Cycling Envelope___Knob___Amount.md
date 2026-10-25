@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Microfreak/UI/Front/Row/Middle/04 Cycling Envelope]]
+up:: [[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope]]
 
 - # Amount knob
 	- Sets how much of the Cycling Envelope reaches the Matrix.
