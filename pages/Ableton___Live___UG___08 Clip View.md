@@ -1,0 +1,21 @@
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]]
+up:: [[Ableton/Live/UG]]
+prev:: [[Ableton/Live/UG/07 Session View]]
+next:: [[Ableton/Live/UG/09 Audio Clips Tempo and Warping]]
+
+- # [8. Clip View](https://www.ableton.com/en/live-manual/12/clip-view/)
+	- Clip properties and the clip editor: the panels for audio, pitch and time, transform and generate, plus looping, cropping and replacing clips.
+	- [[Ableton/Live/UG/08 Clip View/01 Clip View Layout]]
+	- [[Ableton/Live/UG/08 Clip View/02 Main Clip Properties Panel]]
+	- [[Ableton/Live/UG/08 Clip View/03 Extended Clip Properties]]
+	- [[Ableton/Live/UG/08 Clip View/04 Audio Utilities Panel]]
+	- [[Ableton/Live/UG/08 Clip View/05 Pitch and Time Utilities Panel]]
+	- [[Ableton/Live/UG/08 Clip View/06 Transform and Generate Panels]]
+	- [[Ableton/Live/UG/08 Clip View/07 Zooming and Scrolling in the Clip View's Editor]]
+	- [[Ableton/Live/UG/08 Clip View/08 Playing and Scrubbing Clips]]
+	- [[Ableton/Live/UG/08 Clip View/09 Looping Clips]]
+	- [[Ableton/Live/UG/08 Clip View/10 Clip View Sample Details]]
+	- [[Ableton/Live/UG/08 Clip View/11 Cropping Clips]]
+	- [[Ableton/Live/UG/08 Clip View/12 Replacing and Editing the Sample]]
+	- [[Ableton/Live/UG/08 Clip View/13 Editing Clip Properties for Multiple Clips]]
+	- [[Ableton/Live/UG/08 Clip View/14 Clip Defaults and Update Rate]]
