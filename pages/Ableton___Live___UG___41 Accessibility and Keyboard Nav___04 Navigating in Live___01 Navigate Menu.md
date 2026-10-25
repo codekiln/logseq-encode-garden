@@ -1,0 +1,42 @@
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
+up:: [[Ableton/Live/UG/41 Accessibility and Keyboard Nav/04 Navigating in Live]]
+- # [41.4.1 Navigate Menu](https://www.ableton.com/en/live-manual/12/accessibility-and-keyboard-navigation/#navigate-menu)
+	- The Navigate menu reaches every main view, and most entries have a shortcut. Open it with `VO+M` then `N` under VoiceOver (Mac), or `Alt+N` (Win).
+	- ## 41.4.1.1 Control Bar — `Option+0` (Mac) / `Alt+0` (Win)
+		- The [[Ableton/Live/UI/Control Bar]] groups project settings, transport, tools and status views. `Tab` through the groups with Speak Help Text on to hear what each does. Focus returns to the last control used.
+	- ## 41.4.1.2 Session View — `Option+1` (Mac) / `Alt+1` (Win)
+		- **Track title bars** — left and right arrows move between them; right-click for track commands.
+		- **Clip slots** — tracks run top to bottom, scenes left to right. `Cmd+Shift+M` (Mac) / `Ctrl+Shift+M` (Win) inserts an empty MIDI clip; `Enter` launches the selected clip, following the [[Ableton/Live/UI/Control Bar/Menu/Quantization]] setting. Return tracks show slots that cannot hold clips.
+		- **Scenes** — up and down arrows move between Main track scene numbers; `Enter` launches a scene.
+		- **Mixer** — choose which mixer sections show from View → Mixer Controls or the menu by the Mixer view control at the bottom right. Crossfader, track options and performance impact are hidden by default.
+		- `Tab` / `Shift+Tab` move from slots to the mixer and through a track's mixer controls. Next Neighbor and Previous Neighbor, `Option+Tab` / `Option+Shift+Tab` (Mac), move to the same control on another track. `Esc` returns to the track's title bar.
+	- ## 41.4.1.3 Arrangement View — `Option+2` (Mac) / `Alt+2` (Win)
+		- In [[Ableton/Live/UI/Arrangement View]]:
+		- **Tracks** — up and down arrows move between tracks; `Option+Tab` (Mac) moves between track mixers, and `Tab` / `Shift+Tab` through a mixer's controls.
+		- **Timeline** — left and right arrows step by the grid; `+` and `-` widen or narrow the grid; `Option` plus left or right (Mac) jumps to the previous or next clip edge or locator.
+		- **Locators** — arrow to a spot, `Tab` to [[Ableton/Live/UI/Arrangement View/Button/Set Locator]] and press `Enter`; `Tab` / `Shift+Tab` move between locators; `Delete` removes one.
+		- **Content** — `Shift` plus arrows selects; arrows move the selection; `Cmd+X`, `Cmd+C`, `Cmd+V`, `Cmd+D` and `Delete` cut, copy, paste, duplicate and delete (`Ctrl` on Windows).
+		- **Clip edges** — put the insert marker on an edge, press `Enter`, adjust with the arrows, then `Enter` to confirm or `Esc` to cancel.
+		- **Export** — select a region and press `Cmd+R` (Mac) / `Ctrl+R` (Win); the Main track renders by default.
+		- Audio clip fades cannot yet be edited with a screen reader.
+	- ## 41.4.1.4 Clip View — `Option+3` (Mac) / `Alt+3` (Win)
+		- Open a clip with a double-click or `Cmd+Option+3` (Mac) / `Ctrl+Alt+3` (Win). Clip View has clip panels and an editor; `Option+Shift+P` (Mac) / `Alt+Shift+P` (Win) focuses the panels and `Option+3` focuses the editor.
+		- **MIDI Note Editor** — turn on Options → MIDI Note Editor Preview to hear notes as you edit. `Shift` plus left or right selects time; `Enter` selects the notes in it; `Option` plus left or right (Mac) moves to the previous or next note boundary.
+		- **Moving between notes** — `Option` plus up or down (Mac) jumps to the previous or next note; `Option` plus left or right jumps to the previous or next note of the same pitch; add `Shift` to extend the selection.
+		- **Editing notes** — up and down transpose; `Shift` plus up or down transposes by octave; `Shift` plus left or right changes length by the grid; left and right move by the grid; `Cmd` plus up or down changes velocity; `Cmd+Option` plus up or down changes probability (Mac).
+		- **Audio clips** — `Option` plus left or right moves the insert marker; `Shift` plus arrows selects time; left and right move a selected Warp Marker; `Cmd+I` inserts a Warp Marker; `Cmd+Shift+I` inserts a transient (Mac; `Ctrl` on Windows).
+		- MPE editing is not yet supported with screen readers.
+	- ## 41.4.1.5 Device View — `Option+4` (Mac) / `Alt+4` (Win)
+		- Shows a track's device chain. MIDI tracks hold MIDI effects, instruments and audio effects; audio, group, return and Main tracks hold audio effects.
+		- Each device reads as a group to screen readers. Left and right arrows move between devices, `Tab` / `Shift+Tab` through a device's controls, and the usual cut, copy, paste, duplicate and `Delete` shortcuts work on devices.
+		- Complex devices are not yet fully optimized for screen readers.
+	- ## 41.4.1.6 Browser — `Option+5` (Mac) / `Alt+5` (Win)
+		- The [[Ableton/Browser]] has a search bar, filters, a sidebar and a content pane. `Cmd+F` (Mac) / `Ctrl+F` (Win) focuses search from anywhere and selects the All label.
+		- `Tab` moves from search to the filter toggle, the Filter View menu and the sidebar, then to filters or the content pane; down arrow jumps from search to results.
+		- In the sidebar, up and down move between labels and left and right move between sidebar and content. In the content pane, `Shift` plus up or down multi-selects, and right and left expand and collapse folders.
+		- Turn on Options → Browser File Preview to hear previews; with it off, right arrow still plays the selected item's preview.
+		- Filtering and tagging are not yet supported with screen readers.
+	- ## 41.4.1.7 Groove Pool — `Option+6` (Mac) / `Alt+6` (Win)
+		- Grooves change the timing and feel of clips. In the Groove Pool, `Tab` / `Shift+Tab` move between groove parameters and up and down arrows change values.
+	- ## 41.4.1.8 Learn View — `Option+7` (Mac) / `Alt+7` (Win)
+		- Short lessons on different parts of Live.
