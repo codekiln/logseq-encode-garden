@@ -47,8 +47,8 @@ date-created:: [[2026-10-24 Sat]]
 		- ### 05:00 Cycling envelope sweeps
 			- Cycling envelope rise (CC 102) and fall (CC 103) move through most of these three minutes, which have the most notes in the session. Because the cycling envelope drives resonance in this preset, those sweeps change how the resonance pulses. The section from 05:38 to 08:27 comes from a later take placed into the arrangement.
 			- [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/02 Changing Shapes]]
-			- ### [[My Notes]] 07:40 detunes
-				-
+			- ### [[My Notes]] 07:40 detunes - [[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Detune]]
+				- Musically effective. Dreamy and machine-like.
 		- ### 08:00 Opening the filter
 			- Cutoff (CC 23) rises from 12 at 08:03, with Wave, Shape and attack changes around it. From 09:00, cycling envelope amount (CC 24), hold, rise and fall change again.
 			- [[Microfreak/UG/07 Filter/01 Modifying Sound/04 Cutoff Frequency]]
