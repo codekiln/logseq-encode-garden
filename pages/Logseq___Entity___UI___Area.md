@@ -6,7 +6,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- A region the product's own documentation names and that holds controls: [[Microfreak/UI/Oscillator]], [[Ableton/Live/UI/Control Bar]], [[Ableton/Live/UI/Arrangement View]].
 		- `<Item>/UI` is the root area for an item and covers its whole interface, the way `<Item>/UG` holds its [[Logseq/Entity/Book/User Guide]].
 		- A single knob, button, pad or field is a [[Logseq/Entity/UI/Control]], not an area.
-		- A group of controls the documentation does not name stays a list on its area page rather than becoming a page.
+		- A small group of controls stays a heading on its area page rather than becoming a page, even when the documentation names it, such as the Transport Controls section of [[Ableton/Live/UI/Control Bar]].
 	- ## Atomic Design stages
 		- A UI Area corresponds to an [[UX/Design/Atomic/L3 - Organism]]; a root `<Item>/UI` page or a full view such as [[Ableton/Live/UI/Arrangement View]] corresponds to an [[UX/Design/Atomic/L4 - Template]].
 		- A [[Logseq/Entity/UI/Control]] corresponds to an [[UX/Design/Atomic/L1 - Atom]]. A preset or a saved Live Set, which fills the interface with real values, corresponds to an [[UX/Design/Atomic/L5 - Page]] and is modeled by its own entity.

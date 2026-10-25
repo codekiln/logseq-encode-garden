@@ -9,7 +9,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- A control corresponds to an [[UX/Design/Atomic/L1 - Atom]].
 	- ## Identity and names
 		- Place a control at `<Item>/UI/<Area>/<Kind>/<Name>`, under the [[Logseq/Entity/UI/Area]] that holds it.
-		- `<Kind>` is the noun the product's documentation uses for that control, singular and in Title Case: `Knob`, `Button`, `Switch`, `Toggle`, `Field`, `Slider`, `Pad`, `Fader`, `Marker`.
+		- `<Kind>` is the noun the product's documentation uses for that control, singular and in Title Case: `Knob`, `Button`, `Switch`, `Toggle`, `Field`, `Slider`, `Menu`, `Pad`, `Fader`, `Marker`.
 		- `<Name>` is the label printed on the panel or used in the manual.
 		- A control that selects among named modes has one page per mode beneath it, and a parameter that only exists in one mode has its page beneath that mode: [[Logseq/Entity/UI/Control/Setting]].
 	- ## Page shape
