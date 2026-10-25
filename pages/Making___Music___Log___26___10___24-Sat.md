@@ -1,4 +1,6 @@
-- [[2026-10-24 Sat]]
+next:: [[Making/Music/Log/26/10/25 Sun]]
+
+- # [[2026-10-24 Sat]]
 	- Recorded [[GitP/A/Session/26/10/24-Sat]] at the library with [[Microfreak/Preset/151 The Unstable]], the [[Novation/Launchpad/Pro/Mk3]] and [[Ableton/Live]].
 	- Project: `~/Documents/ableton/GitP/26.10.24 Project`; export `26.10.24.mp3`.
 	- USB cables only for MIDI. A single USB hub with all the other cables plugged into it works well.

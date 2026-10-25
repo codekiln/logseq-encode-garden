@@ -8,7 +8,7 @@ prev:: [[Making/Music/Log/26/10/11-Sun]]
 			- with octave -1 d, f, g, c, coupling (d,f), (f, g), (g, c), (c, d) where a descant sang out.
 			- While this was happening, the microfreak paraphonic / unison button was blinking. I'm I'm not sure what that was about.
 		- ### [[Microfreak/Preset/247 Laity]]
-			- This preset has several items that are modulated by pressure in the matrix: [[Microfreak/Oscillator/Timbre]], [[Microfreak/Filter/Cutoff]], [[Microfreak/Matrix/Assn/1]]. I realized that it's easier to make quiet sounds on the capacitive touch keyboard using the "bones" of the white keys, since there are fewer sensors up there. Effective example: I recorded a clip with (d), (d,f), (f,c), (c,e) and some cool interference patterns emerged.
+			- This preset has several items that are modulated by pressure in the matrix: [[Microfreak/UI/Oscillator/Knob/Timbre]], [[Microfreak/Filter/Cutoff]], [[Microfreak/Matrix/Assn/1]]. I realized that it's easier to make quiet sounds on the capacitive touch keyboard using the "bones" of the white keys, since there are fewer sensors up there. Effective example: I recorded a clip with (d), (d,f), (f,c), (c,e) and some cool interference patterns emerged.
 	- ## Compelling Launchpad Microfreak Workflow for Scales and Sequences
 		- realized that I could make a `Mf to LPP` [[Ableton/Track/MIDI]] in [[Ableton/Live]] to route the [[Microfreak]] to the [[Launchpad]] so I could record into a sequence into the [[Launchpad/UG/09 Sequencer]]. Then I can use all the sequencer's various affordances, e.g. modes, scenes, etc.
 	- ## Questions

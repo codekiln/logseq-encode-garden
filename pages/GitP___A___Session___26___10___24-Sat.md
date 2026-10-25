@@ -22,6 +22,7 @@ date-created:: [[2026-10-24 Sat]]
 	- ## MIDI
 		- [Download the session MIDI](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___MIDI___Session.mid) · [[GitP/A/Session/26/10/24-Sat/Asset/MIDI/Session/mid]]
 		- Times below follow the recording. Control names come from [[Microfreak/UG/21 Appendix D - CC Values]]. With V.Analog, the panel's Wave knob (CC 10) sets Detune, the Timbre knob (CC 12) sets Shape, and the Shape knob (CC 13) sets Wave. [[Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog]]
+		  id:: 6add3dae-8dc8-4156-a5ea-23f7290d9173
 	- ## Voices
 		- **codekiln** is transcribed from the commentary microphone. Only codekiln's commentary is transcribed. Most of the recording is music without commentary.
 		- The transcript is an automatic draft; [unclear] marks a word that could not be made out.
@@ -33,7 +34,8 @@ date-created:: [[2026-10-24 Sat]]
 				- **codekiln** · 00:00:02 — All right, that was cool. Hey, by the way, this is also the first time when I used my [[Launchpad/UG/08 Custom Modes]] to be able to enable the recording. Unfortunately I think it's inverted from what I want. I think it's a bright green when I'm recording and then if I…
 			- [[My Notes]]
 				- This part was actually from the end of the recording session. At the end, I stopped the recording, then used the custom mode MIDI toggle button mapped to the [[Ableton/Live/Mode/Arrangement]] record button
-					- TODO [[Ghost Gardener]] please create a namespace hierarchy under [[Ableton/Live/Mode/Arrangement]] which will map out all the parts of arrangement mode and give all the buttons and settings dedicated pages that autocomplete in Logseq
+					- DOING [[Ghost Gardener]] please create a namespace hierarchy under [[Ableton/Live/Mode/Arrangement]] which will map out all the parts of arrangement mode and give all the buttons and settings dedicated pages that autocomplete in Logseq
+					  id:: 6addc678-7052-4e91-a8af-b4e3f6d99542
 		- ### 00:22 The Unstable over a slow sequence
 			- Launchpad sequencer track 1, set to its slowest rate, plays The Unstable. The Wave and Shape knobs sweep between triangle and saw and between narrow pulse and square, resonance rises a little at 01:27, and cycling envelope amount goes up to about 95 at 01:36. From 02:00, cycling envelope rise, fall and hold change.
 			- [[Launchpad/UG/09 Sequencer/05 Pattern Settings/01 Sync Rate]] · [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope]] · [[Microfreak/Preset/151 The Unstable]]
@@ -45,6 +47,8 @@ date-created:: [[2026-10-24 Sat]]
 		- ### 05:00 Cycling envelope sweeps
 			- Cycling envelope rise (CC 102) and fall (CC 103) move through most of these three minutes, which have the most notes in the session. Because the cycling envelope drives resonance in this preset, those sweeps change how the resonance pulses. The section from 05:38 to 08:27 comes from a later take placed into the arrangement.
 			- [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/02 Changing Shapes]]
+			- ### [[My Notes]] 07:40 detunes
+				-
 		- ### 08:00 Opening the filter
 			- Cutoff (CC 23) rises from 12 at 08:03, with Wave, Shape and attack changes around it. From 09:00, cycling envelope amount (CC 24), hold, rise and fall change again.
 			- [[Microfreak/UG/07 Filter/01 Modifying Sound/04 Cutoff Frequency]]
