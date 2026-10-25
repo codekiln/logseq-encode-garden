@@ -1,0 +1,33 @@
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
+up:: [[Ableton/Live/UG/31 Instrument Reference/11 Simpler]]
+next:: [[Ableton/Live/UG/31 Instrument Reference/11 Simpler/02 Warp Controls]]
+- # [31.11.1 Playback Modes](https://www.ableton.com/en/live-manual/12/live-instrument-reference/#playback-modes)
+	- The mode switch, left of the Sample tab or along the bottom of the expanded view, sets how Simpler treats the sample:
+		- ![Mode Switch in the Sample Tab](https://ableton-production.imgix.net/live-manual/12/SimplerModesTabL12.png)
+		- **Classic** (default) — pitched melodic and harmonic instruments, full ADSR, looping, polyphonic.
+		- **One-Shot** — monophonic drum hits or short phrases; simple envelope, no loop, plays the whole sample by default.
+		- **Slicing** — non-destructive slices played chromatically, set automatically or by hand; suited to drum breaks.
+	- ## 31.11.1.1 Classic Playback Mode
+		- ![The Sample Tab in Classic Playback Mode](https://ableton-production.imgix.net/live-manual/12/SimplerClassicModeL12.png)
+		- The left and right flags bound the usable region. **Start** and **Length** are percentages of it; Length 50% plays half. **Loop** sets how much loops, when the Loop switch is on.
+		- Very short loops turn glitchy or granular, or pitched at audio rates, and can load the CPU heavily, especially in Complex warp modes.
+		- **Snap** puts markers on zero crossings of the left channel, so stereo samples can still click. **Fade** crossfades loop end into start, useful for long textures.
+		- **Gain** — sample level, separate from the final **Volume** after the filter.
+		- **Voices** — when exceeded, the oldest voices are stolen.
+		- **Retrig** — replaying a sounding note cuts it off; off lets copies overlap. Audible only with long releases and more than one voice.
+	- ## 31.11.1.2 One-Shot Playback Mode
+		- ![The Sample Tab in One-Shot Playback Mode](https://ableton-production.imgix.net/live-manual/12/SimplerOneShotModeL12.png)
+		- Flags set the region; no Loop, Length or Voices, and always monophonic.
+		- **Trigger** — plays on after note-off, so hold length doesn't matter. **Gate** — starts fading at note-off over the Fade Out time.
+		- **Fade In** — time to full volume; **Fade Out** — starts that long before the region end.
+		- **Snap** applies to the start and end flags only.
+	- ## 31.11.1.3 Slicing Playback Mode
+		- ![The Sample Tab in Slicing Playback Mode](https://ableton-production.imgix.net/live-manual/12/SimplerSliceModeL12.png)
+		- **Slice By**:
+			- **Transient** — at transients; **Sensitivity** sets how many, up to 64.
+			- **Beat** — at a beat **Division**.
+			- **Region** — a number of equal **Regions**.
+			- **Manual** — double-click to add slices.
+		- **Playback** — **Mono** plays one slice at a time; **Poly** plays several, with Voices and Retrig; **Thru** is monophonic but plays on to the end of the region.
+		- Trigger/Gate as in One-Shot. Fades span each slice in Mono and Poly, or from the triggered slice to the region end in Thru.
+		- Automatic slices are blue and manual ones white. Drag to move, double-click to delete; in Transient mode, `Option`-click (Mac) / `Alt`-click (Win) toggles a slice between manual and automatic. Manual slices survive Sensitivity changes.

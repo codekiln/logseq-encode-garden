@@ -1,0 +1,42 @@
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
+up:: [[Ableton/Live/UG/31 Instrument Reference/09 Operator]]
+prev:: [[Ableton/Live/UG/31 Instrument Reference/09 Operator/09 Finally]]
+- # [31.9.10 The Complete Parameter List](https://www.ableton.com/en/live-manual/12/live-instrument-reference/#the-complete-parameter-list)
+	- Every parameter, grouped by where it sits; the Info View also explains any control under the mouse.
+	- ## 31.9.10.1 Global Shell and Display
+		- **Time** — scales all envelope rates. **Tone** — high-frequency content; brighter means more aliasing risk. **Volume**. **Algorithm** — oscillator connections.
+		- **Voices** — oldest notes are cut when exceeded. **Retrigger (R)** — retrigger a playing note instead of adding a voice.
+		- **Interpolation** — off sounds rougher, especially noise, and saves CPU. **Antialias** — off saves CPU.
+		- **Time < Key** — faster envelopes for higher notes. **PB Range**.
+		- **Pan**, **Pan < Key** (low notes left, high right, as for pianos), **Pan < Random**.
+	- ## 31.9.10.2 Modulation Targets
+		- For MIDI routings, the LFO's Dest. B and the pitch envelope's Dest. B: Off; OSC Volume A–D; OSC Crossfade A/C and B/D; OSC Feedback (only unmodulated oscillators); OSC Fixed Frequency; FM Drive (level of all modulators); Filter Frequency; Filter Q (Legacy); Filter Res; Filter Morph; Filter Drive (not with Morph); Filter Envelope Amount; Shaper Drive; LFO Rate; LFO Amount; Pitch Envelope Amount; Volume; Panorama; Tone; Time.
+	- ## 31.9.10.3 Pitch Shell and Display
+		- **Pitch Envelope On** — off saves CPU. **Pitch Env** — ±100%; 100% follows the envelope's levels exactly, negative inverts.
+		- **Spread**, **Transpose** (affects playing notes), **Glide (G)** and **Glide Time**; legato glides don't retrigger envelopes.
+		- **Destination A–D** and **LFO** switches with **Amount A**; **Destination B** with **Amount B**.
+	- ## 31.9.10.4 Filter Shell and Display
+		- **Filter On** (off saves CPU), **Filter Type**, **Circuit Type**, **Freq**, **Res** (resonance for low- and high-pass, width for band-pass and notch).
+		- **Freq < Vel**; **Freq < Key**, where 100% doubles cutoff per octave around C3; **Envelope**, where 100% can shift about nine octaves.
+		- **Flt. Drive**, **Morph**, **Shaper**, **Shp. Drive**, **Dry/Wet**.
+	- ## 31.9.10.5 LFO Shell and Display
+		- **LFO On** (off saves CPU). **Waveform** — all band-limited to avoid clicks.
+		- **Range** — Low covers 50 seconds to 30 Hz, Hi 8 Hz to 12 kHz, or Sync to tempo.
+		- **R**, **Rate**, **Amount**, **Destination A–D** and **FIL** with **Amount A**, **Destination B** with **Amount B**.
+		- **Rate < Key** — at 100% the LFO doubles per octave like an oscillator. **Amt < Vel**.
+	- ## 31.9.10.6 Oscillators A-D Shell and Display
+		- **Osc On**. **Coarse** — whole-number ratios for harmonic relationships. **Fine** — fractions for inharmonic ones.
+		- **Fixed**, **Freq** and **Multi** — a constant frequency, Freq × Multi in Hz.
+		- **Level** — on a modulator, higher levels usually mean brighter or noisier sounds.
+		- Envelope/Oscillator display switches; **16/32/64** partials; **Wave**; **Repeat**.
+		- **Feedback** — self-modulation of an unmodulated oscillator, also shaped by its level and envelope.
+		- **Phase** (one full cycle), **R**.
+		- **Osc < Vel** with **Q**; **Vel** and **Key** for level, centered on C3. Velocity on modulators makes timbre follow touch.
+	- ## 31.9.10.7 Envelope Display
+		- **Attack** — linear on oscillator envelopes, shapeable on filter and pitch. **Decay** — exponential on oscillators. **Release** — from the current level at note-off to End, or to -inf dB on oscillators.
+		- **Initial**, **Peak**, **Sustain**, and **End** (LFO, filter and pitch only).
+		- **Loop** mode — Loop, Beat, Sync or Trigger. **Repeat** — beat time for Beat and Sync. **Loop Time** — return from sustain to initial.
+		- **Time < Vel** — scales segments, not Beat or Sync times.
+		- **A.Slope**, **D.Slope**, **R.Slope** — filter and pitch envelopes.
+	- ## 31.9.10.8 Context Menu Options for Operator
+		- Copy parameters between oscillators; set all envelope levels to maximum, minimum or middle; harmonics editor options (even or odd, Normalize, export .ams); **Play By Key**; and **Enable Per-Note Pitch Bend**, on by default.
