@@ -1,0 +1,42 @@
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
+up:: [[Ableton/Live/UG/42 Keyboard Shortcuts]]
+prev:: [[Ableton/Live/UG/42 Keyboard Shortcuts/11 Clip View Sample Editor]]
+next:: [[Ableton/Live/UG/42 Keyboard Shortcuts/13 Grid Snapping and Drawing]]
+- # [42.12 Clip View MIDI Note Editor](https://www.ableton.com/en/live-manual/12/live-keyboard-shortcuts/#clip-view-midi-note-editor)
+	- Select All Notes — `Cmd+A` (Win `Ctrl+A`)
+	- Copy Notes — `Option` drag (Win `Ctrl` drag)
+	- Chop Selected Notes on Grid or Split Notes at Time Selection Start/End — `Cmd+E` (Win `Ctrl+E`)
+	- Chop Notes in Increments of 1 — `Cmd+E` drag up/down (Win `Ctrl+E` drag up/down)
+	- Chop Notes in Increments of 2 — `Cmd+Shift+E` drag up/down (Win `Ctrl+Shift+E` drag up/down)
+	- Split Notes at Exact Location — Hold `E` then click to split, drag to move
+	- Join Notes — `Cmd+J` (Win `Ctrl+J`)
+	- Fit Notes to Time Range — `Cmd+Option+J` (Win `Ctrl+Alt+J`)
+	- Fit Content to View Width — `W`
+	- Fit Content to View Height — `H`
+	- Quantize — `Cmd+U` (Win `Ctrl+U`)
+	- Quantize Settings… — `Cmd+Shift+U` (Win `Ctrl+Shift+U`)
+	- Scroll Editor Vertically — Page Up/Down keys
+	- Scroll Editor Vertically in Fine Increments — `Shift` Page Up/Down keys
+	- Scroll Editor Horizontally — `Cmd` Page Up/Down keys (Win `Ctrl` Page Up/Down keys)
+	- Change Velocity from MIDI Note Editor — `Cmd` drag (Win `Alt` drag)
+	- Move Insert Marker to Beginning — `Home` or `Function` left arrow key (Win `Home`)
+	- Move Insert Marker to End — `End` or `Function` right arrow (Win `End`)
+	- Select Next/Previous Note — `Option` up and down arrow keys (Win `Alt` up and down arrow keys)
+	- Select Next/Previous Note in Same Key Track — `Option` left and right arrow keys (Win `Alt` left and right arrow keys)
+	- Scroll Display to Follow Playback — `Option+Shift+F` (Win `Ctrl+Shift+F`)
+	- Move Clip Region with Start Marker — `Shift` right and left arrow keys
+	- Zoom to Clip Selection — `Z`
+	- Zoom Back from Clip Selection — `X`
+	- Zoom In/Out Horizontally — `+` / `-`
+	- Set Note Selection Velocity — Type a value between 0-127 and press `Enter`
+	- Adjust Note Selection Velocity — `Cmd` up and down arrow keys (Win `Ctrl` up and down arrow keys)
+	- Adjust Note Selection Velocity Deviation — `Cmd+Shift` up and down arrow keys (Win `Ctrl+Shift` up and down arrow keys)
+	- Adjust Note Selection Chance — `Cmd+Option` up and down arrow keys (Win `Ctrl+Alt` up and down arrow keys)
+	- Toggle Full-Size Clip View — `Cmd+Option+E` (Win `Ctrl+Alt+E`)
+	- Group Notes (Play All) — `Cmd+G` (Win `Ctrl+G`)
+	- Ungroup Notes — `Cmd+Shift+G` (Win `Ctrl+Shift+G`)
+	- Apply Current MIDI Tool Settings — `Cmd+Enter` (Win `Ctrl+Enter`)
+	- Invert Note Selection — `Cmd+Shift+A` (Win `Ctrl+Shift+A`)
+	- Highlight Scale — `K`
+	- Split Arrangement Clip Based on Time Selection — `Cmd+Shift+E` (Win `Ctrl+Shift+E`)
+	- Show/Hide MIDI Note Filters — `Cmd+Shift+F` (Win `Ctrl+Shift+F`)
