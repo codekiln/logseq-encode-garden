@@ -6,4 +6,5 @@ up:: [[Ableton/Live/UI/Control Bar]]
 	- Also available as [[Ableton/Menu/Options/Follow]].
 	- **Behavior** — toggle.
 	- ## Source
+		- [[Ableton/Live/UG/06 Arrangement View]]
 		- [6.2 Navigation and Zooming](https://www.ableton.com/en/live-manual/12/arrangement-view/#navigation-and-zooming)

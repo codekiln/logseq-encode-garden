@@ -7,4 +7,5 @@ up:: [[Ableton/Live/UI/Arrangement View]]
 	- Its start and end are also the punch-in and punch-out points: [[Ableton/Live/UI/Control Bar/Switch/Punch-In]], [[Ableton/Live/UI/Control Bar/Switch/Punch-Out]].
 	- Turned on with the [[Ableton/Live/UI/Control Bar/Toggle/Arrangement Loop]].
 	- ## Source
+		- [[Ableton/Live/UG/06 Arrangement View]]
 		- [6.6 The Arrangement Loop](https://www.ableton.com/en/live-manual/12/arrangement-view/#the-arrangement-loop)
