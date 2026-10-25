@@ -27,6 +27,8 @@ up:: [[Microfreak/UI/Oscillator]]
 		- [[Microfreak/UI/Oscillator/Knob/Type/Cloud Grains]]
 		- [[Microfreak/UI/Oscillator/Knob/Type/Hit Grains]]
 		- [[Microfreak/UI/Oscillator/Knob/Type/Vocoder]]
+	- ## Same control
+		- [[Microfreak/UI/Front/Row/Middle/02 Digital Oscillator/Knob/Type]]
 	- ## Remote control
 		- MIDI CC 9, per [[Microfreak/UG/21 Appendix D - CC Values]].
 	- ## Source
