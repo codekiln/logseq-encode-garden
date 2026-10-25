@@ -4,7 +4,39 @@ preset-synth-microfreak-name:: Keys 1
 preset-synth-microfreak-category:: [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-category/Template]]
 preset-synth-microfreak-initialized:: false
 preset-synth-microfreak-on-device:: true
-preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Unknown]]
+preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/Factory]]
 prev:: [[Microfreak/Preset/177 Square Poly]]
 next:: [[Microfreak/Preset/179 Keys 2]]
+preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable]]
+preset-synth-microfreak-parameter-payload-sha256:: d8b2e7405a04cffcb130862eae65a901752ec4c19e709f03ddae9d415430dd63
+preset-synth-file:: [Keys 1 — October 25 slot 178 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___178%20Keys%201___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file-sha256:: 35fd78edf5c2b719ec076fc03bd659737650cb2918e6a3883d6f8b322b65c45b
 - # Notes
+	- ## Saved export and provenance
+		- Saved export: read from the device's slot 178 over USB on October 25, 2026 with `mise run microfreak:download --slot 178`. Two consecutive reads returned the same file.
+		- The parameter payload matches the MIDI Control Center archives Factory 1.1, Factory 2.1, Factory 3.0 (Factory 1.1 slot 209, Factory 2.1 slot 252, Factory 3.0 slot 252). Comparison used `mise run microfreak:compare`.
+		- [Download the slot 178 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___178%20Keys%201___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/178 Keys 1/Asset/Device-Read-2026-10-25/bin]].
+	- ## Oscillator
+		- Model: Wavetable. [[Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable]]
+		- Table: 13 (stored choice code). Position: 0.351. Chorus: 0.000.
+		- Keyboard octave: +1. Glide: 0.000.
+	- ## Filter
+		- Low-pass filter. Saved cutoff: 0.537; resonance: 0.742. [[Microfreak/UG/07 Filter/01 Modifying Sound/01 Low Pass Filter]]
+	- ## Envelopes
+		- Main envelope: attack 0.000, decay/release 0.253, sustain 0.000. Amp Mod is on, so the main envelope controls loudness. [[Microfreak/UG/09 Envelope Gen/03 Envelope Stages]]
+		- Cycling Envelope mode: Env. Stored RiseLvl 0.000, RiseSlp 0.500, FallLvl 0.115, FallSlp 0.086, Hold 0.000, Amount 1.000. [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope]]
+	- ## LFO
+		- Sine, clock sync off; stored normalized rate: 0.091. [[Microfreak/UG/08 LFO/01 LFO Shape]] · [[Microfreak/UG/08 LFO/02 LFO Rate]]
+	- ## Modulation matrix
+		- Amounts use the signed normalized range −1…+1. [[Microfreak/UG/05 Connections/02 Matrix and Encoder/01 Sources and Destinations]]
+		- Cycling Envelope → Wave: +0.031.
+		- ENV → Cutoff: +0.163.
+		- PRESSURE → Cutoff: +0.316.
+		- PRESSURE → Assign 1 → Decay/Release: +0.841.
+		- All other saved matrix amounts are zero.
+	- ## Voice and keyboard
+		- Paraphonic mode: on.
+	- ## Evidence and interpretation
+		- Values describe saved base settings before modulation. Controls use normalized 0…1 values unless a stored choice code is shown; they are not OLED percentages, hertz or milliseconds.
+		- The [saved-parameter inspector](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/PARAMETERS.md) preserves the original fields. Oscillator interpretation assumes the documented firmware 5 layout; firmware is not detected from the export.
+		- Matrix assignments follow the [Freakout live map](https://github.com/kmorrill/freakout/blob/main/src/minifreak_patch/microfreak_live_map.py). Mode, LFO shape, filter type and octave labels follow the [MicroFreak Reader definitions](https://github.com/francoisgeorgy/microfreak-reader/blob/master/src/model/index.js).
