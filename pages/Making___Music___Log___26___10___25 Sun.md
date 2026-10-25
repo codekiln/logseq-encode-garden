@@ -3,8 +3,8 @@ prev:: [[Making/Music/Log/26/10/24-Sat]]
 - # [[2026-10-25 Sun]]
 	- ## [[Ghost Gardener]] requests
 		- ((6addc678-7052-4e91-a8af-b4e3f6d99542))
-		- ### DOING project - create UI entity types
-			- DOING import person entity and also [[UX/Design/Atomic/L1 - Atom]] and other levels from this brief chatgpt transcript
+		- ### DONE project - create UI entity types
+			- DONE import person entity and also [[UX/Design/Atomic/L1 - Atom]] and other levels from this brief chatgpt transcript
 			  collapsed:: true
 				- You're remembering Atomic Design, a methodology introduced by UX designer Brad Frost in 2013.
 				  
@@ -56,10 +56,10 @@ prev:: [[Making/Music/Log/26/10/24-Sat]]
 				  Atomic Design by Brad Frost
 				  
 				  +2
-			- DOING inspired by that create a [[Logseq/Entity/Definition]] or two that would let us to have a consistent ability to map out hierarchies of UI elements into pages of logseq, structurally inspired by [[Logseq/Entity/Book/Section]]  but defined for a different purpose. I'm thinking that we would let us map out the UI the [[Microfreak]], the [[Launchpad]] and [[Ableton/Live]], so at any point we can have autocompleted in Logseq any part of these and reference them.
+			- DONE inspired by that create a [[Logseq/Entity/Definition]] or two that would let us to have a consistent ability to map out hierarchies of UI elements into pages of logseq, structurally inspired by [[Logseq/Entity/Book/Section]]  but defined for a different purpose. I'm thinking that we would let us map out the UI the [[Microfreak]], the [[Launchpad]] and [[Ableton/Live]], so at any point we can have autocompleted in Logseq any part of these and reference them.
 				- For example, I already have referenced [[Microfreak/UI/Oscillator/Knob/Timbre]] would model the UI that points to or corresponds to [[Microfreak/UG/06 Dig Osc/01 as Soundgen]]
-			- DOING please create a page in the garden for each parameter of each oscillator. For example, in ((6add3dae-8dc8-4156-a5ea-23f7290d9173)) I would like these to be hyperlinks to logseq pages.
-			- DOING create a plan for how to model all the types of midi mapping encoders in midi devices - they shouldn't be overfit on Midi though. Maybe  for example,
+			- DONE please create a page in the garden for each parameter of each oscillator. For example, in ((6add3dae-8dc8-4156-a5ea-23f7290d9173)) I would like these to be hyperlinks to logseq pages.
+			- DONE create a plan for how to model all the types of midi mapping encoders in midi devices - they shouldn't be overfit on Midi though. Maybe  for example,
 				- buttons
 					- toggle buttons
 					- multi-value toggle buttons

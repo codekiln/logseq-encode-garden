@@ -34,7 +34,7 @@ date-created:: [[2026-10-24 Sat]]
 				- **codekiln** · 00:00:02 — All right, that was cool. Hey, by the way, this is also the first time when I used my [[Launchpad/UG/08 Custom Modes]] to be able to enable the recording. Unfortunately I think it's inverted from what I want. I think it's a bright green when I'm recording and then if I…
 			- [[My Notes]]
 				- This part was actually from the end of the recording session. At the end, I stopped the recording, then used the custom mode MIDI toggle button mapped to the [[Ableton/Live/Mode/Arrangement]] record button
-					- DOING [[Ghost Gardener]] please create a namespace hierarchy under [[Ableton/Live/Mode/Arrangement]] which will map out all the parts of arrangement mode and give all the buttons and settings dedicated pages that autocomplete in Logseq
+					- DONE [[Ghost Gardener]] please create a namespace hierarchy under [[Ableton/Live/Mode/Arrangement]] which will map out all the parts of arrangement mode and give all the buttons and settings dedicated pages that autocomplete in Logseq
 					  id:: 6addc678-7052-4e91-a8af-b4e3f6d99542
 		- ### 00:22 The Unstable over a slow sequence
 			- Launchpad sequencer track 1, set to its slowest rate, plays The Unstable. The Wave and Shape knobs sweep between triangle and saw and between narrow pulse and square, resonance rises a little at 01:27, and cycling envelope amount goes up to about 95 at 01:36. From 02:00, cycling envelope rise, fall and hold change.
