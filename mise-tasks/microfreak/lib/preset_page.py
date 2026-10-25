@@ -40,16 +40,30 @@ PREFIX = 'preset-synth-'
 UI = 'Microfreak/UI'
 OSC = UI + '/Oscillator/Knob'
 FRONT = UI + '/Front/Row'
-FILTER = FRONT + '/Middle/03 Analog Filter'
-CYCLING = FRONT + '/Middle/04 Cycling Envelope'
-ENVELOPE = FRONT + '/Bottom/05 Envelope'
-LFO = FRONT + '/Bottom/04 LFO'
-MATRIX = FRONT + '/Top/01 Matrix'
-ARP = FRONT + '/Bottom/03 Arp Seq'
+# Every front-panel page this generator links, by panel area. Renaming a row
+# or an area on the panel pages means changing this table only.
+PANEL = {
+    'matrix': FRONT + '/Top/01 Matrix',
+    'paraphonic': FRONT + '/Top/02 Paraphonic Button',
+    'glide': FRONT + '/Middle/01 Glide Knob',
+    'filter': FRONT + '/Middle/03 Analog Filter',
+    'cycling': FRONT + '/Middle/04 Cycling Envelope',
+    'octave': FRONT + '/Bottom/01 Octave',
+    'arp': FRONT + '/Bottom/03 Arp Seq',
+    'lfo': FRONT + '/Bottom/04 LFO',
+    'envelope': FRONT + '/Bottom/05 Envelope',
+    'keyboard': FRONT + '/Bottom/06 Keyboard',
+}
+FILTER = PANEL['filter']
+CYCLING = PANEL['cycling']
+ENVELOPE = PANEL['envelope']
+LFO = PANEL['lfo']
+MATRIX = PANEL['matrix']
+ARP = PANEL['arp']
 PAGES = {
     'VCO.Type': OSC + '/Type',
-    'Kbd.Glide': FRONT + '/Middle/01 Glide Knob',
-    'Kbd.Octave': FRONT + '/Bottom/01 Octave',
+    'Kbd.Glide': PANEL['glide'],
+    'Kbd.Octave': PANEL['octave'],
     'VCF.Type': FILTER + '/Button/Type',
     'VCF.Cutoff': FILTER + '/Knob/Cutoff',
     'VCF.Reso': FILTER + '/Knob/Resonance',
@@ -68,7 +82,7 @@ PAGES = {
     'LFO.Rate': LFO + '/Knob/Rate',
     'LFO.Sync': LFO + '/Knob/Rate/Press',
     'LFO.Div': LFO + '/Knob/Rate/Press',
-    'Gen.Parafon': FRONT + '/Top/02 Paraphonic Button',
+    'Gen.Parafon': PANEL['paraphonic'],
     'Arp.Rate': ARP + '/Knob/Rate',
     'Arp.Enable': ARP + '/Button/Arp Seq/Arp',
     'Arp.SeqOn': ARP + '/Button/Arp Seq/Seq',
@@ -99,11 +113,11 @@ LFO_SHAPES = [('Sine', 'Sine'), ('Triangle', 'Triangle'), ('Sawtooth', 'Rising S
               ('Square', 'Square'), ('Sample-and-Hold', 'Random Stepped'),
               ('Sample-and-Hold Filtered', 'Random Gliding')]
 OCTAVES = ['-3', '-2', '-1', '0', '+1', '+2', '+3']
-ROWS = [('EG1', 'Cycling Envelope', FRONT + '/Middle/04 Cycling Envelope'),
-        ('EG2', 'ENV', FRONT + '/Bottom/05 Envelope'),
-        ('LFO', 'LFO', FRONT + '/Bottom/04 LFO'),
-        ('Xpr', 'PRESSURE', FRONT + '/Bottom/06 Keyboard'),
-        ('Key', 'KEY/ARP', FRONT + '/Bottom/06 Keyboard')]
+ROWS = [('EG1', 'Cycling Envelope', PANEL['cycling']),
+        ('EG2', 'ENV', PANEL['envelope']),
+        ('LFO', 'LFO', PANEL['lfo']),
+        ('Xpr', 'PRESSURE', PANEL['keyboard']),
+        ('Key', 'KEY/ARP', PANEL['keyboard'])]
 COLUMNS = ['Pitch', 'Wave', 'Timbre', 'Cutoff', 'Assign 1', 'Assign 2', 'Assign 3']
 COLUMN_PAGES = {'Wave': OSC + '/Wave', 'Timbre': OSC + '/Timbre', 'Cutoff': PAGES['VCF.Cutoff'],
                 'Assign 1': MATRIX + '/Button/Assn/1', 'Assign 2': MATRIX + '/Button/Assn/2',
@@ -611,6 +625,10 @@ def run_slot(args, slot, address, factory):
                         + render(sections) + EVIDENCE)
             plan['action'] = 'backup'
         plan.update(url=url, raw_sha256=meta['raw_sha256'], payload_sha256=info['payload_sha256'], origin=origin)
+    elif not is_factory and any(t == 'Customized controls' for t, _, _ in section_spans(body)):
+        title, start, end = next(x for x in section_spans(body) if x[0] == 'Customized controls')
+        new_body = body[:start] + render([sections[-1]]) + body[end:]
+        plan['action'] = 'customized controls'
     else:
         return dict(plan, skip='handwritten page' if not is_generated(body) else 'no change')
     new_text = '\n'.join(new_front + new_body) + '\n'
