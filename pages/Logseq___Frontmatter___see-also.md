@@ -1,4 +1,4 @@
-# `see-also::` for relevant, related, non-obvious pages not mentioned in the body
+- # `see-also::` for relevant, related, non-obvious pages not mentioned in the body
 	- The purpose of `see-also::` is to aid discovery of distant, directly pages in the garden with a compelling discovery case, and which does not appear in the body of the page. It should be used very sparingly and rarely, including no more than 2-3 items, and it should almost never include pages that are immediate parent, child or siblings in the namespace hierarchy.
 	- ## Standards
 		- Order links strongest-tie first.
