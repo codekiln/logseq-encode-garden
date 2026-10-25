@@ -1,0 +1,43 @@
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
+up:: [[Ableton/Live/UG/36 Push 2]]
+prev:: [[Ableton/Live/UG/36 Push 2/16 Setup Menu]]
+
+- # [36.17 Push 2 Control Reference](https://www.ableton.com/en/live-manual/12/using-push-2/#push-2-control-reference)
+	- What every control does:
+	- ## Transport and tempo
+		- **Tap Tempo** — tap on each beat to set the tempo; with Start Playback with Tap Tempo on, four taps in 4/4 also start playback. The encoder above changes tempo by 1 BPM, or 0.1 with `Shift`.
+		- **Metronome** — toggles the click; the encoder above sets swing for Quantize, Record Quantize and Repeat.
+		- **Play/Stop** — toggles Live's Play; when stopped, `Shift`+Play/Stop returns to 1.1.1.
+		- **Record** — in Session focus: record, then play, then overdub. Hold Record and a track's lower button to arm it. In Arrangement focus it toggles Arrangement recording; `Shift` swaps the two.
+		- **New** — stops the selected clip and prepares for a new recording.
+		- **Fixed Length** — new clips get a set length, chosen by holding it; turning it on mid-recording loops the last bars.
+		- **Automate** — toggles Session automation recording; `Shift` re-enables overridden automation; with Delete, clears the clip's automation.
+	- ## Editing
+		- **Delete** — deletes the selected clip (or Arrangement clip in Arrangement focus); with a pad, its notes or the pad; with a clip, device or track, that item; with an encoder, its automation or resets the parameter; in Slicing mode, a slice.
+		- **Undo** — Live's Undo, even for actions made elsewhere; `Shift` to Redo.
+		- **Duplicate** — per Workflow mode; also copies drum pads, tracks (with a track button) and Session clips.
+		- **Convert** — Simpler in Classic or One-Shot becomes a Drum Rack on a new track with the Simpler on the first pad; Simpler in Slicing mode becomes a Drum Rack of slices on the same track; a Drum Rack pad's devices move to a new track. An audio clip can become a Simpler or Drum Rack track (warp settings kept), or be converted with Harmony, Melody or Drums to MIDI.
+		- **Double Loop** — doubles the loop and its contents.
+		- **Quantize** — quantizes selected notes, all notes, one drum's notes, or audio transients; hold for settings.
+	- ## Mixing and tracks
+		- **Mute**, **Solo**, **Stop Clip** — act on the selected track, other tracks, pads, steps or devices as described above; hold to lock.
+		- **Master** — selects the Main track; again to go back.
+		- **Add Device**, **Add Track** — as described in their sections.
+		- Far-right encoder — Main volume, or Pre-Cue volume with `Shift`. `Shift` on any encoder gives fine control.
+	- ## Modes
+		- **Device**, **Browse**, **Mix**, **Clip**, **Note**, **Session** — enter each mode; holding Device, Mix, Clip, Note or Session switches temporarily.
+		- **Setup** — settings menu.
+		- **User** — turns off Push 2's built-in functions so it can be mapped to other things in Live or other software. Its encoders work best as "Relative (2's Comp.)"; turn slowly left while mapping to get it. See [[Ableton/Live/UG/34 MIDI and Key Remote]].
+	- ## Playing
+		- **Touch Strip** — pitch bend (default) or mod wheel when playing an instrument (Select+tap switches), note range when step sequencing, drum bank on Drum Rack tracks.
+		- **Scale** — key and scale for instrument tracks in Note mode: Fixed, In Key/Chromatic, key and scale type.
+		- **Layout** — Session Overview in Session mode; in Note mode, playing vs step sequencing for instruments, or the drum layouts for Drum Racks and sliced Simplers.
+		- **Repeat**, **Accent** — retrigger held pads at the Scene/Grid rate; full velocity for every note. Hold for momentary use.
+		- **Scene/Grid** — launch scenes in Session mode (Select+press selects without launching); set step and repeat resolution in Note mode.
+		- **Octave Up/Down** — octave for instruments, 16 pads for Drum Racks, eight scenes in Session mode; unlit when there's nowhere further to go.
+		- **Page Left/Right** — previous or next page of steps; eight tracks in Session mode.
+		- **Arrow keys** — move through the Set, tracks and scenes, or browser columns.
+		- **Shift**, **Select** — extra functions and fine adjustment; select clips or pads without triggering them.
+	- ## 36.17.0.1 Using Footswitches with Push 2
+		- Two jacks on the back take momentary footswitches. Footswitch 1 is sustain. Footswitch 2 toggles Record (recording or overdub vs playback) with one tap, and acts as New with a quick double tap.
+		- If a pedal works backwards, plugging it in while pressed usually fixes it; pedals with a polarity switch are more reliable.
