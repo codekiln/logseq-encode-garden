@@ -29,7 +29,7 @@ up:: [[Microfreak/UI/Oscillator]]
 			- [[Microfreak/UI/Oscillator/Knob/Type/Hit Grains/Start]]
 			- [[Microfreak/UI/Oscillator/Knob/Type/Vocoder/Wave]]
 	- ## Same control
-		- [[Microfreak/UI/Front/Row/Middle/02 Digital Oscillator/Knob/Wave]]
+		- [[Microfreak/UI/Front/Row/02 Main/02 Digital Oscillator/Knob/Wave]]
 	- ## Remote control
 		- MIDI CC 10, per [[Microfreak/UG/21 Appendix D - CC Values]].
 	- ## Source

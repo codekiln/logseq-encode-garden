@@ -29,7 +29,7 @@ up:: [[Microfreak/UI/Oscillator]]
 			- [[Microfreak/UI/Oscillator/Knob/Type/Hit Grains/Shape]]
 			- [[Microfreak/UI/Oscillator/Knob/Type/Vocoder/Shape]]
 	- ## Same control
-		- [[Microfreak/UI/Front/Row/Middle/02 Digital Oscillator/Knob/Shape]]
+		- [[Microfreak/UI/Front/Row/02 Main/02 Digital Oscillator/Knob/Shape]]
 	- ## Remote control
 		- MIDI CC 13, per [[Microfreak/UG/21 Appendix D - CC Values]].
 	- ## Source

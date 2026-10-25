@@ -5,11 +5,11 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## What counts
 		- A mode: one named position of a selector, such as the oscillator model [[Microfreak/UI/Oscillator/Knob/Type/VAnalog]].
 		- A parameter: the name another control takes while that mode is active, such as [[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Detune]], which the Wave knob sets.
-		- A gesture: a way of operating the control other than its plain use, such as pressing a knob, holding a button, or using the control while Shift is held: [[Microfreak/UI/Front/Row/Top/06 Save Button/Hold]].
+		- A gesture: a way of operating the control other than its plain use, such as pressing a knob, holding a button, or using the control while Shift is held: [[Microfreak/UI/Front/Row/01 Top/06 Save Button/Hold]].
 		- A plain value along a range, such as 64 on a knob, is not a setting page.
 	- ## Identity and names
 		- A mode sits at `<Control>/<Mode>`, beneath the control that selects it; a parameter sits at `<Control>/<Mode>/<Parameter>`.
-		- A gesture sits at `<Control>/<Gesture>`, named `Press`, `Hold` or `Shift`. A gesture that combines two nests the second beneath the first: [[Microfreak/UI/Front/Row/Top/02 Paraphonic Button/Hold/Shift]].
+		- A gesture sits at `<Control>/<Gesture>`, named `Press`, `Hold` or `Shift`. A gesture that combines two nests the second beneath the first: [[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button/Hold/Shift]].
 		- Use the names the display or manual shows.
 	- ## Page shape
 		- Frontmatter: `logseq-entity:: [[Logseq/Entity/UI/Control/Setting]]` and `up::` to the control or mode above it; `prev::` and `next::` follow the order of modes in the manual when the modes are numbered.
