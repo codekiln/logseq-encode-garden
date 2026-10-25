@@ -11,4 +11,4 @@ prev:: [[Ableton/Live/UG/28 Video/03 Matching Sound to Video]]
 		- When the music is ready to render, Select All and drag everything a few seconds right.
 		- Select only the video clip and drag its left edge all the way left to reveal the pre-roll.
 			- ![The video clip with its pre-roll restored](https://ableton-production.imgix.net/live-manual/12/VideoClipWithTwoBeepBack.png?auto=&w=320)
-	- With the video clip still selected, Export Audio/Video renders a file exactly as long as the original movie, pre-roll included.
+	- With the video clip still selected, Export Audio/Video renders a file as long as the original movie, pre-roll included.

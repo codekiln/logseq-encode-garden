@@ -4,7 +4,7 @@ next:: [[Ableton/Live/UG/14 Grooves/01 Groove Pool/02 Committing Grooves]]
 
 - # [14.1.1 Adjusting Groove Parameters](https://www.ableton.com/en/live-manual/12/using-grooves/#adjusting-groove-parameters)
 	- Each groove in the pool has buttons to save and hot-swap it, and these parameters, which change playback in real time:
-		- **Base** — the note grid the groove is measured against, such as 1/4 or 1/8. Groove notes exactly on that grid don't move your notes.
+		- **Base** — the note grid the groove is measured against, such as 1/4 or 1/8. Groove notes that fall on that grid don't move your notes.
 		- **Quantize** — straight quantization applied before the groove: 100% snaps to the Base grid, 0% leaves notes where they were.
 		- **Timing** — how strongly the groove's timing moves the clip.
 		- **Random** — random timing offsets, different for each voice; small amounts loosen tightly quantized loops.

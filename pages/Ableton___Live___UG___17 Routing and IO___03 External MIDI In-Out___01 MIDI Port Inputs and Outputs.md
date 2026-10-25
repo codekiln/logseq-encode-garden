@@ -17,7 +17,7 @@ next:: [[Ableton/Live/UG/17 Routing and IO/03 External MIDI In-Out/02 Playing MI
 			- ![Sync output options](https://ableton-production.imgix.net/live-manual/12/MIDIOutputPortSyncOptions.png?auto=&w=320)
 			- **MIDI Clock Sync Delay** — delays outgoing sync in milliseconds to fix timing offsets.
 			- **MIDI Clock Type** — Song sends Song Position Pointer and Continue whenever the play position changes; Pattern sends only Start, at the next bar, for devices that ignore SPP.
-			- **Hardware Resync** — what the Control Bar's Resync External Hardware button sends when drifting gear needs pulling back in time: Stop and Start (default), Start Only, or Don't Resync.
+			- **Hardware Resync** — what the Control Bar's Resync External Hardware button sends to bring synced gear that has fallen out of time back in line: Stop and Start (default), Start Only, or Don't Resync.
 			- ![The Resync External Hardware button in the Control Bar](https://ableton-production.imgix.net/live-manual/12/ResyncExternalHardwareIndicator.png?auto=&w=320)
 	- ## 17.3.1.3 Remote
 		- Lets a controller map to Live's parameters, and sends feedback back to it.

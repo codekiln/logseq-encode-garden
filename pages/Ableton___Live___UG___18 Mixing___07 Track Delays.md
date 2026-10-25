@@ -9,4 +9,4 @@ next:: [[Ableton/Live/UG/18 Mixing/08 Keep Monitoring Latency in Recording Track
 		- ![Track Delay controls in Arrangement View](https://ableton-production.imgix.net/live-manual/12/ArrangementViewTrackDelaysL12.png?auto=&w=308)
 	- Set the amount with the slider and pick milliseconds or samples with the toggle.
 	- Avoid changing it during a performance, as it can click. For small offsets of Session clips, use Nudge in Clip View instead.
-	- Device delay compensation is separate and on by default. Very large delays or plug-in latencies can make Live sluggish; turning compensation off is rarely advised, and disables Track Delay.
+	- Device delay compensation is separate and on by default. Very large delays or plug-in latencies can make Live sluggish; turning compensation off is not usually advised, and disables Track Delay.
