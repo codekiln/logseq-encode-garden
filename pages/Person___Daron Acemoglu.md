@@ -1,5 +1,7 @@
 date-created:: [[1967-09-03 Fri]]
-logseq-entity:: [[Logseq/Entity/Person]]
+logseq-entity:: [[Logseq/Entity/Person/Professor]]
+academic-title:: Institute Professor
+university-affiliation:: [[MIT]]
 - # Daron Acemoglu
 	- ## Bio
 		- Turkish-American economist, MIT Institute Professor, and 2024 Nobel laureate in economic sciences.
@@ -22,3 +24,5 @@ logseq-entity:: [[Logseq/Entity/Person]]
 		- [Nobel interview](https://www.nobelprize.org/prizes/economic-sciences/2024/acemoglu/interview/)
 		- [Brookings: The promises and risks of artificial intelligence](https://www.brookings.edu/events/the-promises-and-risks-of-artificial-intelligence-a-conversation-with-daron-acemoglu/)
 		- [MIT News on the 2024 Nobel Prize](https://news.mit.edu/2024/mit-economists-daron-acemoglu-simon-johnson-nobel-prize-economics-1014)
+	- ## Academic Appointment
+		- Institute Professor in the Department of Economics at [[MIT]]. [MIT Economics faculty biography](https://economics.mit.edu/people/faculty/daron-acemoglu)
