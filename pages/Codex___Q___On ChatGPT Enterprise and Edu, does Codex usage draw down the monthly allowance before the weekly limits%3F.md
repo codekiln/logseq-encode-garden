@@ -1,0 +1,41 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+see-also:: [[ChatGPT/Q/How can I measure usage in ChatGPT Work and in ChatGPT Codex? I'd like to know how much usage each thread has consumed]]
+
+- # On [[ChatGPT/Enterprise]] and Edu, does [[Codex]] usage draw down the monthly allowance before the weekly limits?
+	- ## [[My Answer]]
+		- **Hypothesis:** Codex now burns the monthly allowance first (for example, pooled workspace credits), then the weekly allowance, which resets each week.
+		- **Recollection:** Earlier the order was the reverse: weekly usage first, then the monthly allotment. I suspect OpenAI reversed it recently, but I'm not sure.
+	- ## [[AI Answer]]
+		- **Short answer:** The docs don't support the hypothesis, and they don't record a reversal. No OpenAI page I found describes an Enterprise or Edu account that draws a monthly pool first and a weekly allowance second. The only documented order runs the other way: included plan limits first, then credits. What did change in 2026 is the admin control: per-user **weekly** limits are being replaced by **monthly** limits. That is a swap of one cap for another, not a reordering.
+		- **What the docs say**
+			- [[Answer/Official]] from [Codex pricing](https://learn.chatgpt.com/docs/pricing) (formerly `developers.openai.com/codex/pricing`):
+				- Enterprise and Edu workspaces **with flexible pricing** have no fixed rate limits; "usage scales with credits." There is no 5-hour or weekly allowance to burn before the pool.
+				- Enterprise and Edu workspaces **without flexible pricing** get "the same per-seat usage limits as Plus for most features", which means the 5-hour and weekly windows.
+				- Across plans, included limits are consumed first, and credits let work continue once those are reached.
+			- [[Answer/Official]] from [Flexible pricing for the Enterprise, Edu, and Business plans](https://help.openai.com/en/articles/11487671-flexible-pricing-for-the-enterprise-edu-and-business-plans): Enterprise and Edu buy a shared credit pool at the contract level. There are no per-seat caps by default; admins set spend controls by group with RBAC.
+			- [[Answer/Official]] from [Manage usage limits and overages in ChatGPT Enterprise and Edu](https://help.openai.com/en/articles/20001001) (help article 20001001):
+				- Admins set **monthly** credit limits as a workspace default, group defaults, and user overrides. The precedence is user override, then the highest group default, then the workspace default.
+				- The monthly window is the UTC calendar month by default, or it can be aligned to the billing cycle.
+				- The older **weekly** limits under *Permissions & roles* stay in force until they are migrated, either with a *Migrate* button or automatically.
+				- The article says Usage limits arrive starting June 18, 2026. Its versions give conflicting automatic migration dates (July 15 in one, August 15 in another). A later version moves the pane to the Global Admin Console as of July 23 and advises against assuming any automatic date.
+			- [[Answer/Official]] from [ChatGPT Work usage and cost](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-usage-and-cost) and the [ChatGPT Work admin FAQ](https://learn.chatgpt.com/docs/enterprise/work-admin-faq):
+				- Work and Codex "share pricing, credits, and usage limits".
+				- A user's limit can stop that user before the shared pool runs out.
+				- When the pool is empty, the overage setting decides whether usage continues.
+				- Neither page mentions weekly limits or an order of consumption.
+		- **Changelog entries on usage display** ([ChatGPT & Codex changelog](https://learn.chatgpt.com/docs/changelog))
+			- **2025-11-24, "Usage and credits fixes"** ([November 2025](https://learn.chatgpt.com/docs/changelog#month-2025-11)): all usage dashboards switched to "limits remaining", where the CLI had shown "limits used". This changed how usage is *displayed*, not the order in which it is consumed.
+			- **Codex app 26.609** (2026-06-11): rate-limit reset banking for Plus and Pro, and usage-limit errors that show reset timing.
+			- **Codex app 26.707** (2026-07-09): Codex joined the ChatGPT desktop app on macOS and Windows.
+			- **Codex CLI 0.144.0** (2026-07-09): usage-limit reset credits show their type and expiration.
+			- **ChatGPT for iOS 1.2026.267** (2026-10-02): Home Screen and Lock Screen widgets for remaining usage and reset times.
+			- **ChatGPT for iOS 1.2026.279** (2026-10-13): "Usage widgets adapt to accounts with only a weekly limit."
+			- **ChatGPT for iOS 1.2026.286** (2026-10-22): usage-limit explanations and reset times appear in the chat.
+			- None of these entries says which pool is drawn first, and none mentions an Enterprise or Edu change in consumption order. I found no ChatGPT desktop release note that ties a version to a change in limit order.
+		- **Inference, not documented**
+			- The weekly-first, then-monthly order in the recollection above matches the documented order for seats that have Plus-style limits: the weekly and 5-hour windows are spent first, then workspace credits. That is how Business works, and how Enterprise and Edu work without flexible pricing.
+			- The sense that the order reversed probably comes from the 2026 migration of admin caps from weekly to monthly. On a flexible-pricing Enterprise or Edu workspace, after migration, a user has one monthly cap drawing on the shared pool, with no weekly allowance behind it.
+			- To check a specific workspace, compare what **Settings → Usage & billing** in ChatGPT Desktop shows (a monthly allowance, a weekly limit, or both) with `/status` in Codex CLI.
+		- **Not verified**
+			- The help article details above come from indexed copies of the article, and those copies disagree on migration dates.
+			- The changelog page only rendered October 2026 in full. The 2025-11-24, 26.609, 26.707 and 0.144.0 entries come from search results on `learn.chatgpt.com`, not from reading the full entries.
