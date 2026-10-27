@@ -7,7 +7,7 @@ see-also:: [[pmset]], [[CaffeinateCLI]]
 		- Keep a MacBook running with its lid closed, for example while a render or an agent session finishes, then put lid-close sleep back the way it was.
 		- The switch is the [[pmset]] setting `disablesleep`. [[CaffeinateCLI]] holds off idle sleep but does not keep the Mac awake through a lid close.
 	- ## Prerequisites
-		- The `pmset:lid-awake:*` tasks from [[Person/codekiln/GitHub/dotfiles]], applied with `chezmoi apply`. They are under review in [codekiln/dotfiles#173 Keep the Mac awake with the lid closed and restore it](https://github.com/codekiln/dotfiles/pull/173).
+		- The `pmset:lid-awake:*` tasks from [[Person/codekiln/GitHub/dotfiles]], applied with `chezmoi apply`. They were added in [codekiln/dotfiles#173 Keep the Mac awake with the lid closed and restore it](https://github.com/codekiln/dotfiles/pull/173).
 		- An admin account, for the one `sudo` prompt in step 1.
 	- ## Steps
 		- ### 1. Allow the switch without a password

@@ -2,7 +2,7 @@ logseq-entity:: [[Logseq/Entity/Mise/Task]]
 task-owner:: [[Person/codekiln/GitHub/dotfiles]]
 task-config-root:: chezmoi/dot_config/mise
 task-name:: pmset:lid-awake:restore
-source-link:: https://github.com/codekiln/dotfiles/blob/claude/172-lid-awake-tasks/chezmoi/dot_config/mise/tasks/pmset/lid-awake/executable_restore
+source-link:: https://github.com/codekiln/dotfiles/blob/main/chezmoi/dot_config/mise/tasks/pmset/lid-awake/executable_restore
 see-also:: [[MacOS/How To/Keep a Mac Awake with the Lid Closed]]
 
 - # Restore Lid-Close Sleep

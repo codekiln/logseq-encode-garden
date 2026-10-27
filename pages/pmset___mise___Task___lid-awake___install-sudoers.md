@@ -2,7 +2,7 @@ logseq-entity:: [[Logseq/Entity/Mise/Task]]
 task-owner:: [[Person/codekiln/GitHub/dotfiles]]
 task-config-root:: chezmoi/dot_config/mise
 task-name:: pmset:lid-awake:install-sudoers
-source-link:: https://github.com/codekiln/dotfiles/blob/claude/172-lid-awake-tasks/chezmoi/dot_config/mise/tasks/pmset/lid-awake/executable_install-sudoers
+source-link:: https://github.com/codekiln/dotfiles/blob/main/chezmoi/dot_config/mise/tasks/pmset/lid-awake/executable_install-sudoers
 see-also:: [[MacOS/How To/Keep a Mac Awake with the Lid Closed]], [[Mac/OS/Q/How does Touch ID for sudo (PAM) work?]]
 
 - # Allow the Lid-Awake Switch Without a Password
