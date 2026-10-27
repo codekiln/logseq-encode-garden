@@ -35,7 +35,7 @@ This repository is a personal Logseq knowledge graph (not a software project): p
 - LFM details (footnotes, naming rationale, file↔link table, logical-vs-disk) → **logseq-lfm**
 - Convert pasted/standard Markdown to LFM → **logseq-convert-md-to-lfm**
 - Tables in LFM → **logseq-table-formatter**
-- Diataxis how-to / tutorial / reference / concept pages → load **[[Diataxis]]** (graph page) and the matching **[[Logseq/Entity/Diataxis/*]]** type page
+- Diataxis how-to / tutorial / reference / explanation pages → load **[[Logseq/Entity/Diataxis]]** and the matching child entity page (via **logseq-entity**)
 - AI model mentions and model pages → load **[[Logseq/Entity/AI/Model]]** (graph page)
 - Asset / image / PDF links → **logseq-asset-linker**
 - Proxy pages / `logseq://` URLs → load **[[Logseq/Entity/Proxy/Page]]** (graph page)
