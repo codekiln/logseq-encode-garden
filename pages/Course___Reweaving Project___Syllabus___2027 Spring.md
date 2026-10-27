@@ -1,0 +1,141 @@
+logseq-entity:: [[Logseq/Entity/Course/Syllabus]]
+course:: [[Course/Reweaving Project]]
+academic-term:: 2027 Spring
+syllabus-status:: Draft
+created-by:: [[Person/Rebecca Henderson]]
+- # [Reweaving Ourselves: Leadership in a World on Fire — Spring 2027 Syllabus](https://reweavingproject.org/wp-content/uploads/2026/10/2027_RW_Syllabus_Web_Oct-26.pdf)
+	- ## Overview
+		- Wednesday evenings, 4–7 p.m., in Cambridge, Massachusetts; twelve dated sessions from January 27 through April 21, 2027.
+		- Instructor: [[Person/Rebecca Henderson]], John & Natty McArthur Professor at Harvard University.
+		- Teaching assistance and book scholarship enquiries: [[Person/Ray Carp]].
+		- The document identifies itself as a draft syllabus for Spring 2027. Its filename carries the version label `Oct-26`; the document does not state a publication date.
+		- ### Purpose
+			- An interdisciplinary conversation among university students and practitioners about living through interconnected social and ecological crises, choosing a life’s purpose, and finding useful ways to act.
+			- The course examines whether disconnection from oneself, other people, and nature helps explain these crises, and whether personal and collective inner work can contribute to systemic change.
+			- Readings, shared practices, and practitioner visits connect personal experience with institutions and social change. Intended outcomes include a sustaining personal practice, a better understanding of how systemic change happens, and possible directions for one’s own life.
+	- ## Requirements
+		- Attend every class, apart from an absence approved in advance or a genuine emergency.
+		- Submit six responses to the readings, each no longer than 500 words. Responses are due approximately every other week on Monday evening before Wednesday’s class; prompts arrive a week beforehand. Specific submission dates are not listed in the draft.
+		- Join a small coached learning circle for an hour each week to support mutual learning and explore applications in everyday life. The draft anticipates virtual meetings but does not finalize the format.
+		- Spend at least fifteen minutes daily on a grounding or centering practice. Options include time in nature, journaling, gratitude, Tai Chi, and meditation.
+		- ### Experiential Practice
+			- Shared exercises include deep listening, working with grief and difficult emotions, considering other perspectives, and noticing reactions to disagreement or challenging ideas.
+			- Exercise participation is voluntary. Some experiences may be challenging, and participants share responsibility for a supportive setting. Anyone who feels unsafe or uncomfortable is asked to contact Henderson or another teaching-team member for support.
+	- ## Required Books
+		- [[Person/Rebecca Henderson/Book/20/Reimagining Capitalism]] — [[Person/Rebecca Henderson]].
+		- [[Person/Eric Ries/Book/26/Incorruptible]] — [[Person/Eric Ries]].
+		- [[Person/Amitav Ghosh/Book/21/The Nutmeg’s Curse]] — [[Person/Amitav Ghosh]].
+		- A small scholarship fund can help with book costs; contact [[Person/Ray Carp]].
+	- ## Schedule
+		- ### January 27 — Introduction: What Is Going On?
+			- Required preparation
+				- Case: “Richard Phillips: Spiritual Grounding in Times of Crisis,” Harvard Business School Case 325-091; case subject: [[Person/Richard Phillips]].
+				- “Belovedness as Alchemy,” [[Person/Amy Elizabeth Fox]].
+				- Case: “The Push to Save the Great Salt Lake,” [[Person/Nicole Marie]] and [[Person/Rebecca Henderson]].
+			- Recommended preparation
+				- Review of [[Person/George Marshall/Book/14/Don’t Even Think About It]], [[Person/George Marshall]]; alternatively, watch Marshall’s “The Greatest Story Never Told.” The draft does not identify the review’s author or outlet.
+				- [[Person/Elinor Ostrom/Book/90/Governing the Commons]], [[Person/Elinor Ostrom]].
+				- [[Person/Patrick Deneen/Book/18/Why Liberalism Failed]], [[Person/Patrick Deneen]]: preface, pp. xxv–xxvii, and introduction, pp. 1–20.
+		- ### February 3 — The Polycrisis and Possible Solutions
+			- Required preparation
+				- World Economic Forum, *Global Risks Report 2026*: “Key Findings,” pp. 7–12.
+				- Explore [Probable Futures climate maps](https://probablefutures.org/climate-maps/).
+				- “The Urgency of Building Systemic Risk Capacity in a Polycrisis World,” [[Person/Ajay Gambhir]] et al., *One Earth* 9(4), April 17, 2026: pp. 1–3 only.
+				- [[Person/Rupert Read/Book/22/Why Climate Breakdown Matters]], [[Person/Rupert Read]]: “Introduction: On Climate, Ecological and Societal Breakdown,” labeled chapter X in the draft.
+				- [[Person/Sherri Mitchell/Book/18/Sacred Instructions]], [[Person/Sherri Mitchell]]: chapter 2, “The Love of Thousands.”
+				- Choose a solutions topic from climate, food, water, or ecosystems and rewilding. Topic-specific readings are still to be supplied.
+			- Recommended preparation
+				- “This Is the New Disorder,” *The New York Times*, September 1, 2026.
+				- Listen to [[Person/Nate Hagens]] with [[Person/Sarah Wilson]] on *The Great Simplification*; the draft gives no episode title or date.
+				- “Global Polycrisis: The Causal Mechanisms of Crisis Entanglement,” [[Person/Michael Lawrence]] et al., *Global Sustainability* (2024).
+				- The six papers linked in [Bluesky reading list](https://bsky.app/profile/thierryaaron.bsky.social/post/3mhx2pijvek2v).
+		- ### February 10 — Reimagining Organizations and Governance
+			- Required preparation
+				- Case: “Nehemiah Mfg. Co.: Providing a Second Chance,” [[Person/Brian Trelstad]], Harvard Business School Case 9-320-008.
+				- Case: “Reimagining Ashley Stewart (A),” [[Person/Jack Brookes]], [[Person/Rebecca Henderson]], and [[Person/James Rhee]].
+				- Case: “Turning Ashley Stewart Around?” [[Person/Jack Brookes]], [[Person/Rebecca Henderson]], and [[Person/James Rhee]].
+				- “Innovation in the 21st Century: Architectural Change, Purpose, and the Challenges of Our Time,” [[Person/Rebecca Henderson]], *Management Science* 67(9), 2021: pp. 5479–5488.
+				- [[Person/Eric Ries/Book/26/Incorruptible]], [[Person/Eric Ries]]: introduction and chapters 3 and 5.
+				- Case: “1worker1vote: MONDRAGON in the U.S.,” [[Person/Rebecca Henderson]] and [[Person/Michael Norris]].
+		- ### February 17 — Why Are We So Stuck?
+			- Required preparation
+				- [[Person/Vanessa Machado de Oliveira/Book/21/Hospicing Modernity]], [[Person/Vanessa Machado de Oliveira]]: “Prep Work 1: Who the Heck Is Modernity?” pp. 15–29; “Prep Work 3: The Most Important Chapter,” pp. 41–61; and chapter 3, “The House of Modernity,” pp. 105–121.
+				- [[Person/Amitav Ghosh/Book/21/The Nutmeg’s Curse]], [[Person/Amitav Ghosh]]: chapter 6, “Bonds of Earth.”
+				- “Settler Colonialism, Ecology, and Environmental Injustice,” [[Person/Kyle Whyte]], *Environment and Society: Advances in Research* 9, 2018: pp. 125–144.
+				- [[Person/Robin Wall Kimmerer/Book/13/Braiding Sweetgrass]], [[Person/Robin Wall Kimmerer]]: “Skywoman Falling,” pp. 3–10, and “Asters and Goldenrod,” pp. 37–45.
+				- “Prefixing the World,” [[Person/Jonathan Rowson]]: part 1, stopping before “Permacrisis Enter the Afterparty.”
+				- [[Book/24/The Blind Spot]], [[Person/Adam Frank]], [[Person/Evan Thompson]], and [[Person/Marcelo Gleiser]] (2024): introduction.
+			- Recommended preparation
+				- [[Person/Iain McGilchrist/Book/21/The Matter with Things]], [[Person/Iain McGilchrist]]: chapter 12, “The Science of Life: A Study in Left Hemisphere Dominance.”
+				- [[Book/24/The Blind Spot]]: chapters 6 and 8.
+		- ### February 24 — Grief, Despair, and Cultivating the Self
+			- Required preparation
+				- [[Person/Mariana Alessandri/Book/23/Night Vision]], [[Person/Mariana Alessandri]]: selected chapters, not yet specified.
+				- [[Person/Francis Weller/Book/15/The Wild Edge of Sorrow]], [[Person/Francis Weller]]: selected chapters, not yet specified.
+				- [[Person/Valarie Kaur/Book/20/See No Stranger]], [[Person/Valarie Kaur]]: selected chapters, not yet specified.
+				- Watch “The Long Journey to Becoming 10% Happier,” [[Person/Dan Harris]].
+				- Listen to “The Science of Awe,” [[Person/Dacher Keltner]], February 2023.
+				- *The System Within: Addressing the Inner Dimensions of Sustainability and Systems Transformation*, [[Person/Jamie Bristow]] and [[Person/Rosie Bell]]: introduction and sections 1–2.
+				- [[Person/David Abram/Book/96/The Spell of the Sensuous]], [[Person/David Abram]] (1997): chapter 1, “The Ecology of Magic,” from p. 3 to the break at the top of p. 11.
+			- Recommended preparation
+				- *The System Within*: section 3 is highly recommended.
+				- Technical note: “What Is ‘Inner Work’ and How Does One Do It?” [[Person/Jack Brookes]] and [[Person/Rebecca Henderson]].
+				- Technical note: “An Introduction to Adult Development,” [[Person/Jamie Bristow]] and [[Person/Rebecca Henderson]].
+		- ### March 3 — What Might Change Look Like?
+			- Required preparation
+				- Lakota legend, “The End of the World.”
+				- “Deactivating the H2 Vortex,” [[Person/Jonathan Rowson]].
+				- “What Is the Two Loops Model?” Berkana Institute, via Visible Network Labs.
+				- [[Person/David McRaney/Book/22/How Minds Change]], [[Person/David McRaney]]: selected chapters, not yet specified.
+				- [[Person/Damon Centola/Book/21/Change]], [[Person/Damon Centola]]: selected chapters, not yet specified.
+				- Watch [[Person/Tim Jackson]]’s TED talk “An Economic Reality Check,” for which a transcript is available; alternatively, read “The Myth of Growth,” pp. 1–16 in [[Person/Tim Jackson/Book/21/Post Growth]].
+				- [[Book/23/Wellbeing]], [[Person/Richard Layard]] and [[Person/Jan-Emmanuel De Neve]]: introduction and summary, pp. 1–14.
+				- [[Book/11/A Cooperative Species]], [[Person/Samuel Bowles]] and [[Person/Herbert Gintis]]: selected chapters, not yet specified.
+			- Recommended preparation
+				- [[Person/Jonathan Lear/Book/06/Radical Hope]], [[Person/Jonathan Lear]]: chapter 2, “Ethics at the Horizon.”
+		- ### March 10 — The Dynamics of Power
+			- Required preparation
+				- Case: “Brazil: Resistance and Re-democratization after the 1964 Military Coup,” [[Person/Zairo Cheibub]], [[Person/Rebecca Henderson]], and [[Person/Channing Spencer]].
+				- [[Book/16/This Is an Uprising]], [[Person/Mark Engler]] and [[Person/Paul Engler]]: introduction and “The Hybrid,” pp. 87–97.
+				- [[Book/21/Power, for All]], [[Person/Julie Battilana]] and [[Person/Tiziana Casciaro]]: selected chapters, not yet specified.
+				- [[Person/Kazu Haga/Book/25/Fierce Vulnerability]], [[Person/Kazu Haga]]: chapter 2, “The Compassion of Fierceness,” pp. 45–67.
+			- Recommended preparation
+				- [[Person/Hilary Cottam/Book/18/Radical Help]], [[Person/Hilary Cottam]]: experiments 1 and 5.
+				- [[Book/17/The Nordic Secret]], [[Person/Lene Rachel Andersen]] and [[Person/Tomas Björkman]]: chapter 7, “The Danish Spring.”
+				- “Bildung in the 21st Century,” [[Person/Jonathan Rowson]].
+				- “The Making of Social Democracy,” [[Person/Daron Acemoglu]] et al., *Journal of the European Economic Association* (2025).
+				- [[Person/Marshall Ganz/Book/24/People, Power, Change]], [[Person/Marshall Ganz]]: chapter 1, “Practicing Democracy”; alternatively, watch Ganz’s “Fighting for Change” on YouTube.
+				- “How Not to Do Activism,” [[Person/Michael Gecan]], *Boston Review*, December 4, 2019.
+		- ### March 24 — The Dynamics of Love
+			- Required preparation
+				- Case: “Martin Luther King and the Struggle for Black Voting Rights,” [[Person/David Moss]].
+				- “Letter from Birmingham Jail,” [[Person/Martin Luther King Jr.]].
+				- [[Person/Howard Thurman/Book/49/Jesus and the Disinherited]], [[Person/Howard Thurman]]: selected chapter, not yet specified.
+				- [[Person/Valarie Kaur/Book/20/See No Stranger]], [[Person/Valarie Kaur]]: selected chapter, not yet specified.
+				- [[Person/bell hooks/Book/01/Salvation]], [[Person/bell hooks]]: selected chapter, not yet specified.
+				- “Kin Relationality and Ecological Belonging: A Cultural Psychology of Indigenous Transcendence,” [[Person/Yuria Celidwen]] and [[Person/Dacher Keltner]], *Frontiers in Psychology* (2023).
+				- [[Person/Killian Noe/Book/15/Descent into Love]], [[Person/Killian Noe]]: chapter 1, “The Story before the Story.”
+		- ### March 31 — Reimagining the Future and Driving Change
+			- Required preparation
+				- Case: “Leading and Learning from the Emerging Future: The Presencing Institute at a Crossroads,” [[Person/Nicole Marie]] and [[Person/Rebecca Henderson]].
+				- [Markets Built for Humans](https://marketsbuiltforhumans.org/), [[Person/Eric Beinhocker]] and [[Person/Nick Hanauer]].
+				- [[Person/Kristen R. Ghodsee/Book/23/Everyday Utopia]], [[Person/Kristen R. Ghodsee]]: chapter 1, “To Boldly Know When No One Has Known Before.”
+				- [[Person/Rebecca Henderson/Book/20/Reimagining Capitalism]], [[Person/Rebecca Henderson]]: chapter 7, “Changing Politics.”
+				- Watch “A Crash Course in Making Political Change,” [[Person/Katie Fahey]], TED talk.
+				- “Critical Connections: Trust-Building as a Prerequisite to Systems Change,” [[Person/Susan M. Glisson]], *Du Bois Review* 16(1), Spring 2019: pp. 181–188.
+				- [[Person/Martha Nussbaum/Book/13/Political Emotions]], [[Person/Martha Nussbaum]]: “Teaching Patriotism,” pp. 204–225, and “How Love Matters for Justice,” pp. 387–397.
+		- ### April 7 — Love and Power in Action
+			- Required preparation
+				- A regenerative-agriculture case, not yet identified.
+				- A climate-change case; the draft tentatively suggests Ørsted.
+				- Case: “Shorefast: A Strange and Familiar Way to Reimagine Capitalism,” [[Person/Brian Trelstad]].
+		- ### April 14 — Reimagining Democracy; The Human Side of Change
+			- The draft runs the phrases “Reimagining Democracy” and “The human side of change” together in its session heading, leaving the final title unclear.
+			- Required preparation
+				- [[Book/24/Plurality]], [[Person/E. Glen Weyl]] and [[Person/Audrey Tang]]: selected chapters, not yet specified.
+				- A piece on Irish deliberative democracy, not yet identified.
+				- [The Interfaith Popular Education Case Study](https://interfaithcasestudy.com/).
+				- “What Is Economic Democracy?” [[Person/J. Phillip Thompson]]: section V, “Criticisms from the Left,” on [Voices for New Democracy](https://voicesfornewdemocracy.wordpress.com/).
+				- *Habits of Heart and Mind: How to Fortify Civic Culture*, American Academy of Arts and Sciences (2024).
+		- ### April 21 — What Is Mine to Do?
+			- Revisit the Great Salt Lake. The draft lists no additional reading or assignment for this final session.

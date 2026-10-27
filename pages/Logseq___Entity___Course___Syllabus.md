@@ -1,0 +1,20 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+- # Course Syllabus
+	- In this garden, **Course Syllabus** pages model a dated plan for one offering of a course, including its aims, expectations, schedule, and assigned material.
+	- ## Relationship to a course
+		- A syllabus belongs to a [[Logseq/Entity/Course]] instance. Its title is `<Course Page>/Syllabus/<Year Term>`; distinct published revisions may append a source revision label.
+		- A syllabus page carries this entity alone in `logseq-entity::`; it describes a course document, while the parent course page describes the course itself.
+	- ## Finding and deduplicating
+		- Compare course identity, academic term, source URL, and stated revision before creating another syllabus. Revisions for the same offering can update one page when the source and revision history remain clear.
+	- ## Frontmatter
+		- Shared conventions follow [[Logseq/Frontmatter]].
+		- `course::` links the course instance. `academic-term::` records the source's year and term. `syllabus-status::` records a published status such as Draft or Final when stated.
+		- `created-by::` credits the syllabus author when identified. A source filename or upload directory alone does not establish its publication date.
+	- ## Page shape
+		- A linked H1 points to the original syllabus and names the course and offering.
+		- **Overview** summarizes the learning aims and teaching approach in original prose, with the document's draft status and source revision when available.
+		- **Requirements** preserves attendance, written work, group activities, personal practice, participation conditions, and support information.
+		- **Required books** links the [[Logseq/Entity/Book]] instances explicitly required for purchase or sustained use.
+		- **Schedule** has one dated heading per meeting, with required and recommended assignments kept distinct. Assignments preserve chapter titles, page ranges, case identifiers, media formats, alternatives, and details still awaiting confirmation.
+		- Assigned books link to their book pages; named authors, speakers, and case subjects link to their person hubs. Chapters remain assignment text unless they have substantive section pages of their own.
+		- An adaptation credits its remote source and summarizes explanatory prose. Unspecified readings and provisional sessions retain their uncertainty.

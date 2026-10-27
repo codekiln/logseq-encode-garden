@@ -1,0 +1,19 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+- # Course
+	- In this garden, **Course** pages model a named course of study with a coherent purpose, teaching team, and learning activities.
+	- ## Scope
+		- The course page holds the identity and educational purpose shared across offerings. A dated teaching plan is a [[Logseq/Entity/Course/Syllabus]] instance linked from the course.
+		- A book, a single talk, and a collection of unrelated resources each retain their own entity definitions.
+	- ## Naming and identity
+		- A course with an established provider or creator namespace follows [[Logseq/Pref/Page/Name]] under that namespace with a `Course` segment. Otherwise its title is `Course/<Course Name>`.
+		- Search the official URL, full course title, shorter public name, instructor, and provider before creating a course. A new term or syllabus revision belongs to the existing course when the course's identity continues.
+	- ## Frontmatter
+		- `logseq-entity::` points to this definition. Shared conventions follow [[Logseq/Frontmatter]].
+		- `instructor::` links the teaching staff's [[Logseq/Entity/Person]] hubs, including professor instances where applicable. `created-by::` credits course designers when the source identifies them.
+		- `provider::` links an existing institution or organization page when the source establishes that relationship; otherwise the provider can be stated in prose.
+	- ## Page shape
+		- A linked H1 points to the official course site and uses its public course name.
+		- **About** describes the subject, audience, learning aims, and approach.
+		- **Offering** records the term, format, location, participation conditions, and fee when published, with dates attributed to the relevant offering.
+		- **Syllabus** links the dated syllabus pages. Detailed assignments and meeting schedules live on those pages.
+		- Source disagreements are stated beside the affected fact, with enough context to identify each source.
