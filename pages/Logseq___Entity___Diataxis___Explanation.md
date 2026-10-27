@@ -1,8 +1,11 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
+logseq-entity-hierarchy-type:: [[Logseq/Entity/Hierarchy/Frontmatter/Type/extends]]
 alias:: [[Explanation Page]], [[Diataxis Explanation Page]], [[Diataxis Concept Page]]
 
 - # Diataxis Explanation
 	- In this garden, **Diataxis Explanation** pages model understanding-oriented writing: why something is the way it is, and how ideas fit together. They explain **why** and serve understanding, the reflective quadrant of [[Diataxis]].
+	- ## Inherited rules
+		- Choosing between the four children, marking an instance, `see-also::` and shared frontmatter follow [[Logseq/Entity/Diataxis]].
 	- ## What counts as an instance
 		- A page that gives background, weighs alternatives, or draws the connections between ideas, rather than instructing or cataloguing.
 		- Not an instance: a page of steps — [[Logseq/Entity/Diataxis/How To]] or [[Logseq/Entity/Diataxis/Tutorial]]. A systematic description of a thing — [[Logseq/Entity/Diataxis/Reference]].
@@ -13,16 +16,13 @@ alias:: [[Explanation Page]], [[Diataxis Explanation Page]], [[Diataxis Concept 
 	- ## Naming and links
 		- No namespace segment of its own — an explanation page is named for the idea it explains, wherever that idea naturally sits, per [[Logseq/Entity/Concept]].
 	- ## Frontmatter
-		- **`tags::`** — new pages of this kind carry `[[Diataxis/Concept]]` (or `[[Diataxis/Explanation]]`, the same cluster by alias). Add it on creation; never remove or rewrite tags on a page you did not create.
-		- **`see-also::`** — preferred over a `## Related` section listing internal wikilinks.
-		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+		- **`tags::`** — new pages of this kind carry `[[Diataxis/Concept]]` (or `[[Diataxis/Explanation]]`, the same cluster by alias).
 	- ## Page shape
-		- Per [[Logseq/Entity/Concept]]. This type adds no shape of its own.
+		- Per [[Logseq/Entity/Concept]]. This entity adds no shape of its own.
 	- ## Writing an instance
 		- Take a wider view than a task allows: the history, the alternatives that were not taken, the reasons behind a design.
 		- Admit the disagreements. Explanation is the one quadrant where opinion belongs, provided it is marked as such.
 		- Link out to the how-to, tutorial and reference pages rather than absorbing their jobs.
-	- ## Relationship to other types
-		- The four Diataxis types are mutually exclusive in intent even when a topic needs all four; pick by what the reader needs, not by what is easiest to write.
-		- **[[Diataxis/Explanation]]** — the framework concept page this type implements.
+	- ## Relationship to other entities
+		- **[[Diataxis/Explanation]]** — the framework concept page this entity implements.
 		- **[[Logseq/Entity/Discussion]]** — a Discussion page that weighs alternatives also carries this entity, after Discussion in its `logseq-entity::` line. It takes its name, placement, shape and frontmatter from the Discussion definition, so an agent writing one leaves out the `[[Diataxis/Concept]]` tag that new Explanation pages otherwise carry.

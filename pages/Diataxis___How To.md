@@ -19,14 +19,7 @@ tags:: [[Diataxis]], [[Documentation]]
 		- **Reference**: Reference documentation describes what something is and how it works, while how-to guides show how to use it to accomplish tasks.
 		- **Explanation**: Explanation provides background and context, while how-to guides focus solely on practical steps.
 	- ## Structure in Logseq
-		- How-to guides in this knowledge garden follow a consistent structure:
-			- Title: "How To [Specific Task]"
-			- Overview: Brief description of what the guide helps accomplish
-			- Prerequisites: What's needed before starting
-			- Steps: Numbered, sequential actions to take
-			- Troubleshooting: Common issues and solutions
-			- Related: Links to related pages
-		- All how-to guides are tagged with `[[Diataxis/How To]]` for easy discovery.
+		- [[Logseq/Entity/Diataxis/How To]] gives the naming, tag and page shape of a how-to page in this garden.
 	- ## Examples
 		- [[Diataxis/How To/Create a How To]]
 		- (More examples will be added as they are created)
