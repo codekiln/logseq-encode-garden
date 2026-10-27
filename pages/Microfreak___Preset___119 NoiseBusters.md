@@ -13,13 +13,16 @@ preset-synth-file:: [NoiseBusters — October 25 slot 119 capture](https://s3.us
 preset-synth-file-sha256:: 7c05681f3deaa1b1eb87db2e7ec2f226eda0e21cbced0ae57c1cc2ab7ac63ccd
 - # Notes
 	- ## Saved export and provenance
+		- On October 26, 2026, two further read-only USB downloads of saved slot 119 returned identical `slot-119.bin` files, matching the October 25 export and this page’s file and parameter-payload SHA-256 values. The [download protocol](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/lib/download.py) reads saved memory without selecting the preset.
 		- Saved export: read from the device's slot 119 over USB on October 25, 2026 with `mise run microfreak:download --slot 119`. Two consecutive reads returned the same file.
-		- The parameter payload matches the MIDI Control Center archives Factory 2.0, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 2.0 slot 7, Factory 2.1 slot None, Factory 3.0 slot 199, Factory 6.0 slot 307). Comparison used `mise run microfreak:compare`.
+		- The parameter payload matches the MIDI Control Center archives Factory 2.0, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 2.0 slot 7, Factory 2.1 archive, Factory 3.0 slot 199, Factory 6.0 slot 307). Comparison used `mise run microfreak:compare`.
 		- [Download the slot 119 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___119%20NoiseBusters___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/119 NoiseBusters/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the October 26 NoiseBusters preset export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___26-Mon___Asset___Preset___119-NoiseBusters.mfpz). The `.mfpz` export preserves the captured saved sound; its parser round-trip matched the raw payload. See [[GitP/A/Session/26/10/26-Mon/Asset/Preset/119-NoiseBusters/mfpz]] for format provenance and restoration limits.
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Noise]([[Microfreak/UI/Oscillator/Knob/Type/Noise]]). [[Microfreak/UG/06 Dig Osc/03 Types/13 Noise]]
 		- [Wave]([[Microfreak/UI/Oscillator/Knob/Type/Noise/Wave]]): 0.374. [Timbre]([[Microfreak/UI/Oscillator/Knob/Type/Noise/Timbre]]): 0.790. [Shape]([[Microfreak/UI/Oscillator/Knob/Type/Noise/Shape]]): 0.710.
 		- [Keyboard octave]([[Microfreak/UI/Front/Row/03 Bottom/01 Octave]]): 0. [Glide]([[Microfreak/UI/Front/Row/02 Main/01 Glide Knob]]): 0.000.
+		- Wave morphs particle noise through white noise to metallic noise. Timbre changes noise sample-rate reduction and the pitch of the metallic component; Shape blends the noise with a pitched waveform. The saved cycling-envelope routes sweep both noise character controls, while keyboard tracking counteracts part of the Timbre movement. [[Microfreak/UG/06 Dig Osc/03 Types/13 Noise]]
 	- ## Filter
 		- [Low-pass]([[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Button/Type/LPF]]) filter. Saved [cutoff]([[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Cutoff]]): 0.174; [resonance]([[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Resonance]]): 0.415. [[Microfreak/UG/07 Filter/01 Modifying Sound/01 Low Pass Filter]]
 	- ## Envelopes
@@ -46,6 +49,9 @@ preset-synth-file-sha256:: 7c05681f3deaa1b1eb87db2e7ec2f226eda0e21cbced0ae57c1cc
 		- All other saved matrix amounts are zero.
 	- ## Voice and keyboard
 		- [Paraphonic]([[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button]]) mode: on.
+	- ## Performance and session context
+		- Hold several notes in paraphonic mode to hear the noise-and-pitched blend across the keyboard. The looping Cycling Envelope sweeps noise character while key position changes Timbre and cutoff. The LFO modulates its own rate and the Cycling Envelope’s amount and fall, so the saved modulation wiring can produce changing motion without manual knob turns. [[Microfreak/UG/06 Dig Osc/03 Types/13 Noise]] · [[Microfreak/UG/05 Connections/02 Matrix and Encoder/01 Sources and Destinations]]
+		- NoiseBusters opens [[GitP/A/Session/26/10/26-Mon]]; the unedited commentary recording starts with codekiln saying “119 NoiseBusters.” The first 01:49 has no controller changes, so the opening plays the saved sound; cutoff, cycling-envelope and oscillator changes follow from 01:49. The saved factory baseline does not capture those unsaved changes.
 	- ## Evidence and interpretation
 		- Values describe saved base settings before modulation. Controls use normalized 0…1 values unless a stored choice code is shown; they are not OLED percentages, hertz or milliseconds.
 		- The [saved-parameter inspector](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/PARAMETERS.md) preserves the original fields. Oscillator interpretation assumes the documented firmware 5 layout; firmware is not detected from the export.

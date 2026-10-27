@@ -1,0 +1,63 @@
+prev:: [[GitP/A/Session/26/10/24-Sat]]
+logseq-entity:: [[Logseq/Entity/Podcast/Episode/GitP/A]], [[Logseq/Entity/Podcast/Episode]]
+public:: true
+created-by:: [[Person/codekiln]]
+date-created:: [[2026-10-26 Mon]]
+
+- # NoiseBusters, Fight and TaBass
+	- A Ghost in the Patch session with three MicroFreak factory presets in layered takes: NoiseBusters opens as a hall of mirrors, Fight comes in as a lead with pad pressure, and TaBass enters near the end as a little thumper, with cycling-envelope and filter sweeps throughout.
+	- ![Episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___26-Mon___Asset___Audio___Full.mp3)
+	- ## Recording
+		- 16:06 · [[GitP/A/Session/26/10/26-Mon/Asset/Audio/Full/mp3]] · [Download the MP3](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___26-Mon___Asset___Audio___Full.mp3)
+		- Recorded on October 26, 2026 in [[Ableton/Live]] at 120 BPM in 4/4 and mixed the next morning. Three MicroFreak audio layers play through the main mix with modest reverb and delay sends and a slow ride on the main output level; the commentary microphone is left out of the mix.
+		- codekiln wrote the poem in the sip column of [Bean 2026-10-27 · Beans](https://codekiln.github.io/beans/log/2026-10-27-bean1/) while mixing this recording.
+		- Select a chapter timestamp to play from that point.
+	- ## Setup
+		- The audible parts are three takes of the MicroFreak, each on its own audio track with a matching MIDI capture. A further full-length take of the MicroFreak's audio and MIDI is kept in the set as a muted reference.
+		- [[My Notes]]
+			- I've been using Ableton all wrong. During this session I realized I could use Session View to record, or I could use Arrangement Record to record clips and their playback in Session View. That was really fun, and I'm going to use it going forward. [[Ableton/Live/UG/19 Recording New Clips/03 Recording/02 Recording Into Session Slots]] · [[Ableton/Live/UG/19 Recording New Clips/03 Recording/01 Recording Into the Arrangement]] · [[Ableton/Arrangement View/Q/Can I record in Arrangement View while playing Session View clips?]]
+			- The next morning I did a little ideation with AI about declaring a template for an Ableton set in this garden: [[Ableton/Live/Idea/Declare a Live Set in Logseq]].
+	- ## Presets
+		- [[Microfreak/Preset/119 NoiseBusters]] — Keys, Noise oscillator, paraphonic. [Download the saved slot 119 export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___26-Mon___Asset___Preset___119-NoiseBusters.mfpz)
+		- [[Microfreak/Preset/118 Fight]] — Lead, Chords oscillator. [Download the saved slot 118 export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___26-Mon___Asset___Preset___118-Fight.mfpz)
+		- [[Microfreak/Preset/123 TaBass]] — Bass, V.Analog oscillator. [Download the saved slot 123 export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___26-Mon___Asset___Preset___123-TaBass.mfpz)
+		- All three saved slots matched their factory sounds when read after the session, so the knob changes heard here were not saved. The `.mfpz` exports use Elektroid's format; restoring them in MIDI Control Center has not been tested.
+	- ## MIDI
+		- [Download the session MIDI](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___26-Mon___Asset___MIDI___Session.mid) · [[GitP/A/Session/26/10/26-Mon/Asset/MIDI/Session/mid]]
+		- Times below follow the recording. Control names come from [[Microfreak/UG/21 Appendix D - CC Values]]. What the [Wave]([[Microfreak/UI/Oscillator/Knob/Wave]]) (CC 10), [Timbre]([[Microfreak/UI/Oscillator/Knob/Timbre]]) (CC 12) and [Shape]([[Microfreak/UI/Oscillator/Knob/Shape]]) (CC 13) knobs do depends on the oscillator: with [Noise]([[Microfreak/UI/Oscillator/Knob/Type/Noise]]) they change the noise character, with [Chords]([[Microfreak/UI/Oscillator/Knob/Type/Chords]]) Wave selects the chord, and with [V.Analog]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog]]) Wave sets detune. No oscillator-type changes (CC 9) were recorded.
+	- ## Chapters
+		- ### 00:00 Introit
+			- NoiseBusters plays from its saved settings; no controller changes are recorded in this passage.
+			- [[Microfreak/Preset/119 NoiseBusters]] · [[Microfreak/UG/06 Dig Osc/03 Types/13 Noise]]
+			- [[My Notes]]
+				- Hall of Mirrors.
+		- ### 01:49 Cycling-envelope rise and cutoff
+			- Cycling envelope [rise]([[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Knob/Rise]]) (CC 102) and [cutoff]([[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Cutoff]]) (CC 23) start moving together at 01:49. Cycling envelope [amount]([[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Knob/Amount]]) (CC 24) joins at 02:34.
+			- [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope]] · [[Microfreak/UG/07 Filter/01 Modifying Sound/04 Cutoff Frequency]]
+			- [[My Notes]]
+				- Around 02:20: clap echo entrance.
+		- ### 03:03 Filter and oscillator controls
+			- The busiest stretch for both notes and knobs. Cutoff sweeps run throughout; [attack]([[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Knob/Attack]]) (CC 105) changes from 03:05, Wave, Timbre and Shape from 03:11, and [resonance]([[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Resonance]]) (CC 83) from 03:19. Cycling envelope rise changes again from 04:37.
+			- [[Microfreak/UG/07 Filter/01 Modifying Sound/05 Resonance]] · [[Microfreak/UG/09 Envelope Gen/03 Envelope Stages]]
+		- ### 07:01 Preset 118 Fight
+			- Fight comes in as a lead. No knobs move here; the movement comes from pad pressure, which the saved preset routes to cutoff.
+			- [[Microfreak/Preset/118 Fight]] · [[Microfreak/UG/06 Dig Osc/03 Types/10 Chords]] · [[Launchpad/UG/10 Setup/04 Aftertouch Settings]]
+		- ### 07:51 Envelope timing and oscillator changes
+			- Cycling envelope rise and [fall]([[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Knob/Fall]]) (CC 103) change from 07:51. From 08:17, attack, [filter amount]([[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Knob/Filter Amt]]) (CC 26) and Timbre change, and Wave changes almost continuously from 08:22. On the layer playing Fight, Wave sets the [chord type]([[Microfreak/UI/Oscillator/Knob/Type/Chords/Type]]) and Timbre its [inversion]([[Microfreak/UI/Oscillator/Knob/Type/Chords/Inv Transp]]).
+		- ### 09:08 Cycling envelope and filter interplay
+			- Cycling envelope rise changes first, then Timbre from 09:31. Amount, [hold]([[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Knob/Hold Sustain]]) (CC 28), fall, attack, resonance and cutoff follow between 09:50 and 10:00, and Wave from 10:07. After 10:10, notes continue without new controller changes.
+			- [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope/02 Changing Shapes]]
+		- ### 12:55 Preset 123 TaBass entrance
+			- TaBass enters on its saved settings; no controller changes are recorded until 14:05. Its looping cycling envelope and main envelope both open the filter on each note.
+			- [[Microfreak/Preset/123 TaBass]] · [[Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog]]
+			- [[My Notes]]
+				- A little thumper.
+		- ### 14:05 Final control sweeps
+			- Cycling envelope rise, hold, fall and amount, attack, cutoff, resonance and Wave all change in these 23 seconds; hold changes most often.
+		- ### 14:28 Formant whackiness
+			- Timbre changes almost continuously, with Wave, cycling envelope rise and attack alongside it. With V.Analog, the oscillator TaBass uses, Timbre sets [Shape]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Shape]]), which runs from narrow pulse through full square to hard-sync formants.
+			- [[Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog]]
+			- [[My Notes]]
+				- Formant whackiness.
+		- ### 15:26 Closing passage
+			- The passage recorded at the start of the session plays as the ending, without new controller changes.

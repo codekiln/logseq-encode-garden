@@ -13,13 +13,16 @@ preset-synth-file:: [TaBass — October 25 slot 123 capture](https://s3.us-east-
 preset-synth-file-sha256:: 4c0f43d92ef8c043b6de5d270f3b6e0031f27a60c9ebb1d933672821e0cfbded
 - # Notes
 	- ## Saved export and provenance
+		- On October 27, 2026, two further read-only USB downloads of saved slot 123 returned identical `slot-123.bin` files, matching the October 25 export and this page’s file and parameter-payload SHA-256 values. The [download protocol](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/lib/download.py) reads saved memory without selecting the preset.
 		- Saved export: read from the device's slot 123 over USB on October 25, 2026 with `mise run microfreak:download --slot 123`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 2.0, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 2.0 slot 100, Factory 2.1 slot 202, Factory 3.0 slot 202, Factory 6.0 slot 347). Comparison used `mise run microfreak:compare`.
 		- [Download the slot 123 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___123%20TaBass___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/123 TaBass/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the October 27 TaBass preset export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___26-Mon___Asset___Preset___123-TaBass.mfpz). The `.mfpz` export preserves the captured saved sound; `mise run microfreak:compare` found the same payload as the raw capture. See [[GitP/A/Session/26/10/26-Mon/Asset/Preset/123-TaBass/mfpz]] for format provenance and restoration limits.
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [V.Analog]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog]]). [[Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog]]
 		- [Detune]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Detune]]): 0.655. [Shape]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Shape]]): 0.440. [Wave]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Wave]]): 0.316.
 		- [Keyboard octave]([[Microfreak/UI/Front/Row/03 Bottom/01 Octave]]): 0. [Glide]([[Microfreak/UI/Front/Row/02 Main/01 Glide Knob]]): 0.164.
+		- With V.Analog, the panel's Wave knob sets Detune between the two waves, Timbre sets Shape, a variable square from narrow pulse through full square to hard-sync formants, and Shape sets Wave, a variable saw from triangle to sawtooth. [[Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog]]
 	- ## Filter
 		- [Low-pass]([[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Button/Type/LPF]]) filter. Saved [cutoff]([[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Cutoff]]): 0.106; [resonance]([[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Resonance]]): 0.288. [[Microfreak/UG/07 Filter/01 Modifying Sound/01 Low Pass Filter]]
 	- ## Envelopes
@@ -37,6 +40,9 @@ preset-synth-file-sha256:: 4c0f43d92ef8c043b6de5d270f3b6e0031f27a60c9ebb1d933672
 		- All other saved matrix amounts are zero.
 	- ## Voice and keyboard
 		- [Paraphonic]([[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button]]) mode: off.
+	- ## Performance and session context
+		- Play single notes low on the keyboard. Each note starts a short main-envelope pluck that opens the low-pass filter and, through the negative ENV → Wave route, pulls the waveform and timbre on the attack. The looping Cycling Envelope at high amount adds a repeating pulse, and the small glide joins legato notes. Pressure brightens the timbre. [[Microfreak/UG/05 Connections/02 Matrix and Encoder/01 Sources and Destinations]] · [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope]]
+		- TaBass enters at 12:55 in [[GitP/A/Session/26/10/26-Mon]], where codekiln called it “a little thumper.” The recorded MIDI has no controller changes until 14:05, so the entrance likely plays close to the saved settings; the saved capture does not show later unsaved edits.
 	- ## Evidence and interpretation
 		- Values describe saved base settings before modulation. Controls use normalized 0…1 values unless a stored choice code is shown; they are not OLED percentages, hertz or milliseconds.
 		- The [saved-parameter inspector](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/PARAMETERS.md) preserves the original fields. Oscillator interpretation assumes the documented firmware 5 layout; firmware is not detected from the export.
