@@ -46,7 +46,7 @@ tags:: [[Mac/CLI]], [[CLI/Tool]]
 		- Better suited for command-line workflows
 	- ## Related Tools
 		- [[CaffeineApp]] - GUI application with menu bar icon
-		- `pmset` - macOS power management command-line tool for viewing/setting sleep settings
+		- [[pmset]] - macOS power management command-line tool for viewing/setting sleep settings
 	- ## References
 		- [Apple Developer Documentation](https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/man8/caffeinate.8.html)
 		- View manual page: `man caffeinate`
