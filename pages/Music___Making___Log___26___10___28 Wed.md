@@ -1,0 +1,27 @@
+- [[2026-10-28 Wed]]
+	- ## Research [[Ableton/Live/UI/Arrangement View]] and recording.
+		- ### [[Ghost Gardener]] requests
+			- DONE please import youtube video entity, person entity / music technology maker entity and my readwise notes from [Ableton Live 11 Tutorial - Recording Clips from the Session View to the Arrangement View | Readwise](https://read.readwise.io/new/read/01m60w6e03481pprtet867xr5e)  using the readwise CLI and link it here.
+			  id:: 6ae1bff3-1855-4d7a-9a99-c490201f4665
+				- [[Person/Lorne Bregitzer/YouTube/21/09/Recording Clips from the Session View to the Arrangement View]]
+		- ### Basic idea for recording an [[Improv]] into Arrangement view while doing the improv in [[Ableton/Live/Mode/Session]]
+			- The basic idea is to double up every track.
+				- #### Session Tracks group
+					- ##### Common Track Settings
+						- **Audio From**: `Ext In`
+						- **Audio To**: `Master`
+					- MF1-S
+					- MF2-S
+					- MF3-S
+				- #### Arrangement Tracks group
+					- ##### [[My Notes]]
+						- This group is for "proxying" each individual track in the Session Tracks group so the live looping session performance can be recorded in arrangement view.
+					- ##### Common Track Settings
+						- **Audio From**: for each, select the corresponding track > `Post Mixer`
+						- **Monitor**: `Off`
+					- MF1-A
+					- MF2-A
+					- MF3-A
+			- [[Learned]]
+				- [[Ableton/Live/UG/07 Session View/04 Setting Up the Session View Grid/02 Removing Clip Stop Buttons]]
+					- It's possible to remove the clip stop buttons on the session view for the Arrangement Tracks group; select a whole portion of the grid with shift click, right click, then do Remove Stop Button or Cmd E
