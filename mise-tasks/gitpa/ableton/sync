@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#MISE description="Compile a Logseq Ableton Session declaration into a new Live 11 Set"
+set -euo pipefail
+exec python3 "$(dirname "$0")/lib/compiler.py" "$@"
