@@ -3,5 +3,5 @@ up:: [[Zoom H5/UG]]
 prev:: [[Zoom H5/UG/08 Recording]]
 next:: [[Zoom H5/UG/10 Project and File Editing]]
 - # Playback
-	- Playback offers speed, pitch and repeat controls.
+	- Change speed and key; repeat between two points (AB repeat).
 	- [Read in the official manual](https://zoomcorp.com/media/documents/E_H5_v2.pdf#page=38)
