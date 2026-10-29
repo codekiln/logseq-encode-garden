@@ -23,20 +23,6 @@ see-also:: [[Microfreak/Preset]], [[Logseq/Entity/Preset/Synth/Microfreak]]
 			- Why it fits: each key selects a different word, and the sound has a long decay with no sustain. You can "play" a sentence by choosing keys, which makes it the most controllable of the talking patches. A doll that says a word when you touch it is a good bit for a party.
 			- Pressure brings in the cycling envelope and makes it rise faster, so pressing harder makes the word stutter.
 			- How to use it: find a few keys whose words land well and repeat them as a call-and-response with the crowd.
-	- ## Vocoder voices
-		- These need the gooseneck microphone of the Vocoder Edition, or a TRRS headset microphone in the headphone jack. Set Mic Gain in the Utility menu before the party. The [[Microfreak/UG/06 Dig Osc/03 Types/22 Vocoder]] oscillator puts your voice onto the synth's pitch, so you can speak to the room as a monster or a machine. See [[Microfreak/UG/19 Appendix B Vocoder]].
-		- ### 5. [[Microfreak/Preset/315 Crying]]
-			- Why it fits: a looping cycling envelope bends the pitch slightly and opens the filter bands, so whatever you say wavers like a wail. Paraphonic mode is on, so you can hold a minor chord and moan into the microphone for a choir of ghosts.
-			- How to use it: hold a minor chord and say "boo" slowly, or sing a long vowel. Good between songs.
-		- ### 6. [[Microfreak/Preset/311 The Eyes]]
-			- Why it fits: key position controls the vocoder's analysis range, so the same spoken word sounds dark on low keys and thin and alien on high ones. Saying "I see you" across the keyboard is an easy bit, and the name matches.
-			- How to use it: speak one phrase while walking a slow line from high keys down to low ones.
-		- ### 7. [[Microfreak/Preset/306 Low Battery]]
-			- Why it fits: a looping cycling envelope and a filtered Sample-and-Hold LFO wobble the pitch and timbre, so your voice sounds like a toy whose batteries are dying. That is a horror-film trope with a friendly side, good for younger guests.
-			- How to use it: announce the next song as a dying robot.
-		- ### 8. [[Microfreak/Preset/309 Low Noisy Vox]]
-			- Why it fits: the filter is open with strong resonance, and the name suggests a low, noisy carrier. Played in a low octave this should give the deepest monster voice of the set.
-			- How to use it: drop the octave and use it for a slow, deep "Happy Halloween" or a monster roar into the microphone.
 	- ## Atmosphere
 		- Long sounds to leave running while the room fills up, or under the talking patches.
 		- ### 9. [[Microfreak/Preset/012 Darkstream]]
@@ -102,3 +88,17 @@ see-also:: [[Microfreak/Preset]], [[Logseq/Entity/Preset/Synth/Microfreak]]
 		- [[Microfreak/Preset/264 Disaster]]: a HARM lead where the cycling envelope and pressure each add a lot of noise.
 		- [[Microfreak/Preset/213 Hypno Chaos]]: a triangle LFO with a wide range on pitch, which wobbles each note like a siren.
 		- [[Microfreak/Preset/230 Cristal Church]]: a SAWX organ with a long release, a brighter companion to [[Microfreak/Preset/195 Night Organ]].
+	- ## Vocoder voices
+		- These need the gooseneck microphone of the Vocoder Edition, or a TRRS headset microphone in the headphone jack. Set Mic Gain in the Utility menu before the party. The [[Microfreak/UG/06 Dig Osc/03 Types/22 Vocoder]] oscillator puts your voice onto the synth's pitch, so you can speak to the room as a monster or a machine. See [[Microfreak/UG/19 Appendix B Vocoder]].
+		- ### 5. [[Microfreak/Preset/315 Crying]]
+			- Why it fits: a looping cycling envelope bends the pitch slightly and opens the filter bands, so whatever you say wavers like a wail. Paraphonic mode is on, so you can hold a minor chord and moan into the microphone for a choir of ghosts.
+			- How to use it: hold a minor chord and say "boo" slowly, or sing a long vowel. Good between songs.
+		- ### 6. [[Microfreak/Preset/311 The Eyes]]
+			- Why it fits: key position controls the vocoder's analysis range, so the same spoken word sounds dark on low keys and thin and alien on high ones. Saying "I see you" across the keyboard is an easy bit, and the name matches.
+			- How to use it: speak one phrase while walking a slow line from high keys down to low ones.
+		- ### 7. [[Microfreak/Preset/306 Low Battery]]
+			- Why it fits: a looping cycling envelope and a filtered Sample-and-Hold LFO wobble the pitch and timbre, so your voice sounds like a toy whose batteries are dying. That is a horror-film trope with a friendly side, good for younger guests.
+			- How to use it: announce the next song as a dying robot.
+		- ### 8. [[Microfreak/Preset/309 Low Noisy Vox]]
+			- Why it fits: the filter is open with strong resonance, and the name suggests a low, noisy carrier. Played in a low octave this should give the deepest monster voice of the set.
+			- How to use it: drop the octave and use it for a slow, deep "Happy Halloween" or a monster roar into the microphone.
