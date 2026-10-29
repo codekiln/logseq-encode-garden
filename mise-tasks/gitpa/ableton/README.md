@@ -71,6 +71,6 @@ python3 -m unittest discover -s mise-tasks/gitpa/ableton/lib -p 'test_*.py' -v
 
 ## Seed maintenance
 
-The tracked seed contains organizational groups Pattern A (30) and Pattern B (31). Its child tracks retain the performance bus routes. `lib/prepare_seed.py` is a constrained maintenance helper: it copies the observed empty GroupTrack30 from a Live-saved Set, allocates new global automation/object IDs for GroupTrack31, preserves local slot/send/lane IDs, and groups existing tracks21/22. It rejects device-bearing or automated source groups and unexpected identities. The page compiler only edits existing groups.
+The tracked seed contains organizational groups Pattern A (30) and Pattern B (31). Its child tracks retain the performance bus routes. [prepare_seed.py](lib/prepare_seed.py) creates Pattern B by copying the empty Pattern A group from a Set saved in Live. The script assigns new object IDs to the copied group and groups the existing Pattern B audio and MIDI tracks. It preserves the child tracks’ routes to the performance tracks. It rejects device-bearing or automated source groups and unexpected identities. The page compiler only edits existing groups.
 
 After modifying a seed, open, save and reopen it in Live before using it for episodes.
