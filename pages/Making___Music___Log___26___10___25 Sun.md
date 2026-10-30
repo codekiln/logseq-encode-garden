@@ -1,4 +1,5 @@
 prev:: [[Making/Music/Log/26/10/24-Sat]]
+next:: [[Making/Music/Log/26/10/30 Fri]]
 
 - # [[2026-10-25 Sun]]
 	- ## [[Ghost Gardener]] requests

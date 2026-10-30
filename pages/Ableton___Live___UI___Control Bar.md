@@ -14,6 +14,8 @@ up:: [[Ableton/Live/UI]]
 			- [[Ableton/Live/UI/Control Bar/Button/Play]]
 			- [[Ableton/Live/UI/Control Bar/Button/Stop]]
 			- [[Ableton/Live/UI/Control Bar/Button/Arrangement Record]]
+		- ### Automation and Capture MIDI
+			- [[Ableton/Live/UI/Control Bar/Button/Automation Arm]]
 		- ### Arrangement Loop Settings
 			- [[Ableton/Live/UI/Control Bar/Toggle/Arrangement Loop]]
 			- [[Ableton/Live/UI/Control Bar/Field/Loop Start]]
