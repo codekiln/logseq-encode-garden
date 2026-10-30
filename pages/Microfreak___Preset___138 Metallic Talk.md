@@ -38,6 +38,10 @@ preset-synth-file-sha256:: ea3383634d12b816fbf0dabfff57e0f212515c36cc9392888c554
 		- All other saved matrix amounts are zero.
 	- ## Voice and keyboard
 		- [Paraphonic]([[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button]]) mode: off.
+	- ## Performance and session context
+		- Hold a note while the cycling envelope moves speech formants and the filtered random LFO changes Word and pulls the low-pass cutoff downward. These saved routes couple changing syllables with changing brightness. [[Microfreak/UG/06 Dig Osc/03 Types/11 Speech]]
+		- Expression raises filter resonance and the Arp/Seq Rate assignment. The rate route affects note repetition when the arpeggiator or sequencer is running; its presence alone does not establish that either was active in a performance. [[Microfreak/UG/05 Connections/02 Matrix and Encoder/01 Sources and Destinations]]
+		- The October 25 capture establishes the saved factory baseline. Later knob movements, transport state and the global pressure-or-velocity choice remain unobserved by this export.
 	- ## Evidence and interpretation
 		- Values describe saved base settings before modulation. Controls use normalized 0…1 values unless a stored choice code is shown; they are not OLED percentages, hertz or milliseconds.
 		- The [saved-parameter inspector](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/PARAMETERS.md) preserves the original fields. Oscillator interpretation assumes the documented firmware 5 layout; firmware is not detected from the export.

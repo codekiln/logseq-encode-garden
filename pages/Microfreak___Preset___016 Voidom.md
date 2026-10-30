@@ -14,7 +14,8 @@ preset-synth-file:: [Voidom — October 25 slot 16 capture](https://s3.us-east-0
 - # Notes
 	- Speech patch with stepped formants and word selection, plus strong expression control of filter brightness.
 	- ## Saved export and provenance
-		- Saved export: September 28, 2026 MIDI Control Center user-bank archive, computer-bank slot 105, file `105-09282026 6h14-A105.mbp`. The computer-bank slot differs from this page’s observed device slot.
+		- Saved export: read from the device’s slot 16 over USB on October 25, 2026 with `mise run microfreak:download --slot 16`. Two consecutive reads returned the same file, with SHA-256 `ef9b2913965642d96dcea1761a09b26a5b216ee675a8df9204aaf5122ddf98ae`. See [[Microfreak/Preset/016 Voidom/Asset/Device-Read-2026-10-25/bin]].
+		- Its parameter payload matches the September 28, 2026 MIDI Control Center user-bank archive, computer-bank slot 105, file `105-09282026 6h14-A105.mbp`. The archive and the device capture have different file envelopes but the same parameter payload, SHA-256 `20c1d565dc198f0c3c9ee12981f2a7982aa56ace5c01f4c6489f282a7ec3d1c9`.
 		- The parameter payload matches Factory 1.1, 2.1, 3.0 and 6.0. This is an archived factory-equivalent baseline; it does not establish the instrument’s saved or unsaved state during a later session.
 		- The Factory 1.0 variant has a different pressure-to-cutoff route and is not the same payload.
 	- ## Oscillator

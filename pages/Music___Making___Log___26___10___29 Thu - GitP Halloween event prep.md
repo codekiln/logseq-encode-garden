@@ -1,5 +1,6 @@
 - [[2026-10-29 Thu]]
 	- For a halloween party - dressing the bit!
+	- [[GitP/A/Session/26/10/29-Thu]]
 	- ## [[Ghost Gardener]]
 	  id:: 6ae34fbc-bdcc-4d5c-891c-27ee3159d8a3
 		- DONE make a list of the top 25 [[Microfreak/Preset]] ideas for a halloween party - spooky sounds, etc.
