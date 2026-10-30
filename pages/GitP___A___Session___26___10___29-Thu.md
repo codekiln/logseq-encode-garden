@@ -33,6 +33,7 @@ date-created:: [[2026-10-29 Thu]]
 		- The MIDI retains the Launchpad-to-MicroFreak and MicroFreak-to-Launchpad input streams, including note pressure, pitch bend and controller changes. Audio loops can continue while the captured input is quiet, so the MIDI describes the playing and control gestures rather than every repeated sound in the mix.
 		- The MIDI contains no preset-program, bank-selection or oscillator-type messages. The preset order comes from the performance account; the chapter boundaries follow captures and gestures rather than verified preset switches. [[Microfreak/UG/21 Appendix D - CC Values]] gives the controller names.
 	- ## Chapters
+		- The performance combines loops from the Ableton Live audio tracks MF Layer A, MF Layer B and MF Layer C; the chapter labels use those track names.
 		- ### 00:00 Opening voices
 			- Long low notes establish the opening material. The Launchpad notes mostly last several seconds, and no knob changes are captured in this passage.
 		- ### 03:07 New layer B take
