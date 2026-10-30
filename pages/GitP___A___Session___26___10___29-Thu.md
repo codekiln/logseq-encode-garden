@@ -38,7 +38,7 @@ date-created:: [[2026-10-29 Thu]]
 			- The MIDI contains no preset-program, bank-selection or oscillator-type messages. The preset order comes from the performance account; the chapter boundaries follow captures and gestures rather than verified preset switches. [[Microfreak/UG/21 Appendix D - CC Values]] gives the controller names.
 	- ## Chapters
 		- ### 00:00 enter [[Microfreak/Preset/016 Voidom]]
-			- ### tentative invitation
+			- ### tentative invocation
 				- Low, warbled establishment. At this point in time, I was mostly.
 			- ### 03:07 second layer
 				- layer B enters while layer A loops.
