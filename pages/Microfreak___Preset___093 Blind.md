@@ -40,6 +40,10 @@ preset-synth-file-sha256:: 8cc204cc52b276aaf7c0cac90686c3b807203b4c1fca8a8898ab0
 		- All other saved matrix amounts are zero.
 	- ## Voice and keyboard
 		- [Paraphonic]([[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button]]) mode: on.
+	- ## Performance and session context
+		- Play different keys to change both pitch and the Speech Word selection: KEY/ARP has a full positive route to Word, with an additional triangle-LFO route moving it. The immediate attack, zero sustain and long decay give each note a decaying spoken gesture. [[Microfreak/UG/06 Dig Osc/03 Types/11 Speech]]
+		- Expression raises Cycling Envelope Amount and shortens its Rise setting, strengthening the saved cycling-envelope pitch motion and bringing its rise forward. The PRESSURE row follows the global pressure-or-velocity setting; that choice is not captured in the preset. [[Microfreak/UG/05 Connections/02 Matrix and Encoder/01 Sources and Destinations]]
+		- The October 25 factory-equivalent capture describes the starting sound. A later recording or MIDI capture is needed to identify the words played, knob edits and expression used during a session.
 	- ## Evidence and interpretation
 		- Values describe saved base settings before modulation. Controls use normalized 0…1 values unless a stored choice code is shown; they are not OLED percentages, hertz or milliseconds.
 		- The [saved-parameter inspector](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/PARAMETERS.md) preserves the original fields. Oscillator interpretation assumes the documented firmware 5 layout; firmware is not detected from the export.

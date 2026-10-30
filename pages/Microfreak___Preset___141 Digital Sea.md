@@ -37,6 +37,10 @@ preset-synth-file-sha256:: 318aa928549b305ddb080a78fa27c3d7b2a8d5f6b7b9198cc217a
 		- All other saved matrix amounts are zero.
 	- ## Voice and keyboard
 		- [Paraphonic]([[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button]]) mode: off.
+	- ## Performance and session context
+		- Hold a note and let the slow main-envelope attack bring the noise in. With Shape saved at zero, the Noise model starts from noise alone; Wave selects the noise character and Timbre applies sample-rate reduction. [[Microfreak/UG/06 Dig Osc/03 Types/13 Noise]]
+		- The Cycling Envelope moves noise Wave, Timbre and band-pass cutoff together. The slow filtered random LFO varies the envelope Rise and Fall settings, so the saved modulation changes the pace of those sweeps. The matrix has no nonzero pressure or keyboard modulation routes. [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope]]
+		- The October 25 capture establishes this factory-equivalent baseline. It cannot establish the instrument’s later unsaved edits or the exact gestures in a recorded passage.
 	- ## Evidence and interpretation
 		- Values describe saved base settings before modulation. Controls use normalized 0…1 values unless a stored choice code is shown; they are not OLED percentages, hertz or milliseconds.
 		- The [saved-parameter inspector](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/PARAMETERS.md) preserves the original fields. Oscillator interpretation assumes the documented firmware 5 layout; firmware is not detected from the export.

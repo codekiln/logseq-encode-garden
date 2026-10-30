@@ -1,0 +1,27 @@
+schema: '2.0'
+stages:
+  mp3-GitP___A___Session___26___10___29-Thu___Asset___Audio___Halloween:
+    cmd: python mise-tasks/asset/lib/assets.py _prepare 
+      assets/.remote/GitP___A___Session___26___10___29-Thu___Asset___Audio___Halloween.wav
+      assets/.remote/GitP___A___Session___26___10___29-Thu___Asset___Audio___Halloween.mp3
+    deps:
+    - path: 
+        assets/.remote/GitP___A___Session___26___10___29-Thu___Asset___Audio___Halloween.wav
+      hash: md5
+      md5: 61c70d09dedb9b036d5909c6fa09c58a
+      size: 806112044
+    - path: mise-tasks/asset/lib/assets.py
+      hash: md5
+      md5: 4aa76ec52619c40894b3be6193e94ddf
+      size: 5980
+    - path: mise-tasks/gitpa/media/prepare
+      hash: md5
+      md5: b2ca0141f388d94eca4c4ca02f0b6121
+      size: 802
+      isexec: true
+    outs:
+    - path: 
+        assets/.remote/GitP___A___Session___26___10___29-Thu___Asset___Audio___Halloween.mp3
+      hash: md5
+      md5: f2b64c50b17980e4935b7b49adc44678
+      size: 67177786
