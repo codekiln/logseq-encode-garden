@@ -3,5 +3,8 @@ up:: [[Zoom H5/UG]]
 prev:: [[Zoom H5/UG/06 Display]]
 next:: [[Zoom H5/UG/08 Recording]]
 - # Preparations
-	- Power, SD card, date and time, battery type (alkaline or NiMH).
-	- [Read in the official manual](https://zoomcorp.com/media/documents/E_H5_v2.pdf#page=12)
+	- {{embed [[Zoom H5/UG/07 Prep/01 Power]]}}
+	- {{embed [[Zoom H5/UG/07 Prep/02 SD Card]]}}
+	- {{embed [[Zoom H5/UG/07 Prep/03 Power On Off]]}}
+	- {{embed [[Zoom H5/UG/07 Prep/04 Date and Time]]}}
+	- {{embed [[Zoom H5/UG/07 Prep/05 Battery Type]]}}

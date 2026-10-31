@@ -2,5 +2,51 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]]
 up:: [[Zoom H5/UG]]
 next:: [[Zoom H5/UG/02 Introduction]]
 - # Safety and usage precautions
-	- Handling and power precautions.
-	- [Read in the official manual](https://zoomcorp.com/media/documents/E_H5_v2.pdf#page=2)
+	- ## Warnings
+		- Ignoring these could cause serious injury or death.
+		- ### AC adapter
+			- Use only a ZOOM AD-17 AC adapter with the H5.
+			- Do not exceed the ratings of outlets or other electrical wiring. Do not use a power supply other than AC 100V.
+			- In a country or region with a different voltage, ask a shop that carries ZOOM products for the right AC adapter before use.
+		- ### Batteries
+			- Use two ordinary 1.5 V AA batteries, alkaline or nickel-metal hydride (NiMH).
+			- Read the battery warning labels carefully.
+			- Keep the battery compartment cover closed while using the unit.
+		- ### Alterations
+			- Do not open the case or modify the product.
+	- ## Precautions
+		- Ignoring these could cause injury or damage to the equipment.
+		- ### Product handling
+			- Do not drop, bump or apply excessive force to the unit.
+			- Keep foreign objects and liquids out of the unit.
+		- ### Operating environment
+			- Avoid extremely high or low temperatures, and heat sources such as heaters and stoves.
+			- Avoid very high humidity and places where water could splash on the unit.
+			- Avoid places with frequent vibration, or with much dust or sand.
+		- ### AC adapter handling
+			- Hold the plug, not the cable, when unplugging the adapter from an outlet.
+			- Unplug it during lightning storms and when the unit will not be used for a long time.
+		- ### Battery handling
+			- Install batteries with + and − facing the way the compartment shows.
+			- Use a specified battery type. Do not mix new and old batteries, or different brands or types.
+			- Remove the batteries when the unit will not be used for a long time.
+			- If a battery leaks, wipe the battery compartment and terminals carefully to remove all residue.
+		- ### Mics
+			- Turn the power off before connecting a mic, and do not force it on.
+		- ### Cables and jacks
+			- Turn the power off on all equipment before connecting any cables.
+			- Disconnect all cables and the AC adapter before moving the unit.
+		- ### Volume
+			- Do not listen at a loud volume for a long time.
+	- ## Usage precautions
+		- ### Interference with other equipment
+			- The H5 is designed to limit its own electromagnetic emissions and to resist outside interference. Equipment that is very sensitive to interference, or that emits strong electromagnetic waves, can still cause problems when placed nearby. If this happens, move the H5 and the other device farther apart.
+			- As with any digitally controlled device, electromagnetic interference can cause malfunctions, corrupt or destroy data, or cause other unexpected trouble.
+		- ### Cleaning
+			- Clean the exterior with a soft cloth. If needed, use a damp cloth that has been wrung out well.
+			- Never use abrasive cleansers, wax, or solvents such as alcohol, benzene or paint thinner.
+		- ### Breakdown and malfunction
+			- If the unit breaks or malfunctions, disconnect the AC adapter at once, turn the power off and disconnect other cables.
+			- Contact the store where you bought it or ZOOM service. Give the product model, serial number and symptoms, along with your name, address and telephone number.
+	- ## Trademarks and copyright
+		- Windows, Mac OS, iPad and the SD and SDHC logos are trademarks of their owners. MP3 (MPEG Layer-3) compression is licensed from Fraunhofer IIS and Sisvel SpA. Recording copyrighted sources such as CDs, records, tapes, live performances, video works and broadcasts for anything other than personal use, without the copyright holder's permission, is prohibited by law. Zoom Corporation assumes no responsibility for copyright infringement.

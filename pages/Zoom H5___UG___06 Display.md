@@ -3,5 +3,63 @@ up:: [[Zoom H5/UG]]
 prev:: [[Zoom H5/UG/05 Inputs]]
 next:: [[Zoom H5/UG/07 Prep]]
 - # Display overview
-	- Indicators on the Home/Recording and Playback screens.
-	- [Read in the official manual](https://zoomcorp.com/media/documents/E_H5_v2.pdf#page=10)
+	- ## Home/Recording screen
+		- ### MULTI FILE mode
+			- Home/Recording screen in MULTI FILE mode
+				- ![01 Home screen, MULTI FILE mode](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___06%20Display___Asset___01-Home-screen-MULTI-FILE.png)
+			- Top row
+				- Status icon — the recorder's state.
+					- `SD` — stopped
+					- Solid round icon — recording
+					- Two bars — paused
+				- Counter — the remaining recordable time. See [[Zoom H5/UG/13 Settings/06 Counter/01 Recording]].
+				- Input capsule name — the mic capsule connected to the L/R inputs, such as `XY5`.
+				- Backup recording icon — appears when backup recording is on. See [[Zoom H5/UG/08 Recording/12 Backup Rec]].
+				- Battery charge indicator — three bars when full, fewer as the charge drops, and an X when empty.
+			- Second row
+				- Folder name, such as `FOLDER01`.
+				- Project name — after pressing **PLAY/PAUSE**, the project playing; while recording, the project being recorded.
+			- Meters
+				- Track L/R and Track 1/2 — one level meter per input, showing the recording input level on a scale from −48 to 0 dB.
+				- Clip indicator — at the right end of each meter; marks a track whose signal has clipped.
+				- Icons to the left of each track pair show the input settings in use:
+					- LO CUT — the low cut filter is on. See [[Zoom H5/UG/13 Settings/01 Low Cut]].
+					- COMP/LIMITER — the compressor or limiter is on. See [[Zoom H5/UG/13 Settings/02 Comp Limiter]].
+					- `MS` — the MS stereo matrix is on. See [[Zoom H5/UG/12 Tools/06 MS to Stereo]].
+			- Bottom row
+				- Recording format, such as `WAV44.1/16`. See [[Zoom H5/UG/12 Tools/08 Rec Format]].
+					- When the H5 is used as an audio interface, this shows the computer or iPad setting instead.
+				- Phantom power voltage and the inputs it feeds, such as `48V:In1/2`. See [[Zoom H5/UG/13 Settings/03 Phantom Power]].
+				- PAD setting and the inputs it affects, such as `-20dB:In1/2`. See [[Zoom H5/UG/13 Settings/05 PAD]].
+		- ### STEREO FILE mode
+			- Home/Recording screen in STEREO FILE mode
+				- ![02 Home screen, STEREO FILE mode](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___06%20Display___Asset___02-Home-screen-STEREO-FILE.png)
+			- The screen shows the same elements as MULTI FILE mode, with a single stereo meter.
+			- The name field shows a file name with its extension, such as `ZOOM0001.WAV`. After pressing **PLAY/PAUSE**, it shows the file playing; while recording, the file being recorded.
+	- ## Playback screen
+		- ### MULTI FILE mode
+			- Playback screen in MULTI FILE mode
+				- ![03 Playback screen, MULTI FILE mode](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___06%20Display___Asset___03-Playback-screen-MULTI-FILE.png)
+			- Top row
+				- Status icon — the playback state.
+					- ► — playing
+					- Two bars — paused
+				- Counter — the elapsed or remaining playback time. See [[Zoom H5/UG/13 Settings/06 Counter/02 Playback]].
+				- Input capsule name — the mic capsule connected to the L/R inputs.
+				- Battery charge indicator.
+			- Second row
+				- Folder name and the name of the project playing.
+			- Meters
+				- Stereo track — a pair of meters, `L` and `R`.
+				- Mono track — one meter per track, `1` and `2`.
+				- Level meter — the playback level of each track.
+				- Clip indicator — at the right end of each meter.
+			- Bottom row
+				- Playback format, such as `WAV44.1/16`.
+				- Playback speed, such as `SPEED:100%`. See [[Zoom H5/UG/09 Playback/05 Speed]].
+				- Key control, such as `KEY:±0`. See [[Zoom H5/UG/09 Playback/04 Pitch]].
+				- A-B repeat. See [[Zoom H5/UG/09 Playback/06 AB Repeat]].
+		- ### STEREO FILE mode
+			- Playback screen in STEREO FILE mode
+				- ![04 Playback screen, STEREO FILE mode](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___06%20Display___Asset___04-Playback-screen-STEREO-FILE.png)
+			- The screen shows the same elements as MULTI FILE mode, with a single stereo meter and the name of the file playing.

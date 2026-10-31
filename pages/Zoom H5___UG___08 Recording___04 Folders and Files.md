@@ -1,0 +1,52 @@
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
+up:: [[Zoom H5/UG/08 Recording]]
+prev:: [[Zoom H5/UG/08 Recording/03 Select Mode]]
+next:: [[Zoom H5/UG/08 Recording/05 Inputs and Levels]]
+- # Folder and file structure on the H5
+	- Recording creates folders and files on the SD card in a fixed layout.
+	- Folders and files on the SD card
+		- ![01 Folder and file structure](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___08%20Recording___04%20Folders%20and%20Files___Asset___01-Folder-and-file-structure.png)
+	- ## Folders
+		- The card root holds a `MULTI` folder for MULTI FILE mode and a `STEREO` folder for STEREO FILE mode.
+		- Each of these holds ten folders, `FOLDER01` to `FOLDER10`. New recordings go to the selected one: [[Zoom H5/UG/08 Recording/07 Save Location]].
+	- ## MULTI FILE projects
+		- Each recording creates a new project folder, named `ZOOM0001` to `ZOOM9999`.
+		- A project folder holds one audio file per recorded track and a project setting file (`.hprj`). The setting file takes the project's name.
+		- Examples:
+			- Folder `ZOOM0002`, Inputs 1/2 recorded as mono, no backup recording
+				- `ZOOM0002_TrLR.WAV` — stereo file from the L/R inputs
+				- `ZOOM0002_Tr1.WAV` — mono file from Input 1
+				- `ZOOM0002_Tr2.WAV` — mono file from Input 2
+				- `ZOOM0002.hprj` — project setting file
+			- Folder `ZOOM0003`, project name `DualStereo`, Inputs 1/2 stereo-linked, with backup recording
+				- `ZOOM0003_TrLR.WAV` — stereo file from the L/R inputs
+				- `ZOOM0003_Tr12.WAV` — stereo file from the linked Inputs 1/2
+				- `ZOOM0003_TrLR_BU.WAV` — backup of the L/R inputs: [[Zoom H5/UG/08 Recording/12 Backup Rec]]
+				- `DualStereo.hprj` — setting file named after the project
+			- Folder `ZOOM0004`, project name `140531-163015`, with a voice memo
+				- `ZOOM0004_TrLR.WAV` — stereo file from the L/R inputs
+				- `ZOOM0004_VM.MP3` — voice memo: [[Zoom H5/UG/10 Project and File Editing/12 Voice Memos]]
+				- `140531-163015.hprj` — the project name when project naming is set to `DATE`: [[Zoom H5/UG/12 Tools/10 Naming]]
+			- Folder `ZOOM0005`, project name `LongRecording`, a recording larger than 2 GB
+				- `ZOOM0005_TrLR-0001.WAV` — first file
+				- `ZOOM0005_TrLR-0002.WAV` — second file, started when the first reached 2 GB
+				- `LongRecording.hprj`
+			- Folder `ZOOM0006`, with an added recording and a mixdown
+				- `ZOOM0006_TrLR.WAV` — first stereo file, recorded to the L/R track
+				- `ZOOM0006_Tr12-01.WAV` — stereo file added later on tracks 1/2: [[Zoom H5/UG/08 Recording/13 Overdubbing]]
+				- `ZOOM0006_ST001.WAV` — stereo file made by mixdown: [[Zoom H5/UG/10 Project and File Editing/04 Mixdown]]
+				- `ZOOM0006.hprj`
+	- ## STEREO FILE files
+		- Each recording is saved as a file directly in the selected folder.
+		- Examples:
+			- `FOLDER01`
+				- `ZOOM0001.WAV` — stereo file from the L/R inputs
+				- `ZOOM0002.WAV` — stereo file from Inputs 1/2
+			- `FOLDER02`
+				- `ZOOM0001.WAV` — stereo file from the L/R inputs
+				- `ZOOM0001_BU.WAV` — backup of `ZOOM0001.WAV`
+				- `ZOOM0002_MN.WAV` — stereo WAV of a mono mix of Inputs 1/2: [[Zoom H5/UG/12 Tools/07 Mono Mix]]
+			- `FOLDER03`
+				- `140101-120000.MP3` and `140101-120500.MP3` — MP3 files named with file naming set to `DATE`
+			- `FOLDER04`
+				- `ZOOM0001.WAV`, `ZOOM0002.WAV`, `ZOOM0003.WAV` — first, second and third files of one recording that grew past 2 GB

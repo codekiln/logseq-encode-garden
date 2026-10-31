@@ -3,5 +3,6 @@ up:: [[Zoom H5/UG]]
 prev:: [[Zoom H5/UG/13 Settings]]
 next:: [[Zoom H5/UG/15 Appendices]]
 - # Other functions
-	- Firmware update, SD cards from older H series recorders, remote control.
-	- [Read in the official manual](https://zoomcorp.com/media/documents/E_H5_v2.pdf#page=110)
+	- {{embed [[Zoom H5/UG/14 Other Functions/01 Firmware Update]]}}
+	- {{embed [[Zoom H5/UG/14 Other Functions/02 Older SD Cards]]}}
+	- {{embed [[Zoom H5/UG/14 Other Functions/03 Remote Control]]}}
