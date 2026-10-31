@@ -1,0 +1,32 @@
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
+up:: [[Zoom H5/UG/15 Appendices]]
+next:: [[Zoom H5/UG/15 Appendices/02 Specs]]
+- # Troubleshooting
+	- If the H5 does not seem to work properly, check these points first.
+	- ## Recording and playback trouble
+		- ### No sound, or output is very quiet
+			- Check the connections to your monitoring system and its volume setting.
+			- Check that the H5's volume is not too low: [[Zoom H5/UG/09 Playback/01 Basic Playback]].
+		- ### A connected device or mic is silent or very quiet
+			- With the included XY mic, check that the mic is pointed in a suitable direction.
+			- Check the input level setting: [[Zoom H5/UG/08 Recording/05 Inputs and Levels]].
+			- With a CD player or other device on an input jack, try raising that device's output level.
+			- Check the input signal monitoring setting: [[Zoom H5/UG/12 Tools/03 Monitor Mix]].
+			- Check the plug-in power setting: [[Zoom H5/UG/13 Settings/04 Plug-in Power]].
+			- Check the PAD setting: [[Zoom H5/UG/13 Settings/05 PAD]].
+		- ### Recording is not possible
+			- Check that a track button is lit red.
+			- Check that the SD card has free space: [[Zoom H5/UG/13 Settings/11 SD Space]].
+			- Check that the SD card is loaded correctly in the card slot.
+			- If `Card Protected` appears, the SD card's write protection is on. Slide the card's lock switch to turn it off.
+			- If `Hold` appears, the hold function is on. Turn it off: [[Zoom H5/UG/07 Prep/03 Power On Off]].
+		- ### Recorded sound is silent or very quiet
+			- Check that the volume levels of the L/R and 1/2 tracks are not turned down: [[Zoom H5/UG/09 Playback/07 Mixing Projects]].
+			- Check that the track buttons are lit green during playback.
+		- ### Mixdown is not possible (MULTI FILE mode)
+			- Check that the volume levels of the L/R and 1/2 tracks are not turned down: [[Zoom H5/UG/09 Playback/07 Mixing Projects]].
+			- Check that the SD card has free space: [[Zoom H5/UG/13 Settings/11 SD Space]].
+	- ## Other trouble
+		- ### A computer does not recognize the H5 over USB
+			- Check that the computer's operating system is compatible: [[Zoom H5/UG/11 USB/01 Card Reader]].
+			- A computer recognizes the H5 only after an operation mode is selected on the H5, either `SD CARD READER` or `AUDIO INTERFACE`: [[Zoom H5/UG/11 USB/01 Card Reader]].

@@ -1,0 +1,3 @@
+logseq-entity:: [[Logseq/Entity/Asset/B2]]
+- # 01 Mono mix screen
+	- ![01 Mono mix screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___12%20Tools___07%20Mono%20Mix___Asset___01-Mono-mix-screen.png)

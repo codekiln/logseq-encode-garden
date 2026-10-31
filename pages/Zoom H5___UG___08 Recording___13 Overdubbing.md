@@ -1,0 +1,45 @@
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
+up:: [[Zoom H5/UG/08 Recording]]
+prev:: [[Zoom H5/UG/08 Recording/12 Backup Rec]]
+- # Overdubbing
+	- Overdubbing works only in MULTI FILE mode, with 44.1 kHz or 48 kHz WAV formats.
+	- New recordings can be added to a project that has already been recorded.
+	- ## Recording an overdub
+		- 1. Press **MENU**, then use the scroll button to select `PROJECT`.
+		- 2. Select the project to overdub, then press the scroll button.
+			- Only projects recorded in MULTI FILE mode can be overdubbed.
+		- 3. Select `MIXER/OVERDUB > MIXER/OVERDUB`.
+			- The track button indicators light green for tracks that already hold recordings and stay unlit for empty tracks.
+			- MIXER/OVERDUB screen: the cursor marks the selected track, and the icons at the left show its setting values
+				- ![01 Mixer overdub screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___08%20Recording___13%20Overdubbing___Asset___01-Mixer-overdub-screen.png)
+		- 4. Press the track button of the track to overdub. Its indicator lights red, and that track's input can be monitored.
+			- The Input 1/2 stereo link can also be changed here: [[Zoom H5/UG/08 Recording/05 Inputs and Levels]].
+		- 5. Turn the input volume knob to adjust the input level.
+		- 6. To hear an existing track while overdubbing, press its track button so its indicator lights green.
+			- Each press steps the indicator through red → green → unlit.
+			- Press **PLAY/PAUSE** to hear the green tracks play back along with the input of the track chosen in step 4. Use this to rehearse and to check the input level.
+			- The volume and panning of the tracks that play back can be adjusted.
+		- 7. Press **REC**. Overdubbing on the track chosen in step 4 starts.
+			- > [[Note/Info]] `AUTO REC` and `PRE REC` cannot be used with overdubbing.
+			- > [[Note/Info]] While the MIXER/OVERDUB screen is in use, the project's `PLAYBACK SPEED` and `KEY CONTROL` settings are disabled.
+		- 8. Press **STOP** to stop.
+			- The overdubbed track is no longer record-ready, and its indicator lights green.
+			- An overdub never overwrites the file already on a track. It creates a new file named after the track with a two-digit take number, such as `ZOOM0001_TrLR-01.WAV`. Any file can later be assigned to any track.
+			- An overdub on track 1 adds a file to the project folder
+				- ![02 Overdub file added](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___08%20Recording___13%20Overdubbing___Asset___02-Overdub-file-added.png)
+		- 9. Press **PLAY/PAUSE** to check the recording. Tracks with green indicators play back.
+			- Mixdown combines overdubbed recordings into one stereo file: [[Zoom H5/UG/10 Project and File Editing/04 Mixdown]].
+	- ## Assigning files to tracks
+		- 1. On the MIXER/OVERDUB screen, use the scroll button to select the track, then press the scroll button.
+		- 2. Select `FILE`, then press the scroll button.
+			- Track settings screen, showing the track name and the name of the assigned file
+				- ![03 Track settings screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___08%20Recording___13%20Overdubbing___Asset___03-Track-settings-screen.png)
+		- 3. Select a WAV file from the same project folder, then press the scroll button.
+			- **MENU** cancels the assignment.
+			- Select `NONE` to remove the assigned file from the track.
+			- > [[Note/Info]] A stereo track accepts only stereo files, and a mono track accepts only mono files.
+			- > [[Note/Info]] Files recorded in MS-RAW mode cannot be assigned to tracks 1/2.
+			- Playing back a mixed-down file while overdubbing new tracks lets recordings be layered again and again: [[Zoom H5/UG/10 Project and File Editing/04 Mixdown]].
+	- ## Ending overdubbing
+		- Press **MENU** to end overdubbing.
+		- From then on, the files assigned to the tracks are used when the project is played back or edited.

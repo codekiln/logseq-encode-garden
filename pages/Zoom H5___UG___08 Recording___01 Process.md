@@ -1,0 +1,44 @@
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
+up:: [[Zoom H5/UG/08 Recording]]
+next:: [[Zoom H5/UG/08 Recording/02 Mode Overview]]
+- # Recording process
+	- A recording session has six stages: connect, turn the power on, prepare, record, play back and check, then overdub and edit.
+	- In MULTI FILE mode the H5 handles recording and playback data as projects. In STEREO FILE mode it handles the data as individual files.
+	- ## Connect
+		- Attach the XY mic: [[Zoom H5/UG/04 Mics]].
+		- Plug mics, instruments and other equipment into **INPUTS 1/2**: [[Zoom H5/UG/05 Inputs]].
+	- ## Turn the power on
+		- [[Zoom H5/UG/07 Prep/03 Power On Off]]
+	- ## Prepare to record
+		- 1. Set the recording mode: [[Zoom H5/UG/08 Recording/03 Select Mode]].
+			- Choose MULTI FILE or STEREO FILE mode. The two modes record different file types and formats.
+			- Other settings to make at this stage include:
+				- Automatic recording — [[Zoom H5/UG/08 Recording/08 Auto Rec]]
+				- Pre-recording — [[Zoom H5/UG/08 Recording/09 Pre-Rec]]
+				- Backup recording — [[Zoom H5/UG/08 Recording/12 Backup Rec]]
+				- Low cut — [[Zoom H5/UG/13 Settings/01 Low Cut]]
+				- Compressor/limiter — [[Zoom H5/UG/13 Settings/02 Comp Limiter]]
+				- Metronome — [[Zoom H5/UG/12 Tools/02 Metronome]]
+		- 2. Select the tracks to record: [[Zoom H5/UG/08 Recording/05 Inputs and Levels]].
+			- Press the track buttons. A track's input can be monitored once its indicator lights red.
+			- In MULTI FILE mode, the **1** and **2** track buttons can be linked so Inputs 1 and 2 record as one stereo track (stereo link).
+		- 3. Adjust the input levels.
+			- Turn the input volume knob for each input.
+			- Set each level so the meter stays near −12 dB when the loudest sound comes in.
+			- With an MS capsule, the side mic level can also be adjusted: [[Zoom H5/UG/08 Recording/11 Side Mic Level]].
+	- ## Record
+		- Press **REC** to start recording, **PLAY/PAUSE** to pause and **STOP** to stop.
+		- Marks can also be added while recording: [[Zoom H5/UG/08 Recording/06 Recording]].
+	- ## Play back and check
+		- Press **PLAY/PAUSE** to start playback and **STOP** to stop it.
+		- Playback settings include:
+			- Marks — [[Zoom H5/UG/09 Playback/01 Basic Playback]]
+			- Playback mode — [[Zoom H5/UG/09 Playback/03 Playback Mode]]
+			- Playback pitch — [[Zoom H5/UG/09 Playback/04 Pitch]]
+			- Playback speed — [[Zoom H5/UG/09 Playback/05 Speed]]
+			- AB repeat — [[Zoom H5/UG/09 Playback/06 AB Repeat]]
+			- Project mixer — [[Zoom H5/UG/09 Playback/07 Mixing Projects]]
+	- ## Overdub and edit
+		- Overdub — [[Zoom H5/UG/08 Recording/13 Overdubbing]]
+		- Mix down to a stereo file — [[Zoom H5/UG/10 Project and File Editing/04 Mixdown]]
+		- Check project and file information — [[Zoom H5/UG/10 Project and File Editing/01 Info]]

@@ -1,0 +1,3 @@
+logseq-entity:: [[Logseq/Entity/Asset/B2]]
+- # 01 Battery type screen
+	- ![01 Battery type screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___07%20Prep___05%20Battery%20Type___Asset___01-Battery-type-screen.png)

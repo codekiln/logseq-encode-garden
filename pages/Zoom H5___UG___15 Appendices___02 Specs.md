@@ -1,0 +1,58 @@
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
+up:: [[Zoom H5/UG/15 Appendices]]
+prev:: [[Zoom H5/UG/15 Appendices/01 Troubleshooting]]
+- # Specifications
+	- ## Recording media
+		- 16 MB–2 GB SD cards, 4 GB–32 GB SDHC cards
+	- ## Inputs
+		- ### L/R inputs
+			- XY mic (XYH-5)
+				- Mic type: directional
+				- Sensitivity: −45 dB, 1 kHz at 1 Pa
+				- Input gain: −∞ to 52 dB
+				- Maximum sound pressure input: 140 dB SPL
+			- MIC/LINE IN stereo mini jack
+				- Input gain: −∞ to 52 dB
+				- Input impedance: 2 kΩ or more
+				- Plug-in power supported
+			- Backup input: L/R input gain −12 dB ([[Zoom H5/UG/08 Recording/12 Backup Rec]])
+		- ### Inputs 1/2
+			- Connectors: XLR/TRS combo jacks (XLR: pin 2 hot; TRS: tip hot)
+			- Input gain (PAD OFF): −∞ to 55 dB
+			- Input gain (PAD ON): −∞ to 35 dB
+			- Input impedance: 1.8 kΩ or more
+			- Maximum allowable input level: +22 dBu (PAD ON)
+			- Phantom power: +12/+24/+48 V, turned on and off separately for Inputs 1 and 2
+			- Equivalent input noise (EIN): −120 dBu or less
+	- ## Outputs
+		- LINE OUT stereo mini jack: rated output level −10 dBm into an output load impedance of 10 kΩ or more
+		- PHONE OUT stereo mini jack: 20 mW + 20 mW into a 32 Ω load
+		- Built-in speaker: 400 mW / 8 Ω mono speaker
+	- ## Recording formats
+		- ### STEREO FILE mode
+			- WAV: 44.1/48/96 kHz, 16/24-bit, stereo; BWF format supported
+			- MP3: 48–320 kbps, 44.1 kHz sampling frequency
+			- Maximum simultaneous recording tracks: 4 (L/R + backup recording)
+		- ### MULTI FILE mode
+			- Supported formats: 44.1/48 kHz, 16/24-bit, mono/stereo; BWF format supported
+			- Maximum simultaneous recording tracks: 6 (L/R + 1/2 + backup recording)
+	- ## Display
+		- LCD (128 × 64) with backlight
+	- ## USB
+		- Mass storage class operation: USB 2.0 High Speed
+		- Audio interface, `MULTI TRACK` mode: USB 2.0 High Speed; 4 in/2 out; 44.1/48 kHz sampling rate; 16/24-bit. Windows needs a driver; Mac OS does not.
+		- Audio interface, `STEREO` mode: USB 2.0 Full Speed; 2 in/2 out; 44.1/48 kHz sampling rate; 16-bit. No driver needed.
+		- Works as an iPad audio interface in `STEREO` mode only.
+		- Can run on USB bus power.
+	- ## Battery life
+		- Approximate continuous recording times on alkaline batteries:
+			- `STEREO FILE` mode, XY mic, 44.1 kHz/16-bit (stereo × 1): about 10 hours
+			- `MULTI FILE` mode, XY mic plus Inputs 1 and 2, 48 kHz/24-bit (stereo × 2): about 5.2 hours
+		- > [[Note/Info]] These times are estimates from ZOOM's own testing method. They can differ greatly depending on operating conditions.
+	- ## Power
+		- 2 AA batteries
+		- AC adapter: DC 5 V 1 A (AD-17)
+		- USB bus power
+	- ## Dimensions
+		- Main unit: 66.8 mm (W) × 135.2 mm (D) × 42.1 mm (H), 176 g
+		- XYH-5: 65.5 mm (W) × 62.2 mm (D) × 41.0 mm (H), 94 g
