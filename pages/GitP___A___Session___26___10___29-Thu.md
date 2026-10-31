@@ -66,10 +66,10 @@ date-created:: [[2026-10-29 Thu]]
 				- Layer A fills in the growl texture with a hooting declaration G3, G3, F3 G3 **Ab4** G3, F3 C3
 				- Layer B still has tentative little calls for attention
 		- ### 14:51 pierced resonance
-			- more of the pseudo middle-eastern vibe continues. a sheik shuffle.
+			- more of the fluty vibe continues.
 			- Another layer C take enters. Filter cutoff and resonance move together around 15:18, followed by cycling-envelope Rise and Amount and the oscillator controls. Filter-envelope Amount, attack, decay and LFO rate change later in the passage. [[Microfreak/UG/07 Filter/01 Modifying Sound/04 Cutoff Frequency]] · [[Microfreak/UG/07 Filter/01 Modifying Sound/05 Resonance]]
 		- #### 16:04 UF Orb whacky ziggurat
-			- Layer A - sheik shuffle
+			- Layer A - fluty vibe
 			- Layer B - Dropped out; silent
 			- Layer C - high reverb footsteps in the mall.
 		- ### 21:26 Layer B develops
