@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+- # What are [[GitHub/Issue]] artifacts?
+	- ## [[AI Answer]]
+		- [[Answer/Official]] from [Using artifacts with issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/using-artifacts-with-issues)
+		- **Short answer:** GitHub issue artifacts are named content attached to an issue, giving plans, research, decisions, reference links, and interactive HTML a durable place alongside the work. Artifacts can be shared by URL, and edits create version history.
+		- The supported formats are:
+			- **Markdown document (`generic`):** research notes, investigation results, or design documents.
+			- **Plan (`plan`):** an implementation plan in Markdown.
+			- **Link (`link`):** a named link to something elsewhere, such as a discussion, prototype, or Slack or Teams thread.
+			- **HTML file (`embedded_html`):** a self-contained HTML page, such as an interactive prototype, visualization, flowchart, or diagram.
+		- **In the issue menu:** “Add link” attaches a named URL, “Create artifact” creates a Markdown document, and “Create HTML artifact” creates an HTML document.
+		- GitHub Actions artifacts are a separate feature: they store files produced by workflow runs. Issue artifacts keep context attached to an issue.
+		- Issue artifacts are in public preview on GitHub.com and GitHub Enterprise Cloud. GitHub displays HTML source first; preview runs user-provided code in a restricted sandbox and may allow it to send content to external sites, so preview only HTML you trust.

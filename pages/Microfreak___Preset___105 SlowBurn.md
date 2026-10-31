@@ -35,6 +35,10 @@ preset-synth-file-sha256:: d228daf9eceb2148088d07c518e6c2109170dd0c4c5fd28dea704
 		- All other saved matrix amounts are zero.
 	- ## Voice and keyboard
 		- [Paraphonic]([[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button]]) mode: on.
+	- ## Performance and session context
+		- Hold notes or chords and leave time between phrases for the near-maximum saved decay/release to trail away. The free triangle LFO moves Wavetable Position, with a much smaller route to Table; the oscillator guide explains how position scans the waveform cycles. [[Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable]]
+		- Expression raises the high-pass cutoff strongly. That removes progressively more low-frequency material, while the high saved resonance emphasizes the cutoff region. The PRESSURE row uses the global pressure-or-velocity choice. [[Microfreak/UG/07 Filter/01 Modifying Sound/03 High Pass Filter]] · [[Microfreak/UG/05 Connections/02 Matrix and Encoder/01 Sources and Destinations]]
+		- The saved Table code identifies a selector position; the export does not preserve or verify the referenced wavetable content. The October 25 capture establishes the saved baseline, and later table selections, knob edits and expression need session evidence.
 	- ## Evidence and interpretation
 		- Values describe saved base settings before modulation. Controls use normalized 0…1 values unless a stored choice code is shown; they are not OLED percentages, hertz or milliseconds.
 		- The [saved-parameter inspector](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/PARAMETERS.md) preserves the original fields. Oscillator interpretation assumes the documented firmware 5 layout; firmware is not detected from the export.

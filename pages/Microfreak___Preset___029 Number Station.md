@@ -35,6 +35,10 @@ preset-synth-file-sha256:: b2f53f47027c077151d3be14f137b4db3a687dc2aaad09ca206e0
 		- All other saved matrix amounts are zero.
 	- ## Voice and keyboard
 		- [Paraphonic]([[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button]]) mode: off.
+	- ## Performance and session context
+		- Hold a note to let the filtered random LFO move the Speech Word selector. The oscillator keeps changing syllables while pitch stays under the keyboard; the Speech guide explains how Type chooses a library and Word scans within it. [[Microfreak/UG/06 Dig Osc/03 Types/11 Speech]]
+		- The saved pressure routes lower the low-pass cutoff and raise resonance together, emphasizing a narrower, more muffled voice as expression increases. The PRESSURE source follows the global pressure-or-velocity setting, which the preset export cannot establish. [[Microfreak/UG/05 Connections/02 Matrix and Encoder/01 Sources and Destinations]]
+		- The October 25 capture establishes this saved factory baseline. Knob changes and the global expression mode during a later performance need the recording or captured MIDI.
 	- ## Evidence and interpretation
 		- Values describe saved base settings before modulation. Controls use normalized 0…1 values unless a stored choice code is shown; they are not OLED percentages, hertz or milliseconds.
 		- The [saved-parameter inspector](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/PARAMETERS.md) preserves the original fields. Oscillator interpretation assumes the documented firmware 5 layout; firmware is not detected from the export.
