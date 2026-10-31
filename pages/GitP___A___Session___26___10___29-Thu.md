@@ -5,12 +5,12 @@ created-by:: [[Person/codekiln]]
 date-created:: [[2026-10-29 Thu]]
 
 - # Hallowed Speaking
-	- The ghost made an appearance here for a fall festival: MicroFreak speech patches give way to swelling pads, unstable tones and filtered noise, with phrases captured and returned as overlapping audio loops.
+	- The ghost made a hot appearance here for a live fall fest. Speech patches caught the vibe, gave way to swelling pads, unstable tones and filtered noise, with phrases captured and returned as overlapping audio loops.
 	- ![Episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___29-Thu___Asset___Audio___Halloween.mp3)
-	- ## Recording
+	- ## Recording and Prep
 	  collapsed:: true
 		- 46:39 · [[GitP/A/Session/26/10/29-Thu/Asset/Audio/Halloween/mp3]] · [Download the MP3](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___29-Thu___Asset___Audio___Halloween.mp3)
-		- Recorded on October 29, 2026 in [[Ableton/Live]] at 120 BPM in 4/4. The mix keeps the recorded layer changes, volume rides, reverb and delay, with a lower master level. The opening wait and silent end are trimmed; the closing fade remains.
+		- Recorded on October 29, 2026 in [[Ableton/Live]] at 120 BPM in 4/4. The mix keeps the recorded layer changes, volume rides, reverb and delay. The opening wait and silent end are trimmed; the closing fade remains.
 		- [[Music/Making/Log/26/10/29 Thu - GitP Halloween event prep]] · [[Music/Making/Log/26/10/29 Thu - GitP Halloween event prep/Discussion/Analysis/Opus/26/10/29/0956 ET MicroFreak presets for a Halloween party]]
 		- ### Presets
 		  collapsed:: true
@@ -38,28 +38,40 @@ date-created:: [[2026-10-29 Thu]]
 			- The MIDI contains no preset-program, bank-selection or oscillator-type messages. The preset order comes from the performance account; the chapter boundaries follow captures and gestures rather than verified preset switches. [[Microfreak/UG/21 Appendix D - CC Values]] gives the controller names.
 	- ## Chapters
 		- ### 00:00 enter [[Microfreak/Preset/016 Voidom]]
-			- ### tentative invocation
-				- Low, warbled establishment. At this point in time, I was mostly.
-			- ### 03:07 second layer
+			- #### tentative invocation
+				- Low, warbled establishment. mostly checking sound.
+			- #### 03:07 secondo strato
 				- layer B enters while layer A loops.
 				- The incoming Launchpad phrases become shorter and reach farther up the keyboard.
-			- ### 04:12 A high note enters
-				- a 2nd theme
-			- ### 05:50 Cycling envelope and speech controls
-				- Cycling-envelope Rise starts moving here, followed by Fall and Amount. Timbre, Shape, Wave and filter cutoff join the exploration. On the Speech presets, the panel controls select the formant or library, shift formants and scan words. [[Microfreak/UG/06 Dig Osc/03 Types/11 Speech]] · [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope]]
-			- ### 06:01 Layer B Double Beeper
+			- #### 04:12 in the high note
+				- a 2nd thing appears above the forest
+			- #### 05:50 exploring cyclical [[Microfreak/UG/06 Dig Osc/03 Types/11 Speech]]
+				- [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope]] Rise starts moving, followed by Fall and Amount.
+				- Further modulations of [[Microfreak/UI/Oscillator/Knob/Timbre]], [[Microfreak/UI/Oscillator/Knob/Shape]] and [[Microfreak/UI/Oscillator/Knob/Wave]]
+					- On the Speech presets, the panel controls select the formant or library, shift formants and scan words
+					- [[Microfreak/UI/Oscillator/Knob/Type/Speech/Type]]
+			- #### 06:01 Layer B - Double Beeper
 				- What is this? not sure. I kind of like it. Still the same preset - could be some kind of double trigger with the launchpad sequencer
-			- ### 08:27 Strange Words Emerge
+			- #### 08:27 Strange Word Emergence
 				- After adjusting the oscillator parameters in  [[Microfreak/UG/06 Dig Osc/03 Types/11 Speech]], different words start to emerge. I think this was mostly caused by [[Microfreak/UI/Oscillator/Knob/Shape]] adjustments.
 		- ### 09:22 enter [[Microfreak/Preset/029 Number Station]]
 			- ### Layer C capture - "8, 6, 1, 2 ..."
 				- A short layer C take is captured here. One low MicroFreak key is held for nearly ten seconds; the earlier loops continue around it.
 		- ### 10:32 enter [[Microfreak/Preset/138 Metallic Talk]]
-			- ### New layer A phrase
-				- It's sort of like a speech-based [[Instrument/Didgeridoo]].
+			- #### New layer A - speech-based [[Instrument/Didgeridoo]].
 				- The new layer A material becomes audible. Incoming notes are much shorter than in the opening, with both the MicroFreak keys and Launchpad active. Main-envelope Attack and cycling-envelope Rise change briefly near 10:43–10:45. [[Microfreak/UG/09 Envelope Gen/03 Envelope Stages]]
-		- ### 14:51 Layer C and filter movement
+			- #### 12:04 the jiggling growls
+				- Layer A begins a rhythmic growling pattern
+			- #### 12:47 lighting the ritual flanger
+				- Layer A fills in the growl texture with a hooting declaration G3, G3, F3 G3 **Ab4** G3, F3 C3
+				- Layer B still has tentative little calls for attention
+		- ### 14:51 pierced resonance
+			- more of the pseudo middle-eastern vibe continues. a sheik shuffle.
 			- Another layer C take enters. Filter cutoff and resonance move together around 15:18, followed by cycling-envelope Rise and Amount and the oscillator controls. Filter-envelope Amount, attack, decay and LFO rate change later in the passage. [[Microfreak/UG/07 Filter/01 Modifying Sound/04 Cutoff Frequency]] · [[Microfreak/UG/07 Filter/01 Modifying Sound/05 Resonance]]
+		- #### 16:04 UF Orb whacky ziggurat
+			- Layer A - sheik shuffle
+			- Layer B - Dropped out; silent
+			- Layer C - high reverb footsteps in the mall.
 		- ### 21:26 Layer B develops
 			- Sustained Launchpad notes overlap shorter MicroFreak-key gestures and pitch bends. Wave, Shape and cycling-envelope Amount change first. Around 24:32 the envelope Rise, Fall and Hold are reshaped, with cutoff and resonance sweeps soon afterward. [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope]]
 		- ### 26:35 Sustained notes
@@ -74,34 +86,3 @@ date-created:: [[2026-10-29 Thu]]
 			- High, short Launchpad phrases continue over the retained loops. Timbre and Shape change early; Wave, the main-envelope attack and decay, filter-envelope Amount and free LFO rate follow. Pitch bends become prominent again before the close. [[Microfreak/UG/08 LFO/02 LFO Rate]]
 		- ### 46:19 Closing fade
 			- The layers recede through the recorded volume fade, leaving the effect tails to settle.
-	- ## Live Set
-		- Episode mix: `~/Documents/ableton/GitP/26.10.29-spooky Project/26.10.29-spooky-episode.als`.
-		- Original performance: `~/Documents/ableton/GitP/26.10.29-spooky Project/26.10.29-spooky.als`.
-		- Named locators follow the chapter passages. The arrangement loop brace marks the episode bounds; looping is off.
-	- ## Earlier session plan
-	  collapsed:: true
-		- The earlier Pattern A and B plan used a separate Live Set; the Halloween performance is in the spooky project above.
-		- Template: [[GitP/A/Template/Pattern A and B]]
-		- ### Pattern A and B — October 29
-			- #### Intention
-				- Explore live looping with Pattern A and Pattern B while preserving the full performance in Arrangement View. Leave the sound choice open.
-				- Open with a live phrase, capture a loop, develop a contrasting pattern, improvise with both, and leave space for spoken reflection.
-			- #### Live Set
-				- Live Set: `~/Documents/ableton/GitP/26.10.29 Project/26.10.29.als`
-				- [[GitP/A/Template/Pattern A and B]] · [[GitP/mise/Task/ableton/sync]]
-			- Ableton Session
-			  tempo:: 120
-			  intention:: Explore live looping with Pattern A and Pattern B; preserve the full performance in Arrangement View and leave space for spoken reflection. Sound choice remains open.
-				- Locators
-					- Opening
-					  bar:: 1
-					- Pattern A
-					  bar:: 17
-					- Pattern B
-					  bar:: 33
-					- Improvisation
-					  bar:: 49
-					- Reflection
-					  bar:: 65
-			- #### Performance notes
-				- Planned locator positions are starting points. Set new locators during the performance with the yellow pad in Custom Mode 1.
