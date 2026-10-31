@@ -10,6 +10,7 @@ see-also:: [[GitP/House/Back]], [[GitP/How To/Prepare Podcast Metadata]]
 		- ### Episode page and audio
 			- The AI creates the session episode page using [[Logseq/Entity/Podcast/Episode]], linking the music-making log and its project, recording, and other source pointers.
 			- The AI converts the exported WAV to an MP3, uploads it to Backblaze B2 at a stable, readable URL, and verifies that the uploaded file matches the prepared MP3.
+			- Follow the established WAV-to-MP3 workflow and podcast encoding best practices, including an appropriate bitrate, to keep episode files manageable. The longer [[GitP/A/Session/26/10/29-Thu/Asset/Audio/Halloween/mp3]] had trouble loading; its file size is a suspected cause.
 		- ### MicroFreak presets
 			- Every saved preset referenced by the session gets detailed notes upstream, including presets already filed in the garden and sounds used briefly. Header metadata or an empty Notes section is a starting point.
 			- The notes explain the saved export and its provenance, oscillator controls, filter, envelopes, LFO, modulation matrix, and performance context. Supported units and cited sources accompany the settings; unknown conversions and session-time changes remain explicit.
