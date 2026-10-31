@@ -8,13 +8,14 @@ date-created:: [[2026-10-06 Tue]]
 	- A MicroFreak improvisation starting from an initialized patch: chord oscillators, cycling-envelope and LFO modulation, and a turn toward formant sounds. Shimmering textures give way to a gruff emergence, a ballpark organ, and a trippy denouement, with the Launchpad sequencer and MicroFreak arpeggiator along the way.
 	- ![GitP.26.10.06 — episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___06-Tue___Asset___Synth___Full.mp3)
 	- ## Chapters
-		- 02:11.388 — pull back on cutofff
-		- 07:44.587 — shimmering glittering
-		- 11:18.165 — gruff emergence
-		- 12:37.431 — using the launchpad sequencer
-		- 16:26.422 — ballpark organ
-		- 17:19.266 — microfreak arpeggiator
-		- 19:22.569 — trippy denouement
+		- ### 00:00 initialized patch to chords
+		- ### 02:11 pull back on cutoff
+		- ### 07:44 shimmering glittering
+		- ### 11:18 gruff emergence
+		- ### 12:37 using the launchpad sequencer
+		- ### 16:26 ballpark organ
+		- ### 17:19 microfreak arpeggiator
+		- ### 19:22 trippy denouement
 	- ## Session Notes
 		- Started on an [[Microfreak/Preset/Initialized]], swichflipped to [[Microfreak/UG/06 Dig Osc/03 Types/10 Chords]].
 			- Tried to map the cycling envelope to the wave and other parameters. Later, mapped the [[Microfreak/UG/08 LFO]] to those.
