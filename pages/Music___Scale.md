@@ -1,1 +1,25 @@
 alias:: [[Music Scale]], [[Music Scales]]
+
+- # Music Scale
+	- Scale pages follow [[Logseq/Entity/Music/Scale]].
+	- ## Diatonic modes
+		- [[Music/Scale/Major]]
+		- [[Music/Scale/Dorian]]
+		- [[Music/Scale/Phrygian]]
+		- [[Music/Scale/Mixolydian]]
+		- [[Music/Scale/Minor/Natural]]
+	- ## Altered minor
+		- [[Music/Scale/Minor/Harmonic]]
+		- [[Music/Scale/Minor/Melodic]]
+		- [[Music/Scale/Minor/Hungarian]]
+		- [[Music/Scale/Dorian/Ukrainian]]
+	- ## Pentatonic, hexatonic and eight-note
+		- [[Music/Scale/Pentatonic/Major]]
+		- [[Music/Scale/Pentatonic/Minor]]
+		- [[Music/Scale/Hirajoshi]]
+		- [[Music/Scale/Blues]]
+		- [[Music/Scale/Whole Tone]]
+		- [[Music/Scale/Dorian/Bebop]]
+	- ## Hindustani thaats
+		- [[Music/Scale/Marwa]]
+		- [[Music/Scale/Todi]]

@@ -1,0 +1,4 @@
+- # [ChatGPT Enterprise and Edu release notes](https://help.openai.com/en/articles/10128477-chatgpt-enterprise-and-edu-release-notes)
+	- OpenAI's running record of new features, administrative controls, and product updates for [[ChatGPT]] Enterprise and Edu workspaces.
+	- The release notes cover ChatGPT, [[ChatGPT/Work]], [[Codex]], plugins, connected apps, Sites, workspace administration, model access, and usage controls.
+	- The page was updated on 2026-10-28. Recent entries cover the GPT-6.1 Terra rollout, the custom GPT creation cutoff, workspace analytics, personal-workspace migration grace periods, locked chats, administrator-managed sync retirement, Sites administration, and plugin management.

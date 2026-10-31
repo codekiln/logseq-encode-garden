@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Music/Work]]
-creator:: [[Person/John Adams]]
+created-by:: [[Person/John Adams]]
 date-created:: 1978
 logseq-created-time-year:: [[19/7/8]]
 - # Shaker Loops

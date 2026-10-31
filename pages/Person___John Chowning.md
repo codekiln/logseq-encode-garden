@@ -1,4 +1,5 @@
-logseq-entity:: [[Logseq/Entity/Person]], [[Logseq/Entity/Person/Musician]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Tech]], [[Logseq/Entity/Person/Maker/Music/Composition]]
+
 - # John Chowning
 	- ## About
 		- American composer, music researcher, and pioneer of FM sound synthesis.

@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Music/Work]]
-creator:: [[Person/Madonna]]
+created-by:: [[Person/Madonna]]
 date-created:: 1990
 logseq-created-time-year:: [[19/9/0]]
 appears-on:: [[Person/Madonna/Music/Recording/I'm Breathless]]

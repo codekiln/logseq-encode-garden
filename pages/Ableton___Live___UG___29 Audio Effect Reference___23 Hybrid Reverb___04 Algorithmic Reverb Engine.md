@@ -1,0 +1,46 @@
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
+up:: [[Ableton/Live/UG/29 Audio Effect Reference/23 Hybrid Reverb]]
+prev:: [[Ableton/Live/UG/29 Audio Effect Reference/23 Hybrid Reverb/03 Convolution Reverb Engine]]
+next:: [[Ableton/Live/UG/29 Audio Effect Reference/23 Hybrid Reverb/05 EQ Section]]
+- # [29.23.4 Algorithmic Reverb Engine](https://www.ableton.com/en/live-manual/12/live-audio-effect-reference/#algorithmic-reverb-engine)
+	- ![Hybrid Reverb’s Algorithmic Reverb Section](https://ableton-production.imgix.net/live-manual/12/HybridReverbAlgorithmSectionL12.png?auto=&w=320)
+	- The algorithmic engine is built only from digital delay lines, without samples. Its controls sit right of the Blend knob and change with the **Algorithm** chooser.
+	- Algorithms: Dark Hall, Quartz, Shimmer, Tides, Prism. All have:
+		- **Decay** — time for the tail to fall by 60 dB
+		- **Size** — size of the virtual room
+		- **Delay** — extra predelay in ms for this engine
+		- **Freeze** — stops input and makes the decay infinite so the reverb sustains; **Freeze In** keeps adding input to the frozen sound, building it up
+	- ### [29.23.4.1 Dark Hall](https://www.ableton.com/en/live-manual/12/live-audio-effect-reference/#dark-hall)
+		- A smooth, classic hall for medium to long halls.
+		- **Damping** — high-frequency filtering; higher is darker
+		- **Mod** — movement in the tail; more gives chorusing and fewer resonances
+		- **Shape** — from small and resonant to large and diffuse
+		- **Bass X** — crossover for the low end of the tail; **Bass Mult** scales its decay time
+		- Long decays with a very small Size give metallic, gong-like resonances.
+	- ### [29.23.4.2 Quartz](https://www.ableton.com/en/live-manual/12/live-audio-effect-reference/#quartz)
+		- A hall-like reverb with audible echoes in the tail and clear early reflections; suits voices, drums, transient material and echo effects.
+		- **Damping** — high-frequency filtering; higher is darker
+		- **Lo Damp** — low-frequency filtering; higher is brighter
+		- **Mod** — movement in the tail
+		- **Diffusion** — density of the tail
+		- **Distance** — how far away the reflections are; closer is denser, farther spaces the echoes out
+	- ### [29.23.4.3 Shimmer](https://www.ableton.com/en/live-manual/12/live-audio-effect-reference/#shimmer)
+		- Dense diffuse delays with a pitch shifter in the feedback; tails rise or fall in pitch. Low diffusion is a plain delay, high diffusion a lush reverb.
+		- **Damping** — high-frequency filtering
+		- **Mod** — movement in the tail
+		- **Pitch** — pitch shift in the feedback, in semitones
+		- **Diffusion** — density; below 10% gives dub-style delays, good on drums
+		- **Shimmer** — amount of pitch-shifted signal; 100% on melodic material gives harmonies
+		- Here **Size** sets the spacing of echoes on percussive material.
+	- ### [29.23.4.4 Tides](https://www.ableton.com/en/live-manual/12/live-audio-effect-reference/#tides)
+		- A smooth reverb whose output is modulated by a multiband filter, giving rippling bands.
+		- **Damping** — high-frequency filtering
+		- **Wave** — modulation shape from noise (0%) through sine (50%) to square (100%)
+		- **Tide** — strength of the texture
+		- **Phase** — left/right offset; 180° is fully opposite
+		- **Rate** — modulation rate in beat divisions, with triplet, 16th and dotted variations
+	- ### [29.23.4.5 Prism](https://www.ableton.com/en/live-manual/12/live-audio-effect-reference/#prism)
+		- A bright, clearly artificial diffuse reverb based on spectrally flat "velvet" noise. It adds depth without getting in the way, suits short non-linear decays on drums, and gives a clean digital sound on longer decays.
+		- **Low Mult** and **High Mult** — scale the decay of the low and high parts of the tail
+		- **X over** — crossover between those parts
+		- Small Decay and Size give a classic 1980s gated snare reverb.

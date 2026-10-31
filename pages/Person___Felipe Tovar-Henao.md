@@ -1,5 +1,7 @@
-logseq-entity:: [[Logseq/Entity/Person]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition]], [[Logseq/Entity/Person/Maker/Music/Tech]], [[Logseq/Entity/Person/Maker/Art]]
 # **Felipe Tovar-Henao**
+	- ## About
+		- Composer and multimedia artist who built bellplay~, an offline algorithmic audio framework.
 	- #Pic
 		- ![Felipe Tovar-Henao](https://icmc2025.sites.northeastern.edu/files/2025/05/uf_headshot_small_square-221x300.jpg)
 	- **Felipe Tovar-Henao**

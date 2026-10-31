@@ -1,5 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Music/Recording]], [[Logseq/Entity/Music/Session/Performance]] 
 date-created:: [[2026-09-24 Thu]]
+logseq-created-time-year:: [[20/2/6]]
 time-created:: 1845 ET
 
 - # [[GitP/A/Session/26/09/24-Thu]] with Microfreak and Launchpad

@@ -1,4 +1,6 @@
-logseq-entity:: [[Logseq/Entity/Person]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Tech]]
+- ## About
+	- Developer of Max for Live devices, published as Zack's Plugins, and of the Knobbler app for iPad.
 - Website: https://steinkamp.us/
 - GitHub: [zsteinkamp (Zack Steinkamp)](https://github.com/zsteinkamp)
 - Website about Max plugins: [Zack's Plugins](https://plugins.steinkamp.us/about) - https://plugins.steinkamp.us/

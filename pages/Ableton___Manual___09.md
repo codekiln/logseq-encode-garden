@@ -11,3 +11,4 @@ alias:: [[Ableton/Manual/09 Audio Clips Tempo and Warping]]
 	- > Think of a sample as a rubber-band that you want to pin to a (musical time) ruler. In Live, the pins are called Warp Markers. **An [[Ableton/Warp/Marker]]** locks a specific point in the sample to a specific place in the measure. You can use any number of Warp Markers to create an arbitrary mapping of the piece’s inherent rhythm to a musical meter.
 		- > They can then be dragged or moved with the arrow keys to different points in time. Warp Markers can also be deleted by double-clicking them, or by pressing the computer keyboard’s [Backspace] or [Delete] key after selecting them.
 		- ((6794a445-c739-4a43-b0c3-b0fb0ff5d97d))
+- Live 12 manual: [[Ableton/Live/UG/09 Audio Clips Tempo and Warping]]

@@ -57,6 +57,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- **Choose the topic namespace first.** It is the domain or tool the question is about — `Claude Code`, `git`, `LangSmith`, `EdTech/Idea/LearnMark`. Infer it from the question when the human did not name one; ask rather than guess when nothing plausible presents itself.
 		- Keep the question's full wording, punctuation included, as the page title. Normalize trailing `?` for searching only.
 		- The filing is recorded in today's journal like any other graph edit — a new page under `[[Filed]]`, an edited one under `[[Updated]]`, per [[Logseq/Journal]].
+		- Commit the drafted question page and its journal entry by default, unless the human asks to leave them uncommitted.
 	- ## Answering an instance
 		- Filing and answering are one pass: once the page and its journal line exist, research the answer rather than leaving a bare question.
 		- Draw on whatever is at hand — the garden's own pages first, then official documentation, then web search. Prefer a source that can be cited over recollection.

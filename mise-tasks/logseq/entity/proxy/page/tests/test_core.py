@@ -10,6 +10,7 @@ from unittest.mock import patch
 
 LIB = Path(__file__).resolve().parents[1] / 'lib'
 sys.path.insert(0, str(LIB))
+import records
 from core import (SyncError, add_write, apply_plan, build_page_plan, graph_url,
                   parse_properties, recover_transaction, resolve_page, resolve_source)
 
@@ -105,6 +106,41 @@ class PageSyncTests(unittest.TestCase):
         apply_plan(plan)
         props, _ = parse_properties((self.destination / 'pages/Session___Asset.md').read_text())
         self.assertEqual(props['logseq-proxy-url'], graph_url(self.source, 'Session/Asset'))
+
+    def gitpa_definitions(self):
+        (self.source / 'pages/Logseq___Entity___Proxy___Page.md').write_text(
+            'entity-proxy-destination-properties:: public\n- # Proxy Page\n')
+        (self.source / 'pages/Logseq___Entity___Podcast___Episode.md').write_text(
+            'entity-proxy-destination-properties:: podcast-guid, podcast-published-at\n- # Episode\n')
+        (self.source / 'pages/Logseq___Entity___Podcast___Episode___GitP___A.md').write_text(
+            'entity-proxy-source-properties:: public\n- # GitP Alpha Episode\n')
+
+    def test_gitpa_source_controls_publication_and_preserves_release_identity(self):
+        self.gitpa_definitions()
+        membership = ('logseq-entity:: [[Logseq/Entity/Podcast/Episode/GitP/A]], '
+                      '[[Logseq/Entity/Podcast/Episode]]\n')
+        self.source_page.write_text('public:: false\ntags:: [[Source]]\n' + membership + '- body\n')
+        apply_plan(self.plan())
+        target = resolve_page(self.destination, self.page)
+        text = target.read_text().replace('public:: false', 'public:: true').replace('[[Source]]', '[[Local]]')
+        target.write_text('podcast-guid:: stable\npodcast-published-at:: 2026-10-01T00:00:00Z\n' + text)
+        for value in ('false', 'true', None):
+            public = f'public:: {value}\n' if value is not None else ''
+            self.source_page.write_text(public + 'tags:: [[Changed]]\n' + membership + '- body\n')
+            apply_plan(self.plan())
+            props, _ = parse_properties(target.read_text())
+            self.assertEqual(props.get('public'), value)
+            self.assertEqual(props['tags'], '[[Local]]')
+            self.assertEqual(props['podcast-guid'], 'stable')
+            self.assertEqual(props['podcast-published-at'], '2026-10-01T00:00:00Z')
+
+    def test_source_ownership_cannot_override_tags_or_proxy_metadata(self):
+        for key in ('tags', 'logseq-proxy-url', 'logseq-proxy-codeforge-url', 'logseq-proxy-last-sync-date'):
+            with self.subTest(key=key):
+                (self.source / 'pages/Logseq___Entity___Book.md').write_text(
+                    f'entity-proxy-source-properties:: {key}\n- # Book\n')
+                with self.assertRaisesRegex(SyncError, 'protected properties'):
+                    self.plan()
 
     def test_page_collision_and_wrong_proxy_source_have_no_writes(self):
         target = resolve_page(self.destination, self.page)
@@ -286,7 +322,7 @@ class PageSyncTests(unittest.TestCase):
         subprocess.run(['git', '-C', str(repo), 'remote', 'add', 'origin', 'git@github.com:owner/repo.git'], check=True)
         plan = build_page_plan(nested, self.destination, 'Example')
         task_imports.extend_plan(plan)
-        manifest = plan.writes['.logseq-proxy/manifest.json'].decode()
+        manifest = plan.writes[records.page_record_path('Example')].decode()
         self.assertNotIn(str(self.root), manifest)
         record = json.loads(manifest)['imports']['github.com/owner/repo::sub/source::Example']
         self.assertEqual(record['source_graph'], 'sub/source')
@@ -362,12 +398,13 @@ class WorktreeSyncTests(unittest.TestCase):
                 self.assertIn('/blob/codex%2F189-proxy/', props['logseq-proxy-codeforge-url'])
                 self.assertEqual(body, '- branch\n')
                 self.assertIn('echo branch', (target_graph / 'mise-tasks/example').read_text())
-                manifest = plan.writes['.logseq-proxy/manifest.json']
+                manifest = records.encoded(records.load_store(target_graph))
                 self.assertNotIn(str(self.root).encode(), manifest)
                 repeat = self.sync(worktree_graph, target_graph)
                 self.assertTrue(all(data == repeat.expected[path] for path, data in repeat.writes.items()))
                 # A normal re-sync after merge uses the registered graph identity again.
-                manifest = self.sync(source, target_graph).writes['.logseq-proxy/manifest.json']
+                self.sync(source, target_graph)
+                manifest = records.load_store(target_graph)
                 self.commit(destination_worktree)
                 relocation = self.root / ('relocated-' + name)
                 relocation.mkdir()
@@ -377,7 +414,7 @@ class WorktreeSyncTests(unittest.TestCase):
                 relocated_destination = relocation / 'destination/garden'
                 self.git(relocation, 'clone', '-q', '-b', 'codex/dependent', str(dest_repo), str(relocated_destination.parent))
                 relocated = self.sync(relocated_repo / scope, relocated_destination)
-                self.assertEqual(relocated.writes['.logseq-proxy/manifest.json'], manifest)
+                self.assertEqual(records.load_store(relocated_destination), manifest)
                 # Same graph folder name in another repository still cannot claim the page.
                 self.git(relocated_repo, 'remote', 'set-url', 'origin', 'git@github.com:other/repo.git')
                 before = (relocated_destination / 'pages/Example.md').read_bytes()
@@ -412,8 +449,10 @@ class TaskImporterTests(unittest.TestCase):
         (task_dir / 'lib').mkdir(parents=True)
         mapping = {str(source_files / 'sync'): str(source_files / 'sync'),
                    str(source_files / 'lib/core.py'): str(source_files / 'lib/core.py'),
+                   str(source_files / 'lib/records.py'): str(source_files / 'lib/records.py'),
                    str(source_files / 'lib/companions.py'): str(source_files / 'lib/companions.py')}
         shutil.copyfile(LIB / 'core.py', task_dir / 'lib/core.py')
+        shutil.copyfile(LIB / 'records.py', task_dir / 'lib/records.py')
         shutil.copyfile(LIB / 'task_imports.py', task_dir / 'lib/companions.py')
         entrypoint = (LIB.parent / 'sync').read_text()
         (task_dir / 'sync').write_text(entrypoint.replace('task_imports', 'companions'))

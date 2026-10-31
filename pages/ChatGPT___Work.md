@@ -5,3 +5,4 @@ logseq-entity:: [[Logseq/Entity/Term]]
 	- Work organizes collaboration around a goal and a finished result. It can use files and other context to create documents, spreadsheets, presentations, research, and analysis.
 	- OpenAI describes Work as turning a goal, files, and context into useful deliverables. See the [official ChatGPT overview](https://learn.chatgpt.com/).
 	- [[ChatGPT/App/Desktop/Concept/Chat, Work, and Codex]] compares Work with [[ChatGPT/Chat]] and [[Codex]].
+	- [[OpenAI/ChatGPT/Enterprise and Edu release notes|ChatGPT Enterprise and Edu release notes]] track product updates and workspace controls that affect Work.

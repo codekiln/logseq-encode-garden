@@ -11,6 +11,7 @@ tags:: [[Ableton/Arrangement View]]
 				- `\`: **set** a locator
 			- These are not mapped by default, and need to be set with [MIDI/key mapping](https://www.ableton.com/en/live-manual/11/midi-and-key-remote-control/#midi-and-key-remote-control)
 	- ![Locator controls](https://ableton-production.imgix.net/live-manual/11/LocatorControls.png?auto=&w=396)
-	- > You can recall (jump to) locators by clicking on them, or with the Previous and Next Locator buttons below the Set button. Locators can also be recalled using [MIDI/key mapping](https://www.ableton.com/en/live-manual/11/midi-and-key-remote-control/#midi-and-key-remote-control).
+	- > You can recall (jump to) locators by clicking on them, or with the Previous and Next Locator buttons below the Set button. Locators can also be recalled using [MIDI/key mapping](https://www.ableton.com/en/live-manual/11/midi-and-key-remote-control/#midi-and-key-remote-control).
 	-
 	-
+- Live 12 manual: [[Ableton/Live/UG/06 Arrangement View/04 Launching the Arrangement with Locators]]

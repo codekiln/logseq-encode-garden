@@ -1,5 +1,7 @@
-logseq-entity:: [[Logseq/Entity/Person]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Performance]], [[Logseq/Entity/Person/Maker/Music/Composition]], [[Logseq/Entity/Person/Maker/Art]]
 # Atsushi Tadokoro
+	- ## About
+		- Live coder who composes algorithmic music and makes audio-visual installations.
 	- ![Atsushi Tadokoro](https://icmc2025.sites.northeastern.edu/files/2025/06/434-Atsushi_Tadokoro_headshot-221x300.jpg)
 	- Live coder and creative coder exploring the boundaries of sound and visual art. Associate professor at Maebashi Institute of Technology, and part-time lecturer at Tokyo University of the Arts and Keio University. Born in 1972, he creates musical works by synthesizing sounds using algorithms and improvises with sound and images using a laptop computer. In recent years, he has also presented a variety of audio-visual installation works that have been exhibited internationally. His work has been selected for international conferences,
 		- including ICMC (International Computer Music Conference) in 2024, 2015, and 1996;

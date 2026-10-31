@@ -10,7 +10,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Use the event date or a stable event name to distinguish repeated performances of the same work.
 		- A session of several works may use one event page with an ordered set of `work::` links.
 	- ## Relationships
-		- Use `work::` for the performed work, `performer::` for performers, and `recording::` for a recording page that documents the event.
+		- Use `work::` for the performed work, `performer::` for performers as defined at [[Logseq/Entity/Music/Recording/Frontmatter/performer]], and `recording::` for a recording page that documents the event.
 		- Link an event or venue when its page exists. A performance's `date-created::` is the date of the event when known.
 	- ## Instance shape
 		- Start each performance page with `logseq-entity:: [[Logseq/Entity/Music/Performance]]` and one H1 naming the performance.

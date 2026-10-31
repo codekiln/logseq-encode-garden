@@ -1,0 +1,22 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+
+- # Can a [[LangSmith/Deployment]] on LangSmith Cloud call [[AWS/Bedrock]] through an IAM role instead of stored AWS keys?
+	- ## [[AI Answer]]
+		- [[Answer/Official]] from [Playground model providers: Amazon Bedrock](https://docs.langchain.com/langsmith/playground-model-providers#amazon-bedrock), researched by [[Anthropic/Model/Claude/5/5/Opus]] on [[2026-10-23 Fri]] against the docs repo at commit `91b2bd91b`
+		- **Short answer:** not according to the docs. The IAM role option LangSmith offers for Bedrock lets LangSmith's own services assume a role in your AWS account. The Agent Server that runs your graph code in a Cloud deployment has no documented way to assume that role, so graph code there still authenticates to Bedrock with stored credentials.
+		- ## Where the IAM role does work
+			- The docs call it an **IAM trusted entity**. You create a role that LangSmith's AWS account (`808407022534`) may assume, with your workspace ID as the STS external ID, and enter the role ARN in the Playground's Bedrock secrets panel.
+			- It is Cloud only; the same page says self-hosted and BYOC must use access keys or a Bedrock API key.
+			- The changelog shows other LangSmith-run features using the role too, such as LangSmith Chat and Fleet. In each case a LangSmith service makes the call, not your deployed code.
+		- ## Why a Cloud deployment does not get it
+			- [Cloud Agent Server environment variables](https://docs.langchain.com/langsmith/env-var-cloud) lists no AWS identity setting, and the deploy guides for Bedrock-based frameworks just say to "configure AWS credentials".
+			- [IAM auth for Agent Server](https://docs.langchain.com/langsmith/configure-iam-auth) covers workload identity (IRSA, EKS Pod Identity) only for the server's Postgres and Redis, and only on a cluster you run: self-hosted or BYOC.
+			- The LLM Gateway, a beta proxy that deployed code can call with a LangSmith API key, authenticates to Bedrock with a Bedrock API key in `AWS_BEARER_TOKEN_BEDROCK` only ([Direct model access](https://docs.langchain.com/langsmith/llm-gateway-direct-model-access)).
+			- Sandboxes can assume a customer role through `aws_auth(role_arn=...)` ([Sandbox auth proxy](https://docs.langchain.com/langsmith/sandbox-auth-proxy#authenticate-with-an-iam-role)), and data export uses web identity federation. Neither applies to a deployment.
+			- Storing the role ARN as a workspace secret does not help on its own: nothing in the docs says workspace secrets reach a Cloud deployment's environment, boto3 ignores that variable, and assuming a role still needs a starting AWS identity.
+		- ## What a Cloud deployment can use
+			- AWS access keys for an IAM user limited to `bedrock:InvokeModel`, stored as deployment secrets.
+			- A [[AWS/Bedrock/API Key]], used directly or through the LLM Gateway. Still a stored credential, but limited to Bedrock and able to expire.
+			- BYOC or self-hosted, where IRSA or Pod Identity gives the pods a role.
+		- ## Still open
+			- Whether Cloud deployment pods carry any AWS identity at all. Running `aws sts get-caller-identity` from inside a deployment would show it, but anything found that way is undocumented and could change.

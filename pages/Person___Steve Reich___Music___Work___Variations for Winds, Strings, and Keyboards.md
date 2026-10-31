@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Music/Work]]
-creator:: [[Person/Steve Reich]]
+created-by:: [[Person/Steve Reich]]
 date-created:: 1979
 logseq-created-time-year:: [[19/7/9]]
 - # Variations for Winds, Strings, and Keyboards

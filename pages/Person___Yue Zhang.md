@@ -1,4 +1,8 @@
-logseq-entity:: [[Logseq/Entity/Person]]
+tags:: [[Person]], [[Composer]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition]]
 # Yue Zhang
 	- #Bio
-		- **Zhang Yue** is studying Computer Music Composition at [[School/Wuhan Conservatory of Music]], under the guidance of Associate Professor Feng Jian. In recent years, the works created have been selected multiple times for the International Computer Music Conference (ICMC), the International Symposium on Computer Music and Audio Technology (WOCMAT), and the Hangzhou International Electronic Music Festival (EMAC). In 2023, he won the “Best STUDENT MUSIC AWARD” award at 2023ICMC for his work “Flying with the Starling” The 2024 work ‘Butterfly Revelation’ won the first prize (Group B electronic soundtrack) at the IEMC2024 International Electronic Music Competition and the second prize at the EMAC Hangzhou International Electronic Music Competition.
+		- **Zhang Yue** is studying Computer Music Composition at [[School/Wuhan Conservatory of Music]], under the guidance of Associate Professor Feng Jian. In recent years, the works created have been selected multiple times for the International Computer Music Conference (ICMC), the International Symposium on Computer Music and Audio Technology (WOCMAT), and the Hangzhou International Electronic Music Festival (EMAC). In 2023, he won the “Best STUDENT MUSIC AWARD” award at 2023ICMC for his work “Flying with the Starling” The 2024 work ‘Butterfly Revelation’ won the first prize (Group B electronic soundtrack) at the IEMC2024 International Electronic Music Competition and the second prize at the EMAC Hangzhou International Electronic Music Competition.
+		- The [[ICMC]] [[2025]] program gives his school as the China Conservatory.
+	- ## Works
+		- [[ICMC/25/d6/1400 Concert 17/03 The Magic Flute]]

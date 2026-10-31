@@ -1,0 +1,28 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # UI Area
+	- In this garden, **UI Area** pages model one named region of a product's interface — a panel section on hardware, or a view or bar in software — and list the controls and smaller areas inside it.
+	- ## What counts
+		- A region the product's own documentation names and that holds controls: [[Microfreak/UI/Oscillator]], [[Ableton/Live/UI/Control Bar]], [[Ableton/Live/UI/Arrangement View]].
+		- `<Item>/UI` is the root area for an item and covers its whole interface, the way `<Item>/UG` holds its [[Logseq/Entity/Book/User Guide]].
+		- A single knob, button, pad or field is a [[Logseq/Entity/UI/Control]], not an area.
+		- A small group of controls stays a heading on its area page rather than becoming a page, even when the documentation names it, such as the Transport Controls section of [[Ableton/Live/UI/Control Bar]].
+	- ## Atomic Design stages
+		- A UI Area corresponds to an [[UX/Design/Atomic/L3 - Organism]]; a root `<Item>/UI` page or a full view such as [[Ableton/Live/UI/Arrangement View]] corresponds to an [[UX/Design/Atomic/L4 - Template]].
+		- A [[Logseq/Entity/UI/Control]] corresponds to an [[UX/Design/Atomic/L1 - Atom]]. A preset or a saved Live Set, which fills the interface with real values, corresponds to an [[UX/Design/Atomic/L5 - Page]] and is modeled by its own entity.
+	- ## Identity and names
+		- Place an area at `<Item>/UI/<Area>`, nesting a smaller area under the area that holds it: `<Item>/UI/<Area>/<Sub-area>`.
+		- A hardware panel can also be mapped by position. Each side of the device is an area, `<Item>/UI/Front` or `<Item>/UI/Rear`; a side laid out in rows has one area per row at `<Item>/UI/Front/Row/<NN Row>`, numbered top to bottom, such as [[Microfreak/UI/Front/Row/02 Main]].
+		- Inside a row, or on a side without rows, each item takes a two-digit number counting left to right: `01 Matrix`, `02 Paraphonic Button`. A numbered group of controls is an area, such as [[Microfreak/UI/Front/Row/01 Top/01 Matrix]]; a numbered single control is a [[Logseq/Entity/UI/Control]].
+		- Use the name printed on the panel or used in the manual, in Title Case: `Oscillator`, `Control Bar`, `Arrangement View`, `Scrub Area`.
+		- Search `<Item>/UI` and the item's older pages before creating an area. When the garden already has a page for the same region under another name, link it from the area page, and list the older name in `alias::` when it has no page file of its own.
+	- ## Page shape
+		- Frontmatter: `logseq-entity:: [[Logseq/Entity/UI/Area]]`; `up::` links to the containing area, and a root `<Item>/UI` page links `up::` to the item. See [[Logseq/Frontmatter]] for shared conventions.
+		- One bullet-wrapped H1 with the area's name, then one sentence saying where the area sits and what it is for, then a picture of the area when the user guide has one.
+		- A `## Controls` section links each [[Logseq/Entity/UI/Control]] in the area, in panel or screen order. A `## Areas` section links smaller areas when there are any. Link rather than embed; control pages are short and many.
+		- A `## Source` section links the user guide or manual section that describes the area.
+	- ## Examples
+		- [[Microfreak/UI]] → [[Microfreak/UI/Oscillator]]
+		- [[Microfreak/UI/Front]] → [[Microfreak/UI/Front/Row/01 Top]] → [[Microfreak/UI/Front/Row/01 Top/01 Matrix]]
+		- [[Ableton/Live/UI]] → [[Ableton/Live/UI/Arrangement View]] and [[Ableton/Live/UI/Control Bar]]
+		- A Launchpad page would follow the same shape at `Launchpad/UI/<Area>`, for example its grid of pads.

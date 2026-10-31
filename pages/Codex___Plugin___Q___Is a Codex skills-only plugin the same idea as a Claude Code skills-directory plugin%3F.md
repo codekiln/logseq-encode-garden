@@ -18,7 +18,16 @@ see-also:: [[Agent/Skills/Dir]]
 			- A skills-directory plugin is the **second** row: the manifest sits at `<skills-dir>/foo/.claude-plugin/plugin.json`, so the folder you were already using for a plain skill becomes a plugin without moving or installing anything.
 		- ### What each actually maps to
 			- Codex's skills-only plugin ↔ an ordinary Claude plugin that happens to ship only skills. Same idea, both need a marketplace source and an install.
-			- Claude's skills-directory plugin ↔ **nothing in Codex**. Codex has no in-place plugin discovery; its docs steer the other way — direct skill folders "are best for local authoring and repo-scoped workflows," and distribution means packaging as a plugin.
-			- The nearest Codex equivalent is therefore not a plugin at all but a plain [[Codex/Skill]] in a scanned directory: `$CWD/.agents/skills`, `$CWD/../.agents/skills`, `$REPO_ROOT/.agents/skills`, or `$HOME/.agents/skills`.
+			- Claude's skills-directory plugin ↔ Codex's repo marketplace plus project plugin configuration is the closest supported plugin workflow. Codex still installs a cached copy; it does not document discovering a full plugin merely from a manifest placed inside `.agents/skills/`.
+			- For editing skills in place, use a plain [[Codex/Skill]] in a scanned directory: `$CWD/.agents/skills`, `$CWD/../.agents/skills`, `$REPO_ROOT/.agents/skills`, or `$HOME/.agents/skills`.
 		- ### The practical difference
-			- The skills-directory plugin exists to remove the install loop while authoring — edit `SKILL.md` and the running session picks it up; `/reload-plugins` for the rest. Codex's manual path still routes through `@plugin-creator`, a local marketplace, and an install before the plugin is available.
+			- The skills-directory plugin exists to remove the install loop while authoring — edit `SKILL.md` and the running session picks it up; `/reload-plugins` for the rest. Codex's plugin workflow uses a marketplace and an installed copy. For its cache and refresh behavior, see [[Codex/Plugin/Q/Does registering a local plugin copy it into a home-directory cache?]].
+		- ### Repo activation in current Codex clients
+			- As of October 15, 2026, a repo can expose plugins through `.agents/plugins/marketplace.json` and enable one through its trusted project `.codex/config.toml`:
+				- ~~~toml
+				  [plugins."my-plugin@local-repo"]
+				  enabled = true
+				  ~~~
+			- `my-plugin` matches the catalog entry; `local-repo` matches the catalog's top-level `name`. The catalog alone makes the plugin discoverable. Configured plugins can be installed or refreshed during marketplace refresh, even when configured as disabled. [Enable or disable a plugin for a repo](https://developers.openai.com/plugins/build/plugins#enable-or-disable-a-plugin-for-a-repo).
+			- This provides a declarative repo setup for supported local Codex clients, subject to project trust and enforced requirements. It does not establish a universal promise that opening a repo activates the plugin in every ChatGPT Work surface. Workspace-imported plugins have separately managed installation and enabled state.
+			- To develop and distribute the package, see [[ChatGPT/Plugin/How To/Develop and Share a Team Plugin for ChatGPT and Claude]].

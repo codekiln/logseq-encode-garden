@@ -1,0 +1,42 @@
+see-also:: [[Obsidian/Q/Should a team vault in git commit its community plugins' code, or only the list of plugins?]], [[Obsidian/Q/How can an Obsidian vault declare the community plugins it depends on and install them by script?]], [[My/Pref/Dev/mise/Tasks]]
+
+- # How I handle [[Obsidian]] community plugins in a git-committed knowledge garden
+	- Applies to any [[Obsidian]] vault I keep in a [[GitHub/Repo]], alone or with a team, where [[mise]] is the task runner.
+	- ## Commit the list of plugins, not the plugins
+		- Commit `.obsidian/community-plugins.json`. It names the plugins that are on, and it changes only when someone adds or removes one.
+		- Ignore the whole plugins folder with one `.gitignore` line, `**/.obsidian/plugins/`, under a comment that names the install task.
+		- Do not commit a plugin's `manifest.json` on its own. Obsidian rewrites it on every plugin update, so it churns, and it records the version the last person updated to without installing that version anywhere else.
+		- Do not commit `main.js` or `styles.css`. Plugin updates are frequent, and a version bump is not worth a commit or a diff to review.
+		- Keep the other per-person files ignored as well: `workspace.json`, `workspace-mobile.json`, and anything a plugin writes for one machine.
+	- ## Install the plugins with a mise file task
+		- Obsidian does not download a plugin that `community-plugins.json` lists but the vault lacks, so a fresh clone needs an install step.
+		- The task is a [[mise/Task/File]] named for what it acts on and what it does, such as `garden:obsidian:plugins:install` at `mise-tasks/garden/obsidian/plugins/install`. It is not a script in a `scripts/` folder called by a wrapper task.
+		- Write it in [[Python]] as a [[uv]] script: a `#!/usr/bin/env -S uv run --script --quiet` shebang and inline `# /// script` metadata, using only the standard library, so it needs nothing installed beyond what mise provides.
+		- Annotate it with `#MISE description=` and `#USAGE` lines, per [[My/Pref/Dev/mise/Tasks]]: a `--force` flag to download again and a `--min-age-days <days>` flag defaulting to 5.
+		- What it does, in order:
+			- Finds the vault as the one top-level folder holding `.obsidian/community-plugins.json`, so the task does not name the garden folder and survives a rename.
+			- Looks up each plugin id's GitHub repository in Obsidian's public registry, `https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugins.json`.
+			- Lists that repository's releases through the GitHub API, using `GH_TOKEN`, `GITHUB_TOKEN` or `gh auth token` when present to avoid the 60-requests-an-hour anonymous limit.
+			- Picks the newest release that is not a draft or prerelease, has `manifest.json` and `main.js` assets, and is at least 5 days old. The 5 days match `minimum_release_age = "5d"` in `mise.toml`, the same supply-chain delay I use for every other dependency (see [[My/Pref/Dev/Tool]]).
+			- Downloads `manifest.json`, `main.js` and, when the release has one, `styles.css` into `.obsidian/plugins/<id>/`, and removes a leftover `styles.css` the release no longer ships.
+			- Keeps a plugin already at that version, and keeps one that is newer, because Obsidian's own updater got there first and going back could undo a settings migration.
+			- Never touches a plugin's `data.json`.
+			- Prints one line per plugin, says to restart Obsidian only when something changed, and exits non-zero naming each plugin it could not install.
+		- Running it twice in a row downloads nothing the second time.
+		- Updating plugins is running the task again. Nothing shows in `git status`.
+	- ## Plugin settings (`data.json`)
+		- Ignore every `data.json` by default. It holds one person's choices, and some plugins keep tokens there.
+		- Before committing one, check whether the plugin's defaults already give the garden what it needs. Read the plugin's `DEFAULT_SETTINGS` in `main.js`. folder-notes, for example, already defaults to a folder note inside its folder named `{{folder_name}}`.
+		- Commit a plugin's `data.json` only when the garden depends on a setting that is not the default. Know the cost first: everyone who already has that file untracked gets a pull error until they move theirs aside, so add it with a `!` exception for that one plugin and tell people before it lands.
+	- ## Document the step where people open the vault
+		- The README's "open the garden in Obsidian" line says to run the install task first, then open the folder as a vault and choose **Trust author and enable plugins**.
+		- The repo's agent instructions list the task with the other mise tasks, and say the garden tracks the list of plugins and not the plugins.
+		- If the repo uses [[OpenSpec]], record the rule as a requirement, so a later change cannot quietly start tracking plugin files again.
+	- ## Moving a garden that tracked plugin files
+		- `git rm --cached` each tracked `manifest.json`, `main.js`, `styles.css` and `data.json` under `.obsidian/plugins/`, and add the ignore line in the same commit.
+		- Pulling that commit deletes those files from everyone else's copy, because Git removes a file the pulled commit stops tracking. A plugin without its `manifest.json` does not load, so say in the commit message, and to the team, to run the install task once after pulling.
+		- Turn off auto-commit in obsidian-git for shared gardens, so a plugin update or one person's settings never land in a commit nobody looked at.
+	- ## Limits I accept
+		- Plugin versions are not pinned. Everyone gets the newest release that is at least 5 days old when they run the task. If a release breaks the garden, pin that one plugin in the task until a fix ships.
+		- iPhone and iPad cannot run mise, so mobile users install plugins from Obsidian's Community plugins browser.
+		- Someone who opens the vault in Obsidian before running the task sees the plugins listed but not installed.

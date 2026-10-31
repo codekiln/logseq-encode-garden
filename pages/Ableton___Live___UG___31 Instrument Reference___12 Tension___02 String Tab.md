@@ -1,0 +1,45 @@
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 3]]
+up:: [[Ableton/Live/UG/31 Instrument Reference/12 Tension]]
+prev:: [[Ableton/Live/UG/31 Instrument Reference/12 Tension/01 Architecture and Interface]]
+next:: [[Ableton/Live/UG/31 Instrument Reference/12 Tension/03 Filter-Global Tab]]
+- # [31.12.2 String Tab](https://www.ableton.com/en/live-manual/12/live-instrument-reference/#string-tab)
+	- The string's physical properties and how it is played.
+	- ## 31.12.2.1 The Exciter Section
+		- ![Tension's Exciter Section](https://ableton-production.imgix.net/live-manual/12/TensionExciterSectionL12.png)
+		- With the Exciter off, only the damper can move the string. With Exciter and Damper both off there is no sound.
+	- ## 31.12.2.2 Exciter Types
+		- **Bow** — sustained vibration from stick-and-slip friction, as on violin, viola and cello. Damping is unavailable.
+		- **Hammer** — strikes from below once and falls away, as in a piano.
+		- **Hammer (bouncing)** — dropped from above and may bounce, as on a hammered dulcimer.
+		- **Plectrum** — snaps the string, as on a guitar or harpsichord.
+	- ## 31.12.2.3 Exciter Parameters
+		- Type-specific: Bow has **Force** (more is scratchier) and **Friction** (more gives a faster attack); the Hammers have **Mass** and **Stiffness**; Plectrum has **Protrusion** (less is thinner) and **Stiffness**.
+		- Shared: **Velocity** — how fast the exciter hits. **Position** — 0% at the termination, 50% at the midpoint. **Damping** — how much impact force the exciter absorbs; for the bouncing hammer it sets the stiffness of its spring, and more makes a shorter, louder, brighter contact.
+		- **Fix. Pos** — keeps the contact point fixed regardless of string length, like a guitar pick. Leave it off for a piano, whose hammers strike about 1/7 of the length.
+		- **Vel** and **Key** modulate by velocity and pitch. Some combinations produce no sound.
+	- ## 31.12.2.4 The Damper Section
+		- ![Tension's Damper Section](https://ableton-production.imgix.net/live-manual/12/TensionDamperSectionL12.png)
+		- Dampers mute the string, like felt in a piano or a player's fingers, and make sounds of their own.
+		- **Mass** — how hard it presses; more mutes faster. **Stiffness** — felt to metal. Very high values can shorten the string and change its tuning.
+		- **Velocity** — how fast the damper lands at key release and lifts at key press; very high values can make a loud release. Works only with **Gated** on; with Gated off the damper stays on the string.
+		- **Position**, **Fix. Pos** and **Key** sliders as in the Exciter.
+		- **Damping** — overall absorption. Above 50% the damper gets stiff enough to bounce, which lengthens decay again; try it on one repeated key.
+	- ## The String Section
+		- ![Tension's String Section](https://ableton-production.imgix.net/live-manual/12/TensionStringSectionL12.png)
+		- **Decay** with **< Key**. **Ratio** — shortens release decay relative to onset decay.
+		- **Inharm** — real strings are inharmonic, more so when thicker; raising it detunes upper partials.
+		- **Damping** with **< Key** — more high partials at higher values.
+	- ## The Vibrato Section
+		- ![Tension's Vibrato Section](https://ableton-production.imgix.net/live-manual/12/TensionVibratoSectionL12.png)
+		- An LFO on pitch: **Delay**, **Attack**, **Rate**, **Amount**, **< Mod** (mod wheel depth relative to Amount) and **Error** (random variation of rate, amount, delay and attack).
+	- ## 31.12.2.5 The Termination Section
+		- ![Tension's Termination Section](https://ableton-production.imgix.net/live-manual/12/TensionTerminationSectionL12.png)
+		- Models finger, fret and string, which set the string's working length. **Finger Mass** (with Vel and Key), **Finger Stiff** and **Fret Stiff**.
+	- ## 31.12.2.6 The Pickup Section
+		- ![Tension's Pickup Section](https://ableton-production.imgix.net/live-manual/12/TensionPickupSectionL12.png)
+		- An electromagnetic pickup. **Position** 0% at the termination is brighter and thinner; toward 50% is fuller.
+	- ## The Body Section
+		- ![Tension's Body Section](https://ableton-production.imgix.net/live-manual/12/TensionBodySectionL12.png)
+		- The body radiates and filters the string's energy; some, like guitars, have an air cavity that boosts lows.
+		- **Body Type** after real instruments, **Body Size** XS to XL (larger is lower), **Decay**, **Str/Body** (dry string versus body; fully left bypasses the body), **Low Cut** and **High Cut**.
+		- **Volume** sets the overall output and is also on the Filter/Global tab.

@@ -1,0 +1,104 @@
+author:: [[Anthropic/Model/Claude/5/5/Opus]]
+see-also:: [[Microfreak/Preset]], [[Logseq/Entity/Preset/Synth/Microfreak]]
+
+- # MicroFreak presets for a Halloween party
+	- Twenty-five saved sounds on the [[Microfreak]], grouped by the job each one does at a party: talking voices, slow atmosphere, organ and bells, bass and lead lines, jump scares, and a sung or spoken vocoder. Every preset below is on the device today; a read of the instrument on [[2026-10-29 Thu]] matched the slot names in the garden.
+	- The reasons come from each preset's saved settings, read off the device on October 25, 2026 and recorded on its preset page. None of these sounds have been auditioned yet, so the order is a starting point for the next session.
+	- The PRESSURE row in each patch responds to key pressure or velocity, depending on the instrument's global Utility setting.
+	- ## Voices that talk
+		- The [[Microfreak/UG/06 Dig Osc/03 Types/11 Speech]] oscillator comes from the speech research behind the Speak & Spell toy. It produces vowels, numbers, letters and whole words. A toy voice saying words nobody chose is the most direct Halloween sound the instrument makes.
+		- ### 1. [[Microfreak/Preset/016 Voidom]]
+			- Why it fits: a Sample-and-Hold LFO steps the speech formants and also pushes the word selector in the opposite direction, so each step lands on a different syllable. The result is a voice that keeps saying broken fragments, like a possessed toy or a radio between stations.
+			- Pressing harder opens the filter almost fully, so you can keep it muffled under the music and make it suddenly clear on one note.
+			- How to use it: hold a single low note and let the random syllables run under a pad. Lean on the key when you want the voice to come forward.
+		- ### 2. [[Microfreak/Preset/029 Number Station]]
+			- Why it fits: real number stations are shortwave broadcasts of a voice reading numbers for unknown listeners, and the cold, flat delivery is creepy on its own. This patch uses the Speech oscillator with a filtered Sample-and-Hold LFO on the word selector, so it reads a stream of numbers that changes on its own.
+			- Pressure closes the filter a little and raises its resonance, which makes the voice sound more like it is coming through a radio.
+			- How to use it: an intro or interlude, alone, before the beat drops. Pair it with [[Microfreak/Preset/141 Digital Sea]] for radio static.
+		- ### 3. [[Microfreak/Preset/138 Metallic Talk]]
+			- Why it fits: the filter has a fair amount of resonance, and an LFO pulls the cutoff down while it also changes the word, so the voice sounds like it is talking from inside a metal pipe. That reads as a robot or a ghost in the machine.
+			- Pressure speeds up the arpeggiator or sequencer, so a held chord can start chattering faster as you press.
+			- How to use it: run it through the arpeggiator on a minor chord, then press to make the chatter speed up before a drop.
+		- ### 4. [[Microfreak/Preset/093 Blind]]
+			- Why it fits: each key selects a different word, and the sound has a long decay with no sustain. You can "play" a sentence by choosing keys, which makes it the most controllable of the talking patches. A doll that says a word when you touch it is a good bit for a party.
+			- Pressure brings in the cycling envelope and makes it rise faster, so pressing harder makes the word stutter.
+			- How to use it: find a few keys whose words land well and repeat them as a call-and-response with the crowd.
+	- ## Atmosphere
+		- Long sounds to leave running while the room fills up, or under the talking patches.
+		- ### 5. [[Microfreak/Preset/012 Darkstream]]
+			- Why it fits: a detuned [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]] one octave down, with a slow attack and a filter that a held envelope sweeps open. It swells in like strings in a horror score. Paraphonic mode lets you hold dark chords.
+			- How to use it: hold a minor chord, then move one note up a half step to make a cluster. Tension builds without any rhythm.
+		- ### 6. [[Microfreak/Preset/105 SlowBurn]]
+			- Why it fits: a [[Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable]] through a high-pass filter with high resonance, a slow attack and a release that runs nearly as long as the instrument allows. A slow triangle LFO moves the timbre. Notes ring on after you let go, like an echo in an empty house.
+			- Pressure opens the filter strongly, so you can make the drone grow without touching a knob.
+			- How to use it: the pad that fills the room before anything else plays.
+		- ### 7. [[Microfreak/Preset/151 The Unstable]]
+			- Why it fits: a Sample-and-Hold LFO steps the oscillator's wave, and a looping envelope keeps changing the filter resonance. Each held note shifts in random steps and never settles, which is the sound of something wrong in the room.
+			- Pressing harder speeds up the random steps and widens the pulse.
+			- How to use it: under the talking voices, so the whole bed sounds unsteady.
+		- ### 8. [[Microfreak/Preset/141 Digital Sea]]
+			- Why it fits: a [[Microfreak/UG/06 Dig Osc/03 Types/13 Noise]] oscillator through a nearly closed band-pass filter, with a slow attack and a slow random LFO adjusting the cycling envelope. Filtered noise that rises and falls sounds like wind through a broken window.
+			- How to use it: hold a key for wind between songs, or pair it with [[Microfreak/Preset/029 Number Station]] as radio static.
+		- ### 9. [[Microfreak/Preset/161 Crackle Sleep]]
+			- Why it fits: noise with a looping envelope and paraphonic voices. The name and settings point to crackle, which reads as an old record or a fire in a fireplace.
+			- How to use it: put it under [[Microfreak/Preset/154 Old Tapes]] for a haunted gramophone.
+		- ### 10. [[Microfreak/Preset/154 Old Tapes]]
+			- Why it fits: [[Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM]] through a band-pass filter, with a slow attack and a filtered random LFO on the cutoff. The band-pass thins the sound like a small speaker, and the random movement wobbles it like warped tape. An old song on a broken machine is a staple of ghost stories.
+			- How to use it: play a simple nursery tune or "Happy Birthday" slowly in a minor key.
+		- ### 11. [[Microfreak/Preset/130 Sprt Brth]]
+			- Why it fits: a patch of codekiln's own, with no close factory match. It is a wavetable sound one octave up, with a slow attack, a looping envelope that holds and falls, and a fast filtered random LFO that nudges the glide. The name reads as "spirit breath," and the settings suggest a breathy, high, wandering tone that suits it.
+			- How to use it: a high line over the pads, played slowly, as the ghost in [Ghost in the Patch]([[GitP]]).
+	- ## Organ and bells
+		- ### 12. [[Microfreak/Preset/195 Night Organ]]
+			- Why it fits: the [[Microfreak/UG/06 Dig Osc/03 Types/10 Chords]] oscillator plays a full chord from each key, with paraphonic mode on and a sine LFO adding a slight vibrato. A pipe organ in a minor key is the haunted-house sound most people know, from Bach's Toccata and Fugue in D minor.
+			- How to use it: play the opening of the Toccata, or any slow D minor progression, as a set opener.
+		- ### 13. [[Microfreak/Preset/017 Tubular]]
+			- Why it fits: the [[Microfreak/UG/06 Dig Osc/03 Types/12 Modal]] oscillator models a struck resonating body, and this patch is tuned as tubular bells with a medium decay. The opening of Mike Oldfield's "Tubular Bells" became the theme of The Exorcist. Twelve strokes on one bell is also the midnight chime.
+			- Pressure moves the wave strongly, so a harder press changes the bell's material.
+			- How to use it: count down to midnight, or play the Exorcist figure.
+		- ### 14. [[Microfreak/Preset/052 Ringussion]]
+			- Why it fits: a modal bell through a high-pass filter with strong resonance, where pressure bends the pitch a long way. A bell whose note bends after it is struck sounds broken and wrong.
+			- How to use it: strike a note, then press down to make it sag.
+	- ## Bass and lead lines
+		- ### 15. [[Microfreak/Preset/087 ATSpookBass]]
+			- Why it fits: a factory bass named for this job. A wavetable bass with an LFO on the oscillator's chorus and a slight pitch wobble from the cycling envelope. Pressure opens the filter.
+			- How to use it: the bass line under the set. John Carpenter's Halloween theme is in 5/4, and a repeated five-note bass figure in that meter is instantly recognizable.
+		- ### 16. [[Microfreak/Preset/239 70s Dracula]]
+			- Why it fits: a [[Microfreak/UG/06 Dig Osc/03 Types/16 HARM]] lead with a resonant low-pass filter, a short decay with no sustain, and paraphonic voices. Pressure adds noise to the oscillator. The name points at 1970s horror-film scores, and plucked resonant chords with breath-like noise fit that era.
+			- How to use it: stabbing minor chords for a vampire entrance.
+		- ### 17. [[Microfreak/Preset/248 GrowLing]]
+			- Why it fits: a [[Microfreak/UG/06 Dig Osc/03 Types/15 SAWX]] through a band-pass filter, with the cycling envelope pushing both wave and timbre fully. Each note opens with a sweep that sounds like a growl.
+			- How to use it: low single notes on the downbeat, as a werewolf.
+		- ### 18. [[Microfreak/Preset/050 Death]]
+			- Why it fits: a [[Microfreak/UG/06 Dig Osc/03 Types/07 Waveshaper]] whose timbre is driven by both the cycling envelope and a clock-synced Sample-and-Hold LFO. The tone folds over itself in stepped, random patterns in time with the music, which sounds harsh and mechanical. Pressure shortens the envelope's fall.
+			- How to use it: a rhythmic lead for the peak of the set, when the crowd is dancing.
+	- ## Jump scares and effects
+		- ### 19. [[Microfreak/Preset/132 Hold Riser]]
+			- Why it fits: noise whose pitch the cycling envelope pushes nearly all the way up, with the timbre rising alongside it. A rising wash of noise is the build before a jump scare in horror films.
+			- How to use it: hold it for the build, then cut the sound for silence before the scare lands.
+		- ### 20. [[Microfreak/Preset/175 Wuuut]]
+			- Why it fits: noise through a low-pass filter with high resonance and a slow attack, with key position and the cycling envelope both moving the wave. Resonant filtered noise that swells in sounds like a moan or a howl.
+			- Pressure drives the timbre fully, so pressing turns the moan into a shriek.
+			- How to use it: a ghost moan when someone walks in.
+		- ### 21. [[Microfreak/Preset/160 Incoming Ship]]
+			- Why it fits: noise through a high-pass filter with very high resonance and a long decay, with the envelope moving wave, timbre and cutoff together. It sounds like the arrival of something from the sky, which covers the B-movie alien side of Halloween.
+			- How to use it: a one-shot transition between songs.
+	- ## Worth an audition if a slot opens
+		- [[Microfreak/Preset/238 Deep Sea Call]]: a nearly closed, resonant HARM sound with a slow rise, likely a low moan.
+		- [[Microfreak/Preset/264 Disaster]]: a HARM lead where the cycling envelope and pressure each add a lot of noise.
+		- [[Microfreak/Preset/213 Hypno Chaos]]: a triangle LFO with a wide range on pitch, which wobbles each note like a siren.
+		- [[Microfreak/Preset/230 Cristal Church]]: a SAWX organ with a long release, a brighter companion to [[Microfreak/Preset/195 Night Organ]].
+	- ## Vocoder voices
+		- These need the gooseneck microphone of the Vocoder Edition, or a TRRS headset microphone in the headphone jack. Set Mic Gain in the Utility menu before the party. The [[Microfreak/UG/06 Dig Osc/03 Types/22 Vocoder]] oscillator puts your voice onto the synth's pitch, so you can speak to the room as a monster or a machine. See [[Microfreak/UG/19 Appendix B Vocoder]].
+		- ### 22. [[Microfreak/Preset/315 Crying]]
+			- Why it fits: a looping cycling envelope bends the pitch slightly and opens the filter bands, so whatever you say wavers like a wail. Paraphonic mode is on, so you can hold a minor chord and moan into the microphone for a choir of ghosts.
+			- How to use it: hold a minor chord and say "boo" slowly, or sing a long vowel. Good between songs.
+		- ### 23. [[Microfreak/Preset/311 The Eyes]]
+			- Why it fits: key position controls the vocoder's analysis range, so the same spoken word sounds dark on low keys and thin and alien on high ones. Saying "I see you" across the keyboard is an easy bit, and the name matches.
+			- How to use it: speak one phrase while walking a slow line from high keys down to low ones.
+		- ### 24. [[Microfreak/Preset/306 Low Battery]]
+			- Why it fits: a looping cycling envelope and a filtered Sample-and-Hold LFO wobble the pitch and timbre, so your voice sounds like a toy whose batteries are dying. That is a horror-film trope with a friendly side, good for younger guests.
+			- How to use it: announce the next song as a dying robot.
+		- ### 25. [[Microfreak/Preset/309 Low Noisy Vox]]
+			- Why it fits: the filter is open with strong resonance, and the name suggests a low, noisy carrier. Played in a low octave this should give the deepest monster voice of the set.
+			- How to use it: drop the octave and use it for a slow, deep "Happy Halloween" or a monster roar into the microphone.

@@ -2,7 +2,7 @@ tags:: [[Diataxis/How To]]
 github-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/My___AI___Agent___Chief%20of%20Staff.md
 
 - # Chief of Staff
-	- Standing supervision of the AI agents that do work in [[My/Knowledge/Garden/logseq-encode-garden]]. One chief-of-staff agent per [[herdr]] workspace holds this graph's docket, starts subagents for named work items, and reports outcomes, so [[Person/codekiln]] names the work and reads results instead of driving each session.
+	- Standing supervision of the AI agents that do work in [[My/Knowledge/Garden/logseq-encode-garden]]. One chief-of-staff agent holds this graph's docket from a [[tmux]] session of its own, starts subagents for named work items, and reports outcomes, so [[Person/codekiln]] names the work and reads results instead of driving each session. Its subagents and worktrees run in the harness's own subagents or in tmux; [[herdr]] is used only when [[Person/codekiln]] asks for it.
 	- ## The seat is called Hayward
 		- A hayward kept the hedges and fences of the common fields, and kept the livestock out of the growing crop. The work here is the same shape: deciding what may be written into a public garden, keeping another repository's private context from crossing into it, and keeping links pointing at pages that exist.
 		- The name belongs to the seat rather than to whichever session is sitting in it. A session ends, a model changes, an agent renames itself; the seat and its record carry on, and whoever takes it next inherits both. `encode-garden-chief-of-staff` describes a function and changes with the workspace label — Hayward does not.

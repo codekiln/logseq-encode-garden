@@ -1,0 +1,35 @@
+tags:: [[Diataxis/Explanation]]
+logseq-entity:: [[Logseq/Entity/Concept]]
+
+- # How the GitHub integration feeds project knowledge
+	- Docs read on 2026-10-21 from [Use the GitHub integration](https://support.claude.com/en/articles/10167454-use-the-github-integration) and [What are projects?](https://support.claude.com/en/articles/9517075-what-are-projects). Org-level observations come from the author's own Claude Enterprise org and are marked as such.
+	- ## Overview
+		- The GitHub integration lets a Claude project take files from a GitHub repository as project knowledge. Claude then reads those files in every chat in the project, the same way it reads an uploaded document.
+		- It copies files. It does not give Claude live access to the repository.
+	- ## Context
+		- ### How a repository gets linked
+			- 1. In a project, click the "+" at the upper right of the project knowledge section and choose GitHub.
+			- 2. Search the repositories you can access, or paste a repository URL.
+			- 3. Use the file browser to pick files and folders. The selection is added to project knowledge.
+			- If you are not signed in to GitHub, Claude sends you through authentication first.
+		- ### What crosses the link
+			- Only file names and file contents, from one branch. The docs state that commit history, PRs and other metadata are not retrieved.
+			- Several repositories can be added, but together they must fit in Claude's context window. The docs advise choosing only the files central to the task.
+		- ### Refreshing
+			- The docs describe a Sync icon and a "Sync now" option that pull the latest version of every file and folder already selected, and a "Configure files" icon that changes the selection. They recommend syncing before a new analysis or after large repository changes.
+			- Observed in the author's Enterprise org: the import looked like a one-time copy and no refresh control was easy to find. This was seen, not tested, so it may be a difference between the docs and the current interface. Test it before relying on either.
+		- ### Private and org-wide projects
+			- A private project can take GitHub content. In the author's Enterprise org, an org-wide project had the GitHub option disabled. The docs article says nothing about shared or org-wide projects, so this is observed behaviour with no documented reason.
+			- Private repositories need the Claude GitHub App. A GitHub admin can grant it all repositories or specific ones. Other users request access and the org admins are emailed.
+			- For SSO-enabled GitHub orgs each user must also authorize the Claude app for that org, and reconnecting does not fix a missing authorization.
+			- Organizations with zero data retention for Claude Code cannot link the GitHub App to their Claude organization.
+		- ### Losing access
+			- If you lose access to a repository, its contents can no longer be viewed in projects where it was added and the preview is removed. Conversation history stays.
+		- ### A newer projects experience
+			- The projects article says a new version of projects is rolling out in stages, where every thread starts with the project's files, repositories, instructions and memory. The steps above come from the older project knowledge flow, so the screens may differ.
+	- ## Key Principles
+		- A project's GitHub content is a snapshot that a person refreshes, not a feed that follows the branch.
+		- What the project can attach depends on its sharing level, so the same account can see GitHub in a private project and not in an org-wide one.
+	- ## Related
+		- [Use the GitHub integration](https://support.claude.com/en/articles/10167454-use-the-github-integration)
+		- [What are projects?](https://support.claude.com/en/articles/9517075-what-are-projects)

@@ -19,6 +19,13 @@ see-also:: [[Knowledge Gardener]], [[Knowledge/Concept/Knowledge Base vs Knowled
 		- ### My Knowledge Gardens
 			- {{embed [[My/Knowledge/Garden/logseq-encode-garden]]}}
 			-
+	- ## Douglas Lenat's knowledge principles
+		- [[Person/Douglas Lenat]] and Edward Feigenbaum's [On the Thresholds of Knowledge](https://www.sciencedirect.com/science/article/pii/000437029190055O) offer a useful set of design principles for a knowledge garden:
+			- Keep knowledge explicit and inspectable so it can be questioned, connected, and revised.
+			- Grow breadth as well as depth; unexpected questions often require general knowledge and analogies to distant domains.
+			- Preserve declarative knowledge even when some of it is compiled into faster operational forms.
+			- Test the garden through real use on substantial problems, because small toy examples can conceal missing context.
+		- These principles describe how a knowledge garden can support intelligent work; they are an application of Lenat and Feigenbaum's AI principles rather than a definition of the garden form itself.
 	- ## #History
 		- ### Early Roots
 			- 1. **Zettelkasten Method (Late 20th Century):** The term "Zettelkasten" was popularized by German sociologist Niklas Luhmann in the late 20th century. Luhmann used a system of index cards to capture ideas and notes, linking them through a numbering system, which allowed for a web of interrelated thoughts. His method emphasized the importance of context and connections over linear organization.

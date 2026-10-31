@@ -18,4 +18,5 @@ alias:: [[My Dev Tool Preferences]]
 				- [[VueJS]] - secondary preference
 		- [[Documentation]]
 			- utilize [[Logseq]] or [[Obsidian]] in a `docs/` sub-folder (or possibly `<project>-docs` sub-folder) with [[Markdown]] inside a [[GitHub/Repo]]
+				- for [[Obsidian]] community plugins in such a repo, see [[My/Pref/Dev/Tool/Obsidian/Plugins in Git]]
 		-

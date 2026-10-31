@@ -1,5 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Music/Recording]], [[Logseq/Entity/Music/Performance]]
 date-created::  [[2026-09-23 Wed]]
+logseq-created-time-year:: [[20/2/6]]
 time-created::  1200 ET
 
 - # Public Improv Session with [[Ableton/Note]] and [[Microfreak]]

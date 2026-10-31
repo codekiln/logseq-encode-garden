@@ -1,0 +1,24 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+- # Professor
+	- In this garden, **Professor** pages model real people who hold or held a university professorial appointment, including emeritus professors.
+	- ## Identity and Membership
+		- A Professor is a kind of [[Logseq/Entity/Person]], using the same `Person/Full Name` hub and deduplication rules. An appointment adds academic context to the person's existing hub.
+		- The hub carries Professor as its most specific entity in this lineage, omitting the broader Person marker. Independent entities from other lineages may appear alongside Professor when applicable.
+		- A doctorate, book authorship, research position, guest lecture, or course contribution alone does not establish a professorship. University faculty biographies, appointment notices, and curriculum vitae establish the appointment and its dates.
+	- ## Appointments and Affiliations
+		- `academic-title::` records the current named professorship or emeritus title as plain text when known.
+		- `university-affiliation::` links the current university when it already exists in the graph; an official university link in the body can identify an institution without a graph page.
+		- The **Academic Appointment** section distinguishes the university, school or department, and appointment title. Joint appointments retain each school or department.
+		- The **Previous Appointments** section records former universities and roles with dates where established. Historical appointments remain dated in the body rather than appearing as current affiliations.
+		- Sources retain the date of an appointment notice or curriculum vitae when it matters to interpreting a career history. An old biography does not establish a current affiliation.
+	- ## Research and Publications
+		- **About** states the person's research field and the questions their scholarship addresses. **Education** may record degrees and universities when useful.
+		- A separately modeled publication uses its own entity, such as [[Logseq/Entity/Book]] or [[Logseq/Entity/Article]], with `created-by::` pointing to every credited author who has a person hub. The person's linked references collect those publications.
+		- **Selected Publications** gives context for significant works rather than reproducing a complete bibliography. A publication without a garden page may appear as a descriptive external link with its title, venue, and publication year. An official publication list can supply the complete bibliography.
+		- Book and article entity definitions govern publication titles, dates, and coauthor credits; a publication is not a child Professor instance merely because it sits under a person's namespace.
+	- ## Teaching
+		- A [[Logseq/Entity/Course]] page identifies its instructor through `instructor::`; the professor's linked references collect the courses. A **Teaching** section may explain a course's relationship to the professor's research.
+		- A [[Logseq/Entity/Course/Syllabus]] page records a particular offering's curriculum. Reading, citation, case authorship, and guest participation do not establish an instructor appointment.
+	- ## Page Shape
+		- The person hub opens with the person's name, preferably linked to an official faculty biography, followed by **About**. Appointment, career, research, publication, education, and teaching sections appear where substantive information is available.
+		- Faculty biographies, official publication records, and curriculum vitae support academic facts. Shared property conventions live on [[Logseq/Frontmatter]].

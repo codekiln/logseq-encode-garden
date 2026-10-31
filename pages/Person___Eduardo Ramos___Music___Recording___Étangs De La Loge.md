@@ -1,6 +1,7 @@
 logseq-entity:: [[Logseq/Entity/Music/Recording]]
 performer:: [[Person/Eduardo Ramos]]
 date-created:: [[2026-09-25 Fri]]
+logseq-created-time-year:: [[20/2/6]]
 - # [Étangs De La Loge](https://panditpampam.bandcamp.com/album/e-tangs-de-la-loge)
 	- Three-track album by Pandit Pam Pam, released on Bandcamp on [[2026-09-25 Fri]]. The artist's note describes it as a slow-building travelogue of one day on a trip to the French countryside, named for the *étangs*, the still ponds there.
 		- > Still going on this French wave (or a wave of a Frenchman), this time courtesy of a trip to the inner French countryside, something I had never done before.

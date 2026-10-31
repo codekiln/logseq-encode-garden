@@ -25,7 +25,13 @@
 			- Git sources: `owner/repo`, `owner/repo@ref`, HTTP/HTTPS/SSH URLs; `--sparse PATH` (repeatable) for sparse checkout; `--ref` pins a ref.
 		- Codex also reads legacy `$REPO_ROOT/.claude-plugin/marketplace.json`.
 		- Installs land in `~/.codex/plugins/cache/$MARKETPLACE_NAME/$PLUGIN_NAME/$VERSION/` (`local` for local plugins); per-plugin on/off in `~/.codex/config.toml`.
-	- ## Minimal plugin (manual)
+	- ## Repo activation
+		- `.agents/plugins/marketplace.json` exposes a repo catalog. A trusted project `.codex/config.toml` can set `[plugins."my-plugin@local-repo"]` with `enabled = true`; supported local clients can install or refresh configured plugins during marketplace refresh. [Repo plugin configuration](https://developers.openai.com/plugins/build/plugins#enable-or-disable-a-plugin-for-a-repo).
+		- Source edits still pass through the installation cache. See [[Codex/Plugin/Q/Does registering a local plugin copy it into a home-directory cache?]].
+	- ## Portable plugin package
+		- Current portable packages use root `plugin.json` with the Agent Plugins 1.0 schema, `skills/`, and optional root `mcp.json`. OpenAI settings live under `extensions.com.openai`. The `.codex-plugin/plugin.json` layout remains a compatibility fallback. [Package format](https://developers.openai.com/plugins/build/plugins#plugin-structure).
+		- [[ChatGPT/Plugin/How To/Develop and Share a Team Plugin for ChatGPT and Claude]]
+	- ## Codex compatibility plugin (manual)
 		- Manifest at `.codex-plugin/plugin.json` only inside `.codex-plugin/`; `skills/`, `hooks/`, `assets/`, `.mcp.json`, `.app.json` at plugin root.
 		- ~~~
 		  {
@@ -41,7 +47,7 @@
 	- ## Workspace sharing (Codex app)
 		- Plugins → Created by you → Share — workspace members or link; appears under Shared with you (not public Plugin Directory).
 		- Admins can set `plugin_sharing = false` in `requirements.toml`.
-	- ## Manifest (published shape)
+	- ## Codex compatibility manifest
 		- Top-level: `name`, `version`, `description`, `author`, `homepage`, `repository`, `license`, `keywords`, `skills`, `mcpServers`, `apps`, `hooks`.
 		- `interface`: `displayName`, `shortDescription`, `longDescription`, `developerName`, `category`, `capabilities`, legal URLs, `defaultPrompt`, `brandColor`, `composerIcon`, `logo`, `screenshots`.
 		- Paths relative to plugin root, start with `./`; assets under `./assets/` when possible.

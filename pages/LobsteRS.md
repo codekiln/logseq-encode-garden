@@ -1,2 +1,3 @@
-- https://lobste.rs/
+logseq-entity:: [[Logseq/Entity/Forum]]
+- # [Lobsters](https://lobste.rs/)
 	- This is a community that's been around since [[2013]] that reminds me of [[HN]]. Their [about page](https://lobste.rs/about) signals the intentionality of this community.

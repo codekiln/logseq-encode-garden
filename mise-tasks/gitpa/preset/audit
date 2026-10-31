@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#MISE description="Audit source episode preset notes and recorded evidence"
+#USAGE flag "--episode <title>" help="Exact source episode title or unique alias"
+#USAGE flag "--all" help="Report historical source sessions without blocking publication"
+#USAGE flag "--check" help="Fail on gaps for the selected episode only"
+#USAGE flag "--json" help="Print a structured report outside the graph"
+#USAGE flag "--garden <path>" help="Source garden checkout"
+set -euo pipefail
+task_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [[ -n "${usage_episode:-}" || "${usage_all:-false}" == "true" ]]; then
+  args=()
+  [[ -n "${usage_episode:-}" ]] && args+=(--episode "$usage_episode")
+  [[ "${usage_all:-false}" == "true" ]] && args+=(--all)
+  [[ "${usage_check:-false}" == "true" ]] && args+=(--check)
+  [[ "${usage_json:-false}" == "true" ]] && args+=(--json)
+  [[ -n "${usage_garden:-}" ]] && args+=(--garden "$usage_garden")
+  exec python3 "$task_dir/lib/readiness.py" "${args[@]}"
+fi
+exec python3 "$task_dir/lib/readiness.py" "$@"

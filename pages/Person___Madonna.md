@@ -1,4 +1,5 @@
-logseq-entity:: [[Logseq/Entity/Person]], [[Logseq/Entity/Person/Musician]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition/Song]], [[Logseq/Entity/Person/Maker/Music/Performance]]
+
 - # [Madonna](https://www.madonna.com/)
 	- ## About
 		- American singer-songwriter and performer.

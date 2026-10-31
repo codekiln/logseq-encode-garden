@@ -1,0 +1,16 @@
+# Use AGENTS.md Without Symlinks
+	- I prefer `AGENTS.md` as the neutral project instruction file. Use it alone where the selected clients read it; add a client-specific file only when it is needed.
+	- When several client files must stay synchronized, use [[rulesync]] to generate ordinary files from one maintained source rather than linking `AGENTS.md` and `CLAUDE.md` with a symlink. This follows [[My/Pref/Dev/AI/Config/Management]].
+	- ## Why ordinary files
+		- A repository should work on Windows without asking each contributor to enable Developer Mode, change symlink permissions or configure Git to create links.
+		- Windows supports symlinks, but their creation depends on permissions and Git configuration. With `core.symlinks=false`, Git checks out the link target as plain text. A committed directory symlink does not automatically become a Windows junction. See [Git for Windows: symbolic links](https://gitforwindows.org/symbolic-links.html) and [Git's core.symlinks setting](https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresymlinks).
+		- macOS or Linux success does not establish native Windows compatibility. Test checkout, generation and client loading on Windows before claiming support.
+	- ## When another client file is needed
+		- Keep the authored instructions in `.rulesync/rules/overview.md`, with `root: true` in the frontmatter. Generate `AGENTS.md` and any needed client-specific files from that source; edit the source rather than the outputs.
+		- Current Claude Code can read `AGENTS.md` directly, but certain `CLAUDE.md` and `CLAUDE.local.md` files take precedence. Check the selected version and actual loading before removing a compatibility file. [Claude's instruction-loading rules](https://code.claude.com/docs/en/memory#agentsmd).
+		- Regenerate after source changes and through installed checkout and merge hooks. Check generated files for drift so copies do not become independently maintained instructions.
+		- Declare shared skill sources through [[rulesync/Skill/Declarative Source]] instead of requiring skill-directory symlinks or a separate installer for each client.
+	- ## Dotfiles example
+		- [The root rule](https://github.com/codekiln/dotfiles/blob/main/.rulesync/rules/overview.md) is the authored source; [rulesync.jsonc](https://github.com/codekiln/dotfiles/blob/main/rulesync.jsonc) selects the project targets.
+		- [The Git hooks](https://github.com/codekiln/dotfiles/blob/main/lefthook.yml) run `mise x -- rulesync install` followed by `mise x -- rulesync generate` after checkout and merge. [mise.toml](https://github.com/codekiln/dotfiles/blob/main/mise.toml) installs those hooks on entering the repository.
+		- [The global Rulesync configuration](https://github.com/codekiln/dotfiles/blob/main/chezmoi/dot_aiglobal/rulesync.jsonc) also declares external skill sources. Project configuration and global configuration have separate scopes.

@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Person]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition]]
 - # Michèle Bokanowski
 	- ## Bio
 		- French composer of electroacoustic music (born 1943)

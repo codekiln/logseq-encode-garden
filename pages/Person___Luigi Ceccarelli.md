@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Person]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition]]
 - # Luigi Ceccarelli
 	- ## Bio
 		- Italian composer of electroacoustic and acousmatic music

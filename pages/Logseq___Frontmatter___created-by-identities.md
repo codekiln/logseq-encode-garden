@@ -1,0 +1,10 @@
+- # `created-by-identities::` — credited public identities
+	- On a work, recording or other creation, lists the [[Logseq/Entity/Identity]] pages credited as its creators or artists, in published order.
+	- ## Values
+		- Comma-separated identity-page links. A joint release can carry `created-by-identities:: [[Bibio]], [[Dorian Concept]]`.
+		- A name that is only a person's ordinary biographical name can use `created-by::` or `performer::` directly without a separate identity page.
+	- ## Personal credits
+		- `created-by::` records known people who made the particular work or recording; `performer::` records known performers. Neither property is inferred from identity membership alone.
+		- An identity credit can be known even when individual contributors are unknown. In that case the identity credit stands on its own.
+	- ## Placement
+		- The first credited identity supplies the namespace when the creation's entity definition uses identity-based placement. [[Logseq/Entity/Music/Recording]] and [[Logseq/Entity/Music/Work]] define musical placement.

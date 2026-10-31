@@ -1,0 +1,4 @@
+- # Behavior is the first technology
+	- Before tools, people shape what they do through behavior: habits, routines and agreements about how to act. Assistive technologies work by shaping behaviors.
+	- Related to [[Design/Pattern]]s and [[My/Principle]]s.
+	- First noted in [[Week/Review/26/10/11 Sun]].

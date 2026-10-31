@@ -1,0 +1,2 @@
+- When codekiln references a factory preset, assume the session starts from its factory settings. Use the factory preset as the starting point for understanding the sound and its modulation wiring.
+- Changes made during the session are departures from that starting state.

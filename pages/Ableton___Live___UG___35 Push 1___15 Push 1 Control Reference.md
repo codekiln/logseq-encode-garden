@@ -1,0 +1,58 @@
+logseq-entity:: [[Logseq/Entity/Book/Section/Level 2]]
+up:: [[Ableton/Live/UG/35 Push 1]]
+prev:: [[Ableton/Live/UG/35 Push 1/14 Setting User Preferences]]
+- # [35.15 Push 1 Control Reference](https://www.ableton.com/en/live-manual/12/using-push-1/#push-1-control-reference)
+	- What each section and control does.
+		- ![Overview of Push 1's Controls](https://ableton-production.imgix.net/live-manual/12/PushOverview.png)
+	- ## 35.15.0.1 Focus/Navigation Section
+		- **Note** — on an instrument track the pads play notes, and further presses switch between real-time playing and the melodic sequencer. On a Drum Rack track the lower-left 16 pads play, the lower-right 16 set loop length, and the top four rows step-sequence; press again for 64-pad mode.
+		- **Session** — pads launch Session View clips.
+		- **Shift** — hold for second functions.
+		- **Arrow keys** — move around the Set in Session Mode, or between tracks and scenes in Note Mode.
+		- **Select** — hold and press a clip to select it without launching and show its name, or a drum pad to select its notes silently.
+	- ## 35.15.0.2 Add Section
+		- **Add Effect** — opens Browse to add a device right of the selected one; `Shift` adds it to the left. For a MIDI effect, select the instrument and use `Shift` + Add Effect.
+		- **Add Track** — adds a MIDI track to the right; hold to choose Audio, MIDI or Return. Inside a Group Track, the new track joins the group.
+	- ## 35.15.0.3 Note Section
+		- **Scales** — on an instrument track in Note Mode, picks the key and scale, with Fixed Y/N, In Key/Chromatic and scale type. No effect on Drum Rack tracks or in Session Mode.
+		- **User** — turns off Push's built-in functions so it can be remapped; hold for configuration. Relative encoders work best as "Relative (2's Comp.)"; turn the encoder slowly left while mapping to get it.
+		- **Repeat** — holding a pad retriggers it at the Scene/Grid rate.
+		- **Accent** — every note plays at full velocity; hold for temporary accent.
+		- **Octave Up/Down** — shift pads by octave on instrument tracks, by 16 pads on Drum Racks, and by eight scenes in Session Mode. Unlit when no further range exists.
+	- ## 35.15.0.4 State Control Section
+		- For tracks, the eight left buttons stop clips, mute or solo, depending on which of **Stop**, **Mute** or **Solo** is active. For devices they turn devices on and off. Other modes reuse them, for example for scale selection. `Shift` + Stop stops all clips.
+	- ## 35.15.0.5 Selection Control Section
+		- Chooses what the encoders and display edit. In and Out reach devices in Racks or more parameter banks, and in Browse shift the columns.
+	- ## 35.15.0.6 Display/Encoder Section
+		- Six buttons beside the display set the encoder mode; hold one to switch temporarily. The ninth encoder is Main track volume, or Pre-Cue volume with `Shift`. `Shift` with any of the first eight encoders gives fine control.
+		- **Volume** — eight track volumes.
+		- **Pan & Send** — pans, then each send in turn.
+		- **Track** — one track's volume, pan and first six sends; Master selects the Main track.
+		- **Clip** — for MIDI clips: Loop Start (or Clip Start), Position, Loop Length (or Clip End), Loop on/off. Audio clips add Warp Mode, Detune, Transpose and Gain.
+		- **Device** — parameters of the selected device.
+		- **Browse** — scroll devices and presets.
+	- ## 35.15.0.7 Tempo Section
+		- **Tap Tempo** — the Set's tempo follows your taps. With "Start Playback with Tap Tempo" on in the Record, Warp & Launch Settings, four taps in 4/4 also start playback.
+		- **Metronome** — toggles Live's metronome.
+		- Left encoder sets tempo in 1 BPM steps, or 0.1 BPM with `Shift`. Right encoder sets swing for Quantize, Record Quantize and Repeat.
+	- ## 35.15.0.8 Edit Section
+		- **Undo** — Live's own Undo, including actions not made on Push; `Shift` + Undo redoes.
+		- **Delete** — in Note Mode deletes the selected clip; in Session Mode hold and press a clip. Hold with a Selection Control button to delete a device or track, or touch an encoder to clear its automation or reset it.
+		- **Quantize** — press to quantize selected notes, or the whole clip; hold with a drum pad for that pad only. On audio clips it moves transients. Hold for settings.
+		- **Double** — doubles the loop and its contents.
+	- ## 35.15.0.9 Transport Section
+		- **Fixed Length** — new clips get a set number of bars; hold to choose.
+		- **Automation** — toggles Live's Automation Record for playing Session clips. `Shift` + Automation re-enables overridden automation; Delete + Automation clears all automation in a clip.
+		- **Duplicate** — captures a scene in Scene Workflow or copies the selected clip in Clip Workflow; with a drum pad, copies that pad.
+		- **New** — stops the selected clip and readies new recording. On an armed MIDI track, Record + New triggers Capture MIDI.
+		- **Record** — record, then play, then overdub.
+		- **Play/Stop** — Live's play button; `Shift` + Play/Stop returns to 1.1.1 without playing.
+	- ## 35.15.0.10 Touch Strip
+		- On instrument tracks it is pitch bend (default) or mod wheel while playing live, and the note range while step sequencing; Select + tap the strip toggles bend and mod. On Drum Rack tracks it picks the pad bank.
+	- ## 35.15.0.11 Pad Section
+		- Session Mode launches clips. Note Mode plays notes on instrument tracks or splits into play, loop length and sequencer areas on Drum Rack tracks, with 64-pad mode one Note press away.
+	- ## 35.15.0.12 Scene/Grid Section
+		- In Session Mode these launch scenes; hold Select to select a scene without launching. In Note Mode they set step size and Repeat rate.
+	- ## 35.15.0.13 Using Footswitches with Push 1
+		- Two jacks take momentary footswitches. Footswitch 1 is sustain. Footswitch 2 toggles Record on a single tap and acts as New on a double tap.
+		- If a switch works backwards, plug it in while holding it down, or use a pedal with a polarity switch.

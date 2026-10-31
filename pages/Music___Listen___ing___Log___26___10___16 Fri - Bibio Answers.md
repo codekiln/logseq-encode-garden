@@ -1,0 +1,3 @@
+- [[2026-10-16 Fri]]
+	- [[Bibio]]'s newest album [[Bibio/Music/Recording/Answers]] just came out on spotify. [[Dorian Concept]] is listed as a co-author. I've listened to [[Dorian Concept]]'s 2025 album [[Dorian Concept/Music/Recording/Miniatures]] and to [[Bibio]]'s albums [[Bibio/Music/Recording/Fi]] and [[Bibio/Music/Recording/The Apple and the Tooth]] many times. I'm interested in learning more about their collaboration.
+	- This morning I watched some of the videos on spotify. 80's and 90's videography effects, blurs.

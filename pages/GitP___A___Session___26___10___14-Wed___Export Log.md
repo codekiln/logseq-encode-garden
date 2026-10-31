@@ -1,0 +1,12 @@
+- # GitP.26.10.14 Export Log
+	- ## First pass · [[2026-10-15 Thu]]
+		- Local project: `~/Documents/ableton/GitP/26.10.14 Project/`; local MP3: `GitP26.10.14.mp3` in that folder.
+		- Opened `26.10.14 Project/26.10.14.2.als` in Ableton Live. Copied the paired Session clips `mf ALL 2-1` and `mf MIDI ALL 2` into Arrangement View, aligned at bar 1. Both span 1,000 beats at 67.5 BPM.
+		- The first Live export was silent. Audio preferences showed `No Device` for the output, and the audio engine was off. The available computer-use controls could open Audio preferences but could not operate Live's device selector.
+		- Replaced the silent local export by encoding `Samples/Recorded/mf ALL 0002 [2026-10-14 190218]-1.aif` directly as a stereo, 44.1 kHz, 320 kbps MP3, cut to the arrangement's 14:49 length. Uploaded and verified [[GitP/A/Session/26/10/14-Wed/Asset/Synth/Full/mp3]] in B2.
+		- This MP3 contains the recorded audio without Live's track or master processing. It retains about 25 seconds of leading quiet and several internal quiet stretches. No repetition or passage selection was done.
+	- ## Material to review
+		- The `mf ALL` Session track also holds `mf ALL 3` (264 beats) and `mf ALL 4` (92 beats), with corresponding clips on `mf MIDI ALL`. Neither pair is in the current Arrangement View or MP3. Decide which passages from all three pairs belong in the episode and in what order.
+		- A rough −45 dB silence scan found a nearly 15-second quiet stretch within the first clip, about 12 seconds within clip 3, and about 18 seconds at the start of clip 4. Listen before deciding whether to cut these passages.
+		- Choose an audio output device in Live and verify a render through the effects chain. Check for repeated material, edit the selected audio and MIDI together, then review the replacement MP3 before updating B2.
+		- Treat the uploaded MP3 as a first-pass export until an edited render is reviewed.

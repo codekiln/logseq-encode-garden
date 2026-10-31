@@ -1,4 +1,5 @@
-logseq-entity:: [[Logseq/Entity/Person]], [[Logseq/Entity/Person/Musician]]
+logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition]], [[Logseq/Entity/Person/Maker/Music/Performance]]
+
 - # [Steve Reich](https://stevereich.com/biography/)
 	- ## About
 		- American composer and musician.

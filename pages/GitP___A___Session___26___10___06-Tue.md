@@ -1,3 +1,5 @@
+prev:: [[GitP/A/Session/24/12/04-Wed]]
+next:: [[GitP/A/Session/26/10/07-Wed]]
 logseq-entity:: [[Logseq/Entity/Podcast/Episode]]
 created-by:: [[Person/codekiln]]
 date-created:: [[2026-10-06 Tue]]

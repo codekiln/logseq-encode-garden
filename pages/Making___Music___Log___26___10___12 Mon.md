@@ -1,0 +1,26 @@
+prev:: [[Making/Music/Log/26/10/11-Sun]]
+
+- [[2026-10-12 Mon]]
+	- I messed about with [[Microfreak/Preset/Factory]] for the microfreak this morning; it was fun. I haven't done that much, actually; I prefer to make my own, usually.
+		- ### [[Microfreak/Preset/219 Dusty Bass]]
+			- Spent the most time on this preset
+		- ### [[Microfreak/Preset/286 Driftsynchros]]
+			- with octave -1 d, f, g, c, coupling (d,f), (f, g), (g, c), (c, d) where a descant sang out.
+			- While this was happening, the microfreak paraphonic / unison button was blinking. I'm I'm not sure what that was about.
+		- ### [[Microfreak/Preset/247 Laity]]
+			- This preset has several items that are modulated by pressure in the matrix: [[Microfreak/UI/Oscillator/Knob/Timbre]], [[Microfreak/Filter/Cutoff]], [[Microfreak/Matrix/Assn/1]]. I realized that it's easier to make quiet sounds on the capacitive touch keyboard using the "bones" of the white keys, since there are fewer sensors up there. Effective example: I recorded a clip with (d), (d,f), (f,c), (c,e) and some cool interference patterns emerged.
+	- ## Compelling Launchpad Microfreak Workflow for Scales and Sequences
+		- realized that I could make a `Mf to LPP` [[Ableton/Track/MIDI]] in [[Ableton/Live]] to route the [[Microfreak]] to the [[Launchpad]] so I could record into a sequence into the [[Launchpad/UG/09 Sequencer]]. Then I can use all the sequencer's various affordances, e.g. modes, scenes, etc.
+	- ## Questions
+		- [[Launchpad/Scale/Q/What scales are available?]]
+		- [[Launchpad/Scale/Q/Where do scales apply?]]
+	- [[Launchpad/UG/09 Sequencer/11 Print to Clip]]
+		- This morning the internet was out, and I realized that I didn't have easy access to the images in this page! Not ideal.
+		- I wish there was an easy way I could make a local fallback.
+			- I suppose I could make a localhost server which resolved from local if available, then resolved from backblaze if local wasn't available. Then that address could be replaced upon publish. Sounds complex; lots of moving parts.
+			- I could also
+	- ## Issues - Microfreak with No Sound
+		- I had some weird issues with the microfreak not emitting any signals this morning. I had to turn it off and back on. Not sure what that was about ...
+	- ## [[Ghost Gardener]] requests
+		- TODO create [[Logseq/Entity/Card]]s for memorizing the positions of the modes above, for example, [[Launchpad/Scale/Dorian/Bebop]]
+		- TODO file a [[Logseq/Entity/Question]] - what does it mean when the paraphonic / unison button on the [[Microfreak]] blinks?
