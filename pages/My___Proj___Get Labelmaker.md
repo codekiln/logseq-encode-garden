@@ -1,0 +1,36 @@
+- # Get Labelmaker
+	- Goal: a personal asset system. Every possession gets a permanent ID, a record in a database, and a printed QR label. The label printer is one output device of that system.
+	- ## Requirements
+		- Stable identifiers: each possession has one permanent ID and one matching record.
+		- Generated labels: the inventory software, and later AI agents, produce and print QR labels without retyping data into a printer maker's app.
+		- Labels that last on camping gear, cables, adapters, storage bins, and objects of other sizes and materials.
+		- Strong macOS automation matters more than a handheld unit's keyboard.
+	- ## Software
+		- [[Homebox]] already has nested locations, asset records, photos, custom fields, label templates, a REST API, and a third-party MCP server. Try it with that server before buying a printer. That settles label formats, minimum QR dimensions, and automation needs.
+		- Homebox's built-in label presets include Brother DK rolls, which are the QL line's stock. A P-touch loaded with TZe tape takes a Custom size in millimetres.
+		- Open question: whether Homebox models kits and packing lists with weight totals, or whether that needs a layer on top.
+	- ## Printers
+		- Brother P-touch printers take TZe laminated tape.
+		- [PT-P710BT (P-touch CUBE Plus)](https://www.brother-usa.com/products/PTP710BT): USB to a Mac, Bluetooth to a phone, rechargeable battery, TZe tape up to 24 mm. Candidate for a USB-connected prototype on the Mac.
+		- [PT-P750W](https://www.brother-usa.com/products/ptp750w): USB and Wi-Fi, automatic half cut, TZe tape up to 24 mm. Candidate if a networked print service runs permanently.
+		- [PT-P910BT (P-touch CUBE XP)](https://www.brother-usa.com/products/ptp910bt): 360 dpi, TZe tape up to 36 mm, USB-C and Bluetooth. Suits large asset tags or denser QR codes, and goes beyond what a first version needs.
+	- ## Printing from a Mac
+		- [nbuchwitz/ptouch](https://github.com/nbuchwitz/ptouch): Python library and command-line tool for Brother P-touch printers over USB or network. It prints text and image labels, so a generated QR image goes straight to the printer without Brother's design app. Supports the PT-P710BT, PT-P750W, PT-P910BT, and others.
+			- On the PT-P710BT, multi-label jobs use full cut, since the printer ignores the half-cut command.
+		- [danielrosehill/ptouch-cube-print-bridge](https://github.com/danielrosehill/ptouch-cube-print-bridge): an HTTP print bridge for a PT-P710BT wired by USB to a home server, with snippets for a home-inventory web app that renders the QR label in the browser. It uses the C tool `ptouch-print` with a patch for the PT-P710BT. An early project, and a precedent for this architecture.
+		- Test the whole print path on macOS before relying on it.
+	- ## Data model
+		- Identity, storage location, and kit membership are separate relationships.
+		- Asset: a Therm-a-Rest sleeping pad, 410 g. Its weight is recorded once.
+		- Location: Home / Closet / Camping / Bin 03.
+		- Kit or collection: a three-season backpacking kit.
+		- Label: a QR code that identifies asset `7K3P`.
+		- The pad lives in Bin 03 and belongs to several saved packing lists. A trip's total weight is computed from the selected items and quantities. A packing list separates base weight, consumables, and worn weight.
+	- ## Labels
+		- A label carries only an opaque ID or URL, such as `https://assets.example.com/a/7K3P`. The URL stays fixed when the item changes location, is renamed, or changes weight. A phone scans it, signs in to the application, and loads the current record.
+		- Location and other personal details stay off the physical label.
+		- Cables and dongles: a short human-readable ID or a cable flag. A QR code that small is unreadable.
+		- Fabric camping gear: a QR-coded hang tag on a loop can work better than adhesive.
+	- ## Workflow
+		- An agent creates an asset record, attaches a photo and specifications, requests a label print, and later updates the location. The inventory database stays the source of truth.
+		- Later: scan an item, then scan a location, and the system records the move. Example: scan the sleeping pad, then Bin 03.
