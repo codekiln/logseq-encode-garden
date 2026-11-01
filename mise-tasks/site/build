@@ -1,0 +1,196 @@
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.11"
+# ///
+#MISE description="Publish the garden as a static website with Logseq Gardener"
+#MISE tools={uv="0.13.6"}
+#USAGE flag "--output <path>" required=#true help="New directory for the website, outside the garden"
+#USAGE flag "--lsg <path>" default="lsg" help="Logseq Gardener executable"
+#USAGE flag "--diagnostics <path>" help="File that receives lsg's diagnostics"
+"""Publish every page and journal of the garden with `lsg publish`.
+
+    mise run site:build --output /tmp/encode-site
+    open /tmp/encode-site/index.html
+"""
+from __future__ import annotations
+
+import argparse
+import collections
+import hashlib
+import json
+import os
+from pathlib import Path
+import re
+import subprocess
+import sys
+import time
+import unicodedata
+
+GRAPH = Path(os.environ.get('MISE_PROJECT_ROOT') or Path(__file__).resolve().parents[2])
+# Logseq shows pages/contents.md in the right sidebar, so lsg lists no page for it.
+SIDEBAR_PAGES = {'contents'}
+
+
+def leading_properties(text: str) -> dict[str, str]:
+    """Properties of the page's first root block, keyed without ASCII case."""
+    found = {}
+    for number, line in enumerate(text.splitlines()):
+        line = line.strip()
+        if number == 0 and line.startswith('- '):
+            line = line[2:]
+        match = re.fullmatch(r'([A-Za-z0-9_-]+)::\s*(.*)', line)
+        if not match:
+            break
+        found[match[1].lower()] = match[2].strip()
+    return found
+
+
+def page_title(path: Path) -> str:
+    """Title as lsg derives it for :file/name-format :triple-lowbar."""
+    title = leading_properties(path.read_text(encoding='utf-8')).get('title')
+    if title:
+        return title
+    stem = path.name[:-len('.md')].replace('___', '/')
+    stem = re.sub(r'%([0-7][0-9A-Fa-f])', lambda m: chr(int(m[1], 16)), stem)
+    return '/'.join(part for part in stem.split('/') if part)
+
+
+def page_key(name: str) -> str:
+    return unicodedata.normalize('NFC', name.strip()).lower()
+
+
+def page_files(graph: Path) -> list[Path]:
+    return sorted(path for path in (graph / 'pages').iterdir()
+                  if path.suffix == '.md' and path.is_file())
+
+
+def namespace_roots(titles) -> list[str]:
+    """lsg publishes only selected namespaces, so select the root of every title.
+
+    Replace with a single flag once lsg has one:
+    https://github.com/codekiln/logseq-gardener/issues/350
+    """
+    return sorted({title.split('/')[0].strip() for title in titles})
+
+
+def check_every_page_published(titles: dict[Path, str], site: dict, diagnostics: str):
+    published = {page['id'] for page in site['pages'] if page['id']}
+    missing = [path for path, title in titles.items()
+               if page_key(title) not in published | SIDEBAR_PAGES
+               and f'pages/{path.name}: Page withheld' not in diagnostics]
+    if missing:
+        names = '\n'.join(f'  pages/{path.name}' for path in missing)
+        raise SystemExit(f'lsg left out {len(missing)} pages:\n{names}')
+
+
+def share_repeated_styles(output: Path) -> int:
+    """Move <style> blocks that every top-level page repeats into one cached file.
+
+    The repeated styles add 341 MB to a site that GitHub Pages caps at 1 GB.
+    Remove once lsg links its own stylesheet:
+    https://github.com/codekiln/logseq-gardener/issues/348
+    """
+    pages = sorted(output.glob('*.html'))
+    texts = {page: page.read_text(encoding='utf-8') for page in pages}
+    counts = collections.Counter()
+    for text in texts.values():
+        head = text[:text.find('</head>')]
+        counts.update(set(re.findall(r'<style(?: [^>]*)?>.*?</style>', head, re.S)))
+    shared = [block for block, count in counts.items() if count == len(pages)]
+    if not shared:
+        return 0
+    css = '\n'.join(re.sub(r'^<style[^>]*>|</style>$', '', block) for block in shared)
+    name = f'lsg-shared-{hashlib.sha256(css.encode()).hexdigest()[:16]}.css'
+    (output / name).write_text(css, encoding='utf-8')
+    link = f'<link rel="stylesheet" href="{name}">'
+    for page, text in texts.items():
+        for index, block in enumerate(shared):
+            text = text.replace(block, link if index == 0 else '', 1)
+        page.write_text(text, encoding='utf-8')
+    return len(pages) * len(css)
+
+
+LEGACY_LOADER = '''<script>(()=>{let pending=false;function load(){
+const hash=location.hash;if(pending||!/^#\\/(page|all-pages|graph)\\//.test(hash+'/'))return;pending=true;
+fetch('legacy-routes.json').then(r=>r.json()).then(routes=>{let target=null;
+if(hash.startsWith('#/page/')){let name;try{name=decodeURIComponent(hash.slice(7).split('?')[0])}catch{return}
+name=name.trim().normalize('NFC').toLowerCase();target=Object.hasOwn(routes,name)?routes[name]:null}
+else if(hash.startsWith('#/all-pages'))target='pages.html';
+else if(hash.startsWith('#/graph'))target='graph.html';
+if(target)location.replace(target)}).catch(()=>{}).finally(()=>{pending=false})}
+window.addEventListener('hashchange',load);load()})();</script>'''
+
+
+def legacy_routes(output: Path, site: dict, aliases: dict[str, str]):
+    """Send publish-spa's #/page/<name> links to the page lsg published."""
+    routes = {page['id']: page['url'] for page in site['pages']
+              if page['id'] and page['kind'] in {'page', 'journal', 'namespace'}}
+    for alias, title in aliases.items():
+        if alias not in routes and page_key(title) in routes:
+            routes[alias] = routes[page_key(title)]
+    (output / 'legacy-routes.json').write_text(json.dumps(routes, ensure_ascii=False), encoding='utf-8')
+    index = output / 'index.html'
+    index.write_text(index.read_text(encoding='utf-8').replace('</head>', LEGACY_LOADER + '</head>', 1),
+                     encoding='utf-8')
+
+
+def page_aliases(titles: dict[Path, str]) -> dict[str, str]:
+    claims = collections.defaultdict(set)
+    for path, title in titles.items():
+        aliases = leading_properties(path.read_text(encoding='utf-8')).get('alias', '')
+        for alias in re.findall(r'\[\[([^\]]+)\]\]|([^,]+)', aliases):
+            name = page_key(alias[0] or alias[1])
+            if name:
+                claims[name].add(title)
+    return {alias: next(iter(owners)) for alias, owners in claims.items() if len(owners) == 1}
+
+
+def directory_size(path: Path) -> tuple[int, int]:
+    files = [item for item in path.rglob('*') if item.is_file()]
+    return len(files), sum(item.stat().st_size for item in files)
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument('--output', required=True, type=Path)
+    parser.add_argument('--lsg', default='lsg')
+    parser.add_argument('--diagnostics', type=Path)
+    args = parser.parse_args()
+
+    titles = {path: page_title(path) for path in page_files(GRAPH)}
+    command = [args.lsg, 'publish', '--format', 'json', '--graph', str(GRAPH),
+               '--output', str(args.output), '--filename-format', 'triple-lowbar',
+               '--journals', '--search', '--timings']
+    for root in namespace_roots(titles.values()):
+        command += ['--include', root]
+
+    started = time.monotonic()
+    result = subprocess.run(command, capture_output=True, text=True)
+    elapsed = time.monotonic() - started
+    if args.diagnostics:
+        args.diagnostics.write_text(result.stderr, encoding='utf-8')
+    if result.returncode != 0:
+        sys.stderr.write(result.stderr[-4000:])
+        raise SystemExit(f'lsg publish exited {result.returncode}')
+    report = json.loads(result.stdout)
+    site = json.loads((args.output / 'lsg-site.json').read_text(encoding='utf-8'))
+    if site.get('apiVersion') != 1:
+        raise SystemExit(f'Unsupported lsg-site.json apiVersion: {site.get("apiVersion")}')
+    check_every_page_published(titles, site, result.stderr)
+
+    saved = share_repeated_styles(args.output)
+    legacy_routes(args.output, site, page_aliases(titles))
+    (args.output / '.nojekyll').touch()
+
+    files, size = directory_size(args.output)
+    timings = ', '.join(f'{item["phase"]} {item["ms"] / 1000:.1f}' for item in report['timings'])
+    print(f'Published {report["pages"]} pages, {report["journals"]} journals and {report["assets"]} assets '
+          f'from {len(titles)} page files; withheld {report["withheld_pages"]}; '
+          f'{report["diagnostic_count"]} diagnostics.')
+    print(f'lsg publish took {elapsed:.1f} s ({timings}).')
+    print(f'Website: {files} files, {size / 1e6:.0f} MB after sharing {saved / 1e6:.0f} MB of repeated styles.')
+    print(f'Open {args.output / "index.html"}')
+
+
+if __name__ == '__main__':
+    main()

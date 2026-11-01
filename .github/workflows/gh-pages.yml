@@ -3,44 +3,87 @@ name: Publish
 on:
   push:
     branches: [ main ]
+  pull_request:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: publish-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Guard against publish-spa sentinel collision
+      - uses: astral-sh/setup-uv@v6
+
+      # To upgrade, set GARDENER_VERSION to a newer release tag and GARDENER_SHA256
+      # to the hash in that release's logseq-gardener-x86_64-unknown-linux-gnu.tar.xz.sha256.
+      - name: Install released Logseq Gardener
+        env:
+          GARDENER_VERSION: v0.0.7
+          GARDENER_SHA256: aae8c9bc5c7198d10c80d66e2ba9120352d92f39f1a8019a0c9a96a3792d3177
+          GARDENER_TARGET: x86_64-unknown-linux-gnu
         run: |
-          if grep -rnE 'logseq____&(amp|lt|gt|quot|apos);' pages journals; then
-            echo "::error::Literal publish-spa sentinel token found in graph content; it will corrupt the published JSON and blank the site."
-            exit 1
-          fi
+          archive="logseq-gardener-$GARDENER_TARGET.tar.xz"
+          download="$RUNNER_TEMP/gardener-download"
+          mkdir -p "$download" "$RUNNER_TEMP/gardener/bin"
+          curl --fail --silent --show-error --location --retry 3 \
+            --output "$download/$archive" \
+            "https://github.com/codekiln/logseq-gardener/releases/download/$GARDENER_VERSION/$archive"
+          echo "$GARDENER_SHA256  $download/$archive" | sha256sum --check --strict
+          tar -xJf "$download/$archive" -C "$download"
+          install -m 0755 "$download/logseq-gardener-$GARDENER_TARGET/lsg" "$RUNNER_TEMP/gardener/bin/lsg"
+          "$RUNNER_TEMP/gardener/bin/lsg" --version
 
-      - name: Logseq Publish
-        uses: logseq/publish-spa@main
+      # lsg writes the site outside the garden it reads.
+      - name: Publish with Logseq Gardener
+        run: |
+          mise-tasks/site/build --lsg "$RUNNER_TEMP/gardener/bin/lsg" \
+            --output "$RUNNER_TEMP/www" --diagnostics "$RUNNER_TEMP/lsg-diagnostics.txt"
+
+      - name: Save lsg diagnostics
+        uses: actions/upload-artifact@v4
         with:
-          graph-directory: .
-          output-directory: www
-          accent-color: indigo
+          name: lsg-diagnostics
+          path: ${{ runner.temp }}/lsg-diagnostics.txt
+          retention-days: 7
 
-      - name: Add .nojekyll file
-        run: touch www/.nojekyll
+      - name: Mark the published revision
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          printf '{"revision": "%s", "run": "%s"}\n' "$GITHUB_SHA" "$GITHUB_RUN_ID" > "$RUNNER_TEMP/www/publication.json"
 
-      - name: Compress graph data (stay under GitHub's 100 MB file limit)
-        run: python3 .github/scripts/compress_logseq_db.py
-
+      # Every page names the content-hashed search manifest, so each build rewrites
+      # every page; one commit keeps gh-pages from accumulating whole-site copies.
+      # https://github.com/codekiln/logseq-gardener/issues/349
       - name: Deploy to gh-pages
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: www
-          clean: true
-          clean-exclude: |
-            .nojekyll
+          folder: ${{ runner.temp }}/www
+          single-commit: true
+
+      - name: Check that GitHub Pages serves this revision
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          url="https://codekiln.github.io/logseq-encode-garden/publication.json?run=$GITHUB_RUN_ID"
+          for attempt in $(seq 1 90); do
+            if curl --fail --silent --header 'Cache-Control: no-cache' "$url" | grep -q "\"$GITHUB_SHA\""; then
+              echo "GitHub Pages serves $GITHUB_SHA after $((attempt * 10)) s"
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "::error::GitHub Pages did not serve $GITHUB_SHA within 15 minutes"
+          exit 1
