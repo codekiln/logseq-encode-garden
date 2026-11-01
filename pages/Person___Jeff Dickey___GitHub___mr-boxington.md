@@ -1,0 +1,4 @@
+- GitHub: [jdx/mr-boxington](https://github.com/jdx/mr-boxington)
+- Docs: https://mr-boxington.jdx.dev/
+- Author: [[Person/Jeff Dickey]] (same ecosystem as [[mise]])
+- Related: [[Mr Boxington]]

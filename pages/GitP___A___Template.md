@@ -1,0 +1,2 @@
+- This knowledge garden namespace contains and concerns templates for [[Ableton/Live/Set]]s.
+- In [[Ghost in the Patch]], as in other areas of life, I follow [[My/Principle/Declarative over Imperative]] where possible and practical. This area of the garden is designed to help me lean towards declaring what I want to be in my ableton live sets and how they should work. Over time, they may also have a log of changes.

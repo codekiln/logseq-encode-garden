@@ -2,10 +2,11 @@ logseq-entity:: [[Logseq/Entity/Book/Section/Level 1]]
 up:: [[Zoom H5/UG]]
 prev:: [[Zoom H5/UG/02 Introduction]]
 next:: [[Zoom H5/UG/04 Mics]]
+
 - # Names of parts
 	- ## Left and front
 		- Left side and front panel
-			- ![01 Left and front](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___03%20Parts___Asset___01-Left-and-front.png)
+			- ![01 Left and front](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___03%20Parts___Asset___01-Left-and-front.png){:height 310, :width 444}
 		- The left side carries the **LINE OUT** jack, the **PHONE** jack, the **VOLUME** +/− button for headphone and speaker level, the **USB** port, and the **POWER/HOLD** switch.
 		- The XY mic sits on top, with its own **Input volume L/R** knob. Below the display are the **Input volume 1** and **Input volume 2** knobs, one per bottom input.
 		- The **Track buttons** **L**, **R**, **1** and **2** select which inputs record; each has an indicator above it.

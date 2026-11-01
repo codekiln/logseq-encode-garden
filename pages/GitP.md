@@ -1,5 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Podcast/Episode]]
 created-by:: [[Person/codekiln]]
+alias:: [[Ghost in the Patch]]
 
 - # Ghost in the Patch
 	- GitP is the parent namespace for all things related to Ghost in the Patch, a podcast where we create synth presets and use them.

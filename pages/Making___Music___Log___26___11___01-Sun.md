@@ -1,0 +1,4 @@
+- [[2026-11-01 Sun]]
+	- Working on revising the [[GitP/A/Template]]s after this week's sessions.
+	- ## New template
+		- I had an AI agent draft [[GitP/A/Template/Pattern A and B]] the other day, which resulted in an ableton live template.
