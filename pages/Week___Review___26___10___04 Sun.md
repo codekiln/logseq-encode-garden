@@ -45,7 +45,7 @@ date-created:: [[2026-10-04 Sun]]
 				- My Oura Ring is less than a year old, and it's only recording my information on less than half of the nights I wear it. I used the in-app support chatbot to run a diagnostic, and apparently they are going to send me a new ring, but it hasn't been shipped yet, and that was five days ago or so; who knows how long it will take to get here. As a result, some of my health and wellness challenges related that I was recording in Oura are suffering in terms of continuity. For example, a key thing I'm working on is improving my [[HRV]], and until I find an alternative method of measuring that or receive my new Oura Ring, that challenge is pretty much on hold.
 					- TODO create a [[Logseq/Entity/Diataxis/Explanation]], [[Logseq/Entity/Term/Acronym]] for Heart Rate Variability.
 			- #### Reading and Adopting [[Person/Andrew Huberman/Book/26/Protocols]]
-				- TODO import [[Person/Andrew Huberman/Book/26/Protocols]] book
+				- DONE import [[Person/Andrew Huberman/Book/26/Protocols]] book
 				- I'm about two chapters into this book. It's good so far.
 				- It's already affected my behavior a bit.
 					- I'm getting outside and trying to get light in the morning. The sun rises so late these days, so it takes a bit of scheduling.
