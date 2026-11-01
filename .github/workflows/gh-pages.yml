@@ -60,7 +60,8 @@ jobs:
 
       - name: Mark the published revision
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-        run: printf '{"revision": "%s", "run": "%s"}\n' "$GITHUB_SHA" "$GITHUB_RUN_ID" > "$RUNNER_TEMP/www/publication.json"
+        run: |
+          printf '{"revision": "%s", "run": "%s"}\n' "$GITHUB_SHA" "$GITHUB_RUN_ID" > "$RUNNER_TEMP/www/publication.json"
 
       # Every page names the content-hashed search manifest, so each build rewrites
       # every page; one commit keeps gh-pages from accumulating whole-site copies.
