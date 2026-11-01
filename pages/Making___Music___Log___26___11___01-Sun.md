@@ -1,4 +1,22 @@
 - [[2026-11-01 Sun]]
 	- Working on revising the [[GitP/A/Template]]s after this week's sessions.
-	- ## New template
+	- ## New Ghost in the Patch Ableton template
 		- I had an AI agent draft [[GitP/A/Template/Pattern A and B]] the other day, which resulted in an ableton live template.
+		- I ended up saving a new GitP ableton template that I made by hand. It had some issues with it, unfortunately; specifically, only Layer A's music was completely recorded.
+	- ## New GitP session today -
+		- ### [[Microfreak/Preset/259 Infini Pad]]
+			- 05:15 - the bass comes in - Infini Pad works great as a bass if the [[Microfreak/UI/Oscillator/Knob/Shape]] is turned up so the noise comes through.
+			- 07:05 - The minor seventh is a great bass interval.
+			- 08:45 - the filter / cutoff adjustment, makes its warbly commentary.
+			- 09:02 - the bottom drops
+			- 10:06 - the pulsar returns
+			- 13:00 - the long sky's cloud, the hair's blown face
+			- 13:50 - a cave of spectacles receives the formula
+			- 17:00 - pulling back the grid, washing the curtain
+		- ### 18:16 - `8bitfi` [[Microfreak/Preset/260 8bitfi]] starts
+			- we actually first start to hear it
+			- 19:35 - we first start to hear that old warbling sound, creepy
+			- 21:15 - flippity low helicopter
+			- 21:35 - question - under assign 3 [[Microfreak/Matrix/Assn/3]] is the "move" destination
+			- 21:45 - using some pitch bends to destroy the blanket
+			-
