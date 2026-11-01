@@ -17,6 +17,7 @@ from __future__ import annotations
 import argparse
 import collections
 import hashlib
+import html
 import json
 import os
 from pathlib import Path
@@ -25,6 +26,7 @@ import subprocess
 import sys
 import time
 import unicodedata
+from urllib.parse import unquote
 
 GRAPH = Path(os.environ.get('MISE_PROJECT_ROOT') or Path(__file__).resolve().parents[2])
 # Logseq shows pages/contents.md in the right sidebar, so lsg lists no page for it.
@@ -83,14 +85,21 @@ def check_every_page_published(titles: dict[Path, str], site: dict, diagnostics:
         raise SystemExit(f'lsg left out {len(missing)} pages:\n{names}')
 
 
-def share_repeated_styles(output: Path) -> int:
-    """Move <style> blocks that every top-level page repeats into one cached file.
+def page_documents(output: Path, site: dict) -> list[Path]:
+    """The root pages and every page's readable folder index.html."""
+    folders = {output / unquote(page['url']) / 'index.html' for page in site['pages'] if page['url'].endswith('/')}
+    return sorted(set(output.glob('*.html')) | folders)
+
+
+def share_repeated_styles(output: Path, site: dict) -> int:
+    """Move <style> blocks that every page repeats into one cached file.
 
     The repeated styles add 341 MB to a site that GitHub Pages caps at 1 GB.
-    Remove once lsg links its own stylesheet:
+    Each page's <base href> leads to the output root, so one root-relative link serves
+    every folder. Remove once lsg links its own stylesheet:
     https://github.com/codekiln/logseq-gardener/issues/348
     """
-    pages = sorted(output.glob('*.html'))
+    pages = page_documents(output, site)
     texts = {page: page.read_text(encoding='utf-8') for page in pages}
     counts = collections.Counter()
     for text in texts.values():
@@ -134,6 +143,39 @@ def legacy_routes(output: Path, site: dict, aliases: dict[str, str]):
                      encoding='utf-8')
 
 
+HASHED_REDIRECT = ('<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex">'
+                   '<link rel="canonical" href="{url}"><meta http-equiv="refresh" content="0; url={url}">'
+                   '<script>location.replace("{url}"+location.hash)</script><a href="{url}">{title}</a>')
+
+
+def title_digest(title: str) -> str:
+    """lsg's 64-bit FNV-1a digest of a title, which named pages p-<digest>.html before --readable-urls."""
+    value = 0xcbf29ce484222325
+    for byte in title.encode('utf-8'):
+        value = ((value ^ byte) * 0x100000001b3) & 0xFFFFFFFFFFFFFFFF
+    return f'{value:016x}'
+
+
+def hashed_redirects(output: Path, site: dict) -> int:
+    """Keep links to the p-<digest>.html files of lsg v0.0.7 builds working.
+
+    A page whose title cannot name folders is still published at that file.
+    """
+    count = 0
+    for page in site['pages']:
+        if page['kind'] not in {'page', 'journal', 'namespace'}:
+            continue
+        target = output / f'p-{title_digest(page["title"])}.html'
+        if page['url'] == target.name:
+            continue
+        if target.exists():
+            raise SystemExit(f'{target.name} for {page["title"]} already exists')
+        target.write_text(HASHED_REDIRECT.format(url=html.escape(page['url']), title=html.escape(page['title'])),
+                          encoding='utf-8')
+        count += 1
+    return count
+
+
 def page_aliases(titles: dict[Path, str]) -> dict[str, str]:
     claims = collections.defaultdict(set)
     for path, title in titles.items():
@@ -160,7 +202,7 @@ def main():
     titles = {path: page_title(path) for path in page_files(GRAPH)}
     command = [args.lsg, 'publish', '--format', 'json', '--graph', str(GRAPH),
                '--output', str(args.output), '--filename-format', 'triple-lowbar',
-               '--journals', '--search', '--timings']
+               '--journals', '--search', '--readable-urls', '--timings']
     for root in namespace_roots(titles.values()):
         command += ['--include', root]
 
@@ -178,8 +220,9 @@ def main():
         raise SystemExit(f'Unsupported lsg-site.json apiVersion: {site.get("apiVersion")}')
     check_every_page_published(titles, site, result.stderr)
 
-    saved = share_repeated_styles(args.output)
+    saved = share_repeated_styles(args.output, site)
     legacy_routes(args.output, site, page_aliases(titles))
+    redirects = hashed_redirects(args.output, site)
     (args.output / '.nojekyll').touch()
 
     files, size = directory_size(args.output)
@@ -189,6 +232,7 @@ def main():
           f'{report["diagnostic_count"]} diagnostics.')
     print(f'lsg publish took {elapsed:.1f} s ({timings}).')
     print(f'Website: {files} files, {size / 1e6:.0f} MB after sharing {saved / 1e6:.0f} MB of repeated styles.')
+    print(f'Kept {redirects} p-<digest>.html links as redirects to readable URLs.')
     print(f'Open {args.output / "index.html"}')
 
 
