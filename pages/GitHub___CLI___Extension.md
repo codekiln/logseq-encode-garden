@@ -4,6 +4,6 @@ alias:: [[GitHub CLI Extensions]], [[gh extension]]
 	- Collection of GitHub CLI extensions
 	- ## Extensions
 		- [[gh-dash]]
-		- [[GitHub/Agentic Workflow]]
+		- [[gh-aw]]
 		- [[GitHub/CLI/Extension/gh-sub-issue]]
 		- [[GitHub/CLI/Extension/gh-issue-dependency]]
