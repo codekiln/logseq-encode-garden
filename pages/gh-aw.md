@@ -1,3 +1,4 @@
+alias:: [[GitHub/Agentic Workflow]]
 logseq-entity:: [[Logseq/Entity/Software/Project]]
 
 - # [GitHub Agentic Workflows](https://github.github.com/gh-aw/)
