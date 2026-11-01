@@ -17,6 +17,12 @@ node = "lts"
 # under .rulesync/skills/ (readwise-cli, triage, quiz, …) and compiled by rulesync.
 # Auth is per-user: `readwise login` (or `login-with-token` for headless agents).
 "npm:@readwise/cli" = "latest"
+# lsg (Logseq Gardener) finds a page's file for agents working in this garden:
+# `lsg lookup NAME --graph . --filename-format triple-lowbar` prints the file of the
+# page named by its title, an alias or a journal date. `lsg help` lists the current
+# commands and flags. The global mise config declares the same "latest", so mise
+# uses the globally installed lsg here. See [[Person/codekiln/GitHub/logseq-gardener]].
+"github:codekiln/logseq-gardener" = "latest"
 
 [env]
 # mise's npm backend (aube) refuses packages under its lowDownloadThreshold
