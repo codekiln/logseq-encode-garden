@@ -87,7 +87,7 @@ def check_every_page_published(titles: dict[Path, str], site: dict, diagnostics:
 
 def page_documents(output: Path, site: dict) -> list[Path]:
     """The root pages and every page's readable folder index.html."""
-    folders = {output / unquote(page['url']) / 'index.html' for page in site['pages']}
+    folders = {output / unquote(page['url']) / 'index.html' for page in site['pages'] if page['url'].endswith('/')}
     return sorted(set(output.glob('*.html')) | folders)
 
 
@@ -157,10 +157,17 @@ def title_digest(title: str) -> str:
 
 
 def hashed_redirects(output: Path, site: dict) -> int:
-    """Keep links to the p-<digest>.html files of lsg v0.0.7 builds working."""
+    """Keep links to the p-<digest>.html files of lsg v0.0.7 builds working.
+
+    A page whose title cannot name folders is still published at that file.
+    """
     count = 0
     for page in site['pages']:
+        if page['kind'] not in {'page', 'journal', 'namespace'}:
+            continue
         target = output / f'p-{title_digest(page["title"])}.html'
+        if page['url'] == target.name:
+            continue
         if target.exists():
             raise SystemExit(f'{target.name} for {page["title"]} already exists')
         target.write_text(HASHED_REDIRECT.format(url=html.escape(page['url']), title=html.escape(page['title'])),
