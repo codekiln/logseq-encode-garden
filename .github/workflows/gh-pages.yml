@@ -22,7 +22,12 @@ jobs:
       contents: write
 
     steps:
+      # lsg dates each page from the commits that touched its file. A blobless
+      # clone holds every commit and tree without the repository's 11 GB of old files.
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          filter: blob:none
 
       - uses: astral-sh/setup-uv@v6
 
@@ -50,6 +55,13 @@ jobs:
         run: |
           mise-tasks/site/build --lsg "$RUNNER_TEMP/gardener/bin/lsg" \
             --output "$RUNNER_TEMP/www" --diagnostics "$RUNNER_TEMP/lsg-diagnostics.txt"
+
+      - name: Check that pages carry their own dates
+        run: |
+          if grep -F 'shallow clone' "$RUNNER_TEMP/lsg-diagnostics.txt"; then
+            echo "::error::All pages would show the checkout's single commit as every page's date"
+            exit 1
+          fi
 
       - name: Save lsg diagnostics
         uses: actions/upload-artifact@v4
