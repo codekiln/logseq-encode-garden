@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><base href="../"><title>Unlinked references: OpenAI/Model/o3/Mini</title><script type="application/json" class="references-data">{"count":6,"files":["p-2dea91bd78392416-unlinked-1.html"]}</script></head><body><main><h1>Unlinked references: <a href="p-2dea91bd78392416.html">OpenAI/Model/o3/Mini</a></h1><div class="references-fragment"><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-4fd8b82faf98f64e.html">2025-08-21 Thu</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/cline/cline/issues/1634?utm_source=chatgpt.com">o1 / o3-mini via Azure: &quot;temperature&quot; is not supported with this model. · Issue #1634 · cline/cline</a></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-3bb465cdc6db6662.html">2025-04-18 Fri</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><blockquote><p>Up to 2.5 million tokens per day across gpt-4.1-mini, gpt-4.1-nano, gpt-4o-mini, o1-mini, o3-mini and o4-mini<br></p></blockquote></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-a1e801d4deae83f5.html">CursorAI/Settings/API Keys/OpenAI API Keys</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><blockquote><p>OpenAI’s reasoning models (o1, o1-mini, o3-mini) require special configuration and are not currently supported with custom API keys. Note: this can cost more than pro and won&#39;t work for custom model features.<br></p></blockquote></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-d49617c64a9bc1b7.html">LangSmith/Docs/Observability Studio/LangGraph assistant configuration</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block" data-lang="python"><div class="extensions__code"><div class="extensions__code-lang">python</div><pre class="lsg-code"><code><span class="line">		  <span class="cm-comment">## Using Pydantic</span></span>
+<span class="line">		  <span class="cm-keyword">from </span><span class="cm-variable">pydantic </span><span class="cm-keyword">import </span><span class="cm-variable">BaseModel</span>, <span class="cm-variable">Field</span></span>
+<span class="line">		  <span class="cm-keyword">from </span><span class="cm-variable">typing </span><span class="cm-keyword">import </span><span class="cm-variable">Annotated</span>, <span class="cm-variable">Literal</span></span>
+<span class="line">		  </span>
+<span class="line">		  <span class="cm-keyword">class </span><span class="cm-def">Configuration</span>(<span class="cm-type">BaseModel</span>):</span>
+<span class="line">		      <span class="cm-comment">&quot;&quot;&quot;The configuration for the agent.&quot;&quot;&quot;</span></span>
+<span class="line">		  </span>
+<span class="line">		      <span class="cm-variable">system_prompt</span>: <span class="cm-type">str </span><span class="cm-operator">= </span><span class="cm-variable">Field</span>(</span>
+<span class="line">		          <span class="cm-variable">default</span><span class="cm-operator">=</span><span class="cm-string">&quot;You are a helpful AI assistant.&quot;</span>,</span>
+<span class="line">		          <span class="cm-variable">description</span><span class="cm-operator">=</span><span class="cm-string">&quot;The system prompt to use for the agent&#39;s interactions. &quot;</span></span>
+<span class="line">		          <span class="cm-string">&quot;This prompt sets the context and behavior for the agent.&quot;</span>,</span>
+<span class="line">		          <span class="cm-variable">json_schema_extra</span><span class="cm-operator">=</span>{</span>
+<span class="line">		              <span class="cm-string">&quot;langgraph_nodes&quot;</span>: [<span class="cm-string">&quot;call_model&quot;</span>],</span>
+<span class="line">		              <span class="cm-string">&quot;langgraph_type&quot;</span>: <span class="cm-string">&quot;prompt&quot;</span>,</span>
+<span class="line">		          },</span>
+<span class="line">		      )</span>
+<span class="line">		  </span>
+<span class="line">		      <span class="cm-variable">model</span>: <span class="cm-variable">Annotated</span>[</span>
+<span class="line">		          <span class="cm-variable">Literal</span>[</span>
+<span class="line">		              <span class="cm-string">&quot;anthropic/claude-sonnet-4-5-20250929&quot;</span>,</span>
+<span class="line">		              <span class="cm-string">&quot;anthropic/claude-haiku-4-5-20251001&quot;</span>,</span>
+<span class="line">		              <span class="cm-string">&quot;openai/o1&quot;</span>,</span>
+<span class="line">		              <span class="cm-string">&quot;openai/gpt-4o-mini&quot;</span>,</span>
+<span class="line">		              <span class="cm-string">&quot;openai/o1-mini&quot;</span>,</span>
+<span class="line">		              <span class="cm-string">&quot;openai/o3-mini&quot;</span>,</span>
+<span class="line">		          ],</span>
+<span class="line">		          {<span class="cm-string">&quot;__template_metadata__&quot;</span>: {<span class="cm-string">&quot;kind&quot;</span>: <span class="cm-string">&quot;llm&quot;</span>}},</span>
+<span class="line">		      ] <span class="cm-operator">= </span><span class="cm-variable">Field</span>(</span>
+<span class="line">		          <span class="cm-variable">default</span><span class="cm-operator">=</span><span class="cm-string">&quot;openai/gpt-4o-mini&quot;</span>,</span>
+<span class="line">		          <span class="cm-variable">description</span><span class="cm-operator">=</span><span class="cm-string">&quot;The name of the language model to use for the agent&#39;s main interactions. &quot;</span></span>
+<span class="line">		          <span class="cm-string">&quot;Should be in the form: provider/model-name.&quot;</span>,</span>
+<span class="line">		          <span class="cm-variable">json_schema_extra</span><span class="cm-operator">=</span>{<span class="cm-string">&quot;langgraph_nodes&quot;</span>: [<span class="cm-string">&quot;call_model&quot;</span>]},</span>
+<span class="line">		      )</span>
+<span class="line">		  </span>
+<span class="line">		  <span class="cm-comment">## Using Dataclasses</span></span>
+<span class="line">		  <span class="cm-keyword">from </span><span class="cm-variable">dataclasses </span><span class="cm-keyword">import </span><span class="cm-variable">dataclass</span>, <span class="cm-variable">field</span></span>
+<span class="line">		  </span>
+<span class="line">		  <span class="cm-meta">@</span><span class="cm-variable">dataclass</span><span class="cm-meta">(</span><span class="cm-variable">kw_only</span><span class="cm-operator">=</span><span class="cm-atom">True</span><span class="cm-meta">)</span></span>
+<span class="line">		  <span class="cm-keyword">class </span><span class="cm-def">Configuration</span>:</span>
+<span class="line">		      <span class="cm-comment">&quot;&quot;&quot;The configuration for the agent.&quot;&quot;&quot;</span></span>
+<span class="line">		  </span>
+<span class="line">		      <span class="cm-variable">system_prompt</span>: <span class="cm-type">str </span><span class="cm-operator">= </span><span class="cm-variable">field</span>(</span>
+<span class="line">		          <span class="cm-variable">default</span><span class="cm-operator">=</span><span class="cm-string">&quot;You are a helpful AI assistant.&quot;</span>,</span>
+<span class="line">		          <span class="cm-variable">metadata</span><span class="cm-operator">=</span>{</span>
+<span class="line">		              <span class="cm-string">&quot;description&quot;</span>: <span class="cm-string">&quot;The system prompt to use for the agent&#39;s interactions. &quot;</span></span>
+<span class="line">		              <span class="cm-string">&quot;This prompt sets the context and behavior for the agent.&quot;</span>,</span>
+<span class="line">		              <span class="cm-string">&quot;json_schema_extra&quot;</span>: {<span class="cm-string">&quot;langgraph_nodes&quot;</span>: [<span class="cm-string">&quot;call_model&quot;</span>]},</span>
+<span class="line">		          },</span>
+<span class="line">		      )</span>
+<span class="line">		  </span>
+<span class="line">		      <span class="cm-variable">model</span>: <span class="cm-variable">Annotated</span>[<span class="cm-type">str</span>, {<span class="cm-string">&quot;__template_metadata__&quot;</span>: {<span class="cm-string">&quot;kind&quot;</span>: <span class="cm-string">&quot;llm&quot;</span>}}] <span class="cm-operator">= </span><span class="cm-variable">field</span>(</span>
+<span class="line">		          <span class="cm-variable">default</span><span class="cm-operator">=</span><span class="cm-string">&quot;anthropic/claude-3-5-sonnet-20240620&quot;</span>,</span>
+<span class="line">		          <span class="cm-variable">metadata</span><span class="cm-operator">=</span>{</span>
+<span class="line">		              <span class="cm-string">&quot;description&quot;</span>: <span class="cm-string">&quot;The name of the language model to use for the agent&#39;s main interactions. &quot;</span></span>
+<span class="line">		              <span class="cm-string">&quot;Should be in the form: provider/model-name.&quot;</span>,</span>
+<span class="line">		              <span class="cm-string">&quot;json_schema_extra&quot;</span>: {<span class="cm-string">&quot;langgraph_nodes&quot;</span>: [<span class="cm-string">&quot;call_model&quot;</span>]},</span>
+<span class="line">		          },</span>
+<span class="line">		      )</span></code></pre></div></div></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-98ab7e65e8a4be2b.html">Person/Harper Reed/Blog/25/02/My LLM codegen workflow atm/Sample Mise Rules</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block" data-lang="toml"><div class="extensions__code"><div class="extensions__code-lang">toml</div><pre class="lsg-code"><code><span class="line">			  [<span class="cm-def">tasks</span>.<span class="cm-string">&quot;llm:generate_issue_prompts&quot;</span>]</span>
+<span class="line">			  <span class="cm-tag">depends </span>= [<span class="cm-string">&quot;llm:generate_bundle&quot;</span>]</span>
+<span class="line">			  <span class="cm-tag">description </span>= <span class="cm-string">&#39;Generate issue prompts from repository content stored in output.txt using LLM generation&#39;</span></span>
+<span class="line">			  <span class="cm-tag">run </span>= <span class="cm-string">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="cm-string">			  #!/usr/bin/env bash</span></span>
+<span class="line"><span class="cm-string">			  cat output.txt | llm -m o3-mini -t issue-prompts-gen &gt; issue-prompts.md</span></span>
+<span class="line"><span class="cm-string">			  &quot;&quot;&quot;</span></span></code></pre></div></div></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>Uses Claude 3.5 Sonnet for most generations, O3-mini for prompts</li></ul></div></div></details></div></div></main></body></html>

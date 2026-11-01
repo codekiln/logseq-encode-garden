@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>yt-dlp</title><script data-lsg-theme-script>/** Shared visitor appearance, independent of replaceable page content. */
+(() => {
+  try {
+    // Saved shell layout applies before paint; the phone overlay always starts closed.
+    const root = document.documentElement;
+    if (window.matchMedia?.('(min-width: 640px)')?.matches && window.localStorage.getItem('logseq-gardener-left-sidebar') === 'open') root.setAttribute('data-lsg-left-sidebar', 'open');
+    if (window.localStorage.getItem('logseq-gardener-wide') === 'true') root.setAttribute('data-lsg-wide', 'true');
+    // The right sidebar's column takes its width before paint; its cards load after load.
+    const right = JSON.parse(window.localStorage.getItem('logseq-gardener-right-sidebar') || 'null');
+    if (right && window.matchMedia?.('(min-width: 640px)')?.matches) {
+      root.setAttribute('data-lsg-right-sidebar', right.open ? 'open' : 'closed');
+      if (right.width > 0) root.style.setProperty('--lsg-right-width', right.width + 'px');
+    }
+  } catch { /* Layout keeps its defaults. */ }
+  if (typeof window.logseqGardenerInitTheme === 'function') return;
+  const key = 'logseq-gardener-theme';
+  const valid = value => value === 'light' || value === 'dark';
+  const read = () => {
+    try { const value = window.localStorage.getItem(key); return valid(value) ? value : 'system'; }
+    catch { return 'system'; }
+  };
+  let choice = read();
+  let media;
+  try { media = window.matchMedia?.('(prefers-color-scheme: dark)'); } catch { /* Light fallback. */ }
+  const appearance = () => choice === 'system' ? (media?.matches ? 'dark' : 'light') : choice;
+  const initialize = (root = document) => {
+    for (const select of root.querySelectorAll('[data-lsg-theme-select]')) {
+      select.value = choice;
+      const control = select.closest('[data-lsg-theme-control]');
+      if (control) control.hidden = false;
+    }
+  };
+  const apply = () => {
+    document.documentElement.setAttribute('data-lsg-theme', appearance());
+    document.documentElement.setAttribute('data-lsg-theme-mode', choice);
+    initialize();
+  };
+  const set = value => {
+    if (!valid(value) && value !== 'system') return;
+    choice = value;
+    try {
+      if (choice === 'system') window.localStorage.removeItem(key);
+      else window.localStorage.setItem(key, choice);
+    } catch { /* Keep this document's choice when storage is unavailable. */ }
+    apply();
+  };
+  window.logseqGardenerInitTheme = initialize;
+  window.logseqGardenerTheme = { choice: () => choice, appearance, set };
+  apply();
+  if (media?.addEventListener) media.addEventListener('change', apply);
+  else media?.addListener?.(apply);
+  document.addEventListener('change', event => {
+    const select = event.target;
+    if (select?.matches?.('[data-lsg-theme-select]')) set(select.value);
+  });
+  window.addEventListener('storage', event => {
+    if (event.key === key || event.key === null) { choice = read(); apply(); }
+  });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => initialize(), { once: true });
+})();
+</script><script defer src="lsg-shell.js"></script><link rel="lsg-search" href="lsg-search-manifest-1e91ba5239e1caaa.json" data-revision="1e91ba5239e1caaa"><link rel="stylesheet" href="lsg-shared-559a1c927f395608.css"><script data-lsg-search-start>(()=>{const f=(_,o)=>Object.assign(f.options??={},o);window.logseqGardenerInitSearch=f;const u=new URL('lsg-search-start-d1579d619a9675f1.mjs',document.querySelector('[rel=lsg-search]').href);document.addEventListener('DOMContentLoaded',()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{const s=document.createElement('script');s.type='module';s.src=u;s.onerror=()=>{if(!document.querySelector('[rel=lsg-search]'))return;const t=document.createElement('span');t.id='lsg-search-load';t.setAttribute('role','status');t.textContent='Search unavailable. Reload this page to retry search.';document.body.append(t)};document.head.append(s)})),{once:true})})();</script></head><body><header class="lsg-header cp__header"><button type="button" class="lsg-button" data-lsg-left-toggle aria-label="Toggle left sidebar" aria-controls="lsg-left-sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l16 0M4 12l16 0M4 18l16 0"/></svg></button><span class="lsg-header-space"></span><a class="lsg-button" href="index.html" aria-label="Home"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l-2 0l9 -9l9 9l-2 0M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg></a><a class="lsg-button button" href="graph.html#/graph" aria-label="Graph"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path id="lsg-i-graph" d="M10 5a2 2 0 1 0 4 0a2 2 0 1 0-4 0M3 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M17 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M6.5 17.5 12 13l5.5 4.5M12 7v6"/></svg></a><button type="button" class="lsg-button" data-lsg-search aria-label="Search garden" aria-haspopup="dialog" aria-controls="lsg-search-dialog" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0M21 21l-6 -6"/></svg></button><div class="lsg-more"><button type="button" class="lsg-button" data-lsg-more aria-label="More" aria-haspopup="menu" aria-controls="lsg-more-menu" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M20 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg></button><div id="lsg-more-menu" role="menu" aria-label="More" hidden><button type="button" role="menuitem" data-lsg-slides>View as slides</button><button type="button" role="menuitem" data-lsg-theme-toggle>Toggle theme</button><button type="button" role="menuitem" data-lsg-theme-system hidden>Use system theme</button></div></div><button type="button" class="lsg-button lsg-right-toggle" data-lsg-right-toggle aria-label="Toggle right sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2zM15 4l0 16"/></svg></button></header><aside id="lsg-left-sidebar" class="lsg-left-sidebar" aria-label="Left sidebar"><nav aria-label="Navigation"><ul><li><a href="index.html" data-lsg-journals-link><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12zM16 3v4M8 3v4M4 11h16M11 15h1M12 15v3"/></svg><span>Journals</span></a></li><li class="flashcards-nav"><a href="#" role="button" data-lsg-flashcards><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.828 9.172a4 4 0 1 0 0 5.656a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828"/></svg><span>Flashcards</span><span class="lsg-shortcut" aria-hidden="true">g f</span><span class="lsg-badge" data-lsg-due>430</span></a></li><li class="graph-view-nav"><a href="graph.html" data-lsg-graph-view><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#lsg-i-graph"/></svg><span>Graph view</span></a></li><li><a href="pages.html" data-lsg-all-pages><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3v4a1 1 0 0 0 1 1h4M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2zM16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2"/></svg><span>All pages</span></a></li></ul><h2 class="lsg-favorites-heading" id="lsg-favorites">Favorites</h2><ul aria-labelledby="lsg-favorites"><li><a href="p-08986007b541df27.html">fd</a></li><li><a href="p-710a025b0e00c8d5.html">gh-dash</a></li><li><a href="p-710a025b0e00c8d5.html">GitHub/CLI/Extension/gh-dash</a></li><li><a href="p-539dc7d0a39cc4ec.html">tuicr</a></li><li><a href="p-4276cb26f35edeca.html">tmux/Q/How can I put a thick border around the focused pane?</a></li><li><a href="p-62e5d9883ed48541.html">LazyVim</a></li><li><a href="p-abc1fe1091d210a5.html">Logseq/Flashcard/Review/Favorite</a></li><li><a href="p-7d113595e3cdeb70.html">Obsidian</a></li><li><a href="p-efba5ef46cf8e2e4.html">Codex</a></li><li><a href="p-398c5fe622fecdf8.html">chezmoi</a></li><li><a href="p-c02f89b682f53253.html">DevContainer</a></li><li><a href="p-da5911a2a798df4f.html">mise</a></li><li><a href="p-08dc5107b57b9276.html">rg</a></li><li><a href="p-68e903194eba71d7.html">vim</a></li><li><a href="p-74ff40ba60b70acb.html">nvim</a></li><li><a href="p-f237247b53a844f6.html">Zoxide</a></li><li><a href="p-a0d502498c67fd12.html">yazi</a></li><li><a href="p-424036ef4353ec8f.html">tmux</a></li><li><a href="p-e4db29888872bdd5.html">Lazygit</a></li></ul></nav></aside><div class="lsg-sidebar-shade" data-lsg-sidebar-shade hidden></div><main><h1>yt-dlp</h1><ul class="outline"><li><span id="source-block-61"></span><a class="bullet" href="#"></a><h1><span class="page-reference unresolved"><span>yt-dlp/PyPI</span></span> <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://pypi.org/project/yt-dlp/">yt-dlp · PyPI</a></h1><ul><li><span id="source-block-132"></span><a class="bullet" href="#"></a>A feature-rich command-line audio/video downloader</li><li><span id="source-block-186"></span><a class="bullet" href="#"></a><span class="page-reference unresolved"><span>yt-dlp/GitHub</span></span> <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/yt-dlp/yt-dlp">https://github.com/yt-dlp/yt-dlp</a></li><li><span id="source-block-276"></span><a class="bullet" href="#"></a><h2><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/yt-dlp/yt-dlp/wiki/Installation">Installation</a></h2><ul><li><span id="source-block-349"></span><a class="bullet" href="#"></a><span class="page-reference"><a href="p-6799efa807455c65.html">Brew</a></span> might be easier - <code>brew install yt-dlp</code><ul><li><span id="source-block-402"></span><a class="bullet" href="#"></a>see also <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/youtubedl/comments/1br16c5/idiot_guide_to_download_ytdlp_to_mac/">Idiot guide to download yt-dlp to Mac : r/youtubedl</a><ul><li><span id="source-block-561"></span><a class="bullet" href="#"></a>You&#39;ll be using the Terminal app on macOS, which resides in Applications &gt; Utilities.</li><li><span id="source-block-653"></span><a class="bullet" href="#"></a>Install <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://brew.sh/">Homebrew</a> following their instructions.</li><li><span id="source-block-728"></span><a class="bullet" href="#"></a>Install ffmpeg by issuing the command: <code>brew install ffmpeg</code></li><li><span id="source-block-796"></span><a class="bullet" href="#"></a>Install yt-dlp by issuing the command: <code>brew install yt-dlp</code></li><li><span id="source-block-864"></span><a class="bullet" href="#"></a>To update HomeBrew, ffmpeg and yt-dlp, issue the command: <code>brew upgrade</code> and when everything is done updating, close the Terminal window and open a new one.<p>				  <br>				  After that, you&#39;ll be learning to use yt-dlp commands like anyone else does here. Start with the <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/yt-dlp/yt-dlp">yt-dlp documentation</a>.<br></p></li></ul></li></ul></li><li><span id="source-block-1198"></span><a class="bullet" href="#"></a>for python - pip install <code>yt-dlp[default]</code></li><li><span id="source-block-1245"></span><a class="bullet" href="#"></a><h3>DEPENDENCIES</h3><ul><li><span id="source-block-1266"></span><a class="bullet" href="#"></a>While all the other dependencies are optional, <span class="page-reference"><a href="p-0e4cdfb169009214.html">CLI/Tool/ffmpeg</a></span> and <span class="page-reference unresolved"><span>ffprobe</span></span> are highly recommended<ul><li><span id="source-block-1380"></span><a class="bullet" href="#"></a><h3><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/yt-dlp/yt-dlp#strongly-recommended">Strongly recommended</a></h3></li><li><span id="source-block-1468"></span><a class="bullet" href="#"></a><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.ffmpeg.org/">**ffmpeg** and **ffprobe**</a> - Required for <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/yt-dlp/yt-dlp#format-selection">merging separate video and audio files</a>, as well as for various <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/yt-dlp/yt-dlp#post-processing-options">post-processing</a> tasks. License <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.ffmpeg.org/legal.html">depends on the build</a></li><li><span id="source-block-1815"></span><a class="bullet" href="#"></a>There are bugs in ffmpeg that cause various issues when used alongside yt-dlp. Since ffmpeg is such an important dependency, we provide <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/yt-dlp/FFmpeg-Builds#ffmpeg-static-auto-builds">custom builds</a> with patches for some of these issues at <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/yt-dlp/FFmpeg-Builds">yt-dlp/FFmpeg-Builds</a>. See <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/yt-dlp/FFmpeg-Builds#patches-applied">the readme</a> for details on the specific issues solved by these builds</li><li><span id="source-block-2283"></span><a class="bullet" href="#"></a><strong>Important</strong>: What you need is ffmpeg <em>binary</em>, <strong>NOT</strong> <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://pypi.org/project/ffmpeg">the Python package of the same name</a></li></ul></li><li><span id="source-block-2420"></span><a class="bullet" href="#"></a><h3><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/yt-dlp/yt-dlp#networking">Networking</a></h3><ul><li><span id="source-block-2487"></span><a class="bullet" href="#"></a><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/certifi/python-certifi"><strong>certifi</strong></a>* - Provides Mozilla&#39;s root certificate bundle. Licensed under <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/certifi/python-certifi/blob/master/LICENSE">MPLv2</a></li><li><span id="source-block-2684"></span><a class="bullet" href="#"></a><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/google/brotli"><strong>brotli</strong></a>* or <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/python-hyper/brotlicffi"><strong>brotlicffi</strong></a> - <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Brotli">Brotli</a> content encoding support. Both licensed under MIT <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/google/brotli/blob/master/LICENSE">1</a> <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/python-hyper/brotlicffi/blob/master/LICENSE">2</a></li><li><span id="source-block-3033"></span><a class="bullet" href="#"></a><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/aaugustin/websockets"><strong>websockets</strong></a>* - For downloading over websocket. Licensed under <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/aaugustin/websockets/blob/main/LICENSE">BSD-3-Clause</a></li><li><span id="source-block-3222"></span><a class="bullet" href="#"></a><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/psf/requests"><strong>requests</strong></a>* - HTTP library. For HTTPS proxy and persistent connections support. Licensed under <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/psf/requests/blob/main/LICENSE">Apache-2.0</a></li></ul></li></ul></li><li><span id="source-block-3425"></span><a class="bullet" href="#"></a><h2><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#usage-and-options">Usage and Options</a></h2><ul><li><span id="source-block-3523"></span><a class="bullet" href="#"></a><code>yt-dlp [OPTIONS] [--] URL [URL...]</code></li><li><span id="source-block-3565"></span><a class="bullet" href="#"></a><h3>General Options</h3><ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="\"><div class="extensions__code"><div class="extensions__code-lang">\</div><pre class="lsg-code" style="--lsg-code-digits:3"><code><span class="line">-h, --help                      Print this help text and exit</span>
+<span class="line">--version                       Print program version and exit</span>
+<span class="line">-U, --update                    Update this program to the latest version</span>
+<span class="line">--no-update                     Do not check for updates (default)</span>
+<span class="line">--update-to [CHANNEL]@[TAG]     Upgrade/downgrade to a specific version.</span>
+<span class="line">                                CHANNEL can be a repository as well. CHANNEL</span>
+<span class="line">                                and TAG default to &quot;stable&quot; and &quot;latest&quot;</span>
+<span class="line">                                respectively if omitted; See &quot;UPDATE&quot; for</span>
+<span class="line">                                details. Supported channels: stable,</span>
+<span class="line">                                nightly, master</span>
+<span class="line">-i, --ignore-errors             Ignore download and postprocessing errors.</span>
+<span class="line">                                The download will be considered successful</span>
+<span class="line">                                even if the postprocessing fails</span>
+<span class="line">--no-abort-on-error             Continue with next video on download errors;</span>
+<span class="line">                                e.g. to skip unavailable videos in a</span>
+<span class="line">                                playlist (default)</span>
+<span class="line">--abort-on-error                Abort downloading of further videos if an</span>
+<span class="line">                                error occurs (Alias: --no-ignore-errors)</span>
+<span class="line">--dump-user-agent               Display the current user-agent and exit</span>
+<span class="line">--list-extractors               List all supported extractors and exit</span>
+<span class="line">--extractor-descriptions        Output descriptions of all supported</span>
+<span class="line">                                extractors and exit</span>
+<span class="line">--use-extractors NAMES          Extractor names to use separated by commas.</span>
+<span class="line">                                You can also use regexes, &quot;all&quot;, &quot;default&quot;</span>
+<span class="line">                                and &quot;end&quot; (end URL matching); e.g. --ies</span>
+<span class="line">                                &quot;holodex.*,end,youtube&quot;. Prefix the name</span>
+<span class="line">                                with a &quot;-&quot; to exclude it, e.g. --ies</span>
+<span class="line">                                default,-generic. Use --list-extractors for</span>
+<span class="line">                                a list of extractor names. (Alias: --ies)</span>
+<span class="line">--default-search PREFIX         Use this prefix for unqualified URLs. E.g.</span>
+<span class="line">                                &quot;gvsearch2:python&quot; downloads two videos from</span>
+<span class="line">                                google videos for the search term &quot;python&quot;.</span>
+<span class="line">                                Use the value &quot;auto&quot; to let yt-dlp guess</span>
+<span class="line">                                (&quot;auto_warning&quot; to emit a warning when</span>
+<span class="line">                                guessing). &quot;error&quot; just throws an error. The</span>
+<span class="line">                                default value &quot;fixup_error&quot; repairs broken</span>
+<span class="line">                                URLs, but emits an error if this is not</span>
+<span class="line">                                possible instead of searching</span>
+<span class="line">--ignore-config                 Don&#39;t load any more configuration files</span>
+<span class="line">                                except those given to --config-locations.</span>
+<span class="line">                                For backward compatibility, if this option</span>
+<span class="line">                                is found inside the system configuration</span>
+<span class="line">                                file, the user configuration is not loaded.</span>
+<span class="line">                                (Alias: --no-config)</span>
+<span class="line">--no-config-locations           Do not load any custom configuration files</span>
+<span class="line">                                (default). When given inside a configuration</span>
+<span class="line">                                file, ignore all previous --config-locations</span>
+<span class="line">                                defined in the current file</span>
+<span class="line">--config-locations PATH         Location of the main configuration file;</span>
+<span class="line">                                either the path to the config or its</span>
+<span class="line">                                containing directory (&quot;-&quot; for stdin). Can be</span>
+<span class="line">                                used multiple times and inside other</span>
+<span class="line">                                configuration files</span>
+<span class="line">--plugin-dirs PATH              Path to an additional directory to search</span>
+<span class="line">                                for plugins. This option can be used</span>
+<span class="line">                                multiple times to add multiple directories.</span>
+<span class="line">                                Note that this currently only works for</span>
+<span class="line">                                extractor plugins; postprocessor plugins can</span>
+<span class="line">                                only be loaded from the default plugin</span>
+<span class="line">                                directories</span>
+<span class="line">--flat-playlist                 Do not extract a playlist&#39;s URL result</span>
+<span class="line">                                entries; some entry metadata may be missing</span>
+<span class="line">                                and downloading may be bypassed</span>
+<span class="line">--no-flat-playlist              Fully extract the videos of a playlist</span>
+<span class="line">                                (default)</span>
+<span class="line">--live-from-start               Download livestreams from the start.</span>
+<span class="line">                                Currently only supported for YouTube</span>
+<span class="line">                                (Experimental)</span>
+<span class="line">--no-live-from-start            Download livestreams from the current time</span>
+<span class="line">                                (default)</span>
+<span class="line">--wait-for-video MIN[-MAX]      Wait for scheduled streams to become</span>
+<span class="line">                                available. Pass the minimum number of</span>
+<span class="line">                                seconds (or range) to wait between retries</span>
+<span class="line">--no-wait-for-video             Do not wait for scheduled streams (default)</span>
+<span class="line">--mark-watched                  Mark videos watched (even with --simulate)</span>
+<span class="line">--no-mark-watched               Do not mark videos watched (default)</span>
+<span class="line">--color [STREAM:]POLICY         Whether to emit color codes in output,</span>
+<span class="line">                                optionally prefixed by the STREAM (stdout or</span>
+<span class="line">                                stderr) to apply the setting to. Can be one</span>
+<span class="line">                                of &quot;always&quot;, &quot;auto&quot; (default), &quot;never&quot;, or</span>
+<span class="line">                                &quot;no_color&quot; (use non color terminal</span>
+<span class="line">                                sequences). Use &quot;auto-tty&quot; or &quot;no_color-tty&quot;</span>
+<span class="line">                                to decide based on terminal support only.</span>
+<span class="line">                                Can be used multiple times</span>
+<span class="line">--compat-options OPTS           Options that can help keep compatibility</span>
+<span class="line">                                with youtube-dl or youtube-dlc</span>
+<span class="line">                                configurations by reverting some of the</span>
+<span class="line">                                changes made in yt-dlp. See &quot;Differences in</span>
+<span class="line">                                default behavior&quot; for details</span>
+<span class="line">--alias ALIASES OPTIONS         Create aliases for an option string. Unless</span>
+<span class="line">                                an alias starts with a dash &quot;-&quot;, it is</span>
+<span class="line">                                prefixed with &quot;--&quot;. Arguments are parsed</span>
+<span class="line">                                according to the Python string formatting</span>
+<span class="line">                                mini-language. E.g. --alias get-audio,-X</span>
+<span class="line">                                &quot;-S=aext:{0},abr -x --audio-format {0}&quot;</span>
+<span class="line">                                creates options &quot;--get-audio&quot; and &quot;-X&quot; that</span>
+<span class="line">                                takes an argument (ARG0) and expands to</span>
+<span class="line">                                &quot;-S=aext:ARG0,abr -x --audio-format ARG0&quot;.</span>
+<span class="line">                                All defined aliases are listed in the --help</span>
+<span class="line">                                output. Alias options can trigger more</span>
+<span class="line">                                aliases; so be careful to avoid defining</span>
+<span class="line">                                recursive options. As a safety measure, each</span>
+<span class="line">                                alias may be triggered a maximum of 100</span>
+<span class="line">                                times. This option can be used multiple times</span></code></pre></div></div></li></ul></li></ul></li></ul></li></ul></li></ul><section class="references linked-references" id="linked-references" data-refs="linked" data-src="_refs/p-919d86aabe21903d-linked-1.html"><details class="references-section"><summary><span class="ref-chevron"></span><h2>3 Linked References</h2><button type="button" class="filter" title="Filter" aria-label="Filter" data-state="none" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v2.172a2 2 0 0 1-.586 1.414L15 12v7l-6 2v-8.5L4.52 7.572A2 2 0 0 1 4 6.227z"/></svg></button></summary><noscript><a href="_refs/p-919d86aabe21903d-linked-1.html">Show linked references</a></noscript><div class="references-body"><p role="status"></p></div></details></section><section class="references linked-references unlinked-references" data-refs="unlinked" data-src="_refs/p-919d86aabe21903d-unlinked-1.html"><details class="references-section"><summary><span class="ref-chevron"></span><h2>Unlinked References</h2></summary><noscript><a href="_refs/p-919d86aabe21903d-unlinked-1.html">Show unlinked references</a></noscript><div class="references-body"></div></details></section></main><script data-lsg-fragments>// Native fragment navigation does not run when a host swaps page content.
+// Hosts can call this helper before their own fragment focus/scroll handling.
+(() => {
+  function reveal(fragment = location.hash, { scroll = true } = {}) {
+    let id;
+    try { id = decodeURIComponent(fragment.replace(/^#/, "")); }
+    catch { return null; }
+    const target = id && document.getElementById(id);
+    if (!target) return null;
+    for (let parent = target.parentElement; parent; parent = parent.parentElement) {
+      if (parent.tagName === "DETAILS") parent.open = true;
+      parent.classList?.remove("folded");
+    }
+    if (scroll) target.scrollIntoView();
+    return target;
+  }
+  window.logseqGardenerRevealFragment = reveal;
+  window.addEventListener("hashchange", () => reveal());
+  reveal();
+})();
+</script></body></html>

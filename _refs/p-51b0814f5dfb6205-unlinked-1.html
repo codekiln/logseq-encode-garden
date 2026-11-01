@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><base href="../"><title>Unlinked references: Pyenv</title><script type="application/json" class="references-data">{"count":25,"files":["p-51b0814f5dfb6205-unlinked-1.html"]}</script></head><body><main><h1>Unlinked references: <a href="p-51b0814f5dfb6205.html">Pyenv</a></h1><div class="references-fragment"><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-748e4c2255450aea.html">2025-02-26 Wed</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><span class="tag">#Filed</span> and <a class="tag" href="p-fe64c2c784fddf10.html">#Solved</a> <span class="page-reference"><a href="p-164d3fca2cf2b8be.html">mise/Issue/Conflict with PyEnv on Shell Startup</a></span></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-b167fbe319ef00ee.html">2025-02-24 Mon</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><span class="page-reference"><a href="p-1081d91b9cab87bb.html">mise/Q/How does mise interact with pyenv</a></span></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-164d3fca2cf2b8be.html">mise/Issue/Conflict with PyEnv on Shell Startup</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">		  mise run llm:copy_buffer_bundle                         </span>
+<span class="line">		  mise WARN  no precompiled python found for codekiln, force mise to use a precompiled version with `mise settings set python.compile false`</span>
+<span class="line">		  python-build: definition not found: codekiln</span>
+<span class="line">		  mise ERROR ~/Library/Caches/mise/python/pyenv/plugins/python-build/bin/python-build failed</span>
+<span class="line">		  python-build: definition not found: codekiln</span>
+<span class="line">		  mise ERROR failed to install core:python@codekiln</span>
+<span class="line">		  mise ERROR ~/Library/Caches/mise/python/pyenv/plugins/python-build/bin/python-build exited with non-zero status: exit code 2</span>
+<span class="line">		  mise ERROR Run with --verbose or MISE_VERBOSE=1 for more information</span></code></pre></div></div></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>If migrating to mise: Remove pyenv configuration from shell startup files</li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>If keeping pyenv: Configure mise to ignore Python version management</li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>Consider running <code>mise sync python</code> to import existing pyenv installations</li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>Remove or comment out pyenv initialization in shell config files</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-7666905f2bf4a718.html">mise/Python/How To/Use mise to set up a virtualenv with uv</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>At your project root, add a file named <code>mise.toml</code>:<div class="cp__fenced-code-block" data-lang="toml"><div class="extensions__code"><div class="extensions__code-lang">toml</div><pre class="lsg-code"><code><span class="line">			  [<span class="cm-def">env</span>]</span>
+<span class="line">			  <span class="cm-comment"># Use the project name derived from the current directory</span></span>
+<span class="line">			  <span class="cm-tag">PROJECT_NAME </span>= <span class="cm-string">&quot;{{ config_root | basename }}&quot;</span></span>
+<span class="line">			  </span>
+<span class="line">			  <span class="cm-comment"># Automatic virtualenv activation</span></span>
+<span class="line">			  <span class="cm-tag">_</span>.<span class="cm-tag">python</span>.<span class="cm-tag">venv </span>= { <span class="cm-tag">path </span>= <span class="cm-string">&quot;.venv&quot;</span>, <span class="cm-tag">create </span>= <span class="cm-atom">true </span>}</span>
+<span class="line">			  </span>
+<span class="line">			  [<span class="cm-def">tools</span>]</span>
+<span class="line">			  <span class="cm-comment"># Python version (via pyenv, as a fallback to .python-version)</span></span>
+<span class="line">			  <span class="cm-tag">python </span>= <span class="cm-string">&quot;{{ get_env(name=&#39;PYTHON_VERSION&#39;, default=&#39;3.13&#39;) }}&quot;</span></span>
+<span class="line">			  <span class="cm-tag">uv </span>= <span class="cm-string">&quot;latest&quot;</span></span>
+<span class="line">			  <span class="cm-tag">ruff </span>= <span class="cm-string">&quot;latest&quot;</span></span>
+<span class="line">			  </span>
+<span class="line">			  [<span class="cm-def">tasks</span>.<span class="cm-def">install-deps</span>]</span>
+<span class="line">			  <span class="cm-tag">description </span>= <span class="cm-string">&quot;Install all basic dependencies&quot;</span></span>
+<span class="line">			  <span class="cm-tag">alias </span>= <span class="cm-string">&quot;id&quot;</span></span>
+<span class="line">			  <span class="cm-tag">run </span>= <span class="cm-string">&quot;uv sync --all-extras&quot;</span></span>
+<span class="line">			  </span>
+<span class="line">			  [<span class="cm-def">tasks</span>.<span class="cm-def">install-deps-dev</span>]</span>
+<span class="line">			  <span class="cm-tag">description </span>= <span class="cm-string">&quot;Install only dev dependencies&quot;</span></span>
+<span class="line">			  <span class="cm-tag">alias </span>= <span class="cm-string">&quot;idd&quot;</span></span>
+<span class="line">			  <span class="cm-tag">run </span>= <span class="cm-string">&quot;uv sync --extras dev&quot;</span></span>
+<span class="line">			  </span>
+<span class="line">			  [<span class="cm-def">tasks</span>.<span class="cm-def">install-deps-all</span>]</span>
+<span class="line">			  <span class="cm-tag">description </span>= <span class="cm-string">&quot;Install all dependencies (including dev dependencies)&quot;</span></span>
+<span class="line">			  <span class="cm-tag">alias </span>= <span class="cm-string">&quot;ida&quot;</span></span>
+<span class="line">			  <span class="cm-tag">run </span>= <span class="cm-string">&quot;uv sync --all-extras&quot;</span></span>
+<span class="line">			  </span>
+<span class="line">			  [<span class="cm-def">tasks</span>.<span class="cm-def">add-deps</span>]</span>
+<span class="line">			  <span class="cm-tag">description </span>= <span class="cm-string">&quot;Add new dependencies using uv&quot;</span></span>
+<span class="line">			  <span class="cm-tag">alias </span>= <span class="cm-string">&quot;ad&quot;</span></span>
+<span class="line">			  <span class="cm-tag">run </span>= <span class="cm-string">&quot;uv pip install $@&quot;</span></span>
+<span class="line">			  </span>
+<span class="line">			  [<span class="cm-def">tasks</span>.<span class="cm-def">test</span>]</span>
+<span class="line">			  <span class="cm-tag">description </span>= <span class="cm-string">&quot;Run tests&quot;</span></span>
+<span class="line">			  <span class="cm-tag">run </span>= <span class="cm-string">&quot;pytest tests/&quot;</span></span>
+<span class="line">			  </span>
+<span class="line">			  [<span class="cm-def">tasks</span>.<span class="cm-def">lint</span>]</span>
+<span class="line">			  <span class="cm-tag">description </span>= <span class="cm-string">&quot;Lint the code&quot;</span></span>
+<span class="line">			  <span class="cm-tag">run </span>= <span class="cm-string">&quot;ruff check .&quot;</span></span>
+<span class="line">			  </span>
+<span class="line">			  [<span class="cm-def">tasks</span>.<span class="cm-def">format</span>]</span>
+<span class="line">			  <span class="cm-tag">description </span>= <span class="cm-string">&quot;Format the code&quot;</span></span>
+<span class="line">			  <span class="cm-tag">run </span>= <span class="cm-string">&quot;ruff format .&quot;</span></span>
+<span class="line">			  </span>
+<span class="line">			  [<span class="cm-def">tasks</span>.<span class="cm-def">info</span>]</span>
+<span class="line">			  <span class="cm-tag">description </span>= <span class="cm-string">&quot;Print project information&quot;</span></span>
+<span class="line">			  <span class="cm-tag">run </span>= <span class="cm-string">&#39;&#39;&#39;</span></span>
+<span class="line"><span class="cm-string">			  echo &quot;Project: $PROJECT_NAME&quot;</span></span>
+<span class="line"><span class="cm-string">			  echo &quot;Virtual Environment: $VIRTUAL_ENV&quot;</span></span>
+<span class="line"><span class="cm-string">			  &#39;&#39;&#39;</span></span></code></pre></div></div></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-1081d91b9cab87bb.html">mise/Q/How does mise interact with pyenv</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><h1>how do I migrate from pyenv to mise?</h1></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-a10878fae76a85f7.html">Pyenv/.python-version</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/pyenv/pyenv?tab=readme-ov-file#understanding-python-version-selection">https://github.com/pyenv/pyenv?tab=readme-ov-file#understanding-python-version-selection</a></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-5e72a167a7620cc9.html">VSCode/Docs/Languages/Python/Tutorial</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">		  gitp-acolyte ✘ Me@Home  ~/dev/gitpa  ↱ cc/04-host-n-dist/03-ai-ep-yml  /Users/Me/.pyenv/versions/3.13.1/envs/gitp-acolyte/bin/python /Users/Me/dev/gitpa/gitp-acolyte/gitp_acolyte/hello.py</span>
+<span class="line">		  Roll a dice!</span></code></pre></div></div></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-1f95a27659b3f40a.html">VSCode/Language/Python/How To/Fix Stuck at Discovering Python Interpreters</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>I removed <code>.python-version</code> files and also removed the pyenv virtualenv</li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">			    424  pyenv virtualenv-delete gitp-acolyte</span>
+<span class="line">			    425  ls -la</span>
+<span class="line">			    426  rm -rf .python-version</span>
+<span class="line">			    427  rm -rf gitp-acolyte/.python-version</span></code></pre></div></div></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><blockquote><p><strong>If you use a tool like <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/pyenv/pyenv">pyenv</a> to manage different Python versions</strong>, you can set the experimental <code>virtualenvs.prefer-active-python</code> option to <code>true</code>. Poetry will then try to find the current <code>python</code> of your shell.<br></p></blockquote></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><blockquote><p><code>pyenv install 3.9.8</code><br></p></blockquote></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><blockquote><p><code>pyenv local 3.9.8</code><br></p></blockquote></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>Ok, that definitely makes it seem like that&#39;s a good way to go for pyenv. However, what this actually does is not intuitive. And I ended up seeing some people who actually removed the configuration to solve it (which would have removed the default value of false)<ul><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/python-poetry/poetry/issues/5947"><code>poetry env info</code> does not respect <code>virtualenvs.prefer-active-python = true</code> setting · Issue #5947 · python-poetry/poetry</a> <span class="page-reference unresolved"><span>GitHub/python-poetry/poetry/Issue</span></span></summary><ul><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span>Note, after all the steps below, my results were different from the OP here in that they were the same whether I ran <code>poetry run poetry env info</code> or if I ran <code>poetry env info</code></summary><ul><li><span class="bullet"></span><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">										  (gitp-acolyte)  Me@Home  ~/dev/gitpa/gitp-acolyte  ↱ cc/04-host-n-dist/03-ai-ep-yml  poetry run poetry env info                            </span>
+<span class="line">										  </span>
+<span class="line">										  Virtualenv</span>
+<span class="line">										  Python:         3.13.1</span>
+<span class="line">										  Implementation: CPython</span>
+<span class="line">										  Path:           /Users/Me/.pyenv/versions/3.13.1/envs/gitp-acolyte</span>
+<span class="line">										  Executable:     /Users/Me/.pyenv/versions/3.13.1/envs/gitp-acolyte/bin/python</span>
+<span class="line">										  Valid:          True</span>
+<span class="line">										  </span>
+<span class="line">										  Base</span>
+<span class="line">										  Platform:   darwin</span>
+<span class="line">										  OS:         posix</span>
+<span class="line">										  Python:     3.13.1</span>
+<span class="line">										  Path:       /Users/Me/.pyenv/versions/3.13.1</span>
+<span class="line">										  Executable: /Users/Me/.pyenv/versions/3.13.1/bin/python3.13</span>
+<span class="line">										  (gitp-acolyte)  Me@Home  ~/dev/gitpa/gitp-acolyte  ↱ cc/04-host-n-dist/03-ai-ep-yml  poetry env info                      </span>
+<span class="line">										  </span>
+<span class="line">										  Virtualenv</span>
+<span class="line">										  Python:         3.13.1</span>
+<span class="line">										  Implementation: CPython</span>
+<span class="line">										  Path:           /Users/Me/.pyenv/versions/3.13.1/envs/gitp-acolyte</span>
+<span class="line">										  Executable:     /Users/Me/.pyenv/versions/3.13.1/envs/gitp-acolyte/bin/python</span>
+<span class="line">										  Valid:          True</span>
+<span class="line">										  </span>
+<span class="line">										  Base</span>
+<span class="line">										  Platform:   darwin</span>
+<span class="line">										  OS:         posix</span>
+<span class="line">										  Python:     3.13.1</span>
+<span class="line">										  Path:       /Users/Me/.pyenv/versions/3.13.1</span>
+<span class="line">										  Executable: /Users/Me/.pyenv/versions/3.13.1/bin/python3.13</span></code></pre></div></div></li></ul></details></li></ul></details></li></ul></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>I read many articles and forum posts about using poetry with pyenv, and they all seemed to give contradictory advice. But the thing that ended up working for me was removing the customizations to the config that I did by removing this dir. In particular, I removed these customizations because<ul><li><span class="bullet"></span><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">					  (gitp-acolyte)  Me@Home  ~/dev/gitpa/gitp-acolyte  ↱ cc/04-host-n-dist/03-ai-ep-yml  history | grep &quot;pypoetry&quot;     </span>
+<span class="line">					    176  emulate bash -c &#39;. /Users/Me/Library/Caches/pypoetry/virtualenvs/gitp-acolyte-kfI6rJB7-py3.13/bin/activate&#39;</span>
+<span class="line">					    361  emulate bash -c &#39;. /Users/Me/Library/Caches/pypoetry/virtualenvs/gitp-acolyte-kfI6rJB7-py3.13/bin/activate&#39;</span>
+<span class="line">					    458  ls ~/Library/Application Support/pypoetry</span>
+<span class="line">					    459  ls &quot;~/Library/Application Support/pypoetry&quot;</span>
+<span class="line">					    460  ls ~/Library/Application\ Support/pypoetry</span>
+<span class="line">					    461  vim ~/Library/Application\ Support/pypoetry</span>
+<span class="line">					    462  rm -rf ~/Library/Application\ Support/pypoetry/config.toml</span></code></pre></div></div></li></ul></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><h3>Recreate the <span class="page-reference unresolved"><span>Person/codekiln/GitHub/gitpa/acolyte</span></span> <span class="page-reference unresolved"><span>Pyenv/virtualenv</span></span> and specify the pyenv global version to be 3.13.1</h3><ul><li><span class="bullet"></span><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">			    449  pyenv virtualenv 3.13.1 gitp-acolyte</span>
+<span class="line">			    452  pyenv local gitp-acolyte</span>
+<span class="line">			    453  pyenv which python</span>
+<span class="line">			    469  pyenv global 3.13.1</span></code></pre></div></div></li></ul></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block" data-lang="shell"><div class="extensions__code"><div class="extensions__code-lang">shell</div><pre class="lsg-code"><code><span class="line">			  <span class="cm-comment">#!/bin/bash</span></span>
+<span class="line">			  </span>
+<span class="line">			  <span class="cm-comment"># Get list of virtualenvs in ~/.virtualenvs</span></span>
+<span class="line">			  <span class="cm-variable">old_virtualenvs</span><span class="cm-operator">=</span><span class="cm-string">$(ls </span><span class="cm-keyword">~</span><span class="cm-string">/.virtualenvs)</span></span>
+<span class="line">			  </span>
+<span class="line">			  <span class="cm-comment"># Get list of pyenv-managed virtualenvs</span></span>
+<span class="line">			  <span class="cm-variable">pyenv_virtualenvs</span><span class="cm-operator">=</span><span class="cm-string">$(pyenv virtualenvs</span><span class="cm-variable"> --bare</span><span class="cm-string">)</span></span>
+<span class="line">			  </span>
+<span class="line">			  <span class="cm-comment"># Loop through each virtualenv in ~/.virtualenvs</span></span>
+<span class="line">			  <span class="cm-keyword">for</span> env <span class="cm-keyword">in </span>$<span class="cm-variable">old_virtualenvs</span><span class="cm-operator">; </span><span class="cm-keyword">do</span></span>
+<span class="line">			      <span class="cm-comment"># Check if it&#39;s managed by pyenv-virtualenv</span></span>
+<span class="line">			      <span class="cm-keyword">if </span><span class="cm-operator">! </span><span class="cm-builtin">echo </span><span class="cm-string">&quot;$</span><span class="cm-variable">pyenv_virtualenvs</span><span class="cm-string">&quot; </span><span class="cm-operator">| </span>grep<span class="cm-variable"> -q </span><span class="cm-string">&quot;^$</span><span class="cm-variable">env</span><span class="cm-string">$&quot;</span><span class="cm-operator">; </span><span class="cm-keyword">then</span></span>
+<span class="line">			          <span class="cm-builtin">echo </span><span class="cm-string">&quot;Deleting unused virtualenv: $</span><span class="cm-variable">env</span><span class="cm-string">&quot;</span></span>
+<span class="line">			          rm<span class="cm-variable"> -rf </span><span class="cm-keyword">~</span>/.virtualenvs/<span class="cm-string">&quot;$</span><span class="cm-variable">env</span><span class="cm-string">&quot;</span></span>
+<span class="line">			      <span class="cm-keyword">fi</span></span>
+<span class="line">			  <span class="cm-keyword">done</span></span>
+<span class="line">			  </span></code></pre></div></div></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">			    473  pyenv versions</span>
+<span class="line">			    474  pyenv uninstall 3.5.6</span>
+<span class="line">			    475  pyenv uninstall 3.6.7</span>
+<span class="line">			    476  pyenv versions</span>
+<span class="line">			    477  pyenv uninstall 3.7.1</span>
+<span class="line">			    478  pyenv versions</span>
+<span class="line">			    479  pyenv uninstall 3.9.6</span>
+<span class="line">			    480  pyenv uninstall 3.12.0</span>
+<span class="line">			    481  pyenv versions</span>
+<span class="line">			    482  ls -la /Users/Me/.pyenv/versions/</span>
+<span class="line">			    483  ls -la ~/.virtualenvs/</span>
+<span class="line">			    485  touch scripts/clean_virtualenvs.sh</span>
+<span class="line">			    486  chmod +x scripts/clean_virtualenvs.sh</span>
+<span class="line">			    487  vscr scripts/clean_virtualenvs.sh</span>
+<span class="line">			    488  ./scripts/clean_virtualenvs.sh</span>
+<span class="line">			    490  ls -la /Users/Me/.virtualenvs/</span>
+<span class="line">			    491  rm -rf ~/.virtualenvs/2023-11-26\ Sun\ Chiaroscurro\ Project</span>
+<span class="line">			    493  pwd</span>
+<span class="line">			    494  poetry install</span>
+<span class="line">			    495  poetry env info --path</span>
+<span class="line">			    496  poetry env info --executable | pbcopy</span></code></pre></div></div></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><h3>Start VS Code and reinstall <span class="page-reference unresolved"><span>VSCode/Extension/Python</span></span>; associate it with the pyenv virtualenv that poetry install installed to</h3><ul><li><span class="bullet"></span>495  poetry env info --path<p>			   496  poetry env info --executable | pbcopy<br></p></li><li><span class="bullet"></span>now I did <code>Cmd Shift P</code> in <a class="tag" href="p-0c40b5be473d0273.html">#VSCode</a> and did <code>Python: Select Interpreter</code> and then entered in the path to the virtualenv. It started working.</li><li><span class="bullet"></span></li></ul></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-27ace855a4d16790.html">VSCode/Proj/24t3/LearnVSCode/03 Basic Python</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>13:09 filed <span class="page-reference"><a href="p-104272dfdac63271.html">VSCode/Language/Python/How To/Use Poetry with Pyenv and VS Code</a></span></li></ul></div></div></details></div></div></main></body></html>

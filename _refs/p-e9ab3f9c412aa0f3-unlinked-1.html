@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><base href="../"><title>Unlinked references: NodeJS/module</title><script type="application/json" class="references-data">{"count":24,"files":["p-e9ab3f9c412aa0f3-unlinked-1.html"]}</script></head><body><main><h1>Unlinked references: <a href="p-e9ab3f9c412aa0f3.html">NodeJS/module</a></h1><div class="references-fragment"><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-715661961517a54a.html">2025-02-08 Sat</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">			  docker run --rm node:22 ls -l /usr/local/bin</span>
+<span class="line">			  </span>
+<span class="line">			  total 94264</span>
+<span class="line">			  lrwxrwxrwx 1 root root       45 Jan 21 05:32 corepack -&gt; ../lib/node_modules/corepack/dist/corepack.js</span>
+<span class="line">			  -rwxr-xr-x 1 root root      388 Jan 22 19:53 docker-entrypoint.sh</span>
+<span class="line">			  -rwxr-xr-x 1 root root 96522032 Jan 21 05:30 node</span>
+<span class="line">			  lrwxrwxrwx 1 root root       19 Jan 22 19:53 nodejs -&gt; /usr/local/bin/node</span>
+<span class="line">			  lrwxrwxrwx 1 root root       38 Jan 21 05:32 npm -&gt; ../lib/node_modules/npm/bin/npm-cli.js</span>
+<span class="line">			  lrwxrwxrwx 1 root root       38 Jan 21 05:32 npx -&gt; ../lib/node_modules/npm/bin/npx-cli.js</span>
+<span class="line">			  lrwxrwxrwx 1 root root       27 Jan 22 19:53 yarn -&gt; /opt/yarn-v1.22.22/bin/yarn</span>
+<span class="line">			  lrwxrwxrwx 1 root root       30 Jan 22 19:53 yarnpkg -&gt; /opt/yarn-v1.22.22/bin/yarnpkg</span></code></pre></div></div></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-e5a900ec0ef4bb96.html">AI/Coding/Idea/26/08/Standing agent inboxes on long-lived worktrees</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>Untracked and ignored files survive branch switches: <code>.env</code>, <code>node_modules/</code>, build caches, language-server indexes. That is the real prize, and it means the repos worth a standing agent are the ones with expensive setup, not the ones touched most often.</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-95d7c03d68f7f024.html">Architecture/Decision/Record/MADR</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">			  npm install madr &amp;&amp; mkdir -p docs/decisions &amp;&amp; cp node_modules/madr/template/* docs/decisions/</span></code></pre></div></div></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-c28008d92fe86e93.html">Claude/Code/Settings</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><code>worktree.symlinkDirectories</code> — directories symlinked from the main repository into worktrees to avoid duplicating them on disk. Nothing is symlinked by default. Example: <code>[&quot;node_modules&quot;]</code>.</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-6d09ac5e164ec45f.html">DevContainer/Report/25/12/Multi-Env DevContainer Setup</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><strong>D. External Launch Scripts / Tools:</strong> Some teams sidestep these limitations by using wrapper scripts or alternative tools. For instance, a <code>devcontainer.json</code> can have a <code>&quot;postCreateCommand&quot;</code> that runs a script; theoretically, that script could detect the IDE or environment and adjust mounts (though again, mounts can&#39;t be changed once the container is up – at most you could bind mount an additional volume for node_modules or similar). This doesn&#39;t solve the core workspace issue. Another angle is using a tool like <strong>DevPod or Coder</strong> to manage dev environments. These tools can read devcontainer configs but also allow additional flags or settings per environment. For example, DevPod (formerly Codespaces CLI) can be used to launch a devcontainer on your own VM and you could pass a different mount type. However, this shifts the workflow away from the simple VS Code/Codespaces/Gateway UI buttons, which the question specifically wants to avoid (JetBrains users shouldn&#39;t have to run custom CLI commands).</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-96e868e4216d01b1.html">git/worktree</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>Untracked and ignored files stay in place: <code>.env</code>, <code>node_modules/</code>, build and test caches, language-server indexes. This is what makes reusing a worktree cheaper than creating a fresh one.</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-252361dd5db96c82.html">GitHub/aptrn/maxmsp-ts-example</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><code>node_modules/@not251/not251/dist/index.js</code></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><code>node_modules/@not251/not251/dist/index.map.js</code><p>		  <br>		  To:<br></p></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-ee4c8dbdee2611ed.html">mise/Docs/Guides/Walkthrouh</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">			  [env]</span>
+<span class="line">			  _.path = &quot;./node_modules/.bin&quot;</span></code></pre></div></div></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">			  [env]</span>
+<span class="line">			  _.path = [</span>
+<span class="line">			      # adds an absolute path</span>
+<span class="line">			      &quot;~/.local/share/bin&quot;,</span>
+<span class="line">			      # adds paths relative to directory in which this file was found (see below for details), not PWD</span>
+<span class="line">			      &quot;{{config_root}}/node_modules/.bin&quot;,</span>
+<span class="line">			      # adds paths relative to the exact file that this is found in (not PWD)</span>
+<span class="line">			      &quot;tools/bin&quot;,</span>
+<span class="line">			  ]</span></code></pre></div></div></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-f0bf66338eb9cbe7.html">Obsidian/Q/Can a custom Obsidian plugin live in the same repository as its vault and be installed locally on desktop and iPhone?</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>Build on desktop, exclude <code>node_modules/</code>, and commit <code>main.js</code>, <code>manifest.json</code>, and <code>styles.css</code> so the iPhone receives runnable files.</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-597711a9fac9d1cc.html">Person/Bill Mill/24/03/How I use git worktrees</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><strong>Key trick:</strong> The script checks for a <code>node_modules</code> folder and, if present, duplicates it to the new worktree directory using copy-on-write. This saves time by avoiding repeated <code>npm install</code> runs.</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-568badeab523bd9e.html">Person/codekiln/GitHub/alits</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><code>kebricide#build: command (/home/runner/work/alits/alits/apps/kebricide) /home/runner/setup-pnpm/node_modules/.bin/pnpm run build exited (254)</code></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">					  Run pnpm run build</span>
+<span class="line">					  </span>
+<span class="line">					  &gt; alits-monorepo@ build /home/runner/work/alits/alits</span>
+<span class="line">					  &gt; turbo build</span>
+<span class="line">					  </span>
+<span class="line">					  • Packages in scope: @codekiln/maxmsp-ts, @my-username/my-library, kebricide, maxmsp-test</span>
+<span class="line">					  • Running build in 4 packages</span>
+<span class="line">					  • Remote caching disabled</span>
+<span class="line">					  @codekiln/maxmsp-ts:build</span>
+<span class="line">					  @my-username/my-library:build</span>
+<span class="line">					  kebricide:build</span>
+<span class="line">					  cache miss, executing dbfe99f6e1cd9d58</span>
+<span class="line">					  </span>
+<span class="line">					  &gt; kebricide@0.0.1 build /home/runner/work/alits/alits/apps/kebricide</span>
+<span class="line">					  &gt; pnpm maxmsp build</span>
+<span class="line">					  </span>
+<span class="line">					  undefined</span>
+<span class="line">					   ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL  Command &quot;maxmsp&quot; not found</span>
+<span class="line">					   ELIFECYCLE  Command failed with exit code 254.</span>
+<span class="line">					  Error:  command finished with error: command (/home/runner/work/alits/alits/apps/kebricide) /home/runner/setup-pnpm/node_modules/.bin/pnpm run build exited (254)</span>
+<span class="line">					  maxmsp-test:build</span>
+<span class="line">					  Error: kebricide#build: command (/home/runner/work/alits/alits/apps/kebricide) /home/runner/setup-pnpm/node_modules/.bin/pnpm run build exited (254)</span>
+<span class="line">					   ERROR  run failed: command  exited (254)</span>
+<span class="line">					  </span>
+<span class="line">					   Tasks:    2 successful, 4 total</span>
+<span class="line">					  Cached:    0 cached, 4 total</span>
+<span class="line">					    Time:    3.321s </span>
+<span class="line">					  Failed:    kebricide#build</span>
+<span class="line">					  </span>
+<span class="line">					   ELIFECYCLE  Command failed with exit code 254.</span>
+<span class="line">					  Error: Process completed with exit code 254.</span></code></pre></div></div></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">					  node ➜ /app (codekiln/issue20-pull-maxmsp-ts-into-monorepo-until-original-is-compatible) $ pnpm install</span>
+<span class="line">					  ! Corepack is about to download https://registry.npmjs.org/pnpm/-/pnpm-10.2.1.tgz</span>
+<span class="line">					  ? Do you want to continue? [Y/n] y</span>
+<span class="line">					  </span>
+<span class="line">					  Scope: all 5 workspace projects</span>
+<span class="line">					  Lockfile is up to date, resolution step is skipped</span>
+<span class="line">					  Already up to date</span>
+<span class="line">					   EACCES  EACCES: permission denied, symlink &#39;../../../apps/kebricide&#39; -&gt; &#39;/app/node_modules/.pnpm/node_modules/kebricide&#39;</span>
+<span class="line">					  </span>
+<span class="line">					  pnpm: EACCES: permission denied, symlink &#39;../../../apps/kebricide&#39; -&gt; &#39;/app/node_modules/.pnpm/node_modules/kebricide&#39;</span>
+<span class="line">					      at async Object.symlink (node:internal/fs/promises:1001:10)</span>
+<span class="line">					      at async forceSymlink (/home/node/.cache/node/corepack/v1/pnpm/10.2.1/dist/pnpm.cjs:101363:9)</span>
+<span class="line">					      at async symlinkHoistedDependency (/home/node/.cache/node/corepack/v1/pnpm/10.2.1/dist/pnpm.cjs:143563:9)</span>
+<span class="line">					      at async Promise.all (index 0)</span>
+<span class="line">					      at async /home/node/.cache/node/corepack/v1/pnpm/10.2.1/dist/pnpm.cjs:143554:9</span>
+<span class="line">					      at async Promise.all (index 2)</span>
+<span class="line">					      at async symlinkHoistedDependencies (/home/node/.cache/node/corepack/v1/pnpm/10.2.1/dist/pnpm.cjs:143540:7)</span>
+<span class="line">					      at async hoist (/home/node/.cache/node/corepack/v1/pnpm/10.2.1/dist/pnpm.cjs:143416:7)</span>
+<span class="line">					      at async headlessInstall (/home/node/.cache/node/corepack/v1/pnpm/10.2.1/dist/pnpm.cjs:149440:36)</span>
+<span class="line">					      at async _install (/home/node/.cache/node/corepack/v1/pnpm/10.2.1/dist/pnpm.cjs:188646:33)</span></code></pre></div></div></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-98ab7e65e8a4be2b.html">Person/Harper Reed/Blog/25/02/My LLM codegen workflow atm/Sample Mise Rules</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block" data-lang="toml"><div class="extensions__code"><div class="extensions__code-lang">toml</div><pre class="lsg-code"><code><span class="line">			  [<span class="cm-def">tasks</span>.<span class="cm-string">&quot;llm:generate_bundle&quot;</span>]</span>
+<span class="line">			  <span class="cm-tag">description </span>= <span class="cm-string">&#39;Generate LLM bundle output file using repomix&#39;</span></span>
+<span class="line">			  <span class="cm-tag">hide </span>= <span class="cm-atom">true </span><span class="cm-comment"># hide this task from the list</span></span>
+<span class="line">			  <span class="cm-tag">run </span>= <span class="cm-string">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="cm-string">			  #!/usr/bin/env bash</span></span>
+<span class="line"><span class="cm-string">			  npx repomix --style xml --output-show-line-numbers --output output.txt --ignore **/uv.lock,**/package-lock.json,**/.env,**/Cargo.lock,**/node_modules,**/target,**/dist,**/build,**/output.txt,**/yarn.lock</span></span>
+<span class="line"><span class="cm-string">			  &quot;&quot;&quot;</span></span></code></pre></div></div></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-069645755b7c7967.html">Person/Matan Kushner/GitHub/dotfiles</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><code>opensrc path &lt;pkg&gt;</code> fetches the actual repo at the installed version with full source, tests, and docs. <code>node_modules</code> often contains transpiled/bundled output that&#39;s harder to reason about</li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>When investigating how a dependency works internally, load the <code>opensrc</code> skill first. Never read files under node_modules, vendor, or similar dependency directories</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-0aedf7f56c009248.html">Person/Simon Willison/24/03/How I use Git Worktrees</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>One particularly neat trick: Bill’s “worktree” Bash script checks for a node_modules folder and, if one exists, duplicates it to the new directory using copy-on-write, saving you from having to run yet another lengthy “npm install”.</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-3d718298311687dc.html">PiAI/Extension/Architecture</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>Import aliases redirect <code>@earendil-works/pi-coding-agent</code>, <code>typebox</code>, <code>@earendil-works/pi-ai</code>, and <code>@earendil-works/pi-tui</code> to the host&#39;s own copies rather than a duplicate inside the extension&#39;s <code>node_modules</code>. Under the Bun binary these become virtual modules instead.</li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>Host libraries belong in <code>peerDependencies</code> with a <code>&quot;*&quot;</code> range and must not be bundled, since the loader aliases them to the host&#39;s copies. Genuine runtime dependencies go in <code>dependencies</code>. Other pi packages must be bundled and referenced through <code>node_modules/</code> paths, because each package loads with a separate module root.</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-db505191e57973b0.html">pnpm/DevContainer/Concept/Issues with DevContainers</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><strong>Common Error</strong>: <code>EACCES: permission denied, symlink &#39;../../../apps/kebricide&#39; -&gt; &#39;/app/node_modules/.pnpm/node_modules/kebricide&#39;</code></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><strong>Configuration</strong>:<div class="cp__fenced-code-block" data-lang="dockerfile"><div class="extensions__code"><div class="extensions__code-lang">dockerfile</div><pre class="lsg-code"><code><span class="line">		  FROM node:22-alpine AS base</span>
+<span class="line">		  ENV PNPM_HOME=&quot;/pnpm&quot;</span>
+<span class="line">		  ENV PATH=&quot;$PNPM_HOME:$PATH&quot;</span>
+<span class="line">		  RUN corepack enable</span>
+<span class="line">		  </span>
+<span class="line">		  FROM base AS deps</span>
+<span class="line">		  WORKDIR /app</span>
+<span class="line">		  COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./</span>
+<span class="line">		  RUN --mount=type=cache,id=pnpm,target=/pnpm/store \</span>
+<span class="line">		      pnpm install --frozen-lockfile</span>
+<span class="line">		  </span>
+<span class="line">		  FROM base AS build</span>
+<span class="line">		  WORKDIR /app</span>
+<span class="line">		  COPY --from=deps /app/node_modules ./node_modules</span>
+<span class="line">		  COPY . .</span>
+<span class="line">		  RUN --mount=type=cache,id=pnpm,target=/pnpm/store \</span>
+<span class="line">		      pnpm run build</span></code></pre></div></div></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><strong>Dockerfile</strong>:<div class="cp__fenced-code-block" data-lang="dockerfile"><div class="extensions__code"><div class="extensions__code-lang">dockerfile</div><pre class="lsg-code"><code><span class="line">		  FROM node:22-alpine AS base</span>
+<span class="line">		  ENV PNPM_HOME=&quot;/pnpm&quot;</span>
+<span class="line">		  ENV PATH=&quot;$PNPM_HOME:$PATH&quot;</span>
+<span class="line">		  RUN corepack enable</span>
+<span class="line">		  </span>
+<span class="line">		  FROM base AS deps</span>
+<span class="line">		  WORKDIR /app</span>
+<span class="line">		  COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./</span>
+<span class="line">		  RUN --mount=type=cache,id=pnpm,target=/pnpm/store \</span>
+<span class="line">		      pnpm install --frozen-lockfile</span>
+<span class="line">		  </span>
+<span class="line">		  FROM base AS build</span>
+<span class="line">		  WORKDIR /app</span>
+<span class="line">		  COPY --from=deps /app/node_modules ./node_modules</span>
+<span class="line">		  COPY . .</span>
+<span class="line">		  RUN --mount=type=cache,id=pnpm,target=/pnpm/store \</span>
+<span class="line">		      pnpm run build</span>
+<span class="line">		  </span>
+<span class="line">		  FROM node:22-alpine AS runtime</span>
+<span class="line">		  WORKDIR /app</span>
+<span class="line">		  COPY --from=build /app/dist ./dist</span>
+<span class="line">		  COPY --from=build /app/package.json ./</span>
+<span class="line">		  RUN --mount=type=cache,id=pnpm,target=/pnpm/store \</span>
+<span class="line">              pnpm install --prod --frozen-lockfile</span>
+<span class="line">		  EXPOSE 3000</span>
+<span class="line">		  CMD [&quot;node&quot;, &quot;dist/index.js&quot;]</span></code></pre></div></div></li></ul></div></div></details></div></div></main></body></html>

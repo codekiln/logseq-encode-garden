@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>mise/Q/How do I list installed mise tools that aren&#39;t in any config file?</title><script data-lsg-theme-script>/** Shared visitor appearance, independent of replaceable page content. */
+(() => {
+  try {
+    // Saved shell layout applies before paint; the phone overlay always starts closed.
+    const root = document.documentElement;
+    if (window.matchMedia?.('(min-width: 640px)')?.matches && window.localStorage.getItem('logseq-gardener-left-sidebar') === 'open') root.setAttribute('data-lsg-left-sidebar', 'open');
+    if (window.localStorage.getItem('logseq-gardener-wide') === 'true') root.setAttribute('data-lsg-wide', 'true');
+    // The right sidebar's column takes its width before paint; its cards load after load.
+    const right = JSON.parse(window.localStorage.getItem('logseq-gardener-right-sidebar') || 'null');
+    if (right && window.matchMedia?.('(min-width: 640px)')?.matches) {
+      root.setAttribute('data-lsg-right-sidebar', right.open ? 'open' : 'closed');
+      if (right.width > 0) root.style.setProperty('--lsg-right-width', right.width + 'px');
+    }
+  } catch { /* Layout keeps its defaults. */ }
+  if (typeof window.logseqGardenerInitTheme === 'function') return;
+  const key = 'logseq-gardener-theme';
+  const valid = value => value === 'light' || value === 'dark';
+  const read = () => {
+    try { const value = window.localStorage.getItem(key); return valid(value) ? value : 'system'; }
+    catch { return 'system'; }
+  };
+  let choice = read();
+  let media;
+  try { media = window.matchMedia?.('(prefers-color-scheme: dark)'); } catch { /* Light fallback. */ }
+  const appearance = () => choice === 'system' ? (media?.matches ? 'dark' : 'light') : choice;
+  const initialize = (root = document) => {
+    for (const select of root.querySelectorAll('[data-lsg-theme-select]')) {
+      select.value = choice;
+      const control = select.closest('[data-lsg-theme-control]');
+      if (control) control.hidden = false;
+    }
+  };
+  const apply = () => {
+    document.documentElement.setAttribute('data-lsg-theme', appearance());
+    document.documentElement.setAttribute('data-lsg-theme-mode', choice);
+    initialize();
+  };
+  const set = value => {
+    if (!valid(value) && value !== 'system') return;
+    choice = value;
+    try {
+      if (choice === 'system') window.localStorage.removeItem(key);
+      else window.localStorage.setItem(key, choice);
+    } catch { /* Keep this document's choice when storage is unavailable. */ }
+    apply();
+  };
+  window.logseqGardenerInitTheme = initialize;
+  window.logseqGardenerTheme = { choice: () => choice, appearance, set };
+  apply();
+  if (media?.addEventListener) media.addEventListener('change', apply);
+  else media?.addListener?.(apply);
+  document.addEventListener('change', event => {
+    const select = event.target;
+    if (select?.matches?.('[data-lsg-theme-select]')) set(select.value);
+  });
+  window.addEventListener('storage', event => {
+    if (event.key === key || event.key === null) { choice = read(); apply(); }
+  });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => initialize(), { once: true });
+})();
+</script><script defer src="lsg-shell.js"></script><link rel="lsg-search" href="lsg-search-manifest-1e91ba5239e1caaa.json" data-revision="1e91ba5239e1caaa"><link rel="stylesheet" href="lsg-shared-559a1c927f395608.css"><script data-lsg-search-start>(()=>{const f=(_,o)=>Object.assign(f.options??={},o);window.logseqGardenerInitSearch=f;const u=new URL('lsg-search-start-d1579d619a9675f1.mjs',document.querySelector('[rel=lsg-search]').href);document.addEventListener('DOMContentLoaded',()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{const s=document.createElement('script');s.type='module';s.src=u;s.onerror=()=>{if(!document.querySelector('[rel=lsg-search]'))return;const t=document.createElement('span');t.id='lsg-search-load';t.setAttribute('role','status');t.textContent='Search unavailable. Reload this page to retry search.';document.body.append(t)};document.head.append(s)})),{once:true})})();</script></head><body><header class="lsg-header cp__header"><button type="button" class="lsg-button" data-lsg-left-toggle aria-label="Toggle left sidebar" aria-controls="lsg-left-sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l16 0M4 12l16 0M4 18l16 0"/></svg></button><span class="lsg-header-space"></span><a class="lsg-button" href="index.html" aria-label="Home"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l-2 0l9 -9l9 9l-2 0M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg></a><a class="lsg-button button" href="graph.html#/graph" aria-label="Graph"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path id="lsg-i-graph" d="M10 5a2 2 0 1 0 4 0a2 2 0 1 0-4 0M3 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M17 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M6.5 17.5 12 13l5.5 4.5M12 7v6"/></svg></a><button type="button" class="lsg-button" data-lsg-search aria-label="Search garden" aria-haspopup="dialog" aria-controls="lsg-search-dialog" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0M21 21l-6 -6"/></svg></button><div class="lsg-more"><button type="button" class="lsg-button" data-lsg-more aria-label="More" aria-haspopup="menu" aria-controls="lsg-more-menu" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M20 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg></button><div id="lsg-more-menu" role="menu" aria-label="More" hidden><button type="button" role="menuitem" data-lsg-slides>View as slides</button><button type="button" role="menuitem" data-lsg-theme-toggle>Toggle theme</button><button type="button" role="menuitem" data-lsg-theme-system hidden>Use system theme</button></div></div><button type="button" class="lsg-button lsg-right-toggle" data-lsg-right-toggle aria-label="Toggle right sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2zM15 4l0 16"/></svg></button></header><aside id="lsg-left-sidebar" class="lsg-left-sidebar" aria-label="Left sidebar"><nav aria-label="Navigation"><ul><li><a href="index.html" data-lsg-journals-link><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12zM16 3v4M8 3v4M4 11h16M11 15h1M12 15v3"/></svg><span>Journals</span></a></li><li class="flashcards-nav"><a href="#" role="button" data-lsg-flashcards><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.828 9.172a4 4 0 1 0 0 5.656a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828"/></svg><span>Flashcards</span><span class="lsg-shortcut" aria-hidden="true">g f</span><span class="lsg-badge" data-lsg-due>430</span></a></li><li class="graph-view-nav"><a href="graph.html" data-lsg-graph-view><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#lsg-i-graph"/></svg><span>Graph view</span></a></li><li><a href="pages.html" data-lsg-all-pages><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3v4a1 1 0 0 0 1 1h4M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2zM16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2"/></svg><span>All pages</span></a></li></ul><h2 class="lsg-favorites-heading" id="lsg-favorites">Favorites</h2><ul aria-labelledby="lsg-favorites"><li><a href="p-08986007b541df27.html">fd</a></li><li><a href="p-710a025b0e00c8d5.html">gh-dash</a></li><li><a href="p-710a025b0e00c8d5.html">GitHub/CLI/Extension/gh-dash</a></li><li><a href="p-539dc7d0a39cc4ec.html">tuicr</a></li><li><a href="p-4276cb26f35edeca.html">tmux/Q/How can I put a thick border around the focused pane?</a></li><li><a href="p-62e5d9883ed48541.html">LazyVim</a></li><li><a href="p-abc1fe1091d210a5.html">Logseq/Flashcard/Review/Favorite</a></li><li><a href="p-7d113595e3cdeb70.html">Obsidian</a></li><li><a href="p-efba5ef46cf8e2e4.html">Codex</a></li><li><a href="p-398c5fe622fecdf8.html">chezmoi</a></li><li><a href="p-c02f89b682f53253.html">DevContainer</a></li><li><a href="p-da5911a2a798df4f.html">mise</a></li><li><a href="p-08dc5107b57b9276.html">rg</a></li><li><a href="p-68e903194eba71d7.html">vim</a></li><li><a href="p-74ff40ba60b70acb.html">nvim</a></li><li><a href="p-f237247b53a844f6.html">Zoxide</a></li><li><a href="p-a0d502498c67fd12.html">yazi</a></li><li><a href="p-424036ef4353ec8f.html">tmux</a></li><li><a href="p-e4db29888872bdd5.html">Lazygit</a></li></ul></nav></aside><div class="lsg-sidebar-shade" data-lsg-sidebar-shade hidden></div><main><h1>mise/Q/How do I list installed mise tools that aren&#39;t in any config file?</h1><ul class="outline"><li><span id="source-block-333"></span><a class="bullet" href="#"></a><h1>How do I list installed <span class="page-reference"><a href="p-da5911a2a798df4f.html">mise</a></span> tools that aren&#39;t in any <span class="page-reference unresolved"><span>mise/Config/mise.toml</span></span> (or other config) file?</h1><ul><li><span id="source-block-445"></span><a class="bullet" href="#"></a><h2><span class="page-reference"><a href="p-68f2e81ea8dc6d7a.html">My Answer</a></span></h2><ul><li><span id="source-block-465"></span><a class="bullet" href="#"></a>use user-defined <span class="page-reference"><a href="p-579d06106acb04a8.html">mise/Task/File</a></span>s<ul><li><a class="bullet" href="#"></a><a class="block-ref-link" href="p-7668759fd2dcfe21.html#block-6a16c6fd-7c8e-4b04-b96d-a2138b61561c"><span class="block-ref"><code>mise run tool:missing:ls</code> — prints orphans, one per line</span></a></li><li><a class="bullet" href="#"></a><a class="block-ref-link" href="p-7668759fd2dcfe21.html#block-6a16c6fd-3e2e-4303-8610-8b62be2aa4b9"><span class="block-ref"><code>mise run tool:missing:uninstall -- --preview</code> (or <code>-n</code>) — same list as <code>ls</code>; does not uninstall</span></a></li><li><a class="bullet" href="#"></a><a class="block-ref-link" href="p-7668759fd2dcfe21.html#block-6a16cd70-54d2-4bf9-889f-018ee1327e2d"><span class="block-ref"><code>mise run tool:missing:uninstall</code> — uninstalls each orphan one at a time, verifies none remain</span></a></li></ul></li><li><span id="source-block-644"></span><a class="bullet" href="#"></a>for installation, put in <span class="page-reference"><a href="p-bc0108fbcf813e51.html">mise/Config/mise.toml/Global</a></span><ul><li><a class="bullet" href="#"></a><div class="embed-block" data-level="1"><div><ul><li><a class="bullet" href="#"></a><code>tool/missing/ls</code>:<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line"><span class="cm-comment">#!/usr/bin/env bash</span></span>
+<span class="line"><span class="cm-builtin">set</span> -euo pipefail</span>
+<span class="line"><span class="cm-comment">#MISE description=&quot;List installed mise tools not referenced in any config&quot;</span></span>
+<span class="line">mise ls<span class="cm-variable"> --installed --json </span><span class="cm-operator">| </span>jq<span class="cm-variable"> -r </span><span class="cm-string">&#39;</span></span>
+<span class="line"><span class="cm-string">  to_entries[] | .key as $tool | .value[] |</span></span>
+<span class="line"><span class="cm-string">  select(.source == null or (.source.path // &quot;&quot;) == &quot;&quot;) |</span></span>
+<span class="line"><span class="cm-string">  &quot;\($tool)@\(.version)&quot;</span></span>
+<span class="line"><span class="cm-string">&#39;</span></span></code></pre></div></div></li></ul></li></ul></div></div></li><li><a class="bullet" href="#"></a><div class="embed-block" data-level="1"><div><ul><li><a class="bullet" href="#"></a><code>tool/missing/uninstall</code>:<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line"><span class="cm-comment">#!/usr/bin/env bash</span></span>
+<span class="line"><span class="cm-builtin">set</span> -euo pipefail</span>
+<span class="line"><span class="cm-comment">#MISE description=&quot;Uninstall mise tools not referenced in any config&quot;</span></span>
+<span class="line"><span class="cm-comment">#USAGE flag &quot;-n --preview&quot; help=&quot;List orphans only; do not uninstall&quot;</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-def">orphan_specs</span>() {</span>
+<span class="line">  mise ls<span class="cm-variable"> --installed --json </span><span class="cm-operator">| </span>jq<span class="cm-variable"> -r </span><span class="cm-string">&#39;</span></span>
+<span class="line"><span class="cm-string">    to_entries[] | .key as $tool | .value[] |</span></span>
+<span class="line"><span class="cm-string">    select(.source == null or (.source.path // &quot;&quot;) == &quot;&quot;) |</span></span>
+<span class="line"><span class="cm-string">    &quot;\($tool)@\(.version)&quot;</span></span>
+<span class="line"><span class="cm-string">  &#39;</span></span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line"><span class="cm-variable">orphans</span><span class="cm-operator">=</span>()</span>
+<span class="line"><span class="cm-keyword">while </span>IFS= read<span class="cm-variable"> -r</span> line<span class="cm-operator">; </span><span class="cm-keyword">do</span></span>
+<span class="line">  <span class="cm-builtin">[[ </span><span class="cm-variable">-n </span><span class="cm-string">&quot;$</span><span class="cm-variable">line</span><span class="cm-string">&quot; </span><span class="cm-builtin">]] </span><span class="cm-operator">&amp;&amp; </span><span class="cm-variable">orphans</span><span class="cm-operator">+=</span>(<span class="cm-string">&quot;$</span><span class="cm-variable">line</span><span class="cm-string">&quot;</span>)</span>
+<span class="line"><span class="cm-keyword">done </span><span class="cm-operator">&lt; &lt;</span>(orphan_specs)</span>
+<span class="line"></span>
+<span class="line"><span class="cm-keyword">if </span><span class="cm-builtin">[[ </span>${<span class="cm-operator">#</span><span class="cm-variable">orphans[</span><span class="cm-keyword">@</span><span class="cm-variable">]</span>} <span class="cm-variable">-eq</span> 0 <span class="cm-builtin">]]</span><span class="cm-operator">; </span><span class="cm-keyword">then</span></span>
+<span class="line">  <span class="cm-builtin">echo </span><span class="cm-string">&quot;No orphan tools installed.&quot;</span></span>
+<span class="line">  <span class="cm-builtin">exit</span> 0</span>
+<span class="line"><span class="cm-keyword">fi</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-variable">preview</span><span class="cm-operator">=</span><span class="cm-string">false</span></span>
+<span class="line"><span class="cm-builtin">[[ </span><span class="cm-string">&quot;${</span><span class="cm-variable">usage_preview</span><span class="cm-operator">:-</span><span class="cm-string">false}&quot; </span><span class="cm-operator">== </span><span class="cm-string">&quot;true&quot; </span><span class="cm-operator">|| </span><span class="cm-string">&quot;${</span><span class="cm-variable">usage_n</span><span class="cm-operator">:-</span><span class="cm-string">false}&quot; </span><span class="cm-operator">== </span><span class="cm-string">&quot;true&quot; </span><span class="cm-builtin">]] </span><span class="cm-operator">&amp;&amp; </span><span class="cm-variable">preview</span><span class="cm-operator">=</span><span class="cm-string">true</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-keyword">if </span>$<span class="cm-variable">preview</span><span class="cm-operator">; </span><span class="cm-keyword">then</span></span>
+<span class="line">  <span class="cm-builtin">printf </span><span class="cm-string">&#39;%s\n&#39; &quot;${</span><span class="cm-variable">orphans[</span><span class="cm-keyword">@</span><span class="cm-variable">]</span><span class="cm-string">}&quot;</span></span>
+<span class="line">  <span class="cm-builtin">exit</span> 0</span>
+<span class="line"><span class="cm-keyword">fi</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-variable">exit_code</span><span class="cm-operator">=</span><span class="cm-string">0</span></span>
+<span class="line"><span class="cm-keyword">for</span> spec <span class="cm-keyword">in </span><span class="cm-string">&quot;${</span><span class="cm-variable">orphans[</span><span class="cm-keyword">@</span><span class="cm-variable">]</span><span class="cm-string">}&quot;</span><span class="cm-operator">; </span><span class="cm-keyword">do</span></span>
+<span class="line">  <span class="cm-builtin">echo </span><span class="cm-string">&quot;Uninstalling ${</span><span class="cm-variable">spec</span><span class="cm-string">}...&quot;</span></span>
+<span class="line">  <span class="cm-keyword">if </span><span class="cm-operator">! </span><span class="cm-variable">out</span><span class="cm-operator">=</span><span class="cm-string">$(</span><span class="cm-builtin">command</span><span class="cm-string"> mise uninstall &quot;$</span><span class="cm-variable">spec</span><span class="cm-string">&quot; </span><span class="cm-number">2</span><span class="cm-operator">&gt;&amp;</span><span class="cm-number">1</span><span class="cm-string">)</span><span class="cm-operator">; </span><span class="cm-keyword">then</span></span>
+<span class="line">    <span class="cm-builtin">printf </span><span class="cm-string">&#39;%s\n&#39; &quot;$</span><span class="cm-variable">out</span><span class="cm-string">&quot; </span><span class="cm-operator">&gt;&amp;</span><span class="cm-number">2</span></span>
+<span class="line">    <span class="cm-builtin">echo </span><span class="cm-string">&quot;error: failed to uninstall ${</span><span class="cm-variable">spec</span><span class="cm-string">}&quot; </span><span class="cm-operator">&gt;&amp;</span><span class="cm-number">2</span></span>
+<span class="line">    <span class="cm-variable">exit_code</span><span class="cm-operator">=</span><span class="cm-string">1</span></span>
+<span class="line">  <span class="cm-keyword">elif </span><span class="cm-builtin">[[ </span><span class="cm-variable">-n </span><span class="cm-string">&quot;$</span><span class="cm-variable">out</span><span class="cm-string">&quot; </span><span class="cm-builtin">]]</span><span class="cm-operator">; </span><span class="cm-keyword">then</span></span>
+<span class="line">    <span class="cm-builtin">printf </span><span class="cm-string">&#39;%s\n&#39; &quot;$</span><span class="cm-variable">out</span><span class="cm-string">&quot;</span></span>
+<span class="line">  <span class="cm-keyword">fi</span></span>
+<span class="line"><span class="cm-keyword">done</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-variable">remaining</span><span class="cm-operator">=</span>()</span>
+<span class="line"><span class="cm-keyword">while </span>IFS= read<span class="cm-variable"> -r</span> line<span class="cm-operator">; </span><span class="cm-keyword">do</span></span>
+<span class="line">  <span class="cm-builtin">[[ </span><span class="cm-variable">-n </span><span class="cm-string">&quot;$</span><span class="cm-variable">line</span><span class="cm-string">&quot; </span><span class="cm-builtin">]] </span><span class="cm-operator">&amp;&amp; </span><span class="cm-variable">remaining</span><span class="cm-operator">+=</span>(<span class="cm-string">&quot;$</span><span class="cm-variable">line</span><span class="cm-string">&quot;</span>)</span>
+<span class="line"><span class="cm-keyword">done </span><span class="cm-operator">&lt; &lt;</span>(orphan_specs)</span>
+<span class="line"></span>
+<span class="line"><span class="cm-keyword">if </span><span class="cm-builtin">[[ </span>${<span class="cm-operator">#</span><span class="cm-variable">remaining[</span><span class="cm-keyword">@</span><span class="cm-variable">]</span>} <span class="cm-variable">-gt</span> 0 <span class="cm-builtin">]]</span><span class="cm-operator">; </span><span class="cm-keyword">then</span></span>
+<span class="line">  <span class="cm-builtin">echo </span><span class="cm-string">&quot;Still installed (not removed):&quot; </span><span class="cm-operator">&gt;&amp;</span><span class="cm-number">2</span></span>
+<span class="line">  <span class="cm-builtin">printf </span><span class="cm-string">&#39;  %s\n&#39; &quot;${</span><span class="cm-variable">remaining[</span><span class="cm-keyword">@</span><span class="cm-variable">]</span><span class="cm-string">}&quot; </span><span class="cm-operator">&gt;&amp;</span><span class="cm-number">2</span></span>
+<span class="line">  <span class="cm-builtin">exit</span> 1</span>
+<span class="line"><span class="cm-keyword">fi</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-keyword">if </span><span class="cm-builtin">[[ </span>$<span class="cm-variable">exit_code -ne</span> 0 <span class="cm-builtin">]]</span><span class="cm-operator">; </span><span class="cm-keyword">then</span></span>
+<span class="line">  <span class="cm-builtin">exit </span><span class="cm-string">&quot;$</span><span class="cm-variable">exit_code</span><span class="cm-string">&quot;</span></span>
+<span class="line"><span class="cm-keyword">fi</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-builtin">echo </span><span class="cm-string">&quot;Uninstalled ${</span><span class="cm-operator">#</span><span class="cm-variable">orphans[</span><span class="cm-keyword">@</span><span class="cm-variable">]</span><span class="cm-string">} orphan(s).&quot;</span></span></code></pre></div></div></li></ul></li></ul></div></div></li></ul></li></ul></li><li><span id="source-block-818"></span><a class="bullet" href="#"></a><h2><span class="page-reference"><a href="p-68cab01ea8babc3e.html">AI Answer</a></span></h2><ul><li><span id="source-block-838"></span><a class="bullet" href="#"></a><strong>Short answer:</strong> Orphan installs are on disk but not pinned in any merged config—<code>mise ls --installed</code> shows a blank config column, and JSON has <code>source: null</code> (or empty <code>source.path</code>). Use global <span class="page-reference"><a href="p-579d06106acb04a8.html">mise/Task/File</a></span> tasks: <code>mise run tool:missing:ls</code> to list <code>TOOL@VERSION</code> lines, preview with <code>mise run tool:missing:uninstall -- --preview</code>, then <code>mise run tool:missing:uninstall</code> to remove. Use <span class="page-reference"><a href="p-0ebaa72162f0ea02.html">mise/uninstall</a></span>, not <span class="page-reference"><a href="p-0bb18384f979d9a2.html">mise/unuse</a></span> (config-only).</li><li><span id="source-block-1294"></span><a class="bullet" href="#"></a><strong>Chezmoi source:</strong> Managed in <span class="page-reference"><a href="p-a5df9fbf204c3536.html">dotfiles</a></span> at <code>chezmoi/dot_config/mise/tasks/tool/missing/</code> (<code>executable_ls</code> → <code>~/.config/mise/tasks/tool/missing/ls</code>, <code>executable_uninstall</code> → <code>…/uninstall</code>). Apply with <code>chezmoi apply</code>.</li><li><span id="source-block-1525"></span><a class="bullet" href="#"></a><strong>Tasks</strong> (under <code>~/.config/mise/tasks/tool/missing/</code>, group <code>tool:missing:*</code> per <span class="page-reference"><a href="p-bda2093966a6782c.html">mise/Task/File/Group</a></span>):<ul><li><span id="source-block-1638"></span><span id="block-6a16c6fd-7c8e-4b04-b96d-a2138b61561c"></span><a class="bullet" href="#"></a><code>mise run tool:missing:ls</code> — prints orphans, one per line</li><li><span id="source-block-1750"></span><span id="block-6a16c6fd-3e2e-4303-8610-8b62be2aa4b9"></span><a class="bullet" href="#"></a><code>mise run tool:missing:uninstall -- --preview</code> (or <code>-n</code>) — same list as <code>ls</code>; does not uninstall</li><li><span id="source-block-1901"></span><span id="block-6a16cd70-54d2-4bf9-889f-018ee1327e2d"></span><a class="bullet" href="#"></a><code>mise run tool:missing:uninstall</code> — uninstalls each orphan one at a time, verifies none remain</li></ul></li><li><span id="source-block-2050"></span><a class="bullet" href="#"></a><strong>Do not use <code>--dry-run</code> on the task:</strong> <code>mise run --dry-run</code> is a <em>runner</em> flag (“print the command, don&#39;t execute”). It collides with a task flag named <code>--dry-run</code> and produces only a line like <code>[tool:missing:uninstall] $ …/uninstall --dry-run</code> with no output. The task uses <code>--preview</code> instead (<span class="page-reference unresolved"><span>usageCLI/spec</span></span> <code>#USAGE flag &quot;-n --preview&quot;</code>).</li><li><span id="source-block-2406"></span><a class="bullet" href="#"></a><strong>Task sources</strong><ul><li><span id="source-block-2427"></span><span id="block-6a16c6fd-b004-4a25-84a8-24de5a7c3ed0"></span><a class="bullet" href="#"></a><code>tool/missing/ls</code>:<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line"><span class="cm-comment">#!/usr/bin/env bash</span></span>
+<span class="line"><span class="cm-builtin">set</span> -euo pipefail</span>
+<span class="line"><span class="cm-comment">#MISE description=&quot;List installed mise tools not referenced in any config&quot;</span></span>
+<span class="line">mise ls<span class="cm-variable"> --installed --json </span><span class="cm-operator">| </span>jq<span class="cm-variable"> -r </span><span class="cm-string">&#39;</span></span>
+<span class="line"><span class="cm-string">  to_entries[] | .key as $tool | .value[] |</span></span>
+<span class="line"><span class="cm-string">  select(.source == null or (.source.path // &quot;&quot;) == &quot;&quot;) |</span></span>
+<span class="line"><span class="cm-string">  &quot;\($tool)@\(.version)&quot;</span></span>
+<span class="line"><span class="cm-string">&#39;</span></span></code></pre></div></div></li></ul></li><li><span id="source-block-2849"></span><span id="block-6a16c6fd-c3c3-4b53-a2fb-84eac38c58a1"></span><a class="bullet" href="#"></a><code>tool/missing/uninstall</code>:<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line"><span class="cm-comment">#!/usr/bin/env bash</span></span>
+<span class="line"><span class="cm-builtin">set</span> -euo pipefail</span>
+<span class="line"><span class="cm-comment">#MISE description=&quot;Uninstall mise tools not referenced in any config&quot;</span></span>
+<span class="line"><span class="cm-comment">#USAGE flag &quot;-n --preview&quot; help=&quot;List orphans only; do not uninstall&quot;</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-def">orphan_specs</span>() {</span>
+<span class="line">  mise ls<span class="cm-variable"> --installed --json </span><span class="cm-operator">| </span>jq<span class="cm-variable"> -r </span><span class="cm-string">&#39;</span></span>
+<span class="line"><span class="cm-string">    to_entries[] | .key as $tool | .value[] |</span></span>
+<span class="line"><span class="cm-string">    select(.source == null or (.source.path // &quot;&quot;) == &quot;&quot;) |</span></span>
+<span class="line"><span class="cm-string">    &quot;\($tool)@\(.version)&quot;</span></span>
+<span class="line"><span class="cm-string">  &#39;</span></span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line"><span class="cm-variable">orphans</span><span class="cm-operator">=</span>()</span>
+<span class="line"><span class="cm-keyword">while </span>IFS= read<span class="cm-variable"> -r</span> line<span class="cm-operator">; </span><span class="cm-keyword">do</span></span>
+<span class="line">  <span class="cm-builtin">[[ </span><span class="cm-variable">-n </span><span class="cm-string">&quot;$</span><span class="cm-variable">line</span><span class="cm-string">&quot; </span><span class="cm-builtin">]] </span><span class="cm-operator">&amp;&amp; </span><span class="cm-variable">orphans</span><span class="cm-operator">+=</span>(<span class="cm-string">&quot;$</span><span class="cm-variable">line</span><span class="cm-string">&quot;</span>)</span>
+<span class="line"><span class="cm-keyword">done </span><span class="cm-operator">&lt; &lt;</span>(orphan_specs)</span>
+<span class="line"></span>
+<span class="line"><span class="cm-keyword">if </span><span class="cm-builtin">[[ </span>${<span class="cm-operator">#</span><span class="cm-variable">orphans[</span><span class="cm-keyword">@</span><span class="cm-variable">]</span>} <span class="cm-variable">-eq</span> 0 <span class="cm-builtin">]]</span><span class="cm-operator">; </span><span class="cm-keyword">then</span></span>
+<span class="line">  <span class="cm-builtin">echo </span><span class="cm-string">&quot;No orphan tools installed.&quot;</span></span>
+<span class="line">  <span class="cm-builtin">exit</span> 0</span>
+<span class="line"><span class="cm-keyword">fi</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-variable">preview</span><span class="cm-operator">=</span><span class="cm-string">false</span></span>
+<span class="line"><span class="cm-builtin">[[ </span><span class="cm-string">&quot;${</span><span class="cm-variable">usage_preview</span><span class="cm-operator">:-</span><span class="cm-string">false}&quot; </span><span class="cm-operator">== </span><span class="cm-string">&quot;true&quot; </span><span class="cm-operator">|| </span><span class="cm-string">&quot;${</span><span class="cm-variable">usage_n</span><span class="cm-operator">:-</span><span class="cm-string">false}&quot; </span><span class="cm-operator">== </span><span class="cm-string">&quot;true&quot; </span><span class="cm-builtin">]] </span><span class="cm-operator">&amp;&amp; </span><span class="cm-variable">preview</span><span class="cm-operator">=</span><span class="cm-string">true</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-keyword">if </span>$<span class="cm-variable">preview</span><span class="cm-operator">; </span><span class="cm-keyword">then</span></span>
+<span class="line">  <span class="cm-builtin">printf </span><span class="cm-string">&#39;%s\n&#39; &quot;${</span><span class="cm-variable">orphans[</span><span class="cm-keyword">@</span><span class="cm-variable">]</span><span class="cm-string">}&quot;</span></span>
+<span class="line">  <span class="cm-builtin">exit</span> 0</span>
+<span class="line"><span class="cm-keyword">fi</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-variable">exit_code</span><span class="cm-operator">=</span><span class="cm-string">0</span></span>
+<span class="line"><span class="cm-keyword">for</span> spec <span class="cm-keyword">in </span><span class="cm-string">&quot;${</span><span class="cm-variable">orphans[</span><span class="cm-keyword">@</span><span class="cm-variable">]</span><span class="cm-string">}&quot;</span><span class="cm-operator">; </span><span class="cm-keyword">do</span></span>
+<span class="line">  <span class="cm-builtin">echo </span><span class="cm-string">&quot;Uninstalling ${</span><span class="cm-variable">spec</span><span class="cm-string">}...&quot;</span></span>
+<span class="line">  <span class="cm-keyword">if </span><span class="cm-operator">! </span><span class="cm-variable">out</span><span class="cm-operator">=</span><span class="cm-string">$(</span><span class="cm-builtin">command</span><span class="cm-string"> mise uninstall &quot;$</span><span class="cm-variable">spec</span><span class="cm-string">&quot; </span><span class="cm-number">2</span><span class="cm-operator">&gt;&amp;</span><span class="cm-number">1</span><span class="cm-string">)</span><span class="cm-operator">; </span><span class="cm-keyword">then</span></span>
+<span class="line">    <span class="cm-builtin">printf </span><span class="cm-string">&#39;%s\n&#39; &quot;$</span><span class="cm-variable">out</span><span class="cm-string">&quot; </span><span class="cm-operator">&gt;&amp;</span><span class="cm-number">2</span></span>
+<span class="line">    <span class="cm-builtin">echo </span><span class="cm-string">&quot;error: failed to uninstall ${</span><span class="cm-variable">spec</span><span class="cm-string">}&quot; </span><span class="cm-operator">&gt;&amp;</span><span class="cm-number">2</span></span>
+<span class="line">    <span class="cm-variable">exit_code</span><span class="cm-operator">=</span><span class="cm-string">1</span></span>
+<span class="line">  <span class="cm-keyword">elif </span><span class="cm-builtin">[[ </span><span class="cm-variable">-n </span><span class="cm-string">&quot;$</span><span class="cm-variable">out</span><span class="cm-string">&quot; </span><span class="cm-builtin">]]</span><span class="cm-operator">; </span><span class="cm-keyword">then</span></span>
+<span class="line">    <span class="cm-builtin">printf </span><span class="cm-string">&#39;%s\n&#39; &quot;$</span><span class="cm-variable">out</span><span class="cm-string">&quot;</span></span>
+<span class="line">  <span class="cm-keyword">fi</span></span>
+<span class="line"><span class="cm-keyword">done</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-variable">remaining</span><span class="cm-operator">=</span>()</span>
+<span class="line"><span class="cm-keyword">while </span>IFS= read<span class="cm-variable"> -r</span> line<span class="cm-operator">; </span><span class="cm-keyword">do</span></span>
+<span class="line">  <span class="cm-builtin">[[ </span><span class="cm-variable">-n </span><span class="cm-string">&quot;$</span><span class="cm-variable">line</span><span class="cm-string">&quot; </span><span class="cm-builtin">]] </span><span class="cm-operator">&amp;&amp; </span><span class="cm-variable">remaining</span><span class="cm-operator">+=</span>(<span class="cm-string">&quot;$</span><span class="cm-variable">line</span><span class="cm-string">&quot;</span>)</span>
+<span class="line"><span class="cm-keyword">done </span><span class="cm-operator">&lt; &lt;</span>(orphan_specs)</span>
+<span class="line"></span>
+<span class="line"><span class="cm-keyword">if </span><span class="cm-builtin">[[ </span>${<span class="cm-operator">#</span><span class="cm-variable">remaining[</span><span class="cm-keyword">@</span><span class="cm-variable">]</span>} <span class="cm-variable">-gt</span> 0 <span class="cm-builtin">]]</span><span class="cm-operator">; </span><span class="cm-keyword">then</span></span>
+<span class="line">  <span class="cm-builtin">echo </span><span class="cm-string">&quot;Still installed (not removed):&quot; </span><span class="cm-operator">&gt;&amp;</span><span class="cm-number">2</span></span>
+<span class="line">  <span class="cm-builtin">printf </span><span class="cm-string">&#39;  %s\n&#39; &quot;${</span><span class="cm-variable">remaining[</span><span class="cm-keyword">@</span><span class="cm-variable">]</span><span class="cm-string">}&quot; </span><span class="cm-operator">&gt;&amp;</span><span class="cm-number">2</span></span>
+<span class="line">  <span class="cm-builtin">exit</span> 1</span>
+<span class="line"><span class="cm-keyword">fi</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-keyword">if </span><span class="cm-builtin">[[ </span>$<span class="cm-variable">exit_code -ne</span> 0 <span class="cm-builtin">]]</span><span class="cm-operator">; </span><span class="cm-keyword">then</span></span>
+<span class="line">  <span class="cm-builtin">exit </span><span class="cm-string">&quot;$</span><span class="cm-variable">exit_code</span><span class="cm-string">&quot;</span></span>
+<span class="line"><span class="cm-keyword">fi</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-builtin">echo </span><span class="cm-string">&quot;Uninstalled ${</span><span class="cm-operator">#</span><span class="cm-variable">orphans[</span><span class="cm-keyword">@</span><span class="cm-variable">]</span><span class="cm-string">} orphan(s).&quot;</span></span></code></pre></div></div></li></ul></li></ul></li><li><span id="source-block-4675"></span><a class="bullet" href="#"></a><strong>Related:</strong> <code>mise ls --current</code> is the inverse (config-only). <code>mise ls --prunable</code> is for stale versions of <em>pinned</em> tools (<span class="page-reference"><a href="p-3abe0589040efee5.html">mise/Q/What&#39;s the difference between mise unuse, mise uninstall, and mise cache clear?</a></span>). <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://mise.jdx.dev/cli/ls.html">mise ls</a></li></ul></li></ul></li></ul><section class="references linked-references" id="linked-references" data-refs="linked" data-src="_refs/p-7668759fd2dcfe21-linked-1.html"><details class="references-section"><summary><span class="ref-chevron"></span><h2>3 Linked References</h2><button type="button" class="filter" title="Filter" aria-label="Filter" data-state="none" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v2.172a2 2 0 0 1-.586 1.414L15 12v7l-6 2v-8.5L4.52 7.572A2 2 0 0 1 4 6.227z"/></svg></button></summary><noscript><a href="_refs/p-7668759fd2dcfe21-linked-1.html">Show linked references</a></noscript><div class="references-body"><p role="status"></p></div></details></section><section class="page-hierarchy references" aria-label="Hierarchy"><details class="references-section" open><summary><span class="ref-chevron"></span><h2>Hierarchy</h2></summary><ul class="namespaces"><li><span class="page-reference"><a href="p-da5911a2a798df4f.html">mise</a></span><span class="namespace-separator" aria-hidden="true">/</span><span class="page-reference"><a class="namespace-link" aria-label="mise/Q (Namespace)" href="p-9d4ceddb244e7003.html">Q</a></span></li></ul></details></section><section class="references linked-references unlinked-references" data-refs="unlinked"><details class="references-section"><summary><span class="ref-chevron"></span><h2>Unlinked References</h2></summary><noscript>No unlinked references.</noscript><div class="references-body"></div></details></section></main><script data-lsg-fragments>// Native fragment navigation does not run when a host swaps page content.
+// Hosts can call this helper before their own fragment focus/scroll handling.
+(() => {
+  function reveal(fragment = location.hash, { scroll = true } = {}) {
+    let id;
+    try { id = decodeURIComponent(fragment.replace(/^#/, "")); }
+    catch { return null; }
+    const target = id && document.getElementById(id);
+    if (!target) return null;
+    for (let parent = target.parentElement; parent; parent = parent.parentElement) {
+      if (parent.tagName === "DETAILS") parent.open = true;
+      parent.classList?.remove("folded");
+    }
+    if (scroll) target.scrollIntoView();
+    return target;
+  }
+  window.logseqGardenerRevealFragment = reveal;
+  window.addEventListener("hashchange", () => reveal());
+  reveal();
+})();
+</script></body></html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><base href="../"><title>Linked references: OpenSpec/Workflow</title><script type="application/json" class="references-data">{"blocks":[[0,[0,1,2,3],[]],[0,[4,5,6,1,7],[]],[0,[1,8],[]]],"count":3,"files":["p-544620b6e8255686-linked-1.html"],"filter":[[],[]],"pages":[["Gard/Diff","p-2e42fb145555f8e3.html"],["OpenSpec","p-438564a24d03eaca.html"],["Gard","p-b59b977e05ccd923.html"],["2026-05-25 Mon","p-dbd6f3ab1bea438f.html"],["UX","p-09312207b5c38298.html"],["OpenSpec/Delivery","p-111422a68555b6ff.html"],["OpenSpec/config/profile/Step 1 - Delivery and Workflows","p-1cb0ef8f93bd7e75.html"],["UX/Pattern","p-63d1f53490640fd9.html"],["OpenSpec/config/profile/Step 3 - Configure Workflow","p-a47b0f9ec46050c5.html"]]}</script></head><body><main><h1>Linked references: <a href="p-544620b6e8255686.html">OpenSpec/Workflow</a></h1><div class="references-fragment"><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-dbd6f3ab1bea438f.html">2026-05-25 Mon</a></summary><div class="references-block"><div class="breadcrumb block-parents"><a href="p-dbd6f3ab1bea438f.html#source-block-0"><span class="page-reference"><span>Gard/Diff</span></span></a><span class="crumb-sep" aria-hidden="true"></span><a href="p-dbd6f3ab1bea438f.html#source-block-16"><span class="page-reference"><span>Filed</span></span></a><span class="crumb-sep" aria-hidden="true"></span><a href="p-dbd6f3ab1bea438f.html#source-block-1501">openspec</a></div><div class="blocks-container"><ul class="refs-outline"><li data-ref-block="0"><a class="bullet" href="p-dbd6f3ab1bea438f.html#source-block-1625"></a><span class="page-reference"><a href="p-544620b6e8255686.html">OpenSpec/Workflow</a></span></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-1cb0ef8f93bd7e75.html">OpenSpec/config/profile/Step 1 - Delivery and Workflows</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li data-ref-block="1"><a class="bullet" href="p-1cb0ef8f93bd7e75.html#source-block-0"></a>This is a bit like a <span class="page-reference unresolved"><span>UX/Pattern/Table of Contents</span></span> that enables one to select whether subsequent steps of the <code>openspec config profile</code> will configure <span class="page-reference"><a href="p-111422a68555b6ff.html">OpenSpec/Delivery</a></span>, <span class="page-reference"><a href="p-544620b6e8255686.html">OpenSpec/Workflow</a></span>s, or both<ul><li><span class="bullet"></span><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">	  openspec config profile</span>
+<span class="line">	  </span>
+<span class="line">	  Current profile settings</span>
+<span class="line">	    Delivery: both</span>
+<span class="line">	    Workflows: 4 selected (core)</span>
+<span class="line">	    Delivery = where workflows are installed (skills, commands, or both)</span>
+<span class="line">	    Workflows = which actions are available (propose, explore, apply, etc.)</span>
+<span class="line">	  </span>
+<span class="line">	  ? What do you want to configure?</span>
+<span class="line">	  ❯ Delivery and workflows</span>
+<span class="line">	    Delivery only</span>
+<span class="line">	    Workflows only</span>
+<span class="line">	    Keep current settings (exit)</span>
+<span class="line">	  </span>
+<span class="line">	  Update install mode and available actions together</span>
+<span class="line">	  ↑↓ navigate • ⏎ select</span>
+<span class="line">	  Config profile cancelled.</span>
+<span class="line">	  </span></code></pre></div></div></li></ul></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-a47b0f9ec46050c5.html">OpenSpec/config/profile/Step 3 - Configure Workflow</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li data-ref-block="2"><a class="bullet" href="p-a47b0f9ec46050c5.html#source-block-0"></a>Step 3 of <code>openspec config profile</code> configures &quot;custom <span class="page-reference"><a href="p-544620b6e8255686.html">OpenSpec/Workflow</a></span> selection&quot;<ul><li><span class="bullet"></span></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span></summary><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">	   openspec config profile</span>
+<span class="line">	  </span>
+<span class="line">	  Current profile settings</span>
+<span class="line">	    Delivery: both</span>
+<span class="line">	    Workflows: 4 selected (core)</span>
+<span class="line">	    Delivery = where workflows are installed (skills, commands, or both)</span>
+<span class="line">	    Workflows = which actions are available (propose, explore, apply, etc.)</span>
+<span class="line">	  </span>
+<span class="line">	  ✔ What do you want to configure? Delivery and workflows</span>
+<span class="line">	  ✔ Delivery mode (how workflows are installed): Both (skills + commands) [current]</span>
+<span class="line">	  ? Select workflows to make available:</span>
+<span class="line">	  ❯[x] Propose change</span>
+<span class="line">	   [x] Explore ideas</span>
+<span class="line">	   [ ] New change</span>
+<span class="line">	   [ ] Continue change</span>
+<span class="line">	   [x] Apply tasks</span>
+<span class="line">	   [ ] Fast-forward</span>
+<span class="line">	   [ ] Sync specs</span>
+<span class="line">	   [x] Archive change</span>
+<span class="line">	   [ ] Bulk archive</span>
+<span class="line">	   [ ] Verify change</span>
+<span class="line">	   [ ] Onboard</span>
+<span class="line">	  </span></code></pre></div></div><ul><li><span class="bullet"></span>it&#39;s a bit unclear, but from this I can imagine:</li><li><span class="bullet"></span>the single most important thing here is the definition of each of these terms, which is nowhere to be found</li></ul></details></li></ul></li></ul></div></div></details></div></div></main></body></html>

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><base href="../"><title>Unlinked references: json/Schema</title><script type="application/json" class="references-data">{"count":20,"files":["p-83e4fea8126b531f-unlinked-1.html"]}</script></head><body><main><h1>Unlinked references: <a href="p-83e4fea8126b531f.html">json/Schema</a></h1><div class="references-fragment"><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-6f68efd644977bb9.html">AI/ES/25/11 Code/CODE/21 Fri/0930 No Vibes Allowed Solving Hard Problems in Complex Codebases</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>Avoid returning raw JSON schema dumps; instead compress to <code>progress.md</code>.</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-bb43100b53525523.html">AI/ES/25/ws</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>Data Validation, Reflection and Self-Correction: The critical role of enforcing strict data contracts at the API level and validating inputs to and outputs from AI models to ensure reliability — simple and obvious though this might see, it’s easy to get wrong and many people do Schema Generation: tool calls are critical to leveraging LLMs, but you shouldn’t be hand-writing JSON Schema to define tools, instead Pydantic should be generating schema from the same source of truth used for data validation.</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-198dd53d16897ade.html">AWS/AppConfig/Blog/22/02/Cross-Account Configuration</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>* Add JSON Schema validator</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-b1dfbc9c26b466bd.html">Claude/Code/Plugin/Marketplace</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><code>$schema</code> — JSON Schema URL for editor autocomplete; ignored by Claude Code at load time.</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-308d4b558a81ecea.html">CursorAI/v/0/46</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><input class="task-checkbox" type="checkbox" disabled> <span class="task-marker">TODO</span> what&#39;s the json schema for this <a class="tag" href="p-af640c4c86023e1c.html">#q</a></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-6d09ac5e164ec45f.html">DevContainer/Report/25/12/Multi-Env DevContainer Setup</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><strong>No Native Conditional Config:</strong> Neither VS Code&#39;s devcontainer tooling nor JetBrains&#39; currently provide an official way to have one devcontainer config automatically adjust mounts per environment. The devcontainer.json schema doesn&#39;t support conditional sections (no built-in <code>if</code> for &quot;if running in Codespaces use X, else Y&quot;). The expectation from the spec is that if you have different needs, you either make the configuration handle both (e.g. via environment variables or runtime detection) or supply separate configs. Microsoft&#39;s documentation suggests using multiple devcontainer.json files for different scenarios (like separate subfolders for different services or environments) [6]. JetBrains&#39; documentation similarly allows you to point the IDE at a specific devcontainer.json path if it&#39;s not in the default location [7] [8] – meaning you could maintain a JetBrains-specific devcontainer config in a separate folder and choose it when creating the Dev Container in Gateway.</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-d7d8794fccbc49ec.html">LangSmith/PromptHub/How To/Define Structured Output and Models for PromptHub in Git</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>converts a Pydantic model to JSON Schema and attaches it to the prompt (workaround for StructuredPrompt push),</li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>writes local artifacts (yaml/json) so prompts+schemas are kept in your repo for version control.<div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code" style="--lsg-code-digits:3"><code><span class="line">		  # file: prompthub_sync.py</span>
+<span class="line">		  from typing import Any, Dict, List, Optional, Type</span>
+<span class="line">		  import json</span>
+<span class="line">		  import os</span>
+<span class="line">		  from pathlib import Path</span>
+<span class="line">		  </span>
+<span class="line">		  from langsmith import Client</span>
+<span class="line">		  from langchain_core.prompts import ChatPromptTemplate</span>
+<span class="line">		  # example model class provider import; optional:</span>
+<span class="line">		  # from langchain_openai import ChatOpenAI</span>
+<span class="line">		  </span>
+<span class="line">		  # if you use pydantic v1/v2 choose the right method to export schema:</span>
+<span class="line">		  try:</span>
+<span class="line">		    # pydantic v2</span>
+<span class="line">		    from pydantic import BaseModel as PydanticBase</span>
+<span class="line">		    def pydantic_to_json_schema(m: Type[PydanticBase]) -&gt; Dict[str, Any]:</span>
+<span class="line">		        return m.model_json_schema()</span>
+<span class="line">		  except Exception:</span>
+<span class="line">		    # fallback for pydantic v1</span>
+<span class="line">		    from pydantic import BaseModel as PydanticBase</span>
+<span class="line">		    def pydantic_to_json_schema(m: Type[PydanticBase]) -&gt; Dict[str, Any]:</span>
+<span class="line">		        return m.schema()</span>
+<span class="line">		  </span>
+<span class="line">		  class PromptHubSync:</span>
+<span class="line">		    def __init__(self, client: Optional[Client] = None, out_dir: str = &quot;prompts&quot;):</span>
+<span class="line">		        self.client = client or Client()</span>
+<span class="line">		        self.out_dir = Path(out_dir)</span>
+<span class="line">		        self.out_dir.mkdir(exist_ok=True, parents=True)</span>
+<span class="line">		  </span>
+<span class="line">		    def write_local_artifact(self, prompt_id: str, prompt_obj: Any, schema: Optional[Dict]=None):</span>
+<span class="line">		        # save prompt text and schema to repo for git/version control</span>
+<span class="line">		        base = self.out_dir / prompt_id</span>
+<span class="line">		        base.mkdir(exist_ok=True, parents=True)</span>
+<span class="line">		        if isinstance(prompt_obj, ChatPromptTemplate):</span>
+<span class="line">		            # get something serializable</span>
+<span class="line">		            with open(base / &quot;prompt.txt&quot;, &quot;w&quot;, encoding=&quot;utf8&quot;) as f:</span>
+<span class="line">		                try:</span>
+<span class="line">		                    # ChatPromptTemplate has from_messages/from_template; try to format sensibly</span>
+<span class="line">		                    f.write(str(prompt_obj))</span>
+<span class="line">		                except Exception:</span>
+<span class="line">		                    f.write(repr(prompt_obj))</span>
+<span class="line">		        else:</span>
+<span class="line">		            with open(base / &quot;prompt.obj.json&quot;, &quot;w&quot;, encoding=&quot;utf8&quot;) as f:</span>
+<span class="line">		                json.dump({&quot;repr&quot;: repr(prompt_obj)}, f, indent=2)</span>
+<span class="line">		        if schema is not None:</span>
+<span class="line">		            with open(base / &quot;schema.json&quot;, &quot;w&quot;, encoding=&quot;utf8&quot;) as f:</span>
+<span class="line">		                json.dump(schema, f, indent=2)</span>
+<span class="line">		  </span>
+<span class="line">		    def push_prompt_with_models(</span>
+<span class="line">		        self,</span>
+<span class="line">		        prompt_id: str,</span>
+<span class="line">		        prompt_obj: ChatPromptTemplate,</span>
+<span class="line">		        pydantic_schema: Optional[Type[PydanticBase]] = None,</span>
+<span class="line">		        models: Optional[List[Dict[str, Any]]] = None,</span>
+<span class="line">		        tags: Optional[List[str]] = None,</span>
+<span class="line">		        description: Optional[str] = None,</span>
+<span class="line">		    ) -&gt; Dict[str,str]:</span>
+<span class="line">		        &quot;&quot;&quot;</span>
+<span class="line">		        - prompt_obj: ChatPromptTemplate (or other LangChain prompt object)</span>
+<span class="line">		        - pydantic_schema: Optional Pydantic BaseModel class (we attach its JSON Schema as readme)</span>
+<span class="line">		        - models: list of dicts each describing a model variant. Each dict can be:</span>
+<span class="line">		           {&quot;name&quot;: &quot;gpt-4o-mini&quot;, &quot;model_obj&quot;: &lt;langchain model instance&gt;, &quot;tags&quot;: [&quot;g:gpt4o-mini&quot;]}</span>
+<span class="line">		          OR: {&quot;name&quot;: &quot;gpt-4o-mini&quot;, &quot;tags&quot;: [&quot;g:gpt4o-mini&quot;]} to only push prompt metadata for that model.</span>
+<span class="line">		        Returns mapping model_name -&gt; url of pushed prompt commit.</span>
+<span class="line">		        &quot;&quot;&quot;</span>
+<span class="line">		        # 1) save locally (git-managed)</span>
+<span class="line">		        schema_json = None</span>
+<span class="line">		        if pydantic_schema:</span>
+<span class="line">		            schema_json = pydantic_to_json_schema(pydantic_schema)</span>
+<span class="line">		        self.write_local_artifact(prompt_id, prompt_obj, schema_json)</span>
+<span class="line">		  </span>
+<span class="line">		        # 2) push a baseline prompt (content only). We&#39;ll put schema JSON in `readme` as a practical workaround.</span>
+<span class="line">		        readme_text = None</span>
+<span class="line">		        if schema_json:</span>
+<span class="line">		            readme_text = json.dumps({&quot;schema&quot;: schema_json}, indent=2)</span>
+<span class="line">		        baseline_url = self.client.push_prompt(</span>
+<span class="line">		            prompt_id,</span>
+<span class="line">		            object=prompt_obj,</span>
+<span class="line">		            description=description or &quot;&quot;,</span>
+<span class="line">		            readme=readme_text,</span>
+<span class="line">		            tags=tags or [],</span>
+<span class="line">		        )</span>
+<span class="line">		  </span>
+<span class="line">		        results = {&quot;baseline&quot;: baseline_url}</span>
+<span class="line">		  </span>
+<span class="line">		        # 3) push model-specific commits (if model objects supplied, push prompt|model runnables)</span>
+<span class="line">		        if models:</span>
+<span class="line">		            for m in models:</span>
+<span class="line">		                name = m.get(&quot;name&quot;) or m.get(&quot;model&quot;) or &quot;model&quot;</span>
+<span class="line">		                model_obj = m.get(&quot;model_obj&quot;)</span>
+<span class="line">		                model_tags = (tags or []) + m.get(&quot;tags&quot;, [])</span>
+<span class="line">		                try:</span>
+<span class="line">		                    if model_obj is not None:</span>
+<span class="line">		                        # push prompt|model so the commit stores the model config LangSmith supports</span>
+<span class="line">		                        runnable = prompt_obj | model_obj</span>
+<span class="line">		                        url = self.client.push_prompt(f&quot;{prompt_id}-{name}&quot;, object=runnable, tags=model_tags, description=(m.get(&quot;description&quot;) or &quot;&quot;))</span>
+<span class="line">		                    else:</span>
+<span class="line">		                        # fallback: just push the prompt but tag with the model name</span>
+<span class="line">		                        url = self.client.push_prompt(f&quot;{prompt_id}-{name}&quot;, object=prompt_obj, tags=model_tags)</span>
+<span class="line">		                    results[name] = url</span>
+<span class="line">		                except Exception as e:</span>
+<span class="line">		                    results[name] = f&quot;ERROR: {e}&quot;</span>
+<span class="line">		        return results</span>
+<span class="line">		  </span>
+<span class="line">		  # Example usage:</span>
+<span class="line">		  if __name__ == &quot;__main__&quot;:</span>
+<span class="line">		    from pydantic import BaseModel, Field</span>
+<span class="line">		    from langchain_core.prompts import ChatPromptTemplate</span>
+<span class="line">		  </span>
+<span class="line">		    class MySchema(BaseModel):</span>
+<span class="line">		        title: str = Field(..., title=&quot;Title&quot;)</span>
+<span class="line">		        score: int = Field(..., title=&quot;Score&quot;)</span>
+<span class="line">		  </span>
+<span class="line">		    messages = [(&quot;system&quot;, &quot;You are a helpful assistant.&quot;), (&quot;user&quot;, &quot;{text}&quot;)]</span>
+<span class="line">		    prompt = ChatPromptTemplate.from_messages(messages)</span>
+<span class="line">		  </span>
+<span class="line">		    sync = PromptHubSync()</span>
+<span class="line">		    # If you use langchain_openai.ChatOpenAI as model, pass instance in models list (optional)</span>
+<span class="line">		    res = sync.push_prompt_with_models(</span>
+<span class="line">		        &quot;my-enterprise-prompt&quot;,</span>
+<span class="line">		        prompt,</span>
+<span class="line">		        pydantic_schema=MySchema,</span>
+<span class="line">		        models=[{&quot;name&quot;:&quot;gpt-4o-mini&quot;, &quot;tags&quot;:[&quot;prod&quot;,&quot;gpt-4o-mini&quot;]}],</span>
+<span class="line">		        tags=[&quot;team:qa&quot;],</span>
+<span class="line">		        description=&quot;My prompt with schema attached as readme&quot;</span>
+<span class="line">		    )</span>
+<span class="line">		    print(res)</span></code></pre></div></div><p>		  <br>		  Notes on the helper and caveats<br></p></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>Because of the <strong>StructuredPrompt / Pydantic</strong> push issue, the helper attaches Pydantic JSON Schema into <code>readme</code> as a pragmatic workaround; when you <code>pull_prompt()</code> later you can <code>readme</code> and reconstruct the schema locally. This keeps your schema in the repo (versioned) and still usable in the UI for human editors. (See the SDK issue where pushing StructuredPrompt containing Pydantic fails.) (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/langchain-ai/langsmith-sdk/issues/1462?utm_source=chatgpt.com">GitHub</a>)</li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><strong>Attach schema as JSON (or in <code>readme</code>) and push prompt content.</strong> Push the prompt template and include your schema serialized to JSON Schema in the prompt <code>readme</code> or metadata. This is the pragmatic approach many teams use until the SDK supports direct class serialization. (Docs show <code>push_prompt()</code> and commit manifests but the SDK/API require serializable manifest pieces.) (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://docs.langchain.com/langsmith/manage-prompts-programmatically?utm_source=chatgpt.com">LangChain Docs</a>)</li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><strong>Serialize the Pydantic model explicitly to a JSON Schema and push that JSON schema (not the class object).</strong> Convert <code>MyModel.model_json_schema()</code> (pydantic v2) or <code>MyModel.schema()</code> (v1) and include that dict in the prompt manifest/readme or as separate artifact in your repo and in the prompt commit. That avoids sending a Python class object. (This is essentially the workaround in the helper I previously gave you.) (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://docs.pydantic.dev/latest/concepts/serialization/?utm_source=chatgpt.com">Pydantic</a>)</li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>Got it — here’s a <strong>minimal test script</strong> you can run in your environment to check if pushing a prompt with a JSON schema as the <code>StructuredPrompt.schema</code> works with the LangSmith SDK.<p>		  <br>		  It will try to push the prompt to your Prompt Hub; if serialization fails, you’ll see the same error reported in <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/langchain-ai/langsmith-sdk/issues/1462">issue #1462</a>.<br>		  <br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">		  from langsmith import Client</span>
+<span class="line">		  from langchain_core.prompts import StructuredPrompt</span>
+<span class="line">		  </span>
+<span class="line">		  # 1. Define a JSON schema (this would normally come from a Pydantic model)</span>
+<span class="line">		  json_schema = {</span>
+<span class="line">		      &quot;title&quot;: &quot;MySchema&quot;,</span>
+<span class="line">		      &quot;type&quot;: &quot;object&quot;,</span>
+<span class="line">		      &quot;properties&quot;: {</span>
+<span class="line">		          &quot;title&quot;: {&quot;type&quot;: &quot;string&quot;},</span>
+<span class="line">		          &quot;score&quot;: {&quot;type&quot;: &quot;integer&quot;}</span>
+<span class="line">		      },</span>
+<span class="line">		      &quot;required&quot;: [&quot;title&quot;, &quot;score&quot;]</span>
+<span class="line">		  }</span>
+<span class="line">		  </span>
+<span class="line">		  # 2. Define a StructuredPrompt with schema as JSON dict</span>
+<span class="line">		  structured_prompt = StructuredPrompt(</span>
+<span class="line">		      schema=json_schema,</span>
+<span class="line">		      template=&quot;Generate a {title} with a score of {score}.&quot;</span>
+<span class="line">		  )</span>
+<span class="line">		  </span>
+<span class="line">		  # 3. Push to LangSmith Prompt Hub</span>
+<span class="line">		  client = Client()</span>
+<span class="line">		  </span>
+<span class="line">		  try:</span>
+<span class="line">		      url = client.push_prompt(</span>
+<span class="line">		          &quot;json-schema-test-prompt&quot;,</span>
+<span class="line">		          object=structured_prompt,</span>
+<span class="line">		          description=&quot;Test pushing StructuredPrompt with JSON schema&quot;</span>
+<span class="line">		      )</span>
+<span class="line">		      print(&quot;✅ Success, pushed to:&quot;, url)</span>
+<span class="line">		  except Exception as e:</span>
+<span class="line">		      print(&quot;❌ Failed with error:&quot;, e)</span></code></pre></div></div></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>If it fails, you’ll know the SDK still doesn’t accept JSON schema–based <code>StructuredPrompt</code>. If it succeeds, check the Prompt Hub UI — does the schema show up as structured output metadata?</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-bcd9566be3aa5358.html">LazyVim/plugins/extras/lang/json</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><span class="page-reference unresolved"><span>nvim/Plugin/SchemaStore.nvim</span></span> — JSON Schema catalog feeding jsonls</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-e4fa3a1f6838724e.html">Logseq/Entity/Standard</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><strong><span class="page-reference"><a href="p-dff0838a411ac140.html">Logseq/Entity/Organization</a></span></strong> — Use for the <strong>maintainer or standards body</strong> (IETF, W3C, FIDO Alliance, JSON Schema Organization, industry consortia). Use <strong>standard</strong> for the <strong>artifact</strong> (the RFC, the published recommendation, the community spec). Link them in the body or <strong><code>see-also::</code></strong> when both exist.</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-8c2fbea696e425a6.html">Person/codekiln/GitHub/sourcer/Project/v0 AI Spec</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>For editor affordances, Sourcer should publish a JSON Schema for <code>srcr.toml</code> even though the file is TOML. Many editors and language servers can associate schemas with TOML files through tooling such as Taplo, which supports JSON Schema-based validation and completions for TOML. That means the project can offer a schema URL and document editor setup so users get autocomplete for <code>[sources]</code>, object keys, allowed enum values such as <code>clone = &quot;https&quot; | &quot;ssh&quot;</code>, and warnings for misspelled options. This is important because the config file is the interface in the MVP.</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-5a9ce4bd45edb2d9.html">Person/codekiln/GitHub/sourcer/Project/v0 AI Spec/Config</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>Ship a published <strong>JSON Schema</strong> for <code>srcr.toml</code> even though the on-disk format is TOML.</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-6b8d06ddd94573a9.html">Person/codekiln/GitHub/sourcer/Project/v0 AI Spec/Mise</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><strong>taplo-compatible JSON Schema</strong> published from the repo (see Config page); optional <code>schemars</code> or hand-maintained schema crate.</li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>Config reference generated from schema (compare Taplo + JSON Schema note on <span class="page-reference"><a href="p-5a9ce4bd45edb2d9.html">Person/codekiln/GitHub/sourcer/Project/v0 AI Spec/Config</a></span>)</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-cd06f35f86ae1b0a.html">Rust/Weather/Report/26/03/Survey of Rust-Centric CLI and TUI Weather Apps for Forecasting</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>For the &quot;I want an agent-friendly CLI that yields structured data&quot; role, <code>outside</code> and <code>rustormy</code> are the most directly aligned with agentic summarization. <code>outside</code> provides a rich JSON schema including multi-day forecast arrays and precipitation/UV/sunrise-sunset fields, while <code>rustormy</code> provides JSON output and multiple providers with XDG config support and very recent development activity. [10] [8]</li></ul></div></div></details></div></div></main></body></html>

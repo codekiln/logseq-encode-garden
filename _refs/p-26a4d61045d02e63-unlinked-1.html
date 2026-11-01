@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><base href="../"><title>Unlinked references: CPU/Arch/x86</title><script type="application/json" class="references-data">{"count":6,"files":["p-26a4d61045d02e63-unlinked-1.html"]}</script></head><body><main><h1>Unlinked references: <a href="p-26a4d61045d02e63.html">CPU/Arch/x86</a></h1><div class="references-fragment"><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-849d22e97ebee252.html">Omarchy/Install/Log/26/02/15 Sun</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><input class="task-checkbox" type="checkbox" checked disabled> <span class="task-done">download raw <span class="page-reference unresolved"><span>Arch</span></span> ISO <code>archlinux-2026.02.01-x86_64.iso</code> from an official Arch mirror.</span></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><input class="task-checkbox" type="checkbox" checked disabled> <span class="task-done">verify downloaded <code>archlinux-2026.02.01-x86_64.iso</code> against <code>archlinux-2026.02.01-x86_64.iso.sig</code> using <code>gpg --keyserver-options auto-key-retrieve --verify archlinux-2026.02.01-x86_64.iso.sig</code>.</span><ul><li><span class="bullet"></span><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">			  gpg --keyserver-options auto-key-retrieve --verify archlinux-2026.02.01-x86_64.iso.sig</span>
+<span class="line">			  gpg: assuming signed data in &#39;archlinux-2026.02.01-x86_64.iso&#39;</span>
+<span class="line">			  gpg: Signature made Sun Feb  1 03:08:03 2026 EST</span>
+<span class="line">			  gpg:                using EDDSA key 3E80CA1A8B89F69CBA57D98A76A5EF9054449A5C</span>
+<span class="line">			  gpg:                issuer &quot;pierre@archlinux.org&quot;</span>
+<span class="line">			  gpg: key 76A5EF9054449A5C: public key &quot;Pierre Schmitz &lt;pierre@archlinux.org&gt;&quot; imported</span>
+<span class="line">			  gpg: key 7F2D434B9741E8AC: public key &quot;Pierre Schmitz &lt;pierre@archlinux.org&gt;&quot; imported</span>
+<span class="line">			  gpg: key 76A5EF9054449A5C: &quot;Pierre Schmitz &lt;pierre@archlinux.org&gt;&quot; not changed</span>
+<span class="line">			  gpg: key 7F2D434B9741E8AC: &quot;Pierre Schmitz &lt;pierre@archlinux.org&gt;&quot; not changed</span>
+<span class="line">			  gpg: Total number processed: 4</span>
+<span class="line">			  gpg:               imported: 2</span>
+<span class="line">			  gpg:              unchanged: 2</span>
+<span class="line">			  gpg: no ultimately trusted keys found</span>
+<span class="line">			  gpg: Good signature from &quot;Pierre Schmitz &lt;pierre@archlinux.org&gt;&quot; [unknown]</span>
+<span class="line">			  gpg: WARNING: The key&#39;s User ID is not certified with a trusted signature!</span>
+<span class="line">			  gpg:          There is no indication that the signature belongs to the owner.</span>
+<span class="line">			  Primary key fingerprint: 3E80 CA1A 8B89 F69C BA57  D98A 76A5 EF90 5444 9A5C</span></code></pre></div></div></li><li><span class="bullet"></span>Result: <code>Good signature</code> confirms the <code>.sig</code> matches the ISO bytes.</li><li><span class="bullet"></span>Note: trust warning means local Web of Trust trust is not established yet; it is not a signature failure.</li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span>Verified fingerprint <code>3E80 CA1A 8B89 F69C BA57 D98A 76A5 EF90 5444 9A5C</code> against official Arch sources:</summary><ul><li><span class="bullet"></span><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://archlinux.org/download/">Arch Linux Downloads</a></li><li><span class="bullet"></span><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://archlinux.org/master-keys/">Arch Linux Master Keys</a></li></ul></details></li></ul></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-6b8d06ddd94573a9.html">Person/codekiln/GitHub/sourcer/Project/v0 AI Spec/Mise</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>GitHub releases with prebuilt binaries (target matrix: linux/macos, x86_64/aarch64)—compare <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://mise.jdx.dev/installing-mise.html">installing mise</a> (<span class="page-reference"><a href="p-28f5ff1c27487032.html">mise/How To/Install Mise/The First Time</a></span>).</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-674fdac2c9ea1277.html">Person/Jan-Erik Rediger/TIL/Nix/minimal flake for a shell</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">		{</span>
+<span class="line">		  description = &quot;A very basic flake&quot;;</span>
+<span class="line">		  outputs = { self, nixpkgs, ... }:</span>
+<span class="line">		    let</span>
+<span class="line">		      supportedSystems = [ &quot;aarch64-linux&quot; &quot;aarch64-darwin&quot; &quot;x86_64-darwin&quot; &quot;x86_64-linux&quot; ];</span>
+<span class="line">		      forAllSystems = nixpkgs.lib.genAttrs supportedSystems;</span>
+<span class="line">		    in</span>
+<span class="line">		    {</span>
+<span class="line">		      devShells = forAllSystems (system:</span>
+<span class="line">		        let</span>
+<span class="line">		          pkgs = nixpkgs.legacyPackages.${system};</span>
+<span class="line">		        in</span>
+<span class="line">		        {</span>
+<span class="line">		          default = pkgs.mkShell {</span>
+<span class="line">		            buildInputs = with pkgs;</span>
+<span class="line">		              [</span>
+<span class="line">		                ripgrep</span>
+<span class="line">		              ];</span>
+<span class="line">		          };</span>
+<span class="line">		        });</span>
+<span class="line">		    };</span>
+<span class="line">		}</span></code></pre></div></div></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-9129077100481fea.html">Person/Sadjow Leão/GitHub/codex-cli-nix</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>Pre-built binaries are intended for Linux and macOS on both x86_64 and ARM64</li></ul></div></div></details></div></div></main></body></html>

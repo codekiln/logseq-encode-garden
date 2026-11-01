@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><base href="../"><title>Unlinked references: aiofiles</title><script type="application/json" class="references-data">{"count":2,"files":["p-cb48876fcf0ec22f-unlinked-1.html"]}</script></head><body><main><h1>Unlinked references: <a href="p-cb48876fcf0ec22f.html">aiofiles</a></h1><div class="references-fragment"><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-0c86840997b3c995.html">StreamIO/Chat/How To/Attach Data Files Larger than 5KB with File Uploads</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="table-wrapper"><table class="table-auto"><colgroup><col class="org-left"><col class="org-left"></colgroup><thead><tr><th scope="col" class="org-left">Requirement</th><th scope="col" class="org-left">Value</th></tr></thead><tbody><tr><td class="org-left">Python</td><td class="org-left">3.8 +</td></tr><tr><td class="org-left">Packages</td><td class="org-left"><code>stream-chat&gt;=5</code>, <code>aiofiles</code>, <code>python-dotenv</code></td></tr><tr><td class="org-left">Environment</td><td class="org-left"><code>STREAM_APP_KEY</code>, <code>STREAM_APP_SECRET</code> set</td></tr><tr><td class="org-left">Channel cfg</td><td class="org-left"><code>uploads: true</code> (the helper will enable it if missing)</td></tr></tbody></table></div></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block" data-lang="python"><div class="extensions__code"><div class="extensions__code-lang">python</div><pre class="lsg-code"><code><span class="line">			  <span class="cm-keyword">import </span><span class="cm-variable">json</span>, <span class="cm-variable">os</span>, <span class="cm-variable">aiofiles</span>.<span class="cm-variable">tempfile</span>, <span class="cm-variable">contextlib</span></span>
+<span class="line">			  <span class="cm-keyword">from </span><span class="cm-variable">stream_chat</span>.<span class="cm-variable">async_chat </span><span class="cm-keyword">import </span><span class="cm-variable">StreamChatAsync</span></span>
+<span class="line">			  <span class="cm-keyword">from </span><span class="cm-variable">stream_chat</span>.<span class="cm-variable">base</span>.<span class="cm-variable">exceptions </span><span class="cm-keyword">import </span><span class="cm-variable">StreamAPIException</span></span>
+<span class="line">			  </span>
+<span class="line">			  <span class="cm-keyword">async def </span><span class="cm-def">upload_json_as_attachment</span>(</span>
+<span class="line">			      <span class="cm-variable">chat</span>: <span class="cm-variable">StreamChatAsync</span>,</span>
+<span class="line">			      <span class="cm-variable">channel_type</span>: <span class="cm-type">str</span>,</span>
+<span class="line">			      <span class="cm-variable">channel_id</span>: <span class="cm-type">str</span>,</span>
+<span class="line">			      <span class="cm-variable">message_id</span>: <span class="cm-type">str</span>,</span>
+<span class="line">			      <span class="cm-variable">attachment_name</span>: <span class="cm-type">str</span>,</span>
+<span class="line">			      <span class="cm-variable">payload</span>: <span class="cm-type">dict </span><span class="cm-operator">| </span><span class="cm-type">str</span>,</span>
+<span class="line">			      <span class="cm-variable">user_id</span>: <span class="cm-type">str</span>,</span>
+<span class="line">			  ):</span>
+<span class="line">			      <span class="cm-comment">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="cm-comment">			      • Serializes *payload* to JSON (if dict)  </span></span>
+<span class="line"><span class="cm-comment">			      • Writes it to a temp file  </span></span>
+<span class="line"><span class="cm-comment">			      • Uploads via channel.send_file  </span></span>
+<span class="line"><span class="cm-comment">			      • Adds the file as an attachment to *message_id*  </span></span>
+<span class="line"><span class="cm-comment">			      • Returns the Stream API response</span></span>
+<span class="line"><span class="cm-comment">			      &quot;&quot;&quot;</span></span>
+<span class="line">			      <span class="cm-variable">channel </span><span class="cm-operator">= </span><span class="cm-variable">chat</span>.<span class="cm-variable">channel</span>(<span class="cm-variable">channel_type</span>, <span class="cm-variable">channel_id</span>)</span>
+<span class="line">			  </span>
+<span class="line">			      <span class="cm-comment"># 1 write payload</span></span>
+<span class="line">			      <span class="cm-keyword">async with </span><span class="cm-variable">aiofiles</span>.<span class="cm-variable">tempfile</span>.<span class="cm-variable">NamedTemporaryFile</span>(</span>
+<span class="line">			          <span class="cm-string">&quot;w&quot;</span>, <span class="cm-variable">suffix</span><span class="cm-operator">=</span><span class="cm-string">&quot;.json&quot;</span>, <span class="cm-variable">delete</span><span class="cm-operator">=</span><span class="cm-atom">False</span></span>
+<span class="line">			      ) <span class="cm-keyword">as </span><span class="cm-variable">tmp</span>:</span>
+<span class="line">			          <span class="cm-variable">text </span><span class="cm-operator">= </span><span class="cm-variable">json</span>.<span class="cm-variable">dumps</span>(<span class="cm-variable">payload</span>) <span class="cm-keyword">if </span><span class="cm-builtin">isinstance</span>(<span class="cm-variable">payload</span>, <span class="cm-type">dict</span>) <span class="cm-keyword">else </span><span class="cm-type">str</span>(<span class="cm-variable">payload</span>)</span>
+<span class="line">			          <span class="cm-keyword">await </span><span class="cm-variable">tmp</span>.<span class="cm-variable">write</span>(<span class="cm-variable">text</span>)</span>
+<span class="line">			          <span class="cm-keyword">await </span><span class="cm-variable">tmp</span>.<span class="cm-variable">flush</span>()</span>
+<span class="line">			          <span class="cm-variable">tmp_path </span><span class="cm-operator">= </span><span class="cm-variable">tmp</span>.<span class="cm-variable">name</span></span>
+<span class="line">			  </span>
+<span class="line">			      <span class="cm-comment"># 2 upload temp file</span></span>
+<span class="line">			      <span class="cm-keyword">try</span>:</span>
+<span class="line">			          <span class="cm-variable">resp </span><span class="cm-operator">= </span><span class="cm-keyword">await </span><span class="cm-variable">channel</span>.<span class="cm-variable">send_file</span>(</span>
+<span class="line">			              <span class="cm-variable">tmp_path</span>,</span>
+<span class="line">			              <span class="cm-variable">name</span><span class="cm-operator">=</span><span class="cm-keyword">f</span><span class="cm-string">&quot;</span>{<span class="cm-variable">attachment_name</span>}<span class="cm-string">.json&quot;</span>,</span>
+<span class="line">			              <span class="cm-variable">user</span><span class="cm-operator">=</span>{<span class="cm-string">&quot;id&quot;</span>: <span class="cm-variable">user_id</span>},</span>
+<span class="line">			              <span class="cm-variable">content_type</span><span class="cm-operator">=</span><span class="cm-string">&quot;application/json&quot;</span>,</span>
+<span class="line">			          )</span>
+<span class="line">			      <span class="cm-keyword">except </span><span class="cm-variable">StreamAPIException </span><span class="cm-keyword">as </span><span class="cm-variable">exc</span>:</span>
+<span class="line">			          <span class="cm-comment"># Enable uploads on the fly if needed</span></span>
+<span class="line">			          <span class="cm-keyword">if </span><span class="cm-string">&quot;upload disabled&quot; </span><span class="cm-operator">not in </span><span class="cm-type">str</span>(<span class="cm-variable">exc</span>):</span>
+<span class="line">			              <span class="cm-keyword">raise</span></span>
+<span class="line">			          <span class="cm-keyword">await </span><span class="cm-variable">channel</span>.<span class="cm-variable">update_partial</span>({<span class="cm-string">&quot;config_overrides&quot;</span>: {<span class="cm-string">&quot;uploads&quot;</span>: <span class="cm-atom">True</span>}})</span>
+<span class="line">			          <span class="cm-variable">resp </span><span class="cm-operator">= </span><span class="cm-keyword">await </span><span class="cm-variable">channel</span>.<span class="cm-variable">send_file</span>(</span>
+<span class="line">			              <span class="cm-variable">tmp_path</span>,</span>
+<span class="line">			              <span class="cm-variable">name</span><span class="cm-operator">=</span><span class="cm-keyword">f</span><span class="cm-string">&quot;</span>{<span class="cm-variable">attachment_name</span>}<span class="cm-string">.json&quot;</span>,</span>
+<span class="line">			              <span class="cm-variable">user</span><span class="cm-operator">=</span>{<span class="cm-string">&quot;id&quot;</span>: <span class="cm-variable">user_id</span>},</span>
+<span class="line">			              <span class="cm-variable">content_type</span><span class="cm-operator">=</span><span class="cm-string">&quot;application/json&quot;</span>,</span>
+<span class="line">			          )</span>
+<span class="line">			  </span>
+<span class="line">			      <span class="cm-comment"># 3 attach to message</span></span>
+<span class="line">			      <span class="cm-variable">url </span><span class="cm-operator">= </span><span class="cm-variable">resp</span>[<span class="cm-string">&quot;file&quot;</span>]</span>
+<span class="line">			      <span class="cm-variable">attachment </span><span class="cm-operator">= </span>{</span>
+<span class="line">			          <span class="cm-string">&quot;type&quot;</span>: <span class="cm-string">&quot;file&quot;</span>,</span>
+<span class="line">			          <span class="cm-string">&quot;url&quot;</span>: <span class="cm-variable">url</span>,</span>
+<span class="line">			          <span class="cm-string">&quot;name&quot;</span>: <span class="cm-keyword">f</span><span class="cm-string">&quot;</span>{<span class="cm-variable">attachment_name</span>}<span class="cm-string">.json&quot;</span>,</span>
+<span class="line">			          <span class="cm-string">&quot;asset_url&quot;</span>: <span class="cm-variable">url</span>,</span>
+<span class="line">			          <span class="cm-string">&quot;mime_type&quot;</span>: <span class="cm-string">&quot;application/json&quot;</span>,</span>
+<span class="line">			      }</span>
+<span class="line">			      <span class="cm-keyword">await </span><span class="cm-variable">chat</span>.<span class="cm-variable">partial_update_message</span>(</span>
+<span class="line">			          <span class="cm-variable">message_id</span>,</span>
+<span class="line">			          {<span class="cm-string">&quot;set&quot;</span>: {<span class="cm-string">&quot;attachments&quot;</span>: [<span class="cm-variable">attachment</span>]}},</span>
+<span class="line">			      )</span>
+<span class="line">			  </span>
+<span class="line">			      <span class="cm-comment"># 4 clean up temp file</span></span>
+<span class="line">			      <span class="cm-keyword">with </span><span class="cm-variable">contextlib</span>.<span class="cm-variable">suppress</span>(<span class="cm-type">FileNotFoundError</span>):</span>
+<span class="line">			          <span class="cm-variable">os</span>.<span class="cm-variable">remove</span>(<span class="cm-variable">tmp_path</span>)</span>
+<span class="line">			  </span>
+<span class="line">			      <span class="cm-keyword">return </span><span class="cm-variable">url</span></span></code></pre></div></div></li></ul></div></div></details></div></div></main></body></html>

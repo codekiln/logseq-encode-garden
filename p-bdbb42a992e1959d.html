@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Person/Erwin Schrödinger/Cat</title><script data-lsg-theme-script>/** Shared visitor appearance, independent of replaceable page content. */
+(() => {
+  try {
+    // Saved shell layout applies before paint; the phone overlay always starts closed.
+    const root = document.documentElement;
+    if (window.matchMedia?.('(min-width: 640px)')?.matches && window.localStorage.getItem('logseq-gardener-left-sidebar') === 'open') root.setAttribute('data-lsg-left-sidebar', 'open');
+    if (window.localStorage.getItem('logseq-gardener-wide') === 'true') root.setAttribute('data-lsg-wide', 'true');
+    // The right sidebar's column takes its width before paint; its cards load after load.
+    const right = JSON.parse(window.localStorage.getItem('logseq-gardener-right-sidebar') || 'null');
+    if (right && window.matchMedia?.('(min-width: 640px)')?.matches) {
+      root.setAttribute('data-lsg-right-sidebar', right.open ? 'open' : 'closed');
+      if (right.width > 0) root.style.setProperty('--lsg-right-width', right.width + 'px');
+    }
+  } catch { /* Layout keeps its defaults. */ }
+  if (typeof window.logseqGardenerInitTheme === 'function') return;
+  const key = 'logseq-gardener-theme';
+  const valid = value => value === 'light' || value === 'dark';
+  const read = () => {
+    try { const value = window.localStorage.getItem(key); return valid(value) ? value : 'system'; }
+    catch { return 'system'; }
+  };
+  let choice = read();
+  let media;
+  try { media = window.matchMedia?.('(prefers-color-scheme: dark)'); } catch { /* Light fallback. */ }
+  const appearance = () => choice === 'system' ? (media?.matches ? 'dark' : 'light') : choice;
+  const initialize = (root = document) => {
+    for (const select of root.querySelectorAll('[data-lsg-theme-select]')) {
+      select.value = choice;
+      const control = select.closest('[data-lsg-theme-control]');
+      if (control) control.hidden = false;
+    }
+  };
+  const apply = () => {
+    document.documentElement.setAttribute('data-lsg-theme', appearance());
+    document.documentElement.setAttribute('data-lsg-theme-mode', choice);
+    initialize();
+  };
+  const set = value => {
+    if (!valid(value) && value !== 'system') return;
+    choice = value;
+    try {
+      if (choice === 'system') window.localStorage.removeItem(key);
+      else window.localStorage.setItem(key, choice);
+    } catch { /* Keep this document's choice when storage is unavailable. */ }
+    apply();
+  };
+  window.logseqGardenerInitTheme = initialize;
+  window.logseqGardenerTheme = { choice: () => choice, appearance, set };
+  apply();
+  if (media?.addEventListener) media.addEventListener('change', apply);
+  else media?.addListener?.(apply);
+  document.addEventListener('change', event => {
+    const select = event.target;
+    if (select?.matches?.('[data-lsg-theme-select]')) set(select.value);
+  });
+  window.addEventListener('storage', event => {
+    if (event.key === key || event.key === null) { choice = read(); apply(); }
+  });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => initialize(), { once: true });
+})();
+</script><script defer src="lsg-shell.js"></script><link rel="lsg-search" href="lsg-search-manifest-1e91ba5239e1caaa.json" data-revision="1e91ba5239e1caaa"><link rel="stylesheet" href="lsg-shared-559a1c927f395608.css"><script data-lsg-search-start>(()=>{const f=(_,o)=>Object.assign(f.options??={},o);window.logseqGardenerInitSearch=f;const u=new URL('lsg-search-start-d1579d619a9675f1.mjs',document.querySelector('[rel=lsg-search]').href);document.addEventListener('DOMContentLoaded',()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{const s=document.createElement('script');s.type='module';s.src=u;s.onerror=()=>{if(!document.querySelector('[rel=lsg-search]'))return;const t=document.createElement('span');t.id='lsg-search-load';t.setAttribute('role','status');t.textContent='Search unavailable. Reload this page to retry search.';document.body.append(t)};document.head.append(s)})),{once:true})})();</script></head><body><header class="lsg-header cp__header"><button type="button" class="lsg-button" data-lsg-left-toggle aria-label="Toggle left sidebar" aria-controls="lsg-left-sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l16 0M4 12l16 0M4 18l16 0"/></svg></button><span class="lsg-header-space"></span><a class="lsg-button" href="index.html" aria-label="Home"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l-2 0l9 -9l9 9l-2 0M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg></a><a class="lsg-button button" href="graph.html#/graph" aria-label="Graph"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path id="lsg-i-graph" d="M10 5a2 2 0 1 0 4 0a2 2 0 1 0-4 0M3 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M17 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M6.5 17.5 12 13l5.5 4.5M12 7v6"/></svg></a><button type="button" class="lsg-button" data-lsg-search aria-label="Search garden" aria-haspopup="dialog" aria-controls="lsg-search-dialog" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0M21 21l-6 -6"/></svg></button><div class="lsg-more"><button type="button" class="lsg-button" data-lsg-more aria-label="More" aria-haspopup="menu" aria-controls="lsg-more-menu" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M20 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg></button><div id="lsg-more-menu" role="menu" aria-label="More" hidden><button type="button" role="menuitem" data-lsg-slides>View as slides</button><button type="button" role="menuitem" data-lsg-theme-toggle>Toggle theme</button><button type="button" role="menuitem" data-lsg-theme-system hidden>Use system theme</button></div></div><button type="button" class="lsg-button lsg-right-toggle" data-lsg-right-toggle aria-label="Toggle right sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2zM15 4l0 16"/></svg></button></header><aside id="lsg-left-sidebar" class="lsg-left-sidebar" aria-label="Left sidebar"><nav aria-label="Navigation"><ul><li><a href="index.html" data-lsg-journals-link><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12zM16 3v4M8 3v4M4 11h16M11 15h1M12 15v3"/></svg><span>Journals</span></a></li><li class="flashcards-nav"><a href="#" role="button" data-lsg-flashcards><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.828 9.172a4 4 0 1 0 0 5.656a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828"/></svg><span>Flashcards</span><span class="lsg-shortcut" aria-hidden="true">g f</span><span class="lsg-badge" data-lsg-due>430</span></a></li><li class="graph-view-nav"><a href="graph.html" data-lsg-graph-view><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#lsg-i-graph"/></svg><span>Graph view</span></a></li><li><a href="pages.html" data-lsg-all-pages><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3v4a1 1 0 0 0 1 1h4M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2zM16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2"/></svg><span>All pages</span></a></li></ul><h2 class="lsg-favorites-heading" id="lsg-favorites">Favorites</h2><ul aria-labelledby="lsg-favorites"><li><a href="p-08986007b541df27.html">fd</a></li><li><a href="p-710a025b0e00c8d5.html">gh-dash</a></li><li><a href="p-710a025b0e00c8d5.html">GitHub/CLI/Extension/gh-dash</a></li><li><a href="p-539dc7d0a39cc4ec.html">tuicr</a></li><li><a href="p-4276cb26f35edeca.html">tmux/Q/How can I put a thick border around the focused pane?</a></li><li><a href="p-62e5d9883ed48541.html">LazyVim</a></li><li><a href="p-abc1fe1091d210a5.html">Logseq/Flashcard/Review/Favorite</a></li><li><a href="p-7d113595e3cdeb70.html">Obsidian</a></li><li><a href="p-efba5ef46cf8e2e4.html">Codex</a></li><li><a href="p-398c5fe622fecdf8.html">chezmoi</a></li><li><a href="p-c02f89b682f53253.html">DevContainer</a></li><li><a href="p-da5911a2a798df4f.html">mise</a></li><li><a href="p-08dc5107b57b9276.html">rg</a></li><li><a href="p-68e903194eba71d7.html">vim</a></li><li><a href="p-74ff40ba60b70acb.html">nvim</a></li><li><a href="p-f237247b53a844f6.html">Zoxide</a></li><li><a href="p-a0d502498c67fd12.html">yazi</a></li><li><a href="p-424036ef4353ec8f.html">tmux</a></li><li><a href="p-e4db29888872bdd5.html">Lazygit</a></li></ul></nav></aside><div class="lsg-sidebar-shade" data-lsg-sidebar-shade hidden></div><main><h1>Person/Erwin Schrödinger/Cat</h1><ul class="outline"><li><span id="source-block-100"></span><a class="bullet" href="#"></a><h1>Schrödinger&#39;s Cat</h1><ul><li><span id="source-block-123"></span><a class="bullet" href="#"></a><h2>Overview</h2><ul><li><span id="source-block-138"></span><a class="bullet" href="#"></a>A thought experiment <span class="page-reference"><a href="p-28ceefe57a325a26.html">Person/Erwin Schrödinger</a></span> published in 1935 to show how strange the Copenhagen interpretation of quantum mechanics becomes when a <span class="page-reference"><a href="p-fdc0e1df6e498a47.html">Superposition</a></span> reaches an everyday object.</li></ul></li><li><span id="source-block-343"></span><a class="bullet" href="#"></a><h2>Context</h2><ul><li><span id="source-block-357"></span><a class="bullet" href="#"></a>Schrödinger worked the idea out in letters with <span class="page-reference"><a href="p-66adf6db7c7e2b74.html">Person/Albert Einstein</a></span> after the 1935 EPR paper. Einstein had proposed a keg of gunpowder that is both exploded and unexploded; Schrödinger replaced it with a cat.</li><li><span id="source-block-579"></span><a class="bullet" href="#"></a>It appears in &quot;Die gegenwärtige Situation in der Quantenmechanik&quot; (&quot;The Present Situation in Quantum Mechanics&quot;), <em>Naturwissenschaften</em>, 1935.</li></ul></li><li><span id="source-block-727"></span><a class="bullet" href="#"></a><h2>Mechanism</h2><ul><li><span id="source-block-743"></span><a class="bullet" href="#"></a>A sealed box holds a cat, a flask of hydrocyanic acid, a small radioactive sample and a Geiger counter wired to a hammer.</li><li><span id="source-block-869"></span><a class="bullet" href="#"></a>If an atom decays within the hour, the counter trips the hammer, the flask breaks and the cat dies. If none decays, the cat lives.</li><li><span id="source-block-1004"></span><a class="bullet" href="#"></a>Quantum mechanics describes the atom as a superposition of decayed and undecayed. Carried through the apparatus, the whole box, cat included, ends up in a superposition of dead and alive until someone opens it.</li></ul></li><li><span id="source-block-1219"></span><a class="bullet" href="#"></a><h2>Interpretations</h2><ul><li><span id="source-block-1241"></span><a class="bullet" href="#"></a><strong>Copenhagen</strong> — opening the box is a measurement that collapses the superposition into one outcome.</li><li><span id="source-block-1348"></span><a class="bullet" href="#"></a><strong>Many-worlds</strong> — both outcomes happen, in branches of reality that no longer interact.</li><li><span id="source-block-1442"></span><a class="bullet" href="#"></a><strong>Decoherence</strong> — interaction with the environment resolves the superposition into classical outcomes long before anyone looks, which is why large objects never show superposition.</li></ul></li><li><span id="source-block-1629"></span><a class="bullet" href="#"></a><h2>Misconceptions</h2><ul><li><span id="source-block-1650"></span><a class="bullet" href="#"></a>Schrödinger meant the cat as a <em>reductio ad absurdum</em>. He called the dead-and-alive cat an absurdity of the existing view, and never offered it as a picture of how the world works.</li></ul></li><li><span id="source-block-1836"></span><a class="bullet" href="#"></a><h2>Sources</h2><ul><li><span id="source-block-1850"></span><a class="bullet" href="#"></a><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Schr%C3%B6dinger%27s_cat">Wikipedia: Schrödinger&#39;s cat</a></li></ul></li></ul></li></ul><section class="references linked-references" id="linked-references" data-refs="linked" data-src="_refs/p-bdbb42a992e1959d-linked-1.html"><details class="references-section"><summary><span class="ref-chevron"></span><h2>5 Linked References</h2><button type="button" class="filter" title="Filter" aria-label="Filter" data-state="none" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v2.172a2 2 0 0 1-.586 1.414L15 12v7l-6 2v-8.5L4.52 7.572A2 2 0 0 1 4 6.227z"/></svg></button></summary><noscript><a href="_refs/p-bdbb42a992e1959d-linked-1.html">Show linked references</a></noscript><div class="references-body"><p role="status"></p></div></details></section><section class="page-hierarchy references" aria-label="Hierarchy"><details class="references-section" open><summary><span class="ref-chevron"></span><h2>Hierarchy</h2></summary><ul class="namespaces"><li><span class="page-reference"><a href="p-40d76f1f51639ec0.html">Person</a></span><span class="namespace-separator" aria-hidden="true">/</span><span class="page-reference"><a href="p-28ceefe57a325a26.html">Erwin Schrödinger</a></span></li></ul></details></section><section class="references linked-references unlinked-references" data-refs="unlinked"><details class="references-section"><summary><span class="ref-chevron"></span><h2>Unlinked References</h2></summary><noscript>No unlinked references.</noscript><div class="references-body"></div></details></section></main><script data-lsg-fragments>// Native fragment navigation does not run when a host swaps page content.
+// Hosts can call this helper before their own fragment focus/scroll handling.
+(() => {
+  function reveal(fragment = location.hash, { scroll = true } = {}) {
+    let id;
+    try { id = decodeURIComponent(fragment.replace(/^#/, "")); }
+    catch { return null; }
+    const target = id && document.getElementById(id);
+    if (!target) return null;
+    for (let parent = target.parentElement; parent; parent = parent.parentElement) {
+      if (parent.tagName === "DETAILS") parent.open = true;
+      parent.classList?.remove("folded");
+    }
+    if (scroll) target.scrollIntoView();
+    return target;
+  }
+  window.logseqGardenerRevealFragment = reveal;
+  window.addEventListener("hashchange", () => reveal());
+  reveal();
+})();
+</script></body></html>

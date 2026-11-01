@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Person/codekiln/GitHub/logseq-gardener/Project/Brief</title><script data-lsg-theme-script>/** Shared visitor appearance, independent of replaceable page content. */
+(() => {
+  try {
+    // Saved shell layout applies before paint; the phone overlay always starts closed.
+    const root = document.documentElement;
+    if (window.matchMedia?.('(min-width: 640px)')?.matches && window.localStorage.getItem('logseq-gardener-left-sidebar') === 'open') root.setAttribute('data-lsg-left-sidebar', 'open');
+    if (window.localStorage.getItem('logseq-gardener-wide') === 'true') root.setAttribute('data-lsg-wide', 'true');
+    // The right sidebar's column takes its width before paint; its cards load after load.
+    const right = JSON.parse(window.localStorage.getItem('logseq-gardener-right-sidebar') || 'null');
+    if (right && window.matchMedia?.('(min-width: 640px)')?.matches) {
+      root.setAttribute('data-lsg-right-sidebar', right.open ? 'open' : 'closed');
+      if (right.width > 0) root.style.setProperty('--lsg-right-width', right.width + 'px');
+    }
+  } catch { /* Layout keeps its defaults. */ }
+  if (typeof window.logseqGardenerInitTheme === 'function') return;
+  const key = 'logseq-gardener-theme';
+  const valid = value => value === 'light' || value === 'dark';
+  const read = () => {
+    try { const value = window.localStorage.getItem(key); return valid(value) ? value : 'system'; }
+    catch { return 'system'; }
+  };
+  let choice = read();
+  let media;
+  try { media = window.matchMedia?.('(prefers-color-scheme: dark)'); } catch { /* Light fallback. */ }
+  const appearance = () => choice === 'system' ? (media?.matches ? 'dark' : 'light') : choice;
+  const initialize = (root = document) => {
+    for (const select of root.querySelectorAll('[data-lsg-theme-select]')) {
+      select.value = choice;
+      const control = select.closest('[data-lsg-theme-control]');
+      if (control) control.hidden = false;
+    }
+  };
+  const apply = () => {
+    document.documentElement.setAttribute('data-lsg-theme', appearance());
+    document.documentElement.setAttribute('data-lsg-theme-mode', choice);
+    initialize();
+  };
+  const set = value => {
+    if (!valid(value) && value !== 'system') return;
+    choice = value;
+    try {
+      if (choice === 'system') window.localStorage.removeItem(key);
+      else window.localStorage.setItem(key, choice);
+    } catch { /* Keep this document's choice when storage is unavailable. */ }
+    apply();
+  };
+  window.logseqGardenerInitTheme = initialize;
+  window.logseqGardenerTheme = { choice: () => choice, appearance, set };
+  apply();
+  if (media?.addEventListener) media.addEventListener('change', apply);
+  else media?.addListener?.(apply);
+  document.addEventListener('change', event => {
+    const select = event.target;
+    if (select?.matches?.('[data-lsg-theme-select]')) set(select.value);
+  });
+  window.addEventListener('storage', event => {
+    if (event.key === key || event.key === null) { choice = read(); apply(); }
+  });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => initialize(), { once: true });
+})();
+</script><script defer src="lsg-shell.js"></script><link rel="lsg-search" href="lsg-search-manifest-1e91ba5239e1caaa.json" data-revision="1e91ba5239e1caaa"><link rel="stylesheet" href="lsg-shared-559a1c927f395608.css"><script data-lsg-search-start>(()=>{const f=(_,o)=>Object.assign(f.options??={},o);window.logseqGardenerInitSearch=f;const u=new URL('lsg-search-start-d1579d619a9675f1.mjs',document.querySelector('[rel=lsg-search]').href);document.addEventListener('DOMContentLoaded',()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{const s=document.createElement('script');s.type='module';s.src=u;s.onerror=()=>{if(!document.querySelector('[rel=lsg-search]'))return;const t=document.createElement('span');t.id='lsg-search-load';t.setAttribute('role','status');t.textContent='Search unavailable. Reload this page to retry search.';document.body.append(t)};document.head.append(s)})),{once:true})})();</script></head><body><header class="lsg-header cp__header"><button type="button" class="lsg-button" data-lsg-left-toggle aria-label="Toggle left sidebar" aria-controls="lsg-left-sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l16 0M4 12l16 0M4 18l16 0"/></svg></button><span class="lsg-header-space"></span><a class="lsg-button" href="index.html" aria-label="Home"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l-2 0l9 -9l9 9l-2 0M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg></a><a class="lsg-button button" href="graph.html#/graph" aria-label="Graph"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path id="lsg-i-graph" d="M10 5a2 2 0 1 0 4 0a2 2 0 1 0-4 0M3 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M17 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M6.5 17.5 12 13l5.5 4.5M12 7v6"/></svg></a><button type="button" class="lsg-button" data-lsg-search aria-label="Search garden" aria-haspopup="dialog" aria-controls="lsg-search-dialog" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0M21 21l-6 -6"/></svg></button><div class="lsg-more"><button type="button" class="lsg-button" data-lsg-more aria-label="More" aria-haspopup="menu" aria-controls="lsg-more-menu" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M20 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg></button><div id="lsg-more-menu" role="menu" aria-label="More" hidden><button type="button" role="menuitem" data-lsg-slides>View as slides</button><button type="button" role="menuitem" data-lsg-theme-toggle>Toggle theme</button><button type="button" role="menuitem" data-lsg-theme-system hidden>Use system theme</button></div></div><button type="button" class="lsg-button lsg-right-toggle" data-lsg-right-toggle aria-label="Toggle right sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2zM15 4l0 16"/></svg></button></header><aside id="lsg-left-sidebar" class="lsg-left-sidebar" aria-label="Left sidebar"><nav aria-label="Navigation"><ul><li><a href="index.html" data-lsg-journals-link><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12zM16 3v4M8 3v4M4 11h16M11 15h1M12 15v3"/></svg><span>Journals</span></a></li><li class="flashcards-nav"><a href="#" role="button" data-lsg-flashcards><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.828 9.172a4 4 0 1 0 0 5.656a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828"/></svg><span>Flashcards</span><span class="lsg-shortcut" aria-hidden="true">g f</span><span class="lsg-badge" data-lsg-due>430</span></a></li><li class="graph-view-nav"><a href="graph.html" data-lsg-graph-view><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#lsg-i-graph"/></svg><span>Graph view</span></a></li><li><a href="pages.html" data-lsg-all-pages><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3v4a1 1 0 0 0 1 1h4M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2zM16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2"/></svg><span>All pages</span></a></li></ul><h2 class="lsg-favorites-heading" id="lsg-favorites">Favorites</h2><ul aria-labelledby="lsg-favorites"><li><a href="p-08986007b541df27.html">fd</a></li><li><a href="p-710a025b0e00c8d5.html">gh-dash</a></li><li><a href="p-710a025b0e00c8d5.html">GitHub/CLI/Extension/gh-dash</a></li><li><a href="p-539dc7d0a39cc4ec.html">tuicr</a></li><li><a href="p-4276cb26f35edeca.html">tmux/Q/How can I put a thick border around the focused pane?</a></li><li><a href="p-62e5d9883ed48541.html">LazyVim</a></li><li><a href="p-abc1fe1091d210a5.html">Logseq/Flashcard/Review/Favorite</a></li><li><a href="p-7d113595e3cdeb70.html">Obsidian</a></li><li><a href="p-efba5ef46cf8e2e4.html">Codex</a></li><li><a href="p-398c5fe622fecdf8.html">chezmoi</a></li><li><a href="p-c02f89b682f53253.html">DevContainer</a></li><li><a href="p-da5911a2a798df4f.html">mise</a></li><li><a href="p-08dc5107b57b9276.html">rg</a></li><li><a href="p-68e903194eba71d7.html">vim</a></li><li><a href="p-74ff40ba60b70acb.html">nvim</a></li><li><a href="p-f237247b53a844f6.html">Zoxide</a></li><li><a href="p-a0d502498c67fd12.html">yazi</a></li><li><a href="p-424036ef4353ec8f.html">tmux</a></li><li><a href="p-e4db29888872bdd5.html">Lazygit</a></li></ul></nav></aside><div class="lsg-sidebar-shade" data-lsg-sidebar-shade hidden></div><main><h1>Person/codekiln/GitHub/logseq-gardener/Project/Brief</h1><ul class="outline"><li><span id="source-block-0"></span><a class="bullet" href="#"></a><h1>logseq-gardener  — Project Brief</h1></li><li><span id="source-block-37"></span><a class="bullet" href="#"></a><h2>Working definition</h2><p><br>  logseq-gardener is a fast, local-first semantic engine for existing <strong>Logseq OG/file-based knowledge gardens</strong>.<br><br>  Its source of truth is the user&#39;s existing Markdown files:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">pages/</span>
+<span class="line">journals/</span>
+<span class="line">assets/</span>
+<span class="line">logseq/</span></code></pre></div></div><p><br>  It should understand those files as a Logseq knowledge graph without requiring the user to migrate them into another canonical database format.<br><br>  The project exists partly as an <strong>exit strategy from the Logseq application</strong> as Logseq shifts active development toward its database-backed product while the older Git-friendly file format enters maintenance mode.<br><br>  The goal is not initially to reproduce the Logseq application.<br><br>  The goal is to make the <strong>data model that made Logseq valuable independently usable</strong>.<br><br>  At a high level:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">Logseq Markdown</span>
+<span class="line">                  pages/ journals/ assets/</span>
+<span class="line">                            │</span>
+<span class="line">                            ▼</span>
+<span class="line">                  ┌──────────────────┐</span>
+<span class="line">                  │   garden-core    │</span>
+<span class="line">                  │                  │</span>
+<span class="line">                  │ parser           │</span>
+<span class="line">                  │ graph model      │</span>
+<span class="line">                  │ incremental idx  │</span>
+<span class="line">                  │ derived cache    │</span>
+<span class="line">                  └────────┬─────────┘</span>
+<span class="line">                           │</span>
+<span class="line">                one stable semantic API</span>
+<span class="line">                           │</span>
+<span class="line">      ┌────────────────────┼─────────────────────┐</span>
+<span class="line">      │                    │                     │</span>
+<span class="line">      ▼                    ▼                     ▼</span>
+<span class="line">    CLI                  LSP                Publisher</span>
+<span class="line">      │                    │                     │</span>
+<span class="line">humans / agents       Neovim/LazyVim          static HTML</span>
+<span class="line">scripts / tools       completion/gd/gr        SEO/search</span></code></pre></div></div><p><br>  The core principle is:<br><br>  &gt; <br><br>  Parse Logseq once, model it once, index it once, and allow many tools to consume the same understanding.<br><br></p><hr></li><li><span id="source-block-2183"></span><a class="bullet" href="#"></a><h1>Project name and components</h1><p><br>  Working repository name:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">logseq-gardener</span></code></pre></div></div><p><br>  Conceptual components:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">logseq-gardener/</span>
+<span class="line">  garden-core</span>
+<span class="line">  garden-cli</span>
+<span class="line">  garden-lsp</span>
+<span class="line">  garden-publish</span>
+<span class="line">  integrations/</span>
+<span class="line">      nvim/</span>
+<span class="line">  benchmarks/</span>
+<span class="line">  compatibility/</span>
+<span class="line">  docs/</span></code></pre></div></div><p><br>  This is a conceptual layout rather than a prescribed language-specific directory structure.<br><br>  garden-core is the important component. Everything else should be relatively thin.<br><br>  The public executable should tentatively be called:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">logseq-garden</span></code></pre></div></div><p><br>  Examples in this document use the shorter working alias:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">garden</span></code></pre></div></div><p><br>  because it is easier to read and type.<br><br></p><hr></li><li><span id="source-block-2894"></span><a class="bullet" href="#"></a><h1>Motivation</h1><p><br>  The project&#39;s author has several large, long-lived Logseq knowledge gardens, collectively containing well over a million lines of Markdown.<br><br>  These gardens are:<br></p></li><li><span id="source-block-3078"></span><a class="bullet" href="#"></a>stored in Git;</li><li><span id="source-block-3095"></span><a class="bullet" href="#"></a>edited by humans;</li><li><span id="source-block-3115"></span><a class="bullet" href="#"></a>edited increasingly often by AI coding agents;</li><li><span id="source-block-3164"></span><a class="bullet" href="#"></a>sometimes opened in Logseq;</li><li><span id="source-block-3194"></span><a class="bullet" href="#"></a>sometimes manipulated directly as Markdown;</li><li><span id="source-block-3240"></span><a class="bullet" href="#"></a>candidates for editing primarily from LazyVim/Neovim;</li><li><span id="source-block-3296"></span><a class="bullet" href="#"></a>candidates for publication as fast, indexable knowledge-garden websites.<p><br>  The current Logseq application provides valuable semantic behavior around these files, but the underlying Markdown corpus should not depend indefinitely on Logseq itself for navigation, reference resolution, querying, editing, or publication.<br><br>  The project should therefore treat <strong>Logseq OG Markdown as an independent durable knowledge format</strong>.<br><br></p><hr></li><li><span id="source-block-3735"></span><a class="bullet" href="#"></a><h1>Core model</h1><p><br>  The conceptual beauty of Logseq is its tree/forest-oriented data model.<br><br>  A garden consists of a forest of nodes.<br><br>  The most important node types are:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">Page</span>
+<span class="line">Block</span></code></pre></div></div><p><br>  A block contains:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">content</span>
+<span class="line">properties</span>
+<span class="line">children</span>
+<span class="line">references</span>
+<span class="line">source location</span>
+<span class="line">optional stable identity / UUID</span></code></pre></div></div><p><br>  A page can usefully be exposed through much of the same node interface:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">page</span>
+<span class="line">├── properties/frontmatter</span>
+<span class="line">└── top-level blocks</span>
+<span class="line">  ├── child block</span>
+<span class="line">  ├── child block</span>
+<span class="line">  └── ...</span></code></pre></div></div><p><br>  The internal model may therefore share a general Node abstraction between pages and blocks.<br><br>  However, the implementation must <strong>not erase meaningful differences between page identity and block identity merely for conceptual elegance</strong>.<br><br>  For example:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">Page</span>
+<span class="line">  canonical Logseq page name</span>
+<span class="line">  source file</span>
+<span class="line">  aliases</span>
+<span class="line">  namespace relationships</span>
+<span class="line">  page properties</span>
+<span class="line">  top-level children</span>
+<span class="line"></span>
+<span class="line">Block</span>
+<span class="line">  content</span>
+<span class="line">  position in parent</span>
+<span class="line">  properties</span>
+<span class="line">  optional explicit UUID</span>
+<span class="line">  descendants</span></code></pre></div></div><p><br>  A useful semantic model will likely eventually include concepts such as:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">Graph</span>
+<span class="line">Page</span>
+<span class="line">Block</span>
+<span class="line">Property</span>
+<span class="line">PageRef</span>
+<span class="line">BlockRef</span>
+<span class="line">Tag</span>
+<span class="line">Alias</span>
+<span class="line">Embed</span>
+<span class="line">Task</span>
+<span class="line">Query</span>
+<span class="line">SourceLocation</span></code></pre></div></div><p><br>  Every derived semantic entity should retain enough source provenance to identify the Markdown from which it came.<br><br></p><hr></li><li><span id="source-block-5161"></span><a class="bullet" href="#"></a><h1>Source-of-truth rule</h1><p><br>  Markdown files are authoritative.<br><br>  The cache is not.<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">Git-tracked Markdown</span>
+<span class="line">      │</span>
+<span class="line">      │ parse</span>
+<span class="line">      ▼</span>
+<span class="line">derived semantic cache</span></code></pre></div></div><p><br>  The cache must always be reconstructible.<br><br>  No user knowledge should exist only in the cache.<br><br>  Deleting the entire cache should at worst cause a performance penalty while it is rebuilt.<br><br>  The cache should normally live outside the knowledge garden, for example:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">~/.cache/logseq-gardener/&lt;graph-id&gt;/</span></code></pre></div></div><p><br>  and must never need to be committed to Git.<br><br>  An embedded database such as SQLite is acceptable if useful.<br><br>  A required external database service is not.<br><br>  The project should specifically avoid operational characteristics such as:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">database daemon setup</span>
+<span class="line">ports</span>
+<span class="line">server discovery</span>
+<span class="line">stale background engines</span>
+<span class="line">manually started services</span></code></pre></div></div><p><br>  A user should be able to install one executable and use it.<br><br></p><hr></li><li><span id="source-block-6124"></span><a class="bullet" href="#"></a><h1>Primary use cases</h1></li><li><span id="source-block-6146"></span><a class="bullet" href="#"></a><h2>1. CLI for humans, agents, and scripts</h2><p><br>  The project should expose its semantic engine as a first-class CLI.<br><br>  Illustrative read operations:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">garden pages</span>
+<span class="line">garden page &quot;Logseq/Publish&quot;</span>
+<span class="line"></span>
+<span class="line">garden complete &quot;Logseq/Pub&quot;</span>
+<span class="line"></span>
+<span class="line">garden refs &quot;Logseq/Publish&quot;</span>
+<span class="line">garden backlinks &quot;Logseq/Publish&quot;</span>
+<span class="line"></span>
+<span class="line">garden block 67c48ebc-07e8-498f-b9ee-08d339d0469d</span>
+<span class="line"></span>
+<span class="line">garden search &quot;mldoc&quot;</span>
+<span class="line"></span>
+<span class="line">garden status</span></code></pre></div></div><p><br>  The exact command hierarchy should be designed deliberately.<br><br>  A resource-oriented API may ultimately be cleaner:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">garden page list</span>
+<span class="line">garden page get &quot;Logseq/Publish&quot;</span>
+<span class="line">garden page refs &quot;Logseq/Publish&quot;</span>
+<span class="line">garden page backlinks &quot;Logseq/Publish&quot;</span>
+<span class="line"></span>
+<span class="line">garden block get &lt;uuid&gt;</span>
+<span class="line"></span>
+<span class="line">garden search &quot;mldoc&quot;</span></code></pre></div></div><p><br>  Machine-readable output is a first-class requirement.<br><br>  Commands should eventually support predictable structured output such as:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">--json</span></code></pre></div></div><p><br>  so that the same CLI is pleasant for:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">humans</span>
+<span class="line">shell scripts</span>
+<span class="line">Claude Code</span>
+<span class="line">Codex</span>
+<span class="line">Copilot</span>
+<span class="line">Cursor</span>
+<span class="line">other agents</span></code></pre></div></div><p><br>  Agents should not need to independently rediscover Logseq semantics by grepping a graph every time they work.<br><br>  The CLI should give them the same semantic understanding available to the editor.<br><br></p><hr></li><li><span id="source-block-7400"></span><a class="bullet" href="#"></a><h2>2. Language server for editors</h2><p><br>  garden lsp should expose the same semantic engine using the Language Server Protocol.<br><br>  The principal first editor target is:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">LazyVim / Neovim</span></code></pre></div></div><p><br>  An editor integration should be thin.<br><br>  Conceptually:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">LazyVim</span>
+<span class="line"> │</span>
+<span class="line"> ├── existing generic Markdown tooling</span>
+<span class="line"> │</span>
+<span class="line"> └── Logseq-specific client</span>
+<span class="line">           │</span>
+<span class="line">           ▼</span>
+<span class="line">       garden lsp</span>
+<span class="line">           │</span>
+<span class="line">           ▼</span>
+<span class="line">      garden-core</span></code></pre></div></div><p><br>  The editor should spawn:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">garden lsp</span></code></pre></div></div><p><br>  as a long-running process communicating over standard input/output.<br><br>  The user should not configure:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">TCP sockets</span>
+<span class="line">ports</span>
+<span class="line">server processes</span>
+<span class="line">database services</span></code></pre></div></div><p><br>  Initial LSP/editor capabilities should focus on high-value Logseq behavior:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">[[ page-reference completion</span>
+<span class="line">go to definition for [[Page]]</span>
+<span class="line">find references / backlinks</span>
+<span class="line">((UUID)) block-reference navigation</span>
+<span class="line">block-reference completion</span>
+<span class="line">hover / preview where useful</span></code></pre></div></div><p><br>  Generic Markdown intelligence should continue to coexist with tools such as Marksman rather than being unnecessarily reimplemented.<br><br></p><hr></li><li><span id="source-block-8572"></span><a class="bullet" href="#"></a><h2>3. Static knowledge-garden publishing</h2><p><br>  garden publish should eventually use the same parsed graph to produce a static website.<br><br>  The initial motivating publication corpus is:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">https://github.com/codekiln/logseq-encode-garden</span></code></pre></div></div><p><br>  The current Logseq SPA publication model effectively serializes the graph into a large browser-side database and requires the visitor to load a substantial portion of the garden before rendering individual content.<br><br>  The replacement should instead be able to generate:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">one page</span>
+<span class="line">      ↓</span>
+<span class="line">one independently useful HTML document</span></code></pre></div></div><p><br>  A page request should not require downloading the entire garden.<br><br>  Static output should eventually support:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">real page HTML</span>
+<span class="line">stable URLs</span>
+<span class="line">SEO metadata</span>
+<span class="line">search-engine indexing</span>
+<span class="line">backlinks</span>
+<span class="line">internal references</span>
+<span class="line">incremental rebuilds</span>
+<span class="line">sitemaps</span>
+<span class="line">optional client-side search</span>
+<span class="line">optional graph visualization loaded only when requested</span></code></pre></div></div><p><br>  The publisher should be another client of garden-core, not a separate Logseq parser.<br><br></p><hr></li><li><span id="source-block-9638"></span><a class="bullet" href="#"></a><h1>Performance philosophy</h1><p><br>  Performance is a primary project requirement rather than a later optimization.<br><br>  The target corpus includes gardens with more than one million lines.<br><br>  The engine should therefore use:<br><br>  &gt; <br><br>  lazy activation, eager background warming, and JIT reprioritization.<br></p></li><li><span id="source-block-9943"></span><a class="bullet" href="#"></a><h2>Lazy activation</h2><p><br>  Starting Neovim or invoking unrelated commands should not automatically parse every known garden.<br><br>  A garden becomes active when the engine is given strong evidence that the garden is being used.<br><br>  For example:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">open first file within graph</span>
+<span class="line">      ↓</span>
+<span class="line">identify graph root</span>
+<span class="line">      ↓</span>
+<span class="line">activate graph</span></code></pre></div></div></li><li><span id="source-block-10295"></span><a class="bullet" href="#"></a><h2>Eager background warming</h2><p><br>  Once a graph becomes active, indexing should begin opportunistically in the background.<br><br>  The system should not wait until the user types [[ before beginning expensive work.<br><br>  Conceptually:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">graph activated</span>
+<span class="line">    ↓</span>
+<span class="line">load any previous cache</span>
+<span class="line">    ↓</span>
+<span class="line">cheap graph discovery</span>
+<span class="line">    ↓</span>
+<span class="line">parse high-value/current files</span>
+<span class="line">    ↓</span>
+<span class="line">background semantic parsing</span>
+<span class="line">    ↓</span>
+<span class="line">incrementally richer index</span></code></pre></div></div></li><li><span id="source-block-10751"></span><a class="bullet" href="#"></a><h2>JIT reprioritization</h2><p><br>  Interactive actions may reprioritize work already underway.<br><br>  For example:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">background parser currently processing graph</span>
+<span class="line">           │</span>
+<span class="line">user requests completion for &quot;Logseq/Pub&quot;</span>
+<span class="line">           │</span>
+<span class="line">           ▼</span>
+<span class="line">prioritize likely relevant unresolved files/entities</span></code></pre></div></div><p><br>  However:<br><br>  &gt; <br><br>  An interactive completion request must never block waiting for a whole-graph indexing operation.<br><br>  It should query the best currently available snapshot and return promptly.<br><br></p><hr></li><li><span id="source-block-11285"></span><a class="bullet" href="#"></a><h1>Progressive completeness</h1><p><br>  A cold garden does not have to transition from:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">nothing</span></code></pre></div></div><p><br>  directly to:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">perfect semantic knowledge</span></code></pre></div></div><p><br>  The engine may progressively improve its understanding.<br><br>  For example:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">Level 0</span>
+<span class="line">cheap page/file discovery</span>
+<span class="line"></span>
+<span class="line">Level 1</span>
+<span class="line">canonical page identity</span>
+<span class="line">page references</span>
+<span class="line">basic properties</span>
+<span class="line"></span>
+<span class="line">Level 2</span>
+<span class="line">blocks</span>
+<span class="line">UUID references</span>
+<span class="line">backlinks</span>
+<span class="line">aliases</span>
+<span class="line">namespaces</span>
+<span class="line"></span>
+<span class="line">Level 3</span>
+<span class="line">tasks</span>
+<span class="line">embeds</span>
+<span class="line">queries</span>
+<span class="line">richer semantics</span></code></pre></div></div><p><br>  Results should become available as soon as they are trustworthy enough for the operation being requested.<br><br>  The system should distinguish internally between provisional and fully resolved information when necessary.<br><br></p><hr></li><li><span id="source-block-12029"></span><a class="bullet" href="#"></a><h1>Warm startup and incremental indexing</h1><p><br>  A previously indexed graph should not require a whole-graph parse every time a client starts.<br><br>  A warm cache should be usable immediately.<br><br>  Reconciliation should then determine what changed.<br><br>  For Git-backed gardens, Git itself may provide useful invalidation information:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">last indexed commit</span>
+<span class="line">      +</span>
+<span class="line">current HEAD</span>
+<span class="line">      +</span>
+<span class="line">working-tree changes</span>
+<span class="line">      +</span>
+<span class="line">filesystem changes since process start</span></code></pre></div></div><p><br>  The implementation should investigate whether this can sharply reduce startup reconciliation work.<br><br>  File watching should allow an active graph to incrementally re-index only files that change.<br><br>  The central invariant should be:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">edit one file</span>
+<span class="line">   ↓</span>
+<span class="line">reparse only what is necessary</span>
+<span class="line">   ↓</span>
+<span class="line">update dependent semantic indexes</span></code></pre></div></div><p><br>  rather than rebuilding the whole garden.<br><br></p><hr></li><li><span id="source-block-12918"></span><a class="bullet" href="#"></a><h1>Multiple gardens</h1><p><br>  Multiple graphs are a first-class requirement from the beginning.<br><br>  A user may have:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">work graph</span>
+<span class="line">personal graph</span>
+<span class="line">public garden</span>
+<span class="line">private garden</span>
+<span class="line">specialized project graphs</span></code></pre></div></div><p><br>  Each graph should have its own identity and cache.<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">Graph A → Cache A</span>
+<span class="line">Graph B → Cache B</span>
+<span class="line">Graph C → Cache C</span></code></pre></div></div><p><br>  Queries should normally be scoped to one graph.<br><br>  Cross-graph behavior should not be introduced accidentally.<br><br>  If cross-graph search or linking is later supported, it should be explicit.<br><br></p><hr></li><li><span id="source-block-13484"></span><a class="bullet" href="#"></a><h1>Shared cache across humans, editors, and agents</h1><p><br>  A major goal is that all clients benefit from the same previously computed semantic knowledge.<br><br>  For example:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">garden cache</span>
+<span class="line">                       │</span>
+<span class="line">      ┌────────────────┼───────────────┐</span>
+<span class="line">      │                │               │</span>
+<span class="line">     CLI              LSP            agent</span>
+<span class="line">      │                │               │</span>
+<span class="line">    human           Neovim          AI tool</span></code></pre></div></div><p><br>  A user should not pay separately for:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">Neovim indexing</span>
+<span class="line">agent indexing</span>
+<span class="line">CLI indexing</span>
+<span class="line">publishing indexing</span></code></pre></div></div><p><br>  The underlying cache and semantic definitions should be reusable.<br><br>  Long-running clients such as garden lsp may maintain an in-memory hot index over the same persistent cache used by short-lived CLI invocations.<br><br>  A mandatory always-running daemon should not be required.<br><br></p><hr></li><li><span id="source-block-14435"></span><a class="bullet" href="#"></a><h1>Read-only first</h1><p><br>  The first implementation must be read-only.<br><br>  This should be an architectural property, not merely a documented convention.<br><br>  Early core APIs should simply contain no method capable of mutating the user&#39;s Markdown.<br><br>  This permits testing against real and valuable knowledge gardens with very low risk.<br><br>  Initial development should prioritize:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">parse</span>
+<span class="line">index</span>
+<span class="line">resolve</span>
+<span class="line">complete</span>
+<span class="line">search</span>
+<span class="line">navigate</span>
+<span class="line">reference</span>
+<span class="line">publish</span></code></pre></div></div><p><br>  before:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">insert</span>
+<span class="line">update</span>
+<span class="line">move</span>
+<span class="line">delete</span>
+<span class="line">rename</span>
+<span class="line">merge</span></code></pre></div></div><hr></li><li><span id="source-block-14997"></span><a class="bullet" href="#"></a><h1>Future mutation API</h1><p><br>  The system should nevertheless be designed so that mutations can later become first-class operations.<br><br>  Likely operations include:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">page create</span>
+<span class="line">page rename</span>
+<span class="line"></span>
+<span class="line">block insert</span>
+<span class="line">block update</span>
+<span class="line">block move</span>
+<span class="line">block delete</span>
+<span class="line"></span>
+<span class="line">property set</span>
+<span class="line">property remove</span></code></pre></div></div><p><br>  The eventual command vocabulary and semantics should review existing Logseq APIs for useful precedent.<br><br>  Mutation should operate semantically on pages and blocks rather than forcing every client to perform raw Markdown text surgery.<br><br>  For example:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">garden block update &lt;uuid&gt; --content &quot;...&quot;</span></code></pre></div></div><p><br>  should eventually be able to compute and preview the minimum source-file change required.<br><br>  Mutation operations should initially support:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">dry run</span>
+<span class="line">diff preview</span>
+<span class="line">expected source revision</span>
+<span class="line">atomic write</span>
+<span class="line">clear conflict reporting</span></code></pre></div></div><p><br>  before silent automated writes are considered safe.<br><br></p><hr></li><li><span id="source-block-15940"></span><a class="bullet" href="#"></a><h1>Concurrency and CRDT direction</h1><p><br>  Concurrent editing is an important long-term use case.<br><br>  Human editors and multiple AI agents may eventually operate on the same graph simultaneously, potentially even on the same block.<br><br>  The architecture should therefore <strong>not foreclose CRDT-backed or otherwise conflict-aware editing</strong>.<br><br>  However, a CRDT implementation is not an MVP dependency.<br><br>  The progression should likely be:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">read-only semantic engine</span>
+<span class="line"></span>
+<span class="line">      ↓</span>
+<span class="line"></span>
+<span class="line">safe single-operation mutations</span>
+<span class="line">with revision checking</span>
+<span class="line"></span>
+<span class="line">      ↓</span>
+<span class="line"></span>
+<span class="line">operation log / explicit concurrency model</span>
+<span class="line"></span>
+<span class="line">      ↓</span>
+<span class="line"></span>
+<span class="line">concurrent block-level editing</span>
+<span class="line"></span>
+<span class="line">      ↓</span>
+<span class="line"></span>
+<span class="line">CRDT-backed collaborative mutation where justified</span></code></pre></div></div><p><br>  A CRDT should not replace Markdown as the user&#39;s durable canonical representation unless a later explicit design decision changes the project&#39;s fundamental goals.<br><br>  Instead, a CRDT may eventually serve as a coordination or editing layer that reconciles back to the file-backed graph.<br><br>  The design should pay particular attention to:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">stable block identity</span>
+<span class="line">source revisions</span>
+<span class="line">block ordering</span>
+<span class="line">parent/child relationships</span>
+<span class="line">concurrent modification</span>
+<span class="line">merge semantics</span>
+<span class="line">Git interaction</span></code></pre></div></div><hr></li><li><span id="source-block-17201"></span><a class="bullet" href="#"></a><h1>Parsing and semantic compatibility</h1><p><br>  The project should not casually invent a new interpretation of Logseq Markdown.<br><br>  Before choosing a parser or semantic representation, the implementation should perform an architectural review of existing work.<br><br>  Particularly relevant prior art includes:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">logseq/mldoc</span>
+<span class="line"></span>
+<span class="line">Logseq OG graph-parser</span>
+<span class="line"></span>
+<span class="line">Logseq&#39;s OG → DB importer and its</span>
+<span class="line">compatibility/regression cases</span>
+<span class="line"></span>
+<span class="line">Tine / lsdoc</span>
+<span class="line"></span>
+<span class="line">Looksyk</span>
+<span class="line"></span>
+<span class="line">Markdown Oxide</span>
+<span class="line"></span>
+<span class="line">LogseqLSP</span>
+<span class="line"></span>
+<span class="line">relevant newer OCaml projects</span>
+<span class="line">inside the Logseq organization</span></code></pre></div></div><p><br>  Questions to answer include:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">What exactly constitutes a page?</span>
+<span class="line"></span>
+<span class="line">How is a page name derived from a filename?</span>
+<span class="line"></span>
+<span class="line">How are namespaces encoded?</span>
+<span class="line"></span>
+<span class="line">How do title:: and aliases affect identity?</span>
+<span class="line"></span>
+<span class="line">How are journals treated?</span>
+<span class="line"></span>
+<span class="line">How are block UUIDs represented and resolved?</span>
+<span class="line"></span>
+<span class="line">What parser output is needed for indexing?</span>
+<span class="line"></span>
+<span class="line">Can mldoc&#39;s fast outline-only mode be reused?</span>
+<span class="line"></span>
+<span class="line">Should mldoc itself be linked directly?</span>
+<span class="line"></span>
+<span class="line">Would a compatible Rust parser be preferable?</span>
+<span class="line"></span>
+<span class="line">Which real-world malformed or legacy constructs</span>
+<span class="line">must be tolerated?</span></code></pre></div></div><p><br>  Parser fidelity and index performance should both be benchmarked rather than assumed.<br><br></p><hr></li><li><span id="source-block-18438"></span><a class="bullet" href="#"></a><h1>Implementation-language decision</h1><p><br>  The implementation language for the semantic core is intentionally not fixed by this brief.<br><br>  Two especially plausible directions are:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">OCaml</span>
+<span class="line">  direct use of Logseq&#39;s mldoc ecosystem</span>
+<span class="line">  strong parsing/tooling heritage</span>
+<span class="line">  compatibility advantage</span>
+<span class="line"></span>
+<span class="line">Rust</span>
+<span class="line">  strong systems/LSP ecosystem</span>
+<span class="line">  straightforward native distribution</span>
+<span class="line">  strong performance/tooling</span>
+<span class="line">  existing relevant projects such as Looksyk</span></code></pre></div></div><p><br>  The choice should be made through an explicit architectural decision record based on:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">mldoc compatibility</span>
+<span class="line">performance</span>
+<span class="line">incremental parsing/indexing needs</span>
+<span class="line">LSP implementation</span>
+<span class="line">binary distribution</span>
+<span class="line">FFI complexity</span>
+<span class="line">licensing</span>
+<span class="line">maintenance burden</span>
+<span class="line">existing reusable code</span></code></pre></div></div><p><br>  Do not choose a language merely because it is currently fashionable or familiar.<br><br></p><hr></li><li><span id="source-block-19301"></span><a class="bullet" href="#"></a><h1>Initial benchmark corpus</h1><p><br>  The first substantial real-world test garden should be:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">codekiln/logseq-encode-garden</span></code></pre></div></div><p><br>  This graph is useful because it is both large and semantically nontrivial.<br><br>  It includes real examples of:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">Logseq namespaces</span>
+<span class="line">filename encoding</span>
+<span class="line">properties</span>
+<span class="line">aliases</span>
+<span class="line">UUID-bearing blocks</span>
+<span class="line">references</span>
+<span class="line">agent-authored content</span>
+<span class="line">publication concerns</span></code></pre></div></div><p><br>  Its current published web version also provides a concrete performance problem that garden publish may eventually solve.<br><br>  Development should supplement this real corpus with small deterministic fixtures representing difficult Logseq edge cases.<br><br>  Personal knowledge gardens should never be the project&#39;s only correctness corpus.<br><br></p><hr></li><li><span id="source-block-20064"></span><a class="bullet" href="#"></a><h1>Benchmark requirements</h1><p><br>  Performance work should be measurable.<br><br>  The project should establish repeatable benchmarks for at least:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">cold graph activation</span>
+<span class="line"></span>
+<span class="line">time to first useful page-completion index</span>
+<span class="line"></span>
+<span class="line">complete cold semantic index</span>
+<span class="line"></span>
+<span class="line">warm startup with no changes</span>
+<span class="line"></span>
+<span class="line">warm startup after one changed file</span>
+<span class="line"></span>
+<span class="line">time from save to updated completion/reference result</span>
+<span class="line"></span>
+<span class="line">page completion latency</span>
+<span class="line"></span>
+<span class="line">page lookup latency</span>
+<span class="line"></span>
+<span class="line">backlink lookup latency</span>
+<span class="line"></span>
+<span class="line">block UUID lookup latency</span>
+<span class="line"></span>
+<span class="line">peak memory</span>
+<span class="line"></span>
+<span class="line">persistent cache size</span></code></pre></div></div><p><br>  The primary UX constraint is more important than any initial numeric target:<br><br>  &gt; <br><br>  Typing [[ in a large graph must not appear to freeze while the graph is indexed.<br><br>  Similarly:<br><br>  &gt; <br><br>  A warm graph should feel immediately available.<br><br>  Concrete latency budgets should be established from benchmarks on logseq-encode-garden rather than invented prematurely.<br><br></p><hr></li><li><span id="source-block-21006"></span><a class="bullet" href="#"></a><h1>Reliability requirements</h1><p><br>  Correctness takes precedence over speculative cleverness.<br><br>  The engine should:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">never mutate source during read/index operations</span>
+<span class="line"></span>
+<span class="line">never require the cache to recover user knowledge</span>
+<span class="line"></span>
+<span class="line">tolerate interrupted indexing</span>
+<span class="line"></span>
+<span class="line">detect stale cache entries</span>
+<span class="line"></span>
+<span class="line">recover from cache corruption by rebuilding</span>
+<span class="line"></span>
+<span class="line">avoid silently guessing ambiguous page identity</span>
+<span class="line"></span>
+<span class="line">make graph scope explicit</span>
+<span class="line"></span>
+<span class="line">preserve source locations</span>
+<span class="line"></span>
+<span class="line">produce deterministic machine-readable output</span></code></pre></div></div><p><br>  Operations that cannot be answered completely because the background index is still warming should have an explicit representation for incomplete or provisional state where necessary.<br><br></p><hr></li><li><span id="source-block-21723"></span><a class="bullet" href="#"></a><h1>Compatibility philosophy</h1><p><br>  The compatibility target is:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">Logseq OG / file-based graph semantics</span></code></pre></div></div><p><br>  The project should not automatically adopt incompatible semantics from the newer Logseq database model.<br><br>  The newer DB implementation and importer are valuable as:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">documentation</span>
+<span class="line">test cases</span>
+<span class="line">edge-case knowledge</span>
+<span class="line">architectural prior art</span></code></pre></div></div><p><br>  but not necessarily as the model that logseq-gardener should reproduce.<br><br>  The user owns Markdown.<br><br>  The engine exists to understand that Markdown.<br><br></p><hr></li><li><span id="source-block-22273"></span><a class="bullet" href="#"></a><h1>Relationship to generic Markdown</h1><p><br>  Logseq files remain Markdown files.<br><br>  The project should coexist with generic Markdown tooling rather than attempting to replace all of it.<br><br>  For the initial Neovim use case:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">generic Markdown</span>
+<span class="line">  → Tree-sitter</span>
+<span class="line">  → Marksman / existing Markdown tooling</span>
+<span class="line"></span>
+<span class="line">Logseq semantics</span>
+<span class="line">  → garden lsp</span></code></pre></div></div><p><br>  The project should add knowledge that generic Markdown tools do not possess:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">Logseq page identity</span>
+<span class="line">Logseq namespaces</span>
+<span class="line">block UUIDs</span>
+<span class="line">block references</span>
+<span class="line">properties</span>
+<span class="line">aliases</span>
+<span class="line">backlinks</span>
+<span class="line">embeds</span>
+<span class="line">queries</span>
+<span class="line">task semantics</span></code></pre></div></div><p><br>  It should avoid producing duplicate diagnostics or competing implementations of features that existing Markdown tools already handle correctly.<br><br></p><hr></li><li><span id="source-block-23038"></span><a class="bullet" href="#"></a><h1>Initial development sequence</h1><p><br>  The project should advance through narrow vertical slices.<br><br>  <strong>Phase 0 — Architecture and compatibility</strong><br><br>  Study the reference implementations and decide:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">parser strategy</span>
+<span class="line">core language</span>
+<span class="line">semantic model</span>
+<span class="line">cache strategy</span>
+<span class="line">graph identity</span>
+<span class="line">incremental invalidation model</span></code></pre></div></div><p><br>  Create compatibility fixtures and benchmarks before implementing broad features.<br><br>  <strong>Phase 1 — Read-only page index</strong><br><br>  On logseq-encode-garden:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">activate graph</span>
+<span class="line">enumerate pages</span>
+<span class="line">derive canonical page identities</span>
+<span class="line">persist disposable cache</span>
+<span class="line">incrementally refresh changed files</span></code></pre></div></div><p><br>  Expose:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">garden pages</span>
+<span class="line">garden page get</span>
+<span class="line">garden complete</span>
+<span class="line">garden status</span></code></pre></div></div><p><br>  <strong>Phase 2 — LazyVim vertical slice</strong><br><br>  Implement enough LSP/editor support that:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">[[Logseq/Pub</span></code></pre></div></div><p><br>  immediately produces page-reference completion.<br><br>  The editor must not wait for a graph-wide parse.<br><br>  <strong>Phase 3 — Reference graph</strong><br><br>  Add:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">page refs</span>
+<span class="line">backlinks</span>
+<span class="line">go-to-definition</span>
+<span class="line">find-references</span>
+<span class="line">aliases</span>
+<span class="line">namespaces</span></code></pre></div></div><p><br>  <strong>Phase 4 — Block semantics</strong><br><br>  Add:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">block hierarchy</span>
+<span class="line">id:: UUID indexing</span>
+<span class="line">((UUID)) completion</span>
+<span class="line">block go-to-definition</span>
+<span class="line">block references</span>
+<span class="line">embeds</span></code></pre></div></div><p><br>  <strong>Phase 5 — Publisher</strong><br><br>  Produce static per-page HTML from the same semantic model.<br><br>  Measure first-content and page-load behavior against the current Logseq-published Encode Garden.<br><br>  <strong>Phase 6 — Richer Logseq semantics</strong><br><br>  Investigate:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">properties</span>
+<span class="line">tasks</span>
+<span class="line">queries</span>
+<span class="line">templates</span>
+<span class="line">advanced embeds</span></code></pre></div></div><p><br>  <strong>Phase 7 — Safe mutations</strong><br><br>  Add explicit previewable page/block mutation operations.<br><br>  <strong>Phase 8 — Concurrent editing</strong><br><br>  Only after mutation semantics and stable node identity are trustworthy, investigate CRDT-backed collaborative editing and merging.<br><br></p><hr></li><li><span id="source-block-24945"></span><a class="bullet" href="#"></a><h1>Explicit non-goals for the first version</h1><p><br>  The first version is not intended to:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">replace every Logseq UI feature</span>
+<span class="line"></span>
+<span class="line">implement the new Logseq DB model</span>
+<span class="line"></span>
+<span class="line">provide real-time collaborative editing</span>
+<span class="line"></span>
+<span class="line">replace Git</span>
+<span class="line"></span>
+<span class="line">become the canonical storage database</span>
+<span class="line"></span>
+<span class="line">implement a browser SPA</span>
+<span class="line"></span>
+<span class="line">implement every Markdown feature itself</span>
+<span class="line"></span>
+<span class="line">rewrite user files during indexing</span>
+<span class="line"></span>
+<span class="line">require a daemon or server setup</span></code></pre></div></div><p><br>  Keeping these out of the initial scope is important.<br><br></p><hr></li><li><span id="source-block-25445"></span><a class="bullet" href="#"></a><h1>Architectural principle</h1><p><br>  The central artifact of the project should not be:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">a Neovim plugin</span></code></pre></div></div><p><br>  or:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">a static-site generator</span></code></pre></div></div><p><br>  or:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">an AI-agent MCP server</span></code></pre></div></div><p><br>  It should be:<br><br>  &gt; <br><br>  <strong>a fast, faithful, local semantic engine for Logseq file gardens.</strong><br><br>  Everything else is an adapter.<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">garden-core</span>
+<span class="line">                           │</span>
+<span class="line">            ┌──────────────┼──────────────┐</span>
+<span class="line">            │              │              │</span>
+<span class="line">           CLI            LSP          publisher</span>
+<span class="line">            │              │              │</span>
+<span class="line">      humans/agents      editors           web</span></code></pre></div></div><p><br>  This boundary is what allows the same million-line garden to become fast once and remain fast everywhere.<br><br></p><hr></li><li><span id="source-block-26292"></span><a class="bullet" href="#"></a><h1>Project thesis</h1><p><br>  logseq-gardener should make a Logseq OG garden useful without requiring Logseq.<br><br>  A person should eventually be able to point the tool at years of existing Markdown and immediately obtain:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">semantic search</span>
+<span class="line">page and block resolution</span>
+<span class="line">backlinks</span>
+<span class="line">editor completion</span>
+<span class="line">agent tooling</span>
+<span class="line">static publishing</span>
+<span class="line">safe structured mutation</span></code></pre></div></div><p><br>  while retaining the properties that made the file-based Logseq format attractive in the first place:<br><br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">plain files</span>
+<span class="line">Git</span>
+<span class="line">portability</span>
+<span class="line">inspectability</span>
+<span class="line">local ownership</span>
+<span class="line">long-term durability</span></code></pre></div></div><p><br>  The long-term aspiration is therefore larger than a Logseq Neovim plugin:<br><br>  &gt; <br><br>  Preserve the useful semantic model of file-based Logseq as an open, high-performance knowledge-garden substrate that can support editors, humans, AI agents, scripts, and websites independently of the original application.<br></p></li><li><a class="bullet" href="#"></a></li></ul><section class="references linked-references" id="linked-references" data-refs="linked" data-src="_refs/p-750c180e6b17db94-linked-1.html"><details class="references-section"><summary><span class="ref-chevron"></span><h2>23 Linked References</h2><button type="button" class="filter" title="Filter" aria-label="Filter" data-state="none" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v2.172a2 2 0 0 1-.586 1.414L15 12v7l-6 2v-8.5L4.52 7.572A2 2 0 0 1 4 6.227z"/></svg></button></summary><noscript><a href="_refs/p-750c180e6b17db94-linked-1.html">Show linked references</a></noscript><div class="references-body"><p role="status"></p></div></details></section><section class="page-hierarchy references" aria-label="Hierarchy"><details class="references-section" open><summary><span class="ref-chevron"></span><h2>Hierarchy</h2></summary><ul class="namespaces"><li><span class="page-reference"><a href="p-40d76f1f51639ec0.html">Person</a></span><span class="namespace-separator" aria-hidden="true">/</span><span class="page-reference"><a class="namespace-link" aria-label="Person/codekiln (Namespace)" href="p-6cf6ee002bb2f272.html">codekiln</a></span><span class="namespace-separator" aria-hidden="true">/</span><span class="page-reference"><a class="namespace-link" aria-label="Person/codekiln/GitHub (Namespace)" href="p-c276b68336509f74.html">GitHub</a></span><span class="namespace-separator" aria-hidden="true">/</span><span class="page-reference"><a href="p-f82bca45c22c9909.html">logseq-gardener</a></span><span class="namespace-separator" aria-hidden="true">/</span><span class="page-reference"><a class="namespace-link" aria-label="Person/codekiln/GitHub/logseq-gardener/Project (Namespace)" href="p-ebaa0ce9b8120bb3.html">Project</a></span></li></ul></details></section><section class="references linked-references unlinked-references" data-refs="unlinked"><details class="references-section"><summary><span class="ref-chevron"></span><h2>Unlinked References</h2></summary><noscript>No unlinked references.</noscript><div class="references-body"></div></details></section></main><script data-lsg-fragments>// Native fragment navigation does not run when a host swaps page content.
+// Hosts can call this helper before their own fragment focus/scroll handling.
+(() => {
+  function reveal(fragment = location.hash, { scroll = true } = {}) {
+    let id;
+    try { id = decodeURIComponent(fragment.replace(/^#/, "")); }
+    catch { return null; }
+    const target = id && document.getElementById(id);
+    if (!target) return null;
+    for (let parent = target.parentElement; parent; parent = parent.parentElement) {
+      if (parent.tagName === "DETAILS") parent.open = true;
+      parent.classList?.remove("folded");
+    }
+    if (scroll) target.scrollIntoView();
+    return target;
+  }
+  window.logseqGardenerRevealFragment = reveal;
+  window.addEventListener("hashchange", () => reveal());
+  reveal();
+})();
+</script></body></html>

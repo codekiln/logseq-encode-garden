@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><base href="../"><title>Unlinked references: oclif</title><script type="application/json" class="references-data">{"count":6,"files":["p-7b3d36019c7fab8a-unlinked-1.html"]}</script></head><body><main><h1>Unlinked references: <a href="p-7b3d36019c7fab8a.html">oclif</a></h1><div class="references-fragment"><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-cef0c463e3486743.html">Claude/Code/How To/Create Git Commit Tool</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>Can use <code>oclif</code> framework for CLI structure</li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><h2>Procedure: Option 2 - Node.js CLI with oclif</h2><ul><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h3>1. Initialize oclif project</h3></summary><ul><li><span class="bullet"></span><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">			  npx oclif generate conventional-commit-tool</span>
+<span class="line">			  <span class="cm-builtin">cd</span> conventional-commit-tool</span></code></pre></div></div></li></ul></details></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h3>2. Add dependencies</h3></summary><ul><li><span class="bullet"></span><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">			  npm install @anthropic-ai/sdk</span></code></pre></div></div></li></ul></details></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h3>3. Create the main command</h3></summary><ul><li><span class="bullet"></span><div class="cp__fenced-code-block" data-lang="typescript"><div class="extensions__code"><div class="extensions__code-lang">typescript</div><pre class="lsg-code" style="--lsg-code-digits:3"><code><span class="line">			  <span class="cm-comment">// src/commands/generate.ts</span></span>
+<span class="line">			  <span class="cm-keyword">import </span>{<span class="cm-variable">Command</span>, <span class="cm-variable">Flags</span>} <span class="cm-keyword">from </span><span class="cm-string">&#39;@oclif/core&#39;</span></span>
+<span class="line">			  <span class="cm-keyword">import </span><span class="cm-variable">Anthropic </span><span class="cm-keyword">from </span><span class="cm-string">&#39;@anthropic-ai/sdk&#39;</span></span>
+<span class="line">			  <span class="cm-keyword">import </span><span class="cm-atom">* </span><span class="cm-keyword">as </span><span class="cm-variable">fs </span><span class="cm-keyword">from </span><span class="cm-string">&#39;fs&#39;</span></span>
+<span class="line">			  <span class="cm-keyword">import </span>{<span class="cm-variable">execSync</span>} <span class="cm-keyword">from </span><span class="cm-string">&#39;child_process&#39;</span></span>
+<span class="line">			  </span>
+<span class="line">			  <span class="cm-keyword">export default class </span><span class="cm-def">Generate </span><span class="cm-keyword">extends </span><span class="cm-type">Command </span>{</span>
+<span class="line">			   <span class="cm-keyword">static </span><span class="cm-variable">description </span><span class="cm-operator">= </span><span class="cm-string">&#39;Generate conventional commit message&#39;</span></span>
+<span class="line">			   </span>
+<span class="line">			   <span class="cm-keyword">static </span><span class="cm-variable">flags </span><span class="cm-operator">= </span>{</span>
+<span class="line">			    <span class="cm-string">&#39;prompt-file&#39;</span>: <span class="cm-variable">Flags</span>.<span class="cm-def">string</span>({</span>
+<span class="line">			  	  <span class="cm-variable">char</span>: <span class="cm-string">&#39;p&#39;</span>,</span>
+<span class="line">			  	  <span class="cm-variable">description</span>: <span class="cm-string">&#39;Path to file containing commit prompt&#39;</span>,</span>
+<span class="line">			    }),</span>
+<span class="line">			    <span class="cm-variable">prompt</span>: <span class="cm-variable">Flags</span>.<span class="cm-def">string</span>({</span>
+<span class="line">			  	  <span class="cm-variable">char</span>: <span class="cm-string">&#39;m&#39;</span>,</span>
+<span class="line">			  	  <span class="cm-variable">description</span>: <span class="cm-string">&#39;Direct commit prompt text&#39;</span>,</span>
+<span class="line">			    }),</span>
+<span class="line">			    <span class="cm-string">&#39;dry-run&#39;</span>: <span class="cm-variable">Flags</span>.<span class="cm-def">boolean</span>({</span>
+<span class="line">			  	  <span class="cm-variable">description</span>: <span class="cm-string">&#39;Show commit message without executing&#39;</span>,</span>
+<span class="line">			    }),</span>
+<span class="line">			    <span class="cm-variable">scope</span>: <span class="cm-variable">Flags</span>.<span class="cm-def">string</span>({</span>
+<span class="line">			  	  <span class="cm-variable">char</span>: <span class="cm-string">&#39;s&#39;</span>,</span>
+<span class="line">			  	  <span class="cm-variable">description</span>: <span class="cm-string">&#39;Optional scope for the commit&#39;</span>,</span>
+<span class="line">			    }),</span>
+<span class="line">			   }</span>
+<span class="line">			   </span>
+<span class="line">			   <span class="cm-keyword">async </span><span class="cm-def">run</span>() {</span>
+<span class="line">			    <span class="cm-keyword">const </span>{<span class="cm-variable">flags</span>} <span class="cm-operator">= </span><span class="cm-keyword">await this</span>.<span class="cm-builtin">parse</span>(<span class="cm-variable">Generate</span>)</span>
+<span class="line">			    </span>
+<span class="line">			    <span class="cm-keyword">const </span><span class="cm-variable">anthropic </span><span class="cm-operator">= new </span><span class="cm-def">Anthropic</span>({</span>
+<span class="line">			  	  <span class="cm-variable">apiKey</span>: <span class="cm-variable">process</span>.<span class="cm-variable">env</span>.<span class="cm-variable">ANTHROPIC_API_KEY</span>,</span>
+<span class="line">			    })</span>
+<span class="line">			    </span>
+<span class="line">			    <span class="cm-keyword">let </span><span class="cm-variable">promptText</span><span class="cm-operator">: </span><span class="cm-type">string</span></span>
+<span class="line">			    </span>
+<span class="line">			    <span class="cm-keyword">if </span>(<span class="cm-variable">flags</span>[<span class="cm-string">&#39;prompt-file&#39;</span>]) {</span>
+<span class="line">			  	  <span class="cm-variable">promptText </span><span class="cm-operator">= </span><span class="cm-variable">fs</span>.<span class="cm-def">readFileSync</span>(<span class="cm-variable">flags</span>[<span class="cm-string">&#39;prompt-file&#39;</span>], <span class="cm-string">&#39;utf8&#39;</span>).<span class="cm-def">trim</span>()</span>
+<span class="line">			    } <span class="cm-keyword">else if </span>(<span class="cm-variable">flags</span>.<span class="cm-variable">prompt</span>) {</span>
+<span class="line">			  	  <span class="cm-variable">promptText </span><span class="cm-operator">= </span><span class="cm-variable">flags</span>.<span class="cm-variable">prompt</span></span>
+<span class="line">			    } <span class="cm-keyword">else </span>{</span>
+<span class="line">			  	  <span class="cm-keyword">this</span>.<span class="cm-def">error</span>(<span class="cm-string">&#39;Must provide either --prompt-file or --prompt&#39;</span>)</span>
+<span class="line">			    }</span>
+<span class="line">			    </span>
+<span class="line">			    <span class="cm-keyword">const </span><span class="cm-variable">systemPrompt </span><span class="cm-operator">= </span><span class="cm-keyword">this</span>.<span class="cm-def">getSystemPrompt</span>()</span>
+<span class="line">			    <span class="cm-keyword">const </span><span class="cm-variable">userPrompt </span><span class="cm-operator">= </span><span class="cm-keyword">this</span>.<span class="cm-def">buildUserPrompt</span>(<span class="cm-variable">promptText</span>, <span class="cm-variable">flags</span>.<span class="cm-variable">scope</span>)</span>
+<span class="line">			    </span>
+<span class="line">			    <span class="cm-keyword">const </span><span class="cm-variable">response </span><span class="cm-operator">= </span><span class="cm-keyword">await </span><span class="cm-variable">anthropic</span>.<span class="cm-variable">messages</span>.<span class="cm-def">create</span>({</span>
+<span class="line">			  	  <span class="cm-variable">model</span>: <span class="cm-string">&#39;claude-3-5-sonnet-20241022&#39;</span>,</span>
+<span class="line">			  	  <span class="cm-variable">max_tokens</span>: <span class="cm-number">150</span>,</span>
+<span class="line">			  	  <span class="cm-variable">system</span>: <span class="cm-variable">systemPrompt</span>,</span>
+<span class="line">			  	  <span class="cm-variable">messages</span>: [{<span class="cm-variable">role</span>: <span class="cm-string">&#39;user&#39;</span>, <span class="cm-variable">content</span>: <span class="cm-variable">userPrompt</span>}],</span>
+<span class="line">			    })</span>
+<span class="line">			    </span>
+<span class="line">			    <span class="cm-keyword">const </span><span class="cm-variable">commitMsg </span><span class="cm-operator">= </span><span class="cm-variable">response</span>.<span class="cm-variable">content</span>[<span class="cm-number">0</span>].<span class="cm-variable">text</span>.<span class="cm-def">trim</span>()</span>
+<span class="line">			    </span>
+<span class="line">			    <span class="cm-keyword">if </span>(<span class="cm-variable">flags</span>[<span class="cm-string">&#39;dry-run&#39;</span>]) {</span>
+<span class="line">			  	  <span class="cm-keyword">this</span>.<span class="cm-def">log</span>(<span class="cm-string">&#39;Generated commit message:&#39;</span>)</span>
+<span class="line">			  	  <span class="cm-keyword">this</span>.<span class="cm-def">log</span>(<span class="cm-variable">commitMsg</span>)</span>
+<span class="line">			    } <span class="cm-keyword">else </span>{</span>
+<span class="line">			  	  <span class="cm-def">execSync</span>(<span class="cm-string">`git commit -m &quot;${</span><span class="cm-variable">commitMsg</span><span class="cm-string">}&quot;`</span>, {<span class="cm-variable">stdio</span>: <span class="cm-string">&#39;inherit&#39;</span>})</span>
+<span class="line">			    }</span>
+<span class="line">			   }</span>
+<span class="line">			   </span>
+<span class="line">			   <span class="cm-keyword">private </span><span class="cm-def">getSystemPrompt</span>()<span class="cm-operator">: </span><span class="cm-type">string </span>{</span>
+<span class="line">			    <span class="cm-keyword">return </span><span class="cm-string">`You are a git commit message generator that follows the Conventional Commits specification.</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    The commit message should be structured as follows:</span></span>
+<span class="line"><span class="cm-string">			    &lt;type&gt;[optional scope]: &lt;description&gt;</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    Types:</span></span>
+<span class="line"><span class="cm-string">			    - feat: A new feature</span></span>
+<span class="line"><span class="cm-string">			    - fix: A bug fix</span></span>
+<span class="line"><span class="cm-string">			    - docs: Documentation only changes</span></span>
+<span class="line"><span class="cm-string">			    - style: Changes that do not affect the meaning of the code</span></span>
+<span class="line"><span class="cm-string">			    - refactor: A code change that neither fixes a bug nor adds a feature</span></span>
+<span class="line"><span class="cm-string">			    - perf: A code change that improves performance</span></span>
+<span class="line"><span class="cm-string">			    - test: Adding missing tests or correcting existing tests</span></span>
+<span class="line"><span class="cm-string">			    - chore: Changes to the build process or auxiliary tools</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    Rules:</span></span>
+<span class="line"><span class="cm-string">			    1. Use the imperative mood (&quot;add&quot; not &quot;added&quot; or &quot;adds&quot;)</span></span>
+<span class="line"><span class="cm-string">			    2. Don&#39;t capitalize the first letter</span></span>
+<span class="line"><span class="cm-string">			    3. No dot (.) at the end</span></span>
+<span class="line"><span class="cm-string">			    4. Keep the description under 72 characters</span></span>
+<span class="line"><span class="cm-string">			    5. If scope is provided, include it in brackets`</span></span>
+<span class="line">			   }</span>
+<span class="line">			   </span>
+<span class="line">			   <span class="cm-keyword">private </span><span class="cm-def">buildUserPrompt</span>(<span class="cm-variable">prompt</span><span class="cm-operator">: </span><span class="cm-type">string</span>, <span class="cm-variable">scope</span><span class="cm-operator">?: </span><span class="cm-type">string</span>)<span class="cm-operator">: </span><span class="cm-type">string </span>{</span>
+<span class="line">			    <span class="cm-keyword">let </span><span class="cm-variable">userPrompt </span><span class="cm-operator">= </span><span class="cm-string">`Generate a conventional commit message for the following changes:</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    ${</span><span class="cm-variable">prompt</span><span class="cm-string">}`</span></span>
+<span class="line">			    </span>
+<span class="line">			    <span class="cm-keyword">if </span>(<span class="cm-variable">scope</span>) {</span>
+<span class="line">			  	  <span class="cm-variable">userPrompt </span><span class="cm-operator">+= </span><span class="cm-string">`</span><span class="cm-string-2">\n\n</span><span class="cm-string">Scope: ${</span><span class="cm-variable">scope</span><span class="cm-string">}`</span></span>
+<span class="line">			    }</span>
+<span class="line">			    </span>
+<span class="line">			    <span class="cm-keyword">return </span><span class="cm-variable">userPrompt</span></span>
+<span class="line">			   }</span>
+<span class="line">			  }</span></code></pre></div></div></li></ul></details></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h3>4. Build and install</h3></summary><ul><li><span class="bullet"></span><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">			  npm run build</span>
+<span class="line">			  npm install<span class="cm-variable"> -g</span> .</span></code></pre></div></div></li></ul></details></li></ul></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://oclif.io/">oclif Framework</a></li></ul></div></div></details></div></div></main></body></html>

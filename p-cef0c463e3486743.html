@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Claude/Code/How To/Create Git Commit Tool</title><script data-lsg-theme-script>/** Shared visitor appearance, independent of replaceable page content. */
+(() => {
+  try {
+    // Saved shell layout applies before paint; the phone overlay always starts closed.
+    const root = document.documentElement;
+    if (window.matchMedia?.('(min-width: 640px)')?.matches && window.localStorage.getItem('logseq-gardener-left-sidebar') === 'open') root.setAttribute('data-lsg-left-sidebar', 'open');
+    if (window.localStorage.getItem('logseq-gardener-wide') === 'true') root.setAttribute('data-lsg-wide', 'true');
+    // The right sidebar's column takes its width before paint; its cards load after load.
+    const right = JSON.parse(window.localStorage.getItem('logseq-gardener-right-sidebar') || 'null');
+    if (right && window.matchMedia?.('(min-width: 640px)')?.matches) {
+      root.setAttribute('data-lsg-right-sidebar', right.open ? 'open' : 'closed');
+      if (right.width > 0) root.style.setProperty('--lsg-right-width', right.width + 'px');
+    }
+  } catch { /* Layout keeps its defaults. */ }
+  if (typeof window.logseqGardenerInitTheme === 'function') return;
+  const key = 'logseq-gardener-theme';
+  const valid = value => value === 'light' || value === 'dark';
+  const read = () => {
+    try { const value = window.localStorage.getItem(key); return valid(value) ? value : 'system'; }
+    catch { return 'system'; }
+  };
+  let choice = read();
+  let media;
+  try { media = window.matchMedia?.('(prefers-color-scheme: dark)'); } catch { /* Light fallback. */ }
+  const appearance = () => choice === 'system' ? (media?.matches ? 'dark' : 'light') : choice;
+  const initialize = (root = document) => {
+    for (const select of root.querySelectorAll('[data-lsg-theme-select]')) {
+      select.value = choice;
+      const control = select.closest('[data-lsg-theme-control]');
+      if (control) control.hidden = false;
+    }
+  };
+  const apply = () => {
+    document.documentElement.setAttribute('data-lsg-theme', appearance());
+    document.documentElement.setAttribute('data-lsg-theme-mode', choice);
+    initialize();
+  };
+  const set = value => {
+    if (!valid(value) && value !== 'system') return;
+    choice = value;
+    try {
+      if (choice === 'system') window.localStorage.removeItem(key);
+      else window.localStorage.setItem(key, choice);
+    } catch { /* Keep this document's choice when storage is unavailable. */ }
+    apply();
+  };
+  window.logseqGardenerInitTheme = initialize;
+  window.logseqGardenerTheme = { choice: () => choice, appearance, set };
+  apply();
+  if (media?.addEventListener) media.addEventListener('change', apply);
+  else media?.addListener?.(apply);
+  document.addEventListener('change', event => {
+    const select = event.target;
+    if (select?.matches?.('[data-lsg-theme-select]')) set(select.value);
+  });
+  window.addEventListener('storage', event => {
+    if (event.key === key || event.key === null) { choice = read(); apply(); }
+  });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => initialize(), { once: true });
+})();
+</script><script defer src="lsg-shell.js"></script><link rel="lsg-search" href="lsg-search-manifest-1e91ba5239e1caaa.json" data-revision="1e91ba5239e1caaa"><link rel="stylesheet" href="lsg-shared-559a1c927f395608.css"><script data-lsg-search-start>(()=>{const f=(_,o)=>Object.assign(f.options??={},o);window.logseqGardenerInitSearch=f;const u=new URL('lsg-search-start-d1579d619a9675f1.mjs',document.querySelector('[rel=lsg-search]').href);document.addEventListener('DOMContentLoaded',()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{const s=document.createElement('script');s.type='module';s.src=u;s.onerror=()=>{if(!document.querySelector('[rel=lsg-search]'))return;const t=document.createElement('span');t.id='lsg-search-load';t.setAttribute('role','status');t.textContent='Search unavailable. Reload this page to retry search.';document.body.append(t)};document.head.append(s)})),{once:true})})();</script></head><body><header class="lsg-header cp__header"><button type="button" class="lsg-button" data-lsg-left-toggle aria-label="Toggle left sidebar" aria-controls="lsg-left-sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l16 0M4 12l16 0M4 18l16 0"/></svg></button><span class="lsg-header-space"></span><a class="lsg-button" href="index.html" aria-label="Home"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l-2 0l9 -9l9 9l-2 0M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg></a><a class="lsg-button button" href="graph.html#/graph" aria-label="Graph"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path id="lsg-i-graph" d="M10 5a2 2 0 1 0 4 0a2 2 0 1 0-4 0M3 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M17 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M6.5 17.5 12 13l5.5 4.5M12 7v6"/></svg></a><button type="button" class="lsg-button" data-lsg-search aria-label="Search garden" aria-haspopup="dialog" aria-controls="lsg-search-dialog" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0M21 21l-6 -6"/></svg></button><div class="lsg-more"><button type="button" class="lsg-button" data-lsg-more aria-label="More" aria-haspopup="menu" aria-controls="lsg-more-menu" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M20 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg></button><div id="lsg-more-menu" role="menu" aria-label="More" hidden><button type="button" role="menuitem" data-lsg-slides>View as slides</button><button type="button" role="menuitem" data-lsg-theme-toggle>Toggle theme</button><button type="button" role="menuitem" data-lsg-theme-system hidden>Use system theme</button></div></div><button type="button" class="lsg-button lsg-right-toggle" data-lsg-right-toggle aria-label="Toggle right sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2zM15 4l0 16"/></svg></button></header><aside id="lsg-left-sidebar" class="lsg-left-sidebar" aria-label="Left sidebar"><nav aria-label="Navigation"><ul><li><a href="index.html" data-lsg-journals-link><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12zM16 3v4M8 3v4M4 11h16M11 15h1M12 15v3"/></svg><span>Journals</span></a></li><li class="flashcards-nav"><a href="#" role="button" data-lsg-flashcards><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.828 9.172a4 4 0 1 0 0 5.656a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828"/></svg><span>Flashcards</span><span class="lsg-shortcut" aria-hidden="true">g f</span><span class="lsg-badge" data-lsg-due>430</span></a></li><li class="graph-view-nav"><a href="graph.html" data-lsg-graph-view><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#lsg-i-graph"/></svg><span>Graph view</span></a></li><li><a href="pages.html" data-lsg-all-pages><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3v4a1 1 0 0 0 1 1h4M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2zM16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2"/></svg><span>All pages</span></a></li></ul><h2 class="lsg-favorites-heading" id="lsg-favorites">Favorites</h2><ul aria-labelledby="lsg-favorites"><li><a href="p-08986007b541df27.html">fd</a></li><li><a href="p-710a025b0e00c8d5.html">gh-dash</a></li><li><a href="p-710a025b0e00c8d5.html">GitHub/CLI/Extension/gh-dash</a></li><li><a href="p-539dc7d0a39cc4ec.html">tuicr</a></li><li><a href="p-4276cb26f35edeca.html">tmux/Q/How can I put a thick border around the focused pane?</a></li><li><a href="p-62e5d9883ed48541.html">LazyVim</a></li><li><a href="p-abc1fe1091d210a5.html">Logseq/Flashcard/Review/Favorite</a></li><li><a href="p-7d113595e3cdeb70.html">Obsidian</a></li><li><a href="p-efba5ef46cf8e2e4.html">Codex</a></li><li><a href="p-398c5fe622fecdf8.html">chezmoi</a></li><li><a href="p-c02f89b682f53253.html">DevContainer</a></li><li><a href="p-da5911a2a798df4f.html">mise</a></li><li><a href="p-08dc5107b57b9276.html">rg</a></li><li><a href="p-68e903194eba71d7.html">vim</a></li><li><a href="p-74ff40ba60b70acb.html">nvim</a></li><li><a href="p-f237247b53a844f6.html">Zoxide</a></li><li><a href="p-a0d502498c67fd12.html">yazi</a></li><li><a href="p-424036ef4353ec8f.html">tmux</a></li><li><a href="p-e4db29888872bdd5.html">Lazygit</a></li></ul></nav></aside><div class="lsg-sidebar-shade" data-lsg-sidebar-shade hidden></div><main><h1>Claude/Code/How To/Create Git Commit Tool</h1><ul class="outline"><li><span id="source-block-28"></span><a class="bullet" href="#"></a><h1>How to use <span class="page-reference"><a href="p-2585a93436a631cd.html">Claude/Code</a></span> to build a <span class="page-reference"><a href="p-51886d274c2d26dc.html">CLI/Tool</a></span> to create a <span class="page-reference"><a href="p-26a151ae9f5f2a99.html">git/commit</a></span> according to a convention</h1><ul><li><span id="source-block-136"></span><a class="bullet" href="#"></a><h2>Goal</h2><ul><li><span id="source-block-147"></span><a class="bullet" href="#"></a>Create a standalone command-line tool that generates git commits following the <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.conventionalcommits.org/en/v1.0.0/#summary">Conventional Commits specification</a> based on prompts stored independently of the script.</li><li><span id="source-block-376"></span><a class="bullet" href="#"></a>The tool should work independently of Claude Code and can be used in any development workflow.</li></ul></li><li><span id="source-block-475"></span><a class="bullet" href="#"></a><h2>Preconditions</h2><ul><li><span id="source-block-495"></span><a class="bullet" href="#"></a>Claude Code ≥ v1.0 installed and in <code>PATH</code></li><li><span id="source-block-544"></span><a class="bullet" href="#"></a>Python 3.8+ or Node.js 18+ for the CLI tool</li><li><span id="source-block-592"></span><a class="bullet" href="#"></a>Git repository initialized</li><li><span id="source-block-623"></span><a class="bullet" href="#"></a>Anthropic API key configured (for the standalone tool)</li></ul></li><li><span id="source-block-682"></span><a class="bullet" href="#"></a><h2>Approach Options</h2><ul><li><span id="source-block-705"></span><a class="bullet" href="#"></a><h3>Option 1: Python-based CLI with llm-cli (Recommended)</h3><ul><li><span id="source-block-767"></span><a class="bullet" href="#"></a>Uses Simon Willison&#39;s <code>llm-cli</code> tool for LLM interactions</li><li><span id="source-block-830"></span><a class="bullet" href="#"></a>Leverages <code>uv</code> for tool management</li><li><span id="source-block-870"></span><a class="bullet" href="#"></a>Can be installed globally or run on-demand</li></ul></li><li><span id="source-block-918"></span><a class="bullet" href="#"></a><h3>Option 2: Node.js-based CLI with Claude API</h3><ul><li><span id="source-block-970"></span><a class="bullet" href="#"></a>Direct integration with Anthropic&#39;s Claude API</li><li><span id="source-block-1022"></span><a class="bullet" href="#"></a>Can use <code>oclif</code> framework for CLI structure</li><li><span id="source-block-1071"></span><a class="bullet" href="#"></a>Managed via <code>mise</code> tasks</li></ul></li><li><span id="source-block-1101"></span><a class="bullet" href="#"></a><h3>Option 3: Claude Code-assisted development</h3><ul><li><span id="source-block-1152"></span><a class="bullet" href="#"></a>Use Claude Code to help build the tool</li><li><span id="source-block-1196"></span><a class="bullet" href="#"></a>Then extract the standalone script for independent use</li></ul></li></ul></li><li><span id="source-block-1256"></span><a class="bullet" href="#"></a><h2>Procedure: Option 1 - Python CLI with llm-cli</h2><ul><li><span id="source-block-1308"></span><a class="bullet" href="#"></a><h3>1. Set up the development environment</h3><ul><li><span id="source-block-1354"></span><a class="bullet" href="#"></a>Create a new project directory:<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">mkdir conventional-commit-tool</span>
+<span class="line"><span class="cm-builtin">cd</span> conventional-commit-tool</span></code></pre></div></div></li></ul></li><li><span id="source-block-1486"></span><a class="bullet" href="#"></a>Initialize with <code>uv</code>:<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">uv init</span></code></pre></div></div></li></ul></li><li><span id="source-block-1551"></span><a class="bullet" href="#"></a>Add dependencies to <code>pyproject.toml</code>:<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="toml"><div class="extensions__code"><div class="extensions__code-lang">toml</div><pre class="lsg-code"><code><span class="line">[<span class="cm-def">project</span>]</span>
+<span class="line"><span class="cm-tag">name </span>= <span class="cm-string">&quot;conventional-commit-tool&quot;</span></span>
+<span class="line"><span class="cm-tag">version </span>= <span class="cm-string">&quot;0.1.0&quot;</span></span>
+<span class="line"><span class="cm-tag">description </span>= <span class="cm-string">&quot;Generate conventional commits using LLM&quot;</span></span>
+<span class="line"><span class="cm-tag">dependencies </span>= [</span>
+<span class="line">    <span class="cm-string">&quot;click&gt;=8.0.0&quot;</span>,</span>
+<span class="line">    <span class="cm-string">&quot;anthropic&gt;=0.25.0&quot;</span>,</span>
+<span class="line">    <span class="cm-string">&quot;pydantic&gt;=2.0.0&quot;</span>,</span>
+<span class="line">]</span>
+<span class="line"></span>
+<span class="line">[<span class="cm-def">project</span>.<span class="cm-def">scripts</span>]</span>
+<span class="line"><span class="cm-tag">conventional-commit </span>= <span class="cm-string">&quot;conventional_commit_tool.cli:main&quot;</span></span></code></pre></div></div></li></ul></li></ul></li><li><span id="source-block-1972"></span><a class="bullet" href="#"></a><h3>2. Create the CLI structure</h3><ul><li><span id="source-block-2008"></span><a class="bullet" href="#"></a>Create the main CLI module:<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="python"><div class="extensions__code"><div class="extensions__code-lang">python</div><pre class="lsg-code"><code><span class="line"><span class="cm-comment"># conventional_commit_tool/cli.py</span></span>
+<span class="line"><span class="cm-keyword">import </span><span class="cm-variable">click</span></span>
+<span class="line"><span class="cm-keyword">import </span><span class="cm-variable">os</span></span>
+<span class="line"><span class="cm-keyword">from </span><span class="cm-variable">pathlib </span><span class="cm-keyword">import </span><span class="cm-variable">Path</span></span>
+<span class="line"><span class="cm-keyword">from .</span><span class="cm-variable">commit_generator </span><span class="cm-keyword">import </span><span class="cm-variable">ConventionalCommitGenerator</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-meta">@click.</span><span class="cm-variable">command</span><span class="cm-meta">()</span></span>
+<span class="line"><span class="cm-meta">@click.</span><span class="cm-variable">option</span><span class="cm-meta">(</span><span class="cm-string">&#39;--prompt-file&#39;</span><span class="cm-meta">, </span><span class="cm-string">&#39;-p&#39;</span><span class="cm-meta">, </span></span>
+<span class="line"><span class="cm-meta">              </span><span class="cm-variable">help</span><span class="cm-operator">=</span><span class="cm-string">&#39;Path to file containing commit prompt&#39;</span><span class="cm-meta">)</span></span>
+<span class="line"><span class="cm-meta">@click.</span><span class="cm-variable">option</span><span class="cm-meta">(</span><span class="cm-string">&#39;--prompt&#39;</span><span class="cm-meta">, </span><span class="cm-string">&#39;-m&#39;</span><span class="cm-meta">, </span></span>
+<span class="line"><span class="cm-meta">              </span><span class="cm-variable">help</span><span class="cm-operator">=</span><span class="cm-string">&#39;Direct commit prompt text&#39;</span><span class="cm-meta">)</span></span>
+<span class="line"><span class="cm-meta">@click.</span><span class="cm-variable">option</span><span class="cm-meta">(</span><span class="cm-string">&#39;--dry-run&#39;</span><span class="cm-meta">, </span><span class="cm-variable">is_flag</span><span class="cm-operator">=</span><span class="cm-atom">True</span><span class="cm-meta">, </span></span>
+<span class="line"><span class="cm-meta">              </span><span class="cm-variable">help</span><span class="cm-operator">=</span><span class="cm-string">&#39;Show commit message without executing&#39;</span><span class="cm-meta">)</span></span>
+<span class="line"><span class="cm-meta">@click.</span><span class="cm-variable">option</span><span class="cm-meta">(</span><span class="cm-string">&#39;--scope&#39;</span><span class="cm-meta">, </span><span class="cm-string">&#39;-s&#39;</span><span class="cm-meta">, </span></span>
+<span class="line"><span class="cm-meta">              </span><span class="cm-variable">help</span><span class="cm-operator">=</span><span class="cm-string">&#39;Optional scope for the commit&#39;</span><span class="cm-meta">)</span></span>
+<span class="line"><span class="cm-keyword">def </span><span class="cm-def">main</span>(<span class="cm-variable">prompt_file</span>, <span class="cm-variable">prompt</span>, <span class="cm-variable">dry_run</span>, <span class="cm-variable">scope</span>):</span>
+<span class="line">    <span class="cm-comment">&quot;&quot;&quot;Generate conventional commits using LLM.&quot;&quot;&quot;</span></span>
+<span class="line">    <span class="cm-variable">generator </span><span class="cm-operator">= </span><span class="cm-variable">ConventionalCommitGenerator</span>()</span>
+<span class="line">    </span>
+<span class="line">    <span class="cm-keyword">if </span><span class="cm-variable">prompt_file</span>:</span>
+<span class="line">        <span class="cm-keyword">with </span><span class="cm-builtin">open</span>(<span class="cm-variable">prompt_file</span>, <span class="cm-string">&#39;r&#39;</span>) <span class="cm-keyword">as </span><span class="cm-variable">f</span>:</span>
+<span class="line">            <span class="cm-variable">prompt_text </span><span class="cm-operator">= </span><span class="cm-variable">f</span>.<span class="cm-variable">read</span>().<span class="cm-variable">strip</span>()</span>
+<span class="line">    <span class="cm-keyword">elif </span><span class="cm-variable">prompt</span>:</span>
+<span class="line">        <span class="cm-variable">prompt_text </span><span class="cm-operator">= </span><span class="cm-variable">prompt</span></span>
+<span class="line">    <span class="cm-keyword">else</span>:</span>
+<span class="line">        <span class="cm-variable">click</span>.<span class="cm-variable">echo</span>(<span class="cm-string">&quot;Error: Must provide either --prompt-file or --prompt&quot;</span>)</span>
+<span class="line">        <span class="cm-keyword">return</span></span>
+<span class="line">    </span>
+<span class="line">    <span class="cm-variable">commit_msg </span><span class="cm-operator">= </span><span class="cm-variable">generator</span>.<span class="cm-variable">generate_commit</span>(<span class="cm-variable">prompt_text</span>, <span class="cm-variable">scope</span>)</span>
+<span class="line">    </span>
+<span class="line">    <span class="cm-keyword">if </span><span class="cm-variable">dry_run</span>:</span>
+<span class="line">        <span class="cm-variable">click</span>.<span class="cm-variable">echo</span>(<span class="cm-string">&quot;Generated commit message:&quot;</span>)</span>
+<span class="line">        <span class="cm-variable">click</span>.<span class="cm-variable">echo</span>(<span class="cm-variable">commit_msg</span>)</span>
+<span class="line">    <span class="cm-keyword">else</span>:</span>
+<span class="line">        <span class="cm-comment"># Execute git commit</span></span>
+<span class="line">        <span class="cm-variable">os</span>.<span class="cm-variable">system</span>(<span class="cm-keyword">f</span><span class="cm-string">&#39;git commit -m &quot;</span>{<span class="cm-variable">commit_msg</span>}<span class="cm-string">&quot;&#39;</span>)</span>
+<span class="line"></span>
+<span class="line"><span class="cm-keyword">if </span><span class="cm-variable">__name__ </span><span class="cm-operator">== </span><span class="cm-string">&#39;__main__&#39;</span>:</span>
+<span class="line">    <span class="cm-variable">main</span>()</span></code></pre></div></div></li></ul></li></ul></li><li><span id="source-block-3521"></span><a class="bullet" href="#"></a><h3>3. Create the commit generator</h3><ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="python"><div class="extensions__code"><div class="extensions__code-lang">python</div><pre class="lsg-code"><code><span class="line"><span class="cm-comment"># conventional_commit_tool/commit_generator.py</span></span>
+<span class="line"><span class="cm-keyword">import </span><span class="cm-variable">anthropic</span></span>
+<span class="line"><span class="cm-keyword">import </span><span class="cm-variable">os</span></span>
+<span class="line"><span class="cm-keyword">from </span><span class="cm-variable">typing </span><span class="cm-keyword">import </span><span class="cm-variable">Optional</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-keyword">class </span><span class="cm-def">ConventionalCommitGenerator</span>:</span>
+<span class="line"> <span class="cm-keyword">def </span><span class="cm-builtin">__init__</span>(<span class="cm-variable">self</span>):</span>
+<span class="line">  <span class="cm-keyword">self</span>.<span class="cm-variable">client </span><span class="cm-operator">= </span><span class="cm-variable">anthropic</span>.<span class="cm-variable">Anthropic</span>(</span>
+<span class="line">	  <span class="cm-variable">api_key</span><span class="cm-operator">=</span><span class="cm-variable">os</span>.<span class="cm-variable">getenv</span>(<span class="cm-string">&#39;ANTHROPIC_API_KEY&#39;</span>)</span>
+<span class="line">  )</span>
+<span class="line"> </span>
+<span class="line"> <span class="cm-keyword">def </span><span class="cm-def">generate_commit</span>(<span class="cm-variable">self</span>, <span class="cm-variable">prompt</span>: <span class="cm-type">str</span>, <span class="cm-variable">scope</span>: <span class="cm-variable">Optional</span>[<span class="cm-type">str</span>] <span class="cm-operator">= </span><span class="cm-atom">None</span>) -&gt; <span class="cm-type">str</span>:</span>
+<span class="line">  <span class="cm-variable">system_prompt </span><span class="cm-operator">= </span><span class="cm-keyword">self</span>.<span class="cm-variable">_get_system_prompt</span>()</span>
+<span class="line">  </span>
+<span class="line">  <span class="cm-variable">user_prompt </span><span class="cm-operator">= </span><span class="cm-keyword">f</span><span class="cm-string">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="cm-string">  Generate a conventional commit message for the following changes:</span></span>
+<span class="line"><span class="cm-string">  </span></span>
+<span class="line"><span class="cm-string">  </span>{<span class="cm-variable">prompt</span>}</span>
+<span class="line"><span class="cm-string">  &quot;&quot;&quot;</span></span>
+<span class="line">  </span>
+<span class="line">  <span class="cm-keyword">if </span><span class="cm-variable">scope</span>:</span>
+<span class="line">	  <span class="cm-variable">user_prompt </span><span class="cm-operator">+= </span><span class="cm-keyword">f</span><span class="cm-string">&quot;</span><span class="cm-string-2">\n\n</span><span class="cm-string">Scope: </span>{<span class="cm-variable">scope</span>}<span class="cm-string">&quot;</span></span>
+<span class="line">  </span>
+<span class="line">  <span class="cm-variable">response </span><span class="cm-operator">= </span><span class="cm-keyword">self</span>.<span class="cm-variable">client</span>.<span class="cm-variable">messages</span>.<span class="cm-variable">create</span>(</span>
+<span class="line">	  <span class="cm-variable">model</span><span class="cm-operator">=</span><span class="cm-string">&quot;claude-3-5-sonnet-20241022&quot;</span>,</span>
+<span class="line">	  <span class="cm-variable">max_tokens</span><span class="cm-operator">=</span><span class="cm-number">150</span>,</span>
+<span class="line">	  <span class="cm-variable">system</span><span class="cm-operator">=</span><span class="cm-variable">system_prompt</span>,</span>
+<span class="line">	  <span class="cm-variable">messages</span><span class="cm-operator">=</span>[{<span class="cm-string">&quot;role&quot;</span>: <span class="cm-string">&quot;user&quot;</span>, <span class="cm-string">&quot;content&quot;</span>: <span class="cm-variable">user_prompt</span>}]</span>
+<span class="line">  )</span>
+<span class="line">  </span>
+<span class="line">  <span class="cm-keyword">return </span><span class="cm-variable">response</span>.<span class="cm-variable">content</span>[<span class="cm-number">0</span>].<span class="cm-variable">text</span>.<span class="cm-variable">strip</span>()</span>
+<span class="line"> </span>
+<span class="line"> <span class="cm-keyword">def </span><span class="cm-def">_get_system_prompt</span>(<span class="cm-variable">self</span>) -&gt; <span class="cm-type">str</span>:</span>
+<span class="line">  <span class="cm-keyword">return </span><span class="cm-string">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="cm-string">  You are a git commit message generator that follows the Conventional Commits specification.</span></span>
+<span class="line"><span class="cm-string">  </span></span>
+<span class="line"><span class="cm-string">  The commit message should be structured as follows:</span></span>
+<span class="line"><span class="cm-string">  &lt;type&gt;[optional scope]: &lt;description&gt;</span></span>
+<span class="line"><span class="cm-string">  </span></span>
+<span class="line"><span class="cm-string">  Types:</span></span>
+<span class="line"><span class="cm-string">  - feat: A new feature</span></span>
+<span class="line"><span class="cm-string">  - fix: A bug fix</span></span>
+<span class="line"><span class="cm-string">  - docs: Documentation only changes</span></span>
+<span class="line"><span class="cm-string">  - style: Changes that do not affect the meaning of the code</span></span>
+<span class="line"><span class="cm-string">  - refactor: A code change that neither fixes a bug nor adds a feature</span></span>
+<span class="line"><span class="cm-string">  - perf: A code change that improves performance</span></span>
+<span class="line"><span class="cm-string">  - test: Adding missing tests or correcting existing tests</span></span>
+<span class="line"><span class="cm-string">  - chore: Changes to the build process or auxiliary tools</span></span>
+<span class="line"><span class="cm-string">  </span></span>
+<span class="line"><span class="cm-string">  Rules:</span></span>
+<span class="line"><span class="cm-string">  1. Use the imperative mood (&quot;add&quot; not &quot;added&quot; or &quot;adds&quot;)</span></span>
+<span class="line"><span class="cm-string">  2. Don&#39;t capitalize the first letter</span></span>
+<span class="line"><span class="cm-string">  3. No dot (.) at the end</span></span>
+<span class="line"><span class="cm-string">  4. Keep the description under 72 characters</span></span>
+<span class="line"><span class="cm-string">  5. If scope is provided, include it in brackets</span></span>
+<span class="line"><span class="cm-string">  </span></span>
+<span class="line"><span class="cm-string">  Examples:</span></span>
+<span class="line"><span class="cm-string">  - feat(auth): add OAuth2 authentication</span></span>
+<span class="line"><span class="cm-string">  - fix(api): resolve user data retrieval issue</span></span>
+<span class="line"><span class="cm-string">  - docs: update README with installation steps</span></span>
+<span class="line"><span class="cm-string">  - refactor: simplify user validation logic</span></span>
+<span class="line"><span class="cm-string">  &quot;&quot;&quot;</span></span></code></pre></div></div></li></ul></li><li><span id="source-block-5734"></span><a class="bullet" href="#"></a><h3>4. Create prompt templates</h3><ul><li><span id="source-block-5769"></span><a class="bullet" href="#"></a>Create a <code>prompts/</code> directory with template files:<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">mkdir prompts</span></code></pre></div></div></li></ul></li><li><span id="source-block-5869"></span><a class="bullet" href="#"></a>Example prompt file <code>prompts/feature.txt</code>:<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="text"><div class="extensions__code"><div class="extensions__code-lang">text</div><pre class="lsg-code"><code><span class="line">Added new user authentication feature with OAuth2 support.</span>
+<span class="line">Includes login/logout functionality and session management.</span>
+<span class="line">Updated API endpoints to handle authentication tokens.</span>
+<span class="line">Added unit tests for authentication flow.</span></code></pre></div></div></li></ul></li><li><span id="source-block-6181"></span><a class="bullet" href="#"></a>Example prompt file <code>prompts/bugfix.txt</code>:<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="text"><div class="extensions__code"><div class="extensions__code-lang">text</div><pre class="lsg-code"><code><span class="line">Fixed issue where user data was not being retrieved correctly.</span>
+<span class="line">The problem was in the database query that was missing proper joins.</span>
+<span class="line">Added error handling for cases where user data is not found.</span></code></pre></div></div></li></ul></li></ul></li><li><span id="source-block-6463"></span><a class="bullet" href="#"></a><h3>5. Install and test the tool</h3><ul><li><span id="source-block-6500"></span><a class="bullet" href="#"></a>Install in development mode:<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">uv pip install<span class="cm-variable"> -e</span> .</span></code></pre></div></div></li></ul></li><li><span id="source-block-6584"></span><a class="bullet" href="#"></a>Test with a prompt file:<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">conventional-commit<span class="cm-variable"> --prompt-file</span> prompts/feature.txt<span class="cm-variable"> --dry-run</span></span></code></pre></div></div></li></ul></li><li><span id="source-block-6708"></span><a class="bullet" href="#"></a>Test with direct prompt:<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">conventional-commit<span class="cm-variable"> --prompt </span><span class="cm-string">&quot;Fixed login bug&quot;</span><span class="cm-variable"> --scope</span> auth<span class="cm-variable"> --dry-run</span></span></code></pre></div></div></li></ul></li></ul></li><li><span id="source-block-6838"></span><a class="bullet" href="#"></a><h3>6. Make it globally available</h3><ul><li><span id="source-block-6876"></span><a class="bullet" href="#"></a>Install globally using <code>uv</code>:<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">uv tool install conventional-commit-tool</span></code></pre></div></div></li></ul></li><li><span id="source-block-6981"></span><a class="bullet" href="#"></a>Or add to <code>mise.toml</code> for project-specific use:<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="toml"><div class="extensions__code"><div class="extensions__code-lang">toml</div><pre class="lsg-code"><code><span class="line">[<span class="cm-def">tasks</span>.<span class="cm-def">commit</span>]</span>
+<span class="line"><span class="cm-tag">description </span>= <span class="cm-string">&quot;Generate conventional commit&quot;</span></span>
+<span class="line"><span class="cm-tag">run </span>= <span class="cm-string">&quot;uvx conventional-commit-tool $@&quot;</span></span>
+<span class="line"><span class="cm-tag">env </span>= { <span class="cm-tag">ANTHROPIC_API_KEY </span>= <span class="cm-string">&quot;op://vault/anthropic-key/credential&quot; </span>}</span></code></pre></div></div></li></ul></li></ul></li></ul></li><li><span id="source-block-7250"></span><a class="bullet" href="#"></a><h2>Procedure: Option 2 - Node.js CLI with oclif</h2><ul><li><span id="source-block-7301"></span><a class="bullet" href="#"></a><h3>1. Initialize oclif project</h3><ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">npx oclif generate conventional-commit-tool</span>
+<span class="line"><span class="cm-builtin">cd</span> conventional-commit-tool</span></code></pre></div></div></li></ul></li><li><span id="source-block-7441"></span><a class="bullet" href="#"></a><h3>2. Add dependencies</h3><ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">npm install @anthropic-ai/sdk</span></code></pre></div></div></li></ul></li><li><span id="source-block-7526"></span><a class="bullet" href="#"></a><h3>3. Create the main command</h3><ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="typescript"><div class="extensions__code"><div class="extensions__code-lang">typescript</div><pre class="lsg-code" style="--lsg-code-digits:3"><code><span class="line"><span class="cm-comment">// src/commands/generate.ts</span></span>
+<span class="line"><span class="cm-keyword">import </span>{<span class="cm-variable">Command</span>, <span class="cm-variable">Flags</span>} <span class="cm-keyword">from </span><span class="cm-string">&#39;@oclif/core&#39;</span></span>
+<span class="line"><span class="cm-keyword">import </span><span class="cm-variable">Anthropic </span><span class="cm-keyword">from </span><span class="cm-string">&#39;@anthropic-ai/sdk&#39;</span></span>
+<span class="line"><span class="cm-keyword">import </span><span class="cm-atom">* </span><span class="cm-keyword">as </span><span class="cm-variable">fs </span><span class="cm-keyword">from </span><span class="cm-string">&#39;fs&#39;</span></span>
+<span class="line"><span class="cm-keyword">import </span>{<span class="cm-variable">execSync</span>} <span class="cm-keyword">from </span><span class="cm-string">&#39;child_process&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-keyword">export default class </span><span class="cm-def">Generate </span><span class="cm-keyword">extends </span><span class="cm-type">Command </span>{</span>
+<span class="line"> <span class="cm-keyword">static </span><span class="cm-variable">description </span><span class="cm-operator">= </span><span class="cm-string">&#39;Generate conventional commit message&#39;</span></span>
+<span class="line"> </span>
+<span class="line"> <span class="cm-keyword">static </span><span class="cm-variable">flags </span><span class="cm-operator">= </span>{</span>
+<span class="line">  <span class="cm-string">&#39;prompt-file&#39;</span>: <span class="cm-variable">Flags</span>.<span class="cm-def">string</span>({</span>
+<span class="line">	  <span class="cm-variable">char</span>: <span class="cm-string">&#39;p&#39;</span>,</span>
+<span class="line">	  <span class="cm-variable">description</span>: <span class="cm-string">&#39;Path to file containing commit prompt&#39;</span>,</span>
+<span class="line">  }),</span>
+<span class="line">  <span class="cm-variable">prompt</span>: <span class="cm-variable">Flags</span>.<span class="cm-def">string</span>({</span>
+<span class="line">	  <span class="cm-variable">char</span>: <span class="cm-string">&#39;m&#39;</span>,</span>
+<span class="line">	  <span class="cm-variable">description</span>: <span class="cm-string">&#39;Direct commit prompt text&#39;</span>,</span>
+<span class="line">  }),</span>
+<span class="line">  <span class="cm-string">&#39;dry-run&#39;</span>: <span class="cm-variable">Flags</span>.<span class="cm-def">boolean</span>({</span>
+<span class="line">	  <span class="cm-variable">description</span>: <span class="cm-string">&#39;Show commit message without executing&#39;</span>,</span>
+<span class="line">  }),</span>
+<span class="line">  <span class="cm-variable">scope</span>: <span class="cm-variable">Flags</span>.<span class="cm-def">string</span>({</span>
+<span class="line">	  <span class="cm-variable">char</span>: <span class="cm-string">&#39;s&#39;</span>,</span>
+<span class="line">	  <span class="cm-variable">description</span>: <span class="cm-string">&#39;Optional scope for the commit&#39;</span>,</span>
+<span class="line">  }),</span>
+<span class="line"> }</span>
+<span class="line"> </span>
+<span class="line"> <span class="cm-keyword">async </span><span class="cm-def">run</span>() {</span>
+<span class="line">  <span class="cm-keyword">const </span>{<span class="cm-variable">flags</span>} <span class="cm-operator">= </span><span class="cm-keyword">await this</span>.<span class="cm-builtin">parse</span>(<span class="cm-variable">Generate</span>)</span>
+<span class="line">  </span>
+<span class="line">  <span class="cm-keyword">const </span><span class="cm-variable">anthropic </span><span class="cm-operator">= new </span><span class="cm-def">Anthropic</span>({</span>
+<span class="line">	  <span class="cm-variable">apiKey</span>: <span class="cm-variable">process</span>.<span class="cm-variable">env</span>.<span class="cm-variable">ANTHROPIC_API_KEY</span>,</span>
+<span class="line">  })</span>
+<span class="line">  </span>
+<span class="line">  <span class="cm-keyword">let </span><span class="cm-variable">promptText</span><span class="cm-operator">: </span><span class="cm-type">string</span></span>
+<span class="line">  </span>
+<span class="line">  <span class="cm-keyword">if </span>(<span class="cm-variable">flags</span>[<span class="cm-string">&#39;prompt-file&#39;</span>]) {</span>
+<span class="line">	  <span class="cm-variable">promptText </span><span class="cm-operator">= </span><span class="cm-variable">fs</span>.<span class="cm-def">readFileSync</span>(<span class="cm-variable">flags</span>[<span class="cm-string">&#39;prompt-file&#39;</span>], <span class="cm-string">&#39;utf8&#39;</span>).<span class="cm-def">trim</span>()</span>
+<span class="line">  } <span class="cm-keyword">else if </span>(<span class="cm-variable">flags</span>.<span class="cm-variable">prompt</span>) {</span>
+<span class="line">	  <span class="cm-variable">promptText </span><span class="cm-operator">= </span><span class="cm-variable">flags</span>.<span class="cm-variable">prompt</span></span>
+<span class="line">  } <span class="cm-keyword">else </span>{</span>
+<span class="line">	  <span class="cm-keyword">this</span>.<span class="cm-def">error</span>(<span class="cm-string">&#39;Must provide either --prompt-file or --prompt&#39;</span>)</span>
+<span class="line">  }</span>
+<span class="line">  </span>
+<span class="line">  <span class="cm-keyword">const </span><span class="cm-variable">systemPrompt </span><span class="cm-operator">= </span><span class="cm-keyword">this</span>.<span class="cm-def">getSystemPrompt</span>()</span>
+<span class="line">  <span class="cm-keyword">const </span><span class="cm-variable">userPrompt </span><span class="cm-operator">= </span><span class="cm-keyword">this</span>.<span class="cm-def">buildUserPrompt</span>(<span class="cm-variable">promptText</span>, <span class="cm-variable">flags</span>.<span class="cm-variable">scope</span>)</span>
+<span class="line">  </span>
+<span class="line">  <span class="cm-keyword">const </span><span class="cm-variable">response </span><span class="cm-operator">= </span><span class="cm-keyword">await </span><span class="cm-variable">anthropic</span>.<span class="cm-variable">messages</span>.<span class="cm-def">create</span>({</span>
+<span class="line">	  <span class="cm-variable">model</span>: <span class="cm-string">&#39;claude-3-5-sonnet-20241022&#39;</span>,</span>
+<span class="line">	  <span class="cm-variable">max_tokens</span>: <span class="cm-number">150</span>,</span>
+<span class="line">	  <span class="cm-variable">system</span>: <span class="cm-variable">systemPrompt</span>,</span>
+<span class="line">	  <span class="cm-variable">messages</span>: [{<span class="cm-variable">role</span>: <span class="cm-string">&#39;user&#39;</span>, <span class="cm-variable">content</span>: <span class="cm-variable">userPrompt</span>}],</span>
+<span class="line">  })</span>
+<span class="line">  </span>
+<span class="line">  <span class="cm-keyword">const </span><span class="cm-variable">commitMsg </span><span class="cm-operator">= </span><span class="cm-variable">response</span>.<span class="cm-variable">content</span>[<span class="cm-number">0</span>].<span class="cm-variable">text</span>.<span class="cm-def">trim</span>()</span>
+<span class="line">  </span>
+<span class="line">  <span class="cm-keyword">if </span>(<span class="cm-variable">flags</span>[<span class="cm-string">&#39;dry-run&#39;</span>]) {</span>
+<span class="line">	  <span class="cm-keyword">this</span>.<span class="cm-def">log</span>(<span class="cm-string">&#39;Generated commit message:&#39;</span>)</span>
+<span class="line">	  <span class="cm-keyword">this</span>.<span class="cm-def">log</span>(<span class="cm-variable">commitMsg</span>)</span>
+<span class="line">  } <span class="cm-keyword">else </span>{</span>
+<span class="line">	  <span class="cm-def">execSync</span>(<span class="cm-string">`git commit -m &quot;${</span><span class="cm-variable">commitMsg</span><span class="cm-string">}&quot;`</span>, {<span class="cm-variable">stdio</span>: <span class="cm-string">&#39;inherit&#39;</span>})</span>
+<span class="line">  }</span>
+<span class="line"> }</span>
+<span class="line"> </span>
+<span class="line"> <span class="cm-keyword">private </span><span class="cm-def">getSystemPrompt</span>()<span class="cm-operator">: </span><span class="cm-type">string </span>{</span>
+<span class="line">  <span class="cm-keyword">return </span><span class="cm-string">`You are a git commit message generator that follows the Conventional Commits specification.</span></span>
+<span class="line"><span class="cm-string">  </span></span>
+<span class="line"><span class="cm-string">  The commit message should be structured as follows:</span></span>
+<span class="line"><span class="cm-string">  &lt;type&gt;[optional scope]: &lt;description&gt;</span></span>
+<span class="line"><span class="cm-string">  </span></span>
+<span class="line"><span class="cm-string">  Types:</span></span>
+<span class="line"><span class="cm-string">  - feat: A new feature</span></span>
+<span class="line"><span class="cm-string">  - fix: A bug fix</span></span>
+<span class="line"><span class="cm-string">  - docs: Documentation only changes</span></span>
+<span class="line"><span class="cm-string">  - style: Changes that do not affect the meaning of the code</span></span>
+<span class="line"><span class="cm-string">  - refactor: A code change that neither fixes a bug nor adds a feature</span></span>
+<span class="line"><span class="cm-string">  - perf: A code change that improves performance</span></span>
+<span class="line"><span class="cm-string">  - test: Adding missing tests or correcting existing tests</span></span>
+<span class="line"><span class="cm-string">  - chore: Changes to the build process or auxiliary tools</span></span>
+<span class="line"><span class="cm-string">  </span></span>
+<span class="line"><span class="cm-string">  Rules:</span></span>
+<span class="line"><span class="cm-string">  1. Use the imperative mood (&quot;add&quot; not &quot;added&quot; or &quot;adds&quot;)</span></span>
+<span class="line"><span class="cm-string">  2. Don&#39;t capitalize the first letter</span></span>
+<span class="line"><span class="cm-string">  3. No dot (.) at the end</span></span>
+<span class="line"><span class="cm-string">  4. Keep the description under 72 characters</span></span>
+<span class="line"><span class="cm-string">  5. If scope is provided, include it in brackets`</span></span>
+<span class="line"> }</span>
+<span class="line"> </span>
+<span class="line"> <span class="cm-keyword">private </span><span class="cm-def">buildUserPrompt</span>(<span class="cm-variable">prompt</span><span class="cm-operator">: </span><span class="cm-type">string</span>, <span class="cm-variable">scope</span><span class="cm-operator">?: </span><span class="cm-type">string</span>)<span class="cm-operator">: </span><span class="cm-type">string </span>{</span>
+<span class="line">  <span class="cm-keyword">let </span><span class="cm-variable">userPrompt </span><span class="cm-operator">= </span><span class="cm-string">`Generate a conventional commit message for the following changes:</span></span>
+<span class="line"><span class="cm-string">  </span></span>
+<span class="line"><span class="cm-string">  ${</span><span class="cm-variable">prompt</span><span class="cm-string">}`</span></span>
+<span class="line">  </span>
+<span class="line">  <span class="cm-keyword">if </span>(<span class="cm-variable">scope</span>) {</span>
+<span class="line">	  <span class="cm-variable">userPrompt </span><span class="cm-operator">+= </span><span class="cm-string">`</span><span class="cm-string-2">\n\n</span><span class="cm-string">Scope: ${</span><span class="cm-variable">scope</span><span class="cm-string">}`</span></span>
+<span class="line">  }</span>
+<span class="line">  </span>
+<span class="line">  <span class="cm-keyword">return </span><span class="cm-variable">userPrompt</span></span>
+<span class="line"> }</span>
+<span class="line">}</span></code></pre></div></div></li></ul></li><li><span id="source-block-10871"></span><a class="bullet" href="#"></a><h3>4. Build and install</h3><ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">npm run build</span>
+<span class="line">npm install<span class="cm-variable"> -g</span> .</span></code></pre></div></div></li></ul></li></ul></li><li><span id="source-block-10963"></span><a class="bullet" href="#"></a><h2>Procedure: Option 3 - Claude Code-assisted development</h2><ul><li><span id="source-block-11024"></span><a class="bullet" href="#"></a><h3>1. Use Claude Code to scaffold the project</h3><ul><li><span id="source-block-11075"></span><a class="bullet" href="#"></a>Start Claude Code in your project:<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">claude</span></code></pre></div></div></li></ul></li><li><span id="source-block-11152"></span><a class="bullet" href="#"></a>Ask Claude to help create the CLI tool:<ul><li><a class="bullet" href="#"></a><blockquote><p>&quot;Help me create a Python CLI tool that generates conventional commits using the Anthropic API. The tool should read prompts from files and generate commit messages following the Conventional Commits specification.&quot;<br></p></blockquote></li></ul></li></ul></li><li><span id="source-block-11420"></span><a class="bullet" href="#"></a><h3>2. Extract the standalone script</h3><ul><li><span id="source-block-11461"></span><a class="bullet" href="#"></a>Once Claude Code has helped create the tool, extract the relevant files</li><li><span id="source-block-11538"></span><a class="bullet" href="#"></a>Remove any Claude Code-specific dependencies</li><li><span id="source-block-11588"></span><a class="bullet" href="#"></a>Test the standalone version</li></ul></li></ul></li><li><span id="source-block-11621"></span><a class="bullet" href="#"></a><h2>Usage Examples</h2><ul><li><span id="source-block-11642"></span><a class="bullet" href="#"></a><h3>Basic usage with prompt file</h3><ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">conventional-commit<span class="cm-variable"> --prompt-file</span> prompts/feature.txt</span></code></pre></div></div></li></ul></li><li><span id="source-block-11760"></span><a class="bullet" href="#"></a><h3>With scope specification</h3><ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">conventional-commit<span class="cm-variable"> --prompt </span><span class="cm-string">&quot;Fixed authentication bug&quot;</span><span class="cm-variable"> --scope</span> auth</span></code></pre></div></div></li></ul></li><li><span id="source-block-11889"></span><a class="bullet" href="#"></a><h3>Dry run to preview</h3><ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">conventional-commit<span class="cm-variable"> --prompt-file</span> prompts/bugfix.txt<span class="cm-variable"> --dry-run</span></span></code></pre></div></div></li></ul></li><li><span id="source-block-12006"></span><a class="bullet" href="#"></a><h3>Using with mise task</h3><ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">mise run commit<span class="cm-variable"> --prompt-file</span> prompts/feature.txt</span></code></pre></div></div></li></ul></li></ul></li><li><span id="source-block-12112"></span><a class="bullet" href="#"></a><h2>Integration with Development Workflow</h2><ul><li><span id="source-block-12156"></span><a class="bullet" href="#"></a><h3>Git hooks</h3><ul><li><span id="source-block-12174"></span><a class="bullet" href="#"></a>Create a pre-commit hook that uses the tool</li><li><span id="source-block-12223"></span><a class="bullet" href="#"></a>Store commit prompts in a <code>.commit-prompts/</code> directory</li></ul></li><li><span id="source-block-12283"></span><a class="bullet" href="#"></a><h3>IDE integration</h3><ul><li><span id="source-block-12307"></span><a class="bullet" href="#"></a>Add VS Code tasks for common commit types</li><li><span id="source-block-12354"></span><a class="bullet" href="#"></a>Create snippets for prompt templates</li></ul></li><li><span id="source-block-12396"></span><a class="bullet" href="#"></a><h3>CI/CD integration</h3><ul><li><span id="source-block-12422"></span><a class="bullet" href="#"></a>Use the tool in automated commit generation</li><li><span id="source-block-12471"></span><a class="bullet" href="#"></a>Validate commit messages in CI</li></ul></li></ul></li><li><span id="source-block-12507"></span><a class="bullet" href="#"></a><h2>Troubleshooting</h2><ul><li><span id="source-block-12529"></span><a class="bullet" href="#"></a><strong>API key not found</strong>: Ensure <code>ANTHROPIC_API_KEY</code> is set in environment</li><li><span id="source-block-12605"></span><a class="bullet" href="#"></a><strong>Permission denied</strong>: Make sure the script is executable (<code>chmod +x</code>)</li><li><span id="source-block-12680"></span><a class="bullet" href="#"></a><strong>Git not found</strong>: Ensure git is installed and in PATH</li><li><span id="source-block-12739"></span><a class="bullet" href="#"></a><strong>Invalid commit format</strong>: Check that the prompt is clear and specific</li></ul></li><li><span id="source-block-12814"></span><a class="bullet" href="#"></a><h2>References</h2><ul><li><span id="source-block-12831"></span><a class="bullet" href="#"></a><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://www.conventionalcommits.org/en/v1.0.0/#summary">Conventional Commits Specification</a></li><li><span id="source-block-12928"></span><a class="bullet" href="#"></a><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://llm.datasette.io/">llm-cli Documentation</a></li><li><span id="source-block-12983"></span><a class="bullet" href="#"></a><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://oclif.io/">oclif Framework</a></li><li><span id="source-block-13024"></span><a class="bullet" href="#"></a><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://docs.anthropic.com/claude/reference">Anthropic Claude API</a></li><li><span id="source-block-13096"></span><a class="bullet" href="#"></a><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://mise.jdx.dev/tasks/">mise Task Management</a></li></ul></li></ul></li></ul><section class="references linked-references" id="linked-references" data-refs="linked" data-src="_refs/p-cef0c463e3486743-linked-1.html"><details class="references-section"><summary><span class="ref-chevron"></span><h2>1 Linked Reference</h2><button type="button" class="filter" title="Filter" aria-label="Filter" data-state="none" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v2.172a2 2 0 0 1-.586 1.414L15 12v7l-6 2v-8.5L4.52 7.572A2 2 0 0 1 4 6.227z"/></svg></button></summary><noscript><a href="_refs/p-cef0c463e3486743-linked-1.html">Show linked references</a></noscript><div class="references-body"><p role="status"></p></div></details></section><section class="page-hierarchy references" aria-label="Hierarchy"><details class="references-section" open><summary><span class="ref-chevron"></span><h2>Hierarchy</h2></summary><ul class="namespaces"><li><span class="page-reference"><a href="p-612c81390b1a1c37.html">Claude</a></span><span class="namespace-separator" aria-hidden="true">/</span><span class="page-reference"><a href="p-2585a93436a631cd.html">Code</a></span><span class="namespace-separator" aria-hidden="true">/</span><span class="page-reference"><a href="p-02982ae4236d3581.html">How To</a></span></li></ul></details></section><section class="references linked-references unlinked-references" data-refs="unlinked"><details class="references-section"><summary><span class="ref-chevron"></span><h2>Unlinked References</h2></summary><noscript>No unlinked references.</noscript><div class="references-body"></div></details></section></main><script data-lsg-fragments>// Native fragment navigation does not run when a host swaps page content.
+// Hosts can call this helper before their own fragment focus/scroll handling.
+(() => {
+  function reveal(fragment = location.hash, { scroll = true } = {}) {
+    let id;
+    try { id = decodeURIComponent(fragment.replace(/^#/, "")); }
+    catch { return null; }
+    const target = id && document.getElementById(id);
+    if (!target) return null;
+    for (let parent = target.parentElement; parent; parent = parent.parentElement) {
+      if (parent.tagName === "DETAILS") parent.open = true;
+      parent.classList?.remove("folded");
+    }
+    if (scroll) target.scrollIntoView();
+    return target;
+  }
+  window.logseqGardenerRevealFragment = reveal;
+  window.addEventListener("hashchange", () => reveal());
+  reveal();
+})();
+</script></body></html>

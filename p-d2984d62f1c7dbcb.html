@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>2025-04-09 Wed</title><script data-lsg-theme-script>/** Shared visitor appearance, independent of replaceable page content. */
+(() => {
+  try {
+    // Saved shell layout applies before paint; the phone overlay always starts closed.
+    const root = document.documentElement;
+    if (window.matchMedia?.('(min-width: 640px)')?.matches && window.localStorage.getItem('logseq-gardener-left-sidebar') === 'open') root.setAttribute('data-lsg-left-sidebar', 'open');
+    if (window.localStorage.getItem('logseq-gardener-wide') === 'true') root.setAttribute('data-lsg-wide', 'true');
+    // The right sidebar's column takes its width before paint; its cards load after load.
+    const right = JSON.parse(window.localStorage.getItem('logseq-gardener-right-sidebar') || 'null');
+    if (right && window.matchMedia?.('(min-width: 640px)')?.matches) {
+      root.setAttribute('data-lsg-right-sidebar', right.open ? 'open' : 'closed');
+      if (right.width > 0) root.style.setProperty('--lsg-right-width', right.width + 'px');
+    }
+  } catch { /* Layout keeps its defaults. */ }
+  if (typeof window.logseqGardenerInitTheme === 'function') return;
+  const key = 'logseq-gardener-theme';
+  const valid = value => value === 'light' || value === 'dark';
+  const read = () => {
+    try { const value = window.localStorage.getItem(key); return valid(value) ? value : 'system'; }
+    catch { return 'system'; }
+  };
+  let choice = read();
+  let media;
+  try { media = window.matchMedia?.('(prefers-color-scheme: dark)'); } catch { /* Light fallback. */ }
+  const appearance = () => choice === 'system' ? (media?.matches ? 'dark' : 'light') : choice;
+  const initialize = (root = document) => {
+    for (const select of root.querySelectorAll('[data-lsg-theme-select]')) {
+      select.value = choice;
+      const control = select.closest('[data-lsg-theme-control]');
+      if (control) control.hidden = false;
+    }
+  };
+  const apply = () => {
+    document.documentElement.setAttribute('data-lsg-theme', appearance());
+    document.documentElement.setAttribute('data-lsg-theme-mode', choice);
+    initialize();
+  };
+  const set = value => {
+    if (!valid(value) && value !== 'system') return;
+    choice = value;
+    try {
+      if (choice === 'system') window.localStorage.removeItem(key);
+      else window.localStorage.setItem(key, choice);
+    } catch { /* Keep this document's choice when storage is unavailable. */ }
+    apply();
+  };
+  window.logseqGardenerInitTheme = initialize;
+  window.logseqGardenerTheme = { choice: () => choice, appearance, set };
+  apply();
+  if (media?.addEventListener) media.addEventListener('change', apply);
+  else media?.addListener?.(apply);
+  document.addEventListener('change', event => {
+    const select = event.target;
+    if (select?.matches?.('[data-lsg-theme-select]')) set(select.value);
+  });
+  window.addEventListener('storage', event => {
+    if (event.key === key || event.key === null) { choice = read(); apply(); }
+  });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => initialize(), { once: true });
+})();
+</script><script defer src="lsg-shell.js"></script><link rel="lsg-search" href="lsg-search-manifest-1e91ba5239e1caaa.json" data-revision="1e91ba5239e1caaa"><link rel="stylesheet" href="lsg-shared-559a1c927f395608.css"><script data-lsg-search-start>(()=>{const f=(_,o)=>Object.assign(f.options??={},o);window.logseqGardenerInitSearch=f;const u=new URL('lsg-search-start-d1579d619a9675f1.mjs',document.querySelector('[rel=lsg-search]').href);document.addEventListener('DOMContentLoaded',()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{const s=document.createElement('script');s.type='module';s.src=u;s.onerror=()=>{if(!document.querySelector('[rel=lsg-search]'))return;const t=document.createElement('span');t.id='lsg-search-load';t.setAttribute('role','status');t.textContent='Search unavailable. Reload this page to retry search.';document.body.append(t)};document.head.append(s)})),{once:true})})();</script></head><body><header class="lsg-header cp__header"><button type="button" class="lsg-button" data-lsg-left-toggle aria-label="Toggle left sidebar" aria-controls="lsg-left-sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l16 0M4 12l16 0M4 18l16 0"/></svg></button><span class="lsg-header-space"></span><a class="lsg-button" href="index.html" aria-label="Home"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l-2 0l9 -9l9 9l-2 0M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg></a><a class="lsg-button button" href="graph.html#/graph" aria-label="Graph"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path id="lsg-i-graph" d="M10 5a2 2 0 1 0 4 0a2 2 0 1 0-4 0M3 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M17 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M6.5 17.5 12 13l5.5 4.5M12 7v6"/></svg></a><button type="button" class="lsg-button" data-lsg-search aria-label="Search garden" aria-haspopup="dialog" aria-controls="lsg-search-dialog" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0M21 21l-6 -6"/></svg></button><div class="lsg-more"><button type="button" class="lsg-button" data-lsg-more aria-label="More" aria-haspopup="menu" aria-controls="lsg-more-menu" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M20 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg></button><div id="lsg-more-menu" role="menu" aria-label="More" hidden><button type="button" role="menuitem" data-lsg-slides>View as slides</button><button type="button" role="menuitem" data-lsg-theme-toggle>Toggle theme</button><button type="button" role="menuitem" data-lsg-theme-system hidden>Use system theme</button></div></div><button type="button" class="lsg-button lsg-right-toggle" data-lsg-right-toggle aria-label="Toggle right sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2zM15 4l0 16"/></svg></button></header><aside id="lsg-left-sidebar" class="lsg-left-sidebar" aria-label="Left sidebar"><nav aria-label="Navigation"><ul><li><a href="index.html" data-lsg-journals-link><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12zM16 3v4M8 3v4M4 11h16M11 15h1M12 15v3"/></svg><span>Journals</span></a></li><li class="flashcards-nav"><a href="#" role="button" data-lsg-flashcards><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.828 9.172a4 4 0 1 0 0 5.656a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828"/></svg><span>Flashcards</span><span class="lsg-shortcut" aria-hidden="true">g f</span><span class="lsg-badge" data-lsg-due>430</span></a></li><li class="graph-view-nav"><a href="graph.html" data-lsg-graph-view><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#lsg-i-graph"/></svg><span>Graph view</span></a></li><li><a href="pages.html" data-lsg-all-pages><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3v4a1 1 0 0 0 1 1h4M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2zM16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2"/></svg><span>All pages</span></a></li></ul><h2 class="lsg-favorites-heading" id="lsg-favorites">Favorites</h2><ul aria-labelledby="lsg-favorites"><li><a href="p-08986007b541df27.html">fd</a></li><li><a href="p-710a025b0e00c8d5.html">gh-dash</a></li><li><a href="p-710a025b0e00c8d5.html">GitHub/CLI/Extension/gh-dash</a></li><li><a href="p-539dc7d0a39cc4ec.html">tuicr</a></li><li><a href="p-4276cb26f35edeca.html">tmux/Q/How can I put a thick border around the focused pane?</a></li><li><a href="p-62e5d9883ed48541.html">LazyVim</a></li><li><a href="p-abc1fe1091d210a5.html">Logseq/Flashcard/Review/Favorite</a></li><li><a href="p-7d113595e3cdeb70.html">Obsidian</a></li><li><a href="p-efba5ef46cf8e2e4.html">Codex</a></li><li><a href="p-398c5fe622fecdf8.html">chezmoi</a></li><li><a href="p-c02f89b682f53253.html">DevContainer</a></li><li><a href="p-da5911a2a798df4f.html">mise</a></li><li><a href="p-08dc5107b57b9276.html">rg</a></li><li><a href="p-68e903194eba71d7.html">vim</a></li><li><a href="p-74ff40ba60b70acb.html">nvim</a></li><li><a href="p-f237247b53a844f6.html">Zoxide</a></li><li><a href="p-a0d502498c67fd12.html">yazi</a></li><li><a href="p-424036ef4353ec8f.html">tmux</a></li><li><a href="p-e4db29888872bdd5.html">Lazygit</a></li></ul></nav></aside><div class="lsg-sidebar-shade" data-lsg-sidebar-shade hidden></div><main><h1>2025-04-09 Wed</h1><ul class="outline"><li><span id="source-block-0"></span><a class="bullet" href="#"></a><h2><span class="page-reference unresolved"><span>Py/asyncio</span></span></h2><ul><li><span id="source-block-18"></span><a class="bullet" href="#"></a><span class="tag">#Filed</span> <span class="page-reference"><a href="p-9c5cf391f5960b2e.html">Pytest/asyncio/How To/Await Async Fixtures</a></span></li><li><span id="source-block-75"></span><a class="bullet" href="#"></a><span class="page-reference unresolved"><span>FastAPI</span></span> <span class="page-reference"><a href="p-ef05cd2e46c92d10.html">Best Practices</a></span><ul><li><span id="source-block-109"></span><a class="bullet" href="#"></a><span class="page-reference"><a href="p-bc4d55e631af3dc3.html">YouTube/Code Collider/24/03/How FastAPI Handles Requests Behind the Scenes</a></span></li></ul></li><li><span id="source-block-192"></span><a class="bullet" href="#"></a>Read some of <span class="page-reference"><a href="p-8e7ca1f35b459f48.html">Book/Python Concurrency with asyncio</a></span> by <span class="page-reference"><a href="p-bff15022e3f2fd38.html">Person/Matthew Fowler</a></span></li></ul></li><li><span id="source-block-278"></span><a class="bullet" href="#"></a><h2>Security</h2><ul><li><span id="source-block-292"></span><a class="bullet" href="#"></a><span class="tag">#Filed</span><ul><li><span id="source-block-302"></span><a class="bullet" href="#"></a><span class="page-reference"><a href="p-1a304fc82754abbb.html">GitHub/Docs/Actions/Security/Guides/Using Secrets</a></span><ul><li><span id="source-block-360"></span><a class="bullet" href="#"></a><span class="page-reference unresolved"><span>GitHub/Repo/Setting/Security/Secrets</span></span></li></ul></li><li><span id="source-block-406"></span><a class="bullet" href="#"></a><span class="tag">#Discovered</span> <span class="page-reference"><a href="p-4a60ab9dfbb70952.html">1Password/GitHub/for-open-source</a></span><ul><li><span id="source-block-459"></span><a class="bullet" href="#"></a><span class="page-reference"><a href="p-c1a095352be4855e.html">1Password/Dev/Slack</a></span></li></ul></li></ul></li></ul></li><li><span id="source-block-488"></span><a class="bullet" href="#"></a><h2><span class="page-reference"><a href="p-c86947759fec301c.html">Feature Flags/25/04/Market Overview Deep Research</a></span></h2><ul><li><span id="source-block-547"></span><a class="bullet" href="#"></a><span class="page-reference"><a href="p-cd1bf24d1bf7d750.html">Gitlab/Feature Flags</a></span><ul><li><span id="source-block-575"></span><a class="bullet" href="#"></a><span class="page-reference"><a href="p-feee382a9c6b23ff.html">Unleash</a></span></li></ul></li></ul></li><li><span id="source-block-591"></span><a class="bullet" href="#"></a><h2><span class="page-reference unresolved"><span>LangChain/Ecosystem</span></span></h2><ul><li><span id="source-block-620"></span><a class="bullet" href="#"></a><span class="page-reference unresolved"><span>langgraph/Studio/Desktop</span></span> is now deprecated; see <span class="page-reference"><a href="p-70316434dd97ddc5.html">langgraph/Docs/Concept/LangGraph Studio/Getting Started</a></span></li><li><span id="source-block-735"></span><a class="bullet" href="#"></a>Installing <span class="page-reference"><a href="p-4327c28d7d4f6489.html">langgraph/llms-txt</a></span> and <span class="page-reference"><a href="p-cb1b4e273b0d5641.html">LangChain/GitHub/mpcdoc</a></span></li><li><span id="source-block-804"></span><a class="bullet" href="#"></a><span class="page-reference unresolved"><span>Dependency/Hell</span></span><ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">poetry lock   </span>
+<span class="line">Resolving dependencies... (0.7s)</span>
+<span class="line">Resolving dependencies... (0.8s)</span>
+<span class="line">    Because langchain-cli (0.0.35) depends on langserve[all] (&gt;=0.0.51)</span>
+<span class="line"> and no versions of langchain-cli match &gt;0.0.35,&lt;0.0.36 || &gt;0.0.36, langchain-cli (&gt;=0.0.35,&lt;0.0.36 || &gt;0.0.36) requires langserve[all] (&gt;=0.0.51).</span>
+<span class="line">(1) So, because langchain-cli (0.0.36) depends on langserve[all] (&gt;=0.0.51), langchain-cli (&gt;=0.0.35) requires langserve[all] (&gt;=0.0.51).</span>
+<span class="line"></span>
+<span class="line">    Because no versions of langserve match &gt;0.0.51,&lt;0.1.0 || &gt;0.1.0,&lt;0.1.1 || &gt;0.1.1,&lt;0.2.0 || &gt;0.2.0,&lt;0.2.1 || &gt;0.2.1,&lt;0.2.2 || &gt;0.2.2,&lt;0.2.3 || &gt;0.2.3,&lt;0.3.0 || &gt;0.3.0,&lt;0.3.1 || &gt;0.3.1</span>
+<span class="line">... 10 lines</span>
+<span class="line">(2) So, because langserve[all] (0.3.1) depends on sse-starlette (&gt;=1.3.0,&lt;2.0.0), langchain-cli (&gt;=0.0.35) requires sse-starlette (&gt;=1.3.0,&lt;2.0.0).</span>
+<span class="line"></span>
+<span class="line">    Because langgraph-cli[inmem] (0.1.70) depends on langgraph-api (&gt;=0.0.12,&lt;0.1.0)</span>
+<span class="line">... 14 lines</span>
+<span class="line">and langgraph-cli[inmem] (0.1.72) depends on langgraph-api (&gt;=0.0.24,&lt;0.1.0), langgraph-cli[inmem] (&gt;=0.1.64,&lt;0.1.73 || &gt;0.1.73,&lt;0.1.74 || &gt;0.1.74,&lt;0.1.75 || &gt;0.1.75,&lt;0.1.76 || &gt;0.1.76,&lt;0.1.77 || &gt;0.1.77,&lt;0.1.78 || &gt;0.1.78,&lt;0.1.79 || &gt;0.1.79,&lt;0.1.80 || &gt;0.1.80,&lt;0.1.81 || &gt;0.1.81,&lt;0.1.82 || &gt;0.1.82,&lt;0.1.83 || &gt;0.1.83,&lt;0.1.84 || &gt;0.1.84,&lt;0.1.89 || &gt;0.1.89,&lt;0.2.0) requires sse-starlette (&gt;=2.1.0,&lt;3.0.0) or langgraph-api (&gt;=0.0.24,&lt;0.1.0).</span>
+<span class="line"></span>
+<span class="line">    Because no versions of langgraph-api match &gt;0.0.24,&lt;0.0.25 || &gt;0.0.25,&lt;0.0.26</span>
+<span class="line">... 15 lines</span>
+<span class="line">and langgraph-cli[inmem] (0.1.77) depends on langgraph-api (&gt;=0.0.27,&lt;0.1.0), langgraph-cli[inmem] (&gt;=0.1.64,&lt;0.1.82 || &gt;0.1.82,&lt;0.1.83 || &gt;0.1.83,&lt;0.1.84 || &gt;0.1.84,&lt;0.1.89 || &gt;0.1.89,&lt;0.2.0) requires sse-starlette (&gt;=2.1.0,&lt;3.0.0) or langgraph-api (&gt;=0.0.27,&lt;0.1.0).</span>
+<span class="line"></span>
+<span class="line">    Because no versions of langgraph-api match &gt;0.0.27,&lt;0.0.28 || &gt;0.0.28,&lt;0.0.30 || &gt;0.0.30,&lt;0.0.31 || &gt;0.0.31,&lt;0.0.32</span>
+<span class="line">...10 lines</span>
+<span class="line">and langgraph-cli[inmem] (0.1.82) depends on langgraph-api (&gt;=0.0.32,&lt;0.1.0), langgraph-cli[inmem] (&gt;=0.1.64,&lt;0.1.89 || &gt;0.1.89,&lt;0.2.0) requires sse-starlette (&gt;=2.1.0,&lt;3.0.0) or langgraph-api (&gt;=0.0.32,&lt;0.1.0).</span>
+<span class="line"></span>
+<span class="line">    Because no versions of langgraph-api match &gt;0.0.32,&lt;0.0.33 || &gt;0.0.33,&lt;0.0.34 || &gt;0.0.34,&lt;0.0.36 || &gt;0.0.36,&lt;0.0.37 || &gt;0.0.37,&lt;0.0.38 || &gt;0.0.38,&lt;0.0.40 || &gt;0.0.40,&lt;0.0.41 || &gt;0.0.41,&lt;0.0.42</span>
+<span class="line">... 10 lines</span>
+<span class="line">(6) So, because langgraph-cli[inmem] (0.1.89) depends on langgraph-api (&gt;=0.0.42,&lt;0.1.0), langgraph-cli[inmem] (&gt;=0.1.64,&lt;0.2.0) requires sse-starlette (&gt;=2.1.0,&lt;3.0.0) or langgraph-api (&gt;=0.0.42,&lt;0.1.0).</span>
+<span class="line"></span>
+<span class="line">    Because no versions of langgraph-api match &gt;0.0.42,&lt;0.0.43 || &gt;0.0.43,&lt;0.0.44 || &gt;0.0.44,&lt;0.0.45 || &gt;0.0.45,&lt;0.0.46 || &gt;0.0.46,&lt;0.0.47 || &gt;0.0.47,&lt;0.0.48 || &gt;0.0.48,&lt;0.1.0</span>
+<span class="line">... 10 lines</span>
+<span class="line">So, because &lt;package&gt; depends on both langchain-cli (&gt;=0.0.35) and langgraph-cli[inmem] (^0.1.64), version solving failed.</span></code></pre></div></div></li><li><a class="bullet" href="#"></a></li></ul></li></ul></li><li><span id="source-block-3732"></span><a class="bullet" href="#"></a><span class="page-reference"><a href="p-aa746e51d86626a4.html">Project - Conway&#39;s Game of Life in GitHub Bio</a></span><ul><li><span id="source-block-3784"></span><a class="bullet" href="#"></a><span class="page-reference"><a href="p-1f3075b711a9ba6b.html">mise/How To/Use 1Password runner only in dev</a></span></li></ul></li></ul><section class="references linked-references unlinked-references" data-refs="unlinked"><details class="references-section"><summary><span class="ref-chevron"></span><h2>Unlinked References</h2></summary><noscript>No unlinked references.</noscript><div class="references-body"></div></details></section></main><script data-lsg-fragments>// Native fragment navigation does not run when a host swaps page content.
+// Hosts can call this helper before their own fragment focus/scroll handling.
+(() => {
+  function reveal(fragment = location.hash, { scroll = true } = {}) {
+    let id;
+    try { id = decodeURIComponent(fragment.replace(/^#/, "")); }
+    catch { return null; }
+    const target = id && document.getElementById(id);
+    if (!target) return null;
+    for (let parent = target.parentElement; parent; parent = parent.parentElement) {
+      if (parent.tagName === "DETAILS") parent.open = true;
+      parent.classList?.remove("folded");
+    }
+    if (scroll) target.scrollIntoView();
+    return target;
+  }
+  window.logseqGardenerRevealFragment = reveal;
+  window.addEventListener("hashchange", () => reveal());
+  reveal();
+})();
+</script></body></html>

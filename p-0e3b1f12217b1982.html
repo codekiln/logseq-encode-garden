@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CLI/Tool/displayplacer/How To/Save and Restore Monitor Configurations with mise</title><script data-lsg-theme-script>/** Shared visitor appearance, independent of replaceable page content. */
+(() => {
+  try {
+    // Saved shell layout applies before paint; the phone overlay always starts closed.
+    const root = document.documentElement;
+    if (window.matchMedia?.('(min-width: 640px)')?.matches && window.localStorage.getItem('logseq-gardener-left-sidebar') === 'open') root.setAttribute('data-lsg-left-sidebar', 'open');
+    if (window.localStorage.getItem('logseq-gardener-wide') === 'true') root.setAttribute('data-lsg-wide', 'true');
+    // The right sidebar's column takes its width before paint; its cards load after load.
+    const right = JSON.parse(window.localStorage.getItem('logseq-gardener-right-sidebar') || 'null');
+    if (right && window.matchMedia?.('(min-width: 640px)')?.matches) {
+      root.setAttribute('data-lsg-right-sidebar', right.open ? 'open' : 'closed');
+      if (right.width > 0) root.style.setProperty('--lsg-right-width', right.width + 'px');
+    }
+  } catch { /* Layout keeps its defaults. */ }
+  if (typeof window.logseqGardenerInitTheme === 'function') return;
+  const key = 'logseq-gardener-theme';
+  const valid = value => value === 'light' || value === 'dark';
+  const read = () => {
+    try { const value = window.localStorage.getItem(key); return valid(value) ? value : 'system'; }
+    catch { return 'system'; }
+  };
+  let choice = read();
+  let media;
+  try { media = window.matchMedia?.('(prefers-color-scheme: dark)'); } catch { /* Light fallback. */ }
+  const appearance = () => choice === 'system' ? (media?.matches ? 'dark' : 'light') : choice;
+  const initialize = (root = document) => {
+    for (const select of root.querySelectorAll('[data-lsg-theme-select]')) {
+      select.value = choice;
+      const control = select.closest('[data-lsg-theme-control]');
+      if (control) control.hidden = false;
+    }
+  };
+  const apply = () => {
+    document.documentElement.setAttribute('data-lsg-theme', appearance());
+    document.documentElement.setAttribute('data-lsg-theme-mode', choice);
+    initialize();
+  };
+  const set = value => {
+    if (!valid(value) && value !== 'system') return;
+    choice = value;
+    try {
+      if (choice === 'system') window.localStorage.removeItem(key);
+      else window.localStorage.setItem(key, choice);
+    } catch { /* Keep this document's choice when storage is unavailable. */ }
+    apply();
+  };
+  window.logseqGardenerInitTheme = initialize;
+  window.logseqGardenerTheme = { choice: () => choice, appearance, set };
+  apply();
+  if (media?.addEventListener) media.addEventListener('change', apply);
+  else media?.addListener?.(apply);
+  document.addEventListener('change', event => {
+    const select = event.target;
+    if (select?.matches?.('[data-lsg-theme-select]')) set(select.value);
+  });
+  window.addEventListener('storage', event => {
+    if (event.key === key || event.key === null) { choice = read(); apply(); }
+  });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => initialize(), { once: true });
+})();
+</script><script defer src="lsg-shell.js"></script><link rel="lsg-search" href="lsg-search-manifest-1e91ba5239e1caaa.json" data-revision="1e91ba5239e1caaa"><link rel="stylesheet" href="lsg-shared-559a1c927f395608.css"><script data-lsg-search-start>(()=>{const f=(_,o)=>Object.assign(f.options??={},o);window.logseqGardenerInitSearch=f;const u=new URL('lsg-search-start-d1579d619a9675f1.mjs',document.querySelector('[rel=lsg-search]').href);document.addEventListener('DOMContentLoaded',()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{const s=document.createElement('script');s.type='module';s.src=u;s.onerror=()=>{if(!document.querySelector('[rel=lsg-search]'))return;const t=document.createElement('span');t.id='lsg-search-load';t.setAttribute('role','status');t.textContent='Search unavailable. Reload this page to retry search.';document.body.append(t)};document.head.append(s)})),{once:true})})();</script></head><body><header class="lsg-header cp__header"><button type="button" class="lsg-button" data-lsg-left-toggle aria-label="Toggle left sidebar" aria-controls="lsg-left-sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l16 0M4 12l16 0M4 18l16 0"/></svg></button><span class="lsg-header-space"></span><a class="lsg-button" href="index.html" aria-label="Home"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l-2 0l9 -9l9 9l-2 0M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg></a><a class="lsg-button button" href="graph.html#/graph" aria-label="Graph"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path id="lsg-i-graph" d="M10 5a2 2 0 1 0 4 0a2 2 0 1 0-4 0M3 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M17 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M6.5 17.5 12 13l5.5 4.5M12 7v6"/></svg></a><button type="button" class="lsg-button" data-lsg-search aria-label="Search garden" aria-haspopup="dialog" aria-controls="lsg-search-dialog" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0M21 21l-6 -6"/></svg></button><div class="lsg-more"><button type="button" class="lsg-button" data-lsg-more aria-label="More" aria-haspopup="menu" aria-controls="lsg-more-menu" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M20 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg></button><div id="lsg-more-menu" role="menu" aria-label="More" hidden><button type="button" role="menuitem" data-lsg-slides>View as slides</button><button type="button" role="menuitem" data-lsg-theme-toggle>Toggle theme</button><button type="button" role="menuitem" data-lsg-theme-system hidden>Use system theme</button></div></div><button type="button" class="lsg-button lsg-right-toggle" data-lsg-right-toggle aria-label="Toggle right sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2zM15 4l0 16"/></svg></button></header><aside id="lsg-left-sidebar" class="lsg-left-sidebar" aria-label="Left sidebar"><nav aria-label="Navigation"><ul><li><a href="index.html" data-lsg-journals-link><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12zM16 3v4M8 3v4M4 11h16M11 15h1M12 15v3"/></svg><span>Journals</span></a></li><li class="flashcards-nav"><a href="#" role="button" data-lsg-flashcards><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.828 9.172a4 4 0 1 0 0 5.656a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828"/></svg><span>Flashcards</span><span class="lsg-shortcut" aria-hidden="true">g f</span><span class="lsg-badge" data-lsg-due>430</span></a></li><li class="graph-view-nav"><a href="graph.html" data-lsg-graph-view><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#lsg-i-graph"/></svg><span>Graph view</span></a></li><li><a href="pages.html" data-lsg-all-pages><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3v4a1 1 0 0 0 1 1h4M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2zM16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2"/></svg><span>All pages</span></a></li></ul><h2 class="lsg-favorites-heading" id="lsg-favorites">Favorites</h2><ul aria-labelledby="lsg-favorites"><li><a href="p-08986007b541df27.html">fd</a></li><li><a href="p-710a025b0e00c8d5.html">gh-dash</a></li><li><a href="p-710a025b0e00c8d5.html">GitHub/CLI/Extension/gh-dash</a></li><li><a href="p-539dc7d0a39cc4ec.html">tuicr</a></li><li><a href="p-4276cb26f35edeca.html">tmux/Q/How can I put a thick border around the focused pane?</a></li><li><a href="p-62e5d9883ed48541.html">LazyVim</a></li><li><a href="p-abc1fe1091d210a5.html">Logseq/Flashcard/Review/Favorite</a></li><li><a href="p-7d113595e3cdeb70.html">Obsidian</a></li><li><a href="p-efba5ef46cf8e2e4.html">Codex</a></li><li><a href="p-398c5fe622fecdf8.html">chezmoi</a></li><li><a href="p-c02f89b682f53253.html">DevContainer</a></li><li><a href="p-da5911a2a798df4f.html">mise</a></li><li><a href="p-08dc5107b57b9276.html">rg</a></li><li><a href="p-68e903194eba71d7.html">vim</a></li><li><a href="p-74ff40ba60b70acb.html">nvim</a></li><li><a href="p-f237247b53a844f6.html">Zoxide</a></li><li><a href="p-a0d502498c67fd12.html">yazi</a></li><li><a href="p-424036ef4353ec8f.html">tmux</a></li><li><a href="p-e4db29888872bdd5.html">Lazygit</a></li></ul></nav></aside><div class="lsg-sidebar-shade" data-lsg-sidebar-shade hidden></div><main><h1>CLI/Tool/displayplacer/How To/Save and Restore Monitor Configurations with mise</h1><ul class="outline"><li><span id="source-block-28"></span><a class="bullet" href="#"></a><h1>How To Manage Monitor Layouts with Mise and <span class="page-reference unresolved"><span>CLI/Tool/displayplacer</span></span></h1><ul><li><span id="source-block-103"></span><a class="bullet" href="#"></a><h2>Goal</h2><ul><li><span id="source-block-114"></span><a class="bullet" href="#"></a>Use a single Mise task with proper argument parsing to save, restore, list, and edit multiple monitor layouts (e.g., sitting or standing) by profile name.</li></ul></li><li><span id="source-block-273"></span><a class="bullet" href="#"></a><h2>Preconditions</h2><ul><li><span id="source-block-293"></span><a class="bullet" href="#"></a>Mise is installed and activated in your shell.</li><li><span id="source-block-344"></span><a class="bullet" href="#"></a><span class="page-reference unresolved"><span>CLI/Tool/displayplacer</span></span> <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/jakehilborn/displayplacer"><code>displayplacer</code></a> is installed via Homebrew:<ul><li><span id="source-block-466"></span><a class="bullet" href="#"></a><code>brew install displayplacer</code></li></ul></li><li><span id="source-block-500"></span><a class="bullet" href="#"></a><code>displayplacer</code> should be globally available in <code>PATH</code>. <strong>Do not use <code>mise link</code> for this case</strong>, as versioning or plugin behavior is unnecessary for helper CLIs.</li><li><span id="source-block-667"></span><a class="bullet" href="#"></a>Environment variables <span class="page-reference"><a href="p-9d3b7b0b959dd412.html">EnvVar/VISUAL</a></span> or <span class="page-reference"><a href="p-1736de9b9f14a38f.html">EnvVar/EDITOR</a></span> should be set for the edit functionality.</li></ul></li><li><span id="source-block-774"></span><a class="bullet" href="#"></a><h2>Procedure</h2><ul><li><span id="source-block-790"></span><a class="bullet" href="#"></a><h3>1. Create a storage directory for layouts</h3><ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">mkdir<span class="cm-variable"> -p </span><span class="cm-keyword">~</span>/.config/mise-monitor-layouts</span></code></pre></div></div></li></ul></li><li><span id="source-block-907"></span><a class="bullet" href="#"></a><h3>2. Define the enhanced <code>monitors-home</code> task in <code>~/.config/mise/config.toml</code></h3><ul><li><span id="source-block-991"></span><a class="bullet" href="#"></a>Add the following with proper usage spec and argument handling:<div class="cp__fenced-code-block" data-lang="toml"><div class="extensions__code"><div class="extensions__code-lang">toml</div><pre class="lsg-code" style="--lsg-code-digits:3"><code><span class="line">[<span class="cm-def">tasks</span>.<span class="cm-def">monitors-home</span>]</span>
+<span class="line"><span class="cm-tag">description </span>= <span class="cm-string">&quot;&quot;&quot;Save or restore monitor layout by profile (e.g. standing, sitting) - </span></span>
+<span class="line"><span class="cm-string">see [[CLI/Tool/displayplacer/How To/Save and Restore Monitor Configurations with mise]]</span></span>
+<span class="line"><span class="cm-string">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="cm-tag">usage </span>= <span class="cm-string">&#39;&#39;&#39;</span></span>
+<span class="line"><span class="cm-string">arg &quot;action&quot; &quot;Action to perform: list, save, restore, or edit&quot;</span></span>
+<span class="line"><span class="cm-string">arg &quot;profile&quot; &quot;Profile name (e.g., standing, sitting)&quot;</span></span>
+<span class="line"><span class="cm-string">flag &quot;-s --save&quot; &quot;Save current layout (alternative to &#39;save&#39; action)&quot;</span></span>
+<span class="line"><span class="cm-string">flag &quot;-l --list&quot; &quot;List available profiles (alternative to &#39;list&#39; action)&quot;</span></span>
+<span class="line"><span class="cm-string">&#39;&#39;&#39;</span></span>
+<span class="line"><span class="cm-tag">run </span>= <span class="cm-string">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="cm-string">#!/usr/bin/env bash</span></span>
+<span class="line"><span class="cm-string">set -euo pipefail</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-string"># Create layouts directory if it doesn&#39;t exist</span></span>
+<span class="line"><span class="cm-string">mkdir -p &quot;$HOME/.config/mise-monitor-layouts&quot;</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-string"># Determine action and profile</span></span>
+<span class="line"><span class="cm-string">ACTION=&quot;{{arg(name=&#39;action&#39;)}}&quot;</span></span>
+<span class="line"><span class="cm-string">PROFILE=&quot;{{arg(name=&#39;profile&#39;)}}&quot;</span></span>
+<span class="line"><span class="cm-string">SAVE_FLAG=&quot;{{flag(name=&#39;save&#39;)}}&quot;</span></span>
+<span class="line"><span class="cm-string">LIST_FLAG=&quot;{{flag(name=&#39;list&#39;)}}&quot;</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-string"># Handle flag-based actions</span></span>
+<span class="line"><span class="cm-string">if [[ &quot;$LIST_FLAG&quot; == &quot;true&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">  ACTION=&quot;list&quot;</span></span>
+<span class="line"><span class="cm-string">fi</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-string">if [[ &quot;$SAVE_FLAG&quot; == &quot;true&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">  ACTION=&quot;save&quot;</span></span>
+<span class="line"><span class="cm-string">fi</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-string"># Handle list action</span></span>
+<span class="line"><span class="cm-string">if [[ &quot;$ACTION&quot; == &quot;list&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">  LAYOUT_DIR=&quot;$HOME/.config/mise-monitor-layouts&quot;</span></span>
+<span class="line"><span class="cm-string">  if [[ ! -d &quot;$LAYOUT_DIR&quot; ]] || [[ -z &quot;$(ls -A &quot;$LAYOUT_DIR&quot; 2&gt;/dev/null)&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">    echo &quot;No saved layouts found.&quot;</span></span>
+<span class="line"><span class="cm-string">    echo &quot;Use &#39;mise run monitors-home save &lt;profile&gt;&#39; to save a layout.&quot;</span></span>
+<span class="line"><span class="cm-string">    exit 0</span></span>
+<span class="line"><span class="cm-string">  fi</span></span>
+<span class="line"><span class="cm-string">  </span></span>
+<span class="line"><span class="cm-string">  echo &quot;Available profiles:&quot;</span></span>
+<span class="line"><span class="cm-string">  for file in &quot;$LAYOUT_DIR&quot;/*.layout; do</span></span>
+<span class="line"><span class="cm-string">    if [[ -f &quot;$file&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">      basename &quot;$file&quot; .layout</span></span>
+<span class="line"><span class="cm-string">    fi</span></span>
+<span class="line"><span class="cm-string">  done</span></span>
+<span class="line"><span class="cm-string">  exit 0</span></span>
+<span class="line"><span class="cm-string">fi</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-string"># Handle save action</span></span>
+<span class="line"><span class="cm-string">if [[ &quot;$ACTION&quot; == &quot;save&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">  if [[ -z &quot;$PROFILE&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">    echo &quot;Error: Profile name required for save action&quot;</span></span>
+<span class="line"><span class="cm-string">    echo &quot;Usage: mise run monitors-home save &lt;profile&gt;&quot;</span></span>
+<span class="line"><span class="cm-string">    echo &quot;   or: mise run monitors-home &lt;profile&gt; --save&quot;</span></span>
+<span class="line"><span class="cm-string">    exit 1</span></span>
+<span class="line"><span class="cm-string">  fi</span></span>
+<span class="line"><span class="cm-string">  </span></span>
+<span class="line"><span class="cm-string">  LAYOUT_FILE=&quot;$HOME/.config/mise-monitor-layouts/${PROFILE}.layout&quot;</span></span>
+<span class="line"><span class="cm-string">  displayplacer list &gt; &quot;$LAYOUT_FILE&quot;</span></span>
+<span class="line"><span class="cm-string">  echo &quot;Saved layout: $PROFILE&quot;</span></span>
+<span class="line"><span class="cm-string">  exit 0</span></span>
+<span class="line"><span class="cm-string">fi</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-string"># Handle restore action</span></span>
+<span class="line"><span class="cm-string">if [[ &quot;$ACTION&quot; == &quot;restore&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">  if [[ -z &quot;$PROFILE&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">    echo &quot;Error: Profile name required for restore action&quot;</span></span>
+<span class="line"><span class="cm-string">    echo &quot;Usage: mise run monitors-home restore &lt;profile&gt;&quot;</span></span>
+<span class="line"><span class="cm-string">    exit 1</span></span>
+<span class="line"><span class="cm-string">  fi</span></span>
+<span class="line"><span class="cm-string">  </span></span>
+<span class="line"><span class="cm-string">  LAYOUT_FILE=&quot;$HOME/.config/mise-monitor-layouts/${PROFILE}.layout&quot;</span></span>
+<span class="line"><span class="cm-string">  if [[ ! -f &quot;$LAYOUT_FILE&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">    echo &quot;No layout saved for profile: $PROFILE&quot;</span></span>
+<span class="line"><span class="cm-string">    echo &quot;Use &#39;mise run monitors-home list&#39; to see available profiles&quot;</span></span>
+<span class="line"><span class="cm-string">    exit 1</span></span>
+<span class="line"><span class="cm-string">  fi</span></span>
+<span class="line"><span class="cm-string">  </span></span>
+<span class="line"><span class="cm-string">  # Read the layout file and extract the displayplacer command</span></span>
+<span class="line"><span class="cm-string">  LAYOUT_CONFIG=&quot;$(cat &quot;$LAYOUT_FILE&quot;)&quot;</span></span>
+<span class="line"><span class="cm-string">  echo &quot;Applying layout for profile: $PROFILE&quot;</span></span>
+<span class="line"><span class="cm-string">  </span></span>
+<span class="line"><span class="cm-string">  # Extract the displayplacer command from the end of the file</span></span>
+<span class="line"><span class="cm-string">  # The command is on the last line that starts with &quot;displayplacer&quot;</span></span>
+<span class="line"><span class="cm-string">  DISPLAYPLACER_CMD=&quot;$(echo &quot;$LAYOUT_CONFIG&quot; | grep &#39;^displayplacer &#39; | tail -n1)&quot;</span></span>
+<span class="line"><span class="cm-string">  </span></span>
+<span class="line"><span class="cm-string">  if [[ -z &quot;$DISPLAYPLACER_CMD&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">    echo &quot;Error: Could not find displayplacer command in layout file&quot;</span></span>
+<span class="line"><span class="cm-string">    echo &quot;The layout file may be corrupted or in an unexpected format&quot;</span></span>
+<span class="line"><span class="cm-string">    exit 1</span></span>
+<span class="line"><span class="cm-string">  fi</span></span>
+<span class="line"><span class="cm-string">  </span></span>
+<span class="line"><span class="cm-string">  echo &quot;Executing: $DISPLAYPLACER_CMD&quot;</span></span>
+<span class="line"><span class="cm-string">  </span></span>
+<span class="line"><span class="cm-string">  # Execute the displayplacer command</span></span>
+<span class="line"><span class="cm-string">  eval &quot;$DISPLAYPLACER_CMD&quot;</span></span>
+<span class="line"><span class="cm-string">  </span></span>
+<span class="line"><span class="cm-string">  if [[ $? -eq 0 ]]; then</span></span>
+<span class="line"><span class="cm-string">    echo &quot;Successfully restored layout: $PROFILE&quot;</span></span>
+<span class="line"><span class="cm-string">  else</span></span>
+<span class="line"><span class="cm-string">    echo &quot;Error: Failed to apply layout for profile: $PROFILE&quot;</span></span>
+<span class="line"><span class="cm-string">    echo &quot;The saved layout may be invalid or incompatible with current display setup&quot;</span></span>
+<span class="line"><span class="cm-string">    exit 1</span></span>
+<span class="line"><span class="cm-string">  fi</span></span>
+<span class="line"><span class="cm-string">  exit 0</span></span>
+<span class="line"><span class="cm-string">fi</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-string"># Handle edit action</span></span>
+<span class="line"><span class="cm-string">if [[ &quot;$ACTION&quot; == &quot;edit&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">  if [[ -z &quot;$PROFILE&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">    echo &quot;Error: Profile name required for edit action&quot;</span></span>
+<span class="line"><span class="cm-string">    echo &quot;Usage: mise run monitors-home edit &lt;profile&gt;&quot;</span></span>
+<span class="line"><span class="cm-string">    exit 1</span></span>
+<span class="line"><span class="cm-string">  fi</span></span>
+<span class="line"><span class="cm-string">  </span></span>
+<span class="line"><span class="cm-string">  LAYOUT_FILE=&quot;$HOME/.config/mise-monitor-layouts/${PROFILE}.layout&quot;</span></span>
+<span class="line"><span class="cm-string">  if [[ ! -f &quot;$LAYOUT_FILE&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">    echo &quot;No layout saved for profile: $PROFILE&quot;</span></span>
+<span class="line"><span class="cm-string">    echo &quot;Use &#39;mise run monitors-home list&#39; to see available profiles&quot;</span></span>
+<span class="line"><span class="cm-string">    exit 1</span></span>
+<span class="line"><span class="cm-string">  fi</span></span>
+<span class="line"><span class="cm-string">  </span></span>
+<span class="line"><span class="cm-string">  # Determine which editor to use</span></span>
+<span class="line"><span class="cm-string">  EDITOR_CMD=&quot;&quot;</span></span>
+<span class="line"><span class="cm-string">  if [[ -n &quot;${VISUAL:-}&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">    EDITOR_CMD=&quot;$VISUAL&quot;</span></span>
+<span class="line"><span class="cm-string">  elif [[ -n &quot;${EDITOR:-}&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">    EDITOR_CMD=&quot;$EDITOR&quot;</span></span>
+<span class="line"><span class="cm-string">  else</span></span>
+<span class="line"><span class="cm-string">    echo &quot;Error: No editor found. Please set VISUAL or EDITOR environment variable.&quot;</span></span>
+<span class="line"><span class="cm-string">    exit 1</span></span>
+<span class="line"><span class="cm-string">  fi</span></span>
+<span class="line"><span class="cm-string">  </span></span>
+<span class="line"><span class="cm-string">  echo &quot;Opening layout file for profile &#39;$PROFILE&#39; with $EDITOR_CMD&quot;</span></span>
+<span class="line"><span class="cm-string">  $EDITOR_CMD &quot;$LAYOUT_FILE&quot;</span></span>
+<span class="line"><span class="cm-string">  exit 0</span></span>
+<span class="line"><span class="cm-string">fi</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-string">echo &quot;Unknown action: $ACTION&quot;</span></span>
+<span class="line"><span class="cm-string">echo &quot;Valid actions: list, save, restore, edit&quot;</span></span>
+<span class="line"><span class="cm-string">exit 1</span></span>
+<span class="line"><span class="cm-string">&quot;&quot;&quot;</span></span></code></pre></div></div></li></ul></li><li><span id="source-block-6002"></span><a class="bullet" href="#"></a><h3>3. List available profiles</h3><ul><li><span id="source-block-6037"></span><a class="bullet" href="#"></a>View existing layouts:<div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">mise run monitors-home list</span></code></pre></div></div></li><li><span id="source-block-6120"></span><a class="bullet" href="#"></a>Or use the flag:<div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">mise run monitors-home<span class="cm-variable"> --list</span></span></code></pre></div></div></li></ul></li><li><span id="source-block-6199"></span><a class="bullet" href="#"></a><h3>4. Save layout profiles</h3><ul><li><span id="source-block-6231"></span><a class="bullet" href="#"></a>Save the <em>standing</em> configuration:<div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">mise run monitors-home save standing</span></code></pre></div></div></li><li><span id="source-block-6335"></span><a class="bullet" href="#"></a>Save the <em>sitting</em> configuration:<div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">mise run monitors-home save sitting</span></code></pre></div></div></li><li><span id="source-block-6437"></span><a class="bullet" href="#"></a>Alternative using flags:<div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">mise run monitors-home standing<span class="cm-variable"> --save</span></span></code></pre></div></div></li></ul></li><li><span id="source-block-6533"></span><a class="bullet" href="#"></a><h3>5. Restore layout profiles</h3><ul><li><span id="source-block-6568"></span><a class="bullet" href="#"></a>To restore standing:<div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">mise run monitors-home restore standing</span></code></pre></div></div></li><li><span id="source-block-6661"></span><a class="bullet" href="#"></a>To restore sitting:<div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">mise run monitors-home restore sitting</span></code></pre></div></div></li></ul></li><li><span id="source-block-6752"></span><a class="bullet" href="#"></a><h3>6. Edit layout files (optional)</h3><ul><li><span id="source-block-6792"></span><a class="bullet" href="#"></a>Edit a layout file directly:<div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">mise run monitors-home edit standing</span></code></pre></div></div></li><li><span id="source-block-6890"></span><a class="bullet" href="#"></a>This opens the layout file in your preferred editor (uses <span class="page-reference"><a href="p-9d3b7b0b959dd412.html">EnvVar/VISUAL</a></span> or falls back to <span class="page-reference"><a href="p-1736de9b9f14a38f.html">EnvVar/EDITOR</a></span>)</li></ul></li></ul></li><li><span id="source-block-7007"></span><a class="bullet" href="#"></a><h2>Troubleshooting</h2><ul><li><span id="source-block-7029"></span><a class="bullet" href="#"></a><em>Command not found: displayplacer</em> → Run <code>brew install displayplacer</code>.</li><li><span id="source-block-7106"></span><a class="bullet" href="#"></a><em>No layout saved for profile</em> → Run with <code>save</code> action to store layout before restoring.</li><li><span id="source-block-7201"></span><a class="bullet" href="#"></a><em>Permission denied</em> → Make sure the layout directory and file are writable and readable.</li><li><span id="source-block-7296"></span><a class="bullet" href="#"></a><em>Failed to parse KDL document</em> → The layout file may be corrupted; try recreating it with the save action.</li><li><span id="source-block-7409"></span><a class="bullet" href="#"></a><em>No editor found</em> → Set <span class="page-reference"><a href="p-9d3b7b0b959dd412.html">EnvVar/VISUAL</a></span> or <span class="page-reference"><a href="p-1736de9b9f14a38f.html">EnvVar/EDITOR</a></span> environment variable for the edit functionality.</li><li><span id="source-block-7527"></span><a class="bullet" href="#"></a><em>Argument parsing error</em> → Ensure you&#39;re using the correct action syntax (e.g., <code>mise run monitors-home restore standing</code>).</li></ul></li><li><span id="source-block-7657"></span><a class="bullet" href="#"></a><h2>References</h2><ul><li><span id="source-block-7674"></span><a class="bullet" href="#"></a><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/jakehilborn/displayplacer">displayplacer GitHub</a></li><li><span id="source-block-7747"></span><a class="bullet" href="#"></a><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://mise.jdx.dev/tasks/toml-tasks.html">TOML Tasks Reference – Mise</a></li><li><span id="source-block-7827"></span><a class="bullet" href="#"></a><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://usage.jdx.dev/spec/">Usage Spec Documentation</a></li></ul></li></ul></li></ul><section class="references linked-references" id="linked-references" data-refs="linked" data-src="_refs/p-0e3b1f12217b1982-linked-1.html"><details class="references-section"><summary><span class="ref-chevron"></span><h2>2 Linked References</h2><button type="button" class="filter" title="Filter" aria-label="Filter" data-state="none" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v2.172a2 2 0 0 1-.586 1.414L15 12v7l-6 2v-8.5L4.52 7.572A2 2 0 0 1 4 6.227z"/></svg></button></summary><noscript><a href="_refs/p-0e3b1f12217b1982-linked-1.html">Show linked references</a></noscript><div class="references-body"><p role="status"></p></div></details></section><section class="page-hierarchy references" aria-label="Hierarchy"><details class="references-section" open><summary><span class="ref-chevron"></span><h2>Hierarchy</h2></summary><ul class="namespaces"><li><span class="page-reference"><a class="namespace-link" aria-label="CLI (Namespace)" href="p-0ba44e19aa603c29.html">CLI</a></span><span class="namespace-separator" aria-hidden="true">/</span><span class="page-reference"><a href="p-51886d274c2d26dc.html">Tool</a></span><span class="namespace-separator" aria-hidden="true">/</span><span class="page-reference"><a class="namespace-link" aria-label="CLI/Tool/displayplacer (Namespace)" href="p-d21d66281847bd06.html">displayplacer</a></span><span class="namespace-separator" aria-hidden="true">/</span><span class="page-reference"><a class="namespace-link" aria-label="CLI/Tool/displayplacer/How To (Namespace)" href="p-ed6a56e94f6af54c.html">How To</a></span></li></ul></details></section><section class="references linked-references unlinked-references" data-refs="unlinked"><details class="references-section"><summary><span class="ref-chevron"></span><h2>Unlinked References</h2></summary><noscript>No unlinked references.</noscript><div class="references-body"></div></details></section></main><script data-lsg-fragments>// Native fragment navigation does not run when a host swaps page content.
+// Hosts can call this helper before their own fragment focus/scroll handling.
+(() => {
+  function reveal(fragment = location.hash, { scroll = true } = {}) {
+    let id;
+    try { id = decodeURIComponent(fragment.replace(/^#/, "")); }
+    catch { return null; }
+    const target = id && document.getElementById(id);
+    if (!target) return null;
+    for (let parent = target.parentElement; parent; parent = parent.parentElement) {
+      if (parent.tagName === "DETAILS") parent.open = true;
+      parent.classList?.remove("folded");
+    }
+    if (scroll) target.scrollIntoView();
+    return target;
+  }
+  window.logseqGardenerRevealFragment = reveal;
+  window.addEventListener("hashchange", () => reveal());
+  reveal();
+})();
+</script></body></html>

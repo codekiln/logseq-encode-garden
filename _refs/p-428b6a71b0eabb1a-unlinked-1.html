@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><base href="../"><title>Unlinked references: GitHub/Auth/Personal</title><script type="application/json" class="references-data">{"count":3,"files":["p-428b6a71b0eabb1a-unlinked-1.html"]}</script></head><body><main><h1>Unlinked references: <a href="p-428b6a71b0eabb1a.html">GitHub/Auth/Personal</a></h1><div class="references-fragment"><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-9c8e898751a036f4.html">1Password/Dev/CLI/Shell Plugin/GitHub/How To/Set Up</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><code>? Locate your GitHub Personal Access Token: Search in 1Password...</code> select, hit enter</li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><code>? Locate your GitHub Personal Access Token: Expand search...</code> select, hit enter<ul><li><span class="bullet"></span>you&#39;ll see a bunch of options. This is a <span class="page-reference unresolved"><span>Curses</span></span>-style interface and you can start typing the name of your item in 1Password to locate the token</li></ul></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-894644dcfa0ddc8c.html">GitHub/MCP/How To/Set up in Cursor with 1Password GH token</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block" data-lang="zsh"><div class="extensions__code"><div class="extensions__code-lang">zsh</div><pre class="lsg-code"><code><span class="line">					  <span class="cm-comment">#!/usr/bin/env zsh</span></span>
+<span class="line">					  <span class="cm-comment">#</span></span>
+<span class="line">					  <span class="cm-comment"># Name: start-github-mcp.sh</span></span>
+<span class="line">					  <span class="cm-comment">#</span></span>
+<span class="line">					  <span class="cm-comment"># Purpose:</span></span>
+<span class="line">					  <span class="cm-comment">#   - Securely retrieve a GitHub Personal Access Token (PAT) from 1Password</span></span>
+<span class="line">					  <span class="cm-comment">#   - Inject the token as an environment variable to Docker via `op run`</span></span>
+<span class="line">					  <span class="cm-comment">#   - Serve as a wrapper command for Cursor&#39;s MCP server configuration</span></span>
+<span class="line">					  <span class="cm-comment">#</span></span>
+<span class="line">					  <span class="cm-comment"># Installation:</span></span>
+<span class="line">					  <span class="cm-comment">#   1. Save this file in a secure location, for example:</span></span>
+<span class="line">					  <span class="cm-comment">#        ~/.cursor/github-mcp/start-github-mcp.sh</span></span>
+<span class="line">					  <span class="cm-comment">#</span></span>
+<span class="line">					  <span class="cm-comment">#   2. Make it executable:</span></span>
+<span class="line">					  <span class="cm-comment">#        chmod +x ~/.cursor/github-mcp/start-github-mcp.sh</span></span>
+<span class="line">					  <span class="cm-comment">#</span></span>
+<span class="line">					  <span class="cm-comment">#   3. In your ~/.cursor/mcp.json, point the &quot;command&quot; to this script. For example:</span></span>
+<span class="line">					  <span class="cm-comment">#        {</span></span>
+<span class="line">					  <span class="cm-comment">#          &quot;mcpServers&quot;: {</span></span>
+<span class="line">					  <span class="cm-comment">#            &quot;github&quot;: {</span></span>
+<span class="line">					  <span class="cm-comment">#              &quot;command&quot;: &quot;/Users/your-username/.cursor/github-mcp/start-github-mcp.sh&quot;,</span></span>
+<span class="line">					  <span class="cm-comment">#              &quot;args&quot;: []</span></span>
+<span class="line">					  <span class="cm-comment">#            }</span></span>
+<span class="line">					  <span class="cm-comment">#          }</span></span>
+<span class="line">					  <span class="cm-comment">#        }</span></span>
+<span class="line">					  <span class="cm-comment">#</span></span>
+<span class="line">					  <span class="cm-comment">#</span></span>
+<span class="line">					  <span class="cm-comment"># Usage:</span></span>
+<span class="line">					  <span class="cm-comment">#   - Ensure `op` is installed and you&#39;re signed in to 1Password via the CLI.</span></span>
+<span class="line">					  <span class="cm-comment">#   - The script will automatically retrieve your GitHub PAT at runtime.</span></span>
+<span class="line">					  <span class="cm-comment">#   - No sensitive data will be written to disk.</span></span>
+<span class="line">					  </span>
+<span class="line">					  <span class="cm-comment"># Fail immediately if any command exits non-zero</span></span>
+<span class="line">					  <span class="cm-builtin">set</span> -euo pipefail</span>
+<span class="line">					  </span>
+<span class="line">					  <span class="cm-comment">################################################################################</span></span>
+<span class="line">					  <span class="cm-comment"># Configuration</span></span>
+<span class="line">					  <span class="cm-comment">################################################################################</span></span>
+<span class="line">					  </span>
+<span class="line">					  <span class="cm-comment"># Update these to match the vault/item/field in 1Password</span></span>
+<span class="line">					  <span class="cm-variable">VAULT</span><span class="cm-operator">=</span><span class="cm-string">&quot;Private&quot;</span></span>
+<span class="line">					  <span class="cm-variable">ITEM</span><span class="cm-operator">=</span><span class="cm-string">&quot;GitHub MCP Token&quot;</span></span>
+<span class="line">					  <span class="cm-variable">FIELD</span><span class="cm-operator">=</span><span class="cm-string">&quot;token&quot;</span></span>
+<span class="line">					  </span>
+<span class="line">					  <span class="cm-comment">################################################################################</span></span>
+<span class="line">					  <span class="cm-comment"># Main Script</span></span>
+<span class="line">					  <span class="cm-comment">################################################################################</span></span>
+<span class="line">					  </span>
+<span class="line">					  <span class="cm-comment"># 1. use the 1password secrets reference syntax to get the token</span></span>
+<span class="line">					  <span class="cm-comment"># See also https://developer.1password.com/docs/cli/secret-reference-syntax/#:~:text=To%20get%20a%20secret%20reference,reference%20from%20the%20JSON%20output.</span></span>
+<span class="line">					  <span class="cm-variable">ENV_FILE_CONTENT</span><span class="cm-operator">=</span><span class="cm-string">&quot;GITHUB_PERSONAL_ACCESS_TOKEN=op://${</span><span class="cm-variable">VAULT</span><span class="cm-string">}/${</span><span class="cm-variable">ITEM</span><span class="cm-string">}/${</span><span class="cm-variable">FIELD</span><span class="cm-string">}&quot;</span></span>
+<span class="line">					  </span>
+<span class="line">					  <span class="cm-comment"># 2. Use process substitution to avoid saving a real .env file to disk</span></span>
+<span class="line">					  op run \</span>
+<span class="line"><span class="cm-variable">					    --env-file </span><span class="cm-operator">&lt;</span>(<span class="cm-builtin">echo </span><span class="cm-string">&quot;${</span><span class="cm-variable">ENV_FILE_CONTENT</span><span class="cm-string">}&quot;</span>) \</span>
+<span class="line"><span class="cm-operator">					    -- </span>\</span>
+<span class="line">					    docker run -i --rm \</span>
+<span class="line">					      -e GITHUB_PERSONAL_ACCESS_TOKEN \</span>
+<span class="line">					      ghcr.io/github/github-mcp-server</span></code></pre></div></div></li></ul></div></div></details></div></div></main></body></html>

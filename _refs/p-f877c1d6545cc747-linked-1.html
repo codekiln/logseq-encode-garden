@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><base href="../"><title>Linked references: ts-node</title><script type="application/json" class="references-data">{"blocks":[[0,[0],[]],[0,[1,2],[]]],"count":2,"files":["p-f877c1d6545cc747-linked-1.html"],"filter":[[],[]],"pages":[["2025-02-09 Sun","p-6dbbb8c08978daf7.html"],["c74/M4L/.amxd/How To/Decompile .amxd into json","p-0e51c736eb5b8efb.html"],["Typescript","p-c4fc5df7a8ff1ce2.html"]]}</script></head><body><main><h1>Linked references: <a href="p-f877c1d6545cc747.html">ts-node</a></h1><div class="references-fragment"><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-6dbbb8c08978daf7.html">2025-02-09 Sun</a></summary><div class="references-block"><div class="breadcrumb block-parents"><a href="p-6dbbb8c08978daf7.html#source-block-3160"><span class="tag">#Filed</span></a><span class="crumb-sep" aria-hidden="true"></span><a href="p-6dbbb8c08978daf7.html#source-block-3973"><span class="tag">#Discovered</span></a></div><div class="blocks-container"><ul class="refs-outline"><li data-ref-block="0"><a class="bullet" href="p-6dbbb8c08978daf7.html#source-block-3988"></a><span class="page-reference"><a href="p-f877c1d6545cc747.html">ts-node</a></span></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-0e51c736eb5b8efb.html">c74/M4L/.amxd/How To/Decompile .amxd into json</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li class="outline-collapsed" data-ref-block="1"><details class="outline-disclosure"><summary><a class="bullet" href="p-0e51c736eb5b8efb.html#source-block-2319"></a>And just for good measure, a <span class="page-reference unresolved"><span>Typescript</span></span> version as well - it says one can run it with <code>ts-node extractAmxdJson.ts your_file.amxd output.json</code>. This uses <span class="page-reference"><a href="p-f877c1d6545cc747.html">ts-node</a></span></summary><ul><li><span class="bullet"></span><div class="cp__fenced-code-block" data-lang="typescript"><div class="extensions__code"><div class="extensions__code-lang">typescript</div><pre class="lsg-code"><code><span class="line">	  <span class="cm-keyword">import </span><span class="cm-atom">* </span><span class="cm-keyword">as </span><span class="cm-variable">fs </span><span class="cm-keyword">from </span><span class="cm-string">&#39;fs&#39;</span>;</span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-keyword">function </span><span class="cm-def">extractJsonFromAmxd</span>(<span class="cm-variable">amxdFilePath</span><span class="cm-operator">: </span><span class="cm-type">string</span>, <span class="cm-variable">outputJsonPath</span><span class="cm-operator">: </span><span class="cm-type">string</span>)<span class="cm-operator">: </span><span class="cm-type">boolean </span>{</span>
+<span class="line">	      <span class="cm-keyword">try </span>{</span>
+<span class="line">	          <span class="cm-comment">// Read the .amxd file as a buffer</span></span>
+<span class="line">	          <span class="cm-keyword">const </span><span class="cm-variable">data </span><span class="cm-operator">= </span><span class="cm-variable">fs</span>.<span class="cm-def">readFileSync</span>(<span class="cm-variable">amxdFilePath</span>);</span>
+<span class="line">	          <span class="cm-keyword">let </span><span class="cm-variable">textData </span><span class="cm-operator">= </span><span class="cm-variable">data</span>.<span class="cm-builtin">toString</span>(<span class="cm-string">&#39;utf-8&#39;</span>);</span>
+<span class="line">	  </span>
+<span class="line">	          <span class="cm-comment">// Find the start of JSON (first &#39;{&#39;)</span></span>
+<span class="line">	          <span class="cm-keyword">const </span><span class="cm-variable">jsonStart </span><span class="cm-operator">= </span><span class="cm-variable">textData</span>.<span class="cm-builtin">indexOf</span>(<span class="cm-string">&#39;{&#39;</span>);</span>
+<span class="line">	          <span class="cm-keyword">if </span>(<span class="cm-variable">jsonStart </span><span class="cm-operator">=== -</span><span class="cm-number">1</span>) {</span>
+<span class="line">	              <span class="cm-type">console</span>.<span class="cm-builtin">error</span>(<span class="cm-string">&quot;Error: No JSON-like structure found in the .amxd file.&quot;</span>);</span>
+<span class="line">	              <span class="cm-keyword">return </span><span class="cm-atom">false</span>;</span>
+<span class="line">	          }</span>
+<span class="line">	  </span>
+<span class="line">	          <span class="cm-comment">// Extract only the printable part after the first &#39;{&#39;</span></span>
+<span class="line">	          <span class="cm-keyword">const </span><span class="cm-variable">jsonDataClean </span><span class="cm-operator">= </span><span class="cm-variable">textData</span>.<span class="cm-builtin">substring</span>(<span class="cm-variable">jsonStart</span>).<span class="cm-builtin">replace</span>(<span class="cm-string-2">/</span><span class="cm-atom">[</span><span class="cm-operator">^</span><span class="cm-atom">\x20-\x7E\n\t]</span><span class="cm-string-2">/</span><span class="cm-keyword">g</span>, <span class="cm-string">&#39;&#39;</span>);</span>
+<span class="line">	  </span>
+<span class="line">	          <span class="cm-comment">// Attempt to parse JSON</span></span>
+<span class="line">	          <span class="cm-keyword">let </span><span class="cm-variable">parsedJson</span>;</span>
+<span class="line">	          <span class="cm-keyword">try </span>{</span>
+<span class="line">	              <span class="cm-variable">parsedJson </span><span class="cm-operator">= </span><span class="cm-variable">JSON</span>.<span class="cm-builtin">parse</span>(<span class="cm-variable">jsonDataClean</span>);</span>
+<span class="line">	          } <span class="cm-keyword">catch </span>(<span class="cm-variable">error</span>) {</span>
+<span class="line">	              <span class="cm-type">console</span>.<span class="cm-builtin">error</span>(<span class="cm-string">&quot;Error: Extracted content is not valid JSON.&quot;</span>);</span>
+<span class="line">	              <span class="cm-keyword">return </span><span class="cm-atom">false</span>;</span>
+<span class="line">	          }</span>
+<span class="line">	  </span>
+<span class="line">	          <span class="cm-comment">// Save extracted JSON</span></span>
+<span class="line">	          <span class="cm-variable">fs</span>.<span class="cm-def">writeFileSync</span>(<span class="cm-variable">outputJsonPath</span>, <span class="cm-variable">JSON</span>.<span class="cm-builtin">stringify</span>(<span class="cm-variable">parsedJson</span>, <span class="cm-atom">null</span>, <span class="cm-number">4</span>), <span class="cm-string">&#39;utf-8&#39;</span>);</span>
+<span class="line">	          <span class="cm-type">console</span>.<span class="cm-builtin">log</span>(<span class="cm-string">`Successfully extracted JSON saved to: ${</span><span class="cm-variable">outputJsonPath</span><span class="cm-string">}`</span>);</span>
+<span class="line">	          <span class="cm-keyword">return </span><span class="cm-atom">true</span>;</span>
+<span class="line">	      } <span class="cm-keyword">catch </span>(<span class="cm-variable">error</span>) {</span>
+<span class="line">	          <span class="cm-type">console</span>.<span class="cm-builtin">error</span>(<span class="cm-string">`Unexpected error: ${</span><span class="cm-variable">error</span><span class="cm-string">}`</span>);</span>
+<span class="line">	          <span class="cm-keyword">return </span><span class="cm-atom">false</span>;</span>
+<span class="line">	      }</span>
+<span class="line">	  }</span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-keyword">if </span>(<span class="cm-variable">process</span>.<span class="cm-variable">argv</span>.<span class="cm-variable">length </span><span class="cm-operator">&lt; </span><span class="cm-number">4</span>) {</span>
+<span class="line">	      <span class="cm-type">console</span>.<span class="cm-builtin">log</span>(<span class="cm-string">&quot;Usage: ts-node extractAmxdJson.ts &lt;input.amxd&gt; &lt;output.json&gt;&quot;</span>);</span>
+<span class="line">	      <span class="cm-variable">process</span>.<span class="cm-builtin">exit</span>(<span class="cm-number">1</span>);</span>
+<span class="line">	  }</span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-keyword">const </span><span class="cm-variable">inputAmxd </span><span class="cm-operator">= </span><span class="cm-variable">process</span>.<span class="cm-variable">argv</span>[<span class="cm-number">2</span>];</span>
+<span class="line">	  <span class="cm-keyword">const </span><span class="cm-variable">outputJson </span><span class="cm-operator">= </span><span class="cm-variable">process</span>.<span class="cm-variable">argv</span>[<span class="cm-number">3</span>];</span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-keyword">const </span><span class="cm-variable">success </span><span class="cm-operator">= </span><span class="cm-def">extractJsonFromAmxd</span>(<span class="cm-variable">inputAmxd</span>, <span class="cm-variable">outputJson</span>);</span>
+<span class="line">	  <span class="cm-keyword">if </span>(<span class="cm-operator">!</span><span class="cm-variable">success</span>) {</span>
+<span class="line">	      <span class="cm-variable">process</span>.<span class="cm-builtin">exit</span>(<span class="cm-number">1</span>);</span>
+<span class="line">	  }</span>
+<span class="line">	  </span></code></pre></div></div></li></ul></details></li></ul></div></div></details></div></div></main></body></html>

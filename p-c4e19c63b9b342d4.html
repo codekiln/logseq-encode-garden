@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>2026-05-11 Mon</title><script data-lsg-theme-script>/** Shared visitor appearance, independent of replaceable page content. */
+(() => {
+  try {
+    // Saved shell layout applies before paint; the phone overlay always starts closed.
+    const root = document.documentElement;
+    if (window.matchMedia?.('(min-width: 640px)')?.matches && window.localStorage.getItem('logseq-gardener-left-sidebar') === 'open') root.setAttribute('data-lsg-left-sidebar', 'open');
+    if (window.localStorage.getItem('logseq-gardener-wide') === 'true') root.setAttribute('data-lsg-wide', 'true');
+    // The right sidebar's column takes its width before paint; its cards load after load.
+    const right = JSON.parse(window.localStorage.getItem('logseq-gardener-right-sidebar') || 'null');
+    if (right && window.matchMedia?.('(min-width: 640px)')?.matches) {
+      root.setAttribute('data-lsg-right-sidebar', right.open ? 'open' : 'closed');
+      if (right.width > 0) root.style.setProperty('--lsg-right-width', right.width + 'px');
+    }
+  } catch { /* Layout keeps its defaults. */ }
+  if (typeof window.logseqGardenerInitTheme === 'function') return;
+  const key = 'logseq-gardener-theme';
+  const valid = value => value === 'light' || value === 'dark';
+  const read = () => {
+    try { const value = window.localStorage.getItem(key); return valid(value) ? value : 'system'; }
+    catch { return 'system'; }
+  };
+  let choice = read();
+  let media;
+  try { media = window.matchMedia?.('(prefers-color-scheme: dark)'); } catch { /* Light fallback. */ }
+  const appearance = () => choice === 'system' ? (media?.matches ? 'dark' : 'light') : choice;
+  const initialize = (root = document) => {
+    for (const select of root.querySelectorAll('[data-lsg-theme-select]')) {
+      select.value = choice;
+      const control = select.closest('[data-lsg-theme-control]');
+      if (control) control.hidden = false;
+    }
+  };
+  const apply = () => {
+    document.documentElement.setAttribute('data-lsg-theme', appearance());
+    document.documentElement.setAttribute('data-lsg-theme-mode', choice);
+    initialize();
+  };
+  const set = value => {
+    if (!valid(value) && value !== 'system') return;
+    choice = value;
+    try {
+      if (choice === 'system') window.localStorage.removeItem(key);
+      else window.localStorage.setItem(key, choice);
+    } catch { /* Keep this document's choice when storage is unavailable. */ }
+    apply();
+  };
+  window.logseqGardenerInitTheme = initialize;
+  window.logseqGardenerTheme = { choice: () => choice, appearance, set };
+  apply();
+  if (media?.addEventListener) media.addEventListener('change', apply);
+  else media?.addListener?.(apply);
+  document.addEventListener('change', event => {
+    const select = event.target;
+    if (select?.matches?.('[data-lsg-theme-select]')) set(select.value);
+  });
+  window.addEventListener('storage', event => {
+    if (event.key === key || event.key === null) { choice = read(); apply(); }
+  });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => initialize(), { once: true });
+})();
+</script><script defer src="lsg-shell.js"></script><link rel="lsg-search" href="lsg-search-manifest-1e91ba5239e1caaa.json" data-revision="1e91ba5239e1caaa"><link rel="stylesheet" href="lsg-shared-559a1c927f395608.css"><script data-lsg-search-start>(()=>{const f=(_,o)=>Object.assign(f.options??={},o);window.logseqGardenerInitSearch=f;const u=new URL('lsg-search-start-d1579d619a9675f1.mjs',document.querySelector('[rel=lsg-search]').href);document.addEventListener('DOMContentLoaded',()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{const s=document.createElement('script');s.type='module';s.src=u;s.onerror=()=>{if(!document.querySelector('[rel=lsg-search]'))return;const t=document.createElement('span');t.id='lsg-search-load';t.setAttribute('role','status');t.textContent='Search unavailable. Reload this page to retry search.';document.body.append(t)};document.head.append(s)})),{once:true})})();</script></head><body><header class="lsg-header cp__header"><button type="button" class="lsg-button" data-lsg-left-toggle aria-label="Toggle left sidebar" aria-controls="lsg-left-sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l16 0M4 12l16 0M4 18l16 0"/></svg></button><span class="lsg-header-space"></span><a class="lsg-button" href="index.html" aria-label="Home"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l-2 0l9 -9l9 9l-2 0M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg></a><a class="lsg-button button" href="graph.html#/graph" aria-label="Graph"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path id="lsg-i-graph" d="M10 5a2 2 0 1 0 4 0a2 2 0 1 0-4 0M3 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M17 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M6.5 17.5 12 13l5.5 4.5M12 7v6"/></svg></a><button type="button" class="lsg-button" data-lsg-search aria-label="Search garden" aria-haspopup="dialog" aria-controls="lsg-search-dialog" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0M21 21l-6 -6"/></svg></button><div class="lsg-more"><button type="button" class="lsg-button" data-lsg-more aria-label="More" aria-haspopup="menu" aria-controls="lsg-more-menu" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M20 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg></button><div id="lsg-more-menu" role="menu" aria-label="More" hidden><button type="button" role="menuitem" data-lsg-slides>View as slides</button><button type="button" role="menuitem" data-lsg-theme-toggle>Toggle theme</button><button type="button" role="menuitem" data-lsg-theme-system hidden>Use system theme</button></div></div><button type="button" class="lsg-button lsg-right-toggle" data-lsg-right-toggle aria-label="Toggle right sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2zM15 4l0 16"/></svg></button></header><aside id="lsg-left-sidebar" class="lsg-left-sidebar" aria-label="Left sidebar"><nav aria-label="Navigation"><ul><li><a href="index.html" data-lsg-journals-link><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12zM16 3v4M8 3v4M4 11h16M11 15h1M12 15v3"/></svg><span>Journals</span></a></li><li class="flashcards-nav"><a href="#" role="button" data-lsg-flashcards><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.828 9.172a4 4 0 1 0 0 5.656a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828"/></svg><span>Flashcards</span><span class="lsg-shortcut" aria-hidden="true">g f</span><span class="lsg-badge" data-lsg-due>430</span></a></li><li class="graph-view-nav"><a href="graph.html" data-lsg-graph-view><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#lsg-i-graph"/></svg><span>Graph view</span></a></li><li><a href="pages.html" data-lsg-all-pages><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3v4a1 1 0 0 0 1 1h4M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2zM16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2"/></svg><span>All pages</span></a></li></ul><h2 class="lsg-favorites-heading" id="lsg-favorites">Favorites</h2><ul aria-labelledby="lsg-favorites"><li><a href="p-08986007b541df27.html">fd</a></li><li><a href="p-710a025b0e00c8d5.html">gh-dash</a></li><li><a href="p-710a025b0e00c8d5.html">GitHub/CLI/Extension/gh-dash</a></li><li><a href="p-539dc7d0a39cc4ec.html">tuicr</a></li><li><a href="p-4276cb26f35edeca.html">tmux/Q/How can I put a thick border around the focused pane?</a></li><li><a href="p-62e5d9883ed48541.html">LazyVim</a></li><li><a href="p-abc1fe1091d210a5.html">Logseq/Flashcard/Review/Favorite</a></li><li><a href="p-7d113595e3cdeb70.html">Obsidian</a></li><li><a href="p-efba5ef46cf8e2e4.html">Codex</a></li><li><a href="p-398c5fe622fecdf8.html">chezmoi</a></li><li><a href="p-c02f89b682f53253.html">DevContainer</a></li><li><a href="p-da5911a2a798df4f.html">mise</a></li><li><a href="p-08dc5107b57b9276.html">rg</a></li><li><a href="p-68e903194eba71d7.html">vim</a></li><li><a href="p-74ff40ba60b70acb.html">nvim</a></li><li><a href="p-f237247b53a844f6.html">Zoxide</a></li><li><a href="p-a0d502498c67fd12.html">yazi</a></li><li><a href="p-424036ef4353ec8f.html">tmux</a></li><li><a href="p-e4db29888872bdd5.html">Lazygit</a></li></ul></nav></aside><div class="lsg-sidebar-shade" data-lsg-sidebar-shade hidden></div><main><h1>2026-05-11 Mon</h1><ul class="outline"><li><span id="source-block-0"></span><a class="bullet" href="#"></a><h2>Cross-<span class="page-reference unresolved"><span>Repo</span></span> <span class="page-reference unresolved"><span>Authentication</span></span> and <span class="page-reference"><a href="p-09424f07b5d24242.html">Python</a></span> <span class="page-reference"><a href="p-8e67e49d9cdf9ce7.html">Package Management</a></span> with <span class="page-reference"><a href="p-8c6765d2f5d8a922.html">GitHub/App</a></span>s</h2><ul><li><span id="source-block-96"></span><a class="bullet" href="#"></a><h3>Use Case</h3><ul><li><span id="source-block-112"></span><a class="bullet" href="#"></a>In the context of a <span class="page-reference unresolved"><span>GitHub/Enterprise</span></span>, we had two use cases.</li><li><span id="source-block-181"></span><a class="bullet" href="#"></a><h4>Initial Use Case / Need</h4><ul><li><span id="source-block-214"></span><a class="bullet" href="#"></a>In a <span class="page-reference"><a href="p-c26f179a8a0b807d.html">GitHub/Action</a></span> in <code>my-org/repo-a</code>, call <span class="page-reference unresolved"><span>uv/sync</span></span> on a python project that has a dependency on a python package from <code>my-org/repo-b</code> expressed as a git installation path</li></ul></li><li><span id="source-block-399"></span><a class="bullet" href="#"></a><h4>Long-Term Use Case / Need</h4><ul><li><span id="source-block-434"></span><a class="bullet" href="#"></a>In any <span class="page-reference"><a href="p-c26f179a8a0b807d.html">GitHub Action</a></span> in <code>my-org</code>, call <span class="page-reference unresolved"><span>uv/sync</span></span> on a python project that has a dependency on a python package from any other <span class="page-reference"><a href="p-2ae71ff501e9981f.html">GitHub/Repo</a></span> marked as <code>Internal</code></li></ul></li></ul></li><li><span id="source-block-608"></span><a class="bullet" href="#"></a><h3>Challenge</h3><ul><li><span id="source-block-625"></span><a class="bullet" href="#"></a><code>GITHUB_TOKEN</code> does not by default have the ability to respect repositories that are marked as <code>Internal</code> to a <span class="page-reference unresolved"><span>GitHub/Enterprise</span></span>. See <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/orgs/community/discussions/46566">GITHUB_TOKEN does not have permissions to read other private repos in the same organization · community · Discussion #46566</a> for more discussion.</li></ul></li><li><span id="source-block-969"></span><a class="bullet" href="#"></a><h3>Options</h3><ul><li><span id="source-block-984"></span><a class="bullet" href="#"></a><h3>A - Use a GitHub App - CHOSEN</h3><ul><li><span id="source-block-1022"></span><a class="bullet" href="#"></a>Create a github app with the <code>Contents: read</code> permission on <code>my-org/repo-b</code></li><li><span id="source-block-1103"></span><a class="bullet" href="#"></a>Use <span class="page-reference"><a href="p-db333118627ae2db.html">GitHub/Action/Create GitHub App Token</a></span> action to obtain a short-lived credential</li><li><span id="source-block-1196"></span><a class="bullet" href="#"></a>Use the short-lived credential to do the <span class="page-reference unresolved"><span>uv/sync</span></span> after</li></ul></li><li><span id="source-block-1260"></span><a class="bullet" href="#"></a><h3>B - Use a <span class="page-reference"><a href="p-091c4771b5aaf3e4.html">Service User</a></span></h3><ul><li><span id="source-block-1295"></span><a class="bullet" href="#"></a>Create a github service user and grant it access to the <span class="page-reference unresolved"><span>GitHub/Org</span></span></li><li><span id="source-block-1371"></span><a class="bullet" href="#"></a>Create a <span class="page-reference"><a href="p-91b4a1ba164043f8.html">GitHub Fine-Grained Access Token</a></span> with the <code>Contents: read</code> permission on <code>my-org/repo-b</code><ul><li><span id="source-block-1478"></span><a class="bullet" href="#"></a>Install the PAT in <span class="page-reference unresolved"><span>GitHub/Org/Secret</span></span> and use it in the github action to do the <span class="page-reference unresolved"><span>uv/sync</span></span></li></ul></li></ul></li></ul></li><li><span id="source-block-1579"></span><a class="bullet" href="#"></a><h3>Implementing <em>Option A - Use a <span class="page-reference"><a href="p-8c6765d2f5d8a922.html">GitHub/App</a></span></em></h3><ul><li><span id="source-block-1633"></span><a class="bullet" href="#"></a>Created a <span class="page-reference"><a href="p-8c6765d2f5d8a922.html">GitHub/App</a></span> titled <code>&lt;org&gt;-ci-read-repo-contents-app</code></li><li><span id="source-block-1703"></span><a class="bullet" href="#"></a>The app had repo <code>contents: read</code> permissions</li><li><span id="source-block-1753"></span><a class="bullet" href="#"></a>Encountered some difficulty finding how a <span class="page-reference unresolved"><span>GitHub/Org/Admin</span></span> could create a <span class="page-reference"><a href="p-8c6765d2f5d8a922.html">GitHub/App</a></span> &quot;inside&quot; or owned by the GitHub Org. Ended up creating it in a personal account and transferring its ownership to the org.</li><li><span id="source-block-1973"></span><a class="bullet" href="#"></a>After the app was owned by the <span class="page-reference unresolved"><span>GitHub/Enterprise</span></span> <span class="page-reference unresolved"><span>GitHub/Org</span></span>, <span class="page-reference unresolved"><span>GitHub/App/Setting</span></span>s were configured to enable reading all repositories.</li><li><span id="source-block-2122"></span><a class="bullet" href="#"></a>Ensured that <span class="page-reference unresolved"><span>GitHub/App/Client ID</span></span> and <span class="page-reference unresolved"><span>GitHub/App/Private Key</span></span> as <span class="page-reference unresolved"><span>GitHub/Org/Secret</span></span>s.</li><li><span id="source-block-2222"></span><a class="bullet" href="#"></a>In <code>my-org/my-repo-a</code>, update <code>pyproject.toml</code>:<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="toml"><div class="extensions__code"><div class="extensions__code-lang">toml</div><pre class="lsg-code"><code><span class="line"><span class="cm-tag">dependencies </span>= [</span>
+<span class="line">    <span class="cm-string">&quot;my-org-repo-b&quot;</span></span>
+<span class="line">]</span>
+<span class="line">[<span class="cm-def">tool</span>.<span class="cm-def">uv</span>.<span class="cm-def">sources</span>]</span>
+<span class="line"><span class="cm-tag">my-org-repo-b </span>= { <span class="cm-tag">git </span>= <span class="cm-string">&quot;https://github.com/my-org/repo-b.git&quot; </span>}</span></code></pre></div></div></li></ul></li><li><span id="source-block-2443"></span><a class="bullet" href="#"></a>In <code>my-org/my-repo-a</code>, used the following <span class="page-reference"><a href="p-c26f179a8a0b807d.html">GitHub/Action</a></span> to pull the secrets out, generate a <span class="page-reference unresolved"><span>GitHub/App/Token</span></span>. Everything here is scoped to <code>my-org</code> / <code>MY_ORG</code><ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="yml"><div class="extensions__code"><div class="extensions__code-lang">yml</div><pre class="lsg-code"><code><span class="line">    - <span class="cm-tag">name</span>: <span class="cm-string">Generate GitHub App token</span></span>
+<span class="line">      <span class="cm-tag">id</span>: <span class="cm-string">app-token</span></span>
+<span class="line">      <span class="cm-tag">uses</span>: <span class="cm-string">actions/create-github-app-token@v1</span></span>
+<span class="line">      <span class="cm-tag">with</span>:</span>
+<span class="line">        <span class="cm-tag">app-id</span>: <span class="cm-string">${{ secrets.MY_ORG_CI_READ_REPO_CONTENTS_APP_CLIENT_ID }}</span></span>
+<span class="line">        <span class="cm-tag">private-key</span>: <span class="cm-string">${{ secrets.MY_ORG_CI_READ_REPO_CONTENTS_APP_PRIVATE_KEY }}</span></span>
+<span class="line">        <span class="cm-tag">owner</span>: <span class="cm-string">my-org</span></span>
+<span class="line"></span>
+<span class="line">    - <span class="cm-tag">name</span>: <span class="cm-string">Configure git authentication for private repos</span></span>
+<span class="line">      <span class="cm-tag">run</span>: <span class="cm-keyword">|</span></span>
+<span class="line"><span class="cm-string">        git config --global url.&quot;https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/&quot;.insteadOf &quot;https://github.com/&quot;</span></span>
+<span class="line"></span>
+<span class="line">    - <span class="cm-tag">name</span>: <span class="cm-string">Install uv</span></span>
+<span class="line">      <span class="cm-tag">uses</span>: <span class="cm-string">astral-sh/setup-uv@v8.1.0</span></span>
+<span class="line">      <span class="cm-tag">with</span>:</span>
+<span class="line">        <span class="cm-tag">version</span>: <span class="cm-string">&quot;latest&quot;</span></span>
+<span class="line"></span>
+<span class="line">    - <span class="cm-tag">name</span>: <span class="cm-string">Set up Python</span></span>
+<span class="line">      <span class="cm-tag">run</span>: <span class="cm-string">uv python install 3.12</span></span>
+<span class="line"></span>
+<span class="line">    - <span class="cm-tag">name</span>: <span class="cm-string">Install dependencies</span></span>
+<span class="line">      <span class="cm-tag">run</span>: <span class="cm-string">uv sync</span></span></code></pre></div></div></li></ul></li><li><span id="source-block-3464"></span><a class="bullet" href="#"></a>This ended up working.</li><li><span id="source-block-3491"></span><a class="bullet" href="#"></a>In practice, in order to get to this point, first created <code>.github/workflows/test-github-app-access.yml</code> with just the steps necessary to prove cross-repo access.</li></ul></li></ul></li></ul><section class="references linked-references unlinked-references" data-refs="unlinked"><details class="references-section"><summary><span class="ref-chevron"></span><h2>Unlinked References</h2></summary><noscript>No unlinked references.</noscript><div class="references-body"></div></details></section></main><script data-lsg-fragments>// Native fragment navigation does not run when a host swaps page content.
+// Hosts can call this helper before their own fragment focus/scroll handling.
+(() => {
+  function reveal(fragment = location.hash, { scroll = true } = {}) {
+    let id;
+    try { id = decodeURIComponent(fragment.replace(/^#/, "")); }
+    catch { return null; }
+    const target = id && document.getElementById(id);
+    if (!target) return null;
+    for (let parent = target.parentElement; parent; parent = parent.parentElement) {
+      if (parent.tagName === "DETAILS") parent.open = true;
+      parent.classList?.remove("folded");
+    }
+    if (scroll) target.scrollIntoView();
+    return target;
+  }
+  window.logseqGardenerRevealFragment = reveal;
+  window.addEventListener("hashchange", () => reveal());
+  reveal();
+})();
+</script></body></html>

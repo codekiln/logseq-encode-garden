@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>LangSmith/PromptHub/How To/Define Structured Output and Models for PromptHub in Git</title><script data-lsg-theme-script>/** Shared visitor appearance, independent of replaceable page content. */
+(() => {
+  try {
+    // Saved shell layout applies before paint; the phone overlay always starts closed.
+    const root = document.documentElement;
+    if (window.matchMedia?.('(min-width: 640px)')?.matches && window.localStorage.getItem('logseq-gardener-left-sidebar') === 'open') root.setAttribute('data-lsg-left-sidebar', 'open');
+    if (window.localStorage.getItem('logseq-gardener-wide') === 'true') root.setAttribute('data-lsg-wide', 'true');
+    // The right sidebar's column takes its width before paint; its cards load after load.
+    const right = JSON.parse(window.localStorage.getItem('logseq-gardener-right-sidebar') || 'null');
+    if (right && window.matchMedia?.('(min-width: 640px)')?.matches) {
+      root.setAttribute('data-lsg-right-sidebar', right.open ? 'open' : 'closed');
+      if (right.width > 0) root.style.setProperty('--lsg-right-width', right.width + 'px');
+    }
+  } catch { /* Layout keeps its defaults. */ }
+  if (typeof window.logseqGardenerInitTheme === 'function') return;
+  const key = 'logseq-gardener-theme';
+  const valid = value => value === 'light' || value === 'dark';
+  const read = () => {
+    try { const value = window.localStorage.getItem(key); return valid(value) ? value : 'system'; }
+    catch { return 'system'; }
+  };
+  let choice = read();
+  let media;
+  try { media = window.matchMedia?.('(prefers-color-scheme: dark)'); } catch { /* Light fallback. */ }
+  const appearance = () => choice === 'system' ? (media?.matches ? 'dark' : 'light') : choice;
+  const initialize = (root = document) => {
+    for (const select of root.querySelectorAll('[data-lsg-theme-select]')) {
+      select.value = choice;
+      const control = select.closest('[data-lsg-theme-control]');
+      if (control) control.hidden = false;
+    }
+  };
+  const apply = () => {
+    document.documentElement.setAttribute('data-lsg-theme', appearance());
+    document.documentElement.setAttribute('data-lsg-theme-mode', choice);
+    initialize();
+  };
+  const set = value => {
+    if (!valid(value) && value !== 'system') return;
+    choice = value;
+    try {
+      if (choice === 'system') window.localStorage.removeItem(key);
+      else window.localStorage.setItem(key, choice);
+    } catch { /* Keep this document's choice when storage is unavailable. */ }
+    apply();
+  };
+  window.logseqGardenerInitTheme = initialize;
+  window.logseqGardenerTheme = { choice: () => choice, appearance, set };
+  apply();
+  if (media?.addEventListener) media.addEventListener('change', apply);
+  else media?.addListener?.(apply);
+  document.addEventListener('change', event => {
+    const select = event.target;
+    if (select?.matches?.('[data-lsg-theme-select]')) set(select.value);
+  });
+  window.addEventListener('storage', event => {
+    if (event.key === key || event.key === null) { choice = read(); apply(); }
+  });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => initialize(), { once: true });
+})();
+</script><script defer src="lsg-shell.js"></script><link rel="lsg-search" href="lsg-search-manifest-1e91ba5239e1caaa.json" data-revision="1e91ba5239e1caaa"><link rel="stylesheet" href="lsg-shared-559a1c927f395608.css"><script data-lsg-search-start>(()=>{const f=(_,o)=>Object.assign(f.options??={},o);window.logseqGardenerInitSearch=f;const u=new URL('lsg-search-start-d1579d619a9675f1.mjs',document.querySelector('[rel=lsg-search]').href);document.addEventListener('DOMContentLoaded',()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{const s=document.createElement('script');s.type='module';s.src=u;s.onerror=()=>{if(!document.querySelector('[rel=lsg-search]'))return;const t=document.createElement('span');t.id='lsg-search-load';t.setAttribute('role','status');t.textContent='Search unavailable. Reload this page to retry search.';document.body.append(t)};document.head.append(s)})),{once:true})})();</script></head><body><header class="lsg-header cp__header"><button type="button" class="lsg-button" data-lsg-left-toggle aria-label="Toggle left sidebar" aria-controls="lsg-left-sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l16 0M4 12l16 0M4 18l16 0"/></svg></button><span class="lsg-header-space"></span><a class="lsg-button" href="index.html" aria-label="Home"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l-2 0l9 -9l9 9l-2 0M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg></a><a class="lsg-button button" href="graph.html#/graph" aria-label="Graph"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path id="lsg-i-graph" d="M10 5a2 2 0 1 0 4 0a2 2 0 1 0-4 0M3 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M17 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M6.5 17.5 12 13l5.5 4.5M12 7v6"/></svg></a><button type="button" class="lsg-button" data-lsg-search aria-label="Search garden" aria-haspopup="dialog" aria-controls="lsg-search-dialog" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0M21 21l-6 -6"/></svg></button><div class="lsg-more"><button type="button" class="lsg-button" data-lsg-more aria-label="More" aria-haspopup="menu" aria-controls="lsg-more-menu" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M20 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg></button><div id="lsg-more-menu" role="menu" aria-label="More" hidden><button type="button" role="menuitem" data-lsg-slides>View as slides</button><button type="button" role="menuitem" data-lsg-theme-toggle>Toggle theme</button><button type="button" role="menuitem" data-lsg-theme-system hidden>Use system theme</button></div></div><button type="button" class="lsg-button lsg-right-toggle" data-lsg-right-toggle aria-label="Toggle right sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2zM15 4l0 16"/></svg></button></header><aside id="lsg-left-sidebar" class="lsg-left-sidebar" aria-label="Left sidebar"><nav aria-label="Navigation"><ul><li><a href="index.html" data-lsg-journals-link><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12zM16 3v4M8 3v4M4 11h16M11 15h1M12 15v3"/></svg><span>Journals</span></a></li><li class="flashcards-nav"><a href="#" role="button" data-lsg-flashcards><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.828 9.172a4 4 0 1 0 0 5.656a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828"/></svg><span>Flashcards</span><span class="lsg-shortcut" aria-hidden="true">g f</span><span class="lsg-badge" data-lsg-due>430</span></a></li><li class="graph-view-nav"><a href="graph.html" data-lsg-graph-view><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#lsg-i-graph"/></svg><span>Graph view</span></a></li><li><a href="pages.html" data-lsg-all-pages><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3v4a1 1 0 0 0 1 1h4M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2zM16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2"/></svg><span>All pages</span></a></li></ul><h2 class="lsg-favorites-heading" id="lsg-favorites">Favorites</h2><ul aria-labelledby="lsg-favorites"><li><a href="p-08986007b541df27.html">fd</a></li><li><a href="p-710a025b0e00c8d5.html">gh-dash</a></li><li><a href="p-710a025b0e00c8d5.html">GitHub/CLI/Extension/gh-dash</a></li><li><a href="p-539dc7d0a39cc4ec.html">tuicr</a></li><li><a href="p-4276cb26f35edeca.html">tmux/Q/How can I put a thick border around the focused pane?</a></li><li><a href="p-62e5d9883ed48541.html">LazyVim</a></li><li><a href="p-abc1fe1091d210a5.html">Logseq/Flashcard/Review/Favorite</a></li><li><a href="p-7d113595e3cdeb70.html">Obsidian</a></li><li><a href="p-efba5ef46cf8e2e4.html">Codex</a></li><li><a href="p-398c5fe622fecdf8.html">chezmoi</a></li><li><a href="p-c02f89b682f53253.html">DevContainer</a></li><li><a href="p-da5911a2a798df4f.html">mise</a></li><li><a href="p-08dc5107b57b9276.html">rg</a></li><li><a href="p-68e903194eba71d7.html">vim</a></li><li><a href="p-74ff40ba60b70acb.html">nvim</a></li><li><a href="p-f237247b53a844f6.html">Zoxide</a></li><li><a href="p-a0d502498c67fd12.html">yazi</a></li><li><a href="p-424036ef4353ec8f.html">tmux</a></li><li><a href="p-e4db29888872bdd5.html">Lazygit</a></li></ul></nav></aside><div class="lsg-sidebar-shade" data-lsg-sidebar-shade hidden></div><main><h1>LangSmith/PromptHub/How To/Define Structured Output and Models for PromptHub in Git</h1><ul class="outline"><li><span id="source-block-0"></span><a class="bullet" href="#"></a><h1><input class="task-checkbox" type="checkbox" disabled> <span class="task-marker">TODO</span> find way to commit prompts locally and publish them to LangSmith PromptHub using Structured Output and model definitions</h1><ul><li><span id="source-block-128"></span><a class="bullet" href="#"></a><h2>Query</h2><ul><li><span id="source-block-140"></span><a class="bullet" href="#"></a>What I want is something that facilitates defining prompts locally in my python codebase, defining the structured output definitions and models I want, then upload the prompt once for each model or structured output definition to the prompt hub in a private enterprise setting (I have langsmith enterprise).</li><li><span id="source-block-452"></span><a class="bullet" href="#"></a>The goal is to be able to push prompts with model parameters and schemas up to Prompt Hub, pull them back down, and keep them under version control in code.</li></ul></li><li><span id="source-block-613"></span><a class="bullet" href="#"></a><h2><span class="page-reference unresolved"><span>ChatGPT/Response</span></span></h2><ul><li><span id="source-block-640"></span><a class="bullet" href="#"></a>Short answer: I couldn’t find a well-maintained, widely-used <strong>community</strong> Python library that sits <em>on top</em> of the LangSmith SDK and provides a full higher-level Prompt-Hub workflow (define prompts + structured outputs + multiple model variants locally, push one commit per model/schema, pull back and keep everything git-versioned) — most teams either use the official LangSmith SDK (or LangChain’s limited hub helpers), or they use general prompt-management tools (git-native or testing/eval tools) and glue code/CI to push to LangSmith. (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://docs.smith.langchain.com/reference/python/client/langsmith.client.Client">LangSmith Docs</a>)<p>		  <br>		  Below I list the concrete things I found (what exists, what’s missing), then a short, copy-pasteable Python helper you can use immediately to get the workflow you described (since the ecosystem currently lacks a polished community library that already does it).<br></p></li><li><span id="source-block-1565"></span><a class="bullet" href="#"></a><h1>What I found (summary)</h1></li><li><span id="source-block-1594"></span><a class="bullet" href="#"></a><strong>Official LangSmith SDK is the canonical/official path.</strong><p>		  <br>		  <code>Client.push_prompt()</code> / <code>pull_prompt()</code> are the supported APIs for programmatic prompt management (you can push prompt templates and <em>RunnableSequence</em> (prompt|model)). That is the <em>recommended</em> route and what most projects call directly. (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://docs.smith.langchain.com/reference/python/client/langsmith.client.Client">LangSmith Docs</a>)<br></p></li><li><span id="source-block-2007"></span><a class="bullet" href="#"></a><strong>Structured prompt (Pydantic schema) push is currently fragile / problematic.</strong><p>		  <br>		  There are active issues/threads in the LangSmith SDK repo showing pushing a <code>StructuredPrompt</code> that embeds a Pydantic model fails for many users (so programmatic commits of StructuredPrompt + Pydantic schema are not reliably supported at time of writing). That gap is one reason community wrappers that fully automate schema-&gt;PromptHub workflows are rare. (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/langchain-ai/langsmith-sdk/issues/1462?utm_source=chatgpt.com">GitHub</a>)<br></p></li><li><span id="source-block-2550"></span><a class="bullet" href="#"></a><strong>Official helper tooling exists for migration / bulk operations, but it’s official not community abstraction.</strong><p>		  <br>		  LangChain org maintains a LangSmith migration tool that can migrate prompts and prompt versions between workspaces (useful for enterprise workflows), but again this is an official utility rather than a community “high-level PromptHub client library.” (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/langchain-ai/langsmith-data-migration-tool">GitHub</a>)<br></p></li><li><span id="source-block-3007"></span><a class="bullet" href="#"></a><strong>There are many community prompt-management projects — but they are general purpose (git-native, testing, eval) rather than LangSmith-centered high-level wrappers.</strong> Examples:<ul><li><span id="source-block-3190"></span><a class="bullet" href="#"></a><strong>PromptOps / promptops</strong> — git-native prompt management frameworks (store prompts in repo, test, CI). Good for keeping prompts under version control; you’d still need a small integration to push to LangSmith. (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/llmhq-hub/promptops?utm_source=chatgpt.com">GitHub</a>)</li><li><span id="source-block-3483"></span><a class="bullet" href="#"></a><strong>Promptfoo</strong> — strong open-source tool for prompt tests/CI/evals (useful to gate prompt changes in PRs). Not a LangSmith prompt-hub wrapper, but pairs well with a small push tool to sync to LangSmith. (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/promptfoo/promptfoo?utm_source=chatgpt.com">GitHub</a>)</li><li><span id="source-block-3766"></span><a class="bullet" href="#"></a><strong>PromptKnit / Knit / many hosted prompt GUIs</strong> exist (commercial/hosted) but are not the Python “wrapper over LangSmith SDK” you asked about. (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://promptknit.com/?utm_source=chatgpt.com">promptknit.com</a>)</li></ul></li><li><span id="source-block-3985"></span><a class="bullet" href="#"></a><strong>Older hub code / langchainhub:</strong> functionality historically lived in <code>langchainhub</code> which is deprecated; docs now point users to LangSmith SDK. That transition reduced the incentive for community packages to reimplement Prompt Hub sync. (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://docs.langchain.com/langsmith/manage-prompts-programmatically?utm_source=chatgpt.com">LangChain Docs</a>)</li><li><span id="source-block-4340"></span><a class="bullet" href="#"></a><h1>Practical conclusion</h1></li><li><span id="source-block-4367"></span><a class="bullet" href="#"></a><strong>No polished community Python package</strong> I could find that <em>specifically</em> provides the exact high-level abstraction you described (local definition of prompts + Pydantic structured outputs + per-model commits to Prompt Hub + pull &amp; keep git versioned) as a drop-in library. Most orgs either:<ul><li><span id="source-block-4663"></span><a class="bullet" href="#"></a>use the <strong>LangSmith SDK</strong> directly and write a few helper scripts, or</li><li><span id="source-block-4738"></span><a class="bullet" href="#"></a>use a <strong>git-native prompt repo</strong> (PromptOps style) + CI to run a small sync script that calls <code>client.push_prompt()</code> for each variant.<p>			  <br>			  (If you want, I can open a GitHub search log showing results I inspected; but the practical next step is to either pick one of the git-native prompt tools + write a small sync script, or use the sample helper below.)<br></p></li></ul></li><li><span id="source-block-5106"></span><a class="bullet" href="#"></a><h1>Ready-to-use Python helper (copy/paste)</h1><p>		  <br>		  This is a small, practical helper you can drop in your repo. It:<br></p></li><li><span id="source-block-5226"></span><a class="bullet" href="#"></a>lets you define a ChatPromptTemplate in code (or load from file),</li><li><span id="source-block-5296"></span><a class="bullet" href="#"></a>converts a Pydantic model to JSON Schema and attaches it to the prompt (workaround for StructuredPrompt push),</li><li><span id="source-block-5411"></span><a class="bullet" href="#"></a>pushes the bare prompt and then pushes model-tagged commits (prompt|model) so each model variant has its own commit in Prompt Hub,</li><li><span id="source-block-5546"></span><a class="bullet" href="#"></a>writes local artifacts (yaml/json) so prompts+schemas are kept in your repo for version control.<div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code" style="--lsg-code-digits:3"><code><span class="line"># file: prompthub_sync.py</span>
+<span class="line">from typing import Any, Dict, List, Optional, Type</span>
+<span class="line">import json</span>
+<span class="line">import os</span>
+<span class="line">from pathlib import Path</span>
+<span class="line"></span>
+<span class="line">from langsmith import Client</span>
+<span class="line">from langchain_core.prompts import ChatPromptTemplate</span>
+<span class="line"># example model class provider import; optional:</span>
+<span class="line"># from langchain_openai import ChatOpenAI</span>
+<span class="line"></span>
+<span class="line"># if you use pydantic v1/v2 choose the right method to export schema:</span>
+<span class="line">try:</span>
+<span class="line">  # pydantic v2</span>
+<span class="line">  from pydantic import BaseModel as PydanticBase</span>
+<span class="line">  def pydantic_to_json_schema(m: Type[PydanticBase]) -&gt; Dict[str, Any]:</span>
+<span class="line">      return m.model_json_schema()</span>
+<span class="line">except Exception:</span>
+<span class="line">  # fallback for pydantic v1</span>
+<span class="line">  from pydantic import BaseModel as PydanticBase</span>
+<span class="line">  def pydantic_to_json_schema(m: Type[PydanticBase]) -&gt; Dict[str, Any]:</span>
+<span class="line">      return m.schema()</span>
+<span class="line"></span>
+<span class="line">class PromptHubSync:</span>
+<span class="line">  def __init__(self, client: Optional[Client] = None, out_dir: str = &quot;prompts&quot;):</span>
+<span class="line">      self.client = client or Client()</span>
+<span class="line">      self.out_dir = Path(out_dir)</span>
+<span class="line">      self.out_dir.mkdir(exist_ok=True, parents=True)</span>
+<span class="line"></span>
+<span class="line">  def write_local_artifact(self, prompt_id: str, prompt_obj: Any, schema: Optional[Dict]=None):</span>
+<span class="line">      # save prompt text and schema to repo for git/version control</span>
+<span class="line">      base = self.out_dir / prompt_id</span>
+<span class="line">      base.mkdir(exist_ok=True, parents=True)</span>
+<span class="line">      if isinstance(prompt_obj, ChatPromptTemplate):</span>
+<span class="line">          # get something serializable</span>
+<span class="line">          with open(base / &quot;prompt.txt&quot;, &quot;w&quot;, encoding=&quot;utf8&quot;) as f:</span>
+<span class="line">              try:</span>
+<span class="line">                  # ChatPromptTemplate has from_messages/from_template; try to format sensibly</span>
+<span class="line">                  f.write(str(prompt_obj))</span>
+<span class="line">              except Exception:</span>
+<span class="line">                  f.write(repr(prompt_obj))</span>
+<span class="line">      else:</span>
+<span class="line">          with open(base / &quot;prompt.obj.json&quot;, &quot;w&quot;, encoding=&quot;utf8&quot;) as f:</span>
+<span class="line">              json.dump({&quot;repr&quot;: repr(prompt_obj)}, f, indent=2)</span>
+<span class="line">      if schema is not None:</span>
+<span class="line">          with open(base / &quot;schema.json&quot;, &quot;w&quot;, encoding=&quot;utf8&quot;) as f:</span>
+<span class="line">              json.dump(schema, f, indent=2)</span>
+<span class="line"></span>
+<span class="line">  def push_prompt_with_models(</span>
+<span class="line">      self,</span>
+<span class="line">      prompt_id: str,</span>
+<span class="line">      prompt_obj: ChatPromptTemplate,</span>
+<span class="line">      pydantic_schema: Optional[Type[PydanticBase]] = None,</span>
+<span class="line">      models: Optional[List[Dict[str, Any]]] = None,</span>
+<span class="line">      tags: Optional[List[str]] = None,</span>
+<span class="line">      description: Optional[str] = None,</span>
+<span class="line">  ) -&gt; Dict[str,str]:</span>
+<span class="line">      &quot;&quot;&quot;</span>
+<span class="line">      - prompt_obj: ChatPromptTemplate (or other LangChain prompt object)</span>
+<span class="line">      - pydantic_schema: Optional Pydantic BaseModel class (we attach its JSON Schema as readme)</span>
+<span class="line">      - models: list of dicts each describing a model variant. Each dict can be:</span>
+<span class="line">         {&quot;name&quot;: &quot;gpt-4o-mini&quot;, &quot;model_obj&quot;: &lt;langchain model instance&gt;, &quot;tags&quot;: [&quot;g:gpt4o-mini&quot;]}</span>
+<span class="line">        OR: {&quot;name&quot;: &quot;gpt-4o-mini&quot;, &quot;tags&quot;: [&quot;g:gpt4o-mini&quot;]} to only push prompt metadata for that model.</span>
+<span class="line">      Returns mapping model_name -&gt; url of pushed prompt commit.</span>
+<span class="line">      &quot;&quot;&quot;</span>
+<span class="line">      # 1) save locally (git-managed)</span>
+<span class="line">      schema_json = None</span>
+<span class="line">      if pydantic_schema:</span>
+<span class="line">          schema_json = pydantic_to_json_schema(pydantic_schema)</span>
+<span class="line">      self.write_local_artifact(prompt_id, prompt_obj, schema_json)</span>
+<span class="line"></span>
+<span class="line">      # 2) push a baseline prompt (content only). We&#39;ll put schema JSON in `readme` as a practical workaround.</span>
+<span class="line">      readme_text = None</span>
+<span class="line">      if schema_json:</span>
+<span class="line">          readme_text = json.dumps({&quot;schema&quot;: schema_json}, indent=2)</span>
+<span class="line">      baseline_url = self.client.push_prompt(</span>
+<span class="line">          prompt_id,</span>
+<span class="line">          object=prompt_obj,</span>
+<span class="line">          description=description or &quot;&quot;,</span>
+<span class="line">          readme=readme_text,</span>
+<span class="line">          tags=tags or [],</span>
+<span class="line">      )</span>
+<span class="line"></span>
+<span class="line">      results = {&quot;baseline&quot;: baseline_url}</span>
+<span class="line"></span>
+<span class="line">      # 3) push model-specific commits (if model objects supplied, push prompt|model runnables)</span>
+<span class="line">      if models:</span>
+<span class="line">          for m in models:</span>
+<span class="line">              name = m.get(&quot;name&quot;) or m.get(&quot;model&quot;) or &quot;model&quot;</span>
+<span class="line">              model_obj = m.get(&quot;model_obj&quot;)</span>
+<span class="line">              model_tags = (tags or []) + m.get(&quot;tags&quot;, [])</span>
+<span class="line">              try:</span>
+<span class="line">                  if model_obj is not None:</span>
+<span class="line">                      # push prompt|model so the commit stores the model config LangSmith supports</span>
+<span class="line">                      runnable = prompt_obj | model_obj</span>
+<span class="line">                      url = self.client.push_prompt(f&quot;{prompt_id}-{name}&quot;, object=runnable, tags=model_tags, description=(m.get(&quot;description&quot;) or &quot;&quot;))</span>
+<span class="line">                  else:</span>
+<span class="line">                      # fallback: just push the prompt but tag with the model name</span>
+<span class="line">                      url = self.client.push_prompt(f&quot;{prompt_id}-{name}&quot;, object=prompt_obj, tags=model_tags)</span>
+<span class="line">                  results[name] = url</span>
+<span class="line">              except Exception as e:</span>
+<span class="line">                  results[name] = f&quot;ERROR: {e}&quot;</span>
+<span class="line">      return results</span>
+<span class="line"></span>
+<span class="line"># Example usage:</span>
+<span class="line">if __name__ == &quot;__main__&quot;:</span>
+<span class="line">  from pydantic import BaseModel, Field</span>
+<span class="line">  from langchain_core.prompts import ChatPromptTemplate</span>
+<span class="line"></span>
+<span class="line">  class MySchema(BaseModel):</span>
+<span class="line">      title: str = Field(..., title=&quot;Title&quot;)</span>
+<span class="line">      score: int = Field(..., title=&quot;Score&quot;)</span>
+<span class="line"></span>
+<span class="line">  messages = [(&quot;system&quot;, &quot;You are a helpful assistant.&quot;), (&quot;user&quot;, &quot;{text}&quot;)]</span>
+<span class="line">  prompt = ChatPromptTemplate.from_messages(messages)</span>
+<span class="line"></span>
+<span class="line">  sync = PromptHubSync()</span>
+<span class="line">  # If you use langchain_openai.ChatOpenAI as model, pass instance in models list (optional)</span>
+<span class="line">  res = sync.push_prompt_with_models(</span>
+<span class="line">      &quot;my-enterprise-prompt&quot;,</span>
+<span class="line">      prompt,</span>
+<span class="line">      pydantic_schema=MySchema,</span>
+<span class="line">      models=[{&quot;name&quot;:&quot;gpt-4o-mini&quot;, &quot;tags&quot;:[&quot;prod&quot;,&quot;gpt-4o-mini&quot;]}],</span>
+<span class="line">      tags=[&quot;team:qa&quot;],</span>
+<span class="line">      description=&quot;My prompt with schema attached as readme&quot;</span>
+<span class="line">  )</span>
+<span class="line">  print(res)</span></code></pre></div></div><p>		  <br>		  Notes on the helper and caveats<br></p></li><li><span id="source-block-11526"></span><a class="bullet" href="#"></a>Because of the <strong>StructuredPrompt / Pydantic</strong> push issue, the helper attaches Pydantic JSON Schema into <code>readme</code> as a pragmatic workaround; when you <code>pull_prompt()</code> later you can <code>readme</code> and reconstruct the schema locally. This keeps your schema in the repo (versioned) and still usable in the UI for human editors. (See the SDK issue where pushing StructuredPrompt containing Pydantic fails.) (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/langchain-ai/langsmith-sdk/issues/1462?utm_source=chatgpt.com">GitHub</a>)</li><li><span id="source-block-12019"></span><a class="bullet" href="#"></a>For model-attached commits, the code attempts to push <code>prompt | model</code> (a RunnableSequence). That is supported by the SDK and will create a commit that includes a model configuration for the prompt. (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://docs.smith.langchain.com/reference/python/client/langsmith.client.Client">LangSmith Docs</a>)</li><li><span id="source-block-12323"></span><a class="bullet" href="#"></a>Keep the <code>prompts/</code> directory under git. Use PR checks (e.g., promptfoo) to run tests on changed prompts before the CI pipeline runs the sync script to push to LangSmith. This gives a clean PromptOps → CI → PromptHub workflow.</li><li><span id="source-block-12558"></span><a class="bullet" href="#"></a><h1>Recommendations &amp; next steps</h1></li><li><span id="source-block-12593"></span><a class="bullet" href="#"></a>If you want a <strong>turnkey</strong> community library, there isn’t a mature one yet — you can (a) adopt the small helper above, (b) pair it with a git-native prompt manager (PromptOps) and a prompt test suite (Promptfoo) and (c) add a CI job to sync changed prompts to LangSmith. (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/llmhq-hub/promptops?utm_source=chatgpt.com">GitHub</a>)</li><li><span id="source-block-12945"></span><a class="bullet" href="#"></a>If <strong>true StructuredPrompt</strong> programmatic commits (Pydantic schemas embedded as structured output definitions) are critical, you can:<ul><li><span id="source-block-13083"></span><a class="bullet" href="#"></a>monitor/follow the LangSmith SDK issue(s) for fixes (issue <span class="tag">#1462</span> shows the problem and ongoing discussion), or</li><li><span id="source-block-13199"></span><a class="bullet" href="#"></a>implement a custom serialization path that converts your schema to the exact JSON format the API expects (more fragile and requires reverse-engineering/keeping up with API changes). (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/langchain-ai/langsmith-sdk/issues/1462?utm_source=chatgpt.com">GitHub</a>)</li></ul></li><li><span id="source-block-13479"></span><a class="bullet" href="#"></a>Short answer: I couldn’t find any public evidence that the LangSmith Python SDK reliably supports <strong>programmatically pushing a <code>StructuredPrompt</code> that embeds a Pydantic schema</strong> into Prompt Hub as of <strong>September 19, 2025</strong> — the GitHub issue reporting the problem remains open and there are related open issues about serialization/pulling structured outputs. I also didn’t find public community repos showing someone successfully pushing a StructuredPrompt (schema + template) programmatically to Prompt Hub. (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/langchain-ai/langsmith-sdk/issues/1462">GitHub</a>)<p>		  <br>		  What I checked (short, concrete list)<br></p></li><li><span id="source-block-14115"></span><a class="bullet" href="#"></a>The original issue you cited, <strong>“Programmatically update a StructuredPrompt … #1462”</strong>, is still open and shows the same error when trying to push a <code>StructuredPrompt</code> defined in code (Pydantic used as schema). The issue was opened Jan 24, 2025 and has no resolution/comments that indicate it was fixed. (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/langchain-ai/langsmith-sdk/issues/1462">GitHub</a>)</li><li><span id="source-block-14499"></span><a class="bullet" href="#"></a>There is a separate, closely related issue requesting the ability to <strong>pull</strong> a prompt and then chain <code>with_structured_output()</code> so code can invoke it — that feature request is also open (Issue <span class="tag">#1690)</span>. That suggests the SDK’s structured-output prompt roundtrip is still being worked on. (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/langchain-ai/langsmith-sdk/issues/1690?utm_source=chatgpt.com">GitHub</a>)</li><li><span id="source-block-14887"></span><a class="bullet" href="#"></a>The SDK repo contains prior bug/activity around <strong>Pydantic serialization</strong> / “failed to use model_dump” errors (e.g., Issue <span class="tag">#1116)</span>, which matches the kind of serialization problem reported in <span class="tag">#1462</span>. That same serialization surface appears in other places (tracing, prompt commit manifest handling). (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/langchain-ai/langsmith-sdk/issues/1116?utm_source=chatgpt.com">GitHub</a>)</li><li><span id="source-block-15287"></span><a class="bullet" href="#"></a>I searched for community examples (GitHub, PyPI, blog posts, gists) showing someone programmatically pushing a StructuredPrompt (Pydantic schema + prompt) into LangSmith’s Prompt Hub. I found prompt examples on the LangSmith Hub that include structured outputs (likely created in the UI), e.g. <code>efriis/my-structured-prompt-2</code>, but no public scripts/repos showing a reliable programmatic <code>push_prompt()</code> flow that includes a Pydantic class as the schema. That strongly suggests people are still either using the UI for schema entry or using workarounds. (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://smith.langchain.com/hub/efriis/my-structured-prompt-2?utm_source=chatgpt.com">smith.langchain.com</a>)<p>		  <br>		  Interpretation / conclusion<br></p></li><li><span id="source-block-15993"></span><a class="bullet" href="#"></a>The <em>core blocker</em> is serialization of user-defined Python types (Pydantic model classes) into the JSON manifest the LangSmith API expects when creating a <code>PromptCommit</code>. The error in <span class="tag">#1462</span> explicitly shows the API rejecting the serialized object because it contains a non-serializable class ref. Related issues show the SDK tries to use <code>model_dump</code>/<code>dict()</code> approaches but hit edge cases. (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/langchain-ai/langsmith-sdk/issues/1462">GitHub</a>)</li><li><span id="source-block-16458"></span><a class="bullet" href="#"></a>Because the issue is open and there are multiple related open issues (push/pull/serialization), <strong>I judge it unlikely that a public user has reliably pushed StructuredPrompt+Pydantic to Prompt Hub programmatically</strong> by Sept 19, 2025.<p>		  <br>		  Practical workarounds I found / suggest<br></p></li><li><span id="source-block-16745"></span><a class="bullet" href="#"></a><strong>Attach schema as JSON (or in <code>readme</code>) and push prompt content.</strong> Push the prompt template and include your schema serialized to JSON Schema in the prompt <code>readme</code> or metadata. This is the pragmatic approach many teams use until the SDK supports direct class serialization. (Docs show <code>push_prompt()</code> and commit manifests but the SDK/API require serializable manifest pieces.) (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://docs.langchain.com/langsmith/manage-prompts-programmatically?utm_source=chatgpt.com">LangChain Docs</a>)</li><li><span id="source-block-17240"></span><a class="bullet" href="#"></a><strong>Serialize the Pydantic model explicitly to a JSON Schema and push that JSON schema (not the class object).</strong> Convert <code>MyModel.model_json_schema()</code> (pydantic v2) or <code>MyModel.schema()</code> (v1) and include that dict in the prompt manifest/readme or as separate artifact in your repo and in the prompt commit. That avoids sending a Python class object. (This is essentially the workaround in the helper I previously gave you.) (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://docs.pydantic.dev/latest/concepts/serialization/?utm_source=chatgpt.com">Pydantic</a>)</li><li><span id="source-block-17760"></span><a class="bullet" href="#"></a><strong>Keep schemas in repo + CI sync:</strong> Keep prompt templates and JSON schemas in git; run a small CI job that converts serialized JSON schemas into the prompt commit manifest and calls <code>client.push_prompt()</code> with only serializable JSON. This gives the git-versioned, reviewable flow you want without depending on SDK support for sending Python classes. (LangSmith docs show <code>push_prompt()</code> / commit usage.) (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://docs.langchain.com/langsmith/manage-prompts-programmatically?utm_source=chatgpt.com">LangChain Docs</a>)</li><li><span id="source-block-18280"></span><a class="bullet" href="#"></a>Got it — here’s a <strong>minimal test script</strong> you can run in your environment to check if pushing a prompt with a JSON schema as the <code>StructuredPrompt.schema</code> works with the LangSmith SDK.<p>		  <br>		  It will try to push the prompt to your Prompt Hub; if serialization fails, you’ll see the same error reported in <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/langchain-ai/langsmith-sdk/issues/1462">issue #1462</a>.<br>		  <br></p><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">from langsmith import Client</span>
+<span class="line">from langchain_core.prompts import StructuredPrompt</span>
+<span class="line"></span>
+<span class="line"># 1. Define a JSON schema (this would normally come from a Pydantic model)</span>
+<span class="line">json_schema = {</span>
+<span class="line">    &quot;title&quot;: &quot;MySchema&quot;,</span>
+<span class="line">    &quot;type&quot;: &quot;object&quot;,</span>
+<span class="line">    &quot;properties&quot;: {</span>
+<span class="line">        &quot;title&quot;: {&quot;type&quot;: &quot;string&quot;},</span>
+<span class="line">        &quot;score&quot;: {&quot;type&quot;: &quot;integer&quot;}</span>
+<span class="line">    },</span>
+<span class="line">    &quot;required&quot;: [&quot;title&quot;, &quot;score&quot;]</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line"># 2. Define a StructuredPrompt with schema as JSON dict</span>
+<span class="line">structured_prompt = StructuredPrompt(</span>
+<span class="line">    schema=json_schema,</span>
+<span class="line">    template=&quot;Generate a {title} with a score of {score}.&quot;</span>
+<span class="line">)</span>
+<span class="line"></span>
+<span class="line"># 3. Push to LangSmith Prompt Hub</span>
+<span class="line">client = Client()</span>
+<span class="line"></span>
+<span class="line">try:</span>
+<span class="line">    url = client.push_prompt(</span>
+<span class="line">        &quot;json-schema-test-prompt&quot;,</span>
+<span class="line">        object=structured_prompt,</span>
+<span class="line">        description=&quot;Test pushing StructuredPrompt with JSON schema&quot;</span>
+<span class="line">    )</span>
+<span class="line">    print(&quot;✅ Success, pushed to:&quot;, url)</span>
+<span class="line">except Exception as e:</span>
+<span class="line">    print(&quot;❌ Failed with error:&quot;, e)</span></code></pre></div></div></li><li><span id="source-block-19695"></span><a class="bullet" href="#"></a><h3>How to use it</h3></li><li><span id="source-block-19717"></span><a class="bullet" href="#"></a>Save as <code>test_structured_prompt_push.py</code>.</li><li><span id="source-block-19763"></span><a class="bullet" href="#"></a>Run it with your LangSmith credentials configured (<code>LANGCHAIN_API_KEY</code> / <code>LANGCHAIN_ENDPOINT</code> / <code>LANGCHAIN_PROJECT</code> etc).</li><li><span id="source-block-19889"></span><a class="bullet" href="#"></a>If it fails, you’ll know the SDK still doesn’t accept JSON schema–based <code>StructuredPrompt</code>. If it succeeds, check the Prompt Hub UI — does the schema show up as structured output metadata?</li></ul></li><li><a class="bullet" href="#"></a></li></ul></li></ul><section class="references linked-references" id="linked-references" data-refs="linked" data-src="_refs/p-d7d8794fccbc49ec-linked-1.html"><details class="references-section"><summary><span class="ref-chevron"></span><h2>2 Linked References</h2><button type="button" class="filter" title="Filter" aria-label="Filter" data-state="none" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v2.172a2 2 0 0 1-.586 1.414L15 12v7l-6 2v-8.5L4.52 7.572A2 2 0 0 1 4 6.227z"/></svg></button></summary><noscript><a href="_refs/p-d7d8794fccbc49ec-linked-1.html">Show linked references</a></noscript><div class="references-body"><p role="status"></p></div></details></section><section class="page-hierarchy references" aria-label="Hierarchy"><details class="references-section" open><summary><span class="ref-chevron"></span><h2>Hierarchy</h2></summary><ul class="namespaces"><li><span class="page-reference"><a class="namespace-link" aria-label="LangSmith (Namespace)" href="p-ca06c354086e4f40.html">LangSmith</a></span><span class="namespace-separator" aria-hidden="true">/</span><span class="page-reference"><a class="namespace-link" aria-label="LangSmith/PromptHub (Namespace)" href="p-63096cc40d94d17a.html">PromptHub</a></span><span class="namespace-separator" aria-hidden="true">/</span><span class="page-reference"><a class="namespace-link" aria-label="LangSmith/PromptHub/How To (Namespace)" href="p-d710bd09872ca3d0.html">How To</a></span></li></ul></details></section><section class="references linked-references unlinked-references" data-refs="unlinked"><details class="references-section"><summary><span class="ref-chevron"></span><h2>Unlinked References</h2></summary><noscript>No unlinked references.</noscript><div class="references-body"></div></details></section></main><script data-lsg-fragments>// Native fragment navigation does not run when a host swaps page content.
+// Hosts can call this helper before their own fragment focus/scroll handling.
+(() => {
+  function reveal(fragment = location.hash, { scroll = true } = {}) {
+    let id;
+    try { id = decodeURIComponent(fragment.replace(/^#/, "")); }
+    catch { return null; }
+    const target = id && document.getElementById(id);
+    if (!target) return null;
+    for (let parent = target.parentElement; parent; parent = parent.parentElement) {
+      if (parent.tagName === "DETAILS") parent.open = true;
+      parent.classList?.remove("folded");
+    }
+    if (scroll) target.scrollIntoView();
+    return target;
+  }
+  window.logseqGardenerRevealFragment = reveal;
+  window.addEventListener("hashchange", () => reveal());
+  reveal();
+})();
+</script></body></html>

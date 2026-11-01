@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><base href="../"><title>Unlinked references: Programming/Test/Missing</title><script type="application/json" class="references-data">{"count":8,"files":["p-ee233477ff19cf08-unlinked-1.html"]}</script></head><body><main><h1>Unlinked references: <a href="p-ee233477ff19cf08.html">Programming/Test/Missing</a></h1><div class="references-fragment"><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-cef0c463e3486743.html">Claude/Code/How To/Create Git Commit Tool</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block" data-lang="python"><div class="extensions__code"><div class="extensions__code-lang">python</div><pre class="lsg-code"><code><span class="line">			  <span class="cm-comment"># conventional_commit_tool/commit_generator.py</span></span>
+<span class="line">			  <span class="cm-keyword">import </span><span class="cm-variable">anthropic</span></span>
+<span class="line">			  <span class="cm-keyword">import </span><span class="cm-variable">os</span></span>
+<span class="line">			  <span class="cm-keyword">from </span><span class="cm-variable">typing </span><span class="cm-keyword">import </span><span class="cm-variable">Optional</span></span>
+<span class="line">			  </span>
+<span class="line">			  <span class="cm-keyword">class </span><span class="cm-def">ConventionalCommitGenerator</span>:</span>
+<span class="line">			   <span class="cm-keyword">def </span><span class="cm-builtin">__init__</span>(<span class="cm-variable">self</span>):</span>
+<span class="line">			    <span class="cm-keyword">self</span>.<span class="cm-variable">client </span><span class="cm-operator">= </span><span class="cm-variable">anthropic</span>.<span class="cm-variable">Anthropic</span>(</span>
+<span class="line">			  	  <span class="cm-variable">api_key</span><span class="cm-operator">=</span><span class="cm-variable">os</span>.<span class="cm-variable">getenv</span>(<span class="cm-string">&#39;ANTHROPIC_API_KEY&#39;</span>)</span>
+<span class="line">			    )</span>
+<span class="line">			   </span>
+<span class="line">			   <span class="cm-keyword">def </span><span class="cm-def">generate_commit</span>(<span class="cm-variable">self</span>, <span class="cm-variable">prompt</span>: <span class="cm-type">str</span>, <span class="cm-variable">scope</span>: <span class="cm-variable">Optional</span>[<span class="cm-type">str</span>] <span class="cm-operator">= </span><span class="cm-atom">None</span>) -&gt; <span class="cm-type">str</span>:</span>
+<span class="line">			    <span class="cm-variable">system_prompt </span><span class="cm-operator">= </span><span class="cm-keyword">self</span>.<span class="cm-variable">_get_system_prompt</span>()</span>
+<span class="line">			    </span>
+<span class="line">			    <span class="cm-variable">user_prompt </span><span class="cm-operator">= </span><span class="cm-keyword">f</span><span class="cm-string">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="cm-string">			    Generate a conventional commit message for the following changes:</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    </span>{<span class="cm-variable">prompt</span>}</span>
+<span class="line"><span class="cm-string">			    &quot;&quot;&quot;</span></span>
+<span class="line">			    </span>
+<span class="line">			    <span class="cm-keyword">if </span><span class="cm-variable">scope</span>:</span>
+<span class="line">			  	  <span class="cm-variable">user_prompt </span><span class="cm-operator">+= </span><span class="cm-keyword">f</span><span class="cm-string">&quot;</span><span class="cm-string-2">\n\n</span><span class="cm-string">Scope: </span>{<span class="cm-variable">scope</span>}<span class="cm-string">&quot;</span></span>
+<span class="line">			    </span>
+<span class="line">			    <span class="cm-variable">response </span><span class="cm-operator">= </span><span class="cm-keyword">self</span>.<span class="cm-variable">client</span>.<span class="cm-variable">messages</span>.<span class="cm-variable">create</span>(</span>
+<span class="line">			  	  <span class="cm-variable">model</span><span class="cm-operator">=</span><span class="cm-string">&quot;claude-3-5-sonnet-20241022&quot;</span>,</span>
+<span class="line">			  	  <span class="cm-variable">max_tokens</span><span class="cm-operator">=</span><span class="cm-number">150</span>,</span>
+<span class="line">			  	  <span class="cm-variable">system</span><span class="cm-operator">=</span><span class="cm-variable">system_prompt</span>,</span>
+<span class="line">			  	  <span class="cm-variable">messages</span><span class="cm-operator">=</span>[{<span class="cm-string">&quot;role&quot;</span>: <span class="cm-string">&quot;user&quot;</span>, <span class="cm-string">&quot;content&quot;</span>: <span class="cm-variable">user_prompt</span>}]</span>
+<span class="line">			    )</span>
+<span class="line">			    </span>
+<span class="line">			    <span class="cm-keyword">return </span><span class="cm-variable">response</span>.<span class="cm-variable">content</span>[<span class="cm-number">0</span>].<span class="cm-variable">text</span>.<span class="cm-variable">strip</span>()</span>
+<span class="line">			   </span>
+<span class="line">			   <span class="cm-keyword">def </span><span class="cm-def">_get_system_prompt</span>(<span class="cm-variable">self</span>) -&gt; <span class="cm-type">str</span>:</span>
+<span class="line">			    <span class="cm-keyword">return </span><span class="cm-string">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="cm-string">			    You are a git commit message generator that follows the Conventional Commits specification.</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    The commit message should be structured as follows:</span></span>
+<span class="line"><span class="cm-string">			    &lt;type&gt;[optional scope]: &lt;description&gt;</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    Types:</span></span>
+<span class="line"><span class="cm-string">			    - feat: A new feature</span></span>
+<span class="line"><span class="cm-string">			    - fix: A bug fix</span></span>
+<span class="line"><span class="cm-string">			    - docs: Documentation only changes</span></span>
+<span class="line"><span class="cm-string">			    - style: Changes that do not affect the meaning of the code</span></span>
+<span class="line"><span class="cm-string">			    - refactor: A code change that neither fixes a bug nor adds a feature</span></span>
+<span class="line"><span class="cm-string">			    - perf: A code change that improves performance</span></span>
+<span class="line"><span class="cm-string">			    - test: Adding missing tests or correcting existing tests</span></span>
+<span class="line"><span class="cm-string">			    - chore: Changes to the build process or auxiliary tools</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    Rules:</span></span>
+<span class="line"><span class="cm-string">			    1. Use the imperative mood (&quot;add&quot; not &quot;added&quot; or &quot;adds&quot;)</span></span>
+<span class="line"><span class="cm-string">			    2. Don&#39;t capitalize the first letter</span></span>
+<span class="line"><span class="cm-string">			    3. No dot (.) at the end</span></span>
+<span class="line"><span class="cm-string">			    4. Keep the description under 72 characters</span></span>
+<span class="line"><span class="cm-string">			    5. If scope is provided, include it in brackets</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    Examples:</span></span>
+<span class="line"><span class="cm-string">			    - feat(auth): add OAuth2 authentication</span></span>
+<span class="line"><span class="cm-string">			    - fix(api): resolve user data retrieval issue</span></span>
+<span class="line"><span class="cm-string">			    - docs: update README with installation steps</span></span>
+<span class="line"><span class="cm-string">			    - refactor: simplify user validation logic</span></span>
+<span class="line"><span class="cm-string">			    &quot;&quot;&quot;</span></span></code></pre></div></div></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block" data-lang="typescript"><div class="extensions__code"><div class="extensions__code-lang">typescript</div><pre class="lsg-code" style="--lsg-code-digits:3"><code><span class="line">			  <span class="cm-comment">// src/commands/generate.ts</span></span>
+<span class="line">			  <span class="cm-keyword">import </span>{<span class="cm-variable">Command</span>, <span class="cm-variable">Flags</span>} <span class="cm-keyword">from </span><span class="cm-string">&#39;@oclif/core&#39;</span></span>
+<span class="line">			  <span class="cm-keyword">import </span><span class="cm-variable">Anthropic </span><span class="cm-keyword">from </span><span class="cm-string">&#39;@anthropic-ai/sdk&#39;</span></span>
+<span class="line">			  <span class="cm-keyword">import </span><span class="cm-atom">* </span><span class="cm-keyword">as </span><span class="cm-variable">fs </span><span class="cm-keyword">from </span><span class="cm-string">&#39;fs&#39;</span></span>
+<span class="line">			  <span class="cm-keyword">import </span>{<span class="cm-variable">execSync</span>} <span class="cm-keyword">from </span><span class="cm-string">&#39;child_process&#39;</span></span>
+<span class="line">			  </span>
+<span class="line">			  <span class="cm-keyword">export default class </span><span class="cm-def">Generate </span><span class="cm-keyword">extends </span><span class="cm-type">Command </span>{</span>
+<span class="line">			   <span class="cm-keyword">static </span><span class="cm-variable">description </span><span class="cm-operator">= </span><span class="cm-string">&#39;Generate conventional commit message&#39;</span></span>
+<span class="line">			   </span>
+<span class="line">			   <span class="cm-keyword">static </span><span class="cm-variable">flags </span><span class="cm-operator">= </span>{</span>
+<span class="line">			    <span class="cm-string">&#39;prompt-file&#39;</span>: <span class="cm-variable">Flags</span>.<span class="cm-def">string</span>({</span>
+<span class="line">			  	  <span class="cm-variable">char</span>: <span class="cm-string">&#39;p&#39;</span>,</span>
+<span class="line">			  	  <span class="cm-variable">description</span>: <span class="cm-string">&#39;Path to file containing commit prompt&#39;</span>,</span>
+<span class="line">			    }),</span>
+<span class="line">			    <span class="cm-variable">prompt</span>: <span class="cm-variable">Flags</span>.<span class="cm-def">string</span>({</span>
+<span class="line">			  	  <span class="cm-variable">char</span>: <span class="cm-string">&#39;m&#39;</span>,</span>
+<span class="line">			  	  <span class="cm-variable">description</span>: <span class="cm-string">&#39;Direct commit prompt text&#39;</span>,</span>
+<span class="line">			    }),</span>
+<span class="line">			    <span class="cm-string">&#39;dry-run&#39;</span>: <span class="cm-variable">Flags</span>.<span class="cm-def">boolean</span>({</span>
+<span class="line">			  	  <span class="cm-variable">description</span>: <span class="cm-string">&#39;Show commit message without executing&#39;</span>,</span>
+<span class="line">			    }),</span>
+<span class="line">			    <span class="cm-variable">scope</span>: <span class="cm-variable">Flags</span>.<span class="cm-def">string</span>({</span>
+<span class="line">			  	  <span class="cm-variable">char</span>: <span class="cm-string">&#39;s&#39;</span>,</span>
+<span class="line">			  	  <span class="cm-variable">description</span>: <span class="cm-string">&#39;Optional scope for the commit&#39;</span>,</span>
+<span class="line">			    }),</span>
+<span class="line">			   }</span>
+<span class="line">			   </span>
+<span class="line">			   <span class="cm-keyword">async </span><span class="cm-def">run</span>() {</span>
+<span class="line">			    <span class="cm-keyword">const </span>{<span class="cm-variable">flags</span>} <span class="cm-operator">= </span><span class="cm-keyword">await this</span>.<span class="cm-builtin">parse</span>(<span class="cm-variable">Generate</span>)</span>
+<span class="line">			    </span>
+<span class="line">			    <span class="cm-keyword">const </span><span class="cm-variable">anthropic </span><span class="cm-operator">= new </span><span class="cm-def">Anthropic</span>({</span>
+<span class="line">			  	  <span class="cm-variable">apiKey</span>: <span class="cm-variable">process</span>.<span class="cm-variable">env</span>.<span class="cm-variable">ANTHROPIC_API_KEY</span>,</span>
+<span class="line">			    })</span>
+<span class="line">			    </span>
+<span class="line">			    <span class="cm-keyword">let </span><span class="cm-variable">promptText</span><span class="cm-operator">: </span><span class="cm-type">string</span></span>
+<span class="line">			    </span>
+<span class="line">			    <span class="cm-keyword">if </span>(<span class="cm-variable">flags</span>[<span class="cm-string">&#39;prompt-file&#39;</span>]) {</span>
+<span class="line">			  	  <span class="cm-variable">promptText </span><span class="cm-operator">= </span><span class="cm-variable">fs</span>.<span class="cm-def">readFileSync</span>(<span class="cm-variable">flags</span>[<span class="cm-string">&#39;prompt-file&#39;</span>], <span class="cm-string">&#39;utf8&#39;</span>).<span class="cm-def">trim</span>()</span>
+<span class="line">			    } <span class="cm-keyword">else if </span>(<span class="cm-variable">flags</span>.<span class="cm-variable">prompt</span>) {</span>
+<span class="line">			  	  <span class="cm-variable">promptText </span><span class="cm-operator">= </span><span class="cm-variable">flags</span>.<span class="cm-variable">prompt</span></span>
+<span class="line">			    } <span class="cm-keyword">else </span>{</span>
+<span class="line">			  	  <span class="cm-keyword">this</span>.<span class="cm-def">error</span>(<span class="cm-string">&#39;Must provide either --prompt-file or --prompt&#39;</span>)</span>
+<span class="line">			    }</span>
+<span class="line">			    </span>
+<span class="line">			    <span class="cm-keyword">const </span><span class="cm-variable">systemPrompt </span><span class="cm-operator">= </span><span class="cm-keyword">this</span>.<span class="cm-def">getSystemPrompt</span>()</span>
+<span class="line">			    <span class="cm-keyword">const </span><span class="cm-variable">userPrompt </span><span class="cm-operator">= </span><span class="cm-keyword">this</span>.<span class="cm-def">buildUserPrompt</span>(<span class="cm-variable">promptText</span>, <span class="cm-variable">flags</span>.<span class="cm-variable">scope</span>)</span>
+<span class="line">			    </span>
+<span class="line">			    <span class="cm-keyword">const </span><span class="cm-variable">response </span><span class="cm-operator">= </span><span class="cm-keyword">await </span><span class="cm-variable">anthropic</span>.<span class="cm-variable">messages</span>.<span class="cm-def">create</span>({</span>
+<span class="line">			  	  <span class="cm-variable">model</span>: <span class="cm-string">&#39;claude-3-5-sonnet-20241022&#39;</span>,</span>
+<span class="line">			  	  <span class="cm-variable">max_tokens</span>: <span class="cm-number">150</span>,</span>
+<span class="line">			  	  <span class="cm-variable">system</span>: <span class="cm-variable">systemPrompt</span>,</span>
+<span class="line">			  	  <span class="cm-variable">messages</span>: [{<span class="cm-variable">role</span>: <span class="cm-string">&#39;user&#39;</span>, <span class="cm-variable">content</span>: <span class="cm-variable">userPrompt</span>}],</span>
+<span class="line">			    })</span>
+<span class="line">			    </span>
+<span class="line">			    <span class="cm-keyword">const </span><span class="cm-variable">commitMsg </span><span class="cm-operator">= </span><span class="cm-variable">response</span>.<span class="cm-variable">content</span>[<span class="cm-number">0</span>].<span class="cm-variable">text</span>.<span class="cm-def">trim</span>()</span>
+<span class="line">			    </span>
+<span class="line">			    <span class="cm-keyword">if </span>(<span class="cm-variable">flags</span>[<span class="cm-string">&#39;dry-run&#39;</span>]) {</span>
+<span class="line">			  	  <span class="cm-keyword">this</span>.<span class="cm-def">log</span>(<span class="cm-string">&#39;Generated commit message:&#39;</span>)</span>
+<span class="line">			  	  <span class="cm-keyword">this</span>.<span class="cm-def">log</span>(<span class="cm-variable">commitMsg</span>)</span>
+<span class="line">			    } <span class="cm-keyword">else </span>{</span>
+<span class="line">			  	  <span class="cm-def">execSync</span>(<span class="cm-string">`git commit -m &quot;${</span><span class="cm-variable">commitMsg</span><span class="cm-string">}&quot;`</span>, {<span class="cm-variable">stdio</span>: <span class="cm-string">&#39;inherit&#39;</span>})</span>
+<span class="line">			    }</span>
+<span class="line">			   }</span>
+<span class="line">			   </span>
+<span class="line">			   <span class="cm-keyword">private </span><span class="cm-def">getSystemPrompt</span>()<span class="cm-operator">: </span><span class="cm-type">string </span>{</span>
+<span class="line">			    <span class="cm-keyword">return </span><span class="cm-string">`You are a git commit message generator that follows the Conventional Commits specification.</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    The commit message should be structured as follows:</span></span>
+<span class="line"><span class="cm-string">			    &lt;type&gt;[optional scope]: &lt;description&gt;</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    Types:</span></span>
+<span class="line"><span class="cm-string">			    - feat: A new feature</span></span>
+<span class="line"><span class="cm-string">			    - fix: A bug fix</span></span>
+<span class="line"><span class="cm-string">			    - docs: Documentation only changes</span></span>
+<span class="line"><span class="cm-string">			    - style: Changes that do not affect the meaning of the code</span></span>
+<span class="line"><span class="cm-string">			    - refactor: A code change that neither fixes a bug nor adds a feature</span></span>
+<span class="line"><span class="cm-string">			    - perf: A code change that improves performance</span></span>
+<span class="line"><span class="cm-string">			    - test: Adding missing tests or correcting existing tests</span></span>
+<span class="line"><span class="cm-string">			    - chore: Changes to the build process or auxiliary tools</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    Rules:</span></span>
+<span class="line"><span class="cm-string">			    1. Use the imperative mood (&quot;add&quot; not &quot;added&quot; or &quot;adds&quot;)</span></span>
+<span class="line"><span class="cm-string">			    2. Don&#39;t capitalize the first letter</span></span>
+<span class="line"><span class="cm-string">			    3. No dot (.) at the end</span></span>
+<span class="line"><span class="cm-string">			    4. Keep the description under 72 characters</span></span>
+<span class="line"><span class="cm-string">			    5. If scope is provided, include it in brackets`</span></span>
+<span class="line">			   }</span>
+<span class="line">			   </span>
+<span class="line">			   <span class="cm-keyword">private </span><span class="cm-def">buildUserPrompt</span>(<span class="cm-variable">prompt</span><span class="cm-operator">: </span><span class="cm-type">string</span>, <span class="cm-variable">scope</span><span class="cm-operator">?: </span><span class="cm-type">string</span>)<span class="cm-operator">: </span><span class="cm-type">string </span>{</span>
+<span class="line">			    <span class="cm-keyword">let </span><span class="cm-variable">userPrompt </span><span class="cm-operator">= </span><span class="cm-string">`Generate a conventional commit message for the following changes:</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    ${</span><span class="cm-variable">prompt</span><span class="cm-string">}`</span></span>
+<span class="line">			    </span>
+<span class="line">			    <span class="cm-keyword">if </span>(<span class="cm-variable">scope</span>) {</span>
+<span class="line">			  	  <span class="cm-variable">userPrompt </span><span class="cm-operator">+= </span><span class="cm-string">`</span><span class="cm-string-2">\n\n</span><span class="cm-string">Scope: ${</span><span class="cm-variable">scope</span><span class="cm-string">}`</span></span>
+<span class="line">			    }</span>
+<span class="line">			    </span>
+<span class="line">			    <span class="cm-keyword">return </span><span class="cm-variable">userPrompt</span></span>
+<span class="line">			   }</span>
+<span class="line">			  }</span></code></pre></div></div></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-f6c85dc2e76c9ed5.html">Person/codekiln/GitHub/logseq-gardener/Project/Research/26/09/relevant repo precedents</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>Compare that JSON against <code>garden-core</code> in CI. This is the missing test between:<ul><li><span class="bullet"></span><code>lsdoc</code> == <code>mldoc</code></li><li><span class="bullet"></span>and</li><li><span class="bullet"></span><code>garden-core</code> == Logseq</li></ul></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-0f4afc74d5b447ef.html">Person/Harper Reed/Blog/25/02/My LLM codegen workflow atm</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>Generate missing tests for code in repository content stored in <code>output.txt</code> using LLM generation</li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>paste that into claude along with the first missing test “issue”</li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>paste the first missing test “issue” into aider</li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>You are a senior developer. Your job is to review this code, and write out a list of missing test cases, and code tests that should exist. You should be specific, and be very good. Do Not Hallucinate. Think quietly to yourself, then act - write the issues. The issues  will be given to a developer to executed on, so they should be in a format that is compatible with github issues</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-98ab7e65e8a4be2b.html">Person/Harper Reed/Blog/25/02/My LLM codegen workflow atm/Sample Mise Rules</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block" data-lang="toml"><div class="extensions__code"><div class="extensions__code-lang">toml</div><pre class="lsg-code"><code><span class="line">			  [<span class="cm-def">tasks</span>.<span class="cm-string">&quot;llm:generate_missing_tests&quot;</span>]</span>
+<span class="line">			  <span class="cm-tag">depends </span>= [<span class="cm-string">&quot;llm:generate_bundle&quot;</span>]</span>
+<span class="line">			  <span class="cm-tag">description </span>= <span class="cm-string">&#39;Generate missing tests for code in repository content stored in output.txt using LLM generation&#39;</span></span>
+<span class="line">			  <span class="cm-tag">run </span>= <span class="cm-string">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="cm-string">			  #!/usr/bin/env bash</span></span>
+<span class="line"><span class="cm-string">			  cat output.txt | llm -m claude-3.5-sonnet -t missing-tests-gen &gt; missing-tests.md</span></span>
+<span class="line"><span class="cm-string">			  &quot;&quot;&quot;</span></span></code></pre></div></div></li></ul></div></div></details></div></div></main></body></html>

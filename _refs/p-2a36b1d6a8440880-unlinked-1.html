@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><base href="../"><title>Unlinked references: 1Password/Dev/CLI/Secret Reference</title><script type="application/json" class="references-data">{"count":4,"files":["p-2a36b1d6a8440880-unlinked-1.html"]}</script></head><body><main><h1>Unlinked references: <a href="p-2a36b1d6a8440880.html">1Password/Dev/CLI/Secret Reference</a></h1><div class="references-fragment"><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-3d9c68d398414938.html">1Password/Unique Identifier</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><strong>Note</strong>: if you remove the spaces or other characters unsupported in 1password secret references, then in the desktop app if you use Copy Secret Reference it will copy a &quot;traditional&quot; secret reference.</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-3a6d0e06eaea27e0.html">aider/How To/Use mise and op run to load API Keys</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>The approach uses mise&#39;s environment variables with 1Password secret references, ensuring no secrets are stored on disk</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-8143156c3f45f42b.html">mcp-atlassian/How To/Install with 1Password Creds</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block" data-lang="zsh"><div class="extensions__code"><div class="extensions__code-lang">zsh</div><pre class="lsg-code"><code><span class="line">				  <span class="cm-comment">#!/usr/bin/env zsh</span></span>
+<span class="line">				  <span class="cm-comment">#</span></span>
+<span class="line">				  <span class="cm-comment"># Name: start-atlassian-mcp.sh</span></span>
+<span class="line">				  <span class="cm-comment">#</span></span>
+<span class="line">				  <span class="cm-comment"># Purpose:</span></span>
+<span class="line">				  <span class="cm-comment">#   - Securely retrieve Atlassian credentials from 1Password</span></span>
+<span class="line">				  <span class="cm-comment">#   - Inject the credentials as environment variables to Docker via `op run`</span></span>
+<span class="line">				  <span class="cm-comment">#   - Serve as a wrapper command for Cursor&#39;s MCP server configuration</span></span>
+<span class="line">				  <span class="cm-comment">#</span></span>
+<span class="line">				  <span class="cm-comment"># Installation:</span></span>
+<span class="line">				  <span class="cm-comment">#   1. Save this file in a secure location, for example:</span></span>
+<span class="line">				  <span class="cm-comment">#        ~/.cursor/atlassian-mcp/start-atlassian-mcp.sh</span></span>
+<span class="line">				  <span class="cm-comment">#</span></span>
+<span class="line">				  <span class="cm-comment">#   2. Make it executable:</span></span>
+<span class="line">				  <span class="cm-comment">#        chmod +x ~/.cursor/atlassian-mcp/start-atlassian-mcp.sh</span></span>
+<span class="line">				  <span class="cm-comment">#</span></span>
+<span class="line">				  <span class="cm-comment">#   3. In your ~/.cursor/mcp.json, point the &quot;command&quot; to this script.</span></span>
+<span class="line">				  </span>
+<span class="line">				  <span class="cm-comment"># Fail immediately if any command exits non-zero</span></span>
+<span class="line">				  <span class="cm-builtin">set</span> -euo pipefail</span>
+<span class="line">				  </span>
+<span class="line">				  <span class="cm-comment">################################################################################</span></span>
+<span class="line">				  <span class="cm-comment"># Configuration - Update these to match your 1Password setup</span></span>
+<span class="line">				  <span class="cm-comment">################################################################################</span></span>
+<span class="line">				  </span>
+<span class="line">				  <span class="cm-comment"># Vault name in 1Password</span></span>
+<span class="line">				  <span class="cm-variable">VAULT</span><span class="cm-operator">=</span><span class="cm-string">&quot;Private&quot;</span></span>
+<span class="line">				  </span>
+<span class="line">				  <span class="cm-comment"># For Cloud deployment:</span></span>
+<span class="line">				  <span class="cm-variable">CONFLUENCE_ITEM</span><span class="cm-operator">=</span><span class="cm-string">&quot;Atlassian Confluence Cloud&quot;</span></span>
+<span class="line">				  <span class="cm-variable">CONFLUENCE_URL_FIELD</span><span class="cm-operator">=</span><span class="cm-string">&quot;url&quot;</span></span>
+<span class="line">				  <span class="cm-variable">CONFLUENCE_USERNAME_FIELD</span><span class="cm-operator">=</span><span class="cm-string">&quot;username&quot;</span></span>
+<span class="line">				  <span class="cm-variable">CONFLUENCE_TOKEN_FIELD</span><span class="cm-operator">=</span><span class="cm-string">&quot;api_token&quot;</span></span>
+<span class="line">				  </span>
+<span class="line">				  <span class="cm-variable">JIRA_ITEM</span><span class="cm-operator">=</span><span class="cm-string">&quot;Atlassian Jira Cloud&quot;</span></span>
+<span class="line">				  <span class="cm-variable">JIRA_URL_FIELD</span><span class="cm-operator">=</span><span class="cm-string">&quot;url&quot;</span></span>
+<span class="line">				  <span class="cm-variable">JIRA_USERNAME_FIELD</span><span class="cm-operator">=</span><span class="cm-string">&quot;username&quot;</span></span>
+<span class="line">				  <span class="cm-variable">JIRA_TOKEN_FIELD</span><span class="cm-operator">=</span><span class="cm-string">&quot;api_token&quot;</span></span>
+<span class="line">				  </span>
+<span class="line">				  <span class="cm-comment"># For Server/Data Center deployment (uncomment and modify as needed):</span></span>
+<span class="line">				  <span class="cm-comment"># CONFLUENCE_ITEM=&quot;Atlassian Confluence Server&quot;</span></span>
+<span class="line">				  <span class="cm-comment"># CONFLUENCE_URL_FIELD=&quot;url&quot;</span></span>
+<span class="line">				  <span class="cm-comment"># CONFLUENCE_TOKEN_FIELD=&quot;personal_token&quot;</span></span>
+<span class="line">				  <span class="cm-comment"># CONFLUENCE_SSL_VERIFY=&quot;false&quot;</span></span>
+<span class="line">				  </span>
+<span class="line">				  <span class="cm-comment"># JIRA_ITEM=&quot;Atlassian Jira Server&quot;</span></span>
+<span class="line">				  <span class="cm-comment"># JIRA_URL_FIELD=&quot;url&quot;</span></span>
+<span class="line">				  <span class="cm-comment"># JIRA_TOKEN_FIELD=&quot;personal_token&quot;</span></span>
+<span class="line">				  <span class="cm-comment"># JIRA_SSL_VERIFY=&quot;false&quot;</span></span>
+<span class="line">				  </span>
+<span class="line">				  <span class="cm-comment">################################################################################</span></span>
+<span class="line">				  <span class="cm-comment"># Main Script</span></span>
+<span class="line">				  <span class="cm-comment">################################################################################</span></span>
+<span class="line">				  </span>
+<span class="line">				  <span class="cm-comment"># Create environment file content using 1Password secret references</span></span>
+<span class="line">				  <span class="cm-variable">ENV_FILE_CONTENT</span><span class="cm-operator">=</span><span class="cm-string">&quot;</span></span>
+<span class="line"><span class="cm-string">				  CONFLUENCE_URL=op://${</span><span class="cm-variable">VAULT</span><span class="cm-string">}/${</span><span class="cm-variable">CONFLUENCE_ITEM</span><span class="cm-string">}/${</span><span class="cm-variable">CONFLUENCE_URL_FIELD</span><span class="cm-string">}</span></span>
+<span class="line"><span class="cm-string">				  CONFLUENCE_USERNAME=op://${</span><span class="cm-variable">VAULT</span><span class="cm-string">}/${</span><span class="cm-variable">CONFLUENCE_ITEM</span><span class="cm-string">}/${</span><span class="cm-variable">CONFLUENCE_USERNAME_FIELD</span><span class="cm-string">}</span></span>
+<span class="line"><span class="cm-string">				  CONFLUENCE_API_TOKEN=op://${</span><span class="cm-variable">VAULT</span><span class="cm-string">}/${</span><span class="cm-variable">CONFLUENCE_ITEM</span><span class="cm-string">}/${</span><span class="cm-variable">CONFLUENCE_TOKEN_FIELD</span><span class="cm-string">}</span></span>
+<span class="line"><span class="cm-string">				  JIRA_URL=op://${</span><span class="cm-variable">VAULT</span><span class="cm-string">}/${</span><span class="cm-variable">JIRA_ITEM</span><span class="cm-string">}/${</span><span class="cm-variable">JIRA_URL_FIELD</span><span class="cm-string">}</span></span>
+<span class="line"><span class="cm-string">				  JIRA_USERNAME=op://${</span><span class="cm-variable">VAULT</span><span class="cm-string">}/${</span><span class="cm-variable">JIRA_ITEM</span><span class="cm-string">}/${</span><span class="cm-variable">JIRA_USERNAME_FIELD</span><span class="cm-string">}</span></span>
+<span class="line"><span class="cm-string">				  JIRA_API_TOKEN=op://${</span><span class="cm-variable">VAULT</span><span class="cm-string">}/${</span><span class="cm-variable">JIRA_ITEM</span><span class="cm-string">}/${</span><span class="cm-variable">JIRA_TOKEN_FIELD</span><span class="cm-string">}</span></span>
+<span class="line"><span class="cm-string">				  &quot;</span></span>
+<span class="line">				  </span>
+<span class="line">				  <span class="cm-comment"># For Server/Data Center, uncomment and add:</span></span>
+<span class="line">				  <span class="cm-comment"># CONFLUENCE_SSL_VERIFY=${CONFLUENCE_SSL_VERIFY}</span></span>
+<span class="line">				  <span class="cm-comment"># JIRA_SSL_VERIFY=${JIRA_SSL_VERIFY}</span></span>
+<span class="line">				  </span>
+<span class="line">				  <span class="cm-comment"># Use process substitution to avoid saving credentials to disk</span></span>
+<span class="line">				  op run \</span>
+<span class="line"><span class="cm-variable">				    --env-file </span><span class="cm-operator">&lt;</span>(<span class="cm-builtin">echo </span><span class="cm-string">&quot;${</span><span class="cm-variable">ENV_FILE_CONTENT</span><span class="cm-string">}&quot;</span>) \</span>
+<span class="line"><span class="cm-operator">				    -- </span>\</span>
+<span class="line">				    docker run -i --rm \</span>
+<span class="line">				      -e CONFLUENCE_URL \</span>
+<span class="line">				      -e CONFLUENCE_USERNAME \</span>
+<span class="line">				      -e CONFLUENCE_API_TOKEN \</span>
+<span class="line">				      -e JIRA_URL \</span>
+<span class="line">				      -e JIRA_USERNAME \</span>
+<span class="line">				      -e JIRA_API_TOKEN \</span>
+<span class="line">				      ghcr.io/sooperset/mcp-atlassian:latest</span></code></pre></div></div></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-3f519748e068071a.html">rclone/How To/wrap with 1Password and mise</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>Use <code>~/.config/rclone/rclone.env</code> to hold 1Password secret references, then call <strong>rclone</strong> through a <strong>mise</strong> task that runs <code>op run</code> so secrets are injected at runtime.</li></ul></div></div></details></div></div></main></body></html>

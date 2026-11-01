@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>LangChain/Academy/LangSmith/M2 Testing and Evals/L2 Evaluators</title><script data-lsg-theme-script>/** Shared visitor appearance, independent of replaceable page content. */
+(() => {
+  try {
+    // Saved shell layout applies before paint; the phone overlay always starts closed.
+    const root = document.documentElement;
+    if (window.matchMedia?.('(min-width: 640px)')?.matches && window.localStorage.getItem('logseq-gardener-left-sidebar') === 'open') root.setAttribute('data-lsg-left-sidebar', 'open');
+    if (window.localStorage.getItem('logseq-gardener-wide') === 'true') root.setAttribute('data-lsg-wide', 'true');
+    // The right sidebar's column takes its width before paint; its cards load after load.
+    const right = JSON.parse(window.localStorage.getItem('logseq-gardener-right-sidebar') || 'null');
+    if (right && window.matchMedia?.('(min-width: 640px)')?.matches) {
+      root.setAttribute('data-lsg-right-sidebar', right.open ? 'open' : 'closed');
+      if (right.width > 0) root.style.setProperty('--lsg-right-width', right.width + 'px');
+    }
+  } catch { /* Layout keeps its defaults. */ }
+  if (typeof window.logseqGardenerInitTheme === 'function') return;
+  const key = 'logseq-gardener-theme';
+  const valid = value => value === 'light' || value === 'dark';
+  const read = () => {
+    try { const value = window.localStorage.getItem(key); return valid(value) ? value : 'system'; }
+    catch { return 'system'; }
+  };
+  let choice = read();
+  let media;
+  try { media = window.matchMedia?.('(prefers-color-scheme: dark)'); } catch { /* Light fallback. */ }
+  const appearance = () => choice === 'system' ? (media?.matches ? 'dark' : 'light') : choice;
+  const initialize = (root = document) => {
+    for (const select of root.querySelectorAll('[data-lsg-theme-select]')) {
+      select.value = choice;
+      const control = select.closest('[data-lsg-theme-control]');
+      if (control) control.hidden = false;
+    }
+  };
+  const apply = () => {
+    document.documentElement.setAttribute('data-lsg-theme', appearance());
+    document.documentElement.setAttribute('data-lsg-theme-mode', choice);
+    initialize();
+  };
+  const set = value => {
+    if (!valid(value) && value !== 'system') return;
+    choice = value;
+    try {
+      if (choice === 'system') window.localStorage.removeItem(key);
+      else window.localStorage.setItem(key, choice);
+    } catch { /* Keep this document's choice when storage is unavailable. */ }
+    apply();
+  };
+  window.logseqGardenerInitTheme = initialize;
+  window.logseqGardenerTheme = { choice: () => choice, appearance, set };
+  apply();
+  if (media?.addEventListener) media.addEventListener('change', apply);
+  else media?.addListener?.(apply);
+  document.addEventListener('change', event => {
+    const select = event.target;
+    if (select?.matches?.('[data-lsg-theme-select]')) set(select.value);
+  });
+  window.addEventListener('storage', event => {
+    if (event.key === key || event.key === null) { choice = read(); apply(); }
+  });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => initialize(), { once: true });
+})();
+</script><script defer src="lsg-shell.js"></script><link rel="lsg-search" href="lsg-search-manifest-1e91ba5239e1caaa.json" data-revision="1e91ba5239e1caaa"><link rel="stylesheet" href="lsg-shared-559a1c927f395608.css"><script data-lsg-search-start>(()=>{const f=(_,o)=>Object.assign(f.options??={},o);window.logseqGardenerInitSearch=f;const u=new URL('lsg-search-start-d1579d619a9675f1.mjs',document.querySelector('[rel=lsg-search]').href);document.addEventListener('DOMContentLoaded',()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{const s=document.createElement('script');s.type='module';s.src=u;s.onerror=()=>{if(!document.querySelector('[rel=lsg-search]'))return;const t=document.createElement('span');t.id='lsg-search-load';t.setAttribute('role','status');t.textContent='Search unavailable. Reload this page to retry search.';document.body.append(t)};document.head.append(s)})),{once:true})})();</script></head><body><header class="lsg-header cp__header"><button type="button" class="lsg-button" data-lsg-left-toggle aria-label="Toggle left sidebar" aria-controls="lsg-left-sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l16 0M4 12l16 0M4 18l16 0"/></svg></button><span class="lsg-header-space"></span><a class="lsg-button" href="index.html" aria-label="Home"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l-2 0l9 -9l9 9l-2 0M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg></a><a class="lsg-button button" href="graph.html#/graph" aria-label="Graph"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path id="lsg-i-graph" d="M10 5a2 2 0 1 0 4 0a2 2 0 1 0-4 0M3 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M17 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M6.5 17.5 12 13l5.5 4.5M12 7v6"/></svg></a><button type="button" class="lsg-button" data-lsg-search aria-label="Search garden" aria-haspopup="dialog" aria-controls="lsg-search-dialog" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0M21 21l-6 -6"/></svg></button><div class="lsg-more"><button type="button" class="lsg-button" data-lsg-more aria-label="More" aria-haspopup="menu" aria-controls="lsg-more-menu" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M20 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg></button><div id="lsg-more-menu" role="menu" aria-label="More" hidden><button type="button" role="menuitem" data-lsg-slides>View as slides</button><button type="button" role="menuitem" data-lsg-theme-toggle>Toggle theme</button><button type="button" role="menuitem" data-lsg-theme-system hidden>Use system theme</button></div></div><button type="button" class="lsg-button lsg-right-toggle" data-lsg-right-toggle aria-label="Toggle right sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2zM15 4l0 16"/></svg></button></header><aside id="lsg-left-sidebar" class="lsg-left-sidebar" aria-label="Left sidebar"><nav aria-label="Navigation"><ul><li><a href="index.html" data-lsg-journals-link><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12zM16 3v4M8 3v4M4 11h16M11 15h1M12 15v3"/></svg><span>Journals</span></a></li><li class="flashcards-nav"><a href="#" role="button" data-lsg-flashcards><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.828 9.172a4 4 0 1 0 0 5.656a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828"/></svg><span>Flashcards</span><span class="lsg-shortcut" aria-hidden="true">g f</span><span class="lsg-badge" data-lsg-due>430</span></a></li><li class="graph-view-nav"><a href="graph.html" data-lsg-graph-view><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#lsg-i-graph"/></svg><span>Graph view</span></a></li><li><a href="pages.html" data-lsg-all-pages><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3v4a1 1 0 0 0 1 1h4M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2zM16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2"/></svg><span>All pages</span></a></li></ul><h2 class="lsg-favorites-heading" id="lsg-favorites">Favorites</h2><ul aria-labelledby="lsg-favorites"><li><a href="p-08986007b541df27.html">fd</a></li><li><a href="p-710a025b0e00c8d5.html">gh-dash</a></li><li><a href="p-710a025b0e00c8d5.html">GitHub/CLI/Extension/gh-dash</a></li><li><a href="p-539dc7d0a39cc4ec.html">tuicr</a></li><li><a href="p-4276cb26f35edeca.html">tmux/Q/How can I put a thick border around the focused pane?</a></li><li><a href="p-62e5d9883ed48541.html">LazyVim</a></li><li><a href="p-abc1fe1091d210a5.html">Logseq/Flashcard/Review/Favorite</a></li><li><a href="p-7d113595e3cdeb70.html">Obsidian</a></li><li><a href="p-efba5ef46cf8e2e4.html">Codex</a></li><li><a href="p-398c5fe622fecdf8.html">chezmoi</a></li><li><a href="p-c02f89b682f53253.html">DevContainer</a></li><li><a href="p-da5911a2a798df4f.html">mise</a></li><li><a href="p-08dc5107b57b9276.html">rg</a></li><li><a href="p-68e903194eba71d7.html">vim</a></li><li><a href="p-74ff40ba60b70acb.html">nvim</a></li><li><a href="p-f237247b53a844f6.html">Zoxide</a></li><li><a href="p-a0d502498c67fd12.html">yazi</a></li><li><a href="p-424036ef4353ec8f.html">tmux</a></li><li><a href="p-e4db29888872bdd5.html">Lazygit</a></li></ul></nav></aside><div class="lsg-sidebar-shade" data-lsg-sidebar-shade hidden></div><main><h1>LangChain/Academy/LangSmith/M2 Testing and Evals/L2 Evaluators</h1><ul class="outline"><li><span id="source-block-0"></span><a class="bullet" href="#"></a><h1><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://academy.langchain.com/courses/take/intro-to-langsmith/lessons/60775108-lesson-2-evaluators">Introduction to LangSmith Lesson 2 - Evaluators</a></h1><ul><li><span id="source-block-152"></span><a class="bullet" href="#"></a><span class="page-reference"><a href="p-394849faa364f98b.html">LangChain/GitHub/intro-to-langsmith/notebooks/module_2/evaluators.ipynb</a></span><ul><li><span id="source-block-231"></span><a class="bullet" href="#"></a><span class="page-reference"><a href="p-35d24a09b2a42822.html">LangSmith/Evaluator</a></span><ul><li><span id="source-block-259"></span><span id="block-67eebcfb-1b9b-471e-b62a-fb30be68e868"></span><a class="bullet" href="#"></a><img src="https://raw.githubusercontent.com/langchain-ai/intro-to-langsmith/fa01611e733dd0e5e4c848fc823427d7e8870aff/images/evaluator.png" alt="graph showing how an evaluator calculates metrics using an example and a run, both of which are linked by a specific input" title="graph showing how an evaluator calculates metrics using an example and a run, both of which are linked by a specific input" loading="lazy"><ul><li><span id="source-block-566"></span><a class="bullet" href="#"></a><span class="page-reference"><a href="p-3f6e9db7b64c8cf6.html">Key Idea</a></span>: a specific input (<code>Input=x1</code>) is shared between a <span class="page-reference"><a href="p-5f3fcfef72a423c2.html">LangSmith/Dataset/Example</a></span> and a <span class="page-reference unresolved"><span>langsmith/Run</span></span>, and that run is over a specific version of your application (<code>v1</code>). The input is tied to a <span class="page-reference"><a href="p-e2a628d79a505021.html">LangSmith Reference Output</a></span>. The Input, Reference Output, and output from the Run over a specific version are the input to a specific Evaluator, whose job it is to calculate metrics.</li></ul></li><li><span id="source-block-968"></span><a class="bullet" href="#"></a>a very simple custom code evaluator that depends on <code>label</code><ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="python"><div class="extensions__code"><div class="extensions__code-lang">python</div><pre class="lsg-code"><code><span class="line"><span class="cm-keyword">from </span><span class="cm-variable">langsmith</span>.<span class="cm-variable">schemas </span><span class="cm-keyword">import </span><span class="cm-variable">Example</span>, <span class="cm-variable">Run</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-keyword">def </span><span class="cm-def">correct_label</span>(<span class="cm-variable">inputs</span>: <span class="cm-type">dict</span>, <span class="cm-variable">reference_outputs</span>: <span class="cm-type">dict</span>, <span class="cm-variable">outputs</span>: <span class="cm-type">dict</span>) -&gt; <span class="cm-type">dict</span>:</span>
+<span class="line">  <span class="cm-variable">score </span><span class="cm-operator">= </span><span class="cm-variable">outputs</span>.<span class="cm-variable">get</span>(<span class="cm-string">&quot;output&quot;</span>) <span class="cm-operator">== </span><span class="cm-variable">reference_outputs</span>.<span class="cm-variable">get</span>(<span class="cm-string">&quot;label&quot;</span>)</span>
+<span class="line">  <span class="cm-keyword">return </span>{<span class="cm-string">&quot;score&quot;</span>: <span class="cm-type">int</span>(<span class="cm-variable">score</span>), <span class="cm-string">&quot;key&quot;</span>: <span class="cm-string">&quot;correct_label&quot;</span>}</span></code></pre></div></div></li></ul></li></ul></li><li><span id="source-block-1335"></span><a class="bullet" href="#"></a><span class="page-reference"><a href="p-24d03f0fc3746309.html">AI/Eval/LLM as Judge</a></span><ul><li><span id="source-block-1364"></span><a class="bullet" href="#"></a><a class="tag" href="p-6de3d6e9660857a1.html">#Example</a><ul><li><span id="source-block-1378"></span><a class="bullet" href="#"></a>comparing semantic similarity of LLM output and the reference input<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="python"><div class="extensions__code"><div class="extensions__code-lang">python</div><pre class="lsg-code"><code><span class="line"><span class="cm-keyword">class </span><span class="cm-def">Similarity_Score</span>(<span class="cm-type">BaseModel</span>):</span>
+<span class="line">    <span class="cm-variable">similarity_score</span>: <span class="cm-type">int </span><span class="cm-operator">= </span><span class="cm-variable">Field</span>(<span class="cm-variable">description</span><span class="cm-operator">=</span><span class="cm-string">&quot;Semantic similarity score between 1 and 10, where 1 means unrelated and 10 means identical.&quot;</span>)</span></code></pre></div></div></li><li><span id="source-block-1670"></span><a class="bullet" href="#"></a>this will be the <span class="page-reference"><a href="p-dd426daeab7c5610.html">Structured Output</a></span> for the llm that&#39;s evaluating</li></ul></li><li><span id="source-block-1746"></span><a class="bullet" href="#"></a>custom <span class="page-reference unresolved"><span>LangSmith/Evaluator/Offline</span></span><ul><li><span id="source-block-1791"></span><a class="bullet" href="#"></a>system prompt<ul><li><span id="source-block-1812"></span><a class="bullet" href="#"></a>You are a semantic similarity evaluator. Compare the meanings of two responses to a question, Reference Response and New Response, where the reference is the correct answer, and we are trying to judge if the new response is similar. Provide a score between 1 and 10, where 1 means completely unrelated, and 10 means identical in meaning.</li></ul></li><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="python"><div class="extensions__code"><div class="extensions__code-lang">python</div><pre class="lsg-code"><code><span class="line"><span class="cm-comment"># NOTE: This is our evaluator</span></span>
+<span class="line"><span class="cm-keyword">def </span><span class="cm-def">compare_semantic_similarity</span>(<span class="cm-variable">inputs</span>: <span class="cm-type">dict</span>, <span class="cm-variable">reference_outputs</span>: <span class="cm-type">dict</span>, <span class="cm-variable">outputs</span>: <span class="cm-type">dict</span>):</span>
+<span class="line">    <span class="cm-variable">input_question </span><span class="cm-operator">= </span><span class="cm-variable">inputs</span>[<span class="cm-string">&quot;question&quot;</span>]</span>
+<span class="line">    <span class="cm-variable">reference_response </span><span class="cm-operator">= </span><span class="cm-variable">reference_outputs</span>[<span class="cm-string">&quot;output&quot;</span>]</span>
+<span class="line">    <span class="cm-variable">run_response </span><span class="cm-operator">= </span><span class="cm-variable">outputs</span>[<span class="cm-string">&quot;output&quot;</span>]</span>
+<span class="line">    </span>
+<span class="line">    <span class="cm-variable">completion </span><span class="cm-operator">= </span><span class="cm-variable">client</span>.<span class="cm-variable">beta</span>.<span class="cm-variable">chat</span>.<span class="cm-variable">completions</span>.<span class="cm-variable">parse</span>(</span>
+<span class="line">        <span class="cm-variable">model</span><span class="cm-operator">=</span><span class="cm-string">&quot;gpt-4o&quot;</span>,</span>
+<span class="line">        <span class="cm-variable">messages</span><span class="cm-operator">=</span>[</span>
+<span class="line">            {   </span>
+<span class="line">                <span class="cm-string">&quot;role&quot;</span>: <span class="cm-string">&quot;system&quot;</span>,</span>
+<span class="line">                <span class="cm-string">&quot;content&quot;</span>: (</span>
+<span class="line">                    <span class="cm-string">&quot;You are a semantic similarity evaluator. Compare the meanings of two responses to a question, &quot;</span></span>
+<span class="line">                    <span class="cm-string">&quot;Reference Response and New Response, where the reference is the correct answer, and we are trying to judge if the new response is similar. &quot;</span></span>
+<span class="line">                    <span class="cm-string">&quot;Provide a score between 1 and 10, where 1 means completely unrelated, and 10 means identical in meaning.&quot;</span></span>
+<span class="line">                ),</span>
+<span class="line">            },</span>
+<span class="line">            {<span class="cm-string">&quot;role&quot;</span>: <span class="cm-string">&quot;user&quot;</span>, <span class="cm-string">&quot;content&quot;</span>: <span class="cm-keyword">f</span><span class="cm-string">&quot;Question: </span>{<span class="cm-variable">input_question</span>}<span class="cm-string-2">\n</span><span class="cm-string"> Reference Response: </span>{<span class="cm-variable">reference_response</span>}<span class="cm-string-2">\n</span><span class="cm-string"> Run Response: </span>{<span class="cm-variable">run_response</span>}<span class="cm-string">&quot;</span>}</span>
+<span class="line">        ],</span>
+<span class="line">        <span class="cm-variable">response_format</span><span class="cm-operator">=</span><span class="cm-variable">Similarity_Score</span>,</span>
+<span class="line">    )</span>
+<span class="line"></span>
+<span class="line">    <span class="cm-variable">similarity_score </span><span class="cm-operator">= </span><span class="cm-variable">completion</span>.<span class="cm-variable">choices</span>[<span class="cm-number">0</span>].<span class="cm-variable">message</span>.<span class="cm-variable">parsed</span></span>
+<span class="line">    <span class="cm-keyword">return </span>{<span class="cm-string">&quot;score&quot;</span>: <span class="cm-variable">similarity_score</span>.<span class="cm-variable">similarity_score</span>, <span class="cm-string">&quot;key&quot;</span>: <span class="cm-string">&quot;similarity&quot;</span>}</span></code></pre></div></div></li><li><span id="source-block-3564"></span><a class="bullet" href="#"></a>example run<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="python"><div class="extensions__code"><div class="extensions__code-lang">python</div><pre class="lsg-code"><code><span class="line"><span class="cm-comment"># From Dataset typed dict</span></span>
+<span class="line"><span class="cm-variable">inputs </span><span class="cm-operator">= </span>{</span>
+<span class="line">  <span class="cm-string">&quot;question&quot;</span>: <span class="cm-string">&quot;Is LangSmith natively integrated with LangChain?&quot;</span></span>
+<span class="line">}</span>
+<span class="line"><span class="cm-variable">reference_outputs </span><span class="cm-operator">= </span>{</span>
+<span class="line">  <span class="cm-string">&quot;output&quot;</span>: <span class="cm-string">&quot;Yes, LangSmith is natively integrated with LangChain, as well as LangGraph.&quot;</span></span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span class="cm-comment"># From Run typed dict... </span></span>
+<span class="line"><span class="cm-comment"># PURPOSELY incorrect answer</span></span>
+<span class="line"><span class="cm-variable">outputs </span><span class="cm-operator">= </span>{</span>
+<span class="line">  <span class="cm-string">&quot;output&quot;</span>: <span class="cm-string">&quot;No, LangSmith is NOT integrated with LangChain.&quot;</span></span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line"><span class="cm-variable">similarity_score </span><span class="cm-operator">= </span><span class="cm-variable">compare_semantic_similarity</span>(<span class="cm-variable">inputs</span>, <span class="cm-variable">reference_outputs</span>, <span class="cm-variable">outputs</span>)</span>
+<span class="line"><span class="cm-builtin">print</span>(<span class="cm-keyword">f</span><span class="cm-string">&quot;Semantic similarity score: </span>{<span class="cm-variable">similarity_score</span>}<span class="cm-string">&quot;</span>)</span>
+<span class="line"><span class="cm-comment"># should be low, i.e. 0, 1</span></span></code></pre></div></div></li></ul></li><li><span id="source-block-4275"></span><a class="bullet" href="#"></a>so this should produce</li></ul></li></ul></li><li><span id="source-block-4305"></span><a class="bullet" href="#"></a><a class="tag" href="p-6de3d6e9660857a1.html">#Example</a> 2 - this is an &quot;older&quot; method that you still see in docs, they DO NOT recommend this but instead recommend using the above<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="python"><div class="extensions__code"><div class="extensions__code-lang">python</div><pre class="lsg-code"><code><span class="line"><span class="cm-keyword">from </span><span class="cm-variable">langsmith</span>.<span class="cm-variable">schemas </span><span class="cm-keyword">import </span><span class="cm-variable">Run</span>, <span class="cm-variable">Example</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-keyword">def </span><span class="cm-def">compare_semantic_similarity_v2</span>(<span class="cm-variable">root_run</span>: <span class="cm-variable">Run</span>, <span class="cm-variable">example</span>: <span class="cm-variable">Example</span>):</span>
+<span class="line">    <span class="cm-variable">input_question </span><span class="cm-operator">= </span><span class="cm-variable">example</span>[<span class="cm-string">&quot;inputs&quot;</span>][<span class="cm-string">&quot;question&quot;</span>]</span>
+<span class="line">    <span class="cm-variable">reference_response </span><span class="cm-operator">= </span><span class="cm-variable">example</span>[<span class="cm-string">&quot;outputs&quot;</span>][<span class="cm-string">&quot;output&quot;</span>]</span>
+<span class="line">    <span class="cm-variable">run_response </span><span class="cm-operator">= </span><span class="cm-variable">root_run</span>[<span class="cm-string">&quot;outputs&quot;</span>][<span class="cm-string">&quot;output&quot;</span>]</span>
+<span class="line">    </span>
+<span class="line">    <span class="cm-variable">completion </span><span class="cm-operator">= </span><span class="cm-variable">client</span>.<span class="cm-variable">beta</span>.<span class="cm-variable">chat</span>.<span class="cm-variable">completions</span>.<span class="cm-variable">parse</span>(</span>
+<span class="line">        <span class="cm-variable">model</span><span class="cm-operator">=</span><span class="cm-string">&quot;gpt-4o&quot;</span>,</span>
+<span class="line">        <span class="cm-variable">messages</span><span class="cm-operator">=</span>[</span>
+<span class="line">            {   </span>
+<span class="line">                <span class="cm-string">&quot;role&quot;</span>: <span class="cm-string">&quot;system&quot;</span>,</span>
+<span class="line">                <span class="cm-string">&quot;content&quot;</span>: (</span>
+<span class="line">                    <span class="cm-string">&quot;You are a semantic similarity evaluator. Compare the meanings of two responses to a question, &quot;</span></span>
+<span class="line">                    <span class="cm-string">&quot;Reference Response and New Response, where the reference is the correct answer, and we are trying to judge if the new response is similar. &quot;</span></span>
+<span class="line">                    <span class="cm-string">&quot;Provide a score between 1 and 10, where 1 means completely unrelated, and 10 means identical in meaning.&quot;</span></span>
+<span class="line">                ),</span>
+<span class="line">            },</span>
+<span class="line">            {<span class="cm-string">&quot;role&quot;</span>: <span class="cm-string">&quot;user&quot;</span>, <span class="cm-string">&quot;content&quot;</span>: <span class="cm-keyword">f</span><span class="cm-string">&quot;Question: </span>{<span class="cm-variable">input_question</span>}<span class="cm-string-2">\n</span><span class="cm-string"> Reference Response: </span>{<span class="cm-variable">reference_response</span>}<span class="cm-string-2">\n</span><span class="cm-string"> Run Response: </span>{<span class="cm-variable">run_response</span>}<span class="cm-string">&quot;</span>}</span>
+<span class="line">        ],</span>
+<span class="line">        <span class="cm-variable">response_format</span><span class="cm-operator">=</span><span class="cm-variable">Similarity_Score</span>,</span>
+<span class="line">    )</span>
+<span class="line"></span>
+<span class="line">    <span class="cm-variable">similarity_score </span><span class="cm-operator">= </span><span class="cm-variable">completion</span>.<span class="cm-variable">choices</span>[<span class="cm-number">0</span>].<span class="cm-variable">message</span>.<span class="cm-variable">parsed</span></span>
+<span class="line">    <span class="cm-keyword">return </span>{<span class="cm-string">&quot;score&quot;</span>: <span class="cm-variable">similarity_score</span>.<span class="cm-variable">similarity_score</span>, <span class="cm-string">&quot;key&quot;</span>: <span class="cm-string">&quot;similarity&quot;</span>}</span>
+<span class="line">  </span>
+<span class="line">  <span class="cm-variable">sample_run </span><span class="cm-operator">= </span>{</span>
+<span class="line">  <span class="cm-string">&quot;name&quot;</span>: <span class="cm-string">&quot;Sample Run&quot;</span>,</span>
+<span class="line">  <span class="cm-string">&quot;inputs&quot;</span>: {</span>
+<span class="line">    <span class="cm-string">&quot;question&quot;</span>: <span class="cm-string">&quot;Is LangSmith natively integrated with LangChain?&quot;</span></span>
+<span class="line">  },</span>
+<span class="line">  <span class="cm-string">&quot;outputs&quot;</span>: {</span>
+<span class="line">    <span class="cm-string">&quot;output&quot;</span>: <span class="cm-string">&quot;No, LangSmith is NOT integrated with LangChain.&quot;</span></span>
+<span class="line">  },</span>
+<span class="line">  <span class="cm-string">&quot;is_root&quot;</span>: <span class="cm-atom">True</span>,</span>
+<span class="line">  <span class="cm-string">&quot;status&quot;</span>: <span class="cm-string">&quot;success&quot;</span>,</span>
+<span class="line">  <span class="cm-string">&quot;extra&quot;</span>: {</span>
+<span class="line">    <span class="cm-string">&quot;metadata&quot;</span>: {</span>
+<span class="line">      <span class="cm-string">&quot;key&quot;</span>: <span class="cm-string">&quot;value&quot;</span></span>
+<span class="line">    }</span>
+<span class="line">  }</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line"><span class="cm-variable">sample_example </span><span class="cm-operator">= </span>{</span>
+<span class="line">  <span class="cm-string">&quot;inputs&quot;</span>: {</span>
+<span class="line">    <span class="cm-string">&quot;question&quot;</span>: <span class="cm-string">&quot;Is LangSmith natively integrated with LangChain?&quot;</span></span>
+<span class="line">  },</span>
+<span class="line">  <span class="cm-string">&quot;outputs&quot;</span>: {</span>
+<span class="line">    <span class="cm-string">&quot;output&quot;</span>: <span class="cm-string">&quot;Yes, LangSmith is natively integrated with LangChain, as well as LangGraph.&quot;</span></span>
+<span class="line">  },</span>
+<span class="line">  <span class="cm-string">&quot;metadata&quot;</span>: {</span>
+<span class="line">    <span class="cm-string">&quot;dataset_split&quot;</span>: [</span>
+<span class="line">      <span class="cm-string">&quot;AI generated&quot;</span>,</span>
+<span class="line">      <span class="cm-string">&quot;base&quot;</span></span>
+<span class="line">    ]</span>
+<span class="line">  }</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line"><span class="cm-variable">similarity_score </span><span class="cm-operator">= </span><span class="cm-variable">compare_semantic_similarity_v2</span>(<span class="cm-variable">sample_run</span>, <span class="cm-variable">sample_example</span>)</span>
+<span class="line"><span class="cm-builtin">print</span>(<span class="cm-keyword">f</span><span class="cm-string">&quot;Semantic similarity score: </span>{<span class="cm-variable">similarity_score</span>}<span class="cm-string">&quot;</span>)</span></code></pre></div></div></li></ul></li></ul></li></ul></li><li><span id="source-block-6817"></span><a class="bullet" href="#"></a>08:00 langsmith UI<ul><li><span id="source-block-6839"></span><a class="bullet" href="#"></a>09:00 adding an evaluator to a <span class="page-reference unresolved"><span>LangSmith/Dataset</span></span><ul><li><span id="source-block-6896"></span><a class="bullet" href="#"></a>defining an <span class="page-reference unresolved"><span>LangSmith/Evaluator/Online/LLM as a Judge</span></span><ul><li><span id="source-block-6959"></span><a class="bullet" href="#"></a>You can configure model temperature here</li><li><span id="source-block-7006"></span><a class="bullet" href="#"></a>they have a few <span class="page-reference unresolved"><span>Off-the-Shelf</span></span> <span class="page-reference unresolved"><span>LangSmith/Evaluator/Auto</span></span></li><li><span id="source-block-7075"></span><a class="bullet" href="#"></a>we have to put in the prompt here that&#39;s similar to the one we made above ... they are grading for similarity between the reference and submission</li><li><span id="source-block-7228"></span><a class="bullet" href="#"></a>filling in the variables<ul><li><a class="bullet" href="#"></a><img src="assets/a-8d9faf94b635c7bb.png" alt="image.png" title="image.png" loading="lazy"><ul><li><span id="source-block-7316"></span><a class="bullet" href="#"></a><code>question</code> - <code>input.question</code></li><li><span id="source-block-7354"></span><a class="bullet" href="#"></a><code>submission</code> - <code>output.output</code></li><li><span id="source-block-7393"></span><a class="bullet" href="#"></a><code>reference</code> - <code>reference_output.output</code><ul><li><span id="source-block-7441"></span><a class="bullet" href="#"></a>we don&#39;t know the shape of our outputs</li></ul></li></ul></li></ul></li><li><span id="source-block-7489"></span><a class="bullet" href="#"></a>output schema<ul><li><span id="source-block-7509"></span><a class="bullet" href="#"></a>we&#39;re again redefining the same <code>similarity_score</code> as above</li></ul></li></ul></li></ul></li><li><span id="source-block-7576"></span><a class="bullet" href="#"></a>12:54 <span class="page-reference unresolved"><span>LangSmith/Evaluator/Custom Code</span></span> using <span class="page-reference"><a href="p-09424f07b5d24242.html">Py</a></span><ul><li><span id="source-block-7635"></span><a class="bullet" href="#"></a>this only has basic libraries</li><li><span id="source-block-7670"></span><a class="bullet" href="#"></a>but you can test directly in the UI<ul><li><span id="source-block-7711"></span><a class="bullet" href="#"></a><h2>Function</h2><ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="python"><div class="extensions__code"><div class="extensions__code-lang">python</div><pre class="lsg-code"><code><span class="line"><span class="cm-keyword">def </span><span class="cm-def">perform_eval</span>(<span class="cm-variable">run</span>, <span class="cm-variable">example</span>):</span>
+<span class="line">  <span class="cm-comment"># run is a Run object</span></span>
+<span class="line">  <span class="cm-comment"># example is an Example object</span></span>
+<span class="line"></span>
+<span class="line">  <span class="cm-comment"># Example usages:</span></span>
+<span class="line">  <span class="cm-variable">equals_str </span><span class="cm-operator">= </span><span class="cm-variable">run</span>[<span class="cm-string">&#39;outputs&#39;</span>][<span class="cm-string">&#39;output&#39;</span>] <span class="cm-operator">== </span><span class="cm-variable">example</span>[<span class="cm-string">&#39;outputs&#39;</span>][<span class="cm-string">&#39;output&#39;</span>]</span>
+<span class="line"></span>
+<span class="line">  <span class="cm-comment"># contains_str = &#39;expected_to_contain&#39; in run[&#39;outputs&#39;][&#39;my_key&#39;]</span></span>
+<span class="line"></span>
+<span class="line">  <span class="cm-comment"># decoded_json = json.loads(run[&#39;outputs&#39;][&#39;stringified_json_key&#39;])</span></span>
+<span class="line"></span>
+<span class="line">  <span class="cm-variable">score </span><span class="cm-operator">= </span><span class="cm-number">1</span></span>
+<span class="line">  <span class="cm-keyword">return </span>{ <span class="cm-string">&quot;feedback_key&quot;</span>: <span class="cm-variable">equals_str </span>}</span></code></pre></div></div></li></ul></li><li><span id="source-block-8224"></span><a class="bullet" href="#"></a><h2>Input Run</h2><ul><li><span id="source-block-8243"></span><a class="bullet" href="#"></a>13:54 it&#39;s a bit confusing here if you don&#39;t quite know what&#39;s going on - the input here is bogus, but you can edit it and apparently you can get a result back right there in the UI</li><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="python"><div class="extensions__code"><div class="extensions__code-lang">python</div><pre class="lsg-code"><code><span class="line">{</span>
+<span class="line">  <span class="cm-string">&quot;name&quot;</span>: <span class="cm-string">&quot;Sample Run&quot;</span>,</span>
+<span class="line">  <span class="cm-string">&quot;inputs&quot;</span>: {</span>
+<span class="line">      <span class="cm-string">&quot;input&quot;</span>: <span class="cm-string">&quot;value&quot;</span></span>
+<span class="line">  },</span>
+<span class="line">  <span class="cm-string">&quot;outputs&quot;</span>: {</span>
+<span class="line">      <span class="cm-string">&quot;output&quot;</span>: <span class="cm-string">&quot;value&quot;</span></span>
+<span class="line">  },</span>
+<span class="line">  <span class="cm-string">&quot;is_root&quot;</span>: <span class="cm-variable">true</span>,</span>
+<span class="line">  <span class="cm-string">&quot;status&quot;</span>: <span class="cm-string">&quot;success&quot;</span>,</span>
+<span class="line">  <span class="cm-string">&quot;extra&quot;</span>: {</span>
+<span class="line">      <span class="cm-string">&quot;metadata&quot;</span>: {}</span>
+<span class="line">  }</span>
+<span class="line">}</span></code></pre></div></div></li></ul></li><li><span id="source-block-8752"></span><a class="bullet" href="#"></a><h2>Input Example</h2><ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="python"><div class="extensions__code"><div class="extensions__code-lang">python</div><pre class="lsg-code"><code><span class="line">{</span>
+<span class="line">  <span class="cm-string">&quot;inputs&quot;</span>: {</span>
+<span class="line">      <span class="cm-string">&quot;question&quot;</span>: <span class="cm-string">&quot;What is LangSmith used for in three sentences?&quot;</span></span>
+<span class="line">  },</span>
+<span class="line">  <span class="cm-string">&quot;outputs&quot;</span>: {</span>
+<span class="line">      <span class="cm-string">&quot;output&quot;</span>: <span class="cm-string">&quot;LangSmith is a platform designed for the development, monitoring, and testing of LLM applications. It enables users to collect and analyze unstructured data, debug issues, and create datasets for testing and evaluation. The tool supports various workflows throughout the&quot;</span></span>
+<span class="line">  }</span>
+<span class="line">}</span></code></pre></div></div></li></ul></li><li><span id="source-block-9257"></span><a class="bullet" href="#"></a><h2>Result</h2><ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="python"><div class="extensions__code"><div class="extensions__code-lang">python</div><pre class="lsg-code"><code><span class="line">{</span>
+<span class="line">  <span class="cm-string">&quot;feedback_key&quot;</span>: <span class="cm-atom">False</span></span>
+<span class="line">}</span></code></pre></div></div></li></ul></li></ul></li></ul></li><li><span id="source-block-9350"></span><a class="bullet" href="#"></a>14:05 <span class="page-reference unresolved"><span>Take-Away</span></span>s<ul><li><span id="source-block-9375"></span><a class="bullet" href="#"></a><h2>Takeaways</h2><ul><li><span id="source-block-9393"></span><a class="bullet" href="#"></a>Evaluators calculate metrics based on a Run and an Example<ul><li><span id="source-block-9458"></span><a class="bullet" href="#"></a>Specifically, from the Input, Reference output, and Run Output</li></ul></li><li><span id="source-block-9528"></span><a class="bullet" href="#"></a>You can define Evaluators directly in your local code</li><li><span id="source-block-9588"></span><a class="bullet" href="#"></a>You can ALSO define Evaluators in the LangSmith UI<ul><li><span id="source-block-9645"></span><a class="bullet" href="#"></a>LLM-as-judge evaluators</li><li><span id="source-block-9676"></span><a class="bullet" href="#"></a>Custom code evaluators</li></ul></li></ul></li></ul></li></ul></li></ul></li></ul><section class="references linked-references" id="linked-references" data-refs="linked" data-src="_refs/p-c09426fdf9b4754a-linked-1.html"><details class="references-section"><summary><span class="ref-chevron"></span><h2>1 Linked Reference</h2><button type="button" class="filter" title="Filter" aria-label="Filter" data-state="none" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v2.172a2 2 0 0 1-.586 1.414L15 12v7l-6 2v-8.5L4.52 7.572A2 2 0 0 1 4 6.227z"/></svg></button></summary><noscript><a href="_refs/p-c09426fdf9b4754a-linked-1.html">Show linked references</a></noscript><div class="references-body"><p role="status"></p></div></details></section><section class="page-hierarchy references" aria-label="Hierarchy"><details class="references-section" open><summary><span class="ref-chevron"></span><h2>Hierarchy</h2></summary><ul class="namespaces"><li><span class="page-reference"><a class="namespace-link" aria-label="LangChain (Namespace)" href="p-ceeac3a745068206.html">LangChain</a></span><span class="namespace-separator" aria-hidden="true">/</span><span class="page-reference"><a class="namespace-link" aria-label="LangChain/Academy (Namespace)" href="p-7e2ced21affac913.html">Academy</a></span><span class="namespace-separator" aria-hidden="true">/</span><span class="page-reference"><a class="namespace-link" aria-label="LangChain/Academy/LangSmith (Namespace)" href="p-5f0d75709a85e103.html">LangSmith</a></span><span class="namespace-separator" aria-hidden="true">/</span><span class="page-reference"><a href="p-71e70855c178cfcd.html">M2 Testing and Evals</a></span></li></ul></details></section><section class="references linked-references unlinked-references" data-refs="unlinked"><details class="references-section"><summary><span class="ref-chevron"></span><h2>Unlinked References</h2></summary><noscript>No unlinked references.</noscript><div class="references-body"></div></details></section></main><script data-lsg-fragments>// Native fragment navigation does not run when a host swaps page content.
+// Hosts can call this helper before their own fragment focus/scroll handling.
+(() => {
+  function reveal(fragment = location.hash, { scroll = true } = {}) {
+    let id;
+    try { id = decodeURIComponent(fragment.replace(/^#/, "")); }
+    catch { return null; }
+    const target = id && document.getElementById(id);
+    if (!target) return null;
+    for (let parent = target.parentElement; parent; parent = parent.parentElement) {
+      if (parent.tagName === "DETAILS") parent.open = true;
+      parent.classList?.remove("folded");
+    }
+    if (scroll) target.scrollIntoView();
+    return target;
+  }
+  window.logseqGardenerRevealFragment = reveal;
+  window.addEventListener("hashchange", () => reveal());
+  reveal();
+})();
+</script></body></html>

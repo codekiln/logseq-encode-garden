@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Langstar/Log/26/01/23 Fri</title><script data-lsg-theme-script>/** Shared visitor appearance, independent of replaceable page content. */
+(() => {
+  try {
+    // Saved shell layout applies before paint; the phone overlay always starts closed.
+    const root = document.documentElement;
+    if (window.matchMedia?.('(min-width: 640px)')?.matches && window.localStorage.getItem('logseq-gardener-left-sidebar') === 'open') root.setAttribute('data-lsg-left-sidebar', 'open');
+    if (window.localStorage.getItem('logseq-gardener-wide') === 'true') root.setAttribute('data-lsg-wide', 'true');
+    // The right sidebar's column takes its width before paint; its cards load after load.
+    const right = JSON.parse(window.localStorage.getItem('logseq-gardener-right-sidebar') || 'null');
+    if (right && window.matchMedia?.('(min-width: 640px)')?.matches) {
+      root.setAttribute('data-lsg-right-sidebar', right.open ? 'open' : 'closed');
+      if (right.width > 0) root.style.setProperty('--lsg-right-width', right.width + 'px');
+    }
+  } catch { /* Layout keeps its defaults. */ }
+  if (typeof window.logseqGardenerInitTheme === 'function') return;
+  const key = 'logseq-gardener-theme';
+  const valid = value => value === 'light' || value === 'dark';
+  const read = () => {
+    try { const value = window.localStorage.getItem(key); return valid(value) ? value : 'system'; }
+    catch { return 'system'; }
+  };
+  let choice = read();
+  let media;
+  try { media = window.matchMedia?.('(prefers-color-scheme: dark)'); } catch { /* Light fallback. */ }
+  const appearance = () => choice === 'system' ? (media?.matches ? 'dark' : 'light') : choice;
+  const initialize = (root = document) => {
+    for (const select of root.querySelectorAll('[data-lsg-theme-select]')) {
+      select.value = choice;
+      const control = select.closest('[data-lsg-theme-control]');
+      if (control) control.hidden = false;
+    }
+  };
+  const apply = () => {
+    document.documentElement.setAttribute('data-lsg-theme', appearance());
+    document.documentElement.setAttribute('data-lsg-theme-mode', choice);
+    initialize();
+  };
+  const set = value => {
+    if (!valid(value) && value !== 'system') return;
+    choice = value;
+    try {
+      if (choice === 'system') window.localStorage.removeItem(key);
+      else window.localStorage.setItem(key, choice);
+    } catch { /* Keep this document's choice when storage is unavailable. */ }
+    apply();
+  };
+  window.logseqGardenerInitTheme = initialize;
+  window.logseqGardenerTheme = { choice: () => choice, appearance, set };
+  apply();
+  if (media?.addEventListener) media.addEventListener('change', apply);
+  else media?.addListener?.(apply);
+  document.addEventListener('change', event => {
+    const select = event.target;
+    if (select?.matches?.('[data-lsg-theme-select]')) set(select.value);
+  });
+  window.addEventListener('storage', event => {
+    if (event.key === key || event.key === null) { choice = read(); apply(); }
+  });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => initialize(), { once: true });
+})();
+</script><script defer src="lsg-shell.js"></script><link rel="lsg-search" href="lsg-search-manifest-1e91ba5239e1caaa.json" data-revision="1e91ba5239e1caaa"><link rel="stylesheet" href="lsg-shared-559a1c927f395608.css"><script data-lsg-search-start>(()=>{const f=(_,o)=>Object.assign(f.options??={},o);window.logseqGardenerInitSearch=f;const u=new URL('lsg-search-start-d1579d619a9675f1.mjs',document.querySelector('[rel=lsg-search]').href);document.addEventListener('DOMContentLoaded',()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{const s=document.createElement('script');s.type='module';s.src=u;s.onerror=()=>{if(!document.querySelector('[rel=lsg-search]'))return;const t=document.createElement('span');t.id='lsg-search-load';t.setAttribute('role','status');t.textContent='Search unavailable. Reload this page to retry search.';document.body.append(t)};document.head.append(s)})),{once:true})})();</script></head><body><header class="lsg-header cp__header"><button type="button" class="lsg-button" data-lsg-left-toggle aria-label="Toggle left sidebar" aria-controls="lsg-left-sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l16 0M4 12l16 0M4 18l16 0"/></svg></button><span class="lsg-header-space"></span><a class="lsg-button" href="index.html" aria-label="Home"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l-2 0l9 -9l9 9l-2 0M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg></a><a class="lsg-button button" href="graph.html#/graph" aria-label="Graph"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path id="lsg-i-graph" d="M10 5a2 2 0 1 0 4 0a2 2 0 1 0-4 0M3 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M17 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M6.5 17.5 12 13l5.5 4.5M12 7v6"/></svg></a><button type="button" class="lsg-button" data-lsg-search aria-label="Search garden" aria-haspopup="dialog" aria-controls="lsg-search-dialog" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0M21 21l-6 -6"/></svg></button><div class="lsg-more"><button type="button" class="lsg-button" data-lsg-more aria-label="More" aria-haspopup="menu" aria-controls="lsg-more-menu" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M20 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg></button><div id="lsg-more-menu" role="menu" aria-label="More" hidden><button type="button" role="menuitem" data-lsg-slides>View as slides</button><button type="button" role="menuitem" data-lsg-theme-toggle>Toggle theme</button><button type="button" role="menuitem" data-lsg-theme-system hidden>Use system theme</button></div></div><button type="button" class="lsg-button lsg-right-toggle" data-lsg-right-toggle aria-label="Toggle right sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2zM15 4l0 16"/></svg></button></header><aside id="lsg-left-sidebar" class="lsg-left-sidebar" aria-label="Left sidebar"><nav aria-label="Navigation"><ul><li><a href="index.html" data-lsg-journals-link><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12zM16 3v4M8 3v4M4 11h16M11 15h1M12 15v3"/></svg><span>Journals</span></a></li><li class="flashcards-nav"><a href="#" role="button" data-lsg-flashcards><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.828 9.172a4 4 0 1 0 0 5.656a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828"/></svg><span>Flashcards</span><span class="lsg-shortcut" aria-hidden="true">g f</span><span class="lsg-badge" data-lsg-due>430</span></a></li><li class="graph-view-nav"><a href="graph.html" data-lsg-graph-view><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#lsg-i-graph"/></svg><span>Graph view</span></a></li><li><a href="pages.html" data-lsg-all-pages><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3v4a1 1 0 0 0 1 1h4M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2zM16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2"/></svg><span>All pages</span></a></li></ul><h2 class="lsg-favorites-heading" id="lsg-favorites">Favorites</h2><ul aria-labelledby="lsg-favorites"><li><a href="p-08986007b541df27.html">fd</a></li><li><a href="p-710a025b0e00c8d5.html">gh-dash</a></li><li><a href="p-710a025b0e00c8d5.html">GitHub/CLI/Extension/gh-dash</a></li><li><a href="p-539dc7d0a39cc4ec.html">tuicr</a></li><li><a href="p-4276cb26f35edeca.html">tmux/Q/How can I put a thick border around the focused pane?</a></li><li><a href="p-62e5d9883ed48541.html">LazyVim</a></li><li><a href="p-abc1fe1091d210a5.html">Logseq/Flashcard/Review/Favorite</a></li><li><a href="p-7d113595e3cdeb70.html">Obsidian</a></li><li><a href="p-efba5ef46cf8e2e4.html">Codex</a></li><li><a href="p-398c5fe622fecdf8.html">chezmoi</a></li><li><a href="p-c02f89b682f53253.html">DevContainer</a></li><li><a href="p-da5911a2a798df4f.html">mise</a></li><li><a href="p-08dc5107b57b9276.html">rg</a></li><li><a href="p-68e903194eba71d7.html">vim</a></li><li><a href="p-74ff40ba60b70acb.html">nvim</a></li><li><a href="p-f237247b53a844f6.html">Zoxide</a></li><li><a href="p-a0d502498c67fd12.html">yazi</a></li><li><a href="p-424036ef4353ec8f.html">tmux</a></li><li><a href="p-e4db29888872bdd5.html">Lazygit</a></li></ul></nav></aside><div class="lsg-sidebar-shade" data-lsg-sidebar-shade hidden></div><main><h1>Langstar/Log/26/01/23 Fri</h1><ul class="outline"><li><span id="source-block-0"></span><a class="bullet" href="#"></a><span class="page-reference"><a href="p-dc8ab3b5ba457d40.html">2026-01-23 Fri</a></span></li><li><span id="source-block-21"></span><a class="bullet" href="#"></a>Yesterday at the end of the day I merged a <span class="page-reference"><a href="p-e49b00af8c927c32.html">PR</a></span> <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/codekiln/langstar/pull/726">✨ feat(assistant): add description field support from Agent Server API by codekiln · Pull Request #726 · codekiln/langstar</a>, then I tried to bump a release that failed: <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/codekiln/langstar/actions/runs/21266803470">Prepare Release · codekiln/langstar@4a57ccb</a><ul><li><span id="source-block-404"></span><a class="bullet" href="#"></a><h2><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/codekiln/langstar/pull/723">✨ feat(prompt): add parent commit options to resolve 409 conflicts by codekiln · Pull Request #723 · codekiln/langstar</a></h2><ul><li><span id="source-block-582"></span><a class="bullet" href="#"></a>In a <span class="page-reference"><a href="p-8d97c56109ca3160.html">GitHub Codespace</a></span>, I had a worker chunking away on issue number 719. But for some reason, there was a task still running. I wonder if this has to do with the stalling / ram things I noticed recently in <span class="page-reference"><a href="p-c02f89b682f53253.html">DevContainer</a></span>s with <span class="page-reference"><a href="p-bd573340af85d2a1.html">Langstar</a></span>?<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">  Updated PR Description                                                           </span>
+<span class="line">                                                                                   </span>
+<span class="line">  I&#39;ve updated the PR #723 description to include a comprehensive validation report</span>
+<span class="line">   showing all the tests performed, code analysis, and verification that this      </span>
+<span class="line">  implementation correctly solves the issue.                                       </span>
+<span class="line">                                                                                   </span>
+<span class="line">  The implementation is production-ready! 🚀                                       </span>
+<span class="line">                                                                                   </span>
+<span class="line">✻ Baked for 24m 28s                                                                </span>
+<span class="line">                                                                                   </span>
+<span class="line">* Reticulating… (esc to interrupt · 31m 37s · ↓ 0 tokens)                          </span>
+<span class="line">                                                                                   </span>
+<span class="line">╭─────────────────────────────────────────────────────────────────────────────────╮</span>
+<span class="line">│ Shell details                                                                   │</span>
+<span class="line">│                                                                                 │</span>
+<span class="line">│ Status: running                                                                 │</span>
+<span class="line">│ Runtime: 47m 54s                                                                │</span>
+<span class="line">│ Command: tail -f /tmp/claude/-workspace/tasks/bdde30c.output 2&gt;&amp;1 | tail -20    │</span>
+<span class="line">│                                                                                 │</span>
+<span class="line">│ Output:                                                                         │</span>
+<span class="line">│ No output available  </span></code></pre></div></div></li><li><span id="source-block-2866"></span><span id="block-69737656-2432-4deb-8b30-b42cfeddd327"></span><a class="bullet" href="#"></a>When I look at that file, I see it&#39;s zero bytes<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line"> node  /workspace   main ↓1  ls -la /tmp/claude/-workspace/tasks/bdde30c.output </span>
+<span class="line">-rw-r--rw- 1 node node 0 Jan 23 07:34 /tmp/claude/-workspace/tasks/bdde30c.output</span></code></pre></div></div></li></ul></li><li><span id="source-block-3175"></span><a class="bullet" href="#"></a>Furthermore, it seems as though claude is unresponsive. if I ask <code>Can you tell me what the background task is doing?</code>, there is no response. If I manually kill the background task using claude&#39;s interface, it says <code>● Background command &quot;Check test progress&quot; failed with exit code 137</code>. Maybe this has to do with my CI</li><li><span id="source-block-3500"></span><a class="bullet" href="#"></a>If I hit escape 3-4 times, I see<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">✻ Baked for 24m 28s                                                                </span>
+<span class="line">                                                                                   </span>
+<span class="line">● Background command &quot;Run get_commit and push tests&quot; completed (exit code 0)       </span>
+<span class="line">  ⎿  Interrupted · What should Claude do instead?                                  </span>
+<span class="line">                                                                                   </span>
+<span class="line">● Background command &quot;Run full test suite and check summary&quot; completed (exit code  </span>
+<span class="line">0)                                                                                 </span>
+<span class="line">  ⎿  Interrupted · What should Claude do instead?                                  </span>
+<span class="line">                                                                                   </span>
+<span class="line">● Background command &quot;Check test progress&quot; failed with exit code 137               </span>
+<span class="line">  ⎿  Interrupted · What should Claude do instead?   </span>
+<span class="line">  </span>
+<span class="line">❯ why were those commands stalled?                                                 </span>
+<span class="line">                                                                                   </span>
+<span class="line">● Looking at the task notifications:                                               </span>
+<span class="line">                                                                                   </span>
+<span class="line">  1. be52b03 (Run get_commit and push tests) - ✅ Completed successfully (exit code</span>
+<span class="line">   0)                                                                              </span>
+<span class="line">  2. ba27b19 (Run full test suite) - ✅ Completed successfully (exit code 0)       </span>
+<span class="line">  3. b139958 (Check test progress) - ❌ Failed with exit code 137 (SIGKILL)        </span>
+<span class="line">                                                                                   </span>
+<span class="line">  They weren&#39;t actually stalled - here&#39;s what happened:                            </span>
+<span class="line">                                                                                   </span>
+<span class="line">  Why they appeared to &quot;stall&quot;:                                                    </span>
+<span class="line">                                                                                   </span>
+<span class="line">  1. tail -f command (b139958) - I ran tail -f                                     </span>
+<span class="line">  /tmp/claude/-workspace/tasks/bdde30c.output which runs indefinitely by design    </span>
+<span class="line">  (the -f flag means &quot;follow&quot; and never exits). It was killed with SIGKILL (exit   </span>
+<span class="line">  code 137 = 128 + 9) when the shell terminated or hit a timeout.                  </span>
+<span class="line">  2. Test suites (be52b03, ba27b19) - These were running in the background and     </span>
+<span class="line">  completed successfully. I just didn&#39;t wait for them because:                     </span>
+<span class="line">    - I had already killed the initial long-running test suite (bdde30c)           </span>
+<span class="line">    - I ran focused tests that completed quickly                                   </span>
+<span class="line">    - I moved on to manual CLI validation while the full suite finished in the     </span>
+<span class="line">  background                                                                       </span>
+<span class="line">    - By the time they completed, I had already gathered enough evidence to        </span>
+<span class="line">  validate the PR                                                                  </span>
+<span class="line">                                                                                   </span>
+<span class="line">  The actual issue: I used tail -f (continuous follow) when I should have used tail</span>
+<span class="line">   -n (fixed number of lines) or just checked the file directly. The -f flag causes</span>
+<span class="line">   tail to never exit, waiting for new content indefinitely.                       </span>
+<span class="line">                                                                                   </span>
+<span class="line">  Bottom line: No real problem - the test commands completed successfully (611/611 </span>
+<span class="line">  tests passed), and only the tail -f monitoring command was killed because it runs</span>
+<span class="line">   forever by design.           </span></code></pre></div></div></li></ul></li><li><span id="source-block-7469"></span><a class="bullet" href="#"></a>realized that this bumps up against the prompt UX ticket</li></ul></li></ul></li><li><span id="source-block-7531"></span><a class="bullet" href="#"></a><h2><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/codekiln/langstar/pull/724/changes">📚 docs(prompt): design AI-first command structure for prompt UX by codekiln · Pull Request #724 · codekiln/langstar</a></h2><ul><li><span id="source-block-7715"></span><a class="bullet" href="#"></a>merged yesterday. Requested a milestone adjustment.<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block"><div class="extensions__code"><pre class="lsg-code"><code><span class="line">Summary of Updates                                                            </span>
+<span class="line">                                                                                </span>
+<span class="line">  Created 4 New Phase Issues:                                                   </span>
+<span class="line">                                                                                </span>
+<span class="line">  1. #727: Phase 1 - Progressive disclosure help system                         </span>
+<span class="line">  2. #728: Phase 2 - CRUD commands (create, get, update)                        </span>
+<span class="line">  3. #729: Phase 3 - Consolidate list/search                                    </span>
+<span class="line">  4. #730: Phase 4 - Remove deprecated commands (v2.0.0)                        </span>
+<span class="line">                                                                                </span>
+<span class="line">  Updated Milestone Epic (#668):                                                </span>
+<span class="line">                                                                                </span>
+<span class="line">  - Added links to all 4 phase issues                                           </span>
+<span class="line">  - Marked old issues (#669, #667) as superseded                                </span>
+<span class="line">  - Added sub-issues list with checkboxes                                       </span>
+<span class="line">                                                                                </span>
+<span class="line">  Commented on Superseded Issues:                                               </span>
+<span class="line">                                                                                </span>
+<span class="line">  - #669 (handle consistency) → Superseded by Phase 2 (#728)                    </span>
+<span class="line">  - #667 (help docs) → Partially superseded by Phase 1 (#727)                   </span>
+<span class="line">                                                                                </span>
+<span class="line">  Now let me use the /gh-prep-next command to pick the next best task:</span>
+<span class="line">  </span>
+<span class="line">  Important Note About Next Issue                                               </span>
+<span class="line">                                                                                </span>
+<span class="line">  The prep-next script selected #669 (handle consistency), but this issue is    </span>
+<span class="line">  superseded by the new design that was just merged in PR #724.                 </span>
+<span class="line">                                                                                </span>
+<span class="line">  Why #669 is Superseded                                                        </span>
+<span class="line">                                                                                </span>
+<span class="line">  Issue #669 was created before the comprehensive design document. The new      </span>
+<span class="line">  4-phase plan includes:                                                        </span>
+<span class="line">  - Phase 1 (#727): Help system infrastructure (foundation)                     </span>
+<span class="line">  - Phase 2 (#728): CRUD commands including get with handle consistency built-in</span>
+<span class="line">  - Phase 3 (#729): Consolidate list/search                                     </span>
+<span class="line">  - Phase 4 (#730): Remove deprecated commands                                  </span>
+<span class="line">                                                                                </span>
+<span class="line">  Recommended Next Steps                                                        </span>
+<span class="line">                                                                                </span>
+<span class="line">  I recommend starting with Phase 1 (#727) instead, because:                    </span>
+<span class="line">                                                                                </span>
+<span class="line">  1. #727 is the foundation - The progressive disclosure help system needs to be</span>
+<span class="line">   in place before adding new commands                                          </span>
+<span class="line">  2. #669 is included in #728 - Phase 2 implements the get command with full    </span>
+<span class="line">  handle format support, which supersedes the narrow fix in #669                </span>
+<span class="line">  3. Sequential execution - The phases are designed to build on each other      </span>
+<span class="line">                                                                                </span>
+<span class="line">  Action Required                                                               </span>
+<span class="line">                                                                                </span>
+<span class="line">  Would you like me to:                                                         </span>
+<span class="line">                                                                                </span>
+<span class="line">  Option A: Close #669 and #667 as superseded, then set up #727 as the next     </span>
+<span class="line">  task?                                                                         </span>
+<span class="line">                                                                                </span>
+<span class="line">  Option B: Keep #669 open for now and manually set up #727 as the next task?   </span>
+<span class="line">                                                                                </span>
+<span class="line">  Option C: Work on #669 as-is (not recommended since it&#39;s superseded)?         </span>
+<span class="line">                                                                                </span>
+<span class="line">  Which option would you prefer?   </span></code></pre></div></div></li><li><span id="source-block-12646"></span><a class="bullet" href="#"></a>This is hard to follow ...</li><li><a class="bullet" href="#"></a></li></ul></li></ul></li></ul></li></ul><section class="references linked-references" id="linked-references" data-refs="linked" data-src="_refs/p-f5355f92361df87e-linked-1.html"><details class="references-section"><summary><span class="ref-chevron"></span><h2>1 Linked Reference</h2><button type="button" class="filter" title="Filter" aria-label="Filter" data-state="none" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v2.172a2 2 0 0 1-.586 1.414L15 12v7l-6 2v-8.5L4.52 7.572A2 2 0 0 1 4 6.227z"/></svg></button></summary><noscript><a href="_refs/p-f5355f92361df87e-linked-1.html">Show linked references</a></noscript><div class="references-body"><p role="status"></p></div></details></section><section class="page-hierarchy references" aria-label="Hierarchy"><details class="references-section" open><summary><span class="ref-chevron"></span><h2>Hierarchy</h2></summary><ul class="namespaces"><li><span class="page-reference"><a href="p-bd573340af85d2a1.html">Langstar</a></span><span class="namespace-separator" aria-hidden="true">/</span><span class="page-reference"><a class="namespace-link" aria-label="Langstar/Log (Namespace)" href="p-89429f68afafa420.html">Log</a></span><span class="namespace-separator" aria-hidden="true">/</span><span class="page-reference"><a class="namespace-link" aria-label="Langstar/Log/26 (Namespace)" href="p-6cfd4e4ae41d51b1.html">26</a></span><span class="namespace-separator" aria-hidden="true">/</span><span class="page-reference"><a class="namespace-link" aria-label="Langstar/Log/26/01 (Namespace)" href="p-d8e78116939760fd.html">01</a></span></li></ul></details></section><section class="references linked-references unlinked-references" data-refs="unlinked"><details class="references-section"><summary><span class="ref-chevron"></span><h2>Unlinked References</h2></summary><noscript>No unlinked references.</noscript><div class="references-body"></div></details></section></main><script data-lsg-fragments>// Native fragment navigation does not run when a host swaps page content.
+// Hosts can call this helper before their own fragment focus/scroll handling.
+(() => {
+  function reveal(fragment = location.hash, { scroll = true } = {}) {
+    let id;
+    try { id = decodeURIComponent(fragment.replace(/^#/, "")); }
+    catch { return null; }
+    const target = id && document.getElementById(id);
+    if (!target) return null;
+    for (let parent = target.parentElement; parent; parent = parent.parentElement) {
+      if (parent.tagName === "DETAILS") parent.open = true;
+      parent.classList?.remove("folded");
+    }
+    if (scroll) target.scrollIntoView();
+    return target;
+  }
+  window.logseqGardenerRevealFragment = reveal;
+  window.addEventListener("hashchange", () => reveal());
+  reveal();
+})();
+</script></body></html>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><base href="../"><title>Linked references: CLI/Tool/displayplacer</title><script type="application/json" class="references-data">{"blocks":[[0,[0,1,2,3,4,5],[]],[0,[1,2,3,6,7,5],[]],[0,[1,2,3],[1,3,8,9,10,8,9,10,8,9,10]],[0,[1,2,3],[]]],"count":4,"files":["p-d21d66281847bd06-linked-1.html"],"filter":[[],[]],"pages":[["2025-07-06 Sun","p-0897f8718c6bd15f.html"],["CLI","p-0ba44e19aa603c29.html"],["CLI/Tool/displayplacer/How To/Save and Restore Monitor Configurations with mise","p-0e3b1f12217b1982.html"],["CLI/Tool","p-51886d274c2d26dc.html"],["Update","p-8b0432eecbd8b034.html"],["CLI/Tool/displayplacer/How To","p-ed6a56e94f6af54c.html"],["MacOS","p-d1db4b0b9ce05a02.html"],["2025-06-08 Sun","p-dfffb2dd3e0fbe9c.html"],["EnvVar/EDITOR","p-1736de9b9f14a38f.html"],["EnvVar/VISUAL","p-9d3b7b0b959dd412.html"],["EnvVar","p-c359b410cb51cdb5.html"]]}</script></head><body><main><h1>Linked references: <a href="p-d21d66281847bd06.html">CLI/Tool/displayplacer</a></h1><div class="references-fragment"><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-0897f8718c6bd15f.html">2025-07-06 Sun</a></summary><div class="references-block"><div class="breadcrumb block-parents"><a href="p-0897f8718c6bd15f.html#source-block-0">Home Automation</a><span class="crumb-sep" aria-hidden="true"></span><a href="p-0897f8718c6bd15f.html#source-block-19"><span class="tag">#Updated</span></a></div><div class="blocks-container"><ul class="refs-outline"><li data-ref-block="0"><a class="bullet" href="p-0897f8718c6bd15f.html#source-block-31"></a>Fixed, enhanced <span class="page-reference"><a href="p-0e3b1f12217b1982.html">CLI/Tool/displayplacer/How To/Save and Restore Monitor Configurations with mise</a></span></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-dfffb2dd3e0fbe9c.html">2025-06-08 Sun</a></summary><div class="references-block"><div class="breadcrumb block-parents"><a href="p-dfffb2dd3e0fbe9c.html#source-block-0"><span class="tag">#MacOS</span></a><span class="crumb-sep" aria-hidden="true"></span><a href="p-dfffb2dd3e0fbe9c.html#source-block-10"><span class="tag">#Filed</span></a></div><div class="blocks-container"><ul class="refs-outline"><li data-ref-block="1"><a class="bullet" href="p-dfffb2dd3e0fbe9c.html#source-block-20"></a><span class="page-reference"><a href="p-0e3b1f12217b1982.html">CLI/Tool/displayplacer/How To/Save and Restore Monitor Configurations with mise</a></span></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-0e3b1f12217b1982.html">CLI/Tool/displayplacer/How To/Save and Restore Monitor Configurations with mise</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li data-ref-block="2"><a class="bullet" href="p-0e3b1f12217b1982.html#source-block-28"></a><h1>How To Manage Monitor Layouts with Mise and <span class="page-reference unresolved"><span>CLI/Tool/displayplacer</span></span></h1><ul><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h2>Goal</h2></summary><ul><li><span class="bullet"></span>Use a single Mise task with proper argument parsing to save, restore, list, and edit multiple monitor layouts (e.g., sitting or standing) by profile name.</li></ul></details></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h2>Preconditions</h2></summary><ul><li><span class="bullet"></span>Mise is installed and activated in your shell.</li><li class="outline-collapsed" data-ref-block="3"><details class="outline-disclosure"><summary><a class="bullet" href="p-0e3b1f12217b1982.html#source-block-344"></a><span class="page-reference unresolved"><span>CLI/Tool/displayplacer</span></span> <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/jakehilborn/displayplacer"><code>displayplacer</code></a> is installed via Homebrew:</summary><ul><li><span class="bullet"></span><code>brew install displayplacer</code></li></ul></details></li><li><span class="bullet"></span><code>displayplacer</code> should be globally available in <code>PATH</code>. <strong>Do not use <code>mise link</code> for this case</strong>, as versioning or plugin behavior is unnecessary for helper CLIs.</li><li><span class="bullet"></span>Environment variables <span class="page-reference"><a href="p-9d3b7b0b959dd412.html">EnvVar/VISUAL</a></span> or <span class="page-reference"><a href="p-1736de9b9f14a38f.html">EnvVar/EDITOR</a></span> should be set for the edit functionality.</li></ul></details></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h2>Procedure</h2></summary><ul><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h3>1. Create a storage directory for layouts</h3></summary><ul><li><span class="bullet"></span><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">			  mkdir<span class="cm-variable"> -p </span><span class="cm-keyword">~</span>/.config/mise-monitor-layouts</span></code></pre></div></div></li></ul></details></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h3>2. Define the enhanced <code>monitors-home</code> task in <code>~/.config/mise/config.toml</code></h3></summary><ul><li><span class="bullet"></span>Add the following with proper usage spec and argument handling:<div class="cp__fenced-code-block" data-lang="toml"><div class="extensions__code"><div class="extensions__code-lang">toml</div><pre class="lsg-code" style="--lsg-code-digits:3"><code><span class="line">			  [<span class="cm-def">tasks</span>.<span class="cm-def">monitors-home</span>]</span>
+<span class="line">			  <span class="cm-tag">description </span>= <span class="cm-string">&quot;&quot;&quot;Save or restore monitor layout by profile (e.g. standing, sitting) - </span></span>
+<span class="line"><span class="cm-string">			  see [[CLI/Tool/displayplacer/How To/Save and Restore Monitor Configurations with mise]]</span></span>
+<span class="line"><span class="cm-string">			  &quot;&quot;&quot;</span></span>
+<span class="line">			  <span class="cm-tag">usage </span>= <span class="cm-string">&#39;&#39;&#39;</span></span>
+<span class="line"><span class="cm-string">			  arg &quot;action&quot; &quot;Action to perform: list, save, restore, or edit&quot;</span></span>
+<span class="line"><span class="cm-string">			  arg &quot;profile&quot; &quot;Profile name (e.g., standing, sitting)&quot;</span></span>
+<span class="line"><span class="cm-string">			  flag &quot;-s --save&quot; &quot;Save current layout (alternative to &#39;save&#39; action)&quot;</span></span>
+<span class="line"><span class="cm-string">			  flag &quot;-l --list&quot; &quot;List available profiles (alternative to &#39;list&#39; action)&quot;</span></span>
+<span class="line"><span class="cm-string">			  &#39;&#39;&#39;</span></span>
+<span class="line">			  <span class="cm-tag">run </span>= <span class="cm-string">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="cm-string">			  #!/usr/bin/env bash</span></span>
+<span class="line"><span class="cm-string">			  set -euo pipefail</span></span>
+<span class="line"><span class="cm-string">			  </span></span>
+<span class="line"><span class="cm-string">			  # Create layouts directory if it doesn&#39;t exist</span></span>
+<span class="line"><span class="cm-string">			  mkdir -p &quot;$HOME/.config/mise-monitor-layouts&quot;</span></span>
+<span class="line"><span class="cm-string">			  </span></span>
+<span class="line"><span class="cm-string">			  # Determine action and profile</span></span>
+<span class="line"><span class="cm-string">			  ACTION=&quot;{{arg(name=&#39;action&#39;)}}&quot;</span></span>
+<span class="line"><span class="cm-string">			  PROFILE=&quot;{{arg(name=&#39;profile&#39;)}}&quot;</span></span>
+<span class="line"><span class="cm-string">			  SAVE_FLAG=&quot;{{flag(name=&#39;save&#39;)}}&quot;</span></span>
+<span class="line"><span class="cm-string">			  LIST_FLAG=&quot;{{flag(name=&#39;list&#39;)}}&quot;</span></span>
+<span class="line"><span class="cm-string">			  </span></span>
+<span class="line"><span class="cm-string">			  # Handle flag-based actions</span></span>
+<span class="line"><span class="cm-string">			  if [[ &quot;$LIST_FLAG&quot; == &quot;true&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">			    ACTION=&quot;list&quot;</span></span>
+<span class="line"><span class="cm-string">			  fi</span></span>
+<span class="line"><span class="cm-string">			  </span></span>
+<span class="line"><span class="cm-string">			  if [[ &quot;$SAVE_FLAG&quot; == &quot;true&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">			    ACTION=&quot;save&quot;</span></span>
+<span class="line"><span class="cm-string">			  fi</span></span>
+<span class="line"><span class="cm-string">			  </span></span>
+<span class="line"><span class="cm-string">			  # Handle list action</span></span>
+<span class="line"><span class="cm-string">			  if [[ &quot;$ACTION&quot; == &quot;list&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">			    LAYOUT_DIR=&quot;$HOME/.config/mise-monitor-layouts&quot;</span></span>
+<span class="line"><span class="cm-string">			    if [[ ! -d &quot;$LAYOUT_DIR&quot; ]] || [[ -z &quot;$(ls -A &quot;$LAYOUT_DIR&quot; 2&gt;/dev/null)&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">			      echo &quot;No saved layouts found.&quot;</span></span>
+<span class="line"><span class="cm-string">			      echo &quot;Use &#39;mise run monitors-home save &lt;profile&gt;&#39; to save a layout.&quot;</span></span>
+<span class="line"><span class="cm-string">			      exit 0</span></span>
+<span class="line"><span class="cm-string">			    fi</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    echo &quot;Available profiles:&quot;</span></span>
+<span class="line"><span class="cm-string">			    for file in &quot;$LAYOUT_DIR&quot;/*.layout; do</span></span>
+<span class="line"><span class="cm-string">			      if [[ -f &quot;$file&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">			        basename &quot;$file&quot; .layout</span></span>
+<span class="line"><span class="cm-string">			      fi</span></span>
+<span class="line"><span class="cm-string">			    done</span></span>
+<span class="line"><span class="cm-string">			    exit 0</span></span>
+<span class="line"><span class="cm-string">			  fi</span></span>
+<span class="line"><span class="cm-string">			  </span></span>
+<span class="line"><span class="cm-string">			  # Handle save action</span></span>
+<span class="line"><span class="cm-string">			  if [[ &quot;$ACTION&quot; == &quot;save&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">			    if [[ -z &quot;$PROFILE&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">			      echo &quot;Error: Profile name required for save action&quot;</span></span>
+<span class="line"><span class="cm-string">			      echo &quot;Usage: mise run monitors-home save &lt;profile&gt;&quot;</span></span>
+<span class="line"><span class="cm-string">			      echo &quot;   or: mise run monitors-home &lt;profile&gt; --save&quot;</span></span>
+<span class="line"><span class="cm-string">			      exit 1</span></span>
+<span class="line"><span class="cm-string">			    fi</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    LAYOUT_FILE=&quot;$HOME/.config/mise-monitor-layouts/${PROFILE}.layout&quot;</span></span>
+<span class="line"><span class="cm-string">			    displayplacer list &gt; &quot;$LAYOUT_FILE&quot;</span></span>
+<span class="line"><span class="cm-string">			    echo &quot;Saved layout: $PROFILE&quot;</span></span>
+<span class="line"><span class="cm-string">			    exit 0</span></span>
+<span class="line"><span class="cm-string">			  fi</span></span>
+<span class="line"><span class="cm-string">			  </span></span>
+<span class="line"><span class="cm-string">			  # Handle restore action</span></span>
+<span class="line"><span class="cm-string">			  if [[ &quot;$ACTION&quot; == &quot;restore&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">			    if [[ -z &quot;$PROFILE&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">			      echo &quot;Error: Profile name required for restore action&quot;</span></span>
+<span class="line"><span class="cm-string">			      echo &quot;Usage: mise run monitors-home restore &lt;profile&gt;&quot;</span></span>
+<span class="line"><span class="cm-string">			      exit 1</span></span>
+<span class="line"><span class="cm-string">			    fi</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    LAYOUT_FILE=&quot;$HOME/.config/mise-monitor-layouts/${PROFILE}.layout&quot;</span></span>
+<span class="line"><span class="cm-string">			    if [[ ! -f &quot;$LAYOUT_FILE&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">			      echo &quot;No layout saved for profile: $PROFILE&quot;</span></span>
+<span class="line"><span class="cm-string">			      echo &quot;Use &#39;mise run monitors-home list&#39; to see available profiles&quot;</span></span>
+<span class="line"><span class="cm-string">			      exit 1</span></span>
+<span class="line"><span class="cm-string">			    fi</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    # Read the layout file and extract the displayplacer command</span></span>
+<span class="line"><span class="cm-string">			    LAYOUT_CONFIG=&quot;$(cat &quot;$LAYOUT_FILE&quot;)&quot;</span></span>
+<span class="line"><span class="cm-string">			    echo &quot;Applying layout for profile: $PROFILE&quot;</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    # Extract the displayplacer command from the end of the file</span></span>
+<span class="line"><span class="cm-string">			    # The command is on the last line that starts with &quot;displayplacer&quot;</span></span>
+<span class="line"><span class="cm-string">			    DISPLAYPLACER_CMD=&quot;$(echo &quot;$LAYOUT_CONFIG&quot; | grep &#39;^displayplacer &#39; | tail -n1)&quot;</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    if [[ -z &quot;$DISPLAYPLACER_CMD&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">			      echo &quot;Error: Could not find displayplacer command in layout file&quot;</span></span>
+<span class="line"><span class="cm-string">			      echo &quot;The layout file may be corrupted or in an unexpected format&quot;</span></span>
+<span class="line"><span class="cm-string">			      exit 1</span></span>
+<span class="line"><span class="cm-string">			    fi</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    echo &quot;Executing: $DISPLAYPLACER_CMD&quot;</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    # Execute the displayplacer command</span></span>
+<span class="line"><span class="cm-string">			    eval &quot;$DISPLAYPLACER_CMD&quot;</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    if [[ $? -eq 0 ]]; then</span></span>
+<span class="line"><span class="cm-string">			      echo &quot;Successfully restored layout: $PROFILE&quot;</span></span>
+<span class="line"><span class="cm-string">			    else</span></span>
+<span class="line"><span class="cm-string">			      echo &quot;Error: Failed to apply layout for profile: $PROFILE&quot;</span></span>
+<span class="line"><span class="cm-string">			      echo &quot;The saved layout may be invalid or incompatible with current display setup&quot;</span></span>
+<span class="line"><span class="cm-string">			      exit 1</span></span>
+<span class="line"><span class="cm-string">			    fi</span></span>
+<span class="line"><span class="cm-string">			    exit 0</span></span>
+<span class="line"><span class="cm-string">			  fi</span></span>
+<span class="line"><span class="cm-string">			  </span></span>
+<span class="line"><span class="cm-string">			  # Handle edit action</span></span>
+<span class="line"><span class="cm-string">			  if [[ &quot;$ACTION&quot; == &quot;edit&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">			    if [[ -z &quot;$PROFILE&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">			      echo &quot;Error: Profile name required for edit action&quot;</span></span>
+<span class="line"><span class="cm-string">			      echo &quot;Usage: mise run monitors-home edit &lt;profile&gt;&quot;</span></span>
+<span class="line"><span class="cm-string">			      exit 1</span></span>
+<span class="line"><span class="cm-string">			    fi</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    LAYOUT_FILE=&quot;$HOME/.config/mise-monitor-layouts/${PROFILE}.layout&quot;</span></span>
+<span class="line"><span class="cm-string">			    if [[ ! -f &quot;$LAYOUT_FILE&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">			      echo &quot;No layout saved for profile: $PROFILE&quot;</span></span>
+<span class="line"><span class="cm-string">			      echo &quot;Use &#39;mise run monitors-home list&#39; to see available profiles&quot;</span></span>
+<span class="line"><span class="cm-string">			      exit 1</span></span>
+<span class="line"><span class="cm-string">			    fi</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    # Determine which editor to use</span></span>
+<span class="line"><span class="cm-string">			    EDITOR_CMD=&quot;&quot;</span></span>
+<span class="line"><span class="cm-string">			    if [[ -n &quot;${VISUAL:-}&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">			      EDITOR_CMD=&quot;$VISUAL&quot;</span></span>
+<span class="line"><span class="cm-string">			    elif [[ -n &quot;${EDITOR:-}&quot; ]]; then</span></span>
+<span class="line"><span class="cm-string">			      EDITOR_CMD=&quot;$EDITOR&quot;</span></span>
+<span class="line"><span class="cm-string">			    else</span></span>
+<span class="line"><span class="cm-string">			      echo &quot;Error: No editor found. Please set VISUAL or EDITOR environment variable.&quot;</span></span>
+<span class="line"><span class="cm-string">			      exit 1</span></span>
+<span class="line"><span class="cm-string">			    fi</span></span>
+<span class="line"><span class="cm-string">			    </span></span>
+<span class="line"><span class="cm-string">			    echo &quot;Opening layout file for profile &#39;$PROFILE&#39; with $EDITOR_CMD&quot;</span></span>
+<span class="line"><span class="cm-string">			    $EDITOR_CMD &quot;$LAYOUT_FILE&quot;</span></span>
+<span class="line"><span class="cm-string">			    exit 0</span></span>
+<span class="line"><span class="cm-string">			  fi</span></span>
+<span class="line"><span class="cm-string">			  </span></span>
+<span class="line"><span class="cm-string">			  echo &quot;Unknown action: $ACTION&quot;</span></span>
+<span class="line"><span class="cm-string">			  echo &quot;Valid actions: list, save, restore, edit&quot;</span></span>
+<span class="line"><span class="cm-string">			  exit 1</span></span>
+<span class="line"><span class="cm-string">			  &quot;&quot;&quot;</span></span></code></pre></div></div></li></ul></details></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h3>3. List available profiles</h3></summary><ul><li><span class="bullet"></span>View existing layouts:<div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">			  mise run monitors-home list</span></code></pre></div></div></li><li><span class="bullet"></span>Or use the flag:<div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">			  mise run monitors-home<span class="cm-variable"> --list</span></span></code></pre></div></div></li></ul></details></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h3>4. Save layout profiles</h3></summary><ul><li><span class="bullet"></span>Save the <em>standing</em> configuration:<div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">			  mise run monitors-home save standing</span></code></pre></div></div></li><li><span class="bullet"></span>Save the <em>sitting</em> configuration:<div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">			  mise run monitors-home save sitting</span></code></pre></div></div></li><li><span class="bullet"></span>Alternative using flags:<div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">			  mise run monitors-home standing<span class="cm-variable"> --save</span></span></code></pre></div></div></li></ul></details></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h3>5. Restore layout profiles</h3></summary><ul><li><span class="bullet"></span>To restore standing:<div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">			  mise run monitors-home restore standing</span></code></pre></div></div></li><li><span class="bullet"></span>To restore sitting:<div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">			  mise run monitors-home restore sitting</span></code></pre></div></div></li></ul></details></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h3>6. Edit layout files (optional)</h3></summary><ul><li><span class="bullet"></span>Edit a layout file directly:<div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">			  mise run monitors-home edit standing</span></code></pre></div></div></li><li><span class="bullet"></span>This opens the layout file in your preferred editor (uses <span class="page-reference"><a href="p-9d3b7b0b959dd412.html">EnvVar/VISUAL</a></span> or falls back to <span class="page-reference"><a href="p-1736de9b9f14a38f.html">EnvVar/EDITOR</a></span>)</li></ul></details></li></ul></details></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h2>Troubleshooting</h2></summary><ul><li><span class="bullet"></span><em>Command not found: displayplacer</em> → Run <code>brew install displayplacer</code>.</li><li><span class="bullet"></span><em>No layout saved for profile</em> → Run with <code>save</code> action to store layout before restoring.</li><li><span class="bullet"></span><em>Permission denied</em> → Make sure the layout directory and file are writable and readable.</li><li><span class="bullet"></span><em>Failed to parse KDL document</em> → The layout file may be corrupted; try recreating it with the save action.</li><li><span class="bullet"></span><em>No editor found</em> → Set <span class="page-reference"><a href="p-9d3b7b0b959dd412.html">EnvVar/VISUAL</a></span> or <span class="page-reference"><a href="p-1736de9b9f14a38f.html">EnvVar/EDITOR</a></span> environment variable for the edit functionality.</li><li><span class="bullet"></span><em>Argument parsing error</em> → Ensure you&#39;re using the correct action syntax (e.g., <code>mise run monitors-home restore standing</code>).</li></ul></details></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h2>References</h2></summary><ul><li><span class="bullet"></span><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/jakehilborn/displayplacer">displayplacer GitHub</a></li><li><span class="bullet"></span><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://mise.jdx.dev/tasks/toml-tasks.html">TOML Tasks Reference – Mise</a></li><li><span class="bullet"></span><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://usage.jdx.dev/spec/">Usage Spec Documentation</a></li></ul></details></li></ul></li></ul></div></div></details></div></div></main></body></html>

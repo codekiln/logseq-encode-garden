@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>langgraph/Template</title><script data-lsg-theme-script>/** Shared visitor appearance, independent of replaceable page content. */
+(() => {
+  try {
+    // Saved shell layout applies before paint; the phone overlay always starts closed.
+    const root = document.documentElement;
+    if (window.matchMedia?.('(min-width: 640px)')?.matches && window.localStorage.getItem('logseq-gardener-left-sidebar') === 'open') root.setAttribute('data-lsg-left-sidebar', 'open');
+    if (window.localStorage.getItem('logseq-gardener-wide') === 'true') root.setAttribute('data-lsg-wide', 'true');
+    // The right sidebar's column takes its width before paint; its cards load after load.
+    const right = JSON.parse(window.localStorage.getItem('logseq-gardener-right-sidebar') || 'null');
+    if (right && window.matchMedia?.('(min-width: 640px)')?.matches) {
+      root.setAttribute('data-lsg-right-sidebar', right.open ? 'open' : 'closed');
+      if (right.width > 0) root.style.setProperty('--lsg-right-width', right.width + 'px');
+    }
+  } catch { /* Layout keeps its defaults. */ }
+  if (typeof window.logseqGardenerInitTheme === 'function') return;
+  const key = 'logseq-gardener-theme';
+  const valid = value => value === 'light' || value === 'dark';
+  const read = () => {
+    try { const value = window.localStorage.getItem(key); return valid(value) ? value : 'system'; }
+    catch { return 'system'; }
+  };
+  let choice = read();
+  let media;
+  try { media = window.matchMedia?.('(prefers-color-scheme: dark)'); } catch { /* Light fallback. */ }
+  const appearance = () => choice === 'system' ? (media?.matches ? 'dark' : 'light') : choice;
+  const initialize = (root = document) => {
+    for (const select of root.querySelectorAll('[data-lsg-theme-select]')) {
+      select.value = choice;
+      const control = select.closest('[data-lsg-theme-control]');
+      if (control) control.hidden = false;
+    }
+  };
+  const apply = () => {
+    document.documentElement.setAttribute('data-lsg-theme', appearance());
+    document.documentElement.setAttribute('data-lsg-theme-mode', choice);
+    initialize();
+  };
+  const set = value => {
+    if (!valid(value) && value !== 'system') return;
+    choice = value;
+    try {
+      if (choice === 'system') window.localStorage.removeItem(key);
+      else window.localStorage.setItem(key, choice);
+    } catch { /* Keep this document's choice when storage is unavailable. */ }
+    apply();
+  };
+  window.logseqGardenerInitTheme = initialize;
+  window.logseqGardenerTheme = { choice: () => choice, appearance, set };
+  apply();
+  if (media?.addEventListener) media.addEventListener('change', apply);
+  else media?.addListener?.(apply);
+  document.addEventListener('change', event => {
+    const select = event.target;
+    if (select?.matches?.('[data-lsg-theme-select]')) set(select.value);
+  });
+  window.addEventListener('storage', event => {
+    if (event.key === key || event.key === null) { choice = read(); apply(); }
+  });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => initialize(), { once: true });
+})();
+</script><script defer src="lsg-shell.js"></script><link rel="lsg-search" href="lsg-search-manifest-1e91ba5239e1caaa.json" data-revision="1e91ba5239e1caaa"><link rel="stylesheet" href="lsg-shared-559a1c927f395608.css"><script data-lsg-search-start>(()=>{const f=(_,o)=>Object.assign(f.options??={},o);window.logseqGardenerInitSearch=f;const u=new URL('lsg-search-start-d1579d619a9675f1.mjs',document.querySelector('[rel=lsg-search]').href);document.addEventListener('DOMContentLoaded',()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{const s=document.createElement('script');s.type='module';s.src=u;s.onerror=()=>{if(!document.querySelector('[rel=lsg-search]'))return;const t=document.createElement('span');t.id='lsg-search-load';t.setAttribute('role','status');t.textContent='Search unavailable. Reload this page to retry search.';document.body.append(t)};document.head.append(s)})),{once:true})})();</script></head><body><header class="lsg-header cp__header"><button type="button" class="lsg-button" data-lsg-left-toggle aria-label="Toggle left sidebar" aria-controls="lsg-left-sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l16 0M4 12l16 0M4 18l16 0"/></svg></button><span class="lsg-header-space"></span><a class="lsg-button" href="index.html" aria-label="Home"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l-2 0l9 -9l9 9l-2 0M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg></a><a class="lsg-button button" href="graph.html#/graph" aria-label="Graph"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path id="lsg-i-graph" d="M10 5a2 2 0 1 0 4 0a2 2 0 1 0-4 0M3 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M17 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M6.5 17.5 12 13l5.5 4.5M12 7v6"/></svg></a><button type="button" class="lsg-button" data-lsg-search aria-label="Search garden" aria-haspopup="dialog" aria-controls="lsg-search-dialog" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0M21 21l-6 -6"/></svg></button><div class="lsg-more"><button type="button" class="lsg-button" data-lsg-more aria-label="More" aria-haspopup="menu" aria-controls="lsg-more-menu" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M20 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg></button><div id="lsg-more-menu" role="menu" aria-label="More" hidden><button type="button" role="menuitem" data-lsg-slides>View as slides</button><button type="button" role="menuitem" data-lsg-theme-toggle>Toggle theme</button><button type="button" role="menuitem" data-lsg-theme-system hidden>Use system theme</button></div></div><button type="button" class="lsg-button lsg-right-toggle" data-lsg-right-toggle aria-label="Toggle right sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2zM15 4l0 16"/></svg></button></header><aside id="lsg-left-sidebar" class="lsg-left-sidebar" aria-label="Left sidebar"><nav aria-label="Navigation"><ul><li><a href="index.html" data-lsg-journals-link><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12zM16 3v4M8 3v4M4 11h16M11 15h1M12 15v3"/></svg><span>Journals</span></a></li><li class="flashcards-nav"><a href="#" role="button" data-lsg-flashcards><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.828 9.172a4 4 0 1 0 0 5.656a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828"/></svg><span>Flashcards</span><span class="lsg-shortcut" aria-hidden="true">g f</span><span class="lsg-badge" data-lsg-due>430</span></a></li><li class="graph-view-nav"><a href="graph.html" data-lsg-graph-view><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#lsg-i-graph"/></svg><span>Graph view</span></a></li><li><a href="pages.html" data-lsg-all-pages><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3v4a1 1 0 0 0 1 1h4M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2zM16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2"/></svg><span>All pages</span></a></li></ul><h2 class="lsg-favorites-heading" id="lsg-favorites">Favorites</h2><ul aria-labelledby="lsg-favorites"><li><a href="p-08986007b541df27.html">fd</a></li><li><a href="p-710a025b0e00c8d5.html">gh-dash</a></li><li><a href="p-710a025b0e00c8d5.html">GitHub/CLI/Extension/gh-dash</a></li><li><a href="p-539dc7d0a39cc4ec.html">tuicr</a></li><li><a href="p-4276cb26f35edeca.html">tmux/Q/How can I put a thick border around the focused pane?</a></li><li><a href="p-62e5d9883ed48541.html">LazyVim</a></li><li><a href="p-abc1fe1091d210a5.html">Logseq/Flashcard/Review/Favorite</a></li><li><a href="p-7d113595e3cdeb70.html">Obsidian</a></li><li><a href="p-efba5ef46cf8e2e4.html">Codex</a></li><li><a href="p-398c5fe622fecdf8.html">chezmoi</a></li><li><a href="p-c02f89b682f53253.html">DevContainer</a></li><li><a href="p-da5911a2a798df4f.html">mise</a></li><li><a href="p-08dc5107b57b9276.html">rg</a></li><li><a href="p-68e903194eba71d7.html">vim</a></li><li><a href="p-74ff40ba60b70acb.html">nvim</a></li><li><a href="p-f237247b53a844f6.html">Zoxide</a></li><li><a href="p-a0d502498c67fd12.html">yazi</a></li><li><a href="p-424036ef4353ec8f.html">tmux</a></li><li><a href="p-e4db29888872bdd5.html">Lazygit</a></li></ul></nav></aside><div class="lsg-sidebar-shade" data-lsg-sidebar-shade hidden></div><main><h1>langgraph/Template</h1><ul class="outline"><li><span id="source-block-57"></span><a class="bullet" href="#"></a><h1><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://studio.langchain.com/?ref=blog.langchain.dev">LangGraph Templates</a></h1><ul><li><span id="source-block-137"></span><a class="bullet" href="#"></a>See also <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://changelog.langchain.com/announcements/langgraph-templates-build-configurable-agentic-workflows">LangChain - Changelog | 📐 LangGraph Templates: Build configurable</a></li><li><span id="source-block-324"></span><a class="bullet" href="#"></a><h2><span class="page-reference"><a href="p-ba34054c28dcc408.html">My Notes</a></span></h2><ul><li><span id="source-block-343"></span><a class="bullet" href="#"></a>contains a bunch of different <span class="page-reference"><a href="p-2ae71ff501e9981f.html">GitHub/Repo</a></span>s showing how to do things like use configurable fields<ul><li><span id="source-block-448"></span><a class="bullet" href="#"></a>Example<ul><li><span id="source-block-461"></span><a class="bullet" href="#"></a><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/langchain-ai/rag-research-agent-template/blob/main/src/retrieval_graph/configuration.py">rag-research-agent-template/src/retrieval_graph/configuration.py at main · langchain-ai/rag-research-agent-template</a></li><li><span id="source-block-694"></span><a class="bullet" href="#"></a><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/langchain-ai/retrieval-agent-template/blob/main/src/retrieval_graph/retrieval.py">retrieval-agent-template/src/retrieval_graph/retrieval.py at main · langchain-ai/retrieval-agent-template</a> has this pattern using <span class="page-reference unresolved"><span>Py/Context Manager</span></span> and <span class="page-reference unresolved"><span>Py/Generator</span></span><ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="python"><div class="extensions__code"><div class="extensions__code-lang">python</div><pre class="lsg-code"><code><span class="line"><span class="cm-meta">@</span><span class="cm-variable">contextmanager</span></span>
+<span class="line"><span class="cm-keyword">def </span><span class="cm-def">make_retriever</span>(</span>
+<span class="line">    <span class="cm-variable">config</span>: <span class="cm-variable">RunnableConfig</span>,</span>
+<span class="line">) -&gt; <span class="cm-variable">Generator</span>[<span class="cm-variable">VectorStoreRetriever</span>, <span class="cm-atom">None</span>, <span class="cm-atom">None</span>]:</span>
+<span class="line">    <span class="cm-comment">&quot;&quot;&quot;Create a retriever for the agent, based on the current configuration.&quot;&quot;&quot;</span></span>
+<span class="line">    <span class="cm-variable">configuration </span><span class="cm-operator">= </span><span class="cm-variable">IndexConfiguration</span>.<span class="cm-variable">from_runnable_config</span>(<span class="cm-variable">config</span>)</span>
+<span class="line">    <span class="cm-variable">embedding_model </span><span class="cm-operator">= </span><span class="cm-variable">make_text_encoder</span>(<span class="cm-variable">configuration</span>.<span class="cm-variable">embedding_model</span>)</span>
+<span class="line">    <span class="cm-variable">user_id </span><span class="cm-operator">= </span><span class="cm-variable">configuration</span>.<span class="cm-variable">user_id</span></span>
+<span class="line">    <span class="cm-keyword">if </span><span class="cm-operator">not </span><span class="cm-variable">user_id</span>:</span>
+<span class="line">        <span class="cm-keyword">raise </span><span class="cm-type">ValueError</span>(<span class="cm-string">&quot;Please provide a valid user_id in the configuration.&quot;</span>)</span>
+<span class="line">    <span class="cm-variable">match configuration</span>.<span class="cm-variable">retriever_provider</span>:</span>
+<span class="line">        <span class="cm-variable">case </span><span class="cm-string">&quot;elastic&quot; </span><span class="cm-operator">| </span><span class="cm-string">&quot;elastic-local&quot;</span>:</span>
+<span class="line">            <span class="cm-keyword">with </span><span class="cm-variable">make_elastic_retriever</span>(<span class="cm-variable">configuration</span>, <span class="cm-variable">embedding_model</span>) <span class="cm-keyword">as </span><span class="cm-variable">retriever</span>:</span>
+<span class="line">                <span class="cm-keyword">yield </span><span class="cm-variable">retriever</span></span>
+<span class="line"></span>
+<span class="line">        <span class="cm-variable">case </span><span class="cm-string">&quot;pinecone&quot;</span>:</span>
+<span class="line">            <span class="cm-keyword">with </span><span class="cm-variable">make_pinecone_retriever</span>(<span class="cm-variable">configuration</span>, <span class="cm-variable">embedding_model</span>) <span class="cm-keyword">as </span><span class="cm-variable">retriever</span>:</span>
+<span class="line">                <span class="cm-keyword">yield </span><span class="cm-variable">retriever</span></span>
+<span class="line"></span>
+<span class="line">        <span class="cm-variable">case </span><span class="cm-string">&quot;mongodb&quot;</span>:</span>
+<span class="line">            <span class="cm-keyword">with </span><span class="cm-variable">make_mongodb_retriever</span>(<span class="cm-variable">configuration</span>, <span class="cm-variable">embedding_model</span>) <span class="cm-keyword">as </span><span class="cm-variable">retriever</span>:</span>
+<span class="line">                <span class="cm-keyword">yield </span><span class="cm-variable">retriever</span></span>
+<span class="line"></span>
+<span class="line">        <span class="cm-variable">case </span><span class="cm-keyword">_</span>:</span>
+<span class="line">            <span class="cm-keyword">raise </span><span class="cm-type">ValueError</span>(</span>
+<span class="line">                <span class="cm-string">&quot;Unrecognized retriever_provider in configuration. &quot;</span></span>
+<span class="line">                <span class="cm-keyword">f</span><span class="cm-string">&quot;Expected one of: </span>{<span class="cm-string">&#39;, &#39;</span>.<span class="cm-variable">join</span>(<span class="cm-variable">Configuration</span>.<span class="cm-variable">__annotations__</span>[<span class="cm-string">&#39;retriever_provider&#39;</span>].<span class="cm-variable">__args__</span>)}<span class="cm-string-2">\n</span><span class="cm-string">&quot;</span></span>
+<span class="line">                <span class="cm-keyword">f</span><span class="cm-string">&quot;Got: </span>{<span class="cm-variable">configuration</span>.<span class="cm-variable">retriever_provider</span>}<span class="cm-string">&quot;</span></span>
+<span class="line">            )</span></code></pre></div></div></li><li><span id="source-block-2471"></span><a class="bullet" href="#"></a>note that a sample configuration is using <span class="page-reference"><a href="p-e0fc192080fb3941.html">Py/Dataclass</a></span> - what exactly is this <code>__template_metadata__</code> - it&#39;s probably something specific to the templates, but is this how we make it show up in teh UI?<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="python"><div class="extensions__code"><div class="extensions__code-lang">python</div><pre class="lsg-code"><code><span class="line"><span class="cm-meta">@</span><span class="cm-variable">dataclass</span><span class="cm-meta">(</span><span class="cm-variable">kw_only</span><span class="cm-operator">=</span><span class="cm-atom">True</span><span class="cm-meta">)</span></span>
+<span class="line"><span class="cm-keyword">class </span><span class="cm-def">IndexConfiguration</span>:</span>
+<span class="line">    <span class="cm-comment">&quot;&quot;&quot;Configuration class for indexing and retrieval operations.</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-comment">    This class defines the parameters needed for configuring the indexing and</span></span>
+<span class="line"><span class="cm-comment">    retrieval processes, including user identification, embedding model selection,</span></span>
+<span class="line"><span class="cm-comment">    retriever provider choice, and search parameters.</span></span>
+<span class="line"><span class="cm-comment">    &quot;&quot;&quot;</span></span>
+<span class="line"></span>
+<span class="line">    <span class="cm-variable">user_id</span>: <span class="cm-type">str </span><span class="cm-operator">= </span><span class="cm-variable">field</span>(<span class="cm-variable">metadata</span><span class="cm-operator">=</span>{<span class="cm-string">&quot;description&quot;</span>: <span class="cm-string">&quot;Unique identifier for the user.&quot;</span>})</span>
+<span class="line"></span>
+<span class="line">    <span class="cm-variable">embedding_model</span>: <span class="cm-variable">Annotated</span>[</span>
+<span class="line">        <span class="cm-type">str</span>,</span>
+<span class="line">        {<span class="cm-string">&quot;__template_metadata__&quot;</span>: {<span class="cm-string">&quot;kind&quot;</span>: <span class="cm-string">&quot;embeddings&quot;</span>}},</span>
+<span class="line">    ] <span class="cm-operator">= </span><span class="cm-variable">field</span>(</span>
+<span class="line">        <span class="cm-variable">default</span><span class="cm-operator">=</span><span class="cm-string">&quot;openai/text-embedding-3-small&quot;</span>,</span>
+<span class="line">        <span class="cm-variable">metadata</span><span class="cm-operator">=</span>{</span>
+<span class="line">            <span class="cm-string">&quot;description&quot;</span>: <span class="cm-string">&quot;Name of the embedding model to use. Must be a valid embedding model name.&quot;</span></span>
+<span class="line">        },</span>
+<span class="line">    )</span>
+<span class="line"></span>
+<span class="line">    <span class="cm-variable">retriever_provider</span>: <span class="cm-variable">Annotated</span>[</span>
+<span class="line">        <span class="cm-variable">Literal</span>[<span class="cm-string">&quot;elastic&quot;</span>, <span class="cm-string">&quot;elastic-local&quot;</span>, <span class="cm-string">&quot;pinecone&quot;</span>, <span class="cm-string">&quot;mongodb&quot;</span>],</span>
+<span class="line">        {<span class="cm-string">&quot;__template_metadata__&quot;</span>: {<span class="cm-string">&quot;kind&quot;</span>: <span class="cm-string">&quot;retriever&quot;</span>}},</span>
+<span class="line">    ] <span class="cm-operator">= </span><span class="cm-variable">field</span>(</span>
+<span class="line">        <span class="cm-variable">default</span><span class="cm-operator">=</span><span class="cm-string">&quot;elastic&quot;</span>,</span>
+<span class="line">        <span class="cm-variable">metadata</span><span class="cm-operator">=</span>{</span>
+<span class="line">            <span class="cm-string">&quot;description&quot;</span>: <span class="cm-string">&quot;The vector store provider to use for retrieval. Options are &#39;elastic&#39;, &#39;pinecone&#39;, or &#39;mongodb&#39;.&quot;</span></span>
+<span class="line">        },</span>
+<span class="line">    )</span>
+<span class="line"></span>
+<span class="line">    <span class="cm-variable">search_kwargs</span>: <span class="cm-type">dict</span>[<span class="cm-type">str</span>, <span class="cm-variable">Any</span>] <span class="cm-operator">= </span><span class="cm-variable">field</span>(</span>
+<span class="line">        <span class="cm-variable">default_factory</span><span class="cm-operator">=</span><span class="cm-type">dict</span>,</span>
+<span class="line">        <span class="cm-variable">metadata</span><span class="cm-operator">=</span>{</span>
+<span class="line">            <span class="cm-string">&quot;description&quot;</span>: <span class="cm-string">&quot;Additional keyword arguments to pass to the search function of the retriever.&quot;</span></span>
+<span class="line">        },</span>
+<span class="line">    )</span>
+<span class="line"></span>
+<span class="line">    <span class="cm-meta">@</span><span class="cm-builtin">classmethod</span></span>
+<span class="line">    <span class="cm-keyword">def </span><span class="cm-def">from_runnable_config</span>(</span>
+<span class="line">        <span class="cm-variable">cls</span>: <span class="cm-variable">Type</span>[<span class="cm-variable">T</span>], <span class="cm-variable">config</span>: <span class="cm-variable">Optional</span>[<span class="cm-variable">RunnableConfig</span>] <span class="cm-operator">= </span><span class="cm-atom">None</span></span>
+<span class="line">    ) -&gt; <span class="cm-variable">T</span>:</span>
+<span class="line">        <span class="cm-comment">&quot;&quot;&quot;Create an IndexConfiguration instance from a RunnableConfig object.</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-comment">        Args:</span></span>
+<span class="line"><span class="cm-comment">            cls (Type[T]): The class itself.</span></span>
+<span class="line"><span class="cm-comment">            config (Optional[RunnableConfig]): The configuration object to use.</span></span>
+<span class="line"></span>
+<span class="line"><span class="cm-comment">        Returns:</span></span>
+<span class="line"><span class="cm-comment">            T: An instance of IndexConfiguration with the specified configuration.</span></span>
+<span class="line"><span class="cm-comment">        &quot;&quot;&quot;</span></span>
+<span class="line">        <span class="cm-variable">config </span><span class="cm-operator">= </span><span class="cm-variable">ensure_config</span>(<span class="cm-variable">config</span>)</span>
+<span class="line">        <span class="cm-variable">configurable </span><span class="cm-operator">= </span><span class="cm-variable">config</span>.<span class="cm-variable">get</span>(<span class="cm-string">&quot;configurable&quot;</span>) <span class="cm-operator">or </span>{}</span>
+<span class="line">        <span class="cm-variable">_fields </span><span class="cm-operator">= </span>{<span class="cm-variable">f</span>.<span class="cm-variable">name </span><span class="cm-keyword">for </span><span class="cm-variable">f </span><span class="cm-keyword">in </span><span class="cm-variable">fields</span>(<span class="cm-keyword">cls</span>) <span class="cm-keyword">if </span><span class="cm-variable">f</span>.<span class="cm-variable">init</span>}</span>
+<span class="line">        <span class="cm-keyword">return cls</span>(<span class="cm-operator">**</span>{<span class="cm-variable">k</span>: <span class="cm-variable">v </span><span class="cm-keyword">for </span><span class="cm-variable">k</span>, <span class="cm-variable">v </span><span class="cm-keyword">in </span><span class="cm-variable">configurable</span>.<span class="cm-variable">items</span>() <span class="cm-keyword">if </span><span class="cm-variable">k </span><span class="cm-operator">in </span><span class="cm-variable">_fields</span>})</span></code></pre></div></div></li></ul></li></ul></li></ul></li></ul></li><li><span id="source-block-5157"></span><a class="bullet" href="#"></a><span class="tag">#Via</span> <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://blog.langchain.dev/launching-langgraph-templates/">Launching LangGraph Templates</a></li></ul></li><li><a class="bullet" href="#"></a></li></ul></li></ul><section class="references linked-references" id="linked-references" data-refs="linked" data-src="_refs/p-d975268fde3f4172-linked-1.html"><details class="references-section"><summary><span class="ref-chevron"></span><h2>1 Linked Reference</h2><button type="button" class="filter" title="Filter" aria-label="Filter" data-state="none" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v2.172a2 2 0 0 1-.586 1.414L15 12v7l-6 2v-8.5L4.52 7.572A2 2 0 0 1 4 6.227z"/></svg></button></summary><noscript><a href="_refs/p-d975268fde3f4172-linked-1.html">Show linked references</a></noscript><div class="references-body"><p role="status"></p></div></details></section><section class="page-hierarchy references" aria-label="Hierarchy"><details class="references-section" open><summary><span class="ref-chevron"></span><h2>Hierarchy</h2></summary><ul class="namespaces"><li><span class="page-reference"><a class="namespace-link" aria-label="langgraph (Namespace)" href="p-6aae5d2d0fddf137.html">langgraph</a></span></li></ul></details></section><section class="references linked-references unlinked-references" data-refs="unlinked"><details class="references-section"><summary><span class="ref-chevron"></span><h2>Unlinked References</h2></summary><noscript>No unlinked references.</noscript><div class="references-body"></div></details></section></main><script data-lsg-fragments>// Native fragment navigation does not run when a host swaps page content.
+// Hosts can call this helper before their own fragment focus/scroll handling.
+(() => {
+  function reveal(fragment = location.hash, { scroll = true } = {}) {
+    let id;
+    try { id = decodeURIComponent(fragment.replace(/^#/, "")); }
+    catch { return null; }
+    const target = id && document.getElementById(id);
+    if (!target) return null;
+    for (let parent = target.parentElement; parent; parent = parent.parentElement) {
+      if (parent.tagName === "DETAILS") parent.open = true;
+      parent.classList?.remove("folded");
+    }
+    if (scroll) target.scrollIntoView();
+    return target;
+  }
+  window.logseqGardenerRevealFragment = reveal;
+  window.addEventListener("hashchange", () => reveal());
+  reveal();
+})();
+</script></body></html>

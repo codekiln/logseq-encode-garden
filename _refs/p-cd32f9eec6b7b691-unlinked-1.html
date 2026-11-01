@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><base href="../"><title>Unlinked references: VSCode/launch.json</title><script type="application/json" class="references-data">{"count":1,"files":["p-cd32f9eec6b7b691-unlinked-1.html"]}</script></head><body><main><h1>Unlinked references: <a href="p-cd32f9eec6b7b691.html">VSCode/launch.json</a></h1><div class="references-fragment"><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-93be6d7793609f3f.html">DevContainer/Rust/How To/Configure Debugging</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>Create or update <code>.vscode/launch.json</code> with Rust debugging configuration:<ul><li><span class="bullet"></span><div class="cp__fenced-code-block" data-lang="json"><div class="extensions__code"><div class="extensions__code-lang">json</div><pre class="lsg-code"><code><span class="line">				  {</span>
+<span class="line">				    <span class="cm-string">&quot;version&quot;</span>: <span class="cm-string">&quot;0.2.0&quot;</span>,</span>
+<span class="line">				    <span class="cm-string">&quot;configurations&quot;</span>: [</span>
+<span class="line">				      {</span>
+<span class="line">				        <span class="cm-string">&quot;type&quot;</span>: <span class="cm-string">&quot;lldb&quot;</span>,</span>
+<span class="line">				        <span class="cm-string">&quot;request&quot;</span>: <span class="cm-string">&quot;launch&quot;</span>,</span>
+<span class="line">				        <span class="cm-string">&quot;name&quot;</span>: <span class="cm-string">&quot;Debug Rust Program&quot;</span>,</span>
+<span class="line">				        <span class="cm-string">&quot;cargo&quot;</span>: {</span>
+<span class="line">				          <span class="cm-string">&quot;args&quot;</span>: [</span>
+<span class="line">				            <span class="cm-string">&quot;build&quot;</span>,</span>
+<span class="line">				            <span class="cm-string">&quot;--bin=your-binary-name&quot;</span>,</span>
+<span class="line">				            <span class="cm-string">&quot;--package=your-package-name&quot;</span></span>
+<span class="line">				          ],</span>
+<span class="line">				          <span class="cm-string">&quot;filter&quot;</span>: {</span>
+<span class="line">				            <span class="cm-string">&quot;name&quot;</span>: <span class="cm-string">&quot;your-binary-name&quot;</span>,</span>
+<span class="line">				            <span class="cm-string">&quot;kind&quot;</span>: <span class="cm-string">&quot;bin&quot;</span></span>
+<span class="line">				          }</span>
+<span class="line">				        },</span>
+<span class="line">				        <span class="cm-string">&quot;args&quot;</span>: [],</span>
+<span class="line">				        <span class="cm-string">&quot;cwd&quot;</span>: <span class="cm-string">&quot;${workspaceFolder}&quot;</span></span>
+<span class="line">				      }</span>
+<span class="line">				    ]</span>
+<span class="line">				  }</span></code></pre></div></div></li></ul></li></ul></div></div></details></div></div></main></body></html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><base href="../"><title>Linked references: Py/Dataclass</title><script type="application/json" class="references-data">{"blocks":[[0,[0,1,2,3,4],[]]],"count":1,"files":["p-e0fc192080fb3941-linked-1.html"],"filter":[[],[]],"pages":[["Py","p-09424f07b5d24242.html"],["GitHub/Repo","p-2ae71ff501e9981f.html"],["GitHub","p-a8c3b80277455232.html"],["note/my","p-ba34054c28dcc408.html"],["langgraph/Template","p-d975268fde3f4172.html"]]}</script></head><body><main><h1>Linked references: <a href="p-e0fc192080fb3941.html">Py/Dataclass</a></h1><div class="references-fragment"><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-d975268fde3f4172.html">langgraph/Template</a></summary><div class="references-block"><div class="breadcrumb block-parents"><span class="crumb-more">⋯</span><span class="crumb-sep" aria-hidden="true"></span><a href="p-d975268fde3f4172.html#source-block-343">contains a bunch of different <span class="page-reference"><span>GitHub/Repo</span></span>s showing how to do things like use configurable fields</a><span class="crumb-sep" aria-hidden="true"></span><a href="p-d975268fde3f4172.html#source-block-448">Example</a><span class="crumb-sep" aria-hidden="true"></span><a href="p-d975268fde3f4172.html#source-block-694">retrieval-agent-template/src/retrieval_graph/retrieval.py at main · langchain-ai/retrieval-agent-template has this pattern using <span class="page-reference"><span>Py/Context Manager</span></span> and <span class="page-reference"><span>Py/Generator</span></span></a></div><div class="blocks-container"><ul class="refs-outline"><li data-ref-block="0"><a class="bullet" href="p-d975268fde3f4172.html#source-block-2471"></a>note that a sample configuration is using <span class="page-reference"><a href="p-e0fc192080fb3941.html">Py/Dataclass</a></span> - what exactly is this <code>__template_metadata__</code> - it&#39;s probably something specific to the templates, but is this how we make it show up in teh UI?<ul><li><span class="bullet"></span><div class="cp__fenced-code-block" data-lang="python"><div class="extensions__code"><div class="extensions__code-lang">python</div><pre class="lsg-code"><code><span class="line">						  <span class="cm-meta">@</span><span class="cm-variable">dataclass</span><span class="cm-meta">(</span><span class="cm-variable">kw_only</span><span class="cm-operator">=</span><span class="cm-atom">True</span><span class="cm-meta">)</span></span>
+<span class="line">						  <span class="cm-keyword">class </span><span class="cm-def">IndexConfiguration</span>:</span>
+<span class="line">						      <span class="cm-comment">&quot;&quot;&quot;Configuration class for indexing and retrieval operations.</span></span>
+<span class="line"><span class="cm-comment">						  </span></span>
+<span class="line"><span class="cm-comment">						      This class defines the parameters needed for configuring the indexing and</span></span>
+<span class="line"><span class="cm-comment">						      retrieval processes, including user identification, embedding model selection,</span></span>
+<span class="line"><span class="cm-comment">						      retriever provider choice, and search parameters.</span></span>
+<span class="line"><span class="cm-comment">						      &quot;&quot;&quot;</span></span>
+<span class="line">						  </span>
+<span class="line">						      <span class="cm-variable">user_id</span>: <span class="cm-type">str </span><span class="cm-operator">= </span><span class="cm-variable">field</span>(<span class="cm-variable">metadata</span><span class="cm-operator">=</span>{<span class="cm-string">&quot;description&quot;</span>: <span class="cm-string">&quot;Unique identifier for the user.&quot;</span>})</span>
+<span class="line">						  </span>
+<span class="line">						      <span class="cm-variable">embedding_model</span>: <span class="cm-variable">Annotated</span>[</span>
+<span class="line">						          <span class="cm-type">str</span>,</span>
+<span class="line">						          {<span class="cm-string">&quot;__template_metadata__&quot;</span>: {<span class="cm-string">&quot;kind&quot;</span>: <span class="cm-string">&quot;embeddings&quot;</span>}},</span>
+<span class="line">						      ] <span class="cm-operator">= </span><span class="cm-variable">field</span>(</span>
+<span class="line">						          <span class="cm-variable">default</span><span class="cm-operator">=</span><span class="cm-string">&quot;openai/text-embedding-3-small&quot;</span>,</span>
+<span class="line">						          <span class="cm-variable">metadata</span><span class="cm-operator">=</span>{</span>
+<span class="line">						              <span class="cm-string">&quot;description&quot;</span>: <span class="cm-string">&quot;Name of the embedding model to use. Must be a valid embedding model name.&quot;</span></span>
+<span class="line">						          },</span>
+<span class="line">						      )</span>
+<span class="line">						  </span>
+<span class="line">						      <span class="cm-variable">retriever_provider</span>: <span class="cm-variable">Annotated</span>[</span>
+<span class="line">						          <span class="cm-variable">Literal</span>[<span class="cm-string">&quot;elastic&quot;</span>, <span class="cm-string">&quot;elastic-local&quot;</span>, <span class="cm-string">&quot;pinecone&quot;</span>, <span class="cm-string">&quot;mongodb&quot;</span>],</span>
+<span class="line">						          {<span class="cm-string">&quot;__template_metadata__&quot;</span>: {<span class="cm-string">&quot;kind&quot;</span>: <span class="cm-string">&quot;retriever&quot;</span>}},</span>
+<span class="line">						      ] <span class="cm-operator">= </span><span class="cm-variable">field</span>(</span>
+<span class="line">						          <span class="cm-variable">default</span><span class="cm-operator">=</span><span class="cm-string">&quot;elastic&quot;</span>,</span>
+<span class="line">						          <span class="cm-variable">metadata</span><span class="cm-operator">=</span>{</span>
+<span class="line">						              <span class="cm-string">&quot;description&quot;</span>: <span class="cm-string">&quot;The vector store provider to use for retrieval. Options are &#39;elastic&#39;, &#39;pinecone&#39;, or &#39;mongodb&#39;.&quot;</span></span>
+<span class="line">						          },</span>
+<span class="line">						      )</span>
+<span class="line">						  </span>
+<span class="line">						      <span class="cm-variable">search_kwargs</span>: <span class="cm-type">dict</span>[<span class="cm-type">str</span>, <span class="cm-variable">Any</span>] <span class="cm-operator">= </span><span class="cm-variable">field</span>(</span>
+<span class="line">						          <span class="cm-variable">default_factory</span><span class="cm-operator">=</span><span class="cm-type">dict</span>,</span>
+<span class="line">						          <span class="cm-variable">metadata</span><span class="cm-operator">=</span>{</span>
+<span class="line">						              <span class="cm-string">&quot;description&quot;</span>: <span class="cm-string">&quot;Additional keyword arguments to pass to the search function of the retriever.&quot;</span></span>
+<span class="line">						          },</span>
+<span class="line">						      )</span>
+<span class="line">						  </span>
+<span class="line">						      <span class="cm-meta">@</span><span class="cm-builtin">classmethod</span></span>
+<span class="line">						      <span class="cm-keyword">def </span><span class="cm-def">from_runnable_config</span>(</span>
+<span class="line">						          <span class="cm-variable">cls</span>: <span class="cm-variable">Type</span>[<span class="cm-variable">T</span>], <span class="cm-variable">config</span>: <span class="cm-variable">Optional</span>[<span class="cm-variable">RunnableConfig</span>] <span class="cm-operator">= </span><span class="cm-atom">None</span></span>
+<span class="line">						      ) -&gt; <span class="cm-variable">T</span>:</span>
+<span class="line">						          <span class="cm-comment">&quot;&quot;&quot;Create an IndexConfiguration instance from a RunnableConfig object.</span></span>
+<span class="line"><span class="cm-comment">						  </span></span>
+<span class="line"><span class="cm-comment">						          Args:</span></span>
+<span class="line"><span class="cm-comment">						              cls (Type[T]): The class itself.</span></span>
+<span class="line"><span class="cm-comment">						              config (Optional[RunnableConfig]): The configuration object to use.</span></span>
+<span class="line"><span class="cm-comment">						  </span></span>
+<span class="line"><span class="cm-comment">						          Returns:</span></span>
+<span class="line"><span class="cm-comment">						              T: An instance of IndexConfiguration with the specified configuration.</span></span>
+<span class="line"><span class="cm-comment">						          &quot;&quot;&quot;</span></span>
+<span class="line">						          <span class="cm-variable">config </span><span class="cm-operator">= </span><span class="cm-variable">ensure_config</span>(<span class="cm-variable">config</span>)</span>
+<span class="line">						          <span class="cm-variable">configurable </span><span class="cm-operator">= </span><span class="cm-variable">config</span>.<span class="cm-variable">get</span>(<span class="cm-string">&quot;configurable&quot;</span>) <span class="cm-operator">or </span>{}</span>
+<span class="line">						          <span class="cm-variable">_fields </span><span class="cm-operator">= </span>{<span class="cm-variable">f</span>.<span class="cm-variable">name </span><span class="cm-keyword">for </span><span class="cm-variable">f </span><span class="cm-keyword">in </span><span class="cm-variable">fields</span>(<span class="cm-keyword">cls</span>) <span class="cm-keyword">if </span><span class="cm-variable">f</span>.<span class="cm-variable">init</span>}</span>
+<span class="line">						          <span class="cm-keyword">return cls</span>(<span class="cm-operator">**</span>{<span class="cm-variable">k</span>: <span class="cm-variable">v </span><span class="cm-keyword">for </span><span class="cm-variable">k</span>, <span class="cm-variable">v </span><span class="cm-keyword">in </span><span class="cm-variable">configurable</span>.<span class="cm-variable">items</span>() <span class="cm-keyword">if </span><span class="cm-variable">k </span><span class="cm-operator">in </span><span class="cm-variable">_fields</span>})</span></code></pre></div></div></li></ul></li></ul></div></div></details></div></div></main></body></html>

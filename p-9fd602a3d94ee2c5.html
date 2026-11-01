@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>oh-my-tmux/Installation</title><script data-lsg-theme-script>/** Shared visitor appearance, independent of replaceable page content. */
+(() => {
+  try {
+    // Saved shell layout applies before paint; the phone overlay always starts closed.
+    const root = document.documentElement;
+    if (window.matchMedia?.('(min-width: 640px)')?.matches && window.localStorage.getItem('logseq-gardener-left-sidebar') === 'open') root.setAttribute('data-lsg-left-sidebar', 'open');
+    if (window.localStorage.getItem('logseq-gardener-wide') === 'true') root.setAttribute('data-lsg-wide', 'true');
+    // The right sidebar's column takes its width before paint; its cards load after load.
+    const right = JSON.parse(window.localStorage.getItem('logseq-gardener-right-sidebar') || 'null');
+    if (right && window.matchMedia?.('(min-width: 640px)')?.matches) {
+      root.setAttribute('data-lsg-right-sidebar', right.open ? 'open' : 'closed');
+      if (right.width > 0) root.style.setProperty('--lsg-right-width', right.width + 'px');
+    }
+  } catch { /* Layout keeps its defaults. */ }
+  if (typeof window.logseqGardenerInitTheme === 'function') return;
+  const key = 'logseq-gardener-theme';
+  const valid = value => value === 'light' || value === 'dark';
+  const read = () => {
+    try { const value = window.localStorage.getItem(key); return valid(value) ? value : 'system'; }
+    catch { return 'system'; }
+  };
+  let choice = read();
+  let media;
+  try { media = window.matchMedia?.('(prefers-color-scheme: dark)'); } catch { /* Light fallback. */ }
+  const appearance = () => choice === 'system' ? (media?.matches ? 'dark' : 'light') : choice;
+  const initialize = (root = document) => {
+    for (const select of root.querySelectorAll('[data-lsg-theme-select]')) {
+      select.value = choice;
+      const control = select.closest('[data-lsg-theme-control]');
+      if (control) control.hidden = false;
+    }
+  };
+  const apply = () => {
+    document.documentElement.setAttribute('data-lsg-theme', appearance());
+    document.documentElement.setAttribute('data-lsg-theme-mode', choice);
+    initialize();
+  };
+  const set = value => {
+    if (!valid(value) && value !== 'system') return;
+    choice = value;
+    try {
+      if (choice === 'system') window.localStorage.removeItem(key);
+      else window.localStorage.setItem(key, choice);
+    } catch { /* Keep this document's choice when storage is unavailable. */ }
+    apply();
+  };
+  window.logseqGardenerInitTheme = initialize;
+  window.logseqGardenerTheme = { choice: () => choice, appearance, set };
+  apply();
+  if (media?.addEventListener) media.addEventListener('change', apply);
+  else media?.addListener?.(apply);
+  document.addEventListener('change', event => {
+    const select = event.target;
+    if (select?.matches?.('[data-lsg-theme-select]')) set(select.value);
+  });
+  window.addEventListener('storage', event => {
+    if (event.key === key || event.key === null) { choice = read(); apply(); }
+  });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => initialize(), { once: true });
+})();
+</script><script defer src="lsg-shell.js"></script><link rel="lsg-search" href="lsg-search-manifest-1e91ba5239e1caaa.json" data-revision="1e91ba5239e1caaa"><link rel="stylesheet" href="lsg-shared-559a1c927f395608.css"><script data-lsg-search-start>(()=>{const f=(_,o)=>Object.assign(f.options??={},o);window.logseqGardenerInitSearch=f;const u=new URL('lsg-search-start-d1579d619a9675f1.mjs',document.querySelector('[rel=lsg-search]').href);document.addEventListener('DOMContentLoaded',()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{const s=document.createElement('script');s.type='module';s.src=u;s.onerror=()=>{if(!document.querySelector('[rel=lsg-search]'))return;const t=document.createElement('span');t.id='lsg-search-load';t.setAttribute('role','status');t.textContent='Search unavailable. Reload this page to retry search.';document.body.append(t)};document.head.append(s)})),{once:true})})();</script></head><body><header class="lsg-header cp__header"><button type="button" class="lsg-button" data-lsg-left-toggle aria-label="Toggle left sidebar" aria-controls="lsg-left-sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l16 0M4 12l16 0M4 18l16 0"/></svg></button><span class="lsg-header-space"></span><a class="lsg-button" href="index.html" aria-label="Home"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l-2 0l9 -9l9 9l-2 0M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg></a><a class="lsg-button button" href="graph.html#/graph" aria-label="Graph"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path id="lsg-i-graph" d="M10 5a2 2 0 1 0 4 0a2 2 0 1 0-4 0M3 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M17 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M6.5 17.5 12 13l5.5 4.5M12 7v6"/></svg></a><button type="button" class="lsg-button" data-lsg-search aria-label="Search garden" aria-haspopup="dialog" aria-controls="lsg-search-dialog" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0M21 21l-6 -6"/></svg></button><div class="lsg-more"><button type="button" class="lsg-button" data-lsg-more aria-label="More" aria-haspopup="menu" aria-controls="lsg-more-menu" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M20 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg></button><div id="lsg-more-menu" role="menu" aria-label="More" hidden><button type="button" role="menuitem" data-lsg-slides>View as slides</button><button type="button" role="menuitem" data-lsg-theme-toggle>Toggle theme</button><button type="button" role="menuitem" data-lsg-theme-system hidden>Use system theme</button></div></div><button type="button" class="lsg-button lsg-right-toggle" data-lsg-right-toggle aria-label="Toggle right sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2zM15 4l0 16"/></svg></button></header><aside id="lsg-left-sidebar" class="lsg-left-sidebar" aria-label="Left sidebar"><nav aria-label="Navigation"><ul><li><a href="index.html" data-lsg-journals-link><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12zM16 3v4M8 3v4M4 11h16M11 15h1M12 15v3"/></svg><span>Journals</span></a></li><li class="flashcards-nav"><a href="#" role="button" data-lsg-flashcards><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.828 9.172a4 4 0 1 0 0 5.656a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828"/></svg><span>Flashcards</span><span class="lsg-shortcut" aria-hidden="true">g f</span><span class="lsg-badge" data-lsg-due>430</span></a></li><li class="graph-view-nav"><a href="graph.html" data-lsg-graph-view><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#lsg-i-graph"/></svg><span>Graph view</span></a></li><li><a href="pages.html" data-lsg-all-pages><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3v4a1 1 0 0 0 1 1h4M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2zM16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2"/></svg><span>All pages</span></a></li></ul><h2 class="lsg-favorites-heading" id="lsg-favorites">Favorites</h2><ul aria-labelledby="lsg-favorites"><li><a href="p-08986007b541df27.html">fd</a></li><li><a href="p-710a025b0e00c8d5.html">gh-dash</a></li><li><a href="p-710a025b0e00c8d5.html">GitHub/CLI/Extension/gh-dash</a></li><li><a href="p-539dc7d0a39cc4ec.html">tuicr</a></li><li><a href="p-4276cb26f35edeca.html">tmux/Q/How can I put a thick border around the focused pane?</a></li><li><a href="p-62e5d9883ed48541.html">LazyVim</a></li><li><a href="p-abc1fe1091d210a5.html">Logseq/Flashcard/Review/Favorite</a></li><li><a href="p-7d113595e3cdeb70.html">Obsidian</a></li><li><a href="p-efba5ef46cf8e2e4.html">Codex</a></li><li><a href="p-398c5fe622fecdf8.html">chezmoi</a></li><li><a href="p-c02f89b682f53253.html">DevContainer</a></li><li><a href="p-da5911a2a798df4f.html">mise</a></li><li><a href="p-08dc5107b57b9276.html">rg</a></li><li><a href="p-68e903194eba71d7.html">vim</a></li><li><a href="p-74ff40ba60b70acb.html">nvim</a></li><li><a href="p-f237247b53a844f6.html">Zoxide</a></li><li><a href="p-a0d502498c67fd12.html">yazi</a></li><li><a href="p-424036ef4353ec8f.html">tmux</a></li><li><a href="p-e4db29888872bdd5.html">Lazygit</a></li></ul></nav></aside><div class="lsg-sidebar-shade" data-lsg-sidebar-shade hidden></div><main><h1>oh-my-tmux/Installation</h1><ul class="outline"><li><span id="source-block-0"></span><a class="bullet" href="#"></a><h2>chezmoi-managed installation (preferred)</h2><ul><li><span id="source-block-44"></span><a class="bullet" href="#"></a>oh-my-tmux is declared as a <span class="page-reference"><a href="p-67c8509a1cc791fa.html">chezmoi/External</a></span> git-repo in <span class="page-reference unresolved"><span>codekiln/dotfiles</span></span></li><li><span id="source-block-130"></span><a class="bullet" href="#"></a><code>chezmoi/dot_local/share/tmux/.chezmoiexternal.toml</code> clones it to <code>~/.local/share/oh-my-tmux/</code> and refreshes weekly</li><li><span id="source-block-249"></span><a class="bullet" href="#"></a><code>chezmoi/dot_config/tmux/symlink_tmux.conf</code> creates <code>~/.config/tmux/tmux.conf</code> → <code>../../.local/share/oh-my-tmux/.tmux.conf</code></li><li><span id="source-block-378"></span><a class="bullet" href="#"></a><code>chezmoi/dot_config/tmux/tmux.conf.local</code> holds all customizations (Catppuccin Mocha theme, true color, fat borders)</li><li><span id="source-block-498"></span><a class="bullet" href="#"></a><code>chezmoi apply</code> handles everything on a new machine — no manual cloning needed</li></ul></li><li><span id="source-block-582"></span><a class="bullet" href="#"></a><h2>automatic installation from a script</h2><ul><li><span id="source-block-624"></span><a class="bullet" href="#"></a><code>curl -fsSL &quot;https://github.com/gpakosz/.tmux/raw/refs/heads/master/install.sh#$(date +%s)&quot; | bash</code></li></ul></li><li><span id="source-block-727"></span><a class="bullet" href="#"></a><h2>manual installation</h2><ul><li><span id="source-block-752"></span><a class="bullet" href="#"></a>Clone just a single branch of the repo into <code>~/.tmux</code><ul><li><span id="source-block-809"></span><a class="bullet" href="#"></a><code>git clone --single-branch https://github.com/gpakosz/.tmux.git</code></li></ul></li><li><span id="source-block-878"></span><a class="bullet" href="#"></a><h3>manual install in <code>~</code></h3><ul><li><span id="source-block-907"></span><a class="bullet" href="#"></a><code>cd ~</code></li><li><span id="source-block-918"></span><a class="bullet" href="#"></a>Make a symbolic link from <code>~/.tmux.conf</code> to <code>~/.tmux/.tmux.conf</code></li></ul></li><li><span id="source-block-987"></span><a class="bullet" href="#"></a><mark>there&#39;s no <code>.</code> before <code>tmux.conf</code> whenever there is a dedicated directory for config files for tmux</mark><ul><li><span id="source-block-1094"></span><a class="bullet" href="#"></a><h3>manual install in <span class="page-reference"><a href="p-62d8dd5b1dfef9fa.html">XDG/EnvVar/XDG_CONFIG_HOME</a></span></h3><ul><li><span id="source-block-1151"></span><a class="bullet" href="#"></a>make sure that <code>$XDG_CONFIG_HOME</code> exists<ul><li><span id="source-block-1197"></span><a class="bullet" href="#"></a><code>mkdir -p $XDG_CONFIG_HOME</code></li></ul></li><li><span id="source-block-1231"></span><a class="bullet" href="#"></a>make a symbolic link from the XDG config home for <span class="page-reference"><a href="p-56f916d4189b9bae.html">tmux/Config</a></span> to the locally cloned oh-my-tmux config file<ul><li><span id="source-block-1347"></span><a class="bullet" href="#"></a><code>ln -s ~/.tmux/.tmux.conf &quot;$XDG_CONFIG_HOME/tmux/tmux.conf&quot;</code></li></ul></li><li><span id="source-block-1414"></span><a class="bullet" href="#"></a>copy oh-my-tmux&#39;s default <span class="page-reference"><a href="p-75119bb74a8ca2e2.html">tmux/Config/local</a></span> to the config directory<ul><li><span id="source-block-1491"></span><a class="bullet" href="#"></a><code>cp ~/.tmux/.tmux.conf.local &quot;$XDG_CONFIG_HOME/tmux/tmux.conf</code></li></ul></li></ul></li><li><span id="source-block-1560"></span><a class="bullet" href="#"></a><h3>manual install in <span class="page-reference"><a href="p-4f9c70cb52d6122f.html">dot/config</a></span></h3><ul><li><span id="source-block-1601"></span><a class="bullet" href="#"></a>make sure a config dir for tmux exists<ul><li><span id="source-block-1645"></span><a class="bullet" href="#"></a><code>mkdir -p ~/.config/tmux</code></li></ul></li><li><span id="source-block-1677"></span><a class="bullet" href="#"></a>symlink oh-my-tmux&#39;s <span class="page-reference"><a href="p-56f916d4189b9bae.html">tmux/Config</a></span> to the tmux config file location in the dotconfig file<ul><li><span id="source-block-1774"></span><a class="bullet" href="#"></a><code>ln -s ~/.tmux/.tmux.conf ~/.config/tmux/tmux.conf</code></li></ul></li><li><span id="source-block-1832"></span><a class="bullet" href="#"></a>copy oh-my-tmux&#39;s default <span class="page-reference"><a href="p-75119bb74a8ca2e2.html">tmux/Config/local</a></span> to the dotconfig dir<ul><li><span id="source-block-1906"></span><a class="bullet" href="#"></a><code>cp ~/.tmux/.tmux.conf.local ~/.config/tmux/tmux.conf.local</code></li></ul></li></ul></li><li><a class="bullet" href="#"></a></li></ul></li></ul></li></ul><section class="references linked-references" id="linked-references" data-refs="linked" data-src="_refs/p-9fd602a3d94ee2c5-linked-1.html"><details class="references-section"><summary><span class="ref-chevron"></span><h2>4 Linked References</h2><button type="button" class="filter" title="Filter" aria-label="Filter" data-state="none" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v2.172a2 2 0 0 1-.586 1.414L15 12v7l-6 2v-8.5L4.52 7.572A2 2 0 0 1 4 6.227z"/></svg></button></summary><noscript><a href="_refs/p-9fd602a3d94ee2c5-linked-1.html">Show linked references</a></noscript><div class="references-body"><p role="status"></p></div></details></section><section class="page-hierarchy references" aria-label="Hierarchy"><details class="references-section" open><summary><span class="ref-chevron"></span><h2>Hierarchy</h2></summary><ul class="namespaces"><li><span class="page-reference"><a href="p-3726c8b3c4ba97b0.html">oh-my-tmux</a></span></li></ul></details></section><section class="references linked-references unlinked-references" data-refs="unlinked"><details class="references-section"><summary><span class="ref-chevron"></span><h2>Unlinked References</h2></summary><noscript>No unlinked references.</noscript><div class="references-body"></div></details></section></main><script data-lsg-fragments>// Native fragment navigation does not run when a host swaps page content.
+// Hosts can call this helper before their own fragment focus/scroll handling.
+(() => {
+  function reveal(fragment = location.hash, { scroll = true } = {}) {
+    let id;
+    try { id = decodeURIComponent(fragment.replace(/^#/, "")); }
+    catch { return null; }
+    const target = id && document.getElementById(id);
+    if (!target) return null;
+    for (let parent = target.parentElement; parent; parent = parent.parentElement) {
+      if (parent.tagName === "DETAILS") parent.open = true;
+      parent.classList?.remove("folded");
+    }
+    if (scroll) target.scrollIntoView();
+    return target;
+  }
+  window.logseqGardenerRevealFragment = reveal;
+  window.addEventListener("hashchange", () => reveal());
+  reveal();
+})();
+</script></body></html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>rulesync/Skill/Declarative Source</title><script data-lsg-theme-script>/** Shared visitor appearance, independent of replaceable page content. */
+(() => {
+  try {
+    // Saved shell layout applies before paint; the phone overlay always starts closed.
+    const root = document.documentElement;
+    if (window.matchMedia?.('(min-width: 640px)')?.matches && window.localStorage.getItem('logseq-gardener-left-sidebar') === 'open') root.setAttribute('data-lsg-left-sidebar', 'open');
+    if (window.localStorage.getItem('logseq-gardener-wide') === 'true') root.setAttribute('data-lsg-wide', 'true');
+    // The right sidebar's column takes its width before paint; its cards load after load.
+    const right = JSON.parse(window.localStorage.getItem('logseq-gardener-right-sidebar') || 'null');
+    if (right && window.matchMedia?.('(min-width: 640px)')?.matches) {
+      root.setAttribute('data-lsg-right-sidebar', right.open ? 'open' : 'closed');
+      if (right.width > 0) root.style.setProperty('--lsg-right-width', right.width + 'px');
+    }
+  } catch { /* Layout keeps its defaults. */ }
+  if (typeof window.logseqGardenerInitTheme === 'function') return;
+  const key = 'logseq-gardener-theme';
+  const valid = value => value === 'light' || value === 'dark';
+  const read = () => {
+    try { const value = window.localStorage.getItem(key); return valid(value) ? value : 'system'; }
+    catch { return 'system'; }
+  };
+  let choice = read();
+  let media;
+  try { media = window.matchMedia?.('(prefers-color-scheme: dark)'); } catch { /* Light fallback. */ }
+  const appearance = () => choice === 'system' ? (media?.matches ? 'dark' : 'light') : choice;
+  const initialize = (root = document) => {
+    for (const select of root.querySelectorAll('[data-lsg-theme-select]')) {
+      select.value = choice;
+      const control = select.closest('[data-lsg-theme-control]');
+      if (control) control.hidden = false;
+    }
+  };
+  const apply = () => {
+    document.documentElement.setAttribute('data-lsg-theme', appearance());
+    document.documentElement.setAttribute('data-lsg-theme-mode', choice);
+    initialize();
+  };
+  const set = value => {
+    if (!valid(value) && value !== 'system') return;
+    choice = value;
+    try {
+      if (choice === 'system') window.localStorage.removeItem(key);
+      else window.localStorage.setItem(key, choice);
+    } catch { /* Keep this document's choice when storage is unavailable. */ }
+    apply();
+  };
+  window.logseqGardenerInitTheme = initialize;
+  window.logseqGardenerTheme = { choice: () => choice, appearance, set };
+  apply();
+  if (media?.addEventListener) media.addEventListener('change', apply);
+  else media?.addListener?.(apply);
+  document.addEventListener('change', event => {
+    const select = event.target;
+    if (select?.matches?.('[data-lsg-theme-select]')) set(select.value);
+  });
+  window.addEventListener('storage', event => {
+    if (event.key === key || event.key === null) { choice = read(); apply(); }
+  });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => initialize(), { once: true });
+})();
+</script><script defer src="lsg-shell.js"></script><link rel="lsg-search" href="lsg-search-manifest-1e91ba5239e1caaa.json" data-revision="1e91ba5239e1caaa"><link rel="stylesheet" href="lsg-shared-559a1c927f395608.css"><script data-lsg-search-start>(()=>{const f=(_,o)=>Object.assign(f.options??={},o);window.logseqGardenerInitSearch=f;const u=new URL('lsg-search-start-d1579d619a9675f1.mjs',document.querySelector('[rel=lsg-search]').href);document.addEventListener('DOMContentLoaded',()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{const s=document.createElement('script');s.type='module';s.src=u;s.onerror=()=>{if(!document.querySelector('[rel=lsg-search]'))return;const t=document.createElement('span');t.id='lsg-search-load';t.setAttribute('role','status');t.textContent='Search unavailable. Reload this page to retry search.';document.body.append(t)};document.head.append(s)})),{once:true})})();</script></head><body><header class="lsg-header cp__header"><button type="button" class="lsg-button" data-lsg-left-toggle aria-label="Toggle left sidebar" aria-controls="lsg-left-sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l16 0M4 12l16 0M4 18l16 0"/></svg></button><span class="lsg-header-space"></span><a class="lsg-button" href="index.html" aria-label="Home"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l-2 0l9 -9l9 9l-2 0M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg></a><a class="lsg-button button" href="graph.html#/graph" aria-label="Graph"><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path id="lsg-i-graph" d="M10 5a2 2 0 1 0 4 0a2 2 0 1 0-4 0M3 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M17 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0M6.5 17.5 12 13l5.5 4.5M12 7v6"/></svg></a><button type="button" class="lsg-button" data-lsg-search aria-label="Search garden" aria-haspopup="dialog" aria-controls="lsg-search-dialog" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0M21 21l-6 -6"/></svg></button><div class="lsg-more"><button type="button" class="lsg-button" data-lsg-more aria-label="More" aria-haspopup="menu" aria-controls="lsg-more-menu" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M20 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg></button><div id="lsg-more-menu" role="menu" aria-label="More" hidden><button type="button" role="menuitem" data-lsg-slides>View as slides</button><button type="button" role="menuitem" data-lsg-theme-toggle>Toggle theme</button><button type="button" role="menuitem" data-lsg-theme-system hidden>Use system theme</button></div></div><button type="button" class="lsg-button lsg-right-toggle" data-lsg-right-toggle aria-label="Toggle right sidebar" aria-expanded="false" hidden><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2zM15 4l0 16"/></svg></button></header><aside id="lsg-left-sidebar" class="lsg-left-sidebar" aria-label="Left sidebar"><nav aria-label="Navigation"><ul><li><a href="index.html" data-lsg-journals-link><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12zM16 3v4M8 3v4M4 11h16M11 15h1M12 15v3"/></svg><span>Journals</span></a></li><li class="flashcards-nav"><a href="#" role="button" data-lsg-flashcards><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.828 9.172a4 4 0 1 0 0 5.656a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828"/></svg><span>Flashcards</span><span class="lsg-shortcut" aria-hidden="true">g f</span><span class="lsg-badge" data-lsg-due>430</span></a></li><li class="graph-view-nav"><a href="graph.html" data-lsg-graph-view><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#lsg-i-graph"/></svg><span>Graph view</span></a></li><li><a href="pages.html" data-lsg-all-pages><svg class="lsg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3v4a1 1 0 0 0 1 1h4M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2zM16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2"/></svg><span>All pages</span></a></li></ul><h2 class="lsg-favorites-heading" id="lsg-favorites">Favorites</h2><ul aria-labelledby="lsg-favorites"><li><a href="p-08986007b541df27.html">fd</a></li><li><a href="p-710a025b0e00c8d5.html">gh-dash</a></li><li><a href="p-710a025b0e00c8d5.html">GitHub/CLI/Extension/gh-dash</a></li><li><a href="p-539dc7d0a39cc4ec.html">tuicr</a></li><li><a href="p-4276cb26f35edeca.html">tmux/Q/How can I put a thick border around the focused pane?</a></li><li><a href="p-62e5d9883ed48541.html">LazyVim</a></li><li><a href="p-abc1fe1091d210a5.html">Logseq/Flashcard/Review/Favorite</a></li><li><a href="p-7d113595e3cdeb70.html">Obsidian</a></li><li><a href="p-efba5ef46cf8e2e4.html">Codex</a></li><li><a href="p-398c5fe622fecdf8.html">chezmoi</a></li><li><a href="p-c02f89b682f53253.html">DevContainer</a></li><li><a href="p-da5911a2a798df4f.html">mise</a></li><li><a href="p-08dc5107b57b9276.html">rg</a></li><li><a href="p-68e903194eba71d7.html">vim</a></li><li><a href="p-74ff40ba60b70acb.html">nvim</a></li><li><a href="p-f237247b53a844f6.html">Zoxide</a></li><li><a href="p-a0d502498c67fd12.html">yazi</a></li><li><a href="p-424036ef4353ec8f.html">tmux</a></li><li><a href="p-e4db29888872bdd5.html">Lazygit</a></li></ul></nav></aside><div class="lsg-sidebar-shade" data-lsg-sidebar-shade hidden></div><main><h1>rulesync/Skill/Declarative Source</h1><ul class="outline"><li><span id="source-block-0"></span><a class="bullet" href="#"></a><h1><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://rulesync.dyoshikawa.com/guide/declarative-sources.html">Declarative Skill Sources | Rulesync</a></h1><ul><li><span id="source-block-105"></span><a class="bullet" href="#"></a>Rulesync can fetch skills from external repositories using the <span class="page-reference unresolved"><span>rulesync/install</span></span> command. Instead of manually running <code>fetch</code> for each skill source, declare them in your <code>rulesync.jsonc</code> and run <code>rulesync install</code> to resolve and fetch them. Then <span class="page-reference unresolved"><span>rulesync/generate</span></span> picks them up as local curated skills. Typical workflow: <code>rulesync install &amp;&amp; rulesync generate</code>.</li><li><span id="source-block-477"></span><a class="bullet" href="#"></a>This lets you import sources from another repository</li><li><span id="source-block-533"></span><a class="bullet" href="#"></a><h2>Configuration</h2><ul><li><span id="source-block-553"></span><a class="bullet" href="#"></a>Add a <code>sources</code> array to your <code>rulesync.jsonc</code>:<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="json"><div class="extensions__code"><div class="extensions__code-lang">json</div><pre class="lsg-code"><code><span class="line">{</span>
+<span class="line">  <span class="cm-string">&quot;$schema&quot;</span>: <span class="cm-string">&quot;https://github.com/dyoshikawa/rulesync/releases/latest/download/config-schema.json&quot;</span>,</span>
+<span class="line">  <span class="cm-string">&quot;targets&quot;</span>: [<span class="cm-string">&quot;copilot&quot;</span>, <span class="cm-string">&quot;claudecode&quot;</span>],</span>
+<span class="line">  <span class="cm-string">&quot;features&quot;</span>: [<span class="cm-string">&quot;rules&quot;</span>, <span class="cm-string">&quot;skills&quot;</span>],</span>
+<span class="line">  <span class="cm-string">&quot;sources&quot;</span>: [</span>
+<span class="line">    <span class="cm-comment">// Fetch all skills from a GitHub repository (default transport)</span></span>
+<span class="line">    { <span class="cm-string">&quot;source&quot;</span>: <span class="cm-string">&quot;owner/repo&quot; </span>},</span>
+<span class="line"></span>
+<span class="line">    <span class="cm-comment">// Fetch only specific skills by name</span></span>
+<span class="line">    { <span class="cm-string">&quot;source&quot;</span>: <span class="cm-string">&quot;anthropics/skills&quot;</span>, <span class="cm-string">&quot;skills&quot;</span>: [<span class="cm-string">&quot;skill-creator&quot;</span>] },</span>
+<span class="line"></span>
+<span class="line">    <span class="cm-comment">// With ref pinning and subdirectory path (same syntax as fetch command)</span></span>
+<span class="line">    { <span class="cm-string">&quot;source&quot;</span>: <span class="cm-string">&quot;owner/repo@v1.0.0:path/to/skills&quot; </span>},</span>
+<span class="line"></span>
+<span class="line">    <span class="cm-comment">// Git transport — works with any git remote (Azure DevOps, Bitbucket, etc.)</span></span>
+<span class="line">    {</span>
+<span class="line">      <span class="cm-string">&quot;source&quot;</span>: <span class="cm-string">&quot;https://dev.azure.com/org/project/_git/repo&quot;</span>,</span>
+<span class="line">      <span class="cm-string">&quot;transport&quot;</span>: <span class="cm-string">&quot;git&quot;</span>,</span>
+<span class="line">      <span class="cm-string">&quot;ref&quot;</span>: <span class="cm-string">&quot;main&quot;</span>,</span>
+<span class="line">      <span class="cm-string">&quot;path&quot;</span>: <span class="cm-string">&quot;exports/skills&quot;</span>,</span>
+<span class="line">    },</span>
+<span class="line"></span>
+<span class="line">    <span class="cm-comment">// Git transport with a local repository</span></span>
+<span class="line">    { <span class="cm-string">&quot;source&quot;</span>: <span class="cm-string">&quot;file:///path/to/local/repo&quot;</span>, <span class="cm-string">&quot;transport&quot;</span>: <span class="cm-string">&quot;git&quot; </span>},</span>
+<span class="line">  ],</span>
+<span class="line">}</span></code></pre></div></div></li></ul></li></ul></li><li><span id="source-block-1652"></span><a class="bullet" href="#"></a><h2><a class="external-link" target="_blank" rel="noopener noreferrer" href="https://rulesync.dyoshikawa.com/guide/declarative-sources.html#how-it-works">How it works</a></h2><ul><li><span id="source-block-1750"></span><a class="bullet" href="#"></a>The <code>skills/</code> directory (or the path specified in the source URL) is listed from the remote repository.</li></ul></li><li><span id="source-block-1858"></span><a class="bullet" href="#"></a><h2><span class="page-reference"><a href="p-ad4e3549e6a7c0a8.html">rulesync/add</a></span></h2><ul><li><span id="source-block-1881"></span><a class="bullet" href="#"></a>To add one source without editing <code>rulesync.jsonc</code> by hand, run <code>rulesync add &lt;source&gt;</code>. It preserves existing comments, appends the source entry, installs it, and updates the appropriate lockfile.<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">rulesync add anthropics/skills<span class="cm-variable"> --skills</span> skill-creator</span>
+<span class="line"></span>
+<span class="line"><span class="cm-comment"># Add one rule without selecting any skills</span></span>
+<span class="line">rulesync add acme/ai-standards<span class="cm-variable"> --rules</span> testing-guidelines</span></code></pre></div></div></li></ul></li></ul></li><li><span id="source-block-2282"></span><a class="bullet" href="#"></a><h2>Authentication for private repositories</h2><ul><li><span id="source-block-2328"></span><a class="bullet" href="#"></a>The same <code>source</code>/<code>add</code> syntax works against a private GitHub repo&#39;s <code>skills/</code> or <code>rulesync/skills</code> directory — the GitHub transport just needs credentials.</li><li><span id="source-block-2491"></span><a class="bullet" href="#"></a>It uses the <code>GITHUB_TOKEN</code> or <code>GH_TOKEN</code> environment variable:<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line"><span class="cm-keyword">export </span><span class="cm-variable">GITHUB_TOKEN</span><span class="cm-operator">=</span><span class="cm-string">$(gh auth token)</span></span>
+<span class="line">rulesync install</span></code></pre></div></div></li></ul></li><li><span id="source-block-2644"></span><a class="bullet" href="#"></a>Or pass a token explicitly: <code>rulesync install --token ghp_xxxx</code>.</li><li><span id="source-block-2713"></span><a class="bullet" href="#"></a>Git transport (<code>transport: &quot;git&quot;</code>, e.g. SSH remotes) relies on local git credential configuration instead.</li></ul></li><li><span id="source-block-2824"></span><a class="bullet" href="#"></a><h2>Using local git auth (e.g. Git Credential Manager) instead of <code>GITHUB_TOKEN</code></h2><ul><li><span id="source-block-2907"></span><a class="bullet" href="#"></a>The plain <code>owner/repo</code> shorthand always uses the default <code>&quot;github&quot;</code> transport, which reads only <code>GITHUB_TOKEN</code>/<code>GH_TOKEN</code> — it never consults local git credentials.</li><li><span id="source-block-3078"></span><a class="bullet" href="#"></a>To fetch a private repo&#39;s skills via local git auth (SSH keys or an HTTPS credential helper like Git Credential Manager) instead, set the transport to <code>git</code> and give a full URL rather than the <code>owner/repo</code> shorthand:<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="jsonc"><div class="extensions__code"><div class="extensions__code-lang">jsonc</div><pre class="lsg-code"><code><span class="line">{ &quot;source&quot;: &quot;https://github.com/owner/private-repo&quot;, &quot;transport&quot;: &quot;git&quot;, &quot;ref&quot;: &quot;main&quot;, &quot;path&quot;: &quot;rulesync/skills&quot; }</span></code></pre></div></div></li></ul></li><li><span id="source-block-3443"></span><a class="bullet" href="#"></a>No <code>rulesync.jsonc</code> hand-editing is required — <code>rulesync add</code> exposes this as flags directly:<ul><li><a class="bullet" href="#"></a><div class="cp__fenced-code-block" data-lang="bash"><div class="extensions__code"><div class="extensions__code-lang">bash</div><pre class="lsg-code"><code><span class="line">rulesync add https://github.com/owner/private-repo<span class="cm-variable"> --transport</span> git<span class="cm-variable"> --ref</span> main<span class="cm-variable"> --path</span> rulesync/skills<span class="cm-variable"> --skills</span> skill-creator</span></code></pre></div></div></li></ul></li></ul></li><li><a class="bullet" href="#"></a></li></ul></li></ul><section class="references linked-references" id="linked-references" data-refs="linked" data-src="_refs/p-c686c792ef2b971a-linked-1.html"><details class="references-section"><summary><span class="ref-chevron"></span><h2>6 Linked References</h2><button type="button" class="filter" title="Filter" aria-label="Filter" data-state="none" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v2.172a2 2 0 0 1-.586 1.414L15 12v7l-6 2v-8.5L4.52 7.572A2 2 0 0 1 4 6.227z"/></svg></button></summary><noscript><a href="_refs/p-c686c792ef2b971a-linked-1.html">Show linked references</a></noscript><div class="references-body"><p role="status"></p></div></details></section><section class="page-hierarchy references" aria-label="Hierarchy"><details class="references-section" open><summary><span class="ref-chevron"></span><h2>Hierarchy</h2></summary><ul class="namespaces"><li><span class="page-reference"><a href="p-754c229b0ee66084.html">Rulesync</a></span><span class="namespace-separator" aria-hidden="true">/</span><span class="page-reference"><a class="namespace-link" aria-label="Rulesync/Skill (Namespace)" href="p-5b968ca00d3e6cca.html">Skill</a></span></li></ul></details></section><section class="references linked-references unlinked-references" data-refs="unlinked"><details class="references-section"><summary><span class="ref-chevron"></span><h2>Unlinked References</h2></summary><noscript>No unlinked references.</noscript><div class="references-body"></div></details></section></main><script data-lsg-fragments>// Native fragment navigation does not run when a host swaps page content.
+// Hosts can call this helper before their own fragment focus/scroll handling.
+(() => {
+  function reveal(fragment = location.hash, { scroll = true } = {}) {
+    let id;
+    try { id = decodeURIComponent(fragment.replace(/^#/, "")); }
+    catch { return null; }
+    const target = id && document.getElementById(id);
+    if (!target) return null;
+    for (let parent = target.parentElement; parent; parent = parent.parentElement) {
+      if (parent.tagName === "DETAILS") parent.open = true;
+      parent.classList?.remove("folded");
+    }
+    if (scroll) target.scrollIntoView();
+    return target;
+  }
+  window.logseqGardenerRevealFragment = reveal;
+  window.addEventListener("hashchange", () => reveal());
+  reveal();
+})();
+</script></body></html>

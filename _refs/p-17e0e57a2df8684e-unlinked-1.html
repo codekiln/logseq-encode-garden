@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><base href="../"><title>Unlinked references: mcp-atlassian</title><script type="application/json" class="references-data">{"count":6,"files":["p-17e0e57a2df8684e-unlinked-1.html"]}</script></head><body><main><h1>Unlinked references: <a href="p-17e0e57a2df8684e.html">mcp-atlassian</a></h1><div class="references-fragment"><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-8143156c3f45f42b.html">mcp-atlassian/How To/Install with 1Password Creds</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><mark><strong>Important Note</strong>: this guide was made for <span class="page-reference"><a href="p-17e0e57a2df8684e.html">Person/Hyeonsoo Lee/GitHub/mcp-atlassian</a></span> but there is now an official <span class="page-reference"><a href="p-af45730dbac14d30.html">Atlassian/MCP</a></span> server</mark></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block" data-lang="zsh"><div class="extensions__code"><div class="extensions__code-lang">zsh</div><pre class="lsg-code"><code><span class="line">				  <span class="cm-comment">#!/usr/bin/env zsh</span></span>
+<span class="line">				  <span class="cm-comment">#</span></span>
+<span class="line">				  <span class="cm-comment"># Name: start-atlassian-mcp.sh</span></span>
+<span class="line">				  <span class="cm-comment">#</span></span>
+<span class="line">				  <span class="cm-comment"># Purpose:</span></span>
+<span class="line">				  <span class="cm-comment">#   - Securely retrieve Atlassian credentials from 1Password</span></span>
+<span class="line">				  <span class="cm-comment">#   - Inject the credentials as environment variables to Docker via `op run`</span></span>
+<span class="line">				  <span class="cm-comment">#   - Serve as a wrapper command for Cursor&#39;s MCP server configuration</span></span>
+<span class="line">				  <span class="cm-comment">#</span></span>
+<span class="line">				  <span class="cm-comment"># Installation:</span></span>
+<span class="line">				  <span class="cm-comment">#   1. Save this file in a secure location, for example:</span></span>
+<span class="line">				  <span class="cm-comment">#        ~/.cursor/atlassian-mcp/start-atlassian-mcp.sh</span></span>
+<span class="line">				  <span class="cm-comment">#</span></span>
+<span class="line">				  <span class="cm-comment">#   2. Make it executable:</span></span>
+<span class="line">				  <span class="cm-comment">#        chmod +x ~/.cursor/atlassian-mcp/start-atlassian-mcp.sh</span></span>
+<span class="line">				  <span class="cm-comment">#</span></span>
+<span class="line">				  <span class="cm-comment">#   3. In your ~/.cursor/mcp.json, point the &quot;command&quot; to this script.</span></span>
+<span class="line">				  </span>
+<span class="line">				  <span class="cm-comment"># Fail immediately if any command exits non-zero</span></span>
+<span class="line">				  <span class="cm-builtin">set</span> -euo pipefail</span>
+<span class="line">				  </span>
+<span class="line">				  <span class="cm-comment">################################################################################</span></span>
+<span class="line">				  <span class="cm-comment"># Configuration - Update these to match your 1Password setup</span></span>
+<span class="line">				  <span class="cm-comment">################################################################################</span></span>
+<span class="line">				  </span>
+<span class="line">				  <span class="cm-comment"># Vault name in 1Password</span></span>
+<span class="line">				  <span class="cm-variable">VAULT</span><span class="cm-operator">=</span><span class="cm-string">&quot;Private&quot;</span></span>
+<span class="line">				  </span>
+<span class="line">				  <span class="cm-comment"># For Cloud deployment:</span></span>
+<span class="line">				  <span class="cm-variable">CONFLUENCE_ITEM</span><span class="cm-operator">=</span><span class="cm-string">&quot;Atlassian Confluence Cloud&quot;</span></span>
+<span class="line">				  <span class="cm-variable">CONFLUENCE_URL_FIELD</span><span class="cm-operator">=</span><span class="cm-string">&quot;url&quot;</span></span>
+<span class="line">				  <span class="cm-variable">CONFLUENCE_USERNAME_FIELD</span><span class="cm-operator">=</span><span class="cm-string">&quot;username&quot;</span></span>
+<span class="line">				  <span class="cm-variable">CONFLUENCE_TOKEN_FIELD</span><span class="cm-operator">=</span><span class="cm-string">&quot;api_token&quot;</span></span>
+<span class="line">				  </span>
+<span class="line">				  <span class="cm-variable">JIRA_ITEM</span><span class="cm-operator">=</span><span class="cm-string">&quot;Atlassian Jira Cloud&quot;</span></span>
+<span class="line">				  <span class="cm-variable">JIRA_URL_FIELD</span><span class="cm-operator">=</span><span class="cm-string">&quot;url&quot;</span></span>
+<span class="line">				  <span class="cm-variable">JIRA_USERNAME_FIELD</span><span class="cm-operator">=</span><span class="cm-string">&quot;username&quot;</span></span>
+<span class="line">				  <span class="cm-variable">JIRA_TOKEN_FIELD</span><span class="cm-operator">=</span><span class="cm-string">&quot;api_token&quot;</span></span>
+<span class="line">				  </span>
+<span class="line">				  <span class="cm-comment"># For Server/Data Center deployment (uncomment and modify as needed):</span></span>
+<span class="line">				  <span class="cm-comment"># CONFLUENCE_ITEM=&quot;Atlassian Confluence Server&quot;</span></span>
+<span class="line">				  <span class="cm-comment"># CONFLUENCE_URL_FIELD=&quot;url&quot;</span></span>
+<span class="line">				  <span class="cm-comment"># CONFLUENCE_TOKEN_FIELD=&quot;personal_token&quot;</span></span>
+<span class="line">				  <span class="cm-comment"># CONFLUENCE_SSL_VERIFY=&quot;false&quot;</span></span>
+<span class="line">				  </span>
+<span class="line">				  <span class="cm-comment"># JIRA_ITEM=&quot;Atlassian Jira Server&quot;</span></span>
+<span class="line">				  <span class="cm-comment"># JIRA_URL_FIELD=&quot;url&quot;</span></span>
+<span class="line">				  <span class="cm-comment"># JIRA_TOKEN_FIELD=&quot;personal_token&quot;</span></span>
+<span class="line">				  <span class="cm-comment"># JIRA_SSL_VERIFY=&quot;false&quot;</span></span>
+<span class="line">				  </span>
+<span class="line">				  <span class="cm-comment">################################################################################</span></span>
+<span class="line">				  <span class="cm-comment"># Main Script</span></span>
+<span class="line">				  <span class="cm-comment">################################################################################</span></span>
+<span class="line">				  </span>
+<span class="line">				  <span class="cm-comment"># Create environment file content using 1Password secret references</span></span>
+<span class="line">				  <span class="cm-variable">ENV_FILE_CONTENT</span><span class="cm-operator">=</span><span class="cm-string">&quot;</span></span>
+<span class="line"><span class="cm-string">				  CONFLUENCE_URL=op://${</span><span class="cm-variable">VAULT</span><span class="cm-string">}/${</span><span class="cm-variable">CONFLUENCE_ITEM</span><span class="cm-string">}/${</span><span class="cm-variable">CONFLUENCE_URL_FIELD</span><span class="cm-string">}</span></span>
+<span class="line"><span class="cm-string">				  CONFLUENCE_USERNAME=op://${</span><span class="cm-variable">VAULT</span><span class="cm-string">}/${</span><span class="cm-variable">CONFLUENCE_ITEM</span><span class="cm-string">}/${</span><span class="cm-variable">CONFLUENCE_USERNAME_FIELD</span><span class="cm-string">}</span></span>
+<span class="line"><span class="cm-string">				  CONFLUENCE_API_TOKEN=op://${</span><span class="cm-variable">VAULT</span><span class="cm-string">}/${</span><span class="cm-variable">CONFLUENCE_ITEM</span><span class="cm-string">}/${</span><span class="cm-variable">CONFLUENCE_TOKEN_FIELD</span><span class="cm-string">}</span></span>
+<span class="line"><span class="cm-string">				  JIRA_URL=op://${</span><span class="cm-variable">VAULT</span><span class="cm-string">}/${</span><span class="cm-variable">JIRA_ITEM</span><span class="cm-string">}/${</span><span class="cm-variable">JIRA_URL_FIELD</span><span class="cm-string">}</span></span>
+<span class="line"><span class="cm-string">				  JIRA_USERNAME=op://${</span><span class="cm-variable">VAULT</span><span class="cm-string">}/${</span><span class="cm-variable">JIRA_ITEM</span><span class="cm-string">}/${</span><span class="cm-variable">JIRA_USERNAME_FIELD</span><span class="cm-string">}</span></span>
+<span class="line"><span class="cm-string">				  JIRA_API_TOKEN=op://${</span><span class="cm-variable">VAULT</span><span class="cm-string">}/${</span><span class="cm-variable">JIRA_ITEM</span><span class="cm-string">}/${</span><span class="cm-variable">JIRA_TOKEN_FIELD</span><span class="cm-string">}</span></span>
+<span class="line"><span class="cm-string">				  &quot;</span></span>
+<span class="line">				  </span>
+<span class="line">				  <span class="cm-comment"># For Server/Data Center, uncomment and add:</span></span>
+<span class="line">				  <span class="cm-comment"># CONFLUENCE_SSL_VERIFY=${CONFLUENCE_SSL_VERIFY}</span></span>
+<span class="line">				  <span class="cm-comment"># JIRA_SSL_VERIFY=${JIRA_SSL_VERIFY}</span></span>
+<span class="line">				  </span>
+<span class="line">				  <span class="cm-comment"># Use process substitution to avoid saving credentials to disk</span></span>
+<span class="line">				  op run \</span>
+<span class="line"><span class="cm-variable">				    --env-file </span><span class="cm-operator">&lt;</span>(<span class="cm-builtin">echo </span><span class="cm-string">&quot;${</span><span class="cm-variable">ENV_FILE_CONTENT</span><span class="cm-string">}&quot;</span>) \</span>
+<span class="line"><span class="cm-operator">				    -- </span>\</span>
+<span class="line">				    docker run -i --rm \</span>
+<span class="line">				      -e CONFLUENCE_URL \</span>
+<span class="line">				      -e CONFLUENCE_USERNAME \</span>
+<span class="line">				      -e CONFLUENCE_API_TOKEN \</span>
+<span class="line">				      -e JIRA_URL \</span>
+<span class="line">				      -e JIRA_USERNAME \</span>
+<span class="line">				      -e JIRA_API_TOKEN \</span>
+<span class="line">				      ghcr.io/sooperset/mcp-atlassian:latest</span></code></pre></div></div></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block" data-lang="json"><div class="extensions__code"><div class="extensions__code-lang">json</div><pre class="lsg-code"><code><span class="line">			  {</span>
+<span class="line">			    <span class="cm-string">&quot;mcpServers&quot;</span>: {</span>
+<span class="line">			      <span class="cm-string">&quot;mcp-atlassian&quot;</span>: {</span>
+<span class="line">			        <span class="cm-string">&quot;command&quot;</span>: <span class="cm-string">&quot;/Users/&lt;YOUR_USERNAME&gt;/.cursor/atlassian-mcp/start-atlassian-mcp.sh&quot;</span>,</span>
+<span class="line">			        <span class="cm-string">&quot;args&quot;</span>: []</span>
+<span class="line">			      }</span>
+<span class="line">			    }</span>
+<span class="line">			  }</span></code></pre></div></div></li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><h3>2 - Press <code>Cmd+Shift+J</code> to open <span class="page-reference"><a href="p-742f7f17311d43dc.html">CursorAI/Settings/MCP</a></span>, view the <code>mcp-atlassian</code> item - press refresh</h3><ul><li><span class="bullet"></span>It should turn green if the connection is successful</li></ul></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-733d580a23316995.html">MCP/Atlassian/Q/Can Atlassian authentication be system wide and cached</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><h4>Option 2: Use self-hosted mcp-atlassian with API tokens</h4><ul><li><span class="bullet"></span>The unofficial <span class="page-reference"><a href="p-17e0e57a2df8684e.html">mcp-atlassian</a></span> server supports API token authentication</li><li><span class="bullet"></span>Store your Atlassian API token in environment variables or <span class="page-reference"><a href="p-ee57f061ac05d98d.html">1Password</a></span></li><li><span class="bullet"></span>No OAuth flow required — works identically across all tools</li><li><span class="bullet"></span>See <span class="page-reference"><a href="p-8143156c3f45f42b.html">mcp-atlassian/How To/Install with 1Password Creds</a></span></li></ul></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-ba1a9a54ba00c5a0.html">MCP/Atlassian/Reference/Authentication API Key vs OAuth</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>On the <strong>server side</strong>, you <em>can</em> authenticate to Jira/Confluence using an <strong>API token or personal access token</strong> stored in environment variables/config — just like any other REST client. That means your MCP server itself can store credentials (API token) and call the Atlassian REST APIs using basic auth or PAT. (<a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/sooperset/mcp-atlassian">sooperset/mcp-atlassian</a>)</li></ul></div></div></details></div></div></main></body></html>

@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><base href="../"><title>Unlinked references: Emulation</title><script type="application/json" class="references-data">{"count":28,"files":["p-3db78c8e3655046f-unlinked-1.html"]}</script></head><body><main><h1>Unlinked references: <a href="p-3db78c8e3655046f.html">Emulation</a></h1><div class="references-fragment"><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-b92285a21a7ed1ea.html">2026-02-16 Mon</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><span class="page-reference"><a href="p-f07db4e4e2f7c416.html">Programming/Concept/Virtualization vs Emulation</a></span></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-3210b5a9a383f398.html">ChatGPT/Deep Research/Report/26/02/Terminal-First Reproducible Dev Environments for Shell-First Workflows</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>The most standardized container-native option for making a container feel like your default shell already exists in <span class="page-reference"><a href="p-39497fe080cc9225.html">Toolbx</a></span> (<code>toolbox</code>). Its documentation describes <code>toolbox enter</code> as usable as the default shell in a terminal emulation application, and it can create a default container when none exists. [1]</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-5ef8ea71e4e741e2.html">GitHub/Action/Runner/ARM/Concept/Overview of Cost and Deployment</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><h3>6.2 QEMU Emulation on x86 Runner</h3><ul><li><span class="bullet"></span>Approach: docker buildx with --platform linux/arm64 using QEMU emulation.</li><li><span class="bullet"></span>Speed impact: Builds <strong>4–8× slower</strong> than native ARM; 5–6× slower than native x86 baselines in community benchmarks.</li><li><span class="bullet"></span>Reliability: Occasional hangs and segmentation faults reported when building complex C/C++ wheels.</li><li><span class="bullet"></span>Cost impact: No per-minute multiplier applies; however, the increased wall-time may offset any cost advantage. Benchmark data suggests slower emulated builds can increase total usage minutes. Additionally, longer execution durations can raise the likelihood of CI timeouts or flakiness, particularly in multi-stage Docker builds or when compiling native extensions.</li></ul></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-5b05b619d7bde5b8.html">JIT</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><span class="page-reference unresolved"><span>QEMU</span></span> can use JIT-style dynamic binary translation for cross-architecture emulation.</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-a2643341bdad2b5b.html">Obsidian/Q/Can custom Obsidian plugins run on iPhone?</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><strong>Short answer:</strong> Yes. Custom plugins can run in Obsidian for iPhone. Obsidian&#39;s developer documentation covers mobile emulation, inspecting the app&#39;s webview on an iOS device, and detecting iOS with <code>Platform.isIosApp</code>. A plugin declares mobile compatibility with <code>&quot;isDesktopOnly&quot;: false</code> in <code>manifest.json</code>.</li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><strong>A practical development loop:</strong> start with the official sample plugin, keep <code>isDesktopOnly</code> set to <code>false</code>, test first with desktop mobile emulation, then inspect the actual iPhone from Safari&#39;s Web Inspector on a Mac. Obsidian documents inspection for iOS 16.4 or later.</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-f07db4e4e2f7c416.html">Programming/Concept/Virtualization vs Emulation</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><h1>Virtualization vs Emulation Conceptual Overview</h1><ul><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h2>Overview</h2></summary><ul><li><span class="bullet"></span><span class="page-reference"><a href="p-a2c3b2e75928b1d4.html">Virtualization</a></span> and <span class="page-reference"><a href="p-3db78c8e3655046f.html">Emulation</a></span> both let one machine run software intended for another environment, but they optimize for different outcomes.</li><li><span class="bullet"></span>Virtualization prioritizes near-native performance by reusing the host CPU architecture.</li><li><span class="bullet"></span>Emulation prioritizes compatibility by reproducing a different CPU or hardware model in software.</li></ul></details></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h2>Context</h2></summary><ul><li><span class="bullet"></span>Teams often need to run workloads that were built for different operating systems, kernel assumptions, or processor architectures.</li><li><span class="bullet"></span>The practical question is usually: &quot;Do I need speed on similar hardware, or compatibility across different hardware?&quot;</li></ul></details></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h2>Key Principles</h2></summary><ul><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><strong>Instruction path</strong></summary><ul><li><span class="bullet"></span>Virtualization executes most guest instructions directly on host hardware.</li><li><span class="bullet"></span>Emulation translates or interprets guest instructions for a different target architecture.</li></ul></details></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><strong>Architecture coupling</strong></summary><ul><li><span class="bullet"></span>Virtualization is strongest when guest and host CPU families match (for example, ARM on ARM or x86 on x86).</li><li><span class="bullet"></span>Emulation is used when guest and host CPU families differ (for example, x86 guest on ARM host).</li></ul></details></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><strong>Performance profile</strong></summary><ul><li><span class="bullet"></span>Virtualization usually has lower overhead.</li><li><span class="bullet"></span>Emulation usually has higher overhead because of instruction translation.</li></ul></details></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><strong>Fidelity goals</strong></summary><ul><li><span class="bullet"></span>Virtualization models an isolated machine boundary.</li><li><span class="bullet"></span>Emulation models hardware behavior and instruction semantics.</li></ul></details></li></ul></details></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h2>Mechanism</h2></summary><ul><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h3>Virtualization</h3></summary><ul><li><span class="bullet"></span>A hypervisor coordinates privileged operations, memory mapping, and device access while letting most CPU instructions run natively.</li><li><span class="bullet"></span>Hardware extensions (for example VT-x or ARM virtualization support) reduce trap-and-emulate overhead.</li></ul></details></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h3>Emulation</h3></summary><ul><li><span class="bullet"></span>An emulator decodes guest instructions and maps them into host operations (interpreter or dynamic binary translation).</li><li><span class="bullet"></span>Device models and firmware behavior are reproduced in software to match target expectations.</li></ul></details></li></ul></details></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h2>Examples</h2></summary><ul><li><span class="bullet"></span>Running a Linux ARM64 VM on an Apple Silicon Mac with hardware acceleration is primarily virtualization.</li><li><span class="bullet"></span>Running legacy x86 software on an ARM-only host without native x86 hardware support requires emulation.</li><li><span class="bullet"></span>Hybrid systems (for example <span class="page-reference"><a href="p-61f18819db2adc33.html">UTM</a></span> via <span class="page-reference unresolved"><span>QEMU</span></span>) may use virtualization when architectures match and emulation when they do not.</li></ul></details></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h2>Misconceptions</h2></summary><ul><li><span class="bullet"></span>Virtualization and emulation are the same thing -&gt; <strong>False</strong>. They can look similar at the UI level, but the execution model is different.</li><li><span class="bullet"></span>Emulation is always unacceptable for real work -&gt; <strong>False</strong>. It can be essential for compatibility testing, reverse engineering, and legacy workloads.</li><li><span class="bullet"></span>Virtualization always works for any guest OS on any host -&gt; <strong>False</strong>. Cross-architecture scenarios generally require emulation.</li></ul></details></li><li class="outline-collapsed"><details class="outline-disclosure"><summary><span class="bullet"></span><h2>Related</h2></summary><ul><li><span class="bullet"></span><span class="page-reference"><a href="p-61f18819db2adc33.html">UTM</a></span></li><li><span class="bullet"></span><span class="page-reference unresolved"><span>QEMU</span></span></li><li><span class="bullet"></span><span class="page-reference"><a href="p-c1034375f5a9f098.html">Container</a></span></li><li><span class="bullet"></span><span class="page-reference unresolved"><span>Apple/Hypervisor.framework</span></span></li></ul></details></li></ul></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-397381039933d5e6.html">Semigraphics</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>There are two different ways to accomplish the emulation of raster graphics. The first one is to create a low-resolution <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Dot_matrix#All_points_addressable">all points addressable</a> mode using a set of special <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Character_(computing)">characters</a> with all binary combinations of a certain subdivision matrix of the text mode character size; this method is referred to as <strong>block graphics</strong>,<span class="page-reference unresolved"><span>1</span></span>(https://en.wikipedia.org/wiki/Semigraphics<span class="tag">#cite_note-1) or</span> sometimes <strong>mosaic graphics</strong>.</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-2786039fa1c155be.html">Semigraphics/Sextant Characters/Py Grid Utility</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><div class="cp__fenced-code-block" data-lang="python"><div class="extensions__code"><div class="extensions__code-lang">python</div><pre class="lsg-code" style="--lsg-code-digits:3"><code><span class="line">	  <span class="cm-comment">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="cm-comment">	  Sextant Grid - Unicode Sextant Character Mapping Utilities</span></span>
+<span class="line"><span class="cm-comment">	  </span></span>
+<span class="line"><span class="cm-comment">	  This module provides a comprehensive implementation for working with Unicode sextant characters</span></span>
+<span class="line"><span class="cm-comment">	  from the &quot;Symbols for Legacy Computing&quot; Unicode block (U+1FB00 to U+1FBFF).</span></span>
+<span class="line"><span class="cm-comment">	  </span></span>
+<span class="line"><span class="cm-comment">	  Sextant characters are specialized Unicode symbols that divide a character cell into a 3×2 grid</span></span>
+<span class="line"><span class="cm-comment">	  (three rows, two columns), with each of the six sub-cells either activated or not. This allows</span></span>
+<span class="line"><span class="cm-comment">	  for higher resolution text-based graphics within a standard monospace character grid.</span></span>
+<span class="line"><span class="cm-comment">	  </span></span>
+<span class="line"><span class="cm-comment">	  Key features:</span></span>
+<span class="line"><span class="cm-comment">	  - Type-safe representation of sextant coordinates and characters</span></span>
+<span class="line"><span class="cm-comment">	  - Hierarchical organization of sextant characters by number of activated cells</span></span>
+<span class="line"><span class="cm-comment">	  - Efficient mapping between coordinate sets and their corresponding Unicode characters</span></span>
+<span class="line"><span class="cm-comment">	  - Simple string-based coordinate system (&quot;1A&quot;, &quot;1B&quot;, etc.)</span></span>
+<span class="line"><span class="cm-comment">	  </span></span>
+<span class="line"><span class="cm-comment">	  The module is designed to be used in any application requiring text-based graphics, such as:</span></span>
+<span class="line"><span class="cm-comment">	  - Terminal-based user interfaces</span></span>
+<span class="line"><span class="cm-comment">	  - ASCII/Unicode art generation</span></span>
+<span class="line"><span class="cm-comment">	  - Text-mode visualizations</span></span>
+<span class="line"><span class="cm-comment">	  - Retro-computing emulation</span></span>
+<span class="line"><span class="cm-comment">	  - Character-based animations</span></span>
+<span class="line"><span class="cm-comment">	  </span></span>
+<span class="line"><span class="cm-comment">	  References:</span></span>
+<span class="line"><span class="cm-comment">	  - Unicode Symbols for Legacy Computing: https://en.wikipedia.org/wiki/Symbols_for_Legacy_Computing</span></span>
+<span class="line"><span class="cm-comment">	  &quot;&quot;&quot;</span></span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-keyword">from </span><span class="cm-variable">typing </span><span class="cm-keyword">import </span>(</span>
+<span class="line">	      <span class="cm-variable">NamedTuple</span>,</span>
+<span class="line">	      <span class="cm-variable">Set</span>,</span>
+<span class="line">	      <span class="cm-variable">Dict</span>,</span>
+<span class="line">	      <span class="cm-variable">FrozenSet</span>,</span>
+<span class="line">	      <span class="cm-variable">Literal</span>,</span>
+<span class="line">	      <span class="cm-variable">TypeAlias</span>,</span>
+<span class="line">	      <span class="cm-variable">List</span>,</span>
+<span class="line">	      <span class="cm-variable">Tuple</span>,</span>
+<span class="line">	      <span class="cm-variable">Type</span>,</span>
+<span class="line">	      <span class="cm-variable">cast</span>,</span>
+<span class="line">	  )</span>
+<span class="line">	  <span class="cm-keyword">from </span><span class="cm-variable">abc </span><span class="cm-keyword">import </span><span class="cm-variable">ABC</span>, <span class="cm-variable">abstractmethod</span>, <span class="cm-variable">isabstract</span></span>
+<span class="line">	  </span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-comment"># Define a Literal type for valid sextant coordinate strings</span></span>
+<span class="line">	  <span class="cm-variable">SextantCoordinateString</span>: <span class="cm-variable">TypeAlias </span><span class="cm-operator">= </span><span class="cm-variable">Literal</span>[<span class="cm-string">&quot;1A&quot;</span>, <span class="cm-string">&quot;1B&quot;</span>, <span class="cm-string">&quot;2A&quot;</span>, <span class="cm-string">&quot;2B&quot;</span>, <span class="cm-string">&quot;3A&quot;</span>, <span class="cm-string">&quot;3B&quot;</span>]</span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-comment"># Define a type for sets of sextant coordinate strings</span></span>
+<span class="line">	  <span class="cm-variable">SextantString</span>: <span class="cm-variable">TypeAlias </span><span class="cm-operator">= </span><span class="cm-variable">Set</span>[<span class="cm-variable">SextantCoordinateString</span>]</span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-comment"># Constants for coordinate strings</span></span>
+<span class="line">	  <span class="cm-variable">COORD_1A</span>: <span class="cm-variable">SextantCoordinateString </span><span class="cm-operator">= </span><span class="cm-string">&quot;1A&quot;</span></span>
+<span class="line">	  <span class="cm-variable">COORD_1B</span>: <span class="cm-variable">SextantCoordinateString </span><span class="cm-operator">= </span><span class="cm-string">&quot;1B&quot;</span></span>
+<span class="line">	  <span class="cm-variable">COORD_2A</span>: <span class="cm-variable">SextantCoordinateString </span><span class="cm-operator">= </span><span class="cm-string">&quot;2A&quot;</span></span>
+<span class="line">	  <span class="cm-variable">COORD_2B</span>: <span class="cm-variable">SextantCoordinateString </span><span class="cm-operator">= </span><span class="cm-string">&quot;2B&quot;</span></span>
+<span class="line">	  <span class="cm-variable">COORD_3A</span>: <span class="cm-variable">SextantCoordinateString </span><span class="cm-operator">= </span><span class="cm-string">&quot;3A&quot;</span></span>
+<span class="line">	  <span class="cm-variable">COORD_3B</span>: <span class="cm-variable">SextantCoordinateString </span><span class="cm-operator">= </span><span class="cm-string">&quot;3B&quot;</span></span>
+<span class="line">	  </span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-keyword">class </span><span class="cm-def">SextantChar</span>(<span class="cm-type">NamedTuple</span>):</span>
+<span class="line">	      <span class="cm-comment">&quot;&quot;&quot;Represents a sextant Unicode character with its description.&quot;&quot;&quot;</span></span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-type">unicode</span>: <span class="cm-type">str</span></span>
+<span class="line">	      <span class="cm-variable">char</span>: <span class="cm-type">str  </span><span class="cm-comment"># Visual representation for source code readability</span></span>
+<span class="line">	      <span class="cm-variable">description</span>: <span class="cm-type">str </span><span class="cm-operator">= </span><span class="cm-string">&quot;&quot;</span></span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-keyword">def </span><span class="cm-builtin">__str__</span>(<span class="cm-variable">self</span>) -&gt; <span class="cm-type">str</span>:</span>
+<span class="line">	          <span class="cm-comment">&quot;&quot;&quot;Returns the Unicode character when the object is converted to string.&quot;&quot;&quot;</span></span>
+<span class="line">	          <span class="cm-keyword">return self</span>.<span class="cm-variable">unicode</span></span>
+<span class="line">	  </span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-keyword">class </span><span class="cm-def">SextantCoord</span>(<span class="cm-type">NamedTuple</span>):</span>
+<span class="line">	      <span class="cm-comment">&quot;&quot;&quot;Represents a coordinate in the sextant grid with row (1-3) and column (0-1).&quot;&quot;&quot;</span></span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-variable">row</span>: <span class="cm-type">int  </span><span class="cm-comment"># 1-3</span></span>
+<span class="line">	      <span class="cm-variable">col</span>: <span class="cm-type">int  </span><span class="cm-comment"># 0 for A, 1 for B</span></span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-meta">@</span><span class="cm-builtin">classmethod</span></span>
+<span class="line">	      <span class="cm-keyword">def </span><span class="cm-def">from_coordinate_string</span>(</span>
+<span class="line">	          <span class="cm-variable">cls</span>, <span class="cm-variable">coord_string</span>: <span class="cm-variable">SextantCoordinateString</span></span>
+<span class="line">	      ) -&gt; <span class="cm-string">&quot;SextantCoord&quot;</span>:</span>
+<span class="line">	          <span class="cm-comment">&quot;&quot;&quot;Creates a SextantCoord from a coordinate string (e.g., &#39;1A&#39;).&quot;&quot;&quot;</span></span>
+<span class="line">	          <span class="cm-variable">row </span><span class="cm-operator">= </span><span class="cm-type">int</span>(<span class="cm-variable">coord_string</span>[<span class="cm-number">0</span>])</span>
+<span class="line">	          <span class="cm-variable">col </span><span class="cm-operator">= </span><span class="cm-number">0 </span><span class="cm-keyword">if </span><span class="cm-variable">coord_string</span>[<span class="cm-number">1</span>] <span class="cm-operator">== </span><span class="cm-string">&quot;A&quot; </span><span class="cm-keyword">else </span><span class="cm-number">1</span></span>
+<span class="line">	          <span class="cm-keyword">return cls</span>(<span class="cm-variable">row</span><span class="cm-operator">=</span><span class="cm-variable">row</span>, <span class="cm-variable">col</span><span class="cm-operator">=</span><span class="cm-variable">col</span>)</span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-keyword">def </span><span class="cm-def">to_coordinate_string</span>(<span class="cm-variable">self</span>) -&gt; <span class="cm-variable">SextantCoordinateString</span>:</span>
+<span class="line">	          <span class="cm-comment">&quot;&quot;&quot;Converts the coordinate to its string representation.&quot;&quot;&quot;</span></span>
+<span class="line">	          <span class="cm-variable">col_letter </span><span class="cm-operator">= </span><span class="cm-string">&quot;A&quot; </span><span class="cm-keyword">if self</span>.<span class="cm-variable">col </span><span class="cm-operator">== </span><span class="cm-number">0 </span><span class="cm-keyword">else </span><span class="cm-string">&quot;B&quot;</span></span>
+<span class="line">	          <span class="cm-variable">coord_str </span><span class="cm-operator">= </span><span class="cm-keyword">f</span><span class="cm-string">&quot;</span>{<span class="cm-keyword">self</span>.<span class="cm-variable">row</span>}{<span class="cm-variable">col_letter</span>}<span class="cm-string">&quot;</span></span>
+<span class="line">	          <span class="cm-keyword">return </span><span class="cm-variable">cast</span>(<span class="cm-variable">SextantCoordinateString</span>, <span class="cm-variable">coord_str</span>)</span>
+<span class="line">	  </span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-keyword">class </span><span class="cm-def">SextantCoordMapping</span>(<span class="cm-type">NamedTuple</span>):</span>
+<span class="line">	      <span class="cm-comment">&quot;&quot;&quot;Mapping between a set of coordinates and a Unicode character.&quot;&quot;&quot;</span></span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-variable">coordinate_strings</span>: <span class="cm-variable">Tuple</span>[<span class="cm-variable">SextantCoordinateString</span>, <span class="cm-atom">...</span>]</span>
+<span class="line">	      <span class="cm-variable">sextant_char</span>: <span class="cm-variable">SextantChar</span></span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-meta">@</span><span class="cm-builtin">property</span></span>
+<span class="line">	      <span class="cm-keyword">def </span><span class="cm-def">unicode_char</span>(<span class="cm-variable">self</span>) -&gt; <span class="cm-type">str</span>:</span>
+<span class="line">	          <span class="cm-comment">&quot;&quot;&quot;Returns the Unicode character for backward compatibility.&quot;&quot;&quot;</span></span>
+<span class="line">	          <span class="cm-keyword">return self</span>.<span class="cm-variable">sextant_char</span>.<span class="cm-variable">unicode</span></span>
+<span class="line">	  </span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-keyword">class </span><span class="cm-def">SextantCellsActivated</span>(<span class="cm-type">ABC</span>):</span>
+<span class="line">	      <span class="cm-comment">&quot;&quot;&quot;Abstract base class for sextant character groups by cell count.&quot;&quot;&quot;</span></span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-meta">@</span><span class="cm-builtin">classmethod</span></span>
+<span class="line">	      <span class="cm-meta">@</span><span class="cm-variable">abstractmethod</span></span>
+<span class="line">	      <span class="cm-keyword">def </span><span class="cm-def">get_coordinate_mappings</span>(<span class="cm-variable">cls</span>) -&gt; <span class="cm-variable">List</span>[<span class="cm-variable">SextantCoordMapping</span>]:</span>
+<span class="line">	          <span class="cm-comment">&quot;&quot;&quot;Returns a list of coordinate mappings for this cell count.&quot;&quot;&quot;</span></span>
+<span class="line">	          <span class="cm-keyword">pass</span></span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-meta">@</span><span class="cm-builtin">classmethod</span></span>
+<span class="line">	      <span class="cm-keyword">def </span><span class="cm-def">cell_count</span>(<span class="cm-variable">cls</span>) -&gt; <span class="cm-type">int</span>:</span>
+<span class="line">	          <span class="cm-comment">&quot;&quot;&quot;Returns the number of cells activated for this class.&quot;&quot;&quot;</span></span>
+<span class="line">	          <span class="cm-comment"># Extract the number from the class name</span></span>
+<span class="line">	          <span class="cm-keyword">for </span><span class="cm-variable">part </span><span class="cm-keyword">in cls</span>.<span class="cm-variable">__name__</span>.<span class="cm-variable">split</span>(<span class="cm-string">&quot;Sextant&quot;</span>):</span>
+<span class="line">	              <span class="cm-keyword">if </span><span class="cm-variable">part</span>.<span class="cm-variable">endswith</span>(<span class="cm-string">&quot;CellsActivated&quot;</span>):</span>
+<span class="line">	                  <span class="cm-variable">num_str </span><span class="cm-operator">= </span><span class="cm-variable">part</span>.<span class="cm-variable">split</span>(<span class="cm-string">&quot;Cells&quot;</span>)[<span class="cm-number">0</span>]</span>
+<span class="line">	                  <span class="cm-keyword">if </span><span class="cm-variable">num_str </span><span class="cm-operator">== </span><span class="cm-string">&quot;Zero&quot;</span>:</span>
+<span class="line">	                      <span class="cm-keyword">return </span><span class="cm-number">0</span></span>
+<span class="line">	                  <span class="cm-keyword">elif </span><span class="cm-variable">num_str </span><span class="cm-operator">== </span><span class="cm-string">&quot;One&quot;</span>:</span>
+<span class="line">	                      <span class="cm-keyword">return </span><span class="cm-number">1</span></span>
+<span class="line">	                  <span class="cm-keyword">elif </span><span class="cm-variable">num_str </span><span class="cm-operator">== </span><span class="cm-string">&quot;Two&quot;</span>:</span>
+<span class="line">	                      <span class="cm-keyword">return </span><span class="cm-number">2</span></span>
+<span class="line">	                  <span class="cm-keyword">elif </span><span class="cm-variable">num_str </span><span class="cm-operator">== </span><span class="cm-string">&quot;Three&quot;</span>:</span>
+<span class="line">	                      <span class="cm-keyword">return </span><span class="cm-number">3</span></span>
+<span class="line">	                  <span class="cm-keyword">elif </span><span class="cm-variable">num_str </span><span class="cm-operator">== </span><span class="cm-string">&quot;Four&quot;</span>:</span>
+<span class="line">	                      <span class="cm-keyword">return </span><span class="cm-number">4</span></span>
+<span class="line">	                  <span class="cm-keyword">elif </span><span class="cm-variable">num_str </span><span class="cm-operator">== </span><span class="cm-string">&quot;Five&quot;</span>:</span>
+<span class="line">	                      <span class="cm-keyword">return </span><span class="cm-number">5</span></span>
+<span class="line">	                  <span class="cm-keyword">elif </span><span class="cm-variable">num_str </span><span class="cm-operator">== </span><span class="cm-string">&quot;Six&quot;</span>:</span>
+<span class="line">	                      <span class="cm-keyword">return </span><span class="cm-number">6</span></span>
+<span class="line">	          <span class="cm-keyword">return </span><span class="cm-operator">-</span><span class="cm-number">1  </span><span class="cm-comment"># Should never happen</span></span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-meta">@</span><span class="cm-builtin">staticmethod</span></span>
+<span class="line">	      <span class="cm-keyword">def </span><span class="cm-def">_create_coord_mapping</span>(</span>
+<span class="line">	          <span class="cm-variable">coords_to_chars</span>: <span class="cm-variable">Dict</span>[<span class="cm-variable">Tuple</span>[<span class="cm-variable">SextantCoordinateString</span>, <span class="cm-atom">...</span>], <span class="cm-variable">SextantChar</span>]</span>
+<span class="line">	      ) -&gt; <span class="cm-variable">List</span>[<span class="cm-variable">SextantCoordMapping</span>]:</span>
+<span class="line">	          <span class="cm-comment">&quot;&quot;&quot;Helper method to create coordinate mappings from a dictionary of coordinates to characters.</span></span>
+<span class="line"><span class="cm-comment">	  </span></span>
+<span class="line"><span class="cm-comment">	          Args:</span></span>
+<span class="line"><span class="cm-comment">	              coords_to_chars: Dictionary mapping coordinate tuples to sextant characters</span></span>
+<span class="line"><span class="cm-comment">	  </span></span>
+<span class="line"><span class="cm-comment">	          Returns:</span></span>
+<span class="line"><span class="cm-comment">	              List of SextantCoordMapping objects</span></span>
+<span class="line"><span class="cm-comment">	          &quot;&quot;&quot;</span></span>
+<span class="line">	          <span class="cm-keyword">return </span>[</span>
+<span class="line">	              <span class="cm-variable">SextantCoordMapping</span>(<span class="cm-variable">coords</span>, <span class="cm-variable">char</span>)</span>
+<span class="line">	              <span class="cm-keyword">for </span><span class="cm-variable">coords</span>, <span class="cm-variable">char </span><span class="cm-keyword">in </span><span class="cm-variable">coords_to_chars</span>.<span class="cm-variable">items</span>()</span>
+<span class="line">	          ]</span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-meta">@</span><span class="cm-builtin">classmethod</span></span>
+<span class="line">	      <span class="cm-keyword">def </span><span class="cm-def">get_all_subclasses</span>(<span class="cm-variable">cls</span>) -&gt; <span class="cm-variable">List</span>[<span class="cm-variable">Type</span>[<span class="cm-string">&quot;SextantCellsActivated&quot;</span>]]:</span>
+<span class="line">	          <span class="cm-comment">&quot;&quot;&quot;Returns all concrete subclasses of SextantCellsActivated, sorted by cell count.&quot;&quot;&quot;</span></span>
+<span class="line">	          <span class="cm-comment"># Get all direct and indirect subclasses</span></span>
+<span class="line">	          <span class="cm-variable">all_subclasses </span><span class="cm-operator">= </span>[]</span>
+<span class="line">	          <span class="cm-keyword">for </span><span class="cm-variable">subclass </span><span class="cm-keyword">in cls</span>.<span class="cm-builtin">__subclasses__</span>():</span>
+<span class="line">	              <span class="cm-variable">all_subclasses</span>.<span class="cm-variable">append</span>(<span class="cm-variable">subclass</span>)</span>
+<span class="line">	              <span class="cm-variable">all_subclasses</span>.<span class="cm-variable">extend</span>(<span class="cm-variable">subclass</span>.<span class="cm-builtin">__subclasses__</span>())</span>
+<span class="line">	  </span>
+<span class="line">	          <span class="cm-comment"># Filter out any abstract classes</span></span>
+<span class="line">	          <span class="cm-variable">concrete_subclasses </span><span class="cm-operator">= </span>[<span class="cm-variable">sc </span><span class="cm-keyword">for </span><span class="cm-variable">sc </span><span class="cm-keyword">in </span><span class="cm-variable">all_subclasses </span><span class="cm-keyword">if </span><span class="cm-operator">not </span><span class="cm-variable">isabstract</span>(<span class="cm-variable">sc</span>)]</span>
+<span class="line">	  </span>
+<span class="line">	          <span class="cm-comment"># Sort by cell count</span></span>
+<span class="line">	          <span class="cm-keyword">return </span><span class="cm-builtin">sorted</span>(<span class="cm-variable">concrete_subclasses</span>, <span class="cm-variable">key</span><span class="cm-operator">=</span><span class="cm-keyword">lambda </span><span class="cm-variable">sc</span>: <span class="cm-variable">sc</span>.<span class="cm-variable">cell_count</span>())</span>
+<span class="line">	  </span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-comment"># Define sextant characters grouped by cell count</span></span>
+<span class="line">	  <span class="cm-keyword">class </span><span class="cm-def">ZeroSextantCellsActivated</span>(<span class="cm-type">SextantCellsActivated</span>):</span>
+<span class="line">	      <span class="cm-comment">&quot;&quot;&quot;Sextant characters with no cells activated.&quot;&quot;&quot;</span></span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-variable">EMPTY </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB93</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;⮓&quot;</span>, <span class="cm-string">&quot;Empty sextant&quot;</span>)</span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-meta">@</span><span class="cm-builtin">classmethod</span></span>
+<span class="line">	      <span class="cm-keyword">def </span><span class="cm-def">get_coordinate_mappings</span>(<span class="cm-variable">cls</span>) -&gt; <span class="cm-variable">List</span>[<span class="cm-variable">SextantCoordMapping</span>]:</span>
+<span class="line">	          <span class="cm-keyword">return cls</span>.<span class="cm-variable">_create_coord_mapping</span>(</span>
+<span class="line">	              {</span>
+<span class="line">	                  (): <span class="cm-keyword">cls</span>.<span class="cm-variable">EMPTY</span>,</span>
+<span class="line">	              }</span>
+<span class="line">	          )</span>
+<span class="line">	  </span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-keyword">class </span><span class="cm-def">OneSextantCellActivated</span>(<span class="cm-type">SextantCellsActivated</span>):</span>
+<span class="line">	      <span class="cm-comment">&quot;&quot;&quot;Sextant characters with one cell activated.&quot;&quot;&quot;</span></span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-variable">TOP_LEFT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB00</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬀&quot;</span>, <span class="cm-string">&quot;Top-left cell only&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">TOP_RIGHT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB01</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬁&quot;</span>, <span class="cm-string">&quot;Top-right cell only&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">MIDDLE_LEFT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB03</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬃&quot;</span>, <span class="cm-string">&quot;Middle-left cell only&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">MIDDLE_RIGHT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB07</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬇&quot;</span>, <span class="cm-string">&quot;Middle-right cell only&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">BOTTOM_LEFT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB0F</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬏&quot;</span>, <span class="cm-string">&quot;Bottom-left cell only&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">BOTTOM_RIGHT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB1E</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬞&quot;</span>, <span class="cm-string">&quot;Bottom-right cell only&quot;</span>)</span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-meta">@</span><span class="cm-builtin">classmethod</span></span>
+<span class="line">	      <span class="cm-keyword">def </span><span class="cm-def">get_coordinate_mappings</span>(<span class="cm-variable">cls</span>) -&gt; <span class="cm-variable">List</span>[<span class="cm-variable">SextantCoordMapping</span>]:</span>
+<span class="line">	          <span class="cm-keyword">return cls</span>.<span class="cm-variable">_create_coord_mapping</span>(</span>
+<span class="line">	              {</span>
+<span class="line">	                  (<span class="cm-variable">COORD_1A</span>,): <span class="cm-keyword">cls</span>.<span class="cm-variable">TOP_LEFT</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_1B</span>,): <span class="cm-keyword">cls</span>.<span class="cm-variable">TOP_RIGHT</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_2A</span>,): <span class="cm-keyword">cls</span>.<span class="cm-variable">MIDDLE_LEFT</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_2B</span>,): <span class="cm-keyword">cls</span>.<span class="cm-variable">MIDDLE_RIGHT</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_3A</span>,): <span class="cm-keyword">cls</span>.<span class="cm-variable">BOTTOM_LEFT</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_3B</span>,): <span class="cm-keyword">cls</span>.<span class="cm-variable">BOTTOM_RIGHT</span>,</span>
+<span class="line">	              }</span>
+<span class="line">	          )</span>
+<span class="line">	  </span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-keyword">class </span><span class="cm-def">TwoSextantCellsActivated</span>(<span class="cm-type">SextantCellsActivated</span>):</span>
+<span class="line">	      <span class="cm-comment">&quot;&quot;&quot;Sextant characters with two cells activated.&quot;&quot;&quot;</span></span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-variable">TOP_ROW </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB02</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬂&quot;</span>, <span class="cm-string">&quot;Top row filled&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">LEFT_TOP_TWO </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB04</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬄&quot;</span>, <span class="cm-string">&quot;Left column, top two cells&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">TOP_LEFT_MIDDLE_RIGHT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB08</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬈&quot;</span>, <span class="cm-string">&quot;Top-left and middle-right&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">LEFT_TOP_BOTTOM </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB10</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬐&quot;</span>, <span class="cm-string">&quot;Left column, top and bottom&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">TOP_LEFT_BOTTOM_RIGHT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB1F</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬟&quot;</span>, <span class="cm-string">&quot;Top-left and bottom-right&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">RIGHT_TOP_TWO </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB09</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬉&quot;</span>, <span class="cm-string">&quot;Right column, top two cells&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">TOP_RIGHT_BOTTOM_LEFT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB11</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬑&quot;</span>, <span class="cm-string">&quot;Top-right and bottom-left&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">RIGHT_TOP_BOTTOM </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB20</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬠&quot;</span>, <span class="cm-string">&quot;Right column, top and bottom&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">MIDDLE_ROW </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB0B</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬋&quot;</span>, <span class="cm-string">&quot;Middle row filled&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">LEFT_BOTTOM_TWO </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB13</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬓&quot;</span>, <span class="cm-string">&quot;Left column, bottom two cells&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">MIDDLE_LEFT_BOTTOM_RIGHT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(</span>
+<span class="line">	          <span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB22</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬢&quot;</span>, <span class="cm-string">&quot;Middle-left and bottom-right&quot;</span></span>
+<span class="line">	      )</span>
+<span class="line">	      <span class="cm-variable">MIDDLE_RIGHT_BOTTOM_LEFT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(</span>
+<span class="line">	          <span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB16</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬖&quot;</span>, <span class="cm-string">&quot;Middle-right and bottom-left&quot;</span></span>
+<span class="line">	      )</span>
+<span class="line">	      <span class="cm-variable">RIGHT_BOTTOM_TWO </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB26</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬦&quot;</span>, <span class="cm-string">&quot;Right column, bottom two cells&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">BOTTOM_ROW </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB2D</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬭&quot;</span>, <span class="cm-string">&quot;Bottom row filled&quot;</span>)</span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-meta">@</span><span class="cm-builtin">classmethod</span></span>
+<span class="line">	      <span class="cm-keyword">def </span><span class="cm-def">get_coordinate_mappings</span>(<span class="cm-variable">cls</span>) -&gt; <span class="cm-variable">List</span>[<span class="cm-variable">SextantCoordMapping</span>]:</span>
+<span class="line">	          <span class="cm-keyword">return cls</span>.<span class="cm-variable">_create_coord_mapping</span>(</span>
+<span class="line">	              {</span>
+<span class="line">	                  (<span class="cm-variable">COORD_1A</span>, <span class="cm-variable">COORD_1B</span>): <span class="cm-keyword">cls</span>.<span class="cm-variable">TOP_ROW</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_1A</span>, <span class="cm-variable">COORD_2A</span>): <span class="cm-keyword">cls</span>.<span class="cm-variable">LEFT_TOP_TWO</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_1A</span>, <span class="cm-variable">COORD_2B</span>): <span class="cm-keyword">cls</span>.<span class="cm-variable">TOP_LEFT_MIDDLE_RIGHT</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_1A</span>, <span class="cm-variable">COORD_3A</span>): <span class="cm-keyword">cls</span>.<span class="cm-variable">LEFT_TOP_BOTTOM</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_1A</span>, <span class="cm-variable">COORD_3B</span>): <span class="cm-keyword">cls</span>.<span class="cm-variable">TOP_LEFT_BOTTOM_RIGHT</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_1B</span>, <span class="cm-variable">COORD_2B</span>): <span class="cm-keyword">cls</span>.<span class="cm-variable">RIGHT_TOP_TWO</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_1B</span>, <span class="cm-variable">COORD_3A</span>): <span class="cm-keyword">cls</span>.<span class="cm-variable">TOP_RIGHT_BOTTOM_LEFT</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_1B</span>, <span class="cm-variable">COORD_3B</span>): <span class="cm-keyword">cls</span>.<span class="cm-variable">RIGHT_TOP_BOTTOM</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_2A</span>, <span class="cm-variable">COORD_2B</span>): <span class="cm-keyword">cls</span>.<span class="cm-variable">MIDDLE_ROW</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_2A</span>, <span class="cm-variable">COORD_3A</span>): <span class="cm-keyword">cls</span>.<span class="cm-variable">LEFT_BOTTOM_TWO</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_2A</span>, <span class="cm-variable">COORD_3B</span>): <span class="cm-keyword">cls</span>.<span class="cm-variable">MIDDLE_LEFT_BOTTOM_RIGHT</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_2B</span>, <span class="cm-variable">COORD_3A</span>): <span class="cm-keyword">cls</span>.<span class="cm-variable">MIDDLE_RIGHT_BOTTOM_LEFT</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_2B</span>, <span class="cm-variable">COORD_3B</span>): <span class="cm-keyword">cls</span>.<span class="cm-variable">RIGHT_BOTTOM_TWO</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_3A</span>, <span class="cm-variable">COORD_3B</span>): <span class="cm-keyword">cls</span>.<span class="cm-variable">BOTTOM_ROW</span>,</span>
+<span class="line">	              }</span>
+<span class="line">	          )</span>
+<span class="line">	  </span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-keyword">class </span><span class="cm-def">ThreeSextantCellsActivated</span>(<span class="cm-type">SextantCellsActivated</span>):</span>
+<span class="line">	      <span class="cm-comment">&quot;&quot;&quot;Sextant characters with three cells activated.&quot;&quot;&quot;</span></span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-variable">TOP_ROW_MIDDLE_LEFT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB06</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬆&quot;</span>, <span class="cm-string">&quot;Top row and middle-left&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">TOP_ROW_MIDDLE_RIGHT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB0A</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬊&quot;</span>, <span class="cm-string">&quot;Top row and middle-right&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">TOP_LEFT_MIDDLE_ROW </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB0C</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬌&quot;</span>, <span class="cm-string">&quot;Top-left and middle row&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">TOP_RIGHT_MIDDLE_ROW </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB0D</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬍&quot;</span>, <span class="cm-string">&quot;Top-right and middle row&quot;</span>)</span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-meta">@</span><span class="cm-builtin">classmethod</span></span>
+<span class="line">	      <span class="cm-keyword">def </span><span class="cm-def">get_coordinate_mappings</span>(<span class="cm-variable">cls</span>) -&gt; <span class="cm-variable">List</span>[<span class="cm-variable">SextantCoordMapping</span>]:</span>
+<span class="line">	          <span class="cm-keyword">return cls</span>.<span class="cm-variable">_create_coord_mapping</span>(</span>
+<span class="line">	              {</span>
+<span class="line">	                  (<span class="cm-variable">COORD_1A</span>, <span class="cm-variable">COORD_1B</span>, <span class="cm-variable">COORD_2A</span>): <span class="cm-keyword">cls</span>.<span class="cm-variable">TOP_ROW_MIDDLE_LEFT</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_1A</span>, <span class="cm-variable">COORD_1B</span>, <span class="cm-variable">COORD_2B</span>): <span class="cm-keyword">cls</span>.<span class="cm-variable">TOP_ROW_MIDDLE_RIGHT</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_1A</span>, <span class="cm-variable">COORD_2A</span>, <span class="cm-variable">COORD_2B</span>): <span class="cm-keyword">cls</span>.<span class="cm-variable">TOP_LEFT_MIDDLE_ROW</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_1B</span>, <span class="cm-variable">COORD_2A</span>, <span class="cm-variable">COORD_2B</span>): <span class="cm-keyword">cls</span>.<span class="cm-variable">TOP_RIGHT_MIDDLE_ROW</span>,</span>
+<span class="line">	              }</span>
+<span class="line">	          )</span>
+<span class="line">	  </span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-keyword">class </span><span class="cm-def">FourSextantCellsActivated</span>(<span class="cm-type">SextantCellsActivated</span>):</span>
+<span class="line">	      <span class="cm-comment">&quot;&quot;&quot;Sextant characters with four cells activated.&quot;&quot;&quot;</span></span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-variable">TOP_TWO_ROWS </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB0E</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬎&quot;</span>, <span class="cm-string">&quot;Top two rows filled&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">TOP_ROW_MIDDLE_RIGHT_BOTTOM_LEFT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(</span>
+<span class="line">	          <span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB19</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬙&quot;</span>, <span class="cm-string">&quot;Top row, middle-right, bottom-left&quot;</span></span>
+<span class="line">	      )</span>
+<span class="line">	      <span class="cm-variable">LEFT_COLUMN_MIDDLE_RIGHT_BOTTOM_LEFT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(</span>
+<span class="line">	          <span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB1B</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬛&quot;</span>, <span class="cm-string">&quot;Left column, middle-right, bottom-left&quot;</span></span>
+<span class="line">	      )</span>
+<span class="line">	      <span class="cm-variable">TOP_RIGHT_MIDDLE_ROW_BOTTOM_LEFT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(</span>
+<span class="line">	          <span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB1C</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬜&quot;</span>, <span class="cm-string">&quot;Top-right, middle row, bottom-left&quot;</span></span>
+<span class="line">	      )</span>
+<span class="line">	      <span class="cm-variable">TOP_ROW_MIDDLE_LEFT_BOTTOM_RIGHT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(</span>
+<span class="line">	          <span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB25</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬥&quot;</span>, <span class="cm-string">&quot;Top row, middle-left, bottom-right&quot;</span></span>
+<span class="line">	      )</span>
+<span class="line">	      <span class="cm-variable">TOP_ROW_MIDDLE_RIGHT_BOTTOM_RIGHT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(</span>
+<span class="line">	          <span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB28</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬨&quot;</span>, <span class="cm-string">&quot;Top row, middle-right, bottom-right&quot;</span></span>
+<span class="line">	      )</span>
+<span class="line">	      <span class="cm-variable">TOP_LEFT_MIDDLE_ROW_BOTTOM_RIGHT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(</span>
+<span class="line">	          <span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB2A</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬪&quot;</span>, <span class="cm-string">&quot;Top-left, middle row, bottom-right&quot;</span></span>
+<span class="line">	      )</span>
+<span class="line">	      <span class="cm-variable">TOP_RIGHT_MIDDLE_ROW_BOTTOM_RIGHT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(</span>
+<span class="line">	          <span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB2B</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬫&quot;</span>, <span class="cm-string">&quot;Top-right, middle row, bottom-right&quot;</span></span>
+<span class="line">	      )</span>
+<span class="line">	      <span class="cm-variable">TOP_BOTTOM_ROWS </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB30</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬰&quot;</span>, <span class="cm-string">&quot;Top and bottom rows filled&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">LEFT_COLUMN_BOTTOM_ROW </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB32</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬲&quot;</span>, <span class="cm-string">&quot;Left column, bottom row&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">TOP_RIGHT_MIDDLE_LEFT_BOTTOM_ROW </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(</span>
+<span class="line">	          <span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB33</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬳&quot;</span>, <span class="cm-string">&quot;Top-right, middle-left, bottom row&quot;</span></span>
+<span class="line">	      )</span>
+<span class="line">	      <span class="cm-variable">TOP_LEFT_MIDDLE_RIGHT_BOTTOM_ROW </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(</span>
+<span class="line">	          <span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB36</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬶&quot;</span>, <span class="cm-string">&quot;Top-left, middle-right, bottom row&quot;</span></span>
+<span class="line">	      )</span>
+<span class="line">	      <span class="cm-variable">TOP_RIGHT_MIDDLE_RIGHT_BOTTOM_ROW </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(</span>
+<span class="line">	          <span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB37</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬷&quot;</span>, <span class="cm-string">&quot;Top-right, middle-right, bottom row&quot;</span></span>
+<span class="line">	      )</span>
+<span class="line">	      <span class="cm-variable">MIDDLE_BOTTOM_ROWS </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB39</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬹&quot;</span>, <span class="cm-string">&quot;Middle and bottom rows filled&quot;</span>)</span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-meta">@</span><span class="cm-builtin">classmethod</span></span>
+<span class="line">	      <span class="cm-keyword">def </span><span class="cm-def">get_coordinate_mappings</span>(<span class="cm-variable">cls</span>) -&gt; <span class="cm-variable">List</span>[<span class="cm-variable">SextantCoordMapping</span>]:</span>
+<span class="line">	          <span class="cm-keyword">return cls</span>.<span class="cm-variable">_create_coord_mapping</span>(</span>
+<span class="line">	              {</span>
+<span class="line">	                  (<span class="cm-variable">COORD_1A</span>, <span class="cm-variable">COORD_1B</span>, <span class="cm-variable">COORD_2A</span>, <span class="cm-variable">COORD_2B</span>): <span class="cm-keyword">cls</span>.<span class="cm-variable">TOP_TWO_ROWS</span>,</span>
+<span class="line">	                  (</span>
+<span class="line">	                      <span class="cm-variable">COORD_1A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_1B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3A</span>,</span>
+<span class="line">	                  ): <span class="cm-keyword">cls</span>.<span class="cm-variable">TOP_ROW_MIDDLE_RIGHT_BOTTOM_LEFT</span>,</span>
+<span class="line">	                  (</span>
+<span class="line">	                      <span class="cm-variable">COORD_1A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3A</span>,</span>
+<span class="line">	                  ): <span class="cm-keyword">cls</span>.<span class="cm-variable">LEFT_COLUMN_MIDDLE_RIGHT_BOTTOM_LEFT</span>,</span>
+<span class="line">	                  (</span>
+<span class="line">	                      <span class="cm-variable">COORD_1B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3A</span>,</span>
+<span class="line">	                  ): <span class="cm-keyword">cls</span>.<span class="cm-variable">TOP_RIGHT_MIDDLE_ROW_BOTTOM_LEFT</span>,</span>
+<span class="line">	                  (</span>
+<span class="line">	                      <span class="cm-variable">COORD_1A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_1B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3B</span>,</span>
+<span class="line">	                  ): <span class="cm-keyword">cls</span>.<span class="cm-variable">TOP_ROW_MIDDLE_LEFT_BOTTOM_RIGHT</span>,</span>
+<span class="line">	                  (</span>
+<span class="line">	                      <span class="cm-variable">COORD_1A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_1B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3B</span>,</span>
+<span class="line">	                  ): <span class="cm-keyword">cls</span>.<span class="cm-variable">TOP_ROW_MIDDLE_RIGHT_BOTTOM_RIGHT</span>,</span>
+<span class="line">	                  (</span>
+<span class="line">	                      <span class="cm-variable">COORD_1A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3B</span>,</span>
+<span class="line">	                  ): <span class="cm-keyword">cls</span>.<span class="cm-variable">TOP_LEFT_MIDDLE_ROW_BOTTOM_RIGHT</span>,</span>
+<span class="line">	                  (</span>
+<span class="line">	                      <span class="cm-variable">COORD_1B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3B</span>,</span>
+<span class="line">	                  ): <span class="cm-keyword">cls</span>.<span class="cm-variable">TOP_RIGHT_MIDDLE_ROW_BOTTOM_RIGHT</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_1A</span>, <span class="cm-variable">COORD_1B</span>, <span class="cm-variable">COORD_3A</span>, <span class="cm-variable">COORD_3B</span>): <span class="cm-keyword">cls</span>.<span class="cm-variable">TOP_BOTTOM_ROWS</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_1A</span>, <span class="cm-variable">COORD_2A</span>, <span class="cm-variable">COORD_3A</span>, <span class="cm-variable">COORD_3B</span>): <span class="cm-keyword">cls</span>.<span class="cm-variable">LEFT_COLUMN_BOTTOM_ROW</span>,</span>
+<span class="line">	                  (</span>
+<span class="line">	                      <span class="cm-variable">COORD_1B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3B</span>,</span>
+<span class="line">	                  ): <span class="cm-keyword">cls</span>.<span class="cm-variable">TOP_RIGHT_MIDDLE_LEFT_BOTTOM_ROW</span>,</span>
+<span class="line">	                  (</span>
+<span class="line">	                      <span class="cm-variable">COORD_1A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3B</span>,</span>
+<span class="line">	                  ): <span class="cm-keyword">cls</span>.<span class="cm-variable">TOP_LEFT_MIDDLE_RIGHT_BOTTOM_ROW</span>,</span>
+<span class="line">	                  (</span>
+<span class="line">	                      <span class="cm-variable">COORD_1B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3B</span>,</span>
+<span class="line">	                  ): <span class="cm-keyword">cls</span>.<span class="cm-variable">TOP_RIGHT_MIDDLE_RIGHT_BOTTOM_ROW</span>,</span>
+<span class="line">	                  (<span class="cm-variable">COORD_2A</span>, <span class="cm-variable">COORD_2B</span>, <span class="cm-variable">COORD_3A</span>, <span class="cm-variable">COORD_3B</span>): <span class="cm-keyword">cls</span>.<span class="cm-variable">MIDDLE_BOTTOM_ROWS</span>,</span>
+<span class="line">	              }</span>
+<span class="line">	          )</span>
+<span class="line">	  </span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-keyword">class </span><span class="cm-def">FiveSextantCellsActivated</span>(<span class="cm-type">SextantCellsActivated</span>):</span>
+<span class="line">	      <span class="cm-comment">&quot;&quot;&quot;Sextant characters with five cells activated.&quot;&quot;&quot;</span></span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-variable">ALL_EXCEPT_BOTTOM_RIGHT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB1D</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬝&quot;</span>, <span class="cm-string">&quot;All except bottom-right&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">ALL_EXCEPT_BOTTOM_LEFT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB2C</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬬&quot;</span>, <span class="cm-string">&quot;All except bottom-left&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">ALL_EXCEPT_MIDDLE_RIGHT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB34</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬴&quot;</span>, <span class="cm-string">&quot;All except middle-right&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">ALL_EXCEPT_MIDDLE_LEFT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB38</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬸&quot;</span>, <span class="cm-string">&quot;All except middle-left&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">ALL_EXCEPT_TOP_RIGHT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB3A</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬺&quot;</span>, <span class="cm-string">&quot;All except top-right&quot;</span>)</span>
+<span class="line">	      <span class="cm-variable">ALL_EXCEPT_TOP_LEFT </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB3B</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🬻&quot;</span>, <span class="cm-string">&quot;All except top-left&quot;</span>)</span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-meta">@</span><span class="cm-builtin">classmethod</span></span>
+<span class="line">	      <span class="cm-keyword">def </span><span class="cm-def">get_coordinate_mappings</span>(<span class="cm-variable">cls</span>) -&gt; <span class="cm-variable">List</span>[<span class="cm-variable">SextantCoordMapping</span>]:</span>
+<span class="line">	          <span class="cm-keyword">return cls</span>.<span class="cm-variable">_create_coord_mapping</span>(</span>
+<span class="line">	              {</span>
+<span class="line">	                  (</span>
+<span class="line">	                      <span class="cm-variable">COORD_1A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_1B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3A</span>,</span>
+<span class="line">	                  ): <span class="cm-keyword">cls</span>.<span class="cm-variable">ALL_EXCEPT_BOTTOM_RIGHT</span>,</span>
+<span class="line">	                  (</span>
+<span class="line">	                      <span class="cm-variable">COORD_1A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_1B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3B</span>,</span>
+<span class="line">	                  ): <span class="cm-keyword">cls</span>.<span class="cm-variable">ALL_EXCEPT_BOTTOM_LEFT</span>,</span>
+<span class="line">	                  (</span>
+<span class="line">	                      <span class="cm-variable">COORD_1A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_1B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3B</span>,</span>
+<span class="line">	                  ): <span class="cm-keyword">cls</span>.<span class="cm-variable">ALL_EXCEPT_MIDDLE_RIGHT</span>,</span>
+<span class="line">	                  (</span>
+<span class="line">	                      <span class="cm-variable">COORD_1A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3B</span>,</span>
+<span class="line">	                  ): <span class="cm-keyword">cls</span>.<span class="cm-variable">ALL_EXCEPT_MIDDLE_LEFT</span>,</span>
+<span class="line">	                  (</span>
+<span class="line">	                      <span class="cm-variable">COORD_1A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3B</span>,</span>
+<span class="line">	                  ): <span class="cm-keyword">cls</span>.<span class="cm-variable">ALL_EXCEPT_TOP_RIGHT</span>,</span>
+<span class="line">	                  (</span>
+<span class="line">	                      <span class="cm-variable">COORD_1B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3B</span>,</span>
+<span class="line">	                  ): <span class="cm-keyword">cls</span>.<span class="cm-variable">ALL_EXCEPT_TOP_LEFT</span>,</span>
+<span class="line">	              }</span>
+<span class="line">	          )</span>
+<span class="line">	  </span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-keyword">class </span><span class="cm-def">SixSextantCellsActivated</span>(<span class="cm-type">SextantCellsActivated</span>):</span>
+<span class="line">	      <span class="cm-comment">&quot;&quot;&quot;Sextant characters with all six cells activated.&quot;&quot;&quot;</span></span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-variable">FULL_BLOCK </span><span class="cm-operator">= </span><span class="cm-variable">SextantChar</span>(<span class="cm-string">&quot;</span><span class="cm-string-2">\U0001FB8B</span><span class="cm-string">&quot;</span>, <span class="cm-string">&quot;🮋&quot;</span>, <span class="cm-string">&quot;All cells filled (full block)&quot;</span>)</span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-meta">@</span><span class="cm-builtin">classmethod</span></span>
+<span class="line">	      <span class="cm-keyword">def </span><span class="cm-def">get_coordinate_mappings</span>(<span class="cm-variable">cls</span>) -&gt; <span class="cm-variable">List</span>[<span class="cm-variable">SextantCoordMapping</span>]:</span>
+<span class="line">	          <span class="cm-keyword">return cls</span>.<span class="cm-variable">_create_coord_mapping</span>(</span>
+<span class="line">	              {</span>
+<span class="line">	                  (</span>
+<span class="line">	                      <span class="cm-variable">COORD_1A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_1B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_2B</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3A</span>,</span>
+<span class="line">	                      <span class="cm-variable">COORD_3B</span>,</span>
+<span class="line">	                  ): <span class="cm-keyword">cls</span>.<span class="cm-variable">FULL_BLOCK</span>,</span>
+<span class="line">	              }</span>
+<span class="line">	          )</span>
+<span class="line">	  </span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-comment"># Function to convert mappings to a dictionary with frozensets as keys</span></span>
+<span class="line">	  <span class="cm-keyword">def </span><span class="cm-def">create_sextant_dict</span>(</span>
+<span class="line">	      <span class="cm-variable">mappings</span>: <span class="cm-variable">List</span>[<span class="cm-variable">SextantCoordMapping</span>],</span>
+<span class="line">	  ) -&gt; <span class="cm-variable">Dict</span>[<span class="cm-variable">FrozenSet</span>[<span class="cm-variable">SextantCoordinateString</span>], <span class="cm-type">str</span>]:</span>
+<span class="line">	      <span class="cm-keyword">return </span>{<span class="cm-type">frozenset</span>(<span class="cm-variable">m</span>.<span class="cm-variable">coordinate_strings</span>): <span class="cm-variable">m</span>.<span class="cm-variable">sextant_char</span>.<span class="cm-variable">unicode </span><span class="cm-keyword">for </span><span class="cm-variable">m </span><span class="cm-keyword">in </span><span class="cm-variable">mappings</span>}</span>
+<span class="line">	  </span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-comment"># Get all subclasses of SextantCellsActivated, sorted by cell count</span></span>
+<span class="line">	  <span class="cm-variable">SEXTANT_CELL_CLASSES </span><span class="cm-operator">= </span><span class="cm-variable">SextantCellsActivated</span>.<span class="cm-variable">get_all_subclasses</span>()</span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-comment"># Get mappings from each class</span></span>
+<span class="line">	  <span class="cm-variable">SEXTANT_MAPPINGS_BY_COUNT</span>: <span class="cm-variable">List</span>[<span class="cm-variable">List</span>[<span class="cm-variable">SextantCoordMapping</span>]] <span class="cm-operator">= </span>[</span>
+<span class="line">	      <span class="cm-keyword">cls</span>.<span class="cm-variable">get_coordinate_mappings</span>() <span class="cm-keyword">for cls in </span><span class="cm-variable">SEXTANT_CELL_CLASSES</span></span>
+<span class="line">	  ]</span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-comment"># Create dictionaries for each cell count</span></span>
+<span class="line">	  <span class="cm-variable">CELL_MAPPINGS_BY_ACTIVE_CELLS </span><span class="cm-operator">= </span><span class="cm-type">tuple</span>(</span>
+<span class="line">	      <span class="cm-variable">create_sextant_dict</span>(<span class="cm-variable">mappings</span>) <span class="cm-keyword">for </span><span class="cm-variable">mappings </span><span class="cm-keyword">in </span><span class="cm-variable">SEXTANT_MAPPINGS_BY_COUNT</span></span>
+<span class="line">	  )</span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-comment"># Create the main mapping dictionary from the flattened cell mappings</span></span>
+<span class="line">	  <span class="cm-variable">SEXTANT_CHAR_MAP</span>: <span class="cm-variable">Dict</span>[<span class="cm-variable">FrozenSet</span>[<span class="cm-variable">SextantCoordinateString</span>], <span class="cm-type">str</span>] <span class="cm-operator">= </span>{</span>
+<span class="line">	      <span class="cm-variable">coords</span>: <span class="cm-variable">char</span></span>
+<span class="line">	      <span class="cm-keyword">for </span><span class="cm-variable">cell_count_dict </span><span class="cm-keyword">in </span><span class="cm-variable">CELL_MAPPINGS_BY_ACTIVE_CELLS</span></span>
+<span class="line">	      <span class="cm-keyword">for </span><span class="cm-variable">coords</span>, <span class="cm-variable">char </span><span class="cm-keyword">in </span><span class="cm-variable">cell_count_dict</span>.<span class="cm-variable">items</span>()</span>
+<span class="line">	  }</span>
+<span class="line">	  <span class="cm-comment">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="cm-comment">	  A dictionary mapping sets of string-based coordinates to their corresponding Unicode sextant characters.</span></span>
+<span class="line"><span class="cm-comment">	  </span></span>
+<span class="line"><span class="cm-comment">	  This dictionary uses frozensets of coordinate strings (e.g., frozenset([&quot;1A&quot;, &quot;1B&quot;])) as keys,</span></span>
+<span class="line"><span class="cm-comment">	  and the corresponding Unicode sextant character as values.</span></span>
+<span class="line"><span class="cm-comment">	  </span></span>
+<span class="line"><span class="cm-comment">	  Example:</span></span>
+<span class="line"><span class="cm-comment">	      # The character with top row filled has coordinates &quot;1A&quot; and &quot;1B&quot; activated</span></span>
+<span class="line"><span class="cm-comment">	      char = SEXTANT_CHAR_MAP[frozenset([&quot;1A&quot;, &quot;1B&quot;])]  # Returns &quot;🬂&quot;</span></span>
+<span class="line"><span class="cm-comment">	  &quot;&quot;&quot;</span></span>
+<span class="line">	  </span>
+<span class="line">	  </span>
+<span class="line">	  <span class="cm-keyword">def </span><span class="cm-def">get_sextant_character</span>(</span>
+<span class="line">	      <span class="cm-variable">active_cells</span>: <span class="cm-variable">Set</span>[<span class="cm-variable">SextantCoordinateString</span>] <span class="cm-operator">| </span><span class="cm-variable">Set</span>[<span class="cm-variable">SextantCoord</span>],</span>
+<span class="line">	  ) -&gt; <span class="cm-type">str</span>:</span>
+<span class="line">	      <span class="cm-comment">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="cm-comment">	      Returns the Unicode sextant character corresponding to the given set of active cells.</span></span>
+<span class="line"><span class="cm-comment">	  </span></span>
+<span class="line"><span class="cm-comment">	      This function maps a set of coordinates (either as strings or SextantCoord objects) within</span></span>
+<span class="line"><span class="cm-comment">	      a sextant grid to the appropriate Unicode character from the &quot;Symbols for Legacy Computing&quot;</span></span>
+<span class="line"><span class="cm-comment">	      block that visually represents those active positions.</span></span>
+<span class="line"><span class="cm-comment">	  </span></span>
+<span class="line"><span class="cm-comment">	      The coordinate system can use either:</span></span>
+<span class="line"><span class="cm-comment">	      1. String format where the first character is the row number (1-3) and the second</span></span>
+<span class="line"><span class="cm-comment">	         character is the column letter (A or B). For example: &quot;1A&quot;, &quot;1B&quot;, etc.</span></span>
+<span class="line"><span class="cm-comment">	      2. SextantCoord objects with row (1-3) and col (0 for A, 1 for B) attributes.</span></span>
+<span class="line"><span class="cm-comment">	  </span></span>
+<span class="line"><span class="cm-comment">	      Args:</span></span>
+<span class="line"><span class="cm-comment">	          active_cells: A set of coordinates (either strings like {&quot;1A&quot;, &quot;1B&quot;} or</span></span>
+<span class="line"><span class="cm-comment">	                       SextantCoord objects) representing the positions that should be</span></span>
+<span class="line"><span class="cm-comment">	                       activated (filled) in the resulting character</span></span>
+<span class="line"><span class="cm-comment">	  </span></span>
+<span class="line"><span class="cm-comment">	      Returns:</span></span>
+<span class="line"><span class="cm-comment">	          A Unicode string containing a single sextant character with the specified cells activated.</span></span>
+<span class="line"><span class="cm-comment">	          Returns &quot;?&quot; if no matching character is found for the given set of coordinates.</span></span>
+<span class="line"><span class="cm-comment">	  </span></span>
+<span class="line"><span class="cm-comment">	      Examples:</span></span>
+<span class="line"><span class="cm-comment">	          # Using string coordinates</span></span>
+<span class="line"><span class="cm-comment">	          char = get_sextant_character({&quot;1A&quot;, &quot;3B&quot;})  # Returns &quot;🬟&quot;</span></span>
+<span class="line"><span class="cm-comment">	  </span></span>
+<span class="line"><span class="cm-comment">	          # Using SextantCoord objects</span></span>
+<span class="line"><span class="cm-comment">	          char = get_sextant_character({SextantCoord(1, 0), SextantCoord(3, 1)})  # Returns &quot;🬟&quot;</span></span>
+<span class="line"><span class="cm-comment">	      &quot;&quot;&quot;</span></span>
+<span class="line">	      <span class="cm-comment"># Convert SextantCoord objects to coordinate strings if needed</span></span>
+<span class="line">	      <span class="cm-variable">coord_strings</span>: <span class="cm-variable">Set</span>[<span class="cm-variable">SextantCoordinateString</span>]</span>
+<span class="line">	      <span class="cm-keyword">if </span><span class="cm-variable">active_cells </span><span class="cm-operator">and </span><span class="cm-builtin">isinstance</span>(<span class="cm-builtin">next</span>(<span class="cm-builtin">iter</span>(<span class="cm-variable">active_cells</span>)), <span class="cm-variable">SextantCoord</span>):</span>
+<span class="line">	          <span class="cm-variable">coord_strings </span><span class="cm-operator">= </span>{</span>
+<span class="line">	              <span class="cm-variable">coord</span>.<span class="cm-variable">to_coordinate_string</span>()</span>
+<span class="line">	              <span class="cm-keyword">for </span><span class="cm-variable">coord </span><span class="cm-keyword">in </span><span class="cm-variable">cast</span>(<span class="cm-variable">Set</span>[<span class="cm-variable">SextantCoord</span>], <span class="cm-variable">active_cells</span>)</span>
+<span class="line">	          }</span>
+<span class="line">	      <span class="cm-keyword">else</span>:</span>
+<span class="line">	          <span class="cm-variable">coord_strings </span><span class="cm-operator">= </span><span class="cm-variable">cast</span>(<span class="cm-variable">Set</span>[<span class="cm-variable">SextantCoordinateString</span>], <span class="cm-variable">active_cells</span>)</span>
+<span class="line">	  </span>
+<span class="line">	      <span class="cm-keyword">return </span><span class="cm-variable">SEXTANT_CHAR_MAP</span>.<span class="cm-variable">get</span>(</span>
+<span class="line">	          <span class="cm-type">frozenset</span>(<span class="cm-variable">coord_strings</span>), <span class="cm-string">&quot;?&quot;</span></span>
+<span class="line">	      )  <span class="cm-comment"># Return &#39;?&#39; if not found</span></span>
+<span class="line">	  </span></code></pre></div></div></li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-fd06266a7d0a5c72.html">tuicr/Q/Can I compose a PR comment in nvim to get vim keybindings and markdown rendering?</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>tuicr&#39;s comment box has a <code>comment_vim</code> config option (default <code>false</code>); when set (or toggled at runtime with <code>:vim</code> / <code>:set vim!</code>), the box switches to <a class="external-link" target="_blank" rel="noopener noreferrer" href="https://github.com/preiter93/edtui"><code>edtui</code></a> modal editing — <code>hjkl</code>, <code>w</code>/<code>b</code>/<code>e</code>, <code>dd</code>/<code>D</code>/<code>ciw</code>/<code>x</code>, <code>u</code>/<code>Ctrl-r</code>, visual <code>v</code>+<code>y</code>/<code>d</code>/<code>p</code>, <code>:w</code>/<code>:q</code>-style save/cancel. That is a real Vim-modal <em>emulation</em> built into the comment box, not <code>nvim</code> itself — no plugins, no LSP, no Markdown rendering. Verified in <code>agavra/tuicr</code>: <code>docs/CONFIG.md</code>, <code>docs/KEYBINDINGS.md</code> (&quot;Comment mode&quot;), and <code>src/app/comment_vim.rs</code>.</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-d300decd19510afe.html">tuicr/Wishlist</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><strong>Today:</strong> <code>comment_vim = true</code> gives <code>edtui</code>-based Vim-modal editing inside the comment box (see <code>docs/KEYBINDINGS.md</code>), but that is an emulation, not real <code>nvim</code> — no plugins, LSP, or live Markdown preview. <code>$EDITOR</code> handoff exists only for the focused diff file (<code>:edit</code>), not for comment text.</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-61f18819db2adc33.html">UTM</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><strong><span class="page-reference unresolved"><span>QEMU</span></span></strong> → CPU + device emulation</li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>UTM is essentially a GUI virtual machine manager built on top of <span class="page-reference unresolved"><span>QEMU</span></span>. On macOS it integrates with Apple’s Hypervisor framework for near-native virtualization of  <span class="page-reference"><a href="p-d88dda10198be7cf.html">ARM64</a></span> and  <span class="page-reference"><a href="p-26a4d61045d02e63.html">CPU/Arch/x86</a></span> guests when the host CPU is compatible, falling back to QEMU’s <span class="page-reference"><a href="p-5b05b619d7bde5b8.html">JIT</a></span> or interpreter for cross-architecture emulation (for example, x86 on Apple silicon).</li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>This design lets users pick between speed (virtualization) and flexibility (emulation), while UTM’s UI generates and manages the underlying QEMU configurations, so users typically don’t have to hand-craft QEMU command lines.</li></ul></div></div></details></div><div class="references-blocks-item"><details class="references-group" open><summary class="foldable-title"><span class="ref-chevron"></span><a class="page-ref" href="p-a2c3b2e75928b1d4.html">Virtualization</a></summary><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span>Virtualization and <span class="page-reference"><a href="p-3db78c8e3655046f.html">Emulation</a></span> are identical -&gt; <strong>False</strong>. Virtualization typically executes guest code on native hardware, while emulation translates different hardware behavior.</li></ul></div></div><div class="references-block"><div class="blocks-container"><ul class="refs-outline"><li><span class="bullet"></span><span class="page-reference"><a href="p-f07db4e4e2f7c416.html">Programming/Concept/Virtualization vs Emulation</a></span></li></ul></div></div></details></div></div></main></body></html>
