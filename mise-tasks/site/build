@@ -138,7 +138,8 @@ def page_aliases(titles: dict[Path, str]) -> dict[str, str]:
     claims = collections.defaultdict(set)
     for path, title in titles.items():
         aliases = leading_properties(path.read_text(encoding='utf-8')).get('alias', '')
-        for alias in re.findall(r'\[\[([^\]]+)\]\]|([^,]+)', aliases):
+        # Each comma-separated alias is a [[page ref]] or plain text, as in alias:: [[A]], B.
+        for alias in re.findall(r'\s*(?:\[\[([^\]]+)\]\]|([^,]+))\s*(?:,|$)', aliases):
             name = page_key(alias[0] or alias[1])
             if name:
                 claims[name].add(title)
