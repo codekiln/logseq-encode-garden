@@ -1,6 +1,17 @@
-- # `logseq-gardener`
+logseq-entity:: [[Logseq/Entity/Software/Project]]
+alias:: lsg
+tags:: [[CLI/Tool]]
+
+- # [logseq-gardener](https://github.com/codekiln/logseq-gardener)
+	- [[GitHub/Star]]: 0 (checked [[2026-11-01 Sun]]).
+	- Written in [[Rust]].
+	- License: AGPLv3.
 	- ## About
-		- `logseq-gardener` is a proposed command-line tool, called `lsg`, for people and coding agents to manage [[Logseq/OG]] knowledge gardens from the terminal and Neovim.
+		- `logseq-gardener` is a command-line tool, called `lsg`, for people and coding agents to manage [[Logseq/OG]] knowledge gardens from the terminal and Neovim. Version 0.0.1 shipped on [[2026-10-31 Sat]].
+		- `lsg lookup NAME --graph PATH --filename-format triple-lowbar` prints the file of the page named by its title, an alias or a journal date. `lsg publish` generates selected local HTML pages, and `lsg help` documents every command.
+	- ## Install
+		- [[mise]] installs the latest release on every machine that [[My/Dotfiles]] sets up, through the line `"github:codekiln/logseq-gardener" = "latest"` in the global mise config ([dotfiles#183 Install Logseq Gardener (lsg) globally with mise](https://github.com/codekiln/dotfiles/issues/183)).
+		- A project that uses lsg writes the same line under `[tools]` in its `mise.toml`, and mise runs the globally installed version there. This garden's `mise.toml` does so.
 	- ## Project proposal
 		- [[Person/codekiln/GitHub/logseq-gardener/Project/Proposal]] — purpose, use cases, technical design, and starting tasks for `lsg`.
 	- ## Earlier drafts
