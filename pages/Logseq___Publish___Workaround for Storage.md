@@ -1,4 +1,5 @@
 - # Workaround: Keeping index.html Under GitHub's 100 MB Push Limit
+	- The garden's Publish workflow used this workaround until [[2026-11-01 Sun]], when [[Person/codekiln/GitHub/logseq-encode-garden/mise/Task/site/build]] replaced [[logseq/publish-spa]] and the script was deleted.
 	- ## Problem
 		- [[logseq/publish-spa]] bundles the entire graph as a single JavaScript variable (`window.logseq_db`) embedded inline inside `index.html`. As the graph grows, this file exceeds [[GitHub]]'s hard 100 MB per-file push limit, breaking the [[GitHub/Actions]] deploy step.
 		- The limit applies to every `git push`, including the force-push that the `gh-pages` deploy action makes. There is no way to configure `logseq/publish-spa` to split or exclude content.
