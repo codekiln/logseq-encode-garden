@@ -9,6 +9,7 @@ alias:: [[Logseq Journal]]
 		- [[Filed]] and [[Updated]] are sibling top-level blocks — no parent wrapper and no intro line above them.
 		- **The line form is `- # [[Filed]]`**, with the bullet, which is the plurality across the graph and the only common form satisfying the bullet rule in `.claude/rules/logseq-core.md`. Where a journal's first line has lost its bullet, an editor save ate it rather than a person choosing.
 		- A page appears under only one section per day. A page that was both created and edited today stays under [[Filed]] only.
+			- `mise run logseq:journal:lint` reports journals that list a page under both sections; pass journal files to check only those.
 		- Lines are link-only: `- [[Some/Page]]`. No `Created …` / `Updated …` boilerplate and no inline action text; add at most one short child sentence when it genuinely helps a reader.
 		- This is a curated snapshot of the day's adventures — a [[Now/Page]] glimpse, not a full audit of every git change. Skip trivial stubs and noise.
 		- ### Grouping
