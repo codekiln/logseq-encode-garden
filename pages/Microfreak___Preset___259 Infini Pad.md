@@ -40,6 +40,11 @@ preset-synth-file-sha256:: fb4599873da27fceabd67a5108a96e95c33e0dcb0d07b3e52fe91
 		- All other saved matrix amounts are zero.
 	- ## Voice and keyboard
 		- [Paraphonic]([[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button]]) mode: on.
+	- ## Performance and session context
+		- Held notes swell in slowly. The main envelope adds Fold (+0.968) and opens the cutoff (+0.328) as each note opens. Key pressure adds Saturate (+0.170), Fold (+0.486) and cutoff (+0.187) and lowers Noise through Assign 2 (−0.125); the synced sawtooth LFO adds Noise through Assign 1 (+0.203).
+		- The PRESSURE matrix row follows the instrument's global expression setting, which the export does not record.
+		- Turning [Shape]([[Microfreak/UI/Oscillator/Knob/Shape]]) up raises Noise and makes the pad work as a noisy bass in the low register, as heard from 05:15 in [[GitP/A/Session/26/11/01-Sun]].
+		- In that session the Launchpad Pro played it from 00:00 to 18:17. Recorded knob changes covered the main and cycling envelopes, filter amount, Spice, LFO rate and the three oscillator controls, with brief cutoff and resonance changes. A read of slot 259 after the session matched the October 25 export, so those changes were not saved.
 	- ## Evidence and interpretation
 		- Values describe saved base settings before modulation. Controls use normalized 0…1 values unless a stored choice code is shown; they are not OLED percentages, hertz or milliseconds.
 		- The [saved-parameter inspector](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/PARAMETERS.md) preserves the original fields. Oscillator interpretation assumes the documented firmware 5 layout; firmware is not detected from the export.
