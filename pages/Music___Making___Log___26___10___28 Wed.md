@@ -25,3 +25,28 @@
 			- [[Learned]]
 				- [[Ableton/Live/UG/07 Session View/04 Setting Up the Session View Grid/02 Removing Clip Stop Buttons]]
 					- It's possible to remove the clip stop buttons on the session view for the Arrangement Tracks group; select a whole portion of the grid with shift click, right click, then do Remove Stop Button or Cmd E
+	- ## 19:12 — Ghost in the Patch reflections: Session View improv tracks
+		- ![Session View improv track groups and routing](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Music___Making___Log___26___10___28%20Wed___Asset___Notebook___Yellow-11.jpg)
+		- ### Transcription
+			- 2026-10-28 Wed 19:12 Ghost in the Patch reflections
+			- This morning I researched how to record a session view improv in Ableton Live. I watched a few videos, but none really showed everything I needed. I'm expecting to make something like:
+		- ### Diagram
+			- A track plan with three columns on the right: Monitor, From, To.
+			- Session View
+				- Improv Track Group
+					- Patch A Track "group"
+						- Audio Track: A-Aud — Monitor auto? — From μF — To master
+						- Midi Track: A-Mid — Monitor off — From μF — To μF
+					- Patch B Track "group"
+						- Audio Track: B-Aud — Monitor auto? — From μF — To master
+						- MIDI Track: B-MID — Monitor off — From μF — To μF
+				- Arrangement Group (AKA "archival")
+					- Patch A Aud-Arr — Monitor off — From A-Aud — To None
+					- Patch B Aud-Arr — Monitor off — From B-Aud — To None
+				- Route Group
+					- MF→LPP — Monitor auto? — From MF — To LPP
+					- LPP→MF — Monitor auto? — From LPP — To MF
+			- Margin doodle: an eye in a circle.
+		- ### AI notes ([[Anthropic/Model/Claude/5/5/Opus]])
+			- The handwritten version of the doubled-track idea above: each patch gets a Session audio and MIDI track, an "archival" Arrangement track records each audio track with monitoring off, and two routing tracks pass MIDI between the [[Microfreak]] and the [[Novation/Launchpad/Pro/Mk3]].
+			- The day before, [[Music/Making/Log/26/10/27 Tue]] found that Arrangement Record already captures every track, which may make the archival group unnecessary.
