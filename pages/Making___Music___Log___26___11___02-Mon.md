@@ -50,45 +50,45 @@ prev:: [[Making/Music/Log/26/11/01-Sun]]
 			- I'd like to update the GitPA episode entity definition and related entity definitions so it better meets my needs and the needs of the *ceremonial participants*.
 			- #### Partis, not Listeners
 				- Less than half joking, I'm actually thinking of these listener stakeholders as "Participants" or Partis for short, as in time, I want this to move from a podcast into more of a bidirectional communion, where they respond with sounds as well.
-					- TODO define [[GitP/Participant]] term entity with an alias of `Ghost in the Patch Participant` or `Partis` in plural for short, explaining briefly why I consider my podcast listeners to be participants
+					- DONE define [[GitP/Participant]] term entity with an alias of `Ghost in the Patch Participant` or `Partis` in plural for short, explaining briefly why I consider my podcast listeners to be participants
 			- #### Let's make episode pages more oriented toward Partis and their needs
 				- [[My/Principle]] and sub-namespaces should influence this design, particularly [[My/Principle/Simplify]] and [[My/Principle/Simplify/Don't Repeat Yourself DRY]].
 					- I'd like for there to be a high level requirement that entity definitions related to GitP be more oriented towards podcast site visitors. It's a "public facing" part of my identity.
-			- #### TODO Better Ceremony Notes
+			- #### DONE Better Ceremony Notes
 				- The intro section is used for the show notes on the RSS, and it's the first thing that participants see on the website or in their podcatcher. It should be inviting, weird, and curious, with no needless AI "flange," by which I mean, useless tidbits of information that don't serve the purpose of the ceremony and its effects on its participants.
-					- TODO define a term entity for [[Podcast/Catcher]] with an alias of Podcatcher in logseq
-				- TODO the first thing in the episode page should be the play button for the session.
-				- TODO make an H2 section definition, `Ceremonial Annotations` which should be the equivalent of the official episode notes.
-					- ##### TODO define the "vibe" or rhetoric of Ceremonial Annotations in [[GitP/Vibe]]
+					- DONE define a term entity for [[Podcast/Catcher]] with an alias of Podcatcher in logseq
+				- DONE the first thing in the episode page should be the play button for the session.
+				- DONE make an H2 section definition, `Ceremonial Annotations` which should be the equivalent of the official episode notes.
+					- ##### DONE define the "vibe" or rhetoric of Ceremonial Annotations in [[GitP/Vibe]]
 						- religious short wave AM radio show notes.
 							- I want to get back to that feeling I had as a kid where I built a short wave radio and tuned into stuff from across the world in the middle of the night.
 							- I also want to get back to that seance-adjacent religious vibe I witnessed / was a part of a few times throughout my youth. Whether it's Christian Communion, Tibetan Dzogchen, or Carlos Castaneda power stalking at night with Djembes, I need more spirit life spark.
 						- adjacent to steampunk in a way that's not commoditized for mass consumption.
 							- More of this [[Person/Jules Verne]], 
 							   [[Person/H.G. Wells]], [[Person/H. P. Lovecraft]]
-								- TODO import these people
+								- DONE import these people
 							- While there's a spot in my heart for [[Person/Joss Whedon]] and [[Person/Robert Zemeckis]], their mass market appeal is definitively what I'm avoiding here
-								- TODO  import these people
+								- DONE  import these people
 						- practical, respectful, technical performance notes for fellow performers
 						- musicological musings
 						- whimsical pseudo-cryptic poetic and animistic reflections
-			- #### TODO Tranform `Recording and Prep` section
+			- #### DONE Tranform `Recording and Prep` section
 				- The purpose of this section should be for ceremonial participants and technical practitioners (read: musicians) to dig into the details of what happened and figure out how certain sounds were evoked from the spirits. This section should be archival in nature.
-				- TODO Right now, it has a `Recording and Prep` section. Make some updates to the entity definition about this.
-					- TODO Instead of `Recording and Prep`, GitP episodes should have an h2 section `Ceremonial Artifacts`. It should have nested h3 headings `Recording`
-					- TODO ensure the entity definition indicates that this should be collapsed by default, as it's unnecessary information for most viewers.
-					- TODO this section should be at the bottom, as it's the last thing listeners are likely to be interested in.
-			- #### TODO transform Chapters
-				- TODO similar to [[GitP/A/Session/26/10/29-Thu]] chapters, in general we should assume that the H3 beneath Chapters should be about a single preset, named similar to ((6ae46a2c-a94c-40bd-83ba-948dec2a18bd)), `00:00 enter <reference to Microfreak preset>`. The bullets that are nested within that should be "about" that preset. Within that preset, should also be timestamps that are clickable in the web version of the site that will take one to playing that portion. This should go to arbitrary depth. Anywhere there is a bullet that starts with `MM:SS` for example `04:12`, it should be clickable and go to that point. This way there should be chapters and sub-chapters.
-				- TODO take a look at how I annotated ((6ae46a2c-a94c-40bd-83ba-948dec2a18bd)) - that's hand-annotated from me, and I expect it to be more like this when AI does it. In general, if I put it, I'd like it to be in a [[My Notes]] attribution, and if [[GitP/Acolyte]] "says" it (an AI personality and virtual co-host), it should be attributed to [[GitP/Acolyte]]. Don't use block quotes.
+				- DONE Right now, it has a `Recording and Prep` section. Make some updates to the entity definition about this.
+					- DONE Instead of `Recording and Prep`, GitP episodes should have an h2 section `Ceremonial Artifacts`. It should have nested h3 headings `Recording`
+					- DONE ensure the entity definition indicates that this should be collapsed by default, as it's unnecessary information for most viewers.
+					- DONE this section should be at the bottom, as it's the last thing listeners are likely to be interested in.
+			- #### DONE transform Chapters
+				- DONE similar to [[GitP/A/Session/26/10/29-Thu]] chapters, in general we should assume that the H3 beneath Chapters should be about a single preset, named similar to ((6ae46a2c-a94c-40bd-83ba-948dec2a18bd)), `00:00 enter <reference to Microfreak preset>`. The bullets that are nested within that should be "about" that preset. Within that preset, should also be timestamps that are clickable in the web version of the site that will take one to playing that portion. This should go to arbitrary depth. Anywhere there is a bullet that starts with `MM:SS` for example `04:12`, it should be clickable and go to that point. This way there should be chapters and sub-chapters.
+				- DONE take a look at how I annotated ((6ae46a2c-a94c-40bd-83ba-948dec2a18bd)) - that's hand-annotated from me, and I expect it to be more like this when AI does it. In general, if I put it, I'd like it to be in a [[My Notes]] attribution, and if [[GitP/Acolyte]] "says" it (an AI personality and virtual co-host), it should be attributed to [[GitP/Acolyte]]. Don't use block quotes.
 			- #### Overall Comments
 				- Right now, ((6ae85dd5-7ade-4692-be23-f995998c7174)) has many issues with it.
-					- TODO make a note in My/Pref/Markdown that in my preferences for logseq and obsidian flavored wiki markdown we should, never, *ever* mix traditional markdown formatting and wiki formatting. This section currently has, this terrible way of using markdown hyperlink syntax to reference a wikilink destination which is not readable in the plain text representation and is needlessly complicated. Also, make a note in the gitpa episode definition to reference [[GitP/Vibe]] as the writing style - our participants don't need, want or benefit from CC annotations. That's not ceremonial! That said, saying "no oscillator-type changes" is a useful note, though it would be better as a microfreak hyperlink in logseq.
+					- DONE make a note in My/Pref/Markdown that in my preferences for logseq and obsidian flavored wiki markdown we should, never, *ever* mix traditional markdown formatting and wiki formatting. This section currently has, this terrible way of using markdown hyperlink syntax to reference a wikilink destination which is not readable in the plain text representation and is needlessly complicated. Also, make a note in the gitpa episode definition to reference [[GitP/Vibe]] as the writing style - our participants don't need, want or benefit from CC annotations. That's not ceremonial! That said, saying "no oscillator-type changes" is a useful note, though it would be better as a microfreak hyperlink in logseq.
 						- >  With the [BASS]([[Microfreak/UI/Oscillator/Knob/Type/BASS]]) oscillator, [Wave]([[Microfreak/UI/Oscillator/Knob/Wave]]) (CC 10) sets [Saturate]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Saturate]]), [Timbre]([[Microfreak/UI/Oscillator/Knob/Timbre]]) (CC 12) sets [Fold]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Fold]]) and [Shape]([[Microfreak/UI/Oscillator/Knob/Shape]]) (CC 13) sets [Noise]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Noise]]). No oscillator-type changes (CC 9) were recorded.
-			- #### TODO please model ableton live set as a logseq entity definition
+			- #### DONE please model ableton live set as a logseq entity definition
 				- I would like `<episode>/Set/Track/<group or track name>/<track name>` to be created for each track with an entity description. Then `Set` should be a page of [[Logseq/Entity/Ableton/Set]] should be an entity definition along with [[Logseq/Entity/Ableton/Track/Group]] and [[Logseq/Entity/Ableton/Track/Track]] which, like the relationship between [[Logseq/Entity/Book/Section/Level 1]] and its siblings, includes transclusions. The purpose of these entities is
 					- 1 - to convey to a viewer or participant what the ableton live set looked like and what its settings were
 					- 2 - to convey to AI the configuration of a live set in a performance, so it can set up an ableton live set similar to that or debug issues with that
-			- #### TODO Let's prototype a [[Logseq/Entity/Podcast/Episode/GitP/A/Layer]] definition
+			- #### DONE Let's prototype a [[Logseq/Entity/Podcast/Episode/GitP/A/Layer]] definition
 				- Most episodes lately have had three layers of live-looping recordings. Usually there's three tracks for incoming audio from the microfreak accompanied by adjacent three tracks for incoming midi from the microfreak, forming layer A (midi, audio), layer B (midi, audio), layer C (midi, audio). Create a layer definition which assumes that under a gitpa episode namespace `<namespace>/Layer/{A,B,C}/{Audio,MIDI}` can be used to reference these components. It can indicate which `<episode namespace>/Set/Track` models it.
 				- I'm just trying to create a standard nomenclature for referencing parts of the performance.
