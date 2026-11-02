@@ -32,4 +32,4 @@ node = "lts"
 AUBE_ALLOWED_UNPOPULAR_PACKAGES = "@readwise/cli"
 
 [task_config]
-excludes = ["mise-tasks/asset/pyproject.toml", "mise-tasks/asset/lib", "mise-tasks/asset/tests", "mise-tasks/asset/.venv"]
+excludes = ["mise-tasks/asset/pyproject.toml", "mise-tasks/asset/lib", "mise-tasks/asset/tests", "mise-tasks/asset/.venv", "mise-tasks/logseq/journal/lint-lsg"]
