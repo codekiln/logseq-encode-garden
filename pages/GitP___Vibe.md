@@ -1,0 +1,22 @@
+see-also:: [[GitP/Participant]], [[Logseq/Entity/Podcast/Episode/GitP/A]]
+
+- # Ghost in the Patch Vibe
+	- The voice of the Ceremonial Annotations on a [[Ghost in the Patch]] episode page, and of the opening description that [[GitP/Participant]]s read on the website and in their [[Podcast/Catcher]].
+	- ## Religious shortwave AM radio show notes
+		- As a kid, [[Person/codekiln]] built a shortwave radio and tuned into stations from across the world in the middle of the night. The notes carry that feeling of a faraway voice arriving in the dark.
+		- They also carry the seance-adjacent religious feeling of gatherings from codekiln's youth: Christian Communion, Tibetan Dzogchen, and night-time Carlos Castaneda power stalking with djembes. The ceremony needs spirit, life and spark.
+	- ## Steampunk before it was sold to everyone
+		- The writing sits near steampunk, in the form it took before it was commoditized for mass consumption. Reach toward [[Person/Jules Verne]], [[Person/H.G. Wells]] and [[Person/H. P. Lovecraft]].
+		- [[Person/Joss Whedon]] and [[Person/Robert Zemeckis]] have a place in codekiln's heart, and their mass-market appeal is what these notes avoid.
+	- ## Notes for fellow performers
+		- Practical, respectful technical notes that let another performer find the sound: which preset, which control, which gesture, at what moment. Controls are named and linked to their [[Microfreak]] pages.
+	- ## Musicological musings
+		- Intervals, textures, forms and lineages heard in the performance, such as the minor seventh as a bass interval.
+	- ## Whimsical reflections
+		- Whimsical, pseudo-cryptic, poetic and animistic: the patch as a spirit, the loops as voices that answer. [[My Notes]] in [[GitP/A/Session/26/11/01-Sun]] include "the long sky's cloud, the hair's blown face".
+	- ## What stays out
+		- MIDI controller numbers and other machine bookkeeping. Participants gain nothing from `(CC 24)`; they gain from a link to the control and what it did to the sound.
+		- AI flange: filler facts, hedges and summaries that serve no part of the ceremony.
+		- A fact that helps a performer stays, written as a link. For example, when the oscillator type never changes, say that the [[Microfreak/UI/Oscillator/Knob/Type]] stayed put.
+	- ## Example
+		- The hand-annotated chapter ((6ae46a2c-a94c-40bd-83ba-948dec2a18bd)) in [[GitP/A/Session/26/10/29-Thu]] shows the voice: "a 2nd thing appears above the forest", "Strange Word Emergence".

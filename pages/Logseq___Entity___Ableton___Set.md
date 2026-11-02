@@ -1,0 +1,26 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Ableton Set
+	- In this garden, **Ableton Set** pages model the [[Ableton/Live]] Set used for one performance: its tracks, groups and settings.
+	- A Set page serves two readers. A [[GitP/Participant]] or other viewer sees how the performance was wired. An AI agent reads the same pages to rebuild a similar Set or debug one.
+	- ## Names
+		- The Set lives under the performance it belongs to: `<performance>/Set`, such as `GitP/A/Session/26/11/01-Sun/Set`.
+		- Each track or group has its own page under `<performance>/Set/Track/`, named after the track as it appears in Live.
+			- A group: `<performance>/Set/Track/<group name>` — [[Logseq/Entity/Ableton/Track/Group]].
+			- A track inside a group: `<performance>/Set/Track/<group name>/<track name>` — [[Logseq/Entity/Ableton/Track/Track]].
+			- A track outside any group: `<performance>/Set/Track/<track name>`.
+		- Search the performance's `Set` namespace before creating a page. A renamed track keeps its page; its H1 records the new name.
+	- ## Set page
+		- `logseq-entity:: [[Logseq/Entity/Ableton/Set]]`. One H1 names the Set.
+		- The first blocks give the Live version, tempo, time signature and the `.als` file or template it came from, when known.
+		- Then the Set embeds each top-level group and ungrouped track page once, in the order they appear in Live: `{{embed [[<performance>/Set/Track/<name>]]}}`.
+	- ## Track and group pages
+		- Each page carries its own entity marker, one H1 with the track name, and the settings that shaped the sound or the recording: track type, input and output routing, MIDI channel, monitoring, arm state and the device chain in order.
+		- Setting names follow the Ableton Session declaration in [[GitP/A/Template/Pattern A and B]], such as `type::`, `midi-from::`, `midi-to::`, `audio-from::`, `monitor::` and `arm::`, written as block properties under the H1.
+		- A short line says what the track did in the performance, such as "holds layer A's audio loops".
+		- Embeds stop at two levels, as on [[Logseq/Entity/Book/Section]]: the Set embeds groups, and a group embeds its tracks. [[Ableton/Live/UG/18 Mixing/03 Group Tracks]] describes groups in Live.
+	- ## Sources
+		- Settings come from the Set file, a screenshot, or codekiln's notes. A setting that no source shows stays off the page.
+	- ## Related
+		- [[Logseq/Entity/Podcast/Episode/GitP/A/Layer]] names the parts of a GitP performance and links each part to the track that recorded it.
+		- [[Ableton/Live/Idea/Declare a Live Set in Logseq]] explores compiling such pages back into a Set.

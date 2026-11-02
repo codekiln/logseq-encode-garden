@@ -7,15 +7,42 @@ entity-proxy-source-properties:: public
 		- One episode lives at `GitP/A/Session/YY/MM/DD-Day`, using the recording date. Search that session path, the source recording filename, the music-making log, and distinctive title words before creating a page; an existing logical reference also counts as a page.
 		- Start with the available recording and session notes. Follow existing source pointers to the project, music-making log, transcript, MIDI, and preset captures when present. A recording may come from a standalone instrument session or a DAW.
 		- Missing optional material leaves the corresponding section absent. A project file, commentary, MIDI export, preset capture, or artwork is not a prerequisite for an episode.
+	- ## Written for participants
+		- An episode page is public. It is written first for [[GitP/Participant]]s, the people who listen on the website or in a [[Podcast/Catcher]], and second for performers who want to find a sound. [[GitP/Vibe]] sets the writing style for the opening description and the Ceremonial Annotations.
+		- Each section earns its place, per [[My/Principle/Simplify]]. A fact appears once on the page, per [[My/Principle/Simplify/Don't Repeat Yourself DRY]]; the preset, MIDI and asset pages hold the details and the episode links to them.
+		- Page links follow [[My/Pref/Markdown]]: plain wikilinks to garden pages. MIDI controller numbers stay off the page; a control is named by a link to its [[Microfreak]] page.
 	- ## Episode page
 		- Instances carry `logseq-entity::` links to this definition and [[Logseq/Entity/Podcast/Episode]], keeping the generic Episode membership explicit. Creator and recording-date properties follow the generic definition.
-		- One H1 gives the episode title. Its first child is a short listener-facing description, followed by a direct MP3 media embed. Artwork appears when available; downloadable presets and MIDI use labeled direct file links.
-		- The episode embeds the verified public media URLs directly. Separate asset pages hold file metadata; asset page embeds do not replace the playable episode recording.
-		- A `## Chapters` section organizes the recording in time order. Each chapter is an H3 with a plain elapsed timestamp and descriptive title, such as `### 00:00 Opening performance` or `### 01:05:00 Closing passage`.
-		- Each chapter has a brief account of what the listener hears. Times are measured against the prepared episode recording, including any edits or offsets.
-		- Commentary or transcript excerpts, when present, sit beneath their chapter in a child block with `collapsed:: true`. Timestamped excerpts preserve the speaker's meaning; summaries remain separate from quotations.
-		- Relevant existing guide sections and preset pages link beneath the chapter they explain. Confirm exact page names and aliases before adding links. Technical claims come from the recording, captured data, saved presets, or the linked documentation; unknown settings stay out.
-		- MIDI analysis, when available, explains changes within chapters. Saved preset settings and recorded controller events describe different evidence and remain distinguishable.
+		- One H1 gives the episode title. Its children come in this order:
+			- The recording, as a direct MP3 media embed, so the play button is the first thing a participant meets. The episode embeds the verified public media URL directly; the asset page holds the file metadata. Until [Read the episode description when the recording comes first · Issue #138 · codekiln/gitpa](https://github.com/codekiln/gitpa/issues/138) lands, the Gitpa RSS build reads the show notes from the H1's first child, so published episodes keep the description first and the recording second.
+			- The opening description: a few sentences that become the show notes in the RSS feed and the first words in a podcatcher. It is inviting, weird and curious, and carries no AI flange: no filler facts, hedges or bookkeeping that serve no part of the ceremony.
+			- `## Ceremonial Annotations`
+			- `## Chapters`
+			- `## Ceremonial Artifacts`, last.
+	- ## Ceremonial Annotations
+		- The official notes of the episode, in the voice of [[GitP/Vibe]]: what the ceremony was, what was summoned, and what a performer or participant might listen for.
+		- Artwork appears here when available.
+	- ## Chapters
+		- Chapters follow the recording in time order. Each H3 is one preset's entry, written `### MM:SS enter [[Microfreak/Preset/<number> <name>]]`, and the blocks nested under it are about that preset. A passage with no preset change stays nested under the preset that is sounding.
+		- Moments within a preset start with their own timestamp, at any depth: `#### 03:07 secondo strato` as a heading, or a plain bullet such as `05:15 - the bass comes in`. Nesting makes chapters and sub-chapters. Times are measured against the episode recording, including any edits or offsets.
+			- On the website, timestamps that start an H3–H6 heading seek the recording. [Make timestamp-led bullets in chapter notes seek the recording · Issue #139 · codekiln/gitpa](https://github.com/codekiln/gitpa/issues/139) extends that to plain bullets at any depth.
+		- Notes name their speaker:
+			- What [[Person/codekiln]] wrote sits under a [[My Notes]] block.
+			- What AI wrote sits under a [[GitP/Acolyte]] block, in the voice of the AI co-host.
+			- Quoted notes stay as plain bullets, without Markdown block quotes.
+		- Commentary from the recording, when present, sits beneath its chapter in a child block with `collapsed:: true`, each line starting with its timestamp.
+		- The chapter at ((6ae46a2c-a94c-40bd-83ba-948dec2a18bd)) in [[GitP/A/Session/26/10/29-Thu]] is hand-annotated and shows the target shape and voice.
+		- Links to preset pages, guide sections and controls sit beneath the moment they explain. Confirm exact page names and aliases before adding links. Technical claims come from the recording, captured data, saved presets, or the linked documentation; unknown settings stay out.
+		- MIDI analysis explains what a gesture did to the sound. Saved preset settings and recorded controller events describe different evidence and remain distinguishable. A useful negative fact stays, written as a link, such as the [[Microfreak/UI/Oscillator/Knob/Type]] never changing.
+		- [[Logseq/Entity/Podcast/Episode/GitP/A/Layer]] names layers A, B and C and their audio and MIDI parts.
+	- ## Ceremonial Artifacts
+		- The archive for participants and performers who want to dig into how the sounds were drawn out of the instruments. Most readers skip it, so the H2 carries `collapsed:: true` and sits at the bottom of the page.
+		- `### Recording` gives the duration, the recording's asset page and a labeled download link, then how it was recorded: the DAW, tempo, instruments, layers, mix decisions and edits.
+		- Other H3s follow when the material exists:
+			- `### Presets` lists each preset with a one-line description, its guide link and a labeled download link.
+			- `### MIDI` gives the labeled MIDI download and what the capture holds.
+			- `### Set` links the episode's [[Logseq/Entity/Ableton/Set]] page.
+		- Pages published before this definition keep their `## Recording and Prep` section until they are revised.
 	- ## Publication selection
 		- [[Logseq/Entity/Podcast/Episode/GitP/A/Frontmatter/public]] on the source episode in logseq-encode-garden controls whether the episode is selected for the downstream RSS feed and website.
 		- Set `public:: false` for a draft or withdrawal and `public:: true` for publication. Missing values leave the episode unpublished after sync. Re-sync copies the source value even when the destination proxy previously had another value.
