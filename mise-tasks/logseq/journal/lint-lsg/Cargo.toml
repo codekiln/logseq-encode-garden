@@ -1,0 +1,11 @@
+[package]
+name = "journal-lint"
+version = "0.1.0"
+edition = "2024"
+publish = false
+description = "Lint journal change logs, parsing the garden with Logseq Gardener"
+
+[dependencies]
+# Logseq Gardener's garden reader, page catalog and outline: the SDK behind lsg,
+# pinned to the v0.0.6 release that mise installs as `lsg` here.
+logseq-gardener-sdk = { git = "https://github.com/codekiln/logseq-gardener", rev = "f3a3c41afd9dc062d68df862ea3f0e2c7a712e5b" }

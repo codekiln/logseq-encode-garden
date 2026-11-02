@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+#MISE description="Lint journal change logs: a page listed under both [[Filed]] and [[Updated]] on one day"
+#MISE tools={ "rust" = "latest" }
+
+# Args are forwarded verbatim (no #USAGE spec): journal file paths. With none,
+# every journal is linted. Exits 1 when it reports a finding.
+#   mise run logseq:journal:lint                          # every journal
+#   mise run logseq:journal:lint journals/2026_11_02.md   # one journal
+#
+# Parsing uses the Logseq Gardener SDK, the library behind lsg, at the release
+# pinned in lint-lsg/Cargo.toml. The first run compiles it.
+
+# Run from the graph root so the garden path and the build cache resolve.
+cd "${MISE_PROJECT_ROOT:-$PWD}"
+
+manifest="mise-tasks/logseq/journal/lint-lsg/Cargo.toml"
+# The binary is machine specific and gitignored (.cache/).
+export CARGO_TARGET_DIR=".cache/mise-tasks/journal-lint"
+cargo build --quiet --release --locked --manifest-path "$manifest"
+exec "$CARGO_TARGET_DIR/release/journal-lint" --graph . "$@"
