@@ -8,5 +8,7 @@ logseq-entity:: [[Logseq/Entity/Person]]
 		- Profile: [every.to/@danshipper](https://every.to/@danshipper)
 		- [[Person/Dan Shipper/Blog/26/05/21/After Automation]]
 		- [[Person/Dan Shipper/Blog/25/12/11/Compound Engineering - How Every Codes With Agents]]
+	- ## Products
+		- [[Every/Spiral]] — Every's AI writing partner that writes in your voice.
 	- ## Related
 		- [[Engineer/ing/Compound]]

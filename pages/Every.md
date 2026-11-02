@@ -2,7 +2,7 @@ logseq-entity:: [[Logseq/Entity/Company]]
 alias:: [[Every Inc]], [[EveryInc]]
 
 - # [Every](https://every.to/)
-	- Subscription media and software studio: essays, podcasts, and in-house products (e.g. [[Cora]], Monologue, Sparkle, Spiral).
+	- Subscription media and software studio: essays, podcasts, and in-house products (e.g. [[Cora]], Monologue, Sparkle, [[Every/Spiral]]).
 	- GitHub org: [EveryInc](https://github.com/EveryInc)
 	- ## People
 		- [[Person/Dan Shipper]] — CEO and cofounder; [[Chain of Thought]] column and *AI & I* podcast.
