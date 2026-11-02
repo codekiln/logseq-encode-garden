@@ -17,7 +17,6 @@ from __future__ import annotations
 import argparse
 import collections
 import hashlib
-import html
 import json
 import os
 from pathlib import Path
@@ -66,13 +65,24 @@ def page_files(graph: Path) -> list[Path]:
                   if path.suffix == '.md' and path.is_file())
 
 
-def namespace_roots(titles) -> list[str]:
-    """lsg publishes only selected namespaces, so select the root of every title.
+def page_names(titles: dict[Path, str]) -> set[str]:
+    """Every title and alias spelling. lsg titles a page that names itself in another
+    spelling, such as Solvespace.md with alias:: [[SolveSpace]], the way Logseq does."""
+    names = set(titles.values())
+    for path in titles:
+        aliases = leading_properties(path.read_text(encoding='utf-8')).get('alias', '')
+        names.update(alias[0] or alias[1].strip() for alias in re.findall(r'\[\[([^\]]+)\]\]|([^,]+)', aliases))
+    return {name for name in names if name}
+
+
+def namespace_roots(names) -> list[str]:
+    """lsg publishes only selected namespaces, and matches them case-sensitively, so select
+    the root of every title and alias spelling.
 
     Replace with a single flag once lsg has one:
     https://github.com/codekiln/logseq-gardener/issues/350
     """
-    return sorted({title.split('/')[0].strip() for title in titles})
+    return sorted({name.split('/')[0].strip() for name in names} - {''})
 
 
 def check_every_page_published(titles: dict[Path, str], site: dict, diagnostics: str):
@@ -119,74 +129,6 @@ def share_repeated_styles(output: Path, site: dict) -> int:
     return len(pages) * len(css)
 
 
-LEGACY_LOADER = '''<script>(()=>{let pending=false;function load(){
-const hash=location.hash;if(pending||!/^#\\/(page|all-pages|graph)\\//.test(hash+'/'))return;pending=true;
-fetch('legacy-routes.json').then(r=>r.json()).then(routes=>{let target=null;
-if(hash.startsWith('#/page/')){let name;try{name=decodeURIComponent(hash.slice(7).split('?')[0])}catch{return}
-name=name.trim().normalize('NFC').toLowerCase();target=Object.hasOwn(routes,name)?routes[name]:null}
-else if(hash.startsWith('#/all-pages'))target='pages.html';
-else if(hash.startsWith('#/graph'))target='graph.html';
-if(target)location.replace(target)}).catch(()=>{}).finally(()=>{pending=false})}
-window.addEventListener('hashchange',load);load()})();</script>'''
-
-
-def legacy_routes(output: Path, site: dict, aliases: dict[str, str]):
-    """Send publish-spa's #/page/<name> links to the page lsg published."""
-    routes = {page['id']: page['url'] for page in site['pages']
-              if page['id'] and page['kind'] in {'page', 'journal', 'namespace'}}
-    for alias, title in aliases.items():
-        if alias not in routes and page_key(title) in routes:
-            routes[alias] = routes[page_key(title)]
-    (output / 'legacy-routes.json').write_text(json.dumps(routes, ensure_ascii=False), encoding='utf-8')
-    index = output / 'index.html'
-    index.write_text(index.read_text(encoding='utf-8').replace('</head>', LEGACY_LOADER + '</head>', 1),
-                     encoding='utf-8')
-
-
-HASHED_REDIRECT = ('<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex">'
-                   '<link rel="canonical" href="{url}"><meta http-equiv="refresh" content="0; url={url}">'
-                   '<script>location.replace("{url}"+location.hash)</script><a href="{url}">{title}</a>')
-
-
-def title_digest(title: str) -> str:
-    """lsg's 64-bit FNV-1a digest of a title, which named pages p-<digest>.html before --readable-urls."""
-    value = 0xcbf29ce484222325
-    for byte in title.encode('utf-8'):
-        value = ((value ^ byte) * 0x100000001b3) & 0xFFFFFFFFFFFFFFFF
-    return f'{value:016x}'
-
-
-def hashed_redirects(output: Path, site: dict) -> int:
-    """Keep links to the p-<digest>.html files of lsg v0.0.7 builds working.
-
-    A page whose title cannot name folders is still published at that file.
-    """
-    count = 0
-    for page in site['pages']:
-        if page['kind'] not in {'page', 'journal', 'namespace'}:
-            continue
-        target = output / f'p-{title_digest(page["title"])}.html'
-        if page['url'] == target.name:
-            continue
-        if target.exists():
-            raise SystemExit(f'{target.name} for {page["title"]} already exists')
-        target.write_text(HASHED_REDIRECT.format(url=html.escape(page['url']), title=html.escape(page['title'])),
-                          encoding='utf-8')
-        count += 1
-    return count
-
-
-def page_aliases(titles: dict[Path, str]) -> dict[str, str]:
-    claims = collections.defaultdict(set)
-    for path, title in titles.items():
-        aliases = leading_properties(path.read_text(encoding='utf-8')).get('alias', '')
-        for alias in re.findall(r'\[\[([^\]]+)\]\]|([^,]+)', aliases):
-            name = page_key(alias[0] or alias[1])
-            if name:
-                claims[name].add(title)
-    return {alias: next(iter(owners)) for alias, owners in claims.items() if len(owners) == 1}
-
-
 def directory_size(path: Path) -> tuple[int, int]:
     files = [item for item in path.rglob('*') if item.is_file()]
     return len(files), sum(item.stat().st_size for item in files)
@@ -202,8 +144,8 @@ def main():
     titles = {path: page_title(path) for path in page_files(GRAPH)}
     command = [args.lsg, 'publish', '--format', 'json', '--graph', str(GRAPH),
                '--output', str(args.output), '--filename-format', 'triple-lowbar',
-               '--journals', '--search', '--readable-urls', '--timings']
-    for root in namespace_roots(titles.values()):
+               '--journals', '--search', '--readable-urls', '--redirect-old-urls', '--timings']
+    for root in namespace_roots(page_names(titles)):
         command += ['--include', root]
 
     started = time.monotonic()
@@ -221,8 +163,6 @@ def main():
     check_every_page_published(titles, site, result.stderr)
 
     saved = share_repeated_styles(args.output, site)
-    legacy_routes(args.output, site, page_aliases(titles))
-    redirects = hashed_redirects(args.output, site)
     (args.output / '.nojekyll').touch()
 
     files, size = directory_size(args.output)
@@ -232,7 +172,6 @@ def main():
           f'{report["diagnostic_count"]} diagnostics.')
     print(f'lsg publish took {elapsed:.1f} s ({timings}).')
     print(f'Website: {files} files, {size / 1e6:.0f} MB after sharing {saved / 1e6:.0f} MB of repeated styles.')
-    print(f'Kept {redirects} p-<digest>.html links as redirects to readable URLs.')
     print(f'Open {args.output / "index.html"}')
 
 
