@@ -1,3 +1,6 @@
+prev:: [[Making/Music/Log/26/10/31-Sat]]
+next:: [[Making/Music/Log/26/11/02-Mon]]
+
 - [[2026-11-01 Sun]]
 	- Working on revising the [[GitP/A/Template]]s after this week's sessions.
 	- ## New Ghost in the Patch Ableton template

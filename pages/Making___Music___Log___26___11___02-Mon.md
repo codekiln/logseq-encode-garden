@@ -1,0 +1,46 @@
+prev:: [[Making/Music/Log/26/11/01-Sun]]
+
+- [[2026-11-02 Mon]]
+	- ## 02:35 — Notes on the November 1 session
+		- About [[GitP/A/Session/26/11/01-Sun]].
+		- ### Template changes and a recording mix-up
+			- ![A maker's log notebook and the November 1 template changes](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Making___Music___Log___26___10___31-Sat___Asset___Notebook___Blue-01.jpg)
+			- #### Transcription
+				- The 2026-10-31 entry on the upper half of this page is on [[Making/Music/Log/26/10/31-Sat]].
+				- 2026-11-02 Mon 0235
+				- I recorded an episode at [location blacked out in the image] yesterday. Erik and I were supposed to talk at 3pm but he did not respond, so I made some adjustments to the template set GitP in ableton, messed with the VST/AudioUnit plugin 'Sonobus', and tried some Vocoder patches.
+				- In the GitP Ableton Set Template, I made changes:
+				- I then also had MF→LPP and LPP→MF tracks. I messed up the recording in on tracks 9 & 10; since I copied 8 to 9 & 10, I had three copies of track 2's audio.
+			- #### Diagram
+				- A track map with a "name" row and a "track" row:
+					- Layer A: mF1-MIDI (track 1), mF1 Audio (track 2)
+					- Layer B: mF2-MIDI (track 3), mF2 Audio (track 4)
+					- Layer C: mF3 MIDI (track 5), mF3 Audio (track 6)
+					- pink empty clips (separator) (track 7)
+					- full recording: aud. mF1 rec (track 8), rec mF2 aud (track 9), rec mF3 aud (track 10), …
+				- Arrows run from the audio tracks 2, 4 and 6 to the recording tracks 8, 9 and 10.
+			- #### AI notes ([[Anthropic/Model/Claude/5/5/Opus]])
+				- The [[GitP/A/Template]] now has three MicroFreak layers, each a MIDI and an audio track, then a separator and three tracks that record each layer's audio.
+				- Tracks 9 and 10 were copies of track 8 and kept its input, so all three recorded Layer A. This is why only Layer A was fully recorded, as noted on [[Making/Music/Log/26/11/01-Sun]].
+				- The plugin name reads 'Sonobus'; it is probably SonoBus, a peer-to-peer audio streaming plugin.
+		- ### Launchpad to Operator and the three MicroFreak layers
+			- ![Launchpad to Operator and the three MicroFreak layers](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Making___Music___Log___26___11___02-Mon___Asset___Notebook___Blue-02.jpg)
+			- #### Transcription
+				- Tried Launchpad → Live 'Operator' instrument link
+				- Also, I'm not sure if this gets set in the template settings, but I turned MIDI Polyphonic Expression off for the Novation Launchpad MIDI In in Live's MIDI settings. I was experimenting with having Novation control an Ableton Instrument such as Operator by using shift + Note to select channel 2 out, then putting the Operator instrument on the set's track 5 MIDI in, while also gating LPP→MF's MIDI out to channel 1, so the parts of the sequencer meant for the MicroFreak didn't get the cross-talk. I read in the Launchpad's Ableton integration guide that one must disable MPE to gain the access to the ability to target instruments to specific channels, which is why I tried that.
+				- In practice, it was cool that Ableton's device parameters were available in Launchpad's Track Device button. I noticed that one can paginate through features, which is amazing in theory but then presents me with the need to memorize what the seventh parameter of the fourth page refers to in operator. Also, I couldn't see an easy way of switching preset using the launchpad, but maybe I just wasn't being clever enough with MIDI mappings and the launchpad's custom mode.
+				- I ended up going back to three mappings or layers of the microfreak.
+				- I used Infini Pad and 8bitfini which were near 160 on the μF, I believe. I found a lot of depth in Infini Pad. I was using a technique of listening directly to the μF with the volume low on the layer audio to figure out or audition
+			- #### AI notes ([[Anthropic/Model/Claude/5/5/Opus]])
+				- To play [[Ableton/Live/UG/31 Instrument Reference/09 Operator]] from the [[Novation/Launchpad/Pro/Mk3]] alongside the MicroFreak: turn off MPE for the Launchpad's MIDI input ([[Ableton/Live/UG/12 Editing MPE]]), send the Launchpad on channel 2 to Operator, and limit the MicroFreak routing track to channel 1.
+				- The Launchpad's Device mode exposes Operator's parameters in pages, which works but means memorising what each slot does. Preset switching from the Launchpad was not found.
+				- The session went back to three MicroFreak layers with [[Microfreak/Preset/259 Infini Pad]] and [[Microfreak/Preset/260 8bitfi]] (written "8bitfini").
+		- ### Selecting MicroFreak presets from the Launchpad
+			- ![Selecting MicroFreak presets from a Launchpad custom mode](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Making___Music___Log___26___11___02-Mon___Asset___Notebook___Blue-03.jpg)
+			- #### Transcription
+				- sounds on the μF. Not the best technique; ideally I'd have two sets of soundsources or two pairs of earphones, one for audience and one for me.
+				- It does bug me that I need to use the mic to say what preset I'm selecting. If only there was a way to use custom mode on the LPP to send sysex or patch set or preset select messages on the μF. Of course, I could literally do that, but I'd have a larger problem when it came to selection. I suppose there are "sliders" in Custom mode. It would likely be annoying to try to land on a known preset. I think the track indicators give me eight pages of custom modes. I suppose I could use some kind of automation to populate them. Maybe Page 2 could be pads I've used recently, 1 per line, with a binary representation of the preset number. If I have any illuminated button on a row sending that preset's sysex, I can use 2⁸ in binary presets, which is almost enough at 256. I would prefer 2⁹ or 512, that would put me over the μF's limit. maybe I could drop the least significant bit. Or I could use color for a few more bits. Then again, doing mental binary during a live performance sounds like a stupid plan. If I was streaming / recording from above, it could detect the preset.
+			- #### AI notes ([[Anthropic/Model/Claude/5/5/Opus]])
+				- Auditioning on the MicroFreak while the audience hears the layer mix needs separate monitoring: two sound sources or two pairs of earphones. This matches the open question in [[Zoom H5/Q/How can I record the line out on a MacBook or iPhone while monitoring on the headphone jack?]].
+				- Saying the preset name into the mic is a workaround. A Launchpad custom mode could send preset-change messages, with a page of recent presets shown as lit pads encoding the preset number in binary. Eight pads give 256 values; nine would cover all 512 MicroFreak slots ([[Microfreak/UG/01 Welcome and Introduction/02 New in FW 5.0.0]]).
+				- Binary under performance pressure is impractical. An overhead camera reading the MicroFreak's display could log the preset instead.

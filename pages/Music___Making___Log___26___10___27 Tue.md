@@ -1,4 +1,17 @@
 - [[2026-10-27 Tue]]
 	- ## [[Ghost Gardener]] requests
 	- ## [[Music/Making/Todo]]
-		-
+	- ## 18:45 — Arrangement Record captures the whole performance
+		- ![Launchpad LEDs outdoors, setup time and full Arrangement recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Making___Music___Log___26___10___26-Mon___Asset___Notebook___Yellow-10.jpg)
+		- ### Transcription
+			- The 2026-10-26 entry on the upper half of this page is on [[Making/Music/Log/26/10/26-Mon]].
+			- 2026-10-27 Tue 1845
+			- I published the podcast episode from yesterday. I learned that when I added my launchpad custom mode to toggle Arrangement Record in Ableton Live, I also enabled a mode that let me have a full recording of what I was hearing and playing in Arrangement view without needing a separate "μF All" or "μF All MIDI" track to "catch" the output of the other tracks. If that's actually the case, then I'm thrilled; that sounds well-designed (even though I couldn't tell you how it was implemented).
+			- That means I need to update my default template in Live.
+			- What's also quite thrilling is that I can listen to an episode that has been recorded in arrangement view and, at the same time, talk to chatgpt voice mode, which can take notes for me in a comment track.
+			- I realized that I shouldn't distract myself with trying to replace Live when I have other, more interesting problems to work on, …
+		- ### AI notes ([[Anthropic/Model/Claude/5/5/Opus]])
+			- Published [[GitP/A/Session/26/10/26-Mon]].
+			- Turning on Arrangement Record from [[Launchpad/Custom/Mode/1 Arrangement]] records every track into Arrangement View, so the extra catch-all tracks in the [[GitP/A/Template]] may no longer be needed.
+			- Listening back while dictating to [[ChatGPT]] voice mode gives timestamped notes for a comment track.
+			- Decision: keep [[Ableton/Live]] rather than spend time replacing it.
