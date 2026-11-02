@@ -12,14 +12,13 @@ date-created:: [[2026-11-01 Sun]]
 		- Recorded on November 1, 2026 in [[Ableton/Live]] at 120 BPM in 4/4 with the [[Novation/Launchpad/Pro/Mk3]] and the [[Microfreak]], using a new hand-made GitP template. Three MicroFreak audio layers hold the takes, with recorded volume rides and a closing fade. The commentary microphone track also plays in the mix; the commentary under each chapter is a machine transcription, and [unclear] marks a word that could not be made out.
 		- [[Making/Music/Log/26/11/01-Sun]]
 		- ### Presets
-		  collapsed:: true
 			- [[Microfreak/Preset/259 Infini Pad]] — 00:00 to 18:17. A paraphonic pad on the BASS oscillator with a slow attack; key pressure and the envelope open Fold and the filter.
 				- [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]] · [Download the saved 259 Infini Pad export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___259%20Infini%20Pad___Asset___Device-Read-2026-10-25.bin)
 			- [[Microfreak/Preset/260 8bitfi]] — 18:17 to the end. A lead on the BASS oscillator two octaves up, with no sustain and a square LFO on pitch; key pressure drives Fold at full amount.
 				- [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]] · [Download the saved 260 8bitfi export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___260%208bitfi___Asset___Device-Read-2026-10-25.bin)
 			- Both slots read the same after the session as they did on October 25, 2026, so they still hold the factory sounds, and the downloads contain those. The session MIDI holds the knob changes as controller messages. Matrix edits, such as the pressure routing at 25:15, are in neither.
 		- ### MIDI
-		  collapsed:: true
+		  id:: 6ae85dd5-7ade-4692-be23-f995998c7174
 			- [Download the session MIDI](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___01-Sun___Asset___MIDI___Session.mid) · [[GitP/A/Session/26/11/01-Sun/Asset/MIDI/Session/mid]]
 			- "LPP to MF" holds the Launchpad Pro notes sent to the MicroFreak, from 00:12 to 17:53. "MF to LPP" holds the MicroFreak's own key presses, per-note pressure, pitch bend and knob changes.
 			- Times below follow the recording. Control names come from [[Microfreak/UG/21 Appendix D - CC Values]]. With the [BASS]([[Microfreak/UI/Oscillator/Knob/Type/BASS]]) oscillator, [Wave]([[Microfreak/UI/Oscillator/Knob/Wave]]) (CC 10) sets [Saturate]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Saturate]]), [Timbre]([[Microfreak/UI/Oscillator/Knob/Timbre]]) (CC 12) sets [Fold]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Fold]]) and [Shape]([[Microfreak/UI/Oscillator/Knob/Shape]]) (CC 13) sets [Noise]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Noise]]). No oscillator-type changes (CC 9) were recorded.
