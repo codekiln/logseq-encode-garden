@@ -13,7 +13,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Standalone or combined
 		- Field of Study stands on its own or joins another type. When combined, the type that shapes the page comes first and Field of Study follows: `logseq-entity:: [[Logseq/Entity/Term]], [[Logseq/Entity/Field of Study]]` on a glossary-sized page, `logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Field of Study]]` on a full explanation.
 	- ## Frontmatter
-		- `logseq-entity:: [[Logseq/Entity/Field of Study]]`, alone or after the primary type.
+		- The page carries `logseq-entity:: [[Logseq/Entity/Field of Study]]`, alone or after the primary type.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
 		- The primary type sets the shape. A page that declares Field of Study alone reads like a [[Logseq/Entity/Concept]]: what the field studies, where it came from, its key ideas, and its neighboring fields.

@@ -11,7 +11,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 			- A track outside any group: `<performance>/Set/Track/<track name>`.
 		- Search the performance's `Set` namespace before creating a page. A renamed track keeps its page; its H1 records the new name.
 	- ## Set page
-		- `logseq-entity:: [[Logseq/Entity/Ableton/Set]]`. One H1 names the Set.
+		- The page carries `logseq-entity:: [[Logseq/Entity/Ableton/Set]]` and one H1 that names the Set.
 		- The first blocks give the Live version, tempo, time signature and the `.als` file or template it came from, when known.
 		- Then the Set embeds each top-level group and ungrouped track page once, in the order they appear in Live: `{{embed [[<performance>/Set/Track/<name>]]}}`.
 	- ## Track and group pages

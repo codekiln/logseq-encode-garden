@@ -25,10 +25,8 @@ see-also:: [[Logseq/Entity/Person/Maker/Discussion]]
 		- [[Logseq/Entity/Person/Knowledge Gardener]] still asks for Person first. A maker who keeps a public garden lists the maker entities, then Knowledge Gardener, and leaves Person out, until codekiln decides whether Knowledge Gardener follows [[Logseq/Entity/Hierarchy/Discussion/Analysis/Opus/26/10/01/0611 ET Mark each page with the most specific entity in each lineage]].
 		- No page lists Maker itself in `logseq-entity::`. Each maker's hub lists the child entity for what they make.
 		- The entity for what the person is best known for making comes first.
-		- [[Person/Madonna]] writes songs and performs them:
-			- `logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition/Song]], [[Logseq/Entity/Person/Maker/Music/Performance]]`
-		- Jean-Philippe Rameau composed operas and wrote the theory of functional harmony:
-			- `logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition]], [[Logseq/Entity/Person/Maker/Music/Theory]]`
+		- [[Person/Madonna]] writes songs and performs them: `logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition/Song]], [[Logseq/Entity/Person/Maker/Music/Performance]]`
+		- Jean-Philippe Rameau composed operas and wrote the theory of functional harmony: `logseq-entity:: [[Logseq/Entity/Person/Maker/Music/Composition]], [[Logseq/Entity/Person/Maker/Music/Theory]]`
 		- A person known to make music in an unknown role carries [[Logseq/Entity/Person/Maker/Music]]. A person known to make art in an unknown form carries [[Logseq/Entity/Person/Maker/Art]].
 		- Music Theorist and Music Technologist name makers of theory and technology, who are Musicians only when the page also carries Musician or one of its kinds. [[Logseq/Entity/Person/Maker/Music]] shows the marking for a technologist who also makes music in an unknown role.
 	- ## Works

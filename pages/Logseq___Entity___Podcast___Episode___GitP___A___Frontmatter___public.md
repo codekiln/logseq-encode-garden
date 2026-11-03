@@ -2,8 +2,8 @@ logseq-entity:: [[Logseq/Entity/Frontmatter/Definition]]
 - # `public::` — Ghost in the Patch Alpha publication selection
 	- The page-level Boolean on a [[Logseq/Entity/Podcast/Episode/GitP/A]] instance in logseq-encode-garden selects whether the episode appears in the downstream podcast feed and website.
 	- ## Values
-		- `public:: true` selects the episode for publication, subject to the publishing garden’s release metadata and checks.
-		- `public:: false` excludes the episode from both the RSS feed and website. A missing value is unpublished. Values use lowercase `true` and `false`.
+		- `true` selects the episode for publication, subject to the publishing garden’s release metadata and checks.
+		- `false` excludes the episode from both the RSS feed and website. A missing value is unpublished. Values use lowercase `true` and `false`.
 	- ## Sync and publication
 		- The source episode in logseq-encode-garden owns this property. Its entity definition declares `entity-proxy-source-properties:: public`, overriding the default destination ownership of `public` on [[Logseq/Entity/Proxy/Page]].
 		- Re-sync updates the destination proxy to the source value. Removing the property in the source removes it from the proxy, so a previously public proxy becomes unpublished.
