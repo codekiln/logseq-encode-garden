@@ -32,6 +32,7 @@ see-also:: [[GitP/Vibe/Anti]]
 			- [[Person/Jules Verne]]
 			- [[Person/H.G. Wells]]
 			- [[Person/H. P. Lovecraft]]
+			- [[Person/Robert A. Heinlein]]
 		- ### hand-crafted aesthetic
 			- the authentic steampunk is corkscrewed and nerdy, built around private obsession and exploring multidimensional space. it's a DIY aesthetic, taken to the extreme
 	- ## gathering a type of witchy knowledge
