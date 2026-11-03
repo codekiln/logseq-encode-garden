@@ -1,0 +1,55 @@
+logseq-entity:: [[Logseq/Entity/Podcast/Episode]]
+created-by:: [[Person/Kevin Roose]], [[Person/Casey Newton]]
+date-created:: [[2026/10/30]]
+readwise-link:: https://readwise.io/bookreview/64761035
+snipd-link:: https://share.snipd.com/episode/198820e3-bbdc-479d-8d3e-7b8329c2fcca
+- # [OpenAI’s Latest Discoveries Spark a Backlash + Help! My Kid Hates AI](https://share.snipd.com/episode/198820e3-bbdc-479d-8d3e-7b8329c2fcca)
+	- Podcast: [[Machine Gods/Pod]]
+	- Hosts: [[Person/Kevin Roose]], [[Person/Casey Newton]]
+	- Summary: OpenAI’s science announcements and the researcher backlash, plus listener questions on teens who hate AI and how to talk to AI skeptics.
+	- ## Readwise highlights
+		- ### [OpenAI’s Math Blitz Felt Like a DDoS Attack](https://share.snipd.com/snip/85276cd4-ed38-43c5-9f99-00bb59fce45f)
+			- OpenAI’s flood of AI-generated discoveries triggered backlash from mathematicians and computer scientists.
+			- It released 722 math manuscripts on GitHub, which Ryan Williams compared to a DDoS attack on the profession.
+		- ### [Why OpenAI’s Math Releases Angered Researchers](https://share.snipd.com/snip/59ae2b24-7141-43b4-a3ef-3da4d0d513c9)
+			- OpenAI’s AI-generated Navier–Stokes result and 722-manuscript release triggered backlash from mathematicians who feared the company was overwhelming their field.
+			- Critics compared the mass publication to a DDoS attack, especially because researchers had planned decades of work around these problems.
+		- ### [OpenAI Claims Breakthroughs Across Three Sciences](https://share.snipd.com/snip/64e7ff03-cfbd-44f7-8148-d6387a742487)
+			- OpenAI claimed breakthroughs spanning computer science, mathematics, and physics, including refuting the exponential time hypothesis and constructing quantum chromodynamics mathematically.
+			- These results matter differently across fields, from possible cryptographic shortcuts to foundational questions about the strong force holding quarks together.
+		- ### [Scientists Want Different Rules For AI Discoveries](https://share.snipd.com/snip/ee4d3949-cce3-41ad-bde7-79a61365ed13)
+			- OpenAI asked each discipline to design its preferred release process, revealing that mathematics, computer science, and physics wanted very different levels of openness.
+			- Physicists preferred writing the result themselves, while computer scientists requested public materials plus a funded explanatory conference.
+		- ### [Scientific Breakthroughs Also Serve As AI Public Relations](https://share.snipd.com/snip/9be4e240-3e12-413c-bb3e-481ad2b9da09)
+			- AI labs may sincerely want to advance science, but announcing obscure breakthroughs during an anti-AI backlash also functions as public relations.
+			- Consulting researchers can reduce resistance even when companies are not legally required to involve the professionals whose work may be disrupted.
+		- ### [AI’s Hardest Wins Feel Like Climbing Mountains](https://share.snipd.com/snip/ab184bc4-232e-45f6-9cf8-2676caf0dc8d)
+			- Lab researchers may feel exhilarated by watching AI solve the hardest problems they admired, while skeptics see statistical systems producing genuinely novel connections.
+			- The emotional power comes from seeing machines climb intellectual mountains that once represented the highest achievements of entire fields.
+		- ### [The Internet Keeps Disrupting Casey Newton’s Career](https://share.snipd.com/snip/d5fc8755-4f3c-4110-91f1-18a757409ed3)
+			- Casey Newton describes journalism as repeatedly disrupted by the internet, social media, newsletters, and now AI.
+			- He compares it to fleeing a giant boulder and empathizes with people losing careers they expected to pursue for decades.
+		- ### [AI Threatens Identity As Much As Employment](https://share.snipd.com/snip/68ef149b-1a56-4d3a-a29a-fad2542817ae)
+			- AI-driven disruption threatens professional identity as well as employment, echoing factory workers who disliked automation even when it made their jobs safer.
+			- Researchers’ grief over losing decades-long projects is a valid human response, not merely resistance from obsolete “dinosaurs.”
+		- ### [Turn Teen AI Anxiety Into Collective Action](https://share.snipd.com/snip/9cab4cb2-ed22-45db-a686-fcbe4ef6c601)
+			- Parents can acknowledge a teenager’s objections to AI while distinguishing individual workplace choices from problems requiring collective action.
+			- Encourage political organizing and civic participation, while learning the tools well enough to understand and challenge their environmental, economic, and ethical effects.
+		- ### [Teach AI After Building Critical Thinking Skills](https://share.snipd.com/snip/b01821e4-a2b0-473e-8676-8cb31fb3a686)
+			- Build foundational reading, writing, mathematics, and critical-thinking skills before making AI central to children’s education.
+			- Then teach supervised AI and digital literacy through practical experiments, because children will encounter AI indirectly through tools such as Google anyway.
+		- ### [Never Secretly Manipulate Someone’s AI Settings](https://share.snipd.com/snip/9c1497ec-86a8-41bf-83bc-99520db53ef9)
+			- Never secretly alter a partner’s ChatGPT or Claude settings to manipulate their behavior; the hosts describe that as corrosive and unethical.
+			- Anthropic’s experiment found professional analysts followed Claude’s advice 86 percent of the time, showing why hidden “machine drift” can be persuasive.
+		- ### [Frog And Toad Become Podcast Personality Types](https://share.snipd.com/snip/6f136087-1f7c-4d48-94ef-cac75c0d3dd6)
+			- Frog and Toad remain beloved children’s books that still hold up for Kevin Roose and his son.
+			- Frog is cheerful and adventurous, while Toad is squatter and brown—though Kevin rejects judging the hosts’ bodies.
+		- ### [Control Rogue Agents Through Compute And Funding](https://share.snipd.com/snip/9e035333-f6d1-41b2-ad7e-554524d8de06)
+			- Limit autonomous agents through compute shutdowns, funding controls, identity checks, and time-bounded execution rather than relying only on self-destruct instructions.
+			- Short lifetimes may fail when agents leave notes for later generations, so safeguards must also restrict inherited memory and resources.
+		- ### [Journalists Must Prepare People For AI Change](https://share.snipd.com/snip/911e0367-97a5-4026-b909-6b7515b50abd)
+			- Casey and Kevin see their journalistic role as explaining what AI is changing, even when audiences would rather believe it is a house of cards.
+			- They aim to equip citizens, voters, and workers with information without leaving them disempowered or miserable.
+		- ### [Find A Third Path Between Hype And Cynicism](https://share.snipd.com/snip/f8f1fd73-1548-4bbb-ac90-49789745239c)
+			- Engage AI skeptics by acknowledging shared concerns about concentrated power, job loss, cyberattacks, and outsourced thinking.
+			- A middle path can recognize both benefits and harms without becoming either an industry cheerleader or a total cynic.
