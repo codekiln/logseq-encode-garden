@@ -11,7 +11,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Naming
 		- One segment under the trade-off page, repeating the choice's name from the path: `X/vs/Y/X` and `X/vs/Y/Y`; with more choices, `X/vs/Y/vs/Z/Z`.
 	- ## Frontmatter
-		- `logseq-entity:: [[Logseq/Entity/Trade-Off/Component]]`.
+		- The page carries `logseq-entity:: [[Logseq/Entity/Trade-Off/Component]]`.
 		- `see-also::` — the standalone page for the thing itself first, when the garden has one, then other pages that explain this choice.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape

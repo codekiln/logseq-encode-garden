@@ -8,7 +8,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Naming
 		- `Maker/Model`, following the creator-namespace rule on [[Logseq/Pref/Page/Name]]: [[IK Multimedia/iLoud Micro Monitors]].
 	- ## Frontmatter
-		- `logseq-entity:: [[Logseq/Entity/Hardware/Audio/Speaker]]`. A speaker that was bought adds [[Logseq/Entity/Purchase]] after it and takes that type's properties too.
+		- The page carries `logseq-entity:: [[Logseq/Entity/Hardware/Audio/Speaker]]`. A speaker that was bought adds [[Logseq/Entity/Purchase]] after it and takes that type's properties too.
 		- `vendor-url::` — the maker's page for the model.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape

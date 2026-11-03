@@ -15,7 +15,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- A page name that violates these rules needs a valid name before the asset is stored. Silent punctuation replacement would make the filename ambiguous.
 		- Hyphens keep new multiword asset purposes readable. Spaces already present in an owner's namespace stay intact; a URL percent-encodes them. Replacing spaces with hyphens would prevent exact recovery of the page name.
 	- ## Frontmatter and body
-		- `logseq-entity:: [[Logseq/Entity/Asset]]` identifies a local asset. A B2 asset uses [[Logseq/Entity/Asset/B2]]. Ownership follows the namespace before `/Asset/`.
+		- A local asset carries `logseq-entity:: [[Logseq/Entity/Asset]]`. A B2 asset uses [[Logseq/Entity/Asset/B2]]. Ownership follows the namespace before `/Asset/`.
 		- [[Logseq/Entity/Asset/Frontmatter/duration-seconds]] records measured audio or video duration when useful. DVC tracks content identity; podcast feed metadata supplies enclosure size and media type.
 		- The body contains a descriptive heading and the file itself: `![descriptive label](file location)` embeds an image, audio recording, or video; `[descriptive label](file location)` links a downloadable preset or document.
 		- Other technical facts belong in documented frontmatter when the asset needs them. The page contains only information about the represented file.

@@ -13,7 +13,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Finding and deduplicating
 		- Search the size and the layout abbreviation together before creating a page. One connector is sold under several names, so an existing page's `alias::` often already holds the name at hand.
 	- ## Frontmatter
-		- `logseq-entity:: [[Logseq/Entity/Hardware/Connector/Audio]]` marks connector and family pages alike.
+		- Connector and family pages alike carry `logseq-entity:: [[Logseq/Entity/Hardware/Connector/Audio]]`.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
 		- A connector page runs: **Visual Reference**, an image with its credit line; **Overview**, what the abbreviation stands for and what the connector is for; **Physical Specifications**, diameter, contact count and insulating rings; **Pin Configuration**, what each contact carries; **Common Use Cases**; and **Compatibility**, which connectors physically mate with it and what happens to the spare contacts.

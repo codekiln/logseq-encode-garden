@@ -18,7 +18,7 @@ see-also:: [[Logseq/Entity/Music/Scale/Discussion]]
 		- Compare `scale-semitones-above-tonic::` values before creating a page. A rotation of an existing scale is a different mode and gets its own page.
 		- Sources disagree on the pitches behind some names, such as Hirajoshi, Bebop Dorian and Blues. One page holds the name and describes the variants.
 	- ## Frontmatter
-		- `logseq-entity:: [[Logseq/Entity/Music/Scale]]`
+		- The page carries `logseq-entity:: [[Logseq/Entity/Music/Scale]]`.
 		- [[Logseq/Entity/Music/Scale/Frontmatter/scale-semitones-above-tonic]] records the pitches as semitones above the tonic.
 		- Other conventions follow [[Logseq/Frontmatter]].
 	- ## Page shape
