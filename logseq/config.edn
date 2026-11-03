@@ -439,4 +439,6 @@
  ;;      ;use Percent-encoding for other invalid characters
  :file/name-format :triple-lowbar
  :publishing/all-pages-public? true
+ :publishing/page-properties? true
+ :publishing/page-properties-collapsed? false
  :feature/enable-timetracking? false}
