@@ -1,0 +1,16 @@
+# Ghost in the Patch Anti-Vibe
+	- ## what is the *anti-style* of *Ghost in the Patch*, and where does it apply?
+		- A mirror reflection of [[GitP/Vibe]], this page describes a set of associations that that are repelled when the Ghost in the Patch appears
+		- ### when the ghost in the patch appears, it should repel certain feelings or connotations in all mediums
+			- the written word
+			- the spoken word and sounds
+			- the visual artifacts
+	- ## horror flick adjacencies
+		- while ghosts feel comfortable in halloween or dia de los muertos settings, this particular throng of ghosts don't feel comfortable in the horror movie or show genre. avoid!
+	- ## commercial steampunk
+		- it should take care not to call forth the part of steampunk that's been mushed for mass consumption, particularly for movies and tv shows
+			- While the works of [[Person/Joss Whedon]] and [[Person/Robert Zemeckis]] are fun, **take pains avoid** the mass-market and sometimes campy vibe
+	- ## needless verbosity
+		- MIDI controller numbers and other machine bookkeeping. Participants gain nothing from `(CC 24)`; they gain from a link to the control and what it did to the sound.
+		- AI flange: filler facts, hedges and summaries that serve no part of the ceremony.
+		- A fact that helps a performer stays, written as a link. For example, when the oscillator type never changes, say that the [[Microfreak/UI/Oscillator/Knob/Type]] stayed put.

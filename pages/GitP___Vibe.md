@@ -1,22 +1,49 @@
-see-also:: [[GitP/Participant]], [[Logseq/Entity/Podcast/Episode/GitP/A]]
+see-also:: [[GitP/Vibe/Anti]]
 
 - # Ghost in the Patch Vibe
-	- The voice of the Ceremonial Annotations on a [[Ghost in the Patch]] episode page, and of the opening description that [[GitP/Participant]]s read on the website and in their [[Podcast/Catcher]].
-	- ## Religious shortwave AM radio show notes
-		- As a kid, [[Person/codekiln]] built a shortwave radio and tuned into stations from across the world in the middle of the night. The notes carry that feeling of a faraway voice arriving in the dark.
-		- They also carry the seance-adjacent religious feeling of gatherings from codekiln's youth: Christian Communion, Tibetan Dzogchen, and night-time Carlos Castaneda power stalking with djembes. The ceremony needs spirit, life and spark.
-	- ## Steampunk before it was sold to everyone
-		- The writing sits near steampunk, in the form it took before it was commoditized for mass consumption. Reach toward [[Person/Jules Verne]], [[Person/H.G. Wells]] and [[Person/H. P. Lovecraft]].
-		- [[Person/Joss Whedon]] and [[Person/Robert Zemeckis]] have a place in codekiln's heart, and their mass-market appeal is what these notes avoid.
-	- ## Notes for fellow performers
-		- Practical, respectful technical notes that let another performer find the sound: which preset, which control, which gesture, at what moment. Controls are named and linked to their [[Microfreak]] pages.
-	- ## Musicological musings
+	- ## what is the *style* of *Ghost in the Patch*, and where does it apply?
+		- This page describes a resonant set of feelings and associations that *Ghost in the Patch* should stir in its [[GitP/Participant]]s.
+		- ### when the ghost in the patch appears, it should evoke a coherent vibe in all mediums
+			- #### the written word
+				- the description that [[GitP/Participant]]s read on the website and in their [[Podcast/Catcher]]
+				- the voice of the Ceremonial Annotations on a [[Ghost in the Patch]] episode page
+			- #### the spoken word and sounds
+				- of the podcast
+			- #### the visual artifacts
+				- illustrations on episode pages, e.g.
+				- any visualizations on episode pages
+		- The deliberately chosen set of feelings and associations are elaborated below.
+	- ## faraway magic voices arriving in the dark via mysterious signals
+		- Picture a kid that just finished building a shortwave radio from a general purpose electronics kit.
+			- It's late at night, and they pop the screen out their window and drive a screwdriver into the ground encircled with a grounding wire, then put a single earpiece in their ear, tuning into stations from across the world in the middle of the night.
+			- Ghost in the Patch should evoke that kid's feeling of faraway magic sounds arriving in the dark, the weirdness and diversity of the varieties of experience in the universe.
+	- ## space exploration
+		- the original logo of ghost in the patch is a ghost whose body is subsumed into a flying synthesizer space ship, flying above a forest. picture this being traveling from planet to planet, gathering signals.
+		- ghost in the patch is about exploring the contours of the hardware and what's possible.
+	- ## ritual musical offerings
+		- Ghost in the Patch should carry a seance-adjacent valence that descends from the original power of myth making and ritual gatherings
+			- the quiet, extended, improvisatory drone, channeling of the organ in a chapel during communion
+			- the musical offerings of Tibetan Dzogchen
+			- it doesn't have to be a musical offering that's well known or established. the weirdly specific "we do this here" vibe is, in some ways, more original.
+				- picture a kid that reads [[Person/Carlos Castaneda]]'s books and convinces some friends to do some power stalking with [[Instrument/Djembe]]s in a snowy winter field beneath the stars
+	- ## the original steampunk
+		- the vibe should be strangely familiar, if one is a fan of makers such as
+			- [[Person/Charles Babbage]] and [[Person/Ada Lovelace]] and the [[Analytical/Engine]] from [[18/3/7]]
+			- [[Person/Jules Verne]]
+			- [[Person/H.G. Wells]]
+			- [[Person/H. P. Lovecraft]]
+		- ### hand-crafted aesthetic
+			- the authentic steampunk is corkscrewed and nerdy, built around private obsession and exploring multidimensional space. it's a DIY aesthetic, taken to the extreme
+	- ## gathering a type of witchy knowledge
+		- *the ghosts* live in a particular type of garden patch - in a [[Knowledge Garden]]. the vibe here is conducive to building up vast, ancient libraries of powerful spells.
+	- ## collaborative, shared performance notes
+		- Practical, respectful technical notes that let another performer find the sound:
+			- which preset, which control, which gesture, at what moment.
+		- Controls are named and richly linked to the context of their [[Microfreak]], [[Launchpad]], [[Ableton/Live]] and other [[Knowledge Garden]] pages.
+	- ## musicological, theosophical musings
 		- Intervals, textures, forms and lineages heard in the performance, such as the minor seventh as a bass interval.
-	- ## Whimsical reflections
-		- Whimsical, pseudo-cryptic, poetic and animistic: the patch as a spirit, the loops as voices that answer. [[My Notes]] in [[GitP/A/Session/26/11/01-Sun]] include "the long sky's cloud, the hair's blown face".
-	- ## What stays out
-		- MIDI controller numbers and other machine bookkeeping. Participants gain nothing from `(CC 24)`; they gain from a link to the control and what it did to the sound.
-		- AI flange: filler facts, hedges and summaries that serve no part of the ceremony.
-		- A fact that helps a performer stays, written as a link. For example, when the oscillator type never changes, say that the [[Microfreak/UI/Oscillator/Knob/Type]] stayed put.
-	- ## Example
-		- The hand-annotated chapter ((6ae46a2c-a94c-40bd-83ba-948dec2a18bd)) in [[GitP/A/Session/26/10/29-Thu]] shows the voice: "a 2nd thing appears above the forest", "Strange Word Emergence".
+	- ## receiving *poetic* signals
+		- pseudo-cryptic, poetic and animistic:
+			- the patch as a spirit, the loops as voices that answer. [[My Notes]] in [[GitP/A/Session/26/11/01-Sun]] include "the long sky's cloud, the hair's blown face".
+		- ### Example
+			- The hand-annotated chapter ((6ae46a2c-a94c-40bd-83ba-948dec2a18bd)) in [[GitP/A/Session/26/10/29-Thu]] shows the voice: "a 2nd thing appears above the forest", "Strange Word Emergence".
