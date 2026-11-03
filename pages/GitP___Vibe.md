@@ -29,6 +29,7 @@ see-also:: [[GitP/Vibe/Anti]]
 	- ## the original steampunk
 		- the vibe should be strangely familiar, if one is a fan of makers such as
 			- [[Person/Charles Babbage]] and [[Person/Ada Lovelace]] and the [[Analytical/Engine]] from [[18/3/7]]
+				- ![Plan diagram of the analytical engine from 1840](https://upload.wikimedia.org/wikipedia/commons/7/78/Babbage_Analytical_Engine_Plan_1840_CHM.agr.jpg)
 			- [[Person/Jules Verne]]
 			- [[Person/H.G. Wells]]
 			- [[Person/H. P. Lovecraft]]
