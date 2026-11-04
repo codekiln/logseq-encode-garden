@@ -26,7 +26,8 @@ date-created:: [[2026-11-01 Sun]]
 			- #### 05:12 Infini Pad as bass
 			  id:: 6ae85dd5-d05e-41e7-9179-507f304f9baa
 				- Notes from [[GitP/Acolyte]]
-					- Infini Pad comes down to earth: the MicroFreak keys sound a low G and the F below it while the Launchpad shifts lower. Saturate and Fold move through the bass.
+					- Infini Pad comes down to earth: the MicroFreak keys sound G1 and the F1 below it. The Launchpad leaves its G3 to B♭5 range and carries the bass line on from 05:56 through G1, F1, D2 and B♭1, down to D1 at 07:16. Saturate and Fold move through the bass.
+					- [[Music/Concept/Scientific Pitch Notation]]
 				- [[My Notes]]
 					- 05:15 - the bass comes in - Infini Pad works great as a bass if the [[Microfreak/UI/Oscillator/Knob/Shape]] is turned up so the noise comes through.
 					- 07:05 - The minor seventh is a great bass interval.
