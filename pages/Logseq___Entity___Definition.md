@@ -14,7 +14,7 @@ see-also:: [[Logseq/Entity/Definition/Discussion]]
 		- A page under the `Logseq/Entity/` namespace whose job is to define one entity type: what counts as an instance, what does not, how to name and deduplicate it, and what shape its instance pages take.
 		- Not an Entity Definition: an instance page (an actual person, project, book, …), or [[Logseq/Entity]] itself, which is the general conceptual model rather than a single type.
 	- ## Page shape
-		- **Frontmatter** — `logseq-entity:: [[Logseq/Entity/Definition]]` marks the page as an entity definition, so this page collects a backlink to every entity type. Add `alias::` for plural or contextual forms when useful. Never alter `tags::`.
+		- **Frontmatter** — `logseq-entity:: [[Logseq/Entity/Definition]]` marks the page as an entity definition, so this page collects a backlink to every entity type. Plural or contextual forms go in `alias::` only when codekiln asks for them, per [[My/AI/Rule/Logseq/No Aliases Unless Asked]]. Never alter `tags::`.
 		- **H1** — a single bullet-wrapped heading in human-friendly Title Case, with abbreviations expanded and no namespace path: `- # Software Plugin`, `- # Security Vulnerability`, `- # CLI Command`. The page's namespace already carries it.
 		- **First line** — one sentence directly under the H1 in the form `In this garden, **<Name>** pages model <description>.` These first lines read together as a self-describing index of the garden's entity types.
 		- **Body sections** — describe what is specific to recognizing, naming, deduplicating, and shaping that type. Adapt to the type; short definitions do not need every section. Common sections:

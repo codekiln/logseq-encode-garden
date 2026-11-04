@@ -21,7 +21,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Frontmatter
 	  id:: 6a33af25-3c06-4b5c-9e9c-29549aad0b3f
 		- Standard [[Logseq/Frontmatter/logseq-entity]] attribution rules
-		- Standard [[Logseq/Frontmatter/alias]] rules. Include the symbol/notation form `[[Key/Name (symbol)]]` when a standard notation exists (e.g. `[[Key/Meta (M-)]]`, `[[Key/Control (C-)]]`, `[[Key/Shift (⇧)]]`), plus common alternate names (e.g. `[[Key/Alt]]` for Meta).
+		- Standard [[Logseq/Frontmatter/alias]] rules. Include the symbol/notation form `[[Key/Name (symbol)]]` when a standard notation exists (e.g. `[[Key/Meta (M-)]]`, `[[Key/Control (C-)]]`, `[[Key/Shift (⇧)]]`). Common alternate names (e.g. `[[Key/Alt]]` for Meta) go in only when codekiln asks for them, per [[My/AI/Rule/Logseq/No Aliases Unless Asked]].
 			- Platform-specific names go in the alias too: e.g. `[[Key/Mac/Command (⌘)]]` as the symbol alias for `[[Key/Mac/Command]]`, and `[[Key/Alt (⌥)]]` as the symbol alias for `[[Key/Alt]]`.
 	- ## Page shape
 		- **H1** — key name with symbol or notation in parens: `# Meta (M-)`, `# Control (C-)`, `# Shift (⇧)`. Omit parens if no standard symbol exists.

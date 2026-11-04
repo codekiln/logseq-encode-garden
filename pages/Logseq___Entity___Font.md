@@ -11,7 +11,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- When the font's creator has an existing namespace in the garden, use `Creator/Font/<Short Name>` — the `Font` segment is the type, and the leaf drops redundant creator and type words. Example: [[JetBrains/Font/Mono Nerd]] (not `JetBrains/JetBrains Mono Nerd Font`). See [[Logseq/Pref/Page/Name]] for the general creator-namespace rule.
 		- When no creator namespace exists, use `Font/<Font Name>` as a fallback (e.g. [[Font/unscii]], [[Font/Robotization Mono]]).
 		- For nerd-font-patched variants under a creator namespace, append "Nerd" to the base name leaf (e.g. `Mono Nerd`); "Font" is already carried by the namespace segment.
-		- Add `alias::` for the full display name or common shorthand when useful (e.g. `alias:: [[JetBrains Mono Nerd Font]]`).
+		- The full display name or common shorthand goes in `alias::` only when codekiln asks for it (e.g. `alias:: [[JetBrains Mono Nerd Font]]`), per [[My/AI/Rule/Logseq/No Aliases Unless Asked]].
 	- ## Finding and deduplicating
 		- Check in this order: `Creator/Font/<Name>` page, `Font/<Name>` fallback, aliases, font-family string matches in terminal or editor config pages. Classify as: existing, similar, new, or blocked.
 	- ## Frontmatter

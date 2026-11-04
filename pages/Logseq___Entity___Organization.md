@@ -10,7 +10,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Prefer **person** when the subject is an individual maintainer or author.
 	- ## How to name the main page for an organization
 		- Prefer a short top-level name when it is stable and recognizable, such as [[IETF]].
-		- Add **`alias::`** for common alternate names, full names, legal names, acronyms, and former names when useful.
+		- Alternate names, full names, legal names, acronyms, and former names go in **`alias::`** only when codekiln asks for them, per [[My/AI/Rule/Logseq/No Aliases Unless Asked]].
 	- ## Finding and deduplicating
 		- Check in this order: exact page name, exact alias, official domain, acronym or full-name variants, then page-body mentions of the same site, public role, or description. Classify as: existing, similar, new, or blocked.
 	- ## Relationship to company

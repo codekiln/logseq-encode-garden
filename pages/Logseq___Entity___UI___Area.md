@@ -15,7 +15,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- A hardware panel can also be mapped by position. Each side of the device is an area, `<Item>/UI/Front` or `<Item>/UI/Rear`; a side laid out in rows has one area per row at `<Item>/UI/Front/Row/<NN Row>`, numbered top to bottom, such as [[Microfreak/UI/Front/Row/02 Main]].
 		- Inside a row, or on a side without rows, each item takes a two-digit number counting left to right: `01 Matrix`, `02 Paraphonic Button`. A numbered group of controls is an area, such as [[Microfreak/UI/Front/Row/01 Top/01 Matrix]]; a numbered single control is a [[Logseq/Entity/UI/Control]].
 		- Use the name printed on the panel or used in the manual, in Title Case: `Oscillator`, `Control Bar`, `Arrangement View`, `Scrub Area`.
-		- Search `<Item>/UI` and the item's older pages before creating an area. When the garden already has a page for the same region under another name, link it from the area page, and list the older name in `alias::` when it has no page file of its own.
+		- Search `<Item>/UI` and the item's older pages before creating an area. When the garden already has a page for the same region under another name, link it from the area page, and list the older name in `alias::` when codekiln asks for it, per [[My/AI/Rule/Logseq/No Aliases Unless Asked]].
 	- ## Page shape
 		- Frontmatter: `logseq-entity:: [[Logseq/Entity/UI/Area]]`; `up::` links to the containing area, and a root `<Item>/UI` page links `up::` to the item. See [[Logseq/Frontmatter]] for shared conventions.
 		- One bullet-wrapped H1 with the area's name, then one sentence saying where the area sits and what it is for, then a picture of the area when the user guide has one.

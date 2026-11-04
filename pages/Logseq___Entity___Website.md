@@ -11,7 +11,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## How to name the main page for a website
 		- When the site's maker (studio, org, person) already has a namespace in the garden, use `Creator/Website/<Short Name>` so the site nests under its maker.
 		- Otherwise use `Website/<Name>` as the fallback, where `<Name>` is the site's own recognizable name, e.g. [[Website/Misato Town]].
-		- Prefer the site's own short name over its full URL or a slug; put alternate names or the native-language title in `alias::`.
+		- Prefer the site's own short name over its full URL or a slug; alternate names or the native-language title go in `alias::` only when codekiln asks for them, per [[My/AI/Rule/Logseq/No Aliases Unless Asked]].
 	- ## Finding and deduplicating
 		- Check in this order: `Website/<Name>`, `Creator/Website/<Name>`, aliases, the maker's namespace, and body mentions of the URL. Classify as: existing, similar, new, or blocked.
 	- ## Frontmatter

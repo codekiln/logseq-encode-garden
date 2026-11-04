@@ -9,7 +9,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Naming
 		- Paths run from shape to detail: `Audio/Connector/<Family>/<Contact layout>/<Size>`. A family with one layout drops that segment, as in `Audio/Connector/RCA/Stereo`.
 		- The size segment carries its unit and no space: `3.5mm`. Contact layouts keep the trade abbreviation in capitals: `TS`, `TRS`, `TRRS`.
-		- Shop and catalog names — "3.5mm Headset Jack", "1/8 inch Stereo Audio Jack" — belong in `alias::` per [[Logseq/Frontmatter/alias]].
+		- Shop and catalog names — "3.5mm Headset Jack", "1/8 inch Stereo Audio Jack" — go in `alias::` only when codekiln asks for them, per [[My/AI/Rule/Logseq/No Aliases Unless Asked]].
 	- ## Finding and deduplicating
 		- Search the size and the layout abbreviation together before creating a page. One connector is sold under several names, so an existing page's `alias::` often already holds the name at hand.
 	- ## Frontmatter

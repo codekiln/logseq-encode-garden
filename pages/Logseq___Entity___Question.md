@@ -29,7 +29,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 			- **`see-also::`** — optional; extremely parsimonious list of 1-2 not obvious **garden pages** that are the best adjacent reading (**strongest tie first**). Do not put anything obvious in this list, do not restate parent-namespace context the title already encodes. Do not use `see-also::` for external URLs (put those in the answer body).
 		- [[Logseq/Frontmatter/via]]
 			- **`via::`** — optional; only for **what logseq page best represents the context in which the question appeared** - only useful when astonishing; be parsimonious and only use this when it's not obvious.
-		- **`tags::` / `alias::`** — only when they match established patterns on sibling question pages in the same topic; never alter existing **`tags::`** on a page you did not create for tagging migration.
+		- **`alias::`** — only when codekiln asks for one, per [[My/AI/Rule/Logseq/No Aliases Unless Asked]]. **`tags::`** — only when they match established patterns on sibling question pages in the same topic; never alter existing **`tags::`** on a page you did not create for tagging migration.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
 	  id:: 69cd1d51-7708-4021-8c21-f7e864ec017e

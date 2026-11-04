@@ -11,7 +11,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Prefer a **person** entity when the subject is an individual maintainer; use **company** when the subject is the organization or brand (even if it is small).
 	- ## How to name the main page for a company
 		- Prefer a **short top-level name** that matches natural garden linking, such as [[Charm]] for “Charm” even when the GitHub org is `charmbracelet`.
-		- Add **`alias::`** for common alternate names (legal name, GitHub org label, “Foo Inc.” vs “Foo”) so search and backlinks stay unified.
+		- Alternate names (legal name, GitHub org label, “Foo Inc.” vs “Foo”) go in **`alias::`** only when codekiln asks for them, per [[My/AI/Rule/Logseq/No Aliases Unless Asked]].
 		- If the company is only context for one product and unlikely to recur, the vendor can be documented inline on the software page. Create a company entity when the organization is likely to recur.
 	- ## Finding and deduplicating
 		- Check in this order: exact page name, exact alias, official domain, GitHub org name, then page-body mentions of the same site or org. Classify as: existing, similar, new, or blocked.

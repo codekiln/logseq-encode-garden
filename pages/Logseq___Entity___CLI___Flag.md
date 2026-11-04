@@ -13,7 +13,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Naming and links
 		- **Link shape:** `[[{tool}/{command}/--{flag}]]` or `[[{tool}/{command}/{shortName}]]` when the garden uses a short option segment.
 		- **File shape:** `pages/{tool}___{command}___--{flag}.md` or `...___{shortName}.md`; triple underscores between namespace parts.
-		- Use `alias::` on the flag page for common short forms (`-g`, etc.) when established on sibling pages.
+		- Common short forms (`-g`, etc.) go in `alias::` on the flag page only when codekiln asks for them, per [[My/AI/Rule/Logseq/No Aliases Unless Asked]].
 	- ## Finding and deduplicating
 		- Search under the parent command namespace first, then grep for the flag string and upstream doc anchor.
 		- Classify as: **existing**, **similar**, **new**, or **blocked** (parent command missing or unclear).

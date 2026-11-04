@@ -9,7 +9,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Weak signals alone (a single app’s built-in scheme with no shared branding) are usually **not** a color-theme entity — note them on the app page instead.
 	- ## How to name the main page for a color theme
 		- Prefer a **short top-level name** when the theme name is unambiguous (e.g. [[Catppuccin]]), matching the spirit of software project hubs like [[Lazygit]].
-		- Add **`alias::`** to a hierarchical path when the graph should sit under a UI namespace, such as `alias:: [[UI/Color/Theme/Catppuccin]]` on the [[Catppuccin]] page for visibility under [[UI/Color]].
+		- A hierarchical path under a UI namespace goes in **`alias::`** only when codekiln asks for it, such as `alias:: [[UI/Color/Theme/Catppuccin]]` on the [[Catppuccin]] page for visibility under [[UI/Color]], per [[My/AI/Rule/Logseq/No Aliases Unless Asked]].
 		- Use `Theme/Flavor` sub-namespaces when the upstream theme names discrete variants (e.g. Catppuccin’s four flavors): hub page links the set; each subpage holds typical config keywords, optional preview image from `../assets/…`, and points back to the hub for the full stack matrix. For themes without named variants, keep a single hub section instead.
 	- ## Finding and deduplicating
 		- Check in this order: exact page name, exact alias, official homepage or org/repo, then page-body mentions of the same palette names and upstream links. Classify as: existing, similar, new, or blocked.

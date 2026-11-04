@@ -12,7 +12,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Naming and links
 		- Prefer the source title as the final page segment, with year/month/day segments when the surrounding namespace uses date-based import structure.
 		- Use the author or publisher namespace already present in the garden when it exists. Do not create a new author or organization page only for a weak one-off byline unless the source is likely to recur.
-		- Use `alias::` only for real alternate titles, previous paths, or short names likely to be searched.
+		- `alias::` holds real alternate titles, previous paths, or short names likely to be searched, added only when codekiln asks for them, per [[My/AI/Rule/Logseq/No Aliases Unless Asked]].
 	- ## Finding and deduplicating
 		- Search in order: exact source URL; exact title; normalized title words under likely author, publication, Blog, Article, and Essay namespaces; byline plus distinctive title phrase. Classify: existing, similar, new, or blocked.
 		- One page per source work. If the same work is mirrored in multiple places, keep one import page and list alternate source links in body or frontmatter when useful.

@@ -31,5 +31,5 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- First block after frontmatter: H1 matching the primary attack, vulnerability, or weakness name.
 		- Start with a concise description of what the attack or weakness is.
 		- Useful sections include **Mechanism**, **Where it appears**, **Defender relevance**, **Examples**, **Misconceptions**, and **Related**. Adapt headings to the note; short pages do not need every section.
-		- For named identifiers, include CVE, GHSA, or CWE links or aliases when they are central to the page identity.
+		- For named identifiers, include CVE, GHSA, or CWE links when they are central to the page identity. Aliases for them are added only when codekiln asks, per [[My/AI/Rule/Logseq/No Aliases Unless Asked]].
 		- Link to defensive tooling or control pages when they clarify how the risk is found, mitigated, or monitored.

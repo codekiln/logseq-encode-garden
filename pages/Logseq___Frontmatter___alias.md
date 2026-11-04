@@ -2,7 +2,7 @@
 	- In Logseq, if page `[[Super Long Name]]` has frontmatter `alias:: [[Shortname]]`, then clicking `[[Shortname]]` anywhere in the graph navigates to `[[Super Long Name]]`.
 	- Appropriate uses: real alternate names, plural or contextual link surfaces, handles, acronyms, and other useful discovery forms.
 	- ## Aliases are human-curated, not agent-generated
-		- Agents should suggest alias candidates in the chat response rather than writing them to the page without explicit instruction.
+		- Agents add an alias only when codekiln asks for it and otherwise suggest candidates in chat, per [[My/AI/Rule/Logseq/No Aliases Unless Asked]].
 	- ## Be judicious — do not proliferate aliases
 		- Every alias added to the graph slows down auto-complete and may confuse the human operator about which form is canonical.
 	- ## Use singular canonical names; alias the plural

@@ -22,7 +22,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Prefer singular, Title Case namespace segments.
 		- Use nested paths when the host surface or interaction family adds useful structure, for example [[UX/Pattern/Text Input/Slash Command]].
 		- Keep cross-cutting patterns top-level when they are not tied to one host surface, for example [[UX/Pattern/Dark]].
-		- Use `alias::` for legacy titles, common shorthand, or alternate surface forms such as [[Slash Command]] or [[Autocomplete]].
+		- `alias::` holds legacy titles, common shorthand, or alternate surface forms such as [[Slash Command]] or [[Autocomplete]], added only when codekiln asks for them, per [[My/AI/Rule/Logseq/No Aliases Unless Asked]].
 	- ## Page shape
 		- Use a lean hub shape: H1 with the pattern name, then brief sections such as **Overview**, **Interaction**, **Examples**, and **Related** as the topic warrants.
 		- Keep examples concrete and product-facing, but keep the page centered on the reusable interaction pattern rather than one implementation.

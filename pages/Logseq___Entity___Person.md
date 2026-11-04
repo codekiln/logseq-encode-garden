@@ -14,7 +14,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Default page: [[Person/Full Name]] — disk `Person___Full Name.md`.
 		- When linking in prose or new notes, use the page's real title (the filename / Logseq title), not convenience aliases.
 		- **Do not** introduce `People/...` as a page title, alias, or “plural reference” pattern. This garden does not use a parallel `People/` namespace for persons.
-		- Optional `alias::` is only for **real alternates**: prior title after a rename, spelling variants, handles, or other non-`People/` contextual links—same spirit as **company** alternate names.
+		- Optional `alias::` is only for **real alternates**: prior title after a rename, spelling variants, handles, or other non-`People/` contextual links—same spirit as **company** alternate names—added only when codekiln asks for them, per [[My/AI/Rule/Logseq/No Aliases Unless Asked]].
 	- ## Finding and deduplicating
 		- Search in order: exact `Person___*.md` title; `alias::` match; partial name / handle in `pages/Person___*.md`; body text (bio, same GitHub profile URL). Classify: existing, similar, new, or blocked.
 		- **One page per person.** Never split the same human across two hub pages; merge or pick one title.

@@ -13,7 +13,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- The show page is the `Pod` namespace its episodes file under:
 			- `Person/<Host>/Pod` for a show led by a host who has a person page, as with [[Person/Nathaniel Whittemore/Pod]].
 			- `<Show>/Pod` for a show known by its own name or with several hosts, as with [[Hard Fork/Pod]] and [[Latent Space/Pod]].
-		- `alias::` carries the show's published title, its `Podcast/<Show Name>` form, and any short form likely to be searched.
+		- `alias::` carries the show's published title and its `Podcast/<Show Name>` form. Other short forms go in only when codekiln asks for them, per [[My/AI/Rule/Logseq/No Aliases Unless Asked]].
 		- Some show pages and episodes were filed with a `Podcast` segment, as with [[People I (Mostly) Admire/Podcast]]. Prefer `Pod` for new pages and leave existing ones as filed unless a migration is asked for.
 	- ## Finding and deduplicating
 		- Search in order: the show's home or feed URL; the show title and its aliases; `*/Pod` and `*/Podcast` pages; the host's person namespace. Classify as existing, similar, new, or blocked.

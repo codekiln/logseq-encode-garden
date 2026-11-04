@@ -14,7 +14,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- A distribution is a specialization of [[Logseq/Entity/Software/Project]] — still a software project, but whose identity is "the complete curated system." A page may declare both, primary first (see [[Logseq/Entity]] → multiple entity membership).
 		- A distribution is the **maximal** curated collection: it ships or composes smaller, partial collections (a distro's extras / modules / layers). Contrast: **Distribution** = complete & standalone; a plugin collection = partial & composed into a host.
 	- ## How to name the page
-		- Follows [[Logseq/Entity/Software/Project]] naming: give a well-known distro a root-level main page (e.g. [[LazyVim]]) and add an alias from the host namespace when useful (e.g. `nvim/Distro/LazyVim`).
+		- Follows [[Logseq/Entity/Software/Project]] naming: give a well-known distro a root-level main page (e.g. [[LazyVim]]); an alias from the host namespace (e.g. `nvim/Distro/LazyVim`) is added only when codekiln asks for it, per [[My/AI/Rule/Logseq/No Aliases Unless Asked]].
 	- ## Finding and deduplicating
 		- Check in this order: exact main page name, exact alias, host-namespace distro alias (`<host>/Distro/<Name>`), then page-body mentions of the same homepage or repo. Classify as: existing, similar, new, or blocked.
 	- ## Frontmatter
