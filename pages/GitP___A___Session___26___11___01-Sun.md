@@ -12,8 +12,8 @@ date-created:: [[2026-11-01 Sun]]
 			- #### 00:00 [[Launchpad]] playing infini pad
 			  id:: 6aeb00bc-0a7c-4bf5-8502-e98620a0402f
 				- Notes from [[GitP/Acolyte]]
-					- Infini Pad arrives high and slow through the Launchpad. A second voice joins at 01:28, and the phrases gather movement.
-					- The cycling envelope's [[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Knob/Rise]] and [[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Knob/Amount]] shift; a few pressed MicroFreak keys and a touch of [[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Resonance]] join the signal.
+					- Infini Pad arrives slow through the Launchpad, circling C4, G3 and A♭3 around middle C. A second voice joins at 01:28, and the phrases gather movement.
+					- The cycling envelope's [[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Knob/Rise]] and [[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Knob/Amount]] shift; a few pressed MicroFreak keys between G5 and C6 and a touch of [[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Resonance]] join the signal.
 					- [[Microfreak/Preset/259 Infini Pad]] · [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope]]
 				- Spoken Words from [[Person/codekiln]]
 				  collapsed:: true
@@ -38,7 +38,7 @@ date-created:: [[2026-11-01 Sun]]
 					- 08:45 - the filter / cutoff adjustment, makes its warbly commentary.
 			- #### 09:02 The bottom drops
 				- Notes from [[GitP/Acolyte]]
-					- One layer drops away as another take begins. The cycling envelope and sustain are reshaped, and the Launchpad phrases gather in the low-middle register.
+					- One layer drops away as another take begins. The cycling envelope and sustain are reshaped, and from 09:30 the Launchpad repeats C3 and G3 over a bass that moves between E♭1 and D2.
 				- [[My Notes]]
 					- 09:02 - the bottom drops
 			- #### 10:06 The pulsar returns
@@ -63,7 +63,7 @@ date-created:: [[2026-11-01 Sun]]
 					- 17:58 — All right, that was all preset 259 Infini Pad.
 		- ### 18:17 Enter [[Microfreak/Preset/260 8bitfi]]
 			- Notes from [[GitP/Acolyte]]
-				- 8bitfi enters on the MicroFreak keys, with [[Microfreak/UI/Front/Row/04 Icon Strip/Button/Hold]] toggled just before the high notes sound.
+				- 8bitfi enters on the MicroFreak keys, with [[Microfreak/UI/Front/Row/04 Icon Strip/Button/Hold]] toggled just before C6 sounds. The opening phrase circles C6, E♭6 and E6.
 				- Key pressure stays with the voice. In the saved patch it drives Fold fully and Saturate by about a third.
 				- [[Microfreak/Preset/260 8bitfi]]
 			- [[My Notes]]
@@ -80,7 +80,7 @@ date-created:: [[2026-11-01 Sun]]
 					- 19:35 - we first start to hear that old warbling sound, creepy
 			- #### 21:04 Low helicopter
 				- Notes from [[GitP/Acolyte]]
-					- Low notes arrive under continuous pressure, while sustain and decay shift.
+					- Notes from C2 up to B♭3 arrive under continuous pressure, starting on C2, while sustain and decay shift.
 					- The saved matrix sends key position to [[Microfreak/UI/Front/Row/01 Top/01 Matrix/Button/Assn/3]]; [[Microfreak/Preset/260 8bitfi]] holds what is known about its destination.
 				- [[My Notes]]
 					- 21:15 - flippity low helicopter
@@ -91,7 +91,7 @@ date-created:: [[2026-11-01 Sun]]
 					- 21:28 — I'm seeing that under Assign 3, there's the move destination. I don't know what that is. Let's try messing with it. It's under the key ARP. Huh. Okay, key ARP, Assign 3. Huh. Move destination. What could that possibly mean?
 			- #### 22:12 High notes and pitch bends
 				- Notes from [[GitP/Acolyte]]
-					- High notes return, then [[Microfreak/UG/11 Icon Strip/03 Touch Strip/02 Bend]] stretch across the full range.
+					- Notes between A♭4 and B♭5 return, then [[Microfreak/UG/11 Icon Strip/03 Touch Strip/02 Bend]] stretch across the full range.
 				- Spoken Words from [[Person/codekiln]]
 				  collapsed:: true
 					- 22:20 — So I was using a technique in there earlier where I exported, or I lowered the volume of a track before starting to record on it in order to take out the loop.
@@ -101,7 +101,7 @@ date-created:: [[2026-11-01 Sun]]
 					- [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope]]
 			- #### 24:30 Repeated notes
 				- Notes from [[GitP/Acolyte]]
-					- Attack, Noise and Fold shift before a key sounds in quick repetition. Bends and pressure carry the voice onward.
+					- Attack, Noise and Fold shift before E♭3 sounds in quick repetition, dipping to D3 and D2. Bends and pressure carry the voice onward.
 			- #### 25:15 Pressure on the attack
 				- Notes from [[GitP/Acolyte]]
 					- Pressure is routed through [[Microfreak/UI/Front/Row/01 Top/01 Matrix/Button/Assn/1]] to the envelope's [[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Knob/Attack]]: a light touch brings a quick onset, a harder touch a slower one.
