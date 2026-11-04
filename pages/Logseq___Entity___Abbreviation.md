@@ -16,7 +16,7 @@ see-also:: [[Logseq/Entity/Term]]
 		- [[Logseq/Entity/Term/Acronym]] is the add-on type for a term or concept page whose name is an acronym, declared after the primary type.
 	- ## Frontmatter
 		- Set **`logseq-entity::`** to list this entity-type page (primary) then [[Logseq/Entity/Term]] (secondary): `logseq-entity:: [[Logseq/Entity/Abbreviation]], [[Logseq/Entity/Term]]`.
-		- The expanded full phrase goes in **`alias::`** only when codekiln asks for it, per [[My/AI/Rule/Logseq/No Aliases Unless Asked]].
+		- **`alias::`** carries the expanded full phrase.
 		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
 	- ## Page shape
 		- Use Logseq Flavored Markdown.
