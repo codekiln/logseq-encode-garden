@@ -1,0 +1,324 @@
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.11"
+# ///
+#MISE description="Write a GitP episode's timed chapter headings into its Ableton Live Set as locators"
+#USAGE flag "--page <page>" required=#true help="Episode page name, such as GitP/A/Session/26/11/01-Sun"
+#USAGE flag "--set <path>" required=#true help="Live Set (.als) that receives the locators"
+#USAGE flag "--graph <path>" help="Logseq graph holding the episode page; defaults to the graph holding this task"
+#USAGE flag "--start-beat <beats>" default="0" help="Arrangement position, in beats, of the recording's 00:00"
+#USAGE flag "--prune" help="Also remove locators that match no chapter"
+#USAGE flag "--apply" help="Write the Set; without it, print the plan"
+"""Write a GitP episode's timed chapter headings into its Ableton Live Set as locators.
+
+Each H3–H6 heading that starts with a timestamp becomes a locator at that time
+in the arrangement. Headings sharing a time share one locator.
+"""
+from __future__ import annotations
+
+import argparse
+from dataclasses import dataclass
+from datetime import datetime
+import gzip
+import math
+import os
+from pathlib import Path
+import re
+import shutil
+import subprocess
+import sys
+import xml.etree.ElementTree as ET
+from xml.sax.saxutils import escape
+
+# mise-tasks/logseq/entity/podcast/episode/gitp/a/ableton/locators/sync sits nine levels below its graph.
+GRAPH = Path(__file__).resolve().parents[9]
+
+HEADING = re.compile(r'^\s*- (#{3,6}) (.+)$')
+TIME = re.compile(r'^(\d+:\d{2}(?::\d{2})?)(?=\s|[–—-]|$)')
+MACRO = re.compile(r'^\{\{audio-timestamp\s+([^{}]+?)\s*\}\}')
+FENCE = re.compile(r'^\s*(?:-\s*)?(`{3,}|~{3,})')
+LINK = re.compile(r'\[([^\[\]]+)\]\(\[\[[^\]]+\]\]\)|\[\[([^\[\]]+)\]\]|\[([^\[\]]+)\]\([^)]+\)')
+LOCATOR_LIST = re.compile(r'(?m)^(\t*)<Locators>\n(\t*)(<Locators />|<Locators>\n.*?\n\2</Locators>)', re.S)
+LOCATOR_FIELDS = ('LomId', 'Time', 'Name', 'Annotation', 'IsSongStart')
+# Attribute values keep quotes and line breaks through a re-parse.
+ATTRIBUTE_ENTITIES = {'"': '&quot;', '\n': '&#x0A;', '\r': '&#x0D;', '\t': '&#x09;'}
+
+
+class SyncError(ValueError):
+    pass
+
+
+@dataclass
+class Chapter:
+    seconds: int
+    name: str
+    label: str
+
+
+@dataclass
+class Locator:
+    id: int
+    fields: dict
+    action: str = 'keep'
+    note: str = ''
+
+    @property
+    def time(self):
+        return float(self.fields['Time'])
+
+
+def seconds(value):
+    """Integer seconds, M:SS or H:MM:SS."""
+    if re.fullmatch(r'[0-9]+', value):
+        return int(value)
+    parts = value.split(':')
+    if len(parts) not in (2, 3) or not parts[0].isdigit() or any(not re.fullmatch(r'[0-5][0-9]', p) for p in parts[1:]):
+        raise SyncError(f'invalid timestamp: {value!r}')
+    total = 0
+    for part in parts:
+        total = total * 60 + int(part)
+    return total
+
+
+def clock(total):
+    hours, rest = divmod(total, 3600)
+    minutes, secs = divmod(rest, 60)
+    return f'{hours}:{minutes:02}:{secs:02}' if hours else f'{minutes:02}:{secs:02}'
+
+
+def plain(text):
+    """Heading text as Live shows it: link labels, no markup."""
+    def label(match):
+        if match[1]:
+            return match[1]
+        if match[2]:
+            return match[2].rsplit('/', 1)[-1]
+        return match[3]
+    text = LINK.sub(label, text)
+    text = re.sub(r'(?<!\S)#(?=\S)', '', text)
+    text = re.sub(r'\*\*|__|`', '', text)
+    return ' '.join(text.split())
+
+
+def chapters(text):
+    """Timed H3–H6 headings in time order, merged where they share a time."""
+    merged, fence = {}, None
+    for line in text.splitlines():
+        marker = FENCE.match(line)
+        if fence:
+            if marker and marker[1][0] == fence[0] and len(marker[1]) >= len(fence) and not line[marker.end():].strip():
+                fence = None
+            continue
+        if marker:
+            fence = marker[1]
+            continue
+        heading = HEADING.match(line)
+        if not heading:
+            continue
+        content = heading[2].strip()
+        macro = MACRO.match(content)
+        time = macro or TIME.match(content)
+        if not time:
+            continue
+        rest = re.sub(r'^[–—-]\d+:\d{2}(?::\d{2})?', '', content[time.end():])  # end of a time range
+        total = seconds(time[1])
+        label = clock(total) if macro else time[1]
+        name = plain(rest.lstrip(' ·:–—-')) or label
+        merged.setdefault(total, (label, []))[1].append(name)
+    return [Chapter(total, ' / '.join(names), label) for total, (label, names) in sorted(merged.items())]
+
+
+def page_file(graph, page):
+    if not page or '___' in page or any(part in ('', '.', '..') for part in page.split('/')):
+        raise SyncError(f'invalid page name: {page!r}')
+    path = graph / 'pages' / (page.replace('/', '___') + '.md')
+    if not path.is_file():
+        raise SyncError(f'page not found: {path}')
+    return path
+
+
+def read_set(path):
+    try:
+        text = gzip.decompress(path.read_bytes()).decode('utf-8')
+        root = ET.fromstring(text)
+    except (OSError, EOFError, UnicodeDecodeError, ET.ParseError) as exc:
+        raise SyncError(f'cannot read Live Set {path}: {exc}') from exc
+    live = root.find('LiveSet')
+    if root.tag != 'Ableton' or live is None:
+        raise SyncError(f'{path} is not an Ableton Live Set')
+    if len(LOCATOR_LIST.findall(text)) != 1 or live.find('Locators/Locators') is None:
+        raise SyncError(f'{path} has no single arrangement locator list')
+    return text, live
+
+
+def tempo(live):
+    """The Set's tempo; a tempo that changes over the arrangement is refused."""
+    node = live.find('MasterTrack/DeviceChain/Mixer/Tempo')
+    if node is None or node.find('Manual') is None:
+        raise SyncError('the Set has no master tempo')
+    bpm = float(node.find('Manual').get('Value'))
+    target = node.find('AutomationTarget')
+    for envelope in live.findall('MasterTrack/AutomationEnvelopes/Envelopes/AutomationEnvelope'):
+        pointee = envelope.find('EnvelopeTarget/PointeeId')
+        if target is None or pointee is None or pointee.get('Value') != target.get('Id'):
+            continue
+        values = {float(event.get('Value')) for event in envelope.iter('FloatEvent')}
+        if len(values) > 1:
+            raise SyncError('the Set automates its tempo; chapter times cannot be placed at one tempo')
+        if values:
+            bpm = values.pop()
+    if not math.isfinite(bpm) or bpm <= 0:
+        raise SyncError(f'invalid tempo {bpm}')
+    return bpm
+
+
+def existing_locators(live):
+    found = []
+    for node in live.find('Locators/Locators'):
+        fields = {child.tag: child.get('Value') for child in node}
+        if node.tag != 'Locator' or set(fields) != set(LOCATOR_FIELDS) or any(len(child) for child in node):
+            raise SyncError(f'unsupported locator structure: {ET.tostring(node, encoding="unicode")[:200]}')
+        found.append(Locator(int(node.get('Id')), fields))
+    return found
+
+
+def beat_text(beat):
+    return str(int(beat)) if beat == int(beat) else format(beat, '.15g')
+
+
+def plan(page, episode_chapters, locators, bpm, start_beat, prune=False):
+    """Decide each locator's fate; returns the resulting locators sorted by time."""
+    unmatched = list(locators)
+    result = []
+    next_id = max((loc.id for loc in locators), default=-1) + 1
+    for chapter in episode_chapters:
+        beat = start_beat + chapter.seconds * bpm / 60
+        match = next((loc for loc in unmatched if abs(loc.time - beat) < 1e-6), None)
+        if match:
+            unmatched.remove(match)
+            match.note = chapter.label
+            if (match.fields['Name'], match.fields['Annotation']) != (chapter.name, page):
+                if match.fields['Name'] != chapter.name:
+                    match.note += f'; was "{match.fields["Name"]}"'
+                match.fields.update(Name=chapter.name, Annotation=page)
+                match.action = 'update'
+            result.append(match)
+        else:
+            fields = dict(LomId='0', Time=beat_text(beat), Name=chapter.name, Annotation=page, IsSongStart='false')
+            result.append(Locator(next_id, fields, 'add', chapter.label))
+            next_id += 1
+    for loc in unmatched:
+        if loc.fields['Annotation'] == page:
+            loc.action, loc.note = 'remove', 'chapter no longer on the page'
+        elif prune:
+            loc.action, loc.note = 'remove', 'matches no chapter'
+        else:
+            loc.note = 'matches no chapter; --prune removes it'
+        result.append(loc)
+    return sorted(result, key=lambda loc: (loc.time, loc.id))
+
+
+def locator_xml(locators, indent):
+    if not locators:
+        return f'{indent}<Locators />'
+    lines = [f'{indent}<Locators>']
+    for loc in locators:
+        lines.append(f'{indent}\t<Locator Id="{loc.id}">')
+        for key in LOCATOR_FIELDS:
+            lines.append(f'{indent}\t\t<{key} Value="{escape(loc.fields[key], ATTRIBUTE_ENTITIES)}" />')
+        lines.append(f'{indent}\t</Locator>')
+    lines.append(f'{indent}</Locators>')
+    return '\n'.join(lines)
+
+
+def splice(text, locators):
+    """Replace only the arrangement locator list; every other byte stays."""
+    match = LOCATOR_LIST.search(text)
+    start = match.start(3) - len(match[2])
+    return text[:start] + locator_xml(locators, match[2]) + text[match.end(3):]
+
+
+def write_set(path, text, now=None):
+    """Keep the previous version in the project's Backup folder, then replace the Set."""
+    backup = path.parent / 'Backup' / f'{path.stem} [{(now or datetime.now()):%Y-%m-%d %H%M%S}].als'
+    backup.parent.mkdir(exist_ok=True)
+    shutil.copy2(path, backup)
+    temporary = path.with_name(f'.{path.name}.sync')
+    try:
+        with temporary.open('wb') as raw, gzip.GzipFile(fileobj=raw, mode='wb', filename='', mtime=0) as stream:
+            stream.write(text.encode('utf-8'))
+        shutil.copymode(path, temporary)
+        os.replace(temporary, path)
+    finally:
+        temporary.unlink(missing_ok=True)
+    return backup
+
+
+def sync(page, graph, set_path, start_beat=0.0, prune=False, apply=False, now=None):
+    episode_chapters = chapters(page_file(graph, page).read_text())
+    if not episode_chapters:
+        raise SyncError(f'{page} has no timed chapter headings')
+    text, live = read_set(set_path)
+    bpm = tempo(live)
+    result = plan(page, episode_chapters, existing_locators(live), bpm, start_beat, prune)
+    kept = [loc for loc in result if loc.action != 'remove']
+    changed = any(loc.action != 'keep' for loc in result)
+    updated = splice(text, kept)
+    check = existing_locators(ET.fromstring(updated).find('LiveSet'))
+    if [(loc.id, loc.fields) for loc in check] != [(loc.id, loc.fields) for loc in kept]:
+        raise SyncError('the rewritten Set does not hold the planned locators')
+    backup = write_set(set_path, updated, now) if apply and changed else None
+    return {'page': page, 'set': set_path, 'bpm': bpm, 'start_beat': start_beat,
+            'locators': result, 'changed': changed, 'backup': backup}
+
+
+def report(outcome, apply):
+    lines = [f'{outcome["page"]} → {outcome["set"]}',
+             f'{beat_text(outcome["bpm"])} BPM; 00:00 at beat {beat_text(outcome["start_beat"])}']
+    for loc in outcome['locators']:
+        lines.append(f'  {loc.action:<7} beat {loc.fields["Time"]:>6}  {loc.fields["Name"]}'
+                     + (f'  ({loc.note})' if loc.note else ''))
+    if not outcome['changed']:
+        lines.append('The Set already holds these locators.')
+    elif apply:
+        lines.append(f'Wrote the Set; the previous version is {outcome["backup"]}')
+    else:
+        lines.append('Preview only; add --apply to write the Set.')
+    return '\n'.join(lines)
+
+
+def live_is_running():
+    try:
+        return subprocess.run(['pgrep', '-x', 'Live'], capture_output=True).returncode == 0
+    except OSError:
+        return False
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument('--page', required=True)
+    parser.add_argument('--set', required=True, type=Path)
+    parser.add_argument('--graph', type=Path)
+    parser.add_argument('--start-beat', type=float, default=0.0)
+    parser.add_argument('--prune', action='store_true')
+    parser.add_argument('--apply', action='store_true')
+    args = parser.parse_args(argv)
+    caller = Path(os.environ.get('MISE_ORIGINAL_CWD') or os.getcwd())
+    graph = caller / args.graph.expanduser() if args.graph else GRAPH
+    set_path = caller / args.set.expanduser()
+    try:
+        if not math.isfinite(args.start_beat) or args.start_beat < 0:
+            raise SyncError('--start-beat must be zero or more')
+        outcome = sync(args.page, graph, set_path, args.start_beat, args.prune, args.apply)
+    except (SyncError, OSError) as exc:
+        print(f'error: {exc}', file=sys.stderr)
+        return 2
+    print(report(outcome, args.apply))
+    if args.apply and outcome['changed'] and live_is_running():
+        print('Live is running. If this Set is open there, reopen it without saving; '
+              'saving the open copy writes over the new locators.', file=sys.stderr)
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main())

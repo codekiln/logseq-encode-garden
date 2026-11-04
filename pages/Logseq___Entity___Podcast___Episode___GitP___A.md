@@ -1,5 +1,6 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
 entity-proxy-source-properties:: public
+entity-tasks:: [[Logseq/Entity/Podcast/Episode/GitP/A/mise/Task/ableton/locators/sync]]
 - # Ghost in the Patch Alpha Episode
 	- In this garden, **Ghost in the Patch Alpha Episode** pages model recordings prepared as episodes of [[GitP/A]].
 	- The shared episode conventions come from [[Logseq/Entity/Podcast/Episode]]; this definition adds the session page and media preparation process.
