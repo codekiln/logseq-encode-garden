@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#MISE description="Preview or write the Logseq pages that describe an Ableton Live Set file"
+set -euo pipefail
+exec python3 "$(dirname "$0")/lib/als_set.py" "$@"
