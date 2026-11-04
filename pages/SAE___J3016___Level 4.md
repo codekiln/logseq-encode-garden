@@ -1,0 +1,7 @@
+- # Level 4 — High automation
+	- Level 4 of [[SAE/J3016]]. The system drives with no human in a limited area or set of conditions, such as a mapped city. If something goes wrong it pulls over on its own. Most robotaxis sit here.
+	- ## Systems at this level
+		- [[Waymo]], from [[Alphabet]], runs driverless rides in Phoenix, San Francisco, Los Angeles, Austin and other cities
+		- [[Zoox]], from [[Amazon]], runs a purpose-built robotaxi with no steering wheel in Las Vegas, with a smaller public service in San Francisco
+		- [[Baidu]] Apollo Go, [[Pony.ai]] and [[WeRide]] run driverless robotaxis in China
+		- [[Cruise]], from [[GM]], ran driverless rides in San Francisco until GM shut the robotaxi business down in December 2024

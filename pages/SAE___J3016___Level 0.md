@@ -1,0 +1,2 @@
+- # Level 0 — No driving automation
+	- Level 0 of [[SAE/J3016]]. The system can warn or briefly intervene, as with automatic emergency braking or blind-spot warnings. The human drives.

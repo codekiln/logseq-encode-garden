@@ -1,0 +1,5 @@
+- # Level 2 — Partial automation
+	- Level 2 of [[SAE/J3016]]. The system steers *and* controls speed together. The human must supervise constantly and take over at once.
+	- ## Systems at this level
+		- [[Tesla]] Autopilot and Full Self-Driving (Supervised)
+		- [[GM]] Super Cruise and [[Ford]] BlueCruise, which allow hands-off driving on mapped highways while a camera checks that the driver watches the road

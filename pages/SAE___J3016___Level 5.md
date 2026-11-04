@@ -1,0 +1,2 @@
+- # Level 5 — Full automation
+	- Level 5 of [[SAE/J3016]]. The system drives anywhere a human could, in all conditions. No production system has reached Level 5.

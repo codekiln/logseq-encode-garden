@@ -1,0 +1,5 @@
+- # Level 3 — Conditional automation
+	- Level 3 of [[SAE/J3016]]. The system drives within a limited domain, such as a highway below a set speed. The human may look away but must take over when the system asks.
+	- ## Systems at this level
+		- [[Mercedes-Benz]] Drive Pilot, the first Level 3 system certified in Germany and in the US states of California and Nevada
+		- [[BMW]] Personal Pilot L3 on the 7 Series in Germany

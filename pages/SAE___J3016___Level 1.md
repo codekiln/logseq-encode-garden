@@ -1,0 +1,2 @@
+- # Level 1 — Driver assistance
+	- Level 1 of [[SAE/J3016]]. The system steers *or* controls speed, as with adaptive cruise control or lane centering alone. The human drives.
