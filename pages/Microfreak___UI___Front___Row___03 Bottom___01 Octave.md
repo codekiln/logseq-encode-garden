@@ -4,6 +4,8 @@ up:: [[Microfreak/UI/Front/Row/03 Bottom]]
 - # Octave
 	- Two buttons at the left of the bottom row that move the keyboard up or down by octaves.
 	- ![Octave](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Front___Row___Bottom___01%20Octave___Asset___Panel.png)
+	- ## Values
+		- The OLED shows the shift, from -3 to +3. [[Microfreak/UI/Front/Row/03 Bottom/01 Octave/Ref/Key Range]] lists the notes the keys send at each value. At -1 they run from C2 up to middle C, C4.
 	- ## Controls
 		- [[Microfreak/UI/Front/Row/03 Bottom/01 Octave/Button/Down]]
 		- [[Microfreak/UI/Front/Row/03 Bottom/01 Octave/Button/Up]]
