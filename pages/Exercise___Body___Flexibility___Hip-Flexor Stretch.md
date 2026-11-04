@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Flexibility]]
+- # Hip-Flexor Stretch
+	- Practice a controlled hip-extension position that stretches the front of the rear hip.
+	- ## Setup
+		- In a split stance or half-kneeling lunge, place one leg behind the body and keep the pelvis facing forward. Use support for balance or padding under the rear knee.
+	- ## Practice
+		- Gently move the pelvis forward while keeping the trunk tall and the low back comfortable. Aim for a stretch at the front of the rear hip. Raising the same-side arm can add to the movement, provided the back remains controlled.
+	- ## Dose and Progression
+		- Begin with 10–30 seconds per side and repeat as comfortable. Add range gradually while keeping the low back comfortable.
+	- ## Cues and Variations
+		- Begin with 10–30 seconds per side and repeat as comfortable. A shorter stance and smaller movement are useful starting versions. Avoid creating the stretch only by arching the lower back.
+	- ## Sources
+		- Demonstration: [Huberman's hip-extension stretch, 2:15](https://www.youtube.com/watch?v=SzufA9jqrPw&t=135s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Mobility and Flexibility]].

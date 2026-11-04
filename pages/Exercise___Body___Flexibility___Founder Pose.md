@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Flexibility]]
+- # Founder Pose
+	- Practice a long-spine hip hinge with a comfortable arm reach and steady breathing.
+	- ## Setup
+		- Stand with feet a little wider than shoulder width and knees softly bent. Hinge at the hips so the hips move backward and the torso inclines forward.
+	- ## Practice
+		- Lengthen through the spine, lift the chest, and raise the arms only as far as you can while keeping the position comfortable. Breathe and exhale slowly, then return to standing.
+	- ## Dose and Progression
+		- Begin with a shallow hinge and a few calm breaths, then stand to reset. Add reach or hinge depth gradually while keeping the spine controlled.
+	- ## Cues and Variations
+		- Begin with a shallow hinge and a few slow breaths. Keep the arms lower if raising them makes the back arch or the shoulders uncomfortable.
+	- ## Sources
+		- Demonstration: [Huberman's Founder pose, 5:15](https://www.youtube.com/watch?v=SzufA9jqrPw&t=315s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Mobility and Flexibility]].

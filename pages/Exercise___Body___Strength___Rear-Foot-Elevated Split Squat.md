@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Rear-Foot-Elevated Split Squat
+	- Practice a single-leg emphasis squat with the rear foot supported, developing leg strength and balance.
+	- ## Setup
+		- Place the top of one foot on a stable low bench behind you and the other foot firmly on the floor. Begin without dumbbells, using light hand support for balance if needed.
+	- ## Practice
+		- Bend the front knee and hip to lower under control, then push through the front foot to stand. Find a stance in which the front heel stays down and the knee follows the toes. Keep the pelvis facing forward.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Lower the support or use a regular split squat with the rear foot on the floor if balance or hip position limits the movement. Add dumbbells only after both sides feel controlled; stance changes should follow comfort and the intended movement rather than a fixed distance from the bench.
+	- ## Sources
+		- Demonstration: [Huberman's split squat, 2:52](https://www.youtube.com/watch?v=CbEFgDFQBvk&t=172s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]].

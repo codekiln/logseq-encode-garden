@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Chest-Supported Row
+	- Practice a horizontal pull while a pad or bench supports the torso.
+	- ## Setup
+		- On a rowing machine, adjust the chest pad so you can reach the handles with extended arms while the chest remains supported. Set the seat so the handle path is comfortable and the feet stay supported.
+	- ## Practice
+		- Brace, row the handles toward your ribs, pause, and extend the arms slowly. Keep your chest in contact with the pad instead of lifting away to finish a repetition.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- For dumbbells, use an incline bench that supports the chest while leaving space for the arms to hang and row. Begin light; a different bench angle changes both the clearance and the line of pull.
+	- ## Sources
+		- Source for the supported machine version: [ACE's seated row with chest pad](https://www.acefitness.org/resources/everyone/exercise-library/168/seated-row/).

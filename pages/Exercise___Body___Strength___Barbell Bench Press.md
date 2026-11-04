@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Barbell Bench Press
+	- Practice a horizontal barbell press with a repeatable grip, stable support, and controlled bar path.
+	- ## Setup
+		- Set the bench and rack so you can unrack without reaching excessively. Use rack safeties or a capable spotter. Lie with feet planted, shoulders supported, and hands slightly wider than shoulder width; wrap the thumbs around the bar.
+	- ## Practice
+		- Lower the bar slowly toward the chest while keeping wrists stacked over forearms, then press upward. Keep the hips on the bench and avoid bouncing the bar off the chest.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- A machine chest press is a substitute when a suitable rack or spotter is unavailable. Start with a light bar to establish a repeatable grip and bar path.
+	- ## Sources
+		- Demonstration: [Huberman's bench press, 0:07](https://www.youtube.com/watch?v=UEU6NYLRi6o&t=7s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]]. Additional instructions: [ACE's barbell chest press](https://www.acefitness.org/resources/everyone/exercise-library/5/chest-press/).

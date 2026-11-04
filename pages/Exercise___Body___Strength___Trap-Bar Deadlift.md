@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Trap-Bar Deadlift
+	- Practice lifting a load from the floor with coordinated hip and knee extension.
+	- ## Setup
+		- Stand in the center of the hex bar with feet about shoulder width apart. Bend at hips and knees to grasp the middle of both handles, with straight arms and feet flat.
+	- ## Practice
+		- Brace before the lift. Push into the floor and extend hips and knees together to stand tall. Keep the load balanced and the back position steady. Lower both sides to the floor under control, then reset before the next repetition.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Keep the same handle height between sessions when tracking progress. High handles shorten the range; a lighter load is another way to learn the lift. Avoid jerking the bar, letting the hips shoot upward before the shoulders, or leaning back at the top.
+	- ## Sources
+		- Technique source: [U.S. Army Fitness Test deadlift instructions](https://www.army.mil/aft/). Handle-height context: [Barbell Medicine's trap-bar guidance](https://forum.barbellmedicine.com/t/general-s-c-template-question/11830).

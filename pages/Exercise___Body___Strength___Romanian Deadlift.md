@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Romanian Deadlift
+	- Practice a loaded hip hinge that develops the hamstrings and glutes through controlled lowering and standing.
+	- ## Setup
+		- Begin standing with the bar or dumbbells in front of the thighs, feet about hip width apart, and knees slightly bent. Keep the weights close to the legs.
+	- ## Practice
+		- Push your hips backward as your torso inclines forward. Keep the knee bend modest and the spine steady. Stop when you feel hamstring tension and before your back position changes, then drive the feet into the floor and bring the hips forward to stand tall.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- The weights need not reach the floor. Turning the movement into a deep squat or reaching lower by rounding the back changes the exercise. Practice an unloaded hip hinge or use lighter dumbbells to learn it.
+	- ## Sources
+		- Source: [ACE's Romanian deadlift](https://www.acefitness.org/resources/everyone/exercise-library/317/romanian-deadlift/).

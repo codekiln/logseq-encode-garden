@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Back Squat
+	- Practice a loaded squat that develops leg strength while maintaining a stable trunk.
+	- ## Setup
+		- Set the rack hooks just below shoulder height and the safety bars below the bottom of your squat. Center the bar across the upper back, grip it securely, stand to unrack it, and take a short step back.
+	- ## Practice
+		- Brace your trunk, keep the whole foot planted, and bend hips and knees together. Lower through the deepest comfortable range you can control, then push the floor away to stand. Let your knees track in the direction of your toes.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Reduce the load or depth if your heels lift or your trunk position changes abruptly. A light goblet squat is a way to practice the pattern; the leg press below is a machine alternative.
+	- ## Sources
+		- Demonstration: [Huberman's back squat, 0:27](https://www.youtube.com/watch?v=CbEFgDFQBvk&t=27s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]].

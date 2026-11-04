@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Lat Pulldown
+	- Practice pulling an overhead cable handle toward the chest with a steady supported torso.
+	- ## Setup
+		- Secure the thighs under the machine pad and begin with the arms extended and the handle held securely.
+	- ## Practice
+		- Pull the handle toward the upper chest, then let the arms extend slowly. Keep the torso mostly upright and pull in front of the head.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Choose a load that permits the whole intended range without swinging backward. A close underhand grip is the variation Huberman demonstrates; a comfortable neutral or overhand grip is another option when the equipment permits it.
+	- ## Sources
+		- Demonstration: [Huberman's pulldown, 6:56](https://www.youtube.com/watch?v=UEU6NYLRi6o&t=416s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]].
