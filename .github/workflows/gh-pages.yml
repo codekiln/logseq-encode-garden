@@ -35,8 +35,8 @@ jobs:
       # to the hash in that release's logseq-gardener-x86_64-unknown-linux-gnu.tar.xz.sha256.
       - name: Install released Logseq Gardener
         env:
-          GARDENER_VERSION: v0.0.28
-          GARDENER_SHA256: 131adab354c52e1b2267a7c4b0c4a1259d1eaba41eb3cbbabbda74710eee088b
+          GARDENER_VERSION: v0.0.29
+          GARDENER_SHA256: 4fbfdfc4431a6d5033aff46b6fe02972ad8be4113edd7a4e0e9991977c582f8e
           GARDENER_TARGET: x86_64-unknown-linux-gnu
         run: |
           archive="logseq-gardener-$GARDENER_TARGET.tar.xz"
@@ -60,6 +60,13 @@ jobs:
         run: |
           if grep -F 'shallow clone' "$RUNNER_TEMP/lsg-diagnostics.txt"; then
             echo "::error::All pages would show the checkout's single commit as every page's date"
+            exit 1
+          fi
+
+      - name: Check that Logseq accepts every property name
+        run: |
+          if grep -F 'Invalid property names: ' "$RUNNER_TEMP/lsg-diagnostics.txt"; then
+            echo "::error::The blocks above show Logseq's Invalid property names warning on the site"
             exit 1
           fi
 
