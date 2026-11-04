@@ -13,6 +13,7 @@ isbn:: 9781668032145
 		- Hardcover edition: 688 pages; ISBN 9781668032145.
 		- Available in hardcover, ebook, and audiobook; Huberman narrates the audiobook.
 	- ## Chapter Two: Exercise videos
+		- [[Person/Andrew Huberman/Book/26/Protocols/Exercise Guide]] covers setup, movement cues, and alternatives for the lifts and mobility movements.
 		- The [Protocols Chapter Two Resources](https://www.hubermanlab.com/protocols-resources) page holds the exercise demonstrations that Chapter Two refers readers to, also reachable at https://protocolsbook.com/videos. The videos show a sampling of common compound and isolation lifts, plus mobility and flexibility movements.
 		- ### Introduction
 			- [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Introduction]]
