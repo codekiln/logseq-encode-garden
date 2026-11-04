@@ -1,3 +1,5 @@
+logseq-entity:: [[Logseq/Entity/Concept]]
+
 - # Virga
 	- Virga is precipitation that falls from a cloud but evaporates or sublimates before reaching the ground. It is falling rain, snow, or ice crystals whose path ends in the air, so an observer below sees precipitation without wet ground.
 	- ## What it looks like
