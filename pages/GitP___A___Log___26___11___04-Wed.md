@@ -1,0 +1,6 @@
+- [[2026-11-04 Wed]]
+	- ## What are some of the best moments of [[GitP/A]] so far?
+		- In preparation for some upcoming ceremonies, may we now concentrate on moments of extraction, on which [[Microfreak/Preset]]s were active, and what was being expressed through them. Let us call these [[GitP/Light]]s; they are moments of unconcealment, aletheia, insight.
+		- ## TODO identify the [[GitP/Light]]s from recent [[Ghost in the Patch Ceremonies]]
+			- ### TODO identify lights from [[GitP/A/Session/26/11/01-Sun]]
+				- ((6ae85dd5-d05e-41e7-9179-507f304f9baa)) in this section, [[Microfreak/Preset/259 Infini Pad]] is down -2 and playing the lower G on the microfreak. It has a delayed onset. It emerges amidst the higher, clushy keys.
