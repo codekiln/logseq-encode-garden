@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Flexibility]]
+- # Sumo Squat with Rotation
+	- Practice upper-body rotation while maintaining a comfortable wide squat.
+	- ## Setup
+		- Take a wide stance with toes turned slightly outward. Lower into a comfortable squat with the feet grounded, then place the elbows lightly against the inner knees.
+	- ## Practice
+		- Keep one elbow supported while raising the other arm and turning the upper body to follow the hand with the eyes. Return to the center and change sides. Point diagonally upward if reaching the ceiling is uncomfortable.
+	- ## Dose and Progression
+		- Begin with three slow turns per side, pausing briefly and breathing. Add range gradually while keeping the squat stable.
+	- ## Cues and Variations
+		- Start with three slow turns per side, pausing briefly and breathing. Use a shallower squat or hold a stable support when the bottom position is difficult.
+	- ## Sources
+		- Demonstration: [Huberman's sumo squat with rotation, 0:28](https://www.youtube.com/watch?v=SzufA9jqrPw&t=28s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Mobility and Flexibility]].

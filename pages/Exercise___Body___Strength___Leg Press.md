@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Leg Press
+	- Practice extending the hips and knees against resistance with the torso supported by a machine.
+	- ## Setup
+		- Adjust the seat so your back and pelvis stay supported, your heels sit flat on the plate, and the starting knee bend is comfortable. Hold the machine's handles and brace your trunk.
+	- ## Practice
+		- Press the platform away smoothly, stopping before the knees lock. Lower under control while keeping the pelvis against the pad. End the descent before the thighs compress your torso or the lower back rounds off the support.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Use less weight or a shorter range if your pelvis lifts. Check the release and safety stops with a light load before beginning a sled-style machine; machine mechanisms differ.
+	- ## Sources
+		- Source: [ACE's seated leg press](https://www.acefitness.org/resources/everyone/exercise-library/154/seated-leg-press/).

@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Forearm Plank
+	- Practice holding a stable trunk position while supported on the forearms and toes.
+	- ## Setup
+		- Place the elbows beneath the shoulders and extend the legs with toes on the floor. Brace the abdomen and lift into a steady line from head to heels while continuing to breathe.
+	- ## Practice
+		- End the hold if the hips sag, rise, or the shoulders shrug. Shorter holds or an elevated support can make a stable position easier to maintain.
+	- ## Dose and Progression
+		- Begin with two holds of 20–30 seconds. End a hold when the position changes; add time only while position and breathing remain steady.
+	- ## Cues and Variations
+		- Increase the hold only while position and breathing remain steady. A longer hold with a sagging lower back is a different task from a controlled plank.
+	- ## Sources
+		- Sources: [ACE's front plank technique](https://www.acefitness.org/resources/everyone/exercise-library/32/front-plank/) and [ACE's bodyweight programming examples](https://www.acefitness.org/continuing-education/certified/september-2026/9193/body-weight-training-by-design-programming-for-every-fitness-goal/).

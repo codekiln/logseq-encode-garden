@@ -1,0 +1,23 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Music/Piano]]
+- # Scale with Increasing Octaves and Subdivisions
+	- Practice an even scale across a growing keyboard range while keeping the metronome pulse fixed and increasing the number of notes played per beat.
+	- ## Setup
+		- Choose one key and a seven-note diatonic scale, such as C major, with fingering that works across four octaves. Keep the key, starting tonic, and metronome setting the same for the whole sequence.
+		- Begin with one hand at a time. Use both hands together when the fingering and turns are comfortable.
+	- ## Practice
+		- Play one octave up and down in quarter notes: one note per metronome beat.
+		- Play two octaves up and down in eighth notes: two evenly spaced notes per beat, counted `1-and, 2-and`.
+		- Play three octaves up and down in eighth-note triplets: three evenly spaced notes per beat, counted `1-trip-let, 2-trip-let`.
+		- Play four octaves up and down in sixteenth notes: four evenly spaced notes per beat, counted `1-e-and-a, 2-e-and-a`.
+		- At the top, play the tonic once and reverse direction on the next subdivision. Keep the subdivision continuous through the turn. At the returning tonic, release or hold according to a chosen ending, then pause before the next range.
+		- Each added octave contains seven more scale steps, paired with another note per beat. The travel time between the first and returning tonic attacks can stay the same when the turnaround has no repeated endpoint. A repeated top note or a longer final hold changes the phrase duration.
+	- ## Dose and progression
+		- Begin at a pulse that permits the four-octave sixteenth-note passage to remain even and relaxed. A starting practice dose is one complete sequence per hand, with a brief pause between ranges.
+		- Repeat a range at the same pulse when its fingering or timing needs attention. Increase the metronome setting gradually after the whole sequence is comfortable, then practice the same pattern in another key.
+	- ## Cues and common mistakes
+		- Keep the metronome beat unchanged; only the subdivision changes. Listen for evenly spaced attacks and consistent tone through thumb crossings and the turnaround.
+		- Three notes per beat means a triplet, not a dotted or uneven long-short pattern. Sixteenth notes divide each beat into four equal parts.
+		- Reduce the pulse if the shoulders, wrists, or fingers tense, the tone becomes uneven, or the scale rushes at a crossing.
+	- ## Alternatives
+		- Practice only the ascending or descending passage, or repeat the transition between adjacent ranges before joining the whole sequence.
+		- Keep the same subdivision ladder while changing the key or articulation after the basic pattern is established.

@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Pull-Up
+	- Practice pulling the body toward an overhead bar through a controlled hanging range.
+	- ## Setup
+		- Use an overhand grip on a secure bar and begin with the arms extended in a comfortable hanging position.
+	- ## Practice
+		- Pull the chest toward the bar by driving the elbows down and back, then lower under control. Keep the movement free of swinging or kicking.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Use an assisted pull-up machine or another controlled assistance method when needed for the intended range. Reduce the added load or increase assistance if the movement becomes a swing.
+	- ## Sources
+		- Demonstration: [Huberman's pull-up, 6:13](https://www.youtube.com/watch?v=UEU6NYLRi6o&t=373s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]].

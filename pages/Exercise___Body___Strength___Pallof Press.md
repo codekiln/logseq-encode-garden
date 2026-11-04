@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Pallof Press
+	- Practice resisting trunk rotation while the arms extend against a sideways pull.
+	- ## Setup
+		- Set a cable or securely anchored band at chest height and stand sideways to its pull. Hold the handle at the chest with both hands, feet about hip width apart, and knees slightly bent.
+	- ## Practice
+		- Keep the chest and hips facing forward while pressing the hands straight ahead. Hold briefly, then return slowly. Repeat facing the other direction; resisting rotation is the task.
+	- ## Dose and Progression
+		- A practical starting dose is two sets of 8–12 presses per side with a two-second pause. Increase resistance only while the trunk remains steady.
+	- ## Cues and Variations
+		- Use less resistance or keep the hands closer to the chest if the torso turns or leans.
+	- ## Sources
+		- Source: [ACE's standing anti-rotation press](https://www.acefitness.org/resources/everyone/exercise-library/332/standing-anti-rotation-press/).

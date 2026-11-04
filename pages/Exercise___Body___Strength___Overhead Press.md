@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Overhead Press
+	- Practice pressing a load from shoulder height overhead while controlling the trunk.
+	- ## Setup
+		- Begin with the bar at the front of the shoulders, or dumbbells at shoulder height. Brace your trunk and keep the ribs over the pelvis. A seated bench with back support is an alternative to standing.
+	- ## Practice
+		- Press overhead through a comfortable range, allowing the head to move just enough for the bar to pass. Lower slowly to the start. Keep the forearms underneath the load.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Reduce the load if you need to lean backward or turn the lift into a push with the legs. A machine press or supported dumbbell press can simplify balance while you practice.
+	- ## Sources
+		- Demonstrations: [barbell press, 0:11](https://www.youtube.com/watch?v=IzpGEk-2th4&t=11s) and [dumbbell press, 0:52](https://www.youtube.com/watch?v=IzpGEk-2th4&t=52s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]].

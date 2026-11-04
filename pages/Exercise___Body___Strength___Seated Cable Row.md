@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Seated Cable Row
+	- Practice pulling a cable handle toward the torso while keeping the trunk steady.
+	- ## Setup
+		- Sit tall with feet supported, knees slightly bent, and a secure grip on the handle. Begin with arms extended and the cable already under light tension.
+	- ## Practice
+		- Pull the elbows back close to the ribs until the handle reaches the abdomen. Pause briefly, then extend the arms slowly. Keep the torso steady throughout the repetition.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Reduce the weight if you must rock backward, shrug, or curl the wrists to finish. A chest-supported row is an alternative when keeping the torso steady is the limiting factor.
+	- ## Sources
+		- Source: [ACE's seated cable row](https://www.acefitness.org/resources/everyone/exercise-library/48/seated-row/).

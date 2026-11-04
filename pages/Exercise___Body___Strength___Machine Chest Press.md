@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Machine Chest Press
+	- Practice a supported horizontal press for the chest, shoulders, and triceps.
+	- ## Setup
+		- Adjust the seat so the handles are at or slightly below shoulder height. Plant the feet and keep your back supported.
+	- ## Practice
+		- Press forward smoothly and straighten the arms without forcing the elbows into lockout. Return until the upper arms are beside the torso, keeping the movement controlled.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Avoid arching away from the backrest or letting the elbows travel far behind the body. Reduce the load or adjust the starting position if the machine pulls the shoulders into an uncomfortable stretch.
+	- ## Sources
+		- Source and video: [Mayo Clinic's chest press with a weight machine](https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/chest-press/vid-20084687).

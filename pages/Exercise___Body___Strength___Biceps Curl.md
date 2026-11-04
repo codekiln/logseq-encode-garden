@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Biceps Curl
+	- Practice elbow flexion against resistance with a steady upper arm and controlled wrist.
+	- ## Setup
+		- Stand or sit with a dumbbell in each hand, arms down, and trunk steady. Curl by bending the elbows; turn the palms upward if comfortable, then lower slowly.
+	- ## Practice
+		- Keep the upper arms mostly still and the wrists aligned with the forearms. Reduce the load if you must swing the torso or move the elbows far forward to finish.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- A seated curl or cable curl can make the starting position easier to repeat. An EZ-bar is another grip option.
+	- ## Sources
+		- Demonstration: [Huberman's curl, 4:44](https://www.youtube.com/watch?v=IzpGEk-2th4&t=284s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]].

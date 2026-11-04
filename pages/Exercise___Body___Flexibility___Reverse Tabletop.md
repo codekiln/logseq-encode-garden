@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Flexibility]]
+- # Reverse Tabletop
+	- Practice moving into a supported shoulder-extension position while raising the hips.
+	- ## Setup
+		- Sit with knees bent, feet flat, and hands behind the hips, fingers pointing outward. Press through hands and feet to raise the hips toward a tabletop position.
+	- ## Practice
+		- Keep the neck comfortable and breathe. Lift only as high as your shoulders and wrists comfortably allow; begin with short holds and lower under control.
+	- ## Dose and Progression
+		- Begin with short holds and work toward a comfortable ten-second hold. Increase height or try the next shoulder-extension variation only while the position remains comfortable.
+	- ## Cues and Variations
+		- Work toward a comfortable ten-second hold before trying the video's further shoulder-extension progressions. Keep a lower hip position or a shorter hold if full height is not comfortable.
+	- ## Sources
+		- Demonstration: [Huberman's reverse tabletop, 3:41](https://www.youtube.com/watch?v=SzufA9jqrPw&t=221s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Mobility and Flexibility]].

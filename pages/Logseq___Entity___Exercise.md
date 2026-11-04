@@ -1,0 +1,15 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+- # Exercise
+	- In this garden, **Exercise** pages model repeatable instructions for practicing a specific technique.
+	- An exercise names an action and a way to practice it. A movement, scale, or other concept can supply material for an exercise; the exercise adds a repeatable procedure and a practice goal.
+	- ## Naming and identity
+		- Instances live under `Exercise/<Domain>/<Specialty>/<Name>`, following the most specific exercise entity that describes the practice. Names identify the technique or practice pattern in singular form.
+		- Identity follows the technique and procedure. Changes to resistance, tempo, repetitions, duration, or difficulty usually belong as progressions on the same exercise page.
+		- An instance carries only its most specific exercise entity in `logseq-entity::`; parent definitions supply inherited requirements.
+	- ## Page shape
+		- A bullet-wrapped H1 names the exercise. The opening sentence states the technique and purpose.
+		- **Setup** describes equipment, starting conditions, and any material needed to begin.
+		- **Practice** gives the repeatable steps and explains how one repetition, cycle, or passage ends.
+		- **Dose and progression** keeps adjustable quantities separate from the technique: repetitions, duration, resistance, tempo, rest, or difficulty, as appropriate.
+		- **Cues and common mistakes** describes what successful practice looks, feels, or sounds like, and how to recognize a breakdown.
+		- **Alternatives and sources** records useful regressions or variations, demonstrations, and the provenance of borrowed instructions.

@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Standing Calf Raise
+	- Practice raising and lowering the heels against resistance through a controlled ankle range.
+	- ## Setup
+		- Use a calf-raise machine or stand on a stable, nonslip step with light hand support. Place the balls of the feet securely on the surface and begin with the knees straight but not forced backward.
+	- ## Practice
+		- Lower the heels through a comfortable stretch, pause, then rise as high as you can without bouncing. Keep the ankles controlled and the same foot position throughout.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Begin on both feet with bodyweight if needed. A single-leg version increases the challenge; a dumbbell can add resistance once balance and range are consistent. Shorten the range if the Achilles or ankle is uncomfortable.
+	- ## Sources
+		- Demonstrations: [Huberman's calf raise, 10:32](https://www.youtube.com/watch?v=CbEFgDFQBvk&t=632s) and [single-leg version, 12:26](https://www.youtube.com/watch?v=CbEFgDFQBvk&t=746s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]].

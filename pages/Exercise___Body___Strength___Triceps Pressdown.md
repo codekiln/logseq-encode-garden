@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Triceps Pressdown
+	- Practice elbow extension against resistance from a high cable pulley.
+	- ## Setup
+		- Attach a rope or bar to a high cable pulley. Stand with feet planted and knees softly bent, elbows beside the torso, and hands holding the attachment securely.
+	- ## Practice
+		- Extend the elbows to press the attachment down, then bend them slowly to return. Keep the upper arms in place and the shoulders quiet.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Avoid using bodyweight to shove the handle downward. Reduce the load if the elbows drift forward or the torso rocks. This is an elbow-extension exercise; Huberman's overhead cable extension uses a different shoulder position.
+	- ## Sources
+		- Source: [Mayo Clinic's Strength Training for Adults, triceps pushdown](https://cancereducation.mayoclinic.org/wp-content/uploads/2019/10/mc2972.pdf#page=12).
