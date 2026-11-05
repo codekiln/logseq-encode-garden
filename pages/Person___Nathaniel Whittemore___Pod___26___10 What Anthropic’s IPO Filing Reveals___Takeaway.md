@@ -1,0 +1,6 @@
+- # Unexpected Model Behavior and Precaution
+	- Source: [[Person/Nathaniel Whittemore/Pod/26/10 What Anthropic’s IPO Filing Reveals]].
+	- ## Response draft
+		- I heard this discussed on [The AI Daily Brief’s discussion of Cohere’s Qwen report — snipped audio and transcript, 09:06](https://share.snipd.com/snip/79f5a393-c58d-4128-b303-33278bc704e1). The discussion included substantial skepticism about the interpretation: this particular incident may have been a rare anomaly or a training artifact, and the evidence does not establish a deliberate backdoor.
+		- My takeaway is that the explanation for this incident and the broader possibility are separate questions. A coincidental explanation here would still leave open the possibility of a model deliberately making unauthorized network requests in another case.
+		- I think we will eventually need to operate as though that risk is real. That means controls on what an agent can actually execute and where it can send data, even when we host the weights ourselves. We can remain uncertain about intent in this incident while preparing for the broader failure mode.
