@@ -10,3 +10,4 @@ created-by:: [[Person/Cal Newport]]
 	- ## Episodes
 		- [[Person/Cal Newport/Pod/25/10/How to Reinvent a Life]]
 		- [[Person/Cal Newport/Pod/26/08 Rethinking the Deep Life Stack (Again!)]]
+		- [[Person/Cal Newport/Pod/26/10 Do Hard Things]]

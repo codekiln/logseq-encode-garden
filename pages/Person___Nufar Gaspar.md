@@ -12,6 +12,7 @@ logseq-entity:: [[Logseq/Entity/Person]]
 	- ## Citations
 		- ### In this garden
 			- [[Person/Nathaniel Whittemore/Pod/26/05/26 The 4 AI Team Members Execs Should Hire Right Now]] — AI Operators bonus, [[Person/Nathaniel Whittemore/Pod]], [[2026/05/26]]
+			- [[Person/Nathaniel Whittemore/Pod/26/11 How to Deslopify Your AI]] — guest, [[Person/Nathaniel Whittemore/Pod]], [[2026/11/02]]
 		- ### AI Daily Brief ([[Person/Nathaniel Whittemore/Pod]])
 			- [The 4 AI Team Members Execs Should Hire Right Now](https://www.youtube.com/watch?v=WnhyCJJdq1Y) — guest; four “digital employees” for executives (research analyst, strategic advisor, communication expert, operational powerhouse)
 			- Agent use cases and readiness — guest; which agent use cases are most mature and whether to wait on agent readiness (see [resources](https://www.nufargaspar.com/resources))
