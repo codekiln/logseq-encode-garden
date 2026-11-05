@@ -1,0 +1,4 @@
+- I prefer **AI engines** when referring to coding-agent products such as GitHub Copilot, Claude Code, OpenAI Codex, Google Gemini and Pi. It is shorter and clearer to me than **agentic harnesses**.
+- I picked this up from the **AI Engines** navigation in [GitHub Agentic Workflows](https://github.github.com/gh-aw/introduction/overview/).
+- Use **harness** when the surrounding runtime, tool loop, permissions or orchestration is the point. The same product can be an engine selected by a workflow and a harness around a model; the terms do not mean exactly the same thing in every context.
+- This follows [[My/Pref/Writing/Use the simpler word]].
