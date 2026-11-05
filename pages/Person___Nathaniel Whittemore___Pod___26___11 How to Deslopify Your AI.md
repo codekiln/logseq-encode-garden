@@ -5,7 +5,7 @@ readwise-link:: https://readwise.io/bookreview/64959464
 snipd-link:: https://share.snipd.com/episode/e0ad4f64-68f6-495f-a08d-12ffbddabf55
 
 - # [How to Deslopify Your AI](https://www.aidailybrief.ai/e/2026-11-02)
-	- [[Person/Nathaniel Whittemore/Pod]], with guest [[Person/Nufar Gaspar]]. Gaspar lays out habits for getting work from AI that sounds like you and serves its reader.
+	- [[Person/Nathaniel Whittemore/Pod]], with guest [[Person/Nufar Gaspar]]. Gaspar describes how to brief an AI tool, ask it to challenge your thinking, and check that its draft fits the intended reader.
 	- ## Before you open the tool
 		- [27:22 — Think Before You Open The AI Tool](https://share.snipd.com/snip/b45692c6-d481-42a1-a528-146871d5007c)
 		- Gaspar's first habit: "you have to know what you're thinking before you open the tool." Take a walk or read until you have a view of your own, however messy.

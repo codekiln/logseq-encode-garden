@@ -14,7 +14,7 @@ snipd-link:: https://share.snipd.com/episode/70e9c904-8eea-479b-8dff-95fc714d2fa
 	- ## Tools change what counts as work
 		- [01:04 — Technology Quietly Redefines What Work Means](https://share.snipd.com/snip/79e22483-664c-4797-bde9-dab641674ef3)
 		- Newport repeats the argument of *A World Without Email*: email was pitched as a better fax machine and voicemail, and it turned office work into constant back-and-forth messaging. Slack made that rhythm faster. He finds no evidence that either raised the value of what firms produce.
-	- ## The cognitive assembly line
+	- ## AI treats knowledge work as a list of tasks
 		- [05:17 — AI Turns Knowledge Work Into A Cognitive Assembly Line](https://share.snipd.com/snip/14c92893-9f73-419f-8bf6-1f7029d60418)
 		- Newport argues that agent tools describe knowledge work as a list of tasks — update this deck, gather these numbers, send this email — because tasks are what the tools can speed up. More tasks per day feels like productivity.
 		- He describes the result as supervising agents all day: "like being a manager but without actual human interaction."
