@@ -1,0 +1,39 @@
+logseq-entity:: [[Logseq/Entity/Article]]
+date-created:: [[2026/01/12]]
+
+- # [Welcome to Peli's Agent Factory](https://github.github.com/gh-aw/blog/2026-01-12-welcome-to-pelis-agent-factory/)
+	- By Don Syme, Peli de Halleux and Mara Kiefer, on the [[gh-aw]] blog.
+	- ## Summary
+		- GitHub Next and Microsoft Research built and run more than 100 automated agentic workflows in [github/gh-aw](https://github.com/github/gh-aw), mostly for the gh-aw project itself and some at scale in GitHub's internal repositories.
+		- The post calls the factory "a living library of patterns that others can study, adapt, and remix" and notes that "most repositories won't need dozens of agentic workflows."
+		- Its 19-part tour, Meet the Workflows, describes workflows by category. Read the posts in any order and pick a workflow that matches a problem you already have.
+	- ## Where to start
+		- [Go Deep with Project Coordination Workflows](https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-campaigns/) covers finding, planning and tracking work. Plan Command breaks an issue into sub-tasks on a `/plan` comment, and Discussion Task Miner pulls tasks out of discussion threads.
+		- [Meet the Metrics & Analytics Workflows](https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-metrics-analytics/) covers agents that watch other agents: Metrics Collector, Portfolio Analyst for cost, and Audit Workflows for other workflows' runs. These answer which workflows are worth what they cost.
+		- [Meet the Organization & Cross-Repo Workflows](https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-organization/) covers workflows that read across an organization, such as Org Health Report and Stale Repo Identifier. They need organization-level tokens, careful permissions and rate limiting.
+	- ## Trying a workflow
+		- The gh-aw [Quick Start](https://github.github.com/gh-aw/setup/quick-start/) shows how to write and compile a workflow.
+		- [githubnext/agentics](https://github.com/githubnext/agentics) publishes workflows ready for `gh aw add-wizard <url>`, including [plan.md](https://github.com/githubnext/agentics/blob/main/workflows/plan.md) and [discussion-task-miner.md](https://github.com/githubnext/agentics/blob/main/workflows/discussion-task-miner.md).
+		- Several tour posts link workflow files at gh-aw v0.45.5. Compare a file with the current [github/gh-aw](https://github.com/github/gh-aw) before copying it.
+	- ## Tour
+		- All posts are dated 2026-01-13. The series opens with these:
+			- [Meet a Simple Triage Workflow](https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows/)
+			- [Introducing Continuous Simplicity](https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-continuous-simplicity/)
+			- [Introducing Continuous Refactoring](https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-continuous-refactoring/)
+			- [Introducing Continuous Style](https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-continuous-style/)
+			- [Introducing Continuous Improvement](https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-continuous-improvement/)
+			- [Introducing Continuous Documentation](https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-documentation/)
+		- It continues with specialized categories:
+			- [Meet the Issue & PR Management Workflows](https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-issue-management/)
+			- [Meet the Fault Investigation Workflows](https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-quality-hygiene/)
+			- [Meet the Metrics & Analytics Workflows](https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-metrics-analytics/)
+			- [Meet the Operations & Release Workflows](https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-operations-release/)
+			- [Meet the Security-related Workflows](https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-security-compliance/)
+			- [Meet the Teamwork & Culture Workflows](https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-creative-culture/)
+			- [Meet the Interactive & ChatOps Workflows](https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-interactive-chatops/)
+			- [Meet the Testing & Validation Workflows](https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-testing-validation/)
+			- [Meet the Tool & Infrastructure Workflows](https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-tool-infrastructure/)
+			- [Introducing Multi-Phase Improver Workflows](https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-multi-phase/)
+			- [Meet the Organization & Cross-Repo Workflows](https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-organization/)
+			- [Go Deep with Advanced Analytics & ML Workflows](https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-advanced-analytics/)
+			- [Go Deep with Project Coordination Workflows](https://github.github.com/gh-aw/blog/2026-01-13-meet-the-workflows-campaigns/)
