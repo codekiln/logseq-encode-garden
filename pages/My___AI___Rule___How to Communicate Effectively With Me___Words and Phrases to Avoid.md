@@ -19,6 +19,9 @@
 		- ## Precisely, Exactly
 		  collapsed:: true
 			- Adds false confidence to a claim that wasn't verified to that degree. State the claim; skip the intensifier.
+		- ## Genuinely
+		  collapsed:: true
+			- Filler that claims sincerity. If a statement is true, say it plainly; the word adds no information and makes the other sentences sound less sincere. Omit it.
 		- ## Unusually, Rarely, Particularly
 		  id:: 6aba2759-6e03-46c4-9299-cde9c53ef253
 		  collapsed:: true
@@ -30,7 +33,7 @@
 		- This is just a fancy way of saying "standard." Most people in the U.S. probably don't even know what this means. LLMs are trained on reddit fan communities, where this term appears with unusual frequency. Don't assume the reader is a fan fiction writer.
 	- ## Durable
 	  collapsed:: true
-		- AI overuses this, usually as filler on a noun ("durable record," "durable reasoning") where it adds nothing. Cut it, or say "lasting" when permanence is genuinely the point.
+		- AI overuses this, usually as filler on a noun ("durable record," "durable reasoning") where it adds nothing. Cut it, or say "lasting" when permanence is the point.
 - # [[My/Pref/Writing/Avoid Jargon, Especially Tech-speek]]
 	- ## {Bootstrap, Initialize, Provision} -> Setting it up
 	  collapsed:: true
