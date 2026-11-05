@@ -5,7 +5,7 @@ readwise-link:: https://readwise.io/bookreview/64885899
 snipd-link:: https://share.snipd.com/episode/70e9c904-8eea-479b-8dff-95fc714d2faa
 
 - # [Do Hard Things (Featuring: Jerry Seinfeld)](https://share.snipd.com/episode/70e9c904-8eea-479b-8dff-95fc714d2faa)
-	- A 15-minute solo episode of [[Person/Cal Newport/Pod]], listed in Snipd as The Cal Newport Show. Newport takes a Jerry Seinfeld story from [[Acquired/Pod/26/10 Seinfeld]] and uses it to argue about AI and knowledge work.
+	- Newport uses Seinfeld’s story to argue that AI can redefine knowledge work around tasks that tools can speed up. This is a 15-minute solo episode; Snipd lists it as The Cal Newport Show, and the garden files it under [[Person/Cal Newport/Pod]].
 	- ## The Seinfeld story
 		- [00:18 — Seinfeld Rejects Efficiency In Comedy](https://share.snipd.com/snip/736a6784-06dc-4fd0-9b5e-ba49d0325329)
 		- Newport reads the exchange as Acquired read it. In a 2017 *Harvard Business Review* interview, the interviewer asked why Seinfeld, burned out, had not looked for a more efficient way to make the show, and what McKinsey would have said. Seinfeld asked whether McKinsey was funny, and on hearing no, said he didn't need them.
