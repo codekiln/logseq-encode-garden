@@ -19,7 +19,7 @@ These guardrails apply to every edit of a page or journal in this garden. Deeper
 
 - Every line is prefixed with a bullet (`-`), including headings: `- # Heading Text`.
 - TAB indentation determines parent/child nesting. Headings nest: H2 under H1, H3 under H2, etc.
-- No blank lines anywhere — every line has content, at minimum a `-`.
+- No blank lines anywhere — every line has content, at minimum a `-`. The one exception is the blank line Logseq itself writes between the page-properties block and the first bullet: leave it as the page has it.
 - No ordered lists; use numbers inside unordered items: `- 1. First item` (TAB-indent before the `-`).
 - Code blocks use `~~~` fences, nested inside a bullet. When a code block sits inside an outer ``` ``` ``` example, use `~~~` for the inner block.
 
