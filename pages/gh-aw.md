@@ -10,3 +10,4 @@ logseq-entity:: [[Logseq/Entity/Software/Project]]
 	- Suited to tasks that need judgment, such as issue triage, pull request review, CI failure investigation, and keeping docs current. Builds, tests, and deploys stay in ordinary Actions workflows.
 	- Install with `gh extension install github/gh-aw`.
 	- Written in [[Go]].
+	- Reading guide: [[gh-aw/Blog/26/01/Welcome to Peli's Agent Factory]] introduces GitHub Next's 100+ workflows and its 19-part Meet the Workflows tour.
