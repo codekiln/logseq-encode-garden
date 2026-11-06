@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Cardio]]
+- # Walk
+	- Practice walking at an easy to brisk pace to add daily movement and support recovery.
+	- ## Setup
+		- Wear comfortable shoes and choose a route, hallway, or treadmill.
+	- ## Practice
+		- Walk upright with a natural arm swing. An easy walk allows relaxed conversation; a brisk walk raises breathing while conversation remains possible.
+	- ## Dose and Progression
+		- Walk for five to ten minutes after meals when practical, and take a short walk during long periods of sitting or standing. Build daily steps gradually from the current average.
+	- ## Cues and Variations
+		- Walking should leave you fresher, not more tired. Shorter, more frequent walks work when time or energy is limited.
+	- ## Sources
+		- [[Person/Andrew Huberman/Book/26/Protocols]] suggests five minutes of walking per half-hour of sitting, walks after meals, and roughly 7,000–10,000 daily steps.

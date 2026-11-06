@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Cardio]]
+- # Sprint Interval
+	- Practice short hard efforts on a stationary bike or rower, separated by easy recovery.
+	- ## Setup
+		- Use a stationary bike or rower with a familiar setup. Warm up for 5–10 minutes, finishing with a few brief pickups in effort.
+	- ## Practice
+		- One round is a hard effort followed by easy movement. Drive the pedals or the stroke hard for the work period while keeping posture and form, then reduce to easy movement until breathing settles. Finish the session with about five minutes of easy movement.
+	- ## Dose and Progression
+		- Work length, recovery length, effort, and rounds follow the training plan. Start below all-out effort with fewer rounds; add rounds before raising effort, and only while the other workouts and recovery remain good.
+	- ## Cues and Variations
+		- Each hard effort should be repeatable at about the same power or pace. A fading final round, or legs tired enough to change movement, means stopping early or switching to easy cardio for the day.
+	- ## Sources
+		- [[Person/Andrew Huberman/Book/26/Protocols]] places 6–12 near-all-out intervals on Day 6 of the weekly plan.

@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Cardio]]
+- # Steady-State Cardio
+	- Practice continuous moderate-effort cardio on a bike or elliptical, breathing harder while keeping the pace sustainable.
+	- ## Setup
+		- Adjust the bike saddle so the knee stays slightly bent at the bottom of the pedal stroke, or set the elliptical stride and resistance to a smooth motion. Warm up easily for about five minutes.
+	- ## Practice
+		- Raise resistance or cadence until breathing is noticeably harder and speech is limited to short phrases. Hold that effort without fading for the planned duration, then ease off for a few minutes.
+	- ## Dose and Progression
+		- Duration follows the training plan. Lengthen the session a few minutes at a time while the effort stays sustainable from start to finish.
+	- ## Cues and Variations
+		- The final minutes should feel like the first ones. Gasping or a slowing cadence means the effort is too high. A rower, brisk incline walk, or easy jog at the same effort can substitute.
+	- ## Sources
+		- [[Person/Andrew Huberman/Book/26/Protocols]] places a moderate cardio session of 25–30 minutes on Day 5 of the weekly plan.
