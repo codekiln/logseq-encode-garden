@@ -5,7 +5,7 @@ see-also:: [[Music/Making/Log/26/10/28 Wed]]
 	- ## [[AI Answer]]
 		- [[Answer/Official]] from [Live 12 Manual, 17.5.1 Internal Routing Points](https://www.ableton.com/en/live-manual/12/routing-and-i-o/#internal-routing-points)
 		- **Short answer:** both include the tapped track's devices. Post Mixer also includes the track's own volume and pan, and likely its mute and crossfader assignment. Post FX includes none of these. Neither tap includes sends.
-		- When a track's **Audio From** is another track, the **Input Channel** chooser sets the tap point ([[Ableton/Live/UG/17 Routing and IO/05 Internal Routings/01 Internal Routing Points]]):
+		- When a track's **Audio From** is another track, the **Input Channel** chooser sets the [[Ableton/Tap Point]] ([[Ableton/Live/UG/17 Routing and IO/05 Internal Routings/01 Internal Routing Points]]):
 			- **Post FX** — "taps the signal at the output of a track's device chains (FX), but before it has been passed back to the track mixer. Changes to the tapped track's devices will therefore alter the tapped signal, but changes to its mixer settings will not."
 			- **Post Mixer** — "taps the final output of a track, after it has passed through its device chains and mixer."
 		- **In practice:**
