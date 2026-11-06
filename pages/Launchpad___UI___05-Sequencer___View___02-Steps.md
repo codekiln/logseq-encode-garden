@@ -1,0 +1,11 @@
+logseq-entity:: [[Logseq/Entity/UI/Area]]
+up:: [[Launchpad/UI/05-Sequencer/View]]
+
+- # Steps View
+	- The second button down the right-hand column opens Steps View. The top half of the grid shows a pattern's 32 steps, and the bottom half is the Play Area.
+	- ![01 Steps View layout](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Launchpad___UG___09%20Sequencer___02%20Steps%20View___Asset___01-Steps-View-layout.png)
+	- ## Areas
+		- [[Launchpad/UI/05-Sequencer/View/02-Steps/Steps]]
+		- [[Launchpad/UI/05-Sequencer/View/02-Steps/Play Area]]
+	- ## Source
+		- [[Launchpad/UG/09 Sequencer/02 Steps View]]
