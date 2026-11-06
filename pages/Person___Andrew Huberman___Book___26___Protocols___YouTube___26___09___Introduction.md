@@ -12,8 +12,11 @@ logseq-created-time-year:: [[20/2/6]]
 	- ## [[Video]]
 		- {{video https://www.youtube.com/watch?v=QHEQp1wESY8}}
 			- ### {{youtube-timestamp 0}} What the videos supplement
+			  id:: 70ddf321-efc8-4228-8993-e0029206465f
 				- The videos accompany Chapter Two of Protocols, which covers resistance training, cardiovascular training, and mobility.
 			- ### {{youtube-timestamp 12}} Examples called out in the text
+			  id:: 4162db88-0a9c-4e7c-81e4-afaff9383389
 				- The chapter points to these videos for examples of compound and isolation lifts and of mobility exercises, so readers can see what the text describes.
 			- ### {{youtube-timestamp 31}} Not exhaustive
+			  id:: 47f31646-98ab-4d42-a0dc-7683f947ee54
 				- Experienced lifters may already know the movements. The videos sample common exercises and leave out many finer points.
