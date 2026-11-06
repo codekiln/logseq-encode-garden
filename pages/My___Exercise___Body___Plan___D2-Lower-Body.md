@@ -1,0 +1,15 @@
+- # Sunday — Day 2: Lower Body
+	- Allow roughly 50–70 minutes for lifting and warm-ups. Warm up and choose loads per [[My/Exercise/Body/Plan]], and finish with [[My/Exercise/Body/Plan/Mobility-Circuit]] if time allows.
+	- ## Back squat: 3 work sets of 6–8 reps
+		- {{embed [[Exercise/Body/Strength/Back Squat]]}}
+		- Alternative: use a leg press if its setup permits a more comfortable controlled range.
+			- {{embed [[Exercise/Body/Strength/Leg Press]]}}
+	- ## Romanian deadlift: 2 sets of 6–10 reps
+		- {{embed [[Exercise/Body/Strength/Romanian Deadlift]]}}
+		- Alternative: a trap-bar deadlift. Choose one hinge for this session.
+			- {{embed [[Exercise/Body/Strength/Trap-Bar Deadlift]]}}
+	- ## Seated cable row: 2 sets of 8–10 reps
+		- {{embed [[Exercise/Body/Strength/Seated Cable Row]]}}
+	- ## Standing calf raise: 2 sets of 8–15 reps
+		- {{embed [[Exercise/Body/Strength/Standing Calf Raise]]}}
+	- Demonstrations: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]].

@@ -1,0 +1,19 @@
+- # Friday — Day 7: Shoulders and Arms
+	- Allow roughly 55–75 minutes for lifting and warm-ups; trim the optional calf work first when time is short. Warm up and choose loads per [[My/Exercise/Body/Plan]], and finish with [[My/Exercise/Body/Plan/Mobility-Circuit]].
+	- ## Overhead press: 3 sets of 6–8 reps
+		- {{embed [[Exercise/Body/Strength/Overhead Press]]}}
+	- ## Machine chest press: 2 sets of 8–10 reps
+		- {{embed [[Exercise/Body/Strength/Machine Chest Press]]}}
+	- ## Chest-supported row: 2 sets of 8–10 reps
+		- {{embed [[Exercise/Body/Strength/Chest-Supported Row]]}}
+	- ## Biceps curl: 2 sets of 10–15 reps
+		- {{embed [[Exercise/Body/Strength/Biceps Curl]]}}
+	- ## Triceps pressdown: 2 sets of 10–15 reps
+		- {{embed [[Exercise/Body/Strength/Triceps Pressdown]]}}
+	- ## Forearm plank: 2 holds of 20–40 seconds
+		- End each hold while the torso is still stable. Use an incline or shorter hold if needed.
+		- {{embed [[Exercise/Body/Strength/Forearm Plank]]}}
+	- ## Optional standing calf raise: 2 sets of 8–15 reps
+		- Include it if Sunday's work has recovered.
+		- {{embed [[Exercise/Body/Strength/Standing Calf Raise]]}}
+	- Demonstrations: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]].

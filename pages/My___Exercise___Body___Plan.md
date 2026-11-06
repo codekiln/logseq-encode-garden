@@ -1,0 +1,39 @@
+- # Exercise Plan
+	- Strength is the priority. Three gym sessions, daily walking, and a mix of easy, moderate, and brief hard cardio fit into four or five training days.
+	- Saturday is Day 1 every week. The lifting days follow the lower-body, torso, and shoulder emphasis in [[Person/Andrew Huberman/Book/26/Protocols]], with additional exercises spread across the week.
+	- ## Week
+		- [[My/Exercise/Body/Plan/D1-Long-Run]] — Saturday
+		- [[My/Exercise/Body/Plan/D2-Lower-Body]] — Sunday
+		- [[My/Exercise/Body/Plan/D3-Recovery]] — Monday
+		- [[My/Exercise/Body/Plan/D4-Torso]] — Tuesday
+		- [[My/Exercise/Body/Plan/D5-Recovery]] — Wednesday
+		- [[My/Exercise/Body/Plan/D6-Intervals]] — Thursday
+		- [[My/Exercise/Body/Plan/D7-Shoulders-and-Arms]] — Friday
+		- [[My/Exercise/Body/Plan/Mobility-Circuit]] — after Sunday, Tuesday, and Friday lifting
+	- ## Warm up and choose the effort
+		- Begin gym sessions with five minutes of brisk walking or easy cycling to get warm.
+		- Before a demanding exercise, use one to three preparation sets. The book's ramp is about 40% of the planned work weight for 6–10 reps, 65% for 4–8 reps, and 75% for 2–4 reps; rest one to two minutes between them. Round to available weights and keep these sets easy. They are additional to the work sets on each day's page.
+		- Work through a comfortable full range and control both lifting and lowering. Choose loads that leave about one or two more good reps possible at the end of each work set.
+		- The book frequently prescribes failure. This plan leaves a small reserve, particularly on squats, hinges, and barbell presses. The [2026 ACSM position stand](https://acsm.org/resistance-training-guidelines-update-2026/) finds that momentary failure is not required for gains.
+		- Rest three to five minutes after demanding compound sets and about 90 seconds to three minutes after smaller exercises. Start the next set when breathing and control have recovered; avoid rushing heavy lifts to meet a timer. The chapter's broader work-set range is two to five minutes.
+		- Sharp or increasing pain is a reason to stop and change the exercise or get it assessed. A trainer can check an unfamiliar lift's setup before adding load.
+	- ## Progress and recovery
+		- Record the exercise, load, reps in each work set, and estimated reps left in reserve. Note any pain or unusual fatigue. Compare with the previous session before choosing today's weight.
+		- Keep the load until every work set reaches the top of its rep range with controlled form and a small reserve. Then add the smallest practical increment next session; reps may return toward the bottom of the range.
+		- If the new load prevents reaching the lower end of the range cleanly, reduce it. Add reps or load before adding more sets.
+		- Keep exercise choices steady long enough to judge progress. A machine substitution is useful when it fits body mechanics or available equipment better; record the substitution and establish its own load history.
+		- Set counts are work sets per exercise. The chapter's four-to-nine-set range describes a muscle group's total work in its body-part split; it is not another allocation to add to every lift.
+		- If performance declines across sessions or fatigue persists, reduce workload and review sleep, food, and recovery before adding training. The chapter also recommends a week away from resistance training roughly every 10–16 weeks; use that interval as a point to review recovery.
+		- If an exercise is new or training has lapsed, use a one-to-three-week practice period with light loads and several reps in reserve.
+	- ## Daily walking
+		- Walk for five to ten minutes after meals when practical. During long periods of sitting or standing, take a short walking break; the chapter suggests five minutes per half-hour.
+		- Build toward roughly 7,000 daily steps if that is a useful and comfortable target. The chapter proposes 10,000 as an optional higher target. Build from the current average rather than forcing a sudden jump.
+		- {{embed [[Exercise/Body/Cardio/Walk]]}}
+	- ## Four-day week and missed sessions
+		- Keep Saturday cardio and Sunday, Tuesday, and Friday lifting. Omit Thursday's hard intervals. Saturday remains Day 1.
+		- If Tuesday is too long, reduce or omit its cardio before rushing the strength work. Shorter walks can add moderate activity elsewhere in the week.
+		- Resume the next feasible session after a missed day. Avoid doubling heavy sessions to catch up; keep Saturday's calendar anchor.
+	- ## Exercise references
+		- [[Person/Andrew Huberman/Book/26/Protocols/Exercise Guide]]: the typed exercise pages, with setup, movement cues, substitutions, and demonstrations.
+		- [[Person/Andrew Huberman/Book/26/Protocols]]: lower-body, torso, shoulder, and mobility video notes.
+		- [Official Chapter Two demonstrations](https://www.hubermanlab.com/protocols-resources).
