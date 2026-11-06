@@ -1,4 +1,5 @@
 prev:: [[Making/Music/Log/26/11/01-Sun]]
+next:: [[Making/Music/Log/26/11/06-Fri]]
 
 - [[2026-11-02 Mon]]
 	- ## 02:35 — Notes on the November 1 session
