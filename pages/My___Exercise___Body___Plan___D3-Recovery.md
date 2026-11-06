@@ -1,0 +1,5 @@
+- # Monday — Day 3: Recovery
+	- Walk during the day. Optional gentle mobility from [[My/Exercise/Body/Plan/Mobility-Circuit]]; keep the day easy enough to feel ready for Tuesday.
+	- ## Walk: after meals and during long sitting
+		- {{embed [[Exercise/Body/Cardio/Walk]]}}
+	- Part of [[My/Exercise/Body/Plan]].

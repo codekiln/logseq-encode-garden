@@ -1,0 +1,5 @@
+- # Wednesday — Day 5: Recovery
+	- Walk and recover. Keep Wednesday free of a scheduled workout.
+	- ## Walk: after meals and during long sitting
+		- {{embed [[Exercise/Body/Cardio/Walk]]}}
+	- Part of [[My/Exercise/Body/Plan]].

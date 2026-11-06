@@ -1,0 +1,6 @@
+- # Saturday — Day 1: Long Run
+	- Run for 45–60 minutes at an easy, steady conversational pace. Keep enough energy for Sunday's legs. Brisk walking, cycling, or the elliptical can substitute when needed.
+	- If that duration is beyond current capacity, start with 15–20 minutes and add a few minutes in weeks that feel comfortable. The chapter's eventual range is 45–75 minutes.
+	- ## Easy run: 45–60 minutes
+		- {{embed [[Exercise/Body/Cardio/Easy Run]]}}
+	- Part of [[My/Exercise/Body/Plan]].

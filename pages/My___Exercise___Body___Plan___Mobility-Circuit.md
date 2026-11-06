@@ -1,0 +1,15 @@
+- # Mobility Circuit
+	- Spend about ten minutes on two to four days each week, such as Sunday, Tuesday, and Friday. Stay within a painless range and breathe throughout.
+	- ## Sumo squat with rotation: 3 holds of 3–10 seconds per side
+		- Use a shallower squat or smaller rotation as needed.
+		- {{embed [[Exercise/Body/Flexibility/Sumo Squat with Rotation]]}}
+	- ## Hip-flexor stretch: 3 holds of 10–30 seconds per side
+		- Use a supported standing or half-kneeling lunge.
+		- {{embed [[Exercise/Body/Flexibility/Hip-Flexor Stretch]]}}
+	- ## Reverse tabletop: 3 holds of up to 10 seconds
+		- Start lower if shoulders or wrists need an easier position.
+		- {{embed [[Exercise/Body/Flexibility/Reverse Tabletop]]}}
+	- ## Founder pose: a few calm breaths, repeated
+		- Stand to reset between holds.
+		- {{embed [[Exercise/Body/Flexibility/Founder Pose]]}}
+	- Demonstrations: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Mobility and Flexibility]].

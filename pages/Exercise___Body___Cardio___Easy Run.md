@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Cardio]]
+- # Easy Run
+	- Practice running at a steady conversational pace to build aerobic endurance.
+	- ## Setup
+		- Wear running shoes and pick a route or treadmill without steep hills. Start with a few minutes of brisk walking.
+	- ## Practice
+		- Run with short, quick, relaxed steps and land under the body. Hold a pace at which full sentences are still possible. Slow down or walk briefly when breathing rises past that point, then resume.
+	- ## Dose and Progression
+		- Duration and frequency follow the training plan. Begin with a duration that ends with energy left over, then add a few minutes in weeks that feel comfortable, keeping the pace conversational.
+	- ## Cues and Variations
+		- Successful practice feels steady and repeatable from start to finish. Pain that changes your stride, or breathing too hard to speak, means slow to a walk. Brisk walking, cycling, or the elliptical at the same effort can substitute.
+	- ## Sources
+		- [[Person/Andrew Huberman/Book/26/Protocols]] places a long, steady endurance session on Day 1 of the weekly plan.
