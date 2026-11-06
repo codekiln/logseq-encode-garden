@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Collar Squeeze
+	- Practice hand-grip strength by squeezing a spring barbell collar, then flexing and extending the wrist while holding partial tension.
+	- ## Setup
+		- Hold a spring barbell collar in one hand as you would a hand gripper.
+	- ## Practice
+		- Squeeze the collar closed and release it until failure. Then hold it with a little tension and move the wrist back into extension and down into flexion, keeping the grip, until you can no longer control it.
+	- ## Dose and Progression
+		- Sets and repetitions follow the training plan. The video runs it as a drop-set burnout on each hand, with a [[Exercise/Body/Strength/Farmer's Carry]] between sets.
+	- ## Cues and Variations
+		- Holding tension with the wrist flexed is hard because the finger flexors are already shortened; that is the part being trained. A hand gripper can replace the collar.
+	- ## Sources
+		- Demonstration: [Jeff Cavaliere's collar grip combo, 11:10](https://www.youtube.com/watch?v=4EkKhkSNjWY&t=670s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/18/12/The Perfect Forearm Workout]].

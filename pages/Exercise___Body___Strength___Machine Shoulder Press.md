@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Machine Shoulder Press
+	- Practice a supported overhead press for the shoulders and triceps on a guided machine.
+	- ## Setup
+		- Adjust the seat so the handles start at about shoulder height. Plant the feet and keep the back against the pad.
+	- ## Practice
+		- Press the handles overhead without forcing the elbows into lockout, then lower them under control to the starting height.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Avoid arching away from the backrest. The machine guides the path, so it asks less coordination than the barbell [[Exercise/Body/Strength/Overhead Press]] or [[Exercise/Body/Strength/Dumbbell Overhead Press]]; Huberman prefers the free-weight versions for that reason.
+	- ## Sources
+		- Demonstration: [Huberman's machine shoulder press, 1:45](https://www.youtube.com/watch?v=IzpGEk-2th4&t=105s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]].

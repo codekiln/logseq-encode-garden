@@ -13,7 +13,8 @@ logseq-created-time-year:: [[20/2/6]]
 		- {{video https://www.youtube.com/watch?v=UMGpxwhsy_k}}
 			- ### {{youtube-timestamp 0}} Why face pulls matter
 			- ### {{youtube-timestamp 67}} Common face pull mistakes
-			- ### {{youtube-timestamp 111}} Setup with two ropes
+			- ### {{youtube-timestamp 111}} [[Exercise/Body/Strength/Face Pull]]
+				- Setup with two ropes.
 			- ### {{youtube-timestamp 167}} Execution cues and muscles
 			- ### {{youtube-timestamp 241}} Programming frequency and sets
 			- ### {{youtube-timestamp 286}} Rotator cuff benefits

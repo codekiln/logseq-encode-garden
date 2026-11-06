@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Forearm Rotation
+	- Practice turning the forearm palm-down (pronation) and palm-up (supination) against a cable rope, so each rotation meets resistance.
+	- ## Setup
+		- Attach a rope to a cable pulley and hold one end so the rope pulls across the hand.
+	- ## Practice
+		- For pronation, start with the palm up and turn the forearm over, pushing the fingers into the rope on every repetition. For supination, take the hand out to the side and turn it so the palm faces back toward the machine. Return slowly each time.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. The video works each direction to failure, with a [[Exercise/Body/Strength/Farmer's Carry]] between sets.
+	- ## Cues and Variations
+		- Twirling a dumbbell lets the weight spin the hand, so the forearm falls into each position without resisting it. The rope keeps tension through the whole turn.
+	- ## Sources
+		- Demonstration: [Jeff Cavaliere's supination and pronation, 9:18](https://www.youtube.com/watch?v=4EkKhkSNjWY&t=558s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/18/12/The Perfect Forearm Workout]].

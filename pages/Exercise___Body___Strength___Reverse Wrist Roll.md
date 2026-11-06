@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Reverse Wrist Roll
+	- Practice wrist extension by rolling a held bar backward one hand at a time, training the muscles on the top of the forearm.
+	- ## Setup
+		- Stand holding a barbell or wrist-roller handle in front of you with an overhand grip and the arms extended.
+	- ## Practice
+		- Extend one wrist to roll the bar back, then the other, alternating left and right. Standing keeps the hand working against gravity even at full extension.
+	- ## Dose and Progression
+		- Sets, time, and resistance follow the training plan. In the video it runs as a ladder with the [[Exercise/Body/Strength/Reverse Curl]]: one second of rolls and one reverse curl, then two and two, then three and three, climbing until failure.
+	- ## Cues and Variations
+		- Keep the elbows still and let only the wrists move. Wrist extensions done over the edge of a bench lose tension near the top, which is why this version is done standing.
+	- ## Sources
+		- Demonstration: [Jeff Cavaliere's reverse wrist roll ladder, 5:16](https://www.youtube.com/watch?v=4EkKhkSNjWY&t=316s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/18/12/The Perfect Forearm Workout]].

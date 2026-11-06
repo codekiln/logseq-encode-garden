@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Back Extension
+	- Practice lowering and raising the torso from a hip-hinged position on a hyperextension bench to train the lower back and hip extensors.
+	- ## Setup
+		- Adjust a hyperextension (45-degree or horizontal) bench so the pad sits just below the hip crease and the heels are secured under the ankle rollers. Start with the body in a straight line, hands crossed on the chest or behind the head.
+	- ## Practice
+		- Bend at the hips to lower the torso slowly toward the floor, then raise it back until the body is in a straight line again. Stop at a straight line rather than arching the lower back past it. Each repetition is slow and controlled.
+	- ## Dose and Progression
+		- Huberman suggests 8 to 25 controlled repetitions per set and does about 100 repetitions a week. Add load by holding a plate or dumbbell at the chest or by anchoring a band under the bench.
+	- ## Cues and Variations
+		- Reduce the range or remove the added load if the movement turns into a swing or the lower back pinches at the top. Without a machine, hold the edge of a high countertop or sturdy table with the torso supported and lift the legs behind you.
+	- ## Sources
+		- Demonstration: [Huberman's back hyperextension, 9:53](https://www.youtube.com/watch?v=UEU6NYLRi6o&t=593s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]].

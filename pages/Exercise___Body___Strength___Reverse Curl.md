@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Reverse Curl
+	- Practice an overhand-grip elbow curl that trains the brachioradialis on the top of the forearm.
+	- ## Setup
+		- Stand holding a barbell or EZ bar with an overhand grip about shoulder width apart, arms hanging straight and elbows at your sides.
+	- ## Practice
+		- Bend the elbows to curl the bar up toward the shoulders without letting the elbows drift forward, then lower it under control.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. In the video it pairs with the [[Exercise/Body/Strength/Reverse Wrist Roll]] in a ladder taken to failure.
+	- ## Cues and Variations
+		- Keep the wrists straight and the bar in the palms; as you tire the bar tends to roll into the fingers. Use a lighter bar than for a [[Exercise/Body/Strength/Biceps Curl]].
+	- ## Sources
+		- Demonstration: [Jeff Cavaliere's reverse curl ladder, 5:16](https://www.youtube.com/watch?v=4EkKhkSNjWY&t=316s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/18/12/The Perfect Forearm Workout]].

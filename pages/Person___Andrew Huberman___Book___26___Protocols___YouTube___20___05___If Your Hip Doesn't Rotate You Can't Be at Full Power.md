@@ -11,3 +11,13 @@ logseq-created-time-year:: [[20/2/0]]
 		- First assess internal and external rotation against a 75 to 90 degree range, then hold the mobilization for about two minutes. If it pinches, add a band for distraction.
 	- ## [[Video]]
 		- {{video https://www.youtube.com/watch?v=aG-uRxQ-RLA}}
+			- ### {{youtube-timestamp 0}} The hip rotation window
+				- A working hip rotates both internally and externally. Its short rotators act like the shoulder's rotator cuff, and without rotation the body has fewer stable positions.
+			- ### {{youtube-timestamp 80}} How we assess rotation
+				- Therapists test rotation lying down with the hip at 90 degrees. That mid-range test misses how rotation combines with flexion.
+			- ### {{youtube-timestamp 170}} Missing rotation
+				- With the femur loaded you want 75 to 90 degrees of total rotation. Without it the foot turns out, the knee caves, or the lumbar spine twists to make up the difference.
+			- ### {{youtube-timestamp 330}} [[Exercise/Body/Flexibility/Hip Capsule Mobilization]]
+				- Most people lack internal rotation. On hands and knees, drive weight back through the femur, glide sideways, and add flexion and rotation, for about two minutes.
+			- ### {{youtube-timestamp 496}} [[Exercise/Body/Flexibility/Hip Capsule Mobilization]] with band distraction
+				- If the hip pinches, a band pulling the thigh to the side or back changes how the femur sits in the pelvis and can open up more rotation.

@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Incline Bench Press
+	- Practice pressing from an inclined bench to shift work toward the upper chest and front deltoids.
+	- ## Setup
+		- Set an adjustable bench to an incline; ACE gives 45 to 60 degrees for the dumbbell version, and a lower incline keeps more of the work on the chest. With a barbell, use a rack with safeties and a grip slightly wider than the shoulders. With dumbbells, bring them to the shoulders as in the flat dumbbell bench press. Plant the feet and keep head, shoulders, and hips on the bench.
+	- ## Practice
+		- Lower the weight slowly toward the upper chest, keeping wrists stacked over the elbows, then press up until the elbows are straight. Do not bounce the weight off the chest.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Barbell and dumbbells both work. Dumbbells allow a deeper stretch at the bottom and let each arm find its own path; the barbell allows heavier, more even loading with rack safeties. Reduce the load if the lower back arches off the bench to finish a repetition.
+	- ## Sources
+		- Demonstration: [Huberman's incline bench press, 2:05](https://www.youtube.com/watch?v=UEU6NYLRi6o&t=125s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]]. Additional instructions: [ACE's incline chest press](https://www.acefitness.org/resources/everyone/exercise-library/25/incline-chest-press/).

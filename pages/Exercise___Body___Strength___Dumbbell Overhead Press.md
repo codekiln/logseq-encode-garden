@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Dumbbell Overhead Press
+	- Practice pressing a pair of dumbbells from shoulder height overhead while each arm balances its own load.
+	- ## Setup
+		- Lift the dumbbells off the floor with bent knees and a flat back, as in a deadlift, then bring them to the shoulders. Sit on a flat bench or a bench with back support, plant the feet, and brace the trunk.
+	- ## Practice
+		- Press both dumbbells overhead, then lower them under control to shoulder height. Keep the forearms underneath the dumbbells and the ribs over the pelvis.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Reduce the load if the dumbbells drift apart or you lean back to finish. At the end of a set, lower the dumbbells to the knees and then to the floor rather than dropping them from the shoulders. The barbell [[Exercise/Body/Strength/Overhead Press]] and [[Exercise/Body/Strength/Machine Shoulder Press]] train the same pattern with less balance demand.
+	- ## Sources
+		- Demonstration: [Huberman's dumbbell overhead press, 0:52](https://www.youtube.com/watch?v=IzpGEk-2th4&t=52s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]].

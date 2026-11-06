@@ -11,3 +11,4 @@ logseq-entity:: [[Logseq/Entity/Exercise/Body/Flexibility]]
 		- Begin with a shallow hinge and a few slow breaths. Keep the arms lower if raising them makes the back arch or the shoulders uncomfortable.
 	- ## Sources
 		- Demonstration: [Huberman's Founder pose, 5:15](https://www.youtube.com/watch?v=SzufA9jqrPw&t=315s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Mobility and Flexibility]].
+		- Demonstration: [Eric Goodman's founder, 0:00](https://www.youtube.com/watch?v=4BOTvaRaDjI&t=0s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/11/07/Original 12 Minutes of Foundation Training]].

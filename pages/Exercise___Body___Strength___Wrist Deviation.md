@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Wrist Deviation
+	- Practice side-to-side wrist bending against a cable rope, training radial deviation (toward the thumb) and ulnar deviation (toward the little finger).
+	- ## Setup
+		- Attach a rope to a cable pulley and take one end in one hand. Stand close to the stack with the arm down at your side.
+	- ## Practice
+		- For ulnar deviation, start from neutral or slight radial deviation and bend the wrist down toward the little-finger side, slowly and under control. For radial deviation, turn around, take the grip on top, and push down through the little-finger side of the hand so the wrist bends up toward the thumb side, ending with the rope end facing forward.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. The video works each direction on each arm, with a [[Exercise/Body/Strength/Farmer's Carry]] between sets.
+	- ## Cues and Variations
+		- The range is small; keep the forearm still so only the wrist moves. A sledgehammer held at the side and lifted forward or backward trains the same motions.
+	- ## Sources
+		- Demonstration: [Jeff Cavaliere's radial and ulnar deviation, 7:02](https://www.youtube.com/watch?v=4EkKhkSNjWY&t=422s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/18/12/The Perfect Forearm Workout]].

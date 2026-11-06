@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Belt Squat
+	- Practice a squat with the load hung from a hip belt, training the legs without loading the spine or shoulders.
+	- ## Setup
+		- Use a belt-squat machine, or a dip belt with a plate hanging between the feet while you stand on two raised boxes. Fasten the belt around the hips and hold the machine's handles or a support for balance.
+	- ## Practice
+		- Stand tall, then bend hips and knees together to lower the load under control. Keep the torso upright and the whole foot planted. Push the floor away to stand.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Huberman likes this compound option, though most gyms don't have the machine. It suits days when the back or shoulders limit the [[Exercise/Body/Strength/Back Squat]].
+	- ## Sources
+		- Demonstration: [Huberman's other compound options, 4:54](https://www.youtube.com/watch?v=CbEFgDFQBvk&t=294s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]].

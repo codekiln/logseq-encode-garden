@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Dead Hang
+	- Practice hanging from a bar with straight arms for as long as possible to build grip endurance.
+	- ## Setup
+		- Grip a pull-up bar overhand about shoulder width apart and lift the feet so the body hangs with the arms straight.
+	- ## Practice
+		- Hold the hang with a firm grip, keeping the bar in the palms. End the set when the grip fails, then step down.
+	- ## Dose and Progression
+		- Duration follows the training plan. Jeff Cavaliere gives 1:40 as an average fresh hang; at the end of his forearm workout he aims for one more minute.
+	- ## Cues and Variations
+		- Squeeze hard and keep the bar from sliding into the fingers, which loads the inner elbow. Feet on a box for partial support is an easier version.
+	- ## Sources
+		- Demonstration: [Jeff Cavaliere's dead arm hang, 12:44](https://www.youtube.com/watch?v=4EkKhkSNjWY&t=764s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/18/12/The Perfect Forearm Workout]].

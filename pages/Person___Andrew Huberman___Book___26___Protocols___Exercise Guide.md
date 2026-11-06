@@ -14,6 +14,14 @@
 		  id:: 1620a9f4-0ea1-4166-956b-ec8a149b8ff0
 		- {{embed [[Exercise/Body/Strength/Standing Calf Raise]]}}
 		  id:: 526ffd43-e635-4e9e-9ba3-573e013d59a4
+		- {{embed [[Exercise/Body/Strength/Front Squat]]}}
+		- {{embed [[Exercise/Body/Strength/Hack Squat]]}}
+		- {{embed [[Exercise/Body/Strength/Belt Squat]]}}
+		- {{embed [[Exercise/Body/Strength/Leg Extension]]}}
+		- {{embed [[Exercise/Body/Strength/Deadlift]]}}
+		- {{embed [[Exercise/Body/Strength/Lying Leg Curl]]}}
+		- {{embed [[Exercise/Body/Strength/Standing Leg Curl]]}}
+		- {{embed [[Exercise/Body/Strength/Glute-Ham Raise]]}}
 	- ## Upper body
 		- {{embed [[Exercise/Body/Strength/Seated Cable Row]]}}
 		  id:: 18f9208e-93ec-4dfd-8e0f-fad68278b000
@@ -32,11 +40,28 @@
 		  id:: 7fdbdd6d-56fe-4045-8b16-c6fdd3f5f8bc
 		- {{embed [[Exercise/Body/Strength/Triceps Pressdown]]}}
 		  id:: f8ac83b4-f3f3-42cf-a950-ee2851c435a3
+		- {{embed [[Exercise/Body/Strength/Dumbbell Bench Press]]}}
+		- {{embed [[Exercise/Body/Strength/Incline Bench Press]]}}
+		- {{embed [[Exercise/Body/Strength/Dip]]}}
+		- {{embed [[Exercise/Body/Strength/Dumbbell Fly]]}}
+		- {{embed [[Exercise/Body/Strength/Cable Fly]]}}
+		- {{embed [[Exercise/Body/Strength/Dumbbell Row]]}}
+		- {{embed [[Exercise/Body/Strength/Shrug]]}}
+		- {{embed [[Exercise/Body/Strength/Dumbbell Overhead Press]]}}
+		- {{embed [[Exercise/Body/Strength/Machine Shoulder Press]]}}
+		- {{embed [[Exercise/Body/Strength/Lateral Raise]]}}
+		- {{embed [[Exercise/Body/Strength/Front Raise]]}}
+		- {{embed [[Exercise/Body/Strength/Rear Delt Fly]]}}
+		- {{embed [[Exercise/Body/Strength/Face Pull]]}}
+		- {{embed [[Exercise/Body/Strength/Preacher Curl]]}}
+		- {{embed [[Exercise/Body/Strength/Overhead Cable Triceps Extension]]}}
 	- ## Core
 		- {{embed [[Exercise/Body/Strength/Pallof Press]]}}
 		  id:: e31d0a13-b81d-48c5-9264-ff9bcee381a7
 		- {{embed [[Exercise/Body/Strength/Forearm Plank]]}}
 		  id:: 70f2f0e8-2e18-4d87-b44b-0816895211a2
+		- {{embed [[Exercise/Body/Strength/Hanging Leg Raise]]}}
+		- {{embed [[Exercise/Body/Strength/Back Extension]]}}
 	- ## Mobility
 		- {{embed [[Exercise/Body/Flexibility/Sumo Squat with Rotation]]}}
 		  id:: ce5d2c87-e68d-4b49-8b51-b6b982fd0b49
@@ -46,3 +71,17 @@
 		  id:: 19b12018-cf0d-4e22-92f8-68e3d9f7c583
 		- {{embed [[Exercise/Body/Flexibility/Founder Pose]]}}
 		  id:: 652f98d7-20d4-41f8-849d-75b5e2eb382e
+		- {{embed [[Exercise/Body/Flexibility/Hip Capsule Mobilization]]}}
+		- {{embed [[Exercise/Body/Flexibility/Woodpecker]]}}
+		- {{embed [[Exercise/Body/Flexibility/Elbow-Squeeze Arm Raise]]}}
+	- ## Forearms and neck
+		- {{embed [[Exercise/Body/Strength/Prone Wrist Curl]]}}
+		- {{embed [[Exercise/Body/Strength/Reverse Curl]]}}
+		- {{embed [[Exercise/Body/Strength/Reverse Wrist Roll]]}}
+		- {{embed [[Exercise/Body/Strength/Wrist Deviation]]}}
+		- {{embed [[Exercise/Body/Strength/Forearm Rotation]]}}
+		- {{embed [[Exercise/Body/Strength/Farmer's Carry]]}}
+		- {{embed [[Exercise/Body/Strength/Dead Hang]]}}
+		- {{embed [[Exercise/Body/Strength/Collar Squeeze]]}}
+		- {{embed [[Exercise/Body/Strength/Plate Neck Raise]]}}
+		- {{embed [[Exercise/Body/Strength/Chin Tuck]]}}

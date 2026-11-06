@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Flexibility]]
+- # Hip Capsule Mobilization
+	- Practice loading the femur into the hip socket on hands and knees to restore internal and external hip rotation.
+	- ## Setup
+		- Kneel on all fours with the working knee under the hip at 90 degrees of hip flexion. Draw the knee toward the midline to wind up the hip capsule.
+	- ## Practice
+		- Push your weight back through the femur toward the back of the hip, then glide sideways without dropping to the ground, keeping that line of force. From there add a little more flexion or rotation, move the pelvis and torso on the femur, or use the other leg to press the working leg into internal or external rotation.
+	- ## Dose and Progression
+		- About two minutes per side, per the video. Assess rotation before and after.
+	- ## Cues and Variations
+		- Aim for a rotation window of 75 to 90 degrees with the femur vertical and loaded, about 45 degrees external and 30 degrees internal. If the front of the hip pinches, loop a band around the upper thigh and anchor it to the side or behind you to pull the femur slightly out of the socket.
+	- ## Sources
+		- Demonstration: [Kelly Starrett's joint capsule mobilization, 5:30](https://www.youtube.com/watch?v=aG-uRxQ-RLA&t=330s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/20/05/If Your Hip Doesn't Rotate You Can't Be at Full Power]].

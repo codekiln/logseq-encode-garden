@@ -1,0 +1,17 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Hanging Leg Raise
+	- Practice raising the legs while hanging from a bar to train the abdominals and grip together.
+	- ## Setup
+		- Hang from a secure pull-up bar with an overhand grip, arms straight, and the shoulders engaged rather than slumped toward the ears. Let the body settle so it is not swinging.
+	- ## Practice
+		- Brace the abdominals and lift the legs in front of you without swinging, then lower them slowly to a still hang before the next repetition. The progression stage sets how high and how straight the legs go.
+	- ## Dose and Progression
+		- Huberman's progression has three stages:
+			- 1. Knee raise: bend the knees and lift them until the thighs are level with the hips, at 90 degrees.
+			- 2. L-sit: lift straight legs to horizontal and hold the L position.
+			- 3. Pike: lift straight legs all the way up toward the bar.
+		- His goal is three sets of five pikes. Move to the next stage once the current one is controlled for the planned repetitions.
+	- ## Cues and Variations
+		- If the body swings, pause in a still hang between repetitions or return to the previous stage. Grip often fails before the abdominals at first; that is part of the training effect Huberman describes. Straps or a captain's-chair station with forearm pads take grip out of the movement.
+	- ## Sources
+		- Demonstration: [Huberman's hanging core progression, 11:49](https://www.youtube.com/watch?v=UEU6NYLRi6o&t=709s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]].

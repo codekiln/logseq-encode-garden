@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Prone Wrist Curl
+	- Practice wrist flexion against a cable or band with the palm turned down, so the forearm flexors work without help from the biceps.
+	- ## Setup
+		- Stand facing a low cable pulley or an anchored band and take the handle with the palm facing down and the elbow bent. The handle sits in the palm, away from the fingertips.
+	- ## Practice
+		- Keep the elbow still and push the handle down and away by bending the wrist, letting the handle press deeper into the palm. Return slowly to the start.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. The video suggests two sets taken to failure, with a [[Exercise/Body/Strength/Farmer's Carry]] between sets.
+	- ## Cues and Variations
+		- The bent elbow takes the biceps out of the movement. Standard wrist curls on a bench or behind the back let the bar sink into the fingers as you tire, which strains the finger tendons and the inner elbow; this version avoids that.
+	- ## Sources
+		- Demonstration: [Jeff Cavaliere's prone wrist curl, 1:37](https://www.youtube.com/watch?v=4EkKhkSNjWY&t=97s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/18/12/The Perfect Forearm Workout]].

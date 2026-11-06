@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Standing Leg Curl
+	- Practice isolating the hamstrings one leg at a time by curling the heel toward the hip from a standing position.
+	- ## Setup
+		- Adjust the machine so the working knee lines up with its pivot and the roller pad rests on the back of the lower leg, above the heel. Stand on the other leg, hold the handles, and press the front of the thigh against its pad.
+	- ## Practice
+		- Curl the heel toward the buttocks without moving the hips or arching the back. Pause briefly, then lower slowly, stopping before the stack touches. Finish the set, then switch legs.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. A work set ends at failure, the point where the next repetition can no longer be done in good form. Add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Use less weight if the hips swing or the thigh leaves its pad. The [[Exercise/Body/Strength/Lying Leg Curl]] trains both legs at once.
+	- ## Sources
+		- Demonstration: [Huberman's other hamstring options, 9:38](https://www.youtube.com/watch?v=CbEFgDFQBvk&t=578s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]].

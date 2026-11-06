@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Dumbbell Fly
+	- Practice an arcing chest isolation movement with dumbbells and a fixed bend in the elbows.
+	- ## Setup
+		- Lie on a flat or slightly inclined bench with a dumbbell in each hand, feet planted and shoulder blades pulled down and back. Hold the weights above the chest, palms facing each other, elbows slightly bent.
+	- ## Practice
+		- Keeping the elbow bend fixed, lower the dumbbells in a wide arc until the upper arms reach about chest level or a comfortable stretch. Bring them back up along the same arc, as if hugging a large barrel.
+	- ## Dose and Progression
+		- Huberman suggests two to three work sets of 6 to 15 repetitions. Add load only while the elbow angle stays fixed.
+	- ## Cues and Variations
+		- If the elbows bend more as the weights come down, the fly has turned into a press; use lighter dumbbells. Huberman demonstrates a slight incline. At the end of a set, bring the weights together over the chest and sit up before setting them down rather than straining to lower them to the floor from the bottom position. A [[Exercise/Body/Strength/Cable Fly]] keeps tension through the whole movement.
+	- ## Sources
+		- Demonstration: [Huberman's dumbbell fly, 4:20](https://www.youtube.com/watch?v=UEU6NYLRi6o&t=260s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]]. Additional instructions: [ACE's lying chest fly](https://www.acefitness.org/resources/everyone/exercise-library/21/lying-chest-fly/).

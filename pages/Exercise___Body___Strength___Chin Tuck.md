@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Chin Tuck
+	- Practice pulling the chin straight back to activate the deep neck flexors that forward head posture weakens.
+	- ## Setup
+		- Sit, stand, or lie with the head level and the eyes looking straight ahead.
+	- ## Practice
+		- Draw the chin straight back without tipping the head up or down. If needed, place an index finger on the point of the chin and push it straight in. Hold, then release.
+	- ## Dose and Progression
+		- Repetitions and holds follow the training plan. Once the tuck is strong, hold it through each direction of the [[Exercise/Body/Strength/Plate Neck Raise]].
+	- ## Cues and Variations
+		- The movement is straight back, not down toward the chest. Rounded shoulders pull the head forward and up, stretching and weakening the front of the neck; the tuck counters that.
+	- ## Sources
+		- Demonstration: [Jeff Cavaliere's chin tuck, 5:07](https://www.youtube.com/watch?v=wjiZaCJ6tCA&t=307s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/16/11/Neck Exercises that Kill Your Neck]].

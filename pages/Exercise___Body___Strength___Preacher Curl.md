@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Preacher Curl
+	- Practice elbow flexion with the upper arm braced against a pad.
+	- ## Setup
+		- Sit at a preacher curl machine with the backs of the upper arms on the pad. Lift the weight slightly off its rest; that is the starting position.
+	- ## Practice
+		- Curl by bending only the elbows, then lower under control to the start without straightening the arms fully. Continue until you can no longer lift the weight.
+	- ## Dose and Progression
+		- Huberman takes sets to failure. Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- At failure, stand up out of the seat to set the weight down. Letting the weight drop with a straightening arm can strain or tear a biceps. The standing [[Exercise/Body/Strength/Biceps Curl]] trains the same muscle with more supination.
+	- ## Sources
+		- Demonstration: [Huberman's preacher curl, 6:16](https://www.youtube.com/watch?v=IzpGEk-2th4&t=376s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]].

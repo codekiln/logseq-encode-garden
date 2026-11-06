@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Rear Delt Fly
+	- Practice moving the arms out and back at the shoulder to train the rear deltoids.
+	- ## Setup
+		- For the bent-over dumbbell version, stand a little wider than shoulder width and hinge forward with a dumbbell in each hand. A rear delt fly machine or a cable stack works too; face inward toward the machine.
+	- ## Practice
+		- With the elbows bent and fixed, raise the arms out and back so only the shoulders move. Keep the sternum high and the chin in, squeeze, then lower under control.
+	- ## Dose and Progression
+		- Huberman takes work sets to failure and adds load over time. Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Keep continuous tension; letting the weights clank at the bottom means the lowering phase is uncontrolled. Back training reaches the rear deltoids only indirectly, so this isolation work fills the gap.
+	- ## Sources
+		- Demonstration: [Huberman's rear delt fly, 3:20](https://www.youtube.com/watch?v=IzpGEk-2th4&t=200s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]].

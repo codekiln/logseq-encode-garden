@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Hack Squat
+	- Practice a machine squat in which an angled sled holds the torso in place so that only the knees and hips move.
+	- ## Setup
+		- Stand on the platform with your back and shoulders against the pads. Test the machine's angle with little or no weight first, and choose a foot position that lets you bend deeply without joint pain.
+	- ## Practice
+		- Release the safety handles, then lower the sled under control by bending the knees and hips. Stop at the deepest range you can control with the back still against the pad, then push through the whole foot to return. Re-engage the safeties before stepping off.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. A work set ends at failure, the point where the next repetition can no longer be done in good form. Add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Moving the feet higher on the platform shifts work toward the hips and glutes; lower and narrower emphasizes the quadriceps. Change the angle or foot position before adding weight if any joint hurts. The [[Exercise/Body/Strength/Leg Press]] is a similar machine alternative.
+	- ## Sources
+		- Demonstration: [Huberman's hack squat, 1:40](https://www.youtube.com/watch?v=CbEFgDFQBvk&t=100s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]].

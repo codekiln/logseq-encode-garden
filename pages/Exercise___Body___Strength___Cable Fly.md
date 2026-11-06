@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Cable Fly
+	- Practice a chest isolation movement against cables, which keep resistance on the chest through the whole range.
+	- ## Setup
+		- Set two cable pulleys slightly above shoulder height. Take a handle in each hand, step forward into a staggered stance, and let the arms open out to the sides with a slight bend in the elbows.
+	- ## Practice
+		- Keeping the elbow bend fixed, draw the hands together in front of the chest. Pause for a second, then let the arms open slowly back to the start.
+	- ## Dose and Progression
+		- Huberman suggests two to three work sets of 6 to 15 repetitions. Add resistance only while the elbow angle and stance stay steady.
+	- ## Cues and Variations
+		- Reduce the load if you lean or step to finish a repetition. Moving the pulleys higher or lower changes the line of pull toward the lower or upper chest. A seated fly machine (pec deck) uses the same pattern with a fixed path and back support.
+	- ## Sources
+		- Demonstration: [Huberman's cable fly, 4:51](https://www.youtube.com/watch?v=UEU6NYLRi6o&t=291s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]]. Additional instructions: [ACE's standing chest fly](https://www.acefitness.org/resources/everyone/exercise-library/160/standing-chest-fly/).

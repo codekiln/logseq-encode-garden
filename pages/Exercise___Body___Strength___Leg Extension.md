@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Leg Extension
+	- Practice isolating the quadriceps by straightening the knees against a machine pad.
+	- ## Setup
+		- Adjust the seat so the knee lines up with the machine's pivot and the roller pad rests on the front of the lower shin. Hold the handles and sit with your back against the pad.
+	- ## Practice
+		- Lift the weight about a centimeter off the stack so the muscle is under tension before the first repetition. Straighten the knees, squeeze the quadriceps at the top, then lower slowly. Stop each descent just before the weight touches the stack.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. A work set ends at failure, the point where the next repetition can no longer be done in good form. Add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Setting the weight down between repetitions releases tension; keep the stack off its rest for the whole set. Use less weight if the hips lift off the seat or the movement turns into a kick.
+	- ## Sources
+		- Demonstration: [Huberman's leg extension, 5:12](https://www.youtube.com/watch?v=CbEFgDFQBvk&t=312s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]].
