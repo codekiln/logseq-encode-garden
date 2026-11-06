@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Lying Leg Curl
+	- Practice isolating the hamstrings by curling the heels toward the hips while lying face down on a machine.
+	- ## Setup
+		- Lie face down with the knees just past the bench and lined up with the machine's pivot. Set the roller pad on the lower Achilles, near the ankle. Hold the handles and brace the trunk.
+	- ## Practice
+		- Curl the pad toward the buttocks without lifting the hips or arching the back. Pause briefly at the top, then lower slowly. Stop just short of the stack touching so the hamstrings stay under tension through the set.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. A work set ends at failure, the point where the next repetition can no longer be done in good form. Add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Toe position changes which part of the hamstring works; Huberman suggests experimenting. If the lower back takes over, use less weight. Curling one leg at a time is a variation.
+	- ## Sources
+		- Demonstration: [Huberman's lying leg curl, 7:39](https://www.youtube.com/watch?v=CbEFgDFQBvk&t=459s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]]. Source: [ACE's lying hamstrings curl](https://www.acefitness.org/resources/everyone/exercise-library/153/lying-hamstrings-curl/).

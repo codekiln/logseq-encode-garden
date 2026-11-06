@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Deadlift
+	- Practice lifting a barbell from the floor with a hip hinge, training the hamstrings, glutes, and lower back along with grip and trunk strength.
+	- ## Setup
+		- Stand with feet about hip to shoulder width apart and the bar over the middle of the feet, close to the shins. Hinge and bend the knees to grip the bar just outside the legs with an overhand grip. Flatten the back and lift the chest.
+	- ## Practice
+		- Brace, then push the feet into the floor and drive the hips forward to stand tall, keeping the bar close to the legs. Think of hinging instead of yanking the bar upward. Lower it by pushing the hips back and bending the knees once the bar passes them, and keep the back flat until the bar touches the floor.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Grip often gives out before the legs; an over-under grip, with one palm up, is a common way to hold heavier loads. The glutes and hamstrings should do the work, not the lower back. The [[Exercise/Body/Strength/Trap-Bar Deadlift]] uses neutral handles beside the body; the [[Exercise/Body/Strength/Romanian Deadlift]] starts standing and keeps the knees nearly straight.
+	- ## Sources
+		- Demonstration: [Huberman's deadlift, 6:18](https://www.youtube.com/watch?v=CbEFgDFQBvk&t=378s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]]. Source: [ACE's deadlift](https://www.acefitness.org/resources/everyone/exercise-library/6/deadlift/).

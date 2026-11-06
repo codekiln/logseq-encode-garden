@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Face Pull
+	- Practice pulling a cable to face height into external rotation to train the rotator cuff, rear deltoids, and upper back.
+	- ## Setup
+		- Set the pulley at face height and attach two ropes so the hands can travel wide enough to reach 90 degrees at the elbows. Grip the ropes underhand with the thumbs pointing back.
+	- ## Practice
+		- Pull toward the face while rotating the forearms up and back, ending in a double-biceps position with the elbows at 90 degrees and the thumbs pointing behind you. Squeeze the shoulder blades together, hold, and return under control.
+	- ## Dose and Progression
+		- Jeff Cavaliere suggests two or three sets to failure, two or three times a week at the end of a workout, after one light set to rehearse the pattern. A few plates on the stack is enough load.
+	- ## Cues and Variations
+		- An overhand grip or pulling the hands straight to the face leaves the shoulder internally rotated and removes the rotator cuff work. A single rope is too narrow to reach the 90-degree angle. Open the elbows a little wider if the rear deltoids aren't working.
+	- ## Sources
+		- Demonstration: [Jeff Cavaliere's face pull setup, 1:51](https://www.youtube.com/watch?v=UMGpxwhsy_k&t=111s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/05/Jeff Cavaliere Shows Andrew Huberman the Face Pull]].

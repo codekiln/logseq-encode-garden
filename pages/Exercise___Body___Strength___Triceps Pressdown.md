@@ -11,3 +11,4 @@ logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
 		- Avoid using bodyweight to shove the handle downward. Reduce the load if the elbows drift forward or the torso rocks. This is an elbow-extension exercise; Huberman's overhead cable extension uses a different shoulder position.
 	- ## Sources
 		- Source: [Mayo Clinic's Strength Training for Adults, triceps pushdown](https://cancereducation.mayoclinic.org/wp-content/uploads/2019/10/mc2972.pdf#page=12).
+		- Demonstration: [Huberman's triceps isolation, 8:43](https://www.youtube.com/watch?v=IzpGEk-2th4&t=523s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]].

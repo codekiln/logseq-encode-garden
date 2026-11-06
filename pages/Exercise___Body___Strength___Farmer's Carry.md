@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Farmer's Carry
+	- Practice walking while holding heavy weights at the sides to build grip endurance and trunk stability.
+	- ## Setup
+		- Pick up a pair of heavy dumbbells with a hip hinge, then stand tall with the weights at your sides and the shoulders pulled back.
+	- ## Practice
+		- Walk at a steady pace with short, even steps, keeping the trunk upright and the weights from swinging. Set the weights down with the same hinge you used to lift them.
+	- ## Dose and Progression
+		- Distance and load follow the training plan. In Jeff Cavaliere's forearm workout, one lap around the gym follows every set of every exercise. Beginners can do one carry per exercise.
+	- ## Cues and Variations
+		- Squeeze the handles throughout and keep the shoulders from rounding forward. Use lighter weights or a shorter walk if the grip fails before the posture does.
+	- ## Sources
+		- Demonstration: [Jeff Cavaliere's farmer's carry, 4:26](https://www.youtube.com/watch?v=4EkKhkSNjWY&t=266s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/18/12/The Perfect Forearm Workout]].

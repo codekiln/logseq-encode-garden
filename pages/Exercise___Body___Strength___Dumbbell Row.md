@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Dumbbell Row
+	- Practice a one-arm horizontal pull with a dumbbell while a bench supports the opposite hand and knee.
+	- ## Setup
+		- Hold a dumbbell in one hand. Rest the other hand and the knee on that same side on the bench, with the bench hand under the shoulder and the knee under the hip. Brace the core, keep the back flat, and let the weighted arm hang.
+	- ## Practice
+		- Lift the weight slightly first to feel the target muscles engage. Row the dumbbell up by driving the elbow back close to the side, stopping before the torso has to twist. Lower slowly, and set the weight down at the end of the set rather than dropping it.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Reduce the load if the torso rotates or the back rounds to finish a repetition. Barbell and machine rows train the same pattern. Huberman uses compound pulls and rows with progressive overload for the back and skips isolation movements.
+	- ## Sources
+		- Demonstration: [Huberman's dumbbell row, 7:43](https://www.youtube.com/watch?v=UEU6NYLRi6o&t=463s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]]. Additional instructions: [ACE's single-arm row](https://www.acefitness.org/resources/everyone/exercise-library/126/single-arm-row/).

@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Front Squat
+	- Practice a squat with the load held in front of the shoulders, developing the quadriceps with a more upright torso than the back squat.
+	- ## Setup
+		- Set the rack hooks just below shoulder height and the safety bars below the bottom of your squat. Step under the bar so it rests on the front of the shoulders against the neck, with the elbows raised in front and the fingers or crossed arms keeping the bar in place. Stand to unrack it and take a short step back.
+	- ## Practice
+		- Brace your trunk, keep the elbows high and the chest up, and bend hips and knees together. Lower as deep as you can while keeping the whole foot planted, then drive up to stand. Let your knees track in the direction of your toes.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Huberman offers it for people who lack the ankle or shoulder flexibility to squat deep with the bar on their back. If the elbows drop, the bar rolls forward; use less weight. Holding a dumbbell at each shoulder is a way to learn the pattern; the [[Exercise/Body/Strength/Back Squat]] is the back-loaded version.
+	- ## Sources
+		- Demonstration: [Huberman's front squat, 1:07](https://www.youtube.com/watch?v=CbEFgDFQBvk&t=67s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]]. Source: [ACE's front squat](https://www.acefitness.org/resources/everyone/exercise-library/22/front-squat/), a dumbbell version.

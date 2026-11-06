@@ -12,3 +12,13 @@ logseq-created-time-year:: [[20/1/6]]
 		- Cavaliere shows neck exercises that work the same muscles without that compression.
 	- ## [[Video]]
 		- {{video https://www.youtube.com/watch?v=wjiZaCJ6tCA}}
+			- ### {{youtube-timestamp 0}} Neck bridges to avoid
+				- Bridging on the back or leaning forward onto the head builds a thick neck while wearing down the vertebrae.
+			- ### {{youtube-timestamp 55}} Why you need to protect your spine
+				- Bridges are closed-chain and compress the cervical spine while it moves. Bone grinding on bone can grow bone spurs that impinge the nerve roots, causing sudden pain and arm weakness.
+			- ### {{youtube-timestamp 230}} [[Exercise/Body/Strength/Plate Neck Raise]]
+				- A towel-wrapped plate on the head, lying on a bench, trains flexion, extension, and side bending in each direction.
+			- ### {{youtube-timestamp 307}} [[Exercise/Body/Strength/Chin Tuck]]
+				- Forward head posture stretches and weakens the front of the neck. Set a chin tuck before every plate rep, and lighten the load before losing it.
+			- ### {{youtube-timestamp 377}} Conclusion
+				- Plates allow progressive overload without compressing the spine, and spine damage may not show until it suddenly hurts.

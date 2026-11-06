@@ -11,3 +11,4 @@ logseq-entity:: [[Logseq/Entity/Exercise/Body/Flexibility]]
 		- Begin with 10–30 seconds per side and repeat as comfortable. A shorter stance and smaller movement are useful starting versions. Avoid creating the stretch only by arching the lower back.
 	- ## Sources
 		- Demonstration: [Huberman's hip-extension stretch, 2:15](https://www.youtube.com/watch?v=SzufA9jqrPw&t=135s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Mobility and Flexibility]].
+		- Demonstration: [Eric Goodman's lunge stretch, 2:37](https://www.youtube.com/watch?v=4BOTvaRaDjI&t=157s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/11/07/Original 12 Minutes of Foundation Training]].

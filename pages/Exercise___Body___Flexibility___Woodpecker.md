@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Flexibility]]
+- # Woodpecker
+	- Practice a split-stance hip hinge that loads the front glute and hamstring while the back stays braced.
+	- ## Setup
+		- Stand with one foot forward and one back, feet pointing the same way and hips square. Bend the front knee slightly and keep it behind the ankle.
+	- ## Practice
+		- Brace the spine, push the hips back, and press the chest forward until the front hamstring stretches. Reach the arms forward and up and hold. Then cross the arms over the chest and hinge up and down, moving the upper body as one unit from the front hip.
+	- ## Dose and Progression
+		- The video holds the reach briefly, adds a rotation toward the front leg as 10 to 15 repetitions or a static hold, then does 8 to 10 hinges per side.
+	- ## Cues and Variations
+		- Press through the front heel and keep the front knee from sliding forward. Any bend in the lower back means the hinge has gone too far.
+	- ## Sources
+		- Demonstration: [Eric Goodman's split-stance hinge, 3:31](https://www.youtube.com/watch?v=4BOTvaRaDjI&t=211s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/11/07/Original 12 Minutes of Foundation Training]].

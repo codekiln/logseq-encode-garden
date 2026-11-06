@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Dumbbell Bench Press
+	- Practice a horizontal press with a dumbbell in each hand, which lets each arm work on its own path and allows the weights to be set aside if a repetition fails.
+	- ## Setup
+		- Sit on the end of a flat bench with the dumbbells standing on your knees. Lean back and kick them up one knee at a time so they arrive at the shoulders as your back reaches the bench. Plant the feet, pull the shoulder blades down and back, and keep head, shoulders, and hips on the bench.
+	- ## Practice
+		- Press the dumbbells up until the elbows are straight, with wrists stacked over the elbows. Lower slowly toward the middle of the chest, slightly wide toward the armpits, then press back up without arching the lower back. At the end of the set, bring the weights back to the chest and sit up with them on the knees, or hand them to a spotter.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- If a repetition fails, lower the dumbbells to the sides and drop them clear of the body rather than straining to finish. Getting into and out of position safely limits the usable load more than the press itself; practice the kick-up with a light pair. Keeping the elbows closer to the sides shifts work toward the triceps; flaring them shifts it toward the chest.
+	- ## Sources
+		- Demonstration: [Huberman's dumbbell bench press, 1:08](https://www.youtube.com/watch?v=UEU6NYLRi6o&t=68s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]]. Additional instructions: [ACE's dumbbell chest press](https://www.acefitness.org/resources/everyone/exercise-library/19/chest-press/).

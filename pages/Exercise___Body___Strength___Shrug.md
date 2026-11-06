@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Shrug
+	- Practice raising and lowering the shoulders under load to train the upper trapezius.
+	- ## Setup
+		- Stand tall holding a dumbbell in each hand at your sides, palms facing in, or a barbell in front of the thighs. Brace the core and keep the head in line with the spine.
+	- ## Practice
+		- With the arms straight, raise the shoulders straight up toward the ears, pause briefly, then lower them slowly to the start. Move only the shoulders; do not roll them or bend the elbows.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Huberman treats shrugs as optional, because deadlifts and rows already work the traps, and suggests people with rounded shoulders may want to skip them. Reduce the load if the lower back arches or the head juts forward.
+	- ## Sources
+		- Demonstration: [Huberman's traps segment, 9:28](https://www.youtube.com/watch?v=UEU6NYLRi6o&t=568s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]]. Additional instructions: [ACE's standing shrug](https://www.acefitness.org/resources/everyone/exercise-library/75/standing-shrug/) and [ACE's barbell shrug](https://www.acefitness.org/resources/everyone/exercise-library/72/shrug/).

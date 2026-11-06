@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Plate Neck Raise
+	- Practice neck flexion, extension, and side bending against a towel-wrapped weight plate while lying on a bench.
+	- ## Setup
+		- Wrap a weight plate in a towel. For flexion, lie face up with the head over the end of the bench and the plate on the forehead. For extension, lie face down with the plate on the back of the head. For side bending, lie on your side with the plate on the upper side of the head.
+	- ## Practice
+		- Set a [[Exercise/Body/Strength/Chin Tuck]] first. Lower the head toward the floor, then raise it against the plate through a controlled range, holding the plate with one hand. Repeat in each of the four directions.
+	- ## Dose and Progression
+		- Sets, repetitions, and load follow the training plan. Progress by adding plate weight; drop repetitions or weight before giving up the chin tuck.
+	- ## Cues and Variations
+		- The neck moves while the spine is unloaded. Neck bridges on the floor build size but compress the cervical spine while it moves, which can lead to bone spurs and nerve-root impingement.
+	- ## Sources
+		- Demonstration: [Jeff Cavaliere's plate series, 3:50](https://www.youtube.com/watch?v=wjiZaCJ6tCA&t=230s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/16/11/Neck Exercises that Kill Your Neck]].

@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Lateral Raise
+	- Practice raising light dumbbells out to the sides to train the side deltoids.
+	- ## Setup
+		- Stand holding a light dumbbell in each hand at your sides; some people need as little as 5 pounds to keep the movement controlled.
+	- ## Practice
+		- Raise the dumbbells out and slightly in front of the body to about shoulder height, keeping the thumbs level with or a little higher than the pinkies. Lower slowly.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Reduce the load if you swing the torso or shrug to lift. Experiment with the path: some people feel the side deltoids best straight out to the side, others slightly in front of the body.
+	- ## Sources
+		- Demonstration: [Huberman's lateral raise, 2:22](https://www.youtube.com/watch?v=IzpGEk-2th4&t=142s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]].

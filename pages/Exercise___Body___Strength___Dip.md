@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Dip
+	- Practice lowering and pressing the body between parallel bars to train the chest, front and side shoulders, and triceps.
+	- ## Setup
+		- Grip parallel bars, jump or step up, and support yourself with straight arms and the shoulders pulled down away from the ears.
+	- ## Practice
+		- Lean the torso forward somewhat and bend the elbows to lower the body under control until the upper arms are about parallel to the floor or to the deepest point you control without shoulder pain. Press back up to straight arms. Keep the shoulder blades set back and down so the shoulders do not roll forward at the bottom.
+	- ## Dose and Progression
+		- Sets, repetitions, and rest follow the training plan. Once 10 to 15 bodyweight repetitions come easily, add load, for example a dumbbell held between the feet or a dip belt. Huberman calls the weighted dip an upper body squat.
+	- ## Cues and Variations
+		- A more forward lean emphasizes the chest; a more upright torso shifts work toward the triceps. Use an assisted dip machine or a band for support until full bodyweight repetitions are possible. Stop the set if the front of the shoulder hurts at the bottom.
+	- ## Sources
+		- Demonstration: [Huberman's dips, 3:15](https://www.youtube.com/watch?v=UEU6NYLRi6o&t=195s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]].

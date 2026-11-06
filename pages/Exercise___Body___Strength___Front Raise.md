@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Front Raise
+	- Practice raising a load in front of the body to train the front deltoids.
+	- ## Setup
+		- Stand holding a light dumbbell in each hand in front of the thighs, or a cable handle from a low pulley.
+	- ## Practice
+		- Raise the arms forward to about shoulder height with a slight bend in the elbows, then lower slowly.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Add front raises when bench and overhead presses aren't developing the front deltoids enough. Reduce the load if you lean back or swing to lift.
+	- ## Sources
+		- Demonstration: [Huberman's front raise, 3:05](https://www.youtube.com/watch?v=IzpGEk-2th4&t=185s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]].

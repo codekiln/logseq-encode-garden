@@ -13,13 +13,13 @@ logseq-created-time-year:: [[20/2/6]]
 			- [[Person/Andrew Huberman/Book/26/Protocols/YouTube/11/07/Original 12 Minutes of Foundation Training]]
 	- ## [[Video]]
 		- {{video https://www.youtube.com/watch?v=SzufA9jqrPw}}
-			- ### {{youtube-timestamp 28}} Sumo squat with a twist
+			- ### {{youtube-timestamp 28}} [[Exercise/Body/Flexibility/Sumo Squat with Rotation]]
 				- Wide stance, toes slightly out, squat slowly with weight toward the heels. Press the elbows into the insides of the knees, then free one arm, point at the ceiling, and look up at the finger. Stretches the hips, thoracic spine, neck, and shoulder. Point at a corner of the room until full rotation comes.
-			- ### {{youtube-timestamp 135}} Knee behind the glutes
+			- ### {{youtube-timestamp 135}} [[Exercise/Body/Flexibility/Hip-Flexor Stretch]]
 				- Hip extension to stretch the hip flexors, which sitting, walking, stairs, and cycling all keep short. Standing, or in a kneeling lunge with the arm overhead.
-			- ### {{youtube-timestamp 221}} Reverse tabletop
+			- ### {{youtube-timestamp 221}} [[Exercise/Body/Flexibility/Reverse Tabletop]]
 				- Feet flat, knees bent, hands behind with fingers pointing out to the sides. A test of shoulder flexibility, not strength. Later progressions place the hands farther back and scoot the hips forward to stretch the biceps, held passively for 5 to 30 seconds.
-			- ### {{youtube-timestamp 315}} Founder pose
+			- ### {{youtube-timestamp 315}} [[Exercise/Body/Flexibility/Founder Pose]]
 				- Developed by Eric Goodman. Feet wider than shoulders and planted, push the hips back, lengthen the spine away from the tailbone, raise the arms, eyes forward, and exhale. Stretches the lower back; Huberman uses it as a physical and mental reset.
 			- ### {{youtube-timestamp 396}} Further resources
 				- Huberman recommends the mobility work of Kelly Starrett and Ido Portal.

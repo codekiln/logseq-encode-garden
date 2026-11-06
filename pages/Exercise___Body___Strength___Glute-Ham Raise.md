@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Glute-Ham Raise
+	- Practice lowering and raising the torso on a glute-ham bench, combining a hip hinge with a hamstring curl.
+	- ## Setup
+		- Adjust the bench so the knees rest just behind the thigh pad and the ankles are locked under the rollers with the feet against the plate. Start upright on the knees with the hips extended and arms crossed over the chest.
+	- ## Practice
+		- Lower the torso by letting the knees straighten while the hips stay in line with the torso. As the body nears parallel to the floor, the hips can bend to continue downward. Return by curling the heels into the rollers and driving the hips forward until upright.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- The movement takes some skill. Push off the floor or a band with the hands to assist the ascent while learning it, or lower slowly and use the hands to return.
+	- ## Sources
+		- Demonstration: [Huberman's other hamstring options, 9:38](https://www.youtube.com/watch?v=CbEFgDFQBvk&t=578s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]]. Source: [NSCA's glute ham raise](https://www.nsca.com/education/articles/kinetic-select/glute-ham-raise/).

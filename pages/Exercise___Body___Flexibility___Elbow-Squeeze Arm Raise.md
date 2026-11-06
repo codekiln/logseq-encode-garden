@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Flexibility]]
+- # Elbow-Squeeze Arm Raise
+	- Practice raising the arms with the forearms pressed together while holding a hip hinge, opening the upper back and shoulders.
+	- ## Setup
+		- Stand in a [[Exercise/Body/Flexibility/Founder Pose]] with the hips back and the chest lifted. Bring the arms in front of you with the elbows bent at 90 degrees, forearms touching and palms and fingers pressed together.
+	- ## Practice
+		- Keep the forearms together and raise them as high as you can through a full range, then lower them. The set ends when the elbows separate.
+	- ## Dose and Progression
+		- The video does two sets of 10 to 15 lifts. If full repetitions are too hard, press up once and hold the squeeze.
+	- ## Cues and Variations
+		- Squeeze each finger, the palms, and the elbows together the whole time; the exercise stops working when the elbows come apart.
+	- ## Sources
+		- Demonstration: [Eric Goodman's elbow-squeeze arm raise, 10:00](https://www.youtube.com/watch?v=4BOTvaRaDjI&t=600s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/11/07/Original 12 Minutes of Foundation Training]].

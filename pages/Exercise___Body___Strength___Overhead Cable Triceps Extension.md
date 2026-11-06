@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Overhead Cable Triceps Extension
+	- Practice extending the elbows overhead against a cable to stretch and train the long head of the triceps.
+	- ## Setup
+		- Set the cable above and behind you, face away from the stack, and hold the handles behind the head. Step far enough from the machine to feel a stretch on the triceps at the start. Lock the lats and brace the core.
+	- ## Practice
+		- Extend the elbows to press the handles forward and overhead, like a soccer throw-in, then return to the stretched position. The movement is mostly at the elbow; as the set gets harder, let the shoulders come back a little while keeping the stretch.
+	- ## Dose and Progression
+		- Huberman usually does three sets to or near failure. Sets, repetitions, resistance, and rest follow the training plan. Establish a repeatable movement with a light load first; add resistance gradually after completing the planned repetitions with consistent control.
+	- ## Cues and Variations
+		- Reduce the load if the trunk arches or the stretch disappears. [[Exercise/Body/Strength/Triceps Pressdown]] trains the triceps with the arms at the sides.
+	- ## Sources
+		- Demonstration: [Huberman's overhead cable triceps extension, 7:40](https://www.youtube.com/watch?v=IzpGEk-2th4&t=460s). Full notes: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]].
