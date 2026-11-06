@@ -4,7 +4,7 @@ see-also:: [[Music/Making/Log/26/10/28 Wed]]
 - # What's the difference between Post FX and Post Mixer for a track's audio input in [[Ableton]] Live?
 	- ## [[AI Answer]]
 		- [[Answer/Official]] from [Live 12 Manual, 17.5.1 Internal Routing Points](https://www.ableton.com/en/live-manual/12/routing-and-i-o/#internal-routing-points)
-		- **Short answer:** both include the tapped track's devices. Post Mixer also includes the track's own volume and pan, and likely its mute and crossfader assignment. Post FX includes none of these. Neither tap includes sends.
+		- **Short answer:** both include the [tapped]([[Ableton/Tap Point]]) track's devices. Post Mixer also includes the track's own volume and pan, and likely its mute and crossfader assignment. Post FX includes none of these. Neither [tap]([[Ableton/Tap Point]]) includes sends.
 		- When a track's **Audio From** is another track, the **Input Channel** chooser sets the [[Ableton/Tap Point]] ([[Ableton/Live/UG/17 Routing and IO/05 Internal Routings/01 Internal Routing Points]]):
 			- **Post FX** — "taps the signal at the output of a track's device chains (FX), but before it has been passed back to the track mixer. Changes to the tapped track's devices will therefore alter the tapped signal, but changes to its mixer settings will not."
 			- **Post Mixer** — "taps the final output of a track, after it has passed through its device chains and mixer."
@@ -15,8 +15,8 @@ see-also:: [[Music/Making/Log/26/10/28 Wed]]
 			- **Volume and pan** — included; the manual's guitar example names level and panning.
 			- **Track Activator** — likely included. A return's Post send taps "after the track's pan, volume and activator" ([[Ableton/Live/UG/18 Mixing/04 Return Tracks and the Main track]]), which places the activator in that same stage.
 			- **Crossfader A/B assignment** — likely included. It changes "volume at each track's gain stage" ([[Ableton/Live/UG/18 Mixing/05 Using Live's Crossfader]]).
-			- **Sends** — not included. Send knobs sit in the mixer section, but a send copies the signal to a return track without changing the track's own output. The return's effects never reach a Post Mixer tap, and send levels don't change what it records.
+			- **Sends** — not included. Send knobs sit in the mixer section, but a send copies the signal to a return track without changing the track's own output. The return's effects never reach a Post Mixer [tap]([[Ableton/Tap Point]]), and send levels don't change what it records.
 			- **Solo and Arm** — don't alter the sound.
-			- To test the two "likely" items: tap a track Post Mixer, then mute the source, or assign it to A and move the crossfader to B, and watch the receiving track's input meter.
-		- **Solo:** soloing the receiving track still lets you hear a source tapped Post FX, but not one tapped Post Mixer.
-		- Rack chains offer the same three tap points. There, Post Mixer is the chain's output after its chain mixer, just before the chains are summed ([[Ableton/Live/UG/17 Routing and IO/05 Internal Routings/02 Making Use of Internal Routing]]).
+			- To test the two "likely" items: [tap]([[Ableton/Tap Point]]) a track Post Mixer, then mute the source, or assign it to A and move the crossfader to B, and watch the receiving track's input meter.
+		- **Solo:** soloing the receiving track still lets you hear a source [tapped]([[Ableton/Tap Point]]) Post FX, but not one [tapped]([[Ableton/Tap Point]]) Post Mixer.
+		- Rack chains offer the same three [tap points]([[Ableton/Tap Point]]). There, Post Mixer is the chain's output after its chain mixer, just before the chains are summed ([[Ableton/Live/UG/17 Routing and IO/05 Internal Routings/02 Making Use of Internal Routing]]).
