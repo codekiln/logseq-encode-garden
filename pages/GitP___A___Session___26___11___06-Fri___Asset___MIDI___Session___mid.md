@@ -1,7 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Asset/B2]]
 public:: true
-- # Session MIDI
+- # GitP.26.11.06 MIDI
 	- [Download the session MIDI](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___06-Fri___Asset___MIDI___Session.mid)
-	- The MIDI from [[GitP/A/Session/26/11/06-Fri]], lined up with the recording, with a marker at each chapter.
-	- "LPP to MF" holds the notes the [[Novation/Launchpad/Pro/Mk3]] sent to the [[Microfreak]], including the sequencer playing back phrases it caught from the MicroFreak keys.
-	- "MF to LPP" holds what was played on the MicroFreak itself: key presses, key pressure and knob turns.
+	- Type 1 standard MIDI file at 120 BPM in 4/4, 32:00 long, aligned with the episode recording. The tempo track carries a marker for each chapter. "LPP to MF" holds the Launchpad Pro notes sent to the MicroFreak, including the sequencer's playback of captured MicroFreak phrases. "MF to LPP" holds the MicroFreak's own key presses, per-note pressure (as polyphonic aftertouch) and knob changes. All tracks use MIDI channel 1.
