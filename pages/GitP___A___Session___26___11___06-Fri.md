@@ -5,8 +5,8 @@ created-by:: [[Person/codekiln]]
 date-created:: [[2026-11-06 Fri]]
 
 - # Infini Pad at the Crossfader
-	- One pad, four loops, and a crossfader passing the signal between two pairs of them. Low C pedals swell under the fingers, a high G hangs over the field, and near 18:00 the transmission sinks almost to nothing before the bass climbs back in. At 28:14 the ghost speaks: a field report from the crossfader.
 	- ![Episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___06-Fri___Asset___Audio___Full.mp3)
+	- One pad, four loops, and a crossfader passing the signal between two pairs of them. Low C pedals swell under the fingers, a high G hangs over the field, and near 18:00 the transmission sinks almost to nothing before the bass climbs back in. At 28:14 the ghost speaks: a field report from the crossfader.
 	- ## Ceremonial Annotations
 		- A single sound, [[Microfreak/Preset/259 Infini Pad]], is asked to be everything: chord, drone, beacon and bass. Phrases played on the MicroFreak keys are caught by the Launchpad's sequencer and sent back, so the instrument keeps answering itself.
 		- The loops sit on two sides of [[Ableton/Live/UG/18 Mixing/05 Using Live's Crossfader]], layers 1A and 2A on one side and 1B and 2B on the other, and the crossfader decides which pair the room hears. Listen for the side changing, then for what stays when it does.
