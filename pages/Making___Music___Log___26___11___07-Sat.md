@@ -2,10 +2,12 @@
 	- ## [[Ableton/Live/Log/26/11/07-Sat]]
 		- decided to start a dedicated ableton live log for (re-)learning and looking back at the history to jog my memory.
 	- ## [[GitP/A/Session/26/11/06-Fri]]
+	  collapsed:: true
 		- ![Session View of the 26.11.06 Set](../assets/GitP___A___Session___26___11___06-Fri___Set___Asset___Image___Session-View.png)
 			- Here's an image of the set.
 			- DONE [[Ghost Gardener]] please create [[Logseq/Entity/Ableton/Set]] using this and the xml. Move the image into [[GitP/A/Session/26/11/06-Fri/Set]] and rename it appropriately. Then fill it out to the best of your ability using the xml from ableton as well as the image. Describe the image contents in the set.
 		- DONE please review these and their subnamespaces and then revise the words in [[GitP/A/Session/26/11/06-Fri]] and subpages to better adhere to my needs: [[GitP/Vibe]], [[My/AI/Rule]], [[My/Pref/Writing]].
+		  collapsed:: true
 			- [[AI/Response]] from [[Anthropic/Model/Claude/5/5/Opus]]
 			  id:: 6aef11b6-a260-492e-9fb4-f48b39a25ac8
 				- Acknowledged
@@ -32,4 +34,7 @@
 						- [[AI/Response]] from [[Anthropic/Model/Claude/5/5/Opus]]
 							- The track pages under [[GitP/A/Session/26/11/06-Fri/Set]] are subpages of the episode, so your request to revise the subpages covered them too. Their properties use Live's internal names, such as AudioIn/External/M2 for the input the Session View labels "Ext. In 3".
 							- The import task described on [[Logseq/Entity/Ableton/Set]] writes those properties and rewrites them on each run, so plainer names would have to come from the task. Nothing needs to change unless you want the task to write the labels Live shows on screen.
+		-
+	- ## [[GitP/A/Session/26/11/07-Sat]]
+		-
 		-
