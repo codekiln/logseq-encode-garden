@@ -5,6 +5,7 @@ see-also:: [[GitP/House/Back]], [[GitP/How To/Prepare Podcast Metadata]]
 	- ## Record and leave a note
 		- Record the episode in Ableton under `~/Documents/ableton/GitP/<project folder>` and export one WAV into that folder.
 		- Create a `Making/Music/Log` entry with a link to the project and exported WAV, plus a few notes about the session.
+		- Say each preset's number and name into the commentary mic as you select it.
 		- Ask the AI assistant to prepare the episode from that log entry. The exported WAV is the episode recording.
 	- ## What the AI prepares
 		- ### Episode page and audio
@@ -18,6 +19,7 @@ see-also:: [[GitP/House/Back]], [[GitP/How To/Prepare Podcast Metadata]]
 			- When a new capture is needed and authorized, protect unsaved sounds and back up the slot before any rename. Upload prepared exports and add their download links. Missing slot identification leaves the instrument unchanged.
 		- ### Session details
 			- The AI reads the captured MIDI, the music-making log, and the MicroFreak and Launchpad manuals to explain what happened in the session.
+			- When the log doesn't name the presets, the AI transcribes the commentary track and takes each preset and its start time from the spoken announcement. It asks only when the commentary names none.
 			- It correlates recorded MIDI CC messages with the MicroFreak manual and reads the downloaded presets for oscillator type, preset category, and other supported details. The episode page links the sources for those details.
 			- The AI distinguishes recorded changes from the settings in a saved preset. It leaves unknown details out of the episode description.
 		- ### MIDI download
