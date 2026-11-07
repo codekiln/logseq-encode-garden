@@ -1,0 +1,5 @@
+- [[2026-11-07 Sat]]
+	- ## [[Ableton/Live/UG/21 Comping]]
+		- Rediscovered  while trying to find the correct commentary track for [[GitP/A/Session/26/11/06-Fri]].
+			- TODO [[Ghost Gardener]] please create a [[Logseq/Entity/Concept]] and [[Logseq/Entity/Term]] at [[Comping]] and reference [[Ableton/Live/UG/21 Comping]]
+		-

@@ -1,0 +1,9 @@
+- [[2026-11-07 Sat]]
+	- ## [[Ableton/Live/Log/26/11/07-Sat]]
+		- decided to start a dedicated ableton live log for (re-)learning and looking back at the history to jog my memory.
+	- ## [[GitP/A/Session/26/11/06-Fri]]
+		- ![image.png](../assets/image_1794050840073_0.png)
+			- Here's an image of the set.
+			- TODO [[Ghost Gardener]] please create [[Logseq/Entity/Ableton/Set]] using this and the xml. Move the image into [[GitP/A/Session/26/11/06-Fri/Set]] and rename it appropriately. Then fill it out to the best of your ability using the xml from ableton as well as the image. Describe the image contents in the set.
+		- TODO please review these and their subnamespaces and then revise the words in [[GitP/A/Session/26/11/06-Fri]] and subpages to better adhere to my needs: [[GitP/Vibe]], [[My/AI/Rule]], [[My/Pref/Writing]].
+		-
