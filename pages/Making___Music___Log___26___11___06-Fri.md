@@ -1,6 +1,7 @@
 prev:: [[Making/Music/Log/26/11/02-Mon]]
 
 - [[2026-11-06 Fri]]
+	- New GitP session today - [[GitP/A/Session/26/11/06-Fri]]
 	- ## 05:30 — Launchpad Pro sequencer track colors
 		- The four sequencer tracks on the [[Novation/Launchpad/Pro/Mk3]] look orange, violet, green and a color that is hard to name, something like peach. I first called it pink, but it doesn't look very pink to me.
 		- I saw this in the diagram on [[Launchpad/UG/09 Sequencer/03 Patterns View]].

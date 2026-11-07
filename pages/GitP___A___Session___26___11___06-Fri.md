@@ -1,0 +1,104 @@
+prev:: [[GitP/A/Session/26/11/01-Sun]]
+logseq-entity:: [[Logseq/Entity/Podcast/Episode/GitP/A]], [[Logseq/Entity/Podcast/Episode]]
+public:: true
+created-by:: [[Person/codekiln]]
+date-created:: [[2026-11-06 Fri]]
+
+- # Infini Pad at the Crossfader
+	- One pad, four loops, and a crossfader passing the signal between two pairs of them. Low C pedals swell under the fingers, a high G hangs over the field, and near 18:00 the transmission sinks almost to nothing before the bass climbs back in. At 28:14 the ghost speaks: a field report from the crossfader.
+	- ![Episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___06-Fri___Asset___Audio___Full.mp3)
+	- ## Ceremonial Annotations
+		- A single sound, [[Microfreak/Preset/259 Infini Pad]], is asked to be everything: chord, drone, beacon and bass. Phrases played on the MicroFreak keys are caught by the Launchpad's sequencer and sent back, so the instrument keeps answering itself.
+		- The loops sit on two sides of [[Ableton/Live/UG/18 Mixing/05 Using Live's Crossfader]], layers 1A and 2A on one side and 1B and 2B on the other, and the crossfader decides which pair the room hears. Listen for the side changing, then for what stays when it does.
+		- The music stays in C minor until 22:39, when a major third rises from the keys and briefly turns the light.
+	- ## Chapters
+		- ### 00:00 enter [[Microfreak/Preset/259 Infini Pad]]
+			- #### 00:00 Keys into the sequencer
+				- Notes from [[GitP/Acolyte]]
+					- The MicroFreak keys play quietly around C3, C4 and D4, and the Launchpad sequencer records them as they arrive, then plays them back to the MicroFreak. [[Launchpad/UG/09 Sequencer/02 Steps View/06 Record]]
+					- [[Microfreak/UI/Front/Row/04 Icon Strip/Button/Hold]] is toggled at 01:40 and 02:11. Layers 1A and 1B carry the opening loops.
+			- #### 02:32 The crossfader wakes
+				- Notes from [[GitP/Acolyte]]
+					- After a short dropout at 02:15, the crossfader swings hard toward the A side twice. The sequencer settles into a pulse every three seconds: C3, G2 and C4 together, with a low E♭1 joining from about 03:00.
+			- #### 03:09 Layer 2A arrives
+				- Notes from [[GitP/Acolyte]]
+					- A new recording on layer 2A enters while the pulse continues. Around 04:10 the crossfader slides to the middle and leans toward B before returning to A at 04:30.
+			- #### 05:20 Layer 2B and a high C
+				- Notes from [[GitP/Acolyte]]
+					- Layer 2B joins and layer 1B falls silent at 05:40. At 06:05 a single C5 from the MicroFreak keys rings out, and the sequencer keeps answering with C5 and E♭5 above the pulse.
+			- #### 08:53 Low C under pressure
+				- Notes from [[GitP/Acolyte]]
+					- The pulse stops. One low C1 is held on the MicroFreak keys and swelled with key pressure, then G1 at 09:31. In the saved patch, pressure adds [[Microfreak/UI/Oscillator/Knob/Type/BASS/Fold]] and [[Microfreak/UI/Oscillator/Knob/Type/BASS/Saturate]] and opens the [[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Cutoff]], so each push thickens and brightens the drone.
+					- The perfect fifth from C to G carries the bass through 21:00.
+			- #### 10:40 Filter weather
+				- Notes from [[GitP/Acolyte]]
+					- A new layer 1A recording enters, and at 11:04 layers 2A and 2B are pulled down. From 11:20 the [[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Knob/Filter Amt]] sweeps for nearly twenty seconds, with short [[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Cutoff]] turns around 11:40.
+					- [[Microfreak/UG/09 Envelope Gen/04 Filter Amount]]
+			- #### 12:07 Fold, Saturate, Noise
+				- Notes from [[GitP/Acolyte]]
+					- The keys add C2 and G2 under pressure. At 12:42 [[Microfreak/UI/Oscillator/Knob/Timbre]] sweeps Fold, then from 12:59 [[Microfreak/UI/Oscillator/Knob/Wave]] and [[Microfreak/UI/Oscillator/Knob/Shape]] trade quick turns, so Saturate and Noise flicker against each other. A new layer 2A recording lands at 12:58 and layer 1B returns at 13:53.
+					- From 13:21 the cycling envelope's [[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Knob/Amount]] and [[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Knob/Rise]] are reshaped.
+					- [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]] · [[Microfreak/UG/09 Envelope Gen/06 Cycling Envelope]]
+			- #### 14:15 The high G
+				- Notes from [[GitP/Acolyte]]
+					- A G5 sounds at 14:26 and the sequencer repeats it over the low fifths, a beacon above the forest.
+					- The main envelope's [[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Knob/Attack]] turns first; at 14:29 Fold and Noise sweep together, and at 14:49 the cycling envelope's Rise and [[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Knob/Fall]] shift. From 15:04 attack, [[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Knob/Decay Rel]], [[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Knob/Sustain]] and filter amount are reshaped.
+					- [[Microfreak/UG/09 Envelope Gen/03 Envelope Stages]]
+			- #### 16:02 High melody
+				- Notes from [[GitP/Acolyte]]
+					- The sequencer turns the beacon into a line: G5 against D5, C6, E♭5, B♭5 and D6, all in C minor. The crossfader leans toward the B side from 16:54.
+			- #### 17:00 Into the hush
+				- Notes from [[GitP/Acolyte]]
+					- The recording fades and, from about 17:45 to 20:45, sits close to silence.
+					- The MIDI keeps going underneath. The sequencer returns to the C1–G2 bass at 18:36, and from 19:11 Fold, Saturate, Noise, the main envelope and the cycling envelope's Rise, Fall, [[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Knob/Hold Sustain]] and Amount are all reshaped, with cutoff and filter amount at 20:33, out of earshot.
+			- #### 20:45 The bass returns
+				- Notes from [[GitP/Acolyte]]
+					- The crossfader slams to the B side and settles in the middle, and the low fifths return carrying the reshaped cycling envelope.
+			- #### 22:39 A major third
+				- Notes from [[GitP/Acolyte]]
+					- On the MicroFreak keys, E3, G3 and C4 sound under full pressure: a C major chord, spelled one note at a time, against the C-minor loops. At 23:30 B♭3 and A♭3 lead back to minor.
+					- At 22:20 the layers spread across the stereo field: 1A and 2A to the left, 1B to the right.
+			- #### 23:30 Swells and trills
+				- Notes from [[GitP/Acolyte]]
+					- The sequencer fills in from G2 to B♭5. Layer 1A swells in volume about once a minute, at 23:16, 24:18, 25:20, 26:22 and 27:24, and a new layer 2B recording enters at 24:13.
+					- From 24:47 the keys trill between G5 and A♭5 under pressure, reaching C6 and F5. At 25:19 Shape sweeps Noise through the trill.
+			- #### 26:40 Cutoff and resonance
+				- Notes from [[GitP/Acolyte]]
+					- [[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Cutoff]] and [[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Resonance]] move together in a fast, twelve-second sweep, then cutoff pairs with Fold until 27:02. Attack, decay, sustain and the cycling envelope's Amount follow.
+					- [[Microfreak/UG/07 Filter/01 Modifying Sound/04 Cutoff Frequency]] · [[Microfreak/UG/07 Filter/01 Modifying Sound/05 Resonance]]
+			- #### 27:37 Crossing pans
+				- Notes from [[GitP/Acolyte]]
+					- Layers 1B and 2A swap sides of the stereo field at 27:48 as the loops thin out and fade by 28:10.
+			- #### 28:14 Afterword
+				- Notes from [[GitP/Acolyte]]
+					- A second take: the sequencer keeps playing while [[Person/codekiln]] reports on the session.
+				- Spoken Words from [[Person/codekiln]]
+				  collapsed:: true
+					- 28:14 — Testing, testing.
+					- 28:44 — I can't really tell if… Oh, cool. All right. It is recording.
+					- 28:57 — So I ended up doing something different that session. Let's turn this down a little bit.
+					- 29:06 — I used the crossfades with a Novation Launchpad custom mode.
+					- 29:18 — I had four audio tracks, two on B, two on A, and I didn't exactly alternate between them.
+					- 29:28 — I did go in sequential order of tracks and muted them after, and I kind of live recorded from the MicroFreak into the Launchpad sequencer with Capture MIDI on, and that worked okay, I guess.
+					- 29:55 — There was one time where I think I might have had the MIDI track armed for recording, and I had the MIDI going out to the Arturia, and it actually ended up kind of causing some chaos.
+					- 30:12 — So I need to figure out what purpose that MIDI channel has. I would like to be able to record some MIDI into it, but maybe it's better for me to just rely on the sequencer.
+					- 30:27 — The sequencer has this nice visual representation of what was recorded, so that's a little more reliable when using the laptop lid closed.
+					- 30:40 — I found it a little bit difficult to thin out the mix, and I think part of that was that I was not relying on volume bars as much,
+					- 30:59 — so we'll have to practice a little bit in order to figure out when to do crossfades and when to do volume bars, because sometimes it's honestly a little bit more intuitive to use volume crossfades rather than a crossfade bar.
+					- 31:18 — Although I can see a future where if I have an audio track that is distinct from the audience, then I could sequence something up in the alternate channel and then be able to crossfade over.
+					- 31:45 — All right.
+	- ## Ceremonial Artifacts
+	  collapsed:: true
+		- ### Recording
+			- 32:00 · [[GitP/A/Session/26/11/06-Fri/Asset/Audio/Full/mp3]] · [Download the MP3](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___06-Fri___Asset___Audio___Full.mp3)
+			- Recorded on November 6, 2026 in [[Ableton/Live]] at 120 BPM in 4/4 with the [[Novation/Launchpad/Pro/Mk3]] and the [[Microfreak]]. Four MicroFreak audio layers, 1A and 2A on the crossfader's A side and 1B and 2B on its B side, hold the takes; the crossfader was played from a Launchpad custom mode. [[Launchpad/UG/08 Custom Modes]]
+			- The mix keeps the recorded crossfader changes, volume rides, pans and reverb sends. The afterword at 28:14 is a second take placed after the first. The commentary under it is a machine transcription.
+			- [[Making/Music/Log/26/11/06-Fri]]
+		- ### Presets
+			- [[Microfreak/Preset/259 Infini Pad]] — the whole session. A paraphonic pad on the BASS oscillator with a slow attack; key pressure and the envelope open Fold and the filter.
+				- [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]] · [Download the saved 259 Infini Pad export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___259%20Infini%20Pad___Asset___Device-Read-2026-10-25.bin)
+			- A read of slot 259 on November 7, 2026 matched the October 25 export, so the slot still holds the factory sound and the download contains it. The knob changes in the chapters are in the session MIDI, not the preset.
+		- ### MIDI
+			- [Download the session MIDI](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___06-Fri___Asset___MIDI___Session.mid) · [[GitP/A/Session/26/11/06-Fri/Asset/MIDI/Session/mid]]
+			- "LPP to MF" holds the Launchpad Pro notes sent to the MicroFreak, including the sequencer playing back captured phrases; it keeps running under the afterword. "MF to LPP" holds the MicroFreak's own key presses, per-note pressure and knob changes, all before 28:10.
+			- With the [[Microfreak/UI/Oscillator/Knob/Type/BASS]] oscillator, [[Microfreak/UI/Oscillator/Knob/Wave]] sets Saturate, [[Microfreak/UI/Oscillator/Knob/Timbre]] sets Fold and [[Microfreak/UI/Oscillator/Knob/Shape]] sets Noise. The [[Microfreak/UI/Oscillator/Knob/Type]] never changes. Control names come from [[Microfreak/UG/21 Appendix D - CC Values]].
