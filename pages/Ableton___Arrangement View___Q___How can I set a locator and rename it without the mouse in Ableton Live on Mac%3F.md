@@ -2,6 +2,15 @@ logseq-entity:: [[Logseq/Entity/Question]]
 see-also:: [[Ableton/Live/UI/Arrangement View/Scrub Area/Marker/Locator]]
 
 - # How can I set a locator and rename it without the mouse in [[Ableton/Live]] on Mac?
+	- ## [[My Answer]]
+		- After making some mappings:
+			- `;` to set locator
+			- `j` to prev locator
+			- `k` to next locator
+		- Then use `;` to create the locator, then `kj` to go to the prev locator then back really quickly, at which time the Cmd+R rename will work
+		- ### Note - it seems to only sometimes work
+			- If the cursor is on a track that has a clip in the arrangement view, sometimes I find that Cmd+R renames the clip rather than the Locator.
+			- Yeah, actually, now I can't seem to get it to work.
 	- ## [[AI Answer]]
 		- [[Answer/Official]] from [Live 12 Manual: Launching the Arrangement with Locators](https://www.ableton.com/en/live-manual/12/arrangement-view/#launching-the-arrangement-with-locators)
 		- **Short answer:** press your Set Locator key (`;`), then `Cmd+R`, type the name, and press `Return`.
