@@ -1,4 +1,5 @@
 # [[Novation/Launchpad/Pro/Mk3]]
 	- In this [[Knowledge Garden]], Launchpad means the Novation Launchpad Pro Mk3. Other Launchpad models belong under the `Novation/Launchpad` namespace.
 	- [[Launchpad/UG]]
+	- [[Launchpad/PRG]]
 	-
