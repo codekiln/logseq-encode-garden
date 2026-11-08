@@ -1,0 +1,21 @@
+logseq-entity:: [[Logseq/Entity/Book]], [[Logseq/Entity/Series]]
+
+- # Launchpad Pro [MK3] Programmer's Reference Manual
+	- Novation's MIDI and SysEx reference for the [[Launchpad]], the Novation Launchpad Pro Mk3. It covers the bootloader, lighting pads over MIDI, DAW mode, and Programmer Mode. The companion user guide is [[Launchpad/UG]].
+	- Source: [LPP3_prog_ref_guide_200415.pdf](https://fael-downloads-prod.focusrite.com/customer/prod/s3fs-public/downloads/LPP3_prog_ref_guide_200415.pdf), 21 pages, from the Novation Launchpad Pro [MK3] downloads.
+	- ## What the guide can program
+		- Every SysEx message starts with `F0h 00h 20h 29h 02h 0Eh` (240 0 32 41 2 14), followed by a command byte (p. 6).
+		- The guide documents eight commands: Select Layout `00h`, DAW Fader Setup `01h`, LED Lighting `03h`, Live/Programmer `0Eh`, Note/Drumrack select `0Fh`, DAW/Standalone `10h`, Note active colour `17h`, and Stop Faders `19h`. [[Launchpad/PRG/06 SysEx Command Summary]] lists them.
+		- ### Sequencer Projects and Custom Modes
+			- The guide documents no SysEx for sequencer Project, Pattern, Scene, or step data, no Custom Mode upload or download, and no Project backup or restore. A full-text search of the PDF finds "Projects" and "Patterns" only as names in the layout list (p. 7).
+			- Select Layout can switch the surface to Sequencer Projects (`0Dh`), Sequencer Patterns (`0Eh`), Custom Mode (`03h`, pages 0-7), and Custom mode Settings (`13h`) (p. 7). Those messages change only what the surface shows; they do not read or write Project, Pattern, or Custom Mode contents.
+			- The guide says Custom Mode MIDI mappings are edited in Novation Components (p. 8). The User Guide also names Components for Project backup: [[Launchpad/UG/09 Sequencer/12 Projects/02 Backup]].
+			- MIDI can still light pads in a Custom Mode that has no On Colour (p. 8). Factory Custom Modes 7 and 8 are set up for this (p. 20).
+	- ## Chapters
+		- [[Launchpad/PRG/01 About this Guide]]
+		- [[Launchpad/PRG/02 Bootloader]]
+		- [[Launchpad/PRG/03 MIDI]]
+		- [[Launchpad/PRG/04 Controlling the Surface]]
+		- [[Launchpad/PRG/05 Software Integration]]
+		- [[Launchpad/PRG/06 SysEx Command Summary]]
+		- [[Launchpad/PRG/07 Mode Hierarchy]]
