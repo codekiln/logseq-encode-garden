@@ -36,5 +36,72 @@
 							- The import task described on [[Logseq/Entity/Ableton/Set]] writes those properties and rewrites them on each run, so plainer names would have to come from the task. Nothing needs to change unless you want the task to write the labels Live shows on screen.
 		-
 	- ## [[GitP/A/Session/26/11/07-Sat]]
-		-
-		-
+		- ## 16:34 Ghost in the Patch — Session Notes
+			- **Date:** Saturday, November 7, 2026
+			- **Session:** Ghost in the Patch ceremony
+			- **MicroFreak preset:** 259 — Infini Pad
+			- **Ableton set:** 2026.11.07
+		- ### Ableton Live Setup
+			- Created a custom Ableton Live set, simpler than Friday's setup, which had included crossfades.
+			- Used four audio tracks, each colored to correspond with one of the four Launchpad Pro sequencer tracks.
+			- Kept the entire performance interface on a single screen.
+			- Removed MIDI tracks to simplify the recording workflow and focus on audio.
+		- ### Sequencing Experiment
+			- Started with four sequencer tracks containing progressively longer sequences:
+				- Track 1: 1 whole note
+				- Track 2: 2 whole notes
+				- Track 3: 4 whole notes
+				- Track 4: 8 whole notes
+			- The theory was that I could keep the performance organized by developing and recording one sequencer track at a time.
+				- Create a sequence on track 1.
+				- Unmute only track 1 and record its audio into Ableton.
+				- Create a sequence on track 2.
+				- Unmute only track 2 and record it as the next layer.
+				- Continue building the composition additively.
+			- **Retrospective insight:** Since I was building an additive structure, it might have worked better to start with the slowest-moving material and progressively add faster activity: 8 → 4 → 2 → 1.
+		- ### Sequencer Discoveries
+			- A sequence length of 1 is difficult to work with on the Launchpad Pro.
+				- The step remains white, making it difficult to tell when the sequence is recording or where the pulse is.
+				- A sequence length of 2 seems to be the practical minimum for useful visual feedback.
+			- The sequencer is currently my best way of understanding and experiencing the musical pulse.
+			- **Future experiment:** Create patterns with lengths of 2, 4, 8, 16, and 32, then chain them together.
+				- Explore how these patterns produce interesting rhythmic and offbeat relationships.
+				- Investigate how different pattern lengths and playback relationships affect the musical structure.
+		- ### What Worked
+			- **Reintroducing earlier MIDI material:** Later in the performance, I brought back an earlier sequence, probably from track 2.
+				- By then, I had changed the MicroFreak's sound parameters.
+				- The same MIDI material returned with a different sonic character.
+				- This was musically effective and worth exploring further.
+			- **Recording feedback:** Used Novation Components to change the recording indicator from peach to bright red.
+				- The stronger color distinction made recording status easier to recognize.
+			- **Simplified interface:** Four audio channels with corresponding sequencer colors made the overall performance environment easier to manage.
+		- ### Problems and Mistakes
+			- Saved the simplified Ableton setup as a template.
+			- When creating the actual 2026-11-07 episode, discovered that some tracks did not have audio outputs assigned.
+				- Clips appeared to be playing, but I couldn't hear them.
+				- Need a pre-performance checklist to prevent routing mistakes.
+			- Removing the MIDI tracks simplified the setup but also created a sense of information loss.
+				- The resulting audio recordings preserve the sound but not the underlying note sequences.
+				- The relationship between a particular sequencer pattern and its corresponding audio recording becomes harder to reconstruct.
+		- ### Open Design Question: MIDI vs. Audio
+			- How should I manage the transition from a live sequencer pattern to a recorded audio clip?
+			- One possible workflow:
+				- Create a pattern in the Launchpad sequencer.
+				- Use **Print to Clip** to preserve it as MIDI in Ableton.
+				- Record the corresponding audio from the MicroFreak.
+				- Maintain an association between the MIDI clip and its audio recording.
+			- The challenge is MIDI routing:
+				- MicroFreak → Launchpad Pro
+				- Launchpad Pro → MicroFreak
+				- Ableton MIDI recording and playback → MicroFreak
+			- I haven't figured out how to integrate these paths without unwanted interactions or MIDI feedback loops.
+			- For now, an audio-only Ableton template may be the right compromise, even if it sacrifices some information.
+		- ### Next Experiments
+			- [ ] Test building an additive composition from slowest to fastest sequences.
+			- [ ] Experiment with 2, 4, 8, 16, and 32-step patterns and pattern chaining.
+			- [ ] Explore deliberately bringing earlier MIDI sequences back after transforming the MicroFreak patch.
+			- [ ] Investigate an integrated MIDI/audio workflow that preserves the source patterns without creating MIDI feedback.
+			- [ ] Develop a pre-performance checklist that verifies audio input, output, monitoring, track arming, and recording behavior.
+			- [ ] Test whether MIDI Print to Clip can become a natural part of the performance rather than an additional administrative step.
+		- ### Central Question
+			- How can I move fluidly between **composition in the sequencer, capturing the result as audio, and transforming or revisiting earlier material**, while keeping the performance interface simple enough to support improvisation?
