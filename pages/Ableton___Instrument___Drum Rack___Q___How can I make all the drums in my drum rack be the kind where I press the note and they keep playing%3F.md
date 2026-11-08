@@ -16,4 +16,5 @@ see-also:: [[Ableton/Instrument/Drum Rack/How To/Gate Mode]]
 		- **For a rack you already built:**
 			- Quickest: clear the pads and drop the samples back in once the default is saved.
 			- Or keep the rack and change each pad by hand, or map each pad's Trigger/Gate control to one Macro so a single knob flips them all.
+		- **In Live 11:** there is no Drum Sampler, so pads hold Simpler. In **One-Shot** mode, Simpler plays the whole sample by default however long the note is held, so a pad that stops early is usually in **Classic** mode or has **Gate** on. The pad's context menu saves a pad default, the same as in Live 12, and dragging a configured Simpler into Defaults → Dropping Samples → On Drum Rack also works. Sources: [Live 11 Manual: Default Presets for Dropping Samples](https://www.ableton.com/en/live-manual/11/working-with-instruments-and-effects/) and [Live 11 Manual: One-Shot Playback Mode](https://www.ableton.com/en/live-manual/11/live-instrument-reference/).
 		- **If a drum still stops early:** check its **Choke** group in the chain list. Any pad in the same choke group cuts it off when it plays, whatever its mode.
