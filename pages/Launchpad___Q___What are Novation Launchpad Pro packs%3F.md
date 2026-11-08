@@ -16,4 +16,5 @@ see-also:: [[Launchpad/UG/09 Sequencer/12 Projects]]
 		- **Not the same as:**
 			- Custom Modes, which have their own tab and editor in Components ([Custom Mode Editor Guide](https://support.novationmusic.com/hc/en-gb/articles/360009860380--Components-Launchpad-Mini-MK3-Launchpad-X-and-Launchpad-Pro-MK3-Custom-Mode-Editor-Guide)).
 			- The Ampify sample packs in Launchpad Intro ([[Launchpad/UG/02 Getting Up and Running/02 Launchpad Intro]]).
-		- **Still open:** whether a pack always holds all 64 slots, how sending a pack back to the device works, and the pack file format. Opening the Components guide in a browser would settle these.
+		- **Update 2026-11-08:** the Components guide, read in a browser, says Projects are uploaded as a SysEx file, each slot can be got or sent on its own, and **Send to Launchpad Pro Mk3** sends the whole bank. See [[Launchpad/Q/Can I define sequencer Projects programmatically, or do I have to use Novation Components?]].
+		- **Still open:** whether a pack always holds all 64 slots, and the byte layout of the pack file.
