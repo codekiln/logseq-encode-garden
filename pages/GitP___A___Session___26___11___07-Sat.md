@@ -1,5 +1,10 @@
-# Ghost in the Patch - four colors of inifini - [[2026-11-07 Sat]]
-	- ![Episode recording](../assets/.remote/GitP___A___Session___26___11___07-Sat___Asset___Audio___Full.mp3)
+logseq-entity:: [[Logseq/Entity/Podcast/Episode/GitP/A]], [[Logseq/Entity/Podcast/Episode]]
+public:: true
+created-by:: [[Person/codekiln]]
+date-created:: [[2026-11-07 Sat]]
+- # Ghost in the Patch - four colors of inifini - [[2026-11-07 Sat]]
+	- Four sequencer tracks, four colors, and Infini Pad. The loops gather one at a time, then return in a changed sound.
+	- ![Episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___07-Sat___Asset___Audio___Full.mp3)
 	- ## [[GitP/Ceremon/y/Note]]s
 		- recorded at *high* place,
 		  views of horizon clouds.
