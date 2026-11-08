@@ -86,9 +86,12 @@ def namespace_roots(names) -> list[str]:
 
 
 def check_every_page_published(titles: dict[Path, str], site: dict, diagnostics: str):
+    """Every page file with content is published. Logseq reads no page from a file
+    that holds only whitespace, and lsg 0.0.30 and later skip such files too."""
     published = {page['id'] for page in site['pages'] if page['id']}
     missing = [path for path, title in titles.items()
-               if page_key(title) not in published | SIDEBAR_PAGES
+               if path.read_text(encoding='utf-8').strip()
+               and page_key(title) not in published | SIDEBAR_PAGES
                and f'pages/{path.name}: Page withheld' not in diagnostics]
     if missing:
         names = '\n'.join(f'  pages/{path.name}' for path in missing)
