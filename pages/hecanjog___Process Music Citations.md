@@ -1,0 +1,86 @@
+source-url:: https://hecanjog.com/process-music-citations.zip
+
+- # [Process Music Citations](https://hecanjog.com/process-music-citations.zip)
+	- A friend's zip of 72 PDFs about [[Process Music]] in a broad sense, including AI and computational creativity, all from the [[Computer Music Journal]]. The friend shared it as reading alongside [[Person/Steve Reich/Essay/68/Music as a Gradual Process]].
+	- The PDFs stay out of the garden. Each link below goes to the paper's JSTOR stable URL, or its MIT Press DOI for the 2025 issue.
+	- ## [[My Notes]]
+		-
+	- ## Papers
+		- ### 1970s
+			- 1977 — [Notes on Microcomputer Music](https://www.jstor.org/stable/23320139) — Marc LeBrun
+			- 1978 — [Considering Human Memory in Designing User Interfaces for Computer Music](https://www.jstor.org/stable/3680372) — Otto E. Laske
+			- 1978 — [Music for an Interactive Network of Microcomputers](https://www.jstor.org/stable/3679453) — John Bischoff, Rich Gold and Jim Horton
+			- 1979 — [Grammars as Representations for Music](https://www.jstor.org/stable/3679756) — C. Roads and Paul Wieneke
+		- ### 1980s
+			- 1980 — [Interview with Marvin Minsky](https://www.jstor.org/stable/3679636) — C. Roads and Marvin Minsky
+			- 1980 — [Machine Tongues VII](https://www.jstor.org/stable/3680078) — William A. Kornfeld
+			- 1980 — [On Some Computational Models of Music Theory](https://www.jstor.org/stable/3680084) — John Rahn
+			- 1980 — [Review by C. Fry](https://www.jstor.org/stable/3679640)
+			- 1981 — [Automated Composition and Composed Automation](https://www.jstor.org/stable/3679504) — Giuseppe Englert, Otto Laske and C. Roads
+			- 1981 — [Composition Theory in Koenig's Project One and Project Two](https://www.jstor.org/stable/3679506) — Otto Laske
+			- 1981 — [Music, Mind, and Meaning](https://www.jstor.org/stable/3679983) — Marvin Minsky
+			- 1981 — [Using Generative Grammars for Music Composition](https://www.jstor.org/stable/3679694) — S. R. Holtzman
+			- 1982 — [The Handbook of Artificial Intelligence, Volume 1](https://www.jstor.org/stable/3680201) — A. Barr, E. Feigenbaum and C. Roads
+			- 1984 — [Definitions of Computer Art](https://www.jstor.org/stable/3679768) — Otto Laske
+			- 1984 — [Interactive Composing: An Overview](https://www.jstor.org/stable/3679894) — Joel Chadabe
+			- 1984 — [The CHANT Project: From the Synthesis of the Singing Voice to Synthesis in General](https://www.jstor.org/stable/3679810) — Xavier Rodet, Yves Potard and Jean-Baptiste Barrière
+			- 1985 — [A Conversation with Clarence Barlow](https://www.jstor.org/stable/4617919) — Stephan Kaske
+			- 1985 — [LASSO: An Intelligent Computer-Based Tutorial in Sixteenth-Century Counterpoint](https://www.jstor.org/stable/3679622) — Steven R. Newcomb
+			- 1985 — [On the "Psychomusicology" Review](https://www.jstor.org/stable/3679617) — James C. Carlsen and Otto Laske
+			- 1985 — [Report on the Fourth Annual Symposium on Small Computers in the Arts](https://www.jstor.org/stable/3679658) — Jim McConkey
+			- 1985 — [The Deterioration of an Ideal, Ideally Deteriorized: Reflections on Pietro Grossi's "Paganini Al Computer"](https://www.jstor.org/stable/4617921) — Kenneth Gaburo
+			- 1986 — [The Tsukuba Musical Robot](https://www.jstor.org/stable/3679483) — Curtis Roads
+			- 1987 — [An Expert System for Computer-Assisted Composition](https://www.jstor.org/stable/3680238) — David Cope
+			- 1987 — [Report on the Last STEIM Symposium on Interactive Composing in Live Electronic Music](https://www.jstor.org/stable/3679736) — G. W. Logemann
+			- 1988 — [A Turing Test for "Musical Intelligence"?](https://www.jstor.org/stable/3680146) — Erik Belgum, Curtis Roads, Joel Chadabe, T. Emile Tobenfeld and Laurie Spiegel
+			- 1988 — [Introduction to Cognitive Musicology](https://www.jstor.org/stable/3679836) — Otto E. Laske
+			- 1989 — [Machine Tongues XII: Neural Networks](https://www.jstor.org/stable/3680009) — Mark Dolson
+			- 1989 — [Modeling the Perception of Tonal Structure with Neural Nets](https://www.jstor.org/stable/3679552) — Jamshed J. Bharucha and Peter M. Todd
+			- 1989 — [Preface to the Special Issue on Parallel Distributed Processing and Neural Networks](https://www.jstor.org/stable/3680008) — D. Gareth Loy
+			- 1989 — [The Future of Electronic Music](https://www.jstor.org/stable/3679850) — Randolph N. Jackson
+			- 1989 — [The Kansei Music System](https://www.jstor.org/stable/3679555) — Haruhiro Katayose and Seiji Inokuchi
+			- 1989 — [The State of the Art of Computer Music](https://www.jstor.org/stable/3680036) — Otto Laske
+		- ### 1990s
+			- 1990 — [Cybernetic Issues in Interactive Performance Systems](https://www.jstor.org/stable/3680113) — Jeff Pressing
+			- 1990 — [Report on The European Workshop on Artificial Intelligence and Music, Genoa, Italy](https://www.jstor.org/stable/3679961) — Francesco Guiffrida and Paolo Podesta
+			- 1991 — [On Competence and Performance Models for Music](https://www.jstor.org/stable/3680381) — Otto Laske
+			- 1991 — [What Would We like to See Our Music Machines Capable of Doing?](https://www.jstor.org/stable/3681072) — Xavier Rodet
+			- 1992 — [Machine Listening and Composing with Cypher](https://www.jstor.org/stable/3680494) — Robert Rowe
+			- 1993 — [Artificial Intelligence and Music: Implementing an Interactive Computer Performer](https://www.jstor.org/stable/3680871) — Bridget Baird, Donald Blevins and Noel Zahler
+			- 1994 — [Live Interactive Computer Music in HMSL, 1984-1992](https://www.jstor.org/stable/3680444) — Larry Polansky
+			- 1994 — [The Computer-Extended Ensemble](https://www.jstor.org/stable/3680445) — David A. Jaffe and W. Andrew Schloss
+			- 1995 — [An Artificial Intelligence Approach to Sound Design](https://www.jstor.org/stable/3680600) — Eduardo Reck Miranda
+			- 1995 — [Music and Multimedia Knowledge Representation and Reasoning: The HARP System](https://www.jstor.org/stable/3680599) — Antonio Camurri, Alessandro Catorcini, Carlo Innocenti and Alberto Massari
+			- 1996 — [Dreams of Computer Music: Then and Now](https://www.jstor.org/stable/3681267) — F. Richard Moore
+			- 1996 — [The International Congress in Music and Artificial Intelligence](https://www.jstor.org/stable/3681336) — Christiane Ten-Hoopen
+			- 1996 — [The Limitations of EMI](https://www.jstor.org/stable/3680812) — Jim Aikin
+			- 1996 — [The Music Structures Approach to Knowledge Representation for Music Processing](https://www.jstor.org/stable/3681334) — Mira Balaban
+			- 1997 — [The Composer's Underscoring Environment: CUE](https://www.jstor.org/stable/3681011) — David Cope
+		- ### 2000s
+			- 2004 — [A Musical Learning Algorithm](https://www.jstor.org/stable/3681506) — David Cope
+			- 2004 — [H. C. Longuet-Higgins (1923-2004)](https://www.jstor.org/stable/3681505)
+			- 2006 — [Toward Robotic Musicianship](https://www.jstor.org/stable/4617982) — Gil Weinberg and Scott Driscoll
+			- 2007 — [Composing with Algorithms: An Interview with David Cope](https://www.jstor.org/stable/40072590) — Keith Muscutt and David Cope
+			- 2009 — [Decompartmental: Conversing with Clarence Barlow](https://www.jstor.org/stable/25653510) — Christopher Jette and Clarence Barlow
+			- 2009 — [Dynamic Techniques for Genetic Algorithm-Based Music Systems](https://www.jstor.org/stable/40301046) — Dimitrios Tzimeas and Eleni Mangina
+			- 2009 — [The Interrogator as Critic: The Turing Test and the Evaluation of Generative Music Systems](https://www.jstor.org/stable/40301027) — Christopher Ariza
+			- 2009 — [When Is Noise Speech? A Survey in Sonic Ambiguity](https://www.jstor.org/stable/40301012) — Freya Bailes and Roger T. Dean
+		- ### 2010s
+			- 2010 — [Machine Learning of Jazz Grammars](https://www.jstor.org/stable/40963033) — Jon Gillick, Kevin Tang and Robert M. Keller
+			- 2010 — [Review by Paul Doornbusch](https://www.jstor.org/stable/40963035)
+			- 2011 — [Experiments in Modular Design for the Creative Composition of Live Algorithms](https://www.jstor.org/stable/41241766) — Oliver Bown
+			- 2012 — [Automatic Composition of Electroacoustic Art Music Utilizing Machine Listening](https://www.jstor.org/stable/23254379) — Nick Collins
+			- 2013 — [Feedback Systems: An Analytical Framework](https://www.jstor.org/stable/24265464) — Dario Sanfilippo and Andrea Valle
+		- ### 2020s — Volume 49
+			- 2025 — [Acousmatic Spaces, Lived Places: Holophony and the Embodied Experience of Shared Atmospheres](https://doi.org/10.1162/COMJ.a.693) — Kerem Ergener
+			- 2025 — [Computational Network Semantics and Critical Properties of Music Notation Datasets](https://doi.org/10.1162/COMJ.a.691) — Markus Lepper, Baltasar Trancón y Widemann
+			- 2025 — [If the Walls Could Sing: Bringing Barcelona's Oldest House to Life with Sound](https://doi.org/10.1162/COMJ.a.701) — Gil Dori
+			- 2025 — [Sonic Cartographies: Listening at the Membrane between Places, Scales, and Beings in the Network of Nonplace](https://doi.org/10.1162/COMJ.a.698) — Theodore Teichman
+			- 2025 — [Soundscape Composition and Microsound](https://doi.org/10.1162/COMJ.a.699) — [[Person/Barry Truax]]
+			- 2025 — [Taxonomy of Sonic Space in an Acousmatic Listening Situation](https://doi.org/10.1162/COMJ.a.700) — Pedram Diba, Quentin Lauvray
+			- 2025 — [The Symbolic Soundscape: Reversing the Roots](https://doi.org/10.1162/COMJ.a.692) — Alexandros Drymonitis
+			- 2025 — [The Terpsichora Pressure-Sensitive Floors: Design, Implementation, and Refinement from 2015 to 2025](https://doi.org/10.1162/COMJ.a.697) — Sebastian Collen, Iran Sanadzadeh
+			- 2025 — [The Unsettled Soundscape: Field Recordings, Composition, and the Computerized in Ho Chi Minh City](https://doi.org/10.1162/COMJ.a.695) — Renick Bell, Michael Graeve, Charles Anderson, Jordan Lacey
+			- 2025 — [Three-Dimensional Vision-Based Recognition of Guitar Chords](https://doi.org/10.1162/COMJ.a.690) — Giorgia Marullo, Daniele Amati, Simone Barbarino, Miriam D’Onofrio, Tomaso Sechi, Chiara Innocente, Enrico Vezzetti, Luca Ulrich
+			- 2025 — [Tracing Poetic Atmospheres: Multichannel Electroacoustic Soundscapes and Their Cultural Dimensions](https://doi.org/10.1162/COMJ.a.696) — Ali Balighi
+			- 2025 — [Underwater Extraction as Spatial Curation: Sonic Archaeology, Media Inscription, and the Re-Voicing of Submerged Histories](https://doi.org/10.1162/COMJ.a.694) — Tak Cheung Hui
