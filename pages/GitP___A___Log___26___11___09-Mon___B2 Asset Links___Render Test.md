@@ -1,4 +1,4 @@
-- Each block links a file under `assets/.remote/logseq-encode-garden/`. The files are ignored copies of public B2 objects; restore them in a checkout with the commands at the bottom of this page.
+- Open this page in Logseq desktop to see whether Logseq shows an image and plays an MP3 linked by relative path under `assets/.remote/logseq-encode-garden/`. Git ignores these files, so a fresh checkout has none of them; the commands at the bottom of this page download them from B2.
 - ## Image, name with spaces written as `%20`
 	- ![CV and Gate outputs](../assets/.remote/logseq-encode-garden/Microfreak___UG___17%20Ext%20Gear___02%20CV%20Gate___01%20Pitch%20Gate%20and%20Pressure___Asset___01-CV-Gate-outputs.png)
 - ## Image, name with spaces inside angle brackets
