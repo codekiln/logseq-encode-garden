@@ -1,4 +1,4 @@
-logseq-entity:: [[Logseq/Entity/Podcast/Episode]]
+logseq-entity:: [[Logseq/Entity/Podcast]]
 
 - # Ghost in the Patch - Alpha podcast
 	- GitHub repo: [[Person/codekiln/GitHub/gitpa]]
