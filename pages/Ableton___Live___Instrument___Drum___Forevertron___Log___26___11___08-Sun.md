@@ -1,0 +1,27 @@
+- [[2026-11-08 Sun]]
+	- [[AI/Response]] from [[Anthropic/Model/Claude/5/5/Opus]]
+		- ## The problem
+			- Most pads in the Forevertron [[Ableton/Instrument/Drum Rack]] stopped when the note was released. The fix is to put each pad's Simpler on **Trigger**, as [[Ableton/Instrument/Drum Rack/Q/How can I make all the drums in my drum rack be the kind where I press the note and they keep playing?]] explains. Live 11 has no control that changes 76 pads at once, so the preset file was edited directly instead.
+		- ## Where the samples are
+			- All 76 samples are recordings from [[Ableton/Note]], synced to the Mac by Ableton's cloud: `~/Library/Application Support/Ableton/Cloud Manager/d523cca8-7229-4f3f-b488-dfaf42d5c379/Forevertron/Samples/Recordings/`
+			- They're named `29_06_24-R1.wav` to `R5` and `30_06_24-R1.wav` to `R79`, recorded June 29 and 30, 2024, at 48 kHz. Each has a `.asd` analysis file beside it. None are missing.
+			- `~/Library` is hidden, so Live's browser doesn't show this folder unless it's added under Places.
+		- ## Three presets
+			- All three are in `~/Music/Ableton/User Library/Presets/Instruments/Drum Rack/`.
+			- **Forevertron.adg** — the original rack, saved from Live 11.3 on November 8 at 14:51. Each pad is a Simpler in One-Shot mode. Three pads are on Trigger (29_06_24-R1, 29_06_24-R2 and 30_06_24-R4), and the other 73 are on Gate.
+			- **Forevertron Trigger.adg** — the same rack with all 76 pads on Trigger. Nothing else differs.
+			- **Forevertron Trimmed.adg** — Forevertron Trigger, plus new start, end and fade-out points on 39 of the 40 pads that still played from the very start of the file. The 36 pads trimmed by hand are unchanged.
+		- ## How the preset file stores Trigger and Gate
+			- An `.adg` file is gzipped XML. Each pad's Simpler is an `OriginalSimpler` element.
+			- Trigger and Gate are `OneShotEnvelope/SustainMode`: 0 is Trigger, 1 is Gate. This was confirmed by saving the rack with 29_06_24-R2 on Trigger and 29_06_24-R3 on Gate and comparing the two pads.
+			- The start and end points are `SampleStart` and `SampleEnd`, counted in samples. Fade Out is `OneShotEnvelope/FadeOutTime`, in milliseconds, and Simpler caps it at 2000.
+		- ## How the 39 pads were trimmed
+			- **Start:** about 3 ms before the drum hit's attack, moved back to the nearest zero crossing.
+			- **Choosing a hit:** when a recording has several hits, only those within 10 dB of the loudest count. Of those, the one that rings longest before the next hit or the background noise wins.
+			- **End:** 1 s after the hit fades into the background noise, 20 ms before the next hit, or the end of the file, whichever comes first.
+			- **Fade Out:** half the time between start and end, up to 2000 ms.
+			- **Compared with the hand-trimmed pads:** on 35 hand-trimmed pads, the detector picked the same hit 29 times. It started 2–6 ms earlier than the hand-set start on most of them, and about 20 ms later on 29_06_24-R1, 29_06_24-R2, 30_06_24-R3 and 30_06_24-R37, where the hand-set start leaves extra room before a soft attack. The hand-set endings usually run longer than the detected ones.
+			- **Skipped:** 29_06_24-R5 is background noise all the way through, peaking only 4 dB above it, so it has no hit to start on.
+			- **Worth a listen first:**
+				- Several hits of similar strength, so the choice is a guess: 30_06_24-R9, R19, R20, R23, R34, R53, R57, R76 and R79.
+				- Quiet recordings, 22–25 dB above the background noise: 30_06_24-R55, R71, R73 and R77.
