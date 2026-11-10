@@ -35,5 +35,6 @@
 		- Resume the next feasible session after a missed day. Avoid doubling heavy sessions to catch up; keep Saturday's calendar anchor.
 	- ## Exercise references
 		- [[Person/Andrew Huberman/Book/26/Protocols/Exercise Guide]]: the typed exercise pages, with setup, movement cues, substitutions, and demonstrations.
+		- [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]]: torso exercise demonstrations, transcript, and highlights.
 		- [[Person/Andrew Huberman/Book/26/Protocols]]: lower-body, torso, shoulder, and mobility video notes.
 		- [Official Chapter Two demonstrations](https://www.hubermanlab.com/protocols-resources).
