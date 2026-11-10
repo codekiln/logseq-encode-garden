@@ -11,3 +11,4 @@ logseq-entity:: [[Logseq/Entity/Software/Project]]
 	- Install with `gh extension install github/gh-aw`.
 	- Written in [[Go]].
 	- Reading guide: [[gh-aw/Blog/26/01/Welcome to Peli's Agent Factory]] introduces GitHub Next's 100+ workflows and its 19-part Meet the Workflows tour.
+	- Work notes: I reviewed a colleague's draft pull request that proposed reusable gh-aw workflows ([[2026-11-05 Thu]]) and wrote up [what I found](https://claude.ai/artifact/QQQXyNRzMtfV2NY9Ao681f) and [where else gh-aw could run](https://claude.ai/artifact/WAJwWgGkWCP9QvmZnweLV1) as Claude artifacts. Ticket HUB-555 tracks the work; the ticket, the pull request, and the team's reference page are in my work garden.
