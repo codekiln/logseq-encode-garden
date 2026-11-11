@@ -19,7 +19,7 @@ date-created:: [[2026-11-07 Sat]]
 			- #### changes
 				- ##### fewer *audio* tracks into the garden
 					- [[My/Principle/Simplify]] to four [[Ableton Audio Track]]s
-					  each corresponding to and colored after a [[Launchpad/UI/Mode/5-Sequencer/Track]].
+					  each corresponding to and colored after a [[Launchpad/UI/7-Sequencer/Track]].
 						- odd-numbered tracks - crossfade A
 						- even numbered tracks - crossfade B
 				- ##### fewer *instrumental* tracks into the patch
@@ -40,10 +40,10 @@ date-created:: [[2026-11-07 Sat]]
 				- [[Launchpad/UI/Mode/5-Sequencer/Track/4-Salmon]] - 8 whole notes
 		- ### technique - receive one sequencer track audio at a time
 			- #### [[Algo]]
-				- mute all [[Launchpad/UI/Mode/5-Sequencer/Track]]s
+				- mute all [[Launchpad/UI/7-Sequencer/Track]]s
 				- `for` track in `(1, 2, 3, 4):`
 					- unmute the sequencer track so it's MIDI flows into the [[Microfreak]]
-					- create sequence on [[Launchpad/UI/Mode/5-Sequencer/Track]]
+					- create sequence on [[Launchpad/UI/7-Sequencer/Track]]
 					- record track into equivalent  [[Ableton Audio Track]] in the [[Launchpad/UG/05 Session Mode]]
 					- mute track
 			- #### result
