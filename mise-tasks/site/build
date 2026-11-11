@@ -60,9 +60,23 @@ def page_key(name: str) -> str:
     return unicodedata.normalize('NFC', name.strip()).lower()
 
 
+def hidden_prefixes(graph: Path) -> tuple[str, ...]:
+    """Entries of :hidden in logseq/config.edn. Logseq hides a file whose path from the
+    graph root starts with an entry, so an entry such as "../pages/CLAUDE.md" hides nothing."""
+    config = (graph / 'logseq' / 'config.edn').read_text(encoding='utf-8')
+    uncommented = '\n'.join(line.split(';', 1)[0] for line in config.splitlines())
+    match = re.search(r':hidden\s*\[([^\]]*)\]', uncommented)
+    if not match:
+        return ()
+    return tuple(entry.lstrip('/') for entry in re.findall(r'"([^"]*)"', match[1]))
+
+
 def page_files(graph: Path) -> list[Path]:
+    """Page files Logseq reads, leaving out those :hidden covers."""
+    hidden = hidden_prefixes(graph)
     return sorted(path for path in (graph / 'pages').iterdir()
-                  if path.suffix == '.md' and path.is_file())
+                  if path.suffix == '.md' and path.is_file()
+                  and not path.relative_to(graph).as_posix().startswith(hidden))
 
 
 def page_names(titles: dict[Path, str]) -> set[str]:
