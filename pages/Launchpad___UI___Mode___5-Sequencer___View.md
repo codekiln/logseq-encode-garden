@@ -2,7 +2,7 @@ logseq-entity:: [[Logseq/Entity/UI/Area]]
 up:: [[Launchpad/UI/Mode/5-Sequencer]]
 
 - # Sequencer views
-	- Eight buttons run down the right-hand column, top to bottom. In Session mode they launch scenes; in Sequencer mode they open views. Tempo, Swing and Settings are views the column does not open.
+	- Eight buttons run down the [right-hand column]([[Launchpad/UI/Area/3-Right]]), top to bottom. In [Session mode]([[Launchpad/UI/Mode/1-Session]]) they launch scenes; in Sequencer mode they open views. Tempo, Swing and Settings are views the column does not open.
 	- ## Areas
 		- [[Launchpad/UI/Mode/5-Sequencer/View/1-Patterns]]
 		- [[Launchpad/UI/Mode/5-Sequencer/View/2-Steps]]
