@@ -9,7 +9,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- A control corresponds to an [[UX/Design/Atomic/L1 - Atom]].
 	- ## Identity and names
 		- Place a control at `<Item>/UI/<Area>/<Kind>/<Name>`, under the [[Logseq/Entity/UI/Area]] that holds it.
-		- `<Kind>` is the noun the product's documentation uses for that control, singular and in Title Case: `Knob`, `Button`, `Switch`, `Toggle`, `Field`, `Slider`, `Menu`, `Pad`, `Fader`, `Marker`, `Jack`, `Strip`.
+		- `<Kind>` is the noun the product's documentation uses for that control, singular and in Title Case: `Knob`, `Button`, `Switch`, `Toggle`, `Field`, `Slider`, `Menu`, `Pad`, `Fader`, `Marker`, `Jack`, `Port`, `Strip`.
 		- `<Name>` is the label printed on the panel or used in the manual. For a symbol, `<Name>` is the manual's word for it, such as Left or Play.
 		- On a panel mapped by position, a numbered single control carries its kind in its own name, `<Area>/<N>-<Name>-<Kind>`, as in [[Launchpad/UI/Area/0-Top/0-Shift-Button]] and [[Launchpad/UI/Area/1-Left/6-Fixed-Length-Button]].
 		- Controls on the edges of a grid take the number of the grid column or row they line up with, counting from 1 at the top left: [[Launchpad/UI/Area/0-Top/3-Session-Button]] sits above grid column 3, and [[Launchpad/UI/Area/1-Left/1-Up-Button]] beside grid row 1. A control left of the grid takes 0, such as Shift in the top-left corner.
