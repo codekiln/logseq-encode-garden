@@ -10,21 +10,24 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Identity and names
 		- Place a control at `<Item>/UI/<Area>/<Kind>/<Name>`, under the [[Logseq/Entity/UI/Area]] that holds it.
 		- `<Kind>` is the noun the product's documentation uses for that control, singular and in Title Case: `Knob`, `Button`, `Switch`, `Toggle`, `Field`, `Slider`, `Menu`, `Pad`, `Fader`, `Marker`, `Jack`, `Strip`.
-		- `<Name>` is the label printed on the panel or used in the manual.
-		- On a panel mapped by position, a numbered single control carries its kind in its own name, `<Row>/<NN> <Name> <Kind>`, as in [[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button]]. A control in a numbered group keeps `<Group>/<Kind>/<Name>`, and when the group has only one control of that kind the name is left off: [[Microfreak/UI/Front/Row/01 Top/01 Matrix/Knob]].
+		- `<Name>` is the label printed on the panel or used in the manual. For a symbol, `<Name>` is the manual's word for it, such as Left or Play.
+		- On a panel mapped by position, a numbered single control carries its kind in its own name, `<Area>/<N>-<Name>-<Kind>`, as in [[Launchpad/UI/Area/0-Top/0-Shift-Button]] and [[Launchpad/UI/Area/1-Left/6-Fixed-Length-Button]].
+		- Controls on the edges of a grid take the number of the grid column or row they line up with, counting from 1 at the top left: [[Launchpad/UI/Area/0-Top/3-Session-Button]] sits above grid column 3, and [[Launchpad/UI/Area/1-Left/1-Up-Button]] beside grid row 1. A control left of the grid takes 0, such as Shift in the top-left corner.
+		- Identical controls with no printed names share one page at `<Area>/<Kind>`, as in [[Launchpad/UI/Area/2-Grid/Pad]]. When each position has its own role, each gets `<N>-<Kind>`, as in [[Launchpad/UI/Area/4-Bottom/1-Track-Select/1-Button]].
+		- The MicroFreak front panel has the older form `<Row>/<NN> <Name> <Kind>`, as in [[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button]]. A control in one of its numbered groups sits at `<Group>/<Kind>/<Name>`, and when the group has only one control of that kind the name is left off: [[Microfreak/UI/Front/Row/01 Top/01 Matrix/Knob]].
 		- A control that selects among named modes has one page per mode beneath it, and a parameter that only exists in one mode has its page beneath that mode: [[Logseq/Entity/UI/Control/Setting]].
 	- ## Page shape
 		- Frontmatter: `logseq-entity:: [[Logseq/Entity/UI/Control]]` and `up::` to its area. See [[Logseq/Frontmatter]] for shared conventions.
 		- One bullet-wrapped H1 with the control's name and kind, then one sentence on what it does.
-		- A picture of the control cropped from the user guide's panel figure, kept on a [[Logseq/Entity/Asset/B2]] page at `<Control>/Asset/Panel/png`.
+		- A picture of the control may follow, cropped from the user guide's panel figure and kept on a [[Logseq/Entity/Asset/B2]] page at `<Control>/Asset/Panel/png`.
 		- Optional blocks, in this order, when they apply:
 			- **Behavior** — how the control changes its value, from [[Logseq/Entity/UI/Control/Kind]].
 			- **Values** — its range or its positions.
 			- **Settings** — links to its mode and parameter pages.
 			- **Gestures** — links to its gesture pages.
-			- **Remote control** — how another device reaches it, such as a MIDI CC number or a MIDI mapping.
+			- **Remote control** — how another device reaches it, such as a MIDI mapping, or a MIDI CC number like `Programmer mode: CC 98` on [[Launchpad/UI/Area/0-Top/8-Projects-Button]].
 			- **Source** — the user guide or manual section that describes it.
 	- ## Examples
 		- MicroFreak: [[Microfreak/UI/Oscillator/Knob/Type]], [[Microfreak/UI/Oscillator/Knob/Timbre]]
 		- Ableton Live: [[Ableton/Live/UI/Control Bar/Button/Arrangement Record]], [[Ableton/Live/UI/Arrangement View/Button/Set Locator]]
-		- Launchpad: a pad at `Launchpad/UI/<Area>/Pad/<Name>`; [[Launchpad/Custom/Mode/1 Arrangement]] describes one pad set up as a toggle.
+		- Launchpad: [[Launchpad/UI/Area/0-Top/8-Projects-Button]], [[Launchpad/UI/Area/2-Grid/Pad]]; [[Launchpad/Custom/Mode/1 Arrangement]] describes one pad set up as a toggle.

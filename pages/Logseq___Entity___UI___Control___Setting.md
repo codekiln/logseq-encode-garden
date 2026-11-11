@@ -10,6 +10,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Identity and names
 		- A mode sits at `<Control>/<Mode>`, beneath the control that selects it; a parameter sits at `<Control>/<Mode>/<Parameter>`.
 		- A gesture sits at `<Control>/<Gesture>`, named `Press`, `Hold` or `Shift`. A gesture that combines two nests the second beneath the first: [[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button/Hold/Shift]].
+		- When the panel prints the name of a shifted or held function, or the manual names it, that name nests beneath the gesture: `<Control>/<Gesture>/<Function>`, as in [[Launchpad/UI/Area/0-Top/8-Projects-Button/Shift/Save]]. Only the function gets a page, and its `up::` points at the control.
 		- Use the names the display or manual shows.
 	- ## Page shape
 		- Frontmatter: `logseq-entity:: [[Logseq/Entity/UI/Control/Setting]]` and `up::` to the control or mode above it; `prev::` and `next::` follow the order of modes in the manual when the modes are numbered.
