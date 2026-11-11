@@ -28,6 +28,10 @@
 "CLAUDE.md",
 "../journals/CLAUDE.md",
 "../pages/CLAUDE.md",
+;; Logseq matches each entry as a prefix of the path from the graph root, so the
+;; "../" entries above hide nothing; these two hide the agent instruction files.
+"pages/CLAUDE.md",
+"journals/CLAUDE.md",
 "../tools/CLAUDE.md",
 "../.ai-coding/CLAUDE.md",
 ;; A linked git worktree holds a second copy of pages/ and journals/ under the graph
