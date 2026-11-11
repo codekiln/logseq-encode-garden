@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#MISE description="List a Drum Rack preset's pads and check that every sample it references exists"
+#MISE tools={uv="0.13"}
+#USAGE arg "<rack>" help="Path to an .adg Drum Rack preset"
+#USAGE flag "--base <base>" help="Also check that rack-level settings match this .adg"
+set -euo pipefail
+here=$(cd "$(dirname "$0")" && pwd)
+args=(verify "${usage_rack:-$1}")
+[[ -n "${usage_base:-}" ]] && args+=(--base "$usage_base")
+exec uv run --locked --project "$here" drumrack-builder "${args[@]}"

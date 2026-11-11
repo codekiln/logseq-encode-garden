@@ -24,3 +24,8 @@
 				- Improvisation: Reich's sentence is "One can't improvise in a musical process—the concepts are mutually exclusive." The phrase "no room for improvisation" is Christensen's paraphrase, quoted in Erik Schoster's paper in Reader.
 				- Process: Reich rules out the process that created the piece. He means pieces that are themselves processes, audible while the music sounds. He sets this against Cage, whose I Ching procedures can't be heard in the result.
 				- Reich also leaves room for things nobody intended: he lists "slight irregularities in performance" among the "psychoacoustic by-products of the intended process."
+	- ## Drum Rack builder
+		- I want a local web tool for building [[Ableton/Instrument/Drum Rack]]s from samples. Ableton's Drum Rack interface makes it difficult for me to browse, compare, and curate sounds.
+		- From the garden root, `mise run ableton:drumrack:builder:up` would open a sample browser for searching, auditioning, excluding, and organizing recordings, including samples used in existing racks. I want to create a rack or duplicate one as a starting point.
+		- Each pad could have a named shortlist of candidates, with pairwise comparisons or a sports-bracket format to choose among them. Analysis of duration, pitch, and loudness could help cluster and sort sounds; a local SQLite cache could hold the results.
+		- I would like to audition rack arrangements with my Launchpad Pro MK3 over MIDI. The tool should have sensible configuration defaults and keep personal paths in local, untracked data. [Drum Rack builder issue](https://github.com/codekiln/logseq-encode-garden/issues/377)
