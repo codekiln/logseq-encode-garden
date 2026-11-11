@@ -9,6 +9,11 @@
 		- My history with classical piano has a strong pull. Preparing a synthesizer performance the way I used to prepare piano could close off an opportunity to investigate myself and stretch as an improvising musician. I would love to try that prepared approach sometime, but for this ceremony I think it may be more creatively fruitful to live on the edge and include more improvisation.
 		- How much preparation and assistance should I allow? A preset feels acceptable, but I am less certain about a preset containing an entire through-composed sequencer part. A minimal backing track could be a useful creative constraint to improvise over. Deciding where to draw that line is a central question for the performance.
 		- I am also interested in [[Music/Performance/Legibility]]: whether the audience can see how my actions shape the sounds they hear. Traditional playing techniques on synthesizers may help make that connection visible.
+		- ### Goals for today
+			- Lock in my performance setup by the end of the day and leave it unchanged until Saturday.
+			- Record two five-minute practice sessions with the setup.
+			- Put out an episode with several recordings from today. It might be interesting to alternate performances with discussion, like a performance class.
+			- Revisit sections of recent podcast episodes made with preset 259 Infinibase. Identify the key musical zones and memorize how to get into at least a few of them. I think of the performance as visiting these zones.
 		- ### [[Person/Steve Reich/Essay/68/Music as a Gradual Process]]
 			- Earlier this week I read Reich's essay on process music, and I want to read more of his writing: [Writings on Music, 1965–2000](https://read.readwise.io/read/01m701et41bm9ja7hn39zmawvb) is in Reader.
 			- ((81155a77-837e-4f46-aaac-25d53beb1cbb))
