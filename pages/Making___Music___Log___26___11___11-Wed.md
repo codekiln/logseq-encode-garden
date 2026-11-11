@@ -1,3 +1,16 @@
 # [[2026-11-11 Wed]]
 	- This morning I've been doing a bit of knowledge gardening around the Launchpad while trying to figure out more about [[Launchpad/UG/09 Sequencer/12 Projects]]; I'm trying to get better at using Launchpad Projects.
-	-
+	- ## Planning the next [[Ghost in the Patch]] performance
+		- I have a history performing classical piano, and I want to awaken my practice-room identity: practicing a performance and giving a five-minute piece from memory. I find it thrilling to live on that edge without sheet music, a metronome, or other performance scaffolding.
+		- I want to give the audience a thrill, perform a piece they remember as well as the music, and leave them wanting more.
+		- I told Fonicorn I wanted to find the full expression of the Noise Engineering bass oscillator on the [[Microfreak]] ([[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]]), but that goal now feels artificial. What matters more is making music I would want to listen to. I can get wrapped up in concepts of musical structure.
+		- I feel tension between a prepared performance and improvisation. I associate [[Synth/Aesthetic/Coast/West]] with randomness and starting from a blank patch, and [[Synth/Aesthetic/Coast/East]] with presets, notes, and working things out in advance. I think of Wendy Carlos in connection with East Coast synthesis, though that is reductive and she was not working with presets.
+		- ### [[Person/Steve Reich/Essay/68/Music as a Gradual Process]]
+			- Earlier this week I read Reich's essay on process music, and I want to read more of his writing: [Writings on Music, 1965–2000](https://read.readwise.io/read/01m701et41bm9ja7hn39zmawvb) is in Reader.
+			- ((81155a77-837e-4f46-aaac-25d53beb1cbb))
+			- ((84beb931-ac2e-4ec3-9233-a6d7da96814d))
+			- [[AI/Response]] from [[Anthropic/Model/Claude/5/5/Opus]]
+				- The recollection that process music emerges entirely from the process that created it, with no room for improvisation, holds on improvisation and needs a correction on process.
+				- Improvisation: Reich's sentence is "One can't improvise in a musical process—the concepts are mutually exclusive." The phrase "no room for improvisation" is Christensen's paraphrase, quoted in Erik Schoster's paper in Reader.
+				- Process: Reich rules out the process that created the piece. He means pieces that are themselves processes, audible while the music sounds. He sets this against Cage, whose I Ching procedures can't be heard in the result.
+				- Reich also leaves room for things nobody intended: he lists "slight irregularities in performance" among the "psychoacoustic by-products of the intended process."
