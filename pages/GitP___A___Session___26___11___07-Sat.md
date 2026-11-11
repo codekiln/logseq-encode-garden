@@ -34,10 +34,10 @@ date-created:: [[2026-11-07 Sat]]
 		- ### theory - `1, 2, 4, 8`
 			- plan - invoke a 15-based **sequential** raga of `1 + 2 + 4 + 8`
 			- pulled by the concordance between sequencer tracks and audio tracks, ended up changing this to **parallel** invocation
-				- [[Launchpad/UI/7-Sequencer/Track/1-Orange]] - 1 whole note
-				- [[Launchpad/UI/7-Sequencer/Track/2-Violet]] - 2 whole notes
-				- [[Launchpad/UI/7-Sequencer/Track/3-Green]] - 4 whole notes
-				- [[Launchpad/UI/7-Sequencer/Track/4-Salmon]] - 8 whole notes
+				- [[Launchpad/UI/Mode/5-Sequencer/Track/1-Orange]] - 1 whole note
+				- [[Launchpad/UI/Mode/5-Sequencer/Track/2-Violet]] - 2 whole notes
+				- [[Launchpad/UI/Mode/5-Sequencer/Track/3-Green]] - 4 whole notes
+				- [[Launchpad/UI/Mode/5-Sequencer/Track/4-Salmon]] - 8 whole notes
 		- ### technique - receive one sequencer track audio at a time
 			- #### [[Algo]]
 				- mute all [[Launchpad/UI/7-Sequencer/Track]]s
@@ -51,9 +51,9 @@ date-created:: [[2026-11-07 Sat]]
 					- few spirits came in the beginning here; very low signal to boredom ratio
 						- long periods of unintentional silence
 			- [[Learned]]
-				- practical issue with [[Launchpad/UI/7-Sequencer/Track/1-Orange]] - 1 whole note
+				- practical issue with [[Launchpad/UI/Mode/5-Sequencer/Track/1-Orange]] - 1 whole note
 					- it's hard to see what the pulse is on [[Launchpad/UG/09 Sequencer]]
 					- ==best to keep the [[Launchpad/UG/09 Sequencer/05 Pattern Settings]] with length at least 2==
-				- [[Launchpad/UI/7-Sequencer]] is the best way to learn about what the pulse is in [[Ableton/Live]] when the click track is off.
+				- [[Launchpad/UI/Mode/5-Sequencer]] is the best way to learn about what the pulse is in [[Ableton/Live]] when the click track is off.
 	- ## Chapters
 		-
