@@ -1,0 +1,12 @@
+logseq-entity:: [[Logseq/Entity/Concept]], [[Logseq/Entity/Term]]
+- # Performance Legibility
+	- **Performance legibility** is the degree to which an audience can understand how a musician's visible actions relate to the sounds they hear. Research on musical interfaces also discusses the related idea of *instrumental transparency*.
+	- ## Gesture and sound
+		- A guitarist's plucking gesture can help an audience connect an action to a note. On an electronic instrument, a key press, a knob turn, or a sequencer may affect sound in ways that are less apparent to a listener.
+		- Visibility alone does not guarantee understanding. Familiarity, timing, and repeated connections between action and sound can help an audience learn how a performance works.
+	- ## Electronic performance
+		- Playing notes on a synthesizer can make some decisions visible while a preset or sequencer supplies other aspects of the sound. A repeating phrase can make the effect of a visible filter adjustment easier to hear.
+		- Improvisation and legibility are separate qualities: a prepared performance can be legible, and an improvisation can involve processes that are difficult to see or understand.
+	- ## Sources
+		- [Making Mappings: Design Criteria for Live Performance](https://nime.pubpub.org/pub/f1ueovwv/release/1) discusses legibility as an audience's ability to perceive the relationship between gesture and sound.
+		- [Engaging the Audience](https://ualresearchonline.arts.ac.uk/id/eprint/23202/1/murray-browne_nime_2011.pdf) considers how an audience can develop an understanding of an unfamiliar instrument during a performance.
