@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#MISE description="Lint, type-check and test the Drum Rack builder"
+#MISE tools={uv="0.13"}
+#USAGE arg "[pytest_args]..." help="Extra pytest arguments, e.g. -k bracket" var=#true
+set -euo pipefail
+here=$(cd "$(dirname "$0")" && pwd)
+cd "$here"
+uv run --locked --extra launchpad ruff check src tests
+uv run --locked --extra launchpad ruff format --check src tests
+uv run --locked --extra launchpad mypy src
+exec uv run --locked --extra launchpad pytest "$@"

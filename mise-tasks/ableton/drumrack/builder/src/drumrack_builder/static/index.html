@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Drum Rack builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>Drum Rack builder</h1>
+    <span id="status"></span>
+    <button id="rescan" title="Index sample folders and racks again">Rescan</button>
+  </header>
+  <main>
+    <section id="browser">
+      <div class="filters">
+        <input id="q" type="search" placeholder="Search names and folders" autofocus>
+        <select id="folder"><option value="">All folders</option></select>
+        <select id="rackfilter"><option value="">Any rack</option></select>
+        <select id="excluded">
+          <option value="hide">Hide excluded</option>
+          <option value="show">Show excluded</option>
+          <option value="only">Only excluded</option>
+        </select>
+        <label>Sort <select id="sort">
+          <option value="name">name</option><option value="folder">folder</option>
+          <option value="duration">duration</option><option value="pitch">pitch</option>
+          <option value="loudness">loudness</option><option value="brightness">brightness</option>
+        </select></label>
+        <label>Group <select id="group">
+          <option value="">none</option><option value="folder">folder</option>
+          <option value="duration">duration</option><option value="pitch">pitch class</option>
+          <option value="register">octave</option><option value="loudness">loudness</option>
+          <option value="brightness">brightness</option>
+        </select></label>
+      </div>
+      <p class="hint">↑/↓ select · Space play · X exclude · A assign to pad · S add to shortlist</p>
+      <div id="count"></div>
+      <div id="samples" tabindex="0"></div>
+    </section>
+
+    <section id="rack">
+      <div class="rackbar">
+        <select id="rackselect"><option value="">Choose a rack…</option></select>
+        <button id="newrack">New</button>
+        <select id="sourcerack"><option value="">Duplicate an existing rack…</option></select>
+        <button id="duplicate">Duplicate</button>
+        <button id="renamerack">Rename</button>
+        <button id="deleterack">Delete</button>
+      </div>
+      <div id="rackinfo"></div>
+      <div class="bankbar">
+        <button id="bankdown">▼</button>
+        <span id="bank"></span>
+        <button id="bankup">▲</button>
+        <span class="legend"><i class="kept"></i>kept from source <i class="assigned"></i>assigned
+          <i class="shortlist"></i>shortlist only</span>
+      </div>
+      <div id="grid"></div>
+      <div id="compare"></div>
+      <div id="pad"></div>
+      <div class="exportbar">
+        <input id="filename" placeholder="Preset name">
+        <button id="export">Export .adg</button>
+      </div>
+      <div id="report"></div>
+      <div id="launchpad"></div>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
