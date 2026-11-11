@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Area]]
-up:: [[Launchpad/UI/5-Sequencer/View]]
+up:: [[Launchpad/UI/7-Sequencer/View]]
 
 - # Swing view
 	- Hold Shift and press Stop Clip to open Swing view, shown in orange and white. A value above 50 delays off-beat notes and a value below 50 moves them earlier; the Up and Down arrows adjust it.

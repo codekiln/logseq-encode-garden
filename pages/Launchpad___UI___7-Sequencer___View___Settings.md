@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Area]]
-up:: [[Launchpad/UI/5-Sequencer/View]]
+up:: [[Launchpad/UI/7-Sequencer/View]]
 
 - # Sequencer Settings view
 	- Hold Shift and press Sequencer to open Sequencer Settings, which controls each track's type and MIDI channel, plus the scale and root note.

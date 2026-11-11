@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Area]]
-up:: [[Launchpad/UI/5-Sequencer/View]]
+up:: [[Launchpad/UI/7-Sequencer/View]]
 
 - # Probability view
 	- The fifth button down the right-hand column opens Probability view. Select a step in the top half of the grid, then press a pad on the eight-pad slider at the top of the Play Area to set the chance that its notes play, from 13% to 100%.

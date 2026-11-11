@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Area]]
-up:: [[Launchpad/UI/5-Sequencer/View]]
+up:: [[Launchpad/UI/7-Sequencer/View]]
 
 - # Micro Step editing view
 	- The seventh button down the right-hand column opens Micro Step editing view. Select a step in the top half of the grid; the six leftmost pads of the Play Area's top row are that step's Micro Steps, for finer note placement within the step.

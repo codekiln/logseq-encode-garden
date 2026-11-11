@@ -4,6 +4,7 @@ up:: [[Launchpad]]
 - # Launchpad interface
 	- The controls of the [[Launchpad]], by mode.
 	- ## Areas
-		- [[Launchpad/UI/5-Sequencer]]
+		- [[Launchpad/UI/0-Shift]]
+		- [[Launchpad/UI/7-Sequencer]]
 	- ## Source
 		- [[Launchpad/UG]]

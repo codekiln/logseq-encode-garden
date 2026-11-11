@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Control]]
-up:: [[Launchpad/UI/5-Sequencer/View]]
+up:: [[Launchpad/UI/7-Sequencer/View]]
 
 - # Print to Clip button
 	- The eighth button down the right-hand column. It is an action rather than a view: it transfers the selected track's current Pattern or Pattern chain into an Ableton Live clip slot.

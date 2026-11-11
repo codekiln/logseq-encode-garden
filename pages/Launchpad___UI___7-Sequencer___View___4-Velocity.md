@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Area]]
-up:: [[Launchpad/UI/5-Sequencer/View]]
+up:: [[Launchpad/UI/7-Sequencer/View]]
 
 - # Velocity view
 	- The fourth button down the right-hand column opens Velocity view. Select a step in the top half of the grid, then press a pad on the two-row slider at the top of the Play Area to set its velocity from 1 to 16.

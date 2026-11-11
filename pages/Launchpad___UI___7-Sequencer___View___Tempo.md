@@ -1,5 +1,5 @@
 logseq-entity:: [[Logseq/Entity/UI/Area]]
-up:: [[Launchpad/UI/5-Sequencer/View]]
+up:: [[Launchpad/UI/7-Sequencer/View]]
 
 - # Tempo view
 	- Hold Shift and press Device to open Tempo view, shown in blue and white. The number is the current BPM; the Up and Down arrows adjust it.
