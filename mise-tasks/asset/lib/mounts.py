@@ -15,7 +15,7 @@ class MountError(ValueError):
         super().__init__(f"{FILE}: {message}; see {PAGE}")
 
 
-def check(name, mount):
+def validate_mount(name, mount):
     if not isinstance(mount, dict):
         raise MountError(f"mounts.{name} must be a table")
     keys = set(mount)
@@ -50,4 +50,4 @@ def load(root):
     mounts = data.get("mounts", {})
     if not isinstance(mounts, dict):
         raise MountError("mounts must be a table")
-    return {name: check(name, mount) for name, mount in mounts.items()}
+    return {name: validate_mount(name, mount) for name, mount in mounts.items()}
