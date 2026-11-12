@@ -10,6 +10,9 @@ import sys
 import tempfile
 import tomllib
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import mounts  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[3]
 
 
@@ -24,8 +27,16 @@ def filename(page):
     return "___".join(segments[:-1]) + "." + segments[-1]
 
 
+def folder():
+    """The owning mount's folder, where this garden's page-named files sit."""
+    owned = [mount for mount in mounts.load(ROOT).values() if "bucket" in mount]
+    if len(owned) != 1:
+        raise ValueError(f"{mounts.FILE} must declare one mount with a bucket; see {mounts.PAGE}")
+    return ROOT / owned[0]["path"]
+
+
 def asset(page):
-    return ROOT / "assets" / ".remote" / filename(page)
+    return folder() / filename(page)
 
 
 def dvc(*args, remote=False):

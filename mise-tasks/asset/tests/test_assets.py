@@ -23,6 +23,17 @@ class Names(unittest.TestCase):
                 assets.filename(page)
 
 
+class Folder(unittest.TestCase):
+    def test_garden_files_sit_in_owning_mount(self):
+        self.assertEqual(assets.asset("Course/Asset/Diagram/png"), assets.ROOT / "assets/.remote/logseq-encode-garden/Course___Asset___Diagram.png")
+
+    def test_borrowed_mount_alone_is_rejected(self):
+        with tempfile.TemporaryDirectory() as temp, patch.object(assets, "ROOT", Path(temp)):
+            (Path(temp) / "asset-mounts.toml").write_text('[mounts.g]\npath = "assets/.remote/g"\npublic = "https://example.com/g"\nsource = "github.com/o/g"\n')
+            with self.assertRaisesRegex(ValueError, "one mount with a bucket"):
+                assets.asset("Course/Asset/Diagram/png")
+
+
 class Credentials(unittest.TestCase):
     def test_missing_cache_stops_before_fnox(self):
         with tempfile.TemporaryDirectory() as temp, patch.object(assets, "ROOT", Path(temp)), patch.object(assets.subprocess, "check_output", return_value=str(Path(temp) / ".git")), patch.object(assets.subprocess, "run") as run:
@@ -45,13 +56,15 @@ class Conversion(unittest.TestCase):
             helper = root / "mise-tasks/asset/lib/assets.py"
             helper.parent.mkdir(parents=True)
             shutil.copy2(assets.__file__, helper)
+            shutil.copy2(Path(assets.__file__).with_name("mounts.py"), helper.with_name("mounts.py"))
+            (root / "asset-mounts.toml").write_text('[mounts.g]\npath = "assets/.remote/g"\nbucket = "g"\ndvc = "garden"\n')
             prepare = root / "mise-tasks/gitpa/media/prepare"
             prepare.parent.mkdir(parents=True)
             shutil.copy2(assets.ROOT / "mise-tasks/gitpa/media/prepare", prepare)
             subprocess.run(["git", "init", "-q", temp], check=True)
             subprocess.run([sys.executable, "-m", "dvc", "init", "-q"], cwd=root, check=True)
-            (root / ".gitignore").write_text("assets/.remote/*\n!assets/.remote/*.dvc\n")
-            folder = root / "assets/.remote"
+            (root / ".gitignore").write_text("/assets/.remote/**\n!/assets/.remote/**/\n!/assets/.remote/**/*.dvc\n")
+            folder = root / "assets/.remote/g"
             folder.mkdir(parents=True)
             source = folder / "Lesson___Asset___Full.wav"
             def recording(frames):
