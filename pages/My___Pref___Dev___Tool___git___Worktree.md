@@ -10,6 +10,8 @@
 				- branch `AB-1234-add-auth` -> `<proj-root>/.worktrees/AB-1234-add-auth`
 				- branch `docs/add-directory-grounding` -> `<proj-root>/.worktrees/docs-add-directory-grounding`
 		- in [[Claude Desktop]], whose Worktree location setting stores worktrees inside the project but isn't configurable to `.worktrees/`, use its fixed `<proj-root>/.claude/worktrees/` directory instead — the one accepted exception to the shared-location principle above, since the path is dictated by the tool; still [[gitignore]]d
+		- remove a worktree after its branch lands with `git worktree remove <proj-root>/.worktrees/<name>` and no `--force`; add `--force` only after git refuses the plain removal
+			- *why*: a clean worktree needs no `--force`, and git's refusal is the check that untracked or modified files are about to be lost. Agents may force-remove only under `<proj-root>/.worktrees/` or `<proj-root>/.claude/worktrees/`; Claude Code denies `--force` anywhere else.
 	- DO NOT
 		- store worktrees as siblings of the project folder
 		- put the branch-type prefix (`feature/`, `fix/`, `docs/`) in the worktree directory name
