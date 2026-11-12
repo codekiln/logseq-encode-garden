@@ -1,0 +1,7 @@
+# Schema: https://github.com/codekiln/logseq-encode-garden/blob/main/pages/Asset___Mount.md
+
+[mounts.logseq-encode-garden]
+path   = "assets/.remote/logseq-encode-garden"
+bucket = "logseq-encode-garden"
+dvc    = "garden"
+public = "https://s3.us-east-005.backblazeb2.com/logseq-encode-garden"
