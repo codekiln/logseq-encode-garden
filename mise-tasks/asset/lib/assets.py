@@ -27,8 +27,8 @@ def filename(page):
     return "___".join(segments[:-1]) + "." + segments[-1]
 
 
-def folder():
-    """The owning mount's folder, where this garden's page-named files sit."""
+def owned_mount_folder():
+    """The folder of the mount this garden owns in asset-mounts.toml."""
     owned = [mount for mount in mounts.load(ROOT).values() if "bucket" in mount]
     if len(owned) != 1:
         raise ValueError(f"{mounts.FILE} must declare one mount with a bucket; see {mounts.PAGE}")
@@ -36,7 +36,7 @@ def folder():
 
 
 def asset(page):
-    return folder() / filename(page)
+    return owned_mount_folder() / filename(page)
 
 
 def dvc(*args, remote=False):
