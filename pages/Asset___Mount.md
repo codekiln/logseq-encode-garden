@@ -20,7 +20,7 @@ see-also:: [[Logseq/Entity/Asset/B2]], [[Asset/mise/Task/fetch]]
 		- `source`: the ghq address of the garden that owns the files, such as `github.com/codekiln/logseq-encode-garden`.
 	- ## Owning and borrowing gardens
 		- A garden that stores the files owns the mount. Its mount has `path`, `bucket` and `dvc`, and `public` when the bucket is public.
-		- A garden that links another garden's files borrows the mount. Its mount has `path`, `public` and `source`, with the same `path` and `public` as the owning garden. The proxy sync writes a borrowed mount when it copies a page that links into it.
+		- A garden that links another garden's files borrows the mount. Its mount has `path`, `public` and `source`, with the same `path` and `public` as the owning garden. When gitpa's [[Logseq/Entity/Proxy/Page/mise/Task/sync]] task copies a page that links into a mount, the task will also write that mount's borrowed declaration into the destination garden's `asset-mounts.toml`.
 		- A mount without `public` is private. Publishing a page that links into a private mount stops and names the page and the file.
 	- ## Validation
 		- Tasks that read `asset-mounts.toml` load it through `mise-tasks/asset/lib/mounts.py`. It stops with an error that links this page when a mount has an unknown key, lacks a key its role needs, mixes owning and borrowing keys, or has a `path` other than `assets/.remote/<mount>`.
