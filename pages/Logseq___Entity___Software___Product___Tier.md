@@ -1,0 +1,23 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Software Product Tier
+	- In this garden, **Software Product Tier** pages model one named offering of a [[Logseq/Entity/Software/Project]] that its vendor sells or grants under its own name, such as [[ChatGPT/Enterprise]], ChatGPT Edu or ChatGPT Business.
+	- ## What counts as a Software Product Tier
+		- A plan, edition or workspace type with its own name, price or terms, and its own set of features, models, admin controls or usage limits.
+		- Tiers of one product share the product's features. The tier page records what differs: who can buy it, what an admin controls, which models and features are on, and how much use a seat allows.
+		- Not a Software Product Tier: the product itself, which is a [[Logseq/Entity/Software/Project]]; a setting inside the product, which is a [[Logseq/Entity/Software/Option]]; a host add-on, which is a [[Logseq/Entity/Software/Plugin]].
+	- ## Naming and links
+		- Name the page `<Product>/<Tier>`, under the product's main page, so the namespace links the tier to its product. [[ChatGPT/Enterprise]] is a tier of [[ChatGPT]].
+		- Use the vendor's word for the tier as the last segment, such as `Enterprise`, `Edu`, `Business`, `Pro` or `Max`.
+		- A sub-plan of a tier nests under the tier, as [[Anthropic/Product/Claude/Max/5x]] nests under [[Anthropic/Product/Claude/Max]].
+	- ## Finding and deduplicating
+		- Check in this order: the exact `<Product>/<Tier>` page, then pages that mention the tier by its full name, such as "ChatGPT Enterprise" in prose. Classify as: existing, similar, new, or blocked.
+	- ## Frontmatter
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+		- Set `logseq-entity:: [[Logseq/Entity/Software/Product/Tier]]` to mark an instance.
+		- `created-by::` — optional; the company page that sells the tier, when it differs from the product's page or the product has none.
+	- ## Page shape
+		- H1: a Markdown link to the vendor's page for the tier when one is known, otherwise the tier's full name, such as `- # ChatGPT Enterprise`.
+		- Lean bullets on what the tier gives and who sells or grants it. Prices, usage limits and model lists change often, so put a date and a source link on each one.
+	- ## Examples in this garden
+		- [[ChatGPT/Enterprise]] and [[Anthropic/Product/Claude/Max]].
