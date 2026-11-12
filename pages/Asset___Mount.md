@@ -1,7 +1,7 @@
 see-also:: [[Logseq/Entity/Asset/B2]], [[Asset/mise/Task/fetch]]
 
 - # Asset Mount
-	- A mount ties a folder of remote files in a garden checkout to the place they are stored and the URL they are published at. Pages link a mounted file by relative path, `../assets/.remote/<mount>/<file>`, so Logseq shows it from disk. Publishing replaces `../assets/.remote/<mount>/` with the mount's `public` base URL.
+	- A mount ties a folder of remote files in a garden checkout to the place they are stored and the URL they are published at. Pages will link a mounted file by relative path, `../assets/.remote/<mount>/<file>`, so Logseq shows it from disk. `mise run site:build` and gitpa's website and RSS builds will replace `../assets/.remote/<mount>/` with the mount's `public` base URL. Until the sub-issues of [#347 Link B2 assets by relative path and publish them as public URLs](https://github.com/codekiln/logseq-encode-garden/issues/347) land, pages link the B2 URL directly.
 	- Each garden declares its mounts in `asset-mounts.toml` at its root. The file's first line is a comment linking this page.
 	- ## Example
 		- ~~~toml
