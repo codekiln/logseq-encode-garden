@@ -14,7 +14,7 @@ Use `![label](location)` for images, audio, and video; use `[label](location)` f
 
 ## New asset pages
 
-Derive the flat filename from the asset page using the entity definition. Keep the optional local copy of a remotely stored file in `assets/.remote/<mount>/`, where `<mount>` is the mount this garden owns in `asset-mounts.toml`. The B2 URL puts the same filename directly beneath the garden's bucket.
+Derive the flat filename from the asset page using the entity definition. Keep the optional local copy of a remotely stored file in `assets/.remote/<mount>/`, where `<mount>` is the mount this garden owns in `asset-mounts.toml`. A file's B2 URL is the garden's bucket URL followed by the same filename.
 
 ```markdown
 ![September 24 episode recording](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___09___24-Thu___Asset___Synth___Full.mp3)
