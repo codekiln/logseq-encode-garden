@@ -36,6 +36,6 @@
 	- Logseq in such a checkout shows broken images until the files are fetched.
 - ## Path convention
 	- A page links `../assets/.remote/<owning garden>/<file>`. `<file>` is the page-derived name and the object's key at the bucket root.
-	- codekiln chose hyphens for spaces on 2026-11-11: the file name writes each space in the asset page name as a hyphen, so new links need no `%20`. [[Logseq/Entity/Asset]] states the rule.
+	- On 2026-11-11 codekiln chose to replace each space in an asset page name with a hyphen in its file name, so new links need no `%20`. [[Logseq/Entity/Asset]] states the rule.
 	- The migration copies each object with a space in its key to the hyphenated key and points the page's link at the copy. That covers about 730 of the linked files, nearly all MicroFreak and Launchpad screenshots and preset `.bin` files. No podcast enclosure has a space in its name, so the feed's URLs stay the same. The old keys stay in the bucket until codekiln approves deleting them after the migration.
 	- Two tasks build file names from page names and need to write hyphens: [asset_name in b2_upload.py](https://github.com/codekiln/logseq-encode-garden/blob/fbb79bb2550/mise-tasks/gitpa/media/lib/b2_upload.py#L57-L69) behind `gitpa:media:upload`, and the preset `.bin` name in [preset_page.py](https://github.com/codekiln/logseq-encode-garden/blob/fbb79bb2550/mise-tasks/microfreak/lib/preset_page.py#L512).
