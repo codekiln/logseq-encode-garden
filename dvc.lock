@@ -12,8 +12,8 @@ stages:
       size: 637836338
     - path: mise-tasks/asset/lib/assets.py
       hash: md5
-      md5: 743d885686b6a7700b65d6c9b50b5824
-      size: 6381
+      md5: ef0fafad64a003e24ca5e1ce44886f70
+      size: 6399
     - path: mise-tasks/gitpa/media/prepare
       hash: md5
       md5: b2ca0141f388d94eca4c4ca02f0b6121
