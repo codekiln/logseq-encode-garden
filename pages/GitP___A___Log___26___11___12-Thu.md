@@ -1,0 +1,6 @@
+- [[2026-11-12 Thu]]
+	- ## Saved [[Microfreak/Preset/399 FireAlarmLoBat]] for the *Foreveter* ceremony
+		- A low-battery fire alarm chirp to use as a timing cue in this weekend's [[Ghost in the Patch Ceremony]], *Foreveter*. It comes from the alarm-cue idea in [[Making/Music/Log/26/11/11-Wed]].
+		- [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]] with the waves set to sine, playing the highest G on the keyboard at octave +3 (G8) with a 10 ms gate. Attack and decay are at zero.
+		- At 60 BPM, sequence A chirps every 60 seconds and sequence B every 30 seconds. Those are the two common intervals for alarm chirps.
+		- Slot 399 previously held [[Microfreak/Preset/399 Init]] from [[GitP/A/Session/26/10/09-Fri]]; its saved export still preserves that sound.
