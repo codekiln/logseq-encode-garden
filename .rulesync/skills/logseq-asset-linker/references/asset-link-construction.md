@@ -19,11 +19,12 @@ locations without changing the file's name.
 ## New asset pages
 
 Derive the flat filename from the asset page using the entity definition.
-For remotely stored files, the optional local copy is under `assets/.remote/`
+For remotely stored files, the optional local copy is under `assets/.remote/<mount>/`,
+the folder of the garden's own mount in `asset-mounts.toml`,
 and the B2 URL uses that filename directly beneath the garden's bucket.
 
 ```markdown
-![September 24 episode recording](../assets/.remote/GitP___A___Session___26___09___24-Thu___Asset___Synth___Full.mp3)
+![September 24 episode recording](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___09___24-Thu___Asset___Synth___Full.mp3)
 ```
 
 ## Direct file links
