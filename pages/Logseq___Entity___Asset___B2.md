@@ -4,7 +4,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Storage location
 		- Upload the page-derived filename at the root of the garden's configured B2 bucket. Its optional local copy uses `assets/.remote/<filename>`.
 		- For `Course/Asset/Diagram/Overview/png`, the filename is `Course___Asset___Diagram___Overview.png` and the local copy is `assets/.remote/Course___Asset___Diagram___Overview.png`.
-		- Public uploads use the S3 endpoint returned by B2 authorization: `https://<s3-host>/<garden-bucket>/Course___Asset___Diagram___Overview.png`. The garden's B2 configuration supplies the host and bucket. Page-derived names contain no spaces, so the URL repeats the filename unchanged.
+		- Public uploads use the S3 endpoint returned by B2 authorization: `https://<s3-host>/<garden-bucket>/Course___Asset___Diagram___Overview.png`. The garden's B2 configuration supplies the host and bucket. The URL ends with the file name as written. Files uploaded before 2026-11-11 still have spaces in their names, and their URLs write each space as `%20` until those files are copied to hyphenated names.
 		- Private uploads retain the authenticated B2 download URL, `https://<download-host>/file/<garden-bucket>/<filename>`.
 	- ## Frontmatter and body
 		- A B2 asset carries `logseq-entity:: [[Logseq/Entity/Asset/B2]]`. Shared asset frontmatter and embedded media or download links follow [[Logseq/Entity/Asset]].
