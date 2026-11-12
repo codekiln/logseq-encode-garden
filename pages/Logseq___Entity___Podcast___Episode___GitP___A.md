@@ -50,7 +50,7 @@ entity-tasks:: [[Logseq/Entity/Podcast/Episode/GitP/A/mise/Task/ableton/locators
 		- The changed selection reaches the feed and website after sync and the next publishing build and deployment.
 	- ## Prepare and preserve media
 		- Each source or derived file has its own page beneath the session at `GitP/A/Session/YY/MM/DD-Day/Asset/<Purpose>/<format>`, following [[Logseq/Entity/Asset]]. The purpose names the recording or version; the final segment is the lowercase file extension.
-		- The page-derived filename replaces namespace separators with `___` and the final format segment with the extension. A local working copy lives at `assets/.remote/<mount>/<filename>`, in the folder of the owning garden's mount in [[Asset/Mount]].
+		- The page-derived filename replaces namespace separators with `___` and the final format segment with the extension. A local working copy lives at `assets/.remote/<mount>/<filename>`, where `<mount>` is the mount this garden owns in [[Asset/Mount]].
 		- Run the asset tasks from the source garden checkout, passing logical page names without wikilink brackets. Their reference pages hold access requirements and recovery details.
 			- [[Asset/mise/Task/add]] — `mise run asset:add -- <source-file> <asset-page>` copies and DVC-tracks an original or separately prepared file.
 			- [[Asset/mise/Task/fetch]] — `mise run asset:fetch -- <asset-page>` restores a tracked file needed for preparation.

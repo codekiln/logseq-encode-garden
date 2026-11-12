@@ -4,7 +4,7 @@ task-config-root:: .
 task-name:: asset:add
 source-link:: https://github.com/codekiln/logseq-encode-garden/blob/codex/dvc-asset-tasks/mise-tasks/asset/add
 - # Track a Local Asset
-	- Copies a source file into the folder of the garden's own mount in [[Asset/Mount]], `assets/.remote/<mount>/`, using the filename derived from its asset page, then creates adjacent `.dvc` metadata.
+	- Copies a source file into `assets/.remote/<mount>/`, where `<mount>` is the mount this garden owns in [[Asset/Mount]], using the filename derived from its asset page, then creates adjacent `.dvc` metadata.
 	- ## Invocation
 		- Run from the garden checkout. The page argument is its logical name, without wikilink brackets.
 			- ~~~sh

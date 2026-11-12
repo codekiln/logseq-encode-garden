@@ -2,7 +2,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 - # Backblaze B2 Asset
 	- In this garden, **Backblaze B2 Asset** pages represent files stored in Backblaze B2, following [[Logseq/Entity/Asset]] for filenames, ownership, and page contents.
 	- ## Storage location
-		- Upload the page-derived filename at the root of the garden's configured B2 bucket. Its optional local copy sits in the folder of the garden's own mount in [[Asset/Mount]], `assets/.remote/<mount>/<filename>`.
+		- Upload the page-derived filename at the root of the garden's configured B2 bucket. Its optional local copy lives at `assets/.remote/<mount>/<filename>`, where `<mount>` is the mount this garden owns in [[Asset/Mount]].
 		- For `Course/Asset/Diagram/Overview/png`, the filename is `Course___Asset___Diagram___Overview.png` and the local copy in this garden is `assets/.remote/logseq-encode-garden/Course___Asset___Diagram___Overview.png`.
 		- Public uploads use the S3 endpoint returned by B2 authorization: `https://<s3-host>/<garden-bucket>/Course___Asset___Diagram___Overview.png`. The garden's B2 configuration supplies the host and bucket. The URL ends with the file name. A file uploaded before 2026-11-11 can still have spaces in its name, and its URL has `%20` in place of each space until an agent copies the file to a hyphenated name.
 		- Private uploads retain the authenticated B2 download URL, `https://<download-host>/file/<garden-bucket>/<filename>`.
