@@ -9,11 +9,11 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 			- Recording: `Course/Asset/Audio/First-Lesson/mp3` corresponds to `Course___Asset___Audio___First-Lesson.mp3`.
 			- Spaces: `Course/Week One/Asset/Audio/Intro/mp3` corresponds to `Course___Week-One___Asset___Audio___Intro.mp3`.
 			- Document: `Project/Asset/Reference/Setup/pdf` corresponds to `Project___Asset___Reference___Setup.pdf`.
-		- Reverse the mapping by turning the extension back into the final segment and replacing `___` with `/`. For example, `Project___Asset___Reference___Setup.pdf` identifies `Project/Asset/Reference/Setup/pdf`. A hyphen in the file name stands for either a hyphen or a space in the page name, so the owner page is the existing page that matches either reading.
+		- Reverse the mapping by turning the extension back into the final segment and replacing `___` with `/`. For example, `Project___Asset___Reference___Setup.pdf` identifies `Project/Asset/Reference/Setup/pdf`. A hyphen in a file name can stand for a hyphen or a space in the page name, so `Course___Week-One___Asset___Audio___Intro.mp3` belongs to whichever of `Course/Week One/Asset/Audio/Intro/mp3` and `Course/Week-One/Asset/Audio/Intro/mp3` exists. Two pages that differ only by a space and a hyphen would share one file name, so one of them needs a different name before its asset is stored.
 	- ## Valid names
 		- Namespace separators become `___`; an asset filename contains no `/` or directory structure.
 		- `___` is reserved for namespace boundaries and cannot occur inside a page segment. Empty segments, control characters, and filesystem-reserved punctuation (`<`, `>`, `:`, `"`, `\`, `|`, `?`, `*`) are invalid. The format segment contains lowercase letters or digits.
-		- A page name that violates these rules needs a valid name before the asset is stored. Silent punctuation replacement would make the filename ambiguous.
+		- A page name that violates these rules needs a valid name before the asset is stored.
 		- Hyphens keep multiword asset purposes readable. Spaces in an owner's namespace also become hyphens, so a file name needs no URL encoding. Files uploaded before 2026-11-11 keep spaces in their names until the B2 link migration copies them to hyphenated names.
 	- ## Frontmatter and body
 		- A local asset carries `logseq-entity:: [[Logseq/Entity/Asset]]`. A B2 asset uses [[Logseq/Entity/Asset/B2]]. Ownership follows the namespace before `/Asset/`.
@@ -23,4 +23,4 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Principles
 		- [[My/Principle/Simplify/Create Uniform Interfaces]]: every attachment uses the same relationship between its page and filename.
 		- [[My/Principle/Simplify/Don't Repeat Yourself DRY]]: the namespace supplies ownership, the page supplies the filename, and the file link supplies its location.
-		- [[My/Principle/Make Illegal States Unrepresentable/Discussion]]: valid asset names exclude problematic filename characters and reserve `___` for namespace boundaries, so each filename maps back to an owner page.
+		- [[My/Principle/Make Illegal States Unrepresentable/Discussion]]: valid asset names exclude problematic filename characters and reserve `___` for namespace boundaries, so each filename maps back to one page.
