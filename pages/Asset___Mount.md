@@ -15,7 +15,7 @@ see-also:: [[Logseq/Entity/Asset/B2]], [[Asset/mise/Task/fetch]]
 		- The table name under `mounts` is the mount's name. It matches the last folder of `path`.
 		- `path`: the folder the files sit in, relative to the garden root, always `assets/.remote/<mount>`.
 		- `bucket`: the B2 bucket that holds each file at its root, under the file's page-derived name.
-		- `dvc`: the DVC remote in `.dvc/config` that backs up the files and restores them with [[Asset/mise/Task/fetch]].
+		- `dvc`: the name of the DVC remote in `.dvc/config` that stores backups of the files. [[Asset/mise/Task/fetch]] restores a file from that remote.
 		- `public`: the base URL a published page links instead of the mount folder, with no trailing slash. A file's public URL is `<public>/<file>`.
 		- `source`: the ghq address of the garden that owns the files, such as `github.com/codekiln/logseq-encode-garden`.
 	- ## Owning and borrowing gardens
