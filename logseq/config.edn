@@ -445,4 +445,8 @@
  :publishing/all-pages-public? true
  :publishing/page-properties? true
  :publishing/page-properties-collapsed? false
+ ;; Logseq Gardener (lsg) plugins for the published site; Logseq ignores this key.
+ ;; podcast-episode: a player that keeps playing across pages, with seekable chapters.
+ ;; sequence-header: previous and next links in the header from prev:: and next::.
+ :lsg/plugins [:podcast-episode :sequence-header]
  :feature/enable-timetracking? false}
