@@ -45,7 +45,7 @@ class MediaUploadTests(unittest.TestCase):
         self.page_path.write_text('tags:: [[Existing]]\nlogseq-entity:: [[Logseq/Entity/Asset/B2]]\n- # Diagram\n')
         self.source = self.root / 'prepared.gif'
         self.source.write_bytes(b'GIF89a' + b'example')
-        self.filename = 'Course with Spaces___Asset___Diagram___Overview.gif'
+        self.filename = 'Course-with-Spaces___Asset___Diagram___Overview.gif'
         self.info = {'action': 'upload', 'fileName': self.filename,
                      'contentLength': self.source.stat().st_size,
                      'contentSha1': hashlib.sha1(self.source.read_bytes()).hexdigest(), 'contentType': 'image/gif'}
@@ -66,7 +66,7 @@ class MediaUploadTests(unittest.TestCase):
         client = FakeB2(self.info)
         original = self.page_path.read_bytes()
         url = transfer(self.source, self.root, self.page, client=client)
-        self.assertIn('Course%20with%20Spaces___Asset', url)
+        self.assertIn('Course-with-Spaces___Asset', url)
         self.assertEqual(client.uploads, 0)
         self.assertTrue(client.verified)
         self.assertEqual(self.page_path.read_bytes(), original)
@@ -75,7 +75,7 @@ class MediaUploadTests(unittest.TestCase):
         client = FakeB2(self.info)
         client.s3 = 'https://s3.us-east-005.backblazeb2.com'
         url = transfer(self.source, self.root, self.page, client=client)
-        self.assertEqual(url, client.s3 + '/garden/Course%20with%20Spaces___Asset___Diagram___Overview.gif')
+        self.assertEqual(url, client.s3 + '/garden/Course-with-Spaces___Asset___Diagram___Overview.gif')
         self.assertTrue(client.verified)
         self.assertEqual(client.uploads, 0)
 
