@@ -11,7 +11,7 @@ source-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/mise-ta
 		- `pointer`: whether `assets/.remote/<mount>/<file>.dvc` exists, so [[Asset/mise/Task/fetch]] can restore the file.
 		- `local`: whether the file itself sits in `assets/.remote/<mount>/`.
 		- `space`: whether the file name has a space. A `yes` marks a file that needs a copy with a hyphen in place of each space, the naming rule [[Logseq/Entity/Asset]] describes.
-		- `public`, with `--public`: the HTTP status of a HEAD request to the file's public URL, or `private` for a mount with no `public` line.
+		- `public`, with `--public`: the HTTP status the file's public URL returns to a HEAD request, such as `200` or `404`. The column shows `private` for a mount whose entry in `asset-mounts.toml` has no `public` URL, and `error` when the request gets no answer.
 	- A summary line on stderr gives the totals.
 	- ## Invocation
 		- Run from the garden checkout.
