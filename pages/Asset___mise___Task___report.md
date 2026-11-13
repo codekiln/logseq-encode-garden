@@ -3,7 +3,7 @@ task-owner:: [[Person/codekiln/GitHub/logseq-encode-garden]]
 task-config-root:: .
 task-name:: asset:report
 source-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/asset/report
-- # List the B2 Files Pages Link
+- # List Linked B2 Files
 	- Prints one row per file that a page in `pages/` or `journals/` links into a mount declared in `asset-mounts.toml`, as tab-separated columns:
 		- `mount` and `file`: the mount the link points into and the file name, with `%20` decoded.
 		- `pages`: how many pages link the file.
