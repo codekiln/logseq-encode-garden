@@ -7,7 +7,7 @@ next:: [[Making/Music/Log/26/10/31-Sat]]
 		- [[Ableton/Live/UG/06 Arrangement View/04 Launching the Arrangement with Locators]]
 	- ## 23:30 — GitP reflections on notation of performance
 		- ### Logseq as a score
-			- ![Somnia, a set template and Logseq as a score](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Music___Making___Log___26___10___29%20Thu%20-%20GitP%20Halloween%20event%20prep___Asset___Notebook___Yellow-12.jpg)
+			- ![Somnia, a set template and Logseq as a score](../assets/.remote/logseq-encode-garden/Music___Making___Log___26___10___29-Thu---GitP-Halloween-event-prep___Asset___Notebook___Yellow-12.jpg)
 			- #### Transcription
 				- The 2026-10-29 entry and the poem in the left column are on [[Music/Making/Log/26/10/29 Thu - GitP Halloween event prep]].
 				- 2026-10-30 Fri 11:30 PM
@@ -26,7 +26,7 @@ next:: [[Making/Music/Log/26/10/31-Sat]]
 				- The GitP episode page already works like a score: chapters are staves, and each chapter heading names a preset and a pattern.
 				- An Ableton Session grid of scenes × patterns, with the preset as the first column, converts directly into a Logseq outline. The example preset is [[Microfreak/Preset/016 Voidom]].
 		- ### Scale-degree shorthand and machine commands
-			- ![Notation of performance — scale-degree shorthand and machine commands](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Making___Music___Log___26___10___30%20Fri___Asset___Notebook___Yellow-13.jpg)
+			- ![Notation of performance — scale-degree shorthand and machine commands](../assets/.remote/logseq-encode-garden/Making___Music___Log___26___10___30-Fri___Asset___Notebook___Yellow-13.jpg)
 			- #### Transcription
 				- music notation as music technology
 				- it's crazy to think of how many handwritten staves there have been in the history of music; I've probably written less than 1000, but Bach, Mozart…
@@ -54,7 +54,7 @@ next:: [[Making/Music/Log/26/10/31-Sat]]
 				- Instead of staff notation, write melodies as scale degrees with octave subscripts inside a declared mode, plus a repeat count.
 				- Extend that into a notation for performance gestures: Launchpad sequencer commands and MicroFreak knob turns, either as a nested Logseq outline or as terse assembly-like mnemonics (`stp`, `sps`, `len`, `mod`).
 		- ### Columnar gesture notation (p. 3)
-			- ![Columnar gesture notation for the Launchpad Pro and MicroFreak](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Making___Music___Log___26___10___30%20Fri___Asset___Notebook___Yellow-14.jpg)
+			- ![Columnar gesture notation for the Launchpad Pro and MicroFreak](../assets/.remote/logseq-encode-garden/Making___Music___Log___26___10___30-Fri___Asset___Notebook___Yellow-14.jpg)
 			- #### Transcription
 				- 2026-10-30 Fri p3
 				- I like the logseq compat idea but in handwritten contexts, whitespace "aware" notation is not an efficient use of pages. So then, what about something more traditional in terms of programming languages? We could have delimiters, for example, semicolons. makes me want to learn Supercollider again, kind of, just to see what they do, or maybe sonic pi or any of the toplap languages. Now I'm resisting my curiosity. I really want to go into the other room and fire up the computer.
@@ -87,7 +87,7 @@ next:: [[Making/Music/Log/26/10/31-Sat]]
 				- A "gesture" heading holds one code block per instrument, `lpp` for the [[Novation/Launchpad/Pro/Mk3]] and `mfk` for the [[Microfreak]]. Paths name menu locations and functions take values, with `wav(50, 90, 7)` sweeping the Wave knob from 50 to 90 over 7 seconds.
 				- Blocks rendered side by side could show simultaneous actions, though two hands limit how many happen at once.
 		- ### MicroFreak pressure through the Launchpad sequencer (p. 4)
-			- ![Encoding MicroFreak pressure through the Launchpad sequencer](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Making___Music___Log___26___10___30%20Fri___Asset___Notebook___Yellow-15.jpg)
+			- ![Encoding MicroFreak pressure through the Launchpad sequencer](../assets/.remote/logseq-encode-garden/Making___Music___Log___26___10___30-Fri___Asset___Notebook___Yellow-15.jpg)
 			- #### Transcription
 				- 2026-10-30 Fri p.4
 				- I should use microfreak's pressure sensitivity more

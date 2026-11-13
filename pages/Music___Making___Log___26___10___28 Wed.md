@@ -26,7 +26,7 @@
 				- [[Ableton/Live/UG/07 Session View/04 Setting Up the Session View Grid/02 Removing Clip Stop Buttons]]
 					- It's possible to remove the clip stop buttons on the session view for the Arrangement Tracks group; select a whole portion of the grid with shift click, right click, then do Remove Stop Button or Cmd E
 	- ## 19:12 — Ghost in the Patch reflections: Session View improv tracks
-		- ![Session View improv track groups and routing](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Music___Making___Log___26___10___28%20Wed___Asset___Notebook___Yellow-11.jpg)
+		- ![Session View improv track groups and routing](../assets/.remote/logseq-encode-garden/Music___Making___Log___26___10___28-Wed___Asset___Notebook___Yellow-11.jpg)
 		- ### Transcription
 			- 2026-10-28 Wed 19:12 Ghost in the Patch reflections
 			- This morning I researched how to record a session view improv in Ableton Live. I watched a few videos, but none really showed everything I needed. I'm expecting to make something like:
