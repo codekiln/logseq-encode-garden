@@ -28,7 +28,7 @@ def filename(page):
 
 
 def spaced_filename(page):
-    """The name a file uploaded before 2026-11-11 kept, with each space unchanged."""
+    """The page's file name with its spaces kept, as the asset tasks wrote it until they switched to hyphens."""
     segments = page.split("/")
     return "___".join(segments[:-1]) + "." + segments[-1]
 
@@ -42,12 +42,12 @@ def owned_mount_folder():
 
 
 def asset(page):
-    """The page's file in the owned mount, or its older spaced copy while only that one exists."""
+    """Return the page's hyphenated path in the owned mount, or its old spaced path when only the spaced file or its .dvc pointer is there."""
     folder = owned_mount_folder()
     current, spaced = folder / filename(page), folder / spaced_filename(page)
-    def present(path):
+    def file_or_pointer_exists(path):
         return path.exists() or Path(str(path) + ".dvc").exists()
-    return spaced if not present(current) and present(spaced) else current
+    return spaced if not file_or_pointer_exists(current) and file_or_pointer_exists(spaced) else current
 
 
 def dvc(*args, remote=False):
