@@ -69,7 +69,7 @@ def public_links(text, mounts, page):
         start, name, file = match.groups()
         mount = mounts.get(name)
         if mount is None:
-            raise MountError(f"{page} links {name}/{file}, but declares no mounts.{name}")
+            raise MountError(f"{page} links {name}/{file}, but asset-mounts.toml declares no mounts.{name}")
         if "public" not in mount:
             raise MountError(f"{page} links {name}/{file}, but mounts.{name} has no public URL")
         # A file linked in angle brackets may hold spaces, which a URL cannot.

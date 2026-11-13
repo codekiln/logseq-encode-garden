@@ -96,7 +96,7 @@ class PublicLinks(unittest.TestCase):
 
     def test_errors_name_the_page_and_file(self):
         cases = {
-            "pages/A.md links other/C.png, but declares no mounts.other": "[c](../assets/.remote/other/C.png)",
+            "pages/A.md links other/C.png, but asset-mounts.toml declares no mounts.other": "[c](../assets/.remote/other/C.png)",
             "pages/A.md links private/D.png, but mounts.private has no public URL": "[d](../assets/.remote/private/D.png)",
         }
         for message, text in cases.items():
