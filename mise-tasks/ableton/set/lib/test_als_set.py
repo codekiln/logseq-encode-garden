@@ -15,11 +15,13 @@ def value(parent, tag, text):
     ET.SubElement(parent, tag, Value=text)
 
 
-def route(chain, tag, target, lower=''):
+def route(chain, tag, target, lower='', upper=None):
+    """One routing: the target Live stores, and the text of the two boxes Live shows for it."""
     element = ET.SubElement(chain, tag)
     value(element, 'Target', target)
-    value(element, 'UpperDisplayString', 'shown')
-    value(element, 'LowerDisplayString', lower)
+    if upper is not None:
+        value(element, 'UpperDisplayString', upper)
+        value(element, 'LowerDisplayString', lower)
 
 
 def track(tracks, kind, ident, name, group='-1', monitor=None, armed=None, devices=(), routes=(), user_devices=()):
@@ -29,8 +31,8 @@ def track(tracks, kind, ident, name, group='-1', monitor=None, armed=None, devic
     value(names, 'UserName', name)
     value(element, 'TrackGroupId', group)
     chain = ET.SubElement(element, 'DeviceChain')
-    for tag, target, lower in routes:
-        route(chain, tag, target, lower)
+    for tag, target, *shown in routes:
+        route(chain, tag, target, *shown)
     sequencer = ET.SubElement(chain, 'MainSequencer')
     if monitor is not None:
         value(sequencer, 'MonitoringEnum', str(monitor))
@@ -49,17 +51,22 @@ def fixture(signature='201', tempo='120', creator='Ableton Live 11.3.43'):
     root = ET.Element('Ableton', Creator=creator)
     live = ET.SubElement(root, 'LiveSet')
     tracks = ET.SubElement(live, 'Tracks')
-    track(tracks, 'GroupTrack', '1', 'Pattern A', routes=[('AudioOutputRouting', 'AudioOut/Master', '')])
+    track(tracks, 'GroupTrack', '1', 'Pattern A', routes=[('AudioOutputRouting', 'AudioOut/Master', '', 'Master')])
     track(tracks, 'AudioTrack', '2', 'Pattern A Audio', group='1', monitor=1, armed='false',
           devices=['GlueCompressor', 'Compressor2'],
-          routes=[('AudioInputRouting', 'AudioIn/External/S0', '1/2'), ('AudioOutputRouting', 'AudioOut/GroupTrack', '')])
+          routes=[('AudioInputRouting', 'AudioIn/External/S0', '1/2', 'Ext. In'),
+                  ('AudioOutputRouting', 'AudioOut/GroupTrack', '', 'Group')])
     track(tracks, 'MidiTrack', '3', 'Pattern A MIDI', group='1', monitor=0, armed='true',
-          routes=[('MidiInputRouting', 'MidiIn/External.All/-1', ''), ('MidiOutputRouting', 'MidiOut/Track.4/TrackIn', ''),
-                  ('AudioOutputRouting', 'AudioOut/GroupTrack', '')])
+          routes=[('MidiInputRouting', 'MidiIn/External.All/-1', '', 'Ext: All Ins'),
+                  ('MidiOutputRouting', 'MidiOut/Track.4/TrackIn', 'Track In', 'Lead / Synth'),
+                  ('AudioOutputRouting', 'AudioOut/GroupTrack', '', 'Group')])
     track(tracks, 'MidiTrack', '4', 'Lead / Synth', monitor=2, armed='false', user_devices=[('Operator', 'My Lead')],
-          routes=[('MidiInputRouting', 'MidiIn/External.All/4', 'Ch. 5'), ('MidiOutputRouting', 'MidiOut/None', ''),
-                  ('AudioOutputRouting', 'AudioOut/Master', '')])
-    track(tracks, 'ReturnTrack', '5', 'A-Reverb', devices=['Reverb'], routes=[('AudioOutputRouting', 'AudioOut/Master', '')])
+          routes=[('MidiInputRouting', 'MidiIn/Track.3/TrackOut', 'Post Mixer', 'Pattern A MIDI'),
+                  ('MidiOutputRouting', 'MidiOut/None', '', 'None'),
+                  # A file without the display text: the target itself is written.
+                  ('AudioOutputRouting', 'AudioOut/Master')])
+    track(tracks, 'ReturnTrack', '5', 'A-Reverb', devices=['Reverb'],
+          routes=[('AudioOutputRouting', 'AudioOut/Track.99/TrackIn', 'Track In', 'Gone')])
     mixer = ET.SubElement(ET.SubElement(ET.SubElement(live, 'MasterTrack'), 'DeviceChain'), 'Mixer')
     value(ET.SubElement(mixer, 'Tempo'), 'Manual', tempo)
     value(ET.SubElement(mixer, 'TimeSignature'), 'Manual', signature)
@@ -105,7 +112,7 @@ class PlanTests(unittest.TestCase):
         base = f'{PERFORMANCE}/Set/Track'
         action, text = pages[f'{base}/Pattern A']
         self.assertEqual(text, (
-            'logseq-entity:: [[Logseq/Entity/Ableton/Track/Group]]\n\n- # Pattern A\n  type:: group\n  audio-to:: AudioOut/Master\n'
+            'logseq-entity:: [[Logseq/Entity/Ableton/Track/Group]]\n\n- # Pattern A\n  type:: group\n  audio-to:: Master\n'
             f'\t- {{{{embed [[{base}/Pattern A/Pattern A Audio]]}}}}\n'
             f'\t- {{{{embed [[{base}/Pattern A/Pattern A MIDI]]}}}}\n'))
         self.assertIn('logseq-entity:: [[Logseq/Entity/Ableton/Track/Track]]', pages[f'{base}/Pattern A/Pattern A Audio'][1])
@@ -114,17 +121,37 @@ class PlanTests(unittest.TestCase):
         pages = self.plan()
         base = f'{PERFORMANCE}/Set/Track'
         self.assertEqual(pages[f'{base}/Pattern A/Pattern A Audio'][1].split('\n\n', 1)[1], (
-            '- # Pattern A Audio\n  type:: audio\n  audio-from:: AudioIn/External/S0\n  audio-to:: AudioOut/GroupTrack\n'
+            # Live's two boxes, and the track's own group as a link to the group's page.
+            f'- # Pattern A Audio\n  type:: audio\n  audio-from:: Ext. In 1/2\n  audio-to:: [[{base}/Pattern A]]\n'
             '  monitor:: auto\n  arm:: false\n  devices:: GlueCompressor, Compressor2\n'))
         self.assertEqual(pages[f'{base}/Pattern A/Pattern A MIDI'][1].split('\n\n', 1)[1], (
-            '- # Pattern A MIDI\n  type:: midi\n  midi-from:: MidiIn/External.All/-1\n'
-            '  midi-to:: MidiOut/Track.4/TrackIn\n  midi-channel:: all\n  monitor:: in\n  arm:: true\n'))
+            # A routing to another track of the Set links that track's page, then Live's second box.
+            '- # Pattern A MIDI\n  type:: midi\n  midi-from:: Ext: All Ins\n'
+            f'  midi-to:: [[{base}/Lead - Synth]] Track In\n  midi-channel:: all\n  monitor:: in\n  arm:: true\n'))
         # A MIDI track with no MIDI destination records its own audio output; a named device keeps its name.
         self.assertEqual(pages[f'{base}/Lead - Synth'][1].split('\n\n', 1)[1], (
-            '- # Lead / Synth\n  type:: midi\n  audio-to:: AudioOut/Master\n  midi-from:: MidiIn/External.All/4\n'
-            '  midi-to:: MidiOut/None\n  midi-channel:: 5\n  monitor:: off\n  arm:: false\n  devices:: My Lead\n'))
+            f'- # Lead / Synth\n  type:: midi\n  audio-to:: AudioOut/Master\n  midi-from:: [[{base}/Pattern A/Pattern A MIDI]] Post Mixer\n'
+            '  midi-to:: None\n  monitor:: off\n  arm:: false\n  devices:: My Lead\n'))
+        # A target that names a track the Set does not hold keeps Live's text.
         self.assertEqual(pages[f'{base}/A-Reverb'][1].split('\n\n', 1)[1],
-                         '- # A-Reverb\n  type:: return\n  audio-to:: AudioOut/Master\n  devices:: Reverb\n')
+                         '- # A-Reverb\n  type:: return\n  audio-to:: Gone Track In\n  devices:: Reverb\n')
+
+    def test_midi_channel_comes_from_the_input_routing(self):
+        root = fixture()
+        track(root.find('LiveSet/Tracks'), 'MidiTrack', '8', 'Keys', monitor=1, armed='true',
+              routes=[('MidiInputRouting', 'MidiIn/External.Dev:Launchpad Pro MK3 (LPProMK3 MIDI)/4', 'Ch. 5',
+                       'Launchpad Pro MK3 (LPProMK3 MIDI)'),
+                      ('MidiOutputRouting', 'MidiOut/External.Dev:Arturia MicroFreak/0', 'Ch. 1', 'Arturia MicroFreak')])
+        self.assertEqual(self.plan(root)[f'{PERFORMANCE}/Set/Track/Keys'][1].split('\n\n', 1)[1], (
+            '- # Keys\n  type:: midi\n  midi-from:: Launchpad Pro MK3 (LPProMK3 MIDI) Ch. 5\n'
+            '  midi-to:: Arturia MicroFreak Ch. 1\n  midi-channel:: 5\n  monitor:: auto\n  arm:: true\n'))
+
+    def test_public_marks_every_page(self):
+        pages = {page: text for _, (_, text, page) in
+                 plan_pages(fixture(), PERFORMANCE, '26.11.01.als', '/nonexistent', public=True).items()}
+        self.assertEqual(len(pages), 6)
+        for page, text in pages.items():
+            self.assertEqual(text.split('\n')[1], 'public:: true', page)
 
     def test_time_signature_and_tempo(self):
         self.assertEqual([time_signature(code) for code in ('201', '302', '2', '0')], ['4/4', '6/8', '3/1', '1/1'])
@@ -186,6 +213,15 @@ class FileTests(unittest.TestCase):
             self.assertTrue(set_text.endswith('\t- Another note\n'))
             self.assertIn('Set/Track/Commentary]]}}', set_text)
             self.assertEqual(set_text.count('{{embed'), 4)
+            # --public marks pages that exist, once, and a second run changes nothing.
+            self.assertNotIn('public::', set_text)
+            run(*args(write_als(directory, changed)), '--public', '--apply')
+            for path in (root / 'pages').iterdir():
+                lines = path.read_text().split('\n')
+                self.assertEqual((lines[0][:15], lines[1], lines[2]), ('logseq-entity::', 'public:: true', ''), path.name)
+            _, out, _ = run(*args(write_als(directory, changed)), '--public', '--apply')
+            self.assertNotIn('update', out)
+            self.assertIn('  color:: red\n', audio.read_text())
 
     def test_bad_inputs_fail_with_a_message(self):
         with tempfile.TemporaryDirectory() as directory:

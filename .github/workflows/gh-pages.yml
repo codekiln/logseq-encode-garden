@@ -35,8 +35,8 @@ jobs:
       # to the hash in that release's logseq-gardener-x86_64-unknown-linux-gnu.tar.xz.sha256.
       - name: Install released Logseq Gardener
         env:
-          GARDENER_VERSION: v0.0.51
-          GARDENER_SHA256: 07c001ba5538e1ea76271aadf8052d794c0a39fb8c5db171d6b486adecd612ff
+          GARDENER_VERSION: v0.0.53
+          GARDENER_SHA256: b80e8b010e0c0c6fbce9f4144c8ee25bc6b15e94448bd0400c0f3ffc8680e16d
           GARDENER_TARGET: x86_64-unknown-linux-gnu
         run: |
           archive="logseq-gardener-$GARDENER_TARGET.tar.xz"
