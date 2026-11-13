@@ -16,6 +16,9 @@ see-also:: [[Person/codekiln/GitHub/logseq-gardener]]
 		- `--lsg` runs another lsg executable, such as a release under test. `--diagnostics` saves lsg's report of unresolved links and unsupported markup to a file.
 	- ## Inputs and outputs
 		- Reads `pages/`, `journals/`, `assets/` and `logseq/config.edn`. The config sets `:publishing/all-pages-public? true`, so every page is published except one marked `public:: false`.
+		- Copies `pages/`, `journals/`, `logseq/` and `assets/` into a temporary graph beside the output directory, leaving out `assets/.remote/`, and runs lsg on the copy. Files are hard-linked when the output directory is on the same disk as the garden.
+		- In the copy, each link into `../assets/.remote/<mount>/` points at the mount's `public` URL from `asset-mounts.toml`, as [[Asset/Mount]] describes. The site shows B2 files from B2, so it needs no local copies. Code spans and fenced code keep their text.
+		- lsg dates each page from the checkout's git history, which the task hands it through `GIT_DIR` and `GIT_WORK_TREE`.
 		- Writes the site to the output directory, which must not exist yet. `index.html` is the journals feed and `pages.html` lists every page.
 		- Old `#/page/<name>` addresses from the publish-spa site redirect to the matching page.
 		- Stops with a list of page files when lsg leaves a page out of the site.
@@ -24,6 +27,7 @@ see-also:: [[Person/codekiln/GitHub/logseq-gardener]]
 		- mise supplies lsg and uv. The task needs no credentials and works offline.
 	- ## Failure and recovery
 		- An existing output directory stops lsg; choose a new one.
+		- A link into a mount the garden does not declare, or into a mount without a `public` URL, stops the build with the page and the file. Declare the mount in `asset-mounts.toml`, or link the file another way.
 		- A page reported as left out usually has a title the task derives differently from lsg. Compare its `title::` property and filename with lsg's page title rules.
 	- ## Source and help
 		- ~~~sh
