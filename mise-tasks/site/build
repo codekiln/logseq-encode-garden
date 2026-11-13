@@ -246,7 +246,7 @@ def main():
     print(f'Published {report["pages"]} pages, {report["journals"]} journals and {report["assets"]} assets '
           f'from {len(titles)} page files; withheld {report["withheld_pages"]}; '
           f'{report["diagnostic_count"]} diagnostics.')
-    print(f'Linked public URLs in place of mount folders on {rewritten} pages.')
+    print(f'Replaced links into asset mounts with public URLs on {rewritten} pages.')
     print(f'lsg publish took {elapsed:.1f} s ({timings}).')
     print(f'Website: {files} files, {size / 1e6:.0f} MB after sharing {saved / 1e6:.0f} MB of repeated styles.')
     print(f'Open {args.output / "index.html"}')
