@@ -155,7 +155,7 @@ def directory_size(path: Path) -> tuple[int, int]:
     return len(files), sum(item.stat().st_size for item in files)
 
 
-def place(source: Path, target: Path):
+def link_or_copy(source: Path, target: Path):
     """Hard-link source at target, or copy it when the two sit on different disks."""
     try:
         os.link(source, target)
@@ -190,7 +190,7 @@ def site_graph(graph: Path, folder: Path) -> int:
                         target.write_text(public, encoding='utf-8')
                         rewritten += 1
                         continue
-                place(source / name, target)
+                link_or_copy(source / name, target)
     return rewritten
 
 
