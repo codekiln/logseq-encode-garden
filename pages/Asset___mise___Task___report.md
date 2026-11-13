@@ -10,7 +10,7 @@ source-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/mise-ta
 		- `form`: `public` when pages link the mount's public URL, `relative` when they link `../assets/.remote/<mount>/<file>`, and `both` when pages use both.
 		- `pointer`: whether `assets/.remote/<mount>/<file>.dvc` exists, so [[Asset/mise/Task/fetch]] can restore the file.
 		- `local`: whether the file itself sits in `assets/.remote/<mount>/`.
-		- `space`: whether the file name has a space. [[Logseq/Entity/Asset]] writes each space in an asset page name as a hyphen.
+		- `space`: whether the file name has a space. A `yes` marks a file that needs a copy with a hyphen in place of each space, the naming rule [[Logseq/Entity/Asset]] describes.
 		- `public`, with `--public`: the HTTP status of a HEAD request to the file's public URL, or `private` for a mount with no `public` line.
 	- A summary line on stderr gives the totals.
 	- ## Invocation
