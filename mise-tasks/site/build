@@ -21,13 +21,17 @@ import json
 import os
 from pathlib import Path
 import re
+import shutil
 import subprocess
 import sys
+import tempfile
 import time
 import unicodedata
 from urllib.parse import unquote
 
 GRAPH = Path(os.environ.get('MISE_PROJECT_ROOT') or Path(__file__).resolve().parents[2])
+sys.path.insert(0, str(GRAPH / 'mise-tasks' / 'asset' / 'lib'))
+import mounts  # noqa: E402
 # Logseq shows pages/contents.md in the right sidebar, so lsg lists no page for it.
 SIDEBAR_PAGES = {'contents'}
 
@@ -151,6 +155,54 @@ def directory_size(path: Path) -> tuple[int, int]:
     return len(files), sum(item.stat().st_size for item in files)
 
 
+def place(source: Path, target: Path):
+    """Hard-link source at target, or copy it when the two sit on different disks."""
+    try:
+        os.link(source, target)
+    except OSError:
+        shutil.copy2(source, target)
+
+
+def site_graph(graph: Path, folder: Path) -> int:
+    """Copy the folders lsg reads into folder, leaving out assets/.remote/, and point every
+    link into a mount at the mount's public URL. lsg refuses asset folders reached through
+    symbolic links, so the copy holds real files. Returns the number of rewritten pages."""
+    declared = mounts.load(graph)
+    rewritten = 0
+    for top in ('pages', 'journals', 'logseq', 'assets'):
+        for directory, folders, files in os.walk(graph / top):
+            source = Path(directory)
+            relative = source.relative_to(graph)
+            if relative == Path('assets'):
+                folders[:] = [name for name in folders if name != '.remote']
+            (folder / relative).mkdir()
+            for name in folders + files:
+                if (source / name).is_symlink():
+                    (folder / relative / name).symlink_to(os.readlink(source / name))
+            for name in files:
+                if (source / name).is_symlink():
+                    continue
+                target = folder / relative / name
+                if top in ('pages', 'journals') and name.endswith('.md'):
+                    text = (source / name).read_text(encoding='utf-8')
+                    public = mounts.public_links(text, declared, f'{relative / name}')
+                    if public != text:
+                        target.write_text(public, encoding='utf-8')
+                        rewritten += 1
+                        continue
+                place(source / name, target)
+    return rewritten
+
+
+def git_history(graph: Path, folder: Path) -> dict[str, str]:
+    """Environment that lets lsg date the copied pages from the checkout's commits."""
+    result = subprocess.run(['git', '-C', str(graph), 'rev-parse', '--absolute-git-dir'],
+                            capture_output=True, text=True)
+    if result.returncode != 0:
+        return dict(os.environ)
+    return {**os.environ, 'GIT_DIR': result.stdout.strip(), 'GIT_WORK_TREE': str(folder.resolve())}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('--output', required=True, type=Path)
@@ -159,15 +211,22 @@ def main():
     args = parser.parse_args()
 
     titles = {path: page_title(path) for path in page_files(GRAPH)}
-    command = [args.lsg, 'publish', '--format', 'json', '--graph', str(GRAPH),
-               '--output', str(args.output), '--filename-format', 'triple-lowbar',
-               '--journals', '--search', '--readable-urls', '--redirect-old-urls', '--timings']
-    for root in namespace_roots(page_names(titles)):
-        command += ['--include', root]
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix=f'.{args.output.name}-graph-', dir=args.output.parent) as folder:
+        folder = Path(folder)
+        try:
+            rewritten = site_graph(GRAPH, folder)
+        except mounts.MountError as error:
+            raise SystemExit(str(error)) from None
+        command = [args.lsg, 'publish', '--format', 'json', '--graph', str(folder),
+                   '--output', str(args.output), '--filename-format', 'triple-lowbar',
+                   '--journals', '--search', '--readable-urls', '--redirect-old-urls', '--timings']
+        for root in namespace_roots(page_names(titles)):
+            command += ['--include', root]
 
-    started = time.monotonic()
-    result = subprocess.run(command, capture_output=True, text=True)
-    elapsed = time.monotonic() - started
+        started = time.monotonic()
+        result = subprocess.run(command, capture_output=True, text=True, env=git_history(GRAPH, folder))
+        elapsed = time.monotonic() - started
     if args.diagnostics:
         args.diagnostics.write_text(result.stderr, encoding='utf-8')
     if result.returncode != 0:
@@ -187,6 +246,7 @@ def main():
     print(f'Published {report["pages"]} pages, {report["journals"]} journals and {report["assets"]} assets '
           f'from {len(titles)} page files; withheld {report["withheld_pages"]}; '
           f'{report["diagnostic_count"]} diagnostics.')
+    print(f'Linked public URLs in place of mount folders on {rewritten} pages.')
     print(f'lsg publish took {elapsed:.1f} s ({timings}).')
     print(f'Website: {files} files, {size / 1e6:.0f} MB after sharing {saved / 1e6:.0f} MB of repeated styles.')
     print(f'Open {args.output / "index.html"}')

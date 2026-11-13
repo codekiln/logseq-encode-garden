@@ -51,3 +51,33 @@ def load(root):
     if not isinstance(mounts, dict):
         raise MountError("mounts must be a table")
     return {name: validate_mount(name, mount) for name, mount in mounts.items()}
+
+
+# A markdown link target, plain or in angle brackets, that starts in a mount folder.
+LINK = re.compile(r"(\]\(\s*<?)\.\./assets/\.remote/([^/\s<>()]+)/([^)>\n]*)")
+# Fenced code from its opening fence to the next line that starts with the same fence, and inline code.
+CODE = re.compile(r"^[ \t]*(?:- )?(```|~~~).*?^[ \t]*\1[^\n]*|`[^`\n]+`", re.M | re.S)
+
+
+def public_links(text, mounts, page):
+    """Return text with each link into ../assets/.remote/<mount>/ pointing at the mount's public URL.
+
+    Code keeps its text. A link into a mount the garden does not declare, or into a mount
+    without a public URL, stops with an error that names the page and the file."""
+
+    def swap(match):
+        start, name, file = match.groups()
+        mount = mounts.get(name)
+        if mount is None:
+            raise MountError(f"{page} links {name}/{file}, but declares no mounts.{name}")
+        if "public" not in mount:
+            raise MountError(f"{page} links {name}/{file}, but mounts.{name} has no public URL")
+        # A file linked in angle brackets may hold spaces, which a URL cannot.
+        return f"{start}{mount['public']}/{file.replace(' ', '%20')}"
+
+    parts, end = [], 0
+    for code in CODE.finditer(text):
+        parts += [LINK.sub(swap, text[end:code.start()]), code[0]]
+        end = code.end()
+    parts.append(LINK.sub(swap, text[end:]))
+    return "".join(parts)
