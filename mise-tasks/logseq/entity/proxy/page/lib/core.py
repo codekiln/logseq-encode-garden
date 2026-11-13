@@ -467,6 +467,7 @@ def borrow_mount(plan: Plan, page: str, relative: str) -> str:
         source_file = plan.source_root / mounts.FILE
         plan.source_expected[source_file] = source_file.read_bytes() if source_file.is_file() else None
         plan.source_mounts = mounts.load(plan.source_root)
+        watch_destination(plan, mounts.FILE)
         plan.destination_mounts = mounts.load(plan.destination_root)
     mount = plan.source_mounts.get(name)
     if mount is None:
@@ -484,7 +485,6 @@ def borrow_mount(plan: Plan, page: str, relative: str) -> str:
     if name not in plan.borrowed:
         plan.borrowed[name] = borrowed
         target = mounts.FILE
-        watch_destination(plan, target)
         text = (plan.expected[target] or f'# Schema: {mounts.PAGE}\n'.encode()).decode('utf-8')
         for key, values in plan.borrowed.items():
             text += f'\n[mounts.{toml_key(key)}]\n' + ''.join(

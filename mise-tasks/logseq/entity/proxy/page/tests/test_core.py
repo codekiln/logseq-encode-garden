@@ -203,6 +203,17 @@ class PageSyncTests(unittest.TestCase):
         self.assertTrue(text.startswith(mine))
         self.assertIn('source = "github.com/owner/garden"', text)
 
+    def test_destination_mount_change_after_preview_stops_the_apply(self):
+        self.mount_source()
+        declared = ('[mounts.g]\npath = "assets/.remote/g"\npublic = "https://files.example/g"\n'
+                    'source = "github.com/codekiln/source-garden"\n')
+        (self.destination / 'asset-mounts.toml').write_text(declared)
+        plan = self.plan()
+        self.assertNotIn('asset-mounts.toml', plan.writes)
+        (self.destination / 'asset-mounts.toml').write_text('# mount g removed\n')
+        with self.assertRaisesRegex(SyncError, 'Destination changed since preview: asset-mounts.toml'):
+            apply_plan(plan)
+
     def test_mount_conflicts_stop_the_sync_before_any_write(self):
         self.mount_source()
         (self.destination / 'asset-mounts.toml').write_text(
