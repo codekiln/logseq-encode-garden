@@ -16,9 +16,8 @@ see-also:: [[Person/codekiln/GitHub/logseq-gardener]]
 		- `--lsg` runs another lsg executable, such as a release under test. `--diagnostics` saves lsg's report of unresolved links and unsupported markup to a file.
 	- ## Inputs and outputs
 		- Reads `pages/`, `journals/`, `assets/` and `logseq/config.edn`. The config sets `:publishing/all-pages-public? true`, so every page is published except one marked `public:: false`.
-		- Copies `pages/`, `journals/`, `logseq/` and `assets/` into a temporary graph beside the output directory, leaving out `assets/.remote/`, and runs lsg on the copy. Files are hard-linked when the output directory is on the same disk as the garden.
-		- In the copy, each link into `../assets/.remote/<mount>/` points at the mount's `public` URL from `asset-mounts.toml`, as [[Asset/Mount]] describes. The site shows B2 files from B2, so it needs no local copies. Code spans and fenced code keep their text.
-		- lsg dates each page from the checkout's git history, which the task hands it through `GIT_DIR` and `GIT_WORK_TREE`.
+		- Links each file in an asset mount at the mount's `public` URL from `asset-mounts.toml`, as [[Asset/Mount]] describes, so the site shows B2 files from B2 whether or not the checkout has local copies.
+		- To do that, the task copies `pages/`, `journals/`, `logseq/` and `assets/`, without `assets/.remote/`, into a temporary folder beside the output directory, replaces those links in the copied pages, and runs lsg on the copy. Code spans and fenced code keep their text. The copy has no git history, so the task points lsg at the checkout's history through `GIT_DIR` and `GIT_WORK_TREE` to date each page.
 		- Writes the site to the output directory, which must not exist yet. `index.html` is the journals feed and `pages.html` lists every page.
 		- Old `#/page/<name>` addresses from the publish-spa site redirect to the matching page.
 		- Stops with a list of page files when lsg leaves a page out of the site.
