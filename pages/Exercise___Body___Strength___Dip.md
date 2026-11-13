@@ -1,6 +1,9 @@
 logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
 - # Dip
 	- Practice lowering and pressing the body between parallel bars to train the chest, front and side shoulders, and triceps.
+	- ![Huberman at the top of a dip on a dip station](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%204%20-%20Major%20Torso%20Muscles___Frame___0228-Dip.jpg)
+		- [Day 4 at 3:48](https://www.youtube.com/watch?v=UEU6NYLRi6o&t=228s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]]
+		- Equipment: [[Equipment/Exercise/Dip Station]]
 	- ## Setup
 		- Grip parallel bars, jump or step up, and support yourself with straight arms and the shoulders pulled down away from the ears.
 	- ## Practice

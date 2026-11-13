@@ -1,6 +1,9 @@
 logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
 - # Overhead Cable Triceps Extension
 	- Practice extending the elbows overhead against a cable to stretch and train the long head of the triceps.
+	- ![Huberman doing an overhead triceps extension with a cable rope](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%207%20-%20Shoulders%20and%20Arms___Frame___0492-Overhead-Cable-Triceps-Extension.jpg)
+		- [Day 7 at 8:12](https://www.youtube.com/watch?v=IzpGEk-2th4&t=492s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]]
+		- Equipment: [[Equipment/Exercise/Cable Machine]]
 	- ## Setup
 		- Set the cable above and behind you, face away from the stack, and hold the handles behind the head. Step far enough from the machine to feel a stretch on the triceps at the start. Lock the lats and brace the core.
 	- ## Practice

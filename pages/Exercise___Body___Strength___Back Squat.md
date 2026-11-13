@@ -1,6 +1,9 @@
 logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
 - # Back Squat
 	- Practice a loaded squat that develops leg strength while maintaining a stable trunk.
+	- ![Huberman back squatting in a power rack](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%202%20-%20Major%20Lower%20Body%20Muscles___Frame___0042-Back-Squat.jpg)
+		- [Day 2 at 0:42](https://www.youtube.com/watch?v=CbEFgDFQBvk&t=42s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]]
+		- Equipment: [[Equipment/Exercise/Barbell]], [[Equipment/Exercise/Power Rack]]
 	- ## Setup
 		- Set the rack hooks just below shoulder height and the safety bars below the bottom of your squat. Center the bar across the upper back, grip it securely, stand to unrack it, and take a short step back.
 	- ## Practice

@@ -1,6 +1,12 @@
 logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
 - # Hanging Leg Raise
 	- Practice raising the legs while hanging from a bar to train the abdominals and grip together.
+	- ![Huberman holding a hanging L-sit](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%204%20-%20Major%20Torso%20Muscles___Frame___0756-Hanging-L-Sit.jpg)
+		- [Day 4 at 12:36](https://www.youtube.com/watch?v=UEU6NYLRi6o&t=756s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]]
+		- Equipment: [[Equipment/Exercise/Pull-Up Bar]]
+	- ![Huberman in a hanging pike](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%204%20-%20Major%20Torso%20Muscles___Frame___0810-Hanging-Pike.jpg)
+		- [Day 4 at 13:30](https://www.youtube.com/watch?v=UEU6NYLRi6o&t=810s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]]
+		- Equipment: [[Equipment/Exercise/Pull-Up Bar]]
 	- ## Setup
 		- Hang from a secure pull-up bar with an overhand grip, arms straight, and the shoulders engaged rather than slumped toward the ears. Let the body settle so it is not swinging.
 	- ## Practice

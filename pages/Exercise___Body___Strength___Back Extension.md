@@ -1,6 +1,12 @@
 logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
 - # Back Extension
 	- Practice lowering and raising the torso from a hip-hinged position on a hyperextension bench to train the lower back and hip extensors.
+	- ![Feet locked under the pads of a back extension bench](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%204%20-%20Major%20Torso%20Muscles___Frame___0630-Back-Extension.jpg)
+		- [Day 4 at 10:30](https://www.youtube.com/watch?v=UEU6NYLRi6o&t=630s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]]
+		- Equipment: [[Equipment/Exercise/Back Extension Bench]]
+	- ![Huberman lifting his legs on a reverse hyperextension machine](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%204%20-%20Major%20Torso%20Muscles___Frame___0684-Reverse-Hyperextension.jpg)
+		- [Day 4 at 11:24](https://www.youtube.com/watch?v=UEU6NYLRi6o&t=684s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]]
+		- Equipment: [[Equipment/Exercise/Reverse Hyperextension Machine]]
 	- ## Setup
 		- Adjust a hyperextension (45-degree or horizontal) bench so the pad sits just below the hip crease and the heels are secured under the ankle rollers. Start with the body in a straight line, hands crossed on the chest or behind the head.
 	- ## Practice

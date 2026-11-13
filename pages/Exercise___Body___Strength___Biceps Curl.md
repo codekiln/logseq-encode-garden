@@ -1,6 +1,9 @@
 logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
 - # Biceps Curl
 	- Practice elbow flexion against resistance with a steady upper arm and controlled wrist.
+	- ![Huberman curling dumbbells](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%207%20-%20Shoulders%20and%20Arms___Frame___0342-Biceps-Curl.jpg)
+		- [Day 7 at 5:42](https://www.youtube.com/watch?v=IzpGEk-2th4&t=342s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]]
+		- Equipment: [[Equipment/Exercise/Dumbbell]]
 	- ## Setup
 		- Stand or sit with a dumbbell in each hand, arms down, and trunk steady. Curl by bending the elbows; turn the palms upward if comfortable, then lower slowly.
 	- ## Practice

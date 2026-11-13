@@ -1,6 +1,9 @@
 logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
 - # Barbell Bench Press
 	- Practice a horizontal barbell press with a repeatable grip, stable support, and controlled bar path.
+	- ![Huberman benching a barbell in a power rack](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%204%20-%20Major%20Torso%20Muscles___Frame___0042-Barbell-Bench-Press.jpg)
+		- [Day 4 at 0:42](https://www.youtube.com/watch?v=UEU6NYLRi6o&t=42s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]]
+		- Equipment: [[Equipment/Exercise/Barbell]], [[Equipment/Exercise/Weight Bench]], [[Equipment/Exercise/Power Rack]]
 	- ## Setup
 		- Set the bench and rack so you can unrack without reaching excessively. Use rack safeties or a capable spotter. Lie with feet planted, shoulders supported, and hands slightly wider than shoulder width; wrap the thumbs around the bar.
 	- ## Practice
