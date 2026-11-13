@@ -22,6 +22,7 @@ DESTINATION_PROPERTIES = 'entity-proxy-destination-properties'
 SOURCE_PROPERTIES = 'entity-proxy-source-properties'
 EMBED = re.compile(r'\{\{embed\s+\[\[([^\]]+)\]\]\s*\}\}')
 TRANSACTION = '.logseq-proxy-transaction'
+MOUNTED = 'assets/.remote/'
 PROPERTY = re.compile(r'^([^\s:]+):: (.*?)(?:\r?\n)?$')
 
 
@@ -51,6 +52,9 @@ class Plan:
     source_record_store: dict | None = None
     inventory_expected: dict[Path, tuple[str, ...] | None] = field(default_factory=dict)
     inventory_patterns: dict[Path, str] = field(default_factory=dict)
+    source_mounts: dict | None = None
+    destination_mounts: dict | None = None
+    borrowed: dict[str, dict[str, str]] = field(default_factory=dict)
 
 
 def safe_path(root: Path, relative: str) -> Path:
@@ -406,6 +410,10 @@ def add_page(plan: Plan, page: str) -> None:
         if not url.startswith('../assets/'):
             continue
         relative = unquote(url.split('#', 1)[0]).removeprefix('../')
+        if relative.startswith(MOUNTED):
+            name = borrow_mount(plan, page, relative)
+            plan.details.append(f'Mounted asset {relative} stays in mount {name}')
+            continue
         asset = safe_path(plan.source_root, relative)
         safe_path(plan.destination_root, relative)
         if not asset.exists():
@@ -421,6 +429,70 @@ def add_page(plan: Plan, page: str) -> None:
                 add_page(plan, embedded)
             else:
                 plan.warnings.append(f'Missing embedded page: {embedded}')
+
+
+def mounts_module():
+    """Import the asset tasks' mount reader, which task-files imports beside this task."""
+    lib = Path(__file__).resolve().parents[5] / 'asset' / 'lib'
+    if not (lib / 'mounts.py').is_file():
+        raise SyncError(f'Missing {lib / "mounts.py"}; sync the task again to import it')
+    if str(lib) not in sys.path:
+        sys.path.insert(0, str(lib))
+    import mounts
+    return mounts
+
+
+def owner_address(root: Path) -> str:
+    from task_imports import repository, repository_identity
+    address = repository_identity(repository(root))
+    if address.startswith('/'):
+        raise SyncError(f'Cannot name the garden that owns its mounts; {root} has no origin remote')
+    return address
+
+
+def toml_key(name: str) -> str:
+    return name if re.fullmatch(r'[A-Za-z0-9_-]+', name) else json.dumps(name)
+
+
+def borrow_mount(plan: Plan, page: str, relative: str) -> str:
+    """Leave a mounted file in the source garden and declare its mount in the destination."""
+    parts = PurePosixPath(relative).parts
+    if '..' in parts or '\\' in relative or '\x00' in relative:
+        raise SyncError(f'Unsafe relative path: {relative}')
+    if len(parts) < 4:
+        raise SyncError(f'{page} links {relative}, which names no mount folder under {MOUNTED}')
+    name = parts[2]
+    mounts = mounts_module()
+    if plan.source_mounts is None:
+        source_file = plan.source_root / mounts.FILE
+        plan.source_expected[source_file] = source_file.read_bytes() if source_file.is_file() else None
+        plan.source_mounts = mounts.load(plan.source_root)
+        plan.destination_mounts = mounts.load(plan.destination_root)
+    mount = plan.source_mounts.get(name)
+    if mount is None:
+        raise SyncError(f'{page} links into mount {name}, which {plan.source_root / mounts.FILE} does not declare')
+    if 'public' not in mount:
+        raise SyncError(f'{page} links into mount {name}, which is private: it has no public URL to publish')
+    borrowed = {'path': mount['path'], 'public': mount['public'],
+                'source': mount.get('source') or owner_address(plan.source_root)}
+    existing = plan.destination_mounts.get(name)
+    if existing is not None:
+        if (existing['path'], existing.get('public')) != (borrowed['path'], borrowed['public']):
+            raise SyncError(f'{page} links into mount {name}, which {plan.destination_root / mounts.FILE} '
+                            'declares with a different path or public URL')
+        return name
+    if name not in plan.borrowed:
+        plan.borrowed[name] = borrowed
+        target = mounts.FILE
+        watch_destination(plan, target)
+        text = (plan.expected[target] or f'# Schema: {mounts.PAGE}\n'.encode()).decode('utf-8')
+        for key, values in plan.borrowed.items():
+            text += f'\n[mounts.{toml_key(key)}]\n' + ''.join(
+                f'{field:<6} = {json.dumps(value)}\n' for field, value in values.items())
+        plan.writes[target] = text.encode()
+        plan.modes[target] = plan.expected_modes[target] or 0o644
+        plan.details.append(f'Borrow mount {name} from {borrowed["source"]} in {plan.destination_root / target}')
+    return name
 
 
 def build_page_plan(source: Path | None, destination: Path, page: str, codeforge_url: str | None = None,
