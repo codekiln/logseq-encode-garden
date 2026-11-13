@@ -1,6 +1,9 @@
 logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
 - # Dumbbell Bench Press
 	- Practice a horizontal press with a dumbbell in each hand, which lets each arm work on its own path and allows the weights to be set aside if a repetition fails.
+	- ![Huberman pressing dumbbells on a flat bench](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%204%20-%20Major%20Torso%20Muscles___Frame___0108-Dumbbell-Bench-Press.jpg)
+		- [Day 4 at 1:48](https://www.youtube.com/watch?v=UEU6NYLRi6o&t=108s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]]
+		- Equipment: [[Equipment/Exercise/Dumbbell]], [[Equipment/Exercise/Weight Bench]]
 	- ## Setup
 		- Sit on the end of a flat bench with the dumbbells standing on your knees. Lean back and kick them up one knee at a time so they arrive at the shoulders as your back reaches the bench. Plant the feet, pull the shoulder blades down and back, and keep head, shoulders, and hips on the bench.
 	- ## Practice

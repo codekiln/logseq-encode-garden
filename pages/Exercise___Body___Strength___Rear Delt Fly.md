@@ -1,6 +1,9 @@
 logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
 - # Rear Delt Fly
 	- Practice moving the arms out and back at the shoulder to train the rear deltoids.
+	- ![Huberman doing a bent-over dumbbell rear delt fly](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%207%20-%20Shoulders%20and%20Arms___Frame___0216-Rear-Delt-Fly.jpg)
+		- [Day 7 at 3:36](https://www.youtube.com/watch?v=IzpGEk-2th4&t=216s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]]
+		- Equipment: [[Equipment/Exercise/Dumbbell]]
 	- ## Setup
 		- For the bent-over dumbbell version, stand a little wider than shoulder width and hinge forward with a dumbbell in each hand. A rear delt fly machine or a cable stack works too; face inward toward the machine.
 	- ## Practice

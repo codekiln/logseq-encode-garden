@@ -1,6 +1,9 @@
 logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
 - # Front Squat
 	- Practice a squat with the load held in front of the shoulders, developing the quadriceps with a more upright torso than the back squat.
+	- ![Huberman front squatting in a power rack](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%202%20-%20Major%20Lower%20Body%20Muscles___Frame___0084-Front-Squat.jpg)
+		- [Day 2 at 1:24](https://www.youtube.com/watch?v=CbEFgDFQBvk&t=84s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]]
+		- Equipment: [[Equipment/Exercise/Barbell]], [[Equipment/Exercise/Power Rack]]
 	- ## Setup
 		- Set the rack hooks just below shoulder height and the safety bars below the bottom of your squat. Step under the bar so it rests on the front of the shoulders against the neck, with the elbows raised in front and the fingers or crossed arms keeping the bar in place. Stand to unrack it and take a short step back.
 	- ## Practice

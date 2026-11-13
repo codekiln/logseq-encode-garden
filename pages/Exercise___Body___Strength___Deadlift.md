@@ -1,6 +1,9 @@
 logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
 - # Deadlift
 	- Practice lifting a barbell from the floor with a hip hinge, training the hamstrings, glutes, and lower back along with grip and trunk strength.
+	- ![Huberman at the bottom of a barbell deadlift](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%202%20-%20Major%20Lower%20Body%20Muscles___Frame___0420-Deadlift.jpg)
+		- [Day 2 at 7:00](https://www.youtube.com/watch?v=CbEFgDFQBvk&t=420s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]]
+		- Equipment: [[Equipment/Exercise/Barbell]]
 	- ## Setup
 		- Stand with feet about hip to shoulder width apart and the bar over the middle of the feet, close to the shins. Hinge and bend the knees to grip the bar just outside the legs with an overhand grip. Flatten the back and lift the chest.
 	- ## Practice
