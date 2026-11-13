@@ -21,5 +21,5 @@ source-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/mise-ta
 			  ~~~
 	- ## Files and access
 		- Reads `asset-mounts.toml`, the page files and `assets/.remote/`. [[Asset/Mount]] documents the mount file.
-		- `--public` sends one HEAD request per file over HTTPS and needs no B2 credentials.
+		- With `--public`, the task sends a HEAD request to each file's public URL. The public URLs need no B2 credentials.
 		- A linked worktree has no local copies, so run it in the main checkout to see which files are restored there.
