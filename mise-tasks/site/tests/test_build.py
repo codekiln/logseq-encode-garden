@@ -32,7 +32,7 @@ class SiteGraph(unittest.TestCase):
             graph, folder = Path(temp) / "garden", Path(temp) / "site-graph"
             self.garden(graph)
             folder.mkdir()
-            self.assertEqual(build.site_graph(graph, folder), 1)
+            self.assertEqual(build.copy_graph_with_public_links(graph, folder), 1)
             self.assertEqual((folder / "pages/A.md").read_text(), "- ![f](https://example.com/g/F.png)\n")
             self.assertEqual((folder / "pages/B.md").read_text(), "- ![l](../assets/L.png)\n")
             self.assertEqual((graph / "pages/A.md").read_text(), "- ![f](../assets/.remote/g/F.png)\n")
@@ -48,7 +48,7 @@ class SiteGraph(unittest.TestCase):
             self.garden(graph, MOUNTS.replace('public = "https://example.com/g"\n', ""))
             folder.mkdir()
             with self.assertRaisesRegex(build.mounts.MountError, "pages/A.md links g/F.png"):
-                build.site_graph(graph, folder)
+                build.copy_graph_with_public_links(graph, folder)
 
 
 if __name__ == "__main__":

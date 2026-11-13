@@ -163,7 +163,7 @@ def link_or_copy(source: Path, target: Path):
         shutil.copy2(source, target)
 
 
-def site_graph(graph: Path, folder: Path) -> int:
+def copy_graph_with_public_links(graph: Path, folder: Path) -> int:
     """Copy the folders lsg reads into folder, leaving out assets/.remote/, and point every
     link into a mount at the mount's public URL. lsg refuses asset folders reached through
     symbolic links, so the copy holds real files. Returns the number of rewritten pages."""
@@ -215,7 +215,7 @@ def main():
     with tempfile.TemporaryDirectory(prefix=f'.{args.output.name}-graph-', dir=args.output.parent) as folder:
         folder = Path(folder)
         try:
-            rewritten = site_graph(GRAPH, folder)
+            rewritten = copy_graph_with_public_links(GRAPH, folder)
         except mounts.MountError as error:
             raise SystemExit(str(error)) from None
         command = [args.lsg, 'publish', '--format', 'json', '--graph', str(folder),
