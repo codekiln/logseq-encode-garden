@@ -33,5 +33,11 @@ prev:: [[GitP/A/Log/26/11/12-Thu]]
 				- TODO fill out with descriptions
 			- #### bottom row
 				- TODO fill out with descriptions
-		-
+		- ### The Launchpad only played track 4 (`3B Drum`) from its DAW port
+			- Setup: [[Launchpad]] plugged in, track 4 armed, mixer at -6 dB and on, Monitor Auto, Audio To Master. The Launchpad was in [[Launchpad/UI/Mode/2-Note]], set to send on channel 1.
+			- MIDI From `Launchpad Pro MK3 Input (LPProMK3 DAW)`, All Channels: the pads played the Drum Rack. The Launchpad also lit the pads that have a sample loaded and left the empty ones dark, as in [[Launchpad/UG/06 Note Mode/06 Drum Mode]].
+			- Same DAW port, but filtered to Ch. 1: silence, even with the Launchpad set to channel 1.
+				- The likely reason: in Drum Rack layout the Launchpad sends its pads on channel 9 of the DAW port, not channel 1. Its channel setting doesn't change that. See [[Launchpad/PRG/05 Software Integration/02 DAW Interface]].
+			- MIDI From `Launchpad Pro MK3 (LPProMK3 MIDI)`, All Channels: silence.
+				- The Note mode MIDI port is the one I expected to work, per [[Launchpad/PRG/03 MIDI]]. I don't know yet why it didn't.
 	-
