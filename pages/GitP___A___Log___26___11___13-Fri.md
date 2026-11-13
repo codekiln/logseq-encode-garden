@@ -1,0 +1,37 @@
+prev:: [[GitP/A/Log/26/11/12-Thu]]
+
+- [[2026-11-13 Fri]]
+	- ## Working on [[GitP/Ceremon/y/Forevetran]]
+		- I have three [[Ableton/Live/Instrument/Drum]] in `26.11.12-Forever-Veteran`; I'd like to get it down to 16 pads total to simplify things.
+		- ### top row
+			- 4 samples from  [[Ableton/Live/Instrument/Drum/Forevertron]]
+		- ### 2nd to top row
+			- 4 samples from [[Ableton/Live/Instrument/Drum/Pool/Cue/Strikes-Refined]]
+				- candidates
+					- I'm looking for ones that have low noise
+					- I mean to rename these in the drum rack as well as in the `wav` file for clarity; don't quite have time at the moment though
+					- compound
+						- triple
+							- `Pool Cue 45 curated.wav`
+						- double
+						- compound single
+							- `Pool Cue 28 curated.wav`
+							- `Pool Cue 14 curated.wav`
+							- `Pool Cue 48 curated.wav` - 123
+						- oddities of the sound of pool balls; squeaks
+							- `Pool Cue 46 exp decay classic` exponential decay; classic
+					- straight shot
+						- `Pool Cue 39 curated.wav`
+						- `Pool Cue 56 curated.wav`
+						- `Pool Cue 55 curated.wav`
+						- `Pool Cue 33 curated.wav`
+					- compound shot
+						-
+		- ### Bottom rows - [[Piano]] samples from Ableton Note Cloud session `Veteran`
+			- These were recorded on Veteran's day ( [[2026-11-11 Wed]] )
+			- #### 2nd from bottom
+				- TODO fill out with descriptions
+			- #### bottom row
+				- TODO fill out with descriptions
+		-
+	-
