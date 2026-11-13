@@ -432,7 +432,7 @@ def add_page(plan: Plan, page: str) -> None:
 
 
 def mounts_module():
-    """Import the asset tasks' mount reader, which task-files imports beside this task."""
+    """Import mise-tasks/asset/lib/mounts.py, which the sync copies into each garden that imports this task."""
     lib = Path(__file__).resolve().parents[5] / 'asset' / 'lib'
     if not (lib / 'mounts.py').is_file():
         raise SyncError(f'Missing {lib / "mounts.py"}; sync the task again to import it')
