@@ -12,7 +12,7 @@ loader.exec_module(build)
 MOUNTS = '[mounts.g]\npath = "assets/.remote/g"\nbucket = "g"\ndvc = "garden"\npublic = "https://example.com/g"\n'
 
 
-class SiteGraph(unittest.TestCase):
+class CopyGraphWithPublicLinks(unittest.TestCase):
     def garden(self, root, mounts=MOUNTS):
         for name, text in {
             "asset-mounts.toml": mounts,
@@ -29,7 +29,7 @@ class SiteGraph(unittest.TestCase):
 
     def test_copy_links_public_urls_and_leaves_mounts_out(self):
         with tempfile.TemporaryDirectory() as temp:
-            graph, folder = Path(temp) / "garden", Path(temp) / "site-graph"
+            graph, folder = Path(temp) / "garden", Path(temp) / "copy"
             self.garden(graph)
             folder.mkdir()
             self.assertEqual(build.copy_graph_with_public_links(graph, folder), 1)
@@ -44,7 +44,7 @@ class SiteGraph(unittest.TestCase):
 
     def test_private_mount_stops_the_copy(self):
         with tempfile.TemporaryDirectory() as temp:
-            graph, folder = Path(temp) / "garden", Path(temp) / "site-graph"
+            graph, folder = Path(temp) / "garden", Path(temp) / "copy"
             self.garden(graph, MOUNTS.replace('public = "https://example.com/g"\n', ""))
             folder.mkdir()
             with self.assertRaisesRegex(build.mounts.MountError, "pages/A.md links g/F.png"):
