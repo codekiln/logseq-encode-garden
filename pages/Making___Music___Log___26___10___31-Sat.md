@@ -3,7 +3,7 @@ next:: [[Making/Music/Log/26/11/01-Sun]]
 
 - [[2026-10-31 Sat]]
 	- ## 19:00 — A maker's log notebook
-		- ![A maker's log notebook and the November 1 template changes](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Making___Music___Log___26___10___31-Sat___Asset___Notebook___Blue-01.jpg)
+		- ![A maker's log notebook and the November 1 template changes](../assets/.remote/logseq-encode-garden/Making___Music___Log___26___10___31-Sat___Asset___Notebook___Blue-01.jpg)
 		- ### Transcription
 			- 2026-10-31 Sat Makers Log 1900
 			- Up until this afternoon, I was using a yellow regular letter-sized paper notebook for my notes related to making stuff. Now I'm happy to have found this nicer notebook, which I hope to keep focused on making music, particularly synth music, and possibly also the larger sense of a "maker's log," with its wider scope: construction projects, making things.

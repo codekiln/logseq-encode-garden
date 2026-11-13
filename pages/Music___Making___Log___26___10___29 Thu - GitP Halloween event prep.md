@@ -7,7 +7,7 @@
 			-
 			- [[Music/Making/Log/26/10/29 Thu - GitP Halloween event prep/Discussion/Analysis/Opus/26/10/29/0956 ET MicroFreak presets for a Halloween party]]
 	- ## GitP reflections and "Somnia"
-		- ![Somnia, a set template and Logseq as a score](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Music___Making___Log___26___10___29%20Thu%20-%20GitP%20Halloween%20event%20prep___Asset___Notebook___Yellow-12.jpg)
+		- ![Somnia, a set template and Logseq as a score](../assets/.remote/logseq-encode-garden/Music___Making___Log___26___10___29-Thu---GitP-Halloween-event-prep___Asset___Notebook___Yellow-12.jpg)
 		- ### Transcription
 			- 2026-10-29 Thu GitP reflections
 				- This morning I had Claude or CGPT prepare an Ableton set template. It started to.
