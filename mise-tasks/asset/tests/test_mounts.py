@@ -64,5 +64,45 @@ class Rejections(unittest.TestCase):
             load("[mounts.g\n")
 
 
+class PublicLinks(unittest.TestCase):
+    MOUNTS = {
+        "g": {"path": "assets/.remote/g", "public": "https://example.com/g"},
+        "private": {"path": "assets/.remote/private", "bucket": "p", "dvc": "p"},
+    }
+
+    def rewrite(self, text):
+        return mounts.public_links(text, self.MOUNTS, "pages/A.md")
+
+    def test_link_forms_get_the_public_url(self):
+        cases = {
+            "![a](../assets/.remote/g/A___B.png)": "![a](https://example.com/g/A___B.png)",
+            "[a](../assets/.remote/g/A%20B.mp3)": "[a](https://example.com/g/A%20B.mp3)",
+            "![a](<../assets/.remote/g/A B.png>)": "![a](<https://example.com/g/A%20B.png>)",
+        }
+        for text, expected in cases.items():
+            with self.subTest(text=text):
+                self.assertEqual(self.rewrite(text), expected)
+
+    def test_other_links_and_code_keep_their_text(self):
+        text = (
+            "- ![a](../assets/A.png) and `![b](../assets/.remote/g/B.png)`\n"
+            "- ~~~md\n  [c](../assets/.remote/other/C.png)\n  ~~~\n"
+            "- Files sit in ../assets/.remote/<mount>/<file>.\n"
+        )
+        self.assertEqual(self.rewrite(text), text)
+
+    def test_link_after_code_is_rewritten(self):
+        self.assertEqual(self.rewrite("`x` [a](../assets/.remote/g/A.png)"), "`x` [a](https://example.com/g/A.png)")
+
+    def test_errors_name_the_page_and_file(self):
+        cases = {
+            "pages/A.md links other/C.png, but asset-mounts.toml declares no mounts.other": "[c](../assets/.remote/other/C.png)",
+            "pages/A.md links private/D.png, but mounts.private has no public URL": "[d](../assets/.remote/private/D.png)",
+        }
+        for message, text in cases.items():
+            with self.subTest(message=message), self.assertRaisesRegex(mounts.MountError, message):
+                self.rewrite(text)
+
+
 if __name__ == "__main__":
     unittest.main()
