@@ -16,7 +16,7 @@ see-also:: [[Person/codekiln/GitHub/logseq-gardener]]
 		- `--lsg` runs another lsg executable, such as a release under test. `--diagnostics` saves lsg's report of unresolved links and unsupported markup to a file.
 	- ## Inputs and outputs
 		- Reads `pages/`, `journals/`, `assets/` and `logseq/config.edn`. The config sets `:publishing/all-pages-public? true`, so every page is published except one marked `public:: false`.
-		- Links each file in an asset mount at the mount's `public` URL from `asset-mounts.toml`, as [[Asset/Mount]] describes, so the site shows B2 files from B2 whether or not the checkout has local copies.
+		- Points each page link into an asset mount at that mount's `public` URL from `asset-mounts.toml`, as [[Asset/Mount]] describes, so the site loads those files from B2 whether or not the checkout has local copies.
 		- To do that, the task copies `pages/`, `journals/`, `logseq/` and `assets/`, without `assets/.remote/`, into a temporary folder beside the output directory, replaces those links in the copied pages, and runs lsg on the copy. Code spans and fenced code keep their text. The copy has no git history, so the task points lsg at the checkout's history through `GIT_DIR` and `GIT_WORK_TREE` to date each page.
 		- Writes the site to the output directory, which must not exist yet. `index.html` is the journals feed and `pages.html` lists every page.
 		- Old `#/page/<name>` addresses from the publish-spa site redirect to the matching page.
