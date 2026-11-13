@@ -194,7 +194,7 @@ def site_graph(graph: Path, folder: Path) -> int:
     return rewritten
 
 
-def git_history(graph: Path, folder: Path) -> dict[str, str]:
+def env_with_checkout_history(graph: Path, folder: Path) -> dict[str, str]:
     """Environment that lets lsg date the copied pages from the checkout's commits."""
     result = subprocess.run(['git', '-C', str(graph), 'rev-parse', '--absolute-git-dir'],
                             capture_output=True, text=True)
@@ -225,7 +225,7 @@ def main():
             command += ['--include', root]
 
         started = time.monotonic()
-        result = subprocess.run(command, capture_output=True, text=True, env=git_history(GRAPH, folder))
+        result = subprocess.run(command, capture_output=True, text=True, env=env_with_checkout_history(GRAPH, folder))
         elapsed = time.monotonic() - started
     if args.diagnostics:
         args.diagnostics.write_text(result.stderr, encoding='utf-8')
