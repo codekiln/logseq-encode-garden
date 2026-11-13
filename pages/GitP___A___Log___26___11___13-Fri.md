@@ -50,4 +50,18 @@ prev:: [[GitP/A/Log/26/11/12-Thu]]
 				- [[Microfreak/UI/Front/Row/01 Top/08 Master Knob]]: just under 9 o'clock, roughly 20% of its travel
 				- [[Zoom H5]] input gain: between 2 and 3 ([[Zoom H5/UG/08 Recording/05 Inputs and Levels]])
 				- Ableton: the audio tracks fed by the MicroFreak at -7.5 dB
+		- ### Finding my place in the Drum Rack from the [[Launchpad/UI/Mode/5-Sequencer]]
+			- On track 4, the down arrow dims once the grid reaches the bottom of the note range, and the up arrow dims at the top. A dimmed arrow is a fixed reference point.
+			- The arrows move the 16-pad grid by 16 notes, not by an octave.
+			- Bottom up
+				- At the bottom, the lower-left pad is C-2 (MIDI note 0) and the upper-right is D#-1 (15). C-2 is very low, far from the middle of the range.
+				- One press up, I read the lower-left pad as E-2 and the upper-right as G-1. A 16-note step would make them E-1 (16) and G0 (31), so I may have misread them.
+			- Top down
+				- At the top, the top row of the grid is inactive. The highest pad is G8 (127) and the lower-left is G#7 (116), so only three rows play.
+				- One press down: lower-left E6 (100), upper-right G7 (115).
+				- Two presses down: lower-left C5 (84), upper-right D#6 (99).
+			- The top-down pages (116, 100, 84 …) and the bottom-up pages (0, 16 …) are 4 notes apart, so where a page starts depends on which end I come from.
+			- Plan: key the [[Ableton/Live/Instrument/Drum/Forevertron]] samples and the [[Ableton/Live/Instrument/Drum/Pool/Cue/Strikes-Refined]] samples from one end of the range, so I can go all the way to that end and know where I am.
+				- As before, I'd leave one pad out per page, in a different spot on each page, so the gap tells me which page I'm on.
+				- Counting top down is probably better than bottom up, since those pages lined up with what I expected.
 	-
