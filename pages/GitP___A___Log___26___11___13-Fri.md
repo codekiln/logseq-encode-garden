@@ -45,4 +45,9 @@ prev:: [[GitP/A/Log/26/11/12-Thu]]
 			- GM is the General MIDI percussion map, the standard that assigns one drum sound to each MIDI note: kick on 36, snare on 38, closed hi-hat on 42, high tom on 50.
 			- Live names middle C (note 60) C3, so note 50 shows as D2 in Live, where General MIDI charts that use C4 call it D3.
 			- That explains the pattern I'd noticed in the packaged drum kits: they're laid out to this map.
+		- ### Levels that stopped the MicroFreak clipping on preset 398 InfiniAlarm
+			- Pressing down a bunch of keys at once on 398 InfiniAlarm kept maxing out. These settings stopped it:
+				- [[Microfreak/UI/Front/Row/01 Top/08 Master Knob]]: just under 9 o'clock, roughly 20% of its travel
+				- [[Zoom H5]] input gain: between 2 and 3 ([[Zoom H5/UG/08 Recording/05 Inputs and Levels]])
+				- Ableton: the audio tracks fed by the MicroFreak at -7.5 dB
 	-
