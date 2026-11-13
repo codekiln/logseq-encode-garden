@@ -26,7 +26,7 @@ see-also:: [[Person/codekiln/GitHub/logseq-gardener]]
 		- mise supplies lsg and uv. The task needs no credentials and works offline.
 	- ## Failure and recovery
 		- An existing output directory stops lsg; choose a new one.
-		- A link into a mount the garden does not declare, or into a mount without a `public` URL, stops the build with the page and the file. Declare the mount in `asset-mounts.toml`, or link the file another way.
+		- When a page links into a mount that `asset-mounts.toml` does not declare, or into a mount with no `public` URL, the task stops and names the page and the file. Add the mount with its `public` URL to `asset-mounts.toml`, or take the link off the page.
 		- A page reported as left out usually has a title the task derives differently from lsg. Compare its `title::` property and filename with lsg's page title rules.
 	- ## Source and help
 		- ~~~sh
