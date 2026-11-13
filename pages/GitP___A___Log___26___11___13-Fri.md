@@ -40,4 +40,9 @@ prev:: [[GitP/A/Log/26/11/12-Thu]]
 				- The likely reason: in Drum Rack layout the Launchpad sends its pads on channel 9 of the DAW port, not channel 1. Its channel setting doesn't change that. See [[Launchpad/PRG/05 Software Integration/02 DAW Interface]].
 			- MIDI From `Launchpad Pro MK3 (LPProMK3 MIDI)`, All Channels: silence.
 				- The Note mode MIDI port is the one I expected to work, per [[Launchpad/PRG/03 MIDI]]. I don't know yet why it didn't.
+		- ### The Drum Rack suggests a General MIDI sound for each pad
+			- Hovering an empty pad in [[Ableton/Live/Instrument/Drum]] shows a suggestion in the status bar, such as `D2 - GM Suggestion: High Tom` on the `Piano Pool` rack.
+			- GM is the General MIDI percussion map, the standard that assigns one drum sound to each MIDI note: kick on 36, snare on 38, closed hi-hat on 42, high tom on 50.
+			- Live names middle C (note 60) C3, so note 50 shows as D2 in Live, where General MIDI charts that use C4 call it D3.
+			- That explains the pattern I'd noticed in the packaged drum kits: they're laid out to this map.
 	-
