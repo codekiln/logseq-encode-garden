@@ -1,4 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
+entity-proxy-source-properties:: public
 
 - # Ableton Track
 	- In this garden, **Ableton Track** pages model one audio or MIDI track in an [[Logseq/Entity/Ableton/Set]].
