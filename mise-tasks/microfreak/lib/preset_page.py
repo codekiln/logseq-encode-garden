@@ -509,7 +509,7 @@ def frontmatter_set(front, key, value):
 
 def asset_names(page_title, date):
     asset_page = f'{page_title}/Asset/Device-Read-{date}/bin'
-    filename = asset_page.rsplit('/', 1)[0].replace('/', '___') + '.bin'
+    filename = asset_page.rsplit('/', 1)[0].replace('/', '___').replace(' ', '-') + '.bin'
     return asset_page, filename, B2 + quote(filename, safe='')
 
 

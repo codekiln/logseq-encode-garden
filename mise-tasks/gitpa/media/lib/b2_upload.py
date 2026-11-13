@@ -66,7 +66,7 @@ def asset_name(garden: Path, page: str) -> tuple[str, str]:
             entity_types.update(re.findall(r'\[\[([^]\n]+)\]\]', property_line.group(2)))
     if 'Logseq/Entity/Asset/B2' not in entity_types:
         raise ValueError('Target page must be a Logseq/Entity/Asset/B2 instance')
-    return '___'.join(parts[:-1]) + '.' + parts[-1], parts[-1]
+    return '___'.join(parts[:-1]).replace(' ', '-') + '.' + parts[-1], parts[-1]
 
 
 def media_type(source: Path, extension: str) -> str:

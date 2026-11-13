@@ -15,7 +15,7 @@ spec.loader.exec_module(assets)
 
 class Names(unittest.TestCase):
     def test_roundtrip_spelling(self):
-        self.assertEqual(assets.filename("Course Name/Asset/Audio/Lesson/mp3"), "Course Name___Asset___Audio___Lesson.mp3")
+        self.assertEqual(assets.filename("Course Name/Asset/Audio/Lesson/mp3"), "Course-Name___Asset___Audio___Lesson.mp3")
 
     def test_ambiguous_names_rejected(self):
         for page in ["Course/Asset/../wav", "Course/Asset/a___b/mp3", "Course//Asset/mp3", "Course/Asset/A:Z/mp3", "Course/Asset/MP3", "Owner/Asset/mp3", "Asset/Owner/Purpose/mp3"]:
@@ -26,6 +26,18 @@ class Names(unittest.TestCase):
 class Folder(unittest.TestCase):
     def test_garden_files_sit_in_owning_mount(self):
         self.assertEqual(assets.asset("Course/Asset/Diagram/png"), assets.ROOT / "assets/.remote/logseq-encode-garden/Course___Asset___Diagram.png")
+
+    def test_spaced_pointer_is_found_until_a_hyphenated_one_exists(self):
+        with tempfile.TemporaryDirectory() as temp, patch.object(assets, "ROOT", Path(temp)):
+            (Path(temp) / "asset-mounts.toml").write_text('[mounts.g]\npath = "assets/.remote/g"\nbucket = "g"\ndvc = "garden"\npublic = "https://example.com/g"\n')
+            folder = Path(temp) / "assets/.remote/g"
+            folder.mkdir(parents=True)
+            page = "Course Name/Asset/Diagram/png"
+            self.assertEqual(assets.asset(page), folder / "Course-Name___Asset___Diagram.png")
+            (folder / "Course Name___Asset___Diagram.png.dvc").write_text("outs: []\n")
+            self.assertEqual(assets.asset(page), folder / "Course Name___Asset___Diagram.png")
+            (folder / "Course-Name___Asset___Diagram.png.dvc").write_text("outs: []\n")
+            self.assertEqual(assets.asset(page), folder / "Course-Name___Asset___Diagram.png")
 
     def test_borrowed_mount_alone_is_rejected(self):
         with tempfile.TemporaryDirectory() as temp, patch.object(assets, "ROOT", Path(temp)):

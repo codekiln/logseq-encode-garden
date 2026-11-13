@@ -24,6 +24,12 @@ def filename(page):
         raise ValueError("invalid asset page segment")
     if not re.fullmatch(r"[a-z0-9]+", segments[-1]):
         raise ValueError("format must contain lowercase letters or digits")
+    return "___".join(segments[:-1]).replace(" ", "-") + "." + segments[-1]
+
+
+def spaced_filename(page):
+    """The page's file name with its spaces kept, as the asset tasks wrote it until they switched to hyphens."""
+    segments = page.split("/")
     return "___".join(segments[:-1]) + "." + segments[-1]
 
 
@@ -36,7 +42,12 @@ def owned_mount_folder():
 
 
 def asset(page):
-    return owned_mount_folder() / filename(page)
+    """Return the page's hyphenated path in the owned mount, or its old spaced path when only the spaced file or its .dvc pointer is there."""
+    folder = owned_mount_folder()
+    current, spaced = folder / filename(page), folder / spaced_filename(page)
+    def file_or_pointer_exists(path):
+        return path.exists() or Path(str(path) + ".dvc").exists()
+    return spaced if not file_or_pointer_exists(current) and file_or_pointer_exists(spaced) else current
 
 
 def dvc(*args, remote=False):
