@@ -22,7 +22,7 @@ DESTINATION_PROPERTIES = 'entity-proxy-destination-properties'
 SOURCE_PROPERTIES = 'entity-proxy-source-properties'
 EMBED = re.compile(r'\{\{embed\s+\[\[([^\]]+)\]\]\s*\}\}')
 TRANSACTION = '.logseq-proxy-transaction'
-MOUNTED = 'assets/.remote/'
+MOUNTS_FOLDER = 'assets/.remote/'
 PROPERTY = re.compile(r'^([^\s:]+):: (.*?)(?:\r?\n)?$')
 
 
@@ -410,7 +410,7 @@ def add_page(plan: Plan, page: str) -> None:
         if not url.startswith('../assets/'):
             continue
         relative = unquote(url.split('#', 1)[0]).removeprefix('../')
-        if relative.startswith(MOUNTED):
+        if relative.startswith(MOUNTS_FOLDER):
             name = borrow_mount(plan, page, relative)
             plan.details.append(f'Mounted asset {relative} stays in mount {name}')
             continue
@@ -460,7 +460,7 @@ def borrow_mount(plan: Plan, page: str, relative: str) -> str:
     if '..' in parts or '\\' in relative or '\x00' in relative:
         raise SyncError(f'Unsafe relative path: {relative}')
     if len(parts) < 4:
-        raise SyncError(f'{page} links {relative}, which names no mount folder under {MOUNTED}')
+        raise SyncError(f'{page} links {relative}, which names no mount folder under {MOUNTS_FOLDER}')
     name = parts[2]
     mounts = mounts_module()
     if plan.source_mounts is None:
