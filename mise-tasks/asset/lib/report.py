@@ -24,8 +24,9 @@ def link_pattern(prefix):
     return re.compile(rf"<{quoted}([^>\n]+)>|{quoted}([^\s)\]<>\"'`|]+)")
 
 
-def clean(name):
-    name = re.split(r"[?#]", name, maxsplit=1)[0].rstrip(".,;:")
+def file_name_from_link(text):
+    """Drop a link's query, fragment and trailing punctuation, and decode its percent escapes."""
+    name = re.split(r"[?#]", text, maxsplit=1)[0].rstrip(".,;:")
     return urllib.parse.unquote(name)
 
 
@@ -42,7 +43,7 @@ def scan(root, garden_mounts):
             text = page.read_text(errors="replace")
             for name, form, pattern in patterns:
                 for match in pattern.finditer(text):
-                    file = clean(match.group(1) or match.group(2))
+                    file = file_name_from_link(match.group(1) or match.group(2))
                     if not FILE_NAME.fullmatch(file):
                         continue
                     entry = found[(name, file)]
