@@ -62,8 +62,8 @@ CODE = re.compile(r"^[ \t]*(?:- )?(```|~~~).*?^[ \t]*\1[^\n]*|`[^`\n]+`", re.M |
 def public_links(text, mounts, page):
     """Return text with each link into ../assets/.remote/<mount>/ pointing at the mount's public URL.
 
-    Code keeps its text. A link into a mount the garden does not declare, or into a mount
-    without a public URL, stops with an error that names the page and the file."""
+    Leaves inline code and fenced code unchanged. Raises MountError, naming the page and the file,
+    when a link points into a mount that asset-mounts.toml does not declare or that has no public URL."""
 
     def swap(match):
         start, name, file = match.groups()
