@@ -165,7 +165,7 @@ class PageSyncTests(unittest.TestCase):
             self.plan()
 
     def mount_source(self, text=None):
-        """Give the source graph an origin remote and core.py a sibling asset lib, as in the garden."""
+        """Make the source graph a Git repository with an origin remote, declare mount g in its asset-mounts.toml (or write text there instead), and link two files in mount g from the source page."""
         subprocess.run(['git', 'init', '-q', str(self.source)], check=True)
         subprocess.run(['git', '-C', str(self.source), 'remote', 'add', 'origin',
                         'git@github.com:codekiln/source-garden.git'], check=True)
