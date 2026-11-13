@@ -12,7 +12,7 @@ source-link:: https://github.com/codekiln/logseq-encode-garden/blob/main/mise-ta
 		- `local`: whether the file itself sits in `assets/.remote/<mount>/`.
 		- `space`: whether the file name has a space. A `yes` marks a file that needs a copy with a hyphen in place of each space, the naming rule [[Logseq/Entity/Asset]] describes.
 		- `public`, with `--public`: the HTTP status the file's public URL returns to a HEAD request, such as `200` or `404`. The column shows `private` for a mount whose entry in `asset-mounts.toml` has no `public` URL, and `error` when the request gets no answer.
-	- The task writes totals to stderr: how many files pages link, and how many of them have a DVC pointer, a local copy or a space in the name. With `--public` it also counts the files whose public URL answered `200`.
+	- The task writes totals to stderr: the number of linked files, and how many of those have a DVC pointer, a local copy or a space in the name. With `--public` it also counts the files whose public URL answered `200`.
 	- ## Invocation
 		- Run from the garden checkout.
 			- ~~~sh
