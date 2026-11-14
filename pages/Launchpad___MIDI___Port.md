@@ -1,0 +1,8 @@
+- # Launchpad Pro MK3 MIDI ports
+	- Over USB, the Launchpad Pro MK3 presents three MIDI ports ([[Launchpad/PRG/03 MIDI]], [[Launchpad/UI/Area/5-Rear/1-USB-C-Port]]):
+		- [[Launchpad/MIDI/Port/LPProMK3 MIDI]] — Note, Chord, Custom and Sequencer modes, and pad lighting in Custom and Programmer modes.
+		- [[Launchpad/MIDI/Port/LPProMK3 DAW]] — Session mode, driven by a DAW.
+		- [[Launchpad/MIDI/Port/LPProMK3 DIN]] — the MIDI jacks on the rear panel.
+	- A MIDI track's MIDI From menu in [[Ableton/Live]] lists all three:
+		- ![Live MIDI From menu with the Launchpad ports](../assets/.remote/logseq-encode-garden/Launchpad___MIDI___Port___Asset___Live-MIDI-From-menu.png)
+		- Transcription: [[Launchpad/MIDI/Port/Asset/Live-MIDI-From-menu/png]]

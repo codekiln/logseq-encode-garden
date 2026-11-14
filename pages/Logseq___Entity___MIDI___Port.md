@@ -1,0 +1,21 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # MIDI Port
+	- In this garden, **MIDI Port** pages model one named MIDI connection that a device presents to a computer: an entry that software such as a [[DAW]] lists as a MIDI input or output.
+	- ## What counts
+		- Each entry a computer can select on its own is a port. One device can present several: the Launchpad Pro MK3 presents three over one USB cable, [[Launchpad/MIDI/Port/LPProMK3 MIDI]], [[Launchpad/MIDI/Port/LPProMK3 DAW]] and [[Launchpad/MIDI/Port/LPProMK3 DIN]].
+		- A port usually has an input side and an output side under the same name. One page covers both.
+		- The device itself, its physical jacks and its cables are other pages. A jack on a panel is a [[Logseq/Entity/UI/Control]], such as [[Launchpad/UI/Area/5-Rear/4-MIDI-In-Jack]].
+	- ## Names
+		- A port page sits at `<Device>/MIDI/Port/<port name>`, with the port name the device reports, such as `LPProMK3 DAW`.
+		- `<Device>/MIDI/Port` can hold a short page that lists the device's ports.
+		- Software can show a port under a longer label that adds the device name or the program using it. The page records those labels and keeps the device's own name as its title.
+		- Search the device's namespace and the port name before creating a page.
+	- ## Page shape
+		- Frontmatter: `logseq-entity:: [[Logseq/Entity/MIDI/Port]]`. Shared conventions live on [[Logseq/Frontmatter]].
+		- One bullet-wrapped H1 with the port name, then one sentence saying what travels over the port.
+		- An `## In <program>` section for each program that uses the port: the labels it shows for the input and the output, and the settings it keeps for the port. In [[Ableton/Live]], those are the Track, Sync, Remote and MPE switches described on [[Ableton/Live/MIDI/Port]].
+		- A `## Source` section links the user guide sections that describe the port, from the device's guide and from the program's.
+	- ## Examples
+		- [[Launchpad/MIDI/Port/LPProMK3 DAW]]
+		- [[Microfreak/MIDI/Port/Arturia MicroFreak]]
