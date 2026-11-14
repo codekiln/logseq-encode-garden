@@ -12,5 +12,5 @@ next:: [[Launchpad/PRG/05 Software Integration/12 Factory Custom Modes]]
 		- Top row: CC 91-98. Logo: CC 99.
 		- Below the grid: CC 101-108 in the upper row and CC 1-8 in the lower row.
 	- Programmer mode layout, decimal (left) and hex (right)
-		- ![Programmer mode layout](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Launchpad___PRG___05%20Software%20Integration___11%20Programmer%20Layout___Asset___Programmer-layout.png)
+		- ![Programmer mode layout](../assets/.remote/logseq-encode-garden/Launchpad___PRG___05-Software-Integration___11-Programmer-Layout___Asset___Programmer-layout.png)
 	- The User Guide's map is [[Launchpad/UG/11 Appendix/01 Default MIDI Mappings/09 Programmer Mode]].
