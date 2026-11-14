@@ -70,5 +70,9 @@ prev:: [[GitP/A/Log/26/11/13-Fri]]
 						- DONE bring postcard swag for [[GitP/A]]
 		- ### Performance Preplist
 		  id:: 6af85beb-adab-4ac9-9a52-c8b317c5150b
-			- TODO enable closing mac with that one mise task
+			- TODO keep [[Macbook/My]] awake with the lid closed: run [[pmset/mise/Task/lid-awake/enable]]
 			  id:: 6af85bf4-fb13-48e5-9690-66e700814289
+				- `mise run pmset:lid-awake:enable`
+				- Steps and troubleshooting: [[MacOS/How To/Keep a Mac Awake with the Lid Closed]]
+				- TODO after the performance, put lid-close sleep back: run [[pmset/mise/Task/lid-awake/restore]]
+					- `mise run pmset:lid-awake:restore`
