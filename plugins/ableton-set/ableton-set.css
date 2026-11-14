@@ -1,0 +1,71 @@
+/* lsg first-party plugin ableton-set: the track view above an Ableton Live Set page's outline.
+   Tracks sit side by side and the row scrolls sideways, as Live's Session View does. */
+.lsg-ableton-set {
+  --lsg-as-audio: #3f8fd8;
+  --lsg-as-midi: #cf8a2e;
+  --lsg-as-return: #8a7fd6;
+  --lsg-as-group: #4fa663;
+  --lsg-as-arm: #d9534f;
+  margin: 1rem 0 1.5rem;
+  font-size: .8rem;
+  line-height: 1.35;
+}
+.lsg-ableton-set .lsg-as-caption { margin: 0 0 .4rem; color: var(--lsg-muted); font-size: .85rem; }
+.lsg-as-caption strong { color: var(--lsg-text); }
+.lsg-as-scroll {
+  overflow-x: auto;
+  background: var(--lsg-surface);
+  border: 1px solid var(--lsg-border);
+  border-radius: 6px;
+  scroll-snap-type: x proximity;
+  scroll-padding-left: 4px;
+}
+.lsg-ableton-set ol, .lsg-ableton-set dl, .lsg-ableton-set dd, .lsg-ableton-set p { margin: 0; padding: 0; }
+.lsg-ableton-set ol { list-style: none; }
+.lsg-ableton-set li { margin: 0; }
+.lsg-as-tracks { display: flex; align-items: stretch; gap: 4px; width: max-content; }
+.lsg-as-scroll > .lsg-as-tracks { padding: 4px; }
+.lsg-as-track, .lsg-as-group {
+  flex: none;
+  box-sizing: border-box;
+  border: 1px solid var(--lsg-border);
+  border-top: 4px solid var(--lsg-as-color, var(--lsg-muted));
+  border-radius: 4px;
+  scroll-snap-align: start;
+}
+.lsg-as-track { width: 9.5rem; padding: .4rem .5rem .5rem; color: var(--lsg-text); background: var(--lsg-background); }
+.lsg-as-group { padding: .4rem 4px 4px; }
+.lsg-as-group > .lsg-as-head, .lsg-as-group > .lsg-as-settings, .lsg-as-group > .lsg-as-label, .lsg-as-group > .lsg-as-devices { max-width: 9.5rem; padding: 0 .4rem; }
+.lsg-as-group > .lsg-as-tracks { margin-top: .5rem; }
+[data-type="audio"] { --lsg-as-color: var(--lsg-as-audio); }
+[data-type="midi"] { --lsg-as-color: var(--lsg-as-midi); }
+[data-type="return"] { --lsg-as-color: var(--lsg-as-return); }
+[data-type="group"] { --lsg-as-color: var(--lsg-as-group); }
+.lsg-as-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .15rem .4rem; }
+.lsg-as-name { min-width: 0; font-size: .9rem; font-weight: 600; overflow-wrap: anywhere; }
+a.lsg-as-name, a.lsg-as-target { color: var(--lsg-link); text-decoration: none; }
+a.lsg-as-name:hover, a.lsg-as-target:hover { text-decoration: underline; }
+a.lsg-as-name:focus-visible, a.lsg-as-target:focus-visible { outline: 2px solid var(--lsg-focus); outline-offset: 2px; border-radius: 2px; }
+.lsg-as-type { color: var(--lsg-muted); font-size: .7rem; letter-spacing: .04em; text-transform: uppercase; }
+.lsg-as-settings { margin-top: .45rem; }
+.lsg-ableton-set dt, .lsg-ableton-set .lsg-as-label { margin-top: .4rem; color: var(--lsg-muted); font-size: .7rem; }
+.lsg-as-settings dd { overflow-wrap: anywhere; }
+.lsg-as-monitor { display: inline-flex; border: 1px solid var(--lsg-border); border-radius: 3px; overflow: hidden; }
+.lsg-as-monitor > * { padding: 0 .4rem; color: var(--lsg-muted); font-weight: 400; }
+.lsg-as-monitor > * + * { border-left: 1px solid var(--lsg-border); }
+.lsg-as-monitor > strong { color: var(--lsg-background); background: var(--lsg-text); font-weight: 600; }
+.lsg-as-arm::before {
+  content: "";
+  display: inline-block;
+  width: .6rem;
+  height: .6rem;
+  margin-right: .35rem;
+  border: 1px solid var(--lsg-muted);
+  border-radius: 50%;
+}
+.lsg-as-armed::before { background: var(--lsg-as-arm); border-color: var(--lsg-as-arm); }
+.lsg-as-devices { margin-top: .15rem; }
+.lsg-as-devices li { margin-top: 2px; padding: .1rem .35rem; background: var(--lsg-surface); border: 1px solid var(--lsg-border); border-radius: 3px; overflow-wrap: anywhere; }
+@media (width < 640px) {
+  .lsg-as-track { width: 8.5rem; }
+}
