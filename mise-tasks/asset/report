@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#MISE description="List the B2 files that garden pages link, with their DVC and local state"
+#MISE tools={uv="0.12.22", python="3.13.16"}
+#USAGE flag "--public" help="Send a HEAD request to each file's public URL"
+set -euo pipefail
+root=$(git -C "$(dirname "$0")" rev-parse --show-toplevel)
+args=()
+if [[ "${usage_public:-false}" == "true" ]]; then
+  args+=(--public)
+fi
+exec uv run --project "$root/mise-tasks/asset" python "$root/mise-tasks/asset/lib/report.py" ${args[@]+"${args[@]}"}

@@ -1,9 +1,10 @@
 logseq-entity:: [[Logseq/Entity/Ableton/Track/Track]]
+public:: true
 
 - # B-Aud-In
   type:: audio
-  audio-from:: AudioIn/External/M2
-  audio-to:: AudioOut/External/M3
+  audio-from:: Ext. In 3
+  audio-to:: Ext. Out 4
   monitor:: auto
   arm:: false
   devices:: Mastering - Make It Loud, Compressor2

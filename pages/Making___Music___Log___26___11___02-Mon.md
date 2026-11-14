@@ -5,7 +5,7 @@ next:: [[Making/Music/Log/26/11/06-Fri]]
 	- ## 02:35 — Notes on the November 1 session
 		- About [[GitP/A/Session/26/11/01-Sun]].
 		- ### Template changes and a recording mix-up
-			- ![A maker's log notebook and the November 1 template changes](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Making___Music___Log___26___10___31-Sat___Asset___Notebook___Blue-01.jpg)
+			- ![A maker's log notebook and the November 1 template changes](../assets/.remote/logseq-encode-garden/Making___Music___Log___26___10___31-Sat___Asset___Notebook___Blue-01.jpg)
 			- #### Transcription
 				- The 2026-10-31 entry on the upper half of this page is on [[Making/Music/Log/26/10/31-Sat]].
 				- 2026-11-02 Mon 0235
@@ -25,7 +25,7 @@ next:: [[Making/Music/Log/26/11/06-Fri]]
 				- Tracks 9 and 10 were copies of track 8 and kept its input, so all three recorded Layer A. This is why only Layer A was fully recorded, as noted on [[Making/Music/Log/26/11/01-Sun]].
 				- The plugin name reads 'Sonobus'; it is probably SonoBus, a peer-to-peer audio streaming plugin.
 		- ### Launchpad to Operator and the three MicroFreak layers
-			- ![Launchpad to Operator and the three MicroFreak layers](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Making___Music___Log___26___11___02-Mon___Asset___Notebook___Blue-02.jpg)
+			- ![Launchpad to Operator and the three MicroFreak layers](../assets/.remote/logseq-encode-garden/Making___Music___Log___26___11___02-Mon___Asset___Notebook___Blue-02.jpg)
 			- #### Transcription
 				- Tried Launchpad → Live 'Operator' instrument link
 				- Also, I'm not sure if this gets set in the template settings, but I turned MIDI Polyphonic Expression off for the Novation Launchpad MIDI In in Live's MIDI settings. I was experimenting with having Novation control an Ableton Instrument such as Operator by using shift + Note to select channel 2 out, then putting the Operator instrument on the set's track 5 MIDI in, while also gating LPP→MF's MIDI out to channel 1, so the parts of the sequencer meant for the MicroFreak didn't get the cross-talk. I read in the Launchpad's Ableton integration guide that one must disable MPE to gain the access to the ability to target instruments to specific channels, which is why I tried that.
@@ -37,7 +37,7 @@ next:: [[Making/Music/Log/26/11/06-Fri]]
 				- The Launchpad's Device mode exposes Operator's parameters in pages, which works but means memorising what each slot does. Preset switching from the Launchpad was not found.
 				- The session went back to three MicroFreak layers with [[Microfreak/Preset/259 Infini Pad]] and [[Microfreak/Preset/260 8bitfi]] (written "8bitfini").
 		- ### Selecting MicroFreak presets from the Launchpad
-			- ![Selecting MicroFreak presets from a Launchpad custom mode](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Making___Music___Log___26___11___02-Mon___Asset___Notebook___Blue-03.jpg)
+			- ![Selecting MicroFreak presets from a Launchpad custom mode](../assets/.remote/logseq-encode-garden/Making___Music___Log___26___11___02-Mon___Asset___Notebook___Blue-03.jpg)
 			- #### Transcription
 				- sounds on the μF. Not the best technique; ideally I'd have two sets of soundsources or two pairs of earphones, one for audience and one for me.
 				- It does bug me that I need to use the mic to say what preset I'm selecting. If only there was a way to use custom mode on the LPP to send sysex or patch set or preset select messages on the μF. Of course, I could literally do that, but I'd have a larger problem when it came to selection. I suppose there are "sliders" in Custom mode. It would likely be annoying to try to land on a known preset. I think the track indicators give me eight pages of custom modes. I suppose I could use some kind of automation to populate them. Maybe Page 2 could be pads I've used recently, 1 per line, with a binary representation of the preset number. If I have any illuminated button on a row sending that preset's sysex, I can use 2⁸ in binary presets, which is almost enough at 256. I would prefer 2⁹ or 512, that would put me over the μF's limit. maybe I could drop the least significant bit. Or I could use color for a few more bits. Then again, doing mental binary during a live performance sounds like a stupid plan. If I was streaming / recording from above, it could detect the preset.

@@ -10,5 +10,5 @@ next:: [[Launchpad/PRG/04 Controlling the Surface/02 Colour Palette]]
 		- Channel 3, pulsing colour: Note `92h` (146), CC `B2h` (178)
 	- For a Note On, the note number picks the pad and the velocity picks the palette colour. For a CC, the controller number picks the pad and the value picks the colour.
 	- Session Mode layout, decimal (left) and hex (right). Numbers are notes unless marked CC.
-		- ![Session Mode layout](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Launchpad___PRG___04%20Controlling%20the%20Surface___01%20Lighting%20LEDs___Asset___Session-layout.png)
+		- ![Session Mode layout](../assets/.remote/logseq-encode-garden/Launchpad___PRG___04-Controlling-the-Surface___01-Lighting-LEDs___Asset___Session-layout.png)
 	- The Session layout uses the same numbers as [[Launchpad/PRG/05 Software Integration/11 Programmer Layout]].

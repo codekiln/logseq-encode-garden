@@ -7,4 +7,4 @@ logseq-created-time-year:: [[20/2/6]]
 - # Claude Fable 5.1
 	- {{embed [[Anthropic/Model/Claude/5/1/Fable/Doc/API]]}}
 	- {{embed [[Anthropic/Model/Claude/5/1/Fable/Doc/Artificial Analysis/Intelligence]]}}
-	- Successor to [[Anthropic/Model/Claude/Fable/5]].
+	- Successor to [[Anthropic/Model/Claude/Fable/5]]. Succeeded by [[Anthropic/Model/Claude/5/2/Fable]].

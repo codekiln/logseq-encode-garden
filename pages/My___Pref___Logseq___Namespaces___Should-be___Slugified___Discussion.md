@@ -1,0 +1,6 @@
+- Now that [[Person/codekiln/GitHub/logseq-gardener]] is rendering the static site in such a way that the `https://<domain>/<namespace-path>` pulls up a particular logseq namespace, I'm beginning to have the preference that Logseq page names have [[Key/Hyphen]] (`-`) instead of [[Key/Space]] (` `) in them, so as to try to converge towards the invariant that the path at the top of the Logseq page is the same path that would be appended to the end of the static site's URL to get to that page.
+- This small change has quite a few implications for my knowledge gardens and will take some time to converge on. In particular, how best to refactor older namespaces such as [[GitP/A]] whose assets are named after them and published elsewhere will take some care to get right.
+- # Conversion Phases
+	- {{embed [[My/Pref/Logseq/Namespaces/Should-be/Slugified/Phase/1-Net-New-Pages-Slugified]]}}
+	- {{embed [[My/Pref/Logseq/Namespaces/Should-be/Slugified/Phase/2-Create-Skill]]}}
+	- {{embed [[My/Pref/Logseq/Namespaces/Should-be/Slugified/Phase/3-Scheduled-Task]]}}

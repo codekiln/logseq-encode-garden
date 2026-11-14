@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+# Machine-specific state: the analysis cache, curation database, resolved paths and backups.
+.local/
+# Personal overrides of config.toml (sample folders, ports, Launchpad port name).
+config.local.toml

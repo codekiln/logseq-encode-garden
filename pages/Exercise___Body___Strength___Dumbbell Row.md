@@ -1,6 +1,9 @@
 logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
 - # Dumbbell Row
 	- Practice a one-arm horizontal pull with a dumbbell while a bench supports the opposite hand and knee.
+	- ![Huberman rowing a dumbbell with one hand on a bench](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%204%20-%20Major%20Torso%20Muscles___Frame___0486-Dumbbell-Row.jpg)
+		- [Day 4 at 8:06](https://www.youtube.com/watch?v=UEU6NYLRi6o&t=486s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]]
+		- Equipment: [[Equipment/Exercise/Dumbbell]], [[Equipment/Exercise/Weight Bench]]
 	- ## Setup
 		- Hold a dumbbell in one hand. Rest the other hand and the knee on that same side on the bench, with the bench hand under the shoulder and the knee under the hip. Brace the core, keep the back flat, and let the weighted arm hang.
 	- ## Practice

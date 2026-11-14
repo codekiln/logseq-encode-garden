@@ -1,6 +1,9 @@
 logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
 - # Preacher Curl
 	- Practice elbow flexion with the upper arm braced against a pad.
+	- ![Huberman on a preacher curl machine](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%207%20-%20Shoulders%20and%20Arms___Frame___0390-Preacher-Curl.jpg)
+		- [Day 7 at 6:30](https://www.youtube.com/watch?v=IzpGEk-2th4&t=390s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]]
+		- Equipment: [[Equipment/Exercise/Preacher Curl Machine]]
 	- ## Setup
 		- Sit at a preacher curl machine with the backs of the upper arms on the pad. Lift the weight slightly off its rest; that is the starting position.
 	- ## Practice

@@ -1,4 +1,4 @@
-prev:: [[GitP/A/Session/26/10/11-Sun]]
+prev:: [[GitP/A/Session/26/10/14-Wed]]
 next:: [[GitP/A/Session/26/10/20-Tue]]
 logseq-entity:: [[Logseq/Entity/Podcast/Episode/GitP/A]], [[Logseq/Entity/Podcast/Episode]]
 public:: true

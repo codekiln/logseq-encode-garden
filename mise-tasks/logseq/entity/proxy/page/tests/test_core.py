@@ -164,6 +164,79 @@ class PageSyncTests(unittest.TestCase):
         with self.assertRaisesRegex(SyncError, 'Unsafe'):
             self.plan()
 
+    def mount_source(self, text=None):
+        """Make the source graph a Git repository with an origin remote, declare mount g in its asset-mounts.toml (or write text there instead), and link two files in mount g from the source page."""
+        subprocess.run(['git', 'init', '-q', str(self.source)], check=True)
+        subprocess.run(['git', '-C', str(self.source), 'remote', 'add', 'origin',
+                        'git@github.com:codekiln/source-garden.git'], check=True)
+        (self.source / 'asset-mounts.toml').write_text(text if text is not None else (
+            '# Schema: page\n[mounts.g]\npath = "assets/.remote/g"\nbucket = "g"\ndvc = "garden"\n'
+            'public = "https://files.example/g"\n'))
+        self.source_page.write_text('- ![a b](../assets/.remote/g/a%20b.png)\n- [mp3](<../assets/.remote/g/x y.mp3>)\n')
+
+    def test_mounted_assets_stay_behind_and_destination_borrows_the_mount(self):
+        self.mount_source()
+        (self.source / 'assets/.remote/g').mkdir(parents=True)
+        (self.source / 'assets/.remote/g/a b.png').write_bytes(b'PNG')
+        plan = self.plan()
+        self.assertEqual(sorted(plan.writes), ['asset-mounts.toml', 'pages/Book___A%3F B.md'])
+        self.assertEqual(plan.warnings, [])
+        apply_plan(plan)
+        self.assertFalse((self.destination / 'assets').exists())
+        text = (self.destination / 'asset-mounts.toml').read_text()
+        self.assertTrue(text.startswith('# Schema: https://'))
+        sys.path.insert(0, str(LIB.parents[4] / 'asset/lib'))
+        import mounts
+        self.assertEqual(mounts.load(self.destination), {'g': {
+            'path': 'assets/.remote/g', 'public': 'https://files.example/g',
+            'source': 'github.com/codekiln/source-garden'}})
+        repeat = self.plan()
+        self.assertEqual(sorted(repeat.writes), ['pages/Book___A%3F B.md'])
+
+    def test_borrowed_mount_passes_its_source_on_and_keeps_other_mounts(self):
+        self.mount_source('[mounts.g]\npath = "assets/.remote/g"\npublic = "https://files.example/g"\n'
+                          'source = "github.com/owner/garden"\n')
+        mine = '# mine\n[mounts.own]\npath = "assets/.remote/own"\nbucket = "own"\ndvc = "own"\n'
+        (self.destination / 'asset-mounts.toml').write_text(mine)
+        apply_plan(self.plan())
+        text = (self.destination / 'asset-mounts.toml').read_text()
+        self.assertTrue(text.startswith(mine))
+        self.assertIn('source = "github.com/owner/garden"', text)
+
+    def test_destination_mount_change_after_preview_stops_the_apply(self):
+        self.mount_source()
+        declared = ('[mounts.g]\npath = "assets/.remote/g"\npublic = "https://files.example/g"\n'
+                    'source = "github.com/codekiln/source-garden"\n')
+        (self.destination / 'asset-mounts.toml').write_text(declared)
+        plan = self.plan()
+        self.assertNotIn('asset-mounts.toml', plan.writes)
+        (self.destination / 'asset-mounts.toml').write_text('# mount g removed\n')
+        with self.assertRaisesRegex(SyncError, 'Destination changed since preview: asset-mounts.toml'):
+            apply_plan(plan)
+
+    def test_mount_conflicts_stop_the_sync_before_any_write(self):
+        self.mount_source()
+        (self.destination / 'asset-mounts.toml').write_text(
+            '[mounts.g]\npath = "assets/.remote/g"\npublic = "https://elsewhere.example/g"\n'
+            'source = "github.com/codekiln/source-garden"\n')
+        with self.assertRaisesRegex(SyncError, 'mount g.*different path or public URL'):
+            self.plan()
+        (self.destination / 'asset-mounts.toml').unlink()
+        self.source_page.write_text('- ![x](../assets/.remote/missing/x.png)\n')
+        with self.assertRaisesRegex(SyncError, 'mount missing.*does not declare'):
+            self.plan()
+        self.source_page.write_text('- ![x](../assets/.remote/x.png)\n')
+        with self.assertRaisesRegex(SyncError, 'names no mount folder'):
+            self.plan()
+        self.source_page.write_text('- ![x](../assets/.remote/g/%2E%2E/%2E%2E/x.png)\n')
+        with self.assertRaisesRegex(SyncError, 'Unsafe'):
+            self.plan()
+        (self.source / 'asset-mounts.toml').write_text(
+            '[mounts.g]\npath = "assets/.remote/g"\nbucket = "g"\ndvc = "garden"\n')
+        self.source_page.write_text('- ![x](../assets/.remote/g/x.png)\n')
+        with self.assertRaisesRegex(SyncError, 'mount g, which is private'):
+            self.plan()
+
     def test_symlink_source_and_destination_reject_before_write(self):
         (self.source / 'assets').symlink_to(self.root)
         self.source_page.write_text('- [x](../assets/data.pdf)\n')

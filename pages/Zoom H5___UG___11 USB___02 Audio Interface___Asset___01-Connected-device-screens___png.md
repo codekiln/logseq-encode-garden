@@ -1,3 +1,3 @@
 logseq-entity:: [[Logseq/Entity/Asset/B2]]
 - # 01 Connected device screens
-	- ![01 Connected device screens](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___11%20USB___02%20Audio%20Interface___Asset___01-Connected-device-screens.png)
+	- ![01 Connected device screens](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___11-USB___02-Audio-Interface___Asset___01-Connected-device-screens.png)

@@ -1,0 +1,1 @@
+- start making net new pages and namespaces follow the slugification preference, using [[Key/Hyphen]] (`-`) instead of [[Key/Space]] (` `).

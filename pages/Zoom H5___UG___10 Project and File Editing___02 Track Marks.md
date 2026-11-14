@@ -8,7 +8,7 @@ next:: [[Zoom H5/UG/10 Project and File Editing/03 Names]]
 	- 1. Press **MENU**, then use the scroll button to select `PROJECT` (MULTI FILE mode) or `FILE LIST` (STEREO FILE mode).
 	- 2. Select the project or file to check, then select `OPTION > MARK LIST`.
 		- Mark list
-			- ![01 Mark list](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___10%20Project%20and%20File%20Editing___02%20Track%20Marks___Asset___01-Mark-list.png)
+			- ![01 Mark list](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___10-Project-and-File-Editing___02-Track-Marks___Asset___01-Mark-list.png)
 		- Each row shows a mark number and its time.
 		- A flag icon is a mark added by the user.
 		- An `E` icon is an error mark, added where sound skipped during recording.

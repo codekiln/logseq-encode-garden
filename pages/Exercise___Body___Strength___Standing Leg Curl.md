@@ -1,6 +1,9 @@
 logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
 - # Standing Leg Curl
 	- Practice isolating the hamstrings one leg at a time by curling the heel toward the hip from a standing position.
+	- ![Huberman on a standing leg curl machine](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%202%20-%20Major%20Lower%20Body%20Muscles___Frame___0618-Standing-Leg-Curl.jpg)
+		- [Day 2 at 10:18](https://www.youtube.com/watch?v=CbEFgDFQBvk&t=618s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]]
+		- Equipment: [[Equipment/Exercise/Standing Leg Curl Machine]]
 	- ## Setup
 		- Adjust the machine so the working knee lines up with its pivot and the roller pad rests on the back of the lower leg, above the heel. Stand on the other leg, hold the handles, and press the front of the thigh against its pad.
 	- ## Practice

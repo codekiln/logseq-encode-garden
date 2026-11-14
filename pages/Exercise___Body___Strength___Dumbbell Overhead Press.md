@@ -1,6 +1,9 @@
 logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
 - # Dumbbell Overhead Press
 	- Practice pressing a pair of dumbbells from shoulder height overhead while each arm balances its own load.
+	- ![Huberman pressing dumbbells overhead from a bench](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%207%20-%20Shoulders%20and%20Arms___Frame___0096-Dumbbell-Overhead-Press.jpg)
+		- [Day 7 at 1:36](https://www.youtube.com/watch?v=IzpGEk-2th4&t=96s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]]
+		- Equipment: [[Equipment/Exercise/Dumbbell]], [[Equipment/Exercise/Weight Bench]]
 	- ## Setup
 		- Lift the dumbbells off the floor with bent knees and a flat back, as in a deadlift, then bring them to the shoulders. Sit on a flat bench or a bench with back support, plant the feet, and brace the trunk.
 	- ## Practice

@@ -7,7 +7,7 @@ prev:: [[Zoom H5/UG/10 Project and File Editing/11 Rebuild Project]]
 	- 2. Select the project for the memo, then select `OPTION > VOICE MEMO`.
 	- 3. Record the memo.
 		- Voice memo screen
-			- ![01 Voice memo screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___10%20Project%20and%20File%20Editing___12%20Voice%20Memos___Asset___01-Voice-memo-screen.png)
+			- ![01 Voice memo screen](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___10-Project-and-File-Editing___12-Voice-Memos___Asset___01-Voice-memo-screen.png)
 		- Press **REC** to start recording.
 		- Press **STOP** or **REC** to stop recording.
 	- 4. Play the memo.

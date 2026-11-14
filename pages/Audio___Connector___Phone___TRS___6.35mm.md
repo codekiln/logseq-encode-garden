@@ -1,0 +1,34 @@
+tags:: [[Diataxis/Reference]]
+logseq-entity:: [[Logseq/Entity/Hardware/Connector/Audio]]
+
+- # 6.35mm / `1/4"` Phone TRS Connector
+	- ## Visual Reference
+		- ![Sleeve, ring, and tip on a mono and a stereo phone plug](https://upload.wikimedia.org/wikipedia/commons/9/93/Jack_plug.png)
+		- Image: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Jack_plug.png)
+	- ## Overview
+		- TRS stands for **Tip-Ring-Sleeve**: 3 conductors, 2 insulating rings
+		- The full-size phone connector, found on instruments, mixers, PA systems, studio headphones and line-level gear
+		- At 6.35 mm, TRS most often carries balanced mono audio; headphones and mixer insert points wire the same plug differently, as [[Audio/Connector/Phone/TRS]] describes
+	- ## Physical Specifications
+		- **Diameter**: 6.35 mm (1/4 in)
+		- **Conductors**: 3 (tip, ring, sleeve)
+		- **Insulating rings**: 2
+		- **Orientation**: rotationally symmetric, no keying
+	- ## Pin Configuration
+		- Balanced mono, on line inputs and outputs:
+			- **Tip**: hot (+)
+			- **Ring**: cold (−)
+			- **Sleeve**: ground / shield
+		- Unbalanced stereo, on headphones:
+			- **Tip**: left channel
+			- **Ring**: right channel
+			- **Sleeve**: ground
+	- ## Common Use Cases
+		- Balanced line outputs on synths, such as [[Microfreak/UI/Rear/02 Output Jack]]
+		- Line inputs on mixers and PA systems, and the TRS socket of XLR/TRS combo jacks, such as [[Zoom H5/UI/Area/4-Bottom/1-Input-1-Jack]]
+		- Studio headphones
+		- Insert points on mixing desks, with the send on the tip and the return on the ring
+	- ## Compatibility
+		- A 6.35 mm TS plug fits a TRS jack. In a balanced input it ties the cold leg to ground, and the signal arrives unbalanced.
+		- A [[Audio/Connector/Phone/TRS/3.5mm]] plug reaches a 6.35 mm jack through an adapter with a 3.5 mm TRS jack on one end and a 6.35 mm TRS plug on the other. The adapter keeps the stereo wiring: left on the tip, right on the ring.
+		- A balanced mono input reads such an adapter as left minus right, so sound panned to the center cancels. A stereo source reaches balanced mono inputs through a 3.5 mm TRS to dual 6.35 mm TS cable, with each plug in its own input.

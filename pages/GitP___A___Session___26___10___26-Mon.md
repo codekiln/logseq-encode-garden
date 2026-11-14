@@ -1,4 +1,5 @@
 prev:: [[GitP/A/Session/26/10/24-Sat]]
+next:: [[GitP/A/Session/26/10/29-Thu]]
 logseq-entity:: [[Logseq/Entity/Podcast/Episode/GitP/A]], [[Logseq/Entity/Podcast/Episode]]
 public:: true
 created-by:: [[Person/codekiln]]

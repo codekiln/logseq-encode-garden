@@ -10,7 +10,7 @@ next:: [[Zoom H5/UG/09 Playback/05 Speed]]
 		- > [[Note/Info]] In MULTI FILE mode, the pitch change applies to the whole project. It cannot be set for each track.
 	- 4. Move the scroll button up or down to set the pitch, then press the scroll button.
 		- Key control screen
-			- ![01 Key control screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___09%20Playback___04%20Pitch___Asset___01-Key-control-screen.png)
+			- ![01 Key control screen](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___09-Playback___04-Pitch___Asset___01-Key-control-screen.png)
 		- The range is `♭6` to `♯6`.
 		- Playback uses the new pitch. The pitch can be changed during playback; the lower-left corner shows whether playback is playing or paused.
 		- **MENU** cancels.

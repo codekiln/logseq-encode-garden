@@ -19,4 +19,4 @@
 	- ## Steady-state cardio: 20–25 minutes
 		- After lifting, warm up easily for five minutes and ride a bike or elliptical at a steady moderate effort. Build toward the chapter's 25–30 minutes.
 		- {{embed [[Exercise/Body/Cardio/Steady-State Cardio]]}}
-	- Demonstrations: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]].
+	- Demonstrations, transcript, and highlights: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]].

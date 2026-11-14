@@ -1,0 +1,42 @@
+# Defaults for the Drum Rack builder. Copy any section into config.local.toml (ignored by git) to
+# change it on one machine; the local file wins key by key. Paths start with `~` so this file names
+# no particular home folder; relative paths resolve against this folder.
+
+[library]
+# Live writes a sample's path relative to the User Library when it lives there, which keeps an
+# exported rack working on another machine with the same library.
+user_library = "~/Music/Ableton/User Library"
+# Searched recursively for audio. Samples that existing racks use are indexed even when they sit
+# outside these folders. Live's Factory Packs (~/Music/Ableton/Factory Packs) hold about 16,000
+# samples; add them here when the first analysis pass can take a while.
+sample_folders = [
+  "~/Music/Ableton/User Library/Samples",
+  "~/Library/Application Support/Ableton/Cloud Manager",
+]
+# Searched recursively for Drum Rack presets to import or duplicate. These files are only read.
+rack_folders = ["~/Music/Ableton/User Library/Presets/Instruments/Drum Rack"]
+extensions = ["wav", "aif", "aiff", "flac", "mp3", "ogg"]
+
+[output]
+# A subfolder of the Drum Rack presets keeps every rack the builder writes apart from the racks it
+# reads, and still shows up in Live's browser under Instruments > Drum Rack.
+folder = "~/Music/Ableton/User Library/Presets/Instruments/Drum Rack/Builder"
+
+[state]
+# The analysis cache, curation database and overwrite backups. Ignored by git.
+folder = ".local"
+
+[server]
+# Loopback only: the server streams local audio files to whoever can reach it.
+host = "127.0.0.1"
+port = 8377
+open_browser = true
+
+[launchpad]
+# Matched as a substring of the MIDI port name; macOS lists the Pro MK3's main port as
+# "Launchpad Pro MK3 LPProMK3 MIDI". The DAW port belongs to Live's control surface script.
+port = "LPProMK3 MIDI"
+# Empty uses the system's default audio output.
+audio_device = ""
+# Lowest Drum Rack note on the grid's bottom-left pad; Live's own Launchpad drum layout starts at C1.
+base_note = 36

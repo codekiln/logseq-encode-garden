@@ -6,7 +6,7 @@ next:: [[Zoom H5/UG/07 Prep]]
 	- ## Home/Recording screen
 		- ### MULTI FILE mode
 			- Home/Recording screen in MULTI FILE mode
-				- ![01 Home screen, MULTI FILE mode](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___06%20Display___Asset___01-Home-screen-MULTI-FILE.png)
+				- ![01 Home screen, MULTI FILE mode](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___06-Display___Asset___01-Home-screen-MULTI-FILE.png)
 			- Top row
 				- Status icon — the recorder's state.
 					- `SD` — stopped
@@ -33,13 +33,13 @@ next:: [[Zoom H5/UG/07 Prep]]
 				- PAD setting and the inputs it affects, such as `-20dB:In1/2`. See [[Zoom H5/UG/13 Settings/05 PAD]].
 		- ### STEREO FILE mode
 			- Home/Recording screen in STEREO FILE mode
-				- ![02 Home screen, STEREO FILE mode](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___06%20Display___Asset___02-Home-screen-STEREO-FILE.png)
+				- ![02 Home screen, STEREO FILE mode](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___06-Display___Asset___02-Home-screen-STEREO-FILE.png)
 			- The screen shows the same elements as MULTI FILE mode, with a single stereo meter.
 			- The name field shows a file name with its extension, such as `ZOOM0001.WAV`. After pressing **PLAY/PAUSE**, it shows the file playing; while recording, the file being recorded.
 	- ## Playback screen
 		- ### MULTI FILE mode
 			- Playback screen in MULTI FILE mode
-				- ![03 Playback screen, MULTI FILE mode](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___06%20Display___Asset___03-Playback-screen-MULTI-FILE.png)
+				- ![03 Playback screen, MULTI FILE mode](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___06-Display___Asset___03-Playback-screen-MULTI-FILE.png)
 			- Top row
 				- Status icon — the playback state.
 					- ► — playing
@@ -61,5 +61,5 @@ next:: [[Zoom H5/UG/07 Prep]]
 				- A-B repeat. See [[Zoom H5/UG/09 Playback/06 AB Repeat]].
 		- ### STEREO FILE mode
 			- Playback screen in STEREO FILE mode
-				- ![04 Playback screen, STEREO FILE mode](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___06%20Display___Asset___04-Playback-screen-STEREO-FILE.png)
+				- ![04 Playback screen, STEREO FILE mode](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___06-Display___Asset___04-Playback-screen-STEREO-FILE.png)
 			- The screen shows the same elements as MULTI FILE mode, with a single stereo meter and the name of the file playing.

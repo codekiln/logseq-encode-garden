@@ -1,6 +1,12 @@
 logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
 - # Standing Calf Raise
 	- Practice raising and lowering the heels against resistance through a controlled ankle range.
+	- ![Huberman on an angled calf raise machine](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%202%20-%20Major%20Lower%20Body%20Muscles___Frame___0696-Angled-Calf-Raise.jpg)
+		- [Day 2 at 11:36](https://www.youtube.com/watch?v=CbEFgDFQBvk&t=696s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]]
+		- Equipment: [[Equipment/Exercise/Angled Calf Raise Machine]]
+	- ![A single-leg calf raise on a step](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%202%20-%20Major%20Lower%20Body%20Muscles___Frame___0780-Single-Leg-Calf-Raise.jpg)
+		- [Day 2 at 13:00](https://www.youtube.com/watch?v=CbEFgDFQBvk&t=780s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]]
+		- Equipment: [[Equipment/Exercise/Dumbbell]]
 	- ## Setup
 		- Use a calf-raise machine or stand on a stable, nonslip step with light hand support. Place the balls of the feet securely on the surface and begin with the knees straight but not forced backward.
 	- ## Practice

@@ -11,7 +11,8 @@ preset-synth-microfreak-parameter-payload-sha256:: bbe541db43587badabc7aff9e98a9
 preset-synth-file:: [398 Init.mfpz](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___09-Fri___Asset___Preset___398.mfpz)
 preset-synth-file-sha256:: 028abd3d20159adb8d1d1b1fd134ebf1411aaa592fcd0021e9198c11641bd759
 prev:: [[Microfreak/Preset/397 Imit]]
-next:: [[Microfreak/Preset/399 Init]]
+next:: [[Microfreak/Preset/399 FireAlarmLoBat]]
+
 - # Notes
 	- Quick-saved over slot 398 by holding Save during [[GitP/A/Session/26/10/09-Fri]], at 03:40 in the recording.
 	- Custom Bass patch with an open filter and no saved modulation-matrix routes.

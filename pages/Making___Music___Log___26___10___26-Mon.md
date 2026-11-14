@@ -4,7 +4,7 @@ next:: [[Music/Making/Log/26/10/27 Tue]]
 - [[2026-10-26 Mon]]
 	- Recorded [[GitP/A/Session/26/10/26-Mon]].
 	- ## 00:15 — GitP recording situations
-		- ![GitP recording situations and a Launchpad web app question](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Making___Music___Log___26___10___26-Mon___Asset___Notebook___Yellow-04.jpg)
+		- ![GitP recording situations and a Launchpad web app question](../assets/.remote/logseq-encode-garden/Making___Music___Log___26___10___26-Mon___Asset___Notebook___Yellow-04.jpg)
 		- ### Transcription
 			- ghost in the patch recording "situations"
 			- (boxed) might it be possible to do recording in a logseq-like interface? what would that look like?
@@ -17,7 +17,7 @@ next:: [[Music/Making/Log/26/10/27 Tue]]
 			- Two questions about replacing [[Ableton/Live]]'s Session View with a custom interface: recording inside an outline like [[Logseq]], and driving a web or Rust app from the [[Novation/Launchpad/Pro/Mk3]].
 			- The midnight entry breaks off mid-sentence; the todo pages that follow name the challenge: setup and teardown.
 	- ## Ghost in the Patch todos — physical performance prep
-		- ![GitP todos — physical performance prep and USB cabling](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Making___Music___Log___26___10___26-Mon___Asset___Notebook___Yellow-05.jpg)
+		- ![GitP todos — physical performance prep and USB cabling](../assets/.remote/logseq-encode-garden/Making___Music___Log___26___10___26-Mon___Asset___Notebook___Yellow-05.jpg)
 		- ### Transcription
 			- Ghost in the Patch Todos
 			- Physical — Performance Prep
@@ -49,7 +49,7 @@ next:: [[Music/Making/Log/26/10/27 Tue]]
 			- The aim is faster, safer setup for portable sessions: a dedicated go bag, labelled and velcroed cables, and maybe a rigid board.
 			- The hub keeps everything half-plugged and costs nothing, but shares gear with the home setup. Short direct USB-C cables would drop the hub at the cost of buying new cables.
 	- ## Performance board layers and phone video
-		- ![Performance board layers and phone video capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Making___Music___Log___26___10___26-Mon___Asset___Notebook___Yellow-06.jpg)
+		- ![Performance board layers and phone video capture](../assets/.remote/logseq-encode-garden/Making___Music___Log___26___10___26-Mon___Asset___Notebook___Yellow-06.jpg)
 		- ### Diagram
 			- A backpack beside "x2 Boards fit in Backpack".
 			- A pegboard labelled "surface craft board (for performance)" with "risers" at the corners and a "riser/fastener".
@@ -77,7 +77,7 @@ next:: [[Music/Making/Log/26/10/27 Tue]]
 			- A stacked rig: laptop underneath, a pegboard on risers holding the MicroFreak and Launchpad, and a pole for the recorder, light and an overhead phone camera.
 			- It would look good on video but adds weight and size limits. Getting phone video onto the laptop is still open: record separately and sync later, cable it through the hub, or stream it.
 	- ## Performance prep (digital)
-		- ![Performance prep (digital) — declarative Ableton Live setup](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Making___Music___Log___26___10___26-Mon___Asset___Notebook___Yellow-07.jpg)
+		- ![Performance prep (digital) — declarative Ableton Live setup](../assets/.remote/logseq-encode-garden/Making___Music___Log___26___10___26-Mon___Asset___Notebook___Yellow-07.jpg)
 		- ### Transcription
 			- Performance Prep (Digital)
 			- 1 Declarative representation of initialization expectations
@@ -93,7 +93,7 @@ next:: [[Music/Making/Log/26/10/27 Tue]]
 			- Describe the expected [[Ableton/Live]] state (settings, keyboard shortcuts, MIDI mappings and per-track setup) in a file that can be checked, so a session starts from a known setup.
 			- YAML or Logseq outlines are the candidates. [[GitP/mise/Task/ableton/sync]] already reads Live set state.
 	- ## Ghost in the Patch performance stages
-		- ![GitP performance stages](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Making___Music___Log___26___10___26-Mon___Asset___Notebook___Yellow-08.jpg)
+		- ![GitP performance stages](../assets/.remote/logseq-encode-garden/Making___Music___Log___26___10___26-Mon___Asset___Notebook___Yellow-08.jpg)
 		- ### Transcription
 			- PERFORMANCE STAGES — Ghost in the Patch
 			- PREP
@@ -116,7 +116,7 @@ next:: [[Music/Making/Log/26/10/27 Tue]]
 		- ### AI notes ([[Anthropic/Model/Claude/5/5/Opus]])
 			- A GitP session falls into four stages: prep, performance, setup and teardown, and processing. Processing is the episode work that follows each recording: transcript, MP3, MIDI and presets.
 	- ## Ghost in the Patch post-performance stages
-		- ![GitP post-performance stages](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Making___Music___Log___26___10___26-Mon___Asset___Notebook___Yellow-09.jpg)
+		- ![GitP post-performance stages](../assets/.remote/logseq-encode-garden/Making___Music___Log___26___10___26-Mon___Asset___Notebook___Yellow-09.jpg)
 		- ### Diagram
 			- A flow chart: "Performance Assets" → "Podcast Production Software" → "Listen / Comment / Republish", which loops back to the production software. A dotted boundary around the production software and the listen loop is labelled "zone of creativity and innovation". Below, "Podcast Production Software" → "Export" → "PUBLISH".
 			- A second sketch: "Ableton Set / XML / Assets" sends assets to "Backblaze B2 asset storage", which feeds a "CloudFront CDN". The set XML also points, with a "?", to "DS (edge SQLite)".
@@ -136,7 +136,7 @@ next:: [[Music/Making/Log/26/10/27 Tue]]
 			- Storage would be [[Backblaze/B2]] behind a CDN, with the Live set's XML indexed in an edge SQLite database, possibly Cloudflare D1. Comments could follow the W3C Web Annotation model in JSON-LD.
 			- The ideal is an AI driving [[Ableton/Live]] and generating small interface pieces inside a conversation, usable from a phone.
 	- ## 18:45 — Launchpad LEDs outdoors and setup time
-		- ![Launchpad LEDs outdoors, setup time and full Arrangement recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Making___Music___Log___26___10___26-Mon___Asset___Notebook___Yellow-10.jpg)
+		- ![Launchpad LEDs outdoors, setup time and full Arrangement recording](../assets/.remote/logseq-encode-garden/Making___Music___Log___26___10___26-Mon___Asset___Notebook___Yellow-10.jpg)
 		- ### Transcription
 			- 2026-10-26 Mon 1845 (the 7 overwritten as 6)
 			- I learned twice in one day how weak the launchpad's LEDs are, at least when using it outdoors and in the shade at the end of the day. I'm not sure why it's so difficult to believe; I've proven it to myself several times now.

@@ -7,7 +7,7 @@ next:: [[Zoom H5/UG/07 Prep/05 Battery Type]]
 	- 1. Press **MENU**, then use the scroll button to select `SYSTEM > DATE/TIME`.
 	- 2. Change the date and time.
 		- Date and time screen
-			- ![01 Date and time screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___07%20Prep___04%20Date%20and%20Time___Asset___01-Date-and-time-screen.png)
+			- ![01 Date and time screen](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___07-Prep___04-Date-and-Time___Asset___01-Date-and-time-screen.png)
 		- Move the scroll button up or down to move the cursor between fields.
 		- Press the scroll button to edit a field, move it up or down to change the value, then press it again to set it.
 	- 3. Press **REC** to save the setting. **MENU** cancels.

@@ -81,7 +81,7 @@ next:: [[Making/Music/Log/26/10/26-Mon]]
 	- ## Yellow notebook — visualizing GitP sessions
 		- These pages carry no date. They come right before the [[2026-10-26 Mon]] 00:15 entry, after listening through [[GitP/A/Session/26/10/24-Sat]].
 		- ### Visualizing MicroFreak Ghost in the Patch sessions
-			- ![Visualizing GitP sessions — commentary transcript beside parameter sparklines](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Making___Music___Log___26___10___25%20Sun___Asset___Notebook___Yellow-01.jpg)
+			- ![Visualizing GitP sessions — commentary transcript beside parameter sparklines](../assets/.remote/logseq-encode-garden/Making___Music___Log___26___10___25-Sun___Asset___Notebook___Yellow-01.jpg)
 			- #### Diagram
 				- A timeline drawn as vertical columns, with time running down the page. A horizontal "Present" line crosses every column, with "Past" above it and "Future" below.
 				- Columns, left to right:
@@ -106,7 +106,7 @@ next:: [[Making/Music/Log/26/10/26-Mon]]
 				- Parameter columns would be ordered by what is changing most right now, and grouped into collapsible panels coloured by the MicroFreak's panel sections.
 				- The page layout could mirror the [[Ableton/Live]] tracks the session was recorded on, though the recording layout may not be the best reading layout.
 		- ### Patch jacks, a patch DSL and a Logseq-style outline
-			- ![Patch jacks, a patch DSL and a Logseq-style outline of the oscillator](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Making___Music___Log___26___10___25%20Sun___Asset___Notebook___Yellow-02.jpg)
+			- ![Patch jacks, a patch DSL and a Logseq-style outline of the oscillator](../assets/.remote/logseq-encode-garden/Making___Music___Log___26___10___25-Sun___Asset___Notebook___Yellow-02.jpg)
 			- #### Diagram
 				- A Logseq-style outline of the oscillator: "OSCILLATOR" > "SUPERWAVE" > "WAVE", "DETUNE", "VOLUME". WAVE carries a small value mark ("5→24"?) and a cable to a box labelled "CYC ENV", marked "in, +".
 				- A long curved cable labelled "in, positive" runs down to a second outline, "CYC ENV" > "MODE", "RISE", "FALL", "HOLD/SUSTAIN", "AMOUNT".
@@ -128,7 +128,7 @@ next:: [[Making/Music/Log/26/10/26-Mon]]
 				- Percent ranges are easier to read than MIDI values but would need translating to CC values.
 				- A GitP chapter heading could come from an Ableton scene and hold a summary plus spectrograms of the commentary and the synth.
 		- ### Ghost in the Patch Logseq rendering
-			- ![GitP Logseq rendering — chapter headings as staves](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Making___Music___Log___26___10___25%20Sun___Asset___Notebook___Yellow-03.jpg)
+			- ![GitP Logseq rendering — chapter headings as staves](../assets/.remote/logseq-encode-garden/Making___Music___Log___26___10___25-Sun___Asset___Notebook___Yellow-03.jpg)
 			- #### Diagram
 				- A vertical "playhead" line runs down the left edge, with a hand icon: "Hand scrub playhead w/ momentum". Arrows point left from two waveforms toward the playhead.
 				- Rows under "0525 Chapter Heading":

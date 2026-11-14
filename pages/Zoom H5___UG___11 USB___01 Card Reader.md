@@ -6,7 +6,7 @@ next:: [[Zoom H5/UG/11 USB/02 Audio Interface]]
 	- 1. Press **MENU**, then use the scroll button to select `USB > SD CARD READER`.
 	- 2. Connect the H5's **USB** port to the computer with a USB cable.
 		- Connecting to a computer
-			- ![01 Connecting to a computer](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___11%20USB___01%20Card%20Reader___Asset___01-Connecting-to-a-computer.png)
+			- ![01 Connecting to a computer](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___11-USB___01-Card-Reader___Asset___01-Connecting-to-a-computer.png)
 		- > [[Note/Info]] To power the H5 from the computer's USB bus, connect the cable while the recorder is off, then turn it on.
 	- 3. Before unplugging the cable, disconnect the H5 on the computer.
 		- Windows: use **Safely Remove Hardware** and select the H5.

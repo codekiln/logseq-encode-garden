@@ -1,6 +1,9 @@
 logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
 - # Triceps Pressdown
 	- Practice elbow extension against resistance from a high cable pulley.
+	- ![Huberman doing a triceps pressdown with a cable rope](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%207%20-%20Shoulders%20and%20Arms___Frame___0528-Triceps-Pressdown.jpg)
+		- [Day 7 at 8:48](https://www.youtube.com/watch?v=IzpGEk-2th4&t=528s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]]
+		- Equipment: [[Equipment/Exercise/Cable Machine]]
 	- ## Setup
 		- Attach a rope or bar to a high cable pulley. Stand with feet planted and knees softly bent, elbows beside the torso, and hands holding the attachment securely.
 	- ## Practice

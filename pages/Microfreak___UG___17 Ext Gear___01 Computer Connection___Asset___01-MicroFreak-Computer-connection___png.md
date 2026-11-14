@@ -1,3 +1,3 @@
 logseq-entity:: [[Logseq/Entity/Asset/B2]]
 - # 01 MicroFreak-Computer connection
-	- ![01 MicroFreak-Computer connection](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___17%20Ext%20Gear___01%20Computer%20Connection___Asset___01-MicroFreak-Computer-connection.png)
+	- ![01 MicroFreak-Computer connection](../assets/.remote/logseq-encode-garden/Microfreak___UG___17-Ext-Gear___01-Computer-Connection___Asset___01-MicroFreak-Computer-connection.png)

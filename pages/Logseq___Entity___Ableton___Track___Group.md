@@ -1,4 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
+entity-proxy-source-properties:: public
 
 - # Ableton Group Track
 	- In this garden, **Ableton Group Track** pages model one group track in an [[Logseq/Entity/Ableton/Set]].

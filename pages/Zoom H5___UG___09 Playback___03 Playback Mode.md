@@ -7,7 +7,7 @@ next:: [[Zoom H5/UG/09 Playback/04 Pitch]]
 	- 1. Press **MENU**, then use the scroll button to select `PLAY > PLAY MODE`.
 	- 2. Use the scroll button to select the playback mode, then press the scroll button.
 		- Play mode screen
-			- ![01 Play mode screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___09%20Playback___03%20Playback%20Mode___Asset___01-Play-mode-screen.png)
+			- ![01 Play mode screen](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___09-Playback___03-Playback-Mode___Asset___01-Play-mode-screen.png)
 		- `PLAY ONE` — plays only the selected project or file.
 		- `PLAY ALL` — plays from the selected project or file through to the last one.
 		- `REPEAT ONE` — plays the selected project or file over and over.

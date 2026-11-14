@@ -8,7 +8,7 @@ next:: [[Zoom H5/UG/10 Project and File Editing/09 Delete Files]]
 	- 2. Select the project or file to trim, then select `EDIT > TRIM`.
 	- 3. Use the scroll button to select the starting point icon.
 		- Trim screen
-			- ![01 Trim screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___10%20Project%20and%20File%20Editing___08%20Trim___Asset___01-Trim-screen.png)
+			- ![01 Trim screen](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___10-Project-and-File-Editing___08-Trim___Asset___01-Trim-screen.png)
 		- The line under the bar shows the starting time and ending time of the part to keep.
 	- 4. Use **Back** and **Forward** to find the starting point.
 		- > [[Note/Info]] Press **PLAY/PAUSE** to search while the recording plays.

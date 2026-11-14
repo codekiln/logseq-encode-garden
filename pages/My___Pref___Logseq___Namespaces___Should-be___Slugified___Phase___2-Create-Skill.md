@@ -1,0 +1,1 @@
+- convert certain namespaces "by hand," using individual case studies to create an [[AI/Agent/Skill]] to do the conversion reliably, including any irregularities to account for. beginning with namespaces that are pulled out into other gardens, such as [[GitP]], [[Launchpad]], [[Microfreak]], [[Ableton/Live]], etc.

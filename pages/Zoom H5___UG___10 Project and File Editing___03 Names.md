@@ -7,7 +7,7 @@ next:: [[Zoom H5/UG/10 Project and File Editing/04 Mixdown]]
 	- 2. Select the project or file to rename, then select `EDIT > RENAME`.
 	- 3. Change the name.
 		- Rename screen
-			- ![01 Rename screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___10%20Project%20and%20File%20Editing___03%20Names___Asset___01-Rename-screen.png)
+			- ![01 Rename screen](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___10-Project-and-File-Editing___03-Names___Asset___01-Rename-screen.png)
 		- Move the scroll button up or down to move the cursor.
 		- Press the scroll button to select a character, move it up or down to change the character, then press it again to accept the change.
 		- > [[Note/Info]] Names can use spaces, the letters A–Z and a–z, the digits 0–9, the backtick, and these symbols: `! # $ % & ' ( ) + , - ; = @ [ ] ^ _ { } ~`

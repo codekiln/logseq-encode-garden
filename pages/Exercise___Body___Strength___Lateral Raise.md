@@ -1,6 +1,9 @@
 logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
 - # Lateral Raise
 	- Practice raising light dumbbells out to the sides to train the side deltoids.
+	- ![Huberman at the top of a dumbbell lateral raise](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%207%20-%20Shoulders%20and%20Arms___Frame___0166-Lateral-Raise.jpg)
+		- [Day 7 at 2:46](https://www.youtube.com/watch?v=IzpGEk-2th4&t=166s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]]
+		- Equipment: [[Equipment/Exercise/Dumbbell]]
 	- ## Setup
 		- Stand holding a light dumbbell in each hand at your sides; some people need as little as 5 pounds to keep the movement controlled.
 	- ## Practice

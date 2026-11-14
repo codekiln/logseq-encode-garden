@@ -51,15 +51,38 @@ def time_signature(code):
     return f'{code % 99 + 1}/{2 ** (code // 99)}'
 
 
-def routing(track, tag):
+def target(track, tag):
     return value(track, f'DeviceChain/{tag}/Target')
 
 
-def midi_channel(track):
-    target = routing(track, 'MidiInputRouting')
-    if target is None:
+TRACK_TARGET = re.compile(r'/Track\.(\d+)/')
+
+
+def routing(track, tag, entry, by_id):
+    """One routing as Live's In/Out section shows it: the first box, then the second.
+
+    The Set file stores both boxes' text beside the target. A target that is another track of
+    the Set, or the track's own group, is written as a link to that track's page, so a reader
+    can follow it. A file without the display text falls back to the target itself.
+    """
+    aim = target(track, tag)
+    if aim is None:
         return None
-    if target.endswith('/-1'):
+    first = value(track, f'DeviceChain/{tag}/UpperDisplayString') or aim
+    second = value(track, f'DeviceChain/{tag}/LowerDisplayString') or ''
+    other = TRACK_TARGET.search(aim)
+    if other and other[1] in by_id:
+        first = f'[[{by_id[other[1]]["page"]}]]'
+    elif aim.endswith('/GroupTrack') and entry['parent_entry']:
+        first = f'[[{entry["parent_entry"]["page"]}]]'
+    return f'{first} {second}'.strip()
+
+
+def midi_channel(track):
+    aim = target(track, 'MidiInputRouting')
+    if aim is None:
+        return None
+    if aim.endswith('/-1'):
         return 'all'
     match = re.search(r'\d+', value(track, 'DeviceChain/MidiInputRouting/LowerDisplayString') or '')
     return match[0] if match else None
@@ -70,21 +93,23 @@ def devices(track):
     return [] if chain is None else [value(device, 'UserName') or device.tag for device in chain]
 
 
-def track_properties(track, kind):
+def track_properties(entry, by_id):
     """The settings Live's file shows for one track, in the order the entity page lists them."""
+    track, kind = entry['element'], entry['kind']
+    shown = lambda tag: routing(track, tag, entry, by_id)
     props = {'type': kind}
     if kind == 'audio':
-        props['audio-from'] = routing(track, 'AudioInputRouting')
-        props['audio-to'] = routing(track, 'AudioOutputRouting')
+        props['audio-from'] = shown('AudioInputRouting')
+        props['audio-to'] = shown('AudioOutputRouting')
     elif kind == 'midi':
-        props['midi-from'] = routing(track, 'MidiInputRouting')
-        props['midi-to'] = routing(track, 'MidiOutputRouting')
+        props['midi-from'] = shown('MidiInputRouting')
+        props['midi-to'] = shown('MidiOutputRouting')
         props['midi-channel'] = midi_channel(track)
         # A MIDI track with no MIDI destination sounds through its own devices.
-        if props['midi-to'] == 'MidiOut/None':
-            props['audio-to'] = routing(track, 'AudioOutputRouting')
+        if target(track, 'MidiOutputRouting') == 'MidiOut/None':
+            props['audio-to'] = shown('AudioOutputRouting')
     else:
-        props['audio-to'] = routing(track, 'AudioOutputRouting')
+        props['audio-to'] = shown('AudioOutputRouting')
     if kind in ('audio', 'midi'):
         monitor = value(track, 'DeviceChain/MainSequencer/MonitoringEnum')
         props['monitor'] = MONITOR.get(int(monitor)) if monitor is not None else None
@@ -125,7 +150,7 @@ def plan_set(root, performance, source_name):
         name = value(element, 'Name/EffectiveName')
         if not name:
             raise SetError(f'{element.tag} {element.get("Id")} has no name')
-        entry = {'id': element.get('Id'), 'name': name, 'kind': kind, 'props': track_properties(element, kind),
+        entry = {'id': element.get('Id'), 'name': name, 'kind': kind, 'element': element,
                  'parent': value(element, 'TrackGroupId'), 'children': []}
         entries.append(entry)
         by_id[entry['id']] = entry
@@ -147,6 +172,9 @@ def plan_set(root, performance, source_name):
         if entry['page'].lower() in seen:
             raise SetError(f'Two tracks would share the page {entry["page"]}: rename one in Live.')
         seen[entry['page'].lower()] = entry
+    # Routing names other tracks by their pages, so it is read once every track has one.
+    for entry in entries:
+        entry['props'] = track_properties(entry, by_id)
     return props, top, entries
 
 
@@ -158,8 +186,8 @@ def embeds(children):
     return [f'\t- {{{{embed [[{child["page"]}]]}}}}' for child in children]
 
 
-def new_page(entity, title, props, children):
-    lines = [f'logseq-entity:: [[{entity}]]', '', f'- # {title}']
+def new_page(entity, title, props, children, public=False):
+    lines = [f'logseq-entity:: [[{entity}]]', *(['public:: true'] if public else []), '', f'- # {title}']
     lines += [f'  {key}:: {val}' for key, val in props.items()]
     lines += embeds(children)
     return '\n'.join(lines) + '\n'
@@ -169,9 +197,25 @@ PROPERTY = re.compile(r'^  ([a-z][a-z0-9-]*):: ?(.*)$')
 EMBED = re.compile(r'^\t- \{\{embed \[\[(.+)\]\]\}\}$')
 
 
-def update_page(text, props, children, owned_prefix):
+PAGE_PROPERTY = re.compile(r'^([a-z][a-z0-9-]*):: ?(.*)$')
+
+
+def publish(lines):
+    """Mark a page public: set `public:: true` among the properties that open it."""
+    end = 0
+    while end < len(lines) and PAGE_PROPERTY.match(lines[end]):
+        if PAGE_PROPERTY.match(lines[end]).group(1) == 'public':
+            lines[end] = 'public:: true'
+            return
+        end += 1
+    lines.insert(end, 'public:: true')
+
+
+def update_page(text, props, children, owned_prefix, public=False):
     """Set the owned properties and embeds of an existing page, leaving other lines as written."""
     lines = text.rstrip('\n').split('\n')
+    if public:
+        publish(lines)
     heading = next((i for i, line in enumerate(lines) if line.startswith('- # ')), None)
     if heading is None:
         raise SetError('existing page has no H1 block to update')
@@ -196,7 +240,7 @@ def update_page(text, props, children, owned_prefix):
     return '\n'.join(lines) + '\n'
 
 
-def plan_pages(root, performance, source_name, garden):
+def plan_pages(root, performance, source_name, garden, public=False):
     """Map each page file to (action, text); action is create, update or unchanged."""
     props, top, entries = plan_set(root, performance, source_name)
     title = Path(source_name).stem
@@ -211,10 +255,10 @@ def plan_pages(root, performance, source_name, garden):
         path = Path(garden) / 'pages' / file_name(page)
         if path.exists():
             current = path.read_text(encoding='utf-8')
-            text = update_page(current, page_props, children, owned_prefix)
+            text = update_page(current, page_props, children, owned_prefix, public)
             result[path] = ('unchanged' if text == current else 'update', text, page)
         else:
-            result[path] = ('create', new_page(ENTITY[kind], title, page_props, children), page)
+            result[path] = ('create', new_page(ENTITY[kind], title, page_props, children, public), page)
     return result
 
 
@@ -223,12 +267,14 @@ def main(argv=None):
     parser.add_argument('--als', type=Path, required=True, help='the Live Set file')
     parser.add_argument('--performance', required=True, help="the performance's page name, such as GitP/A/Session/26/11/01-Sun")
     parser.add_argument('--garden', type=Path, default=Path(__file__).resolve().parents[4], help='the garden to write to')
+    parser.add_argument('--public', action='store_true',
+                        help='mark the Set page and every group and track page public:: true, so a garden that publishes only marked pages shows the whole Set')
     parser.add_argument('--apply', action='store_true', help='write the pages; the default prints the plan')
     args = parser.parse_args(argv)
     try:
         if not args.performance or args.performance.strip('/') != args.performance or '//' in args.performance:
             raise SetError(f'Not a page name: {args.performance!r}')
-        plan = plan_pages(read_set(args.als), args.performance, args.als.name, args.garden)
+        plan = plan_pages(read_set(args.als), args.performance, args.als.name, args.garden, args.public)
     except SetError as error:
         print(f'error: {error}', file=sys.stderr)
         return 1

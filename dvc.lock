@@ -2,18 +2,18 @@ schema: '2.0'
 stages:
   mp3-GitP___A___Session___26___11___07-Sat___Asset___Audio___Full:
     cmd: python mise-tasks/asset/lib/assets.py _prepare 
-      assets/.remote/GitP___A___Session___26___11___07-Sat___Asset___Audio___Full.wav
-      assets/.remote/GitP___A___Session___26___11___07-Sat___Asset___Audio___Full.mp3
+      assets/.remote/logseq-encode-garden/GitP___A___Session___26___11___07-Sat___Asset___Audio___Full.wav
+      assets/.remote/logseq-encode-garden/GitP___A___Session___26___11___07-Sat___Asset___Audio___Full.mp3
     deps:
     - path: 
-        assets/.remote/GitP___A___Session___26___11___07-Sat___Asset___Audio___Full.wav
+        assets/.remote/logseq-encode-garden/GitP___A___Session___26___11___07-Sat___Asset___Audio___Full.wav
       hash: md5
       md5: 66d090369999bcbf8319f1dbf18d8d38
       size: 637836338
     - path: mise-tasks/asset/lib/assets.py
       hash: md5
-      md5: 4aa76ec52619c40894b3be6193e94ddf
-      size: 5980
+      md5: ef0fafad64a003e24ca5e1ce44886f70
+      size: 6399
     - path: mise-tasks/gitpa/media/prepare
       hash: md5
       md5: b2ca0141f388d94eca4c4ca02f0b6121
@@ -21,7 +21,7 @@ stages:
       isexec: true
     outs:
     - path: 
-        assets/.remote/GitP___A___Session___26___11___07-Sat___Asset___Audio___Full.mp3
+        assets/.remote/logseq-encode-garden/GitP___A___Session___26___11___07-Sat___Asset___Audio___Full.mp3
       hash: md5
       md5: da35cf522544f8b41829e764e9cfba73
       size: 53154420

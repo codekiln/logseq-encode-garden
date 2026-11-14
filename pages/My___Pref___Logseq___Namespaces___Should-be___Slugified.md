@@ -1,0 +1,2 @@
+-
+- Logseq namespaces should work as a URL path when rendered in the static site. By default, lean towards [[Key/Hyphen]] (`-`) rather than [[Key/Space]] (` `) to avoid conversion to `%20`.

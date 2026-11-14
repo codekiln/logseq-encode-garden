@@ -4,7 +4,7 @@ next:: [[Microfreak/UI/Front/Row/02 Main]]
 
 - # Top row
 	- The top row of the MicroFreak front panel.
-	- ![Top row](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___03%20Overview___01%20Front%20Panel___01%20Top%20Row___Asset___01-Top-Row.png)
+	- ![Top row](../assets/.remote/logseq-encode-garden/Microfreak___UG___03-Overview___01-Front-Panel___01-Top-Row___Asset___01-Top-Row.png)
 	- ## Items, left to right
 		- [[Microfreak/UI/Front/Row/01 Top/01 Matrix]]
 		- [[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button]]

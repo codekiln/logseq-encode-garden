@@ -1,6 +1,9 @@
 logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
 - # Cable Fly
 	- Practice a chest isolation movement against cables, which keep resistance on the chest through the whole range.
+	- ![Huberman on a chest fly machine](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%204%20-%20Major%20Torso%20Muscles___Frame___0300-Chest-Fly-Machine.jpg)
+		- [Day 4 at 5:00](https://www.youtube.com/watch?v=UEU6NYLRi6o&t=300s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]]
+		- Equipment: [[Equipment/Exercise/Chest Fly Machine]], [[Equipment/Exercise/Cable Machine]]
 	- ## Setup
 		- Set two cable pulleys slightly above shoulder height. Take a handle in each hand, step forward into a staggered stance, and let the arms open out to the sides with a slight bend in the elbows.
 	- ## Practice

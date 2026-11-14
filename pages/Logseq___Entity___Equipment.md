@@ -1,0 +1,14 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+- # Equipment
+	- In this garden, **Equipment** pages model a kind of physical equipment used to practice something, such as a barbell, a cable machine, or a pull-up bar.
+	- A page names the kind, not a particular product or model. A specific product, such as one brand's machine, belongs on a product page that links to the equipment page.
+	- ## Naming and identity
+		- Instances live under `Equipment/<Domain>/<Name>`, where the domain names the practice the equipment serves, such as `Equipment/Exercise/Barbell`. Names are singular and use the common gym name; other names go in the description.
+	- ## Page shape
+		- A bullet-wrapped H1 names the equipment. The opening sentence says what it is and what it does.
+		- A frame from a video shows the equipment in use, with a child link to the video at that second and to the video's page.
+		- **Exercises** lists the exercise pages that use it.
+	- ## Frontmatter
+		- `logseq-entity::` with [[Logseq/Entity/Equipment]].
+	- ## Example
+		- [[Equipment/Exercise/Cable Machine]]

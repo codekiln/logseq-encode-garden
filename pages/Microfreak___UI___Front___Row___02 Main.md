@@ -5,7 +5,7 @@ next:: [[Microfreak/UI/Front/Row/03 Bottom]]
 
 - # Main row
 	- The main row of the MicroFreak front panel: glide, oscillator, filter and cycling envelope.
-	- ![Middle row](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___03%20Overview___01%20Front%20Panel___02%20Middle%20Row___Asset___01-Middle-row-of-the-MicroFreak.png)
+	- ![Middle row](../assets/.remote/logseq-encode-garden/Microfreak___UG___03-Overview___01-Front-Panel___02-Middle-Row___Asset___01-Middle-row-of-the-MicroFreak.png)
 	- ## Items, left to right
 		- [[Microfreak/UI/Front/Row/02 Main/01 Glide Knob]]
 		- [[Microfreak/UI/Front/Row/02 Main/02 Digital Oscillator]]

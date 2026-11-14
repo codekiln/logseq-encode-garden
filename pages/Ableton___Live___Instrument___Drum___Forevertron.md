@@ -1,0 +1,16 @@
+- # Forevertron Drum Rack
+	- An [[Ableton/Instrument/Drum Rack]] made from recordings at the Forevertron sculpture garden in western Wisconsin. The recordings are synced from [[Ableton/Note]].
+	- ## Rack versions
+		- The presets are in `~/Music/Ableton/User Library/Presets/Instruments/Drum Rack/`.
+		- **Forevertron.adg** — the original rack, with hand-trimmed samples and a mixture of Gate and Trigger playback.
+		- **Forevertron Trigger.adg** — the original rack with every pad set to Trigger, so a sample continues after the note is released.
+		- **Forevertron Trimmed.adg** — the Trigger rack with start, end and fade-out points added to recordings that had still played from the start of the file. The hand-trimmed pads were retained. See [[Ableton/Live/Instrument/Drum/Forevertron/Log/26/11/08-Sun]].
+		- **Forevertron Trimmed Pitch Sorted.adg** — the trimmed rack with its pads arranged from lower to higher estimated pitch. The recordings and pad settings stay the same. Many struck-metal sounds have more than one prominent partial; uncertain sounds need listening, and unpitched sounds are placed by brightness.
+		- **Forevertron Trimmed Pitch Sorted Octave Markers.adg** — the pitch-sorted rack with a different white key left empty in each octave: C0, D1, E2, F3, G4, A5, and B6. All the sounds remain in pitch order; A♯6 is also empty. The gaps are intended as octave markers on the [[Launchpad/UG/09 Sequencer/02 Steps View/01 Play Area]]. The [[Launchpad/UG/06 Note Mode/06 Drum Mode]] documentation describes filled pads lighting in Note Mode; whether the sequencer displays the gaps remains to be tested.
+	- ## Preparation
+		- [[Ableton/Live/Instrument/Drum/Forevertron/Log/26/11/08-Sun]] records the Trigger conversion and trimming.
+		- [[Ableton/Live/Instrument/Drum/Forevertron/Log/26/11/09-Mon/Plan]] explores a portable pack and documents the sample references and Ableton analysis files. The pitch-sorted rack is a separate instrument, not an implementation of the pack plan.
+	- ## Claude sessions
+		- **Trigger and trimming:** resume with `claude --resume 943651fc-54c6-4c95-b9c2-a400a1fa826c` from the garden checkout.
+		- **Pitch sorting:** resume with `claude --resume 0376dc8c-37b3-40af-8406-66e09da8f0f7` from the garden checkout.
+		- **Octave markers:** resume with `claude --resume 2cafe8f1-8de8-45aa-b2b6-e97068d9a00a` from the garden checkout.

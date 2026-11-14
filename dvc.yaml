@@ -1,11 +1,11 @@
 stages:
   mp3-GitP___A___Session___26___11___07-Sat___Asset___Audio___Full:
     cmd: python mise-tasks/asset/lib/assets.py _prepare 
-      assets/.remote/GitP___A___Session___26___11___07-Sat___Asset___Audio___Full.wav
-      assets/.remote/GitP___A___Session___26___11___07-Sat___Asset___Audio___Full.mp3
+      assets/.remote/logseq-encode-garden/GitP___A___Session___26___11___07-Sat___Asset___Audio___Full.wav
+      assets/.remote/logseq-encode-garden/GitP___A___Session___26___11___07-Sat___Asset___Audio___Full.mp3
     deps:
-    - assets/.remote/GitP___A___Session___26___11___07-Sat___Asset___Audio___Full.wav
+    - assets/.remote/logseq-encode-garden/GitP___A___Session___26___11___07-Sat___Asset___Audio___Full.wav
     - mise-tasks/asset/lib/assets.py
     - mise-tasks/gitpa/media/prepare
     outs:
-    - assets/.remote/GitP___A___Session___26___11___07-Sat___Asset___Audio___Full.mp3
+    - assets/.remote/logseq-encode-garden/GitP___A___Session___26___11___07-Sat___Asset___Audio___Full.mp3

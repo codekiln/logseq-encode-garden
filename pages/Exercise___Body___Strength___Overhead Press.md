@@ -1,6 +1,9 @@
 logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
 - # Overhead Press
 	- Practice pressing a load from shoulder height overhead while controlling the trunk.
+	- ![Huberman pressing a barbell overhead](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%207%20-%20Shoulders%20and%20Arms___Frame___0036-Overhead-Press.jpg)
+		- [Day 7 at 0:36](https://www.youtube.com/watch?v=IzpGEk-2th4&t=36s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]]
+		- Equipment: [[Equipment/Exercise/Barbell]], [[Equipment/Exercise/Power Rack]]
 	- ## Setup
 		- Begin with the bar at the front of the shoulders, or dumbbells at shoulder height. Brace your trunk and keep the ribs over the pelvis. A seated bench with back support is an alternative to standing.
 	- ## Practice

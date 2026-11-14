@@ -28,6 +28,10 @@
 "CLAUDE.md",
 "../journals/CLAUDE.md",
 "../pages/CLAUDE.md",
+;; Logseq matches each entry as a prefix of the path from the graph root, so the
+;; "../" entries above hide nothing; these two hide the agent instruction files.
+"pages/CLAUDE.md",
+"journals/CLAUDE.md",
 "../tools/CLAUDE.md",
 "../.ai-coding/CLAUDE.md",
 ;; A linked git worktree holds a second copy of pages/ and journals/ under the graph
@@ -318,7 +322,7 @@
  ;;  :charge-range    600}   ; Default value: 600
 
  ;; Favorites to list on the left sidebar
- :favorites ["fd" "gh-dash" "github/cli/extension/gh-dash" "tuicr" "tmux/Q/How can I put a thick border around the focused pane?" "LazyVim" "logseq/flashcard/review/favorite" "obsidian" "codex" "chezmoi" "devcontainer" "mise" "rg" "vim" "nvim" "zoxide" "yazi" "tmux" "Lazygit"]
+ :favorites ["launchpad" "fd" "gh-dash" "github/cli/extension/gh-dash" "tuicr" "tmux/Q/How can I put a thick border around the focused pane?" "LazyVim" "logseq/flashcard/review/favorite" "obsidian" "codex" "chezmoi" "devcontainer" "mise" "rg" "vim" "nvim" "zoxide" "yazi" "tmux" "Lazygit"]
 
  ;; Set flashcards interval.
  ;; Expected value:
@@ -441,4 +445,9 @@
  :publishing/all-pages-public? true
  :publishing/page-properties? true
  :publishing/page-properties-collapsed? false
+ ;; Logseq Gardener (lsg) plugins for the published site; Logseq ignores this key.
+ ;; podcast-episode: a player that keeps playing across pages, with seekable chapters.
+ ;; sequence-header: previous and next links in the header from prev:: and next::.
+ ;; ableton-set: an Ableton Live Set page opens with a track view, one column per track.
+ :lsg/plugins [:ableton-set :podcast-episode :sequence-header]
  :feature/enable-timetracking? false}

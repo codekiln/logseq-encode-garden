@@ -6,6 +6,6 @@ next:: [[Zoom H5/UG/13 Settings/13 Test SD/02 Full Test]]
 	- 2. At `Execute?`, select `YES` and press the scroll button.
 		- The test takes about 30 seconds.
 		- Quick test confirmation, progress and result
-			- ![01 Quick test screens](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___13%20Settings___13%20Test%20SD___01%20Quick%20Test___Asset___01-Quick-test-screens.png)
+			- ![01 Quick test screens](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___13-Settings___13-Test-SD___01-Quick-Test___Asset___01-Quick-test-screens.png)
 	- 3. To cancel the test, press **MENU**.
 	- > [[Note/Info]] A result of `OK` does not guarantee that write errors will never occur. Treat the test as a guide only.

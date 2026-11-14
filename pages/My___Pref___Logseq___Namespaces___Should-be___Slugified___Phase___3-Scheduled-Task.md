@@ -1,0 +1,1 @@
+- create a scheduled task to identify a noncompliant page or namespace and change it with the skill

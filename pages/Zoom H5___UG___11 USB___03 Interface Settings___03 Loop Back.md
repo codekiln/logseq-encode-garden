@@ -7,4 +7,4 @@ prev:: [[Zoom H5/UG/11 USB/03 Interface Settings/02 Monitor Mix]]
 	- 1. Press **MENU**, then use the scroll button to select `IN/OUT > LOOP BACK`.
 	- 2. Select `ON` and press the scroll button. **MENU** cancels.
 		- Loop back setting
-			- ![01 Loop back on/off](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___11%20USB___03%20Interface%20Settings___03%20Loop%20Back___Asset___01-Loop-back-on-off.png)
+			- ![01 Loop back on/off](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___11-USB___03-Interface-Settings___03-Loop-Back___Asset___01-Loop-back-on-off.png)

@@ -1,4 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Ableton/Set]]
+public:: true
 
 - # 26.11.06
   live-version:: 11.3.43

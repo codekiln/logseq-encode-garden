@@ -1,4 +1,5 @@
 logseq-entity:: [[Logseq/Entity/Definition]]
+entity-proxy-source-properties:: public
 
 - # Ableton Set
 	- In this garden, **Ableton Set** pages model the [[Ableton/Live]] Set used for one performance: its tracks, groups and settings.
@@ -17,13 +18,19 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Track and group pages
 		- Each page carries its own entity marker, one H1 with the track name, and the settings that shaped the sound or the recording: track type, input and output routing, MIDI channel, monitoring, arm state and the device chain in order.
 		- Setting names follow the Ableton Session declaration in [[GitP/A/Template/Pattern A and B]], such as `type::`, `midi-from::`, `midi-to::`, `audio-from::`, `monitor::` and `arm::`, written as block properties under the H1.
+		- Routing reads as Live's In/Out section shows it: the first box, then the second, such as `audio-from:: Ext. In 3` or `midi-to:: Arturia MicroFreak (unknown mididevice) Ch. 1`. A routing that points at another track of the Set, or at the track's own group, links that track's page in place of its name: `audio-to:: [[<performance>/Set/Track/1n2]] Track In`.
 		- A short line says what the track did in the performance, such as "holds layer A's audio loops".
 		- Embeds stop at two levels, as on [[Logseq/Entity/Book/Section]]: the Set embeds groups, and a group embeds its tracks. [[Ableton/Live/UG/18 Mixing/03 Group Tracks]] describes groups in Live.
 	- ## Import from a Set file
 		- `mise run ableton:set:import --als <file> --performance '<performance>'` reads a Live Set (`.als`) and prints the pages it would write: the Set page and one page per group and track, in Live's order. Add `--apply` to write them.
-		- It reads the Live version, tempo, time signature, track and group names and order, track type, routing, MIDI channel, monitoring, arm state and each track's devices.
+		- It reads the Live version, tempo, time signature, track and group names and order, track type, routing, MIDI channel, monitoring, arm state and each track's devices. Routing comes from the text the Set file stores for Live's two In/Out boxes; a Set file without that text gives the file's own target name, such as `AudioIn/External/M2`.
+		- Add `--public` to mark the Set page and every group and track page `public:: true`.
 		- On a page that exists, it changes only the properties and embeds it owns and keeps every other line. Running it again on the same file changes nothing.
 		- A track name with `/` becomes `-` in its page name, and the H1 keeps the name from Live. The short line on what a track did in the performance is yours to write.
+	- ## Publishing
+		- A garden that publishes every page shows a Set with no further step. A garden that publishes only pages marked `public:: true`, such as Gitpa, shows a track only when its page carries the mark, so mark the Set page and every group and track page together; `--public` on the import task does that.
+		- This garden owns `public::` on these pages. A garden that mirrors them with [[Logseq/Entity/Proxy/Page]] takes the value from here on each sync, as it does for a [[Logseq/Entity/Podcast/Episode/GitP/A]].
+		- On a site built with [[Person/codekiln/GitHub/logseq-gardener]]'s `ableton-set` plugin, turned on by `:lsg/plugins [:ableton-set]` in `logseq/config.edn`, the Set page opens with a track view drawn from these pages: one column per track with the settings above.
 	- ## Sources
 		- Settings come from the Set file, a screenshot, or codekiln's notes. A setting that no source shows stays off the page.
 	- ## Related

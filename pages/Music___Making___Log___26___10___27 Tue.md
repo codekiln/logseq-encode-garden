@@ -2,7 +2,7 @@
 	- ## [[Ghost Gardener]] requests
 	- ## [[Music/Making/Todo]]
 	- ## 18:45 — Arrangement Record captures the whole performance
-		- ![Launchpad LEDs outdoors, setup time and full Arrangement recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Making___Music___Log___26___10___26-Mon___Asset___Notebook___Yellow-10.jpg)
+		- ![Launchpad LEDs outdoors, setup time and full Arrangement recording](../assets/.remote/logseq-encode-garden/Making___Music___Log___26___10___26-Mon___Asset___Notebook___Yellow-10.jpg)
 		- ### Transcription
 			- The 2026-10-26 entry on the upper half of this page is on [[Making/Music/Log/26/10/26-Mon]].
 			- 2026-10-27 Tue 1845

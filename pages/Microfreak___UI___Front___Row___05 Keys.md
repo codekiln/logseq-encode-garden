@@ -4,7 +4,7 @@ prev:: [[Microfreak/UI/Front/Row/04 Icon Strip]]
 
 - # Keys
 	- A 25-key touch keyboard that sends gate, pitch and pressure or velocity.
-	- ![Keyboard](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___03%20Overview___01%20Front%20Panel___03%20Bottom%20Row___06%20Keyboard___Asset___01-The-Keyboard.png)
+	- ![Keyboard](../assets/.remote/logseq-encode-garden/Microfreak___UG___03-Overview___01-Front-Panel___03-Bottom-Row___06-Keyboard___Asset___01-The-Keyboard.png)
 	- ## Values
 		- Pressure or velocity, chosen in Utility > Preset > Press Mode.
 	- ## Gestures

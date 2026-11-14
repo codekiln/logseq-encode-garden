@@ -8,7 +8,7 @@ next:: [[Zoom H5/UG/10 Project and File Editing/11 Rebuild Project]]
 	- 2. Press **REC**.
 	- 3. Select each project to delete. A checked box marks each selected project.
 		- Project delete list
-			- ![01 Project delete list](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___10%20Project%20and%20File%20Editing___10%20Delete%20Projects___Asset___01-Project-delete-list.png)
+			- ![01 Project delete list](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___10-Project-and-File-Editing___10-Delete-Projects___Asset___01-Project-delete-list.png)
 		- Press **PLAY/PAUSE** to select or clear all projects.
 		- Press **MENU** to cancel project deletion.
 	- 4. Press **REC**.

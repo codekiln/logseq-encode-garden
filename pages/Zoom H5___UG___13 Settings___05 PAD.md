@@ -9,4 +9,4 @@ next:: [[Zoom H5/UG/13 Settings/06 Counter]]
 		- > [[Note/Info]] Select `ALL` to use the pad on both inputs.
 	- 3. Select `ON (-20dB)` and press the scroll button.
 		- Pad screen
-			- ![01 Pad screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___13%20Settings___05%20PAD___Asset___01-Pad-screen.png)
+			- ![01 Pad screen](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___13-Settings___05-PAD___Asset___01-Pad-screen.png)

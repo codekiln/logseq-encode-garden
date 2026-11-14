@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#MISE description="Open the Drum Rack builder web interface for curating samples into Ableton Drum Racks"
+#MISE tools={uv="0.13"}
+#USAGE flag "--port <port>" help="Port to serve on instead of server.port in config.toml"
+#USAGE flag "--host <host>" help="Address to bind instead of server.host in config.toml"
+#USAGE flag "--no-browser" help="Do not open a browser tab"
+#USAGE flag "--no-launchpad" help="Skip the optional Launchpad MIDI and audio packages"
+set -euo pipefail
+here=$(cd "$(dirname "$0")" && pwd)
+args=()
+[[ -n "${usage_port:-}" ]] && args+=(--port "$usage_port")
+[[ -n "${usage_host:-}" ]] && args+=(--host "$usage_host")
+[[ "${usage_no_browser:-false}" == "true" ]] && args+=(--no-browser)
+extra=(--extra launchpad)
+[[ "${usage_no_launchpad:-false}" == "true" ]] && extra=()
+exec uv run --locked --project "$here" ${extra[@]+"${extra[@]}"} drumrack-builder up ${args[@]+"${args[@]}"}

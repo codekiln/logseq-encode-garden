@@ -7,6 +7,6 @@ next:: [[Zoom H5/UG/12 Tools/05 MS-RAW Monitoring]]
 	- 1. Press **MENU**, then use the scroll button to select `IN/OUT > LINE OUT LEVEL`.
 	- 2. Use the scroll button to set the **LINE OUT** level, then press it.
 		- Line output level screen
-			- ![01 Line output level screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___12%20Tools___04%20Line%20Out%20Level___Asset___01-Line-output-level-screen.png)
+			- ![01 Line output level screen](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___12-Tools___04-Line-Out-Level___Asset___01-Line-output-level-screen.png)
 		- The level can be set from −30 dB to 0 dB.
 	- > [[Note/Info]] This setting does not change the level from the **PHONE** jack.

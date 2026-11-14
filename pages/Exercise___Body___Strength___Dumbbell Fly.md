@@ -1,6 +1,9 @@
 logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
 - # Dumbbell Fly
 	- Practice an arcing chest isolation movement with dumbbells and a fixed bend in the elbows.
+	- ![Huberman doing dumbbell flies on an incline bench](../assets/Person___Andrew%20Huberman___Book___26___Protocols___YouTube___26___09___Day%204%20-%20Major%20Torso%20Muscles___Frame___0276-Dumbbell-Fly.jpg)
+		- [Day 4 at 4:36](https://www.youtube.com/watch?v=UEU6NYLRi6o&t=276s) in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]]
+		- Equipment: [[Equipment/Exercise/Dumbbell]], [[Equipment/Exercise/Weight Bench]]
 	- ## Setup
 		- Lie on a flat or slightly inclined bench with a dumbbell in each hand, feet planted and shoulder blades pulled down and back. Hold the weights above the chest, palms facing each other, elbows slightly bent.
 	- ## Practice

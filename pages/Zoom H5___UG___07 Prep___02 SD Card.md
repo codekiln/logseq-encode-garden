@@ -7,7 +7,7 @@ next:: [[Zoom H5/UG/07 Prep/03 Power On Off]]
 	- 2. Insert the SD card into the slot.
 		- Insert the notched end first, with the label facing the front of the H5.
 		- Inserting an SD card
-			- ![01 Inserting an SD card](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___07%20Prep___02%20SD%20Card___Asset___01-Inserting-an-SD-card.png)
+			- ![01 Inserting an SD card](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___07-Prep___02-SD-Card___Asset___01-Inserting-an-SD-card.png)
 	- To eject a card, push it further into the slot, then pull it out.
 	- > [[Note/Info]] Always turn the power off before inserting or removing an SD card. Inserting or removing a card with the power on can cause data loss.
 	- > [[Note/Info]] The H5 cannot record or play back without an SD card.

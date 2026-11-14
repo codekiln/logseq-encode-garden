@@ -2,7 +2,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 - # MicroFreak Synth Preset
 	- In this garden, **MicroFreak Synth Preset** pages model individual saved sounds on the [[Microfreak]], following [[Logseq/Entity/Preset/Synth]].
 	- ## Placement and identity
-		- Pages use `Microfreak/Preset/<slot> <name>`, with a three-digit slot and the name observed at creation. The filename remains stable so existing music-log links resolve. A newly observed name at an occupied slot needs a new page when continuity is unknown.
+		- Pages use `Microfreak/Preset/<slot> <name>`, with a three-digit slot and the name observed at creation. The namespace models the presets currently on codekiln's MicroFreak, so each slot has at most one page. Saving a new sound into a slot replaces its page: the new sound gets a new page, and the old page is deleted. Git history keeps the deleted pages.
 		- [[Microfreak/Preset/396 Anit]] and [[Microfreak/Preset/397 Imit]] illustrate the frontmatter and notes format. Repeated names or slot numbers alone cannot establish that two observations are the same saved sound.
 	- ## Frontmatter dictionary
 		- [[Logseq/Entity/Preset/Synth/Microfreak/Frontmatter/preset-synth-microfreak-number]]
@@ -29,5 +29,5 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- ## Sync
 		- [The MicroFreak sync task](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/sync) previews the connected device with `mise run microfreak:sync`; `--apply` updates its saved metadata. The [sync implementation on GitHub](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/lib/sync.py) is also available as a [local file](../mise-tasks/microfreak/lib/sync.py).
 		- `--save-inventory /tmp/microfreak-inventory.json` stores a full inventory; `--inventory /tmp/microfreak-inventory.json` previews that capture. `--garden /absolute/path/to/worktree` selects the destination and `--port 'Arturia MicroFreak'` selects an exact endpoint.
-		- A complete successful inventory updates reported fields, omits initialized slots and marks missing sounds absent. Partial reads write nothing. Handwritten notes, established origin, verified oscillator type and export references survive metadata refreshes. A saved inventory describes its capture time; a new device read is needed to establish current state.
+		- A complete successful inventory updates reported fields, omits initialized slots and marks missing sounds absent; pages marked absent are then deleted. Partial reads write nothing. Handwritten notes, established origin, verified oscillator type and export references survive metadata refreshes. A saved inventory describes its capture time; a new device read is needed to establish current state.
 		- Header sync performs no binary export. File and digest properties are populated only after an export and its destination have been verified.

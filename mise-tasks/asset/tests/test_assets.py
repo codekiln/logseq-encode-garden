@@ -15,12 +15,35 @@ spec.loader.exec_module(assets)
 
 class Names(unittest.TestCase):
     def test_roundtrip_spelling(self):
-        self.assertEqual(assets.filename("Course Name/Asset/Audio/Lesson/mp3"), "Course Name___Asset___Audio___Lesson.mp3")
+        self.assertEqual(assets.filename("Course Name/Asset/Audio/Lesson/mp3"), "Course-Name___Asset___Audio___Lesson.mp3")
 
     def test_ambiguous_names_rejected(self):
         for page in ["Course/Asset/../wav", "Course/Asset/a___b/mp3", "Course//Asset/mp3", "Course/Asset/A:Z/mp3", "Course/Asset/MP3", "Owner/Asset/mp3", "Asset/Owner/Purpose/mp3"]:
             with self.subTest(page=page), self.assertRaises(ValueError):
                 assets.filename(page)
+
+
+class Folder(unittest.TestCase):
+    def test_garden_files_sit_in_owning_mount(self):
+        self.assertEqual(assets.asset("Course/Asset/Diagram/png"), assets.ROOT / "assets/.remote/logseq-encode-garden/Course___Asset___Diagram.png")
+
+    def test_spaced_pointer_is_found_until_a_hyphenated_one_exists(self):
+        with tempfile.TemporaryDirectory() as temp, patch.object(assets, "ROOT", Path(temp)):
+            (Path(temp) / "asset-mounts.toml").write_text('[mounts.g]\npath = "assets/.remote/g"\nbucket = "g"\ndvc = "garden"\npublic = "https://example.com/g"\n')
+            folder = Path(temp) / "assets/.remote/g"
+            folder.mkdir(parents=True)
+            page = "Course Name/Asset/Diagram/png"
+            self.assertEqual(assets.asset(page), folder / "Course-Name___Asset___Diagram.png")
+            (folder / "Course Name___Asset___Diagram.png.dvc").write_text("outs: []\n")
+            self.assertEqual(assets.asset(page), folder / "Course Name___Asset___Diagram.png")
+            (folder / "Course-Name___Asset___Diagram.png.dvc").write_text("outs: []\n")
+            self.assertEqual(assets.asset(page), folder / "Course-Name___Asset___Diagram.png")
+
+    def test_borrowed_mount_alone_is_rejected(self):
+        with tempfile.TemporaryDirectory() as temp, patch.object(assets, "ROOT", Path(temp)):
+            (Path(temp) / "asset-mounts.toml").write_text('[mounts.g]\npath = "assets/.remote/g"\npublic = "https://example.com/g"\nsource = "github.com/o/g"\n')
+            with self.assertRaisesRegex(ValueError, "one mount with a bucket"):
+                assets.asset("Course/Asset/Diagram/png")
 
 
 class Credentials(unittest.TestCase):
@@ -45,13 +68,15 @@ class Conversion(unittest.TestCase):
             helper = root / "mise-tasks/asset/lib/assets.py"
             helper.parent.mkdir(parents=True)
             shutil.copy2(assets.__file__, helper)
+            shutil.copy2(Path(assets.__file__).with_name("mounts.py"), helper.with_name("mounts.py"))
+            (root / "asset-mounts.toml").write_text('[mounts.g]\npath = "assets/.remote/g"\nbucket = "g"\ndvc = "garden"\n')
             prepare = root / "mise-tasks/gitpa/media/prepare"
             prepare.parent.mkdir(parents=True)
             shutil.copy2(assets.ROOT / "mise-tasks/gitpa/media/prepare", prepare)
             subprocess.run(["git", "init", "-q", temp], check=True)
             subprocess.run([sys.executable, "-m", "dvc", "init", "-q"], cwd=root, check=True)
-            (root / ".gitignore").write_text("assets/.remote/*\n!assets/.remote/*.dvc\n")
-            folder = root / "assets/.remote"
+            (root / ".gitignore").write_text("/assets/.remote/**\n!/assets/.remote/**/\n!/assets/.remote/**/*.dvc\n")
+            folder = root / "assets/.remote/g"
             folder.mkdir(parents=True)
             source = folder / "Lesson___Asset___Full.wav"
             def recording(frames):

@@ -32,4 +32,12 @@ node = "lts"
 AUBE_ALLOWED_UNPOPULAR_PACKAGES = "@readwise/cli"
 
 [task_config]
-excludes = ["mise-tasks/asset/pyproject.toml", "mise-tasks/asset/lib", "mise-tasks/asset/tests", "mise-tasks/asset/.venv", "mise-tasks/logseq/journal/lint-lsg"]
+excludes = [
+  "mise-tasks/asset/pyproject.toml", "mise-tasks/asset/lib", "mise-tasks/asset/tests", "mise-tasks/asset/.venv",
+  "mise-tasks/logseq/journal/lint-lsg",
+  # The Drum Rack builder's Python package sits beside its up, test and verify tasks.
+  "mise-tasks/ableton/drumrack/builder/pyproject.toml", "mise-tasks/ableton/drumrack/builder/uv.lock",
+  "mise-tasks/ableton/drumrack/builder/config.toml", "mise-tasks/ableton/drumrack/builder/config.local.toml",
+  "mise-tasks/ableton/drumrack/builder/src", "mise-tasks/ableton/drumrack/builder/tests",
+  "mise-tasks/ableton/drumrack/builder/.venv", "mise-tasks/ableton/drumrack/builder/.local",
+]
