@@ -7,4 +7,4 @@ next:: [[Launchpad/UG/10 Setup/03 Velocity Settings]]
 	- Press the first Track Select button. Choose among eight brightness levels; the bright white pad marks the active level.
 	- Vegas Mode starts after five minutes without activity. Its toggle is green when enabled and red when disabled.
 	- 10.2.A — LED Settings view
-		- ![LED Settings grid](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Launchpad___UG___10%20Setup___02%20LED%20Settings___Asset___LED-Settings-grid.png)
+		- ![LED Settings grid](../assets/.remote/logseq-encode-garden/Launchpad___UG___10-Setup___02-LED-Settings___Asset___LED-Settings-grid.png)
