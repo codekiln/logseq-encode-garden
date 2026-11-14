@@ -8,7 +8,7 @@ next:: [[Zoom H5/UG/14 Other Functions/02 Older SD Cards]]
 	- 2. Insert the SD card into the H5, then turn the power on while pressing **PLAY/PAUSE**.
 	- 3. Use the scroll button to select `YES`, and press it.
 		- Update confirmation screen
-			- ![01 Update confirmation](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___14%20Other%20Functions___01%20Firmware%20Update___Asset___01-Update-confirmation.png)
+			- ![01 Update confirmation](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___14-Other-Functions___01-Firmware-Update___Asset___01-Update-confirmation.png)
 		- The screen shows the installed version and the version being installed.
 		- > [[Note/Warning]] Do not turn the power off or remove the SD card during the update. Doing so could leave the H5 unable to start.
 	- 4. When the screen shows `Complete!` and `Please power off.`, turn the power off.

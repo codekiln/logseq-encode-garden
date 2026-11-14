@@ -6,7 +6,7 @@ next:: [[Zoom H5/UG/08 Recording/06 Recording]]
 	- Choose whether to record the L/R inputs, Inputs 1/2, or both.
 	- In MULTI FILE mode, the L/R inputs record to the L/R tracks and Inputs 1/2 record to tracks 1 and 2.
 	- Track buttons (steps 1 and 2) and input volume knobs (step 3)
-		- ![01 Track buttons and input knobs](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___08%20Recording___05%20Inputs%20and%20Levels___Asset___01-Track-buttons-and-input-knobs.png)
+		- ![01 Track buttons and input knobs](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___08-Recording___05-Inputs-and-Levels___Asset___01-Track-buttons-and-input-knobs.png)
 	- 1. Press the track buttons for the tracks you want to record.
 		- The indicators of the selected buttons light red. Their input signals can then be monitored through the headphones and line outputs.
 		- > [[Note/Info]] In STEREO FILE mode, **L** or **R** selects the L/R inputs, and **1** or **2** selects Inputs 1/2.
@@ -17,7 +17,7 @@ next:: [[Zoom H5/UG/08 Recording/06 Recording]]
 		- With a combo-type input capsule on the L/R inputs, press **R** while holding **L** to link or unlink those tracks the same way.
 	- 3. Turn the input volume knob of each selected input to set its level.
 		- Level meters in MULTI FILE mode
-			- ![02 Level meters](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___08%20Recording___05%20Inputs%20and%20Levels___Asset___02-Level-meters.png)
+			- ![02 Level meters](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___08-Recording___05-Inputs-and-Levels___Asset___02-Level-meters.png)
 		- Aim for peaks around −12 dB.
 		- If the sound distorts even with the input level turned down, move the mics or lower the output level of connected devices.
 		- The compressor/limiter can also control the level: [[Zoom H5/UG/13 Settings/02 Comp Limiter]].

@@ -10,19 +10,19 @@ next:: [[Zoom H5/UG/12 Tools/02 Metronome]]
 		- The standard pitch can be set from 435 Hz to 445 Hz.
 	- 4. For every tuner type except `CHROMATIC`, use **Back** and **Forward** to change the pitch (drop tuning).
 		- Flat tuning indicator
-			- ![01 Flat tuning indicator](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___12%20Tools___01%20Tuner___Asset___01-Flat-tuning-indicator.png)
+			- ![01 Flat tuning indicator](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___12-Tools___01-Tuner___Asset___01-Flat-tuning-indicator.png)
 		- The tuning can be dropped by up to three semitones.
 	- 5. Press a track button (**L**, **R**, **1** or **2**) to select the input to tune.
 	- 6. Tune the instrument.
 	- ## Chromatic tuner
 		- The tuner detects the input pitch automatically. It shows the nearest note name and how far the pitch is off.
 		- Chromatic tuner screen
-			- ![02 Chromatic tuner](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___12%20Tools___01%20Tuner___Asset___02-Chromatic-tuner.png)
+			- ![02 Chromatic tuner](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___12-Tools___01-Tuner___Asset___02-Chromatic-tuner.png)
 		- The center indicator lights when the pitch is accurate. Indicators to its left mean flat; to its right, sharp.
 	- ## Guitar and bass tuners
 		- The tuner detects which string you are playing, so you can tune the strings one at a time.
 		- Guitar tuner screen
-			- ![03 Guitar and bass tuner](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___12%20Tools___01%20Tuner___Asset___03-Guitar-and-bass-tuner.png)
+			- ![03 Guitar and bass tuner](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___12-Tools___01-Tuner___Asset___03-Guitar-and-bass-tuner.png)
 		- The screen shows the detected string number and its note name. The center indicator lights when the pitch is accurate.
 		- Note for each string, from string 1
 			- `GUITAR` — E, B, G, D, A, E, B (strings 1–7)

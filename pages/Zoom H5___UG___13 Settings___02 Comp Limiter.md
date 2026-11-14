@@ -10,7 +10,7 @@ next:: [[Zoom H5/UG/13 Settings/03 Phantom Power]]
 		- > [[Note/Info]] Select `ALL` to use it on every input at once.
 	- 3. Use the scroll button to select the type, then press it.
 		- Compressor/limiter type screen
-			- ![01 Comp limiter type screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___13%20Settings___02%20Comp%20Limiter___Asset___01-Comp-limiter-type-screen.png)
+			- ![01 Comp limiter type screen](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___13-Settings___02-Comp-Limiter___Asset___01-Comp-limiter-type-screen.png)
 	- > [[Note/Info]] The compressor/limiter is not applied to backup recordings ([[Zoom H5/UG/08 Recording/12 Backup Rec]]).
 	- ## Types
 		- `OFF` — compressor/limiter off.

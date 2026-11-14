@@ -8,5 +8,5 @@ next:: [[Zoom H5/UG/12 Tools/06 MS to Stereo]]
 	- 1. Press **MENU**, then use the scroll button to select `IN/OUT > L/R MS-RAW MONITOR`.
 	- 2. Use the scroll button to select `RAW`, then press it.
 		- MS-RAW monitor screen
-			- ![01 MS-RAW monitor screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___12%20Tools___05%20MS-RAW%20Monitoring___Asset___01-MS-RAW-monitor-screen.png)
+			- ![01 MS-RAW monitor screen](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___12-Tools___05-MS-RAW-Monitoring___Asset___01-MS-RAW-monitor-screen.png)
 	- > [[Note/Info]] Select `STEREO` to monitor an ordinary stereo mix.

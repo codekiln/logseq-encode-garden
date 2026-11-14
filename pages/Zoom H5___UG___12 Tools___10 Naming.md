@@ -6,7 +6,7 @@ prev:: [[Zoom H5/UG/12 Tools/09 Auto Rec Settings]]
 	- 1. Press **MENU**, then use the scroll button to select `REC > PROJECT NAME` in `MULTI FILE` mode, or `REC > FILE NAME` in `STEREO FILE` mode.
 	- 2. Use the scroll button to select the name type, then press it.
 		- Name type screens in `MULTI FILE` and `STEREO FILE` modes
-			- ![01 Name type screens](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___12%20Tools___10%20Naming___Asset___01-Name-type-screens.png)
+			- ![01 Name type screens](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___12-Tools___10-Naming___Asset___01-Name-type-screens.png)
 	- ## Name types
 		- Project names
 			- `DEFAULT` — `ZOOM0001` to `ZOOM9999`

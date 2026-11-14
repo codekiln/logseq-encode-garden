@@ -8,7 +8,7 @@ next:: [[Zoom H5/UG/12 Tools/09 Auto Rec Settings]]
 	- 2. Use the scroll button to select the recording format, then press it.
 	- ## Formats
 		- Recording formats by mode
-			- ![01 Recording formats](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___12%20Tools___08%20Rec%20Format___Asset___01-Recording-formats.png)
+			- ![01 Recording formats](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___12-Tools___08-Rec-Format___Asset___01-Recording-formats.png)
 		- Formats nearer the top of each list give higher audio quality and larger files.
 		- `MULTI FILE` mode
 			- `WAV 48kHz/24bit`, `WAV 44.1kHz/24bit`, `WAV 48kHz/16bit`, `WAV 44.1kHz/16bit`

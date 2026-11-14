@@ -1,3 +1,3 @@
 logseq-entity:: [[Logseq/Entity/Asset/B2]]
 - # 01 Side mic level display
-	- ![01 Side mic level display](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___08%20Recording___11%20Side%20Mic%20Level___Asset___01-Side-mic-level-display.png)
+	- ![01 Side mic level display](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___08-Recording___11-Side-Mic-Level___Asset___01-Side-mic-level-display.png)
