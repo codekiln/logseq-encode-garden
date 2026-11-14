@@ -49,7 +49,7 @@ prev:: [[GitP/A/Log/26/11/13-Fri]]
 						- TODO bring [[Apple/Cable/Power Adapter Extension]]
 						- TODO bring [[Apple/Adapter/140W USB-C Power]]
 						- TODO bring [[Apple/Cable/USB-C to MagSafe 3]]
-						- TODO bring the [[Microfreak]] 12 V power supply for [[Microfreak/UI/Rear/08 DC In Jack]]
+						- TODO bring [[Microfreak/Power Supply]] for [[Microfreak/UI/Rear/08 DC In Jack]]
 						- TODO bring power strip
 				- TODO bring hardware
 					- TODO bring core audio hardware

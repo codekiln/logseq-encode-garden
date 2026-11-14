@@ -7,6 +7,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- Not this type: a cable assembly, which is a [[Logseq/Entity/Hardware/Cable]], or a connector standard.
 	- ## Naming
 		- `Maker/Adapter/<Short Name>`, following the creator-namespace rule on [[Logseq/Pref/Page/Name]]: [[Apple/Adapter/140W USB-C Power]].
+		- An adapter that ships in one device's box sits under that device: [[Microfreak/Power Supply]].
 		- Search the maker's namespace and the connector names before creating a page.
 	- ## Frontmatter
 		- The page carries `logseq-entity:: [[Logseq/Entity/Hardware/Adapter]]`. An adapter that was bought adds [[Logseq/Entity/Purchase]] after it.
@@ -18,4 +19,4 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- **Works with** — the cables and devices it pairs with.
 		- **Source** — the maker's specification or support page.
 	- ## Examples in this garden
-		- [[Apple/Adapter/USB-C Digital AV Multiport Adapter]], [[Apple/Adapter/140W USB-C Power]], [[Syntech/Adapter/USB-C to 4-Port USB 3.0 Hub]].
+		- [[Apple/Adapter/USB-C Digital AV Multiport Adapter]], [[Apple/Adapter/140W USB-C Power]], [[Syntech/Adapter/USB-C to 4-Port USB 3.0 Hub]], [[Microfreak/Power Supply]].
