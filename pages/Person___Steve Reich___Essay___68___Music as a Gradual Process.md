@@ -8,7 +8,8 @@ readwise-link:: https://read.readwise.io/read/01m701srpkkg1xh71tjneyh1p7
 	- ## Summary
 		- A short set of observations and aphoristic statements by [[Person/Steve Reich]], written in New Mexico in the summer of 1968 and first published in the catalogue to the exhibition *Anti-Illusion: Procedures/Materials* at the Whitney Museum of American Art in 1969.
 		- Reich writes about pieces of music that are themselves processes, which should be audible and should happen extremely gradually. He contrasts them with [[Person/John Cage]]'s chance procedures and with serial music, where the process can't be heard in the sounding music.
-		- Reprinted in Reich's *Writings on Music, 1965–2000* (Oxford University Press, 2002), pp. 34–36. The whole book is also in Reader: [Writings on Music, 1965–2000](https://read.readwise.io/read/01m701et41bm9ja7hn39zmawvb).
+		- Reprinted in Reich's [[Person/Steve Reich/Book/02/Writings on Music, 1965-2000]] (Oxford University Press, 2002), pp. 34–36. The whole book is also in Reader: [Writings on Music, 1965–2000](https://read.readwise.io/read/01m701et41bm9ja7hn39zmawvb).
+		- A friend sent the book pointing to this essay for discussion, along with [[hecanjog/Process Music Citations]].
 	- ## Notes
 		- What "process" means in the essay
 			- > I do not mean the process of composition but rather pieces of music that are, literally, processes.
