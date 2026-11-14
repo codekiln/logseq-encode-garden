@@ -7,7 +7,7 @@ next:: [[Zoom H5/UG/12 Tools/03 Monitor Mix]]
 	- 1. Press **MENU**, then use the scroll button to select `TOOL > METRONOME`.
 	- 2. Use the scroll button to select a setting, then press it.
 		- Metronome menu
-			- ![01 Metronome menu](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___12%20Tools___02%20Metronome___Asset___01-Metronome-menu.png)
+			- ![01 Metronome menu](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___12-Tools___02-Metronome___Asset___01-Metronome-menu.png)
 		- The settings are `CLICK`, `PRE COUNT`, `TEMPO`, `SOUND`, `PATTERN` and `LEVEL`.
 	- > [[Note/Info]] On any metronome setting screen, press **PLAY/PAUSE** to hear the current settings.
 	- ## CLICK
@@ -21,7 +21,7 @@ next:: [[Zoom H5/UG/12 Tools/03 Monitor Mix]]
 	- ## TEMPO
 		- Use the scroll button to set the metronome speed, then press it.
 		- Tempo screen
-			- ![02 Tempo screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___12%20Tools___02%20Metronome___Asset___02-Tempo-screen.png)
+			- ![02 Tempo screen](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___12-Tools___02-Metronome___Asset___02-Tempo-screen.png)
 		- The tempo can be set from 40.0 to 250.0.
 	- ## SOUND
 		- Use the scroll button to choose the metronome sound, then press it: `BELL`, `CLICK`, `STICK`, `COWBELL` or `HI-Q`.

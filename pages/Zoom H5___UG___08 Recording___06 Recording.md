@@ -4,7 +4,7 @@ prev:: [[Zoom H5/UG/08 Recording/05 Inputs and Levels]]
 next:: [[Zoom H5/UG/08 Recording/07 Save Location]]
 - # Recording
 	- Recording controls: **REC** (1), scroll button (2), **PLAY/PAUSE** (3), **STOP** (4)
-		- ![01 Recording controls](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___08%20Recording___06%20Recording___Asset___01-Recording-controls.png)
+		- ![01 Recording controls](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___08-Recording___06-Recording___Asset___01-Recording-controls.png)
 	- 1. Press **REC** to start recording.
 	- 2. Press the scroll button to add a mark, a reference point for playback.
 		- During playback, press **Back** or **Forward** to jump to a mark.

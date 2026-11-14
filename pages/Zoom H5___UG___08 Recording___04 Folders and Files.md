@@ -5,7 +5,7 @@ next:: [[Zoom H5/UG/08 Recording/05 Inputs and Levels]]
 - # Folder and file structure on the H5
 	- Recording creates folders and files on the SD card in a fixed layout.
 	- Folders and files on the SD card
-		- ![01 Folder and file structure](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___08%20Recording___04%20Folders%20and%20Files___Asset___01-Folder-and-file-structure.png)
+		- ![01 Folder and file structure](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___08-Recording___04-Folders-and-Files___Asset___01-Folder-and-file-structure.png)
 	- ## Folders
 		- The card root holds a `MULTI` folder for MULTI FILE mode and a `STEREO` folder for STEREO FILE mode.
 		- Each of these holds ten folders, `FOLDER01` to `FOLDER10`. New recordings go to the selected one: [[Zoom H5/UG/08 Recording/07 Save Location]].

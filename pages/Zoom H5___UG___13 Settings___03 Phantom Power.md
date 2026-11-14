@@ -13,5 +13,5 @@ next:: [[Zoom H5/UG/13 Settings/04 Plug-in Power]]
 	- ## Setting the voltage
 		- After selecting `VOLTAGE`, use the scroll button to select `+12V`, `+24V` or `+48V`, then press it.
 			- Voltage screen
-				- ![01 Voltage screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___13%20Settings___03%20Phantom%20Power___Asset___01-Voltage-screen.png)
+				- ![01 Voltage screen](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___13-Settings___03-Phantom-Power___Asset___01-Voltage-screen.png)
 		- > [[Note/Info]] If a condenser mic works with less than +48V, a lower voltage reduces the power the H5 uses.

@@ -8,7 +8,7 @@ next:: [[Zoom H5/UG/12 Tools/07 Mono Mix]]
 	- 1. Press **MENU**, then use the scroll button to select `IN/OUT > In1/2 MS MATRIX`.
 	- 2. Use the scroll button to select an item, then press it.
 		- MS stereo matrix menu
-			- ![01 MS stereo matrix menu](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___12%20Tools___06%20MS%20to%20Stereo___Asset___01-MS-stereo-matrix-menu.png)
+			- ![01 MS stereo matrix menu](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___12-Tools___06-MS-to-Stereo___Asset___01-MS-stereo-matrix-menu.png)
 		- The items are `ON/OFF`, `MID LEVEL`, `SIDE LEVEL` and `INPUT SETTING`.
 	- ## ON/OFF
 		- Use the scroll button to select `ON`, then press it.
@@ -23,6 +23,6 @@ next:: [[Zoom H5/UG/12 Tools/07 Mono Mix]]
 	- ## INPUT SETTING
 		- Use the scroll button to assign the mid and side signals to Inputs 1 and 2, then press it.
 		- Input setting screen
-			- ![02 Input setting screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___12%20Tools___06%20MS%20to%20Stereo___Asset___02-Input-setting-screen.png)
+			- ![02 Input setting screen](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___12-Tools___06-MS-to-Stereo___Asset___02-Input-setting-screen.png)
 		- `In1=MID, In2=SIDE` — mid mic on Input 1, side mic on Input 2
 		- `In1=SIDE, In2=MID` — side mic on Input 1, mid mic on Input 2

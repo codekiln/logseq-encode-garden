@@ -9,7 +9,7 @@ next:: [[Zoom H5/UG/10 Project and File Editing/05 WAV to MP3]]
 	- 3. To change where the mixdown file is saved, select `SAVE TO`, then select `MULTI` or `STEREO`.
 	- 4. Select the project (`MULTI`) or folder (`STEREO`) to save it in.
 		- Save destination screens
-			- ![01 Save destination screens](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___10%20Project%20and%20File%20Editing___04%20Mixdown___Asset___01-Save-destination-screens.png)
+			- ![01 Save destination screens](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___10-Project-and-File-Editing___04-Mixdown___Asset___01-Save-destination-screens.png)
 		- `MULTI` opens `PROJECT SELECT`, a list of projects. `STEREO` opens `FOLDER SELECT`, a list of folders.
 	- 5. To change the file name, select `NAME`, then edit the name as in [[Zoom H5/UG/10 Project and File Editing/03 Names]].
 	- 6. Select `EXECUTE` to start the mixdown.

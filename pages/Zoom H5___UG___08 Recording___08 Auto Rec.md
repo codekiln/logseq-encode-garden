@@ -10,10 +10,10 @@ next:: [[Zoom H5/UG/08 Recording/09 Pre-Rec]]
 	- 3. Return to the Home Screen.
 		- A dotted line on the level meters marks the level that starts recording.
 		- Home Screen with the start level line
-			- ![01 Start level line](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___08%20Recording___08%20Auto%20Rec___Asset___01-Start-level-line.png)
+			- ![01 Start level line](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___08-Recording___08-Auto-Rec___Asset___01-Start-level-line.png)
 	- 4. Press **REC**. Recording standby starts and the screen shows `Wait for signal...`.
 		- Recording standby
-			- ![02 Recording standby](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___08%20Recording___08%20Auto%20Rec___Asset___02-Recording-standby.png)
+			- ![02 Recording standby](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___08-Recording___08-Auto-Rec___Asset___02-Recording-standby.png)
 		- When the input rises above the start level shown on the meters, recording starts.
 		- Recording can also stop on its own when the input falls below a set level: [[Zoom H5/UG/12 Tools/09 Auto Rec Settings/02 Auto Stop]].
 	- 5. Press **STOP** to leave standby or to stop recording.

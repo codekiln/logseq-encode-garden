@@ -9,4 +9,4 @@ next:: [[Zoom H5/UG/11 USB/03 Interface Settings/02 Monitor Mix]]
 		- The same `DIRECT MONITOR` menu holds `MONITOR MIXER`: [[Zoom H5/UG/11 USB/03 Interface Settings/02 Monitor Mix]].
 	- 3. Select `ON` and press the scroll button. **MENU** cancels.
 		- Direct monitor setting in STEREO and MULTI TRACK
-			- ![01 Direct monitor on/off](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___11%20USB___03%20Interface%20Settings___01%20Direct%20Monitoring___Asset___01-Direct-monitor-on-off.png)
+			- ![01 Direct monitor on/off](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___11-USB___03-Interface-Settings___01-Direct-Monitoring___Asset___01-Direct-monitor-on-off.png)

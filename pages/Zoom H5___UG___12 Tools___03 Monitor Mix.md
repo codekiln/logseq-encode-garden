@@ -8,11 +8,11 @@ next:: [[Zoom H5/UG/12 Tools/04 Line Out Level]]
 	- 1. Press **MENU**, then use the scroll button to select `IN/OUT > MONITOR MIXER`.
 	- 2. Use the scroll button to select the track to adjust, then press it.
 		- Monitor mixer screen
-			- ![01 Monitor mixer screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___12%20Tools___03%20Monitor%20Mix___Asset___01-Monitor-mixer-screen.png)
+			- ![01 Monitor mixer screen](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___12-Tools___03-Monitor-Mix___Asset___01-Monitor-mixer-screen.png)
 		- The top of the screen shows whether the mixer is on. A bracket on the left marks the selected tracks.
 	- 3. Change the parameter values.
 		- Pan and level screen
-			- ![02 Pan and level screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___12%20Tools___03%20Monitor%20Mix___Asset___02-Pan-and-level-screen.png)
+			- ![02 Pan and level screen](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___12-Tools___03-Monitor-Mix___Asset___02-Pan-and-level-screen.png)
 		- Move the scroll button up or down to move the cursor or change a value.
 		- Press the scroll button to select the parameter to change.
 		- `PAN` — left–right balance, from `L100` through `CENTER` to `R100`

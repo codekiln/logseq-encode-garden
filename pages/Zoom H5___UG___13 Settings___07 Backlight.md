@@ -7,7 +7,7 @@ next:: [[Zoom H5/UG/13 Settings/08 Contrast]]
 	- 1. Press **MENU**, then use the scroll button to select `SYSTEM > BACKLIGHT`.
 	- 2. Use the scroll button to change the setting, then press it.
 		- Backlight screen
-			- ![01 Backlight screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___13%20Settings___07%20Backlight___Asset___01-Backlight-screen.png)
+			- ![01 Backlight screen](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___13-Settings___07-Backlight___Asset___01-Backlight-screen.png)
 		- `OFF` — backlight off.
 		- `ON` — backlight on.
 		- `15sec` — backlight turns off after 15 seconds without an operation.

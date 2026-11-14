@@ -7,4 +7,4 @@ next:: [[Zoom H5/UG/13 Settings/05 PAD]]
 	- 1. Press **MENU**, then use the scroll button to select `IN/OUT > PLUGIN POWER`.
 	- 2. Select `ON` and press the scroll button.
 		- Plug-in power screen
-			- ![01 Plug-in power screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___13%20Settings___04%20Plug-in%20Power___Asset___01-Plug-in-power-screen.png)
+			- ![01 Plug-in power screen](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___13-Settings___04-Plug-in-Power___Asset___01-Plug-in-power-screen.png)

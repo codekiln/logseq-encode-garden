@@ -11,7 +11,7 @@ prev:: [[Zoom H5/UG/08 Recording/12 Backup Rec]]
 		- 3. Select `MIXER/OVERDUB > MIXER/OVERDUB`.
 			- The track button indicators light green for tracks that already hold recordings and stay unlit for empty tracks.
 			- MIXER/OVERDUB screen: the cursor marks the selected track, and the icons at the left show its setting values
-				- ![01 Mixer overdub screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___08%20Recording___13%20Overdubbing___Asset___01-Mixer-overdub-screen.png)
+				- ![01 Mixer overdub screen](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___08-Recording___13-Overdubbing___Asset___01-Mixer-overdub-screen.png)
 		- 4. Press the track button of the track to overdub. Its indicator lights red, and that track's input can be monitored.
 			- The Input 1/2 stereo link can also be changed here: [[Zoom H5/UG/08 Recording/05 Inputs and Levels]].
 		- 5. Turn the input volume knob to adjust the input level.
@@ -26,14 +26,14 @@ prev:: [[Zoom H5/UG/08 Recording/12 Backup Rec]]
 			- The overdubbed track is no longer record-ready, and its indicator lights green.
 			- An overdub never overwrites the file already on a track. It creates a new file named after the track with a two-digit take number, such as `ZOOM0001_TrLR-01.WAV`. Any file can later be assigned to any track.
 			- An overdub on track 1 adds a file to the project folder
-				- ![02 Overdub file added](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___08%20Recording___13%20Overdubbing___Asset___02-Overdub-file-added.png)
+				- ![02 Overdub file added](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___08-Recording___13-Overdubbing___Asset___02-Overdub-file-added.png)
 		- 9. Press **PLAY/PAUSE** to check the recording. Tracks with green indicators play back.
 			- Mixdown combines overdubbed recordings into one stereo file: [[Zoom H5/UG/10 Project and File Editing/04 Mixdown]].
 	- ## Assigning files to tracks
 		- 1. On the MIXER/OVERDUB screen, use the scroll button to select the track, then press the scroll button.
 		- 2. Select `FILE`, then press the scroll button.
 			- Track settings screen, showing the track name and the name of the assigned file
-				- ![03 Track settings screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___08%20Recording___13%20Overdubbing___Asset___03-Track-settings-screen.png)
+				- ![03 Track settings screen](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___08-Recording___13-Overdubbing___Asset___03-Track-settings-screen.png)
 		- 3. Select a WAV file from the same project folder, then press the scroll button.
 			- **MENU** cancels the assignment.
 			- Select `NONE` to remove the assigned file from the track.

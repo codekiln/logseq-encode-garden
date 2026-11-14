@@ -3,7 +3,7 @@ up:: [[Zoom H5/UG/09 Playback]]
 next:: [[Zoom H5/UG/09 Playback/02 Select from Lists]]
 - # Basic playback
 	- Playback controls
-		- ![01 Playback controls](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___09%20Playback___01%20Basic%20Playback___Asset___01-Playback-controls.png)
+		- ![01 Playback controls](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___09-Playback___01-Basic-Playback___Asset___01-Playback-controls.png)
 	- 1. Press **PLAY/PAUSE**.
 		- The playback screen appears. [[Zoom H5/UG/06 Display]] explains its indicators.
 	- 2. Press **STOP** or **REC** to return to the Home Screen.

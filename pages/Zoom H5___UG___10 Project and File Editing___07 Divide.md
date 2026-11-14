@@ -8,7 +8,7 @@ next:: [[Zoom H5/UG/10 Project and File Editing/08 Trim]]
 	- 2. Select the project or file to divide, then select `EDIT > DIVIDE`.
 	- 3. Set the division point.
 		- Divide screen
-			- ![01 Divide screen](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Zoom%20H5___UG___10%20Project%20and%20File%20Editing___07%20Divide___Asset___01-Divide-screen.png)
+			- ![01 Divide screen](../assets/.remote/logseq-encode-garden/Zoom-H5___UG___10-Project-and-File-Editing___07-Divide___Asset___01-Divide-screen.png)
 		- Use **Back** and **Forward** to move the point. The time under the bar shows where the point sits.
 		- Press **PLAY/PAUSE** to play or pause while searching.
 		- Press **REC** to set the point.
