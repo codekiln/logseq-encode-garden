@@ -1,0 +1,23 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Cable
+	- In this garden, **Cable** pages model one cable assembly: the connector on each end, its length, and what it carries between them.
+	- ## What counts as an instance
+		- A named model from a named maker, such as [[Apple/Cable/USB-C to MagSafe 3]], or a generic kind named by its two ends.
+		- Not this type: a connector standard, such as [[Audio/Connector/Phone/TRS/3.5mm]] or [[USB/Connector/Ref/USB-C]], or a device with no cable between its connectors, which is a [[Logseq/Entity/Hardware/Adapter]].
+	- ## Naming
+		- A maker's model sits at `Maker/Cable/<Short Name>`, following the creator-namespace rule on [[Logseq/Pref/Page/Name]]: [[Apple/Cable/USB-C to MagSafe 3]].
+		- A generic kind sits at `Cable/<End> to <End>`, such as `Cable/3.5mm TRS to 3.5mm TRS`.
+		- Search the maker's namespace and both connector names before creating a page.
+	- ## Frontmatter
+		- The page carries `logseq-entity:: [[Logseq/Entity/Hardware/Cable]]`. A cable that was bought adds [[Logseq/Entity/Purchase]] after it.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- H1 is the model name as the maker writes it, or the two ends for a generic kind, then one sentence on what the cable connects.
+		- **Ends** — the connector on each end, linked to its connector page when one exists.
+		- **Length**
+		- **Carries** — power, data or audio, with the maker's rating when it gives one.
+		- **Works with** — the adapters and devices it pairs with.
+		- **Source** — the maker's specification or support page.
+	- ## Examples in this garden
+		- [[Apple/Cable/USB-C to MagSafe 3]], [[Apple/Cable/Power Adapter Extension]].

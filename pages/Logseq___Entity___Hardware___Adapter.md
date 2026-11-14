@@ -1,0 +1,21 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Adapter
+	- In this garden, **Adapter** pages model one device that sits between connectors and changes what one side offers the other: a dongle that turns a USB-C port into HDMI and USB-A ports, or a power adapter that turns mains power into USB-C power.
+	- ## What counts as an instance
+		- A named model from a named maker: [[Apple/Adapter/USB-C Digital AV Multiport Adapter]], [[Apple/Adapter/140W USB-C Power]].
+		- Not this type: a cable assembly, which is a [[Logseq/Entity/Hardware/Cable]], or a connector standard.
+	- ## Naming
+		- `Maker/Adapter/<Short Name>`, following the creator-namespace rule on [[Logseq/Pref/Page/Name]]: [[Apple/Adapter/140W USB-C Power]].
+		- Search the maker's namespace and the connector names before creating a page.
+	- ## Frontmatter
+		- The page carries `logseq-entity:: [[Logseq/Entity/Hardware/Adapter]]`. An adapter that was bought adds [[Logseq/Entity/Purchase]] after it.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- H1 is the model name as the maker writes it, then one sentence on what goes in and what comes out.
+		- **Input** — the connector or plug on the input side, and what it accepts.
+		- **Output** — each output connector and what it supplies, with the maker's rating.
+		- **Works with** — the cables and devices it pairs with.
+		- **Source** — the maker's specification or support page.
+	- ## Examples in this garden
+		- [[Apple/Adapter/USB-C Digital AV Multiport Adapter]], [[Apple/Adapter/140W USB-C Power]].
