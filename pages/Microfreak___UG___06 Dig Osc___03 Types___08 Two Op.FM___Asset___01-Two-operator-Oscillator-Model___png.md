@@ -1,3 +1,3 @@
 logseq-entity:: [[Logseq/Entity/Asset/B2]]
 - # 01 Two operator Oscillator Model
-	- ![01 Two operator Oscillator Model](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___06%20Dig%20Osc___03%20Types___08%20Two%20Op.FM___Asset___01-Two-operator-Oscillator-Model.png)
+	- ![01 Two operator Oscillator Model](../assets/.remote/logseq-encode-garden/Microfreak___UG___06-Dig-Osc___03-Types___08-Two-Op.FM___Asset___01-Two-operator-Oscillator-Model.png)

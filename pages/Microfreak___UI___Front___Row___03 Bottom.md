@@ -5,7 +5,7 @@ next:: [[Microfreak/UI/Front/Row/04 Icon Strip]]
 
 - # Bottom row
 	- The bottom row of the MicroFreak front panel.
-	- ![Bottom row](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___03%20Overview___01%20Front%20Panel___03%20Bottom%20Row___Asset___01-Bottom-row-of-the-MicroFreak.png)
+	- ![Bottom row](../assets/.remote/logseq-encode-garden/Microfreak___UG___03-Overview___01-Front-Panel___03-Bottom-Row___Asset___01-Bottom-row-of-the-MicroFreak.png)
 	- ## Items, left to right
 		- [[Microfreak/UI/Front/Row/03 Bottom/01 Octave]]
 		- [[Microfreak/UI/Front/Row/03 Bottom/02 Shift Button]]

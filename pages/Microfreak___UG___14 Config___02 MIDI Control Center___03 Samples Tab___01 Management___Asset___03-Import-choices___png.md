@@ -1,3 +1,3 @@
 logseq-entity:: [[Logseq/Entity/Asset/B2]]
 - # 03 Import choices
-	- ![03 Import choices](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___14%20Config___02%20MIDI%20Control%20Center___03%20Samples%20Tab___01%20Management___Asset___03-Import-choices.png)
+	- ![03 Import choices](../assets/.remote/logseq-encode-garden/Microfreak___UG___14-Config___02-MIDI-Control-Center___03-Samples-Tab___01-Management___Asset___03-Import-choices.png)
