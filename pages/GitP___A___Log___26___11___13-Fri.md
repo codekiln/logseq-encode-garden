@@ -1,11 +1,14 @@
 prev:: [[GitP/A/Log/26/11/12-Thu]]
+next:: [[GitP/A/Log/26/11/14-Sat]]
 
 - [[2026-11-13 Fri]]
 	- ## Working on [[GitP/Ceremon/y/Forevetran]]
 		- I have three [[Ableton/Live/Instrument/Drum]] in `26.11.12-Forever-Veteran`; I'd like to get it down to 16 pads total to simplify things.
 		- ### top row
+		  collapsed:: true
 			- 4 samples from  [[Ableton/Live/Instrument/Drum/Forevertron]]
 		- ### 2nd to top row
+		  collapsed:: true
 			- 4 samples from [[Ableton/Live/Instrument/Drum/Pool/Cue/Strikes-Refined]]
 				- candidates
 					- I'm looking for ones that have low noise
@@ -28,12 +31,14 @@ prev:: [[GitP/A/Log/26/11/12-Thu]]
 					- compound shot
 						-
 		- ### Bottom rows - [[Piano]] samples from Ableton Note Cloud session `Veteran`
+		  collapsed:: true
 			- These were recorded on Veteran's day ( [[2026-11-11 Wed]] )
 			- #### 2nd from bottom
 				- TODO fill out with descriptions
 			- #### bottom row
 				- TODO fill out with descriptions
 		- ### The Launchpad only played track 4 (`3B Drum`) from its DAW port
+		  collapsed:: true
 			- Setup: [[Launchpad]] plugged in, track 4 armed, mixer at -6 dB and on, Monitor Auto, Audio To Master. The Launchpad was in [[Launchpad/UI/Mode/2-Note]], set to send on channel 1.
 			- MIDI From `Launchpad Pro MK3 Input (LPProMK3 DAW)`, All Channels: the pads played the Drum Rack. The Launchpad also lit the pads that have a sample loaded and left the empty ones dark, as in [[Launchpad/UG/06 Note Mode/06 Drum Mode]].
 			- Same DAW port, but filtered to Ch. 1: silence, even with the Launchpad set to channel 1.
@@ -41,25 +46,28 @@ prev:: [[GitP/A/Log/26/11/12-Thu]]
 			- MIDI From `Launchpad Pro MK3 (LPProMK3 MIDI)`, All Channels: silence.
 				- The Note mode MIDI port is the one I expected to work, per [[Launchpad/PRG/03 MIDI]]. I don't know yet why it didn't.
 		- ### The Drum Rack suggests a General MIDI sound for each pad
+		  collapsed:: true
 			- Hovering an empty pad in [[Ableton/Live/Instrument/Drum]] shows a suggestion in the status bar, such as `D2 - GM Suggestion: High Tom` on the `Piano Pool` rack.
 			- GM is the General MIDI percussion map, the standard that assigns one drum sound to each MIDI note: kick on 36, snare on 38, closed hi-hat on 42, high tom on 50.
 			- Live names middle C (note 60) C3, so note 50 shows as D2 in Live, where General MIDI charts that use C4 call it D3.
 			- That explains the pattern I'd noticed in the packaged drum kits: they're laid out to this map.
 		- ### Levels that stopped the MicroFreak clipping on preset 398 InfiniAlarm
+		  collapsed:: true
 			- Pressing down a bunch of keys at once on 398 InfiniAlarm kept maxing out. These settings stopped it:
 				- [[Microfreak/UI/Front/Row/01 Top/08 Master Knob]]: just under 9 o'clock, roughly 20% of its travel
 				- [[Zoom H5]] input gain: between 2 and 3 ([[Zoom H5/UG/08 Recording/05 Inputs and Levels]])
 				- Ableton: the audio tracks fed by the MicroFreak at -7.5 dB
 		- ### Finding my place in the Drum Rack from the [[Launchpad/UI/Mode/5-Sequencer]]
+		  collapsed:: true
 			- On track 4, the down arrow dims once the grid reaches the bottom of the note range, and the up arrow dims at the top. A dimmed arrow is a fixed reference point.
 			- The arrows move the 16-pad grid by 16 notes, not by an octave.
 			- Bottom up
-				- At the bottom, the lower-left pad is C-2 (MIDI note 0) and the upper-right is D#-1 (15). C-2 is very low, far from the middle of the range.
+				- At the bottom, the lower-left pad is `C-2` (MIDI note 0) and the upper-right is D#-1 (15). C-2 is very low, far from the middle of the range.
 				- One press up, I read the lower-left pad as E-2 and the upper-right as G-1. A 16-note step would make them E-1 (16) and G0 (31), so I may have misread them.
 			- Top down
-				- At the top, the top row of the grid is inactive. The highest pad is G8 (127) and the lower-left is G#7 (116), so only three rows play.
+				- At the top, the top row of the grid is inactive. The highest pad is `G8` (127) and the lower-left is `G#7` (116), so only three rows play.
 				- One press down: lower-left E6 (100), upper-right G7 (115).
-				- Two presses down: lower-left C5 (84), upper-right D#6 (99).
+				- Two presses down: lower-left C5 (84), upper-right `D#6` (99).
 			- The top-down pages (116, 100, 84 …) and the bottom-up pages (0, 16 …) are 4 notes apart, so where a page starts depends on which end I come from.
 			- Plan: key the [[Ableton/Live/Instrument/Drum/Forevertron]] samples and the [[Ableton/Live/Instrument/Drum/Pool/Cue/Strikes-Refined]] samples from one end of the range, so I can go all the way to that end and know where I am.
 				- As before, I'd leave one pad out per page, in a different spot on each page, so the gap tells me which page I'm on.
