@@ -49,6 +49,7 @@ prev:: [[GitP/A/Log/26/11/13-Fri]]
 						- TODO bring [[Apple/Cable/Power Adapter Extension]]
 						- TODO bring [[Apple/Adapter/140W USB-C Power]]
 						- TODO bring [[Apple/Cable/USB-C to MagSafe 3]]
+						- TODO bring power strip
 				- TODO bring hardware
 					- TODO bring core audio hardware
 						- TODO [[Macbook/My]]
