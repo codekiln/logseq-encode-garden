@@ -18,4 +18,4 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 		- **Works with** — the cables and devices it pairs with.
 		- **Source** — the maker's specification or support page.
 	- ## Examples in this garden
-		- [[Apple/Adapter/USB-C Digital AV Multiport Adapter]], [[Apple/Adapter/140W USB-C Power]].
+		- [[Apple/Adapter/USB-C Digital AV Multiport Adapter]], [[Apple/Adapter/140W USB-C Power]], [[Syntech/Adapter/USB-C to 4-Port USB 3.0 Hub]].
