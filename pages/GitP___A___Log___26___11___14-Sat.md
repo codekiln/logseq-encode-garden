@@ -54,5 +54,9 @@ prev:: [[GitP/A/Log/26/11/13-Fri]]
 					- TODO [[Launchpad]]
 					- TODO [[Microfreak]]
 					- TODO [[Zoom H5]]
+					- TODO bring performance table
+					- TODO bring 1ft x 2ft performance board
+					- TODO bring metal riser
+					-
 		- ### Performance Preplist
 			- TODO
