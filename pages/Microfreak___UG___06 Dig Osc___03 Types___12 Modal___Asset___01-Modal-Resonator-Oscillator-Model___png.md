@@ -1,3 +1,3 @@
 logseq-entity:: [[Logseq/Entity/Asset/B2]]
 - # 01 Modal Resonator Oscillator Model
-	- ![01 Modal Resonator Oscillator Model](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___06%20Dig%20Osc___03%20Types___12%20Modal___Asset___01-Modal-Resonator-Oscillator-Model.png)
+	- ![01 Modal Resonator Oscillator Model](../assets/.remote/logseq-encode-garden/Microfreak___UG___06-Dig-Osc___03-Types___12-Modal___Asset___01-Modal-Resonator-Oscillator-Model.png)

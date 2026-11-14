@@ -5,7 +5,7 @@ next:: [[Microfreak/UG/06 Dig Osc/03 Types/12 Modal]]
 
 - # 06.03.11 Vowel and speech synthesis (Speech)
 	- Vowel and speech synthesis Oscillator Model
-		- ![01 Vowel and speech synthesis Oscillator Model](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___06%20Dig%20Osc___03%20Types___11%20Speech___Asset___01-Vowel-and-speech-synthesis-Oscillator-Model.png)
+		- ![01 Vowel and speech synthesis Oscillator Model](../assets/.remote/logseq-encode-garden/Microfreak___UG___06-Dig-Osc___03-Types___11-Speech___Asset___01-Vowel-and-speech-synthesis-Oscillator-Model.png)
 	- **Description:** The Speech oscillator draws on speech synthesis research begun by Texas Instruments in the late 1970s, which led to the Speak & Spell talking toy. Vowels use unrestricted airflow while the throat and tongue shape their sound; consonants delimit and shape vowels.
 	- **[[Microfreak/UI/Oscillator/Knob/Type/Speech/Type]]**
 		- The [[Microfreak/UI/Oscillator/Knob/Wave]] knob scans

@@ -1,3 +1,3 @@
 logseq-entity:: [[Logseq/Entity/Asset/B2]]
 - # 01 BASS Oscillator Model
-	- ![01 BASS Oscillator Model](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___06%20Dig%20Osc___03%20Types___14%20BASS___Asset___01-BASS-Oscillator-Model.png)
+	- ![01 BASS Oscillator Model](../assets/.remote/logseq-encode-garden/Microfreak___UG___06-Dig-Osc___03-Types___14-BASS___Asset___01-BASS-Oscillator-Model.png)

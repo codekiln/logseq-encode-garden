@@ -5,7 +5,7 @@ next:: [[Microfreak/UI/Front/Row/05 Keys]]
 
 - # Icon Strip
 	- The row of touch icons and the touch strip just above the keyboard. With Bend selected, the touch strip is the pitch modulator.
-	- ![Icon Strip](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UG___11%20Icon%20Strip___Asset___01-The-Icon-Strip.png)
+	- ![Icon Strip](../assets/.remote/logseq-encode-garden/Microfreak___UG___11-Icon-Strip___Asset___01-The-Icon-Strip.png)
 	- ## Controls
 		- [[Microfreak/UI/Front/Row/04 Icon Strip/Button/Hold]]
 		- [[Microfreak/UI/Front/Row/04 Icon Strip/Button/Up A]]
