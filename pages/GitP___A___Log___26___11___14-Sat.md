@@ -36,7 +36,7 @@ prev:: [[GitP/A/Log/26/11/13-Fri]]
 			- TODO bring cables
 				- TODO bring usb cables
 					- TODO [[Syntech/Adapter/USB-C to 4-Port USB 3.0 Hub]]
-					- TODO USB-A jack to [[USB/Connector/Ref/USB-C]] jack cable to [[Launchpad]]
+					- TODO [[USB/Connector/Ref/USB-C]] to USB-C cable from [[Macbook/My]] to [[Launchpad/UI/Area/5-Rear/1-USB-C-Port]]
 					- TODO USB-A jack to [[USB/Connector/Ref/USB-B]] jack cable to [[Microfreak/UI/Rear/06 USB Port]]
 					- TODO USB-A jack to [[USB/Connector/Ref/USB-B Mini]] jack cable to [[Zoom H5/UI/Area/1-Left/4-USB-Port]]
 				- TODO bring audio cables
