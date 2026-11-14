@@ -4,7 +4,7 @@ logseq-entity:: [[Logseq/Entity/Definition]]
 	- In this garden, **Cable** pages model one cable assembly: the connector on each end, its length, and what it carries between them.
 	- ## What counts as an instance
 		- A named model from a named maker, such as [[Apple/Cable/USB-C to MagSafe 3]], or a generic kind named by its two ends.
-		- Not this type: a connector standard, such as [[Audio/Connector/Phone/TRS/3.5mm]] or [[USB/Connector/Ref/USB-C]], or a device with no cable between its connectors, which is a [[Logseq/Entity/Hardware/Adapter]].
+		- Not this type: a connector standard, such as [[Audio/Connector/Phone/TRS/3.5mm]] or [[USB/Connector/Ref/USB-C]], or a device that changes what one connector offers another, such as a hub or a power adapter, which is a [[Logseq/Entity/Hardware/Adapter]].
 	- ## Naming
 		- A maker's model sits at `Maker/Cable/<Short Name>`, following the creator-namespace rule on [[Logseq/Pref/Page/Name]]: [[Apple/Cable/USB-C to MagSafe 3]].
 		- A generic kind sits at `Cable/<End> to <End>`, such as `Cable/3.5mm TRS to 3.5mm TRS`.
