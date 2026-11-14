@@ -38,7 +38,7 @@ prev:: [[GitP/A/Log/26/11/13-Fri]]
 					- TODO Syntech USB-C jack to 4 USB-A port hub
 					- TODO USB-A jack to [[USB/Connector/Ref/USB-C]] jack cable to [[Launchpad]]
 					- TODO USB-A jack to [[USB/Connector/Ref/USB-B]] jack cable to [[Microfreak/UI/Rear/06 USB Port]]
-					- TODO USB-A jack to [[USB/Connector/Ref/USB-B Micro]] for [[Zoom H5/Port/USB-B Micro]]
+					- TODO USB-A jack to [[USB/Connector/Ref/USB-B Mini]] jack cable to [[Zoom H5/UI/Area/1-Left/4-USB-Port]]
 				- TODO bring audio cables
 					- TODO bring [[Audio/Connector/Phone/TRS/6.35mm/Balanced Audio]] cable for [[Microfreak/UI/Rear/02 Output Jack]] to [[Zoom H5]]
 					- TODO bring [[Audio/Connector/Phone/TRS/3.5mm]] jack to jack cable for [[Zoom H5/UI/Area/1-Left/1-Line-Out-Jack]] to the system's PA
