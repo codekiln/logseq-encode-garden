@@ -7,4 +7,4 @@ logseq-entity:: [[Logseq/Entity/Hardware/Connector/Audio]]
 	- A third wiring appears on mixing desks, where one TRS jack is an unbalanced insert point carrying send on the tip and return on the ring.
 	- ## Sizes
 		- [[Audio/Connector/Phone/TRS/3.5mm]] — headphones, earbuds, and aux and line cabling.
-		- 6.35 mm (1/4 in) — balanced line and insert cabling, and a compact substitute for XLR on small mixing desks.
+		- [[Audio/Connector/Phone/TRS/6.35mm]] — balanced line and insert cabling, and a compact substitute for XLR on small mixing desks.

@@ -27,3 +27,4 @@ alias:: [[3.5mm Stereo Audio Jack]], [[1/8 inch Stereo Audio Jack]]
 		- Physically fits into [[Audio/Connector/Phone/TRRS/3.5mm]] jacks; the extra ring on the TRRS jack (mic/ground) is simply left unused
 		- A [[Audio/Connector/Phone/TS/3.5mm]] plug fits into a TRS jack but only drives one channel
 		- Adapters exist to/from [[RCA/Connector/Ref/RCA Male]] pairs for stereo line audio
+		- An adapter with a 3.5 mm TRS jack and a 6.35 mm TRS plug connects it to [[Audio/Connector/Phone/TRS/6.35mm]] jacks, keeping the stereo wiring
