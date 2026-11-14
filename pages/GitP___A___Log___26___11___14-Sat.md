@@ -41,14 +41,14 @@ prev:: [[GitP/A/Log/26/11/13-Fri]]
 					- TODO USB-A jack to [[USB/Connector/Ref/USB-B Micro]] for [[Zoom H5/Port/USB-B Micro]]
 				- TODO bring audio cables
 					- TODO bring [[Audio/Connector/Phone/TRS/6.35mm/Balanced Audio]] cable for [[Microfreak/UI/Rear/02 Output Jack]] to [[Zoom H5]]
-					- TODO bring [[Audio/Connector/Phone/TRS/3.5mm]] jack to jack cable for [[Zoom H5]] line out to the system's PA
+					- TODO bring [[Audio/Connector/Phone/TRS/3.5mm]] jack to jack cable for [[Zoom H5/UI/Area/1-Left/1-Line-Out-Jack]] to the system's PA
 					  id:: 6af85d8d-7be5-4bac-841b-5b8b7c85cb75
-						- TODO bring 3.5mm to 6.35mm adapter connector to connect to PA
+						- TODO bring [[Audio/Connector/Phone/TRS/3.5mm]] to [[Audio/Connector/Phone/TRS/6.35mm]] adapter connector to connect to PA
 					- TODO bring power cables
 					  id:: 6af85e40-92f1-43e2-aa84-c2f5c3c702f5
-						- TODO bring macbook 3-pronged power cable to brick
-						- TODO bring macbook brick
-						- TODO bring macbook brick to magsafe
+						- TODO bring [[Apple/Cable/Power Adapter Extension]]
+						- TODO bring [[Apple/Adapter/140W USB-C Power]]
+						- TODO bring [[Apple/Cable/USB-C to MagSafe 3]]
 				- TODO bring hardware
 					- TODO [[Macbook/My]]
 					- TODO [[Launchpad]]
