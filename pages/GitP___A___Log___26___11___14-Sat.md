@@ -50,13 +50,17 @@ prev:: [[GitP/A/Log/26/11/13-Fri]]
 						- TODO bring [[Apple/Adapter/140W USB-C Power]]
 						- TODO bring [[Apple/Cable/USB-C to MagSafe 3]]
 				- TODO bring hardware
-					- TODO [[Macbook/My]]
-					- TODO [[Launchpad]]
-					- TODO [[Microfreak]]
-					- TODO [[Zoom H5]]
-					- TODO bring performance table
-					- TODO bring 1ft x 2ft performance board
-					- TODO bring metal riser
-					-
+					- TODO bring core audio hardware
+						- TODO [[Macbook/My]]
+						- TODO [[Launchpad]]
+						- TODO [[Microfreak]]
+						- TODO [[Zoom H5]]
+						- TODO bring [[Campfire Audio/Solaris]]
+					- TODO bring performance setup hardware
+						- TODO bring performance table
+						- TODO bring 1ft x 2ft performance board
+						- TODO bring metal riser for computer
+					- optional
+						- TODO bring iPad for notes
 		- ### Performance Preplist
 			- TODO
