@@ -16,7 +16,7 @@
 	- ## Back
 		- Huberman trains back with compound exercises only.
 		- ### Pull-up or lat pulldown: 3 work sets of 6–10 reps
-			- Select assistance or machine load that permits controlled reps.
+			- Once you can do 10–12 pull-ups in good form without hitting failure, start adding weight.
 			- {{embed [[Exercise/Body/Strength/Pull-Up]]}}
 			- {{embed [[Exercise/Body/Strength/Lat Pulldown]]}}
 		- ### Dumbbell row: 2 work sets of 6–10 reps per side
