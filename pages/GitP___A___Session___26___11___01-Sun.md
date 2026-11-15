@@ -7,7 +7,7 @@ date-created:: [[2026-11-01 Sun]]
 
 - # Infini Pad bass and 8bitfi
 	- The Launchpad plays Infini Pad high and slow, then the MicroFreak keys turn it into a noisy bass. At 18:17 8bitfi takes over with key pressure, warbling and pitch bends over the looping pad layers.
-	- ![Episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___01-Sun___Asset___Audio___Full.mp3)
+	- ![Episode recording](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___11___01-Sun___Asset___Audio___Full.mp3)
 	- ## Chapters
 		- ### 00:00 Enter [[Microfreak/Preset/259 Infini Pad]]
 			- #### 00:00 [[Launchpad]] playing infini pad
@@ -140,7 +140,7 @@ date-created:: [[2026-11-01 Sun]]
 				- Notes from [[GitP/Acolyte]]
 					- The three layers fade together into silence.
 	- ## Recording and Prep
-		- 26:40 · [[GitP/A/Session/26/11/01-Sun/Asset/Audio/Full/mp3]] · [Download the MP3](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___01-Sun___Asset___Audio___Full.mp3)
+		- 26:40 · [[GitP/A/Session/26/11/01-Sun/Asset/Audio/Full/mp3]] · [Download the MP3](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___11___01-Sun___Asset___Audio___Full.mp3)
 		- Recorded on November 1, 2026 in [[Ableton/Live]] at 120 BPM in 4/4 with the [[Novation/Launchpad/Pro/Mk3]] and the [[Microfreak]], using a new hand-made GitP template. Three MicroFreak audio layers hold the takes, with recorded volume rides and a closing fade. The commentary microphone track also plays in the mix; the commentary under each chapter is a machine transcription, and [unclear] marks a word that could not be made out.
 		- [[Making/Music/Log/26/11/01-Sun]]
 		- ### Presets
@@ -151,6 +151,6 @@ date-created:: [[2026-11-01 Sun]]
 			- Both slots read the same after the session as they did on October 25, 2026, so they still hold the factory sounds, and the downloads contain those. The session MIDI holds the knob changes as controller messages. Matrix edits, such as the pressure routing at 25:15, are in neither.
 		- ### MIDI
 		  id:: 6ae85dd5-7ade-4692-be23-f995998c7174
-			- [Download the session MIDI](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___01-Sun___Asset___MIDI___Session.mid) · [[GitP/A/Session/26/11/01-Sun/Asset/MIDI/Session/mid]]
+			- [Download the session MIDI](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___11___01-Sun___Asset___MIDI___Session.mid) · [[GitP/A/Session/26/11/01-Sun/Asset/MIDI/Session/mid]]
 			- "LPP to MF" holds the Launchpad Pro notes sent to the MicroFreak, from 00:12 to 17:53. "MF to LPP" holds the MicroFreak's own key presses, per-note pressure, pitch bend and knob changes.
 			- Times below follow the recording. Control names come from [[Microfreak/UG/21 Appendix D - CC Values]]. With the [[Microfreak/UI/Oscillator/Knob/Type/BASS]] oscillator, [[Microfreak/UI/Oscillator/Knob/Wave]] (CC 10) sets [[Microfreak/UI/Oscillator/Knob/Type/BASS/Saturate]], [[Microfreak/UI/Oscillator/Knob/Timbre]] (CC 12) sets [[Microfreak/UI/Oscillator/Knob/Type/BASS/Fold]] and [[Microfreak/UI/Oscillator/Knob/Shape]] (CC 13) sets [[Microfreak/UI/Oscillator/Knob/Type/BASS/Noise]]. No oscillator-type changes (CC 9) were recorded.

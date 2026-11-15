@@ -8,7 +8,7 @@ preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-orig
 prev:: [[Microfreak/Preset/150 Stab One]]
 next:: [[Microfreak/Preset/152 B3]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog]]
-preset-synth-file:: [The Unstable — October 24 slot 151 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___Preset___The-Unstable-Live-2026-10-24.bin)
+preset-synth-file:: [The Unstable — October 24 slot 151 capture](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___Preset___The-Unstable-Live-2026-10-24.bin)
 preset-synth-file-sha256:: 80d2c3b0312e9a2588dd969619d8e417e2d66e8655961ef064cfacc809b72365
 preset-synth-microfreak-parameter-payload-sha256:: fbd5336466e244efd086246d66b7c760b9c8763b0134763a01c154636510fcf7
 - # Notes
@@ -17,7 +17,7 @@ preset-synth-microfreak-parameter-payload-sha256:: fbd5336466e244efd086246d66b7c
 		- Saved export: read from the device's slot 151 over USB on October 24, 2026 at 19:10 ET, after [[GitP/A/Session/26/10/24-Sat]], with `mise run microfreak:download --slot 151`. Two consecutive reads returned the same file, `slot-151.bin`.
 		- The parameter payload matches the Factory 2.0, 2.1, 3.0 and 6.0 MIDI Control Center archives and the September 28, 2026 user-bank archive (computer-bank slot 228). Factory 1.0 and 1.1 do not contain this preset. Comparison used `mise run microfreak:compare`.
 		- The slot still holds the factory payload, so the edits made during the session were not saved. codekiln says so at 14:35 in the episode.
-		- [Download the slot 151 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___Preset___The-Unstable-Live-2026-10-24.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[GitP/A/Session/26/10/24-Sat/Asset/Preset/The-Unstable-Live-2026-10-24/bin]].
+		- [Download the slot 151 capture](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___Preset___The-Unstable-Live-2026-10-24.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[GitP/A/Session/26/10/24-Sat/Asset/Preset/The-Unstable-Live-2026-10-24/bin]].
 	- ## Oscillator
 		- Model: [V.Analog]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog]]). [Detune]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Detune]]) sets the detuning between two waves; [Shape]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Shape]]) morphs a variable square from narrow pulse through full square to hard-sync formants; [Wave]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Wave]]) morphs a saw from triangle to sawtooth with a widening notch. [[Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog]]
 		- On the panel, V.Analog puts Detune on the [Wave knob]([[Microfreak/UI/Oscillator/Knob/Wave]]) (CC 10), Shape on the [Timbre knob]([[Microfreak/UI/Oscillator/Knob/Timbre]]) (CC 12) and Wave on the [Shape knob]([[Microfreak/UI/Oscillator/Knob/Shape]]) (CC 13). In the session codekiln worked this out by ear: "So timbre is the shape."

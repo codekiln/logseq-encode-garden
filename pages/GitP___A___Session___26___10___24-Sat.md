@@ -7,9 +7,9 @@ date-created:: [[2026-10-24 Sat]]
 
 - # The Unstable over USB
 	- A Ghost in the Patch session recorded at the library with MicroFreak preset 151 The Unstable, a slow Launchpad sequence and USB-only MIDI: Ableton Live sends the clock, Launchpad pad pressure drives the pad, and nothing needed a MIDI panic.
-	- ![Episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___Audio___Full.mp3)
+	- ![Episode recording](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___Audio___Full.mp3)
 	- ## Recording
-		- 17:54 · [[GitP/A/Session/26/10/24-Sat/Asset/Audio/Full/mp3]] · [Download the MP3](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___Audio___Full.mp3)
+		- 17:54 · [[GitP/A/Session/26/10/24-Sat/Asset/Audio/Full/mp3]] · [Download the MP3](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___Audio___Full.mp3)
 		- Recorded in Ableton Live at 120 BPM. [[Making/Music/Log/26/10/24-Sat]] has the session notes.
 		- Select a chapter timestamp to play from that point.
 	- ## Setup
@@ -19,9 +19,9 @@ date-created:: [[2026-10-24 Sat]]
 		- Still to try: separate the headphone output from the audio sent to the [[Zoom H5]], so the cue mix goes to the headphones and the rendered mix to the recorder. [[Zoom H5/Q/How can I record the line out on a MacBook or iPhone while monitoring on the headphone jack?]]
 	- ## Preset
 		- [[Microfreak/Preset/151 The Unstable]] — Pad, V.Analog, paraphonic. The saved slot matched the factory payload after the session, so the edits heard here were not saved.
-		- [Download the slot 151 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___Preset___The-Unstable-Live-2026-10-24.bin)
+		- [Download the slot 151 capture](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___Preset___The-Unstable-Live-2026-10-24.bin)
 	- ## MIDI
-		- [Download the session MIDI](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___MIDI___Session.mid) · [[GitP/A/Session/26/10/24-Sat/Asset/MIDI/Session/mid]]
+		- [Download the session MIDI](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___MIDI___Session.mid) · [[GitP/A/Session/26/10/24-Sat/Asset/MIDI/Session/mid]]
 		- Times below follow the recording. Control names come from [[Microfreak/UG/21 Appendix D - CC Values]]. With [V.Analog]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog]]), the panel's [Wave knob]([[Microfreak/UI/Oscillator/Knob/Wave]]) (CC 10) sets [Detune]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Detune]]), the [Timbre knob]([[Microfreak/UI/Oscillator/Knob/Timbre]]) (CC 12) sets [Shape]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Shape]]), and the [Shape knob]([[Microfreak/UI/Oscillator/Knob/Shape]]) (CC 13) sets [Wave]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Wave]]). [[Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog]]
 		  id:: 6add3dae-8dc8-4156-a5ea-23f7290d9173
 	- ## Voices

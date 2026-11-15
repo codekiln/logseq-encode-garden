@@ -7,7 +7,7 @@ date-created:: [[2026-10-07 Wed]]
 
 - # GitP.26.10.07
 	- A MicroFreak improvisation recorded in Ableton Live at 109 BPM. Its sections run from a toccata and a 90's air tune through a Casio-style passage and a sequence to a closing descan-sigh.
-	- ![GitP.26.10.07 — episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___07-Wed___Asset___Synth___Full.mp3)
+	- ![GitP.26.10.07 — episode recording](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___07-Wed___Asset___Synth___Full.mp3)
 	- ## Chapters
 		- 02:24.771 — tocatta
 		- 02:47.615 — some 90's air tune
@@ -22,7 +22,7 @@ date-created:: [[2026-10-07 Wed]]
 	- ## Session Notes
 		-
 	- ## Downloads
-		- [Full-session MIDI — notes and controller changes](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___07-Wed___Asset___MIDI___Full.mid)
+		- [Full-session MIDI — notes and controller changes](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___07-Wed___Asset___MIDI___Full.mid)
 	- ## Recording
 		- [[Making/Music/Log/26/10/08 Thu]]
 		- Recorded October 7, 2026, in Ableton Live at 109 BPM. The 9:41 episode is arranged from sections of one longer take.

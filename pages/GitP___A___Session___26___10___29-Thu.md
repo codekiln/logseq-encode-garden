@@ -7,10 +7,10 @@ date-created:: [[2026-10-29 Thu]]
 
 - # Hallowed Speaking
 	- The ghost made a hot appearance here for a live fall fest. Speech patches caught the vibe, gave way to swelling pads, unstable tones and filtered noise, with phrases captured and returned as overlapping audio loops.
-	- ![Episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___29-Thu___Asset___Audio___Halloween.mp3)
+	- ![Episode recording](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___29-Thu___Asset___Audio___Halloween.mp3)
 	- ## Recording and Prep
 	  collapsed:: true
-		- 46:39 · [[GitP/A/Session/26/10/29-Thu/Asset/Audio/Halloween/mp3]] · [Download the MP3](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___29-Thu___Asset___Audio___Halloween.mp3)
+		- 46:39 · [[GitP/A/Session/26/10/29-Thu/Asset/Audio/Halloween/mp3]] · [Download the MP3](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___29-Thu___Asset___Audio___Halloween.mp3)
 		- Recorded on October 29, 2026 in [[Ableton/Live]] at 120 BPM in 4/4. The mix keeps the recorded layer changes, volume rides, reverb and delay. The opening wait and silent end are trimmed; the closing fade remains.
 		- [[Music/Making/Log/26/10/29 Thu - GitP Halloween event prep]] · [[Music/Making/Log/26/10/29 Thu - GitP Halloween event prep/Discussion/Analysis/Opus/26/10/29/0956 ET MicroFreak presets for a Halloween party]]
 		- ### Presets
@@ -29,12 +29,12 @@ date-created:: [[2026-10-29 Thu]]
 			- [[Microfreak/Preset/105 SlowBurn]] — A resonant high-pass Wavetable pad with a slow attack, long release and LFO movement through the wavetable.
 				- [[Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable]] · [Download the saved 105 SlowBurn export](../assets/.remote/logseq-encode-garden/Microfreak___Preset___105-SlowBurn___Asset___Device-Read-2026-10-25.bin)
 			- [[Microfreak/Preset/151 The Unstable]] — A V.Analog pad with a stepped-random oscillator morph, pressure-controlled pulse shape and cycling-envelope resonance movement.
-				- [[Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog]] · [Download the saved 151 The Unstable export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___Preset___The-Unstable-Live-2026-10-24.bin)
+				- [[Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog]] · [Download the saved 151 The Unstable export](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___Preset___The-Unstable-Live-2026-10-24.bin)
 			- [[Microfreak/Preset/141 Digital Sea]] — Noise with a slow attack and cycling-envelope movement of its character, sample-rate reduction and band-pass cutoff.
 				- [[Microfreak/UG/06 Dig Osc/03 Types/13 Noise]] · [Download the saved 141 Digital Sea export](../assets/.remote/logseq-encode-garden/Microfreak___Preset___141-Digital-Sea___Asset___Device-Read-2026-10-25.bin)
 		- ### MIDI
 		  collapsed:: true
-			- [Download the aligned session MIDI](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___29-Thu___Asset___MIDI___Halloween.mid) · [[GitP/A/Session/26/10/29-Thu/Asset/MIDI/Halloween/mid]]
+			- [Download the aligned session MIDI](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___29-Thu___Asset___MIDI___Halloween.mid) · [[GitP/A/Session/26/10/29-Thu/Asset/MIDI/Halloween/mid]]
 			- The MIDI retains the Launchpad-to-MicroFreak and MicroFreak-to-Launchpad input streams, including note pressure, pitch bend and controller changes. Audio loops can continue while the captured input is quiet, so the MIDI describes the playing and control gestures rather than every repeated sound in the mix.
 			- The MIDI contains no preset-program, bank-selection or oscillator-type messages. The preset order comes from the performance account; the chapter boundaries follow captures and gestures rather than verified preset switches. [[Microfreak/UG/21 Appendix D - CC Values]] gives the controller names.
 	- ## Chapters
