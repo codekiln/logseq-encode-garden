@@ -47,6 +47,8 @@ preset-synth-file-sha256:: c1fd8141fd618369eedab241e3df0de7e8699f8d51e9e72b60a95
 		- [Decay/Release]([[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Knob/Decay Rel]]): 0.000 (factory 0.259).
 		- [Paraphonic]([[Microfreak/UI/Front/Row/01 Top/02 Paraphonic Button]]): off (factory on).
 		- [Seq]([[Microfreak/UI/Front/Row/03 Bottom/03 Arp Seq/Button/Arp Seq/Seq]]): on (factory off).
+	- ## Performance and session context
+		- In [[GitP/A/Session/26/11/14-Sat]] a recording of the chirp, made from the MicroFreak on November 12, 2026, sat on pad D♯2 of the Piano Pool drum rack. Launchpad sequencer track 2 struck it on most half-minute boundaries of the performance. The MicroFreak itself played [[Microfreak/Preset/259 Infini Pad]] during the performance, so the saved settings here describe the recorded chirp rather than anything played live.
 	- ## Evidence and interpretation
 		- Values describe saved base settings before modulation. Controls use normalized 0…1 values unless a stored choice code is shown; they are not OLED percentages, hertz or milliseconds.
 		- The [saved-parameter inspector](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/PARAMETERS.md) preserves the original fields. Oscillator interpretation assumes the documented firmware 5 layout; firmware is not detected from the export.
