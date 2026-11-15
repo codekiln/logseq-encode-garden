@@ -1,5 +1,5 @@
-# Exercise Plan
-	- Strength is the priority. Three gym sessions, daily walking, and a mix of easy, moderate, and brief hard cardio fit into four or five training days.
+- # Exercise Plan
+	- Strength is the priority. Three gym sessions and three cardio sessions, long and easy, moderate, and brief and hard, fill six days of the week, with daily walking. Monday is the rest day.
 	- Saturday is Day 1 every week. The lifting days use the exercises Huberman demonstrates for Day 2, Day 4, and Day 7 in the Chapter Two videos of [[Person/Andrew Huberman/Book/26/Protocols]].
 	- How to train comes from Huberman's own words in the book and its Chapter Two videos. A question about effort, sets, reps, rest, or recovery is settled by what he says there.
 	- ## Week
@@ -7,7 +7,7 @@
 		- [[My/Exercise/Body/Plan/D2-Lower-Body]] — Sunday
 		- [[My/Exercise/Body/Plan/D3-Recovery]] — Monday
 		- [[My/Exercise/Body/Plan/D4-Torso]] — Tuesday
-		- [[My/Exercise/Body/Plan/D5-Recovery]] — Wednesday
+		- [[My/Exercise/Body/Plan/D5-Moderate-Cardio]] — Wednesday
 		- [[My/Exercise/Body/Plan/D6-Intervals]] — Thursday
 		- [[My/Exercise/Body/Plan/D7-Shoulders-and-Arms]] — Friday
 		- [[My/Exercise/Body/Plan/Mobility-Circuit]] — after Sunday, Tuesday, and Friday lifting
@@ -40,9 +40,7 @@
 		- Walk for five to ten minutes after meals. Walk or pace for at least five minutes for every thirty minutes of sitting or standing.
 		- Seven thousand steps a day is a good goal, and ten thousand is even better. Brisk walking beats slow walking: at least 30 minutes a day, ideally 40–60, at least five days a week.
 		- {{embed [[Exercise/Body/Cardio/Walk]]}}
-	- ## Four-day week and missed sessions
-		- Keep Saturday cardio and Sunday, Tuesday, and Friday lifting. Omit Thursday's hard intervals. Saturday remains Day 1.
-		- If Tuesday is too long, reduce or omit its cardio before rushing the strength work. Shorter walks can add moderate activity elsewhere in the week.
+	- ## Missed sessions
 		- After a missed day, keep the order of the week; moving sessions around makes the schedule fall like dominoes. Stick to it as best you can, missing days here and there or doubling up when there is no other option.
 		- If the long cardio day is missed, skip it and train legs on schedule rather than moving it onto leg day.
 	- ## Exercise references
