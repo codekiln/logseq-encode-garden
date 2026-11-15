@@ -3,7 +3,7 @@ up:: [[Microfreak/UI/Front/Row/01 Top]]
 
 - # Master knob
 	- Sets the output level of the line and headphone outputs.
-	- ![Master knob](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Front___Row___Top___08%20Master%20Knob___Asset___Panel.png)
+	- ![Master knob](../assets/.remote/logseq-encode-garden/Microfreak___UI___Front___Row___01-Top___08-Master-Knob___Asset___Panel.png)
 	- ## Values
 		- Not saved with a preset; use Utility > Preset > Preset volume to balance presets.
 	- ## Source

@@ -3,7 +3,7 @@ up:: [[Microfreak/UI/Front/Row/04 Icon Strip]]
 
 - # Order | B button
 	- In the Arpeggiator, plays the held keys in the order they were pressed; in the Sequencer, selects pattern B.
-	- ![Order | B button](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Front___Row___Bottom___07%20Icon%20Strip___Button___Order%20B___Asset___Panel.png)
+	- ![Order | B button](../assets/.remote/logseq-encode-garden/Microfreak___UI___Front___Row___04-Icon-Strip___Button___Order-B___Asset___Panel.png)
 	- ## Gestures
 		- [[Microfreak/UI/Front/Row/04 Icon Strip/Button/Order B/Shift]]
 		- [[Microfreak/UI/Front/Row/04 Icon Strip/Button/Order B/Hold]]

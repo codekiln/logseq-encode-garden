@@ -3,7 +3,7 @@ up:: [[Microfreak/UI/Front/Row/02 Main]]
 
 - # Analog Filter
 	- The filter section of the middle row: the Type button, Cutoff and Resonance.
-	- ![Analog Filter](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Front___Row___Middle___03%20Analog%20Filter___Asset___Panel.png)
+	- ![Analog Filter](../assets/.remote/logseq-encode-garden/Microfreak___UI___Front___Row___02-Main___03-Analog-Filter___Asset___Panel.png)
 	- ## Controls
 		- [[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Button/Type]]
 		- [[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Cutoff]]

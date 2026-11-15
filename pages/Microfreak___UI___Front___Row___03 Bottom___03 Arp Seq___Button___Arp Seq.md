@@ -3,7 +3,7 @@ up:: [[Microfreak/UI/Front/Row/03 Bottom/03 Arp Seq]]
 
 - # Arp | Seq button
 	- Turns the Arpeggiator or the Sequencer on and off.
-	- ![Arp | Seq button](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Front___Row___Bottom___03%20Arp%20Seq___Button___Arp%20Seq___Asset___Panel.png)
+	- ![Arp | Seq button](../assets/.remote/logseq-encode-garden/Microfreak___UI___Front___Row___03-Bottom___03-Arp-Seq___Button___Arp-Seq___Asset___Panel.png)
 	- ## Settings
 		- [[Microfreak/UI/Front/Row/03 Bottom/03 Arp Seq/Button/Arp Seq/Arp]]
 		- [[Microfreak/UI/Front/Row/03 Bottom/03 Arp Seq/Button/Arp Seq/Seq]]

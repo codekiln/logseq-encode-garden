@@ -3,7 +3,7 @@ up:: [[Microfreak/UI/Front/Row/03 Bottom]]
 
 - # Envelope
 	- The main envelope section at the right of the bottom row.
-	- ![Envelope](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Front___Row___Bottom___05%20Envelope___Asset___Panel.png)
+	- ![Envelope](../assets/.remote/logseq-encode-garden/Microfreak___UI___Front___Row___03-Bottom___05-Envelope___Asset___Panel.png)
 	- ## Controls
 		- [[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Button/Amp Mod]]
 		- [[Microfreak/UI/Front/Row/03 Bottom/05 Envelope/Knob/Attack]]

@@ -3,7 +3,7 @@ up:: [[Microfreak/UI/Front/Row/03 Bottom/03 Arp Seq]]
 
 - # Arp | Seq Rate knob
 	- Sets the tempo of the Arpeggiator and Sequencer; during step recording it steps through the sequence.
-	- ![Arp | Seq Rate knob](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Front___Row___Bottom___03%20Arp%20Seq___Knob___Rate___Asset___Panel.png)
+	- ![Arp | Seq Rate knob](../assets/.remote/logseq-encode-garden/Microfreak___UI___Front___Row___03-Bottom___03-Arp-Seq___Knob___Rate___Asset___Panel.png)
 	- ## Behavior
 		- Endless encoder with a push switch; the Sync LED shows when it follows the clock.
 	- ## Gestures

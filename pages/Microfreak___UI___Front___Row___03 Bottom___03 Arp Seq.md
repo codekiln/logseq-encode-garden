@@ -3,7 +3,7 @@ up:: [[Microfreak/UI/Front/Row/03 Bottom]]
 
 - # Arp Seq
 	- The Arpeggiator and Sequencer section of the bottom row.
-	- ![Arp / Seq](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Front___Row___Bottom___03%20Arp%20Seq___Asset___Panel.png)
+	- ![Arp / Seq](../assets/.remote/logseq-encode-garden/Microfreak___UI___Front___Row___03-Bottom___03-Arp-Seq___Asset___Panel.png)
 	- ## Controls
 		- [[Microfreak/UI/Front/Row/03 Bottom/03 Arp Seq/Button/Arp Seq]]
 		- [[Microfreak/UI/Front/Row/03 Bottom/03 Arp Seq/Button/Oct Mod]]

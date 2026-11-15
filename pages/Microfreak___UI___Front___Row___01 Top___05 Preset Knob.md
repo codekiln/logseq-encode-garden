@@ -3,7 +3,7 @@ up:: [[Microfreak/UI/Front/Row/01 Top]]
 
 - # Preset knob
 	- Browses presets and steps through menu values on the display.
-	- ![Preset knob](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Front___Row___Top___05%20Preset%20Knob___Asset___Panel.png)
+	- ![Preset knob](../assets/.remote/logseq-encode-garden/Microfreak___UI___Front___Row___01-Top___05-Preset-Knob___Asset___Panel.png)
 	- ## Behavior
 		- Endless encoder with a push switch.
 	- ## Values

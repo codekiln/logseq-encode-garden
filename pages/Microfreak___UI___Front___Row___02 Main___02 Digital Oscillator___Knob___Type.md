@@ -3,7 +3,7 @@ up:: [[Microfreak/UI/Front/Row/02 Main/02 Digital Oscillator]]
 
 - # Type knob
 	- Selects the oscillator model.
-	- ![Type knob](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Front___Row___Middle___02%20Digital%20Oscillator___Knob___Type___Asset___Panel.png)
+	- ![Type knob](../assets/.remote/logseq-encode-garden/Microfreak___UI___Front___Row___02-Main___02-Digital-Oscillator___Knob___Type___Asset___Panel.png)
 	- ## Same control
 		- [[Microfreak/UI/Oscillator/Knob/Type]]
 	- ## Gestures

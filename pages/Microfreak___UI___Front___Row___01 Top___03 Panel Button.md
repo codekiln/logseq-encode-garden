@@ -3,7 +3,7 @@ up:: [[Microfreak/UI/Front/Row/01 Top]]
 
 - # Panel button
 	- Applies the current position of every knob to the loaded preset.
-	- ![Panel button](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Front___Row___Top___03%20Panel%20Button___Asset___Panel.png)
+	- ![Panel button](../assets/.remote/logseq-encode-garden/Microfreak___UI___Front___Row___01-Top___03-Panel-Button___Asset___Panel.png)
 	- ## Behavior
 		- Momentary; it works once after each preset load.
 	- ## Source

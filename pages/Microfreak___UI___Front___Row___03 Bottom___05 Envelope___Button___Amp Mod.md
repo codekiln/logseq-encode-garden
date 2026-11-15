@@ -3,7 +3,7 @@ up:: [[Microfreak/UI/Front/Row/03 Bottom/05 Envelope]]
 
 - # Amp Mod button
 	- When on, the envelope shapes the volume as well as the filter.
-	- ![Amp Mod button](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Front___Row___Bottom___05%20Envelope___Button___Amp%20Mod___Asset___Panel.png)
+	- ![Amp Mod button](../assets/.remote/logseq-encode-garden/Microfreak___UI___Front___Row___03-Bottom___05-Envelope___Button___Amp-Mod___Asset___Panel.png)
 	- ## Behavior
 		- Toggle.
 	- ## Source

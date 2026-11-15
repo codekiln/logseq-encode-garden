@@ -3,7 +3,7 @@ up:: [[Microfreak/UI/Front/Row/04 Icon Strip]]
 
 - # Hold button
 	- Keeps held keys sounding after the fingers lift; while recording a sequence it enters a tie or a rest.
-	- ![Hold button](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Front___Row___Bottom___07%20Icon%20Strip___Button___Hold___Asset___Panel.png)
+	- ![Hold button](../assets/.remote/logseq-encode-garden/Microfreak___UI___Front___Row___04-Icon-Strip___Button___Hold___Asset___Panel.png)
 	- ## Behavior
 		- Toggle; its state is not saved with the preset.
 	- ## Remote control

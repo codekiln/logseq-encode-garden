@@ -3,7 +3,7 @@ up:: [[Microfreak/UI/Front/Row/03 Bottom/01 Octave]]
 
 - # Octave Up button
 	- Shifts the keyboard one octave up, as far as three octaves.
-	- ![Octave Up button](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Front___Row___Bottom___01%20Octave___Button___Up___Asset___Panel.png)
+	- ![Octave Up button](../assets/.remote/logseq-encode-garden/Microfreak___UI___Front___Row___03-Bottom___01-Octave___Button___Up___Asset___Panel.png)
 	- ## Behavior
 		- The buttons blink faster the farther the shift is from zero.
 	- ## Values
