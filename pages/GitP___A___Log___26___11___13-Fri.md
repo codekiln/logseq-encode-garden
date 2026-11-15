@@ -2,7 +2,7 @@ prev:: [[GitP/A/Log/26/11/12-Thu]]
 next:: [[GitP/A/Log/26/11/14-Sat]]
 
 - [[2026-11-13 Fri]]
-	- ## Working on [[GitP/Ceremon/y/Forevetran]]
+	- ## Working on [[GitP/Ceremon/y/Fallveter]]
 		- I have three [[Ableton/Live/Instrument/Drum]] in `26.11.12-Forever-Veteran`; I'd like to get it down to 16 pads total to simplify things.
 		- ### top row
 		  collapsed:: true

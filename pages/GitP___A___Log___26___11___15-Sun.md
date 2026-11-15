@@ -1,0 +1,4 @@
+- [[2026-11-15 Sun]]
+	- ## reviewing [[GitP/A/Session/26/11/14-Sat]]
+		- What should we call these ceremonies that happen in the open garden, with ceremonial participants, attendants?
+		-

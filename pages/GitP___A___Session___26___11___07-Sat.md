@@ -5,7 +5,7 @@ public:: true
 created-by:: [[Person/codekiln]]
 date-created:: [[2026-11-07 Sat]]
 
-- # Ghost in the Patch - four colors of inifini
+- # *four colors of inifini*
 	- Four sequencer tracks, four colors, and Infini Pad. The loops gather one at a time, then return in a changed sound.
 	- ![Episode recording](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___11___07-Sat___Asset___Audio___Full.mp3)
 	- ## [[GitP/Ceremon/y/Note]]s
