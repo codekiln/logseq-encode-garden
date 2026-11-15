@@ -16,7 +16,7 @@ see-also:: [[Music/Concept/Scientific Pitch Notation]], [[Music/Note]]
 		- [[Ableton/Live]] and Arturia's MicroFreak manual name MIDI note 60 C3, so their octave numbers run one lower. Add one to their octave number before linking a note: a drum pad Live labels D♯2 is [[D♯3]].
 		- [[Microfreak/UI/Front/Row/03 Bottom/01 Octave/Ref/Key Range]] gives the MicroFreak's keys in both namings at each octave shift.
 	- ## Frontmatter
-		- `logseq-entity:: [[Logseq/Entity/Music/Note]]`, and the `alias::` above.
+		- The page carries `logseq-entity:: [[Logseq/Entity/Music/Note]]` and the `alias::` above.
 		- [[Logseq/Entity/Music/Note/Frontmatter/midi-note]] records the MIDI note number.
 		- `prev::` and `next::` link the notes a semitone below and above.
 	- ## Page shape
