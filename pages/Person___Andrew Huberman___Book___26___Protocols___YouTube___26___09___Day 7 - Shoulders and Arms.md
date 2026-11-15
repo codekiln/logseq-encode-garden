@@ -45,7 +45,7 @@ logseq-created-time-year:: [[20/2/6]]
 						- {{youtube-timestamp 64}} You want to bend your knees, and you're essentially ~~dead, lifting~~ [deadlifting] them off the floor. If they're light enough for you to swing up to your shoulders, like so, you could [overhead press them]([[Exercise/Body/Strength/Dumbbell Overhead Press]]) like this. Right like this.
 						- {{youtube-timestamp 80}} And then you'd have to carefully set them back down. So you could do this with a [flat bench]([[Equipment/Exercise/Weight Bench]]) like so, or you could do it with a-- you could do a back supported.
 						- {{youtube-timestamp 89}} So in this case, you're going to kick it up to your shoulders, and plant your feet strong and press overhead. Lower them, press overhead like so, until you would reach failure on your work sets. And then you'd let them drop to your knees.
-			- ### {{youtube-timestamp 105}} [[Exercise/Body/Strength/Machine Shoulder Press]]
+			- ### {{youtube-timestamp 105}} Machine variations, mentioned: [[Exercise/Body/Strength/Machine Shoulder Press]]
 			  id:: 7a5ed56a-fca1-4109-954d-048c1a74fae8
 			  collapsed:: true
 				- Machine variations of the overhead press, still compound movements. Huberman favors barbells and dumbbells because balancing the weight takes extra coordination.
@@ -68,7 +68,7 @@ logseq-created-time-year:: [[20/2/6]]
 						- {{youtube-timestamp 158}} Most people will have to use a relatively light [dumbbells]([[Equipment/Exercise/Dumbbell]]), maybe even as little as 5 pounds, to [make] sure you're doing them under control and you're raising them up and in front of you.
 						- {{youtube-timestamp 165}} The best targeting of these muscles is often by keeping your thumbs a little bit higher, or level with your pinkies and bring them out. You'll notice they're a little bit in front of my body. But you have to experiment for you.
 						- {{youtube-timestamp 177}} Some people find that straight out to the side, targets those muscles best, other people in front of their body a little bit. You have to find what targets those side delts best.
-			- ### {{youtube-timestamp 185}} [[Exercise/Body/Strength/Front Raise]]
+			- ### {{youtube-timestamp 185}} Front raise, mentioned: [[Exercise/Body/Strength/Front Raise]]
 			  id:: 0866e5ad-c910-41ee-b272-af0d3bb6a115
 			  collapsed:: true
 				- With dumbbells or cables, if the bench and shoulder presses don't develop the front deltoids enough.

@@ -69,7 +69,7 @@ logseq-created-time-year:: [[20/2/6]]
 						- {{youtube-timestamp 264}} But again, people's shapes and abilities to target different movements, neural control of different muscles varies. You have to experiment. That's the key thing about this break in period of experimenting with movements.
 						- {{youtube-timestamp 277}} Or if you're an experienced lifter, you already know what's best for you to target your quadriceps with compound movements safely. Again, there's a huge number of different excellent compound exercises for the quadriceps.
 						- {{youtube-timestamp 289}} I tried to show you the ones that you're most likely to have or encounter the equipment for.
-			- ### {{youtube-timestamp 294}} Other compound options: [[Exercise/Body/Strength/Belt Squat]]
+			- ### {{youtube-timestamp 294}} Belt squat, mentioned: [[Exercise/Body/Strength/Belt Squat]]
 			  id:: b99e21b7-702f-4ac6-88b4-dac7a99aeff0
 			  collapsed:: true
 				- Huberman likes the belt squat, though most gyms don't have one.

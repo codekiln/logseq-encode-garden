@@ -143,7 +143,7 @@ logseq-created-time-year:: [[20/2/6]]
 						- {{youtube-timestamp 543}} Some people will try using dumbbell pullovers lying on a bench. The problem there's no resistance at the top, and getting that right without putting undue stress on the shoulder can be tricky.
 						- {{youtube-timestamp 553}} But if you're interested in that, there are a lot of YouTube videos on how you could do that. So back is one of the movements where I'm not going to show you any isolation movements.
 						- {{youtube-timestamp 560}} I know you'll do just fine with pull downs or [pull ups]([[Exercise/Body/Strength/Pull-Up]]) of some sort, and some sort of rowing movement. With progressive overload, your back will get plenty strong.
-			- ### {{youtube-timestamp 568}} [[Exercise/Body/Strength/Shrug]]
+			- ### {{youtube-timestamp 568}} Shrugs, mentioned: [[Exercise/Body/Strength/Shrug]]
 			  id:: 17a80f05-1d17-4b76-a914-6ba7317adb0d
 			  collapsed:: true
 				- Deadlifts and rows work the traps. Shrugs are optional; people with rounded shoulders may want to skip them.
@@ -191,7 +191,7 @@ logseq-created-time-year:: [[20/2/6]]
 						- {{youtube-timestamp 780}} Really trains your core and your grip, it takes basically no time as compared to doing lots of crunches or something. The goal is to get three sets of five repetitions of full pikes.
 						- {{youtube-timestamp 793}} Your core will be very, very strong and that will serve you on all the other lifts. For stability, for safety, for posture. Having a strong core is really important functionally and for safety reasons.
 						- {{youtube-timestamp 804}} So the goal is ultimately that the pike looks something like this where you pike your legs up because really all it is a knee raise an l-sit, and this. That's the progression. I find these to be immensely useful for strengthening the core and grip all at once.
-			- ### {{youtube-timestamp 821}} [[Exercise/Body/Strength/Plate Neck Raise]] and [[Exercise/Body/Strength/Chin Tuck]]
+			- ### {{youtube-timestamp 821}} Neck training, pointer to another video: [[Exercise/Body/Strength/Plate Neck Raise]] and [[Exercise/Body/Strength/Chin Tuck]]
 			  id:: 330a11fd-6b04-4b90-921d-9619310f7c93
 			  collapsed:: true
 				- Huberman points to [[Person/Andrew Huberman/Book/26/Protocols/YouTube/16/11/Neck Exercises that Kill Your Neck]] for neck training.
