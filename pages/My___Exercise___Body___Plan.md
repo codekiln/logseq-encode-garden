@@ -1,6 +1,6 @@
 - # Exercise Plan
 	- Strength is the priority. Three gym sessions, daily walking, and a mix of easy, moderate, and brief hard cardio fit into four or five training days.
-	- Saturday is Day 1 every week. The lifting days follow the lower-body, torso, and shoulder emphasis in [[Person/Andrew Huberman/Book/26/Protocols]], with additional exercises spread across the week.
+	- Saturday is Day 1 every week. The lifting days use the exercises Huberman demonstrates for Day 2, Day 4, and Day 7 in the Chapter Two videos of [[Person/Andrew Huberman/Book/26/Protocols]].
 	- ## Week
 		- [[My/Exercise/Body/Plan/D1-Long-Run]] — Saturday
 		- [[My/Exercise/Body/Plan/D2-Lower-Body]] — Sunday
@@ -35,6 +35,6 @@
 		- Resume the next feasible session after a missed day. Avoid doubling heavy sessions to catch up; keep Saturday's calendar anchor.
 	- ## Exercise references
 		- [[Person/Andrew Huberman/Book/26/Protocols/Exercise Guide]]: the typed exercise pages, with setup, movement cues, substitutions, and demonstrations.
-		- [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]]: torso exercise demonstrations, transcript, and highlights.
+		- [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]], [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]], and [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]]: each lifting day's demonstrations and transcript.
 		- [[Person/Andrew Huberman/Book/26/Protocols]]: lower-body, torso, shoulder, and mobility video notes.
 		- [Official Chapter Two demonstrations](https://www.hubermanlab.com/protocols-resources).

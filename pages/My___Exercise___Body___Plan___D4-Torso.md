@@ -1,22 +1,37 @@
 - # Tuesday — Day 4: Torso and Moderate Cardio
 	- Allow roughly 75–95 minutes for lifting and cardio; splitting them into separate times of day is another option. Warm up and choose loads per [[My/Exercise/Body/Plan]], and finish with [[My/Exercise/Body/Plan/Mobility-Circuit]] if time allows.
 	- The chapter places the moderate cardio on Day 5. Pairing it with Tuesday's gym session makes a five-day training week.
-	- ## Barbell bench press: 3 sets of 6–8 reps
-		- Set the rack safeties or use a spotter.
-		- {{embed [[Exercise/Body/Strength/Barbell Bench Press]]}}
-		- Alternative: machine chest press.
-			- {{embed [[Exercise/Body/Strength/Machine Chest Press]]}}
-	- ## Pull-up or lat pulldown: 3 sets of 6–10 reps
-		- Select assistance or machine load that permits controlled reps.
-		- {{embed [[Exercise/Body/Strength/Pull-Up]]}}
-		- {{embed [[Exercise/Body/Strength/Lat Pulldown]]}}
-	- ## Rear-foot-elevated split squat: 2 sets of 8 reps per side
-		- Begin with body weight or light dumbbells and stable support.
-		- {{embed [[Exercise/Body/Strength/Rear-Foot-Elevated Split Squat]]}}
-	- ## Pallof press: 2 sets of 8–12 reps per side
-		- Pause briefly at full reach.
-		- {{embed [[Exercise/Body/Strength/Pallof Press]]}}
+	- Chest, back, lower back, and abdominals, using the exercises Huberman demonstrates in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]].
+	- ## Chest
+		- ### Barbell bench press: 3 work sets of 6–10 reps
+			- Set the rack safeties or use a spotter. When benching alone, dumbbells are the safer choice.
+			- {{embed [[Exercise/Body/Strength/Barbell Bench Press]]}}
+			- Alternatives Huberman shows: [[Exercise/Body/Strength/Dumbbell Bench Press]] or [[Exercise/Body/Strength/Incline Bench Press]].
+		- ### Dip: 2 work sets of 6–12 reps
+			- The dips also count toward Friday's triceps work.
+			- {{embed [[Exercise/Body/Strength/Dip]]}}
+		- ### Dumbbell fly: 2 work sets of 8–15 reps
+			- {{embed [[Exercise/Body/Strength/Dumbbell Fly]]}}
+			- Alternative Huberman shows: [[Exercise/Body/Strength/Cable Fly]] or a fly machine.
+	- ## Back
+		- Huberman trains back with compound exercises only.
+		- ### Pull-up or lat pulldown: 3 work sets of 6–10 reps
+			- Select assistance or machine load that permits controlled reps.
+			- {{embed [[Exercise/Body/Strength/Pull-Up]]}}
+			- {{embed [[Exercise/Body/Strength/Lat Pulldown]]}}
+		- ### Dumbbell row: 2 work sets of 6–10 reps per side
+			- {{embed [[Exercise/Body/Strength/Dumbbell Row]]}}
+			- Alternatives Huberman names: barbell or machine rows. He names the [[Exercise/Body/Strength/Shrug]] as an option for the traps.
+	- ## Lower back
+		- ### Back extension: 2 work sets of 8–15 reps
+			- {{embed [[Exercise/Body/Strength/Back Extension]]}}
+			- Without a bench, Huberman lifts his legs while holding a high countertop.
+	- ## Abdominals and core
+		- ### Hanging leg raise: 2–3 sets
+			- Progress from knee raises to the L-sit to pikes, as on the exercise page.
+			- {{embed [[Exercise/Body/Strength/Hanging Leg Raise]]}}
+	- ## Optional neck
+		- Huberman points to [[Person/Andrew Huberman/Book/26/Protocols/YouTube/16/11/Neck Exercises that Kill Your Neck]]: [[Exercise/Body/Strength/Plate Neck Raise]] and [[Exercise/Body/Strength/Chin Tuck]].
 	- ## Steady-state cardio: 20–25 minutes
 		- After lifting, warm up easily for five minutes and ride a bike or elliptical at a steady moderate effort. Build toward the chapter's 25–30 minutes.
 		- {{embed [[Exercise/Body/Cardio/Steady-State Cardio]]}}
-	- Demonstrations, transcript, and highlights: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]].

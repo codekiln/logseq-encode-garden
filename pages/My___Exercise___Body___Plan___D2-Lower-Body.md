@@ -1,15 +1,21 @@
 - # Sunday — Day 2: Lower Body
-	- Allow roughly 50–70 minutes for lifting and warm-ups. Warm up and choose loads per [[My/Exercise/Body/Plan]], and finish with [[My/Exercise/Body/Plan/Mobility-Circuit]] if time allows.
-	- ## Back squat: 3 work sets of 6–8 reps
-		- {{embed [[Exercise/Body/Strength/Back Squat]]}}
-		- Alternative: use a leg press if its setup permits a more comfortable controlled range.
-			- {{embed [[Exercise/Body/Strength/Leg Press]]}}
-	- ## Romanian deadlift: 2 sets of 6–10 reps
-		- {{embed [[Exercise/Body/Strength/Romanian Deadlift]]}}
-		- Alternative: a trap-bar deadlift. Choose one hinge for this session.
-			- {{embed [[Exercise/Body/Strength/Trap-Bar Deadlift]]}}
-	- ## Seated cable row: 2 sets of 8–10 reps
-		- {{embed [[Exercise/Body/Strength/Seated Cable Row]]}}
-	- ## Standing calf raise: 2 sets of 8–15 reps
-		- {{embed [[Exercise/Body/Strength/Standing Calf Raise]]}}
-	- Demonstrations: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]].
+	- Allow roughly 60–80 minutes for lifting and warm-ups. Warm up and choose loads per [[My/Exercise/Body/Plan]], and finish with [[My/Exercise/Body/Plan/Mobility-Circuit]] if time allows.
+	- Quadriceps, hamstrings, and calves, each with a compound exercise and an isolation exercise, using the exercises Huberman demonstrates in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]].
+	- ## Quadriceps
+		- ### Back squat: 3 work sets of 6–10 reps
+			- {{embed [[Exercise/Body/Strength/Back Squat]]}}
+			- Alternatives Huberman shows: [[Exercise/Body/Strength/Front Squat]], [[Exercise/Body/Strength/Hack Squat]], or [[Exercise/Body/Strength/Rear-Foot-Elevated Split Squat]]. He also names the [[Exercise/Body/Strength/Belt Squat]]. Choose one squat for the session.
+		- ### Leg extension: 2 work sets of 8–15 reps
+			- {{embed [[Exercise/Body/Strength/Leg Extension]]}}
+	- ## Hamstrings
+		- ### Deadlift: 2 work sets of 6–10 reps
+			- Pull from the floor with a straight bar, as Huberman does.
+			- {{embed [[Exercise/Body/Strength/Deadlift]]}}
+			- Alternative Huberman names: [[Exercise/Body/Strength/Glute-Ham Raise]].
+		- ### Lying leg curl: 2 work sets of 8–15 reps
+			- {{embed [[Exercise/Body/Strength/Lying Leg Curl]]}}
+			- Alternative Huberman names: [[Exercise/Body/Strength/Standing Leg Curl]].
+	- ## Calves
+		- ### Standing calf raise: 2 work sets of 8–15 reps on the machine, then 2 single-leg sets holding a dumbbell
+			- {{embed [[Exercise/Body/Strength/Standing Calf Raise]]}}
+			- Huberman also names the seated calf raise.

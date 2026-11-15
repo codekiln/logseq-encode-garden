@@ -1,19 +1,36 @@
 - # Friday — Day 7: Shoulders and Arms
-	- Allow roughly 55–75 minutes for lifting and warm-ups; trim the optional calf work first when time is short. Warm up and choose loads per [[My/Exercise/Body/Plan]], and finish with [[My/Exercise/Body/Plan/Mobility-Circuit]].
-	- ## Overhead press: 3 sets of 6–8 reps
-		- {{embed [[Exercise/Body/Strength/Overhead Press]]}}
-	- ## Machine chest press: 2 sets of 8–10 reps
-		- {{embed [[Exercise/Body/Strength/Machine Chest Press]]}}
-	- ## Chest-supported row: 2 sets of 8–10 reps
-		- {{embed [[Exercise/Body/Strength/Chest-Supported Row]]}}
-	- ## Biceps curl: 2 sets of 10–15 reps
-		- {{embed [[Exercise/Body/Strength/Biceps Curl]]}}
-	- ## Triceps pressdown: 2 sets of 10–15 reps
-		- {{embed [[Exercise/Body/Strength/Triceps Pressdown]]}}
-	- ## Forearm plank: 2 holds of 20–40 seconds
-		- End each hold while the torso is still stable. Use an incline or shorter hold if needed.
-		- {{embed [[Exercise/Body/Strength/Forearm Plank]]}}
-	- ## Optional standing calf raise: 2 sets of 8–15 reps
-		- Include it if Sunday's work has recovered.
+	- Allow roughly 60–80 minutes for lifting and warm-ups; trim the optional forearm and calf work first when time is short. Warm up and choose loads per [[My/Exercise/Body/Plan]], and finish with [[My/Exercise/Body/Plan/Mobility-Circuit]].
+	- Shoulders, biceps, triceps, and abdominals, using the exercises Huberman demonstrates in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]], plus the face pull the book asks for on this day.
+	- ## Shoulders
+		- ### Overhead press: 3 work sets of 6–10 reps
+			- {{embed [[Exercise/Body/Strength/Overhead Press]]}}
+			- Alternative Huberman shows: [[Exercise/Body/Strength/Dumbbell Overhead Press]]. He also names the [[Exercise/Body/Strength/Machine Shoulder Press]].
+		- ### Lateral raise: 2 work sets of 8–15 reps
+			- {{embed [[Exercise/Body/Strength/Lateral Raise]]}}
+		- ### Rear delt fly: 2 work sets of 8–15 reps
+			- {{embed [[Exercise/Body/Strength/Rear Delt Fly]]}}
+		- ### Face pull: 2 work sets of 12–15 reps
+			- Use a cable machine or exercise band.
+			- {{embed [[Exercise/Body/Strength/Face Pull]]}}
+	- ## Biceps
+		- ### Biceps curl: 2 work sets of 8–15 reps
+			- Dumbbells, both arms together or alternating.
+			- {{embed [[Exercise/Body/Strength/Biceps Curl]]}}
+		- ### Preacher curl: 2 work sets of 8–15 reps
+			- {{embed [[Exercise/Body/Strength/Preacher Curl]]}}
+	- ## Triceps
+		- Tuesday's dips already work the triceps.
+		- ### Overhead cable triceps extension: 2–3 work sets of 6–12 reps
+			- Huberman treats this as the compound triceps movement.
+			- {{embed [[Exercise/Body/Strength/Overhead Cable Triceps Extension]]}}
+		- ### Triceps pressdown: 2 work sets of 8–15 reps
+			- {{embed [[Exercise/Body/Strength/Triceps Pressdown]]}}
+	- ## Abdominals and core
+		- ### Hanging leg raise: 2 sets
+			- The week's second core session, at the progression stage reached on Tuesday.
+			- {{embed [[Exercise/Body/Strength/Hanging Leg Raise]]}}
+	- ## Optional forearms: 3–4 sets of 12–30 reps
+		- Flexor and extensor movements from [[Person/Andrew Huberman/Book/26/Protocols/YouTube/18/12/The Perfect Forearm Workout]]: [[Exercise/Body/Strength/Prone Wrist Curl]], [[Exercise/Body/Strength/Reverse Curl]], [[Exercise/Body/Strength/Reverse Wrist Roll]], [[Exercise/Body/Strength/Wrist Deviation]], [[Exercise/Body/Strength/Forearm Rotation]], [[Exercise/Body/Strength/Farmer's Carry]], or [[Exercise/Body/Strength/Dead Hang]].
+	- ## Optional standing calf raise: 2 work sets of 8–15 reps
+		- Huberman does calf raises twice a week, one of those days being leg day. Include it if Sunday's work has recovered.
 		- {{embed [[Exercise/Body/Strength/Standing Calf Raise]]}}
-	- Demonstrations: [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]].
