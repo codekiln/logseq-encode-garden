@@ -12,7 +12,7 @@ date-created:: [[2026-11-14 Sat]]
 		- The drum part plays the Piano Pool rack: piano notes and pool-cue strikes from the empty hall, one recording from the [[Ableton/Live/Instrument/Drum/Forevertron]], and the low-battery chirp of [[Microfreak/Preset/399 FireAlarmLoBat]], which sounds on most half-minute boundaries.
 		- [[Microfreak/Preset/259 Infini Pad]] answers from the MicroFreak's own keys, caught and looped on two tracks. Pressure on the touch keys pushes the [[Microfreak/UI/Oscillator/Knob/Type/BASS]] oscillator's [[Microfreak/UI/Oscillator/Knob/Type/BASS/Fold]] and [[Microfreak/UI/Oscillator/Knob/Type/BASS/Saturate]] and opens the [[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Cutoff]], so the pad thickens under the fingers. [[Microfreak/UI/Front/Row/05 Keys]]
 		- The ceremony sits on the line [[Person/Steve Reich/Essay/68/Music as a Gradual Process]] draws between a process and an improvisation. The drum line is fixed and audible as a process; the loops are caught by hand.
-		- Listen for the loops' low notes walking F, F minor, G, F, C and D under a clock that never changes, and for the hall going almost silent at 03:20.
+		- Listen for the loops moving through F, F minor, G and F, then settling on a low C, under a clock that never changes. At 03:20 the hall goes almost silent.
 	- ## Chapters
 		- ### 00:00 enter [[Microfreak/Preset/259 Infini Pad]]
 			- #### 00:00 F, and the first strikes
