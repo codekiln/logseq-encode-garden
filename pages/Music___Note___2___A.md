@@ -1,0 +1,8 @@
+logseq-entity:: [[Logseq/Entity/Music/Note]]
+alias:: [[A2]]
+midi-note:: 45
+prev:: [[Music/Note/2/G♯]]
+next:: [[Music/Note/2/A♯]]
+
+- # A2
+	- MIDI note 45, 110 Hz at A440. Ableton Live and Arturia name it A1.

@@ -9,46 +9,58 @@ date-created:: [[2026-11-14 Sat]]
 	- ![Episode recording](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___11___14-Sat___Asset___Audio___Normalized.mp3)
 	- ## Ceremonial Annotations
 		- ### Notes from [[GitP/Acolyte]]
-			- [[GitP/Ceremon/y/Fallveter]], given live on November 14, 2026, keeps time in half-minutes. Each thirty seconds holds one gesture played twice, 8 + 4 + 2 + 1 = 15 beats at 60 BPM. The drum part was composed in advance on the Launchpad sequencer, its patterns chained into one five-minute line and saved as a [Launchpad Project]([[Launchpad/UG/09 Sequencer/12 Projects]]).
-			- The drum part plays the Piano Pool rack: piano notes and pool-cue strikes from the empty hall, one recording from the [[Ableton/Live/Instrument/Drum/Forevertron]], and the low-battery chirp of [[Microfreak/Preset/399 FireAlarmLoBat]], which sounds on most half-minute boundaries.
-			- [[Microfreak/Preset/259 Infini Pad]] answers from the MicroFreak's own keys, caught and looped on two tracks. Pressure on the touch keys pushes the [[Microfreak/UI/Oscillator/Knob/Type/BASS]] oscillator's [[Microfreak/UI/Oscillator/Knob/Type/BASS/Fold]] and [[Microfreak/UI/Oscillator/Knob/Type/BASS/Saturate]] and opens the [[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Cutoff]], so the pad thickens under the fingers. [[Microfreak/UI/Front/Row/05 Keys]]
-			- The ceremony sits on the line [[Person/Steve Reich/Essay/68/Music as a Gradual Process]] draws between a process and an improvisation. The drum line is fixed and audible as a process; the loops are caught by hand.
-			- Listen for the loops moving through F, F minor, G and F, then settling on a low C, under a clock that never changes. At 03:20 the hall goes almost silent.
+			- #### the clock - `8 + 4 + 2 + 1`
+				- The hall keeps time in half-minutes. Each thirty seconds holds one gesture struck twice: 8 + 4 + 2 + 1 = 15 beats at 60 BPM.
+				- The `1 + 2 + 4 + 8` planned for [[GitP/A/Session/26/11/07-Sat]] returns here reversed, and played in sequence as that ceremony first intended.
+				- The gesture was set down before the meetup on the [[Launchpad/UG/09 Sequencer]], its patterns chained into one five-minute line and kept as a [Launchpad Project]([[Launchpad/UG/09 Sequencer/12 Projects]]).
+			- #### voices in the rack
+				- The Piano Pool rack holds what the empty hall gave on Veterans Day: piano notes, and cue balls struck on the pool table. One more voice comes from the [[Ableton/Live/Instrument/Drum/Forevertron]].
+				- The low-battery chirp of [[Microfreak/Preset/399 FireAlarmLoBat]], a sine at [[G7]], is a signal from a battery running down. It calls most half-minutes to order.
+			- #### the pad that answers
+				- [[Microfreak/Preset/259 Infini Pad]] answers from the MicroFreak's [[Microfreak/UI/Front/Row/05 Keys]], caught and looped on two tracks.
+				- Pressure on the touch keys feeds the [[Microfreak/UI/Oscillator/Knob/Type/BASS]] oscillator's [[Microfreak/UI/Oscillator/Knob/Type/BASS/Fold]] and [[Microfreak/UI/Oscillator/Knob/Type/BASS/Saturate]] and opens the [[Microfreak/UI/Front/Row/02 Main/03 Analog Filter/Knob/Cutoff]]. The pad thickens under the fingers.
+			- #### process and hand
+				- In [[Person/Steve Reich/Essay/68/Music as a Gradual Process]], a process and an improvisation exclude each other. This ceremony keeps one of each: the drum line runs as a process, fixed before the ceremony began, and the loops are caught by hand.
+				- Reich also wrote that playing and hearing a gradual process is an impersonal kind of ritual, attention turned away from the players and out toward the process.
+			- #### listen for
+				- The loops walk through F, F minor, G and F, then settle on a low [[C3]], under a clock that never changes.
+				- At 03:20 the hall goes almost silent.
 	- ## Chapters
 		- ### 00:00 enter [[Microfreak/Preset/259 Infini Pad]]
-			- #### 00:00 F, and the first strikes
+			- #### 00:00 invocation on F
 				- Notes from [[GitP/Acolyte]]
-					- The MicroFreak holds an F, with its octave and the C above, while the orange track records it. From 00:20 the twenty-second take loops.
-					- The sequencer starts the drum part. Each fifteen-beat half strikes at 0, 2, 4 and 8 seconds: a piano note, a cue ball, two more piano notes. The chirp marks 00:00 and 00:30.
-			- #### 00:38 A second voice in F minor
+					- Infini Pad holds an F with its octave and the C above, and the orange track takes it in. From 00:20 that twenty-second take returns as a loop.
+					- The sequencer begins the gesture: a piano note, a cue ball, two more piano notes, struck at 0, 2, 4 and 8 seconds of each fifteen-beat half. The chirp calls 00:00 and 00:30.
+			- #### 00:38 a second voice, in F minor
 				- Notes from [[GitP/Acolyte]]
-					- The green track records a chord on F with A♭ and E♭ in it. From 01:00 it loops every twenty seconds, in step with the F, and the recording grows about 8 dB louder.
-					- At 00:42 the MicroFreak tracks lean right and the drums lean left.
-					- From 01:00 new piano notes vary the gesture, and at 01:30 the Forevertron recording sounds with the chirp.
-			- #### 01:24 The drone steps back
+					- The green track catches a chord on F that holds A♭ and E♭, its minor third and minor seventh. From 01:00 it loops every twenty seconds in step with the F, and the room fills.
+					- At 00:42 the voices take their places: the MicroFreak to the right, the hall's strikes to the left.
+					- From 01:00 new piano notes vary the gesture. At 01:30 the Forevertron sounds with the chirp.
+			- #### 01:24 the drone steps back
 				- Notes from [[GitP/Acolyte]]
-					- The orange track's fader drops to −12 dB and rises again by 01:34. Its F loop stops at 01:32, and from 01:36 it records a new phrase.
-			- #### 02:08 G, then F
+					- The orange fader dips and returns by 01:34. The F loop falls silent at 01:32, and from 01:36 the orange track listens for a new phrase.
+			- #### 02:08 G, then F, out of step
 				- Notes from [[GitP/Acolyte]]
-					- The new loop holds G for nineteen seconds, then F with the C above for thirteen. At 32 seconds long it drifts against the twenty-second F-minor loop.
-					- At 02:30 a piano note, the Forevertron recording and two cue-ball strikes land together, the busiest moment of the drum part.
-			- #### 02:44 Thinning
+					- The new loop holds G for nineteen seconds, then F with the C above for thirteen. At thirty-two seconds it runs against the twenty-second F-minor loop, so the two chords meet at a different place on each pass.
+					- At 02:30 a piano note, the Forevertron and two cue balls land at once, the most crowded moment of the drum line.
+			- #### 02:44 the hall empties
 				- Notes from [[GitP/Acolyte]]
-					- The F-minor loop stops. From 02:54 the green track catches a short phrase and, from 03:04, loops it every four seconds, close to silence.
-					- From 03:00 the drum part keeps only the Forevertron recording and the chirp, once at 03:00 and once at 03:30.
-			- #### 03:20 Near silence
+					- The F-minor loop goes quiet. From 02:54 the green track catches a short phrase, and from 03:04 it turns over every four seconds, close to silence.
+					- From 03:00 the rack keeps two voices, the Forevertron and the chirp, at 03:00 and again at 03:30.
+			- #### 03:20 near silence
 				- Notes from [[GitP/Acolyte]]
-					- The orange track fades out between 03:20 and 03:25, and the recording reaches its quietest point. A new take begins at 03:28, and the fader returns at 03:31.
-			- #### 03:44 Low C
+					- The orange track fades between 03:20 and 03:25, the quietest point of the ceremony. A new take begins at 03:28, and the fader comes back up at 03:31.
+			- #### 03:44 a low C
 				- Notes from [[GitP/Acolyte]]
-					- The last loop holds a low C, first under G and F, then under D and A. For a few seconds only the D remains. It repeats every twenty seconds to the end.
-			- #### 04:00 The gesture returns
+					- The last loop sets a low [[C3]] beneath G and F, then beneath D and A. Neither voicing holds a third, so the close stays open, neither major nor minor.
+					- For a few seconds only the D sounds. Every twenty seconds the loop comes around again, to the end.
+			- #### 04:00 the gesture returns
 				- Notes from [[GitP/Acolyte]]
-					- The drum gesture comes back from its beginning, with the chirp, the Forevertron recording and two piano notes together.
-					- From 04:09 to 04:21 sixteen cue-ball strikes are played by hand on the Launchpad's fourth track, the loudest moments of the recording.
-			- #### 04:24 Fade
+					- The drum gesture starts again from its beginning: the chirp, the Forevertron and two piano notes together.
+					- From 04:09 to 04:21 sixteen cue balls are struck by hand on [[Launchpad/UI/Mode/5-Sequencer/Track/4-Salmon]], the loudest moments of the ceremony.
+			- #### 04:24 the last chirp
 				- Notes from [[GitP/Acolyte]]
-					- The drums come down from 04:24 under a last chirp at 04:30 and are gone by 04:38. The green track fades at 04:34 and the orange track at 04:37.
+					- The drums withdraw from 04:24 beneath a last chirp at 04:30, and are gone by 04:38. The green voice fades at 04:34, the orange at 04:37.
 	- ## Ceremonial Artifacts
 	  collapsed:: true
 		- ### Recording
