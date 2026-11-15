@@ -1,5 +1,5 @@
 - # Sunday — Day 2: Lower Body
-	- Allow roughly 60–80 minutes for lifting and warm-ups. Warm up and choose loads per [[My/Exercise/Body/Plan]], and finish with [[My/Exercise/Body/Plan/Mobility-Circuit]] if time allows.
+	- Plan on 60–80 minutes of work sets, rests included, after the warm-up. Warm up and choose loads per [[My/Exercise/Body/Plan]], and finish with [[My/Exercise/Body/Plan/Mobility-Circuit]] if time allows.
 	- Quadriceps, hamstrings, and calves, each with a compound exercise and an isolation exercise, using the exercises Huberman demonstrates in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]].
 	- ## Quadriceps
 		- ### Back squat: 3 work sets of 6–10 reps

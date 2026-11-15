@@ -1,5 +1,5 @@
 - # Friday — Day 7: Shoulders and Arms
-	- Allow roughly 60–80 minutes for lifting and warm-ups; trim the optional forearm and calf work first when time is short. Warm up and choose loads per [[My/Exercise/Body/Plan]], and finish with [[My/Exercise/Body/Plan/Mobility-Circuit]].
+	- Plan on 60–80 minutes of work sets, rests included, after the warm-up; trim the optional forearm and calf work first when time is short. Warm up and choose loads per [[My/Exercise/Body/Plan]], and finish with [[My/Exercise/Body/Plan/Mobility-Circuit]].
 	- Shoulders, biceps, triceps, and abdominals, using the exercises Huberman demonstrates in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]], plus the face pull the book asks for on this day.
 	- ## Shoulders
 		- ### Overhead press: 3 work sets of 6–10 reps
@@ -13,6 +13,7 @@
 			- Use a cable machine or exercise band.
 			- {{embed [[Exercise/Body/Strength/Face Pull]]}}
 	- ## Biceps
+		- The book suggests palms-facing [pull-ups]([[Exercise/Body/Strength/Pull-Up]]) on this day as compound work for the biceps.
 		- ### Biceps curl: 2 work sets of 8–15 reps
 			- Dumbbells, both arms together or alternating.
 			- {{embed [[Exercise/Body/Strength/Biceps Curl]]}}

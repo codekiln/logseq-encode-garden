@@ -1,8 +1,7 @@
 - # Thursday — Day 6: Intervals
-	- Use a stationary bike or rower with a familiar setup. Warm-up, recoveries, and cool-down are part of the session.
-	- ## Sprint interval: 6 rounds of 30 seconds hard, 60 seconds easy
-		- Warm up for 5–10 minutes. Make the hard efforts controlled and repeatable; finish with five minutes of easy movement.
-		- The chapter's example uses near-all-out efforts for 6–12 rounds. Begin below that intensity and add rounds gradually, up to 12, only while the other workouts and recovery remain good.
+	- Huberman does these on an assault bike; running, rowing, or swimming work too. With the warm-up, the session takes about 25 minutes.
+	- ## Sprint interval: 6–12 rounds of 30 seconds all-out, 60 seconds easy
+		- Warm up for 5–10 minutes at an easy to moderate pace. Then go as hard and fast as you can for 30 seconds, rest or slow down for 60 seconds, and repeat. The hard efforts reach 90–95% of maximum heart rate.
 		- {{embed [[Exercise/Body/Cardio/Sprint Interval]]}}
-	- If legs remain tired or sore enough to change movement, do easy cardio instead. Friday's pressing and rowing should still feel manageable.
+	- Other options Huberman gives: the [[Exercise/Body/Cardio/Cooper Test]], twelve minutes of steady hard effort for distance, or the [[Exercise/Body/Cardio/Norwegian 4x4 Interval]].
 	- Part of [[My/Exercise/Body/Plan]].

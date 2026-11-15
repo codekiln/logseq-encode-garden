@@ -1,6 +1,7 @@
 - # Exercise Plan
 	- Strength is the priority. Three gym sessions, daily walking, and a mix of easy, moderate, and brief hard cardio fit into four or five training days.
 	- Saturday is Day 1 every week. The lifting days use the exercises Huberman demonstrates for Day 2, Day 4, and Day 7 in the Chapter Two videos of [[Person/Andrew Huberman/Book/26/Protocols]].
+	- How to train comes from Huberman's own words in the book and its Chapter Two videos. A question about effort, sets, reps, rest, or recovery is settled by what he says there.
 	- ## Week
 		- [[My/Exercise/Body/Plan/D1-Long-Run]] — Saturday
 		- [[My/Exercise/Body/Plan/D2-Lower-Body]] — Sunday
@@ -10,29 +11,40 @@
 		- [[My/Exercise/Body/Plan/D6-Intervals]] — Thursday
 		- [[My/Exercise/Body/Plan/D7-Shoulders-and-Arms]] — Friday
 		- [[My/Exercise/Body/Plan/Mobility-Circuit]] — after Sunday, Tuesday, and Friday lifting
-	- ## Warm up and choose the effort
-		- Begin gym sessions with five minutes of brisk walking or easy cycling to get warm.
-		- Before a demanding exercise, use one to three preparation sets. The book's ramp is about 40% of the planned work weight for 6–10 reps, 65% for 4–8 reps, and 75% for 2–4 reps; rest one to two minutes between them. Round to available weights and keep these sets easy. They are additional to the work sets on each day's page.
-		- Work through a comfortable full range and control both lifting and lowering. Choose loads that leave about one or two more good reps possible at the end of each work set.
-		- The book frequently prescribes failure. This plan leaves a small reserve, particularly on squats, hinges, and barbell presses. The [2026 ACSM position stand](https://acsm.org/resistance-training-guidelines-update-2026/) finds that momentary failure is not required for gains.
-		- Rest three to five minutes after demanding compound sets and about 90 seconds to three minutes after smaller exercises. Start the next set when breathing and control have recovered; avoid rushing heavy lifts to meet a timer. The chapter's broader work-set range is two to five minutes.
-		- Sharp or increasing pain is a reason to stop and change the exercise or get it assessed. A trainer can check an unfamiliar lift's setup before adding load.
-	- ## Progress and recovery
-		- Record the exercise, load, reps in each work set, and estimated reps left in reserve. Note any pain or unusual fatigue. Compare with the previous session before choosing today's weight.
-		- Keep the load until every work set reaches the top of its rep range with controlled form and a small reserve. Then add the smallest practical increment next session; reps may return toward the bottom of the range.
-		- If the new load prevents reaching the lower end of the range cleanly, reduce it. Add reps or load before adding more sets.
-		- Keep exercise choices steady long enough to judge progress. A machine substitution is useful when it fits body mechanics or available equipment better; record the substitution and establish its own load history.
-		- Set counts are work sets per exercise. The chapter's four-to-nine-set range describes a muscle group's total work in its body-part split; it is not another allocation to add to every lift.
-		- If performance declines across sessions or fatigue persists, reduce workload and review sleep, food, and recovery before adding training. The chapter also recommends a week away from resistance training roughly every 10–16 weeks; use that interval as a point to review recovery.
-		- If an exercise is new or training has lapsed, use a one-to-three-week practice period with light loads and several reps in reserve.
+	- ## Warm up
+		- Begin each gym session with about five minutes of whole-body warm-up, such as a stationary bike, a brisk treadmill walk, or jumping jacks, until a light sweat.
+		- Do one to three warm-up sets per exercise, two or three of them before the first exercise. The first is 6–10 reps at about 40% of the first work set's weight. Rest one to two minutes, then do 4–8 reps at about 65%.
+		- When the work sets will reach failure after only five to seven reps, rest another one to two minutes and add a third warm-up set of 2–4 reps at about 75%. The percentages are of the first work set's weight, not of a one-rep max.
+		- Warm-up sets never come close to failure. They come on top of the work sets on each day's page.
+	- ## Take every work set to failure
+		- Failure is the point where the weight won't move any more in good form despite your greatest effort. Every work set goes there.
+		- Huberman answers the reps-in-reserve argument directly: with this program's small number of work sets, take all of them to failure. What most people call failure already leaves a rep or two in reserve.
+		- The rep ranges are guides, not stopping points. Choose a weight that brings failure after 6–10 reps on compound exercises and 8–15 on isolation exercises. If only five reps come, do five; if you can keep going past the top of the range in good form, keep going until failure.
+		- On the first work set of an exercise, when the weight stops moving, keep trying hard to move it for three to five more seconds, then rack it. Take the second work set to failure without that extra fight. Push past failure on two or three sets at most in a workout, and not at all on a stressed day.
+		- Reach failure safely: set the rack's safety pins or have a spotter strong enough to lift the bar off you. When benching alone, use dumbbells, which can be set down to the knees and dropped to the sides. Machines with stops are another option.
+		- Sharp or dull joint pain, as opposed to soreness or the burn in the muscle, means the form or the exercise is wrong. Stop that exercise for the day and find an alternative.
+	- ## Rest between sets
+		- Rest one to two minutes between warm-up sets and two to five minutes between work sets: typically three to five after compound exercises and 90 seconds to three minutes after isolation exercises.
+		- Time rest by the clock or by feel. Either way, keep talking, texting, and scrolling to a minimum.
+	- ## Sets, session length, and progress
+		- Each day's page gives the work sets per exercise: two or three, usually two. That comes to four to nine work sets per muscle group across two or three exercises, at least one of them compound.
+		- Sixty to eighty minutes of work sets, rests included, after the warm-up is enough. Past about 80 minutes, fatigue gets in the way of recovering before the next workout.
+		- Track every set: the exercise, the load, and the reps reached at failure. Huberman writes each set in a paper notebook, with the phone in airplane mode. Check the last session before choosing today's weight.
+		- Once a compound exercise reaches 10 reps in perfect form, or an isolation exercise 10–15, add weight next time, in steps of 5–10%. More weight or more reps from each workout to the next.
+		- Some days a weight that went 10 times last session only goes three or four. Don't worry about it; keep striving to add reps or weight.
+		- When a bit short on sleep, do the lower end of the exercises and sets, but still do the compound movements. After two or more really bad nights in a row, get sleep back on track before training again.
+		- Take a week off resistance training every 12–16 weeks, or even every 10–12. Dragging yourself to the gym, more interested in texting than training, is another sign to take a week off.
+		- Someone new to resistance training starts with Mike Mentzer's one-to-three-week break-in: find movements that suit your body and learn them with a weight you could lift 10–12 times while easily able to do five more. Someone who has been training a while starts with a full week out of the gym instead.
+		- Choose among the exercises Huberman shows for each muscle group by what suits your body and equipment. What matters is doing the movement safely, without pain, pushing each set to failure, and adding weight over time.
 	- ## Daily walking
-		- Walk for five to ten minutes after meals when practical. During long periods of sitting or standing, take a short walking break; the chapter suggests five minutes per half-hour.
-		- Build toward roughly 7,000 daily steps if that is a useful and comfortable target. The chapter proposes 10,000 as an optional higher target. Build from the current average rather than forcing a sudden jump.
+		- Walk for five to ten minutes after meals. Walk or pace for at least five minutes for every thirty minutes of sitting or standing.
+		- Seven thousand steps a day is a good goal, and ten thousand is even better. Brisk walking beats slow walking: at least 30 minutes a day, ideally 40–60, at least five days a week.
 		- {{embed [[Exercise/Body/Cardio/Walk]]}}
 	- ## Four-day week and missed sessions
 		- Keep Saturday cardio and Sunday, Tuesday, and Friday lifting. Omit Thursday's hard intervals. Saturday remains Day 1.
 		- If Tuesday is too long, reduce or omit its cardio before rushing the strength work. Shorter walks can add moderate activity elsewhere in the week.
-		- Resume the next feasible session after a missed day. Avoid doubling heavy sessions to catch up; keep Saturday's calendar anchor.
+		- After a missed day, keep the order of the week; moving sessions around makes the schedule fall like dominoes. Stick to it as best you can, missing days here and there or doubling up when there is no other option.
+		- If the long cardio day is missed, skip it and train legs on schedule rather than moving it onto leg day.
 	- ## Exercise references
 		- [[Person/Andrew Huberman/Book/26/Protocols/Exercise Guide]]: the typed exercise pages, with setup, movement cues, substitutions, and demonstrations.
 		- [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]], [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]], and [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 7 - Shoulders and Arms]]: each lifting day's demonstrations and transcript.

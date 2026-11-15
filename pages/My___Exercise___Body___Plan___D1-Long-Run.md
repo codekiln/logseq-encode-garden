@@ -1,6 +1,7 @@
 - # Saturday — Day 1: Long Run
-	- Run for 45–60 minutes at an easy, steady conversational pace. Keep enough energy for Sunday's legs. Brisk walking, cycling, or the elliptical can substitute when needed.
-	- If that duration is beyond current capacity, start with 15–20 minutes and add a few minutes in weeks that feel comfortable. The chapter's eventual range is 45–75 minutes.
-	- ## Easy run: 45–60 minutes
+	- Run for 45–75 minutes without stopping, except to drink water or wait at a light. Hold a pace at which you can just barely keep up a conversation: the most effort you can sustain breathing only through the nose, about 60–70% of maximum heart rate and ideally near 70%.
+	- If that duration is beyond current capacity, start with 15–20 minutes and add a few minutes each week until reaching 45–75.
+	- Any activity done for that duration and effort without getting hurt works: cycling, the elliptical, a stair climber, or a hike with a weighted vest or rucksack.
+	- ## Long run: 45–75 minutes
 		- {{embed [[Exercise/Body/Cardio/Easy Run]]}}
 	- Part of [[My/Exercise/Body/Plan]].
