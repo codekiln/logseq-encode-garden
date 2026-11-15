@@ -6,7 +6,7 @@ created-by:: [[Person/codekiln]]
 date-created:: [[2026-10-22 Thu]]
 - # Voidom and MIDI clock
 	- A Ghost in the Patch session with MicroFreak preset 016 Voidom: tracing MIDI connections and clock problems between the Launchpad Pro, MicroFreak and Ableton Live, then combining Launchpad sequencing with recorded Session clips.
-	- ![Episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___22-Thu___Asset___Audio___Trimmed.mp3)
+	- ![Episode recording](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___22-Thu___Asset___Audio___Trimmed.mp3)
 	- ## Recording
 		- [[GitP/A/Session/26/10/22-Thu/Asset/Audio/Trimmed/mp3]]
 		- Recorded in Ableton Live at 109 BPM.

@@ -7,7 +7,7 @@ date-created:: [[2026-10-06 Tue]]
 
 - # GitP.26.10.06 — Chords, Formants, and Sequencers
 	- A MicroFreak improvisation starting from an initialized patch: chord oscillators, cycling-envelope and LFO modulation, and a turn toward formant sounds. Shimmering textures give way to a gruff emergence, a ballpark organ, and a trippy denouement, with the Launchpad sequencer and MicroFreak arpeggiator along the way.
-	- ![GitP.26.10.06 — episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___06-Tue___Asset___Synth___Full.mp3)
+	- ![GitP.26.10.06 — episode recording](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___06-Tue___Asset___Synth___Full.mp3)
 	- ## Chapters
 		- ### 00:00 initialized patch to chords
 		- ### 02:11 pull back on cutoff
@@ -29,7 +29,7 @@ date-created:: [[2026-10-06 Tue]]
 		- I didn't end up recording any [[Microfreak/Preset]] this time.
 		- When looking through the recording later, I made a few notes. AI transcribed these as chapters.
 	- ## Downloads
-		- [Full-session MIDI — notes and controller changes](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___06-Tue___Asset___MIDI___Full.mid)
+		- [Full-session MIDI — notes and controller changes](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___06-Tue___Asset___MIDI___Full.mid)
 	- ## Recording
 		- [[Making/Music/Log/26/10/06 Tue GitP]]
 		- Recorded October 6, 2026, in Ableton Live at 109 BPM.

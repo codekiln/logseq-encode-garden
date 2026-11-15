@@ -6,16 +6,16 @@ created-by:: [[Person/codekiln]]
 date-created:: [[2026-10-20 Tue]]
 - # Eonz between two sequencers
 	- A Ghost in the Patch session with MicroFreak preset 77 Eonz and the Launchpad Pro: two-way MIDI, competing clocks, shared filter pulses and recording one sequencer into the other.
-	- ![Eonz between two sequencers — full recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward.mp3)
+	- ![Eonz between two sequencers — full recording](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward.mp3)
 	- ## Recording
-		- 1:31:50 · [Download the synth-forward MP3](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward.mp3)
+		- 1:31:50 · [Download the synth-forward MP3](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Audio___Synth-Forward.mp3)
 		- Select a chapter timestamp to play from that point in the full recording.
 	- ## Voices
 		- **codekiln** is transcribed from the recording. **[[GitP/Acolyte]]** contributes written AI co-host responses; these appear as “written” in the dialogue and are not spoken in the audio.
 		- Commentary is an automatic transcription draft. Timestamps follow the full recording.
 	- ## Presets
 		- [[Microfreak/Preset/075 Saying Goodbye]] appears briefly before [[Microfreak/Preset/077 Eonz]], the lead used through the session.
-		- Eonz digital twin: a September 28 user-bank export using [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]]. [Download the MCC preset export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Preset___Eonz-Archived-2026-09-28.mbp)
+		- Eonz digital twin: a September 28 user-bank export using [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]]. [Download the MCC preset export](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Preset___Eonz-Archived-2026-09-28.mbp)
 	- ## Chapters
 		- ### 00:00 Four tracks, one MIDI channel
 			- Setting all four Launchpad tracks to MIDI channel 1, with different pattern lengths in mind.

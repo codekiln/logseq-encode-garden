@@ -7,9 +7,9 @@ date-created:: [[2026-10-26 Mon]]
 
 - # NoiseBusters, Fight and TaBass
 	- A Ghost in the Patch session with three MicroFreak factory presets in layered takes: NoiseBusters opens as a hall of mirrors, Fight comes in as a lead with pad pressure, and TaBass enters near the end as a little thumper, with cycling-envelope and filter sweeps throughout.
-	- ![Episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___26-Mon___Asset___Audio___Full.mp3)
+	- ![Episode recording](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___26-Mon___Asset___Audio___Full.mp3)
 	- ## Recording
-		- 16:06 · [[GitP/A/Session/26/10/26-Mon/Asset/Audio/Full/mp3]] · [Download the MP3](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___26-Mon___Asset___Audio___Full.mp3)
+		- 16:06 · [[GitP/A/Session/26/10/26-Mon/Asset/Audio/Full/mp3]] · [Download the MP3](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___26-Mon___Asset___Audio___Full.mp3)
 		- Recorded on October 26, 2026 in [[Ableton/Live]] at 120 BPM in 4/4 and mixed the next morning. Three MicroFreak audio layers play through the main mix with modest reverb and delay sends and a slow ride on the main output level; the commentary microphone is left out of the mix.
 		- codekiln wrote the poem in the sip column of [Bean 2026-10-27 · Beans](https://codekiln.github.io/beans/log/2026-10-27-bean1/) while mixing this recording.
 		- Select a chapter timestamp to play from that point.
@@ -19,12 +19,12 @@ date-created:: [[2026-10-26 Mon]]
 			- I've been using Ableton all wrong. During this session I realized I could use Session View to record, or I could use Arrangement Record to record clips and their playback in Session View. That was really fun, and I'm going to use it going forward. [[Ableton/Live/UG/19 Recording New Clips/03 Recording/02 Recording Into Session Slots]] · [[Ableton/Live/UG/19 Recording New Clips/03 Recording/01 Recording Into the Arrangement]] · [[Ableton/Arrangement View/Q/Can I record in Arrangement View while playing Session View clips?]]
 			- The next morning I did a little ideation with AI about declaring a template for an Ableton set in this garden: [[Ableton/Live/Idea/Declare a Live Set in Logseq]].
 	- ## Presets
-		- [[Microfreak/Preset/119 NoiseBusters]] — Keys, Noise oscillator, paraphonic. [Download the saved slot 119 export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___26-Mon___Asset___Preset___119-NoiseBusters.mfpz)
-		- [[Microfreak/Preset/118 Fight]] — Lead, Chords oscillator. [Download the saved slot 118 export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___26-Mon___Asset___Preset___118-Fight.mfpz)
-		- [[Microfreak/Preset/123 TaBass]] — Bass, V.Analog oscillator. [Download the saved slot 123 export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___26-Mon___Asset___Preset___123-TaBass.mfpz)
+		- [[Microfreak/Preset/119 NoiseBusters]] — Keys, Noise oscillator, paraphonic. [Download the saved slot 119 export](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___26-Mon___Asset___Preset___119-NoiseBusters.mfpz)
+		- [[Microfreak/Preset/118 Fight]] — Lead, Chords oscillator. [Download the saved slot 118 export](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___26-Mon___Asset___Preset___118-Fight.mfpz)
+		- [[Microfreak/Preset/123 TaBass]] — Bass, V.Analog oscillator. [Download the saved slot 123 export](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___26-Mon___Asset___Preset___123-TaBass.mfpz)
 		- All three saved slots matched their factory sounds when read after the session, so the knob changes heard here were not saved. The `.mfpz` exports use Elektroid's format; restoring them in MIDI Control Center has not been tested.
 	- ## MIDI
-		- [Download the session MIDI](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___26-Mon___Asset___MIDI___Session.mid) · [[GitP/A/Session/26/10/26-Mon/Asset/MIDI/Session/mid]]
+		- [Download the session MIDI](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___26-Mon___Asset___MIDI___Session.mid) · [[GitP/A/Session/26/10/26-Mon/Asset/MIDI/Session/mid]]
 		- Times below follow the recording. Control names come from [[Microfreak/UG/21 Appendix D - CC Values]]. What the [Wave]([[Microfreak/UI/Oscillator/Knob/Wave]]) (CC 10), [Timbre]([[Microfreak/UI/Oscillator/Knob/Timbre]]) (CC 12) and [Shape]([[Microfreak/UI/Oscillator/Knob/Shape]]) (CC 13) knobs do depends on the oscillator: with [Noise]([[Microfreak/UI/Oscillator/Knob/Type/Noise]]) they change the noise character, with [Chords]([[Microfreak/UI/Oscillator/Knob/Type/Chords]]) Wave selects the chord, and with [V.Analog]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog]]) Wave sets detune. No oscillator-type changes (CC 9) were recorded.
 	- ## Chapters
 		- ### 00:00 Introit

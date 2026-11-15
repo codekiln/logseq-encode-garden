@@ -7,10 +7,10 @@ date-created:: [[2026-10-18 Sun]]
 
 - # Auster without a computer
 	- A Ghost in the Patch session exploring MicroFreak preset 174 Auster with the Launchpad Pro sequencer: touch articulation, two-way MIDI, clock sync, scale modes and layered patterns.
-	- ![Episode recording — synth-forward mix](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3)
+	- ![Episode recording — synth-forward mix](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3)
 	- ## Recording
 		- [[GitP/A/Session/26/10/18-Sun/Asset/Audio/Synth-Forward/mp3]] · 1:38:11.
-		- [Download the synth-forward MP3](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3)
+		- [Download the synth-forward MP3](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___18-Sun___Asset___Audio___Synth-Forward.mp3)
 	- ## Preset
 		- [[Microfreak/Preset/174 Auster]] — Keys. The session also briefly uses an initialized BasicWaves patch to compare timbre modulation.
 	- ## Chapters

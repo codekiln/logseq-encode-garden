@@ -6,7 +6,7 @@ date-created:: [[2026-10-09 Fri]]
 
 - # GitP.26.10.09
 	- A 31-minute MicroFreak session recorded in Ableton Live, played from a Launchpad Pro, with a spoken commentary track.
-	- ![GitP.26.10.09 — episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___09-Fri___Asset___Synth___Full.mp3)
+	- ![GitP.26.10.09 — episode recording](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___09-Fri___Asset___Synth___Full.mp3)
 	- ## Session Notes
 		-
 	- ## Commentary
@@ -45,8 +45,8 @@ date-created:: [[2026-10-09 Fri]]
 		- 30:28 — I'm on the Mixolydian scale preset; see [[Microfreak/UG/15 Using Scales/01 Scale Settings]].
 		- 30:59 — That's all I have time for.
 	- ## Downloads
-		- [MicroFreak preset 398 Init](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___09-Fri___Asset___Preset___398.mfpz)
-		- [MicroFreak preset 399 Init](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___09-Fri___Asset___Preset___399.mfpz)
+		- [MicroFreak preset 398 Init](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___09-Fri___Asset___Preset___398.mfpz)
+		- [MicroFreak preset 399 Init](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___09-Fri___Asset___Preset___399.mfpz)
 	- ## Recording
 		- [[Making/Music/Log/26/10/09 Fri]]
 		- Recorded October 9, 2026, in Ableton Live. The 31:04 episode recording is [[GitP/A/Session/26/10/09-Fri/Asset/Synth/Full/mp3]].

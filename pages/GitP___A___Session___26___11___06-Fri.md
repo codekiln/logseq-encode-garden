@@ -6,7 +6,7 @@ created-by:: [[Person/codekiln]]
 date-created:: [[2026-11-06 Fri]]
 
 - # Infini Pad at the Crossfader
-	- ![Episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___06-Fri___Asset___Audio___Full.mp3)
+	- ![Episode recording](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___11___06-Fri___Asset___Audio___Full.mp3)
 	- ## Ceremonial Annotations
 		- One pad, four loops, and a crossfader leaning the signal from one side to the other. Low C pedals swell under the fingers, a high G hangs over the field, and near 18:00 the transmission sinks almost to nothing before the bass climbs back in. At 28:14 the ghost speaks: a field report from the crossfader.
 		- A single sound, [[Microfreak/Preset/259 Infini Pad]], plays every part: chord, drone, beacon and bass. Phrases played on the MicroFreak keys are caught by the Launchpad's sequencer and sent back, so the instrument keeps answering itself.
@@ -91,7 +91,7 @@ date-created:: [[2026-11-06 Fri]]
 	- ## Ceremonial Artifacts
 	  collapsed:: true
 		- ### Recording
-			- 32:00 · [[GitP/A/Session/26/11/06-Fri/Asset/Audio/Full/mp3]] · [Download the MP3](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___06-Fri___Asset___Audio___Full.mp3)
+			- 32:00 · [[GitP/A/Session/26/11/06-Fri/Asset/Audio/Full/mp3]] · [Download the MP3](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___11___06-Fri___Asset___Audio___Full.mp3)
 			- Recorded on November 6, 2026 in [[Ableton/Live]] at 120 BPM in 4/4 with the [[Novation/Launchpad/Pro/Mk3]] and the [[Microfreak]]. Four MicroFreak audio layers hold the takes, and [[Person/codekiln]] played the crossfader from a Launchpad custom mode. [[Launchpad/UG/08 Custom Modes]]
 			- The mix keeps the recorded crossfader changes, volume rides, pans and reverb sends. The afterword at 28:14 is a second take placed after the first. The commentary under it is a machine transcription.
 			- [[Making/Music/Log/26/11/06-Fri]]
@@ -102,6 +102,6 @@ date-created:: [[2026-11-06 Fri]]
 				- [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]] · [Download the saved 259 Infini Pad export](../assets/.remote/logseq-encode-garden/Microfreak___Preset___259-Infini-Pad___Asset___Device-Read-2026-10-25.bin)
 			- On November 7, 2026, slot 259 still held the factory sound saved on October 25, so the download plays the sound as it was before the session. The knob turns described in the chapters are in the session MIDI.
 		- ### MIDI
-			- [Download the session MIDI](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___06-Fri___Asset___MIDI___Session.mid) · [[GitP/A/Session/26/11/06-Fri/Asset/MIDI/Session/mid]]
+			- [Download the session MIDI](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___11___06-Fri___Asset___MIDI___Session.mid) · [[GitP/A/Session/26/11/06-Fri/Asset/MIDI/Session/mid]]
 			- "LPP to MF" holds the Launchpad Pro notes sent to the MicroFreak, including the sequencer playing back captured phrases; it keeps running under the afterword. "MF to LPP" holds the MicroFreak's own key presses, per-note pressure and knob changes, all before 28:10.
 			- With the [[Microfreak/UI/Oscillator/Knob/Type/BASS]] oscillator, [[Microfreak/UI/Oscillator/Knob/Wave]] sets Saturate, [[Microfreak/UI/Oscillator/Knob/Timbre]] sets Fold and [[Microfreak/UI/Oscillator/Knob/Shape]] sets Noise. The [[Microfreak/UI/Oscillator/Knob/Type]] never changes. Control names come from [[Microfreak/UG/21 Appendix D - CC Values]].

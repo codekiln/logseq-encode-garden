@@ -8,7 +8,7 @@ preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-orig
 prev:: [[Microfreak/Preset/076 AutoCHILL]]
 next:: [[Microfreak/Preset/078 A Juno Vibe]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]]
-preset-synth-file:: [Eonz — September 28 MCC export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Preset___Eonz-Archived-2026-09-28.mbp)
+preset-synth-file:: [Eonz — September 28 MCC export](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Preset___Eonz-Archived-2026-09-28.mbp)
 preset-synth-file-sha256:: 919e785b1427854c339994cdaf9d1bf51404801d6905d5ce5edfe1de81c67b61
 preset-synth-microfreak-parameter-payload-sha256:: 6aa8faf909f7ae64fbe6e2336e3444982f25128c83353d6f09f3e4ea053de8ad
 - # Notes
@@ -16,7 +16,7 @@ preset-synth-microfreak-parameter-payload-sha256:: 6aa8faf909f7ae64fbe6e2336e344
 	- ## Saved export and provenance
 		- Saved export: September 28, 2026 MIDI Control Center user-bank archive, computer-bank slot 160, file `160-09282026 6h14-A160.mbp`. The computer-bank slot differs from this page’s observed device slot.
 		- The parameter payload matches Factory 1.1, 2.1, 3.0 and 6.0. This is an archived factory-equivalent baseline; it does not establish the instrument’s saved or unsaved state during a later session.
-		- [Download the archived Eonz preset](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Preset___Eonz-Archived-2026-09-28.mbp).
+		- [Download the archived Eonz preset](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___10___20-Tue___Asset___Preset___Eonz-Archived-2026-09-28.mbp).
 	- ## Oscillator
 		- Model: SuperWave. Wave chooses saw, square, triangle or sine; Timbre changes detuning; Shape changes the volume of the detuned copies.
 		- Wave: 3 (stored choice code).
