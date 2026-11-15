@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Cardio]]
+- # Tempo Cardio
+	- Practice a moderately fast continuous effort, harder than conversational pace, to train the heart and lungs in about half an hour.
+	- ## Setup
+		- Choose any mode you can sustain safely: running, cycling, rowing, the elliptical, or the stair climber. Warm up with about five minutes of easy movement.
+	- ## Practice
+		- Hold a steady effort that has you breathing fairly hard but not gasping, and without stopping to recover. In heart-rate terms that is about 75–85 percent of maximum heart rate, the high end of zone 3 and the low end of zone 4.
+	- ## Dose and Progression
+		- Work for 25–30 minutes after the warm-up. Raise pace before duration once the effort feels steady.
+	- ## Cues and Variations
+		- Needing to stop, or a pace that falls apart late, means starting slower. Easier sessions belong to [[Exercise/Body/Cardio/Steady-State Cardio]]; near-maximal efforts belong to [[Exercise/Body/Cardio/Sprint Interval]].
+	- ## Sources
+		- [[Person/Andrew Huberman/Book/26/Protocols]] makes this the second cardiovascular workout of the week, on Day 5 of the weekly plan.

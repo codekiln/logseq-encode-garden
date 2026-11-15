@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Air Squat
+	- Practice a body-weight squat to work the quadriceps and glutes and to break up long periods of sitting.
+	- ## Setup
+		- Stand with the feet about shoulder-width apart, toes turned slightly out, arms free to reach forward for balance.
+	- ## Practice
+		- Sit the hips back and down until the thighs are parallel to the floor, keeping the heels down and the knees tracking over the toes, then stand up fully. One repetition ends standing tall.
+	- ## Dose and Progression
+		- As a movement break, do ten squats every 45 minutes or so through a long day of sitting. As a warm-up, combine them with other body-weight movements for a few minutes.
+	- ## Cues and Variations
+		- Heels lifting, knees collapsing inward, or a rounded lower back means a shallower squat for now. Holding a light weight at the chest turns it into a [[Exercise/Body/Strength/Goblet Squat]].
+	- ## Sources
+		- [[Person/Andrew Huberman/Book/26/Protocols]] suggests ten air squats every 45 minutes when walking is not possible, and 25 air squats with body-weight lunges in a five-minute warm-up circuit.

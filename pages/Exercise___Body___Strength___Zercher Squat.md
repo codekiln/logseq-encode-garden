@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Zercher Squat
+	- Practice a barbell squat with the bar held in the crooks of the elbows to train the quadriceps, glutes, and upper back.
+	- ## Setup
+		- Set a barbell in a rack at about mid-torso height. Hook the bar in the bend of both elbows, hands together or clasped, and stand up to unrack it with the feet about shoulder-width apart.
+	- ## Practice
+		- Squat down with the chest up and the bar close to the body, reach the depth you can control, then stand up through the whole foot. One repetition ends standing.
+	- ## Dose and Progression
+		- Load, sets, and repetitions follow the training plan. Start light: the bar presses on the forearms, and a pad or sleeve makes heavier loads tolerable.
+	- ## Cues and Variations
+		- A rounding upper back means the load is too heavy. Use safety pins in the rack set just below the bottom position.
+	- ## Sources
+		- [[Person/Andrew Huberman/Book/26/Protocols]] lists Zercher squats among the alternatives to the [[Exercise/Body/Strength/Back Squat]] for the quadriceps and glutes.

@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Soleus Push-Up
+	- Practice repeated seated heel raises to contract the soleus, the deep calf muscle, while sitting.
+	- ## Setup
+		- Sit with the feet flat on the floor, the knees bent to about 90 degrees, and the balls of the feet under the knees.
+	- ## Practice
+		- Raise the heels as high as they go while the forefoot stays planted, then lower them back to the floor. One repetition ends with the heel down.
+	- ## Dose and Progression
+		- Repeat continuously at an easy pace during long periods of sitting.
+	- ## Cues and Variations
+		- The effort should stay in the calf. With bent knees the soleus does most of the work; straight-leg calf raises such as the [[Exercise/Body/Strength/Standing Calf Raise]] shift more of it to the gastrocnemius.
+	- ## Sources
+		- [[Person/Andrew Huberman/Book/26/Protocols]] cites a 2022 University of Houston study in which repeated soleus contractions, done seated, improved glucose regulation.

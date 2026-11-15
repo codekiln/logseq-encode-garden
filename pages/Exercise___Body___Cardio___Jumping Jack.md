@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Cardio]]
+- # Jumping Jack
+	- Practice rhythmic jumping with the arms and legs moving apart and together to raise body temperature quickly.
+	- ## Setup
+		- Stand with the feet together and the arms at the sides, on a surface that is comfortable to land on.
+	- ## Practice
+		- Jump the feet apart while swinging the arms overhead, then jump back to the start. One repetition ends with feet together and arms down.
+	- ## Dose and Progression
+		- As a warm-up, continue for a few minutes until breathing rises and a light sweat starts.
+	- ## Cues and Variations
+		- Land softly on the balls of the feet. Stepping one foot out at a time keeps the motion without the impact.
+	- ## Sources
+		- [[Person/Andrew Huberman/Book/26/Protocols]] lists jumping jacks among the options for a five-minute whole-body warm-up before resistance training.

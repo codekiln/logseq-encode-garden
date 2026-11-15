@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Goblet Squat
+	- Practice a squat while holding one weight at the chest to train the quadriceps and glutes with an upright torso.
+	- ## Setup
+		- Hold a dumbbell vertically by one end, or a kettlebell by its horns, against the chest with the elbows pointing down. Stand with the feet about shoulder-width apart.
+	- ## Practice
+		- Squat down between the knees while keeping the chest up and the weight close, go as deep as control allows, then drive up through the whole foot. One repetition ends standing.
+	- ## Dose and Progression
+		- Load, sets, and repetitions follow the training plan. Add weight once the planned repetitions are controlled through the full range.
+	- ## Cues and Variations
+		- The front-loaded weight keeps the torso upright, which suits people who cannot back squat without discomfort. [[Exercise/Body/Strength/Front Squat]] and [[Exercise/Body/Strength/Zercher Squat]] are other front-loaded options.
+	- ## Sources
+		- [[Person/Andrew Huberman/Book/26/Protocols]] lists goblet squats among the alternatives to the [[Exercise/Body/Strength/Back Squat]] for the quadriceps and glutes.

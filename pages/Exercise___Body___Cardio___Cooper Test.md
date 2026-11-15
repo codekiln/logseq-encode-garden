@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Cardio]]
+- # Cooper Test
+	- Practice covering as much distance as possible in twelve minutes of steady, hard effort, which doubles as a fitness test.
+	- ## Setup
+		- Use a measured route, track, pool, or a machine with a distance readout. Warm up first.
+	- ## Practice
+		- Run, swim, or cycle as far as you can in twelve minutes at a hard, even effort, then record the distance.
+	- ## Dose and Progression
+		- One twelve-minute effort per session. Repeat the same mode and route to compare distances over time.
+	- ## Cues and Variations
+		- An even pace beats a fast start and a slow finish. The distance is only comparable within the same mode and route.
+	- ## Sources
+		- [[Person/Andrew Huberman/Book/26/Protocols]] offers the Cooper test as an option for the third, high-intensity cardiovascular workout of the week.

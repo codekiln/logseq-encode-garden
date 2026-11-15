@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Cardio]]
+- # Rucking
+	- Practice walking or hiking with weight on the back to raise the effort of a long, steady session.
+	- ## Setup
+		- Load a weighted vest, a rucksack, or an ordinary backpack, for example with a one-gallon jug of water, and fit it snugly high on the back.
+	- ## Practice
+		- Walk or hike at a pace you can sustain while still holding a conversation with some effort.
+	- ## Dose and Progression
+		- Duration follows the plan for the long cardio session. Add weight or hills gradually, after duration feels easy.
+	- ## Cues and Variations
+		- Shoulder, hip, or knee pain means a lighter load. A pack without weight on varied terrain still raises effort over flat walking.
+	- ## Sources
+		- [[Person/Andrew Huberman/Book/26/Protocols]] lists hiking with a weighted vest, a rucksack, or a backpack holding a one-gallon jug of water among the options for the long, low-intensity cardio session.

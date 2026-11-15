@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Lunge
+	- Practice stepping into a split stance and lowering the back knee to train the quadriceps and glutes one leg at a time.
+	- ## Setup
+		- Stand tall with the feet hip-width apart, with or without dumbbells at the sides.
+	- ## Practice
+		- Step forward, lower until the back knee nearly touches the floor with the front shin roughly vertical, then push back to standing. Alternate legs or finish one side first.
+	- ## Dose and Progression
+		- Body-weight lunges work as a warm-up. Loaded lunges follow the training plan for sets, repetitions, and weight.
+	- ## Cues and Variations
+		- The front knee tracks over the toes and the torso stays upright. Reverse, walking, and stationary split-stance lunges are variations; the [[Exercise/Body/Strength/Rear-Foot-Elevated Split Squat]] raises the back foot.
+	- ## Sources
+		- [[Person/Andrew Huberman/Book/26/Protocols]] notes the many lunge variations that target the quadriceps and glutes, and uses five body-weight lunges per side in a warm-up circuit.

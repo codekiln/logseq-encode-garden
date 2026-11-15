@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Cardio]]
+- # Norwegian 4x4 Interval
+	- Practice four rounds of four hard minutes, each followed by four easier minutes, to train near-maximal aerobic effort.
+	- ## Setup
+		- Use running, cycling, or rowing. Warm up first with several minutes of easy movement.
+	- ## Practice
+		- Work hard for four minutes, then rest or slow down for four minutes. One round is the hard block plus its recovery.
+	- ## Dose and Progression
+		- Four rounds make the session. Raise the work pace once all four hard blocks can be held at the same effort.
+	- ## Cues and Variations
+		- The hard minutes are strenuous but sustained for the full four minutes. A last round much slower than the first means starting the hard blocks easier.
+	- ## Sources
+		- [[Person/Andrew Huberman/Book/26/Protocols]] offers the Norwegian 4×4 as an option for the third, high-intensity cardiovascular workout of the week.
