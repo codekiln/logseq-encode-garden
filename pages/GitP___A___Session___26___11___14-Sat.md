@@ -6,7 +6,7 @@ date-created:: [[2026-11-14 Sat]]
 
 - # Forevetran: Cue Balls in an Empty Hall
 	- A five-minute ceremony played live at a synth meetup. Piano notes and pool-table strikes, recorded in an empty hall on Veterans Day, fall in a half-minute gesture while a synthesized smoke-alarm chirp keeps time. Infini Pad loops gather against them: F, then G, then a low C.
-	- ![Episode recording](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___14-Sat___Asset___Audio___Full.mp3)
+	- ![Episode recording](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___11___14-Sat___Asset___Audio___Full.mp3)
 	- ## Ceremonial Annotations
 		- [[GitP/Ceremon/y/Forevetran]], given live on November 14, 2026, keeps time in half-minutes. Each thirty seconds holds one gesture played twice, 8 + 4 + 2 + 1 = 15 beats at 60 BPM. The drum part was composed in advance on the Launchpad sequencer, its patterns chained into one five-minute line and saved as a [Launchpad Project]([[Launchpad/UG/09 Sequencer/12 Projects]]).
 		- The drum part plays the Piano Pool rack: piano notes and pool-cue strikes from the empty hall, one recording from the [[Ableton/Live/Instrument/Drum/Forevertron]], and the low-battery chirp of [[Microfreak/Preset/399 FireAlarmLoBat]], which sounds on most half-minute boundaries.
@@ -51,7 +51,7 @@ date-created:: [[2026-11-14 Sat]]
 	- ## Ceremonial Artifacts
 	  collapsed:: true
 		- ### Recording
-			- 4:40 · [[GitP/A/Session/26/11/14-Sat/Asset/Audio/Full/mp3]] · [Download the MP3](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___14-Sat___Asset___Audio___Full.mp3)
+			- 4:40 · [[GitP/A/Session/26/11/14-Sat/Asset/Audio/Full/mp3]] · [Download the MP3](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___11___14-Sat___Asset___Audio___Full.mp3)
 			- Played live at a synth meetup on November 14, 2026, in [[Ableton/Live]] at 60 BPM in 4/4 with the [[Novation/Launchpad/Pro/Mk3]] and the [[Microfreak]]. Four tracks carry the performance, colored after the Launchpad's sequencer tracks: orange and green for the MicroFreak, purple and coral for the drums.
 			- The recording was rendered after the meetup from a copy of the Set. The MicroFreak comes from archive tracks that recorded the live tracks after their faders, so the live fader moves are in it. The drums play back from the recorded MIDI, 4 dB louder than they were in the room. Reverb was added to the archive tracks, and three seconds were cut from the green track at 02:42. There is no spoken commentary.
 			- [[GitP/A/Log/26/11/14-Sat]] · rehearsal notes in [[Making/Music/Log/26/11/11-Wed]]
@@ -64,5 +64,5 @@ date-created:: [[2026-11-14 Sat]]
 			- [[Microfreak/Preset/399 FireAlarmLoBat]] — the chirp on pad D♯2 of the Piano Pool rack, recorded from the MicroFreak on November 12, 2026.
 				- [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]] · [Download the slot 399 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___399%20FireAlarmLoBat___Asset___Device-Read-2026-11-12.bin)
 		- ### MIDI
-			- [Download the session MIDI](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___14-Sat___Asset___MIDI___Session.mid) · [[GitP/A/Session/26/11/14-Sat/Asset/MIDI/Session/mid]]
+			- [Download the session MIDI](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___11___14-Sat___Asset___MIDI___Session.mid) · [[GitP/A/Session/26/11/14-Sat/Asset/MIDI/Session/mid]]
 			- "Piano Pool" holds the sequencer's strikes on track 2, and "Cueball Drums" the strikes played by hand on track 4. The MicroFreak was played from its own keys and left no MIDI.
