@@ -12,10 +12,11 @@ preset-synth-microfreak-parameter-payload-sha256:: 56ad9ed9134424d81e00b1f841c07
 preset-synth-file:: [FireAlarmLoBat — November 12 slot 399 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___399-FireAlarmLoBat___Asset___Device-Read-2026-11-12.bin)
 preset-synth-file-sha256:: c1fd8141fd618369eedab241e3df0de7e8699f8d51e9e72b60a9580872d57a51
 - # Notes
-	- Simulates the low-battery chirp of a smoke or fire alarm. Made as a timing cue for the [[Ghost in the Patch Ceremony]] *Foreveter* on [[2026-11-14 Sat]], following the alarm-cue idea in [[Making/Music/Log/26/11/11-Wed]].
+	- Simulates the low-battery chirp of a smoke or fire alarm. Made as a timing cue for [[GitP/Ceremon/y/Fallveter]] on [[2026-11-14 Sat]], following the alarm-cue idea in [[Making/Music/Log/26/11/11-Wed]].
 	- ## Sound
 		- [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]] with the waves set to sine.
-		- Each chirp is the highest G on the keyboard with octave +3 (G8), at the minimum sequencer gate length of 10 ms. Attack and decay are at zero.
+		- Each chirp is the highest G on the keyboard with octave +3, [[G7]], at the minimum sequencer gate length of 10 ms. Attack and decay are at zero.
+		- The chirps recorded in [[GitP/A/Session/26/11/14-Sat]] sound at about 3140 Hz, close to G7's 3136 Hz.
 	- ## Sequences
 		- Set the tempo to 60 BPM for the intervals below.
 		- Sequence A chirps once every 60 seconds.
