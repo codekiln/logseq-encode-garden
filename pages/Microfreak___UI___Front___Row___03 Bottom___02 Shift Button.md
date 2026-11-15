@@ -3,7 +3,7 @@ up:: [[Microfreak/UI/Front/Row/03 Bottom]]
 
 - # Shift button
 	- Gives other controls their second function, printed in blue on the panel.
-	- ![Shift button](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Front___Row___Bottom___02%20Shift%20Button___Asset___Panel.png)
+	- ![Shift button](../assets/.remote/logseq-encode-garden/Microfreak___UI___Front___Row___03-Bottom___02-Shift-Button___Asset___Panel.png)
 	- ## Behavior
 		- Momentary: hold it while using another control.
 	- ## Source

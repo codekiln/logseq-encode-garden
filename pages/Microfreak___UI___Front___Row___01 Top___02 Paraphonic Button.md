@@ -3,7 +3,7 @@ up:: [[Microfreak/UI/Front/Row/01 Top]]
 
 - # Paraphonic button
 	- Switches between one voice and four voices that share the analog filter.
-	- ![Paraphonic button](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Front___Row___Top___02%20Paraphonic%20Button___Asset___Panel.png)
+	- ![Paraphonic button](../assets/.remote/logseq-encode-garden/Microfreak___UI___Front___Row___01-Top___02-Paraphonic-Button___Asset___Panel.png)
 	- ## Behavior
 		- Toggle; the button is lit while Paraphonic mode is on and blinks in Chord and Unison modes.
 	- ## Gestures

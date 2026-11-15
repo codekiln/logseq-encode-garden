@@ -3,7 +3,7 @@ up:: [[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope]]
 
 - # Cycling Envelope Mode button
 	- Steps through Env, Run and Loop; an LED beside the button shows the mode.
-	- ![Cycling Envelope Mode button](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Front___Row___Middle___04%20Cycling%20Envelope___Button___Mode___Asset___Panel.png)
+	- ![Cycling Envelope Mode button](../assets/.remote/logseq-encode-garden/Microfreak___UI___Front___Row___02-Main___04-Cycling-Envelope___Button___Mode___Asset___Panel.png)
 	- ## Settings
 		- [[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Button/Mode/Env]]
 		- [[Microfreak/UI/Front/Row/02 Main/04 Cycling Envelope/Button/Mode/Run]]

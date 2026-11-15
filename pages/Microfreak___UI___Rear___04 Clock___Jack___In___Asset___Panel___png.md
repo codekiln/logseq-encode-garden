@@ -1,4 +1,4 @@
 logseq-entity:: [[Logseq/Entity/Asset/B2]]
 - # Clock In jack on the panel
-	- ![Clock In jack](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Rear___04%20Clock___Jack___In___Asset___Panel.png)
+	- ![Clock In jack](../assets/.remote/logseq-encode-garden/Microfreak___UI___Rear___04-Clock___Jack___In___Asset___Panel.png)
 	- Cropped from [[Microfreak/UG/03 Overview/02 Rear Panel/Asset/01-Rear-Panel-Overview/png]].

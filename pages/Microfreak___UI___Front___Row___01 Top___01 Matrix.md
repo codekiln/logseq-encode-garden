@@ -3,7 +3,7 @@ up:: [[Microfreak/UI/Front/Row/01 Top]]
 
 - # Matrix
 	- The modulation patchbay at the left of the top row: five source rows, seven destination columns, three Assign buttons and the Matrix knob.
-	- ![Matrix](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Front___Row___Top___01%20Matrix___Asset___Panel.png)
+	- ![Matrix](../assets/.remote/logseq-encode-garden/Microfreak___UI___Front___Row___01-Top___01-Matrix___Asset___Panel.png)
 	- ## Controls
 		- [[Microfreak/UI/Front/Row/01 Top/01 Matrix/Button/Assn/1]]
 		- [[Microfreak/UI/Front/Row/01 Top/01 Matrix/Button/Assn/2]]

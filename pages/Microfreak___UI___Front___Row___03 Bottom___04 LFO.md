@@ -3,7 +3,7 @@ up:: [[Microfreak/UI/Front/Row/03 Bottom]]
 
 - # LFO
 	- The low-frequency oscillator section of the bottom row.
-	- ![LFO](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Front___Row___Bottom___04%20LFO___Asset___Panel.png)
+	- ![LFO](../assets/.remote/logseq-encode-garden/Microfreak___UI___Front___Row___03-Bottom___04-LFO___Asset___Panel.png)
 	- ## Controls
 		- [[Microfreak/UI/Front/Row/03 Bottom/04 LFO/Button/Shape]]
 		- [[Microfreak/UI/Front/Row/03 Bottom/04 LFO/Knob/Rate]]

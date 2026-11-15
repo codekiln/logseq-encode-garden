@@ -3,7 +3,7 @@ up:: [[Microfreak/UI/Front/Row/01 Top/01 Matrix]]
 
 - # Matrix knob
 	- Steps the selection through the Matrix patch points, wrapping from the last point back to the first.
-	- ![Matrix knob](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Front___Row___Top___01%20Matrix___Knob___Asset___Panel.png)
+	- ![Matrix knob](../assets/.remote/logseq-encode-garden/Microfreak___UI___Front___Row___01-Top___01-Matrix___Knob___Asset___Panel.png)
 	- ## Behavior
 		- Endless encoder with a push switch.
 	- ## Values

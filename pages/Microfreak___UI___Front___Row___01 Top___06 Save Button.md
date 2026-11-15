@@ -3,7 +3,7 @@ up:: [[Microfreak/UI/Front/Row/01 Top]]
 
 - # Save button
 	- Opens the save menu for choosing a slot, a category and a name; pressing it again cancels.
-	- ![Save button](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___UI___Front___Row___Top___06%20Save%20Button___Asset___Panel.png)
+	- ![Save button](../assets/.remote/logseq-encode-garden/Microfreak___UI___Front___Row___01-Top___06-Save-Button___Asset___Panel.png)
 	- ## Gestures
 		- [[Microfreak/UI/Front/Row/01 Top/06 Save Button/Hold]]
 	- ## Source
