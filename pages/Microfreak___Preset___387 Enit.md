@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/386 Dnit]]
 next:: [[Microfreak/Preset/388 Anit1]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/09 Formant]]
 preset-synth-microfreak-parameter-payload-sha256:: 1db3ab4b6f4f2cbdb61a4619152271f9ace6c7e7c17433b895ca2f39a688e746
-preset-synth-file:: [Enit — October 25 slot 387 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___387%20Enit___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Enit — October 25 slot 387 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___387-Enit___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 57be619cb422aa2b89e8a79917b5eca543b5d09be2c74cb8398b0ed9a07c2773
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 387 over USB on October 25, 2026 with `mise run microfreak:download --slot 387`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 387 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___387%20Enit___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/387 Enit/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 387 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___387-Enit___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/387 Enit/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Formant]([[Microfreak/UI/Oscillator/Knob/Type/Formant]]). [[Microfreak/UG/06 Dig Osc/03 Types/09 Formant]]
 		- [Interval]([[Microfreak/UI/Oscillator/Knob/Type/Formant/Interval]]): 0.409. [Formant]([[Microfreak/UI/Oscillator/Knob/Type/Formant/Formant]]): 0.266. [Shape]([[Microfreak/UI/Oscillator/Knob/Type/Formant/Shape]]): 0.672.

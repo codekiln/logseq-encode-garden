@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/105 SlowBurn]]
 next:: [[Microfreak/Preset/107 Arame]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/05 KarplusStr]]
 preset-synth-microfreak-parameter-payload-sha256:: db8fbcfe498100ae4f819eb49eff79ae3cdb072399da6f8bcb1210f35b78fa3e
-preset-synth-file:: [Clave String — October 25 slot 106 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___106%20Clave%20String___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Clave String — October 25 slot 106 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___106-Clave-String___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: e26e813ce1aaed69399714407918cb4f9144a914b5bafb369af61f9e1f446f60
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 106 over USB on October 25, 2026 with `mise run microfreak:download --slot 106`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 1.1, Factory 2.1, Factory 3.0 (Factory 1.1 slot 198, Factory 2.1 slot 187, Factory 3.0 slot 187). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 106 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___106%20Clave%20String___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/106 Clave String/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 106 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___106-Clave-String___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/106 Clave String/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [KarplusStr]([[Microfreak/UI/Oscillator/Knob/Type/KarplusStr]]). [[Microfreak/UG/06 Dig Osc/03 Types/05 KarplusStr]]
 		- [Bow]([[Microfreak/UI/Oscillator/Knob/Type/KarplusStr/Bow]]): 1.000. [Position]([[Microfreak/UI/Oscillator/Knob/Type/KarplusStr/Position]]): 1.000. [Decay]([[Microfreak/UI/Oscillator/Knob/Type/KarplusStr/Decay]]): 1.000.

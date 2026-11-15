@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/384 Bnit]]
 next:: [[Microfreak/Preset/386 Dnit]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM]]
 preset-synth-microfreak-parameter-payload-sha256:: ce3cbbafb8a9bd8527f021a48851b828c9c102bd9d0f73c61a7a4df726c333f0
-preset-synth-file:: [Cnit — October 25 slot 385 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___385%20Cnit___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Cnit — October 25 slot 385 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___385-Cnit___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 740d8284ca9bc7c169b02d6b846dad8c4e89b5cf2f84b24ec2f1b8cd28c90c7e
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 385 over USB on October 25, 2026 with `mise run microfreak:download --slot 385`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 385 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___385%20Cnit___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/385 Cnit/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 385 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___385-Cnit___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/385 Cnit/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Two Op. FM]([[Microfreak/UI/Oscillator/Knob/Type/Two Op.FM]]). [[Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM]]
 		- [Ratio]([[Microfreak/UI/Oscillator/Knob/Type/Two Op.FM/Ratio]]): 0.306. [Amount]([[Microfreak/UI/Oscillator/Knob/Type/Two Op.FM/Amount]]): 0.486. [Shape]([[Microfreak/UI/Oscillator/Knob/Type/Two Op.FM/Shape]]): 0.012.

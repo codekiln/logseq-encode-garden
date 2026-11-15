@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/050 Death]]
 next:: [[Microfreak/Preset/052 Ringussion]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable]]
 preset-synth-microfreak-parameter-payload-sha256:: 9699070e3557bb5339e17b7db783bf28ea271c2601cd658c40e313ce97f72244
-preset-synth-file:: [Solitude — October 25 slot 51 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___051%20Solitude___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Solitude — October 25 slot 51 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___051-Solitude___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 088b4989bd34c0ad78a09fbc9139cd305ddf3399389480139130b79277273ee2
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 51 over USB on October 25, 2026 with `mise run microfreak:download --slot 51`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 1.1, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 1.1 slot 137, Factory 2.1 slot 137, Factory 3.0 slot 137, Factory 6.0 slot 273). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 51 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___051%20Solitude___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/051 Solitude/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 51 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___051-Solitude___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/051 Solitude/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Wavetable]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable]]). [[Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable]]
 		- [Table]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable/Table]]): 7 (stored choice code). [Position]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable/Position]]): 0.437. [Chorus]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable/Chorus]]): 0.473.

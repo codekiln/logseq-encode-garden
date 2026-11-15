@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/121 Fat Moves]]
 next:: [[Microfreak/Preset/123 TaBass]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/13 Noise]]
 preset-synth-microfreak-parameter-payload-sha256:: ae739fc67e11664a99430825f67d8b02d5160de7371d20dacff8ffb0682b6160
-preset-synth-file:: [Simon Says — October 25 slot 122 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___122%20Simon%20Says___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Simon Says — October 25 slot 122 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___122-Simon-Says___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 934ec8f47cc3c59850cbbed509dc4a3c745ec4b15b3afecbc2e239b4af82a6de
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 122 over USB on October 25, 2026 with `mise run microfreak:download --slot 122`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 2.0, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 2.0 slot 10, Factory 2.1 slot None, Factory 3.0 slot 201, Factory 6.0 slot 363). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 122 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___122%20Simon%20Says___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/122 Simon Says/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 122 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___122-Simon-Says___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/122 Simon Says/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Noise]([[Microfreak/UI/Oscillator/Knob/Type/Noise]]). [[Microfreak/UG/06 Dig Osc/03 Types/13 Noise]]
 		- [Wave]([[Microfreak/UI/Oscillator/Knob/Type/Noise/Wave]]): 0.345. [Timbre]([[Microfreak/UI/Oscillator/Knob/Type/Noise/Timbre]]): 1.000. [Shape]([[Microfreak/UI/Oscillator/Knob/Type/Noise/Shape]]): 0.772.

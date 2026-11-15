@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/055 Analordic]]
 next:: [[Microfreak/Preset/057 Hollows]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog]]
 preset-synth-microfreak-parameter-payload-sha256:: fde718164853098aac2a17b1bf38a3c69a2626f26879906a3f5792164d0856bc
-preset-synth-file:: [PowerStab — October 25 slot 56 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___056%20PowerStab___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [PowerStab — October 25 slot 56 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___056-PowerStab___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 4e6b6146a2f20cd133ed7317778e92bcb6fe2c81f84400a0a21b24b189940d2a
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 56 over USB on October 25, 2026 with `mise run microfreak:download --slot 56`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 1.1, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 1.1 slot 141, Factory 2.1 slot 141, Factory 3.0 slot 141, Factory 6.0 slot 129). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 56 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___056%20PowerStab___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/056 PowerStab/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 56 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___056-PowerStab___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/056 PowerStab/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [V.Analog]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog]]). [[Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog]]
 		- [Detune]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Detune]]): 0.619. [Shape]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Shape]]): 0.181. [Wave]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Wave]]): 0.502.

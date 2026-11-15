@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/393 answ er]]
 next:: [[Microfreak/Preset/395 26.06.25]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable]]
 preset-synth-microfreak-parameter-payload-sha256:: 2ccb2fd485c65dcc003fa434b9577cdcdb3c557a0ae340f835158e135cac86d7
-preset-synth-file:: [Jing A — October 25 slot 394 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___394%20Jing%20A___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Jing A — October 25 slot 394 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___394-Jing-A___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: abfc0bc6faafac92b900b079f448b648b2acac7770258212847cc98cda9865b7
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 394 over USB on October 25, 2026 with `mise run microfreak:download --slot 394`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 394 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___394%20Jing%20A___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/394 Jing A/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 394 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___394-Jing-A___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/394 Jing A/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Wavetable]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable]]). [[Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable]]
 		- [Table]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable/Table]]): 0 (stored choice code). [Position]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable/Position]]): 0.000. [Chorus]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable/Chorus]]): 1.000.

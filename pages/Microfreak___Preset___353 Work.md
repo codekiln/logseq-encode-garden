@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/352 Lait]]
 next:: [[Microfreak/Preset/354 Fjit]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/19 Scan Grains]]
 preset-synth-microfreak-parameter-payload-sha256:: 42ac85227967b5aa3e66e3b90200ef9b24ff7d32783b4533771f4243e8528f68
-preset-synth-file:: [Work — October 25 slot 353 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___353%20Work___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Work — October 25 slot 353 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___353-Work___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: bac9e4dc5d6305136e6276caa77903f8d61f0afcec9a674cfe0a30f6492b6fb2
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 353 over USB on October 25, 2026 with `mise run microfreak:download --slot 353`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 353 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___353%20Work___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/353 Work/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 353 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___353-Work___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/353 Work/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Scan Grains]([[Microfreak/UI/Oscillator/Knob/Type/Scan Grains]]). [[Microfreak/UG/06 Dig Osc/03 Types/19 Scan Grains]]
 		- [Scan]([[Microfreak/UI/Oscillator/Knob/Type/Scan Grains/Scan]]): 0.273. [Density]([[Microfreak/UI/Oscillator/Knob/Type/Scan Grains/Density]]): 0.207. [Chaos]([[Microfreak/UI/Oscillator/Knob/Type/Scan Grains/Chaos]]): 0.262.

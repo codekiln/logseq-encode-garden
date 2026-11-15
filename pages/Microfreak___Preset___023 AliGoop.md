@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/022 BouncKeyPara]]
 next:: [[Microfreak/Preset/024 Stan2]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable]]
 preset-synth-microfreak-parameter-payload-sha256:: 7e2707d4e8d971aa7c9aca720e11fd354da1458744aefa4860b39243567e8cfe
-preset-synth-file:: [AliGoop — October 25 slot 23 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___023%20AliGoop___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [AliGoop — October 25 slot 23 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___023-AliGoop___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 6c144b8b38b2a2446e5ea6826eba2122189376139da1e0eb4c15077fc627f45b
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 23 over USB on October 25, 2026 with `mise run microfreak:download --slot 23`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 1.1, Factory 2.1, Factory 3.0 (Factory 1.1 slot 111, Factory 2.1 slot 111, Factory 3.0 slot 111). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 23 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___023%20AliGoop___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/023 AliGoop/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 23 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___023-AliGoop___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/023 AliGoop/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Wavetable]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable]]). [[Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable]]
 		- [Table]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable/Table]]): 13 (stored choice code). [Position]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable/Position]]): 0.320. [Chorus]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable/Chorus]]): 0.000.

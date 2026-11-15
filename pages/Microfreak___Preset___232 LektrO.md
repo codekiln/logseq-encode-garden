@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/231 KataKick]]
 next:: [[Microfreak/Preset/233 Cryda Chords]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]]
 preset-synth-microfreak-parameter-payload-sha256:: af147e6a15f147af4c9477df65ccd464e47c09937893382bb0d4d1c1d1acefd5
-preset-synth-file:: [LektrO — October 25 slot 232 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___232%20LektrO___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [LektrO — October 25 slot 232 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___232-LektrO___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: a465ba6de77b0f1aef8d9744bd9b4774167817f36f91e7e2304372c1bc500624
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 232 over USB on October 25, 2026 with `mise run microfreak:download --slot 232`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 3.0, Factory 6.0 (Factory 3.0 slot 301, Factory 6.0 slot 336). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 232 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___232%20LektrO___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/232 LektrO/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 232 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___232-LektrO___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/232 LektrO/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Bass]([[Microfreak/UI/Oscillator/Knob/Type/BASS]]). [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]]
 		- [Saturate]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Saturate]]): 0.628. [Fold]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Fold]]): 0.870. [Noise]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Noise]]): 0.419.

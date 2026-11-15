@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/225 Neutrino A]]
 next:: [[Microfreak/Preset/227 Midnight Pad]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/07 Waveshaper]]
 preset-synth-microfreak-parameter-payload-sha256:: e431227091385a472fb0d3cbd98fcff07540b0d3b7c601c1635fe25a4cbcf168
-preset-synth-file:: [Lowride — October 25 slot 226 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___226%20Lowride___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Lowride — October 25 slot 226 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___226-Lowride___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 4f139fc68637c5241370b8703b6dea41e1c516f13297a567677840e7e30cb4ee
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 226 over USB on October 25, 2026 with `mise run microfreak:download --slot 226`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 3.0, Factory 6.0 (Factory 3.0 slot 296, Factory 6.0 slot 295). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 226 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___226%20Lowride___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/226 Lowride/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 226 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___226-Lowride___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/226 Lowride/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Waveshaper]([[Microfreak/UI/Oscillator/Knob/Type/Waveshaper]]). [[Microfreak/UG/06 Dig Osc/03 Types/07 Waveshaper]]
 		- [Wave]([[Microfreak/UI/Oscillator/Knob/Type/Waveshaper/Wave]]): 0.498. [Amount]([[Microfreak/UI/Oscillator/Knob/Type/Waveshaper/Amount]]): 0.498. [Asym]([[Microfreak/UI/Oscillator/Knob/Type/Waveshaper/Asym]]): 0.000.

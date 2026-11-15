@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/129 Opst]]
 next:: [[Microfreak/Preset/131 Colik]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable]]
 preset-synth-microfreak-parameter-payload-sha256:: b11765181a98c90b9441408d429bf8147216e70737583bd752de110a362a5a1c
-preset-synth-file:: [Sprt Brth — October 25 slot 130 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___130%20Sprt%20Brth___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Sprt Brth — October 25 slot 130 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___130-Sprt-Brth___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: bc2653331cc2c567f41c54999dce4956ec48452155bd5921dbd33a1c1a364f92
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 130 over USB on October 25, 2026 with `mise run microfreak:download --slot 130`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 130 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___130%20Sprt%20Brth___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/130 Sprt Brth/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 130 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___130-Sprt-Brth___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/130 Sprt Brth/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Wavetable]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable]]). [[Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable]]
 		- [Table]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable/Table]]): 9 (stored choice code). [Position]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable/Position]]): 0.405. [Chorus]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable/Chorus]]): 0.350.

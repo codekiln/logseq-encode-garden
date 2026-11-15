@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/303 2020 Behind]]
 next:: [[Microfreak/Preset/305 Vibrato Treble]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/22 Vocoder]]
 preset-synth-microfreak-parameter-payload-sha256:: b0bf93477bbb32bbf916ab53355604f4a71a58f68367002b7be8e58d15de0c46
-preset-synth-file:: [Saw Vox — October 25 slot 304 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___304%20Saw%20Vox___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Saw Vox — October 25 slot 304 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___304-Saw-Vox___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: e60b588c20130d5a9ee991bb3691ff9a852494881d2ee5e08d31690e3eda002e
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 304 over USB on October 25, 2026 with `mise run microfreak:download --slot 304`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 2.1, Factory 3.0 (Factory 2.1 slot 51, Factory 3.0 slot 367). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 304 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___304%20Saw%20Vox___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/304 Saw Vox/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 304 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___304-Saw-Vox___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/304 Saw Vox/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Vocoder]([[Microfreak/UI/Oscillator/Knob/Type/Vocoder]]). [[Microfreak/UG/06 Dig Osc/03 Types/22 Vocoder]]
 		- [Wave]([[Microfreak/UI/Oscillator/Knob/Type/Vocoder/Wave]]): 0.000. [Timbre]([[Microfreak/UI/Oscillator/Knob/Type/Vocoder/Timbre]]): 0.500. [Shape]([[Microfreak/UI/Oscillator/Knob/Type/Vocoder/Shape]]): 0.500.

@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/355 PersnikT]]
 next:: [[Microfreak/Preset/357 2024-11-10_Sun]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM]]
 preset-synth-microfreak-parameter-payload-sha256:: d81ef669dda44854a32938ee0201bf7ed300c6b123bdd92e55b3ce38121366b4
-preset-synth-file:: [Ridiance — October 25 slot 356 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___356%20Ridiance___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Ridiance — October 25 slot 356 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___356-Ridiance___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 846dfd47c90c101f49f92f8475423890be10ecb9c396acb8f654c778fdc4d4f3
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 356 over USB on October 25, 2026 with `mise run microfreak:download --slot 356`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 356 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___356%20Ridiance___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/356 Ridiance/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 356 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___356-Ridiance___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/356 Ridiance/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Two Op. FM]([[Microfreak/UI/Oscillator/Knob/Type/Two Op.FM]]). [[Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM]]
 		- [Ratio]([[Microfreak/UI/Oscillator/Knob/Type/Two Op.FM/Ratio]]): 0.314. [Amount]([[Microfreak/UI/Oscillator/Knob/Type/Two Op.FM/Amount]]): 0.373. [Shape]([[Microfreak/UI/Oscillator/Knob/Type/Two Op.FM/Shape]]): 0.047.

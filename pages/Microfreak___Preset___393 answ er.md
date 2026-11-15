@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/392 Blithrifi]]
 next:: [[Microfreak/Preset/394 Jing A]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]]
 preset-synth-microfreak-parameter-payload-sha256:: 14b39f55fa42e20e685fe83120683c0c4caea191e3d6d7a99bb2c1dcf820af23
-preset-synth-file:: [answ er — October 25 slot 393 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___393%20answ%20er___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [answ er — October 25 slot 393 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___393-answ-er___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: f7fb14be4da1e534f5aefef965a708ceec89255b752b9e05f6eeac9dcac114f2
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 393 over USB on October 25, 2026 with `mise run microfreak:download --slot 393`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 393 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___393%20answ%20er___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/393 answ er/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 393 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___393-answ-er___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/393 answ er/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Bass]([[Microfreak/UI/Oscillator/Knob/Type/BASS]]). [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]]
 		- [Saturate]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Saturate]]): 0.738. [Fold]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Fold]]): 0.980. [Noise]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Noise]]): 0.355.

@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/145 Hihat B]]
 next:: [[Microfreak/Preset/147 Drum Grit Seq]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/13 Noise]]
 preset-synth-microfreak-parameter-payload-sha256:: 0a1a5f638e9948239582e1c11b4d3c5a9dc4ff332cf11b680cf9a07fcb188f7b
-preset-synth-file:: [Snare Seq 1 — October 25 slot 146 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___146%20Snare%20Seq%201___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Snare Seq 1 — October 25 slot 146 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___146-Snare-Seq-1___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 66a8548953376555361090a2f89fcd453b46d01f63fea84ed883c8e30eec0cb6
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 146 over USB on October 25, 2026 with `mise run microfreak:download --slot 146`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 2.0, Factory 2.1, Factory 3.0 (Factory 2.0 slot 121, Factory 2.1 slot 223, Factory 3.0 slot 223). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 146 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___146%20Snare%20Seq%201___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/146 Snare Seq 1/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 146 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___146-Snare-Seq-1___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/146 Snare Seq 1/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Noise]([[Microfreak/UI/Oscillator/Knob/Type/Noise]]). [[Microfreak/UG/06 Dig Osc/03 Types/13 Noise]]
 		- [Wave]([[Microfreak/UI/Oscillator/Knob/Type/Noise/Wave]]): 0.309. [Timbre]([[Microfreak/UI/Oscillator/Knob/Type/Noise/Timbre]]): 0.142. [Shape]([[Microfreak/UI/Oscillator/Knob/Type/Noise/Shape]]): 0.201.

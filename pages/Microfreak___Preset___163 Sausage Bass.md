@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/162 Roid]]
 next:: [[Microfreak/Preset/164 Space Alert]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable]]
 preset-synth-microfreak-parameter-payload-sha256:: 5ed770b695d0fddab9a5007fc9668229bef31e41629e6a4f3b0874228fd3d4ea
-preset-synth-file:: [Sausage Bass — October 25 slot 163 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___163%20Sausage%20Bass___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Sausage Bass — October 25 slot 163 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___163-Sausage-Bass___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 4c053c7c7411dc5ad32a4c494dbb0ebe2040a756c343ee61d9e71018d6570375
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 163 over USB on October 25, 2026 with `mise run microfreak:download --slot 163`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 2.0, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 2.0 slot 137, Factory 2.1 slot 239, Factory 3.0 slot 239, Factory 6.0 slot 367). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 163 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___163%20Sausage%20Bass___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/163 Sausage Bass/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 163 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___163-Sausage-Bass___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/163 Sausage Bass/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Wavetable]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable]]). [[Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable]]
 		- [Table]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable/Table]]): 8 (stored choice code). [Position]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable/Position]]): 0.374. [Chorus]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable/Chorus]]): 0.698.

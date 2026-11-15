@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/299 I Saw It B4]]
 next:: [[Microfreak/Preset/301 Perculiar Bass]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/16 HARM]]
 preset-synth-microfreak-parameter-payload-sha256:: 67b85cba6a3b888a407805139e4861da59343af18a2328b9c32a24b3497af680
-preset-synth-file:: [MfCheese — October 25 slot 300 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___300%20MfCheese___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [MfCheese — October 25 slot 300 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___300-MfCheese___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 6055cba6b4a5e73cfb2587321a3eacd889b1e98506f903a415d22a7f0eccdeb9
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 300 over USB on October 25, 2026 with `mise run microfreak:download --slot 300`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 3.0, Factory 6.0 (Factory 3.0 slot 363, Factory 6.0 slot 304). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 300 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___300%20MfCheese___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/300 MfCheese/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 300 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___300-MfCheese___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/300 MfCheese/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Harm]([[Microfreak/UI/Oscillator/Knob/Type/HARM]]). [[Microfreak/UG/06 Dig Osc/03 Types/16 HARM]]
 		- [Spread]([[Microfreak/UI/Oscillator/Knob/Type/HARM/Spread]]): 0.355. [Rectification]([[Microfreak/UI/Oscillator/Knob/Type/HARM/Rectification]]): 0.282. [Noise]([[Microfreak/UI/Oscillator/Knob/Type/HARM/Noise]]): 0.000.

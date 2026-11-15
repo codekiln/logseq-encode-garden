@@ -115,7 +115,7 @@ class PageTest(unittest.TestCase):
         page, filename, url = p.asset_names('Microfreak/Preset/350 Smooth IPA', '2026-10-25')
         self.assertEqual(page, 'Microfreak/Preset/350 Smooth IPA/Asset/Device-Read-2026-10-25/bin')
         self.assertEqual(filename, 'Microfreak___Preset___350-Smooth-IPA___Asset___Device-Read-2026-10-25.bin')
-        self.assertTrue(url.endswith('/Microfreak___Preset___350-Smooth-IPA___Asset___Device-Read-2026-10-25.bin'))
+        self.assertEqual(url, '../assets/.remote/logseq-encode-garden/Microfreak___Preset___350-Smooth-IPA___Asset___Device-Read-2026-10-25.bin')
 
 
 if __name__ == '__main__':

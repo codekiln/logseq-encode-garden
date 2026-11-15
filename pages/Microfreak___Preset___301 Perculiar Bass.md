@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/300 MfCheese]]
 next:: [[Microfreak/Preset/302 No Rush]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]]
 preset-synth-microfreak-parameter-payload-sha256:: 63fae6c55e66643c906ab7ae7cad5db242b73accb52fc9e9811c51443f35d25a
-preset-synth-file:: [Perculiar Bass — October 25 slot 301 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___301%20Perculiar%20Bass___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Perculiar Bass — October 25 slot 301 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___301-Perculiar-Bass___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 1be84d11f21174d5a79d85d5de35e7ec058bbb7cc0062b7af2a3720cb848fae5
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 301 over USB on October 25, 2026 with `mise run microfreak:download --slot 301`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 3.0, Factory 6.0 (Factory 3.0 slot 364, Factory 6.0 slot 310). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 301 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___301%20Perculiar%20Bass___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/301 Perculiar Bass/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 301 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___301-Perculiar-Bass___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/301 Perculiar Bass/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Bass]([[Microfreak/UI/Oscillator/Knob/Type/BASS]]). [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]]
 		- [Saturate]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Saturate]]): 0.384. [Fold]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Fold]]): 1.000. [Noise]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Noise]]): 0.000.

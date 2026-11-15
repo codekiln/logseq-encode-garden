@@ -9,7 +9,7 @@ prev:: [[Microfreak/Preset/398 Init]]
 next:: [[Microfreak/Preset/400 Init]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]]
 preset-synth-microfreak-parameter-payload-sha256:: 56ad9ed9134424d81e00b1f841c072239e5cfbd5611f464941c90be07d0df519
-preset-synth-file:: [FireAlarmLoBat — November 12 slot 399 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___399%20FireAlarmLoBat___Asset___Device-Read-2026-11-12.bin)
+preset-synth-file:: [FireAlarmLoBat — November 12 slot 399 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___399-FireAlarmLoBat___Asset___Device-Read-2026-11-12.bin)
 preset-synth-file-sha256:: c1fd8141fd618369eedab241e3df0de7e8699f8d51e9e72b60a9580872d57a51
 - # Notes
 	- Simulates the low-battery chirp of a smoke or fire alarm. Made as a timing cue for the [[Ghost in the Patch Ceremony]] *Foreveter* on [[2026-11-14 Sat]], following the alarm-cue idea in [[Making/Music/Log/26/11/11-Wed]].
@@ -24,7 +24,7 @@ preset-synth-file-sha256:: c1fd8141fd618369eedab241e3df0de7e8699f8d51e9e72b60a95
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 399 over USB on November 12, 2026 with `mise run microfreak:download --slot 399`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 399 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___399%20FireAlarmLoBat___Asset___Device-Read-2026-11-12.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/399 FireAlarmLoBat/Asset/Device-Read-2026-11-12/bin]].
+		- [Download the slot 399 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___399-FireAlarmLoBat___Asset___Device-Read-2026-11-12.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/399 FireAlarmLoBat/Asset/Device-Read-2026-11-12/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [SuperWave]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave]]). [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]]
 		- [Wave]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave/Wave]]): 3 (stored choice code). [Detune]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave/Detune]]): 0.500. [Volume]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave/Volume]]): 0.500.

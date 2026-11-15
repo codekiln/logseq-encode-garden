@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/389 Bnit2]]
 next:: [[Microfreak/Preset/391 Dnit2]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog]]
 preset-synth-microfreak-parameter-payload-sha256:: f43792c6b5886cdb753e31ec8a150c8d522ac921574c9e6132844ea1ea4692e8
-preset-synth-file:: [Cnit2 — October 25 slot 390 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___390%20Cnit2___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Cnit2 — October 25 slot 390 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___390-Cnit2___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 007e94a49dd422be09eb5adf659a7bd965aa0d3e2ea3c94c2de1e4574b108705
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 390 over USB on October 25, 2026 with `mise run microfreak:download --slot 390`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 390 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___390%20Cnit2___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/390 Cnit2/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 390 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___390-Cnit2___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/390 Cnit2/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [V.Analog]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog]]). [[Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog]]
 		- [Detune]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Detune]]): 0.326. [Shape]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Shape]]): 0.260. [Wave]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Wave]]): 0.029.

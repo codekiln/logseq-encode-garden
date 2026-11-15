@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/318 Sequenced]]
 next:: [[Microfreak/Preset/320 Munks]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/22 Vocoder]]
 preset-synth-microfreak-parameter-payload-sha256:: fe2fb52c84de293c0b4468ac28e1bc844acb4bf1b2a3d21dcc4905102d385232
-preset-synth-file:: [SnH Voicing — October 25 slot 319 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___319%20SnH%20Voicing___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [SnH Voicing — October 25 slot 319 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___319-SnH-Voicing___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: d17bc38db8237484e62cc618fa8ac014c3893b3705c281cd7b31133dfa642624
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 319 over USB on October 25, 2026 with `mise run microfreak:download --slot 319`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 2.1, Factory 3.0, Factory 6.0 (Factory 2.1 slot 66, Factory 3.0 slot 380, Factory 6.0 slot 423). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 319 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___319%20SnH%20Voicing___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/319 SnH Voicing/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 319 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___319-SnH-Voicing___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/319 SnH Voicing/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Vocoder]([[Microfreak/UI/Oscillator/Knob/Type/Vocoder]]). [[Microfreak/UG/06 Dig Osc/03 Types/22 Vocoder]]
 		- [Wave]([[Microfreak/UI/Oscillator/Knob/Type/Vocoder/Wave]]): 0.413. [Timbre]([[Microfreak/UI/Oscillator/Knob/Type/Vocoder/Timbre]]): 0.499. [Shape]([[Microfreak/UI/Oscillator/Knob/Type/Vocoder/Shape]]): 0.508.

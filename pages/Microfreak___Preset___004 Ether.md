@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/003 Trance]]
 next:: [[Microfreak/Preset/005 MotivSeq]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]]
 preset-synth-microfreak-parameter-payload-sha256:: f2095974f6f3d5b480447c5cb426d8f220e91b4f4102f65f298f0a6b7a7ff563
-preset-synth-file:: [Ether — October 25 slot 4 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___004%20Ether___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Ether — October 25 slot 4 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___004-Ether___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: b5c4c87698cc579bc6b25671c3585ddf4b674f48a35fdeee0c556da0ea5a59a0
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 4 over USB on October 25, 2026 with `mise run microfreak:download --slot 4`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 1.1, Factory 2.1, Factory 3.0 (Factory 1.1 slot 4, Factory 2.1 slot 4, Factory 3.0 slot 4). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 4 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___004%20Ether___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/004 Ether/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 4 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___004-Ether___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/004 Ether/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [SuperWave]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave]]). [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]]
 		- [Wave]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave/Wave]]): 3 (stored choice code). [Detune]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave/Detune]]): 1.000. [Volume]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave/Volume]]): 0.735.

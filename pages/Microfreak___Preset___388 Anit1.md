@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/387 Enit]]
 next:: [[Microfreak/Preset/389 Bnit2]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM]]
 preset-synth-microfreak-parameter-payload-sha256:: ecce34ad034e11bc8c93534fb2e6d4464bf230a4d5aee45d5b2e2ea97b8feb30
-preset-synth-file:: [Anit1 — October 25 slot 388 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___388%20Anit1___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Anit1 — October 25 slot 388 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___388-Anit1___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: fcc39832d43f5f17cffa374a57229305aa0ed024fd56a8660567d3bc8991c1b4
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 388 over USB on October 25, 2026 with `mise run microfreak:download --slot 388`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 388 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___388%20Anit1___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/388 Anit1/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 388 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___388-Anit1___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/388 Anit1/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Two Op. FM]([[Microfreak/UI/Oscillator/Knob/Type/Two Op.FM]]). [[Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM]]
 		- [Ratio]([[Microfreak/UI/Oscillator/Knob/Type/Two Op.FM/Ratio]]): 0.306. [Amount]([[Microfreak/UI/Oscillator/Knob/Type/Two Op.FM/Amount]]): 0.486. [Shape]([[Microfreak/UI/Oscillator/Knob/Type/Two Op.FM/Shape]]): 0.000.

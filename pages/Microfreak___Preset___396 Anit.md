@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/395 26.06.25]]
 next:: [[Microfreak/Preset/397 Imit]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/05 KarplusStr]]
 preset-synth-microfreak-parameter-payload-sha256:: d6cf74ffdd0eae2c020467bf37d8acba51ade01fce94b5acf6871f6459c73169
-preset-synth-file:: [Anit — October 25 slot 396 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___396%20Anit___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Anit — October 25 slot 396 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___396-Anit___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 6d80c6a680ae5597c2ea3173a2fc2717cdd8e08e1ecdd5216e491ce357cd81c9
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 396 over USB on October 25, 2026 with `mise run microfreak:download --slot 396`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 396 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___396%20Anit___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/396 Anit/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 396 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___396-Anit___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/396 Anit/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [KarplusStr]([[Microfreak/UI/Oscillator/Knob/Type/KarplusStr]]). [[Microfreak/UG/06 Dig Osc/03 Types/05 KarplusStr]]
 		- [Bow]([[Microfreak/UI/Oscillator/Knob/Type/KarplusStr/Bow]]): 0.495. [Position]([[Microfreak/UI/Oscillator/Knob/Type/KarplusStr/Position]]): 1.000. [Decay]([[Microfreak/UI/Oscillator/Knob/Type/KarplusStr/Decay]]): 0.229.

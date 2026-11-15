@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/400 Init]]
 next:: [[Microfreak/Preset/402 Init]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/04 Harmo]]
 preset-synth-microfreak-parameter-payload-sha256:: 120f247c3137b031cc96bfc653c7527eb76008f58b6cd4fdf3b1be2e7849654e
-preset-synth-file:: [Init — October 25 slot 401 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___401%20Init___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Init — October 25 slot 401 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___401-Init___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: d08d563d245a4922f388bbfbf508f5ab23db1a44deba91ed139d2ee9afbae80f
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 401 over USB on October 25, 2026 with `mise run microfreak:download --slot 401`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 401 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___401%20Init___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/401 Init/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 401 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___401-Init___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/401 Init/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Harmo]([[Microfreak/UI/Oscillator/Knob/Type/Harmo]]). [[Microfreak/UG/06 Dig Osc/03 Types/04 Harmo]]
 		- [Content]([[Microfreak/UI/Oscillator/Knob/Type/Harmo/Content]]): 0.426. [Sculpting]([[Microfreak/UI/Oscillator/Knob/Type/Harmo/Sculpting]]): 0.551. [Chorus]([[Microfreak/UI/Oscillator/Knob/Type/Harmo/Chorus]]): 0.340.

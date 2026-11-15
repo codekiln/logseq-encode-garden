@@ -9,7 +9,7 @@ prev:: [[Microfreak/Preset/368 TMF.24.11.23.B]]
 next:: [[Microfreak/Preset/370 TMF.24.11.23.D]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]]
 preset-synth-microfreak-parameter-payload-sha256:: 5f5c4745e913c0182035b544d45e486fb2d6717d0a6bfc499eb1b77b9c77ba5b
-preset-synth-file:: [TMF.24.11.23.C — October 25 slot 369 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___369%20TMF.24.11.23.C___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [TMF.24.11.23.C — October 25 slot 369 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___369-TMF.24.11.23.C___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 9404fb1f9efbbe8033ae1f7ecfaa84ba6acf5781c5b4845b8e90ff38946a6cd9
 - # Notes
 	- An archived `GitP.24.11.23.C.mfpz` patch contains this preset name. It shares its stored digital oscillator Type and two oscillator parameter fields with the archived [[Microfreak/Preset/368 TMF.24.11.23.B]] and [[Microfreak/Preset/370 TMF.24.11.23.D]] patches. Compared with B, the remaining oscillator field, filter cutoff, and resonance differ. Compared with D, a different oscillator field and the filter cutoff differ, while resonance matches. [[Microfreak/UG/06 Dig Osc/02 Param Controls]] describes Type and its three shaping controls.

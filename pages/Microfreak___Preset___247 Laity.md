@@ -10,7 +10,7 @@ next:: [[Microfreak/Preset/248 GrowLing]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/15 SAWX]]
 preset-synth-file-sha256:: 54d120443e087a90427a218a3e1d26a2086fe7201bcc40513f3867206c48dd1c
 preset-synth-microfreak-parameter-payload-sha256:: d64a0b804a0770991bf625e7a377a73548bcb7b20b58d5f04e6b6a32f7134bb7
-preset-synth-file:: [Laity — October 25 slot 247 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___247%20Laity___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Laity — October 25 slot 247 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___247-Laity___Asset___Device-Read-2026-10-25.bin)
 - # Notes
 	- SawX lead with envelope-shaped saw modulation, chorus and expression-controlled filter resonance.
 	- ## Saved export and provenance

@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/189 Brass 1]]
 next:: [[Microfreak/Preset/191 Soft Brass]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]]
 preset-synth-microfreak-parameter-payload-sha256:: 3dfec6d78eb5f24cec185a9b73d6c0da2caf9300b0fcd77d969e6f53eee04f67
-preset-synth-file:: [Brass 2 — October 25 slot 190 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___190%20Brass%202___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Brass 2 — October 25 slot 190 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___190-Brass-2___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 5097b842dd605a64a418ab6867e51af03446c905a383284ab51a207202e63fcd
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 190 over USB on October 25, 2026 with `mise run microfreak:download --slot 190`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 1.1, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 1.1 slot 22, Factory 2.1 slot 33, Factory 3.0 slot 263, Factory 6.0 slot 286). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 190 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___190%20Brass%202___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/190 Brass 2/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 190 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___190-Brass-2___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/190 Brass 2/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [SuperWave]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave]]). [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]]
 		- [Wave]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave/Wave]]): 0 (stored choice code). [Detune]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave/Detune]]): 0.496. [Volume]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave/Volume]]): 0.496.

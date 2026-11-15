@@ -17,21 +17,21 @@ date-created:: [[2026-10-29 Thu]]
 		  collapsed:: true
 			- The performance followed the opening part of the Halloween list, in roughly this order, through Digital Sea. The descriptions below explain the saved factory starting sounds. Recorded controller changes describe the departures from those settings.
 			- [[Microfreak/Preset/016 Voidom]] — Speech with stepped changes in formants and words; expression strongly opens the filter.
-				- [[Microfreak/UG/06 Dig Osc/03 Types/11 Speech]] · [Download the saved 016 Voidom export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___016%20Voidom___Asset___Device-Read-2026-10-25.bin)
+				- [[Microfreak/UG/06 Dig Osc/03 Types/11 Speech]] · [Download the saved 016 Voidom export](../assets/.remote/logseq-encode-garden/Microfreak___Preset___016-Voidom___Asset___Device-Read-2026-10-25.bin)
 			- [[Microfreak/Preset/029 Number Station]] — Speech whose filtered random LFO changes the word selection; expression lowers cutoff and raises resonance.
-				- [[Microfreak/UG/06 Dig Osc/03 Types/11 Speech]] · [Download the saved 029 Number Station export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___029%20Number%20Station___Asset___Device-Read-2026-10-25.bin)
+				- [[Microfreak/UG/06 Dig Osc/03 Types/11 Speech]] · [Download the saved 029 Number Station export](../assets/.remote/logseq-encode-garden/Microfreak___Preset___029-Number-Station___Asset___Device-Read-2026-10-25.bin)
 			- [[Microfreak/Preset/138 Metallic Talk]] — Speech with an envelope moving the formants and a random LFO changing words and filter brightness.
-				- [[Microfreak/UG/06 Dig Osc/03 Types/11 Speech]] · [Download the saved 138 Metallic Talk export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___138%20Metallic%20Talk___Asset___Device-Read-2026-10-25.bin)
+				- [[Microfreak/UG/06 Dig Osc/03 Types/11 Speech]] · [Download the saved 138 Metallic Talk export](../assets/.remote/logseq-encode-garden/Microfreak___Preset___138-Metallic-Talk___Asset___Device-Read-2026-10-25.bin)
 			- [[Microfreak/Preset/093 Blind]] — Speech with key position mapped to Word, so different keys select different spoken material.
-				- [[Microfreak/UG/06 Dig Osc/03 Types/11 Speech]] · [Download the saved 093 Blind export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___093%20Blind___Asset___Device-Read-2026-10-25.bin)
+				- [[Microfreak/UG/06 Dig Osc/03 Types/11 Speech]] · [Download the saved 093 Blind export](../assets/.remote/logseq-encode-garden/Microfreak___Preset___093-Blind___Asset___Device-Read-2026-10-25.bin)
 			- [[Microfreak/Preset/012 Darkstream]] — A detuned, paraphonic SuperWave pad with a slow attack and cycling-envelope filter movement.
-				- [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]] · [Download the saved 012 Darkstream export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___012%20Darkstream___Asset___Device-Read-2026-10-25.bin)
+				- [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]] · [Download the saved 012 Darkstream export](../assets/.remote/logseq-encode-garden/Microfreak___Preset___012-Darkstream___Asset___Device-Read-2026-10-25.bin)
 			- [[Microfreak/Preset/105 SlowBurn]] — A resonant high-pass Wavetable pad with a slow attack, long release and LFO movement through the wavetable.
-				- [[Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable]] · [Download the saved 105 SlowBurn export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___105%20SlowBurn___Asset___Device-Read-2026-10-25.bin)
+				- [[Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable]] · [Download the saved 105 SlowBurn export](../assets/.remote/logseq-encode-garden/Microfreak___Preset___105-SlowBurn___Asset___Device-Read-2026-10-25.bin)
 			- [[Microfreak/Preset/151 The Unstable]] — A V.Analog pad with a stepped-random oscillator morph, pressure-controlled pulse shape and cycling-envelope resonance movement.
 				- [[Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog]] · [Download the saved 151 The Unstable export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___24-Sat___Asset___Preset___The-Unstable-Live-2026-10-24.bin)
 			- [[Microfreak/Preset/141 Digital Sea]] — Noise with a slow attack and cycling-envelope movement of its character, sample-rate reduction and band-pass cutoff.
-				- [[Microfreak/UG/06 Dig Osc/03 Types/13 Noise]] · [Download the saved 141 Digital Sea export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___141%20Digital%20Sea___Asset___Device-Read-2026-10-25.bin)
+				- [[Microfreak/UG/06 Dig Osc/03 Types/13 Noise]] · [Download the saved 141 Digital Sea export](../assets/.remote/logseq-encode-garden/Microfreak___Preset___141-Digital-Sea___Asset___Device-Read-2026-10-25.bin)
 		- ### MIDI
 		  collapsed:: true
 			- [Download the aligned session MIDI](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___29-Thu___Asset___MIDI___Halloween.mid) · [[GitP/A/Session/26/10/29-Thu/Asset/MIDI/Halloween/mid]]

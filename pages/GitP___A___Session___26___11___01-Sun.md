@@ -145,9 +145,9 @@ date-created:: [[2026-11-01 Sun]]
 		- [[Making/Music/Log/26/11/01-Sun]]
 		- ### Presets
 			- [[Microfreak/Preset/259 Infini Pad]] — 00:00 to 18:17. A paraphonic pad on the BASS oscillator with a slow attack; key pressure and the envelope open Fold and the filter.
-				- [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]] · [Download the saved 259 Infini Pad export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___259%20Infini%20Pad___Asset___Device-Read-2026-10-25.bin)
+				- [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]] · [Download the saved 259 Infini Pad export](../assets/.remote/logseq-encode-garden/Microfreak___Preset___259-Infini-Pad___Asset___Device-Read-2026-10-25.bin)
 			- [[Microfreak/Preset/260 8bitfi]] — 18:17 to the end. A lead on the BASS oscillator two octaves up, with no sustain and a square LFO on pitch; key pressure drives Fold at full amount.
-				- [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]] · [Download the saved 260 8bitfi export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___260%208bitfi___Asset___Device-Read-2026-10-25.bin)
+				- [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]] · [Download the saved 260 8bitfi export](../assets/.remote/logseq-encode-garden/Microfreak___Preset___260-8bitfi___Asset___Device-Read-2026-10-25.bin)
 			- Both slots read the same after the session as they did on October 25, 2026, so they still hold the factory sounds, and the downloads contain those. The session MIDI holds the knob changes as controller messages. Matrix edits, such as the pressure routing at 25:15, are in neither.
 		- ### MIDI
 		  id:: 6ae85dd5-7ade-4692-be23-f995998c7174

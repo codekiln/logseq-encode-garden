@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/077 Eonz]]
 next:: [[Microfreak/Preset/079 ArpZap]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]]
 preset-synth-microfreak-parameter-payload-sha256:: 8773f12ba413306f386dc9946e0eb9f8b2b4b7bb2e5b510b392ce945bad911f4
-preset-synth-file:: [A Juno Vibe — October 25 slot 78 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___078%20A%20Juno%20Vibe___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [A Juno Vibe — October 25 slot 78 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___078-A-Juno-Vibe___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 0c5d32b201609ea426fa66852fdd0e12195116f0c90f5bbf5519a2cec42827c9
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 78 over USB on October 25, 2026 with `mise run microfreak:download --slot 78`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 1.1, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 1.1 slot 164, Factory 2.1 slot 161, Factory 3.0 slot 161, Factory 6.0 slot 209). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 78 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___078%20A%20Juno%20Vibe___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/078 A Juno Vibe/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 78 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___078-A-Juno-Vibe___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/078 A Juno Vibe/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [SuperWave]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave]]). [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]]
 		- [Wave]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave/Wave]]): 1 (stored choice code). [Detune]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave/Detune]]): 0.327. [Volume]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave/Volume]]): 0.001.

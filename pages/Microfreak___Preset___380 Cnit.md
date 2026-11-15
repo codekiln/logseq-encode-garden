@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/379 Bnit]]
 next:: [[Microfreak/Preset/381 Dnit]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves]]
 preset-synth-microfreak-parameter-payload-sha256:: 22f5089229e72d616eff3a5381ccfdfffb6af6ec6b2e749beef7711c0631e80a
-preset-synth-file:: [Cnit — October 25 slot 380 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___380%20Cnit___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Cnit — October 25 slot 380 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___380-Cnit___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 9ae23efaa3f74f933905261cf6ddb811f2cb7f8b05a8b7123fccf236413e1cc6
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 380 over USB on October 25, 2026 with `mise run microfreak:download --slot 380`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 380 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___380%20Cnit___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/380 Cnit/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 380 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___380-Cnit___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/380 Cnit/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [BasicWaves]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves]]). [[Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves]]
 		- [Morph]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves/Morph]]): 0.256. [Sym]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves/Sym]]): 0.000. [Sub]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves/Sub]]): 0.000.

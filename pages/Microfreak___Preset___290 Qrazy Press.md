@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/289 Down For Bass]]
 next:: [[Microfreak/Preset/291 Poisoned 0scs]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]]
 preset-synth-microfreak-parameter-payload-sha256:: dcd1ce8570c5343e53b55ede03af1bda1032c3fa0290ff9927f253c99816051f
-preset-synth-file:: [Qrazy Press — October 25 slot 290 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___290%20Qrazy%20Press___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Qrazy Press — October 25 slot 290 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___290-Qrazy-Press___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: b8ffea4596554c84a2ca1844c903edbbc8fc8a7cbd8ee85ef448bfe4c6e2b9d3
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 290 over USB on October 25, 2026 with `mise run microfreak:download --slot 290`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 3.0, Factory 6.0 (Factory 3.0 slot 354, Factory 6.0 slot 254). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 290 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___290%20Qrazy%20Press___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/290 Qrazy Press/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 290 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___290-Qrazy-Press___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/290 Qrazy Press/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Bass]([[Microfreak/UI/Oscillator/Knob/Type/BASS]]). [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]]
 		- [Saturate]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Saturate]]): 0.081. [Fold]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Fold]]): 0.250. [Noise]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Noise]]): 0.040.
