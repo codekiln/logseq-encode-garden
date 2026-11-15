@@ -1,6 +1,5 @@
-- # Tuesday — Day 4: Torso and Moderate Cardio
-	- Plan on 60–80 minutes of work sets, rests included, after the warm-up, then about 30–35 minutes of cardio; splitting them into separate times of day is another option. Warm up and choose loads per [[My/Exercise/Body/Plan]], and finish with [[My/Exercise/Body/Plan/Mobility-Circuit]] if time allows.
-	- The chapter places the moderate cardio on Day 5. Pairing it with Tuesday's gym session makes a five-day training week.
+- # Tuesday — Day 4: Torso
+	- Plan on 60–80 minutes of work sets, rests included, after the warm-up. Warm up and choose loads per [[My/Exercise/Body/Plan]], and finish with [[My/Exercise/Body/Plan/Mobility-Circuit]] if time allows.
 	- Chest, back, lower back, and abdominals, using the exercises Huberman demonstrates in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]].
 	- ## Chest
 		- ### Barbell bench press: 3 work sets of 6–10 reps
@@ -32,6 +31,3 @@
 			- {{embed [[Exercise/Body/Strength/Hanging Leg Raise]]}}
 	- ## Optional neck
 		- Huberman points to [[Person/Andrew Huberman/Book/26/Protocols/YouTube/16/11/Neck Exercises that Kill Your Neck]]: [[Exercise/Body/Strength/Plate Neck Raise]] and [[Exercise/Body/Strength/Chin Tuck]].
-	- ## Moderate cardio: 25–30 minutes
-		- After lifting, warm up with five minutes of low-intensity movement, then work for 25–30 minutes at 75–85% of maximum heart rate: breathing fairly hard, but not gasping or needing to stop.
-		- {{embed [[Exercise/Body/Cardio/Tempo Cardio]]}}

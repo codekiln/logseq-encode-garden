@@ -1,4 +1,4 @@
-- # Exercise Plan
+# Exercise Plan
 	- Strength is the priority. Three gym sessions, daily walking, and a mix of easy, moderate, and brief hard cardio fit into four or five training days.
 	- Saturday is Day 1 every week. The lifting days use the exercises Huberman demonstrates for Day 2, Day 4, and Day 7 in the Chapter Two videos of [[Person/Andrew Huberman/Book/26/Protocols]].
 	- How to train comes from Huberman's own words in the book and its Chapter Two videos. A question about effort, sets, reps, rest, or recovery is settled by what he says there.

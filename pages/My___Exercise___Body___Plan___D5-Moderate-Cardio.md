@@ -1,0 +1,5 @@
+- # Wednesday — Day 5: Moderate Cardio
+	- Warm up with five minutes of low-intensity movement, then work for 25–30 minutes at 75–85% of maximum heart rate: breathing fairly hard, but not gasping or needing to stop.
+	- ## Moderate cardio: 25–30 minutes
+		- {{embed [[Exercise/Body/Cardio/Tempo Cardio]]}}
+	- Part of [[My/Exercise/Body/Plan]].
