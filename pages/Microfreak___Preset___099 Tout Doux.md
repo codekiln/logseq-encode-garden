@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/098 Lo-FiOrgan]]
 next:: [[Microfreak/Preset/100 Tinnendo]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM]]
 preset-synth-microfreak-parameter-payload-sha256:: c3d006b885943e0f35b7fb856deb4019c991de2b1f389b8c5dbbcb26c9e5d8e1
-preset-synth-file:: [Tout Doux — October 25 slot 99 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___099%20Tout%20Doux___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Tout Doux — October 25 slot 99 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___099-Tout-Doux___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 56cddf5524d1d9de1b027c1fab180a14fe357b813de567ac10b26300eeebdaf1
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 99 over USB on October 25, 2026 with `mise run microfreak:download --slot 99`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 1.1, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 1.1 slot 187, Factory 2.1 slot 180, Factory 3.0 slot 180, Factory 6.0 slot 120). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 99 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___099%20Tout%20Doux___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/099 Tout Doux/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 99 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___099-Tout-Doux___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/099 Tout Doux/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Two Op. FM]([[Microfreak/UI/Oscillator/Knob/Type/Two Op.FM]]). [[Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM]]
 		- [Ratio]([[Microfreak/UI/Oscillator/Knob/Type/Two Op.FM/Ratio]]): 0.508. [Amount]([[Microfreak/UI/Oscillator/Knob/Type/Two Op.FM/Amount]]): 0.051. [Shape]([[Microfreak/UI/Oscillator/Knob/Type/Two Op.FM/Shape]]): 0.995.

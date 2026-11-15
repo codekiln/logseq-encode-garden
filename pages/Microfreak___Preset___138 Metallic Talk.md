@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/137 Solide]]
 next:: [[Microfreak/Preset/139 Long FM Bass]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/11 Speech]]
 preset-synth-microfreak-parameter-payload-sha256:: d1054bfa9c5ef1a687d54fa4a2adc1c29d6f25fb33a71fe307d30b06dce1aae9
-preset-synth-file:: [Metallic Talk — October 25 slot 138 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___138%20Metallic%20Talk___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Metallic Talk — October 25 slot 138 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___138-Metallic-Talk___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: ea3383634d12b816fbf0dabfff57e0f212515c36cc9392888c554c26db7f8621
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 138 over USB on October 25, 2026 with `mise run microfreak:download --slot 138`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 2.0, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 2.0 slot 114, Factory 2.1 slot 216, Factory 3.0 slot 216, Factory 6.0 slot 185). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 138 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___138%20Metallic%20Talk___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/138 Metallic Talk/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 138 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___138-Metallic-Talk___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/138 Metallic Talk/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Speech]([[Microfreak/UI/Oscillator/Knob/Type/Speech]]). [[Microfreak/UG/06 Dig Osc/03 Types/11 Speech]]
 		- [Type]([[Microfreak/UI/Oscillator/Knob/Type/Speech/Type]]): 0.247. [Timbre]([[Microfreak/UI/Oscillator/Knob/Type/Speech/Timbre]]): 0.180. [Word]([[Microfreak/UI/Oscillator/Knob/Type/Speech/Word]]): 0.228.

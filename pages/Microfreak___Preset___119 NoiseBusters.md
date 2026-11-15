@@ -9,14 +9,14 @@ prev:: [[Microfreak/Preset/118 Fight]]
 next:: [[Microfreak/Preset/120 Jobs 4 Rhythm]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/13 Noise]]
 preset-synth-microfreak-parameter-payload-sha256:: 9ad0fd7a87ad623d512f004fe1a0a4cfb441a58537173547aacbfce4c8fe8cd2
-preset-synth-file:: [NoiseBusters — October 25 slot 119 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___119%20NoiseBusters___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [NoiseBusters — October 25 slot 119 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___119-NoiseBusters___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 7c05681f3deaa1b1eb87db2e7ec2f226eda0e21cbced0ae57c1cc2ab7ac63ccd
 - # Notes
 	- ## Saved export and provenance
 		- On October 26, 2026, two further read-only USB downloads of saved slot 119 returned identical `slot-119.bin` files, matching the October 25 export and this page’s file and parameter-payload SHA-256 values. The [download protocol](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/lib/download.py) reads saved memory without selecting the preset.
 		- Saved export: read from the device's slot 119 over USB on October 25, 2026 with `mise run microfreak:download --slot 119`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 2.0, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 2.0 slot 7, Factory 2.1 archive, Factory 3.0 slot 199, Factory 6.0 slot 307). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 119 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___119%20NoiseBusters___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/119 NoiseBusters/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 119 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___119-NoiseBusters___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/119 NoiseBusters/Asset/Device-Read-2026-10-25/bin]].
 		- [Download the October 26 NoiseBusters preset export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___10___26-Mon___Asset___Preset___119-NoiseBusters.mfpz). The `.mfpz` export preserves the captured saved sound; its parser round-trip matched the raw payload. See [[GitP/A/Session/26/10/26-Mon/Asset/Preset/119-NoiseBusters/mfpz]] for format provenance and restoration limits.
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Noise]([[Microfreak/UI/Oscillator/Knob/Type/Noise]]). [[Microfreak/UG/06 Dig Osc/03 Types/13 Noise]]

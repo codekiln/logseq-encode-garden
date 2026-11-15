@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/085 Arp 2ol9]]
 next:: [[Microfreak/Preset/087 ATSpookBass]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/04 Harmo]]
 preset-synth-microfreak-parameter-payload-sha256:: 661c3103972f4412b518f82b322d8202cbf61b94e1a63413ce898a5212819465
-preset-synth-file:: [Whimsy — October 25 slot 86 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___086%20Whimsy___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Whimsy — October 25 slot 86 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___086-Whimsy___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 21ac0c5296208e42ce4031dcf7106209ee811c600b2de374bccbeb146486a394
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 86 over USB on October 25, 2026 with `mise run microfreak:download --slot 86`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 1.0, Factory 1.1, Factory 2.1, Factory 3.0 (Factory 1.0 slot 173, Factory 1.1 slot 173, Factory 2.1 slot 169, Factory 3.0 slot 169). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 86 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___086%20Whimsy___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/086 Whimsy/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 86 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___086-Whimsy___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/086 Whimsy/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Harmo]([[Microfreak/UI/Oscillator/Knob/Type/Harmo]]). [[Microfreak/UG/06 Dig Osc/03 Types/04 Harmo]]
 		- [Content]([[Microfreak/UI/Oscillator/Knob/Type/Harmo/Content]]): 0.000. [Sculpting]([[Microfreak/UI/Oscillator/Knob/Type/Harmo/Sculpting]]): 0.000. [Chorus]([[Microfreak/UI/Oscillator/Knob/Type/Harmo/Chorus]]): 0.000.

@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/350 Smooth IPA]]
 next:: [[Microfreak/Preset/352 Lait]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/22 Vocoder]]
 preset-synth-microfreak-parameter-payload-sha256:: 705a156eb734e8787a0ff54f94980361910807d94e261bfd81b27446b1bd6834
-preset-synth-file:: [Hoit — October 25 slot 351 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___351%20Hoit___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Hoit — October 25 slot 351 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___351-Hoit___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: b0e923735c50adf5145135471cd68d5e24581bdbe333694a29c37bd1e82b936f
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 351 over USB on October 25, 2026 with `mise run microfreak:download --slot 351`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 351 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___351%20Hoit___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/351 Hoit/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 351 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___351-Hoit___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/351 Hoit/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Vocoder]([[Microfreak/UI/Oscillator/Knob/Type/Vocoder]]). [[Microfreak/UG/06 Dig Osc/03 Types/22 Vocoder]]
 		- [Wave]([[Microfreak/UI/Oscillator/Knob/Type/Vocoder/Wave]]): 0.000. [Timbre]([[Microfreak/UI/Oscillator/Knob/Type/Vocoder/Timbre]]): 0.460. [Shape]([[Microfreak/UI/Oscillator/Knob/Type/Vocoder/Shape]]): 0.540.

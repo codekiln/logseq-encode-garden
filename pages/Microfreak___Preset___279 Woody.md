@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/278 Joan]]
 next:: [[Microfreak/Preset/280 Clark]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves]]
 preset-synth-microfreak-parameter-payload-sha256:: 0c37f68fa26ca56722754d163a290f8e261cc47b5d94f27ffe8a1b10d3f2334a
-preset-synth-file:: [Woody — October 25 slot 279 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___279%20Woody___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Woody — October 25 slot 279 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___279-Woody___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 1464a4d51a98583b849d012d63605ef9f0db0c4c6edea97b8606548d533ab872
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 279 over USB on October 25, 2026 with `mise run microfreak:download --slot 279`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 3.0, Factory 6.0 (Factory 3.0 slot 344, Factory 6.0 slot 333). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 279 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___279%20Woody___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/279 Woody/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 279 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___279-Woody___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/279 Woody/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [BasicWaves]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves]]). [[Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves]]
 		- [Morph]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves/Morph]]): 0.256. [Sym]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves/Sym]]): 0.000. [Sub]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves/Sub]]): 0.000.

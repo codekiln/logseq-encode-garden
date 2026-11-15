@@ -10,7 +10,7 @@ next:: [[Microfreak/Preset/287 Holistic]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/15 SAWX]]
 preset-synth-file-sha256:: 2236cbd6f76189c9a461df30ee320a638ec97fa84f85e60813d629af5946c049
 preset-synth-microfreak-parameter-payload-sha256:: 7e218a9f937e60fdcf6ccbb384f1058691bb809ccab486114413a81ea17ada87
-preset-synth-file:: [Driftsynchros — October 25 slot 286 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___286%20Driftsynchros___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Driftsynchros — October 25 slot 286 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___286-Driftsynchros___Asset___Device-Read-2026-10-25.bin)
 - # Notes
 	- SawX patch with a looping envelope closing the filter and expression increasing saw modulation.
 	- ## Saved export and provenance

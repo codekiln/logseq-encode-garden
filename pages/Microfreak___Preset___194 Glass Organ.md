@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/193 Organ 2]]
 next:: [[Microfreak/Preset/195 Night Organ]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/04 Harmo]]
 preset-synth-microfreak-parameter-payload-sha256:: 480c5fca4b54669393593f6d00027e1a53ed5d1d867ed7d9e63bb243c3499cbd
-preset-synth-file:: [Glass Organ — October 25 slot 194 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___194%20Glass%20Organ___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Glass Organ — October 25 slot 194 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___194-Glass-Organ___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 04fe0f73d982a3a3cb33792716b9658d06b0aeff25a89ac6c09184a37d916293
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 194 over USB on October 25, 2026 with `mise run microfreak:download --slot 194`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 1.1, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 1.1 slot 223, Factory 2.1 slot 37, Factory 3.0 slot 267, Factory 6.0 slot 144). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 194 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___194%20Glass%20Organ___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/194 Glass Organ/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 194 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___194-Glass-Organ___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/194 Glass Organ/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Harmo]([[Microfreak/UI/Oscillator/Knob/Type/Harmo]]). [[Microfreak/UG/06 Dig Osc/03 Types/04 Harmo]]
 		- [Content]([[Microfreak/UI/Oscillator/Knob/Type/Harmo/Content]]): 0.000. [Sculpting]([[Microfreak/UI/Oscillator/Knob/Type/Harmo/Sculpting]]): 0.031. [Chorus]([[Microfreak/UI/Oscillator/Knob/Type/Harmo/Chorus]]): 0.646.

@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/291 Poisoned 0scs]]
 next:: [[Microfreak/Preset/293 Digital Roads]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/16 HARM]]
 preset-synth-microfreak-parameter-payload-sha256:: 9eb235b596850b8dbb98a575ccf625acc5318effab52f25843f1c9d7fde79a5f
-preset-synth-file:: [Moving Cars — October 25 slot 292 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___292%20Moving%20Cars___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Moving Cars — October 25 slot 292 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___292-Moving-Cars___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: b4d2ec3ec68120526514c0c1f4b072e4f47f778d56f024c477eb28aeed25a8d0
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 292 over USB on October 25, 2026 with `mise run microfreak:download --slot 292`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 3.0, Factory 6.0 (Factory 3.0 slot 356, Factory 6.0 slot 296). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 292 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___292%20Moving%20Cars___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/292 Moving Cars/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 292 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___292-Moving-Cars___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/292 Moving Cars/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Harm]([[Microfreak/UI/Oscillator/Knob/Type/HARM]]). [[Microfreak/UG/06 Dig Osc/03 Types/16 HARM]]
 		- [Spread]([[Microfreak/UI/Oscillator/Knob/Type/HARM/Spread]]): 0.150. [Rectification]([[Microfreak/UI/Oscillator/Knob/Type/HARM/Rectification]]): 0.684. [Noise]([[Microfreak/UI/Oscillator/Knob/Type/HARM/Noise]]): 0.000.

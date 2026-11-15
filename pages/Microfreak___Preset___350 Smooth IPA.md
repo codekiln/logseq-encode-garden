@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/320 Munks]]
 next:: [[Microfreak/Preset/351 Hoit]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]]
 preset-synth-microfreak-parameter-payload-sha256:: b6236235ef184377fcc1177d01aabbff2389f8c53dc509f8a1572497fae59ac9
-preset-synth-file:: [Smooth IPA — October 25 slot 350 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___350%20Smooth%20IPA___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Smooth IPA — October 25 slot 350 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___350-Smooth-IPA___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 02ef1e347980586012aaafcb54bbce634b89f8aca69bb8552c8b3e4f1826d364
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 350 over USB on October 25, 2026 with `mise run microfreak:download --slot 350`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 350 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___350%20Smooth%20IPA___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/350 Smooth IPA/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 350 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___350-Smooth-IPA___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/350 Smooth IPA/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Bass]([[Microfreak/UI/Oscillator/Knob/Type/BASS]]). [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]]
 		- [Saturate]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Saturate]]): 0.056. [Fold]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Fold]]): 0.000. [Noise]([[Microfreak/UI/Oscillator/Knob/Type/BASS/Noise]]): 0.000.

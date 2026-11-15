@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/377 TMF.24.12.04.D]]
 next:: [[Microfreak/Preset/379 Bnit]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves]]
 preset-synth-microfreak-parameter-payload-sha256:: 2138b6707e3f38b1adfd75bd9b1c14f53ac16d86f9e7d0f597aa570ac87c7b21
-preset-synth-file:: [Anit — October 25 slot 378 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___378%20Anit___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Anit — October 25 slot 378 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___378-Anit___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: b48657243d6486f0c58bf3ed73099de99bfdc8b079662f437e1b79157ddfc79e
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 378 over USB on October 25, 2026 with `mise run microfreak:download --slot 378`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 378 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___378%20Anit___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/378 Anit/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 378 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___378-Anit___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/378 Anit/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [BasicWaves]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves]]). [[Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves]]
 		- [Morph]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves/Morph]]): 0.256. [Sym]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves/Sym]]): 0.000. [Sub]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves/Sub]]): 0.000.

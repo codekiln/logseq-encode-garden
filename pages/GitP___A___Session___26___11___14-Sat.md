@@ -59,10 +59,10 @@ date-created:: [[2026-11-14 Sat]]
 			- [[GitP/A/Session/26/11/14-Sat/Set]] — the tracks, routing, mixer moves and drum pads of the Ableton Live Set.
 		- ### Presets
 			- [[Microfreak/Preset/259 Infini Pad]] — the whole performance, played from the MicroFreak's keys. A paraphonic pad on the BASS oscillator with a slow attack; key pressure adds Fold and Saturate and opens the filter.
-				- [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]] · [Download the saved 259 Infini Pad export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___259%20Infini%20Pad___Asset___Device-Read-2026-10-25.bin)
+				- [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]] · [Download the saved 259 Infini Pad export](../assets/.remote/logseq-encode-garden/Microfreak___Preset___259-Infini-Pad___Asset___Device-Read-2026-10-25.bin)
 				- The performance used a copy of the sound saved in slot 398 with its stored sequence cleared. The download is slot 259's factory sound as read on October 25, 2026.
 			- [[Microfreak/Preset/399 FireAlarmLoBat]] — the chirp on pad D♯2 of the Piano Pool rack, recorded from the MicroFreak on November 12, 2026.
-				- [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]] · [Download the slot 399 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___399%20FireAlarmLoBat___Asset___Device-Read-2026-11-12.bin)
+				- [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]] · [Download the slot 399 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___399-FireAlarmLoBat___Asset___Device-Read-2026-11-12.bin)
 		- ### MIDI
 			- [Download the session MIDI](../assets/.remote/logseq-encode-garden/GitP___A___Session___26___11___14-Sat___Asset___MIDI___Session.mid) · [[GitP/A/Session/26/11/14-Sat/Asset/MIDI/Session/mid]]
 			- "Piano Pool" holds the sequencer's strikes on track 2, and "Cueball Drums" the strikes played by hand on track 4. The MicroFreak was played from its own keys and left no MIDI.

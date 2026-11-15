@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/353 Work]]
 next:: [[Microfreak/Preset/355 PersnikT]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/20 Cloud Grains]]
 preset-synth-microfreak-parameter-payload-sha256:: 14f11c3b98d53c99545447340f68a2e3f63e53b7d8a9703bd268e184b9aacd33
-preset-synth-file:: [Fjit — October 25 slot 354 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___354%20Fjit___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Fjit — October 25 slot 354 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___354-Fjit___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 21bef2aad81360c70309bc5fdd287ad1c4cde09dae311627948b278ebfd92e32
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 354 over USB on October 25, 2026 with `mise run microfreak:download --slot 354`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 354 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___354%20Fjit___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/354 Fjit/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 354 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___354-Fjit___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/354 Fjit/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Cloud Grains]([[Microfreak/UI/Oscillator/Knob/Type/Cloud Grains]]). [[Microfreak/UG/06 Dig Osc/03 Types/20 Cloud Grains]]
 		- [Starts]([[Microfreak/UI/Oscillator/Knob/Type/Cloud Grains/Starts]]): 0.539. [Density]([[Microfreak/UI/Oscillator/Knob/Type/Cloud Grains/Density]]): 0.336. [Chaos]([[Microfreak/UI/Oscillator/Knob/Type/Cloud Grains/Chaos]]): 0.156.

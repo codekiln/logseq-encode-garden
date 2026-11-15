@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/051 Solitude]]
 next:: [[Microfreak/Preset/053 Crystal]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/12 Modal]]
 preset-synth-microfreak-parameter-payload-sha256:: f4925935668171ceaa4e7be6cd9120242a5beb4c95f9c33779211ac2be7974f2
-preset-synth-file:: [Ringussion — October 25 slot 52 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___052%20Ringussion___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Ringussion — October 25 slot 52 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___052-Ringussion___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: a6721b4ddf46015792a1e9a2d2de889e6b1443cb94bba6d2d7e152f0e400d7ee
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 52 over USB on October 25, 2026 with `mise run microfreak:download --slot 52`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 1.0, Factory 1.1, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 1.0 slot 101, Factory 1.1 slot 101, Factory 2.1 slot 138, Factory 3.0 slot 138, Factory 6.0 slot 21). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 52 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___052%20Ringussion___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/052 Ringussion/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 52 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___052-Ringussion___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/052 Ringussion/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Modal]([[Microfreak/UI/Oscillator/Knob/Type/Modal]]). [[Microfreak/UG/06 Dig Osc/03 Types/12 Modal]]
 		- [Inharm]([[Microfreak/UI/Oscillator/Knob/Type/Modal/Inharm]]): 0.786. [Timbre]([[Microfreak/UI/Oscillator/Knob/Type/Modal/Timbre]]): 0.589. [Decay]([[Microfreak/UI/Oscillator/Knob/Type/Modal/Decay]]): 1.000.

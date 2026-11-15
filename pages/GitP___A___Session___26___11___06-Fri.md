@@ -99,7 +99,7 @@ date-created:: [[2026-11-06 Fri]]
 			- [[GitP/A/Session/26/11/06-Fri/Set]] — the tracks, routing and crossfader assignments of the Ableton Live Set, with a screenshot of its Session View.
 		- ### Presets
 			- [[Microfreak/Preset/259 Infini Pad]] — the whole session. A paraphonic pad on the BASS oscillator with a slow attack; key pressure and the envelope open Fold and the filter.
-				- [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]] · [Download the saved 259 Infini Pad export](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___259%20Infini%20Pad___Asset___Device-Read-2026-10-25.bin)
+				- [[Microfreak/UG/06 Dig Osc/03 Types/14 BASS]] · [Download the saved 259 Infini Pad export](../assets/.remote/logseq-encode-garden/Microfreak___Preset___259-Infini-Pad___Asset___Device-Read-2026-10-25.bin)
 			- On November 7, 2026, slot 259 still held the factory sound saved on October 25, so the download plays the sound as it was before the session. The knob turns described in the chapters are in the session MIDI.
 		- ### MIDI
 			- [Download the session MIDI](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/GitP___A___Session___26___11___06-Fri___Asset___MIDI___Session.mid) · [[GitP/A/Session/26/11/06-Fri/Asset/MIDI/Session/mid]]

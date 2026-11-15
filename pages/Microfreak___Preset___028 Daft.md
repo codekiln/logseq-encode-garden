@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/027 Nost]]
 next:: [[Microfreak/Preset/029 Number Station]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/11 Speech]]
 preset-synth-microfreak-parameter-payload-sha256:: ccbf12a1f3949a72abc37e63ccdc2c7432798bd86543fd14d39c03af11656e05
-preset-synth-file:: [Daft — October 25 slot 28 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___028%20Daft___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Daft — October 25 slot 28 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___028-Daft___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: c7d6ad64d666ee0932d53e97002685667db1567fc0798173dbcbf5fa14223e9b
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 28 over USB on October 25, 2026 with `mise run microfreak:download --slot 28`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 1.0, Factory 1.1, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 1.0 slot 116, Factory 1.1 slot 116, Factory 2.1 slot 116, Factory 3.0 slot 116, Factory 6.0 slot 271). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 28 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___028%20Daft___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/028 Daft/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 28 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___028-Daft___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/028 Daft/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Speech]([[Microfreak/UI/Oscillator/Knob/Type/Speech]]). [[Microfreak/UG/06 Dig Osc/03 Types/11 Speech]]
 		- [Type]([[Microfreak/UI/Oscillator/Knob/Type/Speech/Type]]): 0.184. [Timbre]([[Microfreak/UI/Oscillator/Knob/Type/Speech/Timbre]]): 0.000. [Word]([[Microfreak/UI/Oscillator/Knob/Type/Speech/Word]]): 0.000.

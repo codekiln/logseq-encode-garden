@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/108 ATZap]]
 next:: [[Microfreak/Preset/110 F-Back]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/04 Harmo]]
 preset-synth-microfreak-parameter-payload-sha256:: 42440e2c2c8196ce1b3092cabcdfdf1bc07a9bdd37ff8b6d9ad89ce604d4ac44
-preset-synth-file:: [VeloSparklz — October 25 slot 109 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___109%20VeloSparklz___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [VeloSparklz — October 25 slot 109 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___109-VeloSparklz___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: fff80f57eb5c23d277ed1ddce330b57e5b9410eee42210dd366369e834325bda
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 109 over USB on October 25, 2026 with `mise run microfreak:download --slot 109`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 1.0, Factory 1.1, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 1.0 slot None, Factory 1.1 slot 202, Factory 2.1 slot 19, Factory 3.0 slot 19, Factory 6.0 slot None). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 109 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___109%20VeloSparklz___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/109 VeloSparklz/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 109 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___109-VeloSparklz___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/109 VeloSparklz/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Harmo]([[Microfreak/UI/Oscillator/Knob/Type/Harmo]]). [[Microfreak/UG/06 Dig Osc/03 Types/04 Harmo]]
 		- [Content]([[Microfreak/UI/Oscillator/Knob/Type/Harmo/Content]]): 0.128. [Sculpting]([[Microfreak/UI/Oscillator/Knob/Type/Harmo/Sculpting]]): 0.153. [Chorus]([[Microfreak/UI/Oscillator/Knob/Type/Harmo/Chorus]]): 0.457.

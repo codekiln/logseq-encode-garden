@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/380 Cnit]]
 next:: [[Microfreak/Preset/382 Anit]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves]]
 preset-synth-microfreak-parameter-payload-sha256:: 498c765aafce25b2ba4faf3626e54b53adeb7adefb079dcc6dbab94de74dca4e
-preset-synth-file:: [Dnit — October 25 slot 381 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___381%20Dnit___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Dnit — October 25 slot 381 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___381-Dnit___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 29a9a9868235732fa40f7b2f7d1f6cdd75d970033f6ba43610e8f3ef1ca2bb60
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 381 over USB on October 25, 2026 with `mise run microfreak:download --slot 381`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 381 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___381%20Dnit___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/381 Dnit/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 381 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___381-Dnit___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/381 Dnit/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [BasicWaves]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves]]). [[Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves]]
 		- [Morph]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves/Morph]]): 0.123. [Sym]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves/Sym]]): 0.055. [Sub]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves/Sub]]): 0.930.

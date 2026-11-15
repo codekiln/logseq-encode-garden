@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/107 Arame]]
 next:: [[Microfreak/Preset/109 VeloSparklz]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable]]
 preset-synth-microfreak-parameter-payload-sha256:: 42165a49f645f2e00d622b4797ca07d8b25d12612f5decd02fd4cba6107c72f6
-preset-synth-file:: [ATZap — October 25 slot 108 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___108%20ATZap___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [ATZap — October 25 slot 108 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___108-ATZap___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 5c59e8fdcdf449874c086ac003feccd032ffa50cb1b3dfba1da54bb0d1c50422
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 108 over USB on October 25, 2026 with `mise run microfreak:download --slot 108`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 1.0, Factory 1.1, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 1.0 slot 200, Factory 1.1 slot 200, Factory 2.1 slot 189, Factory 3.0 slot 189, Factory 6.0 slot 351). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 108 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___108%20ATZap___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/108 ATZap/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 108 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___108-ATZap___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/108 ATZap/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Wavetable]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable]]). [[Microfreak/UG/06 Dig Osc/03 Types/03 Wavetable]]
 		- [Table]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable/Table]]): 0 (stored choice code). [Position]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable/Position]]): 0.000. [Chorus]([[Microfreak/UI/Oscillator/Knob/Type/Wavetable/Chorus]]): 0.000.

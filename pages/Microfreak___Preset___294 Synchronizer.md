@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/293 Digital Roads]]
 next:: [[Microfreak/Preset/295 Tactile Techno]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/15 SAWX]]
 preset-synth-microfreak-parameter-payload-sha256:: 4a27da5dfe4e9d6489900a2fc646bd75c86e071a2adb716e0d741a5aa8ebf533
-preset-synth-file:: [Synchronizer — October 25 slot 294 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___294%20Synchronizer___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Synchronizer — October 25 slot 294 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___294-Synchronizer___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: edc2ea5eab13654117e543ff0650fbfd7fc3c983a8a08e6b771b82a351184b8a
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 294 over USB on October 25, 2026 with `mise run microfreak:download --slot 294`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 3.0, Factory 6.0 (Factory 3.0 slot 358, Factory 6.0 slot 394). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 294 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___294%20Synchronizer___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/294 Synchronizer/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 294 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___294-Synchronizer___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/294 Synchronizer/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [SawX]([[Microfreak/UI/Oscillator/Knob/Type/SAWX]]). [[Microfreak/UG/06 Dig Osc/03 Types/15 SAWX]]
 		- [Saw Mod]([[Microfreak/UI/Oscillator/Knob/Type/SAWX/Saw Mod]]): 0.001. [Shape]([[Microfreak/UI/Oscillator/Knob/Type/SAWX/Shape]]): 1.000. [Noise]([[Microfreak/UI/Oscillator/Knob/Type/SAWX/Noise]]): 0.340.

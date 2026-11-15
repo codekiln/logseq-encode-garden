@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/103 Padel]]
 next:: [[Microfreak/Preset/105 SlowBurn]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/07 Waveshaper]]
 preset-synth-microfreak-parameter-payload-sha256:: 92dafb78131c9e152200ec6454f569da5e0cbd1b5cd95b575de1aa493676ba2d
-preset-synth-file:: [Wait... — October 25 slot 104 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___104%20Wait...___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Wait... — October 25 slot 104 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___104-Wait...___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: e266aabdf69d57c45d2571b0cb1e19991b6e8b7b583a739a88c77b0673e74a77
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 104 over USB on October 25, 2026 with `mise run microfreak:download --slot 104`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 1.0, Factory 1.1, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 1.0 slot 193, Factory 1.1 slot 193, Factory 2.1 slot 185, Factory 3.0 slot 185, Factory 6.0 slot 15). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 104 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___104%20Wait...___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/104 Wait.../Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 104 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___104-Wait...___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/104 Wait.../Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Waveshaper]([[Microfreak/UI/Oscillator/Knob/Type/Waveshaper]]). [[Microfreak/UG/06 Dig Osc/03 Types/07 Waveshaper]]
 		- [Wave]([[Microfreak/UI/Oscillator/Knob/Type/Waveshaper/Wave]]): 0.141. [Amount]([[Microfreak/UI/Oscillator/Knob/Type/Waveshaper/Amount]]): 0.313. [Asym]([[Microfreak/UI/Oscillator/Knob/Type/Waveshaper/Asym]]): 0.000.

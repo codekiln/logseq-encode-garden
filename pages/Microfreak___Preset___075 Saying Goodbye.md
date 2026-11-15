@@ -10,7 +10,7 @@ next:: [[Microfreak/Preset/076 AutoCHILL]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM]]
 preset-synth-file-sha256:: a988878aa3a5f964e3c59fa4373d309f1c633a077c2b2fc50f0aed59c3e9daa5
 preset-synth-microfreak-parameter-payload-sha256:: 5f345b37fbe2642c85b95b2f56a559d4e022dfc0dccf9b91720175d76101a3ab
-preset-synth-file:: [Saying Goodbye — October 25 slot 75 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___075%20Saying%20Goodbye___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Saying Goodbye — October 25 slot 75 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___075-Saying-Goodbye___Asset___Device-Read-2026-10-25.bin)
 - # Notes
 	- Two-operator FM pad with a looping envelope moving cutoff and feedback; expression reduces FM intensity.
 	- ## Saved export and provenance

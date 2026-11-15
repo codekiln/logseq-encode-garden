@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/253 Carrytron]]
 next:: [[Microfreak/Preset/255 WubbliDub]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/12 Modal]]
 preset-synth-microfreak-parameter-payload-sha256:: fd7d63011d9b063777e406ca97b45f4c463d3b2e34617ad658246ff46c8ea692
-preset-synth-file:: [Comb-Me — October 25 slot 254 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___254%20Comb-Me___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Comb-Me — October 25 slot 254 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___254-Comb-Me___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 0e79bc96563a412a116caff632c9eb6d7703f82cb9159567c893837420f5f0ee
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 254 over USB on October 25, 2026 with `mise run microfreak:download --slot 254`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 3.0, Factory 6.0 (Factory 3.0 slot 321, Factory 6.0 slot 232). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 254 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___254%20Comb-Me___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/254 Comb-Me/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 254 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___254-Comb-Me___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/254 Comb-Me/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Modal]([[Microfreak/UI/Oscillator/Knob/Type/Modal]]). [[Microfreak/UG/06 Dig Osc/03 Types/12 Modal]]
 		- [Inharm]([[Microfreak/UI/Oscillator/Knob/Type/Modal/Inharm]]): 0.115. [Timbre]([[Microfreak/UI/Oscillator/Knob/Type/Modal/Timbre]]): 0.594. [Decay]([[Microfreak/UI/Oscillator/Knob/Type/Modal/Decay]]): 0.326.

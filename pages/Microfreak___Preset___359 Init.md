@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/358 20241116.1]]
 next:: [[Microfreak/Preset/360 TMF.24.11.18.A]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves]]
 preset-synth-microfreak-parameter-payload-sha256:: 4f6e52b167e4ab4a56a531cc11974a9e3611e1eab66ade9611e9206d22ceee73
-preset-synth-file:: [Init — October 25 slot 359 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___359%20Init___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Init — October 25 slot 359 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___359-Init___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 790191ccf9cd0c58634bfa936106a868886091bff69fe6331fbf716c2ea3c58b
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 359 over USB on October 25, 2026 with `mise run microfreak:download --slot 359`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 359 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___359%20Init___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/359 Init/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 359 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___359-Init___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/359 Init/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [BasicWaves]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves]]). [[Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves]]
 		- [Morph]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves/Morph]]): 0.051. [Sym]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves/Sym]]): 0.000. [Sub]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves/Sub]]): 0.000.

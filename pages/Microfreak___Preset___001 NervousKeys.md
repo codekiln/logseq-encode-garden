@@ -11,13 +11,13 @@ preset-synth-microfreak-vcf-cutoff-raw-hex:: 0x00da3c
 preset-synth-microfreak-vcf-reso-raw-hex:: 0x006851
 next:: [[Microfreak/Preset/002 Punisher]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/09 Formant]]
-preset-synth-file:: [NervousKeys — October 25 slot 1 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___001%20NervousKeys___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [NervousKeys — October 25 slot 1 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___001-NervousKeys___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 7ddbc3e577cac6cf965d35c5c403bb292c67495c033fc10443ef8aae2b787a8d
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 1 over USB on October 25, 2026 with `mise run microfreak:download --slot 1`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 1.0, Factory 1.1, Factory 2.1, Factory 3.0 (Factory 1.0 slot 138, Factory 1.1 slot 138, Factory 2.1 slot 1, Factory 3.0 slot 1). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 1 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___001%20NervousKeys___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/001 NervousKeys/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 1 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___001-NervousKeys___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/001 NervousKeys/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Formant]([[Microfreak/UI/Oscillator/Knob/Type/Formant]]). [[Microfreak/UG/06 Dig Osc/03 Types/09 Formant]]
 		- [Interval]([[Microfreak/UI/Oscillator/Knob/Type/Formant/Interval]]): 0.208. [Formant]([[Microfreak/UI/Oscillator/Knob/Type/Formant/Formant]]): 0.456. [Shape]([[Microfreak/UI/Oscillator/Knob/Type/Formant/Shape]]): 0.896.

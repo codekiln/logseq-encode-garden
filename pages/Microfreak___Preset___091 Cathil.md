@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/090 Guisky]]
 next:: [[Microfreak/Preset/092 Smooth Pd]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/09 Formant]]
 preset-synth-microfreak-parameter-payload-sha256:: 9993c59d04e34d9d92e11aa59adb272edd214f96e8375aeee142739727323dfb
-preset-synth-file:: [Cathil — October 25 slot 91 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___091%20Cathil___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Cathil — October 25 slot 91 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___091-Cathil___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 9ccf7edf1179d7fdca70f48a1825dc43de02bfb55a56991748744f0ec2a5e84e
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 91 over USB on October 25, 2026 with `mise run microfreak:download --slot 91`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 1.0, Factory 1.1, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 1.0 slot 178, Factory 1.1 slot 178, Factory 2.1 slot 173, Factory 3.0 slot 173, Factory 6.0 slot 434). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 91 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___091%20Cathil___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/091 Cathil/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 91 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___091-Cathil___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/091 Cathil/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Formant]([[Microfreak/UI/Oscillator/Knob/Type/Formant]]). [[Microfreak/UG/06 Dig Osc/03 Types/09 Formant]]
 		- [Interval]([[Microfreak/UI/Oscillator/Knob/Type/Formant/Interval]]): 0.312. [Formant]([[Microfreak/UI/Oscillator/Knob/Type/Formant/Formant]]): 0.481. [Shape]([[Microfreak/UI/Oscillator/Knob/Type/Formant/Shape]]): 0.549.

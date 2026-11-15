@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/394 Jing A]]
 next:: [[Microfreak/Preset/396 Anit]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/04 Harmo]]
 preset-synth-microfreak-parameter-payload-sha256:: c23364fc86a76fea6c544cf4c490acdd61eddb673e5da9c4cd1b83df6b631da5
-preset-synth-file:: [26.06.25 — October 25 slot 395 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___395%2026.06.25___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [26.06.25 — October 25 slot 395 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___395-26.06.25___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 4904a76593e2f0004ce0b427faddf81638034ed2302e621dcbf38a0e54a71eaf
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 395 over USB on October 25, 2026 with `mise run microfreak:download --slot 395`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 395 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___395%2026.06.25___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/395 26.06.25/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 395 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___395-26.06.25___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/395 26.06.25/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Harmo]([[Microfreak/UI/Oscillator/Knob/Type/Harmo]]). [[Microfreak/UG/06 Dig Osc/03 Types/04 Harmo]]
 		- [Content]([[Microfreak/UI/Oscillator/Knob/Type/Harmo/Content]]): 0.379. [Sculpting]([[Microfreak/UI/Oscillator/Knob/Type/Harmo/Sculpting]]): 0.000. [Chorus]([[Microfreak/UI/Oscillator/Knob/Type/Harmo/Chorus]]): 0.314.

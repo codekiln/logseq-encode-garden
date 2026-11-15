@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/354 Fjit]]
 next:: [[Microfreak/Preset/356 Ridiance]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/20 Cloud Grains]]
 preset-synth-microfreak-parameter-payload-sha256:: 3cda515cddeb25f9101af9a2a284ae728b65e7da1f53dd9ce3d2a4b4abf116b0
-preset-synth-file:: [PersnikT — October 25 slot 355 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___355%20PersnikT___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [PersnikT — October 25 slot 355 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___355-PersnikT___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: e65c9bd02612b6afa44a058fe9b9ca7bb5f2af22c78ee1759033ddc5856d734e
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 355 over USB on October 25, 2026 with `mise run microfreak:download --slot 355`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 355 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___355%20PersnikT___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/355 PersnikT/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 355 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___355-PersnikT___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/355 PersnikT/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Cloud Grains]([[Microfreak/UI/Oscillator/Knob/Type/Cloud Grains]]). [[Microfreak/UG/06 Dig Osc/03 Types/20 Cloud Grains]]
 		- [Starts]([[Microfreak/UI/Oscillator/Knob/Type/Cloud Grains/Starts]]): 0.108. [Density]([[Microfreak/UI/Oscillator/Knob/Type/Cloud Grains/Density]]): 0.461. [Chaos]([[Microfreak/UI/Oscillator/Knob/Type/Cloud Grains/Chaos]]): 0.664.

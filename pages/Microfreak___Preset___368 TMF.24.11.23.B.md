@@ -10,13 +10,13 @@ next:: [[Microfreak/Preset/369 TMF.24.11.23.C]]
 
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]]
 preset-synth-microfreak-parameter-payload-sha256:: 4c44a2fc60cfc84b3542069dbca83277cb6e47dd239f463de2a9769c18b50220
-preset-synth-file:: [TMF.24.11.23.B — October 25 slot 368 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___368%20TMF.24.11.23.B___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [TMF.24.11.23.B — October 25 slot 368 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___368-TMF.24.11.23.B___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 9e811647a60b5e466fd2c86727ad460d0bef333679fc5e6d4baf5cbb7907a25a
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 368 over USB on October 25, 2026 with `mise run microfreak:download --slot 368`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 368 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___368%20TMF.24.11.23.B___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/368 TMF.24.11.23.B/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 368 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___368-TMF.24.11.23.B___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/368 TMF.24.11.23.B/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [SuperWave]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave]]). [[Microfreak/UG/06 Dig Osc/03 Types/02 SuperWave]]
 		- [Wave]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave/Wave]]): 1 (stored choice code). [Detune]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave/Detune]]): 0.551. [Volume]([[Microfreak/UI/Oscillator/Knob/Type/SuperWave/Volume]]): 0.156.

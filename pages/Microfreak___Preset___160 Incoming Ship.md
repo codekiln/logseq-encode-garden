@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/159 Snow Man]]
 next:: [[Microfreak/Preset/161 Crackle Sleep]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/13 Noise]]
 preset-synth-microfreak-parameter-payload-sha256:: 508f3ebe705583f12fc5ccc84f35bb2db797bc5f3dfb24e57a236dc521ea39d6
-preset-synth-file:: [Incoming Ship — October 25 slot 160 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___160%20Incoming%20Ship___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Incoming Ship — October 25 slot 160 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___160-Incoming-Ship___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: c095f96461f2f3fa3e1053a6f1dc64a92f5d6427a8983f90c2473f56c2a58604
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 160 over USB on October 25, 2026 with `mise run microfreak:download --slot 160`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 2.0, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 2.0 slot 134, Factory 2.1 slot 236, Factory 3.0 slot 236, Factory 6.0 slot 404). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 160 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___160%20Incoming%20Ship___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/160 Incoming Ship/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 160 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___160-Incoming-Ship___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/160 Incoming Ship/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Noise]([[Microfreak/UI/Oscillator/Knob/Type/Noise]]). [[Microfreak/UG/06 Dig Osc/03 Types/13 Noise]]
 		- [Wave]([[Microfreak/UI/Oscillator/Knob/Type/Noise/Wave]]): 0.790. [Timbre]([[Microfreak/UI/Oscillator/Knob/Type/Noise/Timbre]]): 0.500. [Shape]([[Microfreak/UI/Oscillator/Knob/Type/Noise/Shape]]): 0.506.

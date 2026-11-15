@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/390 Cnit2]]
 next:: [[Microfreak/Preset/392 Blithrifi]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/09 Formant]]
 preset-synth-microfreak-parameter-payload-sha256:: 19212bac2ca7044871a99e4fde4eb0b25b3581caa016825cf082a9cf1f74d385
-preset-synth-file:: [Dnit2 — October 25 slot 391 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___391%20Dnit2___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Dnit2 — October 25 slot 391 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___391-Dnit2___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 9bf3e02266194d239bbf64ddf4041a18f3eddde98c7de7490f9694e75384f9ea
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 391 over USB on October 25, 2026 with `mise run microfreak:download --slot 391`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 391 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___391%20Dnit2___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/391 Dnit2/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 391 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___391-Dnit2___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/391 Dnit2/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Formant]([[Microfreak/UI/Oscillator/Knob/Type/Formant]]). [[Microfreak/UG/06 Dig Osc/03 Types/09 Formant]]
 		- [Interval]([[Microfreak/UI/Oscillator/Knob/Type/Formant/Interval]]): 0.409. [Formant]([[Microfreak/UI/Oscillator/Knob/Type/Formant/Formant]]): 0.266. [Shape]([[Microfreak/UI/Oscillator/Knob/Type/Formant/Shape]]): 0.672.

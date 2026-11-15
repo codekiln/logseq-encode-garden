@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/128 KickBass]]
 next:: [[Microfreak/Preset/130 Sprt Brth]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves]]
 preset-synth-microfreak-parameter-payload-sha256:: 756b87640a690e882d766897d297dfe7ca606990ad45fb20ad1312cf2793c5e9
-preset-synth-file:: [Opst — October 25 slot 129 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___129%20Opst___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Opst — October 25 slot 129 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___129-Opst___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 5f60d89a40b9ff7301fa3c20eee7888bca45fff34a6e4f1f1734b7dcde91fdb3
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 129 over USB on October 25, 2026 with `mise run microfreak:download --slot 129`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 129 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___129%20Opst___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/129 Opst/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 129 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___129-Opst___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/129 Opst/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [BasicWaves]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves]]). [[Microfreak/UG/06 Dig Osc/03 Types/01 BasicWaves]]
 		- [Morph]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves/Morph]]): 0.418. [Sym]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves/Sym]]): 0.046. [Sub]([[Microfreak/UI/Oscillator/Knob/Type/BasicWaves/Sub]]): 0.103.

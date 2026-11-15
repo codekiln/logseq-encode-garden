@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/385 Cnit]]
 next:: [[Microfreak/Preset/387 Enit]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/07 Waveshaper]]
 preset-synth-microfreak-parameter-payload-sha256:: aef528283e0de78a0ec2b2cd2723a93d411b5044ac1eb9e86b71265451e7ae56
-preset-synth-file:: [Dnit — October 25 slot 386 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___386%20Dnit___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Dnit — October 25 slot 386 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___386-Dnit___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: d5e4c63b13775531ea49af1fd2b3b3c64d9ace2127676a6d6ca48bde87861fa6
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 386 over USB on October 25, 2026 with `mise run microfreak:download --slot 386`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 386 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___386%20Dnit___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/386 Dnit/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 386 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___386-Dnit___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/386 Dnit/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Waveshaper]([[Microfreak/UI/Oscillator/Knob/Type/Waveshaper]]). [[Microfreak/UG/06 Dig Osc/03 Types/07 Waveshaper]]
 		- [Wave]([[Microfreak/UI/Oscillator/Knob/Type/Waveshaper/Wave]]): 0.359. [Amount]([[Microfreak/UI/Oscillator/Knob/Type/Waveshaper/Amount]]): 0.260. [Asym]([[Microfreak/UI/Oscillator/Knob/Type/Waveshaper/Asym]]): 0.180.

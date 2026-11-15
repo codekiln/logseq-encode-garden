@@ -9,7 +9,7 @@ prev:: [[Microfreak/Preset/396 Anit]]
 next:: [[Microfreak/Preset/398 Init]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/17 WaveUser]]
 preset-synth-microfreak-parameter-payload-sha256:: cd9ab794827393dca1275e5d00b5bbed3688d53de94c5f877bb9f378fee7bb85
-preset-synth-file:: [Imit — October 25 slot 397 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___397%20Imit___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Imit — October 25 slot 397 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___397-Imit___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 25c2d705de39f14c45651bfdeeba19a1abfd689d3a8a69ffb73b9a0d31e17788
 - # Notes
 	- Used in a recent [[GitP]] episode; the episode association is unspecified.

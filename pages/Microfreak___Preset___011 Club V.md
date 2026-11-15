@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/010 Raverz]]
 next:: [[Microfreak/Preset/012 Darkstream]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/10 Chords]]
 preset-synth-microfreak-parameter-payload-sha256:: 9ff7173275cb7e091c5aba66b41b3489bb9c7c92c2f88cbd3d15f7c4591ae46c
-preset-synth-file:: [Club V — October 25 slot 11 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___011%20Club%20V___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Club V — October 25 slot 11 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___011-Club-V___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: d46d0d2639814a80c2d99b42dc181d291701a6d539d8d82516a43a0c1fbad547
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 11 over USB on October 25, 2026 with `mise run microfreak:download --slot 11`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 1.1, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 1.1 slot 100, Factory 2.1 slot 100, Factory 3.0 slot 100, Factory 6.0 slot 346). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 11 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___011%20Club%20V___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/011 Club V/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 11 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___011-Club-V___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/011 Club V/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Chords]([[Microfreak/UI/Oscillator/Knob/Type/Chords]]). [[Microfreak/UG/06 Dig Osc/03 Types/10 Chords]]
 		- [Type]([[Microfreak/UI/Oscillator/Knob/Type/Chords/Type]]): 9 (stored choice code). [Inv/Transp]([[Microfreak/UI/Oscillator/Knob/Type/Chords/Inv Transp]]): 0.027. [Shape control]([[Microfreak/UI/Oscillator/Knob/Type/Chords/Waveform]]): 0.000.

@@ -8,13 +8,13 @@ preset-synth-origin:: [[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-orig
 prev:: [[Microfreak/Preset/401 Init]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog]]
 preset-synth-microfreak-parameter-payload-sha256:: 1fd0977e6a71e73c90e2804e1155d097a3ebf5a27e5e0da7f8b7082a3f8ff198
-preset-synth-file:: [Init — October 25 slot 402 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___402%20Init___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Init — October 25 slot 402 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___402-Init___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 4a8c0d8c42b1ad9bda0ea28fd1853371aa0d5ab9445ffd0ef1d6fcac054c99fd
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 402 over USB on October 25, 2026 with `mise run microfreak:download --slot 402`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 402 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___402%20Init___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/402 Init/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 402 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___402-Init___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/402 Init/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [V.Analog]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog]]). [[Microfreak/UG/06 Dig Osc/03 Types/06 VAnalog]]
 		- [Detune]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Detune]]): 0.123. [Shape]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Shape]]): 0.521. [Wave]([[Microfreak/UI/Oscillator/Knob/Type/VAnalog/Wave]]): 0.223.

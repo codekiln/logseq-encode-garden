@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/316 PWM vox]]
 next:: [[Microfreak/Preset/318 Sequenced]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/22 Vocoder]]
 preset-synth-microfreak-parameter-payload-sha256:: 1ed38514dcfb8e1da0ccc0bdafaaa9b799a21d8b0500955d53888b22dfb0d293
-preset-synth-file:: [Low Square Bot — October 25 slot 317 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___317%20Low%20Square%20Bot___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Low Square Bot — October 25 slot 317 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___317-Low-Square-Bot___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: 6981ff82e92762ae252bdcbca67a5211f53c5d249936630a4b0fe92ccc3c4113
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 317 over USB on October 25, 2026 with `mise run microfreak:download --slot 317`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 2.1, Factory 3.0, Factory 6.0 (Factory 2.1 slot 64, Factory 3.0 slot 379, Factory 6.0 slot 17). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 317 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___317%20Low%20Square%20Bot___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/317 Low Square Bot/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 317 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___317-Low-Square-Bot___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/317 Low Square Bot/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Vocoder]([[Microfreak/UI/Oscillator/Knob/Type/Vocoder]]). [[Microfreak/UG/06 Dig Osc/03 Types/22 Vocoder]]
 		- [Wave]([[Microfreak/UI/Oscillator/Knob/Type/Vocoder/Wave]]): 0.417. [Timbre]([[Microfreak/UI/Oscillator/Knob/Type/Vocoder/Timbre]]): 0.548. [Shape]([[Microfreak/UI/Oscillator/Knob/Type/Vocoder/Shape]]): 0.246.

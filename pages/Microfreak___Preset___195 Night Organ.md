@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/194 Glass Organ]]
 next:: [[Microfreak/Preset/196 Chorgan]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/10 Chords]]
 preset-synth-microfreak-parameter-payload-sha256:: fbf9547c5ce7ee608c68c78f70b69b6649567ca3484570d1df63ee2295e77ded
-preset-synth-file:: [Night Organ — October 25 slot 195 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___195%20Night%20Organ___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Night Organ — October 25 slot 195 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___195-Night-Organ___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: a9e309a9113a9dc6682cc01d9cc690464fa58133d4496199a664516e53aa4c9f
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 195 over USB on October 25, 2026 with `mise run microfreak:download --slot 195`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 1.1, Factory 2.1, Factory 3.0, Factory 6.0 (Factory 1.1 slot 224, Factory 2.1 slot 38, Factory 3.0 slot 268, Factory 6.0 slot 205). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 195 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___195%20Night%20Organ___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/195 Night Organ/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 195 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___195-Night-Organ___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/195 Night Organ/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Chords]([[Microfreak/UI/Oscillator/Knob/Type/Chords]]). [[Microfreak/UG/06 Dig Osc/03 Types/10 Chords]]
 		- [Type]([[Microfreak/UI/Oscillator/Knob/Type/Chords/Type]]): 0 (stored choice code). [Inv/Transp]([[Microfreak/UI/Oscillator/Knob/Type/Chords/Inv Transp]]): 0.264. [Shape control]([[Microfreak/UI/Oscillator/Knob/Type/Chords/Waveform]]): 0.717.

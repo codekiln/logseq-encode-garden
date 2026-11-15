@@ -10,7 +10,7 @@ next:: [[Microfreak/Preset/220 Planetary Dial]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/16 HARM]]
 preset-synth-file-sha256:: 100b2c17ade8373ce485c24d06f42904d1db54b6faa8a25cb672a9a2fccd0dde
 preset-synth-microfreak-parameter-payload-sha256:: d36f818ee4fc94c5a6fa838e0c7cb6fde4fbfbe3e6e4ee0d9d62a86960a1822d
-preset-synth-file:: [Dusty Bass — October 25 slot 219 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___219%20Dusty%20Bass___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Dusty Bass — October 25 slot 219 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___219-Dusty-Bass___Asset___Device-Read-2026-10-25.bin)
 - # Notes
 	- Harmonic bass with a resonant filter, changing partials and envelope-controlled brightness.
 	- ## Saved export and provenance

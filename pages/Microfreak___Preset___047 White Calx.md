@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/046 XnastX]]
 next:: [[Microfreak/Preset/048 VintageEdge]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/12 Modal]]
 preset-synth-microfreak-parameter-payload-sha256:: 02a268176450b162f0445ddae34552280cdc48f057e39641896bac40a6f4bf89
-preset-synth-file:: [White Calx — October 25 slot 47 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___047%20White%20Calx___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [White Calx — October 25 slot 47 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___047-White-Calx___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: f4c418c8823f284a6c69352bf36fcf4434baa17525978572479c1bf5a0ef201d
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 47 over USB on October 25, 2026 with `mise run microfreak:download --slot 47`. Two consecutive reads returned the same file.
 		- The parameter payload matches the MIDI Control Center archives Factory 1.1, Factory 2.1, Factory 3.0 (Factory 1.1 slot 133, Factory 2.1 slot 133, Factory 3.0 slot 133). Comparison used `mise run microfreak:compare`.
-		- [Download the slot 47 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___047%20White%20Calx___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/047 White Calx/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 47 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___047-White-Calx___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/047 White Calx/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Modal]([[Microfreak/UI/Oscillator/Knob/Type/Modal]]). [[Microfreak/UG/06 Dig Osc/03 Types/12 Modal]]
 		- [Inharm]([[Microfreak/UI/Oscillator/Knob/Type/Modal/Inharm]]): 0.000. [Timbre]([[Microfreak/UI/Oscillator/Knob/Type/Modal/Timbre]]): 0.000. [Decay]([[Microfreak/UI/Oscillator/Knob/Type/Modal/Decay]]): 1.000.

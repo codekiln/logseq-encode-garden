@@ -9,13 +9,13 @@ prev:: [[Microfreak/Preset/381 Dnit]]
 next:: [[Microfreak/Preset/384 Bnit]]
 preset-synth-microfreak-oscillator-type:: [[Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM]]
 preset-synth-microfreak-parameter-payload-sha256:: a5d26025dc3ba5b0f0b71d994d2a2373a10ebea740ed1805b48f81fa45f37780
-preset-synth-file:: [Anit — October 25 slot 382 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___382%20Anit___Asset___Device-Read-2026-10-25.bin)
+preset-synth-file:: [Anit — October 25 slot 382 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___382-Anit___Asset___Device-Read-2026-10-25.bin)
 preset-synth-file-sha256:: c610f2dde722da14dc209b284ba3b8c58c608a29653a3eefec50a64de9f27cf0
 - # Notes
 	- ## Saved export and provenance
 		- Saved export: read from the device's slot 382 over USB on October 25, 2026 with `mise run microfreak:download --slot 382`. Two consecutive reads returned the same file.
 		- The parameter payload matches no MIDI Control Center factory archive.
-		- [Download the slot 382 capture](https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/Microfreak___Preset___382%20Anit___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/382 Anit/Asset/Device-Read-2026-10-25/bin]].
+		- [Download the slot 382 capture](../assets/.remote/logseq-encode-garden/Microfreak___Preset___382-Anit___Asset___Device-Read-2026-10-25.bin). It is the raw device format (header plus data packets), not an `.mbp` file; see [[Microfreak/Preset/382 Anit/Asset/Device-Read-2026-10-25/bin]].
 	- ## Oscillator
 		- [Model]([[Microfreak/UI/Oscillator/Knob/Type]]): [Two Op. FM]([[Microfreak/UI/Oscillator/Knob/Type/Two Op.FM]]). [[Microfreak/UG/06 Dig Osc/03 Types/08 Two Op.FM]]
 		- [Ratio]([[Microfreak/UI/Oscillator/Knob/Type/Two Op.FM/Ratio]]): 0.306. [Amount]([[Microfreak/UI/Oscillator/Knob/Type/Two Op.FM/Amount]]): 0.486. [Shape]([[Microfreak/UI/Oscillator/Knob/Type/Two Op.FM/Shape]]): 0.000.

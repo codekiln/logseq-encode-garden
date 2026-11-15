@@ -33,7 +33,7 @@ import parameters
 import semantics
 
 FACTORY = Path('/Library/Arturia/MIDI Control Center/Templates/MicroFreak/Local/Factory')
-B2 = 'https://s3.us-east-005.backblazeb2.com/logseq-encode-garden/'
+MOUNT = '../assets/.remote/logseq-encode-garden/'
 ORIGIN = '[[Logseq/Entity/Preset/Synth/Frontmatter/preset-synth-origin/{}]]'
 PREFIX = 'preset-synth-'
 
@@ -510,7 +510,7 @@ def frontmatter_set(front, key, value):
 def asset_names(page_title, date):
     asset_page = f'{page_title}/Asset/Device-Read-{date}/bin'
     filename = asset_page.rsplit('/', 1)[0].replace('/', '___').replace(' ', '-') + '.bin'
-    return asset_page, filename, B2 + quote(filename, safe='')
+    return asset_page, filename, MOUNT + quote(filename, safe='')
 
 
 def long_date(date):
