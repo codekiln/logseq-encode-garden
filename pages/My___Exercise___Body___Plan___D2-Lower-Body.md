@@ -1,21 +1,23 @@
 - # Sunday — Day 2: Lower Body
 	- Plan on 60–80 minutes of work sets, rests included, after the warm-up. Warm up and choose loads per [[My/Exercise/Body/Plan]], and finish with [[My/Exercise/Body/Plan/Mobility-Circuit]] if time allows.
-	- Quadriceps, hamstrings, and calves, each with a compound exercise and an isolation exercise, using the exercises Huberman demonstrates in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]].
-	- ## Quadriceps
-		- ### Back squat: 3 work sets of 6–10 reps
+	- Quadriceps, hamstrings, and calves, using the exercises Huberman demonstrates in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 2 - Major Lower Body Muscles]].
+	- Each muscle group gets two exercises: one compound and one isolation. Where Huberman shows several options for the same job, pick one of them for the session.
+	- ## Quadriceps: two exercises
+		- ### Compound — back squat: 3 work sets of 6–10 reps
 			- {{embed [[Exercise/Body/Strength/Back Squat]]}}
-			- Alternatives Huberman shows: [[Exercise/Body/Strength/Front Squat]], [[Exercise/Body/Strength/Hack Squat]], or [[Exercise/Body/Strength/Rear-Foot-Elevated Split Squat]]. He also names the [[Exercise/Body/Strength/Belt Squat]]. Choose one squat for the session.
-		- ### Leg extension: 2 work sets of 8–15 reps
+			- Or one of the alternatives Huberman shows: [[Exercise/Body/Strength/Front Squat]], [[Exercise/Body/Strength/Hack Squat]], or [[Exercise/Body/Strength/Rear-Foot-Elevated Split Squat]]. He also names the [[Exercise/Body/Strength/Belt Squat]].
+		- ### Isolation — leg extension: 2 work sets of 8–15 reps
 			- {{embed [[Exercise/Body/Strength/Leg Extension]]}}
-	- ## Hamstrings
-		- ### Deadlift: 2 work sets of 6–10 reps
+		- A third compound exercise, such as the hack squat or leg press, is for a day you have the energy for it.
+	- ## Hamstrings: two exercises
+		- ### Compound — deadlift: 2 work sets of 6–10 reps
 			- Pull from the floor with a straight bar, as Huberman does.
 			- {{embed [[Exercise/Body/Strength/Deadlift]]}}
-			- Alternative Huberman names: [[Exercise/Body/Strength/Glute-Ham Raise]].
-		- ### Lying leg curl: 2 work sets of 8–15 reps
+			- Or the [[Exercise/Body/Strength/Glute-Ham Raise]] Huberman names.
+		- ### Isolation — lying leg curl: 2 work sets of 8–15 reps
 			- {{embed [[Exercise/Body/Strength/Lying Leg Curl]]}}
-			- Alternative Huberman names: [[Exercise/Body/Strength/Standing Leg Curl]].
+			- Or the [[Exercise/Body/Strength/Standing Leg Curl]] Huberman names.
 	- ## Calves
+		- Huberman shows only calf raises for the calves. He finds standing or angled calf raises the most useful, and does two or three work sets of a seated calf raise too when one is available.
 		- ### Standing calf raise: 2 work sets of 8–15 reps on the machine, then 2 single-leg sets holding a dumbbell
 			- {{embed [[Exercise/Body/Strength/Standing Calf Raise]]}}
-			- Huberman also names the seated calf raise.

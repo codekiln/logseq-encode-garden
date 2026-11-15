@@ -1,28 +1,28 @@
 - # Tuesday — Day 4: Torso
 	- Plan on 60–80 minutes of work sets, rests included, after the warm-up. Warm up and choose loads per [[My/Exercise/Body/Plan]], and finish with [[My/Exercise/Body/Plan/Mobility-Circuit]] if time allows.
-	- Chest, back, lower back, and abdominals, using the exercises Huberman demonstrates in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]].
-	- ## Chest
-		- ### Barbell bench press: 3 work sets of 6–10 reps
+	- Chest, back, and abdominals, using the exercises Huberman demonstrates in [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]].
+	- Chest gets one compound and one isolation exercise, and back two or three compound exercises. Where Huberman shows several options for the same job, pick one of them for the session.
+	- ## Chest: two exercises, and an optional third
+		- ### Compound — barbell bench press: 3 work sets of 6–10 reps
 			- Set the rack safeties or use a spotter. When benching alone, dumbbells are the safer choice.
 			- {{embed [[Exercise/Body/Strength/Barbell Bench Press]]}}
-			- Alternatives Huberman shows: [[Exercise/Body/Strength/Dumbbell Bench Press]] or [[Exercise/Body/Strength/Incline Bench Press]].
-		- ### Dip: 2 work sets of 6–12 reps
-			- The dips also count toward Friday's triceps work.
-			- {{embed [[Exercise/Body/Strength/Dip]]}}
-		- ### Dumbbell fly: 2 work sets of 8–15 reps
+			- Or one of the alternatives Huberman shows: [[Exercise/Body/Strength/Dumbbell Bench Press]] or [[Exercise/Body/Strength/Incline Bench Press]].
+		- ### Isolation — dumbbell fly: 2 work sets of 8–15 reps
 			- {{embed [[Exercise/Body/Strength/Dumbbell Fly]]}}
-			- Alternative Huberman shows: [[Exercise/Body/Strength/Cable Fly]] or a fly machine.
-	- ## Back
-		- Huberman trains back with compound exercises only.
-		- ### Pull-up or lat pulldown: 3 work sets of 6–10 reps
+			- Or the [[Exercise/Body/Strength/Cable Fly]] or a fly machine.
+		- ### Optional third compound — dip: 2 work sets of 6–12 reps
+			- Huberman does dips on chest and back day or on shoulders and arms day. They also work the triceps.
+			- {{embed [[Exercise/Body/Strength/Dip]]}}
+	- ## Back: three compound exercises
+		- Back takes in the lats, the traps, and the lower back. Huberman trains it with compound exercises only, two or three of them.
+		- ### Compound pull — pull-up or lat pulldown: 3 work sets of 6–10 reps
 			- Once you can do 10–12 pull-ups in good form without hitting failure, start adding weight.
 			- {{embed [[Exercise/Body/Strength/Pull-Up]]}}
 			- {{embed [[Exercise/Body/Strength/Lat Pulldown]]}}
-		- ### Dumbbell row: 2 work sets of 6–10 reps per side
+		- ### Compound row — dumbbell row: 2 work sets of 6–10 reps per side
 			- {{embed [[Exercise/Body/Strength/Dumbbell Row]]}}
-			- Alternatives Huberman names: barbell or machine rows. He names the [[Exercise/Body/Strength/Shrug]] as an option for the traps.
-	- ## Lower back
-		- ### Back extension: 2 work sets of 8–15 reps
+			- Or the barbell or machine rows Huberman names. He names the [[Exercise/Body/Strength/Shrug]] as an option for the traps.
+		- ### Lower back — back extension: 2 work sets of 8–15 reps
 			- {{embed [[Exercise/Body/Strength/Back Extension]]}}
 			- Without a bench, Huberman lifts his legs while holding a high countertop.
 	- ## Abdominals and core

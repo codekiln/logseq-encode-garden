@@ -27,7 +27,8 @@
 		- Rest one to two minutes between warm-up sets and two to five minutes between work sets: typically three to five after compound exercises and 90 seconds to three minutes after isolation exercises.
 		- Time rest by the clock or by feel. Either way, keep talking, texting, and scrolling to a minimum.
 	- ## Sets, session length, and progress
-		- Each day's page gives the work sets per exercise: two or three, usually two. That comes to four to nine work sets per muscle group across two or three exercises, at least one of them compound.
+		- Each muscle group gets two exercises, one compound and one isolation, picked from the options Huberman shows; a third compound exercise is for a muscle group that needs more. A workout covers three or four muscle groups.
+		- Each exercise gets two or three work sets, usually two, for four to nine work sets per muscle group. Each day's page gives the sets.
 		- Sixty to eighty minutes of work sets, rests included, after the warm-up is enough. Past about 80 minutes, fatigue gets in the way of recovering before the next workout.
 		- Track every set: the exercise, the load, and the reps reached at failure. Huberman writes each set in a paper notebook, with the phone in airplane mode. Check the last session before choosing today's weight.
 		- Once a compound exercise reaches 10 reps in perfect form, or an isolation exercise 10–15, add weight next time, in steps of 5–10%. More weight or more reps from each workout to the next.

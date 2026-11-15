@@ -1,0 +1,15 @@
+logseq-entity:: [[Logseq/Entity/Exercise/Body/Strength]]
+- # Chin-Up
+	- Practice pulling the body toward an overhead bar with the palms facing you, a compound pull that works the biceps along with the lats.
+	- Equipment: [[Equipment/Exercise/Pull-Up Bar]], [[Equipment/Exercise/Power Rack]]
+	- ## Setup
+		- Take an underhand grip on a secure bar, palms facing you and hands about shoulder width apart, and begin from a comfortable hang with the arms extended.
+	- ## Practice
+		- Pull the chest toward the bar by driving the elbows down toward the ribs, then lower under control to the full hang. Keep the movement free of swinging or kicking.
+	- ## Dose and Progression
+		- Sets, repetitions, resistance, and rest follow the training plan. Once the planned repetitions come with consistent control, add resistance gradually.
+	- ## Cues and Variations
+		- The palms-away grip of the [[Exercise/Body/Strength/Pull-Up]] shifts more of the work to the lats; an underhand, close-grip [[Exercise/Body/Strength/Lat Pulldown]] trains a similar pull for anyone not yet able to lift their bodyweight.
+	- ## Sources
+		- [[Person/Andrew Huberman/Book/26/Protocols]] suggests palms-facing pull-ups on the shoulders-and-arms day as compound work for the biceps.
+		- In [[Person/Andrew Huberman/Book/26/Protocols/YouTube/26/09/Day 4 - Major Torso Muscles]], Huberman names chins with pull-downs and rows as the compound exercises for the lats.

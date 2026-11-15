@@ -29,6 +29,7 @@ alias:: [[Protocols Book Exercise Guide]]
 		  id:: eb3b3bb5-c841-4409-8872-c3c90b20eacd
 		- {{embed [[Exercise/Body/Strength/Pull-Up]]}}
 		  id:: 8059bf28-2c8e-44dd-b1dd-b19312b070b9
+		- {{embed [[Exercise/Body/Strength/Chin-Up]]}}
 		- {{embed [[Exercise/Body/Strength/Lat Pulldown]]}}
 		- {{embed [[Exercise/Body/Strength/Overhead Press]]}}
 		  id:: 53f5cffa-ccca-45e3-9cac-48f1aa160d92
