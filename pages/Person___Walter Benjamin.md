@@ -4,7 +4,11 @@ logseq-entity:: [[Logseq/Entity/Person]]
 		- German philosopher, cultural critic, media theorist, and essayist.
 		- Lived from 1892 to 1940.
 		- Best known for writing on aesthetics, technology, and modern culture.
+		- Associated with the [[Frankfurt School]].
 		- Author of [[Person/Walter Benjamin/Essay/35/The Work of Art in the Age of Mechanical Reproduction]].
 	- ## Links
 		- [Wikipedia](https://en.wikipedia.org/wiki/Walter_Benjamin)
 		- [[Person/Walter Benjamin/Essay/35/The Work of Art in the Age of Mechanical Reproduction]]
+	- ## Discussed in
+		- [[Person/Stephen West/Pod/21/03 Episode 152 The Frankfurt School - Walter Benjamin Pt. 1]]
+		- [[Person/Stephen West/Pod/21/04 Episode 153 The Frankfurt School - Walter Benjamin Pt. 2 - Distraction]]
