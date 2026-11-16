@@ -1,0 +1,16 @@
+- # Sequence research
+	- The sources below point to a way to write a described sequence into a preset. They do not yet show how a preset stores a sequence's notes and rhythm, and no upload from this Mac has been tested.
+	- This page tracks the research for [#431 Create MicroFreak presets that hold a described sequence](https://github.com/codekiln/logseq-encode-garden/issues/431). [#435 Decode how a MicroFreak preset stores its sequence](https://github.com/codekiln/logseq-encode-garden/issues/435) and [#436 Write a described sequence into a MicroFreak preset](https://github.com/codekiln/logseq-encode-garden/issues/436) will replace the open questions below with findings.
+	- ## What the sources say
+		- [[Microfreak/UG/13 Sequencer]] describes two patterns per preset, A and B, that share one length and hold notes, velocity, duration and four modulation tracks. [[Microfreak/UG/13 Sequencer/01 Use/03 Record/01 Step Time]] describes rests and ties.
+		- The [preset inspector notes](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/PARAMETERS.md) read the named parameters, including the sequence length, gate length and smoothing settings in the `Seq` section. They list the sequence contents as undecoded. The data after the named parameters may hold the sequence; where it sits and how it is encoded are unknown.
+		- [Elektroid's MicroFreak connector](https://github.com/dagargo/elektroid/blob/7806ecafda5fbed214e0e0c4f48a92ead52bdc73/src/connectors/microfreak.c) uploads a complete preset and passes its contents through unread. [[Microfreak/CLI/Preset metadata over USB]] records successful reads from the instrument and no tested write.
+		- [Freakout's firmware notes](https://github.com/kmorrill/freakout/blob/c04166d7b880860879827befa088af6c0e9e789e/docs/microfreak-firmware-notes.md) shape how the garden reads saved parameters. Their [section on the active-preset serializer](https://github.com/kmorrill/freakout/blob/c04166d7b880860879827befa088af6c0e9e789e/docs/microfreak-firmware-notes.md#active-preset-serializer-and-the-operation-19-boundary) has leads on the sequence:
+			- A saved preset holds a fixed-size Sequence A/B area alongside the named parameters.
+			- In [[Microfreak/Preset/005 MotivSeq]], the data right after Pattern A names the modulation-track destinations, then holds the gate length and a copy of the sequence length. Playback follows the `Seq.Length` parameter and ignores the copy.
+			- With Clock Source set to USB, a host can play the sequence with MIDI Start, Clock and a transposing note, then record the notes the MicroFreak sends back over MIDI. No audio is needed.
+	- ## Path to a test
+		- Save and download variants of one preset that differ in one sequence property at a time: a note, a rest, a tie, velocity, length, pattern A against B. Comparing the downloads shows where each property is stored.
+		- Build an encoder once the comparisons support a mapping. Write a generated preset to a backed-up slot, play it, and download the slot again.
+		- Elektroid's upload code shows the transport. It still needs testing on this instrument.
+		- Until a generated preset passes that test, copying an existing preset with its sequence may work. Writing an arbitrary sequence and hearing it play back are both unproven.
