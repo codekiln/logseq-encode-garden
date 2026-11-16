@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#MISE description="List the MicroFreak slots that hold no preset, reading only preset headers"
+#USAGE flag "--first <slot>" help="First slot to read; default 1"
+#USAGE flag "--last <slot>" help="Last slot to read; default 512"
+#USAGE flag "--port <name>" help="Exact MIDI port name"
+set -euo pipefail
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+exec uv run --no-project --with python-rtmidi==1.5.8 python "$root/mise-tasks/microfreak/lib/empty_slots.py" "$@"
