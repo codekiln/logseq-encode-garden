@@ -25,7 +25,7 @@ def synthetic_payload():
 class InspectorCliTests(unittest.TestCase):
     def run_task(self, file, *args, usage=False):
         env = dict(os.environ, PYTHONDONTWRITEBYTECODE='1')
-        for key in ('usage_file', 'usage_slot', 'usage_interpret_fw5'):
+        for key in ('usage_file', 'usage_slot', 'usage_interpret_fw5', 'usage_sequence'):
             env.pop(key, None)
         if usage:
             env['usage_file'] = str(file)

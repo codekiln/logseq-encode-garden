@@ -32,7 +32,17 @@ The added `interpretations` object names the oscillator model and its Wave/Timbr
 
 The formulas and engine order come from [Freakout's firmware research](https://github.com/kmorrill/freakout/blob/main/docs/microfreak-firmware-notes.md) and [structured-payload parser](https://github.com/kmorrill/freakout/blob/main/src/minifreak_patch/microfreak_structured.py), as implemented by [the interpretation helper](lib/semantics.py). Model-specific control names follow the [Arturia guide transcription](../../pages/Microfreak___UG___06%20Dig%20Osc___03%20Types.md). Unknown oscillator values keep a null model and generic field labels; values outside the supported domains remain `raw_only`.
 
-`normalized_0_1`, `normalized_minus_1_1`, and `metadata_scaled_integer` identify numeric domains. These values do not establish OLED readings in hertz, milliseconds or percentages. The report's `display_conversions` remains `unverified`; sequence contents, matrix destination meanings, and referenced sample or wavetable identities remain undecoded. The option does not modify preset pages or handwritten notes.
+`normalized_0_1`, `normalized_minus_1_1`, and `metadata_scaled_integer` identify numeric domains. These values do not establish OLED readings in hertz, milliseconds or percentages. The report's `display_conversions` remains `unverified`; matrix destination meanings and referenced sample or wavetable identities remain undecoded. The option does not modify preset pages or handwritten notes.
+
+## Sequence
+
+Add `--sequence` to include both sequencer patterns, decoded by [the sequence helper](lib/sequence.py):
+
+```sh
+mise run microfreak:inspect /private/tmp/preset/slot-005.bin --sequence
+```
+
+The added `sequence` object holds the shared length, gate length and smoothing, and for patterns A and B whether the pattern is in use, its modulation-track destinations and one entry per played step with its status (`note`, `tie`, `rest`), notes, note names (C4 = MIDI 60), velocities and modulation values. Steps past the sequence length are counted, not listed. `mise run microfreak:write-sequence BASE.bin SEQUENCE.json NEW.bin` writes a sequence description into a copy of a downloaded preset for `microfreak:upload`. The storage layout and the experiments behind it are on [Microfreak/Sequence/Storage](../../pages/Microfreak___Sequence___Storage.md).
 
 ## Evidence and scope
 
@@ -42,10 +52,10 @@ The inner framing below was inferred from MIDI Control Center exports. A repeate
 
 - Each eight-byte transport group contains a high-bit mask followed by seven low-seven-bit data bytes. Mask bit 0 supplies the first data byte's high bit, through bit 6 for the seventh byte. Expanding 4672 bytes yields 4088 bytes.
 - The parameter block starts at expanded offset 0. A tag's upper three bits indicate section name (1), field name (2), or value (3); its lower five bits specify the following byte count. Names are ASCII. Values in the supported layout have three bytes.
-- `0x40` closes a section; `0x20` closes the root. Bytes after the root are retained in the original export and counted in the report, but remain uninterpreted. They can include padding, stale fragments and sequence data; they must not be parsed as more named fields.
+- `0x40` closes a section; `0x20` closes the root. Bytes after the root are retained in the original export and counted in the report, but remain uninterpreted. They hold padding, stale fragments and, from expanded offset 1980, the sequence patterns that `--sequence` decodes; they must not be parsed as more named fields.
 - Observed labels cover `VCO` oscillator controls, `VCF` filter, `EG1` cycling envelope, `EG2` main envelope, `LFO`, `Kbd`, `Arp`, `Gen`, `Mat`, matrix columns `Co1`–`Co7`, `Seq`, and `Voc`. Fields vary between presets and format generations. Unknown or absent fields are never filled with defaults.
 
-The first value byte often resembles a range or type descriptor, while the remaining bytes resemble a normalized value. That interpretation is a research hypothesis. Oscillator descriptors vary between records, and modulation amounts may need signed interpretation. The manual supplies the model-specific oscillator control names and behavior. The opt-in firmware 5 layer uses the existing research-backed engine order and value-domain formulas. Converting those domains to instrument display values still requires paired display-and-export observations or further serialization evidence. Matrix destinations and sequence contents also remain to be decoded. The inspector reports raw fields so those comparisons can be made without losing information.
+The first value byte often resembles a range or type descriptor, while the remaining bytes resemble a normalized value. That interpretation is a research hypothesis. Oscillator descriptors vary between records, and modulation amounts may need signed interpretation. The manual supplies the model-specific oscillator control names and behavior. The opt-in firmware 5 layer uses the existing research-backed engine order and value-domain formulas. Converting those domains to instrument display values still requires paired display-and-export observations or further serialization evidence. Matrix destinations also remain to be decoded; `--sequence` decodes the sequence contents. The inspector reports raw fields so those comparisons can be made without losing information.
 
 Archive format versions and opaque envelope attributes are retained in metadata. The envelope's version string is not assumed to be a firmware version. Export hashes identify bytes, not equivalent sounds or complete preservation of referenced samples and wavetables.
 

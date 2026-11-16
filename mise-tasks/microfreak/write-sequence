@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#MISE description="Write a JSON sequence description into a copy of a downloaded MicroFreak preset"
+#USAGE arg "<base>" help=".bin file saved by microfreak:download, with the sequencer on"
+#USAGE arg "<sequence>" help="JSON sequence description (see pages/Microfreak___Sequence___Storage.md)"
+#USAGE arg "<output>" help="New .bin file to write for microfreak:upload; must not exist"
+set -euo pipefail
+task_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [[ -n "${usage_base:-}" ]]; then
+  exec python3 "$task_dir/lib/sequence.py" "$usage_base" "$usage_sequence" "$usage_output"
+fi
+exec python3 "$task_dir/lib/sequence.py" "$@"
