@@ -14,15 +14,21 @@ metadata:
 
 Read `pages/Microfreak___Sequence___Write a sequence.md` (the garden page `Microfreak/Sequence/Write a sequence`) and follow its Steps. It shows how to turn the request into a description file, with worked examples, how to pick the slot and the base sound, the commands, how to read the verify report, what pattern B needs, and what to tell codekiln.
 
-The two commands it builds on, run from the garden root:
+Run the tasks from the root of a garden checkout on current `main`: the checkout that `ghq list --full-path --exact github.com/codekiln/logseq-encode-garden` prints, after `git pull --ff-only`, or a worktree of `origin/main`. Each task runs the code of the checkout it is started from.
+
+The commands it builds on:
 
 ```sh
+# list the empty slots, reading only preset headers
+mise run microfreak:empty-slots
 # preview: reads the base and prints what it would store, writes nothing
 mise run microfreak:write-sequence "$TMPDIR/microfreak-seq/seq.yaml" --base 358
 # write, play, record, download again and compare, step by step
 mise run microfreak:verify-sequence "$TMPDIR/microfreak-seq/seq.yaml" --base 358 --slot N \
   --backup-dir "$TMPDIR/microfreak-seq/backup-1" --out-dir "$TMPDIR/microfreak-seq/verify"
 ```
+
+Add `--preset-sound` to the verify run to check accents and rests with the preset's own sound.
 
 Hold to these while you work:
 
