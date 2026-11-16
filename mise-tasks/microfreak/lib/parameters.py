@@ -237,7 +237,7 @@ def load_preset(path, slot=None):
     return payload, metadata
 
 
-def inspect(path, slot=None, interpret_fw5=False):
+def inspect(path, slot=None, interpret_fw5=False, sequence=False):
     payload, metadata = load_preset(path, slot)
     result = {'schema': 1, 'source': str(path), 'metadata': metadata,
               'value_context': 'saved_base_setting',
@@ -263,6 +263,12 @@ def inspect(path, slot=None, interpret_fw5=False):
             },
             **semantics.interpret_fields(result['fields']),
         }
+    if sequence:
+        import sequence as sequence_module
+        try:
+            result['sequence'] = sequence_module.decode_sequence(payload)
+        except UnsupportedLayout as exc:
+            result['sequence'] = {'status': 'unsupported_layout', 'error': str(exc)}
     return result
 
 
@@ -272,9 +278,11 @@ def main(argv=None):
     parser.add_argument('--slot', type=int, help='Computer-project slot for .mfprojz')
     parser.add_argument('--interpret-fw5', action='store_true',
                         help='Add evidence-linked interpretations assuming firmware 5; no display-unit conversions')
+    parser.add_argument('--sequence', action='store_true',
+                        help='Add the decoded sequencer patterns A and B')
     args = parser.parse_args(argv)
     try:
-        result = inspect(args.file, args.slot, args.interpret_fw5)
+        result = inspect(args.file, args.slot, args.interpret_fw5, args.sequence)
     except (OSError, ValueError, zipfile.BadZipFile, RuntimeError) as exc:
         print(json.dumps({'status': 'invalid_input', 'error': str(exc)}))
         return 2
