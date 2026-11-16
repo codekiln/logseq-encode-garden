@@ -341,7 +341,8 @@ def make_playable(payload, sequence):
     Returns the new payload and the named settings it changed, as
     {name: [before, after]}. Arp.SeqOn on puts the preset in sequencer mode;
     Gen.Parafon on lets a step sound more than its lowest note, so it is turned
-    on when a step holds a chord.
+    on when a step holds a chord. The description's velo_amp_mod, 0-10, sets
+    Kbd.PresAmp, the panel's Velo Amp Mod: how much velocity changes loudness.
     """
     new = bytearray(parameters.unpack_payload(encode_sequence(payload, stored_form(sequence))))
     fields = {f['name']: f for f in parameters.parse_parameters(payload)['fields']}
@@ -351,6 +352,11 @@ def make_playable(payload, sequence):
                  for step in pattern.get('steps', []) if step)
     if chords:
         wanted['Gen.Parafon'] = SWITCH_ON
+    amp = sequence.get('velo_amp_mod')
+    if amp is not None:
+        if isinstance(amp, bool) or not isinstance(amp, (int, float)) or not 0 <= amp <= 10:
+            raise ValueError('velo_amp_mod runs from 0 to 10')
+        wanted['Kbd.PresAmp'] = round(amp * SWITCH_ON / 10)
     changed = {}
     for name, value in wanted.items():
         before = fields[name]['value_le_unsigned'] if name in fields else None

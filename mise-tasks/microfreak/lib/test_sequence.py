@@ -19,12 +19,15 @@ def field(name, descriptor, value):
     return bytes([0x40 | len(name)]) + name.encode() + b'c' + bytes([descriptor]) + value.to_bytes(2, 'little')
 
 
-def synthetic(length_raw=6553, gate_raw=16384, smooth=(0, 0, 0, 0), switches=None):
+def synthetic(length_raw=6553, gate_raw=16384, smooth=(0, 0, 0, 0), switches=None, pres_amp=None):
     """A preset with a Seq section, pattern A holding three steps and B erased.
 
-    switches=(seq_on, paraphonic) adds Arp.SeqOn and Gen.Parafon fields.
+    switches=(seq_on, paraphonic) adds Arp.SeqOn and Gen.Parafon fields;
+    pres_amp adds a Kbd.PresAmp field.
     """
     block = b'#VCF' + field('Cutoff', 238, 16384) + b'@'
+    if pres_amp is not None:
+        block += b'#Kbd' + field('PresAmp', 1, pres_amp) + b'@'
     if switches is not None:
         block += (b'#Arp' + field('Div', 1, 22937) + field('SeqOn', 1, switches[0]) + b'@'
                   + b'#Gen' + field('Parafon', 1, switches[1]) + b'@')
@@ -227,6 +230,23 @@ class PlayableTests(unittest.TestCase):
         self.assertEqual(decoded['length'], 4)
         self.assertEqual([s['status'] for s in decoded['patterns']['A']['steps']], ['tie'] * 4)
         self.assertEqual(Q.differences(one, decoded), [])
+
+    def test_velo_amp_mod_sets_how_much_velocity_changes_loudness(self):
+        accents = {'length': 4, 'velo_amp_mod': 6,
+                   'patterns': {'A': {'steps': [{'notes': ['A3'], 'velocity': 127}]}}}
+        payload, changed = Q.make_playable(synthetic(switches=(32767, 0), pres_amp=0), accents)
+        fields = {f['name']: f['value_le_unsigned']
+                  for f in parameters.parse_parameters(payload)['fields']}
+        # 19660 is the value saved presets hold for Velo Amp Mod 6.
+        self.assertEqual(fields['Kbd.PresAmp'], 19660)
+        self.assertEqual(changed, {'Kbd.PresAmp': [0, 19660]})
+        _, changed = Q.make_playable(synthetic(switches=(32767, 0), pres_amp=0),
+                                     dict(accents, velo_amp_mod=10))
+        self.assertEqual(changed, {'Kbd.PresAmp': [0, 32767]})
+        for bad in (11, -1, 'high', True):
+            with self.assertRaisesRegex(ValueError, 'velo_amp_mod'):
+                Q.make_playable(synthetic(switches=(32767, 0), pres_amp=0),
+                                dict(accents, velo_amp_mod=bad))
 
     def test_base_without_sequencer_switch_is_refused(self):
         with self.assertRaisesRegex(ValueError, 'no Arp.SeqOn'):
