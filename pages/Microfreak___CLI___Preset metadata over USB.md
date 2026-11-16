@@ -1,3 +1,4 @@
+see-also:: [[Microfreak/Sequence/Research]]
 - # Preset metadata over USB
 	- Direct preset renaming is feasible through MIDI SysEx over USB. Elektroid implements the write sequence; the garden already has Python/RtMidi readers and full-preset backup support.
 	- Investigation date: [[2026-10-03 Sat]]. Source inspection establishes write feasibility; [[Microfreak/CLI/Validation/26-10-03 slot 397]] records successful hardware reads. Hardware writes remain untested.
