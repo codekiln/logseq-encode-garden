@@ -1,0 +1,26 @@
+logseq-entity:: [[Logseq/Entity/Software/Feature]]
+
+- # [Authenticate with vaults](https://platform.claude.com/docs/en/managed-agents/vaults)
+	- A **vault** in [[Claude/Managed Agents]] holds the credentials one end user's agent sessions need. You register each credential once and pass the vault's ID when you create a session.
+	- In beta on every model under `managed-agents-2026-04-01`, on the Claude API, Claude Platform on AWS and Claude Models on Google Cloud. Not eligible for zero data retention or HIPAA, except in self-hosted Managed Agents.
+	- ## Scope
+		- Vaults and credentials belong to a workspace: any API key with access to the workspace can use them in a session.
+		- To revoke access, archive or delete the vault or the credential.
+	- ## Credential types
+		- `mcp_oauth` — an MCP server's OAuth access token, keyed by `mcp_server_url`. With a `refresh` block, Anthropic refreshes the token when it expires.
+		- `static_bearer` — a fixed token for an MCP server, keyed by `mcp_server_url`.
+		- `environment_variable` — a secret keyed by `secret_name`, with `networking` set to `limited` (a list of `allowed_hosts`) or `unrestricted`. The environment must also allow those hosts.
+		- Each key is unique among a vault's active credentials, and a vault holds at most 20 credentials.
+		- Secret fields are write-only: the API never returns `token`, `access_token`, `refresh_token`, `client_secret` or `secret_value`.
+	- ## How credentials reach the agent
+		- `POST /v1/sessions` takes `vault_ids`. When several vaults match, the first vault with a match wins; an MCP server with no match is called without credentials.
+		- MCP tokens are added automatically when the agent connects to that server's URL.
+		- The sandbox holds a placeholder for an environment-variable secret, and the real value replaces it only on outbound requests, in a header, the body or both. The agent never sees the value, so a client that signs requests with the secret, such as AWS SigV4, fails.
+		- Credentials are checked only when a session uses them, and an invalid one produces an error event without stopping the session.
+	- ## Rotation and lifecycle
+		- Updating a credential's secret takes effect in running sessions without a restart. `mcp_server_url`, `secret_name`, `token_endpoint` and `client_id` can't change after creation.
+		- Archiving a vault purges its secrets; running sessions continue and new sessions that name it fail.
+		- `POST /v1/vaults/{vault_id}/credentials/{credential_id}/mcp_oauth_validate` reports whether an OAuth credential is `valid`, `invalid` or `unknown`.
+		- Webhooks report `vault_credential.refresh_failed` and archive and delete events.
+	- ## Self-hosted differences
+		- A self-hosted server starts with empty vaults and rejects `mcp_oauth`; it accepts `environment_variable` once its egress gateway is on, and can keep secrets in AWS Secrets Manager, Google Cloud Secret Manager, HashiCorp Vault or Azure Key Vault. Source: [Differences from the hosted service](https://platform.claude.com/docs/en/managed-agents/self-hosted/differences).
