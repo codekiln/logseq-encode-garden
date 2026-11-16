@@ -42,7 +42,7 @@ Add `--sequence` to include both sequencer patterns, decoded by [the sequence he
 mise run microfreak:inspect /private/tmp/preset/slot-005.bin --sequence
 ```
 
-The added `sequence` object holds the shared length, gate length and smoothing, and for patterns A and B whether the pattern is in use, its modulation-track destinations and one entry per played step with its status (`note`, `tie`, `rest`), notes, note names (C4 = MIDI 60), velocities and modulation values. Steps past the sequence length are counted, not listed. `mise run microfreak:write-sequence BASE.bin SEQUENCE.json NEW.bin` writes a sequence description into a copy of a downloaded preset for `microfreak:upload`. The storage layout and the experiments behind it are on [Microfreak/Sequence/Storage](../../pages/Microfreak___Sequence___Storage.md).
+The added `sequence` object holds the shared length, gate length and smoothing, and for patterns A and B whether the pattern is in use, its modulation-track destinations and one entry per played step with its status (`note`, `tie`, `rest`), notes, note names (C4 = MIDI 60), velocities and modulation values. Steps past the sequence length are counted, not listed. `mise run microfreak:write-sequence SEQUENCE.json --base SLOT_OR_FILE --slot N` writes a sequence description into a preset and uploads it; [Microfreak/Sequence/Write a sequence](../../pages/Microfreak___Sequence___Write%20a%20sequence.md) describes it and `microfreak:verify-sequence`. The storage layout and the experiments behind it are on [Microfreak/Sequence/Storage](../../pages/Microfreak___Sequence___Storage.md).
 
 ## Evidence and scope
 
