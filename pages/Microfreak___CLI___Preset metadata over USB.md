@@ -1,12 +1,12 @@
 see-also:: [[Microfreak/Sequence/Research]]
 - # Preset metadata over USB
 	- Direct preset renaming is feasible through MIDI SysEx over USB. Elektroid implements the write sequence; the garden already has Python/RtMidi readers and full-preset backup support.
-	- Investigation date: [[2026-10-03 Sat]]. Source inspection establishes write feasibility; [[Microfreak/CLI/Validation/26-10-03 slot 397]] records successful hardware reads. Hardware writes remain untested.
+	- Investigation date: [[2026-10-03 Sat]]. Source inspection establishes write feasibility; [[Microfreak/CLI/Validation/26-10-03 slot 397]] records successful hardware reads. [[Microfreak/CLI/Upload a preset]] records the first hardware writes, on [[2026-11-16 Mon]].
 	- ## Existing implementation
 		- [Elektroid MicroFreak connector](https://github.com/dagargo/elektroid/blob/7806ecafda5fbed214e0e0c4f48a92ead52bdc73/src/connectors/microfreak.c) provides preset listing, renaming, downloading and uploading. Its preset operation tables do not implement deletion.
 		- [Garden preset inventory and reconciliation](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/lib/sync.py) reads saved names, categories and initialized status using python-rtmidi. Its writes update garden pages; it does not write presets to the instrument.
 		- [Garden full-preset download](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/lib/download.py) captures the header and sound data, with a manifest and checksums. The raw backup is a custom format, not an MCC-compatible .mfp or .mbp file. Initialized slots are rejected by this downloader, so backup support needs extending before a general CRUD tool can cover every slot.
-		- Existing mise entry points are microfreak:sync, microfreak:download, microfreak:inspect and microfreak:compare. Inspection and comparison support examining exported preset data; they do not provide device writes.
+		- Existing mise entry points are microfreak:sync, microfreak:download, microfreak:inspect, microfreak:compare and microfreak:upload. Inspection and comparison support examining exported preset data; microfreak:upload writes a downloaded preset to a slot ([[Microfreak/CLI/Upload a preset]]).
 	- ## Rename protocol
 		- [microfreak_preset_rename](https://github.com/dagargo/elektroid/blob/7806ecafda5fbed214e0e0c4f48a92ead52bdc73/src/connectors/microfreak.c#L564-L638) reads a saved preset header with operation 0x19, mode 0. The response uses operation 0x52.
 		- The function edits the name in the returned header, sends the complete header using operation 0x52, then sends operation 0x52 with the preset address and mode 1. It finishes with a MIDI program change to select the renamed preset.

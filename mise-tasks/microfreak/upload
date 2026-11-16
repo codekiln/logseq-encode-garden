@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#MISE description="Write one MicroFreak preset from a microfreak:download file to a slot, then read it back"
+#USAGE arg "<file>" help=".bin file saved by microfreak:download"
+#USAGE flag "--slot <number>" help="Preset slot from 1 to 512"
+#USAGE flag "--backup-dir <path>" help="Save the slot here first; required when the slot holds a preset"
+#USAGE flag "--name <name>" help="Preset name to store instead of the one in the file"
+#USAGE flag "--category <category>" help="Category to store instead of the one in the file" {
+#USAGE   choices "Bass" "Brass" "Keys" "Lead" "Organ" "Pad" "Percussion" "Sequence" "SFX" "Strings" "Template" "Vocoder"
+#USAGE }
+#USAGE flag "--port <name>" help="Exact MIDI port name"
+set -euo pipefail
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+exec uv run --no-project --with python-rtmidi==1.5.8 python "$root/mise-tasks/microfreak/lib/upload.py" "$@"

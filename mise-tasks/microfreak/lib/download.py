@@ -45,17 +45,26 @@ def receive(midi_in, midi_out, sequence, op, payload, expected_op, expected_len)
     raise RuntimeError(f'Timed out waiting for response to sequence {sequence}')
 
 
-def read_patch(midi_in, midi_out, slot):
-    """Return the preset header and every data byte from a populated slot."""
+def slot_address(slot):
+    """Return the zero-based device address of a 1-512 slot as two 7-bit values."""
     if not 1 <= slot <= 512:
         raise ValueError('Slot must be from 1 to 512')
     preset_id = slot - 1
-    address = [preset_id // 128, preset_id % 128]
-    sequence = 0
+    return [preset_id // 128, preset_id % 128]
+
+
+def read_header(midi_in, midi_out, slot, sequence=0):
+    """Return the decoded metadata and raw header of any slot, initialized or not."""
     header_message = receive(midi_in, midi_out, sequence, 0x19,
-                             address + [0], 0x52, HEADER_LEN)
-    metadata = decode_header(header_message, slot, sequence)
-    header = bytes(header_message[9:-1])
+                             slot_address(slot) + [0], 0x52, HEADER_LEN)
+    return decode_header(header_message, slot, sequence), bytes(header_message[9:-1])
+
+
+def read_patch(midi_in, midi_out, slot):
+    """Return the preset header and every data byte from a populated slot."""
+    address = slot_address(slot)
+    sequence = 0
+    metadata, header = read_header(midi_in, midi_out, slot, sequence)
     if metadata['initialized']:
         raise ValueError(f'Slot {slot} is initialized and has no patch data')
     time.sleep(.005)
