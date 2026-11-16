@@ -29,7 +29,7 @@ def synthetic(length_raw=6553, gate_raw=16384, smooth=(0, 0, 0, 0), switches=Non
     if pres_amp is not None:
         block += b'#Kbd' + field('PresAmp', 1, pres_amp) + b'@'
     if switches is not None:
-        block += (b'#Arp' + field('Div', 1, 22937) + field('SeqOn', 1, switches[0]) + b'@'
+        block += (b'#Arp' + field('Div', 10, 22937) + field('SeqOn', 1, switches[0]) + b'@'
                   + b'#Gen' + field('Parafon', 1, switches[1]) + b'@')
     block = (block
              + b'#Seq' + field('Length', 60, length_raw) + field('GateLen', 80, gate_raw)
@@ -61,6 +61,18 @@ class ConversionTests(unittest.TestCase):
         for raw, percent in ((16384, 50), (12697, 41), (0, 10), (32767, 90)):
             self.assertEqual(Q.gate_from_raw(raw), percent)
             self.assertEqual(Q.gate_to_raw(percent), raw)
+
+    def test_divisions_match_values_saved_presets_hold(self):
+        for raw, name in ((0, '1'), (6553, '1/2T'), (9830, '1/4'), (13107, '1/4T'),
+                          (16384, '1/8'), (22937, '1/16'), (32767, '1/32T')):
+            self.assertEqual(Q.division_from_raw(raw), name)
+            self.assertEqual(Q.division_to_raw(name), raw)
+        self.assertEqual(len(Q.DIVISIONS), len(Q.DIVISION_CLOCKS))
+        self.assertEqual(Q.division_name(1), '1')
+        self.assertEqual(Q.division_name('1/8t'), '1/8T')
+        for bad in ('1/64', '3/16', True, None):
+            with self.assertRaisesRegex(ValueError, 'Unknown division'):
+                Q.division_name(bad)
 
     def test_note_names_put_middle_c_at_c4(self):
         self.assertEqual(Q.note_number('C4'), 60)
@@ -247,6 +259,18 @@ class PlayableTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'velo_amp_mod'):
                 Q.make_playable(synthetic(switches=(32767, 0), pres_amp=0),
                                 dict(accents, velo_amp_mod=bad))
+
+    def test_division_sets_the_step_length(self):
+        eighths = {'length': 4, 'division': '1/8', 'patterns': {'A': {'steps': [{'notes': ['E2']}]}}}
+        payload, changed = Q.make_playable(synthetic(switches=(32767, 0)), eighths)
+        self.assertEqual(changed, {'Arp.Div': [22937, 16384]})
+        decoded = Q.decode_sequence(payload)
+        self.assertEqual((decoded['division'], Q.describe(decoded)['division']), ('1/8', '1/8'))
+        self.assertEqual(Q.differences(eighths, decoded), [])
+        self.assertEqual(Q.differences(dict(eighths, division='1/16'), decoded),
+                         ['division: described 1/16, stored 1/8'])
+        with self.assertRaisesRegex(ValueError, 'Unknown division'):
+            Q.make_playable(synthetic(switches=(32767, 0)), dict(eighths, division='1/64'))
 
     def test_base_without_sequencer_switch_is_refused(self):
         with self.assertRaisesRegex(ValueError, 'no Arp.SeqOn'):
