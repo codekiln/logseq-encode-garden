@@ -29,10 +29,8 @@ Each is 64 step records of 16 followed by an 18-long pattern trailer:
 Length, gate length and smoothing are the named Seq.Length, Seq.GateLen and
 Seq.Smooth1-4 parameters; both patterns share them.
 """
-import argparse
 import json
 from pathlib import Path
-import sys
 
 import parameters
 
@@ -52,6 +50,7 @@ PATTERN_IN_USE = 0xA5
 PATTERN_ERASED = 0xFF
 LENGTH_RANGE = (4, 64)
 GATE_RANGE = (10, 90)
+SWITCH_ON = 32767
 NOTE_NAMES = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B']
 
 
@@ -310,31 +309,169 @@ def encode_sequence(payload, sequence):
     return pack_payload(bytes(data))
 
 
-def main(argv=None):
-    parser = argparse.ArgumentParser(description='Write a sequence description into a preset')
-    parser.add_argument('base', type=Path, help='microfreak:download .bin to start from')
-    parser.add_argument('sequence', type=Path, help='JSON sequence description')
-    parser.add_argument('output', type=Path, help='new .bin to write')
-    args = parser.parse_args(argv)
-    raw = args.base.read_bytes()
-    if len(raw) != parameters.HEADER_SIZE + parameters.PAYLOAD_SIZE:
-        print('error: base must be a microfreak:download .bin file', file=sys.stderr)
-        return 2
-    header, payload = raw[:parameters.HEADER_SIZE], raw[parameters.HEADER_SIZE:]
-    try:
-        new = encode_sequence(payload, json.loads(args.sequence.read_text()))
-    except (ValueError, KeyError, parameters.UnsupportedLayout) as exc:
-        print(f'error: {exc}', file=sys.stderr)
-        return 2
-    try:
-        with args.output.open('xb') as out:
-            out.write(header + new)
-    except FileExistsError:
-        print(f'error: {args.output} already exists', file=sys.stderr)
-        return 2
-    print(args.output)
-    return 0
+def stored_form(sequence):
+    """Return the description the way the instrument can store it.
+
+    The shortest sequence the instrument holds is 4 steps. A description of
+    1-3 steps is repeated to fill 4 or 6 steps (1 to 4, 2 to 4, 3 to 6), which
+    plays the same loop. Other descriptions come back unchanged.
+    """
+    length = sequence.get('length')
+    if length is None or length >= LENGTH_RANGE[0]:
+        return sequence
+    if length < 1:
+        raise ValueError('Sequence length runs from 1 to 64 steps')
+    repeats = -(-LENGTH_RANGE[0] // length)
+    patterns = {}
+    for name, pattern in (sequence.get('patterns') or {}).items():
+        steps = list(pattern.get('steps', []))
+        if len(steps) > length:
+            raise ValueError(f'Pattern {name} has {len(steps)} steps for a length of {length}')
+        if not any(s and (s.get('notes') or s.get('mod')) for s in steps):
+            patterns[name] = dict(pattern, steps=[])
+            continue
+        steps += [{}] * (length - len(steps))
+        patterns[name] = dict(pattern, steps=steps * repeats)
+    return dict(sequence, length=length * repeats, patterns=patterns)
 
 
-if __name__ == '__main__':
-    sys.exit(main())
+def make_playable(payload, sequence):
+    """Write a description and turn on the settings that let it play.
+
+    Returns the new payload and the named settings it changed, as
+    {name: [before, after]}. Arp.SeqOn on puts the preset in sequencer mode;
+    Gen.Parafon on lets a step sound more than its lowest note, so it is turned
+    on when a step holds a chord.
+    """
+    new = bytearray(parameters.unpack_payload(encode_sequence(payload, stored_form(sequence))))
+    fields = {f['name']: f for f in parameters.parse_parameters(payload)['fields']}
+    wanted = {'Arp.SeqOn': SWITCH_ON}
+    chords = any(len(step.get('notes') or []) > 1
+                 for pattern in (sequence.get('patterns') or {}).values()
+                 for step in pattern.get('steps', []) if step)
+    if chords:
+        wanted['Gen.Parafon'] = SWITCH_ON
+    changed = {}
+    for name, value in wanted.items():
+        before = fields[name]['value_le_unsigned'] if name in fields else None
+        if before != value:
+            set_field(new, fields, name, value)
+            changed[name] = [before, value]
+    return pack_payload(bytes(new)), changed
+
+
+def describe_step(step):
+    """Turn one decoded step into the description format."""
+    result = {}
+    if 'notes' in step:
+        result['notes'] = step['note_names']
+        velocities = step['velocities']
+        result['velocity'] = velocities[0] if len(set(velocities)) == 1 else velocities
+        if step['status'] == 'tie':
+            result['tie'] = True
+    if 'mod' in step:
+        result['mod'] = step['mod']
+    return result
+
+
+def describe(decoded):
+    """Turn decode_sequence output back into a sequence description.
+
+    Each pattern lists its played steps, with trailing rests left out, its
+    modulation-track destinations, and in_use, false for an erased pattern.
+    """
+    result = {'length': decoded['length']}
+    for key in ('gate_percent', 'smoothing'):
+        if key in decoded:
+            result[key] = decoded[key]
+    result['patterns'] = {}
+    for name, pattern in decoded['patterns'].items():
+        steps = [describe_step(s) for s in pattern['steps']]
+        while steps and not steps[-1]:
+            steps.pop()
+        result['patterns'][name] = {
+            'in_use': pattern['in_use'],
+            'steps': steps,
+            'mod_tracks': [t['destination_id'] if t else None for t in pattern['mod_tracks']],
+        }
+    return result
+
+
+def _canonical_step(step):
+    step = step or {}
+    notes = [note_number(n) for n in step.get('notes', [])]
+    result = {}
+    if notes:
+        velocity = step.get('velocity', step.get('velocities', BLANK_VELOCITY))
+        velocities = list(velocity) if isinstance(velocity, (list, tuple)) else [velocity] * len(notes)
+        result = {'notes': notes, 'velocities': velocities}
+        if step.get('tie'):
+            result['tie'] = True
+    mods = step.get('mod')
+    if mods and any(v is not None for v in mods):
+        result['mod'] = list(mods)
+    return result
+
+
+def _destination(value):
+    if value is None:
+        return None
+    return int(value, 0) if isinstance(value, str) else int(value)
+
+
+def canonical_pattern(pattern, length):
+    """Steps 1 to length with note numbers and per-note velocities, for comparing."""
+    steps = [_canonical_step(s) for s in pattern.get('steps', [])[:length]]
+    steps += [{}] * (length - len(steps))
+    tracks = pattern.get('mod_tracks') or [None] * TRACKS
+    return {'steps': steps, 'mod_tracks': [_destination(t) for t in tracks]}
+
+
+def differences(sequence, decoded):
+    """List where a decoded preset differs from a description.
+
+    Only what the description sets is compared: the length, the gate length
+    and smoothing when given, and the patterns it lists. Short descriptions
+    are compared in their stored form (see stored_form).
+    """
+    sequence = stored_form(sequence)
+    found = []
+    length = sequence.get('length', decoded['length'])
+    if length != decoded['length']:
+        found.append(f"length: described {length}, stored {decoded['length']}")
+    if sequence.get('gate_percent') is not None and sequence['gate_percent'] != decoded.get('gate_percent'):
+        found.append(f"gate_percent: described {sequence['gate_percent']}, "
+                     f"stored {decoded.get('gate_percent')}")
+    for n, on in enumerate(sequence.get('smoothing') or [], start=1):
+        if on is not None and bool(on) != decoded['smoothing'][n - 1]:
+            found.append(f'smoothing {n}: described {bool(on)}, stored {decoded["smoothing"][n - 1]}')
+    stored = describe(decoded)['patterns']
+    for name, pattern in (sequence.get('patterns') or {}).items():
+        want = canonical_pattern(pattern, decoded['length'])
+        got = canonical_pattern(stored[name], decoded['length'])
+        in_use = any(s.get('notes') or s.get('mod') for s in want['steps'])
+        if in_use != stored[name]['in_use']:
+            found.append(f'{name}: described {"in use" if in_use else "erased"}, '
+                         f'stored {"in use" if stored[name]["in_use"] else "erased"}')
+        for number, (w, g) in enumerate(zip(want['steps'], got['steps']), start=1):
+            if w != g:
+                found.append(f'{name} step {number}: described {w or "rest"}, stored {g or "rest"}')
+        if want['mod_tracks'] != got['mod_tracks']:
+            found.append(f"{name} mod_tracks: described {want['mod_tracks']}, stored {got['mod_tracks']}")
+    return found
+
+
+def load_description(path):
+    """Read a sequence description from a JSON or YAML file."""
+    text = Path(path).read_text()
+    if Path(path).suffix.lower() in ('.yaml', '.yml'):
+        try:
+            import yaml
+        except ImportError as exc:
+            raise ValueError('Reading YAML needs PyYAML; run the mise task, which installs it') from exc
+        sequence = yaml.safe_load(text)
+    else:
+        sequence = json.loads(text)
+    if not isinstance(sequence, dict):
+        raise ValueError(f'{path} does not hold a sequence description')
+    return sequence

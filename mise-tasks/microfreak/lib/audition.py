@@ -284,6 +284,9 @@ def build_parser():
     parser.add_argument('--no-midi-out', action='store_true',
                         help='Leave Arp/Seq MIDI Out as it is; audio only')
     parser.add_argument('--no-audio', action='store_true', help='Skip the H5 recording')
+    parser.add_argument('--no-select', action='store_true',
+                        help='Play the sound and pattern already loaded, such as pattern B '
+                             'chosen on the panel; sends no program change or CC')
     parser.add_argument('--device', default='H5')
     parser.add_argument('--input-channel', type=int, default=2, help='Zero-based audio input channel')
     parser.add_argument('--samplerate', type=int, default=48000)
@@ -301,6 +304,8 @@ def run(args):
         raise AuditionError('--loops must be positive and --steps 1-64')
     if not 20 <= args.bpm <= 300:
         raise AuditionError('--bpm must be from 20 to 300')
+    if args.no_select and (args.plain or args.cc or args.division):
+        raise AuditionError('--no-select keeps the loaded sound; leave out --plain, --cc and --division')
     wav_dir = None if args.no_audio else guard_wav_dir(args.wav_dir)
     want_midi_out = not args.no_midi_out
     midi_in, midi_out, port = download.open_ports(args.port)
@@ -320,8 +325,11 @@ def run(args):
         for code, value in plan_globals(current, want_midi_out):
             write_global(midi_in, midi_out, code, value)
             applied.append((code, current[code], value))
-        bank, program = select_slot(midi_out, args.slot, channel)
-        time.sleep(0.6)
+        if args.no_select:
+            bank = program = None
+        else:
+            bank, program = select_slot(midi_out, args.slot, channel)
+            time.sleep(0.6)
         sent_ccs = list(PLAIN_CCS) if args.plain else []
         sent_ccs += args.cc
         if forced_index is not None:
@@ -399,8 +407,9 @@ def run(args):
         try:
             if channel is not None:
                 midi_out.send_message([0xB0 | channel, 123, 0])
-                select_slot(midi_out, args.slot, channel)
-                time.sleep(0.3)
+                if not args.no_select:
+                    select_slot(midi_out, args.slot, channel)
+                    time.sleep(0.3)
             failed = []
             for code, before, temporary in reversed(applied):
                 try:
@@ -419,7 +428,7 @@ def run(args):
     report.setdefault('instrument', {})
     report['instrument']['globals_changed'] = restored
     report['instrument']['left_stopped'] = True
-    report['instrument']['slot_reselected'] = True
+    report['instrument']['slot_reselected'] = not args.no_select
     return report
 
 
