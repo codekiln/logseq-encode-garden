@@ -2,24 +2,7 @@ see-also:: [[Microfreak/Sequence/Write a sequence]], [[Microfreak/Sequence/Resea
 
 - # How a preset stores its sequence
 	- A preset keeps sequencer patterns A and B at fixed positions after its named parameters. Each pattern holds 64 steps, whatever the sequence length, followed by a short pattern trailer. The length, gate length and smoothing are named parameters that both patterns share.
-	- `mise run microfreak:inspect FILE --sequence` adds the decoded patterns to the inspector's JSON. `mise run microfreak:write-sequence` writes a sequence description into a preset and uploads it, using [lib/sequence.py](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/lib/sequence.py). [[Microfreak/Sequence/Write a sequence]] describes the task and the checks on the instrument:
-		- ```sh
-		  mise run microfreak:write-sequence sequence.json --base 358 --slot 450
-		  ```
-		- `sequence.json` looks like this; `velocity` defaults to 100, and patterns left out keep what the base holds:
-		- ```json
-		  {"length": 16, "gate_percent": 50,
-		   "patterns": {"A": {"steps": [
-		     {"notes": ["C4"], "velocity": 100},
-		     {},
-		     {"notes": ["G4"], "tie": true},
-		     {"notes": ["G4"]},
-		     {"notes": ["C4", "E4", "G4", "B4"], "velocity": [30, 60, 90, 120]},
-		     {"notes": [72], "mod": [128, null, null, null]}],
-		    "mod_tracks": ["0x0101", null, null, null]}}}
-		  ```
-		- An empty step is a rest. `tie` holds the step's notes into the next step. `mod` gives the values of modulation tracks 1–4, 0–255, and `mod_tracks` gives each track's destination id; `0x0101` is filter cutoff.
-		- Note names put middle C, MIDI note 60, at C4.
+	- `mise run microfreak:inspect FILE --sequence` adds the decoded patterns to the inspector's JSON. `mise run microfreak:write-sequence` writes a sequence description into a preset and uploads it, using [lib/sequence.py](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/lib/sequence.py). [[Microfreak/Sequence/Write a sequence]] describes the description format, the tasks and how to check a slot on the instrument.
 	- The layout follows [Freakout's sequence parser](https://github.com/kmorrill/freakout/blob/main/src/minifreak_patch/microfreak_sequence.py) and its [firmware notes](https://github.com/kmorrill/freakout/blob/main/docs/microfreak-firmware-notes.md), which say the instrument saves `0x824` values of Sequence A/B state with each preset: two patterns of 1042.
 	- ## Where the patterns sit
 		- Positions count in the 4088 values that a preset's 4672 transferred values expand to, as described in [PARAMETERS.md](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/PARAMETERS.md).
@@ -72,7 +55,7 @@ see-also:: [[Microfreak/Sequence/Write a sequence]], [[Microfreak/Sequence/Resea
 			- 338: a voice gap, a tie into a different note, and a tie across the loop.
 			- 339: [[Microfreak/Preset/003 Trance]] with `Arp.SeqOn` on.
 	- ## Open questions
-		- Playing pattern B from the Mac. A preset always starts with pattern A after a program change, even when A is erased and B holds steps ([[Microfreak/Preset/395 26.06.25]] stayed silent). Song Select, CCs 1–119 sent one at a time during playback (except 32 and 64), swapping trailer values 10 and 11, and the global settings tried in [[Microfreak/Sequence/Write a sequence]] did not switch to B. Pattern B data written here played as described once moved to pattern A's place, and downloads hold it unchanged. Pressing B on the panel and running `mise run microfreak:audition --slot 445 --no-select` would play it in its own place.
+		- Playing pattern B from the Mac. A preset always starts with pattern A after a program change, even when A is erased and B holds steps ([[Microfreak/Preset/395 26.06.25]] stayed silent). Song Select, CCs 1–119 sent one at a time during playback (except 32 and 64), swapping trailer values 10 and 11, and the global settings listed in [[Microfreak/Sequence/Research]] did not switch to B. Pattern B data written here played as described once moved to pattern A's place, and downloads hold it unchanged. Pressing B on the panel plays it in its own place, as [[Microfreak/Sequence/Write a sequence]] describes.
 		- What trailer values 10 and 11 record. Pattern identity kept through a copy, and the pattern selected when the preset was saved, fit the factory data but are untested.
 		- Whether the instrument treats `0xFB`, `0xFD` and `0xFF` differently anywhere besides playback.
 		- What a velocity of 0 or above 127 does to the sound. Only MIDI out was observed.

@@ -1,106 +1,239 @@
-see-also:: [[Microfreak/Sequence/Storage]], [[Microfreak/Sequence/Research]], [[Microfreak/CLI/Audition a sequence]], [[Microfreak/CLI/Upload a preset]]
+see-also:: [[Microfreak/Sequence/Storage]], [[Microfreak/Sequence/Research]], [[Microfreak/CLI/Audition a sequence]], [[Microfreak/CLI/Upload a preset]], [[Microfreak/UG/13 Sequencer]]
 
 - # Write a described sequence into a preset
-	- `mise run microfreak:write-sequence` writes a sequence described in a JSON or YAML file into a MicroFreak preset and uploads it to a slot. `mise run microfreak:verify-sequence` also plays the slot, records it and downloads it again, then reports for every step what the description expects, what MIDI out carried and what the [[Zoom H5/My Unit]] heard. Both tasks were added for [#436 Write a described sequence into a MicroFreak preset and verify it on the instrument](https://github.com/codekiln/logseq-encode-garden/issues/436).
-	- ## Put a sequence into a slot
-		- Run from the garden root, with MIDI Control Center closed. Write the description to a file, then:
-		- ```sh
-		  mise run microfreak:write-sequence seq.json --base 358 --slot 450
-		  mise run microfreak:verify-sequence seq.json --base 358 --slot 450 \
-		    --backup-dir /private/tmp/mf-backup --out-dir /private/tmp/mf-verify
-		  ```
-		- `write-sequence` writes and uploads. `verify-sequence` with `--base` does the same write, then plays and checks the slot; without `--base` it checks the slot as it is.
-		- `--base` is the preset to start from: a slot number, which is read and left unchanged, or a `.bin` file from `microfreak:download`. The new preset keeps the base's sound and every setting except the ones listed under What the write changes.
-		- `--slot` is the slot to write. A slot that holds a preset is refused unless `--backup-dir` names a folder to save it in first, as with [[Microfreak/CLI/Upload a preset]]. The slot is read back and compared with what was sent.
-		- `--output new.bin` also writes the result to a new file. With neither `--slot` nor `--output`, the task only prints what it would store.
-		- `--name` and `--category` set the stored name and category. A `name` or `category` key in the description does the same; without either, the base's are kept.
-		- Uploading does not change the sound being played. Select the slot on the panel, or over MIDI with bank select (slot − 1) // 128 and program change (slot − 1) % 128, to hear it.
-	- ## Description
-		- "Pattern A: C3 E3 G3, rest, C4 held for two steps, 16 steps; pattern B empty" is:
-		- ```json
-		  {"name": "Arp Sketch", "length": 16, "gate_percent": 50,
-		   "patterns": {
-		     "A": {"steps": [
-		       {"notes": ["C3"]}, {"notes": ["E3"]}, {"notes": ["G3"]}, {},
-		       {"notes": ["C4"], "tie": true}, {"notes": ["C4"]}]},
-		     "B": {"steps": []}}}
-		  ```
-		- The same in YAML, in a file ending `.yaml` or `.yml`:
-		- ```yaml
-		  name: Arp Sketch
-		  length: 16
-		  gate_percent: 50
-		  patterns:
-		    A:
-		      steps:
-		        - {notes: [C3]}
-		        - {notes: [E3]}
-		        - {notes: [G3]}
-		        - {}
-		        - {notes: [C4], tie: true}
-		        - {notes: [C4]}
-		    B: {steps: []}
-		  ```
-		- `length` is the number of steps, 1–64, shared by both patterns. Steps after the last one listed are rests.
-		- `gate_percent` is the gate length, 10–90. `smoothing` gives four booleans, one per modulation track. Both are optional; the base's values stay when they are left out.
-		- A step lists up to four `notes`, by name (middle C, MIDI note 60, is C4) or MIDI number. `velocity` is 1–127, one value or one per note, default 100. `tie: true` holds the step's notes into the next step; repeat the same notes on that step to hear one long note. An empty step `{}` is a rest.
-		- `mod` gives a step's values for modulation tracks 1–4, 0–255 or `null`, and the pattern's `mod_tracks` gives each track's destination: `"0x0101"` is filter cutoff and `"0x0602"` envelope decay.
-		- A pattern left out keeps the base's steps; `"B": {"steps": []}` erases B. The printed report lists kept patterns under `kept_from_base`.
-		- [[Microfreak/Sequence/Storage]] describes how each of these is stored.
+	- When codekiln describes a sequence in words, such as "in slot 483, a 16-step minor arpeggio on A with a rest every fourth step, pattern B the same an octave up, accent the downbeats", an agent puts it into a MicroFreak preset with two mise tasks.
+	- `mise run microfreak:write-sequence` writes a description file into a preset and uploads it to a slot. `mise run microfreak:verify-sequence` does the same write, then plays the slot, records what the MicroFreak sends over MIDI and what the [[Zoom H5/My Unit]] hears, downloads the slot again, and reports for every step what the description expects, what the instrument sent and what it sounded. Both were added for [#436 Write a described sequence into a MicroFreak preset and verify it on the instrument](https://github.com/codekiln/logseq-encode-garden/issues/436).
+	- ## Steps
+		- Run every command from the garden root. Keep the description, backups, recordings and reports in a folder outside the repository, such as `$TMPDIR/microfreak-seq/`: the presets are codekiln's and the repository is public.
+		- 1. Write the request as a description file, as under Turn the request into a description. To edit a sequence a slot already holds, start from Change a sequence already in a slot.
+		- 2. Choose the slot and the base preset, as under Pick a slot and a base.
+		- 3. Preview. Without `--slot`, the task reads the base, prints what it would store and changes nothing. Fix the description until `differences` is empty.
+			- ```sh
+			  mkdir -p "$TMPDIR/microfreak-seq"
+			  mise run microfreak:write-sequence "$TMPDIR/microfreak-seq/seq.yaml" --base 358
+			  ```
+		- 4. Write, play and check in one run:
+			- ```sh
+			  mise run microfreak:verify-sequence "$TMPDIR/microfreak-seq/seq.yaml" --base 358 --slot 483 \
+			    --backup-dir "$TMPDIR/microfreak-seq/backup-1" --out-dir "$TMPDIR/microfreak-seq/verify"
+			  ```
+		- 5. Read the report, as under Read the report. Exit status 0 means that MIDI out and the downloaded slot both match the description.
+		- 6. Tell codekiln what the slot holds, as under Tell codekiln what the slot holds.
+		- The tasks need the MicroFreak on USB as MIDI port `Arturia MicroFreak` ([[Microfreak/MIDI/Port/Arturia MicroFreak]]), with MIDI Control Center closed. The recording needs the Zoom H5 on USB; without it, add `--no-audio`. One agent drives the instrument at a time. Nobody should play its keys during a run, because a held key takes over from the sequence.
+	- ## Turn the request into a description
+		- A description is a JSON file, or a YAML file ending `.yaml` or `.yml`. Write the request out step by step, one entry per step from step 1. Description keys lists every key, and Worked examples has one example for each kind of request.
+		- Read musical words this way unless codekiln says otherwise:
+			- A step is a sixteenth note. Slot 358 plays one step per sixteenth, so 4 steps make a beat and 16 steps a bar of 4/4.
+			- Downbeats are the first step of each beat: steps 1, 5, 9 and 13 of a 16-step bar. "Every fourth step" is steps 4, 8, 12 and 16.
+			- An accent is velocity 127 on the accented steps and 80 on the others, with `velo_amp_mod: 10` so that velocity changes loudness. Slot 358 stores Velo Amp Mod 0, which plays every velocity at the same level.
+			- Middle C, MIDI note 60, is C4. When the request names no octave, start the root in octave 3: A3 is MIDI 57.
+			- An arpeggio plays the chord's notes from the root upward. To fill a longer pattern, continue an octave higher, then come back down.
+			- "Held", "tied" or "sustained over" several steps is a tie: `tie: true` on every step but the last, with the same notes on each.
+			- "The same an octave up" adds 12 to every note: A3 becomes A4.
+			- Short or staccato notes: `gate_percent: 25`. Long or legato notes: `gate_percent: 90`. One gate length applies to every step of both patterns.
+			- A pattern the request does not mention gets `steps: []`, which erases it. A pattern left out of the description keeps the base's steps, and slot 358's pattern A holds codekiln's own chords.
+			- The description has no tempo. `verify-sequence --bpm` sets the tempo of the check only.
+		- When the request leaves a choice open, make it and name it in the message to codekiln.
+	- ## Description keys
+		- `name`: 1–14 letters, digits, spaces, periods, underscores or hyphens. `category`: Bass, Brass, Keys, Lead, Organ, Pad, Percussion, Sequence, SFX, Strings, Template or Vocoder. Without them the base's name and category stay. `--name` and `--category` on the command line override both.
+		- `length`: the number of steps, 1–64, shared by both patterns. Steps after the last one listed are rests. The instrument's shortest length is 4, so a 1–3 step loop is stored repeated, 1 and 2 steps as 4 and 3 steps as 6, which plays the same; the report's `stored_as` says so.
+		- `gate_percent`: 10–90. `smoothing`: four booleans, one per modulation track. `velo_amp_mod`: 0–10, how much velocity changes loudness, which the panel shows as Velo Amp Mod in Utility > Preset. Each is optional; the base's value stays when it is left out.
+		- `patterns`: `A` and `B`, each with `steps`, a list of up to 64 steps, and optional `mod_tracks`.
+		- A step has `notes`, up to four, by name (C4, F#3, Eb2) or MIDI number; `velocity`, 1–127, one value or one per note, default 100; `tie: true`, which holds the notes into the next step; and `mod`, four values 0–255 or `null`, one per modulation track. `{}` is a rest.
+		- `mod_tracks` gives each modulation track's destination id, or `null`. [[Microfreak/Preset/005 MotivSeq]] and [[Microfreak/Preset/035 FM Seq]] use `"0x0101"` VCF.Cutoff, `"0x0102"` VCF.Reso, `"0x0602"` EG2.DecRel (envelope decay), `"0x0003"` VCO.Param2 and `"0x0005"` VCO.Param3. With smoothing off, a track on `"0x0101"` sends CC 23 at half the stored value, and values near 0 close the filter and silence the note. To find the id of another control, download a preset whose modulation track moves it and read `mod_tracks` in `mise run microfreak:inspect FILE --sequence`.
+		- [[Microfreak/Sequence/Storage]] describes how each key is stored.
+	- ## Worked examples
+		- Each example passed the preview against slot 358 with `differences` empty.
+		- ### Arpeggio with rests, accents, and pattern B an octave up
+			- "In slot 483, a 16-step minor arpeggio on A with a rest every fourth step, pattern B the same an octave up, accent the downbeats." The arpeggio climbs over two octaves and comes back down:
+			- ```yaml
+			  name: A min Arp
+			  category: Sequence
+			  length: 16
+			  velo_amp_mod: 10
+			  patterns:
+			    A:
+			      steps:
+			        - {notes: [A3], velocity: 127}
+			        - {notes: [C4], velocity: 80}
+			        - {notes: [E4], velocity: 80}
+			        - {}
+			        - {notes: [A4], velocity: 127}
+			        - {notes: [C5], velocity: 80}
+			        - {notes: [E5], velocity: 80}
+			        - {}
+			        - {notes: [A5], velocity: 127}
+			        - {notes: [E5], velocity: 80}
+			        - {notes: [C5], velocity: 80}
+			        - {}
+			        - {notes: [A4], velocity: 127}
+			        - {notes: [E4], velocity: 80}
+			        - {notes: [C4], velocity: 80}
+			        - {}
+			    B:
+			      steps:
+			        - {notes: [A4], velocity: 127}
+			        - {notes: [C5], velocity: 80}
+			        - {notes: [E5], velocity: 80}
+			        - {}
+			        - {notes: [A5], velocity: 127}
+			        - {notes: [C6], velocity: 80}
+			        - {notes: [E6], velocity: 80}
+			        - {}
+			        - {notes: [A6], velocity: 127}
+			        - {notes: [E6], velocity: 80}
+			        - {notes: [C6], velocity: 80}
+			        - {}
+			        - {notes: [A5], velocity: 127}
+			        - {notes: [E5], velocity: 80}
+			        - {notes: [C5], velocity: 80}
+			        - {}
+			  ```
+		- ### Scale with a held note
+			- "A C major scale from C4 up to C5, then hold the C5 for four more steps." C5 sounds from step 8 through step 12:
+			- ```yaml
+			  name: C Maj Climb
+			  length: 12
+			  patterns:
+			    A:
+			      steps:
+			        - {notes: [C4]}
+			        - {notes: [D4]}
+			        - {notes: [E4]}
+			        - {notes: [F4]}
+			        - {notes: [G4]}
+			        - {notes: [A4]}
+			        - {notes: [B4]}
+			        - {notes: [C5], tie: true}
+			        - {notes: [C5], tie: true}
+			        - {notes: [C5], tie: true}
+			        - {notes: [C5], tie: true}
+			        - {notes: [C5]}
+			    B: {steps: []}
+			  ```
+		- ### Chords
+			- "Am, F, C, G, one bar each." Each chord is held over four steps. A step with more than one note turns paraphony on:
+			- ```yaml
+			  name: Am F C G
+			  length: 16
+			  patterns:
+			    A:
+			      steps:
+			        - {notes: [A3, C4, E4], tie: true}
+			        - {notes: [A3, C4, E4], tie: true}
+			        - {notes: [A3, C4, E4], tie: true}
+			        - {notes: [A3, C4, E4]}
+			        - {notes: [F3, A3, C4], tie: true}
+			        - {notes: [F3, A3, C4], tie: true}
+			        - {notes: [F3, A3, C4], tie: true}
+			        - {notes: [F3, A3, C4]}
+			        - {notes: [C4, E4, G4], tie: true}
+			        - {notes: [C4, E4, G4], tie: true}
+			        - {notes: [C4, E4, G4], tie: true}
+			        - {notes: [C4, E4, G4]}
+			        - {notes: [G3, B3, D4], tie: true}
+			        - {notes: [G3, B3, D4], tie: true}
+			        - {notes: [G3, B3, D4], tie: true}
+			        - {notes: [G3, B3, D4]}
+			    B: {steps: []}
+			  ```
+		- ### Modulation track
+			- "An 8-step bass line on E2 with the filter opening across the pattern." Track 1 moves the filter cutoff, starting at 60 so the first note sounds:
+			- ```yaml
+			  name: E Bass Sweep
+			  length: 8
+			  patterns:
+			    A:
+			      mod_tracks: ["0x0101", null, null, null]
+			      steps:
+			        - {notes: [E2], mod: [60, null, null, null]}
+			        - {notes: [E2], mod: [88, null, null, null]}
+			        - {notes: [E3], mod: [116, null, null, null]}
+			        - {notes: [E2], mod: [144, null, null, null]}
+			        - {notes: [E2], mod: [172, null, null, null]}
+			        - {notes: [G2], mod: [200, null, null, null]}
+			        - {notes: [E2], mod: [228, null, null, null]}
+			        - {notes: [D3], mod: [255, null, null, null]}
+			    B: {steps: []}
+			  ```
+		- ### Short loop
+			- "C4, E4, G4, looping." The 3-step loop is stored as 6 steps, C4 E4 G4 C4 E4 G4:
+			- ```yaml
+			  name: Three Note
+			  length: 3
+			  patterns:
+			    A:
+			      steps:
+			        - {notes: [C4]}
+			        - {notes: [E4]}
+			        - {notes: [G4]}
+			    B: {steps: []}
+			  ```
+		- ### 64 steps
+			- "64 steps of the C minor pentatonic scale, up two octaves and back down, with a rest every eighth step." Generate a long pattern with a short script rather than typing 64 entries:
+			- ```sh
+			  python3 - <<'EOF' > "$TMPDIR/microfreak-seq/pent64.json"
+			  import json
+			  notes = ['C3', 'Eb3', 'F3', 'G3', 'Bb3', 'C4', 'Eb4', 'F4', 'G4', 'Bb4', 'C5']
+			  walk = notes + notes[-2:0:-1]              # up two octaves and back down: 20 steps
+			  steps = [{'notes': [walk[i % len(walk)]]} for i in range(64)]
+			  for i in range(7, 64, 8):
+			      steps[i] = {}                          # a rest on every eighth step
+			  print(json.dumps({'name': 'Pent 64', 'length': 64,
+			                    'patterns': {'A': {'steps': steps}, 'B': {'steps': []}}}))
+			  EOF
+			  ```
+	- ## Pick a slot and a base
+		- Write to the slot codekiln names. His own presets fill slots 1–320 and 350–402; write to one of those only when he names it.
+		- When he names no slot, choose an empty one and tell him which. To check a slot, run `mise run microfreak:download --slot N --output-dir "$TMPDIR/microfreak-seq/check"`. An empty slot answers `error: Slot N is initialized and has no patch data`. A slot that holds a preset is saved into that folder.
+		- The write refuses a slot that holds a preset unless `--backup-dir` names a folder. It saves the preset there first as `slot-NNN.bin`, then writes. It stops when that folder already holds a backup of the slot, so rewriting a slot, your own earlier write included, takes a new folder each time. Tell codekiln where the backup is; `mise run microfreak:upload BACKUP.bin --slot N --backup-dir NEW_FOLDER` puts it back, as described in [[Microfreak/CLI/Upload a preset]].
+		- `--base` gives the sound. The new preset keeps every setting of the base except the ones under What the write changes. Pass a slot number, which is read and left unchanged, or a `.bin` file from `microfreak:download`; with a file, the preview needs no instrument.
+		- Use the base codekiln names. Otherwise use slot 358, [[Microfreak/Preset/358 20241116.1]]: Basic Waves, paraphony on, no glide or pitch modulation, one step per sixteenth. Every check behind this page used it. A base whose pitch moves still stores and sends the right notes, but the audio check reads them off pitch: with [[Microfreak/Preset/382 Anit]] as the base, held notes read a semitone sharp.
+	- ## Change a sequence already in a slot
+		- An empty description changes nothing, so previewing it prints the slot's current sequence in the description format. Save that as the file to edit:
+			- ```sh
+			  echo '{}' > "$TMPDIR/microfreak-seq/empty.json"
+			  mise run microfreak:write-sequence "$TMPDIR/microfreak-seq/empty.json" --base N \
+			    | python3 -c 'import json, sys; print(json.dumps(json.load(sys.stdin)["sequence"], indent=1))' \
+			    > "$TMPDIR/microfreak-seq/seq.json"
+			  ```
+		- Edit the steps in `seq.json`, preview it with `--base N`, then run `verify-sequence` with `--base N --slot N` and a new `--backup-dir`. The preset keeps everything else slot N held. A pattern listed in the file replaces all of that pattern's steps, so keep both patterns in the file.
+	- ## Read the report
+		- `verify-sequence` prints a summary and one line per played step, and saves the full report and the recording in `--out-dir`. From the slot 483 run of the arpeggio example:
+			- ```text
+			  "summary": {
+			    "played_steps": 32,
+			    "midi_out_matching_steps": 32,
+			    "midi_out_mismatches": [],
+			    "audio_checks": {"match": 24, "rest": 8},
+			    "download_matches_description": true,
+			    "download_differences": [],
+			    "download_equals_upload": true
+			  },
+			  "steps": [
+			    "1.01 expected [A3/127] midi [A3/127] ok audio [A3; C1 G#2 A#2 A3] match",
+			    "1.02 expected [C4/80] midi [C4/80] ok audio [C4; C4] match",
+			    "1.04 expected [rest] midi [rest] ok audio [-; ] rest",
+			  ```
+		- A step line gives the loop and step (`1.04` is loop 1, step 4), the notes the description expects with their velocities, the notes MIDI out carried, `ok` or `DIFFERS`, then the pitch the audio heard, a chord estimate and the audio check. `ok` means that the notes, velocities, held notes and modulation CCs all matched.
+		- The run passed when the exit status is 0: `midi_out_mismatches` is empty and `download_matches_description` is true. `download_equals_upload` true says the slot still holds what was sent.
+		- MIDI out is the exact record of what played. The audio check confirms that the instrument sounded: `match`, `rest` and `held` agree with the description. `octave`, `mismatch` or `silent` on a step whose MIDI reads `ok` comes from the sound, such as a modulation track that closes the filter or a base whose pitch moves. Chords often read `partial`, because the chord estimate misses notes; [[Microfreak/CLI/Audition a sequence]] explains the audio labels.
+		- The check plays pattern A, as Pattern B explains, with a plain test timbre unless `--preset-sound` is given. Afterwards the slot is selected with its own sound and the sequencer is stopped.
+		- A step marked `DIFFERS`: make sure nobody touched the keys and no other program sent MIDI, then run `verify-sequence` again without `--base`, which plays and checks the slot as it is. A line in `download_differences` names a step the slot stores differently from the description; fix the description and write again.
+	- ## Pattern B
+		- The write stores pattern B, and `download_matches_description` compares it. Playing it from the Mac does not work: selecting a slot loads pattern A, and no MIDI or SysEx message found so far switches to B. [[Microfreak/Sequence/Research]] lists what was tried.
+		- Hearing B takes one press on the panel. Ask codekiln to select the slot and press the B icon in the sequencer row; the display shows Sequence B Loaded. The preset loads with the sequencer on; if the icon strip shows the arpeggiator instead, hold Shift and press Arp | Seq first.
+		- After that press, `mise run microfreak:audition --slot N --no-select` plays the loaded pattern without a program change, and `mise run microfreak:verify-sequence seq.yaml --slot N --pattern B --keep-selection --out-dir DIR` compares it with the description step by step.
+	- ## Tell codekiln what the slot holds
+		- Give the slot number and the name it shows, the base whose sound it uses, each pattern as notes step by step, the choices you made where the request left one open, the verify result, where any backup is, and how to hear pattern B.
+		- For the arpeggio example:
+			- Slot 483 now holds A min Arp (Sequence), with the sound of slot 358, 20241116.1. Pattern A, 16 steps: A3 C4 E4 rest, A4 C5 E5 rest, A5 E5 C5 rest, A4 E4 C4 rest. Pattern B is the same an octave up. The downbeats, steps 1, 5, 9 and 13, have velocity 127 and the other notes 80, and Velo Amp Mod is 10 so the accents sound louder. I chose the climb over two octaves and back. verify-sequence: MIDI out matched all 32 played steps of pattern A, the recording heard 24 notes and 8 rests as written, and a fresh download holds both patterns. The slot was empty, so there is no backup. To hear B, select 483 and press B.
 	- ## What the write changes
 		- The steps, modulation-track destinations and in-use marker of each pattern the description lists. A pattern with no notes or modulation values is marked erased.
-		- `Seq.Length`, and `Seq.GateLen` and `Seq.Smooth1`–`Seq.Smooth4` when the description gives them.
+		- `Seq.Length`; and `Seq.GateLen`, `Seq.Smooth1`–`Seq.Smooth4` and `Kbd.PresAmp` (Velo Amp Mod) when the description gives them.
 		- `Arp.SeqOn` on, so the preset starts in sequencer mode.
 		- `Gen.Parafon` (paraphony) on when a step holds more than one note. With paraphony off, the sequencer sounds only the lowest note of a step.
-		- The instrument's shortest sequence is 4 steps. A 1–3 step loop is stored repeated, 1 step as 4, 2 as 4 and 3 as 6, which plays the same; the report's `stored_as` says so.
-		- The task prints one JSON report: `settings_changed` with each changed setting's old and new value, `sequence` decoded again from the new preset in the description format, `differences` between that and the description (empty when it holds the description), and under `upload` the slot, any backup file and whether the read-back matched. It exits with status 1 when it refuses to write or finds a difference.
-	- ## Check it on the instrument
-		- `verify-sequence` uses [[Microfreak/CLI/Audition a sequence]] to select the slot, play it with MIDI Start and Clock for `--loops` loops (default 2) at `--bpm` (default 120) and record MIDI out and the H5, then downloads the slot again. It plays with that task's plain timbre unless `--preset-sound` is given. Global settings it changes are restored and read back.
-		- It prints a summary and one line per step, and saves the full JSON report and the WAV in `--out-dir`, which must be outside the repository:
-		- ```text
-		  1.01 expected [G4/100] midi [G4/100] ok audio [G4; G4] match
-		  1.02 expected [ held G4] midi [rest] ok audio [G4; G4] held
-		  ```
-		- `midi_out_matching_steps` and `midi_out_mismatches` compare the notes, velocities, held notes and modulation CCs that MIDI out carried with the description. `audio_checks` counts how the heard pitch compared, with the labels of [[Microfreak/CLI/Audition a sequence]]. `download_matches_description` and `download_equals_upload` check the slot downloaded afterwards. The task exits with status 0 when MIDI out and the download both match.
-		- MIDI out is the exact record. The audio confirms that the instrument sounded the notes, and depends on the base's sound: a modulation track that closes the filter, or a preset whose pitch moves, reads as a mismatch.
-		- A program change always loads pattern A, so playback is compared with pattern A. To compare with B, see Pattern B below.
-	- ## Checked on the instrument, 2026-11-16
-		- Each case was one `verify-sequence` run with `--base 358` ([[Microfreak/Preset/358 20241116.1]], Basic Waves, paraphonic, no pitch modulation), two loops at 120 BPM, plain timbre, under the shared hardware lock with no one at the panel. Descriptions, reports and recordings stay in the session's scratch folder. In every case MIDI out matched the description on every played step, and the slot downloaded afterwards decoded to the description and equalled the upload.
-		- 431 SeqV L1: one step, E4, stored as 4 steps. Audio matched 8 of 8.
-		- 432 SeqV L7: C4 to B4, 7 steps. Audio matched 14 of 14.
-		- 433 SeqV L16: 16 steps with 5 rests. Audio matched 22 notes and heard 10 silent rests.
-		- 434 SeqV L32: a 32-step scale up and down. Audio matched 64 of 64.
-		- 435 SeqV L64: 64 steps, a rest every eighth step, velocities 60–119. Audio matched 112 notes and heard 16 silent rests.
-		- 436 SeqV Rests: rests on the first step, on two steps in a row and on the last step. Audio matched 8 notes and 8 rests.
-		- 437 SeqV TieSame: G4 held over two steps and F4 over three. MIDI out sent one Note On for each; on the held steps it listed the note as held, and the audio heard the held pitch.
-		- 438 SeqV TieDiff: C5 tied into D5, A4 tied into a rest, E4 tied into G4 tied into C4. Each different note started with its own Note On. Audio matched 12 notes and 4 rests.
-		- 439 SeqV TieLoop: D4 on step 8 tied into D4 on step 1. The second loop's step 1 sent no Note On and held D4.
-		- 440 SeqV Chords: chords of two, three and four notes, a three-note chord held over two steps, and a four-note chord with velocities 40, 70, 100 and 127. MIDI out carried every note with its velocity. The audio chord estimate found every note on 10 of the 12 chord steps; on the other 2, the F3 A3 C4 E4 chord, it found some.
-		- 441 SeqV Velocity: A4 at velocities 1, 20, 40, 60, 80, 100, 120 and 127. MIDI out sent each velocity. Audio matched 16 of 16.
-		- 442 SeqV ModTrack: track 1 on filter cutoff with 0, 64, 128, 192 (on a rest), 255 and 10, sent as CC 23 0, 32, 64, 96, 127 and 5; track 2 on envelope decay with 40 and 200, sent as CC 106 20 and 100. In the audio the cutoff of 0 and 5 muted the note, as a closed filter does.
-		- 443 SeqV A only: pattern A plays, B erased. Audio matched 8 of 8.
-		- 444 SeqV B only: A erased, B holds A3 C4 E4 A4. Playback sent no notes and was silent; the download holds B.
-		- 445 SeqV A and B: A is C4 E4 G4 C5 and B is A3 C4 E4 A4. Playback played A; the download holds both.
-		- 446 SeqV B in A: slot 445's stored pattern B moved into pattern A's place in a downloaded copy, uploaded and played. It played A3 C4 E4 A4, matching on MIDI out and in the audio, so the data written for B plays as described.
-		- The same cases with [[Microfreak/Preset/382 Anit]] as the base also matched on MIDI out and in the download, but held notes read a semitone sharp in the audio. A pitch track of the recording showed each Anit note rising about a semitone within 120 ms of its start, which a short note barely shows and a tied one does. Anit stores a modulation-matrix amount, `Co1.EG1`, and a glide that slot 358 lacks.
-	- ## Pattern B
-		- No MIDI or SysEx message found so far starts pattern B. Selecting a slot loads pattern A, and Start plays it.
-		- Tried for this issue, each with slot 445 playing and MIDI out recorded:
-			- Song Select 0, 1 and 2 before Start, and Song Select 1 during playback: pattern A each time.
-			- Reading every global setting code from 0x00 to 0x7F with operation 0x43, which changes nothing. Every code answers. 0x20–0x4D are the settings named in MIDI Control Center's dictionary, which [Freakout's MIDI Control Center notes](https://github.com/kmorrill/freakout/blob/main/docs/microfreak-mcc-static-analysis.md#microfreak-subcommand-dictionary) recover; none of them concerns patterns. 0x4E–0x7F read 0. 0x00–0x1F hold unnamed values that stayed the same with slot 444 selected, slot 445 selected, during playback and after Stop.
-			- Writing the three unnamed codes inside the dictionary's range, 0x2C, 0x48 and 0x4B: each read back unchanged, so the instrument ignored the write.
-			- The unnamed codes 0x00–0x1F were not written. How the firmware handles a write to them is unknown, and other agents were sharing the instrument.
-			- After these runs, all 128 global codes read back the values they had before.
-		- Tried earlier for [#435 Decode how a MicroFreak preset stores its sequence](https://github.com/codekiln/logseq-encode-garden/issues/435) and [#434 Play a MicroFreak slot's sequence and detect its notes through the Zoom H5](https://github.com/codekiln/logseq-encode-garden/issues/434): program change, CCs 1–119 one at a time during playback, and swapping pattern trailer values 10 and 11.
-		- [Freakout's firmware notes](https://github.com/kmorrill/freakout/blob/main/docs/microfreak-firmware-notes.md#active-preset-serializer-and-the-operation-19-boundary) found no SysEx handler that reaches the sequencer's working copy of patterns A and B.
-		- Pattern B is therefore checked by the download (slots 444 and 445) and by playing B's data from A's place (slot 446). Hearing B itself takes one press on the panel.
-		- ### Check pattern B with one press
-			- On the MicroFreak, select preset 445, SeqV A and B, and press the B icon in the sequencer row; the display shows Sequence B Loaded.
-			- Then run `mise run microfreak:audition --slot 445 --no-select`, or ask an agent to. `--no-select` plays the pattern that is loaded, without a program change.
-			- Pattern B plays a rising A minor arpeggio, A3 C4 E4 A4, and MIDI out in the report lists those notes. Pattern A would play C4 E4 G4 C5.
-			- To compare that playback with pattern B step by step, save slot 445's description as `a-and-b.json` and run `mise run microfreak:verify-sequence a-and-b.json --slot 445 --pattern B --keep-selection --out-dir /private/tmp/mf-verify`. Run without pressing B, it reported pattern A's notes on all 8 steps as mismatches.
-			- ```json
-			  {"length": 4, "gate_percent": 50, "patterns": {
-			    "A": {"steps": [{"notes": ["C4"]}, {"notes": ["E4"]}, {"notes": ["G4"]}, {"notes": ["C5"]}]},
-			    "B": {"steps": [{"notes": ["A3"]}, {"notes": ["C4"]}, {"notes": ["E4"]}, {"notes": ["A4"]}]}}}
-			  ```
+		- `write-sequence` prints one JSON report: `settings_changed` with each changed setting's old and new value, `sequence` decoded again from the new preset in the description format, `differences` between that and the description, and under `upload` the slot, what it held before (`was`), any backup file and whether the read-back matched. It exits with status 1 when it refuses to write or finds a difference. `verify-sequence` saves the same under `write` in its full report.
+		- `--output new.bin` also saves the result as a file in `microfreak:download`'s format.
+		- Uploading leaves the sound being played alone. Select the slot on the panel, or over MIDI as in [[Microfreak/CLI/Upload a preset]], to hear it; `verify-sequence` leaves it selected.
+		- [[Microfreak/Sequence/Research]] lists the runs on the instrument behind this page.
