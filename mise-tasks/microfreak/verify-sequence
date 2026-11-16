@@ -14,7 +14,7 @@
 #USAGE   choices "A" "B"
 #USAGE }
 #USAGE flag "--keep-selection" help="Play the slot as loaded on the panel, for example after pressing B, without a program change"
-#USAGE flag "--preset-sound" help="Play with the preset's own sound instead of microfreak:audition's plain timbre"
+#USAGE flag "--preset-sound" help="Play with the preset's own sound instead of microfreak:audition's plain timbre, to hear accents and releases as they will sound"
 #USAGE flag "--no-audio" help="Skip the H5 recording"
 #USAGE flag "--out-dir <path>" help="Folder outside the repository for the WAV and the JSON report"
 #USAGE flag "--port <name>" help="Exact MIDI port name"
