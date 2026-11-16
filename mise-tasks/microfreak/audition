@@ -11,6 +11,7 @@
 #USAGE flag "--cc <number=value>" var=#true help="Extra CC to send after selecting the slot, for example 23=127"
 #USAGE flag "--no-midi-out" help="Leave Arp/Seq MIDI Out as it is and rely on audio"
 #USAGE flag "--no-audio" help="Skip the H5 recording"
+#USAGE flag "--no-select" help="Play the sound and pattern already loaded, such as pattern B chosen on the panel; sends no program change or CC"
 #USAGE flag "--device <name>" help="Audio input device; default H5"
 #USAGE flag "--input-channel <index>" help="Zero-based audio input channel; default 2"
 #USAGE flag "--wav-dir <path>" help="Directory outside the repository for the WAV"

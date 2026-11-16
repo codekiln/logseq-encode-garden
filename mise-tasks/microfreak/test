@@ -2,4 +2,4 @@
 #MISE description="Run the MicroFreak task tests, including the numpy audio analysis tests"
 set -euo pipefail
 root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-exec uv run --no-project --with numpy==2.5.5 python -m unittest discover -s "$root/mise-tasks/microfreak/lib" -p 'test_*.py' "$@"
+exec uv run --no-project --with numpy==2.5.5 --with pyyaml==6.0.2 python -m unittest discover -s "$root/mise-tasks/microfreak/lib" -p 'test_*.py' "$@"

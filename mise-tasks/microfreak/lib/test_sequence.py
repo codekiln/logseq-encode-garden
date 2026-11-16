@@ -13,16 +13,22 @@ import sequence as Q
 from test_parameters import pack
 
 TASK = Path(__file__).resolve().parents[1] / 'inspect'
-WRITE_TASK = Path(__file__).resolve().parents[1] / 'write-sequence'
 
 
 def field(name, descriptor, value):
     return bytes([0x40 | len(name)]) + name.encode() + b'c' + bytes([descriptor]) + value.to_bytes(2, 'little')
 
 
-def synthetic(length_raw=6553, gate_raw=16384, smooth=(0, 0, 0, 0)):
-    """A preset with a Seq section, pattern A holding three steps and B erased."""
-    block = (b'#VCF' + field('Cutoff', 238, 16384) + b'@'
+def synthetic(length_raw=6553, gate_raw=16384, smooth=(0, 0, 0, 0), switches=None):
+    """A preset with a Seq section, pattern A holding three steps and B erased.
+
+    switches=(seq_on, paraphonic) adds Arp.SeqOn and Gen.Parafon fields.
+    """
+    block = b'#VCF' + field('Cutoff', 238, 16384) + b'@'
+    if switches is not None:
+        block += (b'#Arp' + field('Div', 1, 22937) + field('SeqOn', 1, switches[0]) + b'@'
+                  + b'#Gen' + field('Parafon', 1, switches[1]) + b'@')
+    block = (block
              + b'#Seq' + field('Length', 60, length_raw) + field('GateLen', 80, gate_raw)
              + b''.join(field(f'Smooth{n}', 1, v) for n, v in enumerate(smooth, start=1))
              + b'@ ')
@@ -174,34 +180,122 @@ class EncodeTests(unittest.TestCase):
                 Q.encode_sequence(base, description)
 
 
+class StoredFormTests(unittest.TestCase):
+    def test_short_loops_repeat_to_the_shortest_stored_length(self):
+        for length, stored in ((1, 4), (2, 4), (3, 6)):
+            steps = [{'notes': ['C4']}, {}, {'notes': ['E4'], 'tie': True}][:length]
+            result = Q.stored_form({'length': length, 'patterns': {'A': {'steps': steps},
+                                                                    'B': {'steps': []}}})
+            self.assertEqual(result['length'], stored)
+            self.assertEqual(result['patterns']['A']['steps'],
+                             steps * (stored // length))
+            self.assertEqual(result['patterns']['B']['steps'], [])
+
+    def test_lengths_from_four_are_unchanged(self):
+        description = {'length': 4, 'patterns': {'A': {'steps': [{'notes': [60]}]}}}
+        self.assertIs(Q.stored_form(description), description)
+
+    def test_short_loop_with_more_steps_than_its_length_is_refused(self):
+        with self.assertRaisesRegex(ValueError, '2 steps for a length of 1'):
+            Q.stored_form({'length': 1, 'patterns': {'A': {'steps': [{}, {}]}}})
+        with self.assertRaises(ValueError):
+            Q.stored_form({'length': 0})
+
+
+class PlayableTests(unittest.TestCase):
+    def switches(self, payload):
+        fields = {f['name']: f['value_le_unsigned']
+                  for f in parameters.parse_parameters(payload)['fields']}
+        return fields['Arp.SeqOn'], fields['Gen.Parafon']
+
+    def test_turns_on_sequencer_mode_and_paraphony_for_chords(self):
+        chords = {'length': 4, 'patterns': {'A': {'steps': [{'notes': ['C4', 'E4']}]}}}
+        payload, changed = Q.make_playable(synthetic(switches=(0, 0)), chords)
+        self.assertEqual(self.switches(payload), (32767, 32767))
+        self.assertEqual(changed, {'Arp.SeqOn': [0, 32767], 'Gen.Parafon': [0, 32767]})
+
+    def test_single_notes_leave_paraphony_alone(self):
+        single = {'length': 4, 'patterns': {'A': {'steps': [{'notes': ['C4']}]}}}
+        payload, changed = Q.make_playable(synthetic(switches=(32767, 0)), single)
+        self.assertEqual(self.switches(payload), (32767, 0))
+        self.assertEqual(changed, {})
+
+    def test_short_loop_is_written_in_stored_form(self):
+        one = {'length': 1, 'patterns': {'A': {'steps': [{'notes': ['E4'], 'tie': True}]}}}
+        payload, _ = Q.make_playable(synthetic(switches=(0, 0)), one)
+        decoded = Q.decode_sequence(payload)
+        self.assertEqual(decoded['length'], 4)
+        self.assertEqual([s['status'] for s in decoded['patterns']['A']['steps']], ['tie'] * 4)
+        self.assertEqual(Q.differences(one, decoded), [])
+
+    def test_base_without_sequencer_switch_is_refused(self):
+        with self.assertRaisesRegex(ValueError, 'no Arp.SeqOn'):
+            Q.make_playable(synthetic(), {'length': 4})
+
+
+class DescribeTests(unittest.TestCase):
+    DESCRIPTION = {
+        'length': 6, 'gate_percent': 41, 'smoothing': [False, True, None, None],
+        'patterns': {
+            'A': {'steps': [{'notes': ['C4'], 'velocity': 90},
+                            {},
+                            {'notes': ['G4', 'B4'], 'velocity': [30, 60], 'tie': True},
+                            {'notes': ['G4', 'B4'], 'velocity': [30, 60]},
+                            {'mod': [10, None, None, None]}],
+                  'mod_tracks': ['0x0101', None, None, None]},
+            'B': {'steps': []}}}
+
+    def test_decoded_preset_describes_itself_in_the_input_format(self):
+        payload = Q.encode_sequence(synthetic(), self.DESCRIPTION)
+        described = Q.describe(Q.decode_sequence(payload))
+        self.assertEqual(described['length'], 6)
+        self.assertEqual(described['patterns']['A']['steps'], [
+            {'notes': ['C4'], 'velocity': 90}, {},
+            {'notes': ['G4', 'B4'], 'velocity': [30, 60], 'tie': True},
+            {'notes': ['G4', 'B4'], 'velocity': [30, 60]},
+            {'mod': [10, None, None, None]}])
+        self.assertEqual(described['patterns']['A']['mod_tracks'], ['0x0101', None, None, None])
+        self.assertEqual(described['patterns']['B'], {'in_use': False, 'steps': [],
+                                                      'mod_tracks': [None] * 4})
+        self.assertEqual(Q.differences(self.DESCRIPTION, Q.decode_sequence(payload)), [])
+        self.assertEqual(Q.differences(described, Q.decode_sequence(payload)), [])
+
+    def test_differences_name_each_step_that_changed(self):
+        payload = Q.encode_sequence(synthetic(), self.DESCRIPTION)
+        data = bytearray(parameters.unpack_payload(payload))
+        a = Q.PATTERN_OFFSETS['A']
+        data[a] = 61                     # step 1 note
+        data[a + 2 * 16 + 12] = 1        # step 3 no longer tied
+        data[a + 1040] = Q.PATTERN_ERASED
+        found = Q.differences(self.DESCRIPTION, Q.decode_sequence(Q.pack_payload(bytes(data))))
+        self.assertEqual(len(found), 3)
+        self.assertIn('A: described in use, stored erased', found)
+        self.assertTrue(found[1].startswith('A step 1: described'))
+        self.assertTrue(found[2].startswith('A step 3: described'))
+        other = dict(self.DESCRIPTION, length=8, gate_percent=50)
+        found = Q.differences(other, Q.decode_sequence(payload))
+        self.assertIn('length: described 8, stored 6', found)
+        self.assertIn('gate_percent: described 50, stored 41', found)
+
+    def test_reads_json_and_yaml_descriptions(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / 'seq.json'
+            path.write_text(json.dumps(self.DESCRIPTION))
+            self.assertEqual(Q.load_description(path), self.DESCRIPTION)
+            path.write_text('[1, 2]')
+            with self.assertRaises(ValueError):
+                Q.load_description(path)
+            try:
+                import yaml  # noqa: F401
+            except ImportError:
+                self.skipTest('PyYAML is not installed')
+            path = Path(directory) / 'seq.yaml'
+            path.write_text('length: 4\npatterns:\n  A:\n    steps:\n      - {notes: [C4], tie: true}\n')
+            self.assertEqual(Q.load_description(path),
+                             {'length': 4, 'patterns': {'A': {'steps': [{'notes': ['C4'], 'tie': True}]}}})
+
+
 class CommandTests(unittest.TestCase):
-    def test_encoder_command_keeps_header_and_refuses_to_overwrite(self):
-        with tempfile.TemporaryDirectory() as directory:
-            base, spec, out = (Path(directory) / n for n in ('base.bin', 'seq.json', 'out.bin'))
-            header = bytes(range(35))
-            base.write_bytes(header + synthetic())
-            spec.write_text(json.dumps({'length': 4, 'patterns': {'A': {'steps': [{'notes': ['D4']}]}}}))
-            with contextlib.redirect_stdout(io.StringIO()):
-                self.assertEqual(Q.main([str(base), str(spec), str(out)]), 0)
-            raw = out.read_bytes()
-            self.assertEqual(raw[:35], header)
-            decoded = Q.decode_sequence(raw[35:])
-            self.assertEqual(decoded['patterns']['A']['steps'][0]['notes'], [62])
-            with contextlib.redirect_stderr(io.StringIO()):
-                self.assertEqual(Q.main([str(base), str(spec), str(out)]), 2)
-            self.assertEqual(out.read_bytes(), raw)
-
-    def test_write_task_accepts_usage_arguments(self):
-        with tempfile.TemporaryDirectory() as directory:
-            base, spec, out = (Path(directory) / n for n in ('base.bin', 'seq.json', 'out.bin'))
-            base.write_bytes(bytes(35) + synthetic())
-            spec.write_text(json.dumps({'length': 12}))
-            env = dict(os.environ, PYTHONDONTWRITEBYTECODE='1', usage_base=str(base),
-                       usage_sequence=str(spec), usage_output=str(out))
-            result = subprocess.run(['bash', str(WRITE_TASK)], env=env, text=True, capture_output=True)
-            self.assertEqual(result.returncode, 0, result.stderr)
-            self.assertEqual(Q.decode_sequence(out.read_bytes()[35:])['length'], 12)
-
     def test_inspect_flag_adds_the_sequence(self):
         with tempfile.TemporaryDirectory() as directory:
             file = Path(directory) / 'synthetic.bin'

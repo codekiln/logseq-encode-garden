@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
-#MISE description="Write a JSON sequence description into a copy of a downloaded MicroFreak preset"
-#USAGE arg "<base>" help=".bin file saved by microfreak:download, with the sequencer on"
-#USAGE arg "<sequence>" help="JSON sequence description (see pages/Microfreak___Sequence___Storage.md)"
-#USAGE arg "<output>" help="New .bin file to write for microfreak:upload; must not exist"
+#MISE description="Write a described sequence into a MicroFreak preset: a new .bin file, a slot, or both"
+#USAGE arg "<sequence>" help="JSON or YAML sequence description (see pages/Microfreak___Sequence___Write a sequence.md)"
+#USAGE flag "--base <slot-or-file>" help="Preset to start from: a slot number, read without changing it, or a microfreak:download .bin file"
+#USAGE flag "--slot <number>" help="Upload the result to this slot and read it back"
+#USAGE flag "--output <file>" help="Write the result to this new .bin file"
+#USAGE flag "--backup-dir <path>" help="Save the target slot here first; required when it holds a preset"
+#USAGE flag "--name <name>" help="Preset name; default the description's name, else the base's"
+#USAGE flag "--category <category>" help="Preset category; default the description's, else the base's" {
+#USAGE   choices "Bass" "Brass" "Keys" "Lead" "Organ" "Pad" "Percussion" "Sequence" "SFX" "Strings" "Template" "Vocoder"
+#USAGE }
+#USAGE flag "--port <name>" help="Exact MIDI port name"
 set -euo pipefail
-task_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-if [[ -n "${usage_base:-}" ]]; then
-  exec python3 "$task_dir/lib/sequence.py" "$usage_base" "$usage_sequence" "$usage_output"
-fi
-exec python3 "$task_dir/lib/sequence.py" "$@"
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+exec uv run --no-project --with python-rtmidi==1.5.8 --with pyyaml==6.0.2 \
+  python "$root/mise-tasks/microfreak/lib/sequence_write.py" "$@"

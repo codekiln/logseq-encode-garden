@@ -139,6 +139,16 @@ class RunTests(unittest.TestCase):
                                                                 'label': 'ARP/SEQ rate (sync)'})
 
 
+    def test_no_select_plays_what_is_loaded(self):
+        device = FakeMicroFreak()
+        report = self.run_with(device, extra=('--no-select',))
+        self.assertFalse([m for m in device.sent if m[0] & 0xF0 == 0xC0 or m[:2] == [0xB0, 0]])
+        self.assertFalse(report['instrument']['slot_reselected'])
+        self.assertEqual(device.settings[0x2B], 0)
+        with self.assertRaisesRegex(audition.AuditionError, 'leave out --plain'):
+            self.run_with(FakeMicroFreak(), extra=('--no-select', '--plain'))
+
+
 class HelperTests(unittest.TestCase):
     def test_select_slot_uses_bank_select_and_program_change(self):
         device = FakeMicroFreak()

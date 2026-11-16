@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+#MISE description="Write a described sequence to a MicroFreak slot, play it, record it and download it again, and report per step what was expected, sent and heard"
+#USAGE arg "<sequence>" help="JSON or YAML sequence description"
+#USAGE flag "--slot <number>" help="Slot to write and play"
+#USAGE flag "--base <slot-or-file>" help="Write the description first, starting from this slot or .bin file; without it the slot is played as it is"
+#USAGE flag "--backup-dir <path>" help="Save the slot here first when it holds a preset"
+#USAGE flag "--name <name>" help="Preset name for the write"
+#USAGE flag "--category <category>" help="Preset category for the write" {
+#USAGE   choices "Bass" "Brass" "Keys" "Lead" "Organ" "Pad" "Percussion" "Sequence" "SFX" "Strings" "Template" "Vocoder"
+#USAGE }
+#USAGE flag "--loops <count>" help="Times to play the pattern; default 2"
+#USAGE flag "--bpm <tempo>" help="Clock tempo; default 120"
+#USAGE flag "--pattern <pattern>" help="Pattern to compare playback with; default A; B needs --keep-selection" {
+#USAGE   choices "A" "B"
+#USAGE }
+#USAGE flag "--keep-selection" help="Play the slot as loaded on the panel, for example after pressing B, without a program change"
+#USAGE flag "--preset-sound" help="Play with the preset's own sound instead of microfreak:audition's plain timbre"
+#USAGE flag "--no-audio" help="Skip the H5 recording"
+#USAGE flag "--out-dir <path>" help="Folder outside the repository for the WAV and the JSON report"
+#USAGE flag "--port <name>" help="Exact MIDI port name"
+set -euo pipefail
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+exec uv run --no-project --with python-rtmidi==1.5.8 --with sounddevice==0.5.6 --with numpy==2.5.5 \
+  --with pyyaml==6.0.2 python "$root/mise-tasks/microfreak/lib/sequence_verify.py" "$@"

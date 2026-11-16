@@ -15,6 +15,7 @@ see-also:: [[Microfreak/CLI/Upload a preset]], [[Microfreak/Sequence/Storage]], 
 		- `--division` sets the step length by sending CC 92, for example `--division 1/16`. Without it, the step length comes from the slot's `Arp.Div`. `--clocks-per-step` sets it directly.
 		- `--plain` sends CCs for a simple timbre before playing: Basic Waves square wave, no sub-oscillator, Spice or Glide, filter open without resonance, instant attack, full sustain, shortest release. `--cc 23=127` sends any other CC. The report lists every CC sent.
 		- `--no-midi-out` leaves Arp/Seq MIDI Out as it is and relies on the audio. `--no-audio` skips the recording.
+		- `--no-select` plays the sound and pattern already loaded, without a program change or CCs, for example pattern B after pressing B on the panel. It cannot be combined with `--plain`, `--cc` or `--division`.
 		- `--wav-dir` chooses the folder for the recording, by default `$TMPDIR/microfreak-audition`; the task refuses a folder inside the repository. `--output` also writes the report to a file. `--device` and `--input-channel` choose the audio input, by default `H5` and input index 2.
 		- `mise run microfreak:test` runs the MicroFreak unit tests with numpy, which the audio analysis tests need. Plain `python3 -m unittest` skips those tests when numpy is missing.
 	- ## What the task does
@@ -48,7 +49,7 @@ see-also:: [[Microfreak/CLI/Upload a preset]], [[Microfreak/Sequence/Storage]], 
 		- Ties: slot 113 D3 Chords sends its first chord once and holds it for 1.5 steps; the next step lists those notes under `held`.
 	- ## Pattern A and B
 		- Selecting a slot loads pattern A. Slot 395 stores notes only in pattern B, and its audition produced no notes and no sound. No CC, program change or SysEx message is known that switches to pattern B; MIDI Song Select 1 (`F3 01`) left pattern A playing. Freakout's notes record that changing the values after pattern A in a saved preset did not select B either.
-		- To audition pattern B, write a copy of the preset with B's steps in A's place to a spare slot.
+		- To audition pattern B, select the slot on the panel, press B, and run the task with `--no-select`. Without the panel, write a copy of the preset with B's steps in A's place to a spare slot; [[Microfreak/Sequence/Write a sequence]] did this for slot 446.
 	- ## Audio analysis
 		- The recording is normalized to its peak before analysis. Each step's window starts 12 ms after the step and lasts up to one step or 400 ms. YIN gives the strongest pitch. The chord estimate scores every note from MIDI 24 to 96 by the spectrum at its first 20 harmonics, keeps the best, subtracts a smoothed copy of that note's harmonics, and repeats until a note scores under 35% of the first.
 		- MIDI out is the exact record. The audio shows what the instrument sounds, which can differ from the notes it sends: slot 374 sounds every second step an octave below the note on MIDI out, with a clean, periodic tone, so those steps read `octave`.
