@@ -1,3 +1,3 @@
-- prefer things and designs that hold a purpose-built, handmade aura, which have been shaped by iterative insight and subsequent improvement.
+- prefer things and designs that hold a purpose-built, handmade [aura]([[Person/Walter Benjamin/Essay/35/The Work of Art in the Age of Mechanical Reproduction/Aura]]), which have been shaped by iterative insight and subsequent improvement.
 - the [[DIY]] imperative is related to the Hacker Ethic from [[Book/Hackers]]
 	- TODO

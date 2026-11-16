@@ -1,0 +1,36 @@
+logseq-entity:: [[Logseq/Entity/Definition]]
+
+- # Paradigm
+	- In this garden, **Paradigm** pages model a shared framework of assumptions, questions and methods that a community of thinkers works within, such as the [[Frankfurt School]].
+	- ## What counts as a Paradigm
+		- An intellectual tradition with a name, people who identify with it or are identified with it, founding works, and commitments its members share even when they disagree on details.
+		- Fits: schools of thought in philosophy and social theory, research programs in a science, frameworks of thought that outlast their founders.
+		- Not a Paradigm:
+			- One thinker's idea or theory, which is a [[Logseq/Entity/Concept]] or a [[Logseq/Entity/Term]], as with [[Person/Walter Benjamin/Essay/35/The Work of Art in the Age of Mechanical Reproduction/Aura]].
+			- A programming paradigm, such as [[Programming/Language/Func]]. That is a style of writing programs, and it stays a [[Logseq/Entity/Concept]] page.
+			- The institution that houses a tradition. The Frankfurt School names a tradition; the Institute for Social Research names the institute it grew from.
+		- Whether a school of thought and a paradigm are the same thing is open in [[Paradigm/Q/How is a School of Thought different or not different from a Paradigm?]].
+	- ## Naming and links
+		- A paradigm takes the name it is known by, as a top-level page: [[Frankfurt School]].
+		- `alias::` only when codekiln asks for one, per [[My/AI/Rule/Logseq/No Aliases Unless Asked]].
+		- Questions about paradigms in general file under `Paradigm/Q/`, per [[Logseq/Entity/Question]].
+	- ## Finding and deduplicating
+		- Search the paradigm's name, its other common names, and the names of its central figures across `pages/`. Classify as existing, similar, new, or blocked.
+		- One page per paradigm. A movement within a paradigm, such as a later generation of the same school, stays a section of that page until codekiln asks for its own page.
+	- ## Frontmatter
+		- Mark instances with **`logseq-entity:: [[Logseq/Entity/Paradigm]]`**.
+		- Shared frontmatter conventions live on [[Logseq/Frontmatter]].
+	- ## Page shape
+		- The first body block is an H1 linking the best general reference for the paradigm, such as its Wikipedia article: `- # [Frankfurt School](https://en.wikipedia.org/wiki/Frankfurt_School)`.
+		- A line or two under the H1 says what the paradigm studies and when and where it formed.
+		- Sections, each kept only when there is something to put in it:
+			- **Shared commitments** — what members hold in common.
+			- **People** — links to the [[Logseq/Entity/Person]] pages of its figures, grouped by generation when the paradigm has generations.
+			- **Works** — links to the garden's pages for its founding and central works.
+			- **In my reading** — links to the garden's notes that draw on the paradigm, such as podcast episodes and highlights.
+	- ## Relationship to other entities
+		- [[Logseq/Entity/Person]] — a paradigm's figures. A person's page links to the paradigm it belongs to.
+		- [[Logseq/Entity/Concept]] and [[Logseq/Entity/Term]] — ideas that come out of a paradigm. They link to the paradigm page; the paradigm page links back to the central ones.
+		- [[Logseq/Entity/Field of Study]] — a discipline. A paradigm works inside one or more fields; a field can hold several paradigms at once.
+	- ## Examples in this garden
+		- [[Frankfurt School]]

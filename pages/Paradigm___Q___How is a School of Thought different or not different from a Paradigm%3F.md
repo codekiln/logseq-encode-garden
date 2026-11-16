@@ -1,0 +1,13 @@
+logseq-entity:: [[Logseq/Entity/Question]]
+
+- # How is a [[School/Thought]] different or not different from a [[Paradigm]]?
+	- ## [[AI Answer]]
+		- **Short answer:** in everyday use the two overlap, and the garden's [[Logseq/Entity/Paradigm]] uses the broad sense. In Thomas Kuhn's sense, from *The Structure of Scientific Revolutions* (1962), they differ: competing schools are what a field has *before* it has a paradigm.
+		- **Kuhn's paradigm.** Kuhn used "paradigm" for the constellation of shared commitments a scientific community works within — theories, instruments, values and metaphysical assumptions — and later called that constellation a "disciplinary matrix". In a narrower sense, a paradigm is an exemplary puzzle-solution that the community agrees to imitate. During normal science the paradigm is held fixed and is not itself tested. ([Stanford Encyclopedia of Philosophy: Thomas Kuhn](https://plato.stanford.edu/entries/thomas-kuhn/))
+		- **Schools come first.** Kuhn described the pre-paradigm state of a science as one of competing schools of thought with differing procedures, theories and even metaphysical presuppositions. Much of their energy goes into arguing over fundamentals with each other. A paradigm forms when one school solves shared problems so impressively that it draws adherents from the others and a field-wide consensus forms around its solutions. (same source)
+		- **The differences, on that reading:**
+			- **Scope** — a school is one group within a field; a paradigm is the consensus of a whole field.
+			- **Rivals** — schools exist alongside rivals by definition; a paradigm in Kuhn's sense has none until a crisis or revolution.
+			- **What it holds fixed** — members of a school still argue fundamentals with outsiders; a community under a paradigm stops arguing fundamentals and solves puzzles.
+		- **Where they meet.** The SEP article notes that fields with no settled paradigm, beset by competing schools, adopted Kuhn's vocabulary anyway by describing themselves as in the pre-paradigm state. Outside the natural sciences, "paradigm" is often used loosely for any framework a group of thinkers works within, and in that sense a school of thought *has* a paradigm.
+		- **Applied to the [[Frankfurt School]].** Wikipedia calls it "a school of thought in sociology and critical theory" ([Wikipedia](https://en.wikipedia.org/wiki/Frankfurt_School)). Social theory never settled into one field-wide consensus, so in Kuhn's strict sense the Frankfurt School is one school among rivals, not a paradigm. In the broad sense the garden uses, its shared commitments make it a paradigm.
