@@ -39,7 +39,11 @@ see-also:: [[Microfreak/Sequence/Write a sequence]], [[Microfreak/Sequence/Resea
 		- `Seq.GateLen`: percent = 10 + round(value × 80 / 32767), so 10–90%. 16384 is 50%.
 		- `Seq.Smooth1`–`Seq.Smooth4`: 0 off, 32767 on. With smoothing on, [[Microfreak/Preset/005 MotivSeq]] sent a run of CC values gliding toward each stored value; with smoothing off, each step sent one CC.
 		- `Arp.SeqOn`: 32767 puts the preset in sequencer mode. [[Microfreak/Preset/003 Trance]] holds a pattern with this off and played nothing; a copy with it on played the pattern.
-		- `Arp.Div` sets the clocks per step under external clock: 22937 gave 6 clocks (sixteenth notes) and 16384 gave 12. Other values were not measured.
+		- `Arp.Div`: the length of a step. value = round(index × 32767 / 10), with the index in the order of the Rate list in [[Microfreak/UG/12 Arpeggiator/03 Arpeggio Rate]]. Under USB clock, at 24 clocks to a quarter note, each value played these clocks per step:
+			- 0 → `1`, 96 clocks. 3277 → `1/2`, 48. 6553 → `1/2T`, 32.
+			- 9830 → `1/4`, 24. 13107 → `1/4T`, 16. 16384 → `1/8`, 12. 19660 → `1/8T`, 8.
+			- 22937 → `1/16`, 6. 26214 → `1/16T`, 4. 29490 → `1/32`, 3. 32767 → `1/32T`, 2.
+			- `Arp.Sync` off did not change this: slots 5, 35 and 113 store it off and played 1/16 at 6 clocks, as [[Microfreak/CLI/Audition a sequence]] records.
 	- ## How the playback was checked
 		- Each experiment preset started from [[Microfreak/Preset/382 Anit]], a preset with the sequencer on and paraphony on. `lib/sequence.py` wrote the steps, sometimes followed by a direct edit of one value, and [[Microfreak/CLI/Upload a preset]] wrote the result to a slot from 330 to 339 and read it back unchanged.
 		- A script then selected the slot (CC 0 bank select, program change), turned the global Arp/Seq MIDI Out setting on (SysEx operation `0x42`, code `0x2B`), sent MIDI Start and 24-per-quarter-note clock at 240 BPM, recorded the notes and CCs the MicroFreak sent back, sent Stop and set Arp/Seq MIDI Out back to off. Clock Source (code `0x2E`) was already USB. [#434 Audition a MicroFreak slot's sequence](https://github.com/codekiln/logseq-encode-garden/issues/434) builds the same procedure into a task.
@@ -54,10 +58,10 @@ see-also:: [[Microfreak/Sequence/Write a sequence]], [[Microfreak/Sequence/Resea
 			- 337: trailer values 10 and 11 swapped between the patterns.
 			- 338: a voice gap, a tie into a different note, and a tie across the loop.
 			- 339: [[Microfreak/Preset/003 Trance]] with `Arp.SeqOn` on.
+		- For [#444 Close the gaps the fresh-agent test of the MicroFreak sequence workflow found](https://github.com/codekiln/logseq-encode-garden/issues/444), slots 485–489 and 491–496 each held a copy of [[Microfreak/Preset/358 20241116.1]] with the 4-step pattern C4 D4 E4 F4 and one `Arp.Div` value. Each was uploaded, read back unchanged, and played at 180 BPM while the clocks the MicroFreak echoed were counted between its note-ons. Every interval in each run equalled the clocks listed under Settings shared by both patterns, and the notes came in order: 496 `1`, 485 `1/2`, 486 `1/2T`, 487 `1/4`, 488 `1/4T`, 489 `1/8`, 491 `1/8T`, 492 `1/16`, 493 `1/16T`, 494 `1/32`, 495 `1/32T`.
 	- ## Open questions
 		- Playing pattern B from the Mac. A preset always starts with pattern A after a program change, even when A is erased and B holds steps ([[Microfreak/Preset/395 26.06.25]] stayed silent). Song Select, CCs 1–119 sent one at a time during playback (except 32 and 64), swapping trailer values 10 and 11, and the global settings listed in [[Microfreak/Sequence/Research]] did not switch to B. Pattern B data written here played as described once moved to pattern A's place, and downloads hold it unchanged. Pressing B on the panel plays it in its own place, as [[Microfreak/Sequence/Write a sequence]] describes.
 		- What trailer values 10 and 11 record. Pattern identity kept through a copy, and the pattern selected when the preset was saved, fit the factory data but are untested.
 		- Whether the instrument treats `0xFB`, `0xFD` and `0xFF` differently anywhere besides playback.
 		- What a velocity of 0 or above 127 does to the sound. Only MIDI out was observed.
 		- Whether pressure (aftertouch) recorded in real time is stored anywhere in the step record.
-		- The `Arp.Div` values that give other step lengths.
