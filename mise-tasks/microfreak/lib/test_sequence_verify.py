@@ -62,11 +62,28 @@ class ExpectedRowsTests(unittest.TestCase):
 class CompareTests(unittest.TestCase):
     def test_matching_step_with_audio(self):
         expected = {'loop': 1, 'step': 1, 'notes': [(60, 100)], 'held': [], 'ccs': {'23': 64}}
-        audio = {'midi': 60, 'chord': [{'midi': 60}], 'sounding': True, 'onset': True}
+        audio = {'midi': 60, 'chord': [{'midi': 60}], 'sounding': True, 'onset': True, 'level_db': -9.3}
         row = V.compare_row(expected, audition_row(1, 1, [(60, 100)], ccs={'23': 64}, audio=audio))
         self.assertTrue(row['midi_out_matches'])
-        self.assertEqual(row['audio'], {'pitch': 'C4', 'chord': ['C4'], 'sounding': True, 'onset': True})
+        self.assertEqual(row['audio'], {'pitch': 'C4', 'chord': ['C4'], 'sounding': True, 'onset': True,
+                                        'level_db': -9.3})
         self.assertEqual(row['audio_check'], 'match')
+        self.assertTrue(V.compact(row).endswith('audio [C4; C4] -9.3 dB match'))
+
+    def test_summary_gives_the_mean_level_of_each_note_and_velocity(self):
+        def row(step, note, velocity, level):
+            expected = {'loop': 1, 'step': step, 'notes': [(note, velocity)], 'held': [], 'ccs': {}}
+            audio = {'midi': note, 'chord': [], 'sounding': True, 'onset': True, 'level_db': level}
+            return V.compare_row(expected, audition_row(1, step, [(note, velocity)], audio=audio))
+        rest = V.compare_row({'loop': 1, 'step': 5, 'notes': [], 'held': [], 'ccs': {}},
+                             audition_row(1, 5, audio={'sounding': True, 'level_db': -18.0}))
+        rows = [row(1, 40, 127, -9.0), row(2, 40, 80, -10.0), row(3, 40, 127, -9.4),
+                row(4, 52, 80, -11.9), rest]
+        summary = V.summarize(rows, [], True)
+        self.assertEqual(summary['levels_db'], {'E2/127': -9.2, 'E2/80': -10.0, 'E3/80': -11.9})
+        self.assertNotIn('levels_db', V.summarize([V.compare_row(
+            {'loop': 1, 'step': 1, 'notes': [(60, 100)], 'held': [], 'ccs': {}},
+            audition_row(1, 1, [(60, 100)]))], [], True))
 
     def test_each_kind_of_difference_is_named(self):
         expected = {'loop': 1, 'step': 2, 'notes': [(60, 100)], 'held': [55], 'ccs': {'23': 64}}

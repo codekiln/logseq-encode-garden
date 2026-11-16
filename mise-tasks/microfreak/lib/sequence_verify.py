@@ -6,8 +6,9 @@ microfreak:write-sequence does. microfreak:audition then selects the slot,
 plays it with MIDI Start and Clock, and records MIDI out and the Zoom H5.
 Finally the slot is downloaded again and decoded. The report lists, for every
 played step, the notes the description expects, the notes MIDI out carried and
-the pitch the audio analysis heard, and whether the download still holds the
-description.
+the pitch and level the audio analysis heard, and whether the download still
+holds the description. The slot plays at its stored division (Arp.Div), with
+audition's plain timbre unless --preset-sound asks for the preset's own sound.
 
 A program change always loads pattern A, so playback is compared with
 pattern A. To compare with pattern B, select the slot and press B on the
@@ -91,6 +92,7 @@ def compare_row(expected, row):
             'pitch': Q.note_name(audio['midi']) if audio.get('midi') is not None else None,
             'chord': names(c['midi'] for c in audio.get('chord') or []),
             'sounding': audio.get('sounding'), 'onset': audio.get('onset'),
+            'level_db': audio.get('level_db'),
         }
         wanted = {'notes': [{'note': n} for n, _ in expected['notes']],
                   'held': [{'note': n} for n in expected['held']]}
@@ -109,13 +111,30 @@ def summarize(rows, decode_differences, read_back_unchanged):
     for row in rows:
         if 'audio_check' in row:
             checks[row['audio_check']] = checks.get(row['audio_check'], 0) + 1
-    return {'played_steps': len(rows),
-            'midi_out_matching_steps': len(rows) - len(mismatches),
-            'midi_out_mismatches': mismatches,
-            'audio_checks': checks,
-            'download_matches_description': not decode_differences,
-            'download_differences': decode_differences,
-            'download_equals_upload': read_back_unchanged}
+    summary = {'played_steps': len(rows),
+               'midi_out_matching_steps': len(rows) - len(mismatches),
+               'midi_out_mismatches': mismatches,
+               'audio_checks': checks}
+    levels = note_levels(rows)
+    if levels:
+        summary['levels_db'] = levels
+    summary.update(download_matches_description=not decode_differences,
+                   download_differences=decode_differences,
+                   download_equals_upload=read_back_unchanged)
+    return summary
+
+
+def note_levels(rows):
+    """Mean audio level of the steps that start each note and velocity, such as
+    {'E2/127': -9.1, 'E2/80': -10.3}, in dB relative to the recording's peak."""
+    found = {}
+    for row in rows:
+        level = (row.get('audio') or {}).get('level_db')
+        if level is None or not row['expected']['notes']:
+            continue
+        key = ' '.join(f'{n}/{v}' for n, v in zip(row['expected']['notes'], row['expected']['velocities']))
+        found.setdefault(key, []).append(level)
+    return {key: round(sum(values) / len(values), 1) for key, values in found.items()}
 
 
 def playing_pattern(sequence, decoded, name='A'):
@@ -188,11 +207,14 @@ def run(args):
         report['warning'] = (f"audition played {len(played['steps'])} steps; "
                              f"the description expects {len(expected)}")
     read_back = hashlib.sha256(data).hexdigest()
+    tempo = played.get('tempo') or {}
     report.update({
         'name': played.get('name'),
         'played_pattern': args.pattern, 'expected_from': source,
         'selection': 'kept as loaded' if args.keep_selection else 'program change',
-        'tempo': played.get('tempo'),
+        'played_at': (f"{decoded.get('division')} steps, {tempo.get('clocks_per_step')} clocks per step, "
+                      f"{tempo.get('bpm')} BPM"),
+        'tempo': tempo,
         'recording': played.get('recording'),
         'audition_warnings': played.get('warnings'),
         'globals_restored': played.get('instrument', {}).get('globals_changed'),
@@ -246,7 +268,8 @@ def main(argv=None):
         print(f'error: {exc}', file=sys.stderr)
         return 1
     import sequence_write
-    print(sequence_write.dumps({k: report[k] for k in ('slot', 'name', 'report_file', 'summary')}
+    print(sequence_write.dumps({k: report[k] for k in ('slot', 'name', 'report_file', 'sound',
+                                                       'played_at', 'summary')}
                                | {'steps': [compact(r) for r in report['steps']]}))
     summary = report['summary']
     return 0 if not summary['midi_out_mismatches'] and summary['download_matches_description'] else 1
@@ -260,7 +283,9 @@ def compact(row):
     line = (f"{row['loop']}.{row['step']:02d} expected [{expected or 'rest'}] "
             f"midi [{got or 'rest'}] {'ok' if row['midi_out_matches'] else 'DIFFERS'}")
     if 'audio' in row:
-        line += f" audio [{row['audio']['pitch'] or '-'}; {' '.join(row['audio']['chord'])}] {row['audio_check']}"
+        level = row['audio'].get('level_db')
+        line += (f" audio [{row['audio']['pitch'] or '-'}; {' '.join(row['audio']['chord'])}]"
+                 + (f' {level} dB' if level is not None else '') + f" {row['audio_check']}")
     return line
 
 

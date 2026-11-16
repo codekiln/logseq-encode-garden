@@ -27,7 +27,8 @@ Each is 64 step records of 16 followed by an 18-long pattern trailer:
                 10-15, 17 kept as found
 
 Length, gate length and smoothing are the named Seq.Length, Seq.GateLen and
-Seq.Smooth1-4 parameters; both patterns share them.
+Seq.Smooth1-4 parameters; both patterns share them, and so does the step
+length, the named Arp.Div parameter.
 """
 import json
 from pathlib import Path
@@ -51,6 +52,12 @@ PATTERN_ERASED = 0xFF
 LENGTH_RANGE = (4, 64)
 GATE_RANGE = (10, 90)
 SWITCH_ON = 32767
+# Arp.Div stores the step length as round(index * 32767 / 10), with the index
+# in the order of the guide's Rate list. Each division was written to a slot
+# and played under USB clock; the instrument played these clocks per step
+# (24 clocks to a quarter note).
+DIVISIONS = ('1', '1/2', '1/2T', '1/4', '1/4T', '1/8', '1/8T', '1/16', '1/16T', '1/32', '1/32T')
+DIVISION_CLOCKS = (96, 48, 32, 24, 16, 12, 8, 6, 4, 3, 2)
 NOTE_NAMES = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B']
 
 
@@ -112,6 +119,23 @@ def gate_from_raw(value):
 def gate_to_raw(percent):
     low, high = GATE_RANGE
     return round((percent - low) * 32767 / (high - low))
+
+
+def division_name(value):
+    """The DIVISIONS entry a description's division means: '1/16', 1 or '1/8t'."""
+    text = str(value).strip().upper()
+    if isinstance(value, bool) or text not in DIVISIONS:
+        raise ValueError(f'Unknown division {value!r}; use one of {", ".join(DIVISIONS)}')
+    return text
+
+
+def division_from_raw(value):
+    index = round(value * (len(DIVISIONS) - 1) / 32767)
+    return DIVISIONS[index]
+
+
+def division_to_raw(value):
+    return round(DIVISIONS.index(division_name(value)) * 32767 / (len(DIVISIONS) - 1))
 
 
 def destination_names():
@@ -197,6 +221,9 @@ def decode_sequence(payload):
         result['gate_percent'] = gate_from_raw(seq['Seq.GateLen']['value_le_unsigned'])
     result['smoothing'] = [bool(seq[f'Seq.Smooth{n}']['value_le_unsigned'])
                            if f'Seq.Smooth{n}' in seq else None for n in range(1, 5)]
+    division = next((f for f in report['fields'] if f['name'] == 'Arp.Div'), None)
+    if division is not None:
+        result['division'] = division_from_raw(division['value_le_unsigned'])
     names = destination_names()
     result['patterns'] = {name: decode_pattern(data, name, length, names)
                           for name in PATTERN_OFFSETS}
@@ -343,6 +370,7 @@ def make_playable(payload, sequence):
     Gen.Parafon on lets a step sound more than its lowest note, so it is turned
     on when a step holds a chord. The description's velo_amp_mod, 0-10, sets
     Kbd.PresAmp, the panel's Velo Amp Mod: how much velocity changes loudness.
+    Its division, one of DIVISIONS, sets Arp.Div, the length of a step.
     """
     new = bytearray(parameters.unpack_payload(encode_sequence(payload, stored_form(sequence))))
     fields = {f['name']: f for f in parameters.parse_parameters(payload)['fields']}
@@ -357,6 +385,8 @@ def make_playable(payload, sequence):
         if isinstance(amp, bool) or not isinstance(amp, (int, float)) or not 0 <= amp <= 10:
             raise ValueError('velo_amp_mod runs from 0 to 10')
         wanted['Kbd.PresAmp'] = round(amp * SWITCH_ON / 10)
+    if sequence.get('division') is not None:
+        wanted['Arp.Div'] = division_to_raw(sequence['division'])
     changed = {}
     for name, value in wanted.items():
         before = fields[name]['value_le_unsigned'] if name in fields else None
@@ -387,7 +417,7 @@ def describe(decoded):
     modulation-track destinations, and in_use, false for an erased pattern.
     """
     result = {'length': decoded['length']}
-    for key in ('gate_percent', 'smoothing'):
+    for key in ('division', 'gate_percent', 'smoothing'):
         if key in decoded:
             result[key] = decoded[key]
     result['patterns'] = {}
@@ -436,15 +466,19 @@ def canonical_pattern(pattern, length):
 def differences(sequence, decoded):
     """List where a decoded preset differs from a description.
 
-    Only what the description sets is compared: the length, the gate length
-    and smoothing when given, and the patterns it lists. Short descriptions
-    are compared in their stored form (see stored_form).
+    Only what the description sets is compared: the length, the division, the
+    gate length and smoothing when given, and the patterns it lists. Short
+    descriptions are compared in their stored form (see stored_form).
     """
     sequence = stored_form(sequence)
     found = []
     length = sequence.get('length', decoded['length'])
     if length != decoded['length']:
         found.append(f"length: described {length}, stored {decoded['length']}")
+    if (sequence.get('division') is not None
+            and division_name(sequence['division']) != decoded.get('division')):
+        found.append(f"division: described {division_name(sequence['division'])}, "
+                     f"stored {decoded.get('division')}")
     if sequence.get('gate_percent') is not None and sequence['gate_percent'] != decoded.get('gate_percent'):
         found.append(f"gate_percent: described {sequence['gate_percent']}, "
                      f"stored {decoded.get('gate_percent')}")

@@ -24,6 +24,7 @@ from pathlib import Path
 import download
 import parameters
 import semantics
+import sequence
 import sequence_midi
 
 GLOBAL_PREFIX = [0xF0, 0x00, 0x20, 0x6B, 0x07]
@@ -35,10 +36,10 @@ GLOBAL_NAMES = {CLOCK_SOURCE: 'clock.source', NOTES_OUT: 'midi.arp_seq_notes_out
                 OUTPUT_DEST: 'midi.output_destination', CHANNEL_IN: 'midi.channel_in'}
 CLOCK_SOURCES = ('Internal', 'USB', 'MIDI', 'Clock', 'Auto')
 OUTPUT_DESTINATIONS = {0: 'None', 1: 'USB', 4: 'MIDI', 5: 'Both'}
-# Arp.Div index order is the guide's Rate list (Microfreak/UG/12 Arpeggiator/03).
-# CC 92 values 0, 64, 89 and 100 gave 96, 12, 6 and 4 clocks per step on hardware.
-DIVISIONS = ('1', '1/2', '1/2T', '1/4', '1/4T', '1/8', '1/8T', '1/16', '1/16T', '1/32', '1/32T')
-DIVISION_CLOCKS = (96, 48, 32, 24, 16, 12, 8, 6, 4, 3, 2)
+# The stored Arp.Div index sets the clocks per step (sequence.DIVISIONS). At play
+# time CC 92 = index * 127 / 10 overrides it: 0, 64, 89 and 100 gave 96, 12, 6
+# and 4 clocks per step on hardware.
+DIVISIONS, DIVISION_CLOCKS = sequence.DIVISIONS, sequence.DIVISION_CLOCKS
 RATE_SYNC_CC = 92
 # Basic Waves square wave, no sub-oscillator, Spice or Glide, open filter
 # without resonance, instant attack, full sustain and the shortest release.
