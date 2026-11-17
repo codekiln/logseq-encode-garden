@@ -1,0 +1,39 @@
+see-also:: [[Microfreak/Patch/Research]], [[Microfreak/CLI/Probe a patch]], [[Microfreak/CLI/Inspect a preset]], [[Microfreak/Sequence/Storage]], [[Microfreak/UG/14 Config/01 Utility & MCC/01 Preset]]
+
+- # How a preset stores its patch settings
+	- A preset keeps each setting as a named field, such as `VCO.BendRng`, holding a descriptor and a 16-bit value. [[Microfreak/CLI/Inspect a preset]] prints them. The descriptor of a choice field is the number of choices minus one, and the field stores choice × 32767 ÷ descriptor, rounded. Continuous controls store 0–32767 for 0–1, and matrix amounts store a signed value for −1 to 1.
+	- The conversions below were measured on my MicroFreak by writing values into test slots with `mise run microfreak:probe` and recording the result with the [[Zoom H5/My Unit]]. [[Microfreak/Patch/Research]] lists the runs. [lib/patch_fields.py](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/lib/patch_fields.py) holds them in code, and `mise run microfreak:inspect FILE --interpret-fw5` adds a `display` value for each field it covers.
+	- ## Voice
+		- These are the Voice settings of Utility > Preset ([[Microfreak/UG/14 Config/01 Utility & MCC/01 Preset]]).
+		- ### Bend Range: `VCO.BendRng`
+			- Descriptor 24. The stored choice is the bend in semitones, up and down: 0, 1, 2, 5, 7, 12 and 24 bent C4 by that many semitones at full pitch bend either way.
+		- ### Glide Mode: `Kbd.GlMode`
+			- Descriptor 2. 0 is Time, 1 is Sync, 2 is Rate.
+		- ### Glide: `Kbd.Glide`
+			- A continuous 0–1 value for the Glide knob ([[Microfreak/UG/10 Keyboard/03 Glide]]). 0 is no glide. The pitch slides in a straight line in semitones, and every new note glides from wherever the previous glide had reached, whether or not the notes overlap.
+			- Time mode: a glide of any size takes 10 seconds × Glide³. 0.3 took 0.27 s, 0.5 took 1.25 s and 0.7 took 3.44 s, for an octave and for two octaves alike.
+			- Rate mode: an octave takes 10 seconds × Glide³, so two octaves take twice as long.
+			- Sync mode: the glide lasts a note division at the Arp/Seq tempo. floor(10 × Glide) picks the division: 3 is 1/32, 4 is 1/16T, 5 is 1/16, 6 is 1/8T, 7 is 1/8, 8 is 1/4T, 9 is 1/4 and 10 (Glide 1.0) is 1/2. Below 0.3 the glide was too short to measure at 30 BPM. The guide lists divisions up to 1/1; the longest measured was 1/2.
+		- ### Unison Count: `Gen.UniCnt`
+			- Descriptor 2. 0, 1 and 2 give 2, 3 and 4 voices.
+		- ### Unison Spread: `Gen.UniSprd`
+			- A continuous 0–1 value. The spread S, in semitones, is 2 × the stored value up to 0.5, then 1 + 22 × (stored − 0.5), reaching 12 at 1.0: the guide's 0.001–12.000, where 12 is an octave ([[Microfreak/UG/16 Paraphonic Chord Mode/01 Unison]]).
+			- Two voices sound at −S and +S around the played note, three at −S, 0 and +S, and four at −2S, −S, +S and +2S.
+	- ## Paraphonic modes
+		- ### Paraphonic: `Gen.Parafon`
+			- Descriptor 1. 0 is monophonic: a held four-note chord sounded only its last note. 1 sounds up to four notes at once.
+		- ### Mode: `Gen.Chord`
+			- Descriptor 3, read with paraphonic on. 0 is ordinary paraphonic play. 2 is Paraphonic Chord Mode ([[Microfreak/UG/16 Paraphonic Chord Mode]]): one key plays the stored chord. 3 is Unison. 1 played like 0, both with one key and with a held chord, and its meaning is unknown.
+		- ### Chord offsets: `Gen.ChOffs1`–`Gen.ChOffs3`
+			- The stored chord, as three voices added above or below the played note. Each stores 0x4000 + 128 × semitones: +4 is 0x4200 and −5 is 0x3D80. 0x7F80 leaves that voice out. Offsets of −5, +3, +4, +7, +10 and +12 sounded where expected.
+		- ### `Gen.PolyCnt`
+			- Descriptor 1. Saved presets hold 32765 or 0. Neither value changed a single note or a held chord, and its meaning is unknown.
+	- ## Preset Volume: `Gen.PrstVol`
+		- Descriptor 24; the panel's −12 to +12 is the stored choice minus 12. Each step changes the level by 0.5 dB, except that 9 and 10 (−3 and −2) play at the same level. From 0 to 24 the level spans 11.5 dB: −5.5 dB to +6.0 dB around choice 12.
+	- ## Arp/Seq rate: `Arp.Rate`
+		- The free-running tempo of the arpeggiator and sequencer, and the tempo Sync glide follows. BPM = 30 + stored value ÷ 150, up to 240: 13500 is 120 BPM. The stored value is not a 0–1 fraction, so a write gives `raw:` (BPM − 30) × 150.
+		- The arpeggiator only runs on its own tempo when the global Clock Source is Internal. On USB it waits for clock from the Mac.
+	- ## Still unmeasured
+		- Utility > Preset modulation settings: `EG2.Legato`, `EG2.Snap`, `LFO.Retrig`, `Kbd.Veloc`, `Mat.KyMdSrc` ([#451](https://github.com/codekiln/logseq-encode-garden/issues/451)).
+		- Scale and root: `Kbd.Scale`, `Kbd.Root` ([#452](https://github.com/codekiln/logseq-encode-garden/issues/452)).
+		- Modulation matrix amounts and `Mat.Assign1`–`3` ([#453](https://github.com/codekiln/logseq-encode-garden/issues/453)).
