@@ -68,6 +68,28 @@ class ConversionTests(unittest.TestCase):
         self.assertEqual(P.setting('Kbd.Scale', 'harmonic minor'), ('choice', 4))
         self.assertEqual(P.setting('Kbd.Root', 'Bb'), ('choice', 10))
 
+    def test_matrix_amounts_name_their_row_and_column(self):
+        shown = P.display('Co1.Xpr', round(0.25 * 32767), 0)
+        self.assertEqual((shown['source'], shown['destination']), ('Pressure', 'Pitch'))
+        self.assertEqual(shown['semitones_at_full_source'], 12.0)
+        self.assertEqual(P.display('Co4.EG2', (-16384) & 0xFFFF, 0)['value'], -0.5)
+        self.assertEqual(P.display('Co6.Key', 0, 0)['destination'], 'Assign 2')
+        self.assertEqual(P.setting('Co2.LFO', -0.3), ('decimal', -0.3))
+
+    def test_assign_destinations_use_the_section_numbering(self):
+        ids = P.destination_ids()
+        heard = {'VCO.Param1': 0x0001, 'VCO.Param2': 0x0003, 'VCO.Param3': 0x0005, 'VCF.Cutoff': 0x0101,
+                 'VCF.Reso': 0x0102, 'Kbd.Glide': 0x0300, 'LFO.Rate': 0x0502, 'EG2.DecRel': 0x0602,
+                 'EG2.Sustain': 0x0603, 'Gen.UniSprd': 0x0705, 'Co1.LFO': 0x0A02}
+        for field, value in heard.items():
+            self.assertEqual(ids[field], value)
+        self.assertEqual(ids['Co4.EG2'], 0x0D01)
+        self.assertEqual(P.display('Mat.Assign1', 0x0603, 0)['value'], 'EG2.Sustain')
+        self.assertTrue(P.display('Mat.Assign1', 0x0603, 0)['heard'])
+        self.assertEqual(P.setting('Mat.Assign2', 'LFO.Rate'), ('raw', 0x0502))
+        with self.assertRaises(ValueError):
+            P.setting('Mat.Assign1', 'VCO.Type')
+
     def test_add_display_leaves_unknown_fields_alone(self):
         fields = [{'name': 'VCO.BendRng', 'descriptor': 24, 'value_le_unsigned': 16384},
                   {'name': 'VCF.Cutoff', 'descriptor': 0, 'value_le_unsigned': 100}]
