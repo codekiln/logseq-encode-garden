@@ -279,7 +279,13 @@ def settings_for(description, fields):
         settings, later = envelope_settings(description['envelope'])
         out += settings
     if 'cycling_envelope' in description:
-        out += section_settings(description['cycling_envelope'], CYCLING, 'cycling_envelope')
+        spec = dict(description['cycling_envelope'])
+        for key, field in (('rise_seconds', 'EG1.RiseLvl'), ('fall_seconds', 'EG1.FallLvl')):
+            if key in spec:
+                out.append((field, ('decimal', P.cycling_stage_stored(float(spec.pop(key))))))
+        if 'hold_seconds' in spec:
+            out.append(('EG1.Hold', ('decimal', P.cycling_hold_stored(float(spec.pop('hold_seconds'))))))
+        out += section_settings(spec, CYCLING, 'cycling_envelope')
     if 'lfo' in description:
         out += lfo_settings(description['lfo'])
     if 'glide' in description:
