@@ -28,12 +28,23 @@ see-also:: [[Microfreak/Patch/Research]], [[Microfreak/CLI/Probe a patch]], [[Mi
 			- The stored chord, as three voices added above or below the played note. Each stores 0x4000 + 128 × semitones: +4 is 0x4200 and −5 is 0x3D80. 0x7F80 leaves that voice out. Offsets of −5, +3, +4, +7, +10 and +12 sounded where expected.
 		- ### `Gen.PolyCnt`
 			- Descriptor 1. Saved presets hold 32765 or 0. Neither value changed a single note or a held chord, and its meaning is unknown.
+	- ## Modulations
+		- These are the Modulations settings of Utility > Preset. Each is a choice field, and the stored choices follow the guide's order.
+		- ### Envelope Legato: `EG2.Legato`
+			- 0 is Off: a note that starts while another is held restarts the main envelope. 1 is On: an overlapping note keeps the envelope running, and a note after a gap still restarts it.
+		- ### Envelope Snap: `EG2.Snap`
+			- 0 is Off and 1 (stored 32767) is On. On drops the level about 2 dB faster in the first 50–100 ms after the peak, then the decay runs parallel to Off, 2–2.5 dB lower. Every saved preset read holds the value 1, which is choice 0, Off.
+		- ### LFO Retrig: `LFO.Retrig`
+			- 0 is Off: the LFO runs freely and each note starts wherever it is. 1 is On: every note restarts the LFO, overlapping notes included. 2 is Legato: a note after a gap restarts the LFO and an overlapping note does not.
+		- ### Press Mode: `Kbd.Veloc`
+			- What drives the matrix's PRESSURE source. 0 is Aftertouch: channel pressure changes it and velocity does not. 1 is Velocity: each note's velocity sets it and channel pressure does not.
+		- ### Key/Arp Mode: `Mat.KyMdSrc`
+			- What the matrix's KEY/ARP source sends. 0 is Linear: the played key, with C4 at zero, higher keys positive and lower keys negative. 1 is Random: a new random value for each note, whatever the key.
 	- ## Preset Volume: `Gen.PrstVol`
 		- Descriptor 24; the panel's −12 to +12 is the stored choice minus 12. Each step changes the level by 0.5 dB, except that 9 and 10 (−3 and −2) play at the same level. From 0 to 24 the level spans 11.5 dB: −5.5 dB to +6.0 dB around choice 12.
 	- ## Arp/Seq rate: `Arp.Rate`
 		- The free-running tempo of the arpeggiator and sequencer, and the tempo Sync glide follows. BPM = 30 + stored value ÷ 150, up to 240: 13500 is 120 BPM. The stored value is not a 0–1 fraction, so a write gives `raw:` (BPM − 30) × 150.
 		- The arpeggiator only runs on its own tempo when the global Clock Source is Internal. On USB it waits for clock from the Mac.
 	- ## Still unmeasured
-		- Utility > Preset modulation settings: `EG2.Legato`, `EG2.Snap`, `LFO.Retrig`, `Kbd.Veloc`, `Mat.KyMdSrc` ([#451](https://github.com/codekiln/logseq-encode-garden/issues/451)).
 		- Scale and root: `Kbd.Scale`, `Kbd.Root` ([#452](https://github.com/codekiln/logseq-encode-garden/issues/452)).
 		- Modulation matrix amounts and `Mat.Assign1`–`3` ([#453](https://github.com/codekiln/logseq-encode-garden/issues/453)).
