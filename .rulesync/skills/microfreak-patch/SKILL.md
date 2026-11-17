@@ -38,6 +38,7 @@ Hold to these while you work:
 
 - Keep descriptions, backups, recordings and reports outside the repository. The repository is public, and the backups hold the user's presets.
 - Write to the slot the user names, or to an empty slot you checked. A slot that holds a preset needs `--backup-dir`; tell the user where the backup is.
+- Begin a description with `start: plain` unless the request builds on the base's own sound; the page lists what slot 359 holds.
 - Settings without a measured conversion take 0–1 values. Say which value you chose for each of them.
 
 For a sequence in the patch, the `sequence` key takes the format of `pages/Microfreak___Sequence___Write a sequence.md`. `pages/Microfreak___Patch___Storage.md` says what each stored setting means, and `pages/Microfreak___Patch___Research.md` lists the runs on the instrument behind it.
