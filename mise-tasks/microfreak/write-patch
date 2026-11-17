@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#MISE description="Write a MicroFreak patch described in the panel's own words into a preset file, a slot or both"
+#USAGE arg "<description>" help="YAML or JSON patch description"
+#USAGE flag "--base <slot-or-file>" required=#true help="Slot to read, or a .bin from microfreak:download"
+#USAGE flag "--slot <number>" help="Slot to write; without it the task only previews"
+#USAGE flag "--backup-dir <path>" help="Save the slot here first; required when the slot holds a preset"
+#USAGE flag "--output <file>" help="Also save the result as a microfreak:download file"
+#USAGE flag "--name <name>" help="Preset name; default the description's name, then the base's"
+#USAGE flag "--category <category>" help="Category to store" {
+#USAGE   choices "Bass" "Brass" "Keys" "Lead" "Organ" "Pad" "Percussion" "Sequence" "SFX" "Strings" "Template" "Vocoder"
+#USAGE }
+#USAGE flag "--port <name>" help="Exact MIDI port name"
+set -euo pipefail
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+exec uv run --no-project --with python-rtmidi==1.5.8 --with pyyaml==6.0.2 \
+  python "$root/mise-tasks/microfreak/lib/patch.py" "$@"

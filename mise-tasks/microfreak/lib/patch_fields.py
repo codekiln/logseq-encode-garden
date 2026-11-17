@@ -33,10 +33,42 @@ CHOICES = {
     'Kbd.Scale': ('Global', 'Off', 'Major', 'Minor', 'Harmonic Minor', 'Dorian', 'Mixolydian',
                   'Blues', 'Pentatonic'),
     'Kbd.Root': ('C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'),
+    'VCF.Type': ('LPF', 'BPF', 'HPF'),
+    'LFO.Shape': ('Sine', 'Triangle', 'Saw', 'Square', 'Random Stepped', 'Random Gliding'),
+    'EG1.Mode': ('Env', 'Run', 'Loop'),
+    'EG2.Mode': ('Off', 'On'),
+    'Kbd.Octave': ('-3', '-2', '-1', '0', '+1', '+2', '+3'),
+    'LFO.Sync': ('Off', 'On'),
 }
+# Free-running LFO rate (LFO.Sync off): stored value and the vibrato rate heard.
+LFO_RATE_POINTS = ((0.1, 0.143), (0.2, 0.239), (0.3, 0.521), (0.4, 1.074), (0.5, 2.246),
+                   (0.6, 4.785), (0.7, 10.254), (0.75, 14.974), (0.8, 21.908))
+
+
+def _log_interp(x, points):
+    for (x0, y0), (x1, y1) in zip(points, points[1:]):
+        if x0 <= x <= x1:
+            return math.exp(math.log(y0) + (x - x0) / (x1 - x0) * (math.log(y1) - math.log(y0)))
+    return None
+
+
+def lfo_hz(stored):
+    """The free LFO rate in Hz between the measured points, else None."""
+    return _log_interp(stored, LFO_RATE_POINTS)
+
+
+def lfo_stored(hz):
+    low, high = LFO_RATE_POINTS[0][1], LFO_RATE_POINTS[-1][1]
+    if not low <= hz <= high:
+        raise ValueError(f'LFO rates from {low} to {high} Hz were measured; give rate (0-1) outside them')
+    for (x0, y0), (x1, y1) in zip(LFO_RATE_POINTS, LFO_RATE_POINTS[1:]):
+        if y0 <= hz <= y1:
+            return x0 + (math.log(hz) - math.log(y0)) / (math.log(y1) - math.log(y0)) * (x1 - x0)
 LABELS = {'EG2.Legato': 'Envelope Legato', 'EG2.Snap': 'Envelope Snap', 'LFO.Retrig': 'LFO Retrig',
           'Kbd.Veloc': 'Press Mode', 'Mat.KyMdSrc': 'Key/Arp Mode', 'Kbd.Scale': 'Scale',
-          'Kbd.Root': 'Root Note'}
+          'Kbd.Root': 'Root Note', 'VCF.Type': 'Filter Type', 'LFO.Shape': 'LFO Shape',
+          'EG1.Mode': 'Cycling Envelope Mode', 'EG2.Mode': 'Amp Mod', 'Kbd.Octave': 'Keyboard Octave',
+          'LFO.Sync': 'LFO Sync'}
 FLATS = {'db': 'c#', 'eb': 'd#', 'gb': 'f#', 'ab': 'g#', 'bb': 'a#'}
 # Level of C4 against choice 12, measured in 0.5 dB steps. Choices 9 and 10 played alike.
 PRESET_VOLUME_DB = (-5.5, -5.0, -4.5, -4.0, -3.5, -3.0, -2.5, -2.0, -1.5, -1.0, -1.0, -0.5, 0.0,
@@ -202,6 +234,14 @@ def display(name, raw, descriptor, context=None):
         field = destination_field(raw)
         return {'value': field, 'unit': 'destination', 'destination_id': f'0x{raw:04x}',
                 'heard': raw in HEARD_DESTINATIONS, 'text': field or f'0x{raw:04x}'}
+    if name == 'LFO.Rate':
+        sync = context.get('LFO.Sync')
+        if sync is not None and choice(sync, 1) == 1:
+            return {'value': round(raw / FULL, 3), 'unit': 'ignored while LFO Sync is on',
+                    'text': f'{raw / FULL:.3f} (LFO Sync on)'}
+        hz = lfo_hz(raw / FULL)
+        return {'value': None if hz is None else round(hz, 3), 'unit': 'Hz',
+                'text': f'{raw / FULL:.3f}' if hz is None else f'about {hz:.3g} Hz'}
     if name == 'Arp.Rate':
         bpm = round(arp_bpm(raw), 2)
         return {'value': bpm, 'unit': 'BPM', 'text': f'{bpm:g} BPM'}
@@ -229,6 +269,8 @@ def setting(name, value):
         text = {True: 'on', False: 'off'}.get(value, str(value)).lower() if isinstance(value, bool) else str(value).lower()
         if name == 'Kbd.Root':
             text = FLATS.get(text, text)
+        if name == 'Kbd.Octave' and text.lstrip('+-').isdigit():
+            text = f'{int(text):+d}' if int(text) else '0'
         if text not in names:
             raise ValueError(f'{LABELS[name]} takes one of {", ".join(CHOICES[name])}')
         return ('choice', names.index(text))

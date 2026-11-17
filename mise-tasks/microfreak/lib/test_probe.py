@@ -74,6 +74,12 @@ class ScriptTests(unittest.TestCase):
                          [[0x92, 60, 90], [0xE2, 0x7F, 0x7F], [0xE2, 0, 0],
                           [0xB2, 1, 64], [0xD2, 100], [0x82, 60, 0]])
 
+    def test_yaml_on_and_off_keys_read_as_notes(self):
+        import yaml
+        script = yaml.safe_load('events:\n  - {t: 0, on: C4}\n  - {t: 1, off: C4}\n')
+        compiled = probe.compile_script(script, channel=0)
+        self.assertEqual([m for _, m, _ in compiled], [[0x90, 60, 100], [0x80, 60, 0]])
+
     def test_a_ramp_sends_evenly_spaced_values(self):
         compiled = probe.compile_script({'events': [{'t': 1.0, 'cc': [1, 0], 'to': 127,
                                                      'over': 1.0, 'steps': 4}]}, channel=0)

@@ -12,6 +12,7 @@ File tasks for reading, writing and checking presets on an Arturia MicroFreak ov
 | `write-sequence` | Write a described sequence into a preset file, a slot or both | [Microfreak/Sequence/Write a sequence](../../pages/Microfreak___Sequence___Write%20a%20sequence.md) |
 | `verify-sequence` | Write a described sequence, play it, record it, download it again and compare | [Microfreak/Sequence/Write a sequence](../../pages/Microfreak___Sequence___Write%20a%20sequence.md) |
 | `probe` | Change stored settings, write them to a slot, play notes, bend, CCs or pressure, and measure the H5 recording | [Microfreak/CLI/Probe a patch](../../pages/Microfreak___CLI___Probe%20a%20patch.md) |
+| `write-patch` | Write a patch described in the panel's words into a preset file, a slot or both | [Microfreak/Patch/Write a patch](../../pages/Microfreak___Patch___Write%20a%20patch.md) |
 | `audition` | Play a slot's sequence and report the notes per step from MIDI out and the Zoom H5 | [Microfreak/CLI/Audition a sequence](../../pages/Microfreak___CLI___Audition%20a%20sequence.md) |
 | `sync` | Preview or apply preset metadata to the garden's preset pages | [Microfreak/CLI/Preset metadata over USB](../../pages/Microfreak___CLI___Preset%20metadata%20over%20USB.md) |
 | `refresh` | Read every slot and list presets that differ from their garden pages | [Logseq/Entity/Preset/Synth/Microfreak](../../pages/Logseq___Entity___Preset___Synth___Microfreak.md) |
@@ -20,6 +21,7 @@ File tasks for reading, writing and checking presets on an Arturia MicroFreak ov
 
 More context:
 
+- [Microfreak/Patch/Storage](../../pages/Microfreak___Patch___Storage.md): what each stored patch setting means, measured on the instrument.
 - [Microfreak/Sequence/Storage](../../pages/Microfreak___Sequence___Storage.md): where a preset keeps patterns A and B and what each step holds.
 - [Microfreak/Sequence/Research](../../pages/Microfreak___Sequence___Research.md): the experiments behind the sequence tasks.
 - [Microfreak/UG](../../pages/Microfreak___UG.md): the garden's copy of the MicroFreak user guide.

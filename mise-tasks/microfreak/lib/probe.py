@@ -136,6 +136,9 @@ def compile_script(script, channel):
         return [0xE0 | channel, value & 0x7F, value >> 7]
 
     for event in script.get('events', []):
+        # YAML 1.1 reads the keys on and off as true and false.
+        event = {({True: 'on', False: 'off'}.get(k, k) if isinstance(k, bool) else k): v
+                 for k, v in event.items()}
         t = float(event['t'])
         if 'on' in event:
             note = note_number(event['on'])
