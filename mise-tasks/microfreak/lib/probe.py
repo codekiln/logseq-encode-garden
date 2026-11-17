@@ -22,6 +22,10 @@ import parameters
 import sequence as Q
 
 FRAME_HOP = 0.01
+# Note summaries read pitch and brightness only from frames this close to the note's peak,
+# so a decaying note's tail and the recorder's noise floor stay out of them.
+SUMMARY_GATE_DB = 30.0
+CENTROID_RANGE_DB = 40.0
 PITCH_WINDOW = 4096
 LEVEL_WINDOW = 1024
 SILENCE_DB = -70.0
@@ -157,11 +161,13 @@ def compile_script(script, channel):
             else:
                 start = int(event['pressure'])
                 make, label = (lambda v: [0xD0 | channel, int(round(v))]), 'pressure'
+            whole = label != 'bend'
             if 'to' in event:
                 end, over = float(event['to']), float(event['over'])
                 steps = int(event.get('steps', max(2, int(over / 0.01))))
                 for i in range(steps + 1):
                     value = start + (end - start) * i / steps
+                    value = int(round(value)) if whole else value
                     out.append((t + over * i / steps, make(value), f'{label} {value:g}'))
             else:
                 out.append((t, make(start), f'{label} {start:g}'))
@@ -213,6 +219,9 @@ def frames(audio, sr, hop=FRAME_HOP, fmin=30.0, fmax=2500.0):
         row = {'t': round((start + LEVEL_WINDOW / 2) / sr, 3), 'db': round(db, 2)}
         if db > SILENCE_DB:
             spectrum = np.abs(np.fft.rfft(chunk * window))
+            # Only bins within CENTROID_RANGE_DB of the strongest count, so the
+            # recorder's noise floor does not pull a quiet frame's centroid up.
+            spectrum = np.where(spectrum >= spectrum.max() * 10 ** (-CENTROID_RANGE_DB / 20), spectrum, 0)
             total = spectrum.sum()
             if total > 0:
                 row['centroid_hz'] = round(float((freqs * spectrum).sum() / total), 1)
@@ -266,7 +275,8 @@ def summarize_notes(rows, played, compiled):
         summary.update(onset_latency_ms=None if onset is None else round((onset - t) * 1000),
                        peak_db=peak['db'], peak_at=round(peak['t'] - t, 3),
                        end_db=span[-1]['db'])
-        settled = [r for r in span if r['t'] >= t + 0.05 and 'midi' in r]
+        loud = [r for r in span if r['db'] >= peak['db'] - SUMMARY_GATE_DB]
+        settled = [r for r in loud if r['t'] >= t + 0.05 and 'midi' in r]
         if settled:
             pitches = np.array([r['midi'] for r in settled])
             summary.update(pitch=Q.note_name(int(round(float(np.median(pitches))))),
@@ -274,7 +284,7 @@ def summarize_notes(rows, played, compiled):
                            cents_from_note=round(float(np.median(pitches) - note) * 100, 1),
                            midi_min=round(float(pitches.min()), 3),
                            midi_max=round(float(pitches.max()), 3))
-        centroids = [r['centroid_hz'] for r in span if 'centroid_hz' in r]
+        centroids = [r['centroid_hz'] for r in loud if 'centroid_hz' in r]
         if centroids:
             summary['centroid_hz_median'] = round(float(np.median(centroids)), 1)
         notes.append(summary)

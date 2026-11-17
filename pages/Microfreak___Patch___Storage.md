@@ -2,7 +2,7 @@ see-also:: [[Microfreak/Patch/Research]], [[Microfreak/CLI/Probe a patch]], [[Mi
 
 - # How a preset stores its patch settings
 	- A preset keeps each setting as a named field, such as `VCO.BendRng`, holding a descriptor and a 16-bit value. [[Microfreak/CLI/Inspect a preset]] prints them. The descriptor of a choice field is the number of choices minus one, and the field stores choice × 32767 ÷ descriptor, rounded. Continuous controls store 0–32767 for 0–1, and matrix amounts store a signed value for −1 to 1.
-	- The conversions below were measured on my MicroFreak by writing values into test slots with `mise run microfreak:probe` and recording the result with the [[Zoom H5/My Unit]]. [[Microfreak/Patch/Research]] lists the runs. [lib/patch_fields.py](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/lib/patch_fields.py) holds them in code, and `mise run microfreak:inspect FILE --interpret-fw5` adds a `display` value for each field it covers.
+	- The conversions below were measured on my MicroFreak by writing values into test slots with `mise run microfreak:probe` and recording the result with the [[Zoom H5/My Unit]]. [[Microfreak/Patch/Research]] lists the runs. [lib/patch_fields.py](https://github.com/codekiln/logseq-encode-garden/blob/main/mise-tasks/microfreak/lib/patch_fields.py) holds them in code, and `mise run microfreak:inspect FILE --interpret-fw5` adds a `display` value to each field it covers, in the report's `interpretations.fields` list.
 	- ## Voice
 		- These are the Voice settings of Utility > Preset ([[Microfreak/UG/14 Config/01 Utility & MCC/01 Preset]]).
 		- ### Bend Range: `VCO.BendRng`
@@ -62,10 +62,32 @@ see-also:: [[Microfreak/Patch/Research]], [[Microfreak/CLI/Probe a patch]], [[Mi
 			- `EG1.Mode`, the Cycling Envelope: 0 Env (runs once from each note), 1 Run (runs freely), 2 Loop (loops from each note).
 			- `EG2.Mode`, Amp Mod: 1 on, the envelope shapes loudness; 0 off.
 			- `LFO.Shape`: 0 sine, 1 triangle, 2 rising saw, 3 square, 4 random stepped, 5 random gliding.
-			- `LFO.Sync`: 0 runs at `LFO.Rate`; 1 follows the tempo and ignores `LFO.Rate`.
+			- `LFO.Sync`: 0 runs at `LFO.Rate`; 1 runs at a division of the MIDI clock's tempo, `LFO.Div`, and ignores `LFO.Rate`.
 			- `Kbd.Octave`: descriptor 6, −3 to +3. It shifts only the MicroFreak's own keys: notes sent over MIDI sounded as sent at every value.
+	- ## Oscillator: Basic Waves
+		- `VCO.Param1` is Wave (the guide's Morph), `VCO.Param2` Timbre (Sym) and `VCO.Param3` Shape (Sub), in panel order. Harmonics of A2 with the filter open:
+			- Wave 0.5 is a sawtooth whatever Timbre is: each harmonic n sat 20·log10(n) dB below the fundamental.
+			- Wave 0 with Timbre 0 is a square: odd harmonics only, the even ones 72 dB down. Timbre 0.5 narrows it to a quarter-width pulse (the 4th harmonic missing), Timbre 1.0 to a thin pulse whose first eight harmonics sat within 2.3 dB of each other.
+			- Wave 1.0 with Timbre 0 is two sawtooths half a cycle apart: the fundamental and odd harmonics 65–68 dB down, a sawtooth an octave up. With Timbre 1.0 it is one sawtooth at pitch.
+			- Shape adds a sine an octave below. At 0.4 the sub sat 3.5 dB below E2's fundamental.
+	- ## Envelope times: `EG2.Attack`, `EG2.DecRel`
+		- On slot 359's sawtooth, from the note to 90 % of full level: attack 0.1 took 0.03 s, 0.2 0.06 s, 0.3 0.14 s, 0.4 0.29 s, 0.5 0.56 s, 0.6 1.03 s and 0.7 1.80 s.
+		- Decay with sustain 0, from the peak to 20 dB down: 0.1 took 0.11 s, 0.2 0.27 s, 0.3 0.49 s, 0.4 0.78 s, 0.5 1.17 s, 0.6 1.71 s and 0.7 2.50 s; to 40 dB down, 0.20, 0.47, 0.84, 1.36, 2.08, 3.03 and 4.40 s.
+		- The same knob sets the release, which is faster: with sustain 1, 20 dB down after the note ended took 0.07, 0.18, 0.34, 0.58 and 0.92 s at 0.1–0.5.
+		- `lib/patch_fields.py` interpolates between these points.
+	- ## Filter cutoff: `VCF.Cutoff`
+		- The low-pass corner, where a sawtooth's harmonics fell 3 dB below their level with the filter open, resonance 0: about 140 Hz at 0.3, 300 Hz at 0.4, 580 Hz at 0.5, 1.24 kHz at 0.6, 2.7 kHz at 0.7 and 6.5 kHz at 0.8. It roughly doubles for every 0.1. Below 0.3 it sat under 110 Hz, and above 0.8 above what the harmonics measured.
+		- Filter Amt, the envelope's amount on the cutoff, is the matrix amount Envelope → Cutoff, `Co4.EG2` ([[Microfreak/UG/07 Filter/02 Animating Sound/01 Cutoff Modulation]]).
 	- ## LFO rate: `LFO.Rate`
 		- With `LFO.Sync` off, the rate roughly doubles for every 0.1 of stored value from 0.3 up. Measured: 0.1 → 0.14 Hz, 0.2 → 0.24 Hz, 0.3 → 0.52 Hz, 0.4 → 1.07 Hz, 0.5 → 2.25 Hz, 0.6 → 4.79 Hz, 0.7 → 10.3 Hz, 0.75 → 15.0 Hz, 0.8 → 21.9 Hz. `lib/patch_fields.py` interpolates between these points; faster rates were not measured.
+	- ## LFO sync division: `LFO.Div`
+		- With `LFO.Sync` on, descriptor 12: 0 is about 8 bars, 1 about 4 bars, 2 is 2 bars, 3 one bar, 4 1/2, 5 1/2T, 6 1/4, 7 1/4T, 8 1/8, 9 1/8T, 10 1/16, 11 1/16T and 12 1/32.
+		- The tempo is the MIDI clock's: 1/4 ran at 1.5 Hz under clock at 90 BPM and 2.5 Hz at 150 BPM. With no clock running the LFO keeps the last tempo received, and `Arp.Rate` does not change it.
+	- ## Arpeggiator
+		- `Arp.Enable`: 1 turns the arpeggiator on. `Arp.Div` sets its step, in the divisions of [[Microfreak/Sequence/Storage]].
+		- `Arp.Dir`, descriptor 3: 0 Up, 1 Order (the order the keys went down), 2 Random, 3 Pattern, which favoured the lowest note.
+		- `Arp.Range`, descriptor 3: 0 to 3 play the held notes over 1 to 4 octaves.
+		- `Arp.Swing`, descriptor 25: the stored choice plus 50 is the swing percentage. At 12 (62 %) the second sixteenth of each pair came one clock late; at 25 (75 %), three.
 	- ## Modulation matrix
 		- The matrix ([[Microfreak/UG/05 Connections/02 Matrix and Encoder/01 Sources and Destinations]]) stores one amount per crossing as `CoN.ROW`. The column number is the destination: `Co1` Pitch, `Co2` Wave, `Co3` Timbre, `Co4` Cutoff, and `Co5`–`Co7` Assign 1–3. The row is the source: `EG1` the Cycling Envelope, `EG2` the Envelope, `LFO`, `Xpr` Pressure and `Key` Key/Arp.
 		- An amount is −1 to 1, stored as a signed value over 32767. `Co2` did what assigning `VCO.Param1` did, and `Co3` what assigning `VCO.Param2` did.
@@ -73,6 +95,7 @@ see-also:: [[Microfreak/Patch/Research]], [[Microfreak/CLI/Probe a patch]], [[Mi
 		- ### Assign destinations: `Mat.Assign1`–`Mat.Assign3`
 			- Each stores the destination id of the parameter its Assign column modulates. The sequencer's modulation tracks use the same ids ([[Microfreak/Sequence/Storage]]).
 			- A destination id has four hex digits: the first two name a section and the last two a field in it. Sections: 0x00 oscillator (`VCO`), 0x01 filter (`VCF`), 0x02 Cycling Envelope (`EG1`), 0x03 keyboard (`Kbd`), 0x04 arpeggiator (`Arp`), 0x05 `LFO`, 0x06 Envelope (`EG2`), 0x07 general (`Gen`), 0x09 matrix settings (`Mat`), 0x0A–0x10 the matrix columns `Co1`–`Co7`, 0x12 `Seq` and 0x13 `Voc`. [Freakout's live map](https://github.com/kmorrill/freakout/blob/main/src/minifreak_patch/microfreak_live_map.py) lists two or three addresses per field; the destination id is the one in the field's own section, such as 0x0101 for `VCF.Cutoff`. `lib/patch_fields.py` builds the full list.
+			- Slot 359, Init, aims Assign 1 and Assign 3 at 0x0D01, the Envelope → Cutoff amount, and Assign 2 at 0x0003, Timbre.
 			- Heard on the instrument: 0x0001 Wave, 0x0003 Timbre, 0x0005 Shape, 0x0101 Cutoff, 0x0102 Resonance, 0x0300 Glide, 0x0502 LFO Rate, 0x0602 Envelope Decay, 0x0603 Envelope Sustain, 0x0705 Unison Spread and 0x0A02, the LFO → Pitch amount. 0x0F0E, Freakout's other address for cutoff, did nothing.
 			- An Assign column aimed at a matrix amount adds to it: with LFO → Pitch stored at 0 and Pressure → Assign 1 at 0.05 aimed at 0x0A02, full pressure gave the vibrato that an LFO → Pitch amount of 0.05 gives.
 	- ## Preset Volume: `Gen.PrstVol`
@@ -81,5 +104,5 @@ see-also:: [[Microfreak/Patch/Research]], [[Microfreak/CLI/Probe a patch]], [[Mi
 		- The free-running tempo of the arpeggiator and sequencer, and the tempo Sync glide follows. BPM = 30 + stored value ÷ 150, up to 240: 13500 is 120 BPM. The stored value is not a 0–1 fraction, so a write gives `raw:` (BPM − 30) × 150.
 		- The arpeggiator only runs on its own tempo when the global Clock Source is Internal. On USB it waits for clock from the Mac.
 	- ## Still unmeasured
-		- Times, rates and frequencies of the continuous controls: envelope and Cycling Envelope times, LFO rates above 0.8, the tempo-synced LFO divisions in `LFO.Div`, filter cutoff in hertz, and the oscillator controls of each model.
-		- `Gen.Chord` 1, `Gen.PolyCnt`, `Kbd.Hold`, the arpeggiator's `Arp.Dir`, `Arp.Range`, `Arp.Swing`, `Arp.Spice` and `Arp.Dice`, and the vocoder's `Voc.HissMod` and `Voc.HissVol`.
+		- Cycling Envelope times, attack and decay above 0.7, LFO rates above 0.8, resonance, the band-pass and high-pass corners, and the oscillator controls of models other than Basic Waves.
+		- `Gen.Chord` 1, `Gen.PolyCnt`, `Kbd.Hold`, `Arp.Spice`, `Arp.Dice`, and the vocoder's `Voc.HissMod` and `Voc.HissVol`.

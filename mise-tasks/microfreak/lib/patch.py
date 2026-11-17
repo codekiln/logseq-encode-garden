@@ -37,8 +37,23 @@ DESTINATIONS = {
     'sustain': 'EG2.Sustain', 'rise': 'EG1.RiseLvl', 'fall': 'EG1.FallLvl', 'hold': 'EG1.Hold',
     'cycenv amount': 'EG1.Amount', 'unison spread': 'Gen.UniSprd', 'arp rate': 'Arp.Rate',
 }
-UNIT = ('oscillator', 'filter', 'envelope', 'cycling_envelope', 'lfo', 'glide', 'keyboard',
+UNIT = ('start', 'oscillator', 'filter', 'envelope', 'cycling_envelope', 'lfo', 'glide', 'keyboard',
         'voice', 'arp', 'matrix', 'fields', 'sequence', 'name', 'category')
+# `start: plain` sets these first, so a sound does not inherit its base's.
+PLAIN = {
+    'oscillator': {'type': 'BasicWaves', 'wave': 0.5, 'timbre': 0.0, 'shape': 0.0},
+    'filter': {'type': 'LPF', 'cutoff': 1.0, 'resonance': 0.0},
+    'envelope': {'attack': 0.0, 'decay': 0.3, 'sustain': 1.0, 'amp_mod': True, 'legato': False,
+                 'snap': False},
+    'cycling_envelope': {'mode': 'Env', 'amount': 0.0},
+    'lfo': {'shape': 'Sine', 'rate': 0.5, 'retrig': 'Off'},
+    'glide': 'off',
+    'keyboard': {'bend_range': 2, 'octave': 0, 'scale': 'Off', 'press_mode': 'Aftertouch',
+                 'key_arp_mode': 'Linear', 'velo_amp_mod': 0},
+    'voice': {'paraphonic': False, 'volume': 0},
+    'arp': {'on': False},
+    'matrix': [],
+}
 
 
 def unit(value, name):
@@ -94,11 +109,28 @@ def section_settings(spec, table, label):
 FILTER = {'type': ('VCF.Type', 'named'), 'cutoff': ('VCF.Cutoff', 'unit'), 'resonance': ('VCF.Reso', 'unit')}
 ENVELOPE = {'attack': ('EG2.Attack', 'unit'), 'decay': ('EG2.DecRel', 'unit'), 'sustain': ('EG2.Sustain', 'unit'),
             'amp_mod': ('EG2.Mode', 'switch'), 'legato': ('EG2.Legato', 'switch'), 'snap': ('EG2.Snap', 'switch')}
+
+
+def envelope_settings(spec):
+    """Envelope keys; filter_amount comes back apart, to apply after any matrix."""
+    spec = dict(spec)
+    out = []
+    if 'attack_seconds' in spec:
+        out.append(('EG2.Attack', ('decimal', P.value_for(float(spec.pop('attack_seconds')),
+                                                         P.ATTACK_POINTS, 'Attack times', 's'))))
+    if 'decay_seconds' in spec:
+        out.append(('EG2.DecRel', ('decimal', P.value_for(float(spec.pop('decay_seconds')),
+                                                         P.DECAY_POINTS, 'Decay times', 's'))))
+    amount = spec.pop('filter_amount', None)
+    if amount is not None and not -1 <= float(amount) <= 1:
+        raise ValueError('filter_amount runs from -1 to 1')
+    later = [] if amount is None else [('Co4.EG2', ('decimal', float(amount)))]
+    return section_settings(spec, ENVELOPE, 'envelope') + out, later
 CYCLING = {'mode': ('EG1.Mode', 'named'), 'rise': ('EG1.RiseLvl', 'unit'), 'fall': ('EG1.FallLvl', 'unit'),
            'hold': ('EG1.Hold', 'unit'), 'amount': ('EG1.Amount', 'unit'),
            'rise_shape': ('EG1.RiseSlp', 'unit'), 'fall_shape': ('EG1.FallSlp', 'unit')}
 LFO = {'shape': ('LFO.Shape', 'named'), 'rate': ('LFO.Rate', 'unit'), 'retrig': ('LFO.Retrig', 'named'),
-       'sync': ('LFO.Sync', 'switch')}
+       'sync': ('LFO.Sync', 'switch'), 'division': ('LFO.Div', 'named')}
 
 
 def lfo_settings(spec):
@@ -107,7 +139,9 @@ def lfo_settings(spec):
     out = []
     if 'hz' in spec:
         out.append(('LFO.Rate', ('decimal', P.lfo_stored(float(spec.pop('hz'))))))
-    if ('rate' in spec or out) and 'sync' not in spec:
+    if 'division' in spec and 'sync' not in spec:
+        out.append(('LFO.Sync', ('choice', 1)))
+    elif ('rate' in spec or out) and 'sync' not in spec:
         out.append(('LFO.Sync', ('choice', 0)))
     return section_settings(spec, LFO, 'lfo') + out
 KEYBOARD = {'bend_range': ('VCO.BendRng', 'named'), 'press_mode': ('Kbd.Veloc', 'named'),
@@ -228,12 +262,22 @@ def settings_for(description, fields):
     if unknown:
         raise ValueError(f'Unknown description keys: {", ".join(sorted(unknown))}')
     out = []
+    later = []
+    if description.get('start') not in (None, 'plain'):
+        raise ValueError('start takes plain')
+    if description.get('start') == 'plain':
+        out += settings_for(dict(PLAIN), fields)
     if 'oscillator' in description:
         out += oscillator_settings(description['oscillator'], fields['VCO.Type']['descriptor'])
     if 'filter' in description:
-        out += section_settings(description['filter'], FILTER, 'filter')
+        spec = dict(description['filter'])
+        if 'cutoff_hz' in spec:
+            out.append(('VCF.Cutoff', ('decimal', P.value_for(float(spec.pop('cutoff_hz')),
+                                                             P.CUTOFF_POINTS, 'Cutoffs', 'Hz'))))
+        out += section_settings(spec, FILTER, 'filter')
     if 'envelope' in description:
-        out += section_settings(description['envelope'], ENVELOPE, 'envelope')
+        settings, later = envelope_settings(description['envelope'])
+        out += settings
     if 'cycling_envelope' in description:
         out += section_settings(description['cycling_envelope'], CYCLING, 'cycling_envelope')
     if 'lfo' in description:
@@ -245,12 +289,20 @@ def settings_for(description, fields):
     if 'voice' in description:
         out += voice_settings(description['voice'])
     if 'arp' in description:
+        keys = {'bpm': 'Arp.Rate', 'direction': 'Arp.Dir', 'octaves': 'Arp.Range', 'swing': 'Arp.Swing',
+                'division': 'Arp.Div'}
         for key, value in description['arp'].items():
-            if key != 'bpm':
-                raise ValueError('arp takes bpm')
-            out.append(('Arp.Rate', P.setting('Arp.Rate', value)))
+            if key == 'on':
+                out.append(('Arp.Enable', ('choice', 1 if on_off(value) else 0)))
+                if on_off(value):
+                    out.append(('Arp.SeqOn', ('choice', 0)))
+            elif key in keys:
+                out.append((keys[key], P.setting(keys[key], value)))
+            else:
+                raise ValueError(f'Unknown arp key {key!r}; use on, {", ".join(keys)}')
     if 'matrix' in description:
         out += matrix_settings(description['matrix'], fields)
+    out += later
     if 'fields' in description:
         out += field_settings(description['fields'])
     return out

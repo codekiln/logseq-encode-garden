@@ -33,12 +33,14 @@ see-also:: [[Microfreak/CLI/Inspect a preset]], [[Microfreak/CLI/Upload a preset
 		    - {t: 3.0, off: C4}
 		  tail: 1.0
 		  ```
-		- `on` and `off` take a note name (C4 is MIDI 60) or number. `bend` runs from −1 (full down) to 1 (full up). `cc` takes a controller number and value. `pressure` sends channel pressure (aftertouch) 0–127. `to` and `over` turn a bend, CC or pressure into a ramp. `tail` is how long the recording runs after the last event.
+		- `on` and `off` take a note name (C4 is MIDI 60) or number. `bend` runs from −1 (full down) to 1 (full up). `cc` takes a controller number and value. `pressure` sends channel pressure (aftertouch) 0–127. `to` and `over` turn a bend, CC or pressure into a ramp, with CC and pressure values rounded to whole numbers. `tail` is how long the recording runs after the last event.
 		- The messages go out on the MicroFreak's MIDI input channel, which the task reads from the instrument first.
 	- ## Report
 		- `played` lists each event with the time it was sent.
 		- `notes` has one summary per note: `onset_latency_ms`, `peak_db` and `end_db` in dB relative to the H5's full scale, `pitch` and `midi_median` from the YIN method with `cents_from_note`, the lowest and highest pitch heard during the note, and `centroid_hz_median`, the spectral centroid, which rises as the sound gets brighter.
-		- `--frames` also prints `frames`, the recording measured every 10 ms with the same values. `--output` saves the report with every frame. `--wav-dir` saves the recording. Both must be outside the repository.
+		- A note's pitch and brightness come from its frames within 30 dB of its peak, so a decaying note's quiet tail stays out. Each frame's centroid counts only the spectrum within 40 dB of that frame's strongest component, which keeps the H5's noise floor out of it.
+		- A sub-oscillator one octave down makes the waveform repeat at the sub's period, so `pitch` reads an octave low and `cents_from_note` near −1200.
+		- `--frames` also prints `frames`, the recording measured every 10 ms with the same values. A frame quieter than −70 dBFS has only `t` and `db`, and a frame where no pitch was found has no `f0_hz`, `midi` or `aperiodicity`. `--output` saves the report with every frame. `--wav-dir` saves the recording. Both must be outside the repository.
 		- Levels are absolute, so two runs compare directly when the H5's input gain stays the same between them.
 	- ## Example
 		- Slot 359's sound with `Gen.PrstVol` (Preset Volume) at 0, 12 and 24 played C4 at −27.8, −22.3 and −16.3 dBFS: about half a decibel per step of the setting. The pitch read 60.002 each time.
