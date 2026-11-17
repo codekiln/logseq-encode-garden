@@ -101,6 +101,16 @@ class ConversionTests(unittest.TestCase):
         self.assertEqual(P.display('Arp.Range', 32767, 3)['value'], 4)
         self.assertEqual(P.display('LFO.Div', round(6 * 32767 / 12), 12)['value'], '1/4')
 
+    def test_cycling_envelope_resonance_and_fast_lfo(self):
+        self.assertAlmostEqual(P.cycling_stage_seconds(0.5), 1.25)
+        self.assertAlmostEqual(P.cycling_hold_seconds(0.4), 1.6)
+        self.assertAlmostEqual(P.cycling_hold_stored(3.6), 0.6)
+        self.assertEqual(P.display('EG1.Hold', 16384, 0, {'EG1.Mode': 0})['unit'], 'sustain level in Env mode')
+        self.assertEqual(P.display('EG1.Hold', 16384, 0, {'EG1.Mode': 32767})['unit'], 'seconds in Run and Loop')
+        self.assertAlmostEqual(P.resonance_peak_db(0.8), 9.4)
+        self.assertAlmostEqual(P.lfo_hz(1.0), 100.1)
+        self.assertAlmostEqual(P.lfo_stored(46.8), 0.9)
+
     def test_add_display_leaves_unknown_fields_alone(self):
         fields = [{'name': 'VCO.BendRng', 'descriptor': 24, 'value_le_unsigned': 16384},
                   {'name': 'VCO.Param1', 'descriptor': 238, 'value_le_unsigned': 100}]

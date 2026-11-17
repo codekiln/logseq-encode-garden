@@ -148,6 +148,15 @@ class PatchTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             patch.prepare({'filter': {'cutoff_hz': 20}}, self.base)
 
+    def test_cycling_envelope_in_seconds(self):
+        new, _ = patch.prepare({'cycling_envelope': {'mode': 'Loop', 'rise_seconds': 1.25, 'fall_seconds': 0.27,
+                                                     'hold_seconds': 0.4}}, self.base)
+        v = values(new)
+        self.assertAlmostEqual(v['EG1.RiseLvl'] / 32767, 0.5, places=4)
+        self.assertAlmostEqual(v['EG1.FallLvl'] / 32767, 0.3, places=3)
+        self.assertAlmostEqual(v['EG1.Hold'] / 32767, 0.2, places=4)
+        self.assertEqual(v['EG1.Mode'], 32767)
+
     def test_sequence_and_unknown_keys(self):
         new, changed = patch.prepare({'sequence': {'length': 4, 'patterns': {'A': {'steps': [{'notes': ['C4']}]}}}},
                                      self.base)

@@ -56,7 +56,40 @@ RELEASE_POINTS = ((0.1, 0.071), (0.2, 0.181), (0.3, 0.341), (0.4, 0.581), (0.5, 
 CUTOFF_POINTS = ((0.3, 140), (0.4, 300), (0.5, 580), (0.6, 1240), (0.7, 2720), (0.8, 6460))
 # Free-running LFO rate (LFO.Sync off): stored value and the vibrato rate heard.
 LFO_RATE_POINTS = ((0.1, 0.143), (0.2, 0.239), (0.3, 0.521), (0.4, 1.074), (0.5, 2.246),
-                   (0.6, 4.785), (0.7, 10.254), (0.75, 14.974), (0.8, 21.908))
+                   (0.6, 4.785), (0.7, 10.254), (0.75, 14.974), (0.8, 21.908), (0.85, 32.0),
+                   (0.9, 46.8), (0.95, 68.5), (1.0, 100.1))
+# Low-pass resonance: peak above the passband, dB, at cutoff 0.5.
+RESONANCE_POINTS = ((0.0, 0.0), (0.2, 0.3), (0.4, 1.7), (0.5, 2.9), (0.6, 4.3), (0.7, 6.5), (0.8, 9.4),
+                    (0.9, 15.3), (1.0, 26.5))
+
+
+def cycling_stage_seconds(stored):
+    """Rise or Fall of the Cycling Envelope with a linear shape: 10 s x stored cubed."""
+    return 10 * stored ** 3
+
+
+def cycling_stage_stored(seconds):
+    if not 0 <= seconds <= 10:
+        raise ValueError('A Cycling Envelope stage runs from 0 to 10 seconds')
+    return (seconds / 10) ** (1 / 3)
+
+
+def cycling_hold_seconds(stored):
+    """Hold of the Cycling Envelope in Run and Loop: 10 s x stored squared."""
+    return 10 * stored ** 2
+
+
+def cycling_hold_stored(seconds):
+    if not 0 <= seconds <= 10:
+        raise ValueError('The Cycling Envelope hold runs from 0 to 10 seconds')
+    return math.sqrt(seconds / 10)
+
+
+def resonance_peak_db(stored):
+    for (x0, y0), (x1, y1) in zip(RESONANCE_POINTS, RESONANCE_POINTS[1:]):
+        if x0 <= stored <= x1:
+            return y0 + (stored - x0) / (x1 - x0) * (y1 - y0)
+    return None
 
 
 def _log_interp(x, points):
@@ -274,6 +307,22 @@ def display(name, raw, descriptor, context=None):
         import sequence
         return {'value': sequence.division_from_raw(raw), 'unit': 'note division',
                 'text': sequence.division_from_raw(raw)}
+    if name in ('EG1.RiseLvl', 'EG1.FallLvl'):
+        seconds = cycling_stage_seconds(raw / FULL)
+        return {'value': round(seconds, 3), 'unit': 'seconds with a linear shape',
+                'text': f'{raw / FULL:.3f} (about {seconds:.2g} s)'}
+    if name == 'EG1.Hold':
+        mode = context.get('EG1.Mode')
+        if mode is not None and choice(mode, 2) == 0:
+            return {'value': round(raw / FULL, 3), 'unit': 'sustain level in Env mode',
+                    'text': f'{raw / FULL:.3f} (sustain level)'}
+        seconds = cycling_hold_seconds(raw / FULL)
+        return {'value': round(seconds, 3), 'unit': 'seconds in Run and Loop',
+                'text': f'{raw / FULL:.3f} (about {seconds:.2g} s)'}
+    if name == 'VCF.Reso':
+        peak = resonance_peak_db(raw / FULL)
+        return {'value': round(peak, 1), 'unit': 'dB peak at the cutoff',
+                'text': f'{raw / FULL:.3f} (peak about +{peak:.1f} dB)'}
     for field, points, what in (('EG2.Attack', ATTACK_POINTS, 'to full'),
                                 ('EG2.DecRel', DECAY_POINTS, 'decay to -20 dB'),
                                 ('VCF.Cutoff', CUTOFF_POINTS, None)):
